@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 41906481891908c85daf22c223e77826baa27766
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: ea9ab84a59fd020a7dc5c67b6ad74630e113ee55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037597"
 ---
 # <a name="database-file-initialization"></a>資料庫檔案初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

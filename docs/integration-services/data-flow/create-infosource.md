@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 270f2831b814144f6e053db32509e27ffef02ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a96c406cdd4b920efbfda6644ee5539e0a351f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049560"
 ---
 # <a name="create-infosource"></a>建立 InfoSource
 

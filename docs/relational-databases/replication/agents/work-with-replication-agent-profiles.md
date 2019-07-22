@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 74f0746d3b69183702ef2a9d0609c39e25b28e95
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: ecfdf9a30cd4252eecc74aefa8eb3065708f132f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085890"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

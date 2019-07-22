@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ebb953132e28a3ea0766f7d9d7cd40f3f620659
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 4908caa8c45b4c4f4cd1cdbbc539fe4da3265677
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050218"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
 

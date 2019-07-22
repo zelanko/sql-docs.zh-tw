@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f08564eb8821df4d25bf352ae3afce8afbc7dae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e867584c9c9a0e50022d0964a1772ac2c3a1b1e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099974"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 定序名稱 (Transact-SQL)
 

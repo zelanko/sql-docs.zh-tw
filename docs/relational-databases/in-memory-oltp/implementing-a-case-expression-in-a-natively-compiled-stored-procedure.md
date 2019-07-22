@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5aae82125660ef381d9760ed3f25309f2320bb54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3819201a24318c7bd48a78757a1284b5548be95b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050396"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在原生編譯的預存程序中實作 CASE 運算式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8aec17fc676ef975a1655be1b7af0e70eb5ee599
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: b4be2767bd0ae3a2486e598678e7654a50b1dc93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984422"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY 對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ DENY permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要對稱金鑰的 CONTROL 權限或資料庫的 ALTER ANY SYMMETRIC KEY 權限。 如果是使用 AS 選項，指定的主體必須擁有對稱金鑰。  
   
 ## <a name="examples"></a>範例  

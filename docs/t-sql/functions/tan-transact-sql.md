@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f63a8d77e93e8cd0208c124abab3deab5a474b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c451192a96dc2fdf4e8e5e619237527139b4f2f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117445"
 ---
 # <a name="tan-transact-sql"></a>TAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

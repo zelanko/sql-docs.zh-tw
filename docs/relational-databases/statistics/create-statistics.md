@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8c1dbccf3b45896f56aba5c478e1a37954f37f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103417"
 ---
 # <a name="create-statistics"></a>建立統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

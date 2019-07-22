@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3fa07637-ba93-4633-aaf2-ade7d18bc487
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a96cecbb38234204b70967e2e99929ffba7ee5a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84f983c9b450e625fdca08c46720a1cf22e8b84c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098302"
 ---
 # <a name="mssqlserver3413"></a>MSSQLSERVER_3413
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47679816"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|3413|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400078e666f3854383cbd430cf8fd719ea720929
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: e3eef3752a362dcc6709d7c7461cd35fdc5c1892
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077783"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -63,7 +62,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="return-value"></a>傳回值  
  **varbinary** (最大 8000 位元組)  
 
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 請考慮使用 `CHECKSUM` 或 `BINARY_CHECKSUM` 作為計算雜湊值的替代方案。
 
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始已淘汰 MD2、MD4、MD5、SHA 和 SHA1。 請改用 SHA2_256 或 SHA2_512。 較舊的演算法會繼續運作，但它們會引發淘汰事件。

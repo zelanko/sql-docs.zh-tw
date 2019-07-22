@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ccf081a6f1bac088c4a7539d4efd367f3bb7fade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5f6a00225549c32d95be58bd3987b42494e28a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101186"
 ---
 # <a name="null-geometry-data-type"></a>Null (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

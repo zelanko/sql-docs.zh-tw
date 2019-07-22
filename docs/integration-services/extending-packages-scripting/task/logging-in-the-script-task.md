@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e3774939a655bceff3ceb49653b9dd47bf4fe5e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f55c4b022d0656575c6807660e3b342532786822
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102826"
 ---
 # <a name="logging-in-the-script-task"></a>在指令碼工作中記錄
 

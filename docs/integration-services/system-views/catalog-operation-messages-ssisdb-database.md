@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a45ce170d7965ca8358dd6a442a25a67190651cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e12e63be770a7547e61b1fd546171d4f5cae4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045233"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB 資料庫)
 

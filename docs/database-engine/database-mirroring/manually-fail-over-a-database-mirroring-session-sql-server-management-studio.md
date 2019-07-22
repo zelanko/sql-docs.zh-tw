@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 48dbf8caf5a38e228d6c11e6b5917693adc24176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab61ea2aeebb4e901e93a113fb24a7a74640b059
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041755"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

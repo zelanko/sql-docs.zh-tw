@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: db439c34845dc01c54752e01428fa9793f994fdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6f16706c12ad40a8d5720e8cb868c279dbefc30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031338"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>將變更套用到目的地
 

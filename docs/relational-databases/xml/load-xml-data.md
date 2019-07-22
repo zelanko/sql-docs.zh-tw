@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eaf25e09c5f7c8706c685875ebc7eb39bce95fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 286513b2c78c87a1a0275b94d3e09ad961c4ff8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026625"
 ---
 # <a name="load-xml-data"></a>載入 XML 資料
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

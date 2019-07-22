@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 0a6e4985-9601-4877-942a-cf53f6932958
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9b2fe4727206a16ab116b10eade47b96a8df37e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01c31919eebd170013ebcc84ac3851a920fefedc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026229"
 ---
 # <a name="data-type-functions-transact-sql"></a>資料類型函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

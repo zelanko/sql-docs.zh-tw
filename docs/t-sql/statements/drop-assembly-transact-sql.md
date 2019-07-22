@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 356fd02aad93f523aa621927997fb50182730a05
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984288"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  *assembly_name*  
  這是您要卸除的組件名稱。  
   
- WITH NO DEPENDENTS   
+ WITH NO DEPENDENTS  
  如果指定的話，只會卸除 *assembly_name*，而不會卸除該組件參考的任何相依組件。 若未指定，DROP ASSEMBLY 就會卸除 *assembly_name* 和所有的相依組件。  
   
 ## <a name="remarks"></a>Remarks  
@@ -66,7 +65,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
   
  DROP ASSEMBLY 不會影響任何參考目前正在執行之組件的程式碼。 不過，DROP ASSEMBLY 執行之後，嘗試叫用該組件程式碼就會失敗。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要組件的擁有權或 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

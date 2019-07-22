@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b4d29d3f616a9545aead55937012cffed74bee5d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: bad7e43d5bbd7f3a263de52f8bb4bda7c64bfd29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111139"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>在複寫監視器中重新整理資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

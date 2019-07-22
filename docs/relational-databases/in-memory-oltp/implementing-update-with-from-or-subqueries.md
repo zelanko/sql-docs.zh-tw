@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6af025104d3d17ba7856df7739539ea065e4c197
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c41165cf1e4a6b1ad8122cb674f8644f40d8ebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050262"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>以 FROM 或子查詢實作 UPDATE
 

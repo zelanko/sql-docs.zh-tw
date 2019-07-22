@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc51f5f2d064e5a9cfeeb709cc3649daaaf4c736
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086708"
 ---
 # <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

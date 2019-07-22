@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30636d3dca44e93b67d67d330dbabd04d6feb4ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90163caba595936f5c9ef9854b8e1f0af2890673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129835"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>訂閱逾期與停用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "47820386"
   
     -   複寫無法在發行集和訂閱資料庫中清除中繼資料，直到到達保留期限為止。 小心指定保留期限的高數值，因為此值可能對複寫效能產生負面影響。 若您能夠確實預測所有訂閱者都會在該時間週期內定期同步處理，建議您使用較低設定。  
   
-    -   可以指定訂閱永不過期 ( **@retention**的值為 0)，但強烈建議您不要使用此值，因為中繼資料無法清除。  
+    -   可以指定訂閱永不過期 ( **@retention** 的值為 0)，但強烈建議您不要使用此值，因為中繼資料無法清除。  
   
 -   任何重新發行者的保留期限必須設定為等於或少於原始「發行者」的設定值。 對所有的「發行者」及其替代性同步處理夥伴，也應該使用相同的發行保留值。 使用不同值可能會導致非交集的情況。 若您需要變更發行集保留值，請重新初始化訂閱者，以避免資料無法聚合。  
   

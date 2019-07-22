@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068985"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>逐步解說：使用自訂測試條件來驗證預存程序的結果
 在這個延伸模組功能逐步解說中，您將建立測試條件，並透過建立 SQL Server 單元測試來驗證其功能。 此程序包含建立測試條件的類別庫專案，以及簽署及安裝專案。 若您已經有要更新的測試條件，請參閱[如何：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  

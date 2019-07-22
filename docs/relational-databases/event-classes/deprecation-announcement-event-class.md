@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 236bf28f9455ed2a9bf3a84aad4fa0ce71b7c52f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4eef925a3ce7e44fe983bf8007e6333979bb823
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62685264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138004"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

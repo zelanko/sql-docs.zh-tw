@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa4eca66eaab6abf6b6bf4332dce1c48bb5835cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ef5288ea0ffef804aeb9c11aff51b0db6ef4093
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057867"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作
 

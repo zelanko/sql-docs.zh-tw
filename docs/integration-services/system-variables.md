@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed952b3e9d275d54c751aa64c6544653511667c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e1114b1d77ed339e752f11e9364df7e58880a8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038467"
 ---
 # <a name="system-variables"></a>系統變數
 

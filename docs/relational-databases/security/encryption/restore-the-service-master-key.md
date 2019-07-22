@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: cf93c5a2918089bffd8bfe724f165d20722af086
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: c16742fe161f947e6256537ce04f36f9a07a89a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111626"
 ---
 # <a name="restore-the-service-master-key"></a>還原服務主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "53997530"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
 需要伺服器的 CONTROL SERVER 權限。  
   
 ## <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -53,9 +52,9 @@ ms.locfileid: "53997530"
   
 2. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-3. 在標準列上，按一下 **[新增查詢]**。  
+3. 在標準列上，按一下 **[新增查詢]** 。  
   
-4. 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+4. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- Restores the service master key from a backup file.  

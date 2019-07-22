@@ -1,5 +1,5 @@
 ---
-title: 資料列層級安全性 | Microsoft Docs
+title: 資料列層級安全性 | Microsoft 文件
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de58a5d37bae0f589cae0c56dba21370923aa850
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: ba4f9d9eaff0571e3581468b19371a2f7716545e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986573"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 

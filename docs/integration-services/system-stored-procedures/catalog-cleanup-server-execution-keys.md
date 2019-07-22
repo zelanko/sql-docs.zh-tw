@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af4f827babe48f9feef07d3572d9758049bb5ee0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 619fea014d695cb4601eaf876dcca0add3604f2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110476"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys 
 

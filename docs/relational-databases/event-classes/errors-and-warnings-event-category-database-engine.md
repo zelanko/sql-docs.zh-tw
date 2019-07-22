@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33a4894f1b76c86f635360101b280e6220d2dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fd2ee391b2223c7c2db0d086d561594ebec1125
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089550"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 事件類別目錄 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

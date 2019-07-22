@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 154e7a7136abe882ddd9ea8d036ab5a8906916e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 208babd394592d48feaf257d14329db89d11f767
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092625"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f8d0b6013631cf4b6d888f8e96c24dd9cb83146f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 84050cd000ae53b8b913a9652a4ddb323743c8da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046581"
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "54130968"
 > [!NOTE]  
 >  某些 Windows 作業系統中的「使用者帳戶控制」(UAC) 可以防止以管理員權限存取快照集共用。 因此，您必須針對快照集代理程式、散發代理程式和合併代理程式所使用的 Windows 帳戶，明確地授與快照集共用權限。 即使 Windows 帳戶是管理員群組的成員，也必須這麼做。 如需詳細資訊，請參閱[保護快照集資料夾](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
-|Agent|[權限]|  
+|Agent|權限|  
 |-----------|-----------------|  
 |快照集代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須：<br /><br /> -至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> -具備快照集共用的讀取、寫入及修改權限。<br /><br /> <br /><br /> 請注意，用來 *連接* 發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。|  
 |記錄讀取器代理程式|在連接到散發者時，需使用執行代理程式的 Windows 帳戶。 這個帳戶必須至少是散發資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 用來連接發行者的帳戶必須至少是發行集資料庫中 **db_owner** 固定資料庫角色的成員。<br /><br /> 選取 **sync_type** 選項 *replication support only*、 *initialize with backup*或 *initialize from lsn*時，記錄讀取器代理程式必須在執行 **sp_addsubscription**之後執行，讓設定指令碼寫入至散發資料庫。 記錄讀取器代理程式必須在屬於 **系統管理員 (sysadmin)** 固定伺服器角色成員的 Windows 帳戶底下執行。 當 **sync_type** 選項設為 *Automatic*時，不需要任何特殊的記錄讀取器代理程式動作。|  
@@ -81,7 +80,7 @@ ms.locfileid: "54130968"
   
  \*對於 Oracle 發行集的發送訂閱，其作業名稱會是 **\<發行者>-\<發行者**>，而不是 **\<發行者>-\<發行集資料庫**>。  
   
- \*\*對於 Oracle 發行集的提取訂閱，其作業名稱會是 **\<發行者>-\<散發資料庫**>，而不是 **\<發行者>-\<發行集資料庫>**。  
+ \*\*對於 Oracle 發行集的提取訂閱，其作業名稱會是 **\<發行者>-\<散發資料庫**>，而不是 **\<發行者>-\<發行集資料庫>** 。  
   
  在複寫設定期間，指定代理程式應在其下執行的帳戶。 但是，所有作業步驟均在 *Proxy*安全性內容下執行，因此複寫將為您指定的代理程式帳戶在內部執行下列對應：  
   

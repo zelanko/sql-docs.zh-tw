@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f24ebc5f72ed0bd2bd62550b37bbdc13c940f661
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc2c9a8ebd5d60dbd9c3ed302b76a3c248941439
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62985448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081635"
 ---
 # <a name="sql-server-express-localdb-reference"></a>SQL Server Express LocalDB 參考
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

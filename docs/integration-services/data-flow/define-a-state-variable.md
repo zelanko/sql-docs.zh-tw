@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6d689ee12759b6d894a068bf5a9f9437a0631ef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 796446e4254a9d2e62fc3e1ed302324a0e37baae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062978"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
 

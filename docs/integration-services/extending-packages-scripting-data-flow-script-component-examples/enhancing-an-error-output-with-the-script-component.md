@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3c9a7827c70f99db24c50704f2591b8288124d45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b79c2a412ee4c064ff04a9cb5481689f0b28ce6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66469673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112454"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用指令碼元件增強錯誤輸出
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: f48007f8a782731b5a4348a3c9bae470e23588f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b42f879a238e1c1e9a44c92c8683a91c9021600
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030865"
 ---
 # <a name="stlength-geometry-data-type"></a>STLength (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

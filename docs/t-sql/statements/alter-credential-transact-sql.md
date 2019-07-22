@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ec9f609ed3687106ca65152496cbb20b2ff1b8f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6ac23553500fbf3092d9450b6f5a222863dc1dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63051593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065917"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

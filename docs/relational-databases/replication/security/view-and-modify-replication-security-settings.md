@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: aa4ed7aa2eaf3d10ec2b69860b71b8b612cc9ff8
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 55b838b7fb324cf15b3bf4967d1de68706a337d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051738"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

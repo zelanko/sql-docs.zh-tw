@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b169a3b-30da-4981-b998-b52d61811572
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1e17e2366021959615c7864918cf036081e3ba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb395edd4d0c8cd9b9745967e210713bdb49388
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100243"
 ---
 # <a name="mssqleng014120"></a>MSSQL_ENG014120
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47600477"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|14120|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  

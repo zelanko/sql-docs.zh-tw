@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38d267db0fe3656d860ec3cfe7063da88a069bc9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ba0a80db010c3f0b575cbfbf4cead6d5bc4a7943
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100020"
 ---
 # <a name="publication-information-agents-merge-publication"></a>發行集資訊，代理程式 (合併式發行集)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +26,11 @@ ms.locfileid: "54127758"
 ## <a name="options"></a>選項。  
  如需快照集代理程式的詳細資訊與相關工作，請以滑鼠右鍵按一下代理程式的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 [排序資料行] 對話方塊中排序一個或多個資料行。  
+-   **排序**：在 [排序資料行]  對話方塊中排序一個或多個資料行。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行] 對話方塊中的顯示順序。  
+-   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行]  對話方塊中的顯示順序。  
   
--   **篩選**：根據 [篩選設定] 對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**：根據 [篩選設定]  對話方塊中的資料行值，篩選方格中的資料列。  
   
 -   **清除篩選**：清除方格的所有篩選設定。  
   

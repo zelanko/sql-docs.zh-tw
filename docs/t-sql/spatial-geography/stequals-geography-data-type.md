@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e12465bf75cb6619e837ba55eaca09231cc4b5e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caa274b1571a9c0506acbe3f6d5d5d004588fede
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042271"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -10,13 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
-ms.openlocfilehash: 8b91a1572e5c7cd477d8e112b68b8f9a46fb1153
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054631"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>執行部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件
 

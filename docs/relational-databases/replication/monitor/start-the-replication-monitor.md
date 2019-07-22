@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 444cbddc2129d16bf8486b5c4b76a7b338fde46d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: f3d237be5cdfaaeb79216eb6a8aa6d169bb5a1c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104616"
 ---
 # <a name="start-the-replication-monitor"></a>啟動複寫監視器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

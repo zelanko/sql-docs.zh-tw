@@ -10,13 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: fb7ccf97443bf95187918fc92dcc9f2c7d03ef83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990938"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安裝 SQL Server
 

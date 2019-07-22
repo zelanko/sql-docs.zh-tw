@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1b374b8dc5ef942bd5c7e16329e0b226befb668d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1583d849b28a2ef8ae6e22e311304c3f258cc706
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112637"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>針對查閱轉換來建立及部署快取
 

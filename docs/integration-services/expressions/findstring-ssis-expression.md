@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cadd3f8fbfee31bc79c4cccc70f270e06229f27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9795b15cf47fbaad588139aff0658978ae868807
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088773"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 運算式)
 

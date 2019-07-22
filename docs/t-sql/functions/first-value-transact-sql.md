@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb15792c255a00b77565bc84eabbd474a63cc63c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5954a1b090be1749c07c09a83d4c2cfbf441f6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071377"
 ---
 # <a name="firstvalue-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

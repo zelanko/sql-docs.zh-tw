@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5198b8919fb41c754d5d94ac45c895dda852e2e
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126776"
 ---
 # <a name="sequence-numbers"></a>序號
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

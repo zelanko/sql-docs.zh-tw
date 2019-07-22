@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f55234fc277a9dcbdf3b687e44f54500400591ce
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f6e34fbab18c987a635250bba5557a4d3a214b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126206"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 的預設和具名執行個體的檔案位置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "53213427"
 >  請勿刪除下列任何一個目錄或是其內容：Binn、Data、Ftdata、HTML 或 1033。 必要時，您可以刪除其他目錄。不過，如果您沒有解除安裝後再重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的話，可能會無法擷取任何遺失的功能或資料。 請勿刪除或修改 HTML 目錄中的任何 .htm 檔。 這些檔案是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具得以正常運作所不可或缺的要素。  
   
 ## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- 在單一電腦上，所有執行個體所使用的通用檔案會安裝在資料夾 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 \<磁碟機> 是安裝元件的磁碟機代號。 預設通常為磁碟機 C。\<*nnn*> 代表版本。 下表識別了路徑的版本。 
+ 在單一電腦上，所有執行個體所使用的通用檔案會安裝在資料夾 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 \<磁碟機  > 是安裝元件的磁碟機代號。 預設通常為磁碟機 C。\<*nnn*> 代表版本。 下表識別了路徑的版本。 
 
 |\<*nnn*>|Version
 |-----|-----

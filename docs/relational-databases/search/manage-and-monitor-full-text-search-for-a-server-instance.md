@@ -12,14 +12,13 @@ ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f1c47068d35da60877f9523a905c539cfac9e17
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 68d1ea1ee1adc7c5126606bd0cf72ca8e54a725c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132264"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

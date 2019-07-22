@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 760d19dc87634a519030d064623dfcd743a566f5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: dbfeb117d22e468bdae8b9e2ebe598b099588bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112932"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>建立、修改和卸除選擇性 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

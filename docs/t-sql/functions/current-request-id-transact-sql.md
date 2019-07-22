@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3efa9db81b9079f35cafb245dc10f3437c5c445d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1880ef3ea67ddac948653054a8d5678787c17dcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026433"
 ---
 # <a name="currentrequestid-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

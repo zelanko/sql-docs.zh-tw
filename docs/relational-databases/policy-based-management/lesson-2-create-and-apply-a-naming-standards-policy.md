@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c00b9b2156848e45ce4f73429c8cf397f7d34fc2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087168"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 課：建立和套用命名標準原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 86ed178fcd6b12125a38b43fec442a7f80004fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c2dceee5ebda0b6039a2614b3ae3d9b0dd356e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988657"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Always On 可用性群組的可用性複本屬性 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

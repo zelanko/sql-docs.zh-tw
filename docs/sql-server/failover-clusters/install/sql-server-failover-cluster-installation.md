@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58913303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063876"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

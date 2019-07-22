@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 81523c69052a89b5a94c170c65be077ba17e56c6
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: da8c23819a2f47caf087ab44cd654b795a9a044d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039109"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## <a name="arguments"></a>引數  
- *dbcc_statement* | *@dbcc_statement_var*  
+ *dbcc_statement* |  *@dbcc_statement_var*  
  這是接收語法資訊之 DBCC 命令的名稱。 它只提供 DBCC 後面的 DBCC 命令部分，例如，只提供 CHECKDB 而不是 DBCC CHECKDB。  
   
  ?  
@@ -53,7 +52,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ## <a name="result-sets"></a>結果集  
 DBCC HELP 會傳回結果集，顯示指定 DBCC 命令的語法。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。
   
 ## <a name="examples"></a>範例  
@@ -67,7 +66,7 @@ DBCC HELP (@dbcc_stmt);
 GO  
 ```  
   
-### <a name="b-using-dbcc-help-with-the--option"></a>B. 使用 DBCC HELP 搭配 ?  選項  
+### <a name="b-using-dbcc-help-with-the--option"></a>B. 使用 DBCC HELP 搭配 ? 選項  
 下列範例會傳回所有提供了說明的 DBCC 陳述式。
   
 ```sql  

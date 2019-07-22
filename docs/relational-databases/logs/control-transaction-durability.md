@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62707130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084097"
 ---
 # <a name="control-transaction-durability"></a>控制交易持久性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

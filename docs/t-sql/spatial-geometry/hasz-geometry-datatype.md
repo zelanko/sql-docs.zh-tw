@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: d29a99be39779283b0f6841ac51598491141938d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cba3487b17828ffaf4f7bd092b83542de639fcfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101247"
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

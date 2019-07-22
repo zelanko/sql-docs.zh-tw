@@ -8,14 +8,13 @@ ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4d607a7fa7dd9ce91c5ca97bf144f89e1624ed93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ea9e05d0a3f1c330fc24f52670384b2a3cd844d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984684"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援
 

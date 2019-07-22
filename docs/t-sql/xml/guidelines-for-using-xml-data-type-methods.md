@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 890e5d02f72f9af0d0609602e3815b872d870b45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051306"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>使用 xml 資料類型方法的指導方針
 

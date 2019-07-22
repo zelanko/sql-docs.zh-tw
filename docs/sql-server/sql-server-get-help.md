@@ -7,14 +7,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3187c312683713253ec60431f8892fdf0185c933
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 12758c3d340590cedecc2d9f4f149ad82d6987e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136426"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 說明與意見反應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +49,7 @@ Azure Data Studio 小組會密切監視 [Azure Data Studio Github](https://githu
 ## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>我想要離線存取 SQL Server 技術文件
 如果您想要在離線系統上檢視 SQL Server 文件，您有兩個選項。 您可以在 SQL Server 技術文件中建立 PDF，或使用 [SQL Server 離線說明檢視器](sql-server-help-installation.md)下載離線內容。 
 
-如果您想要建立 PDF，請按一下位於每個目錄底部的 [Download PDF] \(下載 PDF\) 連結。
+如果您想要建立 PDF，請按一下位於每個目錄底部的 [Download PDF] \(下載 PDF\)  連結。
 ![下載 PDF](media/sql-server-get-help/download-pdf.png)
 
 ## <a name="i-want-to-contact-microsoft-support"></a>我想要連絡 Microsoft 支援服務

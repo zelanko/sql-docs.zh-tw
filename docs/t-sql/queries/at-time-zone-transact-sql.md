@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c38cff3036b3c00897d28a1ff12e576f61bf4cfd
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031520"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

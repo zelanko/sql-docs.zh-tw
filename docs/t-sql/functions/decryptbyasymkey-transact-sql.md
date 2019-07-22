@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3a46b3f19bc676b0b8e9f86db684328940b6e520
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c187caf0dc0027d6d7fa86cbd1bee09e76f0228d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118956"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

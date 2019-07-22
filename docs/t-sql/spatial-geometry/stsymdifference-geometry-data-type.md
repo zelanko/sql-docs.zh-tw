@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: bd51f436a5899722cc759ef79c5ead212f345bf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea26c364621910d6dd5148a5753bd6709d3e0f07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066281"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

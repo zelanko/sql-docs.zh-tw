@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8cba297aa253fd4f4d7798342ccb4627f8008154
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 09dc99233119b39161039f524599b9f36c3128ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107876"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票組態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "53215514"
 ##  <a name="ClusterHealthDetectionbyQuorum"></a> 使用仲裁進行叢集健全狀況偵測  
  WSFC 叢集中的每個節點都會參與定期的活動訊號通訊，與其他節點共用節點的健全狀況。 沒有回應的節點是視為處於失敗狀態。  
   
- *「仲裁」* (Quorum) 節點集是 WSFC 叢集中的多數投票節點和見證。 WSFC 叢集的整體健全狀況和狀態是由定期 *「仲裁投票」*(Quorum Vote) 所決定。  仲裁的存在意味著叢集狀況良好，能提供節點層級的容錯功能。  
+ *「仲裁」* (Quorum) 節點集是 WSFC 叢集中的多數投票節點和見證。 WSFC 叢集的整體健全狀況和狀態是由定期 *「仲裁投票」* (Quorum Vote) 所決定。  仲裁的存在意味著叢集狀況良好，能提供節點層級的容錯功能。  
   
  缺少仲裁表示叢集狀況不良。  必須維護整體 WSFC 叢集健全狀況，以確保次要節點狀況良好，可供主要節點容錯移轉。  如果仲裁投票失敗，做為預防措施，WSFC 叢集將設為離線。  這也會導致在叢集中註冊的所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體停止。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "53215514"
 >  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]非對稱儲存組態時，如果投票節點為奇數，通常應該使用節點多數仲裁模式，如果投票節點為偶數，則使用節點與檔案共用多數仲裁模式。  
   
 ##  <a name="VotingandNonVotingNodes"></a> 投票和非投票節點  
- 根據預設，WSFC 叢集中的每個節點都是叢集仲裁成員，每個節點都有一票決定整體叢集健全狀況，而且每個節點都會持續嘗試建立仲裁。  仲裁討論至此，針對投票決定叢集健全狀況的 WSFC 叢集節點集仔細限定為「投票節點」。  
+ 根據預設，WSFC 叢集中的每個節點都是叢集仲裁成員，每個節點都有一票決定整體叢集健全狀況，而且每個節點都會持續嘗試建立仲裁。  仲裁討論至此，針對投票決定叢集健全狀況的 WSFC 叢集節點集仔細限定為「投票節點」  。  
   
  WSFC 叢集中沒有個別節點可針對叢集整體狀況良好或狀況不良做最後決定。  在任何給定時刻，從每個節點的觀點來看，某些其他節點可能看起來離線、看起來正在進行容錯移轉，或因為網路通訊失敗而看起來沒有回應。  仲裁投票的關鍵功能是決定 WSFC 叢集中每個節點的表面狀態是否確實為這些節點的實際狀態。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "53215514"
   
  不過，如果另一個子網路上的節點在仲裁投票中是視為無回應，但它實際上已上線，另一方面也是狀況良好，最可能的原因是子網路之間的網路通訊失敗。  根據叢集拓撲、仲裁模式和容錯移轉原則組態，該網路通訊失敗實際上可能會建立多組投票節點 (或子網路)。  
   
- 當多個投票節點的子網路能夠獨立建立仲裁時，這稱為「裂腦案例」。  在這種情況下，在個別仲裁中的節點可能有不同的表現方式，並且互相衝突。  
+ 當多個投票節點的子網路能夠獨立建立仲裁時，這稱為「裂腦案例」  。  在這種情況下，在個別仲裁中的節點可能有不同的表現方式，並且互相衝突。  
   
 > [!NOTE]  
 >  只在系統管理員手動執行強制仲裁作業時，或在極罕見狀況下手動執行強制容錯移轉，而明確細分仲裁節點集，裂腦案例才是可能的。  

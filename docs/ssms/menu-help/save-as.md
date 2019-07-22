@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 0bb404256c0cc8b36005eb071be573e01cab599b
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: ef6bd7f10ba88988b02dce010f7cce235ad2c751
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682638"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256997"
 ---
 # <a name="save-as"></a>另存新檔
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

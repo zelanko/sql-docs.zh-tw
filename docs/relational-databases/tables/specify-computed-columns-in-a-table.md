@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d5f1da7e23cb183eba5a44d873218041805ed28
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082559"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
 

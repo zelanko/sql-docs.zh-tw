@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4d012b983c2114998def1104f7199f58a9e570b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3194e2dbb6563b5260fcc390e84e73a17e09542c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045466"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 目的地
 

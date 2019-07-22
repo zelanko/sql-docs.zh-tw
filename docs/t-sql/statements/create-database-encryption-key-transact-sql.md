@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7effa50d8e280cbb310b7aeadd9100e82a62a77f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: da59f10213eab84f52b764f41625d6f9361f0a40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061002"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -80,7 +79,7 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
 指定用於加密資料庫加密金鑰之非對稱金鑰的名稱。 為了利用非對稱金鑰加密資料庫加密金鑰，非對稱金鑰必須位在可延伸金鑰管理提供者上。  
   
 ## <a name="remarks"></a>Remarks  
-您需要具備資料庫加密金鑰，資料庫才可以使用「資料庫透明加密」(TDE) 進行加密。 當資料庫以透明方式進行加密時，會在檔案層級加密整個資料庫，而不需要修改任何特殊的程式碼。 用於加密資料庫加密金鑰的憑證或非對稱金鑰必須位於 master 系統資料庫中。  
+您需要具備資料庫加密金鑰，資料庫才可以使用「資料庫透明加密」(TDE)  進行加密。 當資料庫以透明方式進行加密時，會在檔案層級加密整個資料庫，而不需要修改任何特殊的程式碼。 用於加密資料庫加密金鑰的憑證或非對稱金鑰必須位於 master 系統資料庫中。  
   
 資料庫加密陳述式僅允許用於使用者資料庫。  
   
@@ -90,7 +89,7 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫會自動建立資料庫加密金鑰。 您不需要使用 CREATE DATABASE ENCRYPTION KEY 陳述式來建立金鑰。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要資料庫的 CONTROL 權限，以及用於加密資料庫加密金鑰之憑證或非對稱金鑰的 VIEW DEFINITION 權限。  
   
 ## <a name="examples"></a>範例  

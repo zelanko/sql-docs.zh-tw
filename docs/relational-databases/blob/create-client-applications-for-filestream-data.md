@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 20573362cc8eb41c3b6741bbc6efb8f6a3f9c9f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 385deb9dd689c6716ab8addaa64d8bf8bd62ed97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085388"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>建立 FILESTREAM 資料的用戶端應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

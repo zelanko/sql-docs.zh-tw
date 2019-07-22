@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ddb53c690023a0d0abdb95a9ca054f611990a4ee
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7376d783bd2aab594d0beeb18dc1cc03af4b9c50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025886"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

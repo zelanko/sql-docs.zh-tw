@@ -22,19 +22,18 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed70ca65089991b2b557179beda3c7bd6c58b9ac
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116786"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會提供伺服器層級角色來協助您管理伺服器的權限。 這些角色是將其他主體組成群組的安全性主體。 伺服器層級角色的權限範圍為整個伺服器  (「角色」就像是 Windows 作業系統中的「群組」)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會提供伺服器層級角色來協助您管理伺服器的權限。 這些角色是將其他主體組成群組的安全性主體。 伺服器層級角色的權限範圍為整個伺服器 (「角色」  就像是 Windows 作業系統中的「群組」  )。  
   
  固定伺服器角色是為了方便和回溯相容性所提供。 請盡可能指派更特定的權限。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "59429354"
 |**bulkadmin**|**bulkadmin** 固定伺服器角色的成員可以執行 `BULK INSERT` 陳述式。|  
 |**diskadmin**|**diskadmin** 固定伺服器角色是用來管理磁碟檔案。|  
 |**dbcreator**|**dbcreator** 固定伺服器角色的成員可以建立、改變、卸除及還原任何資料庫。|  
-|**public**|每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入都屬於 **public** 伺服器角色。 當伺服器主體未被授與或拒絕安全性實體物件的特定權限時，該使用者會繼承授與給該物件之 public 的權限。 只有當您想要將任何物件提供給所有使用者使用時，才指派該物件的 public 權限。 您無法變更 public 的成員資格。<br /><br /> **注意：****public** 的實作方式不同於其他角色，您可以授與、拒絕或撤銷 public 固定伺服器角色的權限。|  
+|**public**|每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入都屬於 **public** 伺服器角色。 當伺服器主體未被授與或拒絕安全性實體物件的特定權限時，該使用者會繼承授與給該物件之 public 的權限。 只有當您想要將任何物件提供給所有使用者使用時，才指派該物件的 public 權限。 您無法變更 public 的成員資格。<br /><br /> **注意：** **public** 的實作方式不同於其他角色，您可以授與、拒絕或撤銷 public 固定伺服器角色的權限。|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>固定伺服器角色的權限  
  每個固定伺服器角色都擁有指派給它的特定權限。 下圖顯示指派給伺服器角色的權限。   

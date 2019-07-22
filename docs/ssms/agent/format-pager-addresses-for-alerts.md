@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 357b2edd9e1e8ef3c60bbdfa12fffd165f42420d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 6c67c9b74392ee8d2ec74e3e1b24ac6612ff9b61
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687095"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262427"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7417f763aaff5d541f351848eb59b71e9a67a70f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7b122bde62bdae597498c0cf0992ff1c0732c6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081135"
 ---
 # <a name="data-truncation-ssis"></a>資料截斷 (SSIS)
 

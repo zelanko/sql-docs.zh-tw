@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9aea2cb62ad12745a8ad03fd9998a47ee77173e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044220"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +70,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
  如果有計算資料行參考這個函數，而且已經產生索引，DROP FUNCTION 就不會成功。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要執行 DROP FUNCTION，使用者至少必須對該函數所屬的結構描述具備 ALTER 權限，或是對該函數具備 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

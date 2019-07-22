@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d9a981cb1302b8edb1776a5808221eaddd2263b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 892e4c09154e93ded7718819c86dfe91c18c85ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026256"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

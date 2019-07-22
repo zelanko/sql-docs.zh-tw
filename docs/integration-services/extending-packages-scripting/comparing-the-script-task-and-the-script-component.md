@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b68460fb55922fa34143c1a6f6c94cad3ae17171
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74f7d39ad056138dd8fad29afe96e2a8c40d75ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094539"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比較指令碼工作和指令碼元件
 

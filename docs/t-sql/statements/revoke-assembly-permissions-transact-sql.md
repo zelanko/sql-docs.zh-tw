@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f10a5ac6202e635d69756fa57430109c7459e353
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082378"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE 組件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  指定組件可以撤銷的權限。 如下所列。  
   
- ON ASSEMBLY **::**_assembly_name_  
+ ON ASSEMBLY **::** _assembly_name_  
  指定正在撤銷權限的組件。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
@@ -109,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要組件的 CONTROL 權限  
   
 ## <a name="see-also"></a>另請參閱  

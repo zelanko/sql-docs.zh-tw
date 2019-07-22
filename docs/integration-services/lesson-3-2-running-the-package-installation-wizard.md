@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0bd82529575d1907d8a3948ef9301e6925eced8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086508"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>課程 3-2 - 執行套件安裝精靈
 

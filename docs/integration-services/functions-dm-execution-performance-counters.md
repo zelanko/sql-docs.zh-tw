@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 543a4502199287432ca8a13220fa95223797340a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 820d4b3dae7643db7f03f4e761b63208f20263e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102795"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>函式 - dm_execution_performance_counters
 

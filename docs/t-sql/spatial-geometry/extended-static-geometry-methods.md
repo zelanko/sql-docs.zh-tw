@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 1478a7a660892b05bd9914d6a165d85d1a5e16ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b7373754e9f2cd8323e5fdd421a556167380b73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081148"
 ---
 # <a name="extended-static-geometry-methods"></a>擴充的靜態幾何方法
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

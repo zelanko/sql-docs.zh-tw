@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 262a4538774d2827d60367d1d96a12fb15e2d0f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991499"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>將資料庫新增至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
