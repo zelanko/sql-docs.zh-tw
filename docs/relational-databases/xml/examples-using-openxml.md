@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943389"
 ---
 # <a name="examples-using-openxml"></a>範例:使用 OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -476,11 +475,11 @@ EXEC sp_xml_removedocument @docHandle
   
  在 WITH 子句內的 *SchemaDeclaration* 中，亦使用 *ColName* 與 *ColType* 參數來指定 *ColPattern* 。 選用的 *ColPattern* 是指定的 XPath 模式，它表示下列各項：  
   
--   針對資料列集內的 **ProdID** 資料行指定為 *ColPattern* 的 XPath 模式 (**.**) 識別內容節點，即目前節點。 根據所指定的 *rowpattern*，這是 <`OrderDetail`> 元素的 **ProductID** 屬性。  
+-   針對資料列集內的 **ProdID** 資料行指定為 *ColPattern* 的 XPath 模式 ( **.** ) 識別內容節點，即目前節點。 根據所指定的 *rowpattern*，這是 <`OrderDetail`> 元素的 **ProductID** 屬性。  
   
--   針對資料列集內的 **Qty** 資料行所指定的 *ColPattern*、**../\@Quantity**，識別內容節點 \<ProductID> 之父節點 <`OrderDetail`> 的 **Quantity** 屬性。  
+-   針對資料列集內的 **Qty** 資料行所指定的 *ColPattern*、 **../\@Quantity**，識別內容節點 \<ProductID> 之父節點 <`OrderDetail`> 的 **Quantity** 屬性。  
   
--   同樣地，針對資料列集內的 **OID** 資料行所指定的 *ColPattern*、**../../\@OrderID**，識別內容節點的父節點之父系 <`Order`> 的 **OrderID** 屬性。 父節點是 <`OrderDetail`>，內容節點是 <`ProductID`>。  
+-   同樣地，針對資料列集內的 **OID** 資料行所指定的 *ColPattern*、 **../../\@OrderID**，識別內容節點的父節點之父系 <`Order`> 的 **OrderID** 屬性。 父節點是 <`OrderDetail`>，內容節點是 <`ProductID`>。  
   
  然後，SELECT 陳述式擷取由 OPENXML 所提供之資料列集內的所有資料行。  
   

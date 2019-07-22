@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 0b496ecde35917702f1bb976df390c8f5832ac77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930136"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

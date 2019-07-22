@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 62ba3dc8bc64b346ee0818bc4eb6a8b7bb6db088
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c8b190e1678ff53d29e31dde55069739c2ce76f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079887"
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

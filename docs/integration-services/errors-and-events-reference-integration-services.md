@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e107326e5269cfbd0f9e229bb418b83bc9fbfdb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00c1fed0bf79774a9e3f52d00f69be5c6222deae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057684"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
 

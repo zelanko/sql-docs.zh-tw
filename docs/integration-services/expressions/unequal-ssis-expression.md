@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd00eff761b25182d39d7ac3e7630272429ebe16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 829b28ad1c70daff15f0ba4676746998667efc71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967613"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (不等於) (SSIS 運算式)
 

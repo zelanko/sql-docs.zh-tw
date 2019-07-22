@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5dbf3bbd011838bc9c000f271317c86623251896
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a308225e96c740680b2df243f35cac216f53e3e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024298"
 ---
 # <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac4685a5d62acab3754e459b952e151a0c114ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85a2162e2b1973032e4e4678ef2eb9d7b6ac6dc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026540"
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

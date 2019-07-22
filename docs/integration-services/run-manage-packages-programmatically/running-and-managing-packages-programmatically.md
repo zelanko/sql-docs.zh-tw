@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66f32ad0e72e973ed5a9914431ed6830b56ce50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26b101ca8bdc582b2497f7462707a2a2db7e67c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028468"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以程式設計方式執行及管理封裝
 

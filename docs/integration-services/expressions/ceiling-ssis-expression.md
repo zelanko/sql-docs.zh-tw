@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0b9c9c7ab5ed0067d86b3beaa69461ab6e90672
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7663b63b3871a06b0f44f5f91cd9a6aee32aee56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033970"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 運算式)
 

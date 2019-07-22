@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4173a5153dbd05977fcb8cd42b695d3654b1584
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea530fca45a23293f1b08a1a7b4061bda904c1ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943881"
 ---
 # <a name="union-all-transformation"></a>聯集全部轉換
 

@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d21158a65edf2000d122850e0966d7ffb582a41f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 09b935ccc5f8ac1d357168f2032e822c9c0bcd8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141204"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +56,10 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## <a name="arguments"></a>引數  
- BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
+ BEGIN CONVERSATION TIMER **(** _conversation\_handle_ **)**  
  指定要計時的交談。 *conversation_handle* 必須是 **uniqueidentifier** 型別。  
   
- TIMEOUT   
+ TIMEOUT  
  指定等待多久之後，便將訊息放入佇列 (以秒為單位)。  
   
 ## <a name="remarks"></a>Remarks  
@@ -72,7 +71,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
   
  在使用者自訂函數中，BEGIN CONVERSATION TIMER 無效。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  交談計時器的設定權限預設給有交談服務之 SEND 權限的使用者、系統管理員 (**sysadmin**) 固定伺服器角色的成員，以及 **db_owner** 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  

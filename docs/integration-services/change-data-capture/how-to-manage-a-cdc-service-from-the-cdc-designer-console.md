@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: caa86a14e114958ef109d54e2f2d374c8b096b4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcf5e0ca1ac399ef27db98e6147a99251856c66f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076333"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何從 CDC 設計工具主控台管理 CDC 服務
 

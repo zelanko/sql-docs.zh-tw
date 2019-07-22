@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5a54e6ef3c7ede32f9a9d04a841e40d06667b5b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36253c495b20b7c2220593282410ecc059d8e12f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034478"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>資料分割處理目的地自訂屬性
 

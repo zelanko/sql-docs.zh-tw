@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 592af27fb460f748dcf11b1463583a5d221402d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ab13bd89c73a898167d551b61aa8027299ff81b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064508"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB 資料庫)
 

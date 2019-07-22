@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 8fa0b938cfc4d8d544dbfde3eb0b97b19d06d1dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b973e39b4e402bbe5fb970a57478587ac240daf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066528"
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 029660f4de4780a5917ffc6ad2a8e86f2ee1607f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36c2fd4974bb295516f90f7e8c80635dbcae48eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927760"
 ---
 # <a name="ranking-functions-transact-sql"></a>次序函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

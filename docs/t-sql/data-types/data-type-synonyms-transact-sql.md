@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 74fe3be365919d61a7b32587f910f083cc5e846d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 30a66dbcf9126031caa84cdf0ff7623d2dd16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927775"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>資料類型同義字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,21 +34,21 @@ ms.locfileid: "56034209"
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(**_n_**)**|**char(n)**|  
-|**character varying(**_n_**)**|**varchar(n)**|  
+|**character(** _n_ **)**|**char(n)**|  
+|**character varying(** _n_ **)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[**(**_n_**)**] 適用於 _n_ = 1-7|**real**|  
-|**float**[**(**_n_**)**] 適用於 _n_ = 8-15|**float**|  
+|**float**[ **(** _n_ **)** ] 適用於 _n_ = 1-7|**real**|  
+|**float**[ **(** _n_ **)** ] 適用於 _n_ = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(**_n_**)**|**nchar(n)**|  
-|**national char(**_n_**)**|**nchar(n)**|  
-|**national character varying(**_n_**)**|**nvarchar(n)**|  
-|**national char varying(**_n_**)**|**nvarchar(n)**|  
+|**national character(** _n_ **)**|**nchar(n)**|  
+|**national char(** _n_ **)**|**nchar(n)**|  
+|**national character varying(** _n_ **)**|**nvarchar(n)**|  
+|**national char varying(** _n_ **)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-資料類型同義字可用來取代資料定義語言 (DDL) 陳述式中對應的基底資料類型名稱。 這些陳述式包括 CREATE TABLE、CREATE PROCEDURE 和 DECLARE *@variable*。 不過，建立好物件之後，就看不見同義字了。 當建立物件時，會將同義字的相關基底資料類型指派給物件。 沒有在建立物件的陳述式中指定同義字的記錄。
+資料類型同義字可用來取代資料定義語言 (DDL) 陳述式中對應的基底資料類型名稱。 這些陳述式包括 CREATE TABLE、CREATE PROCEDURE 和 DECLARE *@variable* 。 不過，建立好物件之後，就看不見同義字了。 當建立物件時，會將同義字的相關基底資料類型指派給物件。 沒有在建立物件的陳述式中指定同義字的記錄。
   
 從原始物件衍生的物件 (例如結果集資料行或運算式) 都會被指派基底資料類型。 使用原始物件或任何衍生物件的所有中繼資料函數都將報告基底資料類型，而非同義字，包括：
 

@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: acb8b6a2186928d3fcbeb2156d172bcbb9ff9cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eeb1d9072874b24cf73c93eb3113417c66ee4f0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098817"
 ---
 # <a name="trigger-functions-transact-sql"></a>觸發程序函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: fd840d6371574d08ccf7281d1a3dd9f3db83dcaa
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: dc8f12ae745acd0410fb309dc4c3dc9b65e7a382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040453"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="remarks"></a>Remarks  
 當 READ_COMMITTED_SNAPSHOT 資料庫選項設為 ON 且交易隔離等級設為 'read committed' 時，DBCC USEROPTIONS 會報告 'read committed snapshot' 隔離等級。 實際的隔離等級為讀取認可。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **public** 角色的成員資格。
   
 ## <a name="examples"></a>範例  

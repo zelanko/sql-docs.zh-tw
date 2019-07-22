@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ca43c5b6faaa8aecf24da81e7a587f9c33636ac3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fe58243b9a5c4091b281114438bfe1520de7cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038557"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (SSISDB 資料庫)
 

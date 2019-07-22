@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e99e5a97b9d15702c0b1040ffade4a91528cbbf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099599"
 ---
 # <a name="database-properties-general-page"></a>資料庫屬性 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

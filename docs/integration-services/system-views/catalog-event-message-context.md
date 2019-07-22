@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d230b60b204d775e4a5329392960917c28b7c32d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb5add10328aaa4e7c3d1d49b7ac4ebdd8f2e658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038376"
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context 
 
@@ -31,7 +30,7 @@ ms.locfileid: "65715126"
 |-----------------|---------------|-----------------|  
 |Context_id|BIGINT|錯誤內容的唯一識別碼。|  
 |Event_message_id|BIGINT|與內容相關之訊息的唯一識別碼。|  
-|Context_depth|ssNoversion|隨著深度的增加，內容與錯誤之間的距離越遠。 當發生錯誤時，內容深度從 1 開始。 值為 0 表示開始執行之前的封裝狀態。|  
+|Context_depth|INT|隨著深度的增加，內容與錯誤之間的距離越遠。 當發生錯誤時，內容深度從 1 開始。 值為 0 表示開始執行之前的封裝狀態。|  
 |Package_path|Nvarchar(max)|內容來源的封裝路徑。|  
 |Context_type|SMALLINT|內容來源的物件類型。 如需內容類型的清單，請參閱＜**備註**＞一節。|  
 |Context_source_name|Nvarchar(4000)|內容來源的物件名稱。|  

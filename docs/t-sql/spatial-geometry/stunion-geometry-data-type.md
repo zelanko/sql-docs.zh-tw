@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9fe364e8e1f3ca9d610d95283e8a1957a6d60e31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 868b344a18494e4b92cd3ee5944cb80ad15ab845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066224"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

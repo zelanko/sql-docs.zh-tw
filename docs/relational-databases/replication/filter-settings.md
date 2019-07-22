@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a626e79a33c134a3bdde5880b68f2545c6dea78e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6d9ceca85c8f0f09137d0ed82730a4f409114369
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128116"
 ---
 # <a name="filter-settings"></a>篩選設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "54129638"
  選取您想要用來篩選的資料行名稱。 您可以讓篩選以一個或多個資料行為基礎。  
   
  **[等於]**  
- 選取篩選的運算子，例如 **[小於或等於]**。  
+ 選取篩選的運算子，例如 **[小於或等於]** 。  
   
  **值1** 和 **值2**  
  輸入或選取篩選的值。 大部分運算子只需要 **[值1]** 資料行的值，但 **[介於]** 和 **[不介於]** 運算子則需要 **[值2]** 資料行的值。  

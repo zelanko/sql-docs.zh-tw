@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f414c537cf986a259b795fac5dcc2daaf321b72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fd368cdf5289d1b21818d6c7d6e51d395e340d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006834"
 ---
 # <a name="enumeration-facets"></a>列舉 Facet
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

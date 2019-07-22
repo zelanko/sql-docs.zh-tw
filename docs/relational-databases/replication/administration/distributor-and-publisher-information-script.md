@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e60a723698a966c7c45045c9082f5a0cad2c6e40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b73736233e7bb0d8431746d4dcc5119a2a0a32e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939261"
 ---
 # <a name="distributor-and-publisher-information-script"></a>散發者與發行者資訊指定碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

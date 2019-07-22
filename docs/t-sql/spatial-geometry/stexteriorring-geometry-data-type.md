@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 808651c889985586e28132694f02b3f4c35b39f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c79a6aea1042649d688b52d124f9b661d4a5b7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107717"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: aba8942612be6c7b33883bb109146170583b5b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08cc5200801b99442c8973583f4ab7caa9ea9fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62649415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140734"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 查詢存放區物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

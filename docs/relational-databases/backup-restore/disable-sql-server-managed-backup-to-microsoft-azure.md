@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 18c3cb997d08182908b1817ffa1301121159daa8
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: c1a7e35c2c2a9428eb700b8429270874176d570a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089856"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>停用 SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +28,9 @@ ms.locfileid: "49461964"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
 ```  
 EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -41,16 +40,16 @@ GO
   
 ```  
   
-##  <a name="DatabaseAllDisable"></a> 停用執行個體上所有資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]   
+##  <a name="DatabaseAllDisable"></a> 停用執行個體上所有資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  從近期在執行個體上啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的所有資料庫中，若您要停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 組態設定，可使用下列程序。  組態設定 (例如儲存體 URL、保留項目和 SQL 認證) 都會保留在中繼資料中，如果稍後啟用資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 即可使用。 如果您只是想暫停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服務，可使用主切換，本主題的以下章節會加以解釋。  
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-all-the-databases"></a>停用所有資料庫的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 下列範例會識別 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 是否於執行個體層級進行設定，所有的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 是否啟用執行個體的資料庫，該範例還會執行系統預存程序 **sp_backup_config_basic** 以停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 下列範例會識別 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 是否於執行個體層級進行設定，所有的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 是否啟用執行個體的資料庫，該範例還會執行系統預存程序 **sp_backup_config_basic** 以停用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
 ```  
 -- Create a working table to store the database names  
@@ -116,9 +115,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -134,9 +133,9 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
 ```  
 Use msdb;  
@@ -150,9 +149,9 @@ Go
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
   
 ```  
 Use msdb;  

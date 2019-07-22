@@ -20,13 +20,12 @@ helpviewer_keywords:
 - Data Transformation Services
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3c7c128cc74e43877e481f405d8b7df30ce6b5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 782f1fb04ae8167c342bbe39f1f640f090c8c434
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912498"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58ba90d2f94c08160ec5ad5382ca31a9c5dc7c44
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140894"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML 資料修改語言 (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

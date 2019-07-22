@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b32bbcb94aa1f52c951c0bce341828e7df202b4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927220"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## <a name="remarks"></a>Remarks  
  已與 *user_name* 建立關聯的憑證中之公開金鑰會用來驗證傳給遠端服務的訊息，以及對之後要用來加密交談的工作階段金鑰進行加密。 *user_name* 的憑證必須對應到主控遠端服務之資料庫中的使用者憑證。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  改變遠端服務繫結的權限，預設為遠端服務繫結的擁有者、**db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
  執行 ALTER REMOTE SERVICE BINDING 陳述式的使用者必須有陳述式指定的使用者之模擬權限。  

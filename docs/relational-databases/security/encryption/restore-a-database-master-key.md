@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 4dd095f8d4a9254b88680b13bffcf319960336f3
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a7f63b1186d1d008b1091fa56a4ec71a2ee22801
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112153"
 ---
 # <a name="restore-a-database-master-key"></a>還原資料庫主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

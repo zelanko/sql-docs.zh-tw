@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3829348777930a9184620d21a0969e166ce37efc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912764"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Remarks  
  停用字詞表的建立者就是它的擁有者。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  建立 STOPLIST 需要 CREATE FULLTEXT CATALOG 權限。 停用字詞表擁有者可明確授與停用字詞表的 CONTROL 權限，好讓使用者可加入及移除字詞，以及卸除停用字詞表。  
   
 > [!NOTE]  

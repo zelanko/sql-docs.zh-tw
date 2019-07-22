@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 391a47edc45145bac21ce351e36c613f2a76addd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04007a8f8bd6b8cc98e8d2d83330f4925be137f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007769"
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (SSISDB 資料庫)
 
@@ -39,13 +38,13 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @project_name = ] *project_name*  
- 參數所在的專案名稱。 *project_name* 是 **nvarchar(128)**。  
+ 參數所在的專案名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @package_name = ] *package_name*  
- 封裝名稱。 指定封裝名稱，以擷取所有專案參數和來自特定封裝的參數。 使用 NULL 即可擷取所有專案參數和來自所有封裝的參數。 *package_name* 是 **nvarchar(260)**。  
+ 封裝名稱。 指定封裝名稱，以擷取所有專案參數和來自特定封裝的參數。 使用 NULL 即可擷取所有專案參數和來自所有封裝的參數。 *package_name* 是 **nvarchar(260)** 。  
   
  [ @reference_id = ] *reference_id*  
  環境參考的唯一識別碼。 這個參數是選擇性的。 *reference_id* 是 **bigint**。  

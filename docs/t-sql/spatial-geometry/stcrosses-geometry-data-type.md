@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7588d3a335785dd80a5b41cd17734b207852faae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930141"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

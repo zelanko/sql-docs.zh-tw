@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: e8fa29ff7f47a4fbfadb8a2834def4e2ca8f52dd
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: e1346cf21d0fb7fe9d81afc9740edf02957a0009
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102173"
 ---
 # <a name="database-console-commands"></a>資料庫主控台命令
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

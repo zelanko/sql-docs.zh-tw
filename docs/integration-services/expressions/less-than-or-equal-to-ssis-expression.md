@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 77ce175f9f525e2e65698712b9de6ef11a9ae6d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c886f27f99c671367ef1646bf95c2833a99f5408
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027500"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (小於或等於) (SSIS 運算式)
 

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed7cf9232930e867c2761bd60aaaf8ecc9e8c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a511d9142bb59014b5ab0093235df7adf793be7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102704"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services (SSIS) 中的 Hadoop 和 HDFS 支援
 

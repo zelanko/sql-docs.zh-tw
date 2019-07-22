@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110567"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>使用組建和部署參與者自訂資料庫建置和部署
 Visual Studio 提供可用來修改資料庫專案建置和部署動作行為的擴充點。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 8d022e7710c41797edb7bfaef7442610e0724b68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9244a2833a75925fab1f00d6ce20915f5ceaafb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930330"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

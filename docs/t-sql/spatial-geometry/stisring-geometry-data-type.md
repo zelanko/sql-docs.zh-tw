@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 1e4b08d711ed9d0a8016acbf2b438671373b6c62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9aa9b1b8e97f78887710309019e80ff4276c732
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030880"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

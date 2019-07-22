@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c65f93054125090f92eb4924e1007d5b9075c0f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f58fb09416bb6cc800c31dffa47e359d361ccaf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082976"
 ---
 # <a name="monitoring-replication"></a>監視 (複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

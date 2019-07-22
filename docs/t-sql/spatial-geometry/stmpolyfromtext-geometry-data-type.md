@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9f1071dafdb4f1f012aab06724cd8c3865242dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c67174927ea913f50bc23db7e940a79e224dcf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894704"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

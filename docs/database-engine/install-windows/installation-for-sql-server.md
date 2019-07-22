@@ -16,13 +16,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 230626368ee6ec7048a0a906c5cbe0c404dbe1c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 372bdfd2bdb749a624f5b68ff69380825d86b3ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990925"
 ---
 # <a name="sql-server-installation"></a>SQL Server 安裝
 

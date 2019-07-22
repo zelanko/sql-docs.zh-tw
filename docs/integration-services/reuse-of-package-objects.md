@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6844adf38e6139a050cf1f97200323704f8a8ff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4ee7d711514ae032532fa57d9e8b8c65c3f5f75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121473"
 ---
 # <a name="reuse-of-package-objects"></a>重複使用封裝物件
 

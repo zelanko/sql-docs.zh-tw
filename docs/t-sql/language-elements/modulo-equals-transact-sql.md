@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b41fe8326f38775480ee10a0c52b334fcfd028e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04a0b0881475bb47ca87dba03c207f3ceac9149e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122107"
 ---
 # <a name="-modulus-assignment-transact-sql"></a>%= (模數指派) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

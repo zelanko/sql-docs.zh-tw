@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3d0d250b3b3b6ac37982794a3580dee0eabfdd8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16c2c3028dfe3481089de9e661ddcece1fb6404b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967923"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 運算式)
 

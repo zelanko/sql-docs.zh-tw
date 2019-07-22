@@ -24,13 +24,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: dcdae3ff107ad1e1e3a7bc58fde4248bb5330223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c29cfba3f47506cb88860763d6650cfb3ecab7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62850378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026396"
 ---
 # <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 

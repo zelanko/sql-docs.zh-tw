@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 85410c2b33a48670a7b443eb4b72b92fe16688b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb34223b2bfcb896c2f5b6fa6ec01e7e3487a072
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112847"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>將資料品質規則套用至資料來源
 

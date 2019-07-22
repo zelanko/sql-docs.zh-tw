@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 9052c8192f7ea9e8fb7155a027344742a443a1b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904357"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
 
@@ -179,7 +178,7 @@ JSON
  XML  
  指定查詢結果要以 XML 文件來傳回。 您必須指定下列其中一個 XML 模式：RAW、AUTO、EXPLICIT。 如需有關 XML 資料及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的詳細資訊，請參閱 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)。  
   
- RAW [ **('**_ElementName_**')** ]  
+ RAW [ **('** _ElementName_ **')** ]  
  取得查詢結果，然後使用一般識別碼 \<row /> 作為元素標記，將結果集內的每個資料列轉換成 XML 元素。 您可以選擇性地指定資料列元素的名稱。 產生的 XML 會使用指定的 *ElementName* 作為針對每個資料列產生的資料列元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)。
   
  AUTO  
@@ -210,7 +209,7 @@ _隱藏不想要的分行符號：_ 您可以使用 SQL Server Management Studio
 
 <!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
 
- XMLSCHEMA [ **('**_TargetNameSpaceURI_**')** ]  
+ XMLSCHEMA [ **('** _TargetNameSpaceURI_ **')** ]  
  傳回內嵌 XSD 結構描述。 您可以在指定這個指示詞時，選擇性地指定目標命名空間 URI，這會在結構描述中傳回指定的命名空間。 如需詳細資訊，請參閱 [產生內嵌 XSD 結構描述](../../relational-databases/xml/generate-an-inline-xsd-schema.md)。  
   
  ELEMENTS  
@@ -225,8 +224,8 @@ _隱藏不想要的分行符號：_ 您可以使用 SQL Server Management Studio
  ABSENT  
  指出對於 NULL 資料行值而言，不會在 XML 結果中加入對應的 XML 元素。 請只搭配 ELEMENTS 來指定這個選項。  
   
- PATH [ **('**_ElementName_**')** ]  
- 針對結果集內的每個資料列產生 \<row> 元素包裝函式。 您可以視需要為 \<row> 元素包裝函式指定元素名稱。 如果提供空字串 (例如 FOR XML PATH (**''**) )，就不會產生包裝函式元素。 使用 PATH 可能會針對利用 EXPLICIT 指示詞來撰寫的查詢提供較簡單的替代方案。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)。  
+ PATH [ **('** _ElementName_ **')** ]  
+ 針對結果集內的每個資料列產生 \<row> 元素包裝函式。 您可以視需要為 \<row> 元素包裝函式指定元素名稱。 如果提供空字串 (例如 FOR XML PATH ( **''** ) )，就不會產生包裝函式元素。 使用 PATH 可能會針對利用 EXPLICIT 指示詞來撰寫的查詢提供較簡單的替代方案。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)。  
   
  BINARY BASE64  
  指定查詢用二進位 Base64 編碼格式來傳回二進位資料。 當您利用 RAW 和 EXPLICIT 模式來擷取二進位資料時，您必須指定這個選項。 這是 AUTO 模式的預設值。  
@@ -234,7 +233,7 @@ _隱藏不想要的分行符號：_ 您可以使用 SQL Server Management Studio
  TYPE  
  指定查詢以 **xml** 類型的形式傳回結果。 如需詳細資訊，請參閱 [FOR XML 查詢中的 TYPE 指示詞](../../relational-databases/xml/type-directive-in-for-xml-queries.md)。  
   
- ROOT [ **('**_RootName_**')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  指定將單一最上層元素加入產生的 XML 中。 您可以選擇性地指定要產生的根元素名稱。 如果未指定選擇性的根名稱，就會新增預設的 \<root> 元素。  
   
  如需詳細資訊，請參閱 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)。  
@@ -270,7 +269,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  您可以藉由搭配 **FOR JSON** 子句指定 **INCLUDE_NULL_VALUES** 選項，在 JSON 輸出中包含 Null 值。 如果您未指定此選項，輸出就不會包含查詢結果中 Null 值的 JSON 屬性。 如需詳細資訊和範例，請參閱 [使用 INCLUDE_NULL_VALUES 選項在 JSON 輸出中包含 Null 值 &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)。  
   
- ROOT [ **('**_RootName_**')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  您可以藉由搭配 **FOR JSON** 子句指定 **ROOT**選項，將一個單一最上層元素新增至 JSON 輸出中。 如果您未指定 **ROOT** 選項，則 JSON 輸出不會有根項目。 如需詳細資訊和範例，請參閱[使用 ROOT 選項將根節點新增至 JSON 輸出 &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)。  
   
  WITHOUT_ARRAY_WRAPPER  

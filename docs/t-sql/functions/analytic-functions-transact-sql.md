@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 60fbff84-673b-48ea-9254-6ecdad20e7fe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebf74ab07a424612967f1482402928fc134d9e03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c17c44916a84fe1e3beedd8ee850bc7534788813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040402"
 ---
 # <a name="analytic-functions-transact-sql"></a>分析函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

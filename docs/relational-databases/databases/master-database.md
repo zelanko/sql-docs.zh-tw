@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7369d4793b803b538435267399b2deaff777ba21
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133595"
 ---
 # <a name="master-database"></a>master 資料庫
 

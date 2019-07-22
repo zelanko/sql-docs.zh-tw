@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: da99ba740e25ede21c32e1fe6147d924e528e98a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: f1f89570284ecee36ea998a82f7b9dbb966d2683
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087046"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>開啟條件對話方塊，相依原則頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

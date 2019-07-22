@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be502a5bfb5c3abbfb7116a5e4deeff36bfb1910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b092f41c20f2b8100b02fc331692a6dd9f217702
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897603"
 ---
 # <a name="audit-dbcc-event-class"></a>稽核 DBCC 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

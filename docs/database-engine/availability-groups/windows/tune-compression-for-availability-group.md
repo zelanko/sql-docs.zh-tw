@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: f0676a65fbc30d58e81b4e7a56d6a78756b72040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013672"
 ---
 # <a name="tune-compression-for-availability-group"></a>微調可用性群組的壓縮
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

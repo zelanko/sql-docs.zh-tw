@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ca89542cfdeebd9993b86a049c0190e12d16887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d02e9b3ab775305c5b7052f1535a612c836957e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049507"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
 

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 07e50f290d7e1e0a9202c1aaeae02d1dce76dbfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36a0a6f82499a617a37b7cc9b848a33ec29c2ce3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050136"
 ---
 # <a name="migrating-computed-columns"></a>移轉計算資料行
 

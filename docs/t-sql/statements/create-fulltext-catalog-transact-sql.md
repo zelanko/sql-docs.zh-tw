@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4cdbd5b93bdc5d99e397cbbeb923b19da728d393
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 083408cbf75d027e5dc638b52199b6892adae73d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052306"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ CREATE FULLTEXT CATALOG catalog_name
  ON FILEGROUP *filegroup*  
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，這個子句不會有任何作用。  
   
- IN PATH **'**_rootpath_**'**  
+ IN PATH **'** _rootpath_ **'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -101,7 +100,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ## <a name="remarks"></a>Remarks  
  全文檢索目錄識別碼從 00005 開始，每次新增一個目錄時識別碼便增加一號。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  使用者必須具有資料庫的 CREATE FULLTEXT CATALOG 權限，或者是 **db_owner** 或 **db_ddladmin** 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  

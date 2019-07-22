@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-manager: jroth
-ms.openlocfilehash: c40755122775faa3b67fb0f46f5f13b3a789bb32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013745"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組已超過 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

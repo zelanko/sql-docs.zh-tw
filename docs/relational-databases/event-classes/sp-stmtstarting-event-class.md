@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 764e94e9eda2d22c5710eb2630b400af9e48a552
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0926ebc430df541eca9eb22e2c02b7d8021f2de4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064906"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

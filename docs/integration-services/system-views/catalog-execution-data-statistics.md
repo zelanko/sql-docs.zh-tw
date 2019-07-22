@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eafc03f9e9b12bf60e3b0bd13c727ddd51c6637b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6811363e2465d7de24e31e136920feba345a2706
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080758"
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics 
 

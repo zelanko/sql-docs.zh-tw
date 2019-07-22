@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ffe52a392dfec79afa301df7650cf73f2ad35ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d98032d040c29e8c1455bbc0e037f920a8588e4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080947"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS 運算式)
 

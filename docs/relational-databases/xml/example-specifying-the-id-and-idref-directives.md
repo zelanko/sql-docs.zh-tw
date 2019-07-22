@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8cc8d9a7df73bf54c615126b074275aed85722
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76e471b3e6e35e3c6f0568c446b9650466ffa542
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006693"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>範例指定 ID 和 IDREF 指示詞
 

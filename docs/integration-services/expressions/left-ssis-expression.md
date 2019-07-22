@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 303f2af2666520eff7f3b5899053a61186c081a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03c327267cf1bc9370bda84925b44204a521fd86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027515"
 ---
 # <a name="left-ssis-expression"></a>LEFT (SSIS 運算式)
 

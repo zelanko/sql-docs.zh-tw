@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 077490ef3af4e144dbe414fde02ab94b87c87511
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b77c2d78818656c3cbb59619ce99bed8cb0bcd2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984774"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定義 XML 資料的序列化
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

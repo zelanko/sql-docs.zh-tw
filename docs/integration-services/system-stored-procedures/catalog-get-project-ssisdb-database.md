@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 79756562767943d89efd199007941cf9bf29b702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6eaef69d6984494543dc730e19a8436a3a9b658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007827"
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project (SSISDB 資料庫)
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 70a595b13bde3f013e07af02d0599b240a7bdbfc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 15f7c220cbf167c91e052c18d61b2c0c579ea63e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065553"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>授與可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  指定可以授與的可用性群組權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- 指定要授與其權限的可用性群組。 範圍限定詞 (**::**) 是必要項。  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ 指定要授與其權限的可用性群組。 範圍限定詞 ( **::** ) 是必要項。  
   
  TO \<server_principal>  
  指定要授與其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
@@ -93,7 +92,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
  如需所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限的圖表，請參閱 [Database Engine Permission Poster](https://aka.ms/sql-permissions-poster) (資料庫引擎權限海報)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要可用性群組的 CONTROL 權限或伺服器的 ALTER ANY AVAILABILITY GROUP 權限。  
   
 ## <a name="examples"></a>範例  

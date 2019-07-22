@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 27993a5f420588b7bb542f6875488c1624d26e71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13695f6226331455754839a5e26198ae49d186c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929868"
 ---
 # <a name="integration-services-containers"></a>整合服務容器
 

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ea94ccc6b92155d67fc5cb1f47594332a2feb19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94d617f0da60b73ecfc7a0dcdd4530a3a36f3ca7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927362"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>算術運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

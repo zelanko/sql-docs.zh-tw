@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 82cc52338771862b580c193353db0bb98453b458
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7eee6c8aa847a199f7b1547f61bbcd523039644f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101237"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

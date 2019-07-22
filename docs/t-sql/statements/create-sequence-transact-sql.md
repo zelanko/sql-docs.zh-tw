@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 783b2249a36b69bc53e147699e50dcab86fd89b5
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.openlocfilehash: 2772440c98d103790808564b5cdddcde4c2dfd42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117176"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

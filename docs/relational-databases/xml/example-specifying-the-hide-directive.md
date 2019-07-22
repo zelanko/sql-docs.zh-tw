@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2d87703d97c966ac95608c19f42837b4fc4eaee4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22ee3e41d5792683dd73520bbeacb35fdc91d83e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006708"
 ---
 # <a name="example-specifying-the-hide-directive"></a>範例指定 HIDE 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

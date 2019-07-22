@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b264de2077e213bb27e062ff4ba504e75cd1b2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17e5d46a2737fe47d9ed704ff7e6ae7dc7d6f159
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020040"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 發行者的管理考量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

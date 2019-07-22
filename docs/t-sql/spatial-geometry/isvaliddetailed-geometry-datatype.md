@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b4b5061d6840052f74c8c7c15db7f2482e9e31d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f67b291da8de3dcb0ec84891ac69789d132b420b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101217"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

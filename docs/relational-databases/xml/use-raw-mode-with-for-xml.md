@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40d39287c4dfbbe4fdc70ea7f15ea429a98113b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac5e5ccf60594d41ff89d9ef5bd2c4342944a6da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016155"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>搭配 FOR XML 使用 RAW 模式
 

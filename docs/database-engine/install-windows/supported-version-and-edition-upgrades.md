@@ -15,13 +15,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: ea763a377b42d5f4ea4f80b775907baed2d40100
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934866"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>支援的版本與版本升級
 

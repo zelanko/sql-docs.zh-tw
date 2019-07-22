@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 337646527cfaabfb3b803f37088f398cfd63808e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 0a45b7977d19603387e51b9ed824d9e8a4d759b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997679"
 ---
 # <a name="back-up-a-database-master-key"></a>備份資料庫主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "53997510"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 需要資料庫的 CONTROL 權限。  
   
 ## <a name="using-sql-server-management-studio-with-transact-sql"></a>搭配 Transact-SQL 使用 SQL Server Management Studio  
@@ -50,9 +49,9 @@ ms.locfileid: "53997510"
   
 5. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-6. 在標準列上，按一下 **[新增查詢]**。  
+6. 在標準列上，按一下 **[新增查詢]** 。  
   
-7. 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+7. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     -- Creates a backup of the "AdventureWorks2012" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  

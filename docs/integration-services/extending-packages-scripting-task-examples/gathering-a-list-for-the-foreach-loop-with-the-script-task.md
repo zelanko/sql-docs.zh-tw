@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f83b8d77e5fea47e3f88f8545fa043c16ce29132
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56cb5497b842903edd132a45cdc768e89327f841
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112225"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>以指令碼工作蒐集 ForEach 迴圈的清單
 

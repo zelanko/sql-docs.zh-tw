@@ -10,13 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 51bcd27ee8d2c63103650c8527014716f10bc3f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e224e5949fd3f166789e72f7f70d8ca44392179
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934670"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升級為不同的 SQL Server 版本 (安裝程式)
 
