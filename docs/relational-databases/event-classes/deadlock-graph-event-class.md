@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16b53261745e40f0d49a034421ee6fc6c35dfe13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 658d9311b5f175ddfe66b2eb144e1d12b4ecd003
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009530"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph 事件類別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

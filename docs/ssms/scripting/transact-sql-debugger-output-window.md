@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8772e6736fda4fddc58c4ea0d8c7ef6f4c599ed9
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 3cf13eff7a158e73811189523db4397b8731616d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682064"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68253512"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 偵錯工具 - 輸出視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

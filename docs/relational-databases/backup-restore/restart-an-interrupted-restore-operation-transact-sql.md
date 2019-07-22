@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2d842c42a811ad82bf53cc7ce33bd2d4c34a126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01788ac155adbb22ba3a3e6b880410585f4f3f51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937663"
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>重新啟動中斷的還原作業 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

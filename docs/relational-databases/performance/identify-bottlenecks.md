@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 213df75d1883de730a0231c009f1d178814ed463
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbabafa1f5b367343f02c3a0bf3e122bc827ce66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946758"
 ---
 # <a name="identify-bottlenecks"></a>找出瓶頸
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

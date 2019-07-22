@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 84e76dba19f57024e22b459927624bcd0207e95d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48343f827478f9c6effd89d77964732ce2c43fe7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912578"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
 

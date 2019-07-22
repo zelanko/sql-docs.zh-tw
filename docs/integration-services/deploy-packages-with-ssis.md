@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a6be73e7253bc0be8d8dde9766f9fcb8be0a2dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e421382b578d8494f7311414f93fec458014d552
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057701"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
 

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
-manager: craigg
-ms.openlocfilehash: 569341b07d373aaf1d0739a400537ca3b7998a80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 095865071b3a9ddfcba15635d9e3d857b2dbee20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904788"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 連線管理員
 

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a83edf2098f32d56240096da068c5c37c6b83f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 696b0a010a8267e42cd55bc123081add60090840
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130321"
 ---
 # <a name="x40x40maxprecision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

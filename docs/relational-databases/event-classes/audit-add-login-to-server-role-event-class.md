@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f05e1d15e4ab9e22e3f7b2ecc166029e06a3b374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a42276012f3ef3151f453951b0f5ec55c7736f8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903668"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Audit Add Login to Server Role 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

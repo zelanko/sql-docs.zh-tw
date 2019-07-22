@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fbe3cdef207cd70851ac6fd88381dd457258793
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f82e33c3b8d1168068d5ceb131467973984276e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62685086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113614"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>將根節點與根選項加入至 JSON 輸出 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

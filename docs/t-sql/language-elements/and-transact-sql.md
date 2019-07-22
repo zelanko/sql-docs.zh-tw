@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5629288c66b3d8ae4f93185f35ec1d8cacaf85e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927375"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

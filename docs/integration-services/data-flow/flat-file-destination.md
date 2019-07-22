@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5c432741bd8ba3d369230ac72e26ee5516d21d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c62f746d13fdc818ed9caf8010be84065ffe8fbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941518"
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地
 

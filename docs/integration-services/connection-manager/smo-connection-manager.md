@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03373dc9714d992c36ca29611013979d1c62ecf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d91dd8952b1dccbfd0c78f0b0b0fa8aa7c26d53c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904238"
 ---
 # <a name="smo-connection-manager"></a>SMO 連線管理員
 

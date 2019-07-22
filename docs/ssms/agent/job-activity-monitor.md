@@ -13,14 +13,13 @@ f1_keywords:
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e855db862f917306bd8217b16b6bfee9f92c7c21
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: a3e08cddb16b38d49c93ad596e3bcb87a3afa0d7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686986"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262356"
 ---
 # <a name="job-activity-monitor"></a>作業活動監視器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

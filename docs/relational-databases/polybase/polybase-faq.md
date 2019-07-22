@@ -7,13 +7,12 @@ ms.topic: conceptual
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 0d2afed9961881fe46ae9fcd4ebe2441910deee7
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 49376b0a4fa95c673255420962d173903b84ca15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062211"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 

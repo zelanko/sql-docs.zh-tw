@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3b2ccf246ceca49144735baa480c551c811482f4
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 3f61d7ec9e5a50aeaad9a45154f4001869eaa8e1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67685390"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265522"
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>Proxy 帳戶屬性 - 新 Proxy 帳戶 (主體索引標籤)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

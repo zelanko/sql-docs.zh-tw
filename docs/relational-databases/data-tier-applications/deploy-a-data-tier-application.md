@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f734365cbfd8ca0b2ac1114853b0b412cb0e6d7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 23201d2c05e9bdb5196319fba49955bb67afd29a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134817"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

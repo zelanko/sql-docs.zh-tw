@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 074b0932f97c168a8d2250c057ac246785bf2dd0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 03f5c8cbedbf6389ffa3b6ad701e2ffc72bbf631
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051699"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>快照集代理程式 (新增發行集精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

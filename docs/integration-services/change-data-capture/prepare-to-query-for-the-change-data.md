@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c4d0fdc777715dc7077fc3396e533c5e6336a675
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bef8a000619284cc46f96659d2ca6fd03ea5af7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084358"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>準備查詢變更資料
 

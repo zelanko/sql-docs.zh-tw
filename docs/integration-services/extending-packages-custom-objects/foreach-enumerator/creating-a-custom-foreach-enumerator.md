@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a3e40472e41f9798499770e0a2198c52a1d32e44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e61dfcb7cb06ac734067d2870f70e096c750a862
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116295"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>建立自訂 Foreach 列舉值
 

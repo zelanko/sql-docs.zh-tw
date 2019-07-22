@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 74099a8611c9c81b54619e1fc071b63a5d22777a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 437e919b8dfba5d375a80fc53267a539d907aaa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902507"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>課程 1-9：測試第 1 課套件
 

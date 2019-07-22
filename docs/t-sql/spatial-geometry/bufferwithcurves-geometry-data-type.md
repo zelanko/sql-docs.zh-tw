@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d199d2a6171cdb865dc617501a50ceff18563600
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929311"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

@@ -9,13 +9,12 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f05baa17bb09b5cafcd775160d2f585004d00b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84282e4d082e4a15fe4b29a0d72b80ca5aa13243
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114391"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>開始使用這個匯入和匯出精靈的簡單範例
 

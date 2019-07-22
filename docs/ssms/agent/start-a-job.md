@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1efc27538f544406917db0ad4a1c2874213c162d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 00a43ad550f911372672d49548efa3039cec6b84
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682020"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265212"
 ---
 # <a name="start-a-job"></a>啟動作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,15 +55,15 @@ ms.locfileid: "67682020"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **[SQL Server Agent]** ，再展開 **[作業]** 。 請依照您所需要的作業啟動方式，執行下列其中一項作：  
+2.  展開 **[SQL Server Agent]** ，再展開 **[作業]**。 請依照您所需要的作業啟動方式，執行下列其中一項作：  
   
-    -   若要對單一伺服器或目標伺服器執行作業，或要在主要伺服器上執行本機伺服器作業，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]  。  
+    -   若要對單一伺服器或目標伺服器執行作業，或要在主要伺服器上執行本機伺服器作業，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]。  
   
-    -   若要啟動多項作業，請在 [作業活動監視器]  ，然後按一下 [檢視作業活動]  。 您可以在作業活動監視器中選取多項作業，然後在選取範圍上按一下滑鼠右鍵，再按一下 [啟動作業]  。  
+    -   若要啟動多項作業，請在 [作業活動監視器]，然後按一下 [檢視作業活動]。 您可以在作業活動監視器中選取多項作業，然後在選取範圍上按一下滑鼠右鍵，再按一下 [啟動作業]。  
   
-    -   若要對主要伺服器執行作業，並希望所有目標伺服器同時執行該作業，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]  ，再按一下 [在所有目標伺服器上啟動]  。  
+    -   若要對主要伺服器執行作業，並希望所有目標伺服器同時執行該作業，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]，再按一下 [在所有目標伺服器上啟動]。  
   
-    -   若要對主要伺服器執行作業，並要指定執行該作業的目標伺服器，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]  ，再按一下 [在特定目標伺服器上啟動]  。 在 **[公佈下載指示]** 對話方塊中選取 **[下列目標伺服器]** 核取方塊，然後選取應該執行此作業的每個目標伺服器。  
+    -   若要對主要伺服器執行作業，並要指定執行該作業的目標伺服器，請在要啟動的作業上按一下滑鼠右鍵，然後按一下 [啟動作業]，再按一下 [在特定目標伺服器上啟動]。 在 **[公佈下載指示]** 對話方塊中選取 **[下列目標伺服器]** 核取方塊，然後選取應該執行此作業的每個目標伺服器。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -72,9 +71,9 @@ ms.locfileid: "67682020"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]** 。  
+2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- starts a job named Weekly Sales Data Backup.    

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 59a4e60fa68223939a595be96c9adb872e01202a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6198ca1183caf731a78026dfd1f2f7644979580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008445"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Always On 可用性群組的輸入密碼頁面 (新增複本精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

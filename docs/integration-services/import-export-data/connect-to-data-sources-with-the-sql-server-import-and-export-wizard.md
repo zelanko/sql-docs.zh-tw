@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 17dad1100e0a4dc9df770ef781f8294198247af9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0caaa512c365853eb2c6eb6149cc3fbdf0bf6fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114508"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源
 

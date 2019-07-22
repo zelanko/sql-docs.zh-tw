@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 92a2d442803d8d6268cce71e202f2e912ed707b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abecb27ec519c9517fd9e5ee4a3e64dca6b433e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941760"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 來源擷取變更資料
 

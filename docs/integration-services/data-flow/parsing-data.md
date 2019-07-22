@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 86100d0a94030cc7db8f7a5b9574c22cec58903e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0df149ce4d390de52e535587d1d9fac7580819b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928260"
 ---
 # <a name="parsing-data"></a>剖析資料
 

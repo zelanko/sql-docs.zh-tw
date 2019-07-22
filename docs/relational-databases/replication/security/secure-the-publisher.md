@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17a920a45381b20e4ea246619810856624a29025
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3784135455a29d3d1662793d743d9d788e64b5f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095640"
 ---
 # <a name="secure-the-publisher"></a>保護發行者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "54132948"
  PAL 是在發行者端保護發行集安全的主要機制。 PAL 功能類似於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 存取控制清單。 建立發行集之後，複寫便會建立此發行集的 PAL。 PAL 可進行設定，使其包含已授與了對發行集存取權的登入與群組清單。 當代理程式連接到「發行者」或「散發者」並要求存取發行集時，便會將 PAL 上的驗證資訊與代理程式提供的「發行者」登入進行比較。 這項處理序藉由防止用戶端工具使用「發行者」與「散發者」登入在「發行者」上直接進行修改，為「發行者」提供了額外的安全性。  
   
 > [!NOTE]  
->  複寫會在「發行者」上為每個發行集建立角色，以強制賦予 PAL 成員資格。 該角色的名稱格式為 **Msmerge_**_\<發行集識別碼>_ (合併式複寫) 及 **MSReplPAL_**_\<發行集資料庫識別碼>_**_**_\<發行集識別碼>_ (異動複寫和快照式複寫)。  
+>  複寫會在「發行者」上為每個發行集建立角色，以強制賦予 PAL 成員資格。 該角色的名稱格式為 **Msmerge_** _\<發行集識別碼>_ (合併式複寫) 及 **MSReplPAL_** _\<發行集資料庫識別碼>_ **_** _\<發行集識別碼>_ (異動複寫和快照式複寫)。  
   
  根據預設，下列登入包含在 PAL 內：建立發行集時的 **sysadmin** (系統管理員) 固定伺服器角色成員，以及用來建立發行集的登入。 依預設，對於發行集資料庫上所有 **系統管理員 (sysadmin)** 固定伺服器角色或 **db_owner** 固定資料庫角色的成員，其登入均可訂閱發行集而不需將其明確加入 PAL 中。  
   
@@ -62,13 +61,13 @@ ms.locfileid: "54132948"
  若要管理 PAL，請參閱[管理發行集存取清單中的登入](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)。  
   
 ## <a name="snapshot-agent"></a>快照集代理程式  
- 每個發行集都有一個「快照集代理程式」。 如需詳細資訊，請參閱 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
+ 每個發行集都有一個「快照集代理程式」。 如需詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 ## <a name="ftp-snapshot-delivery"></a>FTP 快照集傳遞  
  如果您將快照集指定為應該透過 FTP 共用而不是 UNC 共用來使用，則在設定 FTP 存取時必須指定登入和密碼。 如需詳細資訊，請參閱[透過 FTP 傳遞快照集](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
 ## <a name="log-reader-agent"></a>記錄讀取器代理程式  
- 每個為異動複寫發行的資料庫，都會有一個記錄讀取器代理程式。 如需詳細資訊，請參閱 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
+ 每個為異動複寫發行的資料庫，都會有一個記錄讀取器代理程式。 如需詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 ## <a name="queue-reader-agent"></a>佇列讀取器代理程式  
  所有與給定「散發者」相關聯的「發行者」和發行集 (允許佇列更新訂閱) 都有一個「佇列讀取器代理程式」。 如需詳細資訊，請參閱[啟用交易式發行集的更新訂閱](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)。  

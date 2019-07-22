@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b02552c4fae1e2266d8a98f1d71457b6e2709fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 483b5374238490cfa9c416f252d67d24b5a7a89d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116453"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>資料流程元件的執行階段方法
 

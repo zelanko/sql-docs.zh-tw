@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: ebf4db69052620f7504c06b788d91d9e3d9a3a44
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: bb8dabb400121ffc98a5322132eb6fe4a2ea8d8c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682403"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68254584"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>排除重複的資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

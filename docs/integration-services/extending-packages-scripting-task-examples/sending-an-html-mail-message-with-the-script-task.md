@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 327333366b2636bd74d78fb8c2713f5b4c8707f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fcafb7ba6651b294893b749d8800b80338a1a0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110538"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>使用指令碼工作傳送 HTML 郵件訊息
 

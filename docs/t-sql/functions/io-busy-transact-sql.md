@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b874feb143f72b6cc65a59b8f08eab889ad1927b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7bb537df511483b05647d36dba2a0323e44b199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024257"
 ---
 # <a name="x40x40iobusy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

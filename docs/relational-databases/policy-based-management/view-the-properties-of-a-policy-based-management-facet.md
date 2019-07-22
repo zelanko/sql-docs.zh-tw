@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb04eb063885e7682537f88386772cf8101d7f53
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: be669093b3899744f8019eeb7c965b48dc4665bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009184"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>檢視原則式管理 Facet 的屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

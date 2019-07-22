@@ -24,18 +24,17 @@ helpviewer_keywords:
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 598cfebd686bdd271b283e5a3bbde26233720c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35ea6c3e64329f005d6ef97b23699b2dda43ed56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035838"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>資料的大量匯入及匯出 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表匯出大量資料 (「大量資料」)，以及將大量資料匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或未分割的檢視。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表匯出大量資料 (「大量資料」  )，以及將大量資料匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或未分割的檢視。 
   
 -   *「大量匯出」* 代表將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表複製到資料檔。
 
@@ -59,7 +58,7 @@ ms.locfileid: "64946599"
 > Azure SQL Database 和 Azure SQL DW 只支援使用 bcp 公用程式匯入和匯出分隔的檔案。
   
 ##  <a name="FFs"></a> 格式檔案  
- [bcp](../../tools/bcp-utility.md) 公用程式、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 全都支援使用特殊的「格式檔案」，將每一個欄位的格式資訊儲存在資料檔案中。 格式檔案也可以包含對應的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的相關資訊。 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體大量匯出與大量匯入資料時，格式檔案可以提供所需的所有格式資訊。  
+ [bcp](../../tools/bcp-utility.md) 公用程式、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 全都支援使用特殊的「格式檔案」  ，將每一個欄位的格式資訊儲存在資料檔案中。 格式檔案也可以包含對應的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的相關資訊。 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體大量匯出與大量匯入資料時，格式檔案可以提供所需的所有格式資訊。  
   
  格式檔案提供彈性方式，在匯入期間用於解譯資料檔中的資料，以及在匯出期間用於格式化資料檔中的資料。 這樣的彈性讓您不需撰寫特殊用途的程式碼來解譯資料，也不需因應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或外部應用程式的特定需求將資料重新格式化。 例如，如果您大量匯出的資料即將要載入到需要逗號分隔值的應用程式中，則可以使用格式檔案，在匯出的資料中插入逗號當做欄位結束字元。  
   

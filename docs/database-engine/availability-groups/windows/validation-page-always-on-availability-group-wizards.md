@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 281306cece913e4386a1ca6059b738c9fa20e058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 243109e2c9d93db71c59a852a594a411c40c47dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013451"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>驗證頁面 (AlwaysOn 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f6e94c381e6303d380b2d1447f98299a0f28ec89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86add979aa790e438454c319dee68b8df95a6669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968092"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 運算式)
 

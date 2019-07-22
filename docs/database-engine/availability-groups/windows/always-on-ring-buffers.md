@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-manager: jroth
-ms.openlocfilehash: c69412f5433af83642a0337e49b98b19ecdbce62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef5213139271def9f2901f87fa150950bdeb513d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014724"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>使用環形緩衝區取得 Always On 可用性群組的健全狀況資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

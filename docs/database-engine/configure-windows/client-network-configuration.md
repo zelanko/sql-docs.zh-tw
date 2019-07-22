@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: bd28758b2f5cb0c5e98ea8b24784369386e7bdce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012969"
 ---
 # <a name="client-network-configuration"></a>用戶端網路組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

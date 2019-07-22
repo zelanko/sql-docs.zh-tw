@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 4e0f357c677a2b8e1ca729cc441f0acadaa5de01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b64ac7463e9a1e3ef62d87d5cf9d6096be275cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998012"
 ---
 # <a name="logging-in-to-sql-server"></a>登入 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

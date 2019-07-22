@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: bacb931c8e61cae2e6f322a73a22e968c7b52d88
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4042e890dbac3aadd02f78f50ecf9d03b244ebcb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682937"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263622"
 ---
 # <a name="sort-rows-visual-database-tools"></a>排序資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

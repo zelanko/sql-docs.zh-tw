@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1590dad23ff9b2453aafddce736392ee3702688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb3fd4e2bc815e143ba1ff6d690d2c55a40c6f31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087611"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

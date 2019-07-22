@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3d13a0da50bc9a19728ecd4af6034ffc52849164
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 078d965fbf3963039bb54b70fd63f54aadb9eb95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005369"
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

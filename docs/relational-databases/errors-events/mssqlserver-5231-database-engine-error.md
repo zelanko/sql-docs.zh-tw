@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 998bf914523dec7012c6d9e84d89de858173ba38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cd4a8208925f6e0fe0a0fed4b162b4eb7361009
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122957"
 ---
 # <a name="mssqlserver5231"></a>MSSQLSERVER_5231
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +25,12 @@ ms.locfileid: "47709216"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|5231|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC4_DEADLOCK_SKIPPED_OBJECT|  
-|訊息文字|物件識別碼 O_ID (物件 'NAME'): 嘗試鎖定這個物件進行檢查時發生死結。 已經略過這個物件，不會處理。|  
+|訊息文字|物件識別碼 O_ID (物件 'NAME')：嘗試鎖定此物件進行檢查時發生死結。 已經略過這個物件，不會處理。|  
   
 ## <a name="explanation"></a>說明  
 DBCC 嘗試鎖定物件時發生死結，並已選擇 DBCC 做為死結犧牲者。 將不會處理此物件。  

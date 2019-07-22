@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9279a433d848108b204cadc6990803695f9e82d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140975"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>搭配 dbSqlPackage 提供者使用 MSDeploy
 **DbSqlPackage** 是一種 **MSDeploy** 提供者，可讓您與 SQL Server/SQL Azure 資料庫進行互動。 **DbSqlPackage** 支援下列動作：  

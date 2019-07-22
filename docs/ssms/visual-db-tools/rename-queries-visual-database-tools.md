@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 5fa611bc85af05351c010694b4c81364f5f4cf72
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 09ffe5aa93aa5273d50dba17df367853daf59511
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679459"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255987"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重新命名查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

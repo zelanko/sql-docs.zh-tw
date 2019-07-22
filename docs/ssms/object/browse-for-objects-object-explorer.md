@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 1d4a1a15b0add158c38b7f66877fbc6f9e46a00b
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: de835a1ffe6bba4f2ca3d8a4787bff9a3feccac2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690054"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264782"
 ---
 # <a name="browse-for-objects-object-explorer"></a>瀏覽物件 (物件總管)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

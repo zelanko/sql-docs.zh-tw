@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e8e7090865428be5da4e917b9894c940ef5975b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3435ae2275b9d83b3631bb426ac060bddd3c7c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091221"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
 

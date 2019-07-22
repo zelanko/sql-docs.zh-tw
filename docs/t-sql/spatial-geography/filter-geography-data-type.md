@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7cf00adcfb11249dc2465d2afd7532dc4d4dc093
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b00d10e27e515cb30d32cdd08d7d10e69ac55b0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930282"
 ---
 # <a name="filter-geography-data-type"></a>Filter (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

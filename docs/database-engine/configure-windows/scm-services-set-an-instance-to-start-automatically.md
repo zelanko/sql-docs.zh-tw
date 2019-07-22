@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: a5def9aacdd9b85b547246ca602a2355e55937b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c13ad423cb8ba01e91c7d8810723538ec41eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025655"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM 服務 - 將執行個體設定為自動啟動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

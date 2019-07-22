@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 772bb2a362efbe61dc3bd1b03a3bb049a5822980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b0230b2a3cc3adfae2fe28a520b520f90dc2e8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945496"
 ---
 # <a name="troubleshoot-integration-services-ssis-packages"></a>疑難排解 Integration Services (SSIS) 封裝
 

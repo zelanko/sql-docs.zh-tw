@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d2a43ca51116c577f4540d3c4aba4b2c599a5c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9852e5ee037cd8106e4022b3b30b30085339784c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906957"
 ---
 # <a name="square-transact-sql"></a>SQUARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

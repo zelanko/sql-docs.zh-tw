@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57d6fa7cf4e323004789dabb098df400f1ae6dce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bc956cf14419a1d65ed0ebc39928b39c6c7b63fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083929"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
