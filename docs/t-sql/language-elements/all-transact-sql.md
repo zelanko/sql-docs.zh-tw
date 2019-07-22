@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6901a6eb93ad2374eaf6d613e9eada21dea3cc55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf40ce38bf96ae4d31c9102290e74d5db2230240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927389"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

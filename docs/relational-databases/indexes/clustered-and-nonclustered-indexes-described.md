@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39ed5c4f26421ace2da0acadf110dcdfe08faa3c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b903668a68752edaad612b4ada31329e7dd80a77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081751"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>叢集與非叢集索引說明
 

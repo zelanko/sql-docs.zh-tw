@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cd96a77a90086c894024a2d46f3497f2ae7f14ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044024"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 ## <a name="remarks"></a>Remarks  
  只有在目前沒有資料表或索引在使用資料分割結構描述時，才可以卸除資料分割結構描述。 如果有資料表或索引在使用資料分割結構描述，DROP PARTITION SCHEME 便會傳回錯誤。 DROP PARTITION SCHEME 不會移除檔案群組本身。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  下列權限可用來執行 DROP PARTITION SCHEME：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  

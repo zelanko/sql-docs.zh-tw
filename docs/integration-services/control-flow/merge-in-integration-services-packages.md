@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 124d7c0aec844b1a600f051473835e0be667824f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9985969215ba1351e2b5e62b2c2c7b68d081704b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109167"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
 

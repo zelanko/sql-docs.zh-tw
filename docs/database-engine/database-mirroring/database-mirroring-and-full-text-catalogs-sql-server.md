@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 71a1ff074e5627491ef24ffe4e72cffcd5fcd2b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7f0aee8a195344bc32b355c95f4e131cf503f02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006482"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>資料庫鏡像和全文檢索目錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

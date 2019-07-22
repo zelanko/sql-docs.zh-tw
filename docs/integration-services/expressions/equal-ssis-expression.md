@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ce9b5f138929da84e9a007cbabb4b6f36260f95b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ef97c568d1e5704229be1713639ed5de3112f3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080978"
 ---
 # <a name="-equal-ssis-expression"></a>== (等於) (SSIS 運算式)
 

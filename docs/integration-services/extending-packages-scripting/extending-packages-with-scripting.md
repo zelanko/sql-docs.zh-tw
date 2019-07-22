@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 010619d4782154245c476ff7e64af63c2e546c32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 881fbf113da1746e97f0e884b2cd39f14f41ed30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118907"
 ---
 # <a name="extending-packages-with-scripting"></a>使用指令碼擴充封裝
 

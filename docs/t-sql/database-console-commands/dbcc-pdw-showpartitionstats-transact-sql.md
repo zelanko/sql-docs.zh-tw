@@ -10,14 +10,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b80b96436b8cc7346a69a8b2448ade60dd009b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ac6d3ac9128c8f27a898f4b903f74d1e9ab9bb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116501"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -46,12 +45,12 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|partition_number|ssNoversion|資料分割編號。|  
+|partition_number|INT|資料分割編號。|  
 |used_page_count|BIGINT|資料的使用頁數。|  
 |reserved_page_count|BIGINT|分割區的保留頁數。|  
 |row_count|BIGINT|分割區中的資料列數。|  
-|pdw_node_id|ssNoversion|資料的計算節點。|  
-|distribution_id|ssNoversion|資料的散發識別碼。|  
+|pdw_node_id|INT|資料的計算節點。|  
+|distribution_id|INT|資料的散發識別碼。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS 基本語法範例  

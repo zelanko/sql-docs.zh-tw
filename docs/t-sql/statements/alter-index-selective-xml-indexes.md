@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b3f15837f71e920c7b604e95039c94fd3383b0f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65504028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071359"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選擇性 XML 索引)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -125,7 +124,7 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ]  
  這是要索引之路徑使用的命名空間清單。 如需有關 WITH XMLNAMESPACES 子句語法的相關資訊，請參閱 [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)。  
   
  FOR **(** \<promoted_node_path_action_list> **)**  
@@ -135,7 +134,7 @@ identifier
   
 -   **移除路徑。** 當您 REMOVE 路徑時，會提供建立路徑時指定的名稱。  
   
- [WITH **(** \<index_options> **)**]  
+ [WITH **(** \<index_options> **)** ]  
  使用未包含 FOR 子句的 ALTER INDEX 時，只能指定 \<index_options>。 當您使用 ALTER INDEX 加入或移除索引中的路徑時，索引選項不是有效的引數。 如需索引選項的詳細資訊，請參閱 [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
 ## <a name="remarks"></a>Remarks  

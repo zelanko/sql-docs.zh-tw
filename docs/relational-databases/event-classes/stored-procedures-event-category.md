@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab7c9a5cf2b002d783e8a46805bce273f885c6dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 431ec504fdcf977af23cf5340e39052ff4416d01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62662581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043298"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

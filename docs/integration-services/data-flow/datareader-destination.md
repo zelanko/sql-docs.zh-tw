@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe2c9335eeb25fec264e2750dc1f9487ca53ff80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbdb529678496669febaf7d97d9a09c8e9ae3217
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107688"
 ---
 # <a name="datareader-destination"></a>DataReader 目的地
 

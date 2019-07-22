@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af5142fe96cc26bd18f71f8a67a7856950b966b4
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: 382fd4ab40c574fd1a3d9ce2e972e2c6ea07cc31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071356"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -197,7 +196,7 @@ ALTER INDEX { index_name | ALL }
 > [!WARNING]
 >  如需有關可以在線上執行之索引作業的詳細資訊，請參閱[線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。
 
- 如果設定 PARTITION = *partition_number*來指定 ALL，便會對齊所有索引。 這表示它們會根據對等的分割區函數來進行分割。 搭配 PARTITION 子句使用 ALL 時，會重建或重新組織含有相同 *partition_number* 的所有索引分割區。 如需有關分割區索引的詳細資訊，請參閱[分割資料表與索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+ 如果設定 PARTITION = *partition_number*來指定 ALL，便會對齊所有索引。 這表示它們會根據對等的分割區函數來進行分割。 搭配 PARTITION 子句使用 ALL 時，會重建或重新組織含有相同 *partition_number* 的所有索引分割區。 如需有關分割區索引的詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
  *database_name*  
  這是資料庫的名稱。  
@@ -632,7 +631,7 @@ ABORT
 
 中止已宣告為可繼續的執行中或已暫停的索引作業。 您必須明確地執行 **ABORT** 命令，以終止可繼續的索引重建作業。 失敗或暫停可繼續的索引作業不會終止其執行；相反地，它會使作業進入無限期暫停狀態。
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一個檔案群組。 您不能利用這個陳述式來修改索引定義，例如新增或刪除資料行，或變更資料行順序。 請搭配 DROP_EXISTING 子句來使用 CREATE INDEX，以執行這些作業。  
   
 未明確指定選項時，會套用目前的設定。 例如，如果 REBUILD 子句並未指定 FILLFACTOR 設定，在重建過程中，會使用系統目錄中所儲存的填滿因數值。 若要檢視目前的索引選項設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
@@ -668,14 +667,14 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
   
 1. 從原始資料行存放區索引讀取所有資料，包括差異存放區。 這會將資料合併成新的資料列群組，並將資料列群組壓縮到資料行存放區。  
   
-1. 進行重建時，實體媒體上需要有空間可儲存資料行存放區索引的兩份複本。 當重建完成時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除原始叢集資料行存放區索引。
+1. 進行重建時，實體媒體上需要有空間可儲存資料行存放區索引的兩份副本。 當重建完成時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除原始叢集資料行存放區索引。
 
 1. 若為具有已排序叢集資料行存放區索引的 Azure SQL 資料倉儲資料表，則 ALTER INDEX REBUILD 將重新排序資料。 在重建作業期間監視 tempdb。 如果您需要更多 tempdb 空間，可以相應增加資料倉儲。 當索引重建完成之後，請相應減少回來。
   
 ## <a name="reorganizing-indexes"></a> 重新組織索引
 重新組織索引所用的系統資源最少。 它會實際重新排序分葉層級的頁面，使它們由左至右符合分葉節點的邏輯順序，以重新組織資料表和檢視表之叢集和非叢集索引的分葉層級。 重新組織也會壓縮索引頁面。 壓縮是以現有填滿因數值為基礎。 若要檢視填滿因數設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
   
-當指定 ALL 時，會重新組織資料表的叢集和非叢集關聯式索引及 XML 索引。 當指定 ALL 時，適用某些限制，請參閱此文章＜引數＞一節中的 ALL 定義。  
+當指定 ALL 時，會重新組織資料表的叢集和非叢集關聯式索引及 XML 索引。 當指定 ALL 時，適用某些限制，請參閱本文＜引數＞一節中的 ALL 定義。  
   
 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
 

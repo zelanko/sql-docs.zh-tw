@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: abcbeb3cd6abfd1712217ed5577f2fafd4d5b4a3
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: de6b89d8c561df851b3cbc8696283f1ed95489f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041204"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用檔案輸入輸出 API 存取 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

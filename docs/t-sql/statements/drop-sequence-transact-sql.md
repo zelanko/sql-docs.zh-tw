@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1f35db71f46a6b6147a6a2758878c25b890ab9ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 740c8bff60f56b94304b789e901ec3b1d945fd17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077718"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c38ed37a3cdf0febed98be98b397847ee689e04f
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 63e8ba6c7770679ca487d945e4823f70425413ba
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67684760"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68253260"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 所支援的 Transact-SQL 語法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

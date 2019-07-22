@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 074802ff3717b8935015071fdf37e43923d752c1
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 10a54ea4326c3fb3c1a9400568ac9aa7e904aa2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111795"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>記憶體最佳化資料表的還原與復原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

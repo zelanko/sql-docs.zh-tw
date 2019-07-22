@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 187a333da1f38cc89f8783b48e0c171630339c9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0b90951dedd0d8fb04203f4e035a4cb8280d169
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140426"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>時態表系統一致性檢查
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

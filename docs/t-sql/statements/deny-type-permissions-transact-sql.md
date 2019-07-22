@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 280d5d37ca364e32e2bd8638cdd03563a2b86f49
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984351"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 類型權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,8 +54,8 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  指定可以拒絕的類型權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- ON TYPE **::** [ _schema_name_**.** ] *type_name*  
- 指定要拒絕其權限的類型。 範圍限定詞 (**::**) 是必要項。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 (**.**) 為必要項目。  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ 指定要拒絕其權限的類型。 範圍限定詞 ( **::** ) 是必要項。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
   
  TO \<database_principal>  
  指定要拒絕其權限的主體。  
@@ -112,7 +111,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要類型的 CONTROL 權限。 如果使用 AS 子句，指定的主體必須擁有要拒絕其權限的類型。  
   
 ## <a name="examples"></a>範例  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f12eff6e67392fd433a6b563876912730b9de279
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf46cd6f2ce89553d846c0322d0f8866f05921f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086137"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

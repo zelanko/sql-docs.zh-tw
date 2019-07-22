@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58a0131c84a1a257917a17238be773a8533d2794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9463df4f8aeacab50636b6cc6e9c63123b9d7c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048540"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>查詢最接近像素的空間資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

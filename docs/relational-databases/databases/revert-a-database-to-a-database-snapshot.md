@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b0b31cb616e5e7d8c2b5c83386f247729a115cbe
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a44e97d97a98b1b3f10c77ca632a67437ca48ae9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127225"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

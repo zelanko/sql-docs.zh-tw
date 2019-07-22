@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2106d2683a47e31c2f9c76535ee059a7f151883
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082403"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ REVERT
   
 ## <a name="arguments"></a>引數  
  WITH COOKIE = @*varbinary_variable*  
- 指定在對應 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 獨立陳述式中建立的 Cookie。 *@varbinary_variable* 是 **varbinary(100)**。  
+ 指定在對應 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 獨立陳述式中建立的 Cookie。 *@varbinary_variable* 是 **varbinary(100)** 。  
   
 ## <a name="remarks"></a>Remarks  
  您可以在模組 (例如，預存程序或使用者定義函數，或是獨立陳述式) 中指定 REVERT。 如果 REVERT 是在模組內部指定，則只能用於模組中定義的 EXECUTE AS 陳述式。 例如，下列預存程序會發出後面接有 `EXECUTE AS` 的 `REVERT` 陳述式。  
@@ -82,7 +81,7 @@ EXECUTE dbo.usp_myproc;
   
  這項機制在使用連接共用的環境中相當有用。 連接共用是一組資料庫連接的維護，這些連接是供多位使用者的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳送到 *@varbinary_variable* 的值 (本例是指應用程式)，因此呼叫者可以保證叫用應用程式的使用者不能變更他們所建立的執行內容。 在還原執行內容之後，應用程式就可以將內容切換回另一個主體。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  不需要任何權限。  
   
 ## <a name="examples"></a>範例  

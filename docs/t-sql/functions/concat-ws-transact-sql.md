@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a69b84fb78acaa30800f69783e6117e37e01149
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075333"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]

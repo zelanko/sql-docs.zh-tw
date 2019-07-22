@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: dc735e71a286d5caca14c7e54b4ea8128feeda2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1e7824f864d7d764529fb6860496316bf00537d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120767"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c12a499dbca9bfe4aac952fb8257acba67cf4c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99f4c5ac155f821dfaf69f335629730d99eb6933
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62683663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072088"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

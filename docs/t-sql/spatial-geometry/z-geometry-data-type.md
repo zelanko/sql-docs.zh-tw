@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 3354d243b7a49e7fc34041e7912e8ac337476917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5932235ea8d97f67b17b481cff4e2d39b0c524a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127334"
 ---
 # <a name="z-geometry-data-type"></a>Z (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

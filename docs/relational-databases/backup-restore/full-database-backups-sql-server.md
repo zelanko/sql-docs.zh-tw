@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 066bd086fcbe9b69cc49821651302cd2102cd671
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 754fd1c09319f6be1a11b4eff94be42679ac9058
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939642"
 ---
 # <a name="full-database-backups-sql-server"></a>完整資料庫備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   完整資料庫備份會備份整個資料庫。 這包括交易記錄的部分，讓完整資料庫得以在還原完整資料庫備份之後復原。 完整資料庫備份代表備份完成時的資料庫。  
   
 > [!TIP]  
->  資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 因此，若為大型資料庫，您可能會想透過一系列的 *「差異資料庫備份」*(Differential database backups) 補充完整資料庫備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
+>  資料庫的大小增加時，完整資料庫備份就需要更多的時間才能完成，同時也需要更多的儲存空間。 因此，若為大型資料庫，您可能會想透過一系列的 *「差異資料庫備份」* (Differential database backups) 補充完整資料庫備份。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 > [!IMPORTANT]  
 >  資料庫備份上的 TRUSTWORTHY 是設為 OFF。 如需如何將 TRUSTWORTHY 設成 ON 的資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  

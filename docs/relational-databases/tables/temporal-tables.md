@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08bdce27a5894cdbdba0122ec33a98c94f244ea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 339d114902274c9d3f19094fb73c8ac8a70a88db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999312"
 ---
 # <a name="temporal-tables"></a>時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

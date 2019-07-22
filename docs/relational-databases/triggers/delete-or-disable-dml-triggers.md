@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5001d5e4df6a8f1cecfea387da4184ba6e417529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8640da8c6363b25342b210043763433a74835691
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056145"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>刪除或停用 DML 觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47679106"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要刪除或停用 DML 觸發程序，使用：**  
   
@@ -66,21 +65,21 @@ ms.locfileid: "47679106"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要刪除之觸發程序的資料表。  
+2.  展開您要的資料庫，展開 **[資料表]** ，然後展開包含您要刪除之觸發程序的資料表。  
   
-3.  展開 **[觸發程序]**，以滑鼠右鍵按一下要刪除的觸發程序，然後按一下 **[刪除]**。  
+3.  展開 **[觸發程序]** ，以滑鼠右鍵按一下要刪除的觸發程序，然後按一下 **[刪除]** 。  
   
-4.  在 **[刪除物件]** 對話方塊中，確認要刪除的觸發程序，然後按一下 **[確定]**。  
+4.  在 **[刪除物件]** 對話方塊中，確認要刪除的觸發程序，然後按一下 **[確定]** 。  
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>若要停用和啟用 DML 觸發程序  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要停用之觸發程序的資料表。  
+2.  展開您要的資料庫，展開 **[資料表]** ，然後展開包含您要停用之觸發程序的資料表。  
   
-3.  展開 **[觸發程序]**，以滑鼠右鍵按一下要停用的觸發程序，然後按一下 **[停用]**。  
+3.  展開 **[觸發程序]** ，以滑鼠右鍵按一下要停用的觸發程序，然後按一下 **[停用]** 。  
   
-4.  若要啟用觸發程序，請按一下 **[啟用]**。  
+4.  若要啟用觸發程序，請按一下 **[啟用]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -88,7 +87,7 @@ ms.locfileid: "47679106"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  將下列範例複製並貼入查詢視窗中。 執行 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 陳述式即可建立 `Sales.bonus_reminder` 觸發程序。 若要刪除觸發程序，請執行 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 陳述式。  
   
@@ -122,7 +121,7 @@ GO
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  將下列範例複製並貼入查詢視窗中。 執行 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 陳述式即可建立 `Sales.bonus_reminder` 觸發程序。 若要停用和啟用觸發程序，請分別執行 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 和 [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) 陳述式。  
   

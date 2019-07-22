@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 6447c64b18b690f6bcdcd0f2ffca7e6b674e3200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb57ac476d430d5bc79c71ce5c6a12087155366
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089003"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

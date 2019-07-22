@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6ac4fde8a0058d05125346167e07c3d99e687a8e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066107"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ ALTER ASSEMBLY assembly_name
   
  必須針對同樣需要更新的每一個相依組件分別發出 ALTER ASSEMBLY 陳述式。  
   
- PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }    
+ PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }   
 > [!IMPORTANT]
 >  `PERMISSION_SET` 選項會受到開啟警告中所述的 `clr strict security` 選項影響。 當 `clr strict security` 已啟用時，所有組件會被視為 `UNSAFE`。  
 >  指定組件的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程式碼存取權限集合屬性。 如需有關此屬性的詳細資訊，請參閱 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)。  
@@ -92,10 +91,10 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]
 >  自主資料庫無法使用 EXTERNAL_ACCESS 和 UNSAFE 選項。  
   
- VISIBILITY = { ON | OFF }   
+ VISIBILITY = { ON | OFF }  
  指出是否會顯示組件，以對該組件建立 Common Language Runtime (CLR) 函數、預存程序、觸發程序、使用者自訂類型以及使用者定義彙總函式。 如果是設為 OFF，則該組件是專供其他組件呼叫。 如果已對該組件建立現有的 CLR 資料庫物件，就不能變更該組件的可見性。 依預設，*assembly_name* 所參考的任何組件在上傳時都不會顯示。  
   
- UNCHECKED DATA   
+ UNCHECKED DATA  
  依預設，如果必須驗證個別資料表資料列的一致性，ALTER ASSEMBLY 便會失敗。 這個選項可讓您利用 DBCC CHECKTABLE 延後檢查。 如果指定的話，即使資料庫中有包含下列各項的資料表，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會執行 ALTER ASSEMBLY 陳述式：  
   
 -   透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數或方法，直接或間接參考組件方法的保存計算資料行。  
@@ -114,7 +113,7 @@ ALTER ASSEMBLY assembly_name
   
  如需詳細資訊，請參閱[實作組件](../../relational-databases/clr-integration/assemblies-implementing.md)。  
   
- [ DROP FILE { *file_name*[ **,**_...n_] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
  從資料庫移除與該組件相關聯的檔案名稱，或是所有與該組件相關聯的檔案。 如果使用底下的 ADD FILE，則會先執行 DROP FILE。 此舉可讓您取代同名的檔案。  
   
 > [!NOTE]  
@@ -168,7 +167,7 @@ ALTER ASSEMBLY assembly_name
   
  如果執行 ALTER ASSEMBLY 時，沒有 UNCHECKED 資料子句，則會進行檢查，驗證新組件版本沒有影響資料表中現有的資料。 此舉可能會影響效能，這一點要看必須檢查的資料量而定。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要組件的 ALTER 權限。 其他需求如下：  
   
 -   若要變更現有權限集合為 EXTERNAL_ACCESS 的組件，則需要伺服器的 **EXTERNAL ACCESS ASSEMBLY** 權限。  

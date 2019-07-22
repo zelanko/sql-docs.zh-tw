@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a910e2217f94b16e8890467ba75bef83e37a838d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef239d0cf2aaf495daa4af273128dc43246ad52e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085975"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM：Commit Tran Completed 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

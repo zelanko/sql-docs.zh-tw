@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1d15c7d890901d168d6779d1715cf44f5d9b31ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63154693a20922201e7138d8e03a0609fe04b4df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967660"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (SSIS 運算式)
 

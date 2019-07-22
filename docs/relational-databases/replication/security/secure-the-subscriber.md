@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0b91a574a9b239e2e9f7bca83151fd50d37b08c9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a9914246135350540b0155e61905d1e548a033fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051874"
 ---
 # <a name="secure-the-subscriber"></a>保護訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

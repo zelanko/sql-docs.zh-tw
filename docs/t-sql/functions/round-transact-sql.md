@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97e6792bcd9ed9ea106e93e65c1c8bbdef70ec88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebe60252bc1f0b950ff2f5b4342c30d99c5bd6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058537"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +57,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |-----------------------|-----------------|  
 |**tinyint**|**int**|  
 |**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
 |**decimal** 和 **numeric** 類別 (p, s)|**decimal(p, s)**|  
 |**money** 和 **smallmoney** 類別|**money**|  

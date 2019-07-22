@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: f82acdab4dcab5644169852bdbba9dc326e03f26
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: ef9ddbdc8d59335ccf4dd639a57339ee6e5572aa
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682107"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265330"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>以多個資料行聯結資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

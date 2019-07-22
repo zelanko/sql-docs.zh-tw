@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 3b4e388211536b61429451d11ee7408c274aca79
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: 076bf71586baa61e8bb77c093cd274eca898bf00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67566570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912627"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (預覽)
 
@@ -107,7 +106,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 - 當參考的基底資料表中發生 UPDATE 或 DELETE 時，將停用具體化檢視。  此限制不適用於 INSERT。  若要重新啟用具體化檢視，請搭配 REBUILD 執行 ALTER MATERIALIZED。
   
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 
 Azure 資料倉儲中的具體化檢視非常類似 SQL Server 中的索引檢視表。  它的限制幾乎與索引檢視表相同 (請參閱[建立索引檢視表](/sql/relational-databases/views/create-indexed-views)以取得詳資訊)，不過具體化檢視支援彙總函式。   具體化檢視有其他考量事項。  
  
@@ -119,7 +118,7 @@ Azure 資料倉儲中的具體化檢視非常類似 SQL Server 中的索引檢�
  
 具體化檢視中參考的資料表上不支援 ALTER TABLE SWITCH。 在使用 ALTER TABLE SWITCH 之前停用或捨棄具體化檢視。 在下列案例中，具體化檢視建立要求必須將新資料行新增到具體化檢視：
 
-|案例|新資料行必須新增到具體化檢視|註解|  
+|狀況|新資料行必須新增到具體化檢視|註解|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG() | 在具體化檢視定義的 SELECT 清單中遺失 |COUNT_BIG (*) |已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
 |SUM(a) 是由使用者在具體化檢視定義的 SELECT 清單中指定的，而且 ‘a’ 是可為 Null 的運算式 |COUNT_BIG (a) |使用者必須手動在具體化檢視定義中新增運算式 ‘a’。|

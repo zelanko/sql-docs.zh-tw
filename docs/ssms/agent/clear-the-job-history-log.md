@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2594fd6343d597c6eb9b623fe6f9e4a4ee6011b1
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 6ee87d5b85cabdea32dbcf1080e341d0d9b1e514
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688690"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68251430"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

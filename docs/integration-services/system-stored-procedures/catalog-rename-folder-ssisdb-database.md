@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5f048ff41461e719a06c20ddd08bb62ca58ca974
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c03793ad98e2d4e71b34b095d158b9470cdbdae1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007213"
 ---
 # <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder (SSISDB 資料庫)
 

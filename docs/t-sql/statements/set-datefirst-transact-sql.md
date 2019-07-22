@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b369aafc68c7bf06ca56e325c036ffa0c7e4341
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19019a0493ef20aac9ab51090d64646d5d626185
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041800"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

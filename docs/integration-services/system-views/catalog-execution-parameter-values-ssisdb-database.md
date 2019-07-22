@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a018123080076cfcc3886395345e29df62feed79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fd328fa1d1112e0bafc8fda98f1fdaa986a3b40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065260"
 ---
 # <a name="catalogexecutionparametervalues-ssisdb-database"></a>catalog.execution_parameter_values (SSISDB 資料庫)
 

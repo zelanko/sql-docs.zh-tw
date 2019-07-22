@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1eaa38203d81cab931ab4ae1aa4ab120ae55bb83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ccae0099ec3e53a382ece71815862f93a6c6441
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019618"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 目的地自訂屬性
 

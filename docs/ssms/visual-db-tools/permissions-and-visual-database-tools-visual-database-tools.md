@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: d943152f074131f5b885ac45a686ec48edb650e2
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 139f0966c08e4ceafdb4ccf76d656d9462ab7b59
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680904"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266386"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>權限和 Visual Database Tools (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

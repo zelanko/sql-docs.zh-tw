@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1df493defd8a85c6d360dd224cdcec99b5732150
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137421"
 ---
 # <a name="database-mail"></a>Database Mail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

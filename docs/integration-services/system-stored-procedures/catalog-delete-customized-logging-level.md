@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5898e2bffa2c68ee3432830c338da986b7117de5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0e2e4a0176625a98f190afbe7ce09f6644b5d64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023425"
 ---
 # <a name="catalogdeletecustomizedlogginglevel"></a>catalog.delete_customized_logging_level 
 

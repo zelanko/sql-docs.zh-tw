@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 733e71edda284d8051cc1f641ae94a3518e6b0d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af383d7c8770a254ba4112194ab9452bbb9a1bab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038649"
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (SSISDB 資料庫)
 

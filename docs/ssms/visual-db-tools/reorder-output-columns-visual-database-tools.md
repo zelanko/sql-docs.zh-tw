@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: b5e37a69bb0ae6914fdca2c770648a869e4f479b
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8ea54ee09a6e2c03548779e591aed5d260b54d49
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679469"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255889"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>重新排列輸出資料行順序 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

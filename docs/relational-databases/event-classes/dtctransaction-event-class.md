@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f468509d077ea3b03c31485c26d945d18e9b537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68fd54ddc0f40da91efca486759e2b55dc00cdfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089593"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

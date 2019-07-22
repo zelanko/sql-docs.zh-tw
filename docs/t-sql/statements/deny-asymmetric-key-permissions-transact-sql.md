@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2987ac3cb84b2e36fc6e78e7ea0466b30a440f4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83655bc03b2f55d9d7d426d1fa58ce4e86570d8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114991"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY 非對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

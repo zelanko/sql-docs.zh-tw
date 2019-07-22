@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c795064669166b905a4420809d66ba2b40143f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56610e5418ff242d39f722add6da103960b11647
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929872"
 ---
 # <a name="history-cleanup-task"></a>記錄清除工作
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 780d2929180657afc705335ff2110b9f3f9cc6c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5bda485ba8cec4d3302a4998f60048aa9a43ef0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62664683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100976"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

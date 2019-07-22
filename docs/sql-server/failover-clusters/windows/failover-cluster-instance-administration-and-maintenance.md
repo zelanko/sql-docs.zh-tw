@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3001446fbb71e0aab0d765d58fb938d8e3af5e62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b895dcc560a6e42e9ba5abce39ee22b4075bde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002487"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>容錯移轉叢集執行個體管理及維護
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47738806"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶與 WSFC 服務帳戶請不要使用相同的帳戶。 如果變更 WSFC 服務帳戶的密碼， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝將會失敗。  
   
- 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]上，服務 SID 用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]上，服務 SID 用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
 ## <a name="administering-a-failover-cluster-instance"></a>管理容錯移轉叢集執行個體  
   

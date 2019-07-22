@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d1a084a53402f53b3e217ba7d3d17a9a67859f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 504fc911348320fc61646e7ea307739770ceae17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125194"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL、函數、預存程序及檢視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

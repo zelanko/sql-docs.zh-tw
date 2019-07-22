@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f08d44451f179d896d1c7bb9057307f5321b5c28
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940408"
 ---
 # <a name="non-sql-server-subscribers"></a>非 SQL Server 訂閱者  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

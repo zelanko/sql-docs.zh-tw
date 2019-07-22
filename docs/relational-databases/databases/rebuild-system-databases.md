@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b8b28e23bd9f795b9c8530b0c267589bd2525fe5
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127298"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,15 +146,15 @@ ms.locfileid: "56590413"
   
 1.  從散發程式媒體啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式 (setup.exe)。  
   
-2.  在左側導覽區域中，按一下 **[維護]**，然後按一下 **[修復]**。  
+2.  在左側導覽區域中，按一下 **[維護]** ，然後按一下 **[修復]** 。  
   
 3.  安裝程式支援規則和檔案常式將會執行，以便確保您的系統已安裝必要元件而且電腦通過安裝程式驗證規則。 按一下 **[確定]** 或 **[安裝]** 繼續進行。  
   
-4.  在 [選取執行個體] 頁面上，選取要修復的執行個體，然後按 **[下一步]**。  
+4.  在 [選取執行個體] 頁面上，選取要修復的執行個體，然後按 **[下一步]** 。  
   
-5.  修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]**。  
+5.  修復規則將會執行，以便驗證作業。 若要繼續進行，請按 **[下一步]** 。  
   
-6.  在 **[已完成修復準備工作]** 頁面中，按一下 **[修復]**。 [完成] 頁面會指出作業已完成。  
+6.  在 **[已完成修復準備工作]** 頁面中，按一下 **[修復]** 。 [完成] 頁面會指出作業已完成。  
   
 ##  <a name="CreateMSDB"></a> 建立新的 msdb 資料庫  
  如果 **msdb** 資料庫損毀，而您沒有 **msdb** 資料庫的備份，可以使用 **instmsdb** 指令碼建立新的 **msdb** 。  

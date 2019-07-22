@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44abaccaf7b41d4dec249e868a5c365f324eb7e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3043894d07ee65ba5389c03b949610bd189f5fbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109177"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 運算式)
 

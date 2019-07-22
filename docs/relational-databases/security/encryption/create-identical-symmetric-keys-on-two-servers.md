@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7158694719e11cca4ea355c5fe3b94359e00b952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bcb4748aebe7b4e24ebfe8f857f422ac8a41f47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049966"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>在兩部伺服器上建立相同的對稱金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

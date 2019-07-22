@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2221eedc3e8a64959183c637493e2b45dfec22ee
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: a73728345ba30fefe755bbab53c185804080dc3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094919"
 ---
 # <a name="credentials-database-engine"></a>認證 (Database Engine)
 

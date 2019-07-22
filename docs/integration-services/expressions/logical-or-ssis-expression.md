@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4ea60751df8c27ba61c190a3f48d25e4dfce8cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e364d807205dd00d99a42aa0e3836c0c475856e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027359"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (邏輯 OR) (SSIS 運算式)
 

@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.openlocfilehash: 8d2ea60a1babc5cc0869586db13a7dfcb39c6277
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67232549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117347"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c7d2e9a53d002013551e24d2aaa0ff70bc266772
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 050182836ecaa013ffe45ff9d5f78d2cdd60a1a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137985"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>設定具有 NVDIMM-N 回寫式快取的儲存空間
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

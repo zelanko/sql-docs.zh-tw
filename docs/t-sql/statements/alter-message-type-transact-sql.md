@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 42e41f16ba720b8641d8fdf8f8ce40a386de11d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4f54cc7e37c6def3b0fad29851012ef6e1a2829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071286"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ ALTER MESSAGE TYPE message_type_name
   
  若要變更訊息類型的 AUTHORIZATION，請使用 ALTER AUTHORIZATION 陳述式。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  變更訊息類型的權限預設為訊息類型的擁有者、**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
  當 ALTER MESSAGE TYPE 陳述式指定了結構描述集合時，執行這個陳述式的使用者必須有所指定之結構描述集合的 REFERENCES 權限。  

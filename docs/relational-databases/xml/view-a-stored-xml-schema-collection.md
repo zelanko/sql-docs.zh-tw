@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 649ee770d2cb3762f4a85bc114cca6ab96e32cda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e62fd82b302576dfbaf45cbb8073c2e94f7a67e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096969"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>檢視儲存的 XML 結構描述集合
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

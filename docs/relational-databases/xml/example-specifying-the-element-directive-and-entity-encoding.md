@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8009fb9b4b016d8fef7397ddc0ab3afee578c281
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: ec0ad5a21100a99b80cca9df20e4b12bbfb58548
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006739"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例指定 ELEMENT 指示詞及實體編碼
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5202c1c61b7d7531737de828de935a14289a902d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efdc5658997bf0cf19637900c96c8f06d4a2e3ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042284"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndpoint (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3f3971a3b12dcfb698c6964e2be7424f59ad6b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c14ba04bc487552f99f955d75df947b3676bbf44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118187"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

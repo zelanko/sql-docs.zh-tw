@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4e9d630691eed9d727df5074508210c95ab7345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907073"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

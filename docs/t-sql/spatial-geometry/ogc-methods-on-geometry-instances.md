@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: c0c0f441-bf33-410c-9df0-544e3d05b944
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 109f44f58de4693d963aea4a23bca68e22a1808a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0d6cce8e9476711b1abfced08559f74ee9c6f0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101110"
 ---
 # <a name="ogc-methods-on-geometry-instances"></a>幾何例項上的 OGC 方法
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b744bf63f2b001c0f2529d6430d2ec335202abfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105009"
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

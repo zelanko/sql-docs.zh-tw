@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126861"
 ---
 # <a name="sql-injection"></a>SQL 資料隱碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|查詢分隔符號。|  
 |**'**|字元資料字串分隔符號。|  
-|**--**|字元資料字串分隔符號。<br />執行個體時提供 SQL Server 登入。|  
+|**--**|字元資料字串分隔符號。<br />。|  
 |**/\*** ... **\*/**|註解分隔符號。 伺服器不會評估 **/\*** 和 **\*/** 之間的文字。|  
 |**xp_**|用在目錄擴充預存程序名稱的開頭，如 `xp_cmdshell`。|  
   

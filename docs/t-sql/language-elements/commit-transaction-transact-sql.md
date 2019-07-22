@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 392f5138e580f35f030ce51ce5eed1150f7d0be7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dccb751fa7ea88a0dfa6d47c6a1f4058871f48e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140284"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e3297b1b799865f600476a65e63e65a29bc2d3c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6f89b0cd9d3e5680fdcd4e8b594223fe4d1ddd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084393"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>為 Oracle CDC 檢視指令碼準備 SQL Server
 

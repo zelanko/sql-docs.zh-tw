@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 0ca597bb8c11262c1cc13de78040a560daa5d0b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c0fb67d173ed0f4ade469c5233a7fdff59dd1a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025252"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>服務帳戶 (設定資料庫鏡像安全性精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

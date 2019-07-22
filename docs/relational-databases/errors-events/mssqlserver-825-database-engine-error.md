@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f69f8214-5af1-4769-878b-117ad6eaff52
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 675333d22f1d3828831fbce6c444df1e89c89fe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd856be050972917f658d71f46a98393fe6ba7bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122764"
 ---
 # <a name="mssqlserver825"></a>MSSQLSERVER_825
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

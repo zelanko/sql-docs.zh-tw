@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa0139887cc51e9b883d7afe6091d818d49073f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bebb334438f911dd061075edf0b338ef4f1c3fff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62860629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050353"
 ---
 # <a name="implementing-merge-functionality-in-a-natively-compiled-stored-procedure"></a>在原生編譯的預存程序中實作 MERGE 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

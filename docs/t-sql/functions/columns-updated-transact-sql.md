@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1e436a03125559da522adc9fcc54df0866032698
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29d95c36ddd87b41183eabc543ff3cfd7907b991
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064627"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

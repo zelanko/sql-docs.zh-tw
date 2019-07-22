@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec5e38c55ae31bac1cee4489f9e92065a649a748
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbe3efe2337b8e967ea7b5ced9fc6b3890d989e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63006092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087288"
 ---
 # <a name="guest-permissions-on-user-databases"></a>使用者資料庫的 Guest 權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

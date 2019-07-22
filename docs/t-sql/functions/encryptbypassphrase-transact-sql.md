@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 310c734a8b2bd72c0d2217540ce9fb303a87df77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aefacd470b045caafc73474126468fc01658276
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904375"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
