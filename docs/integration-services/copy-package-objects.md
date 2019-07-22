@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f27e5f7a9227ee9792c45eca87dbef9f78c34df3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0d82dcc4e9caa3e61f5c8d33d034b9395e57fd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057710"
 ---
 # <a name="copy-package-objects"></a>複製封裝物件
 

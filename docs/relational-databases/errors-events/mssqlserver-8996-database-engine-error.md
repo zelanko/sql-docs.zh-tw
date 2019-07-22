@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4e655cdc-945a-4a18-95dd-75f050563d26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cb3d636ed72fa09858776950f8747e61b1b86a99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a0b64656d68874e5cf5dc87c2b70da0abccc5d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037556"
 ---
 # <a name="mssqlserver8996"></a>MSSQLSERVER_8996
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47659416"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|8996|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

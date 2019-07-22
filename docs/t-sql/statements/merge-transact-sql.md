@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 433f0bac60d3643c56b37cdd6d2750952d9836b2
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: d3a3f484bc05411f4d7b78c1734a4a3dba4330d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129446"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -285,7 +284,7 @@ DEFAULT VALUES
 \<圖形搜尋模式>  
 指定圖形搜尋模式。 如需此子句的引數詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 必須至少指定三個 MATCHED 子句中的一個，但可依任何順序指定這些子句。 在同一個 MATCHED 子句中，不能更新變數一次以上。  
   
 在目標資料表上由 MERGE 陳述式所指定的任何插入、更新或刪除動作，都受限於資料表上定義的任何條件約束，包括任何串聯式參考完整性條件約束。 如果在目標資料表上將任何唯一索引的 IGNORE_DUP_KEY 設定為 ON，則 MERGE 會忽略此設定。  

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dbf1fba077d693b45cd20c0e9f683cda64bc03dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a410379960afa6c20d09fa78ff45304a9f6fe5ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070594"
 ---
 # <a name="configure-dialog-box"></a>設定對話方塊
 
@@ -49,12 +48,12 @@ ms.locfileid: "65729216"
   
 4.  展開包含您要設定之封裝或專案的資料夾。  
   
-5.  以滑鼠右鍵按一下封裝或專案，然後按一下 [設定]。  
+5.  以滑鼠右鍵按一下封裝或專案，然後按一下 [設定]  。  
   
 ##  <a name="parameter"></a> 在參數頁面上設定選項  
  使用 **[參數]** 頁面檢視參數名稱和值，並修改這些值。  
   
- 選取 [參數] 和 [連線管理員] 索引標籤的 [範圍] 下拉式清單中所顯示之參數的範圍。  
+ 選取 [參數]  和 [連線管理員]  索引標籤的 [範圍]  下拉式清單中所顯示之參數的範圍。  
   
  以下是 **[參數]** 索引標籤中的選項清單。  
   
@@ -93,14 +92,14 @@ ms.locfileid: "65729216"
  列出包含環境的資料夾。  
   
  **開啟**  
- 按一下以開啟 [環境屬性] 對話方塊。  
+ 按一下以開啟 [環境屬性]  對話方塊。  
   
  **[加入]**  
- 按一下以加入環境的參考。 在 **[瀏覽環境]** 對話方塊中，按一下環境，然後按一下 **[確定]**。  
+ 按一下以加入環境的參考。 在 **[瀏覽環境]** 對話方塊中，按一下環境，然後按一下 **[確定]** 。  
   
  您可以選取 **[SSISDB]** 節點底下的任何專案資料夾中所包含的環境。  
   
  **移除**  
- 按一下 [參考] 區域中所列的環境，然後按一下 [移除]。  
+ 按一下 [參考]  區域中所列的環境，然後按一下 [移除]  。  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06fb23f63b65d06be6e05569ecd31387830522ae
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a3703082dedc3d6c5933904e07e8e8724a04d20d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033717"
 ---
 # <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

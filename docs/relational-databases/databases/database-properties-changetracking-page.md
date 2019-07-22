@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd6dc5a98da7bf06f4bd24bd045fcc76d880e93d
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 2661424dcfe87f7151bbd92b2dfbf76861913fbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099635"
 ---
 # <a name="database-properties-changetracking-page"></a>資料庫屬性 (變更追蹤頁面)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51350010"
   
  若要啟用變更追蹤，必須先擁有修改資料庫的權限。  
   
- 將值設為 [True] 以設定資料庫選項，允許在個別資料表中啟用變更追蹤。  
+ 將值設為 [True]  以設定資料庫選項，允許在個別資料表中啟用變更追蹤。  
   
  您也可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)設定變更追蹤。  
   
@@ -41,14 +40,14 @@ ms.locfileid: "51350010"
  預設值為 2。  
   
  **保留週期單位**  
- 指定「保留週期」值的單位。 您可以選取 [日]、[小時] 或 [分鐘]。 預設值為 [日]。  
+ 指定「保留週期」值的單位。 您可以選取 [日]  、[小時]  或 [分鐘]  。 預設值為 [日]  。  
   
  最小保留週期是 1 分鐘。 沒有最大保留週期。  
   
  **自動清除**  
  指出在經過了指定的保留週期後，是否要自動清除變更追蹤資訊。  
   
- 如啟用 [自動清除]，會將所有先前自訂的保留週期重設為預設保留週期：2 日。  
+ 如啟用 [自動清除]  ，會將所有先前自訂的保留週期重設為預設保留週期：2 日。  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

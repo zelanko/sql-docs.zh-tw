@@ -9,13 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082132"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out 管理員
 
@@ -32,7 +31,7 @@ Scale Out Manager 是一種管理工具，可讓您透過單一應用程式管�
 ### <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1.從 SQL Server Management Studio 中開啟 Scale Out 管理員
 開啟 SQL Server Management Studio (SSMS)，並連線至 Scale Out Master 的 SQL Server 執行個體。
 
-在物件總管中，以滑鼠右鍵按一下 [SSISDB]，然後選取 [管理相應放大]。
+在物件總管中，以滑鼠右鍵按一下 [SSISDB]  ，然後選取 [管理相應放大]  。
 
 ![管理 Scale Out](media/manage-scale-out.PNG)
 
@@ -41,7 +40,7 @@ Scale Out Manager 是一種管理工具，可讓您透過單一應用程式管�
 
 ### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2.執行 ManagementTool.exe 來開啟 Scale Out Manager
 
-在 `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management` 下方找到 `ManagementTool.exe`。 以滑鼠右鍵按一下 **ManagementTool.exe**，然後選取 [以系統管理員​​身分執行]。 
+在 `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management` 下方找到 `ManagementTool.exe`。 以滑鼠右鍵按一下 **ManagementTool.exe**，然後選取 [以系統管理員​​身分執行]  。 
 
 開啟 Scale Out Manager 之後，輸入 Scale Out Master 的 SQL Server 執行個體名稱，並與其連線以管理 Scale Out 環境。
 
@@ -51,24 +50,24 @@ Scale Out Manager 是一種管理工具，可讓您透過單一應用程式管�
 在 Scale Out Manager 中，您可以執行下列動作：
 
 ### <a name="enable-scale-out"></a>啟用 Scale Out
-連線至 SQL Server 之後，如果未啟用 Scale Out，則可以選取 [啟用] 予以啟用。
+連線至 SQL Server 之後，如果未啟用 Scale Out，則可以選取 [啟用]  予以啟用。
 
 ![入口網站的啟用 Scale Out](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>檢視 Scale Out 主機狀態
-Scale Out 主機的狀態會顯示在 [儀表板] 頁面。
+Scale Out 主機的狀態會顯示在 [儀表板]  頁面。
 
 ![入口網站的儀表板](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>檢視 Scale Out 背景工作狀態
-Scale Out 背景工作的狀態會顯示在 [背景工作管理員] 頁面。 您可以選取每個背景工作，以查看個別狀態。
+Scale Out 背景工作的狀態會顯示在 [背景工作管理員]  頁面。 您可以選取每個背景工作，以查看個別狀態。
 
 ![入口網站的背景工作管理員](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>新增 Scale Out Worker
-若要新增 Scale Out Worker，請選取 Scale Out Worker 清單底部的 **+**。 
+若要新增 Scale Out Worker，請選取 Scale Out Worker 清單底部的 **+** 。 
 
-輸入您想要新增的 Scale Out Worker 的電腦名稱，然後按一下 [驗證]。 Scale Out Manager 會檢查目前的使用者是否有權存取 Scale Out Master 和 Scale Out Worker 電腦上的憑證存放區
+輸入您想要新增的 Scale Out Worker 的電腦名稱，然後按一下 [驗證]  。 Scale Out Manager 會檢查目前的使用者是否有權存取 Scale Out Master 和 Scale Out Worker 電腦上的憑證存放區
 
 ![連線背景工作](media/connect-worker-new.PNG)
 
@@ -90,16 +89,16 @@ Scale Out 背景工作的狀態會顯示在 [背景工作管理員] 頁面。 �
 
 ![入口網站的新增確認 2](media/portal-add-confirm2-new.PNG)
 
-選取 [確認] 核取方塊，然後選取 [確定] 開始新增 Scale Out Worker。
+選取 [確認]  核取方塊，然後選取 [確定]  開始新增 Scale Out Worker。
 
 ### <a name="delete-a-scale-out-worker"></a>刪除 Scale Out Worker
-若要刪除 Scale Out Worker，請選取 Scale Out Worker，然後選取 Scale Out Worker 清單底部的 **-**。
+若要刪除 Scale Out Worker，請選取 Scale Out Worker，然後選取 Scale Out Worker 清單底部的 **-** 。
 
 ### <a name="enable-or-disable-a-scale-out-worker"></a>啟用或停用 Scale Out Worker
-若要啟用或停用 Scale Out Worker，請選取 Scale Out Worker，然後選取 [啟用背景工作] 或 [停用背景工作]。 如果背景工作未離線，則 Scale Out Manager 中所顯示的背景工作狀態會據此變更。
+若要啟用或停用 Scale Out Worker，請選取 Scale Out Worker，然後選取 [啟用背景工作]  或 [停用背景工作]  。 如果背景工作未離線，則 Scale Out Manager 中所顯示的背景工作狀態會據此變更。
 
 ## <a name="edit-a-scale-out-worker-description"></a>編輯 Scale Out Worker 描述
-若要編輯 Scale Out Worker 的描述，請選取 Scale Out Worker，然後選取 [編輯]。 在您完成描述的編輯之後，請選取 [儲存]。
+若要編輯 Scale Out Worker 的描述，請選取 Scale Out Worker，然後選取 [編輯]  。 在您完成描述的編輯之後，請選取 [儲存]  。
 
 ![入口網站的儲存背景工作](media/portal-save-worker-new.PNG)
 

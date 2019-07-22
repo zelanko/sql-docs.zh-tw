@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9547e76602ab82b7cc66b62eb52d37857de95ab4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b30f3ba05726b038b802c704df855e9896da082c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034190"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 目的地編輯器 (錯誤輸出頁面)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用 [SAP BW 目的地編輯器] 的 [錯誤輸出] 頁面可以指定錯誤處理選項。  
+  使用 [SAP BW 目的地編輯器]  的 [錯誤輸出]  頁面可以指定錯誤處理選項。  
   
  若要深入了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 目的地，請參閱 [SAP BW 目的地](../../integration-services/data-flow/sap-bw-destination.md)。  
   
@@ -36,9 +35,9 @@ ms.locfileid: "65726452"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 目的地的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。  
   
-2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
+2.  在 [資料流程]  索引標籤上，按兩下 SAP BW 目的地。  
   
-3.  在 [SAP BW 目的地編輯器] 中，按一下 [錯誤輸出] 開啟編輯器的 [錯誤輸出] 頁面。  
+3.  在 [SAP BW 目的地編輯器]  中，按一下 [錯誤輸出]  開啟編輯器的 [錯誤輸出]  頁面。  
   
 ## <a name="options"></a>選項。  
   

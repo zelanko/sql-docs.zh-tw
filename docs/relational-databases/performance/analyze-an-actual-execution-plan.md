@@ -16,11 +16,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68219571"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>分析實際執行計劃
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,14 @@ ms.locfileid: "52439910"
   
 ## <a name="to-analyze-an-execution-plan-for-a-query"></a>分析查詢的執行計劃  
   
-1.  使用 [檔案] 功能表並按一下 [開啟檔案] 來開啟先前已儲存的查詢執行計劃檔案 (.sqlplan)，或將計劃檔案拖曳至 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 視窗。 或者，如果您只執行查詢並選擇顯示它的執行計劃，請移至結果窗格中的 [執行計劃] 索引標籤。 
+1.  使用 [檔案]  功能表並按一下 [開啟檔案]  來開啟先前已儲存的查詢執行計劃檔案 (.sqlplan)，或將計劃檔案拖曳至 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 視窗。 或者，如果您只執行查詢並選擇顯示它的執行計劃，請移至結果窗格中的 [執行計劃]  索引標籤。 
 
-2.  以滑鼠右鍵按一下執行計劃的空白區域，然後按一下 [分析實際執行計劃]。 
+2.  以滑鼠右鍵按一下執行計劃的空白區域，然後按一下 [分析實際執行計劃]  。 
 
     ![以滑鼠右鍵按一下 [分析實際執行計劃]](../../relational-databases/performance/media/plananalysismenuoption.png "以滑鼠右鍵按一下 [分析實際執行計劃]")   
 
-3.  [執行程序表分析] 視窗隨即在底部開啟。 使用多個陳述式來分析計劃時，藉由使用正確的陳述式進行分析，[多個陳述式] 索引標籤非常實用。
+3.  [執行程序表分析]  視窗隨即在底部開啟。 使用多個陳述式來分析計劃時，藉由使用正確的陳述式進行分析，[多個陳述式]  索引標籤非常實用。
 
-4.  選取 [案例] 索引標籤，以查看實際執行計劃中所發現問題的詳細資料。 針對左窗格上每個列出的運算子，右窗格會在 [按一下這裡可取得此案例的詳細資訊] 連結中顯示案例的詳細資料，並列出可能原因來說明該案例。
+4.  選取 [案例] 索引標籤，以查看實際執行計劃中所發現問題的詳細資料。 針對左窗格上每個列出的運算子，右窗格會在 [按一下這裡可取得此案例的詳細資訊]  連結中顯示案例的詳細資料，並列出可能原因來說明該案例。
 
     ![執行計劃分析的結果](../../relational-databases/performance/media/plananalysis-scenarios.png "執行計劃分析的結果") 

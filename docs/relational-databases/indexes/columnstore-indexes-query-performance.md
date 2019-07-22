@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3dca7f9498ae10d67fd804d6ce0e4a33f99584e
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: c1e2d8f01370978074a07eaa0e5f784927bef511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024972"
 ---
 # <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
 
@@ -25,7 +24,7 @@ ms.locfileid: "67860714"
 
   針對達到資料行存放區索引設計來提供的快速查詢效能的建議。    
     
- 資料行存放區索引的分析和資料倉儲工作負載效能可提升高達 100 倍，且資料壓縮比傳統的資料列存放區索引提升高達 10 倍。 這些建議能讓您的查詢達到資料行存放區索引設計來提供的快速查詢效能。 此文章結尾部分有資料行存放區效能的進一步說明。    
+ 資料行存放區索引的分析和資料倉儲工作負載效能可提升高達 100 倍，且資料壓縮比傳統的資料列存放區索引提升高達 10 倍。 這些建議能讓您的查詢達到資料行存放區索引設計來提供的快速查詢效能。 本文結尾部分有資料行存放區效能的進一步說明。    
     
 ## <a name="recommendations-for-improving-query-performance"></a>改善查詢效能的建議    
  以下是針對達到資料行存放區索引設計來提供的高效能的建議。    

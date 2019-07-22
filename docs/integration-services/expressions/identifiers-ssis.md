@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd586c0ca3fa2cca354a2f394d9008761d744d41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 796b03941fde8bfebc276f0cd5fb1e8c56c3b6b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080838"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
 

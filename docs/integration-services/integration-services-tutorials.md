@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96190f1c17fe084545a652901f5b7c327325c44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1af0995a9225bdde48aa8c113d6a276f5055c903
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057333"
 ---
 # <a name="integration-services-tutorials"></a>Integration Services 教學課程
 

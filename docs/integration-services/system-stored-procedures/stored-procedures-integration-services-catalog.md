@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 93eebaef840f3a1030c7f1f625db2ab93f12f12d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f1666742af5a17cfbb900814c9486233847ed74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038496"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>預存程序 (Integration Services 目錄)
 

@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ceef33cc9f2b463d9d6db18ef8b8a8982d52bf95
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b02d7c93ad2858c1463e3283135f1a3e2cc841b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909585"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新組織與重建索引
 
@@ -57,7 +56,7 @@ ms.locfileid: "67732391"
 
 **sys.dm_db_index_physical_stats** 函數傳回的結果集包含下列資料行。
 
-|「資料行」|描述|
+|「資料行」|Description|
 |------------|-----------------|
 |**avg_fragmentation_in_percent**|邏輯片段的百分比 (索引中失序的頁面)。|
 |**fragment_count**|在索引中的片段數目 (實體上為連續的分葉頁面)。|

@@ -11,28 +11,27 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a0f114c9e2783c8989a2bb4682d488eaea087814
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915198"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>使用 DTA 建議的效能改善
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 ---
-資料倉儲和分析工作負載的效能可大幅獲益於「資料行存放區」索引，特別是針對需要掃描大型資料表的查詢。 如果查詢存取相對少量的資料來搜尋特定值或某範圍值，則「資料列存放區」 (B+-樹狀結構) 索引最具效率。 因為資料列存放區索引可依排序順序傳遞資料列，所以也可以減少查詢執行計畫中的排序成本。 因此，資料列存放區與資料行存放區索引組合的建置選擇，取決於應用程式的工作負載。
+資料倉儲和分析工作負載的效能可大幅獲益於「資料行存放區」  索引，特別是針對需要掃描大型資料表的查詢。 如果查詢存取相對少量的資料來搜尋特定值或某範圍值，則「資料列存放區」  (B+-樹狀結構) 索引最具效率。 因為資料列存放區索引可依排序順序傳遞資料列，所以也可以減少查詢執行計畫中的排序成本。 因此，資料列存放區與資料行存放區索引組合的建置選擇，取決於應用程式的工作負載。
 
 Database Engine Tuning Advisor (DTA) 是在 SQL Server 2016 中引進，透過分析給定的資料庫工作負載，來建議適合的**資料列存放區與資料行存放區索引組合**。 
 
 為了示範 DTA 工作負載效能建議的優點，我們實驗數個真實的客戶工作負載。 我們讓 DTA 針對每個客戶工作負載分析個別查詢，以及查詢的完整工作負載。 我們考慮三種替代方案︰
   
   1. **僅限資料行存放區**：在不使用 DTA 的情況下，僅建置所有資料表的資料行存放區索引。 
-  2. **DTA (僅限資料列存放區)**：使用僅建議資料列存放區索引的選項來執行 DTA。
-  3. **DTA (資料列存放區 + 資料行存放區)**：使用同時建議資料列存放區和資料行存放區索引的選項來執行 DTA。  
+  2. **DTA (僅限資料列存放區)** ：使用僅建議資料列存放區索引的選項來執行 DTA。
+  3. **DTA (資料列存放區 + 資料行存放區)** ：使用同時建議資料列存放區和資料行存放區索引的選項來執行 DTA。  
    
 在每個案例中，我們都會接著實作建議的索引。 我們會報告多次執行查詢或工作負載所取得的平均 CPU 時間 (以毫秒為單位)。 下圖繪製跨兩個不同客戶資料庫之工作負載的 CPU 時間 (以毫秒為單位)。 請注意，y 軸 (CPU 時間) 會使用對數刻度。   
 

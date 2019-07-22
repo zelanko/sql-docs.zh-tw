@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cb4bd503220a08736053674c30b0e6c1c3d9b1de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54c699bff247ccf66200f08b6779c80ab1ad84d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941216"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS 運算式)
 

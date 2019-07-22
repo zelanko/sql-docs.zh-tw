@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8a1b2725d65f9eea468ac70ce2d99285c0a85252
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 8204471504e254c33d70adcce52490e0f5609985
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117112"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -449,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  索引會將頁面壓縮用於資料上。  
   
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 每一個 CREATE SPATIAL INDEX 陳述式只能指定每一個選項一次。 指定重複的任何選項都會引發錯誤。  
   
 在資料表的每一個空間資料行上最多可以建立 249 個空間索引。 例如，要針對單一資料行中的不同鑲嵌式參數建立索引時，在特定空間資料行上建立一個以上的空間索引可能會很有用處。  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc092d095835caa5422f01c2f9a9b3a85ec94d55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948226"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  這是要更新之資料表及 **text**、**ntext** 或 **image** 資料行的名稱。 資料表名稱和資料行名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 資料庫名稱和擁有者名稱的指定是選擇性的。  
   
  *dest_text_ptr*  
- 這是指向要更新之 **text**、**ntext** 或 **image** 資料的文字指標值 (TEXTPTR 函數所傳回)。 *dest_text_ptr* 必須是 **binary(** 16 **)**。  
+ 這是指向要更新之 **text**、**ntext** 或 **image** 資料的文字指標值 (TEXTPTR 函數所傳回)。 *dest_text_ptr* 必須是 **binary(** 16 **)** 。  
   
  *insert_offset*  
  這是以零為基底的更新起始位置。 就 **text** 或 **image** 資料行而言，*insert_offset* 是在插入新資料之前，要從現有資料行開頭略過的位元組數。 就 **ntext** 資料行而言，*insert_offset* 則是字元數目 (每個 **ntext** 字元會使用 2 個位元組)。 從這個以零為基底之起始位置開始的現有 **text**、**ntext** 或 **image** 資料，會向右移來騰出空間供新資料使用。 0 值會將新資料插入現有資料的起點。 NULL 值會將新資料附加至現有的資料值。  
@@ -99,7 +98,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
   
  若要將 **text** 資料行初始化為 NULL，請使用 WRITETEXT；UPDATETEXT 會將 **text** 資料行初始化為空字串。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要指定之資料表的 UPDATE 權限。  
   
 ## <a name="examples"></a>範例  

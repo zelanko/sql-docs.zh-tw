@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: e5ea210e24027ac130aedfc2ccb9d5b235f798ea
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 1d2bc7a9d6a50302b48df33acd16bb30033cfe7f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682928"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263695"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>排列圖表中的資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

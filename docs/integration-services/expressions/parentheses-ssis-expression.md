@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5eaf16b94271bb27808571c9bf219e41d8a1d868
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffdc00f4f8f0c009512eace3b3724a7fc419e8a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967947"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (括號) (SSIS 運算式)
 

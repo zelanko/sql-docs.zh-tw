@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7e4137d61fcb223f4fa4fc943314ecaa50965c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7311828e42ffbd73e53e82ab3f87fb6e7b0925d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086686"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
   
  當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 `CONTROL SERVER` 權限。  
   
 ## <a name="examples"></a>範例  

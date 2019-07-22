@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f78f779585f18b3ab3b787424ace83f86dcf987c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 987ce3d90159a83d141a241579e5cbfc727277c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045470"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
 

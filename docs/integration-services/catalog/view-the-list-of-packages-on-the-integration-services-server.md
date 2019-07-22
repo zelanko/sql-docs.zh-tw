@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 383d45c66c59055761c0fd1f9f112e24f41bad29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67d877d0ce4ea137c36a12a28140de85d2b527c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65801414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074676"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>檢視 Integration Services 伺服器上的封裝清單
 

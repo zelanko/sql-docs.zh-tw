@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 945573e16582ba2778ff29e7396a2fb6ea3dedce
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115271"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 

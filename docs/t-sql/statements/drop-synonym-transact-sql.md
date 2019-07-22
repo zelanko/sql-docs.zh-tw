@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f44ba9c4d2b882e97b397fdf959c41d7a9b35fbf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 59c26a7e490edb120d8819d8e2b16158b5b41e76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072133"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
   
  動態 SQL 中的同義字可以建立、卸除和參考。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  使用者至少必須符合下列一個條件，才能卸除同義字。 使用者必須是：  
   
 -   同義字的目前擁有者。  

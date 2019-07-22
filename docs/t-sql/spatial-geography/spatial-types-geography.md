@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: f70b12b7aaf0dbcc748897768d090cb1c663fb30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042526"
 ---
 # <a name="spatial-types---geography"></a>空間類型 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

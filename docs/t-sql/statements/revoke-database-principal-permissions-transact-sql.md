@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee69855ebc242218e0a254c538e3c7e00fee7747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082323"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,15 +62,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  指定可以撤銷的資料庫主體權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  USER ::*database_user*  
- 指定撤銷其權限之使用者的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
+ 指定撤銷其權限之使用者的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  ROLE ::*database_role*  
- 指定撤銷其權限之角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
+ 指定撤銷其權限之角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  APPLICATION ROLE ::*application_role*  
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- 指定撤銷其權限之應用程式角色的類別和名稱。 範圍限定詞 (**::**) 是必要項。  
+ 指定撤銷其權限之應用程式角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  GRANT OPTION  
  指出會撤銷對其他主體授與指定權限的權限。 不會撤銷權限本身。  

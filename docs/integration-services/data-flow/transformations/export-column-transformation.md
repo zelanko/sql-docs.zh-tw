@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e47a17c2802b9de56c567d4f12a2edcff84f1061
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f90f42b21946b4a29c81f33f8f484656c6f5919
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944450"
 ---
 # <a name="export-column-transformation"></a>匯出資料行轉換
 
@@ -44,11 +43,11 @@ ms.locfileid: "65726119"
 |False|False|否|轉換會建立新檔案，並將資料寫入檔案。|  
 |True|False|否|轉換會建立新檔案，並將資料寫入檔案。|  
 |False|True|否|轉換會建立新檔案，並將資料寫入檔案。|  
-|True|True|否|轉換未通過設計階段驗證。 將兩個屬性都設定為 [true] 是無效的。|  
+|True|True|否|轉換未通過設計階段驗證。 將兩個屬性都設定為 [true]  是無效的。|  
 |False|False|是|發生執行階段錯誤。 檔案存在，但轉換無法寫入該檔案。|  
 |False|True|是|轉換會刪除並重新建立檔案，然後將資料寫入該檔案中。|  
 |True|False|是|轉換會開啟該檔案，並將資料寫入檔案結尾。|  
-|True|True|是|轉換未通過設計階段驗證。 將兩個屬性都設定為 [true] 是無效的。|  
+|True|True|是|轉換未通過設計階段驗證。 將兩個屬性都設定為 [true]  是無效的。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>設定匯出資料行轉換  
  您可以利用下列方式設定「匯出資料行」轉換：  
@@ -103,7 +102,7 @@ ms.locfileid: "65726119"
  檢視輸出的名稱。 按一下名稱即可展開檢視來包含資料行。  
   
  **資料行**  
- 檢視您在 [匯出資料行轉換編輯器] 對話方塊的 [資料行] 頁面上選取的輸出資料行。  
+ 檢視您在 [匯出資料行轉換編輯器]  對話方塊的 [資料行]  頁面上選取的輸出資料行。  
   
  **錯誤**  
  指定您要在錯誤發生時採取什麼動作：忽略失敗、重新導向資料列，或使元件失效。  

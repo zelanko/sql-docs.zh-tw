@@ -14,23 +14,22 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6be64ffc819157b95729f855bb81a5e12c78a7f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134479"
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您可以使用 [Database Mail 組態精靈] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立 Database Mail 公用和私人設定檔。 如需郵件設定檔的詳細資訊，請參閱 [Database Mail 設定檔](database-mail-configuration-objects.md)。
+  您可以使用 [Database Mail 組態精靈]  或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立 Database Mail 公用和私人設定檔。 如需郵件設定檔的詳細資訊，請參閱 [Database Mail 設定檔](database-mail-configuration-objects.md)。
   
--   **開始之前：**[必要條件](#Prerequisites)、[安全性](#Security)  
+-   **開始之前：** [必要條件](#Prerequisites)、[安全性](#Security)  
   
--   **使用下列方式建立 Database Mail 私人設定檔：**[Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#PrivateProfile)  
+-   **使用下列方式建立 Database Mail 私人設定檔：** [Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#PrivateProfile)  
   
--   **使用下列方式建立 Database Mail 公用設定檔：**[Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
+-   **使用下列方式建立 Database Mail 公用設定檔：** [Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -40,7 +39,7 @@ ms.locfileid: "53980444"
 ###  <a name="Security"></a> 安全性  
  公用設定檔可以讓任何可存取 **msdb** 資料庫的使用者使用該設定檔來傳送電子郵件。 使用者或角色可以使用私人設定檔。 為角色授與設定檔的存取權限時，會建立能夠更輕鬆維護的架構。 您必須是 **msdb** 資料庫中之 **DatabaseMailUserRole** 的成員，而且至少可以存取一個 Database Mail 設定檔，才能傳送郵件。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  建立設定檔帳戶以及執行預存程序的使用者，應該是系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 Database Mail 組態精靈  
@@ -52,37 +51,37 @@ ms.locfileid: "53980444"
   
 -   按兩下 Database Mail，開啟 [Database Mail 組態精靈]。  
   
--   在 [選取組態工作] 頁面上，選取 [管理 Database Mail 帳戶和設定檔] 選項，然後按一下 [下一步]。  
+-   在 [選取組態工作]  頁面上，選取 [管理 Database Mail 帳戶和設定檔]  選項，然後按一下 [下一步]  。  
   
--   在 [管理設定檔和帳戶] 頁面上，選取 [建立新設定檔] 選項，然後按一下 [下一步]。  
+-   在 [管理設定檔和帳戶]  頁面上，選取 [建立新設定檔]  選項，然後按一下 [下一步]  。  
   
--   在 [新增設定檔] 頁面上，指定設定檔名稱、描述並新增要併入設定檔中的帳戶，然後按一下 [下一步]。  
+-   在 [新增設定檔]  頁面上，指定設定檔名稱、描述並新增要併入設定檔中的帳戶，然後按一下 [下一步]  。  
   
--   在 [完成精靈] 頁面上，檢閱要執行的動作，然後按一下 [完成] 完成新設定檔的建立。  
+-   在 [完成精靈]  頁面上，檢閱要執行的動作，然後按一下 [完成]  完成新設定檔的建立。  
   
 -   **若要設定 Database Mail 私人設定檔：**  
   
     -   開啟 [Database Mail 組態精靈]。  
   
-    -   在 [選取組態工作] 頁面上，選取 [管理 Database Mail 帳戶和設定檔] 選項，然後按一下 [下一步]。  
+    -   在 [選取組態工作]  頁面上，選取 [管理 Database Mail 帳戶和設定檔]  選項，然後按一下 [下一步]  。  
   
-    -   在 [管理設定檔和帳戶] 頁面上，選取 [管理設定檔安全性] 選項，然後按一下 [下一步]。  
+    -   在 [管理設定檔和帳戶]  頁面上，選取 [管理設定檔安全性]  選項，然後按一下 [下一步]  。  
   
-    -   在 [私人設定檔] 索引標籤中，選取想要設定之設定檔的核取方塊，然後按一下 [下一步]。  
+    -   在 [私人設定檔]  索引標籤中，選取想要設定之設定檔的核取方塊，然後按一下 [下一步]  。  
   
-    -   在 [完成精靈] 頁面上，檢閱要執行的動作，然後按一下 [完成] 完成設定檔的設定。  
+    -   在 [完成精靈]  頁面上，檢閱要執行的動作，然後按一下 [完成]  完成設定檔的設定。  
   
 -   **若要設定 Database Mail 公用設定檔：**  
   
     -   開啟 [Database Mail 組態精靈]。  
   
-    -   在 [選取組態工作] 頁面上，選取 [管理 Database Mail 帳戶和設定檔] 選項，然後按一下 [下一步]。  
+    -   在 [選取組態工作]  頁面上，選取 [管理 Database Mail 帳戶和設定檔]  選項，然後按一下 [下一步]  。  
   
-    -   在 [管理設定檔和帳戶] 頁面上，選取 [管理設定檔安全性] 選項，然後按一下 [下一步]。  
+    -   在 [管理設定檔和帳戶]  頁面上，選取 [管理設定檔安全性]  選項，然後按一下 [下一步]  。  
   
-    -   在 [公用設定檔] 索引標籤中，選取想要設定之設定檔的核取方塊，然後按一下 [下一步]。  
+    -   在 [公用設定檔]  索引標籤中，選取想要設定之設定檔的核取方塊，然後按一下 [下一步]  。  
   
-    -   在 [完成精靈] 頁面上，檢閱要執行的動作，然後按一下 [完成] 完成設定檔的設定。  
+    -   在 [完成精靈]  頁面上，檢閱要執行的動作，然後按一下 [完成]  完成設定檔的設定。  
   
 ## <a name="using-transact-sql"></a>使用 Transact-SQL  
   
@@ -190,7 +189,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*預設設定檔狀態* '  
   
-     其中，*@profile_name* 是設定檔的名稱，*@principal_name* 指出這是公用設定檔，而 *@is_default* 可決定此設定檔是否為資料庫使用者或角色的預設值。  
+     其中， *@profile_name* 是設定檔的名稱， *@principal_name* 指出這是公用設定檔，而 *@is_default* 可決定此設定檔是否為資料庫使用者或角色的預設值。  
   
  下列範例會建立 Database Mail 帳戶、建立 Database Mail 私人設定檔，然後將帳戶加入設定檔，並授與設定檔的公用存取權。  
   

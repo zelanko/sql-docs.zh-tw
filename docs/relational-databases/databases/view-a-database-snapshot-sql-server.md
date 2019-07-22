@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7b8389317ea7239533b98d46562fdcf9bfa6212
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 57df1a271d7c7694de048864f8b0db06223c4009
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127104"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>檢視資料庫快照集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

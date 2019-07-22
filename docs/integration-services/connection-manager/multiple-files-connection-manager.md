@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fb4be4efb5c9cce7273bb9024b7b2b3a5565af16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 758bf428032d0eb66cca054032c094d30fa85c30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104133"
 ---
 # <a name="multiple-files-connection-manager"></a>多個檔案連接管理員
 

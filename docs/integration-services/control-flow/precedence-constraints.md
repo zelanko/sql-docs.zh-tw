@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4d6daa4efcd865502429dad0cc8edd498e8a94f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb2d6637098e791a61cbceaf6a6823dfc25cef6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099654"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e99b9c4fbfa9b0d20a78a9d76e4730ce46966d3b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078033"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>將 FOR XML 查詢結果指派給 xml 類型變數  
- 在以下範例中，FOR XML 結果會指派給一個 **xml** 類型變數 `@x`。 此查詢會從 `BusinessEntityID`xml `FirstName`的 `LastName`資料行擷取連絡資訊，例如 `AdditionalContactInfo` 、 **、**`TYPE`，以及其他電話號碼。 由於 `FOR XML` 子句會指定 `TYPE` 指示詞，因此 XML 將以 **xml** 類型傳回並將其指派給變數。  
+ 在以下範例中，FOR XML 結果會指派給一個 **xml** 類型變數 `@x`。 此查詢會從 `BusinessEntityID`xml `FirstName`的 `LastName`資料行擷取連絡資訊，例如 `AdditionalContactInfo` 、 **、** `TYPE`，以及其他電話號碼。 由於 `FOR XML` 子句會指定 `TYPE` 指示詞，因此 XML 將以 **xml** 類型傳回並將其指派給變數。  
   
 ```  
 USE AdventureWorks2012;  
@@ -73,7 +72,7 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>查詢 FOR XML 查詢的結果  
- FOR XML 查詢會傳回 XML。 因此您可以將 **xml** 類型方法 (例如 **query()** 與 **value()**) 套用至 FOR XML 查詢所傳回的 XML 結果。  
+ FOR XML 查詢會傳回 XML。 因此您可以將 **xml** 類型方法 (例如 **query()** 與 **value()** ) 套用至 FOR XML 查詢所傳回的 XML 結果。  
   
  在下列查詢中，**xml** 資料類型的 `query()` 方法是用以查詢 `FOR XML` 查詢的結果。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/query-method-xml-data-type.md)。  
   

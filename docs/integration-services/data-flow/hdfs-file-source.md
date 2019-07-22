@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c40acf6b85fd8a8a2078ea8c085ac54512361ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fc078aa37b7e3bb264d2542c52510601f156906
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941880"
 ---
 # <a name="hdfs-file-source"></a>HDFS 檔案來源
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 3e7c367acff65aa61e43f2ea00cde98a54d5cc94
-ms.sourcegitcommit: acef7bf9f3f4c93920191919992aee2b41c2c8e6
+ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67131829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014466"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>在 Always On 可用性群組使用讀取級別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

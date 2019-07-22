@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1671b59c2b7b9ecaa376e1d5ef46a6743c0b558e
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009356"
 ---
 # <a name="use-the-systemhealth-session"></a>使用 system_health 工作階段
 
@@ -88,7 +87,7 @@ WHERE xe.name = 'system_health'
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  
   
-請注意，當您還原此工作階段之後，必須使用 `ALTER EVENT SESSION` 陳述式或 [物件總管] 中的 [擴充事件] 節點來啟動此工作階段。 否則，此工作階段會在您下一次重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務時自動啟動。  
+請注意，當您還原此工作階段之後，必須使用 `ALTER EVENT SESSION` 陳述式或 [物件總管] 中的 [擴充事件]  節點來啟動此工作階段。 否則，此工作階段會在您下一次重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務時自動啟動。  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)    

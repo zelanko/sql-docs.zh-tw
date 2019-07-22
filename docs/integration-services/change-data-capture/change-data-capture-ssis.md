@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9ff79d145f11d64c7ac97a9d068ea99ec7886d2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee848e7ceab362fb71189312104e32e2b5957fae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099783"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
 

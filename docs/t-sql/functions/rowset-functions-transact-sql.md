@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac24d700-3144-4ab5-9fa8-8c014001cc71
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d10adee08bea99595ba2d49edcf5f8f322f5bcfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90f59e04301b9366c77d2c623b4eb816a731f9e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111347"
 ---
 # <a name="rowset-functions-transact-sql"></a>資料列集函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

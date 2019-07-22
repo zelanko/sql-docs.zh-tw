@@ -10,13 +10,12 @@ ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 4fe57da44076bd33c585d4ab9986cf373e311f8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72c5ff1bcb2162bbe3f3584222214ba448b67d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054280"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成資料庫引擎升級
 

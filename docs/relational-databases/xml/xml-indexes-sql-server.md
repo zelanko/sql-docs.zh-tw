@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ed342b2176d7803092d389b88e95a11f34752ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096910"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

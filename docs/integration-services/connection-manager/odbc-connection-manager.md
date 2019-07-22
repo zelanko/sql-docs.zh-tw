@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 767e94fe1a87973331ccae234bc85270a5cee800
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a9b8fa4b316c34bb2cfc4b51c0fcb6ba310367e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104033"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 連接管理員
 
@@ -66,10 +65,10 @@ ms.locfileid: "65728141"
  檢視選取之 ODBC 連接管理員的屬性與值。  
   
  **新增**  
- 使用 [連線管理員] 對話方塊來建立 ODBC 連線管理員。 此對話方塊也可以讓您在必要時建立新的 ODBC 資料來源。  
+ 使用 [連線管理員]  對話方塊來建立 ODBC 連線管理員。 此對話方塊也可以讓您在必要時建立新的 ODBC 資料來源。  
   
  **刪除**  
- 請選取一個連接，然後使用 [刪除] 按鈕刪除它。  
+ 請選取一個連接，然後使用 [刪除]  按鈕刪除它。  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

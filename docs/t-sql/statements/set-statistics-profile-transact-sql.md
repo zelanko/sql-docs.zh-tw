@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5675050352b26dd0fb3a017891563070c97473c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3d48de1a5feef4a00b087fded311a2b57169047
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131934"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ SET STATISTICS PROFILE { ON | OFF }
 |**資料列**|每個運算子所產生的實際資料列數|  
 |**Executes**|運算子已執行的次數|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要使用 SET STATISTICS PROFILE 和檢視輸出，使用者必須有下列許可權：  
   
 -   執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的適當許可權。  

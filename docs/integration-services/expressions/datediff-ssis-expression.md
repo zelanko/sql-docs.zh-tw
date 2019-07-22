@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 961feeb5714ae007d13517887b2fb6edb794b2be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63c820efc9473f5e297345c6a595973daf2e47b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081144"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 運算式)
 

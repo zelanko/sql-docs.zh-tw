@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 919b2b928319c38870c7bba95adc1d582b1aa569
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115884"
 ---
 # <a name="maintenance-plans"></a>維護計畫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "51216266"
   
 -   執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 這可用來建立執行各種動作的作業，以及執行這些作業的維護計畫。  
   
- 維護工作產生的結果可以當作報表寫入文字檔，或寫入 **msdb** 中的維護計畫資料表 (**sysmaintplan_log** 和 **sysmaintplan_logdetail**)。 若要在記錄檔檢視器中檢視結果，請以滑鼠右鍵按一下 [維護計畫]，然後按一下 [檢視記錄]。  
+ 維護工作產生的結果可以當作報表寫入文字檔，或寫入 **msdb** 中的維護計畫資料表 (**sysmaintplan_log** 和 **sysmaintplan_logdetail**)。 若要在記錄檔檢視器中檢視結果，請以滑鼠右鍵按一下 [維護計畫]  ，然後按一下 [檢視記錄]  。  
   
 ## <a name="related-tasks"></a>相關工作  
  若要開始使用維護計畫，請使用下列主題。  

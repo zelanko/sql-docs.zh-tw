@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dafe47a0a136c7ab5640fc667b46cc496cfdbcb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea71b8970119a5c88f38bb31e4a728addc0954fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023618"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈中的步驟
 

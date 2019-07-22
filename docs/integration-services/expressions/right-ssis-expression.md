@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 61a95fef0bdc8ae31631c0c86f43f9ca5fa6a98b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b524da5aedb728c7c7fdb9da8dbcfc66d5b240c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967897"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 運算式)
 

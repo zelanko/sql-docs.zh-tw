@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 925dbb39d3219f453d83bb94f04b1ba91e5c67d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f790693b674336d7331c6f3b0bf3267affc7f4b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072217"
 ---
 # <a name="--subtraction-assignment-transact-sql"></a>-= (減法指派) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

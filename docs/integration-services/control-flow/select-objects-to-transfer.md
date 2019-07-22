@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4c2e7ef3c3e4a6c61fe3250ec8d9d267503d9ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a402937af18a450dd778d585dd5a1fa59605f79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070505"
 ---
 # <a name="select-objects-to-transfer"></a>選取要傳送的物件
 

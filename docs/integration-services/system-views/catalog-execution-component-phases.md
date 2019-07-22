@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 718605c140bcf6e44cd78c9b07b8b649e0f593bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4f3284e5b0e483c09ea9cc95e64ed20fc1a1cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065255"
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases 
 

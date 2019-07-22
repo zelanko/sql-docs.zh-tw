@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff95f63c43425f9189413bde0c1ee71c5eae287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26fe36ec71463721adf2810221fa3fc118917ae9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967687"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 運算式)
 

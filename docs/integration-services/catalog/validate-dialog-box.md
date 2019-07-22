@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26390931bce4a2b26a4b9e2c234368b02a1e0442
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 999b409025cce7ec209f527841d8ecb9fc416af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070514"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
 

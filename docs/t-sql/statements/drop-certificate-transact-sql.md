@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caf2333be03cd0807d961f95a470aadaed9501b0
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 2ea8b8b77ac4445bc40bea2a2dcc9359de0f6a09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898282"
 ---
 # <a name="drop-certificate-transact-sql"></a>DROP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -53,7 +52,7 @@ DROP CERTIFICATE certificate_name
 ## <a name="remarks"></a>Remarks  
  憑證只有在沒有實體與其關聯時，才可以卸除。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要憑證的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

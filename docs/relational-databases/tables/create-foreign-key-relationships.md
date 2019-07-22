@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36fcc32c7cd07fdb8f7464cf8e39e52196e59fbe
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123751"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
 

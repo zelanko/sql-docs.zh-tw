@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25098ea66002f4f2eac9e5f27f8f0a7cc05c5d62
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909795"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 

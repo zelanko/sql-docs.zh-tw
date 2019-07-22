@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 87763f56dee2c8878ab0149d673d55be3e641ed8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef27717471df324afe9b55f0f0a0f56d77849486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112400"
 ---
 # <a name="developing-specific-types-of-script-components"></a>開發特定類型的指令碼元件
 

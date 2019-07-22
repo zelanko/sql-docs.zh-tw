@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 81ab20c275fb4f42e37e8593d27f05d2d55acc00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52cba3151568396bafd51ffac3e608151039f8ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045420"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
 

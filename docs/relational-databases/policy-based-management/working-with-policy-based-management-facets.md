@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6893d6d86066cd77d1889ac859c67b0074d6d8c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 179b5431f0531b29b4867f405ee88e4567ddb5d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054403"
 ---
 # <a name="working-with-policy-based-management-facets"></a>使用原則式管理 Facet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

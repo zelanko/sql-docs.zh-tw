@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984748"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -33,15 +32,15 @@ ms.locfileid: "58657982"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **立即試用 SQL Server！** 
-- 下載「免費的」[**SQL Server 2016 Developer Edition！**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)
+- 下載「免費的」  [**SQL Server 2016 Developer Edition！** ](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)
 - 下載最新版的 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
 - 有 Azure 帳戶嗎？ 啟動[已安裝 SQL Server 2016 的虛擬機器](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 Database Engine
-- 您現在可以在 SQL Server 安裝及設定期間，設定「多個 TempDB」資料庫檔案。
-- 新的「查詢存放區」可將查詢文字、執行計畫和效能計量儲存於資料庫內，使您可以輕鬆地監視效能問題並進行疑難排解。 儀表板會顯示哪些查詢使用最多時間、記憶體或 CPU 資源。
-- 「時態表」是記錄所有資料變更的記錄資料表，能完整記錄發生資料變更的日期和時間。
-- 在 SQL Server 中全新內建的「JSON 支援」可支援 JSON 匯入、匯出、剖析和儲存。
+- 您現在可以在 SQL Server 安裝及設定期間，設定「多個 TempDB」  資料庫檔案。
+- 新的「查詢存放區」  可將查詢文字、執行計畫和效能計量儲存於資料庫內，使您可以輕鬆地監視效能問題並進行疑難排解。 儀表板會顯示哪些查詢使用最多時間、記憶體或 CPU 資源。
+- 「時態表」  是記錄所有資料變更的記錄資料表，能完整記錄發生資料變更的日期和時間。
+- 在 SQL Server 中全新內建的「JSON 支援」  可支援 JSON 匯入、匯出、剖析和儲存。
 - 新的 **PolyBase** 查詢引擎整合了 SQL Server 與 Hadoop 或 Azure Blob 儲存體中的外部資料。 您可以匯入或匯出資料，也可以執行查詢。
 - 新的 **Stretch Database** 功能可讓您動態且安全地將本機 SQL Server 資料庫的資料封存到雲端的 Azure SQL 資料庫。 SQL Server 會自動查詢本機資料，以及位於連結資料庫內的遠端資料。 
 - **記憶體內 OLTP：** 
@@ -55,45 +54,45 @@ ms.locfileid: "58657982"
 
 請參閱[資料庫引擎](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
-SQL Server 2016 Analysis Services 針對以「1200 (含) 相容性層級」為基礎的表格式模型資料庫，能提供更佳的效能、撰寫功能、資料庫管理、篩選、處理及其他優化。
+SQL Server 2016 Analysis Services 針對以「1200 (含) 相容性層級」  為基礎的表格式模型資料庫，能提供更佳的效能、撰寫功能、資料庫管理、篩選、處理及其他優化。
 - **[SQL Server R 服務](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** 能將用於統計分析的 R 程式設計語言整合到 SQL Server 中。 
-- 新的「資料庫一致性檢查程式 (DBCC)」會在內部執行，以偵測可能的資料損毀問題。
-- 可即時查詢外部資料而不需事先匯入的「直接查詢」功能，現已支援更多資料來源，包括 Azure SQL、Oracle 和 Teradata。 
-- 許多新的「DAX (資料存取運算式) 函式」。
+- 新的「資料庫一致性檢查程式 (DBCC)」  會在內部執行，以偵測可能的資料損毀問題。
+- 可即時查詢外部資料而不需事先匯入的「直接查詢」  功能，現已支援更多資料來源，包括 Azure SQL、Oracle 和 Teradata。 
+- 許多新的「DAX (資料存取運算式) 函式」  。
 - 新的 **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** \(機器翻譯\) 命名空間，可管理表格式模式執行個體和模型。 
 - [Analysis Services 管理物件 (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) \(機器翻譯\) 已經重構以包含第二個組件 **Microsoft.AnalysisServices.Core.dll**。
 
 請參閱 [Analysis Services 引擎 (SSAS)](../analysis-services/what-s-new-in-analysis-services.md)。 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
-- 支援「Always On 可用性群組」
+- 支援「Always On 可用性群組」 
 - **累加套件部署**
-- 「Always Encrypted」支援
+- 「Always Encrypted」  支援
 - 新的 **ssis_logreader** 資料庫層級角色
-- 新的「自訂記錄層級」
-- 資料流程中「適用於錯誤的資料行名稱」 
-- 新的「連接器」
-- 支援「Hadoop 檔案系統 (HDFS)」
+- 新的「自訂記錄層級」 
+- 資料流程中「適用於錯誤的資料行名稱」  
+- 新的「連接器」 
+- 支援「Hadoop 檔案系統 (HDFS)」 
 
 請參閱 [Integration Services (SSIS)](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)。
 
 ## <a name="sql-server-2016-master-data-services-mds"></a>SQL Server 2016 Master Data Services (MDS)
-- 「衍生階層的改進」，包括遞迴和多對多階層的支援
-- 「網域屬性」篩選
-- 「實體同步」以在模型間共用實體資料
-- 透過「變更集」核准工作流程
-- 「自訂索引」以改善查詢效能
-- 新的「權限層級」以改善安全性
-- 重新設計的「商務規則管理」體驗
+- 「衍生階層的改進」  ，包括遞迴和多對多階層的支援
+- 「網域屬性」  篩選
+- 「實體同步」  以在模型間共用實體資料
+- 透過「變更集」  核准工作流程
+- 「自訂索引」  以改善查詢效能
+- 新的「權限層級」  以改善安全性
+- 重新設計的「商務規則管理」  體驗
 
 請參閱 [Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md)。
 
 ## <a name="sql-server-2016-reporting-services-ssrs"></a>SQL Server 2016 Reporting Services (SSRS)
 Microsoft 在此版本中徹底翻新了 Reporting Services。 
-- 具有 KPI 功能的新「Web 報表入口網站」
-- 新的「行動報表發行工具」
-- 「重新設計的報表轉譯引擎」，支援 HTML5 
-- 新的樹狀圖和放射環狀圖「圖表類型」 
+- 具有 KPI 功能的新「Web 報表入口網站」 
+- 新的「行動報表發行工具」 
+- 「重新設計的報表轉譯引擎」  ，支援 HTML5 
+- 新的樹狀圖和放射環狀圖「圖表類型」  
 
 請參閱 [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) \(機器翻譯\)。
 

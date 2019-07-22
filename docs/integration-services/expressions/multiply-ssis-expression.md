@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4182a358c422e3c9a11f76cb824f5386b88b350f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc570f8787d85019a8181dc7ec212bf6e19681eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941115"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乘) (SSIS 運算式)
 

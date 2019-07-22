@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8bd2692d428012e0af4ea4f41059228178810abb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f7bc162244e30b2ac48f9b49a6c596268b595c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62935494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901971"
 ---
 # <a name="hints-transact-sql"></a>提示 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

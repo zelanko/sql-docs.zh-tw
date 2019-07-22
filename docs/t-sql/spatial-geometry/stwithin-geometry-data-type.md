@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 579f2fd2e4e662bf5f8a060c93f7370af4edb7e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066257"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

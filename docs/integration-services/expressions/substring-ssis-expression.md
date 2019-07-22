@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 991ef48e2b4cef24eba5034f07d5545e01198e5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f89dd69a069c33d366cbc53dfc3bb451f1f381d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967735"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 運算式)
 

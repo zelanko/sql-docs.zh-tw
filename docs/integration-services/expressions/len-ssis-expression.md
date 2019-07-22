@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 83256bfc8b610869b8bbc1938f7846ce41971b1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe71d2e914d665392b9728fdeb55c4ddd53431c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027546"
 ---
 # <a name="len-ssis-expression"></a>LEN (SSIS 運算式)
 

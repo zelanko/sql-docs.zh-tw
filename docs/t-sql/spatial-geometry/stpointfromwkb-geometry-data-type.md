@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 623e39aed2471f765755bd46f737967c43f4c1cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 985fb4f48363a1cb3f8411b80365705ee2392498
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066423"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

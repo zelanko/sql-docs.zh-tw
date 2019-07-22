@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5007955504a0eb6501ee32600e9d4e86bc9e1feb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: e45ddec1a380ea6ea867fb0306cca4176786fbf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043149"
 ---
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,15 +38,15 @@ ms.locfileid: "58657643"
  
  1.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的物件總管元件，連接到您的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
    
- 2.  以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [加密資料行]。  
+ 2.  以滑鼠右鍵按一下您的資料庫，指向 [工作]  ，然後按一下 [加密資料行]  。  
    
  ## <a name="column-selection-page"></a>資料行選取頁面
- - 找出資料表與資料行，然後針對所選資料行選取加密類型 (確定性或隨機) 和加密金鑰。 若要解密目前加密的資料行，請選取 [純文字] 。 若要旋轉資料行加密金鑰，請選取不同的加密金鑰，精靈即會解密資料行，並以新的金鑰重新加密該資料行。 (雖然 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援加密時態表和記憶體中的資料表，但精靈無法對此進行設定。)  
+ - 找出資料表與資料行，然後針對所選資料行選取加密類型 (確定性或隨機) 和加密金鑰。 若要解密目前加密的資料行，請選取 [純文字]  。 若要旋轉資料行加密金鑰，請選取不同的加密金鑰，精靈即會解密資料行，並以新的金鑰重新加密該資料行。 (雖然 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援加密時態表和記憶體中的資料表，但精靈無法對此進行設定。)  
  
 ## <a name="master-key-configuration-page"></a>主要金鑰設定頁面  
  - 在 Windows 憑證存放區或 Azure 金鑰保存庫中，建立新的資料行主要金鑰。 如需詳細資訊，請參閱 [金鑰儲存] 底下的連結。  
  
- - 如果您在 [資料行選取] 頁面中選擇自動產生的資料行加密金鑰，則必須設定要與產生的資料行加密金鑰搭配進行加密的資料行主要金鑰。 如果您已在資料庫定義資料行主要金鑰，則可加以選取  (若要使用現有的資料行主要金鑰，使用者必須具有金鑰的存取權限)。或者，您可以在所選的金鑰存放區 (Windows 憑證存放區或 Azure 金鑰保存庫) 中產生資料行主要金鑰，並在資料庫中定義金鑰。  
+ - 如果您在 [資料行選取] 頁面中選擇自動產生的資料行加密金鑰，則必須設定要與產生的資料行加密金鑰搭配進行加密的資料行主要金鑰。 如果您已在資料庫定義資料行主要金鑰，則可加以選取 (若要使用現有的資料行主要金鑰，使用者必須具有金鑰的存取權限)。或者，您可以在所選的金鑰存放區 (Windows 憑證存放區或 Azure 金鑰保存庫) 中產生資料行主要金鑰，並在資料庫中定義金鑰。  
  
  ### <a name="key-storage"></a>**金鑰儲存**  
  

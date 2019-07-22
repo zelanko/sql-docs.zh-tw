@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: f1626c21649d276e6e6cb3e51207aaede006b566
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: b25b7ae6396c32e3b3698c57010b9d043adb97c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014848"
 ---
 # <a name="administration-of-an-availability-group"></a>可用性群組的管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中管理現有的 AlwaysOn 可用性群組包括下列一或多個工作：  
   
--   改變現有可用性複本的屬性 (例如，變更用戶端連接存取 (以設定可讀取的次要複本))；變更其容錯移轉模式、可用性模式或工作階段逾時設定。    
--   加入或移除次要複本。    
+-   改變現有可用性副本的屬性 (例如，變更用戶端連接存取 (以設定可讀取的次要副本))；變更其容錯移轉模式、可用性模式或工作階段逾時設定。    
+-   加入或移除次要副本。    
 -   加入或移除資料庫。    
 -   暫停或恢復資料庫。   
 -   執行已規劃的手動容錯移轉 ( *「手動容錯移轉」* (Manual Failover)) 或強制手動容錯移轉 ( *「強制容錯移轉」* (Forced Failover))。    

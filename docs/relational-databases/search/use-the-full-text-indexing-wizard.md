@@ -22,14 +22,13 @@ ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd312800fd20ae3e2d57c09df20aa9a14181af8a
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a1c5a46dda4c9b2c5793ff62aaf6eb8606efbe9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095285"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

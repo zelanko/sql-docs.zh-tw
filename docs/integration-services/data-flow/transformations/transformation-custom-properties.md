@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d075bdbd593d450cbeef18162da5e8329d4ea850
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4efdff475f51eab9ffd55a491ace3dd2084cd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943917"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
 

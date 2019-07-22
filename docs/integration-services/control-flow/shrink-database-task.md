@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ad3d92ece3a3d625c83232519bf0fdbeb94995d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbdd4f4efd4bd467996364b235ab1ff6f2e7fbb1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011315"
 ---
 # <a name="shrink-database-task"></a>壓縮資料庫工作
 

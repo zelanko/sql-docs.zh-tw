@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fe6bc228759f937a2da08e9599d2ee28fba99c9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a8170dbda2efa4b5ab9ed91692b9e3ec3a0774f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120465"
 ---
 # <a name="mssqlserver8974"></a>MSSQLSERVER_8974
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +25,12 @@ ms.locfileid: "47671226"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|8974|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)。 頁面 P_ID2，位置 S_ID2 以及頁面 P_ID3，位置 P_ID3 指向頁面 P_ID1，位置 S_ID1，文字識別碼 TEXT_ID 的非資料列資料節點。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)。 頁面 P_ID2，位置 S_ID2 以及頁面 P_ID3，位置 P_ID3 指向頁面 P_ID1，位置 S_ID1，文字識別碼 TEXT_ID 的非資料列資料節點。|  
   
 ## <a name="explanation"></a>說明  
 有兩筆資料或索引記錄將非資料列資料節點列為子節點。 一個節點只能有一個父節點。  

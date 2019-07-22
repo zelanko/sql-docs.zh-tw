@@ -12,13 +12,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 097683ae2e5fc90f8a7ae27adb50d53c3ea53b57
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: c6bfd48773c066ffc29600156475495c0c2a6521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021140"
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ GO
 ```  
   
 ###  <a name="BasicsSemanticSearch"></a> 安裝語意搜尋  
- 若要安裝語意搜尋，請在安裝 SQL Server 期間選取 [要安裝的功能] 頁面上的 [搜尋的全文檢索和語意擷取]。  
+ 若要安裝語意搜尋，請在安裝 SQL Server 期間選取 [要安裝的功能]  頁面上的 [搜尋的全文檢索和語意擷取]  。  
   
  統計語意搜尋相依於全文檢索搜尋。 這兩個選擇性功能會同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

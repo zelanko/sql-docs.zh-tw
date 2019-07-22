@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 75a01f8321dcd70b0e3f08c36dfaf04b5e86bd8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd17e43afa06ba954b092c6f6a5f95a74d21faaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011198"
 ---
 # <a name="task-host-container"></a>工作主機容器
 

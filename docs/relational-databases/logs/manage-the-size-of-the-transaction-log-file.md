@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084024"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "51674847"
 > [!NOTE]
 > 如長時間執行的交易之類的因素，使 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 保持作用中一段很長的時間，可能限制記錄檔壓縮，甚至完全阻止記錄檔壓縮。 如需資訊，請參閱[可能會延遲記錄截斷的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。  
   
-壓縮記錄檔會移除一或多個不保留任何邏輯記錄的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) (即「非使用中 VLF」)。 當交易記錄檔壓縮之後，就會從記錄檔的結尾移除非使用中的 VLF，將記錄縮減至大約目標大小。 
+壓縮記錄檔會移除一或多個不保留任何邏輯記錄的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) (即「非使用中 VLF」  )。 當交易記錄檔壓縮之後，就會從記錄檔的結尾移除非使用中的 VLF，將記錄縮減至大約目標大小。 
 
 > [!IMPORTANT]
 > 壓縮交易記錄檔之前，請記住[可能會延遲記錄截斷的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。 如果壓縮記錄檔之後再次需要儲存空間，交易記錄檔將再次成長，並且會因此在記錄檔成長作業期間導入效能額外負荷。 如需詳細資訊，請參閱本主題中的[建議](#Recommendations)。
@@ -91,7 +90,7 @@ ms.locfileid: "51674847"
     -  最大索引維護作業所需的時間。
     -  執行資料庫中最大批次所需的時間。
 
--   使用 `FILEGROWTH` 選項設定資料和記錄檔的 **autogrow** 時，最好以 [大小] 來設定它，而不是使用 [百分比]，以便更能控制成長比率，因為百分比是個不斷成長的數量。
+-   使用 `FILEGROWTH` 選項設定資料和記錄檔的 **autogrow** 時，最好以 [大小]  來設定它，而不是使用 [百分比]  ，以便更能控制成長比率，因為百分比是個不斷成長的數量。
     -  請記住，交易記錄檔無法利用[立即檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)，因此延伸的記錄成長時間特別重要。 
     -  最佳做法是不要將交易記錄的 `FILEGROWTH` 選項值設定為超過 1024 MB。 `FILEGROWTH` 選項的預設值是：  
   

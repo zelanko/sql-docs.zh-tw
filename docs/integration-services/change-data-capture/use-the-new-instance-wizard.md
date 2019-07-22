@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d77c5c6b1c0402a277eda9da944199b3f11301d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cb7bc4b2d828861c4b772a03306d07486da327e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049588"
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新增執行個體精靈
 

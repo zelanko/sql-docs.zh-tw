@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1794ec1620cd4b9d0fd8c27f4fa7affc331b53d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85996d94387fb1a20c7ae21b94307428e21819d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089498"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ ms.locfileid: "47626796"
  建立或更新資料行 (包含在聯結中) 上的統計資料，是降低發生雜湊遞迴或釋出次數最有效的方法。  
   
 > [!NOTE]  
->  詞彙「寬限雜湊聯結」和「遞迴雜湊聯結」也可用來說明 Hash Bailout。  
+>  詞彙「寬限雜湊聯結」  和「遞迴雜湊聯結」  也可用來說明 Hash Bailout。  
   
 > [!IMPORTANT]  
->  若要決定查詢最佳化工具產生執行計畫時發生 Hash Warning 事件的位置，您也應在追蹤中收集顯示計畫事件類別。 您可選擇任何 Showplan 事件類別，但是不包含不會傳回節點識別碼的 Showplan Text 及 Showplan Text (未編碼) 事件類別。 Showplan 中的節點識別碼會識別查詢最佳化工具在產生查詢執行計畫時所執行的每項作業。 這些作業稱為「運算子」，而 Showplan 中的每個運算子都會有節點識別碼。 Hash Warning 事件的 ObjectID 資料行都會對應到 Showplan 中的節點識別碼，因此您可以判斷造成錯誤的運算子或運算。  
+>  若要決定查詢最佳化工具產生執行計畫時發生 Hash Warning 事件的位置，您也應在追蹤中收集顯示計畫事件類別。 您可選擇任何 Showplan 事件類別，但是不包含不會傳回節點識別碼的 Showplan Text 及 Showplan Text (未編碼) 事件類別。 Showplan 中的節點識別碼會識別查詢最佳化工具在產生查詢執行計畫時所執行的每項作業。 這些作業稱為「運算子」  ，而 Showplan 中的每個運算子都會有節點識別碼。 Hash Warning 事件的 ObjectID 資料行都會對應到 Showplan 中的節點識別碼，因此您可以判斷造成錯誤的運算子或運算。  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Hash Warning Event 事件類別資料行  
   

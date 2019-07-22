@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 25e07fb354d739d6a8aa1964e50e31e847194471
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bfb1d81c83da0e62ced89456b04e234ce2e2c67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049576"
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
 

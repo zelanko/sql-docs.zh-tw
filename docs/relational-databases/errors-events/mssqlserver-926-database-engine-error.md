@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 57e01668-883b-4be4-84a8-a111caaf0486
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 408b6abd2ff18a53294e481e33745c8bde794977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e915f74e6bd3e686916aeb2de2f78d8d2e9ae439
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937952"
 ---
 # <a name="mssqlserver926"></a>MSSQLSERVER_926
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47599657"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|926|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -53,5 +52,5 @@ ms.locfileid: "47599657"
 [SQL Server 資料庫的備份與還原](~/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
 [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
 [sys.sysdatabases &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
-[資料庫卸離和附加 &#40;SQL Server&#41;](~/relational-databases/databases/database-detach-and-attach-sql-server.md)  
+[資料庫卸離與附加 &#40;SQL Server&#41;](~/relational-databases/databases/database-detach-and-attach-sql-server.md)  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d7f388a854897b450a6e29b78763125c01e6037
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d9eb72289597b873a340815ea0e388b952de37c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112576"
 ---
 # <a name="create-relationships"></a>建立關聯性
 

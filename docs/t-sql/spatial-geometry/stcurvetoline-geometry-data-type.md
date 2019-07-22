@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b60bdcb684fdb79fa15febb71d88def7573e04cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930302"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 052293944d820a13d8457f0b122733858b62e874
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: c05ef1b9807e6786e73c2e772703463adf6818c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951082"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
 
@@ -33,7 +32,7 @@ ms.locfileid: "59671274"
 
 ### <a name="sqlclient"></a>SqlClient
 
-- 對於 SqlClient，「備妥」的執行和「直接」執行之間沒有差別。 使用具有 CommandType = CommandType.StoredProcedure 的 SqlCommand 來執行預存程序。
+- 對於 SqlClient，「備妥」  的執行和「直接」  執行之間沒有差別。 使用具有 CommandType = CommandType.StoredProcedure 的 SqlCommand 來執行預存程序。
 
 - SqlClient 不支援備妥的 RPC 程序呼叫。
 
@@ -49,9 +48,9 @@ ms.locfileid: "59671274"
 
 下列建議適用於使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式時的原生編譯預存程序呼叫。
 
-呼叫一次：呼叫一次預存程序之最有效率的方式是使用 **SQLExecDirect** 和 ODBC CALL 子句來發出直接 RPC 呼叫。 請勿使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** 陳述式。 如果預存程序多次呼叫，備妥的執行更有效率。
+呼叫一次：  呼叫一次預存程序之最有效率的方式是使用 **SQLExecDirect** 和 ODBC CALL 子句來發出直接 RPC 呼叫。 請勿使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** 陳述式。 如果預存程序多次呼叫，備妥的執行更有效率。
 
-呼叫多次：多次呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序最有效率的方式是透過備妥的 RPC 程序呼叫。 備妥的 RPC 呼叫是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式，執行如下：
+呼叫多次：  多次呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序最有效率的方式是透過備妥的 RPC 程序呼叫。 備妥的 RPC 呼叫是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式，執行如下：
 
 1. 開啟資料庫的連接。
 2. 使用 **SQLBindParameter** 繫結參數。

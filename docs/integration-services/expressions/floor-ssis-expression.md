@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f419fa11c27f912f9e020c83ec8c2164a7b4b13f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ecf37fce2f62a4cadfe574531548aa9351e0057
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080926"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 運算式)
 

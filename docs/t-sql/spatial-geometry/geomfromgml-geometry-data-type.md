@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ad5704a913ff5d8d24eeeb360f3309dfea0a2555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e48cea62df1e0828a583cfccf35fc4bedf7358cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101276"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -37,13 +37,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 00726a70cc40548f3c75b786a9fa2b601ec9dd57
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117335"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  當使用者擁有多項憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會從目前有效的憑證中，選取到期日最晚的憑證，並將它標示為 AVAILABLE FOR BEGIN_DIALOG。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  建立遠端服務繫結的權限預設為 USER 子句中所指定的使用者、**db_owner** 固定資料庫角色的成員、**db_ddladmin** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
  執行 CREATE REMOTE SERVICE BINDING 陳述式的使用者必須有陳述式指定的主體之模擬權限。  

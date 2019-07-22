@@ -10,13 +10,12 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: dc39108ea476947e95f237bdccf1fb64a70bd36a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934829"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
 

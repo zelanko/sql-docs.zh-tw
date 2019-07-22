@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b7802a28926b9e81763bacc85d2623100bb480f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6af08121e05227d066a712970ae0b22b8a644507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027466"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (邏輯 AND) (SSIS 運算式)
 

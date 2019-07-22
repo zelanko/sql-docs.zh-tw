@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 038610db98b647aa48b633ccd90fc6a2310c06b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d163148930b656bd31301193d7a5fe22201adedf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930261"
 ---
 # <a name="hasm-geography-data-type"></a>HasM (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

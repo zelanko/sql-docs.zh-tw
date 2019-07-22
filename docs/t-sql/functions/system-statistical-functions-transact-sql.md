@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c6038b73db5b99bd457b3c5ee92008f5a194aac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c55a051866ae346d5f83c898dc8292833d6d0679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117514"
 ---
 # <a name="system-statistical-functions-transact-sql"></a>系統統計函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

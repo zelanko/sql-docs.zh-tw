@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 53a414f189479f5f9c965729c27e32ea9e052a39
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 17a400e737a5df73c996db861ab00d72954c748a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690019"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259369"
 ---
 # <a name="delete-objects"></a>刪除物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d2a7d45616ee7707ce4a0b5c01f222035a227fec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83022e612afa862ae657f7f93dbe3a80ed8d0bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070538"
 ---
 # <a name="set-parameter-value-dialog-box"></a>設定參數值對話方塊
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 504ca7319a3aa5fa76ef5281d55bf1147a70ae00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68ce1a309d3b6abf77e2fe9d3f571f9c4f738cef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120804"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

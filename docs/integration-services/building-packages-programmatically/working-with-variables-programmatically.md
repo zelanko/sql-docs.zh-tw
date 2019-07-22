@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 13543306533afaf22bbfd12a283d6a6a3e8bdef1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce8d6ccc83c2fe5d254e72412b37e4e94f640fa3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070605"
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數
 

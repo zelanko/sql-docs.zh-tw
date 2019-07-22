@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eefab653ee55a3666cac65d24b3a47514c414308
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902676"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>第 1-4 課：將資料流程工作新增至套件
 

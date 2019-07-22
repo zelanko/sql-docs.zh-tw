@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 87fea9fe64be5e2bc4aadda9e0ffc799e3cd20bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 160d7125cb729ee19bbfb31fe5990e4aa1196688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898952"
 ---
 # <a name="work-with-cdc-services"></a>使用 CDC 服務
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 693a4d95d6c9eb3e290c1b39f8be9cc15c96bb13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84d715b1e90c54c549a255b3ee43f24f2e5556d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039157"
 ---
 # <a name="use-the-binary-base64-option"></a>使用 BINARY BASE64 選項
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

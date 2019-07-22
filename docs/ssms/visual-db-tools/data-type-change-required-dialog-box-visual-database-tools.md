@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 9d62c8310cdfa8cecbda81b39f46b509ee1987dd
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c6b91de4bdb0e637f4ec7bc2833de4a52e322fef
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690451"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263907"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>需要變更資料類型對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

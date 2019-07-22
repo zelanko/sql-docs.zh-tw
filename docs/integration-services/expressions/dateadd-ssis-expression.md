@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 719869587b9c30c4c8ad14b2d0364b90fb7e1b48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e25fade61e60a5e2cab4aef67a8ba8e2a836ef02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088816"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 運算式)
 

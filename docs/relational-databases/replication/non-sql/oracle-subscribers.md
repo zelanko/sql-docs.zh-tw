@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c61134ff7824d4cbcca72bb6fbac0dfb2be85e34
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 8e7ee336c9f81c8d4258e16cf09aa9ffec177e0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110965"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

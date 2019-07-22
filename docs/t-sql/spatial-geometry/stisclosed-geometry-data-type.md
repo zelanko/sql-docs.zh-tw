@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 1212beb7f65789ec986c45af1d1a2b2c3eb8d83f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46ed6c4f4d01b6c4ce1851c24a678617967560a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950056"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

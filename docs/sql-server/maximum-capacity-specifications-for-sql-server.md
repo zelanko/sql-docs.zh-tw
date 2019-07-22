@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045639"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "57973807"
 |每個資料列的位元組數||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援資料列溢位儲存，好讓可變長度資料行可以非資料列形式推送。 只有 24 位元組的根會儲存在從資料列發送之可變長度資料行的主要記錄中；因此，有效資料列限制高於舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[大型資料列支援](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support)。|  
 |記憶體最佳化資料表中每個資料列的位元組數||8,060|從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，記憶體最佳化資料表支援非資料列儲存。 如果資料表中所有資料行的大小上限超過 8060 個位元組，則會以非資料列形式推送可變長度資料行；這是編譯時期決策。 針對以非資料列形式儲存的資料行，只會以非資料列形式儲存 8 位元組參考。 如需詳細資訊，請參閱 [記憶體最佳化資料表中的資料表和資料列大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|  
 |預存程序之來源文字的位元組數||批次大小或 250 MB 當中較小者||  
-|每個 **varchar(max)**、 **varbinary(max)**、 **xml**、 **text**或 **image** 資料行的位元組數||2^31-1||  
+|每個 **varchar(max)** 、 **varbinary(max)** 、 **xml**、 **text**或 **image** 資料行的位元組數||2^31-1||  
 |每個 **ntext** 或 **nvarchar(max)** 資料行的字元數||2^30-1||  
 |每份資料表的叢集索引數||1||  
 |GROUP BY、ORDER BY 的資料行||僅受限於位元組數||  

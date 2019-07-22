@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9941fcae545bdf641ff024b3884970b90e23350e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87be157406b169a0978fd282c9ee40e4808c2599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057840"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
 

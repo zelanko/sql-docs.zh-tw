@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: f7f11a47197ffb355d19be428adba78c74e0e2d7
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c963118053c0aa500cf764abc66be2b53c2e6807
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683888"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264904"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 

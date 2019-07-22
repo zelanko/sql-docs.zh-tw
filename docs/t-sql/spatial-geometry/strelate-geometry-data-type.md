@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: bb4c4e589ef3f658cee65812e9263a68a3489d2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e50ca09fc8ac7c9c61c17227448deebe8c69bc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066315"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

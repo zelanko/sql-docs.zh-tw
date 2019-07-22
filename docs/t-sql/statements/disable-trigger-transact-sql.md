@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0ce241446bdcb928b0edc976117731e78dca7f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cabd08fa2e4ba8797d5fe7fc5e4f623f24cda856
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984311"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
  當您使用 **ALTER TRIGGER** 陳述式來變更觸發程序時，會啟用觸發程序。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要停用 DML 觸發程序，使用者至少要對建立該觸發程序的資料表或檢視，具備 ALTER 權限。  
   
  若要停用伺服器範圍 (ON ALL SERVER) 的 DDL 觸發程序或登入觸發程序，使用者必須有伺服器的 CONTROL SERVER 權限。 若要停用以資料庫範圍 (ON DATABASE) 定義的 DDL 觸發程序，使用者至少要在目前資料庫中具備 ALTER ANY DATABASE DDL TRIGGER 權限。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 91ea18d66129f5450e20bf7e9412380aeb47611e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff3a7b7c39eb8f161621b22315ad5ff8e8f6f807
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928239"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令轉換
 

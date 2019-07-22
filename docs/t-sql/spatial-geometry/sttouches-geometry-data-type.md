@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 18ea5efe0a0bc0ef4e84a5fa9d773a47f5eb99a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93ea5be3c2f9a4ecdd415471da16ca21eb1f08c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066237"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

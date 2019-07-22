@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 229e8b3d06d9524936be25758ee22d65234d25a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63d3031ccbee2d6ae242ee3531cf4c5b946c3949
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967889"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 運算式)
 

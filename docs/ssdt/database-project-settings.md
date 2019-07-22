@@ -40,13 +40,12 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1c3899fc603da55d03ae7acd1e11c7f485637f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912848"
 ---
 # <a name="database-project-settings"></a>資料庫專案設定
 您可以使用資料庫專案設定，控制資料庫、偵錯與組建組態的各個部分。 這些設定可分類如下：  

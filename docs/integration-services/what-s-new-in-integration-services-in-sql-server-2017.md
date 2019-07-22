@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6d8660aa65699e6abd22c73e13c3673903ff6bfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e9a5e7f4a1f290673ca1a914e883ab359dcc8cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945348"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 中的 Integration Services 新功能
 
@@ -64,7 +63,7 @@ ms.locfileid: "65713540"
 -   相應放大背景工作中執行記錄的容錯移轉處理已獲得改善。 如果相應放大背景工作意外停止，則會將執行記錄保存到本機磁碟。 稍後，背景工作重新啟動時，會重新載入保存記錄，並繼續將它們儲存至 SSISDB。
 -   為了一致性和可讀性，預存程序 **[catalog].[create_execution]** 的參數 *runincluster* 已重新命名為 *runinscaleout*。 這項參數名稱變更的影響如下：
     -   如果您的現有指令碼可在相應放大中執行套件，則必須將參數名稱從 *runincluster* 變更為 *runinscaleout*，以確保這些指令碼在 RC1 中正常運作。
-    -   SQL Server Management Studio (SSMS) 17.1 和舊版本無法在 RC1 的相應放大中觸發套件執行。 錯誤訊息為：「*@runincluster* 不是程序 **create_execution** 的參數。」 SSMS 的下一個版本 17.2 版中將會修正此問題。 SSMS 17.2 版和更新版本支援相應放大中的新參數名稱和套件執行。在 SSMS 17.2 版可用之前，作為因應措施，您可以使用現有的 SSMS 版本來產生套件執行指令碼，然後將指令碼中的 *runincluster* 參數名稱變更為 *runinscaleout*，然後執行此指令碼。
+    -   SQL Server Management Studio (SSMS) 17.1 和舊版本無法在 RC1 的相應放大中觸發套件執行。 錯誤訊息為：「 *@runincluster* 不是程序 **create_execution** 的參數。」 SSMS 的下一個版本 17.2 版中將會修正此問題。 SSMS 17.2 版和更新版本支援相應放大中的新參數名稱和套件執行。在 SSMS 17.2 版可用之前，作為因應措施，您可以使用現有的 SSMS 版本來產生套件執行指令碼，然後將指令碼中的 *runincluster* 參數名稱變更為 *runinscaleout*，然後執行此指令碼。
 -   SSIS 目錄有新的全域屬性，可指定執行 SSIS 套件的預設模式。 當您呼叫 *runinscaleout* 參數設定為 Null 的 **[catalog].[create_execution]** 預存程序時，可以使用這個新屬性。 此模式也適用於 SSIS SQL Agent 作業。 您可以在 SSMS 中 SSISDB 節點的 [屬性] 對話方塊中，或使用下列命令，來設定新的全域屬性：
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1
@@ -76,7 +75,7 @@ ms.locfileid: "65713540"
 
 -   在相應放大中觸發執行時，您現在可以使用 **Use32BitRuntime** 參數。
 -   已改善相應放大中套件執行的 SSISDB 記錄效能。 事件訊息和訊息內容記錄現在會以批次模式寫入至 SSISDB，而非逐一寫入。 以下是這項改善的一些其他注意事項：        
-    - SQL Server Management Studio (SSMS) 目前版本中的某些報表，現在不會針對相應放大中的執行顯示這些記錄。預期下一版的 SSMS 將支援它們。 受影響的報表包含 [所有連線] 報表、[錯誤內容] 報表，以及 [Integration Service 儀表板] 中的 [連線資訊] 區段。
+    - SQL Server Management Studio (SSMS) 目前版本中的某些報表，現在不會針對相應放大中的執行顯示這些記錄。預期下一版的 SSMS 將支援它們。 受影響的報表包含 [所有連線]  報表、[錯誤內容]  報表，以及 [Integration Service 儀表板] 中的 [連線資訊]  區段。
     - 已新增資料行 **event_message_guid**。 在相應放大中查詢這些執行記錄時，請使用此資料行來聯結 [catalog].[event_message_context] 檢視與 [catalog].[event_messages] 檢視，而非使用 **event_message_id**。
 -   若要取得 SSIS 相應放大的管理應用程式，請[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 或更新版本。
 

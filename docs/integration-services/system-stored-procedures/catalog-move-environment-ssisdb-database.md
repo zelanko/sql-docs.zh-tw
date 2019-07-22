@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 04ced3ce325755f465aaf203f08ed08e38d99f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a6d69ef7cc1a10b31cdb03f2dd43e20687a3f96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007820"
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (SSISDB 資料庫)
 
@@ -37,13 +36,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>引數  
  [ @source_folder = ] *source_folder*  
- 在移動之前，環境所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)**。  
+ 在移動之前，環境所在之來源資料夾的名稱。 *source_folder* 是 **nvarchar(128)** 。  
   
  [ @environment_name = ] *environment_name*  
- 要移動之環境的名稱。 *environment_name* 是 **nvarchar(128)**。  
+ 要移動之環境的名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
  [ @destination_folder = ] *destination_folder*  
- 在移動之後，環境所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)**。  
+ 在移動之後，環境所在之目的地資料夾的名稱。 *destination_folder* 是 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  

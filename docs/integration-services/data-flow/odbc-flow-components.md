@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e59efeb278c7d5f1236a9943f03ad471491f354a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00099c0e8d23238b7536a187ee1f38450afda6f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038774"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流程元件
 

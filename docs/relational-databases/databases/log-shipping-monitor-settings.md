@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98c2a62a558785f2ea2c483eb1e109a6ee873b0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 216fb75c9dcdffc83e8f4f21469aaa9cfc1b11d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934410"
 ---
 # <a name="log-shipping-monitor-settings"></a>記錄傳送監視器設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

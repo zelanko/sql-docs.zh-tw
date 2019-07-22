@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a54de936-90c6-4845-aa96-29d32f154601
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 228db710fffb79e9fb799d8a14125b2febe6611b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22767609a0281cc21a38d51716661ac98a8ffc24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118372"
 ---
 # <a name="mssqlserver9001"></a>MSSQLSERVER_9001
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47791108"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|9001|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

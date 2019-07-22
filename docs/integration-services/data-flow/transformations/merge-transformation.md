@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d7267c2d4f86025f213208baae90057a84ced3e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ceaa9cfcf08d9dd96acbb2647a057e1bc15c1979
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944133"
 ---
 # <a name="merge-transformation"></a>合併轉換
 

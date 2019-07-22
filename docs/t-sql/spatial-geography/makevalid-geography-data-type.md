@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b4d60632de0ccc60d2c07f501334a64d31692fed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d913a0e7bbe29ab6f6f303519c73304238afd7df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127398"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

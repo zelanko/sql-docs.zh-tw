@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 066f51f5fd323a1e24a13110d2aee2e1aeabeed0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939617"
 ---
 # <a name="full-file-backups-sql-server"></a>完整檔案備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47603656"
  檔案備份可以當成差異檔案備份的 *「差異基底」* (Differential base)。 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 > [!NOTE]  
->  完整檔案備份通常稱為「檔案備份」，但與「差異檔案備份」明確對照時除外。  
+>  完整檔案備份通常稱為「檔案備份」  ，但與「差異檔案備份」  明確對照時除外。  
   
  **本主題內容：**  
   

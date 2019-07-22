@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 9e66d06d88a1febd9e1fe988a0adfd266b120221
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: cee27bc499a00fc77dd022ffa6c29f0173a2a571
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683337"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262226"
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>SQL Server Management Studio 中的輸出視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 針對 Oracle 發行者進行疑難排解 | Microsoft Docs
+title: 針對 Oracle 發行者進行疑難排解 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c4259070befa31239ca68ce93106ec990b131e4
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3edd60a47ac4cebcdea3f70a0658ce837e3d63ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095651"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 發行者疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

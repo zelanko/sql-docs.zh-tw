@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5079a0fbfd3a870875043b40be3c406c72730fbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff402435688d2471b7e6bd871a2e9a3f1cbd98c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007998"
 ---
 # <a name="package-properties-dialog-box"></a>封裝屬性對話方塊
 

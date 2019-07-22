@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 56adf5a1cfb41b3a8efb10e278109a6d10659e7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042456"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

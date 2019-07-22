@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4ce1303c580bb8eabca7fa3fcdb15ed821ff827a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033736"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>鏡像備份媒體集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47626296"
 -   [相關工作](#RelatedTasks)  
   
 ##  <a name="OverviewofMirroredMediaSets"></a> 鏡像媒體集概觀  
- 媒體鏡像是媒體集的一種屬性。 「鏡像媒體集」是由多份媒體集複本 (「鏡像」) 組成。 媒體集包含一個或多個媒體家族，其中每一個都對應到備份裝置。 例如，如果 BACKUP DATABASE 陳述式的 TO 子句列出三個裝置，BACKUP 會將資料分散在三個媒體家族中，每個裝置一份資料。 建立媒體集 (由 BACKUP DATABASE 陳述式指定 WITH FORMAT) 時，就會定義媒體家族和鏡像的數目。  
+ 媒體鏡像是媒體集的一種屬性。 「鏡像媒體集」  是由多份媒體集複本 (「鏡像」  ) 組成。 媒體集包含一個或多個媒體家族，其中每一個都對應到備份裝置。 例如，如果 BACKUP DATABASE 陳述式的 TO 子句列出三個裝置，BACKUP 會將資料分散在三個媒體家族中，每個裝置一份資料。 建立媒體集 (由 BACKUP DATABASE 陳述式指定 WITH FORMAT) 時，就會定義媒體家族和鏡像的數目。  
   
  鏡像媒體集包含二到四個鏡像。 每個鏡像都包含媒體集中的所有媒體家族。 鏡像需要相同數目的裝置，每個媒體家族有一個裝置。 每個鏡像需要每個媒體家族有不同的備份裝置。 例如，由四個媒體家族而有三個鏡像組成的鏡像媒體集需要十二個備份裝置。 所有裝置都必須相同。 例如，相同製造商所提供的相同型號磁帶機。  
   

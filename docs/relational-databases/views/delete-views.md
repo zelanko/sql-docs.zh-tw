@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7846814b1158313bfc663b405cd7e0506235e1e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0b11b2d6fa897b99276f75fb74e2c41e25db904
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123466"
 ---
 # <a name="delete-views"></a>刪除檢視
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47689256"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法，從資料庫刪除檢視：**  
   
@@ -61,12 +60,12 @@ ms.locfileid: "47689256"
   
 1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要刪除的檢視，然後展開 **[檢視]** 資料夾。  
   
-2.  以滑鼠右鍵按一下您要刪除的檢視，然後按一下 [刪除]。  
+2.  以滑鼠右鍵按一下您要刪除的檢視，然後按一下 [刪除]  。  
   
-3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
+3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
   
     > [!IMPORTANT]  
-    >  在 [刪除物件] 對話方塊中按一下 [顯示相依性]，開啟 [_view\_name_ 相依性] 對話方塊。 這就會顯示相依於檢視的所有物件以及檢視所相依的所有物件。  
+    >  在 [刪除物件]  對話方塊中按一下 [顯示相依性]  ，開啟 [_view\_name_ 相依性]  對話方塊。 這就會顯示相依於檢視的所有物件以及檢視所相依的所有物件。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -74,9 +73,9 @@ ms.locfileid: "47689256"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例只在指定的檢視已存在時才會予以刪除。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例只在指定的檢視已存在時才會予以刪除。  
   
     ```  
     USE AdventureWorks2012 ;  

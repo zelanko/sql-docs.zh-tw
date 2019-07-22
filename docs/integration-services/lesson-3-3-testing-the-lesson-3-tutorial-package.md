@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5884506c83dfc0f3cbee6119ad9047807c35fbfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f0bf7d9a38f25af008be3bf77ce8dc31070f5bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055935"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>課程 3-3：測試第 3 課教學課程套件
 

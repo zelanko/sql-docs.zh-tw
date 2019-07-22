@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 290d43492d06a621f984a139ac24348f49356ec8
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 6564bd4d2c8c88c4415be8c19e8a0b791d48dea9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67684997"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263372"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

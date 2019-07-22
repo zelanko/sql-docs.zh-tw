@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c546b5b1935c15f2a597821aefe7b0298e86a413
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e3c026f4feb230cc89982b9a2c39a177239740a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076330"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本機 CDC 服務
 

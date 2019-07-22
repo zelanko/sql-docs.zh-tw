@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: a780172818bd41fa3cff4804437b4d26ad8c95c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aaae21e3a47465011f6644901d0ac886da6846f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930220"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d95d03a9060c367c398327a1b771a730f341fa53
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027656"
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +180,7 @@ ms.locfileid: "57334615"
  指定搜尋 NULL 值或非 NULL 值，這會隨著所用的關鍵字而不同。 如果有任何運算元是 NULL，含位元或算術運算子的運算式便會得出 NULL。  
   
  CONTAINS  
- 搜尋包含字元型資料的資料行，以進行下列各種比對：單字和片語的精確或較不精確 (模糊) 比對、單字彼此在一定距離之間的接近度，或加權比對。 這個選項只能搭配 SELECT 陳述式使用。 如需詳細資訊，請參閱 [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
+ 搜尋包含字元型資料的資料行，以進行下列各種比對：單字和片語的精確或較不精確 (模糊  ) 比對、單字彼此在一定距離之間的接近度，或加權比對。 這個選項只能搭配 SELECT 陳述式使用。 如需詳細資訊，請參閱 [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
   
  FREETEXT  
  提供簡單的自然語言查詢形式，它會搜尋包含以字元為基礎的資料之資料行，以找出符合述詞中之意義 (而不是確實文字) 的值。 這個選項只能搭配 SELECT 陳述式使用。 如需詳細資訊，請參閱 [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 023af0279bdb848e299ec1dbe31ff82305ad109a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 209186cf3756c0bfb9b572a33ba470a83e0cd493
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051446"
 ---
 # <a name="parse-geography-data-type"></a>Parse (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

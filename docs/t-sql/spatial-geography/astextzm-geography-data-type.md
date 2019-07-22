@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 8b4d5e834faa455eeb62e67f396447d44a176f55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a711e81c796293f9c9ac8694b1dc32e0e60f6938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066598"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -16,13 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934760"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>升級或修補複寫的資料庫
 

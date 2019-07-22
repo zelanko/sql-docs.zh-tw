@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 25fb3df76c54042b81a92af3a6fa29706ab9faae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011976"
 ---
 # <a name="database-engine-service-startup-options"></a>Database Engine 服務啟動選項
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 111703695a1ed2452456125ccf872bf31a12d968
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57d0edaed1d26de79813939c9606b9934646e5f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223656"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

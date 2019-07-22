@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: CarlRabeler
 ms.author: carlrab
-manager: jroth
-ms.openlocfilehash: 5be414143dece0b0124d8ea4376d81481635f279
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc832ee0ec3d6f660db14795de5dca10bfe84418
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059070"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server Database Engine
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

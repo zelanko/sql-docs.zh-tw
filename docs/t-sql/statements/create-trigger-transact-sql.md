@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130134"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -214,7 +213,7 @@ AFTER 指定只在觸發 SQL 陳述式指定的所有作業都成功啟動時，
 您不能在檢視表上定義 AFTER 觸發程序。  
   
 INSTEAD OF  
-指定要啟動 DML 觸發程序，而「不是」觸發 SQL 陳述式，因此會覆寫觸發陳述式的動作。 您不能針對 DDL 或登入觸發程序指定 INSTEAD OF。  
+指定要啟動 DML 觸發程序，而「不是」  觸發 SQL 陳述式，因此會覆寫觸發陳述式的動作。 您不能針對 DDL 或登入觸發程序指定 INSTEAD OF。  
   
 您最多只能在資料表或檢視表上的每個 INSERT、UPDATE 或 DELETE 陳述式，各定義一個 INSTEAD OF 觸發程序。 不過，您可以定義檢視表中的檢視表，讓每份檢視表都有它自己的 INSTEAD OF 觸發程序。  
   
@@ -263,7 +262,7 @@ DDL 和登入觸發程序會使用 [EVENTDATA &#40;Transact-SQL&#41;](../../t-sq
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許使用資料表或檢視表的 INSTEAD OF 觸發程序來更新 **text**、**ntext** 或 **image** 資料行。  
   
 > [!IMPORTANT]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本將會移除 **ntext**、**text** 及 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 兩個觸發程序都支援插入和刪除資料表中的 **varchar(MAX)**、**nvarchar(MAX)** 和 **varbinary(MAX)** 資料。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本將會移除 **ntext**、**text** 及 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 兩個觸發程序都支援插入和刪除資料表中的 **varchar(MAX)** 、**nvarchar(MAX)** 和 **varbinary(MAX)** 資料。  
   
 針對經記憶體最佳化資料表上的觸發程序，唯一允許的最上層 *sql_statement* 是 ATOMIC 區塊。 ATOMIC 區塊內允許使用哪些 T-SQL 則受限於原生程序內允許使用的 T-SQL 而定。  
   
@@ -355,7 +354,7 @@ RETURN;
 DDL 觸發程序不像 DML 觸發程序，並不以結構描述為範圍。 因此，您不能使用 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 等函式來查詢 DDL 觸發程序的相關中繼資料。 請改用目錄檢視。 如需詳細資訊，請參閱[取得 DDL 觸發程序的詳細資訊](../../relational-databases/triggers/get-information-about-ddl-triggers.md)。  
   
 > [!NOTE]  
->  伺服器範圍的 DDL 觸發程序會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管的 [觸發程序] 資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則會出現在 [資料庫觸發程序] 資料夾中。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
+>  伺服器範圍的 DDL 觸發程序會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管的 [觸發程序]  資料夾中。 這個資料夾在 **[伺服器物件]** 資料夾之下。 資料庫範圍的 DDL 觸發程序則會出現在 [資料庫觸發程序]  資料夾中。 這個資料夾在對應資料庫的 **[可程式性]** 資料夾之下。  
   
 ## <a name="logon-triggers"></a>登入觸發程序  
 登入觸發程序會執行預存程序來回應 LOGON 事件。 當使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體建立使用者工作階段時，就會引發這個事件。 登入觸發程序會在登入驗證階段結束之後、使用者工作階段建立之前引發。 因此，從觸發程序內產生且通常會傳遞給使用者的所有訊息 (例如錯誤訊息和來自 PRINT 陳述式的訊息)，都會轉向至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。 如需詳細資訊，請參閱[登入觸發程序](../../relational-databases/triggers/logon-triggers.md)。  
@@ -404,12 +403,12 @@ SQL Server 的未來版本將移除從觸發程序傳回結果的功能。 如�
   
 若要停用巢狀觸發程序，請將 sp_configure 的 nested triggers 選項設成 0 (關閉)。 預設設定可支援巢狀觸發程序。 如果關閉巢狀觸發程序，遞迴觸發程序也會停用，不論使用 ALTER DATABASE 設定的 RECURSIVE_TRIGGERS 設定為何，都是如此。  
   
-即使 [巢狀觸發程序] 伺服器設定選項為 0，仍會引發 INSTEAD OF 觸發程序內部的第一個巢狀 AFTER 觸發程序。 不過，在此設定下，不會引發後續的 AFTER 觸發程序。 檢閱應用程式的巢狀觸發程序，以判斷當 [巢狀觸發程序] 伺服器設定選項設為 0 時，應用程式是否會遵循您的商務規則。 若否，請進行適當的修改。  
+即使 [巢狀觸發程序]  伺服器設定選項為 0，仍會引發 INSTEAD OF 觸發程序內部的第一個巢狀 AFTER 觸發程序。 不過，在此設定下，不會引發後續的 AFTER 觸發程序。 檢閱應用程式的巢狀觸發程序，以判斷當 [巢狀觸發程序]  伺服器設定選項設為 0 時，應用程式是否會遵循您的商務規則。 若否，請進行適當的修改。  
   
 ### <a name="deferred-name-resolution"></a>延遲名稱解析  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序、觸發程序和批次參考在編譯時期並不存在的資料表。 這項功能稱為延遲名稱解析。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 若要建立 DML 觸發程序，必須具備要建立觸發程序之資料表或檢視表的 ALTER 權限。  
   
 若要建立伺服器範圍 (ON ALL SERVER) 的 DDL 觸發程序或登入觸發程序，需要伺服器的 CONTROL SERVER 權限。 若要建立資料庫範圍 (ON DATABASE) 的 DDL 觸發程序，需要目前資料庫的 ALTER ANY DATABASE DDL TRIGGER 權限。  

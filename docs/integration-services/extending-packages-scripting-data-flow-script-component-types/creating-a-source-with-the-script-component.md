@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b636a0af28ad002de6b41a3d4dcdd78e38498e46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99959596e4c260fdb080bd0823a96d9cdf604a5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65801368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112373"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
 

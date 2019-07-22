@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ffb3559a379a8d1f64c76072f262b89d41164533
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b75f26a4eae2643ebec512492788bcc60102648
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988169"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 檔案系統工作
 

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76b35434fd3d9a171478394967ef13cca6411c32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4766cac774707ffc9f9d74d38682a420b0e08403
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099796"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>連接到 Oracle 來源資料庫
 
@@ -41,7 +40,7 @@ ms.locfileid: "65728957"
   
 -   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   
--   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中鍵入使用者的 [使用者名稱] 和 [密碼]。  
+-   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中鍵入使用者的 [使用者名稱]  和 [密碼]  。  
   
 > [!NOTE]
 >  使用者必須擁有 Oracle 資料庫中授與的以下權限，才能成為記錄採礦使用者。  
@@ -63,7 +62,7 @@ ms.locfileid: "65728957"
 >  如果有任何權限不能授與給 V$xxx，則將該權限授與給 V_S$xxx。  
   
  **測試連接**  
- 按一下 [測試連接]，以判斷您是否已經與擁有 Oracle 資料庫的遠端電腦建立連接。 隨即開啟對話方塊，通知您連接是否成功。  
+ 按一下 [測試連接]  ，以判斷您是否已經與擁有 Oracle 資料庫的遠端電腦建立連接。 隨即開啟對話方塊，通知您連接是否成功。  
   
 > [!IMPORTANT]  
 >  由於已知問題的緣故，如果未以系統管理員的身分執行 CDC 設計工具，則 Oracle 來源資料庫的連接可能會失敗。 如果連接失敗，請使用 **[以系統管理員身分執行]** 選項關閉 CDC 設計工具，然後重新啟動。  

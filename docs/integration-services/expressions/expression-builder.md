@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 04457acc8bd47f3802ba7ad68797d1745117871d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c4d0d29ab92f6fd4cc88a11c0d7c2a884673a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088721"
 ---
 # <a name="expression-builder"></a>運算式產生器
 

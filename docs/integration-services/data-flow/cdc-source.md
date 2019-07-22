@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6cfd2e24d8c612db7b0865fa689a8b35d26de73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ce7ac47e5de47db98a6986ed471ba0f7fdb01dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045385"
 ---
 # <a name="cdc-source"></a>CDC 來源
 

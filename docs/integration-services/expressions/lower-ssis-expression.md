@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bea0342ef01511621629559cb627447d66340071
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc0309a47b19cc4df0ece6c0785ba47644082a89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941267"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 運算式)
 

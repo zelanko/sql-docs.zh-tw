@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0304976a3ce161d72075f13c51e657695d9af3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b3d21e2dcecf965e82ea5a88a51d6eb64ebfb88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907969"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>在合併發行項之間自動產生聯結篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

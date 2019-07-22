@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0b038e81c70e3368e9f66c6dfefc925e282b27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8dee34e6d2bb7cfb858ee1f10378d5ac4916f9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945575"
 ---
 # <a name="debugging-script"></a>偵錯指令碼
 

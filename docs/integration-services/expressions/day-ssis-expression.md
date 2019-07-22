@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b116852f7e079d675ee2a98b358882d02550f18b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be761d45a99c06120f52348bd5d565824fa6aca0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081089"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 運算式)
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d7ac4da02b259779ef1027ad771f529ee918d12c
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 4203f082d093cae12dc546b083adc6e049d8799f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087393"
 ---
 # <a name="export-a-policy-based-management-policy"></a>匯出原則式管理原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
