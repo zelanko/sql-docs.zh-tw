@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e0ea4b800a4e48959782bfb70d834db93a323d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71852015f9595e51c61f0840ebcec6e41431a660
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941416"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>使用 ODBC 目的地來載入資料
 
@@ -39,7 +38,7 @@ ms.locfileid: "65726751"
   
 6.  選取資料存取方法。  
   
-    -   **資料表名稱 - 批次**：若要將 ODBC 目的地設定成以批次模式運作，請選取此選項。 當您選取此選項時，可以設定 **[批次大小]**。  
+    -   **資料表名稱 - 批次**：若要將 ODBC 目的地設定成以批次模式運作，請選取此選項。 當您選取此選項時，可以設定 **[批次大小]** 。  
   
     -   **資料表名稱 - 逐列**：若要將 ODBC 目的地設定成插入每個資料列至目的地資料表 (一次一個)，請選取此選項。 當您選取此選項時，資料會以一次一個資料列的方式載入到資料表。  
   
@@ -49,9 +48,9 @@ ms.locfileid: "65726751"
   
 9. 按一下 **[對應]** ，然後將資料行從一個清單拖曳至另一個清單，使 **[可用的輸入資料行]** 清單中的資料行對應至 **[可用的目的地資料行]** 清單中的資料行。  
   
-10. 若要設定錯誤輸出，請按一下 **[錯誤輸出]**。  
+10. 若要設定錯誤輸出，請按一下 **[錯誤輸出]** 。  
   
-11. 按一下 [確定] 。  
+11. 按一下 [確定]  。  
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

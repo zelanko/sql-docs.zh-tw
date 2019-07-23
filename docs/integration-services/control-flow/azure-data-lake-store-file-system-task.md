@@ -12,13 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: Lingxi-Li
 ms.author: lingxl
-manager: craigg
-ms.openlocfilehash: 5d07bedb102ee004c78d727afcf99320d12d68a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab5a97beb9f1bfe4d47844e2d0acdb49b28b924
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947342"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 檔案系統工作
 

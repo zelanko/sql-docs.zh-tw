@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ae7db7b-959f-4142-8d9f-aa427869c6ac
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ffc4f8556d34808e491d478e6441940f8873b91
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 96dd323d0966185b42e1c7d11fb5b17917ba848f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970468"
 ---
 # <a name="sqlserversavepoint-class"></a>SQLServerSavepoint 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

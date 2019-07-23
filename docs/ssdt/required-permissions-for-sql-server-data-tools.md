@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1eb77a0990d8f0e19458dd66ea7f73b933de961c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4199109ef0492a23206233c82b6051b88564cc26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110759"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools 的必要權限
 在 Visual Studio 中若要對資料庫執行動作，您用來登入的帳戶必須對該資料庫具備特定的權限。 依您想要執行的動作而定，所需的特定權限將有所不同。 下列各節將描述您可能會執行的每一個動作，以及執行該動作所需要的特定權限。  

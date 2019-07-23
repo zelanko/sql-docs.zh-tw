@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96e9da6c6bf1c394032abff79b7b869e08f4d3e9
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 1e0c9d8d91bce3cc632e6cfd8a5f50353a55793a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085936"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +79,8 @@ snapshot [ -?]
  **-?**  
  列印所有可用的參數。  
   
- **-Publisher**  _server_name_[**\\**_instance\_name_]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。 請針對該伺服器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具名執行個體指定 _server\_name_**\\**_instance\_name_。  
+ **-Publisher**  _server_name_[ **\\** _instance\_name_]  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。 請針對該伺服器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具名執行個體指定 _server\_name_ **\\** _instance\_name_。  
   
  **-Publication** _發行集_  
  這是發行集的名稱。 只有在發行集設定成隨時都有快照供新的訂閱或重新初始化的訂閱使用時，這個參數才有效。  
@@ -95,10 +94,10 @@ snapshot [ -?]
  **-DefinitionFile** _def_path_and_file_name_  
  這是代理程式定義檔的路徑。 代理程式定義檔包含代理程式的命令列引數。 此檔案的內容會剖析為可執行檔。 請使用雙引號 (") 來指定包含任意字元的引數值。  
   
- **-Distributor** _server_name_[**\\**_instance\_name_]  
- 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具名執行個體指定 _server\_name_**\\**_instance\_name_。  
+ **-Distributor** _server_name_[ **\\** _instance\_name_]  
+ 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具名執行個體指定 _server\_name_ **\\** _instance\_name_。  
   
- **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  這是發生死結時散發者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
 |DistributorDeadlockPriority 值|Description|  
@@ -111,7 +110,7 @@ snapshot [ -?]
  這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的散發者時，系統所使用的登入。  
   
  **-DistributorPassword** _distributor_password_  
- 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的散發者時，系統所使用的密碼。 執行個體時提供 SQL Server 登入。  
+ 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的散發者時，系統所使用的密碼。 。  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  指定散發者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證模式 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
@@ -174,7 +173,7 @@ snapshot [ -?]
  這是將「正在等候後端訊息」記錄至 [MSsnapshot_history](../../../relational-databases/system-tables/mssnapshot-history-transact-sql.md) 資料表之前，快照集代理程式等候的時間量 (以秒為單位)。 預設值為 300 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 這是登入逾時之前的秒數。 預設值為 15 秒。  
+ 這是登入逾時之前的秒數。  預設值為 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或散發資料庫之同步處理交易中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 **0** 的值而且沒有硬式編碼的上限。 預設值為處理器數目的兩倍。  
@@ -217,7 +216,7 @@ snapshot [ -?]
  **-PublisherDB** _publisher_database_  
  這是發行集資料庫的名稱。 *這個參數不支援 Oracle 發行者*。  
   
- **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  這是發生死結時發行者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
 |PublisherDeadlockPriority 值|Description|  
@@ -226,14 +225,14 @@ snapshot [ -?]
 |**0** (預設值)|未指派優先權。|  
 |**1**|在發行者端發生死結時，快照集代理程式擁有優先權。|  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance\_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance\_name_]  
  指定參與具有發行集資料庫之資料庫鏡像工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉夥伴執行個體。 如需詳細資訊，請參閱 [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** _publisher_login_  
  這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的發行者時，系統所使用的登入。  
   
  **-PublisherPassword**  _publisher_password_  
- 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的發行者時，系統所使用的密碼。 執行個體時提供 SQL Server 登入。  
+ 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的發行者時，系統所使用的密碼。 。  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  指定發行者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  

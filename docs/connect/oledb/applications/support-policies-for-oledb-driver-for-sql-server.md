@@ -10,38 +10,37 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 7aa291121c751b6634eed645fba52247849b6721
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0bbc3a6806ab28769bd40d16356e6ad49ceaa822
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989276"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 的支援原則
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  這篇文章討論各種資料存取元件可以搭配 OLE DB Driver for SQL Server。  
+  本文討論如何在 SQL Server 的 OLE DB 驅動程式中使用各種資料存取元件。  
 
 ## <a name="server-support"></a>伺服器支援  
- OLE DB Driver for SQL Server 支援連接至[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]， [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]， [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]， [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]，和[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]。
+ SQL Server 的 OLE DB 驅動程式支援與[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]、 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]和[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]的連接。
 
 ## <a name="supported-operating-system-versions"></a>支援的作業系統版本  
- 下表列出哪些作業系統支援 OLE DB Driver for SQL Server。  
+ 下表列出哪些作業系統支援 SQL Server 的 OLE DB 驅動程式。  
 
 |支援的作業系統|  
 |--------------------------------------|---------------------------------|   
-|Microsoft Windows 8.1 + [2014 年 4 月更新](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [2014 年 4 月更新](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016|  
+|Microsoft Windows 8.1 + [2014 年4月更新](https://go.microsoft.com/fwlink/?linkid=2073785) +  [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [4 月2014更新](https://go.microsoft.com/fwlink/?linkid=2073785) +  [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016|  
 
 ## <a name="ado-support-policies"></a>ADO 支援原則  
  如果 ADO 應用程式不需要 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的任何功能，就可以使用 Windows 隨附的 SQLOLEDB OLE DB 提供者。  
 
- ADO 應用程式可以使用 OLE DB Driver for SQL Server，但如果它們這樣必須同時指定`DataTypeCompatibility=80`連接字串中。 當連接字串中存在 `DataTypeCompatibility=80` 時，只能使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的功能。  
+ ADO 應用程式可以使用 SQL Server 的 OLE DB 驅動程式, 但如果它們這麼做, 就`DataTypeCompatibility=80`必須在連接字串中指定。 當連接字串中存在 `DataTypeCompatibility=80` 時，只能使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的功能。  
 
 ## <a name="ole-db-support-policies"></a>OLE DB 支援原則  
-應用程式應該使用 Windows 作業系統隨附的 OLE DB 提供者 (SQLOLEDB)。 不過，，處於維護模式，而且不會再更新。 改為使用 OLE DB Driver for SQL Server (MSOLEDBSQL)。
+應用程式應該使用 Windows 作業系統隨附的 OLE DB 提供者 (SQLOLEDB)。 不過, 這處於維護模式, 且不再更新。 請改用 SQL Server 的 OLE DB 驅動程式 (內含 MSOLEDBSQL.H)。
 
 ## <a name="see-also"></a>另請參閱  
  [使用 OLE DB Driver for SQL Server 建置應用程式](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

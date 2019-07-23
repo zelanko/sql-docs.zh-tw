@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 607d729726c421030f4f77247b4e0090c900744c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 108bc70b3ff4a3fb03d332def79f9ceebeffd94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983641"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverdatasource"></a>getDisableStatementPooling 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  傳回的值**disableStatementPooling**連接屬性。 此設定會控制是否啟用陳述式共用或不適用於此連線。
+  傳回**disableStatementPooling**連接屬性的值。 此設定可控制此連接是否已啟用語句共用。
 
   
 ## <a name="syntax"></a>語法  
@@ -31,13 +30,13 @@ public boolean getDisableStatementPooling();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**布林**，其中包含的值**disableStatementPooling**連接屬性。
+ 包含**disableStatementPooling**連接屬性值的**布林**值。
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 這個方法是從 JDBC 驅動程式版本 6.4 可用且向外。
+ 這個方法可從 JDBC 驅動程式6.4 版和之後版本取得。
  
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

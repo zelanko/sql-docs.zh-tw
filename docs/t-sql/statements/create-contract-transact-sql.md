@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 64ea4a6f152ebeaa5898de35e386fbde8d09aab6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902884"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +60,14 @@ CREATE CONTRACT contract_name
  *message_type_name*  
  這是要併入合約之訊息類型的名稱。  
   
- SENT BY   
- 指定哪一個端點可以傳送指定訊息類型的訊息。 合約記錄服務可以用來進行特定交談的訊息。 每一個交談有兩個端點：「起始端」端點，這是起始交談的服務，以及「目標」端點，這是起始端連絡的服務。  
+ SENT BY  
+ 指定哪一個端點可以傳送指定訊息類型的訊息。 合約記錄服務可以用來進行特定交談的訊息。 每一個交談有兩個端點：「起始端」  端點，這是起始交談的服務，以及「目標」  端點，這是起始端連絡的服務。  
   
- INITIATOR   
- 表示只有交談起始端可以傳送特定訊息類型的訊息。 開始交談的服務稱為交談的「起始端」。  
+ INITIATOR  
+ 表示只有交談起始端可以傳送特定訊息類型的訊息。 開始交談的服務稱為交談的「起始端」  。  
   
  TARGET  
- 表示只有交談目標可以傳送特定訊息類型的訊息。 接受由另一服務起始之交談的服務稱為交談的「目標」。  
+ 表示只有交談目標可以傳送特定訊息類型的訊息。 接受由另一服務起始之交談的服務稱為交談的「目標」  。  
   
  ANY  
  表示起始端和目標兩者都可以傳送這個類型的訊息。  
@@ -87,7 +86,7 @@ CREATE CONTRACT contract_name
   
  合約不能是暫存物件。 您可以使用開頭是 # 的合約名稱，但它們是永久物件。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  根據預設，**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及系統管理員 (**sysadmin**) 固定伺服器角色的成員可以建立合約。  
   
  根據預設，合約的擁有者、**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及系統管理員 (**sysadmin**) 固定伺服器角色的成員，具有合約的 REFERENCES 權限。  

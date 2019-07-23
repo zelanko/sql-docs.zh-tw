@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 99a3691f01884d2e1f19412e046c2a7ece9e3b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 114bf1f77c6b55099a60a18e89d54e4ac8d51a3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898924"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>加入 Analysis Services 連接管理員對話方塊 UI 參考
 

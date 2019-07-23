@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: c85f003384c714ff6da9ccba728e35adce71c1be
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 0bdda3fbe3da2f5abda7c1d808b0366ab8ff70d5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688142"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266845"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>顯示查詢屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

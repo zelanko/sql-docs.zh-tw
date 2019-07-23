@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f759c8ee2b21d22e49bcc402baf16b1fe1534f87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf7fc37921ae37996b5d93b1ed1e913232a28b0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101576"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
 

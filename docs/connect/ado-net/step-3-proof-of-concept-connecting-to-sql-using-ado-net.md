@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 743eab241fa9feb4a622054b3be48b887b804813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957610"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3︰使用 ADO.NET 連線到 SQL 的概念證明
 
@@ -24,11 +23,11 @@ ms.locfileid: "66770573"
 - 下一篇文章：&nbsp;&nbsp;&nbsp;[步驟 4︰使用 ADO.NET 彈性地連接到 SQL](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-這個 C# 程式碼範例應該考慮只概念證明。 範例程式碼為了清楚起見，已簡化，並不一定代表 Microsoft 建議的最佳作法。  
+這個C#程式碼範例只應視為概念證明。 為了清楚起見, 範例程式碼已簡化, 不一定代表 Microsoft 建議的最佳作法。  
   
-## <a name="step-1-connect"></a>步驟 1： 連線
+## <a name="step-1-connect"></a>步驟 1: 連接
   
-此方法**SqlConnection.Open**用來連接到您的 SQL database。  
+方法**SqlConnection. Open**是用來連接到您的 SQL 資料庫。  
 
 
 ```csharp
@@ -67,10 +66,10 @@ ms.locfileid: "66770573"
 
 ## <a name="step-2--execute-a-query"></a>步驟 2：執行查詢  
   
-SqlCommand.ExecuteReader 方法：  
+方法 SqlCommand. ExecuteReader:  
   
-- SQL 系統發出 SQL SELECT 陳述式。  
-- 傳回 SqlDataReader，以提供存取權的結果資料列的執行個體。  
+- 向 SQL 系統發出 SQL SELECT 語句。  
+- 傳回 SqlDataReader 的實例, 以提供結果資料列的存取權。  
   
   
   
@@ -151,14 +150,14 @@ SqlCommand.ExecuteReader 方法：
   
   
   
-## <a name="step-3-insert-a-row"></a>步驟 3： 插入資料列  
+## <a name="step-3-insert-a-row"></a>步驟 3: 插入資料列  
   
   
 此範例示範如何：  
   
-- 透過將參數傳遞，安全地執行的 SQL INSERT 陳述式。  
+- 藉由傳遞參數來安全地執行 SQL INSERT 語句。  
   - 使用參數可防止 SQL 插入式攻擊。  
-- 擷取自動產生的值。  
+- 取出自動產生的值。  
   
   
   

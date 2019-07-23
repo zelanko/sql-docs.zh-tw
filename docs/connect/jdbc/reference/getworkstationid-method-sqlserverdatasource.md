@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6a701de-a8fa-4668-9310-99a8c6e32c88
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 117c0ad7ff08cec0c3c0b39758dce1dc55ecb249
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 98cde4953d60f13d1768b06dbfab9ada6ea8af55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978054"
 ---
 # <a name="getworkstationid-method-sqlserverdatasource"></a>getWorkstationID 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public java.lang.String getWorkstationID()
  **String**，其中包含用戶端電腦名稱。  
   
 ## <a name="remarks"></a>Remarks  
- workstationID 是用戶端電腦或工作站的名稱。 如果未設定 workstationID 屬性，預設值是藉由呼叫 InetAddress.getLocalHost().getHostName() 方法建構。 如果 getHostName 傳回空白值時，會呼叫 getHostAddress().toString() 方法。  
+ workstationID 是用戶端電腦或工作站的名稱。 如果未設定 workstationID 屬性, 則會藉由呼叫 InetAddress. getLocalHost (). getHostName () 方法來建立預設值。 如果 getHostName 傳回空白值, 則會呼叫 getHostAddress () toString () 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

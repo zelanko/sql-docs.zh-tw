@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4af5769f5187fd70387f89aebf07625117da9a49
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916497"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用含有輸出參數的預存程序
 
@@ -29,11 +28,11 @@ ms.locfileid: "66790340"
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> 如需有關 SQL 逸出序列的詳細資訊，請參閱[使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 如需 SQL escape 序列的詳細資訊, 請參閱[使用 Sql Escape 序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
 建構 `call` 逸出序列時，請使用 ? (問號) 字元來指定 IN 參數。 此字元會充當預留位置，代表將從預存程序傳回的參數值。 若要指定 OUT 參數的值，在執行預存程序之前，您必須使用 SQLServerCallableStatement 類別的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法來指定每個參數的資料類型。
 
-您在 registerOutParameter 方法中指定給 OUT 參數的值，必須是 java.sql.Types 包含的其中一個 JDBC 資料類型，然後該資料類型會對應到其中一個原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需 JDBC 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型，請參閱[了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。
+您在 registerOutParameter 方法中指定給 OUT 參數的值，必須是 java.sql.Types 包含的其中一個 JDBC 資料類型，然後該資料類型會對應到其中一個原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需有關 jdbc 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的詳細資訊, 請參閱[瞭解 jdbc 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。
 
 當您將值傳遞到 OUT 參數的 registerOutParameter 方法時，不只要指定用於參數的資料類型，還要指定參數在預存程序中的序數位置或名稱。 比方說，如果預存程序包含單一 OUT 參數，則其序數值為 1；如果預存程序包含兩個參數，則第一個序數值為 1，第二個序數值為 2。
 
@@ -83,9 +82,9 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 ```
 
 > [!NOTE]  
-> 這些範例會使用 SQLServerCallableStatement 類別的 execute 方法來執行預存程序。 會使用這個是因為預存程序並不同時傳回結果集。 如果它已傳回結果集，則會使用 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法。
+> 這些範例會使用 SQLServerCallableStatement 類別的 execute 方法來執行預存程式。 會使用這個是因為預存程序並不同時傳回結果集。 如果它已傳回結果集，則會使用 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法。
 
-預存程序可以傳回更新計數和多個結果集。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 遵循 JDBC 3.0 規格，其中說明在擷取 OUT 參數前，應該擷取多個結果集和更新計數。 也就是應用程式應該擷取所有結果集物件，並更新計數，然後再使用 CallableStatement.getter 方法擷取 OUT 參數。 否則，在擷取 OUT 參數時，將會遺失尚未擷取的 ResultSet 物件和更新計數。 如需更新計數的詳細資訊和多個結果集，請參閱[使用更新計數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)並[使用多個結果集](../../connect/jdbc/using-multiple-result-sets.md)。
+預存程序可以傳回更新計數和多個結果集。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 遵循 JDBC 3.0 規格，其中說明在擷取 OUT 參數前，應該擷取多個結果集和更新計數。 也就是說, 應用程式應該先抓取所有 ResultSet 物件和更新計數, 然後再使用 JAVA.sql.callablestatement 方法取得 OUT 參數。 否則，在擷取 OUT 參數時，將會遺失尚未擷取的 ResultSet 物件和更新計數。 如需更新計數和多個結果集的詳細資訊, 請參閱[使用具有更新計數的預存](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)程式和[使用多個結果集](../../connect/jdbc/using-multiple-result-sets.md)。
 
 ## <a name="see-also"></a>另請參閱
 

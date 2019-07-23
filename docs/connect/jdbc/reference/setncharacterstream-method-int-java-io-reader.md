@@ -1,5 +1,5 @@
 ---
-title: setNCharacterStream 方法來讀取器物件-int |Microsoft Docs
+title: Reader 物件的 setNCharacterStream 方法-int |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a871bbbb7135d22771b3cd769a6ef0e5eb1bbe9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01e501bbe9ae68b35c4e9b8373b0dfe1f55d9f6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973907"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,10 +42,10 @@ public final void setNCharacterStream(int parameterIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 setNCharacterStream 方法是由 java.sql.PreparedStatement 介面中的 setNCharacterStream 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 setNCharacterStream 方法是由 JAVA.sql.preparedstatement 介面中的 setNCharacterStream 方法指定。  
   
- 這個方法應該用於**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**資料型別。  
+ 這個方法應該用於**NCHAR**、 **NVARCHAR**、 **NTEXT**和**XML**資料類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [setNCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   

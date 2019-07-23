@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897166"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用資料表設計工具建立資料庫物件
 [SQL Server 物件總管]  中新的 [SQL Server]  節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
@@ -63,18 +62,18 @@ ms.locfileid: "65098150"
   
     |[屬性]|資料類型|**允許 Null**|  
     |--------|-------------|-------------------|  
-    |Id|ssNoversion|取消選取|  
+    |Id|INT|取消選取|  
     |[屬性]|nvarchar (128)|取消選取|  
   
 7.  建立一個或多個名為 **Products** 的資料表。 使用資料行格線，將下列資料行加入至 Products 資料表。 而且，記得要變更指令碼，讓資料表名稱為 `[dbo].[Products]`。  
   
     |[屬性]|資料類型|**允許 Null**|  
     |--------|-------------|-------------------|  
-    |Id|ssNoversion|取消選取|  
+    |Id|INT|取消選取|  
     |[屬性]|nvarchar (128)|取消選取|  
-    |ShelfLife|ssNoversion|已選取|  
-    |SupplierId|ssNoversion|已選取|  
-    |CustomerId|ssNoversion|已選取|  
+    |ShelfLife|INT|已選取|  
+    |SupplierId|INT|已選取|  
+    |CustomerId|INT|已選取|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>若要使用資料表設計工具建立新的檢查條件約束  
   

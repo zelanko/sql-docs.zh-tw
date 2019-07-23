@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 06ee31ac87f8bbdc8177ea7899b59a6f0e576365
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: faaf063fc00964ec6d060d03f42acc3e1eaaa33a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105640"
 ---
 # <a name="profiler-utility"></a>Profiler 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3bda26c21dcb38475373635ff4ead6d92f1b634
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5eba7d655d0c6ee047d59f3cd14ea39a6ad4ec3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115576"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>重建索引工作 (維護計畫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [重建索引工作] 對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
+  使用 [重建索引工作]  對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
   
- [重建索引工作] 會使用 ALTER INDEX 陳述式。 如需此頁面所描述之選項的詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
+ [重建索引工作]  會使用 ALTER INDEX 陳述式。 如需此頁面所描述之選項的詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
 ## <a name="options"></a>選項。  
  **[連接]**  
@@ -59,7 +58,7 @@ ms.locfileid: "53205587"
     >  維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
  **物件**  
- 限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
+ 限制 [選取範圍]  格線僅顯示資料表、檢視或兩者。  
   
  **選取範圍**  
  指定受此工作影響的資料表或索引。 [物件] 方塊中的 **[資料表和檢視]** 為選取狀態時無法使用。  
@@ -92,7 +91,7 @@ ms.locfileid: "53205587"
  選取此選項以等候低優先權鎖定。  
   
  **在等候之後中止**  
- 指定經過 [持續時間上限] 所指定的時間之後該怎麼做。  
+ 指定經過 [持續時間上限]  所指定的時間之後該怎麼做。  
   
  **持續時間上限**  
  指定等候低優先權鎖定的時間上限。  

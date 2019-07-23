@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f751ec11f66c3edfa61920d17394dd6237e560
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30bf006998ac543b732b4aecac97280f07d36a99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081429"
 ---
 # <a name="backup-timeline"></a>備份時刻表
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [備份時間表] 對話方塊，尋找及指定將資料庫還原至某個時間點的備份。 透過按一下 [還原資料庫] 窗格 ([一般] 頁面) 上的 [時間表] 上，即可存取 [備份時間表] 對話方塊。 這個對話方塊可讓您檢視資料庫上所執行之還原作業的時間軸。  
+  使用 [備份時間表]  對話方塊，尋找及指定將資料庫還原至某個時間點的備份。 透過按一下 [還原資料庫] 窗格 ([一般] 頁面)  上的 [時間表]  上，即可存取 [備份時間表]  對話方塊。 這個對話方塊可讓您檢視資料庫上所執行之還原作業的時間軸。  
   
  Database Recovery Advisor 會確定只選取要還原到該時間點所需的備份。 這些選取的備份為您的還原作業構成了建議的還原計畫。 您應該只使用選取的備份。 如需資料庫復原建議程式的相關資訊，請參閱[還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
   
 ## <a name="restore-to"></a>還原至  
- 系統預設會選取 **[上次建立的備份]** 。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會選取適當的備份以還原資料庫，而且會將資料庫還原至上次備份的時間點。 按一下 [特定的日期與時間] 手動設定日期與時間 (選取特定的時間點)。  
+ 系統預設會選取 **[上次建立的備份]** 。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會選取適當的備份以還原資料庫，而且會將資料庫還原至上次備份的時間點。 按一下 [特定的日期與時間]  手動設定日期與時間 (選取特定的時間點)。  
   
  **[特定的日期與時間]** 會允許您在選取的特定日期和時間停止還原。 此時間表顯示在所選取日期和時間的 24 小時內執行之備份作業的呈現。  
   

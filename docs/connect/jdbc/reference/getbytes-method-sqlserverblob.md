@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9686d29f11f2357b983dce349e8e4dc5d13af664
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4c7891c6d7454e0397406f9391fdfb60d0f0fc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213711"
 ---
 # <a name="getbytes-method-sqlserverblob"></a>getBytes 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +50,7 @@ public byte[] getBytes(long pos,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getBytes 方法是由 java.sql.Blob 介面中的 getBytes 方法指定。  
   
  如果您擁有長度為 null 或零的 BLOB，而且嘗試在位置 1 取得剛好零個位元組，則會傳回空的 **byte** 陣列 (長度 0 的位元組陣列)。  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d81de36b6d0e8df65e1b744b284d9c96dec5d9d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f820ea8a58ac85024a0550a8499aa997333f3de1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944100"
 ---
 # <a name="multicast-transformation"></a>多點傳送轉換
 

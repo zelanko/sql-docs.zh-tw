@@ -11,13 +11,12 @@ apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0940e17ada4fb6ebf9c18667bff55a4fe4c42799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55e306b2fe7b8f52655f504d63f02ffc26e04ea1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971778"
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66803115"
   
 ## <a name="constructors"></a>建構函式  
   
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|初始化 SQLServerClob 類別的新執行個體。|  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66803115"
   
 ## <a name="methods"></a>方法  
   
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|這個方法會釋放 CLOB 物件並且釋出它所保留的資源。|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|具體化此 Clob 當做 ASCII 資料流。|  

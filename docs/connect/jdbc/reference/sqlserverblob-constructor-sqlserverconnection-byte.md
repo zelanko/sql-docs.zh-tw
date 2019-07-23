@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aff7392d2aceab631e5e53cd446696f8ce15ab43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4f3c26ca45da6cba3a86324e970117cde9fcc4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971988"
 ---
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob 建構函式 (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

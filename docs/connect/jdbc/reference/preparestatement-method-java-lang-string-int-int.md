@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0cfbcf94a1211738b0cf0abb8e2657257edd09eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b192f9055394393c48fa19eda697791ddfe3fa2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976167"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>prepareStatement 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,13 +50,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
  **int**，指出結果集的並行類型。  
   
 ## <a name="return-value"></a>傳回值  
- PreparedStatement 物件。  
+ JAVA.sql.preparedstatement 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 prepareStatement 方法是由 java.sql.Connection 介面中的 prepareStatement 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 prepareStatement 方法是由連接介面中的 prepareStatement 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 方法](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 9c9c93a3f81af7303d97527d514d8c3ce320cfeb
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 51aff80cb84f5ff066917f5ba35d966c0f49d08d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683314"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262025"
 ---
 # <a name="properties-window-management-studio"></a>屬性視窗 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

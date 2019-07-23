@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b7c145b516bc580858658a81a1e0a76375bd668
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45096a10f377b88e36f0d84e77963a7321cbef8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110357"
 ---
 # <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level 
 
@@ -41,17 +40,17 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  新的現有自訂記錄層次的名稱。  
   
- *level_name* 是 **nvarchar(128)**。  
+ *level_name* 是 **nvarchar(128)** 。  
   
  [ @level_description = ] *level_description*  
  新的現有自訂記錄層次的描述。  
   
- *level_description* 是 **nvarchar(max)**。  
+ *level_description* 是 **nvarchar(max)** 。  
   
  [ @profile_value = ] *profile_value*  
  您想要新自訂記錄層次記錄的統計資料。  
   
- 統計資料的有效值包含下列各項。 這些值對應至 [自訂記錄層次管理] 對話方塊的 [統計資料] 索引標籤上的值。  
+ 統計資料的有效值包含下列各項。 這些值對應至 [自訂記錄層次管理]  對話方塊的 [統計資料]  索引標籤上的值。  
   
 -   Execution = 0  
   
@@ -64,7 +63,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @events_value = ] *events_value*  
  您想要新自訂記錄層次記錄的事件。  
   
- 事件的有效值包含下列各項。 這些值對應至 [自訂記錄層次管理] 對話方塊的 [事件] 索引標籤上的值。  
+ 事件的有效值包含下列各項。 這些值對應至 [自訂記錄層次管理]  對話方塊的 [事件]  索引標籤上的值。  
   
 |沒有事件內容的事件|具有事件內容的事件|  
 |----------------------------------|-------------------------------|  

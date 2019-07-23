@@ -6,16 +6,15 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
-ms.openlocfilehash: d1efc5b57191ec17f610206115743b656d58d4b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581390"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68254860"
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
 

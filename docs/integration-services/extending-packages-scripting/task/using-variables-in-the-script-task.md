@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb3ad2907396d88515f9d661e8fdfddaba4e5fc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0714aa2a016f8b9c7f2546e2da2972bbd001c590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102816"
 ---
 # <a name="using-variables-in-the-script-task"></a>在指令碼工作中使用變數
 

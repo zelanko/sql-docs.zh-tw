@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 71e52e1e20575f52e4aefde27e16578411c2ea2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d8ff79cbcd5f243ef80c2be49bff7be78db4e20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114445"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈的資料類型對應
 

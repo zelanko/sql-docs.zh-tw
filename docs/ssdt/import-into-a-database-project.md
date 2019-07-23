@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d2c08af731fc8f75089250c92ec4f0912a96eee6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119838"
 ---
 # <a name="import-into-a-database-project"></a>匯入資料庫專案中
 您可以使用 [匯入]，將即時資料庫或 .dacpac 中的新物件填入專案，或者使用指令碼中的新定義來更新專案中的現有物件。 這三種路徑之間存在一些需要注意的行為差異，下面將詳細說明。  

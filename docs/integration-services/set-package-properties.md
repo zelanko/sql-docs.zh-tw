@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 072a0506d4dad9aad762cae77cad97a3bf16bdd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9227289bd6ad587744d9025a70d625f6aedb21e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912515"
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
 

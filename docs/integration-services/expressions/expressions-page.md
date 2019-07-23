@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bcbb3de0820b7f8489a21e4630538246da561f1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 826e9ba34d114d7c18c81915f099fdcf34ca0976
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080940"
 ---
 # <a name="expressions-page"></a>運算式頁面
 

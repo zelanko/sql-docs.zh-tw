@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 042d304dcdd0519d858fcf7369e9b200a57f1959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902587"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>課程 1-7：新增及設定 OLE DB 目的地
 

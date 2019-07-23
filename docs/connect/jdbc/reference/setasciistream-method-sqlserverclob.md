@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76d58f43e1caded32ac03e2c8f96ee5b9365bb72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fff312217f9191e6752f8eb753096ff7499a0496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975431"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,8 +45,8 @@ public java.io.OutputStream setAsciiStream(long pos)
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>備註  
- 這個 setAsciiStream 方法是由 java.sql.Clob 介面中的 setAsciiStream 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 setAsciiStream 方法是由 Clob 介面中的 setAsciiStream 方法指定。  
   
  輸出資料流會從給定位置開始覆寫 CLOB 中的字元資料，而且可以超過 CLOB 的初始長度。 指定位置 + 1 的值將會附加 ASCII 字元。 指定位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。  
   

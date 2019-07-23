@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 8e30986a085f76d8daf3fb65c52eb63b305b69fb
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 6d65dedfb6d2d1f3a2002c358a9ec7c65d0d54d5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688198"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266857"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>顯示圖表屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

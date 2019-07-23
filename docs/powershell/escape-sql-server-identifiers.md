@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0c27639c8037c5a1e72b309ee51d74a8f1a78ef
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: c196b316424c941cba52eb50c61c82ca772ba18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951701"
 ---
 # <a name="escape-sql-server-identifiers"></a>逸出 SQL Server 識別碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 80445ce66d9b6333e5fd8f6856af251eda2ac5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9afddbb4041600ffb22504ad66b4e9aa1ef1e33c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045585"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在資料流程中加入或刪除元件
 
@@ -36,9 +35,9 @@ ms.locfileid: "65727247"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [控制流程] 索引標籤，然後按兩下包含要加入元件之資料流程的「資料流程」工作。  
+3.  按一下 [控制流程]  索引標籤，然後按兩下包含要加入元件之資料流程的「資料流程」工作。  
   
-4.  在 [工具箱] 中，展開 [資料流程來源]、[資料流程轉換] 或 [資料流程目的地]，然後將資料流程項目拖曳到 [資料流程] 索引標籤的設計介面上。  
+4.  在 [工具箱] 中，展開 [資料流程來源]  、[資料流程轉換]  或 [資料流程目的地]  ，然後將資料流程項目拖曳到 [資料流程]  索引標籤的設計介面上。  
   
 5.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
@@ -48,9 +47,9 @@ ms.locfileid: "65727247"
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 [控制流程] 索引標籤，然後按兩下包含您要刪除元件之資料流程的「資料流程」工作。  
+3.  按一下 [控制流程]  索引標籤，然後按兩下包含您要刪除元件之資料流程的「資料流程」工作。  
   
-4.  以滑鼠右鍵按一下資料流程元件，然後按一下 [刪除]。  
+4.  以滑鼠右鍵按一下資料流程元件，然後按一下 [刪除]  。  
   
 5.  確認刪除作業。  
   

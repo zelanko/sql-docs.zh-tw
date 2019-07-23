@@ -7,13 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 2f0a49af4e808c24530ce1eac4d01594044d58b5
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 80fff1e8db1fb9dabe6ed12d425bd844e954dac9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682659"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257268"
 ---
 # <a name="options-environment---startup-page"></a>選項 ([環境] - [啟動] 頁面)
 

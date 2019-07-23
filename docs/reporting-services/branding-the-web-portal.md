@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 description: 在本文中，您將了解如何透過品牌套件建立符合您企業的入口網站品牌形象，藉以變更入口網站的外觀。 品牌套件設計成不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221715"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
@@ -119,11 +119,11 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 1.  選取右上方的**齒輪**。  
   
-2.  選取 [網站設定]。  
+2.  選取 [網站設定]  。  
   
     ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  選取 [建立品牌]。  
+3.  選取 [建立品牌]  。  
   
     ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
   

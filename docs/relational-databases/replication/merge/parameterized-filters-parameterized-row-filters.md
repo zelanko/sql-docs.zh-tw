@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55de7bcfd14c4a3fde78ac6b62874b75b103e01b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140133"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>參數化篩選 - 參數化資料列篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "54127708"
  若要定義或修改參數化資料列篩選，請參閱＜ [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
   
 ## <a name="how-parameterized-filters-work"></a>參數化篩選如何運作  
- 參數化資料列篩選器使用 WHERE 子句選取要發行的適當資料。 您可以指定以下系統函數的其中一個或兩個，而不要在子句中指定常值 (如同對靜態資料列篩選的處理一樣)：SUSER_SNAME() 和 HOST_NAME()。 也可以使用使用者定義函數，但它們必須在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，或者評估這些系統函數的其中之一 (例如 `MyUDF(SUSER_SNAME()`)。 如果使用者定義函數在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，則您將無法將參數傳遞到該函數。  
+ 參數化資料列篩選器使用 WHERE 子句選取要發行的適當資料。 您可以指定下列系統函數的其中一或兩個，而非在子句中指定常值 (如同對靜態資料列篩選的處理)：SUSER_SNAME() 和 HOST_NAME()。 也可以使用使用者定義函數，但它們必須在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，或者評估這些系統函數的其中之一 (例如 `MyUDF(SUSER_SNAME()`)。 如果使用者定義函數在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，則您將無法將參數傳遞到該函數。  
   
  系統函數 SUSER_SNAME() 和 HOST_NAME() 並不是合併式複寫的特定函數，但是可以由合併式複寫用來進行參數化篩選：  
   
@@ -102,7 +101,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  使用下列方法其中一之來覆寫 HOST_NAME() 值：  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在 [新增訂閱精靈] 的 [HOST\_NAME\(\) 值] 頁面上指定一個值。 如需建立訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在 [新增訂閱精靈] 的 [HOST\_NAME\(\) 值]  頁面上指定一個值。 如需建立訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
 -   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計︰指定 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (適用於發送訂閱) 或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (適用於提取訂閱) 的 **@hostname** 參數值。  
   
@@ -133,7 +132,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |資料分割中的資料為不重疊，資料在訂閱之間共用。 訂閱者無法更新參數化篩選中參考的資料行。|N/A*|**不重疊，共用於訂閱之間**|**2**|  
 |資料分割中的資料不重疊，每一資料分割有單一訂閱。 訂閱者不能更新參數化篩選中參考的資料行。**|**這個資料表中的一個資料列只會提供給一個訂閱**|**不重疊，單一訂閱**|**3**|  
   
- \*如果基礎篩選選項設定為 **0**、**1** 或 **2**，則 [新增篩選] 和 [編輯篩選] 對話方塊將顯示 [這個資料表中的一個資料列會提供給多個訂閱]。  
+ \*如果基礎篩選選項設定為 **0**、**1** 或 **2**，則 [新增篩選]  和 [編輯篩選]  對話方塊將顯示 [這個資料表中的一個資料列會提供給多個訂閱]  。  
   
  **如果您指定了此選項，則該發行項中的每一資料分割將僅有單一訂閱。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。  
   

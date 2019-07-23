@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: fd9dcb3ce3e5906b34b7accfca5d9db09b97f39f
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 672157677f280f908f97467a9ced245f484e2c70
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688212"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256426"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>在圖表窗格中顯示資料行名稱 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

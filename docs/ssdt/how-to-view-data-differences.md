@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec641fc027bae18a09e81d5cf14eee1bd8ab3ee3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930346"
 ---
 # <a name="how-to-view-data-differences"></a>如何：檢視資料差異
 當您比較兩個資料庫的資料之後，會看到所比較的每個資料庫物件  及其狀態。 您也可以檢視每個物件內記錄的結果 (依狀態分組)。  

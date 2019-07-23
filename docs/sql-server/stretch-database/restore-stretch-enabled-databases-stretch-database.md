@@ -7,13 +7,12 @@ ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 479d632b8d5413de9517f92f604c44383012acab
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 169d1d2dfe2ab36d5ae7541ee33912ea162f372f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136098"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>還原已啟用 Stretch 的資料庫 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,10 +38,10 @@ Azure 的 SQL Server Stretch Database 服務使用 Azure 儲存體快照集至�
 若要使用 Azure 入口網站將即時的 Azure 資料庫還原到較早的時間點，請執行下列作業。
 
 1. 登入 [Azure 入口網站][]。
-2. 在畫面左側選取 [瀏覽]，然後選取 [SQL 資料庫]。
+2. 在畫面左側選取 [瀏覽]  ，然後選取 [SQL 資料庫]  。
 3. 瀏覽並選取您的資料庫。
-4. 在 [資料庫] 刀鋒視窗頂端，按一下 [還原]。
-5. 指定新的**資料庫名稱**，選取 [還原點] 然後按一下 [建立]。
+4. 在 [資料庫] 刀鋒視窗頂端，按一下 [還原]  。
+5. 指定新的**資料庫名稱**，選取 [還原點]  然後按一下 [建立]  。
 6. 資料庫還原程序就會開始，您可以使用 **NOTIFICATIONS**監視。
 
 ### <a name="recover-a-deleted-azure-database"></a>復原刪除的 Azure 資料庫
@@ -51,11 +50,11 @@ Azure 的 SQL Server Stretch Database 服務，會在卸除資料庫前擷取資
 若要使用 Azure 入口網站將刪除的 Azure 資料庫還原到刪除的時點，請執行下列作業。
 
 1. 登入 [Azure 入口網站][]。
-2. 在畫面左側選取 [瀏覽]，然後選取 [SQL Server]。
+2. 在畫面左側選取 [瀏覽]  ，然後選取 [SQL Server]  。
 3. 瀏覽並選取您的伺服器。
-4. 向下捲動到伺服器的 [作業] 刀鋒視窗，按一下 [已刪除的資料庫] 圖格。
+4. 向下捲動到伺服器的 [作業] 刀鋒視窗，按一下 [已刪除的資料庫]  圖格。
 5. 選取您要還原的已刪除資料庫。
-5. 指定新的**資料庫名稱**，然後按一下 [建立]。
+5. 指定新的**資料庫名稱**，然後按一下 [建立]  。
 6. 資料庫還原程序就會開始，您可以使用 **NOTIFICATIONS**監視。
 
 ## <a name="reconnect"></a>還原 SQL Server 資料庫與遠端 Azure 資料庫之間的連線

@@ -10,13 +10,12 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 63b3f49f191cb1c7e20c398ab1ca1d6cf79a5ba3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934850"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
 

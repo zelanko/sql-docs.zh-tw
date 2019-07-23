@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119876"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>如何：撰寫在單一交易範圍內執行的 SQL Server 單元測試
 您可以修改單元測試，使其在單一交易範圍中執行。 如果採用這種方法，在測試結束之後，可以復原此測試所進行的任何變更。 下列程序說明其做法：  

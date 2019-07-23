@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 295c5156c1f3b27f5030c27d70311e34f0141f18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 072fc285fa5470aa5fa589f028e3e5aba7e3f5fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101557"
 ---
 # <a name="data-flow-task"></a>資料流程工作
 

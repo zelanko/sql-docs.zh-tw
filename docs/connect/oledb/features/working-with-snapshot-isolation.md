@@ -1,6 +1,6 @@
 ---
-title: 使用快照隔離 |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驅動程式中的快照集隔離
+title: 使用快照集隔離 |Microsoft Docs
+description: 在 SQL Server 的 OLE DB 驅動程式中使用快照集隔離
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 74c80e0db7a6059e9a871553f2e11c6a16360ec3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 25d3dbaf09e5cdd6dc6726402275376766cf0591
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988694"
 ---
 # <a name="working-with-snapshot-isolation"></a>使用快照隔離
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "66796018"
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進了新的「快照」隔離等級，目的是增強線上交易處理 (OLTP) 應用程式的並行存取。 在舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，並行存取完全以鎖定為基礎，因此導致某些應用程式發生封鎖及死結問題。 快照集隔離相依於對資料列版本設定的增強功能，目的是藉由避免發生讀取器-寫入器封鎖的案例來改善效能。  
   
- 在快照隔離下啟動的交易會根據交易啟動的時間而讀取資料庫快照。 在快照交易內容中開啟的索引鍵集、動態和靜態伺服器資料指標的行為，與在可序列化交易中開啟的靜態資料指標非常類似。 不過，在開啟資料指標時不會採用快照集隔離層級鎖定。 這項事實可以減少封鎖在伺服器上。  
+ 在快照隔離下啟動的交易會根據交易啟動的時間而讀取資料庫快照。 在快照交易內容中開啟的索引鍵集、動態和靜態伺服器資料指標的行為，與在可序列化交易中開啟的靜態資料指標非常類似。 不過, 當資料指標在快照隔離等級下開啟時, 就不會執行鎖定。 這種事實可以減少伺服器上的封鎖。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- OLE DB Driver for SQL Server 的增強功能可善用中所引進的快照集隔離[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 這些增強功能包括對 DBPROPSET_DATASOURCEINFO 和 DBPROPSET_SESSION 屬性集所做的變更。  
+ SQL Server 的 OLE DB 驅動程式具有增強功能, 可利用中[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引進的快照隔離。 這些增強功能包括對 DBPROPSET_DATASOURCEINFO 和 DBPROPSET_SESSION 屬性集所做的變更。  
   
 ### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
- DBPROPSET_DATASOURCEINFO 屬性集已變更，現藉由加入用於 DBPROP_SUPPORTEDTXNISOLEVELS 屬性中的 DBPROPVAL_TI_SNAPSHOT 值來支援快照隔離等級。 這個新值代表不論資料庫上是否啟用版本控制，快照隔離等級都受到支援。 下表列出 DBPROP_SUPPORTEDTXNISOLEVELS 值：  
+ DBPROPSET_DATASOURCEINFO 屬性集已變更，現藉由加入用於 DBPROP_SUPPORTEDTXNISOLEVELS 屬性中的 DBPROPVAL_TI_SNAPSHOT 值來支援快照隔離等級。 這個新值代表不論資料庫上是否啟用版本控制，快照隔離等級都受到支援。 下表列出 DBPROP_SUPPORTEDTXNISOLEVELS 值:  
   
 |屬性識別碼|Description|  
 |-----------------|-----------------|  
@@ -58,7 +57,7 @@ ms.locfileid: "66796018"
 > [!NOTE]  
 >  如果使用早於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本時設定 DBPROPVAL_TI_SNAPSHOT，就會發生 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED 錯誤。  
   
- 如需如何在交易中支援快照隔離的資訊，請參閱[支援本機交易](../../oledb/ole-db-transactions/supporting-local-transactions.md)。  
+ 如需如何在交易中支援快照集隔離的詳細資訊, 請參閱[支援本機交易](../../oledb/ole-db-transactions/supporting-local-transactions.md)。  
 
   
 ## <a name="see-also"></a>另請參閱  

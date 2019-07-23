@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 099f6347fa90d034d4517d828bc7e3c095017ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf6579c7fbf11fe068947f5ca4358193d4c21db1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65801416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109712"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 

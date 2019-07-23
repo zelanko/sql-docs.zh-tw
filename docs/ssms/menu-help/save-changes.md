@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 4a2ccd6916c1cbe21ab8a4d0a91e73ce6f537b43
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 79540a380854965621bb58658e12f88c17cb00d5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682597"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256904"
 ---
 # <a name="save-changes"></a>儲存變更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

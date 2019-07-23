@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dab606451fc99c70b28999f2d2d8be93d1513a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb465d2a6f0d1cd69483789e39c47fda904e1800
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007795"
 ---
 # <a name="catalogremovedatatap"></a>catalog.remove_data_tap 
 

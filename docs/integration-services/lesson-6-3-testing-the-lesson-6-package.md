@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 001ba5fc56393cbbcdbc8b5379abc8390dc05e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7cfc1a4c6856debd52097b89587167060d212c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082199"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>第 6-3 課：測試第 6 課套件
 
@@ -40,9 +39,9 @@ ms.locfileid: "65721242"
   
 ## <a name="test-the-lesson-6-package"></a>測試第 6 課套件  
   
-1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
+1.  在 [偵錯]  功能表上，選取 [開始偵錯]  。  
   
-2.  在套件執行完成之後，於 [偵錯] 功能表上，選取 [停止偵錯]。  
+2.  在套件執行完成之後，於 [偵錯]  功能表上，選取 [停止偵錯]  。  
   
 ## <a name="go-to-next-task"></a>移至下一個工作
 [步驟 4：部署第 6 課套件](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  

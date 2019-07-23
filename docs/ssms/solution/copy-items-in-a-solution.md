@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 89d66aa6639b6f6a7b361f9676633892aab14c3a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: aae60868de366c26af77c3f52906f23280177969
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689891"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258288"
 ---
 # <a name="copy-items-in-a-solution"></a>複製方案中的項目
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

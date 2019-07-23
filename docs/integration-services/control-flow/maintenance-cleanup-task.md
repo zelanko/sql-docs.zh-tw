@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0cdbaa7d265720cc85966180811221d5883ffc66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a15c685d6bd7bbd6d215f0a9187d5adbdb28af79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107704"
 ---
 # <a name="maintenance-cleanup-task"></a>維護清除工作
 

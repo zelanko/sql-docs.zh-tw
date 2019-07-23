@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01ceb28c3f1b52318f7099a4a1225a0b24219da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0b4286836f3ed7060eceee1b1201670574123cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944280"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>以沒有快取或部分快取模式實作查閱
 

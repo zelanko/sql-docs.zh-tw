@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2782537178c00055e1db7cb7c653fb863ead8724
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913636"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
 
@@ -68,7 +67,7 @@ ms.locfileid: "65719587"
   
 -   「XML 檔案」記錄提供者，它可將記錄檔寫入 XML 檔案中。 此提供者的預設副檔名為 .xml。  
   
- 如果您將記錄提供者加入封裝或以程式設計的方式設定記錄，則可以使用 ProgID 或 ClassID 來識別記錄提供者，以取代使用 [設定 SSIS 記錄] 對話方塊中所顯示之 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的名稱。  
+ 如果您將記錄提供者加入封裝或以程式設計的方式設定記錄，則可以使用 ProgID 或 ClassID 來識別記錄提供者，以取代使用 [設定 SSIS 記錄]  對話方塊中所顯示之 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的名稱。  
   
  下表列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含之記錄提供者的 ProgID 和 ClassID，以及記錄提供者寫入記錄檔的位置。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "65719587"
   
  您還可以建立自訂記錄提供者。 如需詳細資訊，請參閱 [建立自訂記錄提供者](../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)。  
   
- 封裝中的記錄提供者是此封裝之記錄提供者集合的成員。 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 建立封裝並實作記錄時，您可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [封裝總管] 索引標籤上，看到 [記錄提供者] 資料夾中集合成員的清單。  
+ 封裝中的記錄提供者是此封裝之記錄提供者集合的成員。 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 建立封裝並實作記錄時，您可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [封裝總管]  索引標籤上，看到 [記錄提供者]  資料夾中集合成員的清單。  
   
  您可以藉由提供記錄提供者的名稱和描述，並指定記錄提供者使用的連接管理員，來設定記錄提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄提供者會使用 OLE DB 連接管理員。 「文字檔」、「 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]」和「XML 檔案」記錄提供者全都使用「檔案」連線管理員。 Windows 事件記錄檔提供者不使用連接管理員，因為它會直接寫入「Windows 事件記錄檔」中。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md) 和 [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "65719587"
   
  若要防止記錄檔使用大量的磁碟空間，或避免可能會降低效能的過度記錄，可以選取要記錄的特定事件和資訊項目，以限制記錄。 例如，您可以設定記錄檔僅擷取每個錯誤的日期和電腦名稱。  
   
- 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，使用 [設定 SSIS 記錄] 對話方塊來定義記錄選項。  
+ 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，使用 [設定 SSIS 記錄]  對話方塊來定義記錄選項。  
   
 #### <a name="log-schema"></a>記錄結構描述  
  下表描述記錄結構描述中的元素。  
@@ -110,7 +109,7 @@ ms.locfileid: "65719587"
 |MessageText|與記錄項目相關聯的訊息。|  
 |DataBytes|記錄項目特定的位元組陣列。 此欄位的意義會因記錄項目的不同而不同。|  
   
- 下表描述記錄結構描述中，在 [設定 SSIS 記錄] 對話方塊的 [詳細資料] 索引標籤上沒有提供的三個額外元素。  
+ 下表描述記錄結構描述中，在 [設定 SSIS 記錄]  對話方塊的 [詳細資料]  索引標籤上沒有提供的三個額外元素。  
   
 |元素|Description|  
 |-------------|-----------------|  
@@ -119,7 +118,7 @@ ms.locfileid: "65719587"
 |DataCode|選擇性的整數值，一般會包含 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列舉的值，指出執行容器或工作的結果：<br /><br /> 0 - 成功<br /><br /> 1 - 失敗<br /><br /> 2 - 已完成<br /><br /> 3 - 已取消|  
   
 #### <a name="log-entries"></a>記錄項目  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援預先定義事件上的記錄項目，並為許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件提供自訂記錄項目。 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [設定 SSIS 記錄] 對話方塊會列出這些事件和自訂記錄項目。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援預先定義事件上的記錄項目，並為許多 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件提供自訂記錄項目。 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [設定 SSIS 記錄]  對話方塊會列出這些事件和自訂記錄項目。  
   
  下表描述的預先定義事件可在發生執行階段事件時寫入記錄項目。 這些記錄項目會套用至可執行檔、封裝和封裝所包含的工作和容器。 記錄項目的名稱與引發並造成寫入記錄項目之執行階段事件的名稱相同。  
   
@@ -138,7 +137,7 @@ ms.locfileid: "65719587"
 |**OnVariableValueChanged**|在變數的值變更時寫入記錄項目。|  
 |**OnWarning**|發生警告時寫入記錄項目。|  
 |**PipelineComponentTime**|針對每個資料流程元件，寫入每個驗證和執行階段的記錄項目。 記錄項目會指定每個階段的處理時間。|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意:如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息] 欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意:如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息]  欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
   
  封裝及許多工作都有可以啟用記錄功能的自訂記錄項目。 例如，[傳送郵件] 工作會提供 **SendMailTaskBegin** 自訂記錄項目，其會在 [傳送郵件] 工作開始執行時，但在工作傳送電子郵件訊息之前，記錄資訊。 如需詳細資訊，請參閱 [自訂訊息以進行記錄](#custom_messages)。  
   
@@ -148,10 +147,10 @@ ms.locfileid: "65719587"
  為了消除這種模糊不清的狀況，您應該更新這個新封裝的名稱和 GUID。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您可以在 [屬性] 視窗的 **ID** 屬性中重新產生 GUID，並更新 **Name** 屬性的值。 您也可以使用程式設計方式或 **dtutil** 命令提示字元來變更 GUID 和名稱。 如需詳細資訊，請參閱 [設定封裝屬性](../../integration-services/set-package-properties.md) 和 [dtutil 公用程式](../../integration-services/dtutil-utility.md)。  
   
 ### <a name="parent-logging-options"></a>父記錄選項  
- 通常，工作和「For 迴圈」、「Foreach 迴圈」和「時序」容器的記錄選項符合封裝或父容器的選項。 在該情況下，可以設定它們從其父容器繼承記錄選項。 例如，在包含「執行 SQL」工作的「For 迴圈」容器中，「執行 SQL」工作可以使用在「For 迴圈」容器上設定的記錄選項。 若要使用父記錄選項，可將容器的 LoggingMode 屬性設為 **UseParentSetting**。 可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或透過 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 [設定 SSIS 記錄] 對話方塊設定此屬性。  
+ 通常，工作和「For 迴圈」、「Foreach 迴圈」和「時序」容器的記錄選項符合封裝或父容器的選項。 在該情況下，可以設定它們從其父容器繼承記錄選項。 例如，在包含「執行 SQL」工作的「For 迴圈」容器中，「執行 SQL」工作可以使用在「For 迴圈」容器上設定的記錄選項。 若要使用父記錄選項，可將容器的 LoggingMode 屬性設為 **UseParentSetting**。 可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [屬性]  視窗中，或透過 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 的 [設定 SSIS 記錄]  對話方塊設定此屬性。  
   
 ### <a name="logging-templates"></a>記錄範本  
- 在 [設定 SSIS 記錄] 對話方塊中，還可以將常用的記錄組態建立和儲存為範本，然後在多個封裝中使用這些範本。 這使得跨多個封裝套用一致的記錄策略，以及修改封裝的記錄設定變得很容易，只要更新後再套用範本即可。 範本以 XML 檔案儲存。  
+ 在 [設定 SSIS 記錄]  對話方塊中，還可以將常用的記錄組態建立和儲存為範本，然後在多個封裝中使用這些範本。 這使得跨多個封裝套用一致的記錄策略，以及修改封裝的記錄設定變得很容易，只要更新後再套用範本即可。 範本以 XML 檔案儲存。  
   
  **若要使用 [設定 SSIS 記錄] 對話方塊設定記錄**  
   
@@ -227,11 +226,11 @@ ms.locfileid: "65719587"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
+2.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
   
-3.  在 [提供者類型] 清單中選取記錄提供者，然後按一下 [加入]。  
+3.  在 [提供者類型]  清單中選取記錄提供者，然後按一下 [加入]  。  
   
-4.  在 [設定] 資料行中，選取連線管理員，或按一下 [\<新增連線>]，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
+4.  在 [設定]  資料行中，選取連線管理員，或按一下 [\<新增連線>]  ，為記錄提供者建立適當類型的新連線管理員。 因所選提供者的不同，使用下列連接管理員之一：  
   
     -   若為「文字」檔案，請使用「檔案」連接管理員。 如需詳細資訊，請參閱 [檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -248,18 +247,18 @@ ms.locfileid: "65719587"
     > [!NOTE]  
     >  封裝可以使用每種類型一個以上的記錄檔。  
   
-6.  選擇性地選取封裝層級核取方塊，並選取要用於封裝層級記錄的記錄檔，然後按一下 [詳細資料] 索引標籤。  
+6.  選擇性地選取封裝層級核取方塊，並選取要用於封裝層級記錄的記錄檔，然後按一下 [詳細資料]  索引標籤。  
   
-7.  在 [詳細資料] 索引標籤上，選取 [事件]，以記錄所有記錄項目，或清除 [事件]，以選取個別事件。  
+7.  在 [詳細資料]  索引標籤上，選取 [事件]  ，以記錄所有記錄項目，或清除 [事件]  ，以選取個別事件。  
   
-8.  選擇性地按一下 [進階]，以指定要記錄哪些資訊。  
+8.  選擇性地按一下 [進階]  ，以指定要記錄哪些資訊。  
   
     > [!NOTE]  
     >  依預設，會記錄所有資訊。  
   
-9. 在 [詳細資料] 索引標籤上，按一下 [儲存]。 [另存新檔] 對話方塊隨即出現。 尋找要儲存記錄組態的資料夾，輸入新記錄組態的檔案名稱，然後按一下 [儲存]。  
+9. 在 [詳細資料]  索引標籤上，按一下 [儲存]  。 [另存新檔]  對話方塊隨即出現。 尋找要儲存記錄組態的資料夾，輸入新記錄組態的檔案名稱，然後按一下 [儲存]  。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
   
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
@@ -297,7 +296,7 @@ ms.locfileid: "65719587"
  如果容器呈暗灰色，而您要在容器上設定記錄選項，請按兩下其核取方塊。 第一次點選時會清除核取方塊，而第二次點選則會選取核取方塊，讓您可以選擇要使用的記錄提供者和選取要記錄的資訊。  
   
 ###  <a name="provider"></a> 設定 [提供者與記錄] 索引標籤上的選項  
- 使用 [設定 SSIS 記錄] 對話方塊的 [提供者與記錄] 索引標籤，即可建立和設定用於擷取執行階段事件的記錄。  
+ 使用 [設定 SSIS 記錄]  對話方塊的 [提供者與記錄]  索引標籤，即可建立和設定用於擷取執行階段事件的記錄。  
   
 #### <a name="options"></a>選項。  
  **提供者類型**  
@@ -307,18 +306,18 @@ ms.locfileid: "65719587"
  將所指定類型的記錄加入至封裝之記錄提供者的集合。  
   
  **名稱**  
- 使用這些核取方塊，啟用或停用容器的記錄，或是 [設定 SSIS 記錄] 對話方塊的 [容器] 窗格中選取之工作的記錄。 名稱欄位是可編輯的。 使用提供者的預設名稱，或輸入唯一的描述性名稱。  
+ 使用這些核取方塊，啟用或停用容器的記錄，或是 [設定 SSIS 記錄]  對話方塊的 [容器]  窗格中選取之工作的記錄。 名稱欄位是可編輯的。 使用提供者的預設名稱，或輸入唯一的描述性名稱。  
   
  **說明**  
  描述欄位是可編輯的。 按一下，然後修改記錄的預設描述。  
   
  **Configuration**  
- 在清單中選取現有連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
+ 在清單中選取現有連線管理員，或按一下 [\<新增連線...>]  ，即可建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
  相關主題：[OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)、[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **刪除**  
- 選取記錄提供者，然後按一下 [刪除]。  
+ 選取記錄提供者，然後按一下 [刪除]  。  
   
 ###  <a name="detail"></a> 設定 [詳細資料] 索引標籤上的選項  
  使用 **[設定 SSIS 記錄]** 對話方塊的 **[詳細資料]** 索引標籤，即可指定要啟用記錄的事件以及要記錄的資訊詳細資料。 您選取的資訊適用於封裝中的所有記錄提供者。 例如，您無法寫入部份資訊到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，而寫入不同資訊到文字檔。  
@@ -361,32 +360,32 @@ ms.locfileid: "65719587"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
-2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
+2.  在 **[SSIS]** 功能表上，按一下 **[記錄]** 。  
   
 3.  展開封裝樹狀檢視，並選取要設定的容器。  
   
-4.  在 [提供者與記錄] 索引標籤上，選取要用於容器的記錄檔。  
+4.  在 [提供者與記錄]  索引標籤上，選取要用於容器的記錄檔。  
   
     > [!NOTE]  
     >  您只可在封裝層級建立記錄檔。 如需詳細資訊，請參閱[在 SQL Server Data Tools 中啟用封裝記錄功能](#ssdt)。  
   
-5.  按一下 [詳細資料] 索引標籤，然後按一下 [載入]。  
+5.  按一下 [詳細資料]  索引標籤，然後按一下 [載入]  。  
   
-6.  尋找要使用的記錄組態檔，然後按一下 [開啟]。  
+6.  尋找要使用的記錄組態檔，然後按一下 [開啟]  。  
   
-7.  (選擇性) 在 [事件] 資料行中選取核取方塊，以選取要記錄的另一個記錄項目。 按一下 [進階]，選取此項目所要記錄的資訊類型。  
+7.  (選擇性) 在 [事件]  資料行中選取核取方塊，以選取要記錄的另一個記錄項目。 按一下 [進階]  ，選取此項目所要記錄的資訊類型。  
   
     > [!NOTE]  
     >  新容器可能會包含原來用於建立記錄組態之容器無法使用的其他記錄項目。 如果您要記錄這些其他記錄項目，則必須手動選取之。  
   
-8.  若要儲存記錄組態的更新版本，請按一下 [儲存]。  
+8.  若要儲存記錄組態的更新版本，請按一下 [儲存]  。  
   
 9. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 
 ## <a name="server_logging"></a> 在 SSIS 伺服器上啟用封裝執行的記錄功能
   本主題描述如何在執行已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝時，設定或變更封裝的記錄層級。 執行封裝時設定的記錄層級會覆寫您在設計期間於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中設定的封裝記錄。 如需詳細資訊，請參閱[在 SQL Server Data Tools 中啟用封裝記錄功能](#ssdt)。  
   
- 在 SQL Server 的 [伺服器屬性] 中，您可以在 [伺服器記錄層級] 屬性下方，選取預設的全伺服器記錄層級。 您可以挑選本主題所說明的其中一個內建記錄層級，或者可挑選現有的自訂記錄層級。 選取的記錄層級預設會套用到所有部署到 SSIS 目錄的封裝。 它預設也會套用到執行 SSIS 封裝的 SQL 代理程式工作步驟。  
+ 在 SQL Server 的 [伺服器屬性]  中，您可以在 [伺服器記錄層級]  屬性下方，選取預設的全伺服器記錄層級。 您可以挑選本主題所說明的其中一個內建記錄層級，或者可挑選現有的自訂記錄層級。 選取的記錄層級預設會套用到所有部署到 SSIS 目錄的封裝。 它預設也會套用到執行 SSIS 封裝的 SQL 代理程式工作步驟。  
   
  您可以使用下列其中一個方法來指定個別封裝的記錄層級。 本主題涵蓋第一個方法。  
   
@@ -400,7 +399,7 @@ ms.locfileid: "65719587"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [物件總管] 中，導覽至封裝。  
   
-2.  以滑鼠右鍵按一下封裝，然後選取 [執行]。  
+2.  以滑鼠右鍵按一下封裝，然後選取 [執行]  。  
   
 3.  在 **[執行封裝]** 對話方塊中，選取 **[進階]** 索引標籤。  
   
@@ -423,15 +422,15 @@ ms.locfileid: "65719587"
  您可以建立自訂的記錄層級，只收集您所需的統計資料和事件。 您也可以選擇性擷取事件的內容，包括變數值、連接字串及元件屬性。 當您執行封裝時，每當您可以選取內建記錄層級時，就能選取自訂的記錄層級。  
   
 > [!TIP]  
->  若要擷取封裝變數的值，變數的 **IncludeInDebugDump** 屬性必須設定為 [True]。  
+>  若要擷取封裝變數的值，變數的 **IncludeInDebugDump** 屬性必須設定為 [True]  。  
   
-1.  若要建立和管理自訂的記錄層級，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 SSISDB 資料庫，然後選取 [自訂的記錄層級] 以開啟 [自訂記錄層級管理] 對話方塊。 [自訂的記錄層級]  清單包含所有現有的自訂記錄層級。  
+1.  若要建立和管理自訂的記錄層級，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 SSISDB 資料庫，然後選取 [自訂的記錄層級]  以開啟 [自訂記錄層級管理]  對話方塊。 [自訂的記錄層級]  清單包含所有現有的自訂記錄層級。  
   
-2.  若要 **建立** 新的自訂記錄層級，可按一下 [建立] ，然後提供名稱和描述。 在 [統計資料]  和 [事件]  索引標籤上，選擇您想要收集的統計資料與事件。 在 [事件]  索引標籤上，選擇性地選取個別事件的 [包含內容]  。 然後按一下 [儲存] 。  
+2.  若要 **建立** 新的自訂記錄層級，可按一下 [建立]  ，然後提供名稱和描述。 在 [統計資料]  和 [事件]  索引標籤上，選擇您想要收集的統計資料與事件。 在 [事件]  索引標籤上，選擇性地選取個別事件的 [包含內容]  。 然後按一下 [儲存]  。  
   
-3.  若要 **更新** 現有的自訂記錄層級，可在清單中選取該層級、重新進行設定，然後按一下 [儲存] 。  
+3.  若要 **更新** 現有的自訂記錄層級，可在清單中選取該層級、重新進行設定，然後按一下 [儲存]  。  
   
-4.  若要 **刪除** 現有的自訂記錄層級，可在清單中選取該層級，然後按一下 [刪除] 。  
+4.  若要 **刪除** 現有的自訂記錄層級，可在清單中選取該層級，然後按一下 [刪除]  。  
   
  **自訂記錄層級的權限。**  
   

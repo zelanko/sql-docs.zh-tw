@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: f09c3fecff6dd64934a456fafc0eabfcb134c30f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 6fa3223751de2b8b9019cd48473dc0b07d9d72d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136884"
 ---
 # <a name="create-a-workload-group"></a>建立工作負載群組
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

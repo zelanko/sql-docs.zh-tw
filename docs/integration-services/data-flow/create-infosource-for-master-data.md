@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 077ea12b10278be8a38a50f82b6b7e6873be5dab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7512331c57fb69ee953261b08b4bfeeef167dde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009926"
 ---
 # <a name="create-infosource-for-master-data"></a>[建立主要資料的 InfoSource]
 

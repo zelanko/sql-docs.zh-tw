@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cb1d53c9-27f1-4880-8f1d-c32df0d2fb27
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0cc260d2a6f21c6e6a7f2dcb2f4a80f6b7b630f5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8ce11a1918846d028fd0dd3d9dc10e588dbe3f31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977959"
 ---
 # <a name="getxaconnection-method-sqlserverxadatasource"></a>getXAConnection 方法 (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

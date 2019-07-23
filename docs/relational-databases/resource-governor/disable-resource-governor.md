@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 283c1c2022cad1926771620db508b0457a70351d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 13016fa1baf3dd01f7e00c11a322f10ba720c57c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099237"
 ---
 # <a name="disable-resource-governor"></a>停用資源管理員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

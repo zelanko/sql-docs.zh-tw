@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52195cc99c61fb8dbf074f2362e0d7e13eb0b68d
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140805"
 ---
 # <a name="cursors"></a>資料指標
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "52586271"
   
 > [!TIP]
 > 在某些情況下，如果資料表上有主索引鍵，`WHILE` 迴圈可用來取代資料指標，而不會產生資料指標的負荷。
-> 不過，有些情況不僅無法避免資料指標，而且實際上也需要它們。 在這種情況下，如果沒有需要根據資料指標來更新資料表，則使用「流管」資料指標，這表示[且唯讀](#forward-only)的指標。
+> 不過，有些情況不僅無法避免資料指標，而且實際上也需要它們。 在這種情況下，如果沒有需要根據資料指標來更新資料表，則使用「流管」  資料指標，這表示[且唯讀](#forward-only)的指標。
   
 ## <a name="cursor-implementations"></a>實作資料指標  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援三個資料指標實作。  
@@ -66,7 +65,7 @@ API 指標可支援 OLE DB 和 ODBC 中的 API 資料指標函數。 API 伺服�
 > 資料指標可能會利用 tempdb 工作資料表。 就如同溢出的彙總或排序作業，這會發生在 I/O 中，且為潛在的效能瓶頸。 `STATIC` 資料指標從起始就會使用工作資料表。 如需詳細資訊，請參閱[查詢處理架構指南中的工作資料表](../relational-databases/query-processing-architecture-guide.md#worktables)。
 
 ### <a name="forward-only"></a>順向  
-順向資料指標指定為 `FORWARD_ONLY` 和 `READ_ONLY`，且不支援捲動。 這也稱為「流管」資料指標，並只支援以循序方式從資料指標的開始到結尾擷取資料列。 提取資料列之前，不會從資料庫擷取那些資料列。 從資料指標提取資料列時，可看見目前使用者執行或其他使用者認可的所有 `INSERT`、`UPDATE` 和 `DELETE` 陳述式的作用對結果集資料列所產生的影響。  
+順向資料指標指定為 `FORWARD_ONLY` 和 `READ_ONLY`，且不支援捲動。 這也稱為「流管」  資料指標，並只支援以循序方式從資料指標的開始到結尾擷取資料列。 提取資料列之前，不會從資料庫擷取那些資料列。 從資料指標提取資料列時，可看見目前使用者執行或其他使用者認可的所有 `INSERT`、`UPDATE` 和 `DELETE` 陳述式的作用對結果集資料列所產生的影響。  
   
  因為無法逆向捲動資料指標，提取資料列之後對資料庫中資料列所進行的大部分變更，都無法經由資料指標看見。 如果已修改用來判斷結果集之資料列位置的值 (例如更新叢集索引所涵蓋的資料行)，就可以經由資料指標看到修改的值。  
   

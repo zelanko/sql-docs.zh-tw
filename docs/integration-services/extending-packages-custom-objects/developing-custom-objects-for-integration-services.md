@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa21219ef5946ec4d4b95aff1a201aca9b453a2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c92bc2e9500106544fe452e0ffd9f751f12236ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116282"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>開發 Integration Services 的自訂物件
 

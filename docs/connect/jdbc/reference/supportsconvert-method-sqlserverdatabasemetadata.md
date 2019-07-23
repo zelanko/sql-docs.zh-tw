@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a5dbb5d8-41c2-48af-9b71-93a22f6a9b33
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c019a90ac07d688fd3f69bc0f5dc58b3f49a9dbd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9b46b0c7e4ae412fe925a7397f12e8f84e038e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969613"
 ---
 # <a name="supportsconvert-method-sqlserverdatabasemetadata"></a>supportsConvert 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

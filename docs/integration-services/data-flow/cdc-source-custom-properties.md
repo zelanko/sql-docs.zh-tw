@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 821071096967e1a6bfa767f920baafeaa094b0dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adfe75aa70a4bd46a0c3e7aac6a1ea6b45473335
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045387"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC 來源自訂屬性
 

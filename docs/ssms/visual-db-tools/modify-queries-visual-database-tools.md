@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 271c8c3a4d1ec3e98f732112c297aac9d7b1e312
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 93383453d4c8d76cda5944356ba31e8cd97e1f52
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690220"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258466"
 ---
 # <a name="modify-queries-visual-database-tools"></a>修改查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

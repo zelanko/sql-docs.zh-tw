@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6e587cfdac199558e9ef15cedfe53592f415d0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: affcdf9fe7a26f0bf81e3079fea04adb6bfbac8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908671"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>在資料流程元件中記錄和定義記錄項目
 
@@ -72,7 +71,7 @@ End Sub
   
  以上範例使用 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>，因為此元件預期每次執行都會記錄項目一次。  
   
- 在註冊自訂記錄項目以及將自訂元件的執行個體新增至資料流程設計工具介面之後，設計工具中的 [記錄] 對話方塊會顯示新的記錄項目，其中 "My Custom Component Log Entry" 名稱會出現在可用的記錄項目清單中。  
+ 在註冊自訂記錄項目以及將自訂元件的執行個體新增至資料流程設計工具介面之後，設計工具中的 [記錄]  對話方塊會顯示新的記錄項目，其中 "My Custom Component Log Entry" 名稱會出現在可用的記錄項目清單中。  
   
 ### <a name="logging-to-a-custom-log-entry"></a>記錄到自訂記錄項目  
  在註冊自訂記錄項目以後，此元件現在可以記錄自訂訊息。 底下範例會在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 方法期間撰寫自訂記錄項目，其中包含此元件所使用之 SQL 陳述式的文字。  
@@ -100,7 +99,7 @@ Public  Overrides Sub PreExecute()
 End Sub  
 ```  
   
- 現在如果使用者在執行套件時，選取了 [記錄] 對話方塊中的 "My Custom Component Log Entry"，此記錄將會包含一個清楚標示為 "User::My Custom Component Log Entry" 的項目。 這個新的記錄項目包含了 SQL 陳述式的文字、時間戳記以及開發人員記錄的任何其他資料。  
+ 現在如果使用者在執行套件時，選取了 [記錄]  對話方塊中的 "My Custom Component Log Entry"，此記錄將會包含一個清楚標示為 "User::My Custom Component Log Entry" 的項目。 這個新的記錄項目包含了 SQL 陳述式的文字、時間戳記以及開發人員記錄的任何其他資料。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 記錄](../../../integration-services/performance/integration-services-ssis-logging.md)  

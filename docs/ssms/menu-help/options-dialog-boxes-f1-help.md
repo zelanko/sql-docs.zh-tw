@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 3be1b71a037b5607748424d348dca44d660cdd03
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: b22a11c4538ccdcd353c558d57263c65688ec0a8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690249"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257258"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

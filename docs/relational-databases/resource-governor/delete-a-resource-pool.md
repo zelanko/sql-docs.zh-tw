@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c389ed72d7aa6f49c320585ee8f23e35eaec1bc7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: bb169478337e160c63ccd538c2d2f8120de8311f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125030"
 ---
 # <a name="delete-a-resource-pool"></a>刪除資源集區
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

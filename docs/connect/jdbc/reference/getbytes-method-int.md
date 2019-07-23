@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8c2973e6-d57f-4f64-b812-350ce4098ce6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 51eaf47a34a11d813c096e77f61bead4ea142ef2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 848400e46992369d10c57170a1aeccbeac402f84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953396"
 ---
 # <a name="getbytes-method-int"></a>getBytes 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public byte[] getBytes(int index)
  指出參數索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 陣列**位元組**值。  
+ **位元組**值的陣列。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

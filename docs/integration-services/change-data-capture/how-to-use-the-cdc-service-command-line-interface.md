@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5aec8974f2b21bd28869b2c06be9eadbf5cd239c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 548fd64b0dd3ddbb79185549bdc5688b782319a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101726"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>如何使用 CDC 服務命令列介面
 

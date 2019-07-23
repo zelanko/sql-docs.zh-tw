@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1c9e39e4ccec7ab54229a8bbd0bf51b1d751207
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eac6756498c57fa70b1eed3d938435267837d25f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031306"
 ---
 # <a name="odata-source"></a>OData 來源
 

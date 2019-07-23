@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 28a49239a5e53eb25b6b9238f7ed4fde2aafa63c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 34452ed824b8aa5bec4efcc9a926718481614e09
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683977"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266206"
 ---
 # <a name="register-servers"></a>註冊伺服器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 10a15337989da83395ff1bfea5c0ffd13bec8cbe
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c75981961540081d8761bfb4cdf24028b41d1071
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689843"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262835"
 ---
 # <a name="manage-files-with-encoding"></a>利用編碼管理檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

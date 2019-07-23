@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
 author: Lingxi-Li
 ms.author: lingxl
-manager: craigg
-ms.openlocfilehash: 89bf14fb82516a9bd819431d92962169d56f68ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c57abdf2cd6fbdf5cbb0953f1604440d714e1e7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968263"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 連線管理員
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 25808f3a8e1ac688c555c40658a60a0749c8e59f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe732185f0247694470659647f201d64cedbf6f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103973"
 ---
 # <a name="logging-in-the-script-component"></a>在指令碼元件中記錄
 

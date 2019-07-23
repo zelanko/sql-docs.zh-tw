@@ -1,5 +1,5 @@
 ---
-title: 結構描述資料列集支援 (OLE DB) |Microsoft Docs
+title: 架構資料列集支援 (OLE DB) |Microsoft Docs
 description: 結構描述資料列集支援 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: b799ebd6205ebac01f832910dff0775afe5c0a93
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993919"
 ---
 # <a name="schema-rowset-support-ole-db"></a>結構描述資料列集支援 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66795950"
   處理 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 分散式查詢時，OLE DB Driver for SQL Server 也支援從連結伺服器傳回結構描述資訊。  
   
 > [!NOTE]  
->  雖然[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]同義字不會傳回 OLE DB Driver for SQL Server 支援同義字，中繼資料。  
+>  雖然[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援同義字, 但 SQL Server 的 OLE DB 驅動程式不會傳回同義字的中繼資料。  
   
  下表列出 OLE DB Driver for SQL Server 所支援的結構描述資料列集與限制資料行。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66795950"
 ## <a name="in-this-section"></a>本節內容  
  [結構描述資料列集中的分散式查詢支援](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS 資料列集&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS 資料&#40;列集 OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   

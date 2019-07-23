@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa2bce398b6ac03422044c9ffad23f91ab81818c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140968"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>在 SQL Server 單元測試中使用測試條件
 在 SQL Server 單元測試中，系統會執行一或多個 Transact\-SQL 測試指令碼。 您可以在 Transact\-SQL 指令碼內評估結果，也可以在測試中定義用來傳回錯誤及使測試失敗的 THROW 或 RAISERROR 或測試條件來評估結果。 測試會傳回 [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 類別的執行個體。 這個類別的執行個體會包含一個或多個資料集、執行時間以及受指令碼影響的資料列。 所有這些資訊都會在執行指令碼期間收集。 可以使用測試條件來評估這些結果。 SQL Server Data Tools 會提供一組預先定義的測試條件。 您也可以建立及使用自訂條件；請參閱 [SQL Server 單元測試的自訂測試條件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)。  

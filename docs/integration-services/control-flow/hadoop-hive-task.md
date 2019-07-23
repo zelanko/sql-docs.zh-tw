@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1d9ae752dabee68d6fae786675e640773009f4b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4389cbf6e4e4f81c27e452aa8d5f63c4b42a306a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086097"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive 工作
 

@@ -11,13 +11,12 @@ ms.assetid: 59af121d-c8b9-4faa-91a1-b664f2c9b441
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: a4e9796db9847a41dd7c82bf2fd2c9e62501e88f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
-ms.translationtype: HT
+ms.openlocfilehash: e185c6bd783ef656871ae75e34be3b6a5216964a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024006"
 ---
 # <a name="sql-server-native-client-configuration-properties-flags-tab"></a>SQL Server Native Client 組態屬性 (旗標索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "67732021"
   
  登入過程一律加密。 下列選項只適用於加密資料。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何加密通訊的詳細資訊，以及如何將用戶端設定為信任伺服器憑證之根授權單位的指示，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜加密 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的連接＞以及＜如何：啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密連接 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **強制通訊協定加密**  
  使用 SSL 來要求連接。  
   

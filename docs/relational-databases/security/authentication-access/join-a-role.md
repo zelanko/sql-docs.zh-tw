@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 909a8156556cd4a654dcfd6406de2bd45826e31b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990492"
 ---
 # <a name="join-a-role"></a>加入角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +45,11 @@ ms.locfileid: "52539129"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要將角色指派給登入和資料庫使用，使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -64,7 +63,7 @@ ms.locfileid: "52539129"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 **ALTER ANY ROLE** 權限、角色的 **ALTER** 權限，或 **db_securityadmin**的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -77,11 +76,11 @@ ms.locfileid: "52539129"
   
 3.  展開 **[伺服器角色]** 資料夾  
   
-4.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]。  
+4.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]  。  
   
-5.  在 [伺服器角色屬性 -_server\_role\_name_] 對話方塊的 [成員] 頁面上，按一下 [新增]。  
+5.  在 [伺服器角色屬性 -_server\_role\_name_]  對話方塊的 [成員]  頁面上，按一下 [新增]  。  
   
-6.  在 [選取伺服器登入或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 [瀏覽] 並選取 [瀏覽物件] 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [伺服器角色屬性 -_server\_role\_name_] 對話方塊。  
+6.  在 [選取伺服器登入或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 [確定]  ，返回 [伺服器角色屬性 -_server\_role\_name_]  對話方塊。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -99,11 +98,11 @@ ms.locfileid: "52539129"
   
 6.  展開 **[伺服器角色]** 資料夾。  
   
-7.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]。  
+7.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]  。  
   
-8.  在 [資料庫角色屬性 -_database\_role\_name_] 對話方塊的 [一般] 頁面中，按一下 [新增]。  
+8.  在 [資料庫角色屬性 -_database\_role\_name_]  對話方塊的 [一般]  頁面中，按一下 [新增]  。  
   
-9. 在 [選取資料庫使用者或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 [瀏覽] 並選取 [瀏覽物件] 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [資料庫角色屬性 -_database\_role\_name_] 對話方塊。  
+9. 在 [選取資料庫使用者或角色]  對話方塊中，於 [輸入要選取的物件名稱 (範例)]  底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 [瀏覽]  並選取 [瀏覽物件]  對話方塊中任何或所有可用的物件。 按一下 [確定]  ，返回 [資料庫角色屬性 -_database\_role\_name_]  對話方塊。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -113,9 +112,9 @@ ms.locfileid: "52539129"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     ALTER SERVER ROLE diskadmin ADD MEMBER [Domain\Juan] ;  
@@ -128,9 +127,9 @@ ms.locfileid: "52539129"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     ALTER ROLE Marketing ADD MEMBER [Domain\Juan] ;  

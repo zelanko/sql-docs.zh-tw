@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ad963176194300054b97db8b6faa360bce17e558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190553"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252154"
 ---
 # <a name="using-xa-transactions"></a>使用 XA 交易
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "63190553"
 
 ## <a name="overview"></a>概觀
 
-Microsoft ODBC Driver for SQL Server 從 17.3 版開始支援 XA 交易與 Distributed Transaction Coordinator (DTC) 在 Windows、 Linux 和 mac。 在驅動程式端的 XA 實作可讓用戶端應用程式 （例如開始、 認可、 復原的交易分支等） 的序列作業傳送至 Transaction Manager (TM)。 然後 TM 會進行通訊與 Resource Manager (RM) 根據這些作業。 XA 規格的詳細資訊和 DTC (MS DTC) 的 Microsoft 實作，請參閱[運作方式： SQL Server DTC(MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)。
+從17.3 版開始的 Microsoft ODBC Driver for SQL Server 可支援在 Windows、Linux 和 Mac 上使用分散式交易協調器 (DTC) 的 XA 交易。 驅動程式端的 XA 執行可讓用戶端應用程式將序列作業 (例如啟動、認可、回復交易分支等) 傳送至交易管理員 (TM)。 然後, TM 會根據這些作業與 Resource Manager (RM) 進行通訊。 如需有關 XA 規格和適用于 DTC 的 Microsoft 執行 (MS DTC) 的詳細資訊, 請參閱[運作方式: SQL SERVER DTC (MSDTC 和 XA 交易)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)。
 
 
 
 ## <a name="the-xacallparam-structure"></a>XACALLPARAM 結構
 
-`XACALLPARAM`結構會定義所需的 XA 交易管理員要求的資訊。 其定義，如下所示：
+`XACALLPARAM`結構會定義 XA 交易管理員要求所需的資訊。 其定義如下:
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +46,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-大小`XACALLPARAM`結構。 這不包括下列資料的大小`XACALLPARAM`。
+`XACALLPARAM`結構的大小。 這會排除後面`XACALLPARAM`的資料大小。
 
 *operation*  
-要傳遞至 TM 的 XA 作業。 中所定義的可能作業[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)。
+要傳遞至 TM 的 XA 作業。 可能的作業會定義在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)中。
 
 *xid*  
 交易分支識別碼。
 
 *flags*  
-TM 要求相關聯的旗標。 可能的值會定義於[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)。
+與 TM 要求相關聯的旗標。 可能的值定義于[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)中。
 
 *status*  
-傳回自 TM 的狀態。 請參閱[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)標頭可能傳回的狀態。
+從 TM 返回狀態。 如需可能的傳回狀態, 請參閱[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)標頭。
 
 *sizeData*  
-大小的資料緩衝區下列`XACALLPARAM`。 
+之後`XACALLPARAM`的資料緩衝區大小。 
 
 *sizeReturned*  
 傳回的資料大小。
 
-若要提出了 TM [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)函式需要屬性用來呼叫_SQL_COPT_SS_ENLIST_IN_XA_和物件指標`XACALLPARAM`物件。  
+為了提出 TM 要求, 必須使用屬性_SQL_COPT_SS_ENLIST_IN_XA_和`XACALLPARAM`物件的指標來呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)函式。  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>程式碼範例 
 
-下列範例示範如何 TM XA 交易與通訊，並從用戶端應用程式執行不同的作業。 如果您針對 Microsoft SQL Server 執行測試，MS DTC 必須正確設定以啟用 XA 交易。 XA 定義可在[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)標頭檔。 
+下列範例示範如何與 TM 交易通訊, 以及如何從用戶端應用程式執行不同的作業。 如果測試是針對 Microsoft SQL Server 執行, 則必須正確設定 MS DTC, 才能啟用 XA 交易。 您可以在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)標頭檔中找到 XA 定義。 
 
 ```
 
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-`XATestRunner`類別會實作可能的 XA 呼叫時與伺服器通訊。
+`XATestRunner`類別會在與伺服器通訊時, 執行可能的 XA 呼叫。
 
 ```
 

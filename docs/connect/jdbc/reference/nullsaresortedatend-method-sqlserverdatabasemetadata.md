@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 713cf636-40f2-474a-8a5d-5aba4a310a9c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 248d28b199dfbdd92f84cca200735b8b3a66e8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0b81926e3e0e6b57f752391b3f6bac68b5ad7aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976687"
 ---
 # <a name="nullsaresortedatend-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtEnd 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean nullsAreSortedAtEnd()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 nullsAreSortedAtEnd 方法是由 java.sql.DatabaseMetaData 介面中 nullsAreSortedAtEnd 方法指定。  
+ 這個 nullsAreSortedAtEnd 方法是由 JAVA.sql.databasemetadata 介面中的 nullsAreSortedAtEnd 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd620df122c3203a056817f3e9c35667fad433f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13c4f2534ec49c1d3467045d778e0c446f972573
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992846"
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66796993"
 > 根據預設，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 處於自動認可模式。 這表示所有查詢都會在成功時自動進行認可，除非已使用 **sqlsrv_begin_transaction**開始交易。  
   
 > [!NOTE]  
-> 如果在不屬於使用中交易 (以 **sqlsrv_begin_transaction** 起始) 的連線上呼叫 **sqlsrv_commit**，則呼叫會傳回 **false**，且「不在交易中」錯誤會新增至錯誤集合。  
+> 如果在不屬於使用中交易 (以 **sqlsrv_begin_transaction** 起始) 的連線上呼叫 **sqlsrv_commit**，則呼叫會傳回 **false**，且「不在交易中」  錯誤會新增至錯誤集合。  
   
 ## <a name="syntax"></a>語法  
   

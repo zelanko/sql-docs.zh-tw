@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d316864d3dffb26680a503ad1b43bcb4b3ab94a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89b6660f5a989cec23b5a92c09dabb36f891e1c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968113"
 ---
 # <a name="data-sources"></a>資料來源
 

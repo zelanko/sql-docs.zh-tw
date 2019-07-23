@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136475"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +38,12 @@ ms.locfileid: "58797008"
 
 - **因應措施：** 首先請將電腦重新開機，並檢查 FILESTREAM 網路共用是否可用。 如果仍無法使用此共用，請完成下列步驟：
 
-    1. 在 SQL Server 設定管理員中，以滑鼠右鍵按一下 SQL Server 執行個體，然後按一下 [屬性]。 
-    2. 在 [FILESTREAM] 索引標籤上，清除 [啟用 FILESTREAM 的檔案 I/O 資料流存取]，然後按一下 [套用]。
-    3. 使用原始共用名稱再次選取 [啟用 FILESTREAM 的檔案 I/O 資料流存取]，然後按一下 [套用]。
+    1. 在 SQL Server 設定管理員中，以滑鼠右鍵按一下 SQL Server 執行個體，然後按一下 [屬性]  。 
+    2. 在 [FILESTREAM]  索引標籤上，清除 [啟用 FILESTREAM 的檔案 I/O 資料流存取]  ，然後按一下 [套用]  。
+    3. 使用原始共用名稱再次選取 [啟用 FILESTREAM 的檔案 I/O 資料流存取]  ，然後按一下 [套用]  。
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **問題和對客戶的影響：** 在使用者權限頁面上，當您將權限授與實體樹狀檢視中的根層級時，會看到下列錯誤：`"The model permission cannot be saved. The object guid is not valid"`
+- **問題和對客戶的影響：**  在使用者權限頁面上，當您將權限授與實體樹狀檢視中的根層級時，會看到下列錯誤：`"The model permission cannot be saved. The object guid is not valid"`
 
 - **因應措施：** 
   - 將權限授予樹狀檢視中的子節點而不是根層級。
@@ -74,7 +73,7 @@ ms.locfileid: "58797008"
 - **問題和對客戶的影響：** 為了一致性和可讀性，預存程序 **[catalog].[create_execution]** 的參數 *runincluster* 已重新命名為 *runinscaleout*。
 - **因應措施：** 如果您的現有指令碼可在相應放大中執行套件，則必須將參數名稱從 *runincluster* 變更為 *runinscaleout*，以確保這些指令碼在 RC1 中正常運作。
 
-- **問題和對客戶的影響：** SQL Server Management Studio (SSMS) 17.1 和舊版本無法在 RC1 的相應放大中觸發套件執行。 錯誤訊息為：「*@runincluster* 不是程序 **create_execution** 的參數。」 SSMS 的下一個版本 17.2 版中將會修正此問題。 SSMS 17.2 版和更新版本支援 [相應放大] 中的新參數名稱和套件執行。 
+- **問題和對客戶的影響：** SQL Server Management Studio (SSMS) 17.1 和舊版本無法在 RC1 的相應放大中觸發套件執行。 錯誤訊息為：「 *@runincluster* 不是程序 **create_execution** 的參數。」 SSMS 的下一個版本 17.2 版中將會修正此問題。 SSMS 17.2 版和更新版本支援 [相應放大] 中的新參數名稱和套件執行。 
 - **因應措施：** 在 SSMS 17.2 版可用之前：
   1. 使用現有的 SSMS 版本來產生套件執行指令碼。
   2. 將指令碼中 *runincluster* 參數的名稱變更為 *runinscaleout*。
@@ -83,8 +82,8 @@ ms.locfileid: "58797008"
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1 (2017 年 5 月)
 ### <a name="documentation-ctp-21"></a>文件 (CTP 2.1)
-- **問題和對客戶的影響：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文件集。  文中專門針對 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的內容會以「適用於」標示。 
-- **問題和對客戶的影響：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 未提供任何離線內容。
+- **問題和對客戶的影響：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文件集。  文中專門針對 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的內容會以「適用於」  標示。 
+- **問題和對客戶的影響：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 未提供任何離線內容。
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
@@ -94,9 +93,9 @@ ms.locfileid: "58797008"
     1. 以系統管理員模式啟動命令提示字元。
     2. 前往剩餘的報表伺服器安裝所在目錄。
 
-        Power BI 報表伺服器的預設位置：C:\Program Files\Microsoft Power BI Report Server
+        Power BI 報表伺服器的預設位置：  C:\Program Files\Microsoft Power BI Report Server
 
-        SQL Server Reporting Services 的預設位置：C:\Program Files\Microsoft SQL Server Reporting Services
+        SQL Server Reporting Services 的預設位置：  C:\Program Files\Microsoft SQL Server Reporting Services
 
     3. 視剩下的伺服器為何，移至下一個資料夾，亦即 *SSRS* 或 *PBIRS*。
     4. 移至 WMI 資料夾。
@@ -116,12 +115,12 @@ ms.locfileid: "58797008"
 
 - **問題和對客戶的影響：** 在已安裝 *TSqlLanguageService.msi* 2016 版 (透過 SQL 安裝程式或獨立式可轉散發套件) 的電腦上安裝之後，即會移除 *Microsoft.SqlServer.Management.SqlParser.dll* 和 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* 的 v13.* (SQL 2016) 版本。 任何相依於這些組件之 2016 版的應用程式都會停止運作，並產生如下的錯誤：*錯誤:無法載入檔案或組件 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 或其相依性的其中之一。系統找不到指定的檔案。*
 
-   此外，嘗試重新安裝 TSqlLanguageService.msi 的 2016 版將會失敗，並顯示訊息：「安裝 Microsoft SQL Server 2016 T-SQL 語言服務失敗，因為電腦上已經有較新的版本」。
+   此外，嘗試重新安裝 TSqlLanguageService.msi 的 2016 版將會失敗，並顯示訊息：「安裝 Microsoft SQL Server 2016 T-SQL 語言服務失敗，因為電腦上已經有較新的版本」  。
 
 - **因應措施：** 若要暫時解決此問題，並修正相依於 v13 版本組件的應用程式，請遵循下列步驟：
 
    1. 移至**新增/移除程式**
-   2. 尋找 *Microsoft SQL Server 2019 T-SQL 語言服務 CTP2.1*，按一下右鍵，然後選取 [解除安裝]。
+   2. 尋找 *Microsoft SQL Server 2019 T-SQL 語言服務 CTP2.1*，按一下右鍵，然後選取 [解除安裝]  。
    3. 移除元件之後，請修復無法運作的應用程式，或重新安裝適當版本的 *TSqlLanguageService.MSI*。
 
    這個因應措施會移除這些 v14 版本組件，使得任何相依於 v14 版本的應用程式再也無法運作。 如果需要這些組件，則需要不使用並行 2016 安裝的個別安裝。
@@ -129,8 +128,8 @@ ms.locfileid: "58797008"
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-20-april--2017"></a>SQL Server 2017 CTP 2.0 (2017 年 4 月)
 ### <a name="documentation-ctp-20"></a>文件 (CTP 2.0)
-- **問題和對客戶的影響：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文件集。  文中專門針對 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的內容會以「適用於」標示。 
-- **問題和對客戶的影響：**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 未提供任何離線內容。
+- **問題和對客戶的影響：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文件集。  文中專門針對 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的內容會以「適用於」  標示。 
+- **問題和對客戶的影響：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 未提供任何離線內容。
 
 ### <a name="always-on-availability-groups"></a>AlwaysOn 可用性群組
 

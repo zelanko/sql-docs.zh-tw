@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b6255d2e-0028-474a-afa8-553ef092243e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fcdec15bb04af85cb068ea209625e9a10d8f85db
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d0919590ec727068b97ef66d3d0f6824aefcbe03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980034"
 ---
 # <a name="getselectmethod-method-sqlserverdatasource"></a>getSelectMethod 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

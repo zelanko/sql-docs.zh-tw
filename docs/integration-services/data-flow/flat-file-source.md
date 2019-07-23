@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3d325033d1e315ce7b9175f812ae992316fa2f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f8f9bd1a31fd395daea280a4718f87e12c774de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941490"
 ---
 # <a name="flat-file-source"></a>一般檔案來源
 
@@ -52,7 +51,7 @@ ms.locfileid: "65726796"
   
  一般檔案來源輸出中的輸出資料行包含 FastParse 屬性。 FastParse 可指定資料行要使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所提供之速度較快，但不區分地區設定的快速剖析常式，或要使用會區分地區設定的標準剖析常式。 如需詳細資訊，請參閱 [快速剖析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [標準剖析](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。  
   
- 輸出資料行也包含 UseBinaryFormat 屬性。 您可使用此屬性在檔案中實作二進位資料的支援，例如具有壓縮之十進位格式的資料。 UseBinaryFormat 預設為 [false]。 如果您想要使用二進位格式，請將 UseBinaryFormat 設為 [true]，並將輸出資料行上的資料類型設為 **DT_BYTES**。 當您執行這個動作時，一般檔案來源會略過資料轉換，並將資料直接傳遞到輸出資料行。 然後您就可以使用「衍生的資料行」或「資料轉換」等轉換，將 **DT_BYTES** 資料轉換成不同的資料類型，或者您可以在「指令碼」轉換中撰寫自訂指令碼來解譯資料。 您也可以撰寫自訂的資料流程元件來解譯資料。 如需您可將 **DT_BYTES** 轉換為何種資料類型的詳細資訊，請參閱[轉換 &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  
+ 輸出資料行也包含 UseBinaryFormat 屬性。 您可使用此屬性在檔案中實作二進位資料的支援，例如具有壓縮之十進位格式的資料。 UseBinaryFormat 預設為 [false]  。 如果您想要使用二進位格式，請將 UseBinaryFormat 設為 [true]  ，並將輸出資料行上的資料類型設為 **DT_BYTES**。 當您執行這個動作時，一般檔案來源會略過資料轉換，並將資料直接傳遞到輸出資料行。 然後您就可以使用「衍生的資料行」或「資料轉換」等轉換，將 **DT_BYTES** 資料轉換成不同的資料類型，或者您可以在「指令碼」轉換中撰寫自訂指令碼來解譯資料。 您也可以撰寫自訂的資料流程元件來解譯資料。 如需您可將 **DT_BYTES** 轉換為何種資料類型的詳細資訊，請參閱[轉換 &#40;SSIS 運算式&#41;](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  此來源使用「一般檔案」連接管理員存取文字檔。 藉由設定「一般檔案」連接管理員上的屬性，即可提供有關該檔案及其中各資料行的資訊，以及指定「一般檔案」來源應如何處理文字檔中的資料。 例如，您可以指定分隔檔案中資料行和資料列的字元，以及各資料行的資料類型和長度。 如需相關資訊，請參閱 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)。  
   
@@ -81,22 +80,22 @@ ms.locfileid: "65726796"
   
 ### <a name="options"></a>選項。  
  **Flat file connection manager**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 建立新的連線管理員。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  建立新的連線管理員。  
   
  **新增**  
- 使用 [一般檔案連線管理員編輯器] 對話方塊建立新的連線管理員。  
+ 使用 [一般檔案連線管理員編輯器]  對話方塊建立新的連線管理員。  
   
  **將來源的 Null 值保留為資料流程中的 Null 值**  
  指定擷取資料時是否保留 Null 值。 此屬性的預設值為 **false**。 當此值為**alse**時，一般檔案來源會以各資料行適當的預設值取代來源資料的 Null 值，例如字串資料行的空白字串和數值資料行的零。  
   
  **預覽**  
- 使用 [資料檢視] 對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
+ 使用 [資料檢視]  對話方塊來預覽結果。 預覽最多可顯示 200 個資料列。  
   
 ## <a name="flat-file-source-editor-columns-page"></a>一般檔案來源編輯器 (資料行頁面)
-  使用 [一般檔案來源編輯器] 對話方塊的 [資料行] 節點，將輸出資料行對應至每個外部 (來源) 資料行。  
+  使用 [一般檔案來源編輯器]  對話方塊的 [資料行]  節點，將輸出資料行對應至每個外部 (來源) 資料行。  
   
 > [!NOTE]  
->  在 [一般檔案來源編輯器] 中無法使用一般檔案來源的 **FileNameColumnName** 屬性，以及其輸出資料行的 **FastParse** 屬性，但可使用 [進階編輯器] 來設定這兩個屬性。 如需這些屬性的詳細資訊，請參閱 [一般檔案自訂屬性](../../integration-services/data-flow/flat-file-custom-properties.md)的＜一般檔案來源＞一節。  
+>  在 [一般檔案來源編輯器]  中無法使用一般檔案來源的 **FileNameColumnName** 屬性，以及其輸出資料行的 **FastParse** 屬性，但可使用 [進階編輯器]  來設定這兩個屬性。 如需這些屬性的詳細資訊，請參閱 [一般檔案自訂屬性](../../integration-services/data-flow/flat-file-custom-properties.md)的＜一般檔案來源＞一節。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  
@@ -109,19 +108,19 @@ ms.locfileid: "65726796"
  為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 提供的名稱將顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師內。  
   
 ## <a name="flat-file-source-editor-error-output-page"></a>一般檔案來源編輯器 (錯誤輸出頁面)
-  使用 [一般檔案來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
+  使用 [一般檔案來源編輯器]  對話方塊的 [錯誤輸出]  頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
   
 ### <a name="options"></a>選項。  
  **輸入/輸出**  
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [一般檔案來源編輯器] 對話方塊的 [連線管理員] 頁面上所選取的外部 (來源) 資料行。  
+ 檢視您在 [一般檔案來源編輯器]  對話方塊的 [連線管理員]  頁面上所選取的外部 (來源) 資料行。  
   
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：** [資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

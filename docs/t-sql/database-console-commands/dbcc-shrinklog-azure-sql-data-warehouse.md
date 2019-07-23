@@ -10,19 +10,18 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a40717a472970a0e2d463e958330e2d46473ab1
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930310"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (平行資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-「跨設備」降低目前 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 資料庫的交易記錄大小。 資料重組是為了壓縮交易記錄。 資料庫交易記錄可能會隨著時間變得分散和沒有效率。 使用 DBCC SHRINKLOG 可減少資料分散程度，並縮減記錄大小。
+「跨設備」  降低目前 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 資料庫的交易記錄大小。 資料重組是為了壓縮交易記錄。 資料庫交易記錄可能會隨著時間變得分散和沒有效率。 使用 DBCC SHRINKLOG 可減少資料分散程度，並縮減記錄大小。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,7 +43,7 @@ SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**。
 WITH NO_INFOMSGS  
 DBCC SHRINKLOG 結果中不會顯示資訊訊息。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 ALTER SERVER STATE 權限。
   
 ## <a name="general-remarks"></a>一般備註  

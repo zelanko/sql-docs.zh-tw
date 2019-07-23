@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a357eea4f29dc65365db7d5ca7274cf8c385aaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65801355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112409"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
 
@@ -36,58 +35,58 @@ ms.locfileid: "65801355"
  指令碼元件以及它為您產生的基礎結構程式碼，可大幅簡化開發自訂資料流程元件的程序。 不過，若要了解指令碼元件運作方式，建議您詳細閱讀[開發自訂資料流程元件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)一節中開發自訂資料流程元件的步驟，尤其是[開發自訂目的地元件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)。  
   
 ## <a name="getting-started-with-a-destination-component"></a>開始使用目的地元件  
- 當您將指令碼元件新增至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具的 [資料流程] 索引標籤時，就會開啟 [選取指令碼元件類型] 對話方塊，並提示您選取 [來源]、[目的地] 或 [轉換] 指令碼。 在這個對話方塊中，請選取 [目的地]。  
+ 當您將指令碼元件新增至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具的 [資料流程] 索引標籤時，就會開啟 [選取指令碼元件類型]  對話方塊，並提示您選取 [來源]  、[目的地]  或 [轉換]  指令碼。 在這個對話方塊中，請選取 [目的地]  。  
   
  接著，請將轉換的輸出連接至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件。 進行測試時，您不需要任何轉換，就可以直接將來源連接至目的地。  
   
 ## <a name="configuring-a-destination-component-in-metadata-design-mode"></a>在中繼資料設計模式中設定目的地元件  
- 在選取選項以建立目的地元件之後，您可以使用 [指令碼轉換編輯器] 來設定元件。 如需詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
+ 在選取選項以建立目的地元件之後，您可以使用 [指令碼轉換編輯器]  來設定元件。 如需詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
   
- 若要選取指令碼目的地將使用的指令碼語言，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上，設定 **ScriptLanguage** 屬性。  
+ 若要選取指令碼目的地將使用的指令碼語言，請在 [指令碼轉換編輯器]  對話方塊的 [指令碼]  頁面上，設定 **ScriptLanguage** 屬性。  
   
 > [!NOTE]  
->  若要為指令碼元件設定預設的指令碼語言，請使用 [選項] 對話方塊中 [一般] 頁面上的 [指令碼語言] 選項。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
+>  若要為指令碼元件設定預設的指令碼語言，請使用 [選項]  對話方塊中 [一般]  頁面上的 [指令碼語言]  選項。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
- 資料流程目的地元件有一個輸入，但是沒有任何輸出。 設定元件的輸入是您必須在中繼資料設計模式下完成的其中一個步驟，方法是在撰寫自訂指令碼之前先使用 [指令碼轉換編輯器]。  
+ 資料流程目的地元件有一個輸入，但是沒有任何輸出。 設定元件的輸入是您必須在中繼資料設計模式下完成的其中一個步驟，方法是在撰寫自訂指令碼之前先使用 [指令碼轉換編輯器]  。  
   
 ### <a name="adding-connection-managers"></a>加入連接管理員  
- 通常，目的地元件會使用現有的連接管理員來連接至它用來儲存資料流程之資料的資料來源。 在 [指令碼轉換編輯器] 的 [連線管理員] 頁面上，按一下 [新增] 新增適當的連線管理員。  
+ 通常，目的地元件會使用現有的連接管理員來連接至它用來儲存資料流程之資料的資料來源。 在 [指令碼轉換編輯器]  的 [連線管理員]  頁面上，按一下 [新增]  新增適當的連線管理員。  
   
  不過，連接管理員只是一種便利的單位，用以封裝和儲存連接至特定類型的資料來源所需的資訊。 您必須撰寫自己的自訂程式碼來載入或儲存資料，以及 (可能的話) 開啟和關閉資料來源的連接。  
   
  如需如何利用指令碼元件以使用連線管理員的一般資訊，請參閱[在指令碼元件中連線至資料來源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
   
- 如需 [指令碼轉換編輯器] 之 [連線管理員] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)。  
+ 如需 [指令碼轉換編輯器]  之 [連線管理員]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)。  
   
 ### <a name="configuring-inputs-and-input-columns"></a>設定輸入和輸入資料行  
  目的地元件有一個輸入，但是沒有任何輸出。  
   
- 在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上，資料行清單會從資料流程中的上游元件輸出顯示可用的資料行。 請選取您想要儲存的資料行。  
+ 在 [指令碼轉換編輯器]  的 [輸入資料行]  頁面上，資料行清單會從資料流程中的上游元件輸出顯示可用的資料行。 請選取您想要儲存的資料行。  
   
- 如需 [指令碼轉換編輯器] 的 [輸入資料行] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
+ 如需 [指令碼轉換編輯器]  的 [輸入資料行]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
   
- [指令碼轉換編輯器] 的 [輸入及輸出] 頁面會顯示您可以重新命名的單一輸入。 您將使用在自動產生程式碼中建立的存取子屬性，依據指令碼中的名稱來參考輸入。  
+ [指令碼轉換編輯器]  的 [輸入及輸出]  頁面會顯示您可以重新命名的單一輸入。 您將使用在自動產生程式碼中建立的存取子屬性，依據指令碼中的名稱來參考輸入。  
   
- 如需 [指令碼轉換編輯器] 之 [輸入及輸出] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 如需 [指令碼轉換編輯器]  之 [輸入及輸出]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>加入變數  
- 如果您想要在指令碼中使用現有的變數，可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，將它們新增至 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位中。  
+ 如果您想要在指令碼中使用現有的變數，可以在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，將它們新增至 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位中。  
   
- 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 [ReadOnlyVariables] 和 [ReadWriteVariables] 屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取變數，來選取多個變數。  
+ 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 [ReadOnlyVariables]  和 [ReadWriteVariables]  屬性欄位旁邊的省略符號 ([...]  ) 按鈕，然後在 [選取變數]  對話方塊中選取變數，來選取多個變數。  
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 如需 [指令碼轉換編輯器] 的 [指令碼] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
+ 如需 [指令碼轉換編輯器]  的 [指令碼]  頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>在程式碼設計模式中編寫目的地元件的指令碼  
- 在您設定好元件的中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，按一下 [編輯指令碼]，開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼] 頁面上 **ScriptLanguage** 屬性的指令碼語言。  
+ 在您設定好元件的中繼資料之後，便可撰寫自訂指令碼。 在 [指令碼轉換編輯器]  的 [指令碼]  頁面上，按一下 [編輯指令碼]  ，開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE 以新增自訂指令碼。 所使用的指令碼語言取決於您選取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 還是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作為 [指令碼]  頁面上 **ScriptLanguage** 屬性的指令碼語言。  
   
  如需使用指令碼元件所建立之各種元件都適用的重要資訊，請參閱[編碼和偵錯指令碼元件](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
 ### <a name="understanding-the-auto-generated-code"></a>了解自動產生的程式碼  
  當您在建立和設定目的地元件之後開啟 VSTA IDE 時，可編輯的 **ScriptMain** 類別會出現在程式碼編輯器中，並具有 **ProcessInputRow** 方法的虛設常式。 **ScriptMain** 類別是您將撰寫自訂程式碼的地方，而 **ProcessInputRow** 則是目的地元件中最重要的方法。  
   
- 如果您在 VSTA 中開啟 [專案總管] 視窗，則可以看到指令碼元件也會產生唯讀的 **BufferWrapper** 和 **ComponentWrapper** 專案項目。 **ScriptMain** 類別繼承自 **ComponentWrapper** 專案項目中的 **UserComponent** 類別。  
+ 如果您在 VSTA 中開啟 [專案總管]  視窗，則可以看到指令碼元件也會產生唯讀的 **BufferWrapper** 和 **ComponentWrapper** 專案項目。 **ScriptMain** 類別繼承自 **ComponentWrapper** 專案項目中的 **UserComponent** 類別。  
   
  在執行階段，資料流程引擎會叫用 **UserComponent** 類別中的 **ProcessInput** 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 **ProcessInput** 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 **ProcessInputRow** 方法。  
   
@@ -124,17 +123,17 @@ ms.locfileid: "65801355"
   
 3.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (您不需要進行任何轉換，就可以直接將來源連線到目的地。)這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，這個資料表至少包含 **AddressID** 和 **City** 資料行。  
+4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件 (您不需要進行任何轉換，就可以直接將來源連線到目的地。)這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，這個資料表至少包含 **AddressID** 和 **City** 資料行。  
   
-5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 輸入資料行。  
+5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 **AddressID** 和 **City** 輸入資料行。  
   
-6.  在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
+6.  在 [輸入及輸出]  頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
   
-7.  在 [連線管理員] 頁面上，使用名稱 (例如 **MyADONETConnectionManager**) 來新增或建立 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員。  
+7.  在 [連線管理員]  頁面上，使用名稱 (例如 **MyADONETConnectionManager**) 來新增或建立 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員。  
   
-8.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境。  
+8.  在 [指令碼]  頁面上，按一下 [編輯指令碼]  ，並輸入以下指令碼。 然後關閉指令碼開發環境。  
   
-9. 關閉 [指令碼轉換編輯器] 並執行該範例。  
+9. 關閉 [指令碼轉換編輯器]  並執行該範例。  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -241,17 +240,17 @@ public class ScriptMain:
   
 2.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (您不需要進行任何轉換，就可以直接將來源連線到目的地。)這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，而且應該至少包含 **AddressID** 和 **City** 資料行。  
+3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件 (您不需要進行任何轉換，就可以直接將來源連線到目的地。)這個輸出應該從 **AdventureWorks** 範例資料庫的 **Person.Address** 資料表中提供資料，而且應該至少包含 **AddressID** 和 **City** 資料行。  
   
-4.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 資料行。  
+4.  開啟**指令碼轉換編輯器**。 在 [輸入資料行]  頁面上，選取 **AddressID** 和 **City** 資料行。  
   
-5.  在 [輸入及輸出] 頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
+5.  在 [輸入及輸出]  頁面上，以更具描述性的名稱重新命名輸入，例如 **MyAddressInput**。  
   
-6.  在 [連線管理員] 頁面上，使用描述性的名稱 (例如 **MyFlatFileDestConnectionManager**) 來新增或建立一般檔案連線管理員。  
+6.  在 [連線管理員]  頁面上，使用描述性的名稱 (例如 **MyFlatFileDestConnectionManager**) 來新增或建立一般檔案連線管理員。  
   
-7.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境。  
+7.  在 [指令碼]  頁面上，按一下 [編輯指令碼]  ，並輸入以下指令碼。 然後關閉指令碼開發環境。  
   
-8.  關閉 [指令碼轉換編輯器] 並執行該範例。  
+8.  關閉 [指令碼轉換編輯器]  並執行該範例。  
   
 ```vb  
 Imports System.IO  

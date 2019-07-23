@@ -13,14 +13,13 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a91aa69fcc3fc375c1a6469274613fa656813b8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bc5a4def5c32ffc39c0df58d5a7927a24c90860d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135548"
 ---
 # <a name="native-compilation-advisor"></a>原生編譯 Advisor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,19 +30,19 @@ ms.locfileid: "52507819"
   
  在指定解譯預存程序中，NCA 可讓您識別原生模組中不支援的所有功能。 NCA 提供解決方法或解決方案的文件連結。  
   
- 如需移轉方法的資訊，請參閱 [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (記憶體內部 OLTP - 一般工作負載模式和移轉考量)。  
+ 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>使用原生編譯 Advisor 的逐步解說  
- 在 [物件總管] 中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]。 隨即顯示 [預存程序原生編譯 Advisor] 的歡迎頁面。 按 **[下一步]** ，繼續進行。  
+ 在 [物件總管]  中，以滑鼠右鍵按一下您想要轉換的預存程序，然後選取 [原生編譯 Advisor]  。 隨即顯示 [預存程序原生編譯 Advisor]  的歡迎頁面。 按 **[下一步]** ，繼續進行。  
   
 ### <a name="stored-procedure-validation"></a>預存程序驗證  
- 此頁面將會回報預存程序是否使用任何與原生編譯不相容的建構。 您可以按 [下一步] 查看詳細資料。 如果有與原生編譯不相容的建構，您可以按 [下一步] 查看詳細資料。  
+ 此頁面將會回報預存程序是否使用任何與原生編譯不相容的建構。 您可以按 [下一步]  查看詳細資料。 如果有與原生編譯不相容的建構，您可以按 [下一步]  查看詳細資料。  
   
 ### <a name="stored-procedure-validation-result"></a>預存程序驗證結果  
- 如果有與原生編譯不相容的建構，[預存程序驗證結果] 頁面會顯示詳細資料。 您可以產生報表 (按一下 [產生報表])、結束 [原生編譯 Advisor]，並更新您的程式碼，使其與原生編譯相容。  
+ 如果有與原生編譯不相容的建構，[預存程序驗證結果]  頁面會顯示詳細資料。 您可以產生報表 (按一下 [產生報表]  )、結束 [原生編譯 Advisor]  ，並更新您的程式碼，使其與原生編譯相容。  
   
 ## <a name="code-sample"></a>程式碼範例  
- 下列範例顯示解譯的預存程序及原生編譯的「對等」預存程序。 該範例假設目錄名為 c:\data。  
+ 下列範例顯示解譯的預存程序及原生編譯的「對等」  預存程序。 該範例假設目錄名為 c:\data。  
   
 > [!NOTE]  
 >  像往常一樣， **FILEGROUP** 元素和 **USE** mydatabase 陳述式，會套用至 Microsoft SQL Server，但是不會套用至 Azure SQL Database。  

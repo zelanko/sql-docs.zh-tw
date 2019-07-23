@@ -21,15 +21,14 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-manager: jroth
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: e7fb5ecb66552ef4d061c36326788f4be51255bb
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 0841379b0b64ebe81e4a23f76b21f6cf6abe0ec3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680386"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265164"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 241536e1-fae6-4980-85a5-d8cfcd50b8bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 60e61e5e74a8074aec09a6eb6bc26cfd41936297
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e35e2a640d65e72ab7c956999e7e0b7795ce643
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953127"
 ---
 # <a name="getclientinfo-method-sqlserverconnection"></a>getClientInfo 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

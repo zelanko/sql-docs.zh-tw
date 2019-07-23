@@ -11,13 +11,12 @@ ms.topic: conceptual
 ms.date: 06/25/2019
 ms.author: mibar
 author: barmichal
-manager: craigg
-ms.openlocfilehash: b45f3a081b7be55642e662ed195cfc1377e3659b
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: be50742728d7482142d65cb8892231aa6671a97e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127081"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

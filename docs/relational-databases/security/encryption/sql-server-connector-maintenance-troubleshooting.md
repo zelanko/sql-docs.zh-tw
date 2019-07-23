@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140695"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ ms.locfileid: "59241376"
   
 ### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的升級  
 
-1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 生產環境支援 1.0.1.0 版及更新版本。 請使用下列指示升級至 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)可用的最新版本。
+1\.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 生產環境支援 1.0.1.0 版及更新版本。 請使用下列指示升級至 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)可用的最新版本。
 
 目前使用的版本若為 1.0.1.0 版或更新版本，請執行下列步驟更新至最新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。 這些指示不需要重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。
  
@@ -168,7 +167,7 @@ ms.locfileid: "59241376"
 
 **SQL Server 連接器需要存取哪些端點？** 連接器會與兩個需要設為允許清單的端點通訊。 針對 HTTPS，這些其他服務之輸出通訊所需的唯一連接埠是 443：
 -  login.microsoftonline.com/*:443
--  *.vault.azure.net/*:443
+-  *.vault.azure.net/* :443
   
 **什麼是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中每個組態步驟所需的最低權限等級？**  
  雖然您能以 sysadmin 固定伺服器角色的成員身分執行所有設定步驟，但是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓勵您將自己所使用的權限降至最低。 下列清單定義每個動作的最小權限層級。  
@@ -188,11 +187,11 @@ ms.locfileid: "59241376"
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. 請前往 Azure 傳統入口網站：[https://manage.windowsazure.com](https://manage.windowsazure.com)  
-2. 在左側的功能表中，向下捲動並選取 [設定]。
-3. 選取目前使用的 Azure 訂用帳戶，並按一下畫面底部命令的 [編輯目錄]。
-4. 在快顯視窗中，使用 [目錄] 下拉式清單選取您想使用的 Active Directory。 這樣即可讓它成為預設目錄。
+2. 在左側的功能表中，向下捲動並選取 [設定]  。
+3. 選取目前使用的 Azure 訂用帳戶，並按一下畫面底部命令的 [編輯目錄]  。
+4. 在快顯視窗中，使用 [目錄]  下拉式清單選取您想使用的 Active Directory。 這樣即可讓它成為預設目錄。
 5. 您必須是新選取之 Active Directory 的全域管理員。 如果您不是全域管理員，就可能會因為切換目錄而遺失管理權限。
-6. 快顯視窗關閉後，如果沒有看到任何訂用帳戶，您可能需要更新畫面右上角功能表中 [訂用帳戶] 篩選的 [依目錄篩選] 篩選，才能看到使用剛更新之 Active Directory 的訂用帳戶。
+6. 快顯視窗關閉後，如果沒有看到任何訂用帳戶，您可能需要更新畫面右上角功能表中 [訂用帳戶]  篩選的 [依目錄篩選]  篩選，才能看到使用剛更新之 Active Directory 的訂用帳戶。
 
     > [!NOTE] 
     > 您可能無權實際變更 Azure 訂用帳戶的預設目錄。 在此情況下，請在您的預設目錄中建立 AAD 服務主體，讓它和稍後要用的 Azure 金鑰保存庫位於相同的目錄。

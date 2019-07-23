@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: f6cb262c611c16bfea052b8151fb27d9bc37fa02
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 869af839389aec533f132f6e2174d8495ffe1f20
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681036"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263317"
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

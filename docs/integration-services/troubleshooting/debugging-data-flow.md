@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a67815d20a1275d8ae77042c89f76189748d336
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c87cd625222fc320d2a9a6f022a19361e74964f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945589"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
 
@@ -77,7 +76,7 @@ ms.locfileid: "65713732"
   您可以使用 [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** 資料庫檢視，分析封裝的資料流程。 每當資料流程元件傳送資料至下游元件，此檢視就會顯示一個資料列。 您可以使用這項資訊深入了解傳送至每個元件的資料列。  
   
 > [!NOTE]  
->  您必須將記錄層次設定為 [詳細資訊]，以透過 catalog.execution_data_statistics 檢視來擷取資訊。  
+>  您必須將記錄層次設定為 [詳細資訊]  ，以透過 catalog.execution_data_statistics 檢視來擷取資訊。  
   
  下列範例顯示在封裝元件之間傳送的資料列數。  
   
@@ -118,7 +117,7 @@ order by source_component_name desc
 ### <a name="configuring-an-error-output"></a>設定錯誤輸出  
  若要設定錯誤輸出，您有兩個選項：  
   
--   使用 [設定錯誤輸出] 對話方塊。 您可以使用此對話方塊，在支援錯誤輸出的任何資料流程元件中設定錯誤輸出。  
+-   使用 [設定錯誤輸出]  對話方塊。 您可以使用此對話方塊，在支援錯誤輸出的任何資料流程元件中設定錯誤輸出。  
   
 -   請針對此元件使用編輯器對話方塊。 某些元件可讓您直接從它們的編輯器對話方塊設定錯誤輸出； 但如果是 ADO NET 來源、匯入資料行轉換、OLE DB 命令轉換或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地，您便無法從編輯器對話方塊設定錯誤輸出。  
   
@@ -130,13 +129,13 @@ order by source_component_name desc
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，按一下 [資料流程] 索引標籤。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中，按一下 [資料流程]  索引標籤。  
   
 4.  將錯誤輸出 (以紅色箭頭表示) 從錯誤來源元件拖曳到資料流程中的另一個元件。  
   
-5.  在 [設定錯誤輸出] 對話方塊中，針對元件輸入中的每個資料行，在 [錯誤] 和 [截斷] 資料行中選取動作。  
+5.  在 [設定錯誤輸出]  對話方塊中，針對元件輸入中的每個資料行，在 [錯誤]  和 [截斷]  資料行中選取動作。  
   
-6.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
+6.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
   
 #### <a name="to-add-an-error-output-using-the-editor-dialog-box-for-the-component"></a>針對此元件使用編輯器對話方塊來加入錯誤輸出  
   
@@ -144,24 +143,24 @@ order by source_component_name desc
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [資料流程] 索引標籤。  
+3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [資料流程]  索引標籤。  
   
 4.  按兩下要在其中設定錯誤輸出的資料流程元件，並依據此元件，執行下列其中一個步驟：  
   
-    -   按一下 [設定錯誤輸出]。  
+    -   按一下 [設定錯誤輸出]  。  
   
-    -   按一下 [錯誤輸出]。  
+    -   按一下 [錯誤輸出]  。  
   
-5.  為每個資料行設定 [錯誤] 選項。  
+5.  為每個資料行設定 [錯誤]  選項。  
   
-6.  為每個資料行設定 [截斷] 選項。  
+6.  為每個資料行設定 [截斷]  選項。  
   
-7.  按一下 [確定] 。  
+7.  按一下 [確定]  。  
   
-8.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
+8.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
   
 ### <a name="configuring-error-output-columns"></a>設定錯誤輸出資料行  
- 若要設定錯誤輸出資料行，您必須使用 [進階編輯器] 對話方塊的 [輸入與輸出屬性] 索引標籤。  
+ 若要設定錯誤輸出資料行，您必須使用 [進階編輯器]  對話方塊的 [輸入與輸出屬性]  索引標籤。  
   
 #### <a name="to-configure-error-output-columns"></a>設定錯誤輸出資料行  
   
@@ -169,11 +168,11 @@ order by source_component_name desc
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [資料流程] 索引標籤。  
+3.  在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，按一下 [資料流程]  索引標籤。  
   
-4.  以滑鼠右鍵按一下要設定其錯誤輸出資料行的元件，並按一下 [顯示進階編輯器]。  
+4.  以滑鼠右鍵按一下要設定其錯誤輸出資料行的元件，並按一下 [顯示進階編輯器]  。  
   
-5.  按一下 [輸入與輸出屬性] 索引標籤，並展開 [\<元件名稱> 錯誤輸出]，然後展開 [輸出資料行]。  
+5.  按一下 [輸入與輸出屬性]  索引標籤，並展開 [\<元件名稱> 錯誤輸出]  ，然後展開 [輸出資料行]  。  
   
 6.  按一下資料行並更新其屬性。  
   
@@ -182,7 +181,7 @@ order by source_component_name desc
   
 7.  按一下 **[確定].**  
   
-8.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
+8.  若要儲存已更新的封裝，請按一下 [檔案]  功能表上的 [儲存選取項目]  。  
 
 ## <a name="add_viewer"></a> 將資料檢視器加入資料流程
   本主題描述如何在資料流程中加入和設定資料檢視器。 資料檢視器可以顯示在兩個資料流程元件之間移動的資料。 例如，在資料流程中的轉換修改從資料來源擷取的資料之前，資料檢視器可以先顯示該資料。  
@@ -199,24 +198,24 @@ order by source_component_name desc
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  如果 [控制流程] 索引標籤尚未處於使用中，請按一下該索引標籤。  
+3.  如果 [控制流程]  索引標籤尚未處於使用中，請按一下該索引標籤。  
   
-4.  按一下要將資料檢視器附加至其資料流程的 [資料流程] 工作，然後按一下 [資料流程] 索引標籤。  
+4.  按一下要將資料檢視器附加至其資料流程的 [資料流程] 工作，然後按一下 [資料流程]  索引標籤。  
   
-5.  以滑鼠右鍵按一下兩個資料流程元件之間的路徑，然後按一下 [編輯]。  
+5.  以滑鼠右鍵按一下兩個資料流程元件之間的路徑，然後按一下 [編輯]  。  
   
-6.  在 [一般] 頁面上，您可以檢視和編輯路徑屬性。 例如，您可以從 [PathAnnotation] 下拉式清單選取出現在路徑旁的註解。  
+6.  在 [一般]  頁面上，您可以檢視和編輯路徑屬性。 例如，您可以從 [PathAnnotation]  下拉式清單選取出現在路徑旁的註解。  
   
-7.  在 [中繼資料] 頁面上，您可以檢視資料行中繼資料，並且將中繼資料複製到 [剪貼簿]。  
+7.  在 [中繼資料]  頁面上，您可以檢視資料行中繼資料，並且將中繼資料複製到 [剪貼簿]。  
   
-8.  在 [資料檢視器] 頁面上，按一下 [啟用資料檢視器]。  
+8.  在 [資料檢視器]  頁面上，按一下 [啟用資料檢視器]  。  
   
-9. 在 [要顯示的資料行] 區域中，選取要在資料檢視器中顯示的資料行。 根據預設，所有可用的資料行都會選取，並且在 [顯示的資料行] 清單中列出。 將不想使用的資料行移至 [未使用的資料行] 清單，方法是選取它們然後按一下向左箭號。  
+9. 在 [要顯示的資料行] 區域中，選取要在資料檢視器中顯示的資料行。 根據預設，所有可用的資料行都會選取，並且在 [顯示的資料行]  清單中列出。 將不想使用的資料行移至 [未使用的資料行]  清單，方法是選取它們然後按一下向左箭號。  
   
     > [!NOTE]  
     >  在此方格中，代表 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值會以 ISO 8601 格式化字串的形式出現，而且空格分隔符號會取代 **T** 分隔符號。 代表 DT_DATE 和 DT_FILETIME 資料類型的值包括小數秒的七位數。 由於 DT_FILETIME 資料類型只會儲存小數秒的三位數，所以此方格會將其餘四位數顯示為零。 代表 DT_DBTIMESTAMP 資料類型的值包括小數秒的三位數。 如果是代表 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 資料類型的值，則小數秒的位數會對應到針對資料行資料類型指定的小數位數。 如需 ISO 8601 格式的詳細資訊，請參閱 [日期和時間格式](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)。 如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)＞。  
   
-10. 按一下 [確定] 。  
+10. 按一下 [確定]  。  
 
 ## <a name="data-flow-taps"></a>資料流程點選
  您可以在執行階段於封裝的資料流程路徑上加入資料點選，然後從資料點選將輸出導向至外部檔案。 若要使用此功能，您必須使用專案部署模型將 SSIS 專案部署至 SSIS 伺服器。 將封裝部署至伺服器之後，您需要對 SSISDB 資料庫執行 T-SQL 指令碼先加入資料點選，然後再執行該封裝。 範例狀況如下：  
@@ -240,13 +239,13 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  除了輸入 SQL 陳述式之外，執行下列步驟也可以產生執行封裝指令碼：  
   
-1.  以滑鼠右鍵按一下 [Package.dtsx]，然後按一下 [執行]。  
+1.  以滑鼠右鍵按一下 [Package.dtsx]  ，然後按一下 [執行]  。  
   
 2.  按一下 **[指令碼]** 工具列按鈕以產生指令碼。  
   
 3.  接著，在 start_execution 呼叫前面加入 add_data_tap 陳述式。  
   
- add_data_tap 預存程序的 task_package_path 參數對應到 Visual Studio 中，資料流程工作的 PackagePath 屬性。 在 Visual Studio 中，以滑鼠右鍵按一下 [資料流程工作]，然後按一下 [屬性] 啟動 [屬性] 視窗。  請記下 **PackagePath** 屬性的值，其將做為 add_data_tap 預存程序呼叫的 task_package_path 參數值使用。  
+ add_data_tap 預存程序的 task_package_path 參數對應到 Visual Studio 中，資料流程工作的 PackagePath 屬性。 在 Visual Studio 中，以滑鼠右鍵按一下 [資料流程工作]  ，然後按一下 [屬性]  啟動 [屬性] 視窗。  請記下 **PackagePath** 屬性的值，其將做為 add_data_tap 預存程序呼叫的 task_package_path 參數值使用。  
   
  add_data_tap 預存程序的 dataflow_path_id_string 參數對應到您要在其上加入資料點選之資料流程路徑的 IdentificationString 屬性。 若要取得 dataflow_path_id_string，請按一下資料流程路徑 (資料流程中位於工作之間的箭號)，並記下 [屬性] 視窗所示 **IdentificationString** 屬性的值。  
   

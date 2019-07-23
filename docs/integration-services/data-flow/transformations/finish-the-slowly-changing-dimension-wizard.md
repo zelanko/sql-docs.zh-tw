@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6b46ba1015cac981a08c156add837c2fe295e96e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cde51e00c0b76bc41e6949487e644758b4f0209a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944422"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>完成緩時變維度精靈
 

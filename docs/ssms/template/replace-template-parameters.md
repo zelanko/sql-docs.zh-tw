@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: a46e08090107e61b8eef9dc346cf4bf5f97f9c8a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: bd68bc3a3334991a7c81db547a9fc8117c86996a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687311"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266732"
 ---
 # <a name="replace-template-parameters"></a>取代範本參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

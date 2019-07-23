@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c5f6df2e302b96d5f49785ee835650a2ef2f788
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132773"
 ---
 # <a name="dta-utility"></a>dta 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +177,7 @@ dta -d AdventureWorks2012 ...
  指定應為新建議考量篩選的索引。 如需詳細資訊，請參閱 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
 **-fc**  
- 指定新建議需要考量的資料行存放區索引。 DTA 會考慮這兩個叢集與非叢集資料行存放區索引。 如需相關資訊，請參閱    
+ 指定新建議需要考量的資料行存放區索引。 DTA 會考慮叢集和非叢集資料行存放區索引。 如需相關資訊，請參閱    
 [Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。
  ||  
 |-|  
@@ -217,7 +216,7 @@ dta -d AdventureWorks2012 ...
  指定計畫快取可用做為工作負載。 針對明確選定的資料庫排名前 1000 個計畫快取事件，進行分析。 您可以利用 **-n** 選項變更此值。  
  
 **-iq**  
- 指定查詢存放區，做為工作負載使用。 從查詢存放區針對明確選定的資料庫排名前 1000 個事件分析。 您可以利用 **-n** 選項變更此值。  如需詳細資訊，請參閱[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查詢存放區的工作負載微調資料庫](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
+ 指定使用查詢存放區做為工作負載。 系統會分析來自查詢存放區明確選取之資料庫的前1000個事件。 您可以利用 **-n** 選項變更此值。  如需詳細資訊，請參閱[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查詢存放區的工作負載微調資料庫](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
 |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
@@ -267,11 +266,11 @@ dta -n number_of_events -A 0
  在這個情況下，指定無限微調時間 (`-A 0`) 非常重要。 否則，Database Engine Tuning Advisor 會預設 8 小時的微調時間。
  
  **-I** _time_window_in_hours_   
-   指定的時間間隔 （以小時為單位） 的查詢必須有執行時，才能被視為 dta 微調時使用 **-iq**選項 （查詢存放區中的工作負載）。 
+   指定查詢必須執行的時間範圍 (以小時為單位), 以供 DTA 在使用 **-iq**選項 (查詢存放區的工作負載) 時進行調整。 
 ```  
 dta -iq -I 48  
 ```  
-在此情況下，DTA 會做為工作負載的來源使用查詢存放區，並只會考慮過去 48 小時內已執行的查詢。  
+在此情況下, DTA 會使用查詢存放區做為工作負載的來源, 而且只會考慮過去48小時內執行的查詢。  
   ||  
 |-|  
 |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  

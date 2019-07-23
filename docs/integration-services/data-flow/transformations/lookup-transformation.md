@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b530cf3a73baa961fa2db5e39563e6a585b1f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944212"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
 

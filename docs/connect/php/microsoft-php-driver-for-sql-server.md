@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8fcc4a39edfaafd7ae66990a2f1161d781d1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936349"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>用於 SQL Server 之 PHP 的 Microsoft 驅動程式
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Microsoft Drivers for PHP for SQL Server 讓 PHP 應用程式與 SQL Server 整合。 驅動程式允許讀取和寫入從 PHP 指令碼中的 SQL Server 資料的 PHP 延伸模組。 驅動程式提供存取所有版本的 SQL Server 2005 和更新版本 （包括 Express Edition) 和 Azure SQL Database 中資料的介面。 驅動程式會讓使用 PHP 功能，包括 PHP 資料流，讀取及寫入大型物件。  
+適用于 PHP for SQL Server 的 Microsoft 驅動程式, 可與 PHP 應用程式的 SQL Server 整合。 驅動程式是 PHP 延伸模組, 可讓您從 PHP 腳本中讀取和寫入 SQL Server 資料。 驅動程式會提供介面來存取 Azure SQL 資料庫中的資料, 以及所有版本的 SQL Server 2005 和更新版本 (包括 Express Edition)。 驅動程式會利用 PHP 功能 (包括 PHP 資料流程) 來讀取及寫入大型物件。  
   
 ## <a name="getting-started"></a>使用者入門  
 * [步驟 1︰設定 PHP 開發的開發環境](step-1-configure-development-environment-for-php-development.md)  
@@ -40,12 +39,12 @@ Microsoft Drivers for PHP for SQL Server 讓 PHP 應用程式與 SQL Server 整�
 * [Microsoft Drivers for PHP for SQL Server 的支援資源](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>下載  
-* ![下載-向下箭號-圈選起來](../../ssdt/media/download.png)[若要下載 PHP sql 驅動程式](download-drivers-php-sql-server.md)
+* ![下載-Download-downarrow-circled-圈用](../../ssdt/media/download.png)[以下載 PHP FOR SQL 的驅動程式](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>範例  
 * [Microsoft Drivers for PHP for SQL Server 的程式碼範例](code-samples-for-php-sql-driver.md)
-* [開始使用 Windows 上的 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
-* [在 macOS 上開始使用 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
-* [開始使用 PHP 在 Ubuntu 上](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-* [開始使用 Red Hat Enterprise Linux (RHEL) 上的 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
-* [開始使用 SUSE Linux Enterprise Server (SLES) 上的 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
+* [在 Windows 上使用 PHP 的消費者入門](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
+* [在 macOS 上使用 PHP 的消費者入門](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
+* [在 Ubuntu 上使用 PHP 的消費者入門](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL) 上使用 PHP 的消費者入門](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
+* [SUSE Linux Enterprise Server (SLES) 上使用 PHP 的消費者入門](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)

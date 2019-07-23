@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac0ce5511f8bad17d9732abbc17fbea36c92b347
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e4ec4877b7433554ad1f2ef60fdb73ab485cbed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043197"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -118,11 +117,11 @@ SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中
 
 因為使用隨機加密啟用記憶體保護區資料行上的索引會儲存加密的索引鍵值，同時值本身會根據純文字進行排序，SQL Server 引擎必須針對任何涉及建立或更新索引的作業使用記憶體保護區，包括：
 - 建立或重建索引。
-- 插入、更新或刪除資料表中的資料列 (包含已編製索引/加密的資料行)，因為這些行為會觸發將索引鍵插入，或 (和) 從索引移除索引鍵。
+- 插入、更新或刪除資料表中的資料列 (包含已編製索引/已加密的資料行)，這些行為會觸發針對索引將索引鍵插入或/和移除的動作。
 - 執行涉及檢查索引完整性的 DBCC 命令，例如 [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 或 [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。
 - 資料庫復原 (例如在 SQL Server 失敗並重新啟動後)，若 SQL Server 需要復原對索引進行的任何變更 (請參閱下方的詳細資料)。
 
-所有上述的作業都需要記憶體保護區具備索引資料行的資料行加密金鑰，才能解密索引鍵。 一般而言，記憶體保護區可以透過兩種方式取得資料行加密金鑰：
+所有上述的作業都需要記憶體保護區具備適用於已編制索引之資料行的資料行加密金鑰，才能解密索引鍵。 一般而言，記憶體保護區可以透過兩種方式取得資料行加密金鑰：
 
 - **直接從在索引上叫用作業的用戶端應用程式取得**，如以上簡介所說明。 此方法需要應用程式或使用者擁有資料行主要金鑰的存取權限，以及保護索引資料行的資料行加密金鑰存取權限。 應用程式必須連線到針對連線啟用 Always Encrypted 的資料庫。
 - **從資料行加密金鑰的快取取得。** 記憶體保護區會在快取中儲存先前查詢所使用的金鑰，由於該快取位於記憶體保護區內部，因此無法從外部存取。 若應用程式在索引上觸發作業，卻沒有直接提供必要的資料行加密金鑰，記憶體保護區便會在快取中尋找金鑰。 若記憶體保護區在快取中找到金鑰，便會用於作業。 此方法可讓 DBA 管理索引，並執行特定的資料清理作業 (例如從包含加密資料行上索引的資料表中移除資料列)，而無須存取密碼編譯金鑰或純文字格式的資料。 此方法需要應用程式連線到未針對連線啟用 Always Encrypted 的資料庫。

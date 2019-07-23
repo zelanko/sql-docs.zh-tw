@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102113"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -126,7 +125,7 @@ ALL_ERRORMSGS
 
 EXTENDED_LOGICAL_CHECKS  
  如果相容性層級為 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，則會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯一致性檢查。  
- 如需詳細資訊，請參閱本主題稍後[備註](#remarks)一節中的＜對索引執行邏輯一致性檢查＞。  
+ 如需詳細資訊，請參閱本主題稍後[備註](#remarks)一節中的＜對索引執行邏輯一致性檢查＞  。  
     
 NO_INFOMSGS  
  隱藏所有參考訊息。  

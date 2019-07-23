@@ -7,14 +7,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c9855f798a7867dfd67a52a1c8452340cdf2a69a
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: a13421707f332ee992d07daa4e9bd337996a7dad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136391"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 
@@ -38,7 +37,7 @@ ms.locfileid: "52439900"
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
 
 > [!TIP]
-> 請注意，[編輯] 按鈕的位置與影片中顯示的位置會稍有不同，但程序相同。
+> 請注意，[編輯]  按鈕的位置與影片中顯示的位置會稍有不同，但程序相同。
 >
 > ![[編輯] 按鈕](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
@@ -53,7 +52,7 @@ ms.locfileid: "52439900"
 - [本機設定 Git 存放庫](https://docs.microsoft.com/contribute/get-started-setup-local)
 - [使用工具來參與編輯](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
-如果您送出對文件集的重大變更提取要求時，就會收到一個 GitHub 註解，要求您提交線上的**貢獻授權合約 (CLA)**。 您必須填妥線上表單，系統才會接受您的提取要求。
+如果您送出對文件集的重大變更提取要求時，就會收到一個 GitHub 註解，要求您提交線上的**貢獻授權合約 (CLA)** 。 您必須填妥線上表單，系統才會接受您的提取要求。
 
 ## <a name="recognition"></a>辨識
 
@@ -95,7 +94,7 @@ ms.locfileid: "52439900"
 
 - 如需常用 include 檔案的清單，請參閱 [SQL Server 版本和 applies-to include 檔案](applies-to-includes.md)。
 - 查看其他涵蓋相同功能或相關工作的文章。 如果您要編輯這篇文章，可以複製 Markdown 以取得 applies-to include 連結 (您可以取消編輯而不送出)。
-- 搜尋 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 目錄，找出包含 "applies-to" 文字的檔案。 您可以使用 GitHub 中的 [尋找] 按鈕快速篩選。 按一下檔案以查看呈現的方式。
+- 搜尋 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 目錄，找出包含 "applies-to" 文字的檔案。 您可以使用 GitHub 中的 [尋找]  按鈕快速篩選。 按一下檔案以查看呈現的方式。
 - 請注意命名慣例。 如果名稱中有 x，它們通常是預留位置，表示不支援服務。 比方說，**appliesto-xx-xxxx-asdw-xxx-md.md** 表示只支援 Azure SQL 資料倉儲，因為只拼寫出 **asdw**，而其他欄位均為 x。
 - 某些 include 會指定版本號碼，例如 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**。 當您知道某項功能是由特定版本的 SQL Server 導入時，請只使用該版本的 include。
 

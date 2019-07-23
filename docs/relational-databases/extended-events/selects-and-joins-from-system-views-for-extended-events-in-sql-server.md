@@ -10,14 +10,13 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bfaaca6a0f3c35814264d404ceaae9daebc34d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903450"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 
@@ -43,8 +42,8 @@ ms.locfileid: "58788025"
 
 #### <a name="catalog-views"></a>目錄檢視：
 
-- 這些檢視會儲存[建立事件工作階段](../../t-sql/statements/create-event-session-transact-sql.md)或 SSMS UI 對等項目所建立之每個事件工作階段「定義」的相關資訊。 但是這些檢視卻不知道任一工作階段是否已開始執行。
-    - 例如，如果 SSMS [物件總管] 未顯示任何定義的事件工作階段，從 *sys.server_event_session_targets* 檢視中 SELECT 就會傳回零個資料列。
+- 這些檢視會儲存[建立事件工作階段](../../t-sql/statements/create-event-session-transact-sql.md)或 SSMS UI 對等項目所建立之每個事件工作階段「定義」  的相關資訊。 但是這些檢視卻不知道任一工作階段是否已開始執行。
+    - 例如，如果 SSMS [物件總管]  未顯示任何定義的事件工作階段，從 *sys.server_event_session_targets* 檢視中 SELECT 就會傳回零個資料列。
 
 
 - 名稱前置詞為：
@@ -54,7 +53,7 @@ ms.locfileid: "58788025"
 
 #### <a name="dynamic-management-views-dmvs"></a>動態管理檢視 (DMV)：
 
-- 儲存執行事件工作階段的「目前活動」相關資訊。 但是這些 DMV 對工作階段定義卻知之甚少。
+- 儲存執行事件工作階段的「目前活動」  相關資訊。 但是這些 DMV 對工作階段定義卻知之甚少。
     - 即使所有的事件工作階段目前皆已停止，因為伺服器啟動時會將各種封裝載入到使用中的記憶體，所以從 *sys.dm_xe_packages* 檢視 SELECT 仍會傳回資料列。
     - 因為同樣的原因， *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
 
@@ -78,7 +77,7 @@ ms.locfileid: "58788025"
 ## <a name="b-catalog-views"></a>B. 目錄檢視
 
 
-本節會比對同一已定義事件工作階段的三種不同技術檢視方塊，並建立其關聯。 工作階段已定義並顯示在 SQL Server Management Studio (SSMS.exe) 的 [物件總管] 中，但此工作階段目前未執行。
+本節會比對同一已定義事件工作階段的三種不同技術檢視方塊，並建立其關聯。 工作階段已定義並顯示在 SQL Server Management Studio (SSMS.exe) 的 [物件總管]  中，但此工作階段目前未執行。
 
 最好每個月[安裝最新的 SSMS 更新](https://msdn.microsoft.com/library/mt238290.aspx)，以避免發生意外的失敗。
 
@@ -114,33 +113,33 @@ ms.locfileid: "58788025"
 ### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI 檢視方塊
 
 
-在 SSMS 的 [物件總管] 中，您可以啟動 [新增工作階段] 對話方塊：請依序展開 [管理] > [擴充事件]，然後以滑鼠右鍵按一下 [工作階段] > [新增工作階段]。
+在 SSMS 的 [物件總管]  中，您可以啟動 [新增工作階段]  對話方塊：請依序展開 [管理]   > [擴充事件]  ，然後以滑鼠右鍵按一下 [工作階段]   > [新增工作階段]  。
 
-在大型 [新增工作階段] 對話方塊標示為 [一般] 的第一個區段中，我們看到已選取 [在伺服器啟動時啟動事件工作階段] 選項。
+在大型 [新增工作階段]  對話方塊標示為 [一般]  的第一個區段中，我們看到已選取 [在伺服器啟動時啟動事件工作階段]  選項。
 
 ![[新增工作階段] > [一般]，[在伺服器啟動時啟動事件工作階段]。](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-接下來在 [事件] 區段中，我們看到已選擇 [lock_deadlock] 事件。 我們看到該事件已選取三個 [動作]。 這表示已按過 [設定] 按鈕，它在按下後會變成灰色。
+接下來在 [事件]  區段中，我們看到已選擇 [lock_deadlock]  事件。 我們看到該事件已選取三個 [動作]  。 這表示已按過 [設定]  按鈕，它在按下後會變成灰色。
 
 ![[新增工作階段] > [事件]，[全域欄位 (動作)]。](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-接下來，仍在 [事件] > [設定] 區段中，我們看到 [**resource_type** 已設為 [PAGE]](#resource_type_dmv_actual_row)。 這表示，只要 **resource_type** 值是 [PAGE]，事件資料就會從事件引擎傳送到目標。
+接下來，仍在 [事件]   > [設定]  區段中，我們看到 [**resource_type** 已設為 [PAGE]  ](#resource_type_dmv_actual_row)。 這表示，只要 **resource_type** 值是 [PAGE]  ，事件資料就會從事件引擎傳送到目標。
 
 我們會看到資料庫名稱和計數器的其他述詞篩選。
 
 ![[新增工作階段] > [事件]，[Filter Predicate Fields (Actions) (篩選述詞欄位 (動作))]。](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-接著在 [資料儲存區] 區段，我們看到 **event_file** 已被選為目標。 而且，我們還看到已選取 [啟用檔案換用] 選項。
+接著在 [資料儲存區]  區段，我們看到 **event_file** 已被選為目標。 而且，我們還看到已選取 [啟用檔案換用]  選項。
 
 ![[新增工作階段] > [資料儲存區]，eventfile_enablefilerollover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
-最後，在 [進階] 區段看到 [分派延遲上限] 值減少到 4 秒。
+最後，在 [進階]  區段看到 [分派延遲上限]  值減少到 4 秒。
 
 ![[新增工作階段] > [進階]，[分派延遲上限]](../../relational-databases/extended-events/media/xevents-ssms-ac125-latency4.png)
 
@@ -155,7 +154,7 @@ ms.locfileid: "58788025"
 
 不論事件工作階段定義是如何建立的，工作階段可從 SSMS UI 進行還原工程，還原為 TRANSACT-SQL 指令碼完全相符。 您可以檢查前面的 [新增工作階段] 螢幕擷取畫面，比較其可見的規格和下列產生 T-SQL **CREATE EVENT SESSION** 指令碼的子句。
 
-若要進行事件工作階段的還原工程，請在 [物件總管] 中以滑鼠右鍵按一下您的工作階段節點，然後選擇 [編寫工作階段的指令碼為] > [CREATE 至] > [剪貼簿]。
+若要進行事件工作階段的還原工程，請在 [物件總管]  中以滑鼠右鍵按一下您的工作階段節點，然後選擇 [編寫工作階段的指令碼為]   > [CREATE 至]   > [剪貼簿]  。
 
 下列 T-SQL 指令碼是經由 SSMS 還原工程所建立。 然後，只能以空白字元的策略操作手動美化指令碼。
 
@@ -574,7 +573,7 @@ type           package0       xml                           Well formed XML frag
 
 下列的 SELECT 會傳回事件類型特有的所有資料欄位。
 
-- 注意 WHERE 子句項目： *column_type = 'data'*。
+- 注意 WHERE 子句項目： *column_type = 'data'* 。
 - 您也必須編輯 *o.name =* 的 WHERE 子句值。
 
 
@@ -611,7 +610,7 @@ SELECT  -- C.4
 以下為前述 SELECT 傳回的資料列 WHERE `o.name = 'lock_deadlock'`：
 
 - 每個資料列都代表 *sqlserver.lock_deadlock* 事件的選用篩選。
-- 下列畫面省略 [資料行描述]*\[\]* 資料行。 其值通常為 NULL。
+- 下列畫面省略 [資料行描述] *\[\]* 資料行。 其值通常為 NULL。
 
 
 ```
@@ -727,7 +726,7 @@ you could put:
 
 下列 SELECT 會傳回目標的每個參數。 每個參數都會標記，以指出它是否為強制。 您指派給參數的值會影響目標的行為。
 
-- 注意 WHERE 子句項目︰ *object_type = 'customizable'*。
+- 注意 WHERE 子句項目︰ *object_type = 'customizable'* 。
 - 您也必須編輯 *o.name =* 的 WHERE 子句值。
 
 
@@ -813,7 +812,7 @@ SELECT  --C.7
 
 #### <a name="output-the-only-row-including-its-xml-cell"></a>輸出：唯一的資料列，包括其 XML 儲存格。
 
-以下是前述 SELECT 輸出的唯一資料列。 資料行「XML 轉換」包含 SSMS 了解其為 XML 的 XML 字串，。 因此 SSMS 了解應該讓「XML 轉換」資料格成為可按式項目。
+以下是前述 SELECT 輸出的唯一資料列。 資料行「XML 轉換」  包含 SSMS 了解其為 XML 的 XML 字串，。 因此 SSMS 了解應該讓「XML 轉換」資料格成為可按式項目。
 
 
 為執行此作業︰

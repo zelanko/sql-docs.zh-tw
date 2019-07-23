@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a49ef95ac7e6ee122252577ccff9ec535c912fe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b736ed84e0fed6794b036d22af84912f240539fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977345"
 ---
 # <a name="isqlserverstatement-interface"></a>ISQLServerStatement 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public interface ISQLServerStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 此介面由實作[SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)。  
+ 這個介面是由[SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)所執行。  
   
  此介面會公開下列 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的特定方法：  
   

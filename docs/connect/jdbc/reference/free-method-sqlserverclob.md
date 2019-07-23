@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3845548-5186-4986-953c-ddce14057ec1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f5bd36ad4e8fc29753afca2aa8b4617c6afd6c59
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8bfbd2cd3bbde4f9ee5750c28d705ee27072d419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954469"
 ---
 # <a name="free-method-sqlserverclob"></a>free 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

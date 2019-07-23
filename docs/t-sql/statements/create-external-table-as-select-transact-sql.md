@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1c06397b74ecab0f29cb293d7efa591b36fa1ac
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073138"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  例如，如果 REJECT_VALUE = 5 且 REJECT_TYPE = value，資料庫就會在 5 個資料列發生匯入失敗時，停止匯入資料列。  
   
  percentage  
- REJECT_VALUE 是百分比，而不是常值。 當失敗的資料列「百分比」超出 *reject_value* 時，資料庫將會停止從外部資料檔案匯入資料列。 失敗的資料列百分比會每隔一段時間就計算一次。  
+ REJECT_VALUE 是百分比，而不是常值。 當失敗的資料列「百分比」  超出 *reject_value* 時，資料庫將會停止從外部資料檔案匯入資料列。 失敗的資料列百分比會每隔一段時間就計算一次。  
   
  REJECT_SAMPLE_VALUE = *reject_sample_value*  
  當 REJECT_TYPE = percentage 時便為必要項目，這指定了資料庫重新計算失敗的資料列百分比之前，會嘗試匯入的資料列數目。  
@@ -120,7 +119,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  SELECT \<select_criteria> 在新資料表中填入 SELECT 陳述式所產生的結果。 *select_criteria* 是 SELECT 陳述式的主體，可決定要複製到新資料表的資料。 如需 SELECT 陳述式的相關資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要執行此命令，**資料庫使用者**需要具備下列所有權限或成員資格：  
   
 -   將包含新資料表之本機結構描述的 **ALTER SCHEMA** 權限，或 **db_ddladmin** 固定資料庫角色的成員資格。  
@@ -168,7 +167,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   外部資料分割移動  
   
- **適用於：**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]作為建立外部資料表的先決條件，應用裝置系統管理員必須設定 Hadoop 連線能力。 如需詳細資訊，請參閱 APS 文件 (可從[這裡](https://www.microsoft.com/download/details.aspx?id=48241) 下載) 中的＜Configure Connectivity to External Data (Analytics Platform System)＞(設定對外部資料的連線能力 (Analytics Platform System))。  
+ **適用於：** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]作為建立外部資料表的先決條件，應用裝置系統管理員必須設定 Hadoop 連線能力。 如需詳細資訊，請參閱 APS 文件 (可從[這裡](https://www.microsoft.com/download/details.aspx?id=48241) 下載) 中的＜Configure Connectivity to External Data (Analytics Platform System)＞(設定對外部資料的連線能力 (Analytics Platform System))。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  由於外部資料表資料位於資料庫外，因此備份和還原作業將只會在儲存於資料庫中的資料上進行。 這意謂著將只會備份和還原中繼資料。  

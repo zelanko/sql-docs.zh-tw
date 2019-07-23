@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 249ff2d99b5d682f863e4d698b35b9e951da13b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ac59b4fb2923aacd377bb974e49dd8edebf5587
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012501"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>設定 nested triggers 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "66802494"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定巢狀觸發程序選項之後](#FollowUp)  
+-   **後續操作：** [設定巢狀觸發程序選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -50,9 +49,9 @@ ms.locfileid: "66802494"
   
 #### <a name="to-configure-the-nested-triggers-option"></a>設定 nested triggers 選項  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在物件總管  中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
-2.  在 [進階] 頁面上，將 [允許觸發程序引發其他觸發程序] 選項設定為 [True] (預設值) 或 [False]。  
+2.  在 [進階]  頁面上，將 [允許觸發程序引發其他觸發程序]  選項設定為 [True]  (預設值) 或 [False]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -60,9 +59,9 @@ ms.locfileid: "66802494"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `nested triggers` 選項的值設定為 `0`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `nested triggers` 選項的值設定為 `0`。  
   
 ```wmimof  
 USE AdventureWorks2012 ;  
