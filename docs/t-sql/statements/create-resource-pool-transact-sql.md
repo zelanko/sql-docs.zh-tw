@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2f33399282eb92cd2fbdb2a0a57befcf362379d1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117325"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_no
   
 將資源集區附加至特定排程器。 預設值是 AUTO。  
   
-AFFINITY SCHEDULER = **(** \<scheduler_range_spec>**)** 會將資源集區對應至給定識別碼所識別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程。 這些識別碼會對應至 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) 中 scheduler_id 資料行的值。 
+AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** 會將資源集區對應至給定識別碼所識別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程。 這些識別碼會對應至 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) 中 scheduler_id 資料行的值。 
   
 當您使用 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 時，資源集區會與對應至對應給定 NUMA 節點或節點範圍之實體 CPU 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器相似化。 您可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢探索實體 NUMA 組態與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排程器識別碼之間的對應。 
   

@@ -1,5 +1,5 @@
 ---
-title: Partitioning 元素 (DTA) |Microsoft Docs
+title: 分割元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 64ffd3b6775ff19443495ef46efd3fcc1ab4ae0b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9b7114d3c2efe53bd14028e1b326bd90434ff2e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034577"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

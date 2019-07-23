@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: d8d1871e4057673d9a7169c4cfa13f4672b07d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87e612d8b20fc169873d6d8b4356fdb61a8d0311
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62649524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093435"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server 的 Locks 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

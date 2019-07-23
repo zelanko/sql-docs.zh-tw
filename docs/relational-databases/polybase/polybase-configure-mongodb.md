@@ -7,14 +7,13 @@ ms.topic: conceptual
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: f255b2ed227bf1364a06a6b190eef5ac1793676b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ffce4eeb7cffab8b2a8a25c6972fdc01aaf72345
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062323"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>設定 PolyBase 存取 MongoDB 中的外部資料
 

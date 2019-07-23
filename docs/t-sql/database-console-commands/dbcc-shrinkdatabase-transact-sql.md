@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
-ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
+ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073166"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 下表描述結果集中的資料行。
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的資料庫識別碼。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的識別碼。|  
@@ -91,7 +90,7 @@ WITH NO_INFOMSGS
 >[!NOTE]
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會顯示未壓縮之檔案的資料列。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 
 >[!NOTE]
 > Azure SQL 資料倉儲目前不支援 DBCC SHRINKDATABASE。 不建議執行此命令，因為這是 I/O 密集作業，而且可以讓您的資料倉儲離線。 此外，執行此命令之後將會對您的資料倉儲快照集成本有所影響。 

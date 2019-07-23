@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 8b9a34a966a0e89cd8450fb43c12d1163e146397
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082589"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>查詢系統建立版本時態表中的資料
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

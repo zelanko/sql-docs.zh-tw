@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 196647a2c4f6dc872ec1aba7bb91d24c8809113c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fee38d51257ad21822d39700b549b2388eed1714
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112210"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 課：準備建立部署套件組合
 

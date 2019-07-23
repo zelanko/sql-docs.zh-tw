@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 558e29edd2d3fef3f59fa9821069f276efdb05d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086557"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>第 2 課：使用 SSIS 來新增迴圈
 

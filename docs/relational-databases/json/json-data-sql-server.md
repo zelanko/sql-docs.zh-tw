@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 442e349da7b8b21363e747910044cbbd537ffa0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42f33a886122f0443497934ec39d413e63b71555
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083103"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

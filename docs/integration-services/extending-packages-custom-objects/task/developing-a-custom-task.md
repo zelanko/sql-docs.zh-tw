@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 75522733a4054bd0a827913fee3cca060c2bdbdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a586ebad99fb8580ae4b303993a775487efa815
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062812"
 ---
 # <a name="developing-a-custom-task"></a>開發自訂工作
 

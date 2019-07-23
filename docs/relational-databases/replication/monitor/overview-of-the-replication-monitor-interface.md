@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4c6df1fe4c6954539afe8043ffb36c89e5f428fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e3681d88f0cd91ce955919ad24f0e95b0600c5e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061449"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>複寫監視器介面概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

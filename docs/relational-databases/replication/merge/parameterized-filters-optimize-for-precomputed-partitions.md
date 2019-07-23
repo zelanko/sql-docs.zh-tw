@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7a882660203ee2c23e1cdb6cb9dbf6aa7df407d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d4c2062662e07e35366d5bdccbf544d893568ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018693"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>參數化篩選 - 針對預先計算的資料分割最佳化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

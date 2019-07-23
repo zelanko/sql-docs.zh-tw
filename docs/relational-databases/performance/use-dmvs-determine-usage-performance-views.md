@@ -1,7 +1,6 @@
 ---
 title: 使用 DMV 來判斷檢視表的使用方式統計資料和效能
 description: 使用 DMV 來判斷檢視表的使用方式統計資料和效能
-manager: craigg
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -9,12 +8,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986666"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 來判斷檢視表的使用方式統計資料和效能
 本文涵蓋用來取得**使用檢視表的查詢效能**相關資訊的方法和指令碼。 這些指令碼的目的是提供資料庫內找到之各種檢視表的使用和效能指示器。 

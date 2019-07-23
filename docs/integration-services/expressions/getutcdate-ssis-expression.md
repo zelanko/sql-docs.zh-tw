@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 93407a41ef455dfd1b5aae2899b1f1100c514734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfa01a936ad4c788c48033512d165934775cebdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080913"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (SSIS 運算式)
 

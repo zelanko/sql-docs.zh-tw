@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: badd4ab8580292b9a95d8700026d6d9a4c8334b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dde0ecb97efe4390cda6c2eb1ba70047fc9511e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988345"
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
 

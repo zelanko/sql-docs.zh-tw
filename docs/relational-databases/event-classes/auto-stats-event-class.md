@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 462b14902e9a0a5e830e3359d3db4474a150fd5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c4060aa1508da72d9b0bd0eb23977074ecac067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913249"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

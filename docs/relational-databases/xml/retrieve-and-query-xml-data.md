@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98250d8c070c8d7dfaff5c5b1dc490d1be3fcf3d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995263"
 ---
 # <a name="retrieve-and-query-xml-data"></a>擷取及查詢 XML 資料
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

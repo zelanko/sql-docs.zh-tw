@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f16a13c9fb93d17ecb4efaa62b6ba0eb6cd879d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aa5e2a60189a82fb60cd416b7f87b35824e236f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118984"
 ---
 # <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

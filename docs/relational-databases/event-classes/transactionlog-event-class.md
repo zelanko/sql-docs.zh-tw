@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29ee7c237a8526c69deae43a6d489674f14c8a2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86d0ae46f4b75caa8bf5967d8936fe8cb815c04f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095367"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

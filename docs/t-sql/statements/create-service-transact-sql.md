@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d7344df7b16bdef8bb6d49ac5ee313916a1c0a49
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.openlocfilehash: 91ad9771c9133dc3194f25fa530bd3ba458f865a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67232501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117115"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

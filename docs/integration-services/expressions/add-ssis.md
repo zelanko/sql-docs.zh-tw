@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8be3332bb15cd43a5c5a8ba3289f3edc6217145e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 553bd2c7e9c5b86219856cf9a6e0928fbddc89a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088930"
 ---
 # <a name="-add-ssis"></a>+ (加) (SSIS)
 

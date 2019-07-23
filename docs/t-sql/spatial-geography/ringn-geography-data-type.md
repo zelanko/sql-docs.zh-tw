@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 14a29f7bfd5d55a634c5ab8be89a1f5e14dd2ccd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8de2f7c47572e8f25fdc38ce6bb537dadfc38d7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042657"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

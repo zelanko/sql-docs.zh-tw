@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 8d45a98495ab04b2c9ef106b2a432325b294f425
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3289956dd79c852eef6534ad1f72623ad4dcaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066457"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

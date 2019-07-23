@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3fbea983cc2038b1e30900ed9ad2e9b02efe5119
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e24e01fa1b8306208fab655e35747c40a9a85bae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930126"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>關閉追蹤視窗 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

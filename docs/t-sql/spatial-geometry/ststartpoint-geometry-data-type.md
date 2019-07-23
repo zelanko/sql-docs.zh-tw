@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 4bf1d079fec6b825ef3ca28e85b17d6880a305d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ede5ca7a0037eabee9c1588057fd18c45460e812
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066287"
 ---
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

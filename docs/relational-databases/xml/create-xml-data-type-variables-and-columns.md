@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecddc7c9784a4f0334588d3f58e601a49a31580b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984864"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

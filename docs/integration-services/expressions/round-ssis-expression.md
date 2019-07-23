@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0128172fa800cde1dafb0a127a1463e3295ce06f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b59e8f0256cba7e747ac6ee41d7e4e2fdf9feb1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967929"
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS 運算式)
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ceddb40eee5f5eafcc134e4ed434c2dabadd6896
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66ea50d0a0b298f45efbb0ed255c2e354bf30b47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968108"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>DQS 清理連接管理員
 

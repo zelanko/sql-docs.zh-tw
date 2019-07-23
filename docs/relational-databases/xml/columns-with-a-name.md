@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bb5e1789416ee134ce59fbc3ef107f1165ce76ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113047"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
 

@@ -1,5 +1,5 @@
 ---
-title: 適用於 SQL Server 的 Microsoft ADO.NET |Microsoft Docs
+title: 適用于 SQL Server 的 Microsoft ADO.NET |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11bf2d62735f7cb05e6ba9a601b22d4540f9565d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957656"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -41,8 +40,8 @@ ADO.NET 是 .NET 語言的核心資料存取技術。 使用 System.Data.SqlClie
   
 ## <a name="more-samples"></a>其他範例  
 * [ADO.NET Code Examples](https://msdn.microsoft.com/library/dw70f090.aspx) (ADO.NET 程式碼範例)  
-* [Windows 上的.NET Framework 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [在 macOS 上開始使用.NET Core](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [在 Ubuntu 上的.NET Core 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
-* [在 Red Hat Enterprise Linux (RHEL) 上的.NET Core 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
+* [在 Windows 上使用 .NET Framework 的消費者入門](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
+* [在 macOS 上使用 .NET Core 消費者入門](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
+* [在 Ubuntu 上使用 .NET Core 消費者入門](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL) 上的 .NET Core 消費者入門](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

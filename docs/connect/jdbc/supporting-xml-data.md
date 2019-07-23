@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f0c1dae13912ea1eda5747e4646d92b803c01cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af528f507f39cde948ae269d58abb2c0d9dcce46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004275"
 ---
 # <a name="supporting-xml-data"></a>支援 XML 資料
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的 **xml** 資料類型，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存 XML 文件和片段。 **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且在某些狀況下類似於其他內建類型，例如 **int** 和 **varchar**。 如同其他內建類型，您可以將 **xml** 資料類型當作變數類型、參數類型或函式傳回的類型使用；當作建立資料表時的資料行類型；或者在 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 和 CONVERT 函式中使用。 在 JDBC 驅動程式中，**xml** 資料類型可以對應為字串、位元組陣列、資料流、CLOB、BLOB 或 SQLXML 物件。 字串為預設對應。  
   
- JDBC 驅動程式提供 JDBC 4.0 API 的支援，此 API 引進 SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML**是 JDBC 4.0 資料類型，則會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**資料型別。 因此，若要在應用程式中使用 SQLXML 資料類型，您必須將 Classpath 設定為包含 sqljdbc4.jar 檔案。 如果應用程式在存取 SQLXML 物件及其方法時嘗試使用 sqljdbc3.jar，就會擲回例外狀況。  
+ JDBC 驅動程式提供 JDBC 4.0 API 的支援，此 API 引進 SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML**是 JDBC 4.0 資料類型, 而且它會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**資料類型。 因此，若要在應用程式中使用 SQLXML 資料類型，您必須將 Classpath 設定為包含 sqljdbc4.jar 檔案。 如果應用程式在存取 SQLXML 物件及其方法時嘗試使用 sqljdbc3.jar，就會擲回例外狀況。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一定會先驗證 XML 資料，然後再將它儲存於資料庫資料行中。 應用程式可以使用 **SQLXML** 資料類型，因為 JDBC 驅動程式會自動將它對應至 **xml** 資料類型。 sqljdbc4.jar 提供 **SQLXML** 支援。 如需 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 所支援的 JRE 版本清單，請參閱 [JDBC Driver 的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  

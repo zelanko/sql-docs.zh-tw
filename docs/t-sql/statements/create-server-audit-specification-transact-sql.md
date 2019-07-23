@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 07b16209f335dae6f2439b790898ebe4aa609c65
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a02bda17b1da0be95c0aea68720f8747ad6e672f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117171"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ FOR SERVER AUDIT audit_name
 ## <a name="remarks"></a>Remarks  
  在您為它建立伺服器稽核規格之前，必須有稽核存在。 當建立伺服器稽核規格之後，它就會處於停用狀態。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  具有 ALTER ANY SERVER AUDIT 權限的使用者可以建立伺服器稽核規格，並將其繫結至任何稽核。  
   
  一旦建立伺服器稽核規格之後，就可以使用具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 權限的主體、系統管理員 (sysadmin) 帳戶或具有此稽核之明確存取權的主體來加以檢視。  

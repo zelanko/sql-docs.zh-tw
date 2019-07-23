@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c2a515ac4cd5b6fc6cd2dce72b6b51cc648f3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be602e61cfd34e8daf97200628df7fa3147c809a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120462"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 事件類別參考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

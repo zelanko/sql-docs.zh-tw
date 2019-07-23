@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c04fe1d-6669-44a1-8b73-36d469e9b002
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5cc30a19303aea9db0e989186df820405ddb1384
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: c3e1121f2f7a504e90f971015ae16e6a4d6e6ad2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105787"
 ---
 # <a name="xml-input-file-sample-with-inline-workload-dta"></a>含內嵌工作負載的 XML 輸入檔範例 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

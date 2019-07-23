@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d781778f46617a8961506fb022854835717ea0bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114886"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

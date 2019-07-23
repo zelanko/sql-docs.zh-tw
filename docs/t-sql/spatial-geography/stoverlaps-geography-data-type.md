@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 374d6c26153247e518ffc02ca95e9dc9dfa5ce8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc0d0a449941c3d8a04526180cfa721931d98d09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120848"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fd192a18047b03898fe62d5b03ae84aad1f65149
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1ede10be1fe3ce9e225502ca9fd1ceb6108d7ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070642"
 ---
 # <a name="handling-events-programmatically"></a>以程式設計方式處理事件
 

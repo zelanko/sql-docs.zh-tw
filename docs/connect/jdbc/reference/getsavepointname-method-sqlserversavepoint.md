@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4d695c8c3d81786bdc931d576a701a7b54746a0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8fe7df1dcba7762cded47fb5483e017ed6851054
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980209"
 ---
 # <a name="getsavepointname-method-sqlserversavepoint"></a>getSavepointName 方法 (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSavepointName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getSavepointName 方法是由 java.sql.Savepoint 介面中 getSavepointName 方法指定。  
+ 這個 getSavepointName 方法是由 sql-dmo 介面中的 getSavepointName 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerSavepoint 方法](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

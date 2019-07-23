@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 55dc0c5b3cbfb51e15cd0813c87c66e840e592a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d50cef16424f5524429c6b4285af0ae8568391be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038703"
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB 資料庫)
 

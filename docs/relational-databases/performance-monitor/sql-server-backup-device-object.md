@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 1cd5ee037eb7a513e54239ec825af7cced6c4a8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93302a5b9645784b3b326229545f92de0dce56f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987209"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server 的 Backup Device 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

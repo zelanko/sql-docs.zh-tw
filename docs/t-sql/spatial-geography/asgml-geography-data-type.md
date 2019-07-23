@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9d4faaae6df3f1800c592d511972e9fa46c7348e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4264aabaca1fe1b13427fc11cf3cd1b7ccc59e99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066616"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - geography 資料型別
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

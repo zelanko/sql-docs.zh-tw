@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 429be4403d1df512b43a049b0014afcafea15740
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117672"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

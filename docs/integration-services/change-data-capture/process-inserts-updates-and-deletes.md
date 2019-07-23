@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 34f07a3b0518e202cbbcba0f15d7782da56921d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 673b265a3e8b0855095c6bcc0d3ba10206eaab94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084335"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
 
@@ -72,7 +71,7 @@ select
 ## <a name="next-step"></a>下一個步驟  
  分割要處理的資料列後，下一個步驟是將變更套用到目的地。  
   
- **下一個主題：**[將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+ **下一個主題：** [將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [條件式分割轉換](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   

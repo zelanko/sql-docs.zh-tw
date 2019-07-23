@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 29d8806e055088bbf659ecf52fcc7f1c12fdf846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eef95663a1f5b26209b1081d6481e7ca3fdd2a94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080759"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
 
