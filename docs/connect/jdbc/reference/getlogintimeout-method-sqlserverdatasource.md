@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ec8d033bc6d9bc451eaa606a00881bd4e533aa97
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5fe82d2709aa8efa32408a9d9d86f0f660bed823
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982553"
 ---
 # <a name="getlogintimeout-method-sqlserverdatasource"></a>getLoginTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public int getLoginTimeout()
 ## <a name="remarks"></a>Remarks  
  如果應用程式未明確指定逾時值，這個方法會傳回預設值 15 秒。  
   
- GetLoginTimeout 方法由 javax.sql.DataSource 介面中所指定這個 getLoginTimeout 方法。  
+ 這個 getLoginTimeout 方法是由 javax.xml.transform.dom.domresult 介面中的 getLoginTimeout 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5cf0c29f6d095361cb3fd8a1d1cb316beb646433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 861e686d4a64b1030224b8ec35551fade4188ca5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992835"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +43,7 @@ sqlsrv_client_info( resource $conn)
   
 **若是 SQL Server 3.2 和 3.1 版的 PHP**：  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  
@@ -53,7 +52,7 @@ sqlsrv_client_info( resource $conn)
   
 **若是 SQL Server 3.0 和 2.0 版的 PHP**：  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  

@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b3bed617efc3f2c646f237629ca8d737729915c0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1d697554d246d9bcc1720455137287029880d90a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955162"
 ---
 # <a name="datetimeoffset-class"></a>DateTimeOffset 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  這種類型代表 microsoft.sql.datetimeoffset 型別的物件，對應至 Java 型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetimeoffset**資料型別。  
+  此類型代表 sql-dmo 類型的物件, 而且是對應至[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **DateTimeOffset**資料類型的 JAVA 類型。  
   
  **套件：** microsoft.sql  
   
@@ -37,7 +36,7 @@ public final class DateTimeOffset
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 如需資料類型的詳細資訊，請參閱 <<c0> [ 了解 JDBC Driver 資料類型](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。  
+ 如需資料類型的詳細資訊, 請參閱[瞭解 JDBC 驅動程式資料類型](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [JDBC 驅動程式 API 參考](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   

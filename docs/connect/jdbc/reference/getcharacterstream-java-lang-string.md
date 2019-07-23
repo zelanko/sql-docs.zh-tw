@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5281e1b8-19b8-4fe5-83be-929d1987e25d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0a6712bc8bed19ea373bfc7202cbcac6a11205e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e52ff3e9bc9da36d3874382341a1f46eb722ad3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953540"
 ---
 # <a name="getcharacterstream-javalangstring"></a>getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final java.io.Reader getCharacterStream(java.lang.String paramName)
  指出參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- 讀取器物件。  
+ Reader 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

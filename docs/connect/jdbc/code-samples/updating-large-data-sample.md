@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d178f847ae9de2ca8ec9af07433c88b950fddc2f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: efde9e7254d73fcc84caeb2fce3df96bc3c88972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957029"
 ---
 # <a name="updating-large-data-sample"></a>更新大型資料範例
 

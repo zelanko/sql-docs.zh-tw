@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d1569e03-b7bd-486a-af0b-d3f108f712dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c9d557bf62961a02c24564a6f32516b4b98ef425
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 97a95d60a6679a8d5c660fc40a67d680a7a62571
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977312"
 ---
 # <a name="isreadonly-method-sqlserverdatabasemetadata"></a>isReadOnly 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean isReadOnly()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 isReadOnly 方法是由 java.sql.DatabaseMetaData 介面中的 isReadOnly 方法指定。  
+ 這個 isReadOnly 方法是由 JAVA.sql.databasemetadata 介面中的 isReadOnly 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

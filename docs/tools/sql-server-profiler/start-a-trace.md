@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1d27aeff0582edf59c2bc02a94172a4194fab8f1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 40526c910ad10dd280f7eb304abe4db518f8c530
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059647"
 ---
 # <a name="start-a-trace"></a>啟動追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 36db9ff7-5819-4827-9803-4a81c99069b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a414562a8ed400e3d667e304924b0487a5176891
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0d8a81004e846986e7352eabb880404ae3cc8c51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955596"
 ---
 # <a name="close-method-sqlserverpreparedstatement"></a>close 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

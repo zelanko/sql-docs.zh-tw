@@ -1,5 +1,5 @@
 ---
-title: 使用陳述式與預存程序 |Microsoft Docs
+title: 搭配預存程式使用語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2dd4ead601700baefaf356840fba4184ab427ef2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003936"
 ---
 # <a name="using-statements-with-stored-procedures"></a>搭配預存程序使用陳述式
 
@@ -33,17 +32,17 @@ ms.locfileid: "66798552"
 > [!NOTE]  
 > 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的＜了解預存程序＞。  
   
-為了使用預存程序來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別。 要使用哪一個類別視預存程序是否需要 IN (輸入) 或 OUT (輸出) 參數而定。 如果預存程序不需要 IN 或 OUT 參數，您可以使用 SQLServerStatement 類別；如果會多次呼叫預存程序，或只需要 IN 參數，則您可以使用 SQLServerPreparedStatement 類別。 如果預存程序同時需要 IN 及 OUT 參數，您應該使用 SQLServerCallableStatement 類別。 只有在預存程序需要 OUT 參數時，您才需要額外使用 SQLServerCallableStatement 類別。  
+為了使用預存程序來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別。 要使用哪一個類別視預存程序是否需要 IN (輸入) 或 OUT (輸出) 參數而定。 如果預存程序不需要 IN 或 OUT 參數，您可以使用 SQLServerStatement 類別；如果會多次呼叫預存程序，或只需要 IN 參數，則您可以使用 SQLServerPreparedStatement 類別。 如果預存程式同時需要 IN 和 OUT 參數, 您應該使用 SQLServerCallableStatement 類別。 只有在預存程序需要 OUT 參數時，您才需要額外使用 SQLServerCallableStatement 類別。  
   
 > [!NOTE]  
-> 預存程序也可以傳回更新計數和多個結果集。 如需詳細資訊，請參閱 <<c0> [ 使用更新計數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)並[使用多個結果集](../../connect/jdbc/using-multiple-result-sets.md)。  
+> 預存程序也可以傳回更新計數和多個結果集。 如需詳細資訊, 請參閱[使用具有更新計數的預存](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)程式和[使用多個結果集](../../connect/jdbc/using-multiple-result-sets.md)。  
   
 當使用 JDBC 驅動程式呼叫具有參數的預存程序時，您必須使用 `call` SQL 逸出序列與 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法搭配。 `call` 逸出序列的完整語法如下：  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
-> 如需詳細資訊`call`和其他 SQL 逸出序列，請參閱 <<c2> [ 使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
+> 如需和其他 sql `call` escape 序列的詳細資訊, 請參閱[使用 SQL escape 序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
   
 本節的主題描述您可以使用 JDBC 驅動程式和 `call` SQL 逸出序列來呼叫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序的方式。  
   

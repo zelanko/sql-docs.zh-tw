@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7bec2bd2a4b7509a69a7a6ff3e9ab5dcee8de586
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 98880980d11775b3c906b6e51a2d9deef50316bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972025"
 ---
 # <a name="sqlserverblob-class"></a>SQLServerBlob 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

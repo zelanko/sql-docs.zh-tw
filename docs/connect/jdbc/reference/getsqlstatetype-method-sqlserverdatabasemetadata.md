@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55079e30c2f8908153cc708aca699e77aef41261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979728"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public int getSQLStateType()
 ## <a name="return-value"></a>傳回值  
  指出 SQLSTATE 類型的 **int**，可能是下列其中一個值：  
   
--   針對 Java Runtime Environment 5.0 版： 如果**xopenStates**連接屬性設定為 **，則為 true**，這個方法會傳回 DatabaseMetaData.sqlStateXOpen。 否則，DatabaseMetaData.sqlStateSQL99。  
+-   針對 JAVA Runtime Environment 版本 5.0: 如果**xopenStates**連接屬性設定為**true**, 則這個方法會傳回 java.sql.databasemetadata. sqlStateXOpen。 否則，DatabaseMetaData.sqlStateSQL99。  
   
--   針對 Java Runtime Environment 6.0 版： 如果**xopenStates**連接屬性設定為 **，則為 true**，這個方法會傳回 DatabaseMetaData.sqlStateXOpen。 否則，DatabaseMetaData.sqlStateSQL。  
+-   針對 JAVA Runtime Environment 版本 6.0: 如果**xopenStates**連接屬性設定為**true**, 則這個方法會傳回 java.sql.databasemetadata. sqlStateXOpen。 否則, JAVA.sql.databasemetadata. sqlStateSQL。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 getSQLStateType 方法是由 java.sql.DatabaseMetaData 介面中 getSQLStateType 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 getSQLStateType 方法是由 JAVA.sql.databasemetadata 介面中的 getSQLStateType 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -41,17 +41,16 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e042e9d81d389a323e092b2f370b03cb66c2921c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059706"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一種會從伺服器擷取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。 以下是命令和的對話方塊中可用的設定[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一種會從伺服器擷取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。 下列是的對話方塊[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中可用的命令和設定。  
 ## <a name="trace-properties"></a>追蹤屬性
 ### <a name="general-tab"></a>一般索引標籤
 使用 **[追蹤屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視或指定追蹤的屬性。  
@@ -87,7 +86,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一�
 |**組織資料行**|變更追蹤中資料行的順序，並且依據一或多個資料行對結果進行分組。  
 
 ## <a name="trace-template-properties"></a>追蹤範本屬性 
-### <a name="new-general-tab"></a>新 （一般索引標籤）
+### <a name="new-general-tab"></a>新增 (一般索引標籤)
 使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [檔案]  功能表上，指向 [範本]  ，然後按一下 [新增]  。
 
 |項目|Description
@@ -97,7 +96,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一�
 |**以現有的範本作為新範本的基礎**|使用清單中的範本作為此範本的基礎。 所有選取的事件、資料行與篩選，起初都與現有之範本中的項目相符，然後可以視需要加以修改。  
 |**作為所選取伺服器類型的預設範本**|依預設，會針對為此伺服器類型所建立的追蹤使用此範本。  
 
-### <a name="edit-general-tab"></a>編輯 （一般索引標籤）
+### <a name="edit-general-tab"></a>編輯 (一般索引標籤)
  使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來檢視或編輯現有的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上指向 **[範本]** ，然後按一下 **[編輯範本]** 。  
 
 |項目|Description
@@ -171,7 +170,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一�
 2.  核取您要與 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤檔建立相互關聯的計數器。  
 
 如果您要選取效能物件的所有計數器，請核取該效能物件相鄰的方塊。 核取最頂端的節點 (指出電腦)，就會選取效能記錄檔中所包含的所有效能物件和計數器。 
-## <a name="toolsoptions-general-options-page"></a>工具/選項 （[一般選項] 頁面）
+## <a name="toolsoptions-general-options-page"></a>工具/選項 (一般選項頁面)
 使用 [一般選項]  對話方塊來檢視或指定下列選項。  
 ### <a name="display-options"></a>顯示選項  
 

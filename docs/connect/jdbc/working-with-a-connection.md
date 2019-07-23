@@ -1,5 +1,5 @@
 ---
-title: 使用連線 |Microsoft Docs
+title: 使用連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fa216c6fb20ab5881865e2baf283d233b4abbfca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916078"
 ---
 # <a name="working-with-a-connection"></a>使用連接
 

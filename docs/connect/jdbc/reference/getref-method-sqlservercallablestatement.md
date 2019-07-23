@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c7632a9-1ef6-46f0-8208-06a6cbd202e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3784a38eb530bc2a19e0fa08e62146934746ed53
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1f0a37385750db130a82bee39e430f5d4632f139
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980567"
 ---
 # <a name="getref-method-sqlservercallablestatement"></a>getRef 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

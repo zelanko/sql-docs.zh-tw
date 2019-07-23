@@ -1,6 +1,6 @@
 ---
 title: 使用資料庫鏡像 |Microsoft Docs
-description: 使用資料庫鏡像與 OLE DB Driver for SQL Server
+description: 針對 SQL Server 使用具有 OLE DB 驅動程式的資料庫鏡像
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: eba70e8a4ee641b4bccb54f67f37015a0edbd434
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9d61dfe1441029cfa1b742e3b56021e55764d4eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988874"
 ---
 # <a name="using-database-mirroring"></a>使用資料庫鏡像
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "66802895"
  指定鏡像資料庫名稱時，可以使用別名。  
   
 > [!NOTE]  
->  初始連接嘗試與鏡像資料庫的重新連線嘗試的相關資訊，請參閱[用戶端連接至資料庫鏡像工作階段&#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
+>  如需有關初始連接嘗試和鏡像資料庫之重新連接嘗試的詳細資訊, 請參閱[將用戶端&#40;連接&#41;到資料庫鏡像會話 SQL Server](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 ## <a name="programming-considerations"></a>程式設計考量  
  當主體資料庫伺服器失敗時，用戶端應用程式會在回應 API 呼叫時收到錯誤，這表示與資料庫的連接已經中斷。 發生這個情況時，對於資料庫的任何未認可變更都會遺失，而且目前的交易會回復。 如果發生這個情況，應用程式應該關閉連接 (或釋出資料來源物件) 然後再重新開啟它。 此連接會以透明的方式重新導向鏡像資料庫，現在當做主體伺服器使用。  
@@ -55,18 +54,18 @@ ms.locfileid: "66802895"
  建立連接時，主體伺服器會將其容錯移轉夥伴的識別傳送到容錯移轉發生時所使用的用戶端。 在應用程式嘗試在主體伺服器失敗後建立連接的情況下，用戶端不會知道容錯移轉夥伴的識別。 為了讓用戶端有機會處理此狀況，初始化屬性和相關聯的連接字串關鍵字可讓用戶端自行指定容錯移轉夥伴的識別。 只有在有可用的主體伺服器，但未使用時，才會在此狀況中使用用戶端屬性。 如果用戶端提供的容錯移轉夥伴伺服器指的不是當做容錯移轉夥伴的伺服器，伺服器就會拒絕連接。 若要讓應用程式符合組態變更，實際容錯移轉夥伴的識別可以透過檢查建立連接後的屬性來判斷。 如果第一次建立連接的嘗試失敗，您應該考慮快取處理夥伴資訊來更新連接字串或想出重試策略。  
   
 > [!NOTE]  
->  如果您要在 DSN、連接字串或連接屬性 (Property)/屬性 (Attribute) 中使用此功能，您必須明確指定連接所使用的資料庫。 如果不這麼做，則 OLE DB Driver for SQL Server 不會嘗試容錯移轉到夥伴資料庫。  
+>  如果您要在 DSN、連接字串或連接屬性 (Property)/屬性 (Attribute) 中使用此功能，您必須明確指定連接所使用的資料庫。 SQL Server 的 OLE DB 驅動程式不會嘗試容錯移轉到夥伴資料庫 (如果未這麼做)。  
 >   
 >  鏡像是資料庫的一個功能。 使用多個資料庫的應用程式可能無法使用此功能。  
 >   
 >  此外，伺服器名稱不區分大小寫，但是資料庫名稱會區分大小寫。 因此，您應該確認您在 DSN 和連接字串中使用相同的大小寫。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- OLE DB Driver for SQL Server 透過連接和連接字串屬性支援資料庫鏡像。 SSPROP_INIT_FAILOVERPARTNER 屬性已加入到 DBPROPSET_SQLSERVERDBINIT 屬性集，而 **FailoverPartner** 關鍵字是 DBPROP_INIT_PROVIDERSTRING 的新連接字串屬性。 如需詳細資訊，請參閱 < [OLE DB Driver for SQL Server 搭配使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ OLE DB Driver for SQL Server 透過連接和連接字串屬性支援資料庫鏡像。 SSPROP_INIT_FAILOVERPARTNER 屬性已加入到 DBPROPSET_SQLSERVERDBINIT 屬性集，而 **FailoverPartner** 關鍵字是 DBPROP_INIT_PROVIDERSTRING 的新連接字串屬性。 如需詳細資訊, 請參閱[使用連接字串關鍵字搭配適用于 SQL Server 的 OLE DB 驅動程式](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
   
  只要載入提供者，就可以維持容錯移轉快取，直到呼叫 **CoUninitialize** 為止，或只要應用程式擁有 OLE DB Driver for SQL Server 所管理之特定物件的參考即可，例如資料來源物件。  
   
- 如需詳細 OLE DB Driver for SQL Server 支援資料庫鏡像，請參閱[初始化和授權屬性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
+ 如需資料庫鏡像之 SQL Server 支援 OLE DB 驅動程式的詳細資訊, 請參閱[初始化和授權屬性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
  
   
 ## <a name="see-also"></a>另請參閱  

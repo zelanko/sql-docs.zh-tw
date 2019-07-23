@@ -16,13 +16,12 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 503e0f8fcc7cac9a3001ec00fb872642c1fcecd8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994183"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "66803784"
   
  取用者可藉由設定某些資料列集屬性，在資料列集中要求不同的資料指標行為。 如果取用者未設定其中任何一個資料列集屬性，或是將所有屬性都設定為預設值，OLE DB Driver for SQL Server 會使用預設結果集來實作此資料列集。 如果任何一個屬性設定為預設值以外的值，OLE DB Driver for SQL Server 會使用伺服器資料指標來實作此資料列集。  
   
- 下列的資料列集屬性直接 OLE DB Driver for SQL Server 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標。 某些屬性可以安全地與其他屬性合併在一起。 例如，顯示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 屬性的資料列集將會是一個顯示立即更新行為的書籤資料列集。 其他屬性互斥。 例如，顯示 DBPROP_OTHERINSERT 的資料列集不能包含書籤。  
+ 下列資料列集屬性會指示 SQL Server 的 OLE DB 驅動程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用資料指標。 某些屬性可以安全地與其他屬性合併在一起。 例如，顯示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 屬性的資料列集將會是一個顯示立即更新行為的書籤資料列集。 其他屬性互斥。 例如，顯示 DBPROP_OTHERINSERT 的資料列集不能包含書籤。  
   
 |屬性識別碼|ReplTest1|資料列集行為|  
 |-----------------|-----------|---------------------|  

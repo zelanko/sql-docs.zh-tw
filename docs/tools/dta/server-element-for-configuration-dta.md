@@ -1,5 +1,5 @@
 ---
-title: 伺服器組態的元素 (DTA) |Microsoft Docs
+title: Configuration (DTA) 的 Server 元素 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 276af9a4703d70a930d39e06cb4ad21e2d56c9e2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9f5ce7a8d8cda4c130da96a68e9cbdbacd8b5fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105987"
 ---
 # <a name="server-element-for-configuration-dta"></a>組態的 Server 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

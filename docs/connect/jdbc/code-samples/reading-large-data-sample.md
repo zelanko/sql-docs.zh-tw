@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8fe0e62d12f9bb7f4336e338c4d6594d9a94268e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cc18dbddf98e41957e0b9e47058a0eab2f65fba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957183"
 ---
 # <a name="reading-large-data-sample"></a>讀取大型資料範例
 

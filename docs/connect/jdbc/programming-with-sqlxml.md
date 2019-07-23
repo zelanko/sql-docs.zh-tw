@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956179"
 ---
 # <a name="programming-with-sqlxml"></a>使用 SQLXML 進行程式設計
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,11 +27,11 @@ ms.locfileid: "66794047"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>讀取和寫入具有 SQLXML 物件的 XML 資料  
  下列清單描述如何使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API 方法來讀取和寫入具有 SQLXML 物件的 XML 資料：  
   
--   若要建立 SQLXML 物件，請使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法。 請注意，這種方法會建立不含任何資料的 SQLXML 物件。 若要新增**xml** SQLXML 物件的資料呼叫 SQLXML 介面中指定下列方法之一： setResult、 setCharacterStream、 setBinaryStream、 或 setString。  
+-   若要建立 SQLXML 物件，請使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法。 請注意，這種方法會建立不含任何資料的 SQLXML 物件。 若要將**xml**資料加入至 sqlxml 物件, 請呼叫 sqlxml 介面中指定的下列其中一種方法: SetResult、SetCharacterStream、SetBinaryStream 或 setString。  
   
 -   若要擷取 SQLXML 物件本身，請使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別的 getSQLXML 方法。  
   
--   若要擷取**xml** SQLXML 物件的資料使用 SQLXML 介面中指定下列方法之一： Ierrorinfo getCharacterStream，getBinaryStream，或 getString。  
+-   若要從 SQLXML 物件中取出**xml**資料, 請使用 sqlxml 介面中指定的下列其中一種方法: GetSource、GetCharacterStream、GetBinaryStream 或 getString。  
   
 -   若要更新 SQLXML 物件中的 **xml** 資料，請使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 方法。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66794047"
   
 -   [方法名稱] 欄位會列出 JDBC API 中支援的 getter、setter 和 updater 方法。   
   
--   [Getter SQLXML 物件] 欄位代表 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法所建立的 SQLXML 物件。  
+-   [Getter SQLXML 物件] 欄位代表 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 方法或 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 方法所建立的 SQLXML 物件。   
   
 -   [Setter SQLXML 物件] 欄位代表 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法所建立的 SQLXML 物件。  請注意，下列 setter 方法僅接受 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 方法所建立的 SQLXML 物件。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66794047"
  XML 剖析器無法處理空值。 不過，SQL Server 允許應用程式在 XML 資料類型的資料庫資料行中擷取和儲存空值。 這表示，剖析 XML 資料時，如果基礎值是空的，剖析器就會擲回例外狀況。 若為 DOM 輸出，JDBC Driver 會捕捉例外狀況並擲回錯誤。 若為 SAX 和 Stax 輸出，錯誤則直接來自剖析器。  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>適應性緩衝和 SQLXML 支援  
- SQLXML 物件所傳回的二進位和字元資料流會遵循適應性或完整緩衝模式。 反之，如果 XML 剖析器不是資料流，它們就不會遵循適應性或完整設定。 如需有關適應性緩衝的詳細資訊，請參閱 <<c0> [ 使用適應性緩衝](../../connect/jdbc/using-adaptive-buffering.md)。  
+ SQLXML 物件所傳回的二進位和字元資料流會遵循適應性或完整緩衝模式。 反之，如果 XML 剖析器不是資料流，它們就不會遵循適應性或完整設定。 如需適應性緩衝的詳細資訊, 請參閱[使用適應性緩衝](../../connect/jdbc/using-adaptive-buffering.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)  

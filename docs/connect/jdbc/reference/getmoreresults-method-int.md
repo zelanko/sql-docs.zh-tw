@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad7363db0cb1de986273e59d698e2f1b00d50deb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981772"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public final boolean getMoreResults(int mode)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- GetMoreResults 方法 java.sql.Statement 介面中所指定這個 getMoreResults 方法。  
+ 這個 getMoreResults 方法是由 sql 語句介面中的 getMoreResults 方法指定。  
   
  如果在擷取結果之前呼叫 getMoreResults 方法，它的行為會如同 *mode* 引數所指定，並移到下一個結果。  
   

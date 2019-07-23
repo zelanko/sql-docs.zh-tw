@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11bd963275f94fd5ab37d17ead561adbfb0bff5c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1d152001d1b0eb4ad47936d04ba6c74b8ae7f6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974277"
 ---
 # <a name="setfailoverpartner-method-sqlserverdatasource"></a>setFailoverPartner 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,16 +10,15 @@ ms.topic: conceptual
 ms.assetid: 75622982-1815-4d96-906c-a0494c8a0b53
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8142584ad9fdf4bd29b50ea1133f15afeb1ef8aa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6ff612b0d4682726f559e0a1eff41b96bd2a84f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993728"
 ---
 # <a name="connecting-to-microsoft-azure-sql-database"></a>連線到 Microsoft Azure SQL Database
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-如需有關如何連接到 Azure SQL Database 的詳細資訊，請參閱 <<c0> [ 如何從 PHP 存取 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/)。  
+如需有關連接至 Azure SQL 資料庫的詳細資訊, 請參閱[如何從 PHP 存取 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/)。  
   

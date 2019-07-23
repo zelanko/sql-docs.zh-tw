@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c6c7b378f8b8260f0124e5d87b1bb0c20f5f3293
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ec9d1717d12624ffa7663479f1d98146aea1137f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916337"
 ---
 # <a name="using-connection-pooling"></a>使用連接共用
 

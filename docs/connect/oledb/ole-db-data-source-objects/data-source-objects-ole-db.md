@@ -18,28 +18,27 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015919"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 會針對用於建立資料存放區連結的 OLE DB 介面集合，使用資料來源這個詞；例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 建立提供者的資料來源物件的執行個體是 OLE DB Driver for SQL Server 取用者的第一個工作。  
+  OLE DB Driver for SQL Server 會針對用於建立資料存放區連結的 OLE DB 介面集合，使用資料來源這個詞；例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 建立提供者之資料來源物件的實例是 SQL Server 取用者之 OLE DB 驅動程式的第一項工作。  
   
- 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 OLE DB driver for SQL Server 的 CLSID 為 C /C++ GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 會解析為正確的符號 progid 您參考 msoledbsql.h 檔案中)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
+ 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 SQL Server 的 OLE DB 驅動程式的 CLSID 是 C/C++ GUID CLSID_MSOLEDBSQL (符號 MSOLEDBSQL_CLSID 會解析為您參考的內含 msoledbsql.h 檔案中正確的 progid)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
   
- OLE DB Driver for SQL Server 是在同處理序伺服器。 OLE DB Driver for SQL Server 物件的執行個體會使用 CLSCTX_INPROC_SERVER 巨集來建立，以便指示可執行的內容。  
+ SQL Server 的 OLE DB 驅動程式是同進程伺服器。 OLE DB Driver for SQL Server 物件的執行個體會使用 CLSCTX_INPROC_SERVER 巨集來建立，以便指示可執行的內容。  
   
  OLE DB Driver for SQL Server 資料來源物件會公開允許取用者連線到現有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的 OLE DB 初始化介面。  
   
- 每個連接都會透過 OLE DB Driver for SQL Server 會自動設定這些選項：  
+ 透過的 OLE DB 驅動程式所建立 SQL Server 的每個連接都會自動設定這些選項:  
   
 -   SET ANSI_WARNINGS ON  
   

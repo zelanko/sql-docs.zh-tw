@@ -15,13 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989244"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>搭配使用 ADO 與 OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,12 +29,12 @@ ms.locfileid: "66778053"
 
   若要運用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 所導入的新功能 (例如 Multiple Active Result Set (MARS)、查詢通知、使用者定義型別 (UDT) 或新的 **xml** 資料類型)，使用 ActiveX Data Objects (ADO) 的現有應用程式應該使用 OLE DB Driver for SQL Server 當做其資料存取提供者。  
   
- 為了讓 ADO 使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，我們已經對 OLE DB Driver for SQL Server 新增了一些增強功能，以便擴充 OLE DB 的核心功能。 這些增強功能可讓 ADO 應用程式使用較新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，以及取用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 所導入的兩種資料類型：**xml** 和 **udt**。 這些增強功能也會利用 **varchar**、**nvarchar** 和 **varbinary** 資料類型的增強功能。 OLE DB Driver for SQL Server 會將 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化屬性新增至 ADO 應用程式所使用的 DBPROPSET_SQLSERVERDBINIT 屬性集，以便使用與 ADO 相容的方式來公開這些新的資料類型。 此外，OLE DB Driver for SQL Server 也會定義新的連接字串關鍵字，名為**DataTypeCompatibility**設定連接字串中。  
+ 為了讓 ADO 使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，我們已經對 OLE DB Driver for SQL Server 新增了一些增強功能，以便擴充 OLE DB 的核心功能。 這些增強功能可讓 ADO 應用程式使用較新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，以及取用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 所導入的兩種資料類型：**xml** 和 **udt**。 這些增強功能也會利用 **varchar**、**nvarchar** 和 **varbinary** 資料類型的增強功能。 OLE DB Driver for SQL Server 會將 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化屬性新增至 ADO 應用程式所使用的 DBPROPSET_SQLSERVERDBINIT 屬性集，以便使用與 ADO 相容的方式來公開這些新的資料類型。 此外, SQL Server 的 OLE DB 驅動程式也會定義在連接字串中設定的新連接字串關鍵字, 名為**DataTypeCompatibility** 。  
 
 > [!NOTE]  
->  現有的 ADO 應用程式可以使用 SQLOLEDB 提供者來存取並更新 XML、UDT 和大數值文字與二進位欄位值。 新的較大 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型會分別傳回成 ADO 類型 **adLongVarChar**、**adLongVarWChar** 和 **adLongVarBinary**。 XML 資料行會傳回成 **adLongVarChar**，而且 UDT 資料行會傳回成 **adVarBinary**。 不過，如果您使用 OLE DB Driver for SQL Server (MSOLEDBSQL) 取代 SQLOLEDB，您必須確定設定**DataTypeCompatibility**關鍵字為"80"，讓新的資料類型會正確對應至 ADO 資料類型。  
+>  現有的 ADO 應用程式可以使用 SQLOLEDB 提供者來存取並更新 XML、UDT 和大數值文字與二進位欄位值。 新的較大 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 資料類型會分別傳回成 ADO 類型 **adLongVarChar**、**adLongVarWChar** 和 **adLongVarBinary**。 XML 資料行會傳回成 **adLongVarChar**，而且 UDT 資料行會傳回成 **adVarBinary**。 不過, 如果您使用適用于 SQL Server 的 OLE DB 驅動程式 (內含 MSOLEDBSQL.H), 而不是 SQLOLEDB, 則必須確定將**DataTypeCompatibility**關鍵字設定為 "80", 如此新的資料類型才會正確對應至 ADO 資料類型。  
 
-## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>啟用 OLE DB Driver for SQL Server 從 ADO  
+## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>啟用從 ADO SQL Server 的 OLE DB 驅動程式  
  若要能夠使用 OLE DB Driver for SQL Server，ADO 應用程式必須在其連接字串中實作下列關鍵字：  
 
 -   `Provider=MSOLEDBSQL`  
@@ -59,7 +58,7 @@ con.Open
 ```  
 
 ## <a name="examples"></a>範例  
- 下列各節提供如何使用 ADO 與 OLE DB Driver for SQL Server 的範例。  
+ 下列各節提供如何使用 ADO 搭配 SQL Server 之 OLE DB 驅動程式的範例。  
 
 ### <a name="retrieving-xml-column-data"></a>擷取 XML 資料行資料  
  在這個範例中，使用了資料錄集來擷取並顯示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** 範例資料庫中 XML 資料行的資料。  

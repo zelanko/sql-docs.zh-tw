@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fb45d4df3ab054c320bb110c009e8fc4ea6edb59
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ca5946eb5c6450d55168f64dddbd0ca82d986be9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935740"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 驅動程式 - pyodbc
 
-![下載-向下箭號-圈選起來](../../../ssdt/media/download.png)[安裝適用於 Python 的 SQL 驅動程式](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![下載-Download-downarrow-circled-圓形](../../../ssdt/media/download.png)[以安裝適用于 Python 的 SQL 驅動程式](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="getting-started"></a>使用者入門
 
@@ -30,4 +29,4 @@ ms.locfileid: "66761671"
 
 ## <a name="documentation"></a>文件集
 
-* [pyodbc 文件](https://mkleehammer.github.io/pyodbc/)  
+* [pyodbc 檔](https://mkleehammer.github.io/pyodbc/)  

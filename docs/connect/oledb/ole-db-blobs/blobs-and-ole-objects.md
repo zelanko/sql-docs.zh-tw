@@ -1,5 +1,5 @@
 ---
-title: Blob 與 OLE 物件 |Microsoft Docs
+title: Blob 和 OLE 物件 |Microsoft Docs
 description: BLOB 與 OLE 物件
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988676"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66800696"
 
   OLE DB Driver for SQL Server 會公開 **ISequentialStream** 介面來支援取用者存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**、**text**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 以及 xml 資料類型，作為二進位大型物件 (BLOB)。 **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
   
- 如需示範這項功能的範例，請參閱 <<c0> [ 大型資料集&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。</c0>  
+ 如需示範這項功能的範例, 請參閱[Set 大型資料&#40; &#41;OLE DB](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
  當取用者在針對資料修改所繫結的存取子中提供介面指標時，OLE DB Driver for SQL Server 可以使用取用者實作的 **IStorage** 介面。  
   
@@ -47,11 +46,11 @@ ms.locfileid: "66800696"
   
 -   繫結為 DBTYPE_IUNKNOWN 並使用資料流。  
   
- 如果繫結至 DBTYPE_IUNKNOWN，就會使用 ISequentialStream 資料流功能。 OLE DB Driver for SQL Server 支援大數值資料類型為 DBTYPE_IUNKNOWN 繫結 output 參數。 這是為了支援其中的預存程序會傳回這些資料類型當做傳回值，為 DBTYPE_IUNKNOWN 時傳回給用戶端的案例。  
+ 如果繫結至 DBTYPE_IUNKNOWN，就會使用 ISequentialStream 資料流功能。 SQL Server 的 OLE DB 驅動程式支援將輸出參數系結為大數值資料類型的 DBTYPE_IUNKNOWN。 這是為了支援案例, 其中預存程式會傳回這些資料類型做為傳回值, 並以 DBTYPE_IUNKNOWN 的形式傳回給用戶端。  
   
 ## <a name="storage-object-limitations"></a>儲存物件的限制  
   
--   OLE DB Driver for SQL Server 可支援只有單一開啟的儲存體物件。 開啟多個儲存物件的嘗試 (取得多個 **ISequentialStream** 介面指標的參考) 會傳回 DBSTATUS_E_CANTCREATE。  
+-   SQL Server 的 OLE DB 驅動程式只能支援單一開啟的儲存物件。 開啟多個儲存物件的嘗試 (取得多個 **ISequentialStream** 介面指標的參考) 會傳回 DBSTATUS_E_CANTCREATE。  
   
 -   在 OLE DB Driver for SQL Server 中，DBPROP_BLOCKINGSTORAGEOBJECTS 唯讀屬性的預設值為 VARIANT_TRUE。 因此，如果儲存物件作用中，某些方法 (非儲存物件的方法) 將會失敗，並出現 E_UNEXPECTED。  
   

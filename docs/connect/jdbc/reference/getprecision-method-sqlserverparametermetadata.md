@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4f7959476f092389f22f2d7720927907b8f59d69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b0c6b7d8c69e1cc6bc4a9e8d239c3a47c24573d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980787"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>getPrecision 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getPrecision(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getPrecision 方法是由 java.sql.ParameterMetaData 介面中 getPrecision 方法指定。  
+ 這個 getPrecision 方法是由 JAVA.sql.parametermetadata 介面中的 getPrecision 方法指定。  
   
  如果是數字型別，這個方法會取得小數位數。 如果是字元型別，它會取得以字元為單位的最大長度。 如果是二進位型別，它會取得以位元組為單位的最大長度。 當位數未知時，這個方法會傳回 "0"。  
   

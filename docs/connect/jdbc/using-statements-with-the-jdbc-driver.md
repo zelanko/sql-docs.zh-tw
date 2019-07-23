@@ -1,5 +1,5 @@
 ---
-title: 使用陳述式與 JDBC 驅動程式 |Microsoft Docs
+title: 搭配 JDBC Driver 使用語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 12258f95bd08d4fa196557efa7a6acf4feaa0d8f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7646903fc9efcbdb838b4a2d585735dc3a105639
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005919"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用陳述式
 

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a5cb52f4e27ea933b4988c3c8f2daee6fb90147d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015045"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,14 +42,14 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
   
 從 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]3.0 版開始，您也可以透過 `"(localdb)\instancename"`指定 LocalDB 執行個體。 如需詳細資訊，請參閱[支援 LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。  
   
-此外，從 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]3.0 版開始，您也可以指定虛擬網路名稱，以連接到 AlwaysOn 可用性群組。 如需詳細資訊[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支援[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，請參閱[支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。  
+此外，從 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]3.0 版開始，您也可以指定虛擬網路名稱，以連接到 AlwaysOn 可用性群組。 如需有關[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支援的[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]詳細資訊, 請參閱[高可用性和嚴重損壞修復的支援](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。  
   
 *$connectionInfo* [選擇性]：一個關聯**陣列**，其中包含連線屬性 (例如 **array**("Database" => "AdventureWorks"))。 如需支援陣列的索引鍵清單，請參閱 [Connection Options](../../connect/php/connection-options.md) 。  
   
 ## <a name="return-value"></a>傳回值  
 PHP 連接資源。 如果連接無法成功建立並開啟，則傳回 **false** 。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 如果未在選用 *$connectionInfo* 參數中指定 *UID* 和 *PWD* 索引鍵的值，則會使用 Windows 驗證嘗試進行連接。 如需關於連接到伺服器的詳細資訊，請參閱 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 和 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
   
 ## <a name="example"></a>範例  

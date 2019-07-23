@@ -1,5 +1,5 @@
 ---
-title: 疑難排解連線能力 |Microsoft Docs
+title: 針對連線能力進行疑難排解 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004239"
 ---
 # <a name="troubleshooting-connectivity"></a>連接性疑難排解
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66798253"
   
     -   已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但未使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路公用程式，或是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，將 TCP/IP 安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的網路通訊協定。  
   
-    -   TCP/IP 已安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通訊協定，但未在 JDBC 連線 URL 中指定的連接埠上接聽。 預設連接埠為 1433，但可在產品安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為在任何連接埠上接聽。 請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正於連接埠 1433 上接聽。 或者，如果已變更通訊埠，則請確定 JDBC 連接 URL 中所指定的通訊埠符合已變更的通訊埠。 如需有關 JDBC 連接 Url 的詳細資訊，請參閱 < [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)。  
+    -   TCP/IP 已安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通訊協定，但未在 JDBC 連線 URL 中指定的連接埠上接聽。 預設連接埠為 1433，但可在產品安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為在任何連接埠上接聽。 請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正於連接埠 1433 上接聽。 或者，如果已變更通訊埠，則請確定 JDBC 連接 URL 中所指定的通訊埠符合已變更的通訊埠。 如需 JDBC 連接 Url 的詳細資訊, 請參閱[建立連接 url](../../connect/jdbc/building-the-connection-url.md)。  
   
     -   JDBC 連線 URL 中指定的電腦位址並不是指已安裝並啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器。  
   

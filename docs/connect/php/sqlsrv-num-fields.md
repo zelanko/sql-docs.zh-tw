@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ca2ae8a4c6f1e1d3c9f82a756a5c268bf52eec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992672"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-擷取作用中結果集內的欄位數目。 在任何已備妥的陳述式之前, 或之後執行，可以呼叫此函式。  
+擷取作用中結果集內的欄位數目。 您可以在任何備妥的語句上、執行之前或之後呼叫這個函數。  
   
 ## <a name="syntax"></a>語法  
   

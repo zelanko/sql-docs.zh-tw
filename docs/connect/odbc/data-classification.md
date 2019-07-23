@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft ODBC 驅動程式中的資料分類，適用於 SQL Server |Microsoft Docs
+title: 搭配 Microsoft ODBC Driver for SQL Server 使用資料分類 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -13,25 +13,25 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637440"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263998"
 ---
 # <a name="data-classification"></a>資料分類
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>概觀
-為了管理機密資料，SQL Server 和 Azure SQL Server 導入的能力，為資料庫資料行提供區分中繼資料，可讓用戶端應用程式，以處理不同類型的機密資料 （例如財務狀況等等。) 根據的資料保護原則。
+基於管理敏感性資料的目的, SQL Server 和 Azure SQL Server 引進了提供具有敏感性中繼資料之資料庫資料行的功能, 可讓用戶端應用程式處理不同類型的敏感性資料 (例如健康情況、財務等等)。) (根據資料保護原則)。
 
-如需有關如何將分類指派給資料行的詳細資訊，請參閱 < [SQL 資料探索和分類](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)。
+如需如何將分類指派至資料行的詳細資訊, 請參閱[SQL 資料探索和分類](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)。
 
-Microsoft ODBC 驅動程式 17.2 允許透過 SQLGetDescField 此中繼資料擷取使用 SQL_CA_SS_DATA_CLASSIFICATION 欄位識別項。
+Microsoft ODBC Driver 17.2 允許使用 SQL_CA_SS_DATA_CLASSIFICATION 欄位識別碼, 透過 SQLGetDescField 來抓取此中繼資料。
 
 ## <a name="format"></a>[格式]
-SQLGetDescField 的語法如下：
+SQLGetDescField 具有下列語法:
 
 ```  
 SQLRETURN SQLGetDescField(  
@@ -43,7 +43,7 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- [輸入]IRD （實作資料列描述項） 控制代碼。 可以擷取對 SQLGetStmtAttr SQL_ATTR_IMP_ROW_DESC 陳述式屬性
+ 源IRD (執行資料列描述項) 控制碼。 可透過呼叫 SQLGetStmtAttr 與 SQL_ATTR_IMP_ROW_DESC 語句屬性來抓取
   
  *RecNumber*  
  [輸入] 0
@@ -52,44 +52,44 @@ SQLRETURN SQLGetDescField(
  [輸入] SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
- [輸出]輸出緩衝區
+ 輸出輸出緩衝區
   
  *BufferLength*  
- [輸入]以位元組為單位的輸出緩衝區的長度
+ 源輸出緩衝區的長度 (以位元組為單位)
 
- *StringLengthPtr*緩衝區中要傳回的總位元組數來傳回中可用的 [輸出] 指標*ValuePtr*。
+ *StringLengthPtr*輸出緩衝區的指標, 要在其中傳回*valueptr 是*中可傳回的總位元組數。
  
 > [!NOTE]
-> 如果緩衝區的大小是未知的可決定藉由呼叫與 SQLGetDescField *ValuePtr*為 NULL，並檢查的值*StringLengthPtr*。
+> 如果緩衝區的大小不明, 可以藉由呼叫 SQLGetDescField 並將*valueptr 是*當做 Null, 並檢查*StringLengthPtr*的值來判斷。
  
-如果未提供，資料分類資訊*無效的描述項欄位*便會傳回錯誤。
+如果資料分類資訊無法使用, 則會傳回*不正確描述項欄位*錯誤。
 
-SQLGetDescField 成功呼叫，在緩衝區所指*ValuePtr*會包含下列資料：
+成功呼叫 SQLGetDescField 時, *valueptr 是*所指向的緩衝區會包含下列資料:
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn``tt tt`，和`cc cc`是多位元組的整數，會儲存最小顯著性位元組在最低的位址。
+> `nn nn`、 `tt tt`和`cc cc`是多位元組整數, 以最小的位址儲存最少的有效位元組。
 
-*`sensitivitylabel`* 並 *`informationtype`* 都屬於表單
+*`sensitivitylabel`* 和 *`informationtype`* 的格式都是
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* 格式
+*`columnsensitivity`* 的格式為
 
  `nn nn [n sensitivityprops]`
 
-每個資料行 *(c)* ， *n* 4 位元組 *`sensitivityprops`* 有：
+針對每個資料行 *(c)* , 都有 *`sensitivityprops`* *n* 4 個位元組:
 
  `ss ss tt tt`
 
-s-指數 *`sensitivitylabels`* 陣列，`FF FF`若未加上標籤
+s-在 *`sensitivitylabels`* 陣列中的索引`FF FF` (如果未加上標籤)
 
-t-指數 *`informationtypes`* 陣列，`FF FF`若未加上標籤
+t-索引至 *`informationtypes`* 陣列 (如果未加上標籤) `FF FF`
 
 
 <br><br>
-資料的格式可以表示為以下虛擬結構：
+資料的格式可以表示為下列虛擬結構:
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>程式碼範例
-測試應用程式，示範如何讀取資料分類中繼資料。 在 Windows 上可以將它編譯使用`cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib`並執行 SQL 查詢 （，傳回已分類資料行） 與連接字串，做為參數：
+示範如何讀取資料分類中繼資料的測試應用程式。 在 Windows 上, 可以使用`cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib`來編譯, 並以連接字串執行, 以及使用 SQL 查詢 (以傳回分類的資料行) 做為參數:
 
 ```
 #ifdef _WIN32

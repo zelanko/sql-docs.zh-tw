@@ -11,13 +11,12 @@ ms.assetid: ea939db1-ce97-4eea-8223-1ca6a82128d7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 7bcf04f3b58b43bf5b6f3da0c3589c695bc3e2a4
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 78428b48229720a59b5b9cd31cdc2262759e03f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058307"
 ---
 # <a name="report-server-ltservergt-sql-server-configuration-manager"></a>報表伺服器 &lt;伺服器&gt; (SQL Server 設定管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

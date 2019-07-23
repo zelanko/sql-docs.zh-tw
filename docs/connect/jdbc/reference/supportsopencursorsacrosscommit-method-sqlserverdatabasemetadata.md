@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b7eed108-64cc-4be6-b297-8af6c1e3dc72
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bf1e1b24295a491fdd17df45c126f5c3151403e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 264f61c744be0ffc614ca3f45e5268715c680ed8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969105"
 ---
 # <a name="supportsopencursorsacrosscommit-method-sqlserverdatabasemetadata"></a>supportsOpenCursorsAcrossCommit 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOpenCursorsAcrossCommit()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果支援。 否則為 **false**。  
+ 如果支援,**則為 true** 。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 supportsOpenCursorsAcrossCommit 方法是由 java.sql.DatabaseMetaData 介面中 supportsOpenCursorsAcrossCommit 方法指定。  
+ 這個 supportsOpenCursorsAcrossCommit 方法是由 JAVA.sql.databasemetadata 介面中的 supportsOpenCursorsAcrossCommit 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

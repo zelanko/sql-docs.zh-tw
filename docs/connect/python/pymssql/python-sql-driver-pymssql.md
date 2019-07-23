@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 79d067c9221e889fdfb65f77ca18daa96a0900d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3cce0d9a3a488824cf1a3ef686b508157e029363
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992537"
 ---
 # <a name="python-sql-driver---pymssql"></a>Python SQL 驅動程式 - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -28,4 +27,4 @@ ms.locfileid: "66803875"
 * [步驟 3︰使用 pymssql 連接到 SQL 的概念證明](../../../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## <a name="documentation"></a>文件集
-* [pymssql 文件](https://pymssql.org)  
+* [pymssql 檔](https://pymssql.org)  

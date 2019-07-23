@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 305817b7-4d23-49fb-9e6c-4d34359877bf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8e3ba334d2cae800e6bc84b057ba1f39e8db3bf9
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 22f99d58d44fc5c6fd75e35161d71f0cf560c60f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223698"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>從追蹤檔案或追蹤資料表衍生範本 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

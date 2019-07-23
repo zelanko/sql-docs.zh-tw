@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dfff3358-f391-4af6-84c1-b94c029f506d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89d44d44bc2c5417f5d88a4f3083b9580af02b4e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9dcf711e3d95577d41a53329f7ebab4b65389a07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954789"
 ---
 # <a name="executequery-method-sqlserverpreparedstatement"></a>executeQuery 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

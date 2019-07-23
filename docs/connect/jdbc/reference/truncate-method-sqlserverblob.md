@@ -1,5 +1,5 @@
 ---
-title: truncate 方法 (SQLServerBlob) |Microsoft Docs
+title: 截斷方法 (SQLServerBlob) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ce085032435cfe2bbb95137c12c98ac0f53206b5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3195b0eafb5eb48f7ec6b159fef05036d6efd7df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968494"
 ---
 # <a name="truncate-method-sqlserverblob"></a>truncate 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void truncate(long len)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 此截斷的方法是由 java.sql.Blob 介面中的 truncate 方法所指定。  
+ 這個截斷方法是由 .java 介面中的截斷方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

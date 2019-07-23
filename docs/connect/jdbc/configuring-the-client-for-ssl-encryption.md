@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f5ec4a56beb5595353671c0f2aab18bf30e5f87
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956892"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>設定 SSL 加密的用戶端
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

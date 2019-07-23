@@ -1,5 +1,5 @@
 ---
-title: setClob 方法 （int，java.sql.Clob） |Microsoft Docs
+title: setClob 方法 (int, Clob) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 68d49f2c-fd8d-4abb-bfdc-e7b0fbd9a9da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f78d8d226043deed03ab86e5859453313d296fb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abbd62ffbd256334511a30ae89091618ec37abf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974570"
 ---
 # <a name="setclob-method-int-javasqlclob"></a>setClob 方法 (int, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public final void setClob(int parameterIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

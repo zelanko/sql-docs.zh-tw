@@ -1,5 +1,5 @@
 ---
-title: 範例 JDBC 驅動程式應用程式 |Microsoft Docs
+title: JDBC Driver 應用程式範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 385a5d46129aac81125e29b182cb5a9fdde13897
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3227aa1fc886c72b1655fc8ef9770be2c914af3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945831"
 ---
 # <a name="sample-jdbc-driver-applications"></a>範例 JDBC 驅動程式應用程式
 
@@ -40,7 +39,7 @@ ms.locfileid: "66797851"
 | [使用資料類型 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | 這些範例應用程式示範如何使用 JDBC 驅動程式資料類型方法，來使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料。                                                                                           |
 | [使用結果集](../../connect/jdbc/working-with-result-sets.md)                                   | 這些範例應用程式示範如何使用結果集，來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中包含的資料。                                                                                                         |
 | [使用大型資料](../../connect/jdbc/working-with-large-data.md)                                     | 這些範例應用程式會示範如何使用自適性緩衝來擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的大數值資料，而沒有伺服器資料指標的負擔。                                                      |
-| [SQL 資料探索與分類](../../connect/jdbc/data-discovery-classification-sample.md) | 此範例應用程式示範如何擷取資料探索和分類的資訊包含在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從結果集物件，使用 JDBC 驅動程式的資料庫。                                      |
+| [SQL 資料探索與分類](../../connect/jdbc/data-discovery-classification-sample.md) | 這個範例應用程式會示範如何使用 JDBC 驅動程式, 從 ResultSet 物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中, 抓取資料庫中所包含的資料探索和分類資訊。                                      |
   
 ## <a name="see-also"></a>另請參閱
 

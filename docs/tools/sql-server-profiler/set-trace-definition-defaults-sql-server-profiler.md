@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2b77992fd00105d605c1921ce63a9b96e5a0afb8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a3e8f627e7aeac05d418345ded1a069e63e8d116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104163"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>設定追蹤定義預設值 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 資料型別 (OLE DB) |Microsoft Docs
+title: 資料類型 (OLE DB) |Microsoft Docs
 description: 資料類型 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9eaa809532c97b534480ac752c19756cb550b26b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 05e9714159a3253a92c2eb0aeef3ea48e632345c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015825"
 ---
 # <a name="data-types-ole-db"></a>資料類型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

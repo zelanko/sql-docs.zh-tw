@@ -1,6 +1,6 @@
 ---
-title: 擷取單一資料列使用 IRow |Microsoft Docs
-description: 正在擷取使用 IRow 介面的 OLE DB Driver for SQL Server 的單一資料列
+title: 使用 IRow 提取單一資料列 |Microsoft Docs
+description: 使用適用于 SQL Server OLE DB 驅動程式的 IRow 介面來提取單一資料列
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,20 +17,19 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6e9f48ba7f2472fa215b267c915900d7c616dba0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994289"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>使用 IRow 來提取單一資料列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow**介面實作 OLE DB 驅動程式，如 SQL Server 已簡化，以提升效能。 **IRow** 允許直接存取單一資料列物件的資料行。 如果您事先知道命令執行的結果只會產生單一資料列，**IRow** 就會擷取該資料列的資料行。 如果結果集包含多個資料列，**IRow** 就只會公開第一個資料列。  
+  適用于 SQL Server 的 OLE DB 驅動程式中的**IRow**介面實現已簡化, 以提高效能。 **IRow** 允許直接存取單一資料列物件的資料行。 如果您事先知道命令執行的結果只會產生單一資料列，**IRow** 就會擷取該資料列的資料行。 如果結果集包含多個資料列，**IRow** 就只會公開第一個資料列。  
   
  **IRow** 實作不允許資料列的任何導覽。 此資料列中的每個資料行只會存取一次，但有一項例外狀況：您可以存取一次資料行來尋找資料行大小，然後再次存取，以便提取資料。  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9660647681d02e5cd5230930a8cec9f3a9c176be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 820982dbb2a984a3aaa92fba0e32d86c1315ca0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955380"
 ---
 # <a name="concurssscrolllocks-field-sqlserverresultset"></a>CONCUR_SS_SCROLL_LOCKS 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public static final int CONCUR_SS_SCROLL_LOCKS
 ```  
   
 ## <a name="field-value"></a>欄位值  
- **Int**值 1009年。  
+ **Int**值1009。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

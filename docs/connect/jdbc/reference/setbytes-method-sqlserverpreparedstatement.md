@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 52e99ef9-b786-4a14-bfc5-4162e46aafbb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 126a596b36960d883abf69e4dc852f3285a893df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ce55a2dbae90ca84708e236c8688cbbb20dcb9d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974841"
 ---
 # <a name="setbytes-method-sqlserverpreparedstatement"></a>setBytes 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: 了解 SSL 支援 |Microsoft Docs
+title: 瞭解 SSL 支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe0ef2f88f2db6035bce1e7e72fd216882964e82
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916617"
 ---
 # <a name="understanding-ssl-support"></a>了解 SSL 支援
 

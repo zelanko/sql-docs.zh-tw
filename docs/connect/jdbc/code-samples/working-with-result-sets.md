@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 351351dd287da5b7efeb59bd9d1df97e52b30f57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956957"
 ---
 # <a name="working-with-result-sets"></a>使用結果集
 
@@ -27,7 +26,7 @@ ms.locfileid: "66798509"
 此外，SQLServerResultSet 物件也提供數種方法，可用來瀏覽其資料列、取得或設定其包含的資料，以及對基礎資料庫中的變更建立各種敏感性層級。  
   
 > [!NOTE]  
-> 如需管理結果集，包括其變更的敏感性的詳細資訊，請參閱[JDBC driver 管理結果集](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
+> 如需管理結果集的詳細資訊, 包括其對變更的敏感度, 請參閱[使用 JDBC 驅動程式管理結果集](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
   
 本節的主題描述您可以使用結果集，操作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中所包含資料的不同方法。  
   

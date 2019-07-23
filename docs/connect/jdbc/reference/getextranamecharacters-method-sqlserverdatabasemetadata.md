@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef2a0cdaef33ef1797133d9da2bd858eb8d18d66
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6a4aada79019aad4ae01729de8e018edd728b473
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983322"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>getExtraNameCharacters 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getExtraNameCharacters()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getExtraNameCharacters 方法是由 java.sql.DatabaseMetaData 介面中 getExtraNameCharacters 方法指定。  
+ 這個 getExtraNameCharacters 方法是由 JAVA.sql.databasemetadata 介面中的 getExtraNameCharacters 方法指定。  
   
  當您搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會傳回 $、# 和 \@ 額外字元。  
   

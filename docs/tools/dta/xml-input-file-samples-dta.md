@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 101dab519eb3c2fb60eda526772a2715ccfc2302
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e5cbb984045d604ef02a34c2529e62eede733e9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105773"
 ---
 # <a name="xml-input-file-samples-dta"></a>XML 輸入檔範例 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

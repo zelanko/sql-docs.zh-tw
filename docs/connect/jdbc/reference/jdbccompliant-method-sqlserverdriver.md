@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0199a2cbbeb5f01472a17ade1575031c3ad994e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c36d7980355eed1e1a1e8f42fb53c75fdb70d0ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976955"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>jdbcCompliant 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public boolean jdbcCompliant()
  如果 JDBC 驅動程式符合最小需求，則為 **true**； 否則為 **false**。  
   
 ## <a name="remarks"></a>Remarks  
- 這個 jdbcCompliant 方法是由 java.sql.Driver 介面中 jdbcCompliant 方法指定。  
+ 這個 jdbcCompliant 方法是由 sql-dmo 介面中的 jdbcCompliant 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDriver 方法](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

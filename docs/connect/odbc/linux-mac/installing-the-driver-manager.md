@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd45cc3b0db61e87c8d9ce506e141cc9ad8c97c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008790"
 ---
 # <a name="installing-the-driver-manager"></a>安裝驅動程式管理員
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

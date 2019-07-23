@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2cd2bed9-adf4-4bcd-ae5a-d0e3428bc709
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 91333becf557bd31faf8d69636c6b0cc51250dc0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 53c47f912711a486ea60cf0181411e7ed68029ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982146"
 ---
 # <a name="getmaxcursornamelength-method-sqlserverdatabasemetadata"></a>getMaxCursorNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxCursorNameLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getMaxCursorNameLength 方法是由 java.sql.DatabaseMetaData 介面中 getMaxCursorNameLength 方法指定。  
+ 這個 getMaxCursorNameLength 方法是由 JAVA.sql.databasemetadata 介面中的 getMaxCursorNameLength 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e103a29dacea48c42f7d6602f8e8fcb924774ddf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 78b4d49029c6a0f2696cc93348bff7b32767bc13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974837"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setCatalog(java.lang.String catalog)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setCatalog 方法是由 java.sql.Connection 介面中的 setCatalog 方法指定。  
+ 這個 setCatalog 方法是由連接介面中的 setCatalog 方法指定。  
   
  *catalog* 引數會由 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 自動逸出。 使用這種方法，會設定 Connection 物件的 catalog 屬性。 它不會以任何其他方式進行隱含設定。  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2f7bb89f-ace7-41cb-b596-5aa8d0dd9e3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7f40a2967f3c9e986d23aaca3229cd4cc1b236c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8b9d568f5e79ee548c92305378cc7e285c2bb3a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972427"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp"></a>setTimestamp 方法 (int, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

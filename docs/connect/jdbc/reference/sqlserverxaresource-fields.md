@@ -14,17 +14,16 @@ apilocation:
 ms.assetid: a62bbaf4-9ec3-44b5-8a26-7213786b67b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1afb16d3f070cc4b74f23d252d509c19cd6bb7ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9f28dd938839fa5a0bae0bba8da6cc947c4758a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970078"
 ---
 # <a name="sqlserverxaresource-fields"></a>SQLServerXAResource 欄位
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  如需有關成員的資訊[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)，請參閱[SQLServerXAResource 成員](../../../connect/jdbc/reference/sqlserverxaresource-members.md)。  
+  如需[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)成員的詳細資訊, 請參閱[SQLServerXAResource 成員](../../../connect/jdbc/reference/sqlserverxaresource-members.md)。  
   
   

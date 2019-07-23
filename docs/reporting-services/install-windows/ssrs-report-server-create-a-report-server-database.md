@@ -2,18 +2,17 @@
 title: 建立報表伺服器資料庫，SSRS 組態管理員 | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/15/2018
-ms.openlocfilehash: 7f04bff24ca1472b35b71c5e8f04d017714ddf0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a05ef92709974b314ea5865362946c1f053c5343
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502659"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262802"
 ---
 # <a name="create-a-report-server-database"></a>建立報表伺服器資料庫 
 

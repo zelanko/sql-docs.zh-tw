@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7d27da8ff8baf048e7890efab212b7835f4037e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977870"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean insertsAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 insertsAreDetected 方法是由 java.sql.DatabaseMetaData 介面中 insertsAreDetected 方法指定。  
+ 這個 insertsAreDetected 方法是由 JAVA.sql.databasemetadata 介面中的 insertsAreDetected 方法指定。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會偵測任何資料指標類型的插入資料列。  

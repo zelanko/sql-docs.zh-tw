@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream 方法 （) |Microsoft Docs
+title: getBinaryStream 方法 () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f629b626426f8d94eb91f0e772b074f451172bce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 486958cb6df51accc3446d1545b734efe9a6fc66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953626"
 ---
 # <a name="getbinarystream-method-"></a>getBinaryStream 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.InputStream getBinaryStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getBinaryStream 方法是由 java.sql.Blob 介面中 getBinaryStream 方法指定。  
+ 這個 getBinaryStream 方法是由 .java 介面中的 getBinaryStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

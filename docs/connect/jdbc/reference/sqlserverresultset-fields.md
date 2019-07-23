@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 30b8fbee-8818-4217-95be-ab1aa9230062
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f40c415aa0e70605285c49e7442f69b99f87a4b2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 84c3869410f6a09b7e05d6b2960be4d14b3d4a9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970576"
 ---
 # <a name="sqlserverresultset-fields"></a>SQLServerResultSet 欄位
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerResultSet 成員的相關資訊，請參閱[SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)。  
+  如需 SQLServerResultSet 成員的詳細資訊, 請參閱[SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

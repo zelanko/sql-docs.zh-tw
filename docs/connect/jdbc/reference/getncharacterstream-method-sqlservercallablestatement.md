@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e4f1e99c-4c7a-4c83-b202-4608538ab50b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 115092e12196368ab2571efa896cf443bac4cf19
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 57d93c8d99c775232c0f5ad5c418fe32e57922cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981601"
 ---
 # <a name="getncharacterstream-method-sqlservercallablestatement"></a>getNCharacterStream 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

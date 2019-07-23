@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef12c6d5967adc66833146b07e9c8fa071e32a9c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9a4a271e07dea5a533dcb19b098a3e3de29e535e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973178"
 ---
 # <a name="setquerytimeout-method-sqlserverstatement"></a>setQueryTimeout 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setQueryTimeout(int seconds)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setQueryTimeout 方法是由 java.sql.Statement 介面中的 setQueryTimeout 方法指定。  
+ 這個 setQueryTimeout 方法是由 sql 語句介面中的 setQueryTimeout 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

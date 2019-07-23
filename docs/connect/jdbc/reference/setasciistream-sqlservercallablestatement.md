@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8de3ae7c-ba7b-4249-8333-71c8416b3bb7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 589329ae475983cfe1f99ad626dc4bb109146776
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c9629905b0d755457f89a23d025c6d0d4dc2c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975237"
 ---
 # <a name="setasciistream-sqlservercallablestatement"></a>setAsciiStream (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

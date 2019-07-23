@@ -1,5 +1,5 @@
 ---
-title: SQL 命令提示字元公用程式 (Database Engine) |Microsoft Docs
+title: SQL 命令提示字元公用程式 (資料庫引擎) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e83792a7d982dedf41e525fc7801fb76f1db7d5
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8fdcb3b307f525ff9eda14006e6fd4f6378f418c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010417"
 ---
-# <a name="sql-command-prompt-utilities-database-engine"></a>SQL 命令提示字元公用程式 (Database Engine)
+# <a name="sql-command-prompt-utilities-database-engine"></a>SQL 命令提示字元公用程式 (資料庫引擎)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   命令提示字元公用程式可編寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作業指令碼。 下表包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 隨附的多個命令提示字元公用程式清單。  
 
-如需*主要*SQL gui 和命令列工具，請參閱[SQL 工具概觀](overview-sql-tools.md)。
+如需*主要*sql gui 和命令列工具的相關資訊, 請參閱[sql 工具總覽](overview-sql-tools.md)。
 
   
 |**公用程式**|**說明**|**安裝位置**|  

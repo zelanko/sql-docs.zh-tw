@@ -1,5 +1,5 @@
 ---
-title: 資料來源精靈畫面 3 (ODBC Driver for SQL Server) |Microsoft Docs
+title: 資料來源嚮導畫面 3 (ODBC Driver for SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63391969f378fdefbfa9547c079dcce4ff259e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936540"
 ---
 # <a name="data-source-wizard-screen-3"></a>資料來源精靈畫面 3
 
@@ -68,27 +67,27 @@ WHERE "LastName" = 'O''Brien'
 
 ### <a name="multi-subnet-failover"></a>多重子網路容錯移轉
 
-如果您的應用程式連線至高可用性、 災害復原 （AlwaysOn 可用性群組） 可用性群組 (AG) 位於不同子網路，啟用**多重子網路容錯移轉。** 會設定 ODBC Driver for SQL Server，以提供對 (目前) 使用中伺服器更快速的偵測與連接。
+如果您的應用程式要連接到不同子網上的高可用性、嚴重損壞修復 (AlwaysOn 可用性群組) 可用性群組 (AG), 則啟用**多重子網容錯移轉。** 會設定 ODBC Driver for SQL Server，以提供對 (目前) 使用中伺服器更快速的偵測與連接。
 
 ### <a name="transparent-network-ip-resolution"></a>透明網路 IP 解析。
 
-改變的行為**多重子網路容錯移轉**以便在容錯移轉期間更快的重新連線。 如需詳細資訊，請參閱[使用透明網路 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)。
+改變**多重子網容錯移轉**的行為, 以允許在容錯移轉期間更快速地重新連接。 如需詳細資訊，請參閱[使用透明網路 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)。
 
 ### <a name="column-encryption"></a>資料行加密。
 
-啟用自動解密和加密與加密資料行的資料傳輸[Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)功能可在 SQL Server 2016 及更新版本。
+可讓您在 SQL Server 2016 和更新版本中提供的[Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)功能, 自動解密和加密資料行。
 
-### <a name="use-fmtonly-metadata-discovery"></a>使用 FMTONLY 中繼資料探索：
+### <a name="use-fmtonly-metadata-discovery"></a>使用 SET FMTONLY 中繼資料探索:
 
-當連接到 SQL Server 2012 或更新版本時，請使用舊版的 SET FMTONLY 中繼資料探索方法。 啟用此功能只有在使用不支援的查詢時，才[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，例如那些包含暫存資料表。 
+連接到 SQL Server 2012 或更新版本時, 請使用舊版的 SET FMTONLY 中繼資料探索方法。 只有在使用[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)不支援的查詢 (例如包含臨時表的查詢) 時, 才會啟用此項。 
 
 ### <a name="next"></a>下一個
 
-繼續進行精靈的下一個畫面。
+繼續前往 wizard 的下一個畫面。
 
 ### <a name="back"></a>上一頁
 
-若要返回精靈的前一個畫面。
+回到 wizard 的上一個畫面。
 
 ## <a name="next-steps"></a>後續步驟
 

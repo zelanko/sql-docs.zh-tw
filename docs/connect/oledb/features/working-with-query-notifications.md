@@ -1,6 +1,6 @@
 ---
 title: 使用查詢通知 |Microsoft Docs
-description: 使用中 OLE DB Driver for SQL Server 的查詢通知
+description: 在 SQL Server 的 OLE DB 驅動程式中使用查詢通知
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 20860d018e8971089ee1eb80ec0303bdc63ef211
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.openlocfilehash: 5b563099b161fa9b55a72820edd3411a4c72b4fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988736"
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
 
@@ -35,7 +34,7 @@ ms.locfileid: "67208350"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-查詢通知已導入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]和 OLE DB Driver for SQL Server。 查詢通知是根據 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引進的 Service Broker 基礎結構而建置，可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。
+查詢通知是在中[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引進, 而 OLE DB 驅動程式用於 SQL Server。 查詢通知是根據 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引進的 Service Broker 基礎結構而建置，可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。
 
 當查詢的基礎資料變更時，查詢通知可讓您在指定的逾時期間要求通知。 通知的要求會指定通知選項，其中包含服務名稱、訊息文字和伺服器的逾時值。 通知會透過 Service Broker 佇列傳遞，應用程式會輪詢此佇列以查看是否有可用的通知。
 
@@ -71,7 +70,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server
 
-OLE DB Driver for SQL Server 支援在資料列集修改時取用者通知。 使用者會在資料列集修改的每個階段以及嘗試進行任何變更時收到通知。
+SQL Server 的 OLE DB 驅動程式支援在資料列集修改時使用取用者通知。 使用者會在資料列集修改的每個階段以及嘗試進行任何變更時收到通知。
 
 > [!NOTE]
 > 使用 **ICommand::Execute** 將通知查詢傳遞至伺服器，是使用 OLE DB Driver for SQL Server 訂閱查詢通知的唯一有效方法。
@@ -110,7 +109,7 @@ RECEIVE * FROM MyQueue
 > [!NOTE]
 > 陳述式的準備永遠都不會初始化訂閱，只有陳述式的執行才會造成初始化，此外使用 OLE DB 核心服務也不會影響查詢通知。
 
-如需有關 DBPROPSET_SQLSERVERROWSET 屬性集的詳細資訊，請參閱 <<c0> [ 資料列集屬性和行為](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)。
+如需 DBPROPSET_SQLSERVERROWSET 屬性集的詳細資訊, 請參閱資料列[集屬性和行為](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8b9f1c5a1f9c3d841b99c368df51c3e520f465f9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ed7c88520657d822da288a7b66c1f99f2a5bfa50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982615"
 ---
 # <a name="getlabel-method-sqlserversavepoint"></a>getLabel 方法 (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

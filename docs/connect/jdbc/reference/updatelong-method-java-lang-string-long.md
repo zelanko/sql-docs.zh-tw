@@ -1,5 +1,5 @@
 ---
-title: updateLong 方法 (java.lang.String，long) |Microsoft Docs
+title: updateLong 方法 (java. lang.ini, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6003706-35de-42b1-8f23-899a388adb5b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 09cc448d45256cd09e66a3548f6e93d886500194
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 932035288f74c582620108db697cb898c59159bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999170"
 ---
 # <a name="updatelong-method-javalangstring-long"></a>updateLong 方法 (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,12 +42,12 @@ public void updateLong(java.lang.String columnName,
   
  *x*  
   
- A**長**值。  
+ **Long**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 updateLong 方法是由 java.sql.ResultSet 介面中的 updateLong 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

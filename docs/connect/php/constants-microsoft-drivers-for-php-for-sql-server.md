@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993699"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常數 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +49,7 @@ PDO::SQLSRV_ATTR_ENCODING 屬性可以傳遞至 [PDOStatement::setAttribute](../
   
 可傳遞至 PDO::SQLSRV_ATTR_ENCODING 的值為  
   
-|PDO_SQLSRV 驅動程式常數|描述|  
+|PDO_SQLSRV 驅動程式常數|Description|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|資料是來自伺服器的原始位元組資料流，未執行編碼或轉譯。<br /><br />對 PDO::setAttribute 而言無效。|  
 |PDO::SQLSRV_ENCODING_SYSTEM|資料是 8 位元字元，如同在系統上設定之 Windows 地區設定的字碼頁所指定。 系統會以單一位元組問號 (?) 字元取代任何多位元組字元或未對應到此字碼頁的字元。|  
@@ -65,14 +64,14 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 屬性是任何代表逾時期間 (秒) 的非負
 ### <a name="direct-or-prepared-execution"></a>直接或備妥的執行  
 您可以使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 屬性，選取直接查詢執行或備妥的陳述式執行。 PDO::SQLSRV_ATTR_DIRECT_QUERY 可以用 [PDO::prepare](../../connect/php/pdo-prepare.md) 或 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 來設定。 如需 PDO::SQLSRV_ATTR_DIRECT_QUERY 的詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
 
-### <a name="handling-numeric-fetches"></a>處理數值擷取
-PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可用來處理從資料行的數值提取和數值 SQL 型別 （位元、 整數、 smallint、 tinyint、 float 和 real）。 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 當設定為 true 時，整數資料行的結果會會表示為 int，而 SQL 浮點數和 reals 會表示為浮點數。 這個屬性可以設定具有[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 
+### <a name="handling-numeric-fetches"></a>處理數值提取
+PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可用來處理具有數值 SQL 類型 (bit、integer、Smallint、Tinyint、float 和 real) 之資料行的數值提取。 當 PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 設定為 true 時, 整數資料行的結果會以整數表示, 而 SQL 浮點和耳則會表示為浮動。 這個屬性可以使用[PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)來設定。 
 
-您可以修改預設十進位 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 和 PDO::SQLSRV_ATTR_DECIMAL_PLACES 屬性格式化行為。 這些屬性的行為等同於 SQLSRV 一端對應的選項 (**FormatDecimals**並**DecimalPlaces**)，不同之處在於不支援輸出參數的格式。 這些屬性可能設定在連接或陳述式層級，使用[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但任何陳述式屬性將會覆寫對應連接屬性。 如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。
+您可以使用 PDO:: SQLSRV_ATTR_FORMAT_DECIMALS 和 PDO:: SQLSRV_ATTR_DECIMAL_PLACES 屬性來修改預設的十進位格式行為。 這些屬性的行為與 SQLSRV 端上對應的選項相同 (**FormatDecimals**和等**位數**), 不同之處在于輸出參數不支援格式化。 這些屬性可以在連接或語句層級使用[PDO:: setAttribute](../../connect/php/pdo-setattribute.md)或[PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)來設定, 但任何語句屬性都會覆寫對應的連接屬性。 如需詳細資訊，請參閱[將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。
 
 ### <a name="handling-date-and-time-fetches"></a>處理日期和時間擷取
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類型作為[PHP DateTime](http://php.net/manual/en/class.datetime.php)物件。 如果保留 false，則預設行為是以字串形式傳回它們。 這個屬性可能設定在連接或陳述式層級，使用[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但陳述式屬性將會覆寫對應連接屬性。 如需詳細資訊，請參閱[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
+PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要將日期和時間類型當做[PHP DATETIME](http://php.net/manual/en/class.datetime.php)物件來取得。 如果保留 false，則預設行為是以字串形式傳回它們。 這個屬性可以在連接或語句層級使用[PDO:: setAttribute](../../connect/php/pdo-setattribute.md)或[PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)來設定, 但是語句屬性將會覆寫對應的連接屬性。 如需詳細資訊，請參閱[操作說明：使用 PDO_SQLSRV 驅動程式以 PHP DateTime 物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驅動程式常數  
 下列各節列出 SQLSRV 驅動程式所使用的常數。  
@@ -80,7 +79,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
 ### <a name="err-constants"></a>ERR 常數  
 下表列出用來指定 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) 會傳回錯誤、警告還是兩者都傳回的常數。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤和警告。 這是預設值。|  
 |SQLSRV_ERR_ERRORS|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤。|  
@@ -89,7 +88,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
 ### <a name="fetch-constants"></a>FETCH 常數  
 下表列出用來指定 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)所傳回之陣列類型的常數。  
   
-|SQLSRV 常數|描述|  
+|SQLSRV 常數|Description|  
 |-------------------|---------------|  
 |SQLSRV_FETCH_ASSOC|**sqlsrv_fetch_array** 會以關聯陣列的形式傳回下一個資料列。|  
 |SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** 會以同時具有數值和關聯索引鍵的陣列形式傳回下一個資料列。 這是預設值。|  
@@ -100,7 +99,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
   
 下表列出可做為 **LogSubsystems** 設定值的常數：  
   
-|SQLSRV 常數 (括弧中的整數對等項目)|描述|  
+|SQLSRV 常數 (括弧中的整數對等項目)|Description|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|開啟所有子系統的記錄。|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|開啟連接活動的記錄。|  
@@ -111,7 +110,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
   
 下表列出可做為 **LogSeverity** 設定值的常數：  
   
-|SQLSRV 常數 (括弧中的整數對等項目)|描述|  
+|SQLSRV 常數 (括弧中的整數對等項目)|Description|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|指定將會記錄錯誤、警告和通知。|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|指定將會記錄錯誤。|  
@@ -121,7 +120,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
 ### <a name="nullable-constants"></a>Nullable 常數  
 下表列出可用來判斷資料行是否可為 Null 或這項資訊是否無法使用的常數。 您可以比較 **sqlsrv_field_metadata** 所傳回的 [Nullable](../../connect/php/sqlsrv-field-metadata.md) 索引鍵值，以判斷資料行可為 Null 的狀態。  
   
-|SQLSRV 常數 (括弧中的整數對等項目)|描述|  
+|SQLSRV 常數 (括弧中的整數對等項目)|Description|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_NULLABLE_YES (0)|此資料行可為 null。|  
 |SQLSRV_NULLABLE_NO (1)|資料行不可為 Null。|  
@@ -130,7 +129,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
 ### <a name="param-constants"></a>PARAM 常數  
 下列清單包含在您呼叫 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)時用來指定參數方向的常數。  
   
-|SQLSRV 常數|描述|  
+|SQLSRV 常數|Description|  
 |-------------------|---------------|  
 |SQLSRV_PARAM_IN|表示輸入參數。|  
 |SQLSRV_PARAM_INOUT|表示雙向參數。|  
@@ -145,11 +144,11 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
 |SQLSRV_PHPTYPE_DATETIME|DATETIME|  
 |SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING ($編碼<sup>1</sup>)|String|  
+|SQLSRV_PHPTYPE_STRING ($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** 和 **SQLSRV_PHPTYPE_STRING** 可接受指定資料流編碼的參數。 下表包含是可接受之參數的 SQLSRV 常數，以及對應編碼的描述。  
   
-|SQLSRV 常數|描述|  
+|SQLSRV 常數|Description|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|資料會以原始位元組資料流形式從伺服器傳回，而不需執行編碼或轉譯。|  
 |SQLSRV_ENC_CHAR|資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 系統會以單一位元組問號 (?) 字元取代任何多位元組字元或未對應到此字碼頁的字元。<br /><br />這是預設編碼。|  
@@ -161,7 +160,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
 如需這些常數的詳細資訊，請參閱 [如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)、 [如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)。  
   
 ### <a name="sqltype-constants"></a>SQLTYPE 常數  
-下表列出用來說明 SQL Server 資料類型的常數。 某些常數是類似的函式，而且可能需要對應的參數，有效位數、 小數位數和/或長度。  當繫結參數，則應該使用類似函式的常數。 型別比較，就需要有標準的 （非函式類似） 常數。 如需 SQL Server 資料類型的資訊，請參閱[資料類型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。 如需有效位數、小數位數和長度的資訊，請參閱[有效位數、小數位數和長度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
+下表列出用來說明 SQL Server 資料類型的常數。 有些常數的功能很類似, 而且可能會採用對應至有效位數、小數位數和/或長度的參數。  系結參數時, 應該使用類似函數的常數。 針對類型比較, 需要標準 (非函式) 常數。 如需 SQL Server 資料類型的資訊，請參閱[資料類型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。 如需有效位數、小數位數和長度的資訊，請參閱[有效位數、小數位數和長度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
 |SQLSRV 常數|SQL Server 資料類型|  
 |-------------------|------------------------|  
@@ -178,7 +177,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|ssNoversion|  
+|SQLSRV_SQLTYPE_INT|INT|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
@@ -214,7 +213,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否要擷取日期和時間類�
   
 4.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]1.1 版已加入此類型的支援。  
 
-5.  這些常數應該用於型別比較作業，並不取代類似的語法類似函式的常數。 繫結參數，您應該使用類似函式的常數。
+5.  這些常數應該用於類型比較作業中, 而且不會以類似的語法取代類似函式的常數。 針對系結參數, 您應該使用類似函數的常數。
 
   
 下表列出接受參數的 SQLTYPE 常數，以及允許的參數值範圍。  

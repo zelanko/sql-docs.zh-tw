@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 38bf4a1a-6ad3-437c-b9ed-8792ab6dde7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94563e020046acac6f45b75cb9065a41a2059e30
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 481843393f15998df059bb7a732c64010b2c8bf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972286"
 ---
 # <a name="settransactiontimeout-method-sqlserverxaresource"></a>setTransactionTimeout 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean setTransactionTimeout(int seconds)
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setTransactionTimeout 方法是由 javax.transaction.xa.XAResource 介面中 setTransactionTimeout 方法指定。  
+ 這個 setTransactionTimeout 方法是由 javax.xml.transform.dom.domresult 中的 setTransactionTimeout 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerXAResource 方法](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

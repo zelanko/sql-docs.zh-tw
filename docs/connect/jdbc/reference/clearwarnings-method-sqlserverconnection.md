@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cb911adf-4691-4e57-8fb3-bdd11bef7a2e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 47c3d8362f555f1663c98b6394ed887fbfcb91dd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f0ba102c6afe398ac2680595e4a21c249358ebe4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955750"
 ---
 # <a name="clearwarnings-method-sqlserverconnection"></a>clearWarnings 方法 (ISQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void clearWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 clearWarnings 方法是由 java.sql.Connection 介面中的 clearWarnings 方法指定。  
+ 這個 clearWarnings 方法是由連接介面中的 clearWarnings 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

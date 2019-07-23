@@ -13,13 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 4a0691795bdca0ec24b307362c6b2137c5741362
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994731"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 及處理輸出執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "66791273"
   
 3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每一個參數標記各一個)。  
   
-4.  藉由建立定義之參數存取子**iaccessor:: Createaccessor**方法。 **CreateAccessor** 會從一組繫結建立存取子。  
+4.  使用**IAccessor:: CreateAccessor**方法, 為已定義的參數建立存取子。 **CreateAccessor** 會從一組繫結建立存取子。  
   
 5.  填入 DBPARAMS 結構。  
   
 6.  呼叫 **Execute** 命令 (在此情況下，為預存程序的呼叫)。  
   
-7.  處理資料列集，並使用釋放**irowset:: Release**方法。  
+7.  處理資料列集, 並使用**IRowset:: release**方法加以釋放。  
   
 8.  處理從預存程序收到的傳回碼和輸出參數值。  
   

@@ -1,5 +1,5 @@
 ---
-title: 處理複雜陳述式 |Microsoft Docs
+title: 處理複雜語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b2b6dd6bb5fb3a0d7b2e9b78dee87f90f05147df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7adee47147a8aad153bc323470f1711426d92350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956541"
 ---
 # <a name="handling-complex-statements"></a>處理複雜陳述式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

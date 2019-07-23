@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 02b5bcc9154e99ef6fe9a2c76ceff5032610dd55
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9b4ab3a1b0d6f76cd3918b20460c41d66e9616da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972776"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverdatasource"></a>setStatementPoolingCacheSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定此連線的已備妥的陳述式快取的大小。 如果 disableStatementPooling 設為 false，而且值 > 0 的運作方式。
+  設定此連接的已備妥語句快取大小。 適用于 disableStatementPooling 設定為 false 且值 > 0 的情況。
   
 ## <a name="syntax"></a>語法  
   
@@ -33,13 +32,13 @@ public void setStatementPoolingCacheSize(boolean statementPoolingCacheSize);
 #### <a name="parameters"></a>參數  
  *statementPoolingCacheSize*  
   
- 新值**statementPoolingCacheSize**連接屬性。  
+ **StatementPoolingCacheSize**連接屬性的新值。  
 
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 這個方法是從 JDBC 驅動程式版本 6.4 可用且向外。
+ 這個方法可從 JDBC 驅動程式6.4 版和之後版本取得。
  
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

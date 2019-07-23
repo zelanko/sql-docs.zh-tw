@@ -11,13 +11,12 @@ ms.assetid: ee30d5f5-7f6a-4101-849e-73dfcc1b2528
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 647e651aa29afe59200c026baef85fa5998ea57b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: d63d8b2559bb486733704ad0921c0c960128ff80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058457"
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>&lt;伺服器&gt; 的通訊協定 (SQL Server 設定管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8cd810b1-9858-4e51-9535-239d864cd288
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 62dfa8d55e8199df6465cdfab2b62b46fcd1006f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04f09bcd843946763fe3bb2b69cbdcd9560e7c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975044"
 ---
 # <a name="setboolean-method-sqlservercallablestatement"></a>setBoolean 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,12 +42,12 @@ public void setBoolean(java.lang.String sCol,
   
  *b*  
   
- A**布林**值，請 **，則為 true**或是**false**。  
+ **布林**值, 也就是**true**或**false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 setBoolean 方法是由 java.sql.CallableStatement 介面中的 setBoolean 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

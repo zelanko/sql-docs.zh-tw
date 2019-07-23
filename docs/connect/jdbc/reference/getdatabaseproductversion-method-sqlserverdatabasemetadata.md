@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19c0c15d-223f-45bd-a215-2867dfefecb0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 173a3dffb09d160479f3df745a213fdc1268ad14
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eb131223c59586d30fdf4cfbee84f63c483959f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984086"
 ---
 # <a name="getdatabaseproductversion-method-sqlserverdatabasemetadata"></a>getDatabaseProductVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getDatabaseProductVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getDatabaseProductVersion 方法是由 java.sql.DatabaseMetaData 介面中 getDatabaseProductVersion 方法指定。  
+ 這個 getDatabaseProductVersion 方法是由 JAVA.sql.databasemetadata 介面中的 getDatabaseProductVersion 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

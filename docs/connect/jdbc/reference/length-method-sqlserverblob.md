@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aa233ccb-72d3-4ea3-979d-07ef9aa47359
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e176624817a67945fa68ef34b2baaad7ed35714c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5848943e2b8540f1c2f7733af404520159dfb5ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976906"
 ---
 # <a name="length-method-sqlserverblob"></a>length 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個長度方法是由 java.sql.Blob 介面中的長度方法指定。  
+ 這個長度方法是由 .java 介面中的 length 方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

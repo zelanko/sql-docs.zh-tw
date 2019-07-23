@@ -1,5 +1,5 @@
 ---
-title: 參數和資料列集的中繼資料 |Microsoft Docs
+title: 參數和資料列集中繼資料 |Microsoft Docs
 description: 參數和資料列集的中繼資料
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995093"
 ---
 # <a name="metadata---parameter-and-rowset"></a>中繼資料 - 參數和資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,9 +68,9 @@ ms.locfileid: "66769251"
   
  *BPrecision*參數會被忽略。  
   
- 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "**datetime**" 和 "**smalldatetime**" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 伺服器時，會使用 "**datetime2**" 格式，而且當類型名稱為 "**datetime2**" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換 (如有必要)。 *bScale*如果提供者特定的類型名稱則會忽略"**datetime**「 或 」**smalldatetime**」 使用。 否則，應用程式必須確定*bScale*已正確設定。 從 SQL server 升級從 MDAC 和 OLE DB 驅動程式的應用程式[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]使用"DBTYPE_DBTIMESTAMP"將會失敗，如果它們不會設定*bScale*正確。 連接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
+ 當傳送資料到伺服器時，"DBPARAMFLAGS_SS_ISVARIABLESCALE" 會被忽略。 應用程式可以使用提供者特定的類型名稱 "**datetime**" 和 "**smalldatetime**" 來強制使用舊版的表格式資料流 (TDS) 類型。 當連接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 伺服器時，會使用 "**datetime2**" 格式，而且當類型名稱為 "**datetime2**" 或 "DBTYPE_DBTIMESTAMP" 時，會發生隱含的伺服器轉換 (如有必要)。 如果使用提供者特定的類型名稱 "**datetime**" 或 "**Smalldatetime**", 則會忽略*bScale* 。 否則, 應用程式必須確定已正確設定*bScale* 。 從 MDAC 升級的應用程式以及使用 "DBTYPE_DBTIMESTAMP [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] " 之 SQL Server 的 OLE DB 驅動程式, 如果未正確設定*bScale* , 則會失敗。 連接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 之前版本的伺服器執行個體時，*bScale* 值如果不是 0 或 3 且具有 "DBTYPE_DBTIMESTAMP"，便是錯誤且會傳回 E_FAIL。  
   
- 不呼叫 icommandwithparameters:: Setparameterinfo 時，提供者表示 iaccessor:: Createaccessor 中所指定的繫結類型的伺服器類型，如下所示：  
+ 未呼叫 ICommandWithParameters:: SetParameterInfo 時, 提供者會根據 IAccessor:: CreateAccessor 中所指定的系結類型來隱含伺服器類型, 如下所示:  
   
 |繫結類型|*pwszDataSourceType*<br /><br /> (提供者特定)|  
 |------------------|----------------------------------------------------|  
@@ -83,7 +82,7 @@ ms.locfileid: "66769251"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **Icolumnsrowset:: Getcolumnsrowset**傳回下列資料行：  
+ **IColumnsRowset:: GetColumnsRowset**會傳回下列資料行:  
   
 |資料行類型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  

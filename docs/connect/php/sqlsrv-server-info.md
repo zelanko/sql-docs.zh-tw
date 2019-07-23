@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 797ddae6180e3641e94be582dab84587298b7876
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e606d7f5d34225dd690181092c5fdfdfa8d05bb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014834"
 ---
 # <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +41,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>傳回值  
 具有下列索引鍵的關聯陣列：  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
 |CurrentDatabase|目前做為目標的資料庫。|  
 |SQLServerVersion|SQL Server 的版本。|  

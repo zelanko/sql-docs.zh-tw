@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ccfd2816bf81035b893ea8a7ddf30adebd325840
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 46b93b2b5c45491ad91be8b1e40fc909f0c4510d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977234"
 ---
 # <a name="issigned-method-sqlserverparametermetadata"></a>isSigned 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isSigned(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 isSigned 方法是由 java.sql.ParameterMetaData 介面中 isSigned 方法指定。  
+ 這個 isSigned 方法是由 JAVA.sql.parametermetadata 介面中的 isSigned 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerParameterMetaData 方法](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

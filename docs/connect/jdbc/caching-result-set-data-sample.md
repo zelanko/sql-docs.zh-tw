@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7dc1817f8cf46edf8639ff5ad2abeb33235086f9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af44648f8012a2d9bb8e4531f880a68751326e27
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957361"
 ---
 # <a name="caching-result-set-data-sample"></a>快取結果集資料範例
 
@@ -30,7 +29,7 @@ ms.locfileid: "66770262"
 若要對用戶端上快取的資料列數設定限制，您必須先在建立其中一個 Statement 物件時使用伺服器端資料指標，方法為特別陳述要在建立 Statement 物件時使用的資料指標類型。 例如，JDBC 驅動程式提供 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 資料指標類型，這是與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫搭配使用之快速順向且唯讀的伺服器端資料指標。
 
 > [!NOTE]  
-> 除了使用 SQL Server 特定資料指標類型，另一種方法是使用 selectMethod 連接字串屬性，並將其值設為 "cursor"。 如需 JDBC 驅動程式支援的資料指標類型的詳細資訊，請參閱[了解資料指標類型](../../connect/jdbc/understanding-cursor-types.md)。
+> 除了使用 SQL Server 特定資料指標類型，另一種方法是使用 selectMethod 連接字串屬性，並將其值設為 "cursor"。 如需 JDBC 驅動程式所支援之資料指標類型的詳細資訊, 請參閱[瞭解資料指標類型](../../connect/jdbc/understanding-cursor-types.md)。
 
 在執行 Statement 物件中包含的查詢並將資料傳回給用戶端作為結果集之後，您可以呼叫 setFetchSize 方法，控制一次可從資料庫擷取多少資料。 例如，如果有一個資料表包含 100 列資料，但您將提取大小設為 10，則任何時間點只會在用戶端上快取 10 列資料。 雖然這會減慢資料的處理速度，但是它具有在用戶端上使用更少記憶體的優點，當您需要處理大量資料時，此優點特別有用。
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1d279371d425af60687e2c046d1c75316eeae67
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f4c8cf36ca44e4de7bf3b49ac59285fedded6dd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956980"
 ---
 # <a name="working-with-large-data"></a>使用大型資料
 
@@ -26,7 +25,7 @@ JDBC 驅動程式提供適應性緩衝的支援，可讓您擷取任何種類的
   
 在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] JDBC 驅動程式 1.2 版中，預設的緩衝模式為 "**full**"。 如果您的應用程式並未在連接屬性中或使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法，將 "responseBuffering" 連接屬性設定為 "**adaptive**"，此驅動程式就會支援一次從伺服器中讀取完整的結果。 為了取得適應性緩衝行為，您的應用程式必須明確將 "responseBuffering" 連接屬性設定為 "**adaptive**"。  
   
-**adaptive** 值就是預設的緩衝模式，而且 JDBC 驅動程式會在必要時緩衝處理最少的可能資料。 如需有關使用適應性緩衝的詳細資訊，請參閱[使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
+**adaptive** 值就是預設的緩衝模式，而且 JDBC 驅動程式會在必要時緩衝處理最少的可能資料。 如需使用適應性緩衝的詳細資訊, 請參閱[使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
 本節中的主題將描述一些不同的方法，讓您可以用來從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中擷取大數值資料。  
   

@@ -1,5 +1,5 @@
 ---
-title: setSavepoint 方法 （) |Microsoft Docs
+title: setSavepoint 方法 () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 11013055-4fd3-45a9-b2da-28b2908dad52
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bf2c9920545d4d17bb8df6979410d849c125e20c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6f6f26909a0ad7c5f33bdf997c48f88c6e7b300a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973010"
 ---
 # <a name="setsavepoint-method-"></a>setSavepoint 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.Savepoint setSavepoint()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setSavePoint 方法是由 java.sql.Connection 介面中的 setSavePoint 方法指定。  
+ 這個 setSavePoint 方法是由連接介面中的 setSavePoint 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [setSavepoint 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   

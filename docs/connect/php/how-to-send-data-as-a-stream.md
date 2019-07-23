@@ -1,5 +1,5 @@
 ---
-title: 如何： 將資料傳送為 Stream |Microsoft Docs
+title: '如何: 以資料流程形式傳送資料 |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 73b30ff0ed4f4173f13fff518b6578e3d041f3b1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d524e7c7f00b08ce636f8a3b7b945f3e8b349af0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936402"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>如何：以資料流的形式傳送資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66780727"
   
 第三個範例說明如何使用 PDO_SQLSRV 驅動程式將資料流資料傳送至伺服器。  
   
-## <a name="example-sending-stream-data-at-execution"></a>範例： 在執行傳送 Stream 資料
+## <a name="example-sending-stream-data-at-execution"></a>範例: 在執行時傳送資料流程資料
 下列範例會在 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中插入資料列。 客戶意見 ( *$comments*) 會透過 PHP [fopen](https://php.net/manual/en/function.fopen.php) 函式以資料流的形式開啟，然後在執行查詢時串流處理至伺服器。  
   
 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 所有輸出都會寫入至主控台。  
@@ -80,7 +79,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>範例： 傳送 Stream 資料使用 sqlsrv_send_stream_data
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>範例: 使用 sqlsrv_send_stream_data 傳送資料流程資料
 下一個範例與上述範例相同，但關閉在執行時傳送所有資料流資料的預設行為。 此範例會使用 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) 將資料流資料傳送至伺服器。 每次呼叫 **sqlsrv_send_stream_data** 時最多可傳送 8 千位元組 (8 KB) 的資料。 指令碼會計算 **sqlsrv_send_stream_data** 所發出的呼叫數，並將此計數顯示到主控台。  
   
 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 所有輸出都會寫入至主控台。  
@@ -144,7 +143,7 @@ sqlsrv_close( $conn);
   
 本主題中的範例傳送至伺服器的是字元資料，但實際上任何格式的資料都可用資料流的形式傳送。 例如，您也可以使用本主題中示範的技術，以資料流傳送二進位格式的映像。  
   
-## <a name="example-sending-an-image-as-a-stream"></a>範例： 傳送為 Stream 的映像 
+## <a name="example-sending-an-image-as-a-stream"></a>範例: 以資料流程形式傳送影像 
   
 ```  
 <?php  

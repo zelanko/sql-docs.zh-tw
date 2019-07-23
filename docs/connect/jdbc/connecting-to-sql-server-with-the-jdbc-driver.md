@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ceb6d9f5fca9a0ab6281b3caa4b95ceef5bc0b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b88d1824564a9b4fdd3d5340575a5afdff5ca3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956826"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>使用 JDBC 驅動程式連接到 SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

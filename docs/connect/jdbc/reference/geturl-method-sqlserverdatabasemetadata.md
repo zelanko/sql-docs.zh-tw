@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f170e15ec0096d02fd98acb16e15a6ac05257f31
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978211"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>getURL 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public java.lang.String getURL()
   
 -   URL 值，"jdbc:sqlserver://"  
   
--   選擇性的連接屬性，例如**serverName**， **instanceName**，和**連接埠號碼**  
+-   選用的連接屬性, 例如**serverName**、 **instanceName**和**portNumber**  
   
 -   使用者設定的其他連線屬性，以及包含非空白或非 Null 驅動程式預設值的所有連線屬性，但 **userName**、**password** 和 **integratedSecurity** 除外。  
   

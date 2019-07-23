@@ -1,5 +1,5 @@
 ---
-title: 高可用性、 嚴重損壞修復的 Microsoft Drivers for PHP for SQL Server 支援 |Microsoft Docs
+title: 適用于 PHP for SQL Server 的 Microsoft 驅動程式的高可用性、嚴重損壞修復支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0ad826c8846330c7207b14ac2344687563bbfa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fab65d777025f59fab6566d118233febbb51aaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992968"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>高可用性與災害復原的支援
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "66797113"
   
 在連線到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時，永遠指定 **MultiSubnetFailover=True**。 **MultiSubnetFailover** 可讓 SQL Server 2012 中的所有可用性群組和容錯移轉叢集執行個體更快地容錯移轉，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會積極重試 TCP 連線。  
   
-如需有關中連接字串關鍵字[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，請參閱 < [Connection Options](../../connect/php/connection-options.md)。  
+如需中[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]連接字串關鍵字的詳細資訊, 請參閱[連接選項](../../connect/php/connection-options.md)。  
   
 當連線到可用性群組接聽程式或容錯移轉叢集執行個體以外的某個項目時，指定 **MultiSubnetFailover=true** 會導致降低效能，所以不支援此方式。  
   
@@ -63,16 +62,16 @@ ms.locfileid: "66797113"
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>透明網路 IP 解析 (TNIR)
 
-透明網路 IP 解析 (TNIR) 是現有的 MultiSubnetFailover 功能的修訂。 當第一個問題解決之後，主機名稱的 IP 沒有回應，而且有多個主機名稱相關聯的 Ip，它會影響的驅動程式的連接順序。 MultiSubnetFailover 以及它們會提供下列四個連接序列： 
+透明網路 IP 解析 (TNIR) 是現有 MultiSubnetFailover 功能的修訂。 當主機名稱的第一個已解析 IP 沒有回應, 而且有多個 Ip 與主機名稱相關聯時, 它會影響驅動程式的連接順序。 與 MultiSubnetFailover 一起提供下列四個連接順序: 
 
-- TNIR 啟用和停用 MultiSubnetFailover： 嘗試一個 IP，後面接著以平行方式的所有 Ip
-- 啟用 TNIR & MultiSubnetFailover 啟用： 嘗試以平行方式進行的所有 Ip
-- TNIR 已停用 & MultiSubnetFailover 已停用： 嘗試進行的所有 Ip 逐一
-- TNIR 已停用和啟用 MultiSubnetFailover： 嘗試以平行方式進行的所有 Ip
+- 已啟用 TNIR & MultiSubnetFailover 已停用: 嘗試一個 IP, 並以平行方式執行所有 ip
+- 已啟用 TNIR & MultiSubnetFailover: 已同時嘗試所有 Ip
+- 停用的 TNIR & MultiSubnetFailover 停用: 所有 Ip 都會逐一嘗試一次
+- TNIR 已停用 & MultiSubnetFailover 啟用: 所有 Ip 都是以平行方式嘗試
 
-依預設，會啟用的 TNIR 和 MultiSubnetFailover 預設會停用。
+預設會啟用 TNIR, 而且預設會停用 MultiSubnetFailover。
 
-這是啟用 TNIR 和 MultiSubnetFailover 使用 PDO_SQLSRV 驅動程式的範例：
+這是使用 PDO_SQLSRV 驅動程式同時啟用 TNIR 和 MultiSubnetFailover 的範例:
 
 ```
 <?php

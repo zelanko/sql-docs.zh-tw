@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 085461de-367b-4832-88aa-010813d2bc41
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d60c23e3adc2ec3395281ba18d8f5cb0262ed34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 798b5d2abca5aad5daa075a10652b4952dae6e8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979311"
 ---
 # <a name="getsupertables-method-sqlserverdatabasemetadata"></a>getSuperTables 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +58,7 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getSuperTables 方法是由 java.sql.DatabaseMetaData 介面中的 getSuperTables 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

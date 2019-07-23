@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6c00b6a0697a4dc6f6e0a358b85fe1e211791826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916257"
 ---
 # <a name="using-database-mirroring-jdbc"></a>使用資料庫鏡像 (JDBC)
 
@@ -41,7 +40,7 @@ ms.locfileid: "66798661"
 在最初建立連接時，主體伺服器會將其容錯移轉夥伴的身分，傳送給發生容錯移轉時將使用的用戶端。 當應用程式嘗試與失敗的主體伺服器建立初始連接時，用戶端並不知道容錯移轉夥伴的身分。 若要讓用戶端有機會處理此案例，failoverPartner 連接字串屬性及選用的 [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) 資料來源方法，可讓用戶端指定自己的容錯移轉夥伴身分。 此用戶端屬性只會在此案例中使用；如果主體伺服器可用，就不會使用。
 
 > [!NOTE]  
-> 在連接字串中或利用資料來源物件指定 failoverPartner 時，也必須設定 databaseName 屬性，否則將擲回例外狀況。 如果未明確指定 failoverPartner 和 databaseName，當主體資料庫伺服器失敗時，應用程式將不會嘗試容錯移轉。 換句話說，透明的重新導向僅適用於明確指定 failoverPartner 和 databaseName 的連接。 如需 failoverPartner 及其他連接字串屬性的詳細資訊，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。
+> 在連接字串中或利用資料來源物件指定 failoverPartner 時，也必須設定 databaseName 屬性，否則將擲回例外狀況。 如果未明確指定 failoverPartner 和 databaseName，當主體資料庫伺服器失敗時，應用程式將不會嘗試容錯移轉。 換句話說，透明的重新導向僅適用於明確指定 failoverPartner 和 databaseName 的連接。 如需 failoverPartner 和其他連接字串屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。
 
 如果用戶端所提供的容錯移轉夥伴伺服器並未參照當做指定資料庫之容錯移轉夥伴的伺服器，而且如果所參照的伺服器/資料庫處於鏡像排列中，伺服器會拒絕連接。 雖然 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別提供 [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md) 方法，但是此方法只會傳回連接字串或 setFailoverPartner 方法中所指定容錯移轉夥伴的名稱。 若要擷取目前正在使用之真正容錯移轉夥伴的名稱，請使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：
 

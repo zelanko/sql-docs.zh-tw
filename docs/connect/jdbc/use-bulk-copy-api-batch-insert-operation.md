@@ -1,5 +1,5 @@
 ---
-title: MSSQL JDBC 驅動程式的批次插入作業中使用大量複製 API |Microsoft Docs
+title: 針對 MSSQL JDBC Driver 使用大量複製 API 進行批次插入作業 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -10,68 +10,67 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 347ce28dc28016f95de2795bd2f5e491dd29e2d8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004133"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>使用大量複製 API 執行批次插入作業
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-使用大量複製 API 的批次插入作業，Azure 資料倉儲的 SQL Server 支援的 Microsoft JDBC 驅動程式 7.0。 這項功能可讓使用者啟用驅動程式執行時執行的批次插入作業下的大量複製作業。 驅動程式目的是，為了改進效能，同時插入相同的資料，因為驅動程式會使用一般的批次插入作業。 驅動程式會剖析使用者的 SQL 查詢，利用大量複製 API 取代一般的批次插入作業。 以下是各種啟用批次的大量複製 API 插入功能，以及其限制的清單。 此頁面也包含小型示範程式碼範例使用方式和效能提升。
+適用于 SQL Server 的 Microsoft JDBC Driver 7.0 支援使用大量複製 API 來進行 Azure 資料倉儲的批次插入作業。 這項功能可讓使用者在執行批次插入作業時, 啟用驅動程式來執行大量複製操作。 此驅動程式的目的是要改善效能, 同時插入與驅動程式定期執行批次插入作業相同的資料。 驅動程式會剖析使用者的 SQL 查詢, 利用大量複製 API 代替一般的批次插入作業。 以下是啟用批次插入功能的大量複製 API, 以及其限制清單的各種方式。 此頁面也包含一個小範例程式碼, 示範用法和效能增加。
 
-這項功能僅適用於 PreparedStatement 和 CallableStatement 的`executeBatch()`  &  `executeLargeBatch()` Api。
+這項功能僅適用于 java.sql.preparedstatement 和 java.sql.callablestatement 的`executeBatch()`  &  `executeLargeBatch()` api。
 
 ## <a name="pre-requisites"></a>必要條件
 
-有兩個批次插入為啟用大量複製 API 的必要條件。
+有兩個必要條件可啟用大量複製 API 以進行批次插入。
 
 * 伺服器必須是 Azure 資料倉儲。
-* 查詢必須是 insert 查詢 （查詢可能會包含註解，但是查詢必須以開始生效的這項功能的插入關鍵字開頭）。
+* 查詢必須是插入查詢 (查詢可能包含批註, 但查詢必須以 INSERT 關鍵字開頭, 此功能才會生效)。
 
-## <a name="enabling-bulk-copy-api-for-batch-insert"></a>啟用批次插入大量複製 API
+## <a name="enabling-bulk-copy-api-for-batch-insert"></a>啟用大量複製 API 以進行批次插入
 
-有三種方式可啟用大量複製 API 的批次插入。
+有三種方式可啟用大量複製 API 以進行批次插入。
 
-### <a name="1-enabling-with-connection-property"></a>1.啟用搭配連接屬性
+### <a name="1-enabling-with-connection-property"></a>1.使用連接屬性啟用
 
-新增**useBulkCopyForBatchInsert = true;** 連接字串可讓這項功能。
+將**useBulkCopyForBatchInsert = true;** 加入至連接字串會啟用這項功能。
 
 ```java
 Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
 ```
 
-### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2.啟用搭配 SQLServerConnection 物件 setUseBulkCopyForBatchInsert() 方法
+### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2.使用 SQLServerConnection 物件的 setUseBulkCopyForBatchInsert () 方法啟用
 
-呼叫**SQLServerConnection.setUseBulkCopyForBatchInsert(true)** 啟用這項功能。
+呼叫**SQLServerConnection. setUseBulkCopyForBatchInsert (true)** 可啟用這項功能。
 
-**SQLServerConnection.getUseBulkCopyForBatchInsert()** 擷取目前的值，如**useBulkCopyForBatchInsert**連接屬性。
+**SQLServerConnection. getUseBulkCopyForBatchInsert ()** 會抓取**useBulkCopyForBatchInsert**連接屬性的目前值。
 
-值**useBulkCopyForBatchInsert**維持不變的每個 PreparedStatement 在其初始化階段。 任何後續呼叫**SQLServerConnection.setUseBulkCopyForBatchInsert()** 就不會影響已建立的 PreparedStatement 有關它的值。
+**UseBulkCopyForBatchInsert**的值在其初始化期間會針對每個 java.sql.preparedstatement 保持不變。 任何後續對 SQLServerConnection 的呼叫**setUseBulkCopyForBatchInsert ()** 都不會影響已建立的 java.sql.preparedstatement 與其值有關。
 
-### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3.啟用使用 SQLServerDataSource 物件從 setUseBulkCopyForBatchInsert() 方法
+### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3.使用 SQLServerDataSource 物件的 setUseBulkCopyForBatchInsert () 方法啟用
 
-與上述類似，但是使用 SQLServerDataSource 建立 SQLServerConnection 物件。 這兩種方法皆會獲得相同的結果。
+與上述類似, 但使用 SQLServerDataSource 來建立 SQLServerConnection 物件。 這兩種方法皆會獲得相同的結果。
 
 ## <a name="known-limitations"></a>已知限制
 
-目前沒有這項功能適用於這些限制。
+目前有適用于這項功能的限制。
 
-* 插入包含非參數化值的查詢 (例如`INSERT INTO TABLE VALUES (?, 2`))，不支援。 萬用字元 （？） 是唯一支援的參數，此函式。
-* 插入包含 INSERT SELECT 運算式的查詢 (例如`INSERT INTO TABLE SELECT * FROM TABLE2`)，不支援。
-* 插入包含多個值運算式的查詢 (例如`INSERT INTO TABLE VALUES (1, 2) (3, 4)`)，不支援。
-* 插入查詢後面的 OPTION 子句中，加入多個資料表，或後面接著另一個查詢，不支援。
-* 由於大量複製 API 的限制`MONEY`， `SMALLMONEY`， `DATE`， `DATETIME`， `DATETIMEOFFSET`， `SMALLDATETIME`， `TIME`， `GEOMETRY`，和`GEOGRAPHY`資料類型，目前不支援這個功能。
+* 不支援包含非參數化值的插入查詢 (例如`INSERT INTO TABLE VALUES (?, 2`,))。 萬用字元 (？) 是這個函數唯一支援的參數。
+* 不支援包含插入選取運算式 (例如, `INSERT INTO TABLE SELECT * FROM TABLE2`) 的插入查詢。
+* 不支援包含多個值運算式 (例如, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`) 的插入查詢。
+* 不支援將後面接著 OPTION 子句、與多個資料表聯結, 或後面接著另一個查詢的插入查詢。
+* 由於大量複製`MONEY`API、 、`TIME`、 `DATE` `SMALLMONEY` `DATETIME`、 `DATETIMEOFFSET` 、、`GEOGRAPHY` 、、和資料類型的限制, 目前不支援此項`SMALLDATETIME` `GEOMETRY`特徵.
 
-如果查詢失敗，因為非 「 SQL server 」 相關的錯誤，此驅動程式會以批次插入的原始邏輯記錄的錯誤訊息和後援。
+如果查詢因為非「SQL server」相關錯誤而失敗, 驅動程式將會記錄錯誤訊息, 並回溯至批次插入的原始邏輯。
 
 ## <a name="example"></a>範例
 
-以下是示範批次插入作業針對 Azure DW 的一千個資料列，這兩個 （標準與大量複製 API） 案例的使用案例的範例程式碼。
+以下範例程式碼示範適用于數千個數據列之 Azure DW 的批次插入作業使用案例, 適用于 (一般 vs 大量複製 API) 案例。
 
 ```java
     public static void main(String[] args) throws Exception

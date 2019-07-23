@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1726b93bb7d569ce64e4313d80670cf3e27e269
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a212f6e8c320140edfb8092a9c15649bf9b792db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969409"
 ---
 # <a name="supportsgetgeneratedkeys-method-sqlserverdatabasemetadata"></a>supportsGetGeneratedKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsGetGeneratedKeys()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果支援。 否則為 **false**。  
+ 如果支援,**則為 true** 。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 supportsGetGeneratedKeys 方法是由 java.sql.DatabaseMetaData 介面中 supportsGetGeneratedKeys 方法指定。  
+ 這個 supportsGetGeneratedKeys 方法是由 JAVA.sql.databasemetadata 介面中的 supportsGetGeneratedKeys 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

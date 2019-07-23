@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 870d0031-6871-4dc0-b03a-fb0a9ff6ab98
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c7fc5e407a4dfed3a310228ca5f68c7c11968c7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 83221ed88b354eb7b00ae151755129d1a7dc020c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974232"
 ---
 # <a name="setfloat-method-sqlserverpreparedstatement"></a>setFloat 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public final void setFloat(int n,
   
  *x*  
   
- A**浮點數**值。  
+ **浮點**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: effb3d9d1274d19915c9a5eb1850a7e47deb655f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0e53ab6e5f2fc2cc12db37d81b1c8f687b503158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956358"
 ---
 # <a name="managing-transaction-size"></a>管理交易大小
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

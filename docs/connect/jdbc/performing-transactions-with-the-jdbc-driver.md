@@ -1,5 +1,5 @@
 ---
-title: 使用 JDBC 驅動程式執行異動 |Microsoft Docs
+title: 使用 JDBC 驅動程式執行交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8471493fb68df8369084046075f88a1e7b4f2e3e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: afb7968f5173bf69fec3d4b0204798a430d49930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956216"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>以 JDBC 驅動程式執行交易
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

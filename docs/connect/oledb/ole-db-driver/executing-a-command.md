@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, command execution
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 876ce5b140ab590fd1a599f9a05391a236021f68
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f13c9177a74212b849572881f114e503a9530286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994986"
 ---
 # <a name="executing-a-command"></a>執行命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "66796011"
   
  若要直接使用個別的資料表或索引，取用者會要求 **IOpenRowset** 介面。 **IOpenRowset::OpenRowset** 方法會從單一基底資料表或索引開啟並傳回包含所有資料列的資料列集。  
   
- 若要執行命令 (例如 SELECT \* FROM Authors)，取用者會要求 **IDBCreateCommand** 介面。 取用者可以執行**idbcreatecommand:: Createcommand**方法來建立命令物件，並要求**ICommandText**介面。 **Icommandtext:: Setcommandtext**方法用來指定所要執行的命令。  
+ 若要執行命令 (例如 SELECT \* FROM Authors)，取用者會要求 **IDBCreateCommand** 介面。 取用者可以執行**IDBCreateCommand:: CreateCommand**方法來建立命令物件, 並要求**ICommandText**介面。 **ICommandText:: SetCommandText**方法是用來指定要執行的命令。  
   
  **Execute** 命令用於執行命令。 此命令可以是任何 SQL 陳述式或程序名稱。 並非所有命令都會產生結果集 (資料列集) 物件。 SELECT * FROM Authors 之類的命令會產生結果集。  
   

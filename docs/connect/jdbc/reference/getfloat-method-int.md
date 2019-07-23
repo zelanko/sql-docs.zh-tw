@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 40178471-4f35-4df9-b3fb-80cdf43de274
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55fa26cc1cdd89a67eb918b90aca9b0c922e0adb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bb0f1d7376c92eb5710e9d308d40f10fce1e3fa1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983110"
 ---
 # <a name="getfloat-method-int"></a>getFloat 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public float getFloat(int index)
  指出參數索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- A**浮點數**值。  
+ **浮點**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

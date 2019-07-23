@@ -11,13 +11,12 @@ ms.assetid: 5b615023-3c76-4b95-bbd0-9c39f3353f4b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: be8796da609d77c6533e1ed8325dee651d91a6d0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e94c6a0bca2d3f0ea3677efa1293a46cc7ff3786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024205"
 ---
 # <a name="sql-server-browser-sql-server-configuration-manager"></a>SQL Server Browser (SQL Server 組態管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

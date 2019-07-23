@@ -1,5 +1,5 @@
 ---
-title: JDBC 驅動程式概觀 |Microsoft Docs
+title: JDBC Driver 的總覽 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956230"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC Driver 概觀
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66801794"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[下載 Microsoft JDBC Driver for SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server 的下載連結|  
 |[JDBC Driver 的版本資訊](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|說明目前之 Microsoft JDBC Driver 版本中所加入的功能。|  
@@ -38,7 +37,7 @@ ms.locfileid: "66801794"
 |[轉散發 Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|說明如何註冊以轉散發 Microsoft JDBC Driver。|  
 |[尋找其他 JDBC Driver 資訊](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|說明何處可以找到 Microsoft JDBC Driver 的其他資源，包括外部資源的連結。|  
 |[Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft JDBC Driver for SQL Server 的支援對照表與支援週期原則。|  
-|[常見問題集&#40;常見問題集&#41;JDBC 驅動程式](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver 的常見問題集。|  
+|[&#40;JDBC Driver 常見問題&#41;的常見問題](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver 的常見問題集。|  
 |[Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server 的功能相依性。|
 
 ## <a name="see-also"></a>另請參閱  

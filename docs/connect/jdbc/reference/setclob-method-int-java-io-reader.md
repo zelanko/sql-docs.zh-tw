@@ -1,5 +1,5 @@
 ---
-title: setClob 方法 （int，java.io.Reader） |Microsoft Docs
+title: setClob 方法 (int, java. io. 讀取器) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2b3727da-0480-4cea-b8b1-abda90699b84
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d777242d38e6a7002b2fa557c4ca18290e652a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f21a5e3a6d4c09ace79538ea5a5dceadf26479c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974576"
 ---
 # <a name="setclob-method-int-javaioreader"></a>setClob 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,12 +37,12 @@ public final void setClob(int parameterIndex,
   
  *reader*  
   
- 讀取器物件。  
+ Reader 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

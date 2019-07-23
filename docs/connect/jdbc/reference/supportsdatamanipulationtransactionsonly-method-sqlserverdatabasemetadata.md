@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bdc182db-4518-4bf2-b63a-05f58fdb4eb8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0002cfbcb149288846bdb53926b9744fb994a450
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d93c58d045741d281158a1716ab43b0b68e49bec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969497"
 ---
 # <a name="supportsdatamanipulationtransactionsonly-method-sqlserverdatabasemetadata"></a>supportsDataManipulationTransactionsOnly 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsDataManipulationTransactionsOnly()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果支援。 否則為 **false**。  
+ 如果支援,**則為 true** 。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 supportsDataManipulationTransactionsOnly 方法是由 java.sql.DatabaseMetaData 介面中 supportsDataManipulationTransactionsOnly 方法指定。  
+ 這個 supportsDataManipulationTransactionsOnly 方法是由 JAVA.sql.databasemetadata 介面中的 supportsDataManipulationTransactionsOnly 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 42e49ff9-8072-44e4-ad75-c864c3a4ad8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e1d66cdc791b927f269dfa53343b30469b254437
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2b10b7bc63a4d3defc1d0465dd675bc9d7d6f872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982362"
 ---
 # <a name="getmaxbinaryliterallength-method-sqlserverdatabasemetadata"></a>getMaxBinaryLiteralLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxBinaryLiteralLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getMaxBinaryLiteralLength 方法是由 java.sql.DatabaseMetaData 介面中 getMaxBinaryLiteralLength 方法指定。  
+ 這個 getMaxBinaryLiteralLength 方法是由 JAVA.sql.databasemetadata 介面中的 getMaxBinaryLiteralLength 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

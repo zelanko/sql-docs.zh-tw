@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 7ffd282d-c2f6-4d1b-a7a6-859d18b388aa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0ad1abbbfe186841c75c15ad9d6a266726dc6eba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5d8cbb5d941e9d5bd6476b0baa91d5891d6297d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973972"
 ---
 # <a name="setmultisubnetfailover-method-sqlserverdatasource"></a>setMultiSubnetFailover 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定的值**multiSubnetFailover**連接屬性。  
+  設定**multiSubnetFailover**連接屬性的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,10 +31,10 @@ public void setMultiSubnetFailover(boolean multiSubnetFailover);
 #### <a name="parameters"></a>參數  
  *multiSubnetFailover*  
   
- 新值**multiSubnetFailover**連接屬性。  
+ **MultiSubnetFailover**連接屬性的新值。  
   
 ## <a name="remarks"></a>Remarks  
- 如需詳細資訊**multiSubnetFailover**連接屬性，請參閱[設定連接屬性](../../../connect/jdbc/setting-the-connection-properties.md)。  
+ 如需**multiSubnetFailover**連接屬性的詳細資訊, 請參閱[設定連接屬性](../../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource.getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)   

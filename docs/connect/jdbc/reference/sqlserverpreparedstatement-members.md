@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89b4d7bedb2572c0396c3de80f000fdccdd1a2cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d99bf6118af71981ad2f45b5c7b722b458cc158c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970758"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "66803013"
   
 ## <a name="methods"></a>方法  
   
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|將一組參數新增至這個 Statement 物件的批次命令中。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。取消目前正由這個 Statement 物件執行的 SQL 陳述式。|  
@@ -56,7 +55,7 @@ ms.locfileid: "66803013"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取最大位元組數目，此位元組可傳回作為這個 Statement 物件所產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中的字元和二進位資料行值。|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取最大資料列數目，即這個 Statement 物件所產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件可以包含的資料列。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|擷取 [SQLServerResultSetMetaData 類別](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)物件，此物件包含當執行這個 Statement 物件時將傳回之 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件資料行的相關資訊。|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。移至這個陳述式物件的下一個結果。|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。移至這個語句物件的下一個結果。|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|擷取這個 Statement 物件參數的號碼、類型和屬性。|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的回應緩衝模式。|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 將等候這個 Statement 物件執行的秒數。|  
@@ -81,7 +80,7 @@ ms.locfileid: "66803013"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|將指定的參數設定為所指定 Clob 物件。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。將 SQL 資料指標名稱設定為指定的字串，此字串將由後續執行方法使用。|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)|將指定的參數設定為指定的日期值。|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|設定指定的資料行的值[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|將指定的資料行值設定為[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|將指定的參數設定為所指定 **double** 值。|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。設定逸出處理模式。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。提供 JDBC Driver 提示，當做處理結果集資料列時應遵循的方向。|  
@@ -96,7 +95,7 @@ ms.locfileid: "66803013"
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)|在給定要設定之參數的類型時，將指定的參數設定為 null 值。|  
 |[setNString](../../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md)|將指定的參數設定為所指定 **String** 物件。|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)|使用給定物件，設定指定之參數的值。|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。要求共用或不共用陳述式。 根據預設，SQLServerPreparedStatement 物件時它是建立。|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。要求共用或不共用陳述式。 根據預設, SQLServerPreparedStatement 物件會在建立時可共用。|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。設定驅動程式將等候這個 Statement 物件執行指定秒數的秒數。|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|將指定的參數設定為所指定 Ref 物件。|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。將這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的回應緩衝模式設定為 **String full** 或 **adaptive** (不區分大小寫)。|  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c99d0772-b26c-492c-a643-2813b5429993
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e017453713347ff3c3dc5696fb0a4c63315413aa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 15991cb98860ccc471229ae3abb8e3b24e35c799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954016"
 ---
 # <a name="getbigdecimal-method-int-int-sqlserverresultset"></a>getBigDecimal 方法 (int, int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,13 +48,13 @@ public java.math.BigDecimal getBigDecimal(int columnIndex,
  **int**，指出小數點右邊的位數。  
   
 ## <a name="return-value"></a>傳回值  
- BigDecimal 物件。  
+ JAVA.math.bigdecimal 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- GetBigDecimal 方法 java.sql.ResultSet 介面中所指定這個 getBigDecimal 方法。  
+ 這個 getBigDecimal 方法是由 sql-dmo 介面中的 getBigDecimal 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [getBigDecimal 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

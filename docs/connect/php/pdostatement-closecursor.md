@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::closeCursor |Microsoft Docs
+title: 'PDOStatement:: closeCursor |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0100c20c2a6ebaaa0eecdcf0bfe21829740e2d65
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: caf214fa7055bb0e8000f52f5db43c4f76e48e1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993097"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

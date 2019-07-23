@@ -1,5 +1,5 @@
 ---
-title: 了解 JDBC Driver 資料類型 |Microsoft Docs
+title: 瞭解 JDBC Driver 資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4fcb982a613fe914aa0f0c3de556b8d19faa1bbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a78f6049f49c73c728e3de9329cc6b3e533cdc8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916604"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>了解 JDBC Driver 資料類型
 

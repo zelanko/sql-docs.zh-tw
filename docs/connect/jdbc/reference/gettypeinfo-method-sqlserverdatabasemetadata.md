@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978510"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +40,12 @@ public java.sql.ResultSet getTypeInfo()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getTypeInfo 方法是由 java.sql.DatabaseMetaData 介面中的 getTypeInfo 方法指定。  
   
  getTypeInfo 方法所傳回的結果將包含下列資訊：  
   
-|名稱|類型|描述|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|資料類型的名稱。|  
 |DATA_TYPE|**short**|來自 java.sql.Types 的 SQL 資料型別。|  

@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 169f6bdbe17e1df27e62983def52ec26a11635f4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 595ac0ed2e71092950486cf495ec9013bbd6f09d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974343"
 ---
 # <a name="setdisablestatementpooling-method-sqlserverconnection"></a>setDisableStatementPooling 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 設定為 true 或 false 的陳述式共用。 如果為 false，可讓集區，可用於結合 statementPoolingCacheSize 值 > 0 的陳述式。
+ 將語句集區設定為 true 或 false。 如果為 false, 則啟用語句共用以用於與 statementPoolingCacheSize 值的結合 > 0。
 
 ## <a name="syntax"></a>語法  
   
@@ -38,13 +37,13 @@ public void setDisableStatementPooling(boolean disableStatementPooling)
 #### <a name="parameters"></a>參數  
  *disableStatementPooling*  
   
- 新值**disableStatementPooling**連接屬性。  
+ **DisableStatementPooling**連接屬性的新值。  
  
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 這個方法是從 JDBC 驅動程式版本 6.4 可用且向外。
+ 這個方法可從 JDBC 驅動程式6.4 版和之後版本取得。
  
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

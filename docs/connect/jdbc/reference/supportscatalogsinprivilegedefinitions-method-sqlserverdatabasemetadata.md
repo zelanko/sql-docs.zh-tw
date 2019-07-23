@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cc18f99e-c19f-4bd0-96ae-b9a6a0de1926
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 963637dc079d34dd169301aa48c5f7f66f470a83
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 16a57ee05bbe67d4fe8a88f61d969f79734521cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969698"
 ---
 # <a name="supportscatalogsinprivilegedefinitions-method-sqlserverdatabasemetadata"></a>supportsCatalogsInPrivilegeDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCatalogsInPrivilegeDefinitions()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果支援。 否則為 **false**。  
+ 如果支援,**則為 true** 。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 supportsCatalogsInPrivilegeDefinitions 方法是由 java.sql.DatabaseMetaData 介面中 supportsCatalogsInPrivilegeDefinitions 方法指定。  
+ 這個 supportsCatalogsInPrivilegeDefinitions 方法是由 JAVA.sql.databasemetadata 介面中的 supportsCatalogsInPrivilegeDefinitions 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

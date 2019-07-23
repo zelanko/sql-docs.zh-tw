@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1ca8c6de30ff6a1bb949648088a6b29441ea0222
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e207b2c4f78a6a91625c5824ee612a14febf24f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928819"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>在追蹤暫停或停止之後執行追蹤 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

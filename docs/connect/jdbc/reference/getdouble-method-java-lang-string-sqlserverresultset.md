@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3ee26412-43d2-404b-bc05-ffd0fc75805c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fb74dd4b80256ad85e03a258a0adc5d93ba1880d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e82f85941899fc05fc8fdf35cd7ae65870100ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983573"
 ---
 # <a name="getdouble-method-javalangstring-sqlserverresultset"></a>getDouble 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +40,12 @@ public double getDouble(java.lang.String columnName)
  包含資料行名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- A **double**值。  
+ **Double**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getDouble 方法是由 java.sql.ResultSet 介面中的 getDouble 方法指定。  
   
  這個方法會傳回所有具有 Java **double** 精確度的數字資料類型。  

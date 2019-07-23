@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7292e171a2d3d5b2813ebe2add4164876d9edd8a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 767bc5c9d84d8ee0ee14bb74a5b5722604ee9f93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949821"
 ---
 # <a name="configuration-element-dta"></a>Configuration 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

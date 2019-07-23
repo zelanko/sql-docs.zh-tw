@@ -9,15 +9,14 @@ helpviewer_keywords:
 - upgrading Reporting Services
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
-ms.openlocfilehash: dc205f966d0e5556f8dc6f722190d477b5d89327
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65570741"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264988"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 

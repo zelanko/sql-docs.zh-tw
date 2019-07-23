@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13da5aeb7015255f0ff4b7a540b62462439ce30d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981056"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance 方法 (SQLServerDataSourceObjectFactory)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getObjectInstance 方法是由 javax.naming.spi.ObjectFactory 介面中的 getObjectInstance 方法指定。  
+ 這個 getObjectInstance 方法是由 javax.xml.transform.dom.domresult 中的 getObjectInstance 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSourceObjectFactory 方法](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   

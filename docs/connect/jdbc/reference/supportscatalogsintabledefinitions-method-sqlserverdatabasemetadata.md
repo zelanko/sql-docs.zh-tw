@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1e1e50ac-f3d4-416a-8a69-d8b7b4f30bf3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f80dad51a9ce9d0c156dbac86284372848fdcae9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aa1c949cab59b1ff04f9cb0ae693b037fd3588f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969663"
 ---
 # <a name="supportscatalogsintabledefinitions-method-sqlserverdatabasemetadata"></a>supportsCatalogsInTableDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCatalogsInTableDefinitions()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果支援。 否則為 **false**。  
+ 如果支援,**則為 true** 。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 supportsCatalogsInTableDefinitions 方法是由 java.sql.DatabaseMetaData 介面中 supportsCatalogsInTableDefinitions 方法指定。  
+ 這個 supportsCatalogsInTableDefinitions 方法是由 JAVA.sql.databasemetadata 介面中的 supportsCatalogsInTableDefinitions 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

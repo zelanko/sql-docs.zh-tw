@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009968"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中可感知驅動程式的連接共用
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -25,12 +24,12 @@ ms.locfileid: "66797796"
   
 -   無論連線屬性為何，使用 `SQLDriverConnect` 的連線都會進入與使用 `SQLConnect` 的連線不同的個別集區。
 - 在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證和可感知驅動程式的連線共用時，驅動程式並不會使用目前執行緒的 Windows 使用者安全性內容，來區隔集區中的連線。 也就是說，如果連線對於具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的 Windows 模擬案例使用了相同的參數，並且使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證認證連線到後端，則不同的 Windows 使用者將可能使用相同的連線集區。 在使用 Windows 驗證和可感知驅動程式的連接共用時，驅動程式會使用目前 Windows 使用者的安全性內容來區隔集區中的連接。 也就是說，在 Windows 模擬案例中，即使連接使用相同的參數，不同的 Windows 使用者也不會共用連接。
-- 使用 Azure Active Directory 和可感知驅動程式的連接共用時，驅動程式也使用的驗證值來判斷連接集區中的成員資格。
+- 使用 Azure Active Directory 和可感知驅動程式的連接共用時, 驅動程式也會使用驗證值來判斷連接集區中的成員資格。
   
 -   可感知驅動程式的連接共用可防止從集區傳回錯誤的連接。  
   
--   可感知驅動程式的連接共用可辨識驅動程式的特定連接屬性。 因此，如果連接使用`SQL_COPT_SS_APPLICATION_INTENT`設為唯讀，該連線會取得自己的連接集區。
--   設定`SQL_COPT_SS_ACCESS_TOKEN`屬性會導致個別的集區的連線 
+-   可感知驅動程式的連接共用可辨識驅動程式的特定連接屬性。 因此, 如果連接使用`SQL_COPT_SS_APPLICATION_INTENT`設定為唯讀, 該連接會取得自己的連接集區。
+-   `SQL_COPT_SS_ACCESS_TOKEN`設定屬性會使連接分開共用 
   
 如果在您的連接字串與共用的連接字串之間，有下列其中一個連接屬性識別碼或連接字串關鍵字不相同，驅動程式將會使用共用連接。 不過，如果所有的連接屬性識別碼或連接字串關鍵字皆相符，效能會更好。 (為了符合集區中的連接，驅動程式會重設屬性。) 由於重設下列參數需要額外的網路呼叫，效能因而降低。  
   

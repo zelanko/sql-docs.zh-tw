@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fda3463dcdd2a14c94205c2a703addedd05ed557
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d274dec50ef238e0f87f63524d47275bb386810d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976648"
 ---
 # <a name="othersinsertsarevisible-method-sqlserverdatabasemetadata"></a>othersInsertsAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean othersInsertsAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 othersInsertsAreVisible 方法是由 java.sql.DatabaseMetaData 介面中 othersInsertsAreVisible 方法指定。  
+ 這個 othersInsertsAreVisible 方法是由 JAVA.sql.databasemetadata 介面中的 othersInsertsAreVisible 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

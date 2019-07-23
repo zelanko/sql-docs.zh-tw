@@ -10,28 +10,28 @@ helpviewer_keywords:
 - date and time types, retrieving as datetime objects
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 54e5b5c9c1ba59ed64db740fbbb1a643e7cb1b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63210430"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264572"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>如何：使用 PDO_SQLSRV 驅動程式以 PHP 日期時間物件形式擷取日期和時間類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-使用 PDO_SQLSRV 驅動程式時，才有效這項功能，加入版本 5.6.0， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。
+這項功能在版本5.6.0 版中新增, 只有在使用的 PDO_SQLSRV 驅動程式[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]時才有效。
 
-### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>若要擷取做為 DateTime 物件的日期和時間類型
+### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>將日期和時間類型取出為 DateTime 物件
 
-當使用 PDO_SQLSRV，日期和時間類型 (**smalldatetime**， **datetime**，**日期**，**時間**， **datetime2**，並**datetimeoffset**) 都預設以字串傳回。 PDO::ATTR_STRINGIFY_FETCHES 和 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性都不具有任何作用。 以日期和時間型別擷取為[PHP DateTime](http://php.net/manual/en/class.datetime.php)物件，設定的連接或陳述式屬性`PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE`來 **，則為 true** (它是**false**預設)。
+使用 PDO_SQLSRV 時, 日期和時間類型 (**Smalldatetime**、 **datetime**、 **date**、 **time**、 **datetime2**和**datetimeoffset**) 預設會以字串傳回。 PDO:: ATTR_STRINGIFY_FETCHES 或 PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性都不會有任何作用。 若要將日期和時間類型取出為[PHP DateTime](http://php.net/manual/en/class.datetime.php)物件, 請將 connection 或語句屬性`PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE`設定為**true** (預設為**false** )。
 
 > [!NOTE]
-> 此連接或陳述式屬性僅適用於定期擷取的日期和時間型別因為 DateTime 物件不能指定為輸出參數。
+> 此連接或語句屬性僅適用于日期和時間類型的一般提取, 因為 DateTime 物件不能指定為 output 參數。
 
 ## <a name="example---use-the-connection-attribute"></a>範例-使用連接屬性
-下列範例會略過錯誤檢查為了清楚起見。 這個示範如何設定連接屬性：
+下列範例會省略錯誤檢查以清楚瞭解。 這個範例顯示如何設定連接屬性:
 
 ```php
 <?php
@@ -58,8 +58,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-attribute"></a>範例-使用陳述式屬性
-此範例示範如何設定陳述式屬性：
+## <a name="example---use-the-statement-attribute"></a>範例-使用語句屬性
+這個範例顯示如何設定語句屬性:
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>範例-使用陳述式選項
-或者，陳述式屬性可以設定的選項：
+## <a name="example---use-the-statement-option"></a>範例-使用語句選項
+或者, 您也可以將語句屬性設定為選項:
 
 ```php
 <?php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>範例-擷取日期時間型別為字串
-下列範例示範如何達成相反 （這不是真的有必要因為它是預設為 false）：
+## <a name="example---retrieve-datetime-types-as-strings"></a>範例-將日期時間類型取出為字串
+下列範例示範如何達到相反的情況 (這不是真正必要的, 因為它預設為 false):
 
 ```php
 <?php

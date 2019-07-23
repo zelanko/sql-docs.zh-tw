@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 86e76b5186465eadf95728bf3de4edbb4554288f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0cda5aeb04517b0879a8139432f58bdbc08fe553
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059725"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>在連接伺服器之後自動啟動追蹤 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

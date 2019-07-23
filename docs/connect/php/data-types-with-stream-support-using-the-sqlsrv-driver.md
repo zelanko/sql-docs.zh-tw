@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2221833af115e31d7f7d74eff33b0b4f2557a74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92c28fe249d766fff33d2c52e20497cebd1f486b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993684"
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>使用 SQLSRV 驅動程式支援資料流的資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

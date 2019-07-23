@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f4ebdc95ec105b4905ae9886abc59afe68a1f40
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a462fcb1e8fe91cc2a140716968bd6b6f188ac1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003751"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步驟 3︰使用 Node.js 連線到 SQL 的概念證明
 
-![下載-向下箭號-圈選起來](../../ssdt/media/download.png)[若要下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![下載-Download-downarrow-circled-圓形](../../ssdt/media/download.png)[以下載 NODE.JS SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-此範例應該考慮只概念證明。  範例程式碼為了清楚起見，已簡化，並不一定代表 Microsoft 建議的最佳作法。 可在 Github 上使用相同的重要功能的其他範例︰
+這個範例應該僅視為概念證明。  為了清楚起見, 範例程式碼已簡化, 不一定代表 Microsoft 建議的最佳作法。 Github 上提供使用相同重要功能的其他範例:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>步驟 1： 連線  
+## <a name="step-1-connect"></a>步驟 1: 連接  
   
-**新的連接**函數用來連接到 SQL Database。  
+**新的連接**函數是用來連接到 SQL Database。  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -49,7 +48,7 @@ ms.locfileid: "66800503"
 ## <a name="step-2--execute-a-query"></a>步驟 2：執行查詢  
   
   
-所有 SQL 陳述式會使用都執行**new request （)** 函式。 如果陳述式會傳回資料列，例如 select 陳述式中，您可以擷取這些使用**request.on （)** 函式。 如果不有任何資料列，request.on （） 函式會傳回空白清單。  
+所有 SQL 語句都會使用新的**Request ()** 函數來執行。 如果語句傳回資料列 (例如 select 語句), 您可以使用**request. on ()** 函數來抓取它們。 如果沒有任何資料列, 則 request. on () 函數會傳回空的清單。  
   
   
 ```javascript  
@@ -96,9 +95,9 @@ ms.locfileid: "66800503"
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>步驟 3： 插入資料列  
+## <a name="step-3-insert-a-row"></a>步驟 3: 插入資料列  
   
-在您將了解如何執行此範例[插入](../../t-sql/statements/insert-transact-sql.md)陳述式安全地傳遞可保護您的應用程式的參數[SQL 插入式攻擊](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+在此範例中, 您將瞭解如何安全地執行[INSERT](../../t-sql/statements/insert-transact-sql.md)語句、傳遞可保護您的應用程式免于[SQL 插入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
   
   
 ```javascript  

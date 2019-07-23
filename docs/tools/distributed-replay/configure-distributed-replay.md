@@ -1,5 +1,5 @@
 ---
-title: 設定 Distributed 的 Replay |Microsoft Docs
+title: 設定 Distributed Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023775"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ ms.locfileid: "67732110"
   
  重新執行組態設定指定於重新執行組態檔中屬於 `<ReplayOptions>` 和 `<OutputOptions>` 元素子系的 XML 元素中。  
   
-### <a name="replayoptions-element"></a>\<P > 項目  
+### <a name="replayoptions-element"></a>\<ReplayOptions > 元素  
  重新執行組態檔在 `<ReplayOptions>` 元素中指定的設定如下：  
   
 |設定|XML 元素|Description|允許的值|必要項|  
@@ -133,7 +132,7 @@ ms.locfileid: "67732110"
 |查詢逾時|`<QueryTimeout>`|指定查詢逾時值 (以秒為單位)。 此值只在傳回第一個資料列之前有效。|>= 1 的整數<br /><br /> (`-1` 表示停用)|資料分割 根據預設，此值為 `3600`。|  
 |每個用戶端的執行緒|`<ThreadsPerClient>`|指定要用於每個重新執行用戶端的重新執行執行緒數目。|介於 `1` 與 `512`之間的整數。|資料分割 如果未指定，則 Distributed Replay 會使用值 `255`。|  
   
-### <a name="outputoptions-element"></a>\<O > 元素  
+### <a name="outputoptions-element"></a>\<OutputOptions > 元素  
  重新執行組態檔在 `<OutputOptions>` 元素中指定的設定如下：  
   
 |設定|XML 元素|Description|允許的值|必要項|  
@@ -165,20 +164,20 @@ ms.locfileid: "67732110"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>使用同步處理排序模式執行時，可能有問題
- 您可能會遇到的徵兆，在此重新執行功能會出現 「 延遲 」，或重新執行事件速度很慢。 如果在重新執行追蹤相依於資料和/或不存在之還原的目標資料庫內的事件，可能會發生這種現象。 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>使用同步處理排序模式執行時可能發生的問題
+ 您可能會遇到重新執行功能似乎「停止運作」或重新執行事件非常緩慢的徵兆。 如果重新執行的追蹤依賴不存在於還原的目標資料庫中的資料和 (或) 事件, 就會發生這種現象。 
  
- 其中一個範例是使用 WAITFOR，例如，Service Broker 收到 WAITFOR 陳述式中擷取工作負載。 使用同步處理排序模式時，會循序重新執行批次。 如果資料庫備份之後，發生對來源資料庫的插入，但在重新執行擷取之前啟動追蹤，在重新執行期間發出的 WAITFOR 收到可能必須等候 WAITFOR 的整個持續期間。 設定之後會停止 WAITFOR 接收重新執行事件。 WAITFOR 完成之前，這會導致重新執行資料庫目標卸除為零的 Batch Requests/sec 效能監視器計數器。 
+ 其中一個範例是使用 WAITFOR 的已捕捉工作負載, 例如 Service Broker 的 WAITFOR RECEIVE 語句。 使用同步處理排序模式時, 會以序列順序重新執行批次。 如果是在資料庫備份之後, 但在重新執行 capture 追蹤開始之前, 對源資料庫進行插入, 則在重新執行期間發出的 WAITFOR RECEIVE 可能必須等候 WAITFOR 的整個持續時間。 設定為在 WAITFOR 接收之後重新執行的事件將會停止。 這可能會導致在 WAITFOR 完成之前, 重新執行資料庫目標卸載為零的「批次要求/秒」效能監視器計數器。 
  
- 如果您需要使用同步處理模式，並且想来避免此行為，您必須執行下列作業：
+ 如果您需要使用同步處理模式, 而且想要避免此行為, 您必須執行下列動作:
  
-1.  停止重新執行目標為您要使用的資料庫。
+1.  停止您將用來做為重新執行目標的資料庫。
 
-2.  若要完成，以允許所有擱置中的活動。
+2.  允許所有暫止的活動完成。
 
-3.  備份資料庫，並允許完成的備份。
+3.  備份資料庫, 並允許備份完成。
 
-4.  啟動分散式重新執行追蹤擷取，並繼續正常工作負載。 
+4.  啟動 distributed replay 追蹤 capture 並繼續正常工作負載。 
  
  
 ## <a name="see-also"></a>另請參閱  

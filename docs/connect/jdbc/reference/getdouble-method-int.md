@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a16f5b70eeeb762f222c3bc1d7248e99a7f207d8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b02292225d0f0be0529537f369c2fa760d677486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983599"
 ---
 # <a name="getdouble-method-int"></a>getDouble 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public double getDouble(int index)
  指出參數索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- A **double**值。  
+ **Double**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

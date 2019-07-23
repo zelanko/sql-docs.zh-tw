@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6106d830a48b4ef89d85b88e7264e08209947ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936210"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-傳回最近在資料庫的資料表中插入之資料列的識別碼。 資料表必須有 IDENTITY NOT NULL 資料行。 如果提供的序列名稱，則`lastInsertId`傳回最近插入提供的序列名稱的序號 (如需有關序號的詳細資訊，請參閱[這裡](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers))。
+傳回最近在資料庫的資料表中插入之資料列的識別碼。 資料表必須有 IDENTITY NOT NULL 資料行。 如果提供了序列名稱, `lastInsertId`會針對所提供的順序名稱傳回最近插入的序號 (如需序號的詳細資訊, 請參閱[這裡](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers))。
   
 ## <a name="syntax"></a>語法  
   
@@ -34,16 +33,16 @@ string PDO::lastInsertId ([ $name = NULL ] );
 $*name*：讓您指定序列名稱的選擇性字串。 
   
 ## <a name="return-value"></a>傳回值  
-如果沒有順序提供名稱，最近新增的資料列的識別碼字串。
-如果提供的序列名稱，最近加入序列識別碼的字串。
-如果方法呼叫失敗，則會傳回空字串。
+如果未提供任何順序名稱, 則為最近加入之資料列的識別碼字串。
+如果提供了序列名稱, 則為最近新增之序列的識別碼字串。
+如果方法呼叫失敗, 則會傳回空字串。
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
-版本 2.0 和 4.3 之間選擇性參數是資料表名稱，且傳回值是最近新增到提供的資料表資料列的識別碼。
-從 5.0 開始，選擇性的參數會被視為序列名稱，並傳回值是提供的序列名稱的最新加入的順序。
-如果版本提供資料表名稱，則將它之後 4.3，`lastInsertId`傳回空字串。
-只有在 SQL Server 2012 及更新版本支援順序。
+在版本2.0 和4.3 之間, 選擇性參數是資料表名稱, 而傳回值是最近加入至所提供資料表中的資料列識別碼。
+從5.0 開始, 選擇性參數會被視為順序名稱, 而傳回值則是最近針對提供的序列名稱加入的順序。
+如果為4.3 之後的版本提供資料表名稱, `lastInsertId`則會傳回空字串。
+只有 SQL Server 2012 和更新版本才支援序列。
   
 ## <a name="example"></a>範例
   

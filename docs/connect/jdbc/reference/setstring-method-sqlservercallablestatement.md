@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: abbb07c23685562d28297f096728589fdc3a343e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff224739664e55a1e05d45f684f199969903fc04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972637"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>setString 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public void setString(java.lang.String sCol,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 setString 方法是由 java.sql.CallableStatement 介面中的 setString 方法指定。  
   
  只有當 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 知道目標類型是二進位時，才可執行字串到二進位的轉換。 在 JDBC 驅動程式不知道基礎類型為何的情況下，它將傳遞 **String** 常值，並在伺服器無法執行轉換作業時傳回伺服器錯誤。  

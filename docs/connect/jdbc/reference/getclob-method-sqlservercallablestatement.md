@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c1824b89-fc2e-4741-b849-7d06108fda97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c03b4fc227c681f3a7f7f92228be2b6d2afe76df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd533ef2dce654ee1a414499094781f1d5a22c51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953013"
 ---
 # <a name="getclob-method-sqlservercallablestatement"></a>getClob 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fca2d35f-266b-4dc7-9aa9-30a17ee2ecec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a4f4403990d148536c6ce15f4e9e7c86c95f4f7f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 621bffb87631912faa262811cc8a8460ec677cb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978735"
 ---
 # <a name="gettimestamp-method-sqlservercallablestatement"></a>getTimestamp 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

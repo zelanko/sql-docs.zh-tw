@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 91046e09-837d-4c4a-9f4f-3a10042f1c19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 421c4adf5fa755f3b29eee9576209a4dbb36e510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81a499cb80b11ae695267760726f97d48e3517e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992638"
 ---
 # <a name="step-2-create-a-sql-database-for-php-development"></a>步驟 2︰建立供 PHP 開發使用的 SQL 資料庫
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

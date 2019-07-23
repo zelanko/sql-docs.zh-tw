@@ -1,5 +1,5 @@
 ---
-title: Workload 元素 (DTA) |Microsoft Docs
+title: 工作負載元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ac0cc638403f6870da24b948fa57a58196dbc582
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: fb526f31bb36ca7d4dd046f8a0f3a4f7962c6ea8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105937"
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

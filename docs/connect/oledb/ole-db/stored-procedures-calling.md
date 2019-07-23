@@ -1,5 +1,5 @@
 ---
-title: 呼叫預存程序 (OLE DB) |Microsoft Docs
+title: 呼叫預存程式 (OLE DB) |Microsoft Docs
 description: 呼叫預存程序 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,27 +18,26 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3221a4593bf3d7534c3f9def115e69edc3cfeb07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26e97354d54cb65578bcbb35d2c96fb6914270d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015206"
 ---
 # <a name="stored-procedures---calling"></a>預存程序 - 呼叫
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  預存程序可以有零或多個參數。 它也可以傳回值。 當使用 OLE DB Driver for SQL Server，則可以來傳遞預存程序的參數：  
+  預存程序可以有零或多個參數。 它也可以傳回值。 使用 SQL Server 的 OLE DB 驅動程式時, 可以藉由下列方式傳遞預存程式的參數:  
   
 -   將資料值寫入程式碼。  
   
 -   使用參數標記 (?) 來指定參數、將程式變數繫結至參數標記，然後將資料值放在程式變數中。  
   
 > [!NOTE]  
->  搭配 OLE DB 使用具名參數呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序時，參數名稱開頭必須是 '\@' 字元。 這是一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的限制。 OLE DB Driver for SQL Server 會比 MDAC 更嚴格地強制執行這項限制。  
+>  搭配 OLE DB 使用具名參數呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序時，參數名稱開頭必須是 '\@' 字元。 這是一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的限制。 SQL Server 的 OLE DB 驅動程式會比 MDAC 更嚴格地強制執行此限制。  
   
  為支援參數，會在命令物件上公開 **ICommandWithParameters** 介面。 為使用參數，取用者會先呼叫 **ICommandWithParameters::SetParameterInfo** 方法 (或選擇性地準備呼叫 **GetParameterInfo** 方法的呼叫陳述式) 來描述提供者的參數。 接著，取用者會建立指定緩衝區結構的存取子，並將參數值放在此緩衝區中。 最後，它會將存取子的控制代碼與緩衝區的指標傳遞到 **Execute** 的緩衝區。 稍後呼叫 **Execute** 時，取用者會將新的參數值放在緩衝區中，並利用存取子控制代碼和緩衝區指標呼叫 **Execute**。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66795929"
 5.  使用 **ICommand::Execute** 執行命令。  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>呼叫預存程序的方法  
- 執行中的預存程序時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，OLE DB Driver for SQL Server 支援:  
+ 在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行預存程式時, SQL Server 的 OLE DB 驅動程式支援:  
   
 -   ODBC CALL 逸出序列。  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66795929"
   
  使用 ODBC CALL 逸出序列呼叫程序的一般語法為：  
   
- {[**?=**]**call**_procedure\_name_[**(**[*parameter*][**,**[_parameter_]]...**)**]}  
+ {[ **?=** ]**call**_procedure\_name_[ **(** [*parameter*][ **,** [_parameter_]]... **)** ]}  
   
  例如：  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66795929"
   
  當 RPC 逸出序列用於執行預存程序時，提供者不會呼叫任何 Helper 函數來判斷參數資訊 (如果是 ODBC CALL 語法，則會這麼做)。 RPC 語法比 ODBC CALL 語法簡單，因此命令集的剖析速度較快，可以增進效能。 在此情況下，您需要執行 **ICommandWithParameters::SetParameterInfo** 來提供參數資訊。  
   
- RPC 逸出序列要求您擁有傳回值。 如果預存程序沒有傳回值，伺服器預設會傳回 0。 此外，您無法在預存程序上開啟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標。 預存程序會以隱含的方式準備，而 **ICommandPrepare::Prepare** 的呼叫將會失敗。 由於無法準備 RPC 呼叫，您可以查詢資料行中繼資料;Icolumnsinfo:: Getcolumninfo 和 icolumnsrowset:: Getcolumnsrowset 將會傳回 DB_E_NOTPREPARED。  
+ RPC 逸出序列要求您擁有傳回值。 如果預存程序沒有傳回值，伺服器預設會傳回 0。 此外，您無法在預存程序上開啟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標。 預存程序會以隱含的方式準備，而 **ICommandPrepare::Prepare** 的呼叫將會失敗。 因為無法準備 RPC 呼叫, 所以您不能查詢資料行中繼資料。IColumnsInfo:: GetColumnInfo 和 IColumnsRowset:: GetColumnsRowset 會傳回 DB_E_NOTPREPARED。  
   
  如果您知道所有參數中繼資料，RPC 逸出序列是執行預存程序的建議方式。  
   
@@ -119,10 +118,10 @@ ms.locfileid: "66795929"
 {rpc SalesByCategory}  
 ```  
   
- 示範 RPC 逸出序列的範例應用程式，請參閱[執行預存程序&#40;使用 RPC 語法&#41;及處理傳回碼和輸出參數&#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
+ 如需示範 RPC escape 序列的範例應用程式, 請參閱[ &#40;使用 RPC 語法&#41;來執行預存程式和處理傳回碼和&#40;輸出&#41;參數 OLE DB](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 陳述式  
- ODBC CALL 逸出序列和 RPC 逸出序列都是呼叫預存程序而非 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 陳述式的慣用方法。 OLE DB Driver for SQL Server 使用的 RPC 機制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]來最佳化命令處理。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
+ ODBC CALL 逸出序列和 RPC 逸出序列都是呼叫預存程序而非 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 陳述式的慣用方法。 SQL Server 的 OLE DB 驅動程式會使用的 RPC 機制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]來優化命令處理。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
   
  這是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** 陳述式的範例：  
   

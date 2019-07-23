@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 20e04cb0-34ea-4b7a-ba74-4de13b8645b6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d83da542ac076fa3531403b9c0dfcef8908cda6b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3cd2ddc9c0728df5f5fe27227f64d7af035439c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976387"
 ---
 # <a name="position-method-sqlserverclob"></a>position 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

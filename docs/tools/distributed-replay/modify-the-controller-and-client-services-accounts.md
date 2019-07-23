@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b4fd7c20e36ab490430be8be7713e87b986d35b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e946949debc6d5a1fa3c586ece94da58e5241b4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950046"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器服務帳戶與用戶端服務帳戶
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,15 +24,15 @@ ms.locfileid: "47733929"
   
 1.  在已安裝 Distributed Replay 服務的電腦上，從命令提示字元，輸入 **dcomcnfg**。  
   
-2.  按兩下 [服務]，向下捲動並以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<服務名稱>]，然後按一下 [啟動] 或 [停止]。  
+2.  按兩下 [服務]  ，向下捲動並以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<服務名稱>]  ，然後按一下 [啟動]  或 [停止]  。  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>若要修改 Distributed Replay Controller 服務  
   
 1.  在控制器電腦上，停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務。  
   
-2.  在 [服務] 底下，以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller]，然後選取 [內容]。  
+2.  在 [服務]  底下，以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller]  ，然後選取 [內容]  。  
   
-3.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 內容] 視窗的 [登入] 索引標籤上選取 [這個帳戶]，輸入或按一下 [瀏覽] 輸入新的登入帳戶，然後按一下 [確定]。  
+3.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 內容]  視窗的 [登入]  索引標籤上選取 [這個帳戶]  ，輸入或按一下 [瀏覽]  輸入新的登入帳戶，然後按一下 [確定]  。  
   
      **重要事項**：當您設定 Distributed Replay Controller 時，可以指定將用來執行 Distributed Replay Client 服務的一或多個使用者帳戶。 下列是支援帳戶的清單：  
   
@@ -59,25 +58,25 @@ ms.locfileid: "47733929"
   
     2.  在安裝控制器服務的控制器電腦上，於命令提示字元中輸入 **dcomcnfg**。  
   
-    3.  在 [元件服務] 視窗中，巡覽至主控台根目錄 -> [元件服務] -> [電腦] -> [我的電腦] -> [DCOM 設定] -> [DReplayController]。  
+    3.  在 [元件服務]  視窗中，巡覽至主控台根目錄 -> [元件服務] -> [電腦] -> [我的電腦] -> [DCOM 設定] -> [DReplayController]  。  
   
-    4.  以滑鼠右鍵按一下 [DReplayController]，然後按一下 [內容]。  
+    4.  以滑鼠右鍵按一下 [DReplayController]  ，然後按一下 [內容]  。  
   
-    5.  在 [DReplayController 內容] 視窗的 [安全性] 索引標籤上，按一下 [啟動和啟用權限] 區段中的 [編輯]。  
+    5.  在 [DReplayController 內容]  視窗的 [安全性]  索引標籤上，按一下 [啟動和啟用權限]  區段中的 [編輯]  。  
   
-    6.  將**本機和遠端啟用**權限授與新的用戶端服務登入帳戶，然後按一下 [確定]。  
+    6.  將**本機和遠端啟用**權限授與新的用戶端服務登入帳戶，然後按一下 [確定]  。  
   
-    7.  按一下 [存取權限] 區段中的 [編輯]，將**本機和遠端存取**權限授與新的用戶端服務登入帳戶，然後按一下 [確定]。  
+    7.  按一下 [存取權限]  區段中的 [編輯]  ，將**本機和遠端存取**權限授與新的用戶端服務登入帳戶，然後按一下 [確定]  。  
   
-    8.  按一下 [確定] 關閉 [DReplayController 內容] 視窗。  
+    8.  按一下 [確定]  關閉 [DReplayController 內容]  視窗。  
   
-    9. 在控制器電腦上，將已變更的用戶端服務登入帳戶加入 [Distributed COM Users] 群組。  
+    9. 在控制器電腦上，將已變更的用戶端服務登入帳戶加入 [Distributed COM Users]  群組。  
   
     10. 啟動 SQL Server Distributed Replay Controller 服務。  
   
 2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務。  
   
-3.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 內容] 視窗的 [登入] 索引標籤上選取 [這個帳戶]，輸入或按一下 [瀏覽] 輸入新的登入帳戶，然後按一下 [確定]。  
+3.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 內容]  視窗的 [登入]  索引標籤上選取 [這個帳戶]  ，輸入或按一下 [瀏覽]  輸入新的登入帳戶，然後按一下 [確定]  。  
   
 4.  啟動 Distributed Replay Client 服務。  
   

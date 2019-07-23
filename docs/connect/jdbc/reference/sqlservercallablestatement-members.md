@@ -11,13 +11,12 @@ apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c6f0ab616be75d9ccd71bd5b191fde3c76098d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971872"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "66772969"
   
 ## <a name="methods"></a>方法  
   
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(繼承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md))。將一組參數新增至這個 CallableStatement 物件的批次命令中。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。取消目前正由這個 CallableStatement 物件執行的 SQL 陳述式。|  
@@ -51,14 +50,14 @@ ms.locfileid: "66772969"
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|(繼承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md))。在這個 CallableStatement 物件中執行 SQL 查詢，並傳回此查詢所產生的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|(繼承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md))。在這個 CallableStatement 物件中執行的 SQL 陳述式必須是 SQL INSERT、UPDATE、MERGE 或 DELETE 陳述式；否則會是不傳回任何項目的 SQL 陳述式，例如 DDL 陳述式。|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取產生這個 CallableStatement 物件的 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件。|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|擷取值，指定資料行[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)物件。|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|抓取指定資料行的值做為[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)物件。|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取從資料庫資料表中提取資料列的方向，此方向是從這個 CallableStatement 物件所產生結果集的預設值。|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取結果集資料列數目，這個數目是從這個 CallableStatement 物件所產生結果集物件的預設提取大小。|  
 |[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取執行這個 CallableStatement 物件最後所建立的任何自動產生索引鍵。|  
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取最大位元組數目，此位元組可傳回作為這個 CallableStatement 物件所產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中的字元和二進位資料行值。|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取最大資料列數目，即這個 CallableStatement 物件所產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件可以包含的資料列。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|(繼承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md))。擷取 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 物件，此物件包含當執行這個 CallableStatement 物件時將傳回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件資料行相關資訊。|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。移至這個 CallableStatement 物件的下一個結果。|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。移至這個 JAVA.sql.callablestatement 物件的下一個結果。|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|(繼承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md))。擷取這個 CallableStatement 物件的參數號碼、類型和屬性。|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|擷取指定參數的值來作為 Array 物件。|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|擷取所指定參數的值來作為 **ASCII** 字元資料流。|  
@@ -71,14 +70,14 @@ ms.locfileid: "66772969"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|擷取指定之參數的值來當做 java.io.Reader 物件。|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取指定 JDBC Blob 參數的值來作為 Clob 物件。|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|使用 Java 程式語言，擷取指定之參數的值來當做 java.sql.Date 物件。|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|擷取值，指定資料行[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)物件。|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|抓取指定資料行的值做為[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)物件。|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取指定參數的值來作為 **double**。|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取所指定參數的值來作為 **float**。|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取指定參數的值來作為 **int**。|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取所指定參數的值來作為 **long**。|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|擷取指定參數的值來作為 Reader 物件。|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取指定 JDBC **NCLOB** 參數的值來作為 **NClob** 物件。|  
-|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|擷取的指定值**NCHAR**， **NVARCHAR**或是**LONGNVARCHAR**參數做為在 Java 程式語言的字串。|  
+|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|使用 JAVA 程式設計語言, 將指定的**NCHAR**、 **NVARCHAR**或**LONGNVARCHAR**參數值抓取為字串。|  
 |[getObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|使用 Java 程式語言，擷取指定之參數的值來當做物件。|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。擷取 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 將等候這個 CallableStatement 物件執行的秒數。|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|使用 Java 程式設計語言，擷取指定參數的值來作為 Ref 物件。|  
@@ -111,7 +110,7 @@ ms.locfileid: "66772969"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|(繼承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md))。將指定的參數設定為指定的物件。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。將 SQL 資料指標名稱設定為給定的字串，此字串將由後續 execute 方法使用。|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|將指定的參數設定為給定的日期值。|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|設定指定的資料行的值[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|將指定的資料行值設定為[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|將指定的參數設定為所指定 **double** 值。|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。設定逸出處理模式。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。提供 JDBC Driver 提示，當做處理結果集資料列時應遵循的方向。|  
@@ -126,7 +125,7 @@ ms.locfileid: "66772969"
 |[setNString](../../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md)|將指定的參數設定為所指定 String 物件。|  
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)|在給定要設定之參數的類型時，將指定的參數設定為 null 值。|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)|使用給定物件，設定指定之參數的值。|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。要求共用或不共用陳述式。 根據預設，SQLServerCallableStatement 物件時它是建立。|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。要求共用或不共用陳述式。 根據預設, SQLServerCallableStatement 物件會在建立時可共用。|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。設定驅動程式將等候這個 CallableStatement 物件執行指定秒數的秒數。|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|(繼承自 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md))。將指定的參數設定為所指定 Ref 物件。|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(繼承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。將這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的回應緩衝模式設定為 **String full** 或 **adaptive** (不區分大小寫)。|  

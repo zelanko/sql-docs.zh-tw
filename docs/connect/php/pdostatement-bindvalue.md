@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93cf012017e6614bc0ae4d81150e90ddab5b424a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993119"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +39,7 @@ $*data_type*：PDO::PARAM_* 常數所表示的選用 (整數) 資料類型。 �
 ## <a name="return-value"></a>傳回值  
 如果成功，則為 TRUE，否則為 FALSE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   

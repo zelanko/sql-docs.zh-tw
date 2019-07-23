@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0a413e83-e0a4-41f8-9fe0-33ce4d368ee4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 450450774bc5e0897150ea049deb5423d2304881
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a80dddc28fbca156fe31a7620f1d1b0460359a75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972165"
 ---
 # <a name="setunicodestream-method-sqlserverpreparedstatement"></a>setUnicodeStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public final void setUnicodeStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setUnicodeStream 方法是由 java.sql.PreparedStatement 介面中的 setUnicodeStream 方法指定。  
+ 這個 setUnicodeStream 方法是由 JAVA.sql.preparedstatement 介面中的 setUnicodeStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
