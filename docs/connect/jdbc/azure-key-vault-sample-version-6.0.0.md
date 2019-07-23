@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 42de40c2ca7f467b21ed442513bc5862a6d7bfb9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fcc11806d0441efe8216dcb4a28b8cbaa1047641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957492"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault 範例版本 6.0.0
 
@@ -23,7 +22,7 @@ ms.locfileid: "66770398"
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>使用 Azure Key Vault 功能的範例應用程式
 
-此應用程式是可執行使用 JDBC 驅動程式 6.0.0 和 Azure key Vault （版本 0.9.7） Adal4j （1.3.0 版），及其相依性。  可解決基礎相依項目，請將這些程式庫新增至專案的 pom 檔案中，如所述[此處](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+此應用程式可使用 JDBC 驅動程式6.0.0 和 Keyvault (版本0.9.7 版)、Adal4j (版本 1.3.0) 及其相依性來執行。  藉由將這些[連結](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)庫新增至專案的 pom 檔案, 即可解決基礎相依性, 如下所述:
 
 ```java
 import java.net.URISyntaxException;

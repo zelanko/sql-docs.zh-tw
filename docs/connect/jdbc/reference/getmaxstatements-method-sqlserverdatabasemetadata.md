@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 71d58431-b671-49c5-939a-f581d1fef7cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 171ed64402b2d7b1dabd565086f8602afec948f6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2af23d551982787c7c20332f2c48049b95fd83d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981977"
 ---
 # <a name="getmaxstatements-method-sqlserverdatabasemetadata"></a>getMaxStatements 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxStatements()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getMaxStatements 方法是由 java.sql.DatabaseMetaData 介面中 getMaxStatements 方法指定。  
+ 這個 getMaxStatements 方法是由 JAVA.sql.databasemetadata 介面中的 getMaxStatements 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

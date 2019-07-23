@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9b4604184ed457552f8873d03d4995b72d32c152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b04a8b693e5ea2283ce215973c8149080d0036
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992679"
 ---
 # <a name="sqlsrvhasrows"></a>sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

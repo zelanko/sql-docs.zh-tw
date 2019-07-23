@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cb7639f027a66e424d554a074a82a7ea2d08a827
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2167462d00e8a142ddfe7f4cf6cfe151f31b01f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112633"
 ---
 # <a name="data-conversion-transformation"></a>資料轉換
 

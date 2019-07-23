@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dc1f80c816ea2f4a964481682c8fbded50b16675
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e4a41f3fef4cb8b8d64de6015c5e3011490d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019527"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
 

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b22336a1-fe53-4e00-a5ff-ede8d3f2b9f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e1b4b391cf0c2106a705e272d891158c8ab5e3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de1531b16578cacf70c6493029edcd2d853f7fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998662"
 ---
 # <a name="updatenull-method-int"></a>updateNull 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateNull(int index)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 updateNull 方法是由 java.sql.ResultSet 介面中的 updateNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f89ce642-9eac-4d5b-b1ba-45aa3031ab3b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4746b0622aec6872e4376934d7dc1ec1f7ff7bac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d9cde443dc067e21ff0385e988a312095a04da0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983503"
 ---
 # <a name="getdouble-method-sqlservercallablestatement"></a>getDouble 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: 使用的資料類型 (JDBC) |Microsoft Docs
+title: 使用資料類型 (JDBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6af72a4e9157de72a46ecbb7443c0f58d3b400d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003848"
 ---
 # <a name="working-with-data-types-jdbc"></a>使用資料類型 (JDBC)
 
@@ -37,7 +36,7 @@ ms.locfileid: "66783268"
 |-----------|-----------------|  
 |[基本資料類型範例](../../connect/jdbc/basic-data-types-sample.md)|描述如何使用結果集 getter 方法來擷取基本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型值，以及如何使用結果集 update 方法來更新這些值。|  
 |[SQLXML 資料類型範例](../../connect/jdbc/sqlxml-data-type-sample.md)|描述如何在關聯式資料庫中儲存 XML 資料、如何從資料庫中擷取 XML資料，以及如何剖析具有 **SQLXML** Java 資料類型的 XML資料。|  
-|[空間資料類型範例](../../connect/jdbc/spatial-data-types-sample.md)|描述如何儲存和擷取資料與空間資料型別 '幾何' 和 'Geography' 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與資料庫**幾何**並**Geography**定義的 Microsoft JDBC Driver 的 Java 型別。|
+|[空間資料類型範例](../../connect/jdbc/spatial-data-types-sample.md)|描述如何使用 Microsoft JDBC Driver 所定義的**Geometry**和**Geography** JAVA 類型, 儲存和抓取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有空間資料類型「Geometry」和「地理位置」之資料庫的資料。|
 
 ## <a name="see-also"></a>另請參閱
 

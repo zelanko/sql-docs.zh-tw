@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a00c9b3bf9e9f7180ea13f6e707e50d9e32e72e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7fd59027adfba54b9c3937d5d3a23fc556838f36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939070"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>執行複寫維護作業 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "54136008"
   
 -   **清除已過期的訂閱**  
   
- 請從  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from the **Agents** tab in Replication Monitor. 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 在 [作業屬性 - \<作業>] 對話方塊中檢視及修改各作業的屬性，該對話方塊位於相同的資料夾和索引標籤中。  
+ 請從  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from the **Agents** tab in Replication Monitor. 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 在 [作業屬性 - \<作業>]  對話方塊中檢視及修改各作業的屬性，該對話方塊位於相同的資料夾和索引標籤中。  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>在 Management Studio 中啟動或停止複寫維護作業  
   
@@ -44,7 +43,7 @@ ms.locfileid: "54136008"
   
 2.  展開 **[SQL Server Agent]** 資料夾，然後展開 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下作業，然後按一下 **[啟動作業]** 或 **[停止作業]**。  
+3.  以滑鼠右鍵按一下作業，然後按一下 **[啟動作業]** 或 **[停止作業]** 。  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-replication-monitor"></a>在複寫監視器中啟動或停止複寫維護作業  
   
@@ -52,7 +51,7 @@ ms.locfileid: "54136008"
   
 2.  按一下 **[代理程式]** 索引標籤。  
   
-3.  以滑鼠右鍵按一下方格中的作業，然後按一下 **[啟動作業]** 或 **[停止作業]**。  
+3.  以滑鼠右鍵按一下方格中的作業，然後按一下 **[啟動作業]** 或 **[停止作業]** 。  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-management-studio"></a>在 Management Studio 中檢視及修改複寫維護作業的屬性  
   
@@ -60,9 +59,9 @@ ms.locfileid: "54136008"
   
 2.  展開 **[SQL Server Agent]** 資料夾，然後展開 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下作業，然後按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下作業，然後按一下 **[屬性]** 。  
   
-4.  在 [作業屬性 - \<作業>] 對話方塊中，視需要修改任何屬性，然後按一下 [確定]。  
+4.  在 [作業屬性 - \<作業>]  對話方塊中，視需要修改任何屬性，然後按一下 [確定]  。  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>在複寫監視器中檢視及修改複寫維護作業的屬性  
   
@@ -70,9 +69,9 @@ ms.locfileid: "54136008"
   
 2.  按一下 **[代理程式]** 索引標籤。  
   
-3.  以滑鼠右鍵按一下方格中的作業，再按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下方格中的作業，再按一下 **[屬性]** 。  
   
-4.  在 [作業屬性 - \<作業>] 對話方塊中，視需要修改任何屬性，然後按一下 [確定]。  
+4.  在 [作業屬性 - \<作業>]  對話方塊中，視需要修改任何屬性，然後按一下 [確定]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

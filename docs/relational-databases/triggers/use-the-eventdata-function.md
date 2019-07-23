@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06c73cfa612b5348659fec9c8a2022b11ddc5936
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: aef51bd94bf7cffb3e9481b409477a3830fabffb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058597"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +128,7 @@ GO
 > [!NOTE]  
 >  若要傳回事件資料，建議您使用 **query()** 方法的 XQuery **value()** 方法。 **query()** 方法會在輸出中傳回 XML 和 &amp; 符號逸出歸位字元及換行字元 (CRLF) 執行個體， **value()** 方法則會將 CRLF 執行個體轉譯成在輸出中不可見。  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性] 資料夾下。 以滑鼠右鍵按一下 [ddlDatabaseTriggerLog]，然後選取 [編寫資料庫觸發程序的指令碼為]。 依預設，會停用 DDL 觸發程序 **ddlDatabaseTriggerLog**。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性]  資料夾下。 以滑鼠右鍵按一下 [ddlDatabaseTriggerLog]  ，然後選取 [編寫資料庫觸發程序的指令碼為]  。 依預設，會停用 DDL 觸發程序 **ddlDatabaseTriggerLog**。  
   
 ## <a name="see-also"></a>另請參閱  
  [DDL 事件](../../relational-databases/triggers/ddl-events.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 13b51f77-cec9-45fc-862e-3d2bb2d718d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aaa80e7af15839f4ccbc0e623d18cf21707850da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b66a142789e855eaf0e4524554892ea85c7b9cbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979070"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getTime 方法 (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public java.sql.Time getTime(java.lang.String colName,
   
  *cal*  
   
- 月曆物件。  
+ 行事曆物件。  
   
 ## <a name="return-value"></a>傳回值  
  時間物件。  
@@ -51,7 +50,7 @@ public java.sql.Time getTime(java.lang.String colName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getTime 方法是由 java.sql.ResultSet 介面中的 getTime 方法指定。  
   
  這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 資料型別中的有效時間部分，而日期部分是設定成 Java 基準日期 1970/01/01 (根據提供的日曆時區)。  

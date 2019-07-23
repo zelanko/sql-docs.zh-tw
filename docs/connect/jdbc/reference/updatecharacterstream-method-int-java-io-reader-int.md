@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b692c372-f6d7-4528-9c5d-cd8421bdb12e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af5965d55fd48ad884da5ca1ff02e447b2ff5764
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da62f9647b6d9aeff40e43c80a59213d5e8cd239
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996872"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-int"></a>updateCharacterStream 方法 (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void updateCharacterStream(int columnIndex,
   
  *readerValue*  
   
- 讀取器物件。  
+ Reader 物件。  
   
  *length*  
   
@@ -53,10 +52,10 @@ public void updateCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateCharacterStream 方法 java.sql.ResultSet 介面中所指定這個 updateCharacterStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 updateCharacterStream 方法是由 sql-dmo 介面中的 updateCharacterStream 方法指定。  
   
- 這個方法會透過 Reader 物件將 Unicode 字元傳遞到選取的文字和二進位資料行。 這包括所有的文字資料行，以及 **binary**、**varbinary**、**varbinary(max)**、**image** 和 **xml** 等資料行，但是不包含 **udt** 資料行。  
+ 這個方法會透過 Reader 物件將 Unicode 字元傳遞到選取的文字和二進位資料行。 這包括所有的文字資料行，以及 **binary**、**varbinary**、**varbinary(max)** 、**image** 和 **xml** 等資料行，但是不包含 **udt** 資料行。  
   
  如果此資料流的長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   

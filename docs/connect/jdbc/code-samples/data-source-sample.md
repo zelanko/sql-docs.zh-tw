@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e199eff1bf1667ea66d5b4191d911534dfc4dd7c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 61ad7ad7a2de372d4b223986d141fee76882d512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957212"
 ---
 # <a name="data-source-sample"></a>資料來源範例
 

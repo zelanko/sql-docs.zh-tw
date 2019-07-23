@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fafd931dd05726285ee505f1d68ca59d28c0c59d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 7caf2afc79a61f33bd31665714cf6d2ba270a656
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034823"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

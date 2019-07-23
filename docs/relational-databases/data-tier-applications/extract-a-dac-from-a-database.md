@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a056ecc18ed933b1f1fe18e3da0c62d239ea0a4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134787"
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  您可以使用 [擷取資料層應用程式精靈] 或 Windows PowerShell 指令碼，從現有的 SQL Server 資料庫中擷取資料層應用程式 (DAC) 封裝。 此擷取程序會建立 DAC 封裝檔案，其中包含資料庫物件及其相關執行個體層級元素的定義。 例如，DAC 封裝檔案會包含資料庫資料表、預存程序、檢視表、使用者以及對應至資料庫使用者的登入。  
+  您可以使用 [擷取資料層應用程式精靈]  或 Windows PowerShell 指令碼，從現有的 SQL Server 資料庫中擷取資料層應用程式 (DAC) 封裝。 此擷取程序會建立 DAC 封裝檔案，其中包含資料庫物件及其相關執行個體層級元素的定義。 例如，DAC 封裝檔案會包含資料庫資料表、預存程序、檢視表、使用者以及對應至資料庫使用者的登入。  
   
  
 ## <a name="before-you-begin"></a>開始之前  
@@ -38,7 +37,7 @@ ms.locfileid: "53589872"
 ##  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 只能從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫中進行擷取。 如果 DAC 或包含的使用者中不支援資料庫中的物件，則無法擷取 DAC。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)＞。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  擷取 DAC 至少需要 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限。 擷取 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是擷取 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 sysadmin 固定伺服器角色的成員或是內建 SQL Server 系統管理員帳戶 **sa** 也可以擷取 DAC。  
   
 ##  <a name="UsingDACExtractWizard"></a> 使用擷取資料層應用程式精靈  
@@ -48,7 +47,7 @@ ms.locfileid: "53589872"
   
 2.  展開 **[資料庫]** 節點。  
   
-3.  以滑鼠右鍵按一下待擷取 DAC 之資料庫的節點，並指向 [工作]，然後選取 [擷取資料層應用程式...]  
+3.  以滑鼠右鍵按一下待擷取 DAC 之資料庫的節點，並指向 [工作]  ，然後選取 [擷取資料層應用程式...]   
   
 4.  完成精靈對話方塊：  
   
@@ -67,7 +66,7 @@ ms.locfileid: "53589872"
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示此頁面。  
   
- **下一步 >** - 繼續進行至 [選擇方法] 頁面。  
+ **下一步 >** - 繼續進行至 [選擇方法]  頁面。  
   
  **取消** ：結束精靈，不從資料庫中擷取資料層應用程式。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "53589872"
 ###  <a name="SelectData"></a> Select data page  
 選取您想要包含在資料層應用程式 (DAC) 封裝檔案中的參考資料。 在您的 DAC 封裝檔案中包含資料是選擇性的。 DAC 封裝已包含所有受支援資料庫物件和資料庫相關執行個體物件的結構描述。  
   
- 您可以在 DAC 封裝檔案中最多包含 10 MB 的參考資料。 不過，若要在 DAC 包含資料表，資料表不可以包含二進位大型物件 (BLOB) 資料類型，例如 **image** 或 **varchar(max)**。 若要擷取大量資料以傳送至另一個資料庫，請使用 SQL Server Integration Services、大量複製公用程式或許多其他資料移轉技術。  
+ 您可以在 DAC 封裝檔案中最多包含 10 MB 的參考資料。 不過，若要在 DAC 包含資料表，資料表不可以包含二進位大型物件 (BLOB) 資料類型，例如 **image** 或 **varchar(max)** 。 若要擷取大量資料以傳送至另一個資料庫，請使用 SQL Server Integration Services、大量複製公用程式或許多其他資料移轉技術。  
   
  **資料庫資料表** ：選取資料庫資料表旁邊的核取方塊，這些資料庫資料表包含您要併入 DAC 封裝中的資料。 您最多可以選取十個不超過 10,000 資料列的資料表。  
   
@@ -87,20 +86,20 @@ ms.locfileid: "53589872"
   
  **名稱** ：此名稱會識別 DAC。 它可能與 DAC 封裝檔案的名稱不同，而且應該會描述您的應用程式。 例如，如果此資料庫用於財務應用程式，您可能會想要命名為 DAC Finance。  
   
- **版本 (使用 xx.xx.xx.xx，其中 x 是數字)** ：識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料層應用程式] 節點底下檢視此版本。  
+ **版本 (使用 xx.xx.xx.xx，其中 x 是數字)** ：識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 部署 DAC 時，此版本會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料層應用程式]  節點底下檢視此版本。  
   
- **描述**：選擇性。 描述此 DAC。 部署 DAC 時，此描述會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [資料層應用程式] 節點底下檢視此描述。  
+ **描述**：選擇性。 描述此 DAC。 部署 DAC 時，此描述會儲存在 **msdb** 資料庫中，而且您之後可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [資料層應用程式]  節點底下檢視此描述。  
   
- **儲存至 DAC 封裝檔案 (檔案名稱包含 .dacpac 副檔名)**：將 DAC 儲存至副檔名為 .dacpac 的 DAC 封裝檔案。 按一下 **[瀏覽]** 按鈕，即可指定檔案的名稱和位置。  
+ **儲存至 DAC 封裝檔案 (檔案名稱包含 .dacpac 副檔名)** ：將 DAC 儲存至副檔名為 .dacpac 的 DAC 封裝檔案。 按一下 **[瀏覽]** 按鈕，即可指定檔案的名稱和位置。  
   
  **覆寫現有檔案** ：如果已經有同名的 DAC 封裝檔案，請選取此核取方塊來取代該檔案。  
   
 ###  <a name="ValidateSummary"></a> Validation and summary page  
- 在這個頁面上，此精靈會驗證資料層應用程式 (DAC) 是否支援所有資料庫物件。 此外，它也會檢查資料庫物件之間的相依性，以便判斷可成功包含在 DAC 中的物件集合。 之後，它會顯示驗證報表並摘要列出您在這個精靈中所選取的選項。 若要變更選項，請按 **[上一步]**。 若要開始擷取 DAC，請按 **[下一步]**。  
+ 在這個頁面上，此精靈會驗證資料層應用程式 (DAC) 是否支援所有資料庫物件。 此外，它也會檢查資料庫物件之間的相依性，以便判斷可成功包含在 DAC 中的物件集合。 之後，它會顯示驗證報表並摘要列出您在這個精靈中所選取的選項。 若要變更選項，請按 **[上一步]** 。 若要開始擷取 DAC，請按 **[下一步]** 。  
   
-> **注意！** 如果 DAC 不支援一個或多個物件，[下一步] 按鈕就會停用，而且擷取程序便無法繼續。 在這種情況下，建議您移除不支援的物件，然後再次執行此精靈。  
+> **注意！** 如果 DAC 不支援一個或多個物件，[下一步]  按鈕就會停用，而且擷取程序便無法繼續。 在這種情況下，建議您移除不支援的物件，然後再次執行此精靈。  
   
- **摘要**：所選取的選項摘要會列在 [DAC 屬性] 底下。 驗證的結果則列在 **[DAC 物件]** 底下。 驗證的結果有三種類型：  
+ **摘要**：所選取的選項摘要會列在 [DAC 屬性]  底下。 驗證的結果則列在 **[DAC 物件]** 底下。 驗證的結果有三種類型：  
   
 -   **物件成功包含在 DAC 中**：表示這些物件及其相依性受到支援，而且可以成功包含在 DAC 中。  
   
@@ -112,12 +111,12 @@ ms.locfileid: "53589872"
   
  如果 DAC 不支援一個或多個物件， **[下一步]** 按鈕就會停用，而且擷取程序將無法繼續。 在這種情況下，建議您移除不支援的物件，然後再次執行此精靈。  
   
- **儲存報表**：可讓您儲存以 HTML 為基礎的檔案，其中列出摘要之 [DAC 物件] 節點底下的所有物件。 當 DAC 不支援部分資料庫物件時，這份報表可能會很有用。 您可以先使用此報表來變更或移除不支援的物件，然後再次嘗試擷取 DAC。  
+ **儲存報表**：可讓您儲存以 HTML 為基礎的檔案，其中列出摘要之 [DAC 物件]  節點底下的所有物件。 當 DAC 不支援部分資料庫物件時，這份報表可能會很有用。 您可以先使用此報表來變更或移除不支援的物件，然後再次嘗試擷取 DAC。  
   
  ###  <a name="BuildPackage"></a> Build package page  
  您可以使用這個頁面來監視此精靈擷取資料層應用程式 (DAC) 的進度。  
   
- **動作**：在 [建立並儲存 DAC 封裝檔案] 動作期間，此精靈會從 SQL Server 資料庫中擷取 DAC。 然後，它會在記憶體中建立 DAC 封裝並儲存至您所指定的位置。 若要查看對應步驟的結果，請按一下 **[結果]** 欄中的連結。  
+ **動作**：在 [建立並儲存 DAC 封裝檔案]  動作期間，此精靈會從 SQL Server 資料庫中擷取 DAC。 然後，它會在記憶體中建立 DAC 封裝並儲存至您所指定的位置。 若要查看對應步驟的結果，請按一下 **[結果]** 欄中的連結。  
   
  **儲存報表** ：按一下即可將精靈進度的結果儲存至檔案。  
   

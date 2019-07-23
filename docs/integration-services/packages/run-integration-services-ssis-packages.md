@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5046708ffd705ca937b89a7780e47cd62cdc3f97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913698"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
 
@@ -66,29 +65,29 @@ ms.locfileid: "65805255"
 ## <a name="run-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中執行套件
   在開發、偵錯和測試封裝期間，您通常會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中執行封裝。 當您從「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」執行封裝時，封裝一定會立即執行。  
   
- 封裝執行時， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師會在 **[進度]** 索引標籤上顯示封裝執行的進度。您可以檢視封裝的開始和結束時間、它的工作和容器，以及封裝中任何失敗之工作或容器的相關資訊。 在完成執行封裝後，執行階段資訊會在 [執行結果] 索引標籤上保持可用。如需詳細資訊，請參閱＜ [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md)＞主題中的＜進度報表＞一節。  
+ 封裝執行時， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師會在 **[進度]** 索引標籤上顯示封裝執行的進度。您可以檢視封裝的開始和結束時間、它的工作和容器，以及封裝中任何失敗之工作或容器的相關資訊。 在完成執行封裝後，執行階段資訊會在 [執行結果]  索引標籤上保持可用。如需詳細資訊，請參閱＜ [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md)＞主題中的＜進度報表＞一節。  
   
  **設計階段部署**。 當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，會建立封裝，然後部署至資料夾。 在執行封裝之前，您可以指定要用來部署封裝的資料夾。 如果未指定資料夾，預設將會使用 **bin** 資料夾。 這種類型的部署稱為設計階段部署。  
   
 ### <a name="to-run-a-package-in-sql-server-data-tools"></a>若要在 SQL Server Data Tools 中執行封裝  
   
-1.  在方案總管中，如果您的方案包含多個專案，請以滑鼠右鍵按一下包含封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，然後按一下 [設定為啟始物件] 以設定啟始物件。  
+1.  在方案總管中，如果您的方案包含多個專案，請以滑鼠右鍵按一下包含封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，然後按一下 [設定為啟始物件]  以設定啟始物件。  
   
-2.  在方案總管中，如果您的專案包含多個封裝，請以滑鼠右鍵按一下封裝，然後按一下 [設定為啟始物件] 以設定啟始封裝。  
+2.  在方案總管中，如果您的專案包含多個封裝，請以滑鼠右鍵按一下封裝，然後按一下 [設定為啟始物件]  以設定啟始封裝。  
   
 3.  若要執行封裝，請使用下列其中一個程序：  
   
     -   開啟您要執行的封裝，然後按一下功能表列上的 **[啟動偵錯]** ，或按下 F5。 在封裝完成執行後，按下 Shift+F5 以返回設計模式。  
   
-    -   在方案總管中，以滑鼠右鍵按一下封裝，然後按一下 [執行封裝]。  
+    -   在方案總管中，以滑鼠右鍵按一下封裝，然後按一下 [執行封裝]  。  
   
 ### <a name="to-specify-a-different-folder-for-design-time-deployment"></a>若要為設計階段部署指定不同的資料夾  
   
-1.  在方案總管中，以滑鼠右鍵按一下包含您要執行之封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案資料夾，然後按一下 [屬性]。  
+1.  在方案總管中，以滑鼠右鍵按一下包含您要執行之封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案資料夾，然後按一下 [屬性]  。  
   
-2.  在 [\<專案名稱> 屬性頁] 對話方塊中，按一下 [建置]。  
+2.  在 [\<專案名稱> 屬性頁]  對話方塊中，按一下 [建置]  。  
   
-3.  更新 OutputPath 屬性中的值，以指定要用於設計階段部署的資料夾，然後按一下 [確定]。  
+3.  更新 OutputPath 屬性中的值，以指定要用於設計階段部署的資料夾，然後按一下 [確定]  。  
 
 
 ## <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 在 SSIS 伺服器上執行套件
@@ -102,15 +101,15 @@ ms.locfileid: "65805255"
   
 2.  依序展開 [物件總管] 中的 **[Integration Services 目錄]** 節點和 **[SSISDB]** 節點，然後導覽至已部署之專案中包含的封裝。  
   
-3.  以滑鼠右鍵按一下封裝名稱，然後選取 [執行]。  
+3.  以滑鼠右鍵按一下封裝名稱，然後選取 [執行]  。  
   
-4.  使用 **[執行封裝]** 對話方塊中， **[參數]**、 **[連線管理員]** 和 **[進階]** 標籤上的設定，設定封裝執行。  
+4.  使用 **[執行封裝]** 對話方塊中， **[參數]** 、 **[連線管理員]** 和 **[進階]** 標籤上的設定，設定封裝執行。  
   
 5.  按一下 **[確定]** 以執行封裝。  
   
      -或-  
   
-     使用預存程序來執行封裝。 按一下 [指令碼]，產生用以建立執行之執行個體與啟動執行之執行個體的 Transact-SQL 陳述式。 此陳述式包含了對 catalog.create_execution、catalog.set_execution_parameter_value 和 catalog.start_execution 預存程序的呼叫。 如需這些預存程序的詳細資訊，請參閱 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) 和 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。  
+     使用預存程序來執行封裝。 按一下 [指令碼]  ，產生用以建立執行之執行個體與啟動執行之執行個體的 Transact-SQL 陳述式。 此陳述式包含了對 catalog.create_execution、catalog.set_execution_parameter_value 和 catalog.start_execution 預存程序的呼叫。 如需這些預存程序的詳細資訊，請參閱 [catalog.create_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)、[catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) 和 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。  
 
 ## <a name="execute_package_dialog"></a> 執行封裝對話方塊
   使用 **[執行封裝]** 對話方塊，即可執行儲存在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的封裝。  
@@ -143,7 +142,7 @@ ms.locfileid: "65805255"
   
 4.  展開包含您要執行之封裝的資料夾。  
   
-5.  以滑鼠右鍵按一下封裝，然後按一下 [執行]。  
+5.  以滑鼠右鍵按一下封裝，然後按一下 [執行]  。  
   
 ###  <a name="general"></a> 設定 [一般] 頁面上的 [選項]  
  選取 **[環境]** 來指定適用於執行執行封裝的環境。  
@@ -157,7 +156,7 @@ ms.locfileid: "65805255"
 ###  <a name="advanced"></a> 設定 [進階] 索引標籤上的 [選項]  
  使用 [進階] 索引標籤管理屬性和其他封裝設定。  
   
- [加入]、[編輯]、[移除]  
+ [加入]  、[編輯]  、[移除]   
  按一下可加入、編輯或移除屬性。  
   
  **記錄層級**  
@@ -170,7 +169,7 @@ ms.locfileid: "65805255"
  指定封裝將會在 32 位元系統上執行。  
   
 ###  <a name="script"></a> 編寫執行封裝對話方塊中之選項的指令碼  
- 當您位於 **[執行封裝]** 對話方塊時，也可以使用工具列上的 **[指令碼]** 按鈕來為您撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼。 產生的指令碼會使用您在 [執行封裝] 對話方塊中已選取的相同選項來呼叫預存程序 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。 指令碼會出現在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的新指令碼視窗中。  
+ 當您位於 **[執行封裝]** 對話方塊時，也可以使用工具列上的 **[指令碼]** 按鈕來為您撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼。 產生的指令碼會使用您在 [執行封裝]  對話方塊中已選取的相同選項來呼叫預存程序 [catalog.start_execution &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)。 指令碼會出現在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的新指令碼視窗中。  
 
 ## <a name="see-also"></a>另請參閱  
  [dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)   

@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 922d55e335c8310cec3cf4db8967cadc2affd1f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85c6d5577a68619920ec149df95316f19a3a8542
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065205"
 ---
 # <a name="catalogexecutionpropertyoverridevalues"></a>catalog.execution_property_override_values 
 

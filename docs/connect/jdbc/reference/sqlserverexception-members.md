@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 98ca574736da7d57f0c82f8bc447a9d4df7be33e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7df5cc4b13ed8896cdd140195bdecc10ea304b40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971006"
 ---
 # <a name="sqlserverexception-members"></a>SQLServerException 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66788968"
 
 |[屬性]|Description|  
 |----------|-----------------|  
-|[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|初始化 SQLServerException 類別的新執行個體。|  
+|[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|初始化 SQLServerException 類別的新實例。|  
   
 ## <a name="fields"></a>欄位  
  無。  

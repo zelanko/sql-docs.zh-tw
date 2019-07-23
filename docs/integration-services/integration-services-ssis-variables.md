@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5f286a0cd957ed62ab3edb51eb96565431afb22a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e7c309f3317e541c0ebaaec60707473ae4a78da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057420"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
 

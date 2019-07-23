@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 6f827ee280ab53fa6ea14c62226b974058875311
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 228e1d6f52dce6b9e6ccabd4258286f317065e45
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689367"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267386"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>檢視聯結屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

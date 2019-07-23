@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 665173d2-14c7-4ce1-954e-4adb53fb9b39
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 92a4e73c388eac1f79eee915e9dd26a79ce9a732
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9dabb3084bf42ed60a408e6158f70f2b9ae20e23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977751"
 ---
 # <a name="iscatalogatstart-method-sqlserverdatabasemetadata"></a>isCatalogAtStart 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean isCatalogAtStart()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 isCatalogAtStart 方法是由 java.sql.DatabaseMetaData 介面中 isCatalogAtStart 方法指定。  
+ 這個 isCatalogAtStart 方法是由 JAVA.sql.databasemetadata 介面中的 isCatalogAtStart 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

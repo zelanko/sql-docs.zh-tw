@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f036866a41376b2ee37076ac311b7dbe3f3d56e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23b2dc528a3e5b8d920fc14f3a60df120ea45aa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034386"
 ---
 # <a name="raw-file-custom-properties"></a>原始檔案自訂屬性
 

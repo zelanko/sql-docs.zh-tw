@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6cdfd42d0670d8d536e0a9bf40f2a6981ef5b937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acd1beaa07ab9d1867fe99e519d3969f4efec3ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977307"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>isSameRM 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
 ## <a name="exceptions"></a>例外狀況  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 commit 方法是由 javax.transaction.xa.XAResource 介面中的 commit 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

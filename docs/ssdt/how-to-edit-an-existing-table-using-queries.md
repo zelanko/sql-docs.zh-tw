@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69a3486c837959cf4a92a7ee663225df16918928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929600"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>如何：使用查詢編輯現有的資料表
 您可以撰寫 Transact\-SQL 查詢，編輯資料表的定義或資料。 若要以視覺化方式在資料表中檢視或輸入資料，請使用資料編輯器，如[連接的資料庫開發](../ssdt/connected-database-development.md)所述。  

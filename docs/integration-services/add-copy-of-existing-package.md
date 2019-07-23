@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6015de3f6c300e8a96d16ad6b0a322754d882945
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 949cf06676ea13c2e765abec312d700f01a90a55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052239"
 ---
 # <a name="add-copy-of-existing-package"></a>加入現有封裝的副本
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b04e493e6b78e140f62f43d7eb36ab73a9155a52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1491859d5d1cddebf7d6b955a5e1ecc8de2ee15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057467"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
 

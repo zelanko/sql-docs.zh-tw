@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff785052650e18bbd6f8763771c7a7495f10dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7921fa58dc8f318a1b1b0c6dd4c7e408a40b7a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941579"
 ---
 # <a name="excel-source"></a>Excel 來源
 

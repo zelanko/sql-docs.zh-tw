@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 700f54ab-58c1-4e5f-a188-818366a119c0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: db3b5865c60a15995a12ed2ad0a3060cfdfea2c9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ec8a1fc56fe5762093f78ce95453cc44d2f136f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978284"
 ---
 # <a name="geturl-method-sqlservercallablestatement"></a>getURL 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

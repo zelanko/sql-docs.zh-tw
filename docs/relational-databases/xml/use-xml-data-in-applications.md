@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e309fa06adddfa54775085d9ec8955d604a381fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039148"
 ---
 # <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

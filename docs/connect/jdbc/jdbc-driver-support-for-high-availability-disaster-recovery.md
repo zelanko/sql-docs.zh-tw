@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e760523026251463f80d7f7e3e14b7e52b36ab2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 322a22c2236898876ae2fd5e942a1ad3617c1959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956387"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驅動程式對於高可用性、災害復原的支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,19 +28,19 @@ ms.locfileid: "66781537"
   
 -   **applicationIntent**
  
-在連線到可用性群組的可用性群組接聽程式或容錯移轉叢集執行個體時，指定 multiSubnetFailover=true。 請注意， **multiSubnetFailover**預設為 false。 使用**applicationIntent**來宣告應用程式工作負載類型。 請參閱下列各節，如需詳細資訊。
+在連線到可用性群組的可用性群組接聽程式或容錯移轉叢集執行個體時，指定 multiSubnetFailover=true。 請注意, **multiSubnetFailover**預設為 false。 使用**applicationIntent**來宣告應用程式工作負載類型。 如需詳細資訊, 請參閱下列各節。
  
-從 6.0 版的 Microsoft JDBC Driver for SQL Server，新的連接屬性**transparentNetworkIPResolution**至 Always On 可用性群組或伺服器有透明的連接加入 (TNIR)相關聯的多個 IP 位址。 當**transparentNetworkIPResolution**為 true，此驅動程式嘗試連線到第一個可用的 IP 位址。 如果第一次嘗試失敗，驅動程式會嘗試連線到所有的 IP 位址，以平行方式，直到逾時到期，當其中一個成功時，請捨棄任何暫止的連接嘗試。   
+從適用于 SQL Server 的 Microsoft JDBC Driver 版本6.0 開始, 會加入新的連線屬性**transparentNetworkIPResolution** (TNIR), 以透明連線到 Always On 可用性群組或具有多個 IP 位址的伺服器與. 當**transparentNetworkIPResolution**為 true 時, 驅動程式會嘗試連接到第一個可用的 IP 位址。 如果第一次嘗試失敗, 驅動程式會嘗試以平行方式連接到所有 IP 位址, 直到超時時間到期為止, 當其中一個作業成功時, 就會捨棄任何暫止的連接嘗試。   
 
-請注意：
-* transparentNetworkIPResolution 是預設值為 true
-* 如果 multiSubnetFailover 是，則為 true，則會忽略 transparentNetworkIPResolution
-* 如果使用資料庫鏡像，則會忽略 transparentNetworkIPResolution
-* 如果有超過 64 個 IP 位址，則會忽略 transparentNetworkIPResolution
-* TransparentNetworkIPResolution，則為 true 時，第一次連接嘗試就會使用 500 毫秒的逾時值。 其餘的連接嘗試依照和 multiSubnetFailover 功能相同的邏輯。 
+請注意:
+* transparentNetworkIPResolution 預設為 true
+* 如果 multiSubnetFailover 為 true, 則會忽略 transparentNetworkIPResolution
+* 如果使用資料庫鏡像, 則會忽略 transparentNetworkIPResolution
+* 如果有超過64個 IP 位址, 則會忽略 transparentNetworkIPResolution
+* 當 transparentNetworkIPResolution 為 true 時, 第一次連接嘗試會使用500毫秒的超時值。 其餘的連接嘗試會遵循與 multiSubnetFailover 功能相同的邏輯。 
 
 > [!NOTE]
-> 如果您是使用 Microsoft JDBC Driver 4.2 （或較低） for SQL Server，而且如果**multiSubnetFailover**為 false，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]嘗試連線到第一個 IP 位址。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 無法建立與第一個 IP 位址的連線，則連線會失敗。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將不會嘗試連線到與伺服器建立關聯的任何後續 IP 位址。 
+> 如果您使用 Microsoft JDBC Driver 4.2 (或更低版本) 進行 SQL Server, 而且如果**multiSubnetFailover**為 false [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] , 則會嘗試連接到第一個 IP 位址。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 無法建立與第一個 IP 位址的連線，則連線會失敗。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將不會嘗試連線到與伺服器建立關聯的任何後續 IP 位址。 
 > 
 > 
 > [!NOTE]
@@ -54,15 +53,15 @@ ms.locfileid: "66781537"
   
  **multiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，而且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會嘗試連線到所有 IP 位址，以嘗試連線到主要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 為連線指定 **MultiSubnetFailover=true** 時，用戶端會以比作業系統預設 TCP 重新傳輸間隔更快的速度，重試 TCP 連線嘗試。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
- 如需有關中連接字串關鍵字[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，請參閱 <<c2> [ 設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
+ 如需中[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]連接字串關鍵字的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
  當連線到可用性群組接聽程式或容錯移轉叢集執行個體以外的某個項目時，指定 **multiSubnetFailover=true** 會導致降低效能，所以不支援此方式。  
   
- 如果未安裝安全性管理員，則 Java Virtual Machine 會在一段有限期間快取虛擬 IP 位址 (VIP)，這在預設情況下是由您的 JDK 實作以及 Java 屬性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 所定義。 如果已安裝 JDK 安全性管理員，則 Java Virtual Machine 將會快取 VIP，而且預設不會重新整理快取。 您應該針對 Java Virtual Machine 快取將「存留時間」(networkaddress.cache.ttl) 設定為一天。 如果您未將預設值變更為一天 (或一天左右)，則當新增或更新 VIP 時，將不會從「JAVA 虛擬機器」快取中清除舊的值。 如需有關 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的詳細資訊，請參閱 < [ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
+ 如果未安裝安全性管理員，則 Java Virtual Machine 會在一段有限期間快取虛擬 IP 位址 (VIP)，這在預設情況下是由您的 JDK 實作以及 Java 屬性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 所定義。 如果已安裝 JDK 安全性管理員，則 Java Virtual Machine 將會快取 VIP，而且預設不會重新整理快取。 您應該針對 Java Virtual Machine 快取將「存留時間」(networkaddress.cache.ttl) 設定為一天。 如果您未將預設值變更為一天 (或一天左右)，則當新增或更新 VIP 時，將不會從「JAVA 虛擬機器」快取中清除舊的值。 如需 networkaddress.cache.ttl 和 networkaddress.cache.ttl 的詳細資訊, 請參閱[https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
   
  請使用下列指導方針，連接到可用性群組或容錯移轉叢集執行個體中的伺服器：  
   
--   驅動程式會產生錯誤，如果**instanceName**連接屬性會在相同的連接字串**multiSubnetFailover**連接屬性。 這反映以下事實：可用性群組中並未使用 SQL Browser。 不過，如果**portNumber**也指定連接屬性，則驅動程式將會忽略**instanceName**並用**portNumber**。  
+-   如果**instanceName**連接屬性是在與**multiSubnetFailover**連接屬性相同的連接字串中使用, 驅動程式將會產生錯誤。 這反映以下事實：可用性群組中並未使用 SQL Browser。 不過, 如果也指定了**portNumber**連接屬性, 驅動程式將會忽略**InstanceName**並使用**portNumber**。  
   
 -   如果在連線到單一子網路或多重子網路時使用 **multiSubnetFailover** 連線屬性，則會提高兩者的效能。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "66781537"
 
 
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>支援 multiSubnetFailover 和 applicationIntent 的新方法  
- 以下方法讓您以程式設計方式存取**multiSubnetFailover**， **applicationIntent**並**transparentNetworkIPResolution**連接字串關鍵字：  
+ 下列方法可讓您以程式設計方式存取**multiSubnetFailover**、 **applicationIntent**和**transparentNetworkIPResolution**連接字串關鍵字:  
   
 -   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
   
@@ -110,10 +109,10 @@ ms.locfileid: "66781537"
 
 -   SQLServerDataSource.getTransparentNetworkIPResolution
   
- **GetMultiSubnetFailover**， **setMultiSubnetFailover**， **getApplicationIntent**， **setApplicationIntent**， **getTransparentNetworkIPResolution**並**setTransparentNetworkIPResolution**方法也會新增至[SQLServerDataSource 類別](../../connect/jdbc/reference/sqlserverdatasource-class.md)， [SQLServerConnectionPoolDataSource 類別](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)，並[SQLServerXADataSource 類別](../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
+ **GetMultiSubnetFailover**、 **setMultiSubnetFailover**、 **getApplicationIntent**、 **setApplicationIntent**、 **getTransparentNetworkIPResolution**和**setTransparentNetworkIPResolution**方法為也會新增至[SQLServerDataSource 類別](../../connect/jdbc/reference/sqlserverdatasource-class.md)、 [SQLServerConnectionPoolDataSource 類別](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)和[SQLServerXADataSource 類別](../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
   
 ## <a name="ssl-certificate-validation"></a>SSL 憑證驗證  
- 可用性群組是由多個實體伺服器所組成。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 已在 SSL 憑證中新增 **Subject Alternate Name** 的支援，好讓多個主機可以與相同憑證建立關聯。 如需有關 SSL 的詳細資訊，請參閱 <<c0> [ 了解 SSL 支援](../../connect/jdbc/understanding-ssl-support.md)。  
+ 可用性群組是由多個實體伺服器所組成。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 已在 SSL 憑證中新增 **Subject Alternate Name** 的支援，好讓多個主機可以與相同憑證建立關聯。 如需 SSL 的詳細資訊, 請參閱[瞭解 Ssl 支援](../../connect/jdbc/understanding-ssl-support.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

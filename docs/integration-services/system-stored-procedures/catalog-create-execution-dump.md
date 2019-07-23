@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6fd9f7ffc5c07fdfb310984426b57cd84e521137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72b833d5e11e5a034001eca4cac698b5ef392930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023516"
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump 
 

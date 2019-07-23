@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d7d4a10935f25498200c9277d80eee6249ac258
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c0baa1c31db1c3b242bde8e4bda39fda5439ddff
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679877"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267706"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定中斷點條件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

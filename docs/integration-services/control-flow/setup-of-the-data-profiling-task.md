@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5032c7f48bdafdab0430357c01698f5672b2f830
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 184c1e29296a14d530648ae2e621fdc5da188864
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011326"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
 

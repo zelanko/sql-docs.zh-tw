@@ -1,5 +1,5 @@
 ---
-title: 處理結果使用說明主題 (OLE DB) |Microsoft Docs
+title: 處理結果的使用說明主題 (OLE DB) |Microsoft Docs
 description: 處理結果操作說明主題 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - OLE DB, processing results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 82fc2fa7c026c62999131513d9ec44dd98940168
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3cda281e8ce5bc276ff8baab6887754ba56e43a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015566"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>處理結果的使用說明主題 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de404b8650c78671380a2515848a16a2ebf1b9f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 746c1e1d7cea1282892dd8859f7aa838fc089b72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945396"
 ---
 # <a name="variables-window"></a>變數視窗
 

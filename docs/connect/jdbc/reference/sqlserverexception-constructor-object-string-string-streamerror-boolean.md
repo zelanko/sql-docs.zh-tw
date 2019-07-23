@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 33b5d593cfc5ac4b46fdfe7dcf7a845f754d5f3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1cc42a09e455fa42d3f89b05903a22afc945424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971120"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException 建構函式 (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  初始化的新執行個體[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)類別，在給定**物件**，則**字串**物件，**字串**物件、 **StreamError**物件，並**布林**。
+  指定**物件**、**字串**物件、**字串**物件、 **StreamError**物件和**布林值**時, 初始化[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)類別的新實例。
 
 ## <a name="syntax"></a>語法  
   
@@ -42,11 +41,11 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>參數  
  *obj*  
   
- IO 緩衝區產生例外狀況。
+ 產生例外狀況的 IO 緩衝區。
 
  *errText*  
   
- 字串，包含錯誤文字。
+ 包含錯誤文字的字串。
   
  *sqlState*  
   
@@ -54,11 +53,11 @@ public SQLServerException(java.lang.Object obj,
  
  *streamError*  
   
- StreamError 物件，其中包含有關錯誤的詳細資料。
+ 包含錯誤詳細資料的 StreamError 物件。
  
  *bStack*  
   
- 布林值，指出是否會產生堆疊追蹤。
+ 布林值, 指出是否應該產生堆疊追蹤。
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerException 建構函式](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

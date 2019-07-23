@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 070218de71a32c3f1dab40685a1ebdfb885d3433
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 43de9c84bcb1356961d2e5fa0b0c48d05a72de3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935792"
 ---
 # <a name="using-directional-parameters"></a>使用方向參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

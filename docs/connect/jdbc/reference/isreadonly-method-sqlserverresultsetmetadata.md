@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3cbf45389bd7cb87f724b0ff1db9b2b24e66c8d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f88939af9ba975abc32a1c3b7f26e5a3db04ce0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977288"
 ---
 # <a name="isreadonly-method-sqlserverresultsetmetadata"></a>isReadOnly 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isReadOnly(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 isReadOnly 方法是由 java.sql.ResultSetMetaData 介面中的 isReadOnly 方法指定。  
+ 這個 isReadOnly 方法是由 ResultSetMetaData 介面中的 isReadOnly 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSetMetaData 方法](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

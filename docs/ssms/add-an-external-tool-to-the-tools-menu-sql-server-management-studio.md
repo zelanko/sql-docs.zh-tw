@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ed8edd7407ce83418379dbdd4a2a0f8baf2b2fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41cb442df9651f4013a8053bf0070350eacac0c3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099510"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265593"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>將外部工具加入至工具功能表 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

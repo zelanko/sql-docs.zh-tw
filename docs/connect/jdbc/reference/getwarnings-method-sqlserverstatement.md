@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3d6decae-2570-4ca5-8ff6-57a2cc3e921f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2903508d7dc59d293402374637792e8d23c3726c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3bdb05e7d538de461596e1e7bc4b2db715825fae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978061"
 ---
 # <a name="getwarnings-method-sqlserverstatement"></a>getWarnings 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final java.sql.SQLWarning getWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getWarnings 方法是由 java.sql.Statement 介面中的 getWarnings 方法指定。  
+ 這個 getWarnings 方法是由 sql 語句介面中的 getWarnings 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

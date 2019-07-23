@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6ec8c1d-7ff8-4bc5-8bd3-0199a9294a6e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01cf5c8d9d4d4b40e4f76040725a81e6424bb254
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5e9e800c326f18b5247d1257431bb2243ad00c57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976841"
 ---
 # <a name="locatorsupdatecopy-method-sqlserverdatabasemetadata"></a>locatorsUpdateCopy 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean locatorsUpdateCopy()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果更新作用於複本。 **false**如果直接進行更新。  
+ 如果對複本進行更新,**則為 true** 。 如果直接進行更新, 則**為 false** 。  
   
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 這個 locatorsUpdateCopy 方法是由 java.sql.DatabaseMetaData 介面中 locatorsUpdateCopy 方法指定。  
+ 這個 locatorsUpdateCopy 方法是由 JAVA.sql.databasemetadata 介面中的 locatorsUpdateCopy 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

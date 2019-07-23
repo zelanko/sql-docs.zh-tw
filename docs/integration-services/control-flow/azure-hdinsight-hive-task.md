@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0db8a774ec01bd2cab503a3abd476ce87ca40362
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d94c492504798095e01f20fbe78a023e8254c92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947271"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Hive 工作
 

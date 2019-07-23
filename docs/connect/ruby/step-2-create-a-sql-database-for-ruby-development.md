@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bffa9c3d-cf88-4cf4-8110-d11f7948980d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e546244e00b97b3a4f11fa8532860d0372c2b7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca5a6ca1709dd588dcf337262bea76f9f00f0319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935646"
 ---
 # <a name="step-2-create-a-sql-database-for-ruby-development"></a>步驟 2︰建立 Ruby 開發的 SQL 資料庫
 

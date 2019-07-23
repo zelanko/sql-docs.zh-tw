@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea0f60f98ef86908e7e81f810c9160a71d91755c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb09e3904fbfaf6a7b285eb297b5568f2f8e51b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045604"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立封裝
 

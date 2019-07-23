@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d0d364e803fc544ee4f317ee55b597fef9e79fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055836"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>課程 4-3：新增錯誤流程重新導向
 

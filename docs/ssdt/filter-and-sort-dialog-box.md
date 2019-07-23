@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c56ca7cf78cce14c198d78121d175159d90a6aa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d33257f0293e90682775f11fd4ef62da74e9524e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912795"
 ---
 # <a name="filter-and-sort-dialog-box"></a>篩選與排序對話方塊
-在 SQL Server [物件總管] 中，您可以以滑鼠右鍵按一下資料表或檢視，並選取 [檢視資料] (如需詳細資訊，請參閱[如何：檢視及編輯資料表中的資料](../ssdt/how-to-view-and-edit-data-in-a-table.md)。 從 2014 年 3 月發行的 SQL Server Data Tools 開始，[資料編輯器] 在工具列中具有排序與篩選按鈕。 您可以修改資料表或檢視中顯示的資料。  
+在 SQL Server [物件總管] 中，您可以以滑鼠右鍵按一下資料表或檢視，並選取 [檢視資料]  (如需詳細資訊，請參閱[如何：檢視及編輯資料表中的資料](../ssdt/how-to-view-and-edit-data-in-a-table.md)。 從 2014 年 3 月發行的 SQL Server Data Tools 開始，[資料編輯器]  在工具列中具有排序與篩選按鈕。 您可以修改資料表或檢視中顯示的資料。  
   
-在 [篩選與排序] 對話方塊中，您可以指定將在 [資料編輯器] 中顯示的資料：  
+在 [篩選與排序]  對話方塊中，您可以指定將在 [資料編輯器]  中顯示的資料：  
   
 -   顯示的資料列數。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "65096928"
   
 -   資料行的排序順序。  
   
-您也可以滑鼠右鍵按一下資料列，然後在 [篩選與排序] 對話方塊中，選取要對資料列執行的作業。  
+您也可以滑鼠右鍵按一下資料列，然後在 [篩選與排序]  對話方塊中，選取要對資料列執行的作業。  
   
 ## <a name="see-also"></a>另請參閱  
 [連接的資料庫開發](../ssdt/connected-database-development.md)  

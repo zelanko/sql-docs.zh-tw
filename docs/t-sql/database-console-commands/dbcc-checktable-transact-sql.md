@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c3c8e4e2617e3bf1cd7f5f3627aab0c9a4cf0be4
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bf9207498575a52c5d9c2c1a6076110260c1f588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102017"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ ALL_ERRORMSGS
     
 EXTENDED_LOGICAL_CHECKS  
  如果相容性層級為 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，則會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯一致性檢查。  
- 如需詳細資訊，請參閱本主題稍後[備註](#remarks)一節中的＜對索引執行邏輯一致性檢查＞。  
+ 如需詳細資訊，請參閱本主題稍後[備註](#remarks)一節中的＜對索引執行邏輯一致性檢查＞  。  
     
 NO_INFOMSGS  
  隱藏所有參考訊息。  
@@ -217,7 +216,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    
 ```    
     
-## <a name="permissions"></a>[權限]    
+## <a name="permissions"></a>權限    
 使用者必須擁有資料表，或是 系統管理員 (sysadmin) 固定伺服器角色、db_owner 固定資料庫角色，或 db_ddladmin 固定資料庫角色的成員。    
     
 ## <a name="examples"></a>範例    

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 3a80688d458b70f470643830406668ac2a056498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da0da7ae26d859c8bd7ea4b92ff126819d6bc2ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025396"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>移除資料庫鏡像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "66795277"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[移除資料庫鏡像之後](#FollowUp)  
+-   **後續操作：** [移除資料庫鏡像之後](#FollowUp)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -56,20 +55,20 @@ ms.locfileid: "66795277"
   
 2.  展開 **[資料庫]** 並選取資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，選取 [工作]，然後按一下 [鏡像]。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
+3.  以滑鼠右鍵按一下資料庫，選取 [工作]  ，然後按一下 [鏡像]  。 這將會開啟在 **[資料庫屬性]** 對話方塊中的 **[鏡像]** 頁面。  
   
-4.  在 **[選取頁面]** 窗格中按一下 **[鏡像]**。  
+4.  在 **[選取頁面]** 窗格中按一下 **[鏡像]** 。  
   
-5.  若要移除鏡像，請按一下 **[移除鏡像]**。 會出現提示要求確認。 如果按一下 **[是]**，會停止工作階段，並從資料庫移除鏡像。  
+5.  若要移除鏡像，請按一下 **[移除鏡像]** 。 會出現提示要求確認。 如果按一下 **[是]** ，會停止工作階段，並從資料庫移除鏡像。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 若要移除資料庫鏡像，請使用 **[資料庫屬性]**。 使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面。  
+ 若要移除資料庫鏡像，請使用 **[資料庫屬性]** 。 使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面。  
   
 #### <a name="to-remove-database-mirroring"></a>若要移除資料庫鏡像  
   
 1.  連接到任一個鏡像夥伴的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  發出下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   

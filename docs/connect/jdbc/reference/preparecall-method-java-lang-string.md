@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cb83b567-4ce5-447a-93cc-895d4eaf3a05
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22dd6c5c559dc58b5c381cabc23210e3eade266f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dd0a5c40cf12ddae0c6a7aae00c6a83bfe6549f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976227"
 ---
 # <a name="preparecall-method-javalangstring"></a>prepareCall 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql)
  **String**，其中包含 SQL 陳述式。  
   
 ## <a name="return-value"></a>傳回值  
- CallableStatement 物件。  
+ JAVA.sql.callablestatement 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 prepareCall 方法是由 java.sql.Connection 介面中的 prepareCall 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 prepareCall 方法是由連接介面中的 prepareCall 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [prepareCall 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   

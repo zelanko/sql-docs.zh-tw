@@ -1,5 +1,5 @@
 ---
-title: 使用書籤 (OLE DB) 擷取資料列 |Microsoft Docs
+title: 使用書簽 (OLE DB) 取出資料列 |Microsoft Docs
 description: 使用書籤擷取資料列 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,13 +13,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1ae3556f4e78b71b714ced11ea9e7ee64dda619c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b2ab2e7be75e10ff97fcf254f885bfaa9dd25ec9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994712"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用書籤擷取資料列 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66791192"
   
 4.  針對當做書籤使用的資料行，將繫結結構的 **dwFlag** 欄位設定為 DBCOLUMNSINFO_ISBOOKMARK 旗標。  
   
-5.  使用**irowsetlocate:: Getrowsat**提取資料列，從書籤中位移所指定的資料列開始。  
+5.  請使用**IRowsetLocate:: GetRowsAt**來提取資料列, 從書簽的位移所指定的資料列開始。  
   
 ## <a name="example"></a>範例  
  此範例顯示如何使用書籤提取資料列。 IA64 不支援此範例。  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5fa3d153f6e36fe4eb45cc54da2326aec8e32dd8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e32b559d43e44e75d4f87ecf99cfd871727c9934
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976857"
 ---
 # <a name="length-method-sqlservernclob"></a>length 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個長度方法是方法所指定長度 java.sql.NClob 介面中。  
+ 這個長度方法是由 NClob 介面中的 length 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

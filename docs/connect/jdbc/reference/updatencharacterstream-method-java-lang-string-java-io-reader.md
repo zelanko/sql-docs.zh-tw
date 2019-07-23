@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 504d7d06-0227-45e1-8b01-899c3e6006e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7139fbe6caff5e8f30bb93aa6739db0f713a120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05844a45de654be91375ed2539c6510bd1592d29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998835"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader"></a>updateNCharacterStream 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public void updateNCharacterStream(java.lang.String columnLabel,
   
  *reader*  
   
- 讀取器物件。  
+ Reader 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateNCharacterStream 方法 java.sql.ResultSet 介面中所指定這個 updateNCharacterStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 updateNCharacterStream 方法是由 sql-dmo 介面中的 updateNCharacterStream 方法指定。  
   
- 這個方法會傳遞到選取的讀取器物件的 Unicode 字元**nchar**， **nvarchar （max)**， **ntext**並**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
+ 這個方法會將讀取器物件的 Unicode 字元傳遞到選取的**Nchar**、 **Nvarchar (max)** 、 **Ntext**和**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateNCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

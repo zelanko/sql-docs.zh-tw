@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43b5c2e9691959bcb624a7a22c488240a9730a76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bbc83ad424f5c6ed0ef7e56802175f05b1d6a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951882"
 ---
 # <a name="creating-a-custom-log-provider"></a>建立自訂記錄提供者
 

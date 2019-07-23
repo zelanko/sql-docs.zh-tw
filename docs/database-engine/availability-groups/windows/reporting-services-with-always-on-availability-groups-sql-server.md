@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506515"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252127"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,31 +28,13 @@ ms.locfileid: "59506515"
  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源的主要優點是能夠運用可讀取的次要複本做為報表資料來源，同時次要複本可針對主要資料庫提供容錯移轉。  
   
  如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般資訊，請參閱 [SQL Server 2012 的 AlwaysOn 常見問題集 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768)。  
-  
- **本主題內容：**  
-  
--   [使用 Reporting Services 和 AlwaysOn 可用性群組的需求](#bkmk_requirements)  
-  
--   [報表資料來源和可用性群組](#bkmk_reportdatasources)  
-  
--   [報表設計和可用性群組](#bkmk_reportdesign)  
-  
--   [報表伺服器資料庫和可用性群組](#bkmk_reportserverdatabases)  
-  
--   -   [SharePoint 原生模式之間的差異](#bkmk_differences_in_server_mode)  
-  
-    -   [針對可用性群組準備報表伺服器資料庫](#bkmk_prepare_databases)  
-  
-    -   [完成報表伺服器資料庫之災害復原的步驟](#bkmk_steps_to_complete_failover)  
-  
-    -   [進行容錯移轉時的報表伺服器行為](#bkmk_failover_behavior)  
-  
+
 ##  <a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性群組的需求  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 報表伺服器使用 .Net framework 4.0，並支援與資料來源搭配使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
   
  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本時，您必須下載並安裝 .Net 3.5 SP1 的 Hotfix。 此 Hotfix 會加入 SQL 用戶端對於 AG 功能的支援，以及連接字串屬性 **ApplicationIntent** 和 **MultiSubnetFailover**的支援。 如果裝載報表伺服器的每部電腦沒有安裝此 Hotfix，則嘗試預覽報表的使用者將會看見類似下面的錯誤訊息，而且該錯誤訊息將寫入報表伺服器追蹤記錄：  
   
-> **錯誤訊息：**「不支援關鍵字 'applicationintent'」  
+> **錯誤訊息：** 「不支援關鍵字 'applicationintent'」  
   
  當您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串中加入其中一個 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 屬性，但是伺服器無法辨識該屬性時，就會出現此訊息。 如果報表伺服器已啟用遠端錯誤，當您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用者介面中按一下 [測試連線] 按鈕以及預覽報表時，就會看見上述錯誤訊息。  
   
@@ -66,7 +48,7 @@ ms.locfileid: "59506515"
 ##  <a name="bkmk_reportdatasources"></a> 報表資料來源和可用性群組  
  以 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 為基礎之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 資料來源的行為可能會因系統管理員設定 AG 環境的方式而異。  
   
- 若要針對報表資料來源使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，您必須將報表資料來源連接字串設定為使用可用性群組的 *「接聽程式 DNS 名稱」*(Listener DNS Name)。 支援的資料來源如下：  
+ 若要針對報表資料來源使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，您必須將報表資料來源連接字串設定為使用可用性群組的 *「接聽程式 DNS 名稱」* (Listener DNS Name)。 支援的資料來源如下：  
   
 -   使用 SQL Native Client 的 ODBC 資料來源。  
   
@@ -115,7 +97,7 @@ ms.locfileid: "59506515"
   
 -   **遠端或伺服器模式預覽：** 如果將報表發行至報表伺服器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中使用預覽功能之後，您看見類似下面的錯誤，就表示您正在根據報表伺服器預覽報表，而且報表伺服器尚未安裝 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 Hotfix。  
   
-> **錯誤訊息：**「不支援關鍵字 'applicationintent'」  
+> **錯誤訊息：** 「不支援關鍵字 'applicationintent'」  
   
 ##  <a name="bkmk_reportserverdatabases"></a> 報表伺服器資料庫和可用性群組  
  Reporting Services 和 Power BI 報表伺服器針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 與報表伺服器資料庫搭配使用提供有限的支援。 您可以在 AG 中將報表伺服器資料庫設定為複本的一部分，但在容錯移轉時， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 不會自動為報表伺服器資料庫使用不同的複本。 不支援搭配報表伺服器資料庫使用 MultiSubnetFailover。  
@@ -154,7 +136,7 @@ ms.locfileid: "59506515"
 ###  <a name="bkmk_prepare_databases"></a> 針對可用性群組準備報表伺服器資料庫  
  下面是準備將報表伺服器資料庫加入至 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的基本步驟：  
   
--   建立您的可用性群組並且設定 *「接聽程式 DNS 名稱」*(Listener DNS Name)。  
+-   建立您的可用性群組並且設定 *「接聽程式 DNS 名稱」* (Listener DNS Name)。  
   
 -   **主要複本：** 將報表伺服器資料庫設定為單一可用性群組的一部分，並且建立包含所有報表伺服器資料庫的主要複本。  
   
@@ -162,7 +144,7 @@ ms.locfileid: "59506515"
   
 -   **報表伺服器認證：** 您必須在次要與主要複本上建立適當的報表伺服器認證。 確切步驟主要取決於您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境中使用的驗證類型：Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務帳戶、Windows 使用者帳戶或 SQL Server 驗證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
--   將資料庫連接更新為使用接聽程式 DNS 名稱。 若為原生模式報表伺服器，請於 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中變更 [報表伺服器資料庫名稱]。 若為 SharePoint 模式，請為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式變更 [資料庫伺服器名稱]。  
+-   將資料庫連接更新為使用接聽程式 DNS 名稱。 若為原生模式報表伺服器，請在 **組態管理員中變更** [報表伺服器資料庫名稱] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 若為 SharePoint 模式，請為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式變更 [資料庫伺服器名稱]  。  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> 完成報表伺服器資料庫之災害復原的步驟  
  您必須在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉至次要複本之後完成下列步驟：  

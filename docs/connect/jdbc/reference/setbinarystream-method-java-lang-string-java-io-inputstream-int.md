@@ -1,5 +1,5 @@
 ---
-title: setBinaryStream 方法來輸入資料流-長時間 |Microsoft Docs
+title: 輸入資料流程的 setBinaryStream 方法-long |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7bc5c323cb87ab0b5033baf4616a96276c0de2c3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f2020b147b67557417b7c64cc05a053f9650d828
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975169"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void setBinaryStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setBinaryStream 方法 setBinaryStream 方法 java.sql.CallableStatement 介面中所指定。  
+ 這個 setBinaryStream 方法是由 JAVA.sql.callablestatement 介面中的 setBinaryStream 方法指定。  
   
  如果此資料流的長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   

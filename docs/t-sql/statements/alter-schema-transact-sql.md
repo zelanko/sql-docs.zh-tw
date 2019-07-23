@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad0ac154636885ab54f8873ff118e59330350380
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044310"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,12 +82,12 @@ ALTER SCHEMA schema_name
   
  移動資料表或同義字之類的物件，不會自動更新指向這個物件的參考。 您必須手動修改任何參考已傳輸之物件的物件。 例如，如果您移動了資料表，而且觸發程序參考該資料表，您就必須修改觸發程序來反映新的結構描述名稱。 在移動物件之前，請利用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 來列出其相依性。  
 
- 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來變更資料表的結構描述，請在 [物件總管] 中，以滑鼠右鍵按一下資料表，然後按一下 [設計]。 按下 **F4** 開啟 [屬性] 視窗。 在 [結構描述] 方塊中，選取新的結構描述。  
+ 若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來變更資料表的結構描述，請在 [物件總管] 中，以滑鼠右鍵按一下資料表，然後按一下 [設計]  。 按下 **F4** 開啟 [屬性] 視窗。 在 [結構描述]  方塊中，選取新的結構描述。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要從另一個結構描述傳送安全性實體，目前使用者必須對安全性實體 (而非結構描述) 具有 CONTROL 權限，並對目標結構描述具有 ALTER 權限。  
   
  如果安全性實體上有 EXECUTE AS OWNER 規格，且擁有者設為 SCHEMA OWNER，則該使用者也必須對目標結構描述的擁有者具有 IMPERSONATION 權限。  

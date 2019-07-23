@@ -13,13 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95e4e365ed1ec89050ceb8c3765e6a217f819cd3
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: b5363ab8fe37e67b7efa1aa193e269585064f07e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137441"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>使用 Database Mail 傳送測試電子郵件  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

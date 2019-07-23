@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7457b8a-df31-4999-883e-8cc386a48ceb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21505e53640e7b620e8ab455326be28dc1621ec1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8695cd34f088f62ef5fa6f2b82c6103396801179
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974550"
 ---
 # <a name="setclob-method-javalangstring-javaioreader"></a>setClob 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public final void setClob(java.lang.String parameterName,
   
  *reader*  
   
- 讀取器物件。  
+ Reader 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e22a94fef64ac6b31d4a7609c01a50f11d5020bf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006682"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>範例指定 XMLTEXT 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ INSERT INTO Person VALUES
    ,('P3','Joe',N'<SomeTag attr3="data" PersonID="P">content</SomeTag>');  
 ```  
   
- 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
+ 此查詢從 `Person` 資料表擷取資料行。 對於 `Overflow` 資料行，並未指定 *AttributeName*，但「指示詞」  會將 `XMLTEXT` 設為提供通用資料表資料行名稱的一部分。  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -100,7 +99,7 @@ FOR XML EXPLICIT;
   
  如果以 `xmltext` 指示詞指定 *AttributeName*，則 <`overflow`> 元素的屬性將會新增為封閉式 <`Parent`> 元素的子元素屬性。 為 *AttributeName* 所指定的名稱將成為子元素的名稱。  
   
- 在此查詢中，*AttributeName* (<`overflow`>) 會與 `xmltext` 指示詞一起指定：  
+ 在此查詢中，*AttributeName* (<`overflow`>) 會與 `xmltext` 指示詞一起指定：   
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

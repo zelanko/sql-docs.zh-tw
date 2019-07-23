@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ca125846062a77b19c324a50f9ed13c528f1e051
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1b930c13856dd6c0e0945c82364e811730ed236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971588"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>SQLServerConnectionPoolDataSource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66800585"
   
 ## <a name="constructors"></a>建構函式  
   
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[SQLServerConnectionPoolDataSource ()](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-constructor.md)|將 [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 類別的新執行個體初始化。|  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66800585"
   
 ## <a name="methods"></a>方法  
   
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回 **applicationIntent** 連線屬性的值。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回應用程式名稱。|  
@@ -53,7 +52,7 @@ ms.locfileid: "66800585"
 |[getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回 **multiSubnetFailover** 連線屬性的值。|  
 |[getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)|嘗試建立可用來當做共用連接的實體資料庫連接。|  
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回目前用來與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通訊的連接埠號碼。|  
-|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|傳回此資料來源物件的參考。|  
+|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|傳回此 DataSource 物件的參考。|  
 |[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回用於以此 DataSource 物件所建立之所有結果集的預設資料指標類型。|  
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|(繼承自[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回**布林**值來指出是否已啟用以 UNICODE 格式將字串參數傳送到伺服器。|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回正在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的電腦名稱。|  

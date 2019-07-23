@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 012afa885490bb180b9ba0cae7b8ad435cf70e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61db90f4082d19551d1d7b3227069cd0c9cf835a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984524"
 ---
 # <a name="data-tools-operations-window"></a>資料工具作業視窗
 [資料工具作業]  視窗會顯示本主題討論的某些作業的進度，並在發生任何錯誤時通知您。  

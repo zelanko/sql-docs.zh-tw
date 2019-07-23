@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 04124a936e333c4821f0e84dcbdae3d1658addc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 392804caab3af4a9bfe7f652fc8f618df430f924
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215790"
 ---
 # <a name="script-task"></a>指令碼工作
 

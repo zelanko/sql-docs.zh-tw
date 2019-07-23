@@ -1,5 +1,5 @@
 ---
-title: rollback 方法 （) |Microsoft Docs
+title: rollback 方法 () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d58c91b4e305eaabeef11b995a16378441d659fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e3b4575251cb4eb55f9af37bb81ed2c4bedbf564
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975708"
 ---
 # <a name="rollback-method-"></a>rollback 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void rollback()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個回復方法是由 java.sql.Connection 介面中的 rollBack 方法指定。  
+ 此 rollBack 方法是由連接介面中的 rollBack 方法指定。  
   
  只有當已經停用自動認可模式時，才應該使用這個方法。  
   

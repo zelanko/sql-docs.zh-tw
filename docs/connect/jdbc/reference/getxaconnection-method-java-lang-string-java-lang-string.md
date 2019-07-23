@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: db13bdb3a1039abf1b07616d4cd94001833e3600
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 23ba6bc636e5bc714a606c29a46f7b52ce1bbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977991"
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>getXAConnection 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +45,13 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
  包含密碼的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- XAConnection 物件。  
+ JAVAx.sql.xaconnection 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getXAConnection 方法是由 javax.sql.XADataSource 介面中 getXAConnection 方法指定。  
+ 這個 getXAConnection 方法是由 javax.xml.transform.dom.domresult. JAVAx.sql.xadatasource 介面中的 getXAConnection 方法指定。  
   
 > [!NOTE]  
 >  這個方法通常是由 XA 連接集區實作所呼叫，而不是由一般的 JDBC 應用程式碼所呼叫。  

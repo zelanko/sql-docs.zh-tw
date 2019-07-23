@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dc45f1e3c819caedea79e169c72cdc6b6245d854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0ca83c61a09c03c5c066da4b65a5a342f86c631
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045255"
 ---
 # <a name="create-infocube-for-transaction-data"></a>建立交易資料的 InfoCube
 

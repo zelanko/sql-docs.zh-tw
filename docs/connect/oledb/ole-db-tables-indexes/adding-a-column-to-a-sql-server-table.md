@@ -1,6 +1,6 @@
 ---
-title: 加入 SQL Server 資料表中的資料行 |Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 的 SQL Server 資料表中加入一個資料行
+title: 將資料行加入至 SQL Server 資料表 |Microsoft Docs
+description: 使用 SQL Server 的 OLE DB 驅動程式將資料行新增至 SQL Server 資料表
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 282166444597245ad70be565ce6db9f01533a227
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994099"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>將資料行加入至 SQL Server 資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 會公開**itabledefinition:: Addcolumn**函式。 如此可讓取用者將資料行加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
+  SQL Server 的 OLE DB 驅動程式會公開**ITableDefinition:: AddColumn**函數。 如此可讓取用者將資料行加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
   
- 當您將加入的資料行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表，OLE DB Driver for SQL Server 取用者受到限制，如下所示：  
+ 當您將資料行新增至[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表時, SQL Server 取用者的 OLE DB 驅動程式會受到限制, 如下所示:  
   
 -   如果 DBPROP_COL_AUTOINCREMENT 是 VARIANT_TRUE，DBPROP_COL_NULLABLE 就必須是 VARIANT_FALSE。  
   

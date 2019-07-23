@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 22891968234e0ad81e95e6aa78c76a2f8e5d4910
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039104"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ DBCC INPUTBUFFER 會傳回含有下列資料行的資料列集。
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|事件類型。 這可能會是「RPC 事件」或「語言事件」。 如果未偵測到上一個事件，輸出將為「無事件」。|  
+|**EventType**|**nvarchar(30)**|事件類型。 這可能會是「RPC 事件」  或「語言事件」  。 如果未偵測到上一個事件，輸出將為「無事件」  。|  
 |**參數**|**smallint**|0 = 文字<br /><br /> 1- *n* = 參數|  
 |**EventInfo**|**nvarchar(4000)**|如果 **EventType** 是 RPC，**EventInfo**只會包含程序名稱。 如果 **EventType** 是「語言」，便只會顯示事件的前 4000 個字元。|  
   
@@ -88,7 +87,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]
 > 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始，請使用 [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) 來傳回提交至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之執行個體的相關陳述式資訊。
 
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，需要下列其中之一：
 -   使用者必須是系統管理員 **sysadmin** 固定伺服器角色的成員。  
 -   使用者必須擁有 VIEW SERVER STATE 權限。  

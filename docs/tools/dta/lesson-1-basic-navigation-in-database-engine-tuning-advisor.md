@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 39183d699bfa27430a35012d353b8f3bc70d6be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034770"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 課：Database Engine Tuning Advisor 中的基本導覽
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,25 +35,25 @@ Database Engine Tuning Advisor 提供一種以圖形化使用者介面 (GUI) 為
 如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)。
 
   >[!NOTE]
-  > 本教學課程適用於使用者熟悉如何使用 SQL Server Management Studio 和基本資料庫管理工作。 
+  > 本教學課程適用于熟悉使用 SQL Server Management Studio 和基本資料庫管理工作的使用者。 
   
 
 ## <a name="launch-database-tuning-advisor"></a>啟動 Database Tuning Advisor 
 首先，請開啟 Database Engine Tuning Advisor (DTA) 圖形化使用者介面 (GUI)。 在第一次使用時， **系統管理員** 固定伺服器角色的成員必須啟動 Database Engine Tuning Advisor 來初始化應用程式。 初始化之後， **db_owner** 固定資料庫角色的成員便可以利用 Database Engine Tuning Advisor 來微調他們擁有的資料庫。 如需初始化 Database Engine Tuning Advisor 的詳細資訊，請參閱 [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
-1. 啟動 SQL Server Management Studio (SSMS)。 在 Windows 上 **[開始] 功能表**，指向**所有程式**並找出**SQL Server Management Studio**。 
-2. 一旦開啟 SSMS，請選取**工具**功能表，然後選取**Database Tuning Advisor**。 
+1. 啟動 SQL Server Management Studio (SSMS)。 在 Windows [**開始] 功能表**上, 指向 [**所有程式**], 然後找出**SQL Server Management Studio**。 
+2. SSMS 開啟之後, 請選取 [**工具**] 功能表, 然後選取 [**資料庫微調**建議程式]。 
 
-  ![啟動 SSMS 從 DTA](media/dta-tutorials/launch-dta.png)
+  ![從 SSMS 啟動 DTA](media/dta-tutorials/launch-dta.png)
 
-3. Database Tuning Advisor 會自行啟動，並開啟**連接到伺服器** 對話方塊。 確認預設設定，然後按**Connect**連接到您的 SQL Server。  
+3. 資料庫調整建議程式隨即啟動, 並開啟 [**連接到伺服器**] 對話方塊。 確認預設設定, 然後選取 **[** 連線] 以連線到您的 SQL Server。  
   
 依預設，Database Engine Tuning Advisor 會開啟下列說明中的組態：  
   
 ![Database Engine Tuning Advisor 預設視窗](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> **工作階段監視器**索引標籤會顯示工作階段名稱，這是目前的資料與已連線的使用者名稱。 
+> [**會話監視器**] 索引標籤會顯示會話名稱, 這是已連線使用者和目前資料的名稱。 
   
 在第一次開啟 Database Engine Tuning Advisor 時，它的 GUI 會出現兩個主要窗格。  
   
@@ -65,7 +64,7 @@ Database Engine Tuning Advisor 提供一種以圖形化使用者介面 (GUI) 為
 > [!NOTE]
 > 當從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器匯入 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指令碼時，Database Engine Tuning Advisor 可以採用 XML 檔來作為輸入。 如需詳細資訊，請參閱 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動及使用 Database Engine Tuning Advisor [中有關從](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)查詢編輯器＜啟動 Database Engine Tuning Advisor＞一節。  
   
-## <a name="configure-tool-options-and-layout"></a>設定工具選項和配置 
+## <a name="configure-tool-options-and-layout"></a>設定工具選項和版面配置 
 
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
 

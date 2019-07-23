@@ -9,13 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-manager: craigg
-ms.openlocfilehash: 809a78130c5bc015114138e678c55522fa556f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 406fb50ceaba177d02bf8d79d0c37191dbe178f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64478943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986261"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 

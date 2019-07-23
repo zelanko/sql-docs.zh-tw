@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069013"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>逐步解說：擴充資料庫專案組建，以產生模型統計資料
 您可以建立組建參與者，以便在建置資料庫時執行自訂動作。 在這個逐步解說，會建立名為 ModelStatistics 的組建參與者，以便在建置資料庫專案時從 SQL 資料庫模型輸出統計資料。 因為在建置時這個組建參與者採用參數，所以需要某些其他步驟。  

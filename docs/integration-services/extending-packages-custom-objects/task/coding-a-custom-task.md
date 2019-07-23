@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 57ab14256d3c1e7c909b125e470fca06ef3e7808
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a520c9d35087574a98a9366bcbb463338fc517f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062878"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
 

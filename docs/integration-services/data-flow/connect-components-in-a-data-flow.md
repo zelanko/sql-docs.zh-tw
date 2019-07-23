@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d353876938b3e64317f461240b2333e71217449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d075cb578046862c4598efd9da3c060891ae7a7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045296"
 ---
 # <a name="connect-components-in-a-data-flow"></a>連接資料流程中的元件
 

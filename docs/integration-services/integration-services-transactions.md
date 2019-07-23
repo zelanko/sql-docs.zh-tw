@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9ed63abe0ea2c96461409e964b232abce6e1b103
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4819bc46da8f42a6f5fb30ef24f91acbefa8bea2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057401"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
 

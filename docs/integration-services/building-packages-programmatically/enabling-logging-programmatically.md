@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 63fe305bb47c43d9302b90256fc21ac41491984a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62a39e7ea876a405459a23d91e140b2d087d771a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070660"
 ---
 # <a name="enabling-logging-programmatically"></a>以程式設計的方式啟用記錄
 

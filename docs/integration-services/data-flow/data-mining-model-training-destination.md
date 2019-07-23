@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 195b33c9cac8e9009f2db39d12544e48387da5c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a148af7be04bba6bdf5c16ca7e85e94f1a0de31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049437"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
 

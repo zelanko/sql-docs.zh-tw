@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c9634bb19ffa2194e225370f05f00f040a276dc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 327a22c8e661b35c00d6086d09f2f2a3a83ab8b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976336"
 ---
 # <a name="position-method-sqlservernclob"></a>position 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,8 +26,8 @@ ms.locfileid: "66801323"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[position 方法 &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|擷取的字元位置指定**NClob**物件*searchstr*會出現在此**NClob**物件。|  
-|[position 方法&#40;java.lang.String，long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|擷取的字元位置指定的子字串*searchstr*會出現在**NCLOB**所表示的值**NClob**物件。|  
+|[position 方法 &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|抓取指定的**NClob**物件*searchstr*出現在這個**NClob**物件中的字元位置。|  
+|[position 方法&#40;: SQLServerNClob, long&#41; &#40;&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|抓取指定的子字串*searchstr*出現在這個**NCLOB**物件所代表之**NCLOB**值中的字元位置。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583662"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307589"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>設定具有安全記憶體保護區的 Always Encrypted
 
@@ -151,7 +150,7 @@ Windows 主機守護者服務 (HGS) 必須安裝於不同的 HGS 電腦，而非
 
 下列限制目前適用於佈建已啟用記憶體保護區的金鑰：
 
-- 已啟用記憶體保護區的資料行主要金鑰必須儲存在 [Windows 憑證存放區](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/)或 [Azure Key Vault](/azure/key-vault/key-vault-whatis/) 中。 目前不支援將已啟用記憶體保護區的資料行主要金鑰儲存在其他類型的金鑰存放區之中，例如硬體安全性模組或自訂金鑰存放區。
+- 已啟用記憶體保護區的資料行主要金鑰必須儲存在 [Windows 憑證存放區](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores)或 [Azure Key Vault](/azure/key-vault/key-vault-whatis/) 中。 目前不支援將已啟用記憶體保護區的資料行主要金鑰儲存在其他類型的金鑰存放區之中，例如硬體安全性模組或自訂金鑰存放區。
 
 ### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 佈建已啟用記憶體保護區的金鑰
 
@@ -810,7 +809,7 @@ GO;
 - 建立或重建索引。
 - 插入、更新或刪除資料表中的資料列 (包含已編製索引/已加密的資料行)，這些行為會觸發針對索引將索引鍵插入或/和移除的動作。
 - 執行涉及檢查索引完整性的 DBCC 命令，例如 [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 或 [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。
-- 資料庫復原 (例如在 SQL Server 失敗並重新啟動後)，若 SQL Server 需要復原對索引進行的任何變更的話 (請參閱下方的詳細資料)。
+- 資料庫復原 (例如在 SQL Server 失敗並重新啟動後)，若 SQL Server 需要復原對索引進行的任何變更 (請參閱下方的詳細資料)。
 
 所有上述的作業都需要記憶體保護區具備適用於已編制索引之資料行的資料行加密金鑰，才能解密索引鍵。 一般而言，記憶體保護區可以透過兩種方式來取得資料行加密金鑰：
 - 直接從用戶端應用程式取得。

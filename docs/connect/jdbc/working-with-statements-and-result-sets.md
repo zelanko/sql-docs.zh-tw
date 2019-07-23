@@ -1,5 +1,5 @@
 ---
-title: 使用陳述式及結果集 |Microsoft Docs
+title: 使用語句和結果集 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 16def64ceaf9f6387dacc0486bd125f6999df6e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003794"
 ---
 # <a name="working-with-statements-and-result-sets"></a>使用陳述式及結果集
 
@@ -28,9 +27,9 @@ ms.locfileid: "66780801"
 
 當您使用其中一個 JDBC 驅動程式陳述式物件 (例如 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件) 時，請確定正在對工作使用適當的物件。
 
-- 如果您還沒有 OUT 參數，則您不需要使用 SQLServerCallableStatement 物件。 相反地，使用 SQLServerStatement 或 SQLServerPreparedStatement 物件。
+- 如果您沒有 OUT 參數, 就不需要使用 SQLServerCallableStatement 物件。 請改為使用 SQLServerStatement 或 SQLServerPreparedStatement 物件。
 
-- 如果您不想要多次執行陳述式，或者沒有 IN 或 OUT 參數，則您不需要使用 SQLServerCallableStatement 或 SQLServerPreparedStatement 物件。 相反地，使用 SQLServerStatement 物件。
+- 如果您不想要多次執行語句, 或者沒有 IN 或 OUT 參數, 就不需要使用 SQLServerCallableStatement 或 SQLServerPreparedStatement 物件。 相反地, 請使用 SQLServerStatement 物件。
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>對 ResultSet 物件使用適當的並行
 
@@ -38,7 +37,7 @@ ms.locfileid: "66780801"
 
 ## <a name="limit-the-size-of-your-result-sets"></a>限制結果集的大小
 
-請考慮使用 [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 方法 (或 SET ROWCOUNT 或 SELECT TOP N SQL 語法)，限制可能的大型結果集傳回的資料列數目。 如果您必須處理大型結果集，請考慮設定連接字串屬性 responseBuffering=adaptive (預設模式)，藉此使用適應性回應緩衝。 這種方法會允許應用程式處理大型結果集，而不需要伺服器端資料指標，而且會將應用程式的記憶體使用量降到最低。 如需詳細資訊，請參閱 <<c0> [ 使用適應性緩衝](../../connect/jdbc/using-adaptive-buffering.md)。
+請考慮使用 [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 方法 (或 SET ROWCOUNT 或 SELECT TOP N SQL 語法)，限制可能的大型結果集傳回的資料列數目。 如果您必須處理大型結果集，請考慮設定連接字串屬性 responseBuffering=adaptive (預設模式)，藉此使用適應性回應緩衝。 這種方法會允許應用程式處理大型結果集，而不需要伺服器端資料指標，而且會將應用程式的記憶體使用量降到最低。 如需詳細資訊, 請參閱[使用適應性緩衝](../../connect/jdbc/using-adaptive-buffering.md)。
 
 ## <a name="use-the-appropriate-fetch-size"></a>使用適當的提取大小
 

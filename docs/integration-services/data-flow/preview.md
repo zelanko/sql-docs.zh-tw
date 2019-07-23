@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 70dcdbce74a138a9228928df86adc2405dee98e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f86c92c295c3885205d1ae1c447754635e5a6741
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034387"
 ---
 # <a name="preview"></a>預覽 
 

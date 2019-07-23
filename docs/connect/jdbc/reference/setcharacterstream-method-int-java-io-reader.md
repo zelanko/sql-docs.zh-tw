@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b8d4e1f7-14fc-4590-af98-1eda30d2ca6d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 80a0e6116e31080871e12470625d172098afb76f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d97ed3360db0d1a81f71225e4664c6624cb9da37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974706"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>setCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,8 +45,8 @@ public final void setCharacterStream(int parameterIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 setCharacterStream 方法 setCharacterStream 方法 java.sql.PreparedStatement 介面中所指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 setCharacterStream 方法是由 JAVA.sql.preparedstatement 介面中的 setCharacterStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [setCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d934cafef262f5c07b5eeac95d65abd776d8bb35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9ccc245c540cfa6e87ee13f6cbb09f10c7734b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045445"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 目的地
 

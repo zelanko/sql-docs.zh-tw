@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035167"
 ---
 # <a name="how-to-fix-errors"></a>如何：修正錯誤
 [錯誤清單] 窗格會顯示任何的部署或建置錯誤。 編輯資料庫實體及其定義時，Transact\-SQL 編輯器或資料表設計工具中的編輯所造成的語法或語意錯誤也會顯示在這個清單中。 當您跨不同索引標籤編輯指令碼時，[錯誤清單] 會以動態方式更新。 然後，您可以追蹤識別的錯誤以進行進一步疑難排解。  

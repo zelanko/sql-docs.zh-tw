@@ -1,5 +1,5 @@
 ---
-title: 擷取結果集資料範例 |Microsoft Docs
+title: 正在抓取結果集資料範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3a841477eef5fc4f58a94ba3f581324358afea90
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7f3c502ad189bb63d8f10f215b296f97d48457f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957100"
 ---
 # <a name="retrieving-result-set-data-sample"></a>擷取結果集資料範例
 

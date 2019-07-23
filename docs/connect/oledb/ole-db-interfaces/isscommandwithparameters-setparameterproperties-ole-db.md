@@ -1,5 +1,5 @@
 ---
-title: 'Isscommandwithparameters:: Setparameterproperties (OLE DB) |Microsoft Docs'
+title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) |Microsoft Docs'
 description: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - SetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1dd2184a859f3bb6c0b961ac8596cdbea48d2d25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015378"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>傳回碼值  
  **ISSCommandWithParameters::SetParameterProperties** 方法所傳回的錯誤碼與核心 OLE DB **ICommandProperties::SetProperties** 方法相同。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  您可以依序數按照每個參數使用這個方法來設定參數屬性，或在從屬性陣列建立 SSPARAMPROPS 之後，使用單一的 **ISSCommandWithParameters::SetParameterProperties** 呼叫來設定參數屬性。  
   
  在呼叫 **ISSCommandWithParameters::SetParameterProperties** 方法之前，必須先呼叫 **SetParameterInfo** 方法。 呼叫 `SetParameterProperties(0, NULL)` 會清除所有指定的參數屬性，呼叫 `SetParameterInfo(0,NULL,NULL)` 則會清除所有的參數資訊，包括任何可能與參數相關聯的屬性。  
@@ -74,9 +73,9 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- 在開始 database engine 的改進[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]允許 isscommandwithparameters:: Setparameterproperties 以取得更精確的預期結果的描述。 這些更精確的結果可能不同於在舊版的 isscommandwithparameters:: Setparameterproperties 傳回的值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 中繼資料探索](../../oledb/features/metadata-discovery.md)。  
+ 資料庫引擎的改良功能從[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]允許 ISSCommandWithParameters:: SetParameterProperties 開始, 以取得更精確的預期結果描述。 這些更精確的結果可能與舊版的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ISSCommandWithParameters:: SetParameterProperties 所傳回的值不同。 如需詳細資訊, 請參閱[中繼資料探索](../../oledb/features/metadata-discovery.md)。  
   
-|成員|描述|  
+|成員|Description|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
 |*cPropertySets*|*rgPropertySets* 中的 DBPROPSET 結構數目。|  

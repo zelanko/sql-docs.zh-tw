@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 055abcc3e4b6f76b1bb6105f81dfe406d1349c57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8daf9891191b79a2b5c37a37671fa8e38813cdeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021874"
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
 
@@ -32,7 +31,7 @@ ms.locfileid: "62669115"
   
 -   動態管理檢視、目錄檢視和系統資料表。 這些可讓您使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式取得工作階段資料和中繼資料。 系統資料表可幫助您判定 SQL 追蹤事件類別與資料行的現有「擴充事件」對等項目。  
   
--   [物件總管] 的 [擴充事件] 節點。 這可讓您啟動、停止或刪除工作階段，或是匯入及匯出工作階段範本。  
+-   [物件總管] 的 [擴充事件]  節點。 這可讓您啟動、停止或刪除工作階段，或是匯入及匯出工作階段範本。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者。 這是一項功能強大的工具，可讓您用來建立、更改和管理「擴充事件」工作階段。 如需詳細資訊，請參閱 [針對擴充事件使用 PowerShell 提供者](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)。  
   

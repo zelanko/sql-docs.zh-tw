@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 030a3d080f7f02669201160bf1546f25bcd59b45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068732"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a3099541a4eb83e321c0a73422c98b303c375e6
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 5456a9c8febe97f7dbfc09ebba52be469b30c3e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136063"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用篩選函數選取要移轉的資料列 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -199,7 +198,7 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="addafterwiz"></a>在執行精靈後新增篩選函數  
   
-如果您想要使用無法在 [啟用資料庫的延展功能精靈] 中建立的函數，您可以在結束精靈後，執行 **ALTER TABLE** 陳述式來指定函數。 不過，您必須先停止已經在進行中的資料移轉並回復已移轉的資料，才能套用函數。 (如需為什麼必須這麼做的詳細資訊，請參閱 [取代現有的篩選函數](#replacePredicate)。)
+如果您想要使用無法在 [啟用資料庫的延展功能精靈]  中建立的函數，您可以在結束精靈後，執行 **ALTER TABLE** 陳述式來指定函數。 不過，您必須先停止已經在進行中的資料移轉並回復已移轉的資料，才能套用函數。 (如需為什麼必須這麼做的詳細資訊，請參閱 [取代現有的篩選函數](#replacePredicate)。)
   
 1. 反轉移轉方向並回復已經移轉的資料。 這項作業開始之後，即無法將其取消。 您也會因輸出資料傳輸 (輸出) 而在 Azure 上產生費用。 如需詳細資訊，請參閱 [Azure 定價機制](https://azure.microsoft.com/pricing/details/data-transfers/)。  
   
@@ -208,7 +207,7 @@ ALTER TABLE SensorTelemetry
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. 等待移轉完成。 您可以在 SQL Server Management Studio 的 [延展資料庫監視器] 中或查詢 **sys.dm_db_rda_migration_status** 檢視，來查看狀態。 如需詳細資訊，請參閱[資料移轉的監視及疑難排解](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)或 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
+2. 等待移轉完成。 您可以在 SQL Server Management Studio 的 [延展資料庫監視器]  中或查詢 **sys.dm_db_rda_migration_status** 檢視，來查看狀態。 如需詳細資訊，請參閱[資料移轉的監視及疑難排解](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)或 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
   
 3. 建立您想要套用至資料表的篩選函數。  
   

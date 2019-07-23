@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 889067a9b4691e2b6d7ad03ab3ee3b7a503d425b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8f73c30ca589037ed17c52a00021599fbf3ca34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996586"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服務 - 連接至另一台電腦
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,46 +32,46 @@ ms.locfileid: "66775768"
   
 #### <a name="to-connect-to-another-computer-with-windows-computer-management"></a>若要以 Windows 電腦管理連接到另一部電腦  
   
-1.  在 [開始] 功能表中，以滑鼠右鍵按一下 [我的電腦]，然後按一下 [管理]。  
+1.  在 [開始]  功能表中，以滑鼠右鍵按一下 [我的電腦]  ，然後按一下 [管理]  。  
   
-2.  在 [電腦管理] 中，以滑鼠右鍵按一下 [電腦管理 (本機)]，然後按一下 [連線到另一台電腦]。  
+2.  在 [電腦管理]  中，以滑鼠右鍵按一下 [電腦管理 (本機)]  ，然後按一下 [連線到另一台電腦]  。  
   
-3.  在 [選取電腦] 對話方塊的 [另一台電腦] 文字方塊中，輸入要管理的電腦名稱，然後按一下 [確定]。  
+3.  在 [選取電腦]  對話方塊的 [另一台電腦]  文字方塊中，輸入要管理的電腦名稱，然後按一下 [確定]  。  
   
-     [電腦管理] 會顯示出遠端電腦上執行的服務。 最上層節點會變更為 [電腦管理 \<遠端電腦>]。  
+     [電腦管理] 會顯示出遠端電腦上執行的服務。 最上層節點會變更為 [電腦管理 \<遠端電腦>]   。  
   
-4.  在主控台樹狀目錄中，展開 [服務與應用程式]，然後展開 [SQL Server 組態管理員]，來管理遠端電腦的服務。  
+4.  在主控台樹狀目錄中，展開 [服務與應用程式]  ，然後展開 [SQL Server 組態管理員]  ，來管理遠端電腦的服務。  
   
 #### <a name="to-save-a-link-to-sql-server-configuration-manager-for-another-computer"></a>若要儲存另一台電腦的 SQL Server 組態管理員連結  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-2.  在 [開啟] 方塊中，輸入 **mmc -a**，以作者模式開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console。  
+2.  在 [開啟]  方塊中，輸入 **mmc -a**，以作者模式開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console。  
   
-3.  在 [檔案] 功能表上，按一下 [新增/移除嵌入式管理單元]。  
+3.  在 [檔案]  功能表上，按一下 [新增/移除嵌入式管理單元]  。  
   
-4.  在 [新增/移除嵌入式管理單元] 視窗中，按一下 [新增]。  
+4.  在 [新增/移除嵌入式管理單元]  視窗中，按一下 [新增]  。  
   
-5.  在 [新增獨立嵌入式管理單元] 視窗中，依序按一下 [電腦管理] 和 [新增]。  
+5.  在 [新增獨立嵌入式管理單元]  視窗中，依序按一下 [電腦管理]  和 [新增]  。  
   
-6.  在 [電腦管理] 視窗中，按一下 [另一台電腦]，並輸入想要管理之遠端電腦的名稱，然後按一下 [完成]。  
+6.  在 [電腦管理]  視窗中，按一下 [另一台電腦]  ，並輸入想要管理之遠端電腦的名稱，然後按一下 [完成]  。  
   
-7.  在 [新增獨立嵌入式管理單元] 視窗中，按一下 [關閉]。  
+7.  在 [新增獨立嵌入式管理單元]  視窗中，按一下 [關閉]  。  
   
-8.  在 [新增/移除嵌入式管理單元] 視窗中，按一下 [確定]。  
+8.  在 [新增/移除嵌入式管理單元]  視窗中，按一下 [確定]  。  
   
-9. 依序展開 [電腦管理 (\<電腦名稱>)] 和 [服務與應用程式]。  
+9. 依序展開 [電腦管理 (\<電腦名稱>)]    和 [服務與應用程式]  。  
   
-10. 以滑鼠右鍵按一下 [SQL Server 組態管理員]，然後按一下 [從這裡新增視窗]。  
+10. 以滑鼠右鍵按一下 [SQL Server 組態管理員]  ，然後按一下 [從這裡新增視窗]  。  
   
-11. 在 [視窗] 功能表上，按一下 [主控台根目錄]，以切換回第一個視窗，並刪除該視窗。  
+11. 在 [視窗]  功能表上，按一下 [主控台根目錄]  ，以切換回第一個視窗，並刪除該視窗。  
   
-12. 在 [檔案] 功能表上，按一下 [另存新檔]，並將檔案以副檔名為 **.msc** 的適當名稱儲存在所要的資料夾中。 請關閉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console。  
+12. 在 [檔案]  功能表上，按一下 [另存新檔]  ，並將檔案以副檔名為 **.msc** 的適當名稱儲存在所要的資料夾中。 請關閉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console。  
   
-13. 若要在目標電腦上開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，請按兩下該檔案。 如果想要，也請將檔案的連結儲存在桌面或 [開始] 功能表中。  
+13. 若要在目標電腦上開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，請按兩下該檔案。 如果想要，也請將檔案的連結儲存在桌面或 [開始]  功能表中。  
   
 > [!CAUTION]  
->  在遠端電腦上使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員時，電腦名稱並不明顯，且可能會錯誤地停止或設定錯誤的電腦。 在 [服務] 索引標籤上，核取 [主機名稱] 方塊，以便在修改服務之前確認電腦名稱。  
+>  在遠端電腦上使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員時，電腦名稱並不明顯，且可能會錯誤地停止或設定錯誤的電腦。 在 [服務]  索引標籤上，核取 [主機名稱]  方塊，以便在修改服務之前確認電腦名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 WMI 在 SQL Server 工具中顯示伺服器狀態](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  

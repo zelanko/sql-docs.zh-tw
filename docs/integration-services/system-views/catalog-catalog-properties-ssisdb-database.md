@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 455bea0ce159382e30dfae98d8d43041c0d16879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a44e10601821638acde5997cce8e0b3fbf664076
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038465"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB 資料庫)
 

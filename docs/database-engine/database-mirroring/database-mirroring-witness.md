@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 996def514bc87bde79f85bffbb04056bf487764f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043877"
 ---
 # <a name="database-mirroring-witness"></a>資料庫鏡像見證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  若要支援自動容錯移轉，就必須在高安全性模式下設定資料庫鏡像工作階段，而且它也會包含第三個伺服器執行個體，稱為「見證」。 見證是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選擇性執行個體，可以讓在高安全性模式工作階段中的鏡像伺服器辨別是否啟動自動容錯移轉。 與兩位夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
+  若要支援自動容錯移轉，就必須在高安全性模式下設定資料庫鏡像工作階段，而且它也會包含第三個伺服器執行個體，稱為「見證」  。 見證是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選擇性執行個體，可以讓在高安全性模式工作階段中的鏡像伺服器辨別是否啟動自動容錯移轉。 與兩位夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
   
 > [!NOTE]  
 >  在高效能模式中，見證可能會對可用性有負面影響。 如果見證是設定供資料庫鏡像工作階段使用，則主體伺服器必須至少連接到一個其他伺服器執行個體、鏡像伺服器或見證，或者兩者都連接。 否則，資料庫會變得無法使用，而又不可能強制服務 (可能會有資料遺失)。 因此，對於高效能模式，強烈建議您永遠將見證設定為 OFF。 如需見證對高效能模式影響的相關資訊，請參閱 [資料庫鏡像作業模式](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
@@ -64,7 +63,7 @@ ms.locfileid: "66795457"
   
 -   如果鏡像伺服器與見證中斷連接，而且也與主體伺服器中斷連接，則不管主體伺服器的狀態如何，都不可能進行自動容錯移轉。  
   
- 至少連接兩個伺服器執行個體的需求，即所謂的 *「仲裁」*。 仲裁確保資料庫一次只能由一個夥伴提供服務。 如需仲裁運作方式及其對工作階段影響的資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 至少連接兩個伺服器執行個體的需求，即所謂的 *「仲裁」* 。 仲裁確保資料庫一次只能由一個夥伴提供服務。 如需仲裁運作方式及其對工作階段影響的資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ##  <a name="AddRemoveWitness"></a> 加入或移除見證  
  **加入見證**  

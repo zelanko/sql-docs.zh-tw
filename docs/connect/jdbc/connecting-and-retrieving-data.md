@@ -1,5 +1,5 @@
 ---
-title: 連接及擷取資料 |Microsoft Docs
+title: 連接和抓取資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f76b740c9ba64439719a12d016cadaa7db2a7cc3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c7e642879c095dd4d9dca4f51a936ab72c523e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956882"
 ---
 # <a name="connecting-and-retrieving-data"></a>連接及擷取資料
 
@@ -25,7 +24,7 @@ ms.locfileid: "66778244"
 當使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 時，有兩種主要方法，可用於建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的連線。 第一種方法就是在連線 URL 中設定連線屬性，然後呼叫 DriverManager 類別的 getConnection 方法，以傳回 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 物件。  
   
 > [!NOTE]  
-> 如需 JDBC 驅動程式支援的連接屬性的清單，請參閱 <<c0> [ 設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
+> 如需 JDBC 驅動程式所支援的連接屬性清單, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 第二種方法牽涉到設定連線屬性，方法是使用[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別的 setter 方法，然後呼叫 [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) 方法，以傳回 SQLServerConnection 物件。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5fd3788cb31e7e3e6408cc7161f45ba008cf081c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bc4025f51722b64d88bd0841ca616b3e2287bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076387"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
 

@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: b5e4ba32dd96186a05df55ac57cadb31fa522ebe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62510327"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264693"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的接聽程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -276,7 +276,7 @@ ms.locfileid: "62510327"
 ```  
 Import-Module FailoverClusters  
 Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0   
-Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300  
+Get-ClusterResource yourListenerName | Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourListenerName  
 ```  

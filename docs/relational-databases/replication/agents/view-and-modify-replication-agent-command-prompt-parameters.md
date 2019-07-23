@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1137138911519b2e6497525acb39b7de87a4fd63
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 38d86590da144386077b170433c52dcd1cc18d7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085914"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>檢視並修改複寫代理程式命令提示字元參數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  複寫代理程式為可接受命令行參數的可執行檔。 根據預設，代理程式會在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式作業步驟下執行，因此這些參數便可透過 [作業屬性 - \<作業>] 對話方塊進行檢視並修改。 **的** [作業] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 資料夾及複寫監視器的 **[代理程式]** 索引標籤會提供此對話方塊。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+  複寫代理程式為可接受命令行參數的可執行檔。 根據預設，代理程式會在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式作業步驟下執行，因此這些參數便可透過 [作業屬性 - \<作業>]  對話方塊進行檢視並修改。 **的** [作業] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 資料夾及複寫監視器的 **[代理程式]** 索引標籤會提供此對話方塊。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
 > [!NOTE]  
 >  代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。  
@@ -57,9 +56,9 @@ ms.locfileid: "54254893"
   
 2.  展開 **[SQL Server Agent]** 資料夾，然後展開 **[作業]** 資料夾。  
   
-3.  以滑鼠右鍵按一下作業，然後按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下作業，然後按一下 **[屬性]** 。  
   
-4.  在 [作業屬性 - \<作業>] 對話方塊的 [步驟] 頁面上，選取步驟 [執行代理程式]，然後按一下 [編輯]。  
+4.  在 [作業屬性 - \<作業>]  對話方塊的 [步驟]  頁面上，選取步驟 [執行代理程式]  ，然後按一下 [編輯]  。  
   
 5.  在 **[作業步驟屬性 - 執行代理程式]** 對話方塊中，編輯 **[命令]** 欄位。  
   
@@ -71,11 +70,11 @@ ms.locfileid: "54254893"
   
 2.  按一下 **[所有訂閱]** 索引標籤。  
   
-3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
+3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]** 。  
   
-4.  在 [訂閱 <訂閱名稱>] 視窗中，按一下 [動作]，然後按一下 [\<代理程式名稱> 作業屬性]。  
+4.  在 [訂閱 <訂閱名稱>]  視窗中，按一下 [動作]  ，然後按一下 [\<代理程式名稱> 作業屬性]  。  
   
-5.  在 [作業屬性 - \<作業>] 對話方塊的 [步驟] 頁面上，選取步驟 [執行代理程式]，然後按一下 [編輯]。  
+5.  在 [作業屬性 - \<作業>]  對話方塊的 [步驟]  頁面上，選取步驟 [執行代理程式]  ，然後按一下 [編輯]  。  
   
 6.  在 **[作業步驟屬性 - 執行代理程式]** 對話方塊中，編輯 **[命令]** 欄位。  
   
@@ -87,9 +86,9 @@ ms.locfileid: "54254893"
   
 2.  按一下 **[代理程式]** 索引標籤。  
   
-3.  以滑鼠右鍵按一下方格內的代理程式，然後按一下 **[屬性]**。  
+3.  以滑鼠右鍵按一下方格內的代理程式，然後按一下 **[屬性]** 。  
   
-4.  在 [作業屬性 - \<作業>] 對話方塊的 [步驟] 頁面上，選取步驟 [執行代理程式]，然後按一下 [編輯]。  
+4.  在 [作業屬性 - \<作業>]  對話方塊的 [步驟]  頁面上，選取步驟 [執行代理程式]  ，然後按一下 [編輯]  。  
   
 5.  在 **[作業步驟屬性 - 執行代理程式]** 對話方塊中，編輯 **[命令]** 欄位。  
   

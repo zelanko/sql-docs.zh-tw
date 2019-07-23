@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 25eee029d202f18af8d5bc9282b9b15d6015afb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 997c797116e1424f8747d493de2af5b4fd57082e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916148"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驅動程式
 

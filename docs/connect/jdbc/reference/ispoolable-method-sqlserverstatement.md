@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b8a12ac5-57cb-4288-9973-c7d5cebd197c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a5fcc6d842299884bec758ca66f303bf3e8ed625
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 225584f3c60f0494af987581574d8f4205e04e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977512"
 ---
 # <a name="ispoolable-method-sqlserverstatement"></a>isPoolable 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

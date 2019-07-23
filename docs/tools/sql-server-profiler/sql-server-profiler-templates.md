@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3560f0f70b6fe7b74f4072ce9c719c9241f703
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9d73ecd7342f870e9645c86e714bd0420200b61c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059683"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

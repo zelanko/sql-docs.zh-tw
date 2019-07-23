@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8cdded8444f4778ec7ad46c8b677e6ebb496847b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065823"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 資料庫鏡像
 
@@ -88,11 +87,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
 **'** _partner_server_ **'** 指定要在新資料庫鏡像工作階段中，作為容錯移轉夥伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體伺服器網路位址。 每個工作階段都需要兩個夥伴：一個啟動做為主體伺服器，一個啟動做為鏡像伺服器。 我們建議您將這些夥伴放在不同電腦中。
 
-在每個夥伴上，每個工作階段都指定一次這個選項。 起始資料庫鏡像工作階段需要兩個 ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'** 陳述式。 它們的順序很重要。 首先是連線到鏡像伺服器，將主體伺服器執行個體指定為 *partner_server* (SET PARTNER **='**_principal_server_**'**)。 其次是連線到主體伺服器，將鏡像伺服器執行個體指定為 *partner_server* (SET PARTNER **='**_mirror_server_**'**)；這會在這兩個夥伴之間，啟動一個資料庫鏡像工作階段。 如需詳細資訊，請參閱[設定資料庫鏡像](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。
+在每個夥伴上，每個工作階段都指定一次這個選項。 起始資料庫鏡像工作階段需要兩個 ALTER DATABASE *database* SET PARTNER **='** _partner_server_ **'** 陳述式。 它們的順序很重要。 首先是連線到鏡像伺服器，將主體伺服器執行個體指定為 *partner_server* (SET PARTNER **='** _principal_server_ **'** )。 其次是連線到主體伺服器，將鏡像伺服器執行個體指定為 *partner_server* (SET PARTNER **='** _mirror_server_ **'** )；這會在這兩個夥伴之間，啟動一個資料庫鏡像工作階段。 如需詳細資訊，請參閱[設定資料庫鏡像](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。
 
 *partner_server* 的值是一個伺服器網路位址。 這個值的語法如下：
 
-TCP **://**_\<系統位址>_**:**_\<通訊埠>_
+TCP **://** _\<系統位址>_ **:** _\<通訊埠>_
 
 其中
 
@@ -101,7 +100,7 @@ TCP **://**_\<系統位址>_**:**_\<通訊埠>_
 
 如需詳細資訊，請參閱[指定伺服器網路位址 - 資料庫鏡像](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。
 
-下列範例說明 SET PARTNER **='**_partner_server_**'** 子句：
+下列範例說明 SET PARTNER **='** _partner_server_ **'** 子句：
 
 ```
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'
@@ -132,7 +131,7 @@ RESUME 繼續暫止的資料庫鏡像工作階段。 您只能在主體伺服器
 
 SAFETY { FULL | OFF } 設定交易安全層級。 您只能在主體伺服器上指定 SAFETY。
 
-預設值是 FULL。 使用完整安全性時，資料庫鏡像工作階段會同步執行 (在「高安全性模式」 中)。 如果 SAFETY 設定為 OFF，則資料庫鏡像工作階段會非同步執行 (在「高效能模式」中)。
+預設值是 FULL。 使用完整安全性時，資料庫鏡像工作階段會同步執行 (在「高安全性模式」  中)。 如果 SAFETY 設定為 OFF，則資料庫鏡像工作階段會非同步執行 (在「高效能模式」  中)。
 
 高安全性模式行為會依見證而有部分的不同，如下所述：
 
@@ -182,7 +181,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
  **'** _witness_server_ **'** 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體作為資料庫鏡像工作階段的見證伺服器。 您只能在主體伺服器上指定 SET WITNESS。
 
-在 **='**_witness_server_**'** 陳述式中，*witness_server* 的語法與 *partner_server* 的語法相同。
+在 **='** _witness_server_ **'** 陳述式中，*witness_server* 的語法與 *partner_server* 的語法相同。
 
 OFF 從資料庫鏡像工作階段中移除見證。 將見證設成 OFF 會停用自動容錯移轉。 如果資料庫設為 FULL SAFETY，且見證設為 OFF，鏡像伺服器失敗，會使主體伺服器將資料庫設為無法使用。
 

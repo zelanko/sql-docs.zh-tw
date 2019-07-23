@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 099ffb2203397bd02b91af68651ccb42a23e2b5b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 64f39be7193fdbfc72b009f58b4fe0047eceef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989035"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>OLE DB Driver for SQL Server 的 LocalDB 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66802973"
   
  總而言之，LocalDB 可讓您：  
   
--   使用**sqllocaldb.exe 我**探索的預設執行個體的名稱。  
+-   使用**sqllocaldb**探索預設實例的名稱。  
   
 -   使用 **AttachDBFilename** 連接字串關鍵字來指定伺服器應該附加的資料庫檔案。 使用 **AttachDBFilename** 時，如果您沒有使用 **Database** 連接字串關鍵字來指定資料庫的名稱，系統就會在應用程式關閉時從 LocalDB 執行個體中移除資料庫。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66802973"
 SERVER=(localdb)\v11.0  
 ```  
   
- 必要時，您可以使用 sqllocaldb.exe 來建立 LocalDB 執行個體。 您也可以使用 sqlcmd.exe，在 LocalDB 執行個體中加入和修改資料庫。 例如， **sqlcmd-S (localdb) \v11.0**。  
+ 必要時，您可以使用 sqllocaldb.exe 來建立 LocalDB 執行個體。 您也可以使用 sqlcmd.exe，在 LocalDB 執行個體中加入和修改資料庫。 例如, **sqlcmd-S (localdb) \v11.0**。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 功能](../../oledb/features/oledb-driver-for-sql-server-features.md)  

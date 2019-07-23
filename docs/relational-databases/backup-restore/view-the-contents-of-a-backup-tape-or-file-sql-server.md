@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6c53a0e09682d6ccdc6026d626b483c069e47b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 319a67af0c717c3534efad3e34186e3087134d58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041267"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>檢視備份磁帶或檔案的內容 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47724655"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目檢視備份磁帶或檔案的內容：**  
   
@@ -59,15 +58,15 @@ ms.locfileid: "47724655"
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下要備份的資料庫，指向 [工作]，然後按一下 [備份]。 會出現 **[備份資料庫]** 對話方塊。  
+3.  以滑鼠右鍵按一下要備份的資料庫，指向 [工作]  ，然後按一下 [備份]  。 會出現 **[備份資料庫]** 對話方塊。  
   
-4.  在 **[一般]** 頁面的 **[目的地]** 區段中，按一下 **[磁碟]** 或 **[磁帶]**。 在 **[備份至]** 清單方塊中，找出您要的磁碟檔案或磁帶。  
+4.  在 **[一般]** 頁面的 **[目的地]** 區段中，按一下 **[磁碟]** 或 **[磁帶]** 。 在 **[備份至]** 清單方塊中，找出您要的磁碟檔案或磁帶。  
   
-     如果清單方塊中未顯示磁碟檔案或磁帶，按一下 [新增]。 選取檔案名稱或磁帶機。 按一下 [確定]，將其加入 [備份至] 清單方塊。  
+     如果清單方塊中未顯示磁碟檔案或磁帶，按一下 [新增]  。 選取檔案名稱或磁帶機。 按一下 [確定]  ，將其加入 [備份至]  清單方塊。  
   
-5.  在 [備份至] 清單方塊中，選取您要檢視的磁碟或磁帶機路徑，然後按一下 [內容]。 這會開啟 **[裝置內容]** 對話方塊。  
+5.  在 [備份至]  清單方塊中，選取您要檢視的磁碟或磁帶機路徑，然後按一下 [內容]  。 這會開啟 **[裝置內容]** 對話方塊。  
   
 6.  右窗格會針對所選取的磁帶或檔案，顯示其媒體集與備份組的詳細資訊。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "47724655"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
 3.  使用 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 陳述式。 此範例會傳回 `AdventureWorks2012-FullBackup.bak`檔案的相關資訊。  
   

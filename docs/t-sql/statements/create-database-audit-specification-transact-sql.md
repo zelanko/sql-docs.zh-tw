@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f691bd99036ea6b27f9f20cd53e8d6bc72312224
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e1340fd34fe452babf96a3bcd7fcd205a0aa85b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060988"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  資料庫稽核規格是位於給定資料庫內的非安全性實體物件。 當建立資料庫稽核規格之後，它就會處於停用狀態。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  具有 `ALTER ANY DATABASE AUDIT` 權限的使用者可以建立資料庫稽核規格，並將其繫結至任何稽核。  
   
  建立資料庫稽核規格之後，具有 `CONTROL SERVER`、`ALTER ANY DATABASE AUDIT` 權限的主體或 `sysadmin` 帳戶就可以檢視此規格。  
@@ -120,7 +119,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. 針對特定的資料庫角色，稽核 _sales_ 結構描述中「所有」物件的任何 DML (INSERT、UPDATE 或 DELETE)  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. 針對特定的資料庫角色，稽核 _sales_ 結構描述中「所有」  物件的任何 DML (INSERT、UPDATE 或 DELETE)  
  下列範例會針對 `AdventureWorks2012` 資料庫中的 `Sales` 資料表，建立稱為 `DataModification_Security_Audit` 的伺服器稽核，然後建立由具新資料庫角色 `SalesUK` 使用者稽核 `INSERT`、`UPDATE` 和 `DELETE` 陳述式的資料庫稽核規格，其稱為 `Audit_Data_Modification_On_All_Sales_Tables`。  
   
 ```  

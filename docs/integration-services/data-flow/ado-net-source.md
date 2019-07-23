@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1906329a1add4d7484011816a210ef85fa2ec5a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 262d28de4c765a6bc6edaf89db52e57a79ff0c85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901828"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
 

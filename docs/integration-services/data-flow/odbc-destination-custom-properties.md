@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c1775b42624d755da4642d0c17c277c3b254eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5413191366792a64bb3988eb9feb25991bd11c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031293"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
 

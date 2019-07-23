@@ -6,16 +6,15 @@ ms.technology: troubleshooting
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 55246173a23d8bae7fa9aab82a527800eb8bb23a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285066"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258539"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>錯誤和事件參考 (Reporting Services)
 
@@ -47,7 +46,7 @@ ms.locfileid: "67285066"
 |119|錯誤|啟用|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源>  沒有被授權存取報表伺服器資料庫的內容。|  
 |120|錯誤|啟用|報表伺服器|對稱金鑰無法解密。 最可能的情況是因為，執行服務所使用的帳戶已變更。 如需詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |121|錯誤|啟動/關閉|報表伺服器|遠端程序呼叫 (RPC) 服務啟動失敗。|  
-|122|警告|傳遞|排程與傳遞處理器|「排程與傳遞處理器」無法連接到作為電子郵件傳遞的 SMTP 伺服器。 如需有關 SMTP 伺服器連接的詳細資訊，請參閱 <<c0> [ 電子郵件設定-Reporting Services 原生模式 （組態管理員）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
+|122|警告|傳遞|排程與傳遞處理器|「排程與傳遞處理器」無法連接到作為電子郵件傳遞的 SMTP 伺服器。 如需 SMTP 伺服器連接的詳細資訊, 請參閱[電子郵件設定-Reporting Services 原生模式 (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
 |123|警告|記錄|報表伺服器<br /><br /> 入口網站|報表伺服器寫入追蹤記錄失敗。 如需追蹤記錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
 |124|[資訊]|啟用|報表伺服器|「報表伺服器」服務已經初始化。 如需詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。|  
 |125|[資訊]|啟用|報表伺服器|用來加密資料的金鑰已經成功擷取。 如需金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  

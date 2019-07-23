@@ -1,5 +1,5 @@
 ---
-title: 檔案元素 (DTA) |Microsoft Docs
+title: File 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c24484db4d106e236166a2a522a3b038a0b899ec
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6c4f48be8b14a4bc0e4c3c860a752989d1b05ce8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034904"
 ---
 # <a name="file-element-dta"></a>File 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

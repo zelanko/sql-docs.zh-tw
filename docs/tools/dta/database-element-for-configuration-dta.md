@@ -1,5 +1,5 @@
 ---
-title: Database 元素 (DTA) 的組態 |Microsoft Docs
+title: Configuration (DTA) 的 Database 元素 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5c434b43d35dfc59fde648321d12a61674dda8fd
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 713fe8d41b4ec47e624b8fcc501c7e2b87653346
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116940"
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

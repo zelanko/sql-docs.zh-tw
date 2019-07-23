@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66388abaf9e1434abd78d595da25fc08ebeea1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911516"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>第 5-2 課：啟用和設定套件設定
 

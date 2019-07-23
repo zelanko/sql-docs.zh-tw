@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 8ce8024f-153f-4066-b607-0d36fefc79ed
 author: Lingxi-Li
 ms.author: lingxl
-manager: craigg
-ms.openlocfilehash: e601113995e3bbcc16e84dbabcb221f7730b11fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb8482fe4acee529da7462f5eb9400f2738439d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968147"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Azure Resource Manager 連線管理員
 

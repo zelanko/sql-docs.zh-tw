@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 815eedc74e64a8c9e6ef38ba8cb9c8b0048aecbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f4d2fbf448dc34d687359724e3ec19d3023262a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967873"
 ---
 # <a name="property-expressions-editor"></a>屬性運算式編輯器
 
@@ -43,7 +42,7 @@ ms.locfileid: "65725085"
  按一下省略符號，即可開啟 **[運算式產生器]** 對話方塊。 如需詳細資訊，請參閱 [Expression Builder](../../integration-services/expressions/expression-builder.md)。  
   
  **刪除**  
- 選取屬性，然後按一下 [刪除]。  
+ 選取屬性，然後按一下 [刪除]  。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式頁面](../../integration-services/expressions/expressions-page.md)   

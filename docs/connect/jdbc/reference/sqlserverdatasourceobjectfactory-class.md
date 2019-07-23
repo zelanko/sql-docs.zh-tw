@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b616632b-5987-470d-b36c-b22fa9213145
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6314bf3fe9f0d5773ed1084858ea1691418528af
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cf4c90644282ff420e064e7a7b5b99a93c257194
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971386"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>SQLServerDataSourceObjectFactory 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public class SQLServerDataSourceObjectFactory
 ## <a name="remarks"></a>Remarks  
  所有的資料來源類別都會繼承這個方法。 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 會公開實作 ObjectFactory 的這個類別，當作其對可參考介面的支援。 Java 應用程式伺服器將對資料來源類別呼叫 getReference，而這將會建立從內部使用該類別名稱作為其 Class Factory 的 Reference 物件。  
   
- 當 Java 應用程式伺服器具有參考物件取值 （dereference） 時，它會建立 SQLServerDataSourceObjectFactory 物件和呼叫的執行個體[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)方法，並在所參考的物件傳遞至擷取資料來源執行個體。  
+ 當 JAVA 應用程式伺服器必須對參考物件進行取值時, 它會建立 SQLServerDataSourceObjectFactory 物件的實例, 並呼叫[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)方法 (傳入參考物件) 來取得資料來源示例.  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSourceObjectFactory 成員](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   

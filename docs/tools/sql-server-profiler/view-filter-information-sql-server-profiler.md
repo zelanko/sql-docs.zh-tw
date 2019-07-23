@@ -1,5 +1,5 @@
 ---
-title: 檢視篩選資訊 (SQL Server Profiler) |Microsoft Docs
+title: 視圖篩選資訊 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1570ae23423d7b286bedf51cd7c2590bc3ab778
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 94cdf7dcde876b18a6080eefb5afde8137d2e021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059608"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>檢視篩選資訊 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

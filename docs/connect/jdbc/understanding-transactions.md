@@ -1,5 +1,5 @@
 ---
-title: 了解交易 |Microsoft Docs
+title: 瞭解交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad6ccc7f65d6d4c65fb1bb63b58e0b13269ea351
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916580"
 ---
 # <a name="understanding-transactions"></a>了解交易
 
@@ -24,7 +23,7 @@ ms.locfileid: "66788389"
 
 交易是併入邏輯工作單位的作業群組。 它們是用來控制及維護交易中每個動作的一致性與完整性，儘管系統可能會發生錯誤。
 
-使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 時，交易可以是本機或分散式。 交易也可使用隔離等級。 如需有關 JDBC 驅動程式支援的隔離等級的詳細資訊，請參閱 <<c0> [ 了解隔離等級](../../connect/jdbc/understanding-isolation-levels.md)。
+使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 時，交易可以是本機或分散式。 交易也可使用隔離等級。 如需 JDBC 驅動程式所支援之隔離等級的詳細資訊, 請參閱[瞭解隔離等級](../../connect/jdbc/understanding-isolation-levels.md)。
 
 應用程式應該使用 Transact-SQL 陳述式或 JDBC Driver 所提供的方法來控制交易，但不可同時使用這兩者。 針對相同的交易同時使用 Transact-SQL 陳述式和 JDBC API 方法可能會導致問題發生，例如無法依照預期方式認可交易、交易已認可或回復但新的交易非預期地啟動，或者發生「無法繼續交易」例外狀況。
 
@@ -42,7 +41,7 @@ ms.locfileid: "66788389"
 
 JDBC 驅動程式與 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 分散式交易協調器 (MS DTC) 密切整合，以提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實際的分散式交易支援。 MS DTC 是一種由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 針對 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 系統所提供的分散式交易機制。 MS DTC 使用來自 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 經過驗證的交易處理技術以支援 XA 功能，例如完整的二階段分散式認可通訊協定，以及分散式交易的復原。
 
-如需如何使用分散式的交易的詳細資訊，請參閱[了解 XA 交易](../../connect/jdbc/understanding-xa-transactions.md)。
+如需如何使用分散式交易的詳細資訊, 請參閱[瞭解 XA 交易](../../connect/jdbc/understanding-xa-transactions.md)。
 
 ## <a name="see-also"></a>另請參閱
 

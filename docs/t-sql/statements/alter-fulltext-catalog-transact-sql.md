@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b79d00b02f06395a083ee93a2916a7d3aa5f0233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065587"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ALTER FULLTEXT CATALOG catalog_name
  目錄和資料庫區分腔調字的預設值相同。  
   
  REORGANIZE  
- 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行「主要合併」，其中包括將索引作業過程所建立的較小索引合併到單一大型索引中。 合併全文檢索索引片段可以改善效能，並釋出磁碟和記憶體資源。 如果全文檢索目錄經常變更，請定期利用這個命令來重新組織全文檢索目錄。  
+ 通知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行「主要合併」  ，其中包括將索引作業過程所建立的較小索引合併到單一大型索引中。 合併全文檢索索引片段可以改善效能，並釋出磁碟和記憶體資源。 如果全文檢索目錄經常變更，請定期利用這個命令來重新組織全文檢索目錄。  
   
  REORGANIZE 也會將內部索引和目錄結構最佳化。  
   
@@ -72,7 +71,7 @@ ALTER FULLTEXT CATALOG catalog_name
  AS DEFAULT  
  指定這個全文檢索目錄是預設目錄。 當建立全文檢索索引，卻沒有指定目錄時，會使用預設目錄。 如果有現存的全文檢索目錄，將這個目錄設為 AS DEFAULT 會置換現有的預設值。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  使用者必須具備全文檢索目錄的 ALTER 權限，或是 **db_owner**、**db_ddladmin** 固定資料庫角色或 sysadmin 固定伺服器角色的成員。  
   
 > [!NOTE]  

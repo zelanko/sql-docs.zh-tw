@@ -12,13 +12,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 967d46ad2bf63324db45906688a5486b47fd04e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb8fde9c20fdab07d7fa77644a7af7463ec6401d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904249"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
 

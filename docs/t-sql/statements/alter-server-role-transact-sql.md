@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9cc3231b9e883857563b2f7ed0bf8bc8d1a2f3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070269"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +64,7 @@ ADD MEMBER *server_principal*
 DROP MEMBER *server_principal*  
 從伺服器角色移除指定的伺服器主體。 *server_principal* 可以是登入或使用者定義的伺服器角色。 *server_principal* 不能是固定伺服器角色、資料庫角色或系統管理員。  
   
-WITH NAME **=**_new_server_role_name_  
+WITH NAME **=** _new_server_role_name_  
 指定使用者定義伺服器角色的新名稱。 此名稱不能已存在於伺服器中。  
   
 ## <a name="remarks"></a>Remarks  
@@ -77,7 +76,7 @@ WITH NAME **=**_new_server_role_name_
   
 若要變更使用者定義伺服器角色的擁有者，請使用 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要伺服器的 `ALTER ANY SERVER ROLE` 權限，才能變更使用者定義伺服器角色的名稱。  
   
 **固定伺服器角色**  
@@ -144,7 +143,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. 若要檢視角色成員資格  
-若要檢視角色成員資格，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [伺服器角色 (成員)] 頁面，或執行下列查詢：  
+若要檢視角色成員資格，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [伺服器角色 (成員)]  頁面，或執行下列查詢：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

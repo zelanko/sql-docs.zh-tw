@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 51b50528d939c9f422e178e3da87aab7cc382d21
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: a34a082d63e2d89d130e715e3f3a152adfdee102
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689879"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258404"
 ---
 # <a name="delete-a-solution"></a>刪除方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

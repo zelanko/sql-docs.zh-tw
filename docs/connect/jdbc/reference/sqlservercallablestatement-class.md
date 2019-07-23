@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9fce6bcc5b77f33d8c901f897dd2a017a1fcd6a9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 637b56c7f64d35501be0efef30e8f2a055b5be4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971910"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,11 +36,11 @@ public final class SQLServerCallableStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SQLServerCallableStatement 可讓您指定要呼叫的預存程序名稱，連同輸入和輸出參數。 SQLServerCallableStatement 也讓您能夠擷取傳回狀態值與`? = call( ?, ..)`語法。  
+ SQLServerCallableStatement 可讓您指定要呼叫的預存程序名稱，連同輸入和輸出參數。 SQLServerCallableStatement 也提供以`? = call( ?, ..)`語法抓取傳回狀態值的能力。  
   
- 此類別支援解除包裝成為 SQLServerCallableStatement 類別、 ISQLServerCallableStatement 介面、 java.sql.CallableStatement 介面和類別和 SQLServerPreparedStatement 支援解除包裝的介面。 如需詳細資訊，請參閱 <<c0> [ 包裝函式和介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 這個類別支援解除包裝為 SQLServerCallableStatement 類別、ISQLServerCallableStatement 介面、JAVA.sql.callablestatement 介面, 以及 SQLServerPreparedStatement 所支援的類別和介面來解除包裝。 如需詳細資訊, 請參閱包裝函式[和介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
- 當 SQLServerCallableStatement 的其中一個設定方法呼叫對於類型，如果的型別與指定的類型衝突[registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)，最後一個 SQLServerCallableStatement set 方法所指定之類型使用。 但是，這可能會導致不相容的資料類型轉換錯誤。 如果未呼叫 SQLServerCallableStatement set 方法，則會使用以第一個 [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 呼叫所指定的類型。  
+ 針對某個型別呼叫其中一個 SQLServerCallableStatement set 方法時, 如果該型別與使用[registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)所指定的型別相衝突, 則會使用最後一個 SQLServerCallableStatement set 方法所指定的型別。 但是，這可能會導致不相容的資料類型轉換錯誤。 如果未呼叫 SQLServerCallableStatement set 方法，則會使用以第一個 [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 呼叫所指定的類型。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 與 JDBC 4.0 建議相容，此建議中指出必須先擷取結果集和更新計數，然後才能擷取 OUT 參數。 如果在結果集和更新計數完全處理完之前擷取 OUT 參數，則尚未處理的任何結果集和更新計數都會遺失。  
   

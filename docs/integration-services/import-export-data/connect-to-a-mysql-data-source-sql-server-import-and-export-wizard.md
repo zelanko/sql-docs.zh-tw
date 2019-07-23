@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a359cdc0467d06cf0f67c1229981466f9b440101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d535c24ee291018cc65ae00a04d9906a68c1cd2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114671"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>連線至 MySQL 資料來源 (SQL Server 匯入和匯出精靈)
 

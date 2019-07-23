@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 0d57940a-90bc-4f1b-a20f-5a97d7d20b61
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d47f267851d89ad146a74db7e7d93c7e940d41d4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c5bd30473fc9e87dbd2cb21dcf3b13864ba1ac33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971937"
 ---
 # <a name="sqlserverblob-methods"></a>SQLServerBlob 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  如需有關成員的資訊[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)，請參閱[SQLServerBlob 成員](../../../connect/jdbc/reference/sqlserverblob-members.md)。  
+  如需[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)成員的詳細資訊, 請參閱[SQLServerBlob 成員](../../../connect/jdbc/reference/sqlserverblob-members.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerBlob 類別](../../../connect/jdbc/reference/sqlserverblob-class.md)  

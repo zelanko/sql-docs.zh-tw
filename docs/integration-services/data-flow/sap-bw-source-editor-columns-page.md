@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c68ab7fd6392d8740c03ab891a587859dec2c000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caf9e1724d72113ed67421f516ac9fdcd298e936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034095"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 來源編輯器 (資料行頁面)
 

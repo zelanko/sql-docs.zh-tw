@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ba0a8ac8f1e008c4adc2e8206b900e53689ea9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940829"
 ---
 # <a name="backup-device-general-page"></a>備份裝置 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47618926"
  檢視現有邏輯備份裝置的名稱，或是指定新邏輯備份裝置的名稱。  
   
  **磁帶**  
- 在 [磁帶] 清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連接到執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之執行個體的電腦上時，此選項才可以使用。  
+ 在 [磁帶]  清單中檢視或選取目的地磁帶裝置。 只有當磁帶機已連接到執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之執行個體的電腦上時，此選項才可以使用。  
   
 > [!NOTE]  
 >  遠端電腦上的磁帶備份裝置並不是有效的備份目的地。  

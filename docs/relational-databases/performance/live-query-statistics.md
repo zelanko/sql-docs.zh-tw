@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5b60d4190ad25dd57098ef4cd107f1838886a767
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051877"
 ---
 # <a name="live-query-statistics"></a>即時查詢統計資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "53368410"
   
      ![在工具列上的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatstoolbar.png "在工具列上的 [即時查詢統計資料] 按鈕")  
   
-     您也可以用滑鼠右鍵按一下 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中選取的查詢來檢視存取即時查詢執行計畫，然後按一下 [包含即時查詢統計資料]。  
+     您也可以用滑鼠右鍵按一下 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中選取的查詢來檢視存取即時查詢執行計畫，然後按一下 [包含即時查詢統計資料]  。  
   
      ![在快顯功能表上的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatsmenu.png "在快顯功能表上的 [即時查詢統計資料] 按鈕")  
   
@@ -55,15 +54,15 @@ ms.locfileid: "53368410"
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>檢視任何查詢的即時查詢統計資料 
 
-以滑鼠右鍵按一下 [處理序] 或 [使用中的費時查詢] 資料表中的任一查詢，也可以從 [[活動監視器]](../../relational-databases/performance-monitor/activity-monitor.md) 存取即時執行計劃。  
+以滑鼠右鍵按一下 [處理序]  或 [使用中的費時查詢]  資料表中的任一查詢，也可以從 [[活動監視器]](../../relational-databases/performance-monitor/activity-monitor.md)  存取即時執行計劃。  
   
  ![在 [活動監視器] 的 [即時查詢統計資料] 按鈕](../../relational-databases/performance/media/livequerystatsactmon.png "在 [活動監視器] 的 [即時查詢統計資料] 按鈕")  
   
 ## <a name="remarks"></a>Remarks  
  必須先啟用統計資料設定檔基礎結構，即時查詢統計資料才可以擷取查詢進度資訊。 視版本而定，額外負荷可能十分可觀。 如需此額外負荷的詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
   
-## <a name="permissions"></a>[權限]  
- 填入 [即時查詢統計資料] 結果頁面需要資料庫等級的 `SHOWPLAN` 權限，查看即時統計資料需要伺服器等級的 `VIEW SERVER STATE` 權限，而執行查詢則需要任何必要權限。  
+## <a name="permissions"></a>權限  
+ 填入 [即時查詢統計資料]  結果頁面需要資料庫等級的 `SHOWPLAN` 權限，查看即時統計資料需要伺服器等級的 `VIEW SERVER STATE` 權限，而執行查詢則需要任何必要權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

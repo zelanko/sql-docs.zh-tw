@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d0fb6ae351cde68956defff6081fa19f02c092e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7256475421b8666e28eaaf03f3ff4cb9768aa289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955605"
 ---
 # <a name="closeunreferencedpreparedstatementhandles-method-sqlserverconnection"></a>closeUnreferencedPreparedStatementHandles 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 強制取消-準備的任何未處理捨棄已備妥之陳述式執行的要求。
+ 強制執行任何未完成的已捨棄備妥語句的取消準備要求。
 
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +39,7 @@ public void closeUnreferencedPreparedStatementHandles()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
 
 ## <a name="remarks"></a>Remarks  
- 這個方法是從 JDBC 驅動程式版本 6.4 可用且向外。
+ 這個方法可從 JDBC 驅動程式6.4 版和之後版本取得。
  
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

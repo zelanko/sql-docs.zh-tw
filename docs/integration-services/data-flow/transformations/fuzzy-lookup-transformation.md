@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c87b0167c4810c36e6d9579a501aff2a2954d25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ce9b298e096666e8e87cbe83af7c1881905f7eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944311"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
 

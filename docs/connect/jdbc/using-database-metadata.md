@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0bad06da093edd83b7df2e1c10f2b68bdca7a210
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fbe290c558dd8c64605bad0a977657904582c696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916263"
 ---
 # <a name="using-database-metadata"></a>使用資料庫中繼資料
 
@@ -26,7 +25,7 @@ ms.locfileid: "66798672"
 
 若要建立 SQLServerDatabaseMetaData 物件，您可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) 方法來取得有關它連線之資料庫的資訊。
 
-在下列範例中，開啟連線[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫會傳遞至函式、 SQLServerConnection 類別的 getMetaData 方法來傳回 SQLServerDatabaseMetadata 物件，並接著的各種方法SQLServerDatabaseMetaData 物件用來顯示驅動程式、 驅動程式版本、 資料庫名稱和資料庫版本的相關資訊。
+在下列範例中, 連至[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫的開啟連接會傳遞至函式中, SQLServerConnection 類別的 getMetaData 方法會用來傳回 SQLServerDatabaseMetadata 物件, 然後使用下列各項的方法:SQLServerDatabaseMetaData 物件是用來顯示驅動程式、驅動程式版本、資料庫名稱和資料庫版本的相關資訊。
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 

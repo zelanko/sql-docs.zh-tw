@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0580c61bae4fdca1d311e4ccaee88f05a8b6ecd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53008c12ead3f9450edd6fbe26c08728a0b47558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070148"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
 

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 67df1557cf4035f4e7bfca1eaa23d9bb0505c8e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1da1a6aa4b7a98a7ac76c32effc116efdc7020d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62945506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140776"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>設定資料收集器的屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

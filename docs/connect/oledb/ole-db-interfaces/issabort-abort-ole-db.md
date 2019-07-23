@@ -1,5 +1,5 @@
 ---
-title: 'Issabort:: Abort (OLE DB) |Microsoft Docs'
+title: 'ISSAbort:: Abort (OLE DB) |Microsoft Docs'
 description: ISSAbort::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - Abort method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d3073291fa6f2694827e3ca69fd8a9c14ed0ada0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 72ce7fa29adfb349fab8c9e60872740c94484108
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994392"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

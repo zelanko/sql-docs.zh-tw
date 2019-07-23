@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ccaaab04a0ebb4e3ccb4771789588d966f5a7e1c
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986938"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server 的 Buffer Manager 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "53380839"
 |**每秒的延伸模組頁面寫入數**|每秒寫入緩衝集區延伸模組檔案的頁數。|  
 |**Free list stalls/sec**|表示每秒鐘必須等待可用頁面的要求數。|  
 |**Integral Controller Slope**|緩衝集區的整體控制器上次使用的斜率，乘以 -100 億。| 
-|**Lazy writes/sec**|表示每秒鐘由緩衝區管理員的延遲寫入器所寫入的緩衝區數目。 「延遲寫入器」是一種系統處理序，可排清整批已變更且過時的緩衝區 (這種緩衝區包含必須重新寫入磁碟以便讓緩衝區可重複用於其他頁面的變更)，使其可供使用者處理序使用。 使用延遲寫入器，即不需經常執行檢查點來建立可用的緩衝區。|  
+|**Lazy writes/sec**|表示每秒鐘由緩衝區管理員的延遲寫入器所寫入的緩衝區數目。 「延遲寫入器」  是一種系統處理序，可排清整批已變更且過時的緩衝區 (這種緩衝區包含必須重新寫入磁碟以便讓緩衝區可重複用於其他頁面的變更)，使其可供使用者處理序使用。 使用延遲寫入器，即不需經常執行檢查點來建立可用的緩衝區。|  
 |**Page life expectancy**|表示頁面停留在這個沒有參考之緩衝集區中的秒數。|  
 |**Page lookups/sec**|表示每秒鐘在緩衝集區中尋找頁面的要求數。|  
 |**Page reads/sec**|表示每秒鐘發出的實體資料庫頁面讀取數。 這項統計資料可顯示所有資料庫的實體頁面讀取總數。 由於實體 I/O 成本很高，因此您可以藉由使用較大的資料快取、智慧型索引、和較有效的查詢，或藉由變更資料庫設計，盡可能降低成本。|  

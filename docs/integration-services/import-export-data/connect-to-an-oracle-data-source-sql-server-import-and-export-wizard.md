@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 04a7354fac044a835ab5d5649d56c01e72e6e995
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8156ce9aba96d01253b84c15309c6c19a46eaff7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114487"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
 

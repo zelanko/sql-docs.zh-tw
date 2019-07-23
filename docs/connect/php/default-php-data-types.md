@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993674"
 ---
 # <a name="default-php-data-types"></a>預設 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "66801480"
 |地理位置|資料流|二進位<sup>3</sup>|  
 |幾何|資料流|二進位<sup>3</sup>|  
 |image<sup>5</sup>|資料流<sup>2</sup>|二進位<sup>3</sup>|  
-|ssNoversion|Integer|8 位元字元<sup>1</sup>|  
+|INT|Integer|8 位元字元<sup>1</sup>|  
 |money|String|8 位元字元<sup>1</sup>|  
 |NCHAR|String|8 位元字元<sup>1</sup>|  
 |NUMERIC|String|8 位元字元<sup>1</sup>|  
@@ -84,7 +83,7 @@ ms.locfileid: "66801480"
 
 6. 這是對應至 nvarchar(max) 類型的傳統類型。
 
-7.  sql_variant 不支援雙向或輸出參數。
+7.  雙向或輸出參數中不支援 SQL_variant。
 
 8.  這是對應至 varchar(max) 類型的傳統類型。  
   

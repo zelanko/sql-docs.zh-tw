@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters, executing commands containing
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9a32de76937a0029b0cef2e490a107ee4a741696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 320a66b84c6a5b904e98941251801c7ee5927087
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994149"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>執行包含資料表值參數的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,12 +33,12 @@ ms.locfileid: "66801173"
 ## <a name="table-valued-parameter-specification"></a>資料表值參數規格  
  取用者可以指定資料表值參數的類型。 此資訊包含資料表值參數類型名稱。 如果資料表值參數的使用者定義資料表類型不在用於連接的目前預設結構描述中，它也包含結構描述名稱。 根據伺服器支援，取用者也可以指定選擇性的中繼資料資訊 (例如資料行的順序)，而且可以指定特定資料行的所有資料列都有預設值。  
   
- 若要指定的資料表值參數，取用者會呼叫 ISSCommandWithParameter::SetParameterInfo，，並選擇性地呼叫 isscommandwithparameters:: Setparameterproperties。 如果是資料表值參數，DBPARAMBINDINFO 結構中的 *pwszDataSourceType* 欄位將會有 DBTYPE_TABLE 的值。 *ulParamSize* 欄位會設定為 ~0，表示長度未知。 對於資料表值參數，例如結構描述名稱、 型別名稱、 資料行順序和預設資料行的特定屬性可以透過 isscommandwithparameters:: Setparameterproperties 進行設定。  
+ 若要指定資料表值參數, 取用者會呼叫 ISSCommandWithParameter:: SetParameterInfo, 並選擇性地呼叫 ISSCommandWithParameters:: SetParameterProperties。 如果是資料表值參數，DBPARAMBINDINFO 結構中的 *pwszDataSourceType* 欄位將會有 DBTYPE_TABLE 的值。 *ulParamSize* 欄位會設定為 ~0，表示長度未知。 資料表值參數的特定屬性, 例如架構名稱、類型名稱、資料行順序和預設資料行, 可以透過 ISSCommandWithParameters:: SetParameterProperties 來設定。  
   
 ## <a name="table-valued-parameter-binding"></a>資料表值參數繫結  
  資料表值參數可以是任何資料列集物件。 提供者會在執行期間將資料表值參數傳送到伺服器的同時，從此物件讀取。  
   
- 若要繫結資料表值參數，取用者會呼叫 iaccessor:: Createaccessor。 如果是資料表值參數，DBBINDING 結構的 *wType* 欄位會設定為 DBTYPE_TABLE。 DBBINDING 結構的 *pObject* 成員不是 NULL，而且 *pObject* 的 *iid* 成員會設定為 IID_IRowset 或其他任何資料表值參數資料列集物件介面。 DBBINDING 結構中其餘欄位的設定方式應該與針對資料流 BLOB 設定欄位的方式相同。  
+ 若要系結資料表值參數, 取用者會呼叫 IAccessor:: CreateAccessor。 如果是資料表值參數，DBBINDING 結構的 *wType* 欄位會設定為 DBTYPE_TABLE。 DBBINDING 結構的 *pObject* 成員不是 NULL，而且 *pObject* 的 *iid* 成員會設定為 IID_IRowset 或其他任何資料表值參數資料列集物件介面。 DBBINDING 結構中其餘欄位的設定方式應該與針對資料流 BLOB 設定欄位的方式相同。  
   
  如果是資料表值參數以及與資料表值參數相關聯之資料列集物件的繫結，則適用下列限制：  
   
