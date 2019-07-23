@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a535c18156e3a2b34a778698f51f54c8f66f576
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bad96bbe83bf2b4c9046a1bd305e351284a2111c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052247"
 ---
 # <a name="adding-tasks-programmatically"></a>以程式設計方式加入工作
 

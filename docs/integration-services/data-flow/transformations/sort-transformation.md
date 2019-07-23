@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6a8cb120d8934ca909408de71caf2b2c049bb853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 706a2259cbf333f500f1a8e5812de494dd6b863c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943958"
 ---
 # <a name="sort-transformation"></a>排序轉換
 

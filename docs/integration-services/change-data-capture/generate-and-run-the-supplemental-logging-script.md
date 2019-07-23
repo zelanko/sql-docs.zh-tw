@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 91086f31ef9461b1fd1f71bac7fff7a4491b90f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f38161514e1ccd505140c0fba7e8a8e28df411e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011407"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>產生及執行補充記錄指令碼
 

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-manager: jroth
-ms.openlocfilehash: 410fef7965918c69c49585fe282277ccebf01575
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 5cf3a03385ee30d1c037090d47ca91094bdd0aae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081683"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
 

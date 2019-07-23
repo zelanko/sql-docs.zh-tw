@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36db42ae91837a8a003558878f4b59801e3059af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8593dc13115815792bb7912a220e2ad88c15fa3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083049"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,9 +87,9 @@ ms.locfileid: "47640886"
   
 2.  按一下 **[追蹤 Token]** 索引標籤。  
   
-3.  按一下 **[插入追蹤]**。  
+3.  按一下 **[插入追蹤]** 。  
   
-4.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]**、 **[散發者到訂閱者]**、 **[延遲總計]**。 **[暫止]** 表示 Token 尚未到達給定點。  
+4.  在下列資料行中檢視追蹤權杖的經過時間：[發行者到散發者]  、[散發者到訂閱者]  、[延遲總計]  。 **[暫止]** 表示 Token 尚未到達給定點。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>若要檢視先前插入之追蹤 Token 上的訊息  
   
@@ -100,7 +99,7 @@ ms.locfileid: "47640886"
   
 3.  從 **[插入的時間]** 下拉式清單中選取時間。  
   
-4.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]**、 **[散發者到訂閱者]**、 **[延遲總計]**。 **[暫止]** 表示 Token 尚未到達給定點。  
+4.  在下列資料行中檢視追蹤權杖的經過時間：[發行者到散發者]  、[散發者到訂閱者]  、[延遲總計]  。 **[暫止]** 表示 Token 尚未到達給定點。  
   
     > [!NOTE]  
     >  追蹤 Token 資訊與其他記錄資料的保留時間週期相同，這會由散發資料庫的記錄保留期限控制。 如需變更散發資料庫屬性的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
@@ -113,21 +112,21 @@ ms.locfileid: "47640886"
   
 2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 請確認訂閱存在且狀態為使用中。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)，並指定 **@publication**。 請注意 **@tracer_token_id** 輸出參數的值。  
+3.  在發行集資料庫的發行者上，執行 [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)，並指定 **@publication** 。 請注意 **@tracer_token_id** 輸出參數的值。  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>若要針對異動複寫判斷延遲並驗證連接  
   
 1.  使用上一個程序將追蹤 Token 公佈到發行集。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **@publication**。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中所要的 **tracer_id** 。  
+2.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **@publication** 。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中所要的 **tracer_id** 。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)，並指定 **@publication**，而且針對 **@tracer_id** 指定步驟 2 的追追蹤 Token 識別碼。 這麼做會傳回所選取追蹤 Token 的延遲資訊。  
+3.  在發行集資料庫的發行者上，執行 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)，並指定 **@publication** ，而且針對 **@tracer_id** 指定步驟 2 的追追蹤 Token 識別碼。 這麼做會傳回所選取追蹤 Token 的延遲資訊。  
   
 #### <a name="to-remove-tracer-tokens"></a>若要移除追蹤 Token  
   
-1.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **@publication**。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中要刪除之追蹤 Token 的 **tracer_id** 。  
+1.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **@publication** 。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中要刪除之追蹤 Token 的 **tracer_id** 。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)，並指定 **@publication**，而且針對 **@tracer_id** 指定步驟 2 的要刪除的追蹤識別碼。  
+2.  在發行集資料庫的發行者上，執行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)，並指定 **@publication** ，而且針對 **@tracer_id** 指定步驟 2 的要刪除的追蹤識別碼。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這麼做會公佈追蹤 Token 記錄，並使用傳回的公佈追蹤 Token 識別碼檢視延遲資訊。  

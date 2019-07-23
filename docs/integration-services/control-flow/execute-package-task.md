@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47e228c3494c03e86ffa7208f7caf5c1fe150a95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b01580216ffb47a5d0d78cf08b8d7c9c14b861b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043906"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2ac6b4018d24d3ee94d50482295541c36cbafe14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f8a622f35245e50c75354efef9d7dfc9aaf7eb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105578"
 ---
 # <a name="control-flow"></a>控制流程
 

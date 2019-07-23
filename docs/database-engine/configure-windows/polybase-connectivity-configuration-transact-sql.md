@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997921"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 連接組態 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -46,10 +45,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@configname=** ] **'**_option\_name_**'**  
- 這是組態選項的名稱。 *option_name* is **varchar(35)**，預設值為 NULL。 若未指定，就會傳回完整的選項清單。  
+ [ **@configname=** ] **'** _option\_name_ **'**  
+ 這是組態選項的名稱。 *option_name* is **varchar(35)** ，預設值為 NULL。 若未指定，就會傳回完整的選項清單。  
   
- [ **@configvalue=** ] **'**_value_**'**  
+ [ **@configvalue=** ] **'** _value_ **'**  
  這是新的組態設定。 *value* 是 **int**，預設值是 NULL。 最大值會隨著個別選項而不同。  
   
  **'hadoop connectivity'**  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 66af409c92de623d4470b066f59f7fd7bab6aa5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125177"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
 

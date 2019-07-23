@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035015"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定預先部署或部署後指令碼
 預先部署和部署後指令碼會分別執行主要部署指令碼前後的 Transact\-SQL 陳述式，主要部署指令碼則是從資料庫專案產生。 專案中只能有一個預先部署指令碼和一個部署後指令碼。 這些指令碼有許多用途。 例如：  

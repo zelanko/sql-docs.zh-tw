@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbe9e25c3a931e4c32481ac53d7ba93ac130c299
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 79831c782524a1a9b0b7acea55ccce437e5733fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123631"
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>建立記憶體最佳化的系統版本設定時態表
 

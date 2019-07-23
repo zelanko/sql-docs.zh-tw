@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
-manager: jroth
-ms.openlocfilehash: ce63196cb8a5c8791eb6440f69cf06194591f422
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 471708dc2e6b6feb3f91bd831ff63fce1177c8d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998062"
 ---
 # <a name="hybrid-buffer-pool"></a>混合式緩衝集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

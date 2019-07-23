@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 222b725e7e5497adaf679f710fa390dcea8aecf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034983"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何：在專案中使用 Microsoft SQL Server 2012 物件
 在這個範例中，您會將一個序列物件加入至以 Microsoft SQL Server 2012 為目標的資料庫專案。  
@@ -28,9 +27,9 @@ ms.locfileid: "65098409"
   
 ### <a name="to-add-a-new-sequence-object-to-your-project"></a>若要將新的序列物件加入至專案  
   
-1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 資料庫專案，再依序選取 [加入] 和 [新增項目]。  
+1.  以滑鼠右鍵按一下 [方案總管]  中的 [TradeDev]  資料庫專案，再依序選取 [加入]  和 [新增項目]  。  
   
-2.  按一下左窗格中的 [可程式性]，然後選取 [序列]。 按一下 [加入] 將新的物件加入至專案。  
+2.  按一下左窗格中的 [可程式性]  ，然後選取 [序列]  。 按一下 [加入] 將新的物件加入至專案  。  
   
 3.  以下列程式碼取代預設程式碼。  
   
@@ -44,13 +43,13 @@ ms.locfileid: "65098409"
     CACHE 10  
     ```  
   
-4.  如果專案的目標平台未設定為 Microsoft SQL Server 2012，則 [錯誤清單] 會顯示 `CREATE SEQUENCE` 陳述式有語法錯誤。 若要修正此問題，請遵循[如何：變更目標平台及發佈資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主題來相應地變更目標平台。  
+4.  如果專案的目標平台未設定為 Microsoft SQL Server 2012，則 [錯誤清單]  會顯示 `CREATE SEQUENCE` 陳述式有語法錯誤。 若要修正此問題，請遵循[如何：變更目標平台及發佈資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主題來相應地變更目標平台。  
   
 5.  遵循[如何：變更目標平台及發佈資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)，將專案發佈至已連線 Microsoft SQL Server 2012 伺服器中的資料庫。  
   
 ### <a name="to-use-the-new-sequence-object"></a>若要使用新的序列物件  
   
-1.  在 [SQL Server 物件總管] 中，以滑鼠右鍵按一下您在上述程序中已發行的目標資料庫，再選取 [新增查詢]。  
+1.  在 [SQL Server 物件總管] 中，以滑鼠右鍵按一下您在上述程序中已發行的目標資料庫，再選取 [新增查詢]  。  
   
 2.  將下列程式碼貼入查詢視窗。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "65098409"
     GO  
     ```  
   
-3.  按 [執行查詢] 按鈕。  
+3.  按 [執行查詢]  按鈕。  
   
-4.  在 [SQL Server 物件總管] 中，巡覽至資料庫的 [Products] 資料表。 按一下滑鼠右鍵選取 [檢視資料] 檢查新加入的資料列。  
+4.  在 [SQL Server 物件總管]  中，巡覽至資料庫的 [Products]  資料表。 按一下滑鼠右鍵選取 [檢視資料]  檢查新加入的資料列。  
   

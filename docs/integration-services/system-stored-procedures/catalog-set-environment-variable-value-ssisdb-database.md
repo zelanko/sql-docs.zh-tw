@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8140c8eaa6c8fb317265b470ccbd3712f3b2aa41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aab9aea933eefa92261bfd6576e5799d0137f42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897848"
 ---
 # <a name="catalogsetenvironmentvariablevalue-ssisdb-database"></a>catalog.set_environment_variable_value (SSISDB 資料庫)
 
