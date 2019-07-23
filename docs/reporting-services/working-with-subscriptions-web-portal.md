@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 786f7391d87799a0822f357e449db21fea0d0f09
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221243"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>處理訂閱 (Web 入口網站)
 
@@ -28,11 +28,11 @@ ms.locfileid: "52542014"
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-選取報表的**省略符號 (...)**，並選取 [管理]，然後選取 [訂用帳戶]，即可到達 [訂用帳戶] 頁面。  
+選取報表的**省略符號 (...)** ，並選取 [管理]  ，然後選取 [訂用帳戶]  ，即可到達 [訂用帳戶] 頁面。  
   
-從 [訂閱] 頁面中，您可以選取 [+ 新增訂閱] 來建立新的訂閱。 您也可以編輯現有訂閱，或刪除所選取的訂閱。  
+從 [訂閱] 頁面中，您可以選取 [+ 新增訂閱]  來建立新的訂閱。 您也可以編輯現有訂閱，或刪除所選取的訂閱。  
   
-此頁面也會在 [結果] 資料行上提供訂用帳戶執行的結果狀態。 如果訂閱發生錯誤，請先檢查結果資料行，查看訊息為何。  
+此頁面也會在 [結果]  資料行上提供訂用帳戶執行的結果狀態。 如果訂閱發生錯誤，請先檢查結果資料行，查看訊息為何。  
   
 ## <a name="creating-or-editing-a-subscription"></a>建立或編輯訂閱  
 使用 [新增訂閱] 或 [編輯訂閱] 頁面，即可在報表中建立新的訂閱或修改現有的訂閱。 這個頁面的此選項隨著您的角色指派而改變。 具有進階權限的使用者可以使用額外的選項。  
@@ -40,7 +40,7 @@ ms.locfileid: "52542014"
 可自主式執行的報表支援訂閱。 報表至少必須使用預存認證或無認證。 如果報表使用參數，就必須指定預設值。 如果您變更報表執行設定或移除參數屬性的預設值，就可能會造成訂閱停用。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱]。  
   
 ### <a name="type-of-subscription"></a>訂閱的類型  
-您可以選取 [標準訂用帳戶] 和 [資料驅動訂用帳戶]。  
+您可以選取 [標準訂用帳戶]  和 [資料驅動訂用帳戶]  。  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
    
@@ -64,7 +64,7 @@ ms.locfileid: "52542014"
 -   檔案共用訂閱提供讓您指定目標位置的欄位。 您可以傳遞任何報表至檔案共用。 不過，支援互動式功能的報表 (包括支援針對資料列和資料行向下鑽研的矩陣報表) 將轉譯成靜態檔案。 您無法在靜態檔案中檢視向下鑽研資料列和資料行。 檔案共用的名稱必須以統一命名慣例 (UNC) 格式指定 (例如，\mycomputer\public\myreportfiles)。 在路徑名稱中不可包含反斜線。 報表檔案會使用以轉譯格式為基礎的檔案格式進行傳遞 (例如，如果您選擇 [Excel]，報表就會以 .xlsx 檔案來傳遞)。  
   
 ### <a name="data-driven-subscription-dataset"></a>資料驅動訂閱資料集  
-針對資料驅動訂閱，您必須定義用於訂閱的資料集。 選取 [編輯資料集] 提供該資訊。  
+針對資料驅動訂閱，您必須定義用於訂閱的資料集。 選取 [編輯資料集]  提供該資訊。  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  
   

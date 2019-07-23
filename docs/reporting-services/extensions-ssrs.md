@@ -2,7 +2,6 @@
 title: 延伸模組
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +9,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 86c4ed5aea5989a4e77765814a85f837fb1f7d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503975"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262893"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 的延伸模組
 

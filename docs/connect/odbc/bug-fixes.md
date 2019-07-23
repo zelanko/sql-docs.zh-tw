@@ -13,61 +13,61 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 9dba11c0130dc3b969a9fcec46b631abd7d62fe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198765"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264015"
 ---
-# <a name="list-of-bugs-fixed"></a>已修正的 bug 的清單
+# <a name="list-of-bugs-fixed"></a>已修正的 bug 清單
 
-此頁面包含在每個版本中，從已修正的 bug 清單[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+此頁面包含每個版本中已修正的錯誤清單, 從[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17.3 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>ODBC Driver 17.3 for [!INCLUDE[msCoName](../../includes/msconame_md.md)]的錯誤修正[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- 已修正的 TCP 傳送通知事件控制代碼的記憶體流失
-- 列舉 _SQL_FILESTREAM_DESIRED_ACCESS msodbcsql.h 標頭檔中的固定的重新定義問題
-- 已修正遺漏 ACCESS_TOKEN 與驗證相關 msodbcsql.h 標頭檔中適用於 Linux 的定義
+- 已修正 TCP 傳送通知事件處理記憶體流失
+- 已修正 msodbcsql.h 標頭檔中 enum _SQL_FILESTREAM_DESIRED_ACCESS 的重新定義問題
+- 已修正 Linux 的 msodbcsql.h 標頭檔中遺失的 ACCESS_TOKEN 和驗證相關定義
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>ODBC Driver 17.2 for [!INCLUDE[msCoName](../../includes/msconame_md.md)]的錯誤修正[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- 已修正有關 Azure Active Directory 驗證的錯誤訊息
-- 已修正編碼偵測時以不同的方式設定地區設定環境變數
-- 固定連線復原進行中時中斷連線時當機
-- 已修正的偵測連線作用的
-- 已修正不正確的偵測，關閉通訊端
-- 嘗試釋放陳述式控制代碼失敗的復原時，已修正無限期等候
-- 13 和 17 這兩種版本安裝在 Windows 上時，已修正不正確的解除安裝行為
-- 在舊版的 Windows 平台 (Windows 7、windows 8 和 Server 2012) 上的固定的解密行為
-- Windows 上使用 ADAL 驗證時，已修正快取問題
-- 修正會被鎖定的問題，並在 Windows 上覆寫追蹤記錄
+- 已修正關於 Azure Active Directory 驗證的錯誤訊息
+- 已修正地區設定環境變數以不同方式設定時的編碼偵測
+- 已修正連線復原進行中斷連線時的損毀
+- 已修正連接活動的偵測
+- 已修正關閉通訊端的不正確偵測
+- 修正嘗試在失敗復原期間釋放語句控制碼時的無限等候
+- 修正在 Windows 上安裝13和17版時不正確的卸載行為
+- 已修正舊版 Windows 平臺 (Windows 7、8和 Server 2012) 的解密行為
+- 已修正在 Windows 上使用 ADAL 驗證時的快取問題
+- 已修正在 Windows 上鎖定和覆寫追蹤記錄的問題
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>ODBC Driver 17.1 for [!INCLUDE[msCoName](../../includes/msconame_md.md)]的錯誤修正[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- 呼叫啟用 mars 的 SQLFreeHandle 和連接屬性時，已修正 1 秒延遲 「 Encrypt = yes"
-- 修正錯誤 22003 損毀，在 SQLGetData 時傳入緩衝區的大小較小，則所擷取的資料 (Windows)
+- 修正在呼叫 SQLFreeHandle 時, 如果已啟用 MARS 且連接屬性為 "Encrypt = yes" 時的1秒延遲
+- 修正當傳入的緩衝區大小小於所抓取的資料時, SQLGetData 中的錯誤22003損毀 (Windows)
 - 已修正截斷的 ADAL 錯誤訊息
-- 修正了罕見 32 位元 Windows 上時轉換浮點數到整數
-- 已修正的問題，十進位的欄位，透過 Always Encrypted 上插入雙引號將會傳回資料截斷錯誤
-- 修正 MacOS 安裝程式警告
-- 已修正不正確的狀態時傳送給 SQL Server 工作階段復原嘗試期間連線恢復功能和連接共用這兩個已啟用，導致工作階段卸除的伺服器
+- 已修正將浮點數轉換成整數時, 32 位 Windows 上罕見的錯誤
+- 已修正將 double 插入具有 Always Encrypted 的十進位欄位時, 會傳回資料截斷錯誤的問題
+- 已修正 MacOS 安裝程式的警告
+- 已修正當同時啟用連線復原和連線共用時, 將不正確的狀態傳送至 SQL Server, 導致伺服器卸載會話
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>ODBC Driver 17 for [!INCLUDE[msCoName](../../includes/msconame_md.md)]的錯誤修正[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- 修正了在使用 Kerberos 驗證時，大量插入可能會失敗，發生 「 拒絕存取 」 錯誤
-- 已移除的因應措施，針對出現在版本低於 2.3.1 unixODBC bug （驅動程式會加倍傳遞至 unixODBC 特定緩衝區的大小）
-- 已修正連接恢復功能 （重新連線） 停止回應時使用 ColumnEncryption = 啟用
-- 已修正 DSN 建立 bug，其中時使用 「 Active Directory 互動式驗證 」 選項 Azure 驗證視窗可能會變得沒有回應 (Windows)
-- （發生在清除連接控制代碼） 來啟用非同步執行時，ODBC 關機期間固定的罕見損毀
-- 已修正的問題，SQL 驅動程式會造成執行長時間的預存程序時的高 CPU 耗用量
-- 修正的無法在沒有轉換的加密 varbinary （max） 資料行中擷取資料
-- 修正的問題之後為 null 的 varchar （max）, 加密的資料行擷取靜態資料指標上使用 SQLGetData()，下列資料行是也 nulled 它在沒有資料
-- 已修正的問題上擷取 varbinary （max） 欄位，使用 永遠加密
-- 已修正未使用 Always Encrypted 的 setlocale() 的問題
-- SQLDescribeParam() 傳回上呼叫上使用 永遠加密的 XML 類型的預存程序參數時的錯誤修正的問題
-- 已修正在 SQLTables 中無法運作的逸出的底線
-- 已修正的 bug，希伯來文的資料 (varchar) 會被截斷以寬字元傳回在 Linux 上
-- 已修正的問題查詢 Shift JIS 編碼 char/varchar 從 utf-8 應用程式
-- 已修正的 bug 在 MacOS 上使用 SQL_DRIVER_NAME 參數呼叫 SQLGetInfo 傳回位置 Linux 樣式的檔名
-- 已修正的問題，載入 Windows 1252 的字元資料，使用輸入檔案大於 32k，到使用 BCP 公用程式的 VARCHAR 資料行的位元組會導致失敗
+- 已修正使用 Kerberos 驗證時的錯誤, 大量插入可能會失敗並出現「拒絕存取」錯誤
+- 已移除在2.3.1 以下版本中 unixODBC 錯誤的因應措施 (驅動程式會加倍傳遞至 unixODBC 的特定緩衝區大小)
+- 已修正使用 ColumnEncryption = enabled 時的連線恢復功能 (重新連線) 下垂
+- 已修正 DSN 建立 bug, 其中使用「Active Directory 互動式驗證」選項時, Azure 驗證視窗可能會變得沒有回應 (Windows)
+- 修正在啟用非同步執行 (清除連接控制碼時) 時, ODBC 關閉期間發生的罕見損毀
+- 已修正 SQL 驅動程式在執行長時間的預存程式時造成高 CPU 耗用量的問題
+- 已修正無法在不轉換的情況下, 于加密的 Varbinary (max) 資料行中抓取資料
+- 修正了在靜態資料指標上使用 SQLGetData () 提取 null Varchar (max) 加密資料行之後的問題, 也會為下列資料行, 即使它有資料也一樣
+- 已修正使用 Always Encrypted 來提取 Varbinary (max) 欄位的問題
+- 已修正 setlocale () 無法使用 Always Encrypted 的問題
+- 已修正在 Always Encrypted on 的 XML 類型預存程式參數上呼叫 SQLDescribeParam () 時傳回錯誤的問題
+- 已修正無法在 SQLTables 中運作的轉義底線
+- 修正在 Linux 上以寬字元傳回時, 希伯來文資料 (Varchar) 被截斷的錯誤 (bug)
+- 已修正從 UTF-8 應用程式查詢 Shift-JIS 編碼的 char/Varchar 的問題
+- 已修正在 MacOS 上以 SQL_DRIVER_NAME 參數呼叫 SQLGetInfo 的錯誤 (bug) 傳回 Linux 樣式的檔案名
+- 已修正載入 Windows-1252 字元資料時, 使用 BCP 公用程式將大於32k 位元組的輸入檔案轉換成 VARCHAR 資料行的問題會導致失敗

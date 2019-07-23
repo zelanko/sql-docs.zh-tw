@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c86792bb-096e-4c58-8b9e-74491ccf83a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0add66584a71475b33a79760c0225e47afc34fb3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13d8d89a950f57b29c235d823424357dfa8f7bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982753"
 ---
 # <a name="getint-method-int"></a>getInt 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

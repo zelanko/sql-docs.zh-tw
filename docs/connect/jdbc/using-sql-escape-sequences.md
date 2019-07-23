@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL 逸出序列 |Microsoft Docs
+title: 使用 SQL Escape 序列 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005931"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 逸出序列
 
@@ -112,7 +111,7 @@ JDBC 驅動程式支援預存程序呼叫的 `{? = call proc_name(?,...)}` 和 `
 
 其中的 `procedure-name` 指定預存程序的名稱，而 `parameter` 則指定預存程序參數。  
   
-如需使用詳細資訊`call`逸出序列與預存程序，請參閱 <<c2> [ 預存程序使用的 Using 陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
+如需搭配預存程式`call`使用逸出序列的詳細資訊, 請參閱[using 語句與預存](../../connect/jdbc/using-statements-with-stored-procedures.md)程式。  
 
 ## <a name="outer-joins"></a>外部聯結
 

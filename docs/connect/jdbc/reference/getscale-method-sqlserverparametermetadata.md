@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2526d43416382f5cf46cb9b0be1d745487a67848
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980201"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>getScale 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getScale(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getScale 方法是由 java.sql.ParameterMetaData 介面中 getScale 方法指定。  
+ 這個 getScale 方法是由 JAVA.sql.parametermetadata 介面中的 getScale 方法指定。  
   
  這個方法會取得小數點右邊的資料行位數。 如果是沒有小數點的型別，這個方法會傳回 "0"。  
   

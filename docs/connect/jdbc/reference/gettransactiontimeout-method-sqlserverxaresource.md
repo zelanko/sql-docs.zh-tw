@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71a6a0247cc4de5b5ca610525466abb4d6a41a2c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e7aa67a0d4cc8a218500d278783f9dc8b6026fb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978621"
 ---
 # <a name="gettransactiontimeout-method-sqlserverxaresource"></a>getTransactionTimeout 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public int getTransactionTimeout()
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getTransactionTimeout 方法是由 javax.transaction.xa.XAResource 介面中 getTransactionTimeout 方法指定。  
+ 這個 getTransactionTimeout 方法是由 javax.xml.transform.dom.domresult 中的 getTransactionTimeout 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerXAResource 方法](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

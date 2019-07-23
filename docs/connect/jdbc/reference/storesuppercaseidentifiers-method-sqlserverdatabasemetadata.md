@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c77c8af4e71a41ce20565ebbb5081b796a7bdb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 17b42f50fe28ba9d727ea6c897280dcd36034038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969883"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesUpperCaseIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean storesUpperCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 storesUpperCaseIdentifiers 方法是由 java.sql.DatabaseMetaData 介面中 storesUpperCaseIdentifiers 方法指定。  
+ 這個 storesUpperCaseIdentifiers 方法是由 JAVA.sql.databasemetadata 介面中的 storesUpperCaseIdentifiers 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

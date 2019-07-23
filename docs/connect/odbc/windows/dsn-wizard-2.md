@@ -1,5 +1,5 @@
 ---
-title: 資料來源精靈畫面 2 (ODBC Driver for SQL Server) |Microsoft Docs
+title: 資料來源嚮導畫面 2 (ODBC Driver for SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: jroth
-ms.openlocfilehash: 2c41b9215979488cbec9ebda89d98bb0f464d11a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c997dd30b6d1e9844843ff4fa626c46b42fed463
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936577"
 ---
 # <a name="data-source-wizard-screen-2"></a>資料來源精靈螢幕 2
 
@@ -26,43 +25,43 @@ ms.locfileid: "66797810"
 
 ### <a name="with-integrated-windows-authentication"></a>整合式 Windows 驗證
 
-指定驅動程式要求 SQL Server 的安全 （或信任） 連線。 選取之後，不論伺服器目前的登入安全性模式為何，SQL Server 都會透過此資料來源，使用整合式登入安全性來建立連接。 所有提供的登入識別碼或密碼都會被忽略。 SQL Server 系統管理員必須具有相關聯您的 Windows 登入與 SQL Server 登入識別碼 （例如，藉由使用 SQL Server Management Studio）。
+指定驅動程式要求安全 (或信任) 的 SQL Server 連接。 選取之後，不論伺服器目前的登入安全性模式為何，SQL Server 都會透過此資料來源，使用整合式登入安全性來建立連接。 所有提供的登入識別碼或密碼都會被忽略。 SQL Server 系統管理員必須已將您的 Windows 登入與 SQL Server 登入識別碼相關聯 (例如, 藉由使用 SQL Server Management Studio)。
 
 (選擇性) 您可以指定伺服器的服務主體名稱 (SPN)。
 
 ### <a name="with-active-directory-integrated-authentication"></a>使用 Active Directory 整合式驗證
 
-指定驅動程式會向使用 Azure Active Directory 的 SQL Server。 選取之後，不論伺服器目前的登入安全性模式為何，SQL Server 都會透過此資料來源，使用 Azure Active Directory 整合式登入安全性來建立連接。
+指定驅動程式使用 Azure Active Directory 向 SQL Server 進行驗證。 選取之後，不論伺服器目前的登入安全性模式為何，SQL Server 都會透過此資料來源，使用 Azure Active Directory 整合式登入安全性來建立連接。
 
 ### <a name="with-sql-server-authentication"></a>使用 SQL Server 驗證
 
-指定驅動程式會向 SQL Server 使用的登入識別碼和密碼。
+指定驅動程式使用登入識別碼和密碼向 SQL Server 進行驗證。
 
 ### <a name="with-active-directory-password-authentication"></a>使用 Active Directory 密碼驗證
 
-指定驅動程式會向使用 Azure Active Directory 登入識別碼和密碼的 SQL Server。
+指定驅動程式使用 Azure Active Directory 登入識別碼和密碼向 SQL Server 進行驗證。
 
 ### <a name="with-active-directory-interactive-authentication"></a>使用 Active Directory 互動式驗證
 
-指定驅動程式會向 SQL Server 使用 Azure Active Directory 互動模式，藉由提供登入識別碼。 這會觸發 Windows Azure 驗證提示對話方塊。
+指定驅動程式會藉由提供登入識別碼, 使用 Azure Active Directory 互動模式來驗證 SQL Server。 這會觸發 [Windows Azure 驗證提示] 對話方塊。
 
 ### <a name="login-id"></a>登入識別碼
 
-指定當連接到 SQL Server 中，如果驅動程式會使用登入識別碼**與使用 SQL Server 驗證登入識別碼和使用者所輸入的密碼**或**與 Active Directory 密碼驗證登入識別碼和使用者所輸入的密碼**或是**使用登入識別碼與 Active Directory 互動式驗證使用者輸入**已選取。 這僅適用於用來決定伺服器預設值的連接，而不適用於建立此連接之後，使用資料來源所建立的後續連接。
+指定當使用使用者輸入的登入識別碼**和密碼**, 或使用**使用者輸入的登入識別碼和密碼 Active Directory 密碼驗證, 連接到 SQL Server SQL Server 時, 驅動程式所使用的登入識別碼。** 或者 **, 使用使用者所輸入之登入識別碼的 Active Directory 互動式驗證**。 這僅適用於用來決定伺服器預設值的連接，而不適用於建立此連接之後，使用資料來源所建立的後續連接。
 
 ### <a name="password"></a>[密碼]
 
-指定當連接到 SQL Server 中，如果驅動程式會使用的密碼**與使用 SQL Server 驗證登入識別碼和使用者所輸入的密碼**或**與 Active Directory 密碼驗證登入識別碼與使用者所輸入的密碼**已選取。 這僅適用於用來決定伺服器預設值的連接，而不適用於使用新的資料來源建立的後續連接。
+指定當使用**使用者輸入的登入識別碼和密碼**, 或使用**使用者所輸入的登入識別碼和密碼 Active Directory 密碼驗證, 連接到 SQL Server 時, 驅動程式使用的密碼 (如果有 SQL Server 驗證)** 已選取。 這僅適用於用來決定伺服器預設值的連接，而不適用於使用新的資料來源建立的後續連接。
 
-這兩個**登入識別碼**並**密碼**方塊會停用，如果**使用整合式 Windows 驗證**或**與 Active Directory 整合式驗證**已選取。
+如果**使用整合式 Windows 驗證**, 或選取**了 Active Directory 整合式驗證**, 則會停用 [**登入識別碼**] 和 [**密碼**] 方塊。
 
 ### <a name="next"></a>下一個
 
-繼續進行精靈的下一個畫面。
+繼續前往 wizard 的下一個畫面。
 
 ### <a name="back"></a>上一頁
 
-若要返回精靈的前一個畫面。
+回到 wizard 的上一個畫面。
 
 ## <a name="next-steps"></a>後續步驟
 

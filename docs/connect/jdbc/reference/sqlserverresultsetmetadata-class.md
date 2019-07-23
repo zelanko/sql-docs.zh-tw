@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a36885f-83f3-44af-85f0-2b849dfd20d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1c5f19b8ffbc3fff80c07c4f42592354cdbc9736
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1b109a8e6cc04d1791ecd5635aee46886eead5ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970550"
 ---
 # <a name="sqlserverresultsetmetadata-class"></a>SQLServerResultSetMetaData 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

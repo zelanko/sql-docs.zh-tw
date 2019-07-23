@@ -1,5 +1,5 @@
 ---
-title: 項目名稱的索引 (DTA) |Microsoft Docs
+title: Index 的 Name 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3e9b4ec0464d1645b4ca0576b71c8fffa2cdbd1a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f2d9ba05cb38d98823d6bf37cab92194e9e610d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034709"
 ---
 # <a name="name-element-for-index-dta"></a>索引的 Name 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

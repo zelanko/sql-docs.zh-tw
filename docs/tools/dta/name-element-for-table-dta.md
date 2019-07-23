@@ -1,5 +1,5 @@
 ---
-title: 項目名稱的資料表 (DTA) |Microsoft Docs
+title: 資料表的 Name 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d8fb8518e3e46839402ecb3615a83e3c47a0bc24
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: cde36fc8bc0ffb442d641abb49f842ead832fc57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034596"
 ---
 # <a name="name-element-for-table-dta"></a>資料表的 Name 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
