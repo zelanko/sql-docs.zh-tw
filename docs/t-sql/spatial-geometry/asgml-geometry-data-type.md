@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: fcf83925a7093edd44ddf46c31bee4297631bf10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11fe7041212c668855c86664362d555696f36bbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017576"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

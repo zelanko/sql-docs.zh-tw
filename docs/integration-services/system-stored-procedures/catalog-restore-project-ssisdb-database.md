@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af878e23862e791443ad0057997cf93d0eab8ca1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1324fb5e048c8bbaa14e113d998f9b76e47d9b6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897919"
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project (SSISDB 資料庫)
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7b966741a1a6183379f7f2b1f4fa45c37e8044eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c613a95ea3bee42d51ac1805ff65281fa96ec33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101193"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

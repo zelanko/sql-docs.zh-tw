@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a69ce283a920e8ab7e8434bfaaf793477fa9acb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c494c4880ee1ffe2cafa2eae61c617b1222b4a84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099820"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity
 

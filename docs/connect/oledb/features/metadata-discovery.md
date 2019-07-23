@@ -1,6 +1,6 @@
 ---
 title: 中繼資料探索 |Microsoft Docs
-description: 在 OLE DB Driver for SQL Server 中的中繼資料探索
+description: SQL Server OLE DB 驅動程式中的中繼資料探索
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ed5020498dee14a34bd66076fc74a578bc09e69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989058"
 ---
 # <a name="metadata-discovery"></a>中繼資料探索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "66765983"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   Icommandwithparameters:: Getparameterinfo (請參閱[ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md)如需詳細資訊)  
+-   ICommandWithParameters:: GetParameterInfo (如需詳細資訊, 請參閱[ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) )  
   
  當您使用 IBCPSession::BCPSetBulkMode 來指定中繼資料格式時，也會看見效能改進  
   
- 改良的中繼資料探索，OLE DB driver for SQL Server 有可能因為兩個預存程序中加入[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ SQL Server 的 OLE DB 驅動程式中已改善的中繼資料探索可能是因為在中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]加入了兩個預存程式:  
   
 -   sp_describe_first_result_set  
   

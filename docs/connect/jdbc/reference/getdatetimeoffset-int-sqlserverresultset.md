@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 60abf83d-6f97-4e47-b9d3-5072bd09d869
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37bd84db5e5aeb4355234d126c4356b73a5ec6d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8727895a3f8f045de748635418da2c2864a64aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983868"
 ---
 # <a name="getdatetimeoffsetint-sqlserverresultset"></a>getDateTimeOffset(int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int columnIndex)
  資料行序數。  
   
 ## <a name="return-value"></a>傳回值  
- A [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)物件。  
+ [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 您可以更新[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值替換[sqlserverresultset.updatedatetimeoffset 來](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)。  
+## <a name="remarks"></a>Remarks  
+ 您可以使用[SQLServerResultSet. updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)來更新[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

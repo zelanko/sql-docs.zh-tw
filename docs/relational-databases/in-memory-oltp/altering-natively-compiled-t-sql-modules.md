@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ff4159d8584a6670b60dd7c0d9c0b890c8df09
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 03f7e4fd87068e31674e74dc81dd33dadba323cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951260"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>更改原生編譯的 T-SQL 模組
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 737872cdf8d05d75a7849c107089f30d25650572
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2110726db47cf76adffca4b10f153ce941565cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62649508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093497"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server 的 FileTable 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

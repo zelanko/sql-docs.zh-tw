@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: a6744060b9ef3a6500c68d772645f12ecf8f2909
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05f4ddd6366fbb09b4c5f0c9dd186f415fdc16ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066138"
 ---
 # <a name="sty-geometry-data-type"></a>STY (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

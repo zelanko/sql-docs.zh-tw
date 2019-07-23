@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cab62307fa880ff6ac4f1a948c3abfa138ca1377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80806315a1957e0ca165ad966f0f1999b6a732a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086547"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>第 2 課：在 SSIS 中建立部署配套
 

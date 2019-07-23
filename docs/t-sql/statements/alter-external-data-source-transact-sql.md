@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc70465eac81711cfcc3fd500c45e92f682b792c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 25df03e48d08e09033b52e4b51c11d3ecc4db4ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065647"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
 TYPE = BLOB_STORAGE   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
-僅適用於大量作業，`LOCATION` 必須是有效的 Azure Blob 儲存體 URL。 不要將 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
+僅適用於大量作業，`LOCATION` 必須是有效的 Azure Blob 儲存體 URL。 不要將 **/** 、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
 使用的認證必須利用 `SHARED ACCESS SIGNATURE` 來建立，以作為身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
 
   
@@ -71,7 +70,7 @@ TYPE = BLOB_STORAGE
 ## <a name="remarks"></a>Remarks
  每次只能修改單一來源。 修改相同來源的同時要求會導致一個陳述式進入等待。 不過，可同時修改不同的來源。 這個陳述式可以與其他陳述式同時執行。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  要求 ALTER ANY EXTERNAL DATA SOURCE 權限。
  > [!IMPORTANT]  
  >  ALTER ANY EXTERNAL DATA SOURCE 權限可讓任何主體都能夠建立及修改任何外部資料來源物件，因此也會讓主體能夠存取資料庫上的所有資料庫範圍認證。 必須將此權限視為具高度權限，因此必須僅授與系統中受信任的主體。

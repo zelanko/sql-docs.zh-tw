@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: e9f3a9a7a51bd0ca96a21806a11334df6f264753
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89d2da02b841edd85d58798ca4c7c1745332d536
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66749135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093643"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、資料庫複本
 

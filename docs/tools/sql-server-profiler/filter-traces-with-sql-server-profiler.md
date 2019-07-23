@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6fc203158c80ffdb92903e49a307ac0a816d57ac
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e7e04234c6a3ca73b1b4a6689773e8cb55c91698
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074997"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 篩選追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

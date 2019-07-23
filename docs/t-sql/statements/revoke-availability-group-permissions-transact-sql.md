@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 201e7de473a344d0d41269b259c503dc34f2a78c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082356"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>撤銷可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  指定可以撤銷的可用性群組權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- 指定要撤銷其權限的可用性群組。 範圍限定詞 (**::**) 是必要項。  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ 指定要撤銷其權限的可用性群組。 範圍限定詞 ( **::** ) 是必要項。  
   
  { FROM | TO } \<server_principal> 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
@@ -100,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要可用性群組的 CONTROL 權限或伺服器的 ALTER ANY AVAILABILITY GROUP 權限。  
   
 ## <a name="examples"></a>範例  

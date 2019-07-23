@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1dcaf8e01a1ebb0f2ed0d7f33988de2aec6327cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc1307c49bca581c3ec036d28067dafa62b7a5b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049642"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 執行個體
 

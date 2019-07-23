@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 8b255f03070bffb289184a1dbf6ec9fdedbbec4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c77d87f1ffe0083662f9f4fcfe643de3359ea59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012970"
 ---
 # <a name="clr-strict-security"></a>CLR 嚴格安全性   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

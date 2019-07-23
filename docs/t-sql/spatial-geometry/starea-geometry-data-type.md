@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 24ebfb84c17b21116d5571b83adae0d942b31abd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcaad3c2fb8337c64612d5ef5532bcbc4ed4b91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100996"
 ---
 # <a name="starea-geometry-data-type"></a>STArea (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

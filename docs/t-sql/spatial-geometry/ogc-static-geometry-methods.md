@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b6f5a055861ea2d3f0a7cab91fbab3e01832ffba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48f8b8a53f22c4f4e102606ca4e5133b95536be2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101073"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 靜態幾何方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7112a20f7811a0796396045c50b1b243ed0c3802
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970766"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public class SQLServerPreparedStatement
   
  SQLServerPreparedStatement 支援批次處理，也就是一組備妥的陳述式會在單一資料庫來回行程中執行，以改善執行階段效能。  
   
- 此類別支援解除包裝成為 SQLServerPreparedStatement 類別、 ISQLServerPreparedStatement 介面、 java.sql.PreparedStatement 介面和類別及解除包裝成為 SQLServerStatement 所支援的介面。 如需詳細資訊，請參閱 <<c0> [ 包裝函式和介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 這個類別支援解除包裝為 SQLServerPreparedStatement 類別、ISQLServerPreparedStatement 介面、JAVA.sql.preparedstatement 介面, 以及 SQLServerStatement 所支援的類別和介面來解除包裝。 如需詳細資訊, 請參閱包裝函式[和介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

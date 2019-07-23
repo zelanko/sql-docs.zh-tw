@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f9e68149a567b2ccc7b4477e16e5ff39eedf1f6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 464ecdb79ee3a143deccec703438e35217503e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956331"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支援對照表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 347411d840e2019a2a0553340ebf5b821455deea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00d5f282b209c4e705fc07e056f7014c0eaf47bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120814"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

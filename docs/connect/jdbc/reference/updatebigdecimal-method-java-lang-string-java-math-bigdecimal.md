@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b0c1afa9be5944d74a5c8bd8cd7713246e23a36f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5eb50fafceefa312fe1b73daf2b2d88d4238403d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985437"
 ---
 # <a name="updatebigdecimal-method-javalangstring-javamathbigdecimal"></a>updateBigDecimal 方法 (java.lang.String, java.math.BigDecimal)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateBigDecimal(java.lang.String columnName,
   
  *x*  
   
- BigDecimal 物件。  
+ JAVA.math.bigdecimal 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 updateBigDecimal 方法是由 java.sql.ResultSet 介面中的 updateBigDecimal 方法指定。  
+ 這個 updateBigDecimal 方法是由 sql-dmo 介面中的 updateBigDecimal 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateBigDecimal 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   

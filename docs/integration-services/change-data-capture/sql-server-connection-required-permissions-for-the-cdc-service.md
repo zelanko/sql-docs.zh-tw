@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c84ecb01675ffe9e71cfe90cd713e841512a0fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eb635b9b6f6ee1d296e608d65d6f00f0cbb571a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049717"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>SQL Server 連接所需的 CDC 服務權限
 

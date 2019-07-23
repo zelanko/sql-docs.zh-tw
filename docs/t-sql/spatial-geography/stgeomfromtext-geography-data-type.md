@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 6fc2c33daffe05ad996f62f07ae05dd098980e59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90359259bb7ba85377e72c40a8eece79de44cbf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042117"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

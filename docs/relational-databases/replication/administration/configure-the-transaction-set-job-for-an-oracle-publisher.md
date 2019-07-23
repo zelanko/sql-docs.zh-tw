@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98a23215063456a8379abda8384545b5c5e8e15a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ba894550e67896a08e14894c9ab9950f315c3f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939288"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher"></a>設定 Oracle 發行者的交易集作業
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,27 +30,27 @@ ms.locfileid: "47812856"
   
 1.  在「Oracle 發行者」端，將 **job_queue_processes** 初始化參數設定為足夠的值，以允許 Xactset 作業執行。 如需有關此參數的詳細資訊，請參閱「Oracle 發行者」的資料庫文件。  
   
-2.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher**指定「Oracle 發行者」的名稱、針對 **@propertyname** @propertyname **@propertyname**的值，並針對 **@propertyvalue** @propertyname **@propertyvalue**。  
+2.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher** 指定「Oracle 發行者」的名稱、針對 **@propertyname** @propertyname **@propertyname** 的值，並針對 **@propertyvalue** @propertyname **@propertyvalue** 。  
   
-3.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher**指定「Oracle 發行者」的名稱、針對 **@propertyname** @propertyname **@propertyname**的值，並針對 **@propertyvalue**。  
+3.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher** 指定「Oracle 發行者」的名稱、針對 **@propertyname** @propertyname **@propertyname** 的值，並針對 **@propertyvalue** 。  
   
-4.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher**指定「Oracle 發行者」的名稱、針對 **@propertyname** @propertyname **@propertyname**的值，並針對 **@propertyvalue** @propertyname **@propertyvalue**。  
+4.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher** 指定「Oracle 發行者」的名稱、針對 **@propertyname** @propertyname **@propertyname** 的值，並針對 **@propertyvalue** @propertyname **@propertyvalue** 。  
   
 ### <a name="to-configure-the-transaction-set-job"></a>若要設定交易集作業  
   
-1.  (選擇性) 在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher**。 這麼做會傳回「發行者」端 **Xactset** 作業的屬性。  
+1.  (選擇性) 在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher** 。 這麼做會傳回「發行者」端 **Xactset** 作業的屬性。  
   
-2.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher**的「Oracle 發行者」名稱、指定針對 **@propertyname**所設定之 Xactset 作業屬性的名稱，並指定 **@propertyvalue**。  
+2.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher** 的「Oracle 發行者」名稱、指定針對 **@propertyname** 所設定之 Xactset 作業屬性的名稱，並指定 **@propertyvalue** 。  
   
 3.  (選擇性) 針對每個要設定的 Xactset 作業屬性重複步驟 2。 在變更 **xactsetjobinterval** 屬性時，您必須在「Oracle 發行者」上重新啟動作業，新的間隔才會生效。  
   
 ### <a name="to-view-properties-of-the-transaction-set-job"></a>若要檢視交易集作業的屬性  
   
-1.  在「散發者」端執行 [sp_helpxactsetjob](../../../relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md)。 針對 **@publisher**。  
+1.  在「散發者」端執行 [sp_helpxactsetjob](../../../relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md)。 針對 **@publisher** 。  
   
 ### <a name="to-disable-the-transaction-set-job"></a>若要停用交易集作業  
   
-1.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher**指定「Oracle 發行者」的名稱、針對 **@propertyname** @propertyname **@propertyname**的值，並針對 **@propertyvalue** @propertyname **@propertyvalue**。  
+1.  在「散發者」端執行 [sp_publisherproperty &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)。 針對 **@publisher** 指定「Oracle 發行者」的名稱、針對 **@propertyname** @propertyname **@propertyname** 的值，並針對 **@propertyvalue** @propertyname **@propertyvalue** 。  
   
 ## <a name="example"></a>範例  
  下列範例會啟用 `Xactset` 作業，並在執行之間設定三分鐘的間隔。  

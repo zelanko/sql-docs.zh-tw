@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70fc970a214c001e00703ddaa79438d59e31e487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a072483769e4e75ac21b992b0fefa462640fa31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984603"
 ---
 # <a name="connected-database-development"></a>連接的資料庫開發
 本節將說明 SQL Server Data Tools 所提供用於設計及查詢連接的資料庫的功能。  

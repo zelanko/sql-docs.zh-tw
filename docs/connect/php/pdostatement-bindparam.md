@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936159"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,12 +38,12 @@ $*data_type*：選擇性 (整數) PDO::PARAM_* 常數。 預設值是 PDO::PARAM
   
 $*length*：資料類型的選擇性 (整數) 長度。 您可以指定 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE，以指出在 $*data_type* 中使用 PDO::PARAM_INT 或 PDO::PARAM_BOOL 時的預設大小。  
   
-$*driver_options*： 選用 （混合） 驅動程式特有的選項。 例如，您可以指定 PDO::SQLSRV_ENCODING_UTF8，以 UTF-8 編碼的字串形式將資料行繫結至變數。  
+$*driver_options*: 選擇性 (混合) 驅動程式特有的選項。 例如，您可以指定 PDO::SQLSRV_ENCODING_UTF8，以 UTF-8 編碼的字串形式將資料行繫結至變數。  
   
 ## <a name="return-value"></a>傳回值  
 如果成功，則為 TRUE，否則為 FALSE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 將 Null 資料繫結至屬於 varbinary、binary 或 varbinary(max) 類型的伺服器資料行時，您應使用 $*driver_options* 指定二進位編碼 (PDO::SQLSRV_ENCODING_BINARY)。 如需編碼常數的詳細資訊，請參閱[常數](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
@@ -100,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> 時的輸出參數繫結至一個 bigint 型別，如果值可能超出範圍的最後[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，pdo:: PARAM_INT 使用 pdo:: SQLSRV_PARAM_OUT_DEFAULT_SIZE 可能會導致 「 超出範圍的值 」 例外狀況。 因此，改為使用的預設值為 pdo:: PARAM_STR，並提供產生的字串，最多為 21 的大小。 它是數字，包括任何的 bigint 值的負號的最大數目。 
+> 將輸出參數系結至 Bigint 型別時, 如果值的結尾可能超出[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍, 使用 pdo::P ARAM_INT 搭配 pdo:: SQLSRV_PARAM_OUT_DEFAULT_SIZE 可能會產生「值超出範圍」例外狀況。 因此, 請改為使用預設的 PDO::P ARAM_STR, 並提供所產生字串的大小, 最多為21。 這是任何 Bigint 值的最大數位數目, 包括負號。 
 
 ## <a name="example"></a>範例  
 此程式碼範例說明如何使用輸入/輸出參數。  

@@ -9,14 +9,13 @@ ms.technology: integration-services
 ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
-manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e62cecbb3b0d041ea1408b5bd992664e00d11aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a1717afb32a5763c6fc73a86151b041069b467c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038597"
 ---
 # <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info (SSISDB 資料庫)
 

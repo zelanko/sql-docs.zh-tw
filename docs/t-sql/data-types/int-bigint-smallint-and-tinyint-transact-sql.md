@@ -27,21 +27,20 @@ helpviewer_keywords:
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077905"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 使用整數資料的 Exact-number 資料類型。 若要節省資料庫中的空間，請使用能夠包含所有可能值的最小資料類型。 例如，若要儲存一個人的年齡，tinyint 便已足夠，因為沒有人的年齡會超過 255 歲。 但 tinyint 在用於建築物的屋齡上便可能不足，因為建築物的屋齡可超過 255 年。
   
-|資料類型|範圍|Storage|  
+|資料類型|範圍|儲存體|  
 |---|---|---|
 |**bigint**|-2^63 (-9,223,372,036,854,775,808) 到 2^63-1 (9,223,372,036,854,775,807)|8 個位元組|  
 |**int**|-2^31 (-2,147,483,648) 到 2^31-1 (2,147,483,647)|4 個位元組|  
@@ -58,9 +57,9 @@ ms.locfileid: "56802572"
 > [!CAUTION]  
 >  當您使用 +、-、\*、/ 或 % 算術運算子，以隱含或明確方式，將 **int**、**smallint**、**tinyint** 或 **bigint** 常數值轉換為 **float**、**real**、**decimal** 或 **numeric** 資料類型時， 在計算運算式結果的資料類型和有效位數時 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所套用的規則，會根據查詢是否自動參數化而有所不同。  
 >   
->  因此，查詢中類似的運算式，有時候也會產生不同的結果。 如果查詢不是自動參數化，則常數值會先轉換為 **numeric** (其有效位數只是剛好可以容納常數值) 之後，再轉換為指定的資料類型。 例如，常數值 1 會轉換成 **numeric (1, 0)**，常數值 250 則會轉換成 **numeric (3, 0)**。  
+>  因此，查詢中類似的運算式，有時候也會產生不同的結果。 如果查詢不是自動參數化，則常數值會先轉換為 **numeric** (其有效位數只是剛好可以容納常數值) 之後，再轉換為指定的資料類型。 例如，常數值 1 會轉換成 **numeric (1, 0)** ，常數值 250 則會轉換成 **numeric (3, 0)** 。  
 >   
->  當查詢經過自動參數化時，常數值一律會先轉換為 **numeric (10, 0)**，再轉換為最終資料類型。 如果有用到 / 運算子，則不僅類似查詢的結果類型有效位數不同，結果值也可能不一樣。 例如，包含運算式 `SELECT CAST (1.0 / 7 AS float)` 的自動參數化查詢結果值，與非自動化參數之相同查詢的結果值不同，因為自動化參數的查詢結果，會配合 **numeric (10, 0)** 資料類型而被截斷。  
+>  當查詢經過自動參數化時，常數值一律會先轉換為 **numeric (10, 0)** ，再轉換為最終資料類型。 如果有用到 / 運算子，則不僅類似查詢的結果類型有效位數不同，結果值也可能不一樣。 例如，包含運算式 `SELECT CAST (1.0 / 7 AS float)` 的自動參數化查詢結果值，與非自動化參數之相同查詢的結果值不同，因為自動化參數的查詢結果，會配合 **numeric (10, 0)** 資料類型而被截斷。  
   
 ## <a name="converting-integer-data"></a>轉換整數資料
 當整數隱含地轉換成字元資料類型時，如果該整數太大而無法放入字元欄位中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會輸入 ASCII 字元 42，也就是星號 (*)。

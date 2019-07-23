@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8844ad89a8f0e7c1663bc8aadf8479764987b31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e26c0e06ea9a71bdb6b9e39126e646d22ad40ea2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014983"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +38,7 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>傳回值  
 如果計算資料列數目時發生錯誤，則會傳回**false** 。 否則會傳回結果集內的資料列數目。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 sqlsrv_num_rows 需要用戶端、靜態或索引鍵集資料指標，如果您使用順向資料指標或動態資料指標，則會傳回 **false**。 (預設值為順向資料指標)。如需資料指標的詳細資訊，請參閱 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 和[資料指標類型 &#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>範例  

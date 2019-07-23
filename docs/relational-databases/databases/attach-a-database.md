@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3c7b7588801419f57d04996d6bd2cad335a9eede
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: ca1ff898841b946c0823b71b065f360a59e69696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071698"
 ---
 # <a name="attach-a-database"></a>附加資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

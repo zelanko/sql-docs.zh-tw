@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0330ca1d-5e24-4ce3-9d2a-b931f20a0fcf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b424fafe85baf584e3cadc96ee4fe478940b8649
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 393eba0d3ac6df43427e4b5f5774479c43f9bedc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952896"
 ---
 # <a name="getcolumnname-method-sqlserverresultsetmetadata"></a>getColumnName 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getColumnName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getColumnName 方法是由 java.sql.ResultSetMetaData 介面中 getColumnName 方法指定。  
+ 這個 getColumnName 方法是由 ResultSetMetaData 介面中的 getColumnName 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSetMetaData 方法](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

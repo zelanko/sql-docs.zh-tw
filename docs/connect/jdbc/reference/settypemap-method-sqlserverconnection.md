@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01548f5d9a2e54607ff0b260a39724591de4380e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a188d5d98aca0418a2452f29912f62604f3ffa90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972167"
 ---
 # <a name="settypemap-method-sqlserverconnection"></a>setTypeMap 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public void setTypeMap(java.util.Map map)
 #### <a name="parameters"></a>參數  
  *map*  
   
- TypeMap 物件。  
+ Typemap object 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setTypeMap 方法是由 java.sql.Connection 介面中的 setTypeMap 方法指定。  
+ 這個 setTypeMap 方法是由連接介面中的 setTypeMap 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

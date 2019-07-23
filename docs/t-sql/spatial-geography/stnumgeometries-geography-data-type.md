@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 1a5cf36976538bc264ec96ea7a3f5835dc9ad9bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a1150128c281be485ca23dab65db3d82b88e1f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120910"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

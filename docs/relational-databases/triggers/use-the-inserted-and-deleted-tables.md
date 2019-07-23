@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c0c75d1bbeb25dade2bb8e333067fb244d8248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075503"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入或刪除的資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47830996"
 > [!NOTE]  
 >  若觸發程序動作依據被修改的資料列數目來決定啟動與否時，則可利用對多資料列資料修改 (依據 SELECT 陳述式的 INSERT、DELETE 或 UPDATE) 的測試 (如 @@ROWCOUNT 的檢查)，以決定執行何者動作。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AFTER 觸發程序的已插入或已刪除的資料表中，不允許 **text**、 **ntext**，或 **image** 資料行參考。 但還是包含這些資料類型，僅做為回溯相容性的目的使用。 大型資料的慣用儲存體應使用 **varchar(max)**、 **nvarchar(max)**，以及 **varbinary(max)** 資料類型。 AFTER 和 INSTEAD OF 兩個觸發程序都支援已插入及已刪除資料表中的 **varchar(max)**、**nvarchar(max)**，和 **varbinary(max)** 資料。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] AFTER 觸發程序的已插入或已刪除的資料表中，不允許 **text**、 **ntext**，或 **image** 資料行參考。 但還是包含這些資料類型，僅做為回溯相容性的目的使用。 大型資料的慣用儲存體應使用 **varchar(max)** 、 **nvarchar(max)** ，以及 **varbinary(max)** 資料類型。 AFTER 和 INSTEAD OF 兩個觸發程序都支援已插入及已刪除資料表中的 **varchar(max)** 、**nvarchar(max)** ，和 **varbinary(max)** 資料。 如需詳細資訊，請參閱 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  **在觸發程序中使用 inserted 資料表來強制執行商務規則的範例**  
   

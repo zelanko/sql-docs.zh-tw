@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081759"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>記憶體最佳化資料表的交易
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ ALTER DATABASE CURRENT
   
 下表列出可能的交易隔離等級，順序從隔離程度最低到最高。 如需會發生的衝突以及處理這些衝突之重試邏輯的詳細資訊，請參閱 [衝突偵測和重試邏輯](#conflict-detection-and-retry-logic)。 
   
-| 隔離等級 | 描述 |   
+| 隔離等級 | Description |   
 | :-- | :-- |   
 | READ UNCOMMITTED | 無法使用：READ UNCOMMITTED 隔離下無法存取記憶體最佳化資料表。 如果工作階段層級的 TRANSACTION ISOLATION LEVEL 設為 READ UNCOMMITTED，使用 WITH (SNAPSHOT) 資料表提示或將資料庫設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設為 ON，仍有可能存取 SNAPSHOT 隔離下的記憶體最佳化資料表。 | 
 | READ COMMITTED | 只有在自動認可模式作用時，才受記憶體最佳化資料表支援。 如果工作階段層級的 TRANSACTION ISOLATION LEVEL 設為 READ COMMITTED，使用 WITH (SNAPSHOT) 資料表提示或將資料庫設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設為 ON，仍有可能存取 SNAPSHOT 隔離下的記憶體最佳化資料表。<br/><br/>如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON，不允許存取相同陳述式中 READ COMMITTED 隔離下的記憶體最佳化和磁碟資料表。 |  
@@ -140,7 +139,7 @@ ALTER DATABASE CURRENT
 
 以下是當交易存取記憶體最佳化資料表時，會導致交易失敗的錯誤狀況。
 
-| 錯誤碼 | 描述 | 原因 |
+| 錯誤碼 | Description | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 嘗試更新目前交易開始後，已在其他交易中更新的資料列。 | 如果兩筆並行交易同時嘗試更新或刪除相同的資料列，就會發生這個錯誤狀況。 其中一筆交易會收到這個錯誤訊息，且必須重試。 <br/><br/>  | 
 | **41305**| 可重複的讀取驗證失敗。 這筆交易完成認可前，從記憶體最佳化資料表讀取的資料列已為另一筆認可的交易更新。 | 使用 REPEATABLE READ 或 SERIALIZABLE 隔離時，如果並行交易的動作又造成 FOREIGN KEY 條件約束違規，就會發生此錯誤。 <br/><br/>這種外部索引鍵條件約束的並行違規很少見，通常是應用程式邏輯或資料項目的問題。 不過，如果和 FOREIGN KEY 條件約束有關的資料行沒有索引，也會發生此錯誤。 因此，指引是一律在記憶體最佳化資料表中，建立外部索引鍵資料行的索引的上。 <br/><br/> 如需外部索引鍵違規所致驗證失敗的詳細考量，請參閱 SQL Server 客戶諮詢小組的 [部落格文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  

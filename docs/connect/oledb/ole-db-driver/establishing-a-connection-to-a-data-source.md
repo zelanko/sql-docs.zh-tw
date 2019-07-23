@@ -1,6 +1,6 @@
 ---
-title: 建立資料來源的連接 |Microsoft Docs
-description: 建立資料來源使用 OLE DB Driver for SQL Server 的連接
+title: 建立與資料來源的連接 |Microsoft Docs
+description: 使用適用于 SQL Server 的 OLE DB 驅動程式來建立資料來源的連接
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d4a01b560c5612df2db873728747fa2481a2760f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995001"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立資料來源的連接
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  若要存取 OLE DB Driver for SQL Server，取用者必須先呼叫 **CoCreateInstance** 方法來建立資料來源物件的執行個體。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 OLE DB driver for SQL Server，類別識別項是 CLSID_MSOLEDBSQL。 您也可以使用該符號會解析為 OLE DB 驅動程式，會在您參考 msoledbsql.h 的 SQL server 的 MSOLEDBSQL_CLSID。  
+  若要存取 OLE DB Driver for SQL Server，取用者必須先呼叫 **CoCreateInstance** 方法來建立資料來源物件的執行個體。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 針對 SQL Server 的 OLE DB 驅動程式, 類別識別碼為 CLSID_MSOLEDBSQL。 您也可以使用符號 MSOLEDBSQL_CLSID, 針對您所參考的內含 msoledbsql.h 中所使用的 SQL Server, 解析為 OLE DB 驅動程式。  
   
  資料來源物件會公開 **IDBProperties** 介面，取用者可以使用這個介面來提供基本驗證資訊；例如，伺服器名稱、資料庫名稱、使用者識別碼和密碼。 呼叫 **IDBProperties::SetProperties** 方法可設定這些屬性。  
   
@@ -47,7 +46,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
   
  呼叫 **CoCreateInstance** 會建立與 CLSID_MSOLEDBSQL 建立關聯之類別的單一物件 (與資料建立關聯的 CSLID 以及建立物件所使用的程式碼)。 IID_IDBInitialize 是介面 (**IDBInitialize**) 識別項的參考，用於與物件進行通訊。  
   
- 下列範例示範如何初始化並建立資料來源的連接。
+ 下列範例示範如何初始化和建立與資料來源的連接。
   
 ```cpp
 #include "msoledbsql.h"

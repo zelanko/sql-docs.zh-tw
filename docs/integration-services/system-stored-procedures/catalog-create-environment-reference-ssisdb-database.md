@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73871d69a8fbdc56b2359aa888cbc08e572a6107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0c6bb006df112a56b0924b3fc7d90d5318a4ace
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110369"
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference (SSISDB 資料庫)
 
@@ -40,19 +39,19 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>引數  
  [ @folder_name = ] *folder_name*  
- 參考環境之專案的資料夾名稱。 *folder_name* 是 **nvarchar(128)**。  
+ 參考環境之專案的資料夾名稱。 *folder_name* 是 **nvarchar(128)** 。  
   
  [ @project_name = ] *project_name*  
- 參考環境的專案名稱。 *project_name* 是 **nvarchar(128)**。  
+ 參考環境的專案名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @environment_name = ] *environment_name*  
- 正在參考的環境名稱。 *environment_name* 是 **nvarchar(128)**。  
+ 正在參考的環境名稱。 *environment_name* 是 **nvarchar(128)** 。  
   
  [ @reference_location = ] *reference_location*  
- 指出環境會位於與專案相同的資料夾 (相對參考) 中，或是在不同的資料夾 (絕對參考) 中。 使用值 `R` 表示相對參考。 使用值 `A` 表示絕對參考。 *reference_location* 是 **char(1)**。  
+ 指出環境會位於與專案相同的資料夾 (相對參考) 中，或是在不同的資料夾 (絕對參考) 中。 使用值 `R` 表示相對參考。 使用值 `A` 表示絕對參考。 *reference_location* 是 **char(1)** 。  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- 正在參考之環境的所在資料夾名稱。 對於絕對參考來說，這個值是必要值。 *environment_folder_name* 是 **nvarchar(128)**。  
+ 正在參考之環境的所在資料夾名稱。 對於絕對參考來說，這個值是必要值。 *environment_folder_name* 是 **nvarchar(128)** 。  
   
  [ @reference_id = ] *reference_id*  
  傳回新參考的唯一識別碼。 這個參數是選擇性的。 *reference_id* 是 **bigint**。  

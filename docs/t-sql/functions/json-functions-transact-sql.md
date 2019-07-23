@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: bd5ea0433b1cbdee6adf97dbab9a2dcdddcb8389
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b83e6f6eefce1cf56b71e7d433dca19cb4575d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109423"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 函式 (Transact-SQL)
 

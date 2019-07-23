@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 360e0251a88d0b680334afba040b1fc49de44302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebccf6357c759f5a25d128933b6fa939157a555a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064911"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

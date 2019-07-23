@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9d8b235e-4208-40ee-b5a5-bc76f73b82f8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 766799b3680f7d16e256a908e01dfc430b454447
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c6ed0abcdd8d18a40cbf7ee9448af55270a81be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954245"
 ---
 # <a name="getasciistream-int"></a>getAsciiStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

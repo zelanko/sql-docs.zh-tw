@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 51466cf36c27dac74b928ec38d5af866a1d9099d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf71ed3b7bba7eabf66c4a282b16bd76e1f5bdbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096964"
 ---
 # <a name="xml-data-sql-server"></a>XML 資料 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5a582a95223fd47863a6e42b8426ccfb13fcda59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f378c080472ed9004311d0cc73724e2a8c5e263
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992708"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,9 +41,9 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>傳回值  
 陣列的 **array** ，或為 **false**。 此陣列包含結果集內各欄位的一個陣列。 每個子陣列都有如下表中所述的索引鍵。 如果擷取欄位中繼資料發生錯誤，則會傳回 **false** 。  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
-|名稱名稱|欄位所對應的資料行名稱。|  
+|[屬性]|欄位所對應的資料行名稱。|  
 |類型|對應至 SQL 類型的數值。|  
 |大小|字元類型 (char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML) 之欄位的字元數目。 二進位類型 (binary(n)、varbinary(n)、UDT) 之欄位的位元組數目。 **NULL** 適用於其他 SQL Server 資料類型。|  
 |有效位數|變數有效位數 (real、numeric、decimal、datetime2、datetimeoffset 和 time) 之類型的有效位數。 **NULL** 適用於其他 SQL Server 資料類型。|  
@@ -66,7 +65,7 @@ sqlsrv_field_metadata( resource $stmt)
 |Decimal|SQL_DECIMAL (3)|1/38|0/有效位數值||  
 |FLOAT|SQL_FLOAT (6)|4/8|||  
 |image|SQL_LONGVARBINARY (-4)|||2 GB|  
-|ssNoversion|SQL_INTEGER (4)||||  
+|INT|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
 |NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR (-10)|||1 GB|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf6238ae842b07309e8404e4a12537c9245f56f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006820"
 ---
 # <a name="example-querying-xmltype-columns"></a>範例查詢 XMLType 資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

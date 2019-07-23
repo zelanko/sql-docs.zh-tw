@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: f69ffb05414d8e2fdfd3886106a9cfebd1f4d688
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8669d2d4a04fba9a18f091dabab04fc1284ce03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042256"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

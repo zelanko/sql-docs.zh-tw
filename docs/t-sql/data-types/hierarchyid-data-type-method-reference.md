@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4c3f4ed7312afcd19e7244b98ba781753ee22b9f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077899"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 資料類型方法參考
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "56027524"
   
 -   /0.1/0.2/  
   
-您可以在任何位置插入節點。 在 **/1/2/** 之後而在 **/1/3/** 之前插入的節點可以表示成 **/1/2.5/**。 在 0 之前插入的節點具有負數的邏輯表示。 例如，在 **/1/1/** 之前的節點可以表示成 **/1/-1/**。 節點不能有前置零。 例如，**/1/1.1/** 有效，但是 **/1/1.01/** 則無效。 若要避免發生錯誤，請使用 [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) 方法來插入節點。
+您可以在任何位置插入節點。 在 **/1/2/** 之後而在 **/1/3/** 之前插入的節點可以表示成 **/1/2.5/** 。 在 0 之前插入的節點具有負數的邏輯表示。 例如，在 **/1/1/** 之前的節點可以表示成 **/1/-1/** 。 節點不能有前置零。 例如， **/1/1.1/** 有效，但是 **/1/1.01/** 則無效。 若要避免發生錯誤，請使用 [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) 方法來插入節點。
   
 ## <a name="data-type-conversion"></a>資料類型轉換
 **hierarchyid** 資料類型可以轉換成其他資料類型，如下所示：

@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd7cb0660f00fb2b989afa577f95eed8aec83b5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f63d4ed3b2f87d6062dee9ebf5b5ad002f0907c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999746"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group 事件類別
 

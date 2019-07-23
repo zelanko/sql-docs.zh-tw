@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 875b66df7f2788d253bad98b92f19c7d63393885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061033"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,13 +55,13 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  指定所要建立之認證的名稱。 *credential_name* 的開頭不可以是編號 (#) 符號。 系統認證必須以 ## 為開頭。  當使用共用存取簽章 (SAS) 時，此名稱必須符合容器路徑、開頭為 https，而且不能包含正斜線。 請參閱下方範例 D。  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  指定連接到伺服器外部時所要使用的帳戶名稱。 認證用來存取 Azure Key Vault 時，**IDENTITY** 是金鑰保存庫的名稱。 請參閱以下的範例 C。 認證使用共用存取簽章 (SAS) 時，**IDENTITY** 是 *SHARED ACCESS SIGNATURE*。 請參閱下方範例 D。  
  
 > [!IMPORTANT]
 > Azure SQL Database 只支援 Azure Key Vault 與共用存取簽章身分識別。 不支援 Windows 使用者身分識別。
  
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  指定外寄驗證所需的秘密。  
   
  當認證用來存取 Azure Key Vault 時，**CREATE CREDENTIAL** 的 **SECRET** 引數在 Azure Active Directory 中需要**服務主體**的 *\<Client ID>* (不含連字號) 和 *\<Secret>* 才能一起傳遞，並且之間沒有空格。 請參閱以下的範例 C。 當認證使用共用存取簽章時，**SECRET** 是共用存取簽章權杖。 請參閱下方範例 D。  如需有關在 Azure 容器上建立預存存取原則與共用存取簽章的詳細資訊，請參閱[第 1 課：在 Azure 容器上建立預存存取原則和共用存取簽章](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  
@@ -82,7 +81,7 @@ WITH IDENTITY = 'identity_name'
   
  一個登入可以具有多個對應認證，只要這些認證用於不同的提供者即可。 但是，每個登入的每個提供者必須只有一個對應認證。 相同的認證可對應至其他登入。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 **ALTER ANY CREDENTIAL** 權限。  
   
 ## <a name="examples"></a>範例  
@@ -151,7 +150,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 引數要求名稱與容器路徑相符，開頭為 https，而且不包含尾端斜線。 **IDENTITY** 引數需要名稱 *SHARED ACCESS SIGNATURE*。 **SECRET** 引數需要共用存取簽章權杖。  
 >
->  **SHARED ACCESS SIGNATURE 祕密**開頭不應該有 **?**。
+>  **SHARED ACCESS SIGNATURE 祕密**開頭不應該有 **?** 。
   
 ```  
 USE master  

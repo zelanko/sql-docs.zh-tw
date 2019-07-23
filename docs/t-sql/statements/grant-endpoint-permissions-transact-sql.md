@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0e655ac992946cfe08a8ef63c7b6b8de3f8fef45
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050846"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 端點權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  指定可以授與的端點權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- ON ENDPOINT **::**_endpoint_name_  
- 指定要授與其權限的端點。 範圍限定詞 (**::**) 是必要項。  
+ ON ENDPOINT **::** _endpoint_name_  
+ 指定要授與其權限的端點。 範圍限定詞 ( **::** ) 是必要項。  
   
  TO \<server_principal>  
  指定要授與其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
@@ -91,7 +90,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要端點的 CONTROL 權限或伺服器的 ALTER ANY ENDPOINT 權限。  
   
 ## <a name="examples"></a>範例  

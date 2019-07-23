@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ad07cdaffd8e7cd207691e218ad8eaabf293b0db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e47aebb82c0cc3149dae7de697e92c965903a753
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101796"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

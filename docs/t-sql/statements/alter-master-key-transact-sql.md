@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 563f031d16e725fb58535c03c0ea77a81dbef2eb
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071290"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -111,7 +110,7 @@ DROP ENCRYPTION BY SERVICE MASTER KEY 選項會移除服務主要金鑰對資料
 
 ADD ENCRYPTION BY SERVICE MASTER KEY 會造成利用服務主要金鑰來加密主要金鑰的副本，並將該副本同時儲存在目前資料庫和 master 中。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要資料庫的 CONTROL 權限。 如果已利用密碼加密資料庫主要金鑰，則還需要知道該密碼。
 

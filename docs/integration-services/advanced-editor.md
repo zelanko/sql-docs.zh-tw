@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: da17c68fa5195e836a9471479fdfe9e2ce70a0c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d5c4f71605b8d03549d19ff4943a928f981e8c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070787"
 ---
 # <a name="advanced-editor"></a>進階編輯器
 

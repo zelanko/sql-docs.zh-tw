@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9f730d45-b54a-4961-950e-f4447f7225e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aff8b39940b9074160167c63f264f75aa2a9b9f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06da29ea9986281bd89225c1e36920fb4de26d82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953771"
 ---
 # <a name="getblob-method-javalangstring-sqlserverresultset"></a>getBlob 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.sql.Blob getBlob(java.lang.String colName)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getBlob 方法是由 java.sql.ResultSet 介面中的 getBlob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

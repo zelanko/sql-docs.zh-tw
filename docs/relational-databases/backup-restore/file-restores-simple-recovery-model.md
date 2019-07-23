@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 489f5637aea2bc97dfcbb009d45747606b1ad9ae
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138735"
 ---
 # <a name="file-restores-simple-recovery-model"></a>檔案還原 (簡單復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +37,13 @@ ms.locfileid: "54241959"
   
 -   離線檔案還原  
   
-     在 *「離線檔案還原」*(Offline File Restore) 中，還原損毀的檔案或檔案群組時，資料庫處於離線狀態。 在還原順序結束後，資料庫會恢復上線。  
+     在 *「離線檔案還原」* (Offline File Restore) 中，還原損毀的檔案或檔案群組時，資料庫處於離線狀態。 在還原順序結束後，資料庫會恢復上線。  
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的所有版本都支援離線檔案還原。  
   
 -   線上檔案還原  
   
-     在 *「線上檔案還原」*(Online File Restore) 中，如果資料庫在還原期間處於線上，則在檔案還原期間也會處於線上。 不過，在還原作業期間，包含正在還原之檔案的每個檔案群組都會離線。 離線檔案群組中的所有檔案都復原後，檔案群組就會自動回到線上。  
+     在 *「線上檔案還原」* (Online File Restore) 中，如果資料庫在還原期間處於線上，則在檔案還原期間也會處於線上。 不過，在還原作業期間，包含正在還原之檔案的每個檔案群組都會離線。 離線檔案群組中的所有檔案都復原後，檔案群組就會自動回到線上。  
   
      如需線上頁面和檔案還原支援的資訊，請參閱 [Database Engine 功能及工作](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)。 如需線上還原的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
@@ -69,13 +68,13 @@ ms.locfileid: "54241959"
   
  還原順序只包含兩個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 第一個陳述式會還原次要檔案 (即 `A`檔案)，而此檔案是使用 WITH NORECOVERY 進行還原。 第二項作業還原其他兩個檔案 ( `B` 和 `C` )，而這些檔案是使用 WITH RECOVERY 從不同的備份裝置進行還原。  
   
-1.  RESTORE DATABASE *database* FILE **=**_name_of_file_A_  
+1.  RESTORE DATABASE *database* FILE **=** _name_of_file_A_  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=**_name_of_file_B_**,**_name_of_file_C_  
+2.  RESTORE DATABASE *database* FILE **=** _name_of_file_B_ **,** _name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   

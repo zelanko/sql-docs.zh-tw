@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7d922c2c2fcfadb6b7807b8d2845f8d3e6c5188c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 79d9090df19851af3a778e23b7919f28081f32ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974150"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>setIntegratedSecurity 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public void setIntegratedSecurity(boolean enable)
 > [!NOTE]  
 >  只有在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows 作業系統上才支援這個屬性。  
   
- 如需使用整合式的驗證的詳細資訊，請參閱[Building the Connection URL](../../../connect/jdbc/building-the-connection-url.md)。  
+ 如需使用整合式驗證的詳細資訊, 請參閱[建立連接 URL](../../../connect/jdbc/building-the-connection-url.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

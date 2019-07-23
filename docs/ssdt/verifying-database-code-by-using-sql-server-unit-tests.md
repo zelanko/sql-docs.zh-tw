@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 597cebf9db40c2e119949c86341b4817a51c38ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140945"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>使用 SQL Server 單元測試驗證資料庫程式碼
 您可以使用 SQL Server 單元測試建立資料庫的基準狀態，然後驗證您對資料庫物件所做的任何後續變更。  

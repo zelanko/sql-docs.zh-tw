@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL 陳述式不含參數 |Microsoft Docs
+title: 使用不含參數的 SQL 語句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d63b7195e2de73292e56f9a63dcce561ca3b906e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6161f70455e5f1c947841d0381ba1a1de3a778a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006012"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>使用不含參數的 SQL 陳述式
 
@@ -28,7 +27,7 @@ ms.locfileid: "66790215"
 
 [!code[JDBC#UsingSQLWithNoParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_0_1.java)]
 
-如需使用結果集的詳細資訊，請參閱[JDBC driver 管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。
+如需使用結果集的詳細資訊, 請參閱[使用 JDBC 驅動程式管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006483"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ AS condition_expression
  *condition_expression*  
  這是定義規則的一個或多個條件。 規則可以是 WHERE 子句中任何有效的運算式，可以包括算術運算子、關係運算子和述詞 (如 IN、LIKE、BETWEEN) 之類的元素。 規則不能參考資料行或其他資料庫物件。 未參考資料庫物件的內建函數可以包括在內。 無法使用使用者自訂函數。  
   
- *condition_expression*包括一個變數。 每個區域變數前面都會有 @ 記號 (**@**)。 這個運算式參考 UPDATE 或 INSERT 陳述式所輸入的值。 當建立規則時，您可以使用任何名稱或符號來代表值，但第一個字元必須是 @ 記號 (**@**)。  
+ *condition_expression*包括一個變數。 每個區域變數前面都會有 @ 記號 ( **@** )。 這個運算式參考 UPDATE 或 INSERT 陳述式所輸入的值。 當建立規則時，您可以使用任何名稱或符號來代表值，但第一個字元必須是 @ 記號 ( **@** )。  
   
 > [!NOTE]  
 >  請避免建立使用別名資料型別之運算式的規則。 雖然您可以建立使用別名資料型別之運算式的規則，但在規則繫結到資料行或別名資料型別之後，當參考運算式時，會無法編譯運算式。  
@@ -76,7 +75,7 @@ AS condition_expression
 ## <a name="remarks"></a>Remarks  
  CREATE RULE 無法在單一批次中，與其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結合起來。 規則不適用於建立規則時已在資料庫中的資料，規則無法繫結到系統資料類型。  
   
- 規則只能建立在目前資料庫中。 建立好規則之後，請執行 **sp_bindrule**，將規則繫結到資料行或別名資料類型。 規則必須相容於資料行資料類型。 例如， "\@value LIKE A%" 不能用來作為數值資料行的規則。 規則無法繫結到 **text**、**ntext****image**、**varchar (max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
+ 規則只能建立在目前資料庫中。 建立好規則之後，請執行 **sp_bindrule**，將規則繫結到資料行或別名資料類型。 規則必須相容於資料行資料類型。 例如， "\@value LIKE A%" 不能用來作為數值資料行的規則。 規則無法繫結到 **text**、**ntext** **image**、**varchar (max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
   
  請用單引號 (') 括住字元和日期常數，二進位常數前面要附加 0x。 如果規則與所繫結的資料行不相容，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會在插入值時 (而不是繫結規則時)，傳回一則錯誤訊息。  
   
@@ -95,7 +94,7 @@ AS condition_expression
   
  如果資料行有預設值及其相關聯的規則，預設值必須在規則所定義的網域內。 永遠不會插入與規則衝突的預設值。 SQL Server Database Engine 每次嘗試插入這類預設值時，都會產生一則錯誤訊息。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要執行 CREATE RULE，使用者至少必須有目前資料庫中的 CREATE RULE 權限，以及正在建立規則之結構描述的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  
