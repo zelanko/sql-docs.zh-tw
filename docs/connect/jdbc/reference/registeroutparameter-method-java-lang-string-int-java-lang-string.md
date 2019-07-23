@@ -1,5 +1,5 @@
 ---
-title: registerOutParameter 方法型別和名稱 |Microsoft Docs
+title: 要輸入和命名的 registerOutParameter 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c0fb7eb2f50aabb2bcc2a51085f0afdd94cf419
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 18c7dad22a4f5314a0bc920c650bcdf0ecd32d52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975927"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-javalangstring"></a>registerOutParameter 方法 (java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void registerOutParameter(java.lang.String s,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 registerOutParameter 方法是由 java.sql.CallableStatement 介面中的 registerOutParameter 方法指定。  
+ 這個 registerOutParameter 方法是由 JAVA.sql.callablestatement 介面中的 registerOutParameter 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [registerOutParameter 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

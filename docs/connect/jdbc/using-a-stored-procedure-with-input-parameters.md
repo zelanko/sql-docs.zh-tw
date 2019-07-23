@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f14589bfdf5197bdb80e535e00d0fdbeba913529
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 954883c4c69e07493a15ef77eecfed606e9cf9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916518"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>使用含有輸入參數的預存程序
 
@@ -29,9 +28,9 @@ ms.locfileid: "66790402"
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> 如需有關 SQL 逸出序列的詳細資訊，請參閱[使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 如需 SQL escape 序列的詳細資訊, 請參閱[使用 Sql Escape 序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
-建構 `call` 逸出序列時，請使用 ? (問號) 字元來指定 IN 參數。 此字元會充當預留位置，代表將傳入預存程序的參數值。 若要指定參數的值，您可以使用 SQLServerPreparedStatement 類別的 setter 方法的其中一個。 您可以使用的 setter 方法是由 IN 參數的資料類型決定。
+建構 `call` 逸出序列時，請使用 ? (問號) 字元來指定 IN 參數。 此字元會充當預留位置，代表將傳入預存程序的參數值。 若要指定參數的值, 您可以使用 SQLServerPreparedStatement 類別的其中一個 setter 方法。 您可以使用的 setter 方法是由 IN 參數的資料類型決定。
 
 當您將值傳遞至 setter 方法時，您不但要指定將用於參數中的實際值，還要指定預存程序中參數的序數位置。 例如，當您的預存程序包含單一 IN 參數時，其序數值將會是 1。 如果預存程序包含兩個參數，則第一個序數值為 1，而第二個序數值會是 2。
 

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a4a969e7-e72c-4ac8-8b8c-ae2281e4e705
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b20b5b8d8577ce768f35e99f4422ac7f0005ba34
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0c308966a0aa474287709ac498db871c5202222b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983884"
 ---
 # <a name="getdate-method-sqlservercallablestatement"></a>getDate 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

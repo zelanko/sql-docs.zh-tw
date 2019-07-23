@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bd9903438f2bc52d6f3ac87bfc6628bf08e3b9f1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9212e2de7a093b92c51489bb17623a2120e5ce35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916225"
 ---
 # <a name="using-savepoints"></a>使用儲存點
 

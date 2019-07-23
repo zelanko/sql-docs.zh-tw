@@ -1,6 +1,6 @@
 ---
 title: 使用 XML 資料類型 |Microsoft Docs
-description: 使用 OLE DB 驅動程式中的 XML 資料類型，適用於 SQL Server
+description: 將 XML 資料類型與 OLE DB 驅動程式搭配使用 SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -30,13 +30,12 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988796"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "66796064"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 
- DBTYPE_XML 是新的資料類型的特定 OLE DB Driver for SQL Server 中的 XML。 此外，XML 資料可以透過 DBTYPE_BYTES、DBTYPE_WSTR、DBTYPE_BSTR、DBTYPE_XML、DBTYPE_STR、DBTYPE_VARIANT 和 DBTYPE_IUNKNOWN 的現有 OLE DB 類型進行存取。 儲存在 XML 類型資料行中的資料可以使用下列格式，從 OLE DB Driver for SQL Server 資料列集的資料行中擷取：  
+ DBTYPE_XML 是 SQL Server 的 OLE DB 驅動程式中, XML 特有的新資料類型。 此外，XML 資料可以透過 DBTYPE_BYTES、DBTYPE_WSTR、DBTYPE_BSTR、DBTYPE_XML、DBTYPE_STR、DBTYPE_VARIANT 和 DBTYPE_IUNKNOWN 的現有 OLE DB 類型進行存取。 儲存在 XML 類型資料行中的資料可以使用下列格式，從 OLE DB Driver for SQL Server 資料列集的資料行中擷取：  
   
 -   文字字串  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66796064"
 > [!NOTE]  
 >  OLE DB Driver for SQL Server 不包含 SAX 讀取器，但是可以將 **ISequentialStream** 輕鬆地傳遞到 MSXML 中的 SAX 和 DOM 物件。  
   
- **ISequentialStream** 應該用於擷取大型 XML 文件。 用於其他大數值類型的相同技術也適用於 XML。 如需詳細資訊，請參閱 <<c0> [ 使用大型值型別](../../oledb/features/using-large-value-types.md)。  
+ **ISequentialStream** 應該用於擷取大型 XML 文件。 用於其他大數值類型的相同技術也適用於 XML。 如需詳細資訊, 請參閱[使用大數數值型別](../../oledb/features/using-large-value-types.md)。  
   
  儲存在資料列集之 XML 類型資料行中的資料也可以由應用程式，透過 **IRow::GetColumns**、**IRowChange::SetColumns** 和 **ICommand::Execute** 之類的一般介面擷取、插入或更新。 類似於擷取情況，應用程式可以將文字字串或 **ISequentialStream** 傳遞到 OLE DB Driver for SQL Server。  
   
@@ -86,11 +85,11 @@ ms.locfileid: "66796064"
   
 |資料類型|到伺服器<br /><br /> **XML**|到伺服器<br /><br /> **非 XML**|從伺服器<br /><br /> **XML**|從伺服器<br /><br /> **非 XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|通過<sup>6,7</sup>|錯誤<sup>1</sup>|確定<sup>11，6</sup>|錯誤<sup>8</sup>|  
+|DBTYPE_XML|通過<sup>6,7</sup>|錯誤<sup>1</sup>|OK<sup>11, 6</sup>|錯誤<sup>8</sup>|  
 |DBTYPE_BYTES|通過<sup>6,7</sup>|N/A<sup>2</sup>|沒有問題 <sup>11, 6</sup>|N/A <sup>2</sup>|  
-|DBTYPE_WSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|確定<sup>4、 6、 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_WSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|確定<sup>4、6、12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_BSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題 <sup>3</sup>|N/A <sup>2</sup>|  
-|DBTYPE_STR|確定<sup>6、 9、 10</sup>|N/A <sup>2</sup>|沒有問題<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_STR|OK<sup>6、9、10</sup>|N/A <sup>2</sup>|沒有問題<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|透過 **ISequentialStream** 的位元組資料流<sup>7</sup>|N/A <sup>2</sup>|透過 **ISequentialStream** 的位元組資料流<sup>11</sup>|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|不適用|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題<sup>3</sup>|N/A <sup>2</sup>|  
@@ -126,7 +125,7 @@ ms.locfileid: "66796064"
   
  OLE DB 核心服務 (**IDataConvert**) 提供的資料轉換不適用於 DBTYPE_XML。  
   
- 當資料傳送到伺服器時，會執行驗證。 應由您的應用程式處理用戶端驗證和編碼變更。 建議您未直接處理 XML 資料，但應該改用 DOM 或 SAX 讀取器來處理它。  
+ 當資料傳送到伺服器時，會執行驗證。 用戶端驗證和編碼變更應由您的應用程式處理。 建議您不要直接處理 XML 資料, 而應該改為使用 DOM 或 SAX 讀取器來處理它。  
   
  可以繫結 DBTYPE_NULL 和 DBTYPE_EMPTY 用於輸入參數，但是不能用於輸出參數或結果。 當針對輸入參數來繫結時，狀態必須設定為 DBSTATUS_S_ISNULL 或 DBSTATUS_S_DEFAULT。  
   
@@ -135,12 +134,12 @@ ms.locfileid: "66796064"
  DBTYPE_IUNKNOWN 是支援的繫結 (如上表所示)，但是在 DBTYPE_XML 和 DBTYPE_IUNKNOWN 之間沒有進行任何轉換。 DBTYPE_IUNKNOWN 可能無法搭配 DBTYPE_BYREF 使用。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 資料列集的加入和變更  
- OLE DB Driver for SQL Server 會加入新的值，或變更許多核心 OLE DB 結構描述資料列。  
+ SQL Server 的 OLE DB 驅動程式會將新的值或變更加入到許多核心 OLE DB 架構資料列集。  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列集  
  COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列集的新增項目包含下列資料行：  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄的名稱。 對於非 XML 資料行或不具類型的 XML 資料行，此為 NULL。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|定義 XML 結構描述集合所在結構描述的名稱。 對於非 XML 資料行或不具類型的 XML 資料行，此為 NULL。|  
@@ -152,7 +151,7 @@ ms.locfileid: "66796064"
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 結構描述資料列集  
  用戶端推出新的結構描述資料列集 SS_XMLSCHEMA 來擷取 XML 結構描述資訊。 SS_XMLSCHEMA 資料列集包含下列資料行：  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 集合所屬的目錄。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 集合所屬的結構描述。|  
@@ -167,12 +166,12 @@ ms.locfileid: "66796064"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 屬性集的加入和變更  
- OLE DB Driver for SQL Server 加入新的值或變更加入到許多核心 OLE DB 屬性集。  
+ SQL Server 的 OLE DB 驅動程式會將新的值或變更加入到許多核心 OLE DB 屬性集。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 屬性集  
  為了透過 OLE DB 支援 **xml** 資料類型，OLE DB Driver for SQL Server 會實作新的 DBPROPSET_SQLSERVERPARAMETER 屬性集，其中包含以下值。  
   
-|名稱|類型|描述|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄 (資料庫) 的名稱。 SQL 三部分名稱識別碼的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|結構描述集合內，XML 結構描述的名稱。 SQL 三部分名稱識別碼的一部分。|  
@@ -181,7 +180,7 @@ ms.locfileid: "66796064"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 屬性集  
  為了支援 **ITableDefinition** 介面中的資料表建立，OLE DB Driver for SQL Server 會將三個新的資料行新增到 DBPROPSET_SQLSERVERCOLUMN 屬性集。  
   
-|名稱|類型|描述|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定儲存 XML 結構描述所在之目錄名稱的字串。 如果是其他資料行類型，這個屬性會傳回空字串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定定義此資料行之 XML 結構描述名稱的字串。|  
@@ -190,7 +189,7 @@ ms.locfileid: "66796064"
  如同 SSPROP_PARAM 值，這些所有屬性都是選擇性的，而且預設為空。 只有在指定 SSPROP_COL_XML_SCHEMACOLLECTIONNAME 時，才可能指定 SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME 和 SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME。 將 XML 傳遞到伺服器時，如果包含這些值，系統會針對目前的資料庫檢查這些值是否存在 (有效性)，並針對結構描述檢查執行個體資料。 在所有情況下，這些值必須全部為空或全部填入，才會有效。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 介面的加入和變更  
- OLE DB Driver for SQL Server 會將新的值，或變更到許多核心 OLE DB 介面。  
+ SQL Server 的 OLE DB 驅動程式會將新的值或變更加入到許多核心 OLE DB 介面。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 介面  
  為了透過 OLE DB 支援 **xml** 資料類型，OLE DB Driver for SQL Server 會實作一些變更，其中包括新增 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 介面。 這個新的介面繼承自核心的 OLE DB 介面 **ICommandWithParameters**。 除了繼承自 **ICommandWithParameters** 的三種方法 (**GetParameterInfo**、**MapParameterNames** 和 **SetParameterInfo**)，**ISSCommandWithParameters** 也提供用來處理伺服器特定資料類型的 [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法。  
@@ -201,7 +200,7 @@ ms.locfileid: "66796064"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
  OLE DB Driver for SQL Server 會將下列 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬的資料行新增到 **IColumnRowset::GetColumnsRowset** 方法所傳回的資料列集。 這些資料行包含 XML 結構描述集合的三部分名稱。 對於非 XML 資料行或不具類型的 XML 資料行，所有三個資料行都會使用 NULL 的預設值。  
   
-|資料行名稱|類型|描述|  
+|資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 結構描述集合所屬的目錄，<br /><br /> 否則為 NULL。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 結構描述集合所屬的結構描述， 否則為 NULL。|  

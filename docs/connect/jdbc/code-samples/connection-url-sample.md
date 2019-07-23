@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3edf17e051178a402f20e72af8d33b77248e6212
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d3f65b4774564546907e14302552ad129160e55a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957250"
 ---
 # <a name="connection-url-sample"></a>連接 URL 範例
 

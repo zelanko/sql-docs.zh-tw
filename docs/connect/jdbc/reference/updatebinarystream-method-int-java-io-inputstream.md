@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1db3a975-c108-45d1-8c0d-14a094f391bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c2e02e83b778dd6e7804c2f86bd4fea0539a8a5a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8a1b69d4f4e1845b4ec86297c06298c1302becea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985378"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream"></a>updateBinaryStream 方法 (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +43,9 @@ public void updateBinaryStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- UpdateBinaryStream 方法 java.sql.ResultSet 介面中所指定這個 updateBinaryStream 方法。  
+ 這個 updateBinaryStream 方法是由 sql-dmo 介面中的 updateBinaryStream 方法指定。  
   
- 使用這個方法來**映像**，**文字**，並**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別可能會影響效能。  
+ 針對**image**、 **text**和**Ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型使用這個方法可能會影響效能。  
   
  這個方法會透過 InputStream 物件將位元組傳遞到選取的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二進位資料行，例如 binary、varbinary、varbinary(max)、image、xml 和 udt。 這個方法不支援更新字元資料行。 若要以 InputStream 更新字元資料行，請使用 [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) 方法。  
   

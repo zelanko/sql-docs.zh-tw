@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d69be8fd30d5a47b8e11dde5d043285470c1aed6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fb479f471f4df2a90521ec0f47d8d5396881f53f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981087"
 ---
 # <a name="getobject-method-sqlservercallablestatement"></a>getObject 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

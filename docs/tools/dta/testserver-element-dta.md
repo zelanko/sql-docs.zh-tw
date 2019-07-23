@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a5f078f38e64588ffa46f1529a89b29caf4e2a58
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 784275fe53edd3e0c7068927c4af299de3d304d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105927"
 ---
 # <a name="testserver-element-dta"></a>TestServer 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

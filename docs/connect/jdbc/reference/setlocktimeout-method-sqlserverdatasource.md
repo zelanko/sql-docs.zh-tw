@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 10dca5aa-1851-4326-9ae9-7a8430d12d11
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32f61572dca7124e552a9d40497a3385bc243b31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95dc93b8695f9bfe464545ab5f1aa6096a4476be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974107"
 ---
 # <a name="setlocktimeout-method-sqlserverdatasource"></a>setLockTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public void setLockTimeout(int lockTimeout)
   
  **int** 值，其中包含要等候的毫秒數。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  鎖定逾時是等候資料庫報告鎖定逾時的毫秒數。預設值為 -1，表示將會無限期地等候。 如果已指定，則此值為連接上所有陳述式的預設值。  
   
 > [!NOTE]  

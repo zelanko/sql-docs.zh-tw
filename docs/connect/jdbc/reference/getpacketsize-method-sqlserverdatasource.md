@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef02cfaf54499aa3ac6219b32ff154a258733614
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b8f2cf03eb2eeaa3bb742a1f0d665c360e0d5f74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981044"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>getPacketSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

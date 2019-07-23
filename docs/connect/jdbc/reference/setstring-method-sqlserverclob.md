@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e329de08-7624-4cf6-9da7-350584e87011
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0951d7b831c8453e20c2521265af94ddd56f1063
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 47a1bccc2e47d0ef8265554374c8ea492e704373
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972655"
 ---
 # <a name="setstring-method-sqlserverclob"></a>setString 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

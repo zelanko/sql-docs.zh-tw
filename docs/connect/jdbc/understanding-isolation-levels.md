@@ -1,5 +1,5 @@
 ---
-title: 了解隔離等級 |Microsoft Docs
+title: 瞭解隔離等級 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6cfbc099d88a96574439fa8c178b12629d92782c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916645"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔離等級
 

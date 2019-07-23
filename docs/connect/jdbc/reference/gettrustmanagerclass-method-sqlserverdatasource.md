@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 327dcad497c934c787d509a41f0068691bf5588a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 567f5e7e3aca87b875e4f93c26d7caa5535a8c75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978605"
 ---
 # <a name="gettrustmanagerclass-method-sqlserverdatasource"></a>getTrustManagerClass 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public java.lang.String getTrustManagerClass()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**，包含 TrustManagerClass 連接屬性，則為 null 的值，如果未不設定任何值。  
+ **字串**, 其中包含 TrustManagerClass 連接屬性的值, 如果未設定任何值, 則為 null。  
   
 ## <a name="remarks"></a>Remarks  
- 如果未設定 TrustManagerClass 屬性， [getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)方法會傳回 null。  
+ 如果未設定 TrustManagerClass 屬性, [getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)方法會傳回 null。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

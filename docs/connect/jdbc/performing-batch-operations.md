@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4923354c5f6dc013d9fee0284279bb5b6b887556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956228"
 ---
 # <a name="performing-batch-operations"></a>執行批次作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66801822"
   
  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別都可以用來提交批次更新。 [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) 方法用來新增命令。 [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) 方法用來清除命令清單。 [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) 方法用來提交所有命令以供處理。 只有傳回簡單更新計數的資料定義語言 (DDL) 和資料操作語言 (DML) 陳述式可以當作批次的一部份來執行。  
   
- executeBatch 方法會傳回對應到每個命令之更新計數的 **int** 值陣列。 如果其中一個命令失敗，就會擲回 BatchUpdateException，和您應該使用 getUpdateCounts BatchUpdateException 類別方法來擷取更新計數陣列。 如果某命令失敗，驅動程式會繼續處理其餘命令。 不過，如果命令有語法錯誤，批次中的陳述式會失敗。  
+ executeBatch 方法會傳回對應到每個命令之更新計數的 **int** 值陣列。 如果其中一個命令失敗, 則會擲回 BatchUpdateException, 而且您應該使用 BatchUpdateException 類別的 getUpdateCounts 方法來取出更新計數陣列。 如果某命令失敗，驅動程式會繼續處理其餘命令。 不過，如果命令有語法錯誤，批次中的陳述式會失敗。  
   
 > [!NOTE]  
 >  如果不必使用更新計數，可以先對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發出 SET NOCOUNT ON 陳述式。 這將會減少網路流量，而且還會加強應用程式的效能。  

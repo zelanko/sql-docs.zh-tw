@@ -11,13 +11,12 @@ ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 2d62eee56c01ba17ead5ae16b1ddf8fc70004812
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 11aad7e60d37fc855ed716d11421507aa8dea89f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023858"
 ---
 # <a name="sql-server-services"></a>SQL Server 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,6 +1,6 @@
 ---
-title: 以 IOpenRowset 建立資料列集 |Microsoft Docs
-description: 建立以 IOpenRowset 介面的 OLE DB 驅動程式的資料列集，SQL server
+title: 使用 IOpenRowset 建立資料列集 |Microsoft Docs
+description: 使用 OLE DB 驅動程式的 IOpenRowset 介面建立資料列集以進行 SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 78b08a3da3da89e0db0d801945416dcdb1ff9c03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994306"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>以 IOpenRowset 建立資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 支援**iopenrowset:: Openrowset**方法具有下列限制：  
+  SQL Server 的 OLE DB 驅動程式支援**IOpenRowset:: OpenRowset**方法, 但有下列限制:  
   
 -   *pTableID* 參數指向的資料庫識別碼 (DBID) 結構中必須指定基底資料表或檢視表。  
   

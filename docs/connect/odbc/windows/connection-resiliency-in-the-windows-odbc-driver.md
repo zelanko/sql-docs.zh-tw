@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94845da5a211c1f5b3ebf9f27a8a7ba780bc4b71
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008429"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "66797822"
 |IMC06|連接中斷，且無法復原。 用戶端驅動程式將連接標示為無法復原。 未嘗試還原連接。|  
   
 ## <a name="example"></a>範例  
- 下列範例包含兩個函數。 **func1** 說明如何連接使用 Windows 版 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源名稱 (DSN)。 DSN 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，而且它會指定使用者識別碼。 **func1**接著會擷取與連接重試次數**SQL_COPT_SS_CONNECT_RETRY_COUNT**。  
+ 下列範例包含兩個函數。 **func1** 說明如何連接使用 Windows 版 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源名稱 (DSN)。 DSN 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，而且它會指定使用者識別碼。 然後, **func1**會使用**SQL_COPT_SS_CONNECT_RETRY_COUNT**來抓取連接重試次數。  
   
  **func2** 會使用 **SQLDriverConnect**、 **ConnectRetryCount** 連接字串關鍵字和連接屬性來擷取連接重試與重試間隔的設定。  
   

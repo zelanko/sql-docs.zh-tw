@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c46fbea6a02a089b07ad359bc3c53bc5022f3e3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986293"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

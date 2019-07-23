@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6a5332a31da0114eb710befe5ecd62c6821a3295
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edbf5a7feb65d39cb5158c42a218f077a3332236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977417"
 ---
 # <a name="isqlserverresultset-interface"></a>ISQLServerResultSet 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,8 +33,8 @@ ms.locfileid: "66796407"
 public interface ISQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>備註  
- 此介面由實作[SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)。  
+## <a name="remarks"></a>Remarks  
+ 這個介面是由[SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)所執行。  
   
  此介面會公開 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的特定方法：  
   

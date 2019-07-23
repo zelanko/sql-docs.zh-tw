@@ -1,5 +1,5 @@
 ---
-title: 保護 JDBC 驅動程式應用程式 |Microsoft Docs
+title: 保護 JDBC Driver 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3a7a8079f60336bbdfe7b837afa2313f5fda2691
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945749"
 ---
 # <a name="securing-jdbc-driver-applications"></a>保護 JDBC Driver 應用程式
 
@@ -34,7 +33,7 @@ ms.locfileid: "66797835"
 | [驗證使用者輸入](../../connect/jdbc/validating-user-input.md)             | 描述驗證使用者輸入的技術。                                                                                                                          |
 | [應用程式安全性](../../connect/jdbc/application-security.md)               | 描述如何使用 Java 原則權限協助保護 JDBC 驅動程式應用程式。                                                                                |
 | [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)               | 描述如何使用安全通訊端層 (SSL) 建立包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的安全通訊通道。 |
-| [FIPS 模式](../../connect/jdbc/fips-mode.md)                                     | 描述如何使用 JDBC 驅動程式以 FIPS 符合模式。                                                                                                              |
+| [FIPS 模式](../../connect/jdbc/fips-mode.md)                                     | 描述如何在 FIPS 相容模式中使用 JDBC 驅動程式。                                                                                                              |
   
 ## <a name="see-also"></a>另請參閱  
 

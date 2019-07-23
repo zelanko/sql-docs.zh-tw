@@ -15,20 +15,19 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c97c85eaeafd7d811b3f513f7f9cccc30c873b71
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13dd6afde96d42ac1fcc82b6fb24c721997b951d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015928"
 ---
 # <a name="data-source-properties-ole-db"></a>資料來源屬性 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 會實作資料來源屬性，如下所示。  
+  SQL Server 的 OLE DB 驅動程式會執行資料來源屬性, 如下所示。  
   
 |屬性識別碼|Description|  
 |-----------------|-----------------|  

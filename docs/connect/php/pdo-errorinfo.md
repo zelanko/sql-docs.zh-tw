@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c832fae4c62b09a2ee9f928b024cbaa17ea38ae1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe0f0cc2ec15fcdb871f290f03565482a8477995
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936263"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +40,7 @@ array PDO::errorInfo();
   
 如果沒有發生錯誤，或如果未設定 SQLSTATE，則驅動程式特定欄位會是 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 PDO::errorInfo 只會針對直接在資料庫上執行的作業擷取錯誤資訊。 使用 PDO::prepare 或 PDO::query 建立 PDOStatement 執行個體時，請使用 PDOStatement::errorInfo。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  

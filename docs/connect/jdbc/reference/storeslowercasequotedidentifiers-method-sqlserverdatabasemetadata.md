@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3e104c9e-66d4-436b-8b5b-a00ff667c95b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f6b356b45ab1bc8ae2903e3b9ac7aa5bfe367584
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 58135670e18af30dd8795cc124eb43908f611e24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969989"
 ---
 # <a name="storeslowercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseQuotedIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean storesLowerCaseQuotedIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 storesLowerCaseQuotedIdentifiers 方法是由 java.sql.DatabaseMetaData 介面中 storesLowerCaseQuotedIdentifiers 方法指定。  
+ 這個 storesLowerCaseQuotedIdentifiers 方法是由 JAVA.sql.databasemetadata 介面中的 storesLowerCaseQuotedIdentifiers 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e81fe589ed70f4d3f230713290f1d7f9b338ea67
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d47ff96fe493053e7a953cfbae53e52be95a0d62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982947"
 ---
 # <a name="getgeneratedkeys-method-sqlserverstatement"></a>getGeneratedKeys 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public final java.sql.ResultSet getGeneratedKeys()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 結果集物件。  
+ ResultSet 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getGeneratedKeys 方法是由 java.sql.Statement 介面中的 getGeneratedKeys 方法指定。  
+ 這個 getGeneratedKeys 方法是由 sql 語句介面中的 getGeneratedKeys 方法指定。  
   
- 如需如何使用這個方法的詳細資訊，請參閱[使用自動產生索引鍵](../../../connect/jdbc/using-auto-generated-keys.md)。  
+ 如需如何使用此方法的詳細資訊, 請參閱[使用自動產生的金鑰](../../../connect/jdbc/using-auto-generated-keys.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 82f8d608-efc1-4af8-a985-ec25d19420aa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a123ef4b4c0c0e362ed41e493aae332b220726c1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bda185834c24c63ec0a6c9209e6dfd779bece858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975882"
 ---
 # <a name="registeroutparameter-method-sqlservercallablestatement"></a>registerOutParameter 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

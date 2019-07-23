@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 34ff8dcb-5487-46d1-a4c1-25e33eb3eee4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d984d5cf52ad0bc5b5b58df6914d00ef7722b8a4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e16b4f5590057424cfe67491cf4943399d54c01c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969182"
 ---
 # <a name="supportsmultipletransactions-method-sqlserverdatabasemetadata"></a>supportsMultipleTransactions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsMultipleTransactions()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果支援。 否則為 **false**。  
+ 如果支援,**則為 true** 。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 supportsMultipleTransactions 方法是由 java.sql.DatabaseMetaData 介面中 supportsMultipleTransactions 方法指定。  
+ 這個 supportsMultipleTransactions 方法是由 JAVA.sql.databasemetadata 介面中的 supportsMultipleTransactions 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

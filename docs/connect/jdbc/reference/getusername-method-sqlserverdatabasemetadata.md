@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1ae81034-5de3-4f4a-b3f2-7d9d198a73af
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e45dea3bd714e84b786af8e05a5a9460592e9cbb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 38da8d6666337c464d7a828952b025977336d373
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978146"
 ---
 # <a name="getusername-method-sqlserverdatabasemetadata"></a>getUserName 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: 了解並行存取控制 |Microsoft Docs
+title: 瞭解並行控制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf4d64d7a7f02e487c969e80a3a0578498f9b507
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b178b0c38b5891d4a3dc13ef620a217bf3ddb186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004193"
 ---
 # <a name="understanding-concurrency-control"></a>瞭解並行控制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

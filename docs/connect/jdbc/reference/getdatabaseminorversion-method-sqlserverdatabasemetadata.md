@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 18163668-60d6-4d54-aaf1-c338b8c90f2a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 475a0f30a4efa8fb7a181b3b394b0ea1f72bf544
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e333f1d5d3f4463589407b7911fa90b6f2b7abf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984125"
 ---
 # <a name="getdatabaseminorversion-method-sqlserverdatabasemetadata"></a>getDatabaseMinorVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getDatabaseMinorVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getDatabaseMinorVersion 方法是由 java.sql.DatabaseMetaData 介面中 getDatabaseMinorVersion 方法指定。  
+ 這個 getDatabaseMinorVersion 方法是由 JAVA.sql.databasemetadata 介面中的 getDatabaseMinorVersion 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

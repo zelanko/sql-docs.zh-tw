@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37fa8f723b9d008651d98e850c794955a54b0c1c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1c43d503fafba7d6dad8f7d982ad2f51542c61c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980185"
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>getScale 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getScale(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getScale 方法是由 java.sql.ResultSetMetaData 介面中 getScale 方法指定。  
+ 這個 getScale 方法是由 ResultSetMetaData 介面中的 getScale 方法指定。  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 在 DECIMAL_DIGITS 資料行中有行為變更。 如需詳細資訊，請參閱 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)。  
   

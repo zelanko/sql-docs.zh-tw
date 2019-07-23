@@ -13,20 +13,19 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 873921a00392a9555c0fa33fe29a2df961128fdc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bc2ae9c6908bfcd0bf28b4f05be757d22c55f75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015915"
 ---
 # <a name="session-properties---ole-db-driver-for-sql-server"></a>工作階段屬性 - OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server OLE DB 工作階段會將屬性解譯如下。  
+  SQL Server 的 OLE DB 驅動程式會依照下列方式來解讀 OLE DB 會話屬性。  
   
 |屬性識別碼|Description|  
 |-----------------|-----------------|  

@@ -1,6 +1,6 @@
 ---
 title: 資料表和索引 |Microsoft Docs
-description: 建立、 改變和 droping 的資料表和索引使用 OLE DB Driver for SQL Server
+description: 使用適用于 SQL Server 的 OLE DB 驅動程式來建立、改變和 droping 資料表和索引
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8fd98f67a35985474d73225db7991aeeafb9119e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015246"
 ---
 # <a name="tables-and-indexes"></a>資料表和索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "66801593"
   
  建立或卸除資料表和索引的能力，取決於取用者應用程式使用者的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存取權限。 卸除資料表可藉由宣告式參考完整性條件約束或其他因數的存在，而受進一步的條件約束。  
   
- 大部分的應用程式目標設為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]for SQL Server 介面，而這些 OLE DB 驅動程式不是使用 SQL-DMO。 SQL-DMO 是 OLE Automation 物件的集合，可支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所有的管理功能。 以多個 OLE DB 提供者為目標的應用程式會使用這些受多個 OLE DB 提供者支援的一般 OLE DB 介面。  
+ 大部分的應用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]程式目標都使用 sql-dmo, 而不是這些 OLE DB 驅動程式 SQL Server 介面。 SQL-DMO 是 OLE Automation 物件的集合，可支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所有的管理功能。 以多個 OLE DB 提供者為目標的應用程式會使用這些受多個 OLE DB 提供者支援的一般 OLE DB 介面。  
   
  在提供者特定屬性集 DBPROPSET_SQLSERVERCOLUMN 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會定義下列屬性。  
   
