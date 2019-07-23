@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a3e9f70011d96d9aa5d5068af5cddecd8f29cce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3dafccc85b6ca100177364ae9d33e55a8ddc93b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060847"
 ---
 # <a name="connection-to-sql-server"></a>連接到 SQL Server
 
@@ -46,9 +45,9 @@ ms.locfileid: "65728995"
   
 -   **執行逾時**：輸入此程式在產生逾時錯誤之前，等候執行 SQL 命令的時間 (以秒數為單位)。 預設值是 **30**。  
   
--   **加密連接**：選取 [加密連接]，以確保正在建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接已加密來保障隱私權。  
+-   **加密連接**：選取 [加密連接]  ，以確保正在建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接已加密來保障隱私權。  
   
--   **進階**：按一下 [進階]，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
+-   **進階**：按一下 [進階]  ，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 連接所需的 CDC 服務權限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  

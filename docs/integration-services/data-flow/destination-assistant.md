@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 808738f9b391091ad019c0bcab40f1c9416503d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 075f061eadf98385b75de1f0cbf3558a08bd9a41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111237"
 ---
 # <a name="destination-assistant"></a>Destination Assistant
 

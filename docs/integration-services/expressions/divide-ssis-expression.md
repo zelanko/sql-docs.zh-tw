@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0ab03e6965d80c3f77276df4218b6a8fdd66f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d0569234b3ba6fbfde102bb5e71a419cd9f4f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081083"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS 運算式)
 

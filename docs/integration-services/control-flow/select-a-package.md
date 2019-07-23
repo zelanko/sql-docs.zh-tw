@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc976451c29c6d0b1656fec456b2a46b1f4f5f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22f1d99709ea131ee28e9f5c5cef2ee0b6fe3693
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215782"
 ---
 # <a name="select-a-package"></a>選取封裝
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 947d30eeee473388ea457910cafbbf4dc831f4e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1119c0c906e3a3825882e3fe1043e9bdaceb0f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066303"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

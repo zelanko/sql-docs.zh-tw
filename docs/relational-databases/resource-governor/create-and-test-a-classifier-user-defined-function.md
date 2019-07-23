@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: fdb5e407c690ef7dd9a3bdfb4c77fe6897d66585
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: aff12e92692ebd3bd53319a91b0a480338458dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136867"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>建立和測試分類使用者定義函數
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

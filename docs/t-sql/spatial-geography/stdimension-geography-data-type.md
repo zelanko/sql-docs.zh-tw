@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: f2fd921d384e8c79220a435eb8b43d01eccda566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac39de3b0fe0d85aa65ef59661a512988acd4a36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042336"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ba16c8726963fcb355f1e6e424c15ec66601c126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1a64177a3e7a57d41b644e576877c7f9d8d7fda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112239"
 ---
 # <a name="catalogdeleteenvironment-ssisdb-database"></a>catalog.delete_environment (SSISDB 資料庫)
 

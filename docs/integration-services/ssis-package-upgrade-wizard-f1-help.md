@@ -18,13 +18,12 @@ f1_keywords:
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b574a61ad5667d6617b68b8472589a2328bb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d969db282002919775fa9e77198686e4ee1ef3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068925"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
 
@@ -60,7 +59,7 @@ ms.locfileid: "65717841"
 |**Microsoft SQL Server**|指示要升級的封裝是來自現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
  **資料夾**  
- 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽] 並尋找資料夾。  
+ 輸入包含您想要升級之封裝的資料夾名稱，或是按一下 [瀏覽]  並尋找資料夾。  
   
  **瀏覽**  
  瀏覽來尋找包含您要升級之封裝的資料夾。  
@@ -95,7 +94,7 @@ ms.locfileid: "65717841"
  
 ### <a name="static-options"></a>靜態選項  
  **儲存至來源位置**  
- 將升級封裝儲存到此精靈之 [選取來源位置] 頁面上所指定的相同位置。  
+ 將升級封裝儲存到此精靈之 [選取來源位置]  頁面上所指定的相同位置。  
   
  如果原始封裝儲存在檔案系統中，而且您希望精靈備份這些封裝，請選取 **[儲存至來源位置]** 選項。 如需詳細資訊，請參閱 [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "65717841"
 |**Microsoft SQL Server**|指示升級封裝要儲存到現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  
   
  **資料夾**  
- 輸入將用來儲存升級封裝的資料夾名稱，或是按一下 [瀏覽] 並尋找資料夾。  
+ 輸入將用來儲存升級封裝的資料夾名稱，或是按一下 [瀏覽]  並尋找資料夾。  
   
  **瀏覽**  
  瀏覽來尋找將儲存升級封裝的資料夾。  
@@ -140,7 +139,7 @@ ms.locfileid: "65717841"
  輸入使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接伺服器時所要使用的密碼。  
  
 ## <a name="select-package-management-options-page"></a>選取套件管理選項頁面
-  使用 [選取封裝管理選項] 頁面，指定用來升級封裝的選項。  
+  使用 [選取封裝管理選項]  頁面，指定用來升級封裝的選項。  
   
  **執行 SSIS 封裝升級精靈**  
   
@@ -159,7 +158,7 @@ ms.locfileid: "65717841"
  **驗證升級套件**  
  驗證升級封裝，並只儲存通過驗證的那些升級封裝。  
   
- 如果您不選取這個選項，此精靈將不會驗證升級封裝。 因此，此精靈將會儲存所有的升級封裝，不論封裝是否有效。 此精靈會將升級封裝儲存到精靈之 [選取目的地位置] 頁面上所指定的目的地。  
+ 如果您不選取這個選項，此精靈將不會驗證升級封裝。 因此，此精靈將會儲存所有的升級封裝，不論封裝是否有效。 此精靈會將升級封裝儲存到精靈之 [選取目的地位置]  頁面上所指定的目的地。  
   
  驗證會增加升級程序的時間。 如果是可能會升級成功的大型封裝，我們建議您不要選取這個選項。  
   
@@ -181,7 +180,7 @@ ms.locfileid: "65717841"
  **不升級套件**  
  停止升級封裝，並在完成精靈時顯示錯誤。  
   
- 當您在精靈的 [選取目的地位置] 頁面上選取 [儲存至來源位置] 選項時，無法使用這些選項。  
+ 當您在精靈的 [選取目的地位置]  頁面上選取 [儲存至來源位置]  選項時，無法使用這些選項。  
   
  **忽略設定**  
  封裝升級期間不載入封裝組態。 選取此選項可減少升級封裝所需的時間。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce03b7b19973d4f5c48e8cb48aa615e107fdd8c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7068229bcfcf63bb08fe46272cf308cee60be022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056715"
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47634346"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|21879|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -34,7 +33,7 @@ ms.locfileid: "47634346"
 |訊息文字|無法查詢原始發行者 '%s' 和發行者資料庫 '%s' 的重新導向伺服器 '%s' 以判斷遠端伺服器之名稱; 錯誤 %d，錯誤訊息 '%s'。|  
   
 ## <a name="explanation"></a>說明  
-**sp_validate_redirected_publisher** 會使用暫時連結的伺服器，而建立此伺服器的目的是要連接到重新導向的發行者，以便探索遠端伺服器的名稱。 當連結的伺服器查詢失敗時，就會傳回錯誤 21879。 要求遠端伺服器名稱的呼叫通常是在第一次使用暫時連結的伺服器時進行，因此如果發生連接問題，這些問題可能會先與此呼叫一起顯示。 這個遠端呼叫只會在遠端伺服器上執行選取的 **@@servername**。  
+**sp_validate_redirected_publisher** 會使用暫時連結的伺服器，而建立此伺服器的目的是要連接到重新導向的發行者，以便探索遠端伺服器的名稱。 當連結的伺服器查詢失敗時，就會傳回錯誤 21879。 要求遠端伺服器名稱的呼叫通常是在第一次使用暫時連結的伺服器時進行，因此如果發生連接問題，這些問題可能會先與此呼叫一起顯示。 這個遠端呼叫只會在遠端伺服器上執行選取的 **@@servername** 。  
   
 用來查詢重新導向發行者的連結伺服器，會使用針對原始發行者呼叫 **sp_adddistpublisher** 時所提供的安全性模式、登入和密碼。  
   

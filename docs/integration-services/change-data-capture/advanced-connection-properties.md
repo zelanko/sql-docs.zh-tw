@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed62b74256b15aa27ca94459963928ae4b2727ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6d17e67b5f4b48f20752e84300dc8c993a67d1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074649"
 ---
 # <a name="advanced-connection-properties"></a>進階連接屬性
 

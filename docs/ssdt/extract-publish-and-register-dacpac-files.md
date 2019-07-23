@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 21b22c1c3f26112cf6232eb314eeb8f8c330ee03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912807"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>擷取、發行及註冊 .dacpac 檔案
 本主題描述在 SQL Server 物件總管中以滑鼠右鍵按一下連接的資料庫即可執行的四個程序：  

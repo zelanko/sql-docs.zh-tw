@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30361f7f70dc6e738b8cc586dff090bb456a0627
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93eae89743c2a4563317614a18e4bf5f46248071
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031980"
 ---
 # <a name="cross-database-queries"></a>跨資料庫查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

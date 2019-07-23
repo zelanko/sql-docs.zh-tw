@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939206"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "54136068"
   
 -   考慮包括大型物件 (LOB) 資料類型的過度正規化資料表。  
   
-     發生同步處理時，「合併代理程式」可能需要從「發行者」或「訂閱者」讀取及傳送整個資料列。 如果資料列包含使用 LOB 的資料行，則上述處理可能需要額外的記憶體配置，且即使這些資料行並未更新仍會對效能造成負面影響。 為了降低這一效能影響的可能性，請考慮將 LOB 資料行置於另一個資料表，對資料列資料的其餘部分使用一對一關聯性。 資料類型 **text**、 **ntext**和 **image** 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**。  
+     發生同步處理時，「合併代理程式」可能需要從「發行者」或「訂閱者」讀取及傳送整個資料列。 如果資料列包含使用 LOB 的資料行，則上述處理可能需要額外的記憶體配置，且即使這些資料行並未更新仍會對效能造成負面影響。 為了降低這一效能影響的可能性，請考慮將 LOB 資料行置於另一個資料表，對資料列資料的其餘部分使用一對一關聯性。 資料類型 **text**、 **ntext**和 **image** 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 。  
   
 ## <a name="publication-design"></a>發行集設計  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a1dcaf047564629ed7a6a473518317ce1c743ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3b39885a7a7bc5c6259e4fa764f61c69320edb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103957"
 ---
 # <a name="raising-events-in-the-script-component"></a>在指令碼元件中引發事件
 

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43b91f4afcedf7348919758fa2ce691b6a457d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a1c662fb5584fec6de91a98710d13412c828899
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074635"
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
 

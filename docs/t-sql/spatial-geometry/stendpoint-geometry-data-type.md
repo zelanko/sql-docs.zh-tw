@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: a51bb784c2cb4a9ef4ab54d46379d0dcc60d18b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aeaa48534b2a46e5ace697624e425a93afda0d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044630"
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

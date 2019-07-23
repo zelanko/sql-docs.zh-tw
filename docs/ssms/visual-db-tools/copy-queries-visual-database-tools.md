@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 0fd10482e083616e47665bd9ba2832b3fe4d5d21
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 93e03092b17206117946f87c546c3d9d8ec9476c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686162"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264952"
 ---
 # <a name="copy-queries-visual-database-tools"></a>複製查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

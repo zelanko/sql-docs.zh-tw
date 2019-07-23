@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 2d8f890adb1fb44d8e293a8d6cfc5e0c0d5c16c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd96ae317c4f40a8b530bbc20ec64d5e3e2dccaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030847"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

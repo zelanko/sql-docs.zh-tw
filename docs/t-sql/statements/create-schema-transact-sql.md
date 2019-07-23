@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117304"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -130,7 +129,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="deprecation-notice"></a>取代通知  
  目前支援不指定結構描述名稱之 CREATE SCHEMA 陳述式的目的，是為了與舊版相容。 這些陳述式實際上並不會在資料庫中建立結構描述，但是會建立資料表和檢視表，以及授與權限。 主體不需要 CREATE SCHEMA 權限來執行這個舊格式的 CREATE SCHEMA，因為不會建立任何結構描述。 未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將移除這項功能。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要資料庫的 CREATE SCHEMA 權限。  
   
  若要建立 CREATE SCHEMA 陳述式中指定的物件，使用者必須具有對應的 CREATE 權限。  

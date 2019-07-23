@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 97fba0d360b6be5d8b9d2c79c88fa945209a22b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d24050e9344c3dd351f852e624e6a1453432ebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952246"
 ---
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

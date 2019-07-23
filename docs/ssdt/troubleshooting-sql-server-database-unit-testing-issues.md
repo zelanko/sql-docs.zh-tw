@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0a6a198d252f2363fc55e38677518ec02724e3e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b7203572d01ca9f344b96a7008dd78b2e35bcdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110615"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>疑難排解 SQL Server 資料庫單元測試的問題
 搭配資料庫使用 SQL Server 單元測試時，您可能會遇到本主題所述的問題：  

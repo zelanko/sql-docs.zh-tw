@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: e3f9169e208f5bcb3b4b74a2556b77b94d6c8d34
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: d80d86a001a47eafc0ffeabd0f9e46b993667aad
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690407"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255147"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>刪除資料表對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

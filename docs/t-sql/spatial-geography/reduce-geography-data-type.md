@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b89d42d050c32f10bac8c8796a4bfa4dd9355ba0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101763"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

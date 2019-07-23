@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 49919caaf30bb425e90b286cb3c8e7877067ae6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 817a6325b956f5fc4214597b0b8bc46f6aff49f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042516"
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

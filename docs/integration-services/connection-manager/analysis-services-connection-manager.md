@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1831108732e6be88e9a21f71c4a2cba2b83d449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd2c044e68c71d80c3bbfb4ca5358d8ef156652c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897976"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 連接管理員
 

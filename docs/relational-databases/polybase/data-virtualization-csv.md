@@ -4,18 +4,17 @@ description: 此頁面詳述針對 CSV 檔案使用 [建立外部資料表精靈
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d00744ff63d51cb7557a8f299a3fb8fb53a99be
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: df014d179faa5321e3f4e472045eb64a9e9894be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041137"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>搭配使用外部資料表精靈與 CSV 檔案
 

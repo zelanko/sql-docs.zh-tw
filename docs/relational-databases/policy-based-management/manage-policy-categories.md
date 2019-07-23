@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 63ee219cc956942c5bd814c03e10ac94b10a5de9
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 6f0600f663e00e0318a933e7824f3e0b78166f55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087189"
 ---
 # <a name="manage-policy-categories"></a>管理原則類別目錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "51512913"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列方法將類別目錄原則套用至 SQL Server 執行個體：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "51512913"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  此預存程序會在目前預存程序擁有者的內容中執行。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -59,7 +58,7 @@ ms.locfileid: "51512913"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [原則管理] 並選取 [管理類別目錄]。  
+3.  以滑鼠右鍵按一下 [原則管理]  並選取 [管理類別目錄]  。  
   
      **[管理原則類別目錄]** 對話方塊中提供下列資訊：  
   
@@ -71,7 +70,7 @@ ms.locfileid: "51512913"
   
 4.  選取或清除 **[託管資料庫訂閱]** 下的任何或所有核取方塊，將該原則類別目錄套用至 SQL Server 執行個體。  
   
-5.  完成後，請按一下 **[確定]**。  
+5.  完成後，請按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +78,9 @@ ms.locfileid: "51512913"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE msdb;  

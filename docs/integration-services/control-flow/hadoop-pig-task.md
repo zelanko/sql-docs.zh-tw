@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4991fd3ad95a633881099b9677c9db55935f6a13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8746d50744a5498b0f36a7d19103f653b866d33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929906"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 工作
 

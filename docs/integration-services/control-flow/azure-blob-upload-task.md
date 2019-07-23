@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b65a6d6616d844f01ffdb245a81daba04c88dddd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdc915d459144cd2c745f0ca97df55380f819138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947396"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 上傳工作
 

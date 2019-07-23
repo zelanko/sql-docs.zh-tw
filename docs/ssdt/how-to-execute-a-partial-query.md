@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f7861e3ef232dd3f244c9c325468e6ba4d51d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929616"
 ---
 # <a name="how-to-execute-a-partial-query"></a>如何：執行部分查詢
 Transact\-SQL 編輯器可讓您反白顯示指令碼的特定區段，並且將它執行成單一查詢。 這樣可以讓您輕鬆地偵錯複雜查詢的區段。  

@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0275065ac80f9b34e32da885ba838da63ea6711
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 90459364211bef6714ba3af63cdc4669e0190049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128304"
 ---
 # <a name="distributor-information-publications"></a>散發者資訊，發行集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "54135390"
   
  專供「散發者」檢視中的「散發者」使用的代理程式會位於 **[代理程式]** 索引標籤中，當中包含了可供「發行者」使用且位於 **[代理程式]** 索引標籤中的所有代理程式。 但是，專供「散發者」檢視中之「散發者」使用的 **[代理程式]** 索引標籤也會包含「散發者代理程式」和「合併代理程式」。  
   
- 如需有關「快照集」、「佇列讀取器代理程式」和維護作業的詳細資訊，請參閱＜ [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)＞。 請注意，當您在 **[代理程式]** 索引標籤上檢視「散發者」的代理程式資訊時，「發行者」資訊也會顯示，以供「快照集」和「記錄讀取器」代理程式使用。 但是，在專供「散發者」檢視中之「散發者」使用的 **[代理程式]** 索引標籤中，您也可以選取 **[散發者代理程式]** 和 **[合併代理程式]**。  
+ 如需有關「快照集」、「佇列讀取器代理程式」和維護作業的詳細資訊，請參閱＜ [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)＞。 請注意，當您在 **[代理程式]** 索引標籤上檢視「散發者」的代理程式資訊時，「發行者」資訊也會顯示，以供「快照集」和「記錄讀取器」代理程式使用。 但是，在專供「散發者」檢視中之「散發者」使用的 **[代理程式]** 索引標籤中，您也可以選取 **[散發者代理程式]** 和 **[合併代理程式]** 。  
   
 ### <a name="options"></a>選項。  
  下列各節將描述這個索引標籤上針對「散發者代理程式」和「合併代理程式」顯示的資料。  

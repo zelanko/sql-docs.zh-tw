@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9bcae930fc19aa252356f94fbdd387c2f721d048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9efb20e7c182d1d8a2426347fcfe2eafa09d35ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034340"
 ---
 # <a name="recordset-destination"></a>資料錄集目的地
 

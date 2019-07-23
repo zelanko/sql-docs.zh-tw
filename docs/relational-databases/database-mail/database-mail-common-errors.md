@@ -13,13 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d48eeb1d8b18b0cf6cd35b5f6e975ddc426fbf5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a8a5955d56d635a56899653b7cd2bd98b4924ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134444"
 ---
 # <a name="common-errors-with-database-mail"></a>使用 Database Mail 的常見錯誤 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

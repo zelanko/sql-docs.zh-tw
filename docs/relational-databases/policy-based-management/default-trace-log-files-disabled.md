@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c27761e6-75ed-4ee4-a236-0cbc42e500a1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 73544b743dbdf4e17961c59eedefa6c4a602c913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1407f55e2edab15768fb10288b78dd59ff93ddd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63008000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940490"
 ---
 # <a name="default-trace-log-files-disabled"></a>預設追蹤記錄檔已停用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

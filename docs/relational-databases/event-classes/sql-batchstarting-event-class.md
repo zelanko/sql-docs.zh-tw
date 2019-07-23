@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af2d41ee37b2ffe2c3b6c273f159e6fc4618bd31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d978bd61156eb578d002c7e9dae9030fbb1bdc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064837"
 ---
 # <a name="sqlbatchstarting-event-class"></a>SQL:BatchStarting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

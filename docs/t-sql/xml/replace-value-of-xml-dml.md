@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4958921d446e4678ce09eeb4c16f8faf5809dd2a
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051235"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ with Expression2
 識別要更新的值節點。 它必須只識別一個節點。 也就是說，*Expression1* 必須是靜態單一的。 如果輸入 XML，節點類型必須是簡單類型。 如果選取多個節點，就會引發錯誤。 如果 *Expression1* 傳回空的序列，將不會發生值取代，而且也不會傳回錯誤。 *Expression1* 必須傳回單一項目，其具有簡單類型的內容 (清單或不可部分完成類型)、文字節點或屬性節點。 *Expression1* 不能是聯集類型、複雜類型、處理指示、文件節點或註解節點，否則會傳回錯誤。  
   
 *Expression2*  
-識別節點的新值。 它可以是傳回簡單類型節點的運算式，因為將會隱含地使用 **data()**。 如果該值是值清單，**update** 陳述式會以該清單取代舊值。 在修改具類型的 XML 執行個體時，*Expression2* 必須是 *Expression*1 的相同類型或子類型。 否則，就會傳回錯誤。 在修改不具類型的 XML 執行個體時，*Expression2* 必須為不可部分完成的運算式。 否則，就會傳回錯誤。  
+識別節點的新值。 它可以是傳回簡單類型節點的運算式，因為將會隱含地使用 **data()** 。 如果該值是值清單，**update** 陳述式會以該清單取代舊值。 在修改具類型的 XML 執行個體時，*Expression2* 必須是 *Expression*1 的相同類型或子類型。 否則，就會傳回錯誤。 在修改不具類型的 XML 執行個體時，*Expression2* 必須為不可部分完成的運算式。 否則，就會傳回錯誤。  
   
 ## <a name="examples"></a>範例  
 下列 **replace value of** XML DML 陳述式的範例說明如何更新 XML 文件中的節點。  

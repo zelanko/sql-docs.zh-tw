@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 69dc605d906c7647c58a75cdc6989e4815c636f1
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: a19a4bf8c91eb118af246a0e0bc0b3458833af7c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688476"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265356"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>移除或刪除項目或專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

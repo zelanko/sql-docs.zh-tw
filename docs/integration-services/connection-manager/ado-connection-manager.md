@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56abf4898704d8545d0c38a9294cdf5d4736d1de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 920885c27d849ac49dc5e6c801a432ccdb493e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898835"
 ---
 # <a name="ado-connection-manager"></a>ADO 連接管理員
 

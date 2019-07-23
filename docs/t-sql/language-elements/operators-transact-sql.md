@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69ce7cfc0949bc97c0e8371615de4930443737f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61dad1f375a60fa22f4ee38f7023b5836bc3d5a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121905"
 ---
 # <a name="operators-transact-sql"></a>運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

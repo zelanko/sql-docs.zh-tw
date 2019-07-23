@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5418ea8fa92e8e62cf28d1bb740091feb88f32d2
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: a7dc1d67e45bb8d67cebff9deb3a694b09038154
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073659"
 ---
 # <a name="linked-servers-database-engine"></a>連結的伺服器 (Database Engine)
 

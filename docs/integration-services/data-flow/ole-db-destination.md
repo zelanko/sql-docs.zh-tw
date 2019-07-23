@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dc2b3a1f77c7d0f2f00c1a08f27c27887cc4b73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e406e5966b9b865d7e25d8156880f333d5cba26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65802348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897167"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
 

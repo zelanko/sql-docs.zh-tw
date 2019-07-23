@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: feafda7b9ed7fd7ca61310df5d29b0330a521d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83d300b006055a83e823ff509d18ce40e63708c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120654"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

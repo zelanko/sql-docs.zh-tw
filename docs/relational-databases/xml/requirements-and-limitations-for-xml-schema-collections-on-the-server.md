@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30b163359523771630c697acaa82e1171085db71
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093190"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>伺服器上 XML 結構描述集合的需求與限制
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +39,8 @@ ms.locfileid: "58513318"
 |----------|----------------|  
 |**minOccurs** 與 **maxOccurs**|**minOccurs** 與 **maxOccurs** 屬性值必須符合 4 位元組的整數。 伺服器將會拒絕不符合的結構描述。|  
 |**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕沒有子系的 **\<xsd:choice>** 物件之結構描述，除非以零的 **minOccurs** 屬性值定義該物件。|  
-|**\<xsd:include>**|目前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。<br /><br /> 若要解決此問題，您可以預先處理包含**\<xsd:include>** 指示詞的 XML 結構描述，將任何所包含的結構描述內容複製並合併成單一結構描述，以便上傳至伺服器。 如需詳細資訊，請參閱 [前置處理結構描述以合併包含的結構描述](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)。|  
-|**\<xsd:key>**、**\<xsd:keyref>** 和 **\<xsd:unique>**|目前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這些以 XSD 為基礎的條件約束，以強制執行唯一性或建立索引鍵及索引鍵參考。 無法註冊包含這些元素的 XML 結構描述。|  
+|**\<xsd:include>**|目前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。<br /><br /> 若要解決此問題，您可以預先處理包含 **\<xsd:include>** 指示詞的 XML 結構描述，將任何所包含的結構描述內容複製並合併成單一結構描述，以便上傳至伺服器。 如需詳細資訊，請參閱 [前置處理結構描述以合併包含的結構描述](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)。|  
+|**\<xsd:key>** 、 **\<xsd:keyref>** 和 **\<xsd:unique>**|目前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這些以 XSD 為基礎的條件約束，以強制執行唯一性或建立索引鍵及索引鍵參考。 無法註冊包含這些元素的 XML 結構描述。|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援這個元素。 如需更新結構描述之其他做法的資訊，請參閱 [&#60;xsd:redefine&#62; 元素](../../relational-databases/xml/the-xsd-redefine-element.md)使用的指導方針。|  
 |**\<xsd:simpleType>** 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只支援具有 **xs:time** 和 **xs:dateTime**以外之第二個元件的簡單類型毫秒有效位數，以及 **xs:time** 和 **xs:dateTime**100 奈秒的有效位數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會對所有可辨識的 XSD 簡單類型列舉做出限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援在 **\<xsd:simpleType>** 宣告中使用 "NaN" 值。<br /><br /> 如需詳細資訊，請參閱[&#60;xsd:simpleType&#62; 宣告的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)使用的指導方針。|  
 |**xsi:schemaLocation** 與 **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果這些屬性出現在插入 **xml** 資料類型之資料行或變數的 XML 執行個體資料中，將會略過這些屬性。|  

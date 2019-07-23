@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dbf800653dd5cfeaef9eca4867770852fc6af374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad8f9e49ea1dd22184384b337d036991d9dc7f9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044112"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 ## <a name="remarks"></a>Remarks  
  只有在沒有目前使用資料分割函數的資料分割結構描述時，才可以卸除資料分割函數。 如果有使用資料分割函數的資料分割結構描述，DROP PARTITION FUNCTION 就會傳回錯誤。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  下列任何一個權限，都可以用來執行 DROP PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  

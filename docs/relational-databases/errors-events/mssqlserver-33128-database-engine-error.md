@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35e3b5d32676526f696d8b95b6894c8edb411ead
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 493513f21fbf61dd516160e61a7afb9e71e477fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908439"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47754538"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|33128|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -59,5 +58,5 @@ ms.locfileid: "47754538"
 ## <a name="user-action"></a>使用者動作  
 請改用較強的演算法，例如其中一種 AES 演算法。 (建議使用)  
   
-使用 ALTER DATABASE SET COMPATIBILITY_LEVEL 將資料庫相容性層級設定為 100  (不建議使用)。  
+使用 ALTER DATABASE SET COMPATIBILITY_LEVEL 將資料庫相容性層級設定為 100 (不建議使用)。  
   

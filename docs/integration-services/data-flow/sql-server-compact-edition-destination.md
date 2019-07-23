@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e53d934902bb58b2e5d4ba66dc5bb55a8f9c03c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebc177a5971e667abafbe1e444a4a50a568a4a6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019616"
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition 目的地
 

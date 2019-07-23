@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a90017caa4a5c556924756696b61f2686f57ba3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0f64a6b850fb1434df91284479c68b59c004dc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019683"
 ---
 # <a name="notify-operator-task"></a>通知操作員工作
 

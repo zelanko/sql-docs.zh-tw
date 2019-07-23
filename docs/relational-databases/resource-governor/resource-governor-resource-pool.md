@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 7132cacb79266243aab94e0b71e18b4a8cdcbb0f
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 0a65cb01d34082e59d85198505740c345bb7bd08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942660"
 ---
 # <a name="resource-governor-resource-pool"></a>資源管理員資源集區
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "55689921"
   
 -   **MIN_CPU_PERCENT 和 MAX_CPU_PERCENT**  
   
-     這兩個設定是在發生 CPU 競爭時，資源集區中所有要求的保證平均 CPU 頻寬下限和上限。 您可以使用這些設定，根據每個工作負載的需求，為多個工作負載建立可預測的 CPU 資源使用量。 例如，假設公司的銷售和行銷部門共用相同的資料庫。 銷售部門有高查詢優先權的 CPU 運算密集工作負載。 行銷部門也有 CPU 運算密集的工作負載，但是查詢優先權較低。 透過為各部門建立個別的資源集區，您可以指派銷售資源集區的 CPU 百分比「下限」為 70，而行銷資源集區的 CPU 百分比「上限」為 30。 這樣可以確保銷售工作負載接收到其所需的 CPU 資源，而行銷工作負載會與銷售工作負載的 CPU 需求隔離。 請注意，CPU 百分比上限是機率的最大值。 如果有可用的 CPU 容量，工作負載最多可以使用到 100%。 此上限值只適用於發生 CPU 資源競爭時。 在此範例中，如果銷售工作負載關閉，行銷工作負載可在需要時使用 100% 的 CPU。  
+     這兩個設定是在發生 CPU 競爭時，資源集區中所有要求的保證平均 CPU 頻寬下限和上限。 您可以使用這些設定，根據每個工作負載的需求，為多個工作負載建立可預測的 CPU 資源使用量。 例如，假設公司的銷售和行銷部門共用相同的資料庫。 銷售部門有高查詢優先權的 CPU 運算密集工作負載。 行銷部門也有 CPU 運算密集的工作負載，但是查詢優先權較低。 透過為各部門建立個別的資源集區，您可以指派銷售資源集區的 CPU 百分比「下限」  為 70，而行銷資源集區的 CPU 百分比「上限」  為 30。 這樣可以確保銷售工作負載接收到其所需的 CPU 資源，而行銷工作負載會與銷售工作負載的 CPU 需求隔離。 請注意，CPU 百分比上限是機率的最大值。 如果有可用的 CPU 容量，工作負載最多可以使用到 100%。 此上限值只適用於發生 CPU 資源競爭時。 在此範例中，如果銷售工作負載關閉，行銷工作負載可在需要時使用 100% 的 CPU。  
   
 -   **CAP_CPU_PERCENT**  
   

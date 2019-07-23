@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4515d920039c6dacd48e4b969928d525a1cec67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 325691a7ab4a61fcf563e5f9a662db3e1db01827
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967903"
 ---
 # <a name="power-ssis-expression"></a>POWER (SSIS 運算式)
 

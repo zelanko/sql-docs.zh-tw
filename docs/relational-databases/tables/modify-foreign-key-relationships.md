@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139604"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "52517083"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法修改外部索引鍵：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -57,16 +56,16 @@ ms.locfileid: "52517083"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>若要修改外部索引鍵  
   
-1.  在 **[物件總管]** 中，展開含有外部索引鍵的資料表，然後展開 **[索引鍵]**。  
+1.  在 **[物件總管]** 中，展開含有外部索引鍵的資料表，然後展開 **[索引鍵]** 。  
   
-2.  以滑鼠右鍵按一下您要修改的外部索引鍵，然後選取 [修改]。  
+2.  以滑鼠右鍵按一下您要修改的外部索引鍵，然後選取 [修改]  。  
   
 3.  在 **[外部索引鍵關聯性]** 對話方塊中，您可以進行下列修改。  
   
@@ -77,16 +76,16 @@ ms.locfileid: "52517083"
      建立新的關聯性。 [ **資料表及資料行規格** ] 必須在關聯性生效之前設定。  
   
      **Delete**  
-     在 [選取的關聯性] 清單中刪除選取的關聯性。 若要刪除加入的關聯性，請使用此按鈕移除該關聯性。  
+     在 [選取的關聯性]  清單中刪除選取的關聯性。 若要刪除加入的關聯性，請使用此按鈕移除該關聯性。  
   
      **一般類別目錄**  
-     展開以顯示 [檢查建立或重新啟用時的現有資料] 以及 [資料表及資料行規格]。  
+     展開以顯示 [檢查建立或重新啟用時的現有資料]  以及 [資料表及資料行規格]  。  
   
      **檢查建立或重新啟用時的現有資料**  
      在建立或重新啟用條件約束之前，依照條件約束驗證資料表中所有現有的資料。  
   
      **資料表及資料行規格分類**  
-     展開以顯示哪些資料表的哪些資料行，在關聯性中做為外部索引鍵和主要 (或唯一) 索引鍵。 若要編輯或定義這些值，請按一下屬性欄位右邊的省略符號按鈕 (**...**)。  
+     展開以顯示哪些資料表的哪些資料行，在關聯性中做為外部索引鍵和主要 (或唯一) 索引鍵。 若要編輯或定義這些值，請按一下屬性欄位右邊的省略符號按鈕 ( **...** )。  
   
      **外部索引鍵基底資料表**  
      顯示所選取的關聯性中，哪些資料表包含有做為外部索引鍵的資料行。  
@@ -101,16 +100,16 @@ ms.locfileid: "52517083"
      顯示所選取的關聯性中，哪些資料行做為主要 (或唯一) 索引鍵。  
   
      **識別類別目錄**  
-     展開以顯示 [名稱] 和 [描述] 的屬性欄位。  
+     展開以顯示 [名稱]  和 [描述]  的屬性欄位。  
   
      **名稱**  
      顯示關聯性的名稱。 在建立新的關聯性時，會根據 [ **資料表設計工具**] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
      **說明**  
-     描述關聯性。 若要撰寫更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊的省略符號 **(...)**。 如此便可提供較大的區域以寫入文字。  
+     描述關聯性。 若要撰寫更詳細的描述，請按一下 [描述]  ，然後按一下屬性欄位右邊的省略符號 **(...)** 。 如此便可提供較大的區域以寫入文字。  
   
      **資料表設計工具類別目錄**  
-     展開以顯示 [檢查建立或重新啟用時的現有資料] 和 [強制複寫] 的資訊。  
+     展開以顯示 [檢查建立或重新啟用時的現有資料]  和 [強制複寫]  的資訊。  
   
      **強制複寫**  
      指示當複寫代理程式在此資料表上執行插入、更新或刪除時，是否要強制使用條件約束。  
@@ -119,7 +118,7 @@ ms.locfileid: "52517083"
      指定變更關聯性中的資料行資料時，如果變更會破壞外部索引鍵關聯性的完整性，是否允許執行。 如果不允許這樣的變更，請選擇 [ **是** ]，如果允許，請選擇 [ **否** ]。  
   
      **INSERT 和 UPDATE 規格分類**  
-     展開以顯示關聯性之 [刪除規則] 和 [更新規則] 的資訊。  
+     展開以顯示關聯性之 [刪除規則]  和 [更新規則]  的資訊。  
   
      **刪除規則**  
      指定當使用者嘗試刪除與外部索引鍵關聯性相關的資料列時，應該採取什麼動作：  
@@ -143,7 +142,7 @@ ms.locfileid: "52517083"
   
     -   **設為預設值** ：如果資料表的所有外部索引鍵資料行都具有為其所定義的預設值，就可以將值設為資料行所定義的預設值。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
+4.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改外部索引鍵**  

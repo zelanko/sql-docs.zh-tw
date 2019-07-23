@@ -10,14 +10,13 @@ ms.topic: tutorial
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cedb0addec5d6164b418b6bec0458de429dd6a82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3c0b3584edd804768bbbe94bdc570448ab6e653
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66198204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021930"
 ---
 # <a name="alter-an-extended-events-session"></a>更改擴充事件工作階段
 

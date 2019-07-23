@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c035be98a8327ff0abc6fa6beece3c5cb6a2d7ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf33110b09b4ecc5e3709a59a19eaa47bdafad2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033996"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 運算式)
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97cde3fcfb5effa7c61fde6673a830f67d9fc634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 537b9a1d1b0fb84ba26c56aeb2f897d268bb2d03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104856"
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties (SSISDB 資料庫)
 

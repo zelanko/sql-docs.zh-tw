@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: cb2dc637dff24b6e3864d3c14f94ea817767de41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060968"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +60,7 @@ ms.locfileid: "67351688"
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_** &nbsp;| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|**\* _SQL Server \*_** &nbsp;| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +864,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* SQL Database<br />單一資料庫/彈性集區 \*_** | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\* SQL Database<br />單一資料庫/彈性集區 \*_** | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1192,7 +1191,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* SQL Database<br />受控執行個體 \*_** | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />受控執行個體 \*_** | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1259,7 +1258,7 @@ CREATE DATABASE TestDB1;
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL 資料<br />倉儲 \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL 資料<br />倉儲 \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1371,7 +1370,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />單一資料庫/彈性集區](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
 
 &nbsp;
 

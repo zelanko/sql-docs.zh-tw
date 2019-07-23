@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f4d20c4a0eaaf573cdb9da6e9880df6d698a8f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3a05d8b23a6e1f0790e5a9799d0608052f7fcae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096693"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
 

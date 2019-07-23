@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc06dca68c6b6a4cedc730433401076ca07b126b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116486"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -55,7 +54,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |data_space|BIGINT|資料使用的空間 (KB)。|  
 |index_space|BIGINT|索引使用的空間 (KB)。|  
 |unused_space|BIGINT|保留未使用的空間 (KB)。|  
-|pdw_node_id|ssNoversion|資料使用的計算節點。|  
+|pdw_node_id|INT|資料使用的計算節點。|  
   
 這是單一資料表的結果集。
   
@@ -66,8 +65,8 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |data_space|BIGINT|資料使用的空間 (KB)。||  
 |index_space|BIGINT|索引使用的空間 (KB)。||  
 |unused_space|BIGINT|保留未使用的空間 (KB)。||  
-|pdw_node_id|ssNoversion|用於報告空間使用量的計算節點。||  
-|distribution_id|ssNoversion|用於報告空間使用量的分佈。|複寫資料表的值為 -1。|  
+|pdw_node_id|INT|用於報告空間使用量的計算節點。||  
+|distribution_id|INT|用於報告空間使用量的分佈。|複寫資料表的值為 -1。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED 基本語法  

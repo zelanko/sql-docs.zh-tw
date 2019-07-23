@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4e9157dc3e3fb7bffe8365290ef6e4be1878f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38f22a3e65822300eb0a585ed2339a10d7bb349f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011327"
 ---
 # <a name="sequence-container"></a>時序容器
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c9d9f975bcc18341c3f0465e92523815083e2de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133235"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件�
 |**ClientProcessID**|9|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|  
 |**ColumnPermissions**|44|指出是否設定資料行權限。 您可以剖析陳述式文字，以判斷資料行所套用的權限。|  
 |**CPU**|18|事件所使用的 CPU 時間量 (以毫秒為單位)。|  
-|**資料庫識別碼**|3|由 USE <資料庫名稱> 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE <資料庫名稱> 陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|  
+|**資料庫識別碼**|3|由 USE <資料庫名稱>  陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE <資料庫名稱>  陳述式，則是預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|  
 |**DatabaseName**|35|正在其中執行使用者陳述式的資料庫名稱。|  
 |**DBUserName**|40|用戶端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者名稱。|  
 |**有效期間**|13|事件的持續期間 (以百萬分之一秒為單位)。<br /><br /> 伺服器會以百萬分之一秒為單位 (百萬分之一秒，或 10<sup>-6</sup>秒) 報告事件的持續時間，並以毫秒為單位 (千分之一秒，或 10<sup>-3</sup>秒) 報告事件使用的 CPU 時間量。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 圖形化使用者介面預設會以毫秒為單位來顯示 **Duration** 資料行，但是當追蹤儲存到檔案或資料庫資料表時，會以百萬分之一秒為單位來寫入 **Duration** 資料行值。|  
@@ -141,7 +140,7 @@ SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件�
 |**Writes**|17|伺服器代表事件所執行的實體磁碟寫入作業次數。|  
 |**XactSequence**|50|用來描述目前交易的 Token。|  
   
- * 依預設，所有事件都會擴展這些資料行。  
+ \* 依預設，所有事件都會擴展這些資料行。  
   
  \*\*如需 **ObjectType** 資料行的詳細資訊，請參閱 [ObjectType 追蹤事件資料行](../../relational-databases/event-classes/objecttype-trace-event-column.md)。  
   

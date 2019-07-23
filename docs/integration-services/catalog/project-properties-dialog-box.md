@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 60284ac8c7c1f99bac6b5eae20748b2d7f5308ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f792df0fbfd7f78e82f0ce049dc1ef205576ae38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007957"
 ---
 # <a name="project-properties-dialog-box"></a>專案屬性對話方塊
 
@@ -50,7 +49,7 @@ ms.locfileid: "65729196"
   
 4.  展開包含您要設定其屬性之專案的資料夾。  
   
-5.  以滑鼠右鍵按一下專案，然後再按一下 [屬性]。  
+5.  以滑鼠右鍵按一下專案，然後再按一下 [屬性]  。  
   
 ##  <a name="general"></a> 設定 [一般] 頁面上的選項  
  使用 [一般] 頁面檢視專案屬性。  
@@ -74,7 +73,7 @@ ms.locfileid: "65729196"
  使用 **[權限]** 頁面檢視並設定專案的明確權限。  
   
  瀏覽  
- 按一下 [瀏覽]，使用 [瀏覽所有主體] 對話方塊選取您要設定其權限的使用者和角色。  
+ 按一下 [瀏覽]  ，使用 [瀏覽所有主體]  對話方塊選取您要設定其權限的使用者和角色。  
   
  **名稱**  
  列出使用者或角色的名稱。  
@@ -89,9 +88,9 @@ ms.locfileid: "65729196"
  列出授與權限的使用者或角色。  
   
  **授與**  
- 選取 [授與] 時，會針對使用者會或角色授與權限。  
+ 選取 [授與]  時，會針對使用者會或角色授與權限。  
   
  **拒絕**  
- 選取 [拒絕] 時，會針對使用者會或角色拒絕權限。  
+ 選取 [拒絕]  時，會針對使用者會或角色拒絕權限。  
   
   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6c9a5f59a076c857b335a4a8f82298b94b1c4ea3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7314659cc8d0ba18b5b7b7b562ad5df467988638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070256"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  *Key_name*  
  這是要變更之對稱金鑰在資料庫中的識別名稱。  
   
- ADD ENCRYPTION BY   
+ ADD ENCRYPTION BY  
  利用指定的方法新增加密。  
   
  DROP ENCRYPTION BY  
@@ -69,7 +68,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  CERTIFICATE *Certificate_name*  
  指定用來加密對稱金鑰的憑證。 這個憑證必須已存在於資料庫中。  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  指定用於加密對稱金鑰的密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。  
   
  SYMMETRIC KEY *Symmetric_Key_Name*  
@@ -88,9 +87,9 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  如果要變更對稱金鑰的擁有者，請使用 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
 > [!NOTE]  
->  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
+>  只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料 (不建議使用)。請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，使用 RC4 或 RC4_128 加密的資料可以在任何相容性層級進行解密。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要對稱金鑰的 ALTER 權限。 如果利用憑證或非對稱金鑰來新增加密，則需要該憑證或非對稱金鑰的 VIEW DEFINITION 權限。 如果利用憑證或非對稱金鑰來卸除加密，則需要該憑證或非對稱金鑰的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

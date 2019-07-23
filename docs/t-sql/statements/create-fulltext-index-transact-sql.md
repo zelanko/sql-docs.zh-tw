@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e5ed9b37cc49991a7f7af0b4264c68277d362667
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 6f5a03089b51d0c3f37dc28411ff9e0ab376efc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912777"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -154,7 +153,7 @@ OFF
 *property_list_name*       
 指定要與全文檢索索引產生關聯的搜尋屬性清單名稱。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 如需全文檢索索引的詳細資訊，請參閱[建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。  
   
 您可以在 **xml** 資料行上建立檢索 XML 項目內容但忽略 XML 標記的全文檢索索引。 屬性值是全文檢索索引的值 (除非它們是數值)。 元素標記會當做 Token 界限來使用。 系統支援包含多種語言且格式正確的 XML 或 HTML 文件和片段。 如需詳細資訊，請參閱 [使用 XML 資料行進行全文檢索搜尋](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  

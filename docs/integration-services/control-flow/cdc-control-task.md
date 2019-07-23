@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f07faf757a8d2bf4b8f2f93042e0af196e6e6d50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904187"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
 

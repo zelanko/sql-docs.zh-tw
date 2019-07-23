@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: e3f780017ca9894e4372b0286dda8856324f977d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8ff49e0a8f369c40b37759b2b59cd7f5e1897e66
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683923"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266076"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>移除已註冊的伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

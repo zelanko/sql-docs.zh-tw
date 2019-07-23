@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6aa033ce84271e2ac9c4a8efc65b517d9ffe3318
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141058"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ SELECT [ ALL | DISTINCT ]
   
  如果 FROM 子句中有多份資料表有含 IDENTITY 屬性的資料行，就必須利用特定資料表名稱來限定 $IDENTITY，例如 T1.$IDENTITY。  
   
- $ROWGUID   
+ $ROWGUID  
  傳回資料列 GUID 資料行。  
   
  如果 FROM 子句中有多份資料表含有 ROWGUIDCOL 屬性，就必須利用特定資料表名稱來限定 $ROWGUID，例如 T1.$ROWGUID。  

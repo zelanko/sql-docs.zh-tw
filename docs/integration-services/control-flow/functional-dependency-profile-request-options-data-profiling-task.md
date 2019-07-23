@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b75355aec1c0461f1f0b5b5938ec931de4820c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ec1e724c607a8805b9654f8ade077ab078e4eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988199"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>功能相依性設定檔要求選項 (資料分析工作)
 

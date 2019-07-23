@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 18e9bbe981ebd8f36999f3ba0312e3f426457955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ef524c6ee823b80b25fa5cf5ee4584ba8b8d00c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912190"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>設定容錯移轉叢集上的 FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,11 +27,11 @@ ms.locfileid: "65094159"
   
 1.  設定容錯移轉叢集的主要節點。  
   
-     設定完成之後，請使用 [SQL Server 組態管理員]，在主要節點上啟用 FILESTREAM。 這樣就會啟用需要 Windows Admin 權限的設定。 如果需要進行遠端存取，請選取 [允許遠端用戶端具有 FILESTREAM 資料的資料流存取權]。 這樣將會建立檔案共用叢集資源。  
+     設定完成之後，請使用 [SQL Server 組態管理員]  ，在主要節點上啟用 FILESTREAM。 這樣就會啟用需要 Windows Admin 權限的設定。 如果需要進行遠端存取，請選取 [允許遠端用戶端具有 FILESTREAM 資料的資料流存取權]  。 這樣將會建立檔案共用叢集資源。  
   
 2.  設定被動節點。  
   
-     設定完成之後，請使用 [SQL Server 組態管理員]，在被動節點上啟用 FILESTREAM。 您針對 [Windows 共用名稱] 指定的名稱必須在叢集的所有節點中相同。  
+     設定完成之後，請使用 [SQL Server 組態管理員]  ，在被動節點上啟用 FILESTREAM。 您針對 [Windows 共用名稱]  指定的名稱必須在叢集的所有節點中相同。  
   
 3.  若要加入更多被動節點，請重複步驟 2。  
   

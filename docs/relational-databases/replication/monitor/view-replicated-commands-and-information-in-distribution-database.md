@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d332096aee2c38f2cd16c4fa90296ef80b2b15e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e4fc71168a424fa31675e616846f24f6f4af616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111036"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>檢視散發資料庫中複寫的命令和資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "47701146"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>若要在散發資料庫中，檢視從使用異動複寫所發行之特定發行項或特定資料庫複寫的命令  
   
-1.  (選擇性) 在發行集資料庫的「發行者」端，執行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。 指定 **@publication** 和 **@article**＞。 請注意結果集中 **article id** 的值。  
+1.  (選擇性) 在發行集資料庫的「發行者」端，執行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。 指定 **@publication** 和 **@article** ＞。 請注意結果集中 **article id** 的值。  
   
-2.  在散發資料庫的「散發者」端，執行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 (選擇性) 針對 **@article_id**＞。 (選擇性) 針對 **@publisher_database_id**指定發行集資料庫的識別碼，此識別碼可從 **sys.databases** 目錄檢視中的 [database_id](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行取得。  
+2.  在散發資料庫的「散發者」端，執行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 (選擇性) 針對 **@article_id** ＞。 (選擇性) 針對 **@publisher_database_id** 指定發行集資料庫的識別碼，此識別碼可從 **sys.databases** 目錄檢視中的 [database_id](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 資料行取得。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

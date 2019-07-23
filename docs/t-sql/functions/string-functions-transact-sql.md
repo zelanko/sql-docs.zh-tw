@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a9b03570df8ffd1a6837fd9196f50497ca1e371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 562db45e1edfee521bed91b7a4137cd0bf6fa7b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906839"
 ---
 # <a name="string-functions-transact-sql"></a>字串函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

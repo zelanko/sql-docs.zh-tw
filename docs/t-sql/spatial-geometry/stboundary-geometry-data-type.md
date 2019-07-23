@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 671e27f0e35e450b89c3eaaadc3b31612114348a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a15d3bdc505c4406c1c5d09dbc9d6f007c34fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930389"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

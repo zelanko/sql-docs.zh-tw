@@ -9,14 +9,13 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: jroth
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1031bdfa3aa6c728d3e33b500fe942d5e52c5fdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec0b088d7ed1f32661a9ca171eb5f889c09ae5d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012805"
 ---
 # <a name="column-encryption-enclave-type-server-configuration-option"></a>資料行加密記憶體保護區類型伺服器設定選項
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

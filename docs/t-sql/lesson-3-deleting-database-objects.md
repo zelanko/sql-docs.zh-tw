@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b155862bd9983bc8b93b6088bfa6d5df254ffe7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 36b68bb833c5c95beeb65b792b9621f2f9bb9c4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031576"
 ---
 # <a name="lesson-3-delete-database-objects"></a>第 3 課：刪除資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

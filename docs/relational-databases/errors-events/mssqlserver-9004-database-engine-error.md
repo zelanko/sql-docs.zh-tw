@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bbbf5cba908426d1890423f01dbe42c346b4c3ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4aa3b74af774543c5125652d8f860c68fb04fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118327"
 ---
 # <a name="mssqlserver9004"></a>MSSQLSERVER_9004
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47631899"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|9004|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

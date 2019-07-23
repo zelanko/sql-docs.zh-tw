@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 24b145ec8bda61645521fcf69e6a40bba1659e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 701110865f4cda286c647ef887dba2e29cc5fb42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081160"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

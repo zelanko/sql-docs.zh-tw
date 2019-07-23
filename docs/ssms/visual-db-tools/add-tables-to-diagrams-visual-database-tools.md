@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 5abf4fb0713e96dde95d8ac0a1be390e6bcc9b3c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 7f85f9bf8dec248430c261d369f566616db6f1a2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686526"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263728"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>將資料表加入圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 3db09682a58b80d4f0d2d88ad6f65e3d458b36ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 556a0442a64caa5bcbcab98933650da93b4e410b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013470"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用新增可用性群組對話方塊 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [新增可用性群組] 對話方塊，在已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體建立 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
+  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [新增可用性群組]  對話方塊，在已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體建立 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」* (Availability Replica))。  
   
 > [!NOTE]  
 >  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
@@ -55,9 +54,9 @@ ms.locfileid: "66780149"
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後按一下伺服器名稱。  
   
-2.  展開 [AlwaysOn 高可用性] 節點。  
+2.  展開 [AlwaysOn 高可用性]  節點。  
   
-3.  以滑鼠右鍵按一下 [可用性群組] 節點，然後選取 [新增可用性群組] 命令。  
+3.  以滑鼠右鍵按一下 [可用性群組]  節點，然後選取 [新增可用性群組]  命令。  
   
 4.  這個命令會開啟 **[新增可用性群組]** 對話方塊。  
   
@@ -70,11 +69,11 @@ ms.locfileid: "66780149"
     > [!TIP]  
     >  如果您已經加入複本，但無法連接到主機伺服器執行個體，則可以移除該複本並加入新複本。 如需詳細資訊，請參閱[將次要複本從可用性群組移除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) 和[將次要複本加入至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-8.  在對話方塊的 **[選取頁面]** 窗格上，按一下 **[備份喜好設定]**。 然後在 **[備份喜好設定]** 頁面上，根據複本角色指定應該進行備份的位置，並為將要裝載此可用性群組之可用性複本的每個伺服器執行個體指派備份優先權。 如需詳細資訊，請參閱[可用性群組屬性：新增可用性群組 &#40;備份喜好設定頁面&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)。  
+8.  在對話方塊的 **[選取頁面]** 窗格上，按一下 **[備份喜好設定]** 。 然後在 **[備份喜好設定]** 頁面上，根據複本角色指定應該進行備份的位置，並為將要裝載此可用性群組之可用性複本的每個伺服器執行個體指派備份優先權。 如需詳細資訊，請參閱[可用性群組屬性：新增可用性群組 &#40;備份喜好設定頁面&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
-9. 若要建立可用性群組，請按一下 **[確定]**。 這會導致對話方塊驗證該指定的資料庫是否符合必要條件。  
+9. 若要建立可用性群組，請按一下 **[確定]** 。 這會導致對話方塊驗證該指定的資料庫是否符合必要條件。  
   
-     若要結束對話方塊而不建立可用性群組，請按一下 **[取消]**。  
+     若要結束對話方塊而不建立可用性群組，請按一下 **[取消]** 。  
   
 ##  <a name="FollowUp"></a> 後續操作：使用 [新增可用性群組] 對話方塊建立可用性群組之後  
   

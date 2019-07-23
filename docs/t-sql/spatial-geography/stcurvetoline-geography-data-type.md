@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7f237da350b47ea0c3141709cd82d083ef509196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6c68aa9859fbe7e1066ad392377d6b50289fd0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042395"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a095929c44a1f5b4f91b1c7d0abc4375f00712c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b765f663e190f5f36621f0f73655824467a3998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903084"
 ---
 # <a name="connect-to-server-oracle-login"></a>連接到伺服器 (Oracle)，登入
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47749507"
  Oracle 發行者的透明網路基質 (Transparent Network Substrate，TNS) 名稱，是安裝在散發者上的 Oracle 用戶端軟體於組態期間指定的。  
   
  **驗證**  
- 選取 **[Oracle 標準驗證]** (建議選項) 或 **[Windows 驗證]**。 如果您選取 **[Windows 驗證]**：  
+ 選取 **[Oracle 標準驗證]** (建議選項) 或 **[Windows 驗證]** 。 如果您選取 **[Windows 驗證]** ：  
   
 -   Oracle 伺服器必須設定為允許使用 Windows 認證進行連接。 如需詳細資訊，請參閱 Oracle 文件集。  
   

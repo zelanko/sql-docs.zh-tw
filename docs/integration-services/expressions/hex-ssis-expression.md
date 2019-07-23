@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5f219cf46c3b8833086f5b7b4b3f058200ca92b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 486babd40e6afdb576772dc825b8d080c67d13dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051195"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 運算式)
 

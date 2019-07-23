@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c2bf8fe0f0cefb0557fb17160bcfffab957dda1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edcd0b961f6a3955ea633c84b275bfa1a687cc92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997831"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB 資料庫)
 

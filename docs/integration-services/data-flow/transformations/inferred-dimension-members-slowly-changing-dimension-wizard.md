@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cd7d424b7c1bbc4b8a2c654664dce4c1c4836bf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5354a97ac3f0e535f11256de5e0643bf4243255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944240"
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>推斷的維度成員 (緩時變維度精靈)
 

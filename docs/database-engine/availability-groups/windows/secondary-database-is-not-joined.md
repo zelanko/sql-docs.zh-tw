@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 58e1a2589476041d83a34fbc3008addb19632b8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fa4abf575c847bae10342a3870fc2c3785d16a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014227"
 ---
 # <a name="secondary-database-is-not-joined"></a>次要資料庫未加入
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

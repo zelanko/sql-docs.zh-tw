@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c98f7a5714d7cd0813d5a4a7df6cf23c7b661414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82a8df3e80a851de5fb09cda3e28620f163a3de7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127215"
 ---
 # <a name="secondary-database-settings"></a>次要資料庫設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

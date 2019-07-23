@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c291eecac9972bea6d2fbde5d6e8ccc1c0356178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3be8fb2d2a918aafdbec48e5eba1c23885585294
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951890"
 ---
 # <a name="coding-a-custom-log-provider"></a>撰寫自訂記錄提供者的程式碼
 
@@ -35,7 +34,7 @@ ms.locfileid: "65724536"
  您覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> 方法以快取連接集合與事件介面的參考。 您可以稍後在記錄提供者的其他方法中使用這些快取的參考。  
   
 ### <a name="using-the-configstring-property"></a>使用 ConfigString 屬性  
- 在設計階段，記錄提供者會從 [組態] 資料行接收組態資訊。 這個組態資訊會對應至記錄提供者的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性。 依預設，這個資料行包含您可以從中擷取任何字串資訊的文字方塊。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所含的大部分記錄提供者，都會使用此屬性儲存提供者用以連接外部資料來源之連接管理員的名稱。 如果您的記錄提供者使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性，請使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法驗證這個屬性，並確定已正確設定屬性。  
+ 在設計階段，記錄提供者會從 [組態]  資料行接收組態資訊。 這個組態資訊會對應至記錄提供者的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性。 依預設，這個資料行包含您可以從中擷取任何字串資訊的文字方塊。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所含的大部分記錄提供者，都會使用此屬性儲存提供者用以連接外部資料來源之連接管理員的名稱。 如果您的記錄提供者使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 屬性，請使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法驗證這個屬性，並確定已正確設定屬性。  
   
 ### <a name="validating-the-log-provider"></a>驗證記錄提供者  
  您覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法以確定已正確設定提供者，而且已準備執行。 一般而言，驗證的最低層級是確定 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 已正確地設定。 必須等到記錄提供者從 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> 方法傳回 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>，執行才能繼續。  

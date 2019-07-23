@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f169daa1a885024366e0d2f5aae4df3d245ff75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911495"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>第 5-3 課：修改 Directory 屬性設定值
 

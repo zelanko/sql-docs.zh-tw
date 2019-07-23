@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e1b3affaf97a04ddbe16b114d340fa989dab7f5b
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898179"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  DROP DATABASE AUDIT SPECIFICATION 會移除稽核規格的中繼資料，但不會移除 DROP 命令發出前所收集的稽核資料。 您必須使用 `ALTER DATABASE AUDIT SPECIFICATION` 將資料庫稽核規格的狀態設定為 OFF，然後才可以將它卸除。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  具有 **ALTER ANY DATABASE AUDIT** 權限的使用者可以卸除伺服器稽核規格。  
   
 ## <a name="examples"></a>範例  

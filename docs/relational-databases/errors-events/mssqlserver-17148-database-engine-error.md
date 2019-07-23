@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: acc6bb58-7248-4237-8bd6-4b3ed2c11446
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a46b2ebf1aa0069f1c61ef9b52ad290d160f8a0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4581b68f15b78060b359429eaa2599003fa497b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131705"
 ---
 # <a name="mssqlserver17148"></a>MSSQLSERVER_17148
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47628566"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|17148|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

@@ -16,13 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
-ms.openlocfilehash: 3ca141c40420b4d2e71a660220075413d9ca8c64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efefe16b7c5180ed0ae0dd853737c2182f335f61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66015075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034401"
 ---
 # <a name="power-query-source-preview"></a>Power Query 來源 (預覽)
 

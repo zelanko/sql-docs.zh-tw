@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1109e0b7c86e03efe41c05b47af9e74c266edb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef94f1b94ac0f8a75b186a733b8143d1bd29ac51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103955"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
 

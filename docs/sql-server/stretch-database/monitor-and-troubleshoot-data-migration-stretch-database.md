@@ -10,22 +10,21 @@ helpviewer_keywords:
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aff3780352dbacd236e51f343999bd909d05207c
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 6130bd88e93a33c5bcb295e73b752ae1b749ff77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136081"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>監視和疑難排解資料移轉 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | Stretch | 監視]。  
+  若要在 Stretch Database 監視器中監視資料移轉，請針對 SQL Server Management Studio 中的資料庫，選取 [工作 | Stretch | 監視]  。  
   
 ## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>在 Stretch Database 監視器中檢查資料移轉的狀態  
- 針對 SQL Server Management Studio 中的資料庫選取 [工作 | Stretch | 監視]，以開啟 Stretch Database 監視器並監視資料移轉。  
+ 針對 SQL Server Management Studio 中的資料庫選取 [工作 | Stretch | 監視]  ，以開啟 Stretch Database 監視器並監視資料移轉。  
   
 -   監視器的上半部會顯示啟用延展的 SQL Server 資料庫與遠端 Azure 資料庫的一般資訊。  
   

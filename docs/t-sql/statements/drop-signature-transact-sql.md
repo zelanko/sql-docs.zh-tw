@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a7def68fb093f056569836a3cbdad5f71b3fbd2f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f36f0bc8b70a371e61f309ac61b7b0d769135429
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929209"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ## <a name="remarks"></a>Remarks  
  您可以在 sys.crypt_properties 目錄檢視中，看到有關簽章的資訊。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要物件的 ALTER 權限，以及憑證或非對稱金鑰的 CONTROL 權限。 如果相關聯的私密金鑰受到密碼保護，則使用者也必須有密碼。  
   
 ## <a name="examples"></a>範例  

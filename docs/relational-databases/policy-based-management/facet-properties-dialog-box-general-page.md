@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c1c81c38b8b98a4e9808d68cf0c7755bd1ea0d7e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 788240d2c6fef4bd080af3d18a6a41453ecc27a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087278"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Facet 屬性對話方塊、一般頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

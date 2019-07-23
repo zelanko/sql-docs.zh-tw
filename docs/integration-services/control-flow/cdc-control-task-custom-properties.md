@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3d207f253b3604cfc15b5cf5cc792eeba4e668fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52abc0392a20325288be4803f83b5350af63429e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947147"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制工作自訂屬性
 
@@ -28,7 +27,7 @@ ms.locfileid: "65727915"
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
 |連接|ADO.NET 連接|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 資料庫的 ADO.NET 連接，以存取變更資料表和 CDC 狀態 (如果儲存在相同的資料庫中)。<br /><br /> 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
-|TaskOperation|整數 (列舉)|CDC 控制工作的選定作業。 可能值為 **[標記初始載入開始]**、 **[標記初始載入結束]**、 **[標記 CDC 開始]**、 **[取得處理範圍]**、 **[標記處理的範圍]** 和 **[重設 CDC 狀態]**。<br /><br /> 如果您在 **CDC (亦即，非 Oracle) 上工作時選取了**MarkCdcStart **、** MarkInitialLoadStart **或** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，連線管理員中指定的使用者就必須是  **db_owner** 或 **系統管理員**。<br /><br /> 如需有關這些作業的詳細資訊，請參閱＜ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) ＞和＜ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)＞。|  
+|TaskOperation|整數 (列舉)|CDC 控制工作的選定作業。 可能值為 **[標記初始載入開始]** 、 **[標記初始載入結束]** 、 **[標記 CDC 開始]** 、 **[取得處理範圍]** 、 **[標記處理的範圍]** 和 **[重設 CDC 狀態]** 。<br /><br /> 如果您在 **CDC (亦即，非 Oracle) 上工作時選取了**MarkCdcStart **、** MarkInitialLoadStart **或** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，連線管理員中指定的使用者就必須是  **db_owner** 或 **系統管理員**。<br /><br /> 如需有關這些作業的詳細資訊，請參閱＜ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) ＞和＜ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)＞。|  
 |OperationParameter|String|目前用於 **MarkCdcStart** 作業。 此參數允許特定作業所需的額外輸入。 例如， **MarkCdcStart** 作業所需的 LSN 號碼。|  
 |StateVariable|String|SSIS 封裝變數，儲存目前 CDC 內容的 CDC 狀態。 CDC 控制工作會將狀態讀寫至 **StateVariable** ，而且不會在永續性儲存體中載入或儲存它，除非已選取 **AutomaticStatePersistence** 。 請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。|  
 |AutomaticStatePersistence|布林|CDC 控制工作會從 CDC 狀態封裝變數中讀取 CDC 狀態。 在作業之後，CDC 控制工作會更新 CDC 狀態封裝變數的值。 **AutomaticStatePersistence** 屬性告知 CDC 控制工作，誰負責在 SSIS 封裝執行之間保存 CDC 狀態值。<br /><br /> 如果此屬性為 **true**，CDC 控制工作會自動從狀態資料表中載入 CDC 狀態變數的值。 當 CDC 控制工作更新 CDC 狀態變數的值時，它也會更新相同狀態 **資料表中的其值，將狀態儲存**在特殊資料表中，以及更新狀態變數。 開發人員可以控制哪個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫包含該狀態資料表及其名稱。 此狀態資料表的結構是預先定義的。<br /><br /> 如果為 **false**，CDC 控制工作就不會處理其值的保存。 如果為 true，CDC 控制工作會將狀態儲存在特殊資料表中，並更新 StateVariable。<br /><br /> 預設值是 **true**，表示狀態持續性會自動更新。|  

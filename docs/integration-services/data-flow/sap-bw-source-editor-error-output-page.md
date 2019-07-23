@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 48d57c46be91d72973e58caf240d9c9c230bae2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d823b1155a07f7bb3dc44f84f852d747692ae58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002368"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 來源編輯器 (錯誤輸出頁面)
 

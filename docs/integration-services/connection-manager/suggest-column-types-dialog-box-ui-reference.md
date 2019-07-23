@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b76d9fd1d248d463f8b62a1c9358851db34fd3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f500919fcfb8e3df620b73e6db628f7cdd1fc56a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904189"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>建議資料行類型對話方塊 UI 參考
 

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04ab74218fcea53d3f51a386d1d2637c346eded5
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: 23a3dd70b96aef4c24f3aa405ce428db5c7b2321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026514"
 ---
 # <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +66,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**
 ## <a name="return-types"></a>傳回類型
 **bigint**
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 COUNT_BIG(\*) 會傳回群組中的項目數。 其中包括 NULL 值和複本。
   
 COUNT_BIG (ALL *expression*) 會針對群組中的每個資料列來評估 *expression*，且會傳回非 Null 值的數目。

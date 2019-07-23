@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1e3f616b0de021d5c8ac967b630a6bf9ca9bc50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97eddaf05a3ac7eec342d696691a6f38a9b57488
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060807"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒
 
@@ -105,13 +104,13 @@ ms.locfileid: "65728969"
   
 2.  在 **[執行 SQL 工作編輯器]** 的 **[一般]** 頁面上，選取下列選項：  
   
-    1.  針對 **[ResultSet]**，選取 **[單一資料列]**。  
+    1.  針對 **[ResultSet]** ，選取 **[單一資料列]** 。  
   
     2.  將有效的連接設定到來源資料庫。  
   
-    3.  針對 **[SQLSourceType]**，選取 **[直接輸入]**。  
+    3.  針對 **[SQLSourceType]** ，選取 **[直接輸入]** 。  
   
-    4.  針對 **[SQLStatement]**，輸入下列 SQL 陳述式：  
+    4.  針對 **[SQLStatement]** ，輸入下列 SQL 陳述式：  
   
         ```  
         declare @DataReady int, @TimeoutCount int  
@@ -170,17 +169,17 @@ ms.locfileid: "65728969"
   
 3.  針對將「執行 SQL」工作連接到「指令碼」工作的優先順序條件約束，開啟 **[優先順序條件約束編輯器]** ，然後選取下列選項：  
   
-    1.  針對 **[評估作業]**，選取 **[運算式與條件約束]**。  
+    1.  針對 **[評估作業]** ，選取 **[運算式與條件約束]** 。  
   
-    2.  針對 **[數值]**，選取 **[成功]**。  
+    2.  針對 **[數值]** ，選取 **[成功]** 。  
   
          **[成功]** 的條件約束值會參考前一個工作的成功。 在這個情況下是「執行 SQL」工作的成功。  
   
-    3.  針對 **[運算式]**，輸入 `@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`。  
+    3.  針對 **[運算式]** ，輸入 `@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`。  
   
     4.  選取 **[邏輯 AND。所有的條件約束都必須評估為 True]** (如果尚未選取)。  
   
-4.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，針對 **[ReadOnlyVariables]**，選取清單中的 **[User::DelaySeconds]** 整數變數。  
+4.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，針對 **[ReadOnlyVariables]** ，選取清單中的 **[User::DelaySeconds]** 整數變數。  
   
 5.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，按一下 **[編輯指令碼]** 來開啟指令碼開發環境。  
   
@@ -206,7 +205,7 @@ ms.locfileid: "65728969"
   
 7.  保留從指令碼之執行傳回 **DtsExecResult.Success** 的預設程式碼行。  
   
-8.  關閉指令碼開發環境以及 **[指令碼工作編輯器]**。  
+8.  關閉指令碼開發環境以及 **[指令碼工作編輯器]** 。  
   
 #### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>使用執行 SQL 工作實作延遲  
   
@@ -216,13 +215,13 @@ ms.locfileid: "65728969"
   
 3.  針對連接兩個「執行 SQL」工作的優先順序條件約束，開啟 **[優先順序條件約束編輯器]** ，然後選取下列選項：  
   
-    1.  針對 **[評估作業]**，選取 **[運算式與條件約束]**。  
+    1.  針對 **[評估作業]** ，選取 **[運算式與條件約束]** 。  
   
-    2.  針對 **[數值]**，選取 **[成功]**。  
+    2.  針對 **[數值]** ，選取 **[成功]** 。  
   
          **[成功]** 的條件約束值會參考前一個「執行 SQL」工作的成功。  
   
-    3.  針對 **[運算式]**，輸入 `@DataReady == 0`。  
+    3.  針對 **[運算式]** ，輸入 `@DataReady == 0`。  
   
     4.  選取 **[邏輯 AND。所有的條件約束都必須評估為 True]** (如果尚未選取)。  
   
@@ -230,13 +229,13 @@ ms.locfileid: "65728969"
   
 4.  在 **[執行 SQL 工作編輯器]** 的 **[一般]** 頁面上，選取下列選項：  
   
-    1.  針對 **[ResultSet]**，選取 **[單一資料列]**。  
+    1.  針對 **[ResultSet]** ，選取 **[單一資料列]** 。  
   
     2.  將有效的連接設定到來源資料庫。  
   
-    3.  針對 **[SQLSourceType]**，選取 **[直接輸入]**。  
+    3.  針對 **[SQLSourceType]** ，選取 **[直接輸入]** 。  
   
-    4.  針對 **[SQLStatement]**，輸入下列 SQL 陳述式：  
+    4.  針對 **[SQLStatement]** ，輸入下列 SQL 陳述式：  
   
         ```  
         WAITFOR DELAY ?  
@@ -262,19 +261,19 @@ ms.locfileid: "65728969"
   
 4.  針對將「執行 SQL」工作連接到「指令碼」工作的優先順序條件約束，開啟 **[優先順序條件約束編輯器]** ，然後選取下列選項：  
   
-    1.  針對 **[評估作業]**，選取 **[運算式與條件約束]**。  
+    1.  針對 **[評估作業]** ，選取 **[運算式與條件約束]** 。  
   
-    2.  針對 **[數值]**，選取 **[成功]**。  
+    2.  針對 **[數值]** ，選取 **[成功]** 。  
   
          **[成功]** 的條件約束值會參考前一個工作的成功。 在這個情況下是「執行 SQL」工作的成功。  
   
-    3.  針對 **[運算式]**，輸入 `@DataReady == 1 || @DataReady == 5`。  
+    3.  針對 **[運算式]** ，輸入 `@DataReady == 1 || @DataReady == 5`。  
   
     4.  選取 **[邏輯 AND。所有的條件約束都必須評估為 True]** (如果尚未選取)。  
   
          此選項需要條件約束和運算式兩個條件必須同時為 true。  
   
-5.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，針對 **[ReadOnlyVariables]**，從清單選取 **[User::DataReady]** 和 **[User::ExtractStartTime]** ，讓其值可以用於指令碼中。  
+5.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，針對 **[ReadOnlyVariables]** ，從清單選取 **[User::DataReady]** 和 **[User::ExtractStartTime]** ，讓其值可以用於指令碼中。  
   
      如果您要將來自特定系統變數 (例如，System::PackageName) 的資訊加入到您要寫入記錄檔的資訊，請同時選取這些變數。  
   
@@ -334,11 +333,11 @@ ms.locfileid: "65728969"
   
     ```  
   
-8.  關閉指令碼開發環境以及 **[指令碼工作編輯器]**。  
+8.  關閉指令碼開發環境以及 **[指令碼工作編輯器]** 。  
   
 ## <a name="next-step"></a>下一個步驟  
  判斷變更資料就緒後，下一個步驟是準備針對變更資料進行查詢。  
   
- **下一個主題：**[準備查詢變更資料](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **下一個主題：** [準備查詢變更資料](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

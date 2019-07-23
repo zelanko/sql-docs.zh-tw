@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f666a224c2e41fb50a1a62748e7d8f1666d0beb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ec05696c511ea14e481fdde8512861f2a343f55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897098"
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
 

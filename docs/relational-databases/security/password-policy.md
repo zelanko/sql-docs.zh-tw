@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4d8b1196eb1292532320c77559cd4578532957ac
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: aa626cb69e22e56e1769d45b2cbfd652c51bc3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010820"
 ---
 # <a name="password-policy"></a>密碼原則
 
@@ -84,7 +83,7 @@ ms.locfileid: "54361603"
   
   - 密碼記錄會使用目前密碼雜湊的值來初始化。  
   
-  - [帳戶鎖定期間]、[帳戶鎖定閾值] 和 [重設帳戶鎖定計數器的時間] 也會啟用。  
+  - [帳戶鎖定期間]  、[帳戶鎖定閾值]  和 [重設帳戶鎖定計數器的時間]  也會啟用。  
   
 - 當 CHECK_POLICY 改為 OFF 時，會發生下列行為：  
   

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c16b0ba6f774321346c95a69163fa110ffb196ad
-ms.sourcegitcommit: 90b0e0a524df1d1dac18251397973ffd1eb6515f
+ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943062"
 ---
 # <a name="bitwise-operators-transact-sql"></a>位元運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

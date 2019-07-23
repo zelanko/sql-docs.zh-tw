@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 0f2031bd9121c1bcb722c8a51aa9421a34366d9f
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: d2ba40f3580a01bb7f72f54bd69407853820a6d7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689965"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264075"
 ---
 # <a name="name-not-found-dialog-box"></a>找不到名稱對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

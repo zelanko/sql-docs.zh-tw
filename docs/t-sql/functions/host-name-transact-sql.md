@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c781ef8b6b2b0aa883deda482c10c03fbc6f2b78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c39d56ec338be798f9e9dd5589d3a63a65b95d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024410"
 ---
 # <a name="hostname-transact-sql"></a>HOST_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

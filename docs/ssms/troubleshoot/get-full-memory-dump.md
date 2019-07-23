@@ -8,16 +8,15 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: d5c9d90099714b061c25d8be2294ac29a2be0403
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 95beb87d72295f4f5ea10b5bb33476d4d27af628
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682467"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266717"
 ---
 # <a name="get-full-memory-dump"></a>取得完整記憶體傾印
 

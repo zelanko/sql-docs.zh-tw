@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: b230110cae8bfe1d11bcf847d64faeaa3a00f000
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c47318d4582483b8d231d37bd11d852f9a12bbcf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682068"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265325"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>製成資料表對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8932a3413923016783f50c3084658fa992e6c984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdd652c18af72c73566afac978c4dc00e2867a8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065853"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -122,7 +121,7 @@ PRIMARY
 
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
-可讓您將查詢最佳化工具基數估計模型設定為 SQL Server 2012 和更舊版本，而不根據資料庫的相容性層級。 預設值為 **OFF**，這會根據資料庫的相容性層級來設定查詢最佳化工具基數估計模型。 將 LEGACY_CARDINALITY_ESTIMATION 設為 [ON] 相當於啟用[追蹤旗標 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+可讓您將查詢最佳化工具基數估計模型設定為 SQL Server 2012 和更舊版本，而不根據資料庫的相容性層級。 預設值為 **OFF**，這會根據資料庫的相容性層級來設定查詢最佳化工具基數估計模型。 將 LEGACY_CARDINALITY_ESTIMATION 設為 [ON]  相當於啟用[追蹤旗標 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請新增 **QUERYTRACEON** [查詢提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。

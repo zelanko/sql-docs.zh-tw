@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 0171d8e6c8b4148508f584743e36aa1a5a1c5a91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b18d1c8a573a42a8b92deead627783a195bb9e6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014396"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>將主要資料庫從 Always On 可用性群組移除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

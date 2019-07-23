@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd43087f302adca4f20d53e63005786736188786
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5f6b63e0ff79f44b2900fb0f727436ed36401ee2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127463"
 ---
 # <a name="resource-database"></a>Resource 資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51560188"
  Resource 資料庫讓升級為新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的程序變得更快且更容易。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，升級需要卸除和建立系統物件。 由於 Resource 資料庫檔案包含所有系統物件，因此現在只要將單一 Resource 資料庫檔案複製到本機伺服器即可完成升級。  
   
 ## <a name="physical-properties-of-resource"></a>Resource 的實體屬性  
- Resource 資料庫的實體檔案名稱為 mssqlsystemresource.mdf 和 mssqlsystemresource.ldf。 這些檔案位於 \<*磁碟機*>:\Program Files\Microsoft SQL Server\MSSQL\<版本>.\<執行個體名稱>\MSSQL\Binn\ 中，因此不應被移動。 每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體只有一個相關聯的 mssqlsystemresource.mdf 檔案，而且這些執行個體不共用此檔案。  
+ Resource 資料庫的實體檔案名稱為 mssqlsystemresource.mdf 和 mssqlsystemresource.ldf。 這些檔案位於 \<*磁碟機*>:\Program Files\Microsoft SQL Server\MSSQL\<版本>.\<執行個體名稱  >\MSSQL\Binn\ 中，因此不應被移動。 每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體只有一個相關聯的 mssqlsystemresource.mdf 檔案，而且這些執行個體不共用此檔案。  
   
 > [!WARNING]  
 >  升級和 Service Pack 有時會提供新的資源資料庫，其會安裝到 BINN 資料夾。 變更資源資料庫的位置不受支援，亦不建議。  

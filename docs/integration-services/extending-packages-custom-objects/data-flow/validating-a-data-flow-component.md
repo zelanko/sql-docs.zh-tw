@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03c0d26ae97be2ca22b341c40b01cf0e5c558399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c4b8c2bc73a0b7e2fac49f430a34885fd2f39a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116364"
 ---
 # <a name="validating-a-data-flow-component"></a>驗證資料流程元件
 

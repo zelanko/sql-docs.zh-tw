@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 900b264798a8cfc55b38587cf786f2b4effac796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2129c9990156fe970faa2ce134eaf2a17b35c764
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042318"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

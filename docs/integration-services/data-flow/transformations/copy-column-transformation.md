@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7ff2de68a43fff15b452579c6ecf681ea586772c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a66c170d45fbdcd56e974318ba690f9ea93df51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112654"
 ---
 # <a name="copy-column-transformation"></a>複製資料行轉換
 

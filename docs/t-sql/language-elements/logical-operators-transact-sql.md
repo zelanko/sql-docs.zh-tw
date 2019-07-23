@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fb17d3747f7b8e59994e20ec660f3ac7a60bbbc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a26896076c0c9ee12eae61a3e324090379b10df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122131"
 ---
 # <a name="logical-operators-transact-sql"></a>邏輯運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

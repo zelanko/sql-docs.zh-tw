@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36b7c385f3722a1db86899c749ee8310e7596e1e
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082586"
 ---
 # <a name="rename-columns-database-engine"></a>重新命名資料行 (Database Engine)
 
