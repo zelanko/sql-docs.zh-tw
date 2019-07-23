@@ -17,27 +17,26 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016063"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>產生多個資料列集結果的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 可以傳回多個資料列集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]陳述式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  
+  SQL Server 的 OLE DB 驅動程式可以從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]語句傳回多個資料列集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  
   
 -   批次的 SQL 陳述式以單一命令提交。  
   
 -   預存程序實作 SQL 陳述式批次。  
   
 ## <a name="batches"></a>批次  
- OLE DB Driver for SQL Server 將分號字元辨識為 SQL 陳述式的批次分隔符號：  
+ SQL Server 的 OLE DB 驅動程式會將分號字元辨識為 SQL 語句的批次分隔符號:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
