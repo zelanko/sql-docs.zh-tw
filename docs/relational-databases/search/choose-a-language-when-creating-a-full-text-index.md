@@ -18,14 +18,13 @@ ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f1310318cde48b1cd5c001e655ed341bc9cc780
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093383"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
 
@@ -101,7 +100,7 @@ ms.locfileid: "57973464"
   
   
 ##  <a name="stemming"></a> 詞幹分析  
- 選擇資料行層級語言時的其他考量是詞幹分析。 在全文檢索查詢中，「詞幹分析」是指搜尋某特定語言之所有字根 (字形變化) 的過程。 當您使用一般斷詞工具來處理許多語言時，詞幹分析程序只會針對指定給資料行的語言運作，而不會針對資料行中的其他語言運作。 例如，德文字幹分析器不會針對英文或西班牙文 (等語言) 運作。 這可能會影響重新叫用，端視您在查詢時選擇的語言而定。  
+ 選擇資料行層級語言時的其他考量是詞幹分析。 在全文檢索查詢中，「詞幹分析」  是指搜尋某特定語言之所有字根 (字形變化) 的過程。 當您使用一般斷詞工具來處理許多語言時，詞幹分析程序只會針對指定給資料行的語言運作，而不會針對資料行中的其他語言運作。 例如，德文字幹分析器不會針對英文或西班牙文 (等語言) 運作。 這可能會影響重新叫用，端視您在查詢時選擇的語言而定。  
   
   
 ##  <a name="type"></a> 資料行類型對全文檢索搜尋的影響  

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 93bbfcc8b76fe6fe1028b5b13395e0a88a6b359a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 493d5a0d7ab5e9971747abe022fa46edbf615ae4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096657"
 ---
 # <a name="source-assistant"></a>Source Assistant
 

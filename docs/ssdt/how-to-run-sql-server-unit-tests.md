@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b838503365dde968f938efb46c940f3a66ce4357
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035026"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>如何：執行 SQL Server 單元測試
 您可以使用數種方式的任何一種來執行 SQL Server 單元測試，例如使用各種視窗和 [命令提示字元] 視窗。  

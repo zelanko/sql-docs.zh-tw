@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: beb560d41f2fdd58382afbd6374da9869225ddb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de184826e93903629679c273b226cb1e143f850e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042065"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fcc54a1f10345d342b536e049f8288f57708055c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a162e816186c0bae2ff9da2d1aef62f169491b5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112610"
 ---
 # <a name="data-mining-query-transformation"></a>資料採礦查詢轉換
 

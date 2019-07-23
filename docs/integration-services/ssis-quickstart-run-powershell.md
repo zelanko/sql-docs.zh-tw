@@ -8,13 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0703c95824224f8200a43a38ad5990971c6b7911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb302e04cb24ccfd3a944e2c73e0a325becacd85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068820"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>使用 PowerShell 執行 SSIS 套件
 

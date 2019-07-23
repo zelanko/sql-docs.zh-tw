@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 66c2c23882aeede60687d59fbc81301369be8274
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: e23786f27c5fa4c0168b6cf93881886111a592d6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683364"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264035"
 ---
 # <a name="select-object-types-object-explorer"></a>選取物件類型 (物件總管)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ddc31964a018bec7dc0829d21e85283db5f069e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a36cfa888b5a00e8f69404db3989cf9852f0d47e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110747"
 ---
 # <a name="running-sql-server-unit-tests"></a>執行 SQL Server 單元測試
 若要改善及維持程式碼的品質，您可以建立並執行 SQL Server 單元測試，該測試會驗證任何資料庫物件的行為，然後將這些測試簽入版本控制。 當您或小組的任何成員變更資料庫結構描述時，會同時執行 SQL Server 單元測試及軟體單元測試，以驗證該變更尚未中斷現有的功能。 您可以執行個別測試，或執行稱為測試清單的測試群組。 如需詳細資訊，請參閱[使用測試清單 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182461(VS.100).aspx)。  

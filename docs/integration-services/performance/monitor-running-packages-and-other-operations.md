@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3c188f7ba04162b3cd385606789c94e9c08354e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 847f3fccdca31f62ecaebe9451426283fa741b04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120577"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
 

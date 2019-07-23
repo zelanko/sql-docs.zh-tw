@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: df064e5ebe9a5a6fabbd1eda16cf29bfa3f58d0e
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: de59423c368bc966fab3958fbeb4b04888f4e2a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114783"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY 伺服器權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

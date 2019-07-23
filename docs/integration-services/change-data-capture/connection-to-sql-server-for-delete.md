@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 997f0cf8793b0a809db39abd2b8d484529151950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e8f7d2b4354b5f4670a408752d1a92c2aee7751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060866"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>連接到 SQL Server 進行刪除
 

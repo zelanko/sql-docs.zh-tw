@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac34b1617736dbd928dd6b405ecb305d4da84291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7a12e543298b1d22afdec08557a7ed979a7d546
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968286"
 ---
 # <a name="certification-by-sap"></a>SAP 認證
 

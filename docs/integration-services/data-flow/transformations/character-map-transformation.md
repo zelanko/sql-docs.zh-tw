@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e5ebfb5edbcbb0cc6ec47b063ffb11d87b01c55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88aa12fe6a02cce0788eab3ffafeb49769a9991f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112756"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
 

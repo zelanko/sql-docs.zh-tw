@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49876feb2078c2913ab07184a61312807f8a168a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006732"
 ---
 # <a name="example-specifying-the-element-directive"></a>範例指定 ELEMENT 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

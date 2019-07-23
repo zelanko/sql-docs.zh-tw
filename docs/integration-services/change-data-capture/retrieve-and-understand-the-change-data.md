@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a62d94a101a2c62ae21950f6ad25e8f44ad333ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 112c94119959410509bb2381b472c1fc0a6a66ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084346"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>擷取與了解變更資料
 

@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66077bac6ef3ce7f52b03eb5a439aa24a89449a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 421655cb190ac175b7e6c65cf6b296279efe25ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086602"
 ---
 # <a name="lesson-2-1-copy-the-lesson-1-package"></a>課程 2-1：複製第 1 課套件
 

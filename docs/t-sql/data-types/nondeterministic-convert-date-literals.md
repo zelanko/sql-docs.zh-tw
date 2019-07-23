@@ -11,14 +11,13 @@ dev_langs:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63214253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119845"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>將常值日期字串轉換成 DATE 值的非決定性轉換
 

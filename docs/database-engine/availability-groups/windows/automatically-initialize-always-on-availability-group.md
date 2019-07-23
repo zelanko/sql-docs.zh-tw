@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 35786f1c468e5f4c90e5615d64d527a1df673f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fde90e8f64194265a74f866e27e4b2ef4a406d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991576"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>使用自動植入將 Always On 可用性群組初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

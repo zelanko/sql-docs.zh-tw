@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 1f2476313880b061424b2cf34fe0e4ec4d2ce771
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 526a196c280e4a8b62db27be4c8644315379b2d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997952"
 ---
 # <a name="open-objects-server-configuration-option"></a>開啟物件伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

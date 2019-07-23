@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 70fdb66a6d9b9e14d5f308532d07ddc16264614b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d75be34aedb21bf2f3f39a1e4ac2fea3e949c0ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968352"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Attunity Oracle Change Data Capture (CDC) 設計工具 F1 說明參考
 

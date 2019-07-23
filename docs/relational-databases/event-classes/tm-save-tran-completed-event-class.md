@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0c0bf789a8060082c8d20379ae089677c901602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44528a58b1ef57a2fd54958d68e4c6ac7089e8d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62706763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075935"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM：Save Tran Completed 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: a8be1233035f643b40db334aa905504a3dee62bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8880c5287d65e91ccca3c223d93c7b7b070a8df3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107753"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

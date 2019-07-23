@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 40062550cba47e7de36ccb5d389bae15853da026
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033666"
 ---
 # <a name="piecemeal-restores-sql-server"></a>分次還原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

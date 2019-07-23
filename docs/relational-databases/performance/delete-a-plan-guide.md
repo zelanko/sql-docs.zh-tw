@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ac6ad15bd9b5f662eb9596cca91d48c19266eff7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 1be170b2b32ed1529af98fa2b072749de8f1165c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946931"
 ---
 # <a name="delete-a-plan-guide"></a>刪除計畫指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

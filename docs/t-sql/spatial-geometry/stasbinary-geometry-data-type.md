@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 37c935195c740ef03b891f6fb082257422ae412a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b80156459988793ae4733c9617562b5b6120ae5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100977"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

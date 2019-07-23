@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a096d3b60a8836b112639c6c95c393a889d0dbaf
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7dde1fac1d47d497a7afed7fd5404e52a62281f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007112"
 ---
 # <a name="move-user-databases"></a>移動使用者資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

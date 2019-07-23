@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 3057127174cd7a8594685e8e4e71ba1134902435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17c5ec83217c072ada5d112bab1dd4f0105e0971
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120665"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

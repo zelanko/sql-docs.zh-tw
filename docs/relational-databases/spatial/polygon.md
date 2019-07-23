@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081658"
 ---
 # <a name="polygon"></a>多邊形
 

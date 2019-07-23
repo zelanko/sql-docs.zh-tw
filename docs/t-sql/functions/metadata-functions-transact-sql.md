@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a18c12a9-59ad-4711-a862-39d8f28476b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 912067d715a36df3a2eede260d9e0fdbdfad8523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dde95a91f78c8e22bb6452421e41b10750f5c5fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130281"
 ---
 # <a name="metadata-functions-transact-sql"></a>中繼資料函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

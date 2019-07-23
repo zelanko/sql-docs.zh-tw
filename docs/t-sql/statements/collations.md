@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fcdc1c5cdc4dcbb7eb81236a1bb907d929aee5e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77b3b6a7987e4d02640bc1daadfd4cffe77b3354
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63051544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141137"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c455e449ff59296848c7e3f15d07aaee80d415c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e439dd6ed176fbb9c2d2fe666b314bd48f2f9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66221150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904275"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 連接管理員
 

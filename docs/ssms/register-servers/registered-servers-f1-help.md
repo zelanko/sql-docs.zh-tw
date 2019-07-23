@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: ed19649a47264600e61a2814d2ca3fdbeecbf7fc
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: cf08f76b0df0b3624aa1450b2463599b31fb85fa
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683929"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266138"
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

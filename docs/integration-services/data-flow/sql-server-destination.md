@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: becd2493929fb12ddcec6a0623dec7c46f7b5a2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f77bf8bc61b471c51c8f090a72a113c33a1c7e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019631"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cbedc27-4d77-44ad-bed2-c23b628475a7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 270e4ca486f89a2ceefb59da80b3113a4779b09b
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 54f469f8ab9f0daaf6f37c8f6bad1878bc716dbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086933"
 ---
 # <a name="place-data-and-log-files-on-separate-drives"></a>將資料檔和記錄檔放在不同的磁碟機上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56134fd6e9c71d041f0feeed075d350935fe78a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddbbeb80664c06b517eee1f766294d9fa0bfe232
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967699"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
 

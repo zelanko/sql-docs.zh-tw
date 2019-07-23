@@ -13,13 +13,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65372445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984773"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 使用狀況和診斷資料收集的本機稽核 (CEIP)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65372445"
 
 ## <a name="introduction"></a>簡介
 
-Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能可能會收集並傳送電腦或裝置的相關資訊。 這稱為「標準電腦資訊」。 [SQL Server 使用方式和診斷資料收集](usage-and-diagnostic-data-configuration-for-sql-server.md) \(英文\) 的本機稽核元件會將服務收集的資料寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 (記錄)。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。  
+Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能可能會收集並傳送電腦或裝置的相關資訊。 這稱為「標準電腦資訊」  。 [SQL Server 使用方式和診斷資料收集](usage-and-diagnostic-data-configuration-for-sql-server.md) \(英文\) 的本機稽核元件會將服務收集的資料寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 (記錄)。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。  
 
 從 SQL Server 2016 CU2 開始，可以在 SQL Server 資料庫引擎和 Analysis Services (SSAS) 的執行個體層級設定。 在 SQL Server 2016 CU4 與 SQL Server 2016 SP1 中，也會啟用 SQL Server Integration Services (SSIS) 的本機稽核。 安裝程式執行期間所安裝的其他 SQL Server 元件，以及在安裝程式執行之後下載或安裝的 SQL Server 工具，沒有使用方式和診斷資料收集的本機稽核功能。
 
@@ -63,17 +62,17 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 執行下列步驟，以取得 SQL Server CEIP 服務登入帳戶
  
-1. 啟動 [服務] 主控台。 若要這樣做，請在鍵盤上選取 **Windows 鍵 + R** 來開啟 [執行] 對話方塊。 接下來，在文字欄位中鍵入 *services.msc*，並選取 [確定] 來啟動 [服務] 主控台。  
+1. 啟動 [服務]  主控台。 若要這樣做，請在鍵盤上選取 **Windows 鍵 + R** 來開啟 [執行]  對話方塊。 接下來，在文字欄位中鍵入 *services.msc*，並選取 [確定]  來啟動 [服務]  主控台。  
 
-2. 瀏覽至適當的服務。 例如，若為資料庫引擎，請找出 **SQL Server CEIP 服務** **(您的執行個體名稱)**。 若為 Analysis Services，請找出 **SQL Server Analysis Services CEIP** **(您的執行個體名稱)**。 若為 Integration Services，則找出 **SQL Server Integration Services CEIP 服務**。
+2. 瀏覽至適當的服務。 例如，若為資料庫引擎，請找出 **SQL Server CEIP 服務** **(您的執行個體名稱  )** 。 若為 Analysis Services，請找出 **SQL Server Analysis Services CEIP** **(您的執行個體名稱  )** 。 若為 Integration Services，則找出 **SQL Server Integration Services CEIP 服務**。
 
-3. 以滑鼠右鍵按一下服務並選擇 [屬性]。 
+3. 以滑鼠右鍵按一下服務並選擇 [屬性]  。 
 
-4. 選取 [登入] 索引標籤。登入帳戶列在 [這個帳戶]。 
+4. 選取 [登入]  索引標籤。登入帳戶列在 [這個帳戶]  。 
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>設定本機稽核檔案的新資料夾。    
 
-建立新資料夾 (本機稽核目錄) 供本機稽核寫入記錄檔。 例如，資料庫引擎的預設執行個體的本機稽核目錄完整路徑會是︰*C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*。 
+建立新資料夾 (本機稽核目錄) 供本機稽核寫入記錄檔。 例如，資料庫引擎的預設執行個體的本機稽核目錄完整路徑會是︰*C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* 。 
  
   >[!NOTE] 
   >請在 SQL Server 安裝路徑以外設定本機稽核的目錄路徑，以避免允許稽核功能和修補作業造成潛在的 SQL Server 問題。
@@ -81,26 +80,26 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
   ||設計決策|建議|  
   |------|-----------------|----------|  
   |![核取方塊](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|空間可用性 |針對大約 10 個資料庫的一般工作負載，請規劃每個資料庫的每個執行個體大約有 2 MB 的磁碟空間。|  
-|![核取方塊](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|個別的目錄 | 為每個執行個體建立目錄。 例如，針對名為 `MSSQLSERVER` 的 SQL Server 執行個體，使用 *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*。 這可簡化檔案管理。
+|![核取方塊](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|個別的目錄 | 為每個執行個體建立目錄。 例如，針對名為 `MSSQLSERVER` 的 SQL Server 執行個體，使用 *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* 。 這可簡化檔案管理。
 |![核取方塊](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|個別的資料夾 |針對每個服務使用特定的資料夾。 例如，針對給定的執行個體名稱，為資料庫引擎使用一個資料夾。 如果 Analysis Services 的執行個體使用相同的執行個體名稱，請為 Analysis Services 建立個別的資料夾。 資料庫引擎和 Analysis Services 執行個體設定為相同的資料夾將會造成所有本機稽核從兩個執行個體寫入相同的記錄檔。| 
-|![核取方塊](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|授與 SQL Server CEIP 服務登入帳戶的權限|啟用 [列出資料夾內容]、[讀取] 和 [寫入] 存取給 SQL Server CEIP 服務登入帳戶|
+|![核取方塊](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|授與 SQL Server CEIP 服務登入帳戶的權限|啟用 [列出資料夾內容]  、[讀取]  和 [寫入]  存取給 SQL Server CEIP 服務登入帳戶|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>授與 SQL Server CEIP 服務登入帳戶的權限
   
-1. 在檔案總管裡，巡覽至新的資料夾所在的位置。
+1. 在檔案總管  裡，巡覽至新的資料夾所在的位置。
 
-1. 以滑鼠右鍵按一下新資料夾，然後選擇 [屬性]。 
+1. 以滑鼠右鍵按一下新資料夾，然後選擇 [屬性]  。 
 
-1. 在 [安全性] 索引標籤上，選取 [編輯] 管理權限。
+1. 在 [安全性]  索引標籤上，選取 [編輯]  管理權限。
 
-1. 選取 [新增]，並鍵入 SQL Server CEIP 服務的認證。 例如 `NT Service\SQLTELEMETRY`。
+1. 選取 [新增]  ，並鍵入 SQL Server CEIP 服務的認證。 例如 `NT Service\SQLTELEMETRY`。
 
-1. 選取 [檢查名稱] 驗證您提供的名稱，然後選取 [確定]。
+1. 選取 [檢查名稱]  驗證您提供的名稱，然後選取 [確定]  。
 
-1. 在 [權限] 對話方塊中，選擇 SQL Server CEIP 服務的登入帳戶，並選取 [列出資料夾內容]、[讀取] 和 [寫入]。
+1. 在 [權限]  對話方塊中，選擇 SQL Server CEIP 服務的登入帳戶，並選取 [列出資料夾內容]  、[讀取]  和 [寫入]  。
 
-1. 選取 [確定] 立即套用權限變更。 
+1. 選取 [確定]  立即套用權限變更。 
   
 ### <a name="create-a-registry-key-setting-to-configure-local-audit-target-directory"></a>建立登錄機碼設定來設定本機稽核目標目錄
 
@@ -110,14 +109,14 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
    | Version | <資料庫引擎> - 登錄機碼 |
    | :------ | :----------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.<您的執行個體名稱>\\CPE |
-   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.<您的執行個體名稱>\\CPE |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.<您的執行個體名稱>  \\CPE |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.<您的執行個體名稱>  \\CPE |
    | &nbsp; | &nbsp; |
 
    | Version | ***Analysis Services*** - 登錄機碼 |
    | :------ | :------------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.<您的執行個體名稱>\\CPE |
-   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.<您的執行個體名稱>\\CPE |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.<您的執行個體名稱>  \\CPE |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.<您的執行個體名稱>  \\CPE |
    | &nbsp; | &nbsp; |
 
   | Version | ***Integration Services*** - 登錄機碼 |
@@ -126,7 +125,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
   | &nbsp; | &nbsp; |
 
-1. 以滑鼠右鍵按一下 CPE 路徑，然後選擇 [新增]。 選取 [字串值]。
+1. 以滑鼠右鍵按一下 CPE 路徑，然後選擇 [新增]  。 選取 [字串值]  。
 
 1. 將新的登錄機碼命名為 `UserRequestedLocalAuditDirectory`。 
  
@@ -138,9 +137,9 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 1. 巡覽至適當的 CPE [路徑](#create-a-registry-key-setting-to-configure-local-audit-target-directory)。 
 
-1. 以滑鼠右鍵按一下 **UserRequestedLocalAuditDirectory**，然後選取 [修改]。 
+1. 以滑鼠右鍵按一下 **UserRequestedLocalAuditDirectory**，然後選取 [修改]  。 
 
-1. 若要開啟本機稽核，請鍵入本機稽核路徑，例如 *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*。
+1. 若要開啟本機稽核，請鍵入本機稽核路徑，例如 *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* 。
  
     若要關閉本機稽核，請清空 **UserRequestedLocalAuditDirectory** 中的值。
 
@@ -148,15 +147,15 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 如果服務已在執行中，SQL Server CEIP 應該會立即辨識本機稽核設定。 若要啟動 SQL Server CEIP 服務，系統管理員或具有啟動或停止 Windows 服務之存取權的任何人，可以遵循下列步驟： 
 
-1. 啟動 [服務] 主控台。 若要這樣做，請在鍵盤上選取 **Windows 鍵 + R** 來開啟 [執行] 對話方塊。 接下來，在文字欄位中鍵入 *services.msc*，並選取 [確定] 來啟動 [服務] 主控台。  
+1. 啟動 [服務]  主控台。 若要這樣做，請在鍵盤上選取 **Windows 鍵 + R** 來開啟 [執行]  對話方塊。 接下來，在文字欄位中鍵入 *services.msc*，並選取 [確定]  來啟動 [服務]  主控台。  
 
 1. 瀏覽至適當的服務。 
 
-    - 若為資料庫引擎，請使用 **SQL Server CEIP 服務 (「您的執行個體名稱」)**。     
-    - 若為 Analysis Services，請使用 **SQL Server Analysis Services CEIP (「您的執行個體名稱」)**。
+    - 若為資料庫引擎，請使用 **SQL Server CEIP 服務 (「您的執行個體名稱」  )** 。     
+    - 若為 Analysis Services，請使用 **SQL Server Analysis Services CEIP (「您的執行個體名稱」  )** 。
     - 若為 Integration Services， 
-        - 如果是 SQL 2016，請使用「SQL Server Integration Services CEIP 服務 13.0」。
-        - 如果是 SQL 2017，請使用「SQL Server Integration Services CEIP 服務 14.0」。
+        - 如果是 SQL 2016，請使用「SQL Server Integration Services CEIP 服務 13.0」  。
+        - 如果是 SQL 2017，請使用「SQL Server Integration Services CEIP 服務 14.0」  。
 
 1. 以滑鼠右鍵按一下服務並選擇 [重新啟動]。 
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 37b88f07571029e39080f38c1406ab89ec73b0a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd439e528cc30c0971d1b4c824ab2375856d26e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62910156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114794"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 結構描述權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

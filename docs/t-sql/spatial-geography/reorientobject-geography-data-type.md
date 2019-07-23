@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e2945b08eaf0a22c6c83bd412e97c729bedfdfea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c4660fa212a85f3bba5812d6cc990f9c02c5539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101747"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

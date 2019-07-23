@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 9039285fa2911d87e19d4a22ec952eaf78811a0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 508f0cfa001107ad43536525d65311bf3a294f4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62649538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093417"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, LogPool FreePool 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

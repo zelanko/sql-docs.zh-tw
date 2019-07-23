@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b02876a6962d3536200d543e2b64e7210c59f00
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ad26acc2f1e23b61e9692dcf2720d7ee6dd8639
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077813"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 和 smallmoney (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "56034499"
   
 ## <a name="remarks"></a>Remarks  
   
-|資料類型|範圍|Storage|  
+|資料類型|範圍|儲存體|  
 |---|---|---|
 |**money**|-922,337,203,685,477.5808 到 922,337,203,685,477.5807 (-922,337,203,685,477.58<br />到 922,337,203,685,477.58 (Informatica)。  Informatica 只支援兩個十進位數，而非四個。)|8 個位元組|  
 |**smallmoney**|- 214、748.3648 到 214、748.3647|4 個位元組|  

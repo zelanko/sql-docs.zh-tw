@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c976f3a2200294ca2a0577e01b9bd60084794d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057908"
 ---
 # <a name="about-log-shipping-sql-server"></a>關於記錄傳送 (SQL Server)
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 20f6cf51157746f167186ad041943167d40e6d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 313f1bd13cf1b12a0685eeb101998792e0586767
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098773"
 ---
 # <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

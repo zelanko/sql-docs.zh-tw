@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 86c7677754faca57723e93cccc3e55cf76da7a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61b8ccb7a52cee68e709200c4d1d376379b5dd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013890"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>暫止可用性資料庫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "66803496"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **後續操作：**[避免填滿交易記錄](#FollowUp)  
+-   **後續操作：** [避免填滿交易記錄](#FollowUp)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -83,13 +82,13 @@ ms.locfileid: "66803496"
   
 1.  在 [物件總管] 中，連接到裝載您要暫停資料庫之可用性複本的伺服器執行個體，然後展開伺服器樹狀目錄。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
   
-2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性]  節點和 [可用性群組]  節點。  
   
 3.  展開可用性群組。  
   
-4.  展開 [可用性資料庫] 節點，以滑鼠右鍵按一下資料庫，然後按一下 [暫停進行資料移動]。  
+4.  展開 [可用性資料庫]  節點，以滑鼠右鍵按一下資料庫，然後按一下 [暫停進行資料移動]  。  
   
-5.  在 **[暫停資料移動]** 對話方塊中，按一下 **[確定]**。  
+5.  在 **[暫停資料移動]** 對話方塊中，按一下 **[確定]** 。  
   
      [物件總管] 會透過變更資料庫圖示以顯示暫停指標，指出資料庫已暫停。  
   

@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a6d0809e301d02491941da30173e1609f3c6c45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f37620479cd2960f6908430a12c6388dee4d8e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116126"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

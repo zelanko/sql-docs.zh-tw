@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d2a25f729007767176b6393715196d96008937b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5f7c3f57bea4e4c15abbe9001de160e488157b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116353"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>撰寫自訂 Foreach 列舉值的程式碼
 

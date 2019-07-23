@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8694a7b02ffc55cfebbac6466b2ff46d9d9f973
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115891"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 追蹤事件資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

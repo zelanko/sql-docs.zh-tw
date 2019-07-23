@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083944"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +120,7 @@ ms.locfileid: "52711589"
 |14|OTHER_TRANSIENT|這個值目前尚未使用。|  
   
 ##  <a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
-「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
+「最低限度記錄」  包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
 > [!NOTE]
 > 記憶體最佳化資料表不支援最低限度記錄。  

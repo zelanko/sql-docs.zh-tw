@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 992dbc74-7c3a-498b-9f1b-b28387640677
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 82867bf2346c69a5a30a8021c13fb64bf179607f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39d3edc1b85dba6c223cc4b4e5b3d3250b48d489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132286"
 ---
 # <a name="mssqlserver8649"></a>MSSQLSERVER_8649
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47682346"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|8649|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

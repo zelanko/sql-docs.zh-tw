@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121261"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>交易式發行項 - 指定變更的傳播方式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "47683046"
 ## <a name="default-and-custom-stored-procedures"></a>預設與自訂預存程序  
  依預設，複寫為每個資料表發行項建立的三個程序為：  
   
--   處理插入的 **sp_MSins_\<**<資料表名稱> **>**。  
+-   處理插入的 **sp_MSins_\<** <資料表名稱>  **>** 。  
   
--   處理更新的 **sp_MSupd_\<**<資料表名稱> **>**。  
+-   處理更新的 **sp_MSupd_\<** <資料表名稱>  **>** 。  
   
--   處理刪除的 **sp_MSdel_\<**<資料表名稱> **>**。  
+-   處理刪除的 **sp_MSdel_\<** <資料表名稱>  **>** 。  
   
- 程序中使用的 **\<**_tablename_**>** 取決於發行項新增至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。  
+ 程序中使用的 **\<** _tablename_ **>** 取決於發行項新增至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。  
   
  以上任何程序均可取代為您在將發行項新增至發行集時指定的自訂程序。 如果應用程式需要自訂邏輯，例如在「訂閱者」端更新資料列時將資料插入稽核資料表，就要使用自訂程序。 如需指定自訂預存程序的詳細資訊，請參閱以上所列的「如何」主題。  
   
@@ -118,7 +117,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>SCALL 語法  
  UPDATE 預存程序  
- 處理 UPDATE 陳述式的預存程序會只收到那些已變更資料行的更新值，接著是主索引鍵資料行的原始值，然後是指出已變更資料行的位元遮罩 (**binary(n)**) 參數。 在下列範例中，資料行 2 (c2) 未變更：  
+ 處理 UPDATE 陳述式的預存程序會只收到那些已變更資料行的更新值，接著是主索引鍵資料行的原始值，然後是指出已變更資料行的位元遮罩 (**binary(n)** ) 參數。 在下列範例中，資料行 2 (c2) 未變更：  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -126,7 +125,7 @@ c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask
   
 #### <a name="mcall-syntax"></a>MCALL 語法  
  UPDATE 預存程序  
- 處理 UPDATE 陳述式的預存程序會收到發行項中所定義的所有資料行之更新值，接著是主索引鍵資料行的原始值，然後是指出已變更資料行的位元遮罩 (**binary(n)**) 參數：  
+ 處理 UPDATE 陳述式的預存程序會收到發行項中所定義的所有資料行之更新值，接著是主索引鍵資料行的原始值，然後是指出已變更資料行的位元遮罩 (**binary(n)** ) 參數：  
   
 ```  
 c1, c2, c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  

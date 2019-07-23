@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d0dd556e17d50e66a0d74805fd754318f5226ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b90f56f69aed9da7194f2a95b0fa9598db0da50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045449"
 ---
 # <a name="azure-blob-source"></a>Azure Blob 來源
 

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948242"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +84,7 @@ TOP 運算式不會影響因觸發程序而執行的陳述式。 在觸發程序
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許透過檢視表更新資料列。 由於您可以在檢視定義中包含 TOP 子句；因此，如果資料列因更新而不再符合 TOP 運算式的需求，則部分資料列可能會在檢視表中消失。  
   
-在 MERGE 陳述式中指定時，TOP 子句會在整個來源資料表和整個目標資料表聯結在一起「之後」套用。 並且，將會移除不符合插入、更新或刪除動作的聯結資料列。 TOP 子句會進一步將聯結資料列的列數減少為指定的值，且插入、更新或刪除動作會依照未排序方式套用到剩餘的聯結資料列。 亦即，將資料列散發到 WHEN 子句中定義的動作時，沒有任何特定順序。 例如，若指定 TOP (10) 會影響 10 個資料列，則在這些資料列中，可能會更新七個及插入三個。 或者，可能會刪除一個、更新五個及插入四個等等。 因為 MERGE 陳述式會針對來源和目標資料表執行完整資料表掃描，所以當您使用 TOP 子句以藉由建立多個批次來修改大型資料表時，I/O 效能可能會受到影響。 在此狀況中，請務必確保所有後續批次都以新的資料列為目標。  
+在 MERGE 陳述式中指定時，TOP 子句會在整個來源資料表和整個目標資料表聯結在一起「之後」  套用。 並且，將會移除不符合插入、更新或刪除動作的聯結資料列。 TOP 子句會進一步將聯結資料列的列數減少為指定的值，且插入、更新或刪除動作會依照未排序方式套用到剩餘的聯結資料列。 亦即，將資料列散發到 WHEN 子句中定義的動作時，沒有任何特定順序。 例如，若指定 TOP (10) 會影響 10 個資料列，則在這些資料列中，可能會更新七個及插入三個。 或者，可能會刪除一個、更新五個及插入四個等等。 因為 MERGE 陳述式會針對來源和目標資料表執行完整資料表掃描，所以當您使用 TOP 子句以藉由建立多個批次來修改大型資料表時，I/O 效能可能會受到影響。 在此狀況中，請務必確保所有後續批次都以新的資料列為目標。  
   
 當您在查詢中指定包含 UNION、UNION ALL、EXCEPT 或 INTERSECT 運算子的 TOP 子句時，請特別小心。 您可能撰寫一個傳回非預期結果的查詢，因為當這些運算子用於選取作業時，TOP 和 ORDER BY 子句的邏輯處理順序不一定是直覺式。 例如，提供下列資料表和資料時，假設您想要傳回最便宜的紅色汽車和最便宜的藍色汽車。 也就是紅色轎車和藍色小貨車。  
   

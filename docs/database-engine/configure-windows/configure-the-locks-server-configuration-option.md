@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 06ce19dba1624455bdc470cfeec7b16655ec3d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fa3483acfe078dbdd3537c0b327032765def62d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012598"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>設定 locks 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "66794191"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定鎖定選項之後](#FollowUp)  
+-   **後續操作：** [設定鎖定選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66794191"
   
 #### <a name="to-configure-the-locks-option"></a>若要設定 locks 選項  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後選取 [屬性]  。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -81,9 +80,9 @@ ms.locfileid: "66794191"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 設定 `locks` 選項的值，將可供所有使用者使用的鎖定數目設定為 `20000`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 設定 `locks` 選項的值，將可供所有使用者使用的鎖定數目設定為 `20000`。  
   
 ```sql  
 Use AdventureWorks2012 ;  

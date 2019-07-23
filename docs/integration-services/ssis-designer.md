@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c03218101637767dbaf6e5abe2132eb3c0f332da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 798ec9b823c324ea67d50023dd12f4fe585c5de1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100853"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
 
@@ -51,7 +50,7 @@ ms.locfileid: "65717917"
   
 -   在執行階段，檢視封裝的執行進度。  
   
- 下圖顯示 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師與 [工具箱] 視窗。  
+ 下圖顯示 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師與 [工具箱]  視窗。  
   
  ![設計師與工具箱的螢幕擷取畫面](../integration-services/media/denali-designerandtoolbox.gif "設計師與工具箱的螢幕擷取畫面")  
   
@@ -60,13 +59,13 @@ ms.locfileid: "65717917"
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師不具有對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務 (管理和監視封裝的服務) 的相依性，且不需要執行該服務即可在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中建立或修改封裝。 不過，如果在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師處於開啟狀態時停止該服務，則將無法再開啟 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師所提供的對話方塊，同時您可能會接收到「RPC 伺服器無法使用」這樣的錯誤訊息。 若要重設 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師並繼續使用封裝，必須關閉設計師，結束 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後重新開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ([!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案) 和封裝。  
   
 ## <a name="undo-and-redo"></a>復原和取消復原  
- 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中復原和取消復原最多可達 20 個動作。 針對封裝，[控制流程]、[資料流程]、[事件處理常式] 及 [參數] 索引標籤，以及 [變數] 視窗中可以進行復原/取消復原。 針對專案，則可以在 [專案參數] 視窗中進行復原/取消復原。  
+ 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中復原和取消復原最多可達 20 個動作。 針對封裝，[控制流程]  、[資料流程]  、[事件處理常式]  及 [參數]  索引標籤，以及 [變數]  視窗中可以進行復原/取消復原。 針對專案，則可以在 [專案參數]  視窗中進行復原/取消復原。  
   
- 您無法復原和取消復原針對新 [SSIS 工具箱] 所做的變更。  
+ 您無法復原和取消復原針對新 [SSIS 工具箱]  所做的變更。  
   
  使用元件編輯器針對元件進行變更時，您可以將變更做為一個組進行復原和取消復原，而不是針對個別變更進行復原和取消復原。 變更組在復原與取消復原下拉式清單中顯示為單一動作。  
   
- 若要復原某個動作，按一下 [復原] 工具列按鈕、[編輯/復原] 功能表項目，或按 CTRL + Z。 若要復原某個動作，請按一下 [復原] 工具列按鈕、[編輯/復原] 功能表項目，或按 CTRL + Y。按一下工具列按鈕旁的箭頭、反白顯示下拉式清單中的多個動作，然後在清單中按一下，可以復原和取消復原多個動作。  
+ 若要復原某個動作，按一下 [復原] 工具列按鈕、[編輯/復原]  功能表項目，或按 CTRL + Z。 若要復原某個動作，請按一下 [復原] 工具列按鈕、[編輯/復原]  功能表項目，或按 CTRL + Y。按一下工具列按鈕旁的箭頭、反白顯示下拉式清單中的多個動作，然後在清單中按一下，可以復原和取消復原多個動作。  
   
 ## <a name="parts-of-the-ssis-designer"></a>SSIS 設計師的組件  
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師有五個永久的索引標籤：各有一個索引標籤用於建立封裝控制流程、資料流程、參數和事件處理常式，還有一個索引標籤用於檢視封裝的內容。 在執行階段會出現第六個索引標籤，它會在封裝執行中顯示執行進度，並在完成時顯示執行結果。  
@@ -74,12 +73,12 @@ ms.locfileid: "65717917"
  此外， [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師還包含「連接管理員」區域，用於加入和設定由封裝用來連接到資料的連接管理員。  
   
 ### <a name="control-flow-tab"></a>控制流程索引標籤  
- 您可以在 [控制流程] 索引標籤的設計介面上，建構封裝中的控制流程。請從 [工具箱] 將項目拖曳至設計介面，並透過按一下項目的圖示將其連接到控制流程中，然後從一個項目拖曳箭頭到另一個項目。  
+ 您可以在 [控制流程]  索引標籤的設計介面上，建構封裝中的控制流程。請從 [工具箱]  將項目拖曳至設計介面，並透過按一下項目的圖示將其連接到控制流程中，然後從一個項目拖曳箭頭到另一個項目。  
   
  如需詳細資訊，請參閱 [控制流程](../integration-services/control-flow/control-flow.md)。  
   
 ### <a name="data-flow-tab"></a>資料流程索引標籤  
- 如果封裝包含資料流程工作，您可以將資料流程加入封裝中。 您可以在 [資料流程] 索引標籤的設計介面上，建構封裝中的資料流程。請從 [工具箱] 將項目拖曳至設計介面，並透過按一下項目的圖示將其連接到資料流程中，然後從一個項目拖曳箭頭到另一個項目。  
+ 如果封裝包含資料流程工作，您可以將資料流程加入封裝中。 您可以在 [資料流程]  索引標籤的設計介面上，建構封裝中的資料流程。請從 [工具箱]  將項目拖曳至設計介面，並透過按一下項目的圖示將其連接到資料流程中，然後從一個項目拖曳箭頭到另一個項目。  
   
  如需詳細資訊，請參閱 [資料流程](../integration-services/data-flow/data-flow.md)。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "65717917"
 > **重要！！**  參數只能用於針對專案部署模型而開發的專案。 因此，僅對於屬於設定為使用專案部署模型之專案一部分的封裝，您才會看到 [參數] 索引標籤。  
   
 ### <a name="event-handlers-tab"></a>事件處理常式索引標籤  
- 您可以在 [事件處理常式] 索引標籤的設計介面上，建構封裝中的事件。請在 [事件處理常式] 索引標籤上，選取要建立事件處理常式的封裝或封裝物件，然後選取要與事件處理常式產生關聯的事件。 事件處理常式具有控制流程和選擇性的資料流程。  
+ 您可以在 [事件處理常式]  索引標籤的設計介面上，建構封裝中的事件。請在 [事件處理常式]  索引標籤上，選取要建立事件處理常式的封裝或封裝物件，然後選取要與事件處理常式產生關聯的事件。 事件處理常式具有控制流程和選擇性的資料流程。  
   
  如需詳細資訊，請參閱 [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78) (將事件處理常式加入封裝中)。  
   
@@ -101,12 +100,12 @@ ms.locfileid: "65717917"
  如需詳細資訊，請參閱 [View Package Objects](../integration-services/view-package-objects.md)(檢視封裝物件)。  
   
 ### <a name="progressexecution-result-tab"></a>進度/執行結果索引標籤  
- 當封裝正在執行時，[進度] 索引標籤會顯示封裝的執行進度。 在完成執行封裝後，執行結果會在 [執行結果] 索引標籤上保持可用。  
+ 當封裝正在執行時，[進度]  索引標籤會顯示封裝的執行進度。 在完成執行封裝後，執行結果會在 [執行結果]  索引標籤上保持可用。  
   
 > **注意：** 若要啟用或停用 **[進度]** 索引標籤上的訊息顯示，請在 **[SSIS]** 功能表上切換 **[偵錯進度報表]** 選項。  
   
 #### <a name="connection-managers-area"></a>連接管理員區域  
- 您可以在 [連線管理員] 區域中，加入及修改封裝所使用的連線管理員。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含可以連接到各種不同的資料來源 (例如文字檔、OLE DB 資料庫及 .NET 提供者) 的連線管理員。  
+ 您可以在 [連線管理員]  區域中，加入及修改封裝所使用的連線管理員。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含可以連接到各種不同的資料來源 (例如文字檔、OLE DB 資料庫及 .NET 提供者) 的連線管理員。  
   
  如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
  
@@ -136,7 +135,7 @@ ms.locfileid: "65717917"
   
  將代表來源、轉換以及目的地的圖形物件，從 **[工具箱]** 拖曳至 **[資料流程]** 索引標籤的設計介面，然後連接物件來建立決定轉換執行順序的路徑，以建立資料流程。  
   
- 以滑鼠右鍵按一下路徑，然後按一下 [資料檢視器]，即可加入資料檢視器，以檢視在每個資料流程物件之前與之後的資料。  
+ 以滑鼠右鍵按一下路徑，然後按一下 [資料檢視器]  ，即可加入資料檢視器，以檢視在每個資料流程物件之前與之後的資料。  
   
  您也可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師，來加入 **[資料流程]** 索引標籤中的下列功能：  
   
@@ -147,29 +146,29 @@ ms.locfileid: "65717917"
  若要在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中加入這些函數，請以滑鼠右鍵按一下設計介面，然後選取您要的選項。  
  
 ## <a name="event-handlers-tab"></a>事件處理常式索引標籤
-  使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [事件處理常式] 索引標籤，即可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中建立控制流程。 執行事件處理常式以回應封裝所引發的事件，或回應封裝中的工作或容器所引發生的事件。  
+  使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [事件處理常式]  索引標籤，即可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中建立控制流程。 執行事件處理常式以回應封裝所引發的事件，或回應封裝中的工作或容器所引發生的事件。  
   
 ## <a name="options"></a>選項。  
  **可執行檔**  
  選取要建立事件處理常式的可執行檔。 可執行檔可以是封裝，或封裝中的工作或容器。  
   
  **事件處理常式**  
- 選取事件處理常式的類型。 從 [工具箱] 拖曳項目來建立事件處理常式。  
+ 選取事件處理常式的類型。 從 [工具箱]  拖曳項目來建立事件處理常式。  
   
  **刪除**  
- 選取事件處理常式，然後按一下 [刪除] 即可從封裝中移除它。  
+ 選取事件處理常式，然後按一下 [刪除]  即可從封裝中移除它。  
   
  **按一下此處即可為可執行檔\<可執行檔名稱\>建立\<事件處理常式名稱\>**  
  按一下即可建立事件處理常式。  
   
- 從 [工具箱] 中，將代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 工作和容器的圖形物件拖曳至 [事件處理常式] 索引標籤的設計介面來建立控制流程，然後使用優先順序條件約束以定義它們執行的順序來連接物件。  
+ 從 [工具箱]  中，將代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 工作和容器的圖形物件拖曳至 [事件處理常式]  索引標籤的設計介面來建立控制流程，然後使用優先順序條件約束以定義它們執行的順序來連接物件。  
   
- 此外，若要加入註解，請以滑鼠右鍵按一下設計介面，然後在功能表上，按一下 [加入註解]。  
+ 此外，若要加入註解，請以滑鼠右鍵按一下設計介面，然後在功能表上，按一下 [加入註解]  。  
  
 ## <a name="package-explorer-tab"></a>封裝總管索引標籤
-使用 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具] 的封裝總管索引標籤，即可查看封裝中所有元素的階層式檢視：組態、連接、事件處理常式、可執行的物件 (例如：工作和容器)、記錄提供者、優先順序條件約束，以及變數。 如果封裝包含資料流程工作，封裝總管索引標籤就會包括其中含有資料流程元件之階層式檢視的節點。  
+使用 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具] 的封裝總管  索引標籤，即可查看封裝中所有元素的階層式檢視：組態、連接、事件處理常式、可執行的物件 (例如：工作和容器)、記錄提供者、優先順序條件約束，以及變數。 如果封裝包含資料流程工作，封裝總管  索引標籤就會包括其中含有資料流程元件之階層式檢視的節點。  
   
- 以滑鼠右鍵按一下封裝元素，然後按一下 [屬性]，即可在 [屬性] 視窗中顯示元素的屬性，或是按一下 [刪除] 來刪除元素。 
+ 以滑鼠右鍵按一下封裝元素，然後按一下 [屬性]  ，即可在 [屬性]  視窗中顯示元素的屬性，或是按一下 [刪除]  來刪除元素。 
  
 ## <a name="progress-tab"></a>進度索引標籤
 當您在 **中執行封裝時，使用** 設計師的 [!INCLUDE[ssIS](../includes/ssis-md.md)] [進度] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 索引標籤，即可檢視執行 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]封裝的進度。 **[進度]** 索引標籤會列出開始時間、完成時間，以及驗證和執行封裝及其可執行檔的經過時間；封裝的任何資訊或警告；進度通知；封裝是成功還是失敗；以及在封裝執行期間所產生的任何錯誤訊息。  

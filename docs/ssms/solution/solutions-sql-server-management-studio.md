@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: c529e8723cc11831fe3e70d1e4bacf3ab21fcc78
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 767023f1aa97ae1412bffe1298a20d52f570ded7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688402"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259378"
 ---
 # <a name="solutions-sql-server-management-studio"></a>方案 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

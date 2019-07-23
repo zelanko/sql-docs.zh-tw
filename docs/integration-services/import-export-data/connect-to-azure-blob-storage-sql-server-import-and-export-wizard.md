@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 27c6b863ac563b0814ac1d5e483f6b62e667b3e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b578b024392edf8c2a8bc2363b8a824bce502555
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114536"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈)
 

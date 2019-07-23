@@ -16,14 +16,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f93217e87bf081ed8f7c551fd4c9e6ccb7807ef
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c50bdedab94a2bd9dd1c6da6556fbd882412fe45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141311"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ WITH 子句用來指定 `PREDICT` 函數傳回之輸出的結構描述。
 
 您使用的模型必須使用 RevoScaleR 套件中其中一種支援的演算法建立。 如需目前支援的模型清單，請參閱[即時計分](../../advanced-analytics/real-time-scoring.md)。
 
-### <a name="permissions"></a>[權限]
+### <a name="permissions"></a>權限
 
 `PREDICT` 不需要任何權限，不過，使用者需要資料庫的 `EXECUTE` 權限和查詢做為輸入之任何資料的權限。 如果模型儲存在資料表中，使用者也必須能夠從資料表讀取模型。
 

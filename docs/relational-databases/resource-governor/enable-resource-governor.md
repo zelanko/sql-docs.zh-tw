@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 282316013dad44d73e165984167f9cff224c41a6
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 23ff55d4fcb9e9cf398e732376a01ab5495b2a4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099254"
 ---
 # <a name="enable-resource-governor"></a>啟用資源管理員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   預設會關閉資源管理員。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 啟用資源管理員。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要啟用 Resource Governor，請使用下列方式：**[物件總管](#RGOnObjEx)、[Resource Governor 屬性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
+-   **若要啟用 Resource Governor，請使用下列方式：** [物件總管](#RGOnObjEx)、[Resource Governor 屬性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  啟用資源管理員會產生下列結果：  
@@ -39,24 +38,24 @@ ms.locfileid: "55689821"
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  在使用者交易中時，您無法使用 **ALTER RESOURCE GOVERNOR** 陳述式啟用資源管理員。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  啟用資源管理員需要 CONTROL SERVER 權限。  
   
 ##  <a name="RGOnObjEx"></a> 使用物件總管啟用資源管理員  
  **若要使用物件總管啟用資源管理員**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [啟用]。  
+2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [啟用]  。  
   
 ##  <a name="RGOnProp"></a> 使用資源管理員屬性啟用資源管理員  
  **若要使用資源管理員屬性頁面來啟用資源管理員**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]，這會開啟 [資源管理員屬性] 頁面。  
+2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  ，這會開啟 [資源管理員屬性]  頁面。  
   
-3.  按一下 **[啟用資源管理員]** 核取方塊，然後按一下 **[確定]**。  
+3.  按一下 **[啟用資源管理員]** 核取方塊，然後按一下 **[確定]** 。  
   
 ##  <a name="RGOnTSQL"></a> 使用 Transact-SQL 啟用資源管理員  
  **若要使用 Transact-SQL 啟用資源管理員**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 22851b6b515d50ce9a68c4323729b1b838b5e281
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 4795fd4ff2cc6c2c267e132062960ec492353cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138394"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>教學課程：擁有權鏈結和環境切換
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b1a3c7aa59a3b7c69c0f0483f51227e34a550a9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09fe23c827b1d3d4561a4333180ad3eb508a3adc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044240"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ DROP FULLTEXT INDEX ON table_name
 ## <a name="remarks"></a>Remarks  
  在使用 DROP FULLTEXT INDEX 命令之前，您不需要從全文檢索索引中卸除所有資料行。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  使用者必須具有資料表或索引檢視的 ALTER 權限，或必須是 **sysadmin** 固定伺服器角色的成員，或是 **db_owner** 或 **db_ddladmin** 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  

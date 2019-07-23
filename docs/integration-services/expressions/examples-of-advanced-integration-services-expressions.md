@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 17fd09520e21bdc70a77abf56337f4f6b3e1f2c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11cef86218092a0cdbe39a2141f2368cd05bf16e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080974"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>進階 Integration Services 運算式範例
 

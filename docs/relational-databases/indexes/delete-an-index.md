@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c316614bff8740e3ae45908776b671f1d7a5ea9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7337617c8c6bc2e904d5b258fec1d666f63a0ded
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107198"
 ---
 # <a name="delete-an-index"></a>刪除索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "52523565"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法刪除索引：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -51,7 +50,7 @@ ms.locfileid: "52523565"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 依預設，這個權限會授與 **系統管理員** 固定伺服器角色以及 **db_ddladmin** 和 **db_owner** 固定資料庫角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -66,9 +65,9 @@ ms.locfileid: "52523565"
   
 4.  展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想刪除的索引，然後選取 [刪除]。  
+5.  以滑鼠右鍵按一下您想刪除的索引，然後選取 [刪除]  。  
   
-6.  在 **[刪除物件]** 對話方塊中，確認 **[要刪除的物件]** 方格中有正確索引，然後按一下 **[確定]**。  
+6.  在 **[刪除物件]** 對話方塊中，確認 **[要刪除的物件]** 方格中有正確索引，然後按一下 **[確定]** 。  
   
 #### <a name="to-delete-an-index-using-table-designer"></a>使用資料表設計工具刪除索引  
   
@@ -78,15 +77,15 @@ ms.locfileid: "52523565"
   
 3.  以滑鼠右鍵按一下包含您要刪除索引的資料表，然後按一下 [設計]。  
   
-4.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
+4.  在 [資料表設計工具]  功能表上，按一下 [索引/索引鍵]  。  
   
-5.  在 [索引/索引鍵] 對話方塊中，選取要刪除的索引。  
+5.  在 [索引/索引鍵]  對話方塊中，選取要刪除的索引。  
   
-6.  按一下 **[刪除]**。  
+6.  按一下 **[刪除]** 。  
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
+8.  在 [檔案]  功能表上，選取 [儲存 _table_name_]  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -94,9 +93,9 @@ ms.locfileid: "52523565"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

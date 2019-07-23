@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b39f2b1898678b06d77c89eed513927d6dfc92b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16230302a44ef9c56d3b2ab9ff17de6288ead371
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109357"
 ---
 # <a name="keyguid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

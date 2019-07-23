@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035124"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>如何：在 Transact-SQL 指令碼中設定大綱及新增程式碼片段
 SQL Server Data Tools 包含由程式碼片段組成的程式碼程式庫，這些程式碼片段已準備就緒可供您插入應用程式中。 每個程式碼片段都執行完整的指令碼工作，例如建立函式、資料表、觸發程序、索引、檢視、使用者定義資料類型等等。您只需要按幾下滑鼠，便能將程式碼片段插入原始程式碼。 這些程式碼片段因減少打字的時間而提升產能。  

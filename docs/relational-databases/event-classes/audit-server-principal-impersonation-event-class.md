@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61b874cf6967f9f9e075811c53338f7aea0bd69d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e469adf2c33327894a36e559ef69c49c989eefad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913377"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  當伺服器範圍內有模擬時發生，例如 EXECUTE AS \<登入>，就會發生 **Audit Server Principal Impersonation** 事件類別。  
+  當伺服器範圍內有模擬時發生，例如 EXECUTE AS \<登入>  ，就會發生 **Audit Server Principal Impersonation** 事件類別。  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Audit Server Principal Impersonation 事件類別資料行  
   

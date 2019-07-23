@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b264cc02d1725fad0c7d7ca4dca2995b0f7a531a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 72bb2ff92b6b882de0cb2465b8e61417936ceef7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681413"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256187"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目標伺服器 (目標伺服器狀態索引標籤)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

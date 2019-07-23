@@ -9,13 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
-ms.openlocfilehash: 385ae3aafb58d012e6473abc0fe4b8f8f5d40eb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059573"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>將 JSON 文件儲存在 SQL Server 或 SQL Database
 SQL Server 和 Azure SQL Database 有原生 JSON 函式，可讓您使用標準 SQL 語言剖析 JSON 文件。 現在您可以在 SQL Server 或 SQL Database 中儲存 JSON 文件和查詢 JSON 資料，如同在 NoSQL 資料庫中一樣。 本文描述將 JSON 文件儲存在 SQL Server 或 SQL Database 中的選項。

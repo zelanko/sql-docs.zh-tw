@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 622d4c47027477318e8231e9c2d7bbaea877d94f
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 1f5830ab8196c699e5d7b851c7ac82c1056ca919
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091836"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f91b6121270799f48eb256a0ec1affd86a915004
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b1a0fb6a72fde7ba871554abf4e3b40d6bb6c9fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137525"
 ---
 # <a name="mixed-type-and-simple-content"></a>混合的類型與簡單的內容
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

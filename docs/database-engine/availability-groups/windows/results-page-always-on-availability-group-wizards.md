@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: cdc98676e203bdd79f15004391c8ae80fb9a63c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014246"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>結果頁面 (Always On 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

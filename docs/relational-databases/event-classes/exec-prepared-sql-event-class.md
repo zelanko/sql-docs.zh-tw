@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce61a2729d2d0d501d8bd338f41544d70c253976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9187529218500de9b46fd2ccbedac272dbae960f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089388"
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

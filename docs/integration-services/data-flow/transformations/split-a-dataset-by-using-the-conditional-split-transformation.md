@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c84a35ea40187cc2b40ab9e60d75bb0c9b62620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6342cf8409a9133a5e21205b0864af97ceeac75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928101"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用條件式分割轉換來分割資料集
 

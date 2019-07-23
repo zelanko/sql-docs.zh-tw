@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7219499b05a3e0229d685fdf518eea41a734daba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fde8338f7728197d2e2482f30d2b1f09964f4e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908727"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>執行計劃和緩衝區配置
 

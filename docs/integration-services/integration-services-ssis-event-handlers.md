@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b10902e9b7a1258bf453e30d2db6fc1cbd4e241e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6566424b766cba5f106bec883b6f8e4e2b56f339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057506"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
 

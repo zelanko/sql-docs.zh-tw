@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1a60cc8071184151ba869e90f4de4faf63bd33d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37c1bac44b4dff2be7735f89243b6e273eca0775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121908"
 ---
 # <a name="operator-precedence-transact-sql"></a>運算子優先順序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

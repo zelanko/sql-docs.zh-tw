@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e51dd2b69e7b815134b156e0ff065c81aa8d4a63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 056115b494d7b2b7aa45505f8f1960032ac028e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112588"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
 
@@ -49,17 +48,17 @@ ms.locfileid: "65726156"
     > [!NOTE]  
     >  如果運算式無效，則運算式文字會反白顯示，且資料行上的「工具提示」會描述錯誤。  
   
-7.  在 [衍生的資料行] 清單中，選取 [\<以新資料行加入>] 以便將運算式的評估結果寫入新資料行，或選取要以評估結果更新的現有資料行。  
+7.  在 [衍生的資料行]  清單中，選取 [\<以新資料行加入>]  以便將運算式的評估結果寫入新資料行，或選取要以評估結果更新的現有資料行。  
   
      如果您選擇使用新資料行， **[衍生的資料行轉換編輯器]** 對話方塊就會依據資料類型、長度、有效位數、小數位數和字碼頁，評估運算式並指派資料類型到資料行。  
   
-8.  如果使用新的資料行，請在 **[資料類型]** 清單中選取資料類型。 根據選取的資料類型而定，選擇性地更新 **[長度]**、 **[有效位數]**、 **[小數位數]** 和 **[字碼頁]** 資料行中的值。 現有資料行的中繼資料無法變更。  
+8.  如果使用新的資料行，請在 **[資料類型]** 清單中選取資料類型。 根據選取的資料類型而定，選擇性地更新 **[長度]** 、 **[有效位數]** 、 **[小數位數]** 和 **[字碼頁]** 資料行中的值。 現有資料行的中繼資料無法變更。  
   
 9. (選擇性) 修改 **[衍生的資料行名稱]** 資料行中的值。  
   
-10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]**。 如需詳細資訊，請參閱 [偵錯資料流程](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
+10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]** 。 如需詳細資訊，請參閱 [偵錯資料流程](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-11. 按一下 [確定] 。  
+11. 按一下 [確定]  。  
   
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   

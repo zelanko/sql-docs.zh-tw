@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 56a0c72b86e6dcb671b0f18197e7d0046cb2f36e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61487b976322f8725f9398e54f8292919ff0ca58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139114"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

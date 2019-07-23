@@ -14,13 +14,12 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 663dc63894d8356bc9856cba1fca23908e26ef74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc1a9b8b91d37359ce7dc2a4845d0d83e81f996a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044150"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (選擇性 XML 索引)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

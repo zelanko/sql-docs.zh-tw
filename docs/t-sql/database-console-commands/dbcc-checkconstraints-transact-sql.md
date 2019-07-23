@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 911cb0643318e98b46746c7cd11ef2ebbfcaca2b
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102118"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,7 +111,7 @@ DBCC CHECKCONSTRAINTS 會傳回含有下列資料行的資料列集。
 |Constraint Name|**varchar**|違反的條件約束名稱。|  
 |位置|**varchar**|用來識別違反條件約束的一個或多個資料列的資料行值指派。<br /><br /> 在查詢違反條件約束的資料列之 SELECT 陳述式的 WHERE 子句中，可以使用這個資料行中的值。|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。
   
 ## <a name="examples"></a>範例  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8aed6c45ec44e6373db0d018a1190f7295e9775f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8285b4de85be5ce6f6fe79b60afe68650634a2b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128076"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>為合併發行項實作商務邏輯處理常式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ ms.locfileid: "47658076"
 2.  在散發者端，執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)，為 **@article_resolver** 指定商務邏輯處理常式的易記名稱、為 **@is_dotnet_assembly** 指定 **true** 值、為 **@dotnet_assembly_name** 指定組件名稱，以及為 **@dotnet_class_name** 指定覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的類別完整名稱。  
   
     > [!NOTE]  
-    >  如果此組件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或是全域組件快取 (GAC) 中，您就必須將 **@dotnet_assembly_name**＞。 當您正在使用 Web 同步處理時，必須指定組件在 Web 伺服器上的位置。  
+    >  如果此組件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或是全域組件快取 (GAC) 中，您就必須將 **@dotnet_assembly_name** ＞。 當您正在使用 Web 同步處理時，必須指定組件在 Web 伺服器上的位置。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>搭配新的資料表發行項使用商務邏輯處理常式  
   
@@ -112,7 +111,7 @@ ms.locfileid: "47658076"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>搭配現有的資料表發行項使用商務邏輯處理常式  
   
-1.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，並指定 **@publication**、**@article**、**@property** 的 **article_resolver** 值，以及 **@value** 的商務邏輯處理常式易記名稱。  
+1.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，並指定 **@publication** 、 **@article** 、 **@property** 的 **article_resolver** 值，以及 **@value** 的商務邏輯處理常式易記名稱。  
   
 ###  <a name="TsqlExample"></a> 範例 (複寫程式設計)  
  這個範例會示範建立稽核記錄的商務邏輯處理常式。  

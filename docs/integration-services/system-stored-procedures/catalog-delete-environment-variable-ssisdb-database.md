@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ba323521f67bf7d7bc92e9387bc8758606a0e202
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d047bd8af1ed8a30daa9dc1d550029a7a62279ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112252"
 ---
 # <a name="catalogdeleteenvironmentvariable-ssisdb-database"></a>catalog.delete_environment_variable (SSISDB 資料庫)
 

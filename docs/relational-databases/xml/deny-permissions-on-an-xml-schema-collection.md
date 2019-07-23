@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: baa1f607e9bdce0dfedc989125e5d29111d44f93
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052278"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>拒絕 XML 結構描述集合的權限
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

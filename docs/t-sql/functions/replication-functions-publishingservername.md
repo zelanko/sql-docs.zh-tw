@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 54c1e71e8df3369cf6b3b92a0b0f39833e677a08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4ae8127d6365e2fd88b92992ab7dd3308e1460f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105035"
 ---
 # <a name="replication-functions---publishingservername"></a>複寫函式 - PUBLISHINGSERVERNAME
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

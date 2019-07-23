@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 516e038e8ef8d13585cb1c06470ae88ef993a3e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85e5416df62423ddbfaffb3f8490687cda1349eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109903"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>進階編輯 (條件) 對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

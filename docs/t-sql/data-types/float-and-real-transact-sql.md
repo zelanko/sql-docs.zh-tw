@@ -22,24 +22,23 @@ helpviewer_keywords:
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf461a516371b78a74989ac26f6b79ebbe4853b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086748"
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-用來搭配浮點數值資料使用的近似數值資料類型。 浮點數資料是近似的；因此，並非資料類型範圍內的所有值都能夠精確地表示。 **real** 的 ISO 同義字是 **float(24)**。
+用來搭配浮點數值資料使用的近似數值資料類型。 浮點數資料是近似的；因此，並非資料類型範圍內的所有值都能夠精確地表示。 **real** 的 ISO 同義字是 **float(24)** 。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
-**float** [ **(**_n_**)** ] 其中 *n* 是用來儲存科學記號標記法 **float** 數尾數的位元數目；因此，其規定有效位數和儲存體大小。 如果指定 *n*，則其值必須介於 **1** 與 **53** 之間。 *n* 的預設值為 **53**。
+**float** [ **(** _n_ **)** ] 其中 *n* 是用來儲存科學記號標記法 **float** 數尾數的位元數目；因此，其規定有效位數和儲存體大小。 如果指定 *n*，則其值必須介於 **1** 與 **53** 之間。 *n* 的預設值為 **53**。
   
 |*n* 值|有效位數|儲存體大小|  
 |---|---|---|
@@ -49,11 +48,11 @@ ms.locfileid: "56020179"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 *n* 當做兩個可能值的其中一個來處理。 如果 **1**<=n<=**24**，則將 *n* 當作 **24** 來處理。 如果 **25**<=n<=**53**，則將 *n* 當作 **53** 來處理。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[**(n)**] 資料類型從 **1** 到 **53** 的所有 *n* 值都符合 ISO 標準。 **double precision** 的同義字是 **float(53)**。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] 資料類型從 **1** 到 **53** 的所有 *n* 值都符合 ISO 標準。 **double precision** 的同義字是 **float(53)** 。
   
 ## <a name="remarks"></a>Remarks  
   
-|資料類型|範圍|Storage|  
+|資料類型|範圍|儲存體|  
 |---|---|---|
 |**float**|- 1.79E+308 到 -2.23E-308、0 及 2.23E-308 到 1.79E+308|這會隨著 *n* 的值而不同|  
 |**real**|- 3.40E + 38 到 -1.18E - 38、0 及 1.18E - 38 到 3.40E + 38|4 個位元組|  

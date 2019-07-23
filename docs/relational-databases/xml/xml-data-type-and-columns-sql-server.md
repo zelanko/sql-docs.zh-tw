@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2293f8cf40bcd5b3d104f63df80abacf282686ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096887"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
 
@@ -55,7 +54,7 @@ ms.locfileid: "65836153"
   
 -   您想要利用資料庫伺服器的管理功能來管理您的 XML 資料。 例如，您想要備份、復原及複寫資料。  
   
- 如果沒有符合上述任一情況，可能比較適合將您的資料儲存成非 XML 的大型物件類型，例如 **[n]varchar(max)** 或 **varbinary(max)**。  
+ 如果沒有符合上述任一情況，可能比較適合將您的資料儲存成非 XML 的大型物件類型，例如 **[n]varchar(max)** 或 **varbinary(max)** 。  
   
 ## <a name="xml-storage-options"></a>XML 儲存選項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 儲存選項如下：  

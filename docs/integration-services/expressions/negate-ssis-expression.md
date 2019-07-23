@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ccb2fc90312b20ae44081e847e92cf4e9710494
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4224a49bc5464a6f175972db5c93a9f84edbc874
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968089"
 ---
 # <a name="--negate-ssis-expression"></a>- (負) (SSIS 運算式)
 

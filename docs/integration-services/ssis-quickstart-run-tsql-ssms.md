@@ -8,13 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: afb1f780509968536b12c60bc50c4d7e3f537c49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca79ace2f6ad401b4a8df16c885ca6375da4c26a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068777"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 執行 SSIS 套件
 

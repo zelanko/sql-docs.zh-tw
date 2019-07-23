@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 6aa5b37955db2aace7785f7a39b768807e7b0e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042460"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 100dbd947b8b5b8de340bfd45a4d2705a4b0d475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea9797e325216efc8373b350fac76cb87a00aa19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049386"
 ---
 # <a name="data-viewer"></a>資料檢視器
 
