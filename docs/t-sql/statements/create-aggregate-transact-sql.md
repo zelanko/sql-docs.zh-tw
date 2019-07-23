@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141125"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  這是您要建立之彙總函式的名稱。  
   
  **@** _param_name_  
- 使用者定義彙總中的一或多個參數。 在執行彙總函式時，使用者必須提供參數的值。 使用 "at" 記號 (**@**) 當作第一個字元來指定參數名稱。 參數名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 這些參數是函數的本機參數。  
+ 使用者定義彙總中的一或多個參數。 在執行彙總函式時，使用者必須提供參數的值。 使用 "at" 記號 ( **@** ) 當作第一個字元來指定參數名稱。 參數名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 這些參數是函數的本機參數。  
   
  *system_scalar_type*  
  這是用來保留輸入參數值或傳回值的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統純量資料類型。 除了 **text**、**ntext** 和 **image**，所有純量資料類型都可用來當作使用者定義彙總的參數。 不能指定非純量類型，例如 **cursor** 和 **table**。  
@@ -79,7 +78,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  這是目前資料庫中已建立之 CLR 使用者自訂類型的名稱。 如果未指定 *udt_schema_name*，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會假設類型屬於目前使用者的結構描述。  
   
- *assembly_name* [ **.**_class_name_ ]  
+ *assembly_name* [ **.** _class_name_ ]  
  指定要繫結使用者定義彙總函式的組件，以及 (選擇性) 組件所屬的結構描述名稱和實作使用者自訂彙總的組件中之類別名稱。 這個組件必須已利用 CREATE ASSEMBLY 陳述式建立在資料庫中。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且符合組件中現有的類別名稱。 如果用來撰寫類別的程式設計語言使用命名空間 (如 C#)，則 *class_name* 可能是符合命名空間的名稱。 如果未指定 *class_name*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會假設它和 *aggregate_name* 一樣。  
   
 ## <a name="remarks"></a>Remarks  
@@ -87,7 +86,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  *assembly_name* 及其方法所參考的組件類別，應該滿足在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中實作使用者定義彙總函式的所有需求。 如需詳細資訊，請參閱 [CLR 使用者定義彙總](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 CREATE AGGREGATE 權限，以及 EXTERNAL NAME 子句所指定之組件的 REFERENCES 權限。  
   
 ## <a name="examples"></a>範例  

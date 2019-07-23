@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b37c60fa27af53949803c2077ba0736bf5de7e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086150"
 ---
 # <a name="unary-operators---positive"></a>一元加法 - 正數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

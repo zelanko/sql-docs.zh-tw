@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 57544d391da6a9df58baf7cc9189afe3a7db19dc
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: f7290121f2375033c9e731d86ed42b6110fe6f6d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686299"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262545"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>資料行清單對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

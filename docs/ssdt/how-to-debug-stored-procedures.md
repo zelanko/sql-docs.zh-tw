@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f1cc7e8213f9282680f652512fe78c7bc5e8b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929620"
 ---
 # <a name="how-to-debug-stored-procedures"></a>如何：針對預存程序進行偵錯
 Transact\-SQL 偵錯工具透過顯示 SQL 預存程序的 SQL 呼叫堆疊、區域變數和參數，讓您以互動方式針對預存程序進行偵錯。 就像在其他程式設計語言中偵錯一樣，您可以在針對 Transact\-SQL 指令碼進行偵錯時檢視及修改區域變數和參數、檢視全域變數，以及控制和管理中斷點。  

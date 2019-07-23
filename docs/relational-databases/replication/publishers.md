@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8370c989cb442de305c57e239beaff827bef37f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1813cb8f1790fc7383b4eb2fac747cb3efdcb290
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021277"
 ---
 # <a name="publishers"></a>[散發者屬性]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47701166"
   
 ## <a name="options"></a>選項。  
  **發行者**  
- 選取可使用這個散發者的伺服器。 按一下發行者旁的屬性按鈕 (**...**)，即可檢視並設定其他屬性。  
+ 選取可使用這個散發者的伺服器。 按一下發行者旁的屬性按鈕 ( **...** )，即可檢視並設定其他屬性。  
   
  **[加入]**  
  如果未列出您要允許的伺服器，請按一下 **[加入]** ，將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者或 Oracle 發行者加入可用發行者的清單中。  

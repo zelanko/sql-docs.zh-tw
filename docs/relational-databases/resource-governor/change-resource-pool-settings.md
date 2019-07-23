@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 2780556c86203cd89e6804cf9a108bdf37ecd019
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 328d61171c28f89083712c7f46c7b97394a7de84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136999"
 ---
 # <a name="change-resource-pool-settings"></a>變更資源集區設定
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

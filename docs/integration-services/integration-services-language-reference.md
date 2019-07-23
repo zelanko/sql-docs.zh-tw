@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea7b40ca0a7a7bd0502feb6c8613141257d3ee20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f5ed68a4b247de7d074dc547788b1f894466b8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057527"
 ---
 # <a name="integration-services-language-reference"></a>Integration Services 語言參考
 

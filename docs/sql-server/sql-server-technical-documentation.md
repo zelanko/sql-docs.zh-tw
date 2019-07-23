@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
-manager: craigg
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 93d36f922d3cd66cd8b617afbdb3e9bf80d79e22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d925fcbdb80ada3426b42d4dcb413937f4d3953
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136335"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
 

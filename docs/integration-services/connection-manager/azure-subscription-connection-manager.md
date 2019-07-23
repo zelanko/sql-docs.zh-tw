@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3b3dec7a683bcebc28f9bfe90e4b4091a70892f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e958acea51f9664323a6f5662bed6b8d78c0444
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968129"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 訂用帳戶連線管理員
 

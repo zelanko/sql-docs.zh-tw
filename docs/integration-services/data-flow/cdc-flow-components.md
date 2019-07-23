@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b4648f66c9bc73a3de8bcf1bad68a9ad748718bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 576565cb5bf688c3dc784eaa377ba7cf8d4a67b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045416"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
 

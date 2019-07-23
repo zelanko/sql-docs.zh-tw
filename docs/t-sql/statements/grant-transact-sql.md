@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78b83b521da0c7a045fee803b51f143c94b08bf8
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e23c4794b00daca7a228a3cd189835fcdf32628a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050655"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +150,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 權限的圖表  
  如需所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限的 PDF 格式海報大小圖表，請參閱 [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。 如果是使用 AS 選項，就必須套用額外的需求。 如需詳細資料，請參閱安全性實體的特定文章。  
   
  物件擁有者可以授與他們所擁有之物件的權限。 具有安全性實體之 CONTROL 權限的主體可以授與該安全性實體的權限。  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 795d4d31c3b26d2ef1f587e6b96d158d5d304789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c88e14257630f74b168c89bc2cd8409763358f40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113686"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教學課程：使用 OData 來源
 

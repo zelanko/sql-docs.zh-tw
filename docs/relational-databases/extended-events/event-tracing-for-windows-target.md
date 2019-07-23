@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 660244f23151be405bdcf47914c85730e6c5b823
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac1191d870d7fe745cdbed0e17892c5c2cf34435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66198318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021857"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
 

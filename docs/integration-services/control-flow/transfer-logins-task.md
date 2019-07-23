@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc1df2936c51509ffe3e2b68c6ee497e18558dbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12287fec6e5d25a1cf62f5e4652178c1a138d295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105568"
 ---
 # <a name="transfer-logins-task"></a>傳送登入工作
 

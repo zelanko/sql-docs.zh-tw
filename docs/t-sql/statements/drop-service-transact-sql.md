@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fe420a2f1a39165a94500f52d016b111bf43be20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a66af1aafad411a70b707165b96c546cbababa0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929255"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ DROP SERVICE service_name
   
  卸除服務會從服務使用的佇列中，刪除此服務的所有訊息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將錯誤傳送到使用此服務之任何開啟交談的遠端。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  卸除服務的權限預設為服務的擁有者、db_ddladmin 或 db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  

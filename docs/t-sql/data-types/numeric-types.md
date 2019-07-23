@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: c11686eb-80b9-444c-bf1b-36ebad653df1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffa0e1d90e6b5c581e2b2ed6e991cae91c047504
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 60868001884561e97a224e6813201f02ea01ad02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044726"
 ---
 # <a name="numeric-types"></a>數值類型
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

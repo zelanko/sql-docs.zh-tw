@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071175"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ INTO
 在大量插入邊緣資料表之前，必須先匯入節點資料表。 然後可以從節點資料表的 `$node_id` 資料行擷取 `$from_id` 和 `$to_id` 的值，然後插入為邊緣。 
 
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
 需要目標資料表的 INSERT 權限。  
   
 INSERT 權限預設會授與 **sysadmin** 固定伺服器角色、**db_owner** 和 **db_datawriter** 固定資料庫角色的成員，以及資料表擁有者。 **sysadmin**、**db_owner** 和 **db_securityadmin** 角色的成員，以及資料表擁有者，可以將權限轉讓給其他使用者。  

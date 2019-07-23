@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f1c99da1106f366e50d7c02bcc666a4e0c167bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902019"
 ---
 # <a name="hints-transact-sql---join"></a>提示 (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

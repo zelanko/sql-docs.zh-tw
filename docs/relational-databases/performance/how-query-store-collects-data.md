@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b74ad99ac0ade660e524241a0368cacc92e6852
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 83fbc6c183216cedcbb664a0c3a2e3a9337e1513
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946776"
 ---
 # <a name="how-query-store-collects-data"></a>查詢存放區如何收集資料
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "59542198"
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- 為了減少 I/O 額外負荷，會從記憶體內部擷取新資料。 寫入作業會排入佇列，隨後排清至磁碟。 查詢和計畫資訊 (見下圖的計劃存放區) 會以最快速度排清。 執行階段統計資料 (執行階段統計資料) 會保留在記憶體中，時間長短依 `SET QUERY_STORE` 陳述式 `DATA_FLUSH_INTERVAL_SECONDS` 選項所定義的期限。 SSMS 的 [查詢存放區] 對話方塊讓您輸入 [資料排清間隔 (分鐘)]，其可轉換為秒。  
+ 為了減少 I/O 額外負荷，會從記憶體內部擷取新資料。 寫入作業會排入佇列，隨後排清至磁碟。 查詢和計畫資訊 (見下圖的計劃存放區) 會以最快速度排清。 執行階段統計資料 (執行階段統計資料) 會保留在記憶體中，時間長短依 `SET QUERY_STORE` 陳述式 `DATA_FLUSH_INTERVAL_SECONDS` 選項所定義的期限。 SSMS 的 [查詢存放區] 對話方塊讓您輸入 [資料排清間隔 (分鐘)]  ，其可轉換為秒。  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   

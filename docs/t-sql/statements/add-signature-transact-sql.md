@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c86a8bf325bc12ce9fc4843038898a579c2308be
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066105"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 但是，透過用來簽署 ProcSelectT1ForAlice 的相同憑證副署 procSelectT1 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在整個呼叫鏈結中保留簽章，而且允許存取 T1。 如果 Alice 嘗試直接呼叫 procSelectT1，他就無法存取 T1，因為副署不會授與任何權限。 例如，底下的 C 顯示這個範例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要物件的 ALTER 權限，以及憑證或非對稱金鑰的 CONTROL 權限。 如果相關聯的私密金鑰受到密碼保護，則使用者也必須有密碼。  
   
 ## <a name="examples"></a>範例  

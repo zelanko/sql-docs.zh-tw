@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912609"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  這是資料分割函數的名稱。 資料分割函數名稱在資料庫內必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  *input_parameter_type*  
- 這是資料分割所用之資料行的資料類型。 除了 **text**、 **ntext**、 **image**、 **xml**、 **timestamp**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、別名資料類型或 CLR 使用者自訂資料類型，所有資料類型都能有效用在分割資料行上。  
+ 這是資料分割所用之資料行的資料類型。 除了 **text**、 **ntext**、 **image**、 **xml**、 **timestamp**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、別名資料類型或 CLR 使用者自訂資料類型，所有資料類型都能有效用在分割資料行上。  
   
  實際資料行稱為「資料分割資料行」，指定在 CREATE TABLE 或 CREATE INDEX 陳述式中。  
   
@@ -74,14 +73,14 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  指定 *boundary_value* 所提供的數目值，但不可超過 14,999。 所建立的資料分割數目等於 *n* + 1。 這些值不必依照順序列出。 如果值沒有排序，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它們排序、建立函數，以及傳回未依序提供值的警告。 如果 *n* 包括任何重複的值，「資料庫引擎」會傳回錯誤。  
   
  **LEFT** | RIGHT  
- 指定當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是按遞增順序由左至右來排序間隔值時，*boundary_value* [ **,**_...n_ ] 屬於每個界限值間隔的哪一側 (左或右)。 若未指定，LEFT 便是預設值。  
+ 指定當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是按遞增順序由左至右來排序間隔值時，*boundary_value* [ **,** _...n_ ] 屬於每個界限值間隔的哪一側 (左或右)。 若未指定，LEFT 便是預設值。  
   
 ## <a name="remarks"></a>Remarks  
  資料分割函數的範圍只限於建立它的資料庫。 在這個資料庫內，資料分割函數是在不同於其他函數的個別命名空間中。  
   
  任何資料分割資料行含有 Null 值的資料列，都會放在最左側資料分割中，除非將 NULL 指定為界限值，且指示 RIGHT。 在這個情況下，最左側的資料分割是空的資料分割，NULL 值會放在下列資料分割中。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  下列任何一個權限，都可以用來執行 CREATE PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
@@ -107,7 +106,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |**值**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. 建立 int 資料行的 RANGE RIGHT 資料分割函數  
- 下列資料分割函數使用前一個範例的相同 *boundary_value* [ **,**_...n_ ] 值，不過，它指定 RANGE RIGHT。  
+ 下列資料分割函數使用前一個範例的相同 *boundary_value* [ **,** _...n_ ] 值，不過，它指定 RANGE RIGHT。  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

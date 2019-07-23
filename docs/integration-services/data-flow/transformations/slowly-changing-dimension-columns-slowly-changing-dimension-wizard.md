@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e28ec706400625641feb2953e6708df7beabde1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dcf11c5ebb6372ecea9e056577524de50a169747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943992"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>緩時變維度資料行 (緩時變維度精靈)
 

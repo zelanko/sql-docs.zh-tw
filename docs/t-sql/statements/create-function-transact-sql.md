@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: bf64036b88b6f29da0404b6e611ae891db93da70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912661"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -294,7 +293,7 @@ RETURNS return_data_type
  使用 @ 記號當做第一個字元來指定參數名稱。 參數名稱必須符合識別碼的規則。 對函數而言，參數必須是本機參數；相同的參數名稱可以用在其他函數中。 參數只能取代常數，不能用來取代資料表名稱、資料行名稱或其他資料庫物件的名稱。  
   
 > [!NOTE]  
-> 在預存程序或使用者定義函數中傳遞參數，或在批次陳述式中宣告和設定變數時，不接受 ANSI_WARNINGS。 例如，若將變數定義為 **char(3)**，然後將其設為大於三個字元的值，資料便會被截斷成定義的大小，且 `INSERT` 或 `UPDATE` 陳述式會執行成功。  
+> 在預存程序或使用者定義函數中傳遞參數，或在批次陳述式中宣告和設定變數時，不接受 ANSI_WARNINGS。 例如，若將變數定義為 **char(3)** ，然後將其設為大於三個字元的值，資料便會被截斷成定義的大小，且 `INSERT` 或 `UPDATE` 陳述式會執行成功。  
   
  [ *type_schema_name*. ] *parameter_data_type*  
  這是參數資料類型，對於其所屬的結構描述而言為選擇性。 就 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式而言，所有資料類型 (包括 CLR 使用者定義類型和使用者定義資料表類型) 都是允許的資料類型，但 **timestamp** 資料類型除外。 就 CLR 函式而言，所有資料類型 (包括 CLR 使用者定義類型) 都是允許的資料類型，但 **text**、**ntext**、**image**、使用者定義資料表類型及 **timestamp** 資料類型除外。 非純量類型 **cursor** 和 **table** 不能指定為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函式中的參數資料類型。  
@@ -558,7 +557,7 @@ INLINE = { ON | OFF }
  如需有關如何設計 CLR 函式的詳細資訊，請參閱 [CLR 使用者定義函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)。  
   
 ## <a name="general-remarks"></a>一般備註  
- 純量函式可在使用純量運算式的情況下叫用。 這包括計算資料行和 CHECK 條件約束定義。 您也可以使用 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 陳述式來執行純量函式。 叫用純量函式必須至少使用函式的兩部分名稱 (*<schema>.<function>*)。 如需多部分名稱的詳細資訊，請參閱 [Transact-SQL 語法慣例 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 資料表值函式可在 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 陳述式的 `FROM` 子句中允許資料表運算式時叫用。 如需詳細資訊，請參閱[執行使用者定義函式](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)。  
+ 純量函式可在使用純量運算式的情況下叫用。 這包括計算資料行和 CHECK 條件約束定義。 您也可以使用 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 陳述式來執行純量函式。 叫用純量函式必須至少使用函式的兩部分名稱 ( *<schema>.<function>* )。 如需多部分名稱的詳細資訊，請參閱 [Transact-SQL 語法慣例 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 資料表值函式可在 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 陳述式的 `FROM` 子句中允許資料表運算式時叫用。 如需詳細資訊，請參閱[執行使用者定義函式](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)。  
   
 ## <a name="interoperability"></a>互通性  
  以下是函數中的有效陳述式：  

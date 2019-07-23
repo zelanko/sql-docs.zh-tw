@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b555dfd5c92212e6a8a24568964c96af35eb8c0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bdd68dccdcf8c2b317c81b120feb6949bb96c6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027569"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>適用於 Integration Services (SSIS) 的 Microsoft Connectors for Oracle and Teradata by Attunity
 

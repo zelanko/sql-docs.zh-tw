@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f57f66c531619ab81b9e7cd6f7b49324efd7f09f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f654539eb4fbef89b0882b7996b59474c11e1be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080736"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (SSIS 運算式)
 

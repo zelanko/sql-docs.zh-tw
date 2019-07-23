@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: f22b505e0fbb49790b855b0839530d9208477071
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066163"
 ---
 # <a name="stx-geometry-data-type"></a>STX (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

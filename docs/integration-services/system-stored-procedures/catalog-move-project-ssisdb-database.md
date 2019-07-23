@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c79df90c6093ed93668e504e574c712a2ba2146a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 985c541ccad844d972e1a850d65f10b4f6898347
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007784"
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB 資料庫
 

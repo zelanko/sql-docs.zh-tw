@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4327c29276c6f8a1785f974d07454f23329d8456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 073675e3402c83a8cda76b21b870a6c432abf68f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999804"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection 事件類別
 

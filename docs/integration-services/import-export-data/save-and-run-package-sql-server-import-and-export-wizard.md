@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8326920e557d6ed304414f96a7da040de0093dd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46e1f5f0f6eb868d6590ffdd01fd0aa2cca6a4af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901746"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>儲存並執行套件 (SQL Server 匯入和匯出精靈)
 

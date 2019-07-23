@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: d740d7bd8eeb2a273e74053f76dd98a1a77f0975
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: d08f03dbe96e80cf1bd75ef1d40817f4a3354535
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688492"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267097"
 ---
 # <a name="ssms-utility"></a>Ssms 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

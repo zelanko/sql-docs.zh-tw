@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: be4d9a8be28f84bb401a5895be479c1e90cb3a67
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 96bdde501293faf5e34391b2b6d7e7da4e7c2e7a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689940"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264118"
 ---
 # <a name="object-explorer"></a>物件總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4e0bdec7737c98b8b28267344dd9b8e2acb86f1c
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102129"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +150,7 @@ DBCC CHECKALLOC 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes
 |資料分割識別碼|僅供內部使用。|  
 |配置單位識別碼|僅供內部使用。|  
 |同資料列資料|頁面包含索引或堆積資料。|  
-|LOB 資料|頁面包含 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext**、**xml** 及 **image** 資料。|  
+|LOB 資料|頁面包含 **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**xml** 及 **image** 資料。|  
 |資料列溢位資料|頁面包含已進行 off-row 發送的可變長度資料行資料。|  
   
 除非指定了 ESTIMATEONLY 或 NO_INFOMSGS，否則，DBCC CHECKALLOC 會傳回下列結果集 (值可能會不同)。
@@ -228,7 +227,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。
   
 ## <a name="examples"></a>範例  
