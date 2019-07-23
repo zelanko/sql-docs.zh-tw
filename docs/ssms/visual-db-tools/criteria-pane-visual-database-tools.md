@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: fcc1b34d986b66a384bfae7b1f6d45a4010ce18b
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: cf5d5f7a306b443fd01f9112b4197485ce3ce2ba
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680163"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263901"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>準則窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

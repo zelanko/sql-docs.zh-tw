@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 395e7f0427e80ac039181bad8d0866e16317a207
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: e57bc256e2fec2bd978e958b75c18683b8837599
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680867"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266319"
 ---
 # <a name="print-query-results-visual-database-tools"></a>列印查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

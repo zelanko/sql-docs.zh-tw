@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 862f31f3bc0102b98e09310359bc9ad6a12382d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82ea382e8e4703b5dae1bac850da96aa19c35d9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009984"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>建立及設定 Always On 可用性群組的參考
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

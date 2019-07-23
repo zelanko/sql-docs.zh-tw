@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 4b455fee7632f243493a85baf81950b48135f889
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 247258298acbe8af4a68c0cd0b981cd04deb26ba
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683124"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258138"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>在專案中建立查詢與連接的關聯性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

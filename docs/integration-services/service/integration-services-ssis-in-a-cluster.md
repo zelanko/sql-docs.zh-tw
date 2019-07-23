@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7332f70144194bcddca0c2729b4615252a39e7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77e7c82f58ad2f2a40d012d5b503eec3ac6ee3dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947084"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
 

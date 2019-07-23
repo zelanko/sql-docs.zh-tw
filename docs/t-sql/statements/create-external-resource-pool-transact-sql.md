@@ -22,11 +22,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 ms.openlocfilehash: 49baad50d950578b9d2bbb96b4168c730056b307
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570671"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68223626"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ MAX_PROCESSES =*value*
 
 如需如何管理用於機器學習之外部資源集區的特定資訊，請參閱 [SQL Server 中的機器學習資源管理](../../advanced-analytics/r/resource-governance-for-r-services.md)。 
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要 `CONTROL SERVER` 權限。
 

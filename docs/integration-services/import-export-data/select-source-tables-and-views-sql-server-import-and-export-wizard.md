@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e20ae3e7392c01195ecb8cb829976efb3d6ad2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c42b4c7438eade57b8615d5011945112d9451a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901729"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
 

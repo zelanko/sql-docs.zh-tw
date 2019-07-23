@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f2cba1b43d782ef9d9a75d159e245f0f5d4077a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e67e3bb42aa2d70ae4e27a3f13955e5d0827c2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006743"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>範例指定 CDATA 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

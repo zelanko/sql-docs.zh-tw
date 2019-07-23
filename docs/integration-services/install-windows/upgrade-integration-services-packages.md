@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 3d7a1d96603168560c55b78fb05b5546e8674c7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d458e7696719c383b03a5cc3f259de08e4b8c37
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805388"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262785"
 ---
 # <a name="upgrade-integration-services-packages"></a>升級 Integration Services 封裝
 
@@ -59,14 +59,14 @@ ms.locfileid: "65805388"
   
 -   DTExecUI.exe.config  
   
- 若要使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 來設計包含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 自訂元件的套件，您需要修改位於下列位置上的 devenv.exe.config 檔案：*<磁碟機\<*:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE。  
+ 若要使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 來設計包含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 自訂元件的套件，您需要修改位於下列位置上的 devenv.exe.config 檔案： *<磁碟機\<* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE。  
   
  如果要使用這些封裝搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本執行階段所建置的應用程式，必須在可執行檔的 *.exe.config 檔案的組態區段中包含重新導向規則。 規則會將執行階段組件重新導向至 13.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 如需組件版本重新導向的詳細資訊，請參閱 [\<runtime> 的 \<assemblyBinding> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
 ### <a name="locating-the-assemblies"></a>尋找組件  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 \<磁碟機>:\Windows\Microsoft.NET\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 \<磁碟機>  :\Windows\Microsoft.NET\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件。  
   
- 如同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的舊版，核心 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擴充性 .dll 檔案也位於 \<磁碟機>:\Program Files\Microsoft SQL Server\130\SDK\Assemblies。  
+ 如同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的舊版，核心 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擴充性 .dll 檔案也位於 \<磁碟機>  :\Program Files\Microsoft SQL Server\130\SDK\Assemblies。  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>了解 SQL Server 封裝升級結果  
  升級封裝期間， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 封裝中的大多數元件及功能皆會順利地轉換成目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的對應項目。 不過，其中有許多元件和功能不會升級，或者具有您應該注意的升級結果。 下表將識別這些元件和功能。  
@@ -76,7 +76,7 @@ ms.locfileid: "65805388"
   
 |元件或功能|升級結果|  
 |--------------------------|---------------------|  
-|連接字串|對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈] 來升級封裝，然後選取 [更新連接字串以使用新的提供者名稱] 選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱] 選項。 如需這個選項的詳細資訊，請參閱 [一般] 頁面。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟封裝並手動變更 ConnectionString 屬性的文字。<br /><br /> 注意:當連接字串儲存在設定檔或資料來源檔案中，或者運算式設定 **ConnectionString** 屬性時，您無法使用先前的程序來更新連接字串。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱 [資料來源](../../integration-services/connection-manager/data-sources.md)。|  
+|連接字串|對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈] 來升級封裝，然後選取 [更新連接字串以使用新的提供者名稱]  選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱]  選項。 如需這個選項的詳細資訊，請參閱 [一般] 頁面。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟封裝並手動變更 ConnectionString 屬性的文字。<br /><br /> 注意:當連接字串儲存在設定檔或資料來源檔案中，或者運算式設定 **ConnectionString** 屬性時，您無法使用先前的程序來更新連接字串。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱 [資料來源](../../integration-services/connection-manager/data-sources.md)。|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>以 ADODB.dll 為基礎的指令碼  
  明確參考 ADODB.dll 的指令碼工作和指令碼元件指令碼可能無法升級，或是在未安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的電腦上執行。 為了升級這些指令碼工作或指令碼元件指令碼，建議您移除 ADODB.dll 的相依性。  建議以 Ado.Net 來替代 Managed 程式碼 (例如 VB 和 C# 指令碼)。  

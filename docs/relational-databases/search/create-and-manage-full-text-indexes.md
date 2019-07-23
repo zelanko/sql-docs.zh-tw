@@ -12,14 +12,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082927"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "58657913"
 -   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)
 
 ## <a name="populate-a-full-text-index"></a>擴展全文檢索索引
-建立與維護全文檢索索引的程序稱為「母體擴展」，也稱為「搜耙」。 全文檢索索引母體擴展有三種類型：
+建立與維護全文檢索索引的程序稱為「母體擴展」  ，也稱為「搜耙」  。 全文檢索索引母體擴展有三種類型：
 -   完整母體擴展
 -   以變更追蹤為基礎的母體擴展
 -   以時間戳記為基礎的累加母體擴展。
@@ -65,11 +64,11 @@ ms.locfileid: "58657913"
 ### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>使用 Management Studio 檢視全文檢索索引的屬性 
 1.  在 Management Studio 中，於物件總管中展開伺服器。  
   
-2.  展開 [資料庫]，然後展開包含全文檢索索引的資料庫。  
+2.  展開 [資料庫]  ，然後展開包含全文檢索索引的資料庫。  
   
-3.  展開 **[資料表]**。  
+3.  展開 **[資料表]** 。  
   
-4.  以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]，然後按一下 [全文檢索索引] 內容功能表上的 [屬性]。 這樣就會開啟 [全文檢索索引屬性] 對話方塊。  
+4.  以滑鼠右鍵按一下已定義全文檢索索引的資料表、選取 [全文檢索索引]  ，然後按一下 [全文檢索索引]  內容功能表上的 [屬性]  。 這樣就會開啟 [全文檢索索引屬性]  對話方塊。  
   
 5.  在 **[選取頁面]** 窗格中，您可以選取下列任何頁面：  
   
@@ -77,9 +76,9 @@ ms.locfileid: "58657913"
     |----------|-----------------|  
     |**一般**|顯示全文檢索索引的基本屬性。 這些屬性包括許多可修改的屬性和一些無法變更的屬性，例如資料庫名稱、資料表名稱，以及全文檢索索引鍵資料行的名稱。 可修改的屬性包括：<br /><br /> **全文檢索索引停用字詞表**<br /><br /> **全文檢索索引已啟用**<br /><br /> **變更追蹤**<br /><br /> **搜尋屬性清單**|  
     |**資料行**|顯示可用於全文檢索索引的資料表資料行。 系統會針對選取的資料行建立全文檢索索引。 您可以選取任意數目的可用資料行，以便包含在全文檢索索引中。 如需詳細資訊，請參閱[擴展全文檢索索引](populate-full-text-indexes.md)。|
-    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意:在您結束 [全文檢索索引屬性] 對話方塊之後，任何新建立的排程都會與 SQL Server Agent 作業 (針對 *database_name*.*table_name* 啟動累加資料表母體擴展) 建立關聯。|  
+    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意:在您結束 [全文檢索索引屬性]  對話方塊之後，任何新建立的排程都會與 SQL Server Agent 作業 (針對 *database_name*.*table_name* 啟動累加資料表母體擴展) 建立關聯。|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性] 對話方塊。  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性]  對話方塊。  
   
 ##  <a name="props"></a> 檢視索引資料表和資料行的屬性  
  您可以使用許多 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數 (例如 OBJECTPROPERTYEX) 以取得各種全文檢索索引屬性的值。 此資訊適用於管理和疑難排解全文檢索搜尋。  
@@ -166,7 +165,7 @@ GO
  這個範例會傳回名為 `Unique Key Column`的結果集資料行，其中顯示包含 Document 資料表之唯一索引鍵資料行名稱的單一資料列 DocumentID。 請注意，如果這個查詢包含無效的索引名稱、索引名稱沒有對應至資料表，或者資料表不存在等，它就會傳回 NULL。  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>索引 varbinary(max) 和 xml 資料行  
- 如果已建立 **varbinary(max)**、**varbinary** 或  資料行的全文檢索索引，您就可以使用全文檢索述詞 (CONTAINS 和 FREETEXT) 與函數 (CONTAINSTABLE 和 FREETEXTTABLE) 來查詢它，就像查詢任何其他全文檢索索引資料行一樣。
+ 如果已建立 **varbinary(max)** 、**varbinary** 或  資料行的全文檢索索引，您就可以使用全文檢索述詞 (CONTAINS 和 FREETEXT) 與函數 (CONTAINSTABLE 和 FREETEXTTABLE) 來查詢它，就像查詢任何其他全文檢索索引資料行一樣。
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>索引 varbinary(max) 或 varbinary 資料  
  單一 **varbinary(max)** 或 **varbinary** 資料行可以儲存許多類型的文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援已在作業系統中安裝並提供篩選的任何文件類型。 每份文件的文件類型都是由文件的副檔名所識別。 例如，全文檢索搜尋會針對 .doc 副檔名使用支援 Microsoft Word 文件的篩選。 如需可用文件類型的清單，請查詢 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) 目錄檢視。  
@@ -189,18 +188,18 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  在具有全文檢索索引的資料表上，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來手動為資料表停用或重新啟用全文檢索索引。  
 
-1.  展開伺服器群組、展開 [資料庫]，再展開包含您要啟用全文檢索索引之資料表的資料庫。  
+1.  展開伺服器群組、展開 [資料庫]  ，再展開包含您要啟用全文檢索索引之資料表的資料庫。  
   
-2.  展開 [資料表]，然後以滑鼠右鍵按一下您想要停用或重新啟用全文檢索索引的資料表。  
+2.  展開 [資料表]  ，然後以滑鼠右鍵按一下您想要停用或重新啟用全文檢索索引的資料表。  
   
-3.  選取 [全文檢索索引]，然後按一下 [停用全文檢索索引] 或 [啟用全文檢索索引]。  
+3.  選取 [全文檢索索引]  ，然後按一下 [停用全文檢索索引]  或 [啟用全文檢索索引]  。  
   
 ##  <a name="remove"></a> 移除資料表的全文檢索索引  
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下含有您要移除其全文檢索索引的資料表。  
   
-2.  選取 [刪除全文檢索索引]。  
+2.  選取 [刪除全文檢索索引]  。  
   
-3.  出現提示要您確認是否要刪除全文檢索索引時，按一下 [確定]。  
+3.  出現提示要您確認是否要刪除全文檢索索引時，按一下 [確定]  。  
   
   

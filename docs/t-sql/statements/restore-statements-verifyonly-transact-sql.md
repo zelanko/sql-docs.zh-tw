@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e658fb1c3d33e3e5fb4c023109aa7fd4617c7fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abaee73772c2d0b8f4beaff05c2daaf7fe2e80ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082437"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 陳述式 - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]

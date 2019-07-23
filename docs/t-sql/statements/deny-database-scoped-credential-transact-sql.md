@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f58fa15ba67cfcf84a35f130fa70eff0d981c0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbcf7c136bfe9ff80b1ea9129e5c6d453aec9e01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114857"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 資料庫範圍認證 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

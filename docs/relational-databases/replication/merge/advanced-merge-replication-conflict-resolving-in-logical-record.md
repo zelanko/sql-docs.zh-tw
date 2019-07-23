@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c4aee8234b48fca2919f75a1cbf999e0dfb3c49c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62c862fdd67d7b4432595572175d87ae0bd44304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033325"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>進階合併式複寫衝突 - 在邏輯記錄解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

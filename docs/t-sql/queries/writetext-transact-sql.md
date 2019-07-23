@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5dd029115c99ae4826bf1070a7556c7fbdcb8c55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948109"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ WRITETEXT [BULK]
  這是要更新之資料表及 **text**、**ntext** 或 **image** 資料行的名稱。 資料表和資料行名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 資料庫名稱和擁有者名稱的指定是選擇性的。  
   
  *text_ptr*  
- 這是儲存 **text**、**ntext** 或 **image** 資料之指標的值。 *text_ptr* 必須是 **binary(16)**。若要建立文字指標，請搭配 **text**、**ntext** 或 **image** 資料行並非 Null 的資料來執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式。  
+ 這是儲存 **text**、**ntext** 或 **image** 資料之指標的值。 *text_ptr* 必須是 **binary(16)** 。若要建立文字指標，請搭配 **text**、**ntext** 或 **image** 資料行並非 Null 的資料來執行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式。  
   
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會忽略這個項目。 記錄取決於資料庫的實際復原模式。  
@@ -87,7 +86,7 @@ WRITETEXT [BULK]
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，可能有指向 **text**、**ntext** 或 **image** 資料的同資料列文字指標存在，但可能無效。 如需有關 text in row 選項的資訊，請參閱[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 如需有關讓文字指標變成無效的資訊，請參閱 [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要指定之資料表的 UPDATE 權限。 當傳送 UPDATE 權限時，可以傳送權限。  
   
 ## <a name="examples"></a>範例  

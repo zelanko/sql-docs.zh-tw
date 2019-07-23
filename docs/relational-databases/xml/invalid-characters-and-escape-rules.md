@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7528da1f04967203d90d083b03fbd46ca1ba1831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35c3537371df1cb9fc83976605b65fdcfedd1000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62938970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026655"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>無效的字元和逸出規則
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

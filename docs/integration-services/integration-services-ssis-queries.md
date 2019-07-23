@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 706ea983c2fcbd8607ed64f8257d96ad89189d27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 338f515547b146d67eeec5d288cce3d433ae2aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057430"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
 
@@ -83,7 +82,7 @@ ms.locfileid: "65723539"
   
 -   **立即檢視並編輯結果** ：您可以執行您的查詢並使用方格 (您可以捲動並編輯資料庫中的記錄) 中的資料錄集。  
   
- [查詢產生器] 對話方塊中的圖形工具，可以讓您使用拖放作業建構查詢。 依預設，[查詢產生器] 對話方塊會建構 SELECT 查詢，不過您也可以建立 INSERT、UPDATE 或 DELETE 查詢。 在 **[查詢產生器]** 對話方塊中，可以剖析和執行所有類型的 SQL 陳述式。 如需封裝中 SQL 陳述式的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 查詢](../integration-services/integration-services-ssis-queries.md)。  
+ [查詢產生器]  對話方塊中的圖形工具，可以讓您使用拖放作業建構查詢。 依預設，[查詢產生器] 對話方塊會建構 SELECT 查詢，不過您也可以建立 INSERT、UPDATE 或 DELETE 查詢。 在 **[查詢產生器]** 對話方塊中，可以剖析和執行所有類型的 SQL 陳述式。 如需封裝中 SQL 陳述式的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 查詢](../integration-services/integration-services-ssis-queries.md)。  
   
  若要深入了解 Transact-SQL 語言及其語法，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../t-sql/transact-sql-reference-database-engine.md)。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "65723539"
   
 |窗格|Description|  
 |----------|-----------------|  
-|**圖表** 窗格|在圖表中顯示查詢。 此圖表顯示查詢所包括的資料表及其聯結方式。 選取或清除資料表之資料行旁邊的核取方塊，以便在查詢輸出中加入或移除。<br /><br /> 將資料表加入查詢時，查詢產生器會依據資料表中的索引鍵來建立以資料表為基礎的資料表之間的聯結。 若要加入聯結，請將欄位從一個資料表拖曳至另一個資料表的欄位。 若要管理聯結，請以滑鼠右鍵按一下聯結，然後選取功能表選項。<br /><br /> 以滑鼠右鍵按一下 [圖表] 窗格，即可加入或移除資料表、選取所有資料表以及顯示或隱藏窗格。|  
+|**圖表** 窗格|在圖表中顯示查詢。 此圖表顯示查詢所包括的資料表及其聯結方式。 選取或清除資料表之資料行旁邊的核取方塊，以便在查詢輸出中加入或移除。<br /><br /> 將資料表加入查詢時，查詢產生器會依據資料表中的索引鍵來建立以資料表為基礎的資料表之間的聯結。 若要加入聯結，請將欄位從一個資料表拖曳至另一個資料表的欄位。 若要管理聯結，請以滑鼠右鍵按一下聯結，然後選取功能表選項。<br /><br /> 以滑鼠右鍵按一下 [圖表]  窗格，即可加入或移除資料表、選取所有資料表以及顯示或隱藏窗格。|  
 |**方格** 窗格|在方格中顯示查詢。 您可以使用此方格，將資料行加入至查詢、從查詢移除資料行，以及變更每個資料行的設定。|  
 |**SQL** 窗格|以 SQL 文字顯示查詢。 在 **[圖表]** 窗格和 **[方格]** 窗格中所做的變更會出現在此處，而在此處所做的變更會出現在 **[圖表]** 窗格和 **[方格]** 窗格中。|  
 |**結果** 窗格|當您在工具列上按一下 **[執行]** 時，會顯示查詢的結果。| 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9a01f23b598e6a8a81122c8a670fadc9f00b6009
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018887"
 ---
 # <a name="access-filetables-with-transact-sql"></a>利用 Transact-SQL 存取 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

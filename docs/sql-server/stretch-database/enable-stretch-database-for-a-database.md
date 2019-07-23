@@ -10,21 +10,20 @@ helpviewer_keywords:
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 89127c43b8c9c10761820f337935e265a4865213
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 54393dbc44fd8f48b0078fcd63dd06bfddc3e18a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136255"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  若要設定現有的資料庫以使用 Stretch Database，請在 SQL Server Management Studio 中為資料庫選取 [工作 | 延展 | 啟用]，開啟 [啟用資料庫的延展功能精靈]。 您也可以使用 Transact-SQL 來為資料庫啟用 Stretch Database。  
+  若要設定現有的資料庫以使用 Stretch Database，請在 SQL Server Management Studio 中為資料庫選取 [工作 | 延展 | 啟用]  ，開啟 [啟用資料庫的延展功能精靈]  。 您也可以使用 Transact-SQL 來為資料庫啟用 Stretch Database。  
   
- 如果您為個別資料表選取 [工作 | 延展 | 啟用]，而您尚未針對 Stretch Database 啟用資料庫，精靈會針對 Stretch Database 設定資料庫，並且在程序中讓您選取資料表。 請遵循本文中的步驟，而非[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 中的步驟。  
+ 如果您為個別資料表選取 [工作 | 延展 | 啟用]  ，而您尚未針對 Stretch Database 啟用資料庫，精靈會針對 Stretch Database 設定資料庫，並且在程序中讓您選取資料表。 請遵循本文中的步驟，而非[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 中的步驟。  
   
  在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料庫上啟用 Stretch Database 也需要 CONTROL DATABASE 權限。  
 
@@ -44,11 +43,11 @@ ms.locfileid: "56240802"
 ##  <a name="EnableTSQLServer"></a> 必要條件：在伺服器上啟用 Stretch Database  
  在您於資料庫或資料表上啟用 Stretch Database 前，您必須在本機伺服器上啟用它。 這項作業需要 sysadmin 或 serveradmin 權限。  
   
--   如果您已經有必要的系統管理權限，則 [啟用資料庫的延展功能精靈] 會設定伺服器以使用「延展」。  
+-   如果您已經有必要的系統管理權限，則 [啟用資料庫的延展功能精靈]  會設定伺服器以使用「延展」。  
   
 -   如果您沒有必要的權限，系統管理員必須在您執行精靈前，執行 **sp_configure** 來手動啟用選項，否則系統管理員必須執行精靈。  
   
- 若要以手動方式在伺服器上啟用 Stretch Database，請執行 **sp_configure** 並開啟 [遠端資料封存] 選項。 下列範例會將 **remote data archive** 選項的值設為 1 來啟用它。  
+ 若要以手動方式在伺服器上啟用 Stretch Database，請執行 **sp_configure** 並開啟 [遠端資料封存]  選項。 下列範例會將 **remote data archive** 選項的值設為 1 來啟用它。  
   
 ```sql
 EXEC sp_configure 'remote data archive' , '1';  

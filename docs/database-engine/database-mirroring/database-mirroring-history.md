@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: a20b27bd5a3c8b22171bf61ef6ebfda2725c5fc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006430"
 ---
 # <a name="database-mirroring-history"></a>資料庫鏡像記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

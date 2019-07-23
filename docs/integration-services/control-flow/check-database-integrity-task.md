@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fb5be38de88d46a379da31dbe2f570269e4e3a25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19a845d5c41fd20ca7397adbc56980942b886cc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904048"
 ---
 # <a name="check-database-integrity-task"></a>檢查資料庫完整性工作
 

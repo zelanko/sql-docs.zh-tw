@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2fb2e65589e8cec209eb1d7336ec83da3b14737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5eff5410ecd53148a16ae1e726407a7883606a89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999718"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件類別
 

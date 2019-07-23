@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8165479802eefdb9656e4e2d78b3d893c3ce03d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e38ec34f452ac286cf069bf2c88a9b8eb5578db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086607"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>用來建立執行個體的 SQL Server 連接
 

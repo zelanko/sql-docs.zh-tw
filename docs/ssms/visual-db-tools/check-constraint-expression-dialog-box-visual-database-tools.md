@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: da18e2e5fd00da82efb304b2bbd2745897a1ff29
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 7f1554ee91444462c52dee404d198b35944a7caf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686470"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263667"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>檢查條件約束運算式對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

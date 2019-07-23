@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ba74954d0cf587161b02d1a37a09f222722f9f61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d106d69de37da310dbb1d7ebdf06d0542490dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088741"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
 

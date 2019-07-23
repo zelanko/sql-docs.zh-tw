@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 74f459293f0ccf6e6b84a577c685bb0eea9adcb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f42630e101a60c9d3265ab96a5b126551eeaff0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991593"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性群組：互通性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

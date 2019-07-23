@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b708e9ff71bd7f7599339ae2eebc0377b0c5fb1f
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b93c7b9acfc5a3e197709cf71ec0c7923fe7d91c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943485"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例使用 ELEMENTS 指示詞指定 XSINIL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

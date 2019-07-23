@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ccc802650dd4ba57074d760d2e9b7af176121e8e
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: a4bbbb9b08c63e6ab6f8b68d304b611847707558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141252"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>引數  
- FILE **='**_path\_to\_file_**'**  
+ FILE **='** _path\_to\_file_ **'**  
  指定預存服務主要金鑰的完整路徑，包括檔案名稱。 *path_to_file* 可以是本機路徑或通往網路位置的 UNC 路徑。  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  指定解密要從檔案匯入之服務主要金鑰時所需的密碼。  
   
  FORCE  

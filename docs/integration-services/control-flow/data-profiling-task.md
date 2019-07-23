@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dfe740bfa0ec25d577565f310ebeb3ea5e5d9274
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cafb198c7d38c3a03562d6fda39f2b9c4f3b2418
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003574"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
 

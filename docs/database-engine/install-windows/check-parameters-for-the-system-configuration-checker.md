@@ -22,13 +22,12 @@ ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 90afaab67be4e46488ee188f67447c2e30d03dfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3f6682dab001ac01ad811a4b15a989b91ef81ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052290"
 ---
 # <a name="check-parameters-for-the-system-configuration-checker"></a>檢查 System Configuration Checker 的參數
 

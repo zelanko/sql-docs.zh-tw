@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 7aeade4ad7464ad5ddb25872cb99815ec23cb64a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: eb7dc987ba03dc4d50c12c80519f769d6f5b3261
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689371"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267455"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>驗證警告對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

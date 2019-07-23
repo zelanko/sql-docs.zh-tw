@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e97881362ed01f08a0c229025c21950cf117835a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a1e9f29db3c9aec7dc86520c502cc3fdbea7a86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988395"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
 
@@ -75,7 +74,7 @@ ms.locfileid: "66800671"
  **可用性群組的容錯移轉原則設定適用於所有複本，無論複本裝載於獨立執行個體或 FCI 執行個體。  
   
 > [!NOTE]  
->  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的 FCI 和 **Always On 可用性群組**內**節點數目**的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的 FCI 和 **Always On 可用性群組**內**節點數目**的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   
@@ -108,7 +107,7 @@ ms.locfileid: "66800671"
 -   **請不要使用容錯移轉叢集管理員將可用性群組移至不同的節點或容錯移轉可用性群組。** 容錯移轉叢集管理員不會察覺可用性複本的同步處理狀態，而且這樣做可能會造成停機時間延長。 您必須使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
 
   >[!WARNING]
-  > 使用容錯移轉叢集管理員將裝載可用性群組的「容錯移轉叢集執行個體」移至「已」裝載相同可用性群組複本的節點時，可能會導致遺失可用性群組複本，使其無法在目標節點上線。 容錯移轉叢集的單一節點無法裝載相同可用性群組的多個複本。 如需如何發生這種情況以及如何復原的詳細資訊，請參閱部落格：[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (在可用性群組中意外卸除複本)。 
+  > 使用容錯移轉叢集管理員將裝載可用性群組的「容錯移轉叢集執行個體」  移至「已」  裝載相同可用性群組複本的節點時，可能會導致遺失可用性群組複本，使其無法在目標節點上線。 容錯移轉叢集的單一節點無法裝載相同可用性群組的多個複本。 如需如何發生這種情況以及如何復原的詳細資訊，請參閱部落格：[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (在可用性群組中意外卸除複本)。 
   
 ##  <a name="RelatedContent"></a> 相關內容  
   

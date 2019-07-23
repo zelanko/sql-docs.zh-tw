@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d158cff3a2761ae27357088488075e50381145b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063808"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>被遺棄使用者疑難排解 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47825886"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的被遺棄使用者，當資料庫中的使用者登入是根據 **master** 資料庫，但登入已不存在於 **master**時就會發生。 當登入遭到刪除，或當資料庫移動到另一個登入不存在的資料庫時，就可能發生。 本主題說明如何尋找被遺棄使用者，並將他們重新對應至登入。  
   
 > [!NOTE]  
->  針對可能會移動的資料庫，使用自主資料庫使用者可減少被遺棄使用者產生的可能性。 如需詳細資訊，請參閱 [自主的資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
+>  針對可能會移動的資料庫，使用自主資料庫使用者可減少被遺棄使用者產生的可能性。 如需詳細資訊，請參閱 [自主資料庫使用者 - 使資料庫可攜](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
 ## <a name="background"></a>背景  
  若要使用以登入為基礎的安全性主體 (資料庫使用者身分識別) 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫，主體在 **master** 資料庫必須有有效的登入。 此登入適用於驗證程序，可確認主體身份識別並決定主體是否允許連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 伺服器執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入可以在 **sys.server_principals** 目錄檢視和 **sys.sql_logins** 相容性檢視中看到。  

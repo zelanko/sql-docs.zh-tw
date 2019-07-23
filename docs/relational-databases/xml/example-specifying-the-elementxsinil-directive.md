@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2d2accfbc2c2ca34150ffe0db503dc7f4bf35b72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 485a0a9061a1cef6bdde4fee84b95614ea220005
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006713"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>範例指定 ELEMENTXSINIL 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 143bba36c1f85877fd3a0504dd8345c754ec055d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023596"
 ---
 # <a name="install-integration-services"></a>安裝 Integration Services
 

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a2318f89872f490d8d3fc08902438f7a189443
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 1c5bd7fef54ee28993472bd6b3f4e4df3bba739f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060977"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,10 +50,10 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  指定要建立之資料庫範圍認證的名稱。 *credential_name* 的開頭不可以是編號 (#) 符號。 系統認證必須以 ## 為開頭。  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  指定連接到伺服器外部時所要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。  
   
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  指定外寄驗證所需的秘密。 從 Azure Blob 儲存體匯入檔案需要 `SECRET`。 若要從 Azure Blob 儲存體載入到 SQL DW 或平行處理資料倉儲，祕密必須是Azure 儲存體金鑰。  
 > [!WARNING]
 >  SAS 金鑰值的開頭可能是 '?' (問號)。 當您使用 SAS 金鑰時，您必須移除前置字元 '?'。 否則您的工作可能會受阻。  
@@ -83,7 +82,7 @@ WITH IDENTITY = 'identity_name'
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 使用資料庫範圍認證存取 Azure Blob 儲存體的資料。 如需詳細資訊，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。 
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要資料庫上的 **CONTROL** 權限。  
   
 ## <a name="examples"></a>範例  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64a0cf8fb19bd9e89efce96f2e9705eb6b2b9ae1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b188b7ec3b108a32a52ce888d4dfb1b5a064804
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929780"
 ---
 # <a name="add-non-sql-server-subscriber"></a>加入非 SQL Server 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: fa49540e4ca856c04065775540a1c6970af0cb2f
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 38a0417a7f934525c7d43e0a36a52ef918b573a6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687430"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266736"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

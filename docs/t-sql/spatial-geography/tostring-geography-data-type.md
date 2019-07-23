@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 92ffac8a5ff50302378a66d78e362b27ee3b8da6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e4ca89d9fa8dccf2e819e76db188f84b25f0b59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120676"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946990"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
 
@@ -185,23 +184,23 @@ GO
   
 4.  執行您的重要查詢。  
   
-5.  記下結果窗格中 [訊息] 索引標籤上實際受影響的資料列數目。  
+5.  記下結果窗格中 [訊息]  索引標籤上實際受影響的資料列數目。  
   
-6.  在結果窗格的 [結果] 索引標籤上，按兩下包含 XML 格式統計資料的資料格。 圖形查詢計劃隨即顯示。  
+6.  在結果窗格的 [結果]  索引標籤上，按兩下包含 XML 格式統計資料的資料格。 圖形查詢計劃隨即顯示。  
   
-7.  以滑鼠右鍵按一下圖形查詢計劃中的第一個方塊，然後按一下 [屬性]。  
+7.  以滑鼠右鍵按一下圖形查詢計劃中的第一個方塊，然後按一下 [屬性]  。  
   
 8.  為了在稍後比較不同的組態，請記下下列屬性的值：  
   
-    -   [CardinalityEstimationModelVersion]。  
+    -   [CardinalityEstimationModelVersion]  。  
   
-    -   [估計的資料列數目]。  
+    -   [估計的資料列數目]  。  
   
-    -   [估計的 I/O 成本]，以及涉及實際效能 (而不是資料列計數預測) 的幾個類似 [估計] 屬性。  
+    -   [估計的 I/O 成本]  ，以及涉及實際效能 (而不是資料列計數預測) 的幾個類似 [估計]  屬性。  
   
-    -   [邏輯作業] 和 [實體作業]。 [平行處理原則] 是正確值。  
+    -   [邏輯作業]  和 [實體作業]  。 [平行處理原則]  是正確值。  
   
-    -   [實際的執行模式]。 [批次] 是正確值，優於 [資料列]。  
+    -   [實際的執行模式]  。 [批次]  是正確值，優於 [資料列]  。  
   
 9. 比較估計的資料列數目與實際的資料列數目。 CE 誤差是 1% (高或低)，或是 10%？  
   
@@ -239,7 +238,7 @@ GO
 
 3. 您可以使用 `LEGACY_CARDINALITY_ESTIMATION` 查詢提示，讓單一資料庫使用舊版 CE，同時保留查詢最佳化工具的改善。  
   
-若要進行最精細的控制，您可以「強制」系統在測試期間使用透過 CE 70 所產生的計劃。 「固定」您慣用的計劃之後，您可以將整個資料庫設定為使用最新的相容性層級和 CE。 接下來將會詳細說明這個選項。  
+若要進行最精細的控制，您可以「強制」  系統在測試期間使用透過 CE 70 所產生的計劃。 「固定」  您慣用的計劃之後，您可以將整個資料庫設定為使用最新的相容性層級和 CE。 接下來將會詳細說明這個選項。  
   
 ### <a name="how-to-force-a-particular-query-plan"></a>如何強制執行特定查詢計劃  
   
@@ -247,7 +246,7 @@ GO
   
 - 執行 **sp_query_store_force_plan**。  
   
-- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] \(資源耗用量排名在前的節點)，然後按一下 [View Top Resource Consuming Nodes] \(檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
+- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區]  節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] \(資源耗用量排名在前的節點)  ，然後按一下 [View Top Resource Consuming Nodes] \(檢視資源耗用量排名在前的節點)  。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
   
 如需查詢存放區的詳細資訊，請參閱 [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   
@@ -257,7 +256,7 @@ GO
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>範例 A：CE 認為最大值可能比上次收集統計資料時還要高  
   
-假設統計資料是在 `OrderAddedDate` 上限為 `2016-04-30`時，於 `2016-04-30`為 `OrderTable` 收集的狀況。 CE 120 (和更新版本) 會認知具有「遞增」資料之 `OrderTable` 中的資料行，可能會具有大於統計資料所記錄之最大值的值。 此認知會改善 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的查詢計劃，如下所示。  
+假設統計資料是在 `OrderAddedDate` 上限為 `2016-04-30`時，於 `2016-04-30`為 `OrderTable` 收集的狀況。 CE 120 (和更新版本) 會認知具有「遞增」  資料之 `OrderTable` 中的資料行，可能會具有大於統計資料所記錄之最大值的值。 此認知會改善 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的查詢計劃，如下所示。  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  

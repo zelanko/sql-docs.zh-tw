@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 9d7e3e718cae97ece079bbd44ad1a17068201668
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939212"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "54134361"
   
 -   限制使用大型物件 (LOB) 資料類型。  
   
-     LOB 比其他資料行資料類型需要更多儲存空間和處理。 除非您的應用程式需要，否則不要在發行項中包含這些資料行。 資料類型 **text**、 **ntext**和 **image** 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**。  
+     LOB 比其他資料行資料類型需要更多儲存空間和處理。 除非您的應用程式需要，否則不要在發行項中包含這些資料行。 資料類型 **text**、 **ntext**和 **image** 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 。  
   
      對於異動複寫，請考慮使用名為 **OLEDB 資料流的散發設定檔**的「散發代理程式」設定檔。 如需詳細資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   

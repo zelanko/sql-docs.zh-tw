@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 47540d82abb349691f63fb9209010b42cefe4e2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bff01341c6d28f38cc1ba18ecf6ac2644b4bb530
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017518"
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

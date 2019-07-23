@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: f92882612ecf3244b88f764f266ae34ac3f752fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0eeb0558d898c4f12e1d3848e7220c7b7143c996
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042487"
 ---
 # <a name="static-aggregate-geography-methods"></a>靜態彙總地理方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

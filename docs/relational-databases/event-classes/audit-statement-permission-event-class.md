@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf1dcad1abde1ff2aca6e14a9eb4421f6660b34b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95b4c8c58591ac0846b9774a97bbcc1f389d31c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62687755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913319"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 14bce18a08fae02e7a0f8c2eed763d18b95c1a60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f003e2a127fb5e665be7ece4cf3f7590dc984c4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945290"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以程式設計方式使用連接管理員
 

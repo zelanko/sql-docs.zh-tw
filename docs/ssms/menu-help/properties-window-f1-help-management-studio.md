@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 0ca79e92632ab958734ae310bda82a1636ea8021
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 19a7cd6251165db2843a7afb691ad23ccf75fbda
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682653"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257059"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>屬性視窗 F1 說明 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

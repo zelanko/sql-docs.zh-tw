@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1dc06f65e1c724466154197d156517b2c72827f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d3eb9e5c5b451854876cf31ae05641f12e8bc722
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006514"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +64,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要資料庫的 **CREATE ROLE** 權限，或是 **db_securityadmin** 固定資料庫角色的成員資格。 當您使用 **AUTHORIZATION** 選項時，也必須具備下列權限：  
   
 -   若要指派角色擁有權給另一位使用者，則需要該使用者的 IMPERSONATE 權限。  

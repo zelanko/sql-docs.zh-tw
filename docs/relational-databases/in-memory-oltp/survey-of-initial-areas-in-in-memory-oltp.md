@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0988c2cf4d133305676241763aa90f1db68b86c
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 5c28ca4d58a717d34f6036376f8facc395e30cd3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063155"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>記憶體內部 OLTP 的初始區域調查
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
   
 有兩個主要案例︰  
   
-- 「批次作業分析」 指的是在營業時間後或在具有交易資料複本的次要硬體上執行的彙總程序。  
+- 「批次作業分析」  指的是在營業時間後或在具有交易資料複本的次要硬體上執行的彙總程序。  
   - [Azure SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) 也與批次作業分析有關。  
-- 「即時作業分析」 指的是在營業時間內以及在用於交易工作量的主要硬體上執行的彙總程序。  
+- 「即時作業分析」  指的是在營業時間內以及在用於交易工作量的主要硬體上執行的彙總程序。  
   
   
 目前文章的焦點是放在 OLTP，而不是分析。 如需資料行存放區索引如何將分析帶入 SQL 的資訊，請參閱：  
@@ -364,7 +363,7 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
 **雙重本質：** 記憶體最佳化資料表具有雙重本質：一個是在作用中記憶體中的表示方式，另一個是在硬碟上的表示方式。 每項交易都會對資料表的兩種代表方式進行認可。 交易會針對速度較快的使用中記憶體表示方式運作。 記憶體最佳化資料表可從速度更快的使用中記憶體 (相較於硬碟) 獲益。 此外，使用中記憶體較高的敏捷性也讓針對速度最佳化的更先進資料表結構得以實現。 進階結構也是無頁面結構，因此它可以避免閂鎖和執行序同步鎖定超出負荷及競爭。  
   
   
-**無鎖定：** 記憶體最佳化資料表依賴「開放式」方法來達成資料完整性與並行處理及高輸送量之間的競爭目標。 在交易期間，資料表不會鎖定任何版本的已更新資料列。 這可以顯著降低某些高容量系統中的競爭。  
+**無鎖定：** 記憶體最佳化資料表依賴「開放式」  方法來達成資料完整性與並行處理及高輸送量之間的競爭目標。 在交易期間，資料表不會鎖定任何版本的已更新資料列。 這可以顯著降低某些高容量系統中的競爭。  
   
   
 **資料列版本：** 記憶體最佳化資料表會在資料表本身 (而非在 tempdb) 中新增已更新之資料列的新版本，而不使用鎖定。 原始資料列會保留到交易被認可之後。 在交易期間，其他處理序可以讀取資料表的原始版本。  
@@ -405,7 +404,7 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
 - [記憶體最佳化資料表中的資料表和資料列大小](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**分割大型資料表：** 滿足眾多作用中記憶體需求的方式之一，是將您的大型資料表分割成多個部分，部分位於記憶體內部，用來儲存「經常存取的最近使用」資料列，其他部分則位於磁碟上，用來儲存「不常存取的舊版」資料列 (例如已經完全出貨並結單的銷售訂單)。 此資料分割的設計與實作程序為手動程序。 請參閱：  
+**分割大型資料表：** 滿足眾多作用中記憶體需求的方式之一，是將您的大型資料表分割成多個部分，部分位於記憶體內部，用來儲存「經常存取的最近使用」  資料列，其他部分則位於磁碟上，用來儲存「不常存取的舊版」  資料列 (例如已經完全出貨並結單的銷售訂單)。 此資料分割的設計與實作程序為手動程序。 請參閱：  
   
 - [應用程式層級資料分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [分割記憶體最佳化資料表的應用程式模式](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  

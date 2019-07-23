@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f3d7fe83359162d928c46578b64c59ae399b1f2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8081b4b4b4c8a9d19af0c558d162974d98e16878
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094737"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>將資料行加入資料表 (Database Engine)
 

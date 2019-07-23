@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57ebd86a2479152c0e02f3fb010c4daaf8d16382
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 7931e678db7e93dfea385b5ca905dd6968ec78eb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683657"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263482"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查詢編輯器編輯 SQLCMD 指令碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

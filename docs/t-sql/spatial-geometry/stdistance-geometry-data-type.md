@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 47caf3acbbdfd663dcfc507279a4b41ce134ad01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b159a11227792ddf445088162a832b0d897deec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107806"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

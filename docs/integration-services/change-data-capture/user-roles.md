@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 358f85dfd404aecc712f44aae46dad84cf2713b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb0412abb3f7c352b1904dd8cc3925531cf9b457
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898957"
 ---
 # <a name="user-roles"></a>使用者角色
 

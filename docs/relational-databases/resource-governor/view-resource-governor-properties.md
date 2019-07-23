@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 95c7b2a185786c37687a28978fc4786c45a99958
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 461c222e6558ca2c003abc7920e1479c050df89e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106718"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

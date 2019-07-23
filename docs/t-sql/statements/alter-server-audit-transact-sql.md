@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070307"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT  (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,13 +81,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > 在 Azure SQL Database 受控執行個體中，SQL 稽核會在伺服器層級執行，並將 `.xel` 檔案儲存於 Azure Blob 儲存體。
   
- FILEPATH **= '**_os\_file\_path_**'**  
+ FILEPATH **= '** _os\_file\_path_ **'**  
  稽核記錄的路徑。 檔案名稱是根據稽核名稱和稽核 GUID 所產生。  
   
- MAXSIZE **=**_max\_size_  
+ MAXSIZE **=** _max\_size_  
  指定稽核檔案所能成長的大小上限。 *max_size* 值必須是整數，而且後面緊接著 **MB**、**GB**、**TB** 或 **UNLIMITED**。 您可以為 *max_size* 指定的大小下限為 2 **MB**，而上限則為 2,147,483,647 **TB**。 指定了 **UNLIMITED** 時，檔案會成長到磁碟已滿為止。 指定低於 2 MB 的值會引發 MSG_MAXSIZE_TOO_SMALL 錯誤。 預設值為 **UNLIMITED**。  
   
- MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  指定檔案系統中所要保留的最大檔案數目。 當設定 MAX_ROLLOVER_FILES=0 時，不會限制要建立的換用檔案數目。 預設值是 0。 可以指定的檔案數量上限為 2,147,483,647。  
   
  MAX_FILES =*integer*  
@@ -98,7 +97,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  這個選項會在磁碟上將檔案預先配置為 MAXSIZE 值。 只有當 MAXSIZE 不等於 UNLIMITED 時，才會套用它。 預設值是 OFF。  
   
- QUEUE_DELAY **=**_integer_  
+ QUEUE_DELAY **=** _integer_  
  判斷在強制處理稽核動作之前經過的時間長度 (以毫秒為單位)。 值為 0 表示同步傳遞。 可設定的最小查詢延遲值為 1000 (1 秒)，這是預設值。 最大值為 2,147,483,647 (2,147,483.647 秒鐘或是 24 天 20 小時 31 分鐘又 23.647 秒鐘)。 指定無效的數字會引發 MSG_INVALID_QUEUE_DELAY 錯誤。  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
@@ -145,7 +144,7 @@ SHUTDOWN
   
  在建立稽核之後，即無法變更稽核的 GUID。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要建立、改變或卸除伺服器稽核主體，您必須具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

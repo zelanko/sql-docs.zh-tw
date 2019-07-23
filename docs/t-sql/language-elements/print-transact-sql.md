@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc83aca49b6147835353538d809be121756ecda6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072405"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

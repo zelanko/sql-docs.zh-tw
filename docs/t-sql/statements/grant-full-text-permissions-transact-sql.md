@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f0a85482a663b9be77ea455bdbabe87acf3b1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050829"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 全文檢索權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +53,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  這是權限的名稱。 安全性實體權限的有效對應描述於本主題後面的「備註」一節中。  
   
- ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
  指定正在授與權限的全文檢索目錄。 範圍限定詞 **::** 為必要項目。  
   
- ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
  指定正在授與權限的全文檢索停用字詞表。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
@@ -111,7 +110,7 @@ AS *granting_principal*
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。  
   
  如果是使用 AS 選項，就必須套用這些額外的需求。  

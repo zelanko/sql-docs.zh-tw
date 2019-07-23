@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d88faa3a4e7477fdb63ce3a6933197fd160e4e96
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 344b2abfafe5f2e69c6e758744e2cd63fa663603
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903285"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "54298485"
   
 -   使用在複寫精靈中提供的指令碼產生功能或是  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。 如需詳細資訊，請參閱 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
+-   第 1 課：建立 Windows Azure 儲存體物件[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如需詳細資訊，請參閱 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)。  
   
 -   使用 Replication Management Objects (RMO) 以程式設計的方式產生指令碼來建立 RMO 物件。  
   

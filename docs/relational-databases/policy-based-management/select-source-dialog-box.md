@@ -12,27 +12,26 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7fed973dd0014b9a829ef9bf2576dae73479ee8c
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: dc505c0fe87a298ba4a9015f467119c1b7d6d3f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021720"
 ---
 # <a name="select-source-dialog-box"></a>選取來源對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用此對話方塊可選取要執行之原則的來源。 若要選取一或多個包含原則的 XML 檔案，請選取 [檔案]。 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上找到的原則，請選取 [伺服器]。  
+  使用此對話方塊可選取要執行之原則的來源。 若要選取一或多個包含原則的 XML 檔案，請選取 [檔案]  。 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上找到的原則，請選取 [伺服器]  。  
   
  您可以利用以下幾種方式來開啟這個對話方塊。  
   
  **開啟這個對話方塊**  
   
--   在 [已註冊的伺服器] 中，以滑鼠右鍵按一下 [本機伺服器群組] 或 [本機伺服器群組] 底下的任何伺服器，或是 [中央管理伺服器] 底下的任何伺服器，然後選取 [評估原則]。 在 [評估原則] 對話方塊的 [原則選取] 頁面中，按一下 [瀏覽]\(...) 按鈕。  
+-   在 [已註冊的伺服器] 中，以滑鼠右鍵按一下 [本機伺服器群組]  或 [本機伺服器群組]  底下的任何伺服器，或是 [中央管理伺服器]  底下的任何伺服器，然後選取 [評估原則]  。 在 [評估原則]  對話方塊的 [原則選取]  頁面中，按一下 [瀏覽]\(...)  按鈕。  
   
--   在物件總管中，依序展開 [管理] 和 [原則管理]，並以滑鼠右鍵按一下 [原則]，然後選取 [匯入原則]。 在 [匯入] 對話方塊中，按一下 [瀏覽]\(...) 按鈕。  
+-   在物件總管中，依序展開 [管理]  和 [原則管理]  ，並以滑鼠右鍵按一下 [原則]  ，然後選取 [匯入原則]  。 在 [匯入]  對話方塊中，按一下 [瀏覽]\(...)  按鈕。  
   
--   在物件總管中，以滑鼠右鍵按一下伺服器、資料庫或資料庫物件，然後選取 [原則]，再選取 [評估]。 在 [評估原則] 對話方塊的 [原則選取] 頁面中，按一下 [瀏覽]\(...) 按鈕。  
+-   在物件總管中，以滑鼠右鍵按一下伺服器、資料庫或資料庫物件，然後選取 [原則]  ，再選取 [評估]  。 在 [評估原則]  對話方塊的 [原則選取]  頁面中，按一下 [瀏覽]\(...)  按鈕。  
   
 ## <a name="options"></a>選項。  
  **檔案**  

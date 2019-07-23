@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c2a2a034348df16f7ea1f326d78322f578953757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0dd587240a56dcdfab4d618255ee838491054af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122293"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

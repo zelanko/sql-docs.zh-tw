@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 65a716fb31a953a12aa046b27ac0866aa0ca0bb4
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 7a2725586a094aed0cb7d933553bc3fc389adfdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912217"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

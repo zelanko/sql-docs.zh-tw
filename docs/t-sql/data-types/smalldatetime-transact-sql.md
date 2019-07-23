@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000558"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +113,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-如果轉換成 **datetimeoffset(n)**，**smalldatetime** 值會複製到 **datetimeoffset(n)** 值。 小數秒數會設定為 0，而時區時差會設定為 +00:0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetimeoffset(4)` 值的結果。
+如果轉換成 **datetimeoffset(n)** ，**smalldatetime** 值會複製到 **datetimeoffset(n)** 值。 小數秒數會設定為 0，而時區時差會設定為 +00:0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetimeoffset(4)` 值的結果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  

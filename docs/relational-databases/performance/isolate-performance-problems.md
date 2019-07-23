@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c34186b0e10c66f6729933e5cc8d6b171d053fc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 643551201567ae10980c1fe3d5efca95a1bc9ded
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051976"
 ---
 # <a name="isolate-performance-problems"></a>隔離效能問題
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

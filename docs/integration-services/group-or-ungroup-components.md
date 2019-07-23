@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9ae4716ec1f239cbe939970e8b37f0d733e34106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9da09f5b8c2936cf0fadf3a281169e1d03523659
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102739"
 ---
 # <a name="group-or-ungroup-components"></a>將元件分組或取消分組
 

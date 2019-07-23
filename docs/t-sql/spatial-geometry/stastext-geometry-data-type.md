@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 2be7933d08709b7f5526f9872cfc2bb7ba4d51ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d38aee9c7fdb7f7142af5f5d72b5b08b0e18ccd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930198"
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

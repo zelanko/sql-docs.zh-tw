@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: ca1a2d705c7d5f7808ee8c83f014bcb734f9f151
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 3660efc7fe371c111fb06e4022e07d3d09b7e2b4
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689819"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264866"
 ---
 # <a name="miscellaneous-files"></a>其他檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

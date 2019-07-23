@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 297867c1-691e-4d6b-a3be-a7575015ecfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c72d6a61c2cc3e0b9b0cb61fd3cc106835fcc87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 605bb1ae8ff8cd3fb3e5c0e7a096de7aa646730c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101506"
 ---
 # <a name="mssqlserver8525"></a>MSSQLSERVER_8525
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47850896"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|8525|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894793"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  防止利用這個資料指標進行更新。 無法在 `WHERE CURRENT OF` 子句中、在 `UPDATE` 或 `DELETE` 陳述式中參考該資料指標。 這個選項會覆寫要更新之資料指標的預設功能。  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  在資料指標內定義可更新的資料行。 如果指定了 OF <column_name> [, <... n>]，只允許修改所列出的資料行。 如果指定 `UPDATE` 時沒有同時指定資料行清單，則可更新所有的資料行。  
   
 *cursor_name*  
@@ -135,7 +134,7 @@ OPTIMISTIC
   
 如果 *select_statement* 中的子句與所要求資料指標類型的功能相衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會隱含地將資料指標轉換為其他類型。 如需詳細資訊，請參閱＜隱含資料指標轉換＞。  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 在資料指標內定義可更新的資料行。 如果提供了 `OF <column_name> [, <... n>]`，便只允許修改列出的資料行。 若指定 `UPDATE` 時未加上資料行清單，除非指定 `READ_ONLY` 這個並行選項，否則所有資料行皆可更新。  
   
 ## <a name="remarks"></a>Remarks  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5aa564e8db4c3ba9d16fca1ad22c7f0b8ddfc74c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6527438ea0b623be92695a0d2dfe8f2f335fcda4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034065"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (位元排除 OR) (SSIS 運算式)
 

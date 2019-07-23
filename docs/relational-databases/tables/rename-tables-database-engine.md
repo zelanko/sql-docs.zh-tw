@@ -14,14 +14,13 @@ helpviewer_keywords:
 - renaming tables
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 199f89e1ee33793a1186a6b40fed6dcf9658d8b5
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c8a9fd43e62bda03b8f994e2a8639524b4bea645
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016332"
 ---
 # <a name="rename-tables-database-engine"></a>重新命名資料表 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

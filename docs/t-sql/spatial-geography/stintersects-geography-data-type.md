@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 355fd415dac0399385bd13bcabfe2eb095e08ed0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3185634a4370ccb86fdb2f0199dc3af452d77558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042084"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 507eff6484b11ff978e56450b9504f441af85670
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 1ddb14bf485eb7bdd91c2383d165fc02ce20637b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682686"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257255"
 ---
 # <a name="options-environment---general-page"></a>選項 (環境 - 一般頁面)
 

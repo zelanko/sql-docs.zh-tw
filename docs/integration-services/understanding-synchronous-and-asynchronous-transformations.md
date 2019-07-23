@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: faeb7edf94c402a6a4558f95c2b42a6c6f4b3d1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8061880048e45ecb30e76cacd259f02360ec7262
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945452"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換
 

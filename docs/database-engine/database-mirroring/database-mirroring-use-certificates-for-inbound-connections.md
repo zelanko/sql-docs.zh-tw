@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 1b6b6a99a9a3fcc382870932978d3b92a5ec0324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 274260c382eea20a3adb2fc61c1bde27e02469a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997912"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>資料庫鏡像 - 使用傳入連接的憑證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

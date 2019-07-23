@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 340967f5f44b7cbdec4e23dd0cd9a400522bbe8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a823ffd693e770f97811124d77f39763680fb658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999265"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和時間資料類型與函數 (Transact-SQL)
 

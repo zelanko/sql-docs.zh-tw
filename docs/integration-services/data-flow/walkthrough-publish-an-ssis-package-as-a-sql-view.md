@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 401422fcd3c2e32dcd83bebc3ef51351ca83555f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079817"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說：發行 SSIS 封裝做為 SQL 檢視
 

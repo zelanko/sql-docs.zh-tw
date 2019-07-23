@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5efde857036053b6ff31499a2ea6d889e34dfb25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bdf5da8a7e7414bc41a43d9dd007e66709ff86d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060784"
 ---
 # <a name="edit-instance-properties"></a>編輯執行個體屬性
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77e07cd5493220f14b177292e9065c355fca866f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000177"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>啟用或停用 Always On 可用性群組功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

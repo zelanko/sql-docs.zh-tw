@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b8e4fee484f3302b72c1cfc3da9f0e4e62cae5a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d610b40e38832e2dc82b02edf276475d2b27d74c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947181"
 ---
 # <a name="back-up-database-task"></a>備份資料庫工作
 

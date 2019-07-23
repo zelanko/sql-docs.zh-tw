@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 90e6bbd804d69af00d8e006d3ca363e09dacd8c3
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 968425c6ecee0622c8a1e30b3e7a68ad05eccfaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136157"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database 的限制
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

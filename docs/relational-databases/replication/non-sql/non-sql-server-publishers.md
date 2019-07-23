@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be6dac20a6ebc019cfd616860651a10a57aae325
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2cb88a880db13fa8b7582e917d4b599b13709069
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940432"
 ---
 # <a name="non-sql-server-publishers"></a>非 SQL Server 發行者  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

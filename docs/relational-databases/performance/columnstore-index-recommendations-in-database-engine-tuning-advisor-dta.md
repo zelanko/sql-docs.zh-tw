@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ed6d36c68fad62155261181d4134e097f59dd163
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 2899945661ca2f0502b9553cc8e78b751570a092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985005"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,17 +32,17 @@ ms.locfileid: "53328768"
   
   1. 啟動 Database Engine Tuning Advisor，並開啟新的微調工作階段。
   
-  2. 在 [一般] 窗格中選取要微調的資料庫和工作負載。
+  2. 在 [一般]  窗格中選取要微調的資料庫和工作負載。
   
-  3. 在 [微調選項] 窗格中選取 [建議資料行存放區索引] 這個核取方塊 (請參閱下圖)。
+  3. 在 [微調選項] 窗格中選取 [建議資料行存放區索引]  這個核取方塊 (請參閱下圖)。
   ![DTA 資料行存放區索引微調選項](../../relational-databases/performance/media/dta-columnstore-indexes-tuning-option.gif)
  
-  4. 選取其他微調選項，然後按一下 [開始分析] 按鈕。
+  4. 選取其他微調選項，然後按一下 [開始分析]  按鈕。
   
-  5. 完成微調之後，請在 [建議] 窗格中檢視包含任何資料行存放區索引的所有建議 (請參閱下圖)。      
+  5. 完成微調之後，請在 [建議]  窗格中檢視包含任何資料行存放區索引的所有建議 (請參閱下圖)。      
   ![DTA 資料行存放區索引建議](../../relational-databases/performance/media/dta-columnstore-index-recommendation.gif)
   
-  6. 按一下 [定義] 超連結，檢視可建立建議索引的 SQL 資料定義語言 (DDL) 陳述式。 依預設，DTA 會在資料行存放區索引名稱中使用後置詞 **col**，以方便識別資料行存放區索引 (請參閱下圖)。
+  6. 按一下 [定義]  超連結，檢視可建立建議索引的 SQL 資料定義語言 (DDL) 陳述式。 依預設，DTA 會在資料行存放區索引名稱中使用後置詞 **col**，以方便識別資料行存放區索引 (請參閱下圖)。
   ![DTA 資料行存放區索引定義](../../relational-databases/performance/media/dta-columnstore-index-definition.gif) 
   
   

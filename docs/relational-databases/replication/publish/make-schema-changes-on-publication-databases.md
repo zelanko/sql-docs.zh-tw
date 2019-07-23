@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db839c3afa5b3188a7a37f0575f23d3f9ebadce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081729"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>對發行集資料庫進行結構描述變更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "47605366"
   
 -   若要將新資料行新增至資料表，並且在現有發行集中不包含該資料行，則停用結構描述變更的複寫，然後執行 ALTER TABLE \<資料表> 新增 \<資料行>。  
   
--   若要在現有發行集中包含現有資料行，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或 [發行集屬性 - \<發行集>] 對話方塊。  
+-   若要在現有發行集中包含現有資料行，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或 [發行集屬性 - \<發行集>]  對話方塊。  
   
      如需詳細資訊，請參閱 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。 這需要重新初始化訂閱。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "47605366"
   
 -   若要從現有發行集卸除資料行，並從「發行者」端的資料表卸除該資料行，則執行 ALTER TABLE \<資料表> 卸除 \<資料行>。 依預設，資料行然後便會從所有「訂閱者」端的資料表中卸除。  
   
--   若要從現有發行集卸除資料行，但要將該資料行保留在「發行者」端的資料表中，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或 [發行集屬性 - \<發行集>] 對話方塊。  
+-   若要從現有發行集卸除資料行，但要將該資料行保留在「發行者」端的資料表中，則使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或 [發行集屬性 - \<發行集>]  對話方塊。  
   
      如需詳細資訊，請參閱 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。 這需要產生新的快照集。  
   
@@ -152,7 +151,7 @@ ms.locfileid: "47605366"
         |**檔案資料流**|允許變更|封鎖變更|封鎖變更|  
         |**date**、 **time**、 **datetime2**和 **datetimeoffset**|允許變更|允許變更*|封鎖變更|  
   
-         * SQL Server Compact 訂閱者會在訂閱者上轉換這些資料類型。  
+         \* SQL Server Compact 訂閱者會在訂閱者上轉換這些資料類型。  
   
 -   如果套用結構描述變更時發生錯誤 (例如，因為新增參考了「訂閱者」端上不可用之資料表的外部索引鍵而發生的錯誤)，則同步處理會失敗且必須重新初始化訂閱)。  
   

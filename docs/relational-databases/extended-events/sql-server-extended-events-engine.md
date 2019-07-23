@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ccd0d4878b7f83634babf7c9dc451a28e56dbc8
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009398"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 擴充的事件引擎
 
@@ -43,7 +42,7 @@ ms.locfileid: "58478003"
   
  請注意下列事項：  
   
--   每一個 Windows 處理序都可以有一或多個模組 (**Win32 處理序**、**Win32 模組**)。 這些也稱為「二進位檔」或「可執行模組」。  
+-   每一個 Windows 處理序都可以有一或多個模組 (**Win32 處理序**、**Win32 模組**)。 這些也稱為「二進位檔」  或「可執行模組」  。  
   
 -   每一個 Windows 處理序模組都可包含一或多個擴充的事件封裝 (**Package**)，其中包含一或多個擴充的事件物件 (**Type**、**Target**、**Action**、**Map**、**Predicate** 和 **Event**)。  
   

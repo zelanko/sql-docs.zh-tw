@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c399521f26cd2372451122e6d5e9ea828148d32d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5f4b6a6d12f8f4eee929dfca59906fc418bfcd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62649494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995671"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server 的 SQL Errors 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

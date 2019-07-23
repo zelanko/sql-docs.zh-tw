@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b94f389814ff0d0fc9a4adcb26b33431286d1119
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051116"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估計叢集索引的大小
 
@@ -216,7 +215,7 @@ ms.locfileid: "51559355"
   
 -   大型物件 (LOB) 值  
   
-     決定到底要使用多少空間來儲存 LOB 資料類型 **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntext**、 **xml**和 **image** 值的演算法是很複雜的。 只要加上預期的 LOB 值平均大小，乘以 ***Num_Rows***，再將此值加上叢集索引總大小，這就足夠。  
+     決定到底要使用多少空間來儲存 LOB 資料類型 **varchar(max)** 、 **varbinary(max)** 、 **nvarchar(max)** 、 **text**、 **ntext**、 **xml**和 **image** 值的演算法是很複雜的。 只要加上預期的 LOB 值平均大小，乘以 ***Num_Rows***，再將此值加上叢集索引總大小，這就足夠。  
   
 -   壓縮  
   

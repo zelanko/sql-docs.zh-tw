@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90dc7e15fdbe450eb57642b7a4f7be0bb834c063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2f549af8bd9e594d14407fe16186ee5d308e546
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117633"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +69,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 |-----------------------|-----------------|  
 |**tinyint**|**int**|  
 |**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
 |**decimal** 類別 (p, s)|**decimal(38, s)**|  
 |**money** 和 **smallmoney** 類別|**money**|  

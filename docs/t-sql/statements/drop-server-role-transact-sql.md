@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f1a93bf22d1f96745aed7c71dd1f3ee231a7d22
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929240"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -55,7 +54,7 @@ DROP SERVER ROLE role_name
   
  您可以查詢 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目錄檢視，檢視角色成員資格的相關資訊。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要伺服器角色的 CONTROL 權限或 ALTER ANY SERVER ROLE 權限。  
   
 ## <a name="examples"></a>範例  

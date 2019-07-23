@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f0a8a17490da94d7ef608ebc553770021d064b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f61073e5b04e36a5ba6028e47e5c6c13e5c819a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070553"
 ---
 # <a name="project-versions-dialog-box"></a>專案版本對話方塊
 

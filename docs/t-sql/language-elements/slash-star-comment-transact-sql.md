@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 662aaa76f7af8a45513219af63c66fe3a65bede6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121675"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>斜線星形 (區塊註解) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

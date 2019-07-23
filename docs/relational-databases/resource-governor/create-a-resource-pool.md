@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 4fa512ba301aa1fc0c1783b96717545eca2790db
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 07c1743107d3edce7012740a3f1600d2157bf001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136892"
 ---
 # <a name="create-a-resource-pool"></a>建立資源集區
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立資源集區。 若要了解資源集區的主體，請參閱 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
   
--   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
+-   **開始之前：** [限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要建立資源集區，請使用下列方式：**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **若要建立資源集區，請使用下列方式：** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -36,23 +35,23 @@ ms.locfileid: "55689761"
   
  所有資源集區之最小 CPU 百分比和最小記憶體百分比的總和不得超過 100。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  建立資源集區需要 CONTROL SERVER 權限。  
   
 ##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立資源集區  
  **若要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
-2.  以滑鼠右鍵按一下 [資源管理員]，然後按一下 [屬性]。  
+2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [屬性]  。  
   
 3.  在 **[資源集區]** 方格中，按一下空白資料列的第一個資料行。 這個資料行標示有星號 (*)。  
   
-4.  按兩下 [名稱] 資料行中的空白儲存格。 輸入您想要用於資源集區的名稱。  
+4.  按兩下 [名稱]  資料行中的空白儲存格。 輸入您想要用於資源集區的名稱。  
   
 5.  在資料列中按一下或按兩下要變更的任何其他資料格，然後輸入新值。  
   
-6.  若要儲存變更，請按一下 **[確定]**。  
+6.  若要儲存變更，請按一下 **[確定]** 。  
   
 ##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 建立資源集區  
  **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

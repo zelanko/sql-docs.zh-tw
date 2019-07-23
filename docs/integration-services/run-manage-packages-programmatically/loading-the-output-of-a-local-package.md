@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 385fd9fe4224c754af7546ffe2737316aaaf62fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e50ca7e1942444c81a70553b0635a2e5ff67cb81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028566"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
 

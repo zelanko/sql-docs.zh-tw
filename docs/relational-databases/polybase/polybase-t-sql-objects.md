@@ -11,14 +11,13 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9388dfa05e030843300525097c9d65e45bfad73f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3ed8ea01f7eb653c9c28fb58d083d2a5a01ef46f
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731075"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329348"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 參考
 
@@ -147,7 +146,7 @@ WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
 -- CREDENTIAL: The database scoped credential created above.  
   
 CREATE EXTERNAL DATA SOURCE AzureStorage with (  
-        TYPE = HADOOP,   
+        TYPE = BLOB_STORAGE,   
         LOCATION ='wasbs://<blob_container_name>@<azure_storage_account_name>.blob.core.windows.net',  
         CREDENTIAL = AzureStorageCredential  
 );  

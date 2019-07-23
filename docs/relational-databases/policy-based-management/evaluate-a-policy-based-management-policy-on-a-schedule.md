@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc78ec53189ff3f9deae1a95895c12ac33cd25d7
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ad7d22492411538a1f397f1a7d02436d1a02bde7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901149"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>依照排程評估原則式管理原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53588613"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -49,16 +48,16 @@ ms.locfileid: "53588613"
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
-3.  按一下加號展開 **[原則管理]**。  
+3.  按一下加號展開 **[原則管理]** 。  
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]。  
+5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]  。  
   
-6.  在 [開啟原則 -_policy_name_] 對話方塊的 [評估模式] 清單中，選取 [按排程時間]。  
+6.  在 [開啟原則 -_policy_name_]  對話方塊的 [評估模式]  清單中，選取 [按排程時間]  。  
   
 7.  在 **[排程]** 底下，按一下 **[挑選]** 指定現有的排程，或按一下 **[新增]** 建立新的排程。  
   
-8.  完成後，請按一下 **[確定]**。  
+8.  完成後，請按一下 **[確定]** 。  
   
   

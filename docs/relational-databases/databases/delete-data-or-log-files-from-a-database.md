@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3c456dfafae92bec2cd34de1e5b9e33857d3c8e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: be0f5865965ab419d1807783196e18a4e873c6a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073757"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>刪除資料庫的資料或記錄檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

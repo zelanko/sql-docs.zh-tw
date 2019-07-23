@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c75556e07d3dd5ae944e2652157f01456fdaee6d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 159369a30ffe4f0b67f59f3970c241d9275f7a54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134665"
 ---
 # <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

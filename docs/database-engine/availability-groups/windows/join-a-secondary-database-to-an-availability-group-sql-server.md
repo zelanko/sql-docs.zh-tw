@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 8e9fecbbe5894eb6a6804c48f4d37facf01359a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf57aa52ce1ca216a8cd88ba310dcee5310b6a7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019695"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>將次要資料庫聯結至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

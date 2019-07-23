@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 096e0b12aea8376ee27b7d22cceaae94a0746f99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: daa98eea8582d65ae0653d9de407d9908cc11ac9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007936"
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (SSISDB 資料庫)
 

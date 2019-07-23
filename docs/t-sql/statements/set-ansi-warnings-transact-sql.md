@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af30fd34d42b296e9b83bbd537dcff411cd42608
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7209914e92854dc301266625a0345336f787e4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948034"
 ---
 # <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +62,7 @@ SET ANSI_WARNINGS ON
 > 在來源或目標是 **binary** 或 **varbinary** 資料的任何轉換作業中，當發生截斷時，不論 SET 選項為何，都不會發出任何警告或錯誤。  
   
 > [!NOTE]  
-> 當在預存程序或使用者自訂函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，會忽略 ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)**，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會執行成功。  
+> 當在預存程序或使用者自訂函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，會忽略 ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)** ，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會執行成功。  
   
 您可以利用 sp_configure 的 user options 選項來設定所有伺服器連接的 ANSI_WARNINGS 預設值。 如需詳細資訊，請參閱本主題稍後的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)的使用者閱讀。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 2d4ddfdf1721b31ddced529682c8a619f8673644
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a0c9f31f0e724c56c22a46653eb56d51f2616fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101031"
 ---
 # <a name="point-geometry-data-type"></a>Point (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

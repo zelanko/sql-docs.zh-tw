@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 10a10b92a18566ca7a9ffaa8d5a4a80d69f3420b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072347"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

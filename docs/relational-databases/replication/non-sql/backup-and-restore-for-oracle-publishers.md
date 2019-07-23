@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 21b2de27362455291c75e64c93ad6cf7e3529ca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea6539e0d004f573281d54f7bb4a4c055c7b3e73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901116"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle 發行者的備份與還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

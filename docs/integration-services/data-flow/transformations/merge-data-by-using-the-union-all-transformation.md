@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7265a07dc603bd686fa6e90b4d296145a138a67a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ad340a2ec0d94dca701849dd2a658efc7bcab2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944159"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>使用聯集全部轉換來合併資料
 

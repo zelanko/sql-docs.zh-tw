@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a436eb86fdaad06e97da94e821d50437e6d938ee
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 0bdb5b479849e529ac498be076083aec6fc070ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073568"
 ---
 # <a name="replicate-schema-changes"></a>複寫結構描述變更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

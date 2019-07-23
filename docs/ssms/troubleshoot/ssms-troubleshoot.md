@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.custom: ''
 ms.date: 07/01/2019
-ms.openlocfilehash: 41f140a00669e1b5809b83b369f86ba8b277a37e
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 2011de961cc7f54a23b19928a7f6f9df8b962ac8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716764"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262766"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>在 SQL Server Management Studio (SSMS) 損毀之後取得診斷資料
 

@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2404266ed01bfcb68ad55418c4a6dc6bde44716c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3804c83c328a7fc067d2aed964eb7b9635cfb386
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089330"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

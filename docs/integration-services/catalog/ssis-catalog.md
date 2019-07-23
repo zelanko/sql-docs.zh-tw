@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09348b39919c13caa35879609abbd6470660f803
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070536"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
 
@@ -119,16 +118,16 @@ ms.locfileid: "65729168"
 -   後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (_)。  
   
 ##  <a name="Configuration"></a> 目錄組態  
- 您會藉由調整目錄屬性來微調目錄的行為模式。 目錄屬性會定義如何加密敏感性資料以及如何保留作業和專案版本設定資料。 若要設定目錄屬性，請使用 [目錄屬性] 對話方塊，或是呼叫 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 預存程序。 若要檢視屬性，請使用對話方塊或查詢 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 您可在 [物件總管] 中以滑鼠右鍵按一下 **SSISDB** 來存取此對話方塊。  
+ 您會藉由調整目錄屬性來微調目錄的行為模式。 目錄屬性會定義如何加密敏感性資料以及如何保留作業和專案版本設定資料。 若要設定目錄屬性，請使用 [目錄屬性]  對話方塊，或是呼叫 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 預存程序。 若要檢視屬性，請使用對話方塊或查詢 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)。 您可在 [物件總管] 中以滑鼠右鍵按一下 **SSISDB** 來存取此對話方塊。  
   
 ###  <a name="Cleanup"></a> 作業和專案版本清除  
  目錄中許多作業的狀態資料會儲存在內部資料庫資料表中。 例如，目錄會追蹤封裝執行和專案部署的狀態。 為了維護作業資料的大小， **中的** [SSIS Server 維護作業] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會用來移除舊的資料。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時會建立此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Agent 作業。  
   
  若要更新或重新部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，請使用相同名稱將它部署到目錄中的相同資料夾。 根據預設，每當您重新部署專案時， **SSISDB** 目錄都會保留此專案的舊版。 為了維護作業資料的大小， **[SSIS Server 維護作業]** 會用來移除專案的舊版。  
  
-為執行 **SSIS Server 維護作業**，SSIS 會建立 SQL Server 登入 **##MS_SSISServerCleanupJobLogin##**。 此登入僅供 SSIS 內部使用。
+為執行 **SSIS Server 維護作業**，SSIS 會建立 SQL Server 登入 **##MS_SSISServerCleanupJobLogin##** 。 此登入僅供 SSIS 內部使用。
   
- 以下 **[SSISDB]** 目錄屬性會定義此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的行為模式。 您可以使用 [目錄屬性] 對話方塊或使用 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 檢視及修改屬性。  
+ 以下 **[SSISDB]** 目錄屬性會定義此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的行為模式。 您可以使用 [目錄屬性]  對話方塊或使用 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 檢視及修改屬性。  
   
  **定期清除記錄檔**  
  當這個屬性設定為 **True**時，便會執行作業清除的作業步驟。  
@@ -173,7 +172,7 @@ ms.locfileid: "65729168"
   
  下表列出 **[目錄屬性]** 對話方塊中所顯示的屬性名稱，以及資料庫檢視中的對應屬性。  
   
-|屬性名稱 (**[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
+|屬性名稱 ( **[目錄屬性]** 對話方塊)|屬性名稱 (資料庫檢視)|  
 |---------------------------------------------------------|-------------------------------------|  
 |加密演算法名稱|ENCRYPTION_ALGORITHM|  
 |定期清除記錄檔|OPERATION_CLEANUP_ENABLEDâ€‹|  
@@ -320,17 +319,17 @@ ms.locfileid: "65729168"
   
 2.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine。  
   
-3.  在 [物件總管] 中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄] 節點，然後按一下 [建立目錄]。  
+3.  在 [物件總管] 中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [建立目錄]  。  
   
-4.  按一下 **[啟用 CLR 整合]**。  
+4.  按一下 **[啟用 CLR 整合]** 。  
   
      目錄便會使用 CLR 預存程序。  
   
-5.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]，讓 [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md) 預存程序會在每次 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體重新啟動時執行。  
+5.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md) 預存程序會在每次 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體重新啟動時執行。  
   
      預存程序會執行 SSISDB 目錄之作業狀態的維護。 如果 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 伺服器執行個體關閉，它就會修正任何執行中套件的狀態。  
   
-6.  輸入密碼，然後按一下 **[確定]**。  
+6.  輸入密碼，然後按一下 **[確定]** 。  
   
      此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需相關資訊，請參閱 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
@@ -379,7 +378,7 @@ ms.locfileid: "65729168"
   
 2.  連接 Microsoft SQL Server Database Engine。  
   
-3.  在物件總管中，展開 [Integration Services] 節點，並以滑鼠右鍵按一下 [SSISDB]，然後按一下 [屬性]。  
+3.  在物件總管中，展開 [Integration Services]  節點，並以滑鼠右鍵按一下 [SSISDB]  ，然後按一下 [屬性]  。  
   
 ###  <a name="options"></a> 設定選項  
   
@@ -396,7 +395,7 @@ ms.locfileid: "65729168"
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>備份、還原和移動 SSIS 目錄
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB] 目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB]  目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  
   
  **SSISDB** 目錄會儲存您已經部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需目錄的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
@@ -416,27 +415,27 @@ ms.locfileid: "65729168"
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[如何：備份資料庫 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫]  對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[如何：備份資料庫 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  執行下列動作，以產生 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 指令碼。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)。  
   
-    1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，展開 [安全性] 節點，然後展開 [登入] 節點。  
+    1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的物件總管中，展開 [安全性]  節點，然後展開 [登入]  節點。  
   
-    2.  以滑鼠右鍵按一下 [##MS_SSISServerCleanupJobLogin##]，然後按一下 [編寫登入的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
+    2.  以滑鼠右鍵按一下 [##MS_SSISServerCleanupJobLogin##]  ，然後按一下 [編寫登入的指令碼為]   > [CREATE 至]   > [新增查詢編輯器視窗]  。  
   
 5.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，以產生 sp_ssis_startup 的 CREATE PROCEDURE 指令碼。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)。  
   
-    1.  在物件總管中，展開 [資料庫] 節點，然後展開 [master] > [可程式性] > [預存程序] 節點。  
+    1.  在物件總管中，展開 [資料庫]  節點，然後展開 [master]   > [可程式性]   > [預存程序]  節點。  
   
-    2.  以滑鼠右鍵按一下 **dbo.sp_ssis_startup**，然後按一下 [編寫預存程序的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
+    2.  以滑鼠右鍵按一下 **dbo.sp_ssis_startup**，然後按一下 [編寫預存程序的指令碼為]   > [CREATE 至]   > [新增查詢編輯器視窗]  。  
   
 6.  確認已啟動 SQL Server Agent  
   
 7.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，以產生 SSIS 伺服器維護作業的指令碼。 當您建立 SSISDB 目錄時，系統就會自動在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 中建立指令碼。 此作業有助於清除保留週期外部的清除作業，並移除舊版專案。  
   
-    1.  在物件總管中，展開 [SQL Server Agent] 節點，然後展開 [作業] 節點。  
+    1.  在物件總管中，展開 [SQL Server Agent]  節點，然後展開 [作業]  節點。  
   
-    2.  以滑鼠右鍵按一下 SSIS 伺服器維護作業，然後按一下 [編寫作業的指令碼為] > [CREATE 至] > [新增查詢編輯器視窗]。  
+    2.  以滑鼠右鍵按一下 SSIS 伺服器維護作業，然後按一下 [編寫作業的指令碼為]   > [CREATE 至]   > [新增查詢編輯器視窗]  。  
   
 ### <a name="to-restore-the-ssis-database"></a>若要還原 SSIS 資料庫  
   
@@ -467,7 +466,7 @@ ms.locfileid: "65729168"
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [還原資料庫] 對話方塊，從備份還原 SSISDB 資料庫。 如需詳細資訊，請參閱下列主題：  
+3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [還原資料庫]  對話方塊，從備份還原 SSISDB 資料庫。 如需詳細資訊，請參閱下列主題：  
   
     -   [還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -483,7 +482,7 @@ ms.locfileid: "65729168"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [登入屬性] 對話方塊，將 SSISDB 使用者 ##MS_SSISServerCleanupJobUser## (SSISDB 資料庫) 對應至 ##MS_SSISServerCleanupJobLogin##。  
+6.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [登入屬性]  對話方塊，將 SSISDB 使用者 ##MS_SSISServerCleanupJobUser## (SSISDB 資料庫) 對應至 ##MS_SSISServerCleanupJobLogin##。  
   
 7.  使用下列其中一種方法來還原主要金鑰。 如需加密的詳細資訊，請參閱 [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
@@ -543,9 +542,9 @@ ms.locfileid: "65729168"
   
 1.  備份 SSIS 目錄資料庫 (SSISDB)。  
   
-2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開本機伺服器，然後展開 [Integration Services 目錄] 。  
+2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開本機伺服器，然後展開 [Integration Services 目錄]  。  
   
-3.  以滑鼠右鍵按一下 [SSISDB]，然後選取 [資料庫升級] 啟動 [SSISDB 升級精靈]。 或者，在本機伺服器上以較高的權限執行 `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe`，以啟動 [SSISDB 升級精靈]。
+3.  以滑鼠右鍵按一下 [SSISDB]  ，然後選取 [資料庫升級]  啟動 [SSISDB 升級精靈]。 或者，在本機伺服器上以較高的權限執行 `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe`，以啟動 [SSISDB 升級精靈]。
   
      ![啟動 SSISDB 升級精靈](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
 
@@ -599,7 +598,7 @@ ms.locfileid: "65729168"
   
 > [!IMPORTANT]  
 > -   您必須在可用性群組的 **主要節點** 上執行這些步驟。
-> -   將 SSISDB 新增至 Always On 群組之後，您必須啟用**適用於 Always On 的 SSIS 支援**。  
+> -   將 SSISDB 新增至 Always On 群組之後  ，您必須啟用**適用於 Always On 的 SSIS 支援**。  
 
 > [!NOTE]
 > 如需此程序的詳細資訊，請參閱下列由 Data Platform MVP Marcos Freccia 提供的逐步解說與其他螢幕擷取畫面：[Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) (將 SSISDB 新增至 SQL Server 2016 的 AG)。
@@ -608,33 +607,33 @@ ms.locfileid: "65729168"
   
 1.  啟動 **SQL Server Management Studio** 並連接到您想要在叢集中設定為適用於 SSISDB 的 AlwaysOn 高可用性群組 **主要節點** 的 SQL Server 執行個體。  
   
-2.  在物件總管中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [建立目錄] 。  
+2.  在物件總管中，展開伺服器節點，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [建立目錄]  。  
   
-3.  按一下 **[啟用 CLR 整合]**。 目錄便會使用 CLR 預存程序。  
+3.  按一下 **[啟用 CLR 整合]** 。 目錄便會使用 CLR 預存程序。  
   
 4.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](../system-stored-procedures/catalog-startup.md) 預存程序會在每次 SSIS 伺服器執行個體重新啟動時執行。 預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 SSIS 伺服器執行個體效能降低時，修正任何正在執行之封裝的狀態。  
   
-5.  輸入 **密碼**，然後按一下 [確定] 。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需相關資訊，請參閱 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
+5.  輸入 **密碼**，然後按一下 [確定]  。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需相關資訊，請參閱 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
 ####  <a name="Step2"></a> 步驟 2：將 SSISDB 新增至 Always On 可用性群組  
 將 SSISDB 資料庫加入 AlwaysOn 可用性群組，幾乎等於是將任何其他使用者資料庫加入可用性群組。 請參閱 [使用可用性群組精靈](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
-提供您在 [新增可用性群組] 精靈的 [選取資料庫]  頁面中建立 SSIS 目錄時指定的密碼。
+提供您在 [新增可用性群組]  精靈的 [選取資料庫]  頁面中建立 SSIS 目錄時指定的密碼。
 
 ![新增可用性群組](../../integration-services/service/media/ssis-newavailabilitygroup.png "新增可用性群組")  
   
 ####  <a name="Step3"></a> 步驟 3：啟用適用於 Always On 的 SSIS 支援  
- 建立 Integration Services 目錄之後，以滑鼠右鍵按一下 [Integration Services 目錄] 節點，然後按一下 [啟用 Always On 支援]。 您應該會看到下列 [啟用 AlwaysOn 支援]  對話方塊。 如果這個功能表項目已停用，請確認您已安裝的所有必要條件，然後按一下 [重新整理] 。  
+ 建立 Integration Services 目錄之後，以滑鼠右鍵按一下 [Integration Services 目錄]  節點，然後按一下 [啟用 Always On 支援]  。 您應該會看到下列 [啟用 AlwaysOn 支援]  對話方塊。 如果這個功能表項目已停用，請確認您已安裝的所有必要條件，然後按一下 [重新整理]  。  
   
  ![啟用 Always On 支援](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
   
 > [!WARNING]  
 >  在您啟用適用於 AlwaysOn 的 SSIS 支援之前，不支援自動容錯移轉 SSISDB 資料庫。  
   
- 表格會顯示剛從 Always On 可用性群組新增的次要複本。 針對清單中的每個複本按一下 [連接...] 按鈕，然後輸入驗證認證以連接到複本。 使用者帳戶必須是每個複本上的系統管理員群組成員，才能啟用 SSIS 的 Always On 支援。 當您成功連接到每個複本之後，按一下 [確定]  以啟用適用於 AlwaysOn 的 SSIS 支援。  
+ 表格會顯示剛從 Always On 可用性群組新增的次要複本。 針對清單中的每個複本按一下 [連接...]  按鈕，然後輸入驗證認證以連接到複本。 使用者帳戶必須是每個複本上的系統管理員群組成員，才能啟用 SSIS 的 Always On 支援。 當您成功連接到每個複本之後，按一下 [確定]  以啟用適用於 AlwaysOn 的 SSIS 支援。  
  
-在您完成其他必要條件之後，如果操作功能表上的 [啟用 Always On 支援] 選項顯示為停用，請嘗試下列方法：
-1.  按一下 [重新整理] 選項，以重新整理操作功能表。
+在您完成其他必要條件之後，如果操作功能表上的 [啟用 Always On 支援]  選項顯示為停用，請嘗試下列方法：
+1.  按一下 [重新整理]  選項，以重新整理操作功能表。
 2.  請確定您已連線到主要節點。 您必須啟用主要節點上的 Always On 支援。
 3.  請確定 SQL Server 版本為 13.0 或更新版本。 只有在 SQL Server 2016 和更新版本上，SSIS 才會支援 Always On。
 
@@ -645,7 +644,7 @@ ms.locfileid: "65729168"
   
 1.  從可用性群組中移除 SSISDB 資料庫。 如需詳細資訊，請參閱[將次要資料庫從可用性群組移除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) 和[將主要資料庫從可用性群組移除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  
   
-2.  按一下升級精靈中的 [重新執行]。 即可通過「Always On 可用性群組中的 SSISDB 檢查」規則。  
+2.  按一下升級精靈中的 [重新執行]  。 即可通過「Always On 可用性群組中的 SSISDB 檢查」規則。  
   
 3.  按 [下一步]  繼續升級。  
   
@@ -653,11 +652,11 @@ ms.locfileid: "65729168"
   
  如果您在升級 SQL Server 時未遭到封鎖，且 SSISDB 在 Always On 可用性群組中，請在升級 SQL Server 資料庫引擎之後個別升級 SSISDB。 使用 SSIS 升級精靈來升級 SSISDB，如下列程序所述。  
   
-1.  將 SSISDB 資料庫移出可用性群組，或者如果 SSISDB 是可用性群組中唯一的資料庫，請刪除可用性群組。 若要執行這項工作，請在可用性群組的**主要節點**上啟動 [SQL Server Management Studio]。  
+1.  將 SSISDB 資料庫移出可用性群組，或者如果 SSISDB 是可用性群組中唯一的資料庫，請刪除可用性群組。 若要執行這項工作，請在可用性群組的**主要節點**上啟動 [SQL Server Management Studio]  。  
   
 2.  從所有 **複本節點**移除 SSISDB 資料庫。  
   
-3.  在 **主要節點**上升級 SSISDB 資料庫。 在 SQL Server Management Studio 的物件總管 中，展開 [Integration Services 目錄] 、以滑鼠右鍵按一下 [SSISDB] ，然後選取 [資料庫升級] 。 遵循 **SSISDB 升級精靈** 中的指示來升級資料庫。 在**主要節點**本機上啟動 [SSIDB 升級精靈]。  
+3.  在 **主要節點**上升級 SSISDB 資料庫。 在 SQL Server Management Studio 的物件總管  中，展開 [Integration Services 目錄]  、以滑鼠右鍵按一下 [SSISDB]  ，然後選取 [資料庫升級]  。 遵循 **SSISDB 升級精靈** 中的指示來升級資料庫。 在**主要節點**本機上啟動 [SSIDB 升級精靈]  。  
   
 4.  遵循[步驟 2：將 SSISDB 新增至 Always On 可用性群組](#Step2)中的指示，將 SSISDB 新增回可用性群組。  
   

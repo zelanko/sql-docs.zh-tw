@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20cebbb314e2830272e677da2d26bf53668798ab
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072894"
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

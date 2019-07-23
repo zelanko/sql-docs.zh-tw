@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c7d9e578badd12f1b6eb4eb794846431c8c4b0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 275b1c6c138b11fa6330dc61fbfbfd2014a229c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006806"
 ---
 # <a name="example-renaming-the-ltrowgt-element"></a>範例重新命名 &lt;row&gt; 元素
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

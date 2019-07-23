@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17110a0920d8f9af9190102f5c63ab5bc97206ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69c30542eaed08667b603c459a225fd81af5c4a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903192"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>設定點對點拓撲精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

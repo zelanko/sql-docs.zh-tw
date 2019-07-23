@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: f817c09333e895650760441f14d7967d0db120df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f511c6fa7a0d41b0f072981898216fde050d1742
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127371"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

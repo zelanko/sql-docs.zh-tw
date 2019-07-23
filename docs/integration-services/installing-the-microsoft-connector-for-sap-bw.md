@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12605ed268a5d37ffc8c78dafe7a0e41cd0ca1f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1f81c5a81bc4d1e2a096b3fd49e39497c5922c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023547"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>安裝 Microsoft Connector for SAP BW
 

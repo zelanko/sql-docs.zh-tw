@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 7b0ec5d159a333b65ae2a67fd5737c17771792a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84a94dc6b1d4f2f6f0c921f81746eb64f41d2f07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013110"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>已封鎖的處理序臨界值伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

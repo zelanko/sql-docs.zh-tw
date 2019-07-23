@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: db485284b23c56a13f55d94f609a6c482669b61c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: f63788f06e8d7fa921c06186b691a603a49059b6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686075"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264936"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>建立資料行別名 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

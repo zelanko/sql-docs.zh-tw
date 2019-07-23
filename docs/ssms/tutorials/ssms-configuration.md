@@ -10,17 +10,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: jroth
-ms.openlocfilehash: a7ad0d94985871e422146a531b3084127d58e7e7
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834519"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267082"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 元件和設定
 
-本教學課程介紹 SQL Server Management Studio (SSMS) 中的各種視窗元件，以及工作區中的一些基本設定選項。 在此文章中，您將學會如何： 
+本教學課程介紹 SQL Server Management Studio (SSMS) 中的各種視窗元件，以及工作區中的一些基本設定選項。 在本文中，您將學會如何： 
 
 > [!div class="checklist"]
 > * 識別組成 SSMS 環境的元件

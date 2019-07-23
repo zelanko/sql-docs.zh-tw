@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 8dbd0c7d408293bda1dfcdb71652bc6464a59f8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9829ffeb1eaf609ae538fc92054517aa8c9bbf3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996473"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>暫停或繼續資料庫鏡像工作階段 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2725731d216b651d310b204f4cdf6b19612ae435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055815"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>課程 4-5：測試第 4 課套件
 

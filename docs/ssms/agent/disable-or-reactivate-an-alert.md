@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d8727159ca62f96b7f34d0a8d89b2d2c052a850
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 0c3212e441a532d4b1b5532c1795fdbf86980b02
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687161"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262466"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>Disable or Reactivate an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

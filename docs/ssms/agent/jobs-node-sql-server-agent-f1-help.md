@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 32c3bd1a-9f7c-4a01-a271-5868871b8bd5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b90e175753faa78c69303cde8d49a9e5b00774b7
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 68b8655cb3a60663bf4d08213f529161b4ddd138
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690290"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257019"
 ---
 # <a name="jobs-node-sql-server-agent-f1-help"></a>作業節點 (SQL Server Agent F1 說明)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

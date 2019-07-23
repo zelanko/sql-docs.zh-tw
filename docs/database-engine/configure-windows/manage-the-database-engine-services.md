@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: a02c65cef27f9601ae7e4ae4f1c292f2673e5f6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ac35c702783ca5b80367c6f41af9c4c450e0be7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997963"
 ---
 # <a name="manage-the-database-engine-services"></a>管理 Database Engine Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 258c04583f5494e158c9a92fd9ae53dfc501ad9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ae127844a2ffba0a988c23636f487673d737b2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011157"
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
 

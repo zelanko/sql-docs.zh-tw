@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5a276c1f387e8ebe4b9a2414fcc1d61e6c24a60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61233900def55fc28627869a134bddaf786f5548
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028446"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>了解本機和遠端執行之間的差異
 

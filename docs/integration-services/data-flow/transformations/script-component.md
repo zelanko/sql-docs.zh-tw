@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e65aa1624874b976002e8a9bd5f3cfa8932e365
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928196"
 ---
 # <a name="script-component"></a>指令碼元件
 

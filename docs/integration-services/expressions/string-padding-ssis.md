@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cddc755a958850c7042ec59c7c4703ee77716c76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29b7f35f41ede90c0b5cc54e336fb1d3e331ef81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967743"
 ---
 # <a name="string-padding-ssis"></a>字串填補 (SSIS)
 

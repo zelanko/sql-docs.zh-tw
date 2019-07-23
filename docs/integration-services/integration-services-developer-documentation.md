@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0a9ef2d748bacbcab184c5f60dea8c3514cb61b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3156de859f7a4389797e56bfbe40c37018b71c1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913815"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 開發人員文件
 

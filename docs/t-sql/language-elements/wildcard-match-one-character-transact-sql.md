@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0554182b6a18478d917ecf83c8ea4d9ebdb69e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f6876003c64889d32e31266ebe74b6532c1a8f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000309"
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (萬用字元 - 符合單一字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5a43918612c24a6c2d7a0b39c89dacc3edc4ed6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba4e15016ca7b6ae3094b575ee87a1c7508b8aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096958"
 ---
 # <a name="wildcard-components-and-content-validation"></a>萬用字元元件和內容驗證
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

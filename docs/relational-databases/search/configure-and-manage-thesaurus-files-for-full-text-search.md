@@ -13,13 +13,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 792b605f4c85484a8cb6ab7987aeee2bd427c67a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098268"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "67860515"
   
      展開集包含可以由全文檢索查詢彼此替代的一組同義字，例如 "writer"、"author" 和 "journalist"。 包含展開集中任何同義字之相符項目的查詢會展開成包含展開集中的其他每個同義字。  
   
-     如需詳細資訊，請參閱此主題後面的[展開集的 XML 結構](#expansion)。  
+     如需詳細資訊，請參閱本主題後面的[展開集的 XML 結構](#expansion)。  
   
 -   取代集  
   
-     取代集包含替代集所要取代的文字模式。 如需範例，請參閱此主題後面的[取代集的 XML 結構](#replacement)一節。 
+     取代集包含替代集所要取代的文字模式。 如需範例，請參閱本主題後面的[取代集的 XML 結構](#replacement)一節。 
 
 -   變音符號設定  
   

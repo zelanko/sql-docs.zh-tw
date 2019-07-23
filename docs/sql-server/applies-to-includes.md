@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3c947da650b7ba5d5e968464cc022839ca908ef0
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067577"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>版本設定和 applies-to 的 SQL Server include 檔案
 
@@ -29,7 +28,7 @@ SQL 內容作者通常需要包括 SQL Server 的產品名稱與版本。 如此
 
 |SQL 版本| 檔案名稱| Markdown 範例 |文字|
 | :------------  | :-------------| :----------| :-------------------|
-| SQL | ssnoversion-md.md | `[!INCLUDE[ssSQL11](../includes/ssnoversion-md.md)]` | [SQL Server] |
+| SQL | ssnoversion-md.md | `[!INCLUDE[ssSQL11](../includes/ssnoversion-md.md)]` | SQL Server |
 | SQL 2000 | ssversion2000-md.md | `[!INCLUDE[ssSQL11](../includes/ssversion2000-md.md)]` | SQL Server 2000 (8.x) |
 | SQL 2005 | ssversion2005-md.md | `[!INCLUDE[ssSQL11](../includes/ssversion2005-md.md)]` | SQL Server 2005 (9.x) |
 | SQL 2012 | sssql11-md.md | `[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]` | SQL Server 2012 (11.x) |

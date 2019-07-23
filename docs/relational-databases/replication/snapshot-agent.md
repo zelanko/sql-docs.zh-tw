@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a6efca71c246eaa08b237cd551c0cfae022463fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8a40fc2dfb444ea82a00f2438ea65d53bb6e4058
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051664"
 ---
 # <a name="snapshot-agent"></a>快照集代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

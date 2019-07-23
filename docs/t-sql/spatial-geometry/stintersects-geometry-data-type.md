@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c983b7424b7b0674b7e20074665c6adf47bd71de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a01a4ee58b4bca80cba9bfc9a1a094f575c5154
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950122"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

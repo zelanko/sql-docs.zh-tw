@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b76ea109f81b154e44460edbe87f1c3c1e64e4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40a651dc1fd89488d536b8e3c6d8959004424866
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940412"
 ---
 # <a name="detect-failed-input-and-output-requests"></a>偵測失敗的輸入和輸出要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

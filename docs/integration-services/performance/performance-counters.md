@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1488499a710c8e5ab80d46b2c2027cb93e0c54d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 995c4c6719bfa24ccd07f72b5317f6262d5b914e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086498"
 ---
 # <a name="performance-counters"></a>效能計數器
 

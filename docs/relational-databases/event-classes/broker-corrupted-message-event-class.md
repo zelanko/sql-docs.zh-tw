@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73b12fb1e6d2b008bbde9f7863ce0d7eaa620a1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cd8504379475bd14e873c0d499a0c2c64d17928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999742"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件類別
 

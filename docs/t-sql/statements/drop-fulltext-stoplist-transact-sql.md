@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9ed184138e4bec2f973cfe6df8ea758b90b4a6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4396fe9586dfffe5e88bf7949216206d95e2a96b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044235"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DROP FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Remarks  
  如果有任何全文檢索索引參考所卸除的全文檢索停用字詞表，DROP FULLTEXT STOPLIST 就會失敗。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要卸除停用字詞表，則需要具有此停用字詞表的 DROP 權限或是 **db_owner** 或 **db_ddladmin** 固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

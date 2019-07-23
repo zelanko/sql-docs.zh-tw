@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c07444ff1dd425671fbc17176fc3aa94e0705bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a76e1690f93065a001094675f38c7ff388b2203a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033997"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (位元 Not) (SSIS 運算式)
 

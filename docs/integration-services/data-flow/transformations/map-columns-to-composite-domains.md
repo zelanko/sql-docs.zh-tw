@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d2342216a550b285454417be36da9e7f15b661af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69583b01752e37f5b223e98aba105e21291ee4d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944169"
 ---
 # <a name="map-columns-to-composite-domains"></a>將資料行對應到複合定義域
 

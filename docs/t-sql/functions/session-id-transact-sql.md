@@ -11,14 +11,13 @@ dev_langs:
 - TSQL
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 117e5a08730aae4381f10fc8a8a2ab0ed2fa875f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b63cbd1498021fdf9ed8418c3ff36ddec9143f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022234"
 ---
 # <a name="sessionid-transact-sql"></a>SESSION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

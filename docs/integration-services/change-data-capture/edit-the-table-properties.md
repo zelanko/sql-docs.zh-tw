@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f629b0f7905cce4547d76ddfe97adc7dedd17079
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29901bc63223da1004995b86e15f74cfd3d0b23c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011527"
 ---
 # <a name="edit-the-table-properties"></a>編輯資料表屬性
 

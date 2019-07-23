@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 98ac248a005b7be8c2786275f30c23c129a39887
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 4d600a5bf3e5667fdd3bd247e2e479a6c870ff21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021708"
 ---
 # <a name="server-public-permissions"></a>伺服器 public 權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51511963"
  請勿將伺服器權限授與給伺服器 public 角色。  
   
 > [!IMPORTANT]  
->  在安裝程式完成之後，**PUBLIC** 角色會擁有 [專用管理員連接] 以外之所有端點的 **CONNECT** 權限。 這是正常狀況，通常不應該變更  (存取權是使用建立新登入時自動授與的 **CONNECT SQL** 權限來控制)。  
+>  在安裝程式完成之後，**PUBLIC** 角色會擁有 [專用管理員連接]  以外之所有端點的 **CONNECT** 權限。 這是正常狀況，通常不應該變更 (存取權是使用建立新登入時自動授與的 **CONNECT SQL** 權限來控制)。  
   
 ### <a name="for-more-information"></a>如需詳細資訊  
  [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)  

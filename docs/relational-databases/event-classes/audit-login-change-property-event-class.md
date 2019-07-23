@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ec08adfa70eb7f9aeba90eb85318da6beafa343
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 858a796eb524f097816687b4e14ae3c048577a5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897564"
 ---
 # <a name="audit-login-change-property-event-class"></a>Audit Login Change Property 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: de8bb0c96f313a91f146816042e9ba61c5937910
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: e19fbe26a7f3382885a8a1cd2bcbeaed71108708
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689349"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261578"
 ---
 # <a name="verify-queries-visual-database-tools"></a>驗證查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

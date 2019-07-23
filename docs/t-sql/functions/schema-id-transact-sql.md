@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eefc84ea48372824ecec0617513262998bcc5ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5882a98a856916ebeaa0ad30d545d29cdf21071c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089873"
 ---
 # <a name="schemaid-transact-sql"></a>SCHEMA_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

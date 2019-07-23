@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: e866e52cbd74d18065435bc4ddfcf3cb065faff6
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 946e73fe8419c78e4e0d0c117c0d6dee9cf2da3a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689794"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261659"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>SQL 註解對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

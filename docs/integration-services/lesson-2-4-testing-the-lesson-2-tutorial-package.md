@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 907dd855186236e05eb103fd771a28ff0bc916ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086573"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>課程 2-4：測試第 2 課教學課程套件
 
@@ -42,11 +41,11 @@ ms.locfileid: "65722464"
   
 ## <a name="test-the-lesson-2-tutorial-package"></a>測試第 2 課教學課程套件  
   
-1.  在 [方案總管] 中，於 [Lesson 2.dtsx] 上按一下滑鼠右鍵，然後選取 [執行封裝]。  
+1.  在 [方案總管]  中，於 [Lesson 2.dtsx]  上按一下滑鼠右鍵，然後選取 [執行封裝]  。  
   
-    隨即會執行套件。 您可以在 [輸出] 視窗中或透過選取 [進度] 索引標籤，來確認每個迴圈的狀態。例如，您會看到有 1,097 個資料列已從 Currency_VEB.txt 檔案新增到目的地資料表中。  
+    隨即會執行套件。 您可以在 [輸出]  視窗中或透過選取 [進度]  索引標籤，來確認每個迴圈的狀態。例如，您會看到有 1,097 個資料列已從 Currency_VEB.txt 檔案新增到目的地資料表中。  
   
-2.  在套件執行完成之後，於 [偵錯] 功能表上，選取 [停止偵錯]。  
+2.  在套件執行完成之後，於 [偵錯]  功能表上，選取 [停止偵錯]  。  
   
 ## <a name="go-to-next-lesson"></a>移至下一課  
 [第 3 課：使用 SSIS 來新增記錄功能](../integration-services/lesson-3-add-logging-with-ssis.md)  

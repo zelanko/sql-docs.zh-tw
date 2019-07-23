@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 28a98ac0c6fea61ca39c6618a2f1f80c00383ba0
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: cde5c39a3470653da3ffd242af8dd065e200bcd9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687820"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267127"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定保全操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

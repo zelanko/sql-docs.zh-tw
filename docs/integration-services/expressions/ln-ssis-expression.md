@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac9490abd45c37005fc77ed7733768fa6d7c35a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9c5fe52381018da9f41a81234d56a55d774c676
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027455"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 運算式)
 

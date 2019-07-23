@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: b5f4f653b875621da042d99cb22629b0ff21aea2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6478c1b0f1e453fd10f18a403a00f471309f6f35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986691"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server 的 Cursor Manager Total 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

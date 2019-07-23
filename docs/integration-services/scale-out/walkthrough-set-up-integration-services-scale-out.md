@@ -1,6 +1,6 @@
 ---
 title: 逐步解說：設定 SQL Server Integration Services Scale Out | Microsoft Docs
-description: 此文章將引導您完成 SSIS Scale Out 的安裝和設定
+description: 本文將引導您完成 SSIS Scale Out 的安裝和設定
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 001172611503dbff0275448833d05b06aa22512e
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896129"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>逐步解說：設定 Integration Services (SSIS) Scale Out
 
@@ -34,7 +33,7 @@ ms.locfileid: "67826632"
 
 * [安裝相應放大背景工作用戶端憑證](#InstallCert)
 
-* [開啟防火牆連接埠](#Firewall)
+* [開啟防火牆通訊埠](#Firewall)
 
 * [啟動 SQL Server 相應放大主機和背景工作服務](#Start)
 
@@ -63,7 +62,7 @@ ms.locfileid: "67826632"
 2.  在 [伺服器組態]  頁面上，選取要執行 [SQL Server Integration Services 相應放大主機服務]  的帳戶，然後選取 [啟動類型]  。  
     ![伺服器組態](media/server-config.PNG)
 
-3.  在 [Integration Services 相應放大主機組態]  頁面上，指定相應放大主機用來與相應放大背景工作通訊的連接埠編號。 預設連接埠編號是 8391。  
+3.  在 [Integration Services 相應放大主機組態]  頁面上，指定相應放大主機用來與相應放大背景工作通訊的通訊埠編號。 預設通訊埠編號是 8391。  
 
     ![Master 設定](media/master-config.PNG "Master 設定")
 
@@ -149,7 +148,7 @@ ms.locfileid: "67826632"
   
 若要將用戶端憑證新增至根存放區，請按兩下 .cer 檔案，然後按一下 [憑證] 對話方塊中的 [安裝憑證]  。 隨即開啟 [憑證匯入精靈]  。  
 
-## <a name="Firewall"></a> 開啟防火牆連接埠
+## <a name="Firewall"></a> 開啟防火牆通訊埠
 
 在 Scale Out Master 電腦上，於 Windows 防火牆中，開啟在 Scale Out Master 安裝期間所指定的連接埠以及 SQL Server 的連接埠 (預設為 1433)。
 

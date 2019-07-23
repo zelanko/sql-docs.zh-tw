@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: e3bb24d2a8f18077f69358ad26d2363c2ad743d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63c2638f6b6f58d3c3cafd8e8dd601a5a467b210
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62671637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987339"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理程式、作業物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

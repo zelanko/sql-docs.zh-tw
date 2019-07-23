@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fcd7c0cf972a6744cf35ace20fb21dcbf7deb7f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d15beadf6ee7dcc765afa4dee182a6d05e1ce43c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034335"
 ---
 # <a name="recordset-destination-custom-properties"></a>資料錄集目的地自訂屬性
 

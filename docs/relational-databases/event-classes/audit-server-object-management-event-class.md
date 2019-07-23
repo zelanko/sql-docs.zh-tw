@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70884bdc97ac905eb1ca30ea1633f342f2bbb15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b450584bec0117f0b741ee7f650f1c146e930b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913433"
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

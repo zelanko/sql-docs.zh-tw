@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec05684572563228ec3bce88ebb5c5ca32a86bc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70d2b09349588ebd70a56ca8c3930671aeff8af7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104938"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下載工作
 

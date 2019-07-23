@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d87675c4feb0ab784f0003143406b3784f7e8a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a31be55598d3a3df42a9d5a5fd39832fdbc08754
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909290"
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

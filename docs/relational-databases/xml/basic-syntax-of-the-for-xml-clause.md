@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 273cfed91e6d0077700f81b8cb9a0fc8c0300c61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ed13483746d2a3592f8c37380862719103d438a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029367"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本語法
 

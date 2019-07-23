@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 98f06f39732df9c2ee60f1c3ab835f4867e739cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c20925a1cc31647812f47526cf244f2a8371a42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070836"
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Integration Services (SSIS) 目錄 Transact-SQL 參考
 

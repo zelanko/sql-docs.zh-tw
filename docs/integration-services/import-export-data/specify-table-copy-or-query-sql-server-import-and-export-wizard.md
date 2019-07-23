@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c147014aa6554612a51be0ed2369aba053c8c68a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d25caed1ed159ff3cbb63851eb0f9a22487511b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025177"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
 

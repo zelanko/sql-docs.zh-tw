@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a065225cdabe601d0e56323e06bf12fa3abc8847
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947928"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server 的 User Settable 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ GO
 > [!IMPORTANT]  
 >  盡量讓定義於使用者計數器預存程序的查詢越簡單越好。 執行大量排序或雜湊作業的記憶體密集查詢，或是執行大量 I/O 的查詢，都需要很多資源才能執行，所以可能影響效能。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  **sp_user_counter** 適用於所有使用者，但可以由任何查詢計數器來限制。  
   
 ## <a name="see-also"></a>另請參閱  

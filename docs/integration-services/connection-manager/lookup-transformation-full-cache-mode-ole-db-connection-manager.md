@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 280351a1f4703c8b04138e70ddacbea2ef5d5122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ea8d17c11c47c4a31f21a2e538bcc9918ad0fea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904656"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
 

@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db54a0b9855a659d2c9751bd1a46bd18ed9bf923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 664e3cd0fc687509c630258a681c155d94863d39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943051"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (位元互斥 OR) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

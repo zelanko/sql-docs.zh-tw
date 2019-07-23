@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c4f21916de6c03c8e592702e58af481ef64cbb6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fcd041edda3e8575e3dfc05615d2e23f6da20fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130266"
 ---
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33ceb7ba945ae36e09b32bbba37776a6a933059d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: dcf95ea2aaab71771f90bc861265bb19e2f9d0ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073561"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>設定合併式發行集的相容性層級
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

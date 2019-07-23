@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fcb87e9baac60999f5fd810556d2d9e0790b1a9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 64b11563f05347e772d7979c3cb07c9a31f306e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112893"
 ---
 # <a name="create-views-over-xml-columns"></a>建立 XML 資料行檢視
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

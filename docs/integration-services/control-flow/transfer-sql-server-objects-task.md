@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6977e5934178ae17ce8d4469728af211ec2ec274
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbde5c7832767f4baf64261973b15dc46513c0bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105587"
 ---
 # <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作
 

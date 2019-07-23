@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ca91b9a6e432346e4ecb6e43e333a80e7cded22f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8b47f2da5e16e83abf6846d33ac7ce9e38aa6af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911451"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>第 6-1 課：複製第 5 課套件
 

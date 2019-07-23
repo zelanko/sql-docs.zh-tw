@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 853e290a2222ae2c206e264f2aaeb003ca24e359
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101009"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>空間類型 - geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

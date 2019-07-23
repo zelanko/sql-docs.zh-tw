@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: acfa92d36166968f4b82b73b5e2d63dcf2dd6370
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 698daf391d55c09714feb1fbf0cc06996110cf8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943941"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
 

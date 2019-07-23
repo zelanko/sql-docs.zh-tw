@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc67c0a145b1ec32dc14cae8d56e538f14c2808e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 660c2ee9f09bcd3e8a4c883247bdded124561509
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911476"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>第 5-4 課：測試第 5 課套件
 
@@ -41,9 +40,9 @@ ms.locfileid: "65721551"
   
 ## <a name="test-the-lesson-5-package"></a>測試第 5 課套件  
   
-1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
+1.  在 [偵錯]  功能表上，選取 [開始偵錯]  。  
   
-2.  在套件執行完成之後，於 [偵錯] 功能表上，選取 [停止偵錯]。  
+2.  在套件執行完成之後，於 [偵錯]  功能表上，選取 [停止偵錯]  。  
   
 ## <a name="next-lesson"></a>下一課  
 [第 6 課：在 SSIS 中搭配專案部署模型使用參數](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

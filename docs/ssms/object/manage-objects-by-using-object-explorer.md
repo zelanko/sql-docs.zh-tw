@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 874ce644e77ab2a402269856befd99c0190660dc
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: bb52261160cc693193e4cc983a4c2e28baa28686
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689982"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264099"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

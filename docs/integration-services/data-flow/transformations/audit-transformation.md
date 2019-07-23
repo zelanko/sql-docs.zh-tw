@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9161fe71f82d2ca0f2f31805dc07beba387bc28d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dff7efc56a39da27c9a2f5f391071cbc1ddab79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112809"
 ---
 # <a name="audit-transformation"></a>稽核轉換
 

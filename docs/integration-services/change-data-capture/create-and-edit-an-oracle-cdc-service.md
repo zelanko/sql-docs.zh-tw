@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5d690eeaa3d6af5efa06f1e3e439aa4ba7692a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c00da27f5e4e6502bb431854ef0105e3b20954a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060843"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>建立及編輯 Oracle CDC 服務
 
@@ -27,11 +26,11 @@ ms.locfileid: "65728939"
 
   您會從 CDC 服務組態主控台來建立和編輯新的 Oracle CDC Windows 服務。  
   
- 若要建立新的 Oracle CDC Windows 服務，請從左窗格選取 **[本機 CDC 服務]** ，然後按一下 **[動作]** 窗格中的 **[新增服務]** 。 您也可以用滑鼠右鍵按一下 [本機 CDC 服務]，並選取 [新增服務]。 隨即開啟 [新增 Oracle CDC Windows 服務] 對話方塊。  
+ 若要建立新的 Oracle CDC Windows 服務，請從左窗格選取 **[本機 CDC 服務]** ，然後按一下 **[動作]** 窗格中的 **[新增服務]** 。 您也可以用滑鼠右鍵按一下 [本機 CDC 服務]  ，並選取 [新增服務]  。 隨即開啟 [新增 Oracle CDC Windows 服務] 對話方塊。  
   
  **OR**  
   
- 若要編輯 CDC 服務屬性，請選取您要編輯屬性的服務，然後按一下 **[動作]** 窗格中的 **[屬性]** 。 您也可以用滑鼠右鍵按一下您要使用的服務，然後選取 [屬性]。 [CDC 服務屬性] 對話方塊隨即開啟。  
+ 若要編輯 CDC 服務屬性，請選取您要編輯屬性的服務，然後按一下 **[動作]** 窗格中的 **[屬性]** 。 您也可以用滑鼠右鍵按一下您要使用的服務，然後選取 [屬性]  。 [CDC 服務屬性] 對話方塊隨即開啟。  
   
  在 [新增 Oracle CDC Windows 服務] 對話方塊或 [CDC 服務屬性] 對話方塊中輸入以下資訊。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "65728939"
   
      您可以針對此服務帳戶使用本機或網域 Windows 帳戶。 在此情況下，您必須針對該帳戶輸入 **[密碼]** 。 此帳戶可適用於本機主機或網域帳戶。 在 Windows [控制台] 中使用本機服務變更密碼時，請務必更新密碼。  
   
- **伺服器名稱**︰選取要連接的目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (例如，**\\\\<電腦名稱>\\<執行個體名稱>**)。 預設會顯示上次連接的伺服器執行個體。  
+ **伺服器名稱**︰選取要連接的目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (例如， **\\\\<電腦名稱>\\<執行個體名稱>** )。 預設會顯示上次連接的伺服器執行個體。  
   
  **驗證**  
  選取下列其中一項：  
@@ -83,7 +82,7 @@ ms.locfileid: "65728939"
   
 -   **執行逾時**：輸入 Oracle CDC Windows 服務在逾時之前，等候執行命令的時間 (以秒數為單位)。預設值是 **30**。  
   
--   **加密連接**：針對 Oracle CDC 服務與使用加密連線之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連線]。  
+-   **加密連接**：針對 Oracle CDC 服務與使用加密連線之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連線]  。  
   
 -   **進階**：必要時輸入其他任何連接屬性。  
   

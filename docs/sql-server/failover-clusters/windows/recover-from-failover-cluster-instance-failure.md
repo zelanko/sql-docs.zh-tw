@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee494429768619f4cdf622be569dbad81182b976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f962688b69155c6daddc98e6d505a5275741cf86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044714"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>從容錯移轉叢集執行個體失敗的狀況復原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47676836"
   
 1.  在節點 1 失敗之後， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 會容錯移轉至節點 2。  
   
-2.  從 FCI 中收回節點 1。 作法是從節點 2 開啟容錯移轉叢集管理員嵌入式管理單元，並以滑鼠右鍵按一下 [節點 1]，按一下 [移動動作]，然後按一下 [收回節點]。  
+2.  從 FCI 中收回節點 1。 作法是從節點 2 開啟容錯移轉叢集管理員嵌入式管理單元，並以滑鼠右鍵按一下 [節點 1]，按一下 [移動動作]  ，然後按一下 [收回節點]  。  
   
 3.  確認節點 1 已從叢集定義中移出。  
   

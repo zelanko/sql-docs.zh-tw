@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.custom: ''
 ms.date: 01/19/2017
-ms.openlocfilehash: a70615870126f87c079dffccfe532d796e02f869
-ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
+ms.openlocfilehash: 35d326a7820cb8c002dd08b7176f8dc4e30f4c80
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67197600"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264809"
 ---
 # <a name="create-a-project"></a>建立專案
 

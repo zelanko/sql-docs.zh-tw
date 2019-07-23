@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 7517264d6ebc7baef2f066654f0309219f31b34d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89fcc63741b4322501c640453971c67d5a9a02fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013146"
 ---
 # <a name="broadcast-a-shutdown-message-command-prompt"></a>廣播關機訊息 (命令提示字元)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

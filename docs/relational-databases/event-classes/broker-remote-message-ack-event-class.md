@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7eb9cc127650d2fb6faacabcd30ce0ecb2ae3588
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1992d071079e5ecb1912abb1014becca35a339b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999621"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 事件類別
 

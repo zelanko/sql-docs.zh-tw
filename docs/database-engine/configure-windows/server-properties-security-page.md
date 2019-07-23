@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: beda4797b2beeeea2bfb24a35cf052b9ac22b5eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031434"
 ---
 # <a name="server-properties---security-page"></a>伺服器屬性 - 安全性頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

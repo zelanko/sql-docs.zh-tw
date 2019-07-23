@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 26cca9dc13ac9d66cad3a415438850b177270bac
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 495e32c9930711562876c87c5781d51535f1ff2a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681849"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265075"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>伺服器連接的 F1 說明 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

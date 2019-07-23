@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cf646a6cc26b757b65e0c7c1e561aa7aff26d020
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29890b85ccd19d17d74a560a2c1264de879a4e1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081113"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 運算式)
 

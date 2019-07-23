@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1a3642d349fd9d6df39651e38b8b1789dd935c49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bc7ed2ad628e404cd13da1760e74ee8d0a5850d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041455"
 ---
 # <a name="select-backup-destination"></a>選取備份目的地
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

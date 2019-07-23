@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8382624490df51ce0c44856363247697a546a9b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b536a359ad566e022ef0c69f00f12dd2a178fb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907988"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>在發行集中新增和卸除發行項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

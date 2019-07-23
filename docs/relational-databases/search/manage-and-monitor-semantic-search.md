@@ -12,13 +12,12 @@ ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: c16c6118879839b6bff189e5d72eef3470520730
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57972923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132248"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理及監視語意搜尋
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

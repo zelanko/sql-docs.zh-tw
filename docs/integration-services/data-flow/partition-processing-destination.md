@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22fa9d76887451e57f41c8536efc71d954e2e78c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f062b4a9edcab9e7214155cea6ad4451107b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034496"
 ---
 # <a name="partition-processing-destination"></a>資料分割處理目的地
 
@@ -70,16 +69,16 @@ ms.locfileid: "65726562"
   
 ### <a name="options"></a>選項。  
  **[ODBC 目的地編輯器]**  
- 從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
+ 從清單中選取現有的連線管理員，或按一下 [新增]  來建立新的連線。  
   
  **新增**  
- 使用 [加入 Analysis Services 連接管理員] 對話方塊來建立新的連接。  
+ 使用 [加入 Analysis Services 連接管理員]  對話方塊來建立新的連接。  
   
  **可用的資料分割清單**  
  選取要處理的資料分割。  
   
  **處理方法**  
- 選取處理方法。 此選項的預設值是 **[完整]**。  
+ 選取處理方法。 此選項的預設值是 **[完整]** 。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -131,10 +130,10 @@ ms.locfileid: "65726562"
  指定發生錯誤時，應該停止處理。  
   
  **錯誤數目**  
- 如果您已選取 [發生錯誤時停止]，請指定處理應該停止的錯誤臨界值。  
+ 如果您已選取 [發生錯誤時停止]  ，請指定處理應該停止的錯誤臨界值。  
   
  **發生錯誤時要執行的動作**  
- 如果您已選取 [發生錯誤時停止]，請指定到達錯誤臨界值時要採取的動作。  
+ 如果您已選取 [發生錯誤時停止]  ，請指定到達錯誤臨界值時要採取的動作。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

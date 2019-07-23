@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f9fca5c54451d13a8496d20e453d0bd89bf27fed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136034"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
