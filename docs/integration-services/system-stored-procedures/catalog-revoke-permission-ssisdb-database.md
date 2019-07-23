@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41946fdf50ec72d7c81340dd40c99447a9dbbf40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81209c7e194f70536f9da27ac7358da5df265fcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897864"
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
 

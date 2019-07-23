@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1879aef282f9e3d8e61767ba2808bf3dd2908b8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5361b1a179f5c8c712468f46e56d1fcc9d560604
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038555"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (SSISDB 資料庫)
 

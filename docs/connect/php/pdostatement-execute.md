@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Execute |Microsoft Docs'
+title: 'PDOStatement:: execute |Microsoft Docs'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f9f14911589b45a1b27cd5ad3d8f46867ebe253
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 31e7465b2fca0d76f569afb83e3a7d8501fd6036
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936049"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

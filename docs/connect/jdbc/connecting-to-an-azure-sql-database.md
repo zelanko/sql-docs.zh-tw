@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956858"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
 
@@ -32,8 +31,8 @@ ms.locfileid: "66789331"
   
 ## <a name="details"></a>詳細資料
 
-當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該連接到 master 資料庫來呼叫**SQLServerDatabaseMetaData.getCatalogs**。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs**使用 sys.databases 檢視取得目錄。 中的權限的討論，請參閱[sys.databases & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)若要了解**SQLServerDatabaseMetaData.getCatalogs**行為[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]。  
+連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]時, 您應該連接至 master 資料庫以呼叫**SQLServerDatabaseMetaData. getCatalogs**。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData. getCatalogs**使用 sys.databases view 來取得目錄。 請參閱[sys.databases (transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)中的許可權討論, 以瞭解上的**SQLServerDatabaseMetaData getCatalogs** [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]行為。  
   
 ## <a name="connections-dropped"></a>連接中斷
 
@@ -81,7 +80,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密需要設定 hostNameInCertificate
 
-7\.2 版之前[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該指定**hostNameInCertificate**如果您指定**加密 = true** （如果在連接中的伺服器名稱字串是*shortName*。*domainName*，將**hostNameInCertificate**屬性設\*。*domainName*。)。 這是選擇性屬性 7.2 版驅動程式。
+在7.2 版[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]之前, 連接到時, 如果您指定**encrypt = true** (如果連接字串中的伺服器名稱是*簡短名稱*, 則應指定**hostNameInCertificate** 。*domainName*, 將**hostNameInCertificate**屬性設定為\*。*domainName*)。 從7.2 版的驅動程式中, 這個屬性是選擇性的。
 
 例如：
 

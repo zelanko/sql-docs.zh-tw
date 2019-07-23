@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: a5c0d41925b6d0ec943e3009402eaa9b4c5a4b1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a198292700fdda1e5dc092afc4a5bb1948e7192a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075047"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

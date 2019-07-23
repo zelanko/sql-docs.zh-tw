@@ -14,12 +14,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e4e0e6622a2a313b85dfa00df8c88044486f75f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d61ea85f5c1d7784faaf1d094e2fa858bffcd8c2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994996"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255417"
 ---
 # <a name="in-memory-database"></a>記憶體內資料庫
 

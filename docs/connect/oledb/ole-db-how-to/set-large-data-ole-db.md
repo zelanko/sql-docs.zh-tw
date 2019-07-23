@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large data
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e423c1e8ab096e0ba9c3098145f5f070049bae5b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 72827ffa7866b624c50a83c0d3695f0f011cfe5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994682"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

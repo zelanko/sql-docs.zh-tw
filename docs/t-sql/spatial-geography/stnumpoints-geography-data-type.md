@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 92fa22099ef88861986be34832d3bde1165d2d77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 320118e7844dfe40e45be9a893ad7bf45faff8bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120895"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8458961cbd73f712b158d82c31c84372c00cde6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 187a195a831955b65f4af113fb80e5f99308e1a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974453"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection"></a>setEnablePrepareOnFirstPreparedStatementCall 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 指定特定的連接執行個體的行為。 如果值為第一次執行會呼叫 sp_executesql 並不準備的陳述式，它會呼叫 sp_prepexec 並實際設定備妥的陳述式控制代碼，會發生第二次執行之後，則為 false。 遵循執行，就會呼叫 sp_execute。 這減輕 sp_unprepare 備妥的陳述式需要關閉如果陳述式只執行一次。
+ 指定特定連接實例的行為。 如果 value 為 false, 則第一次執行會呼叫 sp_executesql, 而不是準備語句, 一旦第二次執行時, 就會呼叫 sp_prepexec, 並實際設定備妥的語句控制碼。 下列執行會呼叫 sp_execute。 如此一來, 如果語句只執行一次, 就能減輕備妥的語句關閉 sp_unprepare 的需求。
 
 ## <a name="syntax"></a>語法  
   
@@ -38,13 +37,13 @@ public void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOn
 #### <a name="parameters"></a>參數  
  *enablePrepareOnFirstPreparedStatementCall*  
   
- 新值**enablePrepareOnFirstPreparedStatementCall**連接屬性。  
+ **EnablePrepareOnFirstPreparedStatementCall**連接屬性的新值。  
  
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 這個方法是從 JDBC 驅動程式版本 6.4 可用且向外。
+ 這個方法可從 JDBC 驅動程式6.4 版和之後版本取得。
  
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

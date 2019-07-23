@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006510"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -67,10 +66,10 @@ WITH
  取代所有提及的  
  導入定義所建立之路由的子句。  
   
- SERVICE_NAME = **'**_service\_name_**'**  
+ SERVICE_NAME = **'** _service\_name_ **'**  
  指定這個路由所指向的遠端服務名稱。 *service_name* 必須與遠端服務所使用的名稱完全相符。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會使用逐位元組的比較方式來比對 *service_name*。 換言之，這項比較會區分大小寫，且不會考慮目前的定序。 如果省略 SERVICE_NAME，這個路由會符合任何服務名稱，但符合的優先權低於指定 SERVICE_NAME 的路由。 服務名稱是 **'SQL/ServiceBroker/BrokerConfiguration'** 的路由，是指向 Broker Configuration Notice 服務的路由。 指向這項服務的路由不能指定 Broker 執行個體。  
   
- BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
+ BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  指定主控目標服務的資料庫。 *broker_instance_identifier* 參數必須是遠端資料庫的 Broker 執行個體識別碼，您可以在所選資料庫中執行下列查詢來取得這個識別碼：  
   
 ```  
@@ -81,15 +80,15 @@ WHERE database_id = DB_ID()
   
  當省略 BROKER_INSTANCE 子句時，這項路由會符合任何 Broker 執行個體。 當交談並未指定 Broker 執行個體時，符合任何 Broker 執行個體的路由，其相符優先權會高於含明確 Borker 執行個體的路由。 如果交談指定了 Broker 執行個體，含 Borker 執行個體的路由之優先權會高於符合任何 Broker 執行個體的路由。  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將路由保留在路由表中的時間量 (以秒為單位)。 在存留期間結束時，路由會到期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在選擇新交談的路由時，不會再考慮這個路由。 如果省略這個子句，*route_lifetime* 便是 NULL，且路由永遠不會到期。  
   
- ADDRESS **='**_next\_hop\_address_**'**  
+ ADDRESS **='** _next\_hop\_address_ **'**  
 針對 SQL Database 受控執行個體，`ADDRESS` 必須為本機。 
 
 指定這個路由的網路位址。 *next_hop_address* 以下列格式指定 TCP/IP 位址：  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:**_port\_number_  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
  指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
@@ -107,10 +106,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  當路由在 *next_hop_address* 中指定 **'TRANSPORT'** 時，會根據服務名稱中的網路位址來決定網路位址。 指定 **'TRANSPORT'** 的路由不能指定服務名稱或 Broker 執行個體。  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  指定有一個鏡像資料庫在 *next_hop_address* 之鏡像資料庫的網路位址。 *next_hop_mirror_address* 以下列格式指定 TCP/IP 位址：  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  指定的 *port_number* 必須符合在指定電腦的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端點的連接埠號碼。 這可以在選取的資料庫中執行下列查詢來取得：  
   
@@ -127,7 +126,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ## <a name="remarks"></a>Remarks  
  儲存路由的路由表是能夠利用 **sys.routes** 目錄檢視來讀取的中繼資料表。 您只能利用 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 陳述式來更新這個目錄檢視。  
   
- 依預設，每個使用者資料庫中的路由表都包含一個路由。 這個路由的名稱是 **AutoCreatedLocal**。 這個路由在 *next_hop_address* 中指定 **'LOCAL'**，且會比對任何服務名稱和 Broker 執行個體識別碼。  
+ 依預設，每個使用者資料庫中的路由表都包含一個路由。 這個路由的名稱是 **AutoCreatedLocal**。 這個路由在 *next_hop_address* 中指定 **'LOCAL'** ，且會比對任何服務名稱和 Broker 執行個體識別碼。  
   
  當路由在 *next_hop_address* 中指定 **'TRANSPORT'** 時，會根據服務名稱來決定網路位址。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以順利處理開頭是網路位址且格式對 *next_hop_address* 有效的服務名稱。  
   
@@ -137,7 +136,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  路由不能是暫存物件。 您可以使用開頭是 **#** 的路由名稱，但它們是永久物件。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  建立路由的權限預設為 **db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  

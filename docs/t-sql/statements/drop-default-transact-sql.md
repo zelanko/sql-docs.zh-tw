@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 72accd7718280b4994c3339531c8e5d0fef067c1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 885336e48d7b8820ac7c1015be6d770b851978af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898082"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
   
  在從允許 Null 值的資料行中卸除預設值之後，當加入資料列且未明確提供值時，會在這個位置插入 NULL。 從 NOT NULL 資料行中卸除預設值之後，當加入資料列且未明確提供值時，會傳回錯誤訊息。 稍後，會做為一般 INSERT 陳述式行為的一部份而加入這些資料列。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要執行 DROP DEFAULT，使用者至少必須有預設值所屬結構描述的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 03d8b1fd3b76452a0a1027075f9569a746a30edf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 42d3d78b68f84b5ab44658114094bde77cc1f844
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113521"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>效能監視及微調工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "54241439"
   
 |工具|Description|  
 |----------|-----------------|  
-|[內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|內建的函數會顯示自伺服器啟動後，關於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動的快照統計資料，這些統計資料會儲存在預先定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器中。 例如，**@@CPU_BUSY** 包含 CPU 已執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼的時間量；**@@CONNECTIONS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線數或嘗試連線數；**@@PACKET_ERRORS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線上發生的網路封包數目。|  
+|[內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|內建的函數會顯示自伺服器啟動後，關於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動的快照統計資料，這些統計資料會儲存在預先定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器中。 例如， **@@CPU_BUSY** 包含 CPU 已執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼的時間量； **@@CONNECTIONS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線數或嘗試連線數； **@@PACKET_ERRORS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線上發生的網路封包數目。|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC (資料庫主控台命令) 陳述式讓您可以檢查效能統計資料和資料庫的邏輯與實體一致性。|  
 |[Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|Database Engine Tuning Advisor 會針對您要微調的資料庫，分析執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式效能影響。 Database Engine Tuning Advisor 會針對新增、移除，或修改索引、索引檢視和分割提供建議。|  
 |[資料庫測試助理 (DEA)](https://www.microsoft.com/download/details.aspx?id=54090)|資料庫測試助理 (DEA) 是一個適用於 SQL Server 的新 A/B 測試解決方案。 它將協助針對指定的工作負載評估 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的目標版本。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始) 升級為任何較新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，DEA 將能提供比較分析計量。|

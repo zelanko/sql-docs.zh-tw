@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0958e732f288f33fe1bd2c1cd29ece666ed10df2
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: e0b4708c30f1fdbcc6246ffc6e24e95cadb58cd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141323"
 ---
 # <a name="predicates"></a>述詞
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

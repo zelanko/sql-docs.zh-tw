@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 98238937164a1b09a9389d22717541f25393d000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1f0a4c2964e61b7eaa0a3064615b36629bc464e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047975"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (SSISDB 資料庫)
 

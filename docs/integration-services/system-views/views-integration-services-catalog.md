@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7133e0fc0b070c15be8f47df0ce4da650e2f12c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c7d6a6f0de0ec6c9e14b5d6c9df8ff9ab2bf9cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65802354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945648"
 ---
 # <a name="views-integration-services-catalog"></a>檢視 (Integration Services 目錄)
 

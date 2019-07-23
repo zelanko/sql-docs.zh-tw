@@ -1,6 +1,6 @@
 ---
 title: 提取資料列 |Microsoft Docs
-description: 提取資料列使用 IRowset 介面
+description: 使用 IRowset 介面來提取資料列
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c4955b36c5a0d95c4fa4e8bfe0fceb77fc65efd9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d47e94795f3bb81dd7a2d870190f081436c47e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015359"
 ---
 # <a name="fetching-rows"></a>提取資料列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

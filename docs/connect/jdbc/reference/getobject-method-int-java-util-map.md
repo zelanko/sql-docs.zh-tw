@@ -1,5 +1,5 @@
 ---
-title: getObject 方法 （int，java.util.Map） |Microsoft Docs
+title: getObject 方法 (int, util) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 60d12b2fba390418831c56da96079428dbae6b8f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5106bddd6cf71401be0f4a71dfaaf0406901a6cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981244"
 ---
 # <a name="getobject-method-int-javautilmap"></a>getObject 方法 (int, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

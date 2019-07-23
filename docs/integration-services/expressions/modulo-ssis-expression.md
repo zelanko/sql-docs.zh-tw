@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1fada6d5b7d8599b1bdfbc67d47c2ac6c1553686
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbd48fc88f2b7298418f2e428c283131bf2e08fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941229"
 ---
 # <a name="modulo-ssis-expression"></a>(模數) (SSIS 運算式)
 

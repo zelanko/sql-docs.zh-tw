@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 994c4fcbc4a015bf31f48b145fc7003f958bda65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5dd0fcdf9cceb0e1290f56bd4c6eb2459e6da3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944409"
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>固定與變更屬性選項 (緩時變維度精靈)
 

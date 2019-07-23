@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab19ad0c8b02d8a2c1d931b2986f16afcfce45ff
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977644"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isDefinitelyWritable(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 isDefinitelyWritable 方法是由 java.sql.ResultSetMetaData 介面中 isDefinitelyWritable 方法指定。  
+ 這個 isDefinitelyWritable 方法是由 ResultSetMetaData 介面中的 isDefinitelyWritable 方法指定。  
   
 > [!NOTE]  
 >  當配合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法一律會傳回 false。  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d10e44472d5a40007d7ead9f464af89e5cf8734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9bdf91105e9e7db82f51b5ba9885506e2edd8cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953532"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>getBoolean 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,10 +45,10 @@ public boolean getBoolean(java.lang.String columnName)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getBoolean 方法是由 java.sql.ResultSet 介面中的 getBoolean 方法指定。  
   
- 只有在數字和字元資料類型上才支援這個方法。 它會將值"1"，1，轉換和"**，則為 true**"來 **，則為 true**，和值"0"，0，和 「**false**"來**false**。 如果是所有其他值，則不會定義這個行為。  
+ 只有在數字和字元資料類型上才支援這個方法。 它會將值 "1"、1和 "**true**" 轉換為**true**, 並將值 "0"、0和 "**false**" 轉換為**false**。 如果是所有其他值，則不會定義這個行為。  
   
 ## <a name="see-also"></a>另請參閱  
  [getBoolean 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   

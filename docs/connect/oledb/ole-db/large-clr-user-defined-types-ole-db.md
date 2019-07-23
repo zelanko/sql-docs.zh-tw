@@ -1,5 +1,5 @@
 ---
-title: 大型 CLR 使用者定義型別 (OLE DB) |Microsoft Docs
+title: 大型 CLR 使用者定義類型 (OLE DB) |Microsoft Docs
 description: 大型 CLR 使用者定義型別 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015217"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66795983"
 
   本主題討論 OLE DB Driver for SQL Server 中 OLE DB 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
- 如需有關 SQL Server 的 OLE DB 驅動程式中的大型 CLR udt 支援的詳細資訊，請參閱[Large CLR User-Defined 類型](../../oledb/features/large-clr-user-defined-types.md)。 如需範例，請參閱[使用大型 CLR Udt &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 如需在 SQL Server 的 OLE DB 驅動程式中支援大型 CLR Udt 的詳細資訊, 請參閱[大型 Clr 使用者定義型](../../oledb/features/large-clr-user-defined-types.md)別。 如需範例, 請參閱[使用大型 CLR &#40;udt&#41;OLE DB](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>資料格式  
  OLE DB Driver for SQL Server 使用 ~0 來代表大型物件 (LOB) 類型的無限制大小的值長度。 ~0 也代表大於 8,000 個位元組的 CLR UDT 大小。  
@@ -82,7 +81,7 @@ ms.locfileid: "66795983"
   
  下列資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|描述|  
+|資料行識別碼|類型|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -107,7 +106,7 @@ ms.locfileid: "66795983"
   
  下列其他資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|類型|描述|  
+|資料行識別碼|類型|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -140,7 +139,7 @@ ms.locfileid: "66795983"
 |3|資料會從二進位資料轉換成十六進位字串。|  
 |4|在使用 **CreateAccessor** 或 **GetNextRows** 時可能會發生驗證。 錯誤是 DB_E_ERRORSOCCURRED。 繫結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  
 |5|可能會使用 BY_REF。|  
-|6|UDT 參數可以在 DBBINDING 中繫結為 DBTYPE_IUNKNOWN。 繫結至 DBTYPE_IUNKNOWN 表示應用程式想要使用 ISequentialStream 介面將資料處理為資料流。 當取用者的指定*wType*繫結為類型 DBTYPE_IUNKNOWN，並對應資料行或輸出中的預存程序的參數是 UDT，OLE DB Driver for SQL Server 會傳回 ISequentialStream。 輸入參數，如 OLE DB Driver for SQL Server 將查詢的 ISequentialStream 介面。<br /><br /> 在大型 UDT 的情況下，您可以選擇不要在使用 DBTYPE_IUNKNOWN 繫結時繫結 UDT 資料的長度。 不過，小型 UDT 則必須繫結長度。 如果下列其中一項或多項成立，則 DBTYPE_UDT 參數可以指定為大型 UDT：<br />*ulParamParamSize*為 ~ 0。<br />DBPARAMFLAGS_ISLONG 會在 DBPARAMBINDINFO 結構中設定。<br /><br /> 對於資料列資料而言，DBTYPE_IUNKNOWN 繫結只適用於大型 UDT。 您可以找出資料行是否為大型 UDT 類型的資料列集上使用 icolumnsinfo:: Getcolumninfo 方法或命令物件的 IColumnsInfo 介面。 如果下列其中一項或多項成立，則 DBTYPE_UDT 資料行會是大型 UDT 資料行：<br />DBCOLUMNFLAGS_ISLONG 旗標會在 DBCOLUMNINFO 結構的 *dwFlags* 成員上設定。 <br />*ulColumnSize* DBCOLUMNINFO 的成員為 ~ 0。|  
+|6|UDT 參數可以在 DBBINDING 中繫結為 DBTYPE_IUNKNOWN。 繫結至 DBTYPE_IUNKNOWN 表示應用程式想要使用 ISequentialStream 介面將資料處理為資料流。 當取用者在系結中將*wType*指定為類型 DBTYPE_IUNKNOWN, 而預存程式的對應資料行或輸出參數為 UDT 時, SQL Server 的 OLE DB 驅動程式會傳回 ISequentialStream。 針對輸入參數, SQL Server 的 OLE DB 驅動程式會查詢 ISequentialStream 介面的。<br /><br /> 在大型 UDT 的情況下，您可以選擇不要在使用 DBTYPE_IUNKNOWN 繫結時繫結 UDT 資料的長度。 不過，小型 UDT 則必須繫結長度。 如果下列其中一項或多項成立，則 DBTYPE_UDT 參數可以指定為大型 UDT：<br />*ulParamParamSize*為 ~ 0。<br />DBPARAMFLAGS_ISLONG 會在 DBPARAMBINDINFO 結構中設定。<br /><br /> 對於資料列資料而言，DBTYPE_IUNKNOWN 繫結只適用於大型 UDT。 您可以使用資料列集或命令物件的 IColumnsInfo 介面上的 IColumnsInfo:: GetColumnInfo 方法, 找出資料行是否為大型的 UDT 類型。 如果下列其中一項或多項成立，則 DBTYPE_UDT 資料行會是大型 UDT 資料行：<br />DBCOLUMNFLAGS_ISLONG 旗標會在 DBCOLUMNINFO 結構的 *dwFlags* 成員上設定。 <br />DBCOLUMNINFO 的*ulColumnSize*成員為 ~ 0。|  
   
  DBTYPE_NULL 和 DBTYPE_EMPTY 可以針對輸入參數而繫結，但是不能針對輸出參數或結果而繫結。 當針對輸入參數來繫結時，狀態必須針對 DBTYPE_NULL 設定為 DBSTATUS_S_ISNULL，或針對 DBTYPE_EMPTY 設定為 DBSTATUS_S_DEFAULT。 DBTYPE_BYREF 不適用於 DBTYPE_NULL 或 DBTYPE_EMPTY。  
   

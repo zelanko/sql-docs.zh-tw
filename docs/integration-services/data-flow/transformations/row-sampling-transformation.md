@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f8c4744c7e56e7b3014e8af3b462c87b639b6ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456527f6c198060f57ce237b3a7cce1f7985731a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928220"
 ---
 # <a name="row-sampling-transformation"></a>資料列取樣轉換
 

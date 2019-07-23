@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fa160884-394e-4fb2-a6e8-0437b81c149d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 75ab28638070e243a8022654ac33e61a017b37ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c2c8a91e3c3f3eee050fefce1d24f87e245cb8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955341"
 ---
 # <a name="createnclob-method-sqlserverconnection"></a>createNClob 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,8 +35,8 @@ public java.sql.NClob createNClob()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 createNClob 方法是由 java.sql.Connection 介面中的 createNClob 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 createNClob 方法是由連接介面中的 createNClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

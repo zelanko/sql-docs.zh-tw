@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e6ce2f52a8f3326a753d1647bd865c7d6d939e45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d0a2c40462784558f4d618c7e3d0a206d6d382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953293"
 ---
 # <a name="getcharacterstream-method--sqlservernclob"></a>getCharacterStream 方法 () (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,8 +35,8 @@ public java.io.Reader getCharacterStream()
 ## <a name="return-value"></a>傳回值  
  Reader 物件，包含 **NCLOB** 資料。  
   
-## <a name="remarks"></a>備註  
- GetCharacterStream 方法 java.sql.NClob 介面中所指定這個 getCharacterStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 getCharacterStream 方法是由 NClob 介面中的 getCharacterStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [getCharacterStream 方法 &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   

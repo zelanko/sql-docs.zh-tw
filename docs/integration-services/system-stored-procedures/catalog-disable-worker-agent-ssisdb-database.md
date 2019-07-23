@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f3d8f362fd74f5676901b7980fa2f872a8e1a57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43520ecf8645da17f874c993430d757ab88d6c3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007797"
 ---
 # <a name="catalogdisableworkeragent-ssisdb-database"></a>catalog.disable_worker_agent (SSISDB 資料庫)
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 04dc5c791a9a3cfc0cd28941705c5e300ebeef8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ffc0e83be57232670e53ef78ca4793309b8dae3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025192"
 ---
 # <a name="update-statistics-task"></a>更新統計資料工作
 

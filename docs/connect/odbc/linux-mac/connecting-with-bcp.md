@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996614"
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[Bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上使用。 本頁記載的 Windows 版本的差異`bcp`。
+[Bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上使用。 本頁記錄與 Windows 版本的`bcp`差異。
   
 - 欄位結束字元是定位字元 ("\t")。  
   
@@ -47,7 +46,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>可用的選項
 在目前版本中，有下列語法和選項可供使用：  
 
-[_database_**.**]_schema_**.**_table_ **in** _data\_file_ | **out** _data\_file_
+[_database_ **.** ]_schema_ **.** _table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 指定伺服器所收送之每個網路封包的位元組數。  
@@ -79,7 +78,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。  
   
 - -l  
-指定登入逾時。 -l 選項會指定在您嘗試連線到伺服器時，登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 逾時之前的秒數。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為 0 會指定無限逾時。
+指定登入逾時。 -l 選項會指定在您嘗試連線到伺服器時，登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 逾時之前的秒數。 預設登入超時時間為15秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為0會指定無限的超時時間。
   
 - -L *last_row*  
 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。  
@@ -103,7 +102,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定要使用定義給用戶端電腦地區設定的區域格式，將貨幣、日期和時間資料大量複製到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 - -S *server*  
-指定的名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]連接的執行個體如果-D 是使用或，DSN。  
+指定要連接之[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例的名稱, 如果使用了-D, 則為。  
   
 - -t *field_terminator*  
 指定欄位結束字元。  

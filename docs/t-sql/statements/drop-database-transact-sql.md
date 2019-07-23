@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e064ab7ae8ef7776e03cb8d80bb4038a362e7689
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898099"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -86,7 +85,7 @@ DROP DATABASE database_name [;]
 
 ## <a name="interoperability"></a>互通性
 
-### <a name="sql-server"></a>[SQL Server]
+### <a name="sql-server"></a>SQL Server
 
 若要卸除針對異動複寫而發行的資料庫，或是針對合併式複寫而發行或訂閱的資料庫，必須先從該資料庫移除複寫。 如果資料庫損毀，或者無法先移除複寫，或者兩種情況都有，多半還是能夠卸除資料庫，方法是利用 ALTER DATABASE，將資料庫設為離線，然後再卸除它。
 
@@ -121,7 +120,7 @@ DROP DATABASE 陳述式必須執行自動認可模式，且不能在明確或隱
 
 DROP DATABASE 陳述式必須是 SQL 批次中的唯一陳述式，而且您一次只能卸除一個資料庫。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

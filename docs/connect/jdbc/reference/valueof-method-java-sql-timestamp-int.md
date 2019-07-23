@@ -1,5 +1,5 @@
 ---
-title: valueOf 方法 （java.sql.Timestamp，int） |Microsoft Docs
+title: valueOf 方法 (sql. Timestamp, int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b3d2eb2934474b51aacddebc72230330c86bfeb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c13438851fdc543a3567abdc001af5b5b9e726fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001568"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>valueOf 方法 (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
  以分鐘為單位的位移。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回表示點的時間 java.sql.Timestamp 物件在指定的位移，分鐘為單位從 GMT DateTimeOffset 物件。  
+ 傳回 DateTimeOffset 物件, 表示在指定的位移 (以分鐘為單位) 的 GMT 中, 由 sql-dmo 所指定的時間點。  
   
 ## <a name="see-also"></a>另請參閱  
  [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)   

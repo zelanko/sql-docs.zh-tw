@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5ee2afaf911ac4a3f66a769ded09ed92ebe0dd58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc3e16e766544de52b56de39424a8b1d99f8fdff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906071"
 ---
 # <a name="script-task-examples"></a>指令碼工作範例
 

@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4ee8e7d796016f07339f5ef083fe1fde23d859d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a6295d1ccfe06c1c4cb3a353ee071af7d04f0c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092598"
 ---
 # <a name="catalogdeploypackages"></a>catalog.deploy_packages 
 

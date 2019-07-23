@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a31abfb17d613512651b8cfd7d7de92ee268beed
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2b2754366a8272785ddfc9e11053d3b805ce6938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976527"
 ---
 # <a name="ownupdatesarevisible-method-sqlserverdatabasemetadata"></a>ownUpdatesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean othersUpdatesAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 ownUpdatesAreVisible 方法是由 java.sql.DatabaseMetaData 介面中 ownUpdatesAreVisible 方法指定。  
+ 這個 ownUpdatesAreVisible 方法是由 JAVA.sql.databasemetadata 介面中的 ownUpdatesAreVisible 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

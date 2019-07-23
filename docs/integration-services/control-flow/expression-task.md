@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 781f734ac394ffa1374c6bc93861c552dc32618a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 689dc578f28f9b27961fbb5cec161924fdbe54fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988318"
 ---
 # <a name="expression-task"></a>運算式工作
 

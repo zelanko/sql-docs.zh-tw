@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e88a49017db5f8a9a7140f31a10a430a45b988ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82b550d8e814f225614feb7b758ce37d2292f816
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042669"
 ---
 # <a name="ogc-static-geography-methods"></a>OGC 靜態地理方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

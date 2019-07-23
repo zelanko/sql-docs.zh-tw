@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e43c9e6c284a5a546f7648b72158597921aa922
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957488"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴展事件記錄檔中的診斷資訊
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66770522"
 ## <a name="details"></a>詳細資料  
  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會針對連線作業傳送用戶端連線識別碼。 如果連線失敗，您可以存取連線通道緩衝區 ([使用連線通道緩衝區在 SQL Server 2008 中進行連線的疑難排解](https://go.microsoft.com/fwlink/?LinkId=207752))、尋找 **ClientConnectionID** 欄位，並且取得有關連線失敗的診斷資訊。 僅在發生錯誤時，才會在信號緩衝區中記錄用戶端連接識別碼。 (如果在傳送登入前封包之前連線失敗，則不會產生用戶端連線識別碼。)用戶端連接識別碼是 16 位元組的 GUID。 如果在擴充事件工作階段中將 **client_connection_id** 動作新增至事件，您也可在擴充事件目標輸出中找到用戶端連線識別碼。 如果您需要進一步的用戶端驅動程式診斷協助，則可以啟用追蹤，並重新執行連線命令，以觀察追蹤中的 **ClientConnectionID** 欄位。  
   
- 您可以取得用戶端連接識別碼，以程式設計方式使用[ISQLServerConnection 介面](../../connect/jdbc/reference/isqlserverconnection-interface.md)。 連接識別碼也會出現在任何與連接有關的例外狀況中。  
+ 您可以使用[ISQLServerConnection 介面](../../connect/jdbc/reference/isqlserverconnection-interface.md), 以程式設計方式取得用戶端連接識別碼。 連接識別碼也會出現在任何與連接有關的例外狀況中。  
   
  發生連線錯誤時，伺服器內建診斷 (BID) 追蹤資訊和連線通道緩衝區中的用戶端連線識別碼可協助您將用戶端連線與伺服器連線相互關聯。 如需伺服器 BID 追蹤的詳細資訊，請參閱[資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=125805)。 請注意，這篇資料存取追蹤文章也包含資料存取追蹤的相關資訊，但是這些資訊不適用於 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]；如需使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 執行資料存取追蹤的資訊，請參閱[追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md)。  
   

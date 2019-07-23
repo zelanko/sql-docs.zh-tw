@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f19852f8bd922c04c0c860d2884dce3f470fe646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c7c2f167924c6a733b459e95d8320e762bfe44a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117531"
 ---
 # <a name="system-functions-transact-sql"></a>系統函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

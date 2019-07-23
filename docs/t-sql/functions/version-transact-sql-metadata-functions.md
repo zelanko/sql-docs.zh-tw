@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7077a0696fa8711ceb45c9d8e5ad505da224b501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed3eab701a8edbbf118e228bd90080a61a214b32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927433"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL 中繼資料函式
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

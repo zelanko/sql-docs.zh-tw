@@ -1,5 +1,5 @@
 ---
-title: SQLServerSavepoint 建構函式-儲存點 |Microsoft Docs
+title: SQLServerSavepoint 的函式-儲存點 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fb77db6b-ebf8-4b12-8153-2c4bdb8d72f7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 41675553cfb5993f9eab95b427488f5ef8b213ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5a27f7be74b8b4bf471095cacd97b246df12608
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970433"
 ---
 # <a name="sqlserversavepoint-constructor-sqlserverconnection-javalangstringname"></a>SQLServerSavepoint 建構函式 (SQLServerConnection, java.lang.StringName)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

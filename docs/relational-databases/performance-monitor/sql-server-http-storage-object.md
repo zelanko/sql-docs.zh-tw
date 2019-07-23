@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: f863259a12be7ef2346ddfa333b79c95a920d2fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dbfcc5df16b1801154f9be9af46c7bad07925f3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62649474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093483"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server、HTTP 儲存體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,33 +13,32 @@ helpviewer_keywords:
 - IBCPSession interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6fc35b0e8d964d07987263fa05e2647da6fefdd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73f8fd440903c525856475200921f97a25d9b27b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015507"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IBCPSession** 介面會公開以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 檔案為基礎之大量複製作業的支援。 **IBCPSession**介面公開在 OLE DB Driver for SQL Server 下相同工作階段層級。 在 OLE DB Driver for SQL Server 中，資料來源物件是工作階段物件的 Factory，而且大量複製作業指定於連線屬性 SSPROP_ENABLEBULKCOPY 中。 此外，SSPROP_ENABLEFASTLOAD 屬性應該要設定為 true。  
+  **IBCPSession** 介面會公開以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 檔案為基礎之大量複製作業的支援。 在 OLE DB 驅動程式中, 會針對與會話相同層級下的 SQL Server 公開**IBCPSession**介面。 在 OLE DB Driver for SQL Server 中，資料來源物件是工作階段物件的 Factory，而且大量複製作業指定於連線屬性 SSPROP_ENABLEBULKCOPY 中。 此外，SSPROP_ENABLEFASTLOAD 屬性應該要設定為 true。  
   
  然後，呼叫 **IDBCreateSession::CreateSession** 方法將會導致建立 **BulkCopySession** 物件。 所有透過 **IBCPSession** 物件公開之以檔案為基礎的大量複製方法會變成可在這個 **IBCPSession** 物件的 **IBCPSession** 介面上使用幾乎相同的簽章進行呼叫。  
   
 > [!NOTE]  
 >  OLE DB Driver for SQL Server 支援透過 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 介面進行以記憶體為基礎的大量複製作業。  
   
- 如需使用 OLE DB Driver for SQL Server，進行大量複製作業的詳細資訊，請參閱[執行大量複製作業](../../oledb/features/performing-bulk-copy-operations.md)。  
+ 如需使用 OLE DB 驅動程式進行大量複製作業 SQL Server 的詳細資訊, 請參閱[執行大量複製作業](../../oledb/features/performing-bulk-copy-operations.md)。  
   
- 如需示範如何使用範例**IBCPSession**介面，請參閱[IBCPSession::BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)。  
+ 如需顯示如何使用**IBCPSession**介面的範例, 請參閱[IBCPSession:: BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|方法|描述|  
+|方法|Description|  
 |------------|-----------------|  
 |[IBCPSession::BCPColFmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)|在程式變數與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行之間建立繫結。|  
 |[IBCPSession::BCPColumns &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)|設定要繫結至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中之資料行的欄位數目。|  

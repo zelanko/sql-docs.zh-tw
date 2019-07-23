@@ -1,5 +1,5 @@
 ---
-title: 準備輸入的追蹤資料 |Microsoft Docs
+title: 準備輸入追蹤資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b99d260c61a8d64ed7ad64003bdf3f85c6de50ba
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3fbf4e9b2607638d37217dc5862a36446d592b5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949999"
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
   
- ![Distributed replay 前置處理階段](../../tools/distributed-replay/media/preprocess.gif "Distributed replay 前置處理階段")  
+ ![Distributed replay]前置處理階段(../../tools/distributed-replay/media/preprocess.gif "Distributed replay")前置處理階段  
   
  如需前置處理階段的詳細資訊，請參閱 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
   

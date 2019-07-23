@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d01697fe773de96c80dc9ea79e4e0c9ac4f253d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb3b19e67a4a85ef3f7a26d7ad792e7e39459302
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948016"
 ---
 # <a name="xmlschemanamespace"></a>xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  這是要重新建構的 XML 結構描述集合名稱。 *XML_schema_collection_name* 是 **sysname**。  
   
  *Namespace*  
- 這是您要重新建構之 XML 結構描述的命名空間 URI。 它限制為 1,000 個字元。 如果不提供命名空間 URI，會重新建構整個 XML 結構描述集合。 *Namespace* 是 **nvarchar(4000)**。  
+ 這是您要重新建構之 XML 結構描述的命名空間 URI。 它限制為 1,000 個字元。 如果不提供命名空間 URI，會重新建構整個 XML 結構描述集合。 *Namespace* 是 **nvarchar(4000)** 。  
   
 ## <a name="return-types"></a>傳回類型  
  **xml**  

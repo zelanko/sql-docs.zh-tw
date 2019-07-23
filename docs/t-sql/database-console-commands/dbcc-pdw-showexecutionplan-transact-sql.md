@@ -11,14 +11,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f83aeec8ca81dd819e466f0e5017fb2e13514b61
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d0dd253eb161c842a2edbdcad73edd41114d73cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039067"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -53,7 +52,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
  *spid*  
  執行查詢計劃之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作階段的識別碼。 此為整數，而且不得為 NULL。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的 CONTROL 權限。  
   
 需要設備的 VIEW-SERVER-STATE 權限。

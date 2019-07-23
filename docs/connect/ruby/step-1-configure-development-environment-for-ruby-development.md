@@ -10,39 +10,38 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ff03ce6ec79aede2e056f0154836e77970af9c50
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 38af92d3cb0354bc4b75131a349f6a1c26e90490
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992466"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1︰設定 Ruby 開發的開發環境
-您必須設定您的開發環境的先決條件，才能開發使用 Ruby Driver for SQL Server 的應用程式。    
+您必須使用必要條件設定您的開發環境, 才能使用適用于 SQL Server 的 Ruby 驅動程式來開發應用程式。    
   
-請注意，Ruby 驅動程式會使用 TDS 通訊協定，SQL Server 和 Azure SQL Database 中的預設會啟用。  不需要進行其他組態設定。  
+請注意, Ruby 驅動程式會使用 TDS 通訊協定, 其預設會在 SQL Server 和 Azure SQL Database 中啟用。  不需要進行其他組態設定。  
   
   
 ## <a name="windows"></a>Windows  
   
-1.  **Ruby 的安裝程式下載**  
-如果您的電腦並沒有 Ruby 請加以安裝。 針對新的 ruby 使用者，我們建議使用 Ruby 2.2.x 版本安裝程式。 這些提供穩定的語言和廣泛相容，並且已更新的封裝 （寶藏） 清單。 移[Ruby 的下載頁面](https://rubyinstaller.org/downloads/)及下載適當的 2.1.x 安裝程式。 如範例中，如果您是在 64 位元電腦上，下載 Ruby 2.1.6 (x64) 安裝程式。   
+1.  **下載 Ruby 安裝程式**  
+如果您的電腦沒有 Ruby, 請安裝它。 針對新的 ruby 使用者, 建議使用 Ruby 2.2. X 安裝程式。 這些提供穩定的語言, 以及相容和更新的套件 (gem) 清單。 前往[Ruby 下載頁面](https://rubyinstaller.org/downloads/), 並下載適當的 2.1. x 安裝程式。 例如, 如果您是在64位電腦上, 請下載 Ruby 2.1.6 (x64) 安裝程式。   
   
 2.  **安裝 Ruby**  
-安裝程式下載後，執行下列作業：  
+下載安裝程式之後, 請執行下列動作:  
 A. 按兩下檔案以啟動安裝程式。  
-B. 選取您的語言，並同意條款。  
-c.  在 [安裝設定] 畫面中，選取您路徑並產生關聯.rb 和.rbw 檔案這項 Ruby 安裝這兩個新增的 Ruby 可執行檔旁邊的核取方塊。  
+B. 選取您的語言, 並同意條款。  
+c.  在 [安裝設定] 畫面上, 選取 [將 Ruby 可執行檔新增至您的路徑] 旁的核取方塊, 並將 [rb] 和 [rbw] 檔案與此 Ruby 安裝產生關聯。  
   
 3.  **下載 Ruby DevKit**  
-從 RubyInstaller 頁面下載 DevKit  
+從 [RubyInstaller] 頁面下載 DevKit  
   
 4.  **安裝 Ruby DevKit**  
-下載完成之後，執行下列作業：  
-A. 按兩下檔案。 您必須將檔案解壓縮的位置。  
-B. 按一下 [...] 按鈕，然後選取 「 C:\DevKit"。 您可能必須先建立此資料夾，依序按一下 [讓新資料夾]。  
-c. 按一下 [確定]，並接著 [擷取]，將檔案解壓縮。  
+下載完成之後, 請執行下列動作:  
+A. 按兩下檔案。 系統會要求您解壓縮檔案的位置。  
+B. 按一下 [...]按鈕, 然後選取 [C:\DevKit]。 您可能需要先按一下 [建立新資料夾] 來建立這個資料夾。  
+c. 按一下 [確定], 然後按 [解壓縮] 來解壓縮檔案。  
   
 5. **開啟 cmd.exe**  
   
@@ -70,14 +69,14 @@ c. 按一下 [確定]，並接著 [擷取]，將檔案解壓縮。
 > source ~/.rvm/scripts/rvm  
 ```  
    
-3. **安裝 Ruby 使用 rvm**  
-例如，安裝 Ruby 的版本 2.3.0:  
+3. **使用 rvm 安裝 Ruby**  
+例如, 安裝2.3.0 的 Ruby 版本:  
 ```  
 > rvm install 2.3.0  
 > rvm use 2.3.0 --default  
 > ruby -v  
 ```  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;請確定最後一個命令的輸出，表示您正在 2.3.0 版。  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;請確定最後一個命令的輸出指出您正在執行版本2.3.0。  
   
 4.  **安裝 FreeTDS**  
 ```  
@@ -91,7 +90,7 @@ c. 按一下 [確定]，並接著 [擷取]，將檔案解壓縮。
   
 ## <a name="mac"></a>Mac  
   
-請注意，Mac OS X 已經 Ruby 預先安裝，因為作業系統具有相依性。    
+請注意, Mac OS X 已經預先安裝 Ruby, 因為作業系統具有相依性。    
   
 1.  **開啟終端機**  
   

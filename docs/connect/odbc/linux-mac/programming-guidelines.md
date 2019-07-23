@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798747"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264146"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -130,6 +129,8 @@ Windows 與 Linux 和 macOS 上的數個 iconv 程式庫版本之間有一些編
     > DAC 連線必須使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。  
     
 2.  如果陳述式屬性是透過 SQLSetConnectAttr 來傳遞的，則 UnixODBC 驅動程式對於所有的陳述式屬性都會傳回「無效的屬性/選項識別碼」。 在 Windows 上，當 SQLSetConnectAttr 收到陳述式屬性值時，會導致驅動程式在屬於連線控制代碼子系的所有作用中陳述式上設定值。  
+
+3.  使用具有高度多執行緒應用程式的驅動程式時, unixODBC 的控制碼驗證可能會變成效能瓶頸。 在這種情況下, 您可以使用`--enable-fastvalidate`選項編譯 unixODBC, 以獲得更高的效能。 不過, 請注意, 這可能會導致將無效控制碼傳遞給 ODBC api 的應用程式`SQL_INVALID_HANDLE`損毀, 而不會傳回錯誤。
 
 ## <a name="see-also"></a>另請參閱  
 [常見問題集](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

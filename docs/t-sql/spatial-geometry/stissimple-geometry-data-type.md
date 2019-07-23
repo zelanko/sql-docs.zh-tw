@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 662ead77fe7af659718266ab3518a13536c77e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b91fdde3c6940ffa0a7f2e77591e05578e005c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894921"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

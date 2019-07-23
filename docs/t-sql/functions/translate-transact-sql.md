@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2f278b257b1e14f88743a03098949712fa7a873
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098834"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 

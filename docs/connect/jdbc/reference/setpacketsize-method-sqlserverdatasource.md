@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d102885fc235a66f5d42b7ae5100bc8905d895d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8e3affcbb2181cf8979196c65a0bcd81e58c541e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973279"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>setPacketSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public void setPacketSize(int packetSize)
   
  此外，應用程式可能希望在未要求 SSL 加密情況下設定 packetSize 屬性。 在這種情況下，如果伺服器要求用戶端支援 SSL 加密，則驅動程式就會檢查 JVM 之預設安全性提供者的 SSL 記錄大小。 如果 packetSize 屬性大於 JVM 之預設安全性提供者的 SSL 記錄大小，則驅動程式將引發錯誤，並終止連接。  
   
- 如需使用 SSL 的詳細資訊，請參閱[Using SSL Encryption](../../../connect/jdbc/using-ssl-encryption.md)。  
+ 如需使用 SSL 的詳細資訊, 請參閱[使用 Ssl 加密](../../../connect/jdbc/using-ssl-encryption.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

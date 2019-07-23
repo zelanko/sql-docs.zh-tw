@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4444e4988df4a922d42742c58f4bc9e439eb603f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979104"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>getTime 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public java.sql.Time getTime(int index,
   
  *cal*  
   
- 月曆物件。  
+ 行事曆物件。  
   
 ## <a name="return-value"></a>傳回值  
  時間物件。  
@@ -51,10 +50,10 @@ public java.sql.Time getTime(int index,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這項 getTime 方法由 java.sql.CallableStatement 介面中的 getTime 方法指定。  
   
- 圖表標題為 「 Getter 方法轉換 」 所示[了解資料類型轉換](../../../connect/jdbc/understanding-data-type-conversions.md)若要查看哪些[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以使用此方法擷取的資料型別。  
+ 請參閱[瞭解資料類型轉換](../../../connect/jdbc/understanding-data-type-conversions.md)中標題為「Getter 方法轉換」的圖表, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以查看可使用此方法來抓取哪些資料類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [getTime 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: __construct |Microsoft Docs'
+title: 'PDO:: __construct |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5a181d6e8b9a3ffbf9d65dc74cae967d6a1f40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936250"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +36,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*：選用。 包含使用者密碼的字串。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接，請指定密碼。 若要使用 Windows 驗證進行連接，請指定 `""`。  
   
-*$driver_options*： 選擇性。 您可以指定 PDO 驅動程式管理員屬性和 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的特定驅動程式屬性 -- PDO::SQLSRV_ATTR_ENCODING、PDO::SQLSRV_ATTR_DIRECT_QUERY。 無效的屬性不會產生例外狀況。 與 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)一起指定時，無效的屬性會產生例外狀況。  
+*$driver _options*: 選擇性。 您可以指定 PDO 驅動程式管理員屬性和 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的特定驅動程式屬性 -- PDO::SQLSRV_ATTR_ENCODING、PDO::SQLSRV_ATTR_DIRECT_QUERY。 無效的屬性不會產生例外狀況。 與 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)一起指定時，無效的屬性會產生例外狀況。  
   
 ## <a name="return-value"></a>傳回值  
 傳回 PDO 物件。 如果失敗，會傳回 PDOException 物件。  
@@ -48,7 +47,7 @@ PDOException
 ## <a name="remarks"></a>Remarks  
 您可以將執行個體設為 Null，以關閉連接物件。  
   
-連接之後，pdo:: errorcode 會顯示 01000，而不是 00000。  
+連接之後, PDO:: errorCode 會顯示 01000, 而不是00000。  
   
 如果 PDO::__construct 因故失敗，則會擲回例外狀況，即使 PDO::ATTR_ERRMODE 設定為 PDO::ERRMODE_SILENT 亦然。  
   

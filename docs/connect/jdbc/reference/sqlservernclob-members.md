@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8386d896391405777648ee3ec27b188b313c737c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 303742b8e7b7bf8221565e09cf23d2e18cdca8de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970941"
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,17 +33,17 @@ ms.locfileid: "66788958"
   
 ## <a name="methods"></a>方法  
   
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|這個方法會釋放 **NCLOB** 物件並釋出它所保留的資源。|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|擷取**NCLOB**所指定值**java.sql.NClob**當做 ASCII 資料流的物件。|  
-|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|擷取**NCLOB**所指定值**java.sql.NClob**物件。|  
-|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|擷取在指定的子字串的複本**NCLOB**所指定值**java.sql.NClob**物件。|  
-|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|擷取中的字元數目**NCLOB**所指定值**java.sql.NClob**物件。|  
+|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|抓取**NCLOB**物件指定為 ASCII 資料流程的**NCLOB**值。|  
+|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|捕獲**NCLOB**物件所指定的**NCLOB**值。|  
+|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|在**NCLOB**物件所指定的**NCLOB**值中, 抓取指定之子字串的複本。|  
+|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|抓取**NCLOB**值中**NCLOB**物件所指定的字元數。|  
 |[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|依據指定的開始位置，擷取所指定 **java.sql.NClob** 物件或 **java.sql.NClob** 中子字串的字元位置。|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|擷取資料流，此資料流將用於從指定位置開始，將 ASCII 字元寫入到這個 **java.sql.NClob** 物件所代表的 **NCLOB** 值。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|擷取資料流，此資料流將用於從指定位置開始，將 Unicode 字元資料流寫入到這個 **java.sql.NClob** 物件所代表的 **NCLOB** 值。|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|寫入指定**字串**要**NCLOB**指定位置開始。|  
+|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|從指定的位置開始, 將指定的**字串**寫入至**NCLOB** 。|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlservernclob.md)|截斷 **NCLOB** 值成為指定的長度。|  
   
 ## <a name="inherited-methods"></a>繼承的方法  

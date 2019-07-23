@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: de095cb3-1111-4154-8996-3c2e529e3000
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21a32b48eb3c00d7163dd9eda93e8bd971fe99e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf6338d0aee36fedd9011a8467b1d283d7dcae21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972823"
 ---
 # <a name="setsqlxml-method-sqlservercallablestatement"></a>setSQLXML 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public final void setSQLXML(java.lang.String parameterName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 setSQLXML 方法是由 java.sql.CallableStatement 介面中的 setSQLXML 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

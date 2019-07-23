@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7ffaa3267a512fc85b223290c76e239013612d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0009ec924ebe935b60194f950da5d30593adfd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68232249"
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ column_name AS computed_column_expression
  要改變、加入或卸除的資料欄名稱。 *column_name* 可以是 1 至 128 個字元。 若是以 **timestamp** 資料類型建立的新資料行，則可以省略 *column_name*。 如果沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。  
   
 *computed_column_expression*  
- 這是定義計算資料行值的運算式。 計算資料行是一個虛擬資料行，並未實際儲存在資料表中，而是從使用相同資料表之其他資料行的運算式計算出來的。 例如，計算資料行可能會有 cost AS price * qty 這類定義。這個運算式可以是非計算的資料行名稱、常數、函數、變數，以及一個或多個運算子所連接的這些項目的任何組合。 這個運算式不能是子查詢，也不能包括別名資料類型。  
+ 這是定義計算資料行值的運算式。 計算資料行是一個虛擬資料行，並未實際儲存在資料表中，而是從使用相同資料表之其他資料行的運算式計算出來的。 例如，計算資料行可能會有 cost AS price * qty 這類定義。這個運算式可以是非計算的資料行名稱、常數、函式、變數，以及一或多個運算子所連接這些項目的任何組合。 這個運算式不能是子查詢，也不能包括別名資料類型。  
   
  計算資料行可用在選取清單、WHERE 子句、ORDER BY 子句中，或任何能夠使用規則運算式的其他位置中，但下列狀況例外：  
   

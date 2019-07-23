@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf480e3e72a6495f9c0eefe04255a2ed566818df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cdead9d5b6f84072dae454eced8301add4b3c31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927619"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -11,13 +11,12 @@ ms.topic: conceptual
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 86a3db60a6eea2dce25394cab069d9ca9e1f9f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abdb0350e90e1e9d1907db0405f696862434390e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897942"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) 相應放大
 

@@ -7,13 +7,12 @@ ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e9b286a114e3f748c6b87789cbbc8b171377463
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: e7ff4a816d7255f667ece0a4984f464d152280ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136286"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>使用 Stretch Database 設定相容的 SQL Server 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +20,7 @@ ms.locfileid: "56240752"
 
 採取簡單的步驟即可設定下列的 SQL Server 功能，以便使用 Stretch Database。
 -   Always On
--   永遠加密
+-   Always Encrypted
 -   透明資料加密 (TDE)
 -   時態表
 

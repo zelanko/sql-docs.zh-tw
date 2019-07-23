@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e1c05eb3-8465-46fd-99bc-5e8effcafee5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b0f9a8a30e694671a0e4d87163e50816c18859ad
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c47ca9fc50031e08479bfc78ffacbc66be73e14f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982110"
 ---
 # <a name="getmaxprocedurenamelength-method-sqlserverdatabasemetadata"></a>getMaxProcedureNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxProcedureNameLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getMaxProcedureNameLength 方法是由 java.sql.DatabaseMetaData 介面中 getMaxProcedureNameLength 方法指定。  
+ 這個 getMaxProcedureNameLength 方法是由 JAVA.sql.databasemetadata 介面中的 getMaxProcedureNameLength 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

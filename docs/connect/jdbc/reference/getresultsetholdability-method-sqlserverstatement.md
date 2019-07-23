@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 053549ee-2018-47ab-9538-789dac2b150a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 69505d818bdc9ee5ebe75a9e05be23b386fe2fa8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 153da54f0b70d94b4428e2152db6b159230fa38c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980321"
 ---
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>getResultSetHoldability 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getResultSetHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getResultSetHoldability 方法是由 java.sql.Statement 介面中的 getResultSetHoldability 方法指定。  
+ 這個 getResultSetHoldability 方法是由 sql 語句介面中的 getResultSetHoldability 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

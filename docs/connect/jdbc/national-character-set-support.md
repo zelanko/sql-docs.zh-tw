@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab17d9e60752b1aea747b03947d235b7d5f91605
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ff8d7435e3a896c05281748568eacc2e92d32f6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956285"
 ---
 # <a name="national-character-set-support"></a>國家字元集支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  JDBC 驅動程式提供了 JDBC 4.0 API 的支援，其中包含全新的國家字元集轉換 API 方法。 這項支援包括的新 setter、 getter 和 updater 方法**NCHAR**， **NVARCHAR**， **LONGNVARCHAR**，以及**NCLOB** JDBC 類型。  
+  JDBC 驅動程式提供了 JDBC 4.0 API 的支援，其中包含全新的國家字元集轉換 API 方法。 這種支援包括**NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**和**NCLOB** JDBC 類型的新 setter、getter 和更新程式方法。  
   
  下面是支援國家字元集轉換的新 getter、setter 和 updater 方法清單：  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66801812"
 > [!NOTE]  
 >  若要在應用程式中使用這些方法，您必須將 Classpath 設定為包含 sqljdbc4.jar 檔案。  
   
- 為了以 Unicode 格式將 String 參數傳送至伺服器，應用程式應該使用新的 JDBC 4.0 國家字元方法，或在使用非國家字元方法時，將 **sendStringParametersAsUnicode** 連線屬性設定為 "**true**"。 建議的方式為盡可能使用新的 JDBC 4.0 國家字元方法。 如需詳細資訊**sendStringParametersAsUnicode**連接屬性，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
+ 為了以 Unicode 格式將 String 參數傳送至伺服器，應用程式應該使用新的 JDBC 4.0 國家字元方法，或在使用非國家字元方法時，將 **sendStringParametersAsUnicode** 連線屬性設定為 "**true**"。 建議的方式為盡可能使用新的 JDBC 4.0 國家字元方法。 如需**sendStringParametersAsUnicode**連接屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

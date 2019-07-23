@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: f62f7f5536fb2a1ec716971e6c24d88e47cc04aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92cf3e13f1e386a77ba4621b817567af95b42884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66009832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896981"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>變更 Scale Out 記錄的帳戶
 

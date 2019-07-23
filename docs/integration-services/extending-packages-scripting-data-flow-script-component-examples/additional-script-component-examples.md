@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9f962738621bf4be19975077d39fb253f62ad3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e178d20d77b454e649b43c91d5e54513b4a53b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112476"
 ---
 # <a name="additional-script-component-examples"></a>額外的指令碼元件範例
 

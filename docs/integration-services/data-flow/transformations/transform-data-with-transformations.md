@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 20a65f9755e0cea30a79435f885912c15cce5e7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d03bf325bd96b6646f683b0034c0246505e4fb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912607"
 ---
 # <a name="transform-data-with-transformations"></a>使用轉換來轉換資料
 

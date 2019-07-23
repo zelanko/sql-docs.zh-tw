@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 533cdfe3b83b8b759129a27a6dc1699298dd3f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817965"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262217"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>啟用通用條件合規性伺服器設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

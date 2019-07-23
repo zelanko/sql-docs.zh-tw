@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 85b4c36043314affdcd647b4c95698024a170485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 345cb7d09b7b1356751eb8b8b69ecf737805f2c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121654"
 ---
 # <a name="string-operators-transact-sql"></a>字串運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

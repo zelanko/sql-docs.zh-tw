@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: caad7bed9eab964193f0c5ec6734a1dc097b26ef
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 12645120f543094015f2da03eca224c40e16ab6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998465"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject 方法 (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void updateObject(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- UpdateObject 方法 java.sql.ResultSet 介面中所指定這個 updateObject 方法。  
+ 這個 updateObject 方法是由 sql-dmo 介面中的 updateObject 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateObject 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

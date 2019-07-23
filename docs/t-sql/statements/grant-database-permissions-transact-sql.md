@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6db8e7818cbcbba732828f0efd5177b8ab84870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4be7c1494f6f63a87591038265c6b0e63edc83b7
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993479"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344816"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 資料庫權限 (Transact-SQL)
 
@@ -251,7 +250,7 @@ GO
 
 ```sql
 USE AdventureWorks2012;
-GRANT CONTROL ON DATABASE:AdventureWorks2012 TO Sarah;
+GRANT CONTROL ON DATABASE::AdventureWorks2012 TO Sarah;
 GO
 ```
 
