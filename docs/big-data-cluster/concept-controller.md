@@ -1,67 +1,67 @@
 ---
-title: 什麼是控制器？
+title: 控制器是什麼？
 titleSuffix: SQL Server big data clusters
-description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 中的控制站。
+description: 本文說明 SQL Server 2019 big data cluster (預覽) 的控制器。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ef2424ae5a1c41821d47f033329c0c53121b59b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e984c3dced4bde713ac98d67c22481e54491cd68
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958740"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419542"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 的巨量資料叢集上的控制站？
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server big data 叢集上的控制器是什麼？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-控制站會裝載部署及管理巨量資料叢集的核心邏輯。 它會負責與 Kubernetes 叢集與 HDFS 和 Spark 等其他元件的一部分的 SQL Server 執行個體的所有互動。
+控制器會裝載用於部署和管理大型資料叢集的核心邏輯。 它會負責與 Kubernetes、屬於叢集一部分的 SQL Server 實例, 以及其他元件 (例如 HDFS 和 Spark) 的互動。
 
-控制器服務提供核心功能如下：
+控制器服務提供下列核心功能:
 
-- 管理叢集生命週期： 叢集啟動程序與刪除、 更新組態
-- 管理主要的 SQL Server 執行個體
-- 管理計算、 資料和儲存體集區
-- 若要觀察的叢集狀態的監視工具公開 （expose)
-- 公開 （expose) 來偵測並修復未預期的問題的疑難排解工具
-- 管理叢集安全性：
+- 管理叢集生命週期: 叢集啟動程式 & 刪除、更新設定
+- 管理主要 SQL Server 實例
+- 管理計算、資料和存放集區
+- 公開監視工具以觀察叢集的狀態
+- 公開疑難排解工具, 以偵測並修復非預期的問題
+- 管理叢集安全性:
   - 確保安全的叢集端點
   - 管理使用者和角色
-  - 設定叢集間通訊的認證
+  - 設定叢集內通訊的認證
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服務
 
-控制器會部署並裝載於相同的客戶，想要建置巨量資料叢集的 Kubernetes 命名空間。 此服務管理員安裝的 Kubernetes 叢集啟動程序，使用期間**mssqlctl**命令列公用程式。 如需詳細資訊，請參閱 <<c0> [ 開始使用 SQL Server 的巨量資料叢集](deploy-get-started.md)。
+控制器會部署並裝載在客戶想要建立 big data 叢集的相同 Kubernetes 命名空間中。 這項服務是由 Kubernetes 系統管理員在叢集啟動程式期間, 使用**azdata**命令列公用程式來安裝。 如需詳細資訊, 請參閱[開始使用 SQL Server big data](deploy-get-started.md)叢集。
 
-增建工作流程會在 Kubernetes 上的版面配置功能完整的 SQL Server 巨量資料叢集，其中包含所述的所有元件[概觀](big-data-cluster-overview.md)文章。 啟動程序的工作流程首先會建立控制器服務，以及安裝和設定的主機、 計算、 資料和儲存體集區的服務一部分的其餘部分，這部署之後，將協調控制器服務。
+增建工作流程會在 Kubernetes 功能齊全的 SQL Server big data 叢集之上進行版面配置, 其中包含[總覽](big-data-cluster-overview.md)文章中所述的所有元件。 啟動程式工作流程會先建立控制器服務, 一旦部署之後, 控制器服務就會協調主要、計算、資料和存放集區中其餘服務部分的安裝和設定。
 
-## <a name="managing-the-cluster-through-the-controller-service"></a>管理透過控制器服務叢集
+## <a name="managing-the-cluster-through-the-controller-service"></a>透過控制器服務管理叢集
 
-您可以管理透過使用其中一個控制站服務的叢集**mssqlctl**命令。 如果您將其他像是 pod 的 Kubernetes 物件部署到相同的命名空間時，不受管理或監視的控制器服務。 您也可以使用**kubectl**管理層級 Kubernetes 叢集的命令。 如需詳細資訊，請參閱 <<c0> [ 監視和疑難排解 SQL Server 的巨量資料叢集](cluster-troubleshooting-commands.md)。
+您可以使用任一個**azdata**命令, 透過控制器服務來管理叢集。 如果您將其他 Kubernetes 物件 (例如 pod) 部署到相同的命名空間中, 控制器服務就不會管理或監視它們。 您也可以使用**kubectl**命令來管理 Kubernetes 層級的叢集。 如需詳細資訊, 請參閱[監視和疑難排解 SQL Server big data](cluster-troubleshooting-commands.md)叢集。
 
-建立適用於巨量資料叢集的 Kubernetes 物件 （可設定狀態的集合，pod、 密碼等） 和的控制站位於專用的 Kubernetes 命名空間。 控制器服務將 Kubernetes 叢集系統管理員可以管理該命名空間內的所有資源授與權限。  在初始叢集部署使用自動設定此案例中的 RBAC 原則**mssqlctl**。
+針對 big data 叢集所建立的控制器和 Kubernetes 物件 (具狀態集、pod、秘密等) 都位於專用的 Kubernetes 命名空間中。 Kubernetes 叢集系統管理員將授與控制站服務的許可權, 以管理該命名空間內的所有資源。  此案例的 RBAC 原則會在使用**azdata**進行初始叢集部署的過程中自動設定。
 
-### <a name="mssqlctl"></a>mssqlctl
+### <a name="azdata"></a>azdata
 
-**mssqlctl**是命令列公用程式，可讓叢集系統管理員啟動及管理透過控制器服務所公開的 REST Api 的巨量資料叢集以 Python 所撰寫。
+**azdata**是以 Python 撰寫的命令列公用程式, 可讓叢集系統管理員透過控制器服務所公開的 REST api 來啟動和管理大型資料叢集。
 
-## <a name="controller-service-security"></a>控制器服務的安全性
+## <a name="controller-service-security"></a>控制器服務安全性
 
-Controller 服務的所有通訊是透過 REST API 都進行 HTTPS。 自我簽署的憑證將會自動產生為您在啟動程序時之用。 
+所有與控制器服務的通訊都是透過 HTTPS 透過 REST API 進行。 系統會在啟動程式時自動為您產生自我簽署憑證。 
 
-控制器服務端點的驗證根據使用者名稱和密碼。 這些認證會在叢集啟動程序時使用環境變數的輸入佈建`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`。
+控制器服務端點的驗證是以使用者名稱和密碼為基礎。 這些認證會在叢集啟動時布建, 並使用環境變數`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`的輸入。
 
 > [!NOTE]
-> 您必須提供的密碼均遵守[SQL Server 密碼複雜性需求](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017)。
+> 您必須提供符合[SQL Server 密碼複雜性需求](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017)的密碼。
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解 SQL Server 巨量資料叢集，請參閱下列資源：
+若要深入瞭解 SQL Server big data 叢集, 請參閱下列資源:
 
-- [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
-- [研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [什麼是 SQL Server 2019 big data 叢集？](big-data-cluster-overview.md)
+- [發現Microsoft SQL Server big data 叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

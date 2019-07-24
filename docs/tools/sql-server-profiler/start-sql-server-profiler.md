@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b3ccffd3ad298d6c9a6bacca3e060d4fc7a5ed24
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 697905061bb60e91884d8844a103ba1302c5c4ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059624"
 ---
 # <a name="run-sql-server-profiler"></a>執行 SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +30,13 @@ ms.locfileid: "67729672"
   
 當您第一次啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，且從 [檔案]  功能表中選取 [新增追蹤]  時，應用程式會顯示一個 [連線到伺服器]  對話方塊，您可在此指定要連線的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>從 Windows 10 的 [開始] 功能表啟動 SQL Server Profiler  
--  按一下 Windows**啟動**圖示或按下 Windows 鍵，並開始輸入 「 SQL Server Profiler 17 」。 當**SQL Server Profiler 17**  圖格出現時，按一下它。   
+-  按一下 Windows [**開始**] 圖示或按 windows 鍵, 然後開始輸入 "SQL Server Profiler 17"。 當 [ **SQL Server Profiler 17** ] 磚出現時, 按一下它。   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>在 Database Engine Tuning Advisor 中啟動 SQL Server Profiler  
 -  在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 **[工具]** 功能表上，按一下 **[SQL Server Profiler]** 。  
 
-## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>若要啟動 SQL Server Management Studio 中的 SQL Server Profiler  
- 您可以啟動[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中的數個位置[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 當 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 啟動時，它會載入連線內容、追蹤範本及其啟動點的篩選內容。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開始在自己的執行個體中的每個 SQL Server Profiler 工作階段和 Profiler 會繼續執行，如果您關閉[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中啟動 SQL Server Profiler  
+ 您可以從[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的數個位置開始。 當 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 啟動時，它會載入連線內容、追蹤範本及其啟動點的篩選內容。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]會在自己的實例中啟動每個 SQL Server Profiler 會話, 而當您關閉[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]時, Profiler 會繼續執行。  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>從工具功能表啟動 SQL Server Profiler  
 -  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Tuning Advisor 中的** 功能表上，按一下 **[SQL Server Profiler]** 。  
 
@@ -58,5 +57,5 @@ ms.locfileid: "67729672"
 - 若要利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來執行追蹤，使用者也必須有 ALTER TRACE 權限。  
 
 ## <a name="next-steps"></a>後續步驟  
- [SQL Server Profiler 概觀](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler 總覽](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  

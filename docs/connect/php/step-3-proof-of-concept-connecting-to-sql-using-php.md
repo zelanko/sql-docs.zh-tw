@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4828be81914eddbbb5c26b5a6f65cd8b81d85df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014797"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步驟 3︰使用 PHP 連接到 SQL 的概念證明
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>步驟 1： 連線  
+## <a name="step-1--connect"></a>步驟 1: 連接  
   
   
-這**OpenConnection**中所有後續函式的頂端附近呼叫函式。  
+這個**OpenConnection**函式會在接下來的所有函式中的頂端附近呼叫。  
   
   
 ```php 
@@ -46,9 +45,9 @@ ms.locfileid: "66801434"
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>步驟 2： 執行查詢  
+## <a name="step-2--execute-query"></a>步驟 2: 執行查詢  
   
-[Sqlsrv_query （)](https://php.net/manual/en/function.sqlsrv-query.php)函式可以用來擷取結果集從查詢中，對 SQL Database。 此函式基本上會接受任何查詢和連接物件，並傳回結果集，這可以藉由使用反覆[sqlsrv_fetch_array （)](https://php.net/manual/en/function.sqlsrv-fetch-array.php)。  
+[Sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php)函數可用來從查詢針對 SQL Database 取出結果集。 此函式基本上會接受任何查詢和連線物件, 並傳回可使用[sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)反復執行的結果集。  
   
 ```php  
     function ReadData()  
@@ -78,9 +77,9 @@ ms.locfileid: "66801434"
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>步驟 3： 插入資料列  
+## <a name="step-3--insert-a-row"></a>步驟 3: 插入資料列  
   
-在您將了解如何執行此範例[插入](../../t-sql/statements/insert-transact-sql.md)陳述式安全地傳遞可保護您的應用程式的參數[SQL 插入式攻擊](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+在此範例中, 您將瞭解如何安全地執行[INSERT](../../t-sql/statements/insert-transact-sql.md)語句、傳遞可保護您的應用程式免于[SQL 插入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
   
   
 ```php 
@@ -110,16 +109,16 @@ ms.locfileid: "66801434"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>步驟 4： 回復交易  
+## <a name="step-4--rollback-a-transaction"></a>步驟 4: 復原交易  
   
   
-此程式碼範例示範如何使用交易，您：  
+這個程式碼範例會示範交易的使用方式, 您可以在其中:  
   
 -開始交易  
   
--插入資料列，更新另一個資料列的資料  
+-插入一列資料, 更新另一個資料列  
   
--確認您的交易如果 insert 和 update 成功就復原交易如果其中一個不是  
+-如果插入和更新成功, 則認可您的交易, 如果其中一個不是, 則回復交易  
   
   
 ```php 

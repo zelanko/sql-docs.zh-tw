@@ -26,38 +26,37 @@ helpviewer_keywords:
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: afbb8ce321418cce7797b12b161bcef88b88183e
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: d57369af9e621b9b2700104aff9050fda43593fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065477"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> SQL Server 2014 及更低，請參閱[sqlcmd 公用程式](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
-> )。
+> 如 SQL Server 2014 和更低版本[, 請](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
+> )參閱 sqlcmd 公用程式。
 > 
-> 使用 sqlcmd 在 Linux 上，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+> 如需在 Linux 上使用 sqlcmd, 請參閱[在 linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
- **Sqlcmd**公用程式可讓您輸入 TRANSACT-SQL 陳述式、 系統程序和指令碼檔案，透過各種可用的模式：
+ **Sqlcmd**公用程式可讓您透過各種可用的模式, 輸入 transact-sql 語句、系統程式和腳本檔案:
 
 - 在命令提示字元中。
-- 在 **查詢編輯器**SQLCMD 模式。
-- 在 Windows 指令碼檔案中。
-- 在 SQL Server Agent 作業的作業系統 (Cmd.exe) 作業步驟。
+- 在 SQLCMD 模式的 [**查詢編輯器**] 中。
+- 在 Windows 腳本檔案中。
+- 在 SQL Server Agent 作業的作業系統 (Cmd.exe) 作業步驟中。
 
-此公用程式會使用 ODBC 來執行 TRANSACT-SQL 批次。
+公用程式會使用 ODBC 來執行 Transact-sql 批次。
 
-## <a name="download-the-latest-version-of-sqlcmd-utility"></a>下載最新版的 sqlcmd 公用程式
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>下載最新版本的 sqlcmd 公用程式
 
 **[![下載](../ssdt/media/download.png) 下載適用於 SQL Server (x64) 的 Microsoft 命令列公用程式 15.0.x (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
 <br>**[![下載](../ssdt/media/download.png) 下載適用於 SQL Server (x86) 的 Microsoft 命令列公用程式 15.0.x (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
-命令列工具會公開上市 (GA)，不過，在發佈的安裝程式套件與[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
+命令列工具是公開上市 (GA), 不過, 它們是使用的安裝程式套件來[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]發行。
 
 **版本資訊**
 
@@ -65,19 +64,19 @@ ms.locfileid: "67728185"
 組建編號：15.0.1300.359<br>
 發行日期：2019 年 3 月 13 日
 
-SQLCMD 的新版本支援 Azure AD 驗證，包括 SQL Database、 SQL 資料倉儲，以及 Always Encrypted 功能支援 Multi-factor Authentication (MFA)。
-新的 BCP 支援 Azure AD 驗證，包括 SQL Database 和 SQL 資料倉儲的 Multi-factor Authentication (MFA) 支援。
+新版本的 SQLCMD 支援 Azure AD 驗證, 包括 SQL Database、SQL 資料倉儲和 Always Encrypted 功能的多重要素驗證 (MFA) 支援。
+新的 BCP 支援 Azure AD 驗證, 包括 SQL Database 和 SQL 資料倉儲的多重要素驗證 (MFA) 支援。
 
-**系統需求**Windows 10，Windows 7、 Windows 8、 Windows 8.1、 Windows Server 2008、 Windows Server 2008 R2、 Windows Server 2008 R2 SP1，Windows Server 2012 中，Windows Server 2012 此 R2 元件同時需要[Windows 安裝程式4.5](https://www.microsoft.com/download/details.aspx?id=8483)並[Microsoft ODBC Driver for SQL Server 17.3.1.1](https://www.microsoft.com/download/details.aspx?id=56567)。
+**系統需求**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 此元件同時需要[Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483)和[Microsoft ODBC Driver 17.3.1。1SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
  
-若要檢查的 SQLCMD 版本執行`sqlcmd -?`命令並確認該 15.0.1300.359 版本或更高的使用中。
+若要檢查 SQLCMD 版本執行`sqlcmd -?`命令, 並確認15.0.1300.359 版本或更高版本正在使用中。
 
 
 
 > [!NOTE]
-> 您需要的版本，13.1 或更新版本，才能支援 Always Encrypted (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
+> 您需要13.1 或更高版本, 才能支援`-g`Always Encrypted () 和 Azure Active Directory`-G`authentication ()。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
 
-您可以嘗試 sqlcmd 公用程式從 Azure Cloud Shell，因為它會預先安裝預設： [![啟動 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "啟動 Cloud Shell")](https://shell.azure.com)
+根據預設, 您可以從 Azure Cloud Shell 嘗試 sqlcmd 公用程式: [![啟動 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "啟動 Cloud Shell")](https://shell.azure.com)
 
   若要在 SSMS 中執行 sqlcmd 陳述式，請從上方導覽 [查詢] 功能表的下拉式清單中選取 [SQLCMD 模式]。  
   
@@ -146,13 +145,13 @@ sqlcmd
 ## <a name="command-line-options"></a>命令列選項  
  **登入相關選項**  
   **-A**  
- 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 此連接只適用於支援 DAC 的伺服器電腦。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 選項不支援使用-G 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不適用於 Azure Active Directory 系統管理員。
+ 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 此連接只適用于支援 DAC 的伺服器電腦。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -G 選項不支援-A 選項。 當使用-A 連接到 SQL Database 時, 您必須是 SQL server 系統管理員。 DAC 無法供 Azure Active Directory 系統管理員使用。
   
  **-C**  
  這個參數由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.NET 選項 `TRUSTSERVERCERTIFICATE = true`。  
   
  **-d** _db_name_  
- 當您啟動 **sqlcmd** 時發出 `USE` *db_name* 陳述式。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDDBNAME。 此參數會指定初始資料庫。 預設值為您登入的預設資料庫屬性。 如果資料庫不存在，系統會產生一則錯誤訊息，且會結束 **sqlcmd** 。  
+ 當您啟動 **sqlcmd** 時發出 `USE` *db_name* 陳述式。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDDBNAME。 這個參數會指定初始資料庫。 預設值為您登入的預設資料庫屬性。 如果資料庫不存在，系統會產生一則錯誤訊息，且會結束 **sqlcmd** 。  
   
  **-l** _login_timeout_  
  指定在您嘗試連接到伺服器時， **sqlcmd** 登入 ODBC 驅動程式逾時之前的秒數。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDLOGINTIMEOUT。 **sqlcmd** 的預設登入逾時值是 8 秒。 當使用 **-G** 連接到 SQL 資料庫或 SQL 資料倉儲，並使用 Azure Active Directory 進行驗證時，選項建議使用至少 30 秒的逾時值。 此登入逾時必須是介於 0 和 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **sqlcmd** 就會產生錯誤訊息。 0 值指定逾時值無限。
@@ -170,7 +169,7 @@ sqlcmd
 
 > [!IMPORTANT]
 > `-G` 選項只適用於 Azure SQL Database 與 Azure 資料倉儲。
-> AAD 整合式和互動式驗證目前不支援在 Linux 或 macOS 上。
+> Linux 或 macOS 目前不支援 AAD 整合和互動式驗證。
 
 - **Azure Active Directory 使用者名稱和密碼：** 
 
@@ -179,7 +178,7 @@ sqlcmd
     ``` 
     Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
-    -G 參數會在後端產生下列連接字串： 
+    -G 參數會在後端中產生下列連接字串: 
 
     ```
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
@@ -188,7 +187,7 @@ sqlcmd
 - **Azure Active Directory 整合式** 
  
    若是 Azure Active Directory 整合式驗證，請提供 **-G** 選項，但不提供使用者名稱或密碼。
-   *AAD 整合式驗證目前不支援在 Linux 或 macOS 上*。
+   *Linux 或 macOS 目前不支援 AAD 整合式驗證*。
 
     ```
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -206,36 +205,36 @@ sqlcmd
 
 - **Azure Active Directory 互動式**  
  
-   Azure AD 互動式驗證，Azure SQL Database 和 SQL 資料倉儲，可讓您使用支援多重要素驗證的互動式方法。 如需詳細資訊，請參閱 < [Active Directory 互動式驗證](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
+   Azure SQL Database 和 SQL 資料倉儲的 Azure AD 互動式驗證, 可讓您使用支援多重要素驗證的互動式方法。 如需詳細資訊, 請參閱[Active Directory 互動式驗證](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
 
-   互動式 azure AD 會要求**sqlcmd** [版本 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility)或更新版本，以及[ODBC 17.2 版或更新版本](https://www.microsoft.com/download/details.aspx?id=56567)。  
+   Azure AD 互動式需要**sqlcmd** [版本 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility)或更新版本, 以及[ODBC 17.2 版或更新](https://www.microsoft.com/download/details.aspx?id=56567)版本。  
 
-   若要啟用互動式驗證，提供使用者名稱-G 選項 (-U)，而不提供密碼。
+   若要啟用互動式驗證, 請在不使用密碼的情況下, 以使用者名稱 (-U) 提供-G 選項。
 
-   下列範例會匯出使用表示使用者名稱的 Azure AD 互動模式，其中使用者代表的 AAD 帳戶的資料。 這是上一節中所使用的相同範例： *Azure Active Directory 使用者名稱和密碼*。  
+   下列範例會使用 Azure AD 互動模式來匯出資料, 指出使用者代表 AAD 帳戶的使用者名稱。 這是上一節中所使用的相同範例: *Azure Active Directory 使用者名稱和密碼*。  
 
-   互動模式需要密碼才可手動輸入，或進行啟用，multi-factor authentication 使用的帳戶，請完成設定的 MFA 驗證方法。
+   互動模式需要手動輸入密碼, 或針對已啟用多重要素驗證的帳戶, 完成已設定的 MFA 驗證方法。
 
    ``` 
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
    ```
 
-   前一個命令會在後端產生下列連接字串：  
+   上一個命令會在後端產生下列連接字串:  
 
    ```
    SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
    ```
 
-   在 Azure AD 使用者是網域的同盟的使用者，使用 Windows 帳戶，在命令列中，所需的使用者名稱包含其網域帳戶 (比方說，joe@contoso.com如下所示):
+   如果 Azure AD 使用者是使用 Windows 帳戶的網域同盟使用者, 則命令列中所需的使用者名稱會包含其網域帳戶 (例如, joe@contoso.com如下所示):
 
    ```
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   如果來賓使用者在特定的 Azure AD 中存在，且具有執行 sqlcmd 命令的資料庫權限的 SQL DB 中存在的群組的一部分，會使用其來賓使用者的別名 (例如 *keith0@adventureworks.com* )。
+   如果來賓使用者存在於特定 Azure AD 中, 而且屬於 SQL DB 中具有執行 sqlcmd 命令之資料庫許可權的群組, 則會使用其來賓使用者別名 ( *keith0@adventureworks.com* 例如)。
 
   >[!IMPORTANT]
-  >沒有已知的問題時使用`-G`並`-U`選項使用 SQLCMD，其中放`-U`選項之前`-G`選項可能會導致驗證失敗。 開頭一律`-G`選項後面`-U`選項。
+  >使用`-G`和`-U`選項搭配`-G` SQLCMD 時, 有一個已知的問題, 其中在選項之前放置選項可能會導致驗證失敗。`-U` 一律以`-G`選項開頭, 後面接著`-U`選項。
 
     
  **-H** _workstation_name_  
@@ -254,7 +253,7 @@ sqlcmd
  用戶端會用這個參數要求加密的連接。  
   
  **-P** _password_  
- 這是一個使用者指定的密碼。 密碼會區分大小寫。 如果使用 -U 選項但未使用 **-P** 選項，且未設定 SQLCMDPASSWORD 環境變數， **sqlcmd** 會提示使用者輸入密碼。 我們不建議使用 null 密碼，但您可以使用一組連續雙引號的參數值指定 null 密碼：
+ 這是一個使用者指定的密碼。 密碼會區分大小寫。 如果使用 -U 選項但未使用 **-P** 選項，且未設定 SQLCMDPASSWORD 環境變數， **sqlcmd** 會提示使用者輸入密碼。 我們不建議使用 null 密碼, 但您可以針對參數值使用一對連續雙引號來指定 null 密碼:
 
 - **-P ""**
 
@@ -278,7 +277,7 @@ sqlcmd
   
  如果使用者名稱和密碼的組合不正確，會產生錯誤訊息。  
   
-**注意！**  保留 OSQLPASSWORD 環境變數的目的是為了與舊版相容。 SQLCMDPASSWORD 環境變數優先於 OSQLPASSWORD 環境變數。 現在，已不再共用 OSQLPASSWORD，公用程式**sqlcmd**並**osql**可用彼此相鄰不受干擾。 舊的指令碼仍能運作。  
+**注意！**  保留 OSQLPASSWORD 環境變數的目的是為了與舊版相容。 SQLCMDPASSWORD 環境變數優先于 OSQLPASSWORD 環境變數。 既然已不再共用 OSQLPASSWORD, 就可以在彼此旁使用**sqlcmd**和**osql** , 而不會互相干擾。 舊的腳本仍會繼續工作。  
   
  如果同時使用 **-P** 選項和 **-E** 選項，就會產生錯誤訊息。  
   
@@ -350,7 +349,7 @@ sqlcmd
  **-o** _output_file_  
  識別用來接收 **sqlcmd**輸出的檔案。  
   
- 如果指定 **-u** ， *output_file* 會以 Unicode 格式儲存。 如果檔案名稱無效，系統會產生一則錯誤訊息，且會結束 **sqlcmd** 。 **sqlcmd** 不支援同時將多個 **sqlcmd** 處理序寫入相同的檔案。 檔案輸出會損毀或不正確。 請參閱 **-f**參數也是與檔案格式。 如果這個檔案不存在，系統將會建立該檔案， 並覆寫先前 **sqlcmd** 工作階段所產生的同名檔案。 此處所指定的檔案並不是 **stdout** 檔案。 如果指定 **stdout** 檔案，則不會使用這個檔案。  
+ 如果指定 **-u** ， *output_file* 會以 Unicode 格式儲存。 如果檔案名稱無效，系統會產生一則錯誤訊息，且會結束 **sqlcmd** 。 **sqlcmd** 不支援同時將多個 **sqlcmd** 處理序寫入相同的檔案。 檔案輸出會損毀或不正確。 請參閱 **-f**參數也與檔案格式有關。 如果這個檔案不存在，系統將會建立該檔案， 並覆寫先前 **sqlcmd** 工作階段所產生的同名檔案。 此處所指定的檔案並不是 **stdout** 檔案。 如果指定 **stdout** 檔案，則不會使用這個檔案。  
   
  路徑範例：  
 
@@ -507,7 +506,7 @@ sqlcmd
 > [!NOTE]  
 >  由於網路廣播的本質之故， **sqlcmd** 可能不會收到所有伺服器及時的回應。 因此，這個選項每次的引動過程，所傳回的伺服器清單可能各不相同。  
   
- 如果指定了選擇性的參數 **c** ，顯示的輸出不會有 **Servers:** 標頭行，列出的每個伺服器行也都不會有開頭空白。 這份簡報稱為清除輸出。 清除輸出可以增進指令碼語言的處理效能。  
+ 如果指定了選擇性的參數 **c** ，顯示的輸出不會有 **Servers:** 標頭行，列出的每個伺服器行也都不會有開頭空白。 這份簡報稱為「乾淨輸出」。 清除輸出可以增進指令碼語言的處理效能。  
   
  **-p**[**1**]  
  列印每個結果集的效能統計資料。 以下顯示的是效能統計資料的格式範例：  
@@ -678,7 +677,7 @@ sqlcmd
   
  **輸出命令**  
   **:Error**   
- _ **\<**_  _filename_  ** _>|_ STDERR|STDOUT**  
+ _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
  將所有錯誤輸出重新導向至 *filename*所指定的檔案、 **stderr** 或 **stdout**。 在指令碼中， **Error** 命令可以重複出現。 根據預設，錯誤輸出會傳送到 **stderr**。  
   
  *file name*  
@@ -702,7 +701,7 @@ sqlcmd
   
  使用 **exit** 選項時， **sqlcmd** 會結束作業，並會出現適當的錯誤值。  
   
- 使用 **ignore** 選項時， **sqlcmd** 會忽略錯誤，並繼續執行批次或指令碼。 根據預設，會列印錯誤訊息。  
+ 使用 **ignore** 選項時， **sqlcmd** 會忽略錯誤，並繼續執行批次或指令碼。 根據預設, 會列印錯誤訊息。  
   
  [ **:** ] **QUIT**  
  導致 **sqlcmd** 結束。  
@@ -753,7 +752,7 @@ sqlcmd
 |-102|在選取傳回值時，發生轉換錯誤。|  
   
  **GO** [*count*]  
- GO 會發出批次結束及執行任何快取的 Transact-SQL 陳述式的信號。 批次當做個別批次執行多次。 您無法在單一批次中多次宣告變數。
+ GO 會發出批次結束及執行任何快取的 Transact-SQL 陳述式的信號。 批次會當做個別批次執行多次。 您不能在單一批次中多次宣告變數。
   
  **其他命令**  
   **:r \<** 檔名  **>**  
@@ -831,7 +830,7 @@ sqlcmd
 
 `sqlcmd`
   
-在 sqlcmd 提示字元輸入：
+在 sqlcmd 提示字元中輸入:
 
 `USE AdventureWorks2012;`
 

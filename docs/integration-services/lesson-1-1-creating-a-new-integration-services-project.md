@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 82420ce073f65483043d44670fc538849a447d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bb53762be037cbc74720c8af0b6dbdbeba17737
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057316"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>第 1-1 課：建立新的 Integration Services 專案
 

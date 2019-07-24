@@ -1,5 +1,5 @@
 ---
-title: 執行轉換，因此從用戶端到伺服器 |Microsoft Docs
+title: 從用戶端到伺服器執行的轉換 |Microsoft Docs
 description: 從用戶端到伺服器執行的轉換
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995141"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66769304"
 ## <a name="conversions"></a>轉換  
  本文描述針對用戶端所進行的轉換。 如果用戶端針對參數所指定的小數秒有效位數與伺服器上所定義的小數秒有效位數不同，在伺服器允許作業成功的情況下，用戶端轉換可能會造成失敗。 特別是，用戶端會將任何截斷的小數秒視為錯誤，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將時間值捨去為最接近的整秒。  
   
- 如果未呼叫 icommandwithparameters:: Setparameterinfo，DBTYPE_DBTIMESTAMP 繫結會轉換，彷彿**datetime2**。  
+ 如果未呼叫 ICommandWithParameters:: SetParameterInfo, 則會將 DBTYPE_DBTIMESTAMP 系結轉換成**datetime2**。  
   
 |目標 -><br /><br /> 來源|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -52,7 +51,7 @@ ms.locfileid: "66769304"
   
 |符號|意義|  
 |------------|-------------|  
-|-|不支援轉換。 如果繫結驗證時呼叫 iaccessor:: Createaccessor 時，就會傳回 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*。 當存取子驗證延遲時，會設定 DBSTATUS_E_BADACCESSOR。|  
+|-|不支援轉換。 如果在呼叫 IAccessor:: CreateAccessor 時驗證系結, 則*rgStatus*中會傳回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 當存取子驗證延遲時，會設定 DBSTATUS_E_BADACCESSOR。|  
 |不適用|不適用。|  
 |1|如果提供的資料無效，則會設定 DBSTATUS_E_CANTCONVERTVALUE。 輸入資料會在套用轉換之前進行驗證，因此，即使在後續轉換忽略元件時，該資料仍然必須有效，轉換才會成功。|  
 |2|忽略時間欄位。|  

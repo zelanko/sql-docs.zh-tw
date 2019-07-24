@@ -1,5 +1,5 @@
 ---
-title: 工作階段 |Microsoft Docs
+title: 會話 |Microsoft Docs
 description: OLE DB Driver for SQL Server 中的工作階段
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,28 +13,27 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a2768acd897d996ec3076864a0586be74f22dbdf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bc162e77a7a0dd015f108f6d1fd675a8b78b1ecf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995186"
 ---
 # <a name="sessions"></a>工作階段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 工作階段代表的執行個體的單一連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  SQL Server 會話的 OLE DB 驅動程式代表實例的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]單一連接。  
   
- OLE DB Driver for SQL Server 需要工作階段分隔資料來源的交易空間。 所有從特定工作階段物件建立而來的命令物件，都會參與工作階段物件的本機或分散式交易。  
+ SQL Server 的 OLE DB 驅動程式需要會話分隔資料來源的交易空間。 所有從特定工作階段物件建立而來的命令物件，都會參與工作階段物件的本機或分散式交易。  
   
  在初始化資料來源上建立的第一個工作階段物件會接收在初始化時所建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接。 當工作階段物件介面上的所有參考被釋放時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接就可供資料來源上建立的另一個工作階段物件使用。  
   
  在資料來源上建立的其他工作階段物件會依照資料來源的指示，對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體建立本身的連接。 當應用程式釋放對該工作階段所建立物件的所有參考時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接就會卸除。  
   
- 下列範例示範如何使用 OLE DB Driver for SQL Server 連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫：  
+ 下列範例示範如何使用 SQL Server 的 OLE DB 驅動程式來連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫:  
   
 ```  
 int main()  
@@ -183,7 +182,7 @@ EXIT:
 }  
 ```  
   
- 將 OLE DB Driver for SQL Server 工作階段物件連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，可能會為持續建立和釋放工作階段物件的應用程式產生相當大的負擔。 有效率地管理 SQL Server 工作階段物件的 OLE DB 驅動程式，可以減少額外負荷。 OLE DB Driver for SQL Server 應用程式可藉由維持至少一個物件介面上的參考，將工作階段物件的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連線保持為使用中。  
+ 將 OLE DB Driver for SQL Server 工作階段物件連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，可能會為持續建立和釋放工作階段物件的應用程式產生相當大的負擔。 您可以有效率地管理 SQL Server 會話物件的 OLE DB 驅動程式, 以將額外負荷降到最低。 OLE DB Driver for SQL Server 應用程式可藉由維持至少一個物件介面上的參考，將工作階段物件的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連線保持為使用中。  
   
  例如，維持命令建立物件參考的集區，可以將集區中這些工作階段物件的連接保持為使用中。 在需要工作階段物件時，集區維護程式碼會將有效的 **IDBCreateCommand** 介面指標傳遞到需要該工作階段的應用程式方法。 當應用程式方法不再需要工作階段時，該方法會將介面指標傳回給集區維護程式碼，而不是釋放應用程式對命令建立物件的參考。  
   

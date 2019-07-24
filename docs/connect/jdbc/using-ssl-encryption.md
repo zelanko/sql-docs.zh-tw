@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003962"
 ---
 # <a name="using-ssl-encryption"></a>使用 SSL 加密
 
@@ -33,7 +32,7 @@ ms.locfileid: "66798578"
 本節中的主題將描述 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 版本如何支援 SSL 加密 (包括新的連線屬性)，以及如何在用戶端設定信任的存放區。  
   
 > [!NOTE]  
-> **HostNameInCertificate**建議使用連接屬性來驗證 SSL 憑證。  
+> 建議使用**hostNameInCertificate**連接屬性來驗證 SSL 憑證。  
 
 ## <a name="in-this-section"></a>本節內容  
 

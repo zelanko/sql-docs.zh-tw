@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8b3e731fdc3480d646e141cbd53b777407015f8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b420dd7c4bc714e26c8078112c5af54ae5aa7b0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970063"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

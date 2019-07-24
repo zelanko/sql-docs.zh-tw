@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b5f065983f8c2af9cb368147bda83a2e24987caa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ecb8ca48f9f4b76a9d3bf22aff3930eec63667dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976557"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean ownDeletesAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 ownDeletesAreVisible 方法是由 java.sql.DatabaseMetaData 介面中 ownDeletesAreVisible 方法指定。  
+ 這個 ownDeletesAreVisible 方法是由 JAVA.sql.databasemetadata 介面中的 ownDeletesAreVisible 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

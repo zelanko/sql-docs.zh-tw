@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2dac9b1561fbe5b05c96ce8a9ba5f5dd74594ce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993396"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -121,10 +120,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 時的輸出參數繫結至一個 bigint 型別，如果值可能超出範圍的最後[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，您必須指定 SQLSRV_SQLTYPE_BIGINT SQL 欄位類型。 否則，它可能會導致 「 超出範圍的值 」 例外狀況。
+> 將輸出參數系結至 Bigint 類型時, 如果值的結尾可能超出[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍, 您就必須將其 SQL 欄位類型指定為 SQLSRV_SQLTYPE_BIGINT。 否則, 它可能會產生「值超出範圍」例外狀況。
 
 ## <a name="example-2"></a>範例 2
-此程式碼範例示範如何將大型的 bigint 值，做為輸出參數繫結。  
+此程式碼範例示範如何系結大型 Bigint 值做為輸出參數。  
 
 ```
 <?php

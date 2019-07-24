@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956479"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC Driver 的國際功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66781663"
 ## <a name="handling-of-character-data"></a>處理字元資料  
  Java 的字元資料預設是以 Unicode 來處理；Java **String** 物件則代表 Unicode 字元資料。 在 JDBC Driver 中，此規則唯一的例外狀況為 ASCII 資料流的 getter 與 setter 方法，其為特例的原因在於它們使用位元組資料流，並隱含的假設會使用單一已知字碼頁 (ASCII)。  
   
- 此外，JDBC 驅動程式提供**sendStringParametersAsUnicode**連接字串屬性。 這個屬性可用來指定字元資料的準備參數會當做 ASCII 或多位元組字元集 (MBCS) 而非 Unicode 傳送。 如需詳細資訊**sendStringParametersAsUnicode**連接字串屬性，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
+ 此外, JDBC 驅動程式會提供**sendStringParametersAsUnicode**連接字串屬性。 這個屬性可用來指定字元資料的準備參數會當做 ASCII 或多位元組字元集 (MBCS) 而非 Unicode 傳送。 如需**sendStringParametersAsUnicode**連接字串屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ### <a name="driver-incoming-conversions"></a>驅動程式內送轉換  
  來自伺服器的 Unicode 文字資料無需轉換。 它將直接以 Unicode 傳遞。 來自伺服器的非 Unicode 資料將在資料庫或資料行的層級中，從資料的字碼頁轉換成 Unicode。 JDBC 驅動程式使用 Java Virtual Machine (JVM) 轉換常式執行這些轉換。 這些轉換將在所有具類型的字串與字元資料流 getter 方法中執行。  
@@ -47,7 +46,7 @@ ms.locfileid: "66781663"
  另一方面，非國際字元 API 方法 (例如 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 與 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別的 setString、setCharacterStream 與 setClob 方法) 則只有當 **sendStringParametersAsUnicode** 屬性設定為 "true" 時 (預設值)，才會將其值以 Unicode 傳送至伺服器。  
   
 ## <a name="non-unicode-parameters"></a>非 Unicode 參數  
- 達到最佳效能**CHAR**， **VARCHAR**或是**LONGVARCHAR**類型的非 Unicode 參數，設定**sendStringParametersAsUnicode**連接字串為"false"的屬性，並且使用非國家字元方法。  
+ 若要以**CHAR**、 **VARCHAR**或**LONGVARCHAR**類型的非 Unicode 參數達到最佳效能, 請將**sendStringParametersAsUnicode**連接字串屬性設定為 "false", 並使用非國家字元方法。  
   
 ## <a name="formatting-issues"></a>格式化問題  
  針對日期、時間及貨幣，都會使用 Locale 物件，在 Java 語言層級中以當地語系化資料執行所有格式化；以及各種 **Date**、**Calendar** 與 **Number** 資料類型的格式化方法。 在極少的情況下，若 JDBC 驅動程式 必須以當地語系化格式傳遞區分地區設定的資料，此時適合的格式化工具便是使用預設的 JVM 地區設定。  

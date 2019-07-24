@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 401d146241bae341db981f207f877c18919eaaa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fedd86edddc93953a91d2fbfcbfe8de7b897fe3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104116"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
 

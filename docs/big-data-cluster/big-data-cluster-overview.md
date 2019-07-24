@@ -1,108 +1,112 @@
 ---
-title: 什麼是巨量資料叢集？
+title: 什麼是 big data 叢集？
 titleSuffix: SQL Server big data clusters
-description: 深入了解 SQL Server 2019 巨量資料叢集 （預覽），以在 Kubernetes 上執行，並提供關聯式的向外延展選項和 HDFS 的資料。
+description: 瞭解在 Kubernetes 上執行的 SQL Server 2019 big data 叢集 (預覽), 並提供關聯式和 HDFS 資料的相應放大選項。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 166fa1d5b736720b8bab7dff6a8ea56c63a702fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0beb4ea57ba6c2591e5b2c06a7775fc2d7e8b26c
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958858"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419502"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>什麼是 SQL Server 巨量資料叢集？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-從開始[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]，SQL Server 的巨量資料叢集可讓您部署的 SQL Server、 Spark 和 HDFS 的容器，在 Kubernetes 上執行的可調整叢集。 這些元件會並存執行，可讓您讀取、 寫入，並處理從 TRANSACT-SQL 或 Spark 的巨量資料、 讓您輕鬆地結合和分析龐大的巨量資料與您寶貴的關聯式資料。
+從開始[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server big data 叢集可讓您部署在 Kubernetes 上執行之 SQL Server、Spark 和 HDFS 容器的可擴充叢集。 這些元件會並存執行, 讓您可以讀取、寫入和處理來自 Transact-sql 或 Spark 的大型資料, 讓您輕鬆地結合和分析具有大量海量資料的高價值關聯式資料。
 
-如需有關新功能和最新版本的已知的問題的詳細資訊，請參閱 <<c0> [ 版本資訊](release-notes-big-data-cluster.md)。
+如需最新版本的新功能和已知問題的詳細資訊, 請參閱[版本](release-notes-big-data-cluster.md)資訊。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="scenarios"></a>案例
 
-SQL Server 巨量資料叢集提供您與您的巨量資料的互動的彈性。 您可以查詢外部資料來源、 巨量資料儲存在 HDFS 受 SQL Server 或從叢集內的多個外部資料來源的查詢資料。 然後您可以使用資料 AI、 機器學習服務，以及其他分析工作。 下列各節提供這些案例的詳細資訊。
+SQL Server big data 叢集可讓您彈性地與您的 big 資料互動。 您可以查詢外部資料源、在 SQL Server 管理的 HDFS 中儲存海量資料, 或透過叢集查詢來自多個外部資料源的資料。 然後, 您可以使用 AI、機器學習和其他分析工作的資料。 下列各節提供有關這些案例的詳細資訊。
 
 ### <a name="data-virtualization"></a>資料虛擬化
 
-利用[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)，SQL Server 的巨量資料叢集可以查詢外部資料來源，而不需要移動或複製資料。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 資料來源中介紹新的連接器。
+藉由利用[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md), SQL Server big data 叢集可以查詢外部資料源, 而不需要移動或複製資料。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]為數據源引進新的連接器。
 
 ![資料虛擬化](media/big-data-cluster-overview/data-virtualization.png)
 
 ### <a name="data-lake"></a>Data lake
 
-SQL Server 的巨量資料叢集包含可調整的 HDFS*存放集區*。 這可以用來儲存可能內嵌多個外部來源的巨量資料。 一旦巨量資料儲存在 HDFS 中，在巨量資料叢集，您可以分析和查詢資料並將它與您的關聯式資料結合。
+SQL Server big data 叢集包含可擴充的 HDFS*存放集區*。 這可以用來儲存海量資料, 可能會從多個外部來源內嵌。 一旦海量資料儲存在 big data 叢集中的 HDFS 之後, 您就可以分析並查詢資料, 並將其與關聯式資料結合。
 
 ![Data lake](media/big-data-cluster-overview/data-lake.png)
 
 ### <a name="scale-out-data-mart"></a>向外延展資料超市
 
-SQL Server 巨量資料叢集提供向外延展計算和儲存體，以改善的效能分析的任何資料。 從各種來源的資料可以擷取，並分散*資料集區*節點做為快取，供進一步分析。
+SQL Server big data 叢集提供向外延展計算和儲存體, 以改善分析任何資料的效能。 來自各種來源的資料可以內嵌並散佈于*資料集*區節點, 做為進一步分析的快取。
 
 ![資料超市](media/big-data-cluster-overview/data-mart.png)
 
-### <a name="integrated-ai-and-machine-learning"></a>整合的 AI 和機器學習服務
+### <a name="integrated-ai-and-machine-learning"></a>整合式 AI 和 Machine Learning
 
-SQL Server 的巨量資料叢集啟用人工智慧和機器學習服務工作儲存在 HDFS 儲存體集區和資料集區中的資料。 您可以使用 R、 Python、 Scala 或 Java 的 SQL Server 中使用 Spark，以及內建的 AI 工具。
+SQL Server big data 叢集會針對儲存在 HDFS 存放集區和資料集區中的資料, 啟用 AI 和機器學習工作。 您可以在 SQL Server 中使用 Spark 和內建 AI 工具, 使用 R、Python、Scala 或 JAVA。
 
 ![AI 和 ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
 ### <a name="management-and-monitoring"></a>管理與監控
 
-透過命令列工具、 Api、 入口網站和動態管理檢視的組合提供管理和監視。
+管理和監視是透過命令列工具、Api、入口網站和動態管理檢視的組合來提供。
 
-您可以使用 Azure Data Studio 巨量資料叢集上執行的各種工作。 這會啟用新**SQL Server 2019 擴充功能 （預覽）** 。 此延伸模組提供：
+您可以使用 Azure Data Studio 在 big Data 叢集上執行各種工作。 這是由新的**SQL Server 2019 延伸模組 (預覽)** 啟用。 此延伸模組提供:
 
-- 適合一般管理工作的內建程式碼片段。
-- 能夠瀏覽 HDFS 中，將檔案上傳、 預覽檔案，然後建立目錄。
-- 若要建立，開啟，並執行相容性的 Jupyter notebook 的能力。
-- 簡化的外部資料來源建立的虛擬化資料精靈。
+- 常見管理工作的內建程式碼片段。
+- 能夠流覽 HDFS、上傳檔案、預覽檔案, 以及建立目錄。
+- 能夠建立、開啟及執行與 Jupyter 相容的筆記本。
+- [資料虛擬化] [wizard] 可簡化外部資料源的建立。
 
-## <a id="architecture"></a> 架構
+## <a id="architecture"></a>結構
 
-SQL Server 的巨量資料叢集是由協調的 Linux 容器的叢集[Kubernetes](https://kubernetes.io/docs/concepts/)。
+SQL Server big data 叢集是由[Kubernetes](https://kubernetes.io/docs/concepts/)協調的 Linux 容器叢集。
 
 ### <a name="kubernetes-concepts"></a>Kubernetes 概念
 
-Kubernetes 是開放原始碼容器協調者，可以調整容器部署根據的需求。 下表定義了一些重要的 Kubernetes 術語：
+Kubernetes 是一個開放原始碼容器協調器, 可以根據需求調整容器部署。 下表定義一些重要的 Kubernetes 術語:
 
 |||
 |:--|:--|
-| **Cluster** | Kubernetes 叢集是一組機器，又稱為節點。 控制叢集一個節點，並指定在主要節點剩餘的節點是背景工作節點。 Kubernetes 主機負責散發工作的背景工作角色，以及監視叢集的健康情況。 |
-| **節點** | 節點會執行容器化應用程式。 它可以是實體機器或虛擬機器。 Kubernetes 叢集可以包含實體機器和虛擬機器節點的混合。 |
-| **Pod** | 在 pod 已 Kubernetes 的不可部分完成的部署單位。 在 pod 已一或多個容器的邏輯群組-和相關聯的資源所需執行的應用程式。 每個 pod 節點上執行;節點可以執行一或多個 pod。 Kubernetes 主機會將 pod 自動指派給叢集中的節點。 |
+| **Cluster** | Kubernetes 叢集是一組電腦, 稱為節點。 一個節點控制叢集, 並指定主要節點;其餘節點是背景工作節點。 Kubernetes master 負責在背景工作角色和監視叢集的健康情況間散發工作。 |
+| **節點** | 節點會執行容器化應用程式。 它可以是實體電腦或虛擬機器。 Kubernetes 叢集可包含混合的實體機器和虛擬機器節點。 |
+| **Pod** | Pod 是 Kubernetes 的不可部分完成部署單位。 Pod 是執行應用程式所需的一或多個容器 (和相關聯的資源) 的邏輯群組。 每個 pod 都會在一個節點上執行;節點可以執行一或多個 pod。 Kubernetes 主機會自動將 pod 指派給叢集中的節點。 |
 | &nbsp; ||
 
-在 SQL Server 的巨量資料叢集，Kubernetes 會負責使用 SQL Server 的巨量資料叢集; 的狀態Kubernetes 會建置和設定叢集節點、 將 pod 指派給節點，和監視叢集的健全狀況。
+在 SQL Server big data 叢集中, Kubernetes 會負責 SQL Server big data 叢集的狀態;Kubernetes 會建立和設定叢集節點、將 pod 指派給節點, 以及監視叢集的健全狀況。
 
-### <a name="big-data-clusters-architecture"></a>巨量資料叢集架構
+### <a name="big-data-clusters-architecture"></a>Big data 叢集架構
 
-叢集中的節點可分為三個邏輯平面： 控制層、 計算平面和資料平面。 每個平面叢集中有不同的責任。 在 SQL Server 的巨量資料叢集中的每個 Kubernetes 節點的主機元件至少一個平面的 pod。
+下圖顯示 SQL Server 的 big data 叢集元件。
 
-![架構概觀](media/big-data-cluster-overview/architecture-diagram-planes.png)
+![架構概觀](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> 控制平面
+### <a id="controlplane"></a>控制器
 
-控制平面會提供管理和安全性的叢集。 它包含 Kubernetes 母片*SQL Server 的主要執行個體*，和其他叢集層級服務，例如 Hive 中繼存放區和 Spark 驅動程式。
+控制器會提供叢集的管理和安全性。 其中包含 cntrol 服務、設定存放區, 以及其他叢集層級的服務, 例如 Kibana、Grafana 和彈性搜尋。
 
-### <a id="computeplane"></a> 計算平面
+### <a id="computeplane"></a>計算集區
 
-計算平面會提供在叢集中的運算資源。 它包含在 Linux pod 上執行 SQL Server 的節點。 計算平面中的 pod 分為*計算集區*特定處理工作。 計算集區可做為[PolyBase](../relational-databases/polybase/polybase-guide.md)分散式查詢，透過不同的資料來源這類作為 HDFS、 Oracle、 MongoDB 或 Teradata 的向外延展群組。
+計算集區會提供計算資源給叢集。 其中包含執行 Linux 上的 SQL Server pod 的節點。 計算集區中的 pod 會分割成*SQL 計算實例*, 以進行特定的處理工作。 
 
-### <a id="dataplane"></a> 資料平面
+### <a id="dataplane"></a>資料集區
 
-資料平面用於資料持續性和快取。 它包含 SQL 資料集區，以及儲存體集區。  SQL 資料集區是由一或多個 pod，在 Linux 上執行 SQL Server 所組成。 它用來擷取從 SQL 查詢或 Spark 作業的資料。 SQL Server 的巨量資料叢集的資料超市會保存在資料集區。 存放集區包含 Linux、 Spark 和 HDFS 上的 SQL Server 所組成的儲存體集區 pod。 在 SQL Server 的巨量資料叢集中的所有存放裝置節點是 HDFS 叢集的成員。
+資料集區用於資料持續性和快取。 資料集區是由執行 Linux 上的 SQL Server 的一或多個 pod 所組成。 它是用來內嵌 SQL 查詢或 Spark 作業的資料。 SQL Server big data cluster 資料超市會保存在資料集區中。 
+
+### <a name="storage-pool"></a>存放集區
+
+存放集區包含由 Linux 上的 SQL Server、Spark 和 HDFS 組成的存放集區 pod。 SQL Server big data 叢集中的所有存放裝置節點都是 HDFS 叢集的成員。
 
 > [!TIP]
-> 深入了解巨量資料叢集架構和安裝，請參閱[研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
+> 如需深入瞭解 big data 叢集架構和安裝, 請參閱[研討會:Microsoft SQL Server big data 叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
 
 ## <a name="next-steps"></a>後續步驟
 
-SQL Server 的巨量資料叢集可先透過 SQL Server 2019 Early Adoption Program 的有限公開預覽。 若要要求存取權，註冊[此處](https://aka.ms/eapsignup)，並指定您感興趣試用巨量資料叢集。 Microsoft 將分級所有要求，並儘速回應。
+SQL Server big data 叢集第一次是以有限的公開預覽版本, 透過 SQL Server 2019 早期採用計畫取得。 若要要求存取權, 請[在這裡](https://aka.ms/eapsignup)註冊, 並指定您想要試用 big data 叢集的相關資訊。 Microsoft 會將所有要求分級, 並儘快回應。

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0ec1307adb0c2eab58c73a7978c93d366f0209bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85bc4f123dd29025e906d57d64f21746df5f2e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955550"
 ---
 # <a name="commit-method-sqlserverxaresource"></a>commit 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public void commit(javax.transaction.xa.Xid xid,
 ## <a name="exceptions"></a>例外狀況  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 commit 方法是由 javax.transaction.xa.XAResource 介面中的 commit 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

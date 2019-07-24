@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a43ee9007ab396357e2390841384e61101fa4ec4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 418ba74914226b422417af78aa18fcc1ce5cba9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945470"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
 
@@ -94,7 +93,7 @@ ms.locfileid: "65713668"
 ## <a name="troubleshoot-run-time-validation-issues"></a>疑難排解執行階段驗證的問題  
  有時候在尚未執行封裝中的優先工作之前，您可能無法連接到資料來源，或者無法驗證封裝的某些部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含下列功能，可協助您避免因這些狀況而造成的驗證錯誤：  
   
--   **設定載入封裝時無效之封裝元素的 DelayValidation 屬性**。 您可以將組態無效之封裝元素的 **DelayValidation** 設為 [True]，以避免載入封裝時發生驗證錯誤。 例如，您可能有一項會使用目的地資料表的資料流程工作，而這個目的地資料表卻要等到執行 SQL 工作在執行階段建立資料表後才會存在。 **DelayValidation** 屬性可以在封裝層級啟用，也可以在封裝所包含的個別工作和容器層級啟用。  
+-   **設定載入封裝時無效之封裝元素的 DelayValidation 屬性**。 您可以將組態無效之封裝元素的 **DelayValidation** 設為 [True]  ，以避免載入封裝時發生驗證錯誤。 例如，您可能有一項會使用目的地資料表的資料流程工作，而這個目的地資料表卻要等到執行 SQL 工作在執行階段建立資料表後才會存在。 **DelayValidation** 屬性可以在封裝層級啟用，也可以在封裝所包含的個別工作和容器層級啟用。  
   
      您可以針對資料流程工作設定 **DelayValidation** 屬性，但無法針對個別資料流程元件設定這個屬性。 將個別資料流程元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性設為 **false**中開發封裝時可以用於疑難排解封裝的功能和工具。 不過，當這個屬性的值是 **false**時，元件不會察覺對外部資料來源之中繼資料所做的變更。 設為 **true**時， <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性可以協助避免因資料庫中的鎖定而造成的封鎖問題，尤其是在封裝使用交易時。  
   

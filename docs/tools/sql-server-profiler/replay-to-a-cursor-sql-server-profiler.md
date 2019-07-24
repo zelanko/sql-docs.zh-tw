@@ -1,5 +1,5 @@
 ---
-title: 重新執行至游標處 (SQL Server Profiler) |Microsoft Docs
+title: 重新執行至資料指標 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c959282cef7d6ba4055b18ee7c10d3826e623f9
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: c4a6a02576ac5c58c88cf1b2b489106d6cf8013e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928850"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重新執行至資料指標處 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,6 @@
 ---
-title: 將資料插入至資料表值參數 |Microsoft Docs
-description: 使用 OLE DB Driver for SQL Server 將資料插入資料表值參數
+title: 將資料插入資料表值參數 |Microsoft Docs
+description: 使用 OLE DB 驅動程式 SQL Server 將資料插入至資料表值參數
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 064dcfa74cd6471c8c279ef4b08e874097d98d64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994135"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>將資料插入至資料表值參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "66801163"
   
  取用者應該在執行命令前，提供所有資料表值參數資料給提供者。 若要提供資料，取用者要針對每個資料表值參數擴展資料表值參數資料列集物件。 資料表值參數資料列集物件會公開資料列集的 Insert、Set 和 Delete 作業，取用者會使用這些作業來操作資料表值參數資料。 提供者將會在執行時間，從此資料表值參數資料列集物件提取資料。  
   
- 將資料表值參數資料列集物件提供給取用者時，取用者可以將其當做資料列集物件處理。 取用者可以使用 icolumnsinfo:: Getcolumninfo 或 icolumnsrowset:: Getcolumnsrowset 介面方法，以取得每個資料行 （型別、 最大長度、 有效位數和小數位數） 的型別資訊。 接著，取用者會建立存取子來指定資料的繫結。 下一步是將資料的資料列插入到資料表值參數資料列集。 這可以使用 irowsetchange:: Insertrow 來完成。 Irowsetchange:: Setdata 或 irowsetchange:: Deleterows 也可用在資料表值參數資料列集物件，如果您有操作資料。 資料表值參數資料列集物件是計數的參考，類似於資料流物件。  
+ 將資料表值參數資料列集物件提供給取用者時，取用者可以將其當做資料列集物件處理。 取用者可以使用 IColumnsInfo:: GetColumnInfo 或 IColumnsRowset:: GetColumnsRowset 介面方法, 取得每個資料行的類型資訊 (類型、最大長度、有效位數和小數位數)。 接著，取用者會建立存取子來指定資料的繫結。 下一步是將資料的資料列插入到資料表值參數資料列集。 您可以使用 IRowsetChange:: InsertRow 來完成這項作業。 如果您必須運算元據, IRowsetChange:: SetData 或 IRowsetChange::D eleteRows 也可以用於資料表值參數資料列集物件。 資料表值參數資料列集物件是計數的參考，類似於資料流物件。  
   
- 如果使用 icolumnsrowset:: Getcolumnsrowset 時，會有後續產生的資料行的資料列集物件上的 irowset:: Getnextrows、 irowset:: Getdata 和 irowset:: Releaserows 方法呼叫。  
+ 如果使用 IColumnsRowset:: GetColumnsRowset, 則會在產生之資料行的資料列集物件上, 進行 IRowset:: GetNextRows、IRowset:: 和 IRowset:: ReleaseRows 方法的後續呼叫。  
   
  OLE DB Driver for SQL Server 開始執行命令之後，將會從此資料表值參數資料列集物件擷取資料表值參數值，再傳送到伺服器。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66801163"
   
  在提取模型中，取用者會視需要提供資料給提供者。 如果您的應用程式有許多資料插入，而且記憶體中的資料表值參數資料列集資料會導致過量的記憶體存取，請使用此方法。 如果使用多個 OLE DB 提供者，取用者提取模型會讓取用者提供任何資料列集物件，當做資料表值參數值。  
   
- 若要使用提取模型，取用者必須提供資料列集物件自己的實作。 使用資料表值參數資料列集 (CLSID_ROWSET_TVP) 使用提取模型，取用者時需要彙總的提供者會公開 ITableDefinitionWithConstraints 透過資料表值參數資料列集物件：CreateTableWithConstraints 方法或 iopenrowset:: Openrowset&lt; 方法。 只有取用者物件會覆寫 IRowset 介面實作。 您必須覆寫下列函數：  
+ 若要使用提取模型，取用者必須提供資料列集物件自己的實作。 使用提取模型搭配資料表值參數資料列集 (CLSID_ROWSET_TVP) 時, 取用者必須匯總提供者透過 ITableDefinitionWithConstraints 所公開的資料表值參數資料列集物件::CreateTableWithConstraints 方法或 IOpenRowset:: OpenRowset 方法。 只有取用者物件會覆寫 IRowset 介面實作。 您必須覆寫下列函數：  
   
 -   IRowset::GetNextRows  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66801163"
   
  OLE DB Driver for SQL Server 會從取用者資料列集物件一次讀取一或多個資料列，以支援資料表值參數中的資料流行為。 例如，使用者在磁碟 (而不是記憶體) 上可能有資料表值參數資料列集資料，而且可能會在 OLE DB Driver for SQL Server 需要時，從磁碟實作功能來讀取資料。  
   
- 取用者將其資料格式，OLE DB Driver for SQL Server 使用通訊 iaccessor:: Createaccessor 資料表值參數資料列集物件上。 從取用者緩衝區讀取資料時，提供者會確認透過至少一個存取子控制代碼可以取得所有可寫入，而且非預設的資料行，並使用對應的控制代碼來讀取資料行資料。 為避免模稜兩可的情況，在資料表值參數資料列集資料行和繫結之間應該有一對一的對應。 相同資料行的重複繫結將會導致錯誤。 此外，每個存取子必須有*iOrdinal*的 DBBindings 序列中的成員。 IRowset::GetData 的呼叫將會與每個資料列的存取子數目一樣多，而且呼叫的順序將會以 *iOrdinal* 值的順序為基礎 (從低到高)。  
+ 取用者會使用資料表值參數資料列集物件上的 IAccessor:: CreateAccessor, 來對 SQL Server 的 OLE DB 驅動程式進行通訊。 從取用者緩衝區讀取資料時，提供者會確認透過至少一個存取子控制代碼可以取得所有可寫入，而且非預設的資料行，並使用對應的控制代碼來讀取資料行資料。 為避免模稜兩可的情況，在資料表值參數資料列集資料行和繫結之間應該有一對一的對應。 相同資料行的重複繫結將會導致錯誤。 此外, 每個存取子的順序都應該是 DBBindings 的*iOrdinal*成員。 IRowset::GetData 的呼叫將會與每個資料列的存取子數目一樣多，而且呼叫的順序將會以 *iOrdinal* 值的順序為基礎 (從低到高)。  
   
  提供者應該實作透過資料表值參數資料列集物件所公開的大部分介面。 取用者將會以最少的介面 (IRowset) 實作資料列集物件。 由於未公開彙總的緣故，剩餘的強制資料列集物件介面將會透過資料表值參數資料列集物件實作。  
   

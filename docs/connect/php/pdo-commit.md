@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: commit |Microsoft Docs'
+title: 'PDO:: commit |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a0db4a00-9700-4f49-ab16-6522dd1101d3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 344ecc2a6b2e8b71693f5b916774c93df3012c76
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 41a87a6444ce61af5b2b8a00aa61306dd90d0d8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993293"
 ---
 # <a name="pdocommit"></a>PDO::commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

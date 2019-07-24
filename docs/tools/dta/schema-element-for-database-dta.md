@@ -1,5 +1,5 @@
 ---
-title: 結構描述元素 (DTA) 資料庫 |Microsoft Docs
+title: 資料庫的 Schema 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 02a90dc51fec77be7e761dab31fcc1258d2c9a8a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: d41a77ace5608acd649bc91f420fe65c9eb7a563
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034560"
 ---
 # <a name="schema-element-for-database-dta"></a>資料庫的 Schema 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

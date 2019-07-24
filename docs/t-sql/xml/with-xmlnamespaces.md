@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048146"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   當 ELEMENTS XSINIL 指示詞使用於查詢時，不能重新宣告 XML 命名空間前置詞 `xsi`。  
 
--   不需要宣告 'http://www.w3.org/2001/XMLSchema-instance'，即可使用 xsi 標準命名空間。 如果未指定，XML/XPATH 處理器會隱含地予以新增，且只要在 XML 文件中正確宣告 'http://www.w3.org/2001/XMLSchema-instance' 結構描述，xpath 運算式就能使用 xsi 前置詞。
+-   不需要宣告 'http://www.w3.org/2001/XMLSchema-instance '，即可使用 xsi 標準命名空間。 如果未指定，XML/XPATH 處理器會隱含地予以新增，且只要在 XML 文件中正確宣告 'http://www.w3.org/2001/XMLSchema-instance ' 結構描述，xpath 運算式就能使用 xsi 前置詞。
 
 -   URI 字串值是根據目前資料庫定序字碼頁來編碼，在內部是轉換成 Unicode。  
   

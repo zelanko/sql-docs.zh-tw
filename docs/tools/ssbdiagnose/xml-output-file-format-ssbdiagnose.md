@@ -1,5 +1,5 @@
 ---
-title: XML 輸出檔格式 (ssbdiagnose) |Microsoft Docs
+title: XML 輸出檔案格式 (ssbdiagnose) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4b68b8987aad2967447bab72afbb4e3c5665da93
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 414c6a08e4caaf14e55c1e05412cdb86c8658979
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986067"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>XML 輸出檔格式 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

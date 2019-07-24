@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 4d43badf62c4fe5aeeb88ac1f81ce9d010c7fc8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a8d85b5823d692343acbc73ffc10e0cb08bc9f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930150"
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

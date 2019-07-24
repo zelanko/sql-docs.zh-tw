@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50eace66b5f792ce9876d56dab8768555a43392f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66775610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980467"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>getReference 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public javax.naming.Reference getReference()
  參考物件。  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getReference 方法是由 javax.naming.Referenceable 介面中的 getReference 方法指定。  
+ 這個 getReference 方法是由 javax.xml.transform.dom.domresult 中的 getReference 方法指定。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 之前，如果 SQLServerDataSource.setTrustStorePassword 在 SQLServerDataSource 物件上呼叫，密碼會存在於 SQLServerDataSource.getReference 所傳回的物件中，以便允許使用此物件來建立其他連線。 在 JDBC Driver 3.0 中，您需要在 SQLServerDataSource.getReference 傳回的物件上設定密碼，才能夠使用此物件建立連接。  
   

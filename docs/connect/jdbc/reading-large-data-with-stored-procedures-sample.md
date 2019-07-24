@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8277cafb173dc28876c95a7ccb60f7ed3ee6396a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cbf339845bd23f1beb4f5cd0f3b3a380689a3120
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956124"
 ---
 # <a name="reading-large-data-with-stored-procedures-sample"></a>使用預存程序讀取大型資料範例
 
@@ -37,7 +36,7 @@ ms.locfileid: "66772475"
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱 [JDBC Driver 的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
 
-此範例會建立所需的預存程序中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫：
+此範例會在[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫中建立必要的預存程式:
 
 ## <a name="example"></a>範例
 

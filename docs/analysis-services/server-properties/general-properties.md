@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 的一般屬性 |Microsoft Docs
-ms.date: 04/04/2019
+title: Analysis Services 一般屬性 |Microsoft Docs
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0d2a1fd8a83c4b181dfc182f5fb5630e29c9efb
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714685"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419516"
 ---
 # <a name="general-properties"></a>一般屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **適用於：** 多維度與表格式伺服器模式，除非另有指示  
+ 除非另有說明, 否則這些屬性適用于多維度和表格式伺服器模式。  
   
 ## <a name="non-specific-category"></a>非特定類別目錄  
  **AdminTimeout**  
@@ -33,11 +33,11 @@ ms.locfileid: "62714685"
  字串屬性，以分隔清單指定在 Analysis Services 對話方塊中可儲存、開啟和尋找檔案時可瀏覽的資料夾。 Analysis Services 服務帳戶對您加入至清單中的所有資料夾，必須有讀取和寫入權限。  
   
  **BackupDir**  
- 字串屬性所識別的名稱。 根據預設，儲存備份檔案的目錄，萬一不指定路徑，Backup 命令的一部分。  
+ 字串屬性, 識別預設儲存備份檔案的目錄名稱, 在此事件中, 不會將路徑指定為 Backup 命令的一部分。  
  
-**ClientCacheRefreshPolicy**只適用於 Azure 的分析服務。 覆寫**排程快取重新整理**設定所有的 Power BI 資料集。 Live Connect 的所有報表將會都觀察伺服器層級設定，無論資料集層級設定，或它們是在哪一個工作區。
+**ClientCacheRefreshPolicy**針對 SSAS 和 Azure Analysis Services 中的表格式模型, 此屬性會覆寫所有 Power BI 資料集的**排程**快取重新整理設定。 所有 Live Connect 報表都會觀察伺服器層級的設定, 不論資料集層級設定或其所在的工作區。
 
-這個屬性的預設值是-1，這可讓所有的背景快取重新整理排程的快取重新整理資料集設定中所指定。 若要防止所有背景快取重新整理中，指定零 (0)。
+此屬性的預設值為-1, 允許在資料集的 [排程快取重新整理] 設定中指定所有背景快取重新整理。 若要防止所有背景快取重新整理, 請指定零 (0)。
 
   
  **CollationName**  
@@ -52,7 +52,7 @@ ms.locfileid: "62714685"
  此為帶正負號的 32 位元整數屬性，定義配置給建立資料分割索引的最大執行緒數目。 增加此值就能加速資料分割索引，但要耗用較多記憶體。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  **CoordinatorCancelCount**  
- 此為帶正負號的 32 位元整數屬性，定義伺服器應檢查取消事件是否發生的頻率 (依據內部反覆運算計數)。 降低此數字就能以更高的頻率檢查取消事件，但要耗用一般效能。 在表格式伺服器模式下，會忽略這個屬性。  
+ 此為帶正負號的 32 位元整數屬性，定義伺服器應檢查取消事件是否發生的頻率 (依據內部反覆運算計數)。 降低此數字就能以更高的頻率檢查取消事件，但要耗用一般效能。 表格式伺服器模式會忽略這個屬性。  
   
  **CoordinatorExecutionMode**  
  此為帶正負號的 32 位元整數屬性，定義伺服器會嘗試的最大平行作業數目，包含處理和查詢作業。 零 (0) 表示伺服器會依據內部演算法決定。 正數表示總計的最大作業數目。 具有反轉符號的負數，表示每個處理器的最大作業數目。  
@@ -69,7 +69,7 @@ ms.locfileid: "62714685"
  此為字串屬性，可識別儲存資料的目錄名稱。  
   
  **DeploymentMode**  
- 判斷 Analysis Services 伺服器執行個體的運作內容。 這個屬性被指在對話方塊、 訊息和文件中的 「 伺服器模式 」。 根據您在安裝 Analysis Services 時所選取的伺服器模式，此屬性是由 SQL Server 安裝程式所設定。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
+ 判斷 Analysis Services 伺服器執行個體的運作內容。 在對話方塊、訊息和檔中, 此屬性稱為「伺服器模式」。 根據您在安裝 Analysis Services 時所選取的伺服器模式，此屬性是由 SQL Server 安裝程式所設定。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
   
  這個屬性的有效值包括：  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Setfetchmode |Microsoft Docs'
+title: 'PDOStatement:: 呼叫提取 setfetchmode |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f0fb2d76d491482e418a005c4fb1f5879620709b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f5a9065123bbacc828c7949aabcb44de6136f62c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935988"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

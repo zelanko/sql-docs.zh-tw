@@ -1,5 +1,5 @@
 ---
-title: SQLServerConnectionPoolDataSource 建構函式 （) |Microsoft Docs
+title: SQLServerConnectionPoolDataSource 的構造函式 () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0f5d1ee5-7996-4e20-956e-fe72cb64a588
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 902d74a808e24db3f8291b32e89c9cd908c0fee5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9799379cc9121511c0927b56d808d27dda0c18c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971597"
 ---
 # <a name="sqlserverconnectionpooldatasource-constructor-"></a>SQLServerConnectionPoolDataSource 建構函式 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

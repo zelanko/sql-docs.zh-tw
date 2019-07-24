@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984672"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料
 您可以比較「來源」  資料庫與「目標」  資料庫的資料，以及指定應該比較的資料表。 您可以檢閱資料並決定要同步處理哪些變更。 然後您可以更新目標來同步處理資料庫，也可以將更新指令碼匯出至 Transact\-SQL 編輯器或檔案。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 68213a14adfc1c0fe74e9207ab3ca325d7a872e2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1cfac7ed273cf43c2efc4a9751cdbf1ba8b8a2d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930101"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>重新執行追蹤的考量 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,29 +1,29 @@
 ---
 title: 什麼是應用程式部署？
 titleSuffix: SQL Server 2019 big data clusters
-description: 本文說明在 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式部署。
+description: 本文說明 SQL Server 2019 big data cluster (預覽) 上的應用程式部署。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 43d65ce9b9335d22b453114139f7032613ac5359
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8cc44862af21c54bdbd0e4adbb35db912c3f7c9
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958821"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419413"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>什麼是 SQL Server 2019 巨量資料叢集上的應用程式部署？
+# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>什麼是 SQL Server 2019 big data 叢集上的應用程式部署？
 
-應用程式部署會提供介面來建立、 管理及執行應用程式，以讓巨量資料叢集上的應用程式的部署。 巨量資料叢集上部署的應用程式會受益於叢集的運算能力，而且可以存取在叢集使用的資料。 這會增加延展性和效能的應用程式，同時管理資料的所在位置的應用程式。
-下列各節描述的架構和應用程式部署功能。
+應用程式部署藉由提供介面來建立、管理和執行應用程式, 讓您能夠在 big data 叢集上部署應用程式。 部署在 big data 叢集上的應用程式可受益于叢集的計算能力, 並且可以存取叢集上可用的資料。 這會增加應用程式的擴充性和效能, 同時管理資料所在的應用程式。
+下列各節說明應用程式部署的架構和功能。
 
 ## <a name="application-deployment-architecture"></a>應用程式部署架構
 
-應用程式部署是由一個控制站和應用程式執行階段處理常式所組成。 建立應用程式，規格檔案時 (`spec.yaml`) 提供。 這`spec.yaml`檔案包含控制器必須知道若要成功部署應用程式的所有項目。 以下是針對內容的範例`spec.yaml`:
+應用程式部署是由控制器和應用程式執行時間處理常式所組成。 建立應用程式時, 會提供規格檔案`spec.yaml`()。 此`spec.yaml`檔案包含控制器為了成功部署應用程式所需知道的一切。 以下是的內容`spec.yaml`範例:
 
 ```yaml
 #spec.yaml
@@ -41,32 +41,32 @@ output: #output parameter the app expects and the type
   result: int
 ```
 
-控制器會檢查`runtime`中所指定`spec.yaml`檔案，並呼叫對應的執行階段處理常式。 執行階段處理常式會建立應用程式。 首先，會建立 Kubernetes ReplicaSet，包含一或多個 pod，每個均包含應用程式部署。 所定義的 pod 數目`replicas`參數中設定`spec.yaml`應用程式檔案。 每個 pod 可以有多個集區的其中一個。 所定義的集區數目`poolsize`參數中設定`spec.yaml`檔案。
+控制器會檢查檔案`runtime` `spec.yaml`中指定的, 並呼叫對應的執行時間處理常式。 執行時間處理常式會建立應用程式。 首先, 會建立包含一或多個 pod 的 Kubernetes ReplicaSet, 其中每個 pod 都包含要部署的應用程式。 Pod 數目是由應用程式檔案`replicas` `spec.yaml`中所設定的參數所定義。 每個 pod 可以有一個以上的集區。 集區的數目是由檔案`poolsize` `spec.yaml`中設定的參數所定義。
 
-這些設定會影響部署可以平行處理的要求量。 一個給定時間的要求數目上限是等於`replicas`時間`poolsize`。 如果您有 5 個複本和 2 個集區，每個複本部署可以處理以平行方式的 10 名要求。 請參閱下圖的圖形化表示法`replicas`和`poolsize`:
+這些設定會影響部署可以平行處理的要求數量。 一個給定時間的要求數目上限等於`replicas`次。 `poolsize` 如果您有5個複本和每個複本2個集區, 部署可以平行處理10個要求。 如需`replicas`和的圖形表示, `poolsize`請參閱下圖:
 
 ![Poolsize 和複本](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-如果已建立的 ReplicaSet，和 pod 已開始之後，建立 cron 作業`schedule`中設定的`spec.yaml`檔案。 最後，Kubernetes 服務會建立可用來管理和執行應用程式 （如下所示）。
+建立 ReplicaSet 並啟動 pod 之後, 如果`schedule`在檔案`spec.yaml`中設定了, 就會建立 cron 作業。 最後, 會建立一個可用於管理和執行應用程式的 Kubernetes 服務 (請參閱下文)。
 
-應用程式執行時，應用程式 proxy 的要求的複本，然後傳回結果的 Kubernetes 服務。
+當執行應用程式時, 應用程式的 Kubernetes 服務會將要求傳送給複本, 並傳回結果。
 
 ## <a name="how-to-work-with-application-deployment"></a>如何使用應用程式部署
 
-應用程式部署的兩個主要的介面包括： 
-- [命令列介面 `mssqlctl`](big-data-cluster-create-apps.md)
-- [Visual Studio Code 和 Azure Data Studio 擴充功能](app-deployment-extension.md)
+應用程式部署的兩個主要介面如下: 
+- [命令列介面`azdata`](big-data-cluster-create-apps.md)
+- [Visual Studio Code 和 Azure Data Studio 延伸模組](app-deployment-extension.md)
 
-您也可讓應用程式以使用 RESTful web 服務來執行。 如需詳細資訊，請參閱 <<c0> [ 巨量資料叢集上的應用程式會耗用](big-data-cluster-consume-apps.md)。
+您也可以使用 RESTful web 服務來執行應用程式。 如需詳細資訊, 請參閱[在大型資料叢集上使用應用程式](big-data-cluster-consume-apps.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解如何建立和 SQL Server 的巨量資料叢集上執行應用程式，請參閱下列各項：
+若要深入瞭解如何在 SQL Server big data 叢集上建立和執行應用程式, 請參閱下列各項:
 
-- [使用 mssqlctl 部署應用程式](big-data-cluster-create-apps.md)
-- [使用應用程式部署的延伸模組部署應用程式](app-deployment-extension.md)
-- [使用巨量資料叢集上的應用程式](big-data-cluster-consume-apps.md)
+- [使用 azdata 部署應用程式](big-data-cluster-create-apps.md)
+- [使用應用程式部署擴充功能部署應用程式](app-deployment-extension.md)
+- [在大型資料叢集上使用應用程式](big-data-cluster-consume-apps.md)
 
-若要深入了解 SQL Server 巨量資料叢集，請參閱下列概觀：
+若要深入瞭解 SQL Server big data 叢集, 請參閱下列總覽:
 
-- [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
+- [什麼是 SQL Server 2019 big data 叢集？](big-data-cluster-overview.md)

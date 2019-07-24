@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d04e4be41f72d244ec5cd0c7d2a04e468f871181
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e5e2d702c8fb91be6e8581f1fe1bb6c99d31092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011212"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>單一資料表快速分析表單 (資料分析工作)
 

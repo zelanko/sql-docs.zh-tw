@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b688e5b014915578df5c56ec5e6af2fc8fe26b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e7898f66631fd9ca9d75573d5025bb732db8208
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956720"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

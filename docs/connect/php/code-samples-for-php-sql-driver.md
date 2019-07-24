@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3a5d218a-1490-4c61-a20c-4d71f6600c97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3dcb688b68e5bc2cbfe82124b1dc1bab2450748
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74f0d10186831675ecccce1d417ea4fd1b88b213
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015147"
 ---
 # <a name="code-samples-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的程式碼範例
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

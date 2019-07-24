@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_force_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_query_store_force_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9a23f839fcb828d9c90198d8aadffb6a8cfe0ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07d2e8032bb596faaac577194273760c59006645
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896438"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418860"
 ---
-# <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan & Amp;#40;transact-SQL&AMP;#41;
+# <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  啟用強制執行特定的計劃，以針對特定查詢。  
+  針對特定查詢啟用強制特定計劃。  
   
- 如果計劃強制執行特定查詢中，每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遇到查詢，它會嘗試強制最佳化工具的計劃。 如果強制執行計劃失敗，會引發 XEvent，並指示最佳化工具最佳化以一般方式。  
+ 針對特定查詢強制執行計畫時, 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遇到查詢時, 它會嘗試在優化工具中強制計畫。 如果計畫強制失敗, 則會引發 XEvent, 並指示優化工具以正常方式進行優化。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @query_id = ] query_id` 是查詢的識別碼。 *query_id*已**bigint**，沒有預設值。  
+`[ @query_id = ] query_id`這是查詢的識別碼。 *query_id*是**Bigint**, 沒有預設值。  
   
-`[ @plan_id = ] plan_id` 會強制查詢計畫的識別碼。 *plan_id*已**bigint**，沒有預設值。  
+`[ @plan_id = ] plan_id`這是要強制執行之查詢計劃的識別碼。 *plan_id*是**Bigint**, 沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -55,7 +55,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>備註  
   
 ## <a name="permissions"></a>Permissions  
- 需要**EXECUTE**的資料庫上的權限並**插入**， **UPDATE**，和**刪除**查詢存放區目錄的權限檢視。  
+ 需要資料庫的**ALTER**許可權。
   
 ## <a name="examples"></a>範例  
  下列範例會傳回查詢存放區中查詢的相關資訊。  
@@ -69,7 +69,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 識別 query_id 和您想要強制執行 plan_id 之後，使用下列範例中，強制查詢使用的計畫。  
+ 在您識別要強制執行的 query_id 和 plan_id 之後, 請使用下列範例來強制查詢使用計畫。  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  

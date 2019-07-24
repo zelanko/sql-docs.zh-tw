@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 431126a6-ff91-4818-8763-4442152bd571
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e94dd6e91814a70366f41dd7ee6f788c63e5455d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 2c2ee53261681cbcebd023bef75b98124a24d383
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223690"
 ---
 # <a name="extract-a-script-from-a-trace-sql-server-profiler"></a>從追蹤中擷取指令碼 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

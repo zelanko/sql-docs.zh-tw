@@ -1,6 +1,6 @@
 ---
-title: 使用大型值型別 |Microsoft Docs
-description: 使用 OLE DB 驅動程式中的大數值類型，適用於 SQL Server
+title: 使用大數數值型別 |Microsoft Docs
+description: 針對 SQL Server 使用具有 OLE DB 驅動程式的大數數值型別
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,42 +16,41 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a8dafb5c74322c1232f71a7fe2f00b38005a536c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988864"
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，使用大數值資料類型時需要進行特殊處理。 大數值資料類型是指最大資料列大小超過 8 KB 的類型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出了 **max** 規範，這個規範可用於 **varchar**、**nvarchar** 和 **varbinary** 資料類型，以允許儲存最大可達 2^31 -1 個位元組的值。 資料表資料行和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 變數可以指定 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 資料類型。  
+  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，使用大數值資料類型時需要進行特殊處理。 大數值資料類型是指最大資料列大小超過 8 KB 的類型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出了 **max** 規範，這個規範可用於 **varchar**、**nvarchar** 和 **varbinary** 資料類型，以允許儲存最大可達 2^31 -1 個位元組的值。 資料表資料行和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 變數可以指定 **varchar(max)** 、**nvarchar(max)** 或 **varbinary(max)** 資料類型。  
   
 > [!NOTE]  
 >  大數值資料類型的最大大小可介於 1 KB 和 8 KB 之間，或者也可以指定為無限制。  
   
- 先前，只有 **text**、**ntext** 和 **image** 之類的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型可以達到此種長度。 **varchar**、**nvarchar** 和 **varbinary** 的 **max** 規範使這些資料類型變得多餘。 不過，因為 long 資料類型仍可使用，所以大部分 OLE DB 資料存取元件的介面都仍保持原樣。 與先前的版本的回溯相容性，在 OLE DB Driver for SQL Server 中的 DBCOLUMNFLAGS_ISLONG 旗標會持續使用。 當新類型設定為無限制的最大長度時，針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本所撰寫的提供者和驅動程式仍會為其繼續使用這些詞彙。  
+ 先前，只有 **text**、**ntext** 和 **image** 之類的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型可以達到此種長度。 **varchar**、**nvarchar** 和 **varbinary** 的 **max** 規範使這些資料類型變得多餘。 不過，因為 long 資料類型仍可使用，所以大部分 OLE DB 資料存取元件的介面都仍保持原樣。 為了與先前版本的回溯相容性, SQL Server 的 OLE DB 驅動程式中的 DBCOLUMNFLAGS_ISLONG 旗標仍在使用中。 當新類型設定為無限制的最大長度時，針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更新版本所撰寫的提供者和驅動程式仍會為其繼續使用這些詞彙。  
   
 > [!NOTE]  
->  您也可以將 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型指定為預存程序的輸入和輸出參數類型、函數傳回型別，或者指定於 [CAST 和 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 函數。  
+>  您也可以將 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 資料類型指定為預存程序的輸入和輸出參數類型、函數傳回型別，或者指定於 [CAST 和 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 函數。  
   
 > [!NOTE]  
 >  如果複寫資料，您可能需要將 [max text repl size 伺服器組態選項](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)設定為 -1。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 
- OLE DB Driver for SQL Server 會將 **varchar(max)**、**varbinary(max)** 和 **nvarchar(max)** 類型分別公開為 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR。  
+ OLE DB Driver for SQL Server 會將 **varchar(max)** 、**varbinary(max)** 和 **nvarchar(max)** 類型分別公開為 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR。  
   
- 在 **max** 大小設定為無限制的資料行中，**varchar(max)**、**varbinary(max)** 和 **nvarchar(max)** 資料類型會在傳回資料行資料類型的核心 OLE DB 結構描述資料列集和介面中表示為 ISLONG。  
+ 在 **max** 大小設定為無限制的資料行中，**varchar(max)** 、**varbinary(max)** 和 **nvarchar(max)** 資料類型會在傳回資料行資料類型的核心 OLE DB 結構描述資料列集和介面中表示為 ISLONG。  
   
- 命令物件的 **IAccessor** 實作已變更為允許以 DBTYPE_IUNKNOWN 的形式進行繫結。 如果取用者指定 DBTYPE_IUNKNOWN 並將 *pObject* 設定為 null，則提供者會將 **ISequentialStream** 介面傳回給取用者，讓取用者可以將 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 用資料流的形式傳出輸出變數。  
+ 命令物件的 **IAccessor** 實作已變更為允許以 DBTYPE_IUNKNOWN 的形式進行繫結。 如果取用者指定 DBTYPE_IUNKNOWN 並將 *pObject* 設定為 null，則提供者會將 **ISequentialStream** 介面傳回給取用者，讓取用者可以將 **varchar(max)** 、**nvarchar(max)** 或 **varbinary(max)** 用資料流的形式傳出輸出變數。  
   
  以資料流傳輸的輸出參數值會在任何結果資料列之後傳回。 如果應用程式藉由呼叫 **IMultipleResults::GetResult** (而不取用所有的傳回輸出參數值) 嘗試繼續前往下一個結果集，就會傳回 DB_E_OBJECTOPEN。  
   
- 為了支援資料流作業，OLE DB Driver for SQL Server 需要循序存取可變長度的參數。 這表示每當 **varchar(max)**、**nvarchchar(max)** 或 **varbinary(max)** 資料行或輸出參數繫結至 DBTYPE_IUNKNOWN 時，DBPROP_ACCESSORDER 就必須設定為 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 或 DBPROPVAL_AO_SEQUENTIAL。 如果未遵守這項存取順序的限制，則對 **IRowset::GetData** 的呼叫會失敗，且傳回 DBSTATUS_E_UNAVAILABLE。 當沒有任何使用 DBTYPE_IUNKNOWN 的輸出繫結時，這項限制就不適用。  
+ 為了支援資料流作業，OLE DB Driver for SQL Server 需要循序存取可變長度的參數。 這表示每當 **varchar(max)** 、**nvarchchar(max)** 或 **varbinary(max)** 資料行或輸出參數繫結至 DBTYPE_IUNKNOWN 時，DBPROP_ACCESSORDER 就必須設定為 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 或 DBPROPVAL_AO_SEQUENTIAL。 如果未遵守這項存取順序的限制，則對 **IRowset::GetData** 的呼叫會失敗，且傳回 DBSTATUS_E_UNAVAILABLE。 當沒有任何使用 DBTYPE_IUNKNOWN 的輸出繫結時，這項限制就不適用。  
   
  OLE DB Driver for SQL Server 也支援將輸出參數針對大數值資料類型而繫結為 DBTYPE_IUNKNOWN，這在預存程序要將大數值類型以傳回值 (對用戶端公開為 DBTYPE_IUNKNOWN) 傳回時很有用。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66802874"
   
 -   繫結為 DBTYPE_IUNKNOWN 並使用資料流。  
   
- 當報告資料行的大小上限，將會報告 OLE DB Driver for SQL Server:  
+ 報告資料行的大小上限時, SQL Server 的 OLE DB 驅動程式將會報告:  
   
 -   定義的最大大小，例如 **varchar(** 2000 **)** 資料行的最大大小為 2000，或者  
   
@@ -691,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- 如需有關 OLE DB Driver for SQL Server 如何公開大數值資料類型的詳細資訊，請參閱 < [Blob 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
+ 如需 SQL Server 的 OLE DB 驅動程式如何公開大數值資料類型的詳細資訊, 請參閱[blob 和 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
 
   
 ## <a name="see-also"></a>另請參閱  

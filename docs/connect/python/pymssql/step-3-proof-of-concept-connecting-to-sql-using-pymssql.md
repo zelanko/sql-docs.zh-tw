@@ -10,22 +10,21 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48ae75c5eee03cba273e65297b3652c1a2da99ec
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 27b56a20a0456bef04553c614432bde270d8e98d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935778"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步驟 3︰使用 pymssql 連線到 SQL 的概念證明
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-此範例應該考慮只概念證明。  範例程式碼為了清楚起見，已簡化，並不一定代表 Microsoft 建議的最佳作法。  
+這個範例應該僅視為概念證明。  為了清楚起見, 範例程式碼已簡化, 不一定代表 Microsoft 建議的最佳作法。  
   
-## <a name="step-1--connect"></a>步驟 1： 連線  
+## <a name="step-1--connect"></a>步驟 1: 連接  
   
-[Pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html)函數用來連接到 SQL Database。  
+[Pymssql](https://pymssql.org/en/latest/ref/pymssql.html)函數是用來連接到 SQL Database。  
   
 ```python
     import pymssql  
@@ -33,9 +32,9 @@ ms.locfileid: "66800857"
 ```  
   
   
-## <a name="step-2--execute-query"></a>步驟 2： 執行查詢  
+## <a name="step-2--execute-query"></a>步驟 2: 執行查詢  
   
-[Cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)函式可以用來擷取結果集從查詢中，對 SQL Database。 此函式基本上會接受任何查詢，並傳回結果集，這可以藉由使用反覆[cursor.fetchone （)](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)。  
+您可以使用[cursor. execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)函數, 從查詢針對 SQL Database 取出結果集。 此函式基本上會接受任何查詢並傳回結果集, 而您可以使用[cursor.fetchone ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)來反復查看它。  
   
   
 ```python
@@ -49,9 +48,9 @@ ms.locfileid: "66800857"
         row = cursor.fetchone()  
 ```  
   
-## <a name="step-3--insert-a-row"></a>步驟 3： 插入資料列  
+## <a name="step-3--insert-a-row"></a>步驟 3: 插入資料列  
   
-在您將了解如何執行此範例[插入](../../../t-sql/statements/insert-transact-sql.md)陳述式安全地傳遞可保護您的應用程式的參數[SQL 插入式攻擊](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+在此範例中, 您將瞭解如何安全地執行[INSERT](../../../t-sql/statements/insert-transact-sql.md)語句、傳遞可保護您的應用程式免于[SQL 插入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值的參數。    
   
   
 ```python
@@ -67,9 +66,9 @@ ms.locfileid: "66800857"
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>步驟 4： 回復交易  
+## <a name="step-4--rollback-a-transaction"></a>步驟 4: 復原交易  
   
-此程式碼範例示範如何使用交易，您：  
+這個程式碼範例會示範交易的使用方式, 您可以在其中:  
   
 * 開始交易  
 * 插入資料列  
@@ -87,4 +86,4 @@ ms.locfileid: "66800857"
     
   ## <a name="next-steps"></a>後續步驟  
   
-如需詳細資訊，請參閱 < [Python 開發人員中心](https://azure.microsoft.com/develop/python/)。
+如需詳細資訊, 請參閱[Python 開發人員中心](https://azure.microsoft.com/develop/python/)。

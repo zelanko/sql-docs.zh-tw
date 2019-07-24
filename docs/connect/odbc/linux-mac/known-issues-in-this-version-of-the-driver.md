@@ -11,13 +11,12 @@ helpviewer_keywords:
 - known issues
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 86b87d03a5b0a66ba1e77260a0ec0b43125fa98b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3508277502ad7e3eb3b0e7ff048301c8ed1efdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008777"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>此驅動程式版本的已知問題
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5a8aab1770d1bcad18f8c144f57a61703d2a4a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcabc89e268e9ce5ed93211ccf89eed53e245c07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029356"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>標準格式與模式限制
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

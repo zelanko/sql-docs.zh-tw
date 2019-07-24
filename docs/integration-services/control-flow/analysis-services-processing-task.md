@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01e5fa146c49d1fd43b2fac8fda419dec412fee6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 617676bf00f5f91652719ca93ef614152523367a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947930"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
 

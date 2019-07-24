@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bd566edd70ae2b7cd5fd5175a64b6a09c793194d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3541a007b51d5813a6bc42a977ec31fedf5bab87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104989"
 ---
 # <a name="create-element-dta"></a>Create 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

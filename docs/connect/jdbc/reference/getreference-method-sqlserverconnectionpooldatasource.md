@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8c48de91-de55-4f25-a5f1-36a8e8c4629e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 36e5e372ccf126a5f2e5da438c3f610571ad6fe0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: afb317bfcca6ccea14c9a25c98e1c0bfbe29e19f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980496"
 ---
 # <a name="getreference-method-sqlserverconnectionpooldatasource"></a>getReference 方法 (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public javax.naming.Reference getReference()
  參考物件。  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getReference 方法是由 javax.naming.Referenceable 介面中的 getReference 方法指定。 它會覆寫 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別的 [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) 方法。  
+ 這個 getReference 方法是由 javax.xml.transform.dom.domresult 中的 getReference 方法指定。 它會覆寫 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別的 [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnectionPoolDataSource 方法](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f9643504dea0c40c90181a77fa8f035f18addfd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d42af84c320eadb167126325299fb25cadaed2dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972126"
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>setURL 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

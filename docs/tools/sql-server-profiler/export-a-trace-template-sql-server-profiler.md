@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 058f157aa7b102e79c832ec77aacb264035a443f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 60218ad4bd1d50c95764f0191bb42860b1e06107
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930026"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>匯出追蹤範本 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

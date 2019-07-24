@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 450a2d37d2a3ad7ef93f72366e9268ff84db70be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60168c1622ebe7660bb10d421b9d35a6d41523f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091020"
 ---
 # <a name="monitor-disk-usage"></a>監視磁碟使用量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

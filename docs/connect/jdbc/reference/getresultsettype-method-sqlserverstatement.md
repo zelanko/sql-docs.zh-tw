@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 260da35f-ddf6-4111-8519-69956ea3072e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 61286fae7c5ad9c7ffa4c2612517e236f5c6a669
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a0293a48a354bba911a11ecf91a17211a9f8a12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980306"
 ---
 # <a name="getresultsettype-method-sqlserverstatement"></a>getResultSetType 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getResultSetType()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getResultSetType 方法是由 java.sql.Statement 介面中的 getResultSetType 方法指定。  
+ 這個 getResultSetType 方法是由 sql 語句介面中的 getResultSetType 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

@@ -15,24 +15,23 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0a7e06fe0888767d653f40148efb324f89456460
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993969"
 ---
 # <a name="isolation-levels-ole-db"></a>隔離等級 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端可以控制連線的交易隔離等級。 若要控制交易隔離等級，會使用 OLE DB Driver for SQL Server 取用者：  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端可以控制連線的交易隔離等級。 若要控制交易隔離等級, SQL Server 取用者的 OLE DB 驅動程式會使用:  
   
 -   適用於 OLE DB Driver for SQL Server 預設自動認可模式的 DBPROPSET_SESSION 屬性 DBPROP_SESS_AUTOCOMMITISOLEVELS。  
   
-     OLE DB Driver for SQL Server 層級的預設值是 DBPROPVAL_TI_READCOMMITTED。  
+     層級 SQL Server 預設的 OLE DB 驅動程式是 DBPROPVAL_TI_READCOMMITTED。  
   
 -   適用於本機手動認可交易之 **ITransactionLocal::StartTransaction** 方法的 *isoLevel* 參數。  
   

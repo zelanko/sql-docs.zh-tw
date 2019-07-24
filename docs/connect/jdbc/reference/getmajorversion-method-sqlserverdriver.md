@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 027edab7-9b5c-4f5f-9469-fe00cf7798b6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5856879a8391a942859ff287e8e127d28a80e509
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7439a62f8bdb987bf50d76c12277c5341c0dd354
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982421"
 ---
 # <a name="getmajorversion-method-sqlserverdriver"></a>getMajorVersion 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public int getMajorVersion()
  **int**，包含 JDBC 驅動程式的主要版本號碼。  
   
 ## <a name="remarks"></a>Remarks  
- 這個 getMajorVersion 方法是由 java.sql.Driver 介面中 getMajorVersion 方法指定。  
+ 這個 getMajorVersion 方法是由 sql-dmo 介面中的 getMajorVersion 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDriver 方法](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

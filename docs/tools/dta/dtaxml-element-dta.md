@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8bc5977952c32fdf4fa6b81bae20068ab47bb97a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 43b6fc40e4e116777f5caef2a3c6637c8477c86c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132761"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

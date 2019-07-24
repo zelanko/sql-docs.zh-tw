@@ -1,6 +1,6 @@
 ---
-title: 列舉 OLE DB 資料來源 (OLE DB) |Microsoft Docs
-description: 列舉 OLE DB 資料來源使用 MSOLEDBSQL 列舉值
+title: 列舉 OLE DB 的資料來源 (OLE DB) |Microsoft Docs
+description: 使用內含 MSOLEDBSQL.H 枚舉器列舉 OLE DB 的資料來源
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 248a3a681bb7d52d54e7e052539aa9257f6bca03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994826"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>列舉 OLE DB 資料來源 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,15 +39,15 @@ ms.locfileid: "66785928"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>若要列舉 OLE DB 資料來源  
   
-1.  呼叫以擷取來源資料列集**ISourceRowset::GetSourcesRowset**。  
+1.  藉由呼叫**ISourceRowset:: GetSourcesRowset**來取出來來源資料列集。  
   
-2.  尋找列舉值的資料列集的描述，藉由呼叫**GetColumnInfo::IColumnInfo**。  
+2.  藉由呼叫**GetColumnInfo:: IColumnInfo**, 尋找列舉值資料列集的描述。  
   
 3.  從資料行資訊建立繫結結構。  
   
-4.  建立資料列集的存取子，藉由呼叫**iaccessor:: Createaccessor**。  
+4.  藉由呼叫**IAccessor:: CreateAccessor**來建立資料列集存取子。  
   
-5.  藉由呼叫擷取資料列**irowset:: Getnextrows**。  
+5.  藉由呼叫**IRowset:: GetNextRows**來提取資料列。  
   
 6.  呼叫 **IRowset::GetData** 來從資料列集的資料列複本擷取資料，然後加以處理。  
   

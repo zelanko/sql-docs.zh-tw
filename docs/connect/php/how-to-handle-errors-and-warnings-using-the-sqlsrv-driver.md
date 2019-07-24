@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18aef50a23c7452e371abb30e6897b3ec11b48f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18e50d7344fb5d3d16c4fc0978137e169ba487ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936498"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式處理錯誤和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

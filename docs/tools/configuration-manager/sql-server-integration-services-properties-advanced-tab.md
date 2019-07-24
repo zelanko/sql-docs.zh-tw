@@ -11,13 +11,12 @@ ms.assetid: d89cc01f-084b-41b0-8c60-3c6b964d7ad4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 83a7046499e15412bd15c13ce52aa26d510092ad
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: fbed914d8167c320ea36b17a539592e1403085b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024073"
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>SQL Server Integration Services 屬性 (進階索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

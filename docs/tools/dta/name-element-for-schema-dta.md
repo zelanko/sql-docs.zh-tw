@@ -1,5 +1,5 @@
 ---
-title: 命名元素 (DTA) 的結構描述 |Microsoft Docs
+title: 架構的 Name 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 65b0c89b2444d3c75570d4a3c843c8af7fe6b12c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b92dbbee5762e2e2e5e29a3cc3765369e7c45404
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034698"
 ---
 # <a name="name-element-for-schema-dta"></a>結構描述的 Name 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_plan & Amp;#40;transct-SQL&AMP;#41; |Microsoft Docs
+title: sp_query_store_remove_plan (Transct-sql-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 027dbe78c663f2aa218ac46b3ad6e54b681a9369
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef04dee7a7384141aab820c2c65343a18b605ad0
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896432"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418942"
 ---
 # <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  從查詢存放區中移除單一計劃。  
+  從查詢存放區移除單一計畫。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @plan_id = ] plan_id` 是要移除的查詢計劃的識別碼。 *plan_id*已**bigint**，沒有預設值。  
+`[ @plan_id = ] plan_id`這是要移除之查詢計劃的識別碼。 *plan_id*是**Bigint**, 沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -51,7 +51,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>備註  
   
 ## <a name="permissions"></a>Permissions  
- 需要**EXECUTE**的資料庫上的權限並**刪除**查詢存放區目錄檢視的權限。  
+ 需要資料庫的**ALTER**許可權。
   
 ## <a name="examples"></a>範例  
  下列範例會傳回查詢存放區中查詢的相關資訊。  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 識別您想要刪除 plan_id 之後，使用下列範例來刪除的查詢計劃。  
+ 識別您想要刪除的 plan_id 之後, 請使用下列範例來刪除查詢計畫。  
   
 ```  
 EXEC sp_query_store_remove_plan 3;  
@@ -76,7 +76,7 @@ EXEC sp_query_store_remove_plan 3;
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_flush_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

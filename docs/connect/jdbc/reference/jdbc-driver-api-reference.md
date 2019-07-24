@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b635cfc7ecbe3e658a364a214d5c7cf744095492
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977006"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC Driver API 參考
 
@@ -26,26 +25,26 @@ ms.locfileid: "66803214"
 
 
 
-### <a name="javadocio-website-is-primary"></a>JavaDoc.io 網站是主要
+### <a name="javadocio-website-is-primary"></a>JAVADoc.io 網站是主要的
 
-供您檢視 JavaDoc.io 網站上裝載的 Microsoft JDBC API 參考文件。 JavaDoc.io 現在是我們主要的網站，如 JDBC 參考文件。 JDBC 參考文件上 JavaDoc.io 位於下列直接連結：
+Microsoft JDBC API 參考檔是在 JAVADoc.io 網站上進行您的觀看所主控。 JAVADoc.io 現在是我們的主要網站, 適用于 JDBC 參考檔。 您可以從下列直接連結取得 JAVADoc.io 的 JDBC 參考檔:
 
 - [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
 
-JavaDoc.io 具有開頭為 6.0 版 JDBC 參考文件。
+JAVADoc.io 具有從6.0 版開始的 JDBC 參考檔。
 
-#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>僅舊版 JDBC 文件在此文件上
+#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>這裡只有舊版 JDBC 檔
 
-JDBC API 參考文件文章以下 **https://docs.microsoft.com/sql/connect/jdbc/reference/** 不再 JDBC 類別的新版本更新時正在更新。 不過，此處的文件，並包含 for JDBC 4.1 和 4.2 的所有參考。
+當新版本的 jdbc 類別更新時 **https://docs.microsoft.com/sql/connect/jdbc/reference/** , 中的 jdbc API 參考檔文章已不再更新。 不過, 這裡的文章包含 JDBC 版本4.1 和4.2 的所有參考。
 
-JDBC 版本 6.0 和一些更新的版本中，文件是也在這裡。 但任何版本 6.0 或更新版本中，使用 JavaDoc.io 網站。
+JDBC 6.0 版和更新版本的檔也在這裡。 但針對任何6.0 版或更新版本, 請使用 JAVADoc.io 網站。
 
 
 
 ### <a name="important-notes"></a>重要事項
 
 > [!NOTE]  
->  如需使用 JDBC 驅動程式的概念資訊，請參閱[JDBC 驅動程式概觀](../../../connect/jdbc/overview-of-the-jdbc-driver.md)。  
+>  如需有關使用 JDBC 驅動程式的概念性資訊, 請參閱[JDBC driver 的總覽](../../../connect/jdbc/overview-of-the-jdbc-driver.md)。  
   
 > [!IMPORTANT]  
 >  如需 JDBC 4.1 與 4.2 合規性支援，請使用 Microsoft JDBC Driver 4.2 for SQL Server (或更高版本)。 先前的 Microsoft JDBC Drivers 4.1 和 4.0 版本不支援使用 JDBC 4.1 或 4.2 引進的新方法。  
@@ -58,7 +57,7 @@ JDBC 版本 6.0 和一些更新的版本中，文件是也在這裡。 但任何
 >   
 >  本節未包含從 Microsoft JDBC Driver 6.0 for SQL Server 起所提供的 Always Encrypted 功能之 API 詳細資料。 請參閱[適用於 JDBC 驅動程式的 Always Encrypted API 參考](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 >   
->  在本節中找不到可從 Microsoft JDBC Driver 6.0 for SQL Server 的 Using Table-Valued 參數的 API 詳細資料。 請參閱[使用資料表值參數](../../../connect/jdbc/using-table-valued-parameters.md)  
+>  在本節中找不到使用資料表值參數的 API 詳細資料 (從 Microsoft JDBC Driver 6.0 for SQL Server 開始提供)。 請參閱[使用資料表值參數](../../../connect/jdbc/using-table-valued-parameters.md)  
 >   
 >  Microsoft JDBC Driver 6.4 支援 JDK 7.0、8.0 和 9.0 的編譯。  
 >   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0a4753ba8b7f83dd1d166f31195e4c0a85f951a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006829"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>範例使用 EXPLICIT 模式建構同層級
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e77a6574bafaf743ebcc77721ac7e1b812fec974
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc3d2f043eb6aebcb9a7a60a80f7665eb98cd18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032477"
 ---
 # <a name="catalogextendedoperationinfo-ssisdb-database"></a>catalog.extended_operation_info (SSISDB 資料庫)
 

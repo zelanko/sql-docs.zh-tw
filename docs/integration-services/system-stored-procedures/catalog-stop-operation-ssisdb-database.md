@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7427a85fa3e8b6f65bb899d008a13f48008e4c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 983593ce6ee82c834ffa038e0c6860b526bdca34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038616"
 ---
 # <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation (SSISDB 資料庫)
 

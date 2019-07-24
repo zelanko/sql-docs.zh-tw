@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c324e25ef5dacf835a8b81e6ffc23041647b1fcf
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c3085a6ab63278803523e383104ab6cfb9554833
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137893"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>刪除原則式管理條件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
