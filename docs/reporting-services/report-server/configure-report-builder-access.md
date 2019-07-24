@@ -6,14 +6,13 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
-ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826913"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255176"
 ---
 # <a name="configure-report-builder-access"></a>設定報表產生器的存取
 報表產生器是一個隨選報表工具，它會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
@@ -30,15 +29,15 @@ ms.locfileid: "66826913"
 
 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都可使用報表產生器。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 版本支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
 
-用戶端電腦必須具備[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 或 4.6.1 分別安裝 SSRS 2016 和 2017年。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了執行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 應用程式的基礎結構。  
+用戶端電腦必須[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]分別為 SSRS 2016 和2017安裝4.6 或4.6.1。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了執行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 應用程式的基礎結構。  
 
-您必須使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Internet Explorer 11 或更新版本或其他的現代瀏覽器。  
+您必須使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 或更新版本, 或其他現代化瀏覽器。  
 
 報表產生器一定會在完全信任模式中執行；您不能設定它在部分信任模式中執行。 在舊版中，報表產生器可以在部分信任模式中執行，但是在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中則不支援這個選項。  
 
 ## <a name="enabling-and-disabling-report-builder"></a>啟用及停用報表產生器  
 
-預設會啟用報表產生器。 報表伺服器管理員可以選擇將報表伺服器系統屬性 **ShowDownloadMenu** 設定為 **false**，以停用報表產生器功能。 設定這個屬性將會停用報表產生器中，行動報表發行工具，和該報表伺服器下載 Power BI 行動裝置。  
+預設會啟用報表產生器。 報表伺服器管理員可以選擇將報表伺服器系統屬性 **ShowDownloadMenu** 設定為 **false**，以停用報表產生器功能。 設定這個屬性將會停用該報表伺服器的報表產生器、行動報表發行工具和 Power BI 行動版下載。  
 
  若要設定報表伺服器系統屬性，您可以使用 Management Studio 或指令碼：   
 
@@ -66,71 +65,71 @@ ms.locfileid: "66826913"
 
 1. 啟動 Management Studio，然後連接到報表伺服器。  
 
-2. 開啟 [安全性] 資料夾。  
+2. 開啟 [安全性]  資料夾。  
 
-3. 開啟 [系統角色] 資料夾。  
+3. 開啟 [系統角色]  資料夾。  
 
-4. 以滑鼠右鍵按一下 [系統管理員]，然後選取 [屬性]。  
+4. 以滑鼠右鍵按一下 [系統管理員]  ，然後選取 [屬性]  。  
 
-5. 選取 [執行報表定義]，然後按一下 [確定]。  
+5. 選取 [執行報表定義]  ，然後按一下 [確定]  。  
 
-6. 以滑鼠右鍵按一下 [系統使用者]，然後選取 [屬性]。  
+6. 以滑鼠右鍵按一下 [系統使用者]  ，然後選取 [屬性]  。  
 
-7. 選取 [執行報表定義]，然後按一下 [確定]。  
+7. 選取 [執行報表定義]  ，然後按一下 [確定]  。  
 
-8. 開啟 [角色] 資料夾。  
+8. 開啟 [角色]  資料夾。  
 
-9. 以滑鼠右鍵按一下 [瀏覽器]，然後選取 [屬性]。  
+9. 以滑鼠右鍵按一下 [瀏覽器]  ，然後選取 [屬性]  。  
 
-10. 選取 [檢視模型]，然後按一下 [確定]。  
+10. 選取 [檢視模型]  ，然後按一下 [確定]  。  
 
-11. 以滑鼠右鍵按一下 [內容管理員]，然後選取 [屬性]。  
+11. 以滑鼠右鍵按一下 [內容管理員]  ，然後選取 [屬性]  。  
 
-12. 選取 [檢視模型]、[管理模型]、[取用報表]，然後按一下 [確定]。  
+12. 選取 [檢視模型]  、[管理模型]  、[取用報表]  ，然後按一下 [確定]  。  
 
-13. 以滑鼠右鍵按一下 [發行者]，然後選取 [屬性]。  
+13. 以滑鼠右鍵按一下 [發行者]  ，然後選取 [屬性]  。  
 
-14. 選取 [管理模型]，然後按一下 [確定]。  
+14. 選取 [管理模型]  ，然後按一下 [確定]  。  
 
 15. 如果報表產生器角色不存在，請建立該角色：  
 
-    1. 開啟 [安全性] 資料夾。  
+    1. 開啟 [安全性]  資料夾。  
 
-    2. 以滑鼠右鍵按一下 [角色]，並選取 [新增角色]。  
+    2. 以滑鼠右鍵按一下 [角色]  ，並選取 [新增角色]  。  
 
     3. 在 [名稱] 中，輸入 **報表產生器**。  
 
     4. 在 [描述] 中，輸入角色的描述，好讓入口網站中的使用者知道這個角色的目的。  
 
-    5. 新增下列工作：[取用報表]、[檢視報表]、[檢視模型]、[檢視資源]、[檢視資料夾] 及 [管理個別訂閱]。  
+    5. 新增下列工作：[取用報表]  、[檢視報表]  、[檢視模型]  、[檢視資源]  、[檢視資料夾]  及 [管理個別訂閱]  。  
 
-    6. 按一下 [確定]，儲存角色。  
+    6. 按一下 [確定]  ，儲存角色。  
 
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>建立角色指派來授與報表產生器的存取權  
 
 1. 啟動入口網站。  
 
-2. 按一下右上方的齒輪圖示方的 web 入口網站的首頁上，然後選取**站台設定**從下拉式清單。  
-![web 入口網站的齒輪圖示和功能表](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. 按一下入口網站首頁右上方的齒輪圖示, 然後從下拉式功能表中選取 [**網站設定**]。  
+![入口網站齒輪圖示和功能表](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
-3. 按一下 **[安全性]**。  
+3. 按一下 **[安全性]** 。  
 
-4. 如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]。  
-否則請按一下 [新增角色指派]。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
+4. 如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]  。  
+否則請按一下 [新增角色指派]  。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
 
-5. 選取 [系統使用者]，然後按一下 [確定]。  
+5. 選取 [系統使用者]  ，然後按一下 [確定]  。  
 
-6. 按一下 [首頁]。  
+6. 按一下 [首頁]  。  
 
-7. 按一下 [資料夾設定] 索引標籤。  
+7. 按一下 [資料夾設定]  索引標籤。  
 
-8. 按一下 [安全性] 索引標籤。  
+8. 按一下 [安全性]  索引標籤。  
 
-9. 如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]。  
+9. 如果您想要設定報表產生器存取的使用者或群組已經有角色指派，請按一下 [編輯]  。  
 
-    否則請按一下 [新增角色指派]。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
+    否則請按一下 [新增角色指派]  。 在群組或使用者中，使用下列格式來輸入 Windows 網域使用者或群組帳戶：\<網域>\\<帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
 
-10. 選取 [報表產生器]，然後按一下 [套用]。  
+10. 選取 [報表產生器]  ，然後按一下 [套用]  。  
 
 11. 重複上述步驟，以便建立或修改其他使用者或群組的角色指派。  
 

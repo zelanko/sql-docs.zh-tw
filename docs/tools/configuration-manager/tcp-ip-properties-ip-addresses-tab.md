@@ -1,5 +1,5 @@
 ---
-title: TCP/IP 屬性 （IP 位址索引標籤） |Microsoft Docs
+title: TCP/IP 屬性 (IP 位址索引標籤) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d2e26ff7e902d1b3f7607dd7199822b7e4ddab1d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 927f732d4f04c43b5e2973a82509e4da7970a448
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023816"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 屬性 (IP 位址索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

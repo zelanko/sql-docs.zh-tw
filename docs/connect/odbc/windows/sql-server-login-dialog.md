@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: jroth
-ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989418"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 登入對話方塊 (ODBC)
 
@@ -26,7 +25,7 @@ ms.locfileid: "66797739"
 
 ### <a name="server"></a>[伺服器]
 
-您的網路上的 SQL Server 執行個體名稱。 從清單中選取伺服器或執行個體名稱，或在 [伺服器]  方塊中鍵入伺服器或執行個體名稱。 (選擇性) 您可以在用戶端電腦上使用 [SQL Server 設定管理員]  建立伺服器別名，並在 [伺服器]  方塊中鍵入該名稱。
+在您的網路上 SQL Server 實例的名稱。 從清單中選取伺服器或執行個體名稱，或在 [伺服器]  方塊中鍵入伺服器或執行個體名稱。 (選擇性) 您可以在用戶端電腦上使用 [SQL Server 設定管理員]  建立伺服器別名，並在 [伺服器]  方塊中鍵入該名稱。
 
 如果您使用的電腦與 SQL Server 的相同，則可輸入 "(local)"。 接著，即使執行的是非網路版的 SQL Server，您也可連接到 SQL Server 的本機執行個體。
 
@@ -34,14 +33,14 @@ ms.locfileid: "66797739"
 
 ### <a name="authentication-mode"></a>驗證模式
 
-從下列其中一項，請選取驗證模式：
-- **SQL Server**登入識別碼和密碼
-- **Windows 整合式**使用目前登入的使用者帳戶進行驗證
-- **Active Directory 密碼**登入識別碼和密碼
-- **Active Directory 整合式**使用目前登入的使用者帳戶進行驗證
+從下列其中一項選取驗證模式:
+- 具有登入識別碼和密碼的**SQL Server**
+- 使用目前登入的使用者帳戶進行**Windows 整合**式驗證
+- 具有登入識別碼和密碼的**Active Directory 密碼**
+- 使用目前登入的使用者帳戶**Active Directory 整合**式驗證
 - 使用登入識別碼進行的 **Active Directory 互動式**驗證
 
-請參閱[資料來源精靈畫面 2](../../../connect/odbc/windows/dsn-wizard-2.md)如需有關驗證模式。
+如需驗證模式的詳細資訊, 請參閱[資料來源嚮導畫面 2](../../../connect/odbc/windows/dsn-wizard-2.md) 。
 
 ### <a name="server-spn"></a>伺服器 SPN
 
@@ -49,11 +48,11 @@ ms.locfileid: "66797739"
 
 ### <a name="login-id"></a>登入識別碼
 
-指定要用於連線，如果 SQL Server 或 Azure Active Directory 登入識別碼**驗證模式**設為**SQL Server**或是**Active Directory 密碼**或**Active Directory 互動式**。 否則，請**登入識別碼**方塊已停用。
+如果**驗證模式**設定為 [ **SQL Server** ] 或 [ **Active Directory 密碼**] 或 [ **Active Directory 互動式**], 則指定要用於連接的 SQL Server 或 Azure Active Directory 登入識別碼。 否則, 就會停用 [**登入識別碼**] 方塊。
 
 ### <a name="password"></a>[密碼]
 
-如果用於連接 SQL Server 或 Azure Active Directory 登入識別碼中指定的密碼**驗證模式**設為**SQL Server**或**Active Directory 密碼**. 否則，請**密碼**方塊已停用。
+如果 [**驗證模式]** 設定為 [ **SQL Server** ] 或 [ **Active Directory 密碼**], 則指定用於連接之 SQL Server 或 Azure Active Directory 登入識別碼的密碼。 否則, 就會停用 [**密碼**] 方塊。
 
 ### <a name="options"></a>選項。
 
@@ -97,11 +96,11 @@ ms.locfileid: "66797739"
 
 ### <a name="use-strong-encryption-for-data"></a>使用高度加密資料
 
-選取時，會透過連線傳遞的資料將會加密。 預設會加密登入，即使清除該核取方塊亦然。
+若選取此選項, 透過連接傳遞的資料將會加密。 預設會加密登入，即使清除該核取方塊亦然。
 
 ### <a name="trust-server-certificate"></a>信任伺服器憑證
 
-此功能時才適用**使用強式加密資料**已啟用。 選取時，將不會有正確的主機名稱的伺服器和受信任的憑證授權單位所發出驗證伺服器的憑證。
+只有在已啟用 [**對資料使用強式加密**] 時, 才適用此選項。 選取此選項時, 將不會驗證服務器的憑證是否具有伺服器的正確主機名稱, 並由受信任的憑證授權單位單位發行。
 
 ## <a name="see-also"></a>另請參閱
 

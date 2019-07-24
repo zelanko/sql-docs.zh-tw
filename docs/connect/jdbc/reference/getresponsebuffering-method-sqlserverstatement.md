@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c0d96ded45fe1b6cb68eda222039e01901ebc65
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980408"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>getResponseBuffering 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,16 +35,16 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**可包含小寫**完整**或是**調適性**。  
+ 包含低大小寫**完整**或自動調整的**字串**。   
   
 ## <a name="remarks"></a>Remarks  
  **adaptive** 會指定在必要時緩衝處理可能的資料下限。  
   
  **full** 會指定在執行階段從伺服器讀取整個結果。  
   
- **自適性**是 JDBC Driver 2.0 和 3.0 版中的預設值。 **完整**是 JDBC Driver 2.0 版之前的預設值。  
+  「自動調整」是 JDBC 驅動程式2.0 和3.0 版中的預設值。 **full**是 JDBC 驅動程式2.0 版之前的預設值。  
   
- 如需使用回應緩衝模式的詳細資訊，請參閱 <<c0> [ 使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
+ 如需使用回應緩衝模式的詳細資訊, 請參閱[使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [setResponseBuffering 方法 &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

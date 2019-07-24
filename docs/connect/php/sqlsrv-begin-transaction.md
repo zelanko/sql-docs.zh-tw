@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f01ffdced922414f83c18a86ff3d4d2c059e44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 333a3b0c6434415c573907bdf0bdbf3e9667afcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992879"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66797024"
 > 根據預設，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 處於自動認可模式。 這表示所有查詢都會在成功時自動進行認可，除非已使用 **sqlsrv_begin_transaction**開始交易。  
   
 > [!NOTE]  
-> 如果在連線上起始交易之後呼叫了 **sqlsrv_begin_transaction**，但在呼叫 **sqlsrv_commit** 或 **sqlsrv_rollback** 後並未完成，呼叫將會傳回 **false**，且會有「已在交易中」錯誤新增至錯誤集合。  
+> 如果在連線上起始交易之後呼叫了 **sqlsrv_begin_transaction**，但在呼叫 **sqlsrv_commit** 或 **sqlsrv_rollback** 後並未完成，呼叫將會傳回 **false**，且會有「已在交易中」  錯誤新增至錯誤集合。  
   
 ## <a name="syntax"></a>語法  
   
