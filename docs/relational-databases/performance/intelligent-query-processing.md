@@ -11,14 +11,13 @@ ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ae6d0d35da353a9307832989f562f3282af19e5
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860710"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354620"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
@@ -107,7 +106,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>追蹤自適性聯結活動
 自適性聯結運算子有下列計劃運算子屬性：
 
-| 計劃屬性 | 描述 |
+| 計劃屬性 | Description |
 |--- |--- |
 | AdaptiveThresholdRows | 顯示從雜湊聯結切換至巢狀迴圈聯結所使用的閾值。 |
 | EstimatedJoinType | 可能的聯結類型。 |
@@ -140,14 +139,22 @@ WHERE [fo].[Quantity] = 361;
 若要針對源自資料庫的所有查詢執行停用自適性聯結，請在適用資料庫的內容中執行下列程式碼：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
 啟用時，此設定在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中會顯示為已啟用。
 若要針對源自資料庫的所有查詢執行重新啟用自適性聯結，請在適用資料庫的內容中執行下列程式碼：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
 您也可以將 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 指定為 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，以針對特定查詢停用自適性聯結。 例如：
@@ -243,7 +250,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 *LastRequestedMemory* 會在查詢執行之前，顯示授與的記憶體 (KB)。 *IsMemoryGrantFeedbackAdjusted* 屬性可讓您針對實際查詢執行計劃內的陳述式，檢查記憶體授與意見反應的狀態。 此屬性中顯示的值如下：
 
-| IsMemoryGrantFeedbackAdjusted 值 | 描述 |
+| IsMemoryGrantFeedbackAdjusted 值 | Description |
 |---|---|
 | 否：第一次執行 | 記憶體授與意見反應不會針對第一次編譯和相關聯的執行，調整記憶體。  |
 | 否：精確授與 | 如果沒有溢出到磁碟，而且陳述式使用至少 50% 的授與的記憶體，則不會觸發記憶體授與意見反應。 |
@@ -320,14 +327,14 @@ MSTVF 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始具有固定�
 ### <a name="tracking-interleaved-execution-activity"></a>追蹤交錯執行活動
 您可以在實際的查詢執行計劃中看到使用方式屬性：
 
-| 執行計劃屬性 | 描述 |
+| 執行計劃屬性 | Description |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | 適用於 *QueryPlan* 節點。 為 *true* 時，表示計劃包含交錯執行候選項目。 |
 | IsInterleavedExecuted | 位於 TVF 節點 RelOp 之下 *RuntimeInformation* 元素的屬性。 為 *true* 時，這表示作業已具體化為交錯執行作業的一部分。 |
 
 您也可以透過下列 xEvent 追蹤交錯執行項目：
 
-| xEvent | 描述 |
+| xEvent | Description |
 | ---- | --- |
 | interleaved_exec_status | 交錯執行進行時會引發這個事件。 |
 | interleaved_exec_stats_update | 此事件會描述由交錯執行更新的基數估計值。 |
@@ -458,7 +465,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 如果使用資料列存放區上的批次模式，您在查詢計畫中看到的實際執行模式如同**批次模式**。 掃描運算子會使用批次模式處理磁碟上的堆積和 B 型樹狀結構索引。 此批次模式掃描可評估批次模式點陣圖篩選。 您也可能會在計畫中看到其他批次模式運算子。 例如雜湊聯結、雜湊式彙總、排序、Window 彙總、篩選、串連和計算純量運算子。
 
-### <a name="remarks"></a>備註
+### <a name="remarks"></a>Remarks
 
 * 查詢計畫並非一律使用批次模式。 查詢最佳化工具可能會判斷批次模式對查詢沒有幫助。 
 * 查詢最佳化工具的搜尋空間正在變更。 因此，如果收到資料列模式計畫，它可能和您在較低相容性層級中取得的計畫不一樣。 而如果您收到批次模式計畫，它可能和您以資料行存放區索引取得的計畫不一樣。 

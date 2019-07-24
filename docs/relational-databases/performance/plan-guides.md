@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 1197c9b58b1bb6830aa7d1eb4811d5b82c4e7182
-ms.sourcegitcommit: cead0faa2fa91d849a41d25e247a0ceba4310d4a
+ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56893448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113484"
 ---
 # <a name="plan-guides"></a>計畫指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

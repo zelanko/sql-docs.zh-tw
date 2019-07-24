@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902852"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ AS constant_expression [ ; ]
  預設值的名稱。 預設名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 您可以選擇性地指定預設擁有者名稱。  
   
 *constant_expression*  
-只包含常數值的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (其中不能有任何資料行或其他資料庫物件的名稱)。 您可以使用任何常數、內建函式或數學運算式，但包含別名資料類型的項目除外。 使用者自訂函式則不能使用。 請用單引號 (**'**) 括住字元和日期常數；貨幣、整數和浮點數常數不需要引號。 二進位資料的前面必須是 0x，貨幣資料的前面必須是錢幣符號 ($)。 預設值必須相容於資料行資料類型。  
+只包含常數值的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (其中不能有任何資料行或其他資料庫物件的名稱)。 您可以使用任何常數、內建函式或數學運算式，但包含別名資料類型的項目除外。 使用者自訂函式則不能使用。 請用單引號 ( **'** ) 括住字元和日期常數；貨幣、整數和浮點數常數不需要引號。 二進位資料的前面必須是 0x，貨幣資料的前面必須是錢幣符號 ($)。 預設值必須相容於資料行資料類型。  
   
 ## <a name="remarks"></a>Remarks  
  您只能在目前資料庫中建立預設名稱。 在資料庫內，必須藉由結構描述，使預設名稱成為唯一。 當您建立預設值時，請使用 **sp_bindefault**，將它繫結到資料行或別名資料類型。  
@@ -85,7 +84,7 @@ AS constant_expression [ ; ]
   
  若要重新命名預設值，請使用 **sp_rename**。 如需預設值的報表，請使用 **sp_help**。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要使用 CREATE DEFAULT，使用者必須至少具備目前資料庫中的 CREATE DEFAULT 權限，以及要建立預設值之結構描述的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  

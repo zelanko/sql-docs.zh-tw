@@ -9,19 +9,18 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 81c61834b69062875e4b2df733213883cdff4be6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aeefc0c8dec0e05402fa6143e11213e069e4f1eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957051"
 ---
 # <a name="spatial-data-types-sample"></a>空間資料類型範例
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-這[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]範例應用程式示範如何建立、 插入和擷取空間資料類型 （Geometry 和 Geography）。
+這個[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]範例應用程式會示範如何建立、插入和取出空間資料類型 (Geometry 和 Geography)。
   
 此範例的程式碼檔案名稱為 SpatialDataTypes.java，並位於下列位置：  
 
@@ -38,11 +37,11 @@ ms.locfileid: "66769857"
   
 ## <a name="example"></a>範例
 
-在下列範例中，範例程式碼會建立名為 SpatialDataTypesTable_JDBC_Sample 包含 '幾何' 和 'Geography' 的資料行的資料表。
+在下列範例中, 範例程式碼會建立一個名為 SpatialDataTypesTable_JDBC_Sample 的資料表, 其中包含「Geometry」和「Geography」資料行。
 
-範例首先會從格式-Known 文字 (well-known text，WKT) 表示的點建立 '幾何' 和 'Geography' 的物件。 它會使用參數化查詢使用 SQLServerPreparedStatement 據以對應至每個資料行的資料。
+此範例會先從代表某個點的知名文字 (WKT), 建立「Geometry」和「Geography」物件。 它會使用具有參數化查詢的 SQLServerPreparedStatement, 據此將資料對應至每個資料行。
 
-最後，此範例會將資料插入資料表中，並擷取它。 資料會顯示在的 well-known text，WKT 格式。
+最後, 此範例會將資料插入資料表中, 並加以抓取。 資料會以 WKT 的形式顯示。
 
 ```java
 import java.sql.Connection;

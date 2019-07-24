@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 16f7701ab70e3edab1194732dca70e5c10f98a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a965da708880fc3411dbdd33e372e197afc9dff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948740"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>備份與還原合併式複寫的策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47707906"
   
 -   如果發行集未篩選，您可以透過與最新的「訂閱者」進行同步處理，使發行集資料庫處於最新狀態。  
   
--   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請考慮進行資料分割的資料表，這樣可以使每個訂閱僅接收單一地區 (「北區」、「南區」、「東區」和「西區」) 客戶資料。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。  
+-   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請思考一下一個已進行資料分割的資料表，其中資料分割方式使得每個訂閱只會收到下列單一地區的客戶資料：北區、東區、南區及西區。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。  
   
 > [!IMPORTANT]  
 >  同步處理發行集資料庫與訂閱資料庫，可能會導致發行的資料表還原到的時間點比從備份處還原的其他未發行的資料表的時間點要新。  
@@ -72,7 +71,7 @@ ms.locfileid: "47707906"
   
  若要重新初始化訂閱，請參閱＜ [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)＞。  
   
- 若要建立並套用快照集，請參閱＜ [Create ＞和＜ Apply the Initial Snapshot](../../../relational-databases/replication/create-＞和＜-apply-the-initial-snapshot.md) ＞和＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
+ 若要建立並套用快照集，請參閱＜ [Create ＞和＜ Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) ＞和＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>備份與還原散發資料庫  
  對於合併式複寫，散發資料庫應定期備份，並且只要使用的備份不晚於使用「散發者」之所有發行集的最短保留期限，無需任何特殊考量即可還原。 例如，如果有三個保留期間分別為 10、20 及 30 天的發行集，則用來還原資料庫的備份不應晚於 10 天。 散發資料庫在合併式複寫中擁有有限的角色：它不儲存變更追蹤中使用的任何資料，也不提供要轉送到訂閱資料庫之合併式複寫變更的暫時儲存 (與它在異動複寫中一樣)。  

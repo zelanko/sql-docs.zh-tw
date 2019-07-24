@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140955"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 單元測試中使用 Transact-SQL 判斷提示
 在 SQL Server 單元測試中，Transact\-SQL 測試指令碼會執行並傳回結果。 有時候，結果會當做結果集傳回來。 您可以使用測試條件來驗證結果。 例如，您可以使用測試條件來檢查特定結果集傳回的資料列數目或驗證執行特定測試所花費的時間長度。 如需有關測試條件的詳細資訊，請參閱[在 SQL Server 單元測試中使用測試條件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)。  

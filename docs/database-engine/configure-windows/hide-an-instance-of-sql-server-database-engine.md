@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 5401e5b731f09de89dedeef8308b7118299fbc9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ac7c2a6cd6b1f714e4dd1aad2c04ef32854c4f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998068"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隱藏 SQL Server Database Engine 的執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +28,9 @@ ms.locfileid: "66785272"
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>若要隱藏 SQL Server Database Engine 的執行個體  
   
-1.  在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，並以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]，然後選取 [屬性]。  
+1.  在 [SQL Server 組態管理員]  中，展開 [SQL Server 網路組態]  ，並以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]   ，然後選取 [屬性]  。  
   
-2.  在 **[旗標]** 索引標籤的 **[HideInstance]** 方塊中，選取 **[是]**，然後按一下 **[確定]** 關閉對話方塊。 此變更在新連接時會立即生效。  
+2.  在 **[旗標]** 索引標籤的 **[HideInstance]** 方塊中，選取 **[是]** ，然後按一下 **[確定]** 關閉對話方塊。 此變更在新連接時會立即生效。  
   
 ## <a name="remarks"></a>Remarks  
  如果隱藏具名執行個體，將必須於連接字串中提供連接埠號碼，才可連接到隱藏的執行個體 (即使瀏覽器服務正在執行中亦然)。 建議您使用靜態連接埠，而不要使用具名隱藏執行個體的動態連接埠。  

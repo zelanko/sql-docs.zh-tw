@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4db63681f489b0f375846272b7093545eb8fefa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd476f2119705501eff4fad2aedf15ce24d978d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944036"
 ---
 # <a name="row-count-transformation"></a>資料列計數轉換
 
