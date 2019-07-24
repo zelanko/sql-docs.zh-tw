@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fa1b13f006c5bae86613b56a313376e68bb00a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034107"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>設定資料流程元件的屬性
 

@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 310a607e11bbf99437d67b85b6f2e718161b2401
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: b2248e6853c1bfd1b206c40ab73ba27bcccdb9e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902086"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 

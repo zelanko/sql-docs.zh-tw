@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9a8fcab75cfdbb8331f286f46f198288ac7a6d42
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9f65587663fabea6652a76e7ed90ecc552a9a992
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085743"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令列選項 (Distributed Replay Utility)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

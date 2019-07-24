@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6fede95f6d1a0a9b9ca2d8ea0324d5787c87d7b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91b623f2fe2c6608684e31c50fac687ef10fbffa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929836"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b683bf0183b7443106a46abc6d22578a66b5a90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e955e931903a56a1f4ac24ce66bd206f4b5a032a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904761"
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
 

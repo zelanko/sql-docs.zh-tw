@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a089ea233f99294c1e4a38a643e93607e5c56d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39c0937448194dba61eb20d5e1492c71a57bf80a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968062"
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員
 

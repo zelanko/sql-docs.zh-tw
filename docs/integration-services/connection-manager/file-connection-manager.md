@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e8b2eb595f6c12d6ed1cb777ee4c36de957f96cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 769803ee3f6b0c706d4807185fcf1825351552ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102970"
 ---
 # <a name="file-connection-manager"></a>檔案連接管理員
 

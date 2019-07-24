@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9ee6d7483d90858563579ff9a9d92bcc44bd481b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b723984f03c67d7468c7531a8c67c9f46cb2116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904225"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 連接管理員
 

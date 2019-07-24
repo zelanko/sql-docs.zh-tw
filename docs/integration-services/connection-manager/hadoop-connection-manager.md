@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed5bc5e0d93cfb657612e1806bee52d242392604
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bfb7f0e9f1c9f10412c27ccd9fd68982cebf158c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904757"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 連接管理員
 

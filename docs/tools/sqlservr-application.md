@@ -1,5 +1,5 @@
 ---
-title: sqlservr 應用程式 |Microsoft Docs
+title: sqlservr.exe 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 93a4572b44cf2be6fa8f1c0912fa7e8178e6c9a7
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f90682b7647cf31adcae7cf12648bf53685f42d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986216"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

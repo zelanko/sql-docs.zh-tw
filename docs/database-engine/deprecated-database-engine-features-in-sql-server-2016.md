@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: daa81e2aa367c96c44b1b43f0b660e6b94fc4d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f9341929102c046a43f1a6a21d353e0557d275d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050576"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中已被取代的 Database Engine 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

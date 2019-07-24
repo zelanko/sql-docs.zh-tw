@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a057c6678e27f51aba438b6dd57129777867e759
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abe5321f4f8f8cedfb9442e1137b7c2be68a2b12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104170"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 連接管理員
 

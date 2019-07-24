@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa08bc78b491fd33c3f904b03caed2f4466512e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e946568e41b6ba8df928f370d3b8ba2ebc9e354
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904220"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 連接管理員
 
