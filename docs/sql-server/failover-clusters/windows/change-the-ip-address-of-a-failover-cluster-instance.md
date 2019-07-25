@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3cfe93e513d9f60933b9e774979495dc29e2779e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93738cb12b13b5f7c6434acd7d7d86b5496d4fc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63037344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063793"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>變更容錯移轉叢集執行個體的 IP 位址
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

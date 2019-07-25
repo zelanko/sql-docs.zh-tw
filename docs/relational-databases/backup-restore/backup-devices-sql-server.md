@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 41c6710fc126dc39f5a4333c08fa4e61c3d4265c
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 5a44b8b9c4ae4c70ec41a7c699572ecf4adcc224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103768"
 ---
 # <a name="backup-devices-sql-server"></a>備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

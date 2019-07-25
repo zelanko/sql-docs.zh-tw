@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 75f7d30dba13538fdbd735fff34021cbc3497aa0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b2f526510f69a91e3228431953f73717790246f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034729"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>第 2 課：使用 Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "67727610"
 如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)。
 
   >[!NOTE]
-  > 本教學課程適用於使用者熟悉如何使用 SQL Server Management Studio 和基本資料庫管理工作。 
+  > 本教學課程適用于熟悉使用 SQL Server Management Studio 和基本資料庫管理工作的使用者。 
   
 ## <a name="tuning-a-workload"></a>微調工作負載
 您可以利用 Database Engine Tuning Advisor 來找出最好的實體資料庫設計，以改進您選擇要微調的資料庫和資料表的查詢效能。  
 
-1.  將範例複製[選取 ](../../t-sql/queries/select-examples-transact-sql.md)陳述式陳述式並貼到 查詢編輯器的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在您很容易找到的目錄中，將檔案儲存成 **MyScript.sql**。 以下提供範例適用於針對 AdventureWorks2017 資料庫。  
+1.  複製範例[SELECT](../../t-sql/queries/select-examples-transact-sql.md)語句, 並將語句貼入的查詢編輯器[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中。 在您很容易找到的目錄中，將檔案儲存成 **MyScript.sql**。 以下提供適用于 AdventureWorks2017 資料庫的範例。  
 
  ```sql
  Use [Adventureworks2017]; -- may need to modify database name to match database
@@ -63,17 +62,17 @@ ms.locfileid: "67727610"
 
   ![儲存 SQL 查詢](media/dta-tutorials/dta-save-query.png)
   
-2.  啟動 Database Engine Tuning Advisor。 選取  **Database Tuning Advisor**從**工具**功能表在 SQL Server Management Studio (SSMS)。  如需詳細資訊，請參閱[啟動 Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)。 連接到您的 SQL Server 中**連接到伺服器** 對話方塊。  
+2.  啟動 Database Engine Tuning Advisor。 從 SQL Server Management Studio (SSMS) 中的 [**工具**] 功能表選取 [**資料庫微調顧問**]。  如需詳細資訊，請參閱[啟動 Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)。 在 [**連接到伺服器**] 對話方塊中, 連接到您的 SQL Server。  
   
 3.  在 Database Engine Tuning Advisor GUI 右窗格的 [一般]  索引標籤中，在 [工作階段名稱]  中輸入 **MySession**。 
   
-4.  選取 **檔案**針對您**工作負載**，然後選取 雙筒望遠鏡 圖示，以**瀏覽工作負載檔案**。 找出**MyScript.sql**您在步驟 1 中所儲存的檔案。  
+4.  針對您的**工作負載**選取 [檔案], 然後選取 [望遠鏡] 圖示以**流覽工作負載**檔案。  找出您在步驟1中儲存的**myscript.sql**檔案。  
 
-   ![尋找先前儲存的指令碼](media/dta-tutorials/dta-script.png)
+   ![尋找先前儲存的腳本](media/dta-tutorials/dta-script.png)
   
 5.  在 [工作負載分析的資料庫]  清單中選取 [AdventureWorks2017]，在 [選取要微調的資料庫與資料表]  方格中選取 [AdventureWorks2017]，並選取 [儲存微調記錄]  。 [工作負載分析的資料庫]  指定在微調工作負載時 Database Engine Tuning Advisor 所連接的第一個資料庫。 在微調開始之後，Database Engine Tuning Advisor 會連接到工作負載包含的 `USE DATABASE` 陳述式所指定的資料庫。  
 
-  ![DTA db 選項](media/dta-tutorials/dta-select-db.png)
+  ![Db 的 DTA 選項](media/dta-tutorials/dta-select-db.png)
   
 6.  按一下 [微調選項]  索引標籤。您將不會設定這個練習的任何微調選項，但會花一些時間來檢閱預設的微調選項。 請按 F1 鍵來檢視這個索引標籤頁的說明。 請按一下 [進階選項]  來檢視其他微調選項。 如需這裡所顯示之微調選項的相關資訊，請按一下 [進階微調選項]  對話方塊中的 [說明]  。 請按一下 [取消]  來關閉 [進階微調選項]  對話方塊，保持選取預設的選項。  
 
@@ -100,7 +99,7 @@ ms.locfileid: "67727610"
   
 2.  在 [索引建議]  窗格中，以滑鼠右鍵按一下方格。 這個右鍵功能表可讓您選取和取消選取各項建議。 您也可以利用它來變更方格文字的字型。  
  
-   ![索引建議的選項功能表](media/dta-tutorials/dta-index-recommendation-options.png)
+   ![索引建議的選擇功能表](media/dta-tutorials/dta-index-recommendation-options.png)
   
 3.  在 [動作]  功能表上，按一下 [儲存建議]  ，將所有建議儲存在單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中。 請將這份指令碼命名為 **MySessionRecommendations.sql**。  
   
@@ -123,14 +122,14 @@ ms.locfileid: "67727610"
 雖然檢視可用來實作微調結果的指令碼非常有用，但 Database Engine Tuning Advisor 也提供許多有用的報表供您檢視。 這些報表提供您在微調的資料庫其中之現有實體設計結構的相關資訊，以及所建議之結構的相關資訊。 您可以依照下列練習中的說明，按一下 [報表]  索引標籤來檢視這些微調報表。
 
 
-1. 選取 **報表**Database Tuning Advisor 中的索引標籤。 
+1. 在 [資料庫微調顧問] 中選取 [**報表**] 索引標籤。 
 2. 在 [微調摘要]  窗格中，您可以檢視這個微調工作階段的相關資訊。 請利用捲軸來檢視所有窗格內容。 請注意 [預期的改進百分比]  和 [建議使用的空間]  。 當您設定微調選項時，可能會限制建議所用的空間。 在 [微調選項]  索引標籤上，選取 [進階選項]  。 核取 [定義建議的最大空間]  ，並指定建議設定可以使用的最大空間 (以 MB 表示)。 請利用說明瀏覽器中的 [上一頁]  按鈕來返回這個教學課程。 
 
     ![DTA 微調摘要](media/dta-tutorials/dta-tuning-summary.png)
   
 3.  在 [微調報表]  窗格中，按一下 [選取報表]  清單中的 [陳述式成本報表]  。 如果您需要更多空間來檢視報表，請向左拖曳 [工作階段監視器]  窗格框線。 每個針對資料庫中某份資料表來執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式都有相關的效能成本。 您可以在資料表中常常存取的資料行上建立有效的索引來降低這個效能成本。 這份報表會顯示執行工作負載中某陳述式的原始成本和實作微調建議的成本之間的估計改進百分比。 請注意，報表所包含的資訊量以工作負載的長度和複雜度為基礎。  
 
-    ![DTA 報告-陳述式成本](media/dta-tutorials/dta-statement-cost.png)
+    ![DTA 報告-語句成本](media/dta-tutorials/dta-statement-cost.png)
   
 4.  以滑鼠右鍵按一下方格區域中的 [陳述式成本報表]  窗格，然後按一下 [匯出至檔案]  。 將報表儲存成 **MyReport**。 檔案名稱會自動附加 .xml 副檔名。 您可以在喜愛的 XML 編輯器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，開啟 MyReport.xml 來檢視報表內容。  
   

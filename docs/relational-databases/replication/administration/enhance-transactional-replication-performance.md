@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e526bbe9191aa83cedd45c2115b3cb4b54a937d2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebedefdd7e11f7ff3edcd884674092aeaf3b4f9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939151"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "54136078"
   
 -   跨多發行集傳播發行項。  
   
-     如果您無法使用 [**-SubscriptionStreams** 參數](#subscriptionstreams)，請考慮建立多個發行集。 在這些發行集間分散發行項允許複寫將變更平行套用到各個「訂閱者」。  
+     如果您無法使用 [ **-SubscriptionStreams** 參數](#subscriptionstreams)，請考慮建立多個發行集。 在這些發行集間分散發行項允許複寫將變更平行套用到各個「訂閱者」。  
   
 ## <a name="subscription-considerations"></a>訂閱考量因素  
   
@@ -76,9 +75,9 @@ ms.locfileid: "54136078"
 進行測試的目的是要決定最合適的值，以提高「記錄讀取器」和「散發代理程式」的效能。 此測試的結論是：工作負載已成為值在何種情況下才有效的決定性因素了，因此，不可能只調整單一值就改善每種情況下的效能。 
 
 結果： 
-- 若「記錄讀取器代理程式」具有較小型交易的工作負載 (少於 500 個命令) 時，**ReadBatchSize** 較高的值可能會對輸送量產生有利的影響。 不過，針對具有大型交易的工作負載，變更這值不會改善效能。 
+- 若「記錄讀取器代理程式」  具有較小型交易的工作負載 (少於 500 個命令) 時，**ReadBatchSize** 較高的值可能會對輸送量產生有利的影響。 不過，針對具有大型交易的工作負載，變更這值不會改善效能。 
     - 當同一個伺服器上有多個「記錄讀取器代理程式」和多個「散發代理程式」平行執行時，**ReadBatchSize** 較大的值會導致散發資料庫出現爭用的狀況。 
-- 針對「散發代理程式」
+- 針對「散發代理程式」 
     - 增加 **CommitBatchSize** 可以改善輸送量。 缺點是，如果發生失敗，「散發代理程式」必須復原並從頭再次套用更大的交易量。 
     - 增加 **SubscriptionStreams** 值有助於提升「散發代理程式」的整體輸送量，因為多個訂閱者連線會平行套用變更批次。 不過，根據處理器數目以及其他中繼資料的條件 (例如主索引鍵、外部索引鍵、唯一限制式和索引)，SubscriptionStreams 較高的值，實際上可能會有不利的影響。 此外，如果資料流無法執行或認可，則「散發代理程式」會退而使用單一資料流來重試失敗的批次。
 

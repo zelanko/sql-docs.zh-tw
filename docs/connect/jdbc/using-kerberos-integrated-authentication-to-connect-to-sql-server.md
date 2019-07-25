@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 894da21c079b776524c07cab8b8f223bae769aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916237"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 整合式驗證連接到 SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，應用程式可使用 **authenticationScheme** 連線屬性來指定要使用類型 4 Kerberos 整合驗證連線至資料庫。 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)如需有關連接屬性。 如需有關 Kerberos 的詳細資訊，請參閱 < [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)。
+從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，應用程式可使用 **authenticationScheme** 連線屬性來指定要使用類型 4 Kerberos 整合驗證連線至資料庫。 如需連接屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。 如需有關 Kerberos 的詳細資訊, 請參閱[Microsoft kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)。
 
 當您搭配 Java **Krb5LoginModule** 使用整合驗證時，可使用 [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html) (類別 Krb5LoginModule) 設定模組。
 
@@ -38,15 +37,15 @@ ms.locfileid: "66798601"
 
 ## <a name="remarks"></a>Remarks
 
-之前[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]，應用程式可以指定整合式的驗證 （使用 Kerberos 或 NTLM，取決於所提供） 使用**integratedSecurity**連接屬性及參考**sqljdbc_auth.dll**中所述[Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)。
+在之前 , 應用程式可以使用 integratedSecurity 連接屬性, 並藉由參考 sqljdbc_auth, 指定整合式驗證 (使用 Kerberos 或 NTLM, 視可用的方式而定), 如下所示:  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]如[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)中所述。  
 
 從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，應用程式可使用 **authenticationScheme** 連線屬性來指定透過純 Java Kerberos 實作使用 Kerberos 整合驗證連線到資料庫：
 
-- 如果您想要使用整合式的驗證**Krb5LoginModule**，您仍然必須指定**integratedSecurity = true**連接屬性。 您再也會指定**authenticationScheme = JavaKerberos**連接屬性。
+- 如果您想要使用**Krb5LoginModule**進行整合式驗證, 您仍然必須指定**integratedSecurity = true**連接屬性。 您也會指定**authenticationScheme = JAVAKerberos**連接屬性。
 
-- 若要繼續使用整合式的驗證搭配**sqljdbc_auth.dll**，只需指定**integratedSecurity = true**連接屬性 (並選擇性地**authenticationScheme =NativeAuthentication**)。
+- 若要繼續搭配使用整合式驗證與**sqljdbc_auth**, 只需指定**integratedSecurity = true**連接屬性 (並選擇性地**authenticationScheme = NativeAuthentication**)。
 
-- 如果您指定**authenticationScheme = JavaKerberos**也未指定，但**integratedSecurity = true**，則驅動程式將會忽略**authenticationScheme**連接屬性，而且它會預期的連接字串中找到使用者名稱和密碼認證。
+- 如果您指定**authenticationScheme = JAVAKerberos** , 但未同時指定**integratedSecurity = true**, 驅動程式將會忽略**authenticationScheme**連接屬性, 而且預期會找到使用者名稱和密碼。連接字串中的認證。
 
 當使用資料來源建立連線時，您可以透過程式設計的方式，使用 **setAuthenticationScheme** 設定驗證配置，並 (選擇性) 使用 **setServerSpn** 為 Kerberos 連線設定 SPN。
 
@@ -54,7 +53,7 @@ ms.locfileid: "66798601"
 
 以下指導方針可幫助您設定 Kerberos：
 
-1. 設定**AllowTgtSessionKey**為 1 的 Windows 登錄中。 如需詳細資訊，請參閱 [Windows Server 2003 中的 Kerberos 通訊協定登錄項目與 KDC 設定金鑰](https://support.microsoft.com/kb/837361)。
+1. 在 Windows 的登錄中, 將**AllowTgtSessionKey**設定為1。 如需詳細資訊，請參閱 [Windows Server 2003 中的 Kerberos 通訊協定登錄項目與 KDC 設定金鑰](https://support.microsoft.com/kb/837361)。
 2. 確定 Kerberos 組態 (UNIX 環境中的 krb5.conf) 指向您的環境所適用的正確領域和 KDC。
 3. 使用 kinit 或登入網域來初始化 TGT 快取。
 4. 當使用 **authenticationScheme=JavaKerberos** 的應用程式在 Windows Vista 或 Windows 7 作業系統上執行時，您應使用標準使用者帳戶。 但您若是在系統管理員帳戶下執行應用程式，該應用程式就必須以系統管理員的權限執行。
@@ -68,7 +67,7 @@ ms.locfileid: "66798601"
 
 您可以使用 **serverSpn** 連線屬性指定 SPN，或直接讓驅動程式為您建置 (預設)。 此屬性的格式為："MSSQLSvc/fqdn:port\@REALM"，其中 fqdn 是完整網域名稱，port 是連接埠號碼，REALM 是以大寫字母表示的 SQL Server Kerberos 領域。 此選項的 REALM 部分並非必要，只在您 Kerberos 設定的預設領域與伺服器的領域相同，而且預設不會加入時才需要。 如果您想要支援跨領域驗證案例，且其中 Kerberos 設定中的預設領域和伺服器的領域不同，則您必須以 serverSpn 屬性設定 SPN。
 
-例如，您的 SPN 可能看起來像:"MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ。CORP.CONTOSO.COM"
+例如, 您的 SPN 可能會如下所示: 「MSSQLSvc/some-\@ZZZZ。企業.CONTOSO.COM」
 
 如需有關服務主要名稱 (SPN) 的詳細資訊，請參閱：
 
@@ -77,9 +76,9 @@ ms.locfileid: "66798601"
 - [搭配 SQL Server 使用 Kerberos](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
-> 6\.2 版 JDBC 驅動程式的跨領域 Kerberos，正確地使用之前，您就必須明確設定**serverSpn**。
+> 在6.2 版的 JDBC driver 之前, 若要正確使用跨領域 Kerberos, 您必須明確地設定**serverSpn**。
 >
-> 6\.2 從版開始，此驅動程式將能夠建置**serverSpn**根據預設，即使是使用跨領域 Kerberos。 雖然您可以使用**serverSpn**明確太。
+> 從6.2 版本中, 驅動程式預設將能夠建立**serverSpn** , 即使使用跨領域 Kerberos 也一樣。 雖然一個也可以明確使用**serverSpn** 。
 
 ## <a name="creating-a-login-module-configuration-file"></a>建立登入模組組態檔
 
@@ -116,7 +115,7 @@ SQLJDBCDriver {
 
 如需詳細資訊，請參閱 [JAAS 登入組態檔](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html)和 [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html) (類別 Krb5LoginModule)。
 
-從 Microsoft JDBC Driver 6.2 中，登入模組組態檔的名稱可以選擇性地傳遞使用連接屬性`jaasConfigurationName`，這可讓每個連線有它自己的登入設定。
+從 Microsoft JDBC Driver 6.2 開始, 可以選擇性地使用連接屬性`jaasConfigurationName`來傳遞登入模組設定檔的名稱, 如此一來, 每個連接都有自己的登入設定。
 
 ## <a name="creating-a-kerberos-configuration-file"></a>建立 Kerberos 組態檔
 
@@ -151,9 +150,9 @@ forwardable = yes
 
 ## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>啟用網域組態檔和登入模組組態檔
 
-您可以使用 Djava.security.krb5.conf 來啟用網域組態檔。 您可以讓使用登入模組組態檔 **-Djava.security.auth.login.config**。
+您可以使用 Djava.security.krb5.conf 來啟用網域組態檔。 您可以使用 **-Djava**來啟用登入模組設定檔案。
 
-例如，下列命令可用來啟動應用程式：
+例如, 您可以使用下列命令來啟動應用程式:
 
 ```bash
 Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.krb5.conf=krb5.ini <APPLICATION_NAME>  
@@ -172,7 +171,7 @@ select auth_scheme from sys.dm_exec_connections where session_id=\@\@spid
 
 ## <a name="constrained-delegation"></a>限制委派
 
-從 Microsoft JDBC Driver 6.2，驅動程式支援 Kerberos 限制委派。 委派的認證可以傳遞為 org.ietf.jgss.GSSCredential 物件、 驅動程式會使用這些認證來建立連線。
+從 Microsoft JDBC Driver 6.2 開始, 驅動程式支援 Kerberos 限制委派。 委派的認證可以用 jgss. GSSCredential 物件的形式傳入, 驅動程式會使用這些認證來建立連接。
 
 ```java
 Properties driverProperties = new Properties();
@@ -185,17 +184,17 @@ Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 
 ## <a name="kerberos-connection-using-principal-names-and-password"></a>使用主體名稱和密碼的 Kerberos 連接
 
-從 Microsoft JDBC Driver 6.2，驅動程式可以建立使用主體名稱和密碼連線傳遞的 Kerberos，連接字串中。
+從 Microsoft JDBC Driver 6.2 開始, 驅動程式可以使用連接字串中傳遞的主體名稱和密碼來建立 Kerberos 連接。
 
 ```java
 jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
 ```
 
-如果使用者屬於 default_realm krb5.conf 檔案中設定的使用者名稱屬性不需要領域。 當`userName`和`password`設定連同`integratedSecurity=true;`和`authenticationScheme=JavaKerberos;`屬性，連接會建立具有使用者名稱的值做為 Kerberos 主體沿著與提供的密碼。
+如果使用者屬於 krb5 檔案中所設定的 default_realm, 則 username 屬性不需要領域。 當`userName`和`password`設定搭配`integratedSecurity=true;` 和`authenticationScheme=JavaKerberos;`屬性時, 會以使用者名稱的值作為 Kerberos 主體, 以及提供的密碼來建立連接。
 
-## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>在相同的網域上使用 Kerberos 驗證，從 Unix 電腦
+## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>從相同網域上的 Unix 電腦使用 Kerberos 驗證
 
-本指南假設的運作中的 Kerberos 設定已經存在。 使用 Kerberos 驗證，若要確認上述是否為 true 的 Windows 電腦上執行下列程式碼。 的程式碼會列印到主控台中，如果成功的 「 驗證配置:: KERBEROS"。 沒有其他的執行階段旗標、 相依性或驅動程式設定所提供的項目之外。 若要確認成功連線的 Linux 上，可以執行同一個程式碼區塊。
+本指南假設已有運作中的 Kerberos 設定。 在具有作用中 Kerberos 驗證的 Windows 電腦上執行下列程式碼, 以確認上述是否為 true。 如果成功, 程式碼會將「驗證配置: KERBEROS」列印到主控台。 在提供的外部不需要其他執行時間旗標、相依性或驅動程式設定。 相同的程式碼區塊可以在 Linux 上執行, 以確認連線成功。
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();
@@ -213,12 +212,12 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 }
 ```
 
-1. 網域加入的用戶端電腦與伺服器相同的網域。
-2. （選擇性）設定的預設 Kerberos 票證的位置。 這最方便正確地設定`KRB5CCNAME`環境變數。
-3. 取得 Kerberos 票證，以產生新的或將現有的預設 Kerberos 票證的位置中。 若要產生票證，只要使用終端機，並初始化透過票證`kinit USER@DOMAIN.AD`其中 「 使用者 」 與 「 網域。AD"分別為主體和網域。 例如：`kinit SQL_SERVER_USER03@MICROSOFT.COM`。 在預設的票證位置或中，將會產生票證`KRB5CCNAME`路徑如果設定。
-4. 終端機中會提示您輸入密碼，請輸入密碼。
-5. 驗證的認證，透過票證`klist`並確認認證是您想要用於驗證的項目。
-6. 執行上述的範例程式碼，並確認 Kerberos 驗證成功。
+1. 網域將用戶端電腦加入至與伺服器相同的網域。
+2. 選擇性設定預設的 Kerberos 票證位置。 藉由設定`KRB5CCNAME`環境變數, 最方便的方式就是這麼做。
+3. 藉由產生新的票證, 或將現有憑證放在預設的 Kerberos 票證位置, 以取得 Kerberos 票證。 若要產生票證, 只要使用終端機並透過「使用者」 `kinit USER@DOMAIN.AD`和「網域」初始化票證即可。AD "分別是主體和網域。 例如：`kinit SQL_SERVER_USER03@MICROSOFT.COM`。 票證會在預設票證位置或`KRB5CCNAME`路徑中產生 (如果已設定)。
+4. 終端機會提示輸入密碼, 請輸入密碼。
+5. 透過確認票證`klist`中的認證, 並確認認證是您要用於驗證的認證。
+6. 執行上述範例程式碼, 並確認 Kerberos 驗證成功。
 
 ## <a name="see-also"></a>另請參閱
 

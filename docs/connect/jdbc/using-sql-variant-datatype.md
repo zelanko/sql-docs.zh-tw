@@ -10,28 +10,27 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c004bc40ed0c85b82612be9069e1a53041c8095c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916175"
 ---
 # <a name="using-sqlvariant-data-type"></a>使用 Sql_variant 資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-從 6.3.0 版開始，JDBC 驅動程式支援 sql_variant 資料類型。 使用資料表值參數和大量複製之類的功能，但有一些限制稍後提及此頁面時，也支援 Sql_variant。 並非所有的資料類型可以儲存在 sql_variant 資料類型。 如需支援的與 sql_variant 資料類型的清單，請檢查 SQL Server [Docs](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)。
+從版本 6.3.0, JDBC 驅動程式支援 SQL_variant 資料類型。 使用資料表值參數和 BulkCopy 之類的功能時, 也支援 Sql_variant, 此頁面稍後會提到一些限制。 並非所有資料類型都可以儲存在 SQL_variant 資料類型中。 如需支援 SQL_variant 的資料類型清單, 請查看 SQL Server [檔](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)。
 
-##  <a name="populating-and-retrieving-a-table"></a>填入並擷取資料表：
-假設一項具有 sql_variant 資料行的資料表：
+##  <a name="populating-and-retrieving-a-table"></a>填入和抓取資料表:
+假設有一個資料表的 SQL_variant 資料行為:
 
 ```sql
 CREATE TABLE sampleTable (col1 sql_variant)  
 ```
 
-範例指令碼來插入 using 陳述式的值：
+使用語句插入值的範例腳本:
 
 ```java
 try (Statement stmt = connection.createStatement()){
@@ -39,7 +38,7 @@ try (Statement stmt = connection.createStatement()){
 }
 ```
 
-插入的值使用準備陳述式：
+使用備妥的語句來插入值:
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into sampleTable values (?)")) {
@@ -48,7 +47,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into sam
 }
 ```      
 
-如果已知傳入之資料的基礎類型，就可以使用個別的 setter。 比方說，`preparedStatement.setInt()`插入的整數值時，可以使用。
+如果已知所傳遞資料的基礎類型, 則可以使用個別的 setter。 例如, 插入`preparedStatement.setInt()`整數值時, 可以使用。
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into table values (?)")) {
@@ -57,7 +56,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into tab
 }
 ```
 
-從資料表讀取值，可以使用個別的 getter。 例如，`getInt()`或`getString()`如果已知來自伺服器的值，就可以使用方法：    
+若要從資料表讀取值, 可以使用個別的 getter。 例如, 如果`getInt()`已知`getString()`來自伺服器的值, 就可以使用或方法:    
 
 ```java
 try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("select * from sampleTable ")) {
@@ -66,14 +65,14 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sqlvariant"></a>搭配 sql_variant 使用預存程序：   
-如需預存程序：     
+## <a name="using-stored-procedures-with-sqlvariant"></a>搭配 SQL_variant 使用預存程式:   
+擁有預存程式, 例如:     
 
 ```java
 String sql = "CREATE PROCEDURE " + inputProc + " @p0 sql_variant OUTPUT AS SELECT TOP 1 @p0=col1 FROM sampleTable ";
 ``` 
     
-必須註冊輸出參數：
+必須註冊輸出參數:
 
 ```java
 try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc + " (?) }")) {
@@ -82,14 +81,14 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Sql_variant 的限制：
-- 當您使用 TVP 填入資料表時`datetime` / `smalldatetime` / `date` sql_variant，在儲存值呼叫`getDateTime()` / `getSmallDateTime()` / `getDate()`上結果集無法運作，而且會擲回下列例外狀況：
+## <a name="limitations-of-sqlvariant"></a>Sql_variant 的限制:
+- 當您使用 TVP 來填入在 SQL_variant 中`datetime`儲存`smalldatetime` `getDateTime()` / / `date`值的資料表時, 在上呼叫/ `getSmallDateTime()` / `getDate()`ResultSet 無法運作, 而且會擲回下列例外狀況:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
    
-    因應措施： 使用`getString()`或`getObject()`改。 
+    因應措施`getString()` : `getObject()`請改用或。 
     
-- 使用 TVP 填入資料表，並傳送 sql_variant 的 null 值不支援，而且會擲回例外狀況：
+- 不支援使用 TVP 來填入資料表, 並在 SQL_variant 中傳送 null 值, 而且會擲回例外狀況:
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 

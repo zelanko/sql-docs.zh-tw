@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb06138639be09378baa8dfe94d110c0ded41223
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955510"
 ---
 # <a name="compareto-method-datetimeoffset"></a>compareTo 方法 (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  比較這個**DateTimeOffset**物件與另一個**DateTimeOffset**物件根據 GMT 的時間。  
+  根據 GMT 的時間, 比較此**datetimeoffset**物件與另一個**datetimeoffset**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,9 +37,9 @@ public int compareTo(DateTimeOffset other)
   
 |傳回值|Description|  
 |------------------|-----------------|  
-|0|兩者**DateTimeOffset**物件代表相同的點的時間。|  
-|負數|這**DateTimeOffset**物件都代表一個點之前的時間*其他*。|  
-|正數|這**DateTimeOffset**物件都代表一個點之後的時間*其他*。|  
+|0|這兩個**DateTimeOffset**物件代表相同的時間點。|  
+|負數|這個**DateTimeOffset**物件代表之前的時間點。 |  
+|正數|這個**DateTimeOffset**物件代表之後的時間點。 |  
   
 ## <a name="remarks"></a>Remarks  
  當兩個 **DateTimeOffset** 物件有相同的 GMT 時間時，根據位移，物件就沒有其他順序。  

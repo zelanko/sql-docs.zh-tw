@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6016df6c051a7125bda2a50d853cd48876bb03b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ba9c414aa28455b15ef46fb9d334f40ee4a6b6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944799"
 ---
 # <a name="restore-database-general-page"></a>還原資料庫 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

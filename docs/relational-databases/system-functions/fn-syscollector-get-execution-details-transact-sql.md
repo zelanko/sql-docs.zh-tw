@@ -1,5 +1,5 @@
 ---
-title: -aef260e4e105">fn_syscollector_get_execution_details (TRANSACT-SQL) |Microsoft Docs
+title: fn_syscollector_get_execution_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql

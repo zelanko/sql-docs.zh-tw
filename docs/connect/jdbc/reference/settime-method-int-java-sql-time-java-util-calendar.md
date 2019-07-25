@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c666fda3df96e32736c4bfd8c32a92e759142c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6388ea031c6cbd5c492b5af03bd37a091592868
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972565"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>setTime 方法 (int, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,17 +47,17 @@ public final void setTime(int n,
   
  *cal*  
   
- 月曆物件。  
+ 行事曆物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  此 setTime 方法由 java.sql.PreparedStatement 介面中的 setTime方法指定。  
   
- 開頭[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC 驅動程式 3.0 中，這個方法的行為由修改**sendTimeAsDatetime**連接屬性 ([設定連接屬性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
+ 從 JDBC Driver 3.0 開始, **sendTimeAsDatetime** 連接屬性會修改這個方法的行為 ([設定連接屬性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SQLServerDataSource. Sqlserverdatasource.setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
   
- 如需詳細資訊，請參閱 <<c0> [ 如何設定 java.sql.Time 值傳送給伺服器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
+ 如需詳細資訊, 請參閱設定將[java. Time 值傳送至伺服器的方式](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [setTime 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)   

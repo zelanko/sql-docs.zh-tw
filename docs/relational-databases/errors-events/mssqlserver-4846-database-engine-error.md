@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4fd6b9b539488baacb9dbe5b7ec962789b9da177
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9e763c2873c018ca53a0c36db2b5c72b3b5d22b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123072"
 ---
 # <a name="mssqlserver4846"></a>MSSQLSERVER_4846
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47619586"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|4846|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -41,7 +40,7 @@ ms.locfileid: "47619586"
   
 1.  確認是否有其他應用程式或服務正在耗用此伺服器的記憶體。 重新設定比較不重要的應用程式或服務，以降低其記憶體耗用量。  
   
-2.  開始收集 **SQL Server: Buffer Manager** 和 **SQL Server: Memory Manager** 的效能監視器計數器。  
+2.  開始收集下列項目的效能監視器計數：**SQL Server：緩衝區管理員**、**SQL Server：記憶體管理員**。  
   
 3.  檢查下列 SQL Server 記憶體組態參數：  
   
@@ -61,7 +60,7 @@ ms.locfileid: "47619586"
   
 -   如果有 SQL Server 以外的應用程式正在耗用資源，請嘗試停止執行這些應用程式或考慮在不同的伺服器上執行這些應用程式。 這將會移除外部的記憶體壓力。  
   
--   如果已經設定 **max server memory,**，請增加其設定值。  
+-   如果已經設定 **max server memory,** ，請增加其設定值。  
   
 執行下列 DBCC 命令，以便釋放數個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體快取。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e7b6b126897370aeda36e85e146d32c2b43674
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051184"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
 

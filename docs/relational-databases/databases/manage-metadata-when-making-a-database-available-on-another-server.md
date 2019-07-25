@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d61d42a5b684032898a0eabc3dbc4a1b350653d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940720"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ ms.locfileid: "54405838"
   
  如需此功能的詳細資訊，請參閱[認證 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
-> **注意：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶使用認證。 若要了解 Proxy 帳戶的認證識別碼，請使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系統資料表。  
+> **注意：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶使用認證。 若要了解 Proxy 帳戶的認證識別碼，請使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系統資料表。  
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
@@ -131,7 +130,7 @@ ms.locfileid: "54405838"
   
  若要在伺服器執行個體上啟用資料庫主要金鑰的自動解密，就要使用服務主要金鑰來加密此金鑰的副本。 這個加密的副本會同時存放在資料庫和 **master**中。 通常，每當主要金鑰變更時，儲存在 **master** 中的副本便會以無訊息模式更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先嘗試使用執行個體的服務主要金鑰來解密資料庫主要金鑰。 如果該解密失敗， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從認證存放區中搜尋主要金鑰認證，這些主要金鑰認證具有與它需要其主要金鑰之資料庫相同的家族 GUID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試利用每個相符的認證來將資料庫主要金鑰解密，直到解密成功或沒有其他認證為止。 未以服務主要金鑰加密的主要金鑰必須使用 OPEN MASTER KEY 陳述式和密碼來開啟。  
   
- 當加密的資料庫複製、還原或附加至新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，以服務主要金鑰加密的資料庫主要金鑰副本並不會存放在目的地伺服器執行個體的 **master** 中。 您必須在目的地伺服器執行個體上，開啟資料庫的主要金鑰。 若要開啟主要金鑰，請執行下列陳述式：OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_密碼_**'**。 建議您接著執行下列陳述式來啟用資料庫主要金鑰的自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 這個 ALTER MASTER KEY 陳述式會將以服務主要金鑰加密的資料庫主要金鑰副本提供給伺服器執行個體。 如需詳細資訊，請參閱 [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  
+ 當加密的資料庫複製、還原或附加至新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，以服務主要金鑰加密的資料庫主要金鑰副本並不會存放在目的地伺服器執行個體的 **master** 中。 您必須在目的地伺服器執行個體上，開啟資料庫的主要金鑰。 若要開啟主要金鑰，請執行下列陳述式：OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _密碼_ **'** 。 建議您接著執行下列陳述式來啟用資料庫主要金鑰的自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 這個 ALTER MASTER KEY 陳述式會將以服務主要金鑰加密的資料庫主要金鑰副本提供給伺服器執行個體。 如需詳細資訊，請參閱 [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
  如需如何啟用鏡像資料庫之資料庫主要金鑰的自動解密相關資訊，請參閱[設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "54405838"
 -   [建立 WMI 事件警示](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>鏡像資料庫如何使用事件通知  
- 根據定義，若涉及鏡像資料庫時，跨資料庫傳送事件通知為遠端作業，因為鏡像資料庫可以容錯移轉。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會以 *「鏡像路由」*(Mirrored Route) 的形式，為鏡像資料庫提供特殊支援。 鏡像路由有兩個位址：一個是主體伺服器執行個體的位址，另一個是鏡像伺服器執行個體的位址。  
+ 根據定義，若涉及鏡像資料庫時，跨資料庫傳送事件通知為遠端作業，因為鏡像資料庫可以容錯移轉。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會以 *「鏡像路由」* (Mirrored Route) 的形式，為鏡像資料庫提供特殊支援。 鏡像路由有兩個位址：一個是主體伺服器執行個體的位址，另一個是鏡像伺服器執行個體的位址。  
   
  透過設定鏡像路由，可以讓 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由知道資料庫鏡像的存在。 鏡像路由可讓 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 將交談明確地重新導向至目前的主體伺服器執行個體。 例如，假設有一個服務 Service_A 是由鏡像資料庫 Database_A 所裝載。 假設您需要另一個服務 Service_B (由 Database_B 所裝載) 與 Service_A 對話。 為了要讓這個對話可行，Database_B 必須包含 Service_A 的鏡像路由。 此外，Database_A 也必須包含與 Service_B 之間的非鏡像 TCP 傳輸路由，此路由在容錯移轉之後會維持有效狀態，與本機路由不同。 這些路由可讓 ACK 在容錯移轉之後傳送回來。 因為傳送者的服務永遠是以相同方式來命名，所以路由必須指定 Broker 執行個體。  
   
@@ -261,22 +260,22 @@ ms.locfileid: "54405838"
 ##  <a name="logins"></a> 登入  
  登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體需要有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 此登入是用於驗證處理序，可確認主體是否能連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 在伺服器執行個體上未定義或定義不正確之對應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者無法登入此執行個體。 這類使用者就是伺服器執行個體上的資料庫 *「被遺棄使用者」* (Orphaned User)。 當資料庫還原、附加或複製到不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體後，資料庫使用者就可能會成為被遺棄使用者。  
   
- 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫登入的指令碼]** 選項設定為 **[True]**。  
+ 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫登入的指令碼]** 選項設定為 **[True]** 。  
   
 > **注意：** 如需如何設定鏡像資料庫登入的資訊，請參閱[設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
-##  <a name="permissions"></a> Permissions  
+##  <a name="permissions"></a> 權限  
  當您在其他伺服器執行個體上提供資料庫時，可能會影響下列類型的權限。  
   
 -   系統物件的 GRANT、REVOKE 或 DENY 權限  
   
--   伺服器執行個體的 GRANT、REVOKE 或 DENY 權限 (*「伺服器層級權限」*)  
+-   伺服器執行個體的 GRANT、REVOKE 或 DENY 權限 ( *「伺服器層級權限」* )  
   
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>系統物件的 GRANT、REVOKE 及 DENY 權限  
  系統物件 (例如，預存程序、擴充預存程序、函數和檢視) 的權限會存放在 **master** 資料庫中，而且您必須在目的地伺服器執行個體上設定這些權限。  
   
- 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫物件層級權限的指令碼]** 選項設定為 **[True]**。  
+ 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫物件層級權限的指令碼]** 選項設定為 **[True]** 。  
   
    > [!IMPORTANT]
    > 當您在編寫登入的指令碼時，密碼並不會編寫在指令碼中。 如果您具有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，就必須修改目的地上的指令碼。  
@@ -289,7 +288,7 @@ ms.locfileid: "54405838"
  如需詳細資訊，請參閱 [GRANT 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)、[REVOKE 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) 和 [DENY 伺服器權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)。  
   
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>憑證或非對稱金鑰的伺服器層級權限  
- 您無法直接將伺服器層級權限授與憑證或非對稱金鑰。 不過，伺服器層級權限會授與專為特定憑證或非對稱金鑰建立的對應登入。 因此，需要伺服器層級權限的每個憑證或非對稱金鑰都會需要自己的 *「憑證對應登入」* 或 *「非對稱金鑰對應登入」*。 若要授與憑證或非對稱金鑰的伺服器層級權限，請將這些權限授與對應的登入。  
+ 您無法直接將伺服器層級權限授與憑證或非對稱金鑰。 不過，伺服器層級權限會授與專為特定憑證或非對稱金鑰建立的對應登入。 因此，需要伺服器層級權限的每個憑證或非對稱金鑰都會需要自己的 *「憑證對應登入」* 或 *「非對稱金鑰對應登入」* 。 若要授與憑證或非對稱金鑰的伺服器層級權限，請將這些權限授與對應的登入。  
   
 > **注意：** 對應的登入只會用於授權以對應憑證或非對稱金鑰簽署的程式碼。 對應的登入無法用於驗證。  
   

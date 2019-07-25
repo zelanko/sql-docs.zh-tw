@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 139bcebb2f4e92d3cc9e25a3460a6283a93fc4f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a15256be44ace579c6dcc9aa74bf55fdc319e7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129925"
 ---
 # <a name="subscribe-to-publications"></a>訂閱發行集
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,14 +74,14 @@ ms.locfileid: "47635546"
   
  **若要刪除發送訂閱**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  刪除訂閱並不會移除「訂閱者」中已發行的物件。  
   
  **若要建立提取訂閱**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **若要檢視或修改提取訂閱屬性**  
   

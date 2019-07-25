@@ -10,35 +10,35 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 35626c192c3d74ad0201cee3c5e97adbce92a3aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669693"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265148"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdosqlsrv-driver"></a>將十進位字串及貨幣值格式化 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-若要保留精確[decimal 或 numeric 類型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)一律會擷取為確切的有效位數與標尺的字串。 如果任何值小於 1，前置的零遺失。 它是相同的 money 和 smallmoney 欄位為十進位的欄位，固定小數位數等於 4。
+為了保留精確度, [decimal 或 numeric 類型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)一律會以具有精確精確度和縮放比例的字串形式提取。 如果任何值小於 1, 則會遺漏前置零。 這與 money 和 smallmoney 欄位相同, 因為它們是具有固定小數位數等於4的十進位欄位。
 
-## <a name="add-leading-zeroes-if-missing"></a>如果遺失則加入零的前置字元
-開頭為 5.6.0 版、 連線或陳述式屬性`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`可讓使用者設定十進位字串的格式。 這個屬性需要布林值 （true 或 false），而且只會影響擷取的結果中的十進位或數值值的格式。 換句話說，此屬性會有不會影響其他作業，例如插入或更新。
+## <a name="add-leading-zeroes-if-missing"></a>如果遺漏, 請新增前置零
+從 version 5.6.0 版開始, connection 或語句屬性`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`可讓使用者格式化十進位字串。 這個屬性必須是布林值 (true 或 false), 而且只會影響提取結果中的十進位或數值格式。 換句話說, 這個屬性不會影響插入或更新等其他作業。
 
-根據預設，`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 是 **false**。 如果設定為 true，前置的零，以十進位字串將會新增任何十進位值小於 1。
+根據預設，`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 是 **false**。 如果設定為 true, 則會針對小於1的任何十進位值, 加入前置的零到十進位字串。
 
-## <a name="configure-number-of-decimal-places"></a>設定小數位的數
-具有`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`開啟另一個連接或陳述式的屬性， `PDO::SQLSRV_ATTR_DECIMAL_PLACES`，可讓使用者設定的小數位數，顯示 money 和 smallmoney 資料時。 它可接受的範圍內的整數值 [0，4]，並且顯示時捨入可能會發生。 不過，基礎 money 資料保持不變。
+## <a name="configure-number-of-decimal-places"></a>設定小數位數
+在開啟的情況下, 另一個 connection 或`PDO::SQLSRV_ATTR_DECIMAL_PLACES`語句屬性可讓使用者設定顯示 money 和 smallmoney 資料時的小數位數。 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 它接受 [0, 4] 範圍內的整數值, 而在顯示時可能會發生舍入。 不過, 基礎 money 資料會維持不變。
 
-陳述式屬性永遠會覆寫對應的連線設定。 請注意， `PDO::SQLSRV_ATTR_DECIMAL_PLACES`  選項**只**影響 money 資料和`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`必須設定為 true。 否則，格式為關閉狀態不論`PDO::SQLSRV_ATTR_DECIMAL_PLACES`設定。
+語句屬性一律會覆寫對應的連接設定。 請注意,  `PDO::SQLSRV_ATTR_FORMAT_DECIMALS`選項只會影響 money 資料, 而且必須設定為 true。 `PDO::SQLSRV_ATTR_DECIMAL_PLACES`  否則, 無論`PDO::SQLSRV_ATTR_DECIMAL_PLACES`設定為何, 都會關閉格式設定。
 
 > [!NOTE]
-> 由於金額或 smallmoney 欄位有擴展 4，設定`PDO::SQLSRV_ATTR_DECIMAL_PLACES`任何負數或大於 4 將會忽略任何值。 不建議使用任何格式化的 money 資料做為任何計算的輸入。
+> 由於 money 或 smallmoney 欄位的小數位數為`PDO::SQLSRV_ATTR_DECIMAL_PLACES` 4, 因此將會忽略設定為任何負數或大於4的任何值。 不建議使用任何格式化的 money 資料做為任何計算的輸入。
 
-### <a name="to-set-the-connection-attributes"></a>若要設定的連接屬性
+### <a name="to-set-the-connection-attributes"></a>若要設定連接屬性
 
--   在 連接點的設定屬性：
+-   在連接點設定屬性:
 
     ```php
     $attrs = array(PDO::SQLSRV_ATTR_FORMAT_DECIMALS => true,
@@ -47,7 +47,7 @@ ms.locfileid: "62669693"
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password, $attrs);
     ```
 
--   設定屬性 post 連線：
+-   設定屬性後的連接:
 
     ```php
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password);
@@ -55,8 +55,8 @@ ms.locfileid: "62669693"
     $conn->setAttribute(PDO::SQLSRV_ATTR_DECIMAL_PLACES, 2);
     ```
 
-## <a name="example---format-money-data"></a>範例-格式 money 資料
-下列範例示範如何擷取 money 資料使用[pdostatement:: Bindcolumn](../../connect/php/pdostatement-bindcolumn.md):
+## <a name="example---format-money-data"></a>範例-格式化 money 資料
+下列範例顯示如何使用[PDOStatement:: bindColumn](../../connect/php/pdostatement-bindcolumn.md)提取 money 資料:
 
 ```php
 <?php
@@ -81,7 +81,7 @@ unset($conn);
 ```
 
 ## <a name="example---override-connection-attributes"></a>範例-覆寫連接屬性
-下列範例示範如何覆寫連接屬性：
+下列範例顯示如何覆寫連接屬性:
 
 ```php
 <?php

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 160300be692ff21af1cc33c1fd6fc49d415b22e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916458"
 ---
 # <a name="using-adaptive-buffering"></a>使用適應性緩衝
 
@@ -30,7 +29,7 @@ ms.locfileid: "66790315"
 
 - **查詢會產生非常龐大的結果集：** 應用程式可以執行 SELECT 陳述式，該陳述式會產生比應用程式可以儲存在記憶體中還要多的資料列。 在舊版中，應用程式必須使用伺服器資料指標來避免 OutOfMemoryError。 適應性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。
 
-- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **資料行或** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取因為過大而無法完整納入應用程式記憶體中的單一值 (資料行或 OUT 參數)。 適應性緩衝可讓用戶端應用程式使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法來擷取資料流中，這類值。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的值。
+- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **資料行或** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取因為過大而無法完整納入應用程式記憶體中的單一值 (資料行或 OUT 參數)。 適應性緩衝可讓用戶端應用程式使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法, 將這類值當做資料流程來取得。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的值。
 
 > [!NOTE]  
 > 透過適應性緩衝，JDBC Driver 只會緩衝處理它所需的資料量。 此驅動程式不會提供任何公用方法來控制或限制緩衝區的大小。
@@ -41,15 +40,15 @@ ms.locfileid: "66790315"
 
 應用程式可以要求陳述式執行應該使用適應性緩衝的方式有三種：
 
-- 應用程式可以設定連接屬性**responseBuffering**為"adaptive"。 如需有關設定連接屬性的詳細資訊，請參閱 <<c0> [ 設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。
+- 應用程式可以將連接屬性**responseBuffering**設定為「調適型」。 如需設定連接屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。
 
 - 應用程式可以使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 物件的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) 方法，設定透過該 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 物件建立之所有連線的回應緩衝模式。
 
 - 應用程式可以使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法來設定特定陳述式物件的回應緩衝模式。
 
-使用 JDBC Driver 1.2 版時，應用程式原本必須將陳述式物件轉換成 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，才能使用 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 中的程式碼範例[讀取大型資料範例](../../connect/jdbc/reading-large-data-sample.md)並[讀取大型資料與預存程序範例](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)示範這個舊的使用方式。
+使用 JDBC Driver 1.2 版時，應用程式原本必須將陳述式物件轉換成 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，才能使用 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 [讀取大型資料範例](../../connect/jdbc/reading-large-data-sample.md)和[使用預存程式讀取大型資料](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)範例中的程式碼範例會示範這項舊的使用量。
 
-不過，使用 JDBC Driver 2.0 版時，應用程式可以使用 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法來存取供應商特定的功能，而不需要提出有關實作類別階層的任何假設。 取得範例程式碼，請參閱 <<c0> [ 更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)主題。
+不過，使用 JDBC Driver 2.0 版時，應用程式可以使用 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法來存取供應商特定的功能，而不需要提出有關實作類別階層的任何假設。 如需範例程式碼, 請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)主題。
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>利用適應性緩衝擷取大型資料
 
@@ -62,7 +61,7 @@ ms.locfileid: "66790315"
 當應用程式使用自適性緩衝時，僅可以擷取 get\<類型>Stream 方法所擷取值一次。 如果您在呼叫相同物件的 get\<類型>Stream 方法後，嘗試針對相同的資料行或參數呼叫任何 get\<類型> 方法，則會擲回例外狀況並顯示訊息：「資料已存取，此資料行或參數無法使用」。
 
 > [!NOTE]
-> 處理結果集的中間呼叫 ResultSet.close() 需要 Microsoft JDBC Driver for SQL Server 讀取，並捨棄其餘的所有封包。 如果查詢傳回大型資料集，尤其是網路連線速度很慢，這可能需要相當的時間。
+> 在處理結果集的過程中, 對 ResultSet. close () 的呼叫需要 Microsoft JDBC Driver for SQL Server, 才能讀取和捨棄所有剩餘的封包。 如果查詢傳回大型資料集, 特別是當網路連接速度很慢時, 這可能需要相當長的時間。
 
 ## <a name="guidelines-for-using-adaptive-buffering"></a>使用適應性緩衝的指導方針
 
@@ -70,7 +69,7 @@ ms.locfileid: "66790315"
 
 - 請避免使用 **selectMethod=cursor** 連接字串屬性，以讓應用程式處理非常龐大的結果集。 適應性緩衝功能可讓應用程式處理非常大的順向唯讀結果集，而不需要使用伺服器資料指標。 請注意，當您設定 **selectMethod=cursor** 時，該連線產生的所有順向唯讀結果集都會受到影響。 換言之，如果您的應用程式例行地處理含有少數資料列的簡短結果集，就用戶端和伺服器端而言，針對每個結果集建立、讀取和關閉伺服器資料指標所使用的資源會比 **selectMethod** 沒有設定為 **cursor** 的情況還多。
 
-- 為資料流將大型文字或二進位值讀取使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法，而不是 getBlob 或 getClob 方法中。 從 1.2 版開始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別會針對此用途提供新的 get\<類型>Stream 方法。
+- 使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法 (而不是 getBlob 或 getClob 方法), 將大型文字或二進位值讀取為數據流。 從 1.2 版開始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別會針對此用途提供新的 get\<類型>Stream 方法。
 
 - 確保潛在具有大數值的資料行放置在 SELECT 陳述式之資料行清單中的最後面，並確保 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 的 get\<類型>Stream 方法用於以選取的順序存取資料行。
 
@@ -78,9 +77,9 @@ ms.locfileid: "66790315"
 
 - 避免在相同的連接上，同時執行一個以上的陳述式。 在處理前一個陳述式的結果前執行其他陳述式可能會使未處理的結果在應用程式記憶體中緩衝處理。
 
-- 有某些情況下，使用**selectMethod = cursor**而不是**responseBuffering = adaptive**會更有效率，例如：
+- 在某些情況下, 使用**selectMethod = cursor** , 而不是**responseBuffering =** 自動調整會更有説明, 例如:
 
-  - 如果您的應用程式處理順向、 唯讀結果集速度緩慢，例如在使用某些使用者輸入之後讀取每個資料列**selectMethod = cursor**而不是**responseBuffering = adaptive**可能減少所使用的資源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+  - 如果您的應用程式處理順向唯讀結果集的速度很慢 (例如在部分使用者輸入之後讀取每個資料列), 使用**selectMethod = cursor**而不是**responseBuffering =** 自動調整, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能有助於減少資源使用量。
 
   - 如果您的應用程式針對相同的連線同時處理兩個以上的順向唯讀結果集，請使用 **selectMethod=cursor** 而非 **responseBuffering=adaptive** 可能會有助於減少驅動程式在處理這些結果集時所需的記憶體。
 
