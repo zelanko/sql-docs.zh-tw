@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 98dcaeedf8f8c6a1ab6fbea58ede3aca0ccf203b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68161798"
 ---
 ## <a name="edit-contentmediaedit-topic-pencilpng-contribute-sql-documentation"></a>![編輯內容](../media/edit-topic-pencil.png) 參與 SQL 文件

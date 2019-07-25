@@ -39,14 +39,15 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5b2b9b8b02f717f578e5d77569ec1b950344caa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948333"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419637"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   排序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢所傳回的資料。 此子句可用於：  
@@ -62,7 +63,7 @@ ms.locfileid: "67948333"
 
 ## <a name="syntax"></a>語法  
   
-```sql  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -443,7 +444,6 @@ FROM HumanResources.Department
 ORDER BY DepartmentID ASC   
     OFFSET @StartingRowNumber ROWS   
     FETCH NEXT (SELECT PageSize FROM dbo.AppSettings WHERE AppSettingID = 1) ROWS ONLY;  
-  
 ```  
   
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. 在單一交易中執行多個查詢  
@@ -462,7 +462,7 @@ GO
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 GO  
   
--- Beging the transaction  
+-- Beginning the transaction.
 BEGIN TRANSACTION;  
 GO  
 -- Declare and set the variables for the OFFSET and FETCH values.  
@@ -487,7 +487,6 @@ END;
 GO  
 COMMIT TRANSACTION;  
 GO  
-  
 ```  
   
 ###  <a name="Union"></a> 搭配 UNION、EXCEPT 和 INTERSECT 使用 ORDER BY  
@@ -505,7 +504,6 @@ SELECT Name, Color, ListPrice
 FROM Production.Product  
 WHERE Color = 'Yellow'  
 ORDER BY ListPrice ASC;  
-  
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

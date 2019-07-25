@@ -5,10 +5,10 @@ ms.prod: sql
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 991261683a84b3afc200308bd82d8fce8e95e96d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68161793"
 ---
 ## <a name="infotipmediainfo-tippng-get-help-for-sql-tools"></a>![info_tip](../media/info-tip.png) 取得 SQL 工具的說明

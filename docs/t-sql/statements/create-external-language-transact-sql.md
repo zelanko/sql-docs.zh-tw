@@ -10,12 +10,12 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5a3d66d95907c8ddbc4efd33fe58ee4ddbbb9423
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399964"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475996"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "67399964"
 從指定的檔案路徑或位元組資料流，註冊資料庫中的外部延伸模組。 此陳述式可作為一般機制，供資料庫管理員在 SQL Server 支援的任何 OS 平台上註冊新外部語言延伸模組。 如需詳細資訊，請參閱[語言延伸模組](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
 
 > [!NOTE]
-> 目前只支援 **Java** 作為外部語言。 **R** 和 **Python** 為保留的名稱，且不能使用這些特定的名稱來建立任何外部語言。 如需如何使用 **R** 和 **Python** 的詳細資訊，請參閱 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services)。
+> 目前只支援 **Java** 作為外部語言。 **R** 和 **Python** 為保留的名稱，且不能使用這些特定的名稱來建立任何外部語言。 如需如何使用 **R** 和 **Python** 的詳細資訊，請參閱 [SQL Server 機器學習服務](https://docs.microsoft.com/sql/advanced-analytics/)。
 
 ## <a name="syntax"></a>語法
 

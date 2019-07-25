@@ -22,12 +22,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 322cba3f1eede4e5443afd888f6d4bfff2b1d703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16ae636e92d109ea8bc9f9ddd67f70a1657cb564
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086119"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388452"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,19 +96,24 @@ PRINT 'Too much for the market to bear';
  下列範例使用 `@@FETCH_STATUS` 控制 `WHILE` 迴圈中的資料指標活動。  
   
 ```  
+DECLARE @EmployeeID as nvarchar(256)
+DECLARE @Title as nvarchar(50)
+
 DECLARE Employee_Cursor CURSOR FOR  
-SELECT EmployeeID, Title   
+SELECT LoginID, JobTitle   
 FROM AdventureWorks2012.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor;  
+FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
 WHILE @@FETCH_STATUS = 0  
    BEGIN  
+      Print '   ' + @EmployeeID + '      '+  @Title 
       FETCH NEXT FROM Employee_Cursor;  
    END;  
 CLOSE Employee_Cursor;  
 DEALLOCATE Employee_Cursor;  
-GO  
+GO 
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
