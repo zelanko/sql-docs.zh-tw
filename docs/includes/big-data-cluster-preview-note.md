@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: 90efdf00d205cc5dedd7c6645d3c818ed324f147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63b66f13f6a0143368ee5c9df6b598aa74b2287d
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68161570"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419301"
 ---
 > [!NOTE]
-> SQL Server 的巨量資料叢集可先透過 SQL Server 2019 Early Adoption Program 的有限公開預覽。 若要要求存取權，註冊[此處](https://aka.ms/eapsignup)，並指定您要試用 SQL Server 的巨量資料叢集的興趣。 Microsoft 將分級所有要求，並儘速回應。
+> 從 SQL Server 2019 CTP 3.2 起，SQL Server 巨量資料叢集開放公開預覽。
+> SQL Server 2019 CTP 3.2 前，SQL Server 巨量資料叢集可透過 SQL Server 2019 Early Adoption Program 進行有限公開預覽。
