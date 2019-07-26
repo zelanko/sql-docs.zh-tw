@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c7d88137994cf5d920462cc4942eb5b632ae3d6e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 752202a50222b67af659408c259ce29d9c65d703
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344675"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469769"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 轉換資料 (SQL Server 和 RevoScaleR 教學課程)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 

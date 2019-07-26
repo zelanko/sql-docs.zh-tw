@@ -7,15 +7,15 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dbe5bcb39ddbcc2b4968beccb9363a92cf6e8817
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 41403018f6b3a2740328ad1576f8c357e7896b12
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345880"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470571"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>使用 T-sql 定型及儲存 Python 模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文屬於[適用于 SQL 開發人員的資料庫內 Python 分析](sqldev-in-database-python-for-sql-developers.md)教學課程的一部分。 
 

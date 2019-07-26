@@ -7,15 +7,15 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2d3b9df3e99abe3a443dd0fa9b66921a0e9a4506
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 09f2f1dcca3fd8d0828a87e8c781d05c4ad8e5f5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345563"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470129"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何使用 olapR 在 R 中建立 MDX 查詢
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)封裝支援針對 SQL Server Analysis Services 所裝載的 CUBE 進行 MDX 查詢。 您可以針對現有的 cube 建立查詢、流覽維度和其他 cube 物件, 並貼上現有的 MDX 查詢來抓取資料。
 
@@ -79,7 +79,7 @@ ms.locfileid: "68345563"
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.交叉分析篩選器的基本 MDX
 
-這個 MDX 查詢會選取「量值」  表示網際網路銷售計數和銷售量的計數和數量，並將它們放在 [資料行] 座標軸上。 它會將 SalesTerritory 維度成員新增為「交叉分析篩選器」  來篩選查詢，僅在計算中使用來自澳洲的銷售量。
+這個 MDX 查詢會選取「量值」表示網際網路銷售計數和銷售量的計數和數量，並將它們放在 [資料行] 座標軸上。 它會將 SalesTerritory 維度成員新增為「交叉分析篩選器」 來篩選查詢，僅在計算中使用來自澳洲的銷售量。
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 

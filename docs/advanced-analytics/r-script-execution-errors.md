@@ -6,15 +6,15 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 83029a9727a26c647d78c49501fde08f72d7694d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 268b3df72d468170fbefae2557892c49fd15515c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343399"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470298"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server 中的 R 腳本錯誤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文記載在 SQL Server 中執行 R 程式碼時的數個 .scriptin gerrors。 清單並不完整。 有許多套件, 而錯誤在相同套件的版本之間可能有所不同。 我們建議您在[Machine Learning Server 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)上張貼腳本錯誤, 其支援 R Services (資料庫內)、Microsoft R Client 和 Microsoft r Server 中使用的機器學習元件。
 

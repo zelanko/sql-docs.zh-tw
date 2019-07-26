@@ -7,15 +7,15 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e38cac8969544a93d7487d83636c866ec7b09ce9
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344608"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470322"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server 中的 Python 模組)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **revoscalepy**是 Microsoft 的 Python35 相容模組, 支援分散式運算、遠端計算內容和高效能資料科學演算法。 它是以 R 的**RevoScaleR**套件為基礎 (與 Microsoft r Server 和 SQL Server R Services 一起散發), 提供類似的功能:
 
@@ -51,7 +51,7 @@ ms.locfileid: "68344608"
 
 在某些情況下, SQL Server 和 Python 會使用不同的資料類型。 如需 SQL 和 Python 資料類型之間的對應清單, 請參閱[Python 對 SQL 資料類型](python-libraries-and-data-types.md)。
 
-| 功能| 描述|
+| 函數| 描述|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  建立 SQL Server 計算內容物件, 以將計算推送至遠端實例。 有數個**revoscalepy**函式會將計算內容視為引數。 如需內容切換範例, 請參閱[使用 Revoscalepy 建立模型](../tutorials/use-python-revoscalepy-to-create-model.md)。|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | 根據 SQL Server 查詢或資料表建立資料物件。 |
@@ -63,7 +63,7 @@ ms.locfileid: "68344608"
 
 ## <a name="2-data-manipulation-etl"></a>2-資料操作 (ETL)
 
-| 功能 | 說明 |
+| 函數 | 描述 |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | 將資料匯入 xdf 檔案或資料框架中。|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | 將輸入資料集的資料轉換成輸出資料集。|
@@ -72,7 +72,7 @@ ms.locfileid: "68344608"
 
 ## <a name="3-training-and-summarization"></a>3-定型和摘要
 
-| 功能| 描述|
+| 函數| 描述|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | 調整隨機梯度促進式決策樹|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | 調整分類和回歸決策樹系|
@@ -87,7 +87,7 @@ ms.locfileid: "68344608"
 
 ## <a name="4-scoring-functions"></a>4-計分函數
 
-| 功能| 描述|
+| 函數| 描述|
 | ------- | ---------- |
 | [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 從定型的模型產生預測|) | 從定型的模型產生預測, 並可用於即時評分。 |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | 使用 rx_lin_mod 和 rx_logit 物件計算預測值和殘差。 |

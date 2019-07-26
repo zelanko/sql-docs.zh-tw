@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2cb6bf28fa849e2015d111c564bb0af84f103d19
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 96744b15bef03b7d8badc803b1fa5f5de382e64f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345854"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470550"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型, 並在 SQL Server 中使用 (逐步解說)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在這一課, 您將瞭解如何藉由從預存程式呼叫定型模型, 在生產環境中部署 R 模型。 您可以從 R 或任何支援[!INCLUDE[tsql](../../includes/tsql-md.md)]的應用程式設計語言 (例如C#JAVA、Python 等) 叫用預存程式, 並使用模型來對新的觀察進行預測。
 

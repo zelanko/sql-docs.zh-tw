@@ -6,15 +6,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 08d1fd367572561aaa7235fd037371e30f5b270e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 8d7f046e961efb6129f807a7626e498062c415b6
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345287"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470152"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的效能: 結果和資源
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文是一系列中的第四個和最後一個, 描述 R 服務的效能優化。 本文摘要說明兩個測試各種優化方法之個案研究的方法、結果和結論。
 
@@ -38,7 +38,7 @@ SQL Server R Services 開發小組的這種案例研究已測試各種優化的�
 3. 已將各種修改套用到資料表的複本, 以測試 SQL Server 的功能, 例如頁面壓縮、資料列壓縮、索引、單欄式資料存放區等。
 4. 效能是在套用每個優化之前和之後測量。
 
-| 資料表名稱| 說明|
+| 資料表名稱| 描述|
 |------|------|
 | *airline* | 使用 `rxDataStep` 從原始 xdf 檔案轉換的資料|                          |
 | *airlineWithIntCol*   | 轉換成整數而不是字串的 *DayOfWeek*。 會一併新增 *rowNum* 資料行。|
@@ -57,7 +57,7 @@ SQL Server R Services 開發小組的這種案例研究已測試各種優化的�
 6. 主控台輸出也會導向至輸出目錄中的檔案。
 7. 測試腳本會處理這些檔案中的時間, 以計算執行的平均時間。
 
-例如, 下列結果是來自單一測試的時間。 主要的相關時間為「總讀取時間」  (IO 時間) 和「轉換時間」  (在設定處理序以進行計算方面的負擔)。
+例如, 下列結果是來自單一測試的時間。 主要的相關時間為「總讀取時間」(IO 時間) 和「轉換時間」(在設定處理序以進行計算方面的負擔)。
 
 **取樣時間**
 
@@ -144,7 +144,7 @@ metric time pct
 |           | 6      | 3.47 秒 |              |
 |           |        |              | 3.5075       |
 
-「平衡」  電源選項：
+「平衡」電源選項：
 
 | 測試名稱 | 執行 \# | 經過時間 | 平均時間 |
 |-----------|--------|--------------|--------------|

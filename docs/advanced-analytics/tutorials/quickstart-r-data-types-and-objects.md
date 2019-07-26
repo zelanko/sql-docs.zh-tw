@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e8c8ccd60417d4c1d492d53041280ab0c8e318af
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 686ba69425dc9bc6554b369be3d5fadd24b5a234
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345432"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469393"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>快速入門：在 SQL Server 中使用 R 處理資料類型和物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入門中, 取得在 R 與 SQL Server 之間移動資料時常見問題的實際操作簡介。 當您在自己的腳本中使用資料時, 您在此練習中取得的體驗會提供基本的背景。
 
@@ -26,7 +26,7 @@ ms.locfileid: "68345432"
 + 有時需要轉型和轉換作業
 + R 和 SQL 會使用不同的資料物件
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 先前的快速入門[中, 驗證 R 存在於 SQL Server 中](quickstart-r-verify.md), 提供設定本快速入門所需之 R 環境的相關資訊和連結。
 
@@ -61,7 +61,7 @@ EXECUTE sp_execute_external_script
 
 為何結果如此不同？ 
 
-您通常可以使用 R `str()` 命令來找到答案。 在 R 指令碼中的任一處加入函數 `str(object_name)`，以傳回指定 R 物件的資料結構描述做為資訊訊息。 若要檢視訊息，可查看 Visual Studio Code 的 [訊息]  窗格，或 SSMS 中的 [訊息]  索引標籤。
+您通常可以使用 R `str()` 命令來找到答案。 在 R 指令碼中的任一處加入函數 `str(object_name)`，以傳回指定 R 物件的資料結構描述做為資訊訊息。 若要檢視訊息，可查看 Visual Studio Code 的 [訊息] 窗格，或 SSMS 中的 [訊息] 索引標籤。
 
 若要了解為什麼範例 1 和範例 2 會有如此不同的結果，在每個陳述式中 _@script_ 變數定義的結尾插入一行 `str(OutputDataSet)`，如下：
 
@@ -87,7 +87,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-現在，檢視 [訊息]  中的文字，以查看為何會有不同的輸出。
+現在，檢視 [訊息] 中的文字，以查看為何會有不同的輸出。
 
 **結果 - 範例 1**
 

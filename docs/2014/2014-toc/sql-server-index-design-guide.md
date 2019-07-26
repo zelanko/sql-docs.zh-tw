@@ -10,12 +10,12 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ee47da3e97240ec4573303700e9793ee482821c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513045"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475977"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引設計指南
 
@@ -25,7 +25,7 @@ ms.locfileid: "62513045"
   
  本指南假設讀者對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引類型有概略的認識。 如需索引類型的一般描述，請參閱 [Index Types](../relational-databases/indexes/indexes.md)(索引類型)。  
   
-##  <a name="Top"></a> 本指南中  
+##  <a name="Top"></a>本指南  
 
  [索引設計基本概念](#Basics)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62513045"
   
  [篩選索引設計指導方針](#Filtered)  
   
- [其他閱讀資料](#Additional_Reading)  
+ [其他閱讀](#Additional_Reading)  
   
 ##  <a name="Basics"></a> 索引設計基本概念  
 
@@ -47,7 +47,7 @@ ms.locfileid: "62513045"
   
  為資料庫選擇正確的索引及工作負載時，往往很難在查詢速度與更新成本之間取得平衡。 範圍較小的索引，或是索引的索引鍵中包含較少的資料行，所需的磁碟空間與維護負擔相對較小。 相反的，如果索引範圍較大，能涵蓋的查詢就更多。 在找到最有效率的索引之前，可能需要先試過數種不同的設計。 索引可以新增、修改和卸除，不會影響資料庫結構描述或應用程式的設計。 所以，不要吝於嘗試各種不同的索引。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查詢最佳化工具可以確實地選擇在大多數情況中最有效率的索引。 整體的索引設計策略應該為查詢最佳化工具提供多樣化的索引，然後信任它會做最恰當的決定。 這可降低分析時間，且會在各種不同狀況下得到相當好的效能。 若要查看查詢最佳化工具用於特定查詢的索引，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [查詢]  功能表中，選取 [包括實際執行計畫]  。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查詢最佳化工具可以確實地選擇在大多數情況中最有效率的索引。 整體的索引設計策略應該為查詢最佳化工具提供多樣化的索引，然後信任它會做最恰當的決定。 這可降低分析時間，且會在各種不同狀況下得到相當好的效能。 若要查看查詢最佳化工具用於特定查詢的索引，請在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [查詢] 功能表中，選取 [包括實際執行計畫]。  
   
  使用索引不一定就會有良好的效能，良好的效能和有效率地使用索引也不能劃上等號。 如果使用索引對產生最佳效能一定有幫助，查詢最佳化工具的作業就很單純。 但事實上，選擇不正確的索引可能得不到最佳效能。 因此，查詢最佳化工具的工作是只有在提升效能時才選擇索引或索引組合，如果會妨礙效能，就要避免索引式擷取。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62513045"
 
  下列工作是針對設計索引所建議的策略：  
   
-1.  了解資料庫本身的特性。 例如，這是經常修改資料的線上交易處理 (OLTP) 資料庫嗎？還是包含主要唯讀資料且必須快速處理非常龐大資料集的決策支援系統 (DSS) 或資料倉儲 (OLAP) 資料庫？ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中， *xVelocity 記憶體最佳化的資料行存放區索引* 特別適合一般資料倉儲資料集。 資料行存放區索引可以加快常用資料倉儲查詢 (如篩選、彙總、群組及星型聯結查詢等) 的速度，大幅改善使用者的資料倉儲經驗。 如需詳細資訊，請參閱 < [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
+1.  了解資料庫本身的特性。 例如，這是經常修改資料的線上交易處理 (OLTP) 資料庫嗎？還是包含主要唯讀資料且必須快速處理非常龐大資料集的決策支援系統 (DSS) 或資料倉儲 (OLAP) 資料庫？ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中， *xVelocity 記憶體最佳化的資料行存放區索引* 特別適合一般資料倉儲資料集。 資料行存放區索引可以加快常用資料倉儲查詢 (如篩選、彙總、群組及星型聯結查詢等) 的速度，大幅改善使用者的資料倉儲經驗。 如需詳細資訊, 請參閱描述的資料行存放區[索引](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
 2.  了解最常使用的查詢特性。 例如，知道最常使用的查詢會聯結兩個以上的資料表，將有助於判斷要使用的最佳類型索引。  
   
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  此查詢的下列執行計畫，顯示查詢最佳化工具使用了 SORT 運算子，按 ORDER BY 子句所指定的順序傳回結果集。  
   
- ![執行計畫顯示排序運算子使用。](media/indexsort1.gif "執行計畫顯示排序運算子。")  
+ ![執行計畫會顯示使用排序運算子。](media/indexsort1.gif "執行計畫會顯示使用排序運算子。")  
   
  如果利用符合查詢中 ORDER BY 子句的索引鍵資料行來建立索引，就不需要在查詢計畫中使用 SORT 運算子，因此查詢計畫可以更有效率。  
   
@@ -192,13 +192,13 @@ ON Purchasing.PurchaseOrderDetail
   
  再次執行查詢後，下列執行計畫會顯示已刪除 SORT 運算子，並使用了剛建立的非叢集索引。  
   
- ![執行計畫顯示排序運算子不會](media/insertsort2.gif "執行計畫顯示排序運算子不會使用")  
+ ![執行計畫顯示未使用排序運算子](media/insertsort2.gif "執行計畫顯示未使用排序運算子")  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 往遞增或遞減方向移動的效率一樣高。 定義為 `(RejectedQty DESC, ProductID ASC)` 的索引，仍可用在 ORDER BY 子句中的資料行排序方向與其相反的查詢中。 例如，具有 ORDER BY 子句 `ORDER BY RejectedQty ASC, ProductID DESC` 的查詢就可以使用此索引。  
   
  排序順序只能針對索引鍵資料行指定。 [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) 目錄檢視及 INDEXKEY_PROPERTY 函數可回報索引資料行是按遞增還是遞減的順序排序。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
+ 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Clustered"></a> 叢集索引設計指導方針  
 
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   可用於範圍查詢。  
   
- 如果叢集索引不是以 UNIQUE 屬性建立，則 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會自動將 4 位元組的 uniqueifier 資料行加入資料表。 當有需要時， [!INCLUDE[ssDE](../includes/ssde-md.md)] 會自動將 uniqueifier 值加入資料行，使每個索引鍵都是唯一的。 這個資料行及其值是供內部使用的，使用者看不到也無法存取它。  
+ 如果叢集索引不是以 UNIQUE 屬性建立, 則[!INCLUDE[ssDE](../includes/ssde-md.md)]會自動將4位元組的唯一碼資料行加入至資料表。 當需要時, [!INCLUDE[ssDE](../includes/ssde-md.md)]會自動將唯一碼值加入資料列, 使每個索引鍵都是唯一的。 這個資料行及其值是供內部使用的，使用者看不到也無法存取它。  
   
 ### <a name="clustered-index-architecture"></a>叢集索引架構  
 
@@ -227,7 +227,7 @@ ON Purchasing.PurchaseOrderDetail
   
  下圖顯示單一資料分割中的叢集索引結構。  
   
- ![叢集索引的層級](media/bokind2.gif "叢集索引的層級")  
+ 叢集![索引的層級]叢集(media/bokind2.gif "索引的層級")  
   
 ### <a name="query-considerations"></a>查詢注意事項  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      寬索引鍵是由數個資料行或是數個大型資料行所組成。 所有的非叢集索引都使用叢集索引的索引鍵值做為查閱索引鍵。 任何在相同資料表上所定義的非叢集索引將會非常大，因為非叢集索引項目包含叢集索引鍵，同時也包含在該非叢集索引上所定義的索引鍵資料行。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
+ 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Nonclustered"></a> 非叢集索引設計指導方針  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  您必須決定，提高查詢效能，與修改資料時對效能的影響和需要額外磁碟空間，兩者熟輕熟重。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
+ 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Unique"></a> 唯一索引設計指導方針  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   唯一非叢集索引可有內含的非索引鍵之索引資料行。 如需詳細資訊，請參閱 [內含資料行的索引](#Included_Columns)。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
+ 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Filtered"></a> 篩選索引設計指導方針  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  將資料轉換從比較運算子的左側移至右側可能會變更轉換的意義。 在上述範例中，當 CONVERT 運算子新增至右側時，比較作業會從整數比較變更為 `varbinary` 比較。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
+ 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
 

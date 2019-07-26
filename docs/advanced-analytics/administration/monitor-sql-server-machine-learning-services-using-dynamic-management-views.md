@@ -7,15 +7,15 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 70c409af4e8cbca3d4005f54a0772a0fd4917381
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d6b1772effd2ca1b35e547dc1f474dbe355aa86b
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345217"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470603"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用動態管理檢視 (Dmv) 監視 SQL Server Machine Learning 服務
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 使用動態管理檢視 (Dmv) 來監視外部腳本 (R 和 Python) 的執行、使用的資源、診斷問題, 以及微調 SQL Server Machine Learning 服務中的效能。
 
@@ -77,7 +77,7 @@ WHERE name = 'external scripts enabled';
 
 此查詢會傳回下列資料行:
 
-| 「資料行」 | 說明 |
+| 「資料行」 | 描述 |
 |--------|-------------|
 | IsMLServicesInstalled | 如果已安裝實例的 SQL Server Machine Learning 服務, 則傳回1。 否則, 會傳回0。 |
 | ExternalScriptsEnabled | 如果已啟用實例的外部腳本, 則傳回1。 否則, 會傳回0。 |
@@ -220,7 +220,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 此查詢會傳回下列資料行:
 
-| 「資料行」 | 說明 |
+| 「資料行」 | 描述 |
 |--------|-------------|
 | name | 外部資源集區或 SQL Server 的名稱。 |
 | max_memory_percent | SQL Server 或外部資源集區可以使用的最大記憶體。 |
@@ -277,7 +277,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 | 「資料行」 | 描述 |
 |--------|-------------|
 | 套件 | 已安裝之封裝的名稱。 |
-| 版本 | 封裝的版本。 |
+| Version | 封裝的版本。 |
 | 相依 | 列出已安裝之封裝所相依的封裝。 |
 | 使用權 | 已安裝之套件的授權。 |
 | LibPath | 可在其中找到封裝的目錄。 |
@@ -303,7 +303,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 | 「資料行」 | 描述 |
 |--------|-------------|
 | 套件 | 已安裝之封裝的名稱。 |
-| 版本 | 封裝的版本。 |
+| Version | 封裝的版本。 |
 | Location | 可在其中找到封裝的目錄。 |
 
 ## <a name="next-steps"></a>後續步驟

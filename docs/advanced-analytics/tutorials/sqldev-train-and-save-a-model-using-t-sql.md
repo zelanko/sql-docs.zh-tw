@@ -7,15 +7,15 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0d26f549bcca4860f4febe01a868f360edfa4fa2
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0825d99aee2639d28e95dfcaf79e1a8e915bf25a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345866"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470538"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>第 3 課：使用 T-sql 定型及儲存模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文是有關如何在 SQL Server 中使用 R 的 SQL 開發人員教學課程的一部分。
 
@@ -64,7 +64,7 @@ ms.locfileid: "68345866"
   
     - R 腳本會呼叫**rxLogit**函數 (這是隨附[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]的其中一個增強 R 函數) 來建立羅吉斯回歸模型。
   
-        二進位變數 _tipped_ 可做為「標籤」  或結果資料行，而模型則是使用下列功能資料行進行調整︰_passenger_count_、_trip_distance_、_trip_time_in_secs_和 _direct_distance_。
+        二進位變數 _tipped_ 可做為「標籤」或結果資料行，而模型則是使用下列功能資料行進行調整︰_passenger_count_、_trip_distance_、_trip_time_in_secs_和 _direct_distance_。
   
     - 儲存在 R 變數`logitObj`中的定型模型會序列化並當做輸出參數傳回。
 

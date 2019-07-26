@@ -7,15 +7,15 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f50049b1b93068748da84342d68ab6cb319c5d98
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 84ef5d684e767016491baa6e47e37d1402fc6879
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344893"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470051"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>SQL Server 中的 R Server (獨立式) 和 Machine Learning Server (獨立式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 提供獨立 R 伺服器的安裝支援, 或獨立于 SQL Server 執行的 Machine Learning Server。 根據您的 SQL Server 版本而定, 獨立伺服器具有開放原始碼 R 和可能 Python 的基礎, 並與 Microsoft 中的高效能程式庫重迭, 以新增大規模的統計和預測性分析。 程式庫也會啟用在 R 或 Python 中編寫腳本的機器學習工作。 
 
@@ -28,7 +28,7 @@ SQL Server 提供獨立 R 伺服器的安裝支援, 或獨立于 SQL Server 執�
 
 SQL Server 2016 僅限 R。 SQL Server 2017 支援 R 和 Python。 下表描述每個版本的功能。
 
-| 元件 | 說明 |
+| 元件 | 描述 |
 |-----------|-------------|
 | R 套件 | [**RevoScaleR**](ref-r-revoscaler.md)是可調整 R 的主要程式庫, 具有用於資料操作、轉換、視覺化和分析的功能。  <br/>[**MicrosoftML**](ref-r-microsoftml.md)會新增機器學習演算法, 以建立文字分析、影像分析和情感分析的自訂模型。 <br/>[**sqlRUtils**](ref-r-sqlrutils.md)提供 helper 函式, 可將 R 腳本放入 t-sql 預存程式、向資料庫註冊預存程式, 以及從 R 開發環境執行預存程式。<br/>[**mrsdeploy**](operationalization-with-mrsdeploy.md)提供 web 服務部署 (僅限 SQL Server 2017)。 <br/>[**olapR**](ref-r-olapr.md)是用來在 R 中指定 MDX 查詢。|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open)是 Microsoft 的 R 開放原始碼散發。包含封裝和解譯器。 請一律使用安裝程式中配套的 MRO 版本。 |

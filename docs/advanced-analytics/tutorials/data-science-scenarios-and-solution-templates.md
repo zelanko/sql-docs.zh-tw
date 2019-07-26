@@ -6,15 +6,15 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e50344bc94f25e6efd8303f93506401448f94fd1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cb144eb5c766b417884f6f1adb67dc0ac48504a5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344728"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469772"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和解決方案範本
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 範本是範例解決方案，其示範最佳做法，並提供可協助您快速實作解決方案的建置組塊。 每個範本都是針對特定的垂直或產業來解決特定問題而設計的。 每個範本所包含的工作，從資料準備和特徵工程，到模型定型和計分，應有盡有。 使用這些範本來瞭解如何[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]運作。 然後, 您可以隨意自訂範本以符合您自己的案例, 並建立自訂解決方案。 
 
@@ -86,7 +86,7 @@ ms.locfileid: "68344728"
 
 ## <a name="bkmk_HowTo"></a>如何使用範本
 
-若要下載每個範本中所包含的檔案，您可以使用 GitHub 命令，或開啟連結，然後按一下 [Download Zip (下載 Zip)]  將所有檔案儲存至您的電腦。  下載後的解決方案通常會包含下列資料夾：
+若要下載每個範本中所包含的檔案，您可以使用 GitHub 命令，或開啟連結，然後按一下 [Download Zip (下載 Zip)] 將所有檔案儲存至您的電腦。  下載後的解決方案通常會包含下列資料夾：
   
 -   **資料**:包含每個應用程式的範例資料。
   

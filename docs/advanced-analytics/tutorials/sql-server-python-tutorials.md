@@ -7,15 +7,15 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 86c5eaa600da0dbe9106278dd36b21eba322e2b7
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: edbd13de96c514a498aaee9482616a9b1723d632
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345961"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468948"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 教學課程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文說明在[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)上進行資料庫內分析的 Python 教學課程。 
 
@@ -28,7 +28,7 @@ ms.locfileid: "68345961"
 
 ## <a name="python-quickstarts-and-tutorials"></a>Python 快速入門與教學課程
 
-| 連結 | 說明 |
+| 連結 | 描述 |
 |------|-------------|
 | [入門SQL Server 中的 "Hello world" Python 腳本](quickstart-python-run-using-t-sql.md) | 瞭解如何在 T-sql 中呼叫 Python 的基本概念。 |
 | [入門在 SQL Server 中使用預存程式來建立、定型和使用 Python 模型](quickstart-python-train-score-in-tsql.md) | 說明在預存程式中內嵌 Python 程式碼、提供輸入和預存程式執行的機制。 |
@@ -41,7 +41,7 @@ ms.locfileid: "68345961"
 
 SQL Server 開發小組所提供的這些範例和示範, 會醒目提示您可以在真實世界應用程式中使用內嵌分析的方式。
 
-| 連結 | 說明 |
+| 連結 | 描述 |
 |------|-------------|
 | [使用 Python 和 SQL Server 建立預測模型](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 瞭解 ski 出租公司如何使用機器學習來預測未來的租用, 以協助商務計畫和員工滿足未來的需求。 |
 | [使用 Python 和 SQL Server 執行客戶叢集](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | 瞭解如何使用 Kmeans 演算法來執行客戶的不受監督叢集。 |

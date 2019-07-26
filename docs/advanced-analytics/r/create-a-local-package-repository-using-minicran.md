@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e6d204b7f0e2ab0207b22a5e61e1e266a813f195
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 34b7fee6b5eef1503f56dd72c6d8ff10911bbdc1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345160"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470217"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>使用 miniCRAN 建立本機 R 封裝存放庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html)套件是由[Andre de Vries](https://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html)所建立, 可識別並下載套件和相依性至單一資料夾, 您可以將其複製到其他電腦, 以進行離線 R 套件安裝。
 
@@ -78,7 +78,7 @@ local_repo <- "C:/mylocalrepo"
 
 安裝並載入**miniCRAN**之後, 請建立清單來指定您想要下載的其他套件。
 
-請勿  將相依性加入此初始清單。 **MiniCRAN**使用的**igraph**套件會為您產生相依性的清單。 如需如何使用產生的相依性圖形的詳細資訊, 請參閱[使用 miniCRAN 來識別封裝](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)相依性。
+請勿將相依性加入此初始清單。 **MiniCRAN**使用的**igraph**套件會為您產生相依性的清單。 如需如何使用產生的相依性圖形的詳細資訊, 請參閱[使用 miniCRAN 來識別封裝](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)相依性。
 
 1. 將目標封裝、「zoo」和「預測」新增至變數。
 

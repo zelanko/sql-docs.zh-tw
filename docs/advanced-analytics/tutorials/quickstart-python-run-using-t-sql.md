@@ -7,19 +7,19 @@ ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: caa462fa6449d4d130ace629f99c8061c7b8a35f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1281da6a366f7fa9d5fca20cc719a3c86825e56d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345493"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469613"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>快速入門：SQL Server 中的 "Hello world" Python 腳本 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入門中, 您可以藉由執行「Hello World」 Python 腳本 inT-SQL 來瞭解重要概念, 其中包含**sp_execute_external_script**系統預存程式的簡介。 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 先前的快速入門中, 請[確認 Python 存在於 SQL Server](quickstart-python-verify.md)中, 提供設定本快速入門所需之 python 環境的相關資訊和連結。
 

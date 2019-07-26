@@ -7,14 +7,16 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0fd6b624b024c51965420dd438b8eb9ec04fbafc
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344945"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470321"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>SQL Server 資料庫內分析實例之累計更新的 CAB 下載
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 針對資料庫內分析所設定的 SQL Server 實例包括 R 和 Python 功能。 這些功能會隨附于封包檔中, 並透過 SQL Server 安裝程式進行安裝和服務。 在連線到網際網路的裝置上, CAB 更新通常會透過 Windows Update 套用。 在中斷連線的伺服器上, 必須手動下載並套用 CAB 檔案。 
 

@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345761"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469507"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>快速入門：在 SQL Server 中使用預存程式來建立、定型和使用 Python 模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入門中, 您將會建立和執行兩個預存程式。 第一個使用傳統的鳶尾花花資料集, 並產生一個一般的貝氏機率分類模型, 以根據花卉特性來預測鳶尾花物種。 第二個程式是用於計分。 它會呼叫第一個程式中產生的模型, 以輸出一組預測。 藉由將程式碼放入預存程式中, 其他預存程式和用戶端應用程式就可以包含、可重複使用和呼叫作業。 
 
@@ -74,7 +74,7 @@ SQL Server 開發的常見模式是將可程式化作業組織成不同的預存
 
 3. 確認預存程式存在。 
 
-   如果上一個步驟中的 T-sql 腳本執行時沒有錯誤, 則會建立名為**generate_iris_model**的新預存程式, 並將其新增至**irissql**資料庫。 您可以在 [可程式性] 底下的 Management Studio  **物件總管**中找到預存程式。
+   如果上一個步驟中的 T-sql 腳本執行時沒有錯誤, 則會建立名為**generate_iris_model**的新預存程式, 並將其新增至**irissql**資料庫。 您可以在 [可程式性] 底下的 Management Studio **物件總管**中找到預存程式。
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>執行建立和定型模型的程式
 

@@ -7,15 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5a3bd47d8a16a784115136935f669c420cb65e8f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: a2bd6db3aaae2c07f6f46aecce3e7df913fc2a9e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345123"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470242"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>轉換 R 程式碼以在 SQL Server (資料庫內) 實例中執行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文提供有關如何修改 R 程式碼以在 SQL Server 中工作的高階指引。 
 
@@ -69,7 +69,7 @@ ms.locfileid: "68345123"
 
 + 盡可能將您的主要輸入資料定義為 SQL 查詢, 以避免資料移動。
 
-+ 在預存程式中執行 R 時, 您可以傳遞多  個純量輸入。 針對您想要在輸出中使用的任何參數, 加入**output**關鍵字。 
++ 在預存程式中執行 R 時, 您可以傳遞多個純量輸入。 針對您想要在輸出中使用的任何參數, 加入**output**關鍵字。 
 
     例如, 下列純量輸入`@model_name`包含模型名稱, 這也會在結果的本身資料行中輸出:
 

@@ -7,16 +7,16 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 24c751051ff09fa80e738fc4723a00722b6b2e12
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d73399522966a132b025244a1739afa01a194116
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344533"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470003"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server 中的 R 程式庫)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **RevoScaleR**是 Microsoft 提供的高效能資料科學函數程式庫。 函數支援資料匯入、資料轉換、摘要、視覺化和分析。
 
@@ -52,7 +52,7 @@ RevoScaleR 可作為分散式資料科學的平臺。 例如, 您可以在[Micro
 
 在某些情況下, SQL Server 和 R 會使用不同的資料類型。 如需 SQL 和 R 資料類型之間的對應清單, 請參閱[R 對 SQL 資料類型](r-libraries-and-data-types.md)。
 
-| 功能| 說明|
+| 函數| 描述|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  建立 SQL Server 計算內容物件, 以將計算推送至遠端實例。 有數個**RevoScaleR**函式會將計算內容視為引數。 |
 |[rxGetComputeCoNtext/rxSetComputeCoNtext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 取得或設定使用中的計算內容。 |
@@ -67,7 +67,7 @@ RevoScaleR 可作為分散式資料科學的平臺。 例如, 您可以在[Micro
 
 如果您有實例和資料庫的必要許可權, 您可以從 R 執行 DDL 語句。 下列函數會使用 ODBC 呼叫來執行 DDL 語句或抓取資料庫架構。
 
-| 功能| 說明|
+| 函數| 描述|
 | ------- | ---------- |
 | [rxSqlServerTableExists 和 rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]卸載資料表, 或檢查資料庫資料表或物件是否存在。 |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | 執行定義或操作資料庫物件的資料定義語言 (DDL) 命令。 此函式無法傳回資料, 而且只會用來抓取或修改物件架構或中繼資料。|
@@ -76,7 +76,7 @@ RevoScaleR 可作為分散式資料科學的平臺。 例如, 您可以在[Micro
 
 建立資料來源物件之後, 您可以使用物件將資料載入其中、轉換資料, 或將新的資料寫入指定的目的地。 根據來源中的資料大小，您也可以定義資料來源中的批次大小，以及以區塊移動資料。
 
-| 功能 | 描述 |
+| 函數 | 描述 |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 請檢查資料來源是否可用、開啟或關閉資料來源、從來源讀取資料、將資料寫入目標, 以及關閉資料來源。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 將資料從資料來源移到檔案儲存體或資料框架中。|

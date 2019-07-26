@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 64995cc5de7bb3609f1923b7755be9b33b55e764
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1257cc3f3d0b3ed07bc879f5bc3337d62bc1b3a0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345909"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470577"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>教學課程：適用于 SQL 開發人員的 R 資料分析
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在適用于 SQL 程式設計人員的本教學課程中, 您可以使用 SQL Server 上的[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)資料庫來建立和部署 r 型機器學習服務解決方案, 以瞭解 r 整合。 您將使用 T-sql、SQL Server Management Studio 和資料庫引擎實例搭配 [Machine Learning Services] ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)和 R 語言支援
 
@@ -46,7 +46,7 @@ ms.locfileid: "68345909"
 
 將模型儲存至資料庫之後, 使用預存程式從[!INCLUDE[tsql](../../includes/tsql-md.md)]呼叫模型以取得預測。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 所有工作都可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]預存程式來完成。
 

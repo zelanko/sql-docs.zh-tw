@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9146020fb35d729575c8441e71b711e287399a75
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d01004fb54c0410acc372c5c66930f33bbd8856
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345524"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470001"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad 服務設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]是管理和執行外部腳本的服務, 類似于全文檢索索引和查詢服務啟動個別主控制項來處理全文檢索查詢的方式。
 
@@ -61,7 +61,7 @@ ms.locfileid: "68345524"
 
 下表列出的 advanced 設定[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 以及允許的值。
 
-|**設定名稱**|**型別**|**描述**|
+|**設定名稱**|**型別**|**說明**|
 |----|----|----|
 |結束時\_ \_清除\_作業|Integer |這是僅供內部設定-請勿變更此值。 </br></br>指定是否應該在會話完成後清除為每個外部執行時間會話建立的暫存工作資料夾。 這項設定在偵錯時很有用。 </br></br>支援的值為**0** (已停用) 或**1** (已啟用)。 </br></br>預設值為 1, 表示記錄檔會在結束時移除。|
 |追蹤\_層級|Integer |設定 MSSQLLAUNCHPAD 的追蹤詳細資訊層級, 以進行偵錯工具。 這會影響 LOG_DIRECTORY 設定所指定之路徑中的追蹤檔案。 </br></br>支援的值為：**1** (錯誤)、 **2** (效能)、 **3** (警告)、 **4** (資訊)。 </br></br>預設值為 1, 表示只輸出錯誤。|
@@ -74,7 +74,7 @@ ms.locfileid: "68345524"
 
 如果您的組織要求定期變更密碼，您可能需要強制 Launchpad 服務重新產生為其工作者帳戶維護的加密密碼。
 
-若要啟用此設定並強制密碼重新整理，請在 SQL Server 組態管理員中開啟 Launchpad 服務的 [屬性]  窗格，按一下 [進階]  ，然後將 [重設外部使用者密碼]  變更為 [是]  。 當您套用此變更時，系統會立即針對所有使用者帳戶重新產生密碼。 若要在這次變更之後執行外部腳本, 您必須重新開機啟動列服務, 此時它會讀取新產生的密碼。
+若要啟用此設定並強制密碼重新整理，請在 SQL Server 組態管理員中開啟 Launchpad 服務的 [屬性] 窗格，按一下 [進階]，然後將 [重設外部使用者密碼] 變更為 [是]。 當您套用此變更時，系統會立即針對所有使用者帳戶重新產生密碼。 若要在這次變更之後執行外部腳本, 您必須重新開機啟動列服務, 此時它會讀取新產生的密碼。
 
 若要定期重設密碼，您可以手動設定此旗標，或使用指令碼。
 

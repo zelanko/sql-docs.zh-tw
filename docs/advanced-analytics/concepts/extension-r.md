@@ -7,15 +7,15 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3bf8e77cec92cde0e5a8adf4d3e1e36f1689b917
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343408"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470492"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 語言延伸模組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 擴充功能是關係資料庫引擎之 SQL Server Machine Learning 服務附加元件的一部分。 它會新增 R 執行環境、使用標準程式庫和工具的基本 R 散發, 以及 Microsoft R 程式庫:適用于大規模分析的[RevoScaleR](../r/ref-r-revoscaler.md) 、用於機器學習服務演算法的[MicrosoftML](../r/ref-r-microsoftml.md) , 以及用來存取 SQL Server 中資料或 R 程式碼的其他程式庫。
 

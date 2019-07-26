@@ -8,15 +8,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dec0fe7147eab6a4b6545decf99e1731d773957c
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343424"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470291"
 ---
 #  <a name="get-r-and-python-package-information"></a>取得 R 和 Python 套件資訊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 有時候當您使用多個環境或 R 或 Python 的安裝時, 您必須確認您執行的程式碼使用 Python 的預期環境, 或 R 的正確工作區。例如, 如果您已[升級 r 或 Python](../install/upgrade-r-and-python.md), r 程式庫的路徑可能位於與預設值不同的資料夾中。 此外, 如果您安裝 R 用戶端或獨立伺服器的實例, 您的電腦上可能會有多個 R 程式庫。
 

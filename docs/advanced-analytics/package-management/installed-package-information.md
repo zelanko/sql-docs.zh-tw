@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f6cf66725ae15b2b738c020258142576ede734ec
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 2a149b4a98ec6c3a1d35cb499dcd391d87216752
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345075"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470266"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server 中的預設 R 和 Python 套件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文列出隨 SQL Server 安裝的 R 和 Python 套件, 以及要在哪裡尋找封裝程式庫。  
 
@@ -70,7 +70,7 @@ SQL Server 2017 Machine Learning 是支援 R 和 Python 的第一版。
 
 ## <a name="component-upgrades"></a>元件升級
 
-初始安裝之後, R 和 Python 套件會透過 service pack 和累積更新進行重新整理, 但只有系結至新式生命  週期支援原則, 才能進行完整版本升級。 系結會變更服務模型。 根據預設, 在初始安裝之後, R 封裝會透過 service pack 和累計更新進行重新整理。 只有透過產品升級 (從 SQL Server 2016 到 SQL Server 2017) 或將 R 支援系結至 Microsoft Machine Learning Server, 才能夠進行核心 R 元件的其他套件和完整版本升級。 如需詳細資訊, 請參閱[在 SQL Server 中升級 R 和 Python 元件](../install/upgrade-r-and-python.md)。
+初始安裝之後, R 和 Python 套件會透過 service pack 和累積更新進行重新整理, 但只有系結至新式生命週期支援原則, 才能進行完整版本升級。 系結會變更服務模型。 根據預設, 在初始安裝之後, R 封裝會透過 service pack 和累計更新進行重新整理。 只有透過產品升級 (從 SQL Server 2016 到 SQL Server 2017) 或將 R 支援系結至 Microsoft Machine Learning Server, 才能夠進行核心 R 元件的其他套件和完整版本升級。 如需詳細資訊, 請參閱[在 SQL Server 中升級 R 和 Python 元件](../install/upgrade-r-and-python.md)。
 
 ## <a name="package-library-location"></a>封裝程式庫位置
 
@@ -97,7 +97,7 @@ SQL Server 2017 Machine Learning 是支援 R 和 Python 的第一版。
 
 下表列出安裝 SQL Server 2016 R Server (獨立式) 或 SQL Server 2017 Machine Learning Server (獨立式) 伺服器時, 二進位檔的預設路徑。 
 
-|版本| 安裝|預設路徑|
+|Version| 安裝|預設路徑|
 |-------|-------------|------------|
 | SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|Machine Learning Server, 使用 R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|

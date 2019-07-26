@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345403"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469341"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>快速入門：在 SQL Server 中使用 R 從模型預測
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入門中, 使用您在先前的快速入門中建立的模型, 對新資料進行預測評分。 若要使用新資料執行_計分_, 請從資料表中取得其中一個定型模型, 然後呼叫一組新的資料來做為預測基礎。 「計分」 (data 科學) 一詞有時會用來表示根據送入定型模型中的新資料來產生預測、機率或其他值。
 

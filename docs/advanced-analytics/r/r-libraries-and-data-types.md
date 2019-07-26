@@ -7,15 +7,15 @@ ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 255342113a17b0fb2af58eb6bc173cb6c50aac6d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5606997e26aa006e102a2cc60f5635702500e53f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344932"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470052"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 和 SQL Server 之間的資料類型對應
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 針對在 SQL Server Machine Learning 服務的 R 整合功能上執行的 R 方案, 請參閱不支援的資料類型清單, 以及在 R 程式庫和 SQL Server 之間傳遞資料時, 可能會隱含執行的資料類型轉換。
 

@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 70c290d494f7dcb97dd197c057e11dfcc38ada0a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 46c25083133677b382b33480ac5674f1786a7bf8
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345048"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469929"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>使用 ODBC 從 SQL Server 儲存和載入 R 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server R Services 可以將序列化的 R 物件儲存到資料表中，並視需要從資料表載入物件；您不必重新執行 R 程式碼，或是重新定型模型。 這項可在資料庫中儲存 R 物件的功能，對下列案例來說至關重要：定型和儲存模型，以於稍後用來進行評分或分析等案例。
 

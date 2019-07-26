@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d8768532e3891183d82cbb2273ded8dcc378b1fc
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: effcfe458fc004fd8fb44bb58095e91a2fb56b8d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345302"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470062"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>使用 Management Studio 中的自訂報表監視機器學習服務
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 為了讓您更輕鬆地管理用於機器學習服務的實例, 產品小組已提供一些您可以新增至 SQL Server Management Studio 的範例自訂報表。 在這些報告中, 您可以查看詳細資料, 例如:
 
@@ -64,9 +64,9 @@ ms.locfileid: "68345302"
 ### <a name="step-3-run-the-reports"></a>步驟 3： 執行報表
 
 5. 在 Management Studio 中，以滑鼠右鍵按一下要執行報表的執行個體 [資料庫]  節點。
-6. 依序按一下 [報表]  及 [自訂報表]  。
+6. 依序按一下 [報表] 及 [自訂報表] 。
 7. 在 [開啟檔案]  對話方塊中，找出自訂報表資料夾。
-8. 選取下載的其中一個 RDL 檔案，再按一下 [開啟]  。
+8. 選取下載的其中一個 RDL 檔案，再按一下 [開啟] 。
 
 > [!IMPORTANT]
 > 某些電腦無法使用這些報表，例如顯示裝置解析度高於 1080p 或為高 DPI 的電腦，或處於某些遠端桌面工作階段中的電腦。 SSMS 的報表檢視器控制項中有一個 Bug，會損毀報表。

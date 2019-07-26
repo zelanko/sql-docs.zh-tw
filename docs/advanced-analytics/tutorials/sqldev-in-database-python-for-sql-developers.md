@@ -7,15 +7,15 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ed8008bbda76bfc8a194897e9389c9d5dc6bb031
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 6147c4670dace104c2c33c19e1fd29cbf2d4f2ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345934"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468857"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>教學課程：適用于 SQL 開發人員的 Python 資料分析
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在適用于 SQL 程式設計人員的本教學課程中, 瞭解如何使用 SQL Server 上的[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)資料庫來建立及部署以 python 為基礎的機器學習服務解決方案, 以瞭解 python 整合。 您將使用 T-sql、SQL Server Management Studio, 以及具有[Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)和 Python 語言支援的資料庫引擎實例。
 
@@ -49,7 +49,7 @@ ms.locfileid: "68345934"
 
 將模型儲存至資料庫之後, 您可以使用預存程式, 從[!INCLUDE[tsql](../../includes/tsql-md.md)]呼叫模型以取得預測。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 + [使用 Python SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 

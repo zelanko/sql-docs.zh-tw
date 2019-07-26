@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 71a6149f1d89a4a1df114f376c250c203a8721cf
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344905"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469895"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning 或 R Server 的升級和安裝常見問題
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本主題提供有關在 SQL Server 中安裝機器學習功能的一些常見問題解答。 其中也涵蓋升級的相關常見問題。
 
@@ -70,7 +70,7 @@ SQL Server 2016 的早期發行版本無法在離線安裝期間 (沒有網際�
 
 下列版本已與 SQL Server 2016 的發行前版本一起安裝。
 
-| 版本 | 建置         |
+| Version | 建置         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |
@@ -94,11 +94,11 @@ SQL Server 2016 的早期發行版本無法在離線安裝期間 (沒有網際�
 
 如已安裝 Microsoft R Server 發行前版本，您必須先解除安裝它，才能升級至較新版本。
 
-1.  在 [控制台]  中，按一下 [新增/移除程式]  並選取 [ `Microsoft SQL Server 2016 <version number>`]。
+1.  在 [控制台] 中，按一下 [新增/移除程式] 並選取 [ `Microsoft SQL Server 2016 <version number>`]。
 
-2.  在有 [新增]  、[修復]  或 [移除]  元件選項的對話方塊中，選取 [移除]  。
+2.  在有 [新增] 、[修復] 或 [移除]  元件選項的對話方塊中，選取 [移除] 。
   
-3.  在 [選取功能]  頁面下的 [共用功能]  中，選取 [R Server (獨立式)]  。 按一下 [下一步]  ，然後按一下 [完成]  只解除安裝選取的元件。
+3.  在 [選取功能]  頁面下的 [共用功能] 中，選取 [R Server (獨立式)] 。 按一下 [下一步] ，然後按一下 [完成]  只解除安裝選取的元件。
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services 和 R Server (獨立式) 並存錯誤 
 

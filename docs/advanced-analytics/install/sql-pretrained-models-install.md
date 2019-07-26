@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2045d6611d5f418a9ed102a1d776080973c08659
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f89e638b6b9486b17974a04af6076e6c7154fa88
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344966"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470351"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server 上安裝預先定型的機器學習模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文說明如何使用 Powershell 將*情感分析*和*影像特徵化*的免費預先定型機器學習模型新增至具有 R 或 Python 整合的 SQL Server 實例。 預先定型的模型是由 Microsoft 所建立並可立即使用, 並新增至實例做為後續安裝工作。 如需這些模型的詳細資訊, 請參閱本文的[資源](#bkmk_resources)一節。
 
@@ -28,7 +28,7 @@ ms.locfileid: "68344966"
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 在文字輸入上產生正負情感分數。 |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 從影像檔案輸入中解壓縮文字資訊。 |
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 機器學習演算法需要大量計算。 針對低至中等的工作負載, 我們建議使用 16 GB 的 RAM, 包括完成使用所有範例資料的教學課程逐步解說。
 

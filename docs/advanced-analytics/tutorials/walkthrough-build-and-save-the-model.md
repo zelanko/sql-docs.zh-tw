@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: eec6d165b8e3aa4130246aae6d4aaf5b4102fc0f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ecff1f32d129b71a014038fa681e76b9a2f44554
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345821"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470523"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>建立 R 模型並儲存至 SQL Server (逐步解說)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在此步驟中, 您將瞭解如何建立機器學習模型, 並將模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]儲存在中。 藉由儲存模型, 您可以使用系統預存[!INCLUDE[tsql](../../includes/tsql-md.md)]程式[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)或[PREDICT (t-sql) 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql), 直接從程式碼呼叫它。
 

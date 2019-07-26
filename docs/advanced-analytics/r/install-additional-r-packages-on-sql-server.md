@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345551"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470106"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>在 SQL Server 上安裝新的 R 套件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文說明如何將新的 R 封裝安裝到啟用機器學習服務的 SQL Server 實例。 有多種方法可以安裝新的 R 封裝, 視您擁有的 SQL Server 版本以及伺服器是否有網際網路連線而定。 下列是可能的新封裝安裝方法。
 
@@ -67,7 +67,7 @@ R 封裝程式庫實際上位於 SQL Server 實例的 Program Files 資料夾中
 
 2.  以滑鼠右鍵按一下的連結。ZIP 檔案, 然後選取 [**另存目標**]。
 
-3.  流覽至儲存壓縮封裝的本機資料夾, 然後按一下 [儲存  ]。
+3.  流覽至儲存壓縮封裝的本機資料夾, 然後按一下 [儲存]。
 
     此程序會建立套件的本機複本。 
 

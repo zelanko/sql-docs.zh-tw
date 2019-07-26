@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4ee27fd68563be336f5bc98bb5b51b200f1dff71
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345128"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470461"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務中的擴充性架構 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 具有可在伺服器上執行外部腳本 (例如 R 或 Python) 的擴充性架構。 腳本會在語言執行時間環境中執行, 做為核心資料庫引擎的延伸。 
 
@@ -45,7 +45,7 @@ SQL Server 具有可在伺服器上執行外部腳本 (例如 R 或 Python) 的�
 
   ![元件架構](../media/generic-architecture.png "元件架構")
 
-元件包含一個  啟動列服務, 用來叫用語言特定的啟動器 (R 或 Python)、語言和程式庫特定邏輯以載入解譯器和程式庫。 啟動器會載入語言執行時間, 加上任何專屬模組。 例如, 如果您的程式碼包含 RevoScaleR 函數, 就會載入 RevoScaleR 解譯器。 **BxlServer**和**SQL 衛星**會使用 SQL Server 來管理通訊和資料傳輸。
+元件包含一個啟動列服務, 用來叫用語言特定的啟動器 (R 或 Python)、語言和程式庫特定邏輯以載入解譯器和程式庫。 啟動器會載入語言執行時間, 加上任何專屬模組。 例如, 如果您的程式碼包含 RevoScaleR 函數, 就會載入 RevoScaleR 解譯器。 **BxlServer**和**SQL 衛星**會使用 SQL Server 來管理通訊和資料傳輸。
 
 <a name="launchpad"></a>
 

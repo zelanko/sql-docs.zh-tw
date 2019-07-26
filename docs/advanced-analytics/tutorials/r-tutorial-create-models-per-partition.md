@@ -9,15 +9,15 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ceba61f4bdc22b4049453ed27245f09efe080b1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 024ddc72ae2b0a2c443546148a66d0fa85060cb6
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345954"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469192"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立以資料分割為基礎的模型
-[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2019 中, 分割型模型化是透過分割資料建立模型並將其定型的能力。 針對自然分割成指定分類配置的分層資料 (例如地理區域、日期和時間、年齡或性別), 您可以在整個資料集上執行腳本, 並能夠對維持不變的分割區進行模型、定型和評分所有這些作業。 
 
@@ -33,7 +33,7 @@ ms.locfileid: "68345954"
 > * 在每個資料分割上建立和定型模型, 並將物件儲存在資料庫中。
 > * 使用針對該用途保留的範例資料, 預測每個資料分割模型的 tip 結果機率。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
  
 若要完成本教學課程, 您必須具備下列各項:
 

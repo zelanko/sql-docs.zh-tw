@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a23896f5242e0f1182b2864e426bbb20aeda763f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0259a4695ab1ee6f42b92e12b47f81e9aa851469
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344814"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469609"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>快速入門：在 SQL Server 中使用 Python 處理輸入和輸出
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本快速入門說明在 SQL Server Machine Learning 服務中使用 Python 時, 如何處理輸入和輸出。
 
@@ -25,7 +25,7 @@ ms.locfileid: "68344814"
 
 預存程式會傳回單一 Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)資料框架做為輸出, 但您也可以將純量和模型輸出為變數。 例如, 您可以將定型的模型輸出為二進位變數, 並將它傳遞至 T-sql INSERT 語句, 以將該模型寫入資料表。 您也可以產生繪圖 (二進位格式) 或純量 (個別的值, 例如日期和時間、定型模型所經過的時間等等)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 先前的快速入門中, 請[確認 Python 存在於 SQL Server](quickstart-python-verify.md)中, 提供設定本快速入門所需之 python 環境的相關資訊和連結。
 

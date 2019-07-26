@@ -7,15 +7,15 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 298328db563cac8183b14b47e5c75c850c782d58
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c2d27b295df6b29d69ce90a7c70c135a197b68b0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345459"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470229"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server 中的 Python 模組)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **microsoftml**是 Microsoft 的 Python35 相容模組, 可提供高效能的機器學習服務演算法。 其中包含用於定型和轉換的函式、評分、文字和影像分析, 以及從現有資料衍生值的功能解壓縮。
 
@@ -51,7 +51,7 @@ ms.locfileid: "68345459"
 
 ## <a name="1-training-functions"></a>1-訓練函式
 
-| 功能 | 描述 |
+| 函數 | 描述 |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | 定型模型的集團。 |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | 隨機樹系。 |
@@ -67,14 +67,14 @@ ms.locfileid: "68345459"
 
 ### <a name="categorical-variable-handling"></a>類別變數處理
 
-| 功能 | 描述 |
+| 函數 | 描述 |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | 將文字資料行轉換成類別目錄。 |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | 雜湊並將文字資料行轉換成類別目錄。 |
 
 ### <a name="schema-manipulation"></a>架構操作
 
-| 功能 | 說明 |
+| 函數 | 描述 |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 將多個資料行串連成單一向量。 |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | 從資料集卸載資料行。 |
@@ -83,7 +83,7 @@ ms.locfileid: "68345459"
 
 ### <a name="variable-selection"></a>變數選取
 
-| 功能 | 說明 |
+| 函數 | 描述 |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |以計數為基礎的特徵選取。 |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 以相互資訊為基礎的特徵選取。 |
@@ -91,7 +91,7 @@ ms.locfileid: "68345459"
 
 ### <a name="text-analytics"></a>文字分析
 
-| 功能 | 描述 |
+| 函數 | 描述 |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | 將文字資料行轉換成數值特徵。 |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | 情感分析。 |
@@ -99,7 +99,7 @@ ms.locfileid: "68345459"
 
 ### <a name="image-analytics"></a>影像分析 
 
-| 功能 | 描述 |
+| 函數 | 描述 |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | 載入影像。 |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 調整影像大小。 |
@@ -108,7 +108,7 @@ ms.locfileid: "68345459"
 
 ### <a name="featurization-functions"></a>特徵化函式
 
-| 功能 | 描述 |
+| 函數 | 描述 |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | 資料來源的資料轉換 |
 
@@ -116,7 +116,7 @@ ms.locfileid: "68345459"
 
 ## <a name="3-scoring-functions"></a>3-評分函數
 
-| 功能 | 描述 |
+| 函數 | 描述 |
 |----------|-------------|
 |[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | 使用 Microsoft 機器學習模型的分數 |
 

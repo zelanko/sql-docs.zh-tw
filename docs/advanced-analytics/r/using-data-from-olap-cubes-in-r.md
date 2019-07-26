@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3063758e1186dc81e5ce9e70891403e7afd3a89f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c8ac0827ba6bfbb2c35e594967925d16d4730915
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345108"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469868"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用 OLAP cube 的資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **OlapR**套件是由 Microsoft 提供的 R 封裝, 用於 Machine Learning Server 和 SQL Server, 可讓您執行 MDX 查詢以從 OLAP cube 取得資料。 使用此封裝時, 您不需要建立連結的伺服器或清除壓平合併的資料列集;您可以直接從 R 取得 OLAP 資料。
 
@@ -29,23 +29,23 @@ OLAP 是線上分析處理的簡短。 OLAP 解決方案廣泛用於在一段時
 
 Microsoft 提供[Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), 可讓您以_cube_或_表格式模型_的形式來設計、部署和查詢 OLAP 資料。 Cube 是多維度資料庫。 _維度_類似資料的 Facet 或 R 中的因素: 您可以使用維度來識別您想要摘要或分析的某些特定資料子集。 例如, 「時間」是很重要的維度, 因此許多 OLAP 解決方案都包含預設定義的多個行事曆, 以便在切割和匯總資料時使用。 
 
-基於效能的考慮, OLAP 資料庫通常會事先計算摘要  (或匯總), 然後儲存它們以供更快速的抓取。 摘要是以*量值*為基礎, 代表可套用至數值資料的公式。 您可以使用維度來定義資料的子集, 然後計算該資料的量值。 例如, 您可以使用量值來計算在多季減去稅金的特定產品明細的總銷售額, 以報告特定供應商、年初累計薪資付費的平均運送成本等等。
+基於效能的考慮, OLAP 資料庫通常會事先計算摘要(或匯總), 然後儲存它們以供更快速的抓取。 摘要是以*量值*為基礎, 代表可套用至數值資料的公式。 您可以使用維度來定義資料的子集, 然後計算該資料的量值。 例如, 您可以使用量值來計算在多季減去稅金的特定產品明細的總銷售額, 以報告特定供應商、年初累計薪資付費的平均運送成本等等。
 
 MDX (多維度運算式的 short) 是用來查詢 cube 的語言。 MDX 查詢通常包含一個資料定義, 其中包含一或多個維度, 以及至少一個量值, 但 MDX 查詢可能會變得更複雜, 而且包含滾動視窗、累計平均值、總和、次序或百分位數。 
 
 以下是當您開始建立 MDX 查詢時, 可能會有説明的一些其他詞彙:
 
-+  切割會使用單一維度中的值來取得 cube 的子集。
++ 切割會使用單一維度中的值來取得 cube 的子集。
 
-+ 「切割」  藉由在多個維度上指定值範圍來建立 Subcube。
++ 「切割」 藉由在多個維度上指定值範圍來建立 Subcube。
 
-+ 「向下鑽研」  會從摘要巡覽至詳細資料。
++ 「向下鑽研」 會從摘要巡覽至詳細資料。
 
-+ 「向上鑽研」  會從詳細資料移至更高層級的彙總。
++ 「向上鑽研」 會從詳細資料移至更高層級的彙總。
 
-+ 「彙總」  會摘要維度上的資料。
++ 「彙總」 會摘要維度上的資料。
 
-+ 「樞紐」  會輪流選取 Cube 或資料。
++ 「樞紐」 會輪流選取 Cube 或資料。
 
 ## <a name="how-to-use-olapr-to-create-mdx-queries"></a>如何使用 olapR 建立 MDX 查詢
 

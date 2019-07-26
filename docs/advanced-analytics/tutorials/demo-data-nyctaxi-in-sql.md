@@ -7,15 +7,15 @@ ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1b0eea71105cb22cce81ac482c8ad6df50e63fa0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d5d74090713666a2da6058d9eccee1e33e4d7cb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343428"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469748"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教學課程的 NYC 計程車示範資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文說明如何設定包含紐約[計程車和禮車委員會](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)之公用資料的範例資料庫。 此資料用於數個 R 和 Python 教學課程, 用於 SQL Server 上的資料庫內分析。 為了讓範例程式碼執行得更快, 我們為數據建立了代表性的 1% 取樣。 在您的系統上, 資料庫備份檔案會稍微超過 90 MB, 並在主要資料表中提供1700000個數據列。
 
@@ -54,7 +54,7 @@ ms.locfileid: "68343428"
 
 下表摘要說明在 NYC 計程車示範資料庫中建立的物件。
 
-|**物件名稱**|**物件類型**|**描述**|
+|**物件名稱**|**物件類型**|**說明**|
 |----------|------------------------|---------------|
 |**NYCTaxi_Sample** | database | 建立資料庫和兩個資料表：<br /><br />nyctaxi_sample 資料表:包含主要 NYC 計程車資料集。 叢集資料行存放區索引會加入資料表，以提升儲存體和查詢效能。 NYC 計程車資料集的 1% 樣本會插入此資料表中。<br /><br />dbo. nyc _taxi_models table:用來保存已定型的先進分析模型。|
 |**fnCalculateDistance** |純量值函式 | 計算 pickup 和下車位置之間的直線距離。 此函式用於[建立資料特徵](sqldev-create-data-features-using-t-sql.md)、[定型和儲存模型](sqldev-train-and-save-a-model-using-t-sql.md), 以及[讓 R 模型](sqldev-operationalize-the-model.md)。|
@@ -63,7 +63,7 @@ ms.locfileid: "68343428"
 
 預存程式是使用在各種教學課程中找到的 R 和 Python 腳本所建立。 下表摘要說明當您從各種課程執行腳本時, 可以選擇性地加入 NYC 計程車示範資料庫中的預存程式。
 
-|**預存程式**|**語言**|**說明**|
+|**預存程式**|**語言**|**描述**|
 |-------------------------|------------|---------------|
 |**RxPlotHistogram** |R | 呼叫 RevoScaleR rxHistogram 函式以繪製變數的長條圖, 然後將繪圖當做二進位物件傳回。 這個預存程式是用來[流覽資料並將其視覺化](sqldev-explore-and-visualize-the-data.md)。|
 |**RPlotRHist** |R| 使用歷程函式建立圖形, 並將輸出儲存為本機 PDF 檔案。 這個預存程式是用來[流覽資料並將其視覺化](sqldev-explore-and-visualize-the-data.md)。|

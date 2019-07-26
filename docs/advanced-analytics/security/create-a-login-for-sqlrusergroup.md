@@ -7,15 +7,15 @@ ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 74330d37a037b0951c4964cafbd6e0c26b4fdea1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f86bedc3cfd92272b500d5d3edd701b6ca51d38b
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345635"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469983"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>為 SQLRUserGroup 建立登入
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 當腳本中的「迴圈執行」[連接](../../advanced-analytics/concepts/security.md#implied-authentication)指定*信任連接*, 而用來執行物件的身分識別是 Windows 使用者帳戶時, 請在[SQLRUserGroup](../concepts/security.md#sqlrusergroup)的[SQL Server 中建立登入](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)。
 
@@ -28,7 +28,7 @@ ms.locfileid: "68345635"
 
 ## <a name="create-a-login"></a>建立登入
 
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [物件總管] 中，展開 [安全性]  ，以滑鼠右鍵按一下 [登入]  ，然後選取 [新增登入]  。
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [物件總管] 中，展開 [安全性] ，以滑鼠右鍵按一下 [登入] ，然後選取 [新增登入] 。
 
 2. 在 [**登入-新增**] 對話方塊中, 選取 [**搜尋**]。 (還不要在方塊中輸入任何內容)。
     

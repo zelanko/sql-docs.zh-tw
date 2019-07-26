@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cfbd5417106d8e6ddd0ab5c76c2c05dae07c0605
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345989"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470593"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 在 SQL Server 上執行自訂 R 函數
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 您可以透過[rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)傳遞函式, 在 SQL Server 的內容中執行自訂 R 函式, 假設您的腳本所需的任何程式庫也安裝在伺服器上, 而且這些程式庫與 R 的基底散發相容。 
 
@@ -23,7 +23,7 @@ ms.locfileid: "68345989"
 
 在本教學課程中, 您將使用模擬資料來示範如何執行在遠端伺服器上執行的自訂 R 函數。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 + [SQL Server 2017 Machine Learning 服務 (使用 R)](../install/sql-machine-learning-services-windows-install.md)或[SQL Server 2016 R Services (資料庫內)](../install/sql-r-services-windows-install.md)
   
@@ -125,7 +125,7 @@ ms.locfileid: "68345989"
   
     + 使用 *timesToRun* 引數來指定函數應執行的次數。  在此案例中，您要擲骰子 20 次。
   
-    + 引數 *RNGseed* 和 *RNGkind* 可以用來控制隨機數字的產生。 當 *RNGseed* 設為 [自動]  時，會在每一個背景工作上平行初始化隨機資料流。
+    + 引數 *RNGseed* 和 *RNGkind* 可以用來控制隨機數字的產生。 當 *RNGseed* 設為 [自動] 時，會在每一個背景工作上平行初始化隨機資料流。
   
 2. **rxExec** 函數會建立一份清單，其中每個回合都有一個項目；不過，在清單未完成時，您都不會察覺到任何影響。 當所有的反復專案都完成時, 以**length**開頭的行將會傳回值。
   

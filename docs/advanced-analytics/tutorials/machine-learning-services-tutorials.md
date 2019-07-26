@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9a212160c17e4cc3c8322af6026c9e2e4df97254
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d901d11b11019a19d5e26e12956e9ba520e33e8f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343608"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469631"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R 和 Python 中的 SQL Server Machine Learning 教學課程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文提供教學課程和程式碼範例的完整清單, 示範[SQL Server 2016 R services](../install/sql-r-services-windows-install.md)或[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)的機器學習功能。 
 

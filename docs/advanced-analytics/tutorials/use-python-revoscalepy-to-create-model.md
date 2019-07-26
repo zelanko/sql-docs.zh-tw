@@ -7,15 +7,15 @@ ms.date: 10/25/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3fe398a6210936553fc40b10cc9a42f395a98785
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 11a155a9c679a18fefc7b3c91434a0ca241c23f7
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345802"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468510"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>使用 Python 搭配 revoscalepy 來建立可在 SQL Server 上遠端執行的模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 來自 Microsoft 的[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python 程式庫提供資料科學演算法, 以進行資料探索、視覺化、轉換和分析。 在 SQL Server 的 Python 整合案例中, 此程式庫具有策略性的重要性。 在多核心伺服器上, **revoscalepy**函數可以平行執行。 在中央伺服器和用戶端工作站 (個別的實體電腦, 全都擁有相同的**revoscalepy**程式庫) 的分散式架構中, 您可以撰寫在本機啟動的 Python 程式碼, 然後將執行轉移至遠端 SQL Server 實例資料所在的位置。
 

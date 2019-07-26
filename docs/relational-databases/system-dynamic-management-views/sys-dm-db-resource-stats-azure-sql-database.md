@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_resource_stats (Azure SQL Database) |Microsoft Docs
+title: sys.databases _db_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/21/2019
 ms.service: sql-database
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d78e3aa24f6e73d624eec1f33fbebb62108bcc65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71efbc5abad150c599a674ea66409207fc2bf628
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096288"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471088"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,35 +34,35 @@ ms.locfileid: "68096288"
 |[資料行]|資料類型|描述|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 時間會指出目前報告間隔的結束。|  
-|avg_cpu_percent|**十進位 (5,2)**|平均運算使用率，以服務層限制的百分比計算。|  
-|avg_data_io_percent|**十進位 (5,2)**|平均資料 I/O 使用率的服務層限制的百分比表示。|  
-|avg_log_write_percent|**十進位 (5,2)**|平均交易記錄寫入 （以 mbps 為單位） 的服務層限制百分比。|  
-|avg_memory_usage_percent|**十進位 (5,2)**|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用於緩衝集區分頁和儲存體的記憶體內部 OLTP 物件的記憶體。|  
-|xtp_storage_percent|**十進位 (5,2)**|儲存體使用量記憶體內部 OLTP 的服務層限制的百分比表示 （在報告的時間間隔結束）。 這包括用來儲存下列記憶體內部 OLTP 物件的記憶體： 記憶體最佳化資料表、 索引和資料表變數。 它也包含用於處理的 ALTER TABLE 作業的記憶體。<br /><br /> 如果未使用記憶體內部 OLTP 資料庫中，會傳回 0。|  
-|max_worker_percent|**十進位 (5,2)**|最大並行背景工作角色 （要求） 的資料庫的服務層限制的百分比表示。|  
-|max_session_percent|**十進位 (5,2)**|最大並行工作階段的資料庫服務層限制百分比表示。|  
-|dtu_limit|**int**|目前最大資料庫 DTU 此資料庫設定在此間隔期間。 使用以 vCore 為基礎的模型資料庫，此資料行是 NULL。|
-|cpu_limit|**十進位 (5,2)**|在此間隔期間此資料庫的 Vcore 的數目。 使用以 DTU 為基礎的模型資料庫，此資料行是 NULL。|
-|avg_instance_cpu_percent|**十進位 (5,2)**|平均資料庫 CPU 使用量百分比。|
-|avg_instance_memory_percent|**十進位 (5,2)**|資料庫平均記憶體使用量百分比。|
-|avg_login_rate_percent|**十進位 (5,2)**|僅供參考之用。 不支援。 我們無法保證未來的相容性。|
-|replica_role|**int**|表示目前的複本角色為主要的 0、 1 與次要資料庫，以及 2 為轉寄站 （異地次要資料庫的主要）。 您會看到 「 1 」 時連接到所有的可讀取次要複本的唯讀意圖。 如果未指定唯讀意圖，以連接到異地次要資料庫，您應該會看到"2"（連線到轉寄站）。|
+|avg_cpu_percent|**decimal (5, 2)**|平均運算使用率，以服務層限制的百分比計算。|  
+|avg_data_io_percent|**decimal (5, 2)**|平均資料 i/o 使用率, 以服務層限制的百分比表示。|  
+|avg_log_write_percent|**decimal (5, 2)**|平均交易記錄寫入 (以 MBps 為單位), 以服務層限制的百分比表示。|  
+|avg_memory_usage_percent|**decimal (5, 2)**|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用於緩衝集區頁面的記憶體, 以及記憶體內部 OLTP 物件的儲存空間。|  
+|xtp_storage_percent|**decimal (5, 2)**|記憶體內部 OLTP 的儲存使用量, 以服務層限制的百分比表示 (在報告間隔結束時)。 這包括用於儲存下列記憶體內部 OLTP 物件的記憶體: 記憶體優化資料表、索引和資料表變數。 它也包含用來處理 ALTER TABLE 作業的記憶體。<br /><br /> 如果資料庫中未使用記憶體內部 OLTP, 則傳回0。|  
+|max_worker_percent|**decimal (5, 2)**|最大並行背景工作角色 (要求), 以資料庫服務層級限制的百分比表示。|  
+|max_session_percent|**decimal (5, 2)**|並行會話的最大值, 以資料庫服務層的限制百分比表示。|  
+|dtu_limit|**int**|此時間間隔期間, 此資料庫目前的最大資料庫 DTU 設定。 對於使用以 vCore 為基礎之模型的資料庫, 這個資料行是 Null。|
+|cpu_limit|**decimal (5, 2)**|此間隔期間此資料庫的虛擬核心數目。 對於使用以 DTU 為基礎之模型的資料庫, 這個資料行是 Null。|
+|avg_instance_cpu_percent|**decimal (5, 2)**|平均資料庫 CPU 使用量, 以 SQL DB 進程的百分比表示。|
+|avg_instance_memory_percent|**decimal (5, 2)**|以 SQL DB 進程的百分比表示的平均資料庫記憶體使用量。|
+|avg_login_rate_percent|**decimal (5, 2)**|僅供參考之用。 不支援。 我們無法保證未來的相容性。|
+|replica_role|**int**|代表目前複本的角色, 其中0為主要, 1 做為次要, 而2作為轉寄站 (異地次要資料庫的主要)。 當您使用 ReadOnly 意圖連接到所有可讀取的次要複本時, 您會看到 "1"。 如果連接到異地次要資料庫但未指定 ReadOnly 意圖, 您應該會看到 "2" (連接到轉寄站)。|
 |||
   
 > [!TIP]  
->  如需這些限制和服務層的詳細內容，請參閱主題[服務層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)並[服務層功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)。  
+>  如需有關這些限制和服務層級的詳細資訊, 請參閱[服務層級](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)和[服務層功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)主題。  
   
 ## <a name="permissions"></a>Permissions  
  此檢視需要 VIEW DATABASE STATE 權限。  
   
 ## <a name="remarks"></a>備註  
- 所傳回的資料**sys.dm_db_resource_stats**會以您所執行的服務層/效能層級的限制所允許的最大的百分比表示。
+ **_Db_resource_stats**所傳回的資料會以您所執行的服務層/效能層級的最大允許限制百分比表示。
  
  如果資料庫在過去的 60 分鐘內已容錯移轉到另一部伺服器，檢視將只會傳回該資料庫在容錯移轉之後做為主要資料庫時的資料。  
   
- 這項資料較不精細的檢視，使用**sys.resource_stats**目錄檢視中的**主要**資料庫。 此檢視會每隔 5 秒擷取一次資料，並會保留 14 天內的歷程記錄資料。  如需詳細資訊，請參閱 < [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
+ 如需這項資料的更細微觀點, 請使用**master**資料庫中的**resource_stats**目錄 view。 此檢視會每隔 5 秒擷取一次資料，並會保留 14 天內的歷程記錄資料。  如需詳細資訊, 請參閱[resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
   
- 當資料庫的彈性集區成員時，資源統計資料顯示為百分比值，會以資料庫在彈性集區設定中所設定的最大限制的百分比表示。  
+ 當資料庫是彈性集區的成員時, 以百分比值呈現的資源統計資料會以彈性集區設定中所設之資料庫的最大限制百分比表示。  
   
 ## <a name="example"></a>範例  
   
@@ -101,8 +101,8 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [服務層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [服務層功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [服務層級](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
+ [服務層級功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

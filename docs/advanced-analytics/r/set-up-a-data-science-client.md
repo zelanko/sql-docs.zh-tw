@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 225fe78a84da986120ce23f2a1f16fae244e26e4
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0f8cc5aaa10beeb5b91b27111e15013cc705ed20
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345063"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469952"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上設定適用于 R 開發的資料科學用戶端
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 當您在[SQL Server 2016 R services](../install/sql-r-services-windows-install.md)或[SQL Server 2017 Machine Learning Services (資料庫內)](../install/sql-machine-learning-services-windows-install.md)安裝中包含 r 語言選項時, 會在 SQL Server 2016 或更新版本中提供 r 整合。 
 
@@ -224,7 +224,7 @@ Microsoft 的 R 套件適用于多項產品和服務。 在本機工作站上, �
 
 這個範例會使用已安裝資料科學工作負載的 Visual Studio 2017 社區版。
 
-1. 從 [  檔案] 功能表中, 選取 [**新增**], 然後選取 [**專案**]。
+1. 從 [ 檔案] 功能表中, 選取 [**新增**], 然後選取 [**專案**]。
 
 2. 左窗格包含預先安裝的範本清單。 按一下 [ **r**], 然後選取 [ **r 專案**]。 在 [**名稱**] 方塊中`dbtest` , 輸入, 然後按一下 **[確定]** 。 
 

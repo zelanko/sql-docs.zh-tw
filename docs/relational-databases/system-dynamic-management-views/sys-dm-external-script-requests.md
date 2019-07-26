@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7cc6b6b42f7e9fa743724a414aa5b53435d7b0ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33a7b546b9479add67a05f9bb7537f953fa2e9f9
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086828"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476280"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "68086828"
   
 > [!NOTE] 
 >  
-> 您已安裝並啟用支援外部指令碼執行的功能時，才可以使用此動態管理檢視 (DMV)。 如需詳細資訊，請參閱 < [SQL Server 2016 中的 R Services](../../advanced-analytics/r/sql-server-r-services.md)並[Machine Learning 服務 （R、 Python） 在 SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md)。  
+> 只有當您已安裝並啟用支援外部腳本執行的功能時, 才可以使用此動態管理檢視 (DMV)。 如需詳細資訊, 請參閱[SQL Server 2017 和更新版本中 SQL Server 2016 和 Machine Learning 服務 (R、Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md)[中的 R Services](../../advanced-analytics/r/sql-server-r-services.md) 。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**唯一識別碼**|傳送外部指令碼要求的處理序識別碼。 這會對應至處理序 ID 所接收 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**唯一識別碼**|傳送外部指令碼要求的處理序識別碼。 這會對應至所接收的處理序識別碼。[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|代表支援的指令碼語言的關鍵字。 |  
 |degree_of_parallelism|**int**|指出已建立之平行處理序數目的數字。 這個值可能與已要求的平行處理序數目不同。|  
 |external_user_name|**nvarchar**|用來執行指令碼的 Windows 背景工作帳戶。|  
@@ -52,7 +52,7 @@ ms.locfileid: "68086828"
 
 此檢視可使用指令碼語言識別碼進行篩選。
 
-此檢視也會傳回正在執行指令碼的背景工作帳戶。 外部指令碼所使用的背景工作帳戶的相關資訊，請參閱處理 (SQLRUserGroup) 一節中的所使用的身分識別[SQL Server Machine Learning 服務的擴充性架構的安全性概觀](../../advanced-analytics/concepts/security.md#sqlrusergroup)。
+此檢視也會傳回正在執行指令碼的背景工作帳戶。 如需外部腳本所使用之背景工作帳戶的相關資訊, 請參閱 SQL Server Machine Learning 服務中擴充性[架構的安全性總覽](../../advanced-analytics/concepts/security.md#sqlrusergroup)一節中所使用的身分識別 (SQLRUserGroup) 一節。
 
 **external_script_request_id** 欄位中所傳回的 GUID 也代表暫存檔案儲存所在之安全目錄的檔案名稱。 每個背景工作帳戶 (例如 MSSQLSERVER01) 都代表單一 SQL 登入或 Windows 使用者，並且可能會用來執行多個指令碼要求。 根據預設，完成要求的指令碼之後，即會清除這些暫存檔案。
  

@@ -7,15 +7,15 @@ ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f681634b9f57a5fd459e3f6452c04aba024bd297
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 80af3f93eb84c7b78c5cb1e5395175501931e24c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345310"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470082"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>使用 T-sql (建立外部程式庫) 在 SQL Server 上安裝 R 套件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文說明如何在已啟用機器學習的 SQL Server 實例上安裝新的 R 封裝。 有多種方法可供選擇。 使用 T-sql 最適用于不熟悉 R 的伺服器管理員。
 

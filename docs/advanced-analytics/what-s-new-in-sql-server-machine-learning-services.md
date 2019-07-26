@@ -9,16 +9,16 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e3859cfb1ada6453a353509b68abe34e71d2840
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c466c7e039e515be4ef65b4f5680ece2e1d861a8
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345776"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468978"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的新功能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 機器學習功能會新增至每個版本中的 SQL Server, 因為我們會繼續擴充、擴充和加深資料平臺、先進分析和資料科學之間的整合。 
 
@@ -63,7 +63,7 @@ R 的新功能包括[**套件管理**](r/install-additional-r-packages-on-sql-se
 
 ### <a name="r-libraries"></a>R 程式庫
 
-| 套件 | 說明 |
+| 套件 | 描述 |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | 在此版本中, MicrosoftML 包含在預設的 R 安裝中, 可排除先前 SQL Server 2016 R 服務中所需的升級步驟。 MicrosoftML 提供最先進的機器學習演算法和資料轉換, 可以在遠端計算內容中進行調整或執行。 演算法包括可自訂的深度類神經網路、快速決策樹和決策樹系、線性回歸和羅吉斯回歸。  |
 
@@ -79,7 +79,7 @@ T-sql 和 Python 整合是透過[sp_execute_external_script](https://docs.micros
 
 ### <a name="python-libraries"></a>Python 程式庫
 
-| 套件 | 說明 |
+| 套件 | 描述 |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-等同于 RevoScaleR。 您可以建立線性和羅吉斯回歸、決策樹、推進式樹狀結構和隨機樹系的 Python 模型、所有可並行, 而且能夠在遠端計算內容中執行。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以在遠端 SQL Server 上執行 Python 程式碼, 以流覽資料或建立模型, 而不需要移動資料。 |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Python-等同于 MicrosoftML R 套件。 |

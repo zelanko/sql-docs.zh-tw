@@ -7,15 +7,15 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f1e07ffa4423ccfc2cc0082910a2ca8aff8fd087
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345914"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468674"
 ---
 # <a name="create-data-features-using-t-sql"></a>使用 T-sql 建立資料特徵
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 資料探索之後, 您已從資料收集了一些見解, 並準備好繼續進行*功能工程*。 從原始資料建立功能的這個程式, 可能是 advanced analytics 模型化的重要步驟。
 
@@ -33,8 +33,8 @@ ms.locfileid: "68345914"
 
 1.  在進行本逐步解說的準備工作時，已下載並向 _註冊函數_ fnCalculateDistance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請花幾分鐘的時間來審查程式碼。
   
-    在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]  、[函數]  和 [純量值函式]  。
-    以滑鼠右鍵按一下 [fnCalculateDistance]  ，然後選取 [修改]  ，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
+    在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]、[函數] 和 [純量值函式]。
+    以滑鼠右鍵按一下 [fnCalculateDistance]，然後選取 [修改]，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
   
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)

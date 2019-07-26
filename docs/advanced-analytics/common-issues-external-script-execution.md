@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3786ab3ee17bbbc0b54e439e3466236af098ffd3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345165"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470487"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>在 SQL Server 中啟動控制板服務和外部腳本的常見問題
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  SQL Server 信任的啟動控制板服務支援 R 和 Python 的外部腳本執行。 在 SQL Server 2016 R Services 上, SP1 提供服務。 SQL Server 2017 包含啟動列服務, 做為初始安裝的一部分。
 
@@ -54,7 +54,7 @@ ms.locfileid: "68345165"
 
 不過, 在強制執行更嚴格的安全性原則的組織中, 此群組所需的許可權可能已手動移除, 或原則可能會自動撤銷。 如果已移除許可權, 啟動列就無法再連接到 SQL Server, SQL Server 無法呼叫外部執行時間。
 
-若要修正此問題，請確定群組 **SQLRUserGroup** 擁有系統權限「允許本機登入」  。
+若要修正此問題，請確定群組 **SQLRUserGroup** 擁有系統權限「允許本機登入」。
 
 如需詳細資訊，請參閱[設定 Windows 服務帳戶與權限](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
 
@@ -122,7 +122,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 2. 以滑鼠右鍵按一下實例的 [SQL Server Launchpad], 然後選取 [**屬性**]。
 
-3. 選取 [**服務**] 索引標籤, 然後確認服務正在執行。 如果未執行, 請將 [**啟動模式]** 變更為 [**自動**],  然後選取 [套用]。
+3. 選取 [**服務**] 索引標籤, 然後確認服務正在執行。 如果未執行, 請將 [**啟動模式]** 變更為 [**自動**], 然後選取 [套用]。
 
 4. 重新開機服務通常會修正問題, 讓機器學習服務腳本可以執行。 如果重新開機無法修正問題, 請注意 [**二進位路徑**] 屬性中的路徑和引數, 然後執行下列動作:
 

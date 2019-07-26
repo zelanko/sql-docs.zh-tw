@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dafbe12c6304866dc36dde6fffec44da441e582f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e5cd2f55559671b1e3f3d2004c4865b8bac8aa42
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344829"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469882"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函數在 SQL Server 上尋找或安裝 R 套件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 RevoScaleR 9.0.1 和更新版本包含 R 套件管理 SQL Server 計算內容的函式。 遠端、非系統管理員可以使用這些函式在 SQL Server 上安裝封裝, 而不需要直接存取伺服器。
 
@@ -24,7 +24,7 @@ SQL Server 2017 Machine Learning 服務已包含較新版本的 RevoScaleR。 SQ
 
 下表描述用於 R 封裝安裝和管理的功能。
 
-| 功能 | 描述 |
+| 函數 | 描述 |
 |----------|-------------|
 | [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | 判斷遠端 SQL Server 上實例程式庫的路徑。 |
 | [rxFindPackage (英文)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 取得遠端 SQL Server 上一或多個封裝的路徑。 |
@@ -33,7 +33,7 @@ SQL Server 2017 Machine Learning 服務已包含較新版本的 RevoScaleR。 SQ
 | [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 在檔案系統與資料庫之間, 針對指定的計算內容複寫有關封裝程式庫的資訊。 |
 | [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 從指定的計算內容中移除封裝。 它也會計算相依性, 並確保移除 SQL Server 上其他封裝不再使用的封裝, 以釋放資源。 |
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 + [在 SQL Server 上啟用遠端 R 套件管理](r-package-how-to-enable-or-disable.md)
 

@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345685"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469963"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>在 SQL Server 機器學習服務中使用 sp_rxPredict 的即時評分
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 即時計分會在 SQL Server 中使用[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)系統預存程式和 CLR 擴充功能, 以取得預測工作負載的高效能預測或分數。 即時計分是與語言無關, 而且會在 R 或 Python 執行時間沒有相依性的情況下執行。 假設使用 Microsoft 函式建立並定型的模型, 然後在 SQL Server 中序列化為二進位格式, 您可以使用即時計分, 針對沒有 R 或 Python 附加元件 SQL Server 實例上的新資料輸入產生預測結果客戶.
 
@@ -32,7 +32,7 @@ ms.locfileid: "68345685"
 3. 您會提供新的輸入資料做為模型的輸入, 以表格式或單一資料列進行評分。
 4. 若要產生分數, 請呼叫[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)預存程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 + [啟用 SQL SERVER CLR 整合](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)。
 

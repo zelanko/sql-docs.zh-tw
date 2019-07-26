@@ -7,15 +7,15 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7570c6769a780c5a6d98bdfc762092524bf5000c
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 8ba0c560f49dad1a075130a564858ffa94afa7f0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345925"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469164"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 課：使用 R 和 T-sql 建立資料特徵
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文是有關如何在 SQL Server 中使用 R 的 SQL 開發人員教學課程的一部分。
 
@@ -23,7 +23,7 @@ ms.locfileid: "68345925"
 
 ## <a name="about-feature-engineering"></a>關於功能工程
 
-瀏覽資料幾回合之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」  。 從原始資料建立有意義的功能的這個程式, 是建立分析模型的重要步驟。
+瀏覽資料幾回合之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」。 從原始資料建立有意義的功能的這個程式, 是建立分析模型的重要步驟。
 
 在此資料集中, 距離值是根據報告的計量距離, 而不一定代表地理距離或旅遊的實際距離。 因此，您必須使用來源紐約市計程車資料集中可用的座標，來計算上車和下車點之間的直線距離。 您可以使用自訂 [函數中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 公式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來執行這項運算。
 
@@ -39,11 +39,11 @@ ms.locfileid: "68345925"
 
 ## <a name="calculate-trip-distance-using-fncalculatedistance"></a>使用 fnCalculateDistance 計算行程距離
 
-在本  教學課程的準備過程中, 應該[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已下載並註冊函數 fnCalculateDistance。 請花幾分鐘的時間來審查程式碼。
+在本教學課程的準備過程中, 應該[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已下載並註冊函數 fnCalculateDistance。 請花幾分鐘的時間來審查程式碼。
   
-1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]  、[函數]  和 [純量值函式]  。   
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]、[函數] 和 [純量值函式]。   
 
-2. 以滑鼠右鍵按一下 [fnCalculateDistance]  ，然後選取 [修改]  ，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
+2. 以滑鼠右鍵按一下 [fnCalculateDistance]，然後選取 [修改]，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
   
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  

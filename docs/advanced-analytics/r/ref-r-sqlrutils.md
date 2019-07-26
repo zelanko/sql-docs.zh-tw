@@ -7,15 +7,15 @@ ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 361093be372e77a869996e6ffb67a6bd6e701c44
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4218a1b30aedacdab73d08c7b76e3e19d17511c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345092"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469951"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (SQL Server 中的 R 程式庫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **sqlrutils** 套件提供一種機制，讓 R 使用者將其 R 指令碼放入 T-SQL 預存程序、註冊具有資料庫的這個預存程序，以及從 R 開發環境執行預存程序。 
 
@@ -40,7 +40,7 @@ ms.locfileid: "68345092"
 
 下一節概述您可以從**sqlrutils**套件呼叫的函式, 以開發包含內嵌 R 程式碼的預存程式。 如需每個方法或函式之參數的詳細資訊, 請參閱套件的 R 說明:`help(package="sqlrutils")`
 
-|功能 | 描述 |
+|函數 | 描述 |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 執行 SQL 預存程式。|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 取得預存程式的輸入參數清單。| 
@@ -62,7 +62,7 @@ ms.locfileid: "68345092"
 + 產生並註冊預存程式    
 + 執行預存程序  
 
-在 R 會話中, 輸入  `library(sqlrutils)`以從命令列載入 sqlrutils。
+在 R 會話中, 輸入 `library(sqlrutils)`以從命令列載入 sqlrutils。
 
 > [!Note]
 > 如果您將計算內容變更為 SQL Server 並執行該計算內容中的程式碼, 您可以在沒有 SQL Server 的電腦上載入此程式庫 (例如, 在 R 用戶端實例上)。

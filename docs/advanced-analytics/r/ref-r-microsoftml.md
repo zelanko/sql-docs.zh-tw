@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2cf89b26ffad2902223a84e19ccaf425aa6f8b2d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 6808fa01bd4b62a67b220cec86d025820958298d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344895"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470015"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server 中的 R 程式庫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **MicrosoftML**是 Microsoft 提供高效能機器學習服務演算法的 R 函式程式庫。 其中包含用於定型和轉換的函式、評分、文字和影像分析, 以及從現有資料衍生值的功能解壓縮。
 
@@ -68,7 +68,7 @@ ms.locfileid: "68344895"
 
 ## <a name="2-transformation-functions"></a>2-轉換函式
 
-| 函數名稱 | 說明 |
+| 函數名稱 | 描述 |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | 轉換, 以從多個資料行建立單一向量值資料行。  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | 使用具有字典的類別轉換來建立指標向量。  |
@@ -86,7 +86,7 @@ ms.locfileid: "68344895"
 
 ## <a name="3-scoring-and-training-functions"></a>3-評分和定型函數
 
-| 函數名稱 | 說明 |
+| 函數名稱 | 描述 |
 |---------------|-------------|
 |[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | 從 SQL Server、使用預存程式, 或從 R 程式碼執行計分程式庫, 以提供更快的預測效能。|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | 將輸入資料集的資料轉換成輸出資料集。|

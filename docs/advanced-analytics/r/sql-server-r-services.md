@@ -8,15 +8,15 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e849140125ba39c7c1d8601c5ef32880a9d633ac
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 32487d8c1a6c87c9ad916e4cfd517f9ba4cba6e2
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344842"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469911"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R Services 是 SQL Server 2016 資料庫引擎實例的附加元件, 可用來在 SQL Server 上執行 R 程式碼和函式。 程式碼會在擴充性架構中執行, 並與核心引擎進程隔離, 但可完全提供給關聯式資料做為預存程式、包含 R 語句的 T-sql 腳本, 或當做包含 T-sql 的 R 程式碼。 
 

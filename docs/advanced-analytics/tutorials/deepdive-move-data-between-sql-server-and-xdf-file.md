@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0e4c0fbdd9f625886a7d38fc80895e9f4407ce88
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 4109399386f119123591bb917f81290eebe7476e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344745"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469714"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>在 SQL Server 與 XDF 檔案之間移動資料 (SQL Server 和 RevoScaleR 教學課程)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
@@ -82,7 +82,7 @@ ms.locfileid: "68344745"
         overwrite = TRUE)
     ```
   
-    RxImport `localDs`函數所傳回的  物件是輕量的**RxXdfData**資料來源物件, 代表儲存在本機`ccFraud.xdf`磁片上的資料檔案。
+    RxImport `localDs`函數所傳回的物件是輕量的**RxXdfData**資料來源物件, 代表儲存在本機`ccFraud.xdf`磁片上的資料檔案。
   
 7. 對 XDF 檔案呼叫 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) ，確認資料結構描述相同。
   

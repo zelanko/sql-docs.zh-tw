@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7d62004745f8b77bbc26b4d924e2e3948cf2f9e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e799b1ccba38d7716f2987112573a1d2d07203cd
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345840"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468462"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server 建立資料特徵 (逐步解說)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 資料工程是機器學習服務的重要部分。 資料通常需要轉換, 您才能將它用於預測模型。 如果資料沒有您所需的特徵，您就能從現有的值加以建立。
 
@@ -54,7 +54,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)可以接受由有效 SELECT 查詢所組成的查詢 (當做_sqlQuery_參數的引數提供), 或是當做 table 參數提供之資料表物件的名稱。 
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)可以接受由有效 SELECT 查詢所組成的查詢 (當做_sqlQuery_參數的引數提供), 或是當做 table 參數提供之資料表物件的名稱。
     
     - 如果您想要從資料表取樣資料, 則必須使用_sqlQuery_參數、使用 t-sql TABLESAMPLE 子句定義取樣參數, 然後將_rowBuffering_引數設定為 FALSE。
 

@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 547a567b00474f0c1538d907d70d8a808bebf851
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: be55e779f335277a1c0f03fe871b8dcb952e088f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344938"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470408"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning 服務中的已知問題
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文說明在使用 R 和 Python [SQL Server 2016 R services](install/sql-r-services-windows-install.md)和[SQL Server 2017 Machine Learning 服務](install/sql-machine-learning-services-windows-install.md)中提供的機器學習服務元件已知問題或限制。
 
@@ -135,7 +135,7 @@ SQL Server 2016 要求用戶端上的 R 程式庫必須完全符合伺服器上�
 + 您已使用的安裝程式[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)], 在用戶端電腦上安裝 R Server (獨立式)。
 + 您已使用[個別的 Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)來安裝 Microsoft R Server。
 
-為確保伺服器和用戶端使用相同的版本, 您可能需要使用支援  Microsoft R server 9.0 和更新版本的系結, 以升級 SQL Server 2016 實例中的 R 元件。 若要判斷您的 R Services 版本是否有支援升級, 請參閱[使用 SqlBindR 升級 R services 的實例](install/upgrade-r-and-python.md)。
+為確保伺服器和用戶端使用相同的版本, 您可能需要使用支援Microsoft R server 9.0 和更新版本的系結, 以升級 SQL Server 2016 實例中的 R 元件。 若要判斷您的 R Services 版本是否有支援升級, 請參閱[使用 SqlBindR 升級 R services 的實例](install/upgrade-r-and-python.md)。
 
 **適用於：** 使用 R Server 9.0.0 版或更早版本的 SQL Server 2016 R Services
 
@@ -349,7 +349,7 @@ data <- RxSqlServerData(
 
 ### <a name="15-variable-scoping-error-when-you-use-the-transformfunc-parameter"></a>15.當您使用 transformFunc 參數時, 發生變數範圍錯誤
 
-若要在建立模型時轉換資料, 您可以在  函式 (例如`rxLinmod`或`rxLogit`) 中傳遞 transformFunc 引數。 不過, 即使在本機計算內容中呼叫正常運作, 嵌套函式呼叫也會導致 SQL Server 計算內容中的範圍錯誤。
+若要在建立模型時轉換資料, 您可以在函式 (例如`rxLinmod`或`rxLogit`) 中傳遞 transformFunc 引數。 不過, 即使在本機計算內容中呼叫正常運作, 嵌套函式呼叫也會導致 SQL Server 計算內容中的範圍錯誤。
 
 > *分析的範例資料集沒有任何變數*
 
