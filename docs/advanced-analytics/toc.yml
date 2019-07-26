@@ -1,5 +1,5 @@
-- name: SQL Server 機器學習服務
-  href: ../advanced-analytics/sql-server-machine-learning-services.md
+- name: SQL Server 機器學習服務文件
+  href: ../advanced-analytics/index.yml
 - name: 歡迎使用 SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 概觀
