@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22414058b0763f32c2b991487e006b8de8e50611
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982797"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- **true**如果只會傳回唯一值的索引。 **false**如果傳回的所有索引。  
+ 如果只傳回唯一值的索引,**則為 true** 。 如果傳回所有索引, 則**為 false** 。  
   
  *approximate*  
   
- **true**如果結果會反映近似或過期的值。 **false**如果結果非常精確。  
+ 如果結果反映大約或過期的值,**則為 true** 。 如果結果正確, 則**為 false** 。  
   
 ## <a name="return-value"></a>傳回值  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
@@ -66,12 +65,12 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getIndexInfo 方法是由 java.sql.DatabaseMetaData 介面中 getIndexInfo 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getIndexInfo 方法是由 java.sql.DatabaseMetaData 介面中的 getIndexInfo 方法指定。  
   
  透過 getIndexInfo 方法所傳回的結果將包含下列資訊：  
   
-|[屬性]|類型|Description|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|指定之資料表所在的資料庫名稱。|  
 |TABLE_SCHEM|**String**|資料表的結構描述。|  

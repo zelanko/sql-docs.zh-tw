@@ -1,5 +1,5 @@
 ---
-title: findColumn 方法 (SQLServerResultSet) |Microsoft Docs
+title: findColumn 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4e3499748bc8c5e1b4a0251ef089bb498ba6aece
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 24aed500f5b345e2ba3762bdd7a888fc5f8f31ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954578"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>findColumn 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,8 +45,8 @@ public int findColumn(java.lang.String columnName)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 findColumn 方法是由 java.sql.ResultSet 介面中的 findColumn 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 findColumn 方法是由 sql-dmo 介面中的 findColumn 方法指定。  
   
  如果有多個資料行同名，findColumn 方法會傳回第一個區分大小寫的相符項目。 如果沒有任何區分大小寫的相符項目，這個方法會傳回第一個不區分大小寫的相符項目。  
   

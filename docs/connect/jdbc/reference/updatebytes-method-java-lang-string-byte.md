@@ -1,5 +1,5 @@
 ---
-title: updateBytes 方法 （java.lang.String，byte） |Microsoft Docs
+title: updateBytes 方法 (java. lang.ini, byte) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 80fca41da217b3f13d7aadc688f96c7ca6ffa360
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 19ebdfb5b13cd528e5690fe2eeae9bec35e2134d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996899"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>updateBytes 方法 (java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateBytes(java.lang.String columnName,
   
  *x*  
   
- 陣列**位元組**值。  
+ **位元組**值的陣列。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- UpdateBytes 方法 java.sql.ResultSet 介面中所指定這個 updateBytes 方法。  
+## <a name="remarks"></a>備註  
+ 這個 updateBytes 方法是由 java.sql.ResultSet 介面中的 updateBytes 方法指定。  
   
  在舊版的 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 中，您可以使用 SQLServerResultSet.updateBytes 來轉換位元組陣列與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型 **date**、**time**、**datetime2** 或 **datetimeoffset** 之間的值。 現在，搭配這些資料類型使用這個方法將會引發例外狀況，指出不支援轉換。  
   

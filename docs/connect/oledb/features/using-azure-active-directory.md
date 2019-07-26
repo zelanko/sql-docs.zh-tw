@@ -1,5 +1,5 @@
 ---
-title: 使用 Azure Active Directory |適用於 SQL Server 的 Microsoft Docs
+title: 使用 Azure Active Directory |SQL Server 的 Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.prod: sql
@@ -10,11 +10,11 @@ ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: 44f92e782a497005ea47847301279e4341722d36
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744799"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68213559"
 ---
 # <a name="using-azure-active-directory"></a>使用 Azure Active Directory
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -23,79 +23,79 @@ ms.locfileid: "56744799"
 
 ## <a name="purpose"></a>目的
 
-從 18.2.1 版開始，Microsoft OLE DB Driver for SQL Server 可讓 OLE DB 應用程式連接到 Azure SQL Database 的執行個體使用同盟身分識別。 新的驗證方法包括：
+從版本18.2.1 版開始, 適用于 SQL Server 的 Microsoft OLE DB 驅動程式可讓 OLE DB 應用程式使用同盟身分識別連接到 Azure SQL Database 的實例。 新的驗證方法包括:
 - Azure Active Directory 登入識別碼和密碼
 - Azure Active Directory 存取權杖
 - Azure Active Directory 整合式驗證
 - SQL 登入識別碼和密碼
 
 > [!NOTE]  
-> 使用下列的 Azure Active Directory 選項搭配時，OLE DB 驅動程式，請確認[適用於 SQL Server 的 Active Directory Authentication Library](https://go.microsoft.com/fwlink/?LinkID=513072)已安裝：
+> 使用下列 Azure Active Directory 選項搭配 OLE DB 驅動程式時, 請確定已安裝[SQL Server 的 Active Directory 驗證程式庫](https://go.microsoft.com/fwlink/?LinkID=513072):
 > - Azure Active Directory 登入識別碼和密碼
 > - Azure Active Directory 整合式驗證
 >
-> ADAL 不需要其他驗證方法或 OLE DB 作業。
+> 其他驗證方法或 OLE DB 作業不需要 ADAL。
 
 > [!NOTE]
-> 使用下列驗證模式與`DataTypeCompatibility`（或其對應的屬性） 設定為`80`是**不**支援：
-> - 使用登入識別碼和密碼的 azure Active Directory 驗證
-> - 使用存取權杖的 azure Active Directory 驗證
+> `DataTypeCompatibility` **不**支援使用將 (或其對應的屬性) 設定為`80`的下列驗證模式:
+> - 使用登入識別碼和密碼 Azure Active Directory 驗證
+> - 使用存取權杖 Azure Active Directory 驗證
 > - Azure Active Directory 整合式驗證
 
 ## <a name="connection-string-keywords-and-properties"></a>連接字串關鍵字和屬性
-已引進下列連接字串關鍵字來支援 Azure Active Directory 驗證：
+已引進下列連接字串關鍵字來支援 Azure Active Directory 驗證:
 
-|連接字串關鍵字|連線屬性|描述|
+|連接字串關鍵字|連線屬性|Description|
 |---               |---                |---        |
-|存取權杖|SSPROP_AUTH_ACCESS_TOKEN|指定存取權杖來向 Azure Active Directory 進行驗證。 |
+|存取權杖|SSPROP_AUTH_ACCESS_TOKEN|指定要驗證 Azure Active Directory 的存取權杖。 |
 |驗證|SSPROP_AUTH_MODE|指定要使用的驗證方法。|
 
-如需新的關鍵字/屬性的詳細資訊，請參閱下列頁面：
+如需新關鍵字/屬性的詳細資訊, 請參閱下列頁面:
 - [利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [初始化和授權屬性](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
 ## <a name="encryption-and-certificate-validation"></a>加密和憑證驗證
-本章節討論中加密和憑證驗證行為的變更。 這些變更將會**只**生效時使用新的驗證或存取權杖連接字串關鍵字 （或其對應的屬性）。
+本節討論加密和憑證驗證行為的變更。 這些變更只有在使用新的驗證或存取權杖連接字串關鍵字 (或其對應的屬性) 時**才**有效。
 
 ### <a name="encryption"></a>加密
-為了提高安全性，使用新連接的屬性/關鍵字時，驅動程式會覆寫預設的加密值設定為`yes`。 覆寫會發生在資料來源物件初始化階段。 加密透過任何方式設定初始化之前，如果的值是遵守，且不會被覆寫。
+若要改善安全性, 當使用新的連線屬性/關鍵字時, 驅動程式會將預設的加密值設定為`yes`來覆寫它。 覆寫會發生在資料來源物件初始化時間。 如果在以任何方式初始化之前設定加密, 則會遵守且不會覆寫值。
 
 > [!NOTE]   
-> 在 ADO 應用程式和應用程式，取得`IDBInitialize`透過介面`IDataInitialize::GetDataSource`，明確實作介面的核心元件的預設值來設定加密`no`。 如此一來，這項設定及加密值會採用新的驗證屬性/關鍵字**不是**覆寫。 因此，很**建議**明確將這些應用程式設定`Use Encryption for Data=true`覆寫預設值。
+> 在 ADO 應用程式中, 以及在透過`IDBInitialize` `IDataInitialize::GetDataSource`取得介面的應用程式中, 執行介面的核心元件會將加密明確設定`no`為的預設值。 因此, 新的驗證屬性/關鍵字會遵守此設定, 而且**不**會覆寫加密值。 因此,**建議您**明確地將這些應用程式`Use Encryption for Data=true`設定為覆寫預設值。
 
 ### <a name="certificate-validation"></a>憑證驗證
-為了提高安全性，採用新的連接屬性/關鍵字`TrustServerCertificate`設定 （和其對應的連接字串關鍵字/屬性）**獨立用戶端加密設定**。 如此一來，就是預設驗證伺服器憑證。
+為了提升安全性, 新的連接屬性/關鍵字會遵循`TrustServerCertificate` **用戶端加密設定**以外的設定 (及其對應的連接字串關鍵字/屬性)。 因此, 預設會驗證伺服器憑證。
 
 > [!NOTE]   
-> 也可以透過控制憑證驗證`Value`欄位`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2`登錄項目。 有效值為 `0` 或 `1`。 OLE DB 驅動程式會選擇登錄之間的連線屬性/關鍵字設定最安全的選項。 也就是驅動程式會驗證伺服器憑證，只要至少一個登錄/連線設定可讓伺服器憑證驗證。
+> 憑證驗證也可以透過`Value`登錄專案的欄位`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2`來控制。 有效值為 `0` 或 `1`。 OLE DB 驅動程式會在登錄和連接屬性/關鍵字設定之間選擇最安全的選項。 也就是說, 只要至少其中一個登錄/連線設定啟用伺服器憑證驗證, 驅動程式就會驗證伺服器憑證。
 
-## <a name="gui-additions"></a>GUI 新增項目
-驅動程式的圖形化使用者介面已經過增強，以允許 Azure Active Directory 驗證。 如需詳細資訊，請參閱：
+## <a name="gui-additions"></a>新增 GUI
+驅動程式圖形化使用者介面已經過增強, 以允許 Azure Active Directory 驗證。 如需詳細資訊，請參閱：
 - [SQL Server 登入對話方塊](../help-topics/sql-server-login-dialog.md)
 - [通用資料連結 (UDL) 設定](../help-topics/data-link-pages.md)
 
 ## <a name="example-connection-strings"></a>範例連接字串
-此區段會顯示範例的新的和現有的連接字串關鍵字搭配`IDataInitialize::GetDataSource`和`DBPROP_INIT_PROVIDERSTRING`屬性。
+本節顯示新的和現有連接字串關鍵字的範例, 以與`IDataInitialize::GetDataSource`和`DBPROP_INIT_PROVIDERSTRING`屬性搭配使用。
 
 ### <a name="sql-authentication"></a>SQL 驗證
 - 使用 `IDataInitialize::GetDataSource`：
     - 新增：
-        > 提供者 = MSOLEDBSQL; 資料來源 = [伺服器]; Initial Catalog = [database];**Authentication = SqlPassword**;使用者識別碼 = [username];密碼 = [password];使用加密資料 = true
+        > Provider = 內含 MSOLEDBSQL.H; 資料來源 = [伺服器]; 初始目錄 = [資料庫];**Authentication = SqlPassword**;使用者識別碼 = [username];Password = [password];針對資料使用加密 = true
     - 已淘汰：
-        > 提供者 = MSOLEDBSQL; 資料來源 = [伺服器]; Initial Catalog = [database];使用者識別碼 = [username];密碼 = [password];使用加密資料 = true
+        > Provider = 內含 MSOLEDBSQL.H; 資料來源 = [伺服器]; 初始目錄 = [資料庫];使用者識別碼 = [username];Password = [password];針對資料使用加密 = true
 - 使用 `DBPROP_INIT_PROVIDERSTRING`：
     - 新增：
         > Server=[server];Database=[database];**Authentication=SqlPassword**;UID=[username];PWD=[password];Encrypt=yes
     - 已淘汰：
         > Server=[server];Database=[database];UID=[username];PWD=[password];Encrypt=yes
 
-### <a name="integrated-windows-authentication-using-security-support-provider-interface--sspi"></a>使用安全性支援提供者介面 (SSPI) 的整合式的 Windows 驗證
+### <a name="integrated-windows-authentication-using-security-support-provider-interface--sspi"></a>使用安全性支援提供者介面 (SSPI) 的整合式 Windows 驗證
 
 - 使用 `IDataInitialize::GetDataSource`：
     - 新增：
-        > 提供者 = MSOLEDBSQL; 資料來源 = [伺服器]; Initial Catalog = [database];**Authentication = ActiveDirectoryIntegrated**;使用加密資料 = true
+        > Provider = 內含 MSOLEDBSQL.H; 資料來源 = [伺服器]; 初始目錄 = [資料庫];**Authentication = ActiveDirectoryIntegrated**;針對資料使用加密 = true
     - 已淘汰：
-        > 提供者 = MSOLEDBSQL; 資料來源 = [伺服器]; Initial Catalog = [database];**整合式安全性 = SSPI**;使用加密資料 = true
+        > Provider = 內含 MSOLEDBSQL.H; 資料來源 = [伺服器]; 初始目錄 = [資料庫];**整合式安全性 = SSPI**;針對資料使用加密 = true
 - 使用 `DBPROP_INIT_PROVIDERSTRING`：
     - 新增：
         > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes
@@ -105,27 +105,27 @@ ms.locfileid: "56744799"
 ### <a name="aad-username-and-password-authentication-using-adal"></a>使用 ADAL 的 AAD 使用者名稱和密碼驗證
 
 - 使用 `IDataInitialize::GetDataSource`：
-    > 提供者 = MSOLEDBSQL; 資料來源 = [伺服器]; Initial Catalog = [database];**Authentication = ActiveDirectoryPassword**;使用者識別碼 = [username];密碼 = [password];使用加密資料 = true
+    > Provider = 內含 MSOLEDBSQL.H; 資料來源 = [伺服器]; 初始目錄 = [資料庫];**Authentication = ActiveDirectoryPassword**;使用者識別碼 = [username];Password = [password];針對資料使用加密 = true
 - 使用 `DBPROP_INIT_PROVIDERSTRING`：
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryPassword**;UID=[username];PWD=[password];Encrypt=yes
 
-### <a name="integrated-azure-active-directory-authentication-using-adal"></a>使用 ADAL 的整合式的 Azure Active Directory 驗證
+### <a name="integrated-azure-active-directory-authentication-using-adal"></a>使用 ADAL 的整合式 Azure Active Directory 驗證
 
 - 使用 `IDataInitialize::GetDataSource`：
-    > 提供者 = MSOLEDBSQL; 資料來源 = [伺服器]; Initial Catalog = [database];**Authentication = ActiveDirectoryIntegrated**;使用加密資料 = true
+    > Provider = 內含 MSOLEDBSQL.H; 資料來源 = [伺服器]; 初始目錄 = [資料庫];**Authentication = ActiveDirectoryIntegrated**;針對資料使用加密 = true
 - 使用 `DBPROP_INIT_PROVIDERSTRING`：
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes
 
-### <a name="azure-active-directory-authentication-using-an-access-token"></a>使用存取權杖的 azure Active Directory 驗證
+### <a name="azure-active-directory-authentication-using-an-access-token"></a>使用存取權杖 Azure Active Directory 驗證
 
 - 使用 `IDataInitialize::GetDataSource`：
-    > 提供者 = MSOLEDBSQL; 資料來源 = [伺服器]; Initial Catalog = [database];**存取權杖 = [存取權杖]**;使用加密資料 = true
+    > Provider = 內含 MSOLEDBSQL.H; 資料來源 = [伺服器]; 初始目錄 = [資料庫];**存取權杖 = [存取權杖]** ;針對資料使用加密 = true
 - 使用 `DBPROP_INIT_PROVIDERSTRING`：
-    > 提供的存取權杖，透過`DBPROP_INIT_PROVIDERSTRING`不支援
+    > 不支援透過`DBPROP_INIT_PROVIDERSTRING`提供存取權杖
 
 ## <a name="code-samples"></a>程式碼範例
 
-下列範例顯示，才能連接到 Azure Active Directory 與連接關鍵字的程式碼。 
+下列範例顯示使用連接關鍵字連接到 Azure Active Directory 所需的程式碼。 
 
 ### <a name="access-token"></a>存取權杖
 ```cpp
@@ -239,8 +239,8 @@ Cleanup:
 ```
 
 ## <a name="next-steps"></a>後續步驟
-- [授權存取 Azure Active Directory web 應用程式使用 OAuth 2.0 程式碼授與流程](https://go.microsoft.com/fwlink/?linkid=2072672)。
+- [使用 OAuth 2.0 程式碼授與流程, 授權存取 Azure Active Directory web 應用程式](https://go.microsoft.com/fwlink/?linkid=2072672)。
 
 - 了解 [Azure Active Directory 驗證](https://go.microsoft.com/fwlink/?linkid=2073783) (到 SQL Server)。
 
-- 設定使用的驅動程式連線[連接字串關鍵字](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)OLE DB 驅動程式支援。
+- 使用 OLE DB 驅動程式支援的[連接字串關鍵字](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)來設定驅動程式連接。

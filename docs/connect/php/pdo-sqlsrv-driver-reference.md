@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8edc7a19526a0a1e2f8d57e12de505be774c66de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8aa5f04ab9ae510ec0a7c3ead0c30600ebb9b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936186"
 ---
 # <a name="pdosqlsrv-driver-reference"></a>PDO_SQLSRV 驅動程式參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "66761853"
 
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

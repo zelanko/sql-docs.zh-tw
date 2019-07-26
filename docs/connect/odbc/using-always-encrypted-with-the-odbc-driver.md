@@ -7,14 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
+ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680085"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68231850"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,12 +57,12 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>擷取和修改加密資料行中的資料
 
-一旦您啟用 「 一律加密的連接上，您可以使用標準 ODBC Api。 ODBC Api 可以擷取或修改加密的資料庫資料行中的資料。 下列文件項目可協助進行這個：
+一旦您在連線上啟用 Always Encrypted 之後, 就可以使用標準 ODBC Api。 ODBC Api 可以抓取或修改加密資料庫資料行中的資料。 下列檔專案可能會有説明:
 
 - [ODBC 範例程式碼](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC 程式設計人員參考](../../odbc/reference/odbc-programmer-s-reference.md)
 
-您的應用程式必須擁有必要的資料庫權限，而且必須能夠存取資料行主要金鑰。 然後，此驅動程式會加密目標加密資料行的任何查詢參數。 驅動程式也會解密擷取自加密資料行的資料。 驅動程式會執行所有此加密和解密，而不需要任何協助從您的程式碼。 為您的程式，就如同未加密的資料行。
+您的應用程式必須具有必要的資料庫許可權, 而且必須能夠存取資料行主要金鑰。 然後, 驅動程式會將以加密資料行為目標的任何查詢參數加密。 驅動程式也會將從加密資料行抓取的資料解密。 驅動程式會執行所有的加密和解密, 而不會有原始程式碼的協助。 在您的程式中, 就像資料行未加密一樣。
 
 如未啟用 Always Encrypted，使用目標加密資料行參數的查詢就會失敗。 只要查詢沒有以加密資料行為目標的參數，就仍然可以從加密資料行擷取資料。 不過，驅動程式不會嘗試進行任何解密，而應用程式則會收到二進位加密資料 (以位元組陣列的形式)。
 
@@ -352,7 +351,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ODBC Driver for SQL Server 隨附下列內建的金鑰存放區提供者：
 
-| [屬性] | Description | 提供者 (中繼資料) 名稱 |可用性|
+| 名稱 | Description | 提供者 (中繼資料) 名稱 |可用性|
 |:---|:---|:---|:---|
 |Azure 金鑰保存庫 |將 CMK 儲存在 Azure Key Vault 中 | `AZURE_KEY_VAULT` |Windows、macOS、Linux|
 |Windows 憑證存放區|將 CMK 儲存在本機 Windows 金鑰存放區中| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -363,9 +362,10 @@ ODBC Driver for SQL Server 隨附下列內建的金鑰存放區提供者：
 
 ### <a name="using-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供者
 
-Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 Linux、macOS 及 Windows 上的 ODBC Driver for SQL Server 包含 Azure Key Vault 的內建資料行主要金鑰存放區提供者。 如需有關設定適用於 Always Encrypted 之 Azure Key Vault 的詳細資訊，請參閱 [Azure Key Vault - 逐步解說](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) \(英文\)、[金鑰保存庫使用者入門](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)及[在 Azure Key Vault 中建立資料行主要金鑰](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)。
+Azure Key Vault (AKV) 是存放和管理 Always Encrypted 資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 中時)。 Linux、macOS 及 Windows 上的 ODBC Driver for SQL Server 包含 Azure Key Vault 的內建資料行主要金鑰存放區提供者。 如需有關設定適用於 Always Encrypted 之 Azure Key Vault 的詳細資訊，請參閱 [Azure Key Vault - 逐步解說](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) \(英文\)、[金鑰保存庫使用者入門](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)及[在 Azure Key Vault 中建立資料行主要金鑰](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)。
 
 > [!NOTE]
+> ODBC 驅動程式不支援 AKV authentication 的 Active Directory 同盟服務。 如果您使用 Azure Active Directory authentication AKV, 而您的 Active Directory 設定包含同盟服務, 則驗證可能會失敗。
 > 在 Linux 和 macOS 上，針對驅動程式 17.2 版和更新版本，必須要有 `libcurl`，才能使用此提供者，但這不是明確相依性，因為驅動程式的其他作業並不需要它。 如果您遇到有關 `libcurl` 的錯誤，請確定它已安裝。
 
 驅動程式支援使用下列認證類型向 Azure Key Vault 進行驗證：
@@ -378,7 +378,7 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 
 |認證類型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|使用者名稱/密碼| `KeyVaultPassword`|使用者主體名稱|[密碼]|
+|使用者名稱/密碼| `KeyVaultPassword`|使用者主體名稱|密碼|
 |用戶端識別碼/祕密| `KeyVaultClientSecret`|用戶端識別碼|祕密|
 
 #### <a name="example-connection-strings"></a>範例連接字串
@@ -577,7 +577,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="connection-string-keywords"></a>連接字串關鍵字
 
-|[屬性]|Description|  
+|名稱|Description|  
 |----------|-----------------|  
 |`ColumnEncryption`|接受的值為 `Enabled`/`Disabled`。<br>`Enabled` -- 啟用連線的 Always Encrypted 功能。<br>`Disabled` -- 停用連線的 Always Encrypted 功能。 <br><br>預設值為 `Disabled`。|  
 |`KeyStoreAuthentication` | 有效的值：`KeyVaultPassword`、`KeyVaultClientSecret` |
@@ -587,7 +587,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="connection-attributes"></a>連接屬性
 
-|[屬性]|類型|Description|  
+|名稱|類型|Description|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|連線前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 停用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 啟用 Always Encrypted|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|連線後|[Set] 嘗試載入 CEKeystoreProvider<br>[Get] 傳回 CEKeystoreProvider 名稱|
@@ -597,7 +597,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="statement-attributes"></a>陳述式屬性
 
-|[屬性]|Description|  
+|名稱|Description|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- 針對陳述式停用 Always Encrypted <br>`SQL_CE_RESULTSETONLY` (1) -- 僅解密。 將結果集和傳回值解密，但不將參數解密 <br>`SQL_CE_ENABLED` (3) -- 同時針對參數和結果啟用並使用 Always Encrypted|
 

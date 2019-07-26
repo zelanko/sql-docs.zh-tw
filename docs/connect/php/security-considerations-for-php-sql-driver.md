@@ -1,5 +1,5 @@
 ---
-title: 安全性考量的 Microsoft Drivers for PHP for SQL Server |Microsoft Docs
+title: 適用于 PHP for SQL Server 的 Microsoft 驅動程式安全性考慮 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992895"
 ---
-# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>安全性考量的 Microsoft Drivers for PHP for SQL Server
+# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>適用于 PHP for SQL Server 的 Microsoft 驅動程式安全性考慮
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題說明在開發、部署和執行使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的應用程式時特有的安全性考量。 如需詳細的 SQL Server 安全性的相關資訊，請參閱[SQL Server 安全性概觀](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)。  
+本主題說明在開發、部署和執行使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的應用程式時特有的安全性考量。 如需 SQL Server 安全性的詳細資訊, 請參閱[SQL Server 安全性的總覽](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)。  
   
 ## <a name="connect-using-windows-authentication"></a>使用 Windows 驗證進行連接  
 可能的話，Windows 驗證應該用來連接 SQL Server，原因如下：  
@@ -54,5 +53,5 @@ ms.locfileid: "66797055"
 對於已部署的應用程式，請確實將記錄檔寫入至安全的位置，或是關閉記錄。 這有助於防止一般使用者存取已寫入至記錄檔的資訊。 如需詳細資訊，請參閱 [Logging Activity](../../connect/php/logging-activity.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c2d9835dd5731ca0464ad81d2384f63571838b2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 463106c14a63feddb68998affff8131933e81dfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954892"
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>executeBatch 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public int[] executeBatch()
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 executeBatch 方法是由 java.sql.Statement 介面中的 executeBatch 方法指定。  
     
  這個方法會覆寫 [SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)。  

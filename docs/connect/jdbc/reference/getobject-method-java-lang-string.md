@@ -1,5 +1,5 @@
 ---
-title: getObject 方法 (java.lang.String) |Microsoft Docs
+title: getObject 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56fc766c22751ea0a1465f9d1a447653b096b8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e06642390b060164d0e7fba3a8584200e5bc4dd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981128"
 ---
 # <a name="getobject-method-javalangstring"></a>getObject 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

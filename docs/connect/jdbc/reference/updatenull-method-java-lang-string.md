@@ -1,5 +1,5 @@
 ---
-title: updateNull 方法 (java.lang.String) |Microsoft Docs
+title: updateNull 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fb3e5cde-30e1-4c95-adf0-d5b6c1f0da95
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0546eb03b89512bbd7b52ef33ca44ac60fb426a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98ae88f84e31f6120767520046d442f998024732
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998508"
 ---
 # <a name="updatenull-method-javalangstring"></a>updateNull 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

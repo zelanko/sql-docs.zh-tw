@@ -1,5 +1,5 @@
 ---
-title: 安裝 Distributed 的 Replay |Microsoft Docs
+title: 安裝 Distributed Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 10762f3d10aa8e90d8bf2d86663a19a9222db42c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4aa2cc0859972f980e26d67e054dba3c955527c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950031"
 ---
 # <a name="install-distributed-replay"></a>安裝 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "52516012"
 -   安裝之後，必須先執行控制器服務 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller)，然後再啟動用戶端上的 Distributed Replay Client 服務。  
   
 > [!NOTE]  
->  如果要移除或變更 Distributed Replay 功能，請使用 Windows [控制台] 中的 [程式和功能] 視窗。 在 [解除安裝或變更程式] 視窗中，選取 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]，然後按一下 [移除] 開啟 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。 在 [選取功能] 頁面上，核取您想要移除的 Distributed Replay 功能。  
+>  如果要移除或變更 Distributed Replay 功能，請使用 Windows [控制台]  中的 [程式和功能]  視窗。 在 [解除安裝或變更程式]  視窗中，選取 [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]，然後按一下 [移除]  開啟 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。 在 [選取功能]  頁面上，核取您想要移除的 Distributed Replay 功能。  
   
  **必要條件：**  
   
@@ -78,23 +77,23 @@ ms.locfileid: "52516012"
   
 1.  如果要開始安裝 Distributed Replay 功能，請啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈。  
   
-2.  [安裝程式支援規則] 頁面會識別安裝 SQL Server 安裝程式支援檔案時可能會發生的問題。 您必須先更正任何安裝程式支援失敗，然後再繼續進行安裝。  
+2.  [安裝程式支援規則]  頁面會識別安裝 SQL Server 安裝程式支援檔案時可能會發生的問題。 您必須先更正任何安裝程式支援失敗，然後再繼續進行安裝。  
   
 3.  在 **[產品金鑰]** 頁面上，選取選項按鈕，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，或具有 PID 金鑰之產品的實際執行版本。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 4.  在 **[授權條款]** 頁面上，閱讀授權條款，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
-5.  在 [安裝程式支援檔案] 頁面上，按一下 [安裝]，即可安裝或更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的安裝程式支援檔案。  
+5.  在 [安裝程式支援檔案]  頁面上，按一下 [安裝]  ，即可安裝或更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的安裝程式支援檔案。  
   
-6.  在 [安裝程式角色] 頁面上，選取 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安裝]，然後按一下 [下一步] 繼續前往 [特徵選取] 頁面。  
+6.  在 [安裝程式角色]  頁面上，選取 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安裝]  ，然後按一下 [下一步]  繼續前往 [特徵選取]  頁面。  
   
-7.  在 [特徵選取] 頁面上，設定您想要安裝的功能。  
+7.  在 [特徵選取]  頁面上，設定您想要安裝的功能。  
   
-    -   若要安裝管理工具，請選取 [管理工具 - 基本]。  
+    -   若要安裝管理工具，請選取 [管理工具 - 基本]  。  
   
-    -   如果要安裝控制器服務，請選取 [Distributed Replay Controller]。  
+    -   如果要安裝控制器服務，請選取 [Distributed Replay Controller]  。  
   
-    -   如果要安裝用戶端服務，請選取 [Distributed Replay Client]。  
+    -   如果要安裝用戶端服務，請選取 [Distributed Replay Client]  。  
   
      **重要事項**：當您設定 Distributed Replay Controller 時，可以指定將用來執行 Distributed Replay Client 服務的一個或多個使用者帳戶。 下列是支援帳戶的清單：  
   
@@ -110,23 +109,23 @@ ms.locfileid: "52516012"
   
      不接受群組帳戶 (本機或網域) 和其他內建帳戶 (例如 Everyone)。  
   
-8.  (選擇性) 按一下省略符號 (…) 按鈕，即可變更共用功能目錄路徑。  
+8.  (選擇性) 按一下省略符號 (...) 按鈕，即可變更共用功能目錄路徑。  
   
     1.  在 32 位元電腦上，預設安裝路徑為 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
     2.  在 64 位元電腦上，預設安裝路徑為 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-9. 完成後，請按一下 [下一步]。  
+9. 完成後，請按一下 [下一步]  。  
   
-10. 在 [安裝規則] 頁面上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會驗證您的電腦組態。 當驗證程序完成之後，請按一下 [下一步]。  
+10. 在 [安裝規則]  頁面上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會驗證您的電腦組態。 當驗證程序完成之後，請按一下 [下一步]  。  
   
 11. **[磁碟空間需求]** 頁面會計算您所指定之功能的所需磁碟空間。 然後，它會比較所需的空間與可用的磁碟空間。  
   
-12. 在 [錯誤報告] 頁面上，指定您想要傳送給 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的資訊，以便協助改善 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 錯誤報告選項預設為啟用。  
+12. 在 [錯誤報告]  頁面上，指定您想要傳送給 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的資訊，以便協助改善 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 錯誤報告選項預設為啟用。  
   
-13. 系統組態檢查會在 [安裝組態規則] 頁面上另外執行一組規則，藉此向您所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能驗證電腦組態。  
+13. 系統組態檢查會在 [安裝組態規則]  頁面上另外執行一組規則，藉此向您所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能驗證電腦組態。  
   
-14. 在 [已完成安裝程式的準備工作] 頁面上，按一下 [安裝]。  
+14. 在 [已完成安裝程式的準備工作]  頁面上，按一下 [安裝]  。  
   
     > [!IMPORTANT]  
     >  安裝 Distributed Replay 之後，您必須在控制器電腦與用戶端電腦上建立防火牆規則，並為目標伺服器上的每個用戶端電腦授與權限。 如需詳細資訊，請參閱 [完成安裝後步驟](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
@@ -159,7 +158,7 @@ ms.locfileid: "52516012"
 |/CTLRSVCACCOUNT<br /><br /> **選擇性**|Distributed Replay Controller 服務的服務帳戶。|檢查帳戶和密碼|  
 |/CTLRSVCPASSWORD<br /><br /> **選擇性**|Distributed Replay Controller 服務帳戶的密碼。|檢查帳戶和密碼|  
 |/CTLRSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Controller 服務的啟動類型。|Automatic<br /><br /> 已停用<br /><br /> 手動|  
-|/CTLRUSERS<br /><br /> **選擇性**|指定哪些使用者擁有 Distributed Replay Controller 服務的權限。|使用者帳戶字串的集合，以 “ ” (空格) 做為分隔符號<br /><br /> **重要事項**：當您設定 Distributed Replay Controller 服務時，可以指定將用來執行 Distributed Replay Client 服務的一個或多個使用者帳戶。 下列是支援帳戶的清單：<br /><br /> 網域使用者帳戶<br /><br /> 使用者建立的本機使用者帳戶<br /><br /> 系統管理員<br /><br /> 系統管理員<br /><br /> 虛擬帳戶和 MSA (受管理的服務帳戶)<br /><br /> 網路服務、本機系統和系統<br /><br /> <br /><br /> 注意：不接受群組帳戶 (本機或網域) 和其他內建帳戶 (例如 Everyone)。|  
+|/CTLRUSERS<br /><br /> **選擇性**|指定哪些使用者擁有 Distributed Replay Controller 服務的權限。|使用者帳戶字串的集合，以 " " (空格) 作為分隔符號<br /><br /> **重要事項**：當您設定 Distributed Replay Controller 服務時，可以指定將用來執行 Distributed Replay Client 服務的一個或多個使用者帳戶。 下列是支援帳戶的清單：<br /><br /> 網域使用者帳戶<br /><br /> 使用者建立的本機使用者帳戶<br /><br /> 系統管理員<br /><br /> 系統管理員<br /><br /> 虛擬帳戶和 MSA (受管理的服務帳戶)<br /><br /> 網路服務、本機系統和系統<br /><br /> <br /><br /> 注意：不接受群組帳戶 (本機或網域) 和其他內建帳戶 (例如 Everyone)。|  
 |/CLTSVCACCOUNT<br /><br /> **選擇性**|Distributed Replay Client 服務的服務帳戶。|檢查帳戶和密碼|  
 |/CLTSVCPASSWORD<br /><br /> **選擇性**|Distributed Replay 用戶端服務帳戶的密碼。|檢查帳戶和密碼|  
 |/CLTSTARTUPTYPE<br /><br /> **選擇性**|Distributed Replay Client 服務的啟動類型。|Automatic<br /><br /> 已停用<br /><br /> 手動|  
@@ -196,7 +195,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 #### <a name="to-generate-a-configuration-file"></a>若要產生組態檔  
   
-1.  遵循安裝精靈的指示，直到 [準備安裝] 頁面。 組態檔的路徑已指定於 **[準備安裝]** 頁面的 [組態檔路徑] 區段中。  
+1.  遵循安裝精靈的指示，直到 [準備安裝]  頁面。 組態檔的路徑已指定於 **[準備安裝]** 頁面的 [組態檔路徑] 區段中。  
   
 2.  取消安裝程式而不實際完成安裝，即可產生 INI 檔案。  
   

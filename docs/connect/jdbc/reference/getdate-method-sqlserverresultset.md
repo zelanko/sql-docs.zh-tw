@@ -1,5 +1,5 @@
 ---
-title: getDate 方法 (SQLServerResultSet) |Microsoft Docs
+title: getDate 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: efb17208-4cd3-4aa8-a39b-e169b414758c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8104d1a67cff8b31ad04f2dd4ad30231d0cffe16
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f284c3287527a94b859414f67ac02a1097da9e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983883"
 ---
 # <a name="getdate-method-sqlserverresultset"></a>getDate 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66777115"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getDate 方法 (int)](../../../connect/jdbc/reference/getdate-method-int-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取指定的資料行索引值來當作 java.sql.Date 物件。|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar-sqlserverresultset.md)|使用 Java 程式設計語言，並透過指定 Calendar 物件，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中指定資料行索引的值來當作 java.sql.Date 物件。|  

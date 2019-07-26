@@ -1,5 +1,5 @@
 ---
-title: getFloat 方法 (int) (SQLServerResultSet) |Microsoft Docs
+title: getFloat 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 72a2ed57b9b86db50c7d0c1f824181c4a5623026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e043b68592fa3f95c14798ef1ca8589fade64a70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983232"
 ---
 # <a name="getfloat-method-int-sqlserverresultset"></a>getFloat 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public float getFloat(int columnIndex)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- A**浮點數**值。  
+ **浮點**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

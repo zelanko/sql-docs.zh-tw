@@ -1,5 +1,5 @@
 ---
-title: getURL 方法 (java.lang.String) |Microsoft Docs
+title: getURL 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eb709f6b-64e1-4d0c-a704-290891627dd7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: add077cc98e9453b5523c816ff9c47b67a13272c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8ec61791897011781cbe93776bb58bfdd144bd6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978296"
 ---
 # <a name="geturl-method-javalangstring"></a>getURL 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.net.URL getURL(java.lang.String s)
  包含參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- URL 的物件。  
+ URL 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6329fbae355b6d6a232aed87c5d786475e08ee19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979324"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,8 +45,8 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetSubString 方法 java.sql.NClob 介面中所指定這個 getSubString 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 getSubString 方法是由 java.sql.NClob 介面中的 getSubString 方法指定。  
   
  嘗試從 null 或零長度 NCLOB 中取得零個字元，將會傳回空字串。 嘗試在零長度 NCLOB 中的位置 1 以外之任何位置取得任何長度的字元，將會擲回位置例外狀況。  
   

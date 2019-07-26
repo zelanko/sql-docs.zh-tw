@@ -1,5 +1,5 @@
 ---
-title: updateBlob 方法 （int，java.sql.Blob） |Microsoft Docs
+title: updateBlob 方法 (int, java .sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01b7e30b72fdd41c5397aebee92c7cb9aeecec1f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3ce5c1c2e8ce635e5b53f5b5e609666e39e36bc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997134"
 ---
 # <a name="updateblob-method-int-javasqlblob"></a>updateBlob 方法 (int, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateBlob(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- UpdateBlob 方法 java.sql.ResultSet 介面中所指定這個 updateBlob 方法。  
+ 這個 updateBlob 方法是由 java.sql.ResultSet 介面中的 updateBlob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateBlob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

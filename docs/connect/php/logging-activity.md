@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993335"
 ---
 # <a name="logging-activity"></a>記錄活動
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -116,7 +115,7 @@ PHP 會在初始化時讀取組態檔，並將資料儲存在快取中；它也�
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>另請參閱  
-[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

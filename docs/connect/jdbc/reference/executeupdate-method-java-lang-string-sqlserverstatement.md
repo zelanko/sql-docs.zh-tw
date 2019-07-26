@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85e7c3a2-f2da-49bf-9d90-5fd246fd60e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 91d9b9d3a50bf038e201ce0468f1da0e784c35b6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5adfcb9127e6bc073bda7385387edf0946a96021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954711"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>executeUpdate 方法 (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,8 +45,8 @@ public int executeUpdate(java.lang.String sql)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 executeUpdate 方法是由 java.sql.Statement 介面中的 executeUpdate 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 executeUpdate 方法是由 java.sql.Statement interface 介面中的 executeUpdate 方法指定。  
   
  如果執行預存程序產生的更新計數大於一或是產生一個以上的結果集，請使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法執行預存程序。  
   

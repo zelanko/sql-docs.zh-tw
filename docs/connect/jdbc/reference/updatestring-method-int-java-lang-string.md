@@ -1,5 +1,5 @@
 ---
-title: updateString 方法 （int，java.lang.String） |Microsoft Docs
+title: updateString 方法 (int, java. lang.ini) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f8d2f620-0cdf-4a3b-8af4-5e8c4462a42d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 508d83c4eec69e6fd41bfadb6d3f8810ff47eaee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ad0f00eb57bfcf417e45a99ab6b9210ff2277e78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998246"
 ---
 # <a name="updatestring-method-int-javalangstring"></a>updateString 方法 (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateString(int index,
   
  *x*  
   
- A**字串**物件。  
+ **String**物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

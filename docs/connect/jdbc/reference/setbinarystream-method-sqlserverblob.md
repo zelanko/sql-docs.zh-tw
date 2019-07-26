@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ca2b8afe197c2509f0a2633266ea21c619bdeb1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4555dfb9256f3ffe2ba61e82fe90307991a5a580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975091"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>setBinaryStream 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.io.OutputStream setBinaryStream(long pos)
 ```  
   
 #### <a name="parameters"></a>參數  
- *pos*  
+ *Pos*  
   
  BLOB 值中開始寫入的位置。  
   
@@ -46,8 +45,8 @@ public java.io.OutputStream setBinaryStream(long pos)
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 這個 setBinaryStream 方法是由 java.sql.Blob 介面中 setBinaryStream 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 setBinaryStream 方法是由 .java 介面中的 setBinaryStream 方法指定。  
   
  輸出資料流會從指定的位置開始覆寫 BLOB 中的資料，而且可以超過 BLOB 的初始長度。 指定位置 + 1 的值將會附加位元組。 傳遞位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。  
   

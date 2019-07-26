@@ -1,5 +1,5 @@
 ---
-title: getClob 方法 (SQLServerResultSet) |Microsoft Docs
+title: getClob 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b343b2b2-7215-4bcd-b12d-de4a9662e536
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b5314932281224811ac5dbe3efd4bcf6c5023c0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 09adf678236a636cfe0fbdfa581c094be1e7e619
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953008"
 ---
 # <a name="getclob-method-sqlserverresultset"></a>getClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66763636"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getClob (int)](../../../connect/jdbc/reference/getclob-method-int-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行索引的值來作為 Clob 物件。|  
 |[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行名稱的值來作為 Clob 物件。|  

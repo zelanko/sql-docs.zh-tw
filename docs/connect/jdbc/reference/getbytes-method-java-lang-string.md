@@ -1,5 +1,5 @@
 ---
-title: getBytes 方法 (java.lang.String) |Microsoft Docs
+title: getBytes 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4d0dac7f-7f39-47a2-953e-80ab03688d82
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eb7ef24869bb07374426b50f5a99f8220f104564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35476869b1e083e66c349439563b4fed5fd8be2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953372"
 ---
 # <a name="getbytes-method-javalangstring"></a>getBytes 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +40,12 @@ public byte[] getBytes(java.lang.String sCol)
  包含參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- 陣列**位元組**值。  
+ **位元組**值的陣列。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註   
+## <a name="remarks"></a>Remarks  
  在舊版的 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 中，您可以使用 SQLServerCallableStatement.setBytes 來轉換位元組陣列與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型 **date**、**time**、**datetime2** 或 **datetimeoffset** 之間的值。 現在，搭配這些資料類型使用這個方法將會引發例外狀況，指出不支援轉換。  
   
  這個 getBytes 方法是由 java.sql.CallableStatement 介面中的 getBytes 方法指定。  

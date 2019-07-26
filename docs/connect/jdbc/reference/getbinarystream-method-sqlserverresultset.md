@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream 方法 (SQLServerResultSet) |Microsoft Docs
+title: getBinaryStream 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2bcccb16-007f-4a34-a449-61fc89e99218
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c02ac0446784663a33aef71ff073cbd4019ee8f3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ed2f52993ae50b5de6d476f44ab2b797a938d7c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953632"
 ---
 # <a name="getbinarystream-method-sqlserverresultset"></a>getBinaryStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66799754"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getBinaryStream (int)](../../../connect/jdbc/reference/getbinarystream-method-int.md)|從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取指定資料行索引值來當作不中斷位元組的二進位資料流。|  
 |[getBinaryStream (java.lang.String)](../../../connect/jdbc/reference/getbinarystream-method-java-lang-string.md)|擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行名稱的值，來當作不中斷位元組的二進位資料流。|  

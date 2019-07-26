@@ -1,5 +1,5 @@
 ---
-title: execute 方法 (java.lang.String) |Microsoft Docs
+title: execute 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d3ffb7c175c21d56467899bba9de7c110e324d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954951"
 ---
 # <a name="execute-method-javalangstring"></a>execute 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final boolean execute(java.lang.String sql)
  包含 SQL 陳述式的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果陳述式會傳回結果集。 **false**如果更新計數或是未不傳回任何結果。  
+ 如果語句傳回結果集,**則為 true** 。 如果傳回更新計數或沒有結果, 則**為 false** 。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQLServerConnectionPoolDataSource 類別 |Microsoft Docs
+title: SQLServerConnectionPoolDataSource 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f80991eaf3449412db672dfcb73f71c596d1bb29
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bb073be8ef92d44f8821078f60622341638a010d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971655"
 ---
 # <a name="sqlserverconnectionpooldatasource-class"></a>SQLServerConnectionPoolDataSource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66800614"
   
  **套件：** com.microsoft.sqlserver.jdbc  
   
- **擴充：** [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
+ **擴充:** [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
  **實作：** javax.sql.ConnectionPoolDataSource  
   

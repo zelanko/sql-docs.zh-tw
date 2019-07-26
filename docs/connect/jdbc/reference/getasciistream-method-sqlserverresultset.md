@@ -1,5 +1,5 @@
 ---
-title: getAsciiStream 方法 (SQLServerResultSet) |Microsoft Docs
+title: getAsciiStream 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 57560f0a-0fb8-40dd-bbe5-49feb502b9bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d56958b0a5317f02ab1c4cf8b911306b11bfad5a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 983d1f9c670801995d8a29d82cf71500605bf7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954106"
 ---
 # <a name="getasciistream-method-sqlserverresultset"></a>getAsciiStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66800002"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getAsciiStream (int)](../../../connect/jdbc/reference/getasciistream-method-int.md)|從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行索引的值來作為 ASCII 字元資料流。|  
 |[getAsciiStream (java.lang.String)](../../../connect/jdbc/reference/getasciistream-method-java-lang-string.md)|擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列內指定之資料行名稱的值來當作 ASCII 字元資料流。|  

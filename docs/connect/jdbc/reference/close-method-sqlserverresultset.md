@@ -1,5 +1,5 @@
 ---
-title: close 方法 (SQLServerResultSet) |Microsoft Docs
+title: close 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b5994cc3e2e8ed10759985571c195f783b95dac4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e78dbb981938e9af2fbe894919368da17347941a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955581"
 ---
 # <a name="close-method-sqlserverresultset"></a>close 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 close 方法是由 java.sql.ResultSet 介面中的 close 方法指定。  
   
  當 SQLServerStatement 物件遭到關閉、重新執行，或用來從一連串多個結果中擷取下一個結果時，產生 SQLServerResultSet 物件的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件會自動關閉該結果集物件。 SQLServerResultSet 物件也會在進行記憶體回收時自動關閉。  

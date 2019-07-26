@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal 方法 (java.lang.String) |Microsoft Docs
+title: getBigDecimal 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d0b29b48-9663-4de4-9fc2-82bc30e44aed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 07c806f69c6b1469d3312c796023139b5bde1baa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a85bbb7b5e7e14a7af8acb927a8f1abe9e681cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953837"
 ---
 # <a name="getbigdecimal-method-javalangstring"></a>getBigDecimal 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol)
  包含參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- BigDecimal 物件。  
+ JAVA.math.bigdecimal 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- GetBigDecimal 方法 java.sql.CallableStatement 介面中所指定這個 getBigDecimal 方法。  
+ 這個 getBigDecimal 方法是由 JAVA.sql.callablestatement 介面中的 getBigDecimal 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [getBigDecimal 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

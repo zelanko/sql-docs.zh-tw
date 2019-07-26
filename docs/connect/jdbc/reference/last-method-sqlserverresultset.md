@@ -1,5 +1,5 @@
 ---
-title: last 方法 (SQLServerResultSet) |Microsoft Docs
+title: last 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f97a3d27deeb4a51663cb108ab3adc77b75e29e8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bf176794b2fac5a241c14ee494d08ddd4aa98dbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976897"
 ---
 # <a name="last-method-sqlserverresultset"></a>last 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean last()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**新的目前資料列是否有效。 **false**如果沒有要處理多個資料列。  
+ 如果新的目前資料列有效, 則**為 true** 。 如果沒有其他要處理的資料列, 則**為 false** 。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

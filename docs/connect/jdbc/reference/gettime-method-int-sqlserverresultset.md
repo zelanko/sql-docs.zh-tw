@@ -1,5 +1,5 @@
 ---
-title: getTime 方法 (int) (SQLServerResultSet) |Microsoft Docs
+title: getTime 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1c48d78534119eb49d552899658c57b10a09fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b862aed00a154cac23df4008da649347f94f000a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979117"
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>getTime 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.sql.Time getTime(int columnIndex)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getTime 方法是由 java.sql.ResultSet 介面中的 getTime 方法指定。  
   
  這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 資料類型中的有效時間部分，而日期部分是設定成 Java 基準日期 1970/01/01。  

@@ -1,5 +1,5 @@
 ---
-title: setCharacterStream 方法 (SQLServerNClob) |Microsoft Docs
+title: setCharacterStream 方法 (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dbddcadfec0ed7b2bab9573717d0079240443a94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc966b97231f491a5f3c2cdb71c457f0324a8df3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974857"
 ---
 # <a name="setcharacterstream-method-sqlservernclob"></a>setCharacterStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,8 +40,8 @@ public java.io.Writer setCharacterStream(long pos)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 setCharacterStream 方法 setCharacterStream 方法 java.sql.NClob 介面中所指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 setCharacterStream 方法是由 NClob 介面中的 setCharacterStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

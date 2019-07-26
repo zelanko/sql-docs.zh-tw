@@ -1,5 +1,5 @@
 ---
-title: updateNClob 方法 (SQLServerResultSet) |Microsoft Docs
+title: updateNClob 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cb0d347-4449-4920-b382-05f88f2a3225
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5fd5cb23c7e32bc247d936dbd4742d7b3ea83ca9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6520a5e6772ee837f8b47433b155e6b33baaa66f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998566"
 ---
 # <a name="updatenclob-method-sqlserverresultset"></a>updateNClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66776738"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[updateNClob 方法 &#40;int, java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-sql-nclob.md)|使用 **NClob** 值，更新所指定資料行。|  
 |[updateNClob 方法 &#40;java.lang.String, java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-sql-nclob.md)|使用 **NClob** 值，更新所指定資料行。|  

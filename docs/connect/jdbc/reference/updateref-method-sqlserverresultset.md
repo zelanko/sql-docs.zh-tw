@@ -1,5 +1,5 @@
 ---
-title: updateRef 方法 (SQLServerResultSet) |Microsoft Docs
+title: updateRef 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1d80d9e1-4f58-4cc2-9ed6-786fdf3e2660
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f5ea3148097d8cc37d309a4e596c9e21b43342e1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6146fb97d700cd7908bcd56648cf00593a824f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998382"
 ---
 # <a name="updateref-method-sqlserverresultset"></a>updateRef 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66778415"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[updateRef (int, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-int-java-sql-ref.md)|透過給定的資料行索引，使用 java.sql.Ref 值來更新指定的資料行。|  
 |[updateRef (java.lang.String, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-java-lang-string-java-sql-ref.md)|透過給定的資料行名稱，使用 java.sql.Ref 值來更新指定的資料行。|  

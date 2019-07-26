@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6518e45d529f39f5621f2adfa8b46e4eb5f29ffa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e7d894b48fc6ec82450c42599f13725f0cd8ee1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993555"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -133,7 +132,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>另請參閱  
 [如何：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
 

@@ -1,5 +1,5 @@
 ---
-title: updateTime 方法 (SQLServerResultSet) |Microsoft Docs
+title: updateTime 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 74570541-a041-413b-8abd-73ced9bf8900
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2a9542859066e50a75338280b8d8cd534b2277b5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f361f4c7f6435682414f27040a3f28c31c097f82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998172"
 ---
 # <a name="updatetime-method-sqlserverresultset"></a>updateTime 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66797534"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[updateTime (int, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-int-java-sql-time.md)|透過給定的資料行索引，使用時間值來更新指定的資料行。|  
 |[updateTime (java.lang.String, java.sql.Time)](../../../connect/jdbc/reference/updatetime-method-java-lang-string-java-sql-time.md)|透過給定的資料行名稱，使用時間值來更新指定的資料行。|  

@@ -1,5 +1,5 @@
 ---
-title: getDateTimeOffset (SQLServerResultSet) |Microsoft Docs
+title: getDateTimeOffset (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 60ec0499-1c2a-4476-9e32-03b9d698fe54
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1f6ba2d9d74d20da50808fa3a25989a7a0550094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 305c178c066edead818f58c3e7cdbc9229588e2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983782"
 ---
 # <a name="getdatetimeoffset-sqlserverresultset"></a>getDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

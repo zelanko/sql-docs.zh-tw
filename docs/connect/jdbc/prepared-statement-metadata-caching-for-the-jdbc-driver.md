@@ -10,55 +10,54 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58ebcb2560e3b03703d7a419b28c6c04e41c19f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9abd72b366060da2fdffd58c17ace50f01246a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956200"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC Driver 的備妥陳述式中繼資料快取
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本文章提供實作以增強的驅動程式效能的兩個變更的資訊。
+本文提供這兩項變更的相關資訊, 以強化驅動程式的效能。
 
-## <a name="batching-of-unprepare-for-prepared-statements"></a>批次進行取消準備備妥的陳述式
-因為版本 6.1.6-preview，效能改善已實作透過最小化的伺服器往返到 SQL Server。 先前，針對每個 prepareStatement 查詢中，取消準備的呼叫也會傳送。 現在，驅動程式批次 unprepare 查詢最多的臨界值 」 ServerPreparedStatementDiscardThreshold"，其預設值為 10。
-
-> [!NOTE]  
->  使用者可以變更預設值，使用下列方法： setServerPreparedStatementDiscardThreshold （int 值）
-
-從 6.1.6-preview 引進一項變更是在此之前，驅動程式會一律呼叫 sp_prepexec。 現在，第一個執行已備妥的陳述式時，驅動程式會呼叫 sp_executesql 以及其餘部分方法，它可以執行 sp_prepexec，並指派給它的控制代碼。 可以找到更多詳細資料[此處](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching)。
+## <a name="batching-of-unprepare-for-prepared-statements"></a>準備語句的 Unprepare 批次處理
+由於版本 6.1.6-preview, 效能的改善已透過將伺服器來回行程降至 SQL Server 來實現。 先前, 針對每個 prepareStatement 查詢, 也會傳送對 unprepare 的呼叫。 現在, 驅動程式會批次處理 unprepare 查詢, 最高可達臨界值 "ServerPreparedStatementDiscardThreshold", 其預設值為10。
 
 > [!NOTE]  
->  使用者可以變更預設行為，舊版一律呼叫來設定的 enablePrepareOnFirstPreparedStatementCall sp_prepexec **，則為 true**使用下列方法：setEnablePrepareOnFirstPreparedStatementCall （布林值）
+>  使用者可以使用下列方法來變更預設值: setServerPreparedStatementDiscardThreshold (int value)
 
-### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>透過這項變更進行批次處理的引進的新 Api 清單取消準備備妥的陳述式
+從 6.1.6-preview 引進的另一項變更是, 在此之前, 驅動程式一律會呼叫 sp_prepexec。 現在, 在第一次執行備妥的語句時, 驅動程式會呼叫 sp_executesql, 而在其餘部分會執行 sp_prepexec 並為其指派控制碼。 您可以在[這裡](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching)找到更多詳細資料。
+
+> [!NOTE]  
+>  使用者可以使用下列方法將 enablePrepareOnFirstPreparedStatementCall 設定為**true** , 藉以將預設行為變更為先前版本的一律呼叫 Sp_prepexec: setEnablePrepareOnFirstPreparedStatementCall (布林值)
+
+### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>這項變更所引進的新 Api 清單, 適用于已備妥之語句的 Unprepare 批次處理
 
  **SQLServerConnection**
  
-|新的方法|描述|  
+|新的方法|Description|  
 |-----------|-----------------|  
-|int getDiscardedServerPreparedStatementCount()|傳回的目前未完成已備妥之陳述式取消準備動作。|
-|void closeUnreferencedPreparedStatementHandles()|強制執行任何未處理捨棄已備妥要執行陳述式的 unprepare 要求。|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|傳回特定的連接執行個體的行為。 如果為 false 第一次執行呼叫 sp_executesql 後第二次執行發生呼叫 sp_prepexec 準備陳述式，並實際設定備妥的陳述式控制代碼。 下列執行呼叫 sp_execute。 這減輕 sp_unprepare 備妥的陳述式需要關閉如果陳述式只執行一次。 呼叫 setDefaultEnablePrepareOnFirstPreparedStatementCall() 可以變更這個選項的預設值。|
-|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|指定特定的連接執行個體的行為。 如果值為 false 第一次執行呼叫 sp_executesql 後第二次執行發生呼叫 sp_prepexec 準備陳述式和實際設定備妥的陳述式控制代碼。 下列執行呼叫 sp_execute。 這減輕 sp_unprepare 備妥的陳述式需要關閉如果陳述式只執行一次。|
-|int getServerPreparedStatementDiscardThreshold()|傳回特定的連接執行個體的行為。 此設定會控制多少未完成已備妥陳述式捨棄動作 (sp_unprepare) 可以是未處理的每個連接，呼叫以清除 在伺服器上未處理的控制代碼會在執行之前。 如果設定為 < = 1，unprepare 關閉已備妥的陳述式會立即執行動作。 如果設定為 {@literal >} 1，這些呼叫一個批次，以避免太頻繁的呼叫 sp_unprepare 的額外負荷。 呼叫 getDefaultServerPreparedStatementDiscardThreshold() 可以變更這個選項的預設值。|
-|void setServerPreparedStatementDiscardThreshold(int value)|指定特定的連接執行個體的行為。 此設定會控制多少未完成已備妥陳述式捨棄動作 (sp_unprepare) 可以是未處理的每個連接，呼叫以清除 在伺服器上未處理的控制代碼會在執行之前。 如果設定為 < = 1 unprepare 動作會立即關閉已備妥的陳述式上執行。 如果設為 > 1 時這些呼叫被批次，以避免太頻繁呼叫 sp_unprepare 的額外負荷。|
+|int getDiscardedServerPreparedStatementCount()|傳回目前未完成的已準備語句 unprepare 動作數目。|
+|void closeUnreferencedPreparedStatementHandles()|強制執行任何未處理的已捨棄備妥語句的 unprepare 要求。|
+|boolean getEnablePrepareOnFirstPreparedStatementCall()|傳回特定連接實例的行為。 如果為 false, 第一次執行呼叫 sp_executesql, 而不准備語句, 則在第二次執行時, 它會呼叫 sp_prepexec, 並實際設定備妥的語句控制碼。 下列執行會呼叫 sp_execute。 如此一來, 如果語句只執行一次, 就能減輕備妥的語句關閉 sp_unprepare 的需求。 您可以藉由呼叫 setDefaultEnablePrepareOnFirstPreparedStatementCall () 來變更這個選項的預設值。|
+|void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|指定特定連接實例的行為。 如果 value 為 false, 則第一次執行會呼叫 sp_executesql, 而不是準備語句, 一旦第二次執行時, 它會呼叫 sp_prepexec, 並實際設定備妥的語句控制碼。 下列執行會呼叫 sp_execute。 如此一來, 如果語句只執行一次, 就能減輕備妥的語句關閉 sp_unprepare 的需求。|
+|int getServerPreparedStatementDiscardThreshold()|傳回特定連接實例的行為。 此設定可控制在執行清除伺服器上未完成的控制碼之前, 每個連接的未完成準備語句捨棄動作 (sp_unprepare)。 如果設定為 < = 1, 則會在備妥的語句關閉時立即執行 unprepare 動作。 如果設定為 {@literal >} 1, 則會將這些呼叫批次處理在一起, 以避免太常呼叫 sp_unprepare 的額外負荷。 您可以藉由呼叫 getDefaultServerPreparedStatementDiscardThreshold () 來變更這個選項的預設值。|
+|void setServerPreparedStatementDiscardThreshold(int value)|指定特定連接實例的行為。 此設定可控制在執行清除伺服器上未完成的控制碼之前, 每個連接的未完成準備語句捨棄動作 (sp_unprepare)。 如果設定為 < = 1, 則會在備妥的語句關閉時立即執行 unprepare 動作。 如果設定為 > 1, 則會將這些呼叫分批放在一起, 以避免太常呼叫 sp_unprepare 的額外負荷。|
 
  **SQLServerDataSource**
  
-|新的方法|描述|  
+|新的方法|Description|  
 |-----------|-----------------|  
-|void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|如果此設定為 false 備妥的陳述式的第一次執行呼叫 sp_executesql 後第二次執行發生呼叫 sp_prepexec 準備陳述式，和實際設定備妥的陳述式控制代碼。 下列執行呼叫 sp_execute。 這減輕 sp_unprepare 備妥的陳述式需要關閉如果陳述式只執行一次。|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|如果此設定會傳回 false 的已備妥的陳述式的第一次執行 sp_executesql，一旦發生第二次執行準備陳述式，它會呼叫 sp_prepexec，並實際設定備妥的陳述式控制代碼。 下列執行呼叫 sp_execute。 這減輕 sp_unprepare 備妥的陳述式需要關閉如果陳述式只執行一次。|
-|void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|此設定會控制多少未完成已備妥陳述式捨棄動作 (sp_unprepare) 可以是未處理的每個連接，呼叫以清除 在伺服器上未處理的控制代碼會在執行之前。 如果設定為 < = 1 unprepare 動作會立即關閉已備妥的陳述式上執行。 如果設定為 {@literal >} 1 這些呼叫會一起批次處理，以避免太頻繁呼叫 sp_unprepare 的額外負荷|
-|int getServerPreparedStatementDiscardThreshold()|此設定會控制多少未完成已備妥陳述式捨棄動作 (sp_unprepare) 可以是未處理的每個連接，呼叫以清除 在伺服器上未處理的控制代碼會在執行之前。 如果設定為 < = 1 unprepare 動作會立即關閉已備妥的陳述式上執行。 如果設定為 {@literal >} 1 這些呼叫會一起批次處理，以避免太頻繁呼叫 sp_unprepare 的額外負荷。|
+|void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|如果此設定為 false, 則第一次執行備妥的語句會呼叫 sp_executesql, 而不是準備語句, 一旦第二次執行時, 它會呼叫 sp_prepexec, 並實際設定備妥的語句控制碼。 下列執行會呼叫 sp_execute。 如此一來, 如果語句只執行一次, 就能減輕備妥的語句關閉 sp_unprepare 的需求。|
+|boolean getEnablePrepareOnFirstPreparedStatementCall()|如果此設定傳回 false, 則第一次執行備妥的語句會呼叫 sp_executesql, 而不是準備語句, 一旦第二次執行時, 它會呼叫 sp_prepexec, 並實際設定備妥的語句控制碼。 下列執行會呼叫 sp_execute。 如此一來, 如果語句只執行一次, 就能減輕備妥的語句關閉 sp_unprepare 的需求。|
+|void setServerPreparedStatementDiscardThreshold (int serverPreparedStatementDiscardThreshold)|此設定可控制在執行清除伺服器上未完成的控制碼之前, 每個連接的未完成準備語句捨棄動作 (sp_unprepare)。 如果設定為 < = 1, 則會在備妥的語句關閉時立即執行 unprepare 動作。 如果設定為 {@literal >} 1, 則會將這些呼叫一起批次處理, 以避免太常呼叫 sp_unprepare 的額外負荷|
+|int getServerPreparedStatementDiscardThreshold()|此設定可控制在執行清除伺服器上未完成的控制碼之前, 每個連接的未完成準備語句捨棄動作 (sp_unprepare)。 如果設定為 < = 1, 則會在備妥的語句關閉時立即執行 unprepare 動作。 如果設定為 {@literal >} 1, 則會將這些呼叫分批放在一起, 以避免太常呼叫 sp_unprepare 的額外負荷。|
 
-## <a name="prepared-statement-metatada-caching"></a>備妥的陳述式中繼資料快取
-從 6.3.0-preview 版開始，Microsoft JDBC driver for SQL Server 支援已備妥的陳述式快取。 之前 v6.3.0-preview，如果其中一個執行的查詢，已備妥並儲存在快取中，已再次呼叫相同的查詢不會準備。 現在，驅動程式查閱快取中的查詢尋找的控制代碼和 sp_execute 來執行。
-備妥的陳述式中繼資料快取**停用**預設。 若要啟用它，您需要在連線物件上呼叫下列方法：
+## <a name="prepared-statement-metatada-caching"></a>備妥的語句關於快取
+從 6.3.0-preview 版本開始, Microsoft JDBC driver for SQL Server 支援備妥的語句快取。 在 v 6.3.0-preview 之前, 如果有一個查詢已準備好並儲存在快取中, 則再次呼叫相同的查詢並不會產生準備。 現在, 驅動程式會查閱快取中的查詢, 並尋找控制碼, 並使用 sp_execute 來執行它。
+預設會**停用**備妥的語句中繼資料快取。 若要啟用它, 您必須在連線物件上呼叫下列方法:
 
 `setStatementPoolingCacheSize(int value)   //value is the desired cache size (any value bigger than 0)`
 `setDisableStatementPooling(boolean value) //false allows the caching to take place`
@@ -66,27 +65,27 @@ ms.locfileid: "66794091"
 例如：`connection.setStatementPoolingCacheSize(10)`
 `connection.setDisableStatementPooling(false)`
 
-### <a name="list-of-the-new-apis-introduced-with-this-change-for-prepared-statement-metadata-caching"></a>透過這項變更，已備妥的陳述式中引進的新 Api 清單中繼資料快取
+### <a name="list-of-the-new-apis-introduced-with-this-change-for-prepared-statement-metadata-caching"></a>此變更所引進的新 Api 清單, 適用于備妥的語句中繼資料快取
 
  **SQLServerConnection**
  
-|新的方法|描述|  
+|新的方法|Description|  
 |-----------|-----------------|  
-|void setDisableStatementPooling(boolean value)|設定為 true 或 false 的陳述式共用。|
-|布林 getDisableStatementPooling()|如果陳述式共用已停用，則傳回 true。|
-|void setStatementPoolingCacheSize(int value)|指定此連線的已備妥的陳述式快取的大小。 小於 1 的值表示沒有快取。|
-|int getStatementPoolingCacheSize()|傳回此連線的已備妥的陳述式快取的大小。 小於 1 的值表示沒有快取。|
-|int getStatementHandleCacheEntryCount()|傳回目前的集區的已備妥之陳述式控制代碼數目。|
-|boolean isPreparedStatementCachingEnabled()|是否啟用陳述式共用或不適用於此連線。|
+|void setDisableStatementPooling (布林值)|將語句集區設定為 true 或 false。|
+|boolean getDisableStatementPooling()|如果停用語句集區, 則傳回 true。|
+|void setStatementPoolingCacheSize(int value)|指定此連接的已備妥語句快取大小。 小於1的值表示沒有快取。|
+|int getStatementPoolingCacheSize()|傳回此連接備妥之語句快取的大小。 小於1的值表示沒有快取。|
+|int getStatementHandleCacheEntryCount()|傳回目前已準備好的已共用語句控制碼數目。|
+|boolean isPreparedStatementCachingEnabled()|此連接是否已啟用語句集區。|
 
  **SQLServerDataSource**
  
-|新的方法|描述|  
+|新的方法|Description|  
 |-----------|-----------------|  
-|void setDisableStatementPooling(boolean disableStatementPooling)|設定共用的陳述式，為 true 或 false|
-|布林 getDisableStatementPooling()|如果陳述式共用已停用，則傳回 true。|
-|void setStatementPoolingCacheSize(int statementPoolingCacheSize)|指定此連線的已備妥的陳述式快取的大小。 小於 1 的值表示沒有快取。|
-|int getStatementPoolingCacheSize()|傳回此連線的已備妥的陳述式快取的大小。 小於 1 的值表示沒有快取。|
+|void setDisableStatementPooling (布林值 disableStatementPooling)|將語句集區設定為 true 或 false|
+|boolean getDisableStatementPooling()|如果停用語句集區, 則傳回 true。|
+|void setStatementPoolingCacheSize(int statementPoolingCacheSize)|指定此連接的已備妥語句快取大小。 小於1的值表示沒有快取。|
+|int getStatementPoolingCacheSize()|傳回此連接備妥之語句快取的大小。 小於1的值表示沒有快取。|
 
 ## <a name="see-also"></a>另請參閱  
  [善 JDBC Driver 的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  

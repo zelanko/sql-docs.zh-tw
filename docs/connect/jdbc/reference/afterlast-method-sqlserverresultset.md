@@ -1,5 +1,5 @@
 ---
-title: afterLast 方法 (SQLServerResultSet) |Microsoft Docs
+title: afterLast 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cecaaa96-b07e-4038-a760-33164b283e42
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 717b8788f29d226c3c5cef1bbd86b08af12d5d99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 704b292eb50f5a900cb26f8c6958b0d2c6e618c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955952"
 ---
 # <a name="afterlast-method-sqlserverresultset"></a>afterLast 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

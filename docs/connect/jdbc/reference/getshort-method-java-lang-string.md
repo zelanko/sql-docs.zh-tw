@@ -1,5 +1,5 @@
 ---
-title: getShort 方法 (java.lang.String) |Microsoft Docs
+title: getShort 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5216e773a297862774b70f47c64da5d701cc17d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f303d05d7ff38f7f410868103c486e44df84b36b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979801"
 ---
 # <a name="getshort-method-javalangstring"></a>getShort 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public short getShort(java.lang.String sCol)
  包含參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- A**簡短**值。  
+ **Short**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

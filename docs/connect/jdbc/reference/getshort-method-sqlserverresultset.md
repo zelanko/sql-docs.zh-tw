@@ -1,5 +1,5 @@
 ---
-title: getShort 方法 (SQLServerResultSet) |Microsoft Docs
+title: getShort 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5dd39c40-e7cc-4ff9-8491-7e20e25a9d17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1e7bb0c91e1d50f38b44d2766fd7886ae10f3535
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9136c379793f4f66fcc4c69b11da9a0ea49d294d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979766"
 ---
 # <a name="getshort-method-sqlserverresultset"></a>getShort 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66774312"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[getShort (int)](../../../connect/jdbc/reference/getshort-method-int-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取指定的資料行索引值來當作 **short**。|  
 |[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取指定的資料行名稱值來當作 **short**。|  

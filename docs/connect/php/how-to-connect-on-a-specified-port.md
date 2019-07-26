@@ -1,5 +1,5 @@
 ---
-title: 如何： 在指定的連接埠上連接 |Microsoft Docs
+title: '如何: 在指定的埠上連接 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 340cedae8ee5c205e3bc6ea8942151dd4beca168
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015047"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>如何：在指定的通訊埠上連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "66796141"
 ## <a name="see-also"></a>另請參閱  
 [連線到伺服器](../../connect/php/connecting-to-the-server.md)
 
-[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

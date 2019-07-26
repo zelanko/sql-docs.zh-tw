@@ -1,5 +1,5 @@
 ---
-title: setSavepoint 方法 (java.lang.String) |Microsoft Docs
+title: setSavepoint 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 41d9cf40028efb2fac732ec7f6da4a3be39095af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cae36f62cba9f7c8b97ae13c06d1f01960f616e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973095"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>setSavepoint 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 setSavePoint 方法是由 java.sql.Connection 介面中的 setSavePoint 方法指定。  
+ 這個 setSavePoint 方法是由連接介面中的 setSavePoint 方法指定。  
   
  *sName* 引數會由 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 自動逸出。  
   

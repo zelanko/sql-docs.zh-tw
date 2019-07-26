@@ -1,5 +1,5 @@
 ---
-title: updateByte 方法 (SQLServerResultSet) |Microsoft Docs
+title: updateByte 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 240983e8-bd59-4bb1-a37a-5ba71f85fb72
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 63cee88e2cce4c9c704164deebfc5c36c442f6d4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ae69ea0bcbd77d509e541d34594560863af0475e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996925"
 ---
 # <a name="updatebyte-method-sqlserverresultset"></a>updateByte 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66784343"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[updateByte (int, byte)](../../../connect/jdbc/reference/updatebyte-method-int-byte.md)|透過指定的資料行索引，使用 **byte** 值來更新指定的資料行。|  
 |[updateByte (java.lang.String, byte)](../../../connect/jdbc/reference/updatebyte-method-java-lang-string-byte.md)|透過指定的資料行名稱，使用 **byte** 值來更新指定的資料行。|  

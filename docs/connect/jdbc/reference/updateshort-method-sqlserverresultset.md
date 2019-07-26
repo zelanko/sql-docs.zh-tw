@@ -1,5 +1,5 @@
 ---
-title: updateShort 方法 (SQLServerResultSet) |Microsoft Docs
+title: updateShort 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2d50c789-eb9d-4f8a-81ca-974563040bbb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 80a2310da7f630ab517057c5fae96d86a5227bea
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e7c74f251ebc915082f3d6249a84a258d3c84682
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998316"
 ---
 # <a name="updateshort-method-sqlserverresultset"></a>updateShort 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66798797"
   
 ## <a name="overload-list"></a>多載清單  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |[updateShort (int, short)](../../../connect/jdbc/reference/updateshort-method-int-short.md)|透過指定的資料行索引，使用 **short** 值來更新指定的資料行。|  
 |[updateShort (java.lang.String, short)](../../../connect/jdbc/reference/updateshort-method-java-lang-string-short.md)|根據指定的資料行名稱，使用 **short** 值來更新指定的資料行。|  

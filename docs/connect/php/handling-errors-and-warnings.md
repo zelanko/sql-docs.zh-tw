@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50b431ed5b3f02f1032d4176c129d3b6599b4b9e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2765df415cd4e45469f48c30dc2c0937361ce3aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015075"
 ---
 # <a name="handling-errors-and-warnings"></a>處理錯誤和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,5 +39,5 @@ ms.locfileid: "66796174"
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

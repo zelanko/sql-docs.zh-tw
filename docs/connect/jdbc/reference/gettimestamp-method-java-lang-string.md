@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 方法 (java.lang.String) |Microsoft Docs
+title: getTimestamp 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4d5174db-365c-4476-9472-7871578ef34c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 239f8618d1324d3b9ebd11546d882df6e10c87eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 999cfba0f0bd98bfc7e13f436303160ef66962b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978721"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>getTimestamp 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

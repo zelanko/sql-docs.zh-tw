@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 20dfb1ecadbd417a79e74171e4f247e6b09ed40f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a17f4482c46b9e9650b9debbb8a1517f022f1bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979376"
 ---
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>getStringFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.lang.String getStringFunctions()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**，其中包含**字串**函式。  
+ 包含**字串**函數的**字串**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 這個 getStringFunctions 方法是由 java.sql.DatabaseMetaData 介面中 getStringFunctions 方法指定。  
+## <a name="remarks"></a>備註  
+ 這個 getStringFunctions 方法是由 java.sql.DatabaseMetaData 介面中的 getStringFunctions 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

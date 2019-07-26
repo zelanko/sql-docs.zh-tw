@@ -1,5 +1,5 @@
 ---
-title: executeUpdate 方法 (java.lang.String，int[]) |Microsoft Docs
+title: executeUpdate 方法 (java.lang.String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7b3d5b60-4285-4047-b13e-106754ca0d98
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2d0bea512c6cbfda5c283af793365e8aeec590c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 059f463c6a448c6ae2ab302542a50cde1f533db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954706"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 方法 (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public final int executeUpdate(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 executeUpdate 方法是由 java.sql.Statement 介面中的 executeUpdate 方法指定。  
+ 這個 executeUpdate 方法是由 java.sql.Statement interface 介面中的 executeUpdate 方法指定。  
   
  如果執行預存程序產生的更新計數大於一或是產生一個以上的結果集，請使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法執行預存程序。  
   

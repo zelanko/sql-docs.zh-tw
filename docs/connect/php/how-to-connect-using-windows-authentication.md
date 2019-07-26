@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用 Windows 驗證進行連接 |Microsoft Docs
+title: '如何: 使用 Windows 驗證進行連接 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18294f43eceabb531d61c919303b5e874ba63a99
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 84707c67491d4f02be41e6506fb233ee7afef9fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936500"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>如何：使用 Windows 驗證進行連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -108,7 +107,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ## <a name="see-also"></a>另請參閱  
 [如何：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
 

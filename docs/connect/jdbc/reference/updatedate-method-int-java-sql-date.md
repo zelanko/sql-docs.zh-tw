@@ -1,5 +1,5 @@
 ---
-title: updateDate 方法 （int，java.sql.Date） |Microsoft Docs
+title: updateDate 方法 (int, java .sql. Date) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c5fb1292-a5cf-4cdd-8c4a-d1679944a6d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13a8ed675e63d19d3c21dddf54751073593ae156
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3318bc5ebd8eb6496262cc9992a4e516aeebf9fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999161"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>updateDate 方法 (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public void updateDate(int index,
  這個 updateDate 方法是由 java.sql.ResultSet 介面中的 updateDate 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateDate 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   
+ [updateDate 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: rowUpdated 方法 (SQLServerResultSet) |Microsoft Docs
+title: rowUpdated 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 29303550-294e-4d43-b892-312b42e21271
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b827ebb9740c9d88017c5d47626b9a1cef493143
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9eb0f1bf73f719550ce0a00b3b7f96fab9c2af38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975658"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean rowUpdated()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 rowUpdated 方法是由 java.sql.ResultSet 介面中的 rowUpdated 方法指定。  
+ 這個 rowUpdated 方法是由 sql-dmo 介面中的 rowUpdated 方法指定。  
   
  傳回的值取決於結果集是否可以偵測到更新而定。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 85fc9956e8e88398703adf283c91517972aa7e77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dd99b2195cb4f44725ff813bc79c70ec5ffc44b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935896"
 ---
 # <a name="retrieving-data"></a>擷取資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,21 +69,21 @@ ms.locfileid: "66797071"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[以資料流的形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|概略說明如何從伺服器串流處理資料，並提供特定使用案例的連結。|  
 |[使用方向參數](../../connect/php/using-directional-parameters.md)|說明如何在呼叫預存程序時使用參數方向。|  
-|[指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|示範如何建立結果集，您可以依任何順序存取的資料列。|  
+|[指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|示範如何以任何順序來建立結果集, 其中包含您可以存取的資料列。|  
 |[如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|說明如何使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型。|  
 |[如何：使用 PDO_SQLSRV 驅動程式以 PHP 日期時間物件形式擷取日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|說明如何使用 SQLSRV 驅動程式以物件形式擷取日期和時間類型。|  
-|[使用 SQLSRV 驅動程式的格式化十進位字串](../../connect/php/formatting-decimals-sqlsrv-driver.md)|示範如何設定使用 SQLSRV 驅動程式的十進位或貨幣值的格式。|  
-|[使用 PDO_SQLSRV 驅動程式的格式化十進位字串](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|示範如何設定使用 PDO_SQLSRV 驅動程式的十進位或貨幣值的格式。|  
+|[使用 SQLSRV 驅動程式格式化十進位字串](../../connect/php/formatting-decimals-sqlsrv-driver.md)|示範如何使用 SQLSRV 驅動程式來格式化 decimal 或 money 值。|  
+|[使用 PDO_SQLSRV 驅動程式格式化十進位字串](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|示範如何使用 PDO_SQLSRV 驅動程式來格式化 decimal 或 money 值。|  
   
 ## <a name="related-sections"></a>相關章節  
 [如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [擷取資料](../../connect/php/retrieving-data.md)  
   

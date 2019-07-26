@@ -1,5 +1,5 @@
 ---
-title: getBytes 方法 (int) (SQLServerResultSet) |Microsoft Docs
+title: getBytes 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f3299b061303400f75241e863b8675ad95b3e485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d328a2b1f092686403ba4cbcddf1ad22d733ea06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213740"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>getBytes 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public byte[] getBytes(int columnIndex)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 陣列**位元組**值。  
+ **位元組**值的陣列。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: getBlob 方法 (java.lang.String) |Microsoft Docs
+title: getBlob 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3fe74b50-9ccd-4973-a93a-6da2c20a4154
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b991bd56c730fbee833aca2aa965b294df05a7e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e023030d01459ef0f7be9b9c61e5f6b8ba1e4d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953590"
 ---
 # <a name="getblob-method-javalangstring"></a>getBlob 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

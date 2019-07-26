@@ -1,5 +1,5 @@
 ---
-title: setAsciiStream 方法 (SQLServerNClob) |Microsoft Docs
+title: setAsciiStream 方法 (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aebc713ab5256527571eb1a4277caa74e53623d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 043a94108bdb7c8938f06e8bf1d4bf58651fbf21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975372"
 ---
 # <a name="setasciistream-method-sqlservernclob"></a>setAsciiStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>備註  
- 這個 setAsciiStream 方法 setAsciiStream 方法 java.sql.NClob 介面中所指定。  
+ 這個 setAsciiStream 方法是由 NClob 介面中的 setAsciiStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

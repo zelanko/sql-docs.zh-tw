@@ -1,5 +1,5 @@
 ---
-title: updateBoolean 方法 (int，boolean) |Microsoft Docs
+title: updateBoolean 方法 (int, boolean) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7937f4bb-8537-4012-af81-837f9ac123a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2a1eecc932fa9230667ea71e2cae843e753f32b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 658d23f4a2a2a465a6c7344858f67efb005f81bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997004"
 ---
 # <a name="updateboolean-method-int-boolean"></a>updateBoolean 方法 (int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public void updateBoolean(int index,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  這個 updateBoolean 方法是由 java.sql.ResultSet 介面中的 updateBoolean 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

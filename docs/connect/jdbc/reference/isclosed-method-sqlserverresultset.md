@@ -1,5 +1,5 @@
 ---
-title: isClosed 方法 (SQLServerResultSet) |Microsoft Docs
+title: isClosed 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 935deba631fdebd5d118c399e498a30fe8c64144
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fa1f768e79da36ce681b4096c64e5d46e21f5461
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977738"
 ---
 # <a name="isclosed-method-sqlserverresultset"></a>isClosed 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public boolean isClosed()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 isClosed 方法是由 java.sql.ResultSet 介面中的 isClosed 方法指定。  
+ 這個 isClosed 方法是由 sql-dmo 介面中的 isClosed 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

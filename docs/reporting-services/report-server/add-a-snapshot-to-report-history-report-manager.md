@@ -5,16 +5,15 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: e7244e66ec8f6aabd7684bbcd5c22e8d2604d1cb
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492837"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68251933"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>將快照集加入至報表記錄
 
@@ -32,7 +31,7 @@ ms.locfileid: "67492837"
   
 3. 按一下 **[新增快照集]** 。 **[執行時]** 資料行裡會建立一個新的快照集。  
     > [!NOTE]
-    > 若要啟用建立快照集，系統管理員必須設定報表記錄，以便**允許手動建立記錄**。 如需詳細資訊，請參閱 [限制報表記錄 &#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)。
+    > 若要啟用建立快照集, 系統管理員必須將報表記錄設定為**允許手動建立記錄**。 如需詳細資訊，請參閱 [限制報表記錄 &#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)。
 
 4. 按一下 **[套用]** 。
   
@@ -79,39 +78,39 @@ ms.locfileid: "67492837"
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>若要手動將快照集加入至報表記錄
   
-1. 在入口網站中，瀏覽至您想要檢視記錄，並以滑鼠右鍵按一下它的項目。  
+1. 在入口網站中, 流覽至您想要查看其歷程記錄的專案, 並以滑鼠右鍵按一下它。  
   
 2. 從下拉式功能表中選取 [管理]  。  
   
-3. 選取 [**歷程記錄快照集**] 索引標籤。  
+3. 選取 [**記錄快照**集] 索引標籤。  
   
-4. 在 **歷程記錄快照集**頁面上，選取**新的歷程記錄快照集**。 新的快照集建立，而且會以目前的日期和時間出現下面**Created**資料行。  
+4. 在 [**記錄快照**集] 頁面上, 選取**新的記錄快照**集。 隨即會建立新的快照集, 並在下方顯示 [已**建立**] 資料行中目前的日期和時間。  
   
     > [!NOTE]
-    > 若要啟用建立快照集，系統管理員必須設定報表記錄，以便**允許手動建立記錄**。 如需詳細資訊，請參閱 <<c0> [ 限制報表記錄 （入口網站）](../../reporting-services/reports/limit-report-history-report-manager.md)。
+    > 若要啟用建立快照集, 系統管理員必須將報表記錄設定為**允許手動建立記錄**。 如需詳細資訊, 請參閱[限制報表記錄 (web 入口網站)](../../reporting-services/reports/limit-report-history-report-manager.md)。
 
-## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>若要將透過排程的快照集加入報表記錄
+## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>若要透過排程將快照集加入至報表記錄
 
-1. 在入口網站中，瀏覽至您想要檢視記錄，並以滑鼠右鍵按一下它的項目。  
+1. 在入口網站中, 流覽至您想要查看其歷程記錄的專案, 並以滑鼠右鍵按一下它。  
   
 2. 從下拉式功能表中選取 [管理]  。  
   
-3. 選取 [**歷程記錄快照集**] 索引標籤。  
+3. 選取 [**記錄快照**集] 索引標籤。  
   
-4. 在 [**歷程記錄快照集**頁面上，選取**排程及設定**] 按鈕。  
+4. 在 [**記錄快照**集] 頁面上, 選取 [**排程和設定**] 按鈕。  
   
-5. 在 **排程**區段中，選取其中一個或多個下列選項，如果尚未選取至少一個選項：
+5. 如果至少有一個選擇尚未選取, 請在 [**排程**] 區段中, 選取下列其中一個或兩個選項:
     - **依排程建立歷程記錄快照集**。  
     - **允許人員手動建立快照集**。  
   
-6. 在 **進階**區段中，選取**保留所有歷程記錄快照集**。  
+6. 在 [ **Advanced** ] 區段中, 選取 [**保留所有歷程記錄快照**集]。  
   
-7. （選擇性） 選取的核取方塊**將快取快照集儲存在報表歷程記錄**。  
+7. 選擇性地選取 [**在報表記錄中儲存**快取快照集] 核取方塊。  
   
 8.  選取 [套用]  以儲存設定。  
 
     > [!NOTE]  
-    > 若要啟用建立快照集，系統管理員必須設定報表記錄，以便**允許手動建立記錄**。 如需詳細資訊，請參閱 <<c0> [ 限制報表記錄 （入口網站）](../../reporting-services/reports/limit-report-history-report-manager.md)。
+    > 若要啟用建立快照集, 系統管理員必須將報表記錄設定為**允許手動建立記錄**。 如需詳細資訊, 請參閱[限制報表記錄 (web 入口網站)](../../reporting-services/reports/limit-report-history-report-manager.md)。
 
 9.  按一下 **[套用]** 。
 
@@ -119,33 +118,33 @@ ms.locfileid: "67492837"
   
 1. 若為已經設定成當做報表執行快照集執行的報表，您可以設定其他屬性，以便在每次重新整理快照集時，將快照集的副本儲存至報表記錄。  
   
-2. 在入口網站中，瀏覽至您想要檢視記錄，並以滑鼠右鍵按一下它的項目。  
+2. 在入口網站中, 流覽至您想要查看其歷程記錄的專案, 並以滑鼠右鍵按一下它。  
   
 3. 從下拉式功能表中選取 [管理]  。  
   
-4. 選取 [**歷程記錄快照集**] 索引標籤。  
+4. 選取 [**記錄快照**集] 索引標籤。  
   
-5. 在 [**歷程記錄快照集**頁面上，選取**排程及設定**] 按鈕。  
+5. 在 [**記錄快照**集] 頁面上, 選取 [**排程和設定**] 按鈕。  
   
-6. 在 **排程**區段中，選取其中一個或多個下列選項，如果尚未選取至少一個選項：
+6. 如果至少有一個選擇尚未選取, 請在 [**排程**] 區段中, 選取下列其中一個或兩個選項:
     - **依排程建立歷程記錄快照集**。  
     - **允許人員手動建立快照集**。  
   
-7. 在 **進階**區段中，選取**保留所有歷程記錄快照集**。  
+7. 在 [ **Advanced** ] 區段中, 選取 [**保留所有歷程記錄快照**集]。  
   
-8. （選擇性） 選取的核取方塊**將快取快照集儲存在報表歷程記錄**。  
+8. 選擇性地選取 [**在報表記錄中儲存**快取快照集] 核取方塊。  
   
 9. 選取 [套用]  以儲存設定。  
   
 ## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>若要依照排程自動將快照集加入報表記錄  
   
-1. 在入口網站中，瀏覽至您想要檢視記錄，並以滑鼠右鍵按一下它的項目。  
+1. 在入口網站中, 流覽至您想要查看其歷程記錄的專案, 並以滑鼠右鍵按一下它。  
   
 2. 從下拉式功能表中選取 [管理]  。  
   
-3. 選取 [**歷程記錄快照集**] 索引標籤。  
+3. 選取 [**記錄快照**集] 索引標籤。  
   
-4. 在 [**歷程記錄快照集**頁面上，選取**排程及設定**] 按鈕。  
+4. 在 [**記錄快照**集] 頁面上, 選取 [**排程和設定**] 按鈕。  
   
 5. 選取 **[使用下列排程將快照集加入至報表記錄]** 的核取方塊。 執行下列其中之一：  
   
@@ -158,7 +157,7 @@ ms.locfileid: "67492837"
 ## <a name="see-also"></a>另請參閱
 
 - [設定報表的執行屬性 (入口網站)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
-- [限制報表記錄 （入口網站）](../../reporting-services/reports/limit-report-history-report-manager.md)
+- [限制報表記錄 (入口網站)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [排程](../../reporting-services/subscriptions/schedules.md)   
 - [入口網站 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
 

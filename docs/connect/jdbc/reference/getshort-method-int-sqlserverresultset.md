@@ -1,5 +1,5 @@
 ---
-title: getShort 方法 (int) (SQLServerResultSet) |Microsoft Docs
+title: getShort 方法 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bd66bf9996ce01435c8243a13c86c65d11072fee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a301a499a1f640703c431b42739f366596f28b55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979888"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>getShort 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public short getShort(int columnIndex)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- A**簡短**值。  
+ **Short**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
