@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 2dc81d434714e0a13912fa6f14e1194df5e5afe3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215615"
 ---
 > [!NOTE]
