@@ -75,7 +75,7 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: 離線部署
               href: big-data-cluster/deploy-offline.md
-            - name: 部署目標
+            - name: Kubernetes 叢集
               items:
                 - name: Azure Kubernetes Service
                   href: big-data-cluster/deploy-on-aks.md
@@ -85,9 +85,11 @@
                   href: big-data-cluster/deploy-on-minikube.md
             - name: 部署指令碼
               items:
-                - name: Azure Kubernetes Service
+                - name: AKS python 指令碼
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-                - name: 使用 Azure Data Studio Notebooks 部署
+                - name: 單一節點 kubeadm 指令碼
+                  href: big-data-cluster/deployment-script-single-node-kubeadm.md
+                - name: 使用筆記本部署
                   href: big-data-cluster/deploy-notebooks.md
     - name: 概念
       items:
@@ -6670,6 +6672,8 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: SQL Server 公用程式
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
+        - name: SQL 評定 API
+          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: 在相同 SQL Server 執行個體上執行公用程式與非公用程式收集組的考量
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -7500,7 +7504,7 @@
 - name: 報告與分析
   items:
     - name: 進階分析與機器學習 >>
-      href: advanced-analytics/index.md
+      href: advanced-analytics/
     - name: Analytics Platform System >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
