@@ -1,5 +1,5 @@
 ---
-title: 備份、 還原和移動的 SSIS 目錄 |Microsoft Docs
+title: 備份、還原和移動 SSIS 目錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061270"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670502"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>備份、 還原和移動的 SSIS 目錄
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB]  目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  
@@ -48,7 +48,7 @@ ms.locfileid: "66061270"
   
 5.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請執行下列動作，藉以產生 sp_ssis_startup 的 CREATE PROCEDURE 指令碼。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
-    1.  在物件總管中，展開 [資料庫]  節點，然後展開 [master]   > [可程式性]   > [預存程序]  節點。  
+    1.  在物件總管中, 展開 [    > **資料庫**] 節點, 然後展開 [**系統資料庫** > ] [**主要** > 程式設計] [**預存程式**] 節點。  
   
     2.  以滑鼠右鍵按一下 [dbo.sp_ssis_startup]  ，然後按一下 [編寫預存程序的指令碼為]   > [CREATE 至]   > [新增查詢編輯器視窗]  。  
   

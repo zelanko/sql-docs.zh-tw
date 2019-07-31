@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413007"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661286"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
 
-運算式常用於在報表中控制內容以及報表的外觀。 運算式以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]，而且可以使用內建函式的自訂程式碼、 報表和群組變數和使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) 和[新增運算式 &#40;報表產生器及 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)。  
+運算式常用於在報表中控制內容以及報表的外觀。 運算式是以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫, 而且可以使用內建函數自訂程式碼、報表與群組變數, 以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) 和[新增運算式 &#40;報表產生器及 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)。  
 
 > [!IMPORTANT]  
 >  若啟用 RDL 沙箱，當報表發行時，運算式文字中只能使用特定類型和成員。 如需詳細資訊，請參閱 [啟用與停用 RDL 沙箱](../enable-and-disable-rdl-sandboxing.md)。  
@@ -51,9 +51,9 @@ ms.locfileid: "67413007"
 
 如需了解如何在撰寫報表的內容中，撰寫使用本主題中運算式範例所使用許多函式和運算子的運算式，請參閱[教學課程：運算式簡介](../tutorial-introducing-expressions.md)。  
 
-運算式編輯器包含內建函數的階層式檢視。 當您選取函數時，程式碼範例會出現在 [值] 窗格中。 如需詳細資訊，請參閱[Expression Dialog Box](../expression-dialog-box.md)或是[運算式 對話方塊中&#40;報表產生器&#41;](../expression-dialog-box-report-builder.md)。  
+運算式編輯器包含內建函數的階層式檢視。 當您選取函數時，程式碼範例會出現在 [值] 窗格中。 如需詳細資訊, 請參閱 [[運算式] 對話方塊](../expression-dialog-box.md)或 [ [ &#40;運算式&#41;] 對話方塊報表產生器](../expression-dialog-box-report-builder.md)。  
 
-## <a name="functions"></a>函式  
+## <a name="functions"></a>Functions  
 
 報表中的許多運算式都有包含函數， 您可以使用這些函數來格式化資料、套用邏輯以及存取報表中繼資料。 您可撰寫運算式來使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫及 <xref:System.Convert> 和 <xref:System.Math> 命名空間中的函數。 您可以加入其他組件或自訂程式碼中函數的參考， 您也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的類別，包括 <xref:System.Text.RegularExpressions>。  
 
@@ -176,9 +176,9 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-如果文字方塊中只包含日期或數字，您應該使用文字方塊的 Format 屬性來套用格式，而非`Format`文字方塊內的函式。  
+如果文字方塊只包含日期或數位, 您應該使用文字方塊的 Format 屬性來套用格式設定, 而不是`Format`文字方塊內的函式。  
 
--   `Right`， `Len`，並`InStr`函式是用來傳回子字串，例如修剪*網域*\\*username*成只有使用者名稱。 下列運算式會從名為\\User *的參數傳回字串中反斜線 (* ) 字元右邊的字串部分：  
+-    \\、和`Len`函數在傳回子字串時很有用,例如,將網域使用者名稱修剪`InStr`成隻有使用者名稱。 `Right` 下列運算式會從名為\\User *的參數傳回字串中反斜線 (* ) 字元右邊的字串部分：  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   顯示多重數值參數中所選的值。 下列範例會使用`Join`函式來選取的參數值串連*MySelection*成單一字串，可設定的報表項目中文字方塊值的運算式為：  
+-   顯示多重數值參數中所選的值。 下列範例會使用`Join`函式, 將參數*MySelection*的選取值串連成單一字串, 以便設定為報表專案中文字方塊值的運算式:  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 ```  
 
--   `Regex`函式[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]<xref:System.Text.RegularExpressions>對於變更現有字串的格式，例如，格式化電話號碼有用處。 下列運算式會使用`Replace`函式來變更從欄位中十位數電話號碼的格式 」*nnn*-*nnn*-*nnnn*「 至 」 (*nnn*) *nnn*-*nnnn*」:  
+-   `Regex` 中的函式適用于變更現有字串的格式,例如,格式化電話號碼。[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 下列運算式使用`Replace`函數, 將欄位中十位數電話號碼的格式從 "*nnn* - *nnn* - *nnnn*" 變更為 "(*nnn*) *nnn* -*nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 -   您可以藉由指定索引鍵欄位，使用 `Lookup` 函數來從一對一關係的資料集 (如索引鍵-值組) 中擷取值。 下列運算式會顯示提供要比對的產品識別碼時，資料集 ("Product") 中的產品名稱：  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   設定時，下列運算式`Hidden`的資料行中，屬性會顯示資料行僅從資料來源擷取資料後是否在報表資料集欄位：  
+-   下列運算式是在資料行的`Hidden`屬性中設定時, 只有在從資料來源中取出資料之後, 才會顯示該欄位存在於報表資料集中的資料行:  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  
