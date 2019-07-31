@@ -1,5 +1,5 @@
 ---
-title: 'TM: Rollback Tran Completed 事件類別 | Microsoft 文件'
+title: TM：Rollback Tran Completed 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72f4b3ce6e4e10964c6f3a31fb532dc4805641ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c56cc6335bfb30d6edd82c2d4456603df1bab9a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125151"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed 事件類別
+# <a name="tm-rollback-tran-completed-event-class"></a>TM：Rollback Tran Completed 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  TM: Rollback Tran Completed 事件類別指出 ROLLBACK TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出新交易是否會在目前交易回復之後啟動。  
+  TM：Rollback Tran Completed 事件類別指出 ROLLBACK TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出新交易是否會在目前交易回復之後啟動。  
   
-## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed 事件類別資料行  
+## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM：Rollback Tran Completed 事件類別資料行  
   
 |資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

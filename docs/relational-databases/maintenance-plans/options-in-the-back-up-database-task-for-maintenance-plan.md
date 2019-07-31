@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d861c45f8f91a9026285552f30434250bb89d515
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115831"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>維護計畫之備份資料庫工作中的選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [備份資料庫工作] 對話方塊，即可將備份工作加入維護計畫中。 萬一因為發生系統或硬體失敗 (或使用者錯誤) 而導致資料庫在某方面發生損毀，因此需要還原已備份副本時，備份資料庫就相當重要。 此工作讓您能夠執行完整、差異、檔案和檔案群組，以及交易記錄的備份。  
+  使用 [備份資料庫工作]  對話方塊，即可將備份工作加入維護計畫中。 萬一因為發生系統或硬體失敗 (或使用者錯誤) 而導致資料庫在某方面發生損毀，因此需要還原已備份副本時，備份資料庫就相當重要。 此工作讓您能夠執行完整、差異、檔案和檔案群組，以及交易記錄的備份。  
   
  **建立備份資料庫工作**  
   
@@ -39,9 +38,9 @@ ms.locfileid: "51216526"
  建立新的伺服器連接，以便執行此工作時使用。 下面會描述 **[新增連接]** 對話方塊。  
   
  **資料庫**  
- 指定受此工作影響的資料庫。 選取之後，下拉式清單就會提供下列選項： **All databases**、 **All system databases**、 **All user databases**、 **These specific databases**。  
+ 指定受此工作影響的資料庫。 選取後，下拉式清單就會提供下列選項：[所有資料庫]  、[所有系統資料庫]  、[所有使用者資料庫]  和 [這些特定資料庫]  。  
   
- **All databases**  
+ **所有資料庫**  
  產生維護計畫，以便針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行維護工作。  
   
  **所有系統資料庫 (master、msdb、model)**  
@@ -57,7 +56,7 @@ ms.locfileid: "51216526"
  顯示要執行的備份類型。  
   
  **備份元件**  
- 選取 [資料庫]，即可備份整個資料庫。 選取 **[檔案與檔案群組]** ，即可僅備份資料庫的一部分。 如果已選取，請提供檔案或檔案群組名稱。 在 **[資料庫]** 方塊中選取多個資料庫時，僅能指定 **[備份元件]** 的 **[資料庫]**。 若要執行檔案或檔案群組備份，請為每個資料庫建立工作。  
+ 選取 [資料庫]  ，即可備份整個資料庫。 選取 **[檔案與檔案群組]** ，即可僅備份資料庫的一部分。 如果已選取，請提供檔案或檔案群組名稱。 在 **[資料庫]** 方塊中選取多個資料庫時，僅能指定 **[備份元件]** 的 **[資料庫]** 。 若要執行檔案或檔案群組備份，請為每個資料庫建立工作。  
   
  **備份組逾期時間**  
  指定備份組何時可由其他備份組覆寫。  
@@ -66,10 +65,10 @@ ms.locfileid: "51216526"
  將資料庫備份至檔案或至磁帶。 唯有安裝在包含資料庫之電腦的磁帶裝置可以使用。  
   
  **跨越一或多個檔案的備份資料庫**  
- 按一下 [新增]，即可開啟 [選取備份目的地] 對話方塊，並提供一或多個磁碟位置，或磁帶裝置。  
+ 按一下 [新增]  ，即可開啟 [選取備份目的地]  對話方塊，並提供一或多個磁碟位置，或磁帶裝置。  
   
  **如果備份檔案存在**  
- 選取 [附加] 將此備份加入檔案的結尾。 選取 [覆寫] 即可移除檔案中所有舊的備份，並以此新備份取代。  
+ 選取 [附加]  將此備份加入檔案的結尾。 選取 [覆寫]  即可移除檔案中所有舊的備份，並以此新備份取代。  
   
  **為每個資料庫建立一個備份檔案**  
  在資料夾方塊裡所指定的位置中，建立備份檔案， 會為選取的每個資料庫建立一個檔案。  
@@ -100,7 +99,7 @@ ms.locfileid: "51216526"
   
 |||  
 |-|-|  
-|**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。<br /><br /> 此預設是由 [備份壓縮預設] 伺服器組態選項所設定。 有關如何檢視這個選項目前之設定的詳細資訊，請參閱 [檢視或設定備份壓縮伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
+|**使用預設伺服器設定**|按一下即可使用伺服器層級的預設值。<br /><br /> 此預設是由 [備份壓縮預設]  伺服器組態選項所設定。 有關如何檢視這個選項目前之設定的詳細資訊，請參閱 [檢視或設定備份壓縮伺服器組態選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
 |**壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可壓縮備份。<br /><br /> **\*\* 重要 \*\*** 根據預設，壓縮會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，您可能會想要在由[資源管理員](../../relational-databases/resource-governor/resource-governor.md)所限制之 CPU 使用量的工作階段中建立低優先權的壓縮備份。 如需詳細資訊，請參閱本主題稍後介紹的＜ [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制的工作階段中，建立低優先權的壓縮備份。|  
 |**不要壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可建立未壓縮備份。|  
   

@@ -44,7 +44,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> 引數  
  @xevent_channel  
- 擴充事件類型。 預設值會設定為傳回過去 30 分鐘內記錄的所有事件。 記錄的事件會視啟用的擴充事件類型而定。 您可以使用此參數篩選預存程序，僅顯示特定類型的事件。 您可以指定完整事件名稱，或指定子字串，例如： **'Admin'** ， **'Analytic'** ， **'Operational'** ，和 **'Debug'** 。 @event_channel已**VARCHAR (255)** 。  
+ 擴充事件類型。 預設值會設定為傳回過去 30 分鐘內記錄的所有事件。 記錄的事件會視啟用的擴充事件類型而定。 您可以使用此參數篩選預存程序，僅顯示特定類型的事件。 您可以指定完整事件名稱，或指定子字串，例如： **'Admin'** ， **'Analytic'** ， **'Operational'** ，和 **'Debug'** 。 @event_channel已 **VARCHAR (255)** 。  
   
  若要取得事件類型目前已啟用使用一份**managed_backup.fn_get_current_xevent_settings**函式。  
   

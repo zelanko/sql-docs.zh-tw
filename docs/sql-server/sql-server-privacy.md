@@ -2,36 +2,35 @@
 title: SQL Server 隱私權補充 | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06116a52b35acb2ffef584e751e2c7285ce99551
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+author: aliceku
+ms.author: aliceku
+ms.openlocfilehash: 40057200c5b8241849f4030e6c418cf080d149f2
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420023"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329345"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文摘要說明 SQL Server 內使用之不同資料物件的行為，以及如何使用物件來傳遞個人或機密方式的資訊。 本文是整體 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=521839)的增補合約。 本文中的資料分類只適用於 SQL Server 內部部署產品的版本。 它不適用於下列項目：
+本文摘要說明使用已連線到網際網路的功能，可收集匿名的功能使用方式和診斷資料並傳送給 Microsoft。 SQL Server 可能會收集標準電腦資訊以及關於使用方式和效能的資料，這些資訊可能會傳送給 Microsoft，並基於改善產品品質、安全性和可靠性的目的加以分析。 本文是整體 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=521839)的增補合約。 本文中的資料分類只適用於 SQL Server 內部部署產品的版本。 它不適用於下列項目：
 
 - Azure SQL Database
-- SQL Server Management Studio (SSMS)
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Data Migration Assistant
 - SQL Server 移轉小幫手
 - MS-SQL 延伸模組
 
-「允許的使用方式情節」的定義。 在本文內容中，Microsoft 定義「允許的使用方式情節」作為 Microsoft 所啟始動作或活動。
+「允許的使用方式情節」  的定義。 在本文內容中，Microsoft 定義「允許的使用方式情節」作為 Microsoft 所啟始動作或活動。
 
 ## <a name="access-control"></a>存取控制
 
@@ -46,7 +45,7 @@ ms.locfileid: "54420023"
 
 |狀況 |存取限制 |保留需求 |
 |---------|---------|---------|
-|透過「使用意見反應」，這些認證絕不能離開使用者電腦。 |- |- |
+|這些認證永遠不會透過使用方式和診斷資料流出使用者電腦。 |- |- |
 |「損毀傾印」可能包含「存取控制資料」。 |- |損毀傾印：最多 30 天。 |
 |透過「使用者意見反應」，這些認證絕不能離開使用者電腦，除非客戶手動予以插入 |限制為供 Microsoft 內部使用且協力廠商不可存取。 |使用者意見反應：最多 1 年|
 |&nbsp;|&nbsp;|&nbsp;|
@@ -65,7 +64,7 @@ ms.locfileid: "54420023"
 
 |狀況  |存取限制  |保留需求 |
 |---------|---------|---------|
-|透過「使用意見反應」，這項資料不會離開使用者電腦。 |- |- |
+|此資料不會透過使用方式和診斷資料流出使用者電腦。 |- |- |
 |「損毀傾印」可能包含「客戶內容」，並發出給 Microsoft。 |- |損毀傾印：最多 30 天。 |
 |客戶與其同意可以傳送包含給 Microsoft 之「客戶內容」的「使用者意見反應」。 |限制為供 Microsoft 內部使用且協力廠商不可存取。 Microsoft 可以向原始客戶公開資料。 |使用者意見反應：最多 1 年 |
 
@@ -88,7 +87,7 @@ ms.locfileid: "54420023"
 
 |狀況  |存取限制  |保留需求|
 |---------|---------|---------|
-|透過「使用意見反應」，這項資料不會離開使用者電腦。 |- |- |
+|此資料不會透過使用方式和診斷資料流出使用者電腦。 |- |- |
 |損毀傾印可能包含 EUII，並發出給 Microsoft。 |- |損毀傾印：最多 30 天 |
 |客戶識別識別碼可能會發出給 Microsoft，以提供使用者已訂閱的新混合式和雲端功能。 |- |目前沒有這類混合式或雲端功能。|
 |客戶與其同意可以傳送包含給 Microsoft 之客戶內容的使用者意見反應。|限制為供 Microsoft 內部使用且協力廠商不可存取。 Microsoft 可以向原始客戶公開資料。 |使用者意見反應：最多 1 年 |
@@ -120,7 +119,7 @@ ms.locfileid: "54420023"
 
 ### <a name="examples-of-system-metadata"></a>系統中繼資料範例
 
-未包括客戶內容、客戶存取控制或 EUII 時，會將下列各項視為系統中繼資料：
+未包括客戶內容、物件中繼資料、客戶存取控制資料或 EUII 時，會將下列各項視為系統中繼資料：
 
 - 資料庫 GUID
 - 電腦名稱雜湊
@@ -142,7 +141,7 @@ Microsoft 不會檢查由其他使用 SQL Server 之程式所設定的應用程�
 |Microsoft 可以用來改善功能及 (或) 修正目前功能中的 Bug。|限制為供 Microsoft 內部使用且協力廠商不可存取。 |最少 90 天 - 最多 3 年 |
 |可以用來對客戶提出建議。  例如，「根據所使用產品方式，請考慮使用執行效果更佳的功能 *X*。」 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |客戶資料安全性記錄：最小 3 年 - 最多 6 年 |
 |Microsoft 可以用來進行未來的產品規劃。 |Microsoft 可能會與其他硬體和軟體廠商共用這項資訊，以改善其產品如何與 Microsoft 軟體搭配執行。 |最少 90 天 - 最多 3 年|
-|Microsoft 可以用來根據發出的「使用意見反應」來提供雲端服務。 例如，客戶儀表板顯示跨組織之所有 SQL Server 安裝的功能使用方式。 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |最少 90 天 - 最多 3 年 |
+|Microsoft 可以用來根據發出的使用方式和診斷資料來提供雲端服務。 例如，客戶儀表板顯示跨組織之所有 SQL Server 安裝的功能使用方式。 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |最少 90 天 - 最多 3 年 |
 |客戶與其同意可以傳送包含給 Microsoft 之「客戶內容」的「使用者意見反應」。 |限制為供 Microsoft 內部使用且協力廠商不可存取。 Microsoft 可以向原始客戶公開資料。 |使用者意見反應：最多 1 年 |
 |可以使用資料庫名稱和應用程式名稱將資料庫與應用程式分類為已知類別，例如執行由 Microsoft 或其他公司提供之軟體的資料庫與應用程式。|限制為供 Microsoft 內部使用且協力廠商不可存取。|最少 90 天 - 最多 3 年 |
 
@@ -158,12 +157,16 @@ Microsoft 不會檢查由其他使用 SQL Server 之程式所設定的應用程�
 
 ### <a name="permitted-usage-scenarios"></a>允許的使用方式情節
 
+> [!NOTE]
+> 所有物件中繼資料值都會在集合之前進行雜湊處理。
+>
+
 |狀況  |存取限制  |保留需求|
 |---------|---------|---------|
 |Microsoft 可以用來改善功能及 (或) 修正目前功能中的 Bug。 |限制為供 Microsoft 內部使用且協力廠商不可存取。 |最少 90 天 - 最多 3 年|
 
 ## <a name="telemetry-controls"></a>遙測控制項
 
-您可於參考此處的指示，來了解如何開啟/關閉產品中的遙測 - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft。
+您可於參考此處的指示，來了解如何開啟/關閉產品中的遙測 - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft 。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

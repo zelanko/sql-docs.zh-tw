@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a682f0d3c8373ea7fc96dd82796108d5d71f26ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a31f23d4de02bd4554d997364a3a5aa26b3d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134493"
 ---
 # <a name="create-a-database-mail-account"></a>建立 Database Mail 帳戶
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您可以使用 **「Database Mail 組態精靈」** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，建立 Database Mail 帳戶。  
   
--   **Before you begin:**  [Prerequisites](#Prerequisites)  
+-   **開始之前：** [必要條件](#Prerequisites)  
   
--   **使用下列項目，建立 Database Mail 帳戶**  [「Database Mail 組態精靈」](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
+-   **使用下列項目建立 Database Mail 帳戶：** [Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 Database Mail 的後續步驟](#FollowUp)  
+-   **後續操作：** [設定 Database Mail 的後續步驟](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -48,9 +47,9 @@ ms.locfileid: "51558285"
   
 -   按兩下 Database Mail，開啟 [Database Mail 組態精靈]。  
   
--   在 **[選取組態工作]** 頁面上，選取 **[管理 Database Mail 帳戶和設定檔]**，並按 **[下一步]**。  
+-   在 **[選取組態工作]** 頁面上，選取 **[管理 Database Mail 帳戶和設定檔]** ，並按 **[下一步]** 。  
   
--   在 **[管理設定檔和帳戶]** 頁面上，選取 **[建立新帳戶]** ，並按 **[下一步]**。  
+-   在 **[管理設定檔和帳戶]** 頁面上，選取 **[建立新帳戶]** ，並按 **[下一步]** 。  
   
 -   在 **[新增帳戶]** 頁面上，指定帳戶名稱、描述、郵件伺服器資訊和驗證類型。 按 **[下一步]**  
   
@@ -86,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> 待處理：設定 Database Mail 的後續步驟  
+##  <a name="FollowUp"></a> 後續操作：設定 Database Mail 的後續步驟  
   
 -   [建立 Database Mail 設定檔](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   

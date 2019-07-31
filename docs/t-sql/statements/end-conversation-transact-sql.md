@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5bd9dd2e967c1ce6551dbc3b952a8bf8baa09585
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084487"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +54,12 @@ END CONVERSATION conversation_handle
  這是要結束的交談之交談控制代碼。  
   
  WITH ERROR =*failure_code*  
- 這是錯誤碼。 *failure_code* 的型別是 **int**。失敗碼是一個使用者自訂代碼，包含在傳給交談另一端的錯誤訊息中。 失敗碼必須大於 0。  
+ 這是錯誤碼。 *failure_code* 的型別是 **int**。失敗碼是一種使用者定義程式碼，包含在傳給交談另一端的錯誤訊息中。 失敗碼必須大於 0。  
   
  DESCRIPTION =*failure_text*  
- 這是錯誤訊息。 *failure_text* 的型別是 **nvarchar(3000)**。 失敗文字是一個使用者自訂文字，包含在傳給交談另一端的錯誤訊息中。  
+ 這是錯誤訊息。 *failure_text* 的型別是 **nvarchar(3000)** 。 失敗文字是一個使用者自訂文字，包含在傳給交談另一端的錯誤訊息中。  
   
- WITH CLEANUP   
+ WITH CLEANUP  
  移除無法正常完成之交談這一端的所有訊息和目錄檢視項目。 交談的另一端將不會收到此清除通知。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會卸除交談端點，以及這項交談在傳輸佇列和服務佇列中的所有訊息。 管理員可使用這個選項來移除無法正常完成的交談。 例如，如果遠端服務已永久移除，管理員可以使用 WITH CLEANUP 來移除與這項服務的交談。 請勿在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 應用程式的程式碼中使用 WITH CLEANUP。 如果在接收端點認可收到訊息之前，END CONVERSATION WITH CLEANUP 已在執行中，則傳送端點將會再次傳送此訊息。 這樣可能會重新執行對話。  
   
 ## <a name="remarks"></a>Remarks  
@@ -84,7 +83,7 @@ END CONVERSATION conversation_handle
   
  在使用者自訂函數中，END CONVERSATION 無效。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要結束使用中的交談，目前使用者必須是交談的擁有者、系統管理員 (sysadmin) 固定伺服器角色的成員，或 db_owner 固定資料庫角色的成員。  
   
  系統管理員 (sysadmin) 固定伺服器角色的成員或 db_owner 固定資料庫角色的成員，可以利用 WITH CLEANUP 來移除已完成之交談的中繼資料。  

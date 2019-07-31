@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2acd0d75b28f3a0d6a155f681a5b8011473f91a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943680"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329297"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,19 +38,20 @@ ms.locfileid: "65943680"
   
 ## <a name="syntax"></a>語法  
   
-```sql
-  
+```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>引數  
 *datepart*  
-指定所跨越界限類型之 *startdate* 和 *enddate* 的一部分。 `DATEDIFF_BIG` 不會接受使用者定義變數對等項目。 此表格會列出所有有效的 *datepart* 引數。
+指定所跨越界限類型之 *startdate* 和 *enddate* 的一部分。
 
 > [!NOTE]
-> `DATEDIFF_BIG` 不會接受 *datepart* 引數的使用者定義變數對等項目。
+> `DATEDIFF_BIG` 不會接受使用者自訂變數中的 *datepart* 值，也不會接受以引號括住的字串。
+
+此表格列出所有有效的 *datepart* 引數名稱與縮寫。
   
-|*datepart*|縮寫|  
+|*datepart* 名稱| *datepart* 縮寫|  
 |---|---|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
@@ -65,7 +65,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> 每個特定 *datepart* 名稱和該 *datepart* 名稱的縮寫都會傳回相同值。
+
 *startdate*  
 可解析成下列其中一個值的運算式：
 
@@ -82,12 +85,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 請參閱＜*startdate*＞。
   
 ## <a name="return-type"></a>傳回類型  
-
 帶正負號的 **bigint**  
   
 ## <a name="return-value"></a>傳回值  
-傳回跨越指定 startdate 和 enddate 之指定 datepart 界限的計數 (作為帶正負號的 Bigint 值)。
--   每個特定 *datepart* 和該 *datepart* 的縮寫會傳回相同的值。  
+會傳回 *startdate* 和 *enddate* 之間的 **bigint** 差異，以 *datepart* 所設定的 coundary 表示。
   
 針對超出 **bigint** 範圍 (-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807) 的傳回值，`DATEDIFF_BIG` 會傳回錯誤。 不同於 `DATEDIFF` 會傳回 **int**，因此可使用 **minute** 或更高的精確度進行溢位，`DATEDIFF_BIG` 只能在使用 **nanosecond** 精確度 (其中 *enddate* 和 *startdate* 之間的差距超出 292 年 3 個月 10 天 23 小時 47 分鐘又 16.8547758 秒) 時進行溢位。
   

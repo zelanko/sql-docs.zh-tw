@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf50f9a813067f88e2e34ec8e834cef9072de39f
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b89a9efa3a034b9310384cc63a9b4c0c93ab8717
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986455"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>使用 FOR XML 從資料列集產生 XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "58510395"
   
  新的 **FOR XML TYPE** 指示詞可用來定義含有 SQL 語法之關聯式資料的唯讀 XML 檢視。 您可以用 SQL 陳述式和內嵌的 XQuery 來查詢該檢視，如下列範例所示。 您也可以在預存程序中參照這些 SQL 檢視。  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>範例傳回所產生之 xml 資料類型的 SQL 檢視  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>範例傳回所產生之 XML 資料類型的 SQL 檢視  
  下列 SQL 檢視定義會建立一個 XML 檢視，可供檢視從 XML 資料行中擷取的關聯式資料行、pk 及書籍作者。  
   
 ```  

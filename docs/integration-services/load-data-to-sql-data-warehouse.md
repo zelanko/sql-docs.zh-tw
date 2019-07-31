@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29668550dc64d4c782101f2690058bb465764c90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908637"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL 資料倉儲
 
@@ -190,7 +189,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
    
    1. 將目的地資料表的名稱變更為 **SalesOrderDetail**。
    2. 移除 **rowguid** 資料行。 SQL 資料倉儲中不支援 **uniqueidentifier** 資料類型。
-   3. 將 **LineTotal** 資料行的資料類型變更為 **money**。 SQL 資料倉儲中不支援 **decimal** 資料類型。 如需支援資料類型的詳細資訊，請參閱 [CREATE TABLE (Azure SQL 資料倉儲、平行處理資料倉儲)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]。
+   3. 將 **LineTotal** 資料行的資料類型變更為 **money**。 SQL 資料倉儲中不支援 **decimal** 資料類型。 如需支援資料類型的資訊，請參閱 [CREATE TABLE (Azure SQL 資料倉儲、平行處理資料倉儲)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]。
       
        ![][12b]
    4. 按一下 [確定]  以建立資料表，並返回 [ADO.NET 目的地編輯器]  。
@@ -216,7 +215,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 ## <a name="next-steps"></a>後續步驟
 
-- 了解如何直接在設計環境中針對您的套件進行偵錯及疑難排解。 從這裡開始：[套件開發的疑難排解工具][Troubleshooting Tools for Package Development]。
+- 了解如何直接在設計環境中針對您的套件進行偵錯及疑難排解。 從這裡開始：[用於疑難排解套件開發的工具][Troubleshooting Tools for Package Development]。
 
 - 了解如何將您的 SSIS 專案和套件部署到 Integration Services 伺服器或另一個儲存位置。 從這裡開始：[部署專案和套件][Deployment of Projects and Packages]。
 

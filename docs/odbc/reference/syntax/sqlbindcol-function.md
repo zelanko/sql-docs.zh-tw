@@ -68,7 +68,7 @@ SQLRETURN SQLBindCol(
  *BufferLength*  
  [輸入]長度 **TargetValuePtr*以位元組為單位的緩衝區。  
   
- 驅動程式會使用*Columnsize*若要避免寫入結尾\* *TargetValuePtr*緩衝時它會傳回可變長度的資料，例如字元或二進位資料。 請注意，驅動程式會計算之 null 結束字元，傳回字元資料時\* *TargetValuePtr*。 **TargetValuePtr*因此必須包含空格的 null 終止的字元或驅動程式將會截斷資料。  
+ 驅動程式會使用*Columnsize*若要避免寫入結尾\* *TargetValuePtr*緩衝時它會傳回可變長度的資料，例如字元或二進位資料。 請注意，驅動程式會計算之 null 結束字元，傳回字元資料時\* *TargetValuePtr*。 * *TargetValuePtr*因此必須包含空格的 null 終止的字元或驅動程式將會截斷資料。  
   
  驅動程式會傳回固定長度的資料，例如整數或日期結構，此驅動程式會忽略*Columnsize* ，並假設緩衝區是否夠大，無法保存資料。 因此，務必為固定長度的資料配置夠大的緩衝區應用程式或驅動程式會寫入超過緩衝區結尾。  
   

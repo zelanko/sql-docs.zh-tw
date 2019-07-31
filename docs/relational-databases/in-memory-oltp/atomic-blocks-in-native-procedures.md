@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02d5c28e975346ff048ef656fecc2e35f7c82692
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951227"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>原生程序中不可部分完成的區塊
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ ORDER BY c1
 GO  
 ```  
   
- 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果發生在不可部分完成的區塊範圍內，將會造成交易中止：10772、41301、41302、41305、41325、41332、41333 和 41839。  
+ 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果它們發生在不可部分完成的區塊範圍內，將造成交易中止：10772、41301、41302、41305、41325、41332、41333 及 41839。  
   
 ## <a name="session-settings"></a>工作階段設定  
  當編譯預存程序時，將會修復不可部分完成的區塊內的工作階段設定。 某些設定可以使用 **BEGIN ATOMIC** 來指定，而其他設定則一律固定為相同的值。  

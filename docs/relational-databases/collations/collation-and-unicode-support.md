@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118493"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -271,10 +270,14 @@ Unicode Consortium 會為每個字元配置唯一的字碼元素，其值介於 
 
 <sup>2</sup> [增補字元](#Supplementary_Characters)的字碼元素範圍。
 
-如以上所見，取決於所使用的字元集，選擇適當的 Unicode 編碼和資料類型可能會節省大量的儲存空間。 例如，使用啟用 UTF-8 的定序，將具有 ASCII 字元的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)`，會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串表示只需要 10 個位元組。
+> [!TIP]   
+> 一般認為在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，或在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會定義字元數。 這是因為在 CHAR (10) 資料行的範例中，可以使用定序 (例如 Latin1_General_100_CI_AI) 來儲存範圍 0-127 中的 10 個 ASCII 字元，因為此範圍內的每個字元只會使用 1 個位元組。    
+> 不過，在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，*n* 會以**位元組**為單位 (0-8,000) 定義字串長度，而在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會以**位元組配對**為單位 (0-4,000) 定義字串長度。 *n* 一律不會定義可儲存的字元數。
+
+如以上所見，取決於所使用的字元集，選擇適當的 Unicode 編碼和資料類型可能會節省大量的儲存體或增加目前體存體使用量。 例如，使用啟用 UTF-8 的拉丁定序 (例如 Latin1_General_100_CI_AI_SC_UTF8) 時，`CHAR(10)` 資料行會儲存 10 個位元組，且可以保留範圍 0-127 內的 10 個 ASCII 字元，但在範圍為 128-2047 時只能保留 5 個字元，而在範圍為 2048-65535 時只能保留 3 個字元。 相較之下，由於 `NCHAR(10)` 資料行會儲存 10 個位元組配對 (20 個位元組)，因此可以保留範圍 0-65535 內的 10 個字元。  
 
 在為資料庫或資料行選擇使用 UTF-8 或 UTF-16 編碼前，請考慮 (要儲存的) 字串資料的分布：
--  若大部分都在 ASCII 的範圍內 (例如英文)，使用 UTF-8 每個字元將需要 1 個位元組，UTF-16 則需要 2 個位元組。 使用 UTF-8 可提供儲存空間上的優勢。 
+-  若大部分都在 ASCII 的範圍 0-127 內 (例如英文)，則使用 UTF-8 時每個字元將需要 1 個位元組，UTF-16 則需要 2 個位元組。 使用 UTF-8 可提供儲存空間上的優勢。 使用啟用 UTF-8 的定序，將具有 ASCII 字元 (範圍 0-127) 的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)`，會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串表示只需要 10 個位元組。    
 -  在 ASCII 的範圍以上，幾乎所有的拉丁式字集，以及希臘文、斯拉夫、科普特文、亞美尼亞文、希伯來文、阿拉伯文、敘利亞文、它拿文和西非書面文字在 UTF-8 和 UTF-16 中每個字元都需要 2 個位元組。 在這些案例中，可比較的資料類型 (例如使用 **char** 或 **nchar**) 沒有明顯的儲存差異。
 -  若其內容大部分是東亞字集 (例如韓文、中文和日文)，在 UTF-8 中每個字元都需要 3 個位元組，UTF-16 中則為 2 個位元組。 使用 UTF-16 可提供儲存空間上的優勢。 
 -  010000 至 10FFFF 範圍中的字元在 UTF-8 和 UTF-16 中都需要 4 個位元組。 在這些案例中，可比較的資料類型 (例如使用 **char** 或 **nchar**) 沒有儲存差異。

@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ba345be62ae0efdcb13fe35103c472a17bef952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940874"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>備份與還原：互通性與共存性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中數個功能的備份和還原考量。 這些功能包括：檔案還原和資料庫啟動、線上還原和停用的索引、資料庫鏡像，以及分次還原和全文檢索索引。  
+  本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中數個功能的備份和還原考量。 這些功能包括：檔案還原和資料庫啟動、線上還原和停用的索引、資料庫鏡像，以及分次還原和全文檢索索引。  
   
  **本主題內容：**  
   
@@ -51,7 +50,7 @@ ms.locfileid: "47723786"
   
  如果在資料庫啟動期間發生問題，復原會失敗，且會將資料庫標示為 SUSPECT。 如果將問題隔離到檔案，資料庫管理員就可以使檔案離線，並嘗試重新啟動資料庫。 若要使檔案離線，您可以使用下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式：  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'**, OFFLINE)  
+ ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'** , OFFLINE)  
   
  如果啟動成功，任何包含離線檔案的檔案群組都會保持離線。  
   
@@ -135,6 +134,6 @@ ms.locfileid: "47723786"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [備份及還原複寫的資料庫](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[使用中次要：在次要複本上備份 \(AlwaysOn 可用性群組\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[使用中次要：在次要複本上備份 \(Always On 可用性群組\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

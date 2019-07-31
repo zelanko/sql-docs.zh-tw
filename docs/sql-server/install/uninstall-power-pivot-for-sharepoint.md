@@ -10,12 +10,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 105401dc20d20b3414624d5dd0a40238a32bd243
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a5d31f60aac72ce342e16ea251adbe59cb8a8227
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126015"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>解除安裝 PowerPivot for SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,21 +74,21 @@ ms.locfileid: "52535135"
   
 -   確認 SharePoint Administration Service 正在執行中。  
   
-1.  **執行組態工具：** 請注意，只有當 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝在本機伺服器上時，才會列出組態工具。請在 **[開始]** 功能表上，指向 **[所有程式]**，依序按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]**，然後按一下下列其中一項：  
+1.  **執行設定工具：** 請注意，只有當 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝在本機伺服器上時才會列出設定工具。請在 [開始]  功能表上，指向 [所有程式]  ，按一下 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，再按一下 [設定工具]  ，然後按一下下列其中一項：  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態**  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具**  
   
-2.  選取 **[移除功能、服務、應用程式和方案]** ，然後按一下 **[確定]**。  
+2.  選取 **[移除功能、服務、應用程式和方案]** ，然後按一下 **[確定]** 。  
   
-3.  或者，將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]** 和 **[結束]** 命令。  
+3.  或者，將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]** 、 **[執行]** 和 **[結束]** 命令。  
   
 4.  檢閱工作清單中的每個動作以了解每個動作的用途。  
   
-     在 [移除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式] 中，您可以選擇刪除與服務應用程式相關聯的應用程式資料。 應用程式資料是使用服務應用程式建立的 SQL Server 資料庫，用於儲存資料重新整理排程、資料庫執行個體資訊、使用量資料，以及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所使用的其他資料。 它不會儲存使用者檔案，例如 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。 除非您有保留應用程式資料的特定原因 (例如，如果您有與資料重新整理或資料存取相關的資料保留原則)，您才可以在不移除 SharePoint 使用者所建立或儲存之任何檔案的情況下刪除應用程式資料庫。  
+     在 [移除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式]  中，您可以選擇刪除與服務應用程式相關聯的應用程式資料。 應用程式資料是使用服務應用程式建立的 SQL Server 資料庫，用於儲存資料重新整理排程、資料庫執行個體資訊、使用量資料，以及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所使用的其他資料。 它不會儲存使用者檔案，例如 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。 除非您有保留應用程式資料的特定原因 (例如，如果您有與資料重新整理或資料存取相關的資料保留原則)，您才可以在不移除 SharePoint 使用者所建立或儲存之任何檔案的情況下刪除應用程式資料庫。  
   
-     若要刪除資料庫，請選取 [移除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式]，然後選取 [刪除與這個服務應用程式關聯的應用程式資料]。  
+     若要刪除資料庫，請選取 [移除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式]  ，然後選取 [刪除與這個服務應用程式關聯的應用程式資料]  。  
   
 5.  或者，在 **[輸出]** 索引標籤或 **[指令碼]** 索引標籤中檢閱詳細資訊。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52535135"
   
 6.  按一下 **[驗證]** 來檢查每個動作是否有效。 如果無法使用 **[驗證]** ，表示所有動作都適用於您的系統。  
   
-7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行] 時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎？」  
+7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行]  時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎？」  
   
 8.  按一下 **[是]** 繼續。  
   
@@ -122,7 +122,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  檢閱現有部署中的下列資訊： **[類型]** 是 [撤銷] 或 [部署]、 **[檔案]** 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+3.  檢閱現有部署的下列資訊：[類型]  是 [撤銷] 或 [部署]、[檔案]  是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
 4.  若是與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案相關的部署或撤銷，請複製 **JobId** 的 GUID 值，然後將其貼入下列命令 (使用命令介面之 [編輯] 功能表上的 [標記]、[複製] 和 [貼上] 命令來複製 GUID)：  
   
@@ -130,7 +130,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
-5.  依序按一下 **[驗證]** 和 **[執行]**，重試組態工具中的工作。  
+5.  依序按一下 **[驗證]** 和 **[執行]** ，重試組態工具中的工作。  
   
  或者，您可以使用 PowerShell 從伺服器陣列移除功能和方案。 如需詳細資訊，請參閱 [Power Pivot for SharePoint 的 PowerShell 參考](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)。  
   
@@ -139,34 +139,34 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  您可以解除安裝部分安裝，而不影響已安裝的其他 SQL Server 執行個體 (或同一個執行個體中的功能)。 例如，您可以解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，但保留安裝其他元件，例如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 Database Engine。  
   
-1.  從程式清單中選取 [Microsoft SQL Server 2014 (64 位元)]。  
+1.  從程式清單中選取 [Microsoft SQL Server 2014 (64 位元)]  。  
   
-2.  按一下 [解除安裝/變更]。  
+2.  按一下 [解除安裝/變更]  。  
   
-3.  按一下 **[移除]**。 隨即啟動 SQL Server 安裝程式。  
+3.  按一下 **[移除]** 。 隨即啟動 SQL Server 安裝程式。  
   
-     您可以從安裝程式選取 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]] 執行個體，然後選取 [Analysis Services] 和 [Analysis Services SharePoint 整合] 只移除該功能，但保留其他所有功能。  
+     您可以從安裝程式選取 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]]  執行個體，然後選取 [Analysis Services]  和 [Analysis Services SharePoint 整合]  只移除該功能，但保留其他所有功能。  
   
 ##  <a name="bkmk_addin"></a> 步驟 4：解除安裝 PowerPivot for SharePoint 增益集  
  如果您的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署包含兩部以上的伺服器，而且已安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 增益集，請從 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 增益集安裝所在的每一部伺服器上解除安裝增益集，以便完整解除安裝所有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 檔案。 如需詳細資訊，請參閱 [安裝或解除安裝 Power Pivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 ##  <a name="verify"></a> 步驟 5：確認解除安裝  
   
-1.  在管理中心的 [管理伺服器上的服務] 中，連接到您要解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所在的伺服器。  
+1.  在管理中心的 [管理伺服器上的服務]  中，連接到您要解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所在的伺服器。  
   
-2.  -   如果您解除安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013，請確認 [SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務] 不再出現於清單中。  
+2.  -   如果您解除安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013，請確認 [SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務]  不再出現於清單中。  
   
-    -   如果您解除安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010，請確認 [SQL Server Analysis Services] 和 [SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務] 都不再出現於清單中。  
+    -   如果您解除安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010，請確認 [SQL Server Analysis Services]  和 [SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務]  都不再出現於清單中。  
   
 3.  在伺服器陣列中解除安裝最後一部 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器之後，請執行下列操作：  
   
-    1.  在 [應用程式管理] 的 [管理服務應用程式] 中，確認 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式] 不再出現於清單中。  
+    1.  在 [應用程式管理] 的 [管理服務應用程式]  中，確認 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式] 不再出現於清單中。  
   
-    2.  在 [系統設定] 的 [管理伺服器陣列功能] 中，確認 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 整合功能] 不再出現於頁面中。 在 [管理伺服器陣列方案] 中，確認 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案不再出現於頁面中。  
+    2.  在 [系統設定] 的 [管理伺服器陣列功能]  中，確認 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 整合功能] 不再出現於頁面中。 在 [管理伺服器陣列方案]  中，確認 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案不再出現於頁面中。  
   
-    3.  在 [監視] 的 [設定診斷記錄] 和 [設定 Usage and Health Data Collection] 中，確認 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 事件和事件類別目錄不再出現。  
+    3.  在 [監視] 的 [設定診斷記錄]  和 [設定 Usage and Health Data Collection]  中，確認 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 事件和事件類別目錄不再出現。  
   
-    4.  在 [一般應用程式設定] 中，確認 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板] 不再出現於頁面中。  
+    4.  在 [一般應用程式設定] 中，確認 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板]  不再出現於頁面中。  
   
 ##  <a name="bkmk_post"></a> 步驟 6：解除安裝後的檢查清單  
  使用下列清單移除解除安裝期間未刪除的軟體與檔案。  
@@ -183,7 +183,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      相反地，由 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務自動產生的各種目標應用程式將會在解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 時自動刪除。  
   
-4.  在 [控制台] 中，按一下 **[程式]**，然後按一下 **[解除安裝程式]** 解除安裝所有不再使用的 Analysis Services 用戶端程式庫。 當您解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 時，不會移除 Analysis Services ADOMD.NET 及 Microsoft SQL Server 分析管理物件。 由於其他使用 Analysis Services 資料的程式庫仍可能需要使用這些程式庫，因此 SQL Server 安裝程式不會自動解除安裝這些程式庫。 如果您不再需要這些用戶端程式庫，必須手動解除安裝它們。  
+4.  在 [控制台] 中，按一下 **[程式]** ，然後按一下 **[解除安裝程式]** 解除安裝所有不再使用的 Analysis Services 用戶端程式庫。 當您解除安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 時，不會移除 Analysis Services ADOMD.NET 及 Microsoft SQL Server 分析管理物件。 由於其他使用 Analysis Services 資料的程式庫仍可能需要使用這些程式庫，因此 SQL Server 安裝程式不會自動解除安裝這些程式庫。 如果您不再需要這些用戶端程式庫，必須手動解除安裝它們。  
   
      除非疑難排解或安裝指示要求您解除安裝 SQL Server Reporting Services SharePoint 2010 增益集，否則請勿任意解除安裝。 Access Services 需要使用 Reporting Services 增益集。 此增益集由 SharePoint 產品準備工具所安裝，應繼續保留在系統上，以支援 SharePoint 所需要的功能。  
   

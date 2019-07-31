@@ -1,5 +1,5 @@
 ---
-title: 教學課程：使用以原則為基礎的管理來管理伺服器 | Microsoft 文件
+title: 教學課程：使用以原則為基礎的管理來管理伺服器 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8447a2e6b6364c702e9f800810fd6295d5641fe7
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021487"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教學課程：使用以原則為基礎的管理來管理伺服器
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教學課程：使用原則式管理來管理伺服器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 歡迎使用「使用以原則為基礎的管理原則來管理伺服器」教學課程。 本教學課程的主要對象是熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但剛接觸以原則為基礎之管理的使用者。  
   
@@ -30,7 +29,7 @@ ms.locfileid: "51512423"
   
 這個教學課程分成兩個課程：  
   
-[第 1 課：建立和套用 Off By Default 原則](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
+[第 1 課：建立和套用預設關閉原則](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
 這個課程會建立指定不要在伺服器上啟用 Database Mail 的原則。 然後，它會檢查伺服器是否符合此原則，並且透過停用 Database Mail，設定伺服器。  
   
 [第 2 課：建立和套用命名標準原則](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
@@ -42,7 +41,7 @@ ms.locfileid: "51512423"
 若要使用這個教學課程，您的系統必須已安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 ## <a name="start-the-tutorial"></a>開始教學課程  
-[第 1 課：建立和套用 Off By Default 原則](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
+[第 1 課：建立和套用預設關閉原則](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

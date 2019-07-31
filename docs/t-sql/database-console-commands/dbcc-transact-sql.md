@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 22b7963d17039e029ac88ae6f9bc4c2bd9005275
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040526"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,12 +100,12 @@ DBCC 命令有輸入參數和傳回值。 所有 DBCC 命令參數都可以接�
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|在這個階段中，會檢查資料庫中各物件的邏輯和實體一致性。|資料庫頁面層級所報告的進度。<br /><br /> 每檢查 1000 個資料庫頁面，就會更新進度報告值。|  
 |DBCC TABLE REPAIR|如果指定了 REPAIR_FAST、REPAIR_REBUILD 或 REPAIR_ALLOW_DATA_LOSS，而且有必須加以修復的物件錯誤，就會在這個階段期間執行資料庫修復。|個別修復層級所報告的進度。<br /><br /> 每次修復完成，就會更新計數器。|  
-|DBCC ALLOC CHECK|在這個階段期間，會檢查資料庫中的配置結構。<br /><br /> 注意：DBCC CHECKALLOC 會執行相同的檢查。|不報告進度|  
+|DBCC ALLOC CHECK|在這個階段期間，會檢查資料庫中的配置結構。<br /><br /> 注意:DBCC CHECKALLOC 會執行相同的檢查。|不報告進度|  
 |DBCC ALLOC REPAIR|如果指定了 REPAIR_FAST、REPAIR_REBUILD 或 REPAIR_ALLOW_DATA_LOSS，而且有必須加以修復的配置錯誤，就會在這個階段期間執行資料庫修復。|不報告進度。|  
 |DBCC SYS CHECK|在這個階段期間，會檢查資料庫系統資料表。|資料庫頁面層級所報告的進度。<br /><br /> 每檢查 1000 個資料庫頁面，就會更新進度報告值。|  
 |DBCC SYS REPAIR|如果指定了 REPAIR_FAST、REPAIR_REBUILD 或 REPAIR_ALLOW_DATA_LOSS，而且有必須加以修復的系統資料表錯誤，就會在這個階段期間執行資料庫修復。|個別修復層級所報告的進度。<br /><br /> 每次修復完成，就會更新計數器。|  
-|DBCC SSB CHECK|在這個階段期間，會檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 物件。<br /><br /> 注意：當執行 DBCC CHECKTABLE 時，不會執行這個階段。|不報告進度。|  
-|DBCC CHECKCATALOG|在這個階段期間，會檢查資料庫目錄的一致性。<br /><br /> 注意：當執行 DBCC CHECKTABLE 時，不會執行這個階段。|不報告進度。|  
+|DBCC SSB CHECK|在這個階段期間，會檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 物件。<br /><br /> 注意:當執行 DBCC CHECKTABLE 時，不會執行這個階段。|不報告進度。|  
+|DBCC CHECKCATALOG|在這個階段期間，會檢查資料庫目錄的一致性。<br /><br /> 注意:當執行 DBCC CHECKTABLE 時，不會執行這個階段。|不報告進度。|  
 |DBCC IVIEW CHECK|在這個階段中，會檢查資料庫中任何索引檢視的邏輯一致性。|在所檢查的個別資料庫檢視層級報告的進度。|  
   
 ## <a name="informational-statements"></a>資訊陳述式  

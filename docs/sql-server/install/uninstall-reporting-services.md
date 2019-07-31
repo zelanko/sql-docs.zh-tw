@@ -10,12 +10,12 @@ ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cabfc21ea16192eb7a397b72c4075cedc0a8ea26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b4f227270b201e40b22deb9e3d060407bc0bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126007"
 ---
 # <a name="uninstall-reporting-services"></a>解除安裝 Reporting Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "47772696"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是執行個體功能，因此不會列在 Windows [控制台] 的 [程式和功能] 中。 若要解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式：  
   
-1.  在 Windows [控制台] 中，按一下 **[程式和功能]**。  
+1.  在 Windows [控制台] 中，按一下 **[程式和功能]** 。  
   
-2.  在 [程式和功能] 中，選取 [Microsoft SQL Server 2016]。  
+2.  在 [程式和功能]  中，選取 [Microsoft SQL Server 2016]  。  
   
 3.  在解除安裝精靈中，選取包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體功能 **RS**的執行個體。  
   

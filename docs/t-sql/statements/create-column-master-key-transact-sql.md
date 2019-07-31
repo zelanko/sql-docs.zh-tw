@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 17e717fd999109390c001bdab9aeee5629c1a119
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061059"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -166,7 +165,7 @@ ENCLAVE_COMPUTATIONS
 指定資料行主要金鑰已啟用記憶體保護區。 您可以將所有使用資料行主要金鑰加密的資料行加密金鑰與伺服器端安全記憶體保護區共用，並將它們用於記憶體保護區內部的計算。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
 *signature*  
-二進位常值，它是數位簽署「金鑰路徑」和使用資料行主要金鑰之 ENCLAVE_COMPUTATIONS 設定的結果。 簽章會反映是否已指定 ENCLAVE_COMPUTATIONS。 簽章會保護所簽署的值不會受到未經授權的使用者所改變。 已啟用 Always Encrypted 的用戶端驅動程式會驗證簽章，並在簽章無效時，傳回錯誤給應用程式。 簽章需使用用戶端工具予以產生。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+二進位常值，它是數位簽署「金鑰路徑」  和使用資料行主要金鑰之 ENCLAVE_COMPUTATIONS 設定的結果。 簽章會反映是否已指定 ENCLAVE_COMPUTATIONS。 簽章會保護所簽署的值不會受到未經授權的使用者所改變。 已啟用 Always Encrypted 的用戶端驅動程式會驗證簽章，並在簽章無效時，傳回錯誤給應用程式。 簽章需使用用戶端工具予以產生。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
   
   
 ## <a name="remarks"></a>Remarks  
@@ -175,7 +174,7 @@ ENCLAVE_COMPUTATIONS
 
 
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **ALTER ANY COLUMN MASTER KEY** 權限。  
   
 ## <a name="examples"></a>範例  

@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044730"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在無仲裁情況下強制啟動 WSFC 叢集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何在沒有仲裁的情況下強制啟動 Windows Server 容錯移轉叢集 (WSFC) 叢集節點。  在災害復原和多重子網路案例中，可能需要這個方式才能針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體來復原資料及完整重新建立高可用性。  
   
--   **開始之前：**[建議](#Recommendations)、[安全性](#Security)  
+-   **開始之前：** [建議](#Recommendations)、[安全性](#Security)  
   
--   **使用下列項目在沒有仲裁的情況下強制啟動叢集︰**[使用容錯移轉叢集管理員](#FailoverClusterManagerProcedure)、[使用 PowerShell](#PowerShellProcedure)、[使用 Net.exe](#CommandPromptProcedure)  
+-   **在無仲裁的情況下，使用下列項目強制啟動叢集：** [使用容錯移轉叢集管理員](#FailoverClusterManagerProcedure)、[使用 Powershell](#PowerShellProcedure)、[使用 Net.exe](#CommandPromptProcedure)  
   
--   **後續操作：**[在沒有仲裁的情況下強制啟動叢集之後](#FollowUp)  
+-   **後續操作：** [後續操作：在沒有仲裁的情況下強制啟動叢集之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -44,11 +43,11 @@ ms.locfileid: "52520231"
   
 1.  開啟容錯移轉叢集管理員，並連接到所要的叢集節點來強制連線。  
   
-2.  在 [動作] 窗格中，按一下 [強制啟動叢集]，然後按一下 [是 - 強制啟動我的叢集]。  
+2.  在 [動作]  窗格中，按一下 [強制啟動叢集]  ，然後按一下 [是 - 強制啟動我的叢集]  。  
   
 3.  在左窗格的 **[容錯移轉叢集管理員]** 樹狀目錄中，按一下叢集名稱。  
   
-4.  在摘要窗格中，確認目前 **[仲裁設定]** 值為  **[警告: 叢集正在以 ForceQuorum 狀態執行]**。  
+4.  在 [摘要] 窗格中，確認目前 [仲裁設定]  值為：**警告：叢集正以 ForceQuorum 狀態執行**。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 Powershell  
   

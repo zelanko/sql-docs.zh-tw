@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114796"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 物件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,11 +60,11 @@ DENY <permission> [ ,...n ] ON
  ALL  
  拒絕 ALL 不會拒絕所有可能的權限。 拒絕 ALL 相當於拒絕所有適用於指定物件的 ANSI-92 權限。 ALL 有多種意義，如下所示：  
   
- - 純量函數權限：EXECUTE、REFERENCES。  
- - 資料表值函數權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - 純量函式權限：EXECUTE、REFERENCES。  
+ - 資料表值函式權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
  - 預存程序權限：EXECUTE。  
  - 資料表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
- - 檢視表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - 檢視權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
 PRIVILEGES  
  為符合 ANSI-92 而包含這個項目。 不會變更 ALL 的行為。  
@@ -77,7 +76,7 @@ PRIVILEGES
 >  資料表層級的 DENY 不會優先於資料行層級的 GRANT。 保留權限階層中這項不一致的目的，是為了與舊版相容。  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- 指定要拒絕其權限的物件。 若指定 *schema_name*，則 OBJECT 片語為選擇性。 若使用 OBJECT 片語，則範圍限定詞 (**::**) 為必要項目。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 (**.**) 為必要項目。  
+ 指定要拒絕其權限的物件。 若指定 *schema_name*，則 OBJECT 片語為選擇性。 若使用 OBJECT 片語，則範圍限定詞 ( **::** ) 為必要項目。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 ( **.** ) 為必要項目。  
   
  TO \<database_principal>  
  指定要拒絕其權限的主體。  
@@ -132,7 +131,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要物件的 CONTROL 權限。  
   
  如果是使用 AS 子句，指定的主體必須擁有要拒絕其權限的物件。  

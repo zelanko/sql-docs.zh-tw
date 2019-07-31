@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140896"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE 物件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +62,15 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  撤銷 ALL 不會撤銷所有可能的權限。 撤銷 ALL 相當於撤銷所有適用於指定物件的 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 權限。 ALL 有多種意義，如下所示：  
   
- 純量函數權限：EXECUTE、REFERENCES。  
+ 純量函式權限：EXECUTE、REFERENCES。  
   
- 資料表值函數權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ 資料表值函式權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
  預存程序權限：EXECUTE。  
   
  資料表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
- 檢視表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ 檢視權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
  PRIVILEGES  
  為符合 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 而包含這個項目。 不會變更 ALL 的行為。  
@@ -142,7 +141,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要物件的 CONTROL 權限。  
   
  如果使用 AS 子句，指定的主體必須擁有要撤銷其權限的物件。  

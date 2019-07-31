@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 00b6ddce8d5c69e16913290b0300fc6828352147
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039127"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ DBCC FREESYSTEMCACHE
 ALL 會指定所有支援的快取。  
 _pool\_name_ 會指定 Resource Governor 集區快取。 僅會釋放與此集區相關的項目。  
   
-MARK_IN_USE_FOR_REMOVAL   
+MARK_IN_USE_FOR_REMOVAL  
 不再使用目前所用的項目之後，分別從其對應的快取中，以非同步的方式釋出這些項目。 在 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL 執行之後，於快取中建立的新項目皆不受影響。  
   
 NO_INFOMSGS  
@@ -65,7 +64,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 DBCC FREESYSTEMCACHE 會傳回：「DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要伺服器的 ALTER SERVER STATE 權限。
   
 ## <a name="examples"></a>範例  

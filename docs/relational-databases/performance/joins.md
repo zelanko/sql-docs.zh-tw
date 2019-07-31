@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ffde66939be441877add9b5a3ee4c843b031bc3
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 29fa0dcc89cd8e1ad88abcf9974884b723b7a64e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051953"
 ---
 # <a name="joins-sql-server"></a>聯結 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -110,9 +109,9 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 ## <a name="nested_loops"></a> 認識巢狀迴圈聯結
 如果一個聯結輸入相當小 (少於 10 個資料列)，但另一個聯結輸入相當大而且在聯結資料行建有索引的話，索引巢狀迴圈是最快速的聯結作業，因為它們需要的 I/O 最少，需要的比較也最少。 
 
-巢狀迴圈聯結 (也稱為「巢狀反覆運算」) 會使用一個聯結輸入作為外部輸入資料表 (在圖形化執行計劃中顯示為上方輸入)，另一個聯結作為內部 (下方) 輸入資料表。 外部迴圈會逐列消耗外部輸入資料表。 內部迴圈 (針對外部每一列各執行一次) 會在內部輸入資料表中搜尋符合的資料列。   
+巢狀迴圈聯結 (也稱為「巢狀反覆運算」  ) 會使用一個聯結輸入作為外部輸入資料表 (在圖形化執行計劃中顯示為上方輸入)，另一個聯結作為內部 (下方) 輸入資料表。 外部迴圈會逐列消耗外部輸入資料表。 內部迴圈 (針對外部每一列各執行一次) 會在內部輸入資料表中搜尋符合的資料列。   
 
-在最簡單的情況下，搜尋會掃描整個資料表或索引；這稱為「單純巢狀迴圈聯結」。 如果搜尋會利用索引，就稱為「索引巢狀迴圈聯結」。 如果索引是隨著查詢計劃一起建立 (並且在查詢完成時終結)，則稱為「暫存索引巢狀迴圈聯結」。 「查詢最佳化工具」會將所有這些變化都列入考慮。   
+在最簡單的情況下，搜尋會掃描整個資料表或索引；這稱為「單純巢狀迴圈聯結」  。 如果搜尋會利用索引，就稱為「索引巢狀迴圈聯結」  。 如果索引是隨著查詢計劃一起建立 (並且在查詢完成時終結)，則稱為「暫存索引巢狀迴圈聯結」  。 「查詢最佳化工具」會將所有這些變化都列入考慮。   
 
 如果外部輸入相當小，內部輸入已預先建立索引而且很大的話，巢狀迴圈聯結會特別有效率。 在許多小型交易中 (如只影響一小組資料列的交易)，索引巢狀迴圈聯結比合併聯結與雜湊聯結要好得多。 然而在大型查詢中，巢狀迴圈聯結多半不是最佳選擇。    
 

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f2d073be-d9a1-4837-8a38-028d3e3403bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b652864c93127281bacbc26ab5f5e251afea6bc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d294bb44a5b8fc7ab4d0d9860c8eaf766f6b87b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908541"
 ---
 # <a name="mssqlserver32044"></a>MSSQLSERVER_32044
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47613556"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|32044|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -34,7 +33,7 @@ ms.locfileid: "47613556"
 |訊息文字|已發出 [鏡像認可負擔] 的警示。 目前的值 '%d' 已超出臨界值 '%d'。|  
   
 ## <a name="explanation"></a>說明  
-這個資料庫鏡像事件是在主體伺服器執行個體上發出，用來指示由於資料庫鏡像，彙總認可等待時間已達到或超出使用者指定的臨界值。 等待時間是交易數目和各交易時間的乘積。 例如，下列情況都會產生 1000 毫秒等待時間：1000 筆交易 * 1 毫秒，以及 1 筆交易 \* 1000 毫秒。 交易計數激增、傳送記錄延遲，或是排清鏡像伺服器執行個體上的記錄延遲，都可能會使認可等待時間增加。  
+這個資料庫鏡像事件是在主體伺服器執行個體上發出，用來指示由於資料庫鏡像，彙總認可等待時間已達到或超出使用者指定的臨界值。 等待時間是交易數目和各交易時間的乘積。 例如，下列情況都會產生 1000 毫秒的等待時間：1000 筆交易 * 1 毫秒，以及 1 筆交易 \* 1000 毫秒。 交易計數激增、傳送記錄延遲，或是排清鏡像伺服器執行個體上的記錄延遲，都可能會使認可等待時間增加。  
   
 鏡像認可負擔量是一項效能標準，可協助您評估目前同步作業的效能衝擊。 這項標準只有在高安全性模式中才會相關。 由於高安全性模式是同步的，主體伺服器執行個體會在傳送記錄給鏡像伺服器執行個體之後，等待認可交易，直到接到鏡像伺服器執行個體已將記錄寫入磁碟的確認為止。 在等待還原至鏡像資料庫的同時，記錄會一直保留在鏡像伺服器執行個體的磁碟上。  
   

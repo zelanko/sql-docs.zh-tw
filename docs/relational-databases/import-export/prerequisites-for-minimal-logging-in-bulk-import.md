@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946568"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307640"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64946568"
   
 -   資料表未被複寫。  
   
--   已指定資料表鎖定 (使用 TABLOCK)。 對於具有叢集資料行存放區索引的資料表，您不需要 TABLOCK 進行最低限度記錄。  此外，只有在針對載入已壓縮的資料列群組的資料進行最低限度記錄時，需要 102400 或更高的 batchsize。  
+-   已指定資料表鎖定 (使用 TABLOCK)。 對於具有叢集資料行存放區索引的資料表，您不需要 TABLOCK 進行最低限度記錄。  此外，只有在針對載入已壓縮資料列群組的資料進行最低限度記錄時，需要 102400 或更高的 batchsize。  
   
     > [!NOTE]  
     >  雖然在最低限度記錄的大量匯入作業期間，交易記錄檔中不會記錄資料插入，但每當有新的範圍配置到資料表時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍會記錄範圍配置。  
@@ -50,17 +49,15 @@ ms.locfileid: "64946568"
   
 -   若資料表沒有叢集索引，但有一或多個非叢集索引，則資料頁會一律使用最低限度記錄。 但索引頁的記錄方式，則取決於資料表是否空白：  
   
-    -   若資料表空白，則索引頁會使用最低限度記錄。  
+    -   若資料表空白，則索引頁會使用最低限度記錄。  若一開始您以空白資料表與多個批次來進行大量匯入資料，則在第一個批次中，索引頁與資料頁都會使用最低限度記錄，但從第二個批次開始，就只有資料頁會使用最低限度記錄。 
   
-    -   若資料表不是空白，則索引頁會使用完整記錄。  
+    -   若資料表不是空白，則索引頁會使用完整記錄。    
+
+-   若資料表有叢集索引但為空白，則資料頁與索引頁都會使用最低限度記錄。 相對地，若資料表有 B 型樹狀結構叢集索引且並非空白，則不論復原模式為何，資料頁與索引頁都會使用完整記錄。 若一開始您以空白資料表資料列存放區資料表與批次來進行大量匯入資料，則在第一個批次中，索引頁與資料頁都會使用最低限度記錄，但從第二個批次開始，只有資料頁會使用大量記錄。
+
+- 如需叢集資料行存放區索引 (CCI) 的資訊，請參閱[資料行存放區索引資料載入指導](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups)。
   
-        > [!NOTE]  
-        >  若一開始您以空白資料表與多個批次來進行大量匯入資料，則在第一個批次中，索引頁與資料頁都會使用最低限度記錄，但從第二個批次開始，就只有資料頁會使用最低限度記錄。  
-  
--   若資料表有叢集索引但為空白，則資料頁與索引頁都會使用最低限度記錄。 相對地，若資料表有 B 型樹狀結構叢集索引且並非空白，則不論復原模式為何，資料頁與索引頁都會使用完整記錄。 對於具有叢集資料行存放區索引的資料表，載入至已壓縮的資料列群組的資料一律會進行最低限度記錄，無論資料表是否為空白或是當 batchsize >= 102400 時。  
-  
-    > [!NOTE]  
-    >  若一開始您以空白資料表資料列存放區資料表與批次來進行大量匯入資料，則在第一個批次中，索引頁與資料頁都會使用最低限度記錄，但從第二個批次開始，只有資料頁會使用大量記錄。  
+
   
 > [!NOTE]  
 >  啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 BULK INSERT 作業。  

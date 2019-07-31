@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57d421893f8113b4657290fe6aa8ed4b6da37bf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03b231b1a1f90703a26268e97401d39e3f685262
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128130"
 ---
 # <a name="errors-and-events-reference-replication"></a>錯誤和事件參考 (複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "47827606"
 |MSSQL_ENG021642。 請參閱 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)。|異質性發行者需要已連結伺服器。 已經存在名稱為 '%s' 的連結伺服器。 請移除連結的伺服器或選擇其他發行者名稱。|  
 |MSSQL_ENG021663。 請參閱 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)。|找不到有效的來源資料表 [%s].[%s] 主索引鍵。|  
 |MSSQL_ENG021684。 請參閱 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)。|與 Oracle 發行者 '%s' 管理者登入相關聯的權限不足。|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' 必須是有效的 Windows 登入，其格式為：'MACHINE\Login' 或 'DOMAIN\Login'。 請參閱 '%s' 的文件集。|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' 必須是有效的 Windows 登入，格式為：'MACHINE\Login' 或 'DOMAIN\Login'。 請參閱 '%s' 的文件集。|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|在繼續進行之前，必須先經由 '%s' 將 '%s' 代理程式作業加入。 請參閱 '%s' 的文件集。|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|該處理無法執行 '%1' (在 '%2')。|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|合併處理無法變更生成集記錄 '%1'。 執行疑難排解時，以詳細資訊記錄重新啟動同步處理，並指定要寫入的輸出檔案。|  

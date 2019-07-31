@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: edd8ea9a11a06182dced486ed1b03f1b916e15e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903122"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47793256"
 |設計介面|顯示其他介面元素。 若要加入元素，請以滑鼠右鍵按一下設計介面。|  
 |![拓撲中的第一個節點](../../relational-databases/replication/media/p2pwizard-firstnode.gif "拓撲中的第一個節點")|拓撲中的原始節點。 系統會使用原始節點的發行集資料庫副本來初始化新的節點。|  
 |![我們擁有完整資訊的節點](../../relational-databases/replication/media/p2pwizard-complete.gif "我們擁有完整資訊的節點")|正在執行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本之執行個體的節點 (複寫具有完整資訊)。 若要指定組態選項，請以滑鼠右鍵按一下節點。|  
-|![我們沒有完整資訊的節點](../../relational-databases/replication/media/p2pwizard-incomplete.gif "我們沒有完整資訊的節點")|複寫具有不完整資訊的節點。 若要指定組態選項，請以滑鼠右鍵按一下節點。<br /><br /> 由於下列其中一項原因，所以複寫具有不完整的資訊：<br /><br /> -節點正在執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]執行個體 (無法儲存精靈所需的所有中繼資料)。<br /><br /> -節點正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更新版本，但是複寫無法從節點中擷取訂閱資訊。 若要疑難排解這個情況：<br /><br /> 請確定位於節點的資料庫處於線上狀態，而且您可以與連接至節點的散發代理程式使用相同的認證來連接至節點。<br /><br /> 請確定記錄讀取器代理程式和連接至節點的所有散發代理程式都正在執行。<br /><br /> 請確定重新整理逾時的設定夠高，足以蒐集所有拓撲資訊。 若要設定逾時，請以滑鼠右鍵按一下設計介面，然後按一下 **[設定重新整理逾時]**。|  
+|![我們沒有完整資訊的節點](../../relational-databases/replication/media/p2pwizard-incomplete.gif "我們沒有完整資訊的節點")|複寫具有不完整資訊的節點。 若要指定組態選項，請以滑鼠右鍵按一下節點。<br /><br /> 由於下列其中一項原因，所以複寫具有不完整的資訊：<br /><br /> -節點正在執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]執行個體 (無法儲存精靈所需的所有中繼資料)。<br /><br /> -節點正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更新版本，但是複寫無法從節點中擷取訂閱資訊。 若要疑難排解這個情況：<br /><br /> 請確定位於節點的資料庫處於線上狀態，而且您可以與連接至節點的散發代理程式使用相同的認證來連接至節點。<br /><br /> 請確定記錄讀取器代理程式和連接至節點的所有散發代理程式都正在執行。<br /><br /> 請確定重新整理逾時的設定夠高，足以蒐集所有拓撲資訊。 若要設定逾時，請以滑鼠右鍵按一下設計介面，然後按一下 **[設定重新整理逾時]** 。|  
 |含有箭頭的灰線|兩個節點之間的連接。 若要加入連接，請以滑鼠右鍵按一下您想要連接的其中一個節點。 若要移除連接，請以滑鼠右鍵按一下該連接。<br /><br /> 如果此線條只有單一箭頭，就表示複寫具有其中一個節點的不完整資訊。|  
   
 ### <a name="options-for-the-design-surface"></a>設計介面的選項  
@@ -64,7 +63,7 @@ ms.locfileid: "47793256"
   
 ### <a name="options-for-each-node"></a>每個節點的選項  
  **加入新的對等連接**  
- 在兩個節點之間加入連接。 例如，如果您在節點 A 與節點 B 之間加入連接，複寫就會加入兩個訂閱：第一個訂閱可讓節點 A 收到位於節點 B 之發行集的變更，而第二個訂閱可讓節點 B 收到位於節點 A 之發行集的變更。  
+ 在兩個節點之間加入連接。 例如，如果您在節點 A 與節點 B 之間新增連線，複寫就會新增兩個訂閱：第一個訂閱可讓節點 A 收到位於節點 B 的發行集變更，而第二個訂閱可讓節點 B 收到位於節點 A 的發行集變更。  
   
  **刪除對等節點**  
  從拓撲中移除節點。 例如，如果您移除節點 C，就會一併移除位於該節點的發行集。 此外，系統也會移除節點 A 與節點 C 之間的訂閱，以及節點 B 與節點 C 之間的訂閱。 但是，系統不會刪除位於節點 C 的資料庫，而且不會停用發行和散發功能。  

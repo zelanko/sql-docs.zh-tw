@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1273f4fc87728aa30cec9bc51cb119fc2c51551
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 3fb9ce4696ffea2c345eeaeca769dda6548a9ebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071312"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -46,12 +45,12 @@ ms.locfileid: "56828148"
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
 
-## <a name="sql-server"></a>[SQL Server]
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>語法
 
@@ -95,24 +94,24 @@ ALTER LOGIN login_name
 
 *login_name* 指定正在變更的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 網域登入必須加上方括號，使用 [domain\user] 格式。
 
-ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。
+ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，且依然可以模擬。
 
-PASSWORD **='**_password_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。
+PASSWORD **='** _password_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。
 
-PASSWORD **=**_hashed\_password_ 僅適用於 HASHED 關鍵字。 指定要建立之登入的密碼雜湊值。
+PASSWORD **=** _hashed\_password_ 僅適用於 HASHED 關鍵字。 指定要建立之登入的密碼雜湊值。
 
 > [!IMPORTANT]
 > 當登入 (或自主資料庫使用者) 連接並通過驗證時，此連接就會快取有關登入的識別資訊。 若為 Windows 驗證登入，這就包括 Windows 群組中成員資格的相關資訊。 只要維持連接，登入的識別就會維持驗證狀態。 若要強制變更識別 (例如重設密碼或變更 Windows 群組成員資格)，登入必須先登出驗證授權單位 (Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，然後重新登入。 **系統管理員 (sysadmin)** 固定伺服器角色的成員或任何擁有 **ALTER ANY CONNECTION** 權限的登入都可以使用 **KILL** 命令來結束連接並強制登入重新連接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以在開啟 [物件總管] 視窗和 [查詢編輯器] 視窗的多個連接時，重複使用連接資訊。 關閉所有連接以強制重新連接。
 
 HASHED 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定在 PASSWORD 引數之後輸入的密碼已雜湊處理。 如果未選取這個選項，則密碼要儲存至資料庫之前會先雜湊處理。 只有針對兩部伺服器之間的登入同步處理，才應使用這個選項。 請勿使用 HASHED 選項進行例行性地變更密碼。
 
-OLD_PASSWORD **='**_oldpassword_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
+OLD_PASSWORD **='** _oldpassword_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
 
 MUST_CHANGE 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果包含這個選項，則在第一次使用變更後的登入時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提示您輸入更新後的密碼。
 
-DEFAULT_DATABASE **=**_database_ 指定要指派給登入的預設資料庫。
+DEFAULT_DATABASE **=** _database_ 指定要指派給登入的預設資料庫。
 
-DEFAULT_LANGUAGE **=**_language_ 指定要指派給登入的預設語言。 所有 SQL Database 登入的預設語言都是英文且無法變更。 在 Linux 上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上 `sa` 登入的預設語言是英文，但是無法變更它。
+DEFAULT_LANGUAGE **=** _language_ 指定要指派給登入的預設語言。 所有 SQL Database 登入的預設語言都是英文且無法變更。 在 Linux 上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上 `sa` 登入的預設語言是英文，但是無法變更它。
 
 NAME = *login_name* 正在重新命名的登入新名稱。 如果這是 Windows 登入，則對應到新名稱的 Windows 主體 SID 必須與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之登入相關聯的 SID 相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的新名稱，不能包含反斜線字元 (\\)。
 
@@ -157,7 +156,7 @@ DROP CREDENTIAL 將可延伸金鑰管理 (EKM) 提供者認證從登入移除。
   
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要 ALTER ANY LOGIN 權限。
 
@@ -273,7 +272,7 @@ GO
 
 ## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 單一資料庫/彈性集區
 
-## <a name="sql-server"></a>[SQL Server]
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>語法
 
@@ -302,16 +301,16 @@ ALTER LOGIN login_name
 
 *login_name* 指定正在變更的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 網域登入必須加上方括號，使用 [domain\user] 格式。
 
-ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。
+ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，且依然可以模擬。
 
-PASSWORD **='**_password_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。
+PASSWORD **='** _password_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。
 
 持續作用中的 SQL Database 連線至少每 10 小時就需要授權 (由「資料庫引擎」執行)。 「資料庫引擎」會嘗試使用最初提交的密碼重新授權，而且不需要使用者輸入。 基於效能考量，當密碼在 SQL Database 中重設時時，不會重新驗證連線，即使連線因為連線共用而重設。 這和內部部署 SQL Server 的行為不同。 如果自從連線初始授權後密碼已經變更，則必須中斷該連線，然後使用新密碼建立新連線。 具有 KILL DATABASE CONNECTION 權限的使用者可以使用 KILL 命令明確地中斷對 SQL Database 的連線。 如需詳細資訊，請參閱 [KILL](../../t-sql/language-elements/kill-transact-sql.md)。
 
 > [!IMPORTANT]
 > 當登入 (或自主資料庫使用者) 連接並通過驗證時，此連接就會快取有關登入的識別資訊。 若為 Windows 驗證登入，這就包括 Windows 群組中成員資格的相關資訊。 只要維持連接，登入的識別就會維持驗證狀態。 若要強制變更識別 (例如重設密碼或變更 Windows 群組成員資格)，登入必須先登出驗證授權單位 (Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，然後重新登入。 **系統管理員 (sysadmin)** 固定伺服器角色的成員或任何擁有 **ALTER ANY CONNECTION** 權限的登入都可以使用 **KILL** 命令來結束連接並強制登入重新連接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以在開啟 [物件總管] 視窗和 [查詢編輯器] 視窗的多個連接時，重複使用連接資訊。 關閉所有連接以強制重新連接。
 
-OLD_PASSWORD **='**_oldpassword_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
+OLD_PASSWORD **='** _oldpassword_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
 
 NAME = *login_name* 正在重新命名的登入新名稱。 如果這是 Windows 登入，則對應到新名稱的 Windows 主體 SID 必須與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之登入相關聯的 SID 相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的新名稱，不能包含反斜線字元 (\\)。
 
@@ -319,7 +318,7 @@ NAME = *login_name* 正在重新命名的登入新名稱。 如果這是 Windows
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要 ALTER ANY LOGIN 權限。
 
@@ -496,23 +495,23 @@ ALTER LOGIN login_name
 
 *login_name* 指定正在變更的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 Azure AD 登入必須指定為 user@domain。 例如 john.smith@contoso.com，或指定為 Azure AD 群組或應用程式名稱。 針對 Azure AD 登入，*login_name* 必須對應至 master 資料庫中建立的現有 Azure AD 登入。
 
-ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。
+ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，且依然可以模擬。
 
-DEFAULT_DATABASE **=**_database_ 指定要指派給登入的預設資料庫。
+DEFAULT_DATABASE **=** _database_ 指定要指派給登入的預設資料庫。
 
-DEFAULT_LANGUAGE **=**_language_ 指定要指派給登入的預設語言。 所有 SQL Database 登入的預設語言都是英文且無法變更。 在 Linux 上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上 `sa` 登入的預設語言是英文，但是無法變更它。
+DEFAULT_LANGUAGE **=** _language_ 指定要指派給登入的預設語言。 所有 SQL Database 登入的預設語言都是英文且無法變更。 在 Linux 上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上 `sa` 登入的預設語言是英文，但是無法變更它。
 
 ### <a name="arguments-applicable-only-to-sql-logins"></a>僅適用於 SQL 登入的引數
 
-PASSWORD **='**_password_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。 密碼也不適合搭配外部登入使用，例如 Azure AD 登入。
+PASSWORD **='** _password_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。 密碼也不適合搭配外部登入使用，例如 Azure AD 登入。
 
 持續作用中的 SQL Database 連線至少每 10 小時就需要授權 (由「資料庫引擎」執行)。 「資料庫引擎」會嘗試使用最初提交的密碼重新授權，而且不需要使用者輸入。 基於效能考量，當密碼在 SQL Database 中重設時時，不會重新驗證連線，即使連線因為連線共用而重設。 這和內部部署 SQL Server 的行為不同。 如果自從連線初始授權後密碼已經變更，則必須中斷該連線，然後使用新密碼建立新連線。 具有 KILL DATABASE CONNECTION 權限的使用者可以使用 KILL 命令明確地中斷對 SQL Database 的連線。 如需詳細資訊，請參閱 [KILL](../../t-sql/language-elements/kill-transact-sql.md)。
 
-PASSWORD **=**_hashed\_password_ 僅適用於 HASHED 關鍵字。 指定要建立之登入的密碼雜湊值。
+PASSWORD **=** _hashed\_password_ 僅適用於 HASHED 關鍵字。 指定要建立之登入的密碼雜湊值。
 
 HASHED 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定在 PASSWORD 引數之後輸入的密碼已雜湊處理。 如果未選取這個選項，則密碼要儲存至資料庫之前會先雜湊處理。 只有針對兩部伺服器之間的登入同步處理，才應使用這個選項。 請勿使用 HASHED 選項進行例行性地變更密碼。
 
-OLD_PASSWORD **='**_oldpassword_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
+OLD_PASSWORD **='** _oldpassword_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
 
 MUST_CHANGE<br>
 只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果包含這個選項，則在第一次使用變更後的登入時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提示您輸入更新後的密碼。
@@ -558,7 +557,7 @@ DROP CREDENTIAL 將可延伸金鑰管理 (EKM) 提供者認證從登入移除。
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要 ALTER ANY LOGIN 權限。
 
@@ -709,16 +708,16 @@ ALTER LOGIN login_name
 
 *login_name* 指定正在變更的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 網域登入必須加上方括號，使用 [domain\user] 格式。
 
-ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。
+ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，且依然可以模擬。
 
-PASSWORD **='**_password_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。
+PASSWORD **='** _password_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。
 
 持續作用中的 SQL Database 連線至少每 10 小時就需要授權 (由「資料庫引擎」執行)。 「資料庫引擎」會嘗試使用最初提交的密碼重新授權，而且不需要使用者輸入。 基於效能考量，當密碼在 SQL Database 中重設時時，不會重新驗證連線，即使連線因為連線共用而重設。 這和內部部署 SQL Server 的行為不同。 如果自從連線初始授權後密碼已經變更，則必須中斷該連線，然後使用新密碼建立新連線。 具有 KILL DATABASE CONNECTION 權限的使用者可以使用 KILL 命令明確地中斷對 SQL Database 的連線。 如需詳細資訊，請參閱 [KILL](../../t-sql/language-elements/kill-transact-sql.md)。
 
 > [!IMPORTANT]
 > 當登入 (或自主資料庫使用者) 連接並通過驗證時，此連接就會快取有關登入的識別資訊。 若為 Windows 驗證登入，這就包括 Windows 群組中成員資格的相關資訊。 只要維持連接，登入的識別就會維持驗證狀態。 若要強制變更識別 (例如重設密碼或變更 Windows 群組成員資格)，登入必須先登出驗證授權單位 (Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，然後重新登入。 **系統管理員 (sysadmin)** 固定伺服器角色的成員或任何擁有 **ALTER ANY CONNECTION** 權限的登入都可以使用 **KILL** 命令來結束連接並強制登入重新連接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以在開啟 [物件總管] 視窗和 [查詢編輯器] 視窗的多個連接時，重複使用連接資訊。 關閉所有連接以強制重新連接。
 
-OLD_PASSWORD **='**_oldpassword_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
+OLD_PASSWORD **='** _oldpassword_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
 
 NAME = *login_name* 正在重新命名的登入新名稱。 如果這是 Windows 登入，則對應到新名稱的 Windows 主體 SID 必須與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之登入相關聯的 SID 相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的新名稱，不能包含反斜線字元 (\\)。
 
@@ -726,7 +725,7 @@ NAME = *login_name* 正在重新命名的登入新名稱。 如果這是 Windows
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要 ALTER ANY LOGIN 權限。
 
@@ -868,14 +867,14 @@ ALTER LOGIN login_name
 
 *login_name* 指定正在變更的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 網域登入必須加上方括號，使用 [domain\user] 格式。
 
-ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。
+ENABLE | DISABLE 啟用或停用此登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，且依然可以模擬。
 
-PASSWORD **='**_password_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。
+PASSWORD **='** _password_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。
 
 > [!IMPORTANT]
 > 當登入 (或自主資料庫使用者) 連接並通過驗證時，此連接就會快取有關登入的識別資訊。 若為 Windows 驗證登入，這就包括 Windows 群組中成員資格的相關資訊。 只要維持連接，登入的識別就會維持驗證狀態。 若要強制變更識別 (例如重設密碼或變更 Windows 群組成員資格)，登入必須先登出驗證授權單位 (Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，然後重新登入。 **系統管理員 (sysadmin)** 固定伺服器角色的成員或任何擁有 **ALTER ANY CONNECTION** 權限的登入都可以使用 **KILL** 命令來結束連接並強制登入重新連接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以在開啟 [物件總管] 視窗和 [查詢編輯器] 視窗的多個連接時，重複使用連接資訊。 關閉所有連接以強制重新連接。
 
-OLD_PASSWORD **='**_oldpassword_**'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
+OLD_PASSWORD **='** _oldpassword_ **'** 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。
 
 MUST_CHANGE 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果包含這個選項，則在第一次使用變更後的登入時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提示您輸入更新後的密碼。
 
@@ -912,7 +911,7 @@ UNLOCK 僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] �
 
 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要 ALTER ANY LOGIN 權限。
 

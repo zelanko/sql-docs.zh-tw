@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 192627d1050d7c8c87d99231770ba6bb957ac8c0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 240b21b204453eb6e3645aceb3045cd9048dd84b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083027"
 ---
 # <a name="monitor-replication-agents"></a>監視複寫代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "54123999"
   
     -   佇列讀取器代理程式  
   
-     透過下列索引標籤，可存取與這些代理程式相關聯的資訊和工作：[代理程式] (適用於每個「發行者」和發行集) 和 [警告] (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     透過下列索引標籤，可存取與這些代理程式建立關聯的資訊和工作：[代理程式]  (適用於每個「發行者」和發行集) 和 [警告]  (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   下列代理程式與複寫監視器中的訂閱相關聯：  
   
@@ -47,7 +46,7 @@ ms.locfileid: "54123999"
   
     -   [合併代理程式]  
   
-     透過下列索引標籤，可存取與這些代理程式相關聯的資訊和工作：[訂閱監看清單] (適用於每個「發行者」) 或 [所有訂閱] 索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     透過下列索引標籤，可存取與這些代理程式建立關聯的資訊和工作：[訂閱監看清單]  (適用於每個「發行者」) 或 [所有訂閱]  索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>使用 SQL Server Management Studio 監視複寫代理程式  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 提供下列用於監視複寫代理程式的對話方塊：  
@@ -66,7 +65,7 @@ ms.locfileid: "54123999"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
   
-3.  以滑鼠右鍵按一下發行集，然後按一下 **[檢視記錄讀取器代理程式的狀態]** 或 **[檢視快照集代理程式的狀態]**。  
+3.  以滑鼠右鍵按一下發行集，然後按一下 **[檢視記錄讀取器代理程式的狀態]** 或 **[檢視快照集代理程式的狀態]** 。  
   
 4.  在 **[檢視記錄讀取器代理程式的狀態]** 或 **[檢視快照集代理程式的狀態]** 對話方塊中：  
   
@@ -74,7 +73,7 @@ ms.locfileid: "54123999"
   
     -   如有必要，啟動或停止代理程式。  
   
-    -   按一下 **[監視器]** 以啟動 **[複寫監視器]**。  
+    -   按一下 **[監視器]** 以啟動 **[複寫監視器]** 。  
   
 5.  按一下 [ **關閉**]。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "54123999"
   
 3.  展開要監視之訂閱的發行集。  
   
-4.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視同步處理的狀態]**。  
+4.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
   
 5.  在 **[檢視同步處理的狀態]** 對話方塊：  
   
@@ -94,9 +93,9 @@ ms.locfileid: "54123999"
   
     -   如有必要，啟動或停止代理程式。  
   
-    -   對於發送訂閱，按一下 **[監視器]** 以啟動 **[複寫監視器]**。  
+    -   對於發送訂閱，按一下 **[監視器]** 以啟動 **[複寫監視器]** 。  
   
-    -   對於提取訂閱，按一下 **[檢視作業記錄]** 以啟動 **[記錄檔檢視器]**，該檢視器會顯示代理程式記錄的輸出。  
+    -   對於提取訂閱，按一下 **[檢視作業記錄]** 以啟動 **[記錄檔檢視器]** ，該檢視器會顯示代理程式記錄的輸出。  
   
 6.  按一下 [ **關閉**]。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "54123999"
   
 2.  展開 **[複寫]** 資料夾，然後展開 **[本機訂閱]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要監視的訂閱，然後按一下 **[檢視同步處理的狀態]**。  
+3.  以滑鼠右鍵按一下您要監視的訂閱，然後按一下 **[檢視同步處理的狀態]** 。  
   
 4.  在 **[檢視同步處理的狀態]** 對話方塊：  
   
@@ -114,7 +113,7 @@ ms.locfileid: "54123999"
   
     -   如有必要，啟動或停止代理程式。  
   
-    -   按一下 **[檢視作業記錄]** 以啟動 **[記錄檔檢視器]**，該檢視器會顯示代理程式記錄的輸出。  
+    -   按一下 **[檢視作業記錄]** 以啟動 **[記錄檔檢視器]** ，該檢視器會顯示代理程式記錄的輸出。  
   
 5.  按一下 [ **關閉**]。  
   

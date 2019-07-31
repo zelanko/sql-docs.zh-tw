@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91a2e3a44ba68d280f52b35c3d62026455d4e615
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943418"
 ---
 # <a name="examples-using-auto-mode"></a>範例:使用 AUTO 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

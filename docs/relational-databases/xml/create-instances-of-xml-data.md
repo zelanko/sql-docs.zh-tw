@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ac472b720f8c4262b657c35e2c363bae73687ab
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112926"
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  如果未使用 *style* 參數或是將其值設為 0，在轉換 xml DT 執行個體時，將不會保留不重要的空白。 如需如何使用 CONVERT 運算子以及將字串資料轉換成 xmlDT 執行個體時其 *style* 參數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>範例將字串值轉換成具類型的 xml 並將它指派給資料行  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>範例將字串值轉換成具類型的 XML 並將它指派給資料行  
  下列範例將含有 XML 片段的字串變數轉換成 **xml** 資料類型，然後在 **xml** 類型資料行中予以儲存：  
   
 ```  
@@ -123,7 +122,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>範例將字串轉換成具類型的 xml 並將它指派給變數  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>範例將字串轉換成具類型的 XML 並將它指派給變數  
  在下列範例中，字串會轉換成 **xml** 類型，並受指派給 **xml** 的變數。  
   
 ```  

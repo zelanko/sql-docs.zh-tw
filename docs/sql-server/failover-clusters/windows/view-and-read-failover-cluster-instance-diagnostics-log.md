@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8979e3457250cbce7fe3dbe5992c84e786d3f7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904989"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server 資源 DLL 的所有重大錯誤和警告事件都會寫入 Windows 事件記錄檔。 SQL Server 的特定診斷資訊執行記錄檔是由 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序所擷取，並且會寫入 SQL Server 容錯移轉叢集診斷 (也稱為 *SQLDIAG* 記錄) 記錄檔。  
   
--   **開始之前**  [建議](#Recommendations)、 [安全性](#Security)  
+-   **開始之前：** [建議](#Recommendations)、[安全性](#Security)  
   
--   **使用下列項目，檢視診斷記錄：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要檢視診斷記錄，請使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **使用下列項目，設定診斷記錄設定：**[Transact-SQL](#TsqlConfigure)  
+-   **若要設定診斷記錄設定，請使用：** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -44,13 +43,13 @@ ms.locfileid: "47709696"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要檢視診斷記錄檔：**  
   
-1.  從 **[檔案]** 功能表中，依序選取 **[開啟]** 和 **[檔案]**，然後選擇想要檢視的診斷記錄檔。  
+1.  從 **[檔案]** 功能表中，依序選取 **[開啟]** 和 **[檔案]** ，然後選擇想要檢視的診斷記錄檔。  
   
 2.  事件在右窗格中會顯示為資料列，而且依預設只會顯示 **[name]** 和 **[timestamp]** 這兩個資料行。  
   
      這也會啟動 **[ExtendedEvents]** 功能表。  
   
-3.  若要查看其他資料行，請前往 **[ExtendedEvents]** 功能表，並選取 **[選擇資料行]**。  
+3.  若要查看其他資料行，請前往 **[ExtendedEvents]** 功能表，並選取 **[選擇資料行]** 。  
   
      隨即開啟對話方塊，內含可讓您選取資料行進行顯示的可用資料行。  
   

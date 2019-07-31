@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113705"
 ---
 # <a name="date-transact-sql"></a>日期 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -141,7 +140,7 @@ SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-若轉換成 **datetimeoffset(n)**，會複製日期，而時間會設定為 00:00.0000000 +00:00。 下列程式碼顯示將 `date` 值轉換成 `datetimeoffset(3)` 值的結果。
+若轉換成 **datetimeoffset(n)** ，會複製日期，而時間會設定為 00:00.0000000 +00:00。 下列程式碼顯示將 `date` 值轉換成 `datetimeoffset(3)` 值的結果。
   
 ```sql
 DECLARE @date date = '1912-10-25';  

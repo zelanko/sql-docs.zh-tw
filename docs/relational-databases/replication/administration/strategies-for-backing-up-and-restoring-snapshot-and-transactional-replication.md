@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948689"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>備份與還原快照式和異動複寫的策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -215,7 +214,7 @@ ms.locfileid: "54125268"
   
 9. 還原之後，您針對資料庫 **A** 中的每一個資料表指派的識別範圍也會在資料庫 **B** 中使用。請確保還原的資料庫 **B** 已接收到來自失敗資料庫 **B** 中已傳播至資料庫 **A** 和資料庫 **C** 的所有變更；然後為每個資料表的識別範圍重設種子資料。  
   
-    1.  在資料庫 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id**＞。 移至步驟 b。  
+    1.  在資料庫 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id** ＞。 移至步驟 b。  
   
     2.  依預設，「散發代理程式」設定為連續執行；因此 Token 應該會自動傳送到所有的節點。 如果散發代理程式並非以連續模式執行，請執行代理程式。 如需詳細資訊，請參閱[複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)或[啟動和停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。 移至步驟 c。  
   
@@ -231,7 +230,7 @@ ms.locfileid: "54125268"
   
     1.  停止點對點拓撲中已發行資料表上的所有活動。 移至步驟 b。  
   
-    2.  在資料庫 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id**＞。 移至步驟 c。  
+    2.  在資料庫 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id** ＞。 移至步驟 c。  
   
     3.  依預設，「散發代理程式」設定為連續執行；因此 Token 應該會自動傳送到所有的節點。 如果散發代理程式並非以連續模式執行，請執行代理程式。 移至步驟 d。  
   

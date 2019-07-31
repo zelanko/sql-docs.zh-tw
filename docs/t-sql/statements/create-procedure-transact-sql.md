@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006530"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,7 +156,7 @@ OR ALTER
   
  為程序命名時，請避免使用 **sp_** 前置詞。 這個前置詞是供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定系統程序時使用。 如果有相同名稱的系統程序，使用前置詞可能造成應用程式的程式碼中斷。  
   
- 若要建立本機或全域暫存程序，您可以在 *procedure_name* 前面使用一個數字記號 (#) 來建立本機暫存程序 (*#procedure_name*)；使用兩個數字記號來建立全域暫存程序 (*##procedure_name*)。 只有建立本機暫存程序的連線可以看到它，而且關閉連線時就會卸除該程序。 全域暫存程序適用於所有連線，而且在最後一個工作階段結束時，會使用程序卸除。 無法為 CLR 程序指定暫存名稱。  
+ 若要建立本機或全域暫存程序，您可以在 *procedure_name* 前面使用一個數字記號 (#) 來建立本機暫存程序 ( *#procedure_name*)；使用兩個數字記號來建立全域暫存程序 ( *##procedure_name*)。 只有建立本機暫存程序的連線可以看到它，而且關閉連線時就會卸除該程序。 全域暫存程序適用於所有連線，而且在最後一個工作階段結束時，會使用程序卸除。 無法為 CLR 程序指定暫存名稱。  
   
  程序或全域暫存程序的完整名稱 (包括 ##) 不能超過 128 個字元。 本機暫存程序的完整名稱 (包括 #) 不能超過 116 個字元。  
   
@@ -172,13 +171,13 @@ OR ALTER
  編號程序無法使用 **xml** 或 CLR 使用者定義的類型，亦無法用於計劃指南。  
   
  **@** *parameter*  
- 在程序中宣告的參數。 將 at 記號 (**@**) 作為第一個字元來指定參數名稱。 參數名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 對程序而言，參數必須是本機參數；相同的參數名稱可以用在其他程序中。  
+ 在程序中宣告的參數。 將 at 記號 ( **@** ) 作為第一個字元來指定參數名稱。 參數名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 對程序而言，參數必須是本機參數；相同的參數名稱可以用在其他程序中。  
   
  您可以宣告一個或多個參數，最大值為 2,100。 除非定義了參數的預設值或將值設為等於其他參數，否則，在呼叫程序時，使用者必須提供每個已宣告參數的值。 如果程序包含[資料表值參數](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)，但呼叫中缺少此參數，則會傳入空白資料表。 參數只可取代常數運算式，而無法取代資料表名稱、資料行名稱或其他資料庫物件的名稱。 如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)。  
   
  如果指定了 FOR REPLICATION，就不能宣告參數。  
   
- [ _type\_schema\_name_**.** ] *data_type*  
+ [ _type\_schema\_name_ **.** ] *data_type*  
  參數資料類型及該資料類型所屬的結構描述。  
   
 **[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序的指導方針**：  
@@ -242,10 +241,10 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  包含程序主體的一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 您可以使用選用的 BEGIN 和 END 關鍵字來括住陳述式。 如需詳細資訊，請參閱以下的＜最佳作法＞、＜一般備註＞以及＜限制事項＞這幾節。  
   
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
+EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 指定 CLR 程序所要參考之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件的方法。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別具有命名空間限定的名稱，且該名稱使用句號 (**.**) 來分隔命名空間的各個部分，您就必須使用方括弧 (**[]**) 或引號 (**""**) 來分隔類別名稱。 指定的方法必須是類別的靜態方法。  
+ 指定 CLR 程序所要參考之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件的方法。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別具有命名空間限定的名稱，且該名稱使用句號 ( **.** ) 來分隔命名空間的各個部分，您就必須使用方括弧 ( **[]** ) 或引號 ( **""** ) 來分隔類別名稱。 指定的方法必須是類別的靜態方法。  
   
  依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、修改和卸除參考通用語言執行平台模組的資料庫物件；不過，必須等到您啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之後，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行這些參考。 若要啟用這個選項，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
@@ -285,7 +284,7 @@ NATIVE_COMPILATION
 SCHEMABINDING  
  **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 確定程序所參考的資料表無法卸除或改變。 原生編譯預存程序需要 SCHEMABINDING。 (如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。)SCHEMABINDING 限制和使用者定義函數的相關限制相同。 如需詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 中的＜SCHEMABINDING＞一節。  
+ 確定程序所參考的資料表無法卸除或改變。 原生編譯預存程序需要 SCHEMABINDING。 (如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。)SCHEMABINDING 限制和使用者定義函式的相關限制相同。 如需詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 中的＜SCHEMABINDING＞一節。  
   
 LANGUAGE = [N] 'language'  
  **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -402,7 +401,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
  除了 SET SHOWPLAN_TEXT 和 SET SHOWPLAN_ALL 以外，其他所有 SET 陳述式都可以在程序中指定。 這些陳述式必須是批次中唯一的陳述式。 所選 SET 選項在程序執行期間仍然有效，然後會還原為先前的設定。  
   
 > [!NOTE]  
->  當在程序或使用者定義函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，未接受 SET ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)**，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會執行成功。  
+>  當在程序或使用者定義函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，未接受 SET ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)** ，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會執行成功。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  CREATE PROCEDURE 陳述式無法在單一批次中，與其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結合起來。  
@@ -456,11 +455,11 @@ GO
 ||快取頁面|  
 ||快取物件計數*|  
   
- * 這些計數器可供各種類別目錄的快取物件使用，包括隨選 [!INCLUDE[tsql](../../includes/tsql-md.md)]、已備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、程序、觸發程序等等。 如需詳細資訊，請參閱 [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)。  
+ \* 這些計數器可供各種類別目錄的快取物件使用，包括隨選 [!INCLUDE[tsql](../../includes/tsql-md.md)]、已備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、程序、觸發程序等等。 如需詳細資訊，請參閱 [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)。  
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要資料庫的 **CREATE PROCEDURE** 權限，以及要在其中建立程序之結構描述的 **ALTER** 權限，或者需要 **db_ddladmin** 固定資料庫角色的成員資格。  
   
  如果是 CLR 預存程序，需要 EXTERNAL NAME 子句中所參考組件的擁有權，或該組件的 **REFERENCES** 權限。  
@@ -659,7 +658,7 @@ SET @ComparePrice = @MaxPrice;
 GO  
 ```  
   
- 執行 `uspGetList` 以傳回成本低於 `$700` 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 您可以搭配流程控制語言使用 `OUTPUT` 參數 `@Cost` 和 `@ComparePrices`，以在 [訊息] 視窗中傳回訊息。  
+ 執行 `uspGetList` 以傳回成本低於 `$700` 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 您可以搭配流程控制語言使用 `OUTPUT` 參數 `@Cost` 和 `@ComparePrices`，以在 [訊息]  視窗中傳回訊息。  
   
 > [!NOTE]  
 >  建立程序以及使用變數時，都必須定義 OUTPUT 變數。 參數名稱與變數名稱不一定要相符；不過，除非使用 `@ListPrice` = *variable*，否則資料類型與參數定位必須相符。  

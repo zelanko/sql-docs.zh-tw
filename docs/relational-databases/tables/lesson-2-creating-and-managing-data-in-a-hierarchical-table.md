@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54a3323e550ba3534fdc491e42c70c43ba686dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031640"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>第 2 課：在階層式資料表中建立與管理資料
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -293,7 +292,7 @@ AdventureWorks2017 行銷部門有 8 名員工。 員工層級如下：
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 重新組織階層是常見的維護工作。 在這項工作中，我們將會使用 UPDATE 陳述式搭配 [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) 方法，先將單一資料列移到階層中的新位置。 然後，我們會將整個子樹移到新位置。  
   
-`GetReparentedValue` 方法會使用兩個引數。 第一個引數描述要修改的階層部分。 例如，如果階層為 **/1/4/2/3/** 而您想要變更 **/1/4/** 區段，讓該階層變成 **/2/1/2/3/**，留下最後兩個節點 (**2/3/**) 不變，您必須提供變更的節點 (**/1/4/**) 作為第一個引數。 第二個引數會提供新的階層層級，在範例中為 **/2/1/**。 兩個引數不必包含相同的層級數目。  
+`GetReparentedValue` 方法會使用兩個引數。 第一個引數描述要修改的階層部分。 例如，如果階層為 **/1/4/2/3/** 而您想要變更 **/1/4/** 區段，讓該階層變成 **/2/1/2/3/** ，留下最後兩個節點 (**2/3/** ) 不變，您必須提供變更的節點 ( **/1/4/** ) 作為第一個引數。 第二個引數會提供新的階層層級，在範例中為 **/2/1/** 。 兩個引數不必包含相同的層級數目。  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>將單一資料列移到階層中的新位置  
   
@@ -323,7 +322,7 @@ AdventureWorks2017 行銷部門有 8 名員工。 員工層級如下：
     GO  
     ```  
   
-    Wanida 現在是在節點 **/3/1/**。  
+    Wanida 現在是在節點 **/3/1/** 。  
   
 ### <a name="reorganize-a-section-of-a-hierarchy"></a>重新組織階層的區段  
   
@@ -334,7 +333,7 @@ AdventureWorks2017 行銷部門有 8 名員工。 員工層級如下：
     GO  
     ```  
   
-2.  現在，Kevin 回報給 Wanida，Wanida 回報給 Jill，而 Jill 回報給 David。 也就是說，Kevin 位於層級 **/3/1/1/**。 若要將 Jill 的所有部屬移到新的主管之下，我們會將讓 **/3/** 當作其 **OrgNode** 的所有節點更新為新值。 執行下列程式碼，將 Wanida 更新為回報給 Sariya，但是讓 Kevin 回報給 Wanida：  
+2.  現在，Kevin 回報給 Wanida，Wanida 回報給 Jill，而 Jill 回報給 David。 也就是說，Kevin 位於層級 **/3/1/1/** 。 若要將 Jill 的所有部屬移到新的主管之下，我們會將讓 **/3/** 當作其 **OrgNode** 的所有節點更新為新值。 執行下列程式碼，將 Wanida 更新為回報給 Sariya，但是讓 Kevin 回報給 Wanida：  
   
     ```sql  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

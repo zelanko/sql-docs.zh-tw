@@ -1,5 +1,5 @@
 ---
-title: 教學課程：使用 hierarchyid 資料類型 | Microsoft 文件
+title: 教學課程：使用 hierarchyid 資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41e33a33d969f074139c6bdeb5eba99f59728831
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ae451d86f2490765f3871deca925f4b6348e2304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140420"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>教學課程：使用 hierarchyid 資料類型
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +44,8 @@ ms.locfileid: "51666090"
 -   Internet Explorer 6 或更新的版本。  
   
 ## <a name="see-also"></a>另請參閱  
-[教學課程：Database Engine 使用者入門](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
-[教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+[教學課程：資料庫引擎使用者入門](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[教學課程：撰寫 Transact-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)  
 [Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  

@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc25fcdd81c647dcff73c047924f3fbec13b6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107139"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47740092"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法停用索引：**  
   
@@ -106,9 +105,9 @@ ms.locfileid: "47740092"
   
 4.  按一下加號展開 **[索引]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您要停用的索引，然後選取 [停用]。  
+5.  以滑鼠右鍵按一下您要停用的索引，然後選取 [停用]  。  
   
-6.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]**。  
+6.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]** 。  
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>停用資料表上的所有索引  
   
@@ -118,9 +117,9 @@ ms.locfileid: "47740092"
   
 3.  按一下加號展開要停用索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引] 資料夾，並選取 [全部停用]。  
+4.  以滑鼠右鍵按一下 [索引]  資料夾，並選取 [全部停用]  。  
   
-5.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]**。 若要從 **[要停用的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
+5.  在 **[停用索引]** 對話方塊中，確認 **[要停用的索引]** 方格中有正確索引，然後按一下 **[確定]** 。 若要從 **[要停用的索引]** 方格中移除索引，請選取索引，然後按下 DELETE 鍵。  
   
  **[停用索引]** 對話方塊中提供下列資訊：  
   
@@ -131,7 +130,7 @@ ms.locfileid: "47740092"
  顯示建立索引的資料表名稱或檢視名稱。  
   
  **索引類型**  
- 顯示索引的類型：[叢集]、[非叢集]、[空間] 或 [XML]。  
+ 顯示索引的類型：[叢集]  、[非叢集]  、[空間]  或 [XML]  。  
   
  **狀態**  
  顯示停用作業的狀態。 執行之後可能的值：  
@@ -169,9 +168,9 @@ ms.locfileid: "47740092"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -186,9 +185,9 @@ ms.locfileid: "47740092"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

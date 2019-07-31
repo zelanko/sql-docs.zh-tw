@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44eba48983d2dd9e3610b5534997ca6a4a3849b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051327"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>在 XML 資料中繫結關聯式資料
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "56019069"
   
  您不能使用這些函數來參考 **xml**、CLR 使用者定義型別、datetime、smalldatetime、**text**、**ntext**、**sql_variant** 和 **image** 類型之資料行或變數中的資料。  
   
- 此外，這種繫結方式是唯讀的。 意即，您不能在使用這些函數的資料行中寫入資料。 例如，不允許下列語法：sql:variable("\@x")="某個運算式 *"*。  
+ 此外，這種繫結方式是唯讀的。 意即，您不能在使用這些函數的資料行中寫入資料。 例如，不允許下列語法：sql:variable("\@x")="某個運算式 *"* 。  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>範例Cross-domain Query Using sql:variable()  
  此範例會示範 **sql:variable()** 如何讓應用程式將查詢參數化。 ISBN 的傳入方式是使用 SQL 變數 @isbn。 將常數置換成 **sql:variable()** 之後，就可以使用該查詢來搜尋任何 ISBN，而不只是 ISBN 為 0-7356-1588-2 的 ISBN。  

@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a450bd308e412bbfa764cf84cb46b46104ad4ffb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cb89f83f0a916a9d56443e7494ce5e8284350bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940621"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,11 +33,11 @@ ms.locfileid: "51659204"
 |DatabaseName|**nvarchar**|正在其中執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|**整數**|事件類型 = 200。|27|否|  
 |EventSequence|**int**|此事件的序號。|51|否|  
-|EventSubClass|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> **Table created**：表示已經在資料庫中建立參數資料表。<br /><br /> **Table drop attempt**：表示資料庫已嘗試自動卸除未使用的參數資料表，以便釋出資源。<br /><br /> **Table drop attempt failed**：表示資料庫嘗試卸除未使用的參數資料表，但失敗。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將自動重新排程參數資料表的刪除作業，以便釋出資源。<br /><br /> **Table dropped**：表示資料庫已成功卸除參數資料表。<br /><br /> **Table pinned**：表示參數資料表標示為目前用於內部處理。<br /><br /> **Table unpinned**：表示參數資料表已經取消固定。 內部處理已經完成使用此資料表。<br /><br /> **Number of users incremented**：表示參考參數資料表的查詢通知訂閱數目已增加。<br /><br /> **Number of users decremented**：表示參考參數資料表的查詢通知訂閱數目已減少。<br /><br /> **LRU counter reset**：表示參數資料表的使用計數已重設。<br /><br /> **Cleanup task started**：表示已經啟動此參數資料表中所有訂閱的清除作業。 當資料庫啟動或卸除此參數資料表之訂閱底下的資料表時，就會發生這個情況。<br /><br /> **Cleanup task finished**：表示已經完成此參數資料表中所有訂閱的清除作業。|21|是|  
+|EventSubClass|**nvarchar**|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> **Table created**：指出已經在資料庫中建立參數資料表。<br /><br /> **Table drop attempt**：指出資料庫已嘗試自動卸除未使用的參數資料表，以便釋出資源。<br /><br /> **Table drop attempt failed**：指出資料庫嘗試卸除未使用的參數資料表，但失敗。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將自動重新排程參數資料表的刪除作業，以便釋出資源。<br /><br /> **Table dropped**：指出資料庫已成功卸除參數資料表。<br /><br /> **Table pinned**：指出參數資料表標示為目前用於內部處理。<br /><br /> **Table unpinned**：指出參數資料表已經取消釘選。 內部處理已經完成使用此資料表。<br /><br /> **Number of users incremented**：指出參考參數資料表的查詢通知訂閱數目已增加。<br /><br /> **Number of users decremented**：指出參考參數資料表的查詢通知訂閱數目已減少。<br /><br /> **LRU counter reset**：指出參數資料表的使用計數已重設。<br /><br /> **Cleanup task started**：指出已經啟動此參數資料表中所有訂閱的清除作業。 當資料庫啟動或卸除此參數資料表之訂閱底下的資料表時，就會發生這個情況。<br /><br /> **Cleanup task finished**：指出已經完成此參數資料表中所有訂閱的清除作業。|21|是|  
 |GroupID|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|**int**|指出事件是發生在系統處理序或使用者處理序。<br /><br /> 0 = 使用者<br /><br /> 1 = 系統|60|否|  
-|LoginName|**nvarchar**|使用者登入的名稱 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或「網域\\使用者名稱」格式的 Windows 登入認證)。|11|否|  
+|LoginName|**nvarchar**|使用者登入的名稱 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性登入或「網域\\使用者名稱」   格式的 Windows 登入認證)。|11|否|  
 |LoginSID|**image**|已登入之使用者的安全性識別碼 (SID)。 您可以在 sys.server_principals 目錄檢視中找到這項資訊。 伺服器上的每一個登入之 SID 是唯一的。|41|是|  
 |NTDomainName|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|**nvarchar**|擁有產生此事件之連接的使用者名稱。|6|是|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 621387ca62340818cbe8d5529de17bcdf7e96884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999371"
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ FROM Employee
 > 如果您將 AT TIME ZONE 套用到期間資料行，SQL Server 將會執行資料表/索引掃描，這可能會耗費相當多的資源。 請在查詢中避免這類條件：  
 > \<期間資料行>  AT TIME ZONE '\<您的時區>'  >  {< | > | =, ...} date_condition。  
   
- 另請參閱： [查詢系統設定版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
+ 另請參閱：[查詢系統建立版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
   
 ## <a name="point-in-time-analysis-time-travel"></a>時間點分析 (時間移動)  
  資料稽核的焦點通常是在個別記錄所發生的變更上，而對於時間移動案例來說，使用者想要看的是整體資料集經過一段時間的變更方式。 時間移動有時候會包含數個您想要分析的相關時態表，每個時態表皆會以獨立的方式進行變更：  

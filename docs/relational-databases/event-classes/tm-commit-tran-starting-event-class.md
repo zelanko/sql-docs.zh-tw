@@ -1,5 +1,5 @@
 ---
-title: 'TM: Commit Tran Starting 事件類別 | Microsoft 文件'
+title: TM：Commit Tran Starting 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de0bbd146084598e289f4a79afc545283fd6fb68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715eb611d1228eb5ab08ead6fc84da076bd8bb30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125135"
 ---
-# <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting 事件類別
+# <a name="tm-commit-tran-starting-event-class"></a>TM：Commit Tran Starting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  TM: Commit Tran Starting 事件類別指出正在啟動 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
+  TM：Commit Tran Starting 事件類別指出正在啟動 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
   
-## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: Commit Tran Starting 事件類別資料行  
+## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM：Commit Tran Starting 事件類別資料行  
   
 |資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

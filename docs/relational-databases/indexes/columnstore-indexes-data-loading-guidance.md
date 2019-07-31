@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506495"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307629"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
 
@@ -28,7 +27,7 @@ ms.locfileid: "59506495"
  資料行存放區索引的新手嗎？ 請參閱[資料行存放區索引 - 概觀](../../relational-databases/indexes/columnstore-indexes-overview.md)和[資料行存放區索引架構](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)。
   
 ## <a name="what-is-bulk-loading"></a>什麼是大量載入？
-「大量載入」指的是在資料存放區中新增大量資料列的方式。 這是將資料移至資料行存放區索引的最有效方式，因為它是以資料列批次的方式操作。 大量載入會填滿資料列群組的最大容量，並將它們直接壓縮到資料行存放區。 只有載入尾端未達每個資料列群組至少 102,400 個資料列的資料列才會移至差異存放區。  
+「大量載入」  指的是在資料存放區中新增大量資料列的方式。 這是將資料移至資料行存放區索引的最有效方式，因為它是以資料列批次的方式操作。 大量載入會填滿資料列群組的最大容量，並將它們直接壓縮到資料行存放區。 只有載入尾端未達每個資料列群組至少 102,400 個資料列的資料列才會移至差異存放區。  
 
 若要執行大量載入，您可以使用 [bcp 公用程式](../../tools/bcp-utility.md)、[Integration Services](../../integration-services/sql-server-integration-services.md)，或從暫存資料表中選取資料列。
 
@@ -44,11 +43,15 @@ ms.locfileid: "59506495"
 > 在具有非叢集資料行存放區索引資料的資料列存放區資料表上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會一律將資料插入基底資料表。 資料絶對不會直接插入資料行存放區索引。  
 
 大量載入具有下列內建的效能最佳化方式：
--   **平行載入：** 您可以執行多個並行大量載入 (bcp 或大量插入)，其中每個載入作業都會載入不同的資料檔案。 與資料列存放區大量載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同的是，您不需要指定 `TABLOCK`，這是因為每個大量匯入執行緒都會專門將資料載入不同的資料列群組 (壓縮或差異資料列群組)，且對其具有獨占鎖定。 使用 `TABLOCK` 會在資料表上強制進行獨佔鎖定，而您無法以平行方式匯入資料。  
--   **最低限度記錄：** 大量載入會對直接進入壓縮資料列群組的資料使用最低限度記錄。 進入差異資料列群組的所有資料則會完整記錄。 這包括任何少於 102,400 個資料列的批次大小。 不過，大量載入的目標是要讓大部分的資料略過差異資料列群組。  
--   **鎖定最佳化：** 載入壓縮資料列群組時，會取得資料列群組的 X 鎖定。 然而，當大量載入差異資料列群組時，已取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定「頁/範圍」的鎖定，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
+-   **平行載入：** 您可以執行多個並行大量載入 (bcp 或大量插入)，其中每個載入作業都會載入不同的資料檔案。 與資料列存放區大量載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同的是，您不需要指定 `TABLOCK`，這是因為每個大量匯入執行緒都會專門將資料載入不同的資料列群組 (壓縮或差異資料列群組)，且對其具有獨佔鎖定。 
+
+-   **縮減記錄：** 將資料直接載入壓縮資料列群組時，會導致記錄大小大幅減少。 例如，如果將資料壓縮 10 倍，則對應的交易記錄會大約縮小 10 倍，而不需要 TABLOCK 或大量記錄/簡單復原模式。 進入差異資料列群組的所有資料則會完整記錄。 這包括任何少於 102,400 個資料列的批次大小。  最佳做法是使用 batchsize >= 102400。 因為不需要 TABLOCK，所以您可以平行載入資料。 
+
+-   **最低限度記錄：** 如果您遵循[最低限度記錄](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的必要條件，則可以進一步縮減記錄。 不過，與將資料載入資料列存放區不同的是，TABLOCK 會導致資料表的 X 鎖定，而不是 BU (大量更新) 鎖定，因此無法執行平行資料載入。 如需鎖定的詳細資訊，請參閱 [鎖定與資料列版本設定[(../sql-server-transaction-locking-and-row-versioning-guide.md)。
+
+-   **鎖定最佳化：** 將資料載入壓縮資料列群組時，會自動取得資料列群組的 X 鎖定。 不過，當大量載入差異資料列群組時，已取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定「頁/範圍」，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
   
-如果您在資料行存放區索引上有一個非叢集 B 型樹狀結構索引，對於索引本身而言，沒有任何鎖定或記錄最佳化，但仍然會有如上所述的叢集資料行存放區索引最佳化。  
+如果您在資料行存放區索引上有一個非叢集 B 型樹狀結構索引，則對於索引本身而言，沒有任何鎖定或記錄最佳化，但會適用如上所述的叢集資料行存放區索引最佳化。  
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>計畫大量載入大小使差異資料列群組降到最少
 當大部分的資料列壓縮成資料行存放區而不是位於差異資料列群組時，資料行存放區索引的執行效果最好。 最好調整載入的大小，盡量讓資料列直接進入資料行存放區，而略過差異存放區。
@@ -83,7 +86,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- 此命令會以 BCP 或大量插入等類似方式，將資料載入資料行存放區索引，但是為單一批次。 如果在暫存表格中的資料列數目 < 102400，資料列會載入差異資料列群組，否則資料列會直接載入壓縮的資料列群組中。 有一項很重要的限制是，這項 `INSERT` 作業為單一執行緒。 若要平行載入資料，可以建立多個暫存表格，或發出 `INSERT`/`SELECT` 同時設定暫存表格不重疊的資料列範圍。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 時已無這項限制。 下列命令會從暫存表格以平行方式載入資料，但您必須指定 `TABLOCK`。  
+ 此命令會以 BCP 或大量插入等類似方式，將資料載入資料行存放區索引，但是為單一批次。 如果在暫存表格中的資料列數目 < 102400，資料列會載入差異資料列群組，否則資料列會直接載入壓縮的資料列群組中。 有一項很重要的限制是，這項 `INSERT` 作業為單一執行緒。 若要平行載入資料，可以建立多個暫存表格，或發出 `INSERT`/`SELECT` 同時設定暫存表格不重疊的資料列範圍。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 時已無這項限制。 下列命令會從暫存表格以平行方式載入資料，但您必須指定 `TABLOCK`。 您可能會發現這與稍早所述的大量載入有所矛盾，但主要差異在於從暫存表格以平行方式載入資料會在相同的交易下執行。
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
@@ -91,14 +94,14 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  從暫存表格載入叢集資料行存放區索引時，提供下列最佳化方式：
--   **記錄最佳化︰** 將資料載入壓縮的資料列群組時，會記錄最少的內容。 當資料載入差異資料列群組時，沒有記錄的最低限制。  
+-   **記錄最佳化︰** 將資料載入壓縮資料列群組時會縮減記錄。   
 -   **鎖定最佳化：** 載入壓縮資料列群組時，會取得資料列群組的 X 鎖定。 然而，有了差異資料列群組時，會取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定 PAGE/EXTENT 的鎖定，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
   
  如果您有一或多個非叢集索引，對於索引本身而言，沒有任何鎖定或記錄最佳化，但仍然會有如上所述的叢集資料行存放區索引最佳化。  
   
 ## <a name="what-is-trickle-insert"></a>什麼是緩慢插入？
 
-「緩慢插入」指的是個別資料列移至資料行存放區索引的方式。 緩慢插入會使用 [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) 陳述式。 透過緩慢插入，所有資料列都會進入差異存放區。 此功能對於少量資料列很有用，但不適用於大量載入。
+「緩慢插入」  指的是個別資料列移至資料行存放區索引的方式。 緩慢插入會使用 [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) 陳述式。 透過緩慢插入，所有資料列都會進入差異存放區。 此功能對於少量資料列很有用，但不適用於大量載入。
   
 ```sql  
 INSERT INTO <table-name> VALUES (<set of values>)  

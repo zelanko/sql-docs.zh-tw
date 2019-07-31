@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e12e2b8d1578d85420d7a5f3ddd61a85fdd6de7d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 51e1ce454a2b6d0309a33d155cc0e069b5a17a29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041460"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>從儲存在 Microsoft Azure 的備份還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,14 +34,14 @@ ms.locfileid: "51663057"
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
   
--   此還原工作使用 SQL Server Management Studio 來還原資料庫。 備份媒體頁面現在包含 [URL] 選項，以顯示儲存在 Windows Azure Blob 儲存體服務中的備份檔案。 您也必須提供用來驗證儲存體帳戶的 SQL 認證。 [要還原的備份組] 方格接著會填入 Windows Azure Blob 儲存體中的可用備份。 如需詳細資訊，請參閱[使用 SQL Server Management Studio 從 Windows Azure 儲存體還原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
+-   此還原工作使用 SQL Server Management Studio 來還原資料庫。 備份媒體頁面現在包含 [URL]  選項，以顯示儲存在 Windows Azure Blob 儲存體服務中的備份檔案。 您也必須提供用來驗證儲存體帳戶的 SQL 認證。 [要還原的備份組]  方格接著會填入 Windows Azure Blob 儲存體中的可用備份。 如需詳細資訊，請參閱[使用 SQL Server Management Studio 從 Windows Azure 儲存體還原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
   
 ### <a name="optimizing-restores"></a>最佳化還原  
- 若要減少還原寫入時間，請將 [執行磁碟區維護工作] 使用者權限加入至 SQL Server 使用者帳戶。 如需詳細資訊，請參閱[資料庫檔案初始化](https://go.microsoft.com/fwlink/?LinkId=271622)。 如果開啟立即檔案初始化功能之後，還原速度仍然很慢，請查看資料庫備份所在之執行個體上的記錄檔大小。 如果記錄檔大小很大 (數以 GB)，還原速度應該就會很慢。 在還原期間，記錄檔必須歸零，因此需要大量時間。  
+ 若要減少還原寫入時間，請將 [執行磁碟區維護工作]  使用者權限加入至 SQL Server 使用者帳戶。 如需詳細資訊，請參閱[資料庫檔案初始化](https://go.microsoft.com/fwlink/?LinkId=271622)。 如果開啟立即檔案初始化功能之後，還原速度仍然很慢，請查看資料庫備份所在之執行個體上的記錄檔大小。 如果記錄檔大小很大 (數以 GB)，還原速度應該就會很慢。 在還原期間，記錄檔必須歸零，因此需要大量時間。  
   
  若要減少還原時間，建議您使用壓縮的備份。  如果備份大小超過 25 GB，請使用 [AzCopy 公用程式](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) 下載到本機磁碟機，然後執行還原。 如需其他備份最佳做法與建議，請參閱 [SQL Server 備份至 URL 的最佳做法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   
- 當您執行還原時，也可以開啟追蹤旗標 3051，以產生詳細的記錄檔。 此記錄檔會置於記錄檔目錄中，並使用下列格式命名：BackupToUrl-\<執行個體>-\<資料庫名稱>-action-\<PID>.log。 此記錄檔包含每次往返 Windows Azure 儲存體的相關資訊 (包括時間點)，有助於診斷問題。  
+ 當您執行還原時，也可以開啟追蹤旗標 3051，以產生詳細的記錄檔。 此記錄檔位於記錄目錄中，且使用下列格式命名：BackupToUrl-\<執行個體名稱>-\<資料庫名稱>-action-\<PID>.log。 此記錄檔包含每次往返 Windows Azure 儲存體的相關資訊 (包括時間點)，有助於診斷問題。  
   
 ### <a name="topics-on-performing-restore-operations"></a>關於執行還原作業的主題  
   

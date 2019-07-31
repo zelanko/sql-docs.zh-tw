@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100258"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,8 +65,8 @@ ms.locfileid: "52533400"
 
 #### <a name="customer-case-studies"></a>客戶案例研究
 
-- CMC Markets 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體內部 OLTP 來達成一致的低延遲：[因為一秒都不想再等，所以這家金融服務公司目前正在更新其交易軟體。](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 In-Memory OLTP 來支援增加的輸送量並處理尖峰工作負載：[當某家線上遊戲公司不想承擔其未來風險時，其首選為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- CMC Markets 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中記憶體內部 OLTP 來達成一致的低延遲：[因為一秒都不想再等，所以這家金融服務公司目前正在更新其交易軟體](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)。
+- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中記憶體內部 OLTP 來支援增加的輸送量並處理尖峰工作負載：[當某家線上遊戲公司不想承擔其未來風險時，其首選為 SQL Server 2016 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)。
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>擷取資料，包括 IoT (Internet of Things)
@@ -93,14 +92,14 @@ ms.locfileid: "52533400"
 #### <a name="customer-case-studies"></a>客戶案例研究
 
 - [Quorum 利用 Azure SQL Database 中的 In-Memory OLTP，將主要資料庫的工作負載加倍，同時降低 70% 的使用率](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- EdgeNet 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，提升了批次資料載入的效能，並移除了維護中層快取的需求：[資料服務公司利用記憶體內部技術，即時存取產品資料](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅改善網域控制站的資料擷取率，並處理尖峰工作負載：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
+- EdgeNet 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中記憶體內部 OLTP 改善了批次資料載入的效能，並已移除維護中層快取的需求：[資料服務公司利用記憶體內部技術來即時存取產品資料](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
+- Beth Israel Deaconess Medical Center 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅改善網域控制站的資料擷取率，並處理尖峰工作負載：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
 
 ### <a name="caching-and-session-state"></a>快取和工作階段狀態
 
 記憶體內部 OLTP 技術讓 SQL 在維護工作階段狀態 (例如，針對 ASP.NET 應用程式) 和快取方面非常具有吸引力。
 
-ASP.NET 工作階段狀態是非常成功的記憶體內部 OLTP 使用案例。 有一位客戶利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 達成了每秒 120 萬個要求。 在此同時，他們已開始針對企業內所有中層應用程式的快取需求，使用所有記憶體內部 OLTP。 詳細資料︰[bwin 如何使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的記憶體內部 OLTP 來達到前所未有的效能和延展性](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+ASP.NET 工作階段狀態是非常成功的記憶體內部 OLTP 使用案例。 有一位客戶利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 達成了每秒 120 萬個要求。 在此同時，他們已開始針對企業內所有中層應用程式的快取需求，使用所有記憶體內部 OLTP。 詳細資料：[How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) (bwin 如何使用 SQL Server 2016 的記憶體內部 OLTP 來達到前所未有效能和延展性)
 
 #### <a name="implementation-considerations"></a>實作考量
 
@@ -112,8 +111,8 @@ ASP.NET 工作階段狀態是非常成功的記憶體內部 OLTP 使用案例。
 
 #### <a name="customer-case-studies"></a>客戶案例研究
 
-- bwin 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅增加輸送量並減少 ASP.NET 工作階段狀態的硬體使用量：[遊戲網站可以調整為每秒 250,000 個要求並提升玩家體驗](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
-- bwin 甚至進一步利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體內部 OLTP 來增加 ASP.NET 工作階段狀態的輸送量，並實作整個企業的中層快取系統：[bwin 如何使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的記憶體內部 OLTP 來達到前所未有的效能和延展性](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+- bwin 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅增加輸送量並減少 ASP.NET 工作階段狀態的硬體使用量：[遊戲網站可以調整為每秒 250,000 個要求並改善玩家體驗](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
+- bwin 甚至進一步利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中記憶體內部 OLTP 來增加 ASP.NET 工作階段狀態的輸送量，並實作整個企業的中層快取系統：[How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) (bwin 如何使用SQL Server 2016 的記憶體內部 OLTP 來達到前所未有效能和延展性)
 
 ### <a name="tempdb-object-replacement"></a>Tempdb 物件取代
 
@@ -123,12 +122,12 @@ ASP.NET 工作階段狀態是非常成功的記憶體內部 OLTP 使用案例。
 
 #### <a name="implementation-considerations"></a>實作考量
 
-若要開始使用，請參閱 [使用記憶體最佳化提升暫存資料表與資料表變數效能。](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
+若要開始使用，請參閱：[Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/) (使用記憶體最佳化改善暫存資料表與資料表變數效能)。
 
 #### <a name="customer-case-studies"></a>客戶案例研究
 
-- 有一位客戶只是將傳統 TVP 替換為記憶體最佳化 TVP，就能提升 40% 的效能： [在 Azure 中使用記憶體內部 OLTP 高速擷取 IoT 資料](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
-- SentryOne 在其企業延展性改善的過程中，藉由將 tempdb 中的資料表換成記憶體內部 OLTP 資料表，來大幅改善其監視解決方案中的資料擷取容量，幾乎沒有延遲：[Solution provider breaks through performance ceiling with data monitoring innovation](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure) (解決方案提供者藉資料監視創新之力突破效能限制)。
+- 客戶僅需將傳統 TVP 替換為記憶體最佳化 TVP，就能改善 40% 的效能：[High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/) (在 Azure 中使用記憶體內部 OLTP 高速擷取 IoT 資料)
+- SentryOne 在其企業延展性改善的過程中，藉由將 tempdb 中的資料表換成記憶體內部 OLTP 資料表，來大幅改善其監視解決方案中的資料擷取容量，幾乎沒有延遲：[解決方案提供者藉資料監視創新之力突破效能限制](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)。
 
 ### <a name="etl-extract-transform-load"></a>ETL (擷取轉換載入)
 

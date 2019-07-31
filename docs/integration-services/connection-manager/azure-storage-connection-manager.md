@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a115dafb386323bc1f4738720e7576657d22543
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403064"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316682"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
 
@@ -38,6 +37,6 @@ ms.locfileid: "66403064"
 - **驗證：** 指定要使用的驗證方法。 支援 **AccessKey** 和 **ServicePrincipal** 驗證。
     - **AccessKey：** 針對這種驗證方法，指定**帳戶金鑰**。
     - **ServicePrincipal：** 針對這種驗證方法，指定服務主體的**應用程式識別碼**、**應用程式金鑰**、**租用戶識別碼**。
-      您應該將儲存體帳戶的**儲存體 Blob 資料參與者**角色指派給服務主體。
+      若要讓**測試連線**正常執行，應將服務主體至少指派給儲存體帳戶的**儲存體 Blob 資料讀取器**角色。
       如需詳細資料，請參閱[此](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) \(部分機器翻譯\) 頁面。
 - **環境：** 指定裝載儲存體帳戶的雲端環境。

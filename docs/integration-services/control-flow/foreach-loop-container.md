@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403042"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316661"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
 
@@ -508,7 +507,19 @@ ms.locfileid: "66403042"
 指定要列舉其中檔案的資料夾路徑。
 
 **SearchRecursively**  
-指定是否要以遞迴方式在指定的資料夾中搜尋。  
+指定是否要以遞迴方式在指定的資料夾中搜尋。
+
+***服務主體權限設定的注意事項***
+
+Data Lake Storage Gen2 權限由 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 和 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 決定。
+請注意，ACL 會使用應用程式註冊服務主體的物件識別碼 (OID) 進行設定，如[此處](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所詳述。
+這不同於與 RBAC 設定搭配使用的應用程式 (用戶端) 識別碼。
+當安全性主體透過內建角色或自訂角色獲得 RBAC 資料權限時，在要求授權時會先評估這些權限。
+如果要求作業是由安全性主體的 RBAC 指派授權，則會立即解決授權，且不會執行任何額外的 ACL 檢查。
+或者，如果安全性主體不具有 RBAC 指派，或要求作業不符合指派的權限，則會執行 ACL 檢查來判斷安全性主體是否已獲授權執行要求作業。
+若要讓列舉值正常執行，請至少授與**執行**權限 (從根檔案系統開始)，以及目標資料夾的**讀取**權限。
+或者，使用 RBAC 至少授與**儲存體 Blob 資料讀取者**角色。
+如需詳細資料，請參閱[這篇](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)文章。
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>變數對應頁面 - Foreach 迴圈編輯器
  使用 [Foreach 迴圈編輯器]  對話方塊的 [變數對應]  頁面，即可將變數對應至集合值。 會用迴圈之每個反覆運算上的集合值來更新變數的值。  

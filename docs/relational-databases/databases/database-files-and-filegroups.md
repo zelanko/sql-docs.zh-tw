@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2f78e8fbff4a5fdc896810067ad2552b59336a8
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037590"
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "51558935"
 ### <a name="logical-and-physical-file-names"></a>邏輯與實體檔案名稱
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案有兩個檔案名稱類型： 
 
-**logical_file_name：**  logical_file_name 是用來在所有 Transact-SQL 陳述式中指稱實體檔案的名稱。 邏輯檔案名稱必須遵守 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的規則，而且在資料庫的邏輯檔案名稱之間必須是唯一的。 這是由 `ALTER DATABASE` 中的 `NAME` 引數所設定。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+**logical_file_name：** logical_file_name 是用來在所有 Transact-SQL 陳述式中指稱實體檔案的名稱。 邏輯檔案名稱必須遵守 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的規則，而且在資料庫的邏輯檔案名稱之間必須是唯一的。 這是由 `ALTER DATABASE` 中的 `NAME` 引數所設定。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
 **os_file_name：** os_file_name 是包含目錄路徑的實體檔案名稱。 它必須遵循作業系統檔案名稱的規則。 這是由 `ALTER DATABASE` 中的 `FILENAME` 引數所設定。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 

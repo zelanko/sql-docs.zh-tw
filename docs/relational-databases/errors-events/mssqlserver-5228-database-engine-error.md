@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43e1eac679271e3f12d60d310724a8ff025933cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b64b067889582949b42a7d5ffeeca1b1e119b6e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123031"
 ---
 # <a name="mssqlserver5228"></a>MSSQLSERVER_5228
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +25,12 @@ ms.locfileid: "47657136"
   
 |||  
 |-|-|  
-|產品名稱|[SQL Server]|  
+|產品名稱|SQL Server|  
 |事件識別碼|5228|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|訊息文字|資料表錯誤: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)，頁面 PG_ID，資料列 R_ID。 DBCC 偵測到線上索引建立作業有不完整清除。 (反物質資料行值為 VALUE)。|  
+|訊息文字|資料表錯誤：物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)，頁面 PG_ID，資料列 R_ID。 DBCC 偵測到線上索引建立作業有不完整清除。 (反物質資料行值為 VALUE)。|  
   
 ## <a name="explanation"></a>說明  
 偵測到物件 *O_ID*、索引 *I_ID* 和資料分割 *PN_ID* 的線上索引建立作業未完成。 其證據在於資料列 *R_ID* 包含反物質資料行。 線上索引建立期間，反物質資料行用於協調多個來源提供的記錄。 錯誤訊息也指出反物質資料行的值。  

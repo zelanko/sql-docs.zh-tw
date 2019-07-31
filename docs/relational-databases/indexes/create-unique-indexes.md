@@ -17,21 +17,20 @@ helpviewer_keywords:
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898599"
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料表建立唯一索引。 唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 建立 UNIQUE 條件約束與建立獨立於條件約束之外的唯一索引，兩者並無明顯差異。 資料驗證的方式相同，而且查詢最佳化工具不會區分由條件約束建立或由手動建立的唯一索引。 不過，在資料行上建立 UNIQUE 條件約束，會使索引目標更明確。 如需有關 UNIQUE 條件約束的詳細資訊，請參閱＜ [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)＞。  
   
- 當您建立唯一的索引時，可以設定忽略重複之索引鍵的選項。 如果此選項設定為 [是]，且您嘗試透過加入影響多個資料列的資料來建立重複的索引鍵 (使用 INSERT 陳述式)，則不會加入包含重複索引鍵的資料列。 如果此選項設定為 [ **否**]，則整個插入作業會失敗，且所有資料都會回復。  
+ 當您建立唯一的索引時，可以設定忽略重複之索引鍵的選項。 如果此選項設定為 [是]  ，且您嘗試透過加入影響多個資料列的資料來建立重複的索引鍵 (使用 INSERT 陳述式)，則不會加入包含重複索引鍵的資料列。 如果此選項設定為 [ **否**]，則整個插入作業會失敗，且所有資料都會回復。  
   
 > [!NOTE]  
 >  如果一個以上的資料列中的某單一資料行為 NULL，您將無法建立該單一資料行的唯一索引。 同樣地，如果一個以上的資料列中的一組資料行全為 NULL 的話，您將無法在該組資料行上建立唯一索引。 基於索引目的，這些會被視為重複的值。  
@@ -46,11 +45,11 @@ ms.locfileid: "52515077"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法在資料表上建立唯一索引：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -95,7 +94,7 @@ ms.locfileid: "52515077"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -106,29 +105,29 @@ ms.locfileid: "52515077"
   
 2.  展開 **[資料表]** 資料夾。  
   
-3.  以滑鼠右鍵按一下要建立唯一索引的資料表，然後選取 [設計]。  
+3.  以滑鼠右鍵按一下要建立唯一索引的資料表，然後選取 [設計]  。  
   
-4.  在 [資料表設計工具] 功能表中，選取 [索引/索引鍵]。  
+4.  在 [資料表設計工具]  功能表中，選取 [索引/索引鍵]  。  
   
-5.  在 [索引/索引鍵] 對話方塊中，按一下 [加入]。  
+5.  在 [索引/索引鍵]  對話方塊中，按一下 [加入]  。  
   
-6.  從 [選取的主索引鍵/唯一索引鍵或索引] 文字方塊中選取新索引。  
+6.  從 [選取的主索引鍵/唯一索引鍵或索引]  文字方塊中選取新索引。  
   
-7.  在主要方格的 [(一般)] 底下，選取 [類型]，然後從清單中選擇 [索引]。  
+7.  在主要方格的 [(一般)]  底下，選取 [類型]  ，然後從清單中選擇 [索引]  。  
   
-8.  選取 [資料行]，然後按一下省略符號 **(...)**。  
+8.  選取 [資料行]  ，然後按一下省略符號 **(...)** 。  
   
 9. 在 **[索引資料行]** 對話方塊中的 **[資料行名稱]** 底下，選取要進行索引的資料行。 您最多可以選取 16 個資料行。 為了獲得最佳效能，每個索引最好只選取一或兩個資料行。 針對每個選取的資料行，指示索引是要以遞增或遞減順序排列此資料行的值。  
   
-10. 選取索引的所有資料行時，請按一下 **[確定]**。  
+10. 選取索引的所有資料行時，請按一下 **[確定]** 。  
   
-11. 在方格的 [(一般)] 底下，選取 [是唯一的]，然後從清單中選擇 [是]。  
+11. 在方格的 [(一般)]  底下，選取 [是唯一的]  ，然後從清單中選擇 [是]  。  
   
-12. 選擇性：在主要方格中的 **[資料表設計工具]** 底下，選取 **[忽略重複的索引鍵]** ，然後從清單選擇 **[是]** 。 如果您要忽略會在唯一的索引中建立重複索引鍵的加入資料嘗試，請執行這個動作。  
+12. 選擇性：在主要方格的 [資料表設計工具]  底下，選取 [忽略重複的索引鍵]  ，然後從清單選擇 [是]  。 如果您要忽略會在唯一的索引中建立重複索引鍵的加入資料嘗試，請執行這個動作。  
   
 13. 按一下 [ **關閉**]。  
   
-14. 在 [檔案] 功能表上，按一下 [儲存 _table\_name_]。  
+14. 在 [檔案]  功能表上，按一下 [儲存 _table\_name_]  。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用物件總管建立唯一索引  
   
@@ -138,19 +137,19 @@ ms.locfileid: "52515077"
   
 3.  展開您要建立唯一索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引...]。  
+4.  以滑鼠右鍵按一下 [索引]  資料夾，指向 [新增索引]  ，然後選取 [非叢集索引…]  。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
 6.  選取 **[唯一]** 核取方塊。  
   
-7.  按一下 [索引鍵資料行] 下的 [新增...]。  
+7.  按一下 [索引鍵資料行]  下的 [新增...]  。  
   
-8.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
+8.  在 [從 _table\_name_ 選取資料行]  對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
   
-9. 按一下 [確定] 。  
+9. 按一下 [確定]  。  
   
-10. 在 **[新增索引]** 對話方塊中，按一下 **[確定]**。  
+10. 在 **[新增索引]** 對話方塊中，按一下 **[確定]** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -158,9 +157,9 @@ ms.locfileid: "52515077"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```  
     USE AdventureWorks2012;  

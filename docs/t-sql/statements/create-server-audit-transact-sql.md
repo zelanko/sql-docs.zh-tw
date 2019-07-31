@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e48239d521ed82c5bcfe2920c36b89e82cc1e193
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117137"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -84,9 +83,9 @@ CREATE SERVER AUDIT audit_name
  稽核記錄檔的路徑。 檔案名稱是根據稽核名稱和稽核 GUID 所產生。  
   
  MAXSIZE = { *max_size }*  
- 指定稽核檔案所能成長的大小上限。 *max_size* 值必須是整數，而且後面緊接著 MB、GB、TB 或 UNLIMITED。 您可以為 *max_size* 指定的大小下限為 2 MB，而上限則為 2,147,483,647 TB。 指定了 UNLIMITED 時，檔案會成長到磁碟已滿為止  (0 也表示 UNLIMITED)。指定低於 2 MB 的值會引發 MSG_MAXSIZE_TOO_SMALL 錯誤。 預設值為 UNLIMITED。  
+ 指定稽核檔案所能成長的大小上限。 *max_size* 值必須是整數，而且後面緊接著 MB、GB、TB 或 UNLIMITED。 您可以為 *max_size* 指定的大小下限為 2 MB，而上限則為 2,147,483,647 TB。 指定了 UNLIMITED 時，檔案會成長到磁碟已滿為止 (0 也指出 UNLIMITED)。指定低於 2 MB 的值會引發 MSG_MAXSIZE_TOO_SMALL 錯誤。 預設值為 UNLIMITED。  
   
- MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
  除了目前的檔案以外，指定要保留在檔案系統中的檔案數目上限。 *MAX_ROLLOVER_FILES* 值必須是整數或 UNLIMITED。 預設值為 UNLIMITED。 每當稽核重新啟動 (當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體重新啟動或者稽核先關閉然後再次開啟時，就可能會發生此情況) 或者由於達到 MAXSIZE 而需要新的檔案時，系統就會評估此參數。 評估 *MAX_ROLLOVER_FILES* 時，如果檔案的數目超過 *MAX_ROLLOVER_FILES* 設定，系統就會刪除最舊的檔案。 因此，如果 *MAX_ROLLOVER_FILES* 的設定為 0，每次評估 *MAX_ROLLOVER_FILES* 設定時，系統都會建立新的檔案。 評估 *MAX_ROLLOVER_FILES* 設定時，系統只會自動刪除一個檔案，所以當您降低 *MAX_ROLLOVER_FILES* 的值時，除非手動刪除舊的檔案，否則檔案的數目將不會縮減。 可以指定的檔案數量上限為 2,147,483,647。  
   
  MAX_FILES =*integer*  
@@ -151,7 +150,7 @@ SHUTDOWN
   
  CREATE SERVER AUDIT 陳述式位於交易的範圍內。 如果回復交易，也會回復此陳述式。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要建立、更改或卸除伺服器稽核，主體需要使用 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
  當您將稽核資訊儲存到檔案時，為了避免遭到篡改，您可以限制對檔案位置的存取：  
