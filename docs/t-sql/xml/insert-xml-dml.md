@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051294"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ insert
   
 ## <a name="arguments"></a>引數  
  *Expression1*  
- 識別一或多個要插入的節點。 這可以是固定的 XML 執行個體、修改方法套用所在之相同 XML 結構描述集合的具類型 XML 資料類型執行個體的參考、使用獨立 **sql:column()**/**sql:variable()** 函數之不具類型的 XML 資料類型執行個體，或是 XQuery 運算式。 運算式可產生節點、文字節點，或經過排序的節點序列。 它不能解析成根 (/) 節點。 如果運算式會產生一個值或值的序列，這些值會以單一文字節點插入，並以空格隔開序列中的每個值。 如果您指定多個節點做為常數，這些節點會以括號括住，並以逗點隔開。 您不能插入異質性序列，例如含有元素、屬性或值的序列。 如果 *Expression1* 解析成空的序列，則不會進行插入，也不會傳回錯誤。  
+ 識別一或多個要插入的節點。 這可以是固定的 XML 執行個體、修改方法套用所在之相同 XML 結構描述集合的具類型 XML 資料類型執行個體的參考、使用獨立 **sql:column()** /**sql:variable()** 函數之不具類型的 XML 資料類型執行個體，或是 XQuery 運算式。 運算式可產生節點、文字節點，或經過排序的節點序列。 它不能解析成根 (/) 節點。 如果運算式會產生一個值或值的序列，這些值會以單一文字節點插入，並以空格隔開序列中的每個值。 如果您指定多個節點做為常數，這些節點會以括號括住，並以逗點隔開。 您不能插入異質性序列，例如含有元素、屬性或值的序列。 如果 *Expression1* 解析成空的序列，則不會進行插入，也不會傳回錯誤。  
   
  into  
  將 *Expression1* 所識別的節點插入為 *Expression2* 所識別之節點的直接下階 (子節點)。 如果 *Expression2* 中的節點已經有一或多個子節點，則必須使用 **as first** 或 **as last** 來指定您要加入新節點的位置。 例如，分別在子節點清單的開頭或結尾。 插入屬性時，會忽略 **as first** 和 **as last** 關鍵字。  
@@ -212,7 +211,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. 使用 CDATA 區段來插入資料  
- 當您插入的文字中包含對 XML 無效的字元 (例如 < 或 >)，您可以使用 CDATA 區段來插入資料，如下列查詢所示。 此查詢會指定 CDATA 區段，但區段會加入為文字節點，且任何無效字元都會轉換成實體。 例如，'<' 會另存為 &lt;。  
+ 當您所插入文字中包含對 XML 無效的字元 (例如 < 或 >)，您可以使用 CDATA 區段來插入資料，如下列查詢所示。 此查詢會指定 CDATA 區段，但區段會加入為文字節點，且任何無效字元都會轉換成實體。 例如，'<' 會另存為 &lt;。  
   
 ```  
 USE AdventureWorks;  
@@ -299,7 +298,7 @@ GO
 ```  
   
 ### <a name="i-inserting-based-on-an-if-condition-statement"></a>I. 依據 if 條件陳述式插入  
- 在下列範例中，將 IF 條件指定為 **insert** XML DML 陳述式中 Expression1 的一部份。 如果條件為 True，則會將屬性加入 <`WorkCenter`> 元素中。  
+ 在下列範例中，將 IF 條件指定為 **insert** XML DML 陳述式中 Expression1 的一部份。 如果條件為 True，則會將屬性新增至 <`WorkCenter`> 元素中。  
   
 ```  
 USE AdventureWorks;  

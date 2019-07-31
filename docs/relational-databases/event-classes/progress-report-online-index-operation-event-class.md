@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dc6541ec2d4a1efe4227ffc96f5d50ab19edf7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940645"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>進度報表：線上索引作業事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Progress Report: Online Index Operation 事件類別指出在執行建立程序時，線上索引建立作業的進度。  
+  進度報表：Online Index Operation 事件類別指出在執行建置程序時，線上索引建置作業的進度。  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Online Index Operation 事件類別資料行  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>進度報表：Online Index Operation 事件類別資料行  
   
 |資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -1,7 +1,7 @@
 ---
 title: 搭配使用 SQL Server 連接器與 SQL 加密功能 | Microsoft 文件
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,17 +12,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401081"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329261"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 Azure 金鑰保存庫所保護之非對稱金鑰進行的一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活動，包括下列三個區域。  
   
 -   使用 Azure 金鑰保存庫中的非對稱金鑰進行透明資料加密  
@@ -34,7 +32,7 @@ ms.locfileid: "52401081"
  請先完成 [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)主題的第 I 部分到第 IV 部分，再遵循這個主題上的步驟。  
  
 > [!NOTE]  
->  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)頁面之＜SQL Server 連接器的升級＞下的指示來升級為 1.0.1.0 版或更新版本。  
+>  1\.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)頁面＜SQL Server 連接器升級＞下的指示，升級為 1.0.1.0 版或更新版本。  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>使用 Azure 金鑰保存庫中的非對稱金鑰進行透明資料加密  
  完成＜使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟＞主題的第 I 部分到第 IV 部分之後，請使用 Azure 金鑰保存庫金鑰以使用 TDE 來加密資料庫加密金鑰。  
@@ -49,8 +47,8 @@ ms.locfileid: "52401081"
      使用下列方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼：  
   
     -   編輯 `IDENTITY` 引數 (`ContosoDevKeyVault`)，以指向您的 Azure 金鑰保存庫。
-        - 如果您使用的是 **公用 Azure**，請將 `IDENTITY` 引數取代為第 II 部分中的 Azure 金鑰保存庫名稱。
-        - 如果您使用的是 **私人 Azure 雲端** (例如 Azure Government、Azure China 或 Azure Germany)，請將 `IDENTITY` 引數取代為第 II 部分的步驟 3 中所傳回的保存庫 URI。 請不要在保存庫 URI 中包括 "https://"。   
+        - 如果您使用的是**全域 Azure**，請用第 II 部分中的 Azure Key Vault 名稱來取代 `IDENTITY` 引數。
+        - 如果您使用的是 **私人 Azure 雲端** (例如 Azure Government、Azure China 21Vianet 或 Azure Germany)，請將 `IDENTITY` 引數取代為第 II 部分步驟 3 中所傳回的保存庫 URI。 請不要在保存庫 URI 中包括 "https://"。   
   
     -   將 `SECRET` 引數的第一個部分取代為第 I 部分中的 Azure Active Directory **用戶端識別碼** 。在此範例中， **用戶端識別碼** 是 `EF5C8E094D2A4A769998D93440D8115D`。  
   
@@ -62,9 +60,9 @@ ms.locfileid: "52401081"
     ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+        WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
         SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
@@ -113,7 +111,7 @@ ms.locfileid: "52401081"
     GO  
     ```  
   
-     使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，透過使用物件總管連接到您的資料庫，來確認已開啟 TDE。 以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [管理資料庫加密]。  
+     使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，透過使用物件總管連接到您的資料庫，來確認已開啟 TDE。 以滑鼠右鍵按一下您的資料庫，指向 [工作]  ，然後按一下 [管理資料庫加密]  。  
   
      ![EKM TDE 物件總管](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "EKM TDE 物件總管")  
   
@@ -146,8 +144,8 @@ ms.locfileid: "52401081"
      使用下列方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼：  
   
     -   編輯 `IDENTITY` 引數 (`ContosoDevKeyVault`)，以指向您的 Azure 金鑰保存庫。
-        - 如果您使用的是 **公用 Azure**，請將 `IDENTITY` 引數取代為第 II 部分中的 Azure 金鑰保存庫名稱。
-        - 如果您使用的是 **私人 Azure 雲端** (例如 Azure Government、Azure China 或 Azure Germany)，請將 `IDENTITY` 引數取代為第 II 部分的步驟 3 中所傳回的保存庫 URI。 請不要在保存庫 URI 中包括 "https://"。    
+        - 如果您使用的是**全域 Azure**，請用第 II 部分中的 Azure Key Vault 名稱來取代 `IDENTITY` 引數。
+        - 如果您使用的是 **私人 Azure 雲端** (例如 Azure Government、Azure China 21Vianet 或 Azure Germany)，請將 `IDENTITY` 引數取代為第 II 部分步驟 3 中所傳回的保存庫 URI。 請不要在保存庫 URI 中包括 "https://"。    
   
     -   將 `SECRET` 引數的第一個部分取代為第 I 部分中的 Azure Active Directory **用戶端識別碼** 。在此範例中， **用戶端識別碼** 是 `EF5C8E094D2A4A769998D93440D8115D`。  
   
@@ -160,9 +158,9 @@ ms.locfileid: "52401081"
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
-            WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+            WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
             SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    
@@ -214,7 +212,7 @@ ms.locfileid: "52401081"
     
     若要還原使用 TDE 加密的資料庫備份，目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體必須先有一份用於加密的非對稱金鑰保存庫金鑰。 以下是達成此目的的方法：  
     
-    - 若金鑰保存庫中不再有原始用於 TDE 的非對稱金鑰，請還原金鑰保存庫的金鑰備份或重新匯入本機 HSM 中的金鑰。 **重要事項︰** 為了使金鑰的指紋符合資料庫備份上記錄的指紋，金鑰必須命名為與之前原始名稱**相同的金鑰保存庫金鑰名稱**。
+    - 若金鑰保存庫中不再有原始用於 TDE 的非對稱金鑰，請還原金鑰保存庫的金鑰備份或重新匯入本機 HSM 中的金鑰。 **重要：** 為了使金鑰的指紋符合資料庫備份上所記錄指紋，金鑰必須命名為與之前原始名稱**相同的金鑰保存庫金鑰名稱**。
     
     - 將步驟 1 和 2 套用在目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上。
     

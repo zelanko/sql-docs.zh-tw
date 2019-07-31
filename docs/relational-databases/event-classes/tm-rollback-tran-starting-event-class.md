@@ -1,5 +1,5 @@
 ---
-title: 'TM: Rollback Tran Starting 事件類別 | Microsoft 文件'
+title: TM：Rollback Tran Starting 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0822827abe97e8c6585bf7bc7397f8aef9f2361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b0a702203dfbab242965fdb4b729e6f1c73f0cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049026"
 ---
-# <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting 事件類別
+# <a name="tm-rollback-tran-starting-event-class"></a>TM：Rollback Tran Starting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  TM: Rollback Tran Starting 事件類別指出正在啟動 ROLLBACK TRANSACTION 要求。 用戶端會透過 Transaction Management 介面傳送要求。 EventSubClass 資料行指出新交易是否會在目前交易回復之後啟動。  
+  TM：Rollback Tran Starting 事件類別指出正在啟動 ROLLBACK TRANSACTION 要求。 用戶端會透過 Transaction Management 介面傳送要求。 EventSubClass 資料行指出新交易是否會在目前交易回復之後啟動。  
   
-## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM: Rollback Tran Starting 事件類別資料行  
+## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM：Rollback Tran Starting 事件類別資料行  
   
 |資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

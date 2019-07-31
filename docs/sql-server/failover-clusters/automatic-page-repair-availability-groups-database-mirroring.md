@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035270"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自動修復頁面 (可用性群組：資料庫鏡像)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  資料庫鏡像與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]都支援自動修復頁面。 在頁面因為某些錯誤類型而損毀、無法讀取之後，資料庫鏡像夥伴 (主體或鏡像) 或可用性複本 (主要或次要) 會嘗試自動復原頁面。 無法讀取頁面的夥伴/複本會向其夥伴或另一個複本要求一個全新頁面複本。 如果這個要求成功，無法讀取的頁面就會被可讀取的複本取代，而這通常會解決錯誤。  
+  資料庫鏡像與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]都支援自動修復頁面。 在頁面因為某些錯誤類型而損毀、無法讀取之後，資料庫鏡像夥伴 (主體或鏡像) 或可用性複本 (主要或次要) 會嘗試自動復原頁面。 無法讀取頁面的夥伴/複本會向其夥伴或另一個複本要求一個全新頁面副本。 如果這個要求成功，無法讀取的頁面就會被可讀取的副本取代，而這通常會解決錯誤。  
   
  一般來說，資料庫鏡像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 會以相等方式處理 I/O 錯誤。 幾個差異會在這裡明確標註。  
   
@@ -63,17 +62,17 @@ ms.locfileid: "49383563"
   
 -   第 9 頁 (資料庫啟動頁面)。  
   
--   配置頁面—全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
+-   配置頁面：全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
   
  
 ##  <a name="PrimaryIOErrors"></a> 處理主體/主要資料庫的 I/O 錯誤  
  在主體/主要資料庫上，只有當資料庫處於 SYNCHRONIZED 狀態，而且主體/主要資料庫仍在將資料庫的記錄檔記錄傳送到鏡像/次要資料庫時，才會嘗試自動修復頁面。 自動修復頁面的基本動作順序如下所示：  
   
-1.  在主體/主要資料庫的資料頁面上發生讀取錯誤時，主體/主要資料庫會在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 資料表中插入一個資料列，列出適當的錯誤狀態。 如果是資料庫鏡像，主體資料庫接著就會向鏡像資料庫要求頁面的複本。 如果是 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主要資料庫會向所有次要資料庫廣播要求，並從第一個回應的次要資料庫取得頁面。 此要求會指定目前在已排清記錄檔結尾的頁面識別碼和 LSN。 該頁面會標示為 *還原暫止*。 這樣就無法在嘗試進行自動修復頁面期間存取該頁面。 在嘗試修復期間存取此頁面的嘗試將會失敗，其錯誤為 829 (還原暫止)。  
+1.  在主體/主要資料庫的資料頁面上發生讀取錯誤時，主體/主要資料庫會在 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 資料表中插入一個資料列，列出適當的錯誤狀態。 如果是資料庫鏡像，主體資料庫接著就會向鏡像資料庫要求頁面的副本。 如果是 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，主要資料庫會向所有次要資料庫廣播要求，並從第一個回應的次要資料庫取得頁面。 此要求會指定目前在已排清記錄檔結尾的頁面識別碼和 LSN。 該頁面會標示為 *還原暫止*。 這樣就無法在嘗試進行自動修復頁面期間存取該頁面。 在嘗試修復期間存取此頁面的嘗試將會失敗，其錯誤為 829 (還原暫止)。  
   
-2.  收到頁面要求後，鏡像/次要資料庫會等到已經將記錄重做到要求中指定的 LSN 為止。 然後，鏡像/次要資料庫就會嘗試存取其資料庫複本中的頁面。 如果可以存取頁面，鏡像/次要資料庫就會將該頁面的複本傳送到主體/主要資料庫。 否則，鏡像/次要資料庫會將錯誤傳回主體/主要資料庫，而且自動修復頁面嘗試會失敗。  
+2.  收到頁面要求後，鏡像/次要資料庫會等到已經將記錄重做到要求中指定的 LSN 為止。 然後，鏡像/次要資料庫就會嘗試存取其資料庫副本中的頁面。 如果可以存取頁面，鏡像/次要資料庫就會將該頁面的副本傳送到主體/主要資料庫。 否則，鏡像/次要資料庫會將錯誤傳回主體/主要資料庫，而且自動修復頁面嘗試會失敗。  
   
-3.  主體/主要資料庫會處理包含全新頁面複本的回應。  
+3.  主體/主要資料庫會處理包含全新頁面副本的回應。  
   
 4.  自動修復頁面修復可疑頁面之後，該頁面在 **suspect_pages** 資料表中會標示為已還原 (**event_type** = 5)。  
   
@@ -83,11 +82,11 @@ ms.locfileid: "49383563"
 ##  <a name="SecondaryIOErrors"></a> 處理鏡像/次要資料庫的 I/O 錯誤  
  資料庫鏡像與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]通常會以相同方式處理鏡像/次要資料庫上發生的資料頁面 I/O 錯誤。  
   
-1.  對於資料庫鏡像，如果鏡像資料庫在重做記錄檔記錄時遇到一個或多個頁面 I/O 錯誤，鏡像工作階段會進入 SUSPENDED 狀態。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，如果次要複本在重做記錄檔記錄時遇到一個或多個頁面 I/O 錯誤，次要資料庫會進入 SUSPENDED 狀態。 此時，鏡像/次要資料庫會在 **suspect_pages** 資料表中插入一個資料列，列出適當的錯誤狀態。 鏡像/次要資料庫接著就會向主體/主要資料庫要求頁面的複本。  
+1.  對於資料庫鏡像，如果鏡像資料庫在重做記錄檔記錄時遇到一個或多個頁面 I/O 錯誤，鏡像工作階段會進入 SUSPENDED 狀態。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，如果次要複本在重做記錄檔記錄時遇到一個或多個頁面 I/O 錯誤，次要資料庫會進入 SUSPENDED 狀態。 此時，鏡像/次要資料庫會在 **suspect_pages** 資料表中插入一個資料列，列出適當的錯誤狀態。 鏡像/次要資料庫接著就會向主體/主要資料庫要求頁面的副本。  
   
-2.  主體/主要資料庫會嘗試存取其資料庫複本中的頁面。 若無法存取頁面，主體/主要資料庫會傳送頁面複本到鏡像/次要資料庫。  
+2.  主體/主要資料庫會嘗試存取其資料庫副本中的頁面。 若無法存取頁面，主體/主要資料庫會傳送頁面複本到鏡像/次要資料庫。  
   
-3.  如果鏡像/次要資料庫收到所要求之每個頁面的複本，鏡像/次要資料庫會嘗試繼續鏡像工作階段。 如果自動修復頁面修復可疑頁面，該頁面在 **suspect_pages** 資料表中會標示為已還原 (**event_type** = 4)。  
+3.  如果鏡像/次要資料庫收到所要求之每個頁面的副本，鏡像/次要資料庫會嘗試繼續鏡像工作階段。 如果自動修復頁面修復可疑頁面，該頁面在 **suspect_pages** 資料表中會標示為已還原 (**event_type** = 4)。  
   
      如果鏡像/次要資料庫沒有收到向主體/主要資料庫要求的頁面，自動修復頁面嘗試會失敗。 對於資料庫鏡像，鏡像工作階段保持暫停。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，次要資料庫也會保持暫停。 如果手動繼續鏡像工作階段或次要資料庫，在同步處理階段期間，將會再次叫用損毀的頁面。  
   

@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2018
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 83e515054db5d9727733de6cfc2426ee9ac3aa01
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793644"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329281"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,16 +49,21 @@ ms.locfileid: "67793644"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>引數  
 *datepart*  
-指定所跨越界限類型之 *startdate* 和 *enddate* 的一部分。 `DATEDIFF` 不會接受使用者定義變數對等項目。 此表格會列出所有有效的 *datepart* 引數。
-  
-|*datepart*|縮寫|  
-|---|---|
+指定所跨越界限類型之 *startdate* 和 *enddate* 的一部分。
+
+> [!NOTE]
+> `DATEDIFF` 不會接受使用者自訂變數中的 *datepart* 值，也不會接受以引號括住的字串。 
+
+此表格列出所有有效的 *datepart* 引數名稱與縮寫。
+
+|*datepart* 名稱|*datepart* 縮寫|  
+|-----------|------------|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
@@ -72,7 +76,10 @@ DATEDIFF ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> 每個特定 *datepart* 名稱和該 *datepart* 名稱的縮寫都會傳回相同值。
+
 *startdate*  
 可解析成下列其中一個值的運算式：
 
@@ -86,14 +93,13 @@ DATEDIFF ( datepart , startdate , enddate )
 請使用四位數年份以避免模糊不清。 如需兩位數年份值的資訊，請參閱[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
 *enddate*  
-請參閱 *startdate*。
+請參閱＜*startdate*＞。
   
 ## <a name="return-type"></a>傳回類型  
  **int**  
   
 ## <a name="return-value"></a>傳回值  
-  
-每個特定 *datepart* 和該 *datepart* 的縮寫會傳回相同的值。  
+*startdate* 和 *enddate* 之間的 **int** 差異，以 *datepart* 所設定的 coundary 表示。
   
 針對超出 **int** 範圍 (-2,147,483,648 到 +2,147,483,647) 的傳回值，`DATEDIFF` 會傳回錯誤。  針對 **millisecond**，*startdate* 和 *enddate* 最大的差異為 24 天 20 小時 31 分鐘 23.647 秒。 針對 **second**，最大的差異為 68 年 19 天 3 小時 14 分鐘 7 秒。
   
@@ -108,7 +114,7 @@ DATEDIFF ( datepart , startdate , enddate )
 如果 *startdate* 和 *enddate* 具有不同的日期資料類型，而且其中一個項目的時間部分或小數秒數有效位數超過另一個項目，`DATEDIFF` 會將另一個項目的遺漏部分設定為 0。
   
 ## <a name="datepart-boundaries"></a>datepart 界限  
-下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近且時間差距為一百奈秒 (.0000001 秒)。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF` 會針對 *datepart* **week** 傳回 0。
+下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近且時間差距為一百奈秒 (.0000001 秒)。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -123,8 +129,10 @@ SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
-  
-## <a name="remarks"></a>備註  
+
+如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF` 會針對 *datepart* **week** 傳回 0。
+
+## <a name="remarks"></a>Remarks  
 您可以在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF`。
   
 `DATEDIFF` 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當作字串傳遞時，`DATEDIFF` 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。
@@ -241,6 +249,7 @@ GO
 ### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>I. 求得 startdate 與 enddate 的差距，並以日期部分字串表示
 
 ```sql
+-- DOES NOT ACCOUNT FOR LEAP YEARS
 DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
 DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
 

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23f442dcf798a1d4f1961698958673dac007a37e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b42356331d91683811472b420e656560a77d79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086263"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47857236"
 
 3. 以手動方式重新編譯原生編譯的預存程序，可因更新過的統計資料而受益。
 
-*統計資料的一次性指令碼︰* 相容性層級建立的記憶體最佳化資料表，您可以執行一次下列 Transact-SQL 指令碼，更新所有記憶體最佳化資料表的統計資料，並啟用往後的統計資料自動更新 (假設資料庫已啟用 AUTO_UPDATE_STATISTICS)︰
+*統計資料的一次性指令碼：* 對於以較低相容性層級建立的記憶體最佳化資料表，您可以執行一次下列 Transact-SQL 指令碼，更新所有記憶體最佳化資料表的統計資料，並啟用往後的統計資料自動更新 (假設資料庫已啟用 AUTO_UPDATE_STATISTICS)：
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -75,7 +74,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-*驗證已啟用自動更新︰* 下列指令碼會驗證是否已啟用記憶體最佳化資料表統計資料的自動更新。 執行上述指令碼之後，它會針對所有統計資料物件，在資料行中 `1` 傳回 `auto-update enabled` 。
+*驗證已啟用自動更新：* 下列指令碼會驗證是否已啟用記憶體最佳化資料表統計資料的自動更新。 執行上述指令碼之後，它會針對所有統計資料物件，在資料行中 `1` 傳回 `auto-update enabled` 。
 
 ```
 SELECT 

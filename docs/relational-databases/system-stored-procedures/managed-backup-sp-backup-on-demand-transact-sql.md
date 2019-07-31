@@ -50,10 +50,10 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> 引數  
  @database_name  
- 執行備份所在之資料庫的名稱。 @database_name已**SYSNAME**。  
+ 執行備份所在之資料庫的名稱。 @database_name已 **SYSNAME**。  
   
  @type  
- 要執行的備份類型：資料庫或記錄檔。 @type參數是**NVARCHAR(32)** 。  
+ 要執行的備份類型：資料庫或記錄檔。 @type參數是 **NVARCHAR(32)** 。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

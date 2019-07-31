@@ -50,13 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: deac964cb20d64d7a1dc2d1cc1e76f5004d80033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c91c4e9a432992475daef8a987dea2dc9adf913
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803286"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290379"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ ms.locfileid: "66803286"
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** - 一或多部搭配 Distributed Replay controller 運作的分散式重新執行用戶端電腦，以針對 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體模擬並行工作負載。  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - 裝載由 Microsoft 提供之外部可執行檔的受信任服務，例如隨 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]一併安裝的 R 執行階段。 附屬項目處理序可由 Launchpad 處理序啟動，但會根據個別執行個體的組態來進行資源管理。 Launchpad 服務在其專屬的使用者帳戶下執行，而已註冊執行階段之每項特定服務的附屬項目處理序則會繼承 Launchpad 的使用者帳戶。 附屬項目處理序會視需求在執行時加以建立及終結。
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]** - 裝載 Microsoft 所提供外部可執行檔的受信任服務，例如隨 R 服務或機器學習服務一併安裝的 R 或 Python 執行階段。 附屬項目處理序可由 Launchpad 處理序啟動，但會根據個別執行個體的組態來進行資源管理。 Launchpad 服務在其專屬的使用者帳戶下執行，而已註冊執行階段之每項特定服務的附屬項目處理序則會繼承 Launchpad 的使用者帳戶。 附屬項目處理序會視需求在執行時加以建立及終結。
 
     如果在同時作為網域控制站的電腦上安裝 SQL Server，Launchpad 就無法建立所使用的帳戶。 因此，在網域控制站上安裝 R Services (資料庫內) 或 Machine Learning 服務 (資料庫內) 將會失敗。
 
@@ -232,7 +231,7 @@ ms.locfileid: "66803286"
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT、ISSVCPASSWORD、ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR、CTLRSVCACCOUNT、CTLRSVCPASSWORD、CTLRSTARTUPTYPE、CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT、CLTSVCACCOUNT、CLTSVCPASSWORD、CLTSTARTUPTYPE、CLTCTLRNAME、CLTWORKINGDIR、CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS\*\*\*|
+|R 服務或機器學習服務|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS\*\*\*|
 |PolyBase 引擎| PBENGSVCACCOUNT、PBENGSVCPASSWORD、PBENGSVCSTARTUPTYPE、PBDMSSVCACCOUNT、PBDMSSVCPASSWORD、PBDMSSVCSTARTUPTYPE、PBSCALEOUT、PBPORTRANGE。
   
  \*需自動安裝的詳細資訊和範例語法，請參閱[從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
@@ -301,8 +300,8 @@ ms.locfileid: "66803286"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client：**|**以服務方式登入** (SeServiceLogonRight)|  
 |**PolyBase 引擎和 DMS**| **以服務方式登入** (SeServiceLogonRight)  |   
 |**Launchpad：**|**以服務方式登入** (SeServiceLogonRight) <br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br />**略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br />**調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|     
-|**R Services：** **SQLRUserGroup** (SQL 2016 和 2017)  |**允許本機登入** |   
-|**機器學習** '**所有應用程式套件' [AppContainer]** (SQL 2019)  |SQL Server 'Binn'、R_Services 和 PYTHON_Services 目錄的**讀取和執行權限** |   
+|**R 服務/機器學習服務：** **SQLRUserGroup** (SQL 2016 和 2017)  |預設沒有 [允許本機登入]  權限 |   
+|**機器學習服務** '**所有應用程式套件' [AppContainer]** (SQL 2019)  |SQL Server 'Binn'、R_Services 和 PYTHON_Services 目錄的**讀取和執行權限** |   
 
  \*[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的執行個體會停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 代理程式服務。  
   

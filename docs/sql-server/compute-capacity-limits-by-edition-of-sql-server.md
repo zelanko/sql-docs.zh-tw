@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067569"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "52400621"
   
 -   一個實體處理器可能是由一個或多個核心組成。 實體處理器與處理器套件或插槽相同。  
   
-具有多個實體處理器的系統或是具有多核心及/或超執行緒之實體處理器的系統可讓作業系統同時執行多個工作。 每個執行的執行緒都會顯示成邏輯處理器。 例如，如果您的電腦具有兩個啟用超執行緒的四核心處理器，且每個核心都有兩個執行緒，則一共有 16 個邏輯處理器：2 個處理器 x 每個處理器 4 個核心 x 每個核心 2 個執行緒。 值得注意的是：  
+具有多個實體處理器的系統或是具有多核心及/或超執行緒之實體處理器的系統可讓作業系統同時執行多個工作。 每個執行的執行緒都會顯示成邏輯處理器。 例如，如果電腦具有兩個啟用超執行緒的四核心處理器，且每個核心都有兩個執行緒，則一共有 16 個邏輯處理器：2 個處理器 x 每個處理器 4 個核心 x 每個核心 2 個執行緒。 值得注意的是：  
   
 -   來自超執行緒核心之單一執行緒的邏輯處理器計算容量小於來自停用超執行緒之相同核心的邏輯處理器計算容量。  
   

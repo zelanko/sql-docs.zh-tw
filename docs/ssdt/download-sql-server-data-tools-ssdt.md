@@ -12,14 +12,13 @@ keywords:
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3790d0f71b130ff1b73ae9af94fabcefed1cedd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62b3db01792005afa7c124f4f31b78cdc350b2dd
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65368347"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290340"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下載並安裝 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,13 +51,13 @@ ms.locfileid: "65368347"
 
 ## <a name="install-ssdt-with-visual-studio-2017"></a>使用 Visual Studio 2017 安裝 SSDT
 
-若要在 [Visual Studio 安裝](https://docs.microsoft.com/visualstudio/install/install-visual-studio)期間安裝 SSDT，請選取 [Data storage and processing] \(資料儲存和處理\) 工作負載，然後選取 [SQL Server Data Tools]。 如果已安裝 Visual Studio，您可以[編輯工作負載清單](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)來包含 SSDT：![資料儲存和處理工作負載](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
+若要在 [Visual Studio 安裝](https://docs.microsoft.com/visualstudio/install/install-visual-studio)期間安裝 SSDT，請選取 [Data storage and processing] \(資料儲存和處理\)  工作負載，然後選取 [SQL Server Data Tools]  。 如果已安裝 Visual Studio，您可以[編輯工作負載清單](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)來包含 SSDT：![資料儲存和處理工作負載](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
 
 ## <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>安裝 Analysis Services、Integration Services 和 Reporting Services 工具
 
 若要安裝 AS、IS 和 RS 專案支援，請執行 [SSDT 獨立安裝程式](#ssdt-for-vs-2017-standalone-installer)。 
 
-此安裝程式會列出可新增 SSDT 工具的 Visual Studio 執行個體。 如果未安裝 Visual Studio，請選取 [Install a new SQL Server Data Tools instance] \(安裝新的 SQL Server Data Tools 執行個體\) 會以 Visual Studio 的最小版本安裝 SSDT，但若要獲得最佳體驗，建議搭配使用 SSDT 與 [Visual Studio 的最新版本](https://www.visualstudio.com/downloads)。 
+此安裝程式會列出可新增 SSDT 工具的 Visual Studio 執行個體。 如果未安裝 Visual Studio，請選取 [Install a new SQL Server Data Tools instance] \(安裝新的 SQL Server Data Tools 執行個體\)  會以 Visual Studio 的最小版本安裝 SSDT，但若要獲得最佳體驗，建議搭配使用 SSDT 與 [Visual Studio 的最新版本](https://www.visualstudio.com/downloads)。 
 
 ![選取 AS、IS、RS](../ssdt/media/download-sql-server-data-tools-ssdt/select-services.png)
 
@@ -66,18 +65,18 @@ ms.locfileid: "65368347"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (獨立安裝程式)
 
-[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.9.1)](https://go.microsoft.com/fwlink/?linkid=2086373) 
+[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.9.2)](https://go.microsoft.com/fwlink/?linkid=2095463) 
 
 > [!IMPORTANT]
-> - 如果已安裝「Analysis Services 專案」和「Reporting Services 專案」延伸模組，請先解除安裝，並關閉所有 VS 執行個體，然後安裝 SSDT for Visual Studio 2017 (15.9.1)。
+> - 如果已安裝「Analysis Services 專案」  和「Reporting Services 專案」  延伸模組，請先解除安裝並關閉所有 VS 執行個體，然後安裝 SSDT for Visual Studio 2017 (15.9.2)。
 > - 請將適用於 Visual Studio 2017 的 SSDT (15.8.0) 或先前版本用於設計包含 Teradata 來源/目的地的 SSIS 套件。 15.8.0 以後的適用於 Visual Studio 2017 的 SSDT無法設計包含 Attunity 之 Teradata 來源/目的地的 SSIS 套件。
 
 
 **版本資訊**  
   
-版本號碼：15.9.1  
-組建編號：14.0.16191.0  
-發行日期：2019 年 4 月 27 日  
+版本號碼：15.9.2  
+組建編號：14.0.16194.0  
+發行日期：2019 年 7 月 17 日  
 
 如需完整變更清單，請參閱 [SQL Server Data Tools (SSDT) 的版本資訊](release-notes-ssdt.md)。
 
@@ -87,17 +86,17 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 這版**適用於 VS 2017 的 SSDT** 提供下列語言版本：
 
-- [簡體中文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x804)
-- [繁體中文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x404)
-- [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x409)
-- [法文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40c)
-- [德文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x407)
-- [義大利文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x410)
-- [日文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x411)
-- [韓文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x412)
-- [葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x416)
-- [俄文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x419)
-- [西班牙文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40a)
+- [簡體中文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
+- [繁體中文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
+- [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
+- [法文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
+- [德文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
+- [義大利文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
+- [日文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
+- [韓文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
+- [葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
+- [俄文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
+- [西班牙文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
 
 ## <a name="offline-install"></a>離線安裝
 

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd5f5aac2f12cd20b5459f4b1f725b975b4dd1e7
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 5bbb131ef95949d2739c859ecd24b32c4ef25397
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990563"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "54419823"
   
     -   [合併代理程式]  
   
-     透過下列索引標籤，可存取與這些代理程式相關聯的資訊和工作：[訂閱監看清單] (適用於每個「發行者」) 或 [所有訂閱] 索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     透過下列索引標籤，可存取與這些代理程式建立關聯的資訊和工作：[訂閱監看清單]  (適用於每個「發行者」) 或 [所有訂閱]  索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="independent-and-shared-agents"></a>獨立與共用的代理程式  
  獨立代理程式即服務一個訂閱的代理程式。 共用的代理程式會服務多個訂閱；如果使用相同共用代理程式的多個訂閱需要同步，依預設，它們會在佇列中等候，該共用代理程式會一次服務其中之一。 使用獨立代理程式會降低延遲，因為代理程式會在訂閱需要同步時就緒。 合併式複寫通常使用獨立代理程式，依預設，異動複寫會使用在「新增發行集精靈」中建立的發行集之獨立代理程式 (在舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，依預設，異動複寫則使用共用代理程式)。  

@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121331"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>點對點 - 異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」*) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  
+  點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」* ) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  
   
  請考慮 Web 應用程式。 這樣會在以下方面因為點對點複寫而獲益：  
   
@@ -75,7 +74,7 @@ ms.locfileid: "54129308"
   
  每一處都有資料庫和應用程式伺服器，供支援工程師輸入並更新有關客戶來電的資訊。 此拓撲是依時間分割， 因此更新就只會發生在目前正在營業的節點，隨後更新會流向其他參與資料庫。 此拓撲具有下列優點：  
   
--   獨立而不隔離：每一個分公司都可以獨立插入、更新或刪除資料，而且還可以共用資料，因為資料會複寫到所有其他的參與資料庫。  
+-   獨立而不隔離：每一個分公司都可以獨立插入、更新或刪除資料，且還可以共用資料，因為資料會複寫到所有其他的參與資料庫。  
   
 -   在發生失敗或要允許對一或多個參與資料庫進行維護時，具有更高的可用性。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "54129308"
   
 -   散發代理程式參數 **-SubscriptionStreams** 和記錄讀取器代理程式參數 **-MaxCmdsInTran**。  
   
--   發行項屬性 **@destination_owner** 及 **@destination_table**) 來提供向外延展和高可用性解決方案。
+-   發行項屬性 **@destination_owner** 及 **@destination_table** ) 來提供向外延展和高可用性解決方案。
 
 -   點對點異動複寫不支援建立點對點發行集的單向交易式訂閱   
   
@@ -150,16 +149,16 @@ ms.locfileid: "54129308"
   
 -   發行項屬性 **@replicate_ddl** 需要 **true**值， **@identityrangemanagementoption** 需要 **manual**值，而 **@status** 則必須設定選項 **24** 。  
   
--   發行項屬性 **@ins_cmd**、 **@del_cmd**和 **@upd_cmd** 的值不能設定為 **SQL**) 來提供向外延展和高可用性解決方案。  
+-   發行項屬性 **@ins_cmd** 、 **@del_cmd** 和 **@upd_cmd** 的值不能設定為 **SQL**) 來提供向外延展和高可用性解決方案。  
   
 -   訂閱屬性 **@sync_type** 需要 **none** 或 **automatic**) 來提供向外延展和高可用性解決方案。  
   
 ### <a name="maintenance-considerations"></a>維護考量  
- 某些動作需要讓系統靜止。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  
+ 某些動作需要停止系統。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  
   
 ||僅限 SQL Server 2005 對等，或 SQL Server 2005 對等與 SQL Server 2008 對等及更新版本的混合|僅限 SQL Server 2005 對等，或 SQL Server 2005 對等與 SQL Server 2008 對等及更新版本的混合|SQL2008 對等及更新版本|SQL2008 對等及更新版本|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|將節點加入拓撲中|完整拓撲中有 2 個節點︰不需要靜止。 使用 `sync_type = 'initialize with backup'`。|超過 2 個節點：需要靜止。|`sync_type = 'replication support only'`：需要靜止。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：不需要靜止。|  
+|將節點加入拓撲中|完整拓撲中有 2 個節點︰不需要靜止。 使用 `sync_type = 'initialize with backup'`。|超過 2 個節點：需要靜止。|`sync_type = 'replication support only'`:需要靜止。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：不需要靜止。|  
   
  拓撲結構描述變更 (新增或卸除發行項) 需要停止。 如需詳細資訊，請參閱[管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)。  
   
@@ -167,7 +166,7 @@ ms.locfileid: "54129308"
   
  使用  [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 變更發行項屬性永遠不需要停止。 允許的變更 (適用於 P2P) 包括 `description`、 `ins_cmd`、 `upd_cmd`和 `del_cmd` 屬性。  
   
- 發行項結構描述變更 (新增/卸除資料行) 永遠不需要靜止。  
+ 發行項結構描述變更 (新增/卸除資料行) 永遠不需要停止。  
   
 -   新增發行項：若要將發行項新增至現有的設定，我們必須將系統靜止、執行 CREATE TABLE 陳述式並在拓撲中的每個節點載入初始資料，然後在拓撲中的每個節點新增新的發行項。  
   

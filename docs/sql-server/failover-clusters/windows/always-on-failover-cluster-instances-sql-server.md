@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 034a46affb198c89baab3c4741ae84569c96951b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063806"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 容錯移轉叢集執行個體 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Always On 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 供應項目的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體」(FCI)) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
+  Always On 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 供應項目的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體」  (FCI)) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
   
  FCI 可以利用[可用性群組](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)提供資料庫層級的遠端災害復原。 如需詳細資訊，請參閱[容錯移轉叢集和可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
  
@@ -134,7 +133,7 @@ ms.locfileid: "52509921"
  SQL Server 二進位檔  
  產品二進位檔案會在 FCI 的每個節點上本機安裝，此程序類似於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立安裝。 不過，在啟動期間，這些服務並不會自動啟動，而是透過 WSFC 進行管理。  
   
- Storage  
+ 儲存體  
  FCI 與可用性群組相反，前者必須在 FCI 的所有節點之間使用共用儲存體，以供資料庫和記錄檔儲存。 共用儲存體可以採用 WSFC 叢集磁碟、SAN 磁碟、儲存空間直接存取 (S2D) 或 SMB 檔案共用的形式。 如此一來，每當發生容錯移轉時，FCI 中的所有節點都有相同的執行個體資料檢視。 不過，這表示共用儲存體是潛在的單一失敗點，而 FCI 仰賴基礎儲存方案以確保資料保護。  
   
  網路名稱  
@@ -157,7 +156,7 @@ ms.locfileid: "52509921"
 |----------------------------|---------------|  
 |描述如何安裝新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI。|[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |描述如何升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 容錯移轉叢集。|[升級 SQL Server 容錯移轉叢集執行個體](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|描述 Windows 容錯移轉叢集概念，並提供 Windows 容錯移轉叢集相關工作的連結|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]： [容錯移轉叢集概觀](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2： [容錯移轉叢集概觀](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|描述 Windows 容錯移轉叢集概念，並提供 Windows 容錯移轉叢集相關工作的連結|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]:[容錯移轉叢集概觀](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2：[容錯移轉叢集概觀](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |描述 FCI 節點和可用性群組複本之間的概念差異，以及使用 FCI 裝載可用性群組複本的考量。|[容錯移轉叢集和可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

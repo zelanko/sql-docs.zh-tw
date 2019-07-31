@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bdb182e2861675cd42d295bd9004cd62198f7687
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002479"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>設定 HealthCheckTimeout 屬性設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   HealthCheckTimeout 設定會用來指定將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 回報為沒有回應之前，SQL Server 資源 DLL 應該等候 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 預存程序傳回資訊的時間長度 (以毫秒為單位)。 針對逾時設定值所做的變更會立即生效，且不需要重新啟動 SQL Server 資源。  
   
--   **開始之前：**[限制事項](#Limits)、[安全性](#Security)  
+-   **開始之前：** [限制事項](#Limits)、[安全性](#Security)  
   
--   **使用下列項目設定 HeathCheckTimeout 設定：**[PowerShell](#PowerShellProcedure)、[容錯移轉叢集管理員](#WSFC)、[Transact-SQL](#TsqlProcedure)  
+-   **使用下列項目設定 HeathCheckTimeout 設定：** [PowerShell](#PowerShellProcedure)、[容錯移轉叢集管理員](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -32,7 +31,7 @@ ms.locfileid: "51702376"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 ALTER SETTINGS 及 VIEW SERVER STATE 權限。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
@@ -74,7 +73,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 2.  展開 **[服務及應用程式]** 並選取 FCI。  
   
-3.  以滑鼠右鍵按一下 [其他資源] 下方的 [SQL Server 資源]，並從滑鼠右鍵功能表中選取 [屬性]。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
+3.  以滑鼠右鍵按一下 [其他資源]  下方的 [SQL Server 資源]  ，並從滑鼠右鍵功能表中選取 [屬性]  。 SQL Server 資源的 **[屬性]** 對話方塊隨即開啟。  
   
 4.  選取 **[屬性]** 索引標籤，輸入需要的 **[HealthCheckTimeout]** 屬性值，然後按一下 **[確定]** 套用變更。  
   

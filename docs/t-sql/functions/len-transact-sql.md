@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b7c9685b11517ce97ebcce64d25f069f1a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6194b035ae28a1c70dbba2f2b72050fb87a76328
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948671"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329325"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回指定字串運算式的字元數，但尾端空白不算。  
+  傳回指定字串運算式的字元數，但尾端空格不算。  
   
 > [!NOTE]  
 >  若要傳回用來表示運算式的位元組數目，請使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 函數。  
@@ -54,7 +53,7 @@ LEN ( string_expression )
  如果您使用 SC 定序，傳回的整數值也將 UTF-16 Surrogate 字組視為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="remarks"></a>Remarks  
- LEN 會排除尾端空白。 如果這是個問題，請考慮使用不修剪字串的 [DATALENGTH &#40;Transact-SQL&#41; ](../../t-sql/functions/datalength-transact-sql.md) 函數。 如果處理的是 Unicode 字串，DATALENGTH 會傳回字元數兩次。 下列範例會示範有尾端空白的 LEN 和 DATALENGTH。  
+ LEN 會排除尾端空格。 如果這是個問題，請考慮使用不修剪字串的 [DATALENGTH &#40;Transact-SQL&#41; ](../../t-sql/functions/datalength-transact-sql.md) 函數。 如果處理的是 Unicode 字串，DATALENGTH 會傳回字元數兩次。 下列範例會示範有尾端空白的 LEN 和 DATALENGTH。  
   
 ```  
 DECLARE @v1 varchar(40),  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5578844ae24a1a82464bed8abec1b7aa138a6832
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4de53a22bb650098db48619bef26efe543dd9ebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137427"
 ---
 # <a name="non-deterministic-content-models"></a>不具決定性的內容模型
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

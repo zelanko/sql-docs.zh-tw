@@ -40,7 +40,7 @@ ms.locfileid: "68212012"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  從「發行者」在以下項目中檢視並修改發送訂閱屬性：  
   
--   [訂閱屬性 - \<發行者>:\<發行集資料庫>] 對話方塊 (可從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用此對話方塊)。  
+-   [訂閱屬性 - \<發行者>:  \<發行集資料庫>] 對話方塊 (可從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用此對話方塊)。  
   
 -   **[所有訂閱]** 索引標籤，在「複寫監視器」中可用。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](monitor/start-the-replication-monitor.md)。  
   

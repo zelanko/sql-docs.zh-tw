@@ -1,5 +1,5 @@
 ---
-title: 資料行存放區索引：概觀 | Microsoft Docs
+title: 資料行存放區索引：概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebf4644c17f9fdbb02c89edec72abd39bdd9c42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912097"
 ---
-# <a name="columnstore-indexes-overview"></a>資料行存放區索引；概觀
+# <a name="columnstore-indexes-overview"></a>資料行存放區索引：概觀
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 「資料行存放區索引」是儲存和查詢大型資料倉儲事實資料表的標準。 此索引使用以資料行為基礎的資料儲存和查詢處理，相較於傳統的資料列導向儲存，最高可在您的資料倉儲中達到 **10 倍查詢效能**改善。 相較於未壓縮的資料，您最高也可以達到 **10 倍資料壓縮**改善。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，資料行存放區索引可使用作業分析，這是對交易式工作負載執行高效能即時分析的功能。  

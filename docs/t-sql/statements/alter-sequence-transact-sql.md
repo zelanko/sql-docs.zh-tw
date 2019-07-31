@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070327"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要順序的 **ALTER** 權限，或結構描述的 **ALTER** 權限。 若要授與順序的 **ALTER** 權限，請使用下列格式的 **ALTER ON OBJECT**：  
   
 ```  
@@ -104,7 +103,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  如需建立順序和使用 **NEXT VALUE FOR** 函式產生序號的範例，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
 ### <a name="a-altering-a-sequence"></a>A. 改變順序  
- 下列範例會建立名為 Test 的結構描述以及名為 TestSeq 的順序，其使用 **int** 資料類型，且範圍介於 0 到 255 之間。 順序開頭為 125，而且每次產生數字時會遞增 25。 因為順序設定為循環，所以當值超過最大值 200 時，順序會從最小值 100 重新啟動。  
+ 下列範例會建立名為 Test 的結構描述以及名為 TestSeq 的順序，其使用 **int** 資料類型，且範圍介於 100 到 200 之間。 順序開頭為 125，而且每次產生數字時會遞增 25。 因為順序設定為循環，所以當值超過最大值 200 時，順序會從最小值 100 重新啟動。  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- 下列範例會將 TestSeq 順序的範圍改成介於 0 到 255 之間。 順序會從 100 重新啟動編號數列，而且每次產生數字時遞增 50。  
+ 下列範例會將 TestSeq 順序的範圍改成介於 50 到 200 之間。 順序會從 100 重新啟動編號數列，而且每次產生數字時遞增 50。  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  

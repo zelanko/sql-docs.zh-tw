@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8b20360492be7a7667f8f43b686bc04c723bd5e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7adffba6294d2639f94f8ebe753248bcb58f39dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084473"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -188,7 +187,7 @@ GO
 ## <a name="best-practice"></a>最佳作法  
  指定一個登入或使用者，它具有執行在模組中定義的作業時所需要的最低權限。 例如，除非需要這些權限，否則不要指定資料庫擁有者帳戶。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要執行指定了 EXECUTE AS 的模組，呼叫者必須具有該模組的 EXECUTE 權限。  
   
  若要執行指定了 EXECUTE AS 的 CLR 模組，以存取另一個資料庫或伺服器中的資源，則目標資料庫或伺服器必須信任該模組發源之資料庫 (來源資料庫) 的驗證器。  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2018
@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938887"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +147,7 @@ OR ALTER
  加密 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 中包含 CREATE VIEW 陳述式文字的項目。 使用 WITH ENCRYPTION 可防止在 SQL Server 複寫中發行檢視。  
   
  SCHEMABINDING  
- 將檢視繫結於一或多份基礎資料表的結構描述。 當指定 SCHEMABINDING 時，無法依照會影響檢視定義的方式來修改一或多份基底資料表。 您必須先修改或卸除檢視定義來移除對於要修改之資料表的相依性。 當您使用 SCHEMABINDING 時，*select_statement* 必須包括所參考的資料表、檢視或使用者自訂函數的兩部分名稱 (_schema_**.**_object_)。 所有參考的物件都必須在相同的資料庫中。  
+ 將檢視繫結於一或多份基礎資料表的結構描述。 當指定 SCHEMABINDING 時，無法依照會影響檢視定義的方式來修改一或多份基底資料表。 您必須先修改或卸除檢視定義來移除對於要修改之資料表的相依性。 當您使用 SCHEMABINDING 時，*select_statement* 必須包括所參考的資料表、檢視或使用者自訂函數的兩部分名稱 (_schema_ **.** _object_)。 所有參考的物件都必須在相同的資料庫中。  
   
  您無法卸除參與 SCHEMABINDING 子句所建立之檢視的檢視或資料表，除非這份檢視已經卸除或有了改變，不再擁有結構描述繫結。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤。 另外，當 ALTER TABLE 陳述式會影響到檢視定義時，在參與擁有結構描述繫結的檢視之資料表上執行這些陳述式也會失敗。  
   
@@ -181,7 +180,7 @@ OR ALTER
   
 -   檢視所修改的資料行必須直接參考資料表資料行中的基礎資料。 您無法利用任何其他方法來衍生這些資料行，例如：  
   
-    -   彙總函數：AVG、COUNT、SUM、MIN、MAX、GROUPING、STDEV、STDEVP、VAR 和 VARP。  
+    -   彙總函式：AVG、COUNT、SUM、MIN、MAX、GROUPING、STDEV、STDEVP、VAR 和 VARP。  
   
     -   計算。 您不能從使用其他資料行的運算式計算資料行。 利用設定運算子 UNION、UNION ALL、CROSSJOIN、EXCEPT 和 INTERSECT 形成的資料行會得出一項計算，這些資料行無法更新。  
   
@@ -347,7 +346,7 @@ FROM Tn;
   
 -   利用檢視來進行的更新複寫與在兩個不同的資料庫中複寫資料表相同；這些資料表由不同複寫代理程式來提供，無法保證更新的順序。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  至少必須有資料庫中的 CREATE VIEW 權限，以及正在建立之檢視表所在之結構描述的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  

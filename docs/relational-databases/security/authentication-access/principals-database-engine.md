@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf4ae1f391a982294a14cb38bcdce879d0b2253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632693"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344603"
 ---
 # <a name="principals-database-engine"></a>主體 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  「主體」是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍視主體的定義範圍 (Windows、伺服器、資料庫)，以及主體是否可分割或者是一個集合而定。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。 本主題適用於所有版本的 SQL Server，但 SQL Database 或 SQL 資料倉儲中的伺服器層級主體有一些限制。 
+  「主體」  是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍，取決於主體定義的範圍：Windows、伺服器、資料庫；以及主體是否為不可分割或集合。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。 本主題適用於所有版本的 SQL Server，但 SQL Database 或 SQL 資料倉儲中的伺服器層級主體有一些限制。 
   
 ## <a name="sql-server-level-principals"></a>SQL Server 層級主體  
   
@@ -53,12 +52,12 @@ ms.locfileid: "47632693"
   
 ## <a name="database-level-principals"></a>資料庫層級主體
   
-- 資料庫使用者 (有 11 種類型的使用者。 如需詳細資訊，請參閱 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md))。
+- 資料庫使用者 (有 12 種類型的使用者。 如需詳細資訊，請參閱 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md))。
 - 資料庫角色
 - 應用程式角色
   
 ## <a name="sa-login"></a>sa 登入  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 登入為伺服器層級的主體。 根據預設，安裝執行個體時會建立它。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，sa 的預設資料庫就是 master。 這是和舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不同的一項行為變更。 `sa` 登入是 `sysadmin` 固定資料庫角色成員。 `sa` 登入具有伺服器的所有權限，因此不受限制。 無法卸除 `sa` 登入，但可透過停用，讓所有人都無法使用它。
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 登入為伺服器層級的主體。 根據預設，安裝執行個體時會建立它。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，sa 的預設資料庫就是 master。 這是和舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不同的一項行為變更。 `sa` 登入是 `sysadmin` 固定伺服器層級角色成員。 `sa` 登入具有伺服器的所有權限，因此不受限制。 無法卸除 `sa` 登入，但可透過停用，讓所有人都無法使用它。
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo 使用者和 dbo 結構描述
 

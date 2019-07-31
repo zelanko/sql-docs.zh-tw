@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 4676b4d17dc2de9118623037e6725c2b3c637c7e
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400088"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290361"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
@@ -44,6 +43,37 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2，適用於 VS 2017 的 SSDT
+
+發行日期：  &nbsp; 2019 年 7 月 17 日  
+組建編號：  &nbsp; 14.0.16194.0  
+適用於 Visual Studio 2017 的 SSDT。 
+
+### <a name="whats-new"></a>新功能
+
+#### <a name="ssis"></a>SSIS
+
+| 新項目 | 詳細資料 |
+| :------- | :------ |
+| 新增 AzureEnabled 功能。 讓專案套件能夠在 Azure Data Factory 的 SSIS 平台即服務 (PaaS) 上執行 | &nbsp; |
+| 修正無法從變數運算式設定 Oracle 連接器屬性的問題 | &nbsp; |
+| 修正 Oracle 連接器在針對目標為 SQL Server 2019 之前版本套件進行偵錯時發生 VS_NEEDSNEWMETATDATA 錯誤的問題 | &nbsp; |
+| 修正當套件/專案針對連線管理員屬性使用運算式時，Oracle 連接器無法升級/降級套件/專案的問題 | &nbsp; |
+| 修正 Web 服務工作編輯器 [下載 WSDL] 按鈕不支援 TLS 1.1 和 1.2 通訊協定 (目標為 SQL Server 2019) 的問題 | &nbsp; |
+| 修正包含 DQS 連線管理員的套件在儲存後無法再次載入問題 | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+
+| 已知問題 | 詳細資料 |
+| :---------- | :------ |
+| 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 | 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。 |
+| SSDT for Visual Studio 2017 (15.8 以上版本) 不支援設計包含 Teradata 來源/目的地的套件。 | 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。 |
+| 無法在套件部署模型中建立或編輯資料來源。 | 無法開啟 [資料來源精靈]。 |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。 | &nbsp; |
+| 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。 | &nbsp; |
+| Power Query 來源未當地語系化 | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1，&nbsp;適用於 VS 2017 的 SSDT
 
 發行日期：  &nbsp;2019 年 4 月 27 日  

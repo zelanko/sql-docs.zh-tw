@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901876"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -108,12 +107,12 @@ ms.locfileid: "57334735"
  *column_alias_identifier*  
  這是用來參考資料行名稱的替代名稱。  
   
- DELETED   
+ DELETED  
  這是一個資料行前置詞，用來指定更新或刪除作業所刪除的值。 前置詞是 DELETED 的資料行反映 UPDATE、DELETE 或 MERGE 陳述式完成之前的值。  
   
  DELETED 不能用來搭配使用 INSERT 陳述式中的 OUTPUT 子句。  
   
- INSERTED   
+ INSERTED  
  這是一個資料行前置詞，用來指定插入或更新作業所加入的值。 前置詞是 INSERTED 的資料行反映 UPDATE、INSERT 或 MERGE 陳述式完成之後、觸發程序執行之前的值。  
   
  INSERTED 不能用來搭配使用 DELETE 陳述式中的 OUTPUT 子句。  
@@ -134,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 這是一個明確的資料行參考。 任何指向修改之資料表的參考，都必須由 INSERTED 或 DELETED 前置詞來適當地加以限定，例如：INSERTED **.**_column\_name_。  
+ 這是一個明確的資料行參考。 指向正經修改之資料表的任何參考，都必須由 INSERTED 或 DELETED 前置詞來適當地加以限定，例如：INSERTED **.** _column\_name_。  
   
  $action  
  僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定類型為 **navchar(10)** 的資料行，傳回每個資料列下列三個值中的其中一個：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。  
   
 ## <a name="remarks"></a>Remarks  
- 您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } 子句。  
+ 您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 子句。  
   
 > [!NOTE]  
 >  除非另有指定，否則，指向 OUTPUT 子句的參考會同時參考 OUTPUT 子句和 OUTPUT INTO 子句。  
@@ -227,7 +226,7 @@ DELETE Sales.ShoppingCartItem
  如果設定了 sp_configure 選項 disallow results from triggers，當從觸發程序內叫用不含 INTO 子句的 OUTPUT 子句時，它會使陳述式失敗。  
   
 ## <a name="data-types"></a>資料型別  
- OUTPUT 子句支援大型物件資料類型：**nvarchar(max)**、**varchar(max)**、**varbinary(max)**、**text**、**ntext**、**image** 及 **xml**。 當您在 UPDATE 陳述式中使用 .WRITE 子句來修改 **nvarchar(max)**、**varchar(max)** 或 **varbinary(max)** 資料行時，如果參考了值完整的先後影像，便會傳回這些影像。 在 OUTPUT 子句之 **text**、**ntext** 或 **image** 資料行的運算式中，不能出現 TEXTPTR( ) 函數。  
+ OUTPUT 子句支援大型物件資料類型：**nvarchar(max)** 、**varchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**image** 及 **xml**。 當您在 UPDATE 陳述式中使用 .WRITE 子句來修改 **nvarchar(max)** 、**varchar(max)** 或 **varbinary(max)** 資料行時，如果參考了值完整的先後影像，便會傳回這些影像。 在 OUTPUT 子句之 **text**、**ntext** 或 **image** 資料行的運算式中，不能出現 TEXTPTR( ) 函數。  
   
 ## <a name="queues"></a>佇列  
  您可以在利用資料表做為佇列的應用程式中使用 OUTPUT，也可以利用它來存放中繼結果集。 也就是說，應用程式會不斷新增或移除資料表的資料列。 下列範例會利用 DELETE 陳述式中的 OUTPUT 子句，將刪除的資料列傳回發出呼叫的應用程式。  
@@ -307,7 +306,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  如果您的狀況允許多個應用程式執行單一資料表的破壞性讀取，請在 UPDATE 和 DELETE 陳述式中使用 READPAST 資料表提示。 這可以防止當另一個應用程式已在讀取資料表中第一個符合的記錄時，所可能出現的鎖定問題。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  在透過 \<dml_select_list> 來擷取或在 \<scalar_expression> 中使用的所有資料行上，必須要有 SELECT 權限。  
   
  在 \<output_table> 中指定的所有資料表上，必須要有 INSERT 權限。  

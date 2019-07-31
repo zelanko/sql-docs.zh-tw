@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -18,22 +18,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 6939836ca547027f605049f7a26e8d0901f23d51
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140793"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329307"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 將 R、Python 或 Java 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可作為一般機制，供資料庫管理員針對 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支援的任何新外部語言執行階段和 OS 平台，上傳所需的成品。 
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 在 SQL Server 2019 CTP 3.0 中，支援 Windows 和 Linux 平台上的 R、Python 和外部語言。
+> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 SQL Server 2019 CTP 2.4 和更新版本支援 Windows 和 Linux 平台上的 R、Python 和外部語言。
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+> [!NOTE]
+> 在 Azure SQL Database 中，您可以使用 **sqlmlutils** 來安裝程式庫。 如需詳細資料，請參閱[使用 sqlmlutils 新增套件](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)。
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 的語法
@@ -106,6 +113,29 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-database"></a>Azure SQL Database 的語法
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = 'R' )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = <library_bits>)  
+}  
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+```
+::: moniker-end
+
 ### <a name="arguments"></a>引數
 
 **library_name**
@@ -122,6 +152,7 @@ WITH ( LANGUAGE = 'R' )
 
 當使用者 **RUser1** 執行外部指令碼時，`libPath` 的值可能包含多個路徑。 第一個路徑一律是資料庫擁有者所建立之共用程式庫的路徑。 `libPath` 的第二個部分會指定包含 **RUser1** 個別上傳之套件的路徑。
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
 
 指定適用於特定平台的套件內容。 只支援每個平台一個檔案成品。
@@ -131,6 +162,7 @@ WITH ( LANGUAGE = 'R' )
 當您試圖存取在 **<client_library_specifier>** 中所指定的檔案時，SQL Server 會模擬目前 Windows 登入的安全性內容。 由於委派限制之故，如果 **<client_library_specifier>** 指定網路位置 (UNC 路徑)，目前登入的模擬並不會在網路位置發揮作用。 此時就得利用 SQL Server 服務帳戶的資訊安全內容進行存取。 如需詳細資訊，請參閱[認證 (資料引擎)](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
 
 (選擇性) 可以指定檔案的 OS 平台。 針對特定語言或執行階段，每個 OS 平台只允許一個檔案成品或內容。
+::: moniker-end
 
 **library_bits**
 
@@ -141,26 +173,42 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-指定程式庫內容的平台。 此值會預設為 SQL Server 執行所在的主機平台。 因此，使用者不需要指定此值。 當支援多個平台或使用者必須指定不同的平台時，才需要指定此值。 
-
+指定程式庫內容的平台。 此值會預設為 SQL Server 執行所在的主機平台。 因此，使用者不需要指定此值。 當支援多個平台或使用者必須指定不同的平台時，才需要指定此值。
 在 SQL Server 2017 中，Windows 是唯一支援的平台。
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **平台**
 
 指定程式庫內容的平台。 此值會預設為 SQL Server 執行所在的主機平台。 因此，使用者不需要指定此值。 當支援多個平台或使用者必須指定不同的平台時，才需要指定此值。
-
 在 SQL Server 2019 中，支援 Windows 和 Linux 平台。
+::: moniker-end
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+指定套件的語言。
+SQL Server 2017 支援 R。
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+指定套件的語言。
+Azure SQL Database 支援 R。
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-指定套件的語言。 此值可以是 `R`、`Python`，或[已建立的外部語言](create-external-language-transact-sql.md)名稱。
+指定套件的語言。 此值可以是 `R`、`Python` 或外部語言的名稱 (請參閱[建立外部語言](create-external-language-transact-sql.md))。
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-針對 R 語言，當使用檔案時，必須針對 Windows，以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 在 SQL Server 2017 中僅支援 Windows 平台。
+針對 R 語言，當使用檔案時，必須針對 Windows，以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 
+在 SQL Server 2017 中僅支援 Windows 平台。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -193,7 +241,8 @@ GRANT CREATE EXTERNAL LIBRARY to user
 
 ## <a name="examples"></a>範例
 
-### <a name="a-add-an-external-library-to-a-database"></a>A. 將外部程式庫新增至資料庫  
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+### <a name="add-an-external-library-to-a-database"></a>將外部程式庫新增至資料庫  
 
 下列範例會將名為 `customPackage` 的外部程式庫新增至資料庫。
 
@@ -209,12 +258,13 @@ EXEC sp_execute_external_script
 @language =N'R', 
 @script=N'library(customPackage)'
 ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
 ::: moniker-end
 
-### <a name="b-installing-packages-with-dependencies"></a>B. 安裝具有相依性的套件
+### <a name="installing-packages-with-dependencies"></a>安裝具有相依性的套件
 
 如果您想要安裝的套件具有許多相依性，請務必在嘗試安裝目標套件「之前」  ，先分析第一層和第二層的相依性，並確定所有必要的套件都可供使用。
 
@@ -228,6 +278,8 @@ EXEC sp_execute_external_script
 實際上，常用套件的套件相依性通常比這個簡單範例複雜許多。 例如，**ggplot2** 可能需要超過 30 個套件，而這些套件可能需要伺服器上所未提供的額外套件。 任何套件遺失或套件版本錯誤都可能造成安裝失敗。
 
 由於只從查看套件資訊清單很難判斷所有相依性，因此建議您使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 之類的套件，以識別成功完成安裝可能需要的所有套件。
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 
 + 上傳目標套件及其相依性。 所有檔案都必須位於伺服器能夠存取的一個資料夾中。
 
@@ -262,17 +314,18 @@ EXEC sp_execute_external_script
     library(packageA)
     '
     ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
 ::: moniker-end
 
-### <a name="c-create-a-library-from-a-byte-stream"></a>C. 從位元組資料流建立程式庫
+### <a name="create-a-library-from-a-byte-stream"></a>從位元組資料流建立程式庫
 
 如果您無法將套件檔案儲存在伺服器上的位置，則可以在變數中傳遞套件內容。 下列範例會將位元作為十六進位常值傳遞以建立程式庫。
 
 ```SQL
-CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -282,14 +335,14 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 > [!NOTE]
 > 此程式碼範例僅示範語法；`CONTENT =` 中的二進位值已被截斷以提高可讀性，且並不會建立可運作的程式庫。 二進位變數的實際內容會更長。
 
-### <a name="d-change-an-existing-package-library"></a>D. 變更現有的套件程式庫
+### <a name="change-an-existing-package-library"></a>變更現有的套件程式庫
 
 `ALTER EXTERNAL LIBRARY` DDL 陳述式可用來新增程式庫內容，或修改現有的程式庫內容。 若要修改現有的程式庫，需要 `ALTER ANY EXTERNAL LIBRARY` 權限。
 
 如需詳細資訊，請參閱 [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-### <a name="e-add-a-java-jar-file-to-a-database"></a>E. 將 Java.jar 檔案新增至資料庫  
+### <a name="add-a-java-jar-file-to-a-database"></a>將 Java.jar 檔案新增至資料庫  
 
 下列範例會將稱為 `customJar` 的外部 Jar 檔案新增至資料庫。
 
@@ -309,7 +362,7 @@ EXEC sp_execute_external_script
 WITH RESULT SETS ((column1 int))
 ```
 
-### <a name="f-add-an-external-package-for-both-windows-and-linux"></a>F. 新增適用於 Windows 和 Linux 的外部套件
+### <a name="add-an-external-package-for-both-windows-and-linux"></a>新增適用於 Windows 和 Linux 的外部套件
 
 您最多可以指定兩個 `<file_spec>`，一個用於 Windows，一個用於 Linux。
 

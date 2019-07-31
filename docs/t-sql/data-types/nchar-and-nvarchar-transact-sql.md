@@ -1,7 +1,7 @@
 ---
 title: nchar 和 nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,36 +15,38 @@ helpviewer_keywords:
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8a8baa16e2b2d7e22bfd3d4045ff77483e198aec
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696726"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354595"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-固定長度 **nchar** 或變動長度 **nvarchar** 的字元資料型別。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，這些資料類型會存放完整範圍的 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字元並使用 [UTF-16](https://www.wikipedia.org/wiki/UTF-16) 字元編碼。 若指定非 SC 定序，則這些資料類型只會存放 [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 字元編碼所支援之字元資料的子集。
+固定大小 **nchar** 或變動大小 **nvarchar** 的字元資料類型。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，這些資料類型會存放完整範圍的 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字元並使用 [UTF-16](https://www.wikipedia.org/wiki/UTF-16) 字元編碼。 若指定非 SC 定序，則這些資料類型只會存放 [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 字元編碼所支援之字元資料的子集。
   
 ## <a name="arguments"></a>引數  
 **nchar** [ ( n ) ]  
-固定長度的字串資料。 *n* 會定義字串長度 (單位為位元組配對)，而且必須是 1 到 4,000 之間的值。 儲存體大小是 *n* 個位元組的兩倍。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nchar** 的 ISO 同義字為 **national char** 及 **national character**。
+固定大小字串資料。 *n* 會定義字串大小 (單位為位元組配對)，且必須是 1 到 4,000 之間的值。 儲存體大小是 *n* 個位元組的兩倍。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nchar** 的 ISO 同義字為 **national char** 及 **national character**。
   
 **nvarchar** [ ( n | **max** ) ]  
-可變長度的字串資料。 *n* 會定義字串長度 (單位為位元組配對)，而且必須是 1 到 4,000 之間的值。 **max** 表示儲存大小上限是 2^30-1 個字元 (2 GB)。 儲存大小是 *n* 位元組的兩倍 + 2 位元組。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍 + 2 位元組，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍 + 2 位元組，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nvarchar** 的 ISO 同義字為 **national char varying** 及 **national character varying**。
+可變大小字串資料。 *n* 會定義字串大小 (單位為位元組配對)，且可以是 1 到 4,000 之間的值。 **max** 表示儲存大小上限是 2^30-1 個字元 (2 GB)。 儲存大小是 *n* 位元組的兩倍 + 2 位元組。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍 + 2 位元組，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍 + 2 位元組，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nvarchar** 的 ISO 同義字為 **national char varying** 及 **national character varying**。
   
 ## <a name="remarks"></a>Remarks  
+常見的誤解是假設 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)，*n* 會定義字元數。 但是在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會定義字串長度 (以**位元組配對**為單位) (0-4,000)。 *n* 一律不會定義可儲存的字元數。 這類似於 [CHAR (*n*) 和 VARCHAR (*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 的定義。   
+發生誤解的原因是，在使用 Unicode 範圍 0-65,535 中所定義的字元時，每個位元組配對可以儲存一個字元。 不過，在較高的 Unicode 範圍 (65,536-1,114,111) 中，一個字元可能會使用兩個位元組配對。 例如，在定義為 NCHAR(10) 的資料行中，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以儲存 10 個字元，該字元會使用一個位元組配對 (Unicode 範圍 0-65,535)，但使用兩個位元組配對 (Unicode 範圍 65,536-1,114,111) 時，則會小於 10 個字元。 如需 Unicode 儲存和字元範圍的詳細資訊，請參閱 [UTF-8 和 UTF-16 之間的儲存差異](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。     
+
 當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 當 *n* 不是由 CAST 函式指定時，預設長度為 30。
 
 若使用 **nchar** 或 **nvarchar**，建議您：
 - 當資料行資料項目的大小一致時，請使用 **nchar**。  
 - 當資料行資料項目的大小變化相當大時，請使用 **nvarchar**。  
-- 當資料行資料項目的大小變化相當大，且字串長度可能超出 4,000 位元組配對時，請使用 **nvarchar(max)**。  
+- 當資料行資料項目的大小變化相當大，且字串長度可能超出 4,000 位元組配對時，請使用 **nvarchar(max)** 。  
   
-**sysname** 是系統提供的使用者定義資料類型，功能相當於 **nvarchar(128)**，但不可為 Null。 **sysname** 可用於參考資料庫物件名稱。
+**sysname** 是系統提供的使用者定義資料類型，功能相當於 **nvarchar(128)** ，但不可為 Null。 **sysname** 可用於參考資料庫物件名稱。
   
 除非使用 COLLATE 子句指派特定定序；否則，使用 **nchar** 或 **nvarchar** 的物件會被指派資料庫的預設定序。
   

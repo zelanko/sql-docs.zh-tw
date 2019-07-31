@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b18f044dbeb09e70b017afa6f78efb84b527336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068496"
 ---
 # <a name="device-contents-sql-server"></a>裝置內容 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,12 +57,12 @@ ms.locfileid: "47686526"
 |標頭|值|  
 |------------|------------|  
 |**名稱**|備份組的名稱。|  
-|**型別**|執行的備份類型：完整、差異或交易記錄。|  
-|**元件**|備份的元件：資料庫、檔案或 *\<空白>* (針對交易記錄)。|  
+|**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
+|**元件**|備份的元件：[資料庫]、[檔案] 或 [\<空白>]  (適用於交易記錄)。|  
 |**Server**|執行備份作業之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的名稱。|  
 |**[資料庫備份]**|已備份資料庫的名稱。|  
 |**位置**|備份組在磁碟區中的位置。|  
-|**Date**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
+|**日期**|備份作業完成時的日期和時間，會出現在用戶端的地區設定中。|  
 |**大小**|備份組的大小 (以位元組為單位)。|  
 |**使用者名稱**|執行備份作業的使用者名稱。|  
 |**到期**|備份組過期的日期和時間。|  

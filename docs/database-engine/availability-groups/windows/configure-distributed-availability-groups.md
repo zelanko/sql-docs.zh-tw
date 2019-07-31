@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793751"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354598"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>設定分散式 Always On 可用性群組  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->上一個範例係採用直接植入，並針對複本與分散式可用性群組將 **SEEDING_MODE** 設為 **AUTOMATIC** 。 這個組態會將次要複本與次要可用性群組設定成自動填入，無須手動備份和還原主要資料庫。  
+>上一個範例係採用自動植入，並針對複本與分散式可用性群組將 **SEEDING_MODE** 設為 **AUTOMATIC**。 這個組態會將次要複本與次要可用性群組設定成自動填入，無須手動備份和還原主要資料庫。  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>將次要複本聯結至主要可用性群組  
-任何次要複本皆必須透過 **JOIN** 選項，聯結至具 **ALTER AVAILABILITY GROUP** 的可用性群組。 本範例採用直接植入，因此您還必須透過  **GRANT CREATE ANY DATABASE** 選項呼叫 **ALTER AVAILABILITY GROUP** 。 此設定可讓可用性群組建立資料庫，並開始自動從主要複本將其植入。  
+任何次要複本皆必須透過 **JOIN** 選項，聯結至具 **ALTER AVAILABILITY GROUP** 的可用性群組。 本範例採用自動植入，因此您還必須透過  **GRANT CREATE ANY DATABASE** 選項呼叫 **ALTER AVAILABILITY GROUP**。 此設定可讓可用性群組建立資料庫，並開始自動從主要複本將其植入。  
   
 在此範例中，系統會在次要複本 `server2`執行下列命令，以聯結 `ag1` 可用性群組。 接著會允許可用性群組在次要複本上建立資料庫。  
   
@@ -136,7 +135,7 @@ GO
 > 次要可用性群組必須使用相同的資料庫鏡像端點 (在本範例中為通訊埠 5022)。 否則在執行本機容錯移轉後將會停止複寫。  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>將次要複本聯結至次要可用性群組  
- 在此範例中，系統會在次要複本 `server4`執行下列命令，以聯結 `ag2` 可用性群組。 接著會允許可用性群組在次要複本上建立資料庫，以支援直接植入。  
+ 在此範例中，系統會在次要複本 `server4`執行下列命令，以聯結 `ag2` 可用性群組。 接著會允許可用性群組在次要複本上建立資料庫，以支援自動植入。  
   
 ```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   

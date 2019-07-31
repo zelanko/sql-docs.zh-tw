@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3302577e705bf563ad54037437213a4088407f0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101899"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -60,13 +59,13 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>引數  
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle* 會唯一識別批次的查詢計劃，該批次已經執行，且其計劃位於計畫快取中。 *plan_handle* 為 **varbinary(64)**，並可從下列動態管理物件中取得：  
+*plan_handle* 會唯一識別批次的查詢計劃，該批次已經執行，且其計劃位於計畫快取中。 *plan_handle* 為 **varbinary(64)** ，並可從下列動態管理物件中取得：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle* 是要清除之批次的 SQL 控制代碼。 *sql_handle* 為 **varbinary(64)**，並可從下列動態管理物件中取得：  
+*sql_handle* 是要清除之批次的 SQL 控制代碼。 *sql_handle* 為 **varbinary(64)** ，並可從下列動態管理物件中取得：  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
@@ -115,7 +114,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="result-sets"></a>結果集  
 未指定 WITH NO_INFOMSGS 子句時，DBCC FREEPROCCACHE 會傳回：「DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 適用於：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - 需要伺服器的 ALTER SERVER STATE 權限。  
 

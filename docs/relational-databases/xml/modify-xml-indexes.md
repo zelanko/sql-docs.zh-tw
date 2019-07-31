@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1cbd78870aee49d86511a0e4731009374a3b379
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3a579fcf8809c8c05838dad70126421362cd8048
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042686"
 ---
 # <a name="modify-xml-indexes"></a>修改 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

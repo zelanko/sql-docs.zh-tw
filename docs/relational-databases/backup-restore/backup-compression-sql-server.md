@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 59fb1848e03a45badf19eccb94510ffbbfff9e0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940831"
 ---
 # <a name="backup-compression-sql-server"></a>備份壓縮 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題會說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的壓縮，包括限制、壓縮備份的效能取捨、備份壓縮的組態及壓縮比率。  下列 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本支援備份壓縮︰Enterprise、Standard 和 Developer。  每個 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本與更新版本都可以還原壓縮的備份。 
+  本主題會說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的壓縮，包括限制、壓縮備份的效能取捨、備份壓縮的組態及壓縮比率。  下列 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本支援備份壓縮：Enterprise、Standard 和 Developer。  每個 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本與更新版本都可以還原壓縮的備份。 
  
   
 ##  <a name="Benefits"></a> 優點  

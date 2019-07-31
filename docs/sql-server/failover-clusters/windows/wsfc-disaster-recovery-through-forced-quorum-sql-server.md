@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904948"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>透過強制仲裁執行 WSFC 災害復原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   仲裁失敗的原因通常是涉及 WSFC 叢集中許多節點的系統損毀、持續性通訊失敗或設定錯誤。  若要從仲裁失敗中復原，您必須進行手動介入。  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **開始之前：** [必要條件](#Prerequisites)、[安全性](#Security)  
   
 -   **透過強制仲裁程序執行 WSFC 災害復原** [透過強制仲裁程序執行 WSFC 災害復原](#Main)  
   
@@ -41,7 +40,7 @@ ms.locfileid: "51699726"
 > [!WARNING]  
 >  使用者應該充分了解 Windows Server 容錯移轉叢集、WSFC 仲裁模型、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以及環境特定部署組態的概念和互動方式。  
 >   
->  如需詳細資訊，請參閱：  [SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 仲裁模式和投票組態 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)。  
+>  如需詳細資訊，請參閱：[SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)、[WSFC 仲裁模式和投票組態 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> 安全性  
  使用者必須是屬於 WSFC 叢集之每一個節點上本機 Administrators 群組成員的網域帳戶。  
@@ -66,7 +65,7 @@ ms.locfileid: "51699726"
   
      在此節點上，您可以使用強制仲裁程序來手動強制叢集上線。  為了盡量降低遺失資料的可能性，請選取最後裝載可用性群組主要複本的節點。  
   
-     如需詳細資訊，請參閱：＜  [在無仲裁情況下強制啟動 WSFC 叢集](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)＞  
+     如需詳細資訊，請參閱：[在無仲裁情況下強制啟動 WSFC 叢集](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  強制仲裁設定會影響整個叢集並封鎖仲裁檢查，直到邏輯 WSFC 叢集達成大多數投票並自動轉換成一般仲裁模式的作業為止。  

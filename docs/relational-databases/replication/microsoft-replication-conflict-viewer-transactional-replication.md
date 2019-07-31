@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f649899e0f68dda76a7b10ae661fa575df9b4781
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 807af3881bececb71e7e1570550f06336c588c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018666"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 複寫衝突檢視器 (異動複寫)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "54130088"
 ## <a name="options"></a>選項。  
  複寫衝突檢視器會劃分為兩個區段。 對話方塊的上半段會顯示選取之資料表的衝突清單。 當您按一下衝突清單中的某個項目時，對話方塊的下半段中會顯示衝突的詳細資料。  
   
- 下半段中的衝突資料，會在兩個對應的資料行 (**[衝突成功者]** 和 **[衝突失敗者]**) 中顯示。 如果衝突是發生在已更新和已刪除的資料之間，那麼衝突中已刪除的一方可能沒有資料可以顯示。 在此情況下，複寫衝突檢視器會在其中一個資料行裡顯示訊息，這表示資料列在一處已遭刪除，而在另一處已被更新。 它也會指出建議的解決方式。  
+ 下半段中的衝突資料，會在兩個對應的資料行 ( **[衝突成功者]** 和 **[衝突失敗者]** ) 中顯示。 如果衝突是發生在已更新和已刪除的資料之間，那麼衝突中已刪除的一方可能沒有資料可以顯示。 在此情況下，複寫衝突檢視器會在其中一個資料行裡顯示訊息，這表示資料列在一處已遭刪除，而在另一處已被更新。 它也會指出建議的解決方式。  
   
  **[資料庫備份]**  
  選擇包含有衝突之發行集的資料庫。  
@@ -63,11 +62,11 @@ ms.locfileid: "54130088"
  **顯示前五個資料行和有衝突資料的其他資料行。**  
  選取即可顯示前五個資料行和有衝突的任何資料行。 當資料表有大量資料行，但是您只想查看與解決衝突最相關的資料行時，這很有用。 前五個資料行一律會包含在此檢視中做為識別資料列的欄位，例如主索引鍵或名稱欄位，通常是在資料表的前幾個資料行中。  
   
- **顯示資料行資訊** (**...**)  
- 按一下即可檢視資料行資訊：[資料表名稱]、[資料行名稱]、[資料類型] 及 [資料行值]。  
+ **顯示資料行資訊** ( **...** )  
+ 按一下即可檢視資料行資訊：[資料表名稱]  、[資料行名稱]  、[資料類型]  及 [資料行值]  。  
   
  **記錄衝突的詳細資料**  
- 選取此方塊即可將衝突的詳細資料記錄到檔案。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]**。 輸入一個值，或按一下瀏覽 (**...**)，然後導覽至適當的檔案。 按一下 **[確定]** 即可結束 **[選項]** 對話方塊。  
+ 選取此方塊即可將衝突的詳細資料記錄到檔案。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]** 。 輸入一個值，或按一下瀏覽 ( **...** )，然後導覽至適當的檔案。 按一下 **[確定]** 即可結束 **[選項]** 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [點對點複寫中的衝突偵測](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   

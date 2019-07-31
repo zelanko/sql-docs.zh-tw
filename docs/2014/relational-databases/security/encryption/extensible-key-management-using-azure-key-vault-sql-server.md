@@ -75,9 +75,9 @@ ms.locfileid: "67046755"
   
 3.  **取得 Azure Active Directory 服務主體以用於 SQL Server:** 當組織註冊 Microsoft 雲端服務時，它會取得 Azure Active Directory。 在 Azure Active Directory 中建立 **服務主體** ，以供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在存取金鑰保存庫時使用 (以向 Azure Active Directory 驗證自己)。  
   
-    -    系統管理員若要在設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密時存取保存庫，需要一個服務主體 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+    -   系統管理員若要在設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密時存取保存庫，需要一個服務主體 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
-    -    若要存取保存庫，以解除包裝 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 加密所使用的金鑰，則需要另一個服務主體 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+    -   若要存取保存庫，以解除包裝 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 加密所使用的金鑰，則需要另一個服務主體 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
      如需如何註冊應用程式及產生服務主體的詳細資訊，請參閱 **開始使用 Azure Key Vault** 中的 [使用 Azure Active Directory 註冊應用程式](https://go.microsoft.com/fwlink/?LinkId=521402)一節。 註冊程序會針對每個 Azure Active Directory **服務主體** ，傳回 **應用程式識別碼**(又稱為 **用戶端識別碼** ) 和 **驗證金鑰**(又稱為 **密碼**)。 在中使用時`CREATE CREDENTIAL`陳述式，必須從移除連字號**用戶端識別碼**。 請記錄這些項目，以用於下列指令碼：  
   
@@ -101,7 +101,7 @@ ms.locfileid: "67046755"
     -   PowerShell [Azure 金鑰保存庫 Cmdlet](https://docs.microsoft.com/powershell/module/azurerm.keyvault) 參考  
   
 ##  <a name="Step2"></a> 步驟 2：安裝 SQL Server Connector  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector 是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的系統管理員所下載及安裝。 您可以從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft 下載中心 [下載](https://go.microsoft.com/fwlink/p/?LinkId=521700)Connector。  搜尋 **SQL Server Connector for Microsoft Azure Key Vault**，檢閱詳細資料、系統需求和安裝指示，然後選擇下載連接器並使用 [執行] 開始安裝。 檢閱授權，然後接受授權並繼續。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector 是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的系統管理員所下載及安裝。 您可以從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft 下載中心 [下載](https://go.microsoft.com/fwlink/p/?LinkId=521700)Connector。  搜尋 **SQL Server Connector for Microsoft Azure Key Vault**，檢閱詳細資料、系統需求和安裝指示，然後選擇下載連接器並使用 [執行]開始安裝。 檢閱授權，然後接受授權並繼續。  
   
  按照預設在 **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**安裝連接器。 這個位置可以在安裝期間變更。 (如果變更，請調整下列指令碼)。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "67046755"
 2.  設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統管理員登入的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證使用金鑰保存庫，以便設定及管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密案例。  
   
     > [!IMPORTANT]  
-    >  **身分識別**引數`CREATE CREDENTIAL`需要金鑰保存庫名稱。 **祕密**引數`CREATE CREDENTIAL`需要*\<用戶端識別碼 >* （不含連字號） 和*\<祕密 >* 傳遞在一起不之間的空格。  
+    >  **身分識別**引數`CREATE CREDENTIAL`需要金鑰保存庫名稱。 **祕密**引數`CREATE CREDENTIAL`需要 *\<用戶端識別碼 >* （不含連字號） 和 *\<祕密 >* 傳遞在一起不之間的空格。  
   
      在下列範例中， **用戶端識別碼** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) 已移除連字號並以字串 `EF5C8E094D2A4A769998D93440D8115D` 輸入，而 **密碼** 會以字串 *SECRET_sysadmin_login*來表示。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "67046755"
 1.  建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證，以供 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 在資料庫載入期間用於存取金鑰保存庫 EKM。  
   
     > [!IMPORTANT]  
-    >  **身分識別**引數`CREATE CREDENTIAL`需要金鑰保存庫名稱。 **祕密**引數`CREATE CREDENTIAL`需要*\<用戶端識別碼 >* （不含連字號） 和*\<祕密 >* 傳遞在一起不之間的空格。  
+    >  **身分識別**引數`CREATE CREDENTIAL`需要金鑰保存庫名稱。 **祕密**引數`CREATE CREDENTIAL`需要 *\<用戶端識別碼 >* （不含連字號） 和 *\<祕密 >* 傳遞在一起不之間的空格。  
   
      在下列範例中， **用戶端識別碼** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) 已移除連字號並以字串 `EF5C8E094D2A4A769998D93440D8115D` 輸入，而 **密碼** 會以字串 *SECRET_DBEngine*來表示。  
   

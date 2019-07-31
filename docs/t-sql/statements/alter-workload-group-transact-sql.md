@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bac81675ce0469fe39d11745462f2a3376aed73f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091756"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -158,13 +157,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  當您要執行 DDL 陳述式時，建議您先熟悉資源管理員的狀態。 如需詳細資訊，請參閱 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
- REQUEST_MEMORY_GRANT_PERCENT：在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，允許建立索引即可使用比一開始授與之記憶體更多的工作空間記憶體來改善效能。 資源管理員的更新版本中支援此特殊處理，不過，初始授與和任何額外的記憶體授與都會受到資源集區和工作負載群組設定的限制。  
+ REQUEST_MEMORY_GRANT_PERCENT：在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，允許建立索引即可使用比一開始授與的記憶體更多工作區記憶體來改善效能。 資源管理員的更新版本中支援此特殊處理，不過，初始授與和任何額外的記憶體授與都會受到資源集區和工作負載群組設定的限制。  
   
  **在資料分割資料表上建立索引**  
   
  非對齊式分割區資料表上之索引建立所耗用的記憶體，與相關的分割區數目成正比。  如果所需的總記憶體超出資源管理員工作負載群組設定所設的每個查詢限制 (REQUEST_MAX_MEMORY_GRANT_PERCENT)，這個索引建立動作就可能無法執行。 由於 "default" 工作負載群組允許查詢超過每個查詢限制，而且具有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 相容性啟動所需的記憶體下限，因此使用者或許能夠在 "default" 工作負載群組中執行相同的索引建立動作，但前提是 "default" 資源集區有設定足夠的總記憶體來執行這類查詢。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  
@@ -189,7 +188,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

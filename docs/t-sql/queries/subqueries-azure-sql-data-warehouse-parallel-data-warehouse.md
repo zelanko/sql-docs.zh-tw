@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e0c7434f6b4ebee94afdb7ea2ee206bc7b102894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 675dcd165ec164c9149486d2abae8d4b910df17b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948267"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查詢 (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47767986"
   
 -   [基本概念](#Basics)  
   
--   [範例：SQL 資料倉儲和平行處理資料倉儲](#Examples)  
+-   [範例：SQL 資料倉儲與平行處理資料倉儲](#Examples)  
   
 ##  <a name="Basics"></a> 基本概念  
  子查詢  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34f30a8eb8a2d894b1de0a62f5151956c80f5653
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3e2b32c6804de71d9af074de15b8506c493dfa99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030480"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,16 +51,16 @@ ms.locfileid: "53588722"
 |FUNCTION：多重陳述式資料表值|FUNCTION：純量|  
 |INDEX：叢集|INDEX：非叢集|  
 |INDEX：空間|INDEX：唯一|  
-|登入|[權限]|  
+|登入|權限|  
 |角色成員資格|SCHEMA|  
-|Statistics|STORED PROCEDURE：Transact-SQL|  
+|統計資料|STORED PROCEDURE：Transact-SQL|  
 |同義字|TABLE：檢查條件約束|  
 |TABLE：定序|TABLE：資料行，包括計算資料行|  
 |TABLE：條件約束，預設|TABLE：條件約束，外部索引鍵|  
 |TABLE：條件約束，索引|TABLE：條件約束，主索引鍵|  
 |TABLE：條件約束，唯一|TRIGGER：DML|  
-|類型：HIERARCHYID、GEOMETRY、GEOGRAPHY|類型：使用者定義資料類型|  
-|類型：使用者定義資料表類型|使用者|  
+|TYPE：HIERARCHYID、GEOMETRY、GEOGRAPHY|TYPE：使用者定義資料類型|  
+|TYPE：使用者定義資料表類型|使用者|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> SQL Server 版本的資料層應用程式支援  

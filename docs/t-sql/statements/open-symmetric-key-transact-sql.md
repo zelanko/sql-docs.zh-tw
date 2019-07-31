@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: cf608c46a176e53c76a3ca67c8707beea76a2205
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129391"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
  無法開啟從加密提供者建立的對稱金鑰。 由於加密提供者正在開啟與關閉金鑰，使用此種對稱金鑰在沒有 **OPEN** 陳述式的情況下進行加密和解密作業會成功。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  呼叫端必須具有金鑰的某種權限，而且絕不能被拒絕金鑰的 VIEW DEFINITION 權限。 其他需求則隨解密機制而不同：  
   
 -   DECRYPTION BY CERTIFICATE：憑證的 CONTROL 權限，以及為其私密金鑰加密所用密碼的知識。  

@@ -40,7 +40,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>引數  
  *object_id*  
- 這是目前資料庫中，要求其中一個累加統計資料屬性之物件的識別碼。 *@object_id* 是 **int**。  
+ 這是目前資料庫中，要求其中一個累加統計資料屬性之物件的識別碼。 *object_id* 是 **int**。  
   
  *stats_id*  
  這是指定 *object_id*之統計資料的識別碼。 您可以從 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動態管理檢視取得統計資料識別碼。 *stats_id* 是 **int**。  

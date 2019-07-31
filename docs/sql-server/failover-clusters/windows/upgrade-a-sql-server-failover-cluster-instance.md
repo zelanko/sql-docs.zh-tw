@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 54863db300d7a63404161e438bede2ecc2ec8928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 681e944da0a49c6a1b485606e5ed1ed0bd8ffd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904978"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>升級 SQL Server 容錯移轉叢集執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +40,18 @@ ms.locfileid: "47783726"
   
     -   變更容錯移轉叢集的版本會受限於特定狀況。 如需詳細資訊，請參閱 [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
--   在容錯移轉叢集升級期間，停機時間僅包含容錯移轉時間以及執行升級指令碼所需的時間。 在開始升級程序之前，如果您遵循下方的容錯移轉叢集輪流升級程序，且所有節點都符合必要條件，就可將停機時間降至最低。 在記憶體最佳化資料表使用中時升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將會花費額外時間。 如需詳細資訊，請參閱 [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+-   在容錯移轉叢集升級期間，停機時間僅包含容錯移轉時間以及執行升級指令碼所需的時間。 在開始升級程序之前，如果您遵循下方的容錯移轉叢集輪流升級程序，且所有節點都符合必要條件，就可將停機時間降至最低。 在記憶體最佳化資料表使用中時升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將會花費額外時間。 如需詳細資訊，請參閱 [計劃和測試資料庫引擎升級計劃](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  在開始之前，請檢閱以下重要資訊：  
   
--   [支援的版本和版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)︰確認您可從 Windows 作業系統版本和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 例如，您無法直接從 SQL Server 2005 容錯移轉叢集執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，也無法升級在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上執行的容錯移轉叢集。  
+-   [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：確認您可從您的 Windows 作業系統版本與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 例如，您無法直接從 SQL Server 2005 容錯移轉叢集執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，也無法升級在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上執行的容錯移轉叢集。  
   
--   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)︰根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件，依正確順序升級元件。  
+-   [選擇資料庫引擎升級方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件，依正確順序升級元件。  
   
--   [計劃和測試資料庫引擎升級計劃](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)︰檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
+-   [計劃和測試資料庫引擎升級計畫](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
   
--   [安裝 SQL Server 的硬體和軟體需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
+-   [安裝 SQL Server 的硬體與軟體需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>執行輪流升級或更新  
  若要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，請使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式升級每個容錯移轉叢集節點 (從被動節點開始，一次一個)。 當您升級每個節點時，它就不會包含在容錯移轉叢集的可能擁有者中。 如果發生非預期的容錯移轉，則在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式將叢集資源群組擁有權移至升級的節點之前，升級的節點都不會參與容錯移轉。  

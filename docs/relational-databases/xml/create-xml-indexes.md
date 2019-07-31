@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd769a496bd5f9057c6cedfefcf3db371f829760
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 8115350b3ead26a28c03fce975d058f393e0411b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984792"
 ---
 # <a name="create-xml-indexes"></a>建立 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

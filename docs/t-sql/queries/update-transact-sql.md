@@ -37,14 +37,13 @@ helpviewer_keywords:
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b408c61d265506f19c7c9c5a115381fe6b438a7b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: b856ee0218f7b4909ad9c62a42b95dfd96c93abc
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334675"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68317100"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +120,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  另外，一般資料表運算式也可以搭配 SELECT、INSERT、DELETE 和 CREATE VIEW 等陳述式來使用。 如需詳細資訊，請參閱 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP **(** _expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  指定更新的資料列數目或百分比。 *expression* 可以是一個數字，也可以是資料列的百分比。  
   
  搭配 INSERT、UPDATE 或 DELETE 使用的 TOP 運算式所參考的資料列並不依照任何順序來排列。  
@@ -159,7 +158,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  這是包含要變更之資料的資料行。 *column_name* 必須存在於 *table_or view_name*。 無法更新識別欄位。  
   
  *expression*  
- 這是傳回單一值的變數、常值、運算式或子選取陳述式 (括在括號內)。 *expression* 傳回的值會取代 *column_name* 或 *@variable* 中現有的值。  
+ 這是傳回單一值的變數、常值、運算式或子選取陳述式 (括在括號內)。 *expression* 所傳回值會取代 *column_name* 或 @*variable* 中現有的值。  
   
 > [!NOTE]  
 >  參考 Unicode 字元資料類型 **nchar**、**nvarchar** 及 **ntext** 時，'expression' 的前面應該要有大寫字母 'N'。 如果沒有指定 'N'，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將字串轉換成對應至資料庫預設定序或資料行的字碼頁。 在此字碼頁中找不到的任何字元都會遺失。  
@@ -167,7 +166,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  指定資料行所定義的預設值要取代資料行中現有的值。 如果資料行沒有預設值，且定義成允許空值，您可以利用這個方式，將資料行改成 NULL。  
   
- { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+ { **+=**  |  **-=**  |  **\*=**  |  **/=**  |  **%=**  |  **&=**  |  **^=**  |  **|=** }  
  複合指派運算子：  
  +=                       加並指派  
  -=                        減並指派  
@@ -184,24 +183,24 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *property_name* | *field_name*  
  這是使用者自訂類型的公用屬性或公用資料成員。  
   
- *method_name* **(** *argument* [ **,**... *n*] **)**  
+ *method_name* **(** *argument* [ **,** ... *n*] **)**  
  這是 *udt_column_name* 有一或多個引數的非靜態公用 mutator 方法。  
   
- **.** WRITE **(**_expression_**,**_@Offset_**,**_@Length_**)**  
- 指定要修改 *column_name* 的值區段。 *expression* 會取代從 *column_name* 的 *@Offset* 算起的 *@Length* 個單位。 使用這個子句只能指定 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 的資料行。 *column_name* 不能是 NULL，也不能用資料表名稱或資料表別名來限定。  
+ **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)**  
+ 指定要修改 *column_name* 的值區段。 *expression* 會取代從 *column_name* 的 @*Offset* 算起的 @*Length* 個單位。 使用這個子句只能指定 **varchar(max)** 、**nvarchar(max)** 或 **varbinary(max)** 的資料行。 *column_name* 不能是 NULL，也不能用資料表名稱或資料表別名來限定。  
   
- *expression* 是複製到 *column_name* 的值。 *expression* 必須評估為或能夠隱含轉換成 *column_name* 類型。 如果 *expression* 設定為 NULL，系統就會忽略 *@Length*，而且會在指定的 *@Offset* 截斷 *column_name* 中的值。  
+ *expression* 是複製到 *column_name* 的值。 *expression* 必須評估為或能夠隱含轉換成 *column_name* 類型。 如果 *expression* 設定為 NULL，系統就會忽略 @*Length*，且會在所指定 @*Offset* 上截斷 *column_name* 中的值。  
   
- *@Offset* 是 *column_name* 值中寫入 *expression* 的起點。 *@Offset* 是以零為基底的序數位置，也是 **bigint**，而且不能是負數。 如果 *@Offset* 是 NULL，更新作業會在現有 *column_name* 值的結尾附加 *expression*，且會忽略 *@Length*。 如果 @Offset 大於 *column_name* 值的長度，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤。 如果 *@Offset* 加上 *@Length* 超出資料行基礎值的結尾，就會刪除到值的最後一個字元。 如果 *@Offset* 加上 LEN(*expression*) 大於基礎的宣告大小，就會引發錯誤。  
+ @*Offset* 是 *column_name* 值中寫入 *expression* 的起點。 @*Offset* 是以零為基底的序數位置，也是 **bigint**，且不能是負數。 如果 @*Offset* 是 NULL，則更新作業會在現有 *column_name* 值的結尾附加 *expression*，且會忽略 @*Length*。 如果 @Offset 大於 *column_name* 值的長度，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤。 如果 @*Offset* 加上 @*Length* 超出資料行基礎值的結尾，就會刪除到值的最後一個字元。 如果 @*Offset* 加上 LEN(*expression*) 大於基礎的宣告大小，就會引發錯誤。  
   
- *@Length* 是資料行中的區段長度，開頭為 *@Offset*，它會由 *expression* 所取代。 *@Length* 是 **bigint**，而且不能是負數。 如果 *@Length* 是 NULL，更新作業會移除從 *@Offset* 到 *column_name* 值結尾的所有資料。  
+ @*Length* 是資料行中的區段長度，開頭為 @*Offset*，它會由 *expression* 所取代。 @*Length* 是 **bigint**，且不能是負數。 如果 @*Length* 是 NULL，則更新作業會移除從 @*Offset* 到 *column_name* 值結尾的所有資料。  
   
  如需詳細資訊，請參閱＜備註＞。  
   
  **@** *variable*  
  這是設定為 *expression* 傳回之值的宣告變數。  
   
- SET **@**_variable_ = *column* = *expression* 會將變數設成與資料行相同的值。 這有別於 SET **@**_variable_ = _column_, _column_ = _expression_，它會將變數設成資料行更新之前的值。  
+ SET **@** _variable_ = *column* = *expression* 會將變數設成與資料行相同的值。 這有別於 SET **@** _variable_ = _column_, _column_ = _expression_，它會將變數設成資料行更新之前的值。  
   
  \<OUTPUT_Clause>  
  在 UPDATE 作業中，傳回更新資料或以更新資料為基礎的運算式。 任何目標是遠端資料表或檢視表的 DML 陳述式都不支援 OUTPUT 子句。 如需詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
@@ -240,7 +239,7 @@ GLOBAL
 *cursor_variable_name*  
  這是資料指標變數的名稱。 *cursor_variable_name*必須參考允許更新的資料指標。  
   
-OPTION **(** \<query_hint> [ **,**... *n* ] **)**  
+OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
  指定利用最佳化工具提示來自訂 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳作法  
@@ -331,21 +330,21 @@ GO
 >  未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將會移除 **ntext**、**text** 和 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a>更新大數值資料類型  
- 使用 **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) 子句可執行 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型的部分或完整更新。 例如，部分更新 **varchar(max)** 資料行可能只刪除或修改資料行的前 200 個字元，完整更新則會刪除或修改資料行中的所有資料。 如果資料庫復原模式設為大量記錄或簡單模式，插入或附加新資料的 **.** WRITE 更新就會採用最低限度記錄。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ 使用 **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 子句可執行 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 資料類型的部分或完整更新。 例如，部分更新 **varchar(max)** 資料行可能只刪除或修改資料行的前 200 個字元，完整更新則會刪除或修改資料行中的所有資料。 如果資料庫復原模式設為大量記錄或簡單模式，則插入或附加新資料的 **.WRITE** 更新就會採用最低限度記錄。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  當 UPDATE 陳述式造成下列情況時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將部分更新轉換成完整更新：  
 -   變更資料分割檢視或資料表的索引鍵資料行。  
 -   修改多個資料列，同時也將不是唯一的叢集索引之索引鍵更新成非常數值。  
   
-您不能利用 **.** WRITE 子句來更新 NULL 資料行，或將 *column_name* 的值設成 NULL。  
+您不能使用 **.WRITE** 子句來更新 NULL 資料行，或將 *column_name* 的值設成 NULL。  
   
-**varbinary** 和 **varchar** 資料類型的 *@Offset* 和 *@Length* 是以位元組來指定，**nvarchar** 資料類型則是以字元來指定。 雙位元組字集 (DBCS) 定序會計算適當的位移。  
+**varbinary** 和 **varchar** 資料類型的 @*Offset* 和 @*Length* 是以位元組來指定，**nvarchar** 資料類型則是以字元來指定。 雙位元組字集 (DBCS) 定序會計算適當的位移。  
   
 若要有最佳效能，建議您以 8040 個位元組倍數的片段大小來插入或更新資料。  
   
-如果在 OUTPUT 子句中參考 **.** WRITE 子句所修改的資料行，就會將資料行的完整值 (不論是在 **deleted.**_column\_name_ 中的影像之前，或在 **inserted.**_column\_name_ 中的影像之後) 傳回資料表變數中的指定資料行。 請參閱下面的 R 範例。  
+如果在 OUTPUT 子句中參考 **\.WRITE** 子句所修改的資料行，就會將資料行的完整值 (不論是在 **deleted.** _column\_name_ 中影像之前，或在 **inserted.** _column\_name_ 中影像之後) 傳回資料表變數中的指定資料行。 請參閱下面的 R 範例。  
   
-若要利用其他字元或二進位資料類型來完成 **.** WRITE 的相同功能，請使用 [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)。  
+若要使用其他字元或二進位資料類型來完成 **\.WRITE** 的相同功能，請使用 [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)。  
   
 ### <a name="updating-user-defined-type-columns"></a>更新使用者定義型別資料行  
  您可以利用下列方式之一來完成使用者定義型別資料行值的更新：  
@@ -463,7 +462,7 @@ ID     Value
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  需要目標資料表的 UPDATE 權限。 如果 UPDATE 陳述式包含 WHERE 子句，或 SET 子句中的 *expression* 使用資料表中的資料行，則需要所更新之資料表的 SELECT 權限。  
   
  UPDATE 權限預設會授與 **sysadmin** 固定伺服器角色、**db_owner** 和 **db_datawriter** 固定資料庫角色的成員，以及資料表擁有者。 **sysadmin**、**db_owner** 和 **db_securityadmin** 角色的成員，以及資料表擁有者，可以將權限轉移給其他使用者。  
