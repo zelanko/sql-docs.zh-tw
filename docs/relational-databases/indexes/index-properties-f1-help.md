@@ -19,12 +19,12 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909717"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476294"
 ---
 # <a name="index-properties-f1-help"></a>索引屬性 F1 說明
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,76 @@ ms.locfileid: "67909717"
   
  **允許 Null**  
  如果資料表定義對於資料行允許 Null 值，就會顯示 **[是]** 。 如果資料表定義對於資料行不允許 Null 值，就會顯示 **[否]** 。  
+
+##  <a name="Options"></a> 選項頁面選項
+ 使用此頁面來檢視或修改各種索引選項。
+
+### <a name="general-options"></a>一般選項
+**自動重新計算統計資料**<br>
+指定是否要自動重新計算散發統計資料。 預設為 **True**，相當於將 STATISTICS_NORECOMPUTE 設定為 OFF。 將此項目設定為 **False** 會將 STATISTICS_NORECOMPUTE 設定為 ON。
+
+**忽略重複的值** <br>
+指定當插入作業嘗試將重複的索引鍵值插入唯一索引時所產生的錯誤回應。
+
+True<br>
+當重複的索引鍵值插入唯一索引時，就會出現警告訊息。 只有違反唯一性條件約束的資料列才會失敗。
+
+False<br>
+當重複的索引鍵值插入唯一索引時，就會出現錯誤訊息。 整個 INSERT 作業將會回復。
+
+### <a name="locks-options"></a>鎖定選項
+
+**允許資料列鎖定**<br>
+指定是否允許資料列鎖定。
+
+**允許頁面鎖定**<br>
+指定是否允許頁面鎖定。
+
+### <a name="operation-options"></a>作業選項
+
+ **允許線上 DML 處理**  
+ 允許使用者在索引作業期間存取基礎資料表或叢集索引資料，以及與非叢集索引相關聯的任何項目，例如 CREATE 或 ALTER。 如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
+> [!NOTE]  
+>  此選項不適用於 XML 索引，或索引為已停用的叢集索引時亦不適用。  
+  
+ **平行處理原則的最大程度**  
+ 限制平行計畫執行期間要使用的處理器數目。 預設值 (0) 會使用實際可用的 CPU 數目。 將值設定為 1 會抑制平行計畫的產生；將值設定為大於 1 的數字則會限制單一查詢執行所使用的處理器最大數目。 此選項僅會在對話方塊處於 **[重建]** 或 **[重新建立]** 狀態時可用。 如需詳細資訊，請參閱 [設定平行處理原則的最大程度選項來取得最佳效能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
+  
+> [!NOTE]  
+>  如果指定的數值大於可用的 CPU 數目，就會使用可用 CPU 的實際數目。  
+
+
+**針對循序索引鍵優化**<br>
+指定是否要最佳化最後一頁的插入競爭。 如需詳細資訊，請參閱[循序索引鍵](../../t-sql/statements/create-index-transact-sql.md#sequential-keys)。
+
+### <a name="storage-options"></a>儲存選項
+
+**在 tempdb 中排序**<br>
+指定是否要將暫時排序結果儲存在 tempdb 中。
+
+True<br>
+用來建立索引的中繼排序結果會儲存在 tempdb 中。 如果 tempdb 位於使用者資料庫以外的另一組磁碟上，這種儲存方式可以減少建立索引所需的時間。 不過，這會增加建立索引時所使用的磁碟空間量。
+
+False<br>
+中繼排序結果會儲存在與用來儲存索引相同的資料庫中。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](./sort-in-tempdb-option-for-indexes.md)。
+
+**填滿因數**<br>
+指定百分比，以表示 Database Engine 在索引建立或重建期間應該將每個索引頁面的分葉層級填滿的程度。 fillfactor 必須是 1 到 100 之間的整數值。 如果 fillfactor 是 100，資料庫引擎會利用已填滿容量的分葉頁面來建立索引。
+只有在建立或重建索引時才會套用 FILLFACTOR 設定。 資料庫引擎不會動態保留頁面中空白空間的指定百分比。
+
+如需詳細資訊，請參閱 [指定索引的填滿因素](./specify-fill-factor-for-an-index.md)。
+
+**索引頁預留空間**<br>
+指定索引填補。
+
+True<br>
+fillfactor 指定的可用空間百分比會套用到索引的中繼層級頁面上。
+
+False 或未指定 fillfactor<br>
+中繼層級頁面會幾乎填滿整個容量，但會考量中繼頁面上的索引鍵集，而保留至少可供索引所能擁有之大小上限的一個資料列使用的足夠空間。
+
+
 ##  <a name="Storage"></a> 儲存頁面選項  
  使用此頁面來檢視或修改選取之索引的檔案群組或資料分割結構描述屬性。 僅顯示與索引類型相關的選項。  
   
@@ -164,18 +233,6 @@ ms.locfileid: "67909717"
   
 > [!NOTE]  
 >  如果資料表資料行是計算資料行， **[資料行資料類型]** 就會顯示「計算資料行」。  
-  
- **移動索引時，允許線上處理 DML 陳述式**  
- 允許使用者在索引作業期間存取基礎資料表或叢集索引資料，以及與非叢集索引相關聯的任何項目。 如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
-  
-> [!NOTE]  
->  此選項不適用於 XML 索引，或索引為已停用的叢集索引時亦不適用。  
-  
- **設定最大平行程度**  
- 限制平行計畫執行期間要使用的處理器數目。 預設值 (0) 會使用實際可用的 CPU 數目。 將值設定為 1 會抑制平行計畫的產生；將值設定為大於 1 的數字則會限制單一查詢執行所使用的處理器最大數目。 此選項僅會在對話方塊處於 **[重建]** 或 **[重新建立]** 狀態時可用。 如需詳細資訊，請參閱 [設定平行處理原則的最大程度選項來取得最佳效能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
-  
-> [!NOTE]  
->  如果指定的數值大於可用的 CPU 數目，就會使用可用 CPU 的實際數目。  
   
 ##  <a name="Spatial"></a> 空間頁面索引選項  
  使用 **[空間]** 頁面可檢視或指定空間屬性的值。 如需詳細資訊，請參閱[空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  

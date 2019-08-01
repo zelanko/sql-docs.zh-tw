@@ -24,17 +24,20 @@ helpviewer_keywords:
 - SQL Server collations
 - UTF-8
 - UTF-16
+- UTF8
+- UTF16
+- UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118493"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471041"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -272,7 +275,7 @@ Unicode Consortium 會為每個字元配置唯一的字碼元素，其值介於 
 
 > [!TIP]   
 > 一般認為在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，或在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會定義字元數。 這是因為在 CHAR (10) 資料行的範例中，可以使用定序 (例如 Latin1_General_100_CI_AI) 來儲存範圍 0-127 中的 10 個 ASCII 字元，因為此範圍內的每個字元只會使用 1 個位元組。    
-> 不過，在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，*n* 會以**位元組**為單位 (0-8,000) 定義字串長度，而在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會以**位元組配對**為單位 (0-4,000) 定義字串長度。 *n* 一律不會定義可儲存的字元數。
+> 不過，在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，*n* 會以**位元組**為單位 (0-8,000) 定義字串大小，而在 [NCHAR(*n*) 和 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，*n* 會以**位元組配對**為單位 (0-4,000) 定義字串大小。 *n* 一律不會定義可儲存的字元數。
 
 如以上所見，取決於所使用的字元集，選擇適當的 Unicode 編碼和資料類型可能會節省大量的儲存體或增加目前體存體使用量。 例如，使用啟用 UTF-8 的拉丁定序 (例如 Latin1_General_100_CI_AI_SC_UTF8) 時，`CHAR(10)` 資料行會儲存 10 個位元組，且可以保留範圍 0-127 內的 10 個 ASCII 字元，但在範圍為 128-2047 時只能保留 5 個字元，而在範圍為 2048-65535 時只能保留 3 個字元。 相較之下，由於 `NCHAR(10)` 資料行會儲存 10 個位元組配對 (20 個位元組)，因此可以保留範圍 0-65535 內的 10 個字元。  
 
@@ -301,7 +304,9 @@ Unicode Consortium 會為每個字元配置唯一的字碼元素，其值介於 
 [撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [SQL Server 最佳做法：移轉至 Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) - 不再維護   
 [Unicode Consortium 網站](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[Unicode Standard](http://www.unicode.org/standard/standard.html) (Unicode 標準)      
+[Unicode Standard](http://www.unicode.org/standard/standard.html)    (Unicode 標準)  
+[OLE DB Driver for SQL Server 中的 UTF-8 支援](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+介紹 [SQL Server UTF-8 支援](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)的部落格       
     
 ## <a name="see-also"></a>另請參閱    
 [自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)     

@@ -1,7 +1,7 @@
 ---
 title: 聯結 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/18/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -10,31 +10,33 @@ helpviewer_keywords:
 - HASH join
 - NESTED LOOPS join
 - MERGE join
+- ADAPTIVE join
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29fa0dcc89cd8e1ad88abcf9974884b723b7a64e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051953"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419584"
 ---
 # <a name="joins-sql-server"></a>聯結 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用記憶體內排序和雜湊聯結技術，來執行排序、交叉、聯集及差異作業。 使用這類查詢計畫，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援資料表垂直分割 (有時候稱為分欄儲存)。   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 採用三種聯結作業：    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 採用四種聯結作業：    
 -   巢狀迴圈聯結     
 -   合併聯結   
 -   雜湊聯結   
+-   自適性聯結 (開頭為 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 ## <a name="fundamentals"></a> 聯結基本概念
-透過使用聯結，您可以根據資料表之間的邏輯關聯性從二或多個資料表中擷取資料。 聯結會指出 Microsoft SQL Server 應該如何使用一個資料表的資料來選取另一個資料表中的資料列。    
+透過使用聯結，您可以根據資料表之間的邏輯關聯性從二或多個資料表中擷取資料。 聯結指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用一個資料表的資料，以選取另一個資料表的資料列。    
 
 聯結條件定義兩個資料表在查詢中相關的方式：    
 -   指定每個資料表中要用於聯結的資料行。 典型的聯結條件會指定一個資料表的外部索引鍵，以及其在另一個資料表關聯的索引鍵。    
@@ -115,6 +117,8 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 如果外部輸入相當小，內部輸入已預先建立索引而且很大的話，巢狀迴圈聯結會特別有效率。 在許多小型交易中 (如只影響一小組資料列的交易)，索引巢狀迴圈聯結比合併聯結與雜湊聯結要好得多。 然而在大型查詢中，巢狀迴圈聯結多半不是最佳選擇。    
 
+當巢狀迴圈聯結運算子的 OPTIMIZED 屬性設定為 **True** 時，代表會在內部資料表過大時使用巢狀迴圈聯結 (或稱批次排序) 來將 I/O 最小化，而不論資料表平行與否。 因為排序本身是隱藏作業，所以在分析執行計劃時，此最佳化在指定計劃內可能不會很明顯。 但如果仔細在計劃 XML 中尋找屬性 OPTIMIZED 的話，能看出來巢狀迴圈聯結可能在嘗試重新排序輸入資料列來改善 I/O 效能。
+
 ## <a name="merge"></a> 認識合併聯結
 如果兩個聯結輸入都不小，而且依聯結資料行排序 (例如，是由掃描排序的索引所取得) 的話，合併聯結就是最快速的聯結作業。 如果兩個聯結輸入都相當大，而且兩個輸入的大小類似，先行排序再進行的合併聯結所提供的效能大致類似雜湊聯結。 然而，如果兩個輸入的大小差異極大的話，雜湊聯結作業多半快得多。       
 
@@ -142,15 +146,12 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 下列章節描述不同類型的雜湊聯結：In-Memory 雜湊聯結、寬限雜湊聯結和遞迴雜湊聯結。    
 
 ### <a name="inmem_hash"></a> In-Memory 雜湊聯結
-
 雜湊聯結會先掃描或計算整個建置輸入，然後在記憶體中建立雜湊表。 根據以雜湊鍵計算所得的雜湊值，將每一列插入雜湊桶中。 如果整個建置輸入小於可用記憶體，就可以將所有資料列都插入雜湊表。 這個組建階段後跟著探查階段。 這時候會以逐列方式掃描或計算整個探查輸入，針對每個探查列計算雜湊鍵值、掃描對應的雜湊桶，並產生符合項目。    
 
 ### <a name="grace_hash"></a> 寬限雜湊聯結
-
 如果記憶體放不下建置輸入，就會以幾個步驟進行雜湊聯結。 這就是所謂的寬限雜湊聯結。 每個步驟分別有組建階段與探查階段。 最開始，會消耗整個組建與探查輸入，並分割 (對雜湊鍵使用雜湊函數) 成多個檔案。 對雜湊鍵使用雜湊函數會保證任何兩個聯結資料錄一定在同一對檔案中。 因此，本來是聯結兩個大型輸入的工作，變成是做好幾個相同的工作，但每個工作都變得比較小。 然後再對每對分割檔案套用雜湊聯結。    
 
 ### <a name="recursive_hash"></a> 遞迴雜湊聯結
-
 如果建置輸入太大，使得標準外部聯結排序的輸入需要多個合併層級，就需要多個分割步驟與多個分割層級。 如果只有一些分割很大，就僅對這部分使用額外的分割步驟。 為了使所有分割步驟都盡可能達到最快的速度，所以使用大型的非同步 I/O 作業，使單一執行緒可以讓多部磁碟機保持忙碌。    
 
 > [!NOTE]
@@ -164,14 +165,132 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > 角色反轉的發生與任何查詢提示或結構無關。 角色反轉不會顯示在查詢計畫中；當它發生時，使用者就會看到。
 
 ### <a name="hash_bailout"></a> 雜湊釋出
-
 雜湊釋出一詞有時候是用來描述寬限雜湊聯結或遞迴雜湊聯結。    
 
 > [!NOTE]
 > 遞迴雜湊聯結或 Hash Bailout 會導致伺服器的效能降低。 如果您在追蹤內看到許多 「雜湊警告」事件，請在要聯結的資料行上更新統計資料。    
 
 如需有關雜湊釋出的詳細資訊，請參閱[雜湊警告事件類別](../../relational-databases/event-classes/hash-warning-event-class.md)。    
-  
+
+## <a name="adaptive"></a> 了解自適性聯結
+[批次模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)自適性聯結可讓選擇的[雜湊聯結](#hash)或[巢狀迴圈](#nested_loops)聯結方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，查詢計劃可在執行期間動態切換至較佳的聯結策略，而不需經過重新編譯。 
+
+> [!TIP]
+> 經常在小型和大型聯結輸入掃描間變動的工作負載，由此功能獲益最大。
+
+執行階段決策以下列步驟為基礎：
+-  如果組建聯結輸入的資料列計數小到巢狀迴圈聯結會比雜湊聯結更佳的情況，則計劃就會切換成巢狀迴圈演算法。
+-  如果組建聯結輸入超過特定的資料列計數閾值，則不會切換，且您的計劃會繼續執行雜湊聯結。
+
+下列查詢用來說明自適性聯結範例：
+
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 360;
+```
+
+此查詢會傳回 336 個資料列。 透過啟用[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)，會顯示下列計劃：
+
+![查詢結果 336 個資料列](../../relational-databases/performance/media/4_AQPStats336Rows.png)
+
+在計劃中，請注意：
+1. 使用了資料行存放區索引掃描，為雜湊聯結建置階段提供資料列。
+2. 新的自適性聯結運算子。 此運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 本例中的閾值是 78 個資料列。 凡是 &gt;= 78 個資料列的計劃都會使用雜湊聯結。 如果小於該閾值，則會使用巢狀迴圈聯結。
+3. 因為查詢傳回 336 個資料列 (超過閾值)，所以第二個分支會表示標準雜湊聯結作業的探查階段。 請注意，即時查詢統計資料會顯示流經運算子的資料列，本例中為 "672 of 672"。
+4. 而最後一個分支是叢集索引搜尋，供未超過閾值的巢狀迴圈聯結所使用。 請注意，我們看到的顯示是"0 of 336" 資料列 (分支未使用)。
+
+現在對比使用相同查詢的計劃，但當 *Quantity* 值在資料表中只有一個資料列時：
+ 
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 361;
+```
+查詢會傳回一個資料列。 啟用即時查詢統計資料會顯示下列計劃：
+
+![查詢結果一個資料列](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
+
+在計劃中，請注意：
+- 因為傳回一個資料列，現在叢集索引搜尋中有資料列通過。
+- 而且，因為雜湊聯結建置階段並未繼續，所以不會有任何資料列通過第二個分支。
+
+### <a name="adaptive-join-remarks"></a>自適性聯結備註
+自調性聯結導入的記憶體需求，會比索引巢狀的迴圈聯結相等計劃更高。 系統會以巢狀迴圈有如雜湊聯結一般的方式要求額外的記憶體。 在時快時慢作業的建置階段與巢狀迴圈資料流相等聯結的比較中，會另外產生額外負荷。 加上額外的成本，隨組建輸入資料列計數浮動的案例而變動。
+
+批次模式自適性聯結適合初次執行的陳述式使用，而且一旦編譯，連續執行仍會根據編譯的自適性聯結閾值和流經外部輸入建置階段的執行階段資料列聯結自動調整。
+
+如果自適性聯結切換成巢狀迴圈作業，便會使用已由雜湊聯結組建讀取的資料列。 運算子「不會」  再次重新讀取外部參考資料列。
+
+### <a name="tracking-adaptive-join-activity"></a>追蹤自適性聯結活動
+自適性聯結運算子有下列計劃運算子屬性：
+
+|計劃屬性|Description|
+|---|---|
+|AdaptiveThresholdRows|顯示從雜湊聯結切換至巢狀迴圈聯結所使用的閾值。|
+|EstimatedJoinType|可能的聯結類型。|
+|ActualJoinType|在實際的計劃中，顯示根據閾值最後選擇的聯結演算法。|
+
+評估計劃會顯示自適性聯結計劃圖形，以及定義的自適性聯結閾值和預估的聯結類型。
+
+> [!TIP]
+> 查詢存放區擷取並可強制執行批次模式自適性聯結計劃。
+
+### <a name="adaptive-join-eligible-statements"></a>符合自適性聯結的陳述式
+讓邏輯聯結符合批次模式自適性聯結有幾個條件：
+- 資料庫相容性層級為 140 以上。
+- 查詢是 `SELECT` 陳述式 (資料修改陳述式目前不適合)。
+- 聯結能夠由索引巢狀迴圈聯結或雜湊聯結實體演算法執行。
+- 雜湊聯結使用[批次模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)，不論是透過存在於整體查詢中的資料行存放區索引，或是由聯結直接參考的資料行存放區索引資料表。
+- 產生的巢狀迴圈聯結和雜湊聯結替代解決方案應該有相同的第一個子系 (外部參考)。
+
+### <a name="adaptive-threshold-rows"></a>自適性閾值資料列
+下圖顯示雜湊聯結成本與巢狀迴圈聯結替代方案成本之間的交集範例。 在此交集點決定的閾值，會隨之決定用於聯結作業的實際演算法。
+
+![聯結閾值](../../relational-databases/performance/media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>停用自適性聯結而不變更相容性層級
+您可以在資料庫或陳述式的範圍停用自適性聯結，同時仍將資料庫相容性層級維持在 140 以上。  
+若要針對源自資料庫的所有查詢執行停用自適性聯結，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+啟用時，此設定在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中會顯示為已啟用。
+若要針對源自資料庫的所有查詢執行重新啟用自適性聯結，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+您也可以將 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 指定為 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，以針對特定查詢停用自適性聯結。 例如：
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+> [!NOTE]
+> USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。 
+
 ## <a name="nulls_joins"></a> Null 值與聯結
 當資料表的資料行中有 Null 值時，Null 值彼此並不相符。 若所要聯結之其中一個資料表的資料行中出現 Null 值，將只能藉由使用外部聯結來傳回該值 (除非 `WHERE` 子句會排除 Null 值)。     
 
@@ -236,7 +355,3 @@ NULL        three  NULL        NULL
 [資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [子查詢](../../relational-databases/performance/subqueries.md)      
 [自適性聯結](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
-
-
-  
-  

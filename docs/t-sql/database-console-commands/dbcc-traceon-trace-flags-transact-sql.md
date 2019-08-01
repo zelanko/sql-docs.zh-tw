@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4b6b05436f85fa96a164f6e86733c5bc4bf95f0d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 21c43f2780f555b9cabd0ec84b47f80ff0284764
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345472"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388438"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -138,7 +138,7 @@ ms.locfileid: "68345472"
 |**7412**|啟用分析基礎結構的輕量型查詢執行統計資料。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3170113) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更新版本的組建。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，此追蹤旗標沒有任何作用，因為預設會啟用輕量型分析。<br /><br />**範圍**：只限全域|
 |**7471**|同時在單一資料表上對不同的統計資料執行多個 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3156157) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 和更新版本的組建。<br /><br />**範圍**：只限全域|
 |**7745**|強制查詢存放區在資料庫關機時不排清資料到磁碟。<br /><br />**注意：** 使用這項追蹤可能會導致先前未排清至磁碟的查詢存放區資料在關機時遺失。 如果要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關機，可以使用 SHUTDOWN WITH NOWAIT 命令取代此追蹤旗標來強制立即關機。<br /><br />**範圍**：只限全域|
-|**7752**|啟用非同步載入查詢存放區。<br /><br />**注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 有大量與查詢存放區同步載入 (資料庫復原期間的預設行為) 相關的 QDS_LOADDB 等待工作，請使用這個追蹤旗標。<br /><br />**範圍**：只限全域|
+|**7752**|啟用非同步載入查詢存放區。<br /><br />**注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 有大量與查詢存放區同步載入 (資料庫復原期間的預設行為) 相關的 QDS_LOADDB 等待工作，請使用這個追蹤旗標。<br /><br />**注意：** 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，此行為由引擎控制，追蹤旗標 7752 沒有任何作用。<br /><br />**範圍**：只限全域|
 |**7806**|在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]上啟用專用管理員連接 (DAC)。 依預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上不會保留任何 DAC 資源。 如需詳細資訊，請參閱 [資料庫管理員的診斷連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。<br /><br />**範圍**：只限全域|  
 |**8011**|停用資源監視器的信號緩衝區。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：全域和工作階段|
 |**8012**|停用排程器的信號緩衝區。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
