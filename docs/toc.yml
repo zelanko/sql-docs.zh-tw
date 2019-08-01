@@ -165,15 +165,15 @@
               href: big-data-cluster/view-cluster-status.md
             - name: Kubernetes 疑難排解
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: 使用筆記本管理
+            - name: 使用 Notebook 管理
               href: big-data-cluster/manage-notebooks.md
-        - name: 筆記型電腦
+        - name: Notebooks
           items:
             - name: Notebooks 概觀
               href: big-data-cluster/notebooks-guidance.md
             - name: Notebook 教學課程
               href: big-data-cluster/tutorial-notebook-spark.md
-            - name: 管理現有筆記本
+            - name: 管理現有 Notebooks
               href: big-data-cluster/notebooks-how-to-manage.md
         - name: Spark 作業
           items:
@@ -235,7 +235,7 @@
                   href: big-data-cluster/reference-azdata-bdc-status.md
             - name: Notebook
               items:
-                - name: 筆記本
+                - name: Notebook
                   href: big-data-cluster/reference-azdata-notebook.md
             - name: SQL
               items:
@@ -471,9 +471,9 @@
                       href: relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md
                     - name: '[一般] 頁面'
                       href: relational-databases/backup-restore/back-up-database-general-page.md
-                    - name: 媒體選項頁面
+                    - name: '[媒體選項] 頁面'
                       href: relational-databases/backup-restore/back-up-database-media-options-page.md
-                    - name: 備份選項頁面
+                    - name: '[備份選項] 頁面'
                       href: relational-databases/backup-restore/back-up-database-backup-options-page.md
                     - name: 選取備份目的地
                       href: relational-databases/backup-restore/select-backup-destination.md
@@ -493,9 +493,9 @@
                       href: relational-databases/backup-restore/backup-timeline.md
                     - name: '[一般] 頁面'
                       href: relational-databases/backup-restore/restore-database-general-page.md
-                    - name: 選項頁面
+                    - name: '[選項] 頁面'
                       href: relational-databases/backup-restore/restore-database-options-page.md
-                    - name: 檔案頁面
+                    - name: '[檔案] 頁面'
                       href: relational-databases/backup-restore/restore-database-files-page.md
                     - name: 選取備份裝置
                       href: relational-databases/backup-restore/select-backup-device.md
@@ -510,7 +510,7 @@
               href: database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
             - name: 技術與功能
               href: database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md
-            - name: 必要條件、限制與建議
+            - name: 先決條件、限制與建議
               href: database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md
             - name: 互通性
               href: database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md
@@ -680,11 +680,11 @@
                   href: database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md
                 - name: 工作階段期間複本之間可能發生的失敗
                   href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
-            - name: 連接性
+            - name: 連線能力
               items:
                 - name: 用戶端連線
                   href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-                - name: 用戶端連線性
+                - name: 用戶端連線能力
                   href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
                 - name: 接聽程式、用戶端與容錯移轉
                   href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
@@ -738,13 +738,13 @@
                   href: database-engine/availability-groups/windows/availability-replica-properties-general-page.md
                 - name: 新增可用性群組精靈
                   items:
-                    - name: 指定可用性群組選項頁面
+                    - name: '[指定可用性群組選項] 頁面'
                       href: database-engine/availability-groups/windows/specify-availability-group-name-page.md
                     - name: '[選取資料庫] 頁面'
                       href: database-engine/availability-groups/windows/select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
                     - name: '[指定複本] 頁面'
                       href: database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-                    - name: 輸入密碼頁面
+                    - name: '[輸入密碼] 頁面'
                       href: database-engine/availability-groups/windows/enter-passwords-page-add-replica-wizard.md
                 - name: Always On 可用性群組精靈
                   items:
@@ -940,11 +940,11 @@
                     - name: 建立工作階段
                       href: database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
                       items:
-                        - name: 範例：使用 Windows 驗證設定 (T-SQL)
+                        - name: 範例使用 Windows 驗證設定 (T-SQL)
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-                        - name: 範例：使用憑證設定 (T-SQL)
+                        - name: 範例使用憑證設定 (T-SQL)
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
-                    - name: 升級
+                    - name: UPGRADE
                       href: database-engine/database-mirroring/upgrading-mirrored-instances.md
                     - name: 移除鏡像
                       href: database-engine/database-mirroring/remove-database-mirroring-sql-server.md
@@ -1268,19 +1268,19 @@
                   items:
                     - name: '[一般] 頁面'
                       href: relational-databases/databases/database-properties-general-page.md
-                    - name: 檔案頁面
+                    - name: '[檔案] 頁面'
                       href: relational-databases/databases/database-properties-files-page.md
-                    - name: 檔案群組頁面
+                    - name: '[檔案群組] 頁面'
                       href: relational-databases/databases/database-properties-filegroups-page.md
-                    - name: 選項頁面
+                    - name: '[選項] 頁面'
                       href: relational-databases/databases/database-properties-options-page.md
-                    - name: 變更追蹤頁面
+                    - name: '[變更追蹤] 頁面'
                       href: relational-databases/databases/database-properties-changetracking-page.md
-                    - name: 交易記錄傳送頁面
+                    - name: '[交易記錄傳送] 頁面'
                       href: relational-databases/databases/database-properties-transaction-log-shipping-page.md
-                    - name: 鏡像頁面
+                    - name: '[鏡像] 頁面'
                       href: relational-databases/databases/database-properties-mirroring-page.md
-                    - name: 查詢存放區頁面
+                    - name: '[查詢存放區] 頁面'
                       href: relational-databases/databases/database-properties-query-store-page.md
     - name: Filestream、Filetable 與 BLOB
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
@@ -1884,19 +1884,19 @@
             - name: RAW 模式
               href: relational-databases/xml/use-raw-mode-with-for-xml.md
               items:
-                - name: 範例：將產品型號資訊當做 XML 來擷取
+                - name: 範例將產品型號資訊當做 XML 來擷取
                   href: relational-databases/xml/example-retrieving-product-model-information-as-xml.md
-                - name: 範例：使用 ELEMENTS 指示詞指定 XSINIL
+                - name: 範例使用 ELEMENTS 指示詞指定 XSINIL
                   href: relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md
-                - name: 範例：使用 XMLDATA 與 XMLSCHEMA 選項要求結構描述作為結果
+                - name: 範例使用 XMLDATA 與 XMLSCHEMA 選項要求結構描述作為結果
                   href: relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-                - name: 範例：擷取二進位資料
+                - name: 範例擷取二進位資料
                   href: relational-databases/xml/example-retrieving-binary-data.md
-                - name: 範例：為 <row> 元素重新命名
+                - name: 範例為 <row> 元素重新命名
                   href: relational-databases/xml/example-renaming-the-row-element.md
-                - name: 範例：為 FOR XML 產生的 XML 指定根元素
+                - name: 範例為 FOR XML 產生的 XML 指定根元素
                   href: relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-                - name: 範例：查詢 XMLType 資料行
+                - name: 範例查詢 XMLType 資料行
                   href: relational-databases/xml/example-querying-xmltype-columns.md
             - name: AUTO 模式的比較
               href: relational-databases/xml/use-auto-mode-with-for-xml.md
@@ -1910,25 +1910,25 @@
             - name: EXPLICIT 模式
               href: relational-databases/xml/use-explicit-mode-with-for-xml.md
               items:
-                - name: 範例：擷取員工資訊
+                - name: 範例擷取員工資訊
                   href: relational-databases/xml/example-retrieving-employee-information.md
-                - name: 範例：指定 ELEMENT 指示詞
+                - name: 範例指定 ELEMENT 指示詞
                   href: relational-databases/xml/example-specifying-the-element-directive.md
-                - name: 範例：指定 ELEMENTXSINIL 指示詞
+                - name: 範例指定 ELEMENTXSINIL 指示詞
                   href: relational-databases/xml/example-specifying-the-elementxsinil-directive.md
-                - name: 範例：使用 EXPLICIT 模式建構同層級
+                - name: 範例使用 EXPLICIT 模式建構同層級
                   href: relational-databases/xml/example-constructing-siblings-with-explicit-mode.md
-                - name: 範例：指定 ID 與 IDREF 指示詞
+                - name: 範例指定 ID 與 IDREF 指示詞
                   href: relational-databases/xml/example-specifying-the-id-and-idref-directives.md
-                - name: 範例：指定 ID 與 IDREFS 指示詞
+                - name: 範例指定 ID 與 IDREFS 指示詞
                   href: relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md
-                - name: 範例：指定 HIDE 指示詞
+                - name: 範例指定 HIDE 指示詞
                   href: relational-databases/xml/example-specifying-the-hide-directive.md
-                - name: 範例：指定 ELEMENT 指示詞與實體編碼
+                - name: 範例指定 ELEMENT 指示詞與實體編碼
                   href: relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md
-                - name: 範例：指定 CDATA 指示詞
+                - name: 範例指定 CDATA 指示詞
                   href: relational-databases/xml/example-specifying-the-cdata-directive.md
-                - name: 範例：指定 XMLTEXT 指示詞
+                - name: 範例指定 XMLTEXT 指示詞
                   href: relational-databases/xml/example-specifying-the-xmltext-directive.md
             - name: PATH 模式
               href: relational-databases/xml/use-path-mode-with-for-xml.md
@@ -3449,21 +3449,21 @@
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md
             - name: '使用 sql:use-cdata 建立 CDATA 區段'
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md
-            - name: '使用 sql:is-constant 建立常數元素'
+            - name: '使用 sql:is-constant 建立常數項目'
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md
             - name: '使用 sql:prefix 建立有效的 ID、IDREF 和 IDREFS 類型屬性'
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md
             - name: '資料類型強制型轉與 sql:datatype 註解'
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md
-            - name: XSD 元素與屬性對資料表與資料行的預設對應
+            - name: XSD 項目與屬性對資料表與資料行的預設對應
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md
-            - name: '使用 sql:mapped 從 XML 文件排除結構描述元素'
+            - name: '使用 sql:mapped 從 XML 文件排除結構描述項目'
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md
-            - name: XSD 元素與屬性對資料表與資料行的明確對應
+            - name: XSD 項目與屬性對資料表與資料行的明確對應
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md
             - name: '使用 sql:limit-field 與 sql:limit-value 篩選值'
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md
-            - name: '使用 sql:hide 隱藏元素與屬性'
+            - name: '使用 sql:hide 隱藏項目與屬性'
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/hiding-elements-and-attributes-by-using-sql-hide.md
             - name: '使用 sql:key-fields 識別索引鍵資料行'
               href: relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md
@@ -4316,7 +4316,7 @@
               href: database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md
             - name: 輕量型共用
               href: database-engine/configure-windows/lightweight-pooling-server-configuration-option.md
-            - name: 設定鎖定 locks
+            - name: 設定 locks
               href: database-engine/configure-windows/configure-the-locks-server-configuration-option.md
             - name: 設定 max degree of parallelism
               href: database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md
@@ -4621,7 +4621,7 @@
               href: data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md
             - name: 在 Data Quality Client 中開啟 Integration Services 專案
               href: data-quality-services/open-integration-services-projects-in-data-quality-client.md
-        - name: 資料清理
+        - name: Data Cleansing
           href: data-quality-services/data-cleansing.md
           items:
             - name: 使用 DQS (內部) 知識清理資料
@@ -4676,7 +4676,7 @@
         - name: 概觀
           href: relational-databases/replication/sql-server-replication.md
           items:
-            - name: Backward Compatibility
+            - name: 回溯相容性
               href: relational-databases/replication/replication-backward-compatibility.md
             - name: 已被取代的功能
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
@@ -4713,7 +4713,7 @@
                   items:
                     - name: 建立發行集
                       href: relational-databases/replication/publish/create-a-publication.md
-                    - name: 檢視及修改屬性
+                    - name: 檢視及 修改屬性
                       href: relational-databases/replication/publish/view-and-modify-publication-properties.md
                     - name: 設定快照集屬性
                       href: relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md
@@ -4868,7 +4868,7 @@
                       href: relational-databases/replication/monitor/refresh-data-in-replication-monitor.md
                     - name: 監視效能
                       href: relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md
-                    - name: 測量延遲與驗證連線
+                    - name: 測量延遲及驗證連線
                       href: relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md
                     - name: 以程式設計方式監視複寫
                       href: relational-databases/replication/monitor/programmatically-monitor-replication.md
@@ -5228,7 +5228,7 @@
                       href: relational-databases/replication/publication-information-warnings-transactional-publication.md
                     - name: 代理程式
                       href: relational-databases/replication/publication-information-agents-transactional-publication.md
-                    - name: 追蹤 Token
+                    - name: 追蹤權杖
                       href: relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
                     - name: 未散發的命令
                       href: relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
@@ -5954,7 +5954,7 @@
                   href: ssma/db2/project-settings-loading-system-objects-db2tosql.md
                 - name: GUI
                   href: ssma/db2/project-settings-gui-db2tosql.md
-                - name: 同步
+                - name: Synchronization
                   href: ssma/db2/project-settings-synchronization-db2tosql.md
             - name: 全域設定
               href: ssma/db2/global-settings-dialogs-db2tosql.md
@@ -6355,7 +6355,7 @@
                   href: ssma/sybase/project-settings-conversion-sybasetosql.md
                 - name: 類型對應
                   href: ssma/sybase/project-settings-type-mapping-sybasetosql.md
-                - name: 同步
+                - name: Synchronization
                   href: ssma/sybase/project-settings-synchronization-sybasetosql.md
                 - name: Azure SQL DB
                   href: ssma/sybase/project-settings-azure-sql-db-sybasetosql.md
@@ -6915,7 +6915,7 @@
                       items:
                         - name: 警示
                           href: relational-databases/performance-monitor/sql-server-agent-alerts-object.md
-                        - name: 作業
+                        - name: 中稱為
                           href: relational-databases/performance-monitor/sql-server-agent-jobs-object.md
                         - name: JobSteps
                           href: relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
@@ -6931,7 +6931,7 @@
                           href: relational-databases/performance-monitor/sql-server-backup-device-object.md
                         - name: Batch Resp Statistics
                           href: relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
-                        - name: Broker 啟用
+                        - name: Broker Activation
                           href: relational-databases/performance-monitor/sql-server-broker-activation-object.md
                         - name: Broker 統計資料
                           href: relational-databases/performance-monitor/sql-server-broker-statistics-object.md
@@ -7275,7 +7275,7 @@
               href: relational-databases/resource-governor/disable-resource-governor.md
             - name: 使用範本來設定資源管理員
               href: relational-databases/resource-governor/configure-resource-governor-using-a-template.md
-            - name: View Resource Governor Properties
+            - name: 檢視資源管理員屬性
               href: relational-databases/resource-governor/view-resource-governor-properties.md
             - name: 資源集區
               href: relational-databases/resource-governor/resource-governor-resource-pool.md
@@ -7309,7 +7309,7 @@
               href: relational-databases/statistics/create-statistics.md
             - name: 修改
               href: relational-databases/statistics/modify-statistics.md
-            - name: DELETE
+            - name: 刪除
               href: relational-databases/statistics/delete-statistics.md
             - name: 檢視屬性
               href: relational-databases/statistics/view-statistics-properties.md
@@ -7611,7 +7611,7 @@
         - name: 實體
           href: master-data-services/entities-master-data-services.md
           items:
-            - name: 實體相依性總管
+            - name: Entity Dependencies (實體相依性) 總管
               href: master-data-services/entity-dependencies-explorer.md
             - name: 建立
               href: master-data-services/create-an-entity-master-data-services.md
@@ -8308,73 +8308,73 @@
                   href: tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md
             - name: 元素
               items:
-                - name: 索引的 Column 元素
+                - name: 索引的 Column 項目
                   href: tools/dta/column-element-for-index-dta.md
                 - name: 組態元素
                   href: tools/dta/configuration-element-dta.md
                 - name: Create 元素
                   href: tools/dta/create-element-dta.md
-                - name: 設定的 Database 元素
+                - name: 設定的 Database 項目
                   href: tools/dta/database-element-for-configuration-dta.md
                 - name: 伺服器的 Database 元素
                   href: tools/dta/database-element-for-server-dta.md
-                - name: 工作負載的 Database 元素
+                - name: 工作負載的 Database 項目
                   href: tools/dta/database-element-for-workload-dta.md
-                - name: DatabaseToConnect 元素
+                - name: DatabaseToConnect 項目
                   href: tools/dta/databasetoconnect-element-dta.md
-                - name: DropOnlyMode 元素
+                - name: DropOnlyMode 項目
                   href: tools/dta/droponlymode-element-dta.md
-                - name: DTAInput 元素
+                - name: DTAInput 項目
                   href: tools/dta/dtainput-element-dta.md
-                - name: DTAXML 元素
+                - name: DTAXML 項目
                   href: tools/dta/dtaxml-element-dta.md
-                - name: EventString 元素
+                - name: EventString 項目
                   href: tools/dta/eventstring-element-dta.md
-                - name: FeatureSet 元素
+                - name: FeatureSet 項目
                   href: tools/dta/featureset-element-dta.md
                 - name: File 元素
                   href: tools/dta/file-element-dta.md
-                - name: 索引的 Filegroup 元素
+                - name: 索引的 Filegroup 項目
                   href: tools/dta/filegroup-element-for-index-dta.md
-                - name: Index 元素
+                - name: Index 項目
                   href: tools/dta/index-element-dta.md
-                - name: KeepExisting 元素
+                - name: KeepExisting 項目
                   href: tools/dta/keepexisting-element-dta.md
-                - name: 資料行的 Name 元素
+                - name: 資料行的 Name 項目
                   href: tools/dta/name-element-for-column-dta.md
-                - name: 資料庫的 Name 元素
+                - name: 資料庫的 Name 項目
                   href: tools/dta/name-element-for-database-dta.md
-                - name: 索引的 Name 元素
+                - name: 索引的 Name 項目
                   href: tools/dta/name-element-for-index-dta.md
-                - name: 結構描述的 Name 元素
+                - name: 結構描述的 Name 項目
                   href: tools/dta/name-element-for-schema-dta.md
-                - name: 伺服器的 Name 元素
+                - name: 伺服器的 Name 項目
                   href: tools/dta/name-element-for-server-dta.md
-                - name: 資料表的 Name 元素
+                - name: 資料表的 Name 項目
                   href: tools/dta/name-element-for-table-dta.md
-                - name: OnlineIndexOperation 元素
+                - name: OnlineIndexOperation 項目
                   href: tools/dta/onlineindexoperation-element-dta.md
-                - name: Partitioning 元素
+                - name: Partitioning 項目
                   href: tools/dta/partitioning-element-dta.md
-                - name: Recommendation 元素
+                - name: Recommendation 項目
                   href: tools/dta/recommendation-element-dta.md
-                - name: 資料庫的 Schema 元素
+                - name: 資料庫的 Schema 項目
                   href: tools/dta/schema-element-for-database-dta.md
                 - name: Server 元素
                   href: tools/dta/server-element-dta.md
-                - name: 設定的 Server 元素
+                - name: 設定的 Server 項目
                   href: tools/dta/server-element-for-configuration-dta.md
-                - name: StorageBoundInMB 元素
+                - name: StorageBoundInMB 項目
                   href: tools/dta/storageboundinmb-element-dta.md
-                - name: 結構描述的 Table 元素
+                - name: 結構描述的 Table 項目
                   href: tools/dta/table-element-for-schema-dta.md
-                - name: TestServer 元素
+                - name: TestServer 項目
                   href: tools/dta/testserver-element-dta.md
-                - name: TuningOptions 元素
+                - name: TuningOptions 項目
                   href: tools/dta/tuningoptions-element-dta.md
-                - name: TuningTimeInMin 元素
+                - name: TuningTimeInMin 項目
                   href: tools/dta/tuningtimeinmin-element-dta.md
-                - name: Workload 元素
+                - name: Workload 項目
                   href: tools/dta/workload-element-dta.md
             - name: 教學課程
               href: tools/dta/tutorial-database-engine-tuning-advisor.md
@@ -8519,7 +8519,7 @@
             - name: <server> 的通訊協定
               href: tools/configuration-manager/protocols-for-server-sql-server-configuration-manager.md
               items:
-                - name: 旗標索引標籤
+                - name: '[旗標] 索引標籤'
                   href: tools/configuration-manager/protocols-for-mssqlserver-properties-flags-tab.md
                 - name: '[憑證] 索引標籤'
                   href: tools/configuration-manager/protocols-for-mssqlserver-properties-certificate-tab.md
@@ -8586,7 +8586,7 @@
       items:
         - name: XML 輸出檔案格式
           href: tools/ssbdiagnose/xml-output-file-format-ssbdiagnose.md
-        - name: DiagnosticInformation 元素
+        - name: DiagnosticInformation 項目
           href: tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md
         - name: Banner 元素
           href: tools/ssbdiagnose/banner-element-ssbdiagnose.md
@@ -9104,7 +9104,7 @@
                       href: ssms/agent/change-the-membership-of-a-job-category.md
                     - name: 為多伺服器環境選擇適當的 Agent 服務帳戶
                       href: ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
-                    - name: 清除作業記錄
+                    - name: 清除作業記錄檔
                       href: ssms/agent/clear-the-job-history-log.md
                     - name: 設定使用者以建立與管理 SQL Server Agent 作業
                       href: ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
@@ -9184,7 +9184,7 @@
                       href: ssms/agent/tune-automated-administration-across-an-enterprise.md
                     - name: 使用效能物件
                       href: ssms/agent/use-performance-objects.md
-                    - name: 在作業步驟中使用權杖
+                    - name: 在作業步驟中使用 Token
                       href: ssms/agent/use-tokens-in-job-steps.md
                     - name: 將作業狀態寫入到 Windows 應用程式記錄
                       href: ssms/agent/write-the-job-status-to-the-windows-application-log.md
@@ -9250,7 +9250,7 @@
                       href: ssms/agent/delete-an-alert.md
                     - name: 操作員
                       href: ssms/agent/delete-an-operator.md
-                    - name: 作業
+                    - name: 中稱為
                       href: ssms/agent/delete-jobs.md
                     - name: 一或多個作業
                       href: ssms/agent/delete-one-or-more-jobs.md
@@ -9266,7 +9266,7 @@
                   items:
                     - name: 停用或啟用作業
                       href: ssms/agent/disable-or-enable-a-job.md
-                    - name: 停用或啟用警示
+                    - name: 停用或重新啟用警示
                       href: ssms/agent/disable-or-reactivate-an-alert.md
                 - name: 編輯
                   items:
@@ -9987,22 +9987,8 @@
           items:
             - name: SSMS 支援原則
               href: ssms/support-policy.md
-            - name: 適用於商務使用者的支援選項
-              href: 'https://support.microsoft.com/gp/support-options-for-business'
-            - name: 連絡 Microsoft
-              href: 'https://support.microsoft.com/gp/contactus81?Audience=Commercial'
-            - name: 取得說明的所有方法
+            - name: 意見反應與說明
               href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
-            - name: UserVoice - 改善 SQL Server 的建議？
-              href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: 安裝和升級 - MSDN 論壇
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc'
-            - name: Transact-SQL - MSDN 論壇
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql'
-            - name: Stack Overflow
-              href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: Microsoft SQL Server 授權條款及資訊
-              href: 'https://www.microsoft.com/download/details.aspx?id=39299'
             - name: SSMS 中的使用者協助
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 匿名的使用量資料
@@ -10295,7 +10281,7 @@
               href: linux/sql-server-linux-use-log-shipping.md
             - name: 使用 DB Mail 與電子郵件警示
               href: linux/sql-server-linux-db-mail-sql-agent.md
-        - name: 遷移
+        - name: 移轉
           href: linux/sql-server-linux-migrate-overview.md
           items:
             - name: 從 Windows 匯出與匯入 BACPAC
@@ -10376,7 +10362,7 @@
                       href: linux/sql-server-linux-kubernetes-connect.md
                     - name: 建立部署指令碼
                       href: linux/sql-server-linux-kubernetes-create-deployment.md
-        - name: 安全性
+        - name: Security
           href: linux/sql-server-linux-security-overview.md
           items:
             - name: 開始使用安全性功能
@@ -10444,28 +10430,12 @@
           href: 'https://mva.microsoft.com/product-training/sql-server'
         - name: Channel 9 上的 SQL >
           href: 'https://channel9.msdn.com/Search'
-    - name: 部落格
-      items:
-        - name: SQL Server >
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server 資料庫引擎 >
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server 安全性 >
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools >
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: 意見反應與說明
+    - name: 說明
       items:
         - name: 取得說明
           href: sql-server/sql-server-get-help.md
-        - name: 關於 SQL 文件的意見反應 >
-          href: 'https://aka.ms/sqldocsfeedback'
-        - name: 關於 SQL Server 的意見反應 (UserVoice) >
-          href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: SQL 文件問卷 >
-          href: 'https://aka.ms/sqldocsurvey'
-        - name: 參與編輯 SQL 文件！
-          href: sql-server/sql-server-docs-contribute.md
+        - name: SQL 文件瀏覽祕訣
+          href: sql-server/sql-docs-navigation-guide.md
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >
@@ -10474,6 +10444,24 @@
           href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
+    - name: 部落格
+      items:
+        - name: SQL Server >
+          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+        - name: 資料庫引擎 >
+          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
+        - name: 安全性 >
+          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
+        - name: Data Tools >
+          href: 'https://blogs.msdn.microsoft.com/ssdt/'
+    - name: 意見反應
+      items:
+        - name: SQL 件 >
+          href: 'https://aka.ms/sqldocsfeedback'
+        - name: SQL Server >
+          href: 'https://feedback.azure.com/forums/908035-sql-server'
+        - name: 編輯 SQL 文件！
+          href: sql-server/sql-server-docs-contribute.md
     - name: 合作夥伴
       items:
         - name: 監視
@@ -10488,8 +10476,6 @@
       href: sql-server/sql-server-help-installation.md
 - name: 參考
   items:
-    - name: SQL 文件包含檔案
-      href: sql-server/applies-to-includes.md
     - name: 封存的內容 (SQL 2005 - 2012) >
       displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'
@@ -12032,7 +12018,7 @@
               href: relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md
             - name: sys.parameter_type_usages
               href: relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md
-        - name: 安全性
+        - name: Security
           href: relational-databases/system-catalog-views/security-catalog-views-transact-sql.md
           items:
             - name: sys.asymmetric_keys
@@ -12390,7 +12376,7 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md
             - name: sys.dm_clr_tasks
               href: relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md
-        - name: 資料庫
+        - name: '[資料庫]'
           href: relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md
           items:
             - name: sys.dm_db_file_space_usage
@@ -14311,7 +14297,7 @@
               href: relational-databases/system-stored-procedures/sp-vupgrade-mergeobjects-transact-sql.md
             - name: sp_vupgrade_replication
               href: relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md
-        - name: 安全性
+        - name: Security
           href: relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md
           items:
             - name: sp_add_trusted_assembly
@@ -15285,7 +15271,7 @@
               items:
                 - name: GeomFromGML
                   href: t-sql/spatial-geography/geomfromgml-geography-data-type.md
-                - name: 'Null'
+                - name: '[Null]'
                   href: t-sql/spatial-geography/null-geography-data-type.md
                 - name: 剖析
                   href: t-sql/spatial-geography/parse-geography-data-type.md
@@ -15481,7 +15467,7 @@
               items:
                 - name: GeomFromGml
                   href: t-sql/spatial-geometry/geomfromgml-geometry-data-type.md
-                - name: 'Null'
+                - name: '[Null]'
                   href: t-sql/spatial-geometry/null-geometry-data-type.md
                 - name: 剖析
                   href: t-sql/spatial-geometry/parse-geometry-data-type.md
@@ -16060,7 +16046,7 @@
                   href: t-sql/functions/openrowset-transact-sql.md
                 - name: OPENXML
                   href: t-sql/functions/openxml-transact-sql.md
-            - name: 安全性
+            - name: Security
               href: t-sql/functions/security-functions-transact-sql.md
               items:
                 - name: CERTENCODED
@@ -16105,7 +16091,7 @@
                   href: t-sql/functions/suser-sname-transact-sql.md
                 - name: SYSTEM_USER
                   href: t-sql/functions/system-user-transact-sql.md
-                - name: USER
+                - name: 使用者
                   href: t-sql/functions/user-transact-sql.md
                 - name: USER_ID
                   href: t-sql/functions/user-id-transact-sql.md
@@ -16763,7 +16749,7 @@
                   href: t-sql/statements/alter-table-table-constraint-transact-sql.md
                 - name: TRIGGER
                   href: t-sql/statements/alter-trigger-transact-sql.md
-                - name: USER
+                - name: 使用者
                   href: t-sql/statements/alter-user-transact-sql.md
                 - name: VIEW
                   href: t-sql/statements/alter-view-transact-sql.md
@@ -17191,7 +17177,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: 權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
+                - name: '權限:GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)'
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md
