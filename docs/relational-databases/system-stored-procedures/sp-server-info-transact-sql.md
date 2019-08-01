@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (TRANSACT-SQL) |Microsoft Docs
+title: sp_server_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6aae34fb03322a40f1b970df6271bb89d18b3293
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104449"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702848"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、資料庫閘道或基礎資料來源的屬性名稱和相符值的清單。  
   
@@ -39,7 +40,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @attribute_id = ] 'attribute_id'` 是屬性的整數識別碼。 *attribute_id*已**int**，預設值是 NULL。  
+`[ @attribute_id = ] 'attribute_id'`這是屬性的整數識別碼。 *attribute_id*是**int**, 預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -52,7 +53,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar(** 60 **)**|屬性名稱。|  
 |**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|屬性目前的設定。|  
   
- 下表列出各個屬性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 用戶端程式庫目前使用的屬性**1**， **2**， **18**， **22**，以及**500**在連線時間。  
+ 下表列出各個屬性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC 用戶端程式庫目前在連接時使用屬性**1**、 **2**、 **18**、 **22**和**500** 。  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME 描述|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -69,12 +70,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**18**|COLLATION_SEQ<br /><br /> 指定這部伺服器的字元集排序。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 指定基礎 DBMS 是否支援具名儲存點。|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> 指定基礎資料庫或閘道本身是否支援多個結果集 (可以透過閘道傳送多個陳述式，將多個結果集傳回用戶端)。|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> 指定無論**sp_tables**，閘道會傳回唯一的資料表、 檢視和等等，供目前使用者 （也就是擁有資料表的最少選取權限的使用者）。|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> 指定在**sp_tables**中, 閘道是否只傳回資料表、views 等等, 這是由目前使用者存取的 (也就是至少具有資料表 SELECT 許可權的使用者)。|Y|  
 |**100**|USERID_LENGTH<br /><br /> 指定使用者名稱的最大字元數目。|128|  
 |**101**|QUALIFIER_TERM<br /><br /> 指定資料表限定詞的 DBMS 供應商詞彙 (三部份名稱的第一部份)。|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 指定基礎 DBMS 是否支援具名交易。|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> 指定預存程序是否可作為語言事件來執行。|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> 指定無論**sp_stored_procedures**，閘道會傳回只預存程序目前的使用者所能執行。|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> 指定在**sp_stored_procedures**中, 閘道是否只傳回目前使用者可執行檔預存程式。|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> 指定 DBMS 索引中的最大資料行數目。|16|  
 |**106**|RENAME_TABLE<br /><br /> 指定是否可以重新命名資料表。|Y|  
 |**107**|RENAME_COLUMN<br /><br /> 指定是否可以重新命名資料行。|Y|  
@@ -87,13 +88,13 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**500**|SYS_SPROC_VERSION<br /><br /> 指定目前實作的目錄預存程序版本。|目前版本號碼|  
   
 ## <a name="remarks"></a>備註  
- **sp_server_info**會傳回所提供的資訊子集**SQLGetInfo** ODBC 中。  
+ **sp_server_info**會傳回 ODBC 中**SQLGetInfo**所提供的資訊子集。  
   
 ## <a name="permissions"></a>Permissions  
  需要結構描述的 SELECT 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [目錄預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

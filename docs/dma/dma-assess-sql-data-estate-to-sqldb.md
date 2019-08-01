@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: 0d01e210ad319d0043e70cedbca8522ea89d4e5c
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: b3f47cee5cc091c52faa98438d22b88a18a06f03
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670509"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702827"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>使用 Data Migration Assistant, 評估遷移至 Azure SQL Database 的 SQL Server 資料資產是否就緒
 
@@ -28,7 +28,8 @@ ms.locfileid: "68670509"
 
 這篇文章提供逐步指示, 說明如何利用[Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017)來總結準備就緒結果, 並在[Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview)中樞上加以呈現。
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player]
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="create-a-project-and-add-a-tool"></a>建立專案並新增工具
 
