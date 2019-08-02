@@ -1,30 +1,29 @@
 ---
 title: 在 Windows 上安裝 SQL Server Machine Learning 服務 (資料庫內)
-description: SQL Server 或 Python 中的 R, 適用于 Windows 上 SQL Server 2017 Machine Learning 服務的 SQL Server 安裝步驟。
+description: SQL Server 或 Python 中的 R, 適用于 Windows 上 SQL Server Machine Learning 服務的 SQL Server 安裝步驟。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470442"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715220"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>在 Windows 上安裝 SQL Server Machine Learning 服務
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-從 SQL Server 2017 開始, 在**SQL Server Machine Learning 服務**中提供資料庫內分析的 R 和 Python 支援, 這是在 SQL Server 2016 中引進[SQL Server R Services](../r/sql-server-r-services.md)的後繼版本。 函式程式庫可在 R 和 Python 中使用, 並在資料庫引擎實例上以外部腳本的形式執行。 
-
 本文說明如何執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式, 並遵循螢幕上的提示來安裝機器學習服務元件。
 
 ## <a name="bkmk_prereqs"></a>預先安裝檢查清單
 
-+ 如果您想要安裝具有 R 或 Python 語言支援的 Machine Learning 服務, 則需要 SQL Server 2017 (或更新版本) 安裝程式。 如果您改為 SQL Server 2016 安裝媒體, 您可以安裝[SQL Server 2016 r Services (資料庫內)](sql-r-services-windows-install.md)來取得 R 語言支援。
++ 如果您想要安裝具有 R 或 Python 語言支援的 Machine Learning 服務, 則需要 SQL Server 2017 (或更新版本) 安裝程式。 如果您改為 SQL Server 2016 安裝媒體, 您可以安裝[SQL Server R Services (資料庫內)](sql-r-services-windows-install.md)來取得 R 語言支援。
 
 + 需要資料庫引擎實例。 您不能只安裝 R 或 Python 功能, 雖然您可以將它們累加新增至現有的實例。
 
@@ -58,7 +57,7 @@ ms.locfileid: "68470442"
 
    ![新的 SQL Server 獨立安裝](media/2017setup-installation-page-mlsvcs.PNG)
    
-3. 在 [特徵選取]  頁面上，選取下列選項：
+3. 在 [特徵選取] 頁面上，選取下列選項：
   
     -   **Database Engine 服務**
   
@@ -283,8 +282,7 @@ ms.locfileid: "68470442"
 
 您想要從 SQL Server 使用的套件，必須安裝在執行個體所使用的預設程式庫中。 如果您在電腦上個別安裝 R, 或如果您已將套件安裝至使用者程式庫, 則無法從 T-sql 使用這些套件。
 
-安裝和管理 R 套件的程式在 SQL Server 2016 和 SQL Server 2017 中有所不同。 在 SQL Server 2016 中, 資料庫管理員必須安裝使用者需要的 R 套件。 在 SQL Server 2017 中, 您可以將使用者群組設定為在每個資料庫層級上共用封裝, 或設定資料庫角色以讓使用者安裝自己的封裝。 如需詳細資訊, 請參閱[在 SQL Server 中安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
-
+若要安裝和管理 R 封裝, 您可以將使用者群組設定為在每個資料庫層級上共用封裝, 或設定資料庫角色以讓使用者安裝自己的封裝。 如需詳細資訊, 請參閱[在 SQL Server 中安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="next-steps"></a>後續步驟
 

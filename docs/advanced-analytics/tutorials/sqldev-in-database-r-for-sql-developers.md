@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1257cc3f3d0b3ed07bc879f5bc3337d62bc1b3a0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e15e56dfb4a27f0a99262ff1f105ceb0a1fbc294
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470577"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715380"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>教學課程：適用于 SQL 開發人員的 R 資料分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +47,13 @@ ms.locfileid: "68470577"
 
 將模型儲存至資料庫之後, 使用預存程式從[!INCLUDE[tsql](../../includes/tsql-md.md)]呼叫模型以取得預測。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 所有工作都可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]預存程式來完成。
 
 本教學課程假設您已熟悉基本資料庫作業, 例如建立資料庫和資料表、匯入資料, 以及撰寫 SQL 查詢。 它不會假設您知道 R。因此, 會提供所有 R 程式碼。 
 
-+ 已啟用 R 的[SQL Server 2016 R services](../install/sql-r-services-windows-install.md#verify-installation)或[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [已啟用 r 的](../install/sql-machine-learning-services-windows-install.md#verify-installation) [SQL Server 2016 r services](../install/sql-r-services-windows-install.md#verify-installation)或 SQL Server Machine Learning 服務
 
 + [R 程式庫](../package-management/installed-package-information.md)
 

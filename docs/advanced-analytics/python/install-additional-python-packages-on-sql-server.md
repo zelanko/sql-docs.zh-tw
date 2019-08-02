@@ -1,29 +1,30 @@
 ---
 title: 安裝新的 Python 語言套件
-description: 將新的 Python 套件新增至 SQL Server 2017 Machine Learning 服務 (資料庫內) 和 Machine Learning Server (獨立式)。
+description: 將新的 Python 套件新增至 SQL Server Machine Learning 服務 (資料庫內) 和 Machine Learning Server (獨立式)。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fc8c7148369ec1a501106e573e195a8f0b7f060a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e107622655d5f00d27de6abcea46a92526f47ada
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470261"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715798"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>在 SQL Server 上安裝新的 Python 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文說明如何在 SQL Server 2017 Machine Learning 服務的實例上安裝新的 Python 套件。 一般而言, 安裝新套件的程式類似于標準 Python 環境中。 不過, 如果伺服器沒有網際網路連線, 則需要一些額外的步驟。
+本文說明如何在 SQL Server Machine Learning 服務的實例上安裝新的 Python 套件。 一般而言, 安裝新套件的程式類似于標準 Python 環境中。 不過, 如果伺服器沒有網際網路連線, 則需要一些額外的步驟。
 
 如需套件位置和安裝路徑的詳細資訊, 請參閱[取得 R 或 Python 套件資訊](../package-management/installed-package-information.md)。
 
 ## <a name="prerequisites"></a>先決條件
 
-+ 使用 Python 語言選項[SQL Server 2017 Machine Learning 服務 (資料庫內)](../install/sql-machine-learning-services-windows-install.md) 。 
++ 使用 Python 語言選項[SQL Server Machine Learning 服務 (資料庫內)](../install/sql-machine-learning-services-windows-install.md) 。 
 
 + 套件必須符合 Python 3.5 規範, 並可在 Windows 上執行。 
 

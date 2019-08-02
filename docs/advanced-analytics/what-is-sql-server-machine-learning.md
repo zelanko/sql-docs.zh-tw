@@ -3,24 +3,22 @@ title: SQL Server Machine Learning 服務 (R、Python) 的總覽
 description: 概述 SQL Server 中的 Machine Learning Services 功能, 您可以在其中整合 Python 和 R 與資料科學的關聯式資料、統計模型、機器學習模型、預測性分析、資料視覺效果等等。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/24/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4ab4cd7c93cfd1a98a819a849e643d590450cd28
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495403"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714675"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning 服務 (R、Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services 是 SQL Server 的功能, 可用來執行資料庫內 R 和 Python 腳本。 此功能包括適用于高效能預測性分析和機器學習的[Microsoft R 和 Python 套件](#components)。 關聯式資料可透過預存程式、包含 R 和 Python 語句的 T-sql 腳本, 或包含 T-sql 的 R 和 Python 程式碼, 用於 R 和 Python 腳本中。
-
-如果您先前使用[SQL Server 2016 R Services](r/sql-server-r-services.md), SQL Server 2017 和更新版本中的 Machine Learning 服務是下一代的 R 支援, 其中包含已更新的基底 R、RevoScaleR、MicrosoftML 和其他程式庫版本, 並在2016中引進。
 
 在 Azure SQL Database 中, [Machine Learning 服務 (使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)目前為公開預覽狀態。
 
@@ -39,7 +37,7 @@ Machine Learning 服務的關鍵價值主張是其企業 R 和 Python 套件的�
 
 ## <a name="components"></a>元件
 
-SQL Server 2017 支援 R 和 Python。 下表描述這些元件。
+SQL Server 支援 R 和 Python。 下表描述這些元件。
 
 | 元件 | 描述 |
 |-----------|-------------|
@@ -128,19 +126,6 @@ SQL Server 2017 支援 R 和 Python。 下表描述這些元件。
 + 啟用資源管理 (需要 Enterprise edition)
 
 如需詳細資訊, 請參閱[r 的資源管理](r/resource-governance-for-r-services.md)和適用[于 SQL Server 的 r 套件管理](r/install-additional-r-packages-on-sql-server.md)。
-
-## <a name="version-history"></a>版本歷程記錄
-
-SQL Server 2017 Machine Learning 服務是新一代的 SQL Server 2016 R Services, 已增強為包含 Python。 下表是所有產品版本的完整清單, 從開始到目前的版本。 
-
-| 產品名稱 | 引擎版本 | 發行日期 |
-|--------------|---------|--------------|
-| SQL Server 2017 Machine Learning 服務 (資料庫內) | R 伺服器9.2。1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2017 Machine Learning Server (獨立) | R 伺服器9.2。1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2016 R Services (資料庫內) | R 伺服器9。1  | 2017年7月  |
-| SQL Server 2016 R Server (獨立式)  |  R 伺服器9。1 | 2017年7月 |
-
-如需發行的套件版本, 請參閱[升級 R 和 Python 元件](install/upgrade-r-and-python.md#version-map)中的版本對應。
 
 ## <a name="portability-and-related-products"></a>可攜性和相關產品
 

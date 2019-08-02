@@ -3,16 +3,17 @@ title: 使用 sp_rxPredict 預存程式的即時計分
 description: 使用 sp_rxPredict 產生預測, 針對在 SQL Server 上以 R 撰寫的預先定型模型評分資料輸入。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 26701ac6e538d195a5a85ad66af9578848889d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469963"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715640"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>在 SQL Server 機器學習服務中使用 sp_rxPredict 的即時評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ ms.locfileid: "68469963"
 
 ## <a name="how-real-time-scoring-works"></a>即時計分的運作方式
 
-根據 RevoScaleR 或 MicrosoftML 函數 (例如[rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML))](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet), SQL Server 2017 和 SQL Server 2016 都支援即時評分。 它會使用C++原生程式庫, 根據提供給以特殊二進位格式儲存之機器學習模型的使用者輸入來產生分數。
+根據 RevoScaleR 或 MicrosoftML 函式 (例如[rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML))](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet), 特定模型類型支援即時評分。 它會使用C++原生程式庫, 根據提供給以特殊二進位格式儲存之機器學習模型的使用者輸入來產生分數。
 
 由於定型的模型可以用於計分, 而不需要呼叫外部語言執行時間, 因此會減少多個進程的額外負荷。 針對生產評分案例, 這可支援更快速的預測效能。 由於資料永遠不會離開 SQL Server, 因此可以產生結果並插入新的資料表中, 而不需要在 R 與 SQL 之間進行任何資料轉譯。
 
@@ -32,7 +33,7 @@ ms.locfileid: "68469963"
 3. 您會提供新的輸入資料做為模型的輸入, 以表格式或單一資料列進行評分。
 4. 若要產生分數, 請呼叫[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)預存程式。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 + [啟用 SQL SERVER CLR 整合](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)。
 

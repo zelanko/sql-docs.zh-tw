@@ -3,16 +3,17 @@ title: R 語言和 Python 腳本的擴充性架構
 description: SQL Server 資料庫引擎的外部程式碼支援, 具有在關聯式資料上執行 R 和 Python 腳本的雙重架構。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/17/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 49c45fa39cd271140ba78c2b1b32ee8a2f9c1a7a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470461"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715248"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務中的擴充性架構 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ SQL Server 具有可在伺服器上執行外部腳本 (例如 R 或 Python) 的�
 
 ## <a name="background"></a>背景
 
-擴充性架構是在 SQL Server 2016 中引進, 以支援 R 執行時間。 SQL Server 2017 新增對 Python 的支援
+擴充性架構是在 SQL Server 2016 中引進, 以支援 R 執行時間。 SQL Server 2017 和更新版本支援 Python。
 
 擴充性架構的目的是要在 SQL Server 和資料科學語言 (例如 R 和 Python) 之間提供介面, 以減少將資料科學解決方案移到生產環境時的摩擦, 並保護在開發期間公開的資料。流程. 藉由在 SQL Server 管理的安全架構中執行信任的指令碼語言, 資料庫管理員可以維護安全性, 同時允許資料科學家存取企業資料。
 
@@ -55,8 +56,8 @@ SQL Server 具有可在伺服器上執行外部腳本 (例如 R 或 Python) 的�
 
 | 信任的啟動器 | 延伸模組 | SQL Server 版本 |
 |-------------------|-----------|---------------------|
-| R 語言的 RLauncher | [R 擴充功能](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| 適用于 Python 3.5 的 Pythonlauncher | [Python 延伸模組](extension-python.md) | SQL Server 2017 |
+| R 語言的 RLauncher | [R 擴充功能](extension-r.md) | SQL Server 2016 及更新版本 |
+| 適用于 Python 3.5 的 Pythonlauncher | [Python 延伸模組](extension-python.md) | SQL Server 2017 和更新版本 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務在其自有的使用者帳戶下執行。 如果您變更執行啟動列的帳戶, 請務必使用 SQL Server 組態管理員, 以確保變更會寫入相關的檔案中。
 
@@ -70,7 +71,7 @@ SQL Server 具有可在伺服器上執行外部腳本 (例如 R 或 Python) 的�
 
 實際上, BxlServer 是一種語言執行時間環境的隨附, 可以搭配 SQL Server 來傳輸資料及管理工作。 BXL 代表二進位交換語言, 而是指用來在 SQL Server 和外部進程之間有效率地移動資料的資料格式。 BxlServer 也是相關產品 (例如 Microsoft R Client 和 Microsoft R Server) 的重要部分。
 
-**SQL 附屬**項是包含在資料庫引擎中的擴充性 API (從 SQL Server 2016 開始), 其支援使用 C 或C++所執行的外部程式碼或外部執行時間。
+**SQL 附屬**項是包含在 database engine 中的擴充性 API, 可支援使用 C 或C++所執行的外部程式碼或外部執行時間。
 
 BxlServer 將 SQL Satellite 用於下列工作：
 

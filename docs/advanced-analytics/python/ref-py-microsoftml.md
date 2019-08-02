@@ -7,12 +7,13 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2d27b295df6b29d69ce90a7c70c135a197b68b0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c7e7a25749484ff0db4d133f10862438ae5f8ea1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470229"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715147"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server 中的 Python 模組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68470229"
 
 **Microsoftml**模組是以 Python 3.5 為基礎, 只有在您安裝下列其中一個 Microsoft 產品或下載時, 才能使用:
 
-+ [SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
 + [適用于資料科學用戶端的 Python 用戶端程式庫](setup-python-client-tools-sql.md)
 

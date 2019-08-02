@@ -6,19 +6,20 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e0e685543fe1e99f7adbfeb69567c366b0714ef7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8dc99a6f5ac1ff660f34f2248c844e5386bea5f0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470170"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715130"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的擴充事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 提供一組擴充事件, 以用於與相關的疑難排解作業, [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]以及要傳送至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 Python 或 R 作業。
 
-**適用於：** SQL Server 2016 R Services, SQL Server 2017 Machine Learning 服務
+**適用於：** SQL Server 2016 R Services, SQL Server Machine Learning 服務
 
 ## <a name="sql-server-events-for-machine-learning"></a>機器學習服務的 SQL Server 事件
 

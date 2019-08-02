@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 072d2c2e8843b17b3a4ccfeed16bd0916ce501e7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7d494329a52f73d489350792b6f43e138f3618a8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468633"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714658"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教學課程：適用于 R 資料科學家的 SQL 開發
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68468633"
 
 ## <a name="prerequisites"></a>先決條件
 
-+ [使用 r 整合 SQL Server 2017 Machine Learning 服務,](../install/sql-machine-learning-services-windows-install.md#verify-installation)或[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
++ [使用 r 整合 SQL Server Machine Learning 服務,](../install/sql-machine-learning-services-windows-install.md#verify-installation)或[SQL Server 2016 R 服務](../install/sql-r-services-windows-install.md)
 
 + [資料庫許可權](../security/user-permission.md)和 SQL Server 資料庫使用者登入
 
@@ -67,7 +68,7 @@ ms.locfileid: "68468633"
 您有數個選項可以在 SQL Server 上安裝套件。 例如, SQL Server 提供[R 封裝管理](../r/install-additional-r-packages-on-sql-server.md)功能, 可讓資料庫管理員建立封裝存放庫, 並將安裝自己套件的許可權指派給使用者。 不過, 如果您是電腦上的系統管理員, 只要安裝到正確的程式庫, 您就可以使用 R 安裝新的套件。
 
 > [!NOTE]
-> 在伺服器上, 即使出現提示, 也不要安裝到使用者程式庫。 如果您將安裝至使用者程式庫, SQL Server 實例就找不到或無法執行封裝。 如需詳細資訊, 請參閱[在 SQL Server 上安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
+> 在伺服器上,即使出現提示, 也不要安裝到使用者程式庫。 如果您將安裝至使用者程式庫, SQL Server 實例就找不到或無法執行封裝。 如需詳細資訊, 請參閱[在 SQL Server 上安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
 
 1. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦上，**以系統管理員身分**開啟 RGui.exe。  如果您已使用預設值安裝 SQL Server R Services, 您可以在 C:\Program Files\Microsoft SQL Server\MSSQL13. 中找到 Rgui.exe。MSSQLSERVER\R_SERVICES\bin\x64).
 

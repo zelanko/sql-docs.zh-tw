@@ -1,18 +1,19 @@
 ---
 title: 使用 R 套件管理員
-description: 使用如 install 等標準 R 命令, 將新的 R 封裝新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning Services (資料庫內)。
+description: 使用如 install 等標準 R 命令, 將新的 R 封裝新增至 SQL Server 2016 R Services 或 SQL Server Machine Learning Services (資料庫內)。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1977e616b8f5ac41f533d49fab684db146cdb204
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469881"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715027"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>使用 R 套件管理員在 SQL Server 上安裝 R 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "68469881"
 
 如果目標封裝相依于其他套件, R 安裝程式會自動下載並為您進行安裝。
 
-如果您有多個 SQL Server 實例 (例如 SQL Server 2016 R 服務和 SQL Server 2017 Machine Learning 服務的並存實例), 如果您想要在這兩個內容中使用封裝, 請分別針對每個實例執行安裝。 無法在實例之間共用封裝。
+如果您有多個 SQL Server 實例, 例如 SQL Server 2016 R 服務和 SQL Server Machine Learning 服務的並存實例, 如果您想要在這兩個內容中使用封裝, 請分別針對每個實例執行安裝。 無法在實例之間共用封裝。
 
 ## <a name = "bkmk_offlineInstall"></a>使用 R 工具進行離線安裝
 

@@ -7,12 +7,13 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: be6d23c6b176e8d7b2c9bf0d7ff7a02212509a10
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 97e1fb6e2415e30f595d61dffa8a4952cfdc42d0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469834"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715558"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>授與使用者 SQL Server Machine Learning 服務的許可權
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

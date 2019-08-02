@@ -1,18 +1,19 @@
 ---
 title: RevoScaleR R 函數程式庫
-description: 簡介 SQL Server 2016 R Services 中的 RevoScaleR 函式程式庫和使用 R 的 SQL Server 2017 Machine Learning Services。
+description: 簡介 SQL Server 2016 R Services 中的 RevoScaleR 函式程式庫和使用 R SQL Server Machine Learning 服務。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d73399522966a132b025244a1739afa01a194116
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: b5dcd2f14d1a1d8e23a62be299b1ff6f41814041
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470003"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715058"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server 中的 R 程式庫)
 
@@ -35,7 +36,7 @@ RevoScaleR 可作為分散式資料科學的平臺。 例如, 您可以在[Micro
 **RevoScaleR**程式庫是以 R 3.4.3 為基礎, 只有在您安裝下列其中一個 Microsoft 產品或下載時, 才能使用:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R 用戶端](set-up-a-data-science-client.md)
 

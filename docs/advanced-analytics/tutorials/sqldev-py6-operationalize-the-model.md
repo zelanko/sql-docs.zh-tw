@@ -7,12 +7,13 @@ ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b04e57c45c6113d4a0404a3a338e6beba4cda813
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: be80892db818bafdb45da974a064a0c5cf1fdc3f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468601"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715356"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>在預存程式中使用 Python 內嵌執行預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

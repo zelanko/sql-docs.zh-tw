@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e23c025c018811e5ef84304d0cae6bf16491f91e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469507"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715479"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>快速入門：在 SQL Server 中使用預存程式來建立、定型和使用 Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ SQL Server 開發的常見模式是將可程式化作業組織成不同的預存
 
 3. 確認預存程式存在。 
 
-   如果上一個步驟中的 T-sql 腳本執行時沒有錯誤, 則會建立名為**generate_iris_model**的新預存程式, 並將其新增至**irissql**資料庫。 您可以在 [可程式性] 底下的 Management Studio **物件總管**中找到預存程式。
+   如果上一個步驟中的 T-sql 腳本執行時沒有錯誤, 則會建立名為**generate_iris_model**的新預存程式, 並將其新增至**irissql**資料庫。 您可以在 [可程式性] 底下的 Management Studio**物件總管**中找到預存程式。
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>執行建立和定型模型的程式
 

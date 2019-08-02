@@ -1,5 +1,5 @@
 ---
-title: 防火牆設定
+title: 防火牆組態
 description: 如何設定防火牆以從 SQL Server Machine Learning 服務傳出連接。
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,12 +7,13 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 754e243f45965801b9295d2b40a920d52bd2c95c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c55f68a1134fee6477c52182ad66b8705e363296
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469858"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715590"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的防火牆設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

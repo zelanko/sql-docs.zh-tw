@@ -7,12 +7,13 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0825d99aee2639d28e95dfcaf79e1a8e915bf25a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f23f4c350855b71a3633587bb3c092988fe89fef
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470538"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715328"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>第 3 課：使用 T-sql 定型及儲存模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

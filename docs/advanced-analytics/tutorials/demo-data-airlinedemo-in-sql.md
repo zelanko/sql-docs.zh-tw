@@ -7,12 +7,13 @@ ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 38e61bcbf3a5ff5ed44f85d5ad28406550e5a726
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: b7f28dd4b3e7e6990e037dbd9afe164d8d0e4bec
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469677"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714809"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教學課程的航班抵達示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68469677"
 
 2. 在物件總管中, 以滑鼠右鍵按一下 [**資料庫**], 然後建立名為**flightdata.csv**的新資料庫。
 
-3. 以滑鼠右鍵按一下**flightdata.csv**, 按一下 [工作], 然後按一下 [匯**入**一般檔案]。
+3. 以滑鼠右鍵按一下**flightdata.csv**,按一下 [工作], 然後按一下 [匯**入**一般檔案]。
 
 4. 開啟 R 或 Python 散發套件中提供的 AirlineDemoData, 視您安裝的語言而定。
 

@@ -7,12 +7,13 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1ac89b23d9b027c8f5fd02daa28a4246cddf48f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470139"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715680"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server Machine Learning 服務中使用預存程式來讓 R 程式碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "68470139"
 
 評分是很重要的工作, 可以輕鬆地自動化, 或從外部應用程式啟動。 您可以事先使用 R 或 Python 或預存程式來定型模型, 並將[模型以二進位格式](../tutorials/walkthrough-build-and-save-the-model.md)儲存至資料表。 然後, 您可以使用下列其中一個選項, 將模型當做預存程序呼叫的一部分載入變數中, 以便從 T-sql 進行評分:
 
-+ [即時](../real-time-scoring.md)計分, 針對小型批次優化
++ [即時評分, 針對小型批次優化
 + 單一資料列評分, 用於從應用程式呼叫
 + [原生評分](../sql-native-scoring.md), 用於從 SQL Server 的快速批次預測, 而不需要呼叫 R
 

@@ -1,18 +1,19 @@
 ---
 title: sqlrutils helper 函式
-description: 使用 SQL Server 2016 R 服務中的 sqlrutils 函式程式庫, 並 SQL Server 2017 Machine Learning 服務與 R, 以產生包含 R 腳本的預存程式。
+description: 使用 SQL Server 2016 R Services 中的 sqlrutils 函式程式庫, 並使用 R SQL Server Machine Learning 服務來產生包含 R 腳本的預存程式。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4218a1b30aedacdab73d08c7b76e3e19d17511c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469951"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715034"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (SQL Server 中的 R 程式庫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.locfileid: "68469951"
 
 ### <a name="define-stored-procedure-parameters-and-inputs"></a>定義預存程式參數和輸入
 
-`StoredProcedure` 是用來建置預存程序的主要建構函式。 這個建構函式會產生「SQL Server 預存程序」  物件，並選擇性地建立文字檔，其中包含可用來產生使用 T-SQL 命令之預存程序的查詢。 
+`StoredProcedure` 是用來建置預存程序的主要建構函式。 這個建構函式會產生「SQL Server 預存程序」 物件，並選擇性地建立文字檔，其中包含可用來產生使用 T-SQL 命令之預存程序的查詢。 
 
 選擇性， *StoredProcedure* 函式也可以註冊具有所指定執行個體和資料庫的預存程序。
 

@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9d6dbc55281a725dea0373f2a4d61293b2ddb9c0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: dd12e38e0d1f01cd142cc4c11efe43346dd1f8ce
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469937"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715624"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中 R 的效能微調
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68469937"
 + 第三篇文章涵蓋運算化 R 程式碼和資源的優化。
 + 第四篇文章詳細說明測試方法, 並報告結果和結論。
 
-**適用於：** SQL Server 2016 R Services, SQL Server 2017 Machine Learning 服務
+**適用於：** SQL Server 2016 R Services, SQL Server Machine Learning 服務
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>效能目標和目標案例
 

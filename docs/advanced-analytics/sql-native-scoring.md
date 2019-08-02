@@ -7,12 +7,13 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344763"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714955"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用 PREDICT T-sql 函數的原生評分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68344763"
 
 ## <a name="prerequisites"></a>先決條件
 
-PREDICT 適用于所有版本的 SQL Server 2017 資料庫引擎, 且預設為啟用, 包括 Windows 上的 SQL Server 2017 Machine Learning 服務、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) 或 Azure SQL Database。 您不需要安裝 R、Python 或啟用其他功能。
+「預測」適用于所有版本的 SQL Server 2017 資料庫引擎, 且預設為啟用, 包括 Windows 上的 SQL Server Machine Learning 服務、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) 或 Azure SQL Database。 您不需要安裝 R、Python 或啟用其他功能。
 
 + 您必須使用下列其中一種支援的**rx**演算法, 事先訓練此模型。
 
@@ -115,7 +116,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-下列程式碼會建立以**鳶尾花**資料集為基礎的模型, 並將它儲存  至名為 model 的資料表。
+下列程式碼會建立以**鳶尾花**資料集為基礎的模型, 並將它儲存至名為 model 的資料表。
 
 ```sql
 DECLARE @model varbinary(max);

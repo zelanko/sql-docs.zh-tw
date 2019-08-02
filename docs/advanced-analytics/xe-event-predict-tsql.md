@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1c534681200abf056c8bc7dd3745d8098d59c146
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 283e128285fc50b9109d7950b171e30224fb9692
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345660"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714647"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>監視 PREDICT 陳述式的擴充事件
 
@@ -19,7 +20,7 @@ ms.locfileid: "68345660"
 
 即時計分會從已儲存在 SQL Server 中的機器學習模型產生分數。 PREDICT 函數不需要外部執行時間 (例如 R 或 Python), 只有使用特定二進位格式建立的模型。 如需詳細資訊, 請參閱[即時評分](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 如需擴充事件 (有時稱為 XEvents) 的一般資訊, 以及如何追蹤會話中的事件, 請參閱下列文章:
 

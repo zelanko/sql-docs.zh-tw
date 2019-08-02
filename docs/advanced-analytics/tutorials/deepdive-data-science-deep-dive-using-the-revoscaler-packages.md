@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c326d51e9b3ac4edac61f97bf5f7fa3143d8d350
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470625"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714879"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教學課程：搭配 SQL Server 資料使用 RevoScaleR R 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,9 +22,9 @@ ms.locfileid: "68470625"
 
 在這個多部分的教學課程中, 您會針對與資料科學相關聯的工作, 引進一系列的**RevoScaleR**函數。 在此過程中, 您將瞭解如何建立遠端計算內容、在本機和遠端計算內容之間移動資料, 以及在遠端 SQL Server 上執行 R 程式碼。 您也將學習如何在本機和遠端伺服器上分析和繪製資料, 以及如何建立和部署模型。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-+ 使用 R 功能[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md), 或[SQL Server 2016 R Services (資料庫內)](../install/sql-r-services-windows-install.md)
++ 使用 R 功能[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md), 或[SQL Server R Services (資料庫內)](../install/sql-r-services-windows-install.md)
   
 + [資料庫許可權](../security/user-permission.md)和 SQL Server 資料庫使用者登入
 
@@ -31,7 +32,7 @@ ms.locfileid: "68470625"
 
 + 包含在 R 中的 IDE, 例如 RStudio 或內建的 RGUI.EXE 工具
 
-若要在本機和遠端計算內容之間來回切換, 您需要兩個系統。 本機通常是具有資料科學工作負載足夠能力的開發工作站。 在此情況下, 遠端 SQL Server 2017 或已啟用 R 功能的 SQL Server 2016。 
+若要在本機和遠端計算內容之間來回切換, 您需要兩個系統。 本機通常是具有資料科學工作負載足夠能力的開發工作站。 在此情況下, 遠端會在啟用 R 功能時 SQL Server。 
 
 切換計算內容的前提是在本機和遠端系統上都有相同版本的**RevoScaleR** 。 在本機工作站上, 您可以藉由安裝 Microsoft R Client 來取得**RevoScaleR**封裝和相關的提供者。
 

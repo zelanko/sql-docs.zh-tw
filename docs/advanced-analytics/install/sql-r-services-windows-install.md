@@ -7,19 +7,20 @@ ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9cc14328e0e43106f9fec0779f073bcd1568e888
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345014"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715814"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明如何安裝和設定**SQL Server 2016 R Services**。 如果您有 SQL Server 2016, 請安裝此功能, 以在 SQL Server 中啟用 R 程式碼的執行。
 
-在 SQL Server 2017 中, 會在[Machine Learning 服務](../r/r-server-standalone.md)中提供 R 整合, 以反映 Python 的新增。 如果您想要 R 整合並擁有 SQL Server 2017 安裝媒體, 請參閱[安裝 SQL Server 2017 Machine Learning 服務](sql-machine-learning-services-windows-install.md)以新增功能。 
+在 SQL Server 2017 中, 會在[Machine Learning 服務](../r/r-server-standalone.md)中提供 R 整合, 以反映 Python 的新增。 如果您想要 R 整合並擁有 SQL Server 2017 安裝媒體, 請參閱[安裝 SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)以新增功能。 
 
 <a name="bkmk_prereqs"> </a> 
 
