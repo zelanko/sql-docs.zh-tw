@@ -7,12 +7,13 @@ ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1281da6a366f7fa9d5fca20cc719a3c86825e56d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469613"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714827"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>快速入門：SQL Server 中的 "Hello world" Python 腳本 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

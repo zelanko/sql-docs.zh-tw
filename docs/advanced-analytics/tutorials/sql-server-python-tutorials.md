@@ -7,17 +7,18 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: edbd13de96c514a498aaee9482616a9b1723d632
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 65dd2197d9fb079da116908871d931ad19370cf5
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468948"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714774"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文說明在[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)上進行資料庫內分析的 Python 教學課程。 
+本文說明[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)上的資料庫內分析的 Python 教學課程。 
 
 + 瞭解如何在預存程式中包裝和執行 Python 程式碼。
 + 將以 Python 為基礎的模型序列化並儲存至 SQL Server 資料庫。

@@ -1,18 +1,19 @@
 ---
 title: SQL Server 累積更新的 CAB 下載
-description: 適用于 SQL Server 2017 Machine Learning 服務和 SQL Server 2016 R Services 的 R 和 Python CAB 和套件下載。
+description: 適用于 SQL Server Machine Learning 服務和 SQL Server 2016 R 服務的 R 和 Python CAB 和套件下載。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470321"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715836"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>SQL Server 資料庫內分析實例之累計更新的 CAB 下載
 
@@ -20,16 +21,18 @@ ms.locfileid: "68470321"
 
 針對資料庫內分析所設定的 SQL Server 實例包括 R 和 Python 功能。 這些功能會隨附于封包檔中, 並透過 SQL Server 安裝程式進行安裝和服務。 在連線到網際網路的裝置上, CAB 更新通常會透過 Windows Update 套用。 在中斷連線的伺服器上, 必須手動下載並套用 CAB 檔案。 
 
-本文提供每個累計更新之 CAB 檔案的下載連結。 SQL Server 2017 Machine Learning 服務 (R 和 Python) 以及 SQL Server 2016 R Services 皆提供連結。 如需離線安裝的詳細資訊, 請參閱在[沒有網際網路存取的情況下安裝 SQL Server 機器學習元件](sql-ml-component-install-without-internet-access.md#apply-cu)。
+本文提供每個累計更新之 CAB 檔案的下載連結。 如需離線安裝的詳細資訊, 請參閱在[沒有網際網路存取的情況下安裝 SQL Server 機器學習元件](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 開始進行基準安裝。
 
-+ 在 SQL Server 2017 Machine Learning 服務上, 初始版本是基準安裝。 
++ 在 SQL Server Machine Learning 服務上, 初始版本是基準安裝。 
 + 在 SQL Server 2016 R Services 上, 您可以從初始版本、SP1 或 SP2 開始。 
 
 您也可以將累計更新套用到獨立伺服器。
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 Cab
 
@@ -88,6 +91,9 @@ CAB 檔案會以反向時間順序列出。 當您下載封包檔並將它們傳
 | | Microsoft Python 開啟     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 | | Python 伺服器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
+::: moniker-end
+
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -134,7 +140,9 @@ CAB 檔案會以反向時間順序列出。 當您下載封包檔並將它們傳
 
 如果您想要查看 Microsoft R 的原始程式碼, 可以將其下載為. tar 格式的封存:[下載 R Server 安裝程式](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-## <a name="see-also"></a>另請參閱
+::: moniker-end
+
+## <a name="next-steps"></a>後續步驟
 
 [在沒有網際網路存取的電腦上套用累計更新](sql-ml-component-install-without-internet-access.md#apply-cu)
 

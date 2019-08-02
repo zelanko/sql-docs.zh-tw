@@ -7,17 +7,18 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cd03837644ec1cd4d818615bb8a17728c58a1f17
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff1027a3a791ef0151e61982445cafff7be40329
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470589"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715426"
 ---
 # <a name="sql-server-r-language-tutorials"></a>SQL Server R 語言教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文說明在[SQL Server 2016 R 服務](../install/sql-r-services-windows-install.md)或[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)上進行資料庫內分析的 R 語言教學課程。
+本文說明在[SQL Server 2016 R 服務](../install/sql-r-services-windows-install.md)或[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)上進行資料庫內分析的 R 語言教學課程。
 
 + 瞭解如何在預存程式中包裝和執行 R 程式碼。
 + 序列化以 r 為基礎的模型, 並將其儲存至 SQL Server 資料庫。

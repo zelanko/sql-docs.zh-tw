@@ -1,25 +1,26 @@
 ---
 title: R 程式設計語言延伸模組
-description: 瞭解 R 程式碼執行, 以及 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務中的內建 R 程式庫。
+description: 瞭解 R 程式碼執行, 以及 SQL Server R Services 或 SQL Server Machine Learning 服務中的內建 R 程式庫。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fa39240da51d0b7a9269777f751944104d703d59
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470492"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715238"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 語言延伸模組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 擴充功能是關係資料庫引擎之 SQL Server Machine Learning 服務附加元件的一部分。 它會新增 R 執行環境、使用標準程式庫和工具的基本 R 散發, 以及 Microsoft R 程式庫:適用于大規模分析的[RevoScaleR](../r/ref-r-revoscaler.md) 、用於機器學習服務演算法的[MicrosoftML](../r/ref-r-microsoftml.md) , 以及用來存取 SQL Server 中資料或 R 程式碼的其他程式庫。
 
-從 SQL Server 2016 開始, 使用[r Services](../r/sql-server-r-services.md)的 SQL Server 中提供 r 整合, 並繼續做為[SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)的一部分。
+R 整合適用于[SQL Server R Services](../r/sql-server-r-services.md)和[SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)。
 
 ## <a name="r-components"></a>R 元件
 
@@ -27,7 +28,7 @@ SQL Server 包含開放原始碼和專屬的套件。 基本 R 程式庫會透�
 
 SQL Server 不會修改基本 R 可執行檔, 但您必須使用安裝程式所安裝的 R 版本, 因為該版本是專屬套件的建立和測試者。 如需 MRO 與您可能會從 CRAN 取得的 R 基底散發有何差異的詳細資訊, 請參閱[與 r 語言的互通性和 Microsoft r 產品和功能](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)。
 
-安裝程式所安裝的 R 基底封裝散發套件, 可以在與實例相關聯的資料夾中找到。 例如, 如果您在 SQL Server 2016 預設實例上安裝 R Services, R 程式庫預設會位於此資料夾中: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。 同樣地, 與預設實例相關聯的 R 工具預設會位於此資料夾中: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`。
+安裝程式所安裝的 R 基底封裝散發套件, 可以在與實例相關聯的資料夾中找到。 例如, 如果您在 SQL Server 預設實例上安裝 R Services, R 程式庫預設會位於此資料夾中: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。 同樣地, 與預設實例相關聯的 R 工具預設會位於此資料夾中: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`。
 
 Microsoft 為平行和分散式工作負載新增的 R 套件包含下列程式庫。
 

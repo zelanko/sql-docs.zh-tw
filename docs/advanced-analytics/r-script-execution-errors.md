@@ -6,20 +6,18 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 268b3df72d468170fbefae2557892c49fd15515c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 10ec78bf8627bfef3232dfc72d7ef7f638604b15
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470298"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715748"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server 中的 R 腳本錯誤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文記載在 SQL Server 中執行 R 程式碼時的數個 .scriptin gerrors。 清單並不完整。 有許多套件, 而錯誤在相同套件的版本之間可能有所不同。 我們建議您在[Machine Learning Server 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)上張貼腳本錯誤, 其支援 R Services (資料庫內)、Microsoft R Client 和 Microsoft r Server 中使用的機器學習元件。
-
-**適用於：** SQL Server 2016 R Services, SQL Server 2017 Machine Learning 服務
-
+本文記載在 SQL Server 中執行 R 程式碼時的幾個腳本錯誤。 清單並不完整。 有許多套件, 而錯誤在相同套件的版本之間可能有所不同。 我們建議您在[Machine Learning Server 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)上張貼腳本錯誤, 其支援 R Services (資料庫內)、Microsoft R Client 和 Microsoft r Server 中使用的機器學習元件。
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>T-sql 或預存程式中的有效腳本失敗
 

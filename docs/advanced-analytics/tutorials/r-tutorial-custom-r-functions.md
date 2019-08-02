@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 439b21bce4e081025db1db53ab44498415ca44af
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470593"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715409"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 在 SQL Server 上執行自訂 R 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "68470593"
 
 ## <a name="prerequisites"></a>先決條件
 
-+ [SQL Server 2017 Machine Learning 服務 (使用 R)](../install/sql-machine-learning-services-windows-install.md)或[SQL Server 2016 R Services (資料庫內)](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning 服務 (使用 R)](../install/sql-machine-learning-services-windows-install.md)或[SQL Server 2016 R Services (資料庫內)](../install/sql-r-services-windows-install.md)
   
 + [資料庫許可權](../security/user-permission.md)和 SQL Server 資料庫使用者登入
 
@@ -145,7 +146,7 @@ ms.locfileid: "68470593"
 
 雖然此練習很簡單, 但它會示範在 SQL Server 上執行的 R 腳本中整合任意 R 函數的重要機制。 若要總結讓這項技術可行的重點:
 
-+ 必須設定機器學習和 R 整合的 SQL Server:使用 R 功能[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md), 或[SQL Server 2016 R Services (資料庫內)](../install/sql-r-services-windows-install.md)。
++ 必須設定機器學習和 R 整合的 SQL Server:使用 R 功能[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md), 或[SQL Server 2016 R Services (資料庫內)](../install/sql-r-services-windows-install.md)。
 
 + 您的函式中使用的開放原始碼或協力廠商程式庫 (包括任何相依性) 必須安裝在 SQL Server 上。 如需詳細資訊, 請參閱[安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
 

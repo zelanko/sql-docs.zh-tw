@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e799b1ccba38d7716f2987112573a1d2d07203cd
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f12c20a54c0811e392eaa85684d7fac1a209c396
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468462"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714690"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server 建立資料特徵 (逐步解說)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68468462"
 
 目標是要建立一組新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料, 其中包含原始資料行加上新的數值功能*direct_distance*。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 此步驟會根據本逐步解說中的先前步驟, 假設正在進行中的 R 會話。 它會使用在這些步驟中建立的連接字串和資料來源物件。 下列工具和封裝是用來執行腳本。
 
@@ -81,7 +82,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     ```
   
     + 第一行會定義新的環境。 在 R 中，環境可用來封裝套件中的命名空間等等。 您可以使用 `search()` 函數來檢視工作區中的環境。 若要檢視特定環境中的物件，請輸入 `ls(<envname>)`。
-    + 以 `$env.ComputeDist` 開頭的行包含定義 Haversine 公式的程式碼，該公式可計算球面上兩個點之間的「大圓距離」  。
+    + 以 `$env.ComputeDist` 開頭的行包含定義 Haversine 公式的程式碼，該公式可計算球面上兩個點之間的「大圓距離」 。
 
 4. 定義函數之後, 您可以將它套用至資料, 以建立新的特徵資料行*direct_distance*。 但是在執行轉換之前, 請先將計算內容變更為 [本機]。
 
@@ -134,7 +135,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function calculates the direct distance between two geographical coordinates.
-    RETURNS
+    RETURNS decimal(28, 10)
     AS
     BEGIN
       DECLARE @distance decimal(28, 10)

@@ -7,19 +7,20 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ab73e0231f462504652e0e1af62fed80c706f061
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ac9537e3e13313e6ca0094a75b0e72c7c8ee80c2
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469041"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714748"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>快速入門：SQL Server 中的 "Hello world" R 腳本 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入門中, 您可以藉由執行「Hello World」 R 腳本 inT-SQL 來瞭解重要概念, 其中包含**sp_execute_external_script**系統預存程式的簡介。 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 先前的快速入門[中, 驗證 R 存在於 SQL Server 中](quickstart-r-verify.md), 提供設定本快速入門所需之 R 環境的相關資訊和連結。
 

@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 951ffc07a32434b2f8d333140445f12c2971b811
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 072a6f34a7cb91505d77356d6ec3835915c310d0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470621"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715404"
 ---
 # <a name="quickstart-verify-r-exists-in-sql-server"></a>快速入門：驗證 R 存在於 SQL Server 中 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,13 +25,13 @@ SQL Server 包括對常駐 SQL Server 資料進行資料科學分析的 R 語言
 + 內建的[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)預存程式, 以輸入參數的形式傳遞 R 腳本。
 + 將 R 腳本包裝在您建立的[自訂預存](sqldev-in-database-r-for-sql-developers.md)程式中。
 
-在本快速入門中, 您將確認已安裝並設定[SQL Server 2017 Machine Learning Services](../what-is-sql-server-machine-learning.md)或[SQL Server 2016 R Services](../r/sql-server-r-services.md) 。
+在本快速入門中, 您將確認已安裝並設定[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)或[SQL Server 2016 R Services](../r/sql-server-r-services.md) 。
 
 ## <a name="prerequisites"></a>先決條件
 
 此練習需要使用下列其中一項已安裝的 SQL Server 實例的存取權:
 
-+ 已安裝 R 語言的[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
++ 已安裝 R 語言的[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
 您的 SQL Server 實例可以位於 Azure 虛擬機器或內部部署中。 請注意, 預設會停用外部腳本功能, 因此您可能需要[啟用外部腳本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature), 並在開始之前確認**SQL Server Launchpad 服務**正在執行。
@@ -73,7 +74,7 @@ SQL Server 包括對常駐 SQL Server 資料進行資料科學分析的 R 語言
     nickname       Another Canoe               
     ```
 
-如果您收到此查詢的任何錯誤, 請排除任何安裝問題。 必須安裝後續設定, 才能啟用外部程式碼程式庫的使用。 請參閱[安裝 SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)或[安裝 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。 同樣地, 請確定啟動列服務正在執行。
+如果您收到此查詢的任何錯誤, 請排除任何安裝問題。 必須安裝後續設定, 才能啟用外部程式碼程式庫的使用。 請參閱[安裝 SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)或[安裝 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。 同樣地, 請確定啟動列服務正在執行。
 
 根據您的環境，您可能需要啟用 R 背景工作帳戶以連線到 SQL Server、安裝額外的網路程式庫、啟用遠端程式碼執行，或在一切已設定完畢後重新啟動執行個體。 如需詳細資訊, 請參閱[R Services 安裝和升級常見問題](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 

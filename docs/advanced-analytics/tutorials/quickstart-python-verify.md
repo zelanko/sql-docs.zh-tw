@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0dd5714f47c90c0091daacbd792b80c05ec68675
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 98e89cf61e5c53793108a455873382da00a8ea35
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469693"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715448"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>快速入門：驗證 Python 存在於 SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,11 +23,11 @@ SQL Server 包含適用于常駐 SQL Server 資料之資料科學分析的 Pytho
 + 內建的[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)預存程式, 以輸入參數的形式傳遞 Python 腳本。
 + 將 Python 腳本包裝在您建立的[自訂預存](sqldev-in-database-r-for-sql-developers.md)程式中。
 
-在本快速入門中, 您將確認已安裝並設定[SQL Server 2017 Machine Learning 服務](../what-is-sql-server-machine-learning.md)。
+在本快速入門中, 您將確認已安裝並設定[SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-此練習需要存取已安裝[SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)的 SQL Server 實例。
+此練習需要存取已安裝[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)的 SQL Server 實例。
 
 您的 SQL Server 實例可以位於 Azure 虛擬機器或內部部署中。 請注意, 預設會停用外部腳本功能, 因此您可能需要[啟用外部腳本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature), 並在開始之前確認**SQL Server Launchpad 服務**正在執行。
 
@@ -59,7 +60,7 @@ SQL Server 包含適用于常駐 SQL Server 資料之資料科學分析的 Pytho
 
 如果您收到錯誤, 您可以執行各種動作, 以確保實例和 Python 可以進行通訊。
 
-首先, 請排除任何安裝問題。 必須安裝後續設定, 才能啟用外部程式碼程式庫的使用。 請參閱[安裝 SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)。 同樣地, 請確定啟動列服務正在執行。
+首先, 請排除任何安裝問題。 必須安裝後續設定, 才能啟用外部程式碼程式庫的使用。 請參閱[安裝 SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)。 同樣地, 請確定啟動列服務正在執行。
 
 您也必須將 Windows 使用者群組`SQLRUserGroup`新增為實例上的登入, 以確保啟動列可以提供 Python 和 SQL Server 之間的通訊。 (相同的群組用於 R 和 Python 程式碼執行)。如需詳細資訊, 請參閱[建立 SQLRUserGroup 的登](../security/create-a-login-for-sqlrusergroup.md)入。
 

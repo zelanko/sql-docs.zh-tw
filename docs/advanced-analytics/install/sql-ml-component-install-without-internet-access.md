@@ -3,16 +3,17 @@ title: 在沒有網際網路存取的情況下安裝 R 語言和 Python 元件
 description: 在網路防火牆後方隔離的 SQL Server 實例上, Machine Learning R 和 Python 安裝程式離線或中斷連線。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1c68ce075c34c6475828e81a66121e21afcf2482
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ddeea99addae3229575ca581f344332587e85981
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345017"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715819"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在沒有網際網路存取的電腦上安裝 SQL Server machine learning R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,14 +22,15 @@ ms.locfileid: "68345017"
 
 資料庫內分析包含 database engine 實例, 以及 R 和 Python 整合的其他元件, 視 SQL Server 版本而定。 
 
-+ SQL Server 2017 包含 R 和 Python 
++ SQL Server 2017 和更新版本包含 R 和 Python 
 + SQL Server 2016 僅限 R。
 
 在隔離的伺服器上, 機器學習服務和 R/Python 語言特有的功能會透過 CAB 檔案新增。 
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 離線安裝
 
-若要在隔離的伺服器上安裝 SQL Server 2017 Machine Learning Services (R 和 Python), 請先下載 SQL Server 的初始版本, 以及 R 和 Python 支援的對應 CAB 檔案。 即使您打算立即補救伺服器以使用最新的累積更新, 還是必須先安裝初始版本。
+若要在隔離的伺服器上安裝 SQL Server Machine Learning Services (R 和 Python), 請先下載 SQL Server 的初始版本, 以及 R 和 Python 支援的對應 CAB 檔案。 即使您打算立即補救伺服器以使用最新的累積更新, 還是必須先安裝初始版本。
 
 > [!Note]
 > SQL Server 2017 沒有 service pack。 第一版的 SQL Server 是使用初始版本做為唯一的基礎行, 只透過累計更新提供服務。 
@@ -52,6 +54,10 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
    ![選擇 [下載媒體] 安裝類型](media/offline-download-tile.png "下載媒體")
 
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 離線安裝
 
 SQL Server 2016 資料庫內分析僅限 R, 其中只有兩個適用于產品套件的 CAB 檔案和 Microsoft 的開放原始碼 R 散發。 一開始請先安裝下列其中一個版本:RTM, SP 1, SP 2。 基本安裝完成後, 就可以在下一個步驟中套用累計更新。
@@ -72,15 +78,19 @@ SQL Server 2016 資料庫內分析僅限 R, 其中只有兩個適用于產品套
 
 取得包含安裝媒體之 .iso 檔案的其中一種方式是透過[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)。 登入, 然後使用 [**下載**] 連結來尋找您想要安裝的 SQL Server 2016 版本。 下載的格式為 .iso 檔案, 您可以將其複製到目的電腦進行離線安裝。
 
+::: moniker-end
+
 ## <a name="transfer-files"></a>傳輸檔案
 
 將 SQL Server 安裝媒體 (.iso 或 .cab) 和資料庫內分析 CAB 檔案複製到目的電腦。 將 CAB 檔案和安裝媒體檔案放在目的電腦上的相同資料夾中, 例如安裝使用者的% TEMP * 資料夾。
 
 Python CAB 檔案需要% TEMP% 資料夾。 針對 R, 您可以使用% TEMP%, 或將 myrcachedirectory 參數設定為 CAB 路徑。
 
-下列螢幕擷取畫面顯示 SQL Server 2017 CAB 和 ISO 檔案。 SQL Server 2016 下載看起來不同: 檔案較少 (沒有 Python), 而安裝媒體檔案名則適用于2016。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+下列螢幕擷取畫面顯示 SQL Server CAB 和 ISO 檔案。 
 
 ![要傳送的檔案清單]檔案(media/offline-file-list.png "清單")
+::: moniker-end
 
 ## <a name="run-setup"></a>執行安裝程式
 
@@ -104,15 +114,21 @@ Python CAB 檔案需要% TEMP% 資料夾。 針對 R, 您可以使用% TEMP%, �
 
 我們建議您將最新的累計更新套用至資料庫引擎和機器學習服務元件。 累計更新是透過安裝程式進行安裝。 
 
-1. 從基準實例開始。 您只能將累計更新套用到 SQL Server 的現有安裝:
-
-  + SQL Server 2017 初始版本
-  + SQL Server 2016 初始版本、SQL Server 2016 SP 1 或 SQL Server 2016 SP 2
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+1. 從基準實例開始。 您只能將累計更新套用至 SQL Server 初始版本的現有安裝。
 
 2. 在連線到網際網路的裝置上, 移至您的 SQL Server 版本的累計更新清單:
 
   + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+1. 從基準實例開始。 您只能將累計更新套用到 SQL Server 2016 初始版本、SQL Server 2016 SP 1 或 SQL Server 2016 SP 2 的現有安裝。
+
+2. 在連線到網際網路的裝置上, 移至您的 SQL Server 版本的累計更新清單:
+
   + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
+::: moniker-end
 
 3. 選取最新的累計更新以下載可執行檔。
 
@@ -122,7 +138,7 @@ Python CAB 檔案需要% TEMP% 資料夾。 針對 R, 您可以使用% TEMP%, �
 
 6. 執行安裝程式。 接受授權條款, 然後在 [特徵選取] 頁面上, 檢查已套用累積更新的功能。 您應該會看到針對目前實例安裝的每項功能, 包括機器學習功能。
 
-  ![從功能樹狀結構選取功能](media/cumulative-update-feature-selection.png "功能清單")
+    ![從功能樹狀結構選取功能](media/cumulative-update-feature-selection.png "功能清單")
 
 5. 繼續執行嚮導, 並接受 R 和 Python 散發套件的授權條款。 在安裝期間, 系統會提示您選擇包含已更新之 CAB 檔案的資料夾位置。
 
@@ -141,19 +157,30 @@ Python CAB 檔案需要% TEMP% 資料夾。 針對 R, 您可以使用% TEMP%, �
 
 ## <a name="post-install-configuration"></a>安裝後續設定
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 安裝完成之後, 請重新開機服務, 然後將伺服器設定為啟用腳本執行:
 
-+ [啟用外部腳本執行 (SQL Server 2017)](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
-+ [啟用外部腳本執行 (SQL Server 2016)](sql-r-services-windows-install.md#bkmk_enableFeature)
++ [啟用外部腳本執行](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
 
-SQL Server 2017 Machine Learning 服務或 SQL Server 2016 R Services 的初始離線安裝, 需要與線上安裝相同的設定:
+SQL Server Machine Learning 服務的初始離線安裝需要與線上安裝相同的設定:
 
-+ [確認安裝](sql-machine-learning-services-windows-install.md#verify-installation) (針對 SQL Server 2016, 按一下[這裡](sql-r-services-windows-install.md#verify-installation))。
-+ [視需要進行其他](sql-machine-learning-services-windows-install.md#additional-configuration)設定 (針對 SQL Server 2016, 按一下[這裡](sql-r-services-windows-install.md#bkmk_FollowUp))。
++ [確認安裝](sql-machine-learning-services-windows-install.md#verify-installation)
++ [視需要進行其他設定](sql-machine-learning-services-windows-install.md#additional-configuration)
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+安裝完成之後, 請重新開機服務, 然後將伺服器設定為啟用腳本執行:
+
++ [啟用外部腳本執行](sql-r-services-windows-install.md#bkmk_enableFeature)
+
+SQL Server R Services 的初始離線安裝需要與線上安裝相同的設定:
+
++ [確認安裝](sql-r-services-windows-install.md#verify-installation)
++ [視需要進行其他設定](sql-r-services-windows-install.md#bkmk_FollowUp)
+::: moniker-end
 
 ## <a name="next-steps"></a>後續步驟
 
-若要檢查實例的安裝狀態, 並修正常見的問題, 請參閱[SQL Server R Services 的自訂報表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)。
+若要檢查實例的安裝狀態, 並修正常見的問題, 請參閱[SQL Server 的自訂報表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)。
 
 如需任何不熟悉的訊息或記錄專案的說明, 請參閱[升級和安裝常見問題-Machine Learning 服務](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
-

@@ -7,12 +7,13 @@ ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5d5d74090713666a2da6058d9eccee1e33e4d7cb
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a5b60397bb3581ba2d210a6b4469184306145c8a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469748"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714860"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教學課程的 NYC 計程車示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "68469748"
 
 下表摘要說明在 NYC 計程車示範資料庫中建立的物件。
 
-|**物件名稱**|**物件類型**|**說明**|
+|**物件名稱**|**物件類型**|**描述**|
 |----------|------------------------|---------------|
 |**NYCTaxi_Sample** | database | 建立資料庫和兩個資料表：<br /><br />nyctaxi_sample 資料表:包含主要 NYC 計程車資料集。 叢集資料行存放區索引會加入資料表，以提升儲存體和查詢效能。 NYC 計程車資料集的 1% 樣本會插入此資料表中。<br /><br />dbo. nyc _taxi_models table:用來保存已定型的先進分析模型。|
 |**fnCalculateDistance** |純量值函式 | 計算 pickup 和下車位置之間的直線距離。 此函式用於[建立資料特徵](sqldev-create-data-features-using-t-sql.md)、[定型和儲存模型](sqldev-train-and-save-a-model-using-t-sql.md), 以及[讓 R 模型](sqldev-operationalize-the-model.md)。|
@@ -63,7 +64,7 @@ ms.locfileid: "68469748"
 
 預存程式是使用在各種教學課程中找到的 R 和 Python 腳本所建立。 下表摘要說明當您從各種課程執行腳本時, 可以選擇性地加入 NYC 計程車示範資料庫中的預存程式。
 
-|**預存程式**|**語言**|**描述**|
+|**預存程式**|**語言**|**說明**|
 |-------------------------|------------|---------------|
 |**RxPlotHistogram** |R | 呼叫 RevoScaleR rxHistogram 函式以繪製變數的長條圖, 然後將繪圖當做二進位物件傳回。 這個預存程式是用來[流覽資料並將其視覺化](sqldev-explore-and-visualize-the-data.md)。|
 |**RPlotRHist** |R| 使用歷程函式建立圖形, 並將輸出儲存為本機 PDF 檔案。 這個預存程式是用來[流覽資料並將其視覺化](sqldev-explore-and-visualize-the-data.md)。|

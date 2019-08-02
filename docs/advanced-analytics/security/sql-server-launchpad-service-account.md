@@ -7,12 +7,13 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5d01004fb54c0410acc372c5c66930f33bbd8856
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a94ae0f82b407f8f254a31b33d4d9dcd97f24e77
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470001"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714938"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad 服務設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "68470001"
 
 下表列出的 advanced 設定[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 以及允許的值。
 
-|**設定名稱**|**型別**|**說明**|
+|**設定名稱**|**型別**|**描述**|
 |----|----|----|
 |結束時\_ \_清除\_作業|Integer |這是僅供內部設定-請勿變更此值。 </br></br>指定是否應該在會話完成後清除為每個外部執行時間會話建立的暫存工作資料夾。 這項設定在偵錯時很有用。 </br></br>支援的值為**0** (已停用) 或**1** (已啟用)。 </br></br>預設值為 1, 表示記錄檔會在結束時移除。|
 |追蹤\_層級|Integer |設定 MSSQLLAUNCHPAD 的追蹤詳細資訊層級, 以進行偵錯工具。 這會影響 LOG_DIRECTORY 設定所指定之路徑中的追蹤檔案。 </br></br>支援的值為：**1** (錯誤)、 **2** (效能)、 **3** (警告)、 **4** (資訊)。 </br></br>預設值為 1, 表示只輸出錯誤。|

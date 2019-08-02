@@ -1,18 +1,19 @@
 ---
 title: 使用機器學習模型產生預測和預測
-description: 使用 rxPredict 或 sp_rxPredict 進行即時評分, 或預測 T-sql 以在 R 中預測, 並在 SQL Server Machine Learning 的 Pythin 中預測。
+description: 使用 rxPredict 或 sp_rxPredict 進行即時計分, 或預測 T-sql 以在 R 和 Python 的 SQL Server Machine Learning 中進行預測和預測。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470118"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715690"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何在 SQL Server 中使用機器學習模型產生預測和預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

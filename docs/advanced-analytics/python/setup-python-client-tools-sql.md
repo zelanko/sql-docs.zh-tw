@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b5f406ec4b6cfbd65db7a4ecd3a1ad14dff6d8e1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470234"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715178"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>在 SQL Server Machine Learning 服務上設定用於 Python 開發的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +50,9 @@ SSMS 是個別的下載, 適用于在 SQL Server 上建立和執行預存程式,
 
 1. 下載安裝腳本。
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py)安裝 Microsoft Python 套件的版本9.2.1。 這個版本會對應到預設的 SQL Server 2017 實例。 
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py)安裝 Microsoft Python 套件的版本9.2.1。 這個版本會對應到預設的 SQL Server 實例。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)會安裝 Microsoft Python 套件的9.3 版。 如果您的遠端 SQL Server 2017 實例系結[至 Machine Learning Server 9.3](../install/upgrade-r-and-python.md), 則此版本是較佳的選擇。
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)會安裝 Microsoft Python 套件的9.3 版。 如果您的遠端 SQL Server 實例系結[至 Machine Learning Server 9.3](../install/upgrade-r-and-python.md), 此版本是較好的選擇。
 
 2. 以較高的系統管理員許可權開啟 PowerShell 視窗 (以滑鼠右鍵按一下 [**以系統管理員身分執行**])。
 

@@ -7,19 +7,20 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 65d5d999df39909a5419883736686c5bc22e0062
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 00c1c1ed13f1257267111c3bdf71277fa41d0bdc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469802"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714869"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>建立 R 模型 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
 
-既然您已經擴充定型資料, 現在可以使用回歸模型來分析資料。 線性模型是預測性分析世界中很重要的工具, 而**RevoScaleR**套件包含的回歸演算法可以細分工作負載並平行執行。
+您已經擴充定型資料。 現在是時候使用回歸模型分析資料。 線性模型是預測性分析世界中很重要的工具。 **RevoScaleR**套件包含可細分工作負載並平行執行的回歸演算法。
 
 > [!div class="checklist"]
 > * 建立線性迴歸模型

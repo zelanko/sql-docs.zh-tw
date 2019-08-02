@@ -6,17 +6,18 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: be55e779f335277a1c0f03fe871b8dcb952e088f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470408"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715197"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning 服務中的已知問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文說明在使用 R 和 Python [SQL Server 2016 R services](install/sql-r-services-windows-install.md)和[SQL Server 2017 Machine Learning 服務](install/sql-machine-learning-services-windows-install.md)中提供的機器學習服務元件已知問題或限制。
+本文說明在[SQL Server 2016 R services](r/sql-server-r-services.md)中提供的機器學習服務元件已知問題或限制, 以及[使用 R 和 Python SQL Server Machine Learning 服務](what-is-sql-server-machine-learning.md)的選項。
 
 ## <a name="setup-and-configuration-issues"></a>安裝和設定問題
 
@@ -76,7 +77,7 @@ R_SERVER 使用 Intel 數學核心程式庫 (MKL)。 對於涉及 MKL 的計算,
 
 ### <a name="3-unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>3.無法在網域控制站上安裝 SQL Server 機器學習功能
 
-如果您嘗試在網域控制站上安裝 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務, 安裝程式會失敗, 並出現下列錯誤:
+如果您嘗試在網域控制站上安裝 SQL Server 2016 R Services 或 SQL Server Machine Learning 服務, 安裝程式會失敗, 並出現下列錯誤:
 
 > *功能的安裝過程中發生錯誤*
 > 

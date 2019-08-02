@@ -6,19 +6,20 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e5cd2f55559671b1e3f3d2004c4865b8bac8aa42
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8db20295c2e21b6499d4d935f9c99161983b588f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469882"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715586"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函數在 SQL Server 上尋找或安裝 R 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 RevoScaleR 9.0.1 和更新版本包含 R 套件管理 SQL Server 計算內容的函式。 遠端、非系統管理員可以使用這些函式在 SQL Server 上安裝封裝, 而不需要直接存取伺服器。
 
-SQL Server 2017 Machine Learning 服務已包含較新版本的 RevoScaleR。 SQL Server 2016 R 服務客戶必須執行[元件升級](../install/upgrade-r-and-python.md), 才能取得 RevoScaleR 套件管理功能。 如需有關如何取得封裝版本和內容的指示, 請參閱[取得封裝資訊](../package-management/installed-package-information.md)。
+SQL Server Machine Learning 服務已包含較新版本的 RevoScaleR。 SQL Server 2016 R 服務客戶必須執行[元件升級](../install/upgrade-r-and-python.md), 才能取得 RevoScaleR 套件管理功能。 如需有關如何取得封裝版本和內容的指示, 請參閱[取得封裝資訊](../package-management/installed-package-information.md)。
 
 ## <a name="revoscaler-functions-for-package-management"></a>適用于封裝管理的 RevoScaleR 函式
 

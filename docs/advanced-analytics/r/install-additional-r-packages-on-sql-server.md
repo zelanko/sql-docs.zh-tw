@@ -1,18 +1,19 @@
 ---
 title: 安裝新的 R 語言套件
-description: 將新的 R 封裝新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning Services (資料庫內)
+description: 將新的 R 封裝新增至 SQL Server 2016 R Services 或 SQL Server Machine Learning 服務 (資料庫內)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1048dc6ef0a43c5fa41dd5398a5b3dced4a5ebe8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470106"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715098"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>在 SQL Server 上安裝新的 R 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ R 封裝程式庫實際上位於 SQL Server 實例的 Program Files 資料夾中
 
 例如, 下列程式說明從 Bioconductor 取得正確版本的[FISHalyseR](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html)套件, 假設電腦可以存取網際網路。
 
-1.  在 [Package Archives] (封裝封存)  清單中找到 **Windows 二進位** 版本。
+1.  在 [Package Archives] (封裝封存) 清單中找到 **Windows 二進位** 版本。
 
 2.  以滑鼠右鍵按一下的連結。ZIP 檔案, 然後選取 [**另存目標**]。
 
@@ -85,7 +86,7 @@ R 封裝程式庫實際上位於 SQL Server 實例的 Program Files 資料夾中
 
 R 和 Python 功能包含在數個 Microsoft 產品中, 它們全都可以並存于同一部電腦上。
 
-如果您已安裝 SQL Server 2017 Microsoft Machine Learning Server (獨立式) 或 SQL Server 2016 R Server (獨立式), 除了資料庫內分析 (SQL Server 2017 Machine Learning Services 和 SQL Server 2016 R Services) 之外, 您的電腦也會有不同的適用于每個的 R 安裝, 其中包含所有 R 工具和程式庫的重複專案。
+如果您已安裝 SQL Server 2017 Microsoft Machine Learning Server (獨立式) 或 SQL Server 2016 R Server (獨立式), 除了資料庫內分析 (SQL Server Machine Learning Services 和 SQL Server 2016 R Services) 之外, 您的電腦會有不同的適用于每個的 R 安裝, 其中包含所有 R 工具和程式庫的重複專案。
 
 安裝到 R_SERVER 程式庫的套件僅供獨立伺服器使用, 而且不能由 SQL Server (資料庫內) 實例存取。 安裝您想`R_SERVICES`要在 SQL Server 的資料庫中使用的套件時, 請一律使用程式庫。 如需路徑的詳細資訊, 請參閱[套件程式庫位置](../package-management/default-packages.md)。
 

@@ -6,12 +6,13 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8d7f046e961efb6129f807a7626e498062c415b6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: aa56a9367271df2172236b133d85b5771089b1ac
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470152"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715038"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的效能: 結果和資源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68470152"
 
 SQL Server R Services 開發小組的這種案例研究已測試各種優化的效果。 建立單一 rxLogit 模型, 並對航空公司資料集執行評分。 優化會在定型和評分程式期間套用, 以評估個別的影響。
 
-- GithubSQL Server 優化研究的[範例資料和腳本](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
+- GitHubSQL Server 優化研究的[範例資料和腳本](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
 ### <a name="test-methods"></a>測試方法
 

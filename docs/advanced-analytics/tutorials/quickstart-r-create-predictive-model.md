@@ -7,19 +7,20 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7de37b16c04cf2f972e36c11ba5dfb53721e6094
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f902bd7325e84f07d50196c19338d9c05b3503d8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469438"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715440"
 ---
 # <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>快速入門：在 SQL Server 中使用 R 建立預測模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入門中, 您將瞭解如何使用 R 來定型模型, 然後將模型儲存至 SQL Server 中的資料表。 模型是簡單的一般化線性模型 (GLM), 可預測車輛已符合手動傳輸的機率。 您將使用 R `mtcars`隨附的資料集。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 先前的快速入門[中, 驗證 R 存在於 SQL Server 中](quickstart-r-verify.md), 提供設定本快速入門所需之 R 環境的相關資訊和連結。
 

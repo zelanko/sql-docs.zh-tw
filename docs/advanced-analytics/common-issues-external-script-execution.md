@@ -2,21 +2,22 @@
 title: 啟動控制板服務和外部腳本執行的常見問題
 ms.prod: sql
 ms.technology: ''
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c90c59f3b59850bb0e2d1cf4cf40eb569e965eba
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470487"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715279"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>在 SQL Server 中啟動控制板服務和外部腳本的常見問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- SQL Server 信任的啟動控制板服務支援 R 和 Python 的外部腳本執行。 在 SQL Server 2016 R Services 上, SP1 提供服務。 SQL Server 2017 包含啟動列服務, 做為初始安裝的一部分。
+SQL Server 信任的啟動控制板服務支援 R 和 Python 的外部腳本執行。 
 
 多個問題可能會使啟動列無法啟動, 包括設定問題或變更, 或遺失網路通訊協定。 本文提供許多問題的疑難排解指引。 對於我們錯過的任何內容, 您可以將問題張貼到[Machine Learning Server 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)。
 
@@ -76,6 +77,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 本節列出啟動控制板傳回的最常見錯誤訊息。
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>「無法啟動 R 腳本的執行時間」
 
 如果 R 使用者的 Windows 群組 (也用於 Python) 無法登入正在執行 R Services 的實例, 您可能會看到下列錯誤:
@@ -94,10 +96,11 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     * *安全性記錄指出帳戶 NT 服務無法登入*
 
-如需有關如何授與此使用者群組必要許可權的詳細資訊, 請參閱[Install SQL Server 2016 R Services](install/sql-r-services-windows-install.md)。
+如需有關如何授與此使用者群組必要許可權的詳細資訊, 請參閱[Install SQL Server R Services](install/sql-r-services-windows-install.md)。
 
 > [!NOTE]
 > 如果您使用 SQL 登入從遠端工作站執行 R 指令碼，則不適用這項限制。
+::: moniker-end
 
 ## <a name="logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>「登入失敗: 使用者未被授與要求的登入類型」
 
@@ -122,7 +125,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 2. 以滑鼠右鍵按一下實例的 [SQL Server Launchpad], 然後選取 [**屬性**]。
 
-3. 選取 [**服務**] 索引標籤, 然後確認服務正在執行。 如果未執行, 請將 [**啟動模式]** 變更為 [**自動**], 然後選取 [套用]。
+3. 選取 [**服務**] 索引標籤, 然後確認服務正在執行。 如果未執行, 請將 [**啟動模式]** 變更為 [**自動**],然後選取 [套用]。
 
 4. 重新開機服務通常會修正問題, 讓機器學習服務腳本可以執行。 如果重新開機無法修正問題, 請注意 [**二進位路徑**] 屬性中的路徑和引數, 然後執行下列動作:
 
@@ -183,9 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 若要解決此問題, 您必須將封裝重新安裝到 SQL Server 實例程式庫。
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 >[!NOTE]
 >如果您已將 SQL Server 2016 的實例升級為使用最新版的 Microsoft R, 則預設程式庫位置會不同。 如需詳細資訊, 請參閱[使用 SqlBindR 升級 R Services 的實例](install/upgrade-r-and-python.md)。
+::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>因為 Dll 不相符而關閉啟動列
 
 如果您安裝具有其他功能的 database engine、修補伺服器, 然後稍後使用原始媒體來新增 Machine Learning 功能, 可能會安裝錯誤的 Machine Learning 元件版本。 當啟動列偵測到版本不相符時, 它會關閉並建立傾印檔案。
@@ -224,7 +230,7 @@ EXEC sp_execute_external_script @language = N'R',
 3. 使用 fsutil 公用程式搭配*file*引數, 為 WORKING_DIRECTORY 中指定的資料夾指定簡短的檔案路徑。
 
 4. 編輯設定檔, 以指定您在 WORKING_DIRECTORY 屬性中輸入的相同工作目錄。 或者, 您也可以指定不同的工作目錄, 然後選擇已經與8.3 標記法相容的現有路徑。
-
+::: moniker-end
 
 ## <a name="next-steps"></a>後續步驟
 

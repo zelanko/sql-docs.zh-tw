@@ -1,25 +1,26 @@
 ---
 title: 升級 R 和 Python 元件
-description: 在 SQL Server 2016 服務或 SQL Server 2017 Machine Learning 服務中升級 R 和 Python, 並使用 sqlbindr 來系結至 Machine Learning Server。
+description: 在 SQL Server Machine Learning 服務或 SQL Server R Services 中升級 R 和 Python, 並使用 sqlbindr 來系結至 Machine Learning Server。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: def007433075920e419f0bf77be5977d1145f793
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344955"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715208"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 實例中的機器學習 (R 和 Python) 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 中的 R 和 Python 整合包含開放原始碼和 Microsoft 專屬的套件。 在 [標準 SQL Server 服務] 底下, 會根據 SQL Server 發行週期更新套件, 並針對目前版本的現有封裝進行 bug 修正, 但不升級主要版本。 
 
-不過, 許多資料科學家都習慣使用較新的套件, 因為它們可供使用。 針對 SQL Server 2017 Machine Learning 服務 (資料庫內) 和 SQL Server 2016 R Services (資料庫內), 您可以藉由系結至**Microsoft Machine Learning Server**來取得[較新版本的 R 和 Python](#version-map) 。  
+不過, 許多資料科學家都習慣使用較新的套件, 因為它們可供使用。 針對 SQL Server Machine Learning 服務 (資料庫內) 和 SQL Server R Services (資料庫內), 您可以藉由系結至**Microsoft Machine Learning Server**來取得[較新版本的 R 和 Python](#version-map) 。 
 
 ## <a name="what-is-binding"></a>什麼是系結？
 
@@ -32,13 +33,17 @@ SQL Server 中的 R 和 Python 整合包含開放原始碼和 Microsoft 專屬�
 > [!NOTE]
 > 系結僅適用于系結至 SQL Server 實例的 (資料庫內) 實例。 系結與 (獨立式) 安裝無關。
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 **SQL Server 2017 系結考慮**
 
-針對 SQL Server 2017 Machine Learning 服務, 您只需要在 Microsoft Machine Learning Server 開始提供其他套件或較新版本的現有專案時, 才考慮系結。
+針對 SQL Server Machine Learning 服務, 只有當 Microsoft Machine Learning Server 開始提供其他套件或新版本的現有內容時, 才會考慮系結。
+::: moniker-end
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 **SQL Server 2016 系結考慮**
 
-針對 SQL Server 2016 R Services 客戶, 系結會提供已更新的 R 套件、不屬於原始安裝 ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)) 的新套件, 以及[預先定型模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), 這些都可以在每個新的主要和次要版本上進一步重新整理。[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)。 系結不會提供 Python 支援, 這是 SQL Server 2017 功能。 
+針對 SQL Server 2016 R Services 客戶, 系結會提供已更新的 R 套件、不屬於原始安裝 ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)) 的新套件, 以及[預先定型模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), 這些都可以在每個新的主要和次要版本上進一步重新整理。[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)。 系結不會提供 Python 支援, 這是 SQL Server 2017 功能。
+::: moniker-end
 
 <a name="version-map"></a>
 
@@ -48,6 +53,7 @@ SQL Server 中的 R 和 Python 整合包含開放原始碼和 Microsoft 專屬�
 
 請注意, 系結不保證 R 或 Anaconda 的最新版本。 當您系結至 Microsoft Machine Learning Server (MLS) 時, 您會取得透過安裝程式安裝的 R 或 Python 版本, 這可能不是 web 上可用的最新版本。
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
 元件 |初始版本 | [R Server 9.0。1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R 伺服器9。1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
@@ -58,9 +64,10 @@ SQL Server 中的 R 和 Python 整合包含開放原始碼和 Microsoft 專屬�
 [預先定型模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| 馬丁 | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 馬丁 | 1.0 |  1.0 |  1.0 |  1.0 |
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 馬丁 | 1.0 |  1.0 |  1.0 |  1.0 |
+::: moniker-end
 
-
-[**SQL Server 2017 Machine Learning 服務**](../install/sql-machine-learning-services-windows-install.md)
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+[**SQL Server Machine Learning 服務**](../install/sql-machine-learning-services-windows-install.md)
 
 元件 |初始版本 | MLS 9.3 | | | |
 ----------|----------------|---------|-|-|-|-|
@@ -71,14 +78,15 @@ SQL Server 中的 R 和 Python 整合包含開放原始碼和 Microsoft 專屬�
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
 Python 3.5 上的 Anaconda 4。2  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
- [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
+[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [預先定型模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
+::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>元件升級的運作方式 
 
-當您將現有的 R 和 Python 安裝系結至 Machine Learning Server 時, R 和 Python 程式庫和可執行檔會進行升級。 當您在現有的 SQL Server database engine 實例 (2016 或 2017) 上執行安裝程式時, [Microsoft Machine Learning Server 安裝程式](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)會執行系結, 其中包含 R 或 Python 整合。 安裝程式會偵測現有的功能, 並提示您重新系結至 Machine Learning Server。 
+當您將現有的 R 和 Python 安裝系結至 Machine Learning Server 時, R 和 Python 程式庫和可執行檔會進行升級。 當您在具有 R 或 Python 整合的現有 SQL Server database engine 實例上執行安裝程式時, [Microsoft Machine Learning Server 安裝程式](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)會執行系結。 安裝程式會偵測現有的功能, 並提示您重新系結至 Machine Learning Server。 
 
-在系結期間, C:\Program Files\Microsoft SQL Server\MSSQL14. 的內容MSSQLSERVER\R_SERVICES 和 \PYTHON_SERVICES 會以 C:\Program Files\Microsoft\ML Server\R_SERVER 和 \PYTHON_SERVER. 的較新可執行檔和程式庫覆寫
+在系結期間`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES` , 和`\PYTHON_SERVICES`的內容會以`C:\Program Files\Microsoft\ML Server\R_SERVER`和`\PYTHON_SERVER`的較新可執行檔和程式庫覆寫。
 
 同時, 服務模型也會從 SQL Server 的更新機制翻轉到較頻繁的 Microsoft Machine Learning Server 主要和次要發行週期。 針對需要較新的層代 R 和 Python 模組作為解決方案的資料科學小組而言, 切換支援原則是個不錯的選項。 
 
@@ -91,12 +99,12 @@ Binding 僅適用于 R 和 Python 功能。 也就是 R 和 Python 功能的開�
 
 總結, 系結的步驟如下所示:
 
-+ 從現有的已設定安裝的 SQL Server 2016 R Services (或 SQL Server 2017 Machine Learning Services) 開始。
++ 從現有的、已設定的 SQL Server R Services 或 SQL Server Machine Learning 服務安裝開始。
 + 判斷哪個版本的 Microsoft Machine Learning Server 有您想要使用的升級元件。
 + 下載並執行該版本的安裝程式。 安裝程式會偵測現有的實例、加入系結選項, 並傳回相容的實例清單。
 + 選擇您想要系結的實例, 然後完成安裝程式以執行系結。
 
-就使用者經驗而言, 技術及其使用方式不變。 唯一的差別在於是否有較新版本的套件, 以及可能原本無法透過 SQL Server 取得的其他套件 (例如, MicrosoftML for SQL Server 2016 R Services 客戶)。
+就使用者經驗而言, 技術及其使用方式不變。 唯一的差別在於是否有較新版本的套件, 以及可能原本無法透過 SQL Server 取得的其他套件。
 
 ## <a name="bkmk_BindWizard"></a>使用安裝程式系結至 MLS
 
@@ -106,7 +114,7 @@ Microsoft Machine Learning 安裝程式會偵測現有的功能和 SQL Server �
 
    針對 SQL Server 2016 R 服務, 最小值為[Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)和[CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。
 
-1. 檢查 R base 和 RevoScaleR 套件的版本, 確認現有的版本低於您打算用來取代它們的版本。 針對 SQL Server 2016 R 服務, R 基底套件為 3.2.2, 而 RevoScaleR 為8.0.3 版。
+1. 檢查 R base 和 RevoScaleR 套件的版本, 確認現有的版本低於您打算用來取代它們的版本。 
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -184,7 +192,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 1. 下載 MLS 安裝程式。 它會以單一壓縮檔案的形式下載。 我們建議[最新版本](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer), 但您也可以安裝[較早](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)的版本。
 
-1. 下載 .cab 檔案。 下列連結適用于9.3 版本。 如果您需要較舊的版本, 可以在[R 伺服器 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)中找到其他連結。 回想一下, 您只能將 Python/Anaconda 新增至 SQL Server 2017 Machine Learning 服務實例。 適用于 R 和 Python 的預先定型模型存在;.cab 會以您所使用的語言提供模型。
+1. 下載 .cab 檔案。 下列連結適用于9.3 版本。 如果您需要較舊的版本, 可以在[R 伺服器 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)中找到其他連結。 回想一下, 您只能將 Python/Anaconda 新增至 SQL Server Machine Learning Services 實例。 適用于 R 和 Python 的預先定型模型存在;.cab 會以您所使用的語言提供模型。
 
     | 功能 | 下載 |
     |---------|----------|

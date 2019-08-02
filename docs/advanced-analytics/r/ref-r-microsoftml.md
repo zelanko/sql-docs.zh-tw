@@ -1,18 +1,19 @@
 ---
 title: MicrosoftML R 函數程式庫
-description: 簡介 SQL Server 2016 R Services 中的 MicrosoftML 函式程式庫和使用 R 的 SQL Server 2017 Machine Learning Services。
+description: 簡介 SQL Server 2016 R Services 中的 MicrosoftML 函式程式庫和使用 R SQL Server Machine Learning 服務。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6808fa01bd4b62a67b220cec86d025820958298d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: af9e85586a2aad69a87072caa820fff4026d1feb
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470015"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715659"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server 中的 R 程式庫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68470015"
 **MicrosoftML**程式庫是以 R 3.4.3 為基礎, 只有在您安裝下列其中一個 Microsoft 產品或下載時, 才能使用:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R 用戶端](set-up-a-data-science-client.md)
 

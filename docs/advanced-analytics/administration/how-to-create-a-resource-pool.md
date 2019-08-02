@@ -1,20 +1,21 @@
 ---
 title: 如何建立 R 和 Python 的資源集區
-description: 在 SQL Server 2016 或 SQL Server 2017 database engine 實例上, 定義 R 或 Python 進程的 SQL Server 資源集區。
+description: 針對 SQL Server 資料庫引擎實例上的 R 或 Python 進程定義 SQL Server 資源集區。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344066"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715899"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>如何在 SQL Server 中建立機器學習服務的資源集區
+# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>如何建立 SQL Server Machine Learning 服務的資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明如何建立和使用資源集區, 專門用來管理 SQL Server 中的 R 和 Python 機器學習服務工作負載。 它假設您已安裝並啟用機器學習功能, 並想要重新設定實例, 以支援更精細的管理外部進程 (例如 R 或 Python) 所使用的資源。
@@ -41,7 +42,7 @@ ms.locfileid: "68344066"
     |-|-|-|-|-|-|-|-|-|
     |2|預設|0|100|0|100|100|0|0|
 
-2.  檢查配置給預設「外部」  資源集區的資源。
+2.  檢查配置給預設「外部」資源集區的資源。
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools WHERE name = 'default'
@@ -88,7 +89,7 @@ ms.locfileid: "68344066"
   
      因此，為了能夠以更精細的方式控制哪些工作負載應該優先，您可以建立一個新的使用者定義外部資源集區。 您還應該定義一個分類函數，並將它指派給外部資源集區。 **EXTERNAL**關鍵字是 new。
   
-     請從建立一個新的「使用者定義的外部資源集區」  開始著手。 在接下來的範例中，該集區是命名為 **ds_ep**。
+     請從建立一個新的「使用者定義的外部資源集區」開始著手。 在接下來的範例中，該集區是命名為 **ds_ep**。
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);
@@ -188,7 +189,7 @@ ms.locfileid: "68344066"
   
      在此案例中，由於建立集區時已將親和性指定為 AUTO，因此不會顯示任何資訊。 如需詳細資訊，請參閱 [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="next-steps"></a>後續步驟
 
 如需管理伺服器資源的詳細資訊, 請參閱:
 

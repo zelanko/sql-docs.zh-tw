@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fe196a82badcab9ebe05004ee05cd67131942dd1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469895"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715609"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning 或 R Server 的升級和安裝常見問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +23,7 @@ ms.locfileid: "68469895"
 + 只有在從發行前版本升級時, 才會發生一些問題。 因此, 建議您先找出版本和版本, 再閱讀這些筆記。 若要取得版本資訊, `@@VERSION`請在 SQL Server Management Studio 的查詢中執行。
 + 儘快升級至最新的版本或服務版本, 以解決最近版本中已修正的任何問題。
 
-**適用於：** SQL Server 2016 R Services, SQL Server 2017 Machine Learning 服務 (資料庫內)
+**適用於：** SQL Server 2016 R Services、SQL Server Machine Learning Services (資料庫內)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>舊版 SQL Server 2016 的需求和限制 
 
@@ -94,11 +95,11 @@ SQL Server 2016 的早期發行版本無法在離線安裝期間 (沒有網際�
 
 如已安裝 Microsoft R Server 發行前版本，您必須先解除安裝它，才能升級至較新版本。
 
-1.  在 [控制台] 中，按一下 [新增/移除程式] 並選取 [ `Microsoft SQL Server 2016 <version number>`]。
+1.  在 [控制台]中，按一下 [新增/移除程式]並選取 [ `Microsoft SQL Server 2016 <version number>`]。
 
-2.  在有 [新增] 、[修復] 或 [移除]  元件選項的對話方塊中，選取 [移除] 。
+2.  在有 [新增]、[修復]或 [移除] 元件選項的對話方塊中，選取 [移除]。
   
-3.  在 [選取功能]  頁面下的 [共用功能] 中，選取 [R Server (獨立式)] 。 按一下 [下一步] ，然後按一下 [完成]  只解除安裝選取的元件。
+3.  在 [選取功能] 頁面下的 [共用功能]中，選取 [R Server (獨立式)]。 按一下 [下一步]，然後按一下 [完成] 只解除安裝選取的元件。
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services 和 R Server (獨立式) 並存錯誤 
 

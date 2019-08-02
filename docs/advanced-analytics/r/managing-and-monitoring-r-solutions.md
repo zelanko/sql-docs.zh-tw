@@ -7,12 +7,13 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 705df9d06a7dbf4563df3670894351d15c0962a5
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2677b48daf253a85f2b74078bdad7de65e37d572
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470101"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715053"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>在 SQL Server 上管理和整合機器學習服務工作負載
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -8,12 +8,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff4d0839cfdf24b1b43fe9d5a371092713bc63cf
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470291"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715788"
 ---
 #  <a name="get-r-and-python-package-information"></a>取得 R 和 Python 套件資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-(選擇性) 您可以在較新版本的 RevoScaleR 中使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) , SQL Server 2017 Machine Learning 服務或[R Services 升級 r 到至少 RevoScaleR 9.0.1](../install/upgrade-r-and-python.md)。 這個預存程式會傳回實例程式庫的路徑, 以及 SQL Server 所使用的 RevoScaleR 版本:
+(選擇性) 您可以在較新版本的 RevoScaleR 中使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) , SQL Server Machine Learning Services 或[R Services 升級 r 到至少 RevoScaleR 9.0.1](../install/upgrade-r-and-python.md)。 這個預存程式會傳回實例程式庫的路徑, 以及 SQL Server 所使用的 RevoScaleR 版本:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -59,7 +60,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>取得 Python 程式庫位置
 
-針對 SQL Server 2017 中的**Python** , 請執行下列語句來確認目前實例的預設程式庫。 這個範例會傳回 Python `sys.path`變數中包含的資料夾清單。 此清單包含目前的目錄和標準程式庫路徑。
+針對**Python**, 請執行下列語句來確認目前實例的預設程式庫。 這個範例會傳回 Python `sys.path`變數中包含的資料夾清單。 此清單包含目前的目錄和標準程式庫路徑。
 
 ```sql
 EXECUTE sp_execute_external_script

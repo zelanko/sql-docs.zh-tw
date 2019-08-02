@@ -1,20 +1,20 @@
 ---
-title: 新功能 |Microsoft Docs
-description: SQL Server 2016 R Services、R Server SQL Server 2017 Machine Learning Services 的每個版本都有新的功能公告。
-ms.date: 05/22/2019
+title: 新功能
+description: SQL Server 2016 R Services、R Server SQL Server Machine Learning 服務的每個版本都有新的功能公告。
+ms.date: 07/31/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c466c7e039e515be4ef65b4f5680ece2e1d861a8
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9d63aac9c91919a2b4e3296f29e939c8cd09ad76
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468978"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715298"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的新功能
 
@@ -22,7 +22,7 @@ ms.locfileid: "68468978"
 
 機器學習功能會新增至每個版本中的 SQL Server, 因為我們會繼續擴充、擴充和加深資料平臺、先進分析和資料科學之間的整合。 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019-preview"></a>SQL Server 2019 preview 的新功能
 
 此版本會在 SQL Server 中新增 R 和 Python 機器學習作業的最上層要求功能。 如需此版本中所有功能的詳細資訊, 請參閱[SQL Server 2019 中的新](../sql-server/what-s-new-in-sql-server-ver15.md)功能和[SQL Server 2019 的版本](../sql-server/sql-server-ver15-release-notes.md)資訊。
@@ -32,6 +32,8 @@ ms.locfileid: "68468978"
 
 | 版本 | 功能更新 |
 |---------|----------------|
+| CTP 3.2 | 無變更。 |
+| CTP 3.1 | 無變更。 |
 | CTP 3.0 | 無變更。 |
 | CTP 2.5 | 無變更。 |
 | CTP 2.4 | 適用于 R 和 Python 的[建立外部程式庫 (transact-sql)](../t-sql/statements/create-external-library-transact-sql.md)的 Linux 支援。 |
@@ -53,7 +55,7 @@ ms.locfileid: "68468978"
 
 ### <a name="r-enhancements"></a>R 增強功能
 
-SQL Server 2017 Machine Learning 服務的 R 元件是下一代的 SQL Server 2016 R 服務, 其中包含基底 R、RevoScaler 和其他封裝的更新版本。
+SQL Server Machine Learning 服務的 R 元件是下一代的 SQL Server 2016 R 服務, 其中包含基底 R、RevoScaler 和其他封裝的更新版本。
 
 R 的新功能包括[**套件管理**](r/install-additional-r-packages-on-sql-server.md), 並具有下列重點: 
 
@@ -69,7 +71,7 @@ R 的新功能包括[**套件管理**](r/install-additional-r-packages-on-sql-se
 
 ### <a name="python-integration-for-in-database-analytics"></a>資料庫內分析的 Python 整合
 
-Python 是一種語言, 為各種機器學習工作提供絕佳的彈性和強大功能。 適用于 Python 的開放原始碼程式庫包含數個可自訂類神經網路的平臺, 以及適用于自然語言處理的熱門程式庫。 現在, SQL Server 2017 Machine Learning 支援這種廣泛使用的語言。
+Python 是一種語言, 為各種機器學習工作提供絕佳的彈性和強大功能。 適用于 Python 的開放原始碼程式庫包含數個可自訂類神經網路的平臺, 以及適用于自然語言處理的熱門程式庫。 
 
 由於 Python 已與資料庫引擎整合, 因此您可以保持接近資料的分析, 並消除與資料移動相關聯的成本和安全性風險。 您可以使用 Visual Studio 之類的工具, 部署以 Python 為基礎的機器學習解決方案。 您的生產應用程式可以使用 SQL Server 資料存取方法, 從 Python 3.5 執行時間取得預測、模型或視覺效果。
 
@@ -93,6 +95,7 @@ T-sql 和 Python 整合是透過[sp_execute_external_script](https://docs.micros
 此版本也新增了[SQL Server Machine Learning Server (獨立式)](r/r-server-standalone.md), 這是完全獨立的資料科學伺服器, 可支援 R 和 Python 中的統計和預測性分析。 如同 R Services, 此伺服器是下一版的 SQL Server 2016 R Server (獨立式)。 使用獨立伺服器, 您可以散發和調整 R 或 Python 解決方案, 而不需要 SQL Server 的相依性。
 ::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 
 此版本引進了機器學習功能, 可透過**SQL Server 2016 R 服務**SQL Server, 這是一個資料庫內的分析引擎, 用於處理資料庫引擎實例內常駐資料的 R 腳本。
@@ -106,19 +109,23 @@ T-sql 和 Python 整合是透過[sp_execute_external_script](https://docs.micros
 | CU 新增 | [**即時計分**](real-time-scoring.md)依賴原生C++程式庫來讀取以優化二進位格式儲存的模型, 然後產生預測, 而不需要呼叫 R 執行時間。 這可讓評分作業的速度更快。 使用即時評分, 您可以執行預存程式, 或從 R 程式碼執行即時評分。 如果實例升級至最新版本的[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)], 則 SQL Server 2016 也可以使用即時評分。 |
 | 最初發行 | [**資料庫內分析的 R 整合**](r/sql-server-r-services.md)。 <br/><br/> 用來在 T-sql 中呼叫 R 函數的 r 封裝, 反之亦然。 RevoScaleR 函式會將資料區塊化成元件部分、協調和管理分散式處理, 以及匯總結果, 以提供大規模的 R 分析。 在 SQL Server 2016 R Services (資料庫內) 中, RevoScaleR 引擎會與資料庫引擎實例整合, 同時在相同的處理內容中看待資料和分析。 <br/><br/>T-sql 和 R 透過[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)整合。 您可以使用這個預存程式來呼叫任何 R 程式碼。 這個安全的基礎結構可讓您使用簡單的預存程式, 從應用程式呼叫 Rn 模型和腳本的企業級部署。 將 SQL 的資料串流處理至 R 進程和 MPI 通道平行化, 即可達到額外的效能提升。 <br/><br/>您可以使用 T-sql [PREDICT](../t-sql/queries/predict-transact-sql.md)函數, 在先前以必要的二進位格式儲存的預先定型模型上執行[原生評分](sql-native-scoring.md)。|
 
-## <a name="linux-support-roadmap"></a>Linux 支援藍圖
+::: moniker-end
 
-當您使用 database engine 實例安裝機器學習服務套件時, SQL Server 2019 CTP 2.3 會新增適用于 R 和 Python 的 Linux 支援。 如需詳細資訊, 請參閱[在 Linux 上安裝 SQL Server Machine Learning 服務](../linux/sql-server-linux-setup-machine-learning.md)。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+## <a name="linux-support"></a>Linux 支援
+
+當您使用 database engine 實例安裝機器學習套件時, SQL Server 2019 新增 R 和 Python 的 Linux 支援。 如需詳細資訊, 請參閱[在 Linux 上安裝 SQL Server Machine Learning 服務](../linux/sql-server-linux-setup-machine-learning.md)。
 
 在 Linux 上, SQL Server 2017 不會有 R 或 Python 整合, 但您可以在 Linux 上使用[原生計分](sql-native-scoring.md), 因為這種功能可透過 t-sql [PREDICT](../t-sql/queries/predict-transact-sql.md)取得, 它是在 linux 上執行。 原生評分可從預先定型模型進行高效能的計分, 而不需要呼叫或甚至要求 R 執行時間。
+::: moniker-end
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="machine-learning-services-in-azure-sql-database"></a>Azure SQL Database 中的 Machine Learning 服務
 
-Azure SQL Database 中的 Machine Learning 服務 (使用 R) 處於公開預覽狀態。 如需詳細資訊, 請參閱[使用 R Azure SQL Database Machine Learning 服務 (預覽)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)。
+Azure SQL Database 中的 Machine Learning 服務處於公開預覽狀態。 如需詳細資訊, 請參閱[Azure SQL Database Machine Learning Services (預覽)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)。
 
 ## <a name="next-steps"></a>後續步驟
 
-+ [安裝 SQL Server 2017 Machine Learning 服務 (資料庫內)](install/sql-machine-learning-services-windows-install.md)
++ [安裝 SQL Server Machine Learning 服務 (資料庫內)](install/sql-machine-learning-services-windows-install.md)
 + [機器學習服務教學課程和範例](tutorials/machine-learning-services-tutorials.md)
