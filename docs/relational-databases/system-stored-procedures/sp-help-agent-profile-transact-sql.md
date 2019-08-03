@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_profile & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_help_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a431b41119e919adfd62178ed32473a931b455b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055216"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771461"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   顯示指定代理程式的設定檔。 這個預存程序執行於任何資料庫中的散發者端。  
   
@@ -38,7 +38,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @agent_type = ] agent_type` 是代理程式的類型。 *agent_type*已**int**，預設值是**0**，而且可以是下列值之一。  
+`[ @agent_type = ] agent_type`這是代理程式的類型。 *agent_type*是**int**, 預設值是**0**, 它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -48,7 +48,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|[合併代理程式]|  
 |**9**|佇列讀取器代理程式|  
   
-`[ @profile_id = ] profile_id` 是要顯示的設定檔識別碼。 *profile_id*已**int**，預設值是 **-1**，它會傳回中的所有設定檔**MSagent_profiles**資料表。  
+`[ @profile_id = ] profile_id`這是要顯示的設定檔識別碼。 *profile_id*是**int**, 預設值是 **-1**, 它會傳回**MSagent_profiles**資料表中的所有設定檔。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -62,13 +62,13 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**def_profile**|**bit**|指定這個設定檔是否為這個代理程式類型的預設值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_help_agent_profile**用於所有類型的複寫。  
+ **sp_help_agent_profile**用於所有類型的複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**replmonitor**固定的資料庫角色可以執行**sp_help_agent_profile**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**replmonitor**固定資料庫角色的成員, 才能夠執行**sp_help_agent_profile**。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

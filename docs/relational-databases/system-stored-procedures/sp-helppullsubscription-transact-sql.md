@@ -1,5 +1,5 @@
 ---
-title: sp_helppullsubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_helppullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 777e9b2afceb3e9a58030a225a0cbff34375165b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914967"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771439"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   顯示在訂閱者端的一或多項訂閱的相關資訊。 這個預存程序執行於訂閱資料庫的訂閱者端。  
   
@@ -40,13 +40,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是遠端伺服器的名稱。 *發行者*已**sysname**，預設值是 **%** ，它會傳回所有發行者的資訊。  
+`[ @publisher = ] 'publisher'`這是遠端伺服器的名稱。 *publisher*是**sysname**, 預設值 **%** 是, 它會傳回所有發行者的資訊。  
   
-`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 **%** ，它會傳回所有發行者資料庫。  
+`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**, 預設值 **%** 是, 它會傳回所有發行者資料庫。  
   
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 **%** ，它會傳回所有發行集。 如果這個參數等於 ALL，唯一的 「 提取訂用帳戶 independent_agent = **0**會傳回。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**, 預設值 **%** 是, 它會傳回所有發行集。 如果此參數等於 ALL, 則只會傳回 independent_agent = **0**的提取訂閱。  
   
-`[ @show_push = ] 'show_push'` 是是否要傳回所有發送訂閱。 *show_push*已**nvarchar(5)** ，預設值是 FALSE，這不會傳回發送訂閱。  
+`[ @show_push = ] 'show_push'`這是指是否要傳回所有發送訂閱。 *show_push*是**Nvarchar (5)** , 預設值是 FALSE, 不會傳回發送訂閱。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -70,41 +70,41 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**immediate_sync**|**bit**|每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案。|  
 |**發行者登入**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**發行者密碼**|**nvarchar(524)**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
-|**發行者 security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證<br /><br /> **2** = 同步處理觸發程序利用靜態**sysservers**項目來執行遠端程序呼叫 (RPC)，以及*發行者*必須定義在**sysservers**資料表中做為遠端伺服器或連結的伺服器。|  
-|**散發者**|**sysname**|散發者的名稱。|  
+|**發行者 security_mode**|**int**|在發行者端實作的安全性模式：<br /><br /> **0**  = 驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = Windows 驗證<br /><br /> **2** = 同步處理觸發程式會使用靜態**sysservers**專案來執行遠端程序呼叫 (RPC), 而且必須在**sysservers**資料表中將*發行者*定義為遠端伺服器或連結的伺服器。|  
+|**伺服器**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**distributor_password**|**nvarchar(524)**|用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
-|**distributor_security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
+|**distributor_security_mode**|**int**|在散發者端實作的安全性模式：<br /><br /> **0**  = 驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = Windows 驗證|  
 |**ftp_address**|**sysname**|只是為了與舊版相容。|  
 |**ftp_port**|**int**|只是為了與舊版相容。|  
 |**ftp_login**|**sysname**|只是為了與舊版相容。|  
 |**ftp_password**|**nvarchar(524)**|只是為了與舊版相容。|  
 |**alt_snapshot_folder**|**nvarchar(255)**|當位置不是預設位置，或在預設位置之外還有其他位置時，快照集資料夾的儲存位置。|  
 |**working_directory**|**nvarchar(255)**|當指定利用檔案傳輸通訊協定 (FTP) 來傳送快照集檔案的選項時，傳送快照集檔案之目錄的完整路徑。|  
-|**use_ftp**|**bit**|訂閱是透過網際網路來訂閱發行集，並設定 FTP 定址屬性。 如果**0**，訂用帳戶不使用 FTP。 如果**1**，訂閱便使用 FTP。|  
+|**use_ftp**|**bit**|訂閱是透過網際網路來訂閱發行集，並設定 FTP 定址屬性。 如果是**0**, 訂閱就不會使用 FTP。 如果是**1**, 訂閱會使用 FTP。|  
 |**publication_type**|**int**|指定發行集的複寫類型：<br /><br /> **0** = 異動複寫<br /><br /> **1** = 快照式複寫<br /><br /> **2** = 合併式複寫|  
 |**dts_package_name**|**sysname**|指定 Data Transformation Services (DTS) 封裝的名稱。|  
 |**dts_package_location**|**int**|DTS 封裝的儲存位置：<br /><br /> **0** = 散發者<br /><br /> **1** = 訂閱者|  
-|**offload_agent**|**bit**|指定是否能從遠端啟動代理程式。 如果**0**，無法從遠端啟動代理程式。|  
+|**offload_agent**|**bit**|指定是否能從遠端啟動代理程式。 如果是**0**, 就無法從遠端啟動代理程式。|  
 |**offload_server**|**sysname**|指定遠端啟用所用之伺服器的網路名稱。|  
-|**last_sync_status**|**int**|訂閱狀態：<br /><br /> **0** = 所有作業都在等待啟動<br /><br /> **1** = 一或多項作業會啟動<br /><br /> **2** = 所有作業都已執行成功<br /><br /> **3** = 至少一個作業正在執行<br /><br /> **4** = 所有作業都已排程且閒置<br /><br /> **5** = 至少一項作業嘗試在上一次失敗之後執行<br /><br /> **6** = 至少一項工作已順利執行失敗|  
+|**last_sync_status**|**int**|訂閱狀態：<br /><br /> **0** = 所有作業都在等候啟動<br /><br /> **1** = 一或多個作業正在啟動<br /><br /> **2** = 所有作業都已成功執行<br /><br /> **3** = 至少有一項作業正在執行<br /><br /> **4** = 所有作業都已排程且閒置<br /><br /> **5** = 在上一次失敗之後, 至少有一個作業嘗試執行<br /><br /> **6** = 至少有一項作業無法成功執行|  
 |**last_sync_summary**|**sysname**|上次同步處理結果的描述。|  
 |**last_sync_time**|**datetime**|更新訂閱資訊的時間。 這是 ISO 日期 (114) + ODBC 時間 (121) 的 UNICODE 字串。 格式為 yyyymmdd hh:mi:sss.mmm，其中 'yyyy' 是年份，'mm' 是月份，'dd' 是日期，'hh' 是小時，'mi' 是分鐘，'sss' 是秒鐘，'mmm' 是毫秒。|  
-|**job_login**|**nvarchar(512)**|是 Windows 帳戶散發代理程式執行，這傳回的格式如下*網域*\\*username*。|  
-|**job_password**|**sysname**|基於安全性理由，值為" **\*\*\*\*\*\*\*\*\*\*** 」 是一律傳回。|  
+|**job_login**|**nvarchar(512)**|這是用來執行散發代理程式的 Windows 帳戶, 傳回的格式為*domain* \\ *username*。|  
+|**job_password**|**sysname**|基於安全性理由, 一律會傳回 " **\* \* \* \* \* "的\*值。\* \* \* \***|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_helppullsubscription**用於快照式和異動複寫。  
+ **sp_helppullsubscription**用於快照式和異動複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helppullsubscription** 。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_helppullsubscription** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addpullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

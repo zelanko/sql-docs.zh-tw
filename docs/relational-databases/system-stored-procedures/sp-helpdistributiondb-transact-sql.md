@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdistributiondb (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2c97fec403da1913f7f39f1da706d107cd964aa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902921"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770927"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   傳回指定散發資料庫的屬性。 這個預存程序執行於散發資料庫的散發者端。  
   
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database = ] 'database_name'` 是為其傳回屬性的資料庫名稱。 *database_name*已**sysname**，預設值是 **%** 與散發者，並在其上相關聯的所有資料庫的使用者具有權限。  
+`[ @database = ] 'database_name'`這是傳回屬性的資料庫名稱。 *database_name*是**sysname**, 預設值 **%** 為與散發者相關聯的所有資料庫, 以及使用者有許可權的。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -46,7 +46,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**name**|**sysname**|散發資料庫的名稱。|  
 |**min_distretention**|**int**|在刪除交易之前的最小保留期限 (以小時為單位)。|  
 |**max_distretention**|**int**|在刪除交易之前的最大保留期限 (以小時為單位)。|  
-|**記錄保留**|**int**|保留記錄的時數。|  
+|**記錄保留期**|**int**|保留記錄的時數。|  
 |**history_cleanup_agent**|**sysname**|記錄清除代理程式的名稱。|  
 |**distribution_cleanup_agent**|**sysname**|散發清除代理程式的名稱。|  
 |**status**|**int**|僅供內部使用。|  
@@ -58,13 +58,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**log_file_size**|**int**|初始記錄檔大小 (以 MB 為單位)。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_helpdistributiondb**用於所有類型的複寫。  
+ **sp_helpdistributiondb**用於所有類型的複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 成員**db_owner**固定的資料庫角色或**replmonitor**散發資料庫中的角色及使用散發資料庫的發行集的發行集存取清單中的使用者可以執行**sp_helpdistributiondb**傳回檔案的相關資訊。 成員**公開金鑰**角色可以執行**sp_helpdistributiondb**傳回他們具有存取權的散發資料庫的非檔案相關資訊。  
+ 在散發資料庫中的**db_owner**固定資料庫角色或**replmonitor**角色的成員, 以及使用散發資料庫之發行集的發行集存取清單中的使用者, 都可以執行**sp_helpdistributiondb**來傳回檔案相關資訊。 **Public**角色的成員可以執行**sp_helpdistributiondb** , 以傳回其具有存取權之散發資料庫的非檔案相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

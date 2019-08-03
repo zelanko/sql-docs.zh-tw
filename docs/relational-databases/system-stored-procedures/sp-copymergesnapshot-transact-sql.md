@@ -1,5 +1,5 @@
 ---
-title: sp_copymergesnapshot (TRANSACT-SQL) |Microsoft Docs
+title: sp_copymergesnapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b96ef181f0a584c51258a81a37b9f246af46f090
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92cdc1bfda8d21f1f4c1c37b03d52b48b2fcd13f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108743"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771257"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  將指定的發行集的快照集資料夾複製到資料夾中列出 **@destination_folde** _r_。 這個預存程序執行於發行集資料庫的發行者端。  
+  將指定發行集的快照集資料夾複製到 **@destination_folde** _r_中所列的資料夾。 這個預存程序執行於發行集資料庫的發行者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,18 +37,18 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是快照集內容是要複製的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是要複製其快照集內容的發行集名稱。 *發行*集是**sysname**, 沒有預設值。  
   
-`[ @destination_folder = ] 'destination_folder'` 是要複製發行集快照集內容名稱。 *destination_folder*已**nvarchar(255)** ，沒有預設值。 *Destination_folder*可以是替代位置例如另一部伺服器、 網路磁碟機或抽取式媒體 （如 Cd-rom 或抽取式磁碟）。  
+`[ @destination_folder = ] 'destination_folder'`這是要複製發行集快照集內容的資料夾名稱。 *destination_folder*是**Nvarchar (255)** , 沒有預設值。 *Destination_folder*可以是替代位置, 例如另一部伺服器、網路磁碟機機或卸載式媒體 (例如 cd-rom 或抽取式磁碟)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_copymergesnapshot**用於合併式複寫中。 執行訂閱者[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和更新版本無法使用替代快照集位置。  
+ **sp_copymergesnapshot**用於合併式複寫中。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 執行7.0版和更早版本的訂閱者無法使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]替代快照集位置。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_copymergesnapshot**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_copymergesnapshot**。  
   
 ## <a name="see-also"></a>另請參閱  
  [替代快照集資料夾位置](../../relational-databases/replication/snapshot-options.md)   

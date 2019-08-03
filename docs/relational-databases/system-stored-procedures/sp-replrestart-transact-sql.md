@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fc15ed0b36738968a2b455157213a10dbceb2965
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.openlocfilehash: a9108ab25d1a23e06ccd93daad5f755a3a65aa44
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68300441"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770886"
 ---
 # <a name="spreplrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   在備份與還原期間，供異動複寫使用，以便同步處理散發者端的複寫資料和發行者端的資料。 這個預存程序執行於發行集資料庫的發行者端。  
   

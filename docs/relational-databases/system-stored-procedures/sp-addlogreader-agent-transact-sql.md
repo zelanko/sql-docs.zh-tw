@@ -1,5 +1,5 @@
 ---
-title: sp_addlogreader_agent & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_addlogreader_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 062561d440a276fccf5310731db7503e67f7f43e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50b989afef382a8315c29ea5257ad9b103e124c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118100"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769218"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   加入給定資料庫的記錄讀取器代理程式。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -46,42 +46,42 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_login = ] 'job_login'` 登入[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帳戶下執行的代理程式。 *job_login*已**nvarchar(257)** ，預設值是 NULL。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
+`[ @job_login = ] 'job_login'`這是用來執行[!INCLUDE[msCoName](../../includes/msconame-md.md)]代理程式之 Windows 帳戶的登入。 *job_login*是**Nvarchar (257)** , 預設值是 Null。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
   
 > [!NOTE]
->  針對非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，這必須是指定的相同登入[sp_adddistpublisher &#40;-&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)。  
+>  若為非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者, 這必須是在[ &#40;sp_adddistpublisher transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)中指定的相同登入。  
   
-`[ @job_password = ] 'job_password'` 這是代理程式所執行的 Windows 帳戶的密碼。 *job_password*已**sysname**，預設值是 NULL。  
-  
-> [!IMPORTANT]  
->  請勿將驗證資訊儲存在指令碼檔案中。 為了要有最佳的安全性，登入名稱和密碼應該在執行階段提供。  
-  
-`[ @job_name = ] 'job_name'` 是現有的代理程式作業名稱。 *job_name*已**sysname**，預設值是 NULL。 只有在利用現有的作業來啟動代理程式，而不用新建立的作業 (預設值) 時，才指定這個參數。  
-  
-`[ @publisher_security_mode = ] publisher_security_mode` 是的安全性模式，代理程式用來連接到發行者。 *publisher_security_mode*已**smallint**，預設值是**1**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，並**1**指定 Windows 驗證。 值為**0**您必須指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
-  
-`[ @publisher_login = ] 'publisher_login'` 已連接到發行者時使用的登入。 *publisher_login*已**sysname**，預設值是 NULL。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*為 NULL 並*publisher_security_mode*是**1**，在指定的 Windows 帳戶*job_login*將使用當連接到發行者。  
-  
-`[ @publisher_password = ] 'publisher_password'` 這是連接到 「 發行者 」 時用的密碼。 *publisher_password*已**sysname**，預設值是 NULL。  
+`[ @job_password = ] 'job_password'`這是執行代理程式之 Windows 帳戶的密碼。 *job_password*是**sysname**, 預設值是 Null。  
   
 > [!IMPORTANT]  
 >  請勿將驗證資訊儲存在指令碼檔案中。 為了要有最佳的安全性，登入名稱和密碼應該在執行階段提供。  
   
-`[ @publisher = ] 'publisher'` 名稱非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'`這是現有代理程式作業的名稱。 *job_name*是**sysname**, 預設值是 Null。 只有在利用現有的作業來啟動代理程式，而不用新建立的作業 (預設值) 時，才指定這個參數。  
+  
+`[ @publisher_security_mode = ] publisher_security_mode`這是連接到發行者時, 代理程式所使用的安全性模式。 *publisher_security_mode*是**Smallint**, 預設值是**1**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證, **1**指定 Windows 驗證。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者必須指定**0**的值。  
+  
+`[ @publisher_login = ] 'publisher_login'`這是連接到發行者時所使用的登入。 *publisher_login*是**sysname**, 預設值是 Null。 當*publisher_security_mode*為**0**時, 必須指定*publisher_login* 。 如果*publisher_login*為 Null, 而*publisher_security_mode*為**1**, 則連接到發行者時, 將會使用*job_login*中指定的 Windows 帳戶。  
+  
+`[ @publisher_password = ] 'publisher_password'`這是連接到發行者時所使用的密碼。 *publisher_password*是**sysname**, 預設值是 Null。  
+  
+> [!IMPORTANT]  
+>  請勿將驗證資訊儲存在指令碼檔案中。 為了要有最佳的安全性，登入名稱和密碼應該在執行階段提供。  
+  
+`[ @publisher = ] 'publisher'`這是非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者的名稱。 *publisher*是**sysname**, 預設值是 Null。  
   
 > [!NOTE]  
 >  您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
  **sp_addlogreader_agent**用於異動複寫中。  
   
- 您必須執行**sp_addlogreader_agent**以加入記錄讀取器代理程式，如果您已升級的資料庫，啟用以供複寫到此版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用這個資料庫建立發行集之前。  
+ 如果您在使用資料庫建立發行集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前, 將已啟用複寫的資料庫升級為此版本, 您必須執行 sp_addlogreader_agent 來加入記錄讀取器代理程式。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addlogreader_agent**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_addlogreader_agent**。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addlogreader-agent-tr_1.sql)]  

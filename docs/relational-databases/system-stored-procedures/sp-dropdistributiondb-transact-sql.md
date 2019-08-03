@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3acf4ee5515bad2db88e2d928ca897ba9e04a085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 960da4d98ea33ceb3ecdb48e36d565854484feb9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927816"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768862"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   卸除散發資料庫。 如果資料庫所用的實體檔案沒有另一個資料庫在使用，便卸除這些實體檔案。 這個預存程序執行於任何資料庫中的散發者端。  
   
@@ -37,17 +37,17 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database = ] 'database'` 是要卸除的資料庫。 *資料庫*已**sysname**，沒有預設值。  
+`[ @database = ] 'database'`這是要卸載的資料庫。 *資料庫*是**sysname**, 沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_dropdistributiondb**用於所有類型的複寫。  
+ **sp_dropdistributiondb**用於所有類型的複寫中。  
   
- 必須執行這個預存程序，然後再卸除散發者端，執行**sp_dropdistributor**。  
+ 執行**sp_dropdistributor**之前, 必須先執行這個預存程式, 然後再卸載散發者。  
   
- **sp_dropdistributiondb**如果有的話，也會移除散發資料庫的佇列讀取器代理程式作業。  
+ **sp_dropdistributiondb**也會移除散發資料庫的佇列讀取器代理程式作業 (如果有的話)。  
   
  若要停用散發，散發資料庫必須在線上。 如果散發資料庫的資料庫快照集存在，您必須先卸除它，才能停用散發。 資料庫快照集是資料庫的唯讀離線複本，與複寫快照集無關。 如需詳細資訊，請參閱[資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
@@ -55,7 +55,7 @@ sp_dropdistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_dropdistributiondb**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色的成員, 才能夠執行**sp_dropdistributiondb**。  
   
 ## <a name="see-also"></a>另請參閱  
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   

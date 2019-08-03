@@ -1,5 +1,5 @@
 ---
-title: sp_restoredbreplication & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_restoredbreplication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d868ea9ce585dece65653cb010d0ed73b1b0cf51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0aeb3d94bf1b67674b59f756f330e1d460f0cde7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129641"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771116"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  如果將資料庫還原到在其他情況下無法執行複寫處理的非原始伺服器、資料庫或系統，便移除複寫設定。 將複寫的資料庫還原到並非備份來源的伺服器或資料庫時，無法保留複寫設定。 在還原時，伺服器就會呼叫**sp_restoredbreplication**直接以自動移除還原的資料庫中的複寫中繼資料。  
+  如果將資料庫還原到在其他情況下無法執行複寫處理的非原始伺服器、資料庫或系統，便移除複寫設定。 將複寫的資料庫還原到並非備份來源的伺服器或資料庫時，無法保留複寫設定。 在還原時, 伺服器會直接呼叫**sp_restoredbreplication** , 以自動從還原的資料庫中移除複寫中繼資料。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,22 +40,22 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @srv_orig = ] 'original_server_name'` 備份建立所在的伺服器名稱。 *original_server_name&lt*已**sysname**，沒有預設值。  
+`[ @srv_orig = ] 'original_server_name'`建立備份的伺服器名稱。 *original_server_name*是**sysname**, 沒有預設值。  
   
-`[ @db_orig = ] 'original_database_name'` 備份資料庫的名稱。 *original_database_name*已**sysname**，沒有預設值。  
+`[ @db_orig = ] 'original_database_name'`已備份的資料庫名稱。 *original_database_name*是**sysname**, 沒有預設值。  
   
 `[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_restoredbreplication**用於所有類型的複寫。  
+ **sp_restoredbreplication**用於所有類型的複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**或是**dbcreator**固定的伺服器角色或**dbo**資料庫結構描述可以執行**sp_restoredbreplication**.  
+ 只有**系統管理員 (sysadmin** ) 或**dbcreator**固定伺服器角色的成員或**dbo**資料庫架構, 才能夠執行**sp_restoredbreplication**。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscription & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_changesubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016541"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770672"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  變更快照集或交易式發送訂閱的屬性，或變更佇列更新異動複寫所涉及的提取訂閱的屬性。 若要變更提取訂閱的所有其他類型的屬性，請使用[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。 **sp_changesubscription**執行於發行集資料庫的發行者端。  
+  變更快照集或交易式發送訂閱的屬性，或變更佇列更新異動複寫所涉及的提取訂閱的屬性。 若要變更所有其他類型之提取訂閱的屬性, 請使用[sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。 **sp_changesubscription**是在發行集資料庫的發行者端執行。  
   
 > [!IMPORTANT]  
 >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -48,56 +48,56 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是要變更的發行集的名稱。 *發行集*已**sysname**，沒有預設值  
+`[ @publication = ] 'publication'`這是要變更的發行集名稱。 *發行*集是**sysname**, 沒有預設值  
   
-`[ @article = ] 'article'` 是要變更的發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'`這是要變更的發行項名稱。 *文章*是**sysname**, 沒有預設值。  
   
-`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是**sysname**, 沒有預設值。  
   
-`[ @destination_db = ] 'destination_db'` 是訂閱資料庫的名稱。 *destination_db*已**sysname**，沒有預設值。  
+`[ @destination_db = ] 'destination_db'`這是訂閱資料庫的名稱。 *destination_db*是**sysname**, 沒有預設值。  
   
-`[ @property = ] 'property'` 是要變更指定的訂用帳戶的屬性。 *屬性*已**nvarchar(30)** ，而且可以是下列其中一個資料表中的值。  
+`[ @property = ] 'property'`這是指定之訂用帳戶要變更的屬性。 *property*是**Nvarchar (30)** , 它可以是資料表中的其中一個值。  
   
-`[ @value = ] 'value'` 指定的新值*屬性*。 *值*已**nvarchar(4000)** ，而且可以是下列其中一個資料表中的值。  
+`[ @value = ] 'value'`這是指定之*屬性*的新值。 *value*是**Nvarchar (4000)** , 它可以是資料表中的其中一個值。  
   
 |屬性|值|描述|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。|  
 |**distrib_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
-|**subscriber_catalog**||建立 OLE DB 提供者連接時所用的目錄。 這個屬性是唯一有效的非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。|  
-|**subscriber_datasource**||OLE DB 提供者所了解的資料來源名稱。 *這個屬性是唯一有效的非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者。*|  
-|**subscriber_location**||OLE DB 提供者所了解的資料庫位置。 *這個屬性是唯一有效的非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者。*|  
+|**subscriber_catalog**||建立 OLE DB 提供者連接時所用的目錄。 此屬性只對非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者有效。|  
+|**subscriber_datasource**||OLE DB 提供者所了解的資料來源名稱。 *此屬性只對非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者有效。*|  
+|**subscriber_location**||OLE DB 提供者所了解的資料庫位置。 *此屬性只對非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者有效。*|  
 |**subscriber_login**||訂閱者的登入名稱。|  
 |**subscriber_password**||提供之登入的增強式密碼。|  
 |**subscriber_security_mode**|**1**|當連接到發行者時，使用 Windows 驗證。|  
 ||**0**|當連接到訂閱者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
-|**subscriber_provider**||非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的 OLE DB 提供者登錄所用的唯一程式設計識別碼 (PROGID)。 *這個屬性是唯一有效的非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者。*|  
-|**subscriber_providerstring**||OLE DB 提供者特定的連接字串，用來識別資料來源。 *這個屬性是唯一有效的非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者。*|  
-|**subscriptionstreams**||這是每個散發代理程式將數批變更並行套用在訂閱者時所能使用的連接數目。 值範圍**1**要**64**支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 這個屬性必須是**0**為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者 」、 「 Oracle 發行者 」 或 「 對等項目-訂用帳戶。|  
+|**subscriber_provider**||非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的 OLE DB 提供者登錄所用的唯一程式設計識別碼 (PROGID)。 *此屬性只對非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者有效。*|  
+|**subscriber_providerstring**||OLE DB 提供者特定的連接字串，用來識別資料來源。 *此屬性只對非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *訂閱者有效。*|  
+|**subscriptionstreams**||這是每個散發代理程式將數批變更並行套用在訂閱者時所能使用的連接數目。 發行者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援從**1**到**64**的值範圍。 對於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者、Oracle 發行者或點對點訂閱, 此屬性必須為**0** 。|  
 |**subscriber_type**|**1**|ODBC 資料來源伺服器|  
 ||**3**|OLE DB 提供者|  
-|**memory_optimized**|**bit**|指出訂用帳戶支援記憶體最佳化的資料表。 *memory_optimized*已**元**，其中 1 等於 true （訂用帳戶支援記憶體最佳化的資料表）。|  
+|**memory_optimized**|**bit**|表示訂用帳戶支援記憶體優化資料表。 *memory_optimized*是**bit**, 其中1等於 true (訂閱支援記憶體優化的資料表)。|  
   
-`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**, 預設值是 Null。  
   
 > [!NOTE]  
->  *發行者*不應指定為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+>  發行者不應指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_changesubscription**用於快照式和異動複寫。  
+ **sp_changesubscription**用於快照式和異動複寫中。  
   
- **sp_changesubscription**只可用來修改屬性的發送訂閱或提取訂閱參與佇列更新異動複寫。 若要變更提取訂閱的所有其他類型的屬性，請使用[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。  
+ **sp_changesubscription**只能用來修改包含在佇列更新異動複寫中的發送訂閱或提取訂閱的屬性。 若要變更所有其他類型之提取訂閱的屬性, 請使用[sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。  
   
  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changesubscription**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_changesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_droppublication (TRANSACT-SQL) |Microsoft Docs
+title: sp_droppublication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: da51093c6d2c5eb670a35a8cce09b6727b3507f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bbcd4c8c70d2d381df77ccf8a4a99cec82d3e49
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933859"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768232"
 ---
 # <a name="spdroppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   卸除發行集及其相關快照集代理程式。 在卸除發行集之前，必須先卸除所有訂閱。 發行集中的發行項會自動卸除。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -38,22 +38,22 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是要卸除的發行集的名稱。 *發行集*已**sysname**，沒有預設值。 如果**所有**指定，則會卸除發行集資料庫，除了含有訂閱的所有發行集。  
+`[ @publication = ] 'publication'`這是要卸載的發行集名稱。 *發行*集是**sysname**, 沒有預設值。 如果指定**all** , 則除了具有訂閱的發行集之外, 所有發行集都會從發行集資料庫中卸載。  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_droppublication**用於快照式複寫和異動複寫。  
+ **sp_droppublication**用於快照式複寫和異動複寫中。  
   
- **sp_droppublication**遞迴卸除發行集相關聯的所有發行項，然後再卸除發行集本身。 如果發行集有一或多項訂閱，便不能移除它。 如需有關如何移除訂用帳戶的資訊，請參閱 < [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)並[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)。  
+ **sp_droppublication**會以遞迴方式卸載與發行集相關聯的所有文章, 然後卸載發行集本身。 如果發行集有一或多項訂閱，便不能移除它。 如需如何移除訂閱的詳細資訊, 請參閱[刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)和[刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)。  
   
- 執行**sp_droppublication**卸除發行集不會移除已發行的物件從發行集資料庫或從訂閱資料庫對應的物件。 請使用 DROP\<物件 > 來手動移除這些物件，如有必要。  
+ 執行**sp_droppublication**來卸載發行集並不會從發行集資料庫中移除發行的物件, 也不會從訂閱資料庫中移除對應的物件。 如有\<必要, 請使用 DROP object > 以手動方式移除這些物件。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_droppublication**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色的成員, 才能夠執行**sp_droppublication**。  
   
 ## <a name="examples"></a>範例  
  [!code-sql[HowTo#sp_droppublication](../../relational-databases/replication/codesnippet/tsql/sp-droppublication-trans_1.sql)]  

@@ -1,5 +1,5 @@
 ---
-title: sp_browsereplcmds (TRANSACT-SQL) |Microsoft Docs
+title: sp_browsereplcmds (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b29ee604f1b584fcbdcd0ef91e32c84d89cc5f96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045996"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769002"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   傳回散發資料庫所儲存的複寫命令之可讀取版本中的結果集，它用來作為一項診斷工具。 這個預存程序執行於散發資料庫的散發者端。  
   
@@ -44,24 +44,24 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` 指定的最低值確實序號來傳回。 *xact_seqno_start&lt*已**nchar(22)** ，預設值是 0x00000000000000000000。  
+`[ @xact_seqno_start = ] 'xact_seqno_start'`指定要傳回的最小值確切序號。 *xact_seqno_start*是**Nchar (22)** , 預設值是值是0x00000000000000000000。  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` 指定的最高確實序號來傳回。 *xact_seqno_end&lt*已**nchar(22)** ，預設值是 0xFFFFFFFFFFFFFFFFFFFF。  
+`[ @xact_seqno_end = ] 'xact_seqno_end'`指定要傳回的確切最大序號。 *xact_seqno_end*是**Nchar (22)** , 預設值是值是0xffffffffffffffffffff。  
   
-`[ @originator_id = ] 'originator_id'` 指定如果具有指定的命令*originator_id*會傳回。 *originator_id*已**int**，預設值是 NULL。  
+`[ @originator_id = ] 'originator_id'`指定是否傳回具有指定之*originator_id*的命令。 *originator_id*是**int**, 預設值是 Null。  
   
-`[ @publisher_database_id = ] 'publisher_database_id'` 指定如果具有指定的命令*publisher_database_id*會傳回。 *publisher_database_id*已**int**，預設值是 NULL。  
+`[ @publisher_database_id = ] 'publisher_database_id'`指定是否傳回具有指定之*publisher_database_id*的命令。 *publisher_database_id*是**int**, 預設值是 Null。  
   
-`[ @article_id = ] 'article_id'` 指定如果具有指定的命令*article_id*會傳回。 *article_id*已**int**，預設值是 NULL。  
+`[ @article_id = ] 'article_id'`指定是否傳回具有指定之*article_id*的命令。 *article_id*是**int**, 預設值是 Null。  
   
-`[ @command_id = ] command_id` 是中的命令的位置[MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)要解碼。 *command_id*已**int**，預設值是 NULL。 如果指定，所有其他參數也必須指定，並*xact_seqno_start&lt*必須與相同*xact_seqno_end&lt*。  
+`[ @command_id = ] command_id`這是要解碼的[MSrepl_commands &#40;transact-sql&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)中命令的位置。 *command_id*是**int**, 預設值是 Null。 如果指定, 則必須同時指定所有其他參數, 而且*xact_seqno_start*必須與*xact_seqno_end*相同。  
   
-`[ @agent_id = ] agent_id` 指定只有特定的複寫代理程式的命令會傳回。 *agent_id*已**int**，預設值是 NULL。  
+`[ @agent_id = ] agent_id`指定只傳回特定複寫代理程式的命令。 *agent_id*是**int**, 預設值是 Null。  
   
-`[ @compatibility_level = ] compatibility_level` 是的新版[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所在*compatibility_level*是**int**，預設值是 9000000。  
+`[ @compatibility_level = ] compatibility_level`這是*compatibility_level*是[!INCLUDE[msCoName](../../includes/msconame-md.md)] **int**的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 預設值是9000000。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -78,7 +78,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_db_version**|**int**|引發交易的資料庫版本。|  
 |**originator_lsn**|**varbinary(16)**|識別命令在原始發行集中的記錄序號 (LSN)。 用於點對點異動複寫中。|  
 |**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
-|**command_id**|**int**|中的命令識別碼[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)。|  
+|**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)中的命令識別碼。|  
   
  在結果集中，較長的命令可能會分成許多資料列。  
   
@@ -86,11 +86,11 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  **sp_browsereplcmds**用於異動複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定伺服器角色或成員**db_owner**或是**replmonitor**散發資料庫的固定的資料庫角色可以執行**sp_browsereplcmds**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色的成員, 或是散發資料庫中**db_owner**或**replmonitor**固定資料庫角色的成員, 才能夠執行**sp_browsereplcmds**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_helparticledts (TRANSACT-SQL) |Microsoft Docs
+title: sp_helparticledts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 153b7736f126a09765eaac4c364b322fffc96c48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9c489a08291aea3d1c50a6418dc8e1e853dce12
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084937"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771067"
 ---
 # <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   用來取得當利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 來建立轉換訂閱時，所用正確自訂工作名稱的相關資訊。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -37,9 +37,9 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**, 沒有預設值。  
   
-`[ @article = ] 'article'` 是發行集中發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'`這是發行集中的發行項名稱。 *文章*是**sysname**, 沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -52,14 +52,14 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 |**post_script_task_name**|**sysname**|在複製快照集資料之後發生的程式設計工作之工作名稱。 發生錯誤時，中止執行程式。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_helparticledts**用於快照式複寫和異動複寫。  
+ **sp_helparticledts**用於快照式複寫和異動複寫中。  
   
  當在 Data Transformation Services (DTS) 程式中命名作業時，必須遵照複寫代理程式所需要的一些命名慣例。 如果是自訂工作，如執行 SQL 工作，名稱就是發行項名稱、前置詞和選擇性部分的串連字串。 當撰寫程式碼時，如果您不確定工作名稱應該是什麼，結果集會提供應該使用的工作名稱。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色並**db_owner**固定的資料庫角色可以執行**sp_helparticledts**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色與**db_owner**固定資料庫角色的成員, 才能夠執行**sp_helparticledts**。  
   
   

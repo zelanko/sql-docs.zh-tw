@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplicationdboption (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpreplicationdboption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997568"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771535"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   顯示發行者端的資料庫是否啟用複寫。 這個預存程序執行於任何資料庫的發行者端。 *不支援 Oracle 發行者。*  
   
@@ -39,17 +39,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'dbname'` 是資料庫的名稱。 *dbname*已**sysname**，預設值是 **%** 。 如果 **%** ，則結果集包含在 「 發行者 」 的所有資料庫，否則為指定的資料庫上的唯一資訊會傳回。 如下所描述，使用者沒有適當權限的任何資料庫都不會傳回資訊。  
+`[ @dbname = ] 'dbname'`這是資料庫的名稱。 *dbname*是**sysname**, 預設值 **%** 是。 如果 **%** 為, 則結果集會包含「發行者」端的所有資料庫, 否則只會傳回指定資料庫的資訊。 如下所描述，使用者沒有適當權限的任何資料庫都不會傳回資訊。  
   
-`[ @type = ] 'type'` 限制結果集包含只有在其上的資料庫指定的複寫選項*型別*已啟用值。 *型別*已**sysname**，而且可以是下列值之一。  
+`[ @type = ] 'type'`限制結果集只包含已啟用指定之複寫選項*類型*值的資料庫。 *類型*為**sysname**, 而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**publish**|允許異動複寫。|  
-|**合併式發行**|允許合併式複寫。|  
-|**允許的複寫**（預設值）|允許交易式或合併式複寫。|  
+|**合併發行**|允許合併式複寫。|  
+|**允許**複寫預設|允許交易式或合併式複寫。|  
   
-`[ @reserved = ] reserved` 指定是否傳回現有發行集和訂閱的資訊。 *保留*已**元**，預設值為 0。 如果**1**，結果集會包含有關所指定的資料庫是否有任何現有的發行集或訂用帳戶。  
+`[ @reserved = ] reserved`指定是否傳回現有發行集和訂閱的資訊。 *reserved*是**bit**, 預設值是0。 如果是**1**, 結果集會包含有關指定的資料庫是否有任何現有發行集或訂閱的資訊。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -57,21 +57,21 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|資料庫的名稱。|  
 |**id**|**int**|資料庫識別碼。|  
-|**transpublish**|**bit**|如果資料庫已啟用快照集或交易式發行;值**1**表示啟用快照集或交易式發行。|  
-|**mergepublish**|**bit**|如果資料庫已啟用合併式發行;值**1**表示合併發行啟用。|  
-|**dbowner**|**bit**|如果使用者是隸屬**db_owner**固定資料庫角色; 值**1**指出使用者是此角色的成員。|  
-|**dbreadonly**|**bit**|是如果要將資料庫標示為唯讀的;值**1**表示資料庫是唯讀的。|  
-|**haspublications**|**bit**|是指資料庫是否有任何現有的發行集;值**1**表示有現有的發行集。|  
-|**haspullsubscriptions**|**bit**|是指資料庫是否有任何現有的提取訂閱;值**1**表示那里現有的提取訂閱。|  
+|**transpublish**|**bit**|如果資料庫已啟用快照集或交易式發行, 則為,值為**1**時, 表示已啟用快照式或交易式發行。|  
+|**mergepublish**|**bit**|如果資料庫已啟用合併發行, 則為,值為**1**時, 表示已啟用合併發行。|  
+|**dbowner**|**bit**|如果使用者是**db_owner**固定資料庫角色的成員, 則為,其中, **1**的值表示使用者是這個角色的成員。|  
+|**dbreadonly**|**bit**|這是指資料庫是否標示為唯讀;**1**的值表示資料庫是唯讀的。|  
+|**haspublications**|**bit**|這是指資料庫是否有任何現有的發行集;其中**1**值表示有現有的發行集。|  
+|**haspullsubscriptions**|**bit**|這是指資料庫是否有任何現有的提取訂閱;其中**1**值表示有現有的提取訂閱。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_helpreplicationdboption**用於快照式、 交易式和合併式複寫。  
+ **sp_helpreplicationdboption**用於快照式、交易式和合併式複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 成員**sysadmin**固定的伺服器角色可以執行**sp_helpreplicationdboption**的任何資料庫。 成員**db_owner**固定的資料庫角色可以執行**sp_helpreplicationdboption**該資料庫。  
+ **系統管理員 (sysadmin** ) 固定伺服器角色的成員可以執行任何資料庫的**sp_helpreplicationdboption** 。 **Db_owner**固定資料庫角色的成員可以執行該資料庫的**sp_helpreplicationdboption** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_replicationdboption &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

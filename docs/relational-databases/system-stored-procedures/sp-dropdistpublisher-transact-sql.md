@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistpublisher & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_dropdistpublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fcb1487d4291116bfb6fc0ad266b147e0fd69981
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8558c8d9caffd27d7a87743c88e1d62c430640fd
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927830"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768907"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   卸除散發發行者。 這個預存程序執行於任何資料庫中的散發者端。  
   
@@ -39,37 +39,37 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是要卸除 「 發行者 」。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'`這是要卸載的發行者。 *publisher*是**sysname**, 沒有預設值。  
   
-`[ @no_checks = ] no_checks` 指定是否**sp_dropdistpublisher**檢查發行者已解除安裝散發者的伺服器。 *no_checks*已**位元**，預設值是**0**。  
+`[ @no_checks = ] no_checks`指定**sp_dropdistpublisher**是否檢查發行者是否已將伺服器卸載為散發者。 *no_checks*是**bit**, 預設值是**0**。  
   
- 如果**0**，複寫會確認遠端發行者已解除安裝本機伺服器作為散發者。 如果發行者在本機，複寫會確認本機伺服器中沒有其餘發行集或散發物件。  
+ 如果為**0**, 則複寫會確認遠端發行者是否已將本機伺服器卸載為散發者。 如果發行者在本機，複寫會確認本機伺服器中沒有其餘發行集或散發物件。  
   
- 如果**1**，即使無法到達遠端發行者，會卸除散發發行者相關聯的所有複寫物件。 完成之後，遠端發行者必須使用解除安裝複寫[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)具有 **@ignore_distributor**  =  **1**。  
+ 如果是**1**, 即使無法連線到遠端發行者, 也會卸載與散發發行者相關聯的所有複寫物件。 這麼做之後, 遠端發行者必須使用[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) **@ignore_distributor**  = 搭配**1**來卸載複寫。  
   
-`[ @ignore_distributor = ] ignore_distributor` 指定是否將散發物件留在散發者時移除發行者。 *ignore_distributor*已**元**而且可以是下列其中一個值：  
+`[ @ignore_distributor = ] ignore_distributor`指定當移除發行者時, 散發物件是否留在散發者端。 *ignore_distributor*是**bit** , 它可以是下列其中一個值:  
   
- **1** = 散發物件屬於*發行者*維持在 「 散發者 」。  
+ **1** = 屬於發行者的散發物件會保留在散發*者*端。  
   
- **0** = 散發物件*發行者*會清除在散發者。  
+ **0** = 在散發者上清除*發行者*的散發物件。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_dropdistpublisher**用於所有類型的複寫。  
+ **sp_dropdistpublisher**用於所有類型的複寫中。  
   
- 如果無法卸除 「 發行者 」 端卸除 Oracle 發行者 」 時**sp_dropdistpublisher**傳回發生錯誤，「 發行者 」 端的散發者物件會移除。  
+ 卸載「Oracle 發行者」時, 如果無法捨棄「發行者**sp_dropdistpublisher** , 則會傳回錯誤, 並移除「發行者」的「散發者」物件。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_dropdistpublisher**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色的成員, 才能夠執行**sp_dropdistpublisher**。  
   
 ## <a name="see-also"></a>另請參閱  
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistpublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_reinitpullsubscription & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_reinitpullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1389e76d4e679a3ee16c548bf752d5668dfa48b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075667"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762343"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   將交易式提取或匿名訂閱標示為在下次執行散發代理程式時重新初始化。 這個預存程序執行於提取訂閱資料庫的訂閱者端。  
   
@@ -39,31 +39,31 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**, 沒有預設值。  
   
-`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'`這是發行者資料庫的名稱。 *publisher_db*是**sysname**, 沒有預設值。  
   
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 all，將標示為重新初始化所有訂閱。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**, 預設值是 all, 會將所有訂閱標示為重新初始化。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
  **sp_reinitpullsubscription**用於異動複寫中。  
   
- **sp_reinitpullsubscription**的對等項目-異動複寫不支援。  
+ 對等異動複寫不支援**sp_reinitpullsubscription** 。  
   
- **sp_reinitpullsubscription**可以從 「 訂閱者 」 重新初始化訂閱，散發代理程式下一次執行期間呼叫。  
+ **sp_reinitpullsubscription**可以在下一次執行散發代理程式時, 從訂閱者端呼叫來重新初始化訂閱。  
   
- 值建立的發行集的訂閱**false** for **@immediate_sync** 無法從訂閱者重新初始化。  
+ 無法從訂閱者重新初始化使用值為 **@immediate_sync** false 所建立之發行集的訂閱。  
   
- 您可以執行重新初始化提取訂閱**sp_reinitpullsubscription**訂閱者端或**sp_reinitsubscription**在 「 發行者 」。  
+ 您可以藉由在訂閱者端執行**sp_reinitpullsubscription**或在發行者端的**sp_reinitsubscription** , 重新初始化提取訂閱。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_reinitpullsubscription**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_reinitpullsubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
  [重新初始化訂閱](../../relational-databases/replication/reinitialize-a-subscription.md)   

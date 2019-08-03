@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_parameter & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_help_agent_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 616e5547c4acf59f88dc67c5aabc507eb30fe251
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 398e1eebbb269fa1f1507725fefff820c5174f58
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055305"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771515"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  傳回設定檔的所有參數[m &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)系統資料表。 這個預存程序執行於在任何資料庫執行代理程式的散發者端。  
+  從[MSagent_parameters &#40;transact-sql&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)系統資料表中傳回設定檔的所有參數。 這個預存程序執行於在任何資料庫執行代理程式的散發者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] profile_id` 從設定檔的識別碼[m &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)資料表。 *profile_id*已**int**，預設值是 **-1**，它會傳回所有參數。  
+`[ @profile_id = ] profile_id`這是[MSagent_parameters &#40;transact-sql&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)資料表中的設定檔識別碼。 *profile_id*是**int**, 預設值是 **-1**, 它會傳回所有參數。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -48,13 +48,13 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 |**value**|**nvarchar(255)**|參數的值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_help_agent_parameter**用於所有類型的複寫。  
+ **sp_help_agent_parameter**用於所有類型的複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**replmonitor**固定的資料庫角色可以執行**sp_help_agent_parameter**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**replmonitor**固定資料庫角色的成員, 才能夠執行**sp_help_agent_parameter**。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorsubscriptionpendingcmds & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_replmonitorsubscriptionpendingcmds (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e6def32ab27560f68902470d0b7add715de665d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6059c4834c37c3c61227fdaf3c9ea3c94e1b5b9a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090014"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770905"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   傳回對於交易式發行集的訂閱之暫止命令數目的相關資訊，以及處理它們需要大約多少時間的概略估計。 這個預存程序會針對每項傳回的訂閱，各傳回一個資料列。 這個預存程序用來監視複寫，執行於散發資料庫的散發者端。  
   
@@ -42,17 +42,17 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'`這是發行者的名稱。 *publisher*是**sysname**, 沒有預設值。  
   
-`[ @publisher_db = ] 'publisher_db'` 是已發行名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'`這是已發行之資料庫的名稱。 *publisher_db*是**sysname**, 沒有預設值。  
   
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**, 沒有預設值。  
   
-`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是**sysname**, 沒有預設值。  
   
-`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，沒有預設值。  
+`[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**, 沒有預設值。  
   
-`[ @subscription_type = ] subscription_type` 如果訂用帳戶的類型。 *publication_type*已**int**，沒有預設值，它可以是下列值之一。  
+`[ @subscription_type = ] subscription_type`如果訂用帳戶的類型, 則為。 *publication_type*是**int**, 沒有預設值, 而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -67,13 +67,13 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 |**estimatedprocesstime**|**int**|估計將所有暫止命令傳遞給訂閱者所需要的秒數。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
  **sp_replmonitorsubscriptionpendingcmds**用於異動複寫。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色的成員的散發者端**db_owner**散發資料庫中的固定的資料庫角色可以執行**sp_replmonitorsubscriptionpendingcmds**。 發行集存取清單成員可以執行使用散發資料庫的發行集**sp_replmonitorsubscriptionpendingcmds**傳回暫止這個發行集的命令。  
+ 只有在散發者端的**系統管理員 (sysadmin** ) 固定伺服器角色成員, 或散發資料庫中**db_owner**固定資料庫角色的成員, 才能夠執行**sp_replmonitorsubscriptionpendingcmds**。 使用散發資料庫之發行集的發行集存取清單的成員可以執行**sp_replmonitorsubscriptionpendingcmds** , 以傳回該發行集的暫止命令。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

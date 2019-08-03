@@ -1,5 +1,5 @@
 ---
-title: sp_refreshsubscriptions (TRANSACT-SQL) |Microsoft Docs
+title: sp_refreshsubscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9de03f10d16e81f97bd155212c8e2dafbd81216b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 548285b08ceedab49674b35128216bed320c3e7c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075763"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771179"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  將訂用帳戶新增至新的文章中，針對至立即更新的發行集的所有現有訂閱者。 這個預存程序執行於發行集資料庫的發行者端。  
+  針對立即更新發行集的所有現有訂閱者, 將訂閱新增至新文章。 這個預存程序執行於發行集資料庫的發行者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,21 +37,21 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是用來重新整理訂閱的發行集。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'`這是要重新整理訂閱的發行集。 *發行*集是**sysname**, 沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_refreshsubscriptions**用於快照式、 交易式和合併式複寫。  
+ **sp_refreshsubscriptions**用於快照式、交易式和合併式複寫中。  
   
- **sp_refreshsubscriptions**會呼叫**sp_addarticle**針對立即更新發行集。  
+ **sp_addarticle**會針對立即更新發行集呼叫**sp_refreshsubscriptions** 。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_refreshsubscriptions**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_refreshsubscriptions**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

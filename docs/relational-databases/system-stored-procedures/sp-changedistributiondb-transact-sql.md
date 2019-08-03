@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributiondb (TRANSACT-SQL) |Microsoft Docs
+title: sp_changedistributiondb (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b2f098fab2856b51b389e2161fdbe3281e1e3cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120166"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768964"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   變更散發資料庫的屬性。 這個預存程序執行於任何資料庫中的散發者端。  
   
@@ -39,30 +39,30 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database = ] 'database'` 是散發資料庫的名稱。 *資料庫*已**sysname**，沒有預設值。  
+`[ @database = ] 'database'`這是散發資料庫的名稱。 *資料庫*是**sysname**, 沒有預設值。  
   
-`[ @property = ] 'property'` 是要變更給定資料庫的屬性。 *屬性*已**sysname**，而且可以是下列值之一。  
+`[ @property = ] 'property'`這是給定資料庫要變更的屬性。 *屬性*是**sysname**, 它可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**history_retention**|記錄資料表保留期限。|  
 |**max_distretention**|最大散發保留期限。|  
 |**min_distretention**|最小散發保留期限。|  
-|NULL (預設值)|所有可用*屬性*值會列印。|  
+|NULL (預設值)|所有可用的*屬性*值都會列印出來。|  
   
-`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(255)** ，預設值是 NULL。  
+`[ @value = ] 'value'`這是指定之屬性的新值。 *value*是**Nvarchar (255)** , 預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_changedistributiondb**用於所有類型的複寫。  
+ **sp_changedistributiondb**用於所有類型的複寫中。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_changedistributiondb**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色的成員, 才能夠執行**sp_changedistributiondb**。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

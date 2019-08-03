@@ -1,5 +1,5 @@
 ---
-title: sp_add_agent_profile & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_add_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: b6cd4013d3126442b02c660c54215c0b0b17e157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941791"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770848"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   建立複寫代理程式的新設定檔。 這個預存程序執行於任何資料庫中的散發者端。  
   
@@ -42,11 +42,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_id = ] profile_id` 與新插入的設定檔關聯的識別碼。 *profile_id*已**int**是選擇性的 OUTPUT 參數。 如果指定的話，這個值會設為新設定檔識別碼。  
+`[ @profile_id = ] profile_id`這是與新插入之設定檔相關聯的識別碼。 *profile_id*是**int** , 而且是選擇性的輸出參數。 如果指定的話，這個值會設為新設定檔識別碼。  
   
-`[ @profile_name = ] 'profile_name'` 是設定檔的名稱。 *profile_name*已**sysname**，沒有預設值。  
+`[ @profile_name = ] 'profile_name'`這是設定檔的名稱。 *profile_name*是**sysname**, 沒有預設值。  
   
-`[ @agent_type = ] 'agent_type'` 是複寫代理程式的類型。 *agent_type*已**int**，沒有預設值，它可以是下列值之一。  
+`[ @agent_type = ] 'agent_type'`這是複寫代理程式的類型。 *agent_type*是**int**, 沒有預設值, 它可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -56,32 +56,32 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|[合併代理程式]|  
 |**9**|佇列讀取器代理程式|  
   
-`[ @profile_type = ] profile_type` 為設定檔的類型。*profile_type*是**int**，預設值是**1**。  
+`[ @profile_type = ] profile_type`這是設定檔的類型。*profile_type*是**int**, 預設值是**1**。  
   
- **0**表示系統設定檔。 **1**表示自訂設定檔。 使用此預存程序，就可以建立自訂的設定檔因此，唯一有效的值是**1**。 只有[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會建立系統設定檔。  
+ **0**表示系統設定檔。 **1**表示自訂設定檔。 您只能使用這個預存程式來建立自訂設定檔;因此, 唯一有效的值為**1**。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 只[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會建立系統設定檔。  
   
-`[ @description = ] 'description'` 是設定檔的描述。 *描述*已**nvarchar(3000)** ，沒有預設值。  
+`[ @description = ] 'description'`這是設定檔的描述。 *描述*是**Nvarchar (3000)** , 沒有預設值。  
   
-`[ @default = ] default` 指出設定檔是否為預設*agent_type * *。* *預設值*已**位元**，預設值是**0**。 **1**表示所加入的設定檔將成為所指定的代理程式的新預設設定檔*agent_type*。  
+`[ @default = ] default`指出設定檔是否為*agent_type * ** 的預設值。 *預設值*是**bit**, 預設值是**0**。 **1**表示要加入的設定檔會成為*agent_type*所指定之代理程式的新預設設定檔。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_add_agent_profile**用於快照式複寫、 異動複寫和合併式複寫。  
+ **sp_add_agent_profile**用於快照式複寫、異動複寫和合併式複寫中。  
   
- 自訂代理程式設定檔會隨著預設代理程式參數值而一併加入。 使用[sp_change_agent_parameter &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)來變更這些預設值或[sp_add_agent_parameter &#40;-&#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)來新增額外的參數。  
+ 自訂代理程式設定檔會隨著預設代理程式參數值而一併加入。 請[使用&#40;sp_change_agent_parameter transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)來變更這些預設值或[sp_add_agent_parameter &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) , 以加入額外的參數。  
   
- 當**sp_add_agent_profile**是執行，資料列會加入新的自訂設定檔中[MSagent_profiles &#40;-&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表和相關聯的預設參數，這個設定檔新增至[m &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)資料表。  
+ 執行**sp_add_agent_profile**時, 會在[MSagent_profiles &#40;transact-sql&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表中加入新自訂設定檔的資料列, 並將此設定檔的相關聯預設參數新增至[MSagent_parametersTransact-sql&#40; &#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_agent_profile**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色的成員, 才能夠執行**sp_add_agent_profile**。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [複寫代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_change_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
+ [sp_change_agent_parameter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
  [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
  [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
