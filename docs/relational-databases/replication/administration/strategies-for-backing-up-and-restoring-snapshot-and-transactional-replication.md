@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948689"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768735"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>備份與還原快照式和異動複寫的策略
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   當為快照式及異動複寫設計備份與還原策略時，需要考慮三個方面：  
   
--   要備份的資料庫。  
-  
--   異動複寫的備份設定。  
-  
+-   要備份的資料庫。
+-   異動複寫的備份設定。
 -   還原資料庫的必要步驟。 這些步驟是根據複寫類型和所選擇的選項而不同。  
   
  本主題在接下來的三節中對這些方面一一進行說明。 如需 Oracle 發行之備份及還原的詳細資訊，請參閱 [Oracle 發行者的備份與還原](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md)。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>備份資料庫  
  對於快照式及異動複寫，您應定期備份下列資料庫：  
