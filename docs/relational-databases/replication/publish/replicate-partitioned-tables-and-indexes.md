@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1962546b83926f1ff189ece6757ebbf3659976ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 9750e85aefab0db07978cbba6a98a845888cec3d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073583"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769790"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>複寫資料分割資料表及索引
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   分割大型資料表或索引將更易於管理，因為分割可讓您快速並有效率地管理及存取資料子集，同時又可維護資料收集的完整性。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。 複寫可支援資料分割，其方式是提供一組屬性來指定應該如何處理資料分割資料表和索引。  
   
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>交易式和合併式複寫的發行項屬性  

@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d41e532936b29d7824c27da57653bafe0a304408
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 74e43b8d816fe2cfdbf9d35ea1815517f186b736
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100193"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68766216"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
   

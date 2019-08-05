@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2ecad54e3d3393caffb6474352657c2a4d25907c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a0590a339b6357bdc102420c4c68d4a92fc0519c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140713"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68764076"
 ---
 # <a name="publisher-information-publications"></a>發行者資訊，發行集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[發行集]** 索引標籤可以提供在左窗格中所選取發行者之所有發行集的摘要資訊。  
   
 ## <a name="options"></a>選項。  
