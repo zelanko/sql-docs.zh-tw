@@ -11,12 +11,12 @@ keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b7c49c25e1594657c3855aca1d50aac0fc47316f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 622d086c110bbf321534371d6b5547cadf9cbfd8
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951717"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697282"
 ---
 # <a name="install-sql-server-powershell-module"></a>安裝 SQL Server PowerShell 模組
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,6 @@ ms.locfileid: "67951717"
 > * **SqlServer**：此模組包含可支援最新 SQL 功能的新 Cmdlet。 此模組也包含 **SQLPS** 中 Cmdlet 的更新版本。 
 
 舊版 **SqlServer** 模組隨附於  SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 [PowerShell 資源庫](https://www.powershellgallery.com/packages/Sqlserver)安裝 **SqlServer** 模組。
-最新版的 **SqlServer** 模組是 21.1.18080。 這是以 Microsoft.SQLServer.SMO v150 版為基礎，並支援 SQL Server 的下一個版本。 模組若以 Microsoft.SQLServer.SMO v140 版為基礎，則其最新版本為 21.0.17279。
 
 模組的發行前版本可能會更頻繁地提供使用：請參閱此頁面底部有關如何取得這類模組版本的章節。
 

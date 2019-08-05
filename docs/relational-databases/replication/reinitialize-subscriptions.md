@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 72cd7983be16e77bb4273e0380c026f8b07c3f7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7143f28436de8aed4f6b0298d04a57237d88c03e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046726"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769705"
 ---
 # <a name="reinitialize-subscriptions"></a>重新初始化訂閱
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   重新初始化訂閱涉及將一個或多個發行項的新快照集套用至一個或多個「訂閱者」：交易式和快照式複寫允許重新初始化個別發行項；合併式複寫要求重新初始化所有發行項。 無法重新初始化點對點異動複寫拓撲中的節點。 如果您必須確定節點有資料的新副本，請在節點還原備份。 發生重新初始化的情況有兩種：  
   
 -   您將訂閱明確標示為要重新初始化。  

@@ -10,15 +10,16 @@ ms.topic: language-reference
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7e3b835b6f33f309d9302ea9b2acf2e0d0ba1d3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 5206158bf84280fc84f6ad43edb3b09c5fce2796
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943511"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769693"
 ---
 # <a name="replication-language-reference"></a>Replication 語言參考
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Replication 語言參考包含下列各節。  
   

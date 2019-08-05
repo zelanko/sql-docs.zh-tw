@@ -25,15 +25,16 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53691231f08e9ac9fe97807d062c7fed39746a7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 101c272e51a4a4fdab4456f87aac297c2ac56476
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939413"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768816"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>備份及還原複寫的資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   針對複寫的資料庫進行資料的備份與還原時，需要特別地注意。 本主題提供每種複寫類型的備份與還原策略之簡介資訊，以及取得詳細資訊的連結。  
   

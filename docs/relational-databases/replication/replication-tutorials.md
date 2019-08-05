@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 078d965fbf3963039bb54b70fd63f54aadb9eb95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 6a99d15ba812edac0408262ba1ae26d7ea8b8dbc
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005369"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768442"
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 複寫是在伺服器之間移動資料或資料子集的強大解決方案。 您可以使用異動複寫，在完全連線的伺服器之間複寫資料。 您也可以使用合併式複寫，在間歇性連線的伺服器與用戶端之間複寫資料。 本文中的教學課程會協助您準備用於複寫的伺服器，再教導您設定異動複寫及合併式複寫。 
   
 在複寫教學課程中，「發行者」是指包含所要複寫之來源資料的伺服器。 「訂閱者」則是指目的地伺服器。 發行者和訂閱者可以共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但這不是必要條件。 如需詳細資訊，請參閱[複寫發行模型概觀](../../relational-databases/replication/publish/replication-publishing-model-overview.md)。  

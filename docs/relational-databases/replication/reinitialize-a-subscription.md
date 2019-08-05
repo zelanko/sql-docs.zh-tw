@@ -14,26 +14,21 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f94d21a4fcc773c30d2a43d2502eb1f4c5225b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e38cd74e9f916484c804890686e2a3b03d9ec64c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021236"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768567"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化訂閱
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來重新初始化 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的訂閱。 個別訂閱可標示為要重新初始化，好讓下一次同步處理期間會套用新的快照集。  
   
- **本主題內容**  
-  
--   **若要重新初始化訂閱，請使用：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
+
+
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  重新初始化訂閱處理分為兩部份：  

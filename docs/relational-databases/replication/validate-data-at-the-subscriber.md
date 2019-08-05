@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e750743eb98307433d8ad6878cec12ea4e43ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895225"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769295"
 ---
 # <a name="validate-replicated-data"></a>驗證複寫的資料
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中驗證訂閱者端的資料。  
   
 交易式與合併式複寫可以讓您驗證訂閱者端的資料是否與發行者端的資料相符。 可以驗證特定的訂閱或發行的所有訂閱。 指定下列其中一種驗證類型，「散發代理程式」或「合併代理程式」將在下次執行時驗證資料：  
@@ -34,6 +34,8 @@ ms.locfileid: "67895225"
 -   **資料列計數與二進位總和檢查碼。** 除了統計「發行者」與「訂閱者」上的資料列數量之外，也會使用總和檢查碼演算法計算所有資料的總和檢查碼。 如果資料列計數失敗，就不會執行總和檢查碼。  
   
  除驗證「訂閱者」與「發行者」上的資料是否相符外，合併代理程式還可以驗證是否為每個「訂閱者」正確分割資料。 如需詳細資訊，請參閱[驗證合併訂閱者的資料分割資訊](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md)。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>資料驗證如何運作  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 藉由計算「發行者」的資料列計數或總和檢查碼，然後將那些值與「訂閱者」所計算的資料列計數或總和檢查碼相比較，以驗證其資料。 整個發行集資料表計算一個值，整個訂閱資料表也計算一個值，但是 **text**、 **ntext**或 **image** 資料行的資料不包含在其計算中。  

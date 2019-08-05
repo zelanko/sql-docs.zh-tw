@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cc7cb345bd79ff38d2ed2512a50e1962a68eeada
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 836a286c5852a9822835977c47d9cd204a3724ce
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111073"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68766904"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用複寫監視器來檢視資訊及執行工作
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 複寫監視器提供一些索引標籤和選項，來檢視資訊及執行各種工作。 本文說明使用「複寫監視器」時，可以檢視和完成的各種不同項目。 
 
 

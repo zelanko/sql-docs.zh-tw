@@ -20,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92011867835b3b42d6d15576eeb5bafb305e9f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904598"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769882"
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   篩選資料表發行項可讓您建立即將發行的資料分割。 利用篩選發行的資料，您可以：  
   
 -   將透過網路傳送的資料總量縮減到最少。  

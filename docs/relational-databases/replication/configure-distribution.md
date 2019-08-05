@@ -20,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59bbe9c7cef9ad40277b4e6abc7d11b684f8ecd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 36e89b7092ea497f3ad2ca0267e7f5dab99056e7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903216"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768672"
 ---
 # <a name="configure-distribution"></a>設定散發
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   「散發者」是包含散發資料庫的伺服器，該資料庫會存儲所有類型之複寫的中繼資料和記錄資料，以及異動複寫的交易。 若要設定複寫，您必須設定「散發者」。 每個「發行者」可以僅指派給一個「散發者」執行個體，但是多個發行者可以共用一個「散發者」。 散發者會使用所在伺服器的下列額外資源：  
   
 -   如果發行集的快照集檔案儲存於「散發者」(通常如此) 時，則使用額外的磁碟空間。  

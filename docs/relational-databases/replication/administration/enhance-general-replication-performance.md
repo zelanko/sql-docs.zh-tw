@@ -21,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d7e3e718cae97ece079bbd44ad1a17068201668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939212"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768813"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   透過使用本主題中所述的指導方針，您可以提升應用程式及網路上所有複寫類型的一般效能：  
   
 ## <a name="server-and-network"></a>伺服器和網路  

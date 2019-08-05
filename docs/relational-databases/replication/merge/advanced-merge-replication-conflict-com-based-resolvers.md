@@ -14,10 +14,10 @@ ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ec508dbaf274816ecf32f8eaa0a8047baa60e2a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "68033394"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>進階合併式複寫衝突 - 以 COM 為基礎的解析程式

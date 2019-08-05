@@ -14,15 +14,16 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3e542e49811ed7f57a9b60dbf1f0428f69706bdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7a14ded4a0d86973b6e267d35b505aa21e5d8629
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128314"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768579"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>SQL Server 複寫散發者屬性對話方塊 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 本頁說明 [散發者屬性] 對話方塊內的頁面。 
 

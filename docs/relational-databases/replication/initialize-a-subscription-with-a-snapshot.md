@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 06e0c90fef7c030a9ab67998a8f74ae8c0430fbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 68be2c5a44777bb62a594cf2ab612e46a078d0eb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127857"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767848"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照集初始化訂閱
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   建立發行集之後，通常會建立初始快照集，並將其複製到快照集資料夾 (使用「新增發行集精靈」建立的合併式發行集預設均會發生此情況)。 然後，在訂閱的初始同步處理期間，由「散發代理程式」(針對交易式和快取式發行集) 或「合併代理程式」(針對合併式發行集) 套用至「訂閱者」。 快照集處理取決於發行集的類型：  
   
 -   如果快照集用於不使用參數化篩選的快照式發行集、交易式發行集或合併式發行集，則快照集會在大量複製程式 (bcp) 檔案中包含結構描述，還會包含複寫所需的條件約束、擴充屬性、索引、觸發程序和系統資料表。 如需建立和套用快照集的詳細資訊，請參閱[建立和套用快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  

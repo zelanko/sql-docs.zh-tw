@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f7594aa07bf4b193a9bea6ac0ebede78cd10eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113855"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769727"
 ---
 # <a name="publisher-information-agents"></a>發行者資訊，代理程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[代理程式]** 索引標籤會顯示與發行者相關聯之代理程式和維護作業的相關資訊：  
   
 -   快照集代理程式 (針對所有發行集顯示)。  

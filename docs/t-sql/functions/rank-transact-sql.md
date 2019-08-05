@@ -21,12 +21,12 @@ ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 224063dba6895ccd2c6734b7c316c9b030e634aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910638"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661441"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -149,7 +149,7 @@ GROUP BY LastName, SalesTerritoryRegion;
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```sql
-LastName          TotalSales     SalesTerritoryGroup  RankResult
+LastName          TotalSales     SalesTerritoryRegion  RankResult
 ----------------  -------------  -------------------  --------
 Tsoflias          1687000.0000   Australia            1
 Saraiva           7098000.0000   Canada               1

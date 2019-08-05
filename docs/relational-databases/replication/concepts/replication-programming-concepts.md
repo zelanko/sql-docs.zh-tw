@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b1c40faeb2dcc9a85ee6790abb5c0c042ac4fae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903305"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768764"
 ---
 # <a name="replication-programming-concepts"></a>複寫程式設計概念
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   在開發使用複寫功能的應用程式之前，您應該遵循下列一般規劃步驟：  
   

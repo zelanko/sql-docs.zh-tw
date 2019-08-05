@@ -20,12 +20,12 @@ ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eeb1b58975e992445bdd26f90423908f9ee3234c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29a9476f5835df326aa34d8ccfc4cc6d22ea7e3f
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098623"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670611"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ SET @nstring = N'Åkergatan 24';
 -- the actual Unicode character you are processing, and the UNICODE   
 -- value for this particular character.  
 PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
-WHILE @position <= DATALENGTH(@nstring)  
+WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
    BEGIN;  
    SELECT @position,   

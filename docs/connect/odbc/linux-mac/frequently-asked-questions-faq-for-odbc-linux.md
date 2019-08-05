@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d3de76486a44d8c107d0ee35f6069f6854758477
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc31a8ae385f2dbb28db30b299377ab5b38058f9
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008816"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702773"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux 和 macOS 的常見問題集 (FAQ)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,7 +35,7 @@ ODBC Driver on Linux 和 macOS 支援 [!INCLUDE[ssSQL11](../../../includes/sssql
 是的。 如果您已設定現有的 Kerberos 環境, 您應該能夠使用`Trusted_Connection=Yes` DSN 或連接字串選項來連接到伺服器。 如需詳細資訊，請參閱[使用整合式驗證](../../../connect/odbc/linux-mac/using-integrated-authentication.md)。  
   
 **應用程式應使用哪個 Unicode 編碼？**  
-UTF-8 用於 SQL_CHAR 資料，UTF-16 則用於 SQL_WCHAR 資料。  
+UTF-8 用於 SQL_CHAR 資料，UTF-16 則用於 SQL_WCHAR 資料。 視系統地區設定和驅動程式版本而定, 可能也會支援數種編碼之一的非 UTF-8 資料。 如需詳細資訊, 請參閱程式[設計方針](../../../connect/odbc/linux-mac/programming-guidelines.md)。
 
 **是否有 ODBC 範例可讓我下載並與驅動程式一起執行，以試驗或評估驅動程式？**
 

@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6974e8c3d07bd1da5fd48a4bbbc8e49c86e2d314
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 321859ffa20f9c576635a2c082b5f0d2458e848d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128091"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770635"
 ---
 # <a name="filter-table-rows"></a>篩選資料表的資料列
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[篩選資料表的資料列]** 頁面可以讓您：  
   
 -   將靜態資料列篩選套用至快照集式、交易式和合併式發行集的資料表發行項。  

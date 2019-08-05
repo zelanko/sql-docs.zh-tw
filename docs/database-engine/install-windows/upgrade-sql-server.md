@@ -12,12 +12,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c213b95258b30a8d910c7d96d7598ddd930c9687
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ea3d65d8ceaf06fc04efea138b3133fdeb0f335
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934681"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714649"
 ---
 # <a name="upgrade-sql-server"></a>升級 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "67934681"
  [升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [升級 Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197135)   
- [回溯相容性_已刪除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

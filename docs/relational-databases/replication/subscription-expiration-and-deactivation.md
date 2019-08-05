@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90163caba595936f5c9ef9854b8e1f0af2890673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b3d561e331cae739514b2e38c5c885653c44ce46
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129835"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768347"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>訂閱逾期與停用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   如果訂閱在指定 *「保留期限」* 內未執行同步處理，則可以停用訂閱或使訂閱過期。 發生的動作依複寫類型及超過的保留期限而定。  
   
  若要設定保留期限，請參閱[設定訂閱的逾期期限](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)、[設定交易式發行集的散發保留期限 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) 和[設定發行與散發](../../relational-databases/replication/configure-publishing-and-distribution.md)。  

@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 910402b059f602d68428f5348ce35921942d918e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 22770207bd0c6da38f88680313d8da433e1da286
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128255"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768524"
 ---
 # <a name="distributor"></a>散發者
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[散發者]** 頁面會出現在設定散發精靈和新增發行集精靈中。 散發者是包含散發資料庫的伺服器，而且會儲存所有類型之複寫的中繼資料和記錄資料。 散發者也會儲存異動複寫的交易。 散發者可以是與發行者相同的伺服器 (本機散發者)，也可以是與發行者不同的伺服器 (遠端散發者)。 散發者的角色會視您實作的複寫類型而定。 一般而言，它的角色用於異動複寫的機會，遠大於合併式複寫和快照式複寫。 合併式複寫和快照式複寫通常使用本機散發者，但在非常忙碌的電腦上進行異動複寫時，可以使用遠端散發者提高效益。  
   
  散發者會使用所在伺服器的下列額外資源：  

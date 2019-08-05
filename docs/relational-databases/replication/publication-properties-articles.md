@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 06da0b5b0fb6dbbdbd4a85c2792d19ab288d36bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e68a2065da5acb7405fc155f4601a9a5dc7a2c3f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908095"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769952"
 ---
 # <a name="publication-properties-articles"></a>發行集屬性，發行項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[發行集屬性]** 對話方塊的 **[發行項]** 頁面：包含有關發行集內所含發行項的資訊；可讓您將發行項加入至現有的發行集或從現有的發行集卸除發行項；以及可讓您變更發行項屬性和資料行篩選。  
   
 > [!NOTE]  

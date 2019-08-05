@@ -13,16 +13,28 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264015"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702814"
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的 bug 清單
 
 此頁面包含每個版本中已修正的錯誤清單, 從[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>ODBC Driver 17.4 for [!INCLUDE[msCoName](../../includes/msconame_md.md)]的錯誤修正[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- 修正 Multiple Active Results Set (MARS) 啟用時的間歇性停止回應
+- 修正非同步通知啟用時的連線恢復功能停止回應
+- 修正針對多執行緒連線嘗試取得診斷記錄時的損毀
+- 使用 SQL_USER_NAME 和 SQL_DATA_SOURCE_READ_ONLY 在呼叫 SQLGetInfo () 之後, 重新連線時修正「不支援加密」
+- 修正 Azure Active Directory 互動式驗證期間的 COM 初始化錯誤
+- 修正多位元組 UTF8 資料的 SQLGetData ()
+- 修正使用 SQLGetData () 抓取 SQL_variant 資料行的長度
+- 修正使用 bcp 匯入包含超過7992個位元組的 SQL_variant 資料行
+- 針對窄字元資料, 修正將正確編碼傳送至伺服器的問題
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>ODBC Driver 17.3 for [!INCLUDE[msCoName](../../includes/msconame_md.md)]的錯誤修正[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

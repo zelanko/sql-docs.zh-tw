@@ -20,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bc8f21427d5b104ef663d266b4a6b7eb281b8b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912958"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702836"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
      所有鄰近搜尋都只會尋找非重疊項目。 搜尋詞彙的重疊項目絕對不會成為符合項目。 例如，請考慮下列相近詞彙，它會按照此順序搜尋最大距離為兩個詞彙的 "`A`" 和 "`AA`"：  
   
     ```  
-    CONTAINS(column_name, 'NEAR((A,AA),2, TRUE')  
+    CONTAINS(column_name, 'NEAR((A,AA), 2, TRUE)')
     ```  
   
      可能的符合項目為 "`AAA`"、"`A.AA`" 和 "`A..AA`"。 只包含 "`AA`" 的資料列則不符合。  

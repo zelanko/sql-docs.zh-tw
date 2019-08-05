@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e9c037b9dea1bc7110245c4836fcc7a23ac5497f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 21d23387b3d17f54cbd6cfed3398cf5a0e8cffe6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939498"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770802"
 ---
 # <a name="add-or-edit-filter"></a>加入或編輯篩選
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[加入篩選]** 和 **[編輯篩選]** 對話方塊可讓您加入和編輯靜態資料列篩選與參數化資料列篩選器。  
   
 > [!NOTE]  
