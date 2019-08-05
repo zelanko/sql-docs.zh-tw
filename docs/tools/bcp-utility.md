@@ -28,12 +28,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 504e0978e37e5c550985e40b7f68e0323a9dc187
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5267b5b02ce84d70feb4245fe75f62591409f39f
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476314"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742997"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 
@@ -57,7 +57,7 @@ ms.locfileid: "68476314"
 
 命令列工具是公開上市 (GA), 不過, 它們是使用的安裝程式套件來[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]發行。
 
-**版本資訊**
+### <a name="version-information"></a>版本資訊
 
 版本號碼：15.0 <br>
 組建編號：15.0.1000.34<br>
@@ -66,7 +66,11 @@ ms.locfileid: "68476314"
 新版本的 SQLCMD 支援 Azure AD 驗證, 包括 SQL Database、SQL 資料倉儲和 Always Encrypted 功能的多重要素驗證 (MFA) 支援。
 新的 BCP 支援 Azure AD 驗證, 包括 SQL Database 和 SQL 資料倉儲的多重要素驗證 (MFA) 支援。
 
-**系統需求**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 此元件同時需要[Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483)和[Microsoft ODBC Driver 17.3 forSQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
+### <a name="system-requirements"></a>系統需求
+
+Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2
+
+此元件同時需要[Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483)和[Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
 
 若要檢查 BCP 版本執行`bcp /v`命令, 並確認15.0.1000.34 或更高的正在使用中。
 

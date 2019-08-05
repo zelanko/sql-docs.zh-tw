@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127893"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767771"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>不使用快照集初始化交易式訂閱
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   依預設，會使用快照集來初始化交易式發行集的訂閱，此快照集由「快照集代理程式」產生並由「散發者代理程式」套用。 在某些狀況下，例如那些牽涉到大型初始資料集的狀況，最好使用其他方法初始化訂閱。 其他初始化「訂閱者」的方法包括：  
   
 -   指定一個備份。 在「訂閱者」上還原備份，「散發代理程式」隨後會複製所有需要的複寫中繼資料與系統程序。 用備份進行初始化是將資料傳遞到「訂閱者」的最快方法且相當便利，因為如果最新的備份發生在為「使用備份進行初始化」啟用發行集之後，便可使用。  

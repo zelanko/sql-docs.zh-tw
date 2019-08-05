@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5878de6131ce193f8f3b415b07d8961d7058ffa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 9a33317c8f430a3665c47e94441e8f78c68085c6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051720"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768385"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>設定記錄保留週期 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   在 [散發資料庫屬性 - \<散發資料庫>]  對話方塊的 [一般]  頁面中指定記錄保留期限。 此設定會控制複寫代理程式記錄的儲存時間。 此頁面可以從 [散發者屬性 - \<散發者>]  對話方塊的 [一般]  頁面取得。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。  
   
 ### <a name="to-specify-the-history-retention-period"></a>若要指定記錄的保留期限  

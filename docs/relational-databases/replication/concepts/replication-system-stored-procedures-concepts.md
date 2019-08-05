@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 344b2abfafe5f2e69c6e758744e2cd63fa663603
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f887fdf9aaddf49e5dc2c9f79ed43299f572eb13
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903285"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768136"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，系統預存程序可提供複寫拓撲中所有使用者可設定的功能之程式存取權。 雖然使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或是 sqlcmd 命令列公用程式，可以個別執行預存程序，但是撰寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼檔案對於執行一連串的邏輯複寫工作非常有幫助。  
   

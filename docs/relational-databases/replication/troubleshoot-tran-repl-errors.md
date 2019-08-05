@@ -10,14 +10,17 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 03ffb9e8259e463c261838ffc79cf0b9c5908b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895544"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769355"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解員：尋找 SQL Server 異動複寫的錯誤 
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
 若對異動複寫的運作方式沒有基本的了解，針對複寫錯誤進行疑難排解可能會令人感到沮喪。 建立發行集的第一個步驟是讓快照集代理程式建立快照集，並將它儲存到快照集資料夾。 接下來，散發代理程式會將快照集套用到訂閱者。 
 
 此處理序會建立發行集，並將它置於「同步處理」  狀態。 同步處理將分成三個階段進行：

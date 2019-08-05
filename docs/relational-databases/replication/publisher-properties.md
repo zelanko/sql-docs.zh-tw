@@ -15,15 +15,16 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa39a4752952a3d214d7dea8eaeb236c75d9f5d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 1bc6b8506244b16a1c9592ed59e91684494bfa1e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021324"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768546"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 複寫發行者屬性對話方塊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 本主題說明 [發行者屬性] 對話方塊內的各種不同選項。 
 

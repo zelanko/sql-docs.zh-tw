@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3fdd6321d3de0719bf869862404a6f059cee9df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d0d93259d8acdeb6d548d18971bba2843b61bab7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908023"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769924"
 ---
 # <a name="publication-type"></a>發行集類型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   複寫提供下列類型的發行集：  
   
 -   快照式發行集  

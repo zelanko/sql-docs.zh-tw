@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c0a47062d50f4306af3ffb92e9e575317a014f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895385"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769406"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個已完全連線伺服器之間的複寫 (異動)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67895385"
 本教學課程會為您示範，如何為持續連線的伺服器設定異動複寫拓撲。 如需異動複寫如何運作的詳細資訊，請參閱[異動複寫概觀](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication)。 
   
 ## <a name="what-you-will-learn"></a>學習內容  
-本教學課程會教您如何使用異動複寫，從一個資料庫將資料發行到另一個資料庫。 
+本教學課程會教您如何使用異動複寫，從一個資料庫將資料發行到另一個資料庫。  
 
 在本教學課程中，您將學會如何：
 > [!div class="checklist"]
