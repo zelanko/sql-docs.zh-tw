@@ -26,7 +26,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68131584"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -86,6 +86,6 @@ len
  以 Null 結束的字串指標，其中包含指定之欄位在 SRV_PROC 結構中的目前值。 如果欄位是空的，則會傳回空字串的有效指標，而且 *len* 包含 0。 如果欄位不明，會傳回 NULL，而且 *len* 包含值 -1。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱[資訊安全開發人員中心](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱[資訊安全開發人員中心](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

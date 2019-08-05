@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264146"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742793"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -64,7 +64,7 @@ macOS 和 Linux 上此版本的 ODBC 驅動程式不提供下列功能：
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect  
+-   SQLBrowseConnect (版本17.2 之前)
 -   C 間隔類型，如 SQL_C_INTERVAL_YEAR_TO_MONTH (相關文件請參閱[資料類型識別碼和描述項](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   SQLSetConnectAttr 函式之 SQL_ATTR_ODBC_CURSORS 屬性的 SQL_CUR_USE_ODBC 值。
 
@@ -74,7 +74,7 @@ macOS 和 Linux 上此版本的 ODBC 驅動程式不提供下列功能：
 
 若為 ODBC Driver 17，支援其中一種下列字元集/編碼的 SQLCHAR 資料：
 
-|[屬性]|Description|
+|[屬性]|描述|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS Latin US|
@@ -116,6 +116,12 @@ SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。
 Windows 與 Linux 和 macOS 上的數個 iconv 程式庫版本之間有一些編碼轉換差異。 字碼頁 1255 (希伯來文) 的文字資料中有一個字碼元素 (0xCA) 在轉換為 Unicode 時行為不相同。 在 Windows 中，此字元會轉換為 0x05BA 的 UTF-16 字碼元素。 在 libiconv 版本早於 1.15 的 macOS 和 Linux 上，它會轉換為 0x00CA。 在 iconv 程式庫不支援 Big5/CP950 2003 修訂 (名為`BIG5-2003`) 的 Linux 上，使用該修訂新增的字元不會正確地轉換。 在字碼頁 932 (日文，Shift-JIS)，字元如原本未定義於編碼標準中，解碼的結果也會不同。 比方說，位元組 0x80 在 Windows 上會轉換為 U+0080，但在 Linux 和 macOS 上可能會變成 U+30FB，視 iconv 版本而定。
 
 在 ODBC 驅動程式 13 和 13.1 中，當 UTF-8 多位元組字元或 UTF-16 代理分在各個 SQLPutData 緩衝區時，會導致資料損毀。 對於最後不是部分字元編碼的串流 SQLPutData，請使用緩衝區。 ODBC Driver 17 已移除這項限制。
+
+## <a name="bkmk-openssl"></a>OpenSSL
+從17.4 版開始, 驅動程式會以動態方式載入 OpenSSL, 這可讓它在版本1.0 或1.1 的系統上執行, 而不需要個別的驅動程式檔案。 當有多個版本的 OpenSSL 時, 驅動程式會嘗試載入最新的版本。 驅動程式目前支援 OpenSSL 1.0. x 和 1.1. x
+
+> [!NOTE]  
+> 如果使用驅動程式的應用程式 (或它的其中一個元件) 連結到或動態載入不同版本的 OpenSSL, 可能會發生衝突。 如果系統上有數個版本的 OpenSSL, 而且應用程式使用它, 強烈建議您特別小心確認應用程式和驅動程式所載入的版本不相符, 因為錯誤可能會損毀記憶體, 因此不一定會以明顯或一致的方式來進行資訊清單。
 
 ## <a name="additional-notes"></a>其他注意事項  
 

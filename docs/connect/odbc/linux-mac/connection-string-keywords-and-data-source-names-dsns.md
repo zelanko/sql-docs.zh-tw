@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f1bbdb044afd8fb4a5ff55d1a9d5fea2b3f14da1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 486d26dd3afeb91cb43181875e22592fb482af5f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008834"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702799"
 ---
 # <a name="connecting-to-sql-server"></a>連線到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -54,7 +54,7 @@ Server = [protocol:]server[,port]
 
 您可以選擇性地指定用以連接到伺服器的通訊協定和連接埠。 例如, **Server = tcp:** _servername_ **, 12345**。 請注意, Linux 和 macOS 驅動程式所支援的唯一通訊`tcp`協定是。
 
-若要在靜態連接埠上連線到具名執行個體，請使用 <b>Server=</b>伺服器名稱  ,**port_number**。 不支援連線到動態連接埠。  
+若要在靜態連接埠上連線到具名執行個體，請使用 <b>Server=</b>伺服器名稱  ,**port_number**。 在 17.4 版之前，不支援連線到動態連接埠。
 
 或者，您可將 DSN 資訊新增至範本檔案，並執行下列命令將其新增至 `~/.odbc.ini`：
  - **odbcinst -i -s -f** _template_file_  
@@ -86,20 +86,31 @@ SSL 會使用 OpenSSL 程式庫。 下表顯示 OpenSSL 的最低支援版本，
 
 |平台|最低 OpenSSL 版本|預設憑證信任存放區位置|  
 |------------|---------------------------|--------------------------------------------|
+|Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
-|Debian 8.71 |1.0.1|/etc/ssl/certs|
-|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
-|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Debian 8.71|1.0.1|/etc/ssl/certs|
+|OS X 10.11、macOS 10.12、10.13、10.14|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
-|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
-|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
-  
+|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SuSE Linux Enterprise 11、12|1.0.1|/etc/ssl/certs|
+|Ubuntu 18.10、19.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 18.04|1.1.0|/etc/ssl/certs|
+|Ubuntu 16.04、16.10、17.10|1.0.2|/etc/ssl/certs|
+|Ubuntu 14.04|1.0.1|/etc/ssl/certs|
+
 當您使用`Encrypt` **SQLDriverConnect**連接時, 也可以使用選項在連接字串中指定加密。
+
+## <a name="adjusting-the-tcp-keep-alive-settings"></a>調整 TCP Keep-alive 設定
+
+從 ODBC 驅動程式17.4 開始, 可設定驅動程式傳送 keep-alive 封包, 並在未收到回應時重新傳輸它們的頻率。
+若要設定, 請將下列設定新增至中的驅動程式`odbcinst.ini`區段, 或中`odbc.ini`的 DSN 區段。 連接 DSN 時, 驅動程式將會使用 DSN 的區段中的設定 (如果有的話)。否則, 或如果只連接連接字串, 則會使用中驅動程式區段中`odbcinst.ini`的設定。 如果這兩個位置的設定不存在, 驅動程式會使用預設值。
+
+- `KeepAlive=<integer>`藉由傳送 keep-alive 封包, 控制 TCP 嘗試驗證閒置連線是否仍保持不變的頻率。 預設值是 **30** 秒。
+
+- `KeepAliveInterval=<integer>`決定在收到回應之前, 用來分隔 keep-alive 重新傳輸的間隔。  預設值為 **1** 秒。
+
 
 ## <a name="see-also"></a>另請參閱  
 [在 Linux 和 macOS 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  

@@ -1,6 +1,6 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安裝教學課程 | Microsoft Docs
-ms.date: 06/21/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 7a2312a4ff6af5a11825274e3e010873ef2d3bd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 78db7a94e462238b65e90d9b2af035a9906403ac
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256698"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632003"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的 Linux 和 macOS 安裝教學課程
 下列指示假設一個全新的環境，並示範如何在 Ubuntu 16.04、18.04 及 18.10；RedHat 7；Debian 8 和 9；Suse 12 和 15，以及 macOS 10.12、10.13 及 10.14 上安裝 PHP 7.x、Microsoft ODBC 驅動程式、Apache 及 Microsoft Drivers for PHP for SQL Server。 這些指示建議使用 PECL 安裝驅動程式，但您也可以從 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) \(英文\) Github 專案頁面中下載預先建置的二進位檔，並遵循[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 中的指示進行安裝。 如需載入延伸模組以及我們未將延伸模組新增至 php.ini 的原因說明，請參閱關於[載入驅動程式](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)的小節。
@@ -70,7 +70,7 @@ exit
 ```
 sudo service apache2 restart
 ```
-若要測試安裝，請參閱本文件結尾的[測試您的安裝](#testing-your-installation)。
+若要測試安裝，請參閱此文件結尾的[測試您的安裝](#testing-your-installation)。
 
 ## <a name="installing-the-drivers-on-red-hat-7"></a>在 Red Hat 7 上安裝驅動程式
 
@@ -119,7 +119,7 @@ sudo setsebool -P httpd_can_network_connect_db 1
 ```
 sudo apachectl restart
 ```
-若要測試安裝，請參閱本文件結尾的[測試您的安裝](#testing-your-installation)。
+若要測試安裝，請參閱此文件結尾的[測試您的安裝](#testing-your-installation)。
 
 ## <a name="installing-the-drivers-on-debian-8-and-9"></a>在 Debian 8 和 9 上安裝驅動程式
 
@@ -170,12 +170,12 @@ a2enmod php7.3
 ```
 sudo service apache2 restart
 ```
-若要測試安裝，請參閱本文件結尾的[測試您的安裝](#testing-your-installation)。
+若要測試安裝，請參閱此文件結尾的[測試您的安裝](#testing-your-installation)。
 
 ## <a name="installing-the-drivers-on-suse-12-and-15"></a>在 Suse 12 和 15 上安裝驅動程式
 
 > [!NOTE]
-> 在下列指示中，使用您的 Suse 版本來取代 <SuseVersion>；如果您要使用 Suse Enterprise Linux 15，則其將是 SLE_15 或 SLE_15_SP1，對於其他版本也是如此。 並非所有 PHP 版本都可供適用於 Suse Linux 的所有版本使用，請參閱 `http://download.opensuse.org/repositories/devel:/languages:/php` 以查看哪些版本的 Suse 具有可用的預設版本 PHP，或 `http://download.opensuse.org/repositories/devel:/languages:/php:/` 以查看哪些其他版本的 PHP 可供哪些版本的 Suse 使用。
+> 在下列指示中，使用您的 Suse 版本來取代 <SuseVersion>；如果您要使用 Suse Enterprise Linux 15，則它將會是 SLE_15 或 SLE_15_SP1。 若為 Suse 12, 請使用 SLE_12_SP4 (或更高版本 (如果適用))。 並非所有 PHP 版本都可供適用於 Suse Linux 的所有版本使用，請參閱 `http://download.opensuse.org/repositories/devel:/languages:/php` 以查看哪些版本的 Suse 具有可用的預設版本 PHP，或 `http://download.opensuse.org/repositories/devel:/languages:/php:/` 以查看哪些其他版本的 PHP 可供哪些版本的 Suse 使用。
 
 > [!NOTE]
 > 適用於 PHP 7.3 的套件不適用 Suse 12。 若要安裝 PHP 7.1，使用下列 URL 來取代以下的存放庫 URL：`https://download.opensuse.org/repositories/devel:/languages:/php:/php71/<SuseVersion>/devel:languages:php:php71.repo`。
@@ -216,7 +216,7 @@ exit
 ```
 sudo systemctl restart apache2
 ```
-若要測試安裝，請參閱本文件結尾的[測試您的安裝](#testing-your-installation)。
+若要測試安裝，請參閱此文件結尾的[測試您的安裝](#testing-your-installation)。
 
 ## <a name="installing-the-drivers-on-macos-sierra-high-sierra-and-mojave"></a>在 macOS Sierra、High Sierra 和 Mojave 上安裝驅動程式
 
@@ -270,7 +270,7 @@ echo "LoadModule php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so
 ```
 sudo apachectl restart
 ```
-若要測試安裝，請參閱本文件結尾的[測試您的安裝](#testing-your-installation)。
+若要測試安裝，請參閱此文件結尾的[測試您的安裝](#testing-your-installation)。
 
 ## <a name="testing-your-installation"></a>測試您的安裝
 

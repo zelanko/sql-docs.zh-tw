@@ -1,6 +1,6 @@
 ---
-title: Oracle 連線類型 (SSRS) | Microsoft Docs
-ms.date: 01/11/2017
+title: Oracle 連線類型 (SSRS、Power BI 報表伺服器和報表產生器) |Microsoft Docs
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,39 +8,49 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67cb43743f8153a39d28af26807ddea98955674e
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499553"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632082"
 ---
-# <a name="oracle-connection-type-ssrs"></a>Oracle 連接類型 (SSRS)
-若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型會直接使用 Oracle 資料提供者，並且需要 Oracle 用戶端軟體元件。
+# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle 連線類型 (SSRS、Power BI 報表伺服器和報表產生器)
 
-若要安裝 Oracle 用戶端工具，您可以執行下列步驟。
- 
-1.  前往 [Oracle 的下載網站](https://www.oracle.com/downloads/)
-2.  下載 ODAC 12c Release 4 (12.1.0.2.4) for Windows (伺服器為 64bit，工具為 32bit)
-3.  安裝 Data Provider for .NET 4
-  
+若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型會直接使用 Oracle 資料提供者，並且需要 Oracle 用戶端軟體元件。 此文章說明如何下載和安裝 Reporting Services、Power BI 報表伺服器和報表產生器的驅動程式。
+
+## <a name="64-bit-drivers-for-the-report-servers"></a>適用于報表伺服器的64位驅動程式
+
+Power BI 報表伺服器和 SQL Server Reporting Services 2016 和2017全都使用受控 ODP.NET。 只有在使用最新的18x 驅動程式時, 才需要執行下列步驟。 它們會假設您已將檔案安裝至 c:\oracle64。
+
+1. 在 Oracle 下載網站上, 安裝 oracle [64 位 ODAC Oracle 通用安裝程式 (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html)。 
+2. 向 GAC 註冊 ODP.NET Managed 用戶端: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: GAC/providerpath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. 將 ODP.NET Managed 用戶端專案新增至 machine.config: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/product: odpm/frameworkversion: v 4.0.30319/productversion: 4.122.18。3
+
+## <a name="32-bit-drivers-for-report-builder"></a>適用于報表產生器的32位驅動程式
+只有在使用最新的18x 驅動程式時, 才需要執行下列步驟。 它們會假設您已將檔案安裝至 c:\oracle32。
+
+1. 在 Oracle 下載網站上, 安裝 oracle [32 位 ODAC Oracle 通用安裝程式 (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html)。
+2. 向 GAC 註冊 ODP.NET Managed 用戶端: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: GAC/providerpath: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. 將 ODP.NET Managed 用戶端專案新增至 machine.config: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/product: odpm/frameworkversion: v 4.0.30319/productversion: 4.122.18。3
+
  您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 ##  <a name="Connection"></a> 連接字串  
- 請洽詢資料庫管理員，以取得用來連接資料來源的連接資訊和認證。 下列連接字串範例會使用 Unicode 來指定名為 "Oracle9" 之伺服器上的 Oracle 資料庫。 伺服器名稱必須符合 Tnsnames.ora 組態檔中定義為 Oracle 伺服器執行個體名稱的內容。  
+ 請洽詢資料庫管理員，以取得用來連接資料來源的連接資訊和認證。 下列連接字串範例會使用 Unicode 來指定名為 "Oracle18" 之伺服器上的 Oracle 資料庫。 伺服器名稱必須符合 Tnsnames.ora 組態檔中定義為 Oracle 伺服器執行個體名稱的內容。  
   
 ```  
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
 ##  <a name="Credentials"></a> 認證  
  需要有認證才能夠執行報表、於本機預覽報表並且從報表伺服器預覽報表。  
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源及連接字串&#40;報表產生器及 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或是[指定的認證及連接資訊，為報表資料來源](specify-credential-and-connection-information-for-report-data-sources.md).</c0>  
+ 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
   
 ##  <a name="Query"></a> 查詢  
@@ -59,52 +69,26 @@ Data Source="Oracle"; Unicode="True"
   
  如需詳細資訊，請參閱下列內容：  
   
--   msdn.microsoft.com 上的[使用 Oracle 的 .NET Framework 資料提供者](https://go.microsoft.com/fwlink/?LinkId=112314)  
-  
 -   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](https://support.microsoft.com/kb/834305)  
-  
 -   [如何新增 NETWORK SERVICE 安全性主體的權限 (機器翻譯)](https://support.microsoft.com/kb/870668)  
   
-###### <a name="alternate-data-extensions"></a>替代資料延伸模組  
+### <a name="alternate-data-extensions"></a>替代資料延伸模組 
+ 
  您也可以使用 OLE DB 資料來源類型，從 Oracle 資料庫擷取資料。 如需詳細資訊，請參閱 [OLE DB 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)。  
-  
-###### <a name="report-models"></a>報表模型  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions" 
+### <a name="report-models"></a>報表模型  
+
  您也可以根據 Oracle 資料庫建立模型。  
+::: moniker-end
+   
+### <a name="platform-and-version-information"></a>平台和版本資訊  
+
+ 如需平台與版本支援的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+
   
-###### <a name="platform-and-version-information"></a>平台和版本資訊  
- 如需平台和版本支援的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ 線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
-  
-  
-##  <a name="HowTo"></a> 如何主題  
- 本節包含使用資料連接、資料來源與資料集的逐步指示。  
-  
- [加入及驗證資料連接 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
- [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
-  
- [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
-  
-##  <a name="Related"></a> 相關章節  
- 本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
-  
- [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
- 提供存取報表資料的概觀。  
-  
- [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
- 提供資料連接與資料來源的相關資訊。  
-  
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- 提供內嵌與共用資料集的相關資訊。  
-  
- [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
- 提供查詢所產生之資料集欄位集合的相關資訊。  
-  
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
- 提供支援每一個資料延伸模組之平台與版本的深入資訊。  
-  
-  
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

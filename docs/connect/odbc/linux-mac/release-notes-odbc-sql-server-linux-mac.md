@@ -7,21 +7,21 @@ ms.prod_service: connectivity
 ms.reviewer: MightyPen
 ms.technology: connectivity
 ms.topic: conceptual
-author: karinazhou
+author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6f6cdc23073585f5a9a6a8cee0c3fc779f7ca27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d2587a6150807841edc9773478f1b798ee60d84
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190580"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742816"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver to SQL Server 版本資訊
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-本文列出並描述 Linux 和 macOS 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行版本的新增功能。
+此文章列出並描述 Linux 和 macOS 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行版本的新增功能。
 
 <!--
 Going forward, please use the new 2-column markdown table for each new H2 version section.
@@ -35,6 +35,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="174-august-2019"></a>17.4, 2019 年8月
+
+| 新增功能 | 詳細資料 |
+| :------------ | :------ |
+| 具有安全記憶體保護區的 Always Encrypted。 | 請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| OpenSSL 的動態載入 | 請參閱[程式設計指導方針](programming-guidelines.md#bkmk-openssl)。 |
+| 可設定的 TCP Keep-alive 設定。 | 請參閱[連線到 SQL Server](connection-string-keywords-and-data-source-names-dsns.md)。 |
+| 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>17.3，2019 年 2 月
 

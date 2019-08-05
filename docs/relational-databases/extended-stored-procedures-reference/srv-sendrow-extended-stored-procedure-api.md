@@ -26,7 +26,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68036030"
 ---
-# <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow (擴充預存程序 API)
+# <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  

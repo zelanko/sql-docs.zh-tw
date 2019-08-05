@@ -27,7 +27,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126947"
 ---
-# <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (擴充預存程序 API)
+# <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (擴充預存程序 API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  

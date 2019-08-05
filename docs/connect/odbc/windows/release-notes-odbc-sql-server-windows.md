@@ -11,12 +11,12 @@ ms.reviewer: v-jizho2, v-chojas, genemi
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6eebce61ede6e1e3dd76028a653a00ffa06990e
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63031206"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702749"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>ODBC to SQL Server on Windows 版本資訊
 
@@ -43,6 +43,15 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## <a name="174-july-2019"></a>17.4，2019 年 7 月
+
+| 新增功能 | 詳細資料 |
+| :------------ | :------ |
+| 具有安全記憶體保護區的 Always Encrypted。 | 請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| 可設定的 TCP Keep-alive 設定。 | 請參閱[連線到 SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md)。 |
+| 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>17.3，2019 年 2 月
 
