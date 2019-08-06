@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_column_distribution_properties (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases _materialized_view_column_distribution_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19acc92475716b219485b9366e6facbc89268909
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059448"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811433"
 ---
-# <a name="syspdwmaterializedviewcolumndistributionproperties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (TRANSACT-SQL) （預覽）
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>sys.databases _materialized_view_column_distribution_properties (Transact-sql) (預覽)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-具體化檢視中顯示資料行的散發資訊。  
+在具體化視圖中顯示資料行的散發資訊。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|資料行所屬的物件識別碼。 |  
+|object_id|**int**|資料行所屬物件的識別碼。 |  
 |column_id|**int**|資料行的識別碼。|  
-|distribution_ordinal|**tinyint**|0 = 不是散發資料行。</br> 1 = SQL 資料倉儲會使用此資料行散發具體化的檢視。|
+|distribution_ordinal|**tinyint**|0 = 不是散發資料行。</br> 1 = SQL 資料倉儲使用這個資料行來散發具體化視圖。|
  
 ## <a name="permissions"></a>Permissions 
 

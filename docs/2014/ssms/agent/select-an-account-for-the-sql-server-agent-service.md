@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666795"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811078"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
   服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會以指定的使用者帳戶執行。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員選擇下列選項，藉此選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的帳戶：  
@@ -36,12 +36,12 @@ ms.locfileid: "62666795"
     -   **本機系統** 帳戶。 這個帳戶的名稱是 NT AUTHORITY\System。 它是功能強大的帳戶，可不受限制地存取所有本機系統資源。 這個帳戶是本機電腦上的 Windows **Administrators** 群組成員，因此也是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
         > [!IMPORTANT]  
-        >  [本機系統帳戶]  選項僅用於回溯相容性。 本機系統帳戶具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 不需要的權限。 避免以本機系統帳戶身分執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 為了改善安全性，請搭配使用 Windows 網域帳戶與下節「Windows 網域帳戶權限」所列的權限。  
+        >  [本機系統帳戶] 選項僅用於回溯相容性。 本機系統帳戶具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 不需要的權限。 避免以本機系統帳戶身分執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 為了改善安全性，請搭配使用 Windows 網域帳戶與下節「Windows 網域帳戶權限」所列的權限。  
   
 -   **這個帳戶**。 可讓您指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務用來執行的 Windows 網域帳戶。 我們建議您選擇非 Windows **Administrators** 群組成員的 Windows 使用者帳戶。 然而， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶不是本機 **Administrators** 群組的成員時，則會限制多伺服器管理的使用。 如需詳細資訊，請參閱本主題稍後的＜支援的服務帳戶類型＞。  
   
 ## <a name="windows-domain-account-permissions"></a>Windows 網域帳戶權限  
- 為了改善安全性，請選取 [這個帳戶]  ，以指定 Windows 網域帳戶。 您指定的 Windows 網域帳戶必須具有下列權限：  
+ 為了改善安全性，請選取 [這個帳戶]，以指定 Windows 網域帳戶。 您指定的 Windows 網域帳戶必須具有下列權限：  
   
 -   在所有 Windows 版本中，以服務方式登入的權限 (SeServiceLogonRight)  
   
@@ -78,18 +78,18 @@ ms.locfileid: "62666795"
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 網域帳戶 (Windows Administrators 群組的成員)|支援|支援|支援|  
 |Windows 網域帳戶 (非管理)|支援<sup>1</sup>|支援<sup>1</sup>|支援<sup>1</sup>|  
-|網路服務帳戶 (NT AUTHORITY\NetworkService)|支援<sup>1、 3、 4</sup>|不支援|不支援|  
+|網路服務帳戶 (NT AUTHORITY\NetworkService)|支援<sup>1、3、4</sup>|不支援|不支援|  
 |本機使用者帳戶 (非管理)|支援<sup>1</sup>|不支援|不適用|  
 |本機系統帳戶 (NT AUTHORITY\System)|支援<sup>2</sup>|不支援|支援<sup>2</sup>|  
 |本機服務帳戶 (NT AUTHORITY\LocalService)|不支援|不支援|不支援|  
   
- <sup>1</sup>請參閱下列限制 1。  
+ <sup>1</sup>請參閱下面的限制1。  
   
- <sup>2</sup>請參閱下列限制 2。  
+ <sup>2</sup>請參閱下面的限制2。  
   
- <sup>3</sup>請參閱下面 3 的限制。  
+ <sup>3</sup>請參閱下面的限制3。  
   
- <sup>4</sup>請參閱下列限制 4。  
+ <sup>4</sup>請參閱下面的限制4。  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：針對多伺服器管理使用非管理帳戶  
  將目標伺服器登錄到主要伺服器可能失敗，並出現下列錯誤訊息：「登錄作業失敗。」  
@@ -99,7 +99,7 @@ ms.locfileid: "62666795"
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：針對多伺服器管理使用本機系統帳戶  
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務在本機系統帳戶下執行時支援多伺服器管理，但前提是主要伺服器和目標伺服器都必須位於相同電腦上。 如果您使用此組態，則當您在主要伺服器上編列目標伺服器時會傳回下列訊息：  
   
- 「請確定 <目標伺服器電腦名稱>  的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
+ 「請確定 <目標伺服器電腦名稱> 的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
   
  您可以忽略此參考訊息。 編列作業應該順利完成。 如需詳細資訊，請參閱 [建立多伺服器環境](create-a-multiserver-environment.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 了解資料庫結構描述 |Microsoft Docs
+title: 瞭解資料庫架構 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab70f8c3f7bd788214ce6ed27f2e02ea6a0b43ac
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68164965"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811299"
 ---
 # <a name="understanding-the-database-schemas"></a>了解資料庫結構描述
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68164965"
  關聯性  
  精靈會為每個一般維度關聯性，產生從事實資料表到維度資料表之資料粒度屬性的一個關聯性。 如果資料粒度是以維度資料表的索引鍵屬性為基礎，會在資料庫和資料來源檢視中建立關聯性。 如果資料粒度是以另一個屬性為基礎，則只會在資料來源檢視中建立關聯性。  
   
- 如果您在精靈中選擇產生索引，會為每一個關聯性資料行產生一個非叢集索引。  
+ 如果您選擇在嚮導中產生索引, 則會為每個關聯性資料行產生非叢集索引。  
   
  條件約束  
  不會在事實資料表上產生主索引鍵。  

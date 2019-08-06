@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_mappings (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases _materialized_view_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,28 +9,28 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f4e286a335ca6668c81e6b959bd61605c0ea398a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059389"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811499"
 ---
-# <a name="syspdwmaterializedviewmappings-transact-sql-preview"></a>sys.pdw_materialized_view_mappings (TRANSACT-SQL) （預覽）
+# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys.databases _materialized_view_mappings (Transact-sql) (預覽)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-由 object_id 會繫結具體化的檢視，以內部的物件名稱。
+透過 object_id, 將具體化視圖系結至內建物件名稱。
 
-資料行 physical_name 和 object_id 形成這份目錄檢視的索引鍵。
+資料行 physical_name 和 object_id 會形成此目錄檢視的索引鍵。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36)**|具體化檢視的實體名稱。|  
-|object_id  |**int**|具體化檢視物件識別碼。 請參閱[sys.objects & Amp;#40;transact-SQL&AMP;#41;](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
+|physical_name |**nvarchar(36)**|具體化視圖的機構名稱。|  
+|object_id  |**int**|具體化視圖的物件識別碼。 請參閱[sys.databases (transact-sql)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
 
 ## <a name="permissions"></a>Permissions
 

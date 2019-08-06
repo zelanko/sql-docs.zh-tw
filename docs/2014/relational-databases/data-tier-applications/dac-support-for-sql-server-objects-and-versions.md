@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b528a7a9efb91bb99cb7c2b0a32c71dc0de7785b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918435"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811274"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
   資料層應用程式 (DAC) 支援最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 物件。  
@@ -50,8 +50,8 @@ ms.locfileid: "62918435"
 |TABLE：條件約束，預設|TABLE：條件約束，外部索引鍵|  
 |TABLE：條件約束，索引|TABLE：條件約束，主索引鍵|  
 |TABLE：條件約束，唯一|TRIGGER：DML|  
-|類型：HIERARCHYID、GEOMETRY、GEOGRAPHY|類型：使用者定義資料類型|  
-|類型：使用者定義資料表類型|使用者|  
+|TYPE：HIERARCHYID、GEOMETRY、GEOGRAPHY|TYPE：使用者定義資料類型|  
+|TYPE：使用者定義資料表類型|使用者|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> SQL Server 版本的資料層應用程式支援  
@@ -107,7 +107,7 @@ ms.locfileid: "62918435"
 ##  <a name="Considerations"></a> 部署動作的其他考量  
  請注意，DAC Framework 資料部署動作有下列考量：  
   
--   **擷取/匯出** - 使用 DAC Framework 從資料庫建立套件的動作 (例如擷取 .dacpac 檔案、匯出 .bacpac 檔案)，這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到下列摘要訊息：**這些限制不會影響由 DAC Framework 建立之 DAC 套件中所儲存資料類型和值的精確度，而只適用於將 DAC 套件部署到資料庫所產生的資料類型和值。如需有關受影響的資料，以及如何解決這項限制的詳細資訊，請參閱**[本主題](https://go.microsoft.com/fwlink/?LinkId=267086)。  
+-   **擷取/匯出** - 使用 DAC Framework 從資料庫建立套件的動作 (例如擷取 .dacpac 檔案、匯出 .bacpac 檔案)，這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到下列摘要訊息：**這些限制不會影響由 DAC Framework 建立之 DAC 套件中所儲存資料類型和值的精確度，而只適用於將 DAC 套件部署到資料庫所產生的資料類型和值。如需受影響的資料以及如何解決這項限制的詳細資訊, 請參閱** [這個主題](https://go.microsoft.com/fwlink/?LinkId=267086)。  
   
 -   **部署/發行/匯入** - 使用 DAC Framework 將封裝部署到資料庫的動作，例如部署或發行 .dacpac 檔案以及匯入 .bacpac 檔案，這些限制都適用。 目標資料庫中產生的資料可能不包含封裝中資料的不失真表示法。 部署/匯入記錄將會在每個執行個體遇到問題時包含一則訊息 (如上所述)。 錯誤將封鎖此作業 (請參閱上面的類別目錄 3)，但在其他警告的情況下將會繼續。  
   

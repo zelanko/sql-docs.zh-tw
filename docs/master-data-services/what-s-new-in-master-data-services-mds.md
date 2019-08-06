@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4fdb279d47fd182d3196e760e19723715debbb7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017224"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810498"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 
@@ -25,7 +25,7 @@ ms.locfileid: "68017224"
   
  如需如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中整理資料的概觀，請參閱 [Master Data Services 概觀](../master-data-services/master-data-services-overview-mds.md)。 
   
- 若要安裝 Master Data Services、設定資料庫和網站，以及部署範例模型，請參閱  [Master Data Services 概觀 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
+ 若要安裝 Master Data Services、設定資料庫和網站，以及部署範例模型，請參閱 [Master Data Services 概觀 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
   
  **下載**  
   
@@ -177,7 +177,7 @@ ms.locfileid: "68017224"
     
  **自訂索引**  
   
- 您可以在實體中於單一屬性 (單一索引) 或在一份屬性清單 (複合索引) 上建立非叢集索引，以協助改善查詢效能。 如需詳細資訊，請參閱[自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)。  
+ 您可以在一個屬性 (單一索引) 或實體的屬性清單 (複合索引) 上建立非叢集索引, 以協助改善查詢效能。 如需詳細資訊，請參閱[自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)。  
  
   **屬性篩選**  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68017224"
   
  **在適用於 Excel 的 MDS 增益集中儲存或開啟查詢檔案**  
   
- 您可以從實體總管頁面上按一下 [Excel]  ，儲存查詢檔案的捷徑。 或是可以在適用於 Excel 的 MDS 增益集中，開啟儲存在電腦上的查詢檔案。 使用 QueryOpener 應用程式可開啟已儲存的檔案。 如需詳細資訊，請參閱[捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
+ 您可以從實體總管頁面上按一下 [Excel] ，儲存查詢檔案的捷徑。 或是可以在適用於 Excel 的 MDS 增益集中，開啟儲存在電腦上的查詢檔案。 使用 QueryOpener 應用程式可開啟已儲存的檔案。 如需詳細資訊，請參閱[捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
   
  查詢檔案內含來自檔案總管頁面的篩選與階層資訊。  
    

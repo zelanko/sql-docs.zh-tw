@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2de93079289ffda8ff6287ad09aa4dea150932d7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475961"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811027"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新組織與重建索引
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新組織或重建片段索引。 只要對基礎資料進行插入、更新或刪除作業， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會自動維護索引。 過一段時間後，這些修改就可能使索引中的資訊變成散佈於資料庫中 (片段)。 當根據索引鍵值的邏輯順序頁面，與資料檔中的實體順序不相符時，就會有片段產生。 片段化嚴重的索引可能會造成查詢效能降低並使應用程式回應變慢。  
@@ -95,7 +95,7 @@ ms.locfileid: "68475961"
 > 重建或重新組織小型索引通常不會減少片段。 小型索引的頁面有時候會儲存在混合範圍上， 混合範圍最多可由八個物件所共用，所以當重新組織或重建索引之後，小型索引中的片段可能不會減少。
 
 ### <a name="index-defragmentation-considerations"></a>索引磁碟重組考慮
-在某些情況下, 如果非叢集索引記錄中所包含的實體或邏輯識別碼需要變更, 重建叢集索引將會自動重建任何參考叢集金鑰的非叢集索引。
+在某些情況下, 如果非叢集索引記錄中所包含的實體或邏輯識別碼需要變更, 重建叢集索引將會自動重建參考叢集索引鍵的任何非叢集索引。
 
 強制在資料表上自動重建所有非叢集索引的案例:
 

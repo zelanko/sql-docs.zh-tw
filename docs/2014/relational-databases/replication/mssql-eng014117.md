@@ -12,14 +12,14 @@ ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b29b1df0ed0d86cff33461bdd298c0634505af00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a249f5536846507996da4a7478a32dbe68e4dcd
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191564"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811249"
 ---
-# <a name="mssqleng014117"></a>MSSQL_ENG014117
+# <a name="mssql_eng014117"></a>MSSQL_ENG014117
     
 ## <a name="message-details"></a>訊息詳細資料  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63191564"
   
      10.193.17.129 inst1  
   
--   停用散發，註冊執行個體，然後重新建立散發。 如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，請依循下列步驟：  
+-   停用散發，註冊執行個體，然後重新建立散發。 如果非叢集實例的@SERVERNAME @ 值不正確, 請遵循下列步驟:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

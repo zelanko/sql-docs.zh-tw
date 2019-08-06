@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 6c456334d9d77424c1955f392e8c8a5d16261234
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: e41cd9e244a39f5ec2e84d6f3512a709319acb24
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632036"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811462"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 的新功能 (DB2ToSQL)
 
@@ -43,7 +43,7 @@ SSMA for DB2 的 v 8.3 版本已透過專為改善品質和轉換計量而設計
 
 SSMA for DB2 的8.2 版已增強, 可解決從 SSMA 主控台工具 Azure SQL Database 連線的問題, 並在轉換期間遺漏 views 宣告中的 COUNT_BIG 資料行。 此外, 此版本還包含一組目標的修正程式, 其設計目的是要改善品質和轉換計量, 以及的修正:
 
-* 在資料移轉後停用非叢集索引的問題。
+* 資料移轉後停用非叢集索引的問題。
 * 在無訊息安裝期間偵測 .NET Framework。
 * 下載新版本時, 會發生間歇性損毀。
 

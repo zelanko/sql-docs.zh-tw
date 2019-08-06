@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 54edb2b971cbc83d56498065efa72a4e84257147
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: d02b002dd5f974fa7fd989026172b70a049d0e5f
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632050"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811489"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 的新功能 (MySqlToSql)
 
@@ -34,7 +34,7 @@ SSMA for MySQL 的 v 8.3 版本已透過專為改善品質和轉換計量而設�
 
 SSMA for MySQL 的 v4.0 版本已透過一組目標修正來增強, 其設計目的是要改善品質和轉換計量, 以及的修正:
 
-* 在資料移轉後停用非叢集索引的問題。
+* 資料移轉後停用非叢集索引的問題。
 * 在無訊息安裝期間偵測 .NET Framework。
 * 下載新版本時, 會發生間歇性損毀。
 

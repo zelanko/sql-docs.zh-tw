@@ -1,5 +1,5 @@
 ---
-title: 了解資料庫結構描述 |Microsoft Docs
+title: 瞭解資料庫架構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3439fff5e3bba68f01c24a0979434e21a01ded6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072712"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811051"
 ---
 # <a name="understanding-the-database-schemas"></a>了解資料庫結構描述
   結構描述產生精靈會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]裡的維度和量值群組，產生主題領域資料庫反正規化關聯式結構描述。 此精靈會針對每一個維度產生關聯式資料表 (稱為維度資料表)，以便儲存維度資料，也會針對每一個量值群組產生關聯式資料表 (稱為事實資料表)，以便儲存事實資料。 精靈產生這些關聯式資料表時，會忽略連結維度、連結量值群組和伺服器時間維度。  
@@ -71,7 +71,7 @@ ms.locfileid: "66072712"
  關聯性  
  精靈會為每個一般維度關聯性，產生從事實資料表到維度資料表之資料粒度屬性的一個關聯性。 如果資料粒度是以維度資料表的索引鍵屬性為基礎，會在資料庫和資料來源檢視中建立關聯性。 如果資料粒度是以另一個屬性為基礎，則只會在資料來源檢視中建立關聯性。  
   
- 如果您在精靈中選擇產生索引，會為每一個關聯性資料行產生一個非叢集索引。  
+ 如果您選擇在嚮導中產生索引, 則會為每個關聯性資料行產生非叢集索引。  
   
  條件約束  
  不會在事實資料表上產生主索引鍵。  
@@ -82,7 +82,7 @@ ms.locfileid: "66072712"
  針對量值群組中需要翻譯資料行的任何屬性，精靈會產生另一個資料表來保存已翻譯值。 精靈也會為每一種必要的語言，建立個別資料行。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>資料類型轉換和預設長度  
- 結構描述產生精靈會忽略資料類型，在所有情況下使用的資料行除外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`wchar`資料型別。 `wchar` 資料大小會直接翻譯成 `nvarchar` 資料類型。 但是，如果使用 `wchar` 大小指定的資料行長度大於 4000 個位元組，結構描述產生精靈就會產生錯誤。  
+ 在所有情況下, 架構產生嚮導都會忽略資料類型, 但使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`資料類型的資料行除外。 `wchar` 資料大小會直接翻譯成 `nvarchar` 資料類型。 但是，如果使用 `wchar` 大小指定的資料行長度大於 4000 個位元組，結構描述產生精靈就會產生錯誤。  
   
  如果資料項目 (例如屬性的繫結) 沒有指定的長度，則會針對資料行使用下表中所列的預設長度。  
   

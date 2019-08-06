@@ -1,5 +1,5 @@
 ---
-title: 進度報表：線上索引作業事件類別 |Microsoft Docs
+title: 進度報表：Online Index Operation 事件類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520406"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811256"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>進度報表：線上索引作業事件類別
-  Progress Report:Online Index Operation 事件類別指出在建置程序執行時的線上索引建立作業的進度。  
+  進度報表：Online Index Operation 事件類別指出在執行建置程序時，線上索引建置作業的進度。  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>進度報表：線上索引作業事件類別資料行  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>進度報表：Online Index Operation 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "62520406"
 |EndTime|`datetime`|線上索引作業完成的時間。|15|是|  
 |EventClass|`int`|事件類別 = 190。|27|否|  
 |EventSequence|`int`|要求中的給定事件順序。|51|否|  
-|EventSubClass|`int`|事件子類別的類型。<br /><br /> 1=開始<br /><br /> 2=階段 1 執行開始<br /><br /> 3=階段 1 執行結束<br /><br /> 4=階段 2 執行開始<br /><br /> 5=階段 2 執行結束<br /><br /> 6=插入的資料列計數<br /><br /> 7=完成<br /><br /> 階段 1 指的是基底物件 (叢集索引或堆積)，或者索引作業是否只包含一個非叢集索引。 當索引建立作業牽涉到原始重建加上額外的非叢集索引時，便會使用階段 2。  例如，若物件擁有一個叢集索引和數個非叢集索引，'rebuild all' 會重建所有索引。 基底物件 (叢集索引) 會在階段 1 重建，然後所有非叢集索引會在階段 2 重建。|21|是|  
+|EventSubClass|`int`|事件子類別的類型。<br /><br /> 1=開始<br /><br /> 2=階段 1 執行開始<br /><br /> 3=階段 1 執行結束<br /><br /> 4=階段 2 執行開始<br /><br /> 5=階段 2 執行結束<br /><br /> 6=插入的資料列計數<br /><br /> 7=完成<br /><br /> 階段1指的是基底物件 (叢集索引或堆積), 如果索引作業只牽涉到一個非叢集索引, 則為。 當索引建立作業牽涉到原始重建加上額外的非叢集索引時, 會使用第2階段。  例如, 如果物件具有叢集索引和數個非叢集索引, ' rebuild all ' 會重建所有索引。 基底物件 (叢集索引) 會在階段1重建, 然後在第2階段重建所有非叢集索引。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IndexID|`int`|事件所影響之物件的索引識別碼。|24|是|  

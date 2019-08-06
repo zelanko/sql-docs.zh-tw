@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 4da3fa07c4cdcdf2f3666c3bf85ba3669eb7e5bf
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: b0284d0a562578e8b27f492e79e9662a240f8ccb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632061"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811445"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 的新功能 (SybaseToSQL)
 本文列出每個版本中 SAP ASE (先前稱為 SSMA for Sybase) 變更的 SQL Server 移轉小幫手 (SSMA)。
@@ -33,7 +33,7 @@ SSMA for SAP ASE 的 v 8.3 版本已透過專為改善品質和轉換計量而�
 
 SSMA for SAP ASE 的: 8.2 版已透過一組目標修正來增強, 其設計目的是要改善品質和轉換計量, 以及的修正:
 
-* 在資料移轉後停用非叢集索引的問題。
+* 資料移轉後停用非叢集索引的問題。
 * 在無訊息安裝期間偵測 .NET Framework。
 * 下載新版本時, 會發生間歇性損毀。
 

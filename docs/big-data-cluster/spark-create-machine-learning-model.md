@@ -2,19 +2,19 @@
 title: 使用 MLeap 建立和匯出 Spark 機器學習模型
 titleSuffix: SQL Server big data clusters
 description: 使用 PySpark, 透過 SQL Server big data 叢集 (預覽) 上的 Spark 來定型和建立機器學習模型。 使用 MLeap 匯出, 然後在 SQL Server 中使用 JAVA 為模型評分。
-author: lgongmsft
-ms.author: lgong
+author: RogPodge
+ms.author: roliu
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67727381"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811215"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>在 SQL Server big data 叢集上建立、匯出和評分 Spark 機器學習模型
 
@@ -32,7 +32,7 @@ ms.locfileid: "67727381"
 
 - [SQL Server big data](deploy-get-started.md)叢集
 
-- [海量資料工具](deploy-big-data-tools.md)
+- [巨量資料工具](deploy-big-data-tools.md)
    - **kubectl**
    - **curl**
    - **Azure Data Studio**

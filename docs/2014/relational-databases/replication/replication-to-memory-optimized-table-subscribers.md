@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250876"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811235"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
   做為異動複寫訂閱者的資料表 (不包括點對點異動複寫) 可以設定為記憶體最佳化資料表。 其他複寫組態與記憶體最佳化資料表不相容。  
@@ -23,7 +23,7 @@ ms.locfileid: "63250876"
 ## <a name="configuring-a-memory-optimized-table-as-a-subscriber"></a>將記憶體最佳化資料表設定為訂閱者  
  若要設定記憶體最佳化資料表做為訂閱者，請執行下列步驟。  
   
- **建立並啟用發行集**  
+ **建立和啟用發行集**  
   
 1.  建立發行集。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63250876"
     GO  
     ```  
   
- **產生快照集，並調整結構描述**  
+ **產生快照集並調整架構**  
   
 1.  建立快照集工作，並產生快照集。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "63250876"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  導覽到快照集資料夾。 預設位置是"C:\Program Files\Microsoft SQL Server\MSSQL12。\<執行個體 > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\"。  
+2.  導覽到快照集資料夾。 預設位置為 "C:\Program Files\Microsoft SQL Server\MSSQL12。實例 > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\"。 \<  
   
-3.  找出 **。SCH**檔案資料表，然後在 Management Studio 中開啟它。 變更資料表結構描述並更新預存程序，如下所述。  
+3.  找出 **.SCH**您資料表的檔案, 並在 Management Studio 中開啟它。 變更資料表結構描述並更新預存程序，如下所述。  
   
      評估 IDX 檔案中定義的索引。 修改 `CREATE TABLE`，以指定必要的索引、條件約束、主索引鍵和記憶體最佳化語法。 對於記憶體最佳化資料表，索引資料行應該是 NOT NULL，而字元類型的索引資料行必須是 Unicode 並且使用 BIN2 定序。 請參閱以下範例：  
   
@@ -226,7 +226,7 @@ ms.locfileid: "63250876"
     go  
     ```  
   
-5.  建立訂閱者資料庫**提升為快照隔離**選項，然後將預設定序設定為 Latin1_General_CS_AS_KS_WS，以防使用非 Unicode 字元資料類型。  
+5.  使用 [**提升為快照隔離**] 選項建立訂閱者資料庫, 並在使用非 Unicode 字元資料類型時, 將預設定序設定為 Latin1_General_CS_AS_KS_WS。  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -241,7 +241,7 @@ ms.locfileid: "63250876"
     GO  
     ```  
   
-6.  將結構描述套用至訂閱者的資料庫，並儲存供日後使用的結構描述。  
+6.  將架構套用至訂閱者的資料庫, 並儲存架構以供未來使用。  
   
 7.  將發行者 (來源) 資料載入至訂閱者。 資料在發行者端應該不會變更，除非您加入訂閱。  您可以使用 BCP，如下所示：  
   
@@ -263,7 +263,7 @@ ms.locfileid: "63250876"
     GO  
     ```  
   
- **加入非同步訂閱**  
+ **不新增同步訂閱**  
   
  加入 nosync 訂閱。  
   
@@ -293,19 +293,19 @@ GO
   
  在訂閱者端，異動複寫中包含的資料表可以設定為記憶體最佳化資料表，但是訂閱者資料表必須符合記憶體最佳化資料表的需求。 需求的限制如下。  
   
--   若要在異動複寫訂閱者上建立記憶體最佳化資料表，必須手動修改用來建立記憶體最佳化資料表的快照集結構描述檔案。 如需詳細資訊，請參閱 <<c0> [ 修改結構描述檔案](#Schema)。  
+-   若要在異動複寫訂閱者上建立記憶體最佳化資料表，必須手動修改用來建立記憶體最佳化資料表的快照集結構描述檔案。 如需詳細資訊, 請參閱[修改架構](#Schema)檔案。  
   
 -   複寫至訂閱者端記憶體最佳化資料表的資料表限制，會是記憶體最佳化資料表每一個資料列限制的 8060 個位元組。  
   
--   複寫至訂閱者端記憶體最佳化資料表的資料表限制，則為記憶體最佳化資料表中允許的資料類型。 如需詳細資訊，請參閱 < [Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。  
+-   複寫至訂閱者端記憶體最佳化資料表的資料表限制，則為記憶體最佳化資料表中允許的資料類型。 如需詳細資訊, 請參閱[支援的資料類型](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。  
   
--   對於更新複寫至訂閱者端之記憶體最佳化資料表的資料表主索引鍵也有些限制。 如需詳細資訊，請參閱 <<c0> [ 將變更複寫至主索引鍵](#PrimaryKey)。  
+-   對於更新複寫至訂閱者端之記憶體最佳化資料表的資料表主索引鍵也有些限制。 如需詳細資訊, 請參閱[將變更複寫至主要金鑰](#PrimaryKey)。  
   
 -   記憶體最佳化資料表中不支援外部索引鍵、唯一條件約束、觸發程序、結構描述修改、ROWGUIDCOL、計算資料行、資料壓縮、別名資料類型、版本設定及鎖定。 如需詳細資訊，請參閱＜ [記憶體內部 OLTP 不支援 T-SQL 建構](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) ＞。  
   
 ##  <a name="Schema"></a> 修改結構描述檔案  
   
--   不支援叢集索引。 請將任何叢集索引變更為非叢集索引。  
+-   不支援叢集索引。 將任何叢集索引變更為非叢集索引。  
   
 -   索引之索引鍵中的所有資料行都必須指定為 `NOT NULL`。  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING 必須為 ON。  
   
-##  <a name="PrimaryKey"></a> 將變更複寫至主索引鍵  
+##  <a name="PrimaryKey"></a>將變更複寫至主要金鑰  
  記憶體最佳化資料表的主索引鍵無法更新。 若要複寫訂閱者端的主索引鍵更新，請修改更新預存程序，將更新做為刪除和插入組傳遞。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -21,27 +21,27 @@ ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52045095714bfc2be7e929ed27a26a800c860fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092086"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811095"
 ---
 # <a name="sql-server-components"></a>SQL Server 元件
-  您可以針對已在本機或遠端電腦執行 Upgrade Advisor 分析精靈[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安裝。 升級前分析的第一個步驟是識別要分析的電腦和元件。  
+  您[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]可以針對已安裝、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的本機或遠端電腦執行 Upgrade Advisor 分析 Wizard。 升級前分析的第一個步驟是識別要分析的電腦和元件。  
   
-## <a name="options"></a>選項  
- **電腦名稱**  
- 指定要分析之電腦的名稱。 Upgrade Advisor 會填入**伺服器名稱**與本機電腦名稱 方塊中的。 您也可以使用 "." 和 "localhost" 來連接至本機電腦。  
+## <a name="options"></a>選項。  
+ **電腦名稱稱**  
+ 指定要分析之電腦的名稱。 Upgrade Advisor 會在 [**伺服器名稱**] 方塊中填入本機電腦名稱稱。 您也可以使用 "." 和 "localhost" 來連接至本機電腦。  
   
  若要分析不同的電腦，請使用下列指導方針：  
   
--   若要掃描非叢集執行個體，請輸入電腦名稱。  
+-   若要掃描非叢集實例, 請輸入電腦名稱稱。  
   
 -   若要掃描叢集執行個體，請輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的名稱。  
   
--   若要掃描安裝在某個叢集之節點上的非叢集元件，請輸入容錯移轉叢集節點的電腦名稱。  
+-   若要掃描安裝在叢集節點上的非叢集元件, 請輸入容錯移轉叢集節點的電腦名稱稱。  
   
     > [!IMPORTANT]  
     >  請勿包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。  
@@ -50,8 +50,8 @@ ms.locfileid: "66092086"
   
  若要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，您必須指定本機電腦的名稱。 Upgrade Advisor 只會掃描本機報表伺服器。  
   
- **偵測**  
- **偵測**按鈕存取指定的電腦，並偵測要分析的元件：  
+ **是否**  
+ [偵測] 按鈕會存取指定的電腦, 並偵測要分析的元件:  
   
 -   如果要分析遠端電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，則必須在遠端電腦上啟用遠端登錄服務。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66092086"
 -   如果在電腦的登錄中找到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，就會偵測出 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 不過，Upgrade Advisor 只會掃描本機報表伺服器。  
   
  **Components**  
- 選取要分析的元件。 您可以按一下**偵測** 按鈕以選取的電腦上安裝的所有元件。 偵測出安裝在電腦上的元件旁將顯示一個核取記號。 您也可以選取或清除每個元件旁的核取方塊，藉以手動選取要分析的元件。  
+ 選取要分析的元件。 您可以按一下 [偵測] 按鈕, 以選取安裝在電腦上的所有元件。 偵測出安裝在電腦上的元件旁將顯示一個核取記號。 您也可以選取或清除每個元件旁的核取方塊，藉以手動選取要分析的元件。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

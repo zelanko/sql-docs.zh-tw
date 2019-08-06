@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468092"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811066"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
   記憶體中 OLTP 推出記憶體最佳化資料表以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生編譯預存程序。 本文針對記憶體最佳化資料表和原生編譯的預存程序提供查詢處理的概觀。  
@@ -77,7 +77,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Customer 資料表中的資料列是從叢集索引擷取，這是主要資料結構且擁有完整的資料表資料。  
   
--   來自 Order 資料表的資料是使用 CustomerID 資料行上的非叢集索引擷取。 這個索引同時包含用於聯結的 CustomerID 資料行，以及傳回給使用者的主索引鍵資料行 OrderID。 從 Orders 資料表傳回其他資料行會需要查閱 Order 資料表的叢集索引。  
+-   會使用 CustomerID 資料行上的非叢集索引來抓取訂單資料表中的資料。 這個索引同時包含用於聯結的 CustomerID 資料行，以及傳回給使用者的主索引鍵資料行 OrderID。 從 Orders 資料表傳回其他資料行會需要查閱 Order 資料表的叢集索引。  
   
 -   邏輯運算子 `Inner Join` 是由實體運算子 `Merge Join` 所實作。 其他實體聯結類型包括 `Nested Loops` 和 `Hash Join`。 `Merge Join` 運算子會利用兩個索引都會在聯結資料行 CustomerID 上排序的情況。  
   
@@ -114,7 +114,7 @@ SQL Server 查詢處理管線。
   
 6.  Access Methods 會從緩衝集區中的索引和資料頁面擷取資料列，並且視需要將頁面從磁碟載入至緩衝集區。  
   
- 在第一個範例查詢中，執行引擎會從 Access Methods 要求 Customer 上叢集索引中以及 Order 上非叢集索引中的資料列。 Access Methods 會周遊 B 型樹狀目錄索引結構，擷取所要求的資料列。 在這種情況下，當計畫需要完整索引掃描時，就會擷取所有資料列。  
+ 在第一個範例查詢中, 執行引擎會要求客戶上叢集索引中的資料列, 以及從存取方法對非叢集索引進行排序。 Access Methods 會周遊 B 型樹狀目錄索引結構，擷取所要求的資料列。 在這種情況下，當計畫需要完整索引掃描時，就會擷取所有資料列。  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 隨選批次和預存程序，也稱為解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 解譯是指查詢計劃是由查詢計劃中每個運算子的查詢執行引擎所解譯。 執行引擎會讀取運算子及其參數，並執行作業。  
@@ -222,7 +222,7 @@ END
   
  原生編譯預存程序的引動過程描述如下：  
   
-1.  使用者發出`EXEC` *usp_myproc*陳述式。  
+1.  使用者發出`EXEC` *usp_myproc*語句。  
   
 2.  剖析器會擷取名稱和預存程序參數。  
   
@@ -239,7 +239,7 @@ END
  參數探測不會用於編譯原生編譯的預存程序。 預存程序的所有參數都會視為具有 UNKNOWN 值。 與解譯的預存程序相同，原生編譯的預存程序也支援 `OPTIMIZE FOR` 提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>擷取原生編譯預存程序的查詢執行計畫  
- 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)]  或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
+ 原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如:  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -255,7 +255,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>原生編譯預存程序中的查詢運算子  
  下表摘要說明原生編譯預存程序內部支援的查詢運算子：  
   
-|運算子|範例查詢|  
+|Operator|範例查詢|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |Insert|`INSERT dbo.Customer VALUES ('abc', 'def')`|  

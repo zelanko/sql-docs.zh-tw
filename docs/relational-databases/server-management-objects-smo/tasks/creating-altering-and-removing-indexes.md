@@ -1,5 +1,5 @@
 ---
-title: 建立、 改變和移除索引 |Microsoft Docs
+title: 建立、改變和移除索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22af830a8dda47bfe4533668d90f1cac473d4bfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 404bd1d31a910f0fd2d181ab4198ffab065ffd4f
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002710"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811508"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>建立、改變和移除索引
 
@@ -29,10 +29,10 @@ ms.locfileid: "68002710"
  您可以指定 <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Index> 屬性，以在 XML 資料行上建立索引。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>在 Visual Basic 中建立非叢集的複合索引  
- 此程式碼範例示範如何建立非叢集的複合索引。 如果是複合索引，請在索引中加入一個以上的資料行。 設定<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>屬性，以**False**非叢集索引。  
+ 這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 針對非叢集索引 , 將屬性設定為<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> False。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>在 Visual C# 中建立非叢集的複合索引  
- 此程式碼範例示範如何建立非叢集的複合索引。 如果是複合索引，請在索引中加入一個以上的資料行。 設定<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>屬性，以**False**非叢集索引。  
+ 這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 針對非叢集索引 , 將屬性設定為<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> False。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>在 PowerShell 中建立非叢集的複合索引  
- 此程式碼範例示範如何建立非叢集的複合索引。 如果是複合索引，請在索引中加入一個以上的資料行。 設定<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>屬性，以**False**非叢集索引。  
+ 這個程式碼範例示範如何建立複合的非叢集索引。 如果是複合索引，請在索引中加入一個以上的資料行。 針對非叢集索引 , 將屬性設定為<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> False。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  
@@ -188,7 +188,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>在 Visual Basic 中建立 XML 索引  
- 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是稱為 MySampleCollection，這是在 XML schema collection[使用的 XML 結構描述](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
+ 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是名為 MySampleCollection 的 XML 架構集合, 會[使用 Xml 架構](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)在中建立。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -251,7 +251,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>在 Visual C# 中建立 XML 索引  
- 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是稱為 MySampleCollection，這是在 XML schema collection[使用的 XML 結構描述](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
+ 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是名為 MySampleCollection 的 XML 架構集合, 會[使用 Xml 架構](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)在中建立。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -314,7 +314,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>在 PowerShell 中建立 XML 索引  
- 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是稱為 MySampleCollection，這是在 XML schema collection[使用的 XML 結構描述](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
+ 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是名為 MySampleCollection 的 XML 架構集合, 會[使用 Xml 架構](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)在中建立。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

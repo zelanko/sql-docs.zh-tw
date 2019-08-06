@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_distribution_properties (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases _materialized_view_distribution_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2509bdbe2510c78dbb14b59499f2b345680fd3e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fadefa4f42776636c15be5789ccf50e578f73e0b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059421"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809942"
 ---
-# <a name="syspdwmaterializedviewdistributionproperties-transact-sql-preview"></a>sys.pdw_materialized_view_distribution_properties (TRANSACT-SQL) （預覽）
+# <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>sys.databases _materialized_view_distribution_properties (Transact-sql) (預覽)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-顯示發佈資訊具體化檢視。  
+顯示散發資訊具體化視圖。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------| 
-|object_id|**int**|具體化檢視的三個屬性所指定的識別碼。| 
+|object_id|**int**|已指定三個屬性之具體化視圖的識別碼。| 
 |distribution_policy |**tinyint**|2 = 雜湊</br>4 = ROUND_ROBIN|  
-|distribution_policy_desc |**nvarchar(60)**|雜湊 ROUND_ROBIN|  
+|distribution_policy_desc |**nvarchar(60)**|HASH、ROUND_ROBIN|  
  
 ## <a name="permissions"></a>Permissions
 

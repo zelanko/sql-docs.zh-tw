@@ -1,5 +1,5 @@
 ---
-title: 了解累加式產生 |Microsoft Docs
+title: 瞭解累加式產生 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71355cfe5341af74083e21cb786b441c71c48c80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62802698"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811306"
 ---
 # <a name="understanding-incremental-generation"></a>了解累加式產生
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "62802698"
  加入新物件，例如維度、Cube 或屬性。  
  結構描述產生精靈會加入新物件所對應的基礎物件。  
   
- 如果 [結構描述產生精靈] 因為主題領域資料庫中出現使用者物件，而無法進行必要的變更 (因為 Database Engine 會傳回錯誤)，則 [結構描述產生精靈] 會失敗，並顯示 Database Engine 所傳回的錯誤。 比方說，如果您在精靈產生資料表之後，在該資料表上建立主索引鍵條件約束或非叢集索引，則結構描述產生精靈不會卸除該資料表，因為它不會建立條件約束或索引。  
+ 如果 [結構描述產生精靈] 因為主題領域資料庫中出現使用者物件，而無法進行必要的變更 (因為 Database Engine 會傳回錯誤)，則 [結構描述產生精靈] 會失敗，並顯示 Database Engine 所傳回的錯誤。 例如, 如果您在嚮導產生資料表之後, 在資料表上建立 primary key 條件約束或非叢集索引, 則「架構產生嚮導」不會卸載該資料表, 因為它並未建立條件約束或索引。  
   
 ## <a name="supporting-schema-changes"></a>支援結構描述變更  
  當您在主題領域資料庫，或在相關聯資料來源檢視中變更資料表或資料行的屬性時，結構描述產生精靈會如下表所述來處理變更。  
