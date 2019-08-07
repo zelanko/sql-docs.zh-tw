@@ -24,7 +24,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68098729"
 ---
-# <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
+# <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   將會傳回運算式的結果，並轉譯為所要求的資料類型。若在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中轉換失敗，則傳回 Null。 TRY_PARSE 僅適用於從字串轉換到日期/時間及數字類型。  
@@ -110,7 +110,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |hrvatski|克羅埃西亞文|1050|hr-HR|  
 |slovenčina|斯洛伐克文|1051|Sk-SK|  
 |slovenski|斯洛維尼亞文|1060|Sl-SI|  
-|ελληνικά\|希臘文|1032|El-GR|  
+|ελληνικά|希臘文|1032|El-GR|  
 |български|保加利亞文|1026|bg-BG|  
 |русский|俄文|1049|Ru-RU|  
 |Türkçe|土耳其文|1055|Tr-TR|  
@@ -127,7 +127,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-simple-example-of-tryparse"></a>A. TRY_PARSE 的簡單範例  
+### <a name="a-simple-example-of-try_parse"></a>A. TRY_PARSE 的簡單範例  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
@@ -143,7 +143,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-detecting-nulls-with-tryparse"></a>B. 使用 TRY_PARSE 偵測 Null  
+### <a name="b-detecting-nulls-with-try_parse"></a>B. 使用 TRY_PARSE 偵測 Null  
   
 ```  
 SELECT  
@@ -164,7 +164,7 @@ True
 (1 row(s) affected)  
 ```  
   
-### <a name="c-using-iif-with-tryparse-and-implicit-culture-setting"></a>C. 一併使用 IIF 與 TRY_PARSE 及隱含文化特性設定  
+### <a name="c-using-iif-with-try_parse-and-implicit-culture-setting"></a>C. 一併使用 IIF 與 TRY_PARSE 及隱含文化特性設定  
   
 ```  
 SET LANGUAGE English;  
