@@ -1,5 +1,5 @@
 ---
-title: sp_repltrans (TRANSACT-SQL) |Microsoft Docs
+title: sp_repltrans (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b1bdcdcd0f2128a08546e8b322449ec0b28cc29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 40477973efebac9a484e89e7627f0996285b430b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129775"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770856"
 ---
-# <a name="sprepltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_repltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   傳回發行集資料庫交易記錄中所有交易的結果集，這些交易標示了複寫但尚未標示為已散發。 這個預存程序執行於發行集資料庫的發行者端。  
   
@@ -37,15 +37,15 @@ sp_repltrans
 ```  
   
 ## <a name="result-sets"></a>結果集  
- **sp_repltrans**傳回從中它執行時，可讓您檢視目前尚未散發的交易發行集資料庫的相關資訊 (這些尚未傳送至交易記錄檔中所剩餘的交易散發者）。 結果集會顯示每項交易的第一個和最後一個記錄的記錄序號。 **sp_repltrans**大致[sp_replcmds &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)但未傳回之交易的命令。  
+ **sp_repltrans**會傳回其執行所在之發行集資料庫的相關資訊, 可讓您查看目前未散發的交易 (交易記錄檔中尚未傳送至「散發者」的交易)。 結果集會顯示每項交易的第一個和最後一個記錄的記錄序號。 **sp_repltrans**與[sp_replcmds &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)類似, 但不會傳回交易的命令。  
   
 ## <a name="remarks"></a>備註  
  **sp_repltrans**用於異動複寫中。  
   
- **sp_repltrans**不支援非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+ 非[!INCLUDE[msCoName](../../includes/msconame-md.md)]發行者不支援 sp_repltrans。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_repltrans**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_repltrans**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   

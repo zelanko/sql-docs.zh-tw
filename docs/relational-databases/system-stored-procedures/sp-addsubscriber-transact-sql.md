@@ -1,5 +1,5 @@
 ---
-title: sp_addsubscriber (TRANSACT-SQL) |Microsoft Docs
+title: sp_addsubscriber (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cb21731dd02fee4ec3779affed56f85e5dbc0e9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa4ea771197f08fc16989176f486d6a29c8c9940
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079233"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769045"
 ---
-# <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   將訂閱者加入發行者中，使它能夠接收發行集。 針對快照集和交易式發行集，這個預存程序執行於發行集資料庫的發行者端；如果是使用遠端散發者的合併式發行集，這個預存程序便執行於散發者端。  
   
@@ -60,46 +60,46 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @subscriber = ] 'subscriber'` 是要作為有效訂閱者加入這部伺服器上的發行集之伺服器的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'`這是要加入做為此伺服器上之發行集之有效訂閱者的伺服器名稱。 *訂閱者*是**sysname**, 沒有預設值。  
   
-`[ @type = ] type` 為訂閱者的類型。 *型別*已**tinyint**，而且可以是下列值之一。  
+`[ @type = ] type`這是訂閱者的類型。 *類型*為**Tinyint**, 而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**0** (預設)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者|  
+|**0** (預設)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者|  
 |**1**|ODBC 資料來源伺服器|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 資料庫|  
 |**3**|OLE DB 提供者|  
   
-`[ @login = ] 'login'` 登入識別碼的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 *login* 是預設值為 NULL 的 **sysname**。  
+`[ @login = ] 'login'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證的登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @password = ] 'password'` 密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 *密碼*已**nvarchar(524)** ，預設值是 NULL。  
+`[ @password = ] 'password'`這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證的密碼。 *password*是**Nvarchar (524)** , 預設值是 Null。  
   
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @commit_batch_size = ] commit_batch_size` 這個參數已被取代，維護回溯相容性的指令碼。  
-  
-> [!NOTE]  
->  指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
-  
-`[ @status_batch_size = ] status_batch_size` 這個參數已被取代，維護回溯相容性的指令碼。  
+`[ @commit_batch_size = ] commit_batch_size`這個參數已被取代, 而且會針對腳本的回溯相容性進行維護。  
   
 > [!NOTE]  
 >  指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @flush_frequency = ] flush_frequency` 這個參數已被取代，維護回溯相容性的指令碼。  
+`[ @status_batch_size = ] status_batch_size`這個參數已被取代, 而且會針對腳本的回溯相容性進行維護。  
   
 > [!NOTE]  
 >  指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @frequency_type = ] frequency_type` 是用來排程複寫代理程式的頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
+`[ @flush_frequency = ] flush_frequency`這個參數已被取代, 而且會針對腳本的回溯相容性進行維護。  
+  
+> [!NOTE]  
+>  指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+  
+`[ @frequency_type = ] frequency_type`這是複寫代理程式的排程頻率。 *frequency_type*是**int**, 而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -109,19 +109,19 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**8**|每週|  
 |**16**|每月|  
 |**32**|每月相對|  
-|**64** （預設值）|自動啟動|  
+|**64** (預設值)|自動啟動|  
 |**128**|重複執行|  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
  [ **@frequency_interval=** ] *frequency_interval*  
- 若要設定的頻率所套用的值*frequency_type*。 *frequency_interval*已**int**，預設值是 1。  
+ 這是*frequency_type*所設定的頻率所套用的值。 *frequency_interval*是**int**, 預設值是1。  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` 這是複寫代理程式的日期。 使用這個參數時*frequency_type*設為**32** （每月相對）。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
+`[ @frequency_relative_interval = ] frequency_relative_interval`這是複寫代理程式的日期。 當*frequency_type*設定為**32** (每月相對) 時, 會使用這個參數。 *frequency_relative_interval*是**int**, 而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -132,82 +132,82 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**16**|最後一個|  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是**0**。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`這是*frequency_type*所使用的迴圈因數。 *frequency_recurrence_factor*是**int**, 預設值是**0**。  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @frequency_subday = ] frequency_subday` 已定義的期間重新排程的頻率。 *frequency_subday*已**int**，而且可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday`這是在定義的期間內重新排定的頻率。 *frequency_subday*是**int**, 而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二個|  
-|**4** （預設值）|Minute|  
+|**4** (預設值)|Minute|  
 |**8**|Hour|  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` 間隔*frequency_subday*。 *frequency_subday_interval*已**int**，預設值是**5**。  
-  
-> [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
-  
-`[ @active_start_time_of_day = ] active_start_time_of_day` 當複寫代理程式是第一天的排程時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是**0**。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`這是*frequency_subday*的間隔。 *frequency_subday_interval*是**int**, 預設值是**5**。  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` 已停止的當日的複寫代理程式的時間排程，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 235959，表示下午 11:59:59 。  
-  
-> [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
-  
-`[ @active_start_date = ] active_start_date` 排程的日期，複寫代理程式時第一，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 0。  
+`[ @active_start_time_of_day = ] active_start_time_of_day`這是第一次排程複寫代理程式的當日時間, 格式為 HHMMSS。 *active_start_time_of_day*是**int**, 預設值是**0**。  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @active_end_date = ] active_end_date` 會停止複寫代理程式的日期排程，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 99991231，表示年 12 月 31 日至 9999。  
-  
-> [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
-  
-`[ @description = ] 'description'` 是 「 訂閱者 」 的文字描述。 *描述*已**nvarchar(255)** ，預設值是 NULL。  
-  
-`[ @security_mode = ] security_mode` 是實作的安全性模式。 *security_mode*已**int**，預設值是 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  
+`[ @active_end_time_of_day = ] active_end_time_of_day`這是排程停止複寫代理程式的當日時間, 格式為 HHMMSS。 *active_end_time_of_day*是**int**, 預設值是 235959, 表示 11:59:59 P.M。 。  
   
 > [!NOTE]  
->  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 執行時，每個訂用帳戶現在指定的屬性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
   
-`[ @encrypted_password = ] encrypted_password` 這個參數已被取代，並設定僅供回溯相容性*encrypted_password*為任何值，但**0**會導致錯誤。  
-  
-`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @active_start_date = ] active_start_date`這是第一次排程複寫代理程式的日期, 格式為 YYYYMMDD。 *active_start_date*是**int**, 預設值是0。  
   
 > [!NOTE]  
->  *發行者*不應從發佈時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+  
+`[ @active_end_date = ] active_end_date`這是排程停止複寫代理程式的日期, 格式為 YYYYMMDD。 *active_end_date*是**int**, 預設值是 99991231, 這表示9999年12月31日。  
+  
+> [!NOTE]  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+  
+`[ @description = ] 'description'`這是訂閱者的文字描述。 *description*是**Nvarchar (255)** , 預設值是 Null。  
+  
+`[ @security_mode = ] security_mode`是實作為安全性模式。 *security_mode*是**int**, 預設值是1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  
+  
+> [!NOTE]  
+>  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 在執行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)時, 現在會以每一訂用帳戶為基礎來指定屬性。 指定值之後，它會成為在這個訂閱者端建立訂閱時的預設值，且會傳回一則警告訊息。  
+  
+`[ @encrypted_password = ] encrypted_password`這個參數已被取代, 而且僅針對回溯相容性將*Encrypted_password*設定為任何值而提供, 但**0**會導致錯誤。  
+  
+`[ @publisher = ] 'publisher'`指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *publisher*是**sysname**, 預設值是 Null。  
+  
+> [!NOTE]  
+>  從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者發行時, 不應使用「發行者」。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_addsubscriber**用於快照式複寫、 異動複寫和合併式複寫。  
+ **sp_addsubscriber**用於快照式複寫、異動複寫和合併式複寫中。  
   
- **sp_addsubscriber**則不需要 「 訂閱者 」 只會有合併式發行集的匿名訂閱。  
+ 當訂閱者只會有合併式發行集的匿名訂閱時, 不需要**sp_addsubscriber** 。  
   
- **sp_addsubscriber**寫入[MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md)資料表中**發佈**資料庫。  
+ **sp_addsubscriber**會寫入**散發**資料庫中的[MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md)資料表。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_addsubscriber**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色的成員, 才能夠執行**sp_addsubscriber**。  
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)   
- [sp_changesubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_changesubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   
