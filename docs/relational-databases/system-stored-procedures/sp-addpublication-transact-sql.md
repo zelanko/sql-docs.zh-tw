@@ -22,7 +22,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68769104"
 ---
-# <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
+# <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   建立一個快照式或交易式發行集。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -309,9 +309,9 @@ sp_addpublication [ @publication = ] 'publication'
 >  我們建議您使用預設值 FALSE。 當這個選項設定為 TRUE 時，散發代理程式會套用具有最高訂閱者識別碼之節點的衝突資料列，藉以嘗試聚合拓撲中的資料。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。  
   
   
-`[ \@allow_partition_switch = ] 'allow_partition_switch'`指定是否要更改資料表 .。。SWITCH 語句可以針對已發行的資料庫執行。 *allow_partition_switch*是**Nvarchar (5)** , 預設值為 FALSE。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
+`[ \@allow_partition_switch = ] 'allow_partition_switch'`指定是否要更改資料表 ...SWITCH 語句可以針對已發行的資料庫執行。 *allow_partition_switch*是**Nvarchar (5)** , 預設值為 FALSE。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
   
-`[ \@replicate_partition_switch = ] 'replicate_partition_switch'`指定是否要更改資料表 .。。針對已發行的資料庫執行的 SWITCH 語句應該複寫到訂閱者。 *replicate_partition_switch*是**Nvarchar (5)** , 預設值為 FALSE。 只有在*allow_partition_switch*設定為 TRUE 時, 這個選項才有效。  
+`[ \@replicate_partition_switch = ] 'replicate_partition_switch'`指定是否要更改資料表 ...針對已發行的資料庫執行的 SWITCH 語句應該複寫到訂閱者。 *replicate_partition_switch*是**Nvarchar (5)** , 預設值為 FALSE。 只有在*allow_partition_switch*設定為 TRUE 時, 這個選項才有效。  
 
 ## <a name="return-code-values"></a>傳回碼值  
  **0** (成功) 或**1** (失敗)  

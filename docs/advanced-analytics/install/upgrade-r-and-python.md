@@ -221,7 +221,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 2. 輸入下列命令以檢視可用的執行個體清單︰ `SqlBindR.exe /list`
   
-   請記下列出的完整執行個體名稱。 例如, 實例名稱可能是 MSSQL14.。預設實例的 MSSQLSERVER, 或類似 SERVERNAME 的專案。MYNAMEDINSTANCE.
+   請記下列出的完整執行個體名稱。 例如, 實例名稱可能是 MSSQL14.預設實例的 MSSQLSERVER, 或類似 SERVERNAME 的專案。MYNAMEDINSTANCE.
 
 3. 執行**SqlBindR**和 */bind*引數, 並使用上一個步驟中傳回的實例名稱指定要升級之實例的名稱。
 
