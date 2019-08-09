@@ -32,7 +32,7 @@ ms.locfileid: "68495287"
   
 6.  在 [ **Excel 連接管理員**] 對話方塊中, 按一下 [**流覽]** , 然後選取 [ **EIM 教學**課程] 資料夾中的**供應商 .xls**檔案。 確認已在 [ **Excel 版本**] 方塊中選取 [ **Microsoft Excel 97-2003** ], 然後按一下 **[確定]** 。  
   
-     [ ![Excel 連接管理員] 對話方塊][ (../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Excel 連接管理員] 對話方塊")  
+     ![Excel 連接管理員 對話方塊](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Excel 連接管理員 對話方塊")  
   
 7.  在 [ **Excel 來源編輯器**] 對話方塊中, 于 [ **excel 工作表的名稱**] 清單方塊中選取 [ **IncomingSuppliers $** ]。  
   

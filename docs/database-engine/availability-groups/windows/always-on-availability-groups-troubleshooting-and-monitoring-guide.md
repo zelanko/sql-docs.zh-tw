@@ -37,7 +37,7 @@ ms.locfileid: "67991575"
 |[疑難排解：對主要複本的變更未反映在次要複本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|效能|用戶端應用程式在主要複本上成功完成更新，但是查詢次要複本卻顯示未反映變更。|  
 |[Troubleshoot:High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/) (疑難排解：Always On 可用性群組的高 HADR_SYNC_COMMIT 等候類型)|效能|如果 HADR_SYNC_COMMIT 超乎尋常地長，表示資料移動程序或次要複本記錄強化可能有效能問題。|  
 
-##  <a name="BKMK_TOOLS">對疑難排解有助益的工具</a>  
+##  <a name="BKMK_TOOLS"></a> 對疑難排解有助益的工具  
  設定或執行可用性群組時，不同的工具可協助您診斷不同類型的問題。 下表提供與工具相關的有用資訊連結。  
   
 |工具|Description|  
