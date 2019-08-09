@@ -1,7 +1,7 @@
 ---
-title: 將資料內嵌到 SQL Server 資料集區
+title: 將資料內嵌至 SQL Server 資料集區
 titleSuffix: SQL Server big data clusters
-description: 本教學課程會示範如何將資料內嵌至 SQL Server 2019 巨量資料叢集 （預覽） 的資料集區。
+description: 本教學課程示範如何將資料內嵌至 SQL Server 2019 巨量資料叢集 (預覽) 的資料集區。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,27 +10,27 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 626b5442596c5a0f9beedef779937cf875efff00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957793"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：使用 Transact-SQL 將資料內嵌到 SQL Server 資料集區
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程示範如何使用 TRANSACT-SQL，將資料載入[資料集區](concept-data-pool.md)的 SQL Server 2019 巨量資料叢集 （預覽）。 使用 SQL Server 的巨量資料叢集，從各種來源的資料可以擷取並分散到資料集區執行個體。
+本教學課程示範如何使用 Transact-SQL，將資料載入 SQL Server 2019 巨量資料叢集 (預覽) 的[資料集區](concept-data-pool.md)。 透過 SQL Server 巨量資料叢集，即可將各種來源的資料內嵌和分散到不同的資料集區執行個體。
 
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
-> * 建立外部資料表的資料集區中。
-> * 插入的資料集區資料表中的範例 web 點選流資料。
-> * 加入本機資料表的資料集區資料表中的資料。
+> * 在資料集區中建立外部資料表。
+> * 將範例 Web 點選流資料插入資料集區資料表。
+> * 將資料集區資料表中的資料與本機資料表聯結。
 
 > [!TIP]
-> 如果您想，您可以下載並執行命令的指令碼，在本教學課程。 如需相關指示，請參閱 <<c0> [ 資料集區範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)GitHub 上。
+> 如果您想要的話，也可以下載並執行用於本教學課程中命令的指令碼。 如需指示，請參閱 GitHub 上的[資料集區範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)。
 
 ## <a id="prereqs"></a> 必要條件
 
@@ -38,26 +38,26 @@ ms.locfileid: "67957793"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 延伸模組**
-- [將範例資料載入您的巨量資料叢集](tutorial-load-sample-data.md)
+- [將範例資料載入巨量資料叢集](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-in-the-data-pool"></a>建立資料集區中的外部資料表
+## <a name="create-an-external-table-in-the-data-pool"></a>在資料集區中建立外部資料表
 
-下列步驟會建立外部資料表名為資料集區內**web_clickstream_clicks_data_pool**。 本表然後可用做為位置擷取資料到巨量資料叢集。
+下列步驟會在資料集區建立名為 **web_clickstream_clicks_data_pool** 的外部資料表。 然後，此資料表可作為將資料內嵌至巨量資料叢集的位置。
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](connect-to-big-data-cluster.md#master)。
+1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
-1. 在連線 中按兩下**伺服器**視窗以顯示 SQL Server 的主要執行個體的伺服器儀表板。 選取 **新的查詢**。
+1. 按兩下 [伺服器]  視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]  。
 
-   ![SQL Server 的主要執行個體查詢](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
+   ![SQL Server 主要執行個體查詢](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
-1. 執行下列 TRANSACT-SQL 命令，以將內容變更為**銷售**主要執行個體中的資料庫。
+1. 執行下列 Transact-SQL 命令，將內容變更為主要執行個體中的 **Sales** 資料庫。
 
    ```sql
    USE Sales
    GO
    ```
 
-1. 如果不存在，請建立資料集區的外部資料來源。
+1. 如果資料集區沒有外部資料表，請加以建立。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -65,7 +65,7 @@ ms.locfileid: "67957793"
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
-1. 建立名為外部資料表**web_clickstream_clicks_data_pool**資料集區中。
+1. 在資料集區建立名為 **web_clickstream_clicks_data_pool** 的外部資料表。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -78,13 +78,13 @@ ms.locfileid: "67957793"
       );
    ```
   
-1. 在 CTP 3.1 中，建立資料集區是非同步的但沒有任何方法來判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
+1. 在 CTP 3.1 中，資料集區的建立是非同步的，但目前沒有方法能判斷會何時完成。 請等候兩分鐘，確保資料集區建立完成，再繼續進行。
 
 ## <a name="load-data"></a>載入資料
 
-下列步驟會將範例 web 點選流資料嵌入使用先前步驟中建立外部資料表的資料集區。
+下列步驟使用在先前步驟中建立的外部資料表，將範例 Web 點選流資料內嵌至資料集區。
 
-1. 使用`INSERT INTO`陳述式來查詢的結果插入的資料集區 ( **web_clickstream_clicks_data_pool**外部資料表)。
+1. 使用 `INSERT INTO` 陳述式，將查詢結果插入資料集區 (**web_clickstream_clicks_data_pool** 外部資料表)。
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool
@@ -96,7 +96,7 @@ ms.locfileid: "67957793"
    HAVING COUNT_BIG(*) > 100;
    ```
 
-1. 檢查兩個選取的查詢與插入的資料。
+1. 使用兩個 SELECT 查詢，檢查插入的資料。
 
    ```sql
    SELECT count(*) FROM [dbo].[web_clickstream_clicks_data_pool]
@@ -105,7 +105,7 @@ ms.locfileid: "67957793"
 
 ## <a name="query-the-data"></a>查詢資料
 
-加入資料集區中的查詢中的本機資料的預存的結果**銷售**資料表。
+將資料集區中所儲存的查詢結果與 **Sales** 資料表中的本機資料聯結。
 
 ```sql
 SELECT TOP (100)
@@ -128,7 +128,7 @@ GROUP BY w.wcs_user_sk;
 
 ## <a name="clean-up"></a>清除
 
-您可以使用下列命令，移除在本教學課程中建立的資料庫物件。
+使用下列命令，移除本教學課程所建立的資料庫物件。
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
@@ -136,6 +136,6 @@ DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 
 ## <a name="next-steps"></a>後續步驟
 
-深入了解如何將資料內嵌到 Spark 作業的資料集區：
+了解如何使用 Spark 作業，將資料內嵌至資料集區：
 > [!div class="nextstepaction"]
-> [擷取與 Spark 作業的資料](tutorial-data-pool-ingest-spark.md)
+> [使用 Spark 作業內嵌資料](tutorial-data-pool-ingest-spark.md)
