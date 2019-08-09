@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3d8e8ce2683aef5922efe9a13ee88fa5920aa4af
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: d55a51ac388cfb4af197ce409434a0dc9847bd2d
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470758"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661360"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>在多部電腦上設定 Kubernetes 以進行 SQL Server 巨量資料叢集部署
 
@@ -26,7 +26,7 @@ ms.locfileid: "68470758"
 > 如需設定 Kubernetes 的範例指令碼，請參閱 [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm) (在Ubuntu 16.04 LTS 或 18.04 LTS 上使用 Kubeadm 建立 Kubernetes 叢集)。
 另請參閱[本主題](deployment-script-single-node-kubeadm.md)，以取得在 VM 上自動部署單一節點 kubeadm 部署的範例指令碼，然後在其上部署巨量資料叢集的預設設定。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 - 至少 3 部 Linux 實體機器或虛擬機器
 - 每部電腦的建議設定：
@@ -61,7 +61,7 @@ ms.locfileid: "68470758"
 1. 在電腦上設定 Docker 和 Kubernetes 必要條件。
 
    ```bash
-   KUBE_DPKG_VERSION=1.11.3-00
+   KUBE_DPKG_VERSION=1.15.0-00
    sudo apt-get update && /
    sudo apt-get install -y ebtables ethtool && /
    sudo apt-get install -y docker.io && /

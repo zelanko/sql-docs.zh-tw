@@ -9,18 +9,18 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d7d8a6dd53452700853dca9774ed0196ed7546fe
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 83922206503b690a7b49c27d4686333bf7b966a1
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419353"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742727"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 ADLS Gen2 以進行 HDFS 階層處理
 
 下列各節提供如何使用 Azure Data Lake Storage Gen2 儲存體資料來源設定 HDFS 階層處理的範例。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - [部署巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)
@@ -110,10 +110,10 @@ ms.locfileid: "68419353"
    ```
 1. 設定環境變數 MOUNT_CREDENTIALS (向上捲動以取得指示)
 
-1. 使用 **azdata bdc storage-pool mount create** 在 Azure 中掛接遠端 HDFS 儲存體。 執行下列命令之前，請先取代預留位置值：
+1. 使用**azdata bdc HDFS 掛接 create**, 在 Azure 中掛接遠端 HDFS 儲存體。 執行下列命令之前，請先取代預留位置值：
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -126,13 +126,13 @@ ms.locfileid: "68419353"
 若要列出巨量資料叢集中所有掛接的狀態，請使用下列命令：
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 若要列出 HDFS 中特定路徑的掛接狀態，請使用下列命令：
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="refresh-a-mount"></a>重新整理掛接
@@ -145,10 +145,10 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> 刪除掛接
 
-若要刪除掛接，請使用 **azdata bdc storage-pool mount delete** 命令，並在 HDFS 中指定掛接路徑：
+若要刪除掛接, 請使用**azdata bdc hdfs mount delete**命令, 並在 hdfs 中指定掛接路徑:
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>後續步驟
