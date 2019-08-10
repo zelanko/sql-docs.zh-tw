@@ -22,12 +22,12 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922934"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890813"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 資料庫的備份與還原
   此主題描述備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的優點、基本備份和還原詞彙，並介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原策略，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的安全性考量。  
@@ -101,7 +101,7 @@ ms.locfileid: "62922934"
   
 
   
-##  <a name="BnrStrategies"></a> 備份和還原策略簡介  
+##  <a name="BnrStrategies"></a>備份與還原策略簡介  
  備份和還原資料作業必須依特定環境自訂，而且也必須使用可用的資源。 因此，為了可靠地使用備份和還原作業進行復原，您需要擬定備份和還原策略。 設計良好的備份和還原策略可充分提高資料可用性，並使資料損失降至最少，同時考慮到您的特定業務需求。  
   
 > [!IMPORTANT]  
@@ -150,7 +150,7 @@ ms.locfileid: "62922934"
   
      如需詳細資訊，請參閱本節後面的[估計完整資料庫備份的大小](#EstimateDbBuSize)。  
   
-####  <a name="EstimateDbBuSize"></a> 估計完整資料庫備份的大小  
+####  <a name="EstimateDbBuSize"></a>估計完整資料庫備份的大小  
  在實作備份和還原策略前，您必須估計完整資料庫備份將使用多少磁碟空間。 備份作業會將資料庫中的資料複製到備份檔中。 備份僅包含資料庫中的實際資料，而不包含任何未使用的空間。 因此，備份通常會比資料庫本身還小。 您可以使用 **sp_spaceused** 系統預存程序來估計完整資料庫備份的大小。 如需詳細資訊，請參閱 [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)。  
   
 ### <a name="schedule-backups"></a>排程備份  
@@ -277,7 +277,7 @@ ms.locfileid: "62922934"
  [還原和復原概觀 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [備份與還原 Analysis Services 資料庫](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
+ [備份與還原 Analysis Services 資料庫](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [備份並還原全文檢索目錄與索引。](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [備份及還原複寫的資料庫](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [交易記錄 &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

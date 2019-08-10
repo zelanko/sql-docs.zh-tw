@@ -10,12 +10,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107985"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891141"
 ---
 # <a name="relational-query-designer-user-interface"></a>關聯式查詢設計工具使用者介面
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的報表設計師同時提供了圖形化查詢設計工具和以文字為基礎的查詢設計工具來協助您建立查詢，以便指定要從報表資料集之 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 中擷取的資料。 使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。 使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
@@ -36,11 +36,11 @@ ms.locfileid: "66107985"
   
  下圖顯示搭配資料表或檢視表使用時的圖形化查詢設計工具。  
   
- ![查詢適用的圖形化設計工具](../analysis-services/media/rsqd-relational-graphical.gif "查詢適用的圖形化設計工具")  
+ ![查詢適用的圖形化設計工具](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "查詢適用的圖形化設計工具")  
   
  下圖顯示搭配預存程序或資料表值函式使用時的圖形化查詢設計工具。  
   
- ![圖形化查詢設計工具中的預存程序](../analysis-services/media/rs-relational-graphical-sp.gif "圖形化查詢設計工具中的預存程序")  
+ ![圖形化查詢設計工具中的預存程序](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "圖形化查詢設計工具中的預存程序")  
   
  下表會描述各個窗格的功能。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107985"
   
  彙總會提供資料摘要，而資料會進行分組，以支援傳遞摘要資料的彙總。 當您在查詢中使用彙總時，查詢傳回的其他欄位會自動分組，且查詢會包含 SQL GROUP BY 子句。 您可以僅使用 [群組和彙總] 清單中的 [群組依據] 選項摘要資料，而不新增彙總。 許多彙總會包含使用 DISTINCT 關鍵字的版本。 包含 DISTINCT 可消除重複的值。  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 會使用[!INCLUDE[tsql](../includes/tsql-md.md)]並[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]。 SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[tsql](../includes/tsql-md.md)]並[!INCLUDE[msCoName](../includes/msconame-md.md)] 使用。[!INCLUDE[DWsql](../includes/dwsql-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
   
  如需 [!INCLUDE[tsql](../includes/tsql-md.md)] 的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 參考 &#40;資料庫引擎&#41;](/sql/t-sql/language-reference)。  
   

@@ -13,19 +13,19 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b9fb6be3970ea12ce3252e70f7773f1687dbe83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62775351"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889245"
 ---
 # <a name="install-sql-server-2014"></a>安裝 SQL Server 2014
 ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[下載 SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **感謝[Scott Hanselman](http://www.hanselman.com/)收集的所有安裝程式套件連結在同一個地方 ！**
+  **感謝[Scott Hanselman](http://www.hanselman.com/)在一處收集所有安裝程式套件連結!**
   
- 本主題提供可以用於安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之不同安裝選項的概觀。 如需有關各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可供安裝的元件以及安裝過程中，請參閱[SQL Server 2014 安裝](installation-for-sql-server.md)。  
-> **注意︰** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供 32 位元和 64 位元版本。 64 位元和 32 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過安裝精靈或命令提示字元來安裝。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件，請參閱[Edition 和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)並[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 本主題提供可以用於安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之不同安裝選項的概觀。 如需可安裝之各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件和安裝程式的詳細資訊, 請參閱[SQL Server 2014 的安裝](installation-for-sql-server.md)。  
+> **注意:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在32位和64位版本中都有提供。 64 位元和 32 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過安裝精靈或命令提示字元來安裝。 如需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件的詳細資訊, 請參閱[SQL Server 2014 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[SQL Server 2014 版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 若要針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](https://go.microsoft.com/fwlink/?LinkId=87843)。 如需查閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]範例資料庫及範例程式碼的支援資訊，請參閱＜ [資料庫及範例概觀](https://go.microsoft.com/fwlink/?LinkId=110391)＞。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62775351"
 |[安裝 SQL Server 管理工具](../../sql-server/install/install-sql-server-management-tools.md)|描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
 |[安裝 SQL Server PowerShell](install-sql-server-powershell.md)|描述安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 元件時的考量。|  
   
-## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>如何安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>如何安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 |標題|描述|  
 |-----------|-----------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "62775351"
 |-----------|-----------------|  
 |[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|本主題提供防火牆組態及如何設定 Windows 防火牆的概觀。|  
 |[設定多重主目錄電腦進行 SQL Server 存取](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|此主題描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連接。|  
-|[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|您可以遵循本主題所提供的步驟，設定通訊埠和防火牆設定，以允許存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 PowerPivot for SharePoint。|  
+|[設定 Windows 防火牆以允許 Analysis Services 存取](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|您可以遵循本主題所提供的步驟，設定通訊埠和防火牆設定，以允許存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 PowerPivot for SharePoint。|  
   
 ## <a name="related-sections"></a>相關章節  
  [安裝 SQL Server 2014 BI 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
@@ -68,8 +68,8 @@ ms.locfileid: "62775351"
   
 ## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)   
- [升級到 SQL Server 2014](upgrade-sql-server.md)   
- [解除安裝 SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)   
+ [升級至 SQL Server 2014](upgrade-sql-server.md)   
+ [卸載 SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)   
  [高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
   

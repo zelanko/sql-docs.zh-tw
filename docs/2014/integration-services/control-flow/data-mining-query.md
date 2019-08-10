@@ -12,12 +12,12 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf644d1ef54695a4c590a3a67e84da699f8f192b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832378"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890322"
 ---
 # <a name="data-mining-query"></a>資料採礦查詢
   設計窗格包含資料採礦預測查詢產生器，您可以使用該產生器來建立資料採礦預測查詢。 您可以依據輸入資料表來設計預測查詢，或設計單一預測查詢。 切換到結果檢視以執行查詢並檢視結果。 查詢檢視會顯示預測查詢產生器所建立的資料採礦延伸模組 (DMX) 查詢。  
@@ -34,18 +34,18 @@ ms.locfileid: "62832378"
  顯示選取的採礦模型，並以此模型作為預測的基礎。  
   
  **選取模型**  
- 開啟 [選取採礦模型]  對話方塊。  
+ 開啟 [選取採礦模型] 對話方塊。  
   
  **輸入資料行**  
  顯示用來產生預測之選取的輸入資料行。  
   
  **Source**  
- 從下拉式清單中，選取包含您將用於資料行之欄位的來源。 您可以使用在 [採礦模型]  資料表中選取的採礦模型、在 [選取輸入資料表]  資料表中選取的輸入資料表、預測函數或自訂運算式。  
+ 從下拉式清單中，選取包含您將用於資料行之欄位的來源。 您可以使用在 [採礦模型] 資料表中選取的採礦模型、在 [選取輸入資料表] 資料表中選取的輸入資料表、預測函數或自訂運算式。  
   
  可以將資料行從包含採礦模型和輸入資料行的資料表，拖曳至資料格。  
   
  **欄位**  
- 從衍生自來源資料表的資料行清單中，選取一個資料行。 如果在 [來源]  中選取 [預測函數]  ，則此資料格會包含選取的採礦模型可用之預測函數的下拉式清單。  
+ 從衍生自來源資料表的資料行清單中，選取一個資料行。 如果在 [來源] 中選取 [預測函數]，則此資料格會包含選取的採礦模型可用之預測函數的下拉式清單。  
   
  **別名**  
  伺服器所傳回之資料行的名稱。  
@@ -54,7 +54,7 @@ ms.locfileid: "62832378"
  選取即可傳回資料行或只使用 WHERE 子句中的資料行。  
   
  **群組**  
- 配合 [及/或]  資料行，即可將運算式群組在一起。 例如 (expr1 OR expr2) AND expr3。  
+ 配合 [及/或] 資料行，即可將運算式群組在一起。 例如 (expr1 OR expr2) AND expr3。  
   
  **及/或**  
  用於建立邏輯查詢。 例如 (expr1 OR expr2) AND expr3。  
@@ -63,7 +63,7 @@ ms.locfileid: "62832378"
  指定套用至資料行的條件或使用者運算式。 可以將資料行從包含採礦模型和輸入資料行的資料表，拖曳至資料格。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦查詢介面](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [資料採礦查詢介面](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

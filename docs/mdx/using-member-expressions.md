@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097107"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893509"
 ---
 # <a name="using-member-expressions"></a>使用成員運算式
 
@@ -56,10 +56,10 @@ Dimension_Name
   
 ```  
   
- 存在著許多會傳回成員的 MDX 函數。 如需完整清單，請參閱 < [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ 存在著許多會傳回成員的 MDX 函數。 如需完整清單, 請參閱[Mdx 函數&#40;參考&#41; mdx](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  如需有關成員名稱及成員索引鍵的詳細資訊，請參閱 <<c0> [ 使用成員、 Tuple 和集合&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。</c0>  
+>  如需成員名稱和成員索引鍵的詳細資訊, 請參閱[使用成員、元組&#40;和&#41;設定 MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  

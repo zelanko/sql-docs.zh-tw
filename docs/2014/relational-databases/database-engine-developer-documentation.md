@@ -1,5 +1,5 @@
 ---
-title: 開發人員&#39;指南 (Database Engine) |Microsoft Docs
+title: 開發&#39;人員指南 (資料庫引擎) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba11f16b14520ac5340724597a6e5b9aa3dedbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872614"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890808"
 ---
-# <a name="developer39s-guide-database-engine"></a>開發人員&#39;指南 (Database Engine)
+# <a name="developer39s-guide-database-engine"></a>開發&#39;人員指南 (資料庫引擎)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供一組豐富的工具來開發、管理與控制資料庫應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -52,8 +52,8 @@ ms.locfileid: "62872614"
  描述如何在應用程式中使用例外狀況訊息方塊程式介面，讓您更有效地控制訊息經驗，以便讓使用者選擇要儲存錯誤訊息內容以供日後參考，或是取得訊息的說明。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦程式設計](../analysis-services/dev-guide/data-mining-programming.md)   
- [開發人員指南&#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
+ [資料採礦程式設計](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [開發人員指南&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [開發人員指南&#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [開發人員指南&#40;複寫&#41;](replication/concepts/replication-developer-documentation.md)   
  [開發人員指南&#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  

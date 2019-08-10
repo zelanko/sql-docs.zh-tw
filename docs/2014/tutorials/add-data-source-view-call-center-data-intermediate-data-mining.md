@@ -1,5 +1,5 @@
 ---
-title: 新增資料來源檢視的撥接中心資料 （中繼資料採礦教學課程） |Microsoft Docs
+title: 加入撥打電話中心資料的資料來源視圖 (中繼資料採礦教學課程) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62823298"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888680"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>加入用於撥接中心資料的資料來源檢視 (中繼資料採礦教學課程)
   在這項工作中，您將加入資料來源檢視，用來存取撥接中心資料。 相同的資料將用於建立用來進行探索的初步類神經網路模型，以及用於提出建議的羅吉斯迴歸模型。  
@@ -26,41 +26,41 @@ ms.locfileid: "62823298"
   
 #### <a name="to-add-a-data-source-view"></a>若要加入資料來源檢視  
   
-1.  中**方案總管**，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新增資料來源檢視**。  
+1.  在**方案總管**中, 以滑鼠右鍵按一下 [**資料來源視圖**], 然後選取 [**新增資料來源視圖**]。  
   
      此時會開啟資料來源檢視精靈。  
   
-2.  在 [歡迎使用資料來源檢視精靈]  頁面上，按一下 [下一步]  。  
+2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
   
-3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料來源。 如果您沒有此資料來源，請參閱[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](../../2014/tutorials/basic-data-mining-tutorial.md)。 按一下 [下一步]  。  
+3.  在 [**選取資料來源**] 頁面的 [**關聯式資料來源**] 底下[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] , 選取資料來源。 如果您沒有此資料來源, 請參閱[基本資料採礦教學](../../2014/tutorials/basic-data-mining-tutorial.md)課程。 按一下 [下一步]。  
   
-4.  在 **選取資料表和檢視**頁面上，選取下列資料表，然後按一下向右箭號，將它新增至資料來源檢視：  
+4.  在 [**選取資料表和資料檢視]** 頁面上, 選取下列資料表, 然後按一下向右箭號, 將它加入至資料來源視圖:  
   
     -   **FactCallCenter (dbo)**  
   
     -   **DimDate**  
   
-5.  按一下 [下一步]  。  
+5.  按一下 [下一步]。  
   
-6.  在 [**完成精靈]** 頁面上，依預設名稱的資料來源檢視是[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 將名稱變更為**CallCenter**，然後按一下**完成**。  
+6.  在 [**正在完成嚮導]** 頁面上, 預設會將 [資料來源[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]] 視圖命名為。 將名稱變更為**CallCenter**, 然後按一下 **[完成]** 。  
   
-     資料來源檢視設計師會開啟並顯示**撥接中心**資料來源檢視。  
+     [資料來源視圖設計工具] 隨即開啟, 以顯示 [ **CallCenter** ] 資料來源視圖。  
   
-7.  在 [資料來源檢視] 窗格中，以滑鼠右鍵按一下並選取**加入/移除資料表**。 選取的資料表中， **DimDate**然後按一下**確定**。  
+7.  以滑鼠右鍵按一下 [資料來源] 視圖窗格內, 然後選取 [**新增/移除資料表]** 。 選取資料表**DimDate** , 然後按一下 **[確定]** 。  
   
-     關聯性應該會自動加入之間`DateKey`每個資料表中的資料行。 您將使用此關聯性來取得資料行**EnglishDayNameOfWeek**，從**DimDate**資料表，並在您的模型中使用它。  
+     應該在每個資料表的`DateKey`資料行之間自動加入關聯性。 您將使用此關聯性從**DimDate**資料表取得**EnglishDayNameOfWeek**資料行, 並在您的模型中使用它。  
   
-8.  在 資料來源檢視設計工具中，以滑鼠右鍵按一下資料表中， **FactCallCenter**，然後選取**新增具名計算**。  
+8.  在 [資料來源視圖設計工具] 中, 以滑鼠右鍵按一下資料表**FactCallCenter**, 然後選取 [新增] [**命名計算**]。  
   
-     在 **建立具名計算**對話方塊方塊中，輸入下列值：  
+     在 [**建立命名計算**] 對話方塊中, 輸入下列值:  
   
     |||  
     |-|-|  
     |**資料行名稱**|DayOfWeek|  
-    |**說明**|從 DimDate 資料表取得週中的日|  
+    |**描述**|從 DimDate 資料表取得週中的日|  
     |**運算式**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
-     若要確認運算式建立資料您需要請以滑鼠右鍵按一下資料表**FactCallCenter**，然後選取**瀏覽資料**。  
+     若要確認運算式是否會建立您所需的資料, 請以滑鼠右鍵按一下資料表**FactCallCenter**, 然後選取 [**流覽資料**]。  
   
 9. 花一分鐘檢閱可用的資料，以便了解資料在資料採礦中的用法：  
   
@@ -68,8 +68,8 @@ ms.locfileid: "62823298"
 |-----------------|--------------|  
 |FactCallCenterID|當資料匯入資料倉儲時建立的任意索引鍵。<br /><br /> 此資料行會識別唯一記錄，應該做為資料採礦模型的案例索引鍵。|  
 |DateKey|撥接中心作業的日期，以整數表示。 資料倉儲中通常使用整數日期索引鍵，但是如果您要依日期值進行分組，可能想要取得日期/時間格式的日期。<br /><br /> 請注意，日期不是唯一的，因為廠商會在作業的每一天，為每個排班提供一個個別的報表。|  
-|WageType|表示該日期為工作日、週末或假日。<br /><br /> 很可能已有不同的客戶服務品質的工作日與週末讓您將使用此資料行做為輸入。|  
-|Shift|表示記錄電話當時的排班。 此撥接中心將工作日分成四個排班：AM、 PM1、 PM2，以及 Midnight。<br /><br /> 排班可能對客戶服務品質造成影響，因此您將它做為輸入。|  
+|WageType|表示該日期為工作日、週末或假日。<br /><br /> 客戶服務在週末與工作日的品質可能有所差異, 因此您將使用此資料行做為輸入。|  
+|Shift|表示記錄電話當時的排班。 此話務中心會將工作日分成四個移位:AM、PM1、PM2 和午夜。<br /><br /> 排班可能對客戶服務品質造成影響，因此您將它做為輸入。|  
 |LevelOneOperators|表示待命的一級操作員數目。<br /><br /> 撥接中心員工從一級開始，因此這些員工資歷較淺。|  
 |LevelTwoOperators|表示待命的二級操作員數目。<br /><br /> 員工必須記錄特定的服務時數才能限定為二級操作員。|  
 |TotalOperators|排班期間出現的操作員總數。|  
@@ -78,16 +78,16 @@ ms.locfileid: "62823298"
 |Orders|來自電話的訂單數目。|  
 |IssuesRaised|由電話產生、需要後續追蹤的問題數目。|  
 |AverageTimePerIssue|回應來電所需的平均時間。|  
-|ServiceGrade|表示一般服務品質，計量以*放棄率*整個排班。 放棄率越高，客戶越可能不滿意，而且可能會遺失潛在的訂單。|  
+|ServiceGrade|指出一般服務品質的度量, 以整個排班的*放棄速率*來測量。 放棄率越高，客戶越可能不滿意，而且可能會遺失潛在的訂單。|  
   
- 請注意，資料會包含為基礎的單一日期資料行的四個不同資料行： `WageType`， **DayOfWeek**， `Shift`，和`DateKey`。 通常在資料採礦中，最好不要使用多個衍生自相同資料的資料行，因為值的相互關聯性太強，可能會遮蔽其他模式。  
+ 請注意, 資料包含四個以單一日期資料行為基礎的不同資料`WageType`行:、 `Shift` **DayOfWeek**、 `DateKey`和。 通常在資料採礦中，最好不要使用多個衍生自相同資料的資料行，因為值的相互關聯性太強，可能會遮蔽其他模式。  
   
- 不過，我們不會使用`DateKey`模型中因為它包含太多唯一值。 之間沒有直接關聯性`Shift`並**DayOfWeek**，以及`WageType`並**DayOfWeek**只部分相關。 如果您對共線性有顧慮，可以使用所有可用的資料行建立結構，然後忽略各模型中不同的資料行並測試效果。  
+ 不過, 我們不會在`DateKey`模型中使用, 因為它包含太多的唯一值。 和`Shift` **DayOfWeek 之間**沒有直接的關聯性, 而且 和DayOfWeek只有部分`WageType`相關。 如果您對共線性有顧慮，可以使用所有可用的資料行建立結構，然後忽略各模型中不同的資料行並測試效果。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [建立類神經網路結構和模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的資料來源檢視](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [多維度模型中的資料來源檢視](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

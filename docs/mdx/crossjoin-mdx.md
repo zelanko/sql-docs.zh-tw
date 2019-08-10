@@ -1,5 +1,5 @@
 ---
-title: Crossjoin (MDX) |Microsoft Docs
+title: 交叉聯結 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 275a7546bae70ba329cff7af2df107e43c3d1b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047166"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892940"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -39,14 +39,14 @@ Set_Expression1 * Set_Expression2 [* ...n]
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **Crossjoin**函式傳回的交叉乘積的兩個或多個指定集合。 Tuple 在結果集中的順序，會依據要聯結的集合順序以及它們成員的順序而定。 比方說，當第一個集合包含 {x1，x2，...，x*n*}，第二個集合所組成 {y1，y2，...，y*n*}，這些集合的交叉乘積是：  
+ **交叉**聯結函數會傳回兩個或多個指定集合的交叉乘積。 Tuple 在結果集中的順序，會依據要聯結的集合順序以及它們成員的順序而定。 例如, 當第一個集合由 {x1, x2,..., x*n*} 組成, 而第二個集合由 {y1, y2, ..., y*n*} 組成時, 這些集合的交叉乘積就是:  
   
- {(x1 y1)，(x1，y2)，...，(x1，y*n*)，(x2 y1)，(x2 y2)，...，  
+ {(x1, y1), (x1, y2),..., (x1, y*n*), (x2, y1), (x2, y2),..。,  
   
- (x2,...,x y*n*)，...，(x*n*，y1)，(x*n*，y2)，...，(xn，y*n*)}  
+ (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  如果交叉聯結中的集合是由相同維度之不同屬性階層的 Tuple 組成，這個函數只會傳回實際存在的 Tuple。 如需詳細資訊，請參閱 < [MDX 的關鍵概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。  
+>  如果交叉聯結中的集合是由相同維度之不同屬性階層的 Tuple 組成，這個函數只會傳回實際存在的 Tuple。 如需詳細資訊, 請參閱[MDX &#40;中的&#41;重要概念 Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)。  
   
 ## <a name="examples"></a>範例  
  下列查詢會示範在查詢的資料行軸和資料列軸上使用 Crossjoin 函數的範例：  

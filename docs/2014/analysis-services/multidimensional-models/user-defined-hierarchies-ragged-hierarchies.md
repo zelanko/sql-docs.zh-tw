@@ -12,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072516"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889326"
 ---
 # <a name="ragged-hierarchies"></a>不完全階層
   不完全階層是所含層級數目不平均的使用者定義階層。 常見範例包括組織圖 (高階主管同時擁有部門主管級和非主管級直屬員工)，或由國家/地區-區域-城市組成的地理階層 (其中部分城市缺少父州或省，例如華盛頓特區、梵蒂岡或新德里)。  
@@ -41,9 +41,9 @@ ms.locfileid: "66072516"
   
 -   使用一般階層，但是在每個層級上設定 `HideMemberIf` 屬性來指定使用者是否可看到遺漏的層級。 設定 `HideMemberIf` 時，您也應該在連接字串中設定 `MDXCompatibility` 以覆寫預設導覽行為。 本主題將提供設定這些屬性的指示。  
   
--   建立可以明確方式管理層級成員的父子式階層。 如需此技術的說明，請參閱 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)(SSAS 中的不完全階層 (部落格文章))。 如需線上叢書 》 中的詳細資訊，請參閱[父子式階層](parent-child-dimension.md)。 建立父子式階層的缺點在於，每個維度只能有一個父子式階層，且當您計算中繼成員的彙總時，通常會導致效能降低。  
+-   建立可以明確方式管理層級成員的父子式階層。 如需此技術的說明，請參閱 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)(SSAS 中的不完全階層 (部落格文章))。 如需《線上叢書》中的詳細資訊, 請參閱[父子式](parent-child-dimension.md)階層。 建立父子式階層的缺點在於，每個維度只能有一個父子式階層，且當您計算中繼成員的彙總時，通常會導致效能降低。  
   
- 如果您的維度包含多個不完全階層，您應該使用第一種方法：設定 `HideMemberIf`。 在使用不完全階層方面有實務經驗的 BI 開發人員，可進一步支援實體資料表中的其他變更，並建立每個層級的個別的資料表。 請參閱[Martin Mason 的 SSAS 財務 Cube 第 1a 不完全階層 （部落格）](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/)如需這項技術詳細資料。  
+ 如果您的維度包含多個不完全階層，您應該使用第一種方法：設定 `HideMemberIf`。 在使用不完全階層方面有實務經驗的 BI 開發人員，可進一步支援實體資料表中的其他變更，並建立每個層級的個別的資料表。 如需這項技術的詳細資訊, 請參閱[聖馬丁 Mason 的 SSAS 財務 Cube-第1A 層-不完全階層 (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 。  
   
 ##  <a name="bkmk_Hide"></a> 設定 HideMemberIf 以隱藏一般階層中的成員  
  在不完全維度的資料表中，在邏輯上遺漏的成員可以不同方式來表示。 資料表資料格可包含 Null 或空字串，或者它們可以包含與它們父系相同的值以做為一個預留位置。 預留位置的表示是由子成員的預留位置狀態 (如同 `HideMemberIf` 屬性所決定) 以及用戶端應用程式的 `MDX Compatibility` 連接字串屬性所決定。  
@@ -52,7 +52,7 @@ ms.locfileid: "66072516"
   
 1.  在 SSDT 中按兩下維度，在維度設計師中加以開啟。 第一個索引標籤 [維度結構] 會在 [階層] 窗格中顯示屬性階層。  
   
-2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]  。 將 `HideMemberIf` 設定為底下描述的其中一個值。  
+2.  以滑鼠右鍵按一下此階層中的成員，並選取 [屬性]。 將 `HideMemberIf` 設定為底下描述的其中一個值。  
   
     |HideMemberIf 設定|描述|  
     |--------------------------|-----------------|  
@@ -74,6 +74,6 @@ ms.locfileid: "66072516"
  [建立使用者定義階層](user-defined-hierarchies-create.md)   
  [使用者階層](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [父子式階層](parent-child-dimension.md)   
- [連接字串屬性 &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [連接字串屬性 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

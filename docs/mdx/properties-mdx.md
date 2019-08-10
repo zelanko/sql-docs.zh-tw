@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7d6e072cd47233b6cb76c09fb3bc0e9b9b42604
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020647"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893668"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -35,16 +35,16 @@ Member_Expression.Properties(Property_Name [, TYPED])
  成員屬性名稱的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- **屬性**函式會傳回指定的成員屬性的指定成員的值。 成員屬性可以是任何內建成員屬性，例如**名稱**，**識別碼**，**金鑰**，或**標題**，也可以是使用者定義成員屬性。 如需詳細資訊，請參閱 <<c0> [ 內建成員屬性&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)並[使用者自訂成員屬性&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。</c0>  
+ **Properties**函數會針對指定的成員屬性, 傳回指定成員的值。 成員屬性可以是任何內建成員屬性, 例如**名稱**、**識別碼**、索引**鍵**或**標題**, 也可以是使用者定義的成員屬性。 如需詳細資訊, 請參閱[內部&#40;成員&#41;屬性 mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties)和[使用者自訂&#40;成員&#41;屬性 mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
   
- 依預設，值會強制轉型成字串。 如果**具型別**指定，則傳回的值強型別。  
+ 依預設，值會強制轉型成字串。 如果指定了具**類型**, 則傳回值為強型別。  
   
 -   如果為內建的屬性類型，此函數會傳回原始的成員類型。  
   
--   如果使用者定義的屬性型別，傳回值的型別是傳回值的型別相同**MemberValue**函式。  
+-   如果屬性類型是 [使用者定義], 則傳回值的類型會與**MemberValue**函數的傳回數值型別相同。  
   
 > [!NOTE]  
->  Properties ('Key') 會傳回與 Key0 相同的結果，但複合索引鍵例外， 因為複合索引鍵的 Properties ('Key') 會傳回 Null。 使用金鑰*x*對於複合索引鍵，此範例所示的語法。 Properties ('Key0')、Properties('Key1')、Properties('Key2') 等共同形成複合索引鍵。  
+>  Properties ('Key') 會傳回與 Key0 相同的結果，但複合索引鍵例外， 因為複合索引鍵的 Properties ('Key') 會傳回 Null。 使用複合索引鍵的索引鍵*x*語法, 如範例中所示。 Properties ('Key0')、Properties('Key1')、Properties('Key2') 等共同形成複合索引鍵。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回內建和使用者自訂成員屬性，並利用 TYPED 引數來傳回 Day Name 成員屬性的強型別值。  
@@ -85,7 +85,7 @@ SELECT {Measures.MemberName
 FROM [Adventure Works]  
 ```  
   
- 下列範例示範如何使用索引鍵*x*屬性。  
+ 下列範例示範如何使用 KEY*x*屬性。  
   
 ```  
 WITH   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用成員屬性 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [使用成員屬性 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a34cdf743ff0bcecbb4b3088d99efdf3bbfef744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e9fb0dfd3607adc1773d4a43561f32ba650ee5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938162"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887679"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  建立一個以現有採礦模型的採礦結構為基礎的採礦模型。 **SELECT INTO**陳述式會藉由複製結構描述和其他不是實際演算法特定的資訊來建立新的採礦模型。  
+  建立一個以現有採礦模型的採礦結構為基礎的採礦模型。 **SELECT INTO**語句會藉由複製架構和其他非實際演算法特有的資訊, 來建立新的採礦模型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,7 +30,7 @@ FROM <existing model>
 ```  
   
 ## <a name="arguments"></a>引數  
- *新的模型*  
+ *新增模型*  
  所建立之新模型的唯一名稱。  
   
  *演算法*  
@@ -40,20 +40,20 @@ FROM <existing model>
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
   
  *expression*  
- 在定型資料上，評估為有效篩選條件的運算式。 如需有關可用來當做篩選條件的運算式的詳細資訊，請參閱[採礦模型的篩選&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
+ 在定型資料上，評估為有效篩選條件的運算式。 如需可用來做為篩選準則之運算式的詳細資訊, 請參閱[Analysis Services &#40;資料採礦&#41;的採礦模型篩選](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
   
- *現有的模型*  
+ *現有模型*  
  要複製之現有模型的名稱。  
   
 ## <a name="remarks"></a>備註  
  如果現有的模型已定型，當此陳述式執行時，會自動處理新模型。 否則，新模型會保持為未處理。  
   
- **SELECT INTO**現有模型的結構會與新模型的演算法相容時，只有陳述式才能運作。 因此，此陳述式最適用於快速建立與測試以相同演算法為基礎的模式。 如果您要變更演算法類型，新的演算法必須支援現有模型中每個資料行的資料類型，否則在處理模型時，可能會發生錯誤。  
+ 只有當現有模型的結構與新模型的演算法相容時, **SELECT INTO**語句才會運作。 因此，此陳述式最適用於快速建立與測試以相同演算法為基礎的模式。 如果您要變更演算法類型，新的演算法必須支援現有模型中每個資料行的資料類型，否則在處理模型時，可能會發生錯誤。  
   
- **WITH DRILLTHROUGH**子句可讓新的採礦模型上鑽研。 唯有您建立模型時，才能啟用鑽研。  
+ **WITH 鑽**的子句可讓您在新的採礦模型上進行鑽取。 唯有您建立模型時，才能啟用鑽研。  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>範例 1：改變模型的參數  
- 下列範例會建立新的採礦模型，根據現有的採礦模型， `TM_Clustering`，在[Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 在新的模型中，CLUSTER_COUNT 參數經過修改，使新模型中最多會有 5 個群集。 相反地，現有的模型使用預設值 10。  
+ 下列範例會根據您在「[基本資料採礦」教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立`TM_Clustering`的現有「採礦模型」, 建立新的「採礦模型」。 在新的模型中，CLUSTER_COUNT 參數經過修改，使新模型中最多會有 5 個群集。 相反地，現有的模型使用預設值 10。  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -74,8 +74,8 @@ FROM [TM Clustering]
 >  套用到案例資料表的篩選器可以使用 SELECT INTO 陳述式進行變更，如此範例所示，不過，如果原始模型在巢狀資料表上包含篩選器，則無法使用此語法變更或移除巢狀資料表篩選器，但是會從原始模型，以原樣複製。 若要利用巢狀資料表上的不同篩選器建立模型，請使用 ALTER STRTUCTURE...ADD MODEL 語法。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 資料定義語句](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b88ad1a7e048495f80d43234cb4e085bae515fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071006"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889072"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "68071006"
   
  採礦結構的命名方式，是在模型名稱後附加「_structure」，這可確保結構名稱與模型名稱一樣保持唯一。  
   
- 若要建立現有採礦結構的採礦模型，請使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)陳述式。  
+ 若要建立現有的採礦結構的採礦模型, 請使用[ALTER 採礦結構&#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)語句。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,19 +47,19 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  目前提供者所定義之資料採礦演算法的名稱。  
   
 > [!NOTE]  
->  使用也可以擷取一份目前的提供者所支援的演算法[DMSCHEMA_MINING_SERVICES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)。 若要檢視目前執行個體中支援的演算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，請參閱 <<c2> [ 資料採礦屬性](../analysis-services/server-properties/data-mining-properties.md)。  
+>  您可以使用 DMSCHEMA_MINING_SERVICES 資料列[集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)來抓取目前提供者所支援的演算法清單。 若要查看目前實例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中支援的演算法, 請參閱[資料採礦屬性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
   
  *參數清單*  
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
   
  *XML 字串*  
- （僅供進階使用。）XML 編碼的模型 (PMML)。 字串必須使用單引號 (') 括住。  
+ (僅限先進使用)。XML 編碼模型 (PMML)。 字串必須使用單引號 (') 括住。  
   
- **工作階段**子句可讓您建立的採礦模型，會在連接關閉或是工作階段逾時自動從伺服器移除。**工作階段**採礦模型非常實用，因為它們不需要使用者必須為資料庫管理員，而且它們只會使用磁碟空間，只要連接已開啟。  
+ **Session**子句可讓您建立當連接關閉或會話超時時, 自動從伺服器移除的「採礦模型」。**會話**採礦模型很有用, 因為它們不會要求使用者必須是資料庫管理員, 而且只要開啟連接, 就只會使用磁碟空間。  
   
- **WITH DRILLTHROUGH**子句能夠鑽研新採礦模型。 唯有您建立模型時，才能啟用鑽研。 對於某些模型類型而言，需要鑽研才能夠在自訂檢視器中瀏覽此模型。 預測或是使用 Microsoft 一般內容樹狀檢視器來瀏覽此模型時，並不需要鑽研。  
+ **WITH 鑽**檢查子句可讓您在新的採礦模型上進行深入剖析。 唯有您建立模型時，才能啟用鑽研。 對於某些模型類型而言，需要鑽研才能夠在自訂檢視器中瀏覽此模型。 預測或是使用 Microsoft 一般內容樹狀檢視器來瀏覽此模型時，並不需要鑽研。  
   
- **CREATE MINING MODEL**陳述式會建立新的採礦模型為基礎的資料行定義清單、 演算法及演算法參數清單。  
+ **CREATE MODEL**語句會根據資料行定義清單、演算法和演算法參數清單, 建立新的採礦模型。  
   
 ### <a name="column-definition-list"></a>資料行定義清單  
  定義使用資料行定義清單之模型結構的方式，是包含每個資料行的下列資訊：  
@@ -74,9 +74,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   內容類型 (強制的)  
   
--   預測要求，其指出預測這個資料行的演算法，由**PREDICT**或是**PREDICT_ONLY**子句  
+-   預測要求, 表示要預測此資料行的演算法, 以**predict**或**PREDICT_ONLY**子句表示  
   
--   關聯性屬性資料行 （強制只有適用），由**RELATED TO**子句  
+-   與屬性資料行的關聯性 (只有在套用時才為必要), 由**相關的 to**子句所表示  
   
  使用下列資料行定義清單的語法，以定義單一資料行：  
   
@@ -94,17 +94,17 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  如需可用於定義資料行之資料類型、內容類型、資料行散發及模型旗標的清單，請參閱下列主題：  
   
--   [資料類型 &#40;資料採礦&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [資料類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [內容類型 &#40;資料採礦&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [內容類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [資料行分佈 &#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [資料行分佈 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [模型旗標 &#40;資料採礦&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [模型旗標 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- 您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列使用\<資料行關聯性 > 子句。  
+ 您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援使用下列\<資料行關聯性 > 子句。  
   
- **相關**  
+ **與**  
  這個表單表示階層。 RELATED TO 資料行的目標可以是巢狀資料表中的索引鍵資料行、案例資料列中的分隔值資料行，或者使用 RELATED TO 子句的另一個資料行 (表示更深的階層)。  
   
  使用預測子句描述如何使用預測資料行。 下表描述兩個可能的子句。  
@@ -121,12 +121,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- 如需每一種演算法相關聯的參數，請參閱[資料採礦演算法&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
+ 如需與每個演算法相關聯的參數清單, 請參閱[資料採礦演算法&#40;Analysis Services-資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
 ## <a name="remarks"></a>備註  
  如果您想要建立具有內建測試資料集的模型，您應該使用 CREATE MINING STRUCTURE 陳述式，後面接著 ALTER MINING STRUCTURE。 但是，並非所有模型類型都支援鑑效組資料集。 如需詳細資訊，請參閱 [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
   
- 如何使用 CREATEMODEL 陳述式建立採礦模型的逐步解說，請參閱[時間序列預測 DMX 教學課程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 如需如何使用 CREATEMODEL 語句建立採礦模型的逐步解說, 請參閱[時間序列預測 DMX 教學](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)課程。  
   
 ## <a name="naive-bayes-example"></a>貝氏機率分類範例  
  以下範例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 貝氏機率分類演算法建立新的採礦模型。 Bike Buyer 資料行定義為可預測屬性。  
@@ -143,7 +143,7 @@ USING Microsoft_Naive_Bayes
 ```  
   
 ## <a name="association-model-example"></a>關聯模型範例  
- 以下範例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯演算法建立新採礦模型。 陳述式使用資料行，以利用在模型定義中巢狀資料表的能力。 模型以修改*MINIMUM_PROBABILITY*並*MINIMUM_SUPPORT*參數。  
+ 以下範例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯演算法建立新採礦模型。 陳述式使用資料行，以利用在模型定義中巢狀資料表的能力。 此模型會使用*MINIMUM_PROBABILITY*和*MINIMUM_SUPPORT*參數來修改。  
   
 ```  
 CREATE MINING MODEL MyAssociationModel (  
@@ -171,10 +171,10 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>時間序列範例  
- 以下範例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法，透過 ARTxp 演算法建立新的採礦模型。 ReportingDate 是時間序列的索引鍵資料行，而 ModelRegion 則是資料數列的索引鍵資料行。 在這個範例中，假設資料的週期是每 12 個月。 因此， *PERIODICITY_HINT*參數設定為 12。  
+ 以下範例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法，透過 ARTxp 演算法建立新的採礦模型。 ReportingDate 是時間序列的索引鍵資料行，而 ModelRegion 則是資料數列的索引鍵資料行。 在這個範例中，假設資料的週期是每 12 個月。 因此, *PERIODICITY_HINT*參數會設定為12。  
   
 > [!NOTE]  
->  您必須指定*PERIODICITY_HINT*使用大括號字元的參數。 此外，這個值是字串，因為它必須括在單引號中:"{\<數值 >}"。  
+>  您必須使用大括弧字元來指定*PERIODICITY_HINT*參數。 此外, 因為此值為字串, 所以必須以單引號括住: "{\<numeric value >}"。  
   
 ```  
 CREATE MINING MODEL SalesForecast (  
@@ -187,8 +187,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 資料定義語句](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

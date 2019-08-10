@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 12eddedce5d00c1bbc9e71995c2c9ceab34386d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074719"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893921"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,13 +35,13 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  傳回值包含案例的原始機率，也就是案例屬性機率的乘積。  
   
 ## <a name="applies-to"></a>適用於  
- 使用建立模型[!INCLUDE[msCoName](../includes/msconame-md.md)]群集和[!INCLUDE[msCoName](../includes/msconame-md.md)]時序群集演算法。  
+ 使用[!INCLUDE[msCoName](../includes/msconame-md.md)]群集與[!INCLUDE[msCoName](../includes/msconame-md.md)]時序群集演算法建立的模型。  
   
 ## <a name="return-type"></a>傳回類型  
  介於 0 和 1 之間的雙精確度浮點數。 較接近 1 的數字代表案例在此模型中發生的機率較高。 較接近 0 的數字代表案例較不可能在此模型中發生。  
   
 ## <a name="remarks"></a>備註  
- 根據預設，結果**PredictCaseLikelihood**函式會正規化。 隨著案例中的屬性數增加，而任兩個案例之間的原始機率差異更小時，正規化的值通常會變得更有用。  
+ 根據預設, **PredictCaseLikelihood**函數的結果是正規化的。 隨著案例中的屬性數增加，而任兩個案例之間的原始機率差異更小時，正規化的值通常會變得更有用。  
   
  下列方程式是在 x 和 y 已知時，用來計算正規化的值：  
   
@@ -49,9 +49,9 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   y = 臨界案例可能性，根據計算培訓案例而計算為案例的對數可能性  
   
--   Z = Exp (log(x)-Log(Y))  
+-   Z = Exp (記錄 (x)-記錄 (Y))  
   
- 正規化 = (z / (1 + z))  
+ 正規化 = (z/(1 + z))  
   
 ## <a name="examples"></a>範例  
  下列範例根據 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 資料庫，傳回指定的案例在叢集模型內出現的可能性。  
@@ -77,12 +77,12 @@ NATURAL PREDICTION JOIN
 |-------------------------|----------------------------|---------------------|  
 |6.30672792729321E-08|6.30672792729321E-08|9.5824454056846E-48|  
   
- 這些結果之間的差異示範了正規化的效果。 原始值**CaseLikelihood**建議案例的機率約為 20%，; 不過，當您將結果正規化，便可明顯看出案例的可能性，是非常低。  
+ 這些結果之間的差異示範了正規化的效果。 **CaseLikelihood**的原始值會建議案例的機率約為 20%;不過, 當您將結果正規化時, 案例的可能性會明顯降低。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [資料採礦延伸&#40;模組&#41; DMX 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函數&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

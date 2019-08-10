@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f5ad515251a783705e3f8e04c73674a8e978348
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63059430"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889982"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 伺服器物件架構
-  ADOMD.NET 伺服器物件是協助程式物件，可用來建立使用者定義函數 (Udf) 或是預存程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+  ADOMD.NET 伺服器物件是 helper 物件, 可用來在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立使用者定義函數 (udf) 或預存程式。  
   
 > [!NOTE]  
->  若要使用**Microsoft.AnalysisServices.AdomdServer**命名空間 （以及這些物件），將 msmgdsrv.dll 的參考必須加入 UDF 專案或是預存程序。  
+>  若要使用**microsoft.analysisservices. AdomdServer**命名空間 (和這些物件), 必須將 msmgdsrv.dll 的參考新增至 UDF 專案或預存程式。  
   
- ![顯示 ADOMD.NET 伺服器物件的關聯性](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "顯示 ADOMD.NET 伺服器物件的關聯性")  
+ ![顯示 ADOMD.NET 伺服器中的物件關聯]性(https://docs.microsoft.com/analysis-services/analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "顯示 ADOMD.NET 伺服器中的物件關聯")性  
 ADOMD.NET 物件模型  
   
  與 ADOMD.NET 物件階層互動通常是從最頂層中的一或多個物件開始，如下表所述。  
