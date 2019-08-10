@@ -15,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cd5890df8ddc080aaa3e647c77b3c09d8d35216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832597"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890403"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
   「資料採礦查詢」工作會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]內建的資料採礦模型執行預測查詢。 預測查詢會使用採礦模型建立新資料的預測。 例如，預測查詢可預測夏季各月間可能出售的帆船數目，或產生可能購買帆船的預期客戶清單。  
@@ -36,9 +36,9 @@ ms.locfileid: "62832597"
 ## <a name="prediction-queries"></a>預測查詢  
  查詢為「資料採礦延伸模組」(DMX) 陳述式。 DMX 語言為 SQL 語言的擴充模組，能提供使用採礦模型的支援。 如需如何使用 DMX 語言的詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)。  
   
- 此工作可查詢相同採礦結構上建立的多個採礦模型。 採礦模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的其中一種資料採礦演算法建立。 「資料採礦查詢」工作參考的採礦結構，可包含多個使用不同演算法建立的採礦模型。 如需詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) 和[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
+ 此工作可查詢相同採礦結構上建立的多個採礦模型。 採礦模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的其中一種資料採礦演算法建立。 「資料採礦查詢」工作參考的採礦結構，可包含多個使用不同演算法建立的採礦模型。 如需詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 和[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
- 「資料採礦查詢」工作執行的預測查詢會傳回單一資料列或資料集的結果。 傳回單一資料列的查詢稱為單一查詢：例如，預測夏季各月間將售出之帆船數的查詢會傳回數字。 如需有關預測查詢來傳回單一資料列的詳細資訊，請參閱[資料採礦查詢介面](../../analysis-services/data-mining/data-mining-query-tools.md)。  
+ 「資料採礦查詢」工作執行的預測查詢會傳回單一資料列或資料集的結果。 傳回單一資料列的查詢稱為單一查詢：例如，預測夏季各月間將售出之帆船數的查詢會傳回數字。 如需傳回單一資料列之預測查詢的詳細資訊, 請參閱[資料採礦查詢介面](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)。  
   
  查詢結果會儲存到資料表。 如果「資料採礦查詢」工作指定的資料表名稱已存在，則工作可使用相同的名稱附加一個號碼建立新的資料表，或者覆寫資料表內容。  
   

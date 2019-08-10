@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61a90dc7fa034fc8983246aa4eb7119832a2d47d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008007"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893854"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +34,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  資料表。  
   
 ## <a name="remarks"></a>備註  
- 長條圖產生統計資料行。 傳回之長條圖的資料行結構而定，可搭配資料行參考的型別**PredictHistogram**函式。  
+ 長條圖產生統計資料行。 傳回之長條圖的資料行結構, 取決於搭配**PredictHistogram**函數使用的資料行參考類型。  
   
 ## <a name="scalar-columns"></a>純量資料行  
- 針對\<純量資料行參考 >，長條圖， **PredictHistogram**函式會傳回包含下列資料行：  
+ 如需純量資料行參考 >, PredictHistogram 函數傳回的長條圖包含下列資料行: \<  
   
 -   所預測的值。  
   
@@ -47,27 +47,27 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] 不支援資料採礦演算法 **$ProbabilityVariance**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法不支援 **$ProbabilityVariance**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] 不支援資料採礦演算法 **$ProbabilityStdev**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法不支援 **$ProbabilityStdev**。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 演算法的這個資料行一律包含 0。  
   
 -   **$AdjustedProbability**  
   
-     **$AdjustedProbability**資料行是[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]擴充功能來[!INCLUDE[msCoName](../includes/msconame-md.md)]OLE DB for Data Mining 規格。  
+     [ **$AdjustedProbability** ] 資料行[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]是適用于[!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦規格之 OLE DB 的延伸模組。  
   
 ## <a name="cluster-columns"></a>群集資料行  
- 長條圖可**PredictHistogram**函式會傳回\<叢集資料行參考 > 包含下列資料行：  
+ **PredictHistogram**函數針對\<叢集資料行參考所傳回的長條圖 > 由下列資料行所組成:  
   
--   **$Cluster** （代表叢集名稱）  
+-   **$Cluster**(代表叢集名稱)  
   
 -   **$Distance**  
   
 -   **$Probability**  
   
 ## <a name="examples"></a>範例  
- 下列範例在單一查詢中傳回 Bike Buyer 資料行的預測狀態。 此查詢也會傳回 Bike Buyer 屬性，以取得使用的已調整機率的前兩個最可能狀態**PredictHistogram**函式。  
+ 下列範例在單一查詢中傳回 Bike Buyer 資料行的預測狀態。 此查詢也會根據使用**PredictHistogram**函數所取得的調整機率, 傳回自行車購買者屬性的前兩個最可能狀態。  
   
 ```  
 SELECT  
@@ -91,9 +91,9 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [資料採礦延伸&#40;模組&#41; DMX 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函數&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

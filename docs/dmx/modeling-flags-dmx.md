@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 01be0e2d0ead01a3b6c630e0ddd0f53e55620104
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008325"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893934"
 ---
 # <a name="modeling-flags-dmx"></a>模型旗標 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68008325"
  **MODEL_EXISTENCE_ONLY**  
  屬性存在比屬性資料行的值更重要。 這個旗標是在採礦模型資料行定義。  
   
- 協力廠商演算法可能支援其他的模型旗標。 若要判斷哪些模型旗標的演算法支援，請使用**SUPPORTED_MODELING_FLAGS**結構描述資料列。 您也可以查詢伺服器上的採礦服務，以判斷特定演算法支援的模型旗標。 例如，下列查詢會在目前的伺服器上，傳回 Microsoft 線性迴歸演算法支援的模型旗標：  
+ 協力廠商演算法可能支援其他的模型旗標。 若要判斷演算法支援的模型旗標, 請使用**SUPPORTED_MODELING_FLAGS**架構資料列集。 您也可以查詢伺服器上的採礦服務，以判斷特定演算法支援的模型旗標。 例如，下列查詢會在目前的伺服器上，傳回 Microsoft 線性迴歸演算法支援的模型旗標：  
   
 ```  
 SELECT SUPPORTED_MODELING_FLAGS  
@@ -44,20 +44,20 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>在採礦模型上指定模型旗標  
- 如需語法的範例可[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援的指定旗標，採礦結構資料行，請參閱[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
+ 如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援在「採礦結構」資料行上指定旗標的語法範例, 請參閱[建立&#40;挖掘&#41;結構 DMX](../dmx/create-mining-structure-dmx.md)。  
   
- 如需採礦模型資料行上指定模型旗標的語法的範例，請參閱 < [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 如需在「採礦模型」資料行上指定模型 flga 之語法的範例, 請參閱[ALTER &#40;挖掘&#41;結構 DMX](../dmx/alter-mining-structure-dmx.md)。  
   
- 如需有關使用採礦模型資料行的詳細資訊，請參閱[採礦模型資料行](../analysis-services/data-mining/mining-model-columns.md)。  
+ 如需使用「採礦模型資料行」的詳細資訊, 請參閱「[採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [資料採礦延伸模組 &#40;DMX&#41; 參考](../dmx/data-mining-extensions-dmx-reference.md)   
- [資料採礦延伸模組&#40;DMX&#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [資料採礦延伸模組&#40;DMX&#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
- [資料採礦延伸模組&#40;DMX&#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 語句參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [DMX 預測查詢的結構和使用方式](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  

@@ -1,5 +1,5 @@
 ---
-title: 定義導出成員 |Microsoft Docs
+title: 定義匯出成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078395"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888187"
 ---
 # <a name="defining-calculated-members"></a>定義導出成員
   導出成員是根據 Cube 資料、算術運算子、數字和函數組合所定義的維度成員或量值群組成員。 例如，您可以建立一個導出成員，計算 Cube 中兩個實體量值的總和。 導出成員定義是儲存在 Cube 中，但其值是在查詢時計算。  
@@ -32,7 +32,7 @@ ms.locfileid: "66078395"
   
      下圖顯示 Cube 設計師的 [計算] 索引標籤。  
   
-     ![計算索引標籤，Cube 設計師](../../2014/tutorials/media/l6-calculatedmembers-1.gif "計算索引標籤，Cube 設計師] 的")  
+     ![Cube 設計師的 [計算]]索引標籤(../../2014/tutorials/media/l6-calculatedmembers-1.gif "Cube 設計師的 [計算]")索引標籤  
   
 2.  在 [計算] 索引標籤的工具列上，按一下 [新增導出成員]。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66078395"
   
      ![計算運算式窗格表單](../../2014/tutorials/media/l6-calculatedmembers-02.gif "計算運算式窗格表單")  
   
-3.  在 [**名稱**方塊中，變更導出量值名稱`[Total Sales Amount]`。  
+3.  在 [**名稱**] 方塊中, 將匯出量值的名稱`[Total Sales Amount]`變更為。  
   
      如果導出成員的名稱包含空格，則必須以方括號括住導出成員的名稱。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66078395"
   
 5.  從 [計算工具] 窗格的 [中繼資料] 索引標籤，將 [網際網路銷售 - 銷售量] 拖曳到 [計算運算式] 窗格中的 [運算式] 方塊。  
   
-6.  在 [**運算式**方塊中，輸入一個加號 (`+`) 之後 **[Measures]。 [網際網路銷售-銷售量]**。  
+6.  在 [**運算式**] 方塊中, 于 [measure`+`] 後面輸入一個加號 () **。 [網際網路銷售-銷售量]** 。  
   
 7.  在 [計算工具] 窗格的 [中繼資料] 索引標籤中，展開 [轉售商銷售]，再將 [轉售商銷售 - 銷售量] 拖曳到 [計算運算式] 窗格中 [運算式] 方塊的加號 (+) 後面。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078395"
   
      下圖顯示 [計算運算式] 窗格，其中含有您在前面步驟所指定的設定。  
   
-     ![Populated 計算運算式] 窗格](../../2014/tutorials/media/l6-calculatedmembers-03.gif "填入計算運算式] 窗格")  
+     已![填入的計算運算式窗格]已(../../2014/tutorials/media/l6-calculatedmembers-03.gif "填入的計算運算式窗格")  
   
 10. 在 [計算] 索引標籤的工具列上，按一下 [指令碼檢視]，然後再檢閱 [計算運算式] 窗格中的計算指令碼。  
   
@@ -83,11 +83,11 @@ ms.locfileid: "66078395"
   
      下圖顯示此時在教學課程中應該顯示在 [計算運算式] 窗格的計算指令碼。  
   
-     ![在 [計算運算式] 窗格中的指令碼](../../2014/tutorials/media/l6-calculatedmembers-04.gif "計算運算式窗格中的指令碼")  
+     [![計算運算式] 窗格中的腳本][(../../2014/tutorials/media/l6-calculatedmembers-04.gif "計算運算式] 窗格中的腳本")  
   
-12. 工具列上的**計算**索引標籤上，按一下**表單檢視**，確認`[Total Sales Amount]`中選取**指令碼組合管理**窗格中，然後再按一下**新的導出的成員**。  
+12. 在 [**計算**] 索引標籤的工具列上, 按一下 [**表單檢視**] `[Total Sales Amount]` , 確認已在 [**腳本召集人**] 窗格中選取, 然後按一下 [**新增匯出成員**]。  
   
-13. 變更到這個新導出成員的名稱`[Total Product Cost]`，然後建立中的下列運算式**運算式**方塊：  
+13. 將這個新匯出成員的名稱變更為`[Total Product Cost]`, 然後在 [**運算式**] 方塊中建立下列運算式:  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -101,9 +101,9 @@ ms.locfileid: "66078395"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>定義毛利率計算  
   
-1.  確認`[Total Product Cost]`中選取**指令碼組合管理**窗格中，然後再按一下**新增導出成員**工具列上的**計算**] 索引標籤。  
+1.  確認已在 [**腳本召集人**] 窗格中選取, 然後在 [**計算**] 索引標籤的工具列上, 按一下 [新增匯出成員]。 `[Total Product Cost]`  
   
-2.  在 [**名稱**方塊中，變更到這個新導出量值名稱`[Internet GPM]`。  
+2.  在 [**名稱**] 方塊中, 將這個新計算量值的`[Internet GPM]`名稱變更為。  
   
 3.  在 [運算式] 方塊中，建立下列 MDX 運算式：  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66078395"
   
 6.  在 [計算] 索引標籤的工具列上，按一下 [新增導出成員]。  
   
-7.  在 [**名稱**方塊中，變更到這個新導出量值名稱`[Reseller GPM]`。  
+7.  在 [**名稱**] 方塊中, 將這個新計算量值的`[Reseller GPM]`名稱變更為。  
   
 8.  在 [運算式] 方塊中，建立下列 MDX 運算式：  
   
@@ -135,7 +135,7 @@ ms.locfileid: "66078395"
   
 11. 在 [計算] 索引標籤的工具列上，按一下 [新增導出成員]。  
   
-12. 在 [**名稱**方塊中，變更此導出量值名稱`[Total GPM]`。  
+12. 在 [**名稱**] 方塊中, 將這個匯出量值的`[Total GPM]`名稱變更為。  
   
 13. 在 [運算式] 方塊中，建立下列 MDX 運算式：  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66078395"
   
 16. 在 [計算] 索引標籤的工具列上，按一下 [指令碼檢視]，然後檢閱您剛新增至計算指令碼中的三個計算值。  
   
-17. 在計算指令碼前立即新增新的一行`[Internet GPM]`計算，然後將下列文字加入指令碼的那一行：  
+17. 在計算腳本中, 緊接在`[Internet GPM]`計算之前加入新行, 然後將下列文字新增至腳本本身的行:  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -161,17 +161,17 @@ ms.locfileid: "66078395"
   
      下圖顯示含有三個新計算值的 [運算式] 窗格。  
   
-     ![在 [計算運算式] 窗格中的新計算](../../2014/tutorials/media/l6-calculatedmembers-05.gif "計算運算式窗格中的新計算")  
+     [![計算運算式] 窗格中的新計算][(../../2014/tutorials/media/l6-calculatedmembers-05.gif "計算運算式] 窗格中的新計算")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>定義總計算值的百分比  
   
 1.  在 [計算] 索引標籤的工具列上，按一下 [表單檢視]。  
   
-2.  在 [**指令碼組合管理**窗格中，選取`[Total GPM]`，然後按一下 [**新增導出成員**工具列上的**計算**] 索引標籤。  
+2.  在 [**腳本召集人**] 窗格`[Total GPM]`中, 選取, 然後在 [**計算**] 索引標籤的工具列上, 按一下 [**新增匯出成員**]。  
   
      在按一下 [新增導出成員] 之前，先按一下 [指令碼組合管理] 窗格中的最後一個導出成員，可確保這個新的導出成員加在指令碼結尾。 指令碼是以它們出現在 [指令碼組合管理] 窗格中的順序執行的。  
   
-3.  變更到這個新導出成員的名稱`[Internet Sales Ratio to All Products]`。  
+3.  將這個新匯出成員的名稱變更為`[Internet Sales Ratio to All Products]`。  
   
 4.  在 [運算式] 方塊中，輸入下列運算式：  
   
@@ -194,7 +194,7 @@ ms.locfileid: "66078395"
   
 7.  在 [計算] 索引標籤的工具列上，按一下 [新增導出成員]。  
   
-8.  此導出成員的名稱變更`[Reseller Sales Ratio to All Products]`。  
+8.  將這個匯出成員的名稱變更為`[Reseller Sales Ratio to All Products]`。  
   
 9. 在 [運算式] 方塊中，輸入下列運算式：  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66078395"
   
 12. 在 [計算] 索引標籤的工具列上，按一下 [新增導出成員]。  
   
-13. 此導出成員的名稱變更`[Total Sales Ratio to All Products]`。  
+13. 將這個匯出成員的名稱變更為`[Total Sales Ratio to All Products]`。  
   
 14. 在 [運算式] 方塊中，輸入下列運算式：  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66078395"
   
 17. 在 [計算] 索引標籤的工具列上，按一下 [指令碼檢視]，然後檢閱您剛新增至計算指令碼中的三個計算值。  
   
-18. 在計算指令碼前立即新增新的一行`[Internet Sales Ratio to All Products]`計算，然後將下列文字加入指令碼的那一行：  
+18. 在計算腳本中, 緊接在`[Internet Sales Ratio to All Products]`計算之前加入新行, 然後將下列文字新增至腳本本身的行:  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  
@@ -272,7 +272,7 @@ ms.locfileid: "66078395"
   
      請注意，轉售商銷售的毛利率遠低於透過網際網路的銷售，如下圖所示。  
   
-     ![顯示轉售商銷售的 [資料] 窗格](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "顯示轉售商銷售的 [資料] 窗格")  
+     ![顯示轉售商銷售的資料窗格](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "顯示轉售商銷售的資料窗格")  
   
 9. 將 [總銷售與所有產品的比率]、[網際網路銷售與所有產品的比率] 以及 [轉售商銷售與所有產品的比率] 量值新增至 [值] 區域中。  
   
@@ -287,10 +287,10 @@ ms.locfileid: "66078395"
      請注意，配件的銷售量逐漸上升中，但這些銷售在總銷售量中只佔一小部分。 另外也請注意，配件銷售的毛利率高於自行車的毛利率。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [定義命名集](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [定義命名集](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
   
 ## <a name="see-also"></a>另請參閱  
- [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Acwp](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [多維度模型中的計算](multidimensional-models/calculations-in-multidimensional-models.md)   
  [建立導出成員](multidimensional-models/create-calculated-members.md)  
   

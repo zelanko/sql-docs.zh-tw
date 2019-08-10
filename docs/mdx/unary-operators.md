@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bb0dcbd16fc96cb587718504de8fa43babd0db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097363"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893548"
 ---
 # <a name="unary-operators"></a>一元運算子
 
@@ -22,7 +22,7 @@ ms.locfileid: "68097363"
   
  MDX 支援下表中列出的一元運算子。  
   
-|運算子|描述|  
+|Operator|描述|  
 |--------------|-----------------|  
 |[- (負)](../mdx/negative-mdx.md)|傳回數值運算式的負值。|  
 |[+ (正)](../mdx/positive-mdx.md)|傳回數值運算式的正值。|  
@@ -40,7 +40,7 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- 此外，MDX 使用特殊的一元運算子來判斷所執行的彙總作業[RollupChildren](../mdx/rollupchildren-mdx.md)函式。 如需有關這些特殊一元運算子的詳細資訊，請參閱 <<c0> [ 將自訂彙總加入維度](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md)。  
+ 此外, MDX 會使用特殊的一元運算子來判斷[RollupChildren](../mdx/rollupchildren-mdx.md)函數所執行的匯總作業。 如需這些特殊一元運算子的詳細資訊, 請參閱[將自訂匯總加入至維度](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算子&#40;MDX 語法&#41;](../mdx/operators-mdx-syntax.md)  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: db9afc06a02825b8db449492d8cec6ee6d67801d
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fb2918e5fb89d85d7f6fa1cc12622481e585d848
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715119"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887669"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何使用 olapR 在 R 中建立 MDX 查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "68715119"
 
 下列範例是以 AdventureWorks 資料超市和 cube 專案為基礎, 因為該專案在多個版本中是廣泛可用的, 包括可輕鬆還原為 Analysis Services 的備份檔案。 如果您沒有現有的 cube, 請使用下列其中一個選項來取得範例 cube:
 
-+ 遵循 Analysis Services 的教學課程, 以建立用於這些範例的 cube, 直到第4課:[建立 OLAP Cube](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
++ 遵循 Analysis Services 的教學課程, 以建立用於這些範例的 cube, 直到第4課:[建立 OLAP Cube](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ 下載現有的 cube 做為備份, 並將它還原到 Analysis Services 的實例。 例如, 此網站以壓縮格式提供完整處理的 cube:[艾德工作多維度模型 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 解壓縮檔案, 然後將它還原至您的 SSAS 實例。 如需詳細資訊, 請參閱[Backup and restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)或[Restore-.asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
++ 下載現有的 cube 做為備份, 並將它還原到 Analysis Services 的實例。 例如, 此網站以壓縮格式提供完整處理的 cube:[艾德工作多維度模型 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 解壓縮檔案, 然後將它還原至您的 SSAS 實例。 如需詳細資訊, 請參閱[Backup and restore](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)或[Restore-.asdatabase Cmdlet](https://docs.microsoft.com/analysis-services/powershell/restore-asdatabase-cmdlet)。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.交叉分析篩選器的基本 MDX
 
@@ -91,8 +91,8 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + 在資料行上，您可以指定多個量值作為以逗號區隔字串的元素。
 + [資料列] 座標軸會使用「產品線」維度的所有可能值 (所有 MEMBERS)。 
-+ 此查詢會傳回含有三個數據行的資料表, 其中包含所有國家/地區的網際網路銷售_匯總_摘要。
-+ WHERE 子句會指定交叉分析篩選_器軸_。 在此範例中, 交叉分析篩選器會使用**SalesTerritory**維度的成員來篩選查詢, 僅在計算中使用來自澳大利亞的銷售額。
++ 此查詢會傳回含有三個數據行的資料表, 其中包含所有國家/地區的網際網路銷售 _摘要。
++ WHERE 子句會指定交叉分析篩選 _。 在此範例中, 交叉分析篩選器會使用**SalesTerritory**維度的成員來篩選查詢, 僅在計算中使用來自澳大利亞的銷售額。
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>使用 olapR 中所提供的函式來建置此查詢
 

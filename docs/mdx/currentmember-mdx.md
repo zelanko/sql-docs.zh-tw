@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 03583c9af74bd21511dfe871b229d03370a7b436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047116"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892926"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -32,13 +32,13 @@ Hierarchy_Expression.CurrentMember
  傳回階層的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 反覆運算階層成員的集合時，在反覆運算的各個步驟中，進行運算的成員就是目前的成員。 **CurrentMember**函式會傳回該成員。  
+ 反覆運算階層成員的集合時，在反覆運算的各個步驟中，進行運算的成員就是目前的成員。 **CurrentMember**函數會傳回該成員。  
   
 > [!IMPORTANT]  
 >  當維度只包含單一可見的階層，該階層可由維度名稱或階層名稱參考，因為維度名稱會解析成其唯一可見的階層。 例如，`Measures.CurrentMember` 即是有效的 MDX 運算式，因為它解析成量值維度上唯一的階層。  
   
 ## <a name="examples"></a>範例  
- 下列查詢示範如何**Currentmember**可用來從資料行、 資料列和配量軸上的階層尋找目前的成員：  
+ 下列查詢會顯示如何使用**Currentmember** , 從資料行、資料列和配量軸上的階層中尋找目前的成員:  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
   
@@ -74,7 +74,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- 目前的成員會在查詢內之軸上使用的階層上變更。 因此，相同維度上不會在座標軸的其他階層上的目前成員也可以變更;這個行為稱為 「 自動存在 '，且可以找到更多詳細資料[MDX 的關鍵概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。 例如，底下的查詢會顯示 Date 維度之 Calendar Year 階層上的目前成員會隨著 Calendar 階層上的目前成員而變更，後者會顯示在資料列軸上：  
+ 目前的成員會在查詢內之軸上使用的階層上變更。 因此, 在相同維度上, 其他階層上的目前成員也不會在軸上使用, 也可能會變更;這種行為稱為「自動存在」, 而在[MDX &#40; &#41;Analysis Services 的重要概念](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)中可以找到更多詳細資料。 例如，底下的查詢會顯示 Date 維度之 Calendar Year 階層上的目前成員會隨著 Calendar 階層上的目前成員而變更，後者會顯示在資料列軸上：  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -92,7 +92,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember**對於讓計算得知的查詢在使用中的內容是很重要。 下列範例會傳回每個產品的訂單數量和訂單數量百分比依類別和型號，從**Adventure Works** cube。 **CurrentMember**函式會識別訂單數量來計算期間的產品。  
+ **CurrentMember**對於讓計算知道所用查詢的內容而言非常重要。 下列範例會從「**艾德公司**」 cube 傳回每個產品的訂單數量, 以及依類別和型號的訂單數量百分比。 **CurrentMember**函數會識別訂單數量在計算期間要使用的產品。  
   
 ```  
 WITH   

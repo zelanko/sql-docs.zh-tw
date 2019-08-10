@@ -16,28 +16,28 @@ ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56c4313ea77fc342c2d7ac4fb142d922038948ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71279981c5fd3879d633e0fdd8cdec74bed6deac
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62702024"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887702"
 ---
 # <a name="updating-cells-xmla"></a>更新資料格 (XMLA)
-  您可以使用[UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla)命令以變更為 cube 回寫啟用的 cube 中的一或多個資料格的值。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 每個資料分割，其中包含要更新的資料格的個別的回寫資料表中儲存更新的資訊。  
+  您可以使用[UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla)命令來變更已針對 cube 回寫啟用的 cube 中一個或多個資料格的值。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對包含要更新之資料格的每個資料分割,在個別的回寫資料表中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]儲存更新的資訊。  
   
 > [!NOTE]  
->  `UpdateCells` 命令不支援在 Cube 回寫期間的配置。 若要使用配置的回寫，您應該使用[陳述式](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla)要傳送的多維度運算式 (MDX) UPDATE 陳述式命令。 如需詳細資訊，請參閱 < [UPDATE CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube)。  
+>  `UpdateCells` 命令不支援在 Cube 回寫期間的配置。 若要使用配置的回寫, 您應該使用[語句](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla)命令來傳送多維度運算式 (MDX) UPDATE 語句。 如需詳細資訊, 請參閱[UPDATE &#40;CUBE&#41;語句 MDX](/sql/mdx/mdx-data-manipulation-update-cube)。  
   
 ## <a name="specifying-cells"></a>指定資料格  
- [儲存格](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)屬性`UpdateCells`命令包含要更新之資料格。 您可以使用資料格的序數，來識別 `Cell` 屬性中的每個資料格。 就概念而言，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如同 cube 是數字的 cube 中資料格*p*-維陣列，其中*p*是軸的數目。 資料格的處理順序是以資料列為主。 下圖顯示計算資料格序數的公式。  
+ `UpdateCells`命令的[Cell](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)屬性包含要更新的資料格。 您可以使用資料格的序數，來識別 `Cell` 屬性中的每個資料格。 就概念[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]而言, cube 中的資料格數目就如同 cube是一維陣列, 其中*p*是軸的數目。 資料格的處理順序是以資料列為主。 下圖顯示計算資料格序數的公式。  
   
- ![若要計算的資料格的序數位置的公式](../../../2014/analysis-services/dev-guide/media/cellordinalformula.gif "公式來計算的資料格的序數位置")  
+ ![計算資料格序數位置的公式](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cellordinalformula.gif "計算資料格序數位置的公式")  
   
- 一旦您知道資料格的序數時，您可以指示中的資料格的預期的值[值](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/value-element-xmla)屬性[資料格](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)屬性。  
+ 一旦您知道資料格的序數之後, 就可以在資料[格](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)屬性的[value](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/value-element-xmla)屬性中, 指定資料格的預期值。  
   
 ## <a name="see-also"></a>另請參閱  
- [更新項目&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+ [Update 元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [在 Analysis Services 中使用 XMLA 進行開發](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

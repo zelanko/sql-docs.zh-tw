@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212058"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941059"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改發行集屬性。  
@@ -55,9 +55,9 @@ ms.locfileid: "68212058"
 -   建立發行集之後，某些屬性變更需要新的快照集。 如果發行集有訂閱，則某些變更還需要重新初始化所有訂閱。 如需詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 您可以在位於 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 與複寫監視器的 [發行集屬性 - \<發行集>]  對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。  
+ 您可以在位於 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 與複寫監視器的 [發行集屬性 - \<發行集>] 對話方塊中，檢視及修改發行集屬性。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../monitor/start-the-replication-monitor.md)。  
   
- [發行集屬性 - \<發行集>]  對話方塊上包含下列頁面：  
+ [發行集屬性 - \<發行集>] 對話方塊上包含下列頁面：  
   
 -   **[一般]** 頁面包含發行集名稱和描述、發行集類型以及訂閱過期設定。  
   
@@ -102,29 +102,29 @@ ms.locfileid: "68212058"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>檢視快照式或交易式發行集的屬性  
   
-1.  執行 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)，針對 **@publication** 參數指定發行集的名稱。 如果您不指定這個參數，就會傳回發行者上與所有發行集有關的資訊。  
+1.  執行[sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql), 並指定發行集參數的發行 **\@** 集名稱。 如果您不指定這個參數，就會傳回發行者上與所有發行集有關的資訊。  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>變更快照式或交易式發行集的屬性  
   
-1.  執行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，在 **@property** 參數中指定要變更的發行集屬性，並在 **@value** 參數指定發行集的名稱。  
+1.  執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), 在 **\@property**參數中指定要變更的發行集屬性, 並在 **\@value**參數中指定這個屬性的新值。  
   
     > [!NOTE]  
-    >  如果此變更將需要產生新的快照集，您也必須針對 **@force_invalidate_snapshot** 指定 **@force_invalidate_snapshot** 的值，而如果此變更將需要重新初始化訂閱者，您就必須針對 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription** 。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)。  
+    >  如果變更將需要產生新的快照集, 您也必須為 **\@force_invalidate_snapshot**指定**1**的值, 如果變更需要重新初始化訂閱者, 您必須指定值**1**適用**于\@force_reinit_subscription**。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>檢視合併式發行集的屬性  
   
-1.  執行 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)，針對 **@publication** 參數指定發行集的名稱。 如果您不指定這個參數，就會傳回發行者上與所有發行集有關的資訊。  
+1.  執行[sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), 並指定發行集參數的發行 **\@** 集名稱。 如果您不指定這個參數，就會傳回發行者上與所有發行集有關的資訊。  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>變更合併式發行集的屬性  
   
-1.  執行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，在 **@property** 參數中指定要變更的發行集屬性，並在 **@value** 參數指定發行集的名稱。  
+1.  執行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), 在 **\@property**參數中指定要變更的發行集屬性, 並在 **\@value**參數中指定這個屬性的新值。  
   
     > [!NOTE]  
-    >  若此變更將需要產生新的快照集，您也必須針對 **@force_invalidate_snapshot** 指定 **1** 的值，而如果此變更將需要重新初始化訂閱者，您就必須針對 **@force_reinit_subscription** 指定 **1** 的值。如需變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)。  
+    >  如果變更將需要產生新的快照集, 您也必須為 **\@force_invalidate_snapshot**指定**1**的值, 如果變更需要重新初始化訂閱者, 您必須指定值**1如需有關**變更時需要新快照或重新初始化之屬性的詳細資訊, 請參閱[變更發行集和發行項屬性](change-publication-and-article-properties.md)。 **\@**  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>檢視快照集的屬性  
   
-1.  執行 [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)，針對 **@publication** 參數指定發行集的名稱。  
+1.  執行[sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql), 並指定發行集參數的發行 **\@** 集名稱。  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>變更快照集的屬性  
   
@@ -192,7 +192,7 @@ ms.locfileid: "68212058"
  [變更發行集與發行項屬性](change-publication-and-article-properties.md)   
  [對發行集資料庫進行結構描述變更](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [從發行集中加入和卸除發行項](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [在發行集中加入和卸載文章](add-articles-to-and-drop-articles-from-a-publication.md)   
  [使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [檢視和修改發行項屬性](view-and-modify-article-properties.md)  
   

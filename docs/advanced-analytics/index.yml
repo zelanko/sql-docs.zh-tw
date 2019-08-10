@@ -39,7 +39,7 @@ sections:
       - type: list
         style: unordered
         items:
-          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">在 t-sql 中使用 Python</a>:探索資料</a>、執行特徵工程設計、定型和部署模型, 以及進行預測 (五個部分的系列)'
+          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">在 t-sql 中使用 Python</a>:探索資料、執行特徵工程設計、定型和部署模型, 以及進行預測 (五個部分的系列)'
           - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">在 t-sql 中使用 R</a>:探索資料、執行特徵工程設計、定型和部署模型, 以及進行預測 (五個部分的系列)'
           - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">使用 R 工具中的 Machine Learning 服務</a>:流覽資料、建立圖形和繪圖、執行特徵工程設計、定型和部署模型, 以及進行預測 (六個部分的系列)'
   - title: 方案
@@ -67,3 +67,4 @@ sections:
           - html: <a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning 服務<a>
           - html: <a href="/azure/machine-learning/">Azure Machine Learning</a>
           - html: <a href="/dotnet/machine-learning/">ML.NET</a>
+          - html: <a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">Microsoft 的機器學習服務產品有哪些？</a>

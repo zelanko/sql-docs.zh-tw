@@ -1,5 +1,5 @@
 ---
-title: 進階時間序列預測 （中繼資料採礦教學課程） |Microsoft Docs
+title: Advanced Time Series 預測 (元資料採礦教學課程) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62822447"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893694"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>進階時間序列預測 (中繼資料採礦教學課程)
   您已經從預測模型的瀏覽得知，雖然大部分地區的銷售都遵循類似的模式，但是某些地區和某些模型 (如太平洋地區的 M200 模型) 則呈現了非常不同的趨勢。 這不令您吃驚，因為您知道地區之間的差異是很常見的，而且可能是因為許多因素所造成，其中包括促銷活動、不正確的報表或地理政治事件。  
@@ -26,24 +26,24 @@ ms.locfileid: "62822447"
   
  **步驟**  
   
-1.  [準備擴充銷售資料 （用於預測）](#bkmk_newExtendData)  
+1.  [準備擴充銷售資料 (用於預測)](#bkmk_newExtendData)  
   
-2.  [準備彙總的資料 （適用於建立模型）](#bkmk_newReplaceData)  
+2.  [準備匯總資料 (用於建立模型)](#bkmk_newReplaceData)  
   
-3.  [準備數列資料 （適用於交叉預測）](#bkmk_CrossData2)  
+3.  [準備數列資料 (用於交叉預測)](#bkmk_CrossData2)  
   
-4.  [使用 EXTEND 做預測](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+4.  [使用 EXTEND 進行預測](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 5.  [建立交叉預測模型](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-6.  [使用 REPLACE 做預測](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+6.  [使用 REPLACE 進行預測](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-7.  [檢閱新預測](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+7.  [檢查新的預測](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-##  <a name="bkmk_newExtendData"></a> 建立新的擴充銷售資料  
+##  <a name="bkmk_newExtendData"></a>建立新的擴充銷售資料  
  您需要取得最新的銷售數字，以更新銷售資料。 特別值得注意的是來自太平洋地區的最新資料，這裡剛發起區域性銷售促銷，讓新店面及其商品吸引眾人目光。  
   
- 此案例中，我們假設資料已匯入從 Excel 活頁簿，其中包含只是三個月的新資料的幾個區域。 您將建立使用 Transact SQL 指令碼，將資料的資料表，並接著定義要用於預測的資料來源檢視。  
+ 在此案例中, 我們假設已從 Excel 活頁簿匯入資料, 其中只包含三個月的新資料供幾個區域使用。 您將使用 Transact-sql 腳本來建立資料的資料表, 然後定義要用於預測的資料來源 view。  
   
 #### <a name="create-the-table-with-new-sales-data"></a>使用新銷售資料建立資料表  
   
@@ -93,43 +93,43 @@ ms.locfileid: "62822447"
     >   
     >  請注意，範例資料庫中使用的日期已在此版本中變更。 如果您使用的是舊版的 AdventureWorks，可能需要針對插入的日期進行相應的調整。  
   
-###  <a name="bkmk_newReplaceData"></a> 建立使用新的銷售資料的資料來源檢視  
+###  <a name="bkmk_newReplaceData"></a>使用新的銷售資料來建立資料來源視圖  
   
-1.  在 [**方案總管] 中**，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新增資料來源檢視**。  
+1.  在**方案總管**中, 以滑鼠右鍵按一下 [**資料來源視圖**], 然後選取 [**新增資料來源視圖**]。  
   
 2.  在資料來源檢視精靈中，進行下列選擇：  
   
-     **資料來源**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **資料來源**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **選取資料表和檢視**:選取您剛才建立資料表，NewSalesData。  
+     **選取資料表和視圖**:選取您剛才建立的資料表 NewSalesData。  
   
-3.  按一下 **[完成]** 。  
+3.  按一下 [ **完成**]。  
   
-4.  在資料來源檢視設計介面中，以滑鼠右鍵按一下 NewSalesData，，然後按**瀏覽資料**來確認資料。  
+4.  在 [資料來源] 視圖設計介面中, 以滑鼠右鍵按一下 [NewSalesData], 然後選取 [**流覽資料**] 以驗證資料。  
   
 > [!WARNING]  
 >  此資料僅供預測，資料不完整沒有關係。  
   
-##  <a name="bkmk_CrossData2"></a> 建立交叉預測模型的資料  
- 已用於原始的資料預測模型已經稍微分組 view Vtimeserie，摺疊數種自行車型號的成較小的類別目錄，並合併成區域的結果從個別國家/地區。 若要建立可用於全球預測的模型，您將直接在資料來源檢視設計工具中建立一些其他簡單彙總。 新的資料來源檢視只包含所有地區所有產品的銷售總和與平均值。  
+##  <a name="bkmk_CrossData2"></a>建立交叉預測模型的資料  
+ 原始預測模型中使用的資料已經過了 view vTimeSeries 的分組, 這會將數個自行車模型折迭成較少的類別目錄, 並將個別國家/地區的結果合併到區域。 若要建立可用於全球預測的模型，您將直接在資料來源檢視設計工具中建立一些其他簡單彙總。 新的資料來源檢視只包含所有地區所有產品的銷售總和與平均值。  
   
  在建立用於模型的資料來源之後，您必須建立一個用於預測的新資料來源檢視。 例如，如果您要使用新的全球模型來預測歐洲銷售，必須只饋送歐洲地區的資料。 因此，您將設定可篩選原始資料的新資料來源檢視，並針對各組預測查詢來變更篩選條件。  
   
 #### <a name="to-create-the-model-data-using-a-custom-data-source-view"></a>若要使用自訂資料來源檢視建立模型資料  
   
-1.  在 [**方案總管] 中**，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新增資料來源檢視**。  
+1.  在**方案總管**中, 以滑鼠右鍵按一下 [**資料來源視圖**], 然後選取 [**新增資料來源視圖**]。  
   
 2.  在精靈的歡迎頁面中，按 **[下一步]** 。  
   
 3.  在 **[選取資料來源]** 頁面上，選取 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，然後按 **[下一步]** 。  
   
-4.  在頁面中，**選取資料表和檢視表**，不加入任何資料表，只要按一下**下一步**。  
+4.  在頁面中,**選取 [資料表和視圖]** , 不要加入任何資料表, 只要按 **[下一步]** 即可。  
   
-5.  在頁面上，**完成精靈**，輸入名稱`AllRegions`，然後按一下**完成**。  
+5.  在 [**完成嚮導]** 頁面上, 輸入名稱`AllRegions`, 然後按一下 **[完成**]。  
   
-6.  接下來，以滑鼠右鍵按一下空白的資料來源檢視設計介面，然後按**新的具名查詢**。  
+6.  接下來, 以滑鼠右鍵按一下空白的資料來源視圖設計介面, 然後選取 [新增] [**指名的查詢**]。  
   
-7.  在**建立具名查詢** 對話方塊中，如**名稱**，型別`AllRegions`，以及**描述**，型別**的所有模型的銷售總和與平均值和區域**。  
+7.  在 [**建立指名的查詢**] 對話方塊中, 針對 [ `AllRegions`**名稱**] 輸入, 並針對 [**描述**] 輸入**所有模型和地區的銷售總和和平均值**。  
   
 8.  在 SQL 文字窗格中，輸入下列陳述式，然後按一下 [確定]：  
   
@@ -142,29 +142,29 @@ ms.locfileid: "62822447"
     GROUP BY ReportingDate  
     ```  
   
-9. 以滑鼠右鍵按一下`AllRegions`資料表，然後再選取**瀏覽資料**。  
+9. 以滑鼠右鍵按一下`AllRegions`資料表, 然後選取 [**流覽資料**]。  
   
-###  <a name="bkmk_CrossData"></a> 若要建立交叉預測的數列資料  
+###  <a name="bkmk_CrossData"></a>若要建立交叉預測的數列資料  
   
-1.  在 [**方案總管] 中**，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新增資料來源檢視**。  
+1.  在**方案總管**中, 以滑鼠右鍵按一下 [**資料來源視圖**], 然後選取 [**新增資料來源視圖**]。  
   
 2.  在資料來源檢視精靈中，進行下列選擇：  
   
-     **資料來源**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **資料來源**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **選取資料表和檢視**:不選取任何資料表  
+     **選取資料表和視圖**:不要選取任何資料表  
   
      **名稱**：`T1000 Pacific Region`  
   
-3.  按一下 **[完成]** 。  
+3.  按一下 [ **完成**]。  
   
-4.  以滑鼠右鍵按一下空的設計介面，如**T1000 Pacific Region.dsv**，然後選取**新增具名查詢**。  
+4.  以滑鼠右鍵按一下**T1000 太平洋 Region. dsv**的空白設計介面, 然後選取 [**新增**] [指名的查詢]。  
   
      **[建立具名查詢]** 對話方塊隨即出現。 重新輸入名稱，然後加入以下的描述：  
   
      **名稱**：`T1000 Pacific Region`  
   
-     **描述**：**篩選`vTimeSeries`根據地區和模型**  
+     **描述**：**依`vTimeSeries`區域和模型篩選**  
   
 5.  在文字窗格中，輸入下列查詢，然後按一下 [確定]：  
   
@@ -177,16 +177,16 @@ ms.locfileid: "62822447"
     > [!NOTE]  
     >  因為您需要為各數列分別建立預測，您可能會想要複製查詢文字，並將它儲存到文字檔中，以便重複將它用於其他資料數列。  
   
-6.  在資料來源檢視設計介面中，以滑鼠右鍵按一下 [T1000 Pacific]，然後**瀏覽資料**，確認已正確篩選資料。  
+6.  在 [資料來源] 視圖設計介面中, 以滑鼠右鍵按一下 [T1000], 然後選取 [**流覽資料**], 確認資料已正確篩選。  
   
      在建立交叉預測查詢時，您將會使用此資料做為模型的輸入。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [時間序列預測使用更新資料&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [使用更新資料&#40;中繼資料採礦教學課程的時間序列預測&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 時間序列演算法](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft 時間序列演算法技術參考](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [多維度模型中的資料來源檢視](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [多維度模型中的資料來源檢視](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 建立 Analysis Services 專案 （基本資料採礦教學課程） |Microsoft Docs
+title: 建立 Analysis Services 專案 (基本資料採礦教學課程) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855189"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893340"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>建立 Analysis Services 專案 (基本資料採礦教學課程)
   每個 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案都會在單一 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中定義物件。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫可包含許多不同類型的物件  
@@ -32,7 +32,7 @@ ms.locfileid: "62855189"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 預設會針對新專案使用 **localhost** 執行個體。 如果您要使用具名執行個體或不同的伺服器，您必須先建立並開啟專案，然後變更執行個體名稱。  
   
- 如需詳細資訊[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案，請參閱[建立 Analysis Services 專案](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)。  
+ 如需[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案的詳細資訊, 請參閱[建立 Analysis Services 專案](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)。  
   
 ### <a name="to-create-an-analysis-services-project"></a>若要建立 Analysis Services 專案  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62855189"
   
 4.  在 **[範本]** 窗格中，選取 **[Analysis Services 多維度和資料採礦專案]** 。  
   
-5.  在 **名稱**方塊中，將新專案命名`BasicDataMining`。  
+5.  在 [**名稱**] 方塊中, 將新`BasicDataMining`專案命名為。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62855189"
  [建立資料來源&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [建立 Analysis Services 專案 &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [建立 Analysis Services 專案 &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [建立 Analysis Services 專案 &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

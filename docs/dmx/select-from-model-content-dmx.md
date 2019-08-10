@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;。內容 (DMX) |Microsoft Docs
+title: 選取 [ &lt;從&gt;模型]。內容 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906729"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892835"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。內容 (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>選取 [ &lt;從&gt;模型]。內容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   傳回指定之資料採礦模型的採礦模型結構描述資料列集。  
@@ -46,12 +46,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- **SELECT FROM** _\<模型 >_ **。內容**陳述式會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用**SELECT FROM\<模型 >。內容**陳述式來傳回模型之 NODE_RULE 資料行中的值。  
+ [ _從\<模型_ 選取] > **。CONTENT**語句會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用 [**從\<模型選取] >。** 要在模型的 NODE_RULE 資料行中傳回值的 CONTENT 語句。  
   
  下表列出包含在採礦模型內容中的資料行。  
   
 > [!NOTE]  
->  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需採礦模型內容的每個演算法，以及如何解譯與查詢採礦模型內容的每個模型類型的提示的說明，請參閱 <<c0> [ 採礦模型內容&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。</c0>  
+>  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需每個演算法的「採礦模型」內容的描述, 以及如何解讀及查詢每個模型類型之「採礦模型」內容的秘訣, 請參閱[Analysis Services- &#40;資料&#41;挖掘的「採礦模型內容](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」。  
   
 |CONTENT 資料列集資料行|描述|  
 |---------------------------|-----------------|  
@@ -88,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 下列查詢會使用**IsDescendant**函式傳回之節點的上一個查詢中傳回的直接子系。  
+ 下列查詢會使用**IsDescendant**函數來傳回上一個查詢中所傳回之節點的直屬子系。  
   
 > [!NOTE]  
->  由於 NODE_NAME 的值為字串，您無法使用子 select 陳述式傳回 NODE_ID，當做引數**IsDescendant**函式。  
+>  因為 NODE_NAME 的值是字串, 所以您不能使用子 select 語句, 將 NODE_ID 當做引數傳回**IsDescendant**函數。  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -101,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  預期的結果：  
   
- 由於此模型是決策樹模型，因此模型父節點的下階包含單一臨界統計資料節點、代表可預測屬性的節點，以及包含輸入屬性與值的多個節點。 如需詳細資訊，請參閱 [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
+ 由於此模型是決策樹模型，因此模型父節點的下階包含單一臨界統計資料節點、代表可預測屬性的節點，以及包含輸入屬性與值的多個節點。 如需詳細資訊，請參閱 [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)。  
   
 ## <a name="using-the-flattened-keyword"></a>使用 FLATTENED 關鍵字  
  採礦模型內容經常包含巢狀資料表資料行中，關於模型的有趣資訊。 FLATTENED 關鍵字可讓您從巢狀資料表資料行擷取資料，而不必使用支援階層式資料列集的提供者。  
@@ -144,7 +144,7 @@ WHERE NODE_TYPE = 26
   
 ## <a name="see-also"></a>另請參閱  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸&#40;模組&#41; DMX 資料動作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

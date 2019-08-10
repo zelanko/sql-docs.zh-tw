@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d8ed2484bb3eb31b1bb73000f848dffd27e85e9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118865"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893591"
 ---
 # <a name="expressions-mdx"></a>運算式 (MDX)
 
 
-  運算式是識別碼、 數值與運算子，可以評估以取得結果的組合。 在存取或變更資料時，資料可以用在許多不同的地方。 例如，您可以使用運算式做為查詢所要擷取之資料的一部份、或是做為搜尋條件來尋找符合一組條件的資料。  
+  運算式是可評估以取得結果的識別碼、值和運算子的組合。 在存取或變更資料時，資料可以用在許多不同的地方。 例如，您可以使用運算式做為查詢所要擷取之資料的一部份、或是做為搜尋條件來尋找符合一組條件的資料。  
   
 ## <a name="simple-and-complex-expressions"></a>簡單及複雜運算式  
  MDX 中的運算式可能很簡單或很複雜：  
@@ -32,7 +32,7 @@ ms.locfileid: "68118865"
  在 MDX 中，純量函數會傳回評估內容內的單一值。 因為不只會在單一資料元素上，也會反覆在一群資料元素 (例如，資料格或成員) 上評估大部份的 MDX 運算式、陳述式及指令碼，所以此特性對了解 MDX 如何解析純量函數很重要。 但是，在評估純量函數時，此函數一般會檢閱單一資料元素。  
   
  物件識別碼  
- 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需有關識別碼的詳細資訊，請參閱[識別碼&#40;MDX&#41;](../mdx/identifiers-mdx.md)。  
+ 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需識別碼的詳細資訊,[請&#40;參閱&#41;識別碼 MDX](../mdx/identifiers-mdx.md)。  
   
  複雜運算式可以從上述項目利用運算子聯結的組合來建立。  
   
@@ -85,6 +85,6 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

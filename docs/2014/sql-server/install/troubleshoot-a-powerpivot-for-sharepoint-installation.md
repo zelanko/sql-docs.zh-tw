@@ -1,5 +1,5 @@
 ---
-title: 疑難排解 PowerPivot for SharePoint 安裝 |Microsoft Docs
+title: 針對 PowerPivot for SharePoint 安裝進行疑難排解 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc6e01ff69850cb4faf9240c9dc0247ba0d01f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 797405386e8a6c0b9e62328699f3a73a6d845313
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091776"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892447"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>疑難排解 PowerPivot for SharePoint 安裝
   如果您看到的是錯誤，而不是預期的頁面和功能，請執行下列操作。  
@@ -31,7 +31,7 @@ ms.locfileid: "66091776"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>PowerPivot 圖庫縮圖顯示為紅色的 X  
  其中一個可能的原因是 **[網站集合的 PowerPivot 功能整合]** 非使用中。 完成以下動作：  
   
-1.  在 PowerPivot 圖庫文件庫中，按一下**站台設定**從齒輪圖示![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")或**首頁**清單。  
+1.  在 PowerPivot 圖庫文件庫中, 從齒輪圖示 [ ![Sharepoint 設定]] [(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 設定")] 或 [**首頁**] 清單按一下 [**網站設定**]。  
   
 2.  在 **[網站集合管理]** 區段中，按一下 **[網站集合功能]** 。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "66091776"
   
 4.  確認 **[網站集合的 PowerPivot 功能整合]** 為 **[使用中]** 。  
   
- 此問題的其他原因，請參閱 < [PowerPivot 圖庫顯示為紅色 x 圖示](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559) 。  
+ 如需此問題的其他原因, 請參閱[PowerPivot 圖庫會針對圖示顯示紅色 X 的](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559) 。  
   
   

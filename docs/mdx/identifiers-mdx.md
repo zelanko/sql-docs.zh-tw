@@ -1,5 +1,5 @@
 ---
-title: 識別項 (MDX) |Microsoft Docs
+title: 識別碼 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,22 +8,22 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24a1f2b1cb49335ba529126005c41b062e7a9e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105408"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891214"
 ---
 # <a name="identifiers-mdx"></a>識別碼 (MDX)
 
 
-  識別項是 Analysis Services 物件的名稱。 每個物件可以而且必須有識別項。 這包括 Cube、維度、階層、層級、成員等等。 您可以使用物件的識別碼，以參考多維度運算式 (MDX) 陳述式中的物件。  
+  識別碼是 Analysis Services 物件的名稱。 每個物件都可以和都必須具有識別碼。 這包括 Cube、維度、階層、層級、成員等等。 您可以使用物件的識別碼，以參考多維度運算式 (MDX) 陳述式中的物件。  
   
  根據您如何命名物件，物件識別碼的識別碼將會是一般識別碼或是分隔識別碼。  
   
 > [!NOTE]  
->  一般和分隔識別碼必須包含 1 到 100 個字元。  
+>  一般和分隔識別碼都必須包含1到100個字元。  
   
 ## <a name="using-regular-identifiers"></a>使用一般識別碼  
  一般識別碼是一個物件名稱，符合以下的一般識別碼格式化規則。 一般識別碼可以搭配或不搭配分隔符號來使用。  
@@ -32,19 +32,19 @@ ms.locfileid: "68105408"
   
 1.  第一個字元必須是以下任一項：  
   
-    -   Unicode Standard 2.0 所定義的字母。 除了其他語言的字母字元之外，字母的 Unicode 定義還包括從 a 到 z 與從 A 到 Z 的拉丁字元。  
+    -   Unicode 標準2.0 所定義的字母。 除了其他語言的字母字元之外，字母的 Unicode 定義還包括從 a 到 z 與從 A 到 Z 的拉丁字元。  
   
     -   底線 (_)。  
   
 2.  後續的字元可以是：  
   
-    -   Unicode Standard 2.0 中所定義的字母。  
+    -   Unicode 標準2.0 中所定義的字母。  
   
     -   其他基本拉丁文或其他國家 (地區) 字集中的十進位數字。  
   
     -   底線 (_)。  
   
-3.  識別碼絕不能是 MDX 保留關鍵字。 MDX 中的保留關鍵字不區分大小寫。 如需詳細資訊，請參閱 <<c0> [ 保留關鍵字&#40;MDX 語法&#41;](../mdx/reserved-keywords-mdx-syntax.md)。</c0>  
+3.  識別碼絕不能是 MDX 保留關鍵字。 MDX 中的保留關鍵字不區分大小寫。 如需詳細資訊, 請參閱[保留&#40;關鍵字&#41;MDX 語法](../mdx/reserved-keywords-mdx-syntax.md)。  
   
 4.  不允許內嵌的空格或特殊字元。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68105408"
   
 -   當物件名稱或名稱的一部份使用保留關鍵字時。  
   
-     建議您不要使用保留關鍵字作為物件名稱。 從舊版升級的資料庫[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能有些識別碼包含單字不會保留在較早的版本中，但現在會保留。 您可以使用分隔識別碼參考物件，直到您變更了物件的識別碼。  
+     建議您不要使用保留關鍵字作為物件名稱。 從舊版升級的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫可能包含識別碼, 其中包含舊版中未保留的字組, 但現在已保留。 您可以使用分隔識別碼參考物件，直到您變更了物件的識別碼。  
   
 -   當物件名稱使用未列為限定識別碼的字元時。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "68105408"
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 語法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [MDX 語法元素&#40;mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

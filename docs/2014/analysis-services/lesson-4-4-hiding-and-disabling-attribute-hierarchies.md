@@ -10,12 +10,12 @@ ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b662b537913847ee2858f933a54f37739d1c5c34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 411e5f822d0f54e6d8b7654b67bf5776ceb3c9e5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078614"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888355"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>隱藏及停用屬性階層
   根據預設，系統會在維度中建立每個屬性的屬性階層，而且每個階層都可用來建立事實資料的維度。 這個階層是由「全部」層級和詳細資料層級 (含階層的所有成員) 所組成。 如同您已學到的，您可以將屬性組織成使用者自訂階層，在 Cube 中提供導覽路徑。 在某些情況下，您可以停用或隱藏某些屬性及其階層。 例如，某些屬性如保險號碼或身分證號碼、薪水、出生日期和登入資訊等，使用者不能利用這些屬性來建立 Cube 資訊的維度。 相反地，這項資訊通常只是做為特定屬性成員的詳細資料來檢視。 您可以隱藏這些屬性階層，讓屬性只顯示成特定屬性的成員屬性。 您也可以讓其他屬性的成員 (例如客戶名稱或郵遞區號) 只透過使用者階層而非透過獨立屬性階層來檢視。 這麼做的原因是為了顯示屬性階層中的全部相異成員。 最後，為了增進處理效能，您應該將使用者不再用來瀏覽的屬性階層停用。  
@@ -45,9 +45,9 @@ ms.locfileid: "66078614"
   
 ## <a name="setting-attribute-hierarchy-properties-in-the-employee-dimension"></a>在 [員工] 維度中設定屬性階層的屬性  
   
-1.  切換到適用於 [員工] 維度的維度設計師，然後按一下 [瀏覽器]  索引標籤。  
+1.  切換到適用於 [員工] 維度的維度設計師，然後按一下 [瀏覽器] 索引標籤。  
   
-2.  確認下列屬性階層有出現在 [階層]  清單中：  
+2.  確認下列屬性階層有出現在 [階層] 清單中：  
   
     -   **底薪**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66078614"
   
     -   **SSN**  
   
-3.  切換至 [維度結構]  索引標籤，然後在 [屬性]  窗格中選擇下列屬性。 您可以在按住 CTRL 鍵的同時，按一下每個量值，藉以選取多個量值：  
+3.  切換至 [維度結構] 索引標籤，然後在 [屬性] 窗格中選擇下列屬性。 您可以在按住 CTRL 鍵的同時，按一下每個量值，藉以選取多個量值：  
   
     -   **底薪**  
   
@@ -73,29 +73,29 @@ ms.locfileid: "66078614"
   
 4.  在 [屬性] 視窗中，針對已選取的屬性，將 **AttributeHierarchyEnabled** 屬性的值設為 **False**。  
   
-     請注意，在 [屬性]  窗格中，每個屬性的圖示已變更為指示該屬性未啟用。  
+     請注意，在 [屬性] 窗格中，每個屬性的圖示已變更為指示該屬性未啟用。  
   
      下圖顯示針對已選取的屬性，將 **AttributeHierarchyEnabled** 屬性設為 False。  
   
-     ![AttributeHierarchyEnabled 屬性設為 False](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled 屬性設為 False")  
+     ![AttributeHierarchyEnabled 屬性設定為 False](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled 屬性設定為 False")  
   
-5.  在 [建立]  功能表上，按一下 [部署 Analysis Services 教學課程]  。  
+5.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
-6.  順利完成處理之後，切換到 [瀏覽器]  索引標籤、按一下 [重新連接]  ，然後試著瀏覽已修改的屬性階層。  
+6.  順利完成處理之後，切換到 [瀏覽器] 索引標籤、按一下 [重新連接]，然後試著瀏覽已修改的屬性階層。  
   
-     請注意，已修改屬性的成員不會顯示在 [階層]  清單中的屬性階層，供您瀏覽。 如果您嘗試加入其中一個已停用的屬性階層做為使用者階層中的一個層級，您會收到錯誤訊息，通知您必須啟用屬性階層才能參與使用者自訂階層。  
+     請注意，已修改屬性的成員不會顯示在 [階層] 清單中的屬性階層，供您瀏覽。 如果您嘗試加入其中一個已停用的屬性階層做為使用者階層中的一個層級，您會收到錯誤訊息，通知您必須啟用屬性階層才能參與使用者自訂階層。  
   
 ## <a name="setting-attribute-hierarchy-properties-in-the-customer-dimension"></a>在客戶維度中設定屬性階層的屬性  
   
-1.  切換到適用於 [客戶] 維度的維度設計師，然後按一下 [瀏覽器]  索引標籤。  
+1.  切換到適用於 [客戶] 維度的維度設計師，然後按一下 [瀏覽器] 索引標籤。  
   
-2.  確認下列屬性階層有出現在 [階層]  清單中：  
+2.  確認下列屬性階層有出現在 [階層] 清單中：  
   
     -   **全名**  
   
     -   **Postal Code**  
   
-3.  切換到 [維度結構]  索引標籤，然後使用 CTRL 鍵同時選取多個屬性，來選取 [屬性]  窗格中的下列屬性：  
+3.  切換到 [維度結構] 索引標籤，然後使用 CTRL 鍵同時選取多個屬性，來選取 [屬性] 窗格中的下列屬性：  
   
     -   **全名**  
   
@@ -107,25 +107,25 @@ ms.locfileid: "66078614"
   
      下圖顯示 **AttributeHierarchyVisible** 屬性設為 False。  
   
-     ![AttributeHierarchyVisible 屬性設為 False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible 屬性設為 False")  
+     ![AttributeHierarchyVisible 屬性設定為 False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible 屬性設定為 False")  
   
-5.  從 [屬性]  窗格，將 [郵遞區號]  屬性拖曳到 [客戶地理位置]  使用者階層中 (位於 [階層和層級]  窗格的 [縣 (市)]  層級下)。  
+5.  從 [屬性] 窗格，將 [郵遞區號] 屬性拖曳到 [客戶地理位置] 使用者階層中 (位於 [階層和層級] 窗格的 [縣 (市)] 層級下)。  
   
      請注意，隱藏的屬性仍然成為使用者階層中的一個層級。  
   
-6.  在 [建立]  功能表上，按一下 [部署 Analysis Services 教學課程]  。  
+6.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
-7.  順利完成部署之後，針對 [客戶] 維度切換到 [瀏覽器]  索引標籤，然後按一下 [重新連接]  。  
+7.  順利完成部署之後，針對 [客戶] 維度切換到 [瀏覽器] 索引標籤，然後按一下 [重新連接]。  
   
-8.  嘗試從 [階層]  清單中選取任何一個已修改的屬性階層。  
+8.  嘗試從 [階層] 清單中選取任何一個已修改的屬性階層。  
   
-     請注意，兩個已修改的屬性階層都不會出現在 [階層]  清單中。  
+     請注意，兩個已修改的屬性階層都不會出現在 [階層] 清單中。  
   
-9. 在 [階層]  清單中，選取 [客戶地理位置]  ，然後在瀏覽器窗格中瀏覽每一個層級。  
+9. 在 [階層] 清單中，選取 [客戶地理位置]，然後在瀏覽器窗格中瀏覽每一個層級。  
   
-     請注意，[郵遞區號]  和 [全名]  這兩個隱藏的層級會出現在使用者自訂階層中。  
+     請注意，[郵遞區號] 和 [全名] 這兩個隱藏的層級會出現在使用者自訂階層中。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [依次要屬性來排序屬性成員](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [依次要屬性來排序屬性成員](https://docs.microsoft.com/analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute)  
   
   

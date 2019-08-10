@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063883"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891752"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
   您可以使用其中一個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器，以互動方式編輯及測試 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 指令碼，或者編輯 XML 或純文字檔。 每個編輯器都會得到一項特定語言專用服務的支援，會將關鍵字著上顏色，且會進行語法和用法錯誤的檢查。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器含有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具，可讓您用來協助修正 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的問題。  
@@ -65,7 +65,7 @@ ms.locfileid: "66063883"
  這個視窗用來檢視查詢結果。 這個視窗能夠以方格或文字來顯示結果，或者將結果導向至檔案。 結果方格可以顯示為個別的索引標籤視窗。  
   
  **IntelliSense**  
- 在編輯器的 [編輯]  功能表上，指向 [IntelliSense]  來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
+ 在編輯器的 [編輯] 功能表上，指向 [IntelliSense] 來檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。  
   
  **色彩編碼**  
  顯示每種語法元素類型的不同色彩，改進了複雜陳述式的可讀性。  
@@ -108,8 +108,8 @@ ms.locfileid: "66063883"
 |工作描述|主題|  
 |----------------------|-----------|  
 |描述如何檢視及使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器的基本功能。|[Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|描述如何檢視及使用 MDX 查詢編輯器的基本功能。|[MDX 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|描述如何檢視及使用 DMX 查詢編輯器的基本功能。|[DMX 查詢編輯器 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|描述如何檢視及使用 MDX 查詢編輯器的基本功能。|[MDX 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|描述如何檢視及使用 DMX 查詢編輯器的基本功能。|[DMX 查詢編輯器 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |描述如何檢視及使用 XML/A 查詢編輯器的基本功能。|[XML 編輯器 &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |描述如何設定各種編輯器的選項，例如行號和 IntelliSense 選項。|[設定編輯器 &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |描述您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟編輯器的各種方式。|[開啟編輯器 &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  

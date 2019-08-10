@@ -1,5 +1,5 @@
 ---
-title: 存在 (MDX) |Microsoft Docs
+title: Exists (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 781c03283c39ab5ec100ba7f7d83b3cbe19a7c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139177"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893615"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  傳回屬於第一個指定集合並且與第二個指定集合中一或多個 Tuple 同時存在的 Tuple 集合。 這個函數會手動執行自動存在功能自動執行的動作。 如需有關自動存在，請參閱 < [MDX 的關鍵概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。  
+  傳回屬於第一個指定集合並且與第二個指定集合中一或多個 Tuple 同時存在的 Tuple 集合。 這個函數會手動執行自動存在功能自動執行的動作。 如需自動存在的詳細資訊, 請參閱[MDX &#40;Analysis Services&#41;中的重要概念](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)。  
   
- 如果選擇性\<量值群組名稱 > 所提供的函式會傳回一或多個 tuple 存在的 tuple 與第二個集合具有相關聯的事實資料表中指定的量值群組的資料列的 tuple。  
+ 如果提供了\<選擇性量值組名 >, 此函數會傳回與第二個集合中的一個或多個元組存在的元組, 以及在指定之量值群組的事實資料表中具有相關聯資料列的元組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,9 +41,9 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
   
 ## <a name="remarks"></a>備註  
   
-1.  量值包含 null 值的量值群組資料列變為**Exists** MeasureGroupName 引數指定時。 這是這種形式的 Exists 和 Nonempty 函數之間的差異： 如果這些量值的 NullProcessing 屬性設為 Preserve，這表示對 cube; 該部分執行查詢時，量值會顯示 Null 值而具有 MeasureGroupName 引數的 Exists 不會篩選有相關聯的量值群組資料列的 tuple，即使量值是 Null，則 nonEmpty 永遠會從有 Null 量值的值，一組移除 tuple。  
+1.  當指定 MeasureGroupName 引數時, 包含 null 值之量值的量值群組資料列有助於**存在**。 這是這種形式的 Exists 和非空白函數之間的差異: 如果這些量值的 NullProcessing 屬性設定為 [保留], 這表示當對 cube 的該部分執行查詢時, 量值將會顯示 Null 值;非空白會一律從具有 Null 量值的集合中移除元組, 而 Exists 與 MeasureGroupName 引數則不會篩選具有相關聯量值群組資料列的元組, 即使量值是 Null 也一樣。  
   
-2.  如果*MeasureGroupName*參數，結果取決於參考的量值群組中是否有可見的量值; 如果參考的量值群組中沒有任何可見的量值，則 EXISTS 一定會傳回空的集合，不論值*Set_Expression1*並*Set_Expression2*。  
+2.  如果使用*MeasureGroupName*參數, 則結果會取決於參考的量值群組中是否有可見量值;如果參考的量值群組中沒有可見的量值, 則不論*Set_Expression1*和*Set_Expression2*的值為何, EXISTS 一律會傳回空的集合。  
   
 ## <a name="examples"></a>範例  
  住在加州的客戶：  
@@ -94,9 +94,9 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [交叉聯結&#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
+ [交叉&#40;聯結 MDX&#41;](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
+ [非&#40;空的 MDX&#41;](../mdx/nonempty-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
   
   

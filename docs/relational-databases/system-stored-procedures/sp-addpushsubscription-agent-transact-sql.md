@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 754180cfa1ff907e9590b70ba074cd28eaaa804e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769095"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894046"
 ---
-# <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
+# <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   加入一項新排程的代理程式作業，以便用來同步處理發送訂閱與交易式發行集。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -71,7 +71,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="arguments"></a>引數  
 `[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**, 沒有預設值。  
   
-`[ @subscriber = ] 'subscriber'`這是訂閱者的名稱。 *訂閱者*是**sysname**, 預設值是 Null。  
+`[ @subscriber = ] 'subscriber'`這是訂閱者實例的名稱, 如果訂閱者資料庫是可用性群組, 則為 AG 接聽程式的名稱。 *訂閱者*是**sysname**, 預設值是 Null。 
   
 `[ @subscriber_db = ] 'subscriber_db'`這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**, 預設值是 Null。 若為非 SQL Server 的訂閱者, 請為*subscriber_db*指定 **(預設目的地)** 值。  
   

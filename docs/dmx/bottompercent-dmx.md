@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: def2004237b7b9fd6d2f73e1e1217aa32ea5f25a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d8b1665c6e6978af7dc673f7dd51a363da5c48d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031385"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892873"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,22 +31,22 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  *\<資料表運算式 >*  
  巢狀資料表資料行的名稱或資料表值運算式。  
   
- *\<排名運算式 >*  
+ *\<次序運算式 >*  
  巢狀資料表中的資料行，或評估為資料行的運算式。  
   
- *\<%>*  
+ *\<> 百分比*  
  表示總目標百分比的雙精確度浮點數。  
   
 ## <a name="result-type"></a>結果類型  
  資料表。  
   
 ## <a name="remarks"></a>備註  
- **BottomPercent**函式會以遞增次序順序傳回最底部資料列。 陣序為基礎的評估值\<排名運算式 > 引數，每個資料列，使總和\<排名運算式 > 值至少是指定所指定的百分比\<%>引數。 **BottomPercent**傳回符合指定之百分比值的可能最小元素數目。  
+ **BottomPercent**函數會以遞增的次序順序傳回最底端的資料列。 次序是以每個資料列的\<次序運算式 > 引數的評估值為基礎, 因此\<次序運算式 > 值的總和至少是\<百分比所指定的給定百分比 >引數. **BottomPercent**會傳回仍然符合指定之百分比值的最小元素數目。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立預測查詢的關聯模型，您在建置[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下列範例會針對您在[基本資料採礦教學](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)課程中建立的關聯模型, 建立預測查詢。  
   
- 若要了解 BottomPercent 的運作方式，可能要先執行僅傳回巢狀的資料表的預測查詢很有幫助。  
+ 若要瞭解 BottomPercent 的運作方式, 第一次執行只傳回嵌套資料表的預測查詢可能會很有説明。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -57,7 +57,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊，請參閱 <<c0> [ 資料採礦設計師中建立單一查詢](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)。  
+>  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊, 請參閱[在資料採礦設計工具中建立單一查詢](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)。  
   
  範例結果：  
   
@@ -74,7 +74,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- BottomPercent 函式會採用此查詢的結果，並傳回加總為指定之百分比的最小值的資料列。  
+ BottomPercent 函數會採用此查詢的結果, 並傳回總和為指定百分比的最小值資料列。  
   
 ```  
 SELECT   
@@ -89,11 +89,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- BottomPercent 函式的第一個引數是資料表資料行的名稱。 在此範例中，巢狀的資料表會傳回呼叫 Predict 函式，並使用 INCLUDE_STATISTICS 引數。  
+ BottomPercent 函數的第一個引數是資料表資料行的名稱。 在此範例中, 會呼叫 Predict 函數並使用 INCLUDE_STATISTICS 引數來傳回嵌套的資料表。  
   
- BottomPercent 函式的第二個引數是巢狀資料表，您用來排序結果中的資料行。 在此範例中，INCLUDE_STATISTICS 選項會傳回資料行 $SUPPORT、$PROBABILTY 和 $ADJUSTED PROBABILITY。 此範例因為支援值不是分數而使用 $SUPPORT，因此比較容易確認。  
+ BottomPercent 函數的第二個引數是用來排序結果的嵌套資料表中的資料行。 在此範例中，INCLUDE_STATISTICS 選項會傳回資料行 $SUPPORT、$PROBABILTY 和 $ADJUSTED PROBABILITY。 此範例因為支援值不是分數而使用 $SUPPORT，因此比較容易確認。  
   
- BottomPercent 函數的第三個引數會指定為雙精度浮點數的百分比。 若要取得代表支援之最下層 50% 的資料列，可以輸入 50。  
+ BottomPercent 函數的第三個引數會將百分比指定為雙精度浮點數。 若要取得代表支援之最下層 50% 的資料列，可以輸入 50。  
   
  範例結果：  
   
@@ -107,13 +107,13 @@ NATURAL PREDICTION JOIN
 |Mountain-200|1755|0.117951475|0.111260823|  
 |Mountain Tire Tube|1992|0.133879965|0.125304948|  
   
- **請注意**提供這個範例是只為了說明 BottomPercent 的使用方式。 根據資料集的大小而定，此查詢可能會花上很長的一段執行時間。  
+ **注意**此範例僅供說明 BottomPercent 的使用方式。 根據資料集的大小而定，此查詢可能會花上很長的一段執行時間。  
   
 > [!WARNING]  
->  當用來計算百分比的值包含負數時，TOPPERCENT 和 BOTTOMPERCENT 的 MDX 函數會產生非預期的結果。 這種行為並不影響 DMX 函數。 如需詳細資訊，請參閱 < [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)。  
+>  當用來計算百分比的值包含負數時，TOPPERCENT 和 BOTTOMPERCENT 的 MDX 函數會產生非預期的結果。 這種行為並不影響 DMX 函數。 如需詳細資訊,[請&#40;參閱&#41;BottomPercent MDX](../mdx/bottompercent-mdx.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式&#40;DMX&#41;](../dmx/functions-dmx.md)  
+ [資料採礦延伸&#40;模組&#41; DMX 函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函數&#40;DMX&#41;](../dmx/functions-dmx.md)  
   
   

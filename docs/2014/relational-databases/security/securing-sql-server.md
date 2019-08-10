@@ -18,12 +18,12 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62992350"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891618"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
   維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全可視為一系列的步驟，與下列四個方面有關：平台、驗證、物件 (包括資料) 和存取系統的應用程式。 下列主題將會引導您逐步建立及實施有效的安全性計畫。  
@@ -51,7 +51,7 @@ ms.locfileid: "62992350"
 |---------------------------|---------|  
 |設定要搭配使用的防火牆 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |設定要搭配使用的防火牆 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[針對 SSIS 服務的存取設定 Windows 防火牆](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
-|設定要搭配使用的防火牆 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|設定要搭配使用的防火牆 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[設定 Windows 防火牆以允許 Analysis Services 存取](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |開啟防火牆的特定通訊埠以啟用存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |使用通道繫結與服務繫結，設定驗證擴充保護的支援|[使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   

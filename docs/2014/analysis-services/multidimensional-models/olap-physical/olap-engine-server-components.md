@@ -15,15 +15,15 @@ ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138a5ec08ae7ca427352f8c0332b2012e6c0ea3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0537be8bda9c367fc381140183b10ddf383cf16a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62725065"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889528"
 ---
 # <a name="olap-engine-server-components"></a>OLAP 引擎伺服器元件
-  伺服器元件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]是**msmdsrv.exe**應用程式，以 Windows 服務形式執行。 這個應用程式是由安全性元件、XML for Analysis (XMLA) 接聽程式元件、查詢處理器元件及執行下列功能的許多其他內部元件所組成：  
+  的[!INCLUDE[msCoName](../../../includes/msconame-md.md)]伺服器元件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 是[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]以 Windows 服務形式執行的**msmdsrv.exe**應用程式。 這個應用程式是由安全性元件、XML for Analysis (XMLA) 接聽程式元件、查詢處理器元件及執行下列功能的許多其他內部元件所組成：  
   
 -   剖析從用戶端收到的陳述式  
   
@@ -48,10 +48,10 @@ ms.locfileid: "62725065"
   
  下圖顯示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 元件架構，其中包括在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體內執行的所有主要元素以及與此執行個體互動的所有使用者元件。 下圖也會顯示存取此執行個體的唯一方法，就是使用 XML for Analysis (XMLA) 接聽程式 (利用 HTTP 或 TCP)。  
   
- ![Analysis Services 系統架構圖表](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services 系統架構圖表")  
+ ![Analysis Services 系統架構圖表](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services 系統架構圖表")  
   
 ## <a name="xmla-listener"></a>XMLA 接聽程式  
- XMLA 接聽程式元件會處理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 及其用戶端之間的所有 XMLA 通訊。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 檔案中的組態設定可用來指定連接埠上[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體所接聽。 這個檔案中 0 的值表示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會接聽預設通訊埠。 除非另有指定，否則 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會使用下列預設 TCP 通訊埠：  
+ XMLA 接聽程式元件會處理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 及其用戶端之間的所有 XMLA 通訊。 Msmdsrv.exe [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的`Port`設定可以用來指定[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]實例接聽的通訊埠。 這個檔案中 0 的值表示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會接聽預設通訊埠。 除非另有指定，否則 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會使用下列預設 TCP 通訊埠：  
   
 |通訊埠|描述|  
 |----------|-----------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "62725065"
 |2382|其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體的重新導向程式。|  
 |在伺服器啟動時動態指派|具名的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。|  
   
- 請參閱[設定 Windows 防火牆以允許 Analysis Services 存取](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)如需詳細資訊。  
+ 如需詳細資訊, 請參閱[設定 Windows 防火牆以允許 Analysis Services 存取](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件命名規則&#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: 將報表伺服器內容類型新增至程式庫 (SharePoint 整合模式的 Reporting Services) |Microsoft Docs
+title: 將報表伺服器內容類型加入至文件庫 (SharePoint 整合模式中的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ef4049f10363eca45615db234e3ed63687caf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c9080f1ea9ac0d733a45718886e31ab52171c8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110012"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891625"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>將報表伺服器內容類型加入至文件庫 (SharePoint 整合模式中的 Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]** 、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。  
@@ -31,7 +31,7 @@ ms.locfileid: "66110012"
 > [!TIP]  
 >  如果您先前 **沒有** 設定文件庫的內容類型，請先啟用內容類型的管理，然後再啟用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型。 請參閱在單一文件庫中啟用內容類型管理的程序。  
   
- **簡短視訊：** [(SSRS)啟用 Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w) 。  
+ **短片:** [(SSRS) 啟用 sharepoint2010.wmv 中的內容類型](http://www.youtube.com/watch?v=yqhm3DrtT1w)(http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **本主題內容：**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66110012"
   
 2.  前往 **[網站設定]** 。  
   
-    -   在 SharePoint 2013，按一下 **[設定]** 圖示。 ![SharePoint 設定](../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")  
+    -   在 SharePoint 2013，按一下 **[設定]** 圖示。 ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")  
   
     -   在 SharePoint 2010，按一下 **[網站動作]** ，然後按一下 **[網站設定]** 。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66110012"
   
 5.  在 **[內容類型]** 區段中，選取 **[是]** 允許內容類型的管理。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 ##  <a name="bkmk_add_single"></a> 加入 Reporting Services 內容類型 (SharePoint 2013)  
   
@@ -106,17 +106,17 @@ ms.locfileid: "66110012"
 8.  當您完成新增內容類型後，按一下 **[確定]** 。  
   
 9. > [!NOTE]  
-    >  如果在 [新增內容類型]  頁面上看不到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型群組 [SQL Server Reporting Services 內容類型]  ，表示下列有一條件成立：  
+    >  如果在 [新增內容類型] 頁面上看不到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型群組 [SQL Server Reporting Services 內容類型]，表示下列有一條件成立：  
   
-    -   尚未安裝適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集。 如需詳細資訊，請參閱 <<c0> [ 安裝或解除安裝 Reporting Services 增益集 for SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。</c0> 本主題包含安裝增益集的資訊，並逐步帶領您進行增益集中僅檔案部分的安裝，以解決問題。  
+    -   尚未安裝適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集。 如需詳細資訊, 請參閱[安裝或卸載適用&#40;于 sharepoint SharePoint 2010 和 sharepoint 2013&#41;的 Reporting Services 增益集](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 本主題包含安裝增益集的資訊，並逐步帶領您進行增益集中僅檔案部分的安裝，以解決問題。  
   
-    -   安裝了增益集，但網站集合功能的 [報表伺服器整合功能]  未啟用。 請確認 [網站設定]  中的網站集合功能。  
+    -   安裝了增益集，但網站集合功能的 [報表伺服器整合功能] 未啟用。 請確認 [網站設定]中的網站集合功能。  
   
     -   所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型已經加入至文件庫。 如果所有內容類型是文件庫的一部分，則該群組已從 **[新增內容類型]** 頁面中移除。 如果您刪除一個或多個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型，就會在 **[新增內容類型]** 頁面上看到群組 **[SQL Server Reporting Services 內容類型]** 。  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2010)  
   
-1.  開啟要啟用多個內容類型的文件庫。 在文件庫功能表列中，您應該會看到下列功能表：**新**，**上傳**，**動作**，和**設定**。 如果您看不到 **[設定]** ，表示您沒有加入內容類型的權限。  
+1.  開啟要啟用多個內容類型的文件庫。 在 [程式庫] 功能表列上, 您應該會看到下列功能表:[**新增**]、 **[上傳**]、[**動作**] 和 [**設定**]。 如果您看不到 **[設定]** ，表示您沒有加入內容類型的權限。  
   
 2.  在 **[文件庫工具]** 功能區中，按一下 **[文件庫]** 。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66110012"
   
 5.  在 **[內容類型]** 區段中，選取 **[是]** 允許內容類型的管理。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
 ##  <a name="bkmk_add_single_2010"></a> 若要加入報表伺服器內容類型 (SharePoint 2010)  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66110012"
   
 1.  對於 SQL Server Reporting Services 2008 及 2008 R2 報表伺服器，您可以啟用多個商業智慧中心網站的內容類型與內容管理：  
   
-2.  在 [SharePoint 管理中心]，按一下 **[一般應用程式設定]** 。 在 [SQL Server Reporting Services (2008 和 2008 R2)]  區段中，按一下 [Reporting Services 整合]  。  
+2.  在 [SharePoint 管理中心]，按一下 **[一般應用程式設定]** 。 在 [SQL Server Reporting Services (2008 和 2008 R2)] 區段中，按一下 [Reporting Services 整合]。  
   
      ![rs_general_app_settings](media/rs-general-app-settings.gif "rs_general_app_settings")  
   
@@ -164,6 +164,6 @@ ms.locfileid: "66110012"
   
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器項目的 SharePoint 網站和清單權限參考](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [啟動報表產生器&#40;報表產生器&#41;](report-builder/start-report-builder.md)  
+ [開始報表產生器&#40;報表產生器&#41;](report-builder/start-report-builder.md)  
   
   
