@@ -1,7 +1,7 @@
 ---
 title: 設定 SQL Server 可用性群組的 RHEL 叢集
 titleSuffix: SQL Server
-description: 了解可用性群組叢集時執行 Red Hat Enterprise Linux (RHEL)
+description: 了解執行 Red Hat Enterprise Linux (RHEL) 時的可用性群組叢集
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,54 +11,54 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.openlocfilehash: 086138fc1df6245de33b348c529e56e606c3ddc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027320"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文件說明如何建立 Red Hat Enterprise Linux 上的 SQL Server 的三個節點的可用性群組叢集。 如需高可用性，Linux 上的可用性群組需要三個節點-請參閱[可用性群組組態的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 叢集層以在 Red Hat Enterprise Linux (RHEL) 為基礎[HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上建置[Pacemaker](https://clusterlabs.org/)。 
+此文件說明如何在 Red Hat Enterprise Linux 上，針對 SQL Server 建立三個節點的可用性群組叢集。 為了提供高可用性，Linux 上的可用性群組需要三個節點，請參閱[可用性群組設定的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 叢集層是以建置於 [Pacemaker](https://clusterlabs.org/) 之上的 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)為基礎。 
 
 > [!NOTE] 
-> Red Hat 的完整文件的存取需要有效的訂用帳戶。 
+> 存取 Red Hat 完整文件需要有效的訂用帳戶。 
 
-如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+如需叢集設定、資源代理程式選項和管理的詳細資訊，請造訪 [RHEL 參考文件](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) \(英文\)。
 
 > [!NOTE] 
-> SQL Server 並未緊密整合到 Linux 上的 Pacemaker，與 Windows Server 容錯移轉叢集。 無法感知叢集的 SQL Server 執行個體。 Pacemaker 會提供叢集資源的協調流程。 此外，虛擬網路名稱是 Windows Server 容錯移轉叢集的特定-Pacemaker 中沒有任何對等項目。 可用性群組動態管理檢視 (Dmv) 查詢叢集資訊會傳回空的資料列，Pacemaker 叢集上。 若要建立透明容錯移轉之後的重新連線的接聽程式，以用來建立虛擬 IP 資源的 IP 的 DNS 中手動註冊接聽程式名稱。 
+> SQL Server 並未與 Linux 上的 Pacemaker 緊密整合，因為它會使用 Windows Server 容錯移轉叢集。 SQL Server 執行個體不知道該叢集。 Pacemaker 提供叢集資源協調流程。 此外，虛擬網路名稱是 Windows Server 容錯移轉叢集特有的，Pacemaker 中沒有對等項目。 查詢叢集資訊的可用性群組動態管理檢視 (DMV) 會在 Pacemaker 叢集上傳回空的資料列。 若要在容錯移轉之後建立適用於透明重新連線的接聽程式，請在 DNS 中以用來建立虛擬 IP 資源的 IP 手動註冊接聽程式名稱。 
 
-下列各節會逐步設定 Pacemaker 叢集，並將可用性群組新增為高可用性叢集中的資源。
+下列各節將逐步解說設定 Pacemaker 叢集的步驟，並將可用性群組新增為叢集中的資源以提供高可用性。
 
 ## <a name="roadmap"></a>藍圖
 
-在高可用性的 Linux 伺服器上建立可用性群組的步驟是從 Windows Server 容錯移轉叢集上的步驟不同。 下列清單說明的概要步驟： 
+在 Linux 伺服器上建立可用性群組以提供高可用性的步驟，與 Windows Server 容錯移轉叢集上的步驟不同。 下列清單描述高階步驟： 
 
-1. [設定叢集節點上的 SQL Server](sql-server-linux-setup.md)。
+1. [在叢集節點上設定 SQL Server](sql-server-linux-setup.md)。
 
 2. [建立可用性群組](sql-server-linux-availability-group-configure-ha.md)。 
 
-3. 設定叢集資源管理員，例如 Pacemaker。 這些指示是本文件中。
+3. 設定叢集資源管理員，例如 Pacemaker。 此文件包含這些指示。
    
-   若要設定叢集資源管理員的方式取決於特定的 Linux 散發套件。 
+   設定叢集資源管理員的方式取決於特定的 Linux 發行版本。 
 
    >[!IMPORTANT]
-   >生產環境需要隔離代理程式，例如高可用性的 STONITH。 在本文件示範，請勿使用隔離代理程式。 示範適用於測試、 僅驗證。 
+   >生產環境需要 STONITH 這類隔離代理程式以提供高可用性。 此文件的示範不會使用隔離代理程式。 這些示範僅適用於測試和驗證。 
    
-   >Linux 叢集會使用隔離，讓叢集回到已知狀態。 若要設定隔離的方式取決於發佈和環境。 目前，隔離不適用於某些雲端環境。 如需詳細資訊，請參閱 < [RHEL 的高可用性叢集-而虛擬化平台的支援原則](https://access.redhat.com/articles/29440)。
+   >Linux 叢集會使用隔離來將叢集回復為已知的狀態。 設定隔離的方式取決於發行版本和環境。 目前，有些雲端環境無法使用隔離。 如需詳細資訊，請參閱 [RHEL 高可用性叢集的支援原則 - 虛擬化平台](https://access.redhat.com/articles/29440) \(英文\)。
 
-5. [新增可用性群組為叢集中資源](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。  
+5. [將可用性群組新增為叢集中的資源](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。  
 
-## <a name="configure-high-availability-for-rhel"></a>適用於 RHEL 設定高可用性
+## <a name="configure-high-availability-for-rhel"></a>為 RHEL 設定高可用性
 
-若要設定高可用性，適用於 RHEL，啟用高可用性的訂用帳戶及設定 Pacemaker。
+若要為 RHEL 設定高可用性，請啟用高可用性訂用帳戶，然後設定 Pacemaker。
 
-### <a name="enable-the-high-availability-subscription-for-rhel"></a>啟用適用於 RHEL 的高可用性訂用帳戶
+### <a name="enable-the-high-availability-subscription-for-rhel"></a>為 RHEL 啟用高可用性訂用帳戶
 
-叢集中的每個節點必須有適用於 RHEL 和高可用性新增適當的訂用帳戶。 檢閱的需求[如何在 Red Hat Enterprise Linux 中安裝高可用性叢集封裝](https://access.redhat.com/solutions/45930)。 請遵循下列步驟來設定訂用帳戶和儲存機制：
+叢集中的每個節點都必須有適用於 RHEL 的適當訂用帳戶及高可用性附加元件。 檢閱[如何在 Red Hat Enterprise Linux 中安裝高可用性叢集套件](https://access.redhat.com/solutions/45930) \(英文\) 的需求。 請遵循以下步驟來設定訂用帳戶和存放庫：
 
 1. 註冊系統。
 
@@ -66,90 +66,90 @@ ms.locfileid: "68027320"
    sudo subscription-manager register
    ```
 
-   提供您的使用者名稱和密碼。   
+   提供您的使用者名稱與密碼。   
 
-1. 列出可用的集區進行註冊。
+1. 列出可用的集區以進行註冊。
 
    ```bash
    sudo subscription-manager list --available
    ```
 
-   從可用的集區的清單，請注意高可用性的訂用帳戶的集區識別碼。
+   從可用集區的清單中，記下高可用性訂用帳戶的集區識別碼。
 
-1. 更新下列指令碼。 取代`<pool id>`使用從先前步驟中的高可用性的集區識別碼。 執行指令碼，以連結的訂用帳戶。
+1. 更新下列指令碼。 以上一個步驟中高可用性的集區識別碼取代 `<pool id>`。 執行指令碼以附加訂用帳戶。
 
    ```bash
    sudo subscription-manager attach --pool=<pool id>
    ```
 
-1. 啟用儲存機制。
+1. 啟用存放庫。
 
    ```bash
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-如需詳細資訊，請參閱 < [Pacemaker 的開放原始碼、 高可用性叢集](https://clusterlabs.org/pacemaker/)。 
+如需詳細資訊，請參閱 [Pacemake - 開放原始碼、高可用性叢集](https://clusterlabs.org/pacemaker/) \(英文\)。 
 
-設定訂用帳戶之後，請完成下列步驟來設定 Pacemaker:
+當您設定訂用帳戶之後，需完成下列設定 Pacemaker 的步驟：
 
 ### <a name="configure-pacemaker"></a>設定 Pacemaker
 
-註冊訂用帳戶之後，請完成下列步驟來設定 Pacemaker:
+當您註冊訂用帳戶之後，需完成下列設定 Pacemaker 的步驟：
    
 [!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
 
-設定 Pacemaker 之後，使用`pcs`與叢集互動。 從叢集的其中一個節點上執行所有命令。 
+設定 Pacemaker 之後，使用 `pcs` 來與叢集互動。 在叢集的一個節點上執行所有命令。 
 
 ## <a name="configure-fencing-stonith"></a>設定隔離 (STONITH)
 
-Pacemaker 叢集廠商需要啟用 STONITH 和隔離裝置設定為支援的叢集安裝程式。 STONITH 代表 「 豬羊另一個節點在標頭中。 」 時，叢集資源管理員無法判斷狀態的節點或節點上的資源，隔離會再次將設為已知狀態的叢集。
+Pacemaker 叢集廠商必須啟用 STONITH，並針對支援的叢集設定設好隔離裝置。 STONITH 代表 "Shoot the Other Node in the Head" (直譯：將另一節點爆頭)。 當叢集資源管理員無法判斷節點或節點上之資源的狀態時，隔離會讓叢集再次進入已知狀態。
 
-資源層級隔離可確保所設定的資源會發生中斷時的任何資料損毀。 比方說，您可以使用資源層級的隔離，若要將該磁碟標示為已過期時在節點上的通訊連結中斷。 
+資源層級隔離可透過設定資源，確保在發生中斷時不會有資料損毀。 例如，您可以使用資源層級隔離，將節點上的磁碟標示為在通訊連結中斷時過期。 
 
-節點層級隔離可確保節點不會執行任何資源。 這是重設節點。 Pacemaker 支援很棒的各種不同的隔離裝置。 範例包括伺服器不斷電供應器或管理的介面卡。
+節點層級隔離可確保節點不會執行任何資源。 這會透過重設節點來完成。 Pacemaker 支援各式各樣的隔離裝置。 範例包括適用於伺服器的不斷電供應系統或管理介面卡。
 
-STONITH 和隔離的相關資訊，請參閱下列文章：
+如需有關 STONITH 和隔離的詳細資訊，請參閱下列文章：
 
-* [從零開始的 pacemaker 叢集](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
-* [隔離和 STONITH](https://clusterlabs.org/doc/crm_fencing.html)
-* [Red Hat pacemaker 的高可用性附加元件：隔離](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [從頭開始 Pacemaker 叢集](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html) \(英文\)
+* [隔離和 STONITH](https://clusterlabs.org/doc/crm_fencing.html) \(英文\)
+* [Red Hat 高可用性附加元件與 Pacemaker：隔離](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
-因為節點層級的隔離設定大量取決於您的環境，請將它停用此教學課程中 （它可以設定更新版本）。 下列指令碼會停用節點層級隔離：
+由於節點層級隔離設定主要取決於您的環境，因此，請在本教學課程中將其停用 (可於稍後設定)。 下列指令碼會停用節點層級隔離：
 
 ```bash
 sudo pcs property set stonith-enabled=false
 ```
   
 >[!IMPORTANT]
->停用 STONITH 是只基於測試目的。 如果您打算在生產環境中使用 Pacemaker 時，您應該規劃 STONITH 實作，根據您的環境，並將它保持啟用。 RHEL 不提供任何雲端環境 （包括 Azure） 或 HYPER-V 隔離代理程式。 因此，叢集供應商不提供支援在這些環境中執行生產叢集。 我們正努力將會在未來版本中提供此鴻溝的解決方案。
+>停用 STONITH 僅基於測試目的。 如果您打算在生產環境中使用 Pacemaker，則應該根據您的環境規劃 STONITH 實作，並讓它保持啟用狀態。 RHEL 並未針對任何雲端環境 (包括 Azure) 或 Hyper-V 提供隔離代理程式。 因此，叢集廠商不支援在這些環境中執行生產叢集。 我們正在為此差距尋找解決方案，以便在未來的版本中提供。
 
-## <a name="set-cluster-property-cluster-recheck-interval"></a>設定叢集屬性叢集重新檢查間隔
+## <a name="set-cluster-property-cluster-recheck-interval"></a>設定 cluster-recheck-interval 叢集屬性
 
-`cluster-recheck-interval` 指示輪詢間隔的叢集檢查有變更的資源參數、 條件約束或其他叢集的選項。 如果複本停止運作時，叢集會嘗試重新啟動的時間間隔繫結的複本`failure-timeout`值和`cluster-recheck-interval`值。 例如，如果`failure-timeout`設定為 60 秒和`cluster-recheck-interval`設為 120 秒，超過 60 秒，但不超過 120 秒的間隔嘗試重新啟動。 我們建議您將失敗逾時設定為 60 秒和叢集重新檢查-間隔大於 60 秒的值。 建議您不要將叢集重新檢查間隔設定為較小的值。
+`cluster-recheck-interval` 表示輪詢間隔，叢集會依此間隔檢查資源參數、限制式或其他叢集選項中的變更。 如果複本中斷，叢集會嘗試以 `failure-timeout` 值和 `cluster-recheck-interval` 值所繫結的間隔重新啟動複本。 例如，若將 `failure-timeout` 設為 60 秒，並將 `cluster-recheck-interval` 設為 120 秒，則會以大於 60 秒但小於 120 秒的間隔嘗試重新啟動。 建議您將 failure-timeout 設為 60 秒，並將 cluster-recheck-interval 設為大於 60 秒的值。 不建議將 cluster-recheck-interval 設為較小的值。
 
-若要將屬性值更新為`2 minutes`執行：
+若要將屬性值更新為 `2 minutes`，請執行：
 
 ```bash
 sudo pcs property set cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> 其值為 false 時，所有發行版本 （包括 RHEL 7.3 和 7.4） 使用最新可用 Pacemaker 封裝 1.1.18-11.el7 導入開始失敗-時-嚴重的叢集設定的行為變更。 這項變更會影響容錯移轉工作流程。 如果主要複本發生中斷，叢集應該容錯移轉至其中一個可用的次要複本。 相反地，使用者會發現叢集會嘗試啟動失敗的主要複本。 如果該主要永遠不會上線 （因為永久中斷），叢集絕不會容錯移轉至另一個可用的次要複本。 由於這項變更，先前建議的設定，來設定開始失敗-時-嚴重不再有效，且必須還原回其預設值是設定`true`。 此外，必須更新以包含 AG 資源`failover-timeout`屬性。 
+> 所有使用最新可用 Pacemaker 套件 1.1.18-11.el7 的發行版本 (包括 RHEL 7.3 和 7.4)，都會在 start-failure-is-fatal 叢集設定值為 false 時，採用其行為變更。 此變更會影響容錯移轉工作流程。 如果主要複本發生中斷，則預期叢集將容錯移轉至其中一個可用的次要複本。 相反地，使用者將注意到叢集持續嘗試啟動失敗的主要複本。 如果該主要複本永遠無法上線 (因為永久中斷)，則叢集永遠不會容錯移轉至其他可用的次要複本。 由於此變更，先前建議來設定 start-failure-is-fatal 的設定已不再有效，而且必須將此設定還原回其預設值 `true`。 此外，必須更新 AG 資源以包含 `failover-timeout` 屬性。 
 
-若要將屬性值更新為`true`執行：
+若要將屬性值更新為 `true`，請執行：
 
 ```bash
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-若要更新`ag_cluster`資源屬性`failure-timeout`至`60s`執行：
+若要將 `ag_cluster` 資源屬性 `failure-timeout` 更新為 `60s`，請執行：
 
 ```bash
 pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 
-如需 Pacemaker 叢集內容資訊，請參閱[Pacemaker 叢集屬性](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)。
+如需 Pacemaker 叢集屬性的相關資訊，請參閱 [Pacemaker 叢集屬性](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html) \(英文\)。
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>為 Pacemaker 建立 SQL Server 登入
 
@@ -157,7 +157,7 @@ pcs resource update ag_cluster meta failure-timeout=60s
 
 ## <a name="create-availability-group-resource"></a>建立可用性群組資源
 
-若要建立可用性群組資源，請使用`pcs resource create`命令，並設定資源屬性。 下列命令會建立`ocf:mssql:ag`主要/附屬類型名稱的可用性群組的資源`ag1`。
+若要建立可用性群組資源，請使用 `pcs resource create` 命令，並設定資源屬性。 下列命令會針對名稱為 `ocf:mssql:ag` 的可用性群組建立 `ag1` 主要/從屬類型資源。
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
@@ -169,52 +169,52 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 
 ## <a name="create-virtual-ip-resource"></a>建立虛擬 IP 資源
 
-若要建立的虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用網路中可用的靜態 IP 位址。 取代 IP 位址之間`<10.128.16.240>`具備有效的 IP 位址。
+若要建立虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用網路中可用的靜態 IP 位址。 以有效的 IP 位址取代 `<10.128.16.240>` 之間的 IP 位址。
 
 ```bash
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
-沒有 Pacemaker 中的對等的虛擬伺服器名稱。 若要使用的連接字串指向字串伺服器名稱，而非 IP 位址，請在 DNS 中登錄的虛擬 IP 資源的位址和所需的虛擬伺服器名稱。 DR 組態中，註冊所需的虛擬伺服器名稱和 IP 位址與主要和 DR 站台上的 DNS 伺服器。
+Pacemaker 中沒有對等的虛擬伺服器名稱。 若要使用指向字串伺服器名稱而非 IP 位址的連接字串，請在 DNS 中註冊虛擬 IP 資源位址和所需的虛擬伺服器名稱。 針對 DR 設定，在主要和 DR 網站上，向 DNS 伺服器註冊所需的虛擬伺服器名稱和 IP 位址。
 
-## <a name="add-colocation-constraint"></a>加入共置條件約束
+## <a name="add-colocation-constraint"></a>新增共置限制式
 
-在 Pacemaker 叢集中，例如選擇應在何處資源執行，幾乎每個決策是藉由比較分數。 分數會計算每個資源。 「 叢集資源管理員會選擇具有最高分數的特定資源的節點。 如果節點的負分數的資源，資源無法執行該節點上。
+在 Pacemaker 叢集中，幾乎每個決策都是藉由比較分數來完成，例如，選擇應執行資源的位置。 分數是針對每個資源計算得來的。 叢集資源管理員會選擇對特定資源具有最高分數的節點。 如果節點對於某資源的分數為負值，則該資源就無法在該節點上執行。
 
-在 pacemaker 叢集上，您可以處理的條件約束的叢集所做的決策。 條件約束有分數。 如果條件約束有分數低於`INFINITY`，Pacemaker 將它與建議。 分數的`INFINITY`是必要的。
+在 Pacemaker 叢集上，您可以使用限制式來操控叢集的決策。 限制式具有分數。 如果限制式的分數低於 `INFINITY`，則 Pacemaker 會將其視為建議。 `INFINITY` 的分數是強制性的。
 
-若要確保主要複本和虛擬 ip 資源執行相同的主機上，請定義分數為無限大的共置條件約束。 若要新增的共置條件約束，請在一個節點上執行下列命令。
+若要確保該主要複本和虛擬 IP 資源都在相同主機上執行，定義分數為 INFINITY 的共置限制式。 若要新增共置限制式，請在一個節點上執行下列命令。
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
 ```
 
-## <a name="add-ordering-constraint"></a>加入排序條件約束
+## <a name="add-ordering-constraint"></a>新增排序限制式
 
-共置條件約束有隱含的排序條件約束。 將可用性群組資源之前，它會移動虛擬 IP 資源。 根據預設事件的順序為：
+共置限制式具有隱含的排序限制式。 它會先移動虛擬 IP 資源，然後再移動可用性群組資源。 根據預設，事件的順序如下：
 
-1. 使用者問題`pcs resource move`至可用性群組主要複本從 node1 到 node2。
-1. 在節點 1 上，停止虛擬 IP 資源。
-1. 啟動節點 2 上的虛擬 IP 資源。
+1. 使用者會對可用性群組主要複本發出從節點 1 到節點 2 的 `pcs resource move`。
+1. 虛擬 IP 資源會在節點 1 上停止。
+1. 虛擬 IP 資源會在節點 2 上啟動。
   
    >[!NOTE]
-   >此時，IP 位址暫時節點 2 點而節點 2 仍是在容錯移轉之前次要。 
+   >此時，IP 位址會暫時指向節點 2，而節點 2 仍是容錯移轉前的次要複本。 
    
-1. 主要節點 1 上的可用性群組會降級為次要。
-1. 次要節點 2 上的可用性群組會提升為主要。 
+1. 節點 1 上的可用性群組主要複本會降級為次要複本。
+1. 節點 2 上的可用性群組次要複本會升級為主要複本。 
 
-若要避免暫時指向與容錯移轉前次要節點的 IP 位址，請加入排序條件約束。 
+為了防止 IP 位址暫時指向含容錯移轉前次要複本的節點，請新增排序限制式。 
 
-若要加入排序條件約束，請在一個節點上執行下列命令：
+若要新增排序限制式，請在一個節點上執行下列命令：
 
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
 ```
 
 >[!IMPORTANT]
->在設定叢集，並新增為叢集資源的可用性群組之後，您無法使用 TRANSACT-SQL 來容錯移轉可用性群組資源。 在 Linux 上的 SQL Server 叢集資源未結合緊密與作業系統和它們在 Windows Server 容錯移轉叢集 (WSFC)。 SQL Server 服務並不知道叢集的目前狀態。 所有的協調流程是透過叢集管理工具。 在 RHEL 或 Ubuntu 會使用`pcs`並且在 SLES 使用`crm`工具。 
+>當您設定叢集並將可用性群組新增為叢集資源之後，就無法使用 Transact-SQL 來容錯移轉可用性群組資源。 Linux 上的 SQL Server 叢集資源不會與作業系統緊密結合，因為它們均位於 Windows Server 容錯移轉叢集 (WSFC) 上。 SQL Server 服務不知道叢集是否存在。 所有協調流程都會透過叢集管理工具來完成。 在 RHEL 或 Ubuntu 中使用 `pcs`，在 SLES 中使用 `crm` 工具。 
 
-手動容錯移轉之可用性群組的`pcs`。 不會起始與 TRANSACT-SQL 的容錯移轉。 如需相關指示，請參閱 <<c0> [ 容錯移轉](sql-server-linux-availability-group-failover-ha.md#failover)。
+使用 `pcs` 手動容錯移轉可用性群組。 請勿使用 Transact-SQL 來起始容錯移轉。 如需指示，請參閱[容錯移轉](sql-server-linux-availability-group-failover-ha.md#failover)。
 
 ## <a name="next-steps"></a>後續步驟
 

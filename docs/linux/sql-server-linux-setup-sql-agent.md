@@ -1,6 +1,6 @@
 ---
-title: 在 Linux 上安裝 SQL Server 代理程式
-description: 本文說明如何在 Linux 上安裝 SQL Server Agent。
+title: 在 Linux 上安裝 SQL Server Agent
+description: 此文章說明如何在 Linux 上安裝 SQL Server Agent。
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -9,24 +9,24 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.openlocfilehash: c27a31a5e6b9ed771df82e942087d7be88270038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032475"
 ---
-# <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安裝 SQL Server 代理程式
+# <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安裝 SQL Server Agent
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
- [SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)執行 SQL Server 的排程的工作。 從 SQL Server 2017 CU4 開始，SQL Server Agent 是隨附**mssql server**封裝，並預設為停用。 如需此版本的版本資訊以及 SQL Server Agent 支援的功能資訊，請參閱[Release Notes](sql-server-linux-release-notes.md)。
+ [SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) 會執行已排程的 SQL Server 作業。 從 SQL Server 2017 CU4 開始，SQL Server Agent 隨附於 **mssql-server** 套件，而且預設為停用。 如需此 SQL Server Agent 版本所支援功能的相關資訊及版本資訊，請參閱[版本資訊](sql-server-linux-release-notes.md)。
 
- 安裝/啟用 SQL Server 代理程式：
-- [針對 版本 2017 CU4 和更新版本中，啟用 SQL Server Agent](#EnableAgentAfterCU4)
-- [針對版本 2017 cu3 開始 （含） 以下，安裝 SQL Server Agent](#InstallAgentBelowCU4)
+ 安裝/啟用 SQL Server Agent：
+- [針對版本 2017 CU4 和更新版本，啟用 SQL Server Agent](#EnableAgentAfterCU4)
+- [針對版本 2017 CU3 和較低版本，安裝 SQL Server Agent](#InstallAgentBelowCU4)
 
 
-## <a name="EnableAgentAfterCU4">針對 版本 2017 CU4 和更新版本中，啟用 SQL Server Agent</a>
+## <a name="EnableAgentAfterCU4">針對版本 2017 CU4 和更新版本，啟用 SQL Server Agent</a>
 
  若要啟用 SQL Server Agent，請遵循下列步驟。
 
@@ -36,28 +36,28 @@ sudo systemctl restart mssql-server
 ```
 
 > [!NOTE]
-> 如果您從 2017 CU3 升級，或下列代理程式安裝，SQL Server Agent 會自動啟用和前一個將會解除安裝代理程式套件。  
+> 如果您從已安裝 Agent 的 2017 CU3 或較低版本升級，將自動啟用 SQL Server Agent，並將解除安裝先前的 Agent 套件。  
 
-## <a name="InstallAgentBelowCU4">針對版本 2017 cu3 開始 （含） 以下，安裝 SQL Server Agent</a>
+## <a name="InstallAgentBelowCU4">針對版本 2017 CU3 和較低版本，安裝 SQL Server Agent</a>
 
 > [!NOTE]
-> 安裝指示適用於 SQL Server 版本 2017 CU3 和以下版本。 然後再安裝 SQL Server Agent，第一次[安裝 SQL Server](sql-server-linux-setup.md#platforms)。 這會設定索引鍵和您在安裝時使用的儲存機制**mssql server agent**封裝。
+> 以下的安裝指示適用於 SQL Server 版本 2017 CU3 和較低版本。 安裝 SQL Server Agent 之前，請先[安裝 SQL Server](sql-server-linux-setup.md#platforms)。 這會設定您在安裝 **mssql-server-agent** 套件時所使用的金鑰和存放庫。
 
-安裝 SQL Server 代理程式，您的平台：
+安裝適用於您平台的 SQL Server Agent：
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
 ### <a name="RHEL">在 RHEL 上安裝</a>
 
-使用下列步驟來安裝**mssql server agent** Red Hat Enterprise Linux 上。 
+使用下列步驟，在 Red Hat Enterprise Linux 上安裝 **mssql-server-agent**。 
 
 ```bash
 sudo yum install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您已經有**mssql server agent**安裝，您可以更新為最新的版本，使用下列命令：
+如果您已經安裝 **mssql-server-agent**，則可使用下列命令更新為最新版本：
 
 ```bash
 sudo yum check-update
@@ -65,11 +65,11 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您需要離線安裝時，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
+如果您需要離線安裝，請在[版本資訊](sql-server-linux-release-notes.md)中找到 SQL Server Agent 套件下載。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ### <a name="ubuntu">在 Ubuntu 上安裝</a>
 
-使用下列步驟來安裝**mssql server agent**在 Ubuntu 上。 
+使用下列步驟，在 Ubuntu 上安裝 **mssql-server-agent**。 
 
 ```bash
 sudo apt-get update 
@@ -77,7 +77,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您已經有**mssql server agent**安裝，您可以更新為最新的版本，使用下列命令：
+如果您已經安裝 **mssql-server-agent**，則可使用下列命令更新為最新版本：
 
 ```bash
 sudo apt-get update 
@@ -85,20 +85,20 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您需要離線安裝時，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
+如果您需要離線安裝，請在[版本資訊](sql-server-linux-release-notes.md)中找到 SQL Server Agent 套件下載。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ### <a name="SLES">在 SLES 上安裝</a>
 
-使用下列步驟來安裝**mssql server agent** SUSE Linux Enterprise Server 上。 
+使用下列步驟，在 SUSE Linux Enterprise Server 上安裝 **mssql-server-agent**。 
 
-安裝**mssql server 代理程式** 
+安裝 **mssql-server-agent** 
 
 ```bash
 sudo zypper install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您已經有**mssql server agent**安裝，您可以更新為最新的版本，使用下列命令：
+如果您已經安裝 **mssql-server-agent**，則可使用下列命令更新為最新版本：
 
 ```bash
 sudo zypper refresh
@@ -106,7 +106,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果您需要離線安裝時，找出在 SQL Server 代理程式套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
+如果您需要離線安裝，請在[版本資訊](sql-server-linux-release-notes.md)中找到 SQL Server Agent 套件下載。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ## <a name="next-steps"></a>後續步驟
-如需有關如何使用 SQL Server Agent 來建立、 排程及執行工作的詳細資訊，請參閱 <<c0> [ 在 Linux 上執行的 SQL Server Agent 作業](sql-server-linux-run-sql-server-agent-job.md)。
+如需如何使用 SQL Server Agent 來建立、排程和執行作業的詳細資訊，請參閱[在 Linux 上執行 SQL Server Agent 作業](sql-server-linux-run-sql-server-agent-job.md)。

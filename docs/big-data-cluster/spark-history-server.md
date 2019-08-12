@@ -1,7 +1,7 @@
 ---
-title: 偵錯/診斷的 Spark 應用程式
+title: 偵錯/診斷 Spark 應用程式
 titleSuffix: SQL Server big data clusters
-description: 若要偵錯和診斷在 SQL Server 2019 巨量資料叢集上執行的 Spark 應用程式中使用 Spark 歷程記錄伺服器。
+description: 使用 Spark 歷程記錄伺服器來偵錯及診斷在 SQL Server 2019 巨量資料叢集上執行的 Spark 應用程式。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,199 +9,199 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5659de24ed9cc0a61290d055049c804c6709b2a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: bfdace3eae4b8da1584c529121953cbe2b884e7f
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957856"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68470711"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>偵錯和診斷在 SQL Server 在 Spark 歷程記錄伺服器中的巨量資料叢集上的 Spark 應用程式
+# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>在 Spark 歷程記錄伺服器中的 SQL Server 巨量資料叢集上，對 Spark 應用程式進行偵錯和診斷
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文章提供有關如何使用擴充的 Spark 歷程記錄伺服器偵錯和診斷中的 SQL Server 2019 （預覽） 的巨量資料叢集的 Spark 應用程式的指引。 這些偵錯和診斷功能會內建於 Spark 歷程記錄伺服器，並由 Microsoft 所提供。 擴充功能包括資料 索引標籤和 graph 索引標籤和診斷 索引標籤。在 資料 索引標籤中，使用者可以檢查的輸入和輸出資料的 Spark 作業。 圖表索引標籤中，使用者可以檢查資料流，並重新執行工作圖形。 在 [診斷] 索引標籤中，使用者可以參考資料扭曲 」、 「 時間偏差和 「 執行程式使用情況分析。
+此文章提供如何使用擴充的 Spark 歷程記錄伺服器，在 SQL Server 2019 (預覽) 巨量資料叢集中偵錯和診斷 Spark 應用程式的指導方針。 這些偵錯和診斷功能內建於 Spark 歷程記錄伺服器中，並由 Microsoft 提供技術支援。 延伸模組包含 [資料] 索引標籤、[圖表] 索引標籤和 [診斷] 索引標籤。在 [資料] 索引標籤中，使用者可以檢查 Spark 作業的輸入和輸出資料。 在 [圖表] 索引標籤中，使用者可以檢查資料流程，並重新執行作業圖表。 在 [診斷] 索引標籤中，使用者可以參考資料扭曲、時間扭曲和執行程式使用狀況分析。
 
-## <a name="get-access-to-spark-history-server"></a>存取 Spark 歷程記錄伺服器
+## <a name="get-access-to-spark-history-server"></a>取得 Spark 歷程記錄伺服器的存取權
 
-從開放原始碼 Spark 歷程記錄伺服器使用者體驗已增強式的詳細資訊，其中包含作業特定的資料和巨量資料叢集的作業圖表和資料流程的互動式視覺效果。 
+來自開放原始碼的 Spark 歷程記錄伺服器使用者體驗已透過資訊加以增強，其中包括作業特定資料以及作業圖表的互動式視覺效果，以及適用於巨量資料叢集的資料流程。 
 
-### <a name="open-the-spark-history-server-web-ui-by-url"></a>開啟 Spark 歷程記錄伺服器 Web UI URL
-開啟 Spark 歷程記錄伺服器，瀏覽至下列 URL，取代`<Ipaddress>`和`<Port>`巨量資料叢集特定資訊。 可參考的詳細資訊：[部署 SQL Server 的巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+### <a name="open-the-spark-history-server-web-ui-by-url"></a>依 URL 開啟 Spark 歷程記錄伺服器 Web UI
+藉由瀏覽至下列 URL 來開啟 Spark 歷程記錄伺服器，並將 `<Ipaddress>` 和 `<Port>` 取代為巨量資料叢集特定資訊。 如需詳細資訊，可以參考：[部署 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
 ```
 
-Spark 記錄伺服器 」 web UI 看起來像：
+Spark 歷程記錄伺服器 Web UI 如下所示：
 
 ![Spark 歷程記錄伺服器](./media/apache-azure-spark-history-server/spark-history-server.png)
 
 
-## <a name="data-tab-in-spark-history-server"></a>在 [Spark 歷程記錄伺服器中的資料] 索引標籤
-選取的作業識別碼，然後按一下 **資料**在工具功能表上，若要取得資料檢視。
+## <a name="data-tab-in-spark-history-server"></a>Spark 歷程記錄伺服器中的 [資料] 索引標籤
+選取 [作業識別碼]，然後按一下工具功能表上的 [資料]  以取得資料檢視。
 
-+ 請檢查**輸入**，**輸出**，並**資料表作業**個別選取索引標籤。
++ 個別選取索引標籤，以檢查 [輸入]  、[輸出]  和 [資料表作業]  。
 
-    ![Spark 歷程記錄伺服器資料索引標籤](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Spark 歷程記錄伺服器 [資料] 索引標籤](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
-+ 按一下按鈕來複製所有資料列**複製**。
++ 按一下 [複製]  按鈕來複製所有資料列。
 
     ![複製所有資料列](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
-+ 將所有資料都儲存為 CSV 檔案中，按一下按鈕**csv**。
++ 按一下 [csv]  按鈕，將所有資料儲存為 CSV 檔案。
 
     ![將資料儲存為 CSV 檔案](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
-+ 搜尋欄位中輸入關鍵字**搜尋**，將會立即顯示搜尋結果。
++ 在 [搜尋]  欄位中輸入關鍵字來進行搜尋，搜尋結果會立即顯示。
 
     ![使用關鍵字搜尋](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
-+ 按一下資料行標頭來排序資料表，按一下加號，展開 資料列來顯示更多詳細資料，或按一下減號摺疊資料列。
++ 按一下資料行標頭來排序資料表，按一下加號展開資料列以顯示更多詳細資料，或按一下減號來摺疊列。
 
-    ![資料的資料表功能](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![資料表功能](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
-+ 下載單一檔案按鈕，即可**部分下載**，放在右側，然後選取的檔案下載至本機位置。 如果檔案不存在任何其他，即會開啟新索引標籤，以顯示錯誤訊息。
++ 若要下載單一檔案，請按一下右邊的 [部分下載]  按鈕，然後將選取的檔案下載到本機位置。 如果檔案不存在，則會開啟新的索引標籤來顯示錯誤訊息。
 
     ![下載資料列](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
-+ 選取 複製完整路徑或相對路徑**複製完整路徑**，**複製相對路徑**將它展開並從 下載 功能表。 Azure data lake 儲存體檔案，如**在 Azure 儲存體總管中開啟**會啟動 Azure 儲存體總管。 並在登入時，找出要完全相同的資料夾。
++ 複製完整路徑或相對路徑，方法是選取從下載功能表展開的 [複製完整路徑]  、[複製相對路徑]  。 針對 Azure 資料湖儲存體檔案，[在 Azure 儲存體總管中開啟]  將會啟動 Azure 儲存體總管。 並在登入時找出正確的資料夾。
 
-    ![複製的完整或相對路徑](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![複製完整或相對路徑](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
-+ 按一下資料表下方的編號，瀏覽頁面時太多資料列在一個網頁中顯示。 
++ 當在一個頁面中顯示太多資料列時，請按一下資料表下方的數字以瀏覽頁面。 
 
     ![資料頁面](./media/apache-azure-spark-history-server/sparkui-data-page.png)
 
-+ 將滑鼠停留在資料顯示工具提示中，旁邊的問號，或按一下問號，以取得詳細資訊。
++ 將滑鼠停留在 [資料] 旁的問號以顯示工具提示，或按一下問號以取得詳細資訊。
 
-    ![資料的詳細資訊](./media/apache-azure-spark-history-server/sparkui-data-more-info.png)
+    ![資料詳細資訊](./media/apache-azure-spark-history-server/sparkui-data-more-info.png)
 
-+ 按一下 傳送意見反應與議題**向我們反應意見**。
++ 按一下 [提供意見反應]  以傳送有關問題的意見反應。
 
-    ![圖形的意見反應](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
+    ![圖表意見反應](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
 
-## <a name="graph-tab-in-spark-history-server"></a>在 Spark 歷程記錄伺服器中的 圖表 索引標籤
+## <a name="graph-tab-in-spark-history-server"></a>Spark 歷程記錄伺服器中的 [圖表] 索引標籤
 
-選取的作業識別碼，然後按一下  **Graph**在工具功能表上，若要取得工作的 圖表 檢視。
+選取作業識別碼，然後按一下工具功能表上的 [圖表]  以取得作業圖表檢視。
 
-+ 產生的作業圖表來檢查您的工作的概觀。 
++ 透過產生的作業圖表檢查作業概觀。 
 
-+ 根據預設，它會顯示所有作業，以及它可以藉由使用篩選**的作業識別碼**。
++ 根據預設，它會顯示所有作業，而且可以依 [作業識別碼]  進行篩選。
 
-    ![圖形作業識別碼](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
+    ![圖表作業識別碼](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ 我們將保留**進度**做為預設值。 使用者可以選取來檢查資料流**讀取**或 寫入 * * * 在下拉式清單中的**顯示**。
++ 我們將 [進度]  保留為預設值。 使用者可以在 [顯示]  的下拉式清單中選取 [讀取]  或 [寫入]****** 來檢查資料流程。
 
-    ![圖形顯示](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
+    ![圖表顯示](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
-    圖形節點以顯示熱度圖的色彩顯示。
+    圖表節點會以顯示熱度圖的色彩顯示。
 
-    ![圖形熱度圖](./media/apache-azure-spark-history-server/sparkui-graph-heatmap.png)
+    ![圖表熱度圖](./media/apache-azure-spark-history-server/sparkui-graph-heatmap.png)
 
-+ 按一下播放作業**播放**按鈕，並隨時停止，依序按一下 [停止] 按鈕。 工作中的顯示色彩來顯示不同的狀態時播放：
++ 按一下 [播放]  按鈕來播放作業，並按一下 [停止] 按鈕隨時停止。 播放時，工作會以色彩顯示以顯示不同的狀態：
 
-    + 綠色的成功：作業已順利完成。
-    + 橘色的重試：工作失敗，但不會影響作業的最終結果的執行個體。 這些工作會有重複或重試稍後可能會成功的執行個體。
-    + 藍色執行：工作正在執行。
-    + 等候的白色或略過：工作在等候執行，或已略過階段。
-    + 紅色表示失敗：工作已失敗。
+    + 綠色表示成功：作業已成功完成。
+    + 橘色表示重試：失敗但不會影響作業最終結果的工作執行個體。 這些工作具有稍後可能會成功的重複或重試執行個體。
+    + 藍色表示執行中：工作正在執行。
+    + 白色表示正在等候或略過：工作正在等候執行，或已略過該階段。
+    + 紅色表示失敗：工作失敗。
 
-    ![圖形的色彩範例中執行](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
+    ![圖表色彩樣本、執行中](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
-    已略過的階段以白色顯示。
-    ![圖形的色彩範例，請略過](./media/apache-azure-spark-history-server/sparkui-graph-color-skip.png)
+    略過的階段會以白色顯示。
+    ![圖表色彩樣本、略過](./media/apache-azure-spark-history-server/sparkui-graph-color-skip.png)
 
-    ![圖形的色彩範例中失敗](./media/apache-azure-spark-history-server/sparkui-graph-color-failed.png)
+    ![圖表色彩樣本、失敗](./media/apache-azure-spark-history-server/sparkui-graph-color-failed.png)
  
     > [!NOTE]
-    > 允許為每個工作的播放。 針對未完成的工作，不支援播放。
+    > 允許播放每個工作。 針對不完整的作業，不支援播放。
 
 
-+ 捲動至縮放輸入/輸出作業圖表，或按一下的滑鼠**縮放以符合**容易調整成螢幕。
++ 滑鼠會滾動以放大/縮小作業圖表，或按一下　[縮放至適當比例]  ，使其符合螢幕大小。
  
-    ![圖表縮放以符合](./media/apache-azure-spark-history-server/sparkui-graph-zoom2fit.png)
+    ![圖表縮放至適當比例](./media/apache-azure-spark-history-server/sparkui-graph-zoom2fit.png)
 
-+ 將滑鼠停留在圖形節點以查看工具提示時有失敗的工作，然後按一下以開啟階段頁面上的階段。
++ 當工作失敗時，將滑鼠停留在圖表節點上以查看工具提示，然後按一下 [階段] 以開啟 [階段] 頁面。
 
-    ![圖形工具提示](./media/apache-azure-spark-history-server/sparkui-graph-tooltip.png)
+    ![圖表工具提示](./media/apache-azure-spark-history-server/sparkui-graph-tooltip.png)
 
-+ 工作圖表 索引標籤中，階段會有工具提示和小圖示顯示有工作符合以下條件：
-    + 資料扭曲： 讀取的資料大小 > 平均資料讀取的這個階段內的所有工作的大小 * 2 和讀取的資料大小 > 10 MB
-    + 時間誤差： 執行時間 > 的這個階段內的所有工作的平均執行時間 * 2 和執行時間 > 2 分鐘
++ 在 [作業圖表] 索引標籤中，如果階段的工作符合下列條件，則會顯示工具提示和小型圖示：
+    + 資料扭曲：資料讀取大小 > 此階段中所有工作的平均資料讀取大小 * 2 和資料讀取大小 > 10 MB
+    + 時間扭曲：此階段中所有工作的執行時間 > 平均執行時間 * 2，而執行時間 > 2 分鐘
 
-    ![圖形扭曲圖示](./media/apache-azure-spark-history-server/sparkui-graph-skew-icon.png)
+    ![圖表扭曲圖示](./media/apache-azure-spark-history-server/sparkui-graph-skew-icon.png)
 
-+ 作業圖形節點會顯示每個階段的下列資訊：
++ [作業圖表] 節點會顯示每個階段的下列資訊：
     + 識別碼。
     + 名稱或描述。
     + 總工作數。
-    + 讀取的資料： 輸入的大小的 shuffle 加總讀取的大小。
-    + 資料寫入： 輸出大小的 shuffle 總和寫入大小。
-    + 執行時間： 第一次嘗試開始時間和上次嘗試的完成時間之間的時間。
-    + 資料列計數： 輸入記錄的加總輸出記錄、 隨機讀取的記錄和隨機寫入記錄。
+    + 讀取的資料：輸入大小和隨機讀取大小的總和。
+    + 資料寫入：輸出大小和隨機寫入大小的總和。
+    + 執行時間：第一次嘗試的開始時間與最後一次嘗試的完成時間之間的時間。
+    + 資料列計數：輸入記錄、輸出記錄、隨機讀取記錄和隨機寫入記錄的總和。
     + 進度。
 
     > [!NOTE]
-    > 根據預設，作業圖形節點會顯示從上一次嘗試的 （除了階段執行時間），每個階段的資訊，但是在播放圖形節點會顯示每一次嘗試的資訊。
+    > 根據預設，[作業圖表] 節點會顯示每個階段的最後一次嘗試的資訊 (階段執行時間除外)，但在播放圖表節點期間，會顯示每次嘗試的資訊。
 
     > [!NOTE]
-    > 資料大小的讀取和寫入，我們會使用 1 MB = 1000 KB = 1000 * 1000 個位元組。
+    > 對於讀取和寫入的資料大小，我們使用 1MB = 1000 KB = 1000 * 1000 個位元組。
 
-+ 按一下 傳送意見反應與議題**向我們反應意見**。
++ 按一下 [提供意見反應]  以傳送有關問題的意見反應。
 
-    ![圖形的意見反應](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
+    ![圖表意見反應](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
 
 
-## <a name="diagnosis-tab-in-spark-history-server"></a>在 [Spark 歷程記錄伺服器] 診斷索引標籤
-選取的作業識別碼，然後按一下 **診斷**在工具功能表上，以取得診斷檢視的作業。 [診斷] 索引標籤包含**資料扭曲**，**時間誤差**，並**執行程式使用情況分析**。
+## <a name="diagnosis-tab-in-spark-history-server"></a>Spark 歷程記錄伺服器中的 [診斷] 索引標籤
+選取作業識別碼，然後按一下工具功能表上的 [診斷]  以取得作業診斷檢視。 [診斷] 索引標籤包括 [資料扭曲]  、[時間扭曲]  和 [執行程式使用狀況分析]  。
     
-+ 請檢查**資料扭曲**，**時間誤差**，並**執行程式使用情況分析**分別選取索引標籤。
++ 透過個別選取索引標籤，檢查 [資料扭曲]  、[時間扭曲]  和 [執行程式使用狀況分析]  。
 
-    ![診斷索引標籤](./media/apache-azure-spark-history-server/sparkui-diagnosis-tabs.png)
+    ![[診斷] 索引標籤](./media/apache-azure-spark-history-server/sparkui-diagnosis-tabs.png)
 
 ### <a name="data-skew"></a>資料扭曲
-按一下 **資料扭曲**索引標籤上，對應扭曲的工作才會顯示根據指定的參數。 
+按一下[資料扭曲]  索引標籤，就會根據指定的參數顯示對應的扭曲工作。 
 
-+ **指定參數**-第一部分顯示的參數，用來偵測資料扭曲。 內建的規則是：讀取的工作資料大於三次的平均工作資料讀取，且讀取的工作資料會超過 10 MB。 如果您想要定義您自己的規則，扭曲的工作，您可以選擇您的參數**扭曲階段**，並**扭曲 Char**區段將會據以重新整理。 
++ **指定參數** -第一個區段會顯示用來偵測資料扭曲的參數。 內建規則是：工作資料讀取大於平均工作資料讀取的 3 倍，而工作資料讀取超過 10 MB。 如果您想要為扭曲的工作定義自己的規則，您可以選擇您的參數 ([扭曲階段]  )，[扭曲字元]  區段將會據此重新整理。 
 
-+ **扭曲階段**-第二個區段會顯示包含了扭曲符合上述準則的工作階段。 是否有多個扭曲的工作階段中，扭曲的暫存資料表只會顯示最扭曲的工作 （例如，資料扭曲的最大資料）。 
++ **扭曲階段** -第二個區段會顯示階段，其中有扭曲的工作符合上面指定的準則。 如果某個階段中有一個以上的扭曲工作，扭曲階段資料表只會顯示最扭曲的工作 (例如，資料扭曲的最大資料)。 
 
     ![資料扭曲 section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **扭曲圖表**-選取扭曲的暫存資料表中的資料列時，詳細的工作分佈根據讀取的資料和執行時間誤差的圖表顯示。 扭曲的工作會標示為紅色，和一般工作會以藍色標示。 基於效能考量，圖表只會顯示最多 100 個範例工作。 工作詳細資料會顯示在右邊的下方面板。
++ **扭曲圖表** - 選取扭曲階段資料表中的資料列時，扭曲圖表會根據讀取和執行時間的資料，顯示更多工作分佈詳細資料。 扭曲的工作會以紅色標示，而一般工作則會以藍色標示。 基於效能考量，圖表最多只會顯示 100 個樣本工作。 工作詳細資料會顯示在右下方面板中。
 
     ![資料扭曲 section3](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 
 ### <a name="time-skew"></a>時間扭曲
-**時間誤差**索引標籤會顯示扭曲的工作執行時間為基礎的工作。 
+[時間扭曲]  索引標籤會根據工作執行時間顯示扭曲的工作。 
 
-+ **指定參數**-第一部分顯示的參數，用來偵測時間誤差。 預設準則，來偵測時間誤差是： 工作執行時間大於三次的平均執行時間，且工作執行時間大於 30 秒。 您可以變更您的需求為基礎的參數。 **扭曲階段**並**扭曲圖表**一樣顯示的對應階段和工作資訊**資料扭曲**上述 索引標籤。
++ **指定參數** - 第一個區段會顯示用來偵測時間扭曲的參數。 偵測時間扭曲的預設準則是：工作執行時間大於平均執行時間的三倍，而工作執行時間大於 30 秒。 您可以根據您的需求變更參數。 [扭曲階段]  和 [扭曲圖表]  會顯示對應的階段和工作資訊，就像上面的 [資料扭曲]  索引標籤一樣。
 
-+ 按一下 **時間誤差**，然後篩選的結果會顯示在**扭曲階段**根據區段中設定的參數區段**指定參數**。 按一下一個項目**扭曲階段**區段，則相對應的圖表草稿中 section3，並在右邊的下方面板中顯示工作詳細資料。
++ 按一下 [時間扭曲]  ，然後根據 [指定參數]  區段中所設定的參數，在 [扭曲階段]  區段中顯示篩選的結果。 按一下 [扭曲階段]  區段中的一個專案，然後對應的圖表會在 section3 中繪製，而且工作詳細資料會顯示在右下方面板中。
 
-    ![時間誤差 section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-timeskew-section2.png)
+    ![時間扭曲 section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-timeskew-section2.png)
 
-### <a name="executor-usage-analysis"></a>執行程式的使用量分析
-在執行程式的使用量圖表會視覺化 Spark 作業實際執行程式配置和執行狀態。  
+### <a name="executor-usage-analysis"></a>執行程式使用狀況分析
+執行程式使用狀況圖表會將 Spark 作業的實際執行程式配置和執行狀態視覺化。  
 
-+ 按一下 **執行程式使用情況分析**，則我們編寫有關執行者使用量的四個型別曲線。 其中包括**配置執行程式**，**執行的執行程式**，**閒置的執行程式**，以及**最大可執行程式執行個體**。 有關配置的執行程式，每個 「 執行程式已新增 」 或 「 執行程式已移除 」 的事件會增加或減少配置執行程式。 如需詳細的比較 [作業] 索引標籤中，您可以檢查 」 事件時間軸 」。
++ 按一下 [執行程式使用狀況分析]  ，然後繪製與執行程式使用方式相關的四種曲線類型。 其中包括 [已配置的執行程式]  、[執行中的執行程式]  、[閒置的執行程式]  以及 [最大執行程式執行個體]  。 關於已配置的執行程式，每個「已新增執行程式」或「已移除執行程式」事件都會增加或減少配置的執行程式。 您可以檢查 [作業] 索引標籤中的 [事件時間軸] 以進行比較。
 
-    ![執行程式 索引標籤](./media/apache-azure-spark-history-server/sparkui-diagnosis-executors.png)
+    ![[執行程式] 索引標籤](./media/apache-azure-spark-history-server/sparkui-diagnosis-executors.png)
 
-+ 按一下色彩圖示以選取或取消選取所有 [草稿] 中的對應內容。
++ 按一下色彩圖示，以選取或取消選取所有草稿中的對應內容。
 
-    ![選取的圖表](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    ![選取圖表](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
 
 
 ## <a name="known-issues"></a>已知問題
-「 Spark 記錄伺服器具有下列已知的問題：
+Spark 歷程記錄伺服器具有下列已知問題：
 
-+ 目前，它只適用於 Spark 2.3 叢集。
++ 目前，它僅適用於 Spark 2.3 叢集。
 
-+ 在 [資料] 索引標籤中，將不會顯示使用 RDD 的輸入/輸出資料。
++ 使用 RDD 的輸入/輸出資料不會顯示在 [資料] 索引標籤中。
 
 ## <a name="next-steps"></a>後續步驟
 
-* [管理 HDInsight 上的 Spark 叢集的資源](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
+* [開始使用 SQL Server 巨量資料叢集](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [設定 Spark 設定](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

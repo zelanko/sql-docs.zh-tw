@@ -20,25 +20,34 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0480cb7b3692a5101271ea69cc8700c4ff09ada0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072268"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495464"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set 運算子 - UNION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-將兩個或多個查詢的結果結合成單一結果集。 這個集合包含屬於聯集中所有查詢的所有資料列。 UNION 作業不同於利用聯結來結合兩份資料表的資料行。  
+將兩個查詢的結果串連成單一結果集。 您可以控制結果集是否會包含重複的資料列：
+
+- **UNION ALL**：包含重複項目。
+- **UNION**：排除重複項目。
+
+**UNION** 作業和 **[JOIN](../queries/from-transact-sql.md)** 並不相同：
+
+- **UNION** 會串連來自兩個查詢的結果集。 但 **UNION** 不會從收集自兩個資料表的資料行建立個別的資料列。
+- **JOIN** 會比較來自兩個資料表的資料行，以建立由來自兩個資料表的資料行所組成的結果資料列。
   
-以下是利用 UNION 來組合兩項查詢的結果集之基本規則：  
+以下是利用 **UNION** 來組合兩個查詢之結果集的基本規則：  
   
 -   在所有查詢中，資料行的數目和順序都必須相同。  
   
 -   資料類型必須相容。  
   
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +59,7 @@ ms.locfileid: "68072268"
 ```  
   
 ## <a name="arguments"></a>引數  
-\<query_specification> | ( \<query_expression> ) 這是一個查詢規格或查詢運算式，它會傳回要與另一個查詢規格或查詢運算式之資料合併的資料。 UNION 作業中的資料行定義不必相同，但必須能夠透過隱含的轉換而相容。 當資料類型不同時，產生的資料類型取決於[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的規則。 當類型相同，但有效位數、小數位數或長度不同時，結果取決於相同的運算式組合規則。 如需詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
+\<query_specification> | ( \<query_expression> ) 這是一個查詢規格或查詢運算式，它會傳回要與另一個查詢規格或查詢運算式之資料合併的資料。 UNION 作業中的資料行定義不必相同，但必須能夠透過隱含的轉換而相容。 當資料類型不同時，產生的資料類型取決於[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的規則。 當類型相同，但有效位數、小數位數或長度不同時，結果取決於相同的運算式組合規則。 如需詳細資訊，請參閱[有效位數、小數位數和長度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
 **XML** 資料類型的資料行必須相等。 所有資料行都必須是 XML 結構描述類型，或不具類型。 如果具備類型，它們的類型必須是相同的 XML 結構描述集合。  
   
@@ -65,7 +74,7 @@ ALL
 ### <a name="a-using-a-simple-union"></a>A. 使用簡單 UNION  
 在下列範例中，結果集包括 `ProductModelID` 和 `Name` 資料表之 `ProductModel` 和 `Gloves` 資料行的內容。  
  
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL  
@@ -94,7 +103,7 @@ GO
 ### <a name="b-using-select-into-with-union"></a>B. 搭配 UNION 使用 SELECT INTO  
 在下列範例中，第二個 `SELECT` 陳述式中的 `INTO` 子句指定名為 `ProductResults` 的資料表，保留 `ProductModel` 和 `Gloves` 資料表所選資料行聯集的最終結果集。 `Gloves` 資料表是建立在第一個 `SELECT` 陳述式中。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.ProductResults', 'U') IS NOT NULL  
@@ -123,13 +132,12 @@ GO
   
 SELECT ProductModelID, Name   
 FROM dbo.ProductResults;  
-  
 ```  
   
 ### <a name="c-using-union-of-two-select-statements-with-order-by"></a>C. 搭配 ORDER BY 使用兩個 SELECT 陳述式的 UNION  
 搭配 UNION 子句使用之特定參數的順序非常重要。 下列範例會顯示在兩個 `UNION` 陳述式中的輸出重新命名一個資料行時，`SELECT` 的正確和不正確用法。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL  
@@ -165,7 +173,6 @@ SELECT ProductModelID, Name
 FROM dbo.Gloves  
 ORDER BY Name;  
 GO  
-  
 ```  
   
 ### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>D. 利用三個 SELECT 陳述式的 UNION 來顯示 ALL 和括號的作用  
@@ -173,7 +180,7 @@ GO
   
 第三個範例搭配第一個 `UNION` 來使用 `ALL`，並用括弧括住未使用 `ALL` 的第二個 `UNION`。 系統會先處理第二個 `UNION`，因為它在括弧中；由於未使用 `ALL` 選項，並已移除重複項目，因此會傳回 5 個資料列。 這 5 個資料列利用 `SELECT` 關鍵字，與第一個 `UNION ALL` 的結果結合起來。 此範例並不會移除這兩組 5 個資料列之間的重複項目。 最終結果有 10 個資料列。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.EmployeeOne', 'U') IS NOT NULL  
@@ -244,7 +251,7 @@ GO
 ### <a name="e-using-a-simple-union"></a>E. 使用簡單 UNION  
 在下列範例中，結果集包括 `FactInternetSales` 和 `DimCustomer` 資料表之 `CustomerKey` 資料行的內容。 因為沒有使用 ALL 關鍵字，所以重複項目會從結果中排除。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -258,7 +265,7 @@ ORDER BY CustomerKey;
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>F. 搭配 ORDER BY 使用兩個 SELECT 陳述式的 UNION  
  當 UNION 陳述式中的任何 SELECT 陳述式包含 ORDER BY 子句時，該子句應置於所有 SELECT 陳述式之後。 下列範例在兩個 `SELECT` 陳述式 (其中有使用 ORDER BY 進行排序的資料行) 中顯示不正確的和正確的 `UNION` 用法。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- INCORRECT  
@@ -284,7 +291,7 @@ ORDER BY CustomerKey;
 ### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. 使用含 WHERE 和 ORDER BY 之 SELECT 陳述式的 UNION  
 以下範例說明在需要 WHERE 和 ORDER BY 的兩個 `SELECT` 陳述式中，不正確的和正確的 `UNION` 用法。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- INCORRECT   
@@ -316,7 +323,7 @@ ORDER BY CustomerKey;
   
 第三個範例搭配第一個 `UNION` 來使用 `ALL`，並用括弧括住未使用 `ALL` 的第二個 `UNION`。 系統會先處理第二個 `UNION`，因為它在括號中。 由於未使用 `ALL` 選項，並已移除重複項目，因此它只會傳回資料表中未重複的資料列。 這些資料列利用 `UNION ALL` 關鍵字，與第一個 `SELECT` 的結果合併。 此範例並不會移除這兩組之間的重複項目。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, FirstName, LastName  
@@ -350,8 +357,5 @@ FROM DimCustomer
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
-[SELECT 範例 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
-  
-  
-
+[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
+[SELECT 範例 (Transact-SQL)](../../t-sql/queries/select-examples-transact-sql.md)  

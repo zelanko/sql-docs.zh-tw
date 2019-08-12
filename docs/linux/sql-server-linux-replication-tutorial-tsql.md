@@ -10,48 +10,48 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9ac898430bbdc3704e43c62be09884ee1925cb75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68130113"
 ---
-# <a name="configure-replication-with-t-sql"></a>使用 T-SQL 設定複寫
+# <a name="configure-replication-with-t-sql"></a>搭配 T-SQL 設定複寫
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-在本教學課程中，您將設定 SQL Server 快照式複寫在 Linux 上使用兩個使用 Transact SQL 的 SQL Server 執行個體。 「 發行者 」 與 「 散發者 」 會是相同的執行個體，和 「 訂閱者 」 會在個別的執行個體。
+在本教學課程中，您將會在 Linux 上使用 Transact-SQL 搭配兩個 SQL Server 執行個體來設定 SQL Server 快照式複寫。 發行者和散發者將會是相同的執行個體，且訂閱者將會位於個別的執行個體上。
 
 > [!div class="checklist"]
-> * 啟用在 Linux 上的 SQL Server 複寫代理程式
+> * 在 Linux 上啟用 SQL Server 複寫代理程式
 > * 建立範例資料庫
-> * 設定 SQL Server 代理程式存取的快照集資料夾
+> * 針對 SQL Server 代理程式存取設定快照集資料夾
 > * 設定散發者
-> * 設定 「 發行者 」
-> * 設定發行集和文件
+> * 設定發行者
+> * 設定發行集和發行項
 > * 設定訂閱者 
 > * 執行複寫作業
 
-可設定所有的複寫組態[複寫預存程序](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
+所有複寫設定都可以搭配[複寫預存程序](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)來加以設定。
 
-## <a name="prerequisites"></a>必要條件  
-若要完成本教學課程中，您必須：
+## <a name="prerequisites"></a>Prerequisites  
+若要完成本教學課程，您將會需要：
 
-- Linux 上的 SQL Server 的最新版本的 SQL Server 兩個執行個體
-- 若要設定複寫，例如 SQLCMD 或 SSMS 的發出 T-SQL 查詢的工具
+- 具有 Linux 上的 SQL Server 最新版本的兩個 SQL Server 執行個體
+- 用來發出 T-SQL 查詢以設定複寫的工具，例如 SQLCMD 或 SSMS
 
-  請參閱[使用 SSMS 管理 SQL Server on Linux](./sql-server-linux-manage-ssms.md)。
+  請參閱[使用 SSMS 來管理 Linux 上的 SQL Server](./sql-server-linux-manage-ssms.md)。
 
 ## <a name="detailed-steps"></a>詳細步驟
 
-1. 啟用 Linux 啟用 「 SQL Server 代理程式使用複寫代理程式上的 SQL Server 複寫代理程式。 在這兩個主機電腦，請在終端機中執行下列命令。 
+1. 在 Linux 上啟用 SQL Server 複寫代理程式：啟用 SQL Server Agent 以使用複寫代理程式。 在兩部主機電腦上，於終端機中執行下列命令。 
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
   ```
 
-1. 建立範例資料庫和資料表在您的發行者建立範例資料庫和資料表做為發行集發行項。
+1. 在您的發行者上建立範例資料庫和資料表：在您的發行者上，建立範例資料庫和資料表以作為發行的發行項。
 
   ```sql
   CREATE DATABASE Sales
@@ -63,14 +63,14 @@ ms.locfileid: "68130113"
   INSERT INTO CUSTOMER (CustomerID, SalesAmount) VALUES (1,100),(2,200),(3,300)
   ```
 
-  其他 SQL Server 執行個體上，「 訂閱者 」 建立的資料庫可接受的文章。
+  在另一個 SQL Server 執行個體 (訂閱者) 上建立資料庫以接收發行項。
 
   ```sql
   CREATE DATABASE Sales
   GO
   ```
 
-1. 建立快照集資料夾的讀取/寫入，「 散發者 」 上建立快照集資料夾，並授與存取權 'mssql' 使用者的 SQL Server Agent 
+1. 建立快照集資料夾以供 SQL Server Agent 對其進行讀取/寫入：在散發者上，建立快照集資料夾並將存取權授與 'mssql' 使用者 
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -78,7 +78,7 @@ ms.locfileid: "68130113"
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-1. 在此範例中設定 「 散發者 」、 「 發行者 」 端也會 「 散發者 」。 若要設定的執行個體，以及發佈的 「 發行者 」 端，執行下列命令。
+1. 設定散發者：在此範例中，發行者也會是散發者。 在發行者上執行下列命令以同時設定散發執行個體。
 
   ```sql
   DECLARE @distributor AS sysname
@@ -111,7 +111,7 @@ ms.locfileid: "68130113"
   GO
   ```
 
-1. 設定 「 發行者 」 在 「 發行者 」 上執行下列 TSQL 命令。
+1. 設定發行者：在發行者上執行下列 TSQL 命令。
 
   ```sql
   DECLARE @publisher AS sysname
@@ -136,7 +136,7 @@ ms.locfileid: "68130113"
   GO
   ```
 
-1. 「 發行者 」 上設定執行作業的發行集的下列 TSQL 命令。
+1. 設定發行集作業：在發行者上執行下列 TSQL 命令。
 
   ```sql
   DECLARE @replicationdb AS sysname
@@ -175,7 +175,7 @@ ms.locfileid: "68130113"
   @publisher_password = @publisherpassword
   ```
 
-1. 建立文件從 sales 資料表執行下列 TSQL 命令在 「 發行者 」 上。
+1. 從 Sales 資料表建立發行項：在發行者上執行下列 TSQL 命令。
 
   ```sql
   use [Sales]
@@ -195,7 +195,7 @@ ms.locfileid: "68130113"
   @vertical_partition = N'false'
   ```
 
-1. 訂用帳戶執行下列 TSQL 命令上設定 「 發行者 」。
+1. 設定訂用帳戶：在發行者上執行下列 TSQL 命令。
 
   ```sql
   DECLARE @subscriber AS sysname
@@ -240,13 +240,13 @@ ms.locfileid: "68130113"
 
 1. 執行複寫代理程式作業
 
-  執行下列查詢，以取得作業的清單：
+  執行下列查詢以取得作業清單：
 
   ```sql
   SELECT name, date_modified FROM msdb.dbo.sysjobs order by date_modified desc
   ```
 
-  執行快照集的複寫作業，以產生快照集：
+  執行快照式複寫作業以產生快照集：
 
   ```sql
   USE msdb;  
@@ -255,7 +255,7 @@ ms.locfileid: "68130113"
   GO
   ```
 
-  執行快照集的複寫作業，以產生快照集：
+  執行快照式複寫作業以產生快照集：
 
   ```sql
   USE msdb;  
@@ -264,32 +264,32 @@ ms.locfileid: "68130113"
   GO
   ```
 
-1. 連接訂閱者及查詢複寫的資料 
+1. 連線訂閱者並查詢複寫資料 
 
-  在訂閱者上，檢查複寫運作藉由執行下列查詢：
+  在訂閱者上，執行下列查詢來檢查複寫是否正常運作：
 
   ```sql
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-在本教學課程中，您可以設定 SQL Server 快照式複寫在 Linux 上使用兩個使用 Transact SQL 的 SQL Server 執行個體。
+在本教學課程中，您已在 Linux 上使用 Transact-SQL 搭配兩個 SQL Server 執行個體來設定 SQL Server 快照式複寫。
 
 > [!div class="checklist"]
-> * 啟用在 Linux 上的 SQL Server 複寫代理程式
+> * 在 Linux 上啟用 SQL Server 複寫代理程式
 > * 建立範例資料庫
-> * 設定 SQL Server 代理程式存取的快照集資料夾
+> * 針對 SQL Server 代理程式存取設定快照集資料夾
 > * 設定散發者
-> * 設定 「 發行者 」
-> * 設定發行集和文件
+> * 設定發行者
+> * 設定發行集和發行項
 > * 設定訂閱者 
 > * 執行複寫作業
 
 ## <a name="see-also"></a>另請參閱
 
-如需複寫的詳細資訊，請參閱 < [SQL Server 複寫的文件](../relational-databases/replication/sql-server-replication.md)。
+如需複寫的詳細資訊，請參閱 [SQL Server 複寫文件](../relational-databases/replication/sql-server-replication.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
-[概念：在 Linux 上的 SQL Server 複寫](sql-server-linux-replication.md)
+[概念：Linux 上的 SQL Server 複寫](sql-server-linux-replication.md)
 
 [複寫預存程序](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。

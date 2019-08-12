@@ -1,6 +1,6 @@
 ---
-title: 設定 SQL Server 的 Red Hat Enterprise Linux 共用的叢集
-description: 設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集，以實作高可用性。
+title: 設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用叢集
+description: 透過設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用磁碟叢集來實作高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,66 +10,66 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032285"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
+# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用磁碟叢集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南提供指示來建立 Red Hat Enterprise Linux 上的 SQL Server 的兩個節點的共用的磁碟叢集。 叢集層以在 Red Hat Enterprise Linux (RHEL) 為基礎[HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上建置[Pacemaker](https://clusterlabs.org/)。 SQL Server 執行個體是在上一個節點或其他使用中。
+本指南提供在 Red Hat Enterprise Linux 上，為 SQL Server 建立兩個節點共用磁碟叢集的指示。 叢集層是以建置於 [Pacemaker](https://clusterlabs.org/) 之上的 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)為基礎。 SQL Server 執行個體在其中一個節點上為作用中狀態。
 
 > [!NOTE] 
-> Red Hat HA 附加元件和文件集的存取需要訂用帳戶。 
+> 存取 Red Hat HA 附加元件與文件需要訂用帳戶。 
 
-下圖所示，兩部伺服器被提供儲存體。 -Corosync 和 Pacemaker-叢集元件協調通訊和資源管理。 其中一個伺服器具有作用中的連接到儲存體資源和 SQL Server。 當 Pacemaker 偵測到失敗時叢集的元件會管理資源移動到另一個節點。  
+如下圖所示，會向兩部伺服器提供儲存體。 叢集元件 - Corosync 和 Pacemaker 協調叢集通訊和資源管理。 其中一部伺服器具有針對儲存體資源和 SQL Server 的作用中連線。 當 Pacemaker 偵測到失敗時，叢集元件會負責將資源移至另一個節點。  
 
-![Red Hat Enterprise Linux 7 共用磁碟的 SQL 叢集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Red Hat Enterprise Linux 7 共用磁碟 SQL 叢集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+如需叢集設定、資源代理程式選項和管理的詳細資訊，請造訪 [RHEL 參考文件](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) \(英文\)。
 
 
 > [!NOTE] 
-> 到目前為止，不是與使用 Windows 上為 WSFC，結合 SQL Server 的整合 Pacemaker。 從 SQL，在沒有知識存在的叢集，所有的協調流程中超出而且服務由 Pacemaker 控制做為獨立執行個體。 也，例如叢集 dmv sys.dm_os_cluster_nodes 並且 sys.dm_os_cluster_properties，將任何記錄。
-若要使用的連接字串指向字串伺服器名稱，未使用的 IP，他們必須註冊在他們的 DNS 伺服器用來建立虛擬 IP 資源 （如下列各節所述） 的 IP 與所選的伺服器名稱。
+> 目前，SQL Server 與 Pacemaker 整合程度尚不如 Windows 與 WSFC 的結合。 SQL 不會知道叢集是否存在，所有協調流程都是從外而入，且 Pacemaker 會以獨立執行個體形式來控制服務。 例如，叢集 dmvs sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 將不會有任何記錄。
+若要使用指向字串伺服器名稱的連接字串而不使用 IP，他們必須在其 DNS 伺服器中搭配指定的伺服器名稱註冊用來建立虛擬 IP 資源的 IP (如下列各節中所述)。
 
-下列各節逐步解說的步驟來設定容錯移轉叢集解決方案。 
+下列各節將逐步解說設定容錯移轉叢集解決方案的步驟。 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
-若要完成下列的端對端案例中，您需要部署兩個節點叢集並設定 NFS 伺服器的另一部伺服器的兩部機器。 下列步驟概述這些伺服器設定的方式。
+若要完成下列端對端情節，您需要兩部電腦來部署兩個節點叢集，以及另一個伺服器來設定 NFS 伺服器。 以下步驟概述這些伺服器的設定方式。
 
-## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>安裝和設定每個叢集節點上的作業系統
+## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>在每個叢集節點上安裝和設定作業系統
 
-第一個步驟是設定叢集節點上的作業系統。 此逐步解說中，使用 RHEL 與有效的訂用帳戶的 HA 附加元件。 
+第一個步驟是在叢集節點上設定作業系統。 在此逐步解說中，針對 HA 附加元件搭配有效的訂用帳戶來使用 RHEL。 
 
-## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>安裝和設定每個叢集節點上的 SQL Server
+## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每個叢集節點上安裝和設定 SQL Server
 
-1. 安裝和設定兩個節點上的 SQL Server。  如需詳細指示，請參閱 < [Linux 上安裝 SQL Server](sql-server-linux-setup.md)。
+1. 在這兩個節點上安裝和設定 SQL Server。  如需詳細指示，請參閱[在 Linux 上安裝 SQL Server](sql-server-linux-setup.md)。
 
-1. 將一個節點指定為主要，另一個則設為次要，基於的組態。 使用下列這些詞彙本指南。  
+1. 針對設定的用途，將一個節點指定為 [主要]，另一個指定為 [次要]。 請使用這些字詞來進行本指南。  
 
-1. 在次要節點，停止並停用 SQL Server。
+1. 在次要節點上，停止並停用 SQL Server。
 
-   下列範例會停止，並停用 SQL Server: 
+   下列範例會停止並停用 SQL Server： 
 
    ```bash
    sudo systemctl stop mssql-server
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> 於安裝時期 Server 主要金鑰是產生 SQL Server 執行個體，並放在`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，一律以呼叫 mssql 的本機帳戶執行 SQL Server。 因為它是本機帳戶時，不會在節點之間共用其身分識別。 因此，您要複製的加密金鑰從主要節點，每個次要節點以便每個本機 mssql 帳戶可以存取它來解密伺服器主要金鑰。 
+> 在安裝期間，將為 SQL Server 執行個體產生伺服器主要金鑰，並將其置於 `/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 一律會以名為 mssql 的本機帳戶執行。 因為它是本機帳戶，所以不會在節點之間共用其身分識別。 因此，您需要將加密金鑰從主要節點複製到每個次要節點，讓每個本機 mssql 帳戶可以存取它來解密伺服器主要金鑰。 
 
-1. 主要節點上，為 Pacemaker 建立 SQL server 登入，並授與登入執行的權限`sp_server_diagnostics`。 Pacemaker 會使用此帳戶，來確認哪一個節點正在執行 SQL Server。 
+1. 在主要節點上，建立 Pacemaker 的 SQL Server 登入，並授與執行 `sp_server_diagnostics` 的登入許可權。 Pacemaker 會使用此帳戶來確認哪個節點正在執行 SQL Server。 
 
    ```bash
    sudo systemctl start mssql-server
    ```
 
-   連接到 SQL Server`master`資料庫與 sa 帳戶，然後執行下列命令：
+   使用 SA 帳戶連接到 SQL Server `master` 資料庫，然後執行下列動作：
 
    ```bashsql
    USE [master]
@@ -78,24 +78,24 @@ ms.locfileid: "68032285"
 
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
-   或者，您可以以更細微的層級設定權限。 Pacemaker 登入需要對於`VIEW SERVER STATE`sp_server_diagnostics，與查詢健全狀況狀態`setupadmin`和`ALTER ANY LINKED SERVER`執行 sp_dropserver 和 sp_addserver 更新 FCI 執行個體名稱的資源名稱。 
+   或者，您可以以更細微的層級設定權限。 Pacemaker 登入需要 `VIEW SERVER STATE` 以使用 sp_server_diagnostics 查詢健康狀態，`setupadmin` 和 `ALTER ANY LINKED SERVER` 藉由執行 sp_dropserver 和 sp_addserver 以資源名稱更新 FCI 執行個體名稱。 
 
-1. 主要節點上，停止並停用 SQL Server。 
+1. 在主要節點上，停止並停用 SQL Server。 
 
-1. 設定每個叢集節點的主機檔案。 主機檔案必須包含的每個叢集節點名稱與 IP 位址。 
+1. 為每個叢集節點設定 hosts 檔案。 主機檔案必須包含每個叢集節點的 IP 位址和名稱。 
 
-    檢查每個節點的 IP 位址。 下列指令碼會顯示目前節點的 IP 位址。 
+    檢查每個節點的 IP 位址。 下列指令碼會顯示您目前節點的 IP 位址。 
 
    ```bash
    sudo ip addr show
    ```
 
-   每個節點上設定的電腦名稱。 為每個節點指定唯一的名稱為 15 個字元或更少。 將電腦名稱，將它加入至`/etc/hosts`。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
+   在每個節點上設定電腦名稱。 為每個節點指定一個不超過 15 個字元的唯一名稱。 透過將電腦名稱新增至 `/etc/hosts` 來設定電腦名稱。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   下列範例所示`/etc/hosts`新增名為兩個節點項目`sqlfcivm1`和`sqlfcivm2`。
+   下列範例顯示 `/etc/hosts`，以及適用於兩個節點 (名稱為 `sqlfcivm1`和 `sqlfcivm2`) 的新增項目。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -104,21 +104,21 @@ ms.locfileid: "68032285"
    10.128.16.77 sqlfcivm2
    ```
 
-在下一節中，您會設定共用存放裝置，並將您的資料庫檔案移至該儲存體。 
+在下一節中，您將設定共用儲存體，並將資料庫檔案移至該儲存體。 
 
-## <a name="configure-shared-storage-and-move-database-files"></a>設定共用存放裝置，並移動資料庫檔案 
+## <a name="configure-shared-storage-and-move-database-files"></a>設定共用儲存體和移動資料庫檔案 
 
-有各式各樣的解決方案提供共用存放裝置。 此逐步解說會示範設定 NFS 共用的儲存體。 我們建議您遵循最佳作法，並使用 Kerberos 來保護 NFS (您可以找到範例如下： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) 。 
+有多種解決方案可用於提供共用儲存體。 本逐步解說示範如何使用 NFS 設定共用儲存體。 我們建議您遵循最佳作法，並使用 Kerberos 來保護 NFS 安全 (您可以在這裡找到範例： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) \(英文\)。 
 
 >[!Warning]
->如果您未保護 NFS，然後可以存取您的網路和詐騙 SQL 節點的 IP 位址的任何人都能夠存取您的資料檔案。 一如往常，請確定您的威脅模型系統在生產環境中使用它之前。 另一個儲存體選項是使用 SMB 檔案共用。
+>如果您不保護 NFS，那麼任何可以存取您的網路並假冒 SQL 節點 IP 位址的人，都能存取您的資料檔案。 一如往常，請務必在生產環境中使用您的系統之前，先針對它建立威脅模型。 另一個儲存體選項是使用 SMB 檔案共用。
 
-### <a name="configure-shared-storage-with-nfs"></a>使用 NFS 設定共用存放裝置
+### <a name="configure-shared-storage-with-nfs"></a>使用 NFS 設定共用儲存體
 
 > [!IMPORTANT] 
-> 裝載資料庫檔案版本的 NFS 伺服器上 < 4 不支援此版本中。 這包括使用 NFS 共用的磁碟的容錯移轉叢集資料庫以及非叢集執行個體。 我們正努力讓其他即將推出的版本中的 NFS 伺服器版本。 
+> 在此版本中，不支援將資料庫檔案裝載在版本 < 4 的 NFS 伺服器上。 這包括針對共用磁碟容錯移轉叢集，以及非叢集執行個體上的資料庫使用 NFS。 我們正致力於在即將推出的版本中，啟用其他 NFS 伺服器版本。 
 
-NFS 伺服器上執行下列作業：
+在 NFS 伺服器上執行下列動作：
 
 1. 安裝 `nfs-utils`
 
@@ -126,31 +126,31 @@ NFS 伺服器上執行下列作業：
    sudo yum -y install nfs-utils
    ```
 
-1. 啟用和啟動 `rpcbind`
+1. 啟用並啟動 `rpcbind`
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. 啟用和啟動 `nfs-server`
+1. 啟用並啟動 `nfs-server`
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  編輯`/etc/exports`匯出您要共用的目錄。 您需要針對您想要每個共用的 1 行。 例如: 
+1.  編輯 `/etc/exports` 以匯出您要共用的目錄。 您想要的每個共用都需要 1 行。 例如： 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
    ```
 
-1. 匯出的共用
+1. 匯出共用
 
    ```bash
    sudo exportfs -rav
    ```
 
-1. 請確認路徑共用/匯出，NFS 伺服器從執行
+1. 確認路徑為共用/匯出，並從 NFS 伺服器執行
 
    ```bash
    sudo showmount -e
@@ -162,7 +162,7 @@ NFS 伺服器上執行下列作業：
    sudo setsebool -P nfs_export_all_rw 1
    ```
    
-1. 開啟防火牆的伺服器。
+1. 開啟伺服器的防火牆。
 
    ```bash 
    sudo firewall-cmd --permanent --add-service=nfs
@@ -171,9 +171,9 @@ NFS 伺服器上執行下列作業：
    sudo firewall-cmd --reload
    ```
 
-### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>設定連接到共用的 NFS 儲存體的所有叢集節點
+### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>設定所有叢集節點，以連線到 NFS 共用儲存體
 
-執行下列步驟，在所有叢集節點上。
+請在所有叢集節點上執行下列步驟。
 
 1.  安裝 `nfs-utils`
 
@@ -181,7 +181,7 @@ NFS 伺服器上執行下列作業：
    sudo yum -y install nfs-utils
    ```
 
-1. 開啟用戶端和 NFS 伺服器上的防火牆
+1. 在用戶端和 NFS 伺服器上開啟防火牆
 
    ```bash
    sudo firewall-cmd --permanent --add-service=nfs
@@ -196,17 +196,17 @@ NFS 伺服器上執行下列作業：
    sudo showmount -e <IP OF NFS SERVER>
    ```
 
-1. 重複上述步驟，在所有叢集節點上。
+1. 在所有叢集節點上重複這些步驟。
 
-如需使用 NFS 的詳細資訊，請參閱下列資源：
+如需使用 NFS 的相關資訊，請參閱下列資源：
 
-* [NFS 伺服器和 firewalld |Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [掛接 NFS 磁碟區 |Linux 的網路系統管理員指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS 伺服器設定 |Red Hat 客戶入口網站](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [NFS 伺服器和 firewalld | 堆疊交換](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld) \(英文\)
+* [裝載 NFS 磁碟區 | Linux 網路系統管理員指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html) \(英文\)
+* [NFS 伺服器設定 | Red Hat 客戶入口網站](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig) \(英文\)
 
-### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>掛接點的共用存放裝置的資料庫檔案目錄
+### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>裝載資料庫檔案目錄以指向共用儲存體
 
-1.  **只有在主要節點上**，將資料庫檔案儲存到暫存位置。下列程式碼會建立新的暫存目錄、 將資料庫檔案複製到新的目錄中，並移除舊的資料庫檔案。 SQL Server 執行為本機使用者 mssql 時，您必須確定資料傳輸到掛接的共用之後，本機使用者會有共用的讀寫存取。 
+1.  **僅在主要節點上**，將資料庫檔案儲存至暫存位置。下列指令碼會建立新的暫存目錄、將資料庫檔案複製到新的目錄，並移除舊的資料庫檔案。 當 SQL Server 以本機使用者 mssql 的身分執行時，您必須確定在資料傳輸到裝載共用之後，本機使用者具有共用的讀寫存取權。 
 
    ``` 
    $ sudo su mssql
@@ -216,23 +216,23 @@ NFS 伺服器上執行下列作業：
    $ exit
    ``` 
 
-1.  在所有叢集節點上編輯`/etc/fstab`檔案以納入 mount 命令。  
+1.  在所有叢集節點上，編輯 `/etc/fstab` 檔案以包含掛接指令。  
 
    ```bash
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr 
    ```
    
-   下列指令碼會顯示編輯的範例。  
+   下列指令碼顯示一個編輯範例。  
 
    ``` 
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->如果使用檔案系統 (FS) 資源的建議以下，，則不需要保留在 /etc/fstab 中的掛接命令。 Pacemaker 會負責啟動 FS 叢集資源時，掛接的資料夾。 有了隔離的協助，它會確保 FS 永遠不會掛接兩次。 
+>如果此處使用建議的檔案系統 (FS) 資源，則不需要在 /etc/fstab 中保留掛接指令。 Pacemaker 會在啟動 FS 叢集資源時負責裝載資料夾。 有了隔離的協助後，就能確保 FS 永遠不會裝載兩次。 
 
-1.  執行`mount -a`系統更新的掛接的路徑的命令。  
+1.  針對系統執行 `mount -a` 命令以更新裝載的路徑。  
 
-1.  複製的資料庫和記錄檔儲存到`/var/opt/mssql/tmp`到新掛接的共用`/var/opt/mssql/data`。 這只需要進行**主要節點上**。 請確定您在與 'mssql' 的本機使用者授與讀取和寫入權限。
+1.  將您儲存至 `/var/opt/mssql/tmp` 的資料庫和記錄檔，複製到新的裝載共用 `/var/opt/mssql/data`。 這只需要**在主要節點上**完成。 請確定您將讀取寫入權限授與 'mssql' 本機使用者。
 
    ``` 
    $ sudo chown mssql /var/opt/mssql/data
@@ -243,7 +243,7 @@ NFS 伺服器上執行下列作業：
    $ exit
    ``` 
  
-1.  驗證 SQL Server 已成功開始新的檔案路徑。 每個節點上執行這項操作。 此時只有一個節點應該一次執行 SQL Server。 它們無法同時執行相同的時間因為它們將會同時嘗試存取資料檔案，同時 （若要避免不小心在這兩個節點上啟動 SQL Server，請使用檔案系統叢集資源，請確定兩次是由不同的節點未裝載共用）。 下列命令啟動 SQL Server、 檢查狀態，然後再停止 SQL Server。
+1.  驗證 SQL Server 是否使用新的檔案路徑成功啟動。 請在每個節點上執行此動作。 此時，一次只能有一個節點執行 SQL Server。 它們不能同時執行，因為它們都會同時嘗試存取資料檔案 (以避免不小心地在這兩個節點上啟動 SQL Server，請使用檔案系統叢集資源來確保共用不會由不同的節點裝載兩次)。 下列命令會啟動 SQL Server、檢查狀態，然後停止 SQL Server。
  
    ```bash
    sudo systemctl start mssql-server
@@ -251,9 +251,9 @@ NFS 伺服器上執行下列作業：
    sudo systemctl stop mssql-server
    ```
  
-此時兩個 SQL Server 執行個體被設定為執行與共用存放裝置上的資料庫檔案。 下一個步驟是設定 SQL Server 的 Pacemaker。 
+此時，SQL Server 的兩個執行個體都設定為使用共用儲存體上的資料庫檔案來執行。 下一步是針對 Pacemaker 設定 SQL Server。 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>安裝並在每個叢集節點上設定 Pacemaker
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>在每個叢集節點上安裝和設定 Pacemaker
 
 
 2. 在這兩個叢集節點上，建立檔案以儲存 SQL Server 使用者名稱和密碼，以供 Pacemaker 登入使用。 下列命令會建立並填入這個檔案：
@@ -273,10 +273,10 @@ NFS 伺服器上執行下列作業：
    sudo firewall-cmd --reload
    ```
 
-   > 如果您使用其他防火牆沒有內建的高可用性組態，下列連接埠必須開啟 pacemaker 才能與叢集中其他節點通訊
+   > 如果您使用其他防火牆，其中沒有內建的高可用性設定，您需要開啟下列連接埠，Pacemaker 才能與叢集中的其他節點通訊
    >
-   > * TCP:連接埠 2224，3121 21064
-   > * UDP:連接埠 5405
+   > * TCP：連接埠 2224、3121、21064
+   > * UDP：連接埠 5405
 
 1. 在每個節點上安裝 Pacemaker 套件。
 
@@ -310,7 +310,7 @@ NFS 伺服器上執行下列作業：
 
 ## <a name="create-the-cluster"></a>建立叢集 
 
-1. 其中一個節點上建立叢集。
+1. 在其中一個節點上建立叢集。
 
    ```bash
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
@@ -318,7 +318,7 @@ NFS 伺服器上執行下列作業：
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA 附加元件沒有針對 VMWare 和 KVM 隔離代理程式。 隔離需要停用所有其他的 hypervisor 上。 不建議在生產環境中停用隔離代理程式。 從開始時間範圍內，沒有隔離代理程式的 HyperV 或雲端環境。 如果您執行其中一個組態，您需要停用隔離。 \**在生產系統中不建議這麼做 ！* *
+   > RHEL HA 附加元件具有適用於 VMWare 和 KVM 的隔離代理程式。 隔離必須在所有其他的 Hypervisor 上停用。 不建議在生產環境中停用隔離代理程式。 截至時間範圍，HyperV 或雲端環境沒有防護代理程式。 如果您正在執行其中一項設定，則必須停用隔離。 \*這不建議用於生產系統中！* 
 
    下列命令會停用隔離代理程式。
 
@@ -327,17 +327,17 @@ NFS 伺服器上執行下列作業：
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. 設定 SQL Server、 檔案系統和虛擬 IP 資源的叢集資源，並將設定推送到叢集。 您需要下列資訊：
+2. 設定 SQL Server、檔案系統和虛擬 IP 資源的叢集資源，並將設定推送至叢集。 您需要下列資訊：
 
-   - **SQL Server Resource Name&gt**:叢集的 SQL Server 資源的名稱。 
-   - **浮動 IP 資源名稱**:虛擬 IP 位址資源名稱。
-   - **IP 位址**:用戶端將用來連接到 SQL Server 的叢集執行個體 IP 位址。 
-   - **檔案系統資源名稱**:檔案系統資源的名稱。
-   - **裝置**:NFS 共用路徑
-   - **裝置**:本機掛接的共用的路徑
-   - **fstype**:檔案共用型別 (例如 nfs)
+   - **SQL Server 資源名稱**：叢集 SQL Server 資源的名稱。 
+   - **浮動 IP 資源名稱**：虛擬 IP 位址資源的名稱。
+   - **IP 位址**：用戶端將用來連線至 SQL Server 叢集執行個體的 IP 位址。 
+   - **檔案系統資源名稱**：檔案系統資源的名稱。
+   - **裝置**：NFS 共用路徑
+   - **裝置**：裝載至共用的本機路徑
+   - **fstype**：檔案共用類型 (例如 nfs)
 
-   更新下列指令碼，為您的環境中的值。 若要設定及啟動叢集的服務的一個節點上執行。  
+   針對您的環境，更新下列指令碼中的值。 在一個節點上執行，以設定和啟動叢集服務。  
 
    ```bash
    sudo pcs cluster cib cfg 
@@ -349,7 +349,7 @@ NFS 伺服器上執行下列作業：
    sudo pcs cluster cib-push cfg
    ```
 
-   例如，下列指令碼會建立名為的 SQL Server 叢集資源`mssqlha`，以及使用 IP 位址的浮動 IP 資源`10.0.0.99`。 它也會建立檔案系統資源，並新增條件約束，因此所有的資源會共置於相同的節點，為 SQL 資源上。 
+   例如，下列指令碼會建立名為 `mssqlha` 的 SQL Server 叢集資源，以及具有 IP 位址 `10.0.0.99` 的浮動 IP 資源。 它也會建立 Filesystem 資源並新增限制式，讓所有資源都與 SQL 資源共存於相同的節點上。 
 
    ```bash
    sudo pcs cluster cib cfg
@@ -361,15 +361,15 @@ NFS 伺服器上執行下列作業：
    sudo pcs cluster cib-push cfg
    ```
 
-   將設定推送之後，SQL Server 將會啟動一個節點上。 
+   推送設定之後，SQL Server 會在一個節點上啟動。 
 
-3. 確認 SQL Server 已啟動。 
+3. 確認已啟動 SQL Server。 
 
    ```bash
    sudo pcs status 
    ```
 
-   下列範例顯示的結果，當 Pacemaker 已順利啟動 SQL Server 的叢集執行個體。 
+   下列範例會顯示 Pacemaker 已成功啟動 SQL Server 叢集執行個體時的結果。 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1
@@ -388,8 +388,8 @@ NFS 伺服器上執行下列作業：
 
 ## <a name="additional-resources"></a>其他資源
 
-* [叢集從頭](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 的指南
+* Pacemaker 的[從頭開始建立叢集](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)指南
 
 ## <a name="next-steps"></a>後續步驟
 
-[操作在 Red Hat Enterprise Linux 共用的磁碟叢集上的 SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+[在 Red Hat Enterprise Linux 共用磁碟叢集上執行 SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

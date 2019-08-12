@@ -1,7 +1,7 @@
 ---
 title: 反斜線 (行接續符號) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,14 +28,15 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cc949553b66e1bd8e8d501a40a367d23559bb96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121665"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495436"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>反斜線 (行接續符號) (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 `\` 會將長的字串常數、字元或二進位分成兩行或多行，以提高可讀性。  
@@ -57,7 +58,7 @@ ms.locfileid: "68121665"
  這是字串的接續。  
   
 ## <a name="remarks"></a>Remarks  
- 這個命令會將字串的第一個區段和接續區段當做一個字串傳回，但不含反斜線。  
+這個命令會將字串的第一個區段和接續區段當做一個字串傳回，但不含反斜線。 反斜線之後的新行必須是換行字元 (U+000A) 或是歸位字元 (U+000D) 和換行字元 (U+000A) (依照此順序) 的組合。 
 
 ## <a name="examples"></a>範例  
 
@@ -84,7 +85,7 @@ def' AS [ColumnResult];
 下列範例會使用反斜線和歸位字元，將二進位字串分成兩行。  
 
 ```  
-SELECT 0xabc\  
+SELECT 0xabc\
 def AS [ColumnResult];  
   
 ```  

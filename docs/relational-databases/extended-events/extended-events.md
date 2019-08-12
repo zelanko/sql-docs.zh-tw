@@ -1,7 +1,7 @@
 ---
 title: XEvent 概觀 - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,46 +10,52 @@ ms.topic: overview
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
+- XEvents
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abdb5eae1bb24bcedd2095a607895ffa671b7d53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01a823e288ade074b4e9ccd432c40c15e9f96f07
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021840"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495405"
 ---
 # <a name="extended-events-overview"></a>擴充事件概觀
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件具有可高度擴充及可高度設定的基礎結構，可以讓使用者視需要收集許多或部分的資訊來排除或識別效能問題。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「擴充事件」架構可讓使用者收集進行疑難排解或識別效能問題所需的資料 (盡可能多或少)。 擴充事件是可設定的，而且它會非常妥善地調整。
 
-您可以在下列位置找到延伸事件的詳細資訊：[快速入門：SQL Server 中的延伸事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)。
-
+您可以在下列位置找到「擴充事件」的詳細資訊：[快速入門：SQL Server 中的延伸事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)。
 
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件的優點  
- 「擴充事件」是一種使用極少量效能資源的一種輕量型效能監視系統。 擴充事件提供了兩個圖形化使用者介面 ([新增工作階段精靈]  和 [新增工作階段]  )，用以建立、修改、顯示及分析您的工作階段資料。  
-  
+
+「擴充事件」是一種使用小量效能資源的一種輕量型效能監視系統。 擴充事件提供兩個圖形化使用者介面，用以建立、修改、顯示及分析您的工作階段資料。 這些介面的名稱如下：
+
+- 新增工作階段精靈
+- 新增工作階段
+
 ## <a name="extended-events-concepts"></a>擴充事件概念  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件是以現有的概念為建置基礎 (例如事件或事件取用者)、使用 Windows 事件追蹤的概念，並引進新的概念。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「擴充事件」是以現有概念 (例如，事件或事件取用者) 為建置基礎、使用 Windows 事件追蹤的概念，並引進新的概念。  
   
  下表描述擴充事件的概念。  
   
 |主題|Description|  
 |-----------|-----------------|  
-|[SQL Server 擴充的事件套件](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|描述擴充事件封裝，其中包含執行擴充事件工作階段時，用來取得及處理資料的物件。|  
+|[SQL Server 擴充的事件套件](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|描述包含物件的「擴充事件」套件。 當「擴充事件」工作階段在執行時，系統會使用這些物件來取得和處理資料。|  
 |[SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|描述事件工作階段期間可以接收資料的事件取用者。|  
 |[SQL Server 擴充的事件引擎](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|描述可實作和管理擴充事件工作階段的引擎。|  
 |[SQL Server 擴充的事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|描述擴充事件工作階段。|  
+| &nbsp; | &nbsp; |
   
 ## <a name="extended-events-architecture"></a>擴充事件架構  
- 「擴充事件」是一種適用於伺服器系統的一般事件處理系統。 擴充的事件基礎結構可支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中資料的相互關聯，而在某些條件下，則可支援作業系統和資料庫應用程式中資料的相互關聯。 在後者的情況下，「擴充事件」輸出必須導向 Windows 事件追蹤 (ETW)，才能讓此事件資料與作業系統或應用程式事件資料相互關聯。  
-  
- 所有應用程式都有執行點，這些執行點在應用程式內部和外部都很實用。 在應用程式內，可以使用工作最初執行期間所收集的資訊將非同步處理加入佇列。 在應用程式外，執行點會將有關受監視之應用程式的行為和效能特性資訊提供給監視公用程式。  
-  
+
+「擴充事件」是我們對用於伺服器系統的一般事件處理系統的稱呼。 「擴充事件」基礎結構可支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料的相互關聯，而在某些條件下，則可支援作業系統和資料庫應用程式中資料的相互關聯。 在作業系統案例中，「擴充事件」輸出必須導向 Windows 事件追蹤 (ETW)。 ETW 可將事件資料與作業系統或應用程式事件資料相互關聯。  
+
+所有應用程式都有執行點，這些執行點在應用程式內部和外部都很實用。 在應用程式內，可以使用工作最初執行期間所收集的資訊將非同步處理加入佇列。 在應用程式外，執行點會提供資訊給監視公用程式。 該資訊是關於受監視應用程式的行為和效能特性。  
+
  擴充的事件可支援在處理序外使用事件資料。 這些資料通常是由以下項目所使用：  
   
 -   追蹤工具，例如 SQL 追蹤和系統監視器。  
@@ -60,13 +66,13 @@ ms.locfileid: "68021840"
   
  「擴充事件」具有下列重要的設計層面：  
   
--   「擴充事件」引擎無法得知事件。 如此可讓此引擎將任何事件繫結至任何目標，因為此引擎不受到事件內容的限制。 如需有關擴充的事件引擎的詳細資訊，請參閱＜ [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)＞。  
+-   「擴充事件」引擎無法得知事件。 此引擎可將任何事件繫結至任何目標，因為此引擎不受到事件內容限制。 如需有關擴充的事件引擎的詳細資訊，請參閱＜ [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)＞。  
   
 -   事件會與事件取用者區隔，後者在擴充的事件中稱為 *「目標」* 。 這表示，任何目標都可以接收任何事件。 此外，目標可以自動耗用任何引發的事件，這樣可以記錄或提供其他事件內容。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)＞。  
   
 -   事件與事件發生時所要採取的動作不同。 因此，任何動作都可以與任何事件產生關聯。  
   
--   述詞可以動態篩選何時應該擷取事件資料。 這樣會增加「擴充事件」基礎結構的彈性。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md)＞。  
+-   述詞可以動態篩選何時應該擷取事件資料。 動態篩選會增加「擴充事件」基礎結構的彈性。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md)＞。  
   
  擴充的事件可以同步產生事件資料 (以及非同步處理該資料)，這樣可為事件處理提供彈性的方案。 此外，擴充的事件還提供下列功能：  
   
@@ -100,18 +106,23 @@ ms.locfileid: "68021840"
 |描述如何判斷哪些查詢持有鎖定、查詢的計畫，以及取得鎖定時的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆疊。|[判斷哪些查詢持有鎖定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |描述如何識別阻礙資料庫效能的鎖定來源。|[尋找持有最多鎖定的物件](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |描述如何搭配 Windows 事件追蹤來使用擴充事件，以監視系統活動。|[使用擴充事件監視系統活動](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
-| 使用擴充事件的目錄檢視和動態管理檢視 (DMV) | [SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+|使用擴充事件的目錄檢視和動態管理檢視 (DMV) | [SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+| &nbsp; | &nbsp; |
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>適用於 Azure SQL Database 的程式碼範例可能有所不同
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="see-also"></a>另請參閱  
- [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [SQL Server 物件與版本的 DAC 支援](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
- [部署資料層應用程式](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
- [監視資料層應用程式](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
- [擴充的事件動態管理檢視](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [擴充的事件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite：跨平台程式庫，用來讀取 XEL 檔案或即時 SQL 串流中的 XEvent](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)，於 2019 年 5 月發行。   
- [Read-SQLXEvent PowerShell Cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent)，發行日期 2019 年 6 月。
+## <a name="see-also"></a>另請參閱
+
+[資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+[SQL Server 物件與版本的 DAC 支援](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[部署資料層應用程式](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
+[監視資料層應用程式](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
+&nbsp;  
+[擴充事件動態管理檢視](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)  
+[擴充事件目錄檢視 (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
+&nbsp;  
+[XELite：跨平台程式庫，用來讀取 XEL 檔案或即時 SQL 串流中的 XEvent](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)，於 2019 年 5 月發行。  
+[Read-SQLXEvent PowerShell Cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent)，發行日期 2019 年 6 月。  
+[SQL 謎團：XEvent 工作階段的原因追蹤與事件順序 (2019 年 4 月 1 日發佈於部落格)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/) \(英文\)  

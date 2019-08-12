@@ -1,6 +1,6 @@
 ---
-title: 在 Linux 上安裝 SQL Server 語言延伸模組 (Java)
-description: 在 Red Hat、 Ubuntu 與 SUSE，了解如何安裝 SQL Server 語言擴充功能 (Java)。
+title: 在 Linux 上安裝 SQL Server 語言擴充功能 (Java)
+description: 了解如何在 Red Hat、Ubuntu 和 SUSE 上安裝 SQL Server 語言擴充功能 (Java)。
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
@@ -10,42 +10,44 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
-ms.translationtype: MT
+ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834703"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476015"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安裝 SQL Server 2019 語言延伸模組 (Java)
+# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安裝 SQL Server 2019 語言擴充功能 (Java)
 
-語言擴充功能是 database engine 的附加元件。 雖然您可以[同時安裝 database engine 和語言擴充功能](#install-all)，它會安裝及設定 SQL Server database engine 第一次，以便您解決任何問題然後再加入更多元件的最佳作法。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-請遵循這篇文章，若要安裝的 Java 語言擴充功能中的步驟。
+語言擴充功能是資料庫引擎的附加元件。 雖然您可以[同時安裝資料庫引擎和語言擴充功能](#install-all)，但最佳做法是先安裝和設定 SQL Server 資料庫引擎，以便在新增更多元件之前解決任何問題。 
 
-Java 延伸模組的封裝位置是在 SQL Server Linux 來源存放庫中。 如果您已經設定資料庫引擎安裝的來源存放庫，您可以執行**mssql 伺服器擴充性-java**封裝使用相同的存放庫註冊的安裝命令。
+請遵循此文章中的步驟來安裝 Java 語言擴充功能。
 
-語言擴充功能也支援在 Linux 容器。 我們不會提供預先建置的容器具有語言擴充功能，但您可以從建立一個使用的 SQL Server 容器[可在 GitHub 上的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)。
+Java 擴充功能的套件位置在 SQL Server Linux 來源存放庫中。 如果您已經為資料庫引擎安裝設定來源存放庫，您可以使用相同的存放庫登錄來執行 **mssql-server-extensibility-java** 套件安裝命令。
 
-## <a name="uninstall-previous-ctp"></a>解除安裝先前的 CTP
+Linux 容器上也支援語言擴充功能。 我們沒有提供含語言擴充功能的預先建立容器，但您可以使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) \(英文\)，從 SQL Server 容器建立一個。
 
-套件清單已變更透過最後幾個 CTP 版本中，導致較少的封裝。 我們建議您解除安裝 CTP 2.x 安裝 CTP 3.1 之前先移除所有先前的封裝。 不支援多個版本的並存安裝。
+## <a name="uninstall-previous-ctp"></a>將先前的 CTP 解除安裝
 
-### <a name="1-confirm-package-installation"></a>1.確認封裝安裝
+套件清單已經隨最近幾個 CTP 版本變更，套件數量也因此減少。 我們建議您先將 CTP 2.x 解除安裝，以在安裝 CTP 3.2 之前移除所有先前的套件。 不支援多個版本的並存安裝。
 
-您可能想要檢查的第一個步驟中先前的安裝存在。 下列檔案表示現有的安裝： checkinstallextensibility.sh exthost、 啟動列。
+### <a name="1-confirm-package-installation"></a>1.確認套件安裝
+
+首先，建議您檢查先前的安裝是否存在。 下列檔案表示現有安裝存在：checkinstallextensibility.sh、exthost、launchpad。
 
 ```bash
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.解除安裝先前的 CTP 2.x 套件
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.將先前的 CTP 2.x 套件解除安裝
 
-解除安裝最低的套件層級。 會自動解除安裝任何相依於較低層級套件的上游套件。
+在最低套件層級解除安裝。 相依於低層級套件的任何上游套件都會自動解除安裝。
 
-  + Java 整合移除**mssql 伺服器擴充性-java**
+  + 針對 Java 整合，移除 **mssql-server-extensibility-java**
 
-移除封裝的命令會顯示下表中。
+下表中顯示移除封裝的命令。
 
 | 平台  | 套件移除命令 | 
 |-----------|----------------------------|
@@ -53,21 +55,21 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-31-install"></a>3.繼續進行 CTP 3.1 的安裝
+### <a name="3-proceed-with-ctp-32-install"></a>3.繼續進行 CTP 3.2 安裝
 
-在最高的封裝層級使用這篇文章中的指示，適用於您作業系統的安裝。
+使用此文章中適用於您作業系統的指示，在最高套件層級安裝。
 
-每個 OS 特定集的安裝指示*最高的封裝層級*是**範例 1-完整安裝**提供完整的封裝，或**範例 2-最小安裝**將最基本的可行安裝所需的套件數目。
+針對每個 OS 特定的安裝指示集，「最高套件層級」  為適用於安裝完整一組套件的**範例 1 - 完整安裝**，或適用於可行安裝所需最少套件數目的**範例 2 - 最小安裝**。
 
-1. 執行您 Linux 散發套件使用套件管理員和語法的安裝命令： 
+1. 使用適用於您 Linux 發行版本的套件管理員和語法來執行安裝命令： 
 
    + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-+ Linux 版本必須是[SQL Server 支援](sql-server-linux-release-notes-2019.md#supported-platforms)，但不包含 Docker 引擎。 支援的版本包括：
++ Linux 版本必須[受 SQL Server 支援](sql-server-linux-release-notes-2019.md#supported-platforms)，但不包含 Docker 引擎。 支援的版本包含：
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -75,32 +77,32 @@ ls /opt/microsoft/mssql/bin
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ 您應該有的工具執行 T-SQL 命令。 查詢編輯器是後續安裝組態和驗證所需的項目。 我們建議[Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux)，供免費下載，在 Linux 上執行。
++ 您應該有執行 T-SQL 命令的工具。 必須使用查詢編輯器進行安裝後設定和驗證。 我們建議 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux) \(部分機器翻譯\)，這是在 Linux 上執行的免費下載。
 
 ## <a name="package-list"></a>套件清單
 
-在連線網際網路的裝置，套件會下載並安裝獨立資料庫引擎的每個作業系統使用套件安裝程式。 下表描述所有可用的套件。
+在連線到網際網路的裝置上，系統會使用每個作業系統的套件安裝程式，獨立地下載及安裝套件。 下表描述所有可用套件。
 
-| 封裝名稱 | Applies-to | 描述 |
+| 封裝名稱 | 適用於 | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | 所有語言 | 用來執行 Java 程式碼的擴充性架構。 |
-|mssql-server-extensibility-java | Java | 載入的 Java 執行環境的 Java 延伸模組。 沒有任何額外的程式庫或適用於 Java 的封裝。 |
+|mssql-server-extensibility-java | Java | 用於載入 Java 執行環境的 Java 擴充功能。 沒有適用於 Java 的額外程式庫或套件。 |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>安裝語言擴充功能
 
-您可以安裝語言擴充功能和 Java 在 Linux 上安裝**mssql 伺服器擴充性-java**。 當您安裝**mssql 伺服器擴充性-java**，封裝會自動安裝 JRE 8，如果尚未安裝。 另外還會新增至名為 JRE_HOME 環境變數的 JVM 路徑。
+您可以藉由安裝 **mssql-server-extensibility-java**，在 Linux 上安裝語言擴充功能和 Java。 當您安裝 **mssql-server-extensibility-java** 時，套件會自動安裝 JRE 8 (如果尚未安裝)。 它也會將 JVM 路徑新增至名為 JRE_HOME 的環境變數。
 
 > [!Note]
-> 在連線網際網路的伺服器上，會下載封裝相依性，以及將其安裝主套件安裝過程中。 如果您的伺服器未連線到網際網路，請參閱中的更多詳細資料[離線安裝程式](#offline-install)。
+> 在連線到網際網路的伺服器上，套件相依性會作為主要套件安裝的一部分下載並安裝。 如果您的伺服器未連線到網際網路，請參閱[離線安裝程式](#offline-install)中的更多詳細資料。
 
 ### <a name="redhat-install-command"></a>RedHat 安裝命令
 
-您可以使用下列命令的 RedHat 上安裝適用於 Java 的語言擴充功能。
+您可以使用下列命令，在 RedHat 上安裝適用於 Java 的語言擴充功能。
 
 > [!Tip]
-> 可能的話，請執行`yum clean all`重新整理在安裝之前的系統上的封裝。
+> 可能的話，請在安裝之前執行 `yum clean all`，以重新整理系統上的套件。
 
 ```bash
 # Install as root or sudo
@@ -111,10 +113,10 @@ sudo yum install mssql-server-extensibility-java
 
 ### <a name="ubuntu-install-command"></a>Ubuntu 安裝命令
 
-您可以使用下列命令在 Ubuntu 上安裝適用於 Java 的語言擴充功能。
+您可以使用下列命令，在 Ubuntu 上安裝適用於 Java 的語言擴充功能。
 
 > [!Tip]
-> 可能的話，請執行`apt-get update`重新整理在安裝之前的系統上的封裝。 此外，某些的 docker 映像的 Ubuntu 可能沒有 https apt 的傳輸選項。 若要安裝，請使用`apt-get install apt-transport-https`。
+> 可能的話，請在安裝之前執行 `apt-get update`，以重新整理系統上的套件。 此外，某些 Ubuntu 的 Docker 映像可能沒有 HTTPS apt 傳輸選項。 若要安裝它，請使用 `apt-get install apt-transport-https`。
 
 ```bash
 # Install as root or sudo
@@ -125,42 +127,42 @@ sudo apt-get install mssql-server-extensibility-java
 
 ### <a name="suse-install-command"></a>SUSE 安裝命令
 
-您可以使用下列命令的 SUSE 上安裝適用於 Java 的語言擴充功能。
+您可以使用下列命令，在 SUSE 上安裝適用於 Java 的語言擴充功能。
 
 ```bash
 # Install as root or sudo
 sudo zypper install mssql-server-extensibility-java
 ```
 
-## <a name="post-install-config-required"></a>後續安裝組態 （必要）
+## <a name="post-install-config-required"></a>安裝後設定 (必要)
 
-1. 在 Linux 上的 授與權限
+1. 在 Linux 上授與權限
 
-    您不需要執行此步驟中，如果您使用外部程式庫。 工作的建議的方式使用外部程式庫。 從您的 jar 檔案建立外部程式庫的協助，請參閱[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
+    如果您使用的是外部程式庫，則不需要執行此步驟。 建議的運作方式是使用外部程式庫。 如需從您 Jar 檔案建立外部程式庫的說明，請參閱 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
 
-    如果您不使用外部程式庫，您需要 SQL Server 提供的 jar 中執行的 Java 類別的權限。
+    如果您不是使用外部程式庫，則必須提供 SQL Server 在您 Jar 中執行 Java 類別的權限。
 
-    若要授與讀取及執行 jar 檔案的存取權，請執行下列**chmod**命令將 jar 檔案。 我們建議您一律將類別檔案放在 jar 中，當您使用 SQL Server。 如需建立 jar 的說明，請參閱[如何建立的 jar 檔案](https://docs.microsoft.com/sql/language-extensions/how-to/create-a-java-jar-file-from-class-files)。
+    若要授與讀取和執行 Jar 檔案的權限，請在 Jar 檔案上執行下列 **chmod** 命令。 當您使用 SQL Server 時，建議您一律將類別檔案放在 Jar 中。 如需建立 Jar 的說明，請參閱[如何建立 Jar 檔案](https://docs.microsoft.com/sql/language-extensions/how-to/create-a-java-jar-file-from-class-files) \(英文\)。
 
     ```cmd
     chmod ug+rx <MyJarFile.jar>
     ```
 
-    您也需要提供 mssql_satellite 權限以讀取/執行 jar 檔案。
+    您也需要提供 Jar 檔案 mssql_satellite 權限以讀取/執行。
 
     ```cmd
     chown mssql_satellite:mssql_satellite <MyJarFile.jar>
     ```
 
-    主要透過其他設定，就[mssql-conf 工具](sql-server-linux-configure-mssql-conf.md)。
+    其他設定主要是透過 [mssql-conf 工具](sql-server-linux-configure-mssql-conf.md)來設定。
 
-2. 新增用來執行 SQL Server 服務 mssql 使用者帳戶。 如果您還沒有執行安裝程式之前，這是必要的。
+2. 新增用來執行 SQL Server 服務的 mssql 使用者帳戶。 如果您先前未執行安裝，則這是必要的。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-3. 啟用輸出網路存取。 預設會停用輸出網路存取。 若要啟用輸出要求，請設定"outboundnetworkaccess 」 使用 mssql-conf 工具的布林值屬性。 如需詳細資訊，請參閱 <<c0> [ 設定 SQL Server on Linux 使用 mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)。
+3. 啟用輸出網路存取。 預設會停用輸出網路存取。 若要啟用輸出要求，請使用 mssql-conf 工具來設定 "outboundnetworkaccess" 布林值屬性。 如需詳細資訊，請參閱[使用 mssql-conf 在 Linux 上設定 SQL Server](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)。
 
    ```bash
    # Run as SUDO or root
@@ -168,7 +170,7 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-4. 重新啟動 SQL Server Launchpad 服務和資料庫引擎執行個體讀取 INI 檔案中的更新後的值。 重新啟動訊息會提醒您每次修改擴充性相關的設定。  
+4. 重新啟動 SQL Server Launchpad 服務和資料庫引擎執行個體，以從 INI 檔案讀取更新後的值。 每當修改擴充性相關設定時，系統會顯示重新啟動訊息提醒您。  
 
    ```bash
    systemctl restart mssql-launchpadd
@@ -176,22 +178,22 @@ sudo zypper install mssql-server-extensibility-java
    systemctl restart mssql-server.service
    ```
 
-5. 啟用外部指令碼執行使用 Azure Data Studio 或 SQL Server Management Studio (僅 Windows) 等其他工具執行 Transact SQL。
+5. 使用 Azure Data Studio 或 SQL Server Management Studio (僅限 Windows) 等執行 Transact-SQL 的另一種工具，來啟用外部指令碼執行。
 
    ```bash
    EXEC sp_configure 'external scripts enabled', 1
    RECONFIGURE WITH OVERRIDE
    ```
 
-6. 重新啟動`mssql-launchpadd`服務一次。
+6. 重新啟動 `mssql-launchpadd` 服務。
 
-7. 針對您想要使用的語言擴充功能，在每個資料庫，您需要註冊的外部語言[建立外部語言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+7. 針對您要在其中使用語言擴充功能的每個資料庫，您必須使用 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) 來註冊外部語言。
 
 ## <a name="register-external-language"></a>註冊外部語言
 
-針對您想要使用的語言擴充功能，在每個資料庫，您需要註冊的外部語言[建立外部語言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+針對您要在其中使用語言擴充功能的每個資料庫，您必須使用 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) 來註冊外部語言。
 
-下列範例會將外部的語言，稱為 Java 在 Linux 上的 SQL Server 上的資料庫。
+下例範例會將稱為 Java 的外部語言新增至 Linux 上的 SQL Server 資料庫。
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
@@ -199,37 +201,37 @@ FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
 GO
 ```
 
-如需詳細資訊，請參閱 <<c0> [ 建立外部語言](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
+如需詳細資訊，請參閱 [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)。
 
 ## <a name="verify-installation"></a>確認安裝
 
-Java 功能整合不包含程式庫，但您可以執行`grep -r JRE_HOME /etc`確認建立 JAVA_HOME 環境變數。
+Java 功能整合不包含程式庫，但您可以執行 `grep -r JRE_HOME /etc` 來確認 JAVA_HOME 環境變數的建立。
 
-若要驗證安裝，請執行 T-SQL 指令碼會執行系統預存程序叫用 Java。 您必須針對這項工作的查詢工具。 Azure Data Studio 是不錯的選擇。 其他常用於工具，例如 SQL Server Management Studio 或 PowerShell 是僅限 Windows。 如果您有使用這些工具的 Windows 電腦，請使用它來連接到 database engine 的 Linux 安裝。
+若要驗證安裝，請執行 T-SQL 指令碼，以執行叫用 Java 的系統預存程序。 您將需要此工作的查詢工具。 Azure Data Studio 是不錯的選擇。 其他常用的工具，例如，SQL Server Management Studio 或 PowerShell，則只適用於 Windows。 如果您有包含這些工具的 Windows 電腦，請使用它來連線到您的 Linux 安裝資料庫引擎。
 
 <a name="install-all"></a>
 
 ## <a name="full-install-of-sql-server-and-language-extensions"></a>SQL Server 和語言擴充功能的完整安裝
 
-您可以安裝並在程序中設定 database engine 和語言擴充功能，藉由附加的 Java 套件和安裝 database engine 的命令的參數。
+藉由在安裝資料庫引擎的命令附加 Java 套件和參數，您可以在一個程序中安裝及設定資料庫引擎和語言擴充功能。
 
-1. 提供命令列，其中包含資料庫引擎，再加上語言擴充功能。
+1. 提供包含資料庫引擎以及語言擴充功能的命令列。
 
-  您可以新增到資料庫引擎的擴充性安裝的 Java。
+  您可以在資料庫引擎安裝中加入 Java 擴充性。
 
   ```bash
   sudo yum install -y mssql-server mssql-server-extensibility-java 
   ```
 
-3. 接受授權合約，並完成後續安裝組態。 使用**mssql conf**這項工作的工具。
+3. 接受授權合約，並完成安裝後設定。 使用 **mssql-conf** 工具來執行此工作。
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  將提示您接受授權合約，database engine、 選擇版本，並設定系統管理員密碼。 
+  系統會提示您接受資料庫引擎授權合約、選擇版本，以及設定系統管理員密碼。 
 
-4. 如果系統提示您這樣做，請重新啟動服務。
+4. 如果系統提示，請重新啟動服務。
 
   ```bash
   sudo systemctl restart mssql-server.service
@@ -237,43 +239,43 @@ Java 功能整合不包含程式庫，但您可以執行`grep -r JRE_HOME /etc`�
 
 ## <a name="unattended-installation"></a>自動安裝
 
-使用[自動的安裝](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended)資料庫引擎中，新增 mssql 伺服器擴充性-java 的套件。
+使用資料庫引擎的[自動安裝](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended) \(部分機器翻譯\)，新增 mssql-server-extensibility-java 的套件。
 
 <a name="offline-install"></a>
 
 
 ## <a name="offline-installation"></a>離線安裝
 
-請遵循[離線安裝](sql-server-linux-setup.md#offline)安裝套件的步驟的指示。 尋找您的下載網站，然後下載 使用下列套件清單的特定套件。
+遵循[離線安裝](sql-server-linux-setup.md#offline)指示，以取得安裝套件的步驟。 尋找您的下載網站，然後使用以下套件清單下載特定套件。
 
 > [!Tip]
-> 數個封裝管理工具提供命令，可協助您判斷封裝相依性。 使用 yum， `sudo yum deplist [package]`。 對於 Ubuntu，使用`sudo apt-get install --reinstall --download-only [package name]`後面接著`dpkg -I [package name].deb`。
+> 數個套件管理工具都提供協助您判斷套件相依性的命令。 若是 yum，請使用 `sudo yum deplist [package]`。 若是 Ubuntu，請使用 `sudo apt-get install --reinstall --download-only [package name]`，後面接著 `dpkg -I [package name].deb`。
 
 #### <a name="download-site"></a>下載網站
 
-您可以從套件下載[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有適用於 Java 的套件會與資料庫引擎套件共置。 
+您可以從 [https://packages.microsoft.com/](https://packages.microsoft.com/) 下載套件。 所有適用於 Java 的套件都與資料庫引擎套件共存。 
 
 #### <a name="redhat7-paths"></a>RedHat/7 路徑
 
 |||
 |--|----|
-| mssql/擴充性-java 套件 | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 路徑
 
 |||
 |--|----|
-| mssql/擴充性-java 套件 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>SUSE/12 路徑
 
 |||
 |--|----|
-| mssql/擴充性-java 套件 | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
 
 #### <a name="package-list"></a>套件清單
 
-根據哪些延伸模組，您想要使用、 下載所需的特定語言套件。 確切的檔名包含平台資訊的後置詞，但應該關閉，以判斷哪些檔案，以便取得下列檔案名稱。
+取決於您想要使用的擴充功能，下載適用於特定語言的必要套件。 確切的檔案名稱會在尾碼中包含平台資訊，但下面的檔案名稱應該足以讓您判斷要取得的檔案。
 
 ```
 # Core packages 
@@ -284,28 +286,28 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>在 CTP 版本中的限制
+## <a name="limitations-in-ctp-releases"></a>CTP 版本中的限制
 
-在 Linux 上的語言擴充功能和 Java 擴充性是仍在作用中的開發。 預覽版中尚未啟用下列功能。
+Linux 上的語言擴充功能和 Java 擴充性仍在開發中。 預覽版本中尚未啟用下列功能。
 
-+ 隱含的驗證目前不是在 Linux 上使用在這個階段，這表示您無法從進行中的 Java 存取資料或其他資源連接至伺服器。
++ 目前在 Linux 上無法使用隱含驗證，這表示您無法從進行中的 Java 連線回到伺服器，以存取資料或其他資源。
 
 
-### <a name="resource-governance"></a>資源控管
+### <a name="resource-governance"></a>資源管理
 
-沒有 Linux 和 Windows 的之間的同位檢查[資源控管](../t-sql/statements/create-external-resource-pool-transact-sql.md)外部資源集區，但的統計資料[sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)目前有在 Linux 上的不同單位。 單位將會在即將推出的 CTP 中對齊。
+針對外部資源集區的[資源管理](../t-sql/statements/create-external-resource-pool-transact-sql.md)，Linux 與 Windows 之間有同位，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的統計資料在 Linux 上目前有不同單位。 在即將推出的 CTP 中，單位將會保持一致。
  
-| 資料行名稱   | 描述 | 在 Linux 上的值 | 
+| 資料行名稱   | Description | Linux 上的值 | 
 |---------------|--------------|---------------|
-|peak_memory_kb | 最大資源集區使用的記憶體數量。 | 在 Linux 上，這項統計資料被來自在 CGroups 記憶體子系統，其中的值是 memory.max_usage_in_bytes |
-|write_io_count | 已重設資源管理員統計資料之後發出的 Io 寫入總數。 | 在 Linux 上，這項統計資料被來自 CGroups blkio 子系統，其中上寫入的資料列的值是 blkio.throttle.io_serviced | 
-|read_io_count | 讀取已重設資源管理員統計資料之後發出的 Io 總數。 | 在 Linux 上，這項統計資料被來自在 CGroups blkio 子系統，其中讀取的資料列的值是 blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | 累計 CPU 使用者核心時間 （毫秒） 重設資源管理員統計資料之後。 | 在 Linux 上，這項統計資料被來自在 CGroups cpuacct 子系統，其中的使用者資料列上的值是 cpuacct.stat |  
-|total_cpu_user_ms | 累計 CPU 使用者時間 （毫秒） 重設資源管理員統計資料之後。| 在 Linux 上，這項統計資料被來自 CGroups cpuacct 子系統上的系統資料列值的值所在 cpuacct.stat | 
-|active_processes_count | 要求的目前執行的外部處理序數目。| 在 Linux 上，這項統計資料被來自 GGroups pid 子系統，其中的值是 pids.current | 
+|peak_memory_kb | 用於資源集區的記憶體數量上限。 | 在 Linux 上，此統計資料是來自 CGroups 記憶體子系統，其中的值為 memory.max_usage_in_bytes |
+|write_io_count | 重設 Resource Governor 統計資料之後發出的寫入 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中寫入資料列上的值為 blkio.throttle.io_serviced | 
+|read_io_count | 重設 Resource Governor 統計資料之後發出的讀取 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中讀取資料列上的值為 blkio.throttle.io_serviced | 
+|total_cpu_kernel_ms | 重設 Resource Governor 統計資料之後的累計 CPU 使用者核心時間 (以毫秒為單位)。 | 在 Linux 上，此統計資料來自 CGroups cpuacct 子系統，其中使用者資料列上的值為 cpuacct.stat |  
+|total_cpu_user_ms | 重設 Resource Governor 統計資料之後的累計 CPU 使用者時間 (以毫秒為單位)。| 在 Linux 上，此統計資料來自 CGroups cpuacct 子系統，其中系統資料列值上的值為 cpuacct.stat | 
+|active_processes_count | 在要求當時正在執行的外部處理序數目。| 在 Linux 上，此統計資料是來自 CGroups pids 記憶體子系統，其中的值為 pids.current | 
 
 ## <a name="next-steps"></a>後續步驟
 
-Java 開發人員可以開始使用一些簡單的範例，並了解 Java 與 SQL Server 的運作方式的基本概念。 下一個步驟中，請參閱下列連結：
+Java 開發人員可以從一些簡單的範例開始，並了解 Java 如何搭配 SQL Server 使用的基本概念。 如需下一個步驟，請參閱下列連結：
 
 + [教學課程：使用 Java 的規則運算式](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

@@ -1,7 +1,7 @@
 ---
 title: -- (註解) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26bf88d13dd69ea6ac113713175d3ccfea5e1351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950237"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495476"
 ---
 # <a name="---comment-transact-sql"></a>-- (註解) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67950237"
  這是包含註解文字的字元字串。  
   
 ## <a name="remarks"></a>Remarks  
- 單行註解或巢狀註解使用兩個連字號 (--)。 新行字元會終止利用 -- 插入的註解。 註解沒有長度上限。 下表列出您可以用來註解或取消註解文字的鍵盤快速鍵。  
+單行註解或巢狀註解使用兩個連字號 ( **--** )。 使用 **--** 插入的註解會以新行終止，系統會將它指定為歸位字元 (U+000A)、換行字元 (U+000D) 或兩者的組合。 註解沒有長度上限。 下表列出您可以用來註解或取消註解文字的鍵盤快速鍵。
   
 |動作|Standard|  
 |------------|--------------|  

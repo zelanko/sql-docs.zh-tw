@@ -1,7 +1,7 @@
 ---
 title: 開始使用
 titleSuffix: SQL Server big data clusters
-description: 瞭解部署 SQL Server 2019 big data 叢集 (預覽) 的步驟和資源。
+description: 了解部署 SQL Server 2019 巨量資料叢集 (預覽) 的步驟和資源。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,62 +9,67 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 41dd39c7aa613083f8ff47824ed6238b6f3c61b9
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.openlocfilehash: 7d6d1765809092184697d0d2d67b532c31606820
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419431"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68470904"
 ---
-# <a name="get-started-with-sql-server-big-data-clusters"></a>開始使用 SQL Server big data 叢集
+# <a name="get-started-with-sql-server-big-data-clusters"></a>開始使用 SQL Server 巨量資料叢集
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文概述如何部署[SQL Server 2019 big data cluster (預覽)](big-data-cluster-overview.md)。 它的目的是要引導您瞭解這些概念, 並提供可讓您瞭解本節中其他部署文章的架構。 您的特定部署步驟會根據您的用戶端和伺服器平臺選擇而有所不同。
+此文章會提供如何部署 [SQL Server 2019 巨量資料叢集 (預覽)](big-data-cluster-overview.md) 的概觀。 它的目的是要引導您理解其概念，並提供架構以了解本節中的其他部署文章。 您特定的部署步驟會依您針對用戶端和伺服器所選擇的平台而有所不同。
 
-## <a id="tools"></a>用戶端工具
+## <a id="tools"></a> 用戶端工具
 
-Big data 叢集需要一組特定的用戶端工具。 將大型資料叢集部署至 Kubernetes 之前, 您應該安裝下列工具:
+巨量資料叢集需要一組特定的用戶端工具。 在您將巨量資料叢集部署至 Kubernetes 之前，應該先安裝下列工具：
 
-| 工具 | 描述 |
+| 工具 | Description |
 |---|---|
-| **azdata** | 部署和管理大型資料叢集。 |
-| **kubectl** | 建立和管理基礎 Kubernetes 叢集。 |
-| **Azure Data Studio** | 用於使用 big data cluster 的圖形化介面。 |
-| **SQL Server 2019 延伸模組** | 啟用 big Data cluster 功能的 Azure Data Studio 延伸模組。 |
+| **azdata** | 部署及管理巨量資料叢集。 |
+| **kubectl** | 建立及管理基礎 Kubernetes 叢集。 |
+| **Azure Data Studio** | 用來使用巨量資料叢集的圖形化介面。 |
+| **SQL Server 2019 擴充** | 能提供巨量資料叢集功能的 Azure Data Studio 擴充。 |
 
-不同的案例需要其他工具。 每篇文章都應該說明執行特定工作的必要工具。 如需工具和安裝連結的完整清單, 請參閱[安裝 SQL Server 2019 big data tools](deploy-big-data-tools.md)。
+針對不同的案例，還會需要其他工具。 每篇文章都應該會說明執行某個特定工作的必要工具。 如需工具和安裝連結的完整清單，請參閱[安裝 SQL Server 2019 巨量資料工具](deploy-big-data-tools.md)。
 
 ## <a name="kubernetes"></a>Kubernetes
 
-Big data 叢集會部署為一系列的相互關聯容器, 並在[Kubernetes](https://kubernetes.io/docs/home)中進行管理。 您可以用各種方式裝載 Kubernetes。 即使您已經有現有的 Kubernetes 環境, 您還是應該查看 big data 叢集的相關需求。
+巨量資料叢集會被部署為一系列相互關聯的容器，這些容器是在 [Kubernetes](https://kubernetes.io/docs/home) \(英文\) 中加以管理。 您可以透過數種不同方式裝載 Kubernetes。 即使您已經具有現有的 Kubernetes 環境，您還是應該檢閱適用於巨量資料叢集的相關需求。
 
-- **Azure Kubernetes Service (AKS)** :AKS 可讓您在 Azure 中部署受控 Kubernetes 叢集。 您只會管理和維護代理程式節點。 有了 AKS, 您就不需要為叢集布建自己的硬體。 您也可以輕鬆地使用 big data cluster[部署腳本](quickstart-big-data-cluster-deploy.md)來建立 AKS 叢集, 並在一個步驟中部署 big data cluster。 如需有關使用 AKS 搭配 big data 叢集的詳細資訊, 請參閱[設定 SQL Server 2019 big data cluster (預覽) 部署的 Azure Kubernetes Service](deploy-on-aks.md)。
+- **Azure Kubernetes Service (AKS)** ：AKS 可讓您在 Azure 中部署受控 Kubernetes 叢集。 您只需要管理及維護代理程式節點。 透過 AKS，您不需要自行為叢集佈建硬體。 它也可讓您輕鬆使用 [python 指令碼](quickstart-big-data-cluster-deploy.md)或[部署筆記本](deploy-notebooks.md)，以單一步驟建立 AKS 叢集並部署巨量資料叢集。 如需針對巨量資料叢集部署設定 AKS 的詳細資訊，請參閱[設定適用於 SQL Server 2019 巨量資料叢集 (預覽) 部署的 Azure Kubernetes Service](deploy-on-aks.md)。
 
-- **多部電腦**:您也可以將 Kubernetes 部署到多部 Linux 電腦, 也就是實體伺服器或虛擬機器。 [Kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)工具可以用來建立 Kubernetes 叢集。 如果您已經有想要用於 big data 叢集的現有基礎結構, 這個方法會很有作用。 如需有關使用**kubeadm**部署與大型資料叢集的詳細資訊, 請參閱[在多部電腦上設定 Kubernetes, 以進行 SQL Server 2019 big data cluster (預覽) 部署](deploy-with-kubeadm.md)。
+- **多部電腦**：您也可以將 Kubernetes 部署至多部 Linux 電腦，其可為實體伺服器或虛擬機器。 [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) \(英文\) 工具可以用來建立 Kubernetes 叢集。 您可以使用 [bash 指令碼](deployment-script-single-node-kubeadm.md)來將此類型的部署自動化。 此方法很適合用於您已經具有要用於巨量資料叢集之現有基礎結構的情況。 如需搭配巨量資料叢集使用 **kubeadm**部署的詳細資訊，請參閱[針對 SQL Server 2019 巨量資料叢集 (預覽) 部署在多部電腦上設定 Kubernetes](deploy-with-kubeadm.md)。
 
-- **Minikube**:Minikube 可讓您在單一伺服器上本機執行 Kubernetes。 如果您想要嘗試海量資料叢集, 或需要在測試或開發案例中使用它, 這是個不錯的選項。 如需有關使用 Minikube 的詳細資訊, 請參閱[Minikube 檔](https://kubernetes.io/docs/setup/minikube/)。 如需使用 Minikube 搭配 big data 叢集的特定需求, 請參閱[Configure Minikube for SQL Server 2019 big data cluster 部署](deploy-on-minikube.md)。
+- **Minikube**：Minikube 可讓您在單一伺服器上於本機執行 Kubernetes。 它很適合在您只是要試用巨量資料叢集，或是需要將它用於測試或部署案例時使用。 如需使用 Minikube 的詳細資訊，請參閱 [Minikube 文件](https://kubernetes.io/docs/setup/minikube/) \(英文\)。 如需搭配巨量資料叢集使用 Minikube 的特定需求，請參閱[針對 SQL Server 2019 巨量資料叢集部署設定 Minikube](deploy-on-minikube.md)。
 
 ## <a name="deploy-a-big-data-cluster"></a>部署巨量資料叢集
 
-設定 Kubernetes 之後, 您可以使用`azdata bdc create`命令來部署 big data cluster。 部署時, 您可以採用數種不同的方法。
+在設定 Kubernetes 之後，您會使用 `azdata bdc create` 命令來部署巨量資料叢集。 部署時，您可以採取數種不同的方式。
 
-- 如果您要部署至開發/測試環境, 您可以選擇使用**azdata**所提供的其中一個[預設](deployment-guidance.md#deploy)設定。
+- 如果您是要部署至開發-測試環境，您可以選擇使用由 **azdata** 所提供的其中一個[預設設定](deployment-guidance.md#deploy)。
 
-- 若要自訂您的部署, 您可以建立並使用您自己的[部署設定檔](deployment-guidance.md#configfile)。
+- 若要自訂部署，您可以建立並使用自己的[部署設定檔](deployment-guidance.md#configfile)。
 
-- 如需完全自動安裝, 您可以在環境變數中傳遞所有其他設定。 如需詳細資訊, 請參閱自動[部署](deployment-guidance.md#unattended)。
+- 若要進行完全自動安裝，您可以透過環境變數傳遞所有其他設定。 如需詳細資訊，請參閱[自動部署](deployment-guidance.md#unattended)。
 
 ## <a name="deployment-scripts"></a>部署指令碼
 
-部署腳本可協助您在單一步驟中部署 Kubernetes 和 big data 叢集。 它們通常也會提供 big data cluster 設定的預設值。 如需 Azure Kubernetes Service (AKS) 上的大型資料叢集部署腳本範例, 請參閱下列文章:
+部署指令碼可以協助以單一步驟同時部署 Kubernetes 和巨量資料叢集。 它們通常也會提供適用於巨量資料叢集設定的預設值。 您可以透過自行建立會以不同方式設定巨量資料叢集部署的版本，來自訂任何部署指令碼。
 
-[使用部署腳本部署 SQL Server 2019 big data 叢集 (AKS)](quickstart-big-data-cluster-deploy.md)。
+目前提供下列部署指令碼：
 
-您可以建立自己的版本, 以不同方式設定 big data 叢集環境變數, 以自訂任何部署腳本。
+- [Python 指令碼 -- 在 Azure Kubernetes Service (AKS) 上部署巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+- [Bash 指令碼 -- 將巨量資料叢集部署至單一節點 kubeadm 叢集](deployment-script-single-node-kubeadm.md)
 
-[使用 Azure Data Studio 筆記本部署 SQL Server 2019 big data](deploy-notebooks.md)叢集。
+## <a name="deployment-notebooks"></a>部署筆記本
+
+您也可以透過執行 Azure Data Studio 筆記本來部署巨量資料叢集。 如需如何在 AKS 上使用筆記本進行部署的詳細資訊，請參閱下列文章：
+
+- [使用 Azure Data Studio 筆記本部署 SQL Server 巨量資料叢集](deploy-notebooks.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
-在您成功部署 big data 叢集之後, 請[連接到](connect-to-big-data-cluster.md)叢集, 並考慮[載入範例資料](tutorial-load-sample-data.md)以用於數個逐步解說。
+在您成功部署巨量資料叢集之後，請[連線至叢集](connect-to-big-data-cluster.md)並考慮[載入範例資料](tutorial-load-sample-data.md)來搭配數個逐步解說使用。
