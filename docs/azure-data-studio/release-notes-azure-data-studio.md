@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959380"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731055"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -137,7 +137,7 @@ ms.locfileid: "67959380"
 **因應措施：** 將在下一版中修正。 
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458) \(英文\)：如果使用了不正確的版本，Dacpac 解壓縮就會損毀 SqlToolsService <br/>
 **因應措施：** 重新啟動 Azure Data Studio，並確定使用的是正確的版本。
-- [新增筆記本] 和 [開啟筆記本] 圖示均遺失 <br/> 
+- [新增筆記本] 和 [開啟筆記本] 圖示均遺失 <br/>
 **因應措施：** 舊版連線類型已被取代。 建議連線到 SQL Server 端點，而您將如預期般取得所有動作 (新增筆記本、Spark 作業)。 
 
 ## <a name="february-2019"></a>2019 年 2 月

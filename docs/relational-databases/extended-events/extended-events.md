@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01a823e288ade074b4e9ccd432c40c15e9f96f07
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495405"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941131"
 ---
 # <a name="extended-events-overview"></a>擴充事件概觀
 
@@ -52,7 +52,7 @@ ms.locfileid: "68495405"
   
 ## <a name="extended-events-architecture"></a>擴充事件架構  
 
-「擴充事件」是我們對用於伺服器系統的一般事件處理系統的稱呼。 「擴充事件」基礎結構可支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料的相互關聯，而在某些條件下，則可支援作業系統和資料庫應用程式中資料的相互關聯。 在作業系統案例中，「擴充事件」輸出必須導向 Windows 事件追蹤 (ETW)。 ETW 可將事件資料與作業系統或應用程式事件資料相互關聯。  
+「擴充事件」是我們對用於伺服器系統的一般事件處理系統的稱呼。 擴充的事件基礎結構可支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中資料的相互關聯，而在某些條件下，則可支援作業系統和資料庫應用程式中資料的相互關聯。 在作業系統案例中，「擴充事件」輸出必須導向 Windows 事件追蹤 (ETW)。 ETW 可將事件資料與作業系統或應用程式事件資料相互關聯。  
 
 所有應用程式都有執行點，這些執行點在應用程式內部和外部都很實用。 在應用程式內，可以使用工作最初執行期間所收集的資訊將非同步處理加入佇列。 在應用程式外，執行點會提供資訊給監視公用程式。 該資訊是關於受監視應用程式的行為和效能特性。  
 

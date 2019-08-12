@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed777391af3695da69e04c0e2693cff912c76771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426288"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894029"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -57,7 +57,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--force -f`
 強制覆寫目標檔案。
 #### `--accept-eula -a`
-您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://aka.ms/azdata-eula 檢視。
+您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -92,7 +92,7 @@ azdata bdc config list --config-profile aks-dev-test
 您想要的設定類型。
 `cluster`
 #### `--accept-eula -a`
-您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://aka.ms/azdata-eula 檢視。
+您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。

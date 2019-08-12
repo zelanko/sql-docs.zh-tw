@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272249b7bd6c22895b7d10e7fbce4a20cb647a49
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419476"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841556"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>監視 SQL Server 巨量資料叢集並進行疑難排解
 
@@ -69,7 +69,7 @@ storage-0-1       7/7     Running   0          110m
 ```
 
 > [!NOTE]
-> 在部署期間，[狀態]  為 **ContainerCreating** 的 Pod 仍會上線。 如果部署因任何原因而停止回應，這可能會讓您了解問題所在。 另請查看 [就緒]  資料行。 這會告訴您已在 Pod 中啟動多少容器。 請注意，部署可能需要 30 分鐘或更久的時間，視您的設定和網路而定。 在這段時間內，大部分會花在下載不同元件的容器映像。
+> 在部署期間，[狀態] 為 **ContainerCreating** 的 Pod 仍會上線。 如果部署因任何原因而停止回應，這可能會讓您了解問題所在。 另請查看 [就緒] 資料行。 這會告訴您已在 Pod 中啟動多少容器。 請注意，部署可能需要 30 分鐘或更久的時間，視您的設定和網路而定。 在這段時間內，大部分會花在下載不同元件的容器映像。
 
 ## <a name="get-pod-details"></a>取得 Pod 詳細資料
 
@@ -92,7 +92,7 @@ kubectl describe pod  master-0 -n mssql-cluster
 您可以取出在 Pod 中執行之容器的記錄。 下列命令會取出在 Pod `master-0` 中執行之所有容器的記錄，並將其以檔案名稱 `master-0-pod-logs.txt` 輸出：
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> 取得服務的狀態
@@ -111,7 +111,7 @@ kubectl get svc -n mssql-cluster
 
 下列服務支援對巨量資料叢集的外部連線：
 
-| 服務 | Description |
+| 服務 | 描述 |
 |---|---|
 | **master-svc-external** | 提供主要執行個體的存取權。<br/>(**EXTERNAL-IP,31433** 和 **SA** 使用者) |
 | **controller-svc-external** | 支援管理叢集的工具和用戶端。 |
@@ -133,36 +133,6 @@ kubectl describe service <service_name> -n <namespace_name>
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## <a name="run-commands-in-a-container"></a>在容器中執行命令
-
-如果現有工具或基礎結構無法讓您在未實際位於容器內容中的情況下執行特定工作，則可以使用 `kubectl exec` 命令來登入容器。 例如，您可能需要檢查特定檔案是否存在，或者您可能需要重新啟動容器中的服務。 
-
-若要使用 `kubectl exec` 命令，請使用下列語法：
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-下列兩節提供兩個範例，說明如何在特定容器中執行命令。
-
-### <a id="restartsql"></a> 登入特定容器，然後重新啟動 SQL Server 處理序
-
-下列範例示範如何在 `master-0` Pod 的 `mssql-server` 容器中重新啟動 SQL Server 處理序：
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> 登入特定容器，然後重新啟動容器中的服務
- 
-下列範例顯示如何重新啟動 **supervisord** 所管理的所有服務： 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> 複製檔案
