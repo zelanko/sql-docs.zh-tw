@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4ec4877b7433554ad1f2ef60fdb73ab485cbed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043197"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661220"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -149,13 +149,13 @@ SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中
 - 搭配啟用記憶體保護區的 CEK 使用隨機加密來加密資料行，可能會外洩儲存在資料行中資料的順序，因為這類資料行支援範圍比較。 例如，若包含員工薪資的加密資料行中具備索引，惡意 VBA 便可以掃描索引來尋找最大的加密薪資值，並識別薪資最高的人員 (假設人員的名稱未加密的話)。 
 - 若您使用 Always Encrypted 來保護敏感性資料，使其不受未獲授權的 DBA 存取，請不要與 DBA 共用資料行主要金鑰或資料行加密金鑰。 DBA 可以透過利用記憶體保護區內的資料行加密金鑰快取，在無須直接存取金鑰的情況下管理加密資料行上的索引。
 
-## <a name="considerations-for-alwayson-and-database-migration"></a>AlwaysOn 和資料庫移轉的考量事項
+## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> 可用性群組和資料庫移轉的考量事項
 
-設定支援使用記憶體保護區進行查詢所需要的 AlwaysOn 可用性群組時，您需要確保所有裝載可用性群組中資料庫的 SQL Server 執行個體都支援使用安全記憶體保護區的 Always Encrypted 功能，並都已設定記憶體保護區。 若主要資料庫支援記憶體保護區，但次要複本不支援，任何嘗試搭配安全記憶體保護區使用 Always Encrypted 功能的查詢都會失敗。
+設定支援使用記憶體保護區進行查詢所需要的 Always On 可用性群組時，您需要確保所有裝載可用性群組中資料庫的 SQL Server 執行個體都支援使用安全記憶體保護區的 Always Encrypted 功能，並已設定記憶體保護區。 若主要資料庫支援記憶體保護區，但次要複本不支援，任何嘗試搭配安全記憶體保護區使用 Always Encrypted 功能的查詢都會失敗。
 
-當您還原搭配安全記憶體保護區使用 Always Encrypted 功能的資料庫備份檔案，而該 SQL Server 執行個體並未設定記憶體保護區時，還原作業將會成功，並且所有不依賴記憶體保護區的功能都會開放使用。 但是，後續任何使用記憶體保護區功能的查詢都會失敗，且使用隨機加密啟用記憶體保護區資料行上的索引都會失效。  相同的情況也會在您將搭配安全記憶體保護區使用 Always Encrypted 的資料庫附加到並未設定記憶體保護區的執行個體上發生。
+當您還原搭配安全記憶體保護區使用 Always Encrypted 功能的資料庫備份檔案，而該 SQL Server 執行個體並未設定記憶體保護區時，還原作業將會成功，並且所有不依賴記憶體保護區的功能都會開放使用。 但是，後續任何使用記憶體保護區功能的查詢都會失敗，且使用隨機加密啟用記憶體保護區資料行上的索引都會失效。 相同的情況也會在您將搭配安全記憶體保護區使用 Always Encrypted 的資料庫附加到並未設定記憶體保護區的執行個體上發生。
 
-若您的資料庫包含使用隨機加密啟用記憶體保護區資料行上的索引，請務必在資料庫中先啟用[高速資料庫復原 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，再建立資料庫備份。 ADR 將會確保資料庫 (包含索引) 在還原資料庫後立即開放使用。 如需詳細資訊，請參閱[資料庫復原](#database-recovery)。
+若您資料庫包含使用隨機加密啟用記憶體保護區資料行上的索引，請務必在資料庫中先啟用[高速資料庫復原 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，再建立資料庫備份。 ADR 將會確保資料庫 (包含索引) 在還原資料庫後立即開放使用。 如需詳細資訊，請參閱[資料庫復原](#database-recovery)。
 
 當您使用 bacpac 檔案遷移資料庫時，您需要確保在建立 bacpac 檔案前，您已卸除所有使用隨機加密啟用索引記憶體保護區的資料行。
 

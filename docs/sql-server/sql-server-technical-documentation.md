@@ -1,6 +1,6 @@
 ---
 title: SQL Server 文件集 | Microsoft Docs
-ms.date: 08/12/2018
+ms.date: 08/02/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d925fcbdb80ada3426b42d4dcb413937f4d3953
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 824036a79897302411ec1a7026351832269511b3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136335"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771597"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
 
@@ -109,7 +109,7 @@ SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#prev
 |||
 |-|-|
 |![SQL 資料庫引擎](../sql-server/media/sql-database-engine.png "SQL 資料庫引擎")|**[Database Engine](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> Database Engine 是用於儲存、處理和保護資料的核心服務。 它提供受控制的存取和快速交易處理，可滿足您企業內部最嚴苛的資料取用應用程式需求。 Database Engine 還提供豐富的支援以維持高可用性。|
-|![R Server](../sql-server/media/r-server.png "R Server")|**[機器學習服務](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft Machine Learning 服務支援將機器學習 (使用受歡迎的 R 和 Python 語言) 整合到企業的工作流程。<br /><br /> Machine Learning 服務 (資料庫內) 將 R 和 Python 與 SQL Server 整合，藉由呼叫預存程序，以輕鬆建立、重新定型模型，以及為模型評分。  Microsoft Machine Learning 伺服器提供企業規模的 R 和 Python 支援，而不需要 SQL Server。|
+|![機器學習服務](../sql-server/media/r-server.png "R 伺服器")|**[機器學習服務](../advanced-analytics/index.yml)**<br /><br /> 機器學習服務可讓您使用關聯式資料來執行 Python 和 R 指令碼。 您可以使用開放原始碼和 Microsoft 套件來進行預測性分析和機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是一個平台，用於建立高效能資料整合方案，包括提供資料倉儲之擷取、轉換和載入 (ETL) 處理的封裝。|
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] 是一套適用於個人、團隊和企業商業智慧的分析資料平台與工具組。 伺服器和用戶端設計工具支援傳統的 OLAP 方案、新的表格式模型方案，以及使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel 和 SharePoint Server 環境的自助式分析與共同作業。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 也包含資料採礦，讓您能夠發現隱藏在大量資料內部的模式和關聯性。|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services 提供啟用 Web 的企業級報告功能。  您可以建立從各種資料來源取得內容的報表、以各種格式發行報表，以及集中管理安全性和訂閱。|

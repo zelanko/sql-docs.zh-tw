@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a13421707f332ee992d07daa4e9bd337996a7dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136391"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68693193"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 
@@ -32,14 +32,24 @@ ms.locfileid: "68136391"
 
 ## <a id="githubui"></a> 在瀏覽器中編輯
 
-您可以在瀏覽器中對 SQL Server 內容進行簡單的編輯，再提交到 Microsoft。 [Microsoft Docs 參與者指南概觀](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)一文記載了完整程序。 下列影片示範在瀏覽器中提交變更的端對端程序：
+您可以在瀏覽器中對 SQL Server 內容進行簡單的編輯，再提交到 Microsoft。 如需詳細資訊，您可以查看 [Microsoft Docs 參與者指南概觀](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)。 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
+下列步驟會摘要說明流程： 
 
-> [!TIP]
-> 請注意，[編輯]  按鈕的位置與影片中顯示的位置會稍有不同，但程序相同。
->
-> ![[編輯] 按鈕](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. 在您想提供意見反應的頁面上，選取位於右上角的 [編輯]  連結。
+1. 在下一個頁面上，選取位於右上角的**鉛筆**圖示。
+1. 在下一個頁面上，於 [編輯檔案]  文字視窗中，直接對您想要變更的文字進行編輯。
+    若您需要格式化新文字或變更後文字的協助，請參閱 [Markdown 速查表](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)。
+1. 在您進行編輯後，請在 [認可變更]  下方：
+    1. 在第一個文字方塊中，輸入您所進行變更的簡短描述。
+    1. 在 [新增選擇性延伸描述]  方塊中，提供您變更的簡短描述。
+1. 選取 [建議檔案變更]  。
+1. 在 [比較變更]  頁面上，選取 [建立提取要求]  。 
+1. 在 [開啟提取要求]  頁面上，選取 [建立提取要求]  。 
+
+下列 GIF 會示範在您瀏覽器中提交變更的端對端過程：
+
+![編輯 SQL 文件](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a> 使用工具以在本機編輯
 

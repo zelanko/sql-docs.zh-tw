@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 969012ebc2cb804fe67cfb04810d653eb8041f52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: db0ec64180e5bb27cc69643c9847812574ccf8fd
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073496"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769779"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>設定對交易式發行項之資料變更的傳播方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，針對 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中交易式發行項的資料變更設定傳播方法。  
   
  根據預設，異動複寫會針對各發行項使用一組預存程序將變更傳遞至「訂閱者」。 您也可以使用自訂程序取代這些程序。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
@@ -87,13 +88,13 @@ ms.locfileid: "68073496"
   
 #### <a name="to-create-an-article-that-uses-transact-sql-commands-to-propagate-data-changes"></a>建立使用 Transact-SQL 命令的發行項來傳播資料變更  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱、針對 **@article** 指定發行項名稱、針對 **@source_object** 指定發行的資料庫物件，以及至少針對下列其中一個參數指定 **SQL** 的值：  
+1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **\@publication** 指定發行項所屬的發行集名稱、針對 **\@article** 指定發行項名稱、針對 **\@source_object** 指定發佈的資料庫物件，以及至少針對下列其中一個參數指定 **SQL** 的值：  
   
-    -   **@ins_cmd** - 控制 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 命令的複寫。  
+    -   **\@ins_cmd** - 控制 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 命令的複寫。  
   
-    -   **@upd_cmd** - 控制 [UPDATE](../../../t-sql/queries/update-transact-sql.md) 命令的複寫。  
+    -   **\@upd_cmd** - 控制 [UPDATE](../../../t-sql/queries/update-transact-sql.md) 命令的複寫。  
   
-    -   **@del_cmd** - 控制 [DELETE](../../../t-sql/statements/delete-transact-sql.md) 命令的複寫。  
+    -   **\@del_cmd** - 控制 [DELETE](../../../t-sql/statements/delete-transact-sql.md) 命令的複寫。  
   
     > [!NOTE]  
     >  當針對以上任何參數指定 **SQL** 的值時，該類型的命令將會以適當的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 命令形式複寫到訂閱者。  
@@ -102,13 +103,13 @@ ms.locfileid: "68073496"
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>建立不會傳播資料變更的發行項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱、針對 **@article** 指定發行項名稱、針對 **@source_object** 指定發行的資料庫物件，以及至少針對下列其中一個參數指定 **NONE** 的值：  
+1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **\@publication** 指定發行項所屬的發行集名稱、針對 **\@article** 指定發行項名稱、針對 **\@source_object** 指定發佈的資料庫物件，以及至少針對下列其中一個參數指定 **NONE** 的值：  
   
-    -   **@ins_cmd** - 控制 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 命令的複寫。  
+    -   **\@ins_cmd** - 控制 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 命令的複寫。  
   
-    -   **@upd_cmd** - 控制 [UPDATE](../../../t-sql/queries/update-transact-sql.md) 命令的複寫。  
+    -   **\@upd_cmd** - 控制 [UPDATE](../../../t-sql/queries/update-transact-sql.md) 命令的複寫。  
   
-    -   **@del_cmd** - 控制 [DELETE](../../../t-sql/statements/delete-transact-sql.md) 命令的複寫。  
+    -   **\@del_cmd** - 控制 [DELETE](../../../t-sql/statements/delete-transact-sql.md) 命令的複寫。  
   
     > [!NOTE]  
     >  當針對以上任何參數指定 **NONE** 的值時，該類型的命令將不會複寫到訂閱者。  
@@ -117,13 +118,13 @@ ms.locfileid: "68073496"
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>使用使用者修改的自訂預存程序建立發行項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱、針對 **@article** 指定發行項名稱、針對 **@source_object** 指定發行的資料庫物件、針對包含 **@schema_option** 值 (可自動產生自訂預存程序) 的 **@schema_option** 位元遮罩指定一個值，以及至少指定下列其中一個參數：  
+1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **\@publication** 指定發行項所屬的發行集名稱、針對 **\@article** 指定發行項名稱、針對 **\@source_object** 指定發佈的資料庫物件、針對包含 **0x02** 值 (可自動產生自訂預存程序) 的 **\@schema_option** 位元遮罩指定一個值，以及至少指定下列其中一個參數：  
   
-    -   **@ins_cmd** - 指定 **CALL sp_MSins_* article_name*** 值，其中 ***article_name*** 是針對 **@article** 指定的值。  
+    -   **\@ins_cmd** - 指定 **CALL sp_MSins_* article_name*** 的值，其中 ***article_name*** 是針對 **\@article** 指定的值。  
   
-    -   **@del_cmd** - 指定 **CALL sp_MSdel_*article_name*** 或 **XCALL sp_MSdel_* article_name*** 的值，其中 ***article_name*** 是針對 **@article** 指定的值。  
+    -   **\@del_cmd** - 指定 **CALL sp_MSdel_*article_name** 或 **XCALL sp_MSdel_* article_name*** 的值，其中 ***article_name*** 是針對 **\@article** 指定的值。  
   
-    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name*** 或 **MCALL sp_MSupd_* article_name*** 的值，其中 ***article_name*** 是針對 **@article** 指定的值。  
+    -   **\@upd_cmd** - 指定 **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name*** 或 **MCALL sp_MSupd_* article_name*** 的值，其中 ***article_name*** 是針對 **\@article** 指定的值。  
   
     > [!NOTE]  
     >  您可以針對上述的每一個命令參數，為複寫產生的預存程序指定您自己的名稱。  
@@ -137,13 +138,13 @@ ms.locfileid: "68073496"
   
 #### <a name="to-create-an-article-with-custom-scripting-in-the-custom-stored-procedures-to-propagate-data-changes"></a>使用自訂預存程序中的自訂指令碼建立發行項，以傳播資料變更  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱、針對 **@article** 指定發行項名稱、針對 **@source_object** 指定發行的資料庫物件、針對包含 **@schema_option** 值 (可自動產生自訂預存程序) 的 **@schema_option** 位元遮罩指定一個值，以及至少指定下列其中一個參數：  
+1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **\@publication** 指定發行項所屬的發行集名稱、針對 **\@article** 指定發行項名稱、針對 **\@source_object** 指定發佈的資料庫物件、針對包含 **0x02** 值 (可自動產生自訂預存程序) 的 **\@schema_option** 位元遮罩指定一個值，以及至少指定下列其中一個參數：  
   
-    -   **@ins_cmd** - 指定 **CALL sp_MSins_* article_name*** 值，其中 ***article_name*** 是針對 **@article** 指定的值。  
+    -   **\@ins_cmd** - 指定 **CALL sp_MSins_* article_name*** 的值，其中 ***article_name*** 是針對 **\@article** 指定的值。  
   
-    -   **@del_cmd** - 指定 **CALL sp_MSdel_*article_name*** 或 **XCALL sp_MSdel_* article_name*** 的值，其中 ***article_name*** 是針對 **@article** 指定的值。  
+    -   **\@del_cmd** - 指定 **CALL sp_MSdel_*article_name** 或 **XCALL sp_MSdel_* article_name*** 的值，其中 ***article_name*** 是針對 **\@article** 指定的值。  
   
-    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** 的值，其中 ***article_name*** 是針對 **@article** 指定的值。  
+    -   **\@upd_cmd** - 指定 **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** 的值，其中 ***article_name*** 是針對 **\@article** 指定的值。  
   
     > [!NOTE]  
     >  您可以針對上述的每一個命令參數，為複寫產生的預存程序指定您自己的名稱。  
@@ -157,7 +158,7 @@ ms.locfileid: "68073496"
   
 #### <a name="to-change-the-method-of-propagating-changes-for-an-existing-article"></a>變更傳播現有發行項之變更的方法  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 指定 **@publication** 、[UPDATE 傳遞格式] **@article** ，並針對 **@property**、[UPDATE 傳遞格式] **ins_cmd**或 [DELETE 傳遞格式] **upd_cmd** 、或 **@property** 的值，以及針對 **@value** 中交易式發行項的資料變更設定傳播方法。  
+1.  在發行集資料庫的發行者上，執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 指定 **\@publication**、 **\@article**，並針對 **\@property** 指定 **ins_cmd**、**upd_cmd**、或 **del_cmd** 的值，以及針對 **\@value** 指定適當的傳播方法。  
   
 2.  針對要變更的每一個傳播方法重複步驟 1。  
   

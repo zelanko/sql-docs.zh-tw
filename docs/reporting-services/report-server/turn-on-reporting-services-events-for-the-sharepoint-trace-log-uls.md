@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580942"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893247"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |共用服務|範例項目：<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting 對內容資料庫的存取。<br /><br /> ReportingWebServiceApplication 的 MediumProvisioning 執行個體<br /><br /> ReportingWebServiceApplication 的 MediumProcessing 服務帳戶變更<br /><br /> MediumSetting 資料庫權限。|  
   
 ##  <a name="bkmk_powershell"></a> 利用 PowerShell 檢視記錄檔  
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")您可以使用 PowerShell 從 ULS 記錄檔傳回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關事件的清單。 從 SharePoint 2010 管理命令介面鍵入下列命令，從包含 "**sql server reporting services**" 的 ULS 記錄檔 UESQL11SPOINT-20110606-1530.log 傳回已篩選資料列清單：  
+ ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")您可以使用 PowerShell 從 ULS 記錄檔傳回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關事件的清單。 從 SharePoint 2010 管理命令介面鍵入下列命令，從包含 "**sql server reporting services**" 的 ULS 記錄檔 UESQL11SPOINT-20110606-1530.log 傳回已篩選資料列清單：  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

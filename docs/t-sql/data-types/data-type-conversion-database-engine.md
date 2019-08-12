@@ -21,12 +21,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c129998db40a64507b119b8392abcb56cc119a8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001683"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697497"
 ---
 # <a name="data-type-conversion-database-engine"></a>資料類型轉換 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,8 +57,44 @@ CAST ( $157.27 AS VARCHAR(10) )
 下圖顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統提供之資料類型所能使用的所有明確與隱含資料類型轉換。 這些包括 **xml**、**bigint** 和 **sql_variant**。 從 **sql_variant** 資料類型進行指派時，不可使用隱含轉換，但可以隱含轉換成 **sql_variant**。
   
 ![資料類型轉換表](../../t-sql/data-types/media/lrdatahd.png "資料類型轉換表")
-  
+
+雖然上圖顯示了 SQL Server 中允許的所有明確及隱含轉換，但是它並未指出轉換的結果資料類型。 當 SQL Server 執行明確轉換時，陳述式本身便會判斷結果的資料類型。 針對隱含轉換，指派陳述式 (例如設定變數值或將值插入資料行) 會產生變數宣告或資料行定義所定義的資料類型。 針對比較運算子或其他運算式，結果資料類型會取決於資料類型優先順序的規則。
+
+例如，下列指令碼會定義 `varchar` 類型的變數、將 `int` 類型的值指派給變數，然後使用字串選取變數的串連。
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.'
+```
+
+`int` 值 `1` 會轉換成 `varchar`，因此 `SELECT` 陳述式會傳回 `1 is a string.` 值。
+
+下列範例會顯示相似的指令碼，但是會改用 `int` 變數：
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.'
+```
+
+在此情況下，`SELECT` 陳述式會擲回下列錯誤：
+
+`Msg 245, Level 16, State 1, Line 3`
+`Conversion failed when converting the varchar value ' is not a string.' to data type int.`
+
+為了評估運算式 `@notastring + ' is not a string.'`，SQL Server 會遵循資料類型優先順序規則，在計算運算式的結果前完成隱含轉換。 因為 `int` 具有比 `varchar` 更高的優先順序，所以 SQL Server 會嘗試將字串轉換成整數，但由於此字串無法轉換成整數，因此會失敗。 若運算式提供可進行轉換的字串，則陳述式會成功，如下列範例所示：
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+在此情況下，字串 `1` 便可轉換成整數值 `1`，因此此 `SELECT` 陳述式即會傳回 `2` 的值。 請注意，在提供的資料類型為整數時，`+` 運算子會變成加法，而非串連。
+
 ## <a name="data-type-conversion-behaviors"></a>資料類型轉換行為
+
 當您要將某 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件的資料類型轉換成其他資料類型時，有部分隱含與明確資料類型的轉換不受支援。 例如，**nchar** 值無法轉換成 **image** 值。 您只可使用明確轉換將 **nchar** 轉換成 **binary**；系統並不支援隱含轉換成 **binary**。 但 **nchar** 可以明確或隱含轉換成 **nvarchar**。
   
 下列主題說明其對應資料類型所表現的轉換行為：

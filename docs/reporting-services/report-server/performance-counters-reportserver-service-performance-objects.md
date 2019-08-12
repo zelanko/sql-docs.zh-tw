@@ -11,12 +11,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: aac7ce5685f4f70b98028d481f2da2bf630e3cb0
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412642"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893444"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>效能計數器 - ReportServer Service 效能物件
   本主題說明 **ReportServer:Service** 和 **ReportServerSharePoint:Service** 效能物件的效能計數器，這些效能物件是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 部署的一部分。  
@@ -43,7 +43,7 @@ ms.locfileid: "67412642"
   
  下表將列出 **ReportServer:Service** 效能物件所包含的計數器。  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 以下 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單。  
+ ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 以下 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單。  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -76,7 +76,7 @@ ms.locfileid: "67412642"
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint 模式報表伺服器)  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中已加入 **ReportServerSharePoint:Service** 效能物件。  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 以下 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單。  
+ ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 以下 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單。  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -89,7 +89,7 @@ ms.locfileid: "67412642"
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell 指令程式傳回清單  
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName "ReportServerSharePoint:Service" 的效能計數器清單：  
+ ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName "ReportServerSharePoint:Service" 的效能計數器清單：  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  

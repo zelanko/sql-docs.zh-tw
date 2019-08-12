@@ -10,15 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df3f1e188593e3e193faed98b7932a3dffa1adde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005362"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769663"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   作為快照集和異動複寫訂閱者的資料表 (不包括點對點異動複寫) 可以設定為記憶體最佳化資料表。 其他複寫組態與記憶體最佳化資料表不相容。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，將提供這項功能。  
   
@@ -26,7 +27,7 @@ ms.locfileid: "68005362"
   
 -   **將訂閱者資料庫設定為支援對記憶體最佳化資料表的複寫**  
   
-     藉由使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 或 [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)，將 **@memory_optimized**  屬性設定為 **true**。  
+     藉由使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 或 [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)，將 **\@memory_optimized** 屬性設定為 **true**。  
   
 -   **將發行項設定為支援對記憶體最佳化資料表的複寫**  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68005362"
   
 2.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](../../relational-databases/replication/publish/define-an-article.md)。  
   
-     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 預存程序的 **@schema_option** 參數為   
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle** 預存程序的 **\@schema_option** 參數設為   
     **0x40000000000**開始，將提供這項功能。  
   
 3.  在 [發行項屬性] 視窗中，將 啟用記憶體最佳化  設定為 [true]  。  
@@ -55,16 +56,16 @@ ms.locfileid: "68005362"
   
 1.  移至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的訂閱屬性，並將 記憶體最佳化訂閱  設定為 [true]  。 重新初始化訂閱之前，不會套用所做的變更。  
   
-     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定的話，設定 **@memory_optimized** 預存程序的 **@memory_optimized** 參數為 true。  
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addsubscription** 預存程序的 **\@memory_optimized** 參數設為 true。  
   
 2.  移至 [發行項屬性] 視窗 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內的發行集，將 啟用記憶體  設定為 [true]。  
   
-     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 預存程序的 **@schema_option** 參數為   
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle** 預存程序的 **\@schema_option** 參數設為   
     **0x40000000000**開始，將提供這項功能。  
   
 3.  記憶體最佳化資料表不支援叢集索引。 若要藉由在目的地上將複寫轉換為非叢集索引來處理此項目的話，請將 為記憶體最佳化發行項將叢集索引轉換為非叢集索引  設定為 [true]。  
   
-     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 預存程序的 **@schema_option** 參數為  **0x0000080000000000**開始，將提供這項功能。  
+     如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定，將 **sp_addarticle** 預存程序的 **\@schema_option** 參數設為 **0x0000080000000000**。  
   
 4.  重新產生快照集。  
   

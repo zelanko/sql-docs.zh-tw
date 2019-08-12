@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984748"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893028"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -62,7 +62,7 @@ SQL Server 2016 Analysis Services 針對以「1200 (含) 相容性層級」  為
 - 新的 **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** \(機器翻譯\) 命名空間，可管理表格式模式執行個體和模型。 
 - [Analysis Services 管理物件 (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) \(機器翻譯\) 已經重構以包含第二個組件 **Microsoft.AnalysisServices.Core.dll**。
 
-請參閱 [Analysis Services 引擎 (SSAS)](../analysis-services/what-s-new-in-analysis-services.md)。 
+請參閱 [Analysis Services 引擎 (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)。 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - 支援「Always On 可用性群組」 

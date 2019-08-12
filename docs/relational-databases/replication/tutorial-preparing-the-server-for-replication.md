@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895437"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742937"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教學課程：準備 SQL Server 進行複寫 (發行者、散發者、訂閱者)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ ms.locfileid: "67895437"
 >[!NOTE]
 > 如果沒看到 SQL Agent 啟動，請在 SSMS 中以滑鼠右鍵按一下 SQL Server Agent，然後選取 [重新整理]  。 如果它仍處於停止狀態，請從 SQL Server 組態管理員以手動方式啟動它。    
   
-### <a name="set-database-permissions-at-the-publisher"></a>在發行者端設定資料庫權限  
+## <a name="set-database-permissions"></a>設定資料庫權限  
   
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中展開 [安全性]  ，並以滑鼠右鍵按一下 [登入]  ，然後選取 [新增登入]  ：  
 
@@ -233,6 +233,8 @@ ms.locfileid: "67895437"
 5. 重複步驟 1-4 來建立其他本機帳戶 (repl_distribution、repl_logreader 和 repl_merge) 的登入。 這些登入也必須對應至 **distribution** 和 **AdventureWorks** 資料庫中 **db_owner** 固定資料角色成員的使用者。  
 
    ![檢視 [物件總管] 中的所有四個帳戶](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. 在散發代理程式和合併代理程式的訂閱者上重複步驟 1-4，將電腦名稱變更為訂閱者的名稱。 
   
   
 如需詳細資訊，請參閱：

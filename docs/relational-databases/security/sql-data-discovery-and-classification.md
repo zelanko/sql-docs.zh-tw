@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.date: 06/25/2019
 ms.author: mibar
 author: barmichal
-ms.openlocfilehash: be50742728d7482142d65cb8892231aa6671a97e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3d3d0b2a6a2410b4f49e52a77a42d76e87868f7
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127081"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670587"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,6 +139,21 @@ FROM
     ON  EP.major_id = O.object_id 
     JOIN sys.columns C 
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+或是針對 SQL Server 2019：
+```sql
+SELECT 
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    label
+FROM sys.sensitivity_classifications sc
+    JOIN sys.objects O
+    ON  sc.major_id = O.object_id
+    JOIN sys.columns C 
+    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
 ```
 
 ## <a id="subheading-4"></a>後續步驟

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da73c06c49f54caf5e750f6816738738e7a03681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914920"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670529"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 -   當 `INSERT ... SELECT` 或 `INSERT ... EXEC` 陳述式中正在插入的資料來自使用 **ORDER BY** 子句的查詢時，則會依 **ORDER BY** 子句所指定的順序來產生 **NEXT VALUE FOR** 函式所傳回的值。  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>搭配 OVER ORDER BY 子句使用順序物件  
- **NEXT VALUE FOR** 函式支援透過將 **OVER** 子句套用到 **NEXT VALUE FOR** 呼叫，來產生排序的順序值。 透過使用 **OVER** 子句，可確保傳回的值依據 **OVER** 子句之 **ORDER BY** 次子句的順序來產生。 搭配 **OVER** 子句使用 **NEXT VALUE FOR** 函式時，下列為額外的適用規則：  
+ **NEXT VALUE FOR** 函式支援透過將 **OVER** 子句套用到 **NEXT VALUE FOR** 呼叫，來產生排序的順序值。 透過使用 **OVER** 子句，可確保傳回的值依據 **OVER** 子句 **ORDER BY** 次子句的順序來產生。 搭配 **OVER** 子句使用 **NEXT VALUE FOR** 函式時，下列為額外的適用規則：  
   
 -   單一陳述式中為相同順序產生器的多個 **NEXT VALUE FOR** 函式呼叫必須全都使用相同的 **OVER** 子句定義。  
   

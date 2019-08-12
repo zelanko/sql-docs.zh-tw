@@ -27,12 +27,12 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3eb9e5c5b451854876cf31ae05641f12e8bc722
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49741cf920c85ac55288b7cd881b1c52335d3d07
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006514"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661429"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  這是即將建立的角色名稱。  
   
  AUTHORIZATION *owner_name*  
- 這是要擁有新角色的資料庫使用者或角色。 如果未指定任何使用者，該角色便由執行 CREATE ROLE 的使用者所擁有。  
+ 這是要擁有新角色的資料庫使用者或角色。 如果未指定任何使用者，該角色便由執行 CREATE ROLE 的使用者所擁有。 角色的擁有者，或是任何擁有角色的成員都可以新增或移除角色成員。
   
 ## <a name="remarks"></a>Remarks  
  角色是資料庫層級的安全性實體。 當您建立角色之後，請利用 GRANT、DENY 和 REVOKE，設定角色的資料庫層級權限。 若要在資料庫角色中新增成員，請使用 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)。 如需詳細資訊，請參閱[資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  

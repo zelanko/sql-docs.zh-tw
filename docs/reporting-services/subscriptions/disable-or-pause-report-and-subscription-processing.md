@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfebb45330ef9775a3e707ad244122654a1f582e
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314001"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893418"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>停用或暫停報表與訂閱處理  
-有好幾種方法，您可以用來停用或暫停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和訂閱處理。 此文章中的方式包括停用訂用帳戶以中斷資料來源連線。 並非所有方法都都可以同時使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]伺服器模式。 下列資料表摘要說明這些方法，並支援[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]伺服器模式：  
+有好幾種方法，您可以用來停用或暫停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和訂閱處理。 此文章中的方式包括停用訂用帳戶以中斷資料來源連線。 並非所有的方法都可以使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]這兩種伺服器模式。 下表摘要說明方法和支援[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的伺服器模式:  
   
 ##  <a name="bkmk_top"></a> 本文內容  
   
@@ -43,13 +43,13 @@ ms.locfileid: "67314001"
 ##  <a name="bkmk_disable_subscription"></a> 啟用和停用訂用帳戶  
   
 >[!TIP]  
->在 SQL 2016 Reporting Services 中，新*啟用和停用訂用帳戶*。 新的使用者介面選項可讓您快速啟用及停用訂用帳戶。 停用的訂閱會維持其中的其他組態屬性，例如排程，並且可以輕鬆重新啟用。 您也能以程式設計方式啟用及停用訂用帳戶或稽核哪些訂用帳戶已停用。  
+>SQL 2016 Reporting Services 的新功能、*啟用和停用訂閱*。 新的使用者介面選項可讓您快速啟用及停用訂用帳戶。 停用的訂閱會維持其中的其他組態屬性，例如排程，並且可以輕鬆重新啟用。 您也能以程式設計方式啟用及停用訂用帳戶或稽核哪些訂用帳戶已停用。  
   
-  ![啟用和停用按鈕的 [訂閱] 頁面 ](../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png)  
+  ![[訂閱] 頁面的 [啟用] 和 [停用] 按鈕 ](../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png)  
   
-在入口網站中，瀏覽至訂用帳戶從**我的訂用帳戶**頁面或**訂用帳戶**個別訂用帳戶 頁面。 選取一或多個訂用帳戶，然後按一下功能區上的 [停用] 按鈕或 [啟用] 按鈕 (請參閱上面的影像)。 [狀態] 欄會分別變更為 「 停用 」 或 「 已啟用 」。  
+在入口網站中, 從個別訂閱的 [我的**訂閱**] 頁面或 [**訂閱**] 頁面中, 流覽至訂用帳戶。 選取一或多個訂用帳戶，然後按一下功能區上的 [停用] 按鈕或 [啟用] 按鈕 (請參閱上面的影像)。 [狀態] 欄會分別變更為 [已停用] 或 [已啟用]。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將一個資料列寫入[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]時訂用帳戶啟用或停用記錄。 例如，在報表伺服器記錄檔中：  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]當訂用帳戶已[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]啟用或停用時, 寫入記錄檔中的資料列。 例如，在報表伺服器記錄檔中：  
   
  `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles\RSPortal_2019_06_20_00_49_22.log`  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67314001"
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")：**使用 Windows PowerShell 停用單一訂用帳戶：** 使用下列 PowerShell 指令碼停用特定的訂用帳戶。 更新指令碼中的伺服器名稱和訂用帳戶識別碼。  
+![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")：**使用 Windows PowerShell 停用單一訂用帳戶：** 使用下列 PowerShell 指令碼停用特定的訂用帳戶。 更新指令碼中的伺服器名稱和訂用帳戶識別碼。  
   
 ```PS  
 #disable specific subscription  
@@ -79,7 +79,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有已停用的訂閱：** 使用下列 PowerShell 指令碼來列出目前的原生模式報表伺服器上所有已停用的訂閱。 更新伺服器名稱。  
+ ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有已停用的訂閱：** 使用下列 PowerShell 指令碼來列出目前的原生模式報表伺服器上所有已停用的訂閱。 更新伺服器名稱。  
   
 ```  
 #list all disabled subscriptions  
@@ -90,7 +90,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有已停用的訂閱：** 使用下列 PowerShell 指令碼來列出目前的原生模式報表伺服器上所有已停用的訂閱。 更新伺服器名稱。  
+ ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有已停用的訂閱：** 使用下列 PowerShell 指令碼來列出目前的原生模式報表伺服器上所有已停用的訂閱。 更新伺服器名稱。  
   
 ```  
 #enable all subscriptions  
@@ -104,7 +104,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 停用所有訂閱：** 使用下列 PowerShell 指令碼列出停用**所有**訂閱。  
+ ![PowerShell 相關內容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 停用所有訂閱：** 使用下列 PowerShell 指令碼列出停用**所有**訂閱。  
   
 ```  
 #DISABLE all subscriptions  
@@ -120,9 +120,9 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> 暫停共用排程  
  如果報表或訂閱從共用排程執行，您可以暫停排程來禁止處理。 由排程驅動的所有報表與訂閱處理，會被延遲至排程繼續為止。  
   
--   **SharePoint 模式：** ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定") 在 [網站設定]  中，選取 [管理共用排程]  。 選取排程，然後按一下 [暫停選取的排程]  。  
+-   **SharePoint 模式：** ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定") 在 [網站設定]  中，選取 [管理共用排程]  。 選取排程，然後按一下 [暫停選取的排程]  。  
   
--   **原生模式：** 在入口網站中，選取**設定** 按鈕![[設定] 按鈕](media/ssrs-portal-settings-gear.png)從 web 入口網站畫面中，然後選取頂端功能表列**站台設定**從下拉式選單。 選取 **排程**索引標籤，顯示 排程 頁面。 選取您想要啟用或停用，並選擇排程旁邊的核取方塊**啟用**或是**停用**按鈕分別執行所需的動作。 [狀態] 欄會據以更新 「 停用 」 或 「 已啟用 」。  
+-   **原生模式:** 在入口網站中, 從入口網站畫面![頂端的](media/ssrs-portal-settings-gear.png)功能表列中選取 [**設定**] 按鈕 [設定] 按鈕, 然後從下拉式功能表中選取 [**網站設定**]。 選取 [  排程] 索引標籤以顯示 [排程] 頁面。 選取您想要啟用或停用之排程旁的核取方塊, 然後分別選取 [**啟用**] 或 [**停**用] 按鈕, 以執行所需的動作。 [狀態] 欄會據此更新為「已停用」或「已啟用」。  
   
 ##  <a name="bkmk_disable_shared_datasource"></a> 停用共用資料來源  
  使用共用資料來源的優點之一是您可以停用它，禁止執行報表或資料驅動訂閱。 停用共用資料來源會中斷報表與其外部來源的連接。 停用時，資料來源無法供所有使用它的報表與訂閱使用。  
@@ -136,7 +136,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_modify_role_assignment"></a> 修改角色指派來禁止存取報表 (原生模式)  
 讓報表無法使用的一個方法，是暫時移除可以提供存取報表的角色指派。 無論建立資料來源連接的方式為何，此方法可以用於所有報表。 此方法僅會以報表為目標，不會影響其他報表或項目的作業。  
   
- 若要移除的角色指派，請開啟**安全性**入口網站中的報表頁面。 如果報表從父系繼承安全性，您可以選取 [自訂安全性]  並選取 [項目安全性]  對話方塊中的 [確認]  來建立嚴格的安全性原則，省略提供普遍存取權的角色指派 (例如，您可以移除提供 Everyone 存取權的角色指派，保留提供一小組使用者存取權的角色指派，例如系統管理員)。  
+ 若要移除角色指派, 請在入口網站中開啟報表的 [**安全性**] 頁面。 如果報表從父系繼承安全性，您可以選取 [自訂安全性]  並選取 [項目安全性]  對話方塊中的 [確認]  來建立嚴格的安全性原則，省略提供普遍存取權的角色指派 (例如，您可以移除提供 Everyone 存取權的角色指派，保留提供一小組使用者存取權的角色指派，例如系統管理員)。  
   
 ##  <a name="bkmk_remove_manage_subscriptions_permission"></a> 移除角色的管理訂閱權限 (原生模式)  
  若要讓使用者無法建立訂閱，請從角色中清除「管理個別訂閱」  工作。 當您移除這個工作後，[訂閱] 頁面就無法使用。 在入口網站中，即使 [我的訂閱] 頁面原先含有訂閱，此時也會顯示空白 (無法刪除這個頁面)。 移除訂閱相關的工作會讓使用者無法建立與修改訂閱，但是不會刪除現有的訂閱。 現有的訂閱會繼續執行，直到刪除為止。 若要移除權限：  
@@ -147,11 +147,11 @@ ForEach ($subscription in $subscriptions)
   
 3.  展開 [安全性]  節點。  
   
-4.  依序展開**角色**節點，然後選取所需的角色。  
+4.  展開 [**角色**] 節點, 然後選取所需的角色。  
   
 5.  以滑鼠右鍵按一下此角色，然後選取 [屬性]  。  
   
-6.  清除**管理個別訂閱**並**管理所有訂閱**工作。  
+6.  清除 [**管理個別訂閱**] 和 [**管理所有訂閱**] 工作。  
   
 7.  選取 [確定]  以套用變更。
 
@@ -163,9 +163,9 @@ ForEach ($subscription in $subscriptions)
   
 -   SharePoint 文件庫 (只能從與 SharePoint 整合模式報表伺服器整合的 SharePoint 網站使用)  
   
- 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊，請參閱 <<c0> [ 電子郵件設定-Reporting Services 原生模式 （組態管理員）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。  
+ 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊, 請參閱[電子郵件設定-Reporting Services 原生模式 (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。  
   
- 如果您想要關閉特定延伸模組，可以在 **RSReportServer.config** 檔中移除延伸模組項目。 如需詳細資訊，請參閱 < [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)並[電子郵件設定-Reporting Services 原生模式 （組態管理員）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。  
+ 如果您想要關閉特定延伸模組，可以在 **RSReportServer.config** 檔中移除延伸模組項目。 如需詳細資訊, 請參閱[Reporting Services 設定檔](../../reporting-services/report-server/reporting-services-configuration-files.md)和[電子郵件設定-Reporting Services 原生模式 (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。  
   
  在您移除傳遞延伸模組之後，就無法再於入口網站或 SharePoint 網站中使用它。 移除傳遞延伸模組可能會產生非使用中訂閱。 移除延伸模組之前，請務必刪除訂閱，或將它們設定為使用不同的傳遞延伸模組。  
   

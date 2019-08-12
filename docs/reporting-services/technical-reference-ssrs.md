@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd0f8310fa0b11b8816f15194da19c856230991b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301525"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892817"
 ---
 # <a name="technical-reference-ssrs"></a>技術參考 (SSRS)
 
   尋找工具及 PowerShell 參考文件以使用或管理 SQL Server Reporting Services。  
   
- ![小型檔案資料夾圖示](../analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **錯誤和事件**  
+ ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **錯誤和事件**  
  [Reporting Services 錯誤的原因和解決方案](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![小型檔案資料夾圖示](../analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **功能參考**  
+ ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **功能參考**  
  [報表設計師 F1 說明](../reporting-services/tools/report-designer-f1-help.md)  
   
  [報表管理員 F1 說明](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
@@ -41,14 +41,14 @@ ms.locfileid: "63301525"
   
  [轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![小型檔案資料夾圖示](../analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **報表伺服器命令提示字元公用程式**  
+ ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **報表伺服器命令提示字元公用程式**  
  [RS.exe 公用程式 &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [rsconfig 公用程式 &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt 公用程式 &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![小型檔案資料夾圖示](../analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **Reporting Services WMI 提供者類別庫**  
+ ![小型檔案資料夾圖示](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **Reporting Services WMI 提供者類別庫**  
  [Reporting Services WMI 提供者程式庫參考 &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

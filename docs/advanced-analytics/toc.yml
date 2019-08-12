@@ -5,9 +5,9 @@
 - name: 概觀
   expanded: true
   items:
-    - name: 機器學習服務 (R、Python)
+    - name: 什麼是機器學習服務 (Python 和 R)？
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
-    - name: R Services
+    - name: 什麼是 R 服務？
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: 獨立伺服器
       href: ../advanced-analytics/r/r-server-standalone.md
@@ -23,7 +23,7 @@
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: 安裝 R 服務
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: 安裝獨立伺服器 (R、Python)
+    - name: 安裝獨立伺服器 (Python、R)
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: 安裝已訓練的模型
       href: ../advanced-analytics/install/sql-pretrained-models-install.md

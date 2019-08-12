@@ -12,12 +12,12 @@ ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4cd1164b5845f6237a1381fa706fc067cf311a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bedae7661398ed4281f2da460ad7ce16b5dd82de
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140825"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841621"
 ---
 # <a name="view-collation-information"></a>檢視定序資訊
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "68140825"
 2.  在查詢視窗中，輸入下列使用 SERVERPROPERTY 系統函數的陳述式。  
   
     ```sql  
-    SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
+    SELECT CONVERT (varchar(256), SERVERPROPERTY('collation'));  
     ```  
   
 3.  或者，您可以使用 sp_helpsort 系統預存程序。  
@@ -94,7 +94,7 @@ ms.locfileid: "68140825"
 3.  或者，您可以使用 DATABASEPROPERTYEX 系統函數。  
   
     ```sql  
-    SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
+    SELECT CONVERT (varchar(256), DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
  **檢視資料行的定序設定**  

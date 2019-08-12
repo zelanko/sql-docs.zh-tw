@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba7459c97a64422023bed0cffd292c418933ce43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64637e048277db5ad082b2b6a9ffad4b4b0d3ea7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126195"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892297"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68126195"
  使用者熟悉如何管理 **Windows 防火牆**，而且知道自己想要設定的哪些防火牆設定可直接移至更進階的發行項：  
   
 -   [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
--   [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)    
+-   [設定 Windows 防火牆以允許 Analysis Services 存取](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="BKMK_basic"></a> 基本防火牆資訊  
@@ -159,7 +159,7 @@ ms.locfileid: "68126195"
   
  如果使用者透過 IIS 和網際網路存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您就必須開啟 IIS 所接聽的通訊埠，並且在用戶端連接字串中指定該通訊埠。 在此情況下，針對直接存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則不必開啟任何通訊埠。 不過，您應該限制預設通訊埠 2389 和通訊埠 2382 與所有不需要的其他通訊埠。  
   
- 如需設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 Windows 防火牆之逐步解說指示，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)(設定 Windows 防火牆以允許 Analysis Services 存取)。  
+ 如需設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 Windows 防火牆之逐步解說指示，請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)(設定 Windows 防火牆以允許 Analysis Services 存取)。  
   
 ###  <a name="BKMK_ssrs"></a> Reporting Services 所使用的通訊埠  
 

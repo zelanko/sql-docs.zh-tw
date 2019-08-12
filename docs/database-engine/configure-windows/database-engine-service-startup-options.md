@@ -1,7 +1,7 @@
 ---
 title: 資料庫引擎服務啟動選項 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011976"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763235"
 ---
 # <a name="database-engine-service-startup-options"></a>Database Engine 服務啟動選項
 
@@ -82,8 +82,9 @@ ms.locfileid: "68011976"
  在您每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，可能都會想要使用一些啟動選項。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來設定啟動參數，很容易就可以完成這些選項 (例如，使用追蹤旗標來啟動)。 這些工具會將啟動選項儲存成登錄機碼，這樣 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就一定會使用這些啟動選項來啟動。  
   
 ## <a name="compatibility-support"></a>相容性支援  
- **不支援**  -h [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]參數。 舊版 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的狀況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 如需詳細資訊，請參閱 [SQL Server 2016 中已取代及已中止的 SQL Server 功能](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)。  
-  
+
+如需已從先前版本移除的選項，請參閱 [ 應用程式](../../tools/sqlservr-application.md#compatibility-support)。
+
 ## <a name="related-tasks"></a>相關工作  
 [設定 scan for startup procs 伺服器組態選項](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [啟動、停止、暫停、繼續、重新啟動資料庫引擎、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

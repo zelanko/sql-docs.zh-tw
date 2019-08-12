@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d988fc9dfc126bef79d94ca0867128085069456e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495445"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893995"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -46,7 +46,7 @@ Community Technical Preview (CTP) 3.2 是 [!INCLUDE[sql-server-2019](../includes
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---| 
-| Power BI 快取重新整理的治理設定。  | Power BI 服務會快取儀表板磚的資料和報表資料，以進行 Live Connect 報表的初始載入，進而導致將過多的快取查詢提交給 SSAS，且在極端情況下使伺服器超載。 此版本引進了 **ClientCacheRefreshPolicy** 屬性。 這個屬性可讓您在伺服器層級覆寫此行為。 若要深入了解，請參閱[一般屬性](../analysis-services/server-properties/general-properties.md)。 |
+| Power BI 快取重新整理的治理設定。  | Power BI 服務會快取儀表板磚的資料和報表資料，以進行 Live Connect 報表的初始載入，進而導致將過多的快取查詢提交給 SSAS，且在極端情況下使伺服器超載。 此版本引進了 **ClientCacheRefreshPolicy** 屬性。 這個屬性可讓您在伺服器層級覆寫此行為。 若要深入了解，請參閱[一般屬性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
 | 線上附加  | 此功能可讓您將表格式模型附加為線上作業。 線上附加可用於同步處理內部部署查詢擴充環境中的唯讀複本。 若要深入了解，請參閱[線上附加](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)的詳細資料。 |
 | &nbsp; | &nbsp; |
 
@@ -125,7 +125,10 @@ Community Technical Preview (CTP) 3.2 是 [!INCLUDE[sql-server-2019](../includes
 
 ### <a name="polybase"></a>PolyBase
 
-|新功能或更新 | 詳細資料 | | PolyBase | 外部資料表資料行名稱現在可用來查詢 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 資料來源。 | | &nbsp; | &nbsp; |
+|新功能或更新 | 詳細資料 |
+|:---|:---|
+|PolyBase |外部資料表資料行名稱現在可用來查詢 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 資料來源。 |
+| &nbsp; | &nbsp; |
 
 ### <a name="collation"></a>定序
 

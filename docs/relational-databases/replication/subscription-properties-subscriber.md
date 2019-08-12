@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc85c55e86ee026a59c20539eb5c761d0cf66fd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129833"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769457"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 複寫訂閱屬性對話方塊 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ### <a name="publisher-properties"></a>發行者屬性
 在發行者端的 **[訂閱屬性]** 對話方塊，可以讓您檢視和設定發送訂閱的屬性。 您也可以檢視提取訂閱的某些屬性，但在訂閱者端的 **[訂閱屬性]** 對話方塊，會顯示其他屬性並允許修改屬性。  
@@ -46,7 +46,8 @@ ms.locfileid: "68129833"
  如果選項顯示為唯讀，則只有在建立訂閱時才能設定。 如果想要設定新增訂閱精靈中無法使用的選項，請以預存程序建立訂閱。 如需相關資訊，請參閱 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 及 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 > [!NOTE]  
->  如果尚未建立訂閱的散發代理程式或合併代理程式，則不會顯示許多訂閱屬性。 若要建立提取訂閱的代理程式作業，請執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (適用於快照式或交易式發行集訂閱) 或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (適用於合併式發行集訂閱)。  
+>  - 如果尚未建立訂閱的散發代理程式或合併代理程式，則不會顯示許多訂閱屬性。 若要建立提取訂閱的代理程式作業，請執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (適用於快照式或交易式發行集訂閱) 或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (適用於合併式發行集訂閱)。  
+> - Azure SQL Database 受控執行個體可以是快照式和異動複寫的發行者、散發者和訂閱者。 Azure SQL Database 單一和集區資料庫只能是快照式和異動複寫的發送訂閱者。 如需詳細資訊，請參閱[使用 Azure SQL Database 的異動複寫](/azure/sql-database/sql-database-managed-instance-transactional-replication)。 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>所有訂閱的發行者選項  
  **安全性**  

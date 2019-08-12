@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b345e8084b491adeadb5a814655284e9699f5550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094907"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742838"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
 
@@ -73,7 +73,7 @@ ms.locfileid: "68094907"
 |固定資料庫角色名稱|Description|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 固定資料庫角色的成員可以在資料庫上執行所有的組態和維護活動，也可以在 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中卸除資料庫。 (在 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中，某些維護活動需要伺服器層級的權限，而且無法由 **db_owners**執行。)|  
-|**db_securityadmin**|**db_securityadmin** 固定資料庫角色的成員可以修改角色成員資格 (僅自訂角色)、建立不具登入的使用者，以及管理權限。 將主體加入這個角色可能會產生不必要的權限擴大。|  
+|**db_securityadmin**|**db_securityadmin** 固定資料庫角色的成員可以修改角色成員資格 (僅自訂角色) 以及管理權限。 此角色的成員可能會提升其權限，因此其動作應受到監視。|  
 |**db_accessadmin**|**db_accessadmin** 固定資料庫角色的成員可以針對 Windows 登入、Windows 群組及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入加入或移除資料庫的存取權。|  
 |**db_backupoperator**|**db_backupoperator** 固定資料庫角色的成員可以備份資料庫。|  
 |**db_ddladmin**|**db_ddladmin** 固定資料庫角色的成員可在資料庫中執行任何「資料定義語言」(DDL) 的命令。|  
@@ -86,7 +86,7 @@ ms.locfileid: "68094907"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>針對 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 及 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
+## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>針對 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 及 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
 
 這些資料庫角色只存在於虛擬 master 資料庫中。 其權限僅限於能在 master 中執行的動作。 只有 master 資料庫使用者可以加入這些角色中。 這些角色中不能加入登入，但可以根據登入建立使用者，然後將這些使用者加入角色中。 包含的 master 資料庫使用者，也可加入這些角色中。 但是，加入到 **dbmanager** 角色的包含的 master 資料庫使用者不能用來建立新的資料庫。
 

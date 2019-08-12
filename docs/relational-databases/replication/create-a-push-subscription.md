@@ -16,16 +16,19 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ab4102c477a8904dd99eb2717f2c5e31c38b9bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b5a52597f2d81fc3d2431d0ab9e97ac0e64f63f9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903043"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768652"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的發送訂閱。 如需為非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者建立發送訂閱的資訊，請參閱[為非 SQL Server 訂閱者建立訂閱](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -90,19 +93,19 @@ ms.locfileid: "67903043"
   
     -   如果 **allow_push** 的值為 **1**，則發送訂閱受到支援。  
   
-    -   如果 **allow_push** 的值為 **0**，請執行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，將 **allow_push** 指定為 **@property** ，並將 **@value** 指定為 **@value** ＞。  
+    -   如果 **allow_push** 的值為 **0**，請執行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，將 **\@property** 指定為 **allow_push**，並將 **\@value** 指定為 **true**。  
   
-2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **@publication** 或 Replication Management Objects (RMO) 來建立 **@subscriber** ，並將 **@destination_db** ＞。 將 **@subscription_type** 指定為 **@subscription_type** ＞。 如需有關如何更新訂閱的詳細資訊，請參閱＜ [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。  
+2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber** 和 **\@destination_db**。 將 **\@subscription_type** 的值指定為 **push**。 如需有關如何更新訂閱的詳細資訊，請參閱＜ [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列項目：  
   
-    -   將 **@subscriber** 或 Replication Management Objects (RMO) 來建立 **@subscriber_db** 和 **@publication** 參數。  
+    -   **\@subscriber**、 **\@subscriber_db** 和 **\@publication** 參數。  
   
-    -   將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證，「散發者」上的「散發代理程式」執行時會針對 **@job_login** ，並將 **@job_password** ＞。  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證，執行「散發者」上的「散發代理程式」時會針對 **\@job_login** 和 **\@job_password** 使用該認證。  
   
-        > **注意：** 使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password** 中針對非 SQL Server 訂閱者建立訂閱。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+        > **注意：** 使用「Windows 整合式驗證」進行的連線一律使用由 **\@job_login** 和 **\@job_password** 所指定 Windows 認證。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
-    -   (選擇性) **0** 指定為 **@subscriber_security_mode** ，以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，並將 **@subscriber_password** ＞。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
+    -   (選擇性) **\@subscriber_security_mode** 的值 **0** ，以及 **\@subscriber_login** 和 **\@subscriber_password** 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
   
     -   此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -114,29 +117,29 @@ ms.locfileid: "67903043"
   
     -   如果 **allow_push** 的值為 **1**，則發行集支援發送訂閱。  
   
-    -   如果 **allow_push** 的值為 **1**，請執行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，將 **allow_push** 指定為 **@property** ，並將 **@value** 指定為 **@value** ＞。  
+    -   如果 **allow_push** 的值不是 **1**，請執行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，將 **\@property** 指定為 **allow_push**，並將 **\@value** 指定為 **true**。  
   
 2.  在發行集資料庫的「發行者」上，執行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)並指定下列參數：  
   
-    -   **@publication** ＞。 這是發行集的名稱。  
+    -   **\@Publication**。 這是發行集的名稱。  
   
-    -   **@subscriber_type** ＞。 將客訂閱指定為 **local** ，並將主訂閱指定為 **global**。  
+    -   **\@subscriber_type**。 將客訂閱指定為 **local** ，並將主訂閱指定為 **global**。  
   
-    -   **@subscription_priority** ＞。 指定主訂閱的訂閱優先權 (從**0.00** 到 **99.99**)。  
+    -   **\@subscription_priority**。 指定主訂閱的訂閱優先權 (從**0.00** 到 **99.99**)。  
   
          如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定下列項目：  
   
-    -   將 **@subscriber** 或 Replication Management Objects (RMO)，在 **@subscriber_db** 和 **@publication** 參數。  
+    -   **\@subscriber**、 **\@subscriber_db** 和 **\@publication** 參數。  
   
-    -   Windows 認證，「散發者」上的「合併代理程式」執行時會針對 **@job_login** ，並將 **@job_password** ＞。  
+    -   Windows 認證，執行「散發者」上的「合併代理程式」時會針對 **\@job_login** 和 **\@job_password** 使用該認證。  
   
-        > **注意：** 使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password** 中針對非 SQL Server 訂閱者建立訂閱。 「合併代理程式」一律使用「Windows 整合式驗證」建立到「散發者」的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+        > **注意：** 使用「Windows 整合式驗證」進行的連線一律使用由 **\@job_login** 和 **\@job_password** 所指定 Windows 認證。 「合併代理程式」一律使用「Windows 整合式驗證」建立到「散發者」的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
-    -   (選擇性) **0** 指定為 **@subscriber_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，並將 **@subscriber_password** ＞。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
+    -   (選擇性) **\@subscriber_security_mode** 的值 **0**，以及 **\@subscriber_login** 和 **\@subscriber_password** 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。 如果您在連接到「訂閱者」時需要使用「SQL Server 驗證」，請指定這些參數。  
   
-    -   (選擇性) **0** 指定為 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** ，並將 **@publisher_password** ＞。 如果您在連接到「發行者」時需要使用「SQL Server 驗證」，請指定這些值。  
+    -   (選擇性) **\@publisher_security_mode** 的值 **0**，以及 **\@publisher_login** 和 **\@publisher_password** 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。 如果您在連接到「發行者」時需要使用「SQL Server 驗證」，請指定這些值。  
   
     -   此訂閱之「合併代理程式」作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -192,7 +195,7 @@ ms.locfileid: "67903043"
   
 8.  呼叫 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。  
   
-    > **重要！** 利用遠端「散發者」來建立「發行者」上的發送訂閱時，提供給所有屬性的值 (包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) 都會以純文字的方式傳給「散發者」。 您應該先加密「發行者」及其遠端「散發者」之間的連線，然後再呼叫 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+    > **重要事項！！ **使用遠端「散發者」來建立「發行者」的發送訂閱時，提供給所有屬性的值 (包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) 都會以純文字的方式傳送給「散發者」。 您應該先加密「發行者」及其遠端「散發者」之間的連線，然後再呼叫 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>若要建立合併式發行集的發送訂閱  
   

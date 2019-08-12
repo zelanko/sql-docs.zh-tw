@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/20/2019
-ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343883"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893280"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 版本所支援的 Reporting Services 功能
 
@@ -24,9 +24,9 @@ ms.locfileid: "67343883"
 
  ## <a name="try-sql-server-2017"></a>試用 SQL Server 2017
 
-> [![下載 SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[從 Evaluation Center 下載 SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![下載 SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[從 Evaluation Center 下載 SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Azure 虛擬機器 (小型)](../analysis-services/media/azure-virtual-machine-small.png) **[使用已安裝的 SQL Server 2017 加速虛擬機器](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Azure 虛擬機器 (小型)](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[使用已安裝的 SQL Server 2017 加速虛擬機器](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 若要了解 Evaluation 和 Developer 版所支援的功能，請參閱下表 SQL Server Enterprise 版那一欄。
 

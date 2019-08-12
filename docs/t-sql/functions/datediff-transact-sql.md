@@ -31,14 +31,15 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83e515054db5d9727733de6cfc2426ee9ac3aa01
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329281"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731124"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函式會傳回跨越指定 *startdate* 和 *enddate* 之指定 datepart 界限的計數 (作為帶正負號的整數值)。
@@ -54,13 +55,13 @@ DATEDIFF ( datepart , startdate , enddate )
 ```  
   
 ## <a name="arguments"></a>引數  
+
 *datepart*  
-指定所跨越界限類型之 *startdate* 和 *enddate* 的一部分。
+**DATEDIFF** 所報告 _startdate_ 和 _enddate_ 之間差異的單位。 常用的 _datepart_ 單位包括 `month` 或 `second`。
 
-> [!NOTE]
-> `DATEDIFF` 不會接受使用者自訂變數中的 *datepart* 值，也不會接受以引號括住的字串。 
+_Datepart_ 值不能在變數中指定，也不能是以引號括住的字串 (例如 `'month'`)。
 
-此表格列出所有有效的 *datepart* 引數名稱與縮寫。
+下表列出所有有效的 _datepart_ 值。 **DATEDIFF** 接受 _datepart_ 的完整名稱，或任何所列出的完整名稱縮寫。
 
 |*datepart* 名稱|*datepart* 縮寫|  
 |-----------|------------|
@@ -76,6 +77,7 @@ DATEDIFF ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
+| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > 每個特定 *datepart* 名稱和該 *datepart* 名稱的縮寫都會傳回相同值。
@@ -99,7 +101,10 @@ DATEDIFF ( datepart , startdate , enddate )
  **int**  
   
 ## <a name="return-value"></a>傳回值  
-*startdate* 和 *enddate* 之間的 **int** 差異，以 *datepart* 所設定的 coundary 表示。
+
+*startdate* 和 *enddate* 之間的 **int** 差異，以 *datepart* 所設定的界限表示。
+  
+例如，`SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` 會傳回-2，提示 2036 必須是閏年。 這種情況表示如果我們從 _startdate_ '2036-03-01' 開始，然後計數 -2 天，則 _enddate_ 會是 '2036-02-28'。
   
 針對超出 **int** 範圍 (-2,147,483,648 到 +2,147,483,647) 的傳回值，`DATEDIFF` 會傳回錯誤。  針對 **millisecond**，*startdate* 和 *enddate* 最大的差異為 24 天 20 小時 31 分鐘 23.647 秒。 針對 **second**，最大的差異為 68 年 19 天 3 小時 14 分鐘 7 秒。
   
@@ -113,8 +118,9 @@ DATEDIFF ( datepart , startdate , enddate )
   
 如果 *startdate* 和 *enddate* 具有不同的日期資料類型，而且其中一個項目的時間部分或小數秒數有效位數超過另一個項目，`DATEDIFF` 會將另一個項目的遺漏部分設定為 0。
   
-## <a name="datepart-boundaries"></a>datepart 界限  
-下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近且時間差距為一百奈秒 (.0000001 秒)。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 
+## <a name="_datepart_-boundaries"></a>_datepart_ 界限
+
+下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近且時間差距為一百奈秒 (.0000001 秒)。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -130,7 +136,7 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
 
-如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF` 會針對 *datepart* **week** 傳回 0。
+如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，則 `DATEDIFF` 會針對 *datepart* **week** 傳回 0。
 
 ## <a name="remarks"></a>Remarks  
 您可以在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF`。
@@ -201,13 +207,18 @@ SELECT DATEDIFF(day,
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)   
+SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)
     AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day, 1, SYSDATETIME())) AS NumberOfDays  
+SELECT
+    DATEDIFF(
+            day,
+            '2007-05-07 09:53:01.0376635',
+            DATEADD(day, 1, SYSDATETIME())
+        ) AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 ```  
@@ -250,8 +261,9 @@ GO
 
 ```sql
 -- DOES NOT ACCOUNT FOR LEAP YEARS
-DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
-DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100);
+DECLARE @years INT, @months INT, @days INT,
+    @hours INT, @minutes INT, @seconds INT, @milliseconds INT;
 
 SET @date1 = '1900-01-01 00:00:00.000'
 SET @date2 = '2018-12-12 07:08:01.123'
@@ -294,9 +306,12 @@ SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
      + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
      + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
      + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
-          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
-               ELSE '' END 
-          + ' seconds','')
+     + CASE
+            WHEN @milliseconds > 0
+                THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+            ELSE ''
+       END 
+     + ' seconds','')
 
 SELECT @result
 ```

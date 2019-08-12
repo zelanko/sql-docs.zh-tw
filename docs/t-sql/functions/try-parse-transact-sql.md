@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65fd65d6849153b807ecbdb0d24296640ca38390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77a7bd22ee9317e60d1b755e8ef3755735e0d845
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098729"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893794"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|荷蘭文|1043|nl-NL|  
 |Norsk|挪威文|2068|nn-NO|  
 |Português|葡萄牙文|2070|pt-PT|  
-|Suomi|芬蘭文|1035|fi|  
+|Suomi|芬蘭文|1035|fi-FI|  
 |Svenska|瑞典文|1053|sv-SE|  
 |čeština|捷克文|1029|Cs-CZ|  
 |magyar|匈牙利文|1038|Hu-HU|  

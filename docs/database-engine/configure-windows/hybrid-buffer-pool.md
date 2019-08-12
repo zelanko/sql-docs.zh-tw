@@ -10,21 +10,22 @@ ms.topic: conceptual
 ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
-ms.openlocfilehash: 471708dc2e6b6feb3f91bd831ff63fce1177c8d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4808c0895695eba562c25ea0ee412348dc148f5
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998062"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697560"
 ---
 # <a name="hybrid-buffer-pool"></a>混合式緩衝集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 混合式緩衝集區可讓資料庫引擎直接存取儲存在持續性記憶體 (PMEM) 裝置之資料庫檔案中的資料頁面。 這項功能是在 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 中引進。
 
-在沒有 PMEM 的傳統系統中，SQL Server 會在 DRAM 型的緩衝集區中快取資料頁。 使用混合式緩衝集區，SQL Server 會略過執行頁面複本，進入緩衝集區的 DRAM 型部分。 改為直接在 PMEM 裝置的資料庫檔案中存取頁面。 存取混合式緩衝集區 PMEM 裝置上的資料檔案，是使用記憶體對應 I/O (MMIO) 執行，也稱為 SQL Server 中的資料檔案「啟用」  。
+在沒有 PMEM 的傳統系統中，SQL Server 會在緩衝集區中快取資料頁。 透過混合式緩衝集區，SQL Server 會略過將分頁複製到緩衝集區中以 DRAM 為基礎部分的作業，而改為直接存取位於 PMEM 裝置上的資料庫檔案分頁。 混合式緩衝集區 PMEM 裝置上資料檔案的讀取存取會透過遵循 PMEM 裝置上資料頁面指標直接執行。  
 
-只有完整分頁才能直接在 PMEM 裝置上存取。 頁面標示為中途時，它會先複製到 DRAM 型的緩衝集區，最後再寫回 PMEM 裝置，並再次標示為完整。 此程序是發生在一般檢查點作業期間的狀況。
+只有完整分頁才能直接在 PMEM 裝置上存取。 頁面標示為中途時，它會先複製到 DRAM 緩衝集區，最後再寫回 PMEM 裝置，並再次標示為完整。 這會發生在一般檢查點作業期間。 從 PMEM 裝置將檔案複製到 DRAM 的機制是直接記憶體對應 I/O (MMIO)，也稱為 SQL Server 內資料檔案的「啟蒙」  。
+
 
 Windows 和 Linux 都提供混合式緩衝集區功能。 PMEM 裝置必須以支援 DAX (DirectAccess) 的檔案系統格式化。 XFS、EXT4 和 NTFS 檔案系統都支援 DAX。 SQL Server 會自動偵測資料檔案是否位於正確格式化的 PMEM 裝置中，並在使用者空間中執行記憶體對應。 當附加、還原、建立新的資料庫，或啟用資料庫的混合式緩衝集區功能時，此對應就會在啟動時發生。
 

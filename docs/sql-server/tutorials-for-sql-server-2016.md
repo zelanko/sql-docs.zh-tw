@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: edd6d1ddb936571861260e7fafe6a3903e72b29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091823"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893087"
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68091823"
   
 |技術|Description|  
 |--------------|---------------|  
-|[Analysis Services 教學課程 &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|了解如何開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格式或多維度模型。 同時學習如何使用 PowerPivot 之類的工具來分析模型中的資料。|  
+|[Analysis Services 教學課程 &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格式或多維度模型。 同時學習如何使用 PowerPivot 之類的工具來分析模型中的資料。|  
 |[Database Engine 教學課程](../relational-databases/database-engine-tutorials.md)|了解如何連接到 Database Engine 的執行個體，然後建立及執行 Transact-SQL 陳述式。|  
 |[企業資訊管理教學課程](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|了解如何使用 Microsoft EIM 技術管理企業中的資訊。|  
 |[Integration Services 教學課程](../integration-services/integration-services-tutorials.md)|了解如何建立及部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。|  

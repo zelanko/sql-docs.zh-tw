@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d8bc7ae686b78481583548d630751d365e3e01e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6be8d736294df50a5ca3d288b77e4b0daac556b8
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041558"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941121"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -332,11 +332,6 @@ $cbc = $container.CloudBlobContainer
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
 $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
 $sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
-
-
-# Gets the Shared Access Signature for the policy  
-$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-$sas = $cbc.GetSharedAccessSignature($policy, $policyName)  
 Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
 # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  

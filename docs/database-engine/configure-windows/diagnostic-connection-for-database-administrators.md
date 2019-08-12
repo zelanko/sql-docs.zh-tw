@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c912c17ce6914a2de2425ad61e27f49ef7cab86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011870"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670474"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "68011870"
     -   若在與此工作階段相關聯的 sys.dm_os_tasks 中沒有工作存在，但工作階段在執行 KILL 命令後仍處於 sys.dm_exec_sessions 中，則表示您沒有可用的工作者。 請選取目前正在執行的其中一個工作 (列示於 sys.dm_os_tasks 檢視表中而含有 `sessions_id <> NULL`的工作)，然後清除與此工作相關聯的工作階段以釋放工作者。 請注意，終止單一工作階段可能不夠：您可能必須清除多個工作階段。  
   
 ## <a name="dac-port"></a>DAC 通訊埠  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之後有可用或動態指派的 TCP 通訊埠，會在 TCP 通訊埠 1434 上接聽 DAC。 錯誤記錄檔包含 DAC 接聽時所使用的通訊埠編號。 依預設，DAC 接聽程式只接受本機通訊埠上的連接。 如需可啟動遠端管理連接的程式碼範例，請參閱 [remote admin connections 伺服器組態選項](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之後有可用或動態指派的 TCP 通訊埠，會在 TCP 通訊埠 1434 上接聽 DAC。 [錯誤記錄檔](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)包含 DAC 接聽時所使用的通訊埠號碼。 依預設，DAC 接聽程式只接受本機通訊埠上的連接。 如需可啟動遠端管理連接的程式碼範例，請參閱 [remote admin connections 伺服器組態選項](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)。  
   
  一旦設定遠端管理連接之後，即會啟用 DAC 接聽程式而不需重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，而且用戶端可以從遠端連接到 DAC。 您可以先在本機使用 DAC 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然後執行 sp_configure 預存程序以接受遠端的連接，藉以啟用 DAC 接聽程式使其可接受遠端連接，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未回應仍可執行。  
   

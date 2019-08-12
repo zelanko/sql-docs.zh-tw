@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 6a148af7be04bba6bdf5c16ca7e85e94f1a0de31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d0e3f3106b7f4a51cf4423497c248c801ed7d6f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049437"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891431"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  「資料採礦模型培訓」目的地藉由傳送目的地接收的資料至資料採礦模型演算法，來培訓資料採礦模型。 如果多個資料採礦模型建立於同一資料採礦結構上，則可以由一個目的地來培訓這些模型。 如需詳細資訊，請參閱 [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md) 和 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
+  「資料採礦模型培訓」目的地藉由傳送目的地接收的資料至資料採礦模型演算法，來培訓資料採礦模型。 如果多個資料採礦模型建立於同一資料採礦結構上，則可以由一個目的地來培訓這些模型。 如需詳細資訊，請參閱 [採礦結構資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) 和 [採礦模型資料行](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="configuration-of-the-data-mining-model-training-destination"></a>設定資料採礦模型培訓目的地  
- 如果目標結構和建立於此結構上之模型的案例層級資料行具有 KEY TIME 或 KEY SEQUENCE 類型之內容，則輸入資料必須在該資料行上排序。 例如，使用「Microsoft 時間序列」演算法建立之模型使用的內容類型為 KEY TIME。 如果輸入資料未排序，則模型的處理可能會失敗。 如果資料需要排序，您可使用先前在資料流程中描述的「排序」轉換來排序資料。 此需求不會套用至內容類型為 KEY 的資料行。 如需詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md) 和[排序轉換](../../integration-services/data-flow/transformations/sort-transformation.md)。  
+ 如果目標結構和建立於此結構上之模型的案例層級資料行具有 KEY TIME 或 KEY SEQUENCE 類型之內容，則輸入資料必須在該資料行上排序。 例如，使用「Microsoft 時間序列」演算法建立之模型使用的內容類型為 KEY TIME。 如果輸入資料未排序，則模型的處理可能會失敗。 如果資料需要排序，您可使用先前在資料流程中描述的「排序」轉換來排序資料。 此需求不會套用至內容類型為 KEY 的資料行。 如需詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining) 和[排序轉換](../../integration-services/data-flow/transformations/sort-transformation.md)。  
   
 > [!NOTE]  
 >  「資料採礦模型培訓」目的地的輸入必須排序。 若要排序資料，您可以將「資料採礦模型培訓」目的地上游的「排序」目的地併入資料流程中。 如需詳細資訊，請參閱 [排序轉換](../../integration-services/data-flow/transformations/sort-transformation.md)。  

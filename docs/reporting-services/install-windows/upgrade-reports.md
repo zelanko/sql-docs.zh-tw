@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 04dacff6d9a7feed350c6f8e4417bbbd81b80b30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4516effe7308386def1aa7cca885f9fa48547ec5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502625"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889732"
 ---
 # <a name="upgrade-reports-ssrs"></a>升級報表 (SSRS)
 
@@ -136,8 +136,8 @@ ms.locfileid: "65502625"
 ## <a name="next-steps"></a>後續步驟
 
 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016 中 SQL Server Reporting Services 的重大變更](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[SQL Server 2016 中 SQL Server Reporting Services 的行為變更](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[SQL Server 2016 中 SQL Server Reporting Services 的重大變更](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
+[SQL Server 2016 中 SQL Server Reporting Services 的行為變更](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
 [SQL Server 2016 中 SQL Server Reporting Services 已停止的功能](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [自訂報表項目](../../reporting-services/custom-report-items/custom-report-items.md)   
 [升級報表伺服器資料庫](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

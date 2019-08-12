@@ -7,15 +7,15 @@ ms.reviewer: jrasnick
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b2248e6853c1bfd1b206c40ab73ba27bcccdb9e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6cb2bdc652eb77908c044b640d315a90da8cf428
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902086"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809816"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 

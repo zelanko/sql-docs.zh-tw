@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3504de2e73d3320768e5db67995285f442dfdf22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8f18c72deffc33878de95ebc07a80c07cd49d67
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013906"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892259"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>摘要頁面 (AlwaysOn 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68013906"
  **取消**  
  按一下可取消精靈。 在 **[摘要]** 頁面上，取消精靈會導致精靈結束，而不執行任何動作。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [&#91;頂端&#93;](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [&#91;頂端&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68013906"
   
 -   [使用容錯移轉可用性群組精靈 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [&#91;頂端&#93;](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [&#91;頂端&#93;](#Top)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

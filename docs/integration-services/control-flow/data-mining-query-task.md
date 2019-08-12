@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: bf7fc37921ae37996b5d93b1ed1e913232a28b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a981ec4f29cd1fe5dd9629498799dd488f03e3f8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101576"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893230"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
 
@@ -43,9 +43,9 @@ ms.locfileid: "68101576"
 ## <a name="prediction-queries"></a>預測查詢  
  查詢為「資料採礦延伸模組」(DMX) 陳述式。 DMX 語言為 SQL 語言的擴充模組，能提供使用採礦模型的支援。 如需如何使用 DMX 語言的詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)。  
   
- 此工作可查詢相同採礦結構上建立的多個採礦模型。 採礦模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的其中一種資料採礦演算法建立。 「資料採礦查詢」工作參考的採礦結構，可包含多個使用不同演算法建立的採礦模型。 如需詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) 和[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
+ 此工作可查詢相同採礦結構上建立的多個採礦模型。 採礦模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的其中一種資料採礦演算法建立。 「資料採礦查詢」工作參考的採礦結構，可包含多個使用不同演算法建立的採礦模型。 如需詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 和[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
- 「資料採礦查詢」工作執行的預測查詢會傳回單一資料列或資料集的結果。 傳回單一資料列的查詢稱為單一查詢：例如，預測夏季各月間將售出之帆船數的查詢會傳回數字。 如需傳回單一資料列之預測查詢的詳細資料，請參閱 [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
+ 「資料採礦查詢」工作執行的預測查詢會傳回單一資料列或資料集的結果。 傳回單一資料列的查詢稱為單一查詢：例如，預測夏季各月間將售出之帆船數的查詢會傳回數字。 如需傳回單一資料列之預測查詢的詳細資料，請參閱[資料採礦查詢工具](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)。  
   
  查詢結果會儲存到資料表。 如果「資料採礦查詢」工作指定的資料表名稱已存在，則工作可使用相同的名稱附加一個號碼建立新的資料表，或者覆寫資料表內容。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68101576"
 ## <a name="data-mining-query-task-editor-mining-model-tab"></a>資料採礦查詢工作編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢工作]** 對話方塊的 **[採礦模型]** 索引標籤，即可指定要使用的採礦結構和採礦模型。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md)(資料採礦方案)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) (資料採礦查詢工作) 和 [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)(資料採礦方案)。  
   
 ### <a name="general-options"></a>一般選項  
  **名稱**  
@@ -103,7 +103,7 @@ ms.locfileid: "68101576"
 ## <a name="data-mining-query-task-editor-query-tab"></a>資料採礦查詢工作編輯器 (查詢索引標籤)
   使用 [資料採礦查詢工作]  對話方塊的 [查詢]  索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](../../integration-services/control-flow/data-mining-query-task.md) 和 [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](../../integration-services/control-flow/data-mining-query-task.md) 和 [資料採礦方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
   
 ### <a name="general-options"></a>一般選項  
  **名稱**  
@@ -159,7 +159,7 @@ ms.locfileid: "68101576"
 ## <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
   使用 **[資料採礦查詢工作編輯器]** 對話方塊的 **[輸出]** 索引標籤，即可指定預測查詢的目的地。  
   
- 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](../../integration-services/control-flow/data-mining-query-task.md) 和 [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+ 若要深入了解在封裝中實作資料採礦，請參閱 [資料採礦查詢工作](../../integration-services/control-flow/data-mining-query-task.md) 和 [資料採礦方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
   
 ### <a name="general-options"></a>一般選項  
  **名稱**  

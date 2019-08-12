@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12acb028f3ac56e891e320337b04557f23ae861c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76e5accd2894e05fd9a9b346ad9b4825ccd81bc7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984721"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893020"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 
 - 新的 [詳細資料列]  終端使用者動作，可**顯示彙總資訊的詳細資料**。 [SELECTCOLUMNS](/dax/selectcolumns-function-dax) 和 **DETAILROWS** 函式，可建立詳細資料列運算式。 (CTP 1.1)
 - DAX **IN** 運算子，可指定多個值。 (CTP 1.1)
 
-如需詳細資訊，請參閱 [SQL Server Analysis Services 2017 的新功能](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)。
+如需詳細資訊，請參閱 [SQL Server Analysis Services 2017 的新功能](https://docs.microsoft.com/analysis-services/what-s-new-in-sql-server-analysis-services-2017)。
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 無法再透過 SQL Server 安裝程式安裝 SQL Server Reporting Services。 請前往 Microsoft 下載中心以[下載 Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。 

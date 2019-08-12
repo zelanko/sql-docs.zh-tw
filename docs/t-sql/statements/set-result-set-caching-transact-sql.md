@@ -11,15 +11,15 @@ f1_keywords: ''
 dev_langs:
 - TSQL
 helpviewer_keywords: ''
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7b2fa42b039f184485635d407adacd53081504b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f92c1a492ff23c8d783927c6e462c2147b72b9c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141327"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809764"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 

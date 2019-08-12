@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b921ed801297659b02a8f8cb2d22dcf1b498502e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024895"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892414"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>管理資料分割精靈 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "68024895"
  **以滑動視窗案例管理分割資料**  
  將空白的資料分割附加至可用於切換移入資料的現有資料表。 此精靈目前支援切換移入最後一個資料分割以及切換移出第一個資料分割。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
   
 ##  <a name="SwitchIn"></a> 選取資料分割切換移入選項頁面  
  使用 [選取資料分割切換移入選項]  頁面，選取您想要切換移入資料分割資料表的暫存資料表。  
@@ -104,7 +104,7 @@ ms.locfileid: "68024895"
  **切換移入資料表**  
  選取包含了您想要加入至資料分割資料表之資料分割的臨時資料表。 您必須先建立此暫存資料表，然後才能使用 [管理資料分割精靈]  來切換移入資料分割。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
   
 ##  <a name="SwitchOut"></a> 選取資料分割切換移出選項頁面  
  使用 [選取資料分割切換移出選項]  頁面，選取資料分割和暫存資料表來保存您想要切換移出資料分割資料表的分割資料。  
@@ -122,7 +122,7 @@ ms.locfileid: "68024895"
  **現有的**  
  選取您想要用來讓資料分割切換移出目前來源資料表的現有臨時資料表。 如果現有的資料表含有資料，您切換移出的資料就會覆寫這項資料。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
   
 ##  <a name="StagingTableOptions"></a> 選取暫存資料表選項頁面  
  使用 [選取暫存資料表選項]  頁面，即可建立您想要用來切換分割資料的暫存資料表。  
@@ -144,7 +144,7 @@ ms.locfileid: "68024895"
  **檔案群組**  
  為新的資料表選取檔案群組。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
   
 ##  <a name="OutputOption"></a> 選取輸出選項頁面  
  使用 [選取輸出選項]  頁面，指定要如何完成資料分割修改。  
@@ -171,7 +171,7 @@ ms.locfileid: "68024895"
  **變更排程**  
  開啟 [新增作業排程]  對話方塊，以便選取、變更或檢視排程作業的屬性。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
   
 ##  <a name="NewJob"></a> 新增作業排程頁面  
  使用 [新增作業排程]  頁面，即可檢視和變更排程的屬性。  
@@ -254,7 +254,7 @@ ms.locfileid: "68024895"
  **Time**  
  選取作業要執行的時間。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
   
 ##  <a name="Summary"></a> 摘要頁面  
  使用 [摘要]  頁面，即可檢閱您在先前頁面中選取的選項。  
@@ -263,7 +263,7 @@ ms.locfileid: "68024895"
  **檢閱您的選取項目**  
  針對精靈的每一頁，顯示您所選取的項目。 按一下節點即可展開並檢視您先前選取的選項。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
   
 ##  <a name="Progress"></a> 進度頁面  
  使用 [進度]  頁面，即可監視有關 [管理資料分割精靈]  動作的狀態資訊。 根據您在精靈中選取的選項，[進度]  頁面可能會包含一或多個動作。 頂端的方塊會顯示精靈的整體狀態以及精靈已接收的狀態、錯誤和警告訊息數。  
@@ -301,7 +301,7 @@ ms.locfileid: "68024895"
  **關閉**  
  關閉精靈。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
   
 ## <a name="see-also"></a>另請參閱  
  [分割資料表與索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  

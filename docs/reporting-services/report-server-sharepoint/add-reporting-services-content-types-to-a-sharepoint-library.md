@@ -9,12 +9,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: adac7275de5663d8e30c2638c270c13b453aa0ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574578"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887742"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
 
@@ -60,7 +60,7 @@ ms.locfileid: "65574578"
   
 2.  前往 **[網站設定]** 。  
   
-    -   在 SharePoint 2013，按一下 **[設定]** 圖示。 ![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")  
+    -   在 SharePoint 2013，按一下 **[設定]** 圖示。 ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")  
   
     -   在 SharePoint 2010，按一下 **[網站動作]** ，然後按一下 **[網站設定]** 。  
   

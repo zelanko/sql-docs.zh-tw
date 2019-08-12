@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100258"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715289"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -224,7 +224,7 @@ GO
 
 [提高 T-SQL 效能的記憶體內部 OLTP 技術](https://msdn.microsoft.com/library/mt694156.aspx)   
 如需使用記憶體內部 OLTP 的效能示範，請參閱：[in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
-[說明記憶體內部 OLTP 並顯示示範的 17 分鐘影片](https://www.youtube.com/watch?v=l5l5eophmK4) (示範是 8:25)   
+[說明記憶體內部 OLTP 並顯示示範的 17 分鐘影片](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
 [啟用記憶體內部 OLTP 並設定建議選項的指令碼](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
 [主要的記憶體內部 OLTP 文件](in-memory-oltp-in-memory-optimization.md)   
 [Performance and resource utilization benefits of In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/) (Azure SQL Database 中記憶體內部 OLTP 的效能與資源使用率優點)  

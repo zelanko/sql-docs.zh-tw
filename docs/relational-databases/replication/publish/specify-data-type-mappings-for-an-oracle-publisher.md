@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a5b5a6215127b59d90e1de1188223281024304f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f86c97036c74024c47d71150586135022543588
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113906"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661310"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>指定 Oracle 發行者的資料類型對應
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,29 +57,29 @@ ms.locfileid: "68113906"
   
 1.  如果沒有 Oracle 發行集存在，請建立一個。  
   
-2.  在散發者上執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **@use_default_datatypes** 指定 **@use_default_datatypes** 中指定 Oracle 發行者的資料類型對應。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+2.  在散發者上執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **\@use_default_datatypes** 指定 **0** 值。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 3.  在散發者上，執行 [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) ，以檢視已發行之發行項中資料行的現有對應。  
   
-4.  在散發者上，執行 [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)。 針對 **@publisher** 指定 Oracle 發行者的名稱，並指定 **@publication** 、 **@article** 和 **@column** 來定義已發行的資料行。 針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @type **@type** 指定 Oracle 發行者的名稱，並指定 **@length** 、 **@precision** 和 **@scale** 。  
+4.  在散發者上，執行 [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者的名稱，並指定 **\@publication**、 **\@article** 和 **\@column** 來定義已發佈的資料行。 針對 **\@type** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要對應的資料類型名稱，並指定適用的 **\@length**、 **\@precision** 和 **\@scale**。  
   
 5.  在散發者上執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 這樣會建立用來從 Oracle 發行集產生快照集的檢視。  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>將對應指定為資料類型的預設對應  
   
-1.  (選擇性) 在任何資料庫的散發者上，執行 [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)。 指定 **@source_dbms** 、 **@source_type** 、 **@destination_dbms** 、 **@destination_version** 及識別來源 DBMS 所需的任何其他參數。 目的地 DBMS 中有關目前對應之資料類型的資訊會使用輸出參數傳回。  
+1.  (選擇性) 在任何資料庫的散發者上，執行 [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)。 指定 **\@source_dbms**、 **\@source_type**、 **\@destination_dbms**、 **\@destination_version** 及識別來源 DBMS 所需的任何其他參數。 目的地 DBMS 中有關目前對應之資料類型的資訊會使用輸出參數傳回。  
   
-2.  (選擇性) 在任何資料庫的散發者上，執行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 指定 **@source_dbms** 及篩選結果集所需的任何其他參數。 請記下結果集中所需之對應的 **mapping_id** 值。  
+2.  (選擇性) 在任何資料庫的散發者上，執行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 指定 **\@source_dbms** 及篩選結果集所需的任何其他參數。 請記下結果集中所需之對應的 **mapping_id** 值。  
   
 3.  在任何資料庫的散發者上，執行 [sp_setdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)。  
   
-    -   如果您知道步驟 2 中取得之 **mapping_id** 的所要值，請針對 **@mapping_id** 中指定 Oracle 發行者的資料類型對應。  
+    -   如果您知道步驟 2 中所取得 **mapping_id** 的所需值，請針對 **\@mapping_id** 來指定它。  
   
-    -   如果您不知道 **mapping_id**，請指定 **@source_dbms** 、 **@source_type** 、 **@destination_dbms** 、 **@destination_type** 等參數，以及識別現有對應所需的任何其他參數。  
+    -   如果您不知道 **mapping_id**，請指定 **\@source_dbms**、 **\@source_type**、 **\@destination_dbms**、 **\@destination_type** 等參數，以及識別現有對應所需的任何其他參數。  
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>在有效的資料類型中找出給定的 Oracle 資料類型  
   
-1.  在任何資料庫的散發者上，執行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 針對 **@source_dbms** 指定 **@source_dbms** 及篩選結果集所需的任何其他參數。  
+1.  在任何資料庫的散發者上，執行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 針對 **\@source_dbms** 指定 **ORACLE** 值，並指定篩選結果集所需的任何其他參數。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例會變更具有 NUMBER 之 Oracle 資料類型的資料行，好讓它對應到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型 **numeric**(38,38)，而不是預設的資料類型 **float**中指定 Oracle 發行者的資料類型對應。  

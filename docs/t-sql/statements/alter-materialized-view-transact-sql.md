@@ -17,15 +17,15 @@ helpviewer_keywords:
 - views [SQL Server], modifying
 - modifying views
 - ALTER VIEW statement
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b42c4c32f671d55df46cc1c86e94f5dc894d3004
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b03515cb8fa6780f43927327b4afec21b3933acb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223635"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809745"
 ---
 # <a name="alter-materialized-view-transact-sql-preview"></a>ALTER MATERIALIZED VIEW (Transact-SQL) (預覽)
 
