@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 48f87e876f7b73457cdf1ebf0e6201e9fd8032cc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: eac39b0cbc4cdb09b6f20f68517d258a34a38155
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476037"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893864"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：使用 Docker 執行 SQL Server 容器映像
 
@@ -94,7 +94,7 @@ any changes to one section should be duplicated in the other-->
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" \
+   sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
