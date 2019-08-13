@@ -1,6 +1,6 @@
 ---
-title: 開始使用 Linux 上的 SQL Server 安全性
-description: 本文說明一般的安全性動作。
+title: Linux 上的 SQL Server 安全性入門
+description: 本文描述一般的安全性動作。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,34 +9,34 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68019506"
 ---
-# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性功能的逐步解說
+# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 安全性功能逐步解說
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-如果您是剛接觸 SQL Server 的 Linux 使用者時，下列工作會引導您完成一些安全性工作。 這些不是唯一或特定 Linux，但它有助於讓您了解區域以進一步調查。 在每個範例中，會提供該區域的深入文件的連結。
+如果您是剛開始使用 SQL Server 的 Linux 使用者，下列工作將逐步解說其中一些安全性工作。 這不是 Linux 唯一或特定功能，但可協助您大致了解哪些區域需要進一步調查。 在每個範例中，會提供該區域的深入文件連結。
 
 > [!NOTE]
->  下列範例會使用**AdventureWorks2014**範例資料庫。 如需有關如何取得並安裝這個範例資料庫的指示，請參閱 <<c0> [ 從 Windows 的 SQL Server 資料庫還原到 Linux](sql-server-linux-migrate-restore-database.md)。
+>  下列範例使用 **AdventureWorks 2014** 範例資料庫。 如需如何取得和安裝此範例資料庫的指示，請參閱[將 SQL Server 資料庫從 Windows 還原到 Linux](sql-server-linux-migrate-restore-database.md)。
 
 
 ## <a name="create-a-login-and-a-database-user"></a>建立登入和資料庫使用者 
 
-授與其他人所建立的登入在 master 資料庫中使用的 SQL Server 存取[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)陳述式。 例如:
+使用 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) 陳述式，在 master 資料庫中建立登入，以將 SQL Server 的存取權授與其他人。 例如：
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
 > [!NOTE]
->  在前一個命令中，永遠使用強式密碼取代星號。
+>  請一律使用強式密碼來取代上一個命令中的星號。
 
-登入可以連接到 SQL Server，並具有 master 資料庫 （具有有限的權限） 存取。 若要連接至使用者資料庫，登入必須在資料庫層級，呼叫資料庫使用者對應的身分識別。 使用者只適用於每個資料庫，而且必須授與他們存取的每個資料庫中個別建立。 下列範例會將您移至 AdventureWorks2014 資料庫，並接著會使用[CREATE USER](../t-sql/statements/create-user-transact-sql.md)陳述式來建立名為 Larry 與名為 Larry 登入相關聯的使用者。 登入和使用者相關 （彼此對應），但它們是不同的物件。 登入是伺服器層級原則。 使用者是資料庫層級主體。
+登入可以連線到 SQL Server 且可以存取 (權限受限) master 資料庫。 若要連線到使用者資料庫，登入需要資料庫層級的對應識別，稱為資料庫使用者。 使用者特定於每個資料庫，且必須在每個資料庫中個別建立，才能授與其存取權。 下列範例會將您移至 AdventureWorks2014 資料庫，然後使用 [CREATE USER](../t-sql/statements/create-user-transact-sql.md) 陳述式來建立名為 Larry 的使用者，其與名為 Larry 的登入建立關聯。 雖然登入和使用者相互關聯 (彼此對應)，但它們是不同的物件。 登入是伺服器層級的主體。 使用者是資料庫層級的主體。
 
 ```
 USE AdventureWorks2014;
@@ -45,10 +45,10 @@ CREATE USER Larry;
 GO
 ```
 
-- SQL Server 系統管理員帳戶可以連接到任何資料庫，而且可以建立多個登入和使用者在任何資料庫中。  
-- 當有人建立資料庫時，它們成為資料庫擁有者，可以連接至該資料庫。 資料庫擁有者可以建立更多使用者。
+- SQL Server 的系統管理員帳戶可以連線到任何資料庫，且可以在任何資料庫中建立更多登入和使用者。  
+- 當有人建立資料庫時，他們就會成為資料庫擁有者，因而可以連線到該資料庫。 資料庫擁有者可以建立更多的使用者。
 
-稍後您可以授權其他登入，以便建立更多的登入，授與他們`ALTER ANY LOGIN`權限。 在資料庫內，您可以授權其他使用者授與它們建立更多使用者`ALTER ANY USER`權限。 例如:   
+稍後，您可以授權其他登入，藉由授與其 `ALTER ANY LOGIN` 權限來建立更多登入。 在資料庫內，您可以授權其他使用者，藉由授與其 `ALTER ANY USER` 權限來建立更多使用者。 例如：   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -60,14 +60,14 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-登入 Larry 現在可以建立多個登入和使用者 Jerry 可以建立更多使用者。
+現在登入 Larry 可以建立更多登入，而使用者 Jerry 可以建立更多使用者。
 
 
-## <a name="granting-access-with-least-privileges"></a>以最低權限的存取權授與
+## <a name="granting-access-with-least-privileges"></a>以最低權限授與存取權
 
-系統管理員和資料庫擁有者帳戶，將會連接至使用者資料庫的第一個人。 不過這些使用者會在資料庫上擁有可用的所有權限。 這是更多的權限的大部分使用者應該擁有比。 
+第一個連線到使用者資料庫的人員，將會是系統管理員和資料庫擁有者帳戶。 不過，這些使用者擁有資料庫上所有可用權限。 這比大部分使用者擁有更多的權限。 
 
-當您剛開始使用時，您就可以使用內建指派權限的某些一般分類*固定資料庫角色*。 比方說，`db_datareader`固定的資料庫角色可以讀取所有的資料表，在資料庫中，但不做任何變更。 使用授與固定的資料庫角色的成員資格[ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)陳述式。 下列範例會將使用者新增`Jerry`至`db_datareader`固定的資料庫角色。   
+當您剛開始使用時，可以使用內建的「固定資料庫角色」  來指派一些一般的權限類別。 例如，`db_datareader` 固定資料庫角色可以讀取資料庫中的所有資料表，但不會進行任何變更。 請使用 [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) 陳述式來授與固定資料庫角色中的成員資格。 下列範例會將使用者 `Jerry` 新增至 `db_datareader` 固定資料庫角色。   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,11 +76,11 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-如需固定的資料庫角色的清單，請參閱 <<c0> [ 資料庫層級角色](../relational-databases/security/authentication-access/database-level-roles.md)。
+如需固定資料庫角色的清單，請參閱[資料庫層級角色](../relational-databases/security/authentication-access/database-level-roles.md)。
 
-稍後，當您準備好要設定更精確地存取您的資料 （強烈建議），建立您自己使用的使用者定義資料庫角色[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)陳述式。 然後，將特定的細微權限指派給您的自訂角色。
+之後，當您準備好設定更精確的資料存取 (強烈建議) 時，請使用 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) 陳述式來建立您自己的使用者定義資料庫角色。 然後，將特定的細微權限指派給您的自訂角色。
 
-例如，下列陳述式建立名為的資料庫角色`Sales`，授與`Sales`分組的能力，請參閱、 更新和刪除資料列`Orders`資料表，然後再將使用者加入`Jerry`到`Sales`角色。   
+例如，下列陳述式會建立名為 `Sales` 的資料庫角色，授與 `Sales` 群組從 `Orders` 資料表查看、更新及刪除資料列的能力，然後將使用者 `Jerry` 新增至該 `Sales` 角色。   
    
 ```   
 CREATE ROLE Sales;   
@@ -135,11 +135,11 @@ WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())
 Create a security policy adding the function as both a filter and a block predicate on the table:  
 
 ```
-建立安全性原則 SalesFilter   
+CREATE SECURITY POLICY SalesFilter   
 ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
-  在 Sales.SalesOrderHeader，   
-加入區塊述詞 Security.fn_securitypredicate(SalesPersonID)    
-  在 Sales.SalesOrderHeader   
+  ON Sales.SalesOrderHeader,   
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
@@ -148,18 +148,18 @@ Execute the following to query the `SalesOrderHeader` table as each user. Verify
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
 SELECT * FROM Sales.SalesOrderHeader;    
-還原; 
+REVERT; 
  
 EXECUTE AS USER = 'Manager';   
 SELECT * FROM Sales.SalesOrderHeader;   
-還原;   
+REVERT;   
 ```
  
 Alter the security policy to disable the policy.  Now both users can access all rows. 
 
 ```
-改變安全性原則 SalesFilter   
-使用 (狀態 = 關閉);    
+ALTER SECURITY POLICY SalesFilter   
+WITH (STATE = OFF);    
 ``` 
 
 
@@ -170,19 +170,19 @@ Alter the security policy to disable the policy.  Now both users can access all 
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-使用 AdventureWorks2014;移的 ALTER 資料表 Person.EmailAddress     ALTER 資料行 EmailAddress    
-新增遮罩與 (函式 = ' email()');
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-建立使用者 TestUser 沒有登入;   
-GRANT SELECT ON Person.EmailAddress 至 TestUser;    
+CREATE USER TestUser WITHOUT LOGIN;   
+GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
 EXECUTE AS USER = 'TestUser';   
 SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
-還原;    
+REVERT;    
 ```
  
 Verify that the masking function changes the email address in the first record from:
@@ -225,18 +225,18 @@ GO
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
-建立憑證 MyServerCert 主體 = '我資料庫加密金鑰憑證';  
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-使用 AdventureWorks2014; 移
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
-演算法 = AES_256  
-ENCRYPTION BY SERVER 憑證 MyServerCert;  
+WITH ALGORITHM = AES_256  
+ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
 ALTER DATABASE AdventureWorks2014  
-設定加密   
+SET ENCRYPTION ON;   
 ```
 
 To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
@@ -258,12 +258,12 @@ SQL Server has the ability to encrypt the data while creating a backup. By speci
  
 The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
-使用主版; 移 建立憑證 BackupEncryptCert 主體 = '資料庫備份;' 請備份資料庫 [AdventureWorks2014] 磁碟 = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
+USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 取代所有提及的  
-  壓縮，  
+  COMPRESSION,  
   ENCRYPTION   
    (  
-   演算法 = AES_256，  
+   ALGORITHM = AES_256,  
    SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  

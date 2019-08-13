@@ -1,6 +1,6 @@
 ---
-title: 管理 SQL Server on Linux
-description: 本文提供一般管理工作和工具的連結適用於 SQL Server 在 Linux 上執行。
+title: 管理 Linux 上的 SQL Server
+description: 本文提供 Linux 上執行之 SQL Server 的常見管理工作和工具連結。
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
@@ -9,42 +9,42 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68000051"
 ---
-# <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>選擇正確的工具來管理 SQL Server on Linux
+# <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>選擇適當的工具，管理 Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-有幾種方式來管理 SQL Server on Linux。 下一節提供不同的管理工具和技術，具有更多資源的指標的快速概觀。
+有數種方式可以管理 Linux 上的 SQL Server。 下一節將快速介紹各種不同的管理工具和技術，並建議更多資源。
 
 ## <a name="mssql-conf"></a>mssql-conf 
 
-**Mssql conf**工具在 Linux 上設定 SQL Server。 如需詳細資訊，請參閱 <<c0> [ 設定 SQL Server on Linux 使用 mssql-conf](sql-server-linux-configure-mssql-conf.md)。
+**mssql-conf** 工具可設定 Linux 上的 SQL Server。 如需詳細資訊，請參閱[使用 mssql-conf 在 Linux 上設定 SQL Server](sql-server-linux-configure-mssql-conf.md)。
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-幾乎能夠進行的所有用戶端工具也可以使用 TRANSACT-SQL 陳述式完成。 SQL Server 提供[動態管理檢視 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) ，查詢 狀態和 SQL Server 的組態。 另外還有[TRANSACT-SQL 命令](../t-sql/language-reference.md)資料庫管理工作。 您可以執行下列命令中支援連接到 SQL Server 和執行 TRANSACT-SQL 查詢，例如任何用戶端工具[sqlcmd](sql-server-linux-setup-tools.md)或是[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+幾乎所有可在用戶端工具中執行的工作，也可透過 Transact-SQL 陳述式完成。 SQL Server 提供[動態管理檢視 (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)，查詢 SQL Server 的狀態和組態。 還有用於資料庫管理工作的 [Transact-SQL 命令](../t-sql/language-reference.md)。 您可以在任何支援連線到 SQL Server 並執行 Transact-SQL 查詢的用戶端工具 (例如 [sqlcmd](sql-server-linux-setup-tools.md) 或 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)) 中執行這些命令。
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-新的 Azure Data Studio 是用於管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱 < [Azure Data Studio](../azure-data-studio/what-is.md)。
+新的 Azure Data Studio 是用於管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱 [Azure Data Studio](../azure-data-studio/what-is.md)。
 
-## <a name="sql-server-management-studio-on-windows"></a>在 Windows 上的 SQL Server Management Studio
+## <a name="sql-server-management-studio-on-windows"></a>Windows 上的 SQL Server Management Studio
 
-SQL Server Management Studio (SSMS) 是用於管理 SQL Server 提供圖形化使用者介面的 Windows 應用程式。 雖然它目前只能在 Windows 上執行，您可以從遠端連線到您的 Linux SQL Server 執行個體中使用它。 如需有關如何使用 SSMS 管理 SQL Server 的詳細資訊，請參閱 <<c0> [ 使用 SSMS 管理 SQL Server on Linux](sql-server-linux-manage-ssms.md)。
+SQL Server Management Studio (SSMS) 是 Windows 應用程式，提供用於管理 SQL Server 的圖形化使用者介面。 雖然目前只在 Windows 上執行，但您可以用以遠端連線到 Linux SQL Server 執行個體。 如需使用 SSMS 管理 SQL Server 的詳細資訊，請參閱[使用 SSMS 管理 Linux 上的 SQL Server](sql-server-linux-manage-ssms.md)。
 
-## <a name="mssql-cli-preview"></a>mssql cli （預覽）
+## <a name="mssql-cli-preview"></a>mssql-cli (預覽)
 
-Microsoft 已發行新的跨平台指令碼工具，適用於 SQL Server [mssql cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)。 這項工具目前為預覽狀態。
+Microsoft 發行了適用於 SQL Server 的新跨平台指令碼工具 [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)。 此工具目前為預覽狀態。
 
 ## <a name="powershell"></a>PowerShell
 
-PowerShell 提供豐富的命令列環境，來管理 SQL Server on Linux。 如需詳細資訊，請參閱 <<c0> [ 使用 PowerShell 管理 SQL Server on Linux](sql-server-linux-manage-powershell.md)。
+PowerShell 提供豐富的命令列環境來管理 Linux 上的 SQL Server。 如需詳細資訊，請參閱[使用 PowerShell 管理 Linux 上的 SQL Server](sql-server-linux-manage-powershell.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
-在 Linux 上 SQL Server 的相關資訊，請參閱[在 Linux 上的 SQL Server](sql-server-linux-overview.md)。
+如需 Linux 上 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](sql-server-linux-overview.md)。

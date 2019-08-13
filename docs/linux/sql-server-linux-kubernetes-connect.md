@@ -1,6 +1,6 @@
 ---
-title: 連線到 SQL Server Always On 可用性群組上的 Kubernetes 叢集
-description: 這篇文章說明如何連接到 Alwayson 可用性群組
+title: 連線到 Kubernetes 叢集上的 SQL Server Always On 可用性群組
+description: 本文說明如何連線到 Always On 可用性群組
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,48 +10,48 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f05bc51f587723414d3b0a4090fe2b27ad5fb837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67952608"
 ---
-# <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>連接到 SQL Server Always On 可用性群組在 Kubernetes 上
+# <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>連線到 Kubernetes 上的 SQL Server Always On 可用性群組
 
-若要連線到 Kubernetes 叢集上的容器中的 SQL Server 執行個體，建立[負載平衡器服務](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)。 負載平衡器端點。 它會保留的 IP 位址，並轉送到執行 SQL Server 執行個體的 pod 的 IP 位址的要求。
+若要連線到 Kubernetes 叢集上容器中的 SQL Server 執行個體，請建立[負載平衡器服務](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)。 負載平衡器是一個端點。 它包含一個 IP 位址，並會將 IP 位址的要求轉送到執行 SQL Server 執行個體的 Pod。
 
-若要連接到可用性群組複本，建立不同的複本類型的服務。 您可以看到服務中的複本不同類型的範例[sql-server-範例/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)。
+若要連線到可用性群組複本，請為不同的複本類型建立服務。 您可以在 [sql-server-samples/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) 中查看不同複本類型的服務範例。
 
 * `ag1-primary` 指向主要複本。
 * `ag1-secondary` 指向任何次要複本。
 
-如果多個有一個次要複本，Kubernetes 會將您的連線路由到不同的複本，以循環配置資源的方式。
+如果有多個次要複本，Kubernetes 會以循環配置資源的方式，將您的連線路由至不同的複本。
 
 ## <a name="create-a-load-balancer-service"></a>建立負載平衡器服務
 
-若要建立的主要和複本的負載平衡器服務，請將複製[ `ag1-services.yaml` ](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml)從[sql server 範例](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file)並更新您的可用性群組。
+若要建立主要和其他複本的負載平衡器服務，請從 [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file) 複製 [`ag1-services.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml)，並針對您的可用性群組加以更新。
 
-下列命令會將組態從`.yaml`到叢集的檔案：
+下列命令會將 `.yaml` 檔案中的組態套用至叢集：
 
 ```kubectl
 kubectl apply -f ag1-services.yaml --namespace ag1
 ```
 
-## <a name="get-the-ip-address-for-your-load-balancer-service"></a>取得您的負載平衡器服務的 IP 位址
+## <a name="get-the-ip-address-for-your-load-balancer-service"></a>取得負載平衡器服務的 IP 位址
 
-若要取得您的負載平衡器服務的負載平衡器 IP 位址，執行
+若要取得負載平衡器服務的負載平衡器 IP 位址，請執行
 
 ```kubectl
 kubectl get services
 ```
 
-找出您想要連接到服務的 IP 位址。
+識別您要連線的服務 IP 位址。
 
-## <a name="connect-to-primary-replica"></a>連接到主要複本
+## <a name="connect-to-primary-replica"></a>連線到主要複本
 
-若要連線到 SQL 驗證的主要複本，請使用`sa`帳戶、 值`sapassword`您所建立的密碼與此 IP 位址。
+若要使用 SQL 驗證連線到主要複本，請使用 `sa` 帳戶、您所建立祕密中的 `sapassword` 值，以及此 IP 位址。
 
-例如:
+例如：
 
 ```cmd
 sqlcmd -S <0.0.0.0> -U sa -P "<MyC0m9l&xP@ssw0rd>"
@@ -61,4 +61,4 @@ sqlcmd -S <0.0.0.0> -U sa -P "<MyC0m9l&xP@ssw0rd>"
 
 [管理 Kubernetes 叢集上的 SQL Server 可用性群組](sql-server-linux-kubernetes-manage.md)
 
-[在 Kubernetes 叢集上的 SQL Server 可用性群組](sql-server-ag-kubernetes.md)
+[Kubernetes 叢集上的 SQL Server 可用性群組](sql-server-ag-kubernetes.md)

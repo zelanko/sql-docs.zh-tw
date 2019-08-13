@@ -1,7 +1,7 @@
 ---
-title: 新增額外的功能，透過擴充性
+title: 透過擴充性新增其他功能
 titleSuffix: Azure Data Studio
-description: 了解的擴充性模型和金鑰的擴充性方面的擴充功能的 Azure Data Studio
+description: 了解用於擴充 Azure Data Studio 功能的擴充性模型和重要擴充性領域
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,53 +11,53 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959592"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>開始使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充性
+# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>開始使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 擴充性
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 有數個擴充性機制，以自訂使用者體驗，以及讓整個使用者社群中使用這些自訂。 核心[!INCLUDE[name-sos](../includes/name-sos.md)]平台會根據 Visual Studio Code 中，因此大部分的 Visual Studio Code 擴充性 Api 可使用。 此外，我們提供了額外的擴充性點的資料特定管理活動。
+[!INCLUDE[name-sos](../includes/name-sos.md)] 具有數個擴充性機制，可自訂使用者體驗，並將這些自訂項目提供給整個使用者社群。 核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台是以 Visual Studio Code 為建置基礎，因此大部分的 Visual Studio Code 擴充性 API 都可供使用。 此外，我們也為資料管理特定活動提供了額外的擴充點。
 
-金鑰的擴充性點的部分包括：
+其中一些重要的擴充點包括：
 
-- Visual Studio Code 擴充性 Api
-- Azure 製作工具的資料 Studio 擴充功能
-- 管理儀表板 索引標籤面板的貢獻
-- 深入了解動作體驗
-- Azure Data Studio 擴充性 Api
-- 自訂資料提供者 Api
+- Visual Studio Code 擴充性 API
+- Azure Data Studio 延伸模組撰寫工具
+- 管理儀表板索引標籤面板貢獻
+- 可採取動作的深入解析體驗
+- Azure Data Studio 擴充性 API
+- 自訂 Data Provider API
 
-## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 擴充性 Api
+## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 擴充性 API
 
-因為核心[!INCLUDE[name-sos](../includes/name-sos.md)]平台會根據 Visual Studio Code、 Visual Studio Code 擴充性 Api 的詳細資料中找到[延伸模組製作](https://code.visualstudio.com/docs/extensions/overview)並[延伸模組 API](https://code.visualstudio.com/docs/extensionAPI/overview)Visual Studio Code 網站上的文件。
+由於核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台是以 Visual Studio Code 為建置基礎，因此您可以在 Visual Studio Code 網站的[延伸模組撰寫](https://code.visualstudio.com/docs/extensions/overview)和[延伸模組 API](https://code.visualstudio.com/docs/extensionAPI/overview) 文件中，找到 Visual Studio Code 擴充性 API 的詳細資料。
 
-## <a name="manage-dashboard-tab-panel-contributions"></a>管理儀表板 索引標籤面板的貢獻
+## <a name="manage-dashboard-tab-panel-contributions"></a>管理儀表板索引標籤面板貢獻
 
-如需詳細資訊，請參閱 <<c0> [ 貢獻點](#contribution-points)並[內容變數](#context-variables)。
+如需詳細資訊，請參閱[貢獻點](#contribution-points)和[內容變數](#context-variables)。
 
-## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 擴充性 Api
+## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 擴充性 API
 
-如需詳細資訊，請參閱 <<c0> [ 擴充性 Api](extensibility-apis.md)。
+如需詳細資訊，請參閱[擴充性 API](extensibility-apis.md)。
 
 
 ## <a name="contribution-points"></a>貢獻點
 
-本章節涵蓋 package.json 延伸模組資訊清單中所定義的各種貢獻點。
+本節涵蓋 package.json 延伸模組資訊清單中定義的各種貢獻點。
 
-Azuredatastudio 內，不支援 IntelliSense。
+azuredatastudio 中支援 IntelliSense。
 
-## <a name="contributes-dashboard"></a>提供儀表板
+## <a name="contributes-dashboard"></a>提供給儀表板
 
-參與索引標籤、 容器、 深入解析儀表板的小工具。
+將索引標籤、容器、深入解析小工具提供給儀表板。
 
 ![儀表板](media/extensibility/dashboard-page.png)
 
 `dashboard.tabs`
 
-Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件的陣列。  
+Dashboard.tabs 會在儀表板頁面內建立索引標籤區段。 其中必須有物件或物件陣列。  
 
 ```json
 "dashboard.tabs": [
@@ -76,7 +76,7 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 `dashboard.containers`
 
-而不是指定將容器內嵌儀表板 （位於內部 dashboard.tab)。 您可以註冊使用 dashboard.containers 的容器。 它會接受物件的陣列。
+不需要指定內嵌儀表板容器 (在 dashboard.tab 內)。 您可以使用 dashboard.containers 註冊容器。 它接受物件或物件陣列。
 
 ```json
 "dashboard.containers": [
@@ -95,7 +95,7 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 ]
 ```
 
-若要參考已註冊的容器，指定容器的識別碼
+若要參考已註冊的容器，請指定容器的識別碼
 
 ```json
 "dashboard.tabs": [
@@ -112,7 +112,7 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 `dashboard.insights`
 
-您可以註冊使用 dashboard.insights 的深入解析。 這是類似於[教學課程：建置自訂的深入解析小工具](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+您可以使用 dashboard.insights 註冊深入解析。 這類似[教學課程：建置自訂深入解析小工具](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -131,15 +131,15 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 ```
 
 
-### <a name="dashboard-container-types"></a>儀表板的容器類型
+### <a name="dashboard-container-types"></a>儀表板容器類型
 
-目前有四種支援的容器類型：
+目前支援四種容器類型：
 
 1. `widgets-container`
 
-    ![小工具的容器](media/extensibility/widgets-container.png)
+    ![widgets-container](media/extensibility/widgets-container.png)
 
-    將容器中顯示的小工具的清單。 這是流程配置。 它可接受小工具的清單。
+    小工具清單會顯示在容器中。 這是流程配置。 它接受小工具清單。
 
     ```json
     "container": {
@@ -162,9 +162,9 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 2. `webview-container`
 
-    ![web 檢視容器](media/extensibility/webview-container.png)
+    ![webview-container](media/extensibility/webview-container.png)
 
-    Web 檢視會顯示在整個容器。 它會預期要索引標籤的識別碼也是一樣的 webview 識別碼
+    WebView 會顯示在整個容器中。 WebView 識別碼必須與索引標籤識別碼相同
 
     ```json
     "container": {
@@ -174,9 +174,9 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 3. `grid-container`
 
-   ![方格容器](media/extensibility/grid-container.png)
+   ![grid-container](media/extensibility/grid-container.png)
 
-   Widget 或將會顯示在格線版面配置的 web 檢視的清單
+   會顯示在格線配置中的小工具或 WebView 清單
 
     ```json
     "container": {
@@ -226,9 +226,9 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 4.  `nav-section`
 
-    ![瀏覽區段](media/extensibility/nav-section.png)
+    ![nav-section](media/extensibility/nav-section.png)
 
-    瀏覽區段會顯示在容器中
+    導覽區段會顯示在容器中
 
     ```json
     "container": {
@@ -263,18 +263,18 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 ## <a name="context-variables"></a>內容變數
 
-如需在 Visual Studio Code 和後續 Azure Data Studio 中的內容的一般資訊，請參閱[擴充性](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)。
+如需 Visual Studio Code 和後續 Azure Data Studio 中內容的一般資訊，請參閱[擴充性](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)。
 
-在 Azure Data Studio，我們會有可用的延伸模組的資料庫連接相關的特定內容。
+在 Azure Data Studio 中，我們有資料庫連線 (可用於延伸模組) 的相關特定內容。
 
 ### <a name="dashboard"></a>儀表板
 
-在儀表板，我們會提供下列的內容變數：
+在儀表板中，我們提供下列內容變數：
 
 |內容變數| description|
 |:---|:---|
-|`connectionProvider` | 目前連接的提供者的識別項的字串。 例如 `connectionProvider == 'MSSQL'`.|
-|`serverName`|目前連接的伺服器名稱的字串。 例如 `serverName == 'localhost'`.|
-|`databaseName` | 目前連接的資料庫名稱的字串。 例如 `databaseName == 'master'`.|
-|`connection` | 完整的連線設定檔物件，目前的連接 (IConnectionProfile)|
-|`dashboardContext` | 儀表板頁面內容的字串，目前已開啟。 'Database' 或者 'server'。 例如 `dashboardContext == 'database'`|
+|`connectionProvider` | 目前連線提供者的識別碼字串。 例如 第 1 課：建立 Windows Azure 儲存體物件`connectionProvider == 'MSSQL'`。|
+|`serverName`|目前連線的伺服器名稱字串。 例如 第 1 課：建立 Windows Azure 儲存體物件`serverName == 'localhost'`。|
+|`databaseName` | 目前連線的資料庫名稱字串。 例如 第 1 課：建立 Windows Azure 儲存體物件`databaseName == 'master'`。|
+|`connection` | 目前連線的完整連線設定檔物件 (IConnectionProfile)|
+|`dashboardContext` | 目前所在的儀表板頁面內容字串。 可能是 'database' 或 'server'。 例如 `dashboardContext == 'database'`|

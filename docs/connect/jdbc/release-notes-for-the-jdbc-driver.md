@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 的版本資訊 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,67 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 45af95d26da9b05b6e8e99dd78936e1f7bb6ed6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002447"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891290"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的版本資訊
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 本文會列出 _Microsoft JDBC Driver for SQL Server_ 的版本。 針對每個發行版本，會將變更命名並加以描述。
+## <a name="741"></a>7.4.1
+
+### <a name="compliance"></a>遵循
+
+2019年8月2日
+
+| 合規性變更 | 詳細資料 |
+| :---------------- | :------ |
+| 下載 JDBC Driver 7.4 的最新更新。 | &bull; &nbsp; [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub，7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven 中心](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 完全符合 JDBC API 規格 4.2 的規範。 | 7.4 套件中的 jar 會根據 Java 版本相容性命名。<br/><br/>例如，來自 7.4 套件的 mssql-jdbc-7.4.1.jre11.jar 檔案應該與 Java 11 搭配使用。 |
+| 與 JAVA 開發工具組 (JDK) 12.0、11.0 和1.8 版本相容。 | 除了 JDK 11.0 和 1.8 之外，Microsoft JDBC Driver 7.4 for SQL Server 現在還與 Java 開發套件 (JDK) 12.0 版相容。 |
+| &nbsp; | &nbsp; |
+
+### <a name="support-for-jdk-12"></a>JDK 12 支援
+
+除了 JDK 11.0 和 1.8 之外，Microsoft JDBC Driver 7.4 for SQL Server 現在還與 Java 開發套件 (JDK) 12.0 版相容。
+
+### <a name="introduces-ntlm-authentication"></a>引進 NTLM 驗證
+
+| NTLM 變更 | 詳細資料 |
+| :--------- | :------ |
+| 支援 NTLM 驗證模式。 | 這種驗證模式可讓 Windows 和非 Windows 用戶端使用 Windows 網域使用者, 針對 SQL Server 進行驗證。 |
+| 更多詳細資料及一個範例應用程式來使用此驗證模式。 | 請參閱[使用 NTLM 驗證進行連接](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>透過 _介紹查詢 java.sql.parametermetadata
+
+| useFmtOnly 變更 | 詳細資料 |
+| :---------- | :------ |
+| 已新增**useFmtOnly**連接屬性。 | 這項功能可讓使用者透過`SET FMTONLY ON`舊版 API 選擇性地查詢 java.sql.parametermetadata。 這適用于`sp_describe_undeclared_parameters`不會如預期般執行的案例。 |
+| 更多詳細資料和限制。 | 請參閱 [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>更新了「適用於 Java 的 Microsoft Azure Key Vault SDK」1.2.1 版
+
+| Key Vault SDK 變更 | 詳細資料 |
+| :------------------- | :------ |
+| 其在「適用於 Java 的 Microsoft Azure Key Vault SDK」上的 Maven 相依性已更新為 1.2.1 版。 | &nbsp; |
+| 移除 Maven 相依性中的 _Microsoft Azure SDK for Key Vault WebKey_。 | &nbsp; |
+| 其他詳細資料。 | 請參閱 [Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+
+| 已知問題 | 詳細資料 |
+| :----------- | :------ |
+| 使用 NTLM 驗證時。 | 目前不支援同時啟用擴充保護與加密連線。 |
+| 使用 useFmtOnly 時。 | 有一些功能問題與是由 SQL 剖析邏輯中的缺陷所造成。 如需詳細資訊和因應措施建議, 請參閱[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md) 。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
@@ -32,7 +81,7 @@ ms.locfileid: "68002447"
 | 合規性變更 | 詳細資料 |
 | :---------------- | :------ |
 | 下載 JDBC Driver 7.2 的最新更新。 | &bull; &nbsp; [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub，7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven 中心](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| 完全符合 JDBC API 規格 4.2 的規範。 | 7\.2 套件中的 jar 會根據 Java 版本相容性進行命名。<br/><br/>例如，來自 7.2 套件的 mssql-jdbc-7.2.2.jre11.jar 檔案應該與 Java 11 搭配使用。 |
+| 完全符合 JDBC API 規格 4.2 的規範。 | 7.2 套件中的 jar 會根據 Java 版本相容性進行命名。<br/><br/>例如，來自 7.2 套件的 mssql-jdbc-7.2.2.jre11.jar 檔案應該與 Java 11 搭配使用。 |
 | 除了 JDK 1.8 之外，還與 Java Development Kit (JDK) 11.0 版相容。 | 除了 JDK 1.8 之外，Microsoft JDBC Driver 7.2 for SQL Server 現在還與 Java 開發套件 (JDK) 11.0 版相容。 |
 | &nbsp; | &nbsp; |
 
@@ -43,7 +92,7 @@ ms.locfileid: "68002447"
 > 
 > 我們建議更新您的專案以使用 7.2.2 版的 jar。 如需詳細資訊，請檢視 [GitHub，7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) 和 [GitHub，7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2) 的版本資訊。
 
-### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory _受控服務識別_ (MSI) 驗證
+### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Active Directory _受控服務識別_ (MSI) 驗證
 
 | MSI 變更 | 詳細資料 |
 | :--------- | :------ |
@@ -51,7 +100,7 @@ ms.locfileid: "68002447"
 | 更多詳細資料及一個範例應用程式來使用此驗證模式。 | 請參閱[使用 Azure Active Directory 驗證連線](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>引進「開放式服務閘道協議」  (OSGi) 支援
+### <a name="introduces-_open-service-gateway-initiative_-osgi-support"></a>引進「開放式服務閘道協議」(OSGi) 支援
 
 | OSGi 變更 | 詳細資料 |
 | :---------- | :------ |
@@ -59,7 +108,7 @@ ms.locfileid: "68002447"
 | 已新增 **Activator** 實作。 | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-sqlservererror-apis"></a>引進 _SQLServerError_ API
+### <a name="introduces-_sqlservererror_-apis"></a>引進 _SQLServerError_ API
 
 | 錯誤 API 變更 | 詳細資料 |
 | :--------------- | :------ |
@@ -67,7 +116,7 @@ ms.locfileid: "68002447"
 | 其他詳細資料。 | 請參閱[處理錯誤](../../connect/jdbc/handling-errors.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>已更新「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」  ，1.6.3 版
+### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>已更新「適用於 Java 的 Microsoft Azure Active Directory 驗證程式庫 (ADAL4J)」，1.6.3 版
 
 | ADAL4J 變更 | 詳細資料 |
 | :------------ | :------ |
@@ -76,11 +125,11 @@ ms.locfileid: "68002447"
 | 其他詳細資料。 | 請參閱 [Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>已更新「適用於 Java 的 Microsoft Azure Key Vault SDK」  1.2.0 版
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>已更新「適用於 Java 的 Microsoft Azure Key Vault SDK」1.2.0 版
 
 | Key Vault SDK 變更 | 詳細資料 |
 | :------------------- | :------ |
-| 已將其在「適用於 Java 的 Microsoft Azure Key Vault SDK」  上的 Maven 相依性更新為 1.2.0 版。 | &nbsp; |
+| 已將其在「適用於 Java 的 Microsoft Azure Key Vault SDK」上的 Maven 相依性更新為 1.2.0 版。 | &nbsp; |
 | 引進 _Microsoft Azure SDK for Key Vault WebKey_ 作為 Maven 相依性，1.2.0 版。 | &nbsp; |
 | 其他詳細資料。 | 請參閱 [Microsoft JDBC Driver for SQL Server 的功能相依性](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
@@ -95,7 +144,7 @@ ms.locfileid: "68002447"
 
 ## <a name="70"></a>7.0
 
-Microsoft JDBC Driver 7.0 for SQL Server 完全符合 JDBC API 規格 4.2 的規範。 7\.0 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，來自 7.0 套件的 mssql-jdbc-7.0.0.jre10.jar 檔案應該與 Java 10 搭配使用。
+Microsoft JDBC Driver 7.0 for SQL Server 完全符合 JDBC API 規格 4.2 的規範。 7.0 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，來自 7.0 套件的 mssql-jdbc-7.0.0.jre10.jar 檔案應該與 Java 10 搭配使用。
 
 ### <a name="support-for-jdk-10"></a>JDK 10 支援
 
@@ -152,7 +201,7 @@ Microsoft JDBC Driver 7.0 for SQL Server 已將其在「適用於 Java 的 Micro
 
 ## <a name="64"></a>6.4
 
-Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6\.4 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，來自 6.4 套件的 mssql-jdbc-6.4.0.jre8.jar 檔案必須與 Java 8 搭配使用。
+Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6.4 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，來自 6.4 套件的 mssql-jdbc-6.4.0.jre8.jar 檔案必須與 Java 8 搭配使用。
 
 ### <a name="support-for-jdk-9"></a>JDK 9 支援
 
@@ -178,7 +227,7 @@ Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 �
 
 當您使用資料表值參數 (TVP) 時，此驅動程式現在支援資料類型 `datetime` 和 `smallDatetime`。
 
-### <a name="added-support-for-the-sqlvariant-datatype"></a>已新增支援 sql_variant 資料類型
+### <a name="added-support-for-the-sql_variant-datatype"></a>已新增支援 sql_variant 資料類型
 
 此 JDBC Driver 現在支援可與 SQL Server 搭配使用的 `sql_variant` 資料類型。 `sql_variant` 資料類型也可透過 TVP 和大量複製等功能來支援，但有下列限制：
 
@@ -208,7 +257,7 @@ JDBC 驅動程式現在透過 Kerberos，在所有支援的作業系統 (Windows
 
 ## <a name="62"></a>6.2
 
-Microsoft JDBC Driver 6.2 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6\.2 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，建議將來自 6.2 套件的 mssql-jdbc-6.2.2.jre8.jar 檔案與 Java 8 搭配使用。
+Microsoft JDBC Driver 6.2 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6.2 套件中的 jar 會根據 Java 版本相容性進行命名。 例如，建議將來自 6.2 套件的 mssql-jdbc-6.2.2.jre8.jar 檔案與 Java 8 搭配使用。
 
 > [!NOTE]  
 > 在已於 2017 年 6 月 29 日發行的 JDBC 6.2 RTW 中發現了中繼資料快取改進的問題。 此改進已回復，並且已於 2017 年 7 月 17 日發行新的 jar (版本 6.2.1)。 
@@ -246,7 +295,7 @@ Microsoft JDBC Driver 6.1 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 �
 
 ## <a name="60"></a>6.0
 
-Microsoft JDBC Driver 6.0 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6\.0 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，6.0 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
+Microsoft JDBC Driver 6.0 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 6.0 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，6.0 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
 
 若要確保您擁有正確的 sqljdbc42.jar 或 sqljdbc41.jar 檔案，請執行下列程式碼行。 如果輸出為 "Driver version: 6.0.7507.100"，則您具有 JDBC Driver 6.0 套件。
 
@@ -283,7 +332,7 @@ TVP 提供從用戶端應用程式，將多個資料列的資料封送至 SQL Se
 
 ## <a name="42"></a>4.2
 
-Microsoft JDBC Driver 4.2 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 4\.2 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，4.2 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
+Microsoft JDBC Driver 4.2 for SQL Server 完全符合 JDBC 規格 4.1 和 4.2 的規範。 4.2 套件中的 jar 會根據其與 JDBC API 版本的合規性進行命名。 例如，4.2 套件中的 sqljdbc42.jar 檔案會符合 JDBC API 4.2 的規範。 同樣地，sqljdbc41.jar 檔案會符合 JDBC API 4.1 的規範。
 
 若要確保您擁有正確的 sqljdbc42.jar 或 sqljdbc41.jar 檔案，請執行下列程式碼行。 如果輸出為 "Driver version: 4.2.6420.100"，則您具有 JDBC Driver 4.2 套件。
 

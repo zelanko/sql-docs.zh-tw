@@ -1,20 +1,19 @@
 ---
-title: 在 Linux 上安裝 PolyBase | Microsoft Docs
-description: 本文描述如何在 Linux 上安裝 SQL Server 全文檢索搜尋。
+title: 在 Linux 上安裝 PolyBase
+titlesuffix: SQL Server
+description: 本文描述如何在 Linux 上安裝 SQL Server PolyBase。
 author: aboke
 ms.author: aboke
 ms.date: 4/12/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 33a6a4415b5ced4bb2a5ca4448ccca8618f96832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c53eb5db9238f1da32cb207dafb9e36b7748914
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062137"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495360"
 ---
 # <a name="install-polybase-on-linux"></a>在 Linux 上安裝 PolyBase
 
@@ -154,8 +153,6 @@ sudo systemctl restart mssql-server
 >安裝完成後，您必須[啟用 PolyBase 功能](#enable)。
 
 ## <a name="next-steps"></a>後續步驟
-
-### <a name="supported-external-data-sources-on-linux"></a>Linux 上支援的外部資料來源
 
 Linux 上的 PolyBase 可以存取下列資料來源。 如需如何從這些 PolyBase 啟用來源建立外部資料表的詳細資訊，請遵循所提供的連結。 
 

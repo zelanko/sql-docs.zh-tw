@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3c6ba5932e440373ae9e08afc1c8483e25ceebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014613"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388356"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的強制手動容錯移轉 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68014613"
   
 -   在可用性群組的強制容錯移轉期間，可能會發生資料遺失。 此外，如果主要複本在您起始強制容錯移轉時正在執行，用戶端可能仍然會連接至先前的主要資料庫。 因此，我們強烈建議您只有在主要複本不再執行、而且您願意承擔遺失資料的風險以還原可用性群組中對資料庫的存取時，才進行強制容錯移轉。  
   
--   當次要資料庫處於 REVERTING 或 INITIALIZING 狀態時，強制容錯移轉會導致資料庫無法當做主要資料庫啟動。 如果資料庫處於 INTIAILIZGING 狀態，您需要從資料庫備份套用遺失的記錄檔記錄，或從頭完全還原資料庫。 如果資料庫處於 REVERTING 狀態，您就必須從備份完全還原資料庫。  
+-   當次要資料庫處於 REVERTING 或 INITIALIZING 狀態時，強制容錯移轉會導致資料庫無法用作主要資料庫啟動。 如果資料庫處於 INTIAILIZGING 狀態，您需要從資料庫備份套用遺失的記錄檔記錄，或從頭完全還原資料庫。 如果資料庫處於 REVERTING 狀態，您就必須從備份完全還原資料庫。  
   
 -   只要容錯移轉目標接受了命令，就會傳回容錯移轉命令。 不過，在可用性群組完成容錯移轉之後，會以非同步方式復原資料庫。  
   

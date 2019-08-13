@@ -1,7 +1,7 @@
 ---
 title: 部署組態檔參考
 titleSuffix: SQL Server big data clusters
-description: 巨量資料叢集部署組態檔案的參考。
+description: 巨量資料叢集部署組態檔的參考。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958240"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>巨量資料叢集的部署組態檔參考
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文章提供文件的 SQL Server 2019 巨量資料叢集部署組態檔案結構的 JSON 檔案。
+本文提供記載 SQL Server 2019 巨量資料叢集部署組態檔結構的 JSON 檔案。
 
 > [!TIP]
-> 請勿使用此為您實際部署的組態檔。 相反地，請依照中的指示[部署指引](deployment-guidance.md#configfile)如何使用組態檔。
+> 請勿使用此檔案作為實際的部署組態檔。 敬請遵循[部署指引](deployment-guidance.md#configfile)中如何使用組態檔的指示。
 
 ## <a name="deployment-configuration-file"></a>部署組態檔
 
-使用下列的 JSON 檔案做為參考，結構和巨量資料叢集部署組態檔案中的設定。
+使用下列 JSON 檔案，作為巨量資料叢集部署組態檔中的結構和設定參考。
 
 ```json
 {
@@ -453,4 +453,4 @@ ms.locfileid: "67958240"
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關如何使用和自訂部署設定檔的詳細資訊，請參閱 <<c0> [ 如何部署 SQL Server 的巨量資料叢集的 Kubernetes 上](deployment-guidance.md#configfile)。
+如需如何使用和自訂部署組態檔的詳細資訊，請參閱[如何在 Kubernetes 上部署 SQL Server 巨量資料叢集](deployment-guidance.md#configfile)。

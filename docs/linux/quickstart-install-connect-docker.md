@@ -1,7 +1,7 @@
 ---
 title: 開始在 Docker 上使用 SQL Server Linux 容器
 titleSuffix: SQL Server
-description: 本快速入門說明如何使用 Docker 來執行 SQL Server 2017 和2019容器映射。 您隨後便可使用 sqlcmd 來建立及查詢資料庫。
+description: 本快速入門會示範如何使用 Docker 來執行 SQL Server 2017 和 2019 容器映像。 您隨後便可使用 sqlcmd 來建立及查詢資料庫。
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -14,14 +14,14 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: addb8d43a48247206a59d90bac94b998d5b29a81
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MT
+ms.openlocfilehash: 48f87e876f7b73457cdf1ebf0e6201e9fd8032cc
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329257"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476037"
 ---
-# <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：使用 Docker 執行 SQL Server 容器映射
+# <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：使用 Docker 執行 SQL Server 容器映像
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -31,37 +31,37 @@ ms.locfileid: "68329257"
 在本快速入門中，您將使用 Docker 來提取與執行 SQL Server 2017 容器映像，[mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server)。 然後與 **sqlcmd**連線來建立您的第一個資料庫並執行查詢。
 
 > [!TIP]
-> 如果您想要嘗試 SQL Server 2019 preview 影像, 請參閱本文的[SQL Server 2019 preview 版本](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)。
+> 如果您想要試用 SQL Server 2019 Preview 映像，請參閱[本文的 SQL Server 2019 Preview 版本](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本快速入門中, 您可以使用 Docker 來提取並執行 SQL Server 2019 preview 容器映射 ( [mssql-伺服器](https://hub.docker.com/r/microsoft/mssql-server))。 然後與 **sqlcmd**連線來建立您的第一個資料庫並執行查詢。
+在本快速入門中，您將使用 Docker 來提取與執行 SQL Server 2019 Preview 容器映像，[mssql-server](https://hub.docker.com/r/microsoft/mssql-server)。 然後與 **sqlcmd**連線來建立您的第一個資料庫並執行查詢。
 
 > [!TIP]
-> 本快速入門會建立 SQL Server 2019 preview 容器。 如果您想要建立 SQL Server 2017 容器, 請參閱本文的[SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017)。
+> 本快速入門會建立 SQL Server 2019 Preview 容器。 如果您想要建立 SQL Server 2017 容器，請參閱[本文的 SQL Server 2017 版本。](quickstart-install-connect-docker.md?view=sql-server-linux-2017)
 ::: moniker-end
 
-此映像包含以 Ubuntu 16.04 為基礎，在 Linux 上執行的 SQL Server。 您可於適用於 Mac/Windows 的 Docker 上將其與 Docker 引擎 1.8 以上版本搭配使用。 本快速入門特別著重于在**linux**映射上使用 SQL Server。 Windows 映像則不涵蓋在內，但您可於 [mssql-server-windows-developer Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)進一步加以了解。
+此映像包含以 Ubuntu 16.04 為基礎，在 Linux 上執行的 SQL Server。 您可於適用於 Mac/Windows 的 Docker 上將其與 Docker 引擎 1.8 以上版本搭配使用。 本快速入門將著重於在 **linux** 映像上使用 SQL Server。 Windows 映像則不涵蓋在內，但您可於 [mssql-server-windows-developer Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)進一步加以了解。
 
 ## <a id="requirements"></a> 必要條件
 
 - 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
-- Docker **overlay2**儲存體驅動程式。 這是大部分使用者的預設值。 如果您發現您未使用此存放裝置提供者, 而且需要變更, 請參閱[docker 檔](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver)中的指示和警告以設定 overlay2。
+- Docker **overlay2** 儲存體驅動程式。 這是大部分使用者的預設值。 如果您發現您未使用此儲存提供者且需要進行變更，請參閱[用於設定 overlay2 的 Docker 文件](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver)中指示和警告。
 - 至少 2 GB 的磁碟空間。
-- 最少 2 GB 的 RAM。
+- 至少 2 GB 的 RAM。
 - [Linux 上的 SQL Server 系統需求](sql-server-linux-setup.md#system)。
 
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so
 any changes to one section should be duplicated in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="pullandrun2017"></a>提取並執行容器映射
+## <a id="pullandrun2017"></a> 提取及執行容器映像
 
-開始執行下列步驟之前, 請確定您已在本文頂端選取您慣用的 shell (bash、PowerShell 或 cmd)。
+開始下列步驟之前，請確定您已在本文頂端選取您慣用的 Shell (Bash、PowerShell 或 cmd)。
 
-1. 從 Microsoft Container Registry 提取 SQL Server 2017 Linux 容器映射。
+1. 從 Microsoft Container Registry 提取 SQL Server 2017 Linux 容器映像。
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -82,12 +82,12 @@ any changes to one section should be duplicated in the other-->
    ::: zone-end
 
    > [!TIP]
-   > 如果您想要嘗試 SQL Server 2019 preview 影像, 請參閱本文的[SQL Server 2019 preview 版本](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019)。
+   > 如果您想要試用 SQL Server 2019 Preview 映像，請參閱[本文的 SQL Server 2019 Preview 版本](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019)。
 
-   上述命令會提取最新的 SQL Server 2017 容器映像。 若要提取特定映像，您需要新增欄位與標籤名稱 (例如，`mcr.microsoft.com/mssql/server:2017-GA-ubuntu`)。 若要查看所有可用的映射, 請參閱[mssql-伺服器 Docker hub 頁面](https://hub.docker.com/r/microsoft/mssql-server)。
+   上述命令會提取最新的 SQL Server 2017 容器映像。 若要提取特定映像，您需要新增欄位與標籤名稱 (例如，`mcr.microsoft.com/mssql/server:2017-GA-ubuntu`)。 若要查看所有可用的映像，請參閱 [mssql-server Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server)。
 
    ::: zone pivot="cs1-bash"
-   這篇文章`sudo`中的 bash 命令會使用。 在 MacOS 上`sudo` , 可能不需要。 在 Linux 上, 如果您不想使用`sudo`來執行 docker, 您可以設定**docker**群組, 並將使用者新增至該群組。 如需詳細資訊, 請參閱[適用于 Linux 的安裝後步驟](https://docs.docker.com/install/linux/linux-postinstall/)。
+   本文中的 Bash 命令會使用 `sudo`。 在 MacOS 上，可能不需要 `sudo`。 在 Linux 上，如果您不想使用 `sudo` 來執行 Docker，您可以設定 **Docker** 群組，並將使用者新增至該群組。 如需詳細資訊，請參閱 [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/) (適用於 Linux 的安裝後步驟)。
    ::: zone-end
 
 2. 若要以 Docker 執行容器映像，您可以從 Bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元使用下列命令。
@@ -117,19 +117,19 @@ any changes to one section should be duplicated in the other-->
    ::: zone-end
 
    > [!NOTE]
-   > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設, 密碼長度至少必須為8個字元, 且包含下列四個集合中的三個字元:大寫字母、小寫字母、以10為基底的數位和符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
+   > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設，密碼的長度至少必須是 8 個字元，包含下列四種集合的其中三種字元：大寫字母、小寫字母、以 10 為底數的數字，以及符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
 
    > [!NOTE]
    > 根據預設，這會建立 SQL Server 2017 Developer 版本的映像。 在容器中執行生產版本的程序將有些微差異。 如需詳細資訊，請參閱[執行生產容器映像](sql-server-linux-configure-docker.md#production)。
 
    下表提供了前述 `docker run` 範例的參數描述：
 
-   | 參數 | 描述 |
+   | 參數 | Description |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
-   | **-p 1433:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中, SQL Server 會接聽容器中的 TCP 1433, 而這會公開至主機上的埠1433。 |
-   | **--name sql1** | 指定容器名稱，而不隨機產生名稱。 執行多個容器時無法重複使用此相同名稱。 |
+   | **-p 1433:1433** | 將主機環境上的 TCP 連接埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在本範例中，SQL Server 正在接聽容器中的 TCP 1433 且對主機上的連接埠 1433 公開。 |
+   | **--name sql1** | 為容器指定自訂名稱，而不使用隨機產生的名稱。 若您執行數個容器，就無法使用此相同名稱。 |
    | **mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
 3. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
@@ -157,7 +157,7 @@ any changes to one section should be duplicated in the other-->
 
    ![Docker ps 命令輸出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. 如果**狀態**資料行會顯示狀態為**向上**、 然後 SQL Server 正在執行中容器和接聽的通訊埠中指定**連接埠**資料行。 如果**狀態**資料行的 SQL Server 容器節目**Exited**，請參閱[疑難排解 > 一節的設定指南](sql-server-linux-configure-docker.md#troubleshooting)。
+4. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](sql-server-linux-configure-docker.md#troubleshooting)。
 
 `-h` (主機名稱) 參數也相當實用，但為求簡明因此未在本教學課程中使用。 此參數可將容器的內部名稱變更為自訂值。 這是您在下列 Transact-SQL 查詢中會看到的傳回名稱：
 
@@ -176,37 +176,37 @@ SELECT @@SERVERNAME,
 <!--This is the 2019 version of the "Pull and run" section-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="pullandrun2019"></a>提取並執行容器映射
+## <a id="pullandrun2019"></a> 提取及執行容器映像
 
-開始執行下列步驟之前, 請確定您已在本文頂端選取您慣用的 shell (bash、PowerShell 或 cmd)。
+開始下列步驟之前，請確定您已在本文頂端選取您慣用的 Shell (Bash、PowerShell 或 cmd)。
 
-1. 從 Docker Hub 提取 SQL Server 2019 preview Linux 容器映射。
+1. 從 Docker Hub 提取 SQL Server 2019 Preview Linux 容器映像。
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
    > [!TIP]
-   > 本快速入門使用 SQL Server 2019 preview Docker 映射。 如果您想要執行 SQL Server 2017 映射, 請參閱本文的[SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)。
+   > 本快速入門使用 SQL Server 2019 Preview Docker 映像。 如果您想要試用 SQL Server 2017 映像，請參閱[本文的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)。
 
-   先前的命令會提取以 Ubuntu 為基礎的 SQL Server 2019 preview 容器映射。 若要改為使用以 RedHat 為基礎的容器映射, 請參閱[執行以 RHEL 為基礎的容器映射](sql-server-linux-configure-docker.md#rhel)。 若要查看所有可用的映像，請參閱 [mssql-server-linux Docker Hub 頁面](https://hub.docker.com/_/microsoft-mssql-server)。
+   先前的命令，會提取以 Ubuntu 為基礎的 SQL Server 2019 Preview 容器映像。 若要改為使用以 RedHat 為基礎的容器映像，請參閱[執行 RHEL 型的容器映像](sql-server-linux-configure-docker.md#rhel)。 若要查看所有可用的映像，請參閱 [mssql-server-linux Docker Hub 頁面](https://hub.docker.com/_/microsoft-mssql-server)。
 
    ::: zone pivot="cs1-bash"
-   這篇文章`sudo`中的 bash 命令會使用。 在 MacOS 上`sudo` , 可能不需要。 在 Linux 上, 如果您不想使用`sudo`來執行 docker, 您可以設定**docker**群組, 並將使用者新增至該群組。 如需詳細資訊, 請參閱[適用于 Linux 的安裝後步驟](https://docs.docker.com/install/linux/linux-postinstall/)。
+   本文中的 Bash 命令會使用 `sudo`。 在 MacOS 上，可能不需要 `sudo`。 在 Linux 上，如果您不想使用 `sudo` 來執行 Docker，您可以設定 **Docker** 群組，並將使用者新增至該群組。 如需詳細資訊，請參閱 [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/) (適用於 Linux 的安裝後步驟)。
    ::: zone-end
 
 2. 若要以 Docker 執行容器映像，您可以從 Bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元使用下列命令。
@@ -215,7 +215,7 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
@@ -223,7 +223,7 @@ SELECT @@SERVERNAME,
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
@@ -231,25 +231,25 @@ SELECT @@SERVERNAME,
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
    ::: zone-end
 
    > [!NOTE]
-   > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設, 密碼長度至少必須為8個字元, 且包含下列四個集合中的三個字元:大寫字母、小寫字母、以10為基底的數位和符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
+   > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設，密碼的長度至少必須是 8 個字元，包含下列四種集合的其中三種字元：大寫字母、小寫字母、以 10 為底數的數字，以及符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
 
    > [!NOTE]
-   > 根據預設, 這會建立開發人員版本為 SQL Server 2019 preview 的容器。
+   > 根據預設，這會建立 SQL Server 2019 Preview 的 Developer 版容器。
 
    下表提供了前述 `docker run` 範例的參數描述：
 
-   | 參數 | 描述 |
+   | 參數 | Description |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
-   | **-p 1433:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中, SQL Server 會接聽容器中的 TCP 1433, 而這會公開至主機上的埠1433。 |
-   | **--name sql1** | 指定容器名稱，而不隨機產生名稱。 執行多個容器時無法重複使用此相同名稱。 |
-   | **mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu** | SQL Server 2019 CTP 3.1 Linux 容器映射。 |
+   | **-p 1433:1433** | 將主機環境上的 TCP 連接埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在本範例中，SQL Server 正在接聽容器中的 TCP 1433 且對主機上的連接埠 1433 公開。 |
+   | **--name sql1** | 為容器指定自訂名稱，而不使用隨機產生的名稱。 若您執行數個容器，就無法使用此相同名稱。 |
+   | **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu** | SQL Server 2019 CTP3.2 Linux 容器映像。 |
 
 3. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 
@@ -275,7 +275,7 @@ SELECT @@SERVERNAME,
 
    ![Docker ps 命令輸出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. 如果**狀態**資料行會顯示狀態為**向上**、 然後 SQL Server 正在執行中容器和接聽的通訊埠中指定**連接埠**資料行。 如果**狀態**資料行的 SQL Server 容器節目**Exited**，請參閱[疑難排解 > 一節的設定指南](sql-server-linux-configure-docker.md#troubleshooting)。
+4. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](sql-server-linux-configure-docker.md#troubleshooting)。
 
 `-h` (主機名稱) 參數也相當實用，但為求簡明因此未在本教學課程中使用。 此參數可將容器的內部名稱變更為自訂值。 這是您在下列 Transact-SQL 查詢中會看到的傳回名稱：
 
@@ -291,7 +291,7 @@ SELECT @@SERVERNAME,
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a id="sapassword"></a>變更 SA 密碼
+## <a id="sapassword"></a> 變更 SA 密碼
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
@@ -299,7 +299,7 @@ SELECT @@SERVERNAME,
 
 1. 選擇要為 SA 使用者使用的強式密碼。
 
-1. 使用 `docker exec` 來執行 **sqlcmd**，以使用 Transact-SQL 變更密碼。 在下列範例中, 將舊密碼`<YourStrong!Passw0rd>`和新`<YourNewStrong!Passw0rd>`密碼取代為您自己的密碼值。
+1. 使用 `docker exec` 來執行 **sqlcmd**，以使用 Transact-SQL 變更密碼。 在下列範例中，將舊密碼 `<YourStrong!Passw0rd>` 和新密碼 `<YourNewStrong!Passw0rd>` 取代為您自己的密碼值。
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -444,13 +444,13 @@ SELECT @@SERVERNAME,
 
 您也可以從支援 SQL 連線的任何外部 Linux、Windows 或 macOS 工具連線到 Docker 機器上的 SQL Server 執行個體。
 
-下列步驟在您容器的外部使用了 **sqlcmd** 以連線至容器中執行的 SQL Server。 這些步驟會假設您已經在容器外部安裝 SQL Server 命令列工具。 使用其他工具時也適用相同的原則, 但是連接的程式對於每個工具都是唯一的。
+下列步驟在您容器的外部使用了 **sqlcmd** 以連線至容器中執行的 SQL Server。 這些步驟會假設您已經在容器外部安裝 SQL Server 命令列工具。 使用其他工具時亦適用相同原則，但各工具的連線程序不盡相同。
 
 1. 找出裝載您容器之電腦的 IP 位址。 在 Linux 上，使用**ifconfig** 或 **ip addr**。在 Windows 上，使用 **ipconfig**。
 
-1. 針對此範例, 請在您的用戶端電腦上安裝**sqlcmd**工具。 如需詳細資訊, 請參閱[在 Windows 上安裝 sqlcmd](../tools/sqlcmd-utility.md)或[在 Linux 上安裝 sqlcmd](sql-server-linux-setup-tools.md)。
+1. 針對此範例，請在您的用戶端電腦上安裝 **sqlcmd** 工具。 如需詳細資訊，請參閱[在 Windows 上安裝 sqlcmd](../tools/sqlcmd-utility.md) 或[在 Linux 上安裝 sqlcmd](sql-server-linux-setup-tools.md)。
 
-1. 執行 sqlcmd 來指定 IP 位址和容器中 1433 通訊埠所對應的連接埠。 在此範例中, 這是主機電腦上的相同埠 (1433)。 如果您在主機電腦上指定了不同的對應埠, 您可以在這裡使用它。
+1. 執行 sqlcmd 來指定 IP 位址，以及對應至您容器連接埠 1433 的連接埠。 在此範例中即為主機電腦上的相同連接埠 1433。 如果您在主機電腦上指定了不同的對應連接埠，您可以在這裡使用該連接埠。
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -506,7 +506,7 @@ docker rm sql1
 ::: zone-end
 
 > [!WARNING]
-> 停止及移除容器會永久刪除容器中的所有 SQL Server 資料。 如果您要保留您的資料，請[建立備份檔案並複製至容器之外](tutorial-restore-backup-in-sql-server-container.md)，或使用[容器資料持續性技術](sql-server-linux-configure-docker.md#persist)。
+> 停止及移除容器會永久刪除容器中的所有 SQL Server 資料。 如須保留資料，[請建立備份檔案並將其複製到容器外](tutorial-restore-backup-in-sql-server-container.md)，或使用[容器資料持續性技術](sql-server-linux-configure-docker.md#persist)。
 
 ## <a name="docker-demo"></a>Dock 示範
 
@@ -516,6 +516,6 @@ docker rm sql1
 
 ## <a name="next-steps"></a>後續步驟
 
-如需如何將資料庫備份檔案還原至容器中的教學課程，請參閱[在 Linux Docker 容器中還原 SQL Server 資料庫](tutorial-restore-backup-in-sql-server-container.md)。 若要探索其他案例, 例如執行多個容器、資料持續性和疑難排解, 請參閱[在 Docker 上設定 SQL Server 容器映射](sql-server-linux-configure-docker.md)。
+如需如何將資料庫備份檔案還原至容器中的教學課程，請參閱[在 Linux Docker 容器中還原 SQL Server 資料庫](tutorial-restore-backup-in-sql-server-container.md)。 若要探索其他案例，例如執行多個容器、資料持續性及疑難排解，請參閱[在 Docker 上設定 SQL Server 容器映像](sql-server-linux-configure-docker.md)。
 
 此外，也可以前往 [mssql-docker GitHub 存放庫](https://github.com/Microsoft/mssql-docker) 取得資源、意見反應和已知問題。

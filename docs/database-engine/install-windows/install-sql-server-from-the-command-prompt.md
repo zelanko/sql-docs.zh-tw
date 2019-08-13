@@ -1,7 +1,7 @@
 ---
 title: 從命令提示字元安裝 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ed047f78c316cc5bb6308e2bfe425884a649876
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991094"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419330"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -277,8 +277,9 @@ ms.locfileid: "67991094"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的啟動帳戶。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
-|Python/機器學習服務 (資料庫內)|MPYCACHEDIRECTORY|保留供日後使用。 請使用 %TEMP% 來儲存 Python .CAB 檔案，以便在沒有網際網路連線的電腦上進行安裝。 |  
-|R/機器學習服務 (資料庫內)|MRCACHEDIRECTORY|使用此參數來指定 SQL Server 2017 機器學習服務或 Machine Learning Server (獨立式) 中的 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (獨立式) 或 R 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 R 元件，而沒有網際網路存取](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)時。|  
+|Python/機器學習服務 (資料庫內)|/MPYCACHEDIRECTORY|保留供日後使用。 請使用 %TEMP% 來儲存 Python .CAB 檔案，以便在沒有網際網路連線的電腦上進行安裝。 |  
+|R/機器學習服務 (資料庫內)|/MRCACHEDIRECTORY|使用此參數來指定 SQL Server 2017 機器學習服務或 Machine Learning Server (獨立式) 中的 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (獨立式) 或 R 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 R 元件，而沒有網際網路存取](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)時。|  
+|Java/機器學習服務 (資料庫內)| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **選擇性** | 從 SQL Server 2019 開始，會指定使用機器學習服務來安裝 Java。 如果在未使用 /SQLJAVADIR 參數的情況下提供 /SQL_INST_JAVA，系統會假設您希望安裝由安裝媒體提供的 Zulu JRE。 <br /><br /> 提供 /SQLJAVADIR 的路徑，表示您希望使用已安裝的 JRE 或 JDK。 |
   
 ###### <a name="sample-syntax"></a>範例語法：  
  與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、複寫和全文檢索搜尋元件一起安裝新的獨立執行個體，並為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]啟用立即檔案初始化。 

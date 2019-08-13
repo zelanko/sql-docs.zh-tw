@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b02d7c93ad2858c1463e3283135f1a3e2cc841b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909585"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476262"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新組織與重建索引
 
@@ -71,11 +71,28 @@ ms.locfileid: "67909585"
 
 <sup>1</sup> 重建索引可於線上或離線執行。 重新組織索引則一律在線上執行。 若要達到與重新組織選項相似的可用性，您應該在線上重建索引。
 
-這些值提供概略的方針，讓您可判斷應該在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之間切換的時間點。 不過，實際的值可能隨各種狀況而異。 請務必嘗試不同的值，以判斷適合您環境的最佳臨界值。
+> [!TIP]
+> 這些值提供概略的方針，讓您可判斷應該在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之間切換的時間點。 不過，實際的值可能隨各種狀況而異。 請務必嘗試不同的值，以判斷適合您環境的最佳臨界值。 例如，如果指定的索引主要用於掃描作業，則移除片段可以改善這些作業的效能。 對於主要用於搜尋作業的索引而言，效能優勢較不明顯。 同樣地，移除堆積中的片段 (沒有叢集索引的資料表) 對於非叢集索引掃描作業特別有用，但對查閱作業則幾乎沒有影響。
+
 您通常不應該使用上述任何命令來處理片段層級過低 (低於 5%) 的情況，因為重組或重建索引的成本遠遠超過移除如此少量片段所獲得的好處。 如需 `ALTER INDEX REORGANIZE` 與 `ALTER INDEX REBUILD` 的詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。
 
 > [!NOTE]
 > 重建或重新組織小型索引通常不會減少片段。 小型索引的頁面有時候會儲存在混合範圍上， 混合範圍最多可由八個物件所共用，所以當重新組織或重建索引之後，小型索引中的片段可能不會減少。
+
+### <a name="index-defragmentation-considerations"></a>索引磁碟重組考量
+在某些情況下，如果非叢集索引記錄中所包含的實體或邏輯識別碼需要變更，則重建叢集索引將會自動重建任何參考叢集金鑰的非叢集索引。
+
+強制在資料表上自動重建所有非叢集索引的案例：
+
+-  在資料表上建立叢集索引
+-  移除叢集索引，使資料表儲存為堆積
+-  變更叢集索引鍵以包含或排除資料行
+
+不需要在資料表上自動重建所有非叢集索引的案例：
+
+-  重建唯一的叢集索引
+-  重建非唯一的叢集索引
+-  變更索引結構描述，例如將資料分割結構描述套用至叢集索引，或將叢集索引移至不同的檔案群組
 
 ### <a name="Restrictions"></a> 限制事項
 
@@ -96,7 +113,7 @@ ms.locfileid: "67909585"
 
 #### <a name="Permissions"></a> 權限
 
-需要資料表或檢視表的 ALTER 權限。 使用者至少必須是下列角色的成員之一：
+必須具備資料表或檢視的 `ALTER` 權限。 使用者至少必須是下列角色的成員之一：
 
 - **db_ddladmin** 資料庫角色 <sup>1</sup>
 - **db_owner** 資料庫角色

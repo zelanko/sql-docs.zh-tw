@@ -1,7 +1,7 @@
 ---
-title: 計算集區有哪些？
+title: 什麼是計算集區？
 titleSuffix: SQL Server big data clusters
-description: 本文說明在 SQL Server 2019 巨量資料叢集 （預覽） 中的計算集區。
+description: 本文描述 SQL Server 2019 巨量資料叢集 (預覽) 中的計算集區。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,29 +10,29 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d9ae112369ddad91bec125ec19713040a5aae915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958802"
 ---
-# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>在 SQL Server 的巨量資料叢集的計算集區有哪些？
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集中的計算集區？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明所扮演的角色*SQL Server 計算集區*中 SQL Server 2019 預覽巨量資料叢集。 計算集區提供的巨量資料叢集相應放大計算資源。 下列各節描述的架構和計算集區的功能。
+本文描述 SQL Server 2019 巨量資料叢集 (預覽) 中的「SQL Server 計算集區」  角色。 計算集區為巨量資料叢集提供向外延展計算資源。 下列各節描述計算集區的架構和功能。
 
 ## <a name="compute-pool-architecture"></a>計算集區架構
 
-計算集區由一個或多個運算在 Kubernetes 中執行的 pod。 自動的建立和管理這些 pod 由協調[SQL Server 的主要執行個體](concept-master-instance.md)。 每個 pod 包含一組基底的服務和 SQL Server database engine 執行個體。
+計算集區是由在 Kubernetes 中執行的一或多個計算 Pod 所組成。 這些 Pod 的自動建立和管理是由 [SQL Server 主要執行個體](concept-master-instance.md)進行協調。 每個 Pod 會包含一組基本服務和一個 SQL Server 資料庫引擎執行個體。
 
 ## <a name="scale-out-groups"></a>向外延展群組
 
-在不同的資料來源，例如 HDFS、 Oracle、 MongoDB 或 Terradata，計算集區可做為 PolyBase 向外延展群組的分散式查詢。 使用 Kubernetes 中的計算 pod，巨量資料叢集可以自動建立和設定 PolyBase 向外延展群組的計算 pod。
+計算集區可作為 PolyBase 向外延展群組，以便在不同的資料來源 (例如 HDFS、Oracle、MongoDB 或 Terradata) 上進行分散式查詢。 藉由使用 Kubernetes 中的計算 Pod，巨量資料叢集即可自動為 PolyBase 向外延展群組建立和設定計算 Pod。
 
 ## <a name="next-steps"></a>後續步驟
 
 若要深入了解 SQL Server 巨量資料叢集，請參閱下列資源：
 
 - [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
-- [研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [工作坊：Microsoft SQL Server 巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

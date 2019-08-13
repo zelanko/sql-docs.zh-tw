@@ -1,7 +1,7 @@
 ---
 title: 還原資料庫
 titleSuffix: SQL Server big data clusters
-description: 這篇文章會示範如何將資料庫還原到 SQL Server 2019 巨量資料叢集 （預覽） 的主要執行個體。
+description: 本文說明如何將資料庫還原至 SQL Server 2019 巨量資料叢集 (預覽) 的主要執行個體。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,30 +10,30 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958629"
 ---
-# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>將資料庫還原到 SQL Server 巨量資料叢集主要執行個體
+# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>將資料庫還原至 SQL Server 巨量資料叢集的主要執行個體
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何將現有的資料庫還原至 SQL Server 2019 巨量資料叢集 （預覽） 的主要執行個體。 建議的方法是使用備份、 複製和還原方法。
+本文描述如何將現有的資料庫還原至 SQL Server 2019 巨量資料叢集 (預覽) 的主要執行個體。 建議的方法是使用備份、複製和還原方法。
 
-## <a name="backup-your-existing-database"></a>您現有的資料庫備份
+## <a name="backup-your-existing-database"></a>備份現有的資料庫
 
-首先，備份您現有的 SQL Server 資料庫從 SQL Server 在 Windows 或 Linux。 使用 TRANSACT-SQL 或工具等 SQL Server Management Studio (SSMS)，請使用標準的備份技術。
+首先，從 Windows 或 Linux 上的 SQL Server 備份現有的 SQL Server 資料庫。 搭配 Transact-SQL 或 SQL Server Management Studio (SSMS) 等工具使用標準備份技術。
 
-本文說明如何還原 AdventureWorks 資料庫中，但您可以使用任何的資料庫備份。 
+本文說明如何還原 AdventureWorks 資料庫，但您可以使用任意資料庫備份。 
 
 > [!TIP]
-> 您可以下載 AdventureWorks 備份[此處](https://www.microsoft.com/download/details.aspx?id=49502)。
+> 您可以在[這裡](https://www.microsoft.com/download/details.aspx?id=49502)下載 AdventureWorks 備份。
 
-## <a name="copy-the-backup-file"></a>將備份檔案複製
+## <a name="copy-the-backup-file"></a>複製備份檔案
 
-將備份檔案複製到 SQL Server 容器的 Kubernetes 叢集的主要執行個體 pod 中。
+將備份檔案複製到 Kubernetes 叢集之主要執行個體 Pod 中的 SQL Server 容器。
 
 ```bash
 kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
@@ -45,7 +45,7 @@ kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
 ```
 
-然後，確認備份檔案已複製到 pod 容器。
+接著，確認備份檔案已複製到 Pod 容器。
 
 ```bash
 kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
@@ -62,9 +62,9 @@ ls /tmp
 exit
 ```
 
-## <a name="restore-the-backup-file"></a>備份檔案還原
+## <a name="restore-the-backup-file"></a>還原備份檔案
 
-接下來，在主要執行個體 SQL Server 還原資料庫備份。  如果您要還原的資料庫備份，建立在 Windows 上，您必須取得檔案的名稱。  在 Azure 資料 Studio 中，連接到主要執行個體，並執行下列 SQL 指令碼：
+接下來，將資料庫備份還原至 SQL Server 主要執行個體。  如果您想要還原在 Windows 上建立的資料庫備份，您必須取得檔案的名稱。  在 Azure Data Studio 中，連線到主要執行個體並執行此 SQL 指令碼：
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
@@ -76,9 +76,9 @@ RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 ```
 
-![備份的檔案清單](media/restore-database/database-restore-file-list.png)
+![備份檔案清單](media/restore-database/database-restore-file-list.png)
 
-現在，將資料庫還原。 下列指令碼是範例。 取代所需視您資料庫的備份名稱/路徑。
+現在，還原資料庫。 以下為範例指令碼。 請根據您的資料庫備份，視需要取代名稱/路徑。
 
 ```sql
 RESTORE DATABASE AdventureWorks2016CTP3
@@ -88,9 +88,9 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
         MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
 ```
 
-## <a name="configure-data-pool-and-hdfs-access"></a>設定資料集區和 HDFS 的存取
+## <a name="configure-data-pool-and-hdfs-access"></a>設定資料集區和 HDFS 存取
 
-現在，若要存取資料集區和 HDFS 的 SQL Server 主要執行個體，執行資料集區和儲存體集區預存程序。 針對您剛還原的資料庫執行下列 TRANSACT-SQL 指令碼：
+現在，若要讓 SQL Server 主要執行個體存取資料集區和 HDFS，請執行資料集區和存放集區預存程序。 對您剛還原的資料庫執行下列 Transact-SQL 指令碼：
 
 ```sql
 USE AdventureWorks2016CTP3
@@ -108,7 +108,7 @@ GO
 ```
 
 > [!NOTE]
-> 您必須執行的資料庫從舊版的 SQL Server 還原這些設定指令碼。 如果您在 SQL Server 的主要執行個體中建立新的資料庫，您已設定資料集區和儲存體集區預存程序。
+> 您只需要針對從舊版 SQL Server 還原的資料庫執行這些安裝指令碼。 如果您在 SQL Server 主要執行個體中建立新的資料庫，會為您設定好資料集區和存放集區預存程序。
 
 ## <a name="next-steps"></a>後續步驟
 

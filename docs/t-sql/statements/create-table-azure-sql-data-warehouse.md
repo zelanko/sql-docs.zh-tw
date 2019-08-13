@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 080037ec68169c08f7e543504c84118d0d01e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117001"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419606"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 
@@ -167,18 +167,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 叢集資料行存放區索引是在 Azure SQL 資料倉儲中建立資料表的預設。  ORDER 指定規格預設為 COMPOUND 索引鍵。  排序一律會以遞增排序進行。 若沒有指定任何 ORDER 子句，資料行存放區將不會進行排序。 由於排序流程，若資料表具有已排序的叢集資料行存放區索引，則該資料表所經歷的資料載入時間可能比未排序的叢集資料行存放區索引還長。 如果您在載入資料時需要更多 tempdb 空間，您可以減少每個插入的資料量。
 
-在預覽期間，您可以啟用 ORDER 來執行此查詢，以檢查資料行。
-
-```sql
-SELECT i.name AS index_name  
-    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
-    ,ic.index_column_id  
-    ,ic.key_ordinal  
-,ic.is_included_column  
-FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic
-    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
-```
+使用者可以查詢 sys.index_columns 中的 column_store_order_ordinal 資料行，以取得資料表排序所在的資料行，以及排序中的順序。  
 
 ### <a name="DataTypes"></a> 資料類型
 

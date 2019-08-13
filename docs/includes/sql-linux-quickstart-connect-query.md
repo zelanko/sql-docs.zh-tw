@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215629"
 ---
 ## <a name="connect-locally"></a>在本機連線
@@ -52,7 +52,7 @@ ms.locfileid: "68215629"
    ```
 
 > [!TIP]
-> 若要深入了解撰寫 TRANSACT-SQL 陳述式和查詢，請參閱[教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)。
+> 若要了解撰寫 Transact-SQL 陳述式與查詢的詳細資訊，請參閱[教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)。
 
 ### <a name="insert-data"></a>插入資料
 
@@ -108,18 +108,18 @@ QUIT
 
 ## <a name="performance-best-practices"></a>效能最佳做法
 
-在 Linux 上安裝 SQL Server 之後, 檢閱設定 Linux 和 SQL Server，以改善效能的實際執行案例的最佳作法。 如需詳細資訊，請參閱 <<c0> [ 效能最佳做法和 Linux 上的 SQL Server 組態指導方針](../linux/sql-server-linux-performance-best-practices.md)。
+安裝 Linux 上的 SQL Server 之後，請參閱設定 Linux 和 SQL Server 的最佳做法，以改善生產案例的效能。 如需詳細資訊，請參閱 [Linux 上 SQL Server 的效能最佳做法和設定方針](../linux/sql-server-linux-performance-best-practices.md)。
 
-## <a name="cross-platform-data-tools"></a>跨平台的資料工具
+## <a name="cross-platform-data-tools"></a>跨平台資料工具
 
-除了**sqlcmd**，您可以使用下列的跨平台工具來管理 SQL Server:
+除了 **sqlcmd** 以外，您也可以使用下列跨平台工具來管理 SQL Server：
 
 |||
 |---|---|
 | [Azure Data Studio](../azure-data-studio/index.md) | 跨平台 GUI 資料庫管理公用程式。 |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 使用 mssql 延伸模組執行 TRANSACT-SQL 陳述式的跨平台 GUI 程式碼編輯器中。 |
-| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 跨平台自動化和組態工具根據 cmdlet。 |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 執行 TRANSACT-SQL 命令的跨平台命令列介面。 |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 跨平台 GUI 程式碼編輯器，可執行具有 mssql 延伸模組的 Transact-SQL 陳述式。 |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 以 Cmdlet 為基礎的跨平台自動化和設定工具。 |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 用於執行 Transact-SQL 命令的跨平台命令列介面。 |
 
 ## <a name="connecting-from-windows"></a>從 Windows 連線
 
@@ -145,9 +145,9 @@ Windows 上 SQL Server 工具連線到 Linux 上 SQL Server 執行個體的方�
 | [離線安裝](../linux/sql-server-linux-setup.md#offline) | 了解如何手動下載離線安裝的套件 |
 
 > [!TIP]
-> 如需常見問題的解答，請參閱[Linux 常見問題集 > 的 SQL Server](../linux/sql-server-linux-faq.md)。
+> 如需常見問題的解答，請參閱 [Linux 上的 SQL Server 常見問題集](../linux/sql-server-linux-faq.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [在 Linux 上探索 SQL server 的教學課程](../linux/sql-server-linux-migrate-restore-database.md)
+> [探索 Linux 上的 SQL Server 教學課程](../linux/sql-server-linux-migrate-restore-database.md)

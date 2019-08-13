@@ -1,7 +1,7 @@
 ---
-title: 資料集區有哪些？
+title: 什麼是資料集區？
 titleSuffix: SQL Server big data clusters
-description: 本文說明在 SQL Server 2019 巨量資料叢集中的資料集區。
+description: 本文描述 SQL Server 2019 巨量資料叢集中的資料集區。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,25 +10,25 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f9355508e4d32dd9a6152781fba325ded2fa7425
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958730"
 ---
-# <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>在 SQL Server 的巨量資料叢集中的資料集區有哪些？
+# <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集中的資料集區？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明所扮演的角色*SQL Server 資料集區*在 SQL Server 2019 巨量資料叢集 （預覽） 中。 下列各節描述的架構和 SQL 資料集區的功能。
+本文描述 SQL Server 2019 巨量資料叢集 (預覽) 中的「SQL Server 資料集區」  角色。 下列各節描述 SQL 資料集區的架構和功能。
 
 ## <a name="data-pool-architecture"></a>資料集區架構
 
-資料集區是由一或多個 SQL Server 資料集區執行個體所組成。 SQL 資料集區執行個體提供永續性的 SQL Server 儲存體叢集。 資料集區用來擷取從 SQL 查詢或 Spark 作業的資料。 若要提供更佳的效能，跨大型資料集，資料集區中的資料會分散到分區成員 SQL 資料集區執行個體。
+資料集區是由一或多個 SQL Server 資料集區執行個體所組成。 SQL 資料集區執行個體為叢集提供永續性的 SQL Server 儲存體。 資料集區可用於內嵌來自 SQL 查詢或 Spark 作業的資料。 為了在大型資料集上提供更好的效能，資料集區中的資料會分散到成員 SQL 資料集區執行個體的分區。
 
 ## <a name="scale-out-data-marts"></a>向外延展資料超市
 
-資料集區啟用向外延展資料超市，其中多個來源的外部資料擷取至資料集區建立作業。 因為資料會分散到資料集區執行個體，對策劃資料執行平行查詢會更有效率。
+資料集區可讓您建立向外延展資料超市，其中來自多個來源的外部資料會內嵌到資料集區。 由於資料會分散到資料集區執行個體，因此可更有效率地對管理的資料進行平行查詢。
 
 ![向外延展資料超市](media/concept-data-pool/data-virtualization-improvements.png)
 
@@ -37,4 +37,4 @@ ms.locfileid: "67958730"
 若要深入了解 SQL Server 巨量資料叢集，請參閱下列資源：
 
 - [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
-- [研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [工作坊：Microsoft SQL Server 巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

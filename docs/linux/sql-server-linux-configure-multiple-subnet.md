@@ -9,29 +9,29 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077593"
 ---
-# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>設定子網路的多個 Always On 可用性群組和容錯移轉叢集執行個體
+# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>設定多個子網路 Always On 可用性群組和容錯移轉叢集執行個體
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-當 Alwayson 可用性群組 (AG) 或容錯移轉叢集執行個體 (FCI) 跨越多個站台的每個站台通常都有它自己的網路。 這通常表示每個網站有它自己的 IP 位址。 比方說，站台 A 的位址會以 192.168.1 開始。*x*且站台 B 位址開頭 192.168.2。*x*，其中*x*是對伺服器是唯一的 IP 位址的一部分。 而不需要某種形式的路由在網路層中，這些伺服器將無法彼此通訊。 有兩種方式來處理此案例： 設定網路的橋接兩個不同的子網路，又稱為 VLAN，或設定子網路之間的路由。
+當 Always On 可用性群組 (AG) 或容錯移轉叢集執行個體 (FCI) 跨越一個以上的網站時，每個網站通常會有自己的網路。 這通常表示每個網站都有自己的 IP 位址。 例如，網站 A 的位址開頭為 192.168.1.*x*，網站 B 的位址開頭為 192.168.2.*x*，其中 *x* 是伺服器唯一的 IP 位址部分。 如果網路層沒有適當的路由，這些伺服器將無法互相通訊。 有兩種方式可以處理這種情況：設定網路來橋接兩個不同的子網路 (稱為 VLAN)，或設定子網路之間的路由。
 
-## <a name="vlan-based-solution"></a>VLAN 為基礎的解決方案
+## <a name="vlan-based-solution"></a>VLAN 型解決方案
  
-**必要條件**:VLAN 架構的解決方案，參與 AG 或 FCI 的每一部伺服器需要兩張網路卡 (Nic)，以取得適當可用性 （雙重連接埠 NIC 會是單一實體伺服器上的失敗點），以便它可以將指派其原生的子網路，以及一個上的 IP 位址在 VLAN。 這是任何其他網路需求，例如 iSCSI，也需要它自己的網路之外。
+**必要條件**：針對 VLAN 型的解決方案，參與 AG 或 FCI 的每部伺服器都需要兩張網路卡 (NIC) 以提供適當可用性 (雙重連階埠 NIC 會是實體伺服器上的單一失敗點)，以便在其原生子網路和 VLAN 上指派 IP 位址。 這是網路需求之外的附加項目，例如 iSCSI 也需要自己的網路。
 
-AG 或 FCI 的 IP 位址建立 VLAN 上執行。 在下列範例中，VLAN 有 192.168.3 的子網路。*x*，因此建立 AG 或 FCI 的 IP 位址是 192.168.3.104。 其他不需要設定，因為沒有單一 IP 位址指派給 FCI 的 AG。
+針對 AG 或 FCI 建立的 IP 位址是在 VLAN 上完成。 在下列範例中，VLAN 具有 192.168.3.*x* 的子網路；因此，針對 AG 或 FCI 所建立的 IP 位址是 192.168.3.104。 不需要設定任何額外項目，因為已有單一 IP 位址指派給 AG 或 FCI。
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
-## <a name="configuration-with-pacemaker"></a>設定 pacemaker
+## <a name="configuration-with-pacemaker"></a>使用 Pacemaker 設定
 
-在 Windows 世界中，Windows Server 容錯移轉叢集 (WSFC)，以原生方式支援多個子網路，並會處理透過 IP 位址上 OR 相依性的多個 IP 位址。 在 Linux 上，沒有 OR 相依性，但是沒有原生 pacemaker，達到適當的多重子網路的方式如下所示。 您無法直接修改資源使用一般的 Pacemaker 命令列來這樣做。 您需要修改叢集資訊基底 (CIB)。 CIB 是 Pacemaker 組態 XML 檔案。
+在 Windows 的世界中，Windows Server 容錯移轉叢集 (WSFC) 可原生支援多個子網路，並透過對 IP 位址的 OR 相依性來處理多個 IP 位址。 在 Linux 上則沒有 OR 相依性，但有一種方法可以使用 Pacemaker 以原生方式實現適當的多個子網路，如下所示。 若要進行此操作，您無法僅使用一般的 Pacemaker 命令列來修改資源。 您需要修改叢集資訊基底 (CIB)。 CIB 是具有 Pacemaker 設定的 XML 檔案。
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
@@ -51,9 +51,9 @@ AG 或 FCI 的 IP 位址建立 VLAN 上執行。 在下列範例中，VLAN 有 1
     sudo cibadmin -Q > <filename>
     ```
 
-    何處*filename*是您想要呼叫 CIB 的名稱。
+    其中 *filename* 是您想要呼叫 CIB 的名稱。
 
-2.  編輯所產生的檔案。 尋找`<resources>`一節。 您會看到所建立的 AG 或 FCI 的各種資源。 找出相關聯的 IP 位址。 新增`<instance attributes>`區段取代為高於或低於現有的帳戶，第二個 IP 位址的資訊之前`<operations>`。 它會類似於下列語法：
+2.  編輯已產生的檔案。 尋找 `<resources>` 區段。 您會看到針對 AG 或 FCI 所建立的各種資源。 尋找與 IP 位址建立關聯的資源。 新增 `<instance attributes>` 區段，其中包含第二個 IP 位址的資訊，該位址位於現有的 IP 位置之上或之下，但在 `<operations>` 之前。 其類似於下列語法：
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -65,9 +65,9 @@ AG 或 FCI 的 IP 位址建立 VLAN 上執行。 在下列範例中，VLAN 有 1
     </instance attributes>
     ```
     
-    何處*NameForAttribute*是唯一的名稱，這個屬性，如*分數*是指派給屬性，必須是高於主要子網路，數字*RuleName*的規則，名稱*ExpressionName*是運算式的名稱*NodeNameInSubnet2*是另一個子網路，在節點名稱*NameForSecondIP*是名稱的第二個 IP 位址，與相關聯*IPAddress*是第二個子網路，IP 位址*NameForSecondIPNetmask*是與網路遮罩，相關聯的名稱和*Netmask*是第二個子網路的網路遮罩。
+    其中 *NameForAttribute* 是此屬性的唯一名稱，*Score* 是指派給屬性的數字 (必須高於主要子網路)，*RuleName* 是規則的名稱，*ExpressionName* 是運算式的名稱，*NodeNameInSubnet2* 是另一個子網路中的節點名稱，*NameForSecondIP* 是與第二個 IP 位址建立關聯的名稱，*IPAddress* 是第二個子網路的 IP 位址，*NameForSecondIPNetmask* 是與網路遮罩建立關聯的名稱，*Netmask* 是第二個子網路的網路遮罩。
     
-    以下顯示的範例。
+    下列為範例。
     
     ```xml
     <instance attributes id="Node3-2nd-IP" score="2">
@@ -79,7 +79,7 @@ AG 或 FCI 的 IP 位址建立 VLAN 上執行。 在下列範例中，VLAN 有 1
     </instance attributes>
     ```
 
-3.  匯入修改過的 CIB 並重新設定 Pacemaker。
+3.  匯入已修改的 CIB 並重新設定 Pacemaker。
 
     **RHEL/Ubuntu**
     
@@ -93,11 +93,11 @@ AG 或 FCI 的 IP 位址建立 VLAN 上執行。 在下列範例中，VLAN 有 1
     sudo cibadmin -R -x <filename>
     ```
 
-    何處*filename*是修改過的 IP 位址資訊 CIB 檔案的名稱。
+    其中 *filename* 是 CIB 檔案的名稱，包含已修改的 IP 位址資訊。
 
-### <a name="check-and-verify-failover"></a>請檢查並確認容錯移轉
+### <a name="check-and-verify-failover"></a>檢查並驗證容錯移轉
 
-1.  CIB 順利套用更新的設定之後，ping pacemaker 的 IP 位址資源相關聯的 DNS 名稱。 它應該會反映目前裝載的 AG 或 FCI 的子網路相關聯的 IP 位址。
-2.  無法另一個子網路 FCI 的 AG。
-3.  AG 或 FCI 完全上線後，偵測相關聯的 IP 位址的 DNS 名稱。 它應該會反映在第二個子網路的 IP 位址。
-4.  如有需要，請回到原始的子網路中失敗的 AG 或 FCI。
+1.  成功套用已更新設定的 CIB 之後，請 Ping 與 Pacemaker 中 IP 位址資源建立關聯的 DNS 名稱。 其應該會反映與其目前裝載 AG 或 FCI 之子網路建立關聯的 IP 位址。
+2.  將 AG 或 FCI 容錯回復至另一個子網路。
+3.  在 AG 或 FCI 完全上線之後，請 Ping 與 IP 位址建立關聯的 DNS 名稱。 其應該會反映第二個子網路中的 IP 位址。
+4.  如有需要，將 AG 或 FCI 容錯回復至原始子網路。

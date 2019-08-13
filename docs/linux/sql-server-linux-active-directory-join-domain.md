@@ -1,5 +1,5 @@
 ---
-title: 加入至 Active Directory 的 Linux 上的 SQL Server
+title: 將 Linux 上的 SQL Server 加入 Active Directory
 titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027337"
 ---
-# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>加入 Active Directory 網域的 Linux 主機上的 SQL Server
+# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>將 Linux 主機上的 SQL Server 加入 Active Directory 網域
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-這篇文章提供有關如何將 SQL Server Linux 主機電腦加入 Active Directory (AD) 網域的一般指引。 有兩種方法： 使用內建的 SSSD 封裝，或使用協力廠商 Active Directory 提供者。 第三方網域聯結產品的範例包括[PowerBroker 身分識別服務 (PBI)](https://www.beyondtrust.com/)，[一個身分識別](https://www.oneidentity.com/products/authentication-services/)，並[Centrify](https://www.centrify.com/)。 本指南包含要檢查您的 Active Directory 設定的步驟。 不過，它並不打算提供有關如何使用協力廠商公用程式時，將機器加入網域的指示。
+本文提供如何將 SQL Server Linux 主機電腦加入 Active Directory (AD) 網域的一般指引。 您可使用下列兩種方法：使用內建的 SSSD 套件，或使用協力廠商 Active Directory 提供者。 協力廠商網域加入產品的範例包括 [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/)、[One Identity](https://www.oneidentity.com/products/authentication-services/) 和 [Centrify](https://www.centrify.com/)。 本指南包含檢查 Active Directory 設定的步驟。 不過，它並未提供在使用協力廠商公用程式時如何將電腦加入網域的指示。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-設定 Active Directory 驗證之前，您需要設定一個 Active Directory 網域控制站，Windows，您的網路。 然後，加入您的 SQL Server 的 Active Directory 網域的 Linux 主機上。
+設定 Active Directory 驗證之前，您必須先在網路上設定 Active Directory 網域控制站 (Windows)。 然後，將 Linux 主機上的 SQL Server 加入 Active Directory 網域。
 
 > [!IMPORTANT]
-> 這篇文章中所述的範例步驟適用於只使用指導方針。 實際步驟可能會在您的環境，根據您的整體環境的設定方式稍有不同的。 請連絡您的系統和網域系統管理員為您的環境的特定組態、 自訂和任何必要的疑難排解。
+> 本文所述的範例步驟僅供指引參考。 根據整體環境的設定方式而定，您環境中的實際步驟可能稍有不同。 如需環境的特定設定、自訂及任何必要的疑難排解，請連絡您的系統和網域管理員。
 
-## <a name="check-the-connection-to-a-domain-controller"></a>請檢查網域控制站的連線
+## <a name="check-the-connection-to-a-domain-controller"></a>檢查網域控制站的連線
 
-您可以連絡與網域的簡短和完整格式名稱的網域控制站的檢查：
+請確認您可以使用網域的簡短和完整名稱來與網域控制站連線：
 
 ```bash
 ping contoso
@@ -39,13 +39,13 @@ ping contoso.com
 ```
 
 > [!TIP]
-> 本教學課程會使用**contoso.com**並**CONTOSO.COM**做為範例網域和領域名稱，分別。 它也會使用**DC1。CONTOSO.COM**如範例完整的網域控制站的網域名稱。 您必須以您自己的值來取代這些名稱。
+> 本教學課程分別使用 **contoso.com** 和 **CONTOSO.COM** 作為範例網域和領域名稱。 它也會使用 **DC1.CONTOSO.COM** 作為網域控制站的完整網域名稱範例。 您必須以自有值來取代這些名稱。
 
-如果任一項名稱檢查失敗時，更新您的網域搜尋清單。 下列各節分別提供適用於 Ubuntu、 Red Hat Enterprise Linux (RHEL) 及 SUSE Linux Enterprise Server (SLES) 的指示。
+如果其中一項名稱檢查失敗，請更新您的網域搜尋清單。 下列各節分別提供適用於 Ubuntu、Red Hat Enterprise Linux (RHEL) 和 SUSE Linux Enterprise Server (SLES) 的指示。
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. 編輯 **/etc/network/interfaces**檔案，以便您的 Active Directory 網域是網域的 [搜尋] 清單中：
+1. 編輯 **/etc/network/interfaces** 檔案，以讓您的 Active Directory 網域位於網域搜尋清單中：
 
    ```/etc/network/interfaces
    # The primary network interface
@@ -56,15 +56,15 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > 網路介面， `eth0`，針對不同的機器可能會不同。 若要了解您使用哪一個，執行**ifconfig**。 然後複製所具有的 IP 位址和傳輸和接收的位元組的介面。
+   > 網路介面 `eth0` 可能會因不同電腦而有所不同。 若要找出您使用的是哪一個，請執行 **ifconfig**。 然後，複製具有 IP 位址並已傳送和接收位元組的介面。
 
-1. 在編輯這個檔案之後, 重新啟動網路服務：
+1. 編輯此檔案之後，請重新啟動網路服務：
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
    ```
 
-1. 接下來，請檢查您 **/etc/resolv.conf**檔案包含一行，如下列範例所示：
+1. 接下來，檢查 **/etc/resolv.conf** 檔案是否包含類似下列範例的程式碼行：
 
    ```/etc/resolv.conf
    search contoso.com com  
@@ -73,7 +73,7 @@ ping contoso.com
 
 ### <a name="rhel"></a>RHEL
 
-1. 編輯 **/etc/sysconfig/network-scripts/ifcfg-eth0**檔案，以便您的 Active Directory 網域是網域的 [搜尋] 清單中。 或編輯另一個適當的介面組態檔：
+1. 編輯 **/etc/sysconfig/network-scripts/ifcfg-eth0** 檔案，以讓您的 Active Directory 網域位於網域搜尋清單中。 或者，視需要編輯其他介面設定檔：
 
    ```/etc/sysconfig/network-scripts/ifcfg-eth0
    PEERDNS=no
@@ -81,20 +81,20 @@ ping contoso.com
    DOMAIN="contoso.com com"
    ```
 
-1. 在編輯這個檔案之後, 重新啟動網路服務：
+1. 編輯此檔案之後，請重新啟動網路服務：
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. 現在，請確認您 **/etc/resolv.conf**檔案包含一行，如下列範例所示：
+1. 現在，檢查 **/etc/resolv.conf** 檔案是否包含類似下列範例的程式碼行：
 
    ```/etc/resolv.conf
    search contoso.com com  
    nameserver **<AD domain controller IP address>**
    ```
 
-1. 如果您仍然無法 ping 網域控制站，尋找網域控制站的 IP 位址與完整的網域名稱。 範例的網域名稱是**DC1。CONTOSO.COM**。 新增下列項目，以**eg /etc/ 主機**:
+1. 如果您仍然無法 Ping 網域控制站，請尋找網域控制站的完整網域名稱和 IP 位址。 範例網域名稱為 **DC1.CONTOSO.COM**。 將下列項目新增至 **/etc/hosts**：
 
    ```/etc/hosts
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
@@ -102,20 +102,20 @@ ping contoso.com
 
 ### <a name="sles"></a>SLES
 
-1. 編輯 **/etc/sysconfig/network/config**檔案，以便您的 Active Directory 網域控制站 IP 用於 DNS 查詢，而且您的 Active Directory 網域是網域的 [搜尋] 清單中：
+1. 編輯 **/etc/sysconfig/network/config** 檔案，以讓您的 Active Directory 網域控制站 IP 用於 DNS 查詢，且您的 Active Directory 網域位於網域搜尋清單中：
 
    ```/etc/sysconfig/network/config
    NETCONFIG_DNS_STATIC_SEARCHLIST=""
    NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
    ```
 
-1. 在編輯這個檔案之後, 重新啟動網路服務：
+1. 編輯此檔案之後，請重新啟動網路服務：
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. 接下來，請檢查您 **/etc/resolv.conf**檔案包含一行，如下列範例所示：
+1. 接下來，檢查 **/etc/resolv.conf** 檔案是否包含類似下列範例的程式碼行：
 
    ```/etc/resolv.conf
    search contoso.com com
@@ -124,29 +124,29 @@ ping contoso.com
 
 ## <a name="join-to-the-ad-domain"></a>加入 AD 網域
 
-在基本組態和網域控制站的連線通過驗證之後，有兩個聯結與 Active Directory 網域控制站的 SQL Server Linux 主機電腦的選項：
+在驗證網域控制站的基本設定和連線能力之後，您可以使用下列兩個選項來聯結 SQL Server Linux 主機電腦與 Active Directory 網域控制站：
 
-- [選項 1:使用 SSSD 封裝](#option1)
-- [選項 2:使用第三方 openldap 提供者公用程式](#option2)
+- [選項 1：使用 SSSD 套件](#option1)
+- [選項 2：使用協力廠商 OpenLDAP 提供者的公用程式](#option2)
 
-### <a id="option1"></a> 選項 1:若要加入 AD 網域使用 SSSD 封裝
+### <a id="option1"></a> 選項 1：使用 SSSD 套件來加入 AD 網域
 
-這個方法會加入 AD 網域使用的 SQL Server 主機**realmd**並**sssd**封裝。
+此方法會使用 **realmd** 和 **sssd** 套件，將 SQL Server 主機加入 AD 網域。
 
 > [!NOTE]
-> 這是加入 AD 網域控制站的 Linux 主機的慣用的方法。
+> 這是將 Linux 主機加入 AD 網域控制站的慣用方法。
 
-若要加入至 Active Directory 網域的 SQL Server 主機使用下列步驟：
+使用下列步驟，將 SQL Server 主機加入 Active Directory 網域：
 
-1. 使用[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join)主機電腦加入 AD 網域。 您必須先安裝兩者**realmd**和 SQL Server 主機上使用您的 Linux 散發套件管理員的 Kerberos 用戶端套件：
+1. 使用 [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join)，將您的主機電腦加入 AD 網域。 您必須先使用 Linux 發行版本的套件管理員，在 SQL Server 主機電腦上安裝 **realmd** 和 Kerberos 用戶端套件：
 
-   **RHEL:**
+   **RHEL：**
 
    ```base
    sudo yum install realmd krb5-workstation
    ```
 
-   **SUSE:**
+   **SUSE：**
 
    ```bash
    sudo zypper install realmd krb5-client
@@ -158,29 +158,29 @@ ping contoso.com
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
-1. 如果 Kerberos 的用戶端封裝安裝將會提示您輸入領域名稱，請以大寫輸入您的網域名稱。
+1. 如果 Kerberos 用戶端套件安裝提示您提供領域名稱，請以大寫輸入您的網域名稱。
 
-1. 確認已正確設定您的 DNS 之後，請執行下列命令來加入網域。 您必須使用具有足夠的權限，AD 以新的電腦加入網域中的 AD 帳戶進行驗證。 此命令會在 AD 中建立新的電腦帳戶，會建立 **/etc/krb5.keytab**裝載 keytab 檔案、 設定中的網域 **/etc/sssd/sssd.conf**，並更新 **/etc/krb5.conf**.
+1. 在您確認 DNS 設定無誤之後，請執行下列命令來加入網域。 您必須使用具有足夠 AD 權限的 AD 帳戶進行驗證，才能將新的電腦加入網域。 此命令會在 AD 中建立新的電腦帳戶、建立 **/etc/krb5.keytab** 主機 Keytab 檔、在 **/etc/sssd/sssd.conf** 中設定網域，以及更新 **/etc/krb5.conf**。
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    ```
 
-   您應該會看到訊息， `Successfully enrolled machine in realm`。
+   您應該會看到 `Successfully enrolled machine in realm` 此訊息。
 
-   下表列出一些您可能會收到的錯誤訊息和解決問題的建議：
+   下表列出一些您可能會收到的錯誤訊息，以及解決這些錯誤的建議：
 
    | 錯誤訊息 | 建議 |
    |---|---|
-   | `Necessary packages are not installed` | 安裝這些套件使用您的 Linux 散發套件管理員，才能再次執行領域的聯結命令。 |
-   | `Insufficient permissions to join the domain` | 使用網域系統管理員檢查您有足夠的權限加入您的網域中的 Linux 機器。 |
-   | `KDC reply did not match expectations` | 您可能未指定使用者的正確領域名稱。 領域名稱會區分大小寫，則通常是大寫，和可以識別與命令領域探索 contoso.com。 |
+   | `Necessary packages are not installed` | 請先使用 Linux 發行版本的套件管理員安裝這些套件，然後再次執行 realm join 命令。 |
+   | `Insufficient permissions to join the domain` | 請連絡網域系統管理員，確認您有足夠權限可將 Linux 電腦加入您的網域。 |
+   | `KDC reply did not match expectations` | 您可能未針對使用者指定正確的領域名稱。 領域名稱會區分大小寫；通常是大寫，且可以使用 realm discover contoso.com 命令來識別。 |
 
-   SQL Server 會使用 SSSD 和 NSS 對應使用者帳戶和群組安全性識別元 (Sid)。 SSSD 必須設定並執行 SQL Server 已成功建立 AD 登入。 **realmd**平常這會自動在加入網域，但在某些情況下，您必須分別執行此動作。
+   SQL Server 會使用 SSSD 和 NSS，將使用者帳戶和群組對應至安全性識別碼 (SID)。 您必須設定並執行 SSSD，SQL Server 才能成功建立 AD 登入。 **realmd** 通常會在加入網域的過程中自動執行此動作，但在某些情況下，您必須另外進行此作業。
 
-   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951)，並[設定來使用 SSSD NSS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
+   如需詳細資訊，請參閱如何[手動設定 SSSD](https://access.redhat.com/articles/3023951) 和[設定 NSS 以使用 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)。
 
-1. 請確認您現在可以收集使用者資訊從網域，而且您可以取得 Kerberos 票證，以該使用者。 下列範例會使用**識別碼**， [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)，並[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)這個命令。
+1. 確認您現在可以透過網域收集使用者的相關資訊，並取得該使用者的 Kerberos 票證。 下列範例會針對上述目的，使用 **id**、[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 和 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 命令。
 
    ```bash
    id user@contoso.com
@@ -197,22 +197,22 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > - 如果**識別碼user@contoso.com** 會傳回`No such user`，請確定已成功啟動 SSSD 服務： 執行命令`sudo systemctl status sssd`。 如果服務正在執行，而且您仍然看到錯誤，請嘗試啟用 SSSD 的詳細資訊記錄。 如需詳細資訊，請參閱 Red Hat 文件[疑難排解 SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)。
+   > - 如果 **id user@contoso.com** 傳回 `No such user`，請執行 `sudo systemctl status sssd` 命令以確定 SSSD 服務已成功啟動。 如果服務正在執行，但您仍然看到此錯誤，請嘗試啟用 SSSD 的詳細資訊記錄。 如需詳細資訊，請參閱 Red Hat 文件的 [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting) (針對 SSSD 進行疑難排解)。
    >
-   > - 如果**kinit user@CONTOSO.COM** 會傳回`KDC reply did not match expectations while getting initial credentials`，請確定您以大寫指定領域。
+   > - 如果 **kinit user@CONTOSO.COM** 傳回 `KDC reply did not match expectations while getting initial credentials`，請確認您已指定大寫的領域。
 
-如需詳細資訊，請參閱 Red Hat 文件[發掘並加入身分識別網域](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)。
+如需詳細資訊，請參閱 Red Hat 文件的 [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html) (探索及加入識別身分網域)。
 
-### <a id="option2"></a> 選項 2:使用第三方 openldap 提供者公用程式
+### <a id="option2"></a> 選項 2：使用協力廠商 OpenLDAP 提供者的公用程式
 
-您可以使用協力廠商公用程式，例如[PBI](https://www.beyondtrust.com/)， [VAS](https://www.oneidentity.com/products/authentication-services/)，或[Centrify](https://www.centrify.com/)。 這篇文章並未涵蓋每個個別的公用程式的步驟。 您必須先使用其中一個公用程式來加入網域中的 SQL Server 的 Linux 主機，然後再繼續往前。  
+您可以使用協力廠商公用程式，例如 [PBIS](https://www.beyondtrust.com/)、[VAS](https://www.oneidentity.com/products/authentication-services/) 或 [Centrify](https://www.centrify.com/)。 本文未涵蓋每個個別公用程式的步驟。 您必須先使用其中一個公用程式，將 SQL Server 的 Linux 主機加入網域，再繼續進行。  
 
-SQL Server 不使用協力廠商整合器程式碼或程式庫的任何 AD 相關的查詢。 SQL Server alwayson 會查詢 AD 直接在此安裝程式中使用 openldap 程式庫呼叫。 第三方整合者只會用來將 Linux 主機加入 AD 網域和 SQL Server 並沒有任何直接的通訊，使用這些公用程式。
+SQL Server 不會使用協力廠商整合器的程式碼或程式庫來進行任何 AD 相關查詢。 SQL Server 一律會直接在此安裝程式中使用 OpenLDAP 程式庫呼叫來查詢 AD。 系統只會使用協力廠商整合器來將 Linux 主機加入 AD 網域，而 SQL Server 與這些公用程式沒有任何直接的通訊。
 
 > [!IMPORTANT]
-> 使用的建議，請參閱**mssql conf** `network.disablesssd`中的組態選項**其他組態選項**一節的發行項[使用作用中Linux 上的 SQL Server 的目錄驗證](sql-server-linux-active-directory-authentication.md#additionalconfig)。
+> 如需使用 **mssql-conf** `network.disablesssd` 設定選項的建議，請參閱[在 Linux 上搭配使用 Active Directory 驗證與 SQL Server](sql-server-linux-active-directory-authentication.md#additionalconfig) 一文的＜其他設定選項＞  一節。
 
-確認您 **/etc/krb5.conf**已正確設定。 對於大部分的協力廠商 Active Directory 提供者，此設定會自動完成。 不過，檢查 **/etc/krb5.conf**如下列的值，以避免未來發生任何問題：
+確認您已正確設定 **/etc/krb5.conf**。 大多數協力廠商 Active Directory 提供者都會自動完成此設定。 不過，請檢查 **/etc/krb5.conf** 的下列值，以防止任何後續問題：
 
 ```/etc/krb5.conf
 [libdefaults]
@@ -227,16 +227,16 @@ contoso.com = CONTOSO.COM
 .contoso.com = CONTOSO.COM
 ```
 
-## <a name="check-that-the-reverse-dns-is-properly-configured"></a>反向 DNS 已正確設定的核取
+## <a name="check-that-the-reverse-dns-is-properly-configured"></a>檢查反向 DNS 是否已正確設定
 
-下列命令應該傳回完整的網域名稱 (FQDN) 的主控件執行 SQL Server。 例如， **SqlHost.contoso.com**。
+下列命令應該會傳回 SQL Server 執行主機的完整網域名稱 (FQDN)。 例如 **SqlHost.contoso.com**。
 
 ```bash
 host **<IP address of SQL Server host>**
 ```
 
-此命令的輸出應該會類似`**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`。 如果此命令不會傳回您主機的 FQDN，或如果 FQDN 不正確，加入您的 SQL Server，您的 DNS 伺服器的 Linux 主機上反向的 DNS 項目。
+此命令的輸出應該類似 `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`。 如果此命令未傳回您主機的 FQDN，或 FQDN 不正確，請將 Linux 上的 SQL Server 主機反向 DNS 項目新增至您的 DNS 伺服器。
 
 ## <a name="next-steps"></a>後續步驟
 
-本文涵蓋如何使用 Active Directory 驗證 Linux 主機機器上設定 SQL Server 的必要條件。 若要完成設定 Active Directory 帳戶，才能在 Linux 上的 SQL Server，請遵循指示[在 Linux 上的 SQL server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。
+本文涵蓋的必要條件說明如何在使用 Active Directory 驗證的 Linux 主機電腦上設定 SQL Server。 若要完成設定 Linux 上的 SQL Server 以支援 Active Directory 帳戶，請遵循[在 Linux 上搭配使用 Active Directory 驗證與 SQL Server](sql-server-linux-active-directory-authentication.md)中的指示。

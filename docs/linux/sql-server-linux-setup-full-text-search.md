@@ -9,22 +9,22 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 9a637e6b12c674102bd09239739a137e1d442e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065096"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安裝 SQL Server 全文檢索搜尋
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-下列步驟會安裝[SQL Server 全文檢索搜尋](../relational-databases/search/full-text-search.md)(**mssql-server-fts**) 在 Linux 上。 全文檢索搜尋可讓您針對 SQL Server 資料表中的字元為基礎的資料執行全文檢索查詢。 如需此版本的已知問題，請參閱[Release Notes](sql-server-linux-release-notes.md)。
+下列步驟會在 Linux 上安裝 [SQL Server 全文檢索搜尋](../relational-databases/search/full-text-search.md) (**mssql-server-fts**)。 全文檢索搜尋可讓您針對 SQL Server 資料表中以字元為基礎的資料執行全文檢索查詢。 如需此版本的已知問題，請參閱[版本資訊](sql-server-linux-release-notes.md)。
 
 > [!NOTE]
-> 然後再安裝 SQL Server 全文檢索搜尋，第一次[安裝 SQL Server](sql-server-linux-setup.md#platforms)。 這會設定索引鍵和您在安裝時使用的儲存機制**mssql-server-fts**封裝。
+> 安裝 SQL Server 全文檢索搜尋之前，請先[安裝 SQL Server](sql-server-linux-setup.md#platforms)。 這會設定您在安裝 **mssql-server-fts** 套件時所使用的金鑰和存放庫。
 
-安裝適用於您平台的 SQL Server 全文檢索搜尋：
+為您的平台安裝 SQL Server 全文檢索搜尋：
 
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
@@ -32,59 +32,59 @@ ms.locfileid: "68065096"
 
 ## <a name="RHEL">在 RHEL 上安裝</a>
 
-使用下列命令來安裝**mssql-server-fts** Red Hat Enterprise Linux 上。 
+使用下列命令，在 Red Hat Enterprise Linux 上安裝 **mssql-server-fts**。 
 
 ```bash
 sudo yum install -y mssql-server-fts
 ```
 
-如果您已經有**mssql-server-fts**安裝，您可以更新為最新的版本，使用下列命令：
+如果您已經安裝 **mssql-server-fts**，則可使用下列命令更新為最新版本：
 
 ```bash
 sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-如果您需要離線安裝時，找出全文檢索搜尋套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
+如果您需要離線安裝，請在[版本資訊](sql-server-linux-release-notes.md)中找到全文檢索搜尋套件下載。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ## <a name="ubuntu">在 Ubuntu 上安裝</a>
 
-使用下列命令來安裝**mssql-server-fts**在 Ubuntu 上。 
+使用下列命令，在 Ubuntu 上安裝 **mssql-server-fts**。 
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts
 ```
 
-如果您已經有**mssql-server-fts**安裝，您可以更新為最新的版本，使用下列命令：
+如果您已經安裝 **mssql-server-fts**，則可使用下列命令更新為最新版本：
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts 
 ```
 
-如果您需要離線安裝時，找出全文檢索搜尋套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
+如果您需要離線安裝，請在[版本資訊](sql-server-linux-release-notes.md)中找到全文檢索搜尋套件下載。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ## <a name="SLES">在 SLES 上安裝</a>
 
-使用下列命令來安裝**mssql-server-fts** SUSE Linux Enterprise Server 上。 
+使用下列命令，在 SUSE Linux Enterprise Server 上安裝 **mssql-server-fts**。 
 
 ```bash
 sudo zypper install mssql-server-fts
 ```
 
-如果您已經有**mssql-server-fts**安裝，您可以更新為最新的版本，使用下列命令：
+如果您已經安裝 **mssql-server-fts**，則可使用下列命令更新為最新版本：
 
 ```bash
 sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-如果您需要離線安裝時，找出全文檢索搜尋套件下載[版本資訊](sql-server-linux-release-notes.md)。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
+如果您需要離線安裝，請在[版本資訊](sql-server-linux-release-notes.md)中找到全文檢索搜尋套件下載。 然後使用[安裝 SQL Server](sql-server-linux-setup.md#offline)一文所述的相同離線安裝步驟。
 
 ## <a name="supported-languages"></a>支援的語言
 
-全文檢索搜尋會使用[斷詞工具](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)，以決定如何識別個別單字語言為基礎。 您可以藉由查詢來取得一份已註冊的斷詞工具**sys.fulltext_languages**目錄檢視。 針對下列語言的斷詞工具會隨 SQL Server:
+全文檢索搜尋會使用[文字分隔](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)，決定如何根據語言識別個別字詞。 您可以查詢 **sys.fulltext_languages** 目錄檢視來取得已註冊的文字分隔清單。 下列語言的文字分隔會隨著 SQL Server 一起安裝：
 
 | 語言 | 語言識別碼 |
 |---|---|
@@ -142,11 +142,11 @@ sudo zypper update mssql-server-fts
 | 烏都文 | 1056 |
 | 越南文 | 1066 |
 
-## <a id="filters"></a> 篩選器
+## <a id="filters"></a> 篩選
 
-全文檢索搜尋也可以搭配儲存在二進位檔案中的文字。 但在此情況下，已安裝的篩選條件，才能處理檔案。 如需有關篩選的詳細資訊，請參閱[設定及管理搜尋的篩選](../relational-databases/search/configure-and-manage-filters-for-search.md)。
+全文檢索搜尋也適用於儲存在二進位檔案中的文字。 但是在此情況下，您必須已安裝篩選才能處理檔案。 如需篩選的詳細資訊，請參閱[設定及管理搜尋的篩選](../relational-databases/search/configure-and-manage-filters-for-search.md)。
 
-您可以看到已安裝的篩選器清單，藉由呼叫**sp_help_fulltext_system_components 'filter'** 。 SQL Server 會安裝下列的篩選條件︰
+您可以呼叫 **sp_help_fulltext_system_components 'filter'** 來查看已安裝的篩選清單。 SQL Server 會安裝下列篩選：
 
 | 元件名稱 | 類別識別碼 | Version |
 |---|---|---|
@@ -173,7 +173,7 @@ sudo zypper update mssql-server-fts
 |.cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.dbs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|:.dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.dos | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.dsp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -256,11 +256,11 @@ sudo zypper update mssql-server-fts
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>語意搜尋
-[語意搜尋](../relational-databases/search/semantic-search-sql-server.md)來擷取和索引統計上相關的全文檢索搜尋功能是根據*主要片語*。 這可讓您查詢資料庫中的文件內的意義。 它也有助於識別相似的文件。
+[語意搜尋](../relational-databases/search/semantic-search-sql-server.md)是以全文檢索搜尋功能為基礎，可擷取相關「關鍵片語」  並以統計方式編制索引。 這可讓您查詢資料庫中文件內的意義。 它也有助於識別類似的文件。
 
-若要使用語意搜尋，您必須先以您的電腦還原語義語言統計資料庫。
+若要使用語意搜尋，您必須先將語意語言統計資料的資料庫還原至您的電腦。
 
-1. 使用的工具，例如[sqlcmd](sql-server-linux-setup-tools.md)、 您的 Linux SQL Server 執行個體上執行下列 TRANSACT-SQL 命令。 此命令會還原語言統計資料庫。
+1. 使用 [sqlcmd](sql-server-linux-setup-tools.md) 這類工具，在您的 Linux SQL Server 執行個體上執行下列 Transact-SQL 命令。 此命令會還原語言統計資料的資料庫。
 
    ```sql
    RESTORE DATABASE [semanticsdb] FROM
@@ -271,9 +271,9 @@ sudo zypper update mssql-server-fts
    ```
 
    > [!NOTE]
-   > 必要時，更新先前的 RESTORE 命令，來調整您的組態中的路徑。
+   > 如有必要，請更新先前 RESTORE 命令中的路徑，以調整您的設定。
 
-1. 執行下列 TRANSACT-SQL 命令以註冊語意語言統計資料庫。
+1. 執行下列 Transact-SQL 命令，以註冊語意語言統計資料的資料庫。
 
     ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
@@ -282,4 +282,4 @@ sudo zypper update mssql-server-fts
 
 ## <a name="next-steps"></a>後續步驟
 
-全文檢索搜尋的相關資訊，請參閱[SQL Server 全文檢索搜尋](../relational-databases/search/full-text-search.md)。 
+如需全文檢索搜尋的資訊，請參閱 [SQL Server 全文檢索搜尋](../relational-databases/search/full-text-search.md)。 

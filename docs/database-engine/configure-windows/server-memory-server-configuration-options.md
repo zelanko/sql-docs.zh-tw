@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 384647c51e738bf96335ac481fcc250476748ae2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f631c7c0d4e1674e5982f0650989583910388e6
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025605"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476270"
 ---
 # <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68025605"
 
 <sup>2</sup> 如需在目前主機中，為指定數量之親和 CPU 而計算出的預設背景工作執行緒數目相關資訊，請參閱如何[設定最大背景工作執行緒伺服器設定選項](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文件頁面。
 
-<sup>3</sup> 如需 *-g* 啟動參數的資訊，請參閱[資料庫引擎服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)的文件頁面。
+<sup>3</sup> 如需 *-g* 啟動參數的資訊，請參閱[資料庫引擎服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)的文件頁面。 僅適用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定記憶體選項  
 您可使用 [最小伺服器記憶體]  與 **[最大伺服器記憶體]** 這兩個伺服器記憶體選項，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體重新設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員所管理的記憶體數量 (MB)。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以根據可用的系統資源，動態變更其記憶體需求。  

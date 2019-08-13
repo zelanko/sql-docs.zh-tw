@@ -1,6 +1,6 @@
 ---
-title: 建立的 SQL Server Always On 可用性群組在 Kubernetes 上部署指令碼
-description: 這篇文章說明如何建立 SQL Server Always On 可用性群組在 Kubernetes 上部署指令碼
+title: 在 Kubernetes 上建立 SQL Server Always On 可用性群組的部署指令碼
+description: 本文說明如何在 Kubernetes 上建立 SQL Server Always On 可用性群組的部署指令碼
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,45 +10,45 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 181773a19e87c34a1931cae05f5a329aedbc1239
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68000137"
 ---
-# <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>建立部署指令碼以 SQL Server Always On 可用性群組
+# <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>建立 SQL Server Always On 可用性群組的部署指令碼
 
-本文說明如何部署上的範例部署指令碼的單一命令中的 Kubernetes 叢集的可用性群組。 `deploy-ag.py` 建立 Python 指令碼`.yaml`可以將它們套用到 Kubernetes 叢集和檔案叢集。
+本文描述如何以包含範例部署指令碼的單一命令，在 Kubernetes 叢集上部署可用性群組。 `deploy-ag.py` 是 Python 指令碼，它會為叢集建立 `.yaml` 檔案，並可將其套用至 Kubernetes 叢集。
 
-從檔案的檔案下載[sql server 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script)。
+請從 [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script) 下載檔案。
 
 ## <a name="before-you-start"></a>開始之前
 
 在您的工作站上安裝下列工具。
 
-* [Python](https://www.python.org/downloads/) （3.5 或 3.6）
-* [PyYAML](https://pyyaml.org/) -Python 套件
-* [Kubernetes 用戶端](https://github.com/kubernetes-client/python)-Python 套件
+* [Python](https://www.python.org/downloads/) (3.5 或 3.6)
+* [PyYAML](https://pyyaml.org/) - Python 套件
+* [Kubernetes 用戶端](https://github.com/kubernetes-client/python) - Python 套件
 
-將 python 路徑新增至環境變數中，（適用於 Windows)。
+將 python 路徑新增至環境變數 (適用於 Windows)。
 
 ### <a name="install-the-required-components"></a>安裝必要的元件
 
-上述的下列範例會安裝 Python PyYAML 和 Kubernetes 用戶端套件。
+下列範例會安裝適用於 Python 的 PyYAML 和 Kubernetes 用戶端套件。
 
 安裝 Python 之後，請下載並解壓縮範例資料夾。 
 
-若要設定所需的檔案，請執行下列命令。 取代`<path>`解壓縮的範例檔案的位置。
+若要設定必要的檔案，請執行下列命令。 請以解壓縮範例檔案的位置取代 `<path>`。
 
 ```cmd
 pip install --user -r "C:\<path>\requirements.txt"
 ```
 
-## <a name="create-cluster-and-download-config-file"></a>建立叢集，並下載設定檔
+## <a name="create-cluster-and-download-config-file"></a>建立叢集並下載設定檔
 
-下列範例會建立在 Azure Kubernetes Service (AKS) 叢集。
+下列範例會在 Azure Kubernetes Service (AKS) 中建立叢集。
 
-執行指令碼之前，請更新的值，在角括號- `<>`。
+執行指令碼之前，請先更新角括弧 (`<>`) 中的值。
 
 ```azcli
 az aks create  --resource-group <GroupName> --name <ClusterName> --generate-ssh-keys --node-count 4 --kubernetes-version 1.11.1
@@ -57,39 +57,39 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 ```
 
 >[!NOTE]
->可用性群組需要 Kubernetes 版本 1.11.0 或更高版本。 此範例會指定 1.11.1。
+>可用性群組需要 Kubernetes 1.11.0 版或更高版本。 此範例會指定 1.11.1。
 
 ## <a name="run-the-deployment-script"></a>執行部署指令碼
 
-下列範例示範如何執行`deploy-ag.py`。
+下列範例示範如何執行 `deploy-ag.py`。
 
-### <a name="help"></a>Help
+### <a name="help"></a>說明
 
 ```cmd
 python ./deploy-ag.py --help
 ```
 
-* **使用量**: `deploy-ag.py [-h] {deploy | failover} ...`
-* **選擇性引數**:
+* **使用方式**：`deploy-ag.py [-h] {deploy | failover} ...`
+* **選擇性引數**：
   * `-h, --help` 顯示此說明訊息並結束
-* **子命令**:
-  * K8s 代理程式上的動作 {部署 | 容錯移轉}
+* **子命令**：
+  * 對 k8s 代理程式的動作 {deploy | failover}
 
   `deploy`
 
-   將 SQL Server 可用性群組中一組部署
+   在可用性群組中部署一組 SQL Server
 
   `failover`
 
    容錯移轉至目標複本。
 
-### <a name="deploy-help"></a>部署說明
+### <a name="deploy-help"></a>Deploy 說明
 
 ```cmd
 python ./deploy-ag.py deploy --help
 ```
 
-* **使用量**:
+* **使用方式**：
 
   ```
   python ./deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
@@ -98,9 +98,9 @@ python ./deploy-ag.py deploy --help
     [--skip-create-namespace]
   ```
 
-  部署 SQL Server 和 namespace(AG name) k8s 代理程式
+  在命名空間 (AG 名稱) 中部署 SQL Server 和 k8s 代理程式
 
-* **選擇性引數**:
+* **選擇性引數**：
   
   `-h, --help`
   
@@ -112,36 +112,36 @@ python ./deploy-ag.py deploy --help
   
   `--ag AG`
   
-  可用性群組的名稱。 預設 = ag1
+  可用性群組的名稱。 預設=ag1
   
   `-n NAMESPACE, --namespace NAMESPACE`
   
-  k8s 命名空間名稱。 如果未指定，則預設為 AG 名稱。
+  k8s 命名空間的名稱。 若未指定，則預設為 AG 名稱。
 
   `--dry-run`
   
-  建立資訊清單中，但不是套用它們。
+  建立資訊清單，但不要套用這些資訊清單。
   
   `-s SQL_SERVERS [SQL_SERVERS ...], --sql-servers SQL_SERVERS [SQL_SERVERS ...]`
 
-  SQL Server 執行個體的名稱 （最多 5，並以空格分隔)，預設值 = ['mssql1'、 'mssql2'、 'mssql3']
+  SQL Server 執行個體的名稱 (最多 5個，以空格分隔) 預設=['mssql1', 'mssql2', 'mssql3']
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  SA 密碼。 預設值 = 'SAPassword2018'
+  SA 密碼。 預設='SAPassword2018'
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   
   `--skip-create-namespace`
   
-  略過建立命名空間。
+  略過命名空間建立作業。
 
-### <a name="failover-help"></a>容錯移轉說明
+### <a name="failover-help"></a>Failover 說明
 
 ```cmd
 python ./deploy-ag.py failover --help
 ```
-* **使用量**: 
+* **使用方式**： 
 
   ```cmd
   python deploy-ag.py failover [-h] [--verbose] [--ag AG]
@@ -151,11 +151,11 @@ python ./deploy-ag.py failover --help
 
   手動容錯移轉
 
-* **位置引數**: `target_replica`
+* **位置引數**：`target_replica`
 
-  容錯移轉的目標 SQL Server 複本名稱
+  用於容錯移轉的目標 SQL Server 複本名稱
 
-* **選擇性引數**:
+* **選擇性引數**：
 
   `-h, --help`
   
@@ -167,61 +167,61 @@ python ./deploy-ag.py failover --help
 
   `--ag AG`
   
-  可用性群組的名稱。 預設 = ag1
+  可用性群組的名稱。 預設=ag1
 
   `--namespace NAMESPACE`
 
-  k8s 命名空間名稱。 如果未指定的 AG 名稱的預設值
+  k8s 命名空間的名稱。 若未指定，則預設為 AG 名稱
 
   `--dry-run`
   
-  建立，但不是會套用資訊清單。
+  建立但不要套用資訊清單。
 
-### <a name="create-the-manifests---dont-apply"></a>建立資訊清單-不適用
+### <a name="create-the-manifests---dont-apply"></a>建立資訊清單 - 不套用
 
-下列指令碼會建立資訊清單檔案，但不會套用。
+下列指令碼會建立資訊清單檔案，但不會套用這些檔案。
 
 ```cmd
 python ./deploy-ag.py deploy --dry-run
 ```
 
-下列範例會建立命名空間下的可用性群組的資訊清單`AG1`含三個複本。 執行指令碼之前，請取代`<MyC0m91exP@55w0r!>`使用的複雜密碼。
+下列範例會在具有三個複本的命名空間 `AG1` 下建立可用性群組資訊清單。 執行指令碼之前，請以複雜密碼取代 `<MyC0m91exP@55w0r!>`。
 
 ```cmd
 python ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
 ```
 
-前一個命令會產生範例 yaml 檔案目錄。
+上一個命令會產生範例 YAML 檔案目錄。
 
-在此情況下，命令輸出會顯示建立資訊清單檔案的位置。
+在此情況下，命令輸出會顯示資訊清單檔案的建立位置。
 
 ![指令碼輸出](./media/sql-server-linux-kubernetes-create-deployment/scriptbuild-out.png)
     
-### <a name="create-the-manifests-and-apply"></a>建立資訊清單，並套用
+### <a name="create-the-manifests-and-apply"></a>建立資訊清單並套用
 
-下列範例會建立命名空間下的可用性群組的資訊清單`ag1`含三個複本並將其套用到 Kubernetes 叢集。 接著，叢集會建立可用性群組。 執行指令碼之前，請取代`<MyC0m91exP@55w0r!>`使用的複雜密碼。
+下列範例會在具有三個複本的命名空間 `ag1` 下建立可用性群組資訊清單，並將其套用至您的 Kubernetes 叢集。 叢集接著會建立可用性群組。 執行指令碼之前，請以複雜密碼取代 `<MyC0m91exP@55w0r!>`。
 
 ```
 python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --verbose
 ```
 
-指令碼完成之後，Kubernetes 運算子會建立儲存體、 SQL Server 執行個體、 負載平衡器服務。 您可以監視與部署[Kubernetes 儀表板](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)。
+指令碼完成之後，Kubernetes 運算子會建立儲存體、SQL Server 執行個體、負載平衡器服務。 您可以使用 [Kubernetes 儀表板](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)來監視部署。
 
-在 Kubernetes 之後建立的 SQL Server 容器：
+Kubernetes 建立 SQL Server 容器之後：
 
-1. [連接](sql-server-linux-kubernetes-connect.md)叢集中的 SQL Server 執行個體。
+1. [連線](sql-server-linux-kubernetes-connect.md)到叢集中的 SQL Server 執行個體。
 
 1. 建立資料庫。
 
-1. 進行完整備份的資料庫，以便啟動記錄鏈結。
+1. 完整備份資料庫以利啟動記錄鏈結。
 
-1. 您可以將資料庫加入可用性群組。
+1. 將資料庫新增至可用性群組。
 
-使用自動植入讓 SQL Server 會自動建立次要資料庫上適當的複本建立可用性群組。
+使用自動植入建立可用性群組，因此 SQL Server 會在適當的複本上自動建立次要資料庫。
 
 ### <a name="manually-failover"></a>手動容錯移轉
 
-下列範例會容錯移轉主要複本。
+下列範例會為主要複本進行容錯移轉。
 
 ```cmd
 python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
@@ -229,4 +229,4 @@ python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
 
 ## <a name="next-steps"></a>後續步驟
 
-[在 Kubernetes 叢集上的 SQL Server 可用性群組](sql-server-ag-kubernetes.md)
+[Kubernetes 叢集上的 SQL Server 可用性群組](sql-server-ag-kubernetes.md)

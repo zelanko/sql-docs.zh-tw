@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的智慧查詢處理 | Microsoft Docs
 description: 可改善 SQL Server 和 Azure SQL Database 查詢效能的智慧查詢處理功能。
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,22 +12,22 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354620"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388374"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-智慧查詢處理 (QP) 功能系列包含具有廣泛影響的功能，能夠以最少的實作投入量來採用，以改善現有工作負載的效能。 
+智慧查詢處理 (IQP) 功能系列包含具有廣泛影響的功能，能夠以最少的實作投入量來採用，以改善現有工作負載的效能。 
 
 ![智慧查詢處理](./media/iqp-feature-family.png)
 
-您可以為資料庫啟用適用的資料庫相容性層級，讓工作負載能自動滿足智慧查詢處理的資格。 您可以使用 Transact-SQL 設定此項目。 例如：  
+您可以為資料庫啟用適用的資料庫相容性層級，讓工作負載能自動滿足智慧查詢處理的資格。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定此項目。 例如：  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -37,139 +37,19 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 | **IQP 功能** | **Azure SQL Database 支援** | **SQL Server 支援** |**說明** |
 | --- | --- | --- |--- |
-| [自適性聯結 (批次模式)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | 是，屬於相容性層級 140| 是，自 SQL Server 2017 開始屬於相容性層級 140|自適性聯結會在執行階段，依據實際輸入列而機動選取聯結類型。|
-| [近似的相異計數](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 是，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始，公開預覽|為巨量資料案例提供約略的 COUNT DISTINCT，享有高效能及低磁碟使用量的好處。 |
-| [資料列存放區上的批次模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|為耗用大量 CPU 的關聯式 DW 工作負載提供批次模式，而且不需要資料行存放區索引。  | 
-| [交錯執行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 是，屬於相容性層級 140| 是，自 SQL Server 2017 開始屬於相容性層級 140|使用在第一次編譯時遇到的多重陳述式資料表值函式實際基數，而不是定點猜測。|
-| [記憶體授與意見反應 (批次模式)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 是，屬於相容性層級 140| 是，自 SQL Server 2017 開始屬於相容性層級 140|若批次模式查詢有作業會溢出到磁碟，請新增記憶體以防執行中斷。 若查詢耗用了 > 50% 配置給它的記憶體，請縮減記憶體授與端，以防執行中斷。|
-| [記憶體授與意見反應 (資料列模式)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|若資料列模式查詢有作業會溢出到磁碟，請新增記憶體以防執行中斷。 若查詢耗用了 > 50% 配置給它的記憶體，請縮減記憶體授與端，以防執行中斷。|
-| [純量 UDF 內嵌](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否 | 是，自 SQL Server 2019 CTP 2.1 開始屬於相容性層級 150，公開預覽|純量 UDF 會被轉換成「內嵌」在呼叫查詢中的對等關聯運算式，而這通常可讓效能大幅提升。|
-| [資料表變數延後編譯](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|使用在第一次編譯時遇到的資料表值函式實際基數，而不是定點猜測。|
+| [自適性聯結 (批次模式)](#batch-mode-adaptive-joins) | 是，屬於相容性層級 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始屬於相容性層級 140|自適性聯結會在執行階段，依據實際輸入列而機動選取聯結類型。|
+| [近似的相異計數](#approximate-query-processing) | 是，公開預覽| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 開始|為巨量資料案例提供約略的 COUNT DISTINCT，享有高效能及低磁碟使用量的好處。 |
+| [資料列存放區上的批次模式](#batch-mode-on-rowstore) | 是，屬於相容性層級 150，公開預覽| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 開始屬於相容性層級 150，公開預覽|為耗用大量 CPU 的關聯式 DW 工作負載提供批次模式，而且不需要資料行存放區索引。  | 
+| [交錯執行](#interleaved-execution-for-mstvfs) | 是，屬於相容性層級 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始屬於相容性層級 140|使用在第一次編譯時遇到的多重陳述式資料表值函式實際基數，而不是定點猜測。|
+| [記憶體授與意見反應 (批次模式)](#batch-mode-memory-grant-feedback) | 是，屬於相容性層級 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始屬於相容性層級 140|若批次模式查詢有作業會溢出到磁碟，請新增記憶體以防執行中斷。 若查詢耗用了 > 50% 配置給它的記憶體，請縮減記憶體授與端，以防執行中斷。|
+| [記憶體授與意見反應 (資料列模式)](#row-mode-memory-grant-feedback) | 是，屬於相容性層級 150，公開預覽| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 開始屬於相容性層級 150，公開預覽|若資料列模式查詢有作業會溢出到磁碟，請新增記憶體以防執行中斷。 若查詢耗用了 > 50% 配置給它的記憶體，請縮減記憶體授與端，以防執行中斷。|
+| [純量 UDF 內嵌](#scalar-udf-inlining) | 否 | 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 開始屬於相容性層級 150，公開預覽|純量 UDF 會被轉換成「內嵌」在呼叫查詢中的對等關聯運算式，而這通常可讓效能大幅提升。|
+| [資料表變數延後編譯](#table-variable-deferred-compilation) | 是，屬於相容性層級 150，公開預覽| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 開始屬於相容性層級 150，公開預覽|使用在第一次編譯時遇到的資料表值函式實際基數，而不是定點猜測。|
 
 ## <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
+批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**，方法是使用單一快取計畫。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
 
-這項功能可讓您的計畫在使用單一快取計畫的執行期間，以動態方式切換到較佳的聯結策略。
-
-批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
-運作方式如下：
--  如果組建聯結輸入的資料列計數小到巢狀迴圈聯結會比雜湊聯結更佳的情況，則您的計劃就會切換成巢狀迴圈演算法。
--  如果組建聯結輸入超過特定的資料列計數閾值，則不會切換，且您的計劃會繼續執行雜湊聯結。
-
-下列查詢用來說明自適性聯結範例：
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-此查詢會傳回 336 個資料列。 透過啟用[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)，我們會看到下列計劃：
-
-![查詢結果 336 個資料列](./media/4_AQPStats336Rows.png)
-
-我們在計劃中看到：
-1. 我們使用了資料行存放區索引掃描，為雜湊聯結建置階段提供資料列。
-1. 我們有新的自適性聯結運算子。 此運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 本例中的閾值是 78 個資料列。 凡是 &gt;= 78 個資料列的計劃都會使用雜湊聯結。 如果小於該閾值，則會使用巢狀迴圈聯結。
-1. 因為我們傳回 336 個資料列 (超過閾值)，所以第二個分支會表示標準雜湊聯結作業的探查階段。 請注意，即時查詢統計資料會顯示流經運算子的資料列，本例中為 "672 of 672"。
-1. 而最後一個分支是我們的叢集索引搜尋，供未超過閾值的巢狀迴圈聯結所使用。 請注意，我們看到的顯示是"0 of 336" 資料列 (分支未使用)。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- 現在對比使用相同查詢的計劃，但這次的 *Quantity* 值在資料表中只有一個資料列：
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-查詢會傳回一個資料列。 啟用我們在以下計劃中看到的即時查詢統計資料：
-
-![查詢結果一個資料列](./media/5_AQPStatsOneRow.png)
-
-我們在計劃中看到：
-- 因為傳回一個資料列，現在叢集索引搜尋中有資料列通過。
-- 而且，因為雜湊聯結建置階段並未繼續，所以不會有任何資料列通過第二個分支。
-
-### <a name="adaptive-join-benefits"></a>自適性聯結的優點
-經常在小型和大型聯結輸入掃描間變動的工作負載，由此功能獲益最大。
-
-### <a name="adaptive-join-overhead"></a>自適性聯結的負擔
-自調性聯結導入的記憶體需求，會比索引巢狀的迴圈聯結相等計劃更高。 系統會以巢狀迴圈有如雜湊聯結一般的方式要求額外的記憶體。 在時快時慢作業的建置階段與巢狀迴圈資料流相等聯結的比較中，會另外產生額外負荷。 加上額外的成本，隨組建輸入資料列計數浮動的案例而變動。
-
-### <a name="adaptive-join-caching-and-re-use"></a>自適性聯結快取和重複使用
-批次模式自適性聯結適合初次執行的陳述式使用，而且一旦編譯，連續執行仍會根據編譯的自適性聯結閾值和流經外部輸入建置階段的執行階段資料列聯結自動調整。
-
-### <a name="tracking-adaptive-join-activity"></a>追蹤自適性聯結活動
-自適性聯結運算子有下列計劃運算子屬性：
-
-| 計劃屬性 | Description |
-|--- |--- |
-| AdaptiveThresholdRows | 顯示從雜湊聯結切換至巢狀迴圈聯結所使用的閾值。 |
-| EstimatedJoinType | 可能的聯結類型。 |
-| ActualJoinType | 在實際的計劃中，顯示根據閾值最後選擇的聯結演算法。 |
-
-評估計劃會顯示自適性聯結計劃圖形，以及定義的自適性聯結閾值和預估的聯結類型。
-
-### <a name="adaptive-join-and-query-store-interoperability"></a>自適性整聯結和查詢存放區互通性
-查詢存放區擷取並可強制執行批次模式自適性聯結計劃。
-
-### <a name="adaptive-join-eligible-statements"></a>符合自適性聯結的陳述式
-讓邏輯聯結符合批次模式自適性聯結有幾個條件：
-- 資料庫相容性層級是 140。
-- 查詢是 SELECT 陳述式 (資料修改陳述式目前不適合)。
-- 聯結能夠由索引巢狀迴圈聯結或雜湊聯結實體演算法執行。
-- 雜湊聯結使用批次模式，不論是透過存在於整體查詢中的資料行存放區索引，或是由聯結直接參考的資料行存放區索引資料表。
-- 產生的巢狀迴圈聯結和雜湊聯結替代解決方案應該有相同的第一個子系 (外部參考)。
-
-### <a name="adaptive-joins-and-nested-loop-efficiency"></a>自適性聯結與巢狀迴圈效率
-如果自適性聯結切換成巢狀迴圈作業，便會使用已由雜湊聯結組建讀取的資料列。 運算子「不會」  再次重新讀取外部參考資料列。
-
-### <a name="adaptive-threshold-rows"></a>自適性閾值資料列
-下圖顯示雜湊聯結成本與巢狀迴圈聯結替代方案成本之間的交集範例。 在此交集點決定的閾值，會隨之決定用於聯結作業的實際演算法。
-
-![聯結閾值](./media/6_AQPJoinThreshold.png)
-
-### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>停用自適性聯結而不變更相容性層級
-
-您可以在資料庫或陳述式的範圍停用自適性聯結，同時仍將資料庫相容性層級維持在 140 以上。  
-若要針對源自資料庫的所有查詢執行停用自適性聯結，請在適用資料庫的內容中執行下列程式碼：
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-啟用時，此設定在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中會顯示為已啟用。
-若要針對源自資料庫的所有查詢執行重新啟用自適性聯結，請在適用資料庫的內容中執行下列程式碼：
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-您也可以將 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 指定為 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，以針對特定查詢停用自適性聯結。 例如：
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
+如需詳細資訊，請參閱[了解自適性聯結](../../relational-databases/performance/joins.md#adaptive)。
 
 ## <a name="batch-mode-memory-grant-feedback"></a>批次模式記憶體授與意見反應
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的查詢後續執行計劃，包含執行所需的最小記憶體，以及能將所有資料列納入記憶體的理想記憶體授與大小。 當調整的記憶體授與大小不正確時，就會降低效能。 授與過多會浪費記憶體並降低並行。 記憶體授與不足會佔用大量磁碟資源。 透過處理重複的工作負載，批次模式記憶體授與意見反應會重新計算查詢實際所需的記憶體，然後更新快取計劃的授與值。 執行相同的查詢陳述式時，此查詢會使用修訂過的記憶體授權大小，減少影響並行的過多記憶體授與，並修正導致佔用大量磁碟資源的記憶體授與低估。
@@ -193,7 +73,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ### <a name="memory-grant-feedback-sizing"></a>記憶體授與意見反應調整大小
 針對記憶體授與過多的狀況，如果授與的記憶體超過實際使用記憶體大小的兩倍，記憶體授與回饋便會重新計算記憶體授與並更新快取計劃。 記憶體授與小於 1 MB 的計劃不會重新計算處理超額問題。
-針對會導致批次模式運算子磁碟溢出的記憶體授與大小不足狀況，記憶體授與回饋會觸發記憶體授與的重新計算。 溢出事件會報告到記憶體授與回饋，且可以透過 *spilling_report_to_memory_grant_feedback* xEvent 顯示。 此事件會傳回計劃的節點識別碼和該節點溢出的資料大小。
+針對會導致批次模式運算子磁碟溢出的記憶體授與大小不足狀況，記憶體授與回饋會觸發記憶體授與的重新計算。 溢出事件會報告到記憶體授與回饋，且可以透過 *spilling_report_to_memory_grant_feedback* xEvent 顯示。 此事件會傳回計畫的節點識別碼，以及該節點溢出的資料大小。
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>記憶體授與意見反應與參數敏感的情況
 不同的參數值可能也需要不同的查詢計劃，以維持最佳狀態。 這類型的查詢即定義為「參數敏感」。 凡是參數敏感的計劃，如果記憶體授與意見反應有不穩定的記憶體需求，就會在查詢上自行停用。 計劃會在查詢重複數輪後停用，透過監視 *memory_grant_feedback_loop_disabled* xEvent 可觀察到此狀況。 如需參數探查和參數敏感性的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
@@ -212,7 +92,11 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 您可以在資料庫或陳述式的範圍停用記憶體授與意見反應，同時仍將資料庫相容性層級維持在 140 以上。 若要針對源自資料庫的所有查詢執行停用批次模式的記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 啟用時，此設定在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中會顯示為已啟用。
@@ -220,7 +104,11 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 若要針對源自資料庫的所有查詢執行重新啟用批次模式的記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 您也可以將 `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 指定為 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，以針對特定查詢停用批次模式的記憶體授與意見反應。 例如：
@@ -354,14 +242,22 @@ MSTVF 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始具有固定�
 您可以在資料庫或陳述式的範圍停用交錯執行，同時仍將資料庫相容性層級維持在 140 以上。  若要針對源自資料庫的所有查詢執行停用交錯執行，請在適用資料庫的內容中執行下列程式碼：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 啟用時，此設定在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中會顯示為已啟用。
 若要針對源自資料庫的所有查詢執行重新啟用交錯執行，請在適用資料庫的內容中執行下列程式碼：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 您也可以將 `DISABLE_INTERLEAVED_EXECUTION_TVF` 指定為 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，以針對特定查詢停用交錯執行。 例如：

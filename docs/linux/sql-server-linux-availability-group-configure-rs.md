@@ -1,7 +1,7 @@
 ---
-title: 在 Linux 上設定 SQL Server 可用性群組的讀取級別
+title: 設定 SQL Server 可用性群組供 Linux 上的讀取級別使用
 titleSuffix: SQL Server
-description: 了解 Linux 上設定 SQL Server Alwayson 上可用性群組 (AG) 針對讀取規模的工作負載。
+description: 了解如何設定 SQL Server Always On 可用性群組 (AG)，供 Linux 上的讀取級別工作負載使用。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027266"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>在 Linux 上設定 SQL Server 可用性群組的讀取級別
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>設定 SQL Server 可用性群組供 Linux 上的讀取級別使用
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-您可以在 Linux 上設定 SQL Server Alwayson 上可用性群組 (AG) 針對讀取規模的工作負載。 AG 有兩種結構類型。 高可用性架構會使用叢集管理員，以提供改良的商務持續性。 此架構也可以包含讀取級別複本。 若要建立高可用性架構，請參閱[設定 SQL Server Always On 可用性群組在 Linux 上的高可用性](sql-server-linux-availability-group-configure-ha.md)。 其他結構僅支援讀取級別工作負載。 本文說明如何建立不使用叢集管理員的 AG，供讀取級別工作負載之用。 此結構只會提供讀取級別。 它不會提供高可用性。
+您可以設定 SQL Server Always On 可用性群組 (AG)，供 Linux 上的讀取級別工作負載使用。 AG 有兩種結構類型。 高可用性結構會使用叢集管理員來確保改善的商務持續性。 此結構亦可包含讀取級別複本。 若要建立高可用性結構，請參閱[設定 SQL Server Always On 可用性群組以確保 Linux 上的高可用性](sql-server-linux-availability-group-configure-ha.md)。 其他結構僅支援讀取級別工作負載。 本文說明如何建立不使用叢集管理員的 AG，供讀取級別工作負載之用。 此結構只會提供讀取級別。 它不會提供高可用性。
 
 > [!NOTE]
 > `CLUSTER_TYPE = NONE` 的可用性群組可包含裝載於不同作業系統平台上的複本。 它無法支援高可用性。 
@@ -67,7 +67,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-此 AG 不是高可用性設定。 如果您需要高可用性，請遵循指示[設定在 Linux 上的 SQL Server Alwayson 可用性群組](sql-server-linux-availability-group-configure-ha.md)。 具體來說，建立與 AG `CLUSTER_TYPE=WSFC` （在 Windows) 或`CLUSTER_TYPE=EXTERNAL`（在 Linux 中)。 然後使用其中一個 Windows Server 容錯移轉叢集上 Windows 或 Linux 上的 Pacemaker 整合和叢集管理員。
+此 AG 不是高可用性設定。 如果您需要高可用性，請遵循[為 Linux 上的 SQL Server 設定 Always On 可用性群組](sql-server-linux-availability-group-configure-ha.md)中的指示進行。 具體而言，請建立 `CLUSTER_TYPE=WSFC` (Windows) 或 `CLUSTER_TYPE=EXTERNAL` (Linux) 的 AG。 接著，使用 Windows 的 Windows Server 容錯移轉叢集或 Linux 的 Pacemaker 來整合叢集管理員。
 
 ## <a name="connect-to-read-only-secondary-replicas"></a>連線到唯讀次要複本
 

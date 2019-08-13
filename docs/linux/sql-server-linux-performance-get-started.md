@@ -1,6 +1,6 @@
 ---
-title: 開始使用 Linux 上的 SQL Server 的效能功能
-description: 這篇文章介紹 SQL Server 效能功能的 SQL server 的 Linux 使用者。 許多這些範例作用於所有平台，但這篇文章的內容是 Linux。
+title: 開始使用 Linux 上的 SQL Server 效能功能
+description: 本文為剛開始使用 SQL Server 的 Linux 使用者提供 SQL Server 效能功能簡介。 其中許多範例適用於所有平台，但本文內容的適用對象為 Linux。
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
@@ -9,25 +9,25 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67896167"
 ---
-# <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的效能功能的逐步解說
+# <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 效能功能逐步解說
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-如果您是剛接觸 SQL Server 的 Linux 使用者時，下列工作會引導您完成一些效能功能。 這些不是唯一或特定 Linux，但它有助於讓您了解區域以進一步調查。 在每個範例中，會提供該區域的深度文件的連結。
+如果您是剛開始使用 SQL Server 的 Linux 使用者，下列工作將逐步解說一些效能功能。 這不是 Linux 專屬或特別的功能，但可協助您大致了解哪些領域需要深入了解。 在每個範例中，會提供該領域的深入文件連結。
 
 > [!NOTE]
-> 下列範例使用 AdventureWorks 範例資料庫。 如需有關如何取得並安裝這個範例資料庫的指示，請參閱 <<c0> [ 從 Windows 的 SQL Server 資料庫還原到 Linux](sql-server-linux-migrate-restore-database.md)。
+> 下列範例使用 AdventureWorks 範例資料庫。 如需如何取得和安裝此範例資料庫的指示，請參閱[將 SQL Server 資料庫從 Windows 還原到 Linux](sql-server-linux-migrate-restore-database.md)。
 
 ## <a name="create-a-columnstore-index"></a>建立資料行存放區索引
-資料行存放區索引是一種技術來儲存及查詢大型存放區中稱為資料行存放區的單欄式資料格式的資料。  
+資料行存放區索引是以單欄式資料格式，儲存和查詢大型資料存放區 (稱為資料行存放區) 的一項技術。  
 
-1. 加入 SalesOrderDetail 資料表的資料行存放區索引來執行下列 TRANSACT-SQL 命令：
+1. 執行下列 Transact-SQL 命令，將資料行存放區索引新增至 SalesOrderDetail 資料表：
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -36,7 +36,7 @@ ms.locfileid: "67896167"
    GO
    ```
 
-2. 執行下列查詢使用掃描資料表的資料行存放區索引：
+2. 執行下列查詢，使用資料行存放區索引掃描資料表：
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -46,7 +46,7 @@ ms.locfileid: "67896167"
       ORDER BY ProductID
    ```
 
-3. 確認資料行存放區索引，使用查閱的 object_id 資料行存放區索引，並確認它會出現在 SalesOrderDetail 資料表的使用方式統計資料：
+3. 藉由查閱資料行存放區索引的 object_id，並確認它出現在 SalesOrderDetail 資料表的使用統計資料中，來確認資料行存放區索引已在使用中：
 
    ```sql
    SELECT * FROM sys.indexes WHERE name = 'IX_SalesOrderDetail_ColumnStore'
@@ -59,10 +59,10 @@ ms.locfileid: "67896167"
    ```
    
 ## <a name="use-in-memory-oltp"></a>使用記憶體內部 OLTP
-SQL Server 提供記憶體內部 OLTP 功能，可大幅提升應用程式系統的效能。  評估指南的這個章節將逐步引導您逐步完成建立記憶體最佳化的資料表，儲存在記憶體和原生編譯的預存程序，才能存取資料表，而不必編譯或解譯。
+SQL Server 提供記憶體內部 OLTP 功能，可大幅改進應用程式系統的效能。  評估指南的這個章節將逐步引導您建立儲存在記憶體中經記憶體最佳化的資料表，以及可存取資料表而不需要進行編譯或解譯的原生編譯預存程序。
 
-### <a name="configure-database-for-in-memory-oltp"></a>設定資料庫以使用記憶體內部 OLTP
-1. 建議您將資料庫設定為至少 130 使用記憶體內部 OLTP 的相容性層級。  您可以使用下列查詢來檢查 AdventureWorks 的目前相容性層級：  
+### <a name="configure-database-for-in-memory-oltp"></a>設定記憶體內部 OLTP 的資料庫
+1. 建議將資料庫的相容性層級設定為 130 以上，以便使用記憶體內部 OLTP。  使用下列查詢，檢查目前 AdventureWorks 的相容性層級：  
 
    ```sql
    USE AdventureWorks
@@ -73,7 +73,7 @@ SQL Server 提供記憶體內部 OLTP 功能，可大幅提升應用程式系統
    GO
    ```
    
-   如有必要，請更新層級為 130:
+   如果需要，請將層級更新為 130：
 
    ```sql
    ALTER DATABASE CURRENT
@@ -81,14 +81,14 @@ SQL Server 提供記憶體內部 OLTP 功能，可大幅提升應用程式系統
    GO
    ```
 
-2. 當交易涉及磁碟基礎的資料表和記憶體最佳化的資料表時，它的基本操作交易隔離等級的交易的記憶體最佳化部分的名稱為快照集。  若要可靠地強制執行記憶體最佳化的資料表，在跨容器交易中的這個層級，請執行下列作業︰
+2. 當交易同時涉及以磁碟為基礎的資料表和經記憶體最佳化的資料表時，很重要的一點是交易的記憶體最佳化部分需在名為 SNAPSHOT 的交易隔離等級中執行。  在跨容器交易中，若要能穩定地對經記憶體最佳化的資料表強制執行此等級，請執行下列程式碼：
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
    GO
    ```
 
-3. 您可以建立之前記憶體最佳化的資料表，您必須先建立記憶體最佳化檔案群組和資料檔案的容器：
+3. 在您能夠建立經記憶體最佳化的資料表之前，您必須先為資料檔案建立經記憶體最佳化的檔案群組和容器：
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
@@ -97,10 +97,10 @@ SQL Server 提供記憶體內部 OLTP 功能，可大幅提升應用程式系統
    GO
    ```
 
-### <a name="create-a-memory-optimized-table"></a>建立記憶體最佳化資料表
-記憶體最佳化資料表的主要存放區是主記憶體，因此，不同於以磁碟為基礎的資料表，資料不需要在從磁碟讀取到記憶體緩衝區。  若要建立記憶體最佳化的資料表，請使用 MEMORY_OPTIMIZED = ON 子句。
+### <a name="create-a-memory-optimized-table"></a>建立經記憶體最佳化的資料表
+經記憶體最佳化的資料表之主要存放區是主記憶體，因此不同於以磁碟為基礎的資料表，資料不需要從磁碟讀入記憶體緩衝區。  若要建立經記憶體最佳化的資料表，請使用 MEMORY_OPTIMIZED = ON 子句。
 
-1. 執行下列查詢來建立記憶體最佳化的資料表 dbo。ShoppingCart。  做為預設值，資料會保存為持久性用途 （請注意，持久性也可以設定要保存僅限結構描述） 的磁碟上。 
+1. 執行下列查詢，建立經記憶體最佳化的資料表 dbo.ShoppingCart。  根據預設，基於持久性目的，資料會保存在磁碟上 (請注意，DURABILITY (持久性) 也可以設定為只保存結構描述)。 
 
    ```sql
    CREATE TABLE dbo.ShoppingCart ( 
@@ -112,7 +112,7 @@ SQL Server 提供記憶體內部 OLTP 功能，可大幅提升應用程式系統
    GO
    ```
 
-2. 某些記錄插入資料表中：
+2. 在資料表中插入一些記錄：
 
    ```sql
    INSERT dbo.ShoppingCart VALUES (8798, SYSDATETIME(), NULL) 
@@ -122,9 +122,9 @@ SQL Server 提供記憶體內部 OLTP 功能，可大幅提升應用程式系統
    ```
 
 ### <a name="natively-compiled-stored-procedure"></a>原生編譯的預存程序
-SQL Server 支援原生編譯的預存程序存取記憶體最佳化資料表。 T-SQL 陳述式會編譯成機器碼，並儲存成原生 Dll，啟用更快速的資料存取與更有效率的查詢執行，比傳統的 T-SQL。   標示為 NATIVE_COMPILATION 的預存程序為原生編譯。 
+SQL Server 支援原生編譯預存程序，可存取經記憶體最佳化的資料表。 T-SQL 陳述式會編譯成機器碼並儲存為原生 DLL，提供比傳統 T-SQL 更快速的資料存取與更有效率的查詢執行。   標示為 NATIVE_COMPILATION 的預存程序為原生編譯。 
 
-1. 執行下列指令碼來建立原生編譯的預存程序 ShoppingCart 資料表中插入大量的記錄：
+1. 執行下列指令碼，建立原生編譯的預存程序，以在 ShoppingCart 資料表中插入大量記錄：
 
 
    ```sql
@@ -164,15 +164,15 @@ SQL Server 支援原生編譯的預存程序存取記憶體最佳化資料表。
 - [In-Memory OLTP (記憶體中最佳化)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 ## <a name="use-query-store"></a>使用查詢存放區
-查詢存放區會收集查詢、 執行計畫和執行階段統計資料的詳細的效能資訊。
+查詢存放區會收集有關查詢、執行計畫和執行階段統計資料的詳細效能資訊。
 
-查詢存放區不是作用中，依預設，而且可以使用 ALTER DATABASE 加以啟用：
+查詢存放區預設不會啟用，並可使用 ALTER DATABASE 加以啟用：
 
    ```sql
    ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
    ```
 
-執行下列查詢來傳回查詢存放區中的查詢與計劃的相關資訊： 
+執行下列查詢，傳回查詢存放區中查詢和計畫的相關資訊： 
 
    ```sql
    SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*
@@ -184,9 +184,9 @@ SQL Server 支援原生編譯的預存程序存取記憶體最佳化資料表。
    ```
 
 ## <a name="query-dynamic-management-views"></a>查詢動態管理檢視
-動態管理檢視會傳回可用來監視伺服器執行個體的健康情況、 診斷問題和調整效能的伺服器狀態資訊。
+動態管理檢視會傳回伺服器狀態資訊，這項資訊可用來監視伺服器執行個體的健全狀況、診斷問題和調整效能。
 
-若要查詢 dm_os_wait 統計資料的動態管理檢視：
+若要查詢 dm_os_wait stats 動態管理檢視：
 
    ```sql
    SELECT wait_type, wait_time_ms

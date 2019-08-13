@@ -1,7 +1,7 @@
 ---
-title: 執行範例 notebook |Microsoft Docs
+title: 執行範例筆記本 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 本教學課程會示範您可以載入的方式執行的 SQL Server 2019 巨量資料叢集 （預覽） 上的 Spark notebook 範例。
+description: 本教學課程說明如何在 SQL Server 2019 巨量資料叢集 (預覽) 上載入和執行範例 Spark 筆記本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,20 +10,20 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ab558194a67118719c144ea20f9e97496d2cb478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957736"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教學課程：SQL Server 的巨量資料叢集上執行 notebook 範例
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教學課程：在 SQL Server 巨量資料叢集上執行範例筆記本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程會示範如何載入及執行 Azure Data Studio 中的 notebook，在 SQL Server 2019 巨量資料叢集 （預覽） 上。 這可讓資料科學家和資料工程師對叢集執行 Python、 R 或 Scala 程式碼。
+本教學課程示範如何在 SQL Server 2019 巨量資料叢集 (預覽) 上，將筆記本載入 Azure Data Studio 並在其中執行。 這可讓資料科學家和資料工程師對叢集執行 Python、R 或 Scala 程式碼。
 
 > [!TIP]
-> 如果您想，您可以下載並執行命令的指令碼，在本教學課程。 如需相關指示，請參閱 < [Spark 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)GitHub 上。
+> 如果您想要的話，也可以下載並執行用於本教學課程中命令的指令碼。 如需指示，請參閱 GitHub 上的 [Spark 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)。
 
 ## <a id="prereqs"></a> 必要條件
 
@@ -31,49 +31,49 @@ ms.locfileid: "67957736"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 延伸模組**
-- [將範例資料載入您的巨量資料叢集](tutorial-load-sample-data.md)
+- [將範例資料載入巨量資料叢集](tutorial-load-sample-data.md)
 
-## <a name="download-the-sample-notebook-file"></a>下載範例 notebook 檔案
+## <a name="download-the-sample-notebook-file"></a>下載範例筆記本檔案
 
-載入範例筆記本檔案中使用下列指示**spark sql.ipynb**到 Azure Data Studio。
+使用下列指示，將範例筆記本檔案 **spark-sql.ipynb** 載入 Azure Data Studio。
 
-1. 開啟 bash 命令提示字元 (Linux) 或 Windows PowerShell。
+1. 開啟 Bash 命令提示字元 (Linux) 或 Windows PowerShell。
 
-1. 瀏覽至您想要用來下載範例 notebook 檔案，以的目錄。
+1. 巡覽至您要下載範例筆記本檔案的目錄。
 
-1. 執行下列**curl**命令，以從 GitHub 下載 notebook 檔案：
+1. 執行下列 **curl** 命令，從 GitHub 下載筆記本檔案：
 
    ```bash
    curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
    ```
 
-## <a name="open-the-notebook"></a>開啟 notebook
+## <a name="open-the-notebook"></a>開啟筆記本
 
-下列步驟示範如何在 Azure 資料 Studio 中開啟筆記本檔案：
+下列步驟說明如何在 Azure Data Studio 中開啟筆記本檔案：
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連線至巨量資料叢集](connect-to-big-data-cluster.md)。
+1. 在 Azure Data Studio 中，連線到巨量資料叢集的主要執行個體。 如需詳細資訊，請參閱[連線到巨量資料叢集](connect-to-big-data-cluster.md)。
 
-1. 在 HDFS/Spark 閘道連按兩下**伺服器**視窗。 然後選取**開啟 Notebook**。
+1. 按兩下 [伺服器]  視窗中的 HDFS/Spark 閘道連線。 然後選取 [開啟筆記本]  。
 
-   ![開啟 notebook](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
+   ![開啟筆記本](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
 
-1. 等候**核心**和目標內容 (**附加至**) 填入。 設定**核心**要**PySpark3**，並將**附加至**到您的巨量資料叢集端點的 IP 位址。
+1. 等候 [核心]  和目標內容 ([附加至]  ) 填入。 將 [核心]  設定為 [PySpark3]  ，並將 [附加至]  設定為巨量資料叢集端點的 IP 位址。
 
-   ![設定核心並附加至](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
+   ![設定 [核心] 和 [附加至]](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
 
 ## <a name="run-the-notebook-cells"></a>執行筆記本資料格
 
-您可以按下儲存格的左邊的 [播放] 按鈕，以執行每個 notebook 資料格。 儲存格完成執行之後，結果會顯示在 notebook 中。
+您可以按下資料格左側的播放按鈕，執行每個筆記本資料格。 資料格完成執行之後，會在筆記本中顯示結果。
 
-![執行 notebook 資料格](media/tutorial-notebook-spark/run-notebook-cell.png)
+![執行筆記本資料格](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-執行連續範例 notebook 中的每個資料格。 如需 SQL Server 的巨量資料叢集搭配使用 notebook 的詳細資訊，請參閱下列資源：
+連續執行範例筆記本中的每個資料格。 如需搭配 SQL Server 巨量資料叢集使用筆記本的詳細資訊，請參閱下列資源：
 
-- [如何在 SQL Server 2019 預覽中使用 notebook](notebooks-guidance.md)
+- [如何在 SQL Server 2019 Preview 中使用筆記本](notebooks-guidance.md)
 - [如何管理 Azure Data Studio 中的 Notebook](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>後續步驟
 
-深入了解 notebook:
+深入了解筆記本：
 > [!div class="nextstepaction"]
-> [深入了解 notebook](notebooks-guidance.md)
+> [了解筆記本](notebooks-guidance.md)

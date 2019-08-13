@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a5513c6f1f326984c93a760afdd88f949dc18b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d789ded4aefe7d39d1298777ebd851a6c87e6d9
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007983"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388399"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 
@@ -88,6 +88,14 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模
     -   [彈性檔案目的地](../integration-services/data-flow/flexible-file-destination.md)
 
 -   Azure Blob、Azure Data Lake Store 和 Data Lake Storage Gen2 檔案列舉程式。 請參閱 [Foreach 迴圈容器](../integration-services/control-flow/foreach-loop-container.md)
+
+## <a name="use-tls-12"></a>使用 TLS 1.2
+
+Azure Feature Pack 所使用的 TLS 版本遵循系統 .NET Framework 設定。
+若要使用 TLS 1.2，請在下列兩個登錄機碼下方，新增名為 `SchUseStrongCrypto` 的 `REG_DWORD` 值和資料 `1`。
+
+1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
+2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
 
 ## <a name="scenario-processing-big-data"></a>案例：處理巨量資料
  您可以使用 Azure 連接器來完成下列巨量資料處理工作：

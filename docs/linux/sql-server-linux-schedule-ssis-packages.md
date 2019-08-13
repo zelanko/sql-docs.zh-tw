@@ -1,6 +1,6 @@
 ---
-title: 在 Linux 上使用 cron 的排程 SSIS 套件
-description: 這篇文章描述如何排程的 cron 服務在 Linux 上的 SQL Server Integration Services (SSIS) 套件。
+title: 使用 cron 排程 Linux 上的 SSIS 套件
+description: 本文描述如何使用 cron 服務排程 Linux 上的 SQL Server Integration Services (SSIS) 套件。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -9,35 +9,35 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065166"
 ---
-# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>排程 SQL Server Integration Services 封裝執行在 Linux 上的使用 cron
+# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>使用 cron 排程 Linux 上的 SQL Server Integration Services 套件執行
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-當您在 Windows 上執行 SQL Server Integration Services (SSIS) 和 SQL Server 時，您可以使用 SQL Server Agent 自動化中的執行 SSIS 套件。 當您在 Linux 上執行 SQL Server 和 SSIS 時，不過，SQL Server 代理程式公用程式無法用來排程 Linux 上的作業。 相反地，您可以使用廣泛用來讓封裝執行自動化的 Linux 平台的 cron 服務。
+當您在 Windows 上執行 SQL Server Integration Services (SSIS) 和 SQL Server 時，可以使用 SQL Server Agent 自動執行 SSIS 套件。 不過，當您在 Linux 上執行 SQL Server 和 SSIS 時，SQL Server Agent 公用程式無法在 Linux 上排程作業。 因此，您可以改用在 Linux 平台上廣泛使用的 cron 服務來自動執行套件。
 
-本文提供範例，示範如何自動執行的 SSIS 套件。 範例會寫入至 Red Hat Enterprise 上執行。 程式碼很類似 Linux 散發套件，例如 Ubuntu 的項目。
+本文提供的範例會示範如何自動執行 SSIS 套件。 這些範例是針對在 Red Hat Enterprise 上執行所撰寫。 若要用於其他 Linux 發行版本 (例如 Ubuntu)，可採用類似的程式碼。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
-執行作業的情況下，您在使用 cron 服務之前，請檢查以查看它是否您的電腦上執行。
+使用 cron 服務執行作業之前，請先檢查您的電腦是否正在執行 cron 服務。
 
-若要檢查 cron 服務的狀態，請使用下列命令： `systemctl status crond.service`。
+若要檢查 cron 服務的狀態，請使用下列命令：`systemctl status crond.service`。
 
-如果服務不在使用中 （也就未執行），請參閱您的系統管理員安裝及正確設定 cron 服務。
+如果服務並不在作用中狀態 (也就是未執行)，請洽詢您的系統管理員以正確設定 cron 服務。
 
 ## <a name="create-jobs"></a>建立作業
 
-Cron 作業是您可以設定為指定的間隔定期執行的工作。 作業可以是簡單，只要您通常可以直接在主控台中輸入，或殼層指令碼以執行的命令。
+cron 作業是一項可以設定為以指定間隔定期執行的工作。 此作業可以非常簡單，就像您直接在主控台中鍵入或以殼層指令碼形式執行的命令一般。
 
-讓您輕鬆管理和維護的用途，我們建議您執行封裝的命令置於包含的描述性名稱的指令碼。
+為了方便管理和維護，建議您將套件執行命令放在包含描述性名稱的指令碼中。
 
-以下是簡單的殼層指令碼來執行封裝的範例。 它包含只單一命令，但您可以視需要新增更多命令。
+以下是執行套件的簡單殼層指令碼範例。 它只包含一個命令，但您可以視需要新增更多命令。
 
 ```bash
 # A simple shell script that contains a simple package execution command
@@ -46,37 +46,37 @@ Cron 作業是您可以設定為指定的間隔定期執行的工作。 作業�
 /opt/ssis/bin/dtexec /F yourSSISpackageName.dtsx >> $HOME/tmp/out 2>&1
 ```
 
-## <a name="schedule-jobs-with-the-cron-service"></a>Cron 服務的排程工作
+## <a name="schedule-jobs-with-the-cron-service"></a>使用 cron 服務排程作業
 
-定義您的工作之後，您可以排程自動執行使用 cron 服務。
+定義您的作業之後，您可以使用 cron 服務將其排程為自動執行。
 
-若要新增您的 cron 來執行的作業，請在 crontab 檔加入作業。 若要開啟的編輯器，您可以在其中新增或更新作業 crontab 檔案，請使用下列命令： `crontab -e`。
+若要新增由 cron 執行的作業，請在 crontab 檔案中新增作業。 若要在編輯器中開啟 crontab 檔案以新增或更新作業，請使用下列命令：`crontab -e`。
 
-若要排程每日上午 2:10 點執行先前所述的工作，請將下行新增到 crontab 檔案：
+若要將先前所述的作業排定在每天上午 2:10 執行，請將下行新增至 crontab 檔案：
 
 ```
 # run <SSIS package name> at 2:10 AM every day
 10 2 \* \* \* $/HOME/SSIS/jobs/SSISpackageName.daily
 ```
 
-儲存系統檔案，然後再結束編輯器。
+儲存 crontab 檔案，然後結束編輯器。
 
 若要了解範例命令的格式，請檢閱下一節中的資訊。
  
-## <a name="format-of-a-crontab-file"></a>Crontab 檔案格式
+## <a name="format-of-a-crontab-file"></a>crontab 檔案的格式
 
-下圖顯示工作列新增到 crontab 檔案的格式為： 描述。
+下圖顯示新增至 crontab 檔案的作業行格式描述。
 
-![格式為： 描述 crontab 檔案中的項目](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
+![crontab 檔案中的項目格式描述](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
 
-若要取得 crontab 檔案格式的更詳細的描述，請使用下列命令： `man 5 crontab`。
+若要取得 crontab 檔案格式的詳細描述，請使用下列命令：`man 5 crontab`。
 
-以下是部分的範例，協助說明本文中的範例的輸出：
+以下是輸出的部分範例，其有助於說明本文中的範例：
 
-![詳細的說明部分 crontab 格式](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+![crontab 格式的詳細部分描述](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 
-## <a name="related-content-about-ssis-on-linux"></a>關於 Linux 上的 SSIS 的相關的內容
--   [擷取、 轉換和載入與 SSIS Linux 上的資料](sql-server-linux-migrate-ssis.md)
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上的 SSIS 相關內容
+-   [使用 SSIS 在 Linux 上擷取、轉換和載入資料](sql-server-linux-migrate-ssis.md)
 -   [在 Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
--   [在 Linux 上設定 SQL Server Integration Services 使用 ssis conf](sql-server-linux-configure-ssis.md)
--   [限制與已知的問題適用於 Linux 上的 SSIS](sql-server-linux-ssis-known-issues.md)
+-   [使用 ssis-conf 設定 Linux 上的 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [Linux 上的 SSIS 限制和已知問題](sql-server-linux-ssis-known-issues.md)

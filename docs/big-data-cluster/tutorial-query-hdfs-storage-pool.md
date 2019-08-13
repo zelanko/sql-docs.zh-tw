@@ -1,7 +1,7 @@
 ---
-title: 查詢存放區集區中的 HDFS 資料
+title: 查詢存放集區中的 HDFS 資料
 titleSuffix: SQL Server big data clusters
-description: 本教學課程會示範如何查詢 SQL Server 2019 巨量資料叢集 （預覽） 中的 HDFS 資料。 您建立儲存體集區中資料的外部資料表，然後再執行查詢。
+description: 本教學課程示範如何查詢 SQL Server 2019 巨量資料叢集 (預覽) 中的 HDFS 資料。 您可以透過存放集區中的資料建立外部資料表，然後執行查詢。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,26 +10,26 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957700"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教學課程：查詢 HDFS 中的 SQL Server 的巨量資料叢集
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教學課程：查詢 SQL Server 巨量資料叢集中的 HDFS
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程會示範如何查詢 SQL Server 2019 巨量資料叢集 （預覽） 中的 HDFS 資料。
+本教學課程示範如何查詢 SQL Server 2019 巨量資料叢集 (預覽) 中的 HDFS 資料。
 
 在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
-> * 建立指向在巨量資料叢集的 HDFS 資料的外部資料表。
-> * 在主要執行個體中加入此資料與高價值的資料。
+> * 建立外部資料表，指向巨量資料叢集中的 HDFS 資料。
+> * 將此資料與主要執行個體中的高價值資料聯結。
 
 > [!TIP]
-> 如果您想，您可以下載並執行命令的指令碼，在本教學課程。 如需相關指示，請參閱 <<c0> [ 資料虛擬化範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub 上。
+> 如果您想要的話，也可以下載並執行用於本教學課程中命令的指令碼。 如需指示，請參閱 GitHub 上的[資料虛擬化範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)。
 
 ## <a id="prereqs"></a> 必要條件
 
@@ -37,19 +37,19 @@ ms.locfileid: "67957700"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 延伸模組**
-- [將範例資料載入您的巨量資料叢集](tutorial-load-sample-data.md)
+- [將範例資料載入巨量資料叢集](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-to-hdfs"></a>建立外部資料表到 HDFS
+## <a name="create-an-external-table-to-hdfs"></a>建立外部資料表以指向 HDFS
 
-存放集區包含儲存在 HDFS 中的 CSV 檔案中的 web 點選流資料。 您可以使用下列步驟來定義外部資料表可存取該檔案中的資料。
+存放集區會在儲存於 HDFS 的 CSV 檔案中包含 Web 點選流資料。 使用下列步驟，定義可存取該檔案資料的外部資料表。
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](connect-to-big-data-cluster.md#master)。
+1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
-1. 在連線 中按兩下**伺服器**視窗以顯示 SQL Server 的主要執行個體的伺服器儀表板。 選取 **新的查詢**。
+1. 按兩下 [伺服器]  視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]  。
 
-   ![SQL Server 的主要執行個體查詢](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
+   ![SQL Server 主要執行個體查詢](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-1. 執行下列 TRANSACT-SQL 命令，以將內容變更為**銷售**主要執行個體中的資料庫。
+1. 執行下列 Transact-SQL 命令，將內容變更為主要執行個體中的 **Sales** 資料庫。
 
    ```sql
    USE Sales
@@ -70,7 +70,7 @@ ms.locfileid: "67957700"
    );
    ```
 
-1. 如果不存在，請建立存放集區的外部資料來源。
+1. 如果存放集區沒有外部資料來源，請加以建立。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
@@ -80,7 +80,7 @@ ms.locfileid: "67957700"
    END
    ```
 
-1. 建立可讀取的外部資料表`/clickstream_data`從存放集區。 **SqlStoragePool**可從巨量資料叢集的主要執行個體存取。
+1. 建立可從存放集區讀取 `/clickstream_data` 的外部資料表。 **SqlStoragePool** 可從巨量資料叢集的主要執行個體進行存取。
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]
@@ -96,7 +96,7 @@ ms.locfileid: "67957700"
 
 ## <a name="query-the-data"></a>查詢資料
 
-執行下列查詢來聯結 HDFS 資料`web_clickstream_hdfs`與在本機之關聯式資料的外部資料表`Sales`資料庫。
+執行下列查詢，將 `web_clickstream_hdfs` 外部資料表中的 HDFS 資料與本機 `Sales` 資料庫中的關聯式資料聯結。
 
 ```sql
 SELECT  
@@ -120,7 +120,7 @@ GO
 
 ## <a name="clean-up"></a>清除
 
-使用下列命令以移除在本教學課程使用的外部資料表。
+使用下列命令，移除本教學課程所使用的外部資料表。
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
@@ -129,6 +129,6 @@ GO
 
 ## <a name="next-steps"></a>後續步驟
 
-請前往下一篇文章，以了解如何從巨量資料叢集查詢 Oracle。
+請前往下一篇文章，了解如何從巨量資料叢集查詢 Oracle。
 > [!div class="nextstepaction"]
-> [在 Oracle 中的查詢外部資料](tutorial-query-oracle.md)
+> [查詢 Oracle 中的外部資料](tutorial-query-oracle.md)

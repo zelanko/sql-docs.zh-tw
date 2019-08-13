@@ -1,6 +1,6 @@
 ---
 title: 在 Linux 上安裝 SQL Server Integration Services
-description: 本文說明如何在 Linux 上安裝 SQL Server Integration Services (SSIS)。
+description: 本文描述如何在 Linux 上安裝 SQL Server Integration Services (SSIS)。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -9,25 +9,25 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032432"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安裝 SQL Server Integration Services (SSIS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-遵循這篇文章，若要安裝 SQL Server Integration Services 中的步驟 (`mssql-server-is`) 在 Linux 上。 如需在這一版的 linux Integration Services 中支援之功能的資訊，請參閱 < [Release Notes](sql-server-linux-release-notes.md)。
+請遵循本文中的步驟，在 Linux 上安裝 SQL Server Integration Services (`mssql-server-is`)。 如需此版本 Integration Services for Linux 支援功能的資訊，請參閱[版本資訊](sql-server-linux-release-notes.md)。
 
-安裝適用於您平台的 SQL Server 整合的伺服器：
+為您的平台安裝 SQL Server Integration Server：
 
 - [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
 ## <a name="ubuntu"></a> 在 Ubuntu 上安裝 SSIS
-若要安裝`mssql-server-is`封裝在 Ubuntu 上，請遵循下列步驟：
+若要在 Ubuntu 上安裝 `mssql-server-is` 套件，請遵循下列步驟：
 
 1. 匯入公用存放庫 GPG 金鑰。
 
@@ -48,35 +48,35 @@ ms.locfileid: "68032432"
    sudo apt-get install -y mssql-server-is
    ```
 
-4. 安裝 Integration Services 之後, 執行`ssis-conf`。 如需詳細資訊，請參閱 <<c0> [ 設定的 SSIS 在 Linux 上使用 ssis conf](sql-server-linux-configure-ssis.md)。
+4. 安裝 Integration Services 之後，請執行 `ssis-conf`。 如需詳細資訊，請參閱[使用 ssis-conf 設定 Linux 上的 SSIS](sql-server-linux-configure-ssis.md)。
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
    ```
 
-5. 完成設定之後，設定的路徑。
+5. 完成設定之後，請設定路徑。
 
    ```bash
    export PATH=/opt/ssis/bin:$PATH
    ```
 
 ### <a name="update-ssis"></a>更新 SSIS
-如果您已經有`mssql-server-is`安裝，您可以更新為最新的版本，使用下列命令：
+如果您已安裝 `mssql-server-is`，即可使用下列命令來更新為最新版本：
 
 ```bash
 sudo apt-get install mssql-server-is
 ```
 
 ### <a name="remove-ssis"></a>移除 SSIS
-若要移除`mssql-server-is`，您可以執行下列命令：
+若要移除 `mssql-server-is`，您可以執行下列命令：
 ```bash
 sudo apt-get remove mssql-server-is
 ```
 
 ## <a name="RHEL"></a> 在 RHEL 上安裝 SSIS
-若要安裝`mssql-server-is`RHEL 上的封裝，請遵循下列步驟：
+若要在 RHEL 上安裝 `mssql-server-is` 套件，請遵循下列步驟：
 
-1. 下載 Microsoft SQL Server Red Hat 存放庫的組態檔。
+1. 下載 Microsoft SQL Server Red Hat 存放庫設定檔。
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
@@ -89,41 +89,41 @@ sudo apt-get remove mssql-server-is
    ```
 
 
-1. 安裝之後，執行`ssis-conf`。 如需詳細資訊，請參閱 <<c0> [ 設定的 SSIS 在 Linux 上使用 ssis conf](sql-server-linux-configure-ssis.md)。
+1. 安裝後，請執行 `ssis-conf`。 如需詳細資訊，請參閱[使用 ssis-conf 設定 Linux 上的 SSIS](sql-server-linux-configure-ssis.md)。
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
    ```
 
-1. 完成設定之後，請將路徑設定。
+1. 完成設定之後，請設定路徑。
 
    ```bash
    export PATH=/opt/ssis/bin:$PATH
    ```
 
 ### <a name="update-ssis"></a>更新 SSIS
-如果您已經有`mssql-server-is`安裝，您可以更新為最新的版本，使用下列命令：
+如果您已安裝 `mssql-server-is`，即可使用下列命令來更新為最新版本：
 
 ```bash
 sudo yum update mssql-server-is
 ```
 
 ### <a name="remove-ssis"></a>移除 SSIS
-若要移除`mssql-server-is`，您可以執行下列命令：
+若要移除 `mssql-server-is`，您可以執行下列命令：
 ```bash
 sudo yum remove mssql-server-is
 ```
 
 ## <a name="unattended-installation"></a>自動安裝
-若要執行自動的安裝，當您執行`ssis-conf setup`，執行下列動作：
-1.  指定`-n`（沒有提示） 選項。
+當您執行 `ssis-conf setup` 時，若要執行自動安裝，請執行下列動作：
+1.  指定 `-n` (無提示) 選項。
 2.  設定環境變數，以提供必要的值。
 
 下列範例會執行下列動作：
 -   安裝 SSIS。
--   藉由提供的值指定 Developer edition`SSIS_PID`環境變數。
--   接受使用者授權合約所提供的值`ACCEPT_EULA`環境變數。
--   藉由指定執行自動的安裝`-n`（沒有提示） 選項。
+-   提供 `SSIS_PID` 環境變數的值，以指定 Developer 版本。
+-   提供 `ACCEPT_EULA` 環境變數的值，以接受 EULA。
+-   指定 `-n` (無提示) 選項，以執行自動安裝。
 
 ```
 sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
@@ -131,20 +131,20 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>自動安裝的環境變數
 
-| 環境變數 | 描述 |
+| 環境變數 | Description |
 |---|---|
-| **ACCEPT_EULA** | 接受 SQL Server 授權合約，當設定為任何值 (例如`Y`)。|
-| **SSIS_PID** | 設定 SQL Server 版本或產品金鑰。 以下是可能的值：<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>產品金鑰<br/><br/>如果您指定產品金鑰，必須在表單中的產品金鑰`#####-#####-#####-#####-#####`，其中`#`是字母或數字。  |
+| **ACCEPT_EULA** | 當設定為任何值時 (例如 `Y`)，即接受 SQL Server 授權合約。|
+| **SSIS_PID** | 設定 SQL Server 版本或產品金鑰。 下列為可能的值：<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>產品金鑰<br/><br/>如果您指定產品金鑰，則產品金鑰的格式必須為 `#####-#####-#####-#####-#####`，其中 `#` 是字母或數字。  |
 | | |
 
 ## <a name="next-steps"></a>後續步驟
 
-若要在 Linux 上執行 SSIS 套件，請參閱[擷取、 轉換及載入資料，使用 SSIS 在 Linux 上的 SQL server](sql-server-linux-migrate-ssis.md)。
+若要在 Linux 上執行 SSIS 套件，請參閱[使用 SSIS 在 Linux 上的 SQL Server 擷取、轉換和載入資料](sql-server-linux-migrate-ssis.md)。
 
-若要在 Linux 上設定 SSIS 的其他設定，請參閱[在 Linux 上使用 ssis conf 設定 SQL Server Integration Services](sql-server-linux-configure-ssis.md)。
+若要在 Linux 上設定其他 SSIS 設定，請參閱[使用 ssis-conf 設定 Linux 上的 SQL Server Integration Services](sql-server-linux-configure-ssis.md)。
 
-## <a name="related-content-about-ssis-on-linux"></a>關於 Linux 上的 SSIS 的相關的內容
--   [擷取、 轉換和載入與 SSIS Linux 上的資料](sql-server-linux-migrate-ssis.md)
--   [在 Linux 上設定 SQL Server Integration Services 使用 ssis conf](sql-server-linux-configure-ssis.md)
--   [限制與已知的問題適用於 Linux 上的 SSIS](sql-server-linux-ssis-known-issues.md)
--   [排程 SQL Server Integration Services 封裝執行在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上的 SSIS 相關內容
+-   [使用 SSIS 在 Linux 上擷取、轉換和載入資料](sql-server-linux-migrate-ssis.md)
+-   [使用 ssis-conf 設定 Linux 上的 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [Linux 上的 SSIS 限制和已知問題](sql-server-linux-ssis-known-issues.md)
+-   [使用 cron 排程 Linux 上的 SQL Server Integration Services 套件執行](sql-server-linux-schedule-ssis-packages.md)

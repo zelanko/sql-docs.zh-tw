@@ -1,6 +1,6 @@
 ---
-title: 管理 SQL Server Always On 可用性群組 Kubernetes
-description: 這篇文章說明如何管理 SQL Server Always On 可用性群組在 Kubernetes 中。
+title: 管理 Kubernetes 中的 SQL Server Always On 可用性群組
+description: 本文說明如何管理 Kubernetes 中的 SQL Server Always On 可用性群組。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,56 +10,56 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 893e502c35ae33ce6ff87efd88049db97a40f875
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67952547"
 ---
-# <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>管理 SQL Server Always On 可用性群組 Kubernetes
+# <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>管理 Kubernetes 中的 SQL Server Always On 可用性群組
 
-若要管理 Alwayson 可用性群組在 Kubernetes 上，建立資訊清單，並將它套用到叢集。 資訊清單是`.yaml`檔案。  
+若要管理 Kubernetes 上的 Always On 可用性群組，請建立資訊清單並套用至叢集。 此資訊清單是 `.yaml` 檔案。  
 
-這篇文章中的範例適用於所有的 Kubernetes 叢集。 這些範例中的狀況會套用針對在 Azure Kubernetes 服務叢集。
+本文中的範例適合所有 Kubernetes 叢集。 這些範例中的案例適用於 Azure Kubernetes Service 上的叢集。
 
-請參閱完整的部署中的範例[部署 SQL Server Always On 可用性群組上的 Kubernetes 叢集](sql-server-linux-kubernetes-deploy.md)。
+如需完整的部署範例，請參閱[在 Kubernetes 叢集上部署 SQL Server Always On 可用性群組](sql-server-linux-kubernetes-deploy.md)。
 
-## <a name="fail-over---sql-server-availability-group-on-kubernetes"></a>容錯移轉-在 Kubernetes 上的 SQL Server 可用性群組
+## <a name="fail-over---sql-server-availability-group-on-kubernetes"></a>容錯移轉 - Kubernetes 上的 SQL Server 可用性群組
 
-若要容錯移轉或移動至另一個節點在可用性群組主要複本，完成下列步驟：
+若要將主要複本容錯移轉或移至可用性群組中的不同節點，請完成下列步驟：
 
-1. 資訊清單檔中定義作業。
+1. 在資訊清單檔中定義作業。
 
-  [`failover.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/failover.yaml) -在[sql server 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)github 存放庫說明容錯移轉作業。
+  [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) GitHub 存放庫中的 [`failover.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/failover.yaml) 描述容錯移轉作業。
 
-  將資訊清單檔案複製到您管理終端機中。
+  將資訊清單檔複製到您的管理終端。
 
   更新您環境的檔案。
 
-  - 取代`<containerName>`預期的可用性群組目標的 pod 名稱 (例如 mssql2-0)。
-  - 如果可用性群組不在`ag1`命名空間中，取代`ag1`與命名空間。
+  - 以預期可用性群組目標的 Pod 名稱 (例如 mssql2-0) 取代 `<containerName>`。
+  - 如果可用性群組不在 `ag1` 命名空間中，請以其他命名空間取代 `ag1`。
 
-  這個檔案會定義名為的容錯移轉作業`manual-failover`。
+  此檔案會定義名為 `manual-failover` 的容錯移轉作業。
 
-1. 若要部署作業，使用`kubectl apply`。 下列指令碼會部署作業。
+1. 若要部署作業，請使用 `kubectl apply`。 下列指令碼會部署作業。
 
   ```azurecli
   kubectl apply -f failover.yaml
   ```
 
-  部署工作之後，kubernetes，使用 SQL Server 運算子，就會執行下列工作：
+  部署作業之後，Kubernetes 與 SQL Server 運算子會執行下列工作：
   
-  - 降級至次要資料庫的主要複本
+  - 將主要複本降階為次要複本
   
-  - 將指定的複本為主要升階
+  - 將指定的複本升階為主要複本
   
-  套用資訊清單檔案之後，Kubernetes 會執行作業。 作業會監督員選取新的領導者，並將主要複本移至 SQL Server 執行個體的領導者。
+  套用資訊清單檔之後，Kubernetes 會執行作業。 此作業會讓監督員選取新的領導者，並將主要複本移至領導者的 SQL Server 執行個體。
 
 1. 確認作業已完成。
   
-  Kubernetes 執行作業之後，您可以檢閱記錄檔。
+  在 Kubernetes 執行作業之後，您可以檢閱記錄。
   
-  下列範例會傳回名為作業的狀態`manual-failover`。
+  下列範例會傳回名為 `manual-failover` 作業的狀態。
 
   ```azurecli
   kubectl describe jobs/manual-failover --namespace ag1
@@ -68,9 +68,9 @@ ms.locfileid: "67952547"
 1. 刪除手動容錯移轉作業。 
 
   >[!IMPORTANT]
-  >發出另一個的手動容錯移轉之前，您必須手動刪除作業。
+  >您必須手動刪除作業，才能發出另一個手動容錯移轉。
   > 
-  >在 Kubernetes 中的工作物件保持在完成後，讓您可以檢視其狀態。 您需要注意的是他們的狀態後，手動刪除舊工作。 刪除作業時，也會刪除 Kubernetes 記錄檔。 如果您未刪除作業，未來的容錯移轉作業將會失敗，除非您變更的作業名稱與 pod 選取器。 如需詳細資訊，請參閱 <<c0> [ 執行到完成的工作-](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)。
+  >Kubernetes 中的作業物件會在完成後保留，以便檢視狀態。 查看狀態之後，您必須手動刪除舊的作業。 刪除作業也會刪除 Kubernetes 記錄。 如果您沒有刪除作業，除非變更作業名稱和 Pod 選取器，否則未來的容錯移轉作業將會失敗。 如需詳細資訊，請參閱 [Jobs - Run to Completion](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) (作業 - 執行到完成)。
 
   下列命令會刪除作業。
 
@@ -78,29 +78,29 @@ ms.locfileid: "67952547"
   kubectl delete jobs manual-failover --namespace ag1
   ```
 
-## <a name="rotate-credentials"></a>替換認證
+## <a name="rotate-credentials"></a>輪替認證
 
-替換認證的密碼重設為 SQL Server`sa`帳戶和 SQL Server[服務主要金鑰](../relational-databases/security/encryption/service-master-key.md)。 
+輪替認證以重設 SQL Server `sa` 帳戶的密碼和 SQL Server [服務主要金鑰](../relational-databases/security/encryption/service-master-key.md)。 
 
-若要完成這項工作中，您會在 Kubernetes 叢集中建立新的密碼，然後再建立 要替換認證的工作。
+為完成此工作，您要在 Kubernetes 叢集中建立新的祕密，然後建立作業來輪替認證。
 
-之前替換認證，請在密碼和主要金鑰的新密碼。
+輪替認證之前，請建立密碼和主要金鑰的新祕密。
 
-下列指令碼會建立名為祕密`new-sql-secrets`。 執行指令碼之前，請取代`<>`複雜密碼`sapassword`而`masterkeypassword`。 每個個別的值，請使用不同的密碼。
+下列指令碼會建立名為 `new-sql-secrets` 的祕密。 執行指令碼之前，請以 `sapassword` 和 `masterkeypassword` 的複雜密碼取代 `<>`。 針對每個值使用不同的密碼。
 
 ```azurecli
 kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
 ```
 
-每個執行個體的 SQL Server 需要主要金鑰，請完成下列步驟或`sa`密碼。
+對每個需要主要金鑰或 `sa` 密碼的 SQL Server 執行個體完成下列步驟。
 
-1. 複製[ `rotate-creds.yaml` ](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml)終端機您系統管理。
+1. 將 [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) 複製到您的管理終端。
 
-  [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) 在  [sql server 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/)github 存放庫是這項作業的資訊清單的範例。
+  [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/) GitHub 存放庫中的 [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) 即為此作業的資訊清單範例。
 
-  套用此資訊清單之前，請更新您的環境的資訊清單。 檢閱並變更下列設定，視需要。
+  套用此資訊清單之前，請更新您環境的資訊清單。 視需要檢查並變更下列設定。
 
-  - 確認命名空間。 視需要更新。 下列範例資訊清單中的會套用到名為命名空間`ag1`。
+  - 驗證命名空間。 如果需要，請予以更新。 下列資訊清單中的範例會套用至名為 `ag1` 的命名空間。
 
     ```yaml
     metadata:
@@ -108,7 +108,7 @@ kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --f
       namespace: ag1
     ```
 
-  - 請確認 SQL Server 執行個體的名稱。 視需要更新。 下列範例資訊清單規格中的會套用至名為 SQL Server 執行個體`mssql1`。
+  - 確認 SQL Server 執行個體的名稱。 如果需要，請予以更新。 下列資訊清單規格中的範例會套用至名為 `mssql1` 的 SQL Server 執行個體。
 
     ```yaml
     env:
@@ -116,15 +116,15 @@ kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --f
         value: mssql1
     ```
 
-  將更新的資訊清單檔案儲存到您的工作站。
+  將更新的資訊清單檔儲存至您的工作站。
 
-1. 使用`kubectl`部署作業。
+1. 使用 `kubectl` 部署作業。
 
   ```azurecli
   kubectl apply -f rotate-creds.yaml --namespace ag1
   ```
 
-  Kubernetes 更新主要金鑰和`sa`一個的執行個體的 SQL Server 可用性群組中的密碼。
+  Kubernetes 會更新可用性群組中一個 SQL Server 執行個體的主要金鑰和 `sa` 密碼。
 
 1. 確認作業已完成。 執行下列命令：若要確認作業已完成，請執行 
 
@@ -132,19 +132,19 @@ kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --f
   kubectl describe job rotate-creds --namespace ag1
   ```
 
-  作業成功，主要金鑰之後和`sa`會更新一個 SQL Server 執行個體的密碼。
+  作業成功之後，即會更新一個 SQL Server 執行個體的主要金鑰和 `sa` 密碼。
 
 
-1. 再次執行該工作之前，刪除作業。 每個工作名稱必須是唯一的。
+1. 在您重新執行作業之前，請先刪除作業。 每個作業名稱必須是唯一的。
 
   ```azurecli
   kubectl delete job rotate-creds --namespace ag1
   ```
 
-若要設定為相同`sa`密碼的 SQL Server 的所有執行個體的每個 SQL Server 執行個體重複上述步驟。
+若要為所有 SQL Server 執行個體設定相同的 `sa` 密碼，請對每個 SQL Server 執行個體重複上述步驟。
 
 ## <a name="next-steps"></a>後續步驟
 
-[存取 Kubernetes 儀表板與 Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)
+[存取 Azure Kubernetes Service (AKS) 隨附的 Kubernetes 儀表板](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)
 
-[在 Kubernetes 叢集上的 SQL Server 可用性群組](sql-server-ag-kubernetes.md)
+[Kubernetes 叢集上的 SQL Server 可用性群組](sql-server-ag-kubernetes.md)

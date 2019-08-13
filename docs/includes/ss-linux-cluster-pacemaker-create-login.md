@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d2519b1cc56081f8a35308ac41e11f46a7f97211
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215612"
 ---
 1. **在所有 SQL Server 上，為 Pacemaker 建立 Server 登入**。 下列 Transact-SQL 會建立登入：
@@ -16,7 +16,7 @@ ms.locfileid: "68215612"
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [pacemakerLogin]
    ```
 
-  在建立可用性群組時，pacemaker 使用者將需要可用性群組，ALTER、 CONTROL 和 VIEW DEFINITION 權限，它建立之後，但加入任何節點之前。
+  建立可用性群組時，在其建立之後但在新增任何節點之前，Pacemaker 使用者需要可用性群組的 ALTER、CONTROL 和 VIEW DEFINITION 權限。
 
 1. **在所有 SQL 伺服器上，儲存 SQL Server 登入的認證**。
 

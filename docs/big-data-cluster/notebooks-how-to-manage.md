@@ -1,7 +1,7 @@
 ---
-title: 管理 Azure Data Studio 中的 notebook
+title: 管理 Azure Data Studio 中的筆記本
 titleSuffix: SQL Server big data clusters
-description: 了解如何管理 Azure Data Studio 中的 notebook。 這包括開啟 notebook 儲存，且變更您的巨量資料叢集連線。
+description: 了解如何管理 Azure Data Studio 中的筆記本。 這包括開啟筆記本、進行儲存，以及變更您的巨量資料叢集連線。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,74 +10,74 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958286"
 ---
-# <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的 notebook
+# <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的筆記本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-這篇文章會示範如何開啟及儲存在 Azure 資料 Studio 中的 notebook 檔案，使用 SQL Server 2019 預覽。 它也會示範如何將您的連線變更為您 SQL Server 的巨量資料叢集。
+本文說明如何使用 SQL Server 2019 Preview，在 Azure Data Studio 中開啟和儲存筆記本檔案。 它也示範如何變更您的 SQL Server 巨量資料叢集連線。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
-本文假設您已經有您想要使用 Azure Data Studio 中的 notebook。 如果您想要建立的 notebook，請參閱[如何在 SQL Server 2019 預覽中使用 notebook](notebooks-guidance.md)。 若要使用 Azure Data Studio notebook，您必須符合下列必要條件：
+本文假設您已擁有要在 Azure Data Studio 中使用的筆記本。 如果您想要建立筆記本，請參閱[如何在 SQL Server 2019 Preview 中使用筆記本](notebooks-guidance.md)。 若要在 Azure Data Studio 中使用筆記本，您必須符合下列必要條件：
 
 - [部署巨量資料叢集](quickstart-big-data-cluster-deploy.md)。
-- [SQL Server 2019 巨量資料工具](deploy-big-data-tools.md):
+- [SQL Server 2019 巨量資料工具](deploy-big-data-tools.md)：
    - **Azure Data Studio**
    - **SQL Server 2019 延伸模組**
    - **kubectl**
 
-## <a name="open-a-notebook"></a>開啟 notebook
+## <a name="open-a-notebook"></a>開啟筆記本
 
-有數種方式來開啟**開啟 Notebook**對話方塊。 您可以使用 [檔案] 功能表、 儀表板和命令選擇區。 下列各節描述每個方法。
+您可以利用多種方式開啟 [開啟筆記本]  對話方塊。 您可以使用 [檔案] 功能表、儀表板和命令選擇區。 下列各節將描述各種方法。
 
 ### <a name="file-menu"></a>[檔案] 功能表
 
-選取 **開啟舊檔**從 檔案 功能表 Ctrl + O (Windows) 和 Cmd + O (Mac)。
+從 [檔案] 功能表選取 [開啟檔案]  (Ctrl+O (Windows) 和 Cmd+O (Mac))。
 
-![開啟 開啟檔案 對話方塊，選取 開啟舊檔](./media/notebooks-how-to-manage/open-file-1.png) 
+![選取 [開啟檔案]，開啟 [開啟檔案] 對話方塊](./media/notebooks-how-to-manage/open-file-1.png) 
 
 ### <a name="dashboard"></a>儀表板
 
-按一下 **開啟 Notebook**儀表板以開啟 檔案開啟的對話方塊。
+在儀表板中按一下 [開啟筆記本]  ，開啟 [開啟檔案] 對話方塊。
 
-![開啟儀表板中選取 開啟 Notebook 的 開啟檔案 對話方塊](./media/notebooks-how-to-manage/open-file-2.png) 
+![在儀表板中選取 [開啟筆記本]，開啟 [開啟檔案] 對話方塊](./media/notebooks-how-to-manage/open-file-2.png) 
 
 ### <a name="command-palette"></a>命令選擇區
 
-使用命令**檔案：開啟**從命令選擇區輸入 Ctrl + Shift + P （在 Windows) 和 Cmd + Shift + P （在 Mac)。
+從命令選擇區使用命令 **File:Open** (透過在 Windows 鍵入Ctrl+Shift+P 或在 Mac 鍵入 Cmd+Shift+P)。
 
-![在命令選擇區輸入 File:Open 開啟 [開啟檔案] 對話方塊](./media/notebooks-how-to-manage/open-file-3.png)
+![在命令選擇區中輸入 File:Open，開啟 [開啟檔案] 對話方塊](./media/notebooks-how-to-manage/open-file-3.png)
 
-## <a name="save-a-notebook"></a>儲存 notebook
+## <a name="save-a-notebook"></a>儲存筆記本
 
-目前沒有儲存 notebook 的一種方法。 您必須選取**儲存**從 notebook 工具列。
+目前只能利用一種方式儲存筆記本。 您必須選取筆記本工具列中的 [儲存]  。
 
-![儲存 notebook 工具列中按一下 儲存的檔案](./media/notebooks-how-to-manage/save-file-1.png)
+![按一下筆記本工具列中的 [儲存]，儲存檔案](./media/notebooks-how-to-manage/save-file-1.png)
 
 > [!NOTE]
-> 下列方法目前不要儲存變更至 notebook:
+> 下列方法目前無法儲存筆記本的變更：
 >
-> - **檔案儲存**，**存新檔...** 並**儲存所有檔案**從 [檔案] 功能表的命令。
-> - **檔案：儲存**在命令選擇區輸入命令。
+> - 從 [檔案] 功能表的 [儲存檔案]  、[另存新檔...]  和 [儲存所有檔案]  命令。
+> - 在命令選擇區中輸入 **File:Save** 命令。
 
 ## <a name="change-the-big-data-cluster"></a>變更巨量資料叢集
 
-若要變更 SQL Server 的巨量資料叢集，notebook:
+若要變更筆記本的 SQL Server 巨量資料叢集：
 
-1. 按一下 **附加至**從 notebook 工具列的功能表。
+1. 按一下筆記本工具列中的 [附加至]  功能表。
 
-   ![按一下 附加至 notebook 工具列中的功能表](./media/notebooks-how-to-manage/select-attach-to-1.png)
+   ![按一下筆記本工具列中的 [附加至] 功能表](./media/notebooks-how-to-manage/select-attach-to-1.png)
 
-2. 按一下 從伺服器**附加至**功能表。
+2. 在 [附加至]  功能表中，按一下伺服器。
 
-   ![功能表，然後從 附加中選取伺服器](./media/notebooks-how-to-manage/select-attach-to-2.png)
+   ![從 [附加至] 功能表選取伺服器](./media/notebooks-how-to-manage/select-attach-to-2.png)
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 Azure Data Studio 中的 notebook 的詳細資訊，請參閱[如何在 SQL Server 2019 預覽中使用 notebook](notebooks-guidance.md)。
+如需 Azure Data Studio 中筆記本的詳細資訊，請參閱[如何在 SQL Server 2019 Preview 中使用筆記本](notebooks-guidance.md)。

@@ -1,7 +1,7 @@
 ---
-title: 使用 Azure Data Studio 中的深入解析小工具，監視伺服器和資料庫
+title: 使用 Azure Data Studio 中的深入解析小工具監視伺服器和資料庫
 titleSuffix: Azure Data Studio
-description: 深入了解 Azure Data Studio 中的深入解析小工具
+description: 了解 Azure Data Studio 中的深入解析小工具
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,48 +11,48 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959528"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用 insight 小工具管理資料庫與伺服器
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中使用深入解析小工具，管理伺服器和資料庫
 
-Insight 小工具採用您所用的 Transact-SQL (T-SQL) 查詢，以監控伺服器與資料庫並將它們轉換為可深入解析的視覺圖表。
+深入解析小工具會擷取您用來監視伺服器和資料庫的 Transact-SQL (T-SQL) 查詢，並轉換成富有洞察力的視覺效果。
 
-Insights 是可以新增至伺服器與資料庫監控儀表板的客製圖表與圖形。 一目了然地檢視您的伺服器與資料庫，進而深入了解更多細節，並啟動您自定義的管理操作。
+深入解析是您可以新增至伺服器和資料庫監視儀表板的可自訂圖表和圖形。 檢視您伺服器和資料庫的摘要深入解析，然後鑽研更多詳細資料，並啟動您所定義的管理動作。
 
-您可以建立類似下列範例的絕佳伺服器和資料庫管理儀表板：
+您可以建置絕佳的伺服器和資料庫管理儀表板，如下列範例所示：
 
 ![資料庫儀表板](media/insight-widgets/database-dashboard.png)
 
 
-若要著手開始建立不同類型的 Insight 小工具，請參閱下列教學課程：
+若要立即開始建立不同類型的深入解析小工具，請參閱下列教學課程：
 
-- [建置自訂的 Insight 小工具](tutorial-build-custom-insight-sql-server.md)
-- *啟用內建的 Insight 小工具*
-  - [啟用效能監視 insight](tutorial-qds-sql-server.md)
-  - [啟用資料表空間使用量的深入解析](tutorial-table-space-sql-server.md)
+- [建置自訂深入解析小工具](tutorial-build-custom-insight-sql-server.md)
+- 啟用內建深入解析小工具 
+  - [啟用效能監視深入解析](tutorial-qds-sql-server.md)
+  - [啟用資料表空間使用量深入解析](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>SQL 查詢
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 會嘗試以避免產生但另一個語言或大量的使用者介面，如此它便會嘗試使用 T-SQL 盡可能以最低的 JSON 組態。 使用 T-SQL 設定深入解析小工具會利用現有的來源，可以轉換成具洞察力的小工具的實用 T-SQL 查詢的無數的數目。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 會嘗試避免推出另一種語言或龐大的使用者介面，因此會嘗試盡可能使用需要最少 JSON 設定的 T-SQL。 使用 T-SQL 設定深入解析小工具時，會利用無數個現有的實用 T-SQL 查詢來源，全部都可以轉換成富有洞察力的小工具。
 
-Insight 小工具是由一個或兩個 T-SQL 查詢所組成：
-* *Insight 小工具查詢*是必要的且查詢會傳回小工具中出現的資料。
-* 若要建立 Insight 詳細資料頁面，才需要*Insight 詳細資料查詢*。
+深入解析小工具是由一個或兩個 T-SQL 查詢所組成：
+* 「深入解析小工具查詢」  是必要的，而且查詢會傳回小工具中所顯示的資料。
+* 只有在您想要建立深入解析詳細資料頁面時，才需要「深入解析詳細資料查詢」  。
 
-Insight 小工具查詢定義了轉譯計數、圖表或圖形的資料集。 在 Insight 詳細資料面板中，可以使用 Insight 詳細資料查詢以表格格式來列出相關的 Insight 詳細資訊。 
+此深入解析小工具查詢會定義資料集來轉譯計數、圖表或圖形。 您可以使用深入解析詳細資料查詢，在深入解析詳細資料面板中，以表格格式列出相關的深入解析詳細資訊。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]會執行 Insight 小工具查詢，並將查詢結果集對應至圖表的資料集，然後會將其轉譯。 當使用者開啟 Insight 的詳細資料時，它會執行 Insight 詳細資料查詢，並在對話方塊中以方格檢視來列印結果。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 會執行深入解析小工具查詢，並將查詢結果集對應至圖表的資料集，再加以轉譯。 當使用者開啟深入解析的詳細資料時，會執行深入解析詳細資料查詢，並在對話方塊中以格線檢視列出結果。
 
-基本概念是在撰寫 T-SQL 查詢時，讓它可用來當做計數、圖表和圖形小工具的資料集。 
+基本概念是將 T-SQL 查詢撰寫成計數、圖表和圖形小工具的可用資料集。 
 
 ## <a name="summary"></a>摘要
 
-T-SQL 查詢及其結果集決定了 Insight 小工具行為。 若要建置有效的 Insight 小工具，關鍵考量便是撰寫圖表類型的查詢，或是將正確的圖表類型對應至現有查詢。
+T-SQL 查詢及其結果集會決定深入解析小工具的行為。 針對圖表類型撰寫查詢或對應至現有查詢的正確圖表類型，都是在建置有效的深入解析小工具時的重要考量。
 
 
 

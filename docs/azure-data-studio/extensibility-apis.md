@@ -1,7 +1,7 @@
 ---
 title: 擴充性 API
 titleSuffix: Azure Data Studio
-description: 了解擴充性 Api 適用於 Azure Data Studio
+description: 了解適用於 Azure Data Studio 的擴充性 API
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,31 +11,31 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959620"
 ---
-# <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 擴充性 Api
+# <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 擴充性 API
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 提供擴充功能可以用來與 Azure Data Studio，例如 [物件總管] 中的其他部分互動的 API。 這些 Api 都是從[ `src/sql/sqlops.d.ts` ](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts)檔案，並如下所述。
+[!INCLUDE[name-sos](../includes/name-sos.md)] 提供 API，供延伸模組用來與 Azure Data Studio 的其他部分 (例如物件總管) 互動。 這些 API 可從 [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) 檔案取得，如下所述。
 
-## <a name="connection-management"></a>連接管理
+## <a name="connection-management"></a>連線管理
 `sqlops.connection`
 
-### <a name="top-level-functions"></a>最上層函式
+### <a name="top-level-functions"></a>最上層函數
 
-- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` 取得目前使用中編輯器或物件總管 中選取項目為基礎的連接。
+- `getCurrentConnection(): Thenable<sqlops.connection.Connection>`：根據使用中的編輯器或物件總管選取項目，取得目前的連線。
 
-- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` 取得一份作用中的所有使用者的連線。 如果沒有這類的連接，則傳回空的清單。
+- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>`：取得使用者的所有使用中連線清單。 如果沒有這類連線，會傳回空白清單。
 
-- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` 取得字典，其中包含與連接相關聯的認證。 這些會否則選項字典下的一部分傳回`sqlops.connection.Connection`物件，但取得從該物件中移除。 
+- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>`：取得字典，其中包含與連線相關聯的認證。 這些會當做 `sqlops.connection.Connection` 物件下的選項字典一部分傳回，但會從該物件中移除。 
 
 ### `Connection`
-- `options: { [name: string]: string }` 字典的連線選項
-- `providerName: string` 連線提供者的名稱 （例如："MSSQL")
-- `connectionId: string` 連接的唯一識別碼
+- `options: { [name: string]: string }`：連線選項的字典
+- `providerName: string`：連線提供者的名稱 (例如"MSSQL")
+- `connectionId: string`：連線的唯一識別碼
 
 ### <a name="example-code"></a>範例程式碼
 ```
@@ -63,41 +63,41 @@ credentials: {
 `sqlops.objectexplorer`
 
 
-### <a name="top-level-functions"></a>最上層函式
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得對應至給定的連接和路徑的物件總管 節點。 如果未不指定任何路徑，則它會傳回所指定連接的最上層節點。 如果並沒有節點在指定的路徑，它會傳回`undefined`。 注意:`nodePath`物件由 SQL 工具服務後端所產生，而且很難以手動方式建構。 未來的 API 增強功能可讓您能夠根據您提供相關的節點，例如名稱、 類型和結構描述的中繼資料的節點。
+### <a name="top-level-functions"></a>最上層函數
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>`：取得對應至指定連線和路徑的物件總管節點。 如果沒有指定路徑，會傳回指定連線的最上層節點。 如果指定的路徑中沒有節點，會傳回 `undefined`。 注意:物件的 `nodePath` 是由 SQL 工具服務後端所產生，很難以手動方式建構。 未來的 API 改進將可讓您根據所提供的節點相關中繼資料 (例如名稱、類型和結構描述) 來取得節點。
 
-- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得所有作用中的物件總管 連接節點。
+- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>`：取得所有使用中的物件總管連線節點。
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 尋找所有符合指定之中繼資料的物件總管 節點。 `schema`， `database`，並`parentObjectNames`引數應`undefined`時不適用。 `parentObjectNames` 是一份非資料庫的父物件，從最高到最低的層級，在 [物件總管] 中，所需的物件正在進行中。 例如，當使用連接識別碼搜尋的資料行所屬資料表 」 schema1.table1 」 和資料庫"database1"的"column1" `connectionId`，呼叫`findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`。 另請參閱[的預設 Azure Data Studio 支援的類型清單](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)這個 API 呼叫。
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>`：尋找符合指定中繼資料的所有物件總管節點。 當 `schema`、`database` 和 `parentObjectNames` 引數不適用時，應該是 `undefined`。 `parentObjectNames` 是從物件總管最頂層到最底層的非資料庫父物件清單，所需物件會位於下方。 例如，搜尋屬於資料表 "schema1.table1" 和資料庫 "database1" 且具有連線識別碼 `connectionId` 的資料行 "column1" 時，請呼叫 `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`。 另請參閱此 API 呼叫的[預設 Azure Data Studio 支援類型清單](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)。
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
-- `connectionId: string` 底下的節點有連接的識別碼
+- `connectionId: string`：節點所在的連線識別碼
 
-- `nodePath: string` 節點路徑，與用於呼叫`getNode`函式。
+- `nodePath: string`：節點的路徑，用於呼叫 `getNode` 函數。
 
-- `nodeType: string` 字串，表示節點的類型
+- `nodeType: string`：表示節點類型的字串
 
-- `nodeSubType: string` 字串，表示節點的子類型
+- `nodeSubType: string`：表示節點子類型的字串
 
-- `nodeStatus: string` 字串，表示節點的狀態
+- `nodeStatus: string`：表示節點狀態的字串
 
-- `label: string` 節點的標籤會出現在 [物件總管]
+- `label: string`：顯示在物件總管中的節點標籤
 
-- `isLeaf: boolean` 節點是否為分葉節點，並因此並沒有子系
+- `isLeaf: boolean`：節點是否為分葉節點，因此沒有子系
 
-- `metadata: sqlops.ObjectMetadata` 描述此節點所表示之物件的中繼資料
+- `metadata: sqlops.ObjectMetadata`：描述此節點所表示物件的中繼資料
 
-- `errorMessage: string` 顯示節點是否處於錯誤狀態訊息
+- `errorMessage: string`：節點處於錯誤狀態時顯示的訊息
 
-- `isExpanded(): Thenable<boolean>` 在 物件總管節點目前是否已展開
+- `isExpanded(): Thenable<boolean>`：節點目前是否在物件總管中已展開
 
-- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` 設定節點為展開或摺疊。 如果狀態設定為 None 時，節點將不會變更。
+- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>`：設定要展開或摺疊節點。 如果狀態設定為 [無]，則不會變更節點。
 
-- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` 設定是否已選取的節點。 如果`clearOtherSelections`是 true，則清除任何其他選取項目，建立新的選取範圍時。 如果為 false，將保留任何現有的選取項目。 `clearOtherSelections` 預設值為 true 時`selected`時，則為 true 和 false`selected`為 false。
+- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>`：設定是否選取節點。 如果 `clearOtherSelections` 為 true，會在進行新的選取時清除其他選取項目。 如果為 false，則會保留所有現有的選取項目。 當 `selected` 為 true 時，`clearOtherSelections` 預設為 true；當 `selected` 為 false 時，預設為 false。
 
-- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 取得所有子節點的此節點。 如果沒有任何子系，則傳回空的清單。
+- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>`：取得此節點的所有子節點。 如果沒有子系，會傳回空白清單。
 
-- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得此節點的父節點。 如果沒有父代，傳回未定義。
+- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>`：取得此節點的父節點。 如果沒有父系，會傳回 undefined。
 
 ### <a name="example-code"></a>範例程式碼
 
@@ -157,8 +157,8 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 });
 ```
 
-## <a name="proposed-apis"></a>建議的 Api
+## <a name="proposed-apis"></a>建議的 API
 
-我們已新增建議的 Api，以允許在對話方塊、 精靈和其他功能方面的文件索引標籤，顯示自訂 UI 的延伸模組。 請參閱[提議的 API 類型檔案](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts)如需詳細的文件，不過請注意，這些 API 可能會有所變更，在任何時間。 範例，示範如何使用這些 Api 的一些可在["sqlservices 」 範例延伸模組](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)。
+我們新增了建議的 API，允許延伸模組在對話方塊、精靈和文件索引標籤中顯示自訂 UI，以及其他功能。 如需進一步說明，請參閱[建議的 API 類型檔案](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts)，但請注意，這些 API 隨時可能會變更。 您可以在 ["sqlservices" 範例延伸模組](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)中，找到如何使用其中一些 API 的範例。
 
 

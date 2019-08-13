@@ -1,7 +1,7 @@
 ---
-title: 產生資料有爭議的工作程式的碼
+title: 為資料整頓工作產生程式碼
 titleSuffix: Azure Data Studio
-description: 本文說明如何使用 Azure 資料 Studio 中的文字的程式碼加速器，自動產生程式碼的常見的資料有爭議的工作。
+description: 本文說明如何使用 Azure Data Studio 中的 PROSE Code Accelerator，為常見的資料整頓工作自動產生程式碼。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,42 +10,42 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957689"
 ---
-# <a name="data-wrangling-using-prose-code-accelerator"></a>使用文字程式碼加速器 data Wrangling
+# <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE Code Accelerator 進行資料整頓
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-PROSE 程式碼加速器會產生可讀取的 Python 程式碼，以您的資料有爭議的工作。 在 Azure Data Studio 中的 notebook 中工作時，您可以無縫式的方式混合搭配您手動撰寫的程式碼產生的程式碼。 本文將概述如何使用程式碼的加速器。
+PROSE Code Accelerator 會為您的資料整頓工作產生可讀取的 Python 程式碼。 當您在 Azure Data Studio 的筆記本中工作時，您可以順暢地將產生的程式碼與手寫的程式碼融合在一起。 本文提供如何使用 Code Accelerator 的概觀。
 
  > [!NOTE]
- > 程式 Synthesis using Examples，也稱為 PROSE，是一種 Microsoft 技術，產生人類看得懂的程式碼使用 AI。 它會分析使用者的意圖，以及資料、 產生數個候選程式，並挑選最佳的計劃使用排名演算法。 若要深入了解 PROSE 技術，請造訪[PROSE 首頁](https://microsoft.github.io/prose/)。
+ > Program Synthesis using Examples (也稱為 PROSE) 是一項 Microsoft 技術，使用 AI 產出人們看得懂的程式碼。 該技術會去分析使用者的意圖和資料、產出數個候選程式，然後透過排名演算法挑選最佳程式。 若要深入了解 PROSE 技術，請瀏覽 [PROSE 首頁](https://microsoft.github.io/prose/)。
 
-程式碼 Accelerator 已預先安裝 Azure Data Studio。 您可以匯入類似在 notebook 中的其他 Python 套件。 依照慣例，我們它匯入為 cx 簡稱。
+Code Accelerator 會隨 Azure Data Studio 預先安裝。 您可以把它匯入筆記本，就像其他 Python 套件一樣。 依照慣例，我們會以 cx (簡稱) 匯入。
 
 ```python
 import prose.codeaccelerator as cx
 ```
 
-在目前的版本中，程式碼加速器以智慧方式可以產生 Python 程式碼來執行下列工作：
+在目前版本中，Code Accelerator 可以針對下列工作以智慧方式產生 Python 程式碼：
 
-- 資料檔案讀取至 Pandas 或 Pyspark 資料框架。
+- 將資料檔案讀入 Pandas 或 Pyspark 資料框架。
 - 修正資料框架中的資料類型。
-- 尋找規則運算式，表示字串清單中的模式。
+- 在字串清單中尋找呈現出模式的規則運算式。
 
-若要取得程式碼加速器方法的一般概觀，請參閱[文件](https://aka.ms/prose-codeaccelerator-overview)。
+若要取得 Code Accelerator 方法的一般概觀，請參閱[文件](https://aka.ms/prose-codeaccelerator-overview)。
 
-## <a name="reading-data-from-a-file-to-a-dataframe"></a>從檔案讀取資料的資料框架
+## <a name="reading-data-from-a-file-to-a-dataframe"></a>將檔案中的資料讀入資料框架
 
-通常，讀取檔案的資料框架牽涉到查看檔案的內容，並判斷正確的參數，將資料載入程式庫。 根據檔案的複雜度，找出正確的參數可能需要數個反覆項目。
+將檔案讀入資料框架通常涉及查看檔案的內容，並判斷要傳遞至資料載入程式庫的正確參數。 視檔案的複雜度而定，識別正確的參數可能需要反覆查看多次。
 
-PROSE 程式碼加速器會解決此問題，分析資料檔案的結構，並自動產生程式碼載入檔案。 在大部分情況下，產生的程式碼會正確地剖析資料。 在少數情況下，您可能需要調整以符合您需求的程式碼。
+PROSE Code Accelerator 藉由分析資料檔案的結構，然後自動產出程式碼以載入檔案，來解決此問題。 在大多數情況下，產出的程式碼可以正確地剖析資料。 在少數情況下，您可能需要調整程式碼以符合您的需求。
 
-參考下列範例：
+請設想下列範例：
 
  ```python
 import prose.codeaccelerator as cx
@@ -60,7 +60,7 @@ builder = cx.ReadCsvBuilder(r'C:/911.txt')
 builder.learn().code()
  ```
 
-先前的程式碼區塊會列印下列 python 程式碼，讀取分隔的檔案。 請注意如何 PROSE 會自動找出要跳過，標頭、 quotechars、 分隔符號等等的行數。
+上述程式碼區塊會列印下列 Python 程式碼來讀取分隔檔。 注意 PROSE 如何自動找出要略過的行數、標頭、引號字元、分隔符號等。
 
  ```python
 import pandas as pd
@@ -86,13 +86,13 @@ def read_file(file):
     return df
  ```
 
-程式碼加速器可以產生程式碼，以分隔的負載、 JSON 和固定寬度檔案的資料框架。 用於讀取固定寬度檔案`ReadFwfBuilder`會選擇性使用人類看得懂的結構描述檔案，它可以剖析來取得資料行位置。 若要進一步了解，請參閱[文件](https://aka.ms/prose-codeaccelerator-docs)。
+Code Accelerator 可以產出程式碼，將分隔、JSON 和固定寬度的檔案載入資料框架。 若要讀取固定寬度的檔案，`ReadFwfBuilder` 會選擇性地採用人們看得懂的結構描述檔案，以便進行剖析來取得資料行位置。 若要深入了解，請參閱[文件](https://aka.ms/prose-codeaccelerator-docs)。
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>修正資料框架中的資料類型
 
-通常會有 pandas 或含有錯誤的資料類型的 pyspark 資料框架。 這是因為幾個不合格的情況下，資料行的值。 如此一來，整數會讀取為浮點數或字串和日期會讀取為字串。 若要手動修正資料類型所需的工作的資料行數目成正比。
+Pandas 或 Pyspark 資料框架經常會出現錯誤資料類型。 這通常是因為資料行中有幾項不合格的值所造成。 因此，整數會解讀為浮點數或字串，而日期會解讀為字串。 手動修正資料類型所花費的心力會與資料行數目成正比。
 
-您可以使用`DetectTypesBuilder`在這些情況下。 它會分析資料和而不是黑色方塊的方式修正資料型別，它會產生程式碼以修正資料型別。 程式碼做為起點。 您可以檢視、 使用，或視需要修改它。
+您可以在這些情況下使用 `DetectTypesBuilder` 方法。 它會分析資料，並產出程式碼來修正資料類型，而不是以黑箱方式修正資料類型。 此程式碼可作為起點。 您可以視需要檢閱、使用或修改。
 
 ```python
 import prose.codeaccelerator as cx
@@ -106,22 +106,22 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-若要進一步了解，請參閱[文件](https://aka.ms/prose-codeaccelerator-fixtypes)。
+若要深入了解，請參閱[文件](https://aka.ms/prose-codeaccelerator-fixtypes)。
 
 ## <a name="identifying-patterns-in-strings"></a>識別字串中的模式
 
-偵測模式中的字串資料行，以便清除或分組為另一個常見案例。 比方說，您可能將日期的日期資料行在多個不同的格式。 為了標準化值，您可能想要撰寫使用規則運算式的條件陳述式。
+另一個常見的案例是在字串資料行中偵測模式，以便清除或分組。 例如，您可能有一個日期資料行，其中包含多種不同格式的日期。 若要將值標準化，您可能需要使用規則運算式來撰寫條件陳述式。
 
 
-|   |名稱                      |BirthDate      |
+|   |[屬性]                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
 | 3 |Viachaslau Gordan Hilario |22-Apr-67      |
-| 4 |Maya de Villiers          |19-3 月-60      |
+| 4 |Maya de Villiers          |19-Mar-60      |
 
-根據磁碟區和資料的多樣性，撰寫資料行中的不同模式的規則運算式可能會相當耗時的工作。 `FindPatternsBuilder`是功能強大的程式碼加速的一項工具，可解決上述問題，藉由產生的字串的規則運算式的清單。
+視資料的數量和多樣性而定，針對資料行裡不同的模式撰寫規則運算式會是非常耗時的工作。 `FindPatternsBuilder` 是功能強大的程式碼加速工具，藉由為字串清單產出規則運算式來解決上述問題。
 
 ```python
 import prose.codeaccelerator as cx
@@ -134,7 +134,7 @@ builder = cx.FindPatternsBuilder(df['BirthDate'])
 builder.learn().regexes
 ```
 
-以下是所產生的規則運算式`FindPatternsBuilder`上述的資料。
+以下是 `FindPatternsBuilder` 為上述資料所產出的規則運算式。
 
 ```
 ^[0-9]{2}-[A-Z][a-z]+-[0-9]{2}$
@@ -143,4 +143,4 @@ builder.learn().regexes
 ^Unknown$
 ```
 
-除了產生規則運算式，`FindPatternsBuilder`也可以產生程式碼叢集根據產生的 regex 的值。 此外，它也可以判斷提示的資料行中的所有值都符合產生的規則運算式。 若要進一步了解，並查看其他有用的案例，請參閱[文件](https://aka.ms/prose-codeaccelerator-findpatterns)。
+除了產出規則運算式之外，`FindPatternsBuilder` 也可以產出程式碼，以根據產生的 RegEx 將值叢集化。 它也可以宣告資料行中的所有值都符合產出的規則運算式。 若要深入了解並查看其他實用案例，請參閱[文件](https://aka.ms/prose-codeaccelerator-findpatterns)。

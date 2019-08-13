@@ -1,7 +1,7 @@
 ---
 title: 快速入門：連線及查詢 SQL Server
 titleSuffix: Azure Data Studio
-description: 本快速入門示範如何使用 Azure Data Studio 連接到 SQL Server 和執行查詢
+description: 本快速入門說明如何使用 Azure Data Studio 連線到 SQL Server 並執行查詢
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,54 +11,54 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 4117d8c16e96252f792e14d282d285527008874f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959398"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門：使用 SQL Server 連線及查詢 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 SQL Server，然後使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*，並用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線及查詢 SQL Server
+本快速入門說明如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線到 SQL Server，然後使用 Transact-SQL (T-SQL) 陳述式建立 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教學課程中所使用的 *TutorialDB*。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-若要完成本快速入門中，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 SQL 伺服器的存取權。
+若要完成本快速入門，您需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 和 SQL Server 存取權。
 
-- [安裝[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
+- [安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)。
 
-如果您沒有存取 SQL Server，請從下列連結選取您的平台 （請確定您記得您的 SQL 登入和密碼 ！）：
+如果您沒有 SQL Server 存取權，請從下列連結中選取平台 (請務必記住您的 SQL 登入和密碼)：
 - [Windows - 下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [macOS - 下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux - 下載 SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -您只需要按照步驟操作，直到*建立及查詢資料*即可。
+- [Linux - 下載 SQL Server 2017 Developer 版](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) - 您只需要執行步驟到「建立及查詢資料」  。
 
 
 ## <a name="connect-to-a-sql-server"></a>連線到 SQL Server
 
    
 1. 啟動 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
-1. 第一次執行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**歡迎**頁面應該會開啟。 如果您沒有看到**歡迎**頁面上，選取**協助** > **歡迎**。 選取 **新的連線**來開啟**連線**窗格：
+1. 第一次執行 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 時，應該會開啟 [歡迎使用]  頁面。 如果您沒有看到 [歡迎使用]  頁面，請選取 [說明]   > [歡迎使用]  。 選取 [新增連線]  ，開啟 [連線]  窗格：
    
-   ![新的 [連線] 圖示](media/quickstart-sql-server/new-connection-icon.png)
+   ![新增連線圖示](media/quickstart-sql-server/new-connection-icon.png)
 
-1. 本文使用*SQL 登入*，但也支援*Windows 驗證*。 填妥欄位，如下所示： 填妥欄位，如下所示：
+1. 本文使用「SQL 登入」  ，但「Windows 驗證」  亦受支援。 填入欄位如下：
  
     - **伺服器名稱：** localhost
     - **驗證類型：** SQL 登入  
-    - **使用者名稱：** 適用於 SQL Server 的使用者名稱  
-    - **密碼：** 適用於 SQL Server 密碼  
+    - **使用者名稱：** SQL Server 的使用者名稱  
+    - **密碼：** SQL Server 的密碼  
     - **資料庫名稱：** 將此欄位保留空白 
-    - **伺服器群組：** \<預設值\>  
+    - **伺服器群組：** \<Default\>  
 
-   ![新的 [連線] 畫面](media/quickstart-sql-server/new-connection-screen.png)
+   ![新增連線畫面](media/quickstart-sql-server/new-connection-screen.png)
 
 
 
 ## <a name="create-a-database"></a>建立資料庫
 
-下列步驟會建立一個名為 **TutorialDB** 的資料庫：
+下列步驟會建立名為 **TutorialDB** 的資料庫：
 
-1. 以滑鼠右鍵按一下您的伺服器，**localhost**，然後選取**新增查詢。**
-1. 將下列程式碼片段貼到 [查詢] 視窗中： 
+1. 以滑鼠右鍵按一下您的伺服器 **localhost**，然後選取 [新增查詢]  。
+1. 將下列程式碼片段貼到查詢視窗： 
 
    ```sql
    USE master
@@ -74,25 +74,25 @@ ms.locfileid: "67959398"
        ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
    GO
    ```
-1. 若要執行查詢時，按一下**執行**。
+1. 若要執行查詢，請按一下 [執行]  。
 
-查詢完成後，新**TutorialDB**會出現在資料庫的清單。 如果您沒有看到它，以滑鼠右鍵按一下**資料庫**節點，然後選取**重新整理**。
+查詢完成後，新的 **TutorialDB** 會出現在資料庫清單中。 如果看不到，請以滑鼠右鍵按一下 [資料庫]  節點，然後選取 [重新整理]  。
 
 
 ## <a name="create-a-table"></a>建立資料表
 
-查詢編輯器仍然會連線到*master*資料庫，但我們想要在*TutorialDB*資料庫中建立資料表。 
+查詢編輯器仍會連線到 *master* 資料庫，但我們想要在 *TutorialDB* 資料庫中建立資料表。 
 
-1. 變更連接內容為**TutorialDB**:
+1. 將連線內容變更為 **TutorialDB**：
 
    ![變更內容](media/quickstart-sql-server/change-context.png)
 
 
 
-1. 將下列程式碼片段貼到 [查詢] 視窗，然後按一下**執行**:
+1. 將下列程式碼片段貼到查詢視窗，然後按一下 [執行]  ：
 
    > [!NOTE]
-   > 您可以將程式碼片段附加或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
+   > 您可以在編輯器中將此項目附加至查詢，或覆寫先前的查詢。 請注意，按一下 [執行]  只會執行選取的查詢。 如果沒有選取任何項目，按一下 [執行]  會執行編輯器中的所有查詢。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -111,11 +111,11 @@ ms.locfileid: "67959398"
    GO
    ```
 
-查詢完成後，新**Customers**資料表會出現在資料表清單。 您可能需要以滑鼠右鍵按一下**TutorialDB > 資料表**節點，然後選取**重新整理**。
+查詢完成後，新的 [客戶]  資料表會出現在資料表清單中。 您可能必須以滑鼠右鍵按一下 [TutorialDB] > [資料表]  節點，然後選取 [重新整理]  。
 
 ## <a name="insert-rows"></a>插入資料列
 
-- 將下列程式碼片段貼到 [查詢] 視窗，然後按一下**執行**:
+- 將下列程式碼片段貼到查詢視窗，然後按一下 [執行]  ：
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -132,19 +132,19 @@ ms.locfileid: "67959398"
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>檢視查詢所傳回的資料
-1. 將下列程式碼片段貼到 [查詢] 視窗，然後按一下**執行**:
+1. 將下列程式碼片段貼到查詢視窗，然後按一下 [執行]  ：
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. 查詢的結果會顯示：
+1. 查詢的結果隨即顯示：
 
-   ![選取 [結果]](media/quickstart-sql-server/select-results.png)
+   ![選取結果](media/quickstart-sql-server/select-results.png)
 
 
-## <a name="next-steps"></a>後續的步驟
-既然您已成功連線至 SQL Server 並執行查詢，試試看[教學課程中的程式碼編輯器](tutorial-sql-editor.md)。
+## <a name="next-steps"></a>後續步驟
+現在您已成功連線到 SQL Server 並執行查詢，請嘗試[程式碼編輯器教學課程](tutorial-sql-editor.md)。
 
 

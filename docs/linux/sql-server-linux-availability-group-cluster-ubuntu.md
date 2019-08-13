@@ -1,7 +1,7 @@
 ---
 title: 設定 SQL Server 可用性群組的 Ubuntu 叢集
 titleSuffix: SQL Server
-description: 了解如何建立可用性群組的叢集，適用於 Ubuntu
+description: 了解如何建立適用於 Ubuntu 的可用性群組叢集
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,45 +11,45 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027307"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文件說明如何在 Ubuntu 上建立三個節點叢集，並將先前建立的可用性群組新增為叢集中的資源。 如需高可用性，Linux 上的可用性群組需要三個節點-請參閱[可用性群組組態的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。
+本文件說明如何在 Ubuntu 上建立三個節點的叢集，並將先前建立的可用性群組新增為叢集中資源。 為了確保高可用性，Linux 上的可用性群組需要三個節點，請參閱[可用性群組設定的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。
 
 > [!NOTE] 
-> 到目前為止，不是與使用 Windows 上為 WSFC，結合與 Linux 上的 Pacemaker 的 SQL Server 的整合。 從 SQL，內沒有知識存在叢集的所有的協調流程位於外部，而且服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是特有 WSFC 的相同的 Pacemaker 沒有對等。 Always On 動態管理檢視，查詢叢集資訊傳回空的資料列。 您仍然可以建立要用於容錯移轉之後，透明的重新連線的接聽程式，但您必須手動在 DNS 伺服器中註冊的接聽程式名稱以用來建立虛擬 IP 資源 （如下列各節所述） 的 IP。
+> 目前，SQL Server 與 Linux 上 Pacemaker 整合程度尚不如 Windows 與 WSFC 的結合。 SQL 不會知道叢集是否存在，所有協調流程都是從外而入，且 Pacemaker 會以獨立執行個體形式來控制服務。 此外，虛擬網路名稱為 WSFC 特定的，Pacemaker 中沒有相同的對應項。 查詢叢集資訊的 Always On 動態管理檢視會傳回空的資料列。 您仍然可以建立接聽程式，在容錯移轉之後用它來進行透明重新連線，但您必須在 DNS 伺服器中使用建立虛擬 IP 資源所用的 IP 來手動註冊接聽程式名稱 (如下列各節所述)。
 
-下列各節逐步解說的步驟來設定容錯移轉叢集解決方案。 
+下列各節將逐步解說設定容錯移轉叢集解決方案的步驟。 
 
 ## <a name="roadmap"></a>藍圖
 
-在高可用性的 Linux 伺服器上建立可用性群組的步驟是從 Windows Server 容錯移轉叢集上的步驟不同。 下列清單說明的概要步驟： 
+在 Linux 伺服器上建立可用性群組以確保高可用性的步驟，與 Windows Server 容錯移轉叢集上的步驟不同。 下列清單描述高階步驟： 
 
-1. [設定叢集節點上的 SQL Server](sql-server-linux-setup.md)。
+1. [在叢集節點上設定 SQL Server](sql-server-linux-setup.md)。
 
 2. [建立可用性群組](sql-server-linux-availability-group-configure-ha.md)。 
 
-3. 設定叢集資源管理員，例如 Pacemaker。 這些指示是本文件中。
+3. 設定叢集資源管理員，例如 Pacemaker。 本文件包含這些指示。
    
-   若要設定叢集資源管理員的方式取決於特定的 Linux 散發套件。 
+   設定叢集資源管理員的方式取決於特定 Linux 發行版本。 
 
    >[!IMPORTANT]
-   >生產環境需要隔離代理程式，例如高可用性的 STONITH。 在本文件示範，請勿使用隔離代理程式。 示範適用於測試、 僅驗證。 
+   >生產環境需要 STONITH 這類隔離代理程式，以確保高可用性。 本文件中的示範不會使用隔離代理程式。 這些示範僅適用於測試和驗證。 
    
-   >Linux 叢集會使用隔離，讓叢集回到已知狀態。 若要設定隔離的方式取決於發佈和環境。 在此階段中，隔離不適用於某些雲端環境。 請參閱[RHEL 的高可用性叢集-而虛擬化平台的支援原則](https://access.redhat.com/articles/29440)如需詳細資訊。
+   >Linux 叢集會使用隔離功能將叢集回復為已知的狀態。 設定隔離功能的方式取決於發行版本和環境。 目前，有些雲端環境無法使用隔離功能。 如需詳細資訊，請參閱 [RHEL 高可用性叢集的支援原則 - 虛擬化平台](https://access.redhat.com/articles/29440)。
 
-5.  [新增可用性群組為叢集中資源](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)。 
+5.  [將可用性群組新增為叢集中的資源](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)。 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>安裝並在每個叢集節點上設定 Pacemaker
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>在每個叢集節點上安裝和設定 Pacemaker
 
-1. 在所有節點上開啟防火牆連接埠。 開啟 Pacemaker 高可用性服務、 SQL Server 執行個體和可用性群組端點的連接埠。 執行 SQL Server 的伺服器的預設 TCP 通訊埠為 1433年。  
+1. 在所有節點上，開啟防火牆連接埠。 開啟 Pacemaker 高可用性服務、SQL Server 執行個體和可用性群組端點的連接埠。 執行 SQL Server 的伺服器預設 TCP 通訊埠為 1433。  
 
    ```bash
    sudo ufw allow 2224/tcp
@@ -63,13 +63,13 @@ ms.locfileid: "68027307"
    sudo ufw reload
    ```
    
-   或者，您可以只停用防火牆：
+   或者，您可以直接停用防火牆：
         
    ```bash
    sudo ufw disable
    ```
 
-1. 安裝 Pacemaker 套件。 在所有節點上執行下列命令：
+1. 安裝 Pacemaker 套件。 在所有節點上，執行下列命令：
 
    ```bash
    sudo apt-get install pacemaker pcs fence-agents resource-agents
@@ -83,7 +83,7 @@ ms.locfileid: "68027307"
 
 ## <a name="enable-and-start-pcsd-service-and-pacemaker"></a>啟用並啟動 pcsd 服務和 Pacemaker
 
-下列命令會啟用，並啟動 pcsd 服務和 pacemaker。 所有節點上執行。 這可讓節點重新開機後重新加入叢集。 
+下列命令會啟用並啟動 pcsd 服務和 Pacemaker。 在所有節點上執行。 這可讓節點在重新啟動後重新加入叢集。 
 
 ```bash
 sudo systemctl enable pcsd
@@ -91,15 +91,15 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->啟用 pacemaker 命令可能會完成並出現錯誤 「 pacemaker 預設開始包含沒有 runlevels，正在中止。 」 這是無害的可以繼續叢集組態。 
+>Enable pacemaker 命令可能會完成並出現錯誤 'pacemaker Default-Start contains no runlevels, aborting' (pacemaker Default-Start 不含任何執行層級，即將中止)。 這不會有影響，叢集設定仍可繼續進行。 
 
 ## <a name="create-the-cluster"></a>建立叢集
 
-1. 從所有節點中移除任何現有的叢集組態。 
+1. 從所有節點移除任何現有的叢集設定。 
 
-   執行 'sudo apt-get install 電腦' 一次安裝 pacemaker、 corosync 和電腦，並開始執行所有 3 個服務。  啟動 corosync 產生的範本 ' / etc/cluster/corosync.conf' 檔案。  若要能夠成功這個檔案的下一個步驟應該不存在-因此因應措施是停止 pacemaker / corosync 和刪除 ' / etc/cluster/corosync.conf'，然後接下來的步驟已順利完成時。 'pcs cluster destroy' 同一件事，以及您可以使用它作為一個時間初始叢集安裝步驟。
+   執行 'sudo apt-get install pcs' 會同時安裝 pacemaker、corosync 和 pcs 並開始執行所有 3 項服務。  啟動 corosync 會產生範本 '/etc/cluster/corosync.conf' 檔案。  若要讓後續步驟成功，這個檔案不應該存在；因此，解決辦法是停止 pacemaker/corosync 並刪除 '/etc/cluster/corosync.conf'，即可順利完成後續步驟。 'pcs cluster destroy' 會進行相同的作業，因此您可以將它作為一次性的初始叢集設定步驟。
    
-   下列命令會移除任何現有的叢集設定檔，並停止所有的叢集服務。 這會永久終結叢集。 第一個步驟是在進入生產階段前環境中執行。 請注意，' pcs cluster destroy' 已停用 pacemaker 服務和需求來重新啟用。 在所有節點上執行下列命令。
+   下列命令會移除任何現有的叢集設定檔，並停止所有叢集服務。 這麼做會永久終結叢集。 在生產階段前環境中，請將它作為第一個步驟來執行。 請注意，'pcs cluster destroy' 已停用 Pacemaker 服務，必須重新啟用。 在所有節點上執行下列命令。
    
    >[!WARNING]
    >此命令會終結任何現有的叢集資源。
@@ -112,14 +112,14 @@ sudo systemctl enable pacemaker
 1. 建立叢集。 
 
    >[!WARNING]
-   >由於已知的問題，調查，從叢集的廠商叢集 ('電腦叢集 start') 失敗，發生下列錯誤。 這是因為 /etc/corosync/corosync.conf 便會建立叢集的 [設定] 命令執行，問題中的記錄檔設定。 若要解決此問題，請將變更的記錄檔： /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
+   >由於叢集廠商正在調查的已知問題，啟動叢集 ('pcs cluster start') 會失敗並出現下列錯誤。 這是因為 /etc/corosync/corosync.conf 中所設的記錄檔 (在執行叢集設定命令時建立) 有誤所致。 若要解決此問題，請將記錄檔變更為 /var/log/corosync/corosync.log。 或者，您可以建立 /var/log/cluster/corosync.log 檔案。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-下列命令會建立三個節點叢集。 執行指令碼之前，請取代 `< ... >` 之間的值。 在主要節點上執行下列命令。 
+下列命令會建立三個節點的叢集。 執行指令碼之前，請取代 `< ... >` 之間的值。 在主要節點上執行下列命令。 
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
@@ -134,43 +134,43 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>設定隔離 (STONITH)
 
-Pacemaker 叢集廠商需要啟用 STONITH 和隔離裝置設定為支援的叢集安裝程式。 當叢集資源管理員無法判斷狀態的節點或節點上的資源時，隔離會用於再一次將叢集設為已知狀態。 資源層級隔離主要是確保所設定的資源會發生中斷時的任何資料損毀。 您可以使用資源層級的隔離，比方說，使用 DRBD （分散式複寫區塊裝置） 將標示為已過期時的節點上的磁碟通訊連結中斷。 節點層級隔離可確保節點不會執行任何資源。 這是藉由重設節點和它的 Pacemaker 實作稱為 STONITH （這代表 「 限定標頭中的另一個節點 」）。 Pacemaker 支援許多隔離裝置，例如不斷電供應系統或管理介面卡的伺服器。 如需詳細資訊，請參閱 < [Pacemaker 叢集從頭](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)和[隔離和 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
+Pacemaker 叢集廠商必須啟用 STONITH，並針對支援的叢集設定設好隔離裝置。 當叢集資源管理員無法判斷節點或節點上的資源狀態時，即會使用隔離功能讓叢集再次進入已知狀態。 資源層級隔離主要可透過設定資源，確保在發生中斷時不會有資料損毀。 舉例來說，您可以搭配使用資源層級隔離與 DRBD (分散式複寫區塊裝置)，將節點上的磁碟標示為在通訊連結中斷時過期。 節點層級隔離可確保節點不會執行任何資源。 這是藉由重設節點來完成，且其 Pacemaker 的實作名稱為 STONITH ("shoot the other node in the head" 的簡稱)。 Pacemaker 支援各種隔離裝置，例如不斷電系統或伺服器的管理介面卡。 如需詳細資訊，請參閱 [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) (從頭開始使用 Pacemaker 叢集) 和 [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) (隔離與 Stonith) 
 
-因為節點層級的隔離設定大量取決於您環境中，我們停用它 （它可以設定時間較晚） 在此教學課程。 在主要節點上執行下列指令碼： 
+由於節點層級隔離設定主要取決於您的環境，所以我們會在本教學課程中將其停用 (可在稍後設定)。 在主要節點上執行下列指令碼： 
 
 ```bash
 sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->停用 STONITH 是只基於測試目的。 如果您打算在生產環境中使用 Pacemaker 時，您應該規劃 STONITH 實作，根據您的環境，並將它保持啟用。 請注意，此時沒有隔離代理程式的任何雲端環境 （包括 Azure） 或 HYPER-V。 因此，叢集供應商不提供支援在這些環境中執行生產叢集。 
+>停用 STONITH 只是為了測試用途。 如果您打算在生產環境中使用 Pacemaker，則應該根據您的環境規劃 STONITH 實作，並讓它保持啟用狀態。 請注意，目前沒有任何雲端環境 (包括 Azure) 或 Hyper-V 的隔離代理程式。 因此，叢集廠商並不支援在這些環境中執行生產叢集。 
 
-## <a name="set-cluster-property-cluster-recheck-interval"></a>設定叢集屬性叢集重新檢查間隔
+## <a name="set-cluster-property-cluster-recheck-interval"></a>設定 cluster-recheck-interval 叢集屬性
 
-`cluster-recheck-interval` 指示輪詢間隔的叢集檢查有變更的資源參數、 條件約束或其他叢集的選項。 如果複本停止運作時，叢集會嘗試重新啟動的時間間隔繫結的複本`failure-timeout`值和`cluster-recheck-interval`值。 例如，如果`failure-timeout`設定為 60 秒和`cluster-recheck-interval`設為 120 秒，超過 60 秒，但不超過 120 秒的間隔嘗試重新啟動。 我們建議您將失敗逾時設定為 60 秒和叢集重新檢查-間隔大於 60 秒的值。 建議您不要將叢集重新檢查間隔設定為較小的值。
+`cluster-recheck-interval` 表示輪詢間隔；叢集會依此間隔檢查資源參數、限制式或其他叢集選項中的變更。 如果複本中斷，叢集會嘗試以 `failure-timeout` 值和 `cluster-recheck-interval` 值所界定的間隔重新啟動複本。 例如，如果 `failure-timeout` 設為 60 秒，而 `cluster-recheck-interval` 設為 120 秒，則會以大於 60 秒但小於 120 秒的間隔嘗試重新啟動。 建議您將 failure-timeout 設為 60 秒，並將 cluster-recheck-interval 設為大於 60 秒的值。 不建議將 cluster-recheck-interval 設為較小的值。
 
-若要將屬性值更新為`2 minutes`執行：
+若要將屬性值更新為 `2 minutes`，請執行：
 
 ```bash
 sudo pcs property set cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> 如果您已經有由 Pacemaker 叢集管理可用性群組資源，請注意，使用最新可用 Pacemaker 封裝 1.1.18-11.el7 的所有發行版本導入開始失敗-時-嚴重的叢集設定時的行為變更其值為 false。 這項變更會影響容錯移轉工作流程。 如果主要複本發生中斷，叢集應該容錯移轉至其中一個可用的次要複本。 相反地，使用者會發現叢集會嘗試啟動失敗的主要複本。 如果該主要永遠不會上線 （因為永久中斷），叢集絕不會容錯移轉至另一個可用的次要複本。 由於這項變更，先前建議的設定，來設定開始失敗-時-嚴重不再有效，且必須還原回其預設值是設定`true`。 此外，必須更新以包含 AG 資源`failover-timeout`屬性。 
+> 如果您已具備由 Pacemaker 叢集管理的可用性群組資源，請注意，所有使用最新可用 Pacemaker 套件 1.1.18-11.el7 的發行版本，其在 start-failure-is-fatal 叢集設定值為 false 時的行為有所變更。 這種變更會影響容錯移轉工作流程。 如果主要複本發生中斷，則叢集應該要容錯移轉至其中一個可用的次要複本。 但是，使用者卻發現叢集繼續嘗試啟動失敗的主要複本。 如果該主要複本永遠無法上線 (因為永久中斷)，則叢集永遠不會容錯移轉至其他可用的次要複本。 此變更導致先前建議作為 start-failure-is-fatal 的設定不再有效，且必須將此設定還原回其預設值 `true`。 此外，您必須更新 AG 資源以包含 `failover-timeout` 屬性。 
 >
->若要將屬性值更新為`true`執行：
+>若要將屬性值更新為 `true`，請執行：
 >
 >```bash
 >sudo pcs property set start-failure-is-fatal=true
 >```
 >
->更新您現有的 AG 資源屬性`failure-timeout`要`60s`執行 (取代`ag1`您可用性群組資源的名稱):
+>將您現有的 AG 資源屬性 `failure-timeout` 更新為 `60s` 回合 (將 `ag1` 取代為您的可用性群組資源名稱)：
 >
 >```bash
 >pcs resource update ag1 meta failure-timeout=60s
 >```
 
-## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>安裝 Pacemaker 整合的 SQL Server 資源代理程式
+## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>安裝 SQL Server 資源代理程式以與 Pacemaker 整合
 
 在所有節點上執行下列命令。 
 
@@ -184,7 +184,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>建立可用性群組資源
 
-若要建立可用性群組資源，請使用`pcs resource create`命令，並設定資源屬性。 下列命令會建立`ocf:mssql:ag`主要/附屬類型名稱的可用性群組的資源`ag1`。 
+若要建立可用性群組資源，請使用 `pcs resource create` 命令，並設定資源屬性。 下列命令會針對名為 `ag1` 的可用性群組建立 `ocf:mssql:ag` 主要/從屬類型資源。 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
@@ -195,46 +195,46 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 
 ## <a name="create-virtual-ip-resource"></a>建立虛擬 IP 資源
 
-若要建立的虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用網路中可用的靜態 IP 位址。 執行指令碼之前，請將之間的值取代`< ... >`具備有效的 IP 位址。
+若要建立虛擬 IP 位址資源，請在一個節點上執行下列命令。 使用網路中可用的靜態 IP 位址。 執行指令碼之前，請以有效 IP 位址取代 `< ... >` 之間的值。
 
 ```bash
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
-沒有 Pacemaker 中的對等的虛擬伺服器名稱。 若要使用的連接字串指向字串伺服器名稱，未使用的 IP 位址，請在 DNS 中登錄的資源的 IP 位址和所需的虛擬伺服器名稱。 DR 組態中，註冊所需的虛擬伺服器名稱和 IP 位址與主要和 DR 站台上的 DNS 伺服器。
+Pacemaker 中沒有對等的虛擬伺服器名稱。 若要使用指向字串伺服器名稱的連接字串，而不使用 IP 位址，請在 DNS 中註冊 IP 資源位址和所需的虛擬伺服器名稱。 針對 DR 設定，請在主要和 DR 網站上，向 DNS 伺服器註冊所需的虛擬伺服器名稱和 IP 位址。
 
-## <a name="add-colocation-constraint"></a>加入共置條件約束
+## <a name="add-colocation-constraint"></a>新增共置限制式
 
-在 Pacemaker 叢集中，例如選擇應在何處資源執行，幾乎每個決策是藉由比較分數。 分數會計算每個資源，和 「 叢集資源管理員會選擇具有最高分數的特定資源的節點。 （如果節點的資源負分數，該節點上即無法執行資源）。您可以使用條件約束來設定叢集的決策。 條件約束有分數。 如果條件約束的分數低於無限大，則僅供建議。 分數無限大的表示是必要的。 若要確保主要複本和虛擬 ip 資源位於相同的主機，定義分數為無限大的共置條件約束。 若要新增的共置條件約束，請在一個節點上執行下列命令。 
+在 Pacemaker 叢集中，幾乎每個決策都是藉由比較分數來完成，例如，選擇應執行資源的位置。 分數是針對每個資源計算得來的，而叢集資源管理員會選擇對特定資源具有最高分數的節點 (如果節點對於某資源的分數為負值，此資源就無法在該節點上執行)。使用限制式來設定叢集的決策。 限制式具有分數。 如果限制式的分數低於 INFINITY，則系統僅會將其視為建議。 INFINITY 分數表示它是必要項目。 若要確保該主要複本和虛擬 IP 資源都位於相同主機，請使用 INFINITY 分數定義共置限制式。 若要新增共置限制式，請在一個節點上執行下列命令。 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
 ```
 
-## <a name="add-ordering-constraint"></a>加入排序條件約束
+## <a name="add-ordering-constraint"></a>新增排序限制式
 
-共置條件約束有隱含的排序條件約束。 將可用性群組資源之前，它會移動虛擬 IP 資源。 根據預設事件的順序為：
+共置限制式具有隱含的排序限制式。 它會先移動虛擬 IP 資源，再移動可用性群組資源。 根據預設，事件的順序如下：
 
-1. 使用者問題`pcs resource move`至可用性群組主要複本從 node1 到 node2。
+1. 使用者會從 node1 到 node2 對可用性群組主要複本發出 `pcs resource move`。
 1. 虛擬 IP 資源會在 node1 上停止。
-1. 在 node2 上，啟動的虛擬 IP 資源。
+1. 虛擬 IP 資源會在 node2 上啟動。
 
    >[!NOTE]
-   >此時，IP 位址暫時點到 node2 而 node2 仍是在容錯移轉之前次要。 
+   >此時，IP 位址會暫時指向 node2，而 node2 仍是容錯移轉前的次要複本。 
    
-1. 主要在 node1 上的可用性群組會降級為次要。
-1. 在 node2 上的次要可用性群組會提升為主要。 
+1. node1 上的可用性群組主要複本會降級為次要複本。
+1. node2 上的可用性群組次要複本會升級為主要複本。 
 
-若要避免暫時指向與容錯移轉前次要節點的 IP 位址，請加入排序條件約束。 
+為了防止 IP 位址暫時指向含容錯移轉前次要複本的節點，請新增排序限制式。 
 
-若要加入排序條件約束，請在一個節點上執行下列命令：
+若要新增排序限制式，請在一個節點上執行下列命令：
 
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
 ```
 
 >[!IMPORTANT]
->在設定叢集，並新增為叢集資源的可用性群組之後，您無法使用 TRANSACT-SQL 來容錯移轉可用性群組資源。 在 Linux 上的 SQL Server 叢集資源未結合緊密與作業系統和它們在 Windows Server 容錯移轉叢集 (WSFC)。 SQL Server 服務並不知道叢集的目前狀態。 所有的協調流程是透過叢集管理工具。 在 RHEL 或 Ubuntu 使用`pcs`。 
+>當您設定叢集並將可用性群組新增為叢集資源之後，就無法使用 Transact-SQL 來容錯移轉可用性群組資源。 Linux 上的 SQL Server 叢集資源不會與作業系統緊密結合，因為其位於 Windows Server 容錯移轉叢集 (WSFC) 上。 SQL Server 服務不知道叢集是否存在。 所有協調流程都會透過叢集管理工具來完成。 在 RHEL 或 Ubuntu 中，請使用 `pcs`。 
 
 <!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 

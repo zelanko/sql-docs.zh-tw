@@ -1,7 +1,7 @@
 ---
-title: Linux 上的 SQL Server 的 active Directory 驗證
+title: 適用於 Linux 上 SQL Server 的 Active Directory 驗證
 titleSuffix: SQL Server
-description: 這篇文章會提供在 Linux 上的 SQL Server 中的 Active Directory 驗證的概觀。
+description: 本文提供適用於 Linux 上 SQL Server 的 Active Directory 驗證概觀。
 ms.date: 04/01/2019
 author: Dylan-MSFT
 ms.author: dygray
@@ -12,47 +12,47 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67834417"
 ---
-# <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 active Directory 驗證
+# <a name="active-directory-authentication-for-sql-server-on-linux"></a>適用於 Linux 上 SQL Server 的 Active Directory 驗證
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-這篇文章提供的 Active Directory (AD) 驗證概觀[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 上。 AD 驗證，也就是在整合式的驗證[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 
+本文提供適用於 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Active Directory (AD) 驗證概觀。 AD 驗證在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 又稱為整合式驗證。 
 
 ## <a name="ad-authentication-overview"></a>AD 驗證概觀
 
-AD 驗證可讓已加入網域的 Windows 或 Linux 上驗證的用戶端[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用其網域認證和 Kerberos 通訊協定。
+AD 驗證可讓 Windows 或 Linux 上加入網域的用戶端，使用其網域認證和 Kerberos 通訊協定向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 進行驗證。
 
-AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證：
+AD 驗證與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證相較下具有下列優點：
 
-- 使用者驗證透過單一登入，而不提示輸入密碼。   
-- 藉由建立 AD 群組的登入，您可以管理存取和權限在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 群組成員資格。  
-- 每個使用者會有組織的單一身分識別讓您不必追蹤其中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入對應到哪些人。   
-- AD 可讓您強制執行組織的集中式的密碼原則。   
+- 使用者會透過單一登入進行驗證，而不是在出現輸入密碼的提示下進行驗證。   
+- 藉由建立 AD 群組的登入，您就能夠以 AD 群組成員資格，管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的存取和權限。  
+- 每位使用者在整個組織內只有一個身分識別，因此您不需要追蹤哪個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入對應到哪個人員。   
+- AD 可讓您在整個組織內實行集中式密碼原則。   
 
 ## <a name="configuration-steps"></a>組態步驟
 
-若要使用 Active Directory 驗證，您必須在網路上有 AD 網域控制站 (Windows)。
+若要使用 Active Directory 驗證，您的網路上必須有 AD 網域控制站 (Windows)。
 
-如何設定 AD 驗證的詳細資料中的教學課程中，提供[教學課程：Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。 下列清單提供摘要，以包含每個區段的連結，在本教學課程：
+如需如何設定 AD 驗證的詳細資訊，請參閱[教學課程：在 Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。 下列清單提供連結至教學課程中每一節的摘要：
 
-1. [加入 Active Directory 網域的 SQL Server 主機](sql-server-linux-active-directory-join-domain.md)。
-1. [適用於 SQL Server 中建立 AD 使用者和設定 ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser)。
-1. [設定 SQL Server 服務 keytab](sql-server-linux-active-directory-authentication.md#configurekeytab)。
-1. [安全 keytab 檔案](sql-server-linux-active-directory-authentication.md#securekeytab)。
-1. [設定 SQL Server 以使用 keytab 檔案進行 Kerberos 驗證](sql-server-linux-active-directory-authentication.md#keytabkerberos)。
-1. [在 TRANSACT-SQL 中建立 AD 為基礎的 SQL Server 登入](sql-server-linux-active-directory-authentication.md#createsqllogins)。
-1. [連接到 SQL Server 使用 AD 驗證](sql-server-linux-active-directory-authentication.md#connect)。
+1. [將 SQL Server 主機加入 Active Directory 網域](sql-server-linux-active-directory-join-domain.md)。
+1. [建立 SQL Server 的 AD 使用者並設定 ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser)。
+1. [設定 SQL Server 服務 Keytab](sql-server-linux-active-directory-authentication.md#configurekeytab)。
+1. [保護 Keytab 檔案](sql-server-linux-active-directory-authentication.md#securekeytab)。
+1. [設定 SQL Server 以使用 Keytab 檔案進行 Kerberos 驗證](sql-server-linux-active-directory-authentication.md#keytabkerberos)。
+1. [在 Transact-SQL 中建立以 AD 為基礎的 SQL Server 登入](sql-server-linux-active-directory-authentication.md#createsqllogins)。
+1. [使用 AD 驗證連線到 SQL Server](sql-server-linux-active-directory-authentication.md#connect)。
 
 ## <a name="known-issues"></a>已知問題
 
-- 此時，資料庫鏡像端點支援的唯一驗證方法是憑證。 在未來版本中，將會啟用 WINDOWS 驗證方法。
+- 目前，資料庫鏡像端點唯一支援的驗證方法是 CERTIFICATE。 未來的版本將啟用 WINDOWS 驗證方法。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>Next Steps
 
-如需有關如何在 Linux 上實作適用於 SQL Server 的 Active Directory 驗證的詳細資訊，請參閱[教學課程：Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。
+如需如何對 Linux 上的 SQL Server 實作 Active Directory 驗證的詳細資訊，請參閱[教學課程：在 Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。
