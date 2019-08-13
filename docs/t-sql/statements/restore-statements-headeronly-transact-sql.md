@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b0ee348ec2492ac54c1d8da57dfa95701dd42507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082517"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742976"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -71,12 +71,14 @@ FROM <backup_device>
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
-  
+> [!NOTE] 
+> URL 是用來指定 Microsoft Azure Blob 儲存體位置和檔案名稱的格式，從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始支援。 雖然 Microsoft Azure 儲存體是一項服務，但其實作方式類似於磁碟和磁帶，以便為這三種裝置提供一致且順暢的還原體驗。
+
 ## <a name="arguments"></a>引數  
  如需 RESTORE HEADERONLY 引數的描述，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
@@ -84,7 +86,7 @@ FROM <backup_device>
  對於給定裝置中的每個備份，伺服器都會傳送一個含有下列資料行的標頭資訊資料列：  
   
 > [!NOTE]
->  RESTORE HEADERONLY 會查看媒體中的所有備份組。 因此，當使用高容量磁帶機時，產生這個結果集可能需要一些時間。 若要快速瀏覽媒體，而不需要取得每個備份組的相關資訊，請使用 RESTORE LABELONLY 或指定 FILE **=** _backup_set_file_number_。  
+>  RESTORE HEADERONLY 會查看媒體中的所有備份組。 因此，當使用高容量磁帶機時，產生這個結果集可能需要一些時間。 若要快速瀏覽媒體，而不需要取得每個備份組的相關資訊，請使用 RESTORE LABELONLY 或指定 FILE **=** _backup_set_file_number_ 。  
 > 
 > [!NOTE]
 >  由於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 本質的緣故，來自其他軟體程式的備份組有可能佔用與 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份組相同媒體上的空間。 RESTORE HEADERONLY 傳回的結果集會針對每個這些其他備份組，各包括一個資料列。  
@@ -149,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至目前的版本)。<br /><br /> 使用的加密程式類型：憑證或非對稱金鑰。 備份未加密時，這個值會是 NULL。|  
   
 > [!NOTE]  
->  如果定義了備份組的密碼，RESTORE HEADERONLY 只會顯示密碼符合命令指定的 PASSWORD 選項的備份組。 另外，RESTORE HEADERONLY 也只會顯示未受保護之備份組的完整資訊。 媒體上其他受密碼保護之備份組的 **BackupName** 資料行會設為 ' **_Password Protected_** '，所有其他資料行則為 NULL。  
+>  如果定義了備份組的密碼，RESTORE HEADERONLY 只會顯示密碼符合命令指定的 PASSWORD 選項的備份組。 另外，RESTORE HEADERONLY 也只會顯示未受保護之備份組的完整資訊。 媒體上其他受密碼保護之備份組的 **BackupName** 資料行會設為 ' ** _** '，所有其他資料行則為 NULL。  
   
 ## <a name="general-remarks"></a>一般備註  
  用戶端可以利用 RESTORE HEADERONLY 來擷取特定備份裝置上的所有備份之所有備份標頭資訊。 對於備份裝置中的每個備份，伺服器會將標頭資訊當做一個資料列來傳送。  

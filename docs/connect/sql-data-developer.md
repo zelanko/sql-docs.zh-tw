@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cfd79f0cd7470ea94be1c77e5bc27016531909ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265388"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893914"
 ---
 # <a name="sql-data-developer"></a>SQL 資料開發人員
 使用 Microsoft 的 SQL 資料平臺, 在適用于網頁伺服器、企業伺服器和雲端的行動裝置和桌上型電腦上建立以資料為中心的解決方案。  
@@ -40,7 +40,7 @@ ms.locfileid: "68265388"
 * [Sqlxml 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): 使用 sqlxml 4.0 將關聯式資料匯出至 XML。
 
 ## <a name="data-collection-processing-and-visualization"></a>資料收集、處理和視覺效果
-* [Analysis Services (英文)](../analysis-services/analysis-services-developer-documentation.md)
+* [Analysis Services (英文)](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [複寫服務](../relational-databases/replication/concepts/replication-developer-documentation.md)

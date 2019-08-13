@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7808af6be2759b618ec0c57fb9ebb6e97f3b3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048170"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809768"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -702,7 +702,7 @@ INSERT INTO t1 VALUES (1, 0);
 - 不能在相同的陳述式中同時利用與舊版本相容的語法和新語法來指定選項。 例如，指定 WITH (**DROP_EXISTING, ONLINE = ON**) 會造成陳述式失敗。
 - 當您建立 XML 索引時，必須搭配 WITH ( **_option_name_= ON | OFF**) 來指定選項。
 
-## <a name="dropexisting-clause"></a>DROP_EXISTING 子句
+## <a name="drop_existing-clause"></a>DROP_EXISTING 子句
 您可以利用 DROP_EXISTING 子句來重建索引、加入或卸除資料行、修改選項、修改資料行排序次序，或變更分割區配置或檔案群組。
 
 如果索引強制執行 PRIMARY KEY 或 UNIQUE 條件約束，且索引定義完全沒有變更，則會卸除索引並重新建立索引以保留現有的條件約束。 不過，如果索引定義變更了，陳述式就會失敗。 若要變更 PRIMARY KEY 或 UNIQUE 條件約束的定義，請卸除該條件約束，然後利用新的定義來新增條件約束。
@@ -829,7 +829,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```
 
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. 在另一個資料庫的資料表上建立索引
-下列範例會在 `Purchasing` 資料庫中 `ProductVendor` 資料表的 `VendorID` 資料行上建立非叢集索引。
+下列範例會在 `Purchasing` 資料庫中 `ProductVendor` 資料表的 `VendorID` 資料行上建立叢集索引。
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);
@@ -873,7 +873,7 @@ Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
 
-### <a name="f-use-the-ignoredupkey-option"></a>F. 使用 IGNORE_DUP_KEY 選項
+### <a name="f-use-the-ignore_dup_key-option"></a>F. 使用 IGNORE_DUP_KEY 選項
 下列範例分別利用兩種不同的選項設定 (先將選項設為 `IGNORE_DUP_KEY`，再將選項設為 `ON`) 將多個資料列插入暫存資料表中，示範 `OFF` 選項的效果。 單一資料列會插入 `#Test` 資料表中，該資料表則會在第二個多重資料列 `INSERT` 陳述式執行時刻意造成重複的值。 資料表中的資料列計數會傳回所插入的資料列數目。
 
 ```sql
@@ -934,7 +934,7 @@ Number of rows
 
 請注意，即便 `Production.UnitMeasure` 資料表只有一個資料列違反 `UNIQUE` 索引條件約束，皆會導致資料表中所有的資料列無法插入資料表。
 
-### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. 使用 DROP_EXISTING 卸除及重新建立索引
+### <a name="g-using-drop_existing-to-drop-and-re-create-an-index"></a>G. 使用 DROP_EXISTING 卸除及重新建立索引
 下列範例會利用 `ProductID` 選項，在 `Production.WorkOrder` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的 `DROP_EXISTING` 資料行上卸除及重新建立現有的索引。 也會設定 `FILLFACTOR` 和 `PAD_INDEX` 選項。
 
 ```sql
@@ -1109,8 +1109,8 @@ ALTER INDEX test_idx on test_table RESUME
 ALTER INDEX test_idx on test_table ABORT
 ```
 
-### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. 在目前資料庫的資料表上建立非叢集索引
-下列範例會在 `ProductVendor` 資料表的 `VendorID` 資料行上建立非叢集索引。
+### <a name="o-create-a-nonclustered-index-on-a-table-in-the-current-database"></a>O. 在目前資料庫的資料表上建立非叢集索引
+下列範例會在 `VendorID`資料表的 `ProductVendor` 資料行上建立非叢集索引。
 
 ```sql
 CREATE INDEX IX_ProductVendor_VendorID
@@ -1118,7 +1118,7 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```
 
 ### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. 在另一個資料庫的資料表上建立叢集索引
-下列範例會在 `Purchasing` 資料庫中 `ProductVendor` 資料表的 `VendorID` 資料行上建立非叢集索引。
+下列範例會在 `VendorID` 資料庫中 `ProductVendor` 資料表的 `Purchasing` 資料行上建立非叢集索引。
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID

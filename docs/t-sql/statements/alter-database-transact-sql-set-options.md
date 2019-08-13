@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065725"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495454"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -53,7 +53,7 @@ ms.locfileid: "68065725"
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |**\* _SQL Server \*_ ** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -769,7 +769,10 @@ OFF
 SIZE_BASED_CLEANUP_MODE 的類型為 **nvarchar**。
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-指定目前使用中的查詢擷取模式。
+指定目前使用中的查詢擷取模式。 每個模式都會定義特定的查詢擷取原則。
+
+> [!NOTE]
+> 當查詢擷取模式被設定為 ALL、AUTO 或 CUSTOM 時，一律都會擷取資料指標、預存程序中的查詢，以及原生編譯的查詢。
 
 ALL         
 擷取所有的查詢。 ALL 是預設設定值。 這是預設設定值，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始。
@@ -1044,7 +1047,7 @@ OFF
 > [!IMPORTANT]
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，ANSI_PADDING 一律為 ON，而且明確將此選項設定為 OFF 的應用程式將會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您一律將 ANSI_PADDING 設為 ON。 當您建立或操作計算資料行索引或索引檢視表時，ANSI_PADDING 也必須是 ON。
 
-當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行一律會填補到資料行的長度。
+當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char( _)** 和 **binary( _)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char( _)** 和 **binary( _)** 資料行一律會填補到資料行的長度。
 
 利用 SET 陳述式來設定的連接層級設定會覆寫 ANSI_PADDING 的預設資料庫層級設定。 根據預設，ODBC 和 OLE DB 用戶端會發出連線層級的 SET 陳述式，將工作階段的 ANSI_PADDING 設定為 ON。 當您連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，用戶端會執行此陳述式。 如需詳細資訊，請參閱 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -1232,7 +1235,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>B. 將資料庫設為 READ_ONLY
+### <a name="b-setting-the-database-to-read_only"></a>B. 將資料庫設為 READ_ONLY
 
 將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `SINGLE_USER` 模式來取得獨佔存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。
 
@@ -1395,7 +1398,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1936,7 +1939,7 @@ OFF
 > [!IMPORTANT]
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，ANSI_PADDING 一律為 ON，而且明確將此選項設定為 OFF 的應用程式將會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您一律將 ANSI_PADDING 設為 ON。 當您建立或操作計算資料行索引或索引檢視表時，ANSI_PADDING 也必須是 ON。
 
-當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行一律會填補到資料行的長度。
+當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char( _)** 和 **binary( _)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char( _)** 和 **binary( _)** 資料行一律會填補到資料行的長度。
 
   利用 SET 陳述式來設定的連接層級設定會覆寫 ANSI_PADDING 的預設資料庫層級設定。 根據預設，ODBC 和 OLE DB 用戶端會發出連線層級的 SET 陳述式，將工作階段的 ANSI_PADDING 設定為 ON。 當您連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，用戶端會執行此陳述式。 如需詳細資訊，請參閱 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -2083,7 +2086,7 @@ NO_WAIT
 
 ## <a name="examples"></a>範例
 
-### <a name="a-setting-the-database-to-readonly"></a>A. 將資料庫設為 READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. 將資料庫設為 READ_ONLY
 將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `RESTRICTED_USER` 模式來限制存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。
 
 ```sql
@@ -2186,7 +2189,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />受控執行個體 \*_** &nbsp;||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _** &nbsp;||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2669,7 +2672,7 @@ OFF
 > [!IMPORTANT]
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，ANSI_PADDING 一律為 ON，而且明確將此選項設定為 OFF 的應用程式將會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您一律將 ANSI_PADDING 設為 ON。 當您建立或操作計算資料行索引或索引檢視表時，ANSI_PADDING 也必須是 ON。
 
-當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行一律會填補到資料行的長度。
+當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char( _)** 和 **binary( _)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char( _)** 和 **binary( _)** 資料行一律會填補到資料行的長度。
 
   利用 SET 陳述式來設定的連接層級設定會覆寫 ANSI_PADDING 的預設資料庫層級設定。 根據預設，ODBC 和 OLE DB 用戶端會發出連線層級的 SET 陳述式，將工作階段的 ANSI_PADDING 設定為 ON。 當您連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，用戶端會執行此陳述式。 如需詳細資訊，請參閱 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -2789,7 +2792,7 @@ NO_WAIT
 
 ## <a name="examples"></a>範例
 
-### <a name="a-setting-the-database-to-readonly"></a>A. 將資料庫設為 READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. 將資料庫設為 READ_ONLY
 將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `RESTRICTED_USER` 模式來限制存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。
 
 ```sql
@@ -2890,7 +2893,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _** &nbsp;||||
 
 &nbsp;
 
