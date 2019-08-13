@@ -1,7 +1,7 @@
 ---
 title: 從安裝精靈安裝 SQL Server 2016 (安裝程式) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,20 +14,20 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9608e61108ad6f13c14816a35f06ca578e55d192
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419267"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742910"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-此文章說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
+本文說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
 
-此文章提供的逐步程序，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新執行個體。 安裝精靈會提供單一功能樹狀目錄以供安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，所以您不必個別安裝它們。 如需個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
+本文提供的逐步程序，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新執行個體。 安裝精靈會提供單一功能樹狀目錄以供安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，所以您不必個別安裝它們。 如需個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
 
 如需其他安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的方式，請參閱：  
 
@@ -41,7 +41,7 @@ ms.locfileid: "68419267"
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，請檢閱[規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)。  
   
@@ -88,7 +88,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 
     當您選取功能名稱之後，每一個元件群組的描述就會出現在 [功能描述]  窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)或 [SQL Server 2017 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2017.md)。
   
-     [選取之功能的必要元件]  窗格會顯示選取功能的必要元件。 安裝程式會在本程序稍後說明的安裝步驟期間，安裝尚未安裝的先決條件。  
+     [選取之功能的必要元件]  窗格會顯示選取功能的必要元件。 安裝程式會在本程序稍後說明的安裝步驟期間，安裝尚未安裝的必要條件。  
   
      您也可以使用 [特徵選取]  頁面底部的欄位來指定共用元件的自訂目錄。 若要變更共用元件的安裝路徑，請在對話方塊底部的欄位中更新路徑，或選取 [瀏覽]  移至安裝目錄。 預設安裝路徑是 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]。  
   
@@ -202,7 +202,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. [準備安裝]  頁面會顯示您在安裝期間指定的安裝選項樹狀檢視。 在此頁面上，安裝程式會指出**產品更新**功能為啟用或停用，以及最後的更新版本。  
   
-     選取 [安裝]  繼續作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的先決條件，再安裝所選功能。  
+     選取 [安裝]  繼續作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的必要條件，再安裝所選功能。  
   
 1. 在安裝期間，[安裝進度]  頁面會更新狀態，讓您可以在安裝程式進行時監視安裝進度。  
   
@@ -250,7 +250,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 
     當您選取功能名稱之後，每一個元件群組的描述就會出現在 [功能描述]  窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2016.md)或 [SQL Server 2017 的版本和元件](../../sql-server/editions-and-components-of-sql-server-2017.md)。
   
-     [選取之功能的必要元件]  窗格會顯示選取功能的必要元件。 安裝程式會在本程序稍後說明的安裝步驟期間，安裝尚未安裝的先決條件。  
+     [選取之功能的必要元件]  窗格會顯示選取功能的必要元件。 安裝程式會在本程序稍後說明的安裝步驟期間，安裝尚未安裝的必要條件。  
   
      您也可以使用 [特徵選取]  頁面底部的欄位來指定共用元件的自訂目錄。 若要變更共用元件的安裝路徑，請在對話方塊底部的欄位中更新路徑，或選取 [瀏覽]  移至安裝目錄。 預設安裝路徑是 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]。  
   
@@ -280,9 +280,9 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
      其餘的安裝工作流程會因您對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。 
 
-1. 選擇安裝 PolyBase 功能會將 [PolyBase 組態]  頁面新增至 SQL Server 安裝程式，並顯示在 [執行個體組態]  頁面之後。 PolyBase 需要 Oracle JRE 7 Update 51 (至少)，如果尚未安裝此項目，從 SQL Server 2019 開始您可以隨 Azul Zulu Open JRE 一起安裝 SQL Server。 在 [PolyBase 組態]  頁面上，您可以選擇使用 SQL Server 作為已啟用 PolyBase 的獨立執行個體，您也可以使用此 SQL Server 作為 PolyBase 向外延展群組的一部分。 如果您選擇使用向外延展群組，您將會需要指定 6 個連接埠以上的連接埠範圍。  在 [Java 安裝位置]  頁面上，您可以選擇安裝隨附於 SQL Server 2019 安裝的 Azul Zulu Open JRE，或提供已安裝在電腦上的其他 JRE 或 JDK 位置。
+1. 從 SQL Server 2019 開始，Polybase 就不再要求在安裝此功能之前必須先在電腦上預先安裝 Oracle JRE 7 Update 51 (至少)。 選擇安裝 PolyBase 功能會將 [Java 安裝位置]  頁面新增至 SQL Server 安裝程式，並顯示在 [執行個體組態]  頁面之後。 在 [Java 安裝位置] 頁面上，您可以選擇安裝包含於 SQL Server 2019 安裝的 Azul Zulu Open JRE，或提供電腦上已安裝的其他 JRE 或 JDK 位置。
 
-1. 從 SQL Server 2019 開始，Java 已新增至機器學習服務和語言擴充功能的清單，與 R 和 Python 並列。 選擇安裝 Java 功能會將 [Java 安裝位置]  頁面新增至 SQL Server 安裝程式對話方塊視窗，並顯示在 [執行個體組態]  頁面之後。 在 [Java 安裝位置]  頁面上，您可以選擇安裝包含於 SQL Server 2019 安裝的 Azul Zulu Open JRE，或提供已安裝在電腦上的其他 JRE 或 JDK 位置。
+1. 從 SQL Server 2019 開始，已透過語言擴充功能新增 Java。 選擇安裝 Java 功能會將 [Java 安裝位置]  頁面新增至 SQL Server 安裝程式對話方塊視窗，並顯示在 [執行個體組態]  頁面之後。 在 [Java 安裝位置]  頁面上，您可以選擇安裝包含於 SQL Server 2019 安裝的 Zulu Open JRE，或提供電腦上已安裝的其他 JRE 或 JDK 位置。
 
 1. 使用 [伺服器設定 - 服務帳戶]  頁面指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的登入帳戶。 您在此頁面上設定的實際服務會隨您選取安裝的功能而不同。 如需組態設定的詳細資訊，請參閱[安裝精靈說明](../../sql-server/install/instance-configuration.md#serverconfig)。
   
@@ -369,7 +369,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. [準備安裝]  頁面會顯示您在安裝期間指定的安裝選項樹狀檢視。 在此頁面上，安裝程式會指出**產品更新**功能為啟用或停用，以及最後的更新版本。  
   
-     選取 [安裝]  繼續作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的先決條件，再安裝所選功能。  
+     選取 [安裝]  繼續作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的必要條件，再安裝所選功能。  
   
 1. 在安裝期間，[安裝進度]  頁面會更新狀態，讓您可以在安裝程式進行時監視安裝進度。  
   

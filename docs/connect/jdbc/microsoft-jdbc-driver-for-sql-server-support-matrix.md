@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 支援對照表 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 464ecdb79ee3a143deccec703438e35217503e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.openlocfilehash: 04d7fe419c8639d9f14c3c3795a1007d947c3998
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956331"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893248"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支援對照表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,6 +32,7 @@ ms.locfileid: "67956331"
   
 |驅動程式名稱|驅動程式套件版本|適用的 JAR|主要支援結束日期|
 |-|-|-|-|  
+|Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-6.4.0.jre8.jar 7.4.1. jre12 .jar<br> mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-7.2.2.jre11.jar .jar<br> mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-6.2.2.jre8.jar .jar|2024年8月2日|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|2024 年 4 月 16 日|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31 日|  
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 2 月 27 日|    
@@ -53,11 +55,12 @@ ms.locfileid: "67956331"
   
 ## <a name="sql-version-compatibility"></a>SQL 的版本相容性  
   
-|驅動程式版本|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL 受控執行個體 (延伸個人預覽版)|  
-|-|-|-|-|-|-|-|-|-|-|
-|7.2|N|Y|Y|Y|Y|Y|Y|Y|Y|  
-|7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
-|6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
+|驅動程式版本|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|-|-|-|-|-|-|-|-|-|-|-|
+|7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
+|7.2|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|7.0|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|6.4|N|Y|Y|Y|Y|Y|Y|Y|N| 
 |6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
 |6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
 |6.0|Y|Y|Y|Y|Y|Y|Y|N|N|
@@ -85,6 +88,7 @@ ms.locfileid: "67956331"
   
 |JDBC 驅動程式版本|JRE 版本|JDBC API 版本| 
 |-|-|-|  
+|7.4|1.8、11、12|4.2、4.3 (部份)|
 |7.2|1.8、11|4.2、4.3 (部份)|
 |7.0|1.8、10|4.2、4.3 (部份)|
 |6.4|1.7、1.8、9|4.1、4.2、4.3 (部份)|  
@@ -107,6 +111,6 @@ ms.locfileid: "67956331"
  JDBC 產品小組在 Windows、Sun Solaris、SUSE Linux 及 RedHat Linux 上測試過我們的驅動程式。  所有平台的客戶皆可享有客戶支援服務，但我們可能會要求您在平台 (例如 Windows) 上重現問題。  
   
 ## <a name="application-server-support"></a>應用程式伺服器支援  
- Microsoft JDBC Driver for SQL Server 已在各種應用程式伺服器上經過測試。  如需產品相容之驅動程式版本的詳細資訊，請洽詢您的應用程式伺服器廠商。  
-  
-  
+ Microsoft JDBC Driver for SQL Server 已在各種應用程式伺服器上經過測試。  如需產品相容之驅動程式版本的詳細資訊，請洽詢您的應用程式伺服器廠商。
+ 
+ 

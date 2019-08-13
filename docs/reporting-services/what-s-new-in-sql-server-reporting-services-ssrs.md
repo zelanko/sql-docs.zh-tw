@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: d7755f15e78f29814eee93557286736b849c96c6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264587"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893520"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
@@ -26,7 +26,7 @@ ms.locfileid: "68264587"
 
 如需 Power BI 報表伺服器的資訊，請參閱[什麼是 Power BI 報表伺服器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
 
-**下載** ![download](../analysis-services/media/download.png "download")
+**下載** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 請前往 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)** 下載 SQL Server 2017 Reporting Services。
 
@@ -34,7 +34,7 @@ ms.locfileid: "68264587"
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 Preview Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services 不適用於 CTP 3.1。 安裝目前的版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services 不適用於 CTP 3.2。 安裝目前的版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -161,7 +161,7 @@ iPad 和 iPhone 上適用於 iOS 的 Power BI 行動裝置應用程式現在可�
 2. 選取要將項目釘選至的儀表板。
 3. 選取您儀表板更新磚的頻率。
 
-![注意](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")：重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。
+![注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")：重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 

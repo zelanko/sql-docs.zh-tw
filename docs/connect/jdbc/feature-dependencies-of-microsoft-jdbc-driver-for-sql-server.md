@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 的功能相依性 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1bf49c4264b89b6a47f083eec3654a757c1dce6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26395c7a925906e7b27d4e47098164019e56f31d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956599"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893957"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能相依性
 
@@ -26,11 +26,11 @@ ms.locfileid: "67956599"
 ## <a name="compile-time"></a>編譯時間
 
  - `com.microsoft.azure:azure-keyvault`：適用於 Always Encrypted Azure Key Vault 功能的 Azure Key Vault Provider (選擇性)
- - `com.microsoft.azure:azure-keyvault-webkey`：適用於 Always Encrypted Azure Key Vault 功能的 Azure Key Vault Provider (選擇性)
  - `com.microsoft.azure:adal4j`：適用於 Azure Active Directory 驗證功能和 Azure Key Vault 功能的適用於 Java 的 Azure Active Directory 程式庫 (選擇性)
  - `com.microsoft.rest:client-runtime`：適用於 Azure Active Directory 驗證功能和 Azure Key Vault 功能的適用於 Java 的 Azure Active Directory 程式庫 (選擇性)
-- `org.osgi:org.osgi.core`：適用於 OSGi Framework 支援的 OSGi Core 程式庫。
-- `org.osgi:org.osgi.compendium`：適用於 OSGi Framework 支援的 OSGi Compendium 程式庫。
+ - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly 功能 (選擇性)
+ - `org.osgi:org.osgi.core`：適用於 OSGi Framework 支援的 OSGi Core 程式庫。
+ - `org.osgi:org.osgi.compendium`：適用於 OSGi Framework 支援的 OSGi Compendium 程式庫。
 
 ## <a name="test-time"></a>測試時間
 
@@ -42,20 +42,20 @@ ms.locfileid: "67956599"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.2.jre11</version>
+    <version>7.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.3</version>
+    <version>1.6.4</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.6.5</version>
+    <version>1.6.10</version>
 </dependency>
 ```
 
@@ -65,32 +65,26 @@ ms.locfileid: "67956599"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.2.jre11</version>
+    <version>7.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.3</version>
+    <version>1.6.4</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.6.5</version>
+    <version>1.6.10</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.2.0</version>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure-keyvault-webkey</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
@@ -98,6 +92,7 @@ ms.locfileid: "67956599"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>使用 Azure Key Vault Provider：
 
+- JDBC Driver 7.4.1 版 - 相依性版本：Azure-Keyvault (1.2.1 版)、 Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.6.10) 及其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC Driver 7.2.2 版 - 相依性版本：Azure-Keyvault (1.2.0 版)、Azure-Keyvault-Webkey (1.2.0 版)、 Adal4j (1.6.3 版)、Client-Runtime-for-AutoRest (1.6.5) 及其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC Driver 7.0.0 版 - 相依性版本：Azure-Keyvault (1.0.0 版)、Adal4j (1.6.0 版) 及其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC Driver 6.4.0 版 - 相依性版本：Azure-Keyvault (1.0.0 版)、Adal4j (1.4.0 版) 及其相依性 ([範例應用程式](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
@@ -107,10 +102,11 @@ ms.locfileid: "67956599"
 > [!NOTE]
 > 透過 6.2.2 和 6.4.0 驅動程式版本，已將 azure-keyvault-java 相依性更新為 1.0.0 版。 不過，新版本與先前版本 (0.9.7) 不相容，並且會中斷驅動程式中現有的實作。 驅動程式中的新實作需要 API 變更，接著會中斷使用 Azure Key Vault Provider 的用戶端程式。
 >
-> 此問題已透過最新的驅動程式版本 (7.0.0) 來解決。 使用驗證回呼機制的已移除建構函式會加回 Azure Key Vault Provider，以提供回溯相容性。
+> 此問題已透過最新的驅動程式版本 (7.0.0 及後續版本) 解決。 使用驗證回呼機制的已移除建構函式會加回 Azure Key Vault Provider，以提供回溯相容性。
 
 ### <a name="working-with-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證：
 
+- JDBC Driver 7.4.1 版 - 相依性版本：Adal4j (1.6.4 版)、Client-Runtime-for-AutoRest (1.6.10) 及其相依性
 - JDBC Driver 7.2.2 版 - 相依性版本：Adal4j (1.6.3 版)、Client-Runtime-for-AutoRest (1.6.5) 及其相依性
 - JDBC Driver 7.0.0 版 - 相依性版本：Adal4j (1.6.0 版) 及其相依性
 - JDBC Driver 6.4.0 版 - 相依性版本：Adal4j (1.4.0 版) 及其相依性

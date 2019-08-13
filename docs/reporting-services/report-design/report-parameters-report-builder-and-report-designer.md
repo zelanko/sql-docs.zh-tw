@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ef5664ab93b5e293dd176a91da83284cc2b72743
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463601"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941143"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
 
@@ -75,13 +75,13 @@ ms.locfileid: "67463601"
   
 1. **參數窗格** ：報表檢視器工具列會顯示每個參數的提示和預設值。 您可以在參數窗格中自訂參數的配置。 如需詳細資訊，請參閱 [自訂報表中的參數窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中建立的行動報表。  
   
-2. **@SalesDate 參數** @SalesDate 參數的資料類型為 **DateTime**。 文字方塊旁會顯示 [選取日期] 提示。 若要修改日期，請在文字方塊中輸入新日期，或是使用行事曆控制項。  
+2. **\@SalesDate 參數**：參數 @SalesDate 的資料類型為 **DateTime**。 文字方塊旁會顯示 [選取日期] 提示。 若要修改日期，請在文字方塊中輸入新日期，或是使用行事曆控制項。  
   
-3. **@ShowAll 參數** @ShowAll 參數的資料類型為 **Boolean**。 使用選項按鈕可指定 **True** 或 **False**。  
+3. **\@ShowAll 參數**：@ShowAll 參數的資料類型為 **Boolean**。 使用選項按鈕可指定 **True** 或 **False**。  
   
 4. **顯示或隱藏參數區域控點** ：在報表檢視器工具列上，按一下此箭頭可顯示或隱藏參數窗格。  
   
-5. **@CategoryQuota 參數** @CategoryQuota 參數的資料類型為 **Float**，因此接受數值。  @CategoryQuota 設為允許多個值。  
+5. **\@CategoryQuota 參數**：@CategoryQuota 參數的資料類型為 **Float**，因此接受數值。  @CategoryQuota 設為允許多個值。  
   
 6. **檢視報表**：輸入參數值之後，您可以按一下 [檢視報表]  以執行報表。 如果所有參數都有預設值，則報表會在第一次檢視時自動執行。  
   

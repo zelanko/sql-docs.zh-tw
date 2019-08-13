@@ -3,46 +3,48 @@ title: 如何在 Linux 上設定 MSDTC
 description: 此文章提供在 Linux 上設定 MSDTC 的逐步解說。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/21/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077614"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892521"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上設定 Microsoft Distributed Transaction Coordinator (MSDTC)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-此文章說明如何在 Linux 上設定 Microsoft Distributed Transaction Coordinator (MSDTC)。 在 SQL Server 2019 預覽版中引進了 Linux 上的 MSDTC 支援。
+此文章說明如何在 Linux 上設定 Microsoft 分散式交易協調器 (MSDTC)。
+
+> [!NOTE]
+> 從累積更新 16 開始，SQL Server 2019 Preview SQL Server 2017 就支援 Linux 上的 MSDTC。
 
 ## <a name="overview"></a>概觀
 
 在 Linux 上的 SQL Server 啟用分散式交易時，會藉由在 SQL Server 內導入 MSDTC 和 RPC 端點對應程式功能來啟用。 根據預設，RPC 端點對應程序會在連接埠 135 上接聽傳入的 RPC 要求，並向遠端要求提供已註冊的元件資訊。 遠端要求可以使用端點對應程式傳回的資訊來與已註冊的 RPC 元件 (例如 MSDTC 服務) 進行通訊。 程序必須要有超級使用者權限，才能繫結至 Linux 上的已知連接埠 (小於 1024 的連接埠)。 為了避免以根權限啟動 SQL Server 來進行 RPC 端點對應程式程序，系統管理員必須使用 iptables 來建立「網路位址轉譯」，以將連接埠 135 上的流量路由傳送至 SQL Server 的 RPC 端點對應程序。
 
-SQL Server 2019 針對 mssql-conf 公用程式導入兩個設定參數。
+MSDTC 針對 mssql-conf 公用程式使用兩個設定參數：
 
 | mssql-conf 設定 | 描述 |
 |---|---|
 | **network.rpcport** | RPC 端點對應程式所繫結的 TCP 連接埠。 |
 | **distributedtransaction.servertcpport** | MSDTC 伺服器所接聽的連接埠。 如果未設定，MSDTC 服務會在服務重新啟動時使用隨機的暫時連接埠，且防火牆例外將必須重新設定，以確保 MSDTC 服務可以繼續進行通訊。 |
 
-如需有關這些設定及其他相關 MSDTC 設定的詳細資訊，請參閱[使用 mssql-conf 工具設定 Linux 上的 SQL Server](sql-server-linux-configure-mssql-conf.md#msdtc)。
+如需有關這些設定及其他相關 MSDTC 設定的詳細資訊，請參閱[使用 mssql-conf 工具設定 Linux 上的 SQL Server](sql-server-linux-configure-mssql-conf.md)。
 
 ## <a name="supported-msdtc-configurations"></a>支援的 MSDTC 設定
 
 以下是支援的 MSDTC 設定：
 
 - 適用於 ODBC 提供者之針對 Linux 上 SQL Server 的 OLE-TX 分散式交易。
-- 使用 JDBC 和 ODBC 提供者之針對 Linux 上 SQL Server 的 XA 分散式交易。 針對要使用 ODBC 提供者來執行的 XA 交易，您必須使用 Microsoft ODBC Driver for SQL Server 17.3 版或更新版本。
-- 連結伺服器上的分散式交易。
 
-如需了解預覽版中 MSDTC 的限制和已知問題，請參閱 [Linux 上的 SQL Server 2019 預覽版本資訊](sql-server-linux-release-notes-2019.md#msdtc)。
+- 使用 JDBC 和 ODBC 提供者之針對 Linux 上 SQL Server 的 XA 分散式交易。 針對要使用 ODBC 提供者來執行的 XA 交易，您必須使用 Microsoft ODBC Driver for SQL Server 17.3 版或更新版本。 如需詳細資訊，請參閱[了解 XA 交易](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions)。
+
+- 連結伺服器上的分散式交易。
 
 ## <a name="msdtc-configuration-steps"></a>MSDTC 設定步驟
 
@@ -184,9 +186,24 @@ Linux 上 SQL Server 的 MSDTC 預設不會在 RPC 通訊上使用驗證。 不�
 
 | 設定 | 描述 |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | 針對分散式交易設定僅限安全的 RPC 呼叫。 |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | 針對分散式交易設定僅限安全性的 RPC 呼叫。 |
-| **distributedtransaction.turnoffrpcsecurity**               | 針對分散式交易啟用或停用 RPC 安全性。 |
+| **distributedtransaction.allowonlysecurerpccalls**          | 針對分散式交易設定僅限安全的 RPC 呼叫。 預設值為 0。 |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | 針對分散式交易設定僅限安全性的 RPC 呼叫。 預設值為 0。 |
+| **distributedtransaction.turnoffrpcsecurity**               | 針對分散式交易啟用或停用 RPC 安全性。 預設值為 0。 |
+
+## <a name="additional-guidance"></a>其他指導方針
+
+### <a name="active-directory"></a>Active Directory
+
+如果 SQL Server 已註冊到 Active Directory (AD) 設定，Microsoft 建議在已啟用 RPC 的情況下使用 MSDTC。 如果 SQL Server 設定為使用 AD 驗證。則 MSDTC 預設會使用相互驗證 RPC 安全性。
+
+### <a name="windows-and-linux"></a>Windows 與 Linux
+
+如果 Windows 作業系統上的用戶端需要使用 Linux 上的 SQL Server 登錄到分散式交易，它必須具有下列最低版本的 Windows 作業系統：
+
+| 作業系統 | 最低版本 | OS 組建 |
+|---|---|---|
+| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>後續步驟
 

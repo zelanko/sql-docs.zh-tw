@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132773"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809717"
 ---
 # <a name="dta-utility"></a>dta 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ dta -d AdventureWorks2012 ...
  指定應為新建議考量篩選的索引。 如需詳細資訊，請參閱 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
 **-fc**  
- 指定新建議需要考量的資料行存放區索引。 DTA 會考慮叢集和非叢集資料行存放區索引。 如需相關資訊，請參閱    
+ 指定新建議需要考量的資料行存放區索引。 DTA 會同時考量叢集和非叢集資料行存放區索引。 如需相關資訊，請參閱    
 [Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。
  ||  
 |-|  

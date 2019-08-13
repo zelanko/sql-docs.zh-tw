@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032285"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810977"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用磁碟叢集
 
@@ -25,7 +25,7 @@ ms.locfileid: "68032285"
 > [!NOTE] 
 > 存取 Red Hat HA 附加元件與文件需要訂用帳戶。 
 
-如下圖所示，會向兩部伺服器提供儲存體。 叢集元件 - Corosync 和 Pacemaker 協調叢集通訊和資源管理。 其中一部伺服器具有針對儲存體資源和 SQL Server 的作用中連線。 當 Pacemaker 偵測到失敗時，叢集元件會負責將資源移至另一個節點。  
+如下圖所示，會向兩部伺服器提供儲存體。 群集元件 (Corosync 和 Pacemaker) 會協調通訊和資源管理。 其中一部伺服器具有針對儲存體資源和 SQL Server 的作用中連線。 當 Pacemaker 偵測到失敗時，群集元件會負責將資源移至另一個節點。  
 
 ![Red Hat Enterprise Linux 7 共用磁碟 SQL 叢集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -38,7 +38,7 @@ ms.locfileid: "68032285"
 
 下列各節將逐步解說設定容錯移轉叢集解決方案的步驟。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 若要完成下列端對端情節，您需要兩部電腦來部署兩個節點叢集，以及另一個伺服器來設定 NFS 伺服器。 以下步驟概述這些伺服器的設定方式。
 
@@ -48,9 +48,9 @@ ms.locfileid: "68032285"
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每個叢集節點上安裝和設定 SQL Server
 
-1. 在這兩個節點上安裝和設定 SQL Server。  如需詳細指示，請參閱[在 Linux 上安裝 SQL Server](sql-server-linux-setup.md)。
+1. 在這兩個節點上安裝和設定 SQL Server。  如需詳細指示，請參閱[安裝 Linux 上的 SQL Server](sql-server-linux-setup.md)。
 
-1. 針對設定的用途，將一個節點指定為 [主要]，另一個指定為 [次要]。 請使用這些字詞來進行本指南。  
+1. 基於設定目的，將一個節點指定為主要，並將另一個指定為次要。 本指南後續將會使用這些字詞。  
 
 1. 在次要節點上，停止並停用 SQL Server。
 
@@ -61,15 +61,15 @@ ms.locfileid: "68032285"
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> 在安裝期間，將為 SQL Server 執行個體產生伺服器主要金鑰，並將其置於 `/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 一律會以名為 mssql 的本機帳戶執行。 因為它是本機帳戶，所以不會在節點之間共用其身分識別。 因此，您需要將加密金鑰從主要節點複製到每個次要節點，讓每個本機 mssql 帳戶可以存取它來解密伺服器主要金鑰。 
+> 在安裝期間，將為 SQL Server 執行個體產生伺服器主要金鑰，並將其置於 `/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 一律會以名為 mssql 的本機帳戶執行。 因為它是本機帳戶，所以不會在節點之間共用其身分識別。 因此，您需要將加密金鑰從主要節點複製到每個次要節點，讓每個本機 mssql 帳戶可以存取它來將伺服器主要金鑰解密。 
 
-1. 在主要節點上，建立 Pacemaker 的 SQL Server 登入，並授與執行 `sp_server_diagnostics` 的登入許可權。 Pacemaker 會使用此帳戶來確認哪個節點正在執行 SQL Server。 
+1. 在主要節點上，建立 Pacemaker 的 SQL Server 登入，並授與該登入執行 `sp_server_diagnostics` 的權限。 Pacemaker 會使用此帳戶來確認哪個節點正在執行 SQL Server。 
 
    ```bash
    sudo systemctl start mssql-server
    ```
 
-   使用 SA 帳戶連接到 SQL Server `master` 資料庫，然後執行下列動作：
+   使用 SA 帳戶連線到 SQL Server `master` 資料庫，然後執行下列動作：
 
    ```bashsql
    USE [master]
@@ -90,7 +90,7 @@ ms.locfileid: "68032285"
    sudo ip addr show
    ```
 
-   在每個節點上設定電腦名稱。 為每個節點指定一個不超過 15 個字元的唯一名稱。 透過將電腦名稱新增至 `/etc/hosts` 來設定電腦名稱。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
+   在每個節點上設定電腦名稱。 為每個節點提供不超過 15 個字元的唯一名稱。 將電腦名稱新增至 `/etc/hosts` 來設定電腦名稱。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
@@ -243,7 +243,7 @@ ms.locfileid: "68032285"
    $ exit
    ``` 
  
-1.  驗證 SQL Server 是否使用新的檔案路徑成功啟動。 請在每個節點上執行此動作。 此時，一次只能有一個節點執行 SQL Server。 它們不能同時執行，因為它們都會同時嘗試存取資料檔案 (以避免不小心地在這兩個節點上啟動 SQL Server，請使用檔案系統叢集資源來確保共用不會由不同的節點裝載兩次)。 下列命令會啟動 SQL Server、檢查狀態，然後停止 SQL Server。
+1.  驗證 SQL Server 是否使用新的檔案路徑成功啟動。 請在每個節點上執行此動作。 此時，一次只能有一個節點執行 SQL Server。 它們不能同時執行，因為它們會嘗試同時存取資料檔案 (為了避免不小心在這兩個節點上啟動 SQL Server，請使用檔案系統叢集資源來確保共用不會由不同的節點掛接兩次)。 下列命令會啟動 SQL Server、檢查狀態，然後停止 SQL Server。
  
    ```bash
    sudo systemctl start mssql-server

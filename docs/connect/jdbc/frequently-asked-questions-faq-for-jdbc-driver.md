@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 常見問題集 (FAQ)| Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 07/31/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 566dfa3fec53878ac565d33af07d405f6f751521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956578"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892368"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver 常見問題集 (FAQ)
 
@@ -35,7 +35,15 @@ JDBC Driver 是開放原始碼，您可以在 [GitHub](https://github.com/micros
 GitHub 存放庫上針對 Microsoft JDBC 驅動程式提供的 JDBC 驅動程式檔案為 JDBC 驅動程式的核心，且屬於存放庫中列出的開放原始碼授權。 Microsoft 下載中心的驅動程式套件包含適用於 Windows 整合式驗證及透過 JDBC 驅動程式啟用 XA 交易的額外程式庫。 那些額外的程式庫均屬於可下載套件隨附的授權。
 
 **升級我的驅動程式前，我應該先知道哪些事？**
-Microsoft JDBC Driver 7.2 支援 JDBC 4.2 與 4.3 (部份) 規格，同時也在安裝套件中包含了下列兩個 JAR 類別庫：
+Microsoft JDBC Driver 7.4 支援 JDBC 4.2 和 4.3 (部份) 規格，同時也在安裝套件中包含了下列三個 JAR 類別庫：
+
+| JAR                        | JDBC 規格            | JDK 版本 |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-6.4.0.jre8.jar 7.4.1. jre12 .jar | JDBC 4.3 (部份) 和 4.2 | JDK 12.0    |
+| mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-7.2.2.jre11.jar .jar | JDBC 4.3 (部份) 和 4.2 | JDK 11.0    |
+| mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-6.2.2.jre8.jar .jar  | JDBC 4.2                      | JDK 8.0     |
+
+ Microsoft JDBC Driver 7.2 支援 JDBC 4.2 與 4.3 (部份) 規格，同時也在安裝套件中包含了下列兩個 JAR 類別庫：
 
 | JAR                        | JDBC 規格            | JDK 版本 |
 | -------------------------- | ----------------------------- | ----------- |
