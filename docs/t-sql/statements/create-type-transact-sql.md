@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc1a51be4f86112623ca433256782369cbca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938941"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809827"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -320,7 +320,7 @@ GO
 ```  
 
 ### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. 使用主索引鍵和索引來建立使用者定義的資料表類型
-以下範例會建立使用者定義的資料表類型，具有三個資料行，且其中一個 (`Name`) 是主索引鍵，另一個 (`Price`) 則是非叢集索引。  如需如何建立及使用資料表值參數的詳細資訊，請參閱[使用資料表值參數 &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。
+以下範例會建立有三個資料行的使用者定義資料表類型，其中一個 (`Name`) 是主索引鍵，另一個 (`Price`) 則是非叢集索引。  如需如何建立及使用資料表值參數的詳細資訊，請參閱[使用資料表值參數 &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。
 
 ```sql
 CREATE TYPE InventoryItem AS TABLE

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661220"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841567"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -168,7 +168,6 @@ SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中
     > [!NOTE]
     > 目前針對使用 binary2 排序次序 (BIN2 定序) 來定序的字元字串資料行支援以上作業。 使用非 BIN2 定序的字元字串資料行，可使用隨機加密和啟用記憶體保護區的資料行加密金鑰來進行加密。 不過，針對這類資料行所啟用的唯一新功能就是就地加密。
 - 使用隨機加密在資料行上建立非叢集索引。
-- 使用包含 LIKE 述詞運算式的計算資料行和使用隨機加密資料行上的比較運算子。
 
 所有其它在[功能詳細資料](always-encrypted-database-engine.md#feature-details)中針對 Always Encrypted (沒有安全記憶體保護區) 所列出的限制 (並未由以上加強內容處理的項目) 也都適用於具備安全記憶體保護區的 Always Encrypted。
 
@@ -182,6 +181,7 @@ SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中
     - char[n]、varchar[n]、binary[n]、varbinary[n]，若 n 大於 7935。
 - 除了變更相同字碼頁中的定序和可 NULL 性外，就地密碼編譯作業無法與資料行中繼資料的任何其它變更合併。 例如，您無法加密、重新加密或解密資料行，同時在單一 ALTER TABLE 或 ALTER COLUMN Transact-SQL 陳述式中變更資料行的資料類型。 請使用兩個個別的陳述式。
 - 不支援對記憶體內部資料表中的資料行使用已啟用記憶體保護區的金鑰。
+- 定義計算資料行的運算式，無法使用隨機化加密，在具備記憶體保護區功能的資料行上，執行任何計算 (即使是類似 LIKE 及範圍比較等計算皆無法)。
 - 若要儲存已啟用記憶體保護區的資料行主要金鑰，唯一支援的金鑰存放區是 Windows 憑證存放區和 Azure Key Vault。
 
 下列限制適用於 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]，但已納入要解決的藍圖中：

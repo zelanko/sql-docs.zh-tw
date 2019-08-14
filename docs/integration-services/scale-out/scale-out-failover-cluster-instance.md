@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1206d81fb146c851f11ececdcc7ae38fe20eb79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064598"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811205"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 透過 SQL Server 容錯移轉叢集執行個體支援高可用性
 
@@ -36,7 +36,7 @@ ms.locfileid: "68064598"
 將次要節點新增至 SQL Server 容錯移轉叢集。
 
 ## <a name="3-install-scale-out-master-on-the-primary-node"></a>3.在主要節點上安裝 Scale Out Master
-使用非叢集安裝的安裝精靈在主要節點上安裝 Integration Services 和 Scale Out Master。 
+使用非叢集安裝的安裝精靈，在主要節點上安裝 Integration Services 和 Scale Out Master。 
 
 在安裝期間，將 SQL Server 網路名稱包含在 Scale Out Master 憑證的 CN 中。
 

@@ -12,12 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a8200ed17e9581f0c39693ee7386f7f33c566265
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 4572651bb90098c9afb3a01c574401356dac6706
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316631"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892304"
 ---
 # <a name="flexible-file-destination"></a>彈性檔案目的地
 
@@ -39,7 +39,7 @@ ms.locfileid: "68316631"
 - **檔案連線管理員類型：** 指定來源連線管理員類型。 然後選擇一個現有的指定類型，或建立新的。
 - **資料夾路徑：** 指定目的地資料夾路徑。
 - **檔案名稱：** 指定目的地檔案名稱。
-- **檔案格式：** 指定目的地檔案格式。 支援的格式為 **Text**、**Avro**、**ORC**、**Parquet**。
+- **檔案格式：** 指定目的地檔案格式。 支援的格式為 **Text**、**Avro**、**ORC**、**Parquet**。 ORC/Parquet 需要 Java。 如需詳細資料，請參閱[這裡](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java)。
 - **資料行分隔符號字元：** 指定要用來作為資料行分隔符號的字元 (不支援多字元分隔符號)。
 - **第一個資料列作為資料行名稱：** 指定是否要將資料行名稱寫入至第一個資料列。
 - **壓縮檔案：** 指定是否要壓縮檔案。
@@ -74,30 +74,3 @@ ms.locfileid: "68316631"
 針對寫入權限，請至少授與**執行**權限 (從接收檔案系統開始)，以及接收資料夾的**寫入**權限。
 或者，使用 RBAC 至少授與**儲存體 Blob 資料參與者**角色。
 如需詳細資料，請參閱[這篇](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)文章。
-
-**ORC/Parquet 檔案格式的必要條件**
-
-需要 Java 才能使用 ORC/Parquet 檔案格式。
-JAVA 組建架構 (32/64 位元) 應該符合所要使用的 SSIS 執行階段架構。
-下列 JAVA 組建已經過測試。
-
-- [Zulu 的 OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle 的 Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-**設定 Zulu 的 OpenJDK**
-
-1. 下載並解壓縮安裝 ZIP 套件。
-2. 從命令提示字元中，執行 `sysdm.cpl`。
-3. 在 [進階]  索引標籤上，選取 [環境變數]  。
-4. 在 [系統變數]  區段底下，選取 [新增]  。
-5. 針對 [變數名稱]  輸入 `JAVA_HOME`。
-6. 選取 [瀏覽目錄]  ，巡覽至解壓縮的資料夾，然後選取 `jre` 子資料夾。
-   然後選取 [確定]  ，系統會自動填入 [變數值]  。
-7. 選取 [確定]  以關閉 [新增系統變數]  對話方塊。
-8. 選取 [確定]  以關閉 [環境變數]  對話方塊。
-9. 選取 [確定]  以關閉 [系統內容]  對話方塊。
-
-**設定 Oracle 的 Java SE Runtime Environment**
-
-1. 下載並執行 exe 安裝程式。
-2. 依照安裝程式指示來完成安裝。

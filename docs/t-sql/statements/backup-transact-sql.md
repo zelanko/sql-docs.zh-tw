@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141223"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809729"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -178,7 +178,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## <a name="arguments"></a>引數
@@ -305,8 +305,10 @@ ENCRYPTION 用來指定備份的加密。 您可以指定加密演算法來加�
 
 如果您選擇加密，則也需要使用加密程式選項指定加密程式：
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+`SERVER CERTIFICATE` 與 `SERVER ASYMMETRIC KEY` 是在資料庫 `master` 中建立的憑證與非對稱金鑰。 如需詳細資訊，請各別參閱 [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) 以及 [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。
 
 > [!WARNING]
 > 搭配 `FILE_SNAPSHOT` 引數使用加密時，中繼資料檔案本身會使用指定的加密演算法進行加密，而系統會確認已針對資料庫完成[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。 對於資料本身則不會進行任何其他加密。 如果未加密資料庫，或者發出備份陳述式之前未完成加密，備份就會失敗。
@@ -1008,8 +1010,8 @@ ENCRYPTION 用來指定備份的加密。 您可以指定加密演算法來加�
 
 如果您選擇加密，則也需要使用加密程式選項指定加密程式：
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **備份組選項**
 

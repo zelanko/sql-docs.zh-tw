@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cdcac17ddc09223d63e7dd923fd561e0a334fc2
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68700051"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941159"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文件導覽指南 
 
@@ -65,7 +65,7 @@ SQL Server 技術文件提供數個 SQL Server 版本及變體的內容。 不�
 
 ![SQL 文件版本篩選](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-請選取 [SQL Server]   > [不隱藏任何內容]  來確保您可以查看所有內容，且版本篩選不會隱藏任何項目。 
+請選取 [所有 SQL]   > [不隱藏任何內容]  可確保您能看見所有內容，同時版本篩選後不會隱藏任何項目。 
 
 ## <a name="breadcrumbs"></a>階層連結
 

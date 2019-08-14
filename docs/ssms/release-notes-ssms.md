@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: c30179ae89bc69e84005a95a4d370acf4b692bd2
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: e499f58eff6c09ac8d32d4cd630afc4c7855c299
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731134"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809861"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -308,7 +308,7 @@ SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 |Azure SQL Database|已修正下列問題：無法將「時態表」新增至 Azure SQL Database。|
 |Azure SQL Database|在 Azure 中的 [統計資料] 功能表下啟用 [統計資料屬性] 子功能表選項，因為到目前為止已完全支援一段時間。|
 |Azure SQL - 一般支援|修正通用 Azure UI 控制項中防止使用者顯示 Azure 訂用帳戶 (若未超過 50 個) 的問題。 此外，排序已變更為依名稱，而不是依訂用帳戶識別碼。 例如，當使用者嘗試從 URL 還原備份時，可能遇到這個問題。|
-|Azure SQL - 一般支援|已修正通用 Azure UI 控制項在列舉訂用帳戶時，使用者在一些租用戶中沒有任何訂用帳戶時，這可能會產生「索引超出範圍。 必須為非負數且小於集合的大小。」 錯誤的問題。 例如，當使用者嘗試從 URL 還原備份時，可能遇到這個問題。|
+|Azure SQL - 一般支援|已修正通用 Azure UI 控制項在列舉訂用帳戶時，使用者在一些租用戶中沒有任何訂用帳戶時，這可能會產生「索引超出範圍。 必須為非負數且小於集合的大小。」 錯誤。 例如，當使用者嘗試從 URL 還原備份時，可能遇到這個問題。|
 |Azure SQL - 一般支援|修正服務等級目標會硬式編碼而導致 SSMS 難以支援較新 Azure SQL SLO 的問題。 現在，使用者可以登入 Azure，且讓 SSMS 擷取所有適用的 SLO 資料 (版本和大小上限)|
 |Azure SQL DB 受控執行個體支援|已改善/完善對受控執行個體的支援：停用 UI 中不支援的選項，並修正 [檢視稽核記錄] 選項來處理 URL 稽核目標。|
 |Azure SQL DB 受控執行個體支援|[產生和發佈指令碼精靈] 會撰寫不受支援的 CREATE DATABASE 子句指令碼。|
@@ -382,7 +382,7 @@ SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 |物件指令碼|修正搭配 MFA 使用 AAD 連線到 Azure SQL DB 時，為資料庫物件編寫指令碼失敗的問題。|
 |物件指令碼|已修正下列問題：嘗試在 Azure SQL DB 上使用 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID 為空間索引編寫指令碼時，擲回錯誤。|
 |物件指令碼|已修正即使 [物件總管] 指令碼設定已設為符合來源，仍會造成 Azure SQL Database 資料庫指令碼一律針對內部部署 SQL 的問題。|
-|物件指令碼|修正嘗試為 SQL DW 資料庫中涉及叢集及非叢集索引的資料表編寫指令碼時，產生不正確 T-SQL 陳述式的問題。|
+|物件指令碼|修正嘗試為 SQL DW 資料庫中涉及叢集及非叢集索引的資料表編寫指令碼時，產生的 T-SQL 陳述式不正確之問題。|
 |物件指令碼|修正嘗試為 SQL DW 資料庫中具有「叢集資料行存放區索引」及「叢集索引」的資料表編寫指令碼時，產生不正確 T-SQL (重複陳述式) 的問題。|
 |物件指令碼|修正沒有範圍值的資料分割資料表指令碼 (SQL DW 資料庫)。|
 |物件指令碼|修正使用者無法為稽核/稽核規格 SERVER_PERMISSION_CHANGE_GROUP 編寫指令碼的問題。|

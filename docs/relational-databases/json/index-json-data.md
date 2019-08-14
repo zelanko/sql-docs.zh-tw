@@ -13,12 +13,12 @@ ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a31be55598d3a3df42a9d5a5fd39832fdbc08754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdea9d1ffd22fdedbfe15b66eb6d9b57f33d1f8
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909290"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809971"
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
   
 ![執行計畫](../../relational-databases/json/media/jsonindexblog1.png "執行計畫")  
   
-SQL Server 會使用索引搜尋非叢集索引，並尋找滿足指定條件的資料列，而不會使用完整資料表掃描。 接著，其會在 `SalesOrderHeader` 資料表中使用索引鍵查詢，以擷取查詢中參考的其他資料行 -  在此範例中為 `SalesOrderNumber` 和 `OrderDate`。  
+SQL Server 會使用索引搜尋非叢集索引，並尋找滿足指定條件的資料列，而不會掃描整個資料表。 接著，其會在 `SalesOrderHeader` 資料表中使用索引鍵查詢，以擷取查詢中參考的其他資料行 -  在此範例中為 `SalesOrderNumber` 和 `OrderDate`。  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>利用內含資料行進一步最佳化索引
 若您在索引中新增必要資料行，則可避免資料表執行此額外查詢作業。 您可新增這些資料行作為標準內含資料行 (如下列範例所示)，以擴充之前的 `CREATE INDEX` 範例。  
@@ -82,7 +82,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-在此情況下，SQL Server 不必讀取來自 `SalesOrderHeader` 資料表的其他資料，這是因為在非叢集 JSON 索引中已包含所有需要的資訊。 此索引類型是在查詢中合併 JSON 與資料行資料，以及針對工作負載建立最佳化索引的理想方法。  
+在此情況下，SQL Server 不必讀取來自 `SalesOrderHeader` 資料表的其他資料，這是因為在非叢集 JSON 索引中，已包含其所需的所有必要資料。 此索引類型是在查詢中合併 JSON 與資料行資料，以及針對工作負載建立最佳化索引的理想方法。  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON 索引是感知定序的索引  
 JSON 資料之索引的重要功能是索引能夠感知定序。 您在建立計算資料行時所使用的 `JSON_VALUE` 函數的結果為文字值，其繼承來自輸入運算式的定序。 因此，在索引中的值會使用來源資料行中定義的定序規則加以排序。  
@@ -135,11 +135,11 @@ FROM JsonCollection
 ORDER BY JSON_VALUE(json,'$.name')
 ```  
   
- 若您查看實際執行計劃，則會發現其使用來自非叢集索引的排序值。  
+ 若您查看實際執行計劃，會發現其使用來自非叢集索引的排序值。  
   
  ![執行計畫](../../relational-databases/json/media/jsonindexblog2.png "執行計畫")  
   
- 雖然查詢具有 `ORDER BY` 子句，但執行計畫不會使用 Sort 運算子。 JSON 索引已根據塞爾維亞文 (斯拉夫) 規則執行排序。 因此，SQL Server 可在已排序的結果中，使用非叢集索引。  
+ 雖然查詢具有 `ORDER BY` 子句，但執行計畫不會使用 Sort 運算子。 JSON 索引已根據塞爾維亞文 (斯拉夫) 規則執行排序。 因此，SQL Server 可在結果已排序的情況下，使用非叢集索引。  
   
  不過，若您變更 `ORDER BY` 運算式的定序 (例如在 `JSON_VALUE` 函式後方新增 `COLLATE French_100_CI_AS_SC`)，則會得到不同的查詢執行計畫。  
   

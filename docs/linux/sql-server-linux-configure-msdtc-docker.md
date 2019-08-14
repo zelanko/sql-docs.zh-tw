@@ -1,19 +1,18 @@
 ---
 title: 如何在 Docker 上搭配 SQL Server 使用分散式交易
-description: 本文說明如何使用 Docker 提供在 Linux 上設定 MSDTC 的逐步解說。
+description: 本文說明如何針對 Docker 上 SQL Server 容器中的分散式交易使用 Microsoft Distributed Transaction Coordinator (MSDTC)。
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/25/2018
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8304bc95a15a5a9cf74ab23bc2e8e47bf7cf72d1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e4d9d52541b6f9c9ca87bcbe4dc1db3c4448725c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476051"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770838"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何在 Docker 上搭配 SQL Server 使用分散式交易
 
@@ -21,7 +20,7 @@ ms.locfileid: "68476051"
 
 本文說明如何在 Docker 上設定 SQL Server Linux 容器以進行分散式交易。
 
-從 SQL Server 2019 Preview 開始，容器應向支援分散式交易所需的 Microsoft 分散式交易協調器 (MSDTC)。 若要了解 MSDTC 的通訊需求，請參閱[如何在 Linux 上設定 Microsoft 分散式交易協調器 (MSDTC)](sql-server-linux-configure-msdtc.md)。 本文說明與 SQL Server Docker 容器相關的特殊需求和案例。
+SQL Server 容器映像可以使用分散式交易所需的 Microsoft Distributed Transaction Coordinator (MSDTC)。 若要了解 MSDTC 的通訊需求，請參閱[如何在 Linux 上設定 Microsoft 分散式交易協調器 (MSDTC)](sql-server-linux-configure-msdtc.md)。 本文說明與 SQL Server Docker 容器相關的特殊需求和案例。
 
 ## <a name="configuration"></a>組態
 
@@ -32,7 +31,32 @@ ms.locfileid: "68476051"
 
 ### <a name="pull-and-run"></a>提取並執行
 
-下列範例示範如何使用這些環境變數來提取並執行針對 MSDTC 所設定的單一 SQL Server 容器。 這可讓其與任何主機上的任何應用程式通訊。
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+下列範例示範如何使用這些環境變數來提取並執行針對 MSDTC 所設定的單一 SQL Server 2017 容器。 這可讓其與任何主機上的任何應用程式通訊。
+
+```bash
+docker run \
+   -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
+   -p 51433:1433 -p 135:135 -p 51000:51000  \
+   -d mcr.microsoft.com/mssql/server:2017-latest
+```
+
+```PowerShell
+docker run `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
+   -p 51433:1433 -p 135:135 -p 51000:51000  `
+   -d mcr.microsoft.com/mssql/server:2017-latest
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+下列範例示範如何使用這些環境變數來提取並執行針對 MSDTC 所設定的單一 SQL Server 2019 預覽容器。 這可讓其與任何主機上的任何應用程式通訊。
 
 ```bash
 docker run \
@@ -41,6 +65,16 @@ docker run \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
    -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
+
+```PowerShell
+docker run `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
+   -p 51433:1433 -p 135:135 -p 51000:51000  `
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+```
+
+::: moniker-end
 
 > [!IMPORTANT]
 > 上一個命令僅適用於在 Linux 上執行的 Docker。 針對 Windows 上的 Docker，Windows 主機已接聽連接埠 135。 您可以移除 Windows 上 Docker 的 `-p 135:135` 參數，但有一些限制。 產生的容器，即無法用於與主機相關的分散式交易，而只能參與主機上 Docker 容器之間的分散式交易。

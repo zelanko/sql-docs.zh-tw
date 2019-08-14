@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 382fd4ab40c574fd1a3d9ce2e972e2c6ea07cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9228530dcf0204987feda98083ba3a16c946093
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071356"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809801"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -657,7 +657,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
 > 不過，從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，並不會在建立或重建資料分割索引之後掃描資料表中所有的資料列建立統計資料。 反之，查詢最佳化工具會使用預設的採樣演算法來產生這些統計資料。 如果要在掃描資料表中所有資料列時取得分割區索引的統計資料，請使用 CREATE STATISTICS 或 UPDATE STATISTICS 搭配 FULLSCAN 子句。  
   
 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有時候您可以重建非叢集索引來更正硬體故障所造成的任何不一致情況。    
-在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，您仍可能離線重建非叢集索引來修復索引和叢集索引之間的這類不一致的情況。 不過，您無法利用線上重建索引的方式來修復非叢集索引不一致的情況，因為線上重建機制會以現有的非叢集索引做為重建基礎而保存不一致的情況。 離線時重建索引可能會導致強制掃描叢集索引 (或堆積)，因而移除不一致的情況。 請卸除並重新建立非叢集索引，以確保從叢集索引中重建。 如果要從不一致的情況中復原，在舊版中，我們建議的方法是從備份中還原受影響的資料，不過，您現在可以利用離線重建非叢集索引的方式來修復索引不一致的情況。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。  
+在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，您仍可能離線重建非叢集索引來修復索引和叢集索引之間的這類不一致的情況。 不過，您無法利用線上重建索引的方式來修復非叢集索引不一致的情況，因為線上重建機制會以現有的非叢集索引做為重建基礎而保存不一致的情況。 離線時重建索引可能會導致強制掃描叢集索引 (或堆積)，因而移除不一致的情況。 請卸除並重新建立非叢集索引，確保會從叢集索引進行重建。 如果要從不一致的情況中復原，在舊版中，我們建議的方法是從備份中還原受影響的資料，不過，您現在可以利用離線重建非叢集索引的方式來修復索引不一致的情況。 如需詳細資訊，請參閱 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。  
   
 為了重建叢集資料行存放區索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會進行以下作業：  
   
@@ -754,7 +754,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
 
  如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
- ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY 與線上索引作業  
+ ### <a name="wait_at_low_priority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY 與線上索引作業  
   
  為了執行線上索引重建的 DDL 陳述式，特定資料表上執行的所有使用中封鎖交易都必須完成。 當線上索引重建執行時，它會封鎖這個資料表上準備開始執行的所有新交易。 雖然線上索引重建的鎖定期間很短，但是等候特定資料表上所有未完成的交易完成並封鎖要開始的新交易，可能會大幅影響輸送量，導致工作負載速度變慢或逾時，並且大幅限制對基礎資料表的存取。 **WAIT_AT_LOW_PRIORITY** 選項可讓 DBA 管理線上索引重建所需的 S 鎖定和 Sch-M 鎖定，並允許它們選取 3 個選項的其中一個。 在這 3 個案例中，如果在等候期間 ( (MAX_DURATION = n [minutes]) ) 沒有封鎖活動，線上索引重建會立即執行而不等候，並且 DDL 陳述式會完成。  
   

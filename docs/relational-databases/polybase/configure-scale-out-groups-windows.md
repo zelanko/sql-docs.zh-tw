@@ -1,5 +1,5 @@
 ---
-title: 改善 Windows 上的 PolyBase 相應放大群組 | Microsoft Docs
+title: 在 Windows 上設定 PolyBase 相應放大群組 | Microsoft Docs
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,14 +8,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: eee05e9c9ba129b660048797dd8894c0d611449e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f34532c2e2a54a457557410a4bc079c4cd4cbc0
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041150"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811319"
 ---
-# <a name="improve-polybase-scale-out-groups-on-windows"></a>改善 Windows 上的 PolyBase 相應放大群組
+# <a name="configure-polybase-scale-out-groups-on-windows"></a>在 Windows 上設定 PolyBase 相應放大群組
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

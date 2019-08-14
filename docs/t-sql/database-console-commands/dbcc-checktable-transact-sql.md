@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: bf9207498575a52c5d9c2c1a6076110260c1f588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7352a7e2db64da959cbefaacee5c9f3d14a8a579
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102017"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809878"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ REPAIR_FAST
  保留語法的目的，只是為了與舊版相容。 不會執行任何修復動作。  
     
 REPAIR_REBUILD  
- 執行不可能造成資料遺失的修復， 這可包括快速修復 (例如，修復非叢集索引中遺失的資料列) 以及更耗時的修復 (例如，重建索引)。  
+ 執行不可能造成資料遺失的修復， 這可包含快速修復 (例如，修復非叢集索引中遺失的資料列) 以及更耗時的修復 (例如，重建索引)。  
  此引數不會修復涉及 FILESTREAM 資料的錯誤。  
     
  > [!NOTE]  

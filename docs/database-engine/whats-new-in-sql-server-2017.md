@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4ee8a779ef486246d5f4dd927acf7c57a1261c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059028"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811278"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>資料庫引擎的新功能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68059028"
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 現在提供圖形資料庫功能來更有意義的關聯性導向資料的模型。 這包含建立節點和邊緣資料表的新 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 語法，以及查詢的 [MATCH](../t-sql/queries/match-sql-graph.md) 關鍵字。 如需詳細資訊，請參閱[圖形處理與 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。   
 - 新一代的查詢處理功能改善會調整最佳化策略，使其符合您應用程式工作負載的執行階段條件。 為了這個第一版**自適性查詢處理**功能家族，我們推出了三項新的功能更新：**批次模式自適性聯結**、**批次模式記憶體授與回饋**，以及適用於多陳述式資料表值函式的**交錯執行**。  請參閱 [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md) (SQL 資料庫中的智慧查詢處理)。
 - 「自動調整」是一種資料庫功能，可深入探索潛在的查詢效能問題、建議解決方法，並且自動修正找到的問題。 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 中的自動調整只要偵測到潛在的效能問題時就會通知您，並可讓您套用矯正措施，或可讓 [!INCLUDE[ssde-md](../includes/ssde-md.md)] 自動修正效能問題。 如需詳細資訊，請參閱[自動微調](../relational-databases/automatic-tuning/automatic-tuning.md)。
-- 記憶體最佳化資料表上非叢集索引建置的效能增強。 資料庫復原期間 MEMORY_OPTIMIZED 資料表的 bwtree (非叢集) 索引建置效能已大幅最佳化。 這項改善可在使用非叢集索引時大幅減少資料庫復原時間。  
+- 記憶體最佳化資料表上非叢集索引建置的效能增強。 資料庫復原期間 MEMORY_OPTIMIZED 資料表的 bwtree (非叢集) 索引重建效能已大幅最佳化。 這項改善可在使用非叢集索引時，能大幅減少資料庫復原時間。  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 有三個新的資料行：socket_count、cores_per_socket、numa_node_count。 這在您於 VM 中執行伺服器的情況下很有用處，因為超出 NUMA 可能會造成過度認可的主機，並於最終轉變成效能問題。
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中引進新的資料行 modified_extent_page_count\,，以追蹤資料庫之每個資料庫檔案中的差異變更。 新的資料行 modified_extent_page_count 可讓您建置智慧型備份解決方案，以在資料庫中的百分比變更頁面低於臨界值 (即 70-80%) 時執行差異備份，否則請執行完整資料庫備份。
 - SELECT INTO ...ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) 現在使用 SELECT INTO TSQL 語法中所新增的 **ON** 關鍵字支援，來支援將資料表載入使用者預設檔案群組以外的檔案群組。

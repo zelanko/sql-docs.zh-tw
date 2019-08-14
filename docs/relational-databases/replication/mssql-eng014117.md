@@ -13,14 +13,14 @@ ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 80db67dfc2c921a2c44371532ba851e0f3e5865f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2d6a7318c8d45da6c6c029dcacc315fdd1b36460
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766722"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809967"
 ---
-# <a name="mssqleng014117"></a>MSSQL_ENG014117
+# <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
@@ -54,7 +54,7 @@ ms.locfileid: "68766722"
   
      10.193.17.129 inst1  
   
--   停用散發，註冊執行個體，然後重新建立散發。 如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，請依循下列步驟：  
+-   停用散發，註冊執行個體，然後重新建立散發。 如果 @@SERVERNAME 的值對非叢集執行個體並不正確，請遵循下列步驟進行：  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

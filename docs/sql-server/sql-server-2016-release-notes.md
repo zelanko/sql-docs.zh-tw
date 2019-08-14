@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9a62e627e372a7c280e0187a33accc9563da91c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a0bc3d50808c25999f1791a752e069bc02bed0d
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136514"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811557"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ SQL Server SP1 Standard、Web、Express 和 Local DB 版本提供下列功能 (�
 
 |功能|Description|詳細資訊|
 |---|---|---|
-|在 TF 715 下，使用自動 TABLOCK 大量插入堆積| 追蹤旗標 715 可啟用資料表鎖定，以大量載入作業到不含非叢集索引的堆積。|[將 SAP 工作負載移轉至 SQL Server 的速度加快 2.5 倍](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|在 TF 715 下，使用自動 TABLOCK 大量插入堆積| 追蹤旗標 715 可啟用資料表鎖定，以將作業大量載入到不含非叢集索引的堆積。|[將 SAP 工作負載移轉至 SQL Server 的速度加快 2.5 倍](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE 或 ALTER|部署預存程序、觸發程序、使用者定義的函式和檢視等物件。|[SQL Server 資料庫引擎部落格](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |支援複寫的 DROP TABLE|支援複寫的 DROP TABLE，可卸除複寫發行項。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Filestream RsFx 驅動程式簽署|Filestream RsFx 驅動程式經過 Windows 硬體開發人員中心儀表板入口網站 (Dev Portal) 簽署與認證，可確保在 Windows Server 2016/Windows 10 上安裝 SQL Server 2016 SP1 Filestream RsFx 驅動程式時不會發生任何問題。|[將 SAP 工作負載移轉至 SQL Server 的速度加快 2.5 倍](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|

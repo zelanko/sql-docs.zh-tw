@@ -1,6 +1,6 @@
 ---
 title: SQL Server 文件集 | Microsoft Docs
-ms.date: 08/02/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 824036a79897302411ec1a7026351832269511b3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 311e4819751fe9a398643e2005bd8480c781ee9f
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771597"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941158"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
 
@@ -111,7 +111,7 @@ SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#prev
 |![SQL 資料庫引擎](../sql-server/media/sql-database-engine.png "SQL 資料庫引擎")|**[Database Engine](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> Database Engine 是用於儲存、處理和保護資料的核心服務。 它提供受控制的存取和快速交易處理，可滿足您企業內部最嚴苛的資料取用應用程式需求。 Database Engine 還提供豐富的支援以維持高可用性。|
 |![機器學習服務](../sql-server/media/r-server.png "R 伺服器")|**[機器學習服務](../advanced-analytics/index.yml)**<br /><br /> 機器學習服務可讓您使用關聯式資料來執行 Python 和 R 指令碼。 您可以使用開放原始碼和 Microsoft 套件來進行預測性分析和機器學習。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是一個平台，用於建立高效能資料整合方案，包括提供資料倉儲之擷取、轉換和載入 (ETL) 處理的封裝。|
-|![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] 是一套適用於個人、團隊和企業商業智慧的分析資料平台與工具組。 伺服器和用戶端設計工具支援傳統的 OLAP 方案、新的表格式模型方案，以及使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel 和 SharePoint Server 環境的自助式分析與共同作業。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 也包含資料採礦，讓您能夠發現隱藏在大量資料內部的模式和關聯性。|    
+|![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] 是一套適用於個人、團隊和企業商業智慧的分析資料平台與工具組。 伺服器和用戶端設計工具支援傳統的 OLAP 方案、新的表格式模型方案，以及使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel 和 SharePoint Server 環境的自助式分析與共同作業。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 也包含資料採礦，讓您能夠發現隱藏在大量資料內部的模式和關聯性。|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services 提供啟用 Web 的企業級報告功能。  您可以建立從各種資料來源取得內容的報表、以各種格式發行報表，以及集中管理安全性和訂閱。|
 |![複寫服務](../sql-server/media/replication-services.png "複寫服務")|**[複寫](../relational-databases/replication/sql-server-replication.md)**<br /><br /> 複寫是一組技術，用於將資料和資料庫物件從某個資料庫複製和散發到另一個資料庫，然後在兩個資料庫之間進行同步處理以維護一致性。 使用複寫，您可以透過區域網路、廣域網路、撥號連接、無線連接及網際網路，將資料散發到不同的位置以及遠端或行動使用者。|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) 提供您知識驅動的資料清理方案。 DQS 可讓您建立知識庫，然後使用該知識庫透過電腦輔助及互動式方法，對您的資料執行資料更正及刪除重複資料。 您可以使用雲端式參考資料服務，也可以建立資料管理方案，將 DQS 與 SQL Server Integration Services 和 Master Data Services 進行整合。|
@@ -124,7 +124,7 @@ SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#prev
 - [使用 SQL Server 匯入和匯出精靈來匯入和匯出資料](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [將 SQL Server Database 移轉至 Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
-- [Azure 移轉旅程 - 評估、移轉、最佳化](https://azure.microsoft.com/migration/)]
+- [Azure 移轉旅程圖 - 評定、移轉、最佳化](https://azure.microsoft.com/migration/)
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -150,6 +150,12 @@ SQL Server 2014 及包括 SQL Server 2005 的較舊版本，可在[此處](#prev
 ## <a name="previous-versions-gm66"></a> SQL Server 2014、2012、2008、2005 之前的版本
 
 [!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
+## <a name="versioning-control-for-sql-documentation"></a>SQL 文件的版本控制
+
+此 :::no-loc text="Docs"::: 網頁上的_版本控制_位於目錄之上。 如需如何使用版本控制的詳細資訊及其確實的運作方式，請參閱：
+
+- [SQL 文件的版本控制系統](../toc/versioning-system-monikers-ui-sql-server.md)
 
 <!--
 The following includes/ files contain their own H2 headers.

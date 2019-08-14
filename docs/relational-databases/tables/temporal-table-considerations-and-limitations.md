@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db6c9b111ae8448b0b4873fc9478712c57739346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2da0a78e8bc8486832ff878e3ee96e0bf16e9496
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999460"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811354"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "67999460"
   
 -   一般查詢只會影響目前資料表中的資料。 若要查詢歷程記錄資料表中的資料，您必須使用時態查詢。 我們會在本文件後面的＜查詢時態資料＞一節中加以詳述。  
   
--   最佳的索引策略，是在目前的資料表上加入叢集資料行存放區索引和/或 B 型樹狀結構資料列存放區索引，以及在歷程記錄資料表上加入叢集資料行存放區索引，藉以取得最佳儲存大小和效能。 若您建立 / 使用專屬的歷程記錄資料表，強烈建議您建立由期間資料行組成的索引類型，其會以期間資料行結尾開頭來加速 時態查詢，並可加速屬於資料一致性檢查作業的查詢。 預設的歷程記錄資料表已根據期間資料行 (結尾、開頭)，為您建立叢集資料列存放區索引。 至少建議您使用非叢集資料列存放區索引。  
+-   最佳的索引策略，是在目前的資料表上加入叢集資料行存放區索引和/或 B 型樹狀結構資料列存放區索引，以及在歷程記錄資料表上加入叢集資料行存放區索引，藉以取得最佳儲存大小和效能。 若您建立 / 使用專屬的歷程記錄資料表，強烈建議您建立由期間資料行組成的索引類型，其會以期間資料行結尾開頭來加速 時態查詢，並可加速屬於資料一致性檢查作業的查詢。 預設的歷程記錄資料表已根據期間資料行 (結尾、開頭)，為您建立叢集資料列存放區索引。 建議您至少使用非叢集資料列存放區索引。  
   
 -   建立歷程記錄資料表時，下列物件/屬性不會從目前資料表複寫至歷程記錄資料表  
   

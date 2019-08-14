@@ -12,19 +12,19 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d0dd253eb161c842a2edbdcad73edd41114d73cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039067"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809847"
 ---
-# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+# <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 顯示在特定的 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 計算節點或控制節點上執行之查詢的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行計劃。 在計算節點或控制節點上執行查詢時，此命令可用來對查詢效能問題進行疑難排解。
   
-一旦了解計算節點上執行之 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢的查詢效能問題，有許多方法可以改善。 可改善計算節點上之查詢效能的可能方法包括建立多重資料行統計資料、建立非叢集索引或使用查詢提示。
+一旦了解計算節點上執行之 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢的查詢效能問題，有許多方法可以改善。 可改善計算節點上查詢效能的可能方法，包括建立多重資料行統計資料、建立非叢集索引，或使用查詢提示。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,7 +59,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN 基本語法  
+### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN 基本語法  
  在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 執行個體上執行時，請修改上述查詢以同時選取 distribution_id。  
   
 ```sql
@@ -76,7 +76,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN 基本語法  
+### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN 基本語法  
  執行太久的查詢是執行 DMS 查詢計劃作業或 SQL 查詢計劃作業的查詢。  
   
 如果查詢執行的是 DMS 查詢計劃作業，您可以使用下列查詢來擷取未完成之步驟的節點識別碼和工作階段識別碼清單。

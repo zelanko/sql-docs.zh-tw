@@ -12,12 +12,12 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2965fea796efac9a337580ee32c9de53c976320
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940645"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811138"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>進度報表：線上索引作業事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67940645"
 |EndTime|**datetime**|線上索引作業完成的時間。|15|是|  
 |EventClass|**int**|事件類別 = 190。|27|否|  
 |EventSequence|**int**|要求中的給定事件順序。|51|否|  
-|EventSubClass|**int**|事件子類別的類型。<br /><br /> 1=開始<br /><br /> 2=階段 1 執行開始<br /><br /> 3=階段 1 執行結束<br /><br /> 4=階段 2 執行開始<br /><br /> 5=階段 2 執行結束<br /><br /> 6=插入的資料列計數<br /><br /> 7=完成<br /><br /> 階段 1 指的是基底物件 (叢集索引或堆積)，或者索引作業是否只包含一個非叢集索引。 當索引建立作業牽涉到原始重建加上額外的非叢集索引時，便會使用階段 2。  例如，若物件擁有一個叢集索引和數個非叢集索引，'rebuild all' 會重建所有索引。 基底物件 (叢集索引) 會在階段 1 重建，然後所有非叢集索引會在階段 2 重建。|21|是|  
+|EventSubClass|**int**|事件子類別的類型。<br /><br /> 1=開始<br /><br /> 2=階段 1 執行開始<br /><br /> 3=階段 1 執行結束<br /><br /> 4=階段 2 執行開始<br /><br /> 5=階段 2 執行結束<br /><br /> 6=插入的資料列計數<br /><br /> 7=完成<br /><br /> 階段 1 指的是基底物件 (叢集索引或堆積)，或者索引作業只包含一個非叢集索引。 當索引建置作業涉及原始重建加上額外的非叢集索引時，便會使用階段 2。  例如，若物件擁有一個叢集索引和數個非叢集索引，'rebuild all' 會重建所有索引。 階段 1 會重建基底物件 (叢集索引)，然後階段 2 會重建所有非叢集索引。|21|是|  
 |GroupID|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|**nvarchar**|執行用戶端的電腦名稱。 如果用戶端提供主機名稱，這個資料行就會擴展。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IndexID|**int**|事件所影響之物件的索引識別碼。|24|是|  

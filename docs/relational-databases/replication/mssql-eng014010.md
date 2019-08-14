@@ -13,14 +13,14 @@ ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d436de75229f7327b36c1dfc8bb8287d85b71d76
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5a8592dc8108a2dc1cd3c0832e5c4f6cb6635a8f
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767256"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811467"
 ---
-# <a name="mssqleng014010"></a>MSSQL_ENG014010
+# <a name="mssql_eng014010"></a>MSSQL_ENG014010
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
@@ -48,7 +48,7 @@ ms.locfileid: "68767256"
   
      10.193.17.129 inst1  
   
--   移除複寫，註冊每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後重新建立複寫。 如果 @@SERVERNAME 的值不是正確的非叢集執行個體值，請依循下列步驟：  
+-   移除複寫，註冊每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後重新建立複寫。 如果 @@SERVERNAME 的值對非叢集執行個體並不正確，請遵循下列步驟進行：  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

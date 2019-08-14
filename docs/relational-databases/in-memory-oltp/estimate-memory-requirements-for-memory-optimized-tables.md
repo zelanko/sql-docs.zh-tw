@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb9fdd447b36a44803d711a80aa7f2714857d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050406"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811169"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,19 +143,19 @@ SELECT COUNT(DISTINCT [Col2])
   
 由於我們有三個雜湊索引，因此雜湊索引所需的記憶體為 3 * 64MB = 192MB。  
   
-#### <a name="memory-for-non-clustered-indexes"></a>配置給非叢集索引的記憶體  
+#### <a name="memory-for-nonclustered-indexes"></a>非叢集索引的記憶體  
   
-非叢集索引會以 B 型樹狀目錄來實作，其內部節點包含索引值，以及指向後續節點的指標。  分葉節點包含索引值，以及一個指向記憶體中資料表資料列的指標。  
+非叢集索引會以 BTree 實作，其內部節點包含索引值，以及指向後續節點的指標。  分葉節點包含索引值，以及一個指向記憶體中資料表資料列的指標。  
   
 不同於雜湊索引，非叢集索引沒有固定的貯體大小。 此索引會隨資料動態成長和壓縮。  
   
-非叢集索引所需的記憶體計算方式如下：  
+非叢集索引所需的記憶體，計算方式如下：  
   
 - **配置給非分葉節點的記憶體**   
     在一般組態中，配置給非分葉節點的記憶體只佔索引所使用之整體記憶體的很小比例。 因為很小，所以可以放心忽略。  
   
 - **配置給分葉節點的記憶體**   
-    分葉節點中對於資料表內的每個唯一索引鍵都有一個資料列，指向該唯一索引鍵的資料列。  如果相同索引鍵有多個資料列 (亦即有非唯一的非叢集索引)，索引分葉節點中只有一個資料列會指向其中一個資料列，而其他資料列會彼此連結。  因此，所需的總記憶體大約是：
+    分葉節點中對於資料表內的每個唯一索引鍵都有一個資料列，指向該唯一索引鍵的資料列。  如果相同索引鍵有多個資料列 (亦即有非唯一的非叢集索引)，則索引分葉節點中只有一個資料列會指向其中一個資料列，而其他資料列會彼此連結。  因此，所需的總記憶體大約是：
   - memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
  非叢集索引最適合用於範圍查閱，如下列查詢所示：  

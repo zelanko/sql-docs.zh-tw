@@ -1,10 +1,7 @@
 ---
-title: SSMS 公用程式 | Microsoft Docs
-ms.custom: ''
-ms.date: 12/08/2017
+title: SSMS 公用程式
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,135 +13,115 @@ helpviewer_keywords:
 ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d08f03dbe96e80cf1bd75ef1d40817f4a3354535
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/07/2019
+ms.openlocfilehash: 4fa84860e2d101b43b1ea4ebfe09d9580c0088ee
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267097"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893218"
 ---
-# <a name="ssms-utility"></a>Ssms 公用程式
+# <a name="ssms-utility"></a>SSMS 公用程式
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **Ssms** 公用程式會開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果有指定， **Ssms** 也會建立伺服器的連接，且會開啟查詢、指令碼、檔案、專案和方案。  
-  
- 您可以指定包含查詢、專案或方案的檔案。 如果提供了連接資訊，且檔案類型與這個類型的伺服器相關聯，包含查詢的檔案會自動連接伺服器。 例如，.sql 檔會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中開啟一個 [SQL 查詢編輯器] 視窗，.mdx 檔會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中開啟一個 [MDX 查詢編輯器] 視窗。 而**SQL Server 方案和專案** 會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中開啟。  
-  
-> [!NOTE]  
->  **Ssms** 公用程式不會執行查詢。 若要從命令列中執行查詢，請使用 **sqlcmd** 公用程式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-Ssms  
-    [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
-    [-E] [-nosplash] [-log [filename]?] [-?]  
-```  
-  
-## <a name="arguments"></a>引數  
- *scriptfile*  
- 指定一個或多個要開啟的指令碼檔案。 這個參數必須包含檔案的完整路徑。  
-  
- *projectfile*  
- 指定要開啟的指令碼專案。 這個參數必須包含指令碼專案檔的完整路徑。  
-  
- *solutionfile*  
- 指定要開啟的方案。 這個參數必須包含方案檔的完整路徑。  
-  
- [ **-S** _servername_]  
-  伺服器名稱  
-  
- [ **-d** _databasename_]  
-  資料庫名稱  
 
- [ **-G**] 使用 Active Directory 驗證來連線。 是否包含 **-P** 及/或 **-U** 可決定連線類型。
- - 如果未  包含 **-U** 和 **-P**，則會使用 **Active Directory - 整合式**，且不會出現任何對話方塊。
- - 如果同時包含 **-U** 和 **-P**，則會使用 **Active Directory - 密碼**。 **不建議**使用此選項，因為您必須在命令列上指定純文字密碼，而這並非建議的做法。
- - 如果包含 **-U**，但遺漏 **-P**，則會快顯 [驗證] 對話方塊，但所有登入嘗試都將會失敗。 
+**Ssms** 公用程式會開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果有指定， **Ssms** 也會建立伺服器的連接，且會開啟查詢、指令碼、檔案、專案和方案。
 
-  請注意，目前不支援**具 MFA 支援的 Active Directory - 通用**。 
-  
-[ **-U** _username_]  
- 使用「SQL 驗證」或「Active Directory - 密碼」進行連線時的使用者名稱  
-  
-[ **-P** _password_]  
- 使用「SQL 驗證」或「Active Directory - 密碼」進行連線時的密碼
-  
-[ **-E**]  
- 使用 Windows 驗證進行連接  
-  
-[ **-nosplash**]  
- 在開啟時，使 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 不呈現開頭顯示畫面。 當您利用頻寬有限的連接，透過「終端機服務」來連接執行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的電腦時，請使用這個選項。 這個引數不區分大小寫，可出現在其他引數的前後。  
-  
-[ **-log** _[filename]?_ ]  
- 將 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 活動記錄到指定的檔案以利於進行疑難排解  
-  
-[ **-?** ]  
- 顯示命令列說明  
-  
-## <a name="remarks"></a>Remarks  
- 所有參數都是選擇性的，除了用逗號來分隔的檔案之外，您必須用空格來分隔它們。 如果您沒有指定任何參數，**Ssms** 會依照 [工具]  功能表上，[選項]  設定中所指定的內容來開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 例如，如果 [環境/一般]  頁面的 [啟動時]  選項指定 [開啟新增查詢視窗]  ，**Ssms** 會以空白的查詢編輯器開啟。  
-  
- **-log** 參數必須出現在命令列結尾，位於所有其他參數之後。 檔名引數是選擇性的。 如果指定了檔名，但該檔案不存在，便會建立檔案。 若因寫入權限不足等緣故而無法建立檔案，則會改將記錄寫入未當地語系化的 APPDATA 位置 (請參閱下文)。 如果未指定檔名引數，便會將兩個檔案寫入至目前使用者的未當地語系化應用程式儲存資料夾。 SQL Server 的未當地語系化應用程式儲存資料夾可以由 APPDATA 環境變數查知。 例如，SQL Server 2012 的資料夾是 \<系統磁碟機>:\Users\\<使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\\。 兩個檔案依預設將名為 ActivityLog.xml 和 ActivityLog.xsl。 前者包含活動記錄資料，後者則是 XML 樣式表以讓您更方便檢視此 XML 檔案。 請使用下列步驟，在您的預設 XML 檢視器 (如 Internet Explorer) 中檢視記錄檔：按一下 [開始]，再按一下 [執行...]，然後在提供的欄位內鍵入 "\<系統磁碟機>:\Users\\<使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml"，然後按 Enter。  
-  
- 如果提供了連接資訊，且檔案類型與這個類型的伺服器相關聯，便會發出包含查詢的檔案連接到伺服器的提示。 例如，.sql 檔會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中開啟一個 [SQL 查詢編輯器] 視窗，.mdx 檔會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中開啟一個 [MDX 查詢編輯器] 視窗。 而**SQL Server 方案和專案** 會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中開啟。  
-  
- 下表將伺服器類型對應至副檔名。  
-  
-|伺服器類型|延伸模組|  
-|-----------------|---------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|.sql|  
-|SQL Server Analysis Services|.mdx<br /><br /> .xmla|  
-  
-## <a name="examples"></a>範例  
- 下列指令碼會在命令提示字元之下，利用預設值來開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ：  
-  
-```  
-Ssms  
-  
-```  
-  
- 下列指令碼會使用 *Active Directory - 整合式*，從命令提示字元開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]：  
-  
-```  
-Ssms.exe -S servername.database.windows.net -G
-  
-``` 
+您可以指定包含查詢、專案或方案的檔案。 如果提供了連接資訊，且檔案類型與這個類型的伺服器相關聯，包含查詢的檔案會自動連接伺服器。 例如，.sql 檔案會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟一個 [SQL 查詢編輯器] 視窗，.mdx 檔案則會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟一個 [MDX 查詢編輯器] 視窗。 而 **SQL Server 解決方案和專案** 則會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟。 
 
-
- 下列指令碼會在命令提示字元之下，將程式碼編輯器設為伺服器 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，在不呈現開頭顯示畫面的情況下，利用 Windows 驗證來開啟 `ACCTG and the database AdventureWorks2012,` ：  
-  
-```  
-Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
-  
-```  
-
- 下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會開啟 MonthEndQuery 指令碼。  
-  
-```  
-Ssms "C:\Documents and Settings\username\My Documents\SQL Server Management Studio Projects\FinanceScripts\FinanceScripts\MonthEndQuery.sql"  
-  
-```  
-  
- 下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會在名稱為 `developer`的電腦上開啟 NewReportsProject 專案：  
-  
-```  
-Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"  
-  
-```  
-  
- 下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會開啟 MonthlyReports 方案：  
-  
-```  
-Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
-  
-```  
+> [!NOTE]
+> **Ssms** 公用程式不會執行查詢。 若要從命令列中執行查詢，請使用 **sqlcmd** 公用程式。 
  
+## <a name="syntax"></a>語法
+ 
+ ```
+ Ssms 
+ [scriptfile] [projectfile] [solutionfile] 
+ [-S servername] [-d databasename] [-G] [-U username] [-E] [-nosplash] [-log [filename]?] [-?] 
+ ``` 
+ 
+## <a name="arguments"></a>引數
 
+ *scriptfile* 指定一個或多個要開啟的指令碼檔案。 這個參數必須包含檔案的完整路徑。 
+ 
+ *projectfile* 指定要開啟的指令碼專案。 這個參數必須包含指令碼專案檔的完整路徑。 
+ 
+ *solutionfile* 指定要開啟的解決方案。 這個參數必須包含方案檔的完整路徑。 
+ 
+[ **-S** _伺服器名稱_] 伺服器名稱
+ 
+[ **-d** _資料庫名稱_] 資料庫名稱
 
+[ **-G**] 使用 Active Directory 驗證來連線。 是否包含 **-U** 會決定連線的類型。
 
-## <a name="see-also"></a>另請參閱  
- [使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-  
-  
+> [!Note]
+> 目前不支援**具 MFA 支援的 Active Directory - 通用**。
+ 
+[ **-U** _使用者名稱_] 與「SQL 驗證」連線時，為使用者名稱
+ 
+[ **-E**] 使用 Windows 驗證進行連線
+ 
+[ **-nosplash**] 在開啟時，避免 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 出現在啟動顯示畫面圖形中。 當您利用頻寬有限的連接，透過「終端機服務」來連接執行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的電腦時，請使用這個選項。 這個引數不區分大小寫，可出現在其他引數的前後。
+ 
+[ **-log** _[檔案名稱]?_ ] 將 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 活動記錄到指定的檔案，以利於疑難排解
+ 
+[ **-?** ] 顯示命令列說明
+
+## <a name="remarks"></a>Remarks
+
+所有參數皆為選擇性參數，以空格加以分隔，但檔案除外，檔案以逗號分隔。 如果您沒有指定任何參數，**Ssms** 會依照 [工具]  功能表上，[選項]  設定中所指定的內容來開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 例如，如果 [環境/一般]  頁面的 [啟動時]  選項指定了 [開啟新增查詢視窗]  ，**Ssms** 開啟時就會出現空白的查詢編輯器。
+ 
+**-log** 參數必須出現在命令列結尾，位於所有其他參數之後。 檔名引數是選擇性的。 如果指定了檔名，但該檔案不存在，便會建立檔案。 若因寫入權限不足等緣故而無法建立檔案，則會改將記錄寫入未當地語系化的 APPDATA 位置 (請參閱下文)。 如果未指定檔名引數，便會將兩個檔案寫入至目前使用者的未當地語系化應用程式儲存資料夾。 SQL Server 的未當地語系化應用程式儲存資料夾可以由 APPDATA 環境變數查知。 例如，SQL Server 2012 的資料夾是 \<系統磁碟機>:\Users\\<使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\\。 兩個檔案依預設將名為 ActivityLog.xml 和 ActivityLog.xsl。 前者包含活動記錄資料，後者則是 XML 樣式表，供您更方便檢視此 XML 檔案。 請使用下列步驟，在您的預設 XML 檢視器 (如 Internet Explorer) 中檢視記錄檔：按一下 [開始]，再按一下 [執行...]，然後在提供的欄位內鍵入 "\<系統磁碟機>:\Users\\<使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml"，然後按 Enter。
+ 
+如果提供了連線資訊，且檔案類型與這類伺服器相關聯，便會對包含查詢的檔案發出會連線到伺服器的提示。 例如，.sql 檔案會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟一個 [SQL 查詢編輯器] 視窗，.mdx 檔案則會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟一個 [MDX 查詢編輯器] 視窗。 而 **SQL Server 解決方案和專案** 則會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中開啟。
+
+下表將伺服器類型對應至副檔名。
+ 
+|伺服器類型|延伸模組| 
+|-----------------|---------------| 
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|.sql|
+|SQL Server Analysis Services|.mdx<br /><br /> .xmla|
+
+## <a name="examples"></a>範例
+
+下列指令碼會在命令提示字元之下，利用預設值來開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ：
+ 
+ ```
+ Ssms
+ ```
+
+下列指令碼會使用 *Active Directory - 整合*，從命令提示字元開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]：
+ 
+ ```
+ Ssms.exe -S servername.database.windows.net -G
+ ```
+
+下列指令碼會在命令提示字元之下，將程式碼編輯器設為伺服器 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，在不呈現開頭顯示畫面的情況下，利用 Windows 驗證來開啟 `ACCTG and the database AdventureWorks2012,` ：
+ 
+ ```
+ Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
+ ```
+
+ 下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會開啟 MonthEndQuery 指令碼。
+ 
+ ```
+ Ssms "C:\Documents and Settings\username\My Documents\SQL Server Management Studio Projects\FinanceScripts\FinanceScripts\MonthEndQuery.sql"
+ ```
+ 
+ 下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會在名稱為 `developer`的電腦上開啟 NewReportsProject 專案：
+ 
+ ```
+ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
+ ```
+ 
+ 下列指令碼會在命令提示字元之下開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，且會開啟 MonthlyReports 方案： 
+
+ ```
+Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
+ ```
+
+## <a name="see-also"></a>另請參閱
+
+[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)

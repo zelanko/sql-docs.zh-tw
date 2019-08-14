@@ -1,7 +1,7 @@
 - name: 歡迎使用 SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
-- name: SQL 文件的版本控制
-  href: toc/versioning-system-monikers-ui-sql-server.md
+  href: sql-server/sql-server-technical-documentation.md
+- name: SQL 文件瀏覽提示
+  href: sql-server/sql-docs-navigation-guide.md
 - name: 舊版 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: 概觀
@@ -10459,8 +10459,8 @@
       items:
         - name: 取得說明
           href: sql-server/sql-server-get-help.md
-        - name: SQL 文件瀏覽祕訣
-          href: sql-server/sql-docs-navigation-guide.md
+        - name: SQL 文件的版本設定
+          href: sql-server/versioning-system-monikers-ui-sql-server.md
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >

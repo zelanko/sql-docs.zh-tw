@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: d227cbd5910a33f940313fa2e82039240077c280
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495433"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823128"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -46,7 +46,7 @@ SSMS 是免費的！
 
 **[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)**
 
-SSMS 18.2 是 SSMS 最新的正式運作 (GA) 版本。 若您已安裝 SSMS 18.2 (GA)，則安裝 SSMS 18.2 會將它升級至 18.2。 若您已安裝舊的 SSMS 18.x「預覽」  版本，則您必須在安裝 SSMS 18.2 前先將它解除安裝。
+SSMS 18.2 是 SSMS 最新的正式運作 (GA) 版本。 若先前已安裝 SSMS 18 的 GA 版本，則安裝 SSMS 18.2 會將其升級至 18.2。 若您已安裝舊的 SSMS 18.x「預覽」  版本，則您必須在安裝 SSMS 18.2 前先將它解除安裝。
 
 **版本資訊**
 
@@ -81,8 +81,7 @@ SQL Server Management Studio 18.2：
 | 查詢執行或結果 | 在訊息中新增了「完成時間」，用來追蹤指定的查詢何時完成其執行。 |
 | 查詢執行或結果  | 允許顯示更多的資料 (結果為文字) 並將其儲存在資料格 (結果為方格) 中。 SSMS 現在允許這兩者最多有 2M 個字元 (最高分別從 256 和 64K)。 這也解決了使用者無法從方格資料格抓取超過 43680 個字元的問題。 |
 | 執行程序表 | 啟用內嵌純量 UDF 功能時(ContainsInlineScalarTsqlUdfs)，在 QueryPlan 中新增了新屬性。 |
-| SMO | 新增「功能限制」的支援。 如需功能本身的詳細資訊，請參閱[功能限制](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)。 |
-| SMO  | 評定延伸模組。 請參閱<we need a link to something> |
+| SMO | 新增「功能限制」的支援。 如需功能本身的詳細資訊，請參閱[功能限制](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)。 如需評定延伸模組的詳細資訊，請參閱 [SQL 評定 API 簡介](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570)。 |
 | Integration Services (SSIS) | Azure 中 SSIS 套件排程器的效能最佳化 |
 |  |  |
 

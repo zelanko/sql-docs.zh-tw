@@ -1,7 +1,7 @@
 ---
-title: 伺服器記憶體伺服器組態選項 | Microsoft Docs
+title: 伺服器記憶體設定選項 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1f631c7c0d4e1674e5982f0650989583910388e6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476270"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763175"
 ---
-# <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
+# <a name="server-memory-configuration-options"></a>伺服器記憶體設定選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 您可以使用 [最小伺服器記憶體]  和 [最大伺服器記憶體]  這兩個伺服器記憶體選項，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的 SQL Server 處理序重新設定 SQL Server Memory Manager 所管理的記憶體數量 (以 MB 為單位)。  
@@ -49,19 +49,18 @@ ms.locfileid: "68476270"
 > [最小伺服器記憶體]  和 [最大伺服器記憶體]  選項屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更這些設定，只有當 **show advanced options** 設為 1 時，才能變更它們。 這些設定會立即生效，不需要重新啟動伺服器。  
   
 <a name="min_server_memory"></a> 您可使用 **min_server_memory** 確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員，能有最少的記憶體數量可用。 啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會立即配置 [最小伺服器記憶體]  中指定的記憶體數量。 不過，由於用戶端負載使記憶體使用量達到這個值後，除非降低 [最小伺服器記憶體]  的值，否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法釋出記憶體。 例如，當多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可以同時存在於相同的主機上時，設定 min_server_memory 參數而非 max_server_memory 可為執行個體保留記憶體。 此外，也需要設定虛擬環境中的 min_server_memory 值，以確保基礎主機的記憶體壓力不會為了得到可接受的效能，而嘗試從客體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬機器 (VM) 的緩衝集區，解除超過所需的記憶體。
- 
-> [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保證能夠配置 [最小伺服器記憶體]  中指定的記憶體數量。 如果伺服器的負載從不需要配置 [最小伺服器記憶體]  中指定的記憶體大小，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以較少的記憶體執行。  
-  
-<a name="max_server_memory"></a> 您可使用 **max_server_memory** 確保 OS 不會遇到有害的記憶體壓力。 若要設定最大伺服器記憶體設定，請監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的整體取用量，以判斷記憶體需求。 若要為單一執行個體進行更準確的計算：
- -  從 OS 總記憶體中保留 1GB - 4GB 的記憶體給 OS 本身。
- -  然後減去等於不受 [最大伺服器記憶體]  控制的潛在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體配置，該配置的算法為**堆疊大小 <sup>1</sup> \* 計算得出的最大背景工作執行緒數 <sup>2</sup> + -g 啟動參數 <sup>3</sup> ** (若未設定 *-g*，則預設為 256MB)。 餘數即為單一執行個體安裝的 max_server_memory 設定。
- 
+
+>[!NOTE]
+>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保證能夠配置 [最小伺服器記憶體]  中指定的記憶體數量。 如果伺服器的負載從不需要配置 [最小伺服器記憶體]  中指定的記憶體大小，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以較少的記憶體執行。
+
+<a name="max_server_memory"></a> 您可使用 **max_server_memory** 確保 OS 不會遇到有害的記憶體壓力。 若要設定最大伺服器記憶體設定，請監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的整體取用量，以判斷記憶體需求。
+
+- 從 OS 總記憶體中保留足夠的記憶體給 OS 本身。
+- 然後減去等於不受 [最大伺服器記憶體]  控制的潛在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體配置，算法為 **_堆疊大小** <sup>1</sup> **\* 計算得出的最大背景工作執行緒數**<sup>2</sup>。 餘數即為單一執行個體安裝的 max_server_memory 設定。
+
 <sup>1</sup> 如需每個架構之執行緒堆疊大小的資訊，請參閱[記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md#stacksizes)。
 
 <sup>2</sup> 如需在目前主機中，為指定數量之親和 CPU 而計算出的預設背景工作執行緒數目相關資訊，請參閱如何[設定最大背景工作執行緒伺服器設定選項](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文件頁面。
-
-<sup>3</sup> 如需 *-g* 啟動參數的資訊，請參閱[資料庫引擎服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)的文件頁面。 僅適用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定記憶體選項  
 您可使用 [最小伺服器記憶體]  與 **[最大伺服器記憶體]** 這兩個伺服器記憶體選項，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體重新設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員所管理的記憶體數量 (MB)。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以根據可用的系統資源，動態變更其記憶體需求。  

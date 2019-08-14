@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7d326e03c684a17d976d13c27a37aa97ae16792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091411"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811153"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Customer 資料表中的資料列是從叢集索引擷取，這是主要資料結構且擁有完整的資料表資料。  
   
--   來自 Order 資料表的資料是使用 CustomerID 資料行上的非叢集索引擷取。 這個索引同時包含用於聯結的 CustomerID 資料行，以及傳回給使用者的主索引鍵資料行 OrderID。 從 Orders 資料表傳回其他資料行會需要查閱 Order 資料表的叢集索引。  
+-   來自 Order 資料表的資料，使用 CustomerID 資料行上的非叢集索引擷取得來。 這個索引同時包含用於聯結的 CustomerID 資料行，以及傳回給使用者的主索引鍵資料行 OrderID。 從 Orders 資料表傳回其他資料行會需要查閱 Order 資料表的叢集索引。  
   
 -   邏輯運算子 **Inner Join** 是由實體運算子 **Merge Join**所實作。 其他實體聯結類型包括 **Nested Loops** 和 **Hash Join**。 **Merge Join** 運算子會利用兩個索引都會在聯結資料行 CustomerID 上排序的情況。  
   
@@ -119,7 +119,7 @@ SQL Server 查詢處理管線。
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- 在第一個範例查詢中，執行引擎會從 Access Methods 要求 Customer 上叢集索引中以及 Order 上非叢集索引中的資料列。 Access Methods 會周遊 B 型樹狀目錄索引結構，擷取所要求的資料列。 在這種情況下，當計畫需要完整索引掃描時，就會擷取所有資料列。  
+ 在第一個範例查詢中，執行引擎會從 Access Methods 要求 Customer 上叢集索引中的資料列，以及 Order 上非叢集索引中的資料列。 Access Methods 會周遊 B 型樹狀目錄索引結構，擷取所要求的資料列。 在這種情況下，當計畫需要完整索引掃描時，就會擷取所有資料列。  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 隨選批次和預存程序，也稱為解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 解譯是指查詢計劃是由查詢計劃中每個運算子的查詢執行引擎所解譯。 執行引擎會讀取運算子及其參數，並執行作業。  

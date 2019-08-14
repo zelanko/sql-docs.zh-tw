@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837c720e115a41f9b41dfb0e0e1117966988040f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138373"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893620"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL Server 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +34,22 @@ ms.locfileid: "68138373"
 ## <a name="create-azure-blob-container"></a>建立 Azure Blob 容器
 容器會提供一組 Blob 的群組。 所有 Blob 都必須位於容器中。 帳戶可以包含不限數目的容器，但是至少必須具有一個容器。 容器可以儲存不限數目的 Blob。 
 
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 若要建立容器，請遵循下列步驟：
 
 1. 開啟 Azure 入口網站。 
 1. 巡覽至您的儲存體帳戶。 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-   1. 選取儲存體帳戶，向下捲動至 [Blob 服務]  。
-   1. 選取 [Blob]  ，然後選取 [+容器]  以新增新的容器。 
-   1. 輸入容器名稱，並記下您指定的容器名稱。 此資訊會在本快速入門稍後的 T-SQL 陳述式內的 URL (備份檔路徑) 中用到。 
-   1. 選取 [確定]  。 
+1. 選取儲存體帳戶，向下捲動至 [Blob 服務]  。
+1. 選取 [Blob]  ，然後選取 [+容器]  以新增新的容器。 
+1. 輸入容器名稱，並記下您指定的容器名稱。 此資訊會在本快速入門稍後的 T-SQL 陳述式內的 URL (備份檔路徑) 中用到。 
+1. 選取 [確定]  。 
     
     ![新增容器](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
 
-  >[!NOTE]
-  >即使您選擇建立公用容器，SQL Server 備份與還原仍然需要儲存體帳戶的驗證。 您也可以使用 REST API，以程式設計方式建立容器。 如需詳細資訊，請參閱[建立容器](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
+  > [!NOTE]
+  > 即使您選擇建立公用容器，SQL Server 備份與還原仍然需要儲存體帳戶的驗證。 您也可以使用 REST API，以程式設計方式建立容器。 如需詳細資訊，請參閱[建立容器](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
 
 ## <a name="create-a-test-database"></a>建立測試資料庫 
 
@@ -93,14 +92,14 @@ GO
 ## <a name="create-a-sql-server-credential"></a>建立 SQL Server 認證
 SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。 此處，SQL Server 備份和還原程序會使用認證，向 Windows Azure Blob 儲存體服務驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需認證的詳細資訊，請參閱[認證](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)。 
 
-  >[!IMPORTANT]
-  >以下所述建立 SQL Server 認證的需求是特別針對 SQL Server 備份程序 ([SQL Server 備份至 URL](backup-restore/sql-server-backup-to-url.md) 及 [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)) 的需求。 在存取 Azure 儲存體以寫入或讀取備份時，SQL Server 會使用儲存體帳戶名稱與存取金鑰資訊。
+  > [!IMPORTANT]
+  > 以下所述建立 SQL Server 認證的需求是特別針對 SQL Server 備份程序 ([SQL Server 備份至 URL](backup-restore/sql-server-backup-to-url.md) 及 [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)) 的需求。 在存取 Azure 儲存體以寫入或讀取備份時，SQL Server 會使用儲存體帳戶名稱與存取金鑰資訊。
 
 ### <a name="access-keys"></a>存取金鑰
-在 Azure 入口網站仍為開啟狀態時，儲存建立認證所需的存取金鑰。 
+您將需要儲存體帳戶的存取金鑰，才可建立認證。 
 
 1. 巡覽至 Azure 入口網站的 [儲存體帳戶]  。 
-1. 向下捲動至 [設定]  ，然後選取 [存取金鑰]  。 
+1. 選取 [設定]  下的 [存取金鑰]  。 
 1. 儲存金鑰和連接字串，以便稍後於本快速入門中使用。 
 
    ![存取金鑰](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)

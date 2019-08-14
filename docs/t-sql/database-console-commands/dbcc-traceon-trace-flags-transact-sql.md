@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 21c43f2780f555b9cabd0ec84b47f80ff0284764
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388438"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809836"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -74,7 +74,7 @@ ms.locfileid: "68388438"
 |**652**|停用頁面預先提取掃描。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段|
 |**661**|停用準刪除記錄移除程序。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
 |**692**|在大量載入資料到堆積或叢集索引時停用快速插入。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，當資料庫處於簡單或大量記錄復原模式時，預設會啟用最低限度方式記錄的快速插入，以最佳化插入記錄到新頁面的插入效能。 使用快速插入，每個大量載入批次會取得新範圍，藉由略過現有範圍可用空間的配置查閱以最佳化插入效能。<br /><br /> 使用快速插入，小批次的大量載入會導致物件耗用的未使用空間增加，因此建議您針對每個批次使用大批次以完全填滿範圍。 如果增加批次大小不可行，這個追蹤旗標能有助於減少保留的未使用空間，但會犧牲效能。 <br /><br />**注意：** 這個追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 和更新版本的組建。<br /><br />**範圍**：全域或工作階段|
-|**715**|啟用資料表鎖定，以大量載入到不含非叢集索引的堆積。 啟用此追蹤旗標時，大量複製資料到資料表時，大量載入作業會取得大量更新 (BU) 鎖定。 大量更新 (BU) 鎖定允許多個執行緒將資料同時大量載入到相同資料表，同時禁止未大量載入資料的其他處理序存取該資料表。<br /><br />此行為類似使用者在執行大量載入時明確指定 TABLOCK 提示，或針對大量載入的指定資料表啟用 sp_tableoption 資料表鎖定。 不過，啟用此追蹤旗標時，在不變更任何查詢或資料庫的情況下，此行為即為預設值。<br /><br />**範圍：** 全域或工作階段|
+|**715**|啟用資料表鎖定，以將作業大量載入到不含非叢集索引的堆積。 啟用此追蹤旗標時，大量複製資料到資料表時，大量載入作業會取得大量更新 (BU) 鎖定。 大量更新 (BU) 鎖定允許多個執行緒將資料同時大量載入到相同資料表，同時禁止未大量載入資料的其他處理序存取該資料表。<br /><br />此行為類似使用者在執行大量載入時明確指定 TABLOCK 提示，或針對大量載入的指定資料表啟用 sp_tableoption 資料表鎖定。 不過，啟用此追蹤旗標時，在不變更任何查詢或資料庫的情況下，此行為即為預設值。<br /><br />**範圍：** 全域或工作階段|
 |**834**|為緩衝區集區、資料行存放區與記憶體內資料表使用大型分頁配置。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3210239) \(機器翻譯\)。<br /><br />**注意：** 當啟用時，大型分頁記憶體模型會在執行個體啟動時預先配置所有 SQLOS 記憶體，而且不會將該記憶體傳回給 OS。<br /><br />**注意：** 如果您使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的資料行存放區索引功能，則不建議開啟追蹤旗標 834。<br /><br />**範圍**：只限全域|
 |**845**|當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服務帳戶啟用「鎖定記憶體中的分頁」權限時，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的標準 SKU 上啟用鎖定的分頁。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/970070) \(機器翻譯\) 和[伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)上的文件頁面。<br /><br />**注意：** 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預設會針對標準 SKU 啟用此行為，而且不得使用追蹤旗標 845。<br /><br />**範圍**：只限全域|
 |**902**|安裝累計更新或 Service Pack 時略過執行資料庫升級指令碼。 如果在指令碼升級模式期間發生錯誤，建議您連絡 Microsoft SQL 客戶服務及支援 (CSS) 取得進一步指示。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2163980) \(機器翻譯\)。<br /><br />**警告：** 此追蹤旗標用於針對指令碼升級模式期間失敗的更新進行疑難排解，而且不支援在生產環境中連續執行。 資料庫升級指令碼必須順利執行，以完整安裝累積更新和 Service Pack。 否則可能會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體發生未預期的問題。<br /><br />**範圍**：只限全域|

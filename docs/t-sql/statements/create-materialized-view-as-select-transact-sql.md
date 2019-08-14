@@ -34,15 +34,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 076bf71586baa61e8bb77c093cd274eca898bf00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b58102644c596fde248861bb504bf06b932d6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912627"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893769"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (預覽)
 
@@ -120,11 +120,10 @@ Azure 資料倉儲中的具體化檢視非常類似 SQL Server 中的索引檢�
 
 |狀況|新資料行必須新增到具體化檢視|註解|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() | 在具體化檢視定義的 SELECT 清單中遺失 |COUNT_BIG (*) |已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
+|在具體化檢視定義的 SELECT 清單中，遺漏 COUNT_BIG ()| COUNT_BIG (*) |已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
 |SUM(a) 是由使用者在具體化檢視定義的 SELECT 清單中指定的，而且 ‘a’ 是可為 Null 的運算式 |COUNT_BIG (a) |使用者必須手動在具體化檢視定義中新增運算式 ‘a’。|
 |AVG(a) 是由使用者在 ‘a’ 是運算式之具體化檢視定義的 SELECT 清單中指定的。|SUM(a)、COUNT_BIG(a)|已由具體化檢視建立自動新增。  使用者不必採取任何動作。|
-|STDEV(a) 是由使用者在 ‘a’ 是運算式之具體化檢視定義的 SELECT 清單中指定的。|SUM(a)、  
-COUNT_BIG(a) SUM(square(a))|已由具體化檢視建立自動新增。  使用者不必採取任何動作。 |
+|STDEV(a) 是由使用者在 ‘a’ 是運算式之具體化檢視定義的 SELECT 清單中指定的。|SUM(a)、COUNT_BIG(a)、SUM(square(a))|已由具體化檢視建立自動新增。  使用者不必採取任何動作。 |
 | | | |
 
 一旦建立，具體化檢視在 SQL Server Management Studio 內 Azure SQL 資料倉儲執行個體的檢視資料夾下就是可見的。

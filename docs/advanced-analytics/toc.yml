@@ -23,7 +23,7 @@
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: 安裝 R 服務
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: 安裝獨立伺服器 (Python、R)
+    - name: 安裝獨立伺服器
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: 安裝已訓練的模型
       href: ../advanced-analytics/install/sql-pretrained-models-install.md

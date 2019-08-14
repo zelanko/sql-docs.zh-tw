@@ -22,12 +22,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff6e63c05b380d1cee875c29570bd3cc4b97d051
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266770"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811547"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

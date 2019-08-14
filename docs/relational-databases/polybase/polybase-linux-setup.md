@@ -4,16 +4,17 @@ titlesuffix: SQL Server
 description: 本文描述如何在 Linux 上安裝 SQL Server PolyBase。
 author: aboke
 ms.author: aboke
-ms.date: 4/12/2019
+ms.date: 7/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3c53eb5db9238f1da32cb207dafb9e36b7748914
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: 82659c1fdbf4293812db0807ffbb216ba66048b5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495360"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893209"
 ---
 # <a name="install-polybase-on-linux"></a>在 Linux 上安裝 PolyBase
 
@@ -22,10 +23,10 @@ ms.locfileid: "68495360"
 下列步驟會在 Linux 上安裝 [PolyBase](../../relational-databases/search/full-text-search.md) (**mssql-server-polybase**)。 PolyBase 可讓您針對遠端資料來源執行外部查詢。 
 
 >[!NOTE]
-> 在第一次安裝 Polybase 之前，請[安裝 SQL Server](../../linux/sql-server-linux-setup.md#platforms)。 這會設定您在安裝 **mssql-server-polybase** 套件時所使用的金鑰和存放庫。
-
+> 在安裝 Polybase 之前，請先[安裝 SQL Server 2019 預覽](../../linux/sql-server-linux-setup.md#platforms)。 這會設定您在安裝 **mssql-server-polybase** 套件時所使用的金鑰和存放庫。
+>
+> 適用於 Linux 的 SQL Server 2017 不支援 PolyBase。
 > 目前無法使用 Linux 上的 PolyBase 向外延展。
-
 
 安裝您作業系統所適用的 PolyBase：
 

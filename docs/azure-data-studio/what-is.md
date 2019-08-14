@@ -10,18 +10,20 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 1dd66b432ff489b5576b9ce7f69c1860cb9240d5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958938"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68822620"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
 Azure Data Studio 是跨平台資料庫工具，適合在 Windows、macOS 和 Linux 上使用 Microsoft 系列內部部署和雲端資料平台的資料專業人員。
 
 Azure Data Studio 過去是以預覽名稱 SQL Operations Studio 發行，可提供新式編輯器體驗，其中包含 IntelliSense、程式碼片段、原始檔控制整合及整合式終端。 在工程設計時，考量到資料平台使用者，並內建查詢結果集的圖表和可自訂的儀表板。
+
+Azure Data Studio 及其提供者的原始程式碼根據原始程式碼 EULA 提供在 GitHub 上，該合約提供修改和使用軟體的權限，但不能在雲端服務中進行重新散發或裝載。 如需詳細資訊，請參閱 [Azure Data Studio 常見問題集](faq.md)。
 
 **[下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

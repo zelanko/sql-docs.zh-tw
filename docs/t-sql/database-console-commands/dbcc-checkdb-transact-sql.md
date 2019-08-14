@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102113"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809897"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ss
 如果 DBCC CHECKDB 命令成功完成，則資料庫會處於實體一致的狀態，且資料庫狀態會設為 ONLINE。 不過，資料庫可能會包含一個或多個交易不一致的狀況。 建議您執行 [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) 以識別是否有任何商務邏輯的缺陷，並且立即備份資料庫。
 如果 DBCC CHECKDB 命令失敗，資料庫就無法修復。
     
-## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>在複寫的資料庫中搭配執行 DBCC CHECKDB 與 REPAIR_ALLOW_DATA_LOSS    
+## <a name="running-dbcc-checkdb-with-repair_allow_data_loss-in-replicated-databases"></a>在複寫的資料庫中搭配執行 DBCC CHECKDB 與 REPAIR_ALLOW_DATA_LOSS    
 搭配執行 DBCC CHECKDB 命令與 REPAIR_ALLOW_DATA_LOSS 選項時，可能會影響使用者資料庫 (發行集和訂閱資料庫) 以及複寫所使用的散發資料庫。 發行集和訂閱資料庫包含已發行資料表和複寫中繼資料表。 請注意這些資料庫中的下列潛在問題：
 -   已發行資料表。 由 CHECKDB 處理序執行以修復損毀使用者資料的動作可能並未複寫：    
 -   合併式複寫使用觸發程序來追蹤已發行之資料表的變更。 如果資料列是由 CHECKDB 處理序插入、更新或刪除，將不會引發觸發程序；因此，也不會複寫變更。

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fcccb69515398890b79c0a8f780a861b497ab78a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03fa6e342eab136bbeb90e06d6a6ef4d5325b1d5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085399"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811183"
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,9 +164,9 @@ GO
 |||  
 |-|-|  
 |**資料行**|**索引類型**|  
-|[path_locator] ASC|主索引鍵、非叢集|  
-|[parent_path_locator] ASC、<br /><br /> [name] ASC|唯一、非叢集|  
-|[stream_id] ASC|唯一、非叢集|  
+|[path_locator] ASC|主索引鍵，非叢集|  
+|[parent_path_locator] ASC、<br /><br /> [name] ASC|唯一，非叢集|  
+|[stream_id] ASC|唯一，非叢集|  
   
  **建立新 FileTable 時所建立的條件約束**  
  當您建立新的 FileTable 時，也會建立下列系統定義的條件約束：  

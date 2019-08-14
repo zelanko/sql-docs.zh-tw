@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996437"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810975"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 用戶端 SDK 規格
 
@@ -29,7 +29,7 @@ ms.locfileid: "67996437"
 - Linux 上的 SQL Server 不支援具名執行個體，因此已移除執行個體名稱的參考。 
 - 共用程式庫是在安裝於 /opt/mssql/lib/libsqlvdi.so 的 libsqlvdi.so 中實作
 
-本文件是 **vbackup.chm** 的附錄，其中詳細說明 Windows VDI 規格。 請下載 [Windows VDI 規格](https://www.microsoft.com/download/details.aspx?id=17282)。
+這是 **vbackup.chm** 的補充說明文件，內容詳述了 Windows 的 MS SQL Server VDI 規格。 請下載 [Windows 的 SQL VDI 規格](https://www.microsoft.com/download/details.aspx?id=17282)。
 
 另請檢閱 [SQL Server 範例 GitHub 存放庫](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)中的範例 VDI 備份解決方案。
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 5955406abee1c7557a920d45d1280c7ab23199d1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077302"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811195"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的版本及支援功能
 

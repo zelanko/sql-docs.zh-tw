@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: e9ccc245c540cfa6e87ee13f6cbb09f10c7734b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38d79f3a76d71b677c722ca6226182b692dee506
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045445"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892248"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 目的地
 
@@ -32,7 +32,8 @@ ms.locfileid: "68045445"
 > [!NOTE]
 > 為確保 Azure Data Lake Store 連線管理員及使用它的元件 (即 Azure Data Lake Store 來源及 Azure Data Lake Store 目的地) 能夠連接服務，請務必從 [這裡](https://www.microsoft.com/download/details.aspx?id=49492)下載最新版的 Azure Feature Pack。 
 
-## <a name="configure-the-azure-data-lake-store-destination"></a>設定 Azure Data Lake Store 目的地  
+**設定 Azure Data Lake Store 目的地**
+
 1. 將 **Azure Data Lake Store 目的地** 拖放到資料流程設計師，然後在上面按兩下以查看編輯器。  
 
 2.  在 [Azure Data Lake Store 連線管理員]  欄位指定現有的 Azure Data Lake Store 連線管理員，或建立參考 Azure Data Lake Store 服務的新連線管理員。  
@@ -43,30 +44,6 @@ ms.locfileid: "68045445"
   
        檔案格式若為文字，則您必須指定 [資料行分隔符號字元]  值。 若檔案中第一個資料列包含資料行名稱，請選取 [第一個資料列的資料行名稱]  。  
 
-       如果檔案格式是 ORC，您會需要為適當的平台安裝 Java Runtime Environment (JRE)。
+       如果檔案格式為 ORC，則需要 Java。 如需詳細資料，請參閱[這裡](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java)。
   
 3.  指定連接資訊後，請切換至 [資料行]  頁面，將來源資料行對應至 SSIS 資料流程的目的地資料行。  
-
-## <a name="prerequisite-for-orc-file-format"></a>ORC 檔案格式的必要條件
-需要 JAVA 才能使用 ORC 檔案格式。
-JAVA 組建架構 (32/64 位元) 應該符合所要使用的 SSIS 執行階段架構。
-下列 JAVA 組建已經過測試。
-
-- [Zulu 的 OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle 的 Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-### <a name="set-up-zulus-openjdk"></a>設定 Zulu 的 OpenJDK
-1. 下載並解壓縮安裝 ZIP 套件。
-2. 從命令提示字元中，執行 `sysdm.cpl`。
-3. 在 [進階]  索引標籤上，選取 [環境變數]  。
-4. 在 [系統變數]  區段底下，選取 [新增]  。
-5. 針對 [變數名稱]  輸入 `JAVA_HOME`。
-6. 選取 [瀏覽目錄]  ，巡覽至解壓縮的資料夾，然後選取 `jre` 子資料夾。
-   然後選取 [確定]  ，系統會自動填入 [變數值]  。
-7. 選取 [確定]  以關閉 [新增系統變數]  對話方塊。
-8. 選取 [確定]  以關閉 [環境變數]  對話方塊。
-9. 選取 [確定]  以關閉 [系統內容]  對話方塊。
-
-### <a name="set-up-oracles-java-se-runtime-environment"></a>設定 Oracle 的 Java SE Runtime Environment
-1. 下載並執行 exe 安裝程式。
-2. 依照安裝程式指示來完成安裝。
