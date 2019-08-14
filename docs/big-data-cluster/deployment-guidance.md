@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9696cf89d4177d8b78d9a0fe08cd27da5112650
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470764"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995828"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何在 Kubernetes 上部署 SQL Server 巨量資料叢集
 
@@ -50,7 +50,7 @@ SQL Server 巨量資料叢集針對伺服器和用戶端 (kubectl) 至少需要 
 
 您可以選擇以下列三種方式中的任一種來部署 Kubernetes：
 
-| 在下列項目上部署 Kubernetes： | Description | 連結 |
+| 在下列項目上部署 Kubernetes： | 描述 | 連結 |
 |---|---|---|
 | **Azure Kubernetes Service (AKS)** | Azure 中的受控 Kubernetes 容器服務。 | [指示](deploy-on-aks.md) |
 | **多部電腦 (kubeadm)** | 使用 **kubeadm**，在實體或虛擬機器上部署 Kubernetes 叢集 | [指示](deploy-with-kubeadm.md) |
@@ -87,10 +87,10 @@ kubectl config view
 
 您可以執行 **azdata bdc create** 來部署巨量資料叢集。 這會提示您選擇其中一個預設組態，然後引導您完成部署。
 
-第一次執行 `azdata` 時，您必須包含 `--accept-eula` 以接受使用者授權合約 (EULA)。
+第一次執行 `azdata` 時，您必須包含 `--accept-eula=yes` 以接受使用者授權合約 (EULA)。
 
 ```bash
-azdata bdc create --accept-eula
+azdata bdc create --accept-eula=yes
 ```
 
 在此案例中，系統會提示您輸入任何不屬於預設組態 (例如密碼) 一部分的設定。 
@@ -142,7 +142,7 @@ azdata bdc create --accept-eula
 
 下列環境變數用於不會儲存於部署組態檔中的安全性設定。 請注意，您可以在組態檔中設定認證以外的 Docker 設定。
 
-| 環境變數 | 需求 |Description |
+| 環境變數 | 需求 |描述 |
 |---|---|---|
 | **CONTROLLER_USERNAME** | 必要項 |叢集管理員的使用者名稱。 |
 | **CONTROLLER_PASSWORD** | 必要項 |叢集管理員的密碼。 |
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> 由於下載巨量資料叢集元件的容器映像所需的時間，整個部署可能需要很長的時間。 不過，應該不會花費數小時的時間。 如果您在部署期間遇到問題，請參閱[監視和疑難排解 SQL Server 巨量資料叢集](cluster-troubleshooting-commands.md)。
+> 由於下載巨量資料叢集元件的容器映像所需的時間，整個部署可能需要很長的時間。 不過，應該不會花費到數小時。 如果您在部署期間遇到問題，請參閱[監視和疑難排解 SQL Server 巨量資料叢集](cluster-troubleshooting-commands.md)。
 
 完成部署時，輸出會通知您成功：
 
@@ -233,7 +233,7 @@ Cluster deployed successfully.
 
    指定您在部署期間為控制器所設定的使用者名稱和密碼 (CONTROLLER_USERNAME 和 CONTROLLER_PASSWORD)。
 
-1. 執行 [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) 來取得一份清單，其中包含每個端點的描述及其對應的 IP 位址和連接埠值。 
+1. 執行 [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) 來取得一份清單，其中包含每個端點的描述及其對應 IP 位址和連接埠值。 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -314,4 +314,4 @@ Storage  default        Ready
 
 - [針對巨量資料叢集設定部署設定](deployment-custom-configuration.md)
 - [執行 SQL Server 巨量資料叢集的離線部署](deploy-offline.md)
-- [工作坊：Microsoft SQL Server 巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) \(英文\)
+- [工作坊：Microsoft SQL Server 巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
