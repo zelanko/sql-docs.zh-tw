@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cae2c216245fdb6483b3ad07a88b3517c38550bd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470746"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969497"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>針對巨量資料叢集設定部署設定
 
@@ -22,7 +22,7 @@ ms.locfileid: "68470746"
 
 若要自訂您的叢集部署設定檔，您可以使用任何 JSON 格式編輯器，例如 VSCode。 若要針對自動化目的編寫這些編輯的指令碼，請使用 **azdata bdc config** 命令。 此文章說明如何透過修改部署設定檔來設定巨量資料叢集部署。 它會提供如何針對不同案例變更設定的範例。 如需設定檔如何用於部署中的詳細資訊，請參閱[部署指導](deployment-guidance.md#configfile)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 - [安裝 azdata](deploy-install-azdata.md)。
 
@@ -174,16 +174,16 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 
 ## <a id="podplacement"></a> 使用 Kubernetes 標籤設定 Pod 位置
 
-您可以在具有特定資源以容納各種不同工作負載需求的 Kubernetes 節點上控制 Pod 位置。 例如，您可能會想確保存放集區 Pod 會被置於具有較多儲存體的節點上，或是將 SQL Server 主要執行個體置於具有較高 CPU 和記憶體資源的節點上。 在此情況下，您必須先建置具有不同硬體類型的異質 Kubernetes 叢集，然後相對應地[指派節點標籤](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) \(英文\)。 在部署巨量資料叢集時，您可以在叢集部署設定檔中於集區層級指定相同的標籤。 Kubernetes 接著將會處理在符合指定標籤的節點上關聯 Pod 的作業。
+您可以在具有特定資源以容納各種不同工作負載需求的 Kubernetes 節點上控制 Pod 位置。 例如，您可能會想確保存放集區 Pod 會被置於具有較多儲存體的節點上，或是將 SQL Server 主要執行個體置於具有較高 CPU 和記憶體資源的節點上。 在此情況下，您必須先建置具有不同硬體類型的異質 Kubernetes 叢集，然後相對應地[指派節點標籤](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) \(英文\)。 在部署巨量資料叢集時，您可以在叢集部署設定檔中於集區層級指定相同的標籤。 Kubernetes 接著將會處理在符合指定標籤的節點上關聯 Pod 的作業。 需要新增至 kubernetes 叢集中節點的特定標籤索引鍵是以**mssql**為全叢集的。 此標籤本身的值可以是您選擇的任何字串。
 
-下列範例會示範如何編輯自訂設定檔，以包含適用於 SQL Server 主要執行個體的節點標籤設定。 請注意，內建設定中並沒有 *nodeLabel* 機碼，因此您必須手動編輯自訂設定檔，或是建立修補檔並將它套用到自訂設定檔。
+下列範例顯示如何編輯自訂設定檔, 以包含 SQL Server 主要實例、計算集區、資料集區 & 儲存集區的節點標籤設定。 請注意，內建設定中並沒有 *nodeLabel* 機碼，因此您必須手動編輯自訂設定檔，或是建立修補檔並將它套用到自訂設定檔。 SQL Server 的主要實例 pod 將會部署在包含具有值 [ **bdc-主機**] 之 [ **mssql-** 全叢集] 標籤的節點上。 計算集區和資料集區 pod 會部署在包含標籤為 [ **mssql-** 全叢集] 且值為 **[bdc-sql**] 的節點上。 存放集區 pod 會部署在包含標籤為**mssql-** 全叢集且值為**bdc 儲存體**的節點上。
 
 搭配下列內容在您目前的目錄中建立名為 **patch.json** 的檔案：
 
 ```json
 {
   "patch": [
-     {
+    {
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
@@ -197,8 +197,35 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
              "port": 31433
             }
           ],
-        "nodeLabel": "<yourNodeLabel>"
-       }
+        "nodeLabel": "bdc-master"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Compute')].spec",
+      "value": {
+    "type": "Compute",
+        "replicas": 1,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Data')].spec",
+      "value": {
+    "type": "Data",
+        "replicas": 2,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+    "type": "Storage",
+        "replicas": 3,
+        "nodeLabel": "bdc-storage"
+      }
     }
   ]
 }
