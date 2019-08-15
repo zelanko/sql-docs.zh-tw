@@ -10012,12 +10012,12 @@
           items:
             - name: SSMS 支援原則
               href: ssms/support-policy.md
-            - name: 意見反應與說明
-              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
             - name: SSMS 中的使用者協助
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 匿名的使用量資料
               href: ssms/sql-server-management-studio-telemetry-ssms.md
+            - name: 意見反應 >
+              href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
         - name: 安裝 sqlpackage
