@@ -1,5 +1,5 @@
 ---
-title: 伺服器記憶體伺服器組態選項 | Microsoft Docs
+title: 伺服器記憶體設定選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c366a239ca3459bc8fe4517736a4c0bcc64301cb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475970"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028695"
 ---
-# <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
+# <a name="server-memory-configuration-options"></a>伺服器記憶體設定選項
   您可以使用 [最小伺服器記憶體] 和 [最大伺服器記憶體] 這兩個伺服器記憶體選項，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的 SQL Server 處理序重新設定 SQL Server Memory Manager 所管理的記憶體數量 (以 MB 為單位)。  
   
  [最小伺服器記憶體] 的預設值是 0，而 [最大伺服器記憶體] 的預設值是 2147483647 MB。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以根據可用的系統資源，動態變更其記憶體需求。  
   
 > [!NOTE]  
->  將 [最大伺服器記憶體] 設定為最小值可能會大幅降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能，甚至讓伺服器無法啟動。 如果您變更此選項後無法啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 **-f** 啟動選項啟動它，並將 [最大伺服器記憶體] 重設為先前的值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
+> 將 [最大伺服器記憶體] 設定為最小值可能會大幅降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能，甚至讓伺服器無法啟動。 如果您變更此選項後無法啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 **-f** 啟動選項啟動它，並將 [最大伺服器記憶體] 重設為先前的值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
   
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 動態使用記憶體時，它會定期查詢系統以判定可用的記憶體量。 維持這個可用記憶體數量可避免作業系統 (OS) 進行分頁。 如果可用記憶體少於這個數量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將記憶體釋出給 OS。 如果可用記憶體多於這個數量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會配置更多記憶體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有當工作負載需要更多的記憶體時，它才會增加記憶體。休息中的伺服器不會增加其虛擬位址空間的大小。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68475970"
 
 <sup>2</sup> 如需在目前主機中，為指定數量之親和 CPU 而計算出的預設背景工作執行緒數目相關資訊，請參閱如何[設定最大背景工作執行緒伺服器設定選項](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文件頁面。
 
-<sup>3</sup> 如需 *-g* 啟動參數的資訊，請參閱[資料庫引擎服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)的文件頁面。 Aplicable 僅限32位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]至[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。
+<sup>3</sup> 如需 *-g* 啟動參數的資訊，請參閱[資料庫引擎服務啟動選項](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)的文件頁面。 僅適用於 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。
 
 |OS 類型|最**大伺服器記憶體**允許的最小記憶體數量|  
 |-------------|----------------------------------------------------------------|  

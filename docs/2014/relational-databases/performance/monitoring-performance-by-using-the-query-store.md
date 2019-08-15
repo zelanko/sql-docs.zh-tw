@@ -10,37 +10,37 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150797"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028600"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   查詢存放區功能為 DBA 提供查詢計劃選擇及效能的深入了解。 它能讓您快速找出因為查詢計劃中的變更所導致的效能差異，以簡化效能疑難排解。 該功能會自動擷取查詢、計劃及執行階段統計資料的記錄，並會保留這些記錄供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 選項，可設定查詢存放區。  
   
 ||  
 |-|  
-|**適用於**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([取得](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+|**適用於**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([取得此](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)檔案)。|  
   
 > [!IMPORTANT]  
->  目前是預覽功能。 若要使用查詢存放區，您必須同意並了解運作查詢存放區受到授權合約預覽條款 (例如，Enterprise 合約、Microsoft Azure 合約或 Microsoft 線上訂用帳戶合約) 的限制，以及任何適用的 [Microsoft Azure Preview 增補使用條款](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)。  
+>  目前是預覽功能。 若要使用查詢存放區，您必須同意並了解運作查詢存放區受到授權合約預覽條款 (例如，Enterprise 合約、Microsoft Azure 合約或 Microsoft 線上訂用帳戶合約) 的限制，以及任何適用的 [Microsoft Azure Preview 增補使用條款](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)。  
   
 ##  <a name="Enabling"></a> 啟用查詢存放區  
  新的資料庫預設不會啟用查詢存放區。  
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查詢存放區頁面  
   
-1.  在物件總管中，於伺服器上按一下滑鼠右鍵，然後按一下 [屬性]  。 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版本。)  
+1.  在物件總管中，於伺服器上按一下滑鼠右鍵，然後按一下 [屬性]。 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版本。)  
   
-2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。  
+2.  在 [資料庫屬性] 對話方塊中，選取 [查詢存放區] 頁面。  
   
-3.  在 [啟用]  方塊中，選取 [True]  。  
+3.  在 [啟用] 方塊中，選取 [True]。  
   
 #### <a name="by-using-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
-1.  使用 `ALTER DATABASE` 陳述式可啟用查詢存放區。 例如：  
+1.  使用 `ALTER DATABASE` 陳述式可啟用查詢存放區。 例如:  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -90,7 +90,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- 選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]** [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
+ 選取 [迴歸查詢]，開啟 **中的 [迴歸查詢]** [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- 請注意，不允許任意值-您應該使用下列其中一項：1、 5、 10、 15、 30 和 60。  
+ 請注意, 不允許任意值, 您應該使用下列其中一項:1、5、10、15、30和60。  
   
  透過 `sys.database_query_store_options` 檢視，即可看到新的間隔值。  
   
@@ -277,16 +277,16 @@ DEALLOCATE adhoc_queries_cursor;
   
  以上範例使用 `sp_query_store_remove_query` 擴充預存程序，來移除不必要的資料。 您也可以使用其他兩項程序。  
   
--   `sp_query_store_reset_exec_stats` -清除指定計劃的執行階段統計資料。  
+-   `sp_query_store_reset_exec_stats`-清除指定計劃的執行時間統計資料。  
   
--   `sp_query_store_remove_plan` -移除單一計劃。  
+-   `sp_query_store_remove_plan`-移除單一計畫。  
   
 
   
 ###  <a name="Peformance"></a> 效能稽核及疑難排解  
  因為查詢存放區會透過執行查詢來保留編譯記錄與執行階段計量，所以可以很輕易回答許多有關您工作負載的不同問題。  
   
- **最後一個*n*資料庫上執行的查詢。**  
+ **最近*n*個在資料庫上執行的查詢。**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -301,7 +301,7 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;  
 ```  
   
- **針對每個查詢的執行次數。**  
+ **每個查詢的執行次數。**  
   
 ```  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
@@ -317,7 +317,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **前一個小時內最長的平均執行時間的查詢數目。**  
+ **在最後一個小時內, 平均執行時間最長的查詢數目。**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -334,7 +334,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **過去 24 小時內，相對應的平均資料列計數與執行計數，讀取的最大的平均實體 io 的查詢數目。**  
+ **過去24小時內, 有相對應的平均資料列計數和執行計數, 且平均實體 IO 讀取量最大的查詢數目。**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -353,7 +353,7 @@ WHERE rsi.start_time >= DATEADD(hour, -24, GETUTCDATE())
 ORDER BY rs.avg_physical_io_reads DESC;  
 ```  
   
- **具有多個計劃的查詢。** 這些查詢特別有趣的原因是，它們都是因為計劃選擇變更而導致低下的對象。 下列查詢能找出這些查詢以及所有計劃：  
+ **具有多個計畫的查詢。** 這些查詢特別有趣的原因是，它們都是因為計劃選擇變更而導致低下的對象。 下列查詢能找出這些查詢以及所有計劃：  
   
 ```  
 WITH Query_MultPlans  
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **最近效能低下的查詢 （與時間中的不同點）。** 下列查詢範例會傳回所有過去 48 小時內，因為計劃選擇變更而導致執行時間為兩倍的查詢。 查詢會並列比較所有執行階段。  
+ **最近回歸的查詢 (比較不同的時間點)。** 下列查詢範例會傳回所有過去 48 小時內，因為計劃選擇變更而導致執行時間為兩倍的查詢。 查詢會並列比較所有執行階段。  
   
 ```  
 SELECT   
@@ -421,7 +421,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  如果您想要查看所有低下的效能 (不只因方案選擇變更的相關項目)，只要從上一個查詢移除條件 `AND p1.plan_id <> p2.plan_id` 即可。  
   
- **最近效能低下的查詢 （比較最近的執行與記錄的執行）。** 下一個查詢會依據執行時段，比較查詢的執行。 在此特別的範例中，查詢會比較最近期間內 (1 小時) 與記錄期間 (前一天) 的執行，並找出因 additional_duration_workload 所引發的項目。 此度量會計算最近的平均執行與記錄的平均執行之間的差，乘以最近執行的數目。 它實際上代表與記錄相較，最近的執行引發了多少額外的時間：  
+ **最近回歸的查詢 (比較最近的與歷程記錄執行)。** 下一個查詢會依據執行時段，比較查詢的執行。 在此特別的範例中，查詢會比較最近期間內 (1 小時) 與記錄期間 (前一天) 的執行，並找出因 additional_duration_workload 所引發的項目。 此度量會計算最近的平均執行與記錄的平均執行之間的差，乘以最近執行的數目。 它實際上代表與記錄相較，最近的執行引發了多少額外的時間：  
   
 ```  
 --- "Recent" workload - last 1 hour  

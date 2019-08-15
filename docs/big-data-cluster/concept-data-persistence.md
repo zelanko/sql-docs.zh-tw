@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dcc30e8d86a1a767291b410df7cfd3aa42edf27f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470998"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028596"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上使用 SQL Server 2019 巨量資料叢集的資料持續性
 
@@ -45,7 +45,7 @@ SQL Server 巨量資料叢集耗用這些永久性磁碟區的方式是透過使
     }
 ```
 
-巨量資料叢集的部署將會使用永續性儲存體來儲存各種元件的資料、中繼資料和記錄。 您可以自訂在部署過程中建立的永久性磁碟區宣告大小。 建議的最佳做法是使用具有保留  [回收原則](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy) \(英文\) 的儲存體類別。
+巨量資料叢集的部署將會使用永續性儲存體來儲存各種元件的資料、中繼資料和記錄。 您可以自訂在部署過程中建立的永久性磁碟區宣告大小。 建議的最佳做法是使用具有保留[回收原則](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy) \(英文\) 的儲存體類別。
 
 > [!NOTE]
 > 在 CTP 3.2 中，您無法修改部署後的儲存體組態設定。 此外，僅支援整個叢集的 `ReadWriteOnce` 存取模式。
@@ -60,7 +60,7 @@ SQL Server 巨量資料叢集耗用這些永久性磁碟區的方式是透過使
 AKS 隨附[兩個內建的儲存類別](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) \(部分機器翻譯\) **預設**和**受控 (進階)** ，以及適用於它們的動態佈建程式。 您可以指定其中一個，或建立您自己的儲存類別，以部署已啟用永續性儲存體的巨量資料叢集。 根據預設，aks *aks-dev-test* 的內建叢集組態檔會隨附永續性儲存體組態，以使用**預設**儲存類別。
 
 > [!WARNING]
-> 使用內建儲存類別**預設**和**受控 (進階)** 建立的永久性磁碟區具有「刪除」  的回收原則。 因此，當您刪除 SQL Server 巨量資料叢集時，永久性磁碟區宣告也會遭到刪除，然後永久性磁碟區也是。 您可以使用 **azure-disk** 佈建程式搭配「保留」  回收原則來建立自訂儲存類別，如[此文章](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) \(英文\) 所示。
+> 使用內建儲存類別**預設**和**受控 (進階)** 建立的永久性磁碟區具有「刪除」的回收原則。 因此，當您刪除 SQL Server 巨量資料叢集時，永久性磁碟區宣告也會遭到刪除，然後永久性磁碟區也是。 您可以使用 **azure-disk** 佈建程式搭配「保留」回收原則來建立自訂儲存類別，如[此文章](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) \(英文\) 所示。
 
 
 ## <a name="minikube-storage-class"></a>Minikube 儲存類別

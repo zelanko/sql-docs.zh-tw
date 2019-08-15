@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9444842081456563f411ad618f32b8dbd59f7513
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: aaccdff9d5debe30eacfddfd8423a0a57b8a37fb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426438"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028558"
 ---
 # <a name="install-azdata-to-manage-sql-server-big-data-clusters"></a>安裝 azdata 以管理 SQL Server 巨量資料叢集
 
@@ -25,13 +25,13 @@ ms.locfileid: "68426438"
 ## <a id="prerequisites"></a> 必要條件
 
 **azdata** 是一種以 Python 撰寫的命令列公用程式，可讓叢集系統管理員透過 REST API 啟動和管理巨量資料叢集。 所需的最低 Python 版本為 3.5。 您也必須擁有用於下載及安裝 **azdata** 工具的 `pip`。 下列說明提供適用於 Windows 和 Ubuntu 的範例。 如需在其他平台上安裝 Python，請參閱 [Python 文件](https://wiki.python.org/moin/BeginnersGuide/Download)。
-此外，您也必須安裝並更新「要求」  的最新版本 Python 套件：
+此外，您也必須安裝並更新「要求」的最新版本 Python 套件：
 ```bash
 pip3 install -U requests
 ```
 
 > [!IMPORTANT]
-> 如果您要安裝較新版本的巨量資料叢集，您必須在升級 **azdata** 並安裝新版本「之前」  ，先備份您的資料並刪除舊叢集。 如需詳細資訊，請參閱[升級為新版本](deployment-upgrade.md)。
+> 如果您要安裝較新版本的巨量資料叢集，您必須在升級 **azdata** 並安裝新版本「之前」，先備份您的資料並刪除舊叢集。 如需詳細資訊，請參閱[升級為新版本](deployment-upgrade.md)。
 
 ## <a id="windows"></a> Windows azdata 安裝
 
@@ -71,8 +71,8 @@ pip3 install -U requests
 1. 安裝必要的 Python 套件：
 
    ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
+   sudo apt-get update && \
+   sudo apt-get install -y python3 && \
    sudo apt-get install -y python3-pip
    ```
 

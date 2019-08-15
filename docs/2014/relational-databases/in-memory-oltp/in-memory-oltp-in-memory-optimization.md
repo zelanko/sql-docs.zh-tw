@@ -13,12 +13,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bcd8c20039b048cf717c24981124ffd61cf51f4
-ms.sourcegitcommit: 6f8f975f7f97cd12fa008b05dc8d52cd1e94577f
+ms.openlocfilehash: bc65a8a9c17c7e6a7c37e6f08675f89d1b113c8d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251009"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028647"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
 
@@ -26,7 +26,7 @@ ms.locfileid: "67251009"
   
 |||  
 |-|-|  
-|![Azure 虛擬機器](../../master-data-services/media/azure-virtual-machine.png "Azure 虛擬機器")|您要試用 SQL Server 2016 嗎？ 註冊 Microsoft Azure，然後前往 **[這裡](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 啟動安裝有 SQL Server 2016 的虛擬機器。 當您完成時，您可以刪除虛擬機器。|  
+|![Azure 虛擬機器](../../master-data-services/media/azure-virtual-machine.png "Azure 虛擬機器")|您要試用 SQL Server 2016 嗎？ 註冊 Microsoft Azure，然後前往 **[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 啟動安裝有 SQL Server 2016 的虛擬機器。 當您完成時, 可以刪除虛擬機器。|  
   
  若要使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]，您可將經常存取的資料表定義為記憶體最佳化。 記憶體最佳化資料表是可完全交易且持久的，並能利用與以磁碟為基礎的資料表一樣的方式使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 來存取。 查詢可以參考記憶體最佳化資料表和以磁碟為基礎的資料表。 交易可以更新記憶體最佳化資料表和以磁碟為基礎的資料表中的資料。 僅參考記憶體最佳化資料表的預存程序可原生編譯為機器碼，以進一步提升效能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎的設計目的是，在衍生自高度向外擴充中間層的 OLTP 類型交易發生極高的工作階段並行處理時使用。 為達成此目的，它使用了不需閂鎖的資料結構，以及開放式、多版本的並行控制。 結果是可針對資料庫交易進行線性比例調整來產生可預期、亞毫秒低延遲及高輸送量。 實際效能獲益取決於許多因素，但通常可以獲得 5 到 20 倍的效能提升。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67251009"
 |低度延遲。|要求一般資料庫解決方案無法達成的低度延遲商務交易。|排除競爭。<br /><br /> 將程式碼執行時間縮到最短。<br /><br /> 低度延遲的程式碼執行。<br /><br /> 有效率的資料擷取。|  
 |工作階段狀態管理。|經常性插入、更新及點查閱。<br /><br /> 從許多無狀態的 Web 伺服器大範圍載入。|排除競爭。<br /><br /> 有效率的資料擷取。<br /><br /> 使用非持久性的資料表時，選擇性地減少或移除 IO|  
   
- 如需有關案例所在[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]會產生最大的效能提升，請參閱 <<c2> [ 記憶體內部 OLTP-一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 如需[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]將產生最佳效能提升之案例的詳細資訊, 請參閱[記憶體內部 OLTP-一般工作負載模式和遷移考慮](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 對於執行短期交易的 OLTP 效能改善效果最好。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67251009"
   
 -   消除邏輯鎖定的開放式並行存取控制。  
   
--   不需鎖定的物件，可消除所有實體的鎖定與閂鎖。 執行交易工作的執行緒不使用鎖定或閂鎖進行並行存取控制。  
+-   不需鎖定的物件，可消除所有實體的鎖定與閂鎖。 執行交易式工作的執行緒不會使用鎖定或閂鎖來進行並行存取控制。  
   
 -   原生編譯的預存程序，在存取記憶體最佳化資料表時，其效能明顯優於解譯的預存程序。  
   
@@ -85,13 +85,13 @@ ms.locfileid: "67251009"
   
  有關 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 的詳細資訊可於下列位置取得：  
   
--   [Microsoft??SQL Server??2014 產品指南](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft？SQL Server？2014產品指南](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
 -   [記憶體內部 OLTP 部落格](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 -   [記憶體內部 OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [SQL Server 記憶體內部 OLTP 內部概觀](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
+-   [SQL Server 記憶體中 OLTP 內部總覽](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
     <!--
          (https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
          (/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016?view=sql-server-2016)

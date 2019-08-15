@@ -1,21 +1,21 @@
 ---
-title: 獨立 R Server 或 Machine Learning Server 安裝
+title: 什麼是獨立 Machine Learning Server 或 SQL Server 中的 R 伺服器？
 description: SQL Server 設定中的獨立 R 伺服器和 Machine Learning Server 簡介
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 08/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d4843aaf14a944e7beef73ef1330985666007498
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: cb7aef4502f42bc91067cdcbd598b9b2ea7477cf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715108"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028607"
 ---
-# <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>SQL Server 中的 R Server (獨立式) 和 Machine Learning Server (獨立式)
+# <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>什麼是獨立 Machine Learning Server 或 SQL Server 中的 R 伺服器？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 提供獨立 R 伺服器的安裝支援, 或獨立于 SQL Server 執行的 Machine Learning Server。 根據您的 SQL Server 版本而定, 獨立伺服器具有開放原始碼 R 和可能 Python 的基礎, 並與 Microsoft 中的高效能程式庫重迭, 以新增大規模的統計和預測性分析。 程式庫也會啟用在 R 或 Python 中編寫腳本的機器學習工作。 
@@ -73,7 +73,7 @@ R 和 Python 開發人員通常會選擇獨立伺服器, 以超越開放原始�
   
   + [探索在25個函數中的 R 和 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler):開始使用基本 R 命令, 然後進行 RevoScaleR 可散發分析函式的進度, 以提供高效能和調整 R 解決方案。 包含許多最熱門 R 模型建立套件 (例如 	K-Means 叢集、決策樹及決策樹系) 的可平行處理版本，以及資料操作工具。
 
-  + [入門使用 microsoftml Python 套件](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)進行二元分類的範例:使用來自 microsoftml 的函式和知名的乳癌癌症資料集, 建立二元分類模型。
+  + [快速入門：使用 microsoftml Python 套件](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)進行二元分類的範例:使用來自 microsoftml 的函式和知名的乳癌癌症資料集, 建立二元分類模型。
 
 選擇工作的最佳語言。 R 適用于難以使用 SQL 來執行的統計計算。 對於資料的集合型作業, 請利用的功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來達到最大效能。 使用記憶體內部資料庫引擎, 以快速計算資料行。
 

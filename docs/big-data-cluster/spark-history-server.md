@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aabf68c2f1294dfb3873fdfcbec41827e4f80fec
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: abf6b2b3383377a0647f873a8c4a1f6aa9508455
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731082"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028550"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>在 Spark 歷程記錄伺服器中的 SQL Server 巨量資料叢集上，對 Spark 應用程式進行偵錯和診斷
 
@@ -203,5 +203,5 @@ Spark 歷程記錄伺服器具有下列已知問題：
 
 ## <a name="next-steps"></a>後續步驟
 
-* [開始使用 SQL Server 巨量資料叢集](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [開始使用 SQL Server 巨量資料叢集](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [設定 Spark 設定](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
