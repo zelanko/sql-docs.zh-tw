@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888071"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493768"
 ---
 # <a name="defining-and-browsing-perspectives"></a>定義和瀏覽檢視方塊
   檢視方塊可以針對特定的用途，簡化 Cube 的檢視。 根據預設，使用者可以看到 Cube 中他們擁有權限的所有元素。 當使用者檢視整個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 時，他們所檢視的就是該 Cube 的預設檢視方塊。 整個 Cube 的檢視可能非常複雜，讓使用者難以瀏覽，尤其有的使用者只需要與一小部分的 Cube 互動，即可滿足他們的商業智慧和報告需求。  
@@ -191,7 +191,7 @@ ms.locfileid: "68888071"
      ![網際網路銷售 和 轉售商銷售的量值](../../2014/tutorials/media/l9-perspectives-4.gif "網際網路銷售 和 轉售商銷售的量值")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [定義和瀏覽翻譯](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [定義和瀏覽翻譯](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [視角](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

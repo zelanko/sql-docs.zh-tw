@@ -10,12 +10,12 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9273f35ccca51d92461783f1110890b161a85059
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888466"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493980"
 ---
 # <a name="browsing-the-deployed-cube"></a>瀏覽已部署的 Cube
   在下列工作中，您將瀏覽 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 我們的分析會跨多個維度比較量值，因此您將使用 Excel 樞紐分析表瀏覽資料。 使用樞紐分析表可讓您將客戶、日期和產品資訊放在不同的軸上，讓您可以看到跨特定時間週期、客戶人口統計資料和產品線檢視時，[網際網路銷售] 如何變更。  
@@ -45,6 +45,6 @@ ms.locfileid: "68888466"
      ![依區域和產品線的網際網路銷售](../../2014/tutorials/media/l3-cube-browser-finish.gif "依區域和產品線的網際網路銷售")  
   
 ## <a name="next-lesson"></a>下一課  
- [第 4 課：定義 Advanced 屬性和維度屬性](https://docs.microsoft.com/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties)  
+ [第 4 課：定義 Advanced 屬性和維度屬性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

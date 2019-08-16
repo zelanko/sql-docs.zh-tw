@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888187"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493878"
 ---
 # <a name="defining-calculated-members"></a>定義導出成員
   導出成員是根據 Cube 資料、算術運算子、數字和函數組合所定義的維度成員或量值群組成員。 例如，您可以建立一個導出成員，計算 Cube 中兩個實體量值的總和。 導出成員定義是儲存在 Cube 中，但其值是在查詢時計算。  
@@ -287,7 +287,7 @@ ms.locfileid: "68888187"
      請注意，配件的銷售量逐漸上升中，但這些銷售在總銷售量中只佔一小部分。 另外也請注意，配件銷售的毛利率高於自行車的毛利率。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [定義命名集](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [定義命名集](lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Acwp](multidimensional-models-olap-logical-cube-objects/calculations.md)   

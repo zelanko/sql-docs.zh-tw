@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: a1e1b4dc2f66baf0ef7486a3105573d673a5eb7f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6552e6e2ed1ad168fb5e5ff9c0715227870bcb92
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891461"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493950"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商業智慧 (BI) 工具進行分析和報告
 
@@ -31,7 +31,7 @@ ms.locfileid: "68891461"
 |**自助 BI**|分析師/使用者||||||  
 |輕鬆地探索及存取公用和公司資料||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure 資料目錄](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
 |建立功能強大的資料模型||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|執行自助式預測分析||||||[適用于 Excel 的資料採礦增益集](https://docs.microsoft.com/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins)|  
+|執行自助式預測分析||||||[適用于 Excel 的資料採礦增益集](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |將資料視覺化及探索資料||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |使用自然語言查詢發問|||||[問與答](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
 |使用行動裝置存取報表||||[HTML 5 (支援檢視 <10 MB 檔案)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (支援檢視 <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 裝置上的 Power BI 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 裝置上的 Power BI 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Power BI for Windows 10 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  

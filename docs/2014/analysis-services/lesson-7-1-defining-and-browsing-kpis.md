@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888083"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493797"
 ---
 # <a name="defining-and-browsing-kpis"></a>定義和瀏覽 KPI
   若要定義關鍵效能指標 (KPI)，您必須先定義 KPI 名稱以及與該 KPI 相關聯的量值群組。 KPI 可以和所有的量值群組或單一量值群組相關聯。 接著就定義 KPI 的下列元素：  
@@ -268,6 +268,6 @@ ms.locfileid: "68888083"
      北美地區轉售商 Q3 CY 2007 自行車銷售的毛利率隨即出現。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 8 課：定義動作](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
+ [第 8 課：定義動作](lesson-8-defining-actions.md)  
   
   

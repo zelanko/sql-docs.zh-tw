@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 90db0be2372c3af9d3d079a187e4b3cbd8147566
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892131"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494068"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 資料定義 - CREATE MEMBER
 
@@ -114,7 +114,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|當導出成員參考另一個導出成員 (亦即，導出成員彼此交叉) 時，解析導出成員的順序。|  
 |FORMAT_STRING|用戶端應用程式在顯示資料格值時可以使用的 Office 樣式格式字串。|  
 |VISIBLE|指出是否可以看見結構描述資料列集中導出成員的值。 可見的匯出成員可以使用[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函數新增至集合。 非零的值代表可以看見導出成員。 這個屬性的預設值是*可見*的。<br /><br /> 不可見的導出成員 (此值會設為零) 一般會在較為複雜的導出成員中作為中間步驟。 其他成員類型 (例如，量值) 也可以參考這些導出成員。|  
-|NON_EMPTY_BEHAVIOR|解析空白資料格時，用以決定導出成員行為的量值或集合。<br /><br /> **警告此屬性\*已被取代。 \* \* \*** 請勿設定。 如需詳細資訊，請參閱 [SQL Server 2016 中已被取代的 Analysis Services 功能](https://docs.microsoft.com/analysis-services/deprecated-analysis-services-features-in-sql-server-2016) 。|  
+|NON_EMPTY_BEHAVIOR|解析空白資料格時，用以決定導出成員行為的量值或集合。<br /><br /> **警告此屬性\*已被取代。 \* \* \*** 請勿設定。 如需詳細資訊, 請參閱[SQL Server 2014 中已淘汰的 Analysis Services 功能](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014)。|  
 |CAPTION|用戶端應用程式當做成員標題使用的字串。|  
 |DISPLAY_FOLDER|識別用戶端應用程式用於顯示成員之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 針對所提供[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的工具和用戶端, 反斜線\\() 為層級分隔符號。 若要針對已定義的成員提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾。|  
 |ASSOCIATED_MEASURE_GROUP|與此成員建立關聯之量值群組的名稱。|  

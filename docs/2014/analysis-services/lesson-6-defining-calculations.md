@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888051"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493841"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 課：定義計算
   在這一課中，您要學習定義計算，它們是多維度運算式 (MDX) 運算式或指令碼。 計算可讓您定義導出成員、命名集，以及執行其他指令碼命令，以便擴充 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 的功能。 例如，您可以執行指令碼命令，先定義 Subcube，然後再將計算指派給 Subcube 中的資料格。  
@@ -45,14 +45,14 @@ ms.locfileid: "68888051"
   
  這一課包含下列工作：  
   
- [定義導出成員](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
+ [定義導出成員](lesson-6-1-defining-calculated-members.md)  
  在這項工作中，您要學習定義導出成員。  
   
- [定義命名集](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [定義命名集](lesson-6-2-defining-named-sets.md)  
  在這項工作中，您要學習定義命名集。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 7 課：定義關鍵效能指標&#40;kpi&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [第 7 課：定義關鍵效能指標&#40;kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程案例](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   

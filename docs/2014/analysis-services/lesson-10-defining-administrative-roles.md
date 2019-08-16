@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888453"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493958"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>第 10 課：定義系統管理角色
   在這一課中，您要學習定義管理工作的安全性角色。  
@@ -25,7 +25,7 @@ ms.locfileid: "68888453"
   
  這一課包含下列工作：  
   
- [授與處理資料庫權限](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
+ [授與處理資料庫權限](lesson-10-granting-process-database-permissions.md)  
  在這項工作中，您要定義有權處理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的安全性角色，然後測試這個安全性角色。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -10,15 +10,15 @@ ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db52caa0670af868cd5986c85890c291e5f6aac7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888310"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493898"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>依次要屬性來排序屬性成員
-  在第 3 課，您學會如何根據名稱或索引鍵值排序屬性成員。 您也學會如何使用複合成員索引鍵來影響屬性成員和排序次序。 如需詳細資訊，請參閱 [修改 Date 維度](https://docs.microsoft.com/analysis-services/lesson-3-4-modifying-the-date-dimension)。 不過，如果屬性的名稱或索引鍵都無法提供想要的排序次序，您可以使用次要屬性來達成所需的排序次序。 藉由定義屬性之間的關聯性，您可以使用次要屬性排序第一個屬性的成員。  
+  在第 3 課，您學會如何根據名稱或索引鍵值排序屬性成員。 您也學會如何使用複合成員索引鍵來影響屬性成員和排序次序。 如需詳細資訊，請參閱 [修改 Date 維度](lesson-3-4-modifying-the-date-dimension.md)。 不過，如果屬性的名稱或索引鍵都無法提供想要的排序次序，您可以使用次要屬性來達成所需的排序次序。 藉由定義屬性之間的關聯性，您可以使用次要屬性排序第一個屬性的成員。  
   
  屬性關聯性定義屬性之間的關聯性或相依性。 在以單一關聯式資料表為基礎的維度中，所有屬性通常都是透過索引鍵屬性而彼此相關。 這是因為維度的所有屬性會提供有關成員的資訊，這些成員會由維度的索引鍵屬性連結到各個相關量值群組之事實資料表中的事實。 在以多份資料表為基礎的維度中，屬性通常是依據資料表之間的聯結索引鍵來連結。 如果基礎資料支援屬性關聯性，相關屬性可用來指定排序次序。 例如，您可以建立提供相關屬性排序邏輯的新屬性。  
   

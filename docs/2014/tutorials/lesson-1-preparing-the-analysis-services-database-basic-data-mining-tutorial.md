@@ -10,12 +10,12 @@ ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 15cd000f0bcf61743301d130709be29b327efcdc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 47613c905c492c87215b2759b1ed4fab46694f83
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892547"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493998"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>第 1 課：準備 Analysis Services 資料庫 (基本資料採礦教學課程)
   您是在中[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]設計商業智慧應用程式之人員的新員工。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]想要利用您[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的資料採礦經驗, 探索已購買自行車之人員的有趣且可操作的資訊。 然後，還希望您預測未來最有可能購買自行車的潛在客戶。  
@@ -40,6 +40,6 @@ ms.locfileid: "68892547"
  [多維度模型中的資料來源檢視](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)   
  [資料來源支援&#40;SSAS 多維度&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)   
  [建立 Analysis Services 專案 &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [建立 Analysis Services 專案](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)  
+ [建立 Analysis Services 專案](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  
   
   

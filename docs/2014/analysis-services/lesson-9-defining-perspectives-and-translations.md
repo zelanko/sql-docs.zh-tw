@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 914140df4460741f8441ce899a8e73a420806169
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887888"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493750"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 課：定義檢視方塊和翻譯
   在這一課中，您要學習定義檢視方塊和翻譯。 您可以定義檢視方塊，來減少 Cube 明顯的複雜性，以及定義翻譯，讓使用者自己選擇語言來檢視 Cube 中繼資料。  
@@ -28,7 +28,7 @@ ms.locfileid: "68887888"
  [定義和瀏覽檢視方塊](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  在這項工作中，您要定義和瀏覽檢視方塊，來簡化特定使用者的 Cube 檢視。  
   
- [定義和瀏覽翻譯](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [定義和瀏覽翻譯](lesson-9-2-defining-and-browsing-translations.md)  
  在這項工作中，您要定義和瀏覽特定語言的特定中繼資料翻譯。  
   
 ## <a name="next-lesson"></a>下一課  

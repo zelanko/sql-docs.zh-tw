@@ -10,12 +10,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1d5afebb0f0bf69990a0e93bca49d95f7a4c6b5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888288"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493937"
 ---
 # <a name="defining-a-referenced-relationship"></a>定義參考關聯性
   本教學課程最特別要注意的事就是，您定義的每一個 Cube 維度所依據的資料表，是透過主索引鍵對外部索引鍵的關聯性，直接連結到量值群組的事實資料表。 在本主題的工作中，您會透過 [轉售商] 維度 (稱為「參考維度」)，將 [地理位置] 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
@@ -121,7 +121,7 @@ ms.locfileid: "68888288"
      [![定義關聯性] 對話方塊][(../../2014/tutorials/media/l5-referencedrelationship-5.gif "定義關聯性] 對話方塊")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [定義事實關聯性](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)  
+ [定義事實關聯性](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [中，使用 [維度設計師] 的](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

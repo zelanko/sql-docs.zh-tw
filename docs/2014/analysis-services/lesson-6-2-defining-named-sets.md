@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888133"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493888"
 ---
 # <a name="defining-named-sets"></a>定義命名集
   命名集是指傳回一組維度成員的多維度運算式 (MDX) 運算式。 您可以定義命名集，將它們儲存為 Cube 定義的一部分；也可以在用戶端應用程式建立命名集。 您可以結合 Cube 資料、算術運算子、數字和函數，來建立命名集。 使用者可以在用戶端應用程式中將命名集用於 MDX 查詢，也可以用於定義 Subcube 中的集合。 Subcube 是指交叉聯結集的集合，它會將 Cube 空間限制為針對後續陳述式定義的子空間。 定義限制的 Cube 空間是 MDX 指令碼的基本概念。  
@@ -77,7 +77,7 @@ ms.locfileid: "68888133"
   
 9. 在屬性視窗中, 將屬性`DiscretizationMethod`變更為 [**自動**], 然後將`DiscretizationBucketCount`屬性變更`5`為。 如需詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
   
-10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services 教學課程)]。  
   
 11. 順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師]，然後按一下 [計算] 索引標籤之工具列上的 [重新連接]。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "68888133"
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>利用新的命名集來瀏覽 Cube  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services 教學課程)]。  
   
 2.  當部署順利完成時，請依序按一下 [瀏覽器] 索引標籤和 [重新連接]。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "68888133"
      ![包含兩個命名集的篩選窗格](../../2014/tutorials/media/l6-named-set-05.gif "包含兩個命名集的篩選窗格")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [第 7 課：定義關鍵效能指標&#40;kpi&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [第 7 課：定義關鍵效能指標&#40;kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Acwp](multidimensional-models-olap-logical-cube-objects/calculations.md)   

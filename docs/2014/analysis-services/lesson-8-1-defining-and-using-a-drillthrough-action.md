@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888109"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493819"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定義和使用鑽研動作
   依據事實維度測量事實資料的維度，但卻未正確篩選查詢傳回的資料，可能會降低查詢效能。 為了避免這種情況，您可以定義鑽研動作，以便限制傳回的資料列總數。 這樣做將會大幅改善查詢效能。  
@@ -143,13 +143,13 @@ ms.locfileid: "68888109"
      ![傳送至 Adam Powell 的訂單](../../2014/tutorials/media/l8-action8.gif "傳送至 Adam Powell 的訂單")  
   
 ## <a name="next-lesson"></a>下一課  
- [第9課:定義觀點和翻譯](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
+ [第9課:定義觀點和翻譯](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [動作&#40;Analysis Services-多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [多維度模型中的動作](multidimensional-models/actions-in-multidimensional-models.md)   
  [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [定義事實關聯性](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
+ [定義事實關聯性](lesson-5-2-defining-a-fact-relationship.md)   
  [定義事實關聯性及事實關聯性屬性](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   
