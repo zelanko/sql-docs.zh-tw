@@ -10,12 +10,12 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 49a62fb647b7b1a1579103f96907d0635ecc635f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893606"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530885"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>使用資料列篩選器實作動態安全性
   在這個補充課程中，您將建立實作動態安全性的其他角色。 動態安全性提供以使用者目前登入的使用者名稱或登入識別碼為主的資料列層級安全性。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular)。  
@@ -28,7 +28,7 @@ ms.locfileid: "68893606"
   
  完成本課程的估計時間:**30分鐘**  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  這個補充課程主題是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>將 dimSalesTerritory 資料表加入至 AW Internet Sales 表格式模型專案  
@@ -130,7 +130,7 @@ ms.locfileid: "68893606"
  在這項工作中，您將建立新的使用者角色。 這個角色將包含一個資料列篩選器，用於定義使用者可以看見 Sales Territory 資料表中的哪些資料列。 這個篩選器隨後會在一對多關聯性方向中套用至與 Sales Territory 相關的所有其他資料表。 您還會套用一個簡單的篩選器，用來保護整個 Employee Security 資料表的安全，防止屬於該角色成員的任何使用者查詢。  
   
 > [!NOTE]  
->  您在這個課程中建立的 Sales Employees by Territory 角色會限制成員只能瀏覽 (或查詢) 本身所屬銷售地區的銷售資料。 如果您將使用者新增為「銷售地區員工」角色的成員, 同時也以第 12 [課所建立角色中的成員身分存在:建立角色](https://docs.microsoft.com/analysis-services/lesson-11-create-roles), 您將取得許可權的組合。 當使用者是多個角色的成員時，針對每個角色定義的權限和資料列篩選器會累計。 也就是說，該使用者將具有大於角色組合所決定的權限。  
+>  您在這個課程中建立的 Sales Employees by Territory 角色會限制成員只能瀏覽 (或查詢) 本身所屬銷售地區的銷售資料。 如果您將使用者新增為「銷售地區員工」角色的成員, 同時也以第 12 [課所建立角色中的成員身分存在:建立角色](../analysis-services/lesson-11-create-roles.md), 您將取得許可權的組合。 當使用者是多個角色的成員時，針對每個角色定義的權限和資料列篩選器會累計。 也就是說，該使用者將具有大於角色組合所決定的權限。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>若要建立 Sales Employees by Territory 使用者角色  
   

@@ -1,5 +1,5 @@
 ---
-title: 工具和方法來處理 (Analysis Services) |Microsoft Docs
+title: 處理的工具和方法 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072823"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530936"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>處理的工具和方式 (Analysis Services)
   處理是 Analysis Services 查詢關聯式資料來源，然後使用該資料來擴展 Analysis Services 物件的作業。  
@@ -46,13 +46,13 @@ ms.locfileid: "66072823"
  處理是可高度設定的作業，由決定在物件層級上發生完整處理或累加式處理的一組處理選項所控制。 如需處理選項和物件的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) 和[處理 Analysis Services 物件](processing-analysis-services-objects.md)。  
   
 > [!NOTE]  
->  此主題描述用於處理多維度模型的工具和方法。 如需有關處理表格式模型的詳細資訊，請參閱 <<c0> [ 處理資料庫、 資料表或資料分割](../tabular-models/process-database-table-or-partition-analysis-services.md)並[處理序資料&#40;SSAS 表格式&#41;](../process-data-ssas-tabular.md)。</c0>  
+>  此主題描述用於處理多維度模型的工具和方法。 如需有關處理表格式模型的詳細資訊, 請參閱[處理資料庫、資料表或資料分割](../tabular-models/process-database-table-or-partition-analysis-services.md)和[處理資料&#40;SSAS 表格式&#41;](../process-data-ssas-tabular.md)。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中處理物件  
   
 1.  啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並連接到 Analysis Services。  
   
-2.  以滑鼠右鍵按一下您要處理的 Analysis Services 物件，然後按一下 [處理]  。 您可以在這些任何層級處理資料：  
+2.  以滑鼠右鍵按一下您要處理的 Analysis Services 物件，然後按一下 [處理]。 您可以在這些任何層級處理資料：  
   
     -   資料庫  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66072823"
   
 5.  或者，按一下 **[變更設定]** 來修改處理順序、相對於特定類型錯誤的處理行為，以及其他設定。  
   
-6.  按一下 [確定]  。  
+6.  按一下 [確定]。  
   
      [處理進度] 對話方塊會提供每個命令的進行中狀態。 如果狀態訊息遭到截斷，您可以按一下 **[檢視詳細資料]** 來讀取完整訊息。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "66072823"
   
 2.  在 [方案總管] 中，已部署的專案之下，展開 **[維度]** 資料夾。  
   
-3.  以滑鼠右鍵按一下維度，然後按一下 [處理]  。 您可以用滑鼠右鍵按一下多個維度，一次處理多個物件。 如需詳細資訊，請參閱[批次處理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)。  
+3.  以滑鼠右鍵按一下維度，然後按一下 [處理]。 您可以用滑鼠右鍵按一下多個維度，一次處理多個物件。 如需詳細資訊，請參閱[批次處理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)。  
   
-4.  在 **[處理維度]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]** 資料行中，確認這個資料行的選項是 **[完整處理]** 。 如果不是，請在 [處理選項]  之下，按一下選項，然後從下拉式清單中選取 [完整處理]  。  
+4.  在 **[處理維度]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]** 資料行中，確認這個資料行的選項是 **[完整處理]** 。 如果不是，請在 [處理選項] 之下，按一下選項，然後從下拉式清單中選取 [完整處理]。  
   
 5.  按一下 **[執行]** 。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66072823"
   
 1.  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中處理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]物件之前，您可以按一下其中一個 **[處理物件]** 對話方塊中的 **[影響分析]** ，來分析對相關物件的影響。  
   
-2.  以滑鼠右鍵按一下維度、Cube、量值群組或分割區，開啟 [處理物件]  對話方塊。  
+2.  以滑鼠右鍵按一下維度、Cube、量值群組或分割區，開啟 [處理物件] 對話方塊。  
   
 3.  按一下 **[影響分析]** 。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會掃描模型，並報告與已選取進行處理物件相關之物件的重新處理需求。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66072823"
   
 1.  啟動 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並連接到 Analysis Services。  
   
-2.  以滑鼠右鍵按一下要處理的物件，然後按一下 [處理]  。  
+2.  以滑鼠右鍵按一下要處理的物件，然後按一下 [處理]。  
   
 3.  在 **[處理]** 對話方塊中，選取要使用的處理選項。 修改其他任何設定。 執行 [影響分析] 來識別您可能需要進行的所有變更。  
   
@@ -122,13 +122,13 @@ ms.locfileid: "66072823"
   
 1.  從這個版本的 SQL Server 開始，您可以使用 Analysis Services PowerShell 指令程式處理物件。 下列指令程式可以以互動方式或指令碼執行：  
   
-    -   [Invoke-ProcessCube cmdlet](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Invoke-ProcessCube cmdlet](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension cmdlet](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Invoke-ProcessDimension cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition cmdlet](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Invoke-ProcessPartition cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ASCmd Cmdlet](/sql/analysis-services/powershell/invoke-ascmd-cmdlet)，可用來執行包含處理命令的 XMLA、MDX 或 DMX 指令碼。  
+    -   [Invoke-ASCmd Cmdlet](/powershell/module/sqlserver/invoke-ascmd)，可用來執行包含處理命令的 XMLA、MDX 或 DMX 指令碼。  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>使用 SQL Server Profiler 監視物件處理  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66072823"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中建立封裝，當您定期更新來源關聯式資料庫時，它會使用 Analysis Services 處理工作自動以新資訊擴展物件。  
   
-2.  在 SSIS 工具箱  ，按兩下 [Analysis Services 處理]  將其加入到封裝。  
+2.  在 SSIS 工具箱，按兩下 [Analysis Services 處理] 將其加入到封裝。  
   
 3.  編輯工作，以指定資料庫連接、要處理的物件和處理選項。 如需有關如何實作這項工作的詳細資訊，請參閱＜ [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)＞。  
   

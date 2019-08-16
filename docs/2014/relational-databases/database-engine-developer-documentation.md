@@ -13,12 +13,12 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890808"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530954"
 ---
 # <a name="developer39s-guide-database-engine"></a>開發&#39;人員指南 (資料庫引擎)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供一組豐富的工具來開發、管理與控制資料庫應用程式。  
@@ -52,7 +52,7 @@ ms.locfileid: "68890808"
  描述如何在應用程式中使用例外狀況訊息方塊程式介面，讓您更有效地控制訊息經驗，以便讓使用者選擇要儲存錯誤訊息內容以供日後參考，或是取得訊息的說明。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦程式設計](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [資料採礦程式設計](../analysis-services/dev-guide/data-mining-programming.md)   
  [開發人員指南&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [開發人員指南&#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [開發人員指南&#40;複寫&#41;](replication/concepts/replication-developer-documentation.md)   

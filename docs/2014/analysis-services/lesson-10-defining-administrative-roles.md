@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493958"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530869"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>第 10 課：定義系統管理角色
   在這一課中，您要學習定義管理工作的安全性角色。  
@@ -29,7 +29,7 @@ ms.locfileid: "69493958"
  在這項工作中，您要定義有權處理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的安全性角色，然後測試這個安全性角色。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 教學課程案例](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   
  [多維度模型化 &#40;Adventure Works 教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

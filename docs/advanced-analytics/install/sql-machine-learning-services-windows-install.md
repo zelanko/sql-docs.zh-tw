@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715220"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531050"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>在 Windows 上安裝 SQL Server Machine Learning 服務
 
@@ -244,6 +244,10 @@ ms.locfileid: "68715220"
 * [建立 SQLRUserGroup 的登入](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * [管理磁片配額](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas), 以避免外部腳本執行耗盡磁碟空間的工作
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+在 Windows 上的 SQL Server 2019 中, 隔離機制已經變更。 這會影響**SQLRUserGroup**、防火牆規則、檔案許可權, 以及隱含的驗證。 如需詳細資訊, 請參閱[Machine Learning 服務的隔離變更](sql-server-machine-learning-services-2019.md)。
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -258,9 +262,11 @@ ms.locfileid: "68715220"
 
 現在您已有所有工作, 您可能也會想要優化伺服器以支援機器學習服務, 或安裝預先定型模型。
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>新增更多背景工作帳戶
 
 如果您預期有許多使用者同時執行腳本, 您可以增加指派給啟動列服務的背景工作帳戶數目。 如需詳細資訊, 請參閱[修改 SQL Server Machine Learning 服務的使用者帳戶集](../administration/modify-user-account-pool.md)區。
+::: moniker-end
 
 ### <a name="optimize-the-server-for-script-execution"></a>優化伺服器以執行腳本
 
@@ -286,14 +292,14 @@ ms.locfileid: "68715220"
 
 ## <a name="next-steps"></a>後續步驟
 
-R 開發人員可以開始使用一些簡單的範例, 並瞭解 R 如何與 SQL Server 搭配運作的基本概念。 如需下一個步驟, 請參閱下列連結:
+R 開發人員可以從一些簡單的範例開始，並了解 R 如何搭配 SQL Server 使用的基本概念。 如需下一個步驟，請參閱下列連結：
 
-+ [教學課程：在 T-sql 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [教學課程：適用于 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教學課程：適用於 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Python 開發人員可以遵循下列教學課程, 瞭解如何搭配使用 Python 與 SQL Server:
+Python 開發人員可以遵循下列教學課程，以了解如何搭配使用 Python 與 SQL Server：
 
-+ [教學課程：在 T-sql 中執行 Python](../tutorials/run-python-using-t-sql.md)
-+ [教學課程：適用于 Python 開發人員的資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 Python](../tutorials/run-python-using-t-sql.md)
++ [教學課程：適用於 Python 開發人員的資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-若要查看以真實世界案例為基礎的機器學習範例, 請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。
+若要檢視以真實世界案例為基礎的機器學習範例，請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。

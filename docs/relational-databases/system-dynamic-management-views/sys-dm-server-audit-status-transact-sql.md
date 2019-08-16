@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_audit_status (TRANSACT-SQL) |Microsoft Docs
+title: _server_audit_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3291edb34087e46739cf984d2412821fa66b7a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053217"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530859"
 ---
-# <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
+# <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對每個伺服器稽核各傳回一個資料列，表示此稽核的目前狀態。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|稽核的識別碼。 對應至**audit_id**欄位中**sys.audits**目錄檢視。|  
-|**name**|**sysname**|稽核的名稱。 與相同**名稱**欄位中**sys.server_audits**目錄檢視。|  
-|**status**|**smallint**|伺服器稽核的數值狀態：<br /><br /> 0 = 未啟動<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      執行階段失敗<br /><br /> 3 = 目標建立失敗<br /><br /> 4 = 正在關閉|  
+|**audit_id**|**int**|稽核的識別碼。 對應至 [ **sys.databases** ] 目錄檢視中的 [ **audit_id** ] 欄位。|  
+|**name**|**sysname**|稽核的名稱。 與**server_audits**目錄檢視中的 [**名稱**] 欄位相同。|  
+|**status**|**smallint**|伺服器稽核的數值狀態：<br /><br /> 0 = 未啟動<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      執行時間失敗<br /><br /> 3 = 目標建立失敗<br /><br /> 4 = 關閉|  
 |**status_desc**|**nvarchar(256)**|顯示伺服器稽核狀態的字串：<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|稽核之上一次狀態變更的時間戳記 (以 UTC 為單位)。|  
-|**event_session_address**|**varbinary(8)**|與稽核相關聯之擴充的事件工作階段的位址。 與相關**sys.db_xe_sessions.address**目錄檢視。|  
+|**event_session_address**|**varbinary(8)**|與稽核相關聯之擴充的事件工作階段的位址。 與 **_xe_sessions**相關聯的目錄檢視。|  
 |**audit_file_path**|**nvarchar(256)**|目前正在使用之稽核檔案目標的完整路徑和檔案名稱。 只會針對檔案稽核填入。|  
 |**audit_file_size**|**bigint**|稽核檔案的近似大小 (以位元組為單位)。 只會針對檔案稽核填入。|  
   
 ## <a name="permissions"></a>Permissions  
- 主體必須具有**VIEW SERVER STATE**並**選取**權限。  
+ 主體必須擁有**VIEW SERVER STATE**和**SELECT**許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

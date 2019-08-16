@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493841"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530844"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 課：定義計算
   在這一課中，您要學習定義計算，它們是多維度運算式 (MDX) 運算式或指令碼。 計算可讓您定義導出成員、命名集，以及執行其他指令碼命令，以便擴充 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 的功能。 例如，您可以執行指令碼命令，先定義 Subcube，然後再將計算指派給 Subcube 中的資料格。  
@@ -55,8 +55,8 @@ ms.locfileid: "69493841"
  [第 7 課：定義關鍵效能指標&#40;kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 教學課程案例](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
- [多維度&#40;模型化艾德作品教學課程&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   
+ [多維度&#40;模型化艾德作品教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [建立命名集](multidimensional-models/create-named-sets.md)   
  [建立導出成員](multidimensional-models/create-calculated-members.md)  
   

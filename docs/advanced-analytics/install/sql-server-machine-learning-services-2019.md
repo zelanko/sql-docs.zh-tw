@@ -1,22 +1,28 @@
 ---
-title: SQL Server 2019 中的差異
-description: 在 SQL Server 2019 preview 版本中, 瞭解 R 和 Python 的新功能 SQL Server 機器學習服務延伸模組。
+title: Windows 的隔離變更
+description: 本文說明 Windows 上 SQL Server 2019 中 Machine Learning 服務的隔離機制變更。 這些變更會影響 SQLRUserGroup、防火牆規則、檔案許可權, 以及隱含的驗證。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 218ae9bd0685370f38942592fd32da75272fbcac
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470302"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531036"
 ---
-# <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 中 SQL Server Machine Learning 服務安裝的差異  
+# <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows 上的 SQL Server 2019:Machine Learning 服務的隔離變更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+本文說明 Windows 上 SQL Server 2019 中 Machine Learning 服務的隔離機制變更。 這些變更會影響**SQLRUserGroup**、防火牆規則、檔案許可權, 以及隱含的驗證。
+
+如需詳細資訊, 請參閱如何[在 Windows 上安裝 SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)。
+
+## <a name="changes-to-isolation-mechanism"></a>隔離機制的變更
 
 在 Windows 上, SQL Server 2019 安裝程式會變更外部進程的隔離機制。 這項變更會以[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)取代本機背景工作帳戶, 這是在 Windows 上執行的用戶端應用程式的隔離技術。 
 
@@ -63,5 +69,4 @@ AppContainers 由 SQL Server 實作為內部機制。 雖然您不會在進程�
 ## <a name="see-also"></a>另請參閱
 
 + [在 Windows 上安裝 SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)
-
-+ [在 Linux 上安裝 SQL Server 2019 Machine Learning 服務](../../linux/sql-server-linux-setup-machine-learning.md)
++ [在 Linux 上安裝 SQL Server Machine Learning 服務](../../linux/sql-server-linux-setup-machine-learning.md)

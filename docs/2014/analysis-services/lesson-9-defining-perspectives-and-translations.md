@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493750"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530833"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 課：定義檢視方塊和翻譯
   在這一課中，您要學習定義檢視方塊和翻譯。 您可以定義檢視方塊，來減少 Cube 明顯的複雜性，以及定義翻譯，讓使用者自己選擇語言來檢視 Cube 中繼資料。  
@@ -35,7 +35,7 @@ ms.locfileid: "69493750"
  [第10課:定義系統管理角色](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 教學課程案例](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   
  [多維度&#40;模型化艾德作品教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [視角](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [多維度模型中的觀點](multidimensional-models/perspectives-in-multidimensional-models.md)   
