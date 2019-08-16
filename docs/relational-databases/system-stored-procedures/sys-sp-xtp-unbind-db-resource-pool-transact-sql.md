@@ -27,7 +27,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68041006"
 ---
-# <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
+# <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   這個系統程序會移除資料庫與資源集區之間的現有繫結，以便追蹤 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體使用量。  如果目前沒有任何集區繫結至指定的資料庫，就會傳回成功。 當資料庫解除繫結時，先前配置給記憶體最佳化物件的記憶體仍然會配置給先前的資源集區。 您必須重新啟動資料庫以釋出配置的記憶體。 一旦資料庫與資源集區解除繫結之後，繫結就會指向 DEFAULT 資源集區。  
@@ -71,6 +71,6 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫並繫結至資源集區的指引，請參閱](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_bind_db_resource_pool &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

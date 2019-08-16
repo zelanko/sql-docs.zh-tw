@@ -27,7 +27,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68140663"
 ---
-# <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status & Amp;#40;transact-SQL&AMP;#41;
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup.fn_get_health_status & Amp;&#40;transact-SQL&AMP;&#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回擴充事件針對一段指定期間所報告，包含 0 個、一個或多個彙總錯誤計數資料列的資料表。  

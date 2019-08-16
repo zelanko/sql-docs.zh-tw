@@ -66,7 +66,7 @@ FROM sys.dm_os_wait_stats;
   
 |||  
 |-|-|  
-|[Always On 可用性群組動態管理檢視和函數 & Amp;#40;transact-SQL&AMP;#41](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)|[記憶體最佳化的資料表動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)|  
+|[Always On 可用性群組動態管理檢視和函數 & Amp;&#40;transact-SQL&AMP;&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)|[記憶體最佳化的資料表動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)|  
 |[異動資料擷取相關的動態管理檢視 &#40;Transact-SQL&#41;](change-data-capture-sys-dm-cdc-errors.md)|[物件相關的動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)|  
 |[變更追蹤相關的動態管理檢視](change-tracking-sys-dm-tran-commit-table.md)|[查詢通知相關的動態管理檢視&#40;Transact SQL&#41;](query-notifications-sys-dm-qn-subscriptions.md)|  
 |[通用語言執行平台相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)|[複寫相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)|  

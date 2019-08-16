@@ -22,7 +22,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68029980"
 ---
-# <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
+# <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   用來支援合併式發行集，使管理員能夠略過所選的暫止結構描述變更，因而不會複寫它們。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -59,6 +59,6 @@ sp_markpendingschemachange [@publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_markpendingschemachange**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sysmergeschemachange &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

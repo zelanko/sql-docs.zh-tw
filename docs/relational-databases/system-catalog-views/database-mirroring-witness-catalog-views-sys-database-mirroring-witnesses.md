@@ -28,7 +28,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68033086"
 ---
-# <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>資料庫鏡像見證目錄檢視-sys.database_mirroring_witnesses
+# <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>資料庫鏡像見證目錄檢視-sys.database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   針對伺服器在資料庫鏡像合作關係中所扮演的每個見證角色，各包含一個資料列。 
@@ -56,7 +56,7 @@ ms.locfileid: "68033086"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys.database_mirroring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys.database_mirroring &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

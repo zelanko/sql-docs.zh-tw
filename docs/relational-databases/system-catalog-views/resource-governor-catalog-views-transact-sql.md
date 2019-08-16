@@ -29,8 +29,8 @@ ms.locfileid: "68018370"
   
 |||  
 |-|-|  
-|[sys.resource_governor_configuration &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)|[sys.resource_governor_resource_pools &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)|  
-|[sys.resource_governor_external_resource_pools &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)|[sys.resource_governor_workload_groups &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)|  
+|[sys.resource_governor_configuration &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)|[sys.resource_governor_resource_pools &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)|  
+|[sys.resource_governor_external_resource_pools &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)|[sys.resource_governor_workload_groups &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [Resource Governor 相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)   

@@ -27,7 +27,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68079322"
 ---
-# <a name="sysedgeconstraints-transact-sql"></a>sys.edge_constraints & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysedge_constraints-transact-sql"></a>sys.edge_constraints & Amp;&#40;transact-SQL&AMP;&#41;
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 包含每個物件，會有邊緣條件約束的一個資料列。 

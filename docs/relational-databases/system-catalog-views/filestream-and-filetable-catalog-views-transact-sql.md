@@ -26,7 +26,7 @@ ms.locfileid: "68016604"
 
   本節描述與 FileTable 功能相關的目錄檢視。  
   
-## <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream 和 filetable 目錄檢視 & Amp;#40;transact-SQL&AMP;#41;
+## <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream 和 filetable 目錄檢視 & Amp;&#40;transact-SQL&AMP;&#41;
  [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)  
  顯示 FileTable 中已啟用的非交易式 FILESTREAM 資料存取層級的相關資訊。 針對 SQL Server 執行個體中的每個資料庫，各包含一個資料列。  
   

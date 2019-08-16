@@ -25,7 +25,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68037310"
 ---
-# <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history & Amp;&#40;transact-SQL&AMP;&#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   若要從記憶體中的暫存資料表的所有已認可的資料列移至磁碟歷程記錄資料表的資料清除工作會叫用。  

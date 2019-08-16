@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: managed_backup.fn_available_backups & Amp;&#40;transact-SQL&AMP;&#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68140674"
 ---
-# <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups & Amp;#40;transact-SQL&AMP;#41;
+# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup.fn_available_backups & Amp;&#40;transact-SQL&AMP;&#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回指定資料庫之可用備份檔案的資料表，內含 0、1 或更多資料列。 傳回的備份檔案是 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 建立的備份。  

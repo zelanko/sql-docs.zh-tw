@@ -27,7 +27,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67942049"
 ---
-# <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics & Amp;#40;transact-SQL&AMP;#41;
+# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics & Amp;&#40;transact-SQL&AMP;&#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回 Smart Admin 記錄的擴充事件。  

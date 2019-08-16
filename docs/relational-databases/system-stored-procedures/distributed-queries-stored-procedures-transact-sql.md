@@ -35,7 +35,7 @@ ms.locfileid: "68078187"
 |[sp_column_privileges_ex](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)|[sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)|  
 |[sp_columns_ex](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)|[sp_table_privileges_ex](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)|  
 |[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)|[sp_tables_ex](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)|  
-|[sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)|[sp_testlinkedserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)|  
+|[sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)|[sp_testlinkedserver &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)|  
 |[sp_foreignkeys](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)||  
   
 ## <a name="see-also"></a>另請參閱  

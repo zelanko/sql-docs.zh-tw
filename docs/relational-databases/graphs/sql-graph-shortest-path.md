@@ -25,7 +25,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68035885"
 ---
-# <a name="shortestpath-transact-sql"></a>SHORTEST_PATH & Amp;#40;transact-SQL&AMP;#41
+# <a name="shortest_path-transact-sql"></a>SHORTEST_PATH & Amp;&#40;transact-SQL&AMP;&#41
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   指定搜尋條件圖形，也就是搜尋以遞迴方式或重複。 SHORTEST_PATH 可用在 MATCH 內使用 SELECT 陳述式中圖形節點和邊緣資料表。 
@@ -51,7 +51,7 @@ SHORTEST_PATH 函式可讓您尋找：
 * **'+'** :重複模式 1 或多次。 在找到最短路徑後立即終止。
 * **{1,n}** ：重複模式 1 至 'n' 次。 終止只要找到最短。
 
-## <a name="lastnode"></a>LAST_NODE
+## <a name="last_node"></a>LAST_NODE
 LAST_NODE() 函式允許鏈結兩個任意長度的周遊模式。 用於案例其中：    
 * 在查詢中使用多個最短的路徑模式，其中一個模式開始上一個模式的最後一個節點。
 * 在相同的 LAST_NODE()，合併兩個最短的路徑模式。
@@ -79,10 +79,10 @@ LAST_NODE() 函式允許鏈結兩個任意長度的周遊模式。 用於案例�
 
 ```
 
-### <a name="stringagg"></a>STRING_AGG
+### <a name="string_agg"></a>STRING_AGG
 STRING_AGG 函式採用的運算式和分隔符號，做為輸入，並傳回字串。 使用者可以使用此函式在 SELECT 子句中的專案屬性從中繼節點或邊緣周遊的路徑中。 
 
-### <a name="lastvalue"></a>LAST_VALUE
+### <a name="last_value"></a>LAST_VALUE
 從周遊，路徑 LAST_VALUE 彙總函式的最後一個節點的屬性可用的專案。 它是以邊緣資料表別名做為輸入，此函式，只有節點資料表名稱錯誤，或可以使用別名。
 
 **最後一個節點**:最後一個節點是指會周遊，無論在符合述詞中的箭頭方向的路徑中最後一個出現的節點。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`＞。 在此路徑中的最後一個節點會瀏覽的最後一個 P 節點。 

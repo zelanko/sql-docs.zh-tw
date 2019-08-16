@@ -25,7 +25,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68079426"
 ---
-# <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdatabase_scoped_credentials-transact-sql"></a>sys.database_scoped_credentials & Amp;&#40;transact-SQL&AMP;&#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   傳回每個資料庫的一個資料列範圍在資料庫中的認證。  

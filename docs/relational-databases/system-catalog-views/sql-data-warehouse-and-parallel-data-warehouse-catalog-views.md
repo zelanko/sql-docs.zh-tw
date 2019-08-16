@@ -57,7 +57,7 @@ ms.locfileid: "68018237"
 
  [sys.pdw_replicated_table_cache_state (Transact-SQL)](sys-pdw-replicated-table-cache-state-transact-sql.md) 
   
- [sys.pdw_table_distribution_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md)  
+ [sys.pdw_table_distribution_properties &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md)  
   
  [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
@@ -90,7 +90,7 @@ ms.locfileid: "68018237"
   
  [sys.pdw_health_alerts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md)  
   
- [sys.pdw_health_component_groups &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql.md)  
+ [sys.pdw_health_component_groups &#40;-SQL&AMP;&#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-groups-transact-sql.md)  
   
  [sys.pdw_health_component_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md)  
   
