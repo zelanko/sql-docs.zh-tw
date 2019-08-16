@@ -25,7 +25,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68035885"
 ---
-# <a name="shortest_path-transact-sql"></a>SHORTEST_PATH & Amp;&#40;transact-SQL&AMP;&#41
+# <a name="shortest_path-transact-sql"></a>SHORTEST_PATH & Amp;&#40;transact-SQL&AMP;&#41;
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   指定搜尋條件圖形，也就是搜尋以遞迴方式或重複。 SHORTEST_PATH 可用在 MATCH 內使用 SELECT 陳述式中圖形節點和邊緣資料表。 

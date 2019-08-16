@@ -19,7 +19,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68016630"
 ---
-# <a name="external-operations-catalog-views-transact-sql"></a>外部作業類別目錄檢視 & Amp;&#40;transact-SQL&AMP;&#41
+# <a name="external-operations-catalog-views-transact-sql"></a>外部作業類別目錄檢視 & Amp;&#40;transact-SQL&AMP;&#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   以下是目錄檢視的外部資料的物件，例如資料來源、 檔案格式和資料表。 您可以使用這些檢視來查詢項目，例如 Hadoop 資料表用於 PolyBase 作業的狀態。  
