@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba0b03f658f0121b04d5a2002cd2f28fbd522a8d
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 238249ae90556d342e9c6cd50e568d65ff1cb6f6
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530959"
+ms.locfileid: "69553183"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>適用于 SQL Server Machine Learning 服務的 Python 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文說明[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)上的資料庫內分析的 Python 教學課程。 
+本文說明[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)的 Python 教學課程。 
 
 + 瞭解如何執行 Python 腳本。
 + 建立、定型和部署 Python 模型以 SQL Server。

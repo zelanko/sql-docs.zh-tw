@@ -20,12 +20,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29bf4991ce5dd52e9c66c31abade833e4fe319b2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893538"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561132"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68893538"
 |referencing_class_desc|**nvarchar(60)**|參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> 不可為 Null。|  
 |is_schema_bound_reference|**bit**|1 = 受參考的實體是結構描述繫結。<br /><br /> 0 = 受參考的實體非結構描述繫結。<br /><br /> 不可為 Null。|  
 |referenced_class|**tinyint**|受參考實體的類別。<br /><br /> 1 = 物件或資料行<br /><br /> 6 = 類型<br /><br /> 10 = XML 結構描述集合<br /><br /> 21 = 資料分割函數<br /><br /> 不可為 Null。|  
-|referenced_class_desc|**nvarchar(60)**|受參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> 不可為 Null。|  
+|referenced_class_desc|**nvarchar(60)**|受參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> 類型<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> 不可為 Null。|  
 |referenced_server_name|**sysname**|受參考實體之伺服器的名稱。<br /><br /> 這個資料行會因透過指定有效的四部分名稱所達成的跨伺服器相依性而擴展。 如需多部分名稱的相關資訊, 請參閱[Transact-sql &#40;語法慣例 transact-sql&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 若為參考了實體的非結構描述繫結實體，但沒有指定四部分名稱，則為 NULL。<br /><br /> 因為架構系結的實體必須位於相同的資料庫中, 因此只能使用兩部分 (*schema. object*) 名稱加以定義, 所以為 Null。|  
 |referenced_database_name|**sysname**|受參考實體之資料庫的名稱。<br /><br /> 這個資料行會因透過指定有效的三部分或四部分名稱所達成的跨資料庫或跨伺服器參考而擴展。<br /><br /> 在使用一部分或兩部分名稱指定時，若為非結構描述繫結參考，則為 NULL。<br /><br /> 因為架構系結的實體必須位於相同的資料庫中, 因此只能使用兩部分 (*schema. object*) 名稱加以定義, 所以為 Null。|  
 |referenced_schema_name|**sysname**|受參考實體所屬的結構描述。<br /><br /> 若為參考了實體的非結構描述繫結參考，但沒有指定結構描述名稱，則為 NULL。<br /><br /> 若為結構描述繫結的參考，則永遠不會是 NULL；因為您必須使用兩部分名稱來定義和參考結構描述繫結的實體。|  
@@ -68,7 +68,7 @@ ms.locfileid: "68893538"
  下表將列出建立並維護相依性資訊的實體類型。 系統不會針對規則、預設值、暫存資料表、暫存預存程序或系統物件建立或維護相依性資訊。  
 
 > [!NOTE]
-> Azure SQL 資料倉儲和平行處理資料倉儲支援此清單中的資料表、views、篩選統計資料和 Transact-sql 預存程式實體類型。  只有針對資料表、視圖和篩選的統計資料, 才會建立及維護相依性資訊。  
+> Azure SQL 資料倉儲和平行處理資料倉儲支援此清單中的資料表、視圖、篩選的統計資料, 以及 Transact-sql 預存程式實體類型。  只有針對資料表、視圖和篩選的統計資料, 才會建立及維護相依性資訊。  
   
 |實體類型|參考實體|受參考的實體|  
 |-----------------|------------------------|-----------------------|  
