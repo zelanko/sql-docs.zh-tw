@@ -17,12 +17,12 @@ ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2dcfc2039c75d6d785670f47854838b06c2fa5b1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 263796a3a5383423cfc105163365b8eac52b631f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267188"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553002"
 ---
 # <a name="delete-a-job-category"></a>刪除作業類別目錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,22 +33,6 @@ ms.locfileid: "68267188"
 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中刪除 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業類別目錄。  
   
 作業類別目錄可幫助您組織作業，以便於篩選與分組。 例如，您可以將所有的資料庫備份作業整理在資料庫維護類別中。  
-  
-**本主題內容**  
-  
--   **開始之前：**  
-  
-    [限制事項](#Restrictions)  
-  
-    [安全性](#Security)  
-  
--   **若要使用下列項目刪除作業類別目錄：**  
-  
-    [Transact-SQL](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server 管理物件](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>開始之前  
   

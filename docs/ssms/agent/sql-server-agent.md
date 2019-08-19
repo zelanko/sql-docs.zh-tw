@@ -1,7 +1,5 @@
 ---
 title: SQL Server Agent | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -13,31 +11,27 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a131153b269d68091e0b76cda4bda5f14e62fd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265244"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552663"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是 Microsoft Windows 服務，它會執行排程的管理工作 (在 *中稱為* 「作業」 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](Job))。  
-  
-**本主題內容**  
-  
--   [SQL Server Agent 的優點](#Benefits)  
-  
--   [SQL Server Agent 的元件](#Components)  
-  
--   [SQL Server Agent 管理的安全性](#Security)  
-  
-## <a name="Benefits"></a>SQL Server Agent 的優點  
+
+## <a name="Benefits"></a>SQL Server Agent 的優點 
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存作業資訊。 作業包含了一個或多個作業步驟。 每一個步驟包含它自己的工作 (例如備份資料庫)。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可以按照排程、為了回應特定事件或視需要來執行作業。 例如，假設您要在每個工作日結束後備份公司的所有伺服器，您可以讓這項工作自動執行。 將備份排程在星期一至星期五 22:00 之後執行，如果備份發生問題，SQL Server Agent 可以記錄事件並通知您。  

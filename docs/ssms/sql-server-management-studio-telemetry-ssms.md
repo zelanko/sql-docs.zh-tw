@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79a2c3da9ee7f877c3d13bf17ca7912117df883
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82b4af04963c5161cbea300054d19c61b61ec34a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264697"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028823"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用方式和診斷資料收集的本機稽核
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,4 +64,4 @@ SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功�
 ## <a name="see-also"></a>另請參閱
 
 - [設定 SQL Server 的使用狀況和診斷資料收集](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [SQL Server 使用狀況和診斷資料收集的本機稽核](http://msdn.microsoft.com/library/mt743085.aspx)
+- [SQL Server 使用狀況和診斷資料收集的本機稽核](https://msdn.microsoft.com/library/mt743085.aspx)

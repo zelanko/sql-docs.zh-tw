@@ -14,12 +14,12 @@ ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8badca15c404725df9707e1da41322f5ce582dc5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d6edee3d5fd730a6f1102b8debb060356ed7bf6c
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263094"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552492"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,17 +28,7 @@ ms.locfileid: "68263094"
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 別名，以供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務預設會使用不需要額外的用戶端組態之動態伺服器名稱，透過具名管道連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 只有未使用預設網路傳輸，或當您連接到正在接聽替代具名管道之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，才需要設定伺服器連接別名。  
-  
-**本主題內容**  
-  
--   **開始之前：**  
-  
-    [限制事項](#Restrictions)  
-  
-    [安全性](#Security)  
-  
--   [若要使用 SQL Server Management Studio，為 SQL Server Agent 服務設定 SQL Server 別名](#SSMSProcedure)  
-  
+
 ## <a name="BeforeYouBegin"></a>開始之前  
   
 ### <a name="Restrictions"></a>限制事項  

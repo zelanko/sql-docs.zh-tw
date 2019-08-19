@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2ded17c5baf35949b16c173236f94f8d0d3dd299
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893995"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028916"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -35,10 +35,10 @@ Community Technical Preview (CTP) 3.2 是 [!INCLUDE[sql-server-2019](../includes
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|公開預覽 |在 CTP 3.2 之前，SQL Server 巨量資料叢集提供給註冊的早期採用者使用。 而此版本可讓任何人都能體驗 SQL Server 巨量資料叢集的功能。 <br/><br/> 請參閱[開始使用 SQL Server 巨量資料叢集](../big-data-cluster/deploy-get-started.md)。|
-|`azdata` |CTP 3.2 引進了 `azdata`，這是一種以 Python 編寫的命令列公用程式，可讓叢集系統管理員透過 REST API 啟動和管理巨量資料叢集。 `azdata` 取代了 `mssqlctl`。 請參閱[安裝 `azdata`](../big-data-cluster/deploy-install-azdata.md)。 |
+|公開預覽 |在 CTP 3.2 之前，已將 SQL Server 巨量資料叢集提供給註冊的早期採用者使用。 此版本讓任何人都能體驗 SQL Server 巨量資料叢集的功能。 <br/><br/> 請參閱[開始使用 SQL Server 巨量資料叢集](../big-data-cluster/deploy-get-started.md)。|
+|`azdata` |CTP 3.2 引進了 `azdata`，這是一種以 Python 編寫的命令列公用程式，可讓叢集管理員透過 REST API 啟動程序和管理巨量資料叢集。 `azdata` 取代了 `mssqlctl`。 請參閱[安裝 `azdata`](../big-data-cluster/deploy-install-azdata.md)。 |
 |PolyBase |外部資料表資料行名稱現在可用來查詢 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 資料來源。 在先前的 CTP 版本中，資料行僅根據目的地上的序數進行繫結，而不會使用外部資料表定義中的資料行名稱。|
-|HDFS 階層重新整理 |引進了 HDFS 階層處理的重新整理功能，以便能夠針對遠端資料的最新快照集重新整理現有掛接。 請參閱 [HDFS 階層處理](../big-data-cluster/hdfs-tiering.md) |
+|HDFS 階層重新整理 |針對 HDFS 階層處理引進了重新整理功能，以便能夠針對遠端資料的最新快照集重新整理現有的裝載。 請參閱 [HDFS 階層處理](../big-data-cluster/hdfs-tiering.md) |
 |以筆記本為基礎的疑難排解 |CTP 3.2 引進了 Jupyter Notebook，用來協助您針對 SQL Server 巨量資料叢集中的元件進行[開發](../big-data-cluster/deploy-notebooks.md)與[探索、診斷和疑難排解](../big-data-cluster/manage-notebooks.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -83,7 +83,6 @@ Community Technical Preview (CTP) 3.2 是 [!INCLUDE[sql-server-2019](../includes
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|功能限制| 防止某些形式的 SQL 資料隱碼洩漏資料庫相關資訊，即使是 SQL 資料隱碼成功時。 請參閱[功能限制](../relational-databases/security/feature-restrictions.md)|
 |加密索引的資料行|可在使用隨機加密方式以及啟用記憶體保護區的索引鍵所加密的資料行上建立索引，改善雜雜查詢 (使用 `LIKE` 與比較運算子) 的效能。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 |暫止和繼續透明資料加密 (TDE) 的初始掃描|請參閱[透明資料加密 (TDE) 掃描 - 暫止和繼續](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |SQL Server 組態管理員中的憑證管理|請參閱[憑證管理 (SQL Server 組態管理員)](../database-engine/configure-windows/manage-certificates.md)

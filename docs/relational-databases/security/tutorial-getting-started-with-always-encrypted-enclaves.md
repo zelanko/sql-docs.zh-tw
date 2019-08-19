@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888888"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028810"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "68888888"
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 或更新版本。
 - Windows 10 企業版 1809 版或 Windows Server 2019 Datacenter。
-- 如果您的 SQL Server 電腦是實體機器，它必須符合 [HYPER-V 硬體需求](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) \(部分機器翻譯\)：
+- 如果您的 SQL Server 電腦是實體機器，它必須符合 [HYPER-V 硬體需求](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) \(部分機器翻譯\)：
    - 使用第二層位址轉譯 (SLAT) 的 64 位元處理器
    - 對 VM 監視器模式擴充功能的 CPU 支援 (Intel CPU 上的 VT-c)
    - 已啟用虛擬化支援 (Intel VT-x 或 AMD-V)
 - 如果您的 SQL Server 電腦是虛擬機器，則必須將該 VM 設定為支援虛擬化形式安全性。
-   - 在 Hyper-V 2016 或更新版本上，請使用第 1 代 VM，同時在 VM 處理器上[啟用巢狀虛擬化延伸模組](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)，或使用第 2 代 VM。 如需 VM 各世代的詳細資訊，請參閱[我應該在 Hyper-V 中建立第 1 代或第 2 代虛擬機器嗎？](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)。 
+   - 在 Hyper-V 2016 或更新版本上，請使用第 1 代 VM，同時在 VM 處理器上[啟用巢狀虛擬化延伸模組](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)，或使用第 2 代 VM。 如需 VM 各世代的詳細資訊，請參閱[我應該在 Hyper-V 中建立第 1 代或第 2 代虛擬機器嗎？](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)。 
    - 請確定您在 Azure 中所執行的 VM 大小，支援下列其中之一：
-      - 巢狀虛擬化，例如 Dv3 與 Ev3 系列 VM。 請參閱[建立可使用巢狀功能的 Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
-      - 第 2 代 VM，例如: Dsv3 或 Esv3 系列 VM。 請參閱 [Azure上第 2 代 VM 的支援](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2)。
+      - 巢狀虛擬化，例如 Dv3 與 Ev3 系列 VM。 請參閱[建立可使用巢狀功能的 Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
+      - 第 2 代 VM，例如: Dsv3 或 Esv3 系列 VM。 請參閱 [Azure上第 2 代 VM 的支援](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2)。
    - 在 VMWare vSphere 6.7 或更新版本上，針對 VM 啟用虛擬化型安全性支援，如 [VMware 文件](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) \(英文\) 所述。
    - 其他 Hypervisor 和公用雲端可能支援在 VM 中使用具有安全記憶體保護區的 Always Encrypted，前提是已對 VM 公開虛擬化擴充 (又稱巢狀虛擬化)。 如需相容性和設定指示，請參閱您的虛擬化解決方案文件。
 - [SQL Server Management Studio (SSMS) 18.0 或更新版本](../../ssms/download-sql-server-management-studio-ssms.md)。

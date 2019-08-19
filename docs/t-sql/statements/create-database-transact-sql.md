@@ -744,7 +744,7 @@ GO
 下列範例會建立 `FileStreamDB` 資料庫。 此資料庫是使用一個資料列檔案群組和兩個 FILESTREAM 檔案群組所建立。 每個檔案群組都包含一個檔案：
 
 - `FileStreamDB_data` 包含資料列資料， 它包含一個檔案 `FileStreamDB_data.mdf` (具有預設路徑)。
-- `FileStreamPhotos` 包含 FILESTREAM 資料。 其也包含兩個 FILESTREAM 資料容器：一個是位於 `FSPhotos` 的 `C:\MyFSfolder\Photos`，一個是位於 `FSPhotos2` 的 `D:\MyFSfolder\Photos`。 它會標示為預設的 FILESTREAM 檔案群組。
+- `FileStreamPhotos` 包含 FILESTREAM 資料。 其包含兩個 FILESTREAM 資料容器：一個是位於 `FSPhotos` 的 `C:\MyFSfolder\Photos`，一個是位於 `FSPhotos2` 的 `D:\MyFSfolder\Photos`。 它會標示為預設的 FILESTREAM 檔案群組。
 - `FileStreamResumes` 包含 FILESTREAM 資料。 其包含一個 FILESTREAM 資料容器 `FSResumes` (位於 `C:\MyFSfolder\Resumes`)。
 
 ```sql

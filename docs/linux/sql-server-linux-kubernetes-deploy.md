@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1e8825336edd4e55812f6037bbb4479a3b225e3f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952620"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028733"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>在 Kubernetes 叢集上部署 SQL Server Always On 可用性群組
 
@@ -36,7 +36,7 @@ Kubernetes 上的部署包括 SQL Server 運算子、SQL Server 容器和負載�
 > [!NOTE]
 > 您可以使用任意類型的 Kubernetes 叢集。 若要在 Azure Kubernetes Service (AKS) 上建立 Kubernetes 叢集，請參閱[建立 AKS 叢集](https://docs.microsoft.com/azure/aks/create-cluster)。
 >
-> 使用最新版的 Kubernetes。 確切版本取決於您的訂用帳戶和區域。 請參閱 [Supported Kubernetes versions in AKS](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions) (AKS 中支援的 Kubernetes 版本)。  
+> 使用最新版的 Kubernetes。 確切版本取決於您的訂用帳戶和區域。 請參閱 [Supported Kubernetes versions in AKS](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions) (AKS 中支援的 Kubernetes 版本)。  
 >
 > 下列指令碼會在 Azure 中建立四個節點的 Kubernetes 叢集。 執行指令碼之前，請以最新的可用版本取代 `<latest version>`。 例如 `1.12.5`。
 >

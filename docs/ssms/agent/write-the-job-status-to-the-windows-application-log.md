@@ -17,12 +17,12 @@ ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0450757971b745abb36a0790f2278d1c7bd76136
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 93a5e95aa35c349e77ed3876e47a8b46019519c9
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267643"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552151"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,18 +39,6 @@ ms.locfileid: "68267643"
 -   將事件訊息寫入至 Windows 應用程式記錄。 這個回應只用於失敗的作業。  
   
 -   自動刪除作業。 如果確定您將不再需要重新執行這個作業，請使用這個作業回應。  
-  
-**本主題內容**  
-  
--   **開始之前：**  
-  
-    [安全性](#Security)  
-  
--   **若要使用下列項目，將作業狀態寫入 Windows 應用程式記錄檔：**  
-  
-    [Transact-SQL](#SSMS)  
-  
-    [SQL Server 管理物件](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>開始之前  
   

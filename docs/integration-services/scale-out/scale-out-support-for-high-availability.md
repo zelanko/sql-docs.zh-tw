@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: a7c0e9b1d3315edb314cc95980fec8e18d544d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064559"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028755"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 
@@ -73,7 +73,7 @@ ms.locfileid: "68064559"
 
 SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorkerAgentLogin##** 所完成。 若要讓記錄適用於所有 SSISDB 複本，請執行下列動作
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 變更主要 SQL Server 上 **##MS_SSISLogDBWorkerAgentLogin##** 的密碼
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 變更主要 SQL Server 上 **##MS_SSISLogDBWorkerAgentLogin##** 的密碼
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 新增次要 SQL Server 的登入
 
@@ -98,7 +98,7 @@ SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorke
 
 在 Azure 虛擬機器中，此設定步驟需要額外的步驟。 這些概念和步驟的完整說明不在本文範圍內。
 
-1.  您必須設定 Azure 網域。 Windows Server 容錯移轉叢集需要叢集中之所有電腦皆為相同網域中的成員。 如需詳細資訊，請參閱[使用 Azure 入口網站啟用 Azure Active Directory Domain Services](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance)。
+1.  您必須設定 Azure 網域。 Windows Server 容錯移轉叢集需要叢集中之所有電腦皆為相同網域中的成員。 如需詳細資訊，請參閱[使用 Azure 入口網站啟用 Azure Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)。
 
 2. 您必須設定 Azure Load Balancer。 這是可用性群組接聽程式的需求。 如需詳細資訊，請參閱[教學課程：在 Azure 入口網站中使用基本負載平衡器，將內部流量負載平衡到 VM](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)。
 

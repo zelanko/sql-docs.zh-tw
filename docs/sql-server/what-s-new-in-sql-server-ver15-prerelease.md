@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 191c5f2e603821a5bb9d85aa89a630c71800e660
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68424419"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028872"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>SQL Server 2019 CTP 公告封存
 
@@ -384,7 +384,7 @@ ms.locfileid: "68424419"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 針對 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 推出或強化了下列新功能。
 
-#### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>新的 query_post_execution_plan_profile 擴充事件 (CTP 2.4)
+#### <a name="new-query_post_execution_plan_profile-extended-event-ctp-24"></a>新的 query_post_execution_plan_profile 擴充事件 (CTP 2.4)
 
 不同於使用標準分析的 `query_post_execution_showplan`，新的 `query_post_execution_plan_profile` 擴充事件會根據輕量型分析收集實際執行計畫的對等項目。 如需詳細資訊，請參閱[查詢分析基礎結構](../relational-databases/performance/query-profiling-infrastructure.md)。
 
@@ -416,7 +416,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-#### <a name="new-dmf-sysdmexecqueryplanstats-ctp-24"></a>新的 DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
+#### <a name="new-dmf-sysdm_exec_query_plan_stats-ctp-24"></a>新的 DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
 
 新的 DMF `sys.dm_exec_query_plan_stats` 在大多數的查詢中，會根據輕量型分析傳回最後一個已知實際執行計畫的對等項目。 如需詳細資訊，請參閱 [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 和[查詢分析基礎結構](../relational-databases/performance/query-profiling-infrastructure.md)。 請參閱下列指令碼作為範例：
 
@@ -556,7 +556,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 如果索引建立失敗，則沒有此功能，必須重新執行線上索引建立作業，而且必須從頭重新啟動作業。
 
-使用此版本，我們會擴充可繼續的功能，以將此功能新增至可用的[可繼續線上索引重建](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)。
+使用此版本，我們會擴充可繼續的功能，以將此功能新增至可用的[可繼續線上索引重建](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)。
 
 此外，可以使用[線上和可繼續 DDL 作業的資料庫範圍預設設定](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)將此功能設定為特定資料庫的預設值。
 
@@ -688,7 +688,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 `DBCC CLONEDATABASE` 會建立資料庫的僅限結構描述複本，其中包含為查詢效能問題進行疑難排解所需的所有項目，而不需要複製資料。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，此命令不會複製準確疑難排解資料行存放區索引查詢所需的統計資料，而且需要手動步驟才能擷取這項資訊。 現在，在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，`DBCC CLONEDATABASE` 會自動擷取資料行存放區索引的統計資料 blob，因此不需要任何手動步驟。
 
-#### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>新增至 sp_estimate_data_compression_savings 的新選項 (CTP 2.0)
+#### <a name="new-options-added-to-sp_estimate_data_compression_savings-ctp-20"></a>新增至 sp_estimate_data_compression_savings 的新選項 (CTP 2.0)
 
 `sp_estimate_data_compression_savings` 傳回所要求物件的目前大小，並針對所要求的壓縮狀態預估物件大小。 此程序目前支援三個選項：`NONE`、`ROW` 和 `PAGE`。 `COLUMNSTORE_ARCHIVE` 推出了兩個新選項：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 `COLUMNSTORE`。 如果在使用標準或封存資料行存放區壓縮的資料表上建立資料行存放區索引，則這些新選項可讓您估計節省的空間。
 
@@ -712,7 +712,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 - **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的新連接器**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的外部資料新連接器。
 
-#### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>新的 sys.dm_db_page_info 系統函數會傳回頁面資訊 (CTP 2.0)
+#### <a name="new-sysdm_db_page_info-system-function-returns-page-information-ctp-20"></a>新的 sys.dm_db_page_info 系統函數會傳回頁面資訊 (CTP 2.0)
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` 傳回資料庫中頁面的資訊。 此函式會傳回包含頁面中標頭資訊的資料列，包含 `object_id`、`index_id` 和 `partition_id`。 在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。 
 

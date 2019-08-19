@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dd52923a1e9c363d527aee9aedc1253e478f3e4e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: b51f93b12c51bd7bc9659ee1661a7fdc068dd2bd
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419563"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028851"
 ---
 ## <a name="enabled-deployment-scenarios"></a>已啟用部署案例
 
@@ -19,7 +19,7 @@ CTP 3.2 可啟用下列案例：
 
 ## <a name="support"></a>支援
 
-SQL Server 2019 CTP 3.2 是預覽版軟體。 這不是公開支援運作的軟體。 參與 [SQL 早期採用者計劃](http://aka.ms/sqleap)的客戶，可能透過與 Microsoft 協商的特殊合約支援執行 SQL Server 2019 CTP 3.2。
+SQL Server 2019 CTP 3.2 是預覽版軟體。 這不是公開支援運作的軟體。 參與 [SQL 早期採用者計劃](https://aka.ms/sqleap)的客戶，可能透過與 Microsoft 協商的特殊合約支援執行 SQL Server 2019 CTP 3.2。
 
 您可以在下列其中一個位置，找到針對非早期採用方案客戶提供的有限支援：
 

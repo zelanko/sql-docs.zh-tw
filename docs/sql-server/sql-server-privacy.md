@@ -9,12 +9,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 40057200c5b8241849f4030e6c418cf080d149f2
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329345"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028837"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
 
@@ -23,7 +23,7 @@ ms.locfileid: "68329345"
 本文摘要說明使用已連線到網際網路的功能，可收集匿名的功能使用方式和診斷資料並傳送給 Microsoft。 SQL Server 可能會收集標準電腦資訊以及關於使用方式和效能的資料，這些資訊可能會傳送給 Microsoft，並基於改善產品品質、安全性和可靠性的目的加以分析。 本文是整體 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=521839)的增補合約。 本文中的資料分類只適用於 SQL Server 內部部署產品的版本。 它不適用於下列項目：
 
 - Azure SQL Database
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Data Migration Assistant
