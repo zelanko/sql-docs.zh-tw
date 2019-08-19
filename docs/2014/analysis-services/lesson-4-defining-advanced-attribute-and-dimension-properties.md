@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: HT
+ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888260"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493989"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 課：定義進階屬性和維度屬性
   在這一課，您將會學會如何使用某些屬性 (Attribute) 的進階屬性 (Property)、屬性 (Attribute) 階層和維度屬性 (Property)。  
@@ -34,7 +34,7 @@ ms.locfileid: "68888260"
  [自動分組屬性成員](lesson-4-3-automatically-grouping-attribute-members.md)  
  在這項工作中，您會依據屬性階層內的成員分佈情形來自動建立屬性成員的分組。 如需詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
   
- [隱藏及停用屬性階層](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [隱藏及停用屬性階層](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  在這項工作中，您會學到如何及何時停用或隱藏屬性階層。  
   
  [依次要屬性來排序屬性成員](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  

@@ -10,12 +10,12 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: HT
+ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888382"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494008"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>定義父子式階層中父屬性 (Attribute) 的屬性 (Property)
   父子式階層是指維度中以兩個資料表資料行為基礎的階層。 這些資料行會一起定義維度成員之間的階層式關聯性。 第一個名稱為「成員索引鍵資料行」的資料行會識別每個維度成員。 另一個名稱為「父資料行」資料行則會識別每個維度成員的父系。 父屬性的 **NamingTemplate** 屬性決定父子式階層中每個層級的名稱，而 **MembersWithData** 屬性則決定是否應該顯示父成員的資料。  
@@ -104,7 +104,7 @@ ms.locfileid: "68888382"
      ![已修改的員工]階層(../../2014/tutorials/media/l4-employee-2.png "已修改的員工")階層  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [自動分組屬性成員](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
+ [自動分組屬性成員](lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [父子式階層](multidimensional-models/parent-child-dimension.md)   
