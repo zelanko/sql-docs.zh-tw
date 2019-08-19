@@ -1,7 +1,7 @@
 ---
 title: 什麼是 SQL Server Machine Learning 服務 (Python 和 R)？
 titleSuffix: ''
-description: Machine Learning Services 是 SQL Server 中的一項功能, 可讓您以關聯式資料執行 Python 和 R 腳本。 您可以使用開放原始碼套件和架構, 以及適用于預測性分析和機器學習的 Microsoft Python 和 R 套件。 腳本會在資料庫中執行, 而不會將資料移出 SQL Server 或透過網路。 本文說明 SQL Server Machine Learning 服務的基本概念。
+description: Machine Learning Services 是 SQL Server 中的一項功能, 可讓您以關聯式資料執行 Python 和 R 腳本。 您可以使用開放原始碼套件和架構, 以及適用于預測性分析和機器學習的 Microsoft Python 和 R 套件。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server Machine Learning 服務的基本概念。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/07/2019
@@ -9,17 +9,17 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 59e005e0075c9bb26210c6be9be5f52a3aa9a164
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 4a1a9a3b0f712458466051ce2c67c0a725ef0a76
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926917"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957435"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什麼是 SQL Server Machine Learning 服務 (Python 和 R)？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Machine Learning Services 是 SQL Server 中的一項功能, 可讓您以關聯式資料執行 Python 和 R 腳本。 您可以使用開放原始碼套件和架構, 以及適用于預測性分析和機器學習的[Microsoft Python 和 R 套件](#packages)。 腳本會在資料庫中執行, 而不會將資料移出 SQL Server 或透過網路。 本文說明 SQL Server Machine Learning 服務的基本概念。
+Machine Learning Services 是 SQL Server 中的一項功能, 可讓您以關聯式資料執行 Python 和 R 腳本。 您可以使用開放原始碼套件和架構, 以及適用于預測性分析和機器學習的[Microsoft Python 和 R 套件](#packages)。 指令碼會在資料庫中執行，不需在 SQL Server 外部或透過網路來移動資料。 本文說明 SQL Server Machine Learning 服務的基本概念。
 
 在 Azure SQL Database 中, [Machine Learning 服務](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)目前為公開預覽狀態。
 
@@ -32,7 +32,7 @@ Machine Learning Services 是 SQL Server 中的一項功能, 可讓您以關聯�
 
 SQL Server Machine Learning 服務可讓您在資料庫內執行 Python 和 R 腳本。 您可以使用它來準備和清除資料、進行功能工程設計, 以及在資料庫中定型、評估和部署機器學習模型。 此功能會在資料所在的位置執行您的腳本, 並消除透過網路傳送資料到另一部伺服器的情況。
 
-Python 和 R 的基底散發套件包含在 Machine Learning 服務中。 除了適用于 Python 的 Microsoft 套件[revoscalepy](python/ref-py-revoscalepy.md)和[Microsoftml](python/ref-py-microsoftml.md) , 以及[RevoScaleR](r/ref-r-revoscaler.md)、 [microsoftml](r/ref-r-microsoftml.md)、 [olapR](r/ref-r-olapr.md)之外, 您還可以使用開放原始碼套件和架構, 例如 PyTorch、TensorFlow 和 scikit-learn 學習。和適用于 R 的[sqlrutils](r/ref-r-sqlrutils.md) 。
+Python 和 R 的基底散發套件包含在 Machine Learning 服務中。 除了適用于 Python 的 Microsoft 套件[revoscalepy](python/ref-py-revoscalepy.md)和[Microsoftml](python/ref-py-microsoftml.md)，以及[RevoScaleR](r/ref-r-revoscaler.md)、[microsoftml](r/ref-r-microsoftml.md)、[olapR](r/ref-r-olapr.md) 以外, 您還可以使用開放原始碼套件和架構, 例如 PyTorch、TensorFlow 和 scikit-learn-學習和 R 的[sqlrutils](r/ref-r-sqlrutils.md)。
 
 Machine Learning Services 會使用擴充性架構, 在 SQL Server 中執行 Python 和 R 腳本。 深入瞭解其運作方式:
 

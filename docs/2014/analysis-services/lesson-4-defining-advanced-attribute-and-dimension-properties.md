@@ -1,5 +1,5 @@
 ---
-title: 第 4 課：定義進階屬性和維度屬性 |Microsoft Docs
+title: 第 4 課：定義 Advanced 屬性和維度屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8b81a5d2e8bfe57c1ae8d8464b5af9140dd9dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078635"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888260"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 課：定義進階屬性和維度屬性
   在這一課，您將會學會如何使用某些屬性 (Attribute) 的進階屬性 (Property)、屬性 (Attribute) 階層和維度屬性 (Property)。  
@@ -29,12 +29,12 @@ ms.locfileid: "66078635"
  在這項工作中，您會開啟、檢閱及部署「 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程」專案的修改版本，其中具有多個量值群組和其他維度。  
   
  [定義父子式階層中父屬性 (Attribute) 的屬性 (Property)](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- 在這項工作中，您會在父子式維度中定義層級名稱，並指定是否顯示與父成員有關的資料。 如需詳細資訊，請參閱 <<c0> [ 父子式階層](multidimensional-models/parent-child-dimension.md)並[父子式階層中的屬性](multidimensional-models/parent-child-dimension-attributes.md)。  
+ 在這項工作中，您會在父子式維度中定義層級名稱，並指定是否顯示與父成員有關的資料。 如需詳細資訊，請參閱[父子式階層](multidimensional-models/parent-child-dimension.md)和[父子式階層中的屬性](multidimensional-models/parent-child-dimension-attributes.md)。  
   
  [自動分組屬性成員](lesson-4-3-automatically-grouping-attribute-members.md)  
  在這項工作中，您會依據屬性階層內的成員分佈情形來自動建立屬性成員的分組。 如需詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
   
- [隱藏及停用屬性階層](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [隱藏及停用屬性階層](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
  在這項工作中，您會學到如何及何時停用或隱藏屬性階層。  
   
  [依次要屬性來排序屬性成員](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
@@ -51,7 +51,7 @@ ms.locfileid: "66078635"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   
- [多維度模型化&#40;Adventure Works 教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [多維度&#40;模型化艾德作品教學課程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
