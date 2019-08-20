@@ -1,7 +1,7 @@
 ---
 title: 使用資料表值參數 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd5f00d551c189f583af4232fe31716b51594df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98863afb5a47eddfd311563bd03a1c7c7120b161
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003922"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025711"
 ---
 # <a name="using-table-valued-parameters"></a>使用資料表值參數
 
@@ -32,7 +32,7 @@ ms.locfileid: "68003922"
   
  如需有關資料表值參數的詳細資訊, 請參閱下列資源。  
   
-| 資源                                                                                                             | Description                                                                         |
+| 資源                                                                                                             | 描述                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | SQL Server 線上叢書中的[資料表值參數 (資料庫引擎)](https://go.microsoft.com/fwlink/?LinkId=98363) | 描述如何建立及使用資料表值參數                             |
 | SQL Server 線上叢書中的[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkId=98364)                  | 描述用來宣告資料表值參數的使用者定義資料表類型 |
@@ -66,7 +66,7 @@ CREATE PROCEDURE usp_UpdateCategories
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```
 
-## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>使用資料表值參數 &#40;transact-SQL&#41; 修改資料  
+## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>使用資料表值參數修改資料 (Transact-SQL)  
 
 資料表值參數可用於以集合為基礎的資料修改 (藉由執行單一語句來影響多個資料列)。 例如, 您可以選取資料表值參數中的所有資料列, 並將它們插入資料庫資料表中, 或者您可以藉由將資料表值參數聯結至您要更新的資料表來建立 update 語句。  
   
@@ -237,7 +237,7 @@ pStmt.execute();
 
 此類別代表資料行的中繼資料。 它會在 ISQLServerDataRecord 介面中用來將資料行中繼資料傳遞至資料表值參數。 此類別中的方法包括:  
 
-| [屬性]                                                                                                                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 名稱                                                                                                                                                                             | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData (字串 columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | 使用指定的資料行名稱、sql 類型、有效位數、小數位數和伺服器預設值, 初始化 SQLServerMetaData 的新實例。 這種形式的此格式器可讓您指定資料行在資料表值參數中是否為唯一、資料行的排序次序, 以及排序資料行的序數, 藉此支援資料表值參數。 <br/><br/>useServerDefault-指定這個資料行是否應該使用預設的伺服器值。預設值為 false。<br>isUniqueKey-指出資料表值參數中的資料行是否為唯一的;預設值為 false。<br>sortOrder-指出資料行的排序次序;預設值為 SQLServerSortOrder。未指定。<br>sortOrdinal-指定排序資料行的序數;sortOrdinal 從0開始;預設值為-1。 |
 | public SQLServerMetaData (字串 columnName, int sqlType)                                                                                                                        | 使用資料行名稱和 sql 類型, 初始化 SQLServerMetaData 的新實例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -261,7 +261,7 @@ pStmt.execute();
 
 此類別代表要搭配資料表值參數使用的記憶體中資料表。 此類別中的方法包括:  
 
-| [屬性]                                                          | Description                                          |
+| 名稱                                                          | 描述                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Public SQLServerDataTable()                                   | 初始化 SQLServerDataTable 的新實例。    |
 | public Iterator<Entry\<Integer, Object[]>> getIterator()      | 在資料表的資料列上抓取反覆運算器。 |
@@ -275,7 +275,7 @@ pStmt.execute();
 
 此類別代表 SQLServerDataTable 所表示之記憶體中資料表的資料行。 此類別中的方法包括:  
 
-| [屬性]                                                       | Description                                                                      |
+| 名稱                                                       | 描述                                                                      |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | public SQLServerDataColumn (字串 columnName, int sqlType) | 使用資料行名稱和類型, 初始化 SQLServerDataColumn 的新實例。 |
 | public String getColumnName()                              | 抓取資料行名稱。                                                       |
@@ -285,7 +285,7 @@ pStmt.execute();
 
 此類別代表使用者可以執行來將資料串流至資料表值參數的介面。 此介面中的方法包括:  
   
-| [屬性]                                                    | Description                                                                                             |
+| 名稱                                                    | 描述                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData getColumnMetaData(int column); | 抓取指定之資料行索引的資料行中繼資料。                                               |
 | public int getColumnCount();                            | 抓取資料行總數。                                                                  |
@@ -296,7 +296,7 @@ pStmt.execute();
 
 下列方法已加入至這個類別, 以支援傳遞資料表值參數。  
 
-| [屬性]                                                                                                    | Description                                                                                                                                                                                                                                                                                                |
+| 名稱                                                                                                    | 描述                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured (int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | 使用資料表填入資料表值參數。 parameterIndex 是參數索引, tvpName 是資料表值參數的名稱, 而 tvpDataTable 是來源資料表物件。                                                                                                          |
 | public final void setStructured (int parameterIndex, String tvpName, ResultSet tvpResultSet)             | 使用從另一個資料表抓取的結果集填入資料表值參數。 parameterIndex 是參數索引, tvpName 是資料表值參數的名稱, 而 tvpResultSet 是來源結果集物件。                                                                               |
@@ -306,7 +306,7 @@ pStmt.execute();
 
 下列方法已加入至這個類別, 以支援傳遞資料表值參數。  
   
-| [屬性]                                                                                                        | Description                                                                                                                                                                                                                                                                                                                      |
+| 名稱                                                                                                        | 描述                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured (String paratemeterName, String tvpName, SQLServerDataTable tvpDataTable)    | 使用資料表填入傳遞至預存程式的資料表值參數。 paratemeterName 是參數的名稱, tvpName 是 TVP 類型的名稱, 而 tvpDataTable 是資料表物件。                                                                                                                 |
 | public final void setStructured (字串 paratemeterName, 字串 tvpName, ResultSet tvpResultSet)             | 使用從另一個資料表抓取的結果集, 填入傳遞給預存程式的資料表值參數。 paratemeterName 是參數的名稱, tvpName 是 TVP 類型的名稱, 而 tvpResultSet 是來源結果集物件。                                                                              |
@@ -314,4 +314,4 @@ pStmt.execute();
 
 ## <a name="see-also"></a>另請參閱
 
-[JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

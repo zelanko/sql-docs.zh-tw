@@ -1,7 +1,7 @@
 ---
 title: 部署 JDBC 驅動程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3e7898f66631fd9ca9d75573d5025bb732db8208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956720"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028113"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67956720"
 > [!NOTE]  
 >  使用 `/auto` 選項時，它並不是真的無訊息安裝，因為 WinZip 對話方塊仍會出現在使用者的畫面上。 不過，您將不需要與其互動，而且解壓縮作業一完成，它就會關閉。  
   
-## <a name="deploying-the-driver-on-unix-systems"></a>在 UNIX 系統上部署驅動程式  
+## <a name="deploying-the-driver-on-unix-systems"></a>在 UNIX 系統上部署驅動程式 
  在 UNIX 作業系統上部署 JDBC 驅動程式時，您必須使用安裝套件的 GZIP 檔版本，通常名為 `sqljdbc_<version>_<language>.tar.gz`。  
   
  在安裝 JDBC 驅動程式之前，請確定 gzip 和 tar 公用程式已安裝在使用者的系統上，並確定包含這兩個公用程式之執行檔的資料夾已新增至 PATH 環境變數。  
@@ -53,6 +53,6 @@ ms.locfileid: "67956720"
  `tar -xf sqljdbc_<version>_<language>.tar`  
   
 ## <a name="see-also"></a>另請參閱  
- [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

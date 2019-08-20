@@ -1,7 +1,7 @@
 ---
 title: 使用 Azure Active Directory 驗證連線 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 08/12/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a194338a41e64e18076ad37a4f895180a7d9e448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956811"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028126"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
 
@@ -175,7 +175,7 @@ JDK 隨附`kinit`, 可讓您在已加入網域的電腦上, 從金鑰發佈中�
 #### <a name="linux-and-mac"></a>Linux 和 Mac
 
 ##### <a name="requirements"></a>需求
-存取已加入網域的 Windows 電腦, 以查詢您的 Kerberos 網域控制站。
+存取已加入網域的 Windows 電腦，以查詢您的 Kerberos 網域控制站。
 
 ##### <a name="step-1-find-kerberos-kdc"></a>步驟 1: 尋找 Kerberos KDC
 - **執行于**: Windows 命令列
@@ -201,12 +201,12 @@ JDK 隨附`kinit`, 可讓您在已加入網域的電腦上, 從金鑰發佈中�
      kdc = co1-red-dc-28.domain.company.com
   }
   ```
-  然後儲存 krb5 的檔案並結束
+  然後，儲存 krb5.conf 檔案並結束
 
 > [!NOTE]
 >  網域必須全部為大寫。
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>步驟 3: 測試票證授與票證抓取
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>步驟 3：測試票證授權票證的擷取
 - **執行于**: Linux/Mac
 - **動作**：
   - 使用命令`kinit username@DOMAIN.COMPANY.COM`從 KDC 取得 TGT, 然後它會提示您輸入您的網域密碼。

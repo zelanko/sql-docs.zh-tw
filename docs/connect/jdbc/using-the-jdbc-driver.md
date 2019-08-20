@@ -1,7 +1,7 @@
 ---
-title: 使用 JDBC Driver | Microsoft Docs
+title: 使用 JDBC 驅動程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b00cd72309fde42ab794d7a365be2a736e3671e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893660"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025776"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驅動程式
 
@@ -41,9 +41,9 @@ Microsoft JDBC Driver 6.0 和 4.2 for SQL Server 提供 **sqljdbc41.jar** 和 **
   
 Microsoft JDBC Driver 4.1 for SQL Server 提供 **sqljdbc41.jar** 類別庫檔案。
 
-您的選擇也會決定可用的功能。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱 [JDBC Driver 的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+您的選擇也會決定可用的功能。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱 [JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
-## <a name="setting-the-classpath"></a>設定 Classpath
+## <a name="setting-the-classpath"></a>設定 classpath
 
 Microsoft JDBC 驅動程式 jar 不是 Java SDK 的一部分，而且必須包含於使用者應用程式的 Classpath 中。
 
@@ -208,7 +208,7 @@ Servlet 和 JSP 是在 servlet/JSP 引擎中執行，例如 Tomcat。 Classpath 
 
 Enterprise Java Bean (EJB) 是在 EJB 容器中執行。 EJB 容器的來源是各種供應商。 Java Applet 會在瀏覽器中執行，但是您可以從 Web 伺服器下載。 將 sqljdbc.jar、sqljdbc4.jar 或 sqljdbc41.jar 複製到網頁伺服器的根目錄，並在 applet 的 HTML 封存索引標籤中指定 JAR 檔案的名稱，例如 `<applet ... archive=mssql-jdbc-***.jar>`。  
   
-## <a name="making-a-simple-connection-to-a-database"></a>與資料庫建立簡單連接
+## <a name="making-a-simple-connection-to-a-database"></a>與資料庫建立簡單連線
 
 使用 sqljdbc.jar 類別庫時，應用程式必須先依照下列方式註冊此驅動程式：  
   
@@ -227,10 +227,10 @@ Connection con = DriverManager.getConnection(connectionUrl);
 呼叫 DriverManager 類別的 getConnection 方法時，系統會從已註冊的 JDBC 驅動程式集合中找出適當的驅動程式。 sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 檔案會包括 "META-INF/services/java.sql.Driver" 檔案，其中包含 **com.microsoft.sqlserver.jdbc.SQLServerDriver** 作為已註冊的驅動程式。 目前使用 Class.forName 方法來載入驅動程式的現有應用程式將繼續運作而不進行修改。  
   
 > [!NOTE]  
-> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 類別庫無法搭配舊版的 Java Runtime Environment (JRE) 使用。 如需 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 所支援的 JRE 版本清單，請參閱 [JDBC Driver 的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 類別庫無法搭配舊版的 Java Runtime Environment (JRE) 使用。 如需 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 所支援的 JRE 版本清單，請參閱 [JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
 
 如需如何使用資料來源來連線以及使用連線 URL 的詳細資訊，請參閱[建置連線 URL](../../connect/jdbc/building-the-connection-url.md) 和[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 
-[JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

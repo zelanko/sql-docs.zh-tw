@@ -1,7 +1,7 @@
 ---
-title: 使用 SSL 加密進行連接 |Microsoft Docs
+title: 使用 SSL 加密連線 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 209ced9fbf6d1ceb21ed4e5b6d686dd87eec0de2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ccbd9db2ae39113ca157651bdc6dc1486307419
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956809"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028150"
 ---
-# <a name="connecting-with-ssl-encryption"></a>使用 SSL 加密連接
+# <a name="connecting-with-ssl-encryption"></a>使用 SSL 加密連線
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   本文的範例描述如何在 Java 應用程式中使用連接字串屬性，讓應用程式使用安全通訊端層 (SSL) 加密。 如需這些新連接字串屬性 (例如 **encrypt**、**trustServerCertificate**、**trustStore**、**trustStorePassword** 和 **hostNameInCertificate**) 的詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
@@ -66,6 +66,6 @@ String connectionUrl =
  如果**encrypt**屬性設定為**True** , 而且**trustServerCertificate**屬性設定為**false** , 而且連接字串中的伺服器名稱不符合 SSL 憑證中的伺服器名稱, 則下列錯誤會是已發出`The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`:。 從7.2 版, 驅動程式在 SSL 憑證中的伺服器名稱最左邊的標籤中支援萬用字元模式比對。
 ## <a name="see-also"></a>另請參閱  
  [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)   
- [保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

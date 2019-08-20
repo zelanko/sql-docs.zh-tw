@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver 常見問題集 (FAQ)| Microsoft Docs
+title: JDBC 驅動程式常見問題集 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2860034ae67fc7cc376e84251dbeebc5a123fade
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892368"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028067"
 ---
-# <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver 常見問題集 (FAQ)
+# <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驅動程式常見問題集 (FAQ)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "68892368"
 JDBC Driver 是開放原始碼，您可以在 [GitHub](https://github.com/microsoft/mssql-jdbc) \(英文\) 上找到原始程式碼。 您可以藉由提出問題並參與程式碼基底來協助改進此驅動程式。
 
 **此驅動程式支援哪些版本的 SQL Server 及 Java？**  
-如需詳細資，請參閱 [Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)頁面。
+如需詳細資訊，請參閱[適用於 SQL Server 的 Microsoft JDBC 驅動程式支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)頁面。
 
 **Microsoft 下載中心提供的 JDBC 驅動程式套件與 GitHub 上提供的 JDBC 驅動程式有何差異？**  
 GitHub 存放庫上針對 Microsoft JDBC 驅動程式提供的 JDBC 驅動程式檔案為 JDBC 驅動程式的核心，且屬於存放庫中列出的開放原始碼授權。 Microsoft 下載中心的驅動程式套件包含適用於 Windows 整合式驗證及透過 JDBC 驅動程式啟用 XA 交易的額外程式庫。 那些額外的程式庫均屬於可下載套件隨附的授權。
@@ -144,4 +144,4 @@ Microsoft JDBC Driver 不含任何密碼編譯演算法。 若客戶使用作業
 
 ## <a name="see-also"></a>另請參閱
 
-[JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)

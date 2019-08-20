@@ -1,7 +1,7 @@
 ---
-title: 包裝函式和介面 |Microsoft Docs
+title: 包裝函式與介面 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7be51a27364107afe6b79ebcce5de109909b1836
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916058"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025585"
 ---
 # <a name="wrappers-and-interfaces"></a>包裝函式與介面
 
@@ -77,7 +77,7 @@ ms.locfileid: "67916058"
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>Description
+### <a name="description"></a>描述
 
 此範例示範如何從 DataSource 物件存取 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的函式。 此 DataSource 類別可能已經由應用程式伺服器包裝。 若要存取 JDBC 驅動程式特定函式或常數，您可以解除包裝資料來源成為 SQLServerDataSource 介面，然後使用此介面中宣告的函式。
 
@@ -113,4 +113,4 @@ public class UnWrapTest {
 
 ## <a name="see-also"></a>另請參閱
 
-[了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+[了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

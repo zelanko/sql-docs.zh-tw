@@ -1,7 +1,7 @@
 ---
 title: 驗證使用者輸入 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c2d890c4471dfeb85c1dd4f8f6f614a3b28cff90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b732f1f09d4852f30d3b086ea5d88ea1a71eca9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003904"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025596"
 ---
 # <a name="validating-user-input"></a>驗證使用者輸入
 
@@ -29,4 +29,4 @@ ms.locfileid: "68003904"
 
 ## <a name="see-also"></a>另請參閱
 
-[保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)
+[保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)

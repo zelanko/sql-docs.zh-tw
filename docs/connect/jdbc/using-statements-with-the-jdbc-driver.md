@@ -1,7 +1,7 @@
 ---
-title: 搭配 JDBC Driver 使用語句 |Microsoft Docs
+title: 搭配 JDBC 驅動程式使用陳述式 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7646903fc9efcbdb838b4a2d585735dc3a105639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005919"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025789"
 ---
-# <a name="using-statements-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用陳述式
+# <a name="using-statements-with-the-jdbc-driver"></a>搭配 JDBC 驅動程式使用陳述式
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -35,10 +35,10 @@ JDBC 驅動程式提供三種類別來擷取 [!INCLUDE[ssNoVersion](../../includ
   
 ## <a name="in-this-section"></a>本節內容  
 
-| 主題                                                                                                    | Description                                                                                                                                            |
+| 主題                                                                                                    | 描述                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [搭配使用陳述式與 SQL](../../connect/jdbc/using-statements-with-sql.md)                             | 描述如何搭配 JDBC 驅動程式來使用 SQL 陳述式，以處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料。    |
-| [搭配使用陳述式與預存程序](../../connect/jdbc/using-statements-with-stored-procedures.md) | 描述如何搭配 JDBC 驅動程式來使用預存程序，以處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料。 |
+| [使用 SQL 陳述式](../../connect/jdbc/using-statements-with-sql.md)                             | 描述如何搭配 JDBC 驅動程式來使用 SQL 陳述式，以處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料。    |
+| [搭配預存程序使用陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md) | 描述如何搭配 JDBC 驅動程式來使用預存程序，以處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料。 |
 | [使用多個結果集](../../connect/jdbc/using-multiple-result-sets.md)                           | 描述如何使用 JDBC 驅動程式來擷取多個結果集的資料。                                                                       |
 | [使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)                           | 描述如何使用 SQL 逸出序列，例如日期和時間常值及函數。                                                               |
 | [使用自動產生的金鑰](../../connect/jdbc/using-auto-generated-keys.md)                             | 描述如何使用自動產生的金鑰。                                                                                                     |
@@ -47,4 +47,4 @@ JDBC 驅動程式提供三種類別來擷取 [!INCLUDE[ssNoVersion](../../includ
   
 ## <a name="see-also"></a>另請參閱
 
-[JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
