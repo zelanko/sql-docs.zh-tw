@@ -1,7 +1,7 @@
 ---
 title: 疏鬆資料行 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86d230cee4c38b996ee41240a61e6ede53478bac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004420"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027726"
 ---
 # <a name="sparse-columns"></a>疏鬆資料行
 
@@ -35,7 +35,7 @@ ms.locfileid: "68004420"
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>Description
+### <a name="description"></a>描述
 
 此範例示範如何使用偵測資料行集。 它也會示範如何剖析資料行集的 XML 輸出以取得疏鬆資料行中的資料。
 
@@ -160,4 +160,4 @@ public class SparseColumns {
 
 ## <a name="see-also"></a>另請參閱
 
-[善 JDBC Driver 的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[改善JDBC 驅動程式的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

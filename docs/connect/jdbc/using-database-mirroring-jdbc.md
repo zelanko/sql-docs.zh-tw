@@ -1,7 +1,7 @@
 ---
 title: 使用資料庫鏡像 (JDBC) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6c00b6a0697a4dc6f6e0a358b85fe1e211791826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916257"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026429"
 ---
 # <a name="using-database-mirroring-jdbc"></a>使用資料庫鏡像 (JDBC)
 
@@ -110,4 +110,4 @@ public class ClientFailover {
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

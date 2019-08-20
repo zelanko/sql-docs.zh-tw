@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver 應用程式範例 |Microsoft Docs
+title: 範例 JDBC 驅動程式應用程式 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e99e122f1e18c320c6ea6e5b18409ca39780d03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ef5c2d71d398be52ebed2b69020e87d54818176
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957072"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028309"
 ---
 # <a name="sample-jdbc-driver-applications"></a>範例 JDBC 驅動程式應用程式
 
@@ -33,9 +33,9 @@ ms.locfileid: "67957072"
   
 ## <a name="in-this-section"></a>本節內容  
   
-| 主題                                                                                                                  | Description                                                                                                                                                                                                                                                                   |
+| 主題                                                                                                                  | 描述                                                                                                                                                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [連接及擷取資料](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)                              | 這些範例應用程式示範如何連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫。 它們也示範從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫擷取資料的不同方法。 |
+| [連線及擷取資料](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)                              | 這些範例應用程式示範如何連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫。 它們也示範從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫擷取資料的不同方法。 |
 | [使用資料類型 &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)                        | 這些範例應用程式示範如何使用 JDBC 驅動程式資料類型方法，來使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的資料。                                                                                              |
 | [使用結果集](../../../connect/jdbc/code-samples/working-with-result-sets.md)                                          | 這些範例應用程式示範如何使用結果集，來處理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中包含的資料。                                                                                                            |
 | [使用大型資料](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | 這些範例應用程式會示範如何使用自適性緩衝來擷取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的大數值資料，而沒有伺服器資料指標的負擔。                                                         |
@@ -43,4 +43,4 @@ ms.locfileid: "67957072"
   
 ## <a name="see-also"></a>另請參閱
 
-[JDBC Driver 概觀](../../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[JDBC 驅動程式概觀](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

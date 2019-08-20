@@ -1,7 +1,7 @@
 ---
 title: 使用參數中繼資料 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 168a153ecf12acda5adfbae22d13618669c6c2a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80ff8cebcc4141e8363c25f83821cb4924e6c46a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916208"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026079"
 ---
 # <a name="using-parameter-metadata"></a>使用參數中繼資料
 

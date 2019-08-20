@@ -1,7 +1,7 @@
 ---
 title: SQLXML 資料類型範例 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4d5e616fa1a510633caf4e5e2e0b20266a1eb771
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0cc8e3e48024e6d5af789919173454d0ee05e56
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004372"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027653"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 資料類型範例
 

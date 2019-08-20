@@ -1,7 +1,7 @@
 ---
 title: 使用者定義類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae4ada0ee18b9066df27a130a8f68405b760159d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ed890ee562d3fcc2221877b23ee09bbf9a8ccf9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004095"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027143"
 ---
-# <a name="user-defined-types"></a>使用者定義型別
+# <a name="user-defined-types"></a>使用者定義類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,4 +27,4 @@ ms.locfileid: "68004095"
 
 ## <a name="see-also"></a>另請參閱
 
-[了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+[了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

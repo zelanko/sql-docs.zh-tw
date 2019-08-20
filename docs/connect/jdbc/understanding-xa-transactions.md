@@ -1,7 +1,7 @@
 ---
 title: 瞭解 XA 交易 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004161"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027220"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 
@@ -26,11 +26,11 @@ ms.locfileid: "68004161"
 > [!WARNING]  
 > Microsoft JDBC Driver 4.2 (和更新版本) for SQL 包含新的現有功能逾時選項，用於已取消準備交易的自動回復。 如需詳細資訊, 請參閱本主題稍後的設定[伺服器端的自動回復未準備的交易](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide)。  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 分散式交易實作的類別如下：  
   
-| 類別                                              | 實作                      | Description                                       |
+| 類別                                              | 實作                      | 描述                                       |
 | -------------------------------------------------- | ------------------------------- | ------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc.SQLServerXADataSource | javax.sql.XADataSource          | 分散式連接的 Class Factory。    |
 | com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | 交易管理員的資源配接器。 |
@@ -52,7 +52,7 @@ ms.locfileid: "68004161"
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
-## <a name="configuration-instructions"></a>組態指示
+## <a name="configuration-instructions"></a>設定指示
 
 如果要將 XA 資料來源與 Microsoft 分散式交易協調器 (MS DTC) 搭配使用，來處理分散式交易，則需要下列步驟。  
 
@@ -152,7 +152,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
      表示如果用戶端未指定任何逾時，則所有交易都會都有 30 秒逾時 (最大值)。 用戶端如有指定逾時，除非該值小於 30 秒 (最大值)，否則將會使用用戶端的逾時值。  
   
-### <a name="upgrading-sqljdbcxadll"></a>升級 sqljdbc_xa.dll
+### <a name="upgrading-sqljdbc_xadll"></a>升級 sqljdbc_xa.dll
 
 當您安裝新版 JDBC 驅動程式時，也應該使用新版的 sqljdbc_xa.dll 來升級伺服器上的 sqljdbc_xa.dll。  
   
@@ -349,4 +349,4 @@ class XidImpl implements Xid {
 
 ## <a name="see-also"></a>另請參閱  
 
-[使用 JDBC Driver 執行交易](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+[以 JDBC 驅動程式執行交易](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

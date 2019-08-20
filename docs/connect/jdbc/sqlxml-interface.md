@@ -1,7 +1,7 @@
 ---
 title: SQLXML 介面 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f235525e7a633bc0c49d39f8bec6bf4a79c0885d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72cccce89d5e30a92f38b956c8b7996949d3bb46
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006028"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027694"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 介面
 
@@ -25,7 +25,7 @@ JDBC 驅動程式提供 JDBC 4.0 API 的支援，此 API 引進 java.sql.SQLXML 
   
 SQLXML 介面提供將 XML 值當做**字串**、**讀取器**或**寫入器**或**資料流程**來存取的方法。 XML 值也可以透過 **Source** 存取或設定為 **Result**，以便搭配文件物件模型 (DOM)、Simple API for XML (SAX) 和 Streaming API for XML (StAX) 等 XML 剖析器 API 以及 XSLT 轉換和 XPath 使用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
 下表將描述 SQLXML 介面中定義的方法。  
   

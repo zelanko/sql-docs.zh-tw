@@ -1,7 +1,7 @@
 ---
 title: 使用自動產生的金鑰 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 55541d7487f27a6fa4e38fef8baf47a6ef3ff6d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f93bad7ff490ee2774d10e2df940168a67d30867
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003982"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026609"
 ---
 # <a name="using-auto-generated-keys"></a>使用自動產生的金鑰
 
@@ -40,4 +40,4 @@ CREATE TABLE TestTable
 
 ## <a name="see-also"></a>另請參閱
 
-[搭配使用陳述式與 JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)
+[搭配 JDBC 驅動程式使用陳述式](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

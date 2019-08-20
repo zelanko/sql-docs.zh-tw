@@ -1,7 +1,7 @@
 ---
 title: 追蹤驅動程式作業 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916679"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027587"
 ---
 # <a name="tracing-driver-operation"></a>追蹤驅動程式作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67916679"
   
  下表將描述公用記錄類別目錄的每個可用記錄層級。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |SEVERE|表示嚴重失敗，這是最高的記錄層級。 在 JDBC 驅動程式中，這個層次用於報告錯誤和例外狀況。|  
 |WARNING|表示潛在問題。|  
@@ -53,7 +53,7 @@ ms.locfileid: "67916679"
   
  下表將描述內部記錄類別目錄的每個可用記錄層級。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |SEVERE|表示嚴重失敗，這是最高的記錄層級。 在 JDBC 驅動程式中，這個層次用於報告錯誤和例外狀況。|  
 |WARNING|表示潛在問題。|  
@@ -67,7 +67,7 @@ ms.locfileid: "67916679"
 ## <a name="logging-categories"></a>記錄類別目錄  
  建立 Logger 物件時，必須告知物件您有興趣從中取得記錄資訊的具名實體或類別目錄。 JDBC Driver 支援下列公用記錄類別目錄，而且它們定義於 com.microsoft.sqlserver.jdbc 驅動程式封裝中。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |連接|記錄 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINER。|  
 |引數|記錄 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINER。|  
@@ -77,7 +77,7 @@ ms.locfileid: "67916679"
   
  從 Microsoft JDBC Driver 2.0 版開始，此驅動程式也提供了 com.microsoft.sqlserver.jdbc.internals 封裝，其中包含下列內部記錄類別目錄的記錄支援。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |AuthenticationJNI|記錄有關 Windows 整合式驗證問題的訊息 (當**authenticationScheme**連接屬性隱含或明確設定為**NativeAuthentication**時)。<br /><br /> 應用程式可以將記錄層級設定為 FINEST 和 FINE。|  
 |SQLServerConnection|記錄 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE 和 FINER。|  
@@ -131,7 +131,7 @@ Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");
 logger.setLevel(Level.OFF);  
 ```  
   
-## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>使用 Logging.Properties 檔案來啟用追蹤  
+## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>使用 logging.properties 檔案來啟用追蹤  
  您也可以使用 `logging.properties` 檔案來啟用追蹤，此檔案位於 Java Runtime Environment (JRE) 安裝的 `lib` 目錄中。 可以用這個檔案來設定當啟用追蹤時，所要使用的記錄器和處理常式預設值。  
   
  下列是可在 `logging.properties` 檔案中進行的設定範例：  
@@ -159,6 +159,6 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 >  您可以使用 LogManager 物件 (屬於 java.util.logging 的一部分) 設定 `logging.properties` 檔案的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [診斷 JDBC Driver 問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+ [診斷 JDBC 驅動程式的問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: 國家字元集支援 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ff8d7435e3a896c05281748568eacc2e92d32f6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae20e40723822da0004b82dd7c89961fa0448e10
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956285"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027868"
 ---
 # <a name="national-character-set-support"></a>國家字元集支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "67956285"
  為了以 Unicode 格式將 String 參數傳送至伺服器，應用程式應該使用新的 JDBC 4.0 國家字元方法，或在使用非國家字元方法時，將 **sendStringParametersAsUnicode** 連線屬性設定為 "**true**"。 建議的方式為盡可能使用新的 JDBC 4.0 國家字元方法。 如需**sendStringParametersAsUnicode**連接屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+ [了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

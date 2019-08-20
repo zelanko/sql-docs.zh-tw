@@ -1,7 +1,7 @@
 ---
-title: 瞭解 JDBC Driver 資料類型 |Microsoft Docs
+title: 瞭解 JDBC driver 資料類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a78f6049f49c73c728e3de9329cc6b3e533cdc8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916604"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027277"
 ---
-# <a name="understanding-the-jdbc-driver-data-types"></a>了解 JDBC Driver 資料類型
+# <a name="understanding-the-jdbc-driver-data-types"></a>了解 JDBC 驅動程式資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,7 +29,7 @@ JDBC 類型系統會調解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ## <a name="in-this-section"></a>本節內容  
   
-| 主題                                                                                                                                            | Description                                                                                                                                                                                                                                                          |
+| 主題                                                                                                                                            | 描述                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [使用基本資料類型](../../connect/jdbc/using-basic-data-types.md)                                                                           | 描述 JDBC 基本資料類型。 包括如何透過結果集、參數化查詢以及預存程序來使用資料類型的範例。                                                                                                        |
 | [設定 java.sql.Time 值如何傳送給伺服器](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | 描述 JDBC 驅動程式產生日期的方式。                                                                                                                                                                                                                       |
@@ -42,4 +42,4 @@ JDBC 類型系統會調解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 ## <a name="see-also"></a>另請參閱
 
-[JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

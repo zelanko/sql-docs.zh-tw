@@ -1,7 +1,7 @@
 ---
 title: 搭配 JDBC driver 使用 Always Encrypted |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916455"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026637"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 本頁面提供如何使用[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和 Microsoft JDBC Driver 6.0 (或更新版本) 為 SQL Server 開發 JAVA 應用程式的相關資訊。
 
-Always Encrypted 可讓用戶端加密敏感性資料，而且永遠不會向 SQL Server 或 Azure SQL Database 顯示資料或加密金鑰。 Microsoft JDBC Driver 6.0 (或更高版本) for SQL Server 等啟用了 Always Encrypted 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料，達成此行為。 驅動程式會自動判斷哪一個查詢參數對應至 Always Encrypted 的資料庫資料行, 並在將這些參數的值傳送至 SQL Server 或 Azure SQL Database 之前, 先將它們加密。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊, 請參閱 JDBC Driver 的[Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[Always Encrypted API 參考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
+Always Encrypted 可讓用戶端加密敏感性資料，而且永遠不會向 SQL Server 或 Azure SQL Database 顯示資料或加密金鑰。 Microsoft JDBC Driver 6.0 (或更高版本) for SQL Server 等啟用了 Always Encrypted 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料，達成此行為。 驅動程式會自動判斷哪一個查詢參數對應至 Always Encrypted 的資料庫資料行, 並在將這些參數的值傳送至 SQL Server 或 Azure SQL Database 之前, 先將它們加密。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊, 請參閱 JDBC driver 的[Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[Always Encrypted API 參考](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
 
 ## <a name="prerequisites"></a>Prerequisites
 - 請確定您的開發電腦上已安裝適用于 SQL Server 的 Microsoft JDBC Driver 6.0 (或更新版本)。 
@@ -42,7 +42,7 @@ Always Encrypted 可讓用戶端加密敏感性資料，而且永遠不會向 SQ
 ### <a name="using-built-in-column-master-key-store-providers"></a>使用內建資料行主要金鑰存放區提供者
 適用于 SQL Server 的 Microsoft JDBC Driver 隨附下列內建的資料行主要金鑰存放區提供者。 其中一些提供者會預先向特定的提供者名稱註冊 (用來查閱提供者), 而有些則需要額外的認證或明確的註冊。
 
-| 類別                                                 | Description                                        | 提供者 (查閱) 名稱  | 是否已預先註冊？ |
+| 類別                                                 | 描述                                        | 提供者 (查閱) 名稱  | 是否已預先註冊？ |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
 | **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault 的金鑰存放區提供者。 | AZURE_KEY_VAULT         | 否                 |
 | **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 憑證存放區的提供者。      | MSSQL_CERTIFICATE_STORE | 是                |
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > 如需如何在 Maven 專案中包含這些相依性的範例, 請參閱[使用 Apache Maven 下載 ADAL4J 和 AKV](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)相依性。
 
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
-SQLServerColumnEncryptionCertificateStoreProvider 可用來將資料行主要金鑰儲存在 Windows 憑證存放區。 使用 [SQL Server Management Studio (SSMS) Always Encrypted wizard] 或其他支援的工具, 在資料庫中建立資料行主要金鑰和資料行加密金鑰定義。 您可以使用相同的 wizard, 在 Windows 憑證存放區中產生自我簽署憑證, 以做為 always encrypted 資料的資料行主要金鑰。 如需有關資料行主要金鑰和資料行加密金鑰 T-sql 語法的詳細資訊, 請參閱分別[建立資料行主要金鑰](../../t-sql/statements/create-column-master-key-transact-sql.md)和[建立資料行加密金鑰](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。
+SQLServerColumnEncryptionCertificateStoreProvider 可用來將資料行主要金鑰儲存在 Windows 憑證存放區。 使用 [SQL Server Management Studio (SSMS) Always Encrypted wizard] 或其他支援的工具, 在資料庫中建立資料行主要金鑰和資料行加密金鑰定義。 您可以使用相同的 wizard, 在 Windows 憑證存放區中產生自我簽署憑證, 以做為 Always Encrypted 資料的資料行主要金鑰。 如需有關資料行主要金鑰和資料行加密金鑰 T-sql 語法的詳細資訊, 請參閱分別[建立資料行主要金鑰](../../t-sql/statements/create-column-master-key-transact-sql.md)和[建立資料行加密金鑰](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。
 
 SQLServerColumnEncryptionCertificateStoreProvider 的名稱是 MSSQL_CERTIFICATE_STORE, 可由 provider 物件的 getName () API 進行查詢。 它會由驅動程式自動註冊, 而且可以順暢地使用, 而不需要變更任何應用程式。
 
@@ -651,4 +651,4 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 
 ## <a name="see-also"></a>另請參閱
 
-[一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+[Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

@@ -1,7 +1,7 @@
 ---
 title: 使用結果集 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fe44efec59b78fe025cd08207c2026e658466554
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d38cb92fbbf83f9b8a110d2e17f60af70c177ab4
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003832"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025443"
 ---
 # <a name="working-with-result-sets"></a>使用結果集
 
@@ -32,7 +32,7 @@ ms.locfileid: "68003832"
   
 ## <a name="in-this-section"></a>本節內容  
   
-| 主題                                                                                        | Description                                                                                                                                                                                          |
+| 主題                                                                                        | 描述                                                                                                                                                                                          |
 | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [擷取結果集資料範例](../../connect/jdbc/retrieving-result-set-data-sample.md) | 描述如何使用結果集，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫擷取資料並顯示資料。                                                         |
 | [修改結果集資料範例](../../connect/jdbc/modifying-result-set-data-sample.md)   | 描述如何使用結果集，插入、擷取及修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料。                                                      |

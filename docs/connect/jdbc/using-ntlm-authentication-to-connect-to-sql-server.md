@@ -1,7 +1,7 @@
 ---
 title: 使用 NTLM 驗證連接到 SQL Server |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 11fe35e1dc90e32cac460b61fe8a6078c817b0ca
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894100"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026106"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>使用 NTLM 驗證連接到 SQL Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "68894100"
 
 如需連接屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。 如需 Microsoft NTLM 驗證通訊協定的詳細資訊, 請參閱[MICROSOFT ntlm](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 如需 SQL server 設定的描述, 以控制 NTLM 驗證的行為, 請參閱[網路安全性: LAN Manager 驗證層級](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)。 
 
@@ -68,17 +68,17 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 }
 ```
 
-## <a name="service-principal-names"></a>服務主要名稱
+## <a name="service-principal-names"></a>服務主體名稱
 
-服務主要名稱 (SPN) 是用戶端用以唯一識別服務執行個體的名稱。
+服務主體名稱 (SPN) 是用戶端用以唯一識別服務執行個體的名稱。
 
 您可以使用 **serverSpn** 連線屬性指定 SPN，或直接讓驅動程式為您建置 (預設)。 此屬性的格式為："MSSQLSvc/fqdn:port\@REALM"，其中 fqdn 是完整網域名稱，port 是連接埠號碼，REALM 是以大寫字母表示的 SQL Server 領域。 這個屬性的領域部分是選擇性的, 因為預設領域與伺服器的領域相同。
 
 例如, 您的 SPN 可能如下所示: 「MSSQLSvc/some-伺服器. zzz .com: 1433」
 
-如需有關服務主要名稱 (SPN) 的詳細資訊，請參閱：
+如需有關服務主體名稱 (SPN) 的詳細資訊，請參閱：
 
-- [用戶端連接中的服務主要名稱 (SPN) 支援](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [用戶端連線中的服務主體名稱 (SPN) 支援](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
 
 > [!NOTE]  
 > 只有 Microsoft JDBC Driver 4.2 以上 (含) 版本支援 serverSpn 連線屬性。
@@ -95,13 +95,13 @@ NTLM 通訊協定是一種舊的驗證通訊協定, 具有各種弱點, 這會�
 
 - [使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)
 
-如需使用 SSL 加密進行連接的詳細資訊, 請參閱:
+如需使用 SSL 加密進行連線的詳細資訊，請參閱：
 
-- [使用 SSL 加密連接](../../connect/jdbc/connecting-with-ssl-encryption.md)
+- [使用 SSL 加密連線](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
 > 在7.4 版本中, 不支援**同時**啟用擴充保護和加密。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

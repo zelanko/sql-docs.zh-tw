@@ -1,7 +1,7 @@
 ---
-title: 使用 SQL Escape 序列 |Microsoft Docs
+title: 使用 SQL escape 序列 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005931"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025889"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 逸出序列
 
@@ -86,7 +86,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 其中 `literal-type` 是下列其中之一：  
   
-| 常值類型 | Description | 值格式               |
+| 常值類型 | 描述 | 值格式               |
 | ------------ | ----------- | -------------------------- |
 | d            | date        | yyyy-mm-dd                 |
 | t            | Time        | hh:mm:ss [1]               |
@@ -161,4 +161,4 @@ LIMIT <rows> [OFFSET <row offset>]
   
 ## <a name="see-also"></a>另請參閱
 
-[搭配使用陳述式與 JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+[搭配 JDBC 驅動程式使用陳述式](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

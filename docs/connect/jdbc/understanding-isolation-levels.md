@@ -1,7 +1,7 @@
 ---
 title: 瞭解隔離等級 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6cfbc099d88a96574439fa8c178b12629d92782c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916645"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027395"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔離等級
 
@@ -41,7 +41,7 @@ ms.locfileid: "67916645"
   
 較低的隔離等級將可讓更多的使用者同時存取資料，但也會增加使用者可能遇到並行作用 (例如，中途讀取或遺失的更新) 的數目。 相反地，較高的隔離等級將可減少使用者遇到並行作用的類型，但是將需要更多的系統資源，而且會增加一個交易封鎖另一個交易的可能性。 選擇適當的隔離等級需視應用程式的資料完整性需求與每個隔離等級的額外負荷平衡而定。 最高的隔離等級為可序列化，可確保每次交易重複讀取作業時都能擷取相同的資料，但它是透過執行鎖定層級來達成此目的，因此在多使用者系統中有可能會影響其他使用者。 最低隔離等級為讀取未認可，可以擷取其他交易已修改但尚未認可的資料。 在讀取未認可中可能會發生所有的並行副作用，但由於沒有讀取鎖定或版本控制，因此可將負擔降到最低。  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
  下表顯示不同隔離等級所允許的並行副作用。  
   
@@ -77,4 +77,4 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC Driver 執行交易](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+[以 JDBC 驅動程式執行交易](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

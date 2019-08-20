@@ -1,7 +1,7 @@
 ---
 title: 使用預存程序讀取大型資料範例 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbf339845bd23f1beb4f5cd0f3b3a380689a3120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7132ddcd254358cd2199145d260f09ed0465adb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956124"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027810"
 ---
 # <a name="reading-large-data-with-stored-procedures-sample"></a>使用預存程序讀取大型資料範例
 
@@ -40,7 +40,7 @@ ms.locfileid: "67956124"
 
 ## <a name="example"></a>範例
 
-在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 資料庫的連線。 接著，範例程式碼會建立範例資料，並使用參數化查詢更新 Production.Document 資料表。 然後，範例程式碼會使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [getResponseBuffering](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 方法來取得適應性緩衝模式，並且執行 GetLargeDataValue 預存程序。 從 JDBC 驅動程式 2.0 版開始，responseBuffering 連線屬性預設為 "adaptive"。
+在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 資料庫的連線。 接著，範例程式碼會建立範例資料，並使用參數化查詢更新 Production.Document 資料表。 然後，範例程式碼會使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [getResponseBuffering](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 方法來取得自適性緩衝模式，並且執行 GetLargeDataValue 預存程序。 從 JDBC 驅動程式 2.0 版開始，responseBuffering 連線屬性預設為 "adaptive"。
 
 最後，範例程式碼會顯示利用 OUT 參數傳回的資料，同時示範如何在資料流上使用 `mark` 和 `reset` 方法來重新讀取任何部分的資料。
 

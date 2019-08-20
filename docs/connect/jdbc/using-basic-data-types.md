@@ -1,7 +1,7 @@
 ---
 title: 使用基本資料類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916364"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026516"
 ---
 # <a name="using-basic-data-types"></a>使用基本資料類型
 
@@ -113,7 +113,7 @@ ms.locfileid: "67916364"
 > [!NOTE]  
 > 在此範例中，結果集會傳回執行預存程序的結果。
 
-如需有關使用 JDBC 驅動程式搭配預存程式和輸入參數的詳細資訊, 請參閱[使用具有輸入參數的預存](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)程式。  
+如需有關搭配預存程式與輸入參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用含輸入參數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)。  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>從預存程序中擷取參數
 
@@ -128,4 +128,4 @@ ms.locfileid: "67916364"
 
 ## <a name="see-also"></a>另請參閱
 
-[了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

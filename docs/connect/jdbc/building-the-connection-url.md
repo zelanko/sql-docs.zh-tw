@@ -1,7 +1,7 @@
 ---
 title: 建立連接 URL |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957378"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028447"
 ---
 # <a name="building-the-connection-url"></a>建立連接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "67957378"
     > [!NOTE]  
     >  若要達到最佳的連接效能，在連接到具名執行個體時應設定 portNumber。 如此可避免為了判斷通訊埠號碼而徒勞往返於伺服器。 如果同時使用 portNumber 及 instanceName，將優先使用 portNumber 並忽略 instanceName。  
   
--   **property** (選擇項) 是一或多個選項連線屬性。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。 可以指定清單中的任何屬性。 屬性只能使用分號 (';') 來分隔，且不能重複。  
+-   **property** (選擇性) 是一或多個選項連線屬性。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。 可以指定清單中的任何屬性。 屬性只能使用分號 (';') 來分隔，且不能重複。  
   
 > [!CAUTION]  
->  為了安全起見，您應該避免根據使用者輸入來建立連接 URL。 應該只在 URL 中指定伺服器名稱和驅動程式。 至於使用者名稱和密碼值，請使用連接屬性集合。 如需有關 JDBC 應用程式中安全性的詳細資訊, 請參閱[保護 Jdbc Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)。  
+>  為了安全起見，您應該避免根據使用者輸入來建立連接 URL。 應該只在 URL 中指定伺服器名稱和驅動程式。 至於使用者名稱和密碼值，請使用連接屬性集合。 如需有關 JDBC 應用程式中安全性的詳細資訊, 請參閱[保護 jdbc driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)。  
   
-## <a name="connection-examples"></a>連接範例  
+## <a name="connection-examples"></a>連線範例  
  使用一個使用者名稱及密碼，連接至本機電腦上的預設資料庫：  
   
  `jdbc:sqlserver://localhost;user=MyUserName;password=*****;`  
@@ -83,7 +83,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `jdbc:sqlserver://localhost;instanceName=instance1;integratedSecurity=true;<more properties as required>;`  
   
-## <a name="escaping-values-in-the-connection-url"></a>連接 URL 中的逸出值  
+## <a name="escaping-values-in-the-connection-url"></a>逸出連線 URL 中的值  
  因為包含了空格、分號和引號這類特殊字元，可能有需要逸出連接 URL 值中的特定部份。 如果字元是內含在大括弧中，JDBC 驅動程式就支援逸出這些字元。 例如，{;} 可逸出分號。  
   
  逸出值可以包含特殊字元 (特別是 '='、';'、'[]' 和空格)，但不能包含大括弧。 必須逸出和包含大括弧的值，應該加入屬性集合中。  
@@ -107,7 +107,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
-## <a name="connecting-with-ipv6-addresses"></a>以 IPv6 位址連接  
+## <a name="connecting-with-ipv6-addresses"></a>以 IPv6 位址連線  
  JDBC 驅動程式支援使用 IPv6 位址搭配連接屬性集合，以及搭配 serverName 連接字串屬性。 連接字串中的 IPv6 位址不支援初始 serverName 值，例如 jdbc:sqlserver  ://serverName  。 針對 *serverName* 請使用名稱，而不要使用原始 IPv6 位址，此方法適用於所有的連線情況。 下列範例提供詳細資訊。  
   
  **使用 serverName 屬性**  
@@ -123,6 +123,6 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: 管理交易大小 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0e53ab6e5f2fc2cc12db37d81b1c8f687b503158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b443e3541dbf86fd0cfa947f057faaf62e08226
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956358"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027903"
 ---
 # <a name="managing-transaction-size"></a>管理交易大小
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,6 +29,6 @@ ms.locfileid: "67956358"
  此外，如果您的應用程式預期會發生一些封鎖問題而且需要進行逾時，請務必使用鎖定逾時設定。 這時您只要使用 [setLockTimeout](../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md) 方法，即可完成這個動作。 鎖定逾時的預設值為 -1，也就是說，在等待鎖定時，它會永遠封鎖。 您可以將鎖定逾時設定為 30 秒，也就是說，如果由其他連接進行封鎖，將會使封鎖的連接逾時 30 秒。  
   
 ## <a name="see-also"></a>另請參閱  
- [善 JDBC Driver 的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+ [改善JDBC 驅動程式的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

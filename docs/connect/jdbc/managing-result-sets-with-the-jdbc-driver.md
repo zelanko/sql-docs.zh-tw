@@ -1,7 +1,7 @@
 ---
 title: 使用 JDBC 驅動程式管理結果集 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2f6b7dac1be8309ff5ece21dbb863b410edbf61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956341"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027916"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>使用 JDBC 驅動程式管理結果集
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "67956341"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[了解資料指標類型](../../connect/jdbc/understanding-cursor-types.md)|描述 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援的不同資料指標類型。|  
-|[瞭解並行控制](../../connect/jdbc/understanding-concurrency-control.md)|描述 JDBC Driver 支援並行控制的方式。|  
+|[了解並行控制](../../connect/jdbc/understanding-concurrency-control.md)|描述 JDBC Driver 支援並行控制的方式。|  
 |[了解資料列鎖定](../../connect/jdbc/understanding-row-locking.md)|描述 JDBC 驅動程式支援資料列鎖定的方式。|  
   
 ## <a name="see-also"></a>另請參閱  
- [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

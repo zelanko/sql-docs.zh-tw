@@ -1,7 +1,7 @@
 ---
 title: 使用結果集 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956957"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028237"
 ---
 # <a name="working-with-result-sets"></a>使用結果集
 
@@ -32,7 +32,7 @@ ms.locfileid: "67956957"
   
 ## <a name="in-this-section"></a>本節內容  
   
-| 主題                                                                                           | Description                                                                                                                                                                                             |
+| 主題                                                                                           | 描述                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [擷取結果集資料範例](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | 描述如何使用結果集，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫擷取資料並顯示資料。                                                         |
 | [修改結果集資料範例](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | 描述如何使用結果集，插入、擷取及修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的資料。                                                      |

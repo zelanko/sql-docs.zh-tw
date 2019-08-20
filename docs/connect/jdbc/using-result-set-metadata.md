@@ -1,7 +1,7 @@
 ---
 title: 使用結果集中繼資料 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5e37529a-30db-48c8-b90a-ae9657d0f6b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86e41f52ed8296c46cfd7b167407b10fc9f0b285
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ed0b1eedcafa1fab59d17f756523fc0fc189200
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005948"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026117"
 ---
 # <a name="using-result-set-metadata"></a>使用結果集中繼資料
 
@@ -31,4 +31,4 @@ ms.locfileid: "68005948"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC Driver 處理中繼資料](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)
+[使用 JDBC 驅動程式處理中繼資料](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)

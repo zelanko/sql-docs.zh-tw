@@ -1,7 +1,7 @@
 ---
 title: 使用 SQLXML 進行程式設計 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956179"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027775"
 ---
 # <a name="programming-with-sqlxml"></a>使用 SQLXML 進行程式設計
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,8 +96,8 @@ ms.locfileid: "67956179"
   
  XML 剖析器無法處理空值。 不過，SQL Server 允許應用程式在 XML 資料類型的資料庫資料行中擷取和儲存空值。 這表示，剖析 XML 資料時，如果基礎值是空的，剖析器就會擲回例外狀況。 若為 DOM 輸出，JDBC Driver 會捕捉例外狀況並擲回錯誤。 若為 SAX 和 Stax 輸出，錯誤則直接來自剖析器。  
   
-## <a name="adaptive-buffering-and-sqlxml-support"></a>適應性緩衝和 SQLXML 支援  
- SQLXML 物件所傳回的二進位和字元資料流會遵循適應性或完整緩衝模式。 反之，如果 XML 剖析器不是資料流，它們就不會遵循適應性或完整設定。 如需適應性緩衝的詳細資訊, 請參閱[使用適應性緩衝](../../connect/jdbc/using-adaptive-buffering.md)。  
+## <a name="adaptive-buffering-and-sqlxml-support"></a>自適性緩衝和 SQLXML 支援  
+ SQLXML 物件所傳回的二進位和字元資料流會遵循適應性或完整緩衝模式。 反之，如果 XML 剖析器不是資料流，它們就不會遵循適應性或完整設定。 如需自適性緩衝的詳細資訊, 請參閱[使用自適性緩衝](../../connect/jdbc/using-adaptive-buffering.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)  

@@ -1,7 +1,7 @@
 ---
-title: 保護 JDBC Driver 應用程式 |Microsoft Docs
+title: 保護 JDBC 驅動程式應用程式 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945749"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027749"
 ---
-# <a name="securing-jdbc-driver-applications"></a>保護 JDBC Driver 應用程式
+# <a name="securing-jdbc-driver-applications"></a>保護 JDBC 驅動程式應用程式
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,7 +27,7 @@ ms.locfileid: "67945749"
   
 ## <a name="in-this-section"></a>本節內容  
   
-| 主題                                                                            | Description                                                                                                                                                           |
+| 主題                                                                            | 描述                                                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [保護連接字串](../../connect/jdbc/securing-connection-strings.md) | 描述協助保護連接資料來源時所使用之資訊的技術。                                                                                    |
 | [驗證使用者輸入](../../connect/jdbc/validating-user-input.md)             | 描述驗證使用者輸入的技術。                                                                                                                          |
@@ -37,4 +37,4 @@ ms.locfileid: "67945749"
   
 ## <a name="see-also"></a>另請參閱  
 
- [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

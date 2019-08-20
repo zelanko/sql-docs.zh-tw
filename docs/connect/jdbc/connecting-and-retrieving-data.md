@@ -1,7 +1,7 @@
 ---
-title: 連接和抓取資料 |Microsoft Docs
+title: 連線及擷取資料 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c7e642879c095dd4d9dca4f51a936ab72c523e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd4751fe3d1acb7119c87e39ecd8694a0fa83c19
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956882"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028219"
 ---
-# <a name="connecting-and-retrieving-data"></a>連接及擷取資料
+# <a name="connecting-and-retrieving-data"></a>連線及擷取資料
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "67956882"
   
 ## <a name="in-this-section"></a>本節內容  
   
-| 主題                                                                | Description                                                                                                                                                   |
+| 主題                                                                | 描述                                                                                                                                                   |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [連接 URL 範例](../../connect/jdbc/connection-url-sample.md) | 說明如何使用連線 URL 來連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後使用 SQL 陳述式來擷取資料。 |
 | [資料來源範例](../../connect/jdbc/data-source-sample.md)       | 說明如何使用資料來源來連接到 SQL Server，然後使用預存程序來擷取資料。                                                 |

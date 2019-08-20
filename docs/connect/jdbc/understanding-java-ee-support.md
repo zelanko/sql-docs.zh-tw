@@ -1,7 +1,7 @@
 ---
 title: 了解 Java EE 支援 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892314"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027257"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支援
 
@@ -78,4 +78,4 @@ Connection c = ds.getConnection("user", "pwd");
   
 ## <a name="see-also"></a>另請參閱
 
-[JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

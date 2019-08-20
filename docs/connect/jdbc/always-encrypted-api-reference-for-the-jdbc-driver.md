@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver 的 Always Encrypted API 參考 | Microsoft Docs
+title: JDBC 驅動程式的 Always Encrypted API 參考 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a17dc46e2ee60832b51d606c2c7caaf497dfc7c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cf8ce1b951621d58105d18b847306ff620d114
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957476"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028479"
 ---
-# <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC Driver 的 Always Encrypted API 參考
+# <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 驅動程式的 Always Encrypted API 參考
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   一律加密可讓用戶端將用戶端應用程式內的機密資料進行加密，且永遠不會顯示 SQL Server 的加密金鑰。 安裝在用戶端電腦上且啟用 Always Encrypted 的驅動程式，透過自動將 SQL Server 用戶端應用程式中的敏感性資料加密與解密，進而達到此功能。 驅動程式會先將敏感資料行中的資料進行加密，才會將資料傳遞至 SQL Server，並自動重寫查詢以保留應用程式的語意。 同樣地，驅動程式會以透明的方式，將查詢結果中加密資料庫資料行所儲存的資料解密。 如需詳細資訊, 請參閱[Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和搭配[使用 Always Encrypted 與 JDBC 驅動程式](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。  
@@ -194,6 +194,6 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >  如果已針對查詢停用 Always Encrypted, 且查詢傳回來自加密資料行的結果, 則查詢會傳回加密值。 加密的值將會有 Varbinary 資料類型。  
   
  ## <a name="see-also"></a>另請參閱  
- [搭配使用一律加密與 JDBC 驅動程式](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+ [搭配 JDBC 驅動程式使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 

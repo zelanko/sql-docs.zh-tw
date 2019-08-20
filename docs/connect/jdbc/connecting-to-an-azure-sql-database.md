@@ -1,7 +1,7 @@
 ---
 title: 連接到 Azure SQL database |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956858"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028157"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
 
@@ -34,7 +34,7 @@ ms.locfileid: "67956858"
 連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]時, 您應該連接至 master 資料庫以呼叫**SQLServerDatabaseMetaData. getCatalogs**。  
 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData. getCatalogs**使用 sys.databases view 來取得目錄。 請參閱[sys.databases (transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)中的許可權討論, 以瞭解上的**SQLServerDatabaseMetaData getCatalogs** [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]行為。  
   
-## <a name="connections-dropped"></a>連接中斷
+## <a name="connections-dropped"></a>連線中斷
 
 連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，網路元件 (例如防火牆) 可能會在一段時間沒有活動之後結束閒置連線。 在此內容中，有兩種閒置連接類型：  
 
@@ -74,7 +74,7 @@ shutdown /r /t 1
 :done  
 ```
 
-## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>將伺服器名稱附加至連接字串中的 UserId  
+## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>將伺服器名稱附加至連接字串中的 userId  
 
 在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版之前，連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，您必須將伺服器名稱附加至連接字串中的 UserId。 例如， user@servername。 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您不再需要將 @servername 附加至連接字串中的 UserId。  
 
@@ -90,4 +90,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

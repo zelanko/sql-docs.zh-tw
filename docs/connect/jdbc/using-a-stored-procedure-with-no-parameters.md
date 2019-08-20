@@ -1,7 +1,7 @@
 ---
-title: 使用不含輸入參數的預存程序 | Microsoft Docs
+title: 使用不含參數的預存程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3dade70a033ddf2a9e20ffc09930a27e26d9a579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916501"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027025"
 ---
-# <a name="using-a-stored-procedure-with-no-parameters"></a>使用沒有參數的預存程序
+# <a name="using-a-stored-procedure-with-no-parameters"></a>使用不含參數的預存程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "67916501"
 `{call procedure-name}`
 
 > [!NOTE]  
-> 如需 SQL escape 序列的詳細資訊, 請參閱[使用 Sql Escape 序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 如需 SQL escape 序列的詳細資訊, 請參閱[使用 sql escape 序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
 例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列預存程序：
 
@@ -59,4 +59,4 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
 
 ## <a name="see-also"></a>另請參閱
 
-[搭配使用陳述式與預存程序](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[搭配預存程序使用陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)

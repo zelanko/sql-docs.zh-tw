@@ -1,7 +1,7 @@
 ---
-title: JDBC 驅動程式的消費者入門 |Microsoft Docs
+title: 開始使用 JDBC driver |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bc2cc6d9f4a44af8988c167dc09093d6bac7dcb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c9e116ad3a3804642a32c1d2d0e19fb2777da946
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956560"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028054"
 ---
-# <a name="getting-started-with-the-jdbc-driver"></a>開始使用 JDBC Driver
+# <a name="getting-started-with-the-jdbc-driver"></a>開始使用 JDBC 驅動程式
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

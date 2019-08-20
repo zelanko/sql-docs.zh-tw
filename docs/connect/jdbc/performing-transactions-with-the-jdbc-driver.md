@@ -1,7 +1,7 @@
 ---
 title: 使用 JDBC 驅動程式執行交易 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: afb7968f5173bf69fec3d4b0204798a430d49930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58c6282a11e3fcc0ca896a2e3e4075a4b51d928e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956216"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027856"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>以 JDBC 驅動程式執行交易
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "67956216"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[了解交易](../../connect/jdbc/understanding-transactions.md)|提供交易如何與 JDBC 驅動程式搭配使用的概觀。|  
 |[了解 XA 交易](../../connect/jdbc/understanding-xa-transactions.md)|提供 XA 交易如何與 JDBC 驅動程式搭配使用的概觀。|  
@@ -35,6 +35,6 @@ ms.locfileid: "67956216"
 |[使用保留性](../../connect/jdbc/using-holdability.md)|描述如何使用 JDBC 驅動程式搭配結果集保留性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

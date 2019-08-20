@@ -1,7 +1,7 @@
 ---
 title: 瞭解資料類型差異 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0cec994768fb5c3a49257da0fb310937c79c25b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 906a4abf0768fcad2e5ac31a0ee93345dcc8b30c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004168"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027386"
 ---
 # <a name="understanding-data-type-differences"></a>了解資料類型差異
 
@@ -27,7 +27,7 @@ Java 程式設計語言資料類型與 [!INCLUDE[ssNoVersion](../../includes/ssn
 
 JDBC 字元字串資料類型為**CHAR**、 **VARCHAR**和**LONGVARCHAR**。 JDBC 驅動程式提供 JDBC 4.0 API 的支援。 在 JDBC 4.0 中, JDBC 字元字串資料類型也可以是**NCHAR**、 **NVARCHAR**和**LONGNVARCHAR**。 這些新的字元字串類型會以 Unicode 格式維護 Java 原生字元類型，並且移除執行任何 ANSI-to-Unicode 或 Unicode-to-ANSI 轉換的需求。  
   
-| 類型            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| 類型            | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fixed-length    |     Char 和 Nchar 資料類型會直接對應到 JDBC char 和 Nchar 類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 這些是當資料行具有 `SET ANSI_PADDING ON` 時，由伺服器提供填補的固定長度類型。 **nchar** 一定會開啟填補；至於 **char**，當伺服器 char 資料行未開啟填補時，JDBC 驅動程式會新增填補。                                                                                                                                                                                                                                                                                                                                                                                      |
 | Variable-length |     Varchar 和 Nvarchar 類型會分別對應到 JDBC Varchar 和 Nvarchar 類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -37,7 +37,7 @@ JDBC 字元字串資料類型為**CHAR**、 **VARCHAR**和**LONGVARCHAR**。 JDB
 
 JDBC 二進位字串類型為**binary**、 **VARBINARY**和**LONGVARBINARY**。  
   
-| 類型            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 類型            | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Fixed-length    | 二進位類型會直接對應到 JDBC**二進位**類型。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 這是當資料行具有 SET ANSI_PADDING ON 時，會由伺服器提供填補的固定長度類型。 當伺服器 char 資料行未開啟填補時，JDBC 驅動程式會加入填補。<br /><br /> Timestamp 類型是固定長度為8個位元組的 JDBC**二進位**類型。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |
 | Variable-length | Varbinary 類型會對應到 JDBC **Varbinary**類型。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 中  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 udt 類型會對應到 JDBC 做為**VARBINARY**類型。                                                                                                                                                                                                                                 |
@@ -47,7 +47,7 @@ JDBC 二進位字串類型為**binary**、 **VARBINARY**和**LONGVARBINARY**。
 
 JDBC 精確數值類型會直接對應到其相對應的 SQL Server 類型。  
   
-| 類型     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 類型     | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BIT      | JDBC **BIT** 類型代表可為 0 或 1 的單一位元。 這會對應到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **位**類型。                                                                                                                                                                                                                                                                                                                                       |
 | TINYINT  | JDBC **TINYINT** 類型代表單一位元組。 這會對應到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Tinyint**型別。                                                                                                                                                                                                                                                                                                                                                 |
@@ -61,7 +61,7 @@ JDBC 精確數值類型會直接對應到其相對應的 SQL Server 類型。
 
 JDBC 近似數數值型別為**REAL**、 **DOUBLE**和**FLOAT**。  
   
-| 類型   | Description                                                                                                                                                                                                                                                                                                   |
+| 類型   | 描述                                                                                                                                                                                                                                                                                                   |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | real   | JDBC **REAL** 類型具有 7 個位數的有效位數 (單精確度)，並會直接對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **real** 類型。                                                                                                                                     |
 | DOUBLE | JDBC **DOUBLE** 類型具有 15 個位數的有效位數 (雙精確度)，並會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float** 類型。 JDBC **FLOAT**類型是**DOUBLE**的同義字。 由於**FLOAT**和**double**之間可能會產生混淆, 因此偏好**double** 。 |
@@ -79,4 +79,4 @@ JDBC 的自訂類型對應功能，此功能會將 SQLData 介面用於 JDBC 進
   
 ## <a name="see-also"></a>另請參閱
 
-[了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

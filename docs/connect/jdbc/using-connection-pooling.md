@@ -1,7 +1,7 @@
 ---
 title: 使用連接共用 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ec9d1717d12624ffa7663479f1d98146aea1137f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916337"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026367"
 ---
 # <a name="using-connection-pooling"></a>使用連接共用
 
@@ -26,11 +26,11 @@ ms.locfileid: "67916337"
 > [!NOTE]  
 > 雖然 JDBC Driver 支援 Java EE 連接共用，但是它不會提供自己的共用實作。 驅動程式會依賴協力廠商的 Java 應用程式伺服器來管理連接。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 連接共用實作的類別如下所示。  
   
-| 類別                                                           | 實作                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 類別                                                           | 實作                                                    | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc. SQLServerXADataSource             | javax.sql.ConnectionPoolDataSource 和 javax.sql.XADataSource | 建議您對所有 Java EE 伺服器需求都使用 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 類別，因為這個類別會實作所有的 JDBC 3.0 共用和 XA 介面。                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | com.microsoft.sqlserver.jdbc. SQLServerConnectionPoolDataSource | javax.sql.ConnectionPoolDataSource                            | 這個類別是 Connection Factory，可讓 Java EE 應用程式伺服器以實體連接擴展其連接集區。 如果 Java EE 供應商的設定需要有實作 javax.sql.ConnectionPoolDataSource 的類別，請將類別名稱指定為 [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)。 通常建議您改用 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 類別，因為這個類別會實作共用和 XA 介面，並已在多個 Java EE 伺服器設定中獲得驗證。 |
@@ -42,4 +42,4 @@ ms.locfileid: "67916337"
   
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

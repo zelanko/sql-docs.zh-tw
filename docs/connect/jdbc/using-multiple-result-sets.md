@@ -1,7 +1,7 @@
 ---
 title: 使用多個結果集 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005968"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026268"
 ---
 # <a name="using-multiple-result-sets"></a>使用多個結果集
 
@@ -28,7 +28,7 @@ ms.locfileid: "68005968"
 如果 execute 方法傳回 **false**，表示執行的陳述式傳回的是更新計數值，而您可以呼叫 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法來擷取該值。
 
 > [!NOTE]  
-> 如需更新計數的詳細資訊, 請參閱[使用具有更新計數的預存](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)程式。
+> 如需更新計數的詳細資訊，請參閱[使用含更新計數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)。
 
 在下列範例中，[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線會傳遞至函式，並建構一個 SQL 陳述式，以在執行時傳回兩個結果集：
 
@@ -41,4 +41,4 @@ ms.locfileid: "68005968"
 
 ## <a name="see-also"></a>另請參閱
 
-[搭配使用陳述式與 JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)
+[搭配 JDBC 驅動程式使用陳述式](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

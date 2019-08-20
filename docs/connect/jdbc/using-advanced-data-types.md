@@ -1,7 +1,7 @@
 ---
-title: 使用 Advanced 資料類型 |Microsoft Docs
+title: 使用 advanced 資料類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004071"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027013"
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
 
@@ -23,7 +23,7 @@ ms.locfileid: "68004071"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會使用 JDBC 進階資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型轉換為 Java 程式設計語言可以理解的格式。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 下表列出進階 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、JDBC 與 Java 程式設計語言資料類型之間的預設對應。  
   
@@ -170,9 +170,9 @@ JDBC 驅動程式中 **xml** 資料類型的實作提供下列項目的支援：
   
 如需使用者定義資料類型的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用和修改使用者定義類型的執行個體＞。  
   
-## <a name="sqlvariant-data-type"></a>Sql_variant Data Type
+## <a name="sql_variant-data-type"></a>Sql_variant 資料類型
 
-如需 SQL_variant 資料類型的詳細資訊, 請參閱[使用 Sql_variant 資料類型](../../connect/jdbc/using-sql-variant-datatype.md)。  
+如需 SQL_variant 資料類型的詳細資訊, 請參閱[使用 SQL_variant 資料類型](../../connect/jdbc/using-sql-variant-datatype.md)。  
 
 ## <a name="spatial-data-types"></a>空間資料類型
 
@@ -180,4 +180,4 @@ JDBC 驅動程式中 **xml** 資料類型的實作提供下列項目的支援：
 
 ## <a name="see-also"></a>另請參閱
 
-[了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

@@ -1,7 +1,7 @@
 ---
-title: 使用 Kerberos 整合驗證連線至 SQL Server | Microsoft Docs
+title: 使用 Kerberos 整合驗證連接到 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 894da21c079b776524c07cab8b8f223bae769aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916237"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026189"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 整合式驗證連接到 SQL Server
 
@@ -35,9 +35,9 @@ ms.locfileid: "67916237"
 - **useTicketCache = true**
 - **doNotPrompt = true**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
-在之前 , 應用程式可以使用 integratedSecurity 連接屬性, 並藉由參考 sqljdbc_auth, 指定整合式驗證 (使用 Kerberos 或 NTLM, 視可用的方式而定), 如下所示:  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]如[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)中所述。  
+在之前  , 應用程式可以使用 integratedSecurity 連接屬性, 並藉由參考 sqljdbc_auth, 指定整合式驗證 (使用 Kerberos 或 NTLM, 視可用的方式而定), 如下所示:  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]如[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)中所述。
 
 從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，應用程式可使用 **authenticationScheme** 連線屬性來指定透過純 Java Kerberos 實作使用 Kerberos 整合驗證連線到資料庫：
 
@@ -61,15 +61,15 @@ ms.locfileid: "67916237"
 > [!NOTE]  
 > 只有 Microsoft JDBC Driver 4.2 以上 (含) 版本支援 serverSpn 連線屬性。
 
-## <a name="service-principal-names"></a>服務主要名稱
+## <a name="service-principal-names"></a>服務主體名稱
 
-服務主要名稱 (SPN) 是用戶端用以唯一識別服務執行個體的名稱。
+服務主體名稱 (SPN) 是用戶端用以唯一識別服務執行個體的名稱。
 
 您可以使用 **serverSpn** 連線屬性指定 SPN，或直接讓驅動程式為您建置 (預設)。 此屬性的格式為："MSSQLSvc/fqdn:port\@REALM"，其中 fqdn 是完整網域名稱，port 是連接埠號碼，REALM 是以大寫字母表示的 SQL Server Kerberos 領域。 此選項的 REALM 部分並非必要，只在您 Kerberos 設定的預設領域與伺服器的領域相同，而且預設不會加入時才需要。 如果您想要支援跨領域驗證案例，且其中 Kerberos 設定中的預設領域和伺服器的領域不同，則您必須以 serverSpn 屬性設定 SPN。
 
 例如, 您的 SPN 可能會如下所示: 「MSSQLSvc/some-\@ZZZZ。企業.CONTOSO.COM」
 
-如需有關服務主要名稱 (SPN) 的詳細資訊，請參閱：
+如需有關服務主體名稱 (SPN) 的詳細資訊，請參閱：
 
 - [如何在 SQL Server 中使用 Kerberos 驗證](https://support.microsoft.com/kb/319723)
 
@@ -80,9 +80,9 @@ ms.locfileid: "67916237"
 >
 > 從6.2 版本中, 驅動程式預設將能夠建立**serverSpn** , 即使使用跨領域 Kerberos 也一樣。 雖然一個也可以明確使用**serverSpn** 。
 
-## <a name="creating-a-login-module-configuration-file"></a>建立登入模組組態檔
+## <a name="creating-a-login-module-configuration-file"></a>建立登入模組設定檔
 
-您可以選擇指定 Kerberos 組態檔。 如果未指定組態檔，以下設定便有效：
+您可以選擇指定 Kerberos 設定檔。 如果未指定設定檔，以下設定便有效：
 
 Sun JVM  
  com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true;
@@ -117,9 +117,9 @@ SQLJDBCDriver {
 
 從 Microsoft JDBC Driver 6.2 開始, 可以選擇性地使用連接屬性`jaasConfigurationName`來傳遞登入模組設定檔的名稱, 如此一來, 每個連接都有自己的登入設定。
 
-## <a name="creating-a-kerberos-configuration-file"></a>建立 Kerberos 組態檔
+## <a name="creating-a-kerberos-configuration-file"></a>建立 Kerberos 設定檔
 
-如需 Kerberos 組態檔的詳細資訊，請參閱 [Kerberos 需求](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html)。
+如需 Kerberos 設定檔的詳細資訊，請參閱 [Kerberos 需求](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html)。
 
 這是網域設定檔範例，其中 YYYY 與 ZZZZ 是網域名稱。
 
@@ -148,7 +148,7 @@ forwardable = yes
 
 ```
 
-## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>啟用網域組態檔和登入模組組態檔
+## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>啟用網域設定檔和登入模組設定檔
 
 您可以使用 Djava.security.krb5.conf 來啟用網域組態檔。 您可以使用 **-Djava**來啟用登入模組設定檔案。
 
@@ -221,4 +221,4 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

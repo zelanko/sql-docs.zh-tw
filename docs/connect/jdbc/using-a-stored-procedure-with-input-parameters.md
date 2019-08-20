@@ -1,7 +1,7 @@
 ---
-title: 使用含有輸入參數的預存程序 | Microsoft Docs
+title: 使用含輸入參數的預存程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 954883c4c69e07493a15ef77eecfed606e9cf9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c84e4081b9369d504d173387c6944b06d927c9c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916518"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026899"
 ---
-# <a name="using-a-stored-procedure-with-input-parameters"></a>使用含有輸入參數的預存程序
+# <a name="using-a-stored-procedure-with-input-parameters"></a>使用含輸入參數的預存程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "67916518"
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> 如需 SQL escape 序列的詳細資訊, 請參閱[使用 Sql Escape 序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 如需 SQL escape 序列的詳細資訊, 請參閱[使用 sql escape 序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
 建構 `call` 逸出序列時，請使用 ? (問號) 字元來指定 IN 參數。 此字元會充當預留位置，代表將傳入預存程序的參數值。 若要指定參數的值, 您可以使用 SQLServerPreparedStatement 類別的其中一個 setter 方法。 您可以使用的 setter 方法是由 IN 參數的資料類型決定。
 
@@ -56,4 +56,4 @@ public static void executeSprocInParams(Connection con) throws SQLException {
 
 ## <a name="see-also"></a>另請參閱
 
-[搭配使用陳述式與預存程序](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[搭配預存程序使用陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)

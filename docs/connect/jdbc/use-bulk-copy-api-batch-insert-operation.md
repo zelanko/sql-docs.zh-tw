@@ -1,7 +1,7 @@
 ---
 title: 針對 MSSQL JDBC Driver 使用大量複製 API 進行批次插入作業 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004133"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027099"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>使用大量複製 API 執行批次插入作業
 
@@ -25,7 +25,7 @@ ms.locfileid: "68004133"
 
 這項功能僅適用于 java.sql.preparedstatement 和 java.sql.callablestatement 的`executeBatch()`  &  `executeLargeBatch()` api。
 
-## <a name="pre-requisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 有兩個必要條件可啟用大量複製 API 以進行批次插入。
 
@@ -141,4 +141,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## <a name="see-also"></a>另請參閱
 
-[善 JDBC Driver 的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[改善JDBC 驅動程式的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

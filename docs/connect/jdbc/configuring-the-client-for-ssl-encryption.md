@@ -1,7 +1,7 @@
 ---
 title: 設定 SSL 加密的用戶端 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956892"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028198"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>設定 SSL 加密的用戶端
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,8 +26,8 @@ ms.locfileid: "67956892"
   
  如需驗證伺服器憑證的詳細資訊，請參閱[了解 SSL 支援](../../connect/jdbc/understanding-ssl-support.md)中的＜驗證 Server SSL 憑證＞一節。  
   
-## <a name="configuring-the-client-trust-store"></a>設定用戶端信任存放區  
- 驗證伺服器憑證時，需要在連接時間明確地使用 **trustStore** 和 **trustStorePassword** 連接屬性，或隱含地使用基礎 Java Virtual Machine (JVM) 的預設信任存放區來提供信任的資料。 如需如何在連接字串中設定 **trustStore** 和 **trustStorePassword** 屬性的詳細資訊，請參閱[使用 SSL 加密連接](../../connect/jdbc/connecting-with-ssl-encryption.md)。  
+## <a name="configuring-the-client-trust-store"></a>設定用戶端信任存放區 
+ 驗證伺服器憑證時，需要在連接時間明確地使用 **trustStore** 和 **trustStorePassword** 連接屬性，或隱含地使用基礎 Java Virtual Machine (JVM) 的預設信任存放區來提供信任的資料。 如需如何在連接字串中設定 **trustStore** 和 **trustStorePassword** 屬性的詳細資訊，請參閱[使用 SSL 加密連線](../../connect/jdbc/connecting-with-ssl-encryption.md)。  
   
  如果未指定 **trustStore** 屬性，或將其設定為 null，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將會依賴基礎 JVM 的安全性提供者，也就是 Java Secure Socket Extension (SunJSSE)。 SunJSSE 提供者會提供預設的 TrustManager，用於驗證 SQL Server 根據信任存放區中所提供信任資料傳回的 X.509 憑證。  
   
@@ -85,6 +85,6 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)   
- [保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver 的國際功能 |Microsoft Docs
+title: JDBC 驅動程式的國際功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956479"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028010"
 ---
-# <a name="international-features-of-the-jdbc-driver"></a>JDBC Driver 的國際功能
+# <a name="international-features-of-the-jdbc-driver"></a>JDBC 驅動程式的國際功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的國際化功能包含下列各項：  
@@ -63,6 +63,6 @@ ms.locfileid: "67956479"
 >  為非 Windows 平台所撰寫的大部分解析程式軟體，均以網際網路 DSN 標準為基礎，因此，最有可能為 IDN 使用 Punycode 格式，而私人網路上的 Windows DNS 伺服器，則可設定為允許在每部伺服器上使用 UTF-8 字元。  如需詳細資料，請參閱 [Unicode 字元支援](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
- [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

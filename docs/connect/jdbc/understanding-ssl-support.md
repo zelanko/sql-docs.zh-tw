@@ -1,7 +1,7 @@
 ---
 title: 瞭解 SSL 支援 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916617"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027298"
 ---
 # <a name="understanding-ssl-support"></a>了解 SSL 支援
 
@@ -30,7 +30,7 @@ ms.locfileid: "67916617"
 >
 > 如需如何針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定 SSL 的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的＜加密 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線＞主題。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備註
 
 為了讓應用程式能夠使用 SSL 加密，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 已從 1.2 版起引入下列連線屬性：**encrypt**、**trustServerCertificate**、**trustStore**、**trustStorePassword** 和 **hostNameInCertificate**。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
@@ -84,4 +84,4 @@ ms.locfileid: "67916617"
 
 [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)
 
-[保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  

@@ -1,7 +1,7 @@
 ---
 title: 使用空間資料類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f2290aa8d7ebad7a40b5aea9d37c5a9a53e0d333
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916528"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026939"
 ---
 # <a name="using-spatial-datatypes"></a>使用空間資料類型
 
@@ -23,7 +23,7 @@ ms.locfileid: "67916528"
 
 從 JDBC Driver preview 版本6.5.0 開始支援空間資料類型 (Geometry 和 Geography)。 預存程式、資料表值參數 (TVP)、BulkCopy 和 Always Encrypted 目前不支援空間資料類型。 此頁面會顯示 Geometry 和 Geography 資料類型與 JDBC 驅動程式的各種使用案例。 如需空間資料類型的總覽, 請參閱[空間資料類型總覽](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview)頁面。
 
-## <a name="creating-a-geometry--geography-object"></a>建立 Geometry/Geography 物件
+## <a name="creating-a-geometry--geography-object"></a>建立 geometry/geography 物件
 
 建立 Geometry/Geography 物件的主要方式有兩種: 從已知的文字 (WKT) 或已知的二進位 (WKB) 轉換。
 
@@ -87,14 +87,14 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-|方法|Description|
+|方法|描述|
 |:------|:----------|
 |void setGeometry(int n, Geometry x)| 將指定的參數設定為指定的 microsoft .sql 類別物件。
 |void setGeography(int n, Geography x)| 將指定的參數設定為指定的 microsoft .sql 類別物件。
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
-|方法|Description|
+|方法|描述|
 |:------|:----------|
 |Geometry getGeometry(int colunIndex)| 使用 JAVA 程式設計語言, 傳回這個 ResultSet 物件中目前資料列內所指定資料行的值來當做 .com 物件。
 |Geometry getGeometry (字串 columnName)| 使用 JAVA 程式設計語言, 傳回這個 ResultSet 物件中目前資料列內所指定資料行的值來當做 .com 物件。
@@ -103,7 +103,7 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="geometry"></a>幾何
 
-|方法|Description|
+|方法|描述|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geometry 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
 |Geometry STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geometry 執行個體的建構函式。
@@ -128,7 +128,7 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 ### <a name="geography"></a>Geography
 
-|方法|Description|
+|方法|描述|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geography 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
 |Geography STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geography 執行個體的建構函式。

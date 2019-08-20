@@ -1,7 +1,7 @@
 ---
 title: 設定資料來源屬性 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 97e285f5f2680e028a9d8fd00901e3e977ffdd80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b3093b87557917655fcbfd6cf7c2ec37151ca44
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004428"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027730"
 ---
 # <a name="setting-the-data-source-properties"></a>設定資料來源屬性
 
@@ -29,4 +29,4 @@ Java EE 產品 (例如應用程式伺服器及 servlet/JSP 引擎) 通常會讓�
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[使用 JDBC 驅動程式連線到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

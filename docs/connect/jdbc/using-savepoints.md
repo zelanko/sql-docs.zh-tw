@@ -1,7 +1,7 @@
 ---
 title: 使用儲存點 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9212e2de7a093b92c51489bb17623a2120e5ce35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d860e368fe66ce926687fd343fe9f23704cfc7d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916225"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026133"
 ---
 # <a name="using-savepoints"></a>使用儲存點
 
@@ -33,4 +33,4 @@ ms.locfileid: "67916225"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 JDBC Driver 執行交易](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)
+[以 JDBC 驅動程式執行交易](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

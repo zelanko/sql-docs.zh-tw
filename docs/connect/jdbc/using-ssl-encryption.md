@@ -1,7 +1,7 @@
 ---
 title: 使用 SSL 加密 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34a486a2bcde43ccccc053aed9ebd9392ce34e8c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003962"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026029"
 ---
 # <a name="using-ssl-encryption"></a>使用 SSL 加密
 
@@ -36,12 +36,12 @@ ms.locfileid: "68003962"
 
 ## <a name="in-this-section"></a>本節內容  
 
-| 主題                                                                                                        | Description                                                                                                                                           |
+| 主題                                                                                                        | 描述                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [了解 SSL 支援](../../connect/jdbc/understanding-ssl-support.md)                                 | 描述 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 如何支援 SSL 加密。                                              |
-| [使用 SSL 加密連接](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | 描述如何使用新的 SSL 特定連線屬性連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 |
+| [使用 SSL 加密連線](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | 描述如何使用新的 SSL 特定連線屬性連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 |
 | [設定 SSL 加密的用戶端](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | 描述如何在用戶端設定預設的信任存放區，以及如何將私用憑證匯入到用戶端電腦的信任存放區中。   |
   
 ## <a name="see-also"></a>另請參閱
 
-[保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
