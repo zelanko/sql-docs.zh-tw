@@ -50,7 +50,7 @@ SQLRETURN SQLFetch(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLFetch**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時, 可以藉由呼叫[SQLGetDiagRec 函數](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)和 HandleType 的 Handletype 來和  StatementHandle 的*控制碼*, 來取得相關聯的 SQLSTATE 值。  . 下表列出通常由**SQLFetch**所傳回的 SQLSTATE 值, 並在此函式的內容中說明每一個值;「(DM)」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明, 否則, 與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。 如果單一資料行發生錯誤, 則可以使用 SQL_DIAG_COLUMN_NUMBER 的*以*來呼叫[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) , 以判斷發生錯誤的資料行;您可以使用 SQL_DIAG_ROW_NUMBER 的*以*來呼叫和**SQLGetDiagField** , 以判斷包含該資料行的資料列。  
+ 當**SQLFetch**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時, 可以藉由呼叫[SQLGetDiagRec 函數](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)和 HandleType 的 Handletype 來和 StatementHandle 的*控制碼*, 來取得相關聯的 SQLSTATE 值。 下表列出通常由**SQLFetch**所傳回的 SQLSTATE 值, 並在此函式的內容中說明每一個值;「(DM)」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明, 否則, 與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。 如果單一資料行發生錯誤, 則可以使用 SQL_DIAG_COLUMN_NUMBER 的*以*來呼叫[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) , 以判斷發生錯誤的資料行;您可以使用 SQL_DIAG_ROW_NUMBER 的*以*來呼叫和**SQLGetDiagField** , 以判斷包含該資料行的資料列。  
   
  對於可傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 的所有 SQLSTATEs (01xxx SQLSTATEs 除外), 如果一或多個 (但非全部) SQL_SUCCESS_WITH_INFO 作業的資料列發生錯誤, 則會傳回多資料列, 如果發生錯誤, 則會傳回 SQL_ERROR單一資料列作業。  
   
@@ -58,14 +58,14 @@ SQLRETURN SQLFetch(
 |--------------|-----------|-----------------|  
 |01000|一般警告|驅動程式特定的參考用訊息。 (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
 |01004|字串資料, 右邊已截斷|傳回資料行的字串或二進位資料導致截斷非空白字元或非 Null 的二進位資料。 如果它是字串值, 則會被右截斷。|  
-|01S01|資料列發生錯誤|提取一或多個資料列時發生錯誤。<br /><br /> (如果當 ODBC 3.x 應用程式與 ODBC 2.x  驅動程式搭配使用時, 會傳回此  SQLSTATE, 則可以略過)。|  
+|01S01|資料列發生錯誤|提取一或多個資料列時發生錯誤。<br /><br /> (如果當 ODBC 3.x 應用程式與 ODBC 2.x驅動程式搭配使用時, 會傳回此 SQLSTATE, 則可以略過)。|  
 |01S07|小數截斷|針對資料行傳回的資料已被截斷。 若為數值資料類型, 則會截斷數位的小數部分。 若為包含時間元件的時間、時間戳記和間隔資料類型, 則會截斷時間的小數部分。<br /><br /> (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
 |07006|限制的資料類型屬性違規|在結果集中, 資料行的資料值無法轉換成**SQLBindCol**中*TargetType*所指定的資料類型。<br /><br /> 資料行0是以 SQL_C_BOOKMARK 的資料類型系結, 且 SQL_ATTR_USE_BOOKMARKS 語句屬性已設定為 SQL_UB_VARIABLE。<br /><br /> 資料行0是以 SQL_C_VARBOOKMARK 的資料類型系結, 而 SQL_ATTR_USE_BOOKMARKS 語句屬性並未設定為 SQL_UB_VARIABLE。|  
-|07009|不正確描述項索引|驅動程式是一個不支援  **SQLExtendedFetch**的 ODBC 2.x 驅動程式, 而且資料行的系結中指定的資料行編號是0。<br /><br /> 已系結資料行 0, 而且 SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_OFF。|  
+|07009|不正確描述項索引|驅動程式是一個不支援 **SQLExtendedFetch**的 ODBC 2.x 驅動程式, 而且資料行的系結中指定的資料行編號是0。<br /><br /> 已系結資料行 0, 而且 SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_OFF。|  
 |08S01|通訊連結失敗|在函式完成處理之前, 驅動程式連線到驅動程式的資料來源之間的通訊連結失敗。|  
 |22001|字串資料, 右邊已截斷|針對資料行傳回的可變長度書簽已截斷。|  
 |22002|需要指標變數, 但未提供|已將 Null 資料提取至*StrLen_or_IndPtr*由**SQLBindCol** (或**SQLSETDESCFIELD**或**SQLSetDescRec**設定的 SQL_DESC_INDICATOR_PTR) 所設定的資料行, 其為 null 指標。|  
-|22003|數值超出範圍|針對一個或多個系結資料行, 將數值傳回為數值或字串, 可能會導致整個 (而不是小數) 部分的數位被截斷。<br /><br /> 如需詳細資訊, [](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)請參閱附錄 D:資料類型。|  
+|22003|數值超出範圍|針對一個或多個系結資料行, 將數值傳回為數值或字串, 可能會導致整個 (而不是小數) 部分的數位被截斷。<br /><br /> 如需詳細資訊，請參閱在附錄 D:中的[將數據從 SQL 轉換為 C 數據類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)資料類型。|  
 |22007|不正確日期時間格式|結果集中的字元資料行已系結至日期、時間或時間戳記 C 結構, 而且資料行中的值分別為不正確日期、時間或時間戳記。|  
 |22012|除數為零|傳回算術運算式的值, 導致零除。|  
 |22015|間隔欄位溢位|從精確的數值或間隔 SQL 類型指派到間隔 C 類型, 會導致前置欄位中的有效位數遺失。<br /><br /> 將資料提取到 interval C 類型時, 不會在間隔 C 類型中表示 SQL 類型的值。|  
@@ -91,7 +91,7 @@ SQLRETURN SQLFetch(
 ## <a name="comments"></a>註解  
  **SQLFetch**會傳回結果集中的下一個資料列集。 只有當結果集存在時, 才可以呼叫它: 也就是在呼叫之後建立結果集, 而且在關閉該結果集的資料指標之前。 如果系結了任何資料行, 則會傳回這些資料行中的資料。 如果應用程式已指定資料列狀態陣列的指標, 或要傳回提取之資料列數目的緩衝區, 則**SQLFetch**也會傳回這項資訊。 呼叫**SQLFetch**可以與**SQLFetchScroll**的呼叫混合, 但不能與**SQLExtendedFetch**的呼叫混合使用。 如需詳細資訊, 請參閱[提取資料列](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)。  
   
- 如果 ODBC 3.x 應用  程式與 odbc 2.x 驅動程式搭配運作  , 驅動程式管理員會將**SQLFetch**呼叫對應至支援**SQLExtendedFetch**之 odbc 2.x 驅動  程式的**SQLExtendedFetch** 。 如果 ODBC 2.x 驅動  程式不支援**SQLExtendedFetch**, 驅動程式管理員會將**SQLFetch**呼叫對應至 ODBC 2.x 驅動程式中的  **SQLFetch** , 這只能提取單一資料列。  
+ 如果 ODBC 3.x 應用程式與 odbc 2.x 驅動程式搭配運作 , 驅動程式管理員會將**SQLFetch**呼叫對應至支援**SQLExtendedFetch**之 odbc 2.x 驅動程式的**SQLExtendedFetch** 。 如果 ODBC 2.x 驅動程式不支援**SQLExtendedFetch**, 驅動程式管理員會將**SQLFetch**呼叫對應至 ODBC 2.x 驅動程式中的 **SQLFetch** , 這只能提取單一資料列。  
   
  如需詳細資訊, 請參閱附錄 G 中的[區塊資料指標、可滾動游標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md):回溯相容性的驅動程式方針。  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |條件|新資料列集的第一個資料列|  
 |---------------|-----------------------------|  
 |開始之前|1|  
-|*CurrRowsetStart*LastResultRow-RowsetSize [1]  \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
-| CurrRowsetStart >  *LastResultRow-RowsetSize*[1]|結束之後|  
+|*CurrRowsetStart*LastResultRow-RowsetSize [1] \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
+|CurrRowsetStart >  *LastResultRow-RowsetSize*[1]|結束之後|  
 |結束之後|結束之後|  
   
  [1] 如果提取之間的資料列集大小有所變更, 這就是與先前的 fetch 搭配使用的資料列集大小。  
@@ -137,7 +137,7 @@ SQLRETURN SQLFetch(
 |結束之後|SQL_NO_DATA|無。|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>傳回系結資料行中的資料  
- 當**SQLFetch**傳回每個資料列時, 它會將每個綁定欄的資料放在系結至該資料行的緩衝區中。 如果未系結任何資料行, 則**SQLFetch**不會傳回任何資料, 但會將區塊游標向前移動。 您仍然可以使用**SQLGetData**來抓取資料。 如果資料指標是多資料列的資料指標 (也就是, SQL_ATTR_ROW_ARRAY_SIZE 大於 1), 則只有在以 SQLGetInfo InfoType 的呼叫**SQL_GETDATA_EXTENSIONS**時傳回 SQL_GD_BLOCK 時, 才可以  呼叫**SQLGetData** 。 (如需詳細資訊, 請參閱[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md))。  
+ 當**SQLFetch**傳回每個資料列時, 它會將每個綁定欄的資料放在系結至該資料行的緩衝區中。 如果未系結任何資料行, 則**SQLFetch**不會傳回任何資料, 但會將區塊游標向前移動。 您仍然可以使用**SQLGetData**來抓取資料。 如果資料指標是多資料列的資料指標 (也就是, SQL_ATTR_ROW_ARRAY_SIZE 大於 1), 則只有在以 SQLGetInfo InfoType 的呼叫**SQL_GETDATA_EXTENSIONS**時傳回 SQL_GD_BLOCK 時, 才可以呼叫**SQLGetData** 。 (如需詳細資訊, 請參閱[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md))。  
   
  針對資料列中的每個系結資料行, **SQLFetch**會執行下列動作:  
   
@@ -201,7 +201,7 @@ SQLRETURN SQLFetch(
  如果**SQLFetch**或**SQLFetchScroll**不會傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO, 則不會定義已提取之資料列的內容, 不過, 在此情況下, 資料列提取緩衝區中的值會設定為0。  
   
 ### <a name="error-handling"></a>錯誤處理  
- 錯誤和警告可以套用至個別資料列或整個函數。 如需診斷記錄的詳細資訊, 請參閱[診斷](../../../odbc/reference/develop-app/diagnostics.md)和[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)。  
+ 錯誤和警告可以套用至個別資料列或整個函數。 如需診斷記錄的詳細資訊, 請參閱 [診斷](../../../odbc/reference/develop-app/diagnostics.md)和 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 。  
   
 #### <a name="errors-and-warnings-on-the-entire-function"></a>整個功能的錯誤和警告  
  如果錯誤適用于整個函式, 例如 SQLSTATE HYT00 (超時時間已過期) 或 SQLSTATE 24000 (不正確資料指標狀態), 則**SQLFetch**會傳回 SQL_ERROR 和適用的 SQLSTATE。 資料列集緩衝區的內容未定義, 且資料指標位置不變。  

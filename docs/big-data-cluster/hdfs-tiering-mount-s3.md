@@ -9,18 +9,18 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702871"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611416"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 S3 以進行 HDFS 階層處理
 
 下列各節提供如何使用 S3 儲存體資料來源設定 HDFS 階層處理的範例。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [部署巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)
@@ -61,7 +61,7 @@ ms.locfileid: "68702871"
    
 1. 依照上面的指示設定環境變數 MOUNT_CREDENTIALS
 
-1. 使用 **azdata bdc storage-pool mount create** 在 Azure 中掛接遠端 HDFS 儲存體。 執行下列命令之前，請先取代預留位置值：
+1. 使用**azdata bdc 存放集區掛接建立**, 在 S3 中掛接遠端 HDFS 存放裝置。 執行下列命令之前，請先取代預留位置值：
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
@@ -70,7 +70,7 @@ ms.locfileid: "68702871"
    > [!NOTE]
    > mount create 是非同步命令。 此時，沒有任何訊息指出掛接是否成功。 請參閱[狀態](#status)一節以檢查您的掛接狀態。
 
-如果已成功掛接，您應該能夠查詢 HDFS 資料，並對它執行 Spark 作業。 它會出現在您巨量資料叢集的 HDFS 中，位於 `--mount-path` 所指定的位置。
+如果已成功掛接，您應該能夠查詢 HDFS 資料，並對其執行 Spark 作業。 掛接會出現在您巨量資料叢集的 HDFS 中，位於 `--mount-path` 所指定的位置。
 
 ## <a id="status"></a> 取得掛接的狀態
 

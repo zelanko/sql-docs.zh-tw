@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b35eccece4df47cb483932386cf6a38e45d2dc8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419283"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621670"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 巨量資料叢集
 
@@ -25,7 +25,7 @@ ms.locfileid: "68419283"
 > [!TIP]
 > 您可以在 [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 存放庫中找到 SQL Server 2019 巨量資料叢集 (預覽) 的其他範例。 這些範例位於 **sql-server-samples/samples/features/sql-big-data-cluster/** 路徑中。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - [已部署的巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)
@@ -33,7 +33,7 @@ ms.locfileid: "68419283"
    - **kubectl**
    - **sqlcmd**
    - **curl**
-
+ 
 ## <a id="sampledata"></a> 載入範例資料
 
 下列步驟會使用啟動程序指令碼來下載 SQL Server 資料庫備份，並將資料載入您的巨量資料叢集中。 為了方便，這些步驟已細分為 [Windows](#windows) 和 [Linux](#linux) 章節。
@@ -61,7 +61,7 @@ ms.locfileid: "68419283"
 
 1. 啟動程序指令碼需要巨量資料叢集的下列位置參數：
 
-   | 參數 | Description |
+   | 參數 | 描述 |
    |---|---|
    | <CLUSTER_NAMESPACE> | 您為巨量資料叢集提供的名稱。 |
    | <SQL_MASTER_IP> | 主要執行個體的 IP 位址。 |
@@ -97,7 +97,7 @@ ms.locfileid: "68419283"
 
 1. 啟動程序指令碼需要巨量資料叢集的下列位置參數：
 
-   | 參數 | Description |
+   | 參數 | 描述 |
    |---|---|
    | <CLUSTER_NAMESPACE> | 您為巨量資料叢集提供的名稱。 |
    | <SQL_MASTER_IP> | 主要執行個體的 IP 位址。 |

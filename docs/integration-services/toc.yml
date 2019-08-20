@@ -1438,6 +1438,17 @@
   href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Integration Services (SSIS) 中的 Hadoop 和 HDFS 支援
   href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
+- name: Microsoft Connector for Oracle
+  href: ../integration-services/data-flow/oracle-connector.md
+  items:
+    - name: Oracle Connection Manager
+      href: ../integration-services/data-flow/oracle-connection-manager.md
+    - name: Oracle 來源
+      ref: ../integration-services/data-flow/oracle-source.md
+    - name: Oracle 目的地
+      href: ../integration-services/data-flow/oracle-destination.md
+    - name: 資料類型支援
+      href: ../integration-services/data-flow/oracle-data-type-support.md
 - name: Microsoft Connectors for Oracle and Teradata by Attunity
   href: ../integration-services/attunity-connectors.md
 - name: SQL Server 匯入和匯出精靈
