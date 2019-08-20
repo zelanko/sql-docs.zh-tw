@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1778f9b3f6b4662de36e33e3ae7974f4eef4dd82
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771019"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028976"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
 
@@ -76,7 +76,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-x** 停止保留 CPU 時間和快取命中率統計資料。 允許最大效能。
 
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 在大部分情況下，sqlservr.exe 程式只用來進行疑難排解或主要的維護工作。 在命令提示字元處利用 sqlservr.exe 啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會以服務形式啟動，因此，您無法使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **命令停止** 。 使用者可以連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具會顯示該服務的狀態， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員因而可正確地指出該服務已經停止。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以連接到伺服器，但它也會指出該服務已經停止。
 
 ## <a name="compatibility-support"></a>相容性支援
@@ -84,8 +84,8 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 |參數 | 詳細資訊|
 |:-----|:-----|
-|**-h** | 在舊版 32 位元 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的情況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 透過[!INCLUDE[sssql14](../includes/sssql14-md.md)]支援。 如需詳細資訊，請參閱 [SQL Server 2016 中已取代及已中止的 SQL Server 功能](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)。|
-|**-g** | *memory_to_reserve*<br/><br>適用于的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]舊版32位實例。 透過[!INCLUDE[sssql14](../includes/sssql14-md.md)]支援。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留給在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序之內但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體集區之外的記憶體配置，所能使用的記憶體整數數量 (MB)。|
+|**-h** | 在舊版 32 位元 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的情況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 透過[!INCLUDE[sssql14](../includes/sssql14-md.md)]支援。 如需詳細資訊，請參閱 [SQL Server 2016 中已取代及已中止的 SQL Server 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。|
+|**-g** | *memory_to_reserve*<br/><br>適用于的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]舊版32位實例。 透過[!INCLUDE[sssql14](../includes/sssql14-md.md)]支援。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留給在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序之內但在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體集區之外的記憶體配置，所能使用的記憶體整數數量 (MB)。 如需詳細資訊, 請參閱[伺服器記憶體設定選項的 SQL Server 2014 檔](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另請參閱

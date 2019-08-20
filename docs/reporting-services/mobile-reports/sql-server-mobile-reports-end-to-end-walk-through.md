@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502280"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028888"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表：完整逐步解說
 逐步解說在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 入口網站透過 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 建立適用於任何螢幕大小的行動報表，並在 Power BI 行動應用程式中檢視它們。
@@ -39,7 +39,7 @@ ms.locfileid: "62502280"
 *  或者：World Wide Importers 範例資料庫，可從 [Microsoft SQL Server 範例](../../sample/microsoft-sql-server-samples.md)頁面取得。
 * 若要檢視結果︰ 
   *   [註冊 Power BI 服務](https://go.microsoft.com/fwlink/?LinkID=513879) ，並且
-  *  [下載 Power BI 行動應用程式](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 到您的行動裝置：iOS、Android 手機或 Windows 10 裝置。  
+  *  [下載 Power BI 行動應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 到您的行動裝置：iOS、Android 手機或 Windows 10 裝置。  
 
   
 ## <a name="create-a-shared-data-source"></a>建立共用資料來源  

@@ -13,17 +13,17 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a1cffb5050a548acfd1bbd9ec9d38a8c9b48d63f
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 2c71bdf4628b74bd21346f37534339d8d83497b2
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702730"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68984597"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS (在 Linux 及 macOS 上安裝 Microsoft ODBC Driver for SQL Server)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-此文章說明如何安裝 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS，以及適用於 SQL Server 的選擇性命令列工具 (`bcp` 和 `sqlcmd`) 和 unixODBC 開發標頭。
+本文說明如何安裝 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS，以及適用於 SQL Server 的選擇性命令列工具 (`bcp` 和 `sqlcmd`) 和 unixODBC 開發標頭。
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
 
@@ -96,6 +96,7 @@ sudo su
 #Choose only ONE of the following, corresponding to your OS version
 
 #SUSE Linux Enterprise Server 11 SP4
+#Ensure SUSE Linux Enterprise 11 Security Module has been installed 
 zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 
 #SUSE Linux Enterprise Server 12
@@ -103,6 +104,7 @@ zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 #SUSE Linux Enterprise Server 15
 zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+#(Only for driver 17.3 and below)
 SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit
@@ -519,7 +521,7 @@ ODBC Driver on Linux and MacOS 是由下列元件所組成：
 
 ### <a name="linux"></a>Linux
 
-|元件|描述|  
+|元件|Description|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X 或 libmsodbcsql-13.X.so.X.X|共用物件 (`so`) 動態程式庫檔案，其中包含驅動程式的所有功能。 針對 Driver 17，這個檔案會安裝在 `/opt/microsoft/msodbcsql17/lib64/`，針對 Driver 13 則在 `/opt/microsoft/msodbcsql/lib64/`。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|隨附驅動程式程式庫的資源檔。 這個檔案會安裝在 `[driver .so directory]../share/resources/en_US/`| 
@@ -530,7 +532,7 @@ ODBC Driver on Linux and MacOS 是由下列元件所組成：
 
 ### <a name="macos"></a>MacOS
 
-|元件|描述|  
+|元件|Description|  
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|動態連結程式庫 (`dylib`) 檔案，其中包含驅動程式的所有功能。 這個檔案會安裝在 `/usr/local/lib/`。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|隨附驅動程式程式庫的資源檔。 針對 Driver 17，這個檔案會安裝在 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/`，針對 Driver 13 則在 `[driver .dylib directory]../share/msodbcsql/resources/en_US/`。 | 
