@@ -27,7 +27,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68067786"
 ---
-# <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
+# <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   將 0、1 或更多資料列和[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態設定一起傳回。 針對指定的資料庫傳回 1 個資料列，或是傳回執行個體上以[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]設定之所有資料庫的資訊。  
@@ -44,7 +44,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
   
 ##  <a name="Arguments"></a> 引數  
  @db_name  
- 資料庫的名稱。 @db_name參數是**SYSNAME**。 如果將空字串或 NULL 值傳遞給此參數，則會傳回 SQL Server 執行個體上所有資料庫的相關資訊。  
+ 資料庫的名稱。 @db_name參數是 **SYSNAME**。 如果將空字串或 NULL 值傳遞給此參數，則會傳回 SQL Server 執行個體上所有資料庫的相關資訊。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   

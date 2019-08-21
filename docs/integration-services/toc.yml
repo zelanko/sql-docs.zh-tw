@@ -1,6 +1,6 @@
 - name: SQL Server Integration Services (SSIS)
   href: ../integration-services/sql-server-integration-services.md
-- name: 歡迎使用 SQL Server >>
+- name: 歡迎使用 SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 概觀
   items:
@@ -1801,11 +1801,11 @@
               href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: 資源
   items:
-    - name: 在 SSIS 論壇中取得協助 >
+    - name: SSIS 論壇 >>
       href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
-    - name: 在 Stack Overflow 取得協助 >
+    - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
-    - name: 關注 SSIS 小組部落格 >
+    - name: SSIS 部落格 >>
       href: 'https://blogs.msdn.microsoft.com/ssis/'
-    - name: 回報問題與要求功能 >
+    - name: 產品意見反應 >>
       href: 'https://feedback.azure.com/forums/908035-sql-server'

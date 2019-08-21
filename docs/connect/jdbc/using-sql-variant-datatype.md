@@ -1,7 +1,7 @@
 ---
 title: 使用 Sql_variant 資料類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916175"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025845"
 ---
-# <a name="using-sqlvariant-data-type"></a>使用 Sql_variant 資料類型
+# <a name="using-sql_variant-data-type"></a>使用 Sql_variant 資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -65,7 +65,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sqlvariant"></a>搭配 SQL_variant 使用預存程式:   
+## <a name="using-stored-procedures-with-sql_variant"></a>搭配 SQL_variant 使用預存程式:   
 擁有預存程式, 例如:     
 
 ```java
@@ -81,7 +81,7 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Sql_variant 的限制:
+## <a name="limitations-of-sql_variant"></a>Sql_variant 的限制:
 - 當您使用 TVP 來填入在 SQL_variant 中`datetime`儲存`smalldatetime` `getDateTime()` / / `date`值的資料表時, 在上呼叫/ `getSmallDateTime()` / `getDate()`ResultSet 無法運作, 而且會擲回下列例外狀況:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
@@ -94,4 +94,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>另請參閱
 
-[了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[了解 JDBC 驅動程式資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

@@ -1,6 +1,6 @@
 - name: SQL Server 機器學習服務文件
   href: ../advanced-analytics/index.yml
-- name: 歡迎使用 SQL Server >>
+- name: 歡迎使用 SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 概觀
   expanded: true
@@ -165,7 +165,7 @@
           href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
         - name: NYC 計程車資料集
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
-- name: 範例 >
+- name: 範例 >>
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: 方案
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
@@ -321,7 +321,7 @@
           href: ../advanced-analytics/r/ref-r-sqlrutils.md
 - name: 資源
   items:
-    - name: 版本資訊 >>
+    - name: 版本資訊 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: 疑難排解
       items:

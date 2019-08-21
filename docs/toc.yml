@@ -1982,7 +1982,7 @@
               href: relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 部署
   items:
-    - name: 撰寫用戶端程式 >>
+    - name: 撰寫用戶端程式 >
       displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: connect/index.md
     - name: 資料層應用程式
@@ -4500,7 +4500,7 @@
               href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: 移轉與載入資料
   items:
-    - name: SQL Server Integration Services (SSIS) >>
+    - name: SQL Server Integration Services (SSIS) >
       href: integration-services/index.md
     - name: 大量複製公用程式 (bcp)
       href: tools/bcp-utility.md
@@ -5692,13 +5692,13 @@
                   href: sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: 資源
           items:
-            - name: 定價 >
+            - name: 定價 >>
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: 部落格 >
+            - name: 部落格 >>
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: 服務更新 >
+            - name: 服務更新 >>
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: 影片 >
+            - name: 影片 >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: 資料庫測試精靈
       href: dea/database-experimentation-assistant-overview.md
@@ -7422,15 +7422,15 @@
               href: relational-databases/polybase/polybase-type-mapping.md
         - name: 資源
           items:
-            - name: DBA Stack Exchange >
+            - name: DBA Stack Exchange >>
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: Stack Overflow >
+            - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN 論壇 >
+            - name: MSDN 論壇 >>
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: 提交意見反應 >
+            - name: 提交意見反應 >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Reddit >
+            - name: Reddit >>
               href: 'https://www.reddit.com/r/SQLServer'
     - name: 連結的伺服器
       href: relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7528,14 +7528,14 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: 報告與分析
   items:
-    - name: 進階分析與機器學習 >>
+    - name: 進階分析與機器學習 >
       href: advanced-analytics/
-    - name: Analytics Platform System >>
+    - name: Analytics Platform System >
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
-    - name: SQL Server Analysis Services (SSAS) >>
+    - name: SQL Server Analysis Services (SSAS) >
       href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
-    - name: SQL Server Reporting Services (SSRS) >>
+    - name: SQL Server Reporting Services (SSRS) >
       href: reporting-services/index.md
     - name: Master Data Services
       displayName: MDS
@@ -8282,11 +8282,11 @@
           items:
             - name: 常見問題集
               href: azure-data-studio/faq.md
-            - name: Azure Data Studio GitHub 存放庫 >
+            - name: Azure Data Studio GitHub 存放庫 >>
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: SQL Server 部落格 >
+            - name: SQL Server 部落格 >>
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: 回報問題與提出建議 >
+            - name: 回報問題與提出建議 >>
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: 命令提示字元公用程式
       href: tools/command-prompt-utility-reference-database-engine.md
@@ -10016,7 +10016,7 @@
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 匿名的使用量資料
               href: ssms/sql-server-management-studio-telemetry-ssms.md
-            - name: 意見反應 >
+            - name: 意見反應 >>
               href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
@@ -10427,17 +10427,17 @@
       items:
         - name: 疑難排解
           href: linux/sql-server-linux-troubleshooting-guide.md
-        - name: 如何授權 >
+        - name: 如何授權 >>
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: DBA Stack Exchange >
+        - name: DBA Stack Exchange >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow >
+        - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 論壇 >
+        - name: MSDN 論壇 >>
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: 提交意見反應 >
+        - name: 提交意見反應 >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Reddit >
+        - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
 - name: Azure 上的 SQL
   items:
@@ -10451,9 +10451,9 @@
   items:
     - name: 學習
       items:
-        - name: Microsoft Virtual Academy >
+        - name: Microsoft Virtual Academy >>
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: Channel 9 上的 SQL >
+        - name: Channel 9 上的 SQL >>
           href: 'https://channel9.msdn.com/Search'
     - name: 說明
       items:
@@ -10461,29 +10461,29 @@
           href: sql-server/sql-server-get-help.md
         - name: SQL 文件的版本設定
           href: sql-server/versioning-system-monikers-ui-sql-server.md
-        - name: DBA Stack Exchange >
+        - name: DBA Stack Exchange >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow >
+        - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 論壇 >
+        - name: MSDN 論壇 >>
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Reddit >
+        - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
     - name: 部落格
       items:
-        - name: SQL Server >
+        - name: SQL Server >>
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: 資料庫引擎 >
+        - name: 資料庫引擎 >>
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: 安全性 >
+        - name: 安全性 >>
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: Data Tools >
+        - name: Data Tools >>
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: 意見反應
       items:
-        - name: SQL 件 >
+        - name: SQL 文件 >>
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: SQL Server >
+        - name: SQL Server >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: 編輯 SQL 文件！
           href: sql-server/sql-server-docs-contribute.md
@@ -10508,7 +10508,7 @@
       items:
         - name: 範例概觀
           href: samples/sql-samples-where-are.md
-        - name: 所有 Github 範例 >
+        - name: 所有 Github 範例 >>
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:

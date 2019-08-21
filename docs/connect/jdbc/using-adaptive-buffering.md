@@ -1,7 +1,7 @@
 ---
-title: 使用適應性緩衝 |Microsoft Docs
+title: 使用自適性緩衝 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,35 +10,35 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916458"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026803"
 ---
-# <a name="using-adaptive-buffering"></a>使用適應性緩衝
+# <a name="using-adaptive-buffering"></a>使用自適性緩衝
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-適應性緩衝是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 應用程式可以使用自適性緩衝功能搭配此驅動程式所支援的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
+自適性緩衝是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 應用程式可以使用自適性緩衝功能搭配此驅動程式所支援的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
 
 一般而言，當 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 執行查詢時，驅動程式會將伺服器中的所有結果擷取到應用程式記憶體中。 雖然這個方法會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資源耗用量降到最低，但是它會針對產生非常龐大結果的查詢，在 JDBC 應用程式中擲回 OutOfMemoryError。
 
-為了允許應用程式處理非常龐大的結果，因此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供自適性緩衝。 使用自適性緩衝，此驅動程式會在應用程式需要時，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中擷取陳述式執行結果，而非一次擷取所有結果。 只要應用程式不再存取這些結果，驅動程式也可以捨棄它們。 下面是適應性緩衝可能有用的部分範例：
+為了允許應用程式處理非常龐大的結果，因此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供自適性緩衝。 使用自適性緩衝，此驅動程式會在應用程式需要時，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中擷取陳述式執行結果，而非一次擷取所有結果。 只要應用程式不再存取這些結果，驅動程式也可以捨棄它們。 下面是自適性緩衝可能有用的部分範例：
 
-- **查詢會產生非常龐大的結果集：** 應用程式可以執行 SELECT 陳述式，該陳述式會產生比應用程式可以儲存在記憶體中還要多的資料列。 在舊版中，應用程式必須使用伺服器資料指標來避免 OutOfMemoryError。 適應性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。
+- **查詢會產生非常龐大的結果集：** 應用程式可以執行 SELECT 陳述式，該陳述式會產生比應用程式可以儲存在記憶體中還要多的資料列。 在舊版中，應用程式必須使用伺服器資料指標來避免 OutOfMemoryError。 自適性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。
 
-- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **資料行或** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取因為過大而無法完整納入應用程式記憶體中的單一值 (資料行或 OUT 參數)。 適應性緩衝可讓用戶端應用程式使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法, 將這類值當做資料流程來取得。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的值。
+- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **資料行或** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取因為過大而無法完整納入應用程式記憶體中的單一值 (資料行或 OUT 參數)。 自適性緩衝可讓用戶端應用程式使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法, 將這類值當做資料流程來取得。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的值。
 
 > [!NOTE]  
-> 透過適應性緩衝，JDBC Driver 只會緩衝處理它所需的資料量。 此驅動程式不會提供任何公用方法來控制或限制緩衝區的大小。
+> 透過自適性緩衝，JDBC Driver 只會緩衝處理它所需的資料量。 此驅動程式不會提供任何公用方法來控制或限制緩衝區的大小。
 
-## <a name="setting-adaptive-buffering"></a>設定適應性緩衝
+## <a name="setting-adaptive-buffering"></a>設定自適性緩衝
 
-自 JDBC Driver 2.0 版開始，此驅動程式的預設行為是 "**adaptive**"。 換言之，若要取得適應性緩衝行為，您的應用程式不需要明確要求適應性行為。 但在 1.2 版中，預設的緩衝模式為 "**full**"，且應用程式必須明確要求自適性緩衝模式。
+自 JDBC Driver 2.0 版開始，此驅動程式的預設行為是 "**adaptive**"。 換言之，若要取得自適性緩衝行為，您的應用程式不需要明確要求適應性行為。 但在 1.2 版中，預設的緩衝模式為 "**full**"，且應用程式必須明確要求自適性緩衝模式。
 
-應用程式可以要求陳述式執行應該使用適應性緩衝的方式有三種：
+應用程式可以要求陳述式執行應該使用自適性緩衝的方式有三種：
 
 - 應用程式可以將連接屬性**responseBuffering**設定為「調適型」。 如需設定連接屬性的詳細資訊, 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。
 
@@ -50,9 +50,9 @@ ms.locfileid: "67916458"
 
 不過，使用 JDBC Driver 2.0 版時，應用程式可以使用 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法來存取供應商特定的功能，而不需要提出有關實作類別階層的任何假設。 如需範例程式碼, 請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)主題。
 
-## <a name="retrieving-large-data-with-adaptive-buffering"></a>利用適應性緩衝擷取大型資料
+## <a name="retrieving-large-data-with-adaptive-buffering"></a>利用自適性緩衝擷取大型資料
 
-使用 get\<類型>Stream 方法讀取大數值一次，而且以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回的順序存取 ResultSet 資料行和 CallableStatement OUT 參數時，自適性緩衝會將處理結果時的應用程式記憶體使用量降到最低。 使用適應性緩衝時：
+使用 get\<類型>Stream 方法讀取大數值一次，而且以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回的順序存取 ResultSet 資料行和 CallableStatement OUT 參數時，自適性緩衝會將處理結果時的應用程式記憶體使用量降到最低。 使用自適性緩衝時：
 
 - 雖然資料流透過應用程式標示時可以重設，但是在 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別中定義的 get\<類型>Stream 方法預設還是會傳回讀取一次的資料流。 如果應用程式想要 `reset` 資料流，必須先在該資料流上呼叫 `mark` 方法。
 
@@ -63,11 +63,11 @@ ms.locfileid: "67916458"
 > [!NOTE]
 > 在處理結果集的過程中, 對 ResultSet. close () 的呼叫需要 Microsoft JDBC Driver for SQL Server, 才能讀取和捨棄所有剩餘的封包。 如果查詢傳回大型資料集, 特別是當網路連接速度很慢時, 這可能需要相當長的時間。
 
-## <a name="guidelines-for-using-adaptive-buffering"></a>使用適應性緩衝的指導方針
+## <a name="guidelines-for-using-adaptive-buffering"></a>使用自適性緩衝的指導方針
 
 開發人員應該遵循這些重要的指導方針，將應用程式的記憶體使用量降到最低：
 
-- 請避免使用 **selectMethod=cursor** 連接字串屬性，以讓應用程式處理非常龐大的結果集。 適應性緩衝功能可讓應用程式處理非常大的順向唯讀結果集，而不需要使用伺服器資料指標。 請注意，當您設定 **selectMethod=cursor** 時，該連線產生的所有順向唯讀結果集都會受到影響。 換言之，如果您的應用程式例行地處理含有少數資料列的簡短結果集，就用戶端和伺服器端而言，針對每個結果集建立、讀取和關閉伺服器資料指標所使用的資源會比 **selectMethod** 沒有設定為 **cursor** 的情況還多。
+- 請避免使用 **selectMethod=cursor** 連接字串屬性，以讓應用程式處理非常龐大的結果集。 自適性緩衝功能可讓應用程式處理非常大的順向唯讀結果集，而不需要使用伺服器資料指標。 請注意，當您設定 **selectMethod=cursor** 時，該連線產生的所有順向唯讀結果集都會受到影響。 換言之，如果您的應用程式例行地處理含有少數資料列的簡短結果集，就用戶端和伺服器端而言，針對每個結果集建立、讀取和關閉伺服器資料指標所使用的資源會比 **selectMethod** 沒有設定為 **cursor** 的情況還多。
 
 - 使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法 (而不是 getBlob 或 getClob 方法), 將大型文字或二進位值讀取為數據流。 從 1.2 版開始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別會針對此用途提供新的 get\<類型>Stream 方法。
 
@@ -93,4 +93,4 @@ ms.locfileid: "67916458"
 
 ## <a name="see-also"></a>另請參閱
 
-[善 JDBC Driver 的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[改善JDBC 驅動程式的效能與可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
