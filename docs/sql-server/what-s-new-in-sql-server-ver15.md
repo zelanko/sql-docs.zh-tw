@@ -83,7 +83,7 @@ Community Technical Preview (CTP) 3.2 是 [!INCLUDE[sql-server-2019](../includes
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|加密索引的資料行|可在使用隨機加密方式以及啟用記憶體保護區的索引鍵所加密的資料行上建立索引，改善雜雜查詢 (使用 `LIKE` 與比較運算子) 的效能。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+|加密索引的資料行|可在使用隨機加密方式以及啟用記憶體保護區的索引鍵所加密的資料行上建立索引，改善複雜查詢 (使用 `LIKE` 與比較運算子) 的效能。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 |暫止和繼續透明資料加密 (TDE) 的初始掃描|請參閱[透明資料加密 (TDE) 掃描 - 暫止和繼續](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |SQL Server 組態管理員中的憑證管理|請參閱[憑證管理 (SQL Server 組態管理員)](../database-engine/configure-windows/manage-certificates.md)
 | &nbsp; | &nbsp; |

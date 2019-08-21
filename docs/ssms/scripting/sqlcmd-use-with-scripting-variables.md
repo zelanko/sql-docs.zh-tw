@@ -128,7 +128,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDEDITOR            |                | R/W | "edit.com"              |
 | SQLCMDINI               |                | R   | ""                      |
 
-\* SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER 會在使用 **:Connect** 時設定。  
+SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER 會在使用 **:Connect** 時設定。  
 
 R 表示在程式初始化期間只能設定該值一次。  
   
