@@ -1,20 +1,20 @@
 ---
 title: 掛接 S3 進行 HDFS 階層處理
 titleSuffix: SQL Server big data clusters
-description: 此文章說明如何設定 HDFS 階層處理，以將外部 S3 檔案系統掛接到 SQL Server 2019 巨量資料叢集 (預覽) 上的 HDFS。
+description: 本文說明如何設定 HDFS 階層處理, 以將外部 S3 檔案系統掛接至上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611416"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652300"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 S3 以進行 HDFS 階層處理
 
@@ -61,10 +61,10 @@ ms.locfileid: "69611416"
    
 1. 依照上面的指示設定環境變數 MOUNT_CREDENTIALS
 
-1. 使用**azdata bdc 存放集區掛接建立**, 在 S3 中掛接遠端 HDFS 存放裝置。 執行下列命令之前，請先取代預留位置值：
+1. 使用**azdata bdc HDFS 掛接 create**, 在 Azure 中掛接遠端 HDFS 儲存體。 執行下列命令之前，請先取代預留位置值：
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -96,7 +96,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> 刪除掛接
 
-若要刪除掛接，請使用 **azdata bdc storage-pool mount delete** 命令，並在 HDFS 中指定掛接路徑：
+若要刪除掛接, 請使用**azdata bdc hdfs mount delete**命令, 並在 hdfs 中指定掛接路徑:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 SQL Server 2019 巨量資料叢集的詳細資訊，請參閱 [SQL Server 2019 巨量資料叢集是什麼](big-data-cluster-overview.md)。
+如需有關[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的詳細資訊, 請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。

@@ -1,25 +1,26 @@
 ---
-title: 在 Windows 上安裝 SQL Server Machine Learning 服務 (資料庫內)
-description: SQL Server 或 Python 中的 R, 適用于 Windows 上 SQL Server Machine Learning 服務的 SQL Server 安裝步驟。
+title: 在 Windows 上安裝 SQL Server Machine Learning Services (Python、R)
+titleSuffix: ''
+description: 本文說明如何在 Windows 上安裝 SQL Server Machine Learning 服務。 您可以使用 Machine Learning 服務來執行 Python 和資料庫內的 R 腳本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531050"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634560"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>在 Windows 上安裝 SQL Server Machine Learning 服務
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式, 並遵循螢幕上的提示來安裝機器學習服務元件。
+本文說明如何在 Windows 上安裝 SQL Server Machine Learning 服務。 您可以使用 Machine Learning 服務來執行 Python 和資料庫內的 R 腳本。
 
 ## <a name="bkmk_prereqs"></a>預先安裝檢查清單
 

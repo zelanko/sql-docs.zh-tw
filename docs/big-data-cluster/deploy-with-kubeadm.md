@@ -1,32 +1,32 @@
 ---
 title: 使用 kubeadm 設定 Kubernetes
 titleSuffix: SQL Server big data clusters
-description: 了解如何在多部 Ubuntu 16.04 或 18.04 電腦 (實體或虛擬) 上設定 Kubernetes，以進行 SQL Server 2019 巨量資料叢集 (預覽) 部署。
+description: 瞭解如何在多個 Ubuntu 16.04 或18.04 部電腦 (實體或虛擬) 上設定[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Kubernetes, 以進行部署。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d55a51ac388cfb4af197ce409434a0dc9847bd2d
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 63a3529755267137cb7a1094060499e5db008ec8
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661360"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652379"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>在多部電腦上設定 Kubernetes 以進行 SQL Server 巨量資料叢集部署
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文提供範例說明如何使用 **kubeadm** 來設定多部電腦上的 Kubernetes，以進行 SQL Server 2019 巨量資料叢集 (預覽) 部署。 在此範例中，會以多部 Ubuntu 16.04 或 18.04 LTS 電腦 (實體或虛擬) 為目標。 如果您要部署到不同的 Linux 平台，您必須改變一些命令以符合您的系統。  
+本文提供一個範例, 說明如何使用**kubeadm**在多部電腦上設定 Kubernetes 以[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]進行部署。 在此範例中，會以多部 Ubuntu 16.04 或 18.04 LTS 電腦 (實體或虛擬) 為目標。 如果您要部署到不同的 Linux 平台，您必須改變一些命令以符合您的系統。  
 
 > [!TIP] 
 > 如需設定 Kubernetes 的範例指令碼，請參閱 [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm) (在Ubuntu 16.04 LTS 或 18.04 LTS 上使用 Kubeadm 建立 Kubernetes 叢集)。
 另請參閱[本主題](deployment-script-single-node-kubeadm.md)，以取得在 VM 上自動部署單一節點 kubeadm 部署的範例指令碼，然後在其上部署巨量資料叢集的預設設定。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 至少 3 部 Linux 實體機器或虛擬機器
 - 每部電腦的建議設定：

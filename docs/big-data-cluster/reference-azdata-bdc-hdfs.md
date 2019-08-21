@@ -5,16 +5,16 @@ description: azdata bdc hdfs 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e892c2d501902ef915a297440ae5a6ffda83bce
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fab1f3e831f660a01ea2f03967a1144725baabde
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426178"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653467"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
@@ -55,7 +55,7 @@ azdata bdc hdfs shell
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-ls"></a>azdata bdc hdfs ls
@@ -80,7 +80,7 @@ azdata bdc hdfs ls --path '/tmp'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-exists"></a>azdata bdc hdfs exists
@@ -105,7 +105,7 @@ azdata bdc hdfs exists --path '/tmp'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-mkdir"></a>azdata bdc hdfs mkdir
@@ -130,7 +130,7 @@ azdata bdc hdfs mkdir --path '/tmp'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-mv"></a>azdata bdc hdfs mv
@@ -157,7 +157,7 @@ azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-create"></a>azdata bdc hdfs create
@@ -184,7 +184,7 @@ azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-cat"></a>azdata bdc hdfs cat
@@ -214,7 +214,7 @@ azdata bdc hdfs cat --path '/tmp/test.txt'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-rm"></a>azdata bdc hdfs rm
@@ -239,7 +239,7 @@ azdata bdc hdfs rm --path '/tmp'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-rmr"></a>azdata bdc hdfs rmr
@@ -264,7 +264,7 @@ azdata bdc hdfs rmr --path '/tmp'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-chmod"></a>azdata bdc hdfs chmod
@@ -291,7 +291,7 @@ azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-hdfs-chown"></a>azdata bdc hdfs chown
@@ -321,10 +321,10 @@ azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 
 ## <a name="next-steps"></a>後續步驟
 
-如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](deploy-install-azdata.md)。
+如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需有關如何安裝**azdata**工具的詳細資訊, 請參閱[install azdata to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]manage ](deploy-install-azdata.md)。

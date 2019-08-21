@@ -1,31 +1,34 @@
 ---
-title: 使用安裝在使用者程式庫中的 R 套件的秘訣
+title: 使用 R 套件的祕訣
+description: 針對不熟悉 R 或 SQL Server 的使用者, 瞭解在 SQL Server 中使用 R 封裝的有用秘訣。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16f3ae10c7a05529c86bea5684182c7805f9f54b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 5e283ab478a6d65243e9962fd5c26f5f91d87c15
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715676"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633627"
 ---
-# <a name="tips-for-using-r-packages-in-sql-server"></a>在 SQL Server 中使用 R 套件的秘訣
+# <a name="tips-for-using-r-packages"></a>使用 R 套件的祕訣
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-這篇文章針對 Dba 提供了不同的區段, 這些是不熟悉 R 和經驗豐富的 R 開發人員, 不熟悉 SQL Server 實例中的封裝存取。
+本文提供在 SQL Server 中使用 R 封裝的實用秘訣。 這些秘訣適用于不熟悉 R 的 Dba, 以及在 SQL Server 實例中不熟悉封裝存取的經驗豐富 R 開發人員。
 
-## <a name="new-to-r"></a>R 新手
+## <a name="if-youre-new-to-r"></a>如果您不熟悉 R
 
 身為系統管理員第一次安裝 R 套件時, 瞭解 R 套件管理的一些基本概念可協助您開始著手。
 
 ### <a name="package-dependencies"></a>封裝相依性
 
-R 封裝經常取決於多個其他套件, 其中有些封裝可能無法在實例所使用的預設 R 程式庫中使用。 有時候封裝需要已安裝的不同版本的相依套件。 封裝相依性會在封裝中內嵌的描述檔案中注明, 但有時不完整。 您可以使用名為[iGraph](https://igraph.org/r/)的套件來完整表達相依性圖形。
+R 封裝經常取決於多個其他套件, 其中有些封裝可能無法在實例所使用的預設 R 程式庫中使用。 有時候, 套件所需的相依套件版本與已安裝的不同。 封裝相依性會在封裝中內嵌的描述檔案中注明, 但有時不完整。 您可以使用名為[iGraph](https://igraph.org/r/)的套件來完整表達相依性圖形。
 
 如果您需要安裝多個套件, 或想要確保組織中的每個人都能取得正確的套件類型和版本, 建議您使用[miniCRAN](https://mran.microsoft.com/package/miniCRAN)套件來分析完整的相依性鏈。 minicRAN 會建立可在多個使用者或電腦之間共用的本機存放庫。 如需詳細資訊, 請參閱[使用 MiniCRAN 建立本機套件存放庫](create-a-local-package-repository-using-minicran.md)。
 
@@ -33,17 +36,23 @@ R 封裝經常取決於多個其他套件, 其中有些封裝可能無法在實�
 
 R 套件有多個來源, 例如[CRAN](https://cran.r-project.org/)和[Bioconductor](https://www.bioconductor.org/)。 R 語言的官方網站 (<https://www.r-project.org/>) 會列出其中的許多資源。 Microsoft 為其開放原始碼 R ([MRO](https://mran.microsoft.com/open)) 和其他套件的散發提供了[MRAN](https://mran.microsoft.com/) 。 許多套件都會發佈至 GitHub, 開發人員可以在其中取得原始程式碼。
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 R 封裝會在多個計算平臺上執行。 請確定您安裝的版本是 Windows 二進位檔。
+::: moniker-end
 
-### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>知道您要安裝的媒體櫃, 以及已安裝的套件。
+::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+R 封裝會在多個計算平臺上執行。 請確定您安裝的版本是 Linux 二進位檔。
+::: moniker-end
 
-如果您先前已修改電腦上的 R 環境, 在安裝任何專案之前, 請確定 R 環境變數`.libPath`只會使用一個路徑。
+### <a name="know-which-library-youre-installing-to-and-which-packages-are-already-installed"></a>知道您要安裝的媒體櫃, 以及已安裝的套件
 
-這個路徑應該指向實例的 R_SERVICES 資料夾。 如需詳細資訊, 包括如何判斷已安裝哪些套件, 請參閱[SQL Server 中的預設 R 和 Python 套件](../package-management/default-packages.md)。
+如果您先前已修改電腦上的 R 環境, 則在安裝任何專案之前, 請確定 R `.libPath`環境變數只會使用一個路徑。
 
-## <a name="new-to-sql-server"></a>SQL Server 的新手
+這個路徑應該指向實例的 R_SERVICES 資料夾。 如需詳細資訊, 包括如何判斷已安裝哪些套件, 請參閱[取得 R 封裝資訊](../package-management/r-package-information.md)。
 
-當 R 開發人員處理在 SQL Server 上執行的程式碼時, 保護伺服器的安全性原則會限制您控制 R 環境的能力。
+## <a name="if-youre-new-to-sql-server"></a>如果您不熟悉 SQL Server
+
+當 R 開發人員處理在 SQL Server 上執行的程式碼時, 保護伺服器的安全性原則會限制您控制 R 環境的能力。 下列秘訣描述一般情況, 並提供在此環境中工作的建議。
 
 ### <a name="r-user-libraries-not-supported-on-sql-server"></a>R 使用者程式庫: SQL Server 不支援
 
@@ -57,23 +66,27 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 *程式庫中的錯誤 (xxx): 沒有名為 ' package-name ' 的套件*
 
-### <a name="avoid-package-not-found-errors"></a>避免「找不到封裝」錯誤
+如需如何在 SQL Server 中安裝 R 套件的詳細資訊, 請參閱[在 SQL Server Machine Learning 服務或 SQL Server R Services 上安裝新的 R 套件](install-additional-r-packages-on-sql-server.md)。
 
-+ 排除對使用者程式庫的相依性。 
+### <a name="how-to-avoid-package-not-found-errors"></a>如何避免「找不到封裝」錯誤
 
-    將必要的 R 套件安裝到自訂使用者程式庫是不正確的開發做法, 因為如果有另一位無法存取程式庫位置的使用者執行解決方案, 可能會導致錯誤。
+使用下列指導方針可協助您避免「找不到封裝」錯誤。
+
++ 排除對使用者程式庫的相依性。
+
+    將必要的 R 套件安裝到自訂使用者程式庫是不正確的開發實務。 如果有另一位無法存取程式庫位置的使用者執行解決方案, 這可能會導致錯誤。
 
     此外, 如果封裝安裝在預設程式庫中, R 執行時間會從預設程式庫載入封裝, 即使您在 R 程式碼中指定不同的版本也一樣。
 
-+ 修改您的程式碼, 以在共用環境中執行。
++ 請確定您的程式碼可以在共用環境中執行。
 
 + 避免將套件安裝為解決方案的一部分。 如果您沒有安裝封裝的許可權, 程式碼將會失敗。 即使您有安裝套件的許可權, 還是應該與您要執行的其他程式碼分開。
 
 + 檢查您的程式碼，以確保不會呼叫已解除安裝的封裝。
 
-+ 更新您的程式碼, 以移除 R 封裝或 R 程式庫路徑的直接參考。 
++ 更新您的程式碼, 以移除 R 封裝或 R 程式庫路徑的直接參考。
 
-+ 知道哪個封裝程式庫與實例相關聯。 如需詳細資訊, 請參閱[SQL Server 中的預設 R 和 Python 封裝](../package-management/default-packages.md)。
++ 知道哪個封裝程式庫與實例相關聯。 如需詳細資訊, 請參閱[取得 R 封裝資訊](../package-management/r-package-information.md)。
 
 ## <a name="see-also"></a>另請參閱
 

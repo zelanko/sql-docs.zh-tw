@@ -1,22 +1,22 @@
 ---
 title: 部署指導
 titleSuffix: SQL Server big data clusters
-description: 了解如何在 Kubernetes 上部署 SQL Server 2019 巨量資料叢集 (預覽)。
+description: 瞭解如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上部署 (預覽)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995828"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652350"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何在 Kubernetes 上部署 SQL Server 巨量資料叢集
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器�
 
 ## <a id="prereqs"></a> Kubernetes 先決條件
 
-SQL Server 巨量資料叢集針對伺服器和用戶端 (kubectl) 至少需要 v 1.10 的 Kubernetes 版本。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]伺服器和用戶端 (kubectl) 至少需要 v 1.10 的最低 Kubernetes 版本。
 
 > [!NOTE]
 > 請注意，用戶端和伺服器 Kubernetes 版本應該在 +1 或 -1 次要版本內。 如需詳細資訊，請參閱 [Kubernetes 版本資訊和版本誤差 SKU 原則](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew) \(英文\)。
@@ -67,7 +67,7 @@ SQL Server 巨量資料叢集針對伺服器和用戶端 (kubectl) 至少需要 
 kubectl config view
 ```
 
-設定 Kubernetes 叢集之後，您可以繼續部署新的 SQL Server 巨量資料叢集。 如果您從前一個版本升級，請參閱[如何升級 SQL Server 巨量資料叢集](deployment-upgrade.md)。
+設定 Kubernetes 叢集之後，您可以繼續部署新的 SQL Server 巨量資料叢集。 如果您是從上一版升級, 請參閱[如何升級[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md)。
 
 ## <a id="deploy"></a> 部署概觀
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> 由於下載巨量資料叢集元件的容器映像所需的時間，整個部署可能需要很長的時間。 不過，應該不會花費到數小時。 如果您在部署期間遇到問題，請參閱[監視和疑難排解 SQL Server 巨量資料叢集](cluster-troubleshooting-commands.md)。
+> 由於下載巨量資料叢集元件的容器映像所需的時間，整個部署可能需要很長的時間。 不過，應該不會花費到數小時。 如果您的部署遇到問題, 請參閱[監視和疑難排解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)。
 
 完成部署時，輸出會通知您成功：
 
@@ -314,4 +314,4 @@ Storage  default        Ready
 
 - [針對巨量資料叢集設定部署設定](deployment-custom-configuration.md)
 - [執行 SQL Server 巨量資料叢集的離線部署](deploy-offline.md)
-- [工作坊：Microsoft SQL Server 巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

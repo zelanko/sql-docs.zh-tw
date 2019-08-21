@@ -5,16 +5,16 @@ description: azdata bdc 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0a2891256bd6e45de356d620d3fa75256528b697
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 44b0f8daafec86714bb8161c1d30130eed3d480d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894013"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653448"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -88,7 +88,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
@@ -116,10 +116,10 @@ azdata bdc delete --name <cluster_name>
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/]) \(英文\)。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 
 ## <a name="next-steps"></a>後續步驟
 
-如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](deploy-install-azdata.md)。
+如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需有關如何安裝**azdata**工具的詳細資訊, 請參閱[install azdata to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]manage ](deploy-install-azdata.md)。

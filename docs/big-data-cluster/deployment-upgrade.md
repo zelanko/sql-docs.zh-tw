@@ -1,22 +1,22 @@
 ---
 title: 升級為新版本
 titleSuffix: SQL Server big data clusters
-description: 了解如何將 SQL Server 2019 巨量資料叢集 (預覽) 升級至新版本。
+description: 瞭解如何將 ( [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]預覽) 升級至新版本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: 867729b7d638960a2dbf2cb5f7544fecf698c94d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731084"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652338"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>如何升級 SQL Server 巨量資料叢集
+# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>如何升級[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -72,8 +72,8 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>安裝新版本
 
-在您移除先前的巨量資料叢集，並安裝最新的 **azdata** 之後，請使用目前的部署指示來部署新巨量資料叢集。 如需詳細資訊，請參閱[如何在 Kubernetes 上部署 SQL Server 巨量資料叢集](deployment-guidance.md)。 接著，還原任何必要的資料庫或檔案。
+在您移除先前的巨量資料叢集，並安裝最新的 **azdata** 之後，請使用目前的部署指示來部署新巨量資料叢集。 如需詳細資訊, 請參閱 how [to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)。 接著，還原任何必要的資料庫或檔案。
 
 ## <a name="next-steps"></a>後續步驟
 
-如需巨量資料叢集的詳細資訊，請參閱[什麼是 SQL Server 巨量資料叢集](big-data-cluster-overview.md)。
+如需有關 big data 叢集的詳細資訊, 請參閱[什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)。

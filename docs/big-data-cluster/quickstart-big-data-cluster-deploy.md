@@ -1,35 +1,35 @@
 ---
 title: 使用 Python 指令碼進行部署
 titleSuffix: SQL Server big data clusters
-description: 了解如何使用部署指令碼在 Azure Kubernetes Service (AKS) 上部署 SQL Server 2019 巨量資料叢集 (預覽)。
+description: 瞭解如何在 Azure Kubernetes Service (AKS) 上使用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署腳本來部署 (預覽)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee1c8669e6496553c367b4d1078d1e6a7f26497
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1bd3af32448bfce7dc584ac630d503e4cf63b286
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470712"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653233"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>使用 Python 指令碼在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-在本教學課程中，您會使用範例 Python 部署指令碼將 SQL Server 2019 巨量資料叢集 (預覽) 部署至 Azure Kubernetes Service (AKS)。
+在本教學課程中, 您會使用範例 python 部署腳本[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]來部署至 Azure Kubernetes Service (AKS)。
 
 > [!TIP]
-> AKS 只是針對巨量資料叢集而裝載 Kubernetes 的選項之一。 若要深入了解其他部署選項以及如何自訂部署選項，請參閱[如何在 Kubernetes 上部署 SQL Server 巨量資料叢集](deployment-guidance.md)。
+> AKS 只是針對巨量資料叢集而裝載 Kubernetes 的選項之一。 若要深入瞭解其他部署選項, 以及如何自訂部署選項, 請參閱[如何在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 上部署](deployment-guidance.md)。
 
 此處使用的預設巨量資料叢集部署，包含 SQL 主要執行個體、一個計算集區執行個體、兩個資料集區執行個體以及兩個存放集區執行個體。 資料會使用 Kubernetes 持續性磁碟區來保存，該磁碟區使用 AKS 預設儲存類別。 本教學課程中使用的預設設定適用於開發/測試環境。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - Azure 訂用帳戶。
 - [巨量資料工具](deploy-big-data-tools.md)：
@@ -72,7 +72,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 1. 出現提示時，輸入下列資訊：
 
-   | ReplTest1 | Description |
+   | 值 | 描述 |
    |---|---|
    | **Azure 訂用帳戶識別碼** | 用於 AKS 的 Azure 訂用帳戶識別碼。 您可以從另一個命令列執行 `az account list` 以列出您所有訂用帳戶及其識別碼。 |
    | **Azure 資源群組** | 要為 AKS 叢集建立的 Azure 資源群組名稱。 |
@@ -113,7 +113,7 @@ SQL Server 2019 巨量資料叢集早期採用者計畫中的參與者需要下�
 ```
 
 > [!IMPORTANT]
-> 由於下載巨量資料叢集元件的容器映像需要時間，因此整個部署可能會很費時。 不過，應該不會花費到數小時。 如果您在部署期間遇到問題，請參閱[監視和針對 SQL Server 巨量資料叢集進行疑難排解](cluster-troubleshooting-commands.md)。
+> 由於下載巨量資料叢集元件的容器映像需要時間，因此整個部署可能會很費時。 不過，應該不會花費到數小時。 如果您的部署遇到問題, 請參閱[監視和疑難排解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)。
 
 ## <a name="inspect-the-cluster"></a>檢查叢集
 
@@ -151,9 +151,9 @@ SQL Server 2019 巨量資料叢集早期採用者計畫中的參與者需要下�
    ```
 
 > [!TIP]
-> 如需如何監視並針對部署並進行疑難排解的詳細資料，請參閱[監視並針對 SQL Server 巨量資料叢集進行疑難排解](cluster-troubleshooting-commands.md)。
+> 如需有關如何監視和疑難排解部署的詳細資訊, 請參閱[監視和[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]疑難排解](cluster-troubleshooting-commands.md)。
 
-## <a name="connect-to-the-cluster"></a>連線至叢集
+## <a name="connect-to-the-cluster"></a>連接到叢集
 
 部署指令碼完成時，輸出會通知您成功：
 
@@ -166,7 +166,7 @@ SQL Server 巨量資料叢集現在已部署在 AKS 上。 您現在可以使用
 
 ## <a name="clean-up"></a>清除
 
-如果您要在 Azure 中測試 SQL Server 巨量資料叢集，您應在完成時刪除 AKS 叢集，以避免產生非預期的費用。 如果您希望繼續使用叢集，請勿移除叢集。
+如果您要在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Azure 中測試, 您應該在完成時刪除 AKS 叢集, 以避免產生非預期的費用。 如果您希望繼續使用叢集，請勿移除叢集。
 
 > [!WARNING]
 > 下列步驟會卸除 AKS 叢集，也會移除 SQL Server 巨量資料叢集。 如果您有任何想要保留的資料庫或 HDFS 資料，請在刪除叢集之前先備份該資料。
@@ -179,7 +179,7 @@ az group delete -n <resource group name>
 
 ## <a name="next-steps"></a>後續步驟
 
-部署指令碼已設定 Azure Kubernetes Service，同時也部署了 SQL Server 2019 巨量資料叢集。 您也可以選擇透過手動安裝來自訂未來的部署。 若要深入了解如何部署巨量資料叢集以及如何自訂部署，請參閱[如何在 Kubernetes 上部署 SQL Server 巨量資料叢集](deployment-guidance.md)。
+部署指令碼已設定 Azure Kubernetes Service，同時也部署了 SQL Server 2019 巨量資料叢集。 您也可以選擇透過手動安裝來自訂未來的部署。 若要深入瞭解如何部署海量資料叢集, 以及如何自訂部署, 請參閱[如何在 Kubernetes 上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]部署](deployment-guidance.md)。
 
 現在 SQL Server 巨量資料叢集已完成部署，您可以載入範例資料並探索教學課程：
 

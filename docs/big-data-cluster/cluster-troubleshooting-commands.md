@@ -1,26 +1,26 @@
 ---
 title: 監視和疑難排解
 titleSuffix: SQL Server big data clusters
-description: 此文章提供用來監視和針對 SQL Server 2019 巨量資料叢集 (預覽) 進行疑難排解的實用命令。
+description: 本文提供用於監視和疑難排解的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]實用命令。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68841556"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653026"
 ---
-# <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>監視 SQL Server 巨量資料叢集並進行疑難排解
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>監視和疑難排解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-此文章說明數個實用的 Kubernetes 命令，可讓您用來監視和針對 SQL Server 2019 巨量資料叢集 (預覽) 進行疑難排解。 它會示範如何檢視位於巨量資料叢集中的 Pod 或其他 Kubernetes 成品的深入詳細資料。 此文章也涵蓋一般工作，例如，將檔案複製到執行其中一項 SQL Server 巨量資料叢集服務的容器，或從其中複製檔案。
+本文說明數個實用的 Kubernetes 命令, 可讓您用來監視和[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]疑難排解。 它會示範如何檢視位於巨量資料叢集中的 Pod 或其他 Kubernetes 成品的深入詳細資料。 此文章也涵蓋一般工作，例如，將檔案複製到執行其中一項 SQL Server 巨量資料叢集服務的容器，或從其中複製檔案。
 
 > [!TIP]
 > 在 Windows (cmd or PS) 或 Linux (bash) 用戶端電腦上執行下列 **kubectl** 命令。 它們需要叢集中先前的驗證，以及要執行的目標叢集內容。 例如，針對先前建立的 AKS 叢集，您可以執行 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` 來下載 Kubernetes 叢集組態檔並設定叢集內容。
@@ -224,4 +224,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>後續步驟
 
-如需巨量資料叢集的詳細資訊，請參閱[什麼是 SQL Server 巨量資料叢集](big-data-cluster-overview.md)。
+如需有關 big data 叢集的詳細資訊, 請參閱[什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)。

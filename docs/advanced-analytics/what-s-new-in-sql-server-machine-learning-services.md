@@ -1,7 +1,7 @@
 ---
 title: 新功能
 description: SQL Server 2016 R Services、R Server SQL Server Machine Learning 服務的每個版本都有新的功能公告。
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -9,12 +9,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d63aac9c91919a2b4e3296f29e939c8cd09ad76
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f582088359c2878f5dfd84d4b353b1f9d8c369e5
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715298"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652295"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的新功能
 
@@ -32,6 +32,7 @@ ms.locfileid: "68715298"
 
 | 版本 | 功能更新 |
 |---------|----------------|
+| RC 1 | Windows 和 Linux 現在支援[從 Python 或 R 腳本對 SQL Server 的回送連接](connect/loopback-connection.md)。 |
 | CTP 3.2 | 無變更。 |
 | CTP 3.1 | 無變更。 |
 | CTP 3.0 | 無變更。 |

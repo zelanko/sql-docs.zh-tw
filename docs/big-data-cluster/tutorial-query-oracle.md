@@ -1,20 +1,20 @@
 ---
 title: 查詢 Oracle 中的外部資料
 titleSuffix: SQL Server big data clusters
-description: 本教學課程示範如何查詢 SQL Server 2019 巨量資料叢集 (預覽) 中的 Oracle 資料。 您會透過 Oracle 中的資料建立外部資料表，然後執行查詢。
+description: 本教學課程示範如何從[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]查詢 Oracle 資料。 您會透過 Oracle 中的資料建立外部資料表，然後執行查詢。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-ms.date: 12/12/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ebad25ed0532ed6ba96dc803fa8e6dc2538977ae
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957717"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653250"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教學課程：查詢 SQL Server 巨量資料叢集中的 Oracle
 
@@ -67,7 +67,7 @@ ms.locfileid: "67957717"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
-1. 按兩下 [伺服器]  視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]  。
+1. 按兩下 [伺服器] 視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]。
 
    ![SQL Server 主要執行個體查詢](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 

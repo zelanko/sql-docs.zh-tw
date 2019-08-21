@@ -1,26 +1,26 @@
 ---
 title: 查詢存放集區中的 HDFS 資料
 titleSuffix: SQL Server big data clusters
-description: 本教學課程示範如何查詢 SQL Server 2019 巨量資料叢集 (預覽) 中的 HDFS 資料。 您可以透過存放集區中的資料建立外部資料表，然後執行查詢。
+description: 本教學課程示範如何在中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]查詢 HDFS 資料。 您可以透過存放集區中的資料建立外部資料表，然後執行查詢。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957700"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652449"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教學課程：查詢 SQL Server 巨量資料叢集中的 HDFS
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程示範如何查詢 SQL Server 2019 巨量資料叢集 (預覽) 中的 HDFS 資料。
+本教學課程示範如何在中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]查詢 HDFS 資料。
 
 在本教學課程中，您將了解如何：
 
@@ -45,7 +45,7 @@ ms.locfileid: "67957700"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
-1. 按兩下 [伺服器]  視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]  。
+1. 按兩下 [伺服器] 視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]。
 
    ![SQL Server 主要執行個體查詢](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 

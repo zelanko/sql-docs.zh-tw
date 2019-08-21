@@ -5,16 +5,16 @@ description: 了解如何搭配設定檔自訂巨量資料叢集部署。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 02e922ca909cd863d496f9c49a60dd986df8bedb
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969497"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652396"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>針對巨量資料叢集設定部署設定
 
@@ -22,7 +22,7 @@ ms.locfileid: "68969497"
 
 若要自訂您的叢集部署設定檔，您可以使用任何 JSON 格式編輯器，例如 VSCode。 若要針對自動化目的編寫這些編輯的指令碼，請使用 **azdata bdc config** 命令。 此文章說明如何透過修改部署設定檔來設定巨量資料叢集部署。 它會提供如何針對不同案例變更設定的範例。 如需設定檔如何用於部署中的詳細資訊，請參閱[部署指導](deployment-guidance.md#configfile)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [安裝 azdata](deploy-install-azdata.md)。
 
@@ -420,4 +420,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.j
 
 ## <a name="next-steps"></a>後續步驟
 
-如需在巨量資料叢集部署中使用設定檔的詳細資訊，請參閱[如何在 Kubernetes 上部署 SQL Server 巨量資料叢集](deployment-guidance.md#configfile)。
+如需在 big data cluster 部署中使用設定檔的詳細資訊, 請參閱 how [to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile)。

@@ -1,28 +1,31 @@
 ---
 title: 版本資訊
 titleSuffix: SQL Server big data clusters
-description: 此文章說明 SQL Server 2019 巨量資料叢集 (預覽) 的最新更新和已知問題。
+description: 本文說明[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (預覽) 的最新更新和已知問題。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7951c79fa457ffa47a2c2a7089c71256d870628b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476247"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653431"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server 上巨量資料叢集的版本資訊
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-此文章列出最新版 SQL Server 巨量資料叢集的更新和已知問題。
+本文列出最新版本[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的更新和已知問題。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="ctp32"></a> CTP 3.2 (7 月)
 
@@ -32,7 +35,7 @@ ms.locfileid: "68476247"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|公開預覽 |在 CTP 3.2 之前，已將 SQL Server 巨量資料叢集提供給註冊的早期採用者使用。 此版本讓任何人都能體驗 SQL Server 巨量資料叢集的功能。 <br/><br/> 請參閱[開始使用 SQL Server 巨量資料叢集](deploy-get-started.md)。|
+|公開預覽 |在 CTP 3.2 之前，已將 SQL Server 巨量資料叢集提供給註冊的早期採用者使用。 此版本讓任何人都能體驗 SQL Server 巨量資料叢集的功能。 <br/><br/> 請參閱[開始使用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md)。|
 |`azdata` |CTP 3.2 引進了 `azdata`，這是一種以 Python 編寫的命令列公用程式，可讓叢集管理員透過 REST API 啟動程序和管理巨量資料叢集。 `azdata` 取代了 `mssqlctl`。 請參閱[安裝 `azdata`](deploy-install-azdata.md)。 |
 |PolyBase |外部資料表資料行名稱現在可用來查詢 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 資料來源。 在先前的 CTP 版本中，外部資料來源中的資料行只會根據序數位置進行繫結，而不會使用 EXTERNAL TABLE 定義中所指定的名稱。 |
 |HDFS 階層處理重新整理 |針對 HDFS 階層處理引進了重新整理功能，以便能夠針對遠端資料的最新快照集重新整理現有的裝載。 請參閱 [HDFS 階層處理](hdfs-tiering.md) |
@@ -142,9 +145,9 @@ ms.locfileid: "68476247"
 
 - 如果您已經在 Windows 上安裝 Jupyter 和個別的 Python，Spark 筆記本可能會失敗。 若要解決此問題，請將 Jupyter 升級為最新版本。
 
-- 在筆記本中，如果您按一下 [新增文字]  命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
+- 在筆記本中，如果您按一下 [新增文字] 命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>安全性
 
 - SA_PASSWORD 是環境的一部分且可探索 (例如，在核心傾印檔案中)。 您必須在部署之後，於主要執行個體上重設 SA_PASSWORD。 這不是 Bug，而是一個安全性步驟。 如需如何在 Linux 容器中變更 SA_PASSWORD 的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
 
@@ -246,9 +249,9 @@ ms.locfileid: "68476247"
 
 - 如果您已經在 Windows 上安裝 Jupyter 和個別的 Python，Spark 筆記本可能會失敗。 若要解決此問題，請將 Jupyter 升級為最新版本。
 
-- 在筆記本中，如果您按一下 [新增文字]  命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
+- 在筆記本中，如果您按一下 [新增文字] 命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>安全性
 
 - SA_PASSWORD 是環境的一部分且可探索 (例如，在核心傾印檔案中)。 您必須在部署之後，於主要執行個體上重設 SA_PASSWORD。 這不是 Bug，而是一個安全性步驟。 如需如何在 Linux 容器中變更 SA_PASSWORD 的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
 
@@ -324,7 +327,7 @@ ms.locfileid: "68476247"
 
 - 如果您已經在 Windows 上安裝 Jupyter 和個別的 Python，Spark 筆記本可能會失敗。 若要解決此問題，請將 Jupyter 升級為最新版本。
 
-- 在筆記本中，如果您按一下 [新增文字]  命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
+- 在筆記本中，如果您按一下 [新增文字] 命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
 
 #### <a name="hdfs"></a>HDFS
 
@@ -336,7 +339,7 @@ ms.locfileid: "68476247"
 
 - 不支援對 HDFS 所做的設定變更 (包括對 hdfs-site.xml 所做的變更)。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>安全性
 
 - SA_PASSWORD 是環境的一部分且可探索 (例如，在核心傾印檔案中)。 您必須在部署之後，於主要執行個體上重設 SA_PASSWORD。 這不是 Bug，而是一個安全性步驟。 如需如何在 Linux 容器中變更 SA_PASSWORD 的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
 
@@ -353,7 +356,7 @@ ms.locfileid: "68476247"
 | 說明在 Spark 中透過 TensorFlow 執行深度學習時的 GPU 支援。 | [部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow](spark-gpu-tensorflow.md)。 |
 | 預設不會再建立 **SqlDataPool** 和 **SqlStoragePool** 資料來源。 | 視需要手動建立這些資料來源。 請參閱[已知問題](#externaltablesctp24)。 |
 | 資料集區的 `INSERT INTO SELECT` 支援。 | 如需範例，請參閱[教學課程：使用 Transact-SQL 將資料內嵌到 SQL Server 資料集區](tutorial-data-pool-ingest-sql.md)。 |
-| `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 選項。 | 針對外部資料表上的查詢，強制使用或停用計算集區。 例如， `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`。 |
+| `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 選項。 | 針對外部資料表上的查詢，強制使用或停用計算集區。 例如： `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
 | 更新的 AKS 部署建議。 | 評估 AKS 上的巨量資料叢集時，我們現在建議您使用大小為 **Standard_L8s** 的單一節點。 |
 | 將 Spark 執行階段升級至 Spark 2.4。 | |
 
@@ -455,7 +458,7 @@ make: *** [deploy-clean] Error 2
 
 - 如果您已經在 Windows 上安裝 Jupyter 和個別的 Python，Spark 筆記本可能會失敗。 若要解決此問題，請將 Jupyter 升級為最新版本。
 
-- 在筆記本中，如果您按一下 [新增文字]  命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
+- 在筆記本中，如果您按一下 [新增文字] 命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
 
 #### <a name="hdfs"></a>HDFS
 
@@ -467,7 +470,7 @@ make: *** [deploy-clean] Error 2
 
 - 不支援對 HDFS 所做的設定變更 (包括對 hdfs-site.xml 所做的變更)。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>安全性
 
 - SA_PASSWORD 是環境的一部分且可探索 (例如，在核心傾印檔案中)。 您必須在部署之後，於主要執行個體上重設 SA_PASSWORD。 這不是 Bug，而是一個安全性步驟。 如需如何在 Linux 容器中變更 SA_PASSWORD 的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
 
@@ -481,9 +484,9 @@ make: *** [deploy-clean] Error 2
 
 | 新功能或更新 | 詳細資料 |
 | :---------- | :------ |
-| 在 IntelliJ 中於巨量資料叢集上提交 Spark 作業。 | [在 IntelliJ 中於 SQL Server 巨量資料叢集上提交 Spark 作業](spark-submit-job-intellij-tool-plugin.md) |
-| 適用於應用程式部署和叢集管理的一般 CLI。 | [如何在 SQL Server 2019 巨量資料叢集 (預覽) 上部署應用程式](big-data-cluster-create-apps.md) |
-| 用來將應用程式部署到巨量資料叢集的 VS Code 延伸模組。 | [如何使用 VS Code 將應用程式部署到 SQL Server 巨量資料叢集](app-deployment-extension.md) |
+| 在 IntelliJ 中於巨量資料叢集上提交 Spark 作業。 | [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在 IntelliJ 中提交 Spark 作業](spark-submit-job-intellij-tool-plugin.md) |
+| 適用於應用程式部署和叢集管理的一般 CLI。 | [如何在上部署應用程式[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| 用來將應用程式部署到巨量資料叢集的 VS Code 延伸模組。 | [如何使用 VS Code 將應用程式部署至[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | **azdata** 工具命令使用方式的變更。 | 如需詳細資料，請參閱 [azdata 的已知問題](#azdatactp23)。 |
 | 在巨量資料叢集中使用 Sparklyr。 | [在 SQL Server 2019 巨量資料叢集中使用 Sparklyr](sparklyr-from-RStudio.md) |
 | 將外部 HDFS 相容儲存體裝載至具備 **HDFS 階層處理**的巨量資料叢集。 | 請參閱 [HDFS 階層處理](hdfs-tiering.md)。 |
@@ -577,7 +580,7 @@ make: *** [deploy-clean] Error 2
 
 - 如果您已經在 Windows 上安裝 Jupyter 和個別的 Python，Spark 筆記本可能會失敗。 若要解決此問題，請將 Jupyter 升級為最新版本。
 
-- 在筆記本中，如果您按一下 [新增文字]  命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
+- 在筆記本中，如果您按一下 [新增文字] 命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
 
 #### <a name="hdfs"></a>HDFS
 
@@ -589,7 +592,7 @@ make: *** [deploy-clean] Error 2
 
 - 不支援對 HDFS 所做的設定變更 (包括對 hdfs-site.xml 所做的變更)。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>安全性
 
 - SA_PASSWORD 是環境的一部分且可探索 (例如，在核心傾印檔案中)。 您必須在部署之後，於主要執行個體上重設 SA_PASSWORD。 這不是 Bug，而是一個安全性步驟。 如需如何在 Linux 容器中變更 SA_PASSWORD 的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
 
@@ -599,7 +602,7 @@ make: *** [deploy-clean] Error 2
 
 下列各節說明 SQL Server 2019 CTP 2.2 中巨量資料叢集的新功能和已知問題。
 
-### <a name="new-features"></a>新增功能
+### <a name="new-features"></a>新功能
 
 - 使用 `/portal` 存取的叢集管理入口網站 (**https://\<ip-address\>:30777/portal**)。
 - 主要集區服務名稱已從 `service-master-pool-lb` 和 `service-master-pool-nodeport` 變更為 `endpoint-master-pool`。
@@ -646,7 +649,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - 如果您已經在 Windows 上安裝 Jupyter 和個別的 Python，Spark 筆記本可能會失敗。 若要解決此問題，請將 Jupyter 升級為最新版本。
 
-- 在筆記本中，如果您按一下 [新增文字]  命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
+- 在筆記本中，如果您按一下 [新增文字] 命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
 
 #### <a name="hdfs"></a>HDFS
 
@@ -658,7 +661,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - 不支援對 HDFS 所做的設定變更 (包括對 hdfs-site.xml 所做的變更)。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>安全性
 
 - SA_PASSWORD 是環境的一部分且可探索 (例如，在核心傾印檔案中)。 您必須在部署之後，於主要執行個體上重設 SA_PASSWORD。 這不是 Bug，而是一個安全性步驟。 如需如何在 Linux 容器中變更 SA_PASSWORD 的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
 
@@ -668,7 +671,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 下列各節說明 SQL Server 2019 CTP 2.1 中巨量資料叢集的新功能和已知問題。
 
-### <a name="new-features"></a>新增功能
+### <a name="new-features"></a>新功能
 
 - 在巨量資料叢集中[部署 Python 和 R 應用程式](big-data-cluster-create-apps.md)。
 - 新版本的 **azdata** 和更新的映像。 
@@ -676,7 +679,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>已知問題
 
-下列各節提供 CTP 2.1 中 SQL Server 巨量資料叢集的已知問題。
+下列各節提供 CTP 2.1 中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的已知問題。
 
 #### <a name="deployment"></a>部署
 
@@ -692,7 +695,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 #### <a name="admin-portal"></a>管理入口網站
 
-- 當您[使用 msqlctl-ctp 命令建立應用程式](big-data-cluster-create-apps.md)，並將它部署於 SQL Server 巨量資料叢集時，叢集管理入口網站會在「管理部分」的 [控制器] 區段中顯示將應用程式部署為「不明」的 Pod。
+- 當您[建立應用程式使用 msqlctl ctp 命令](big-data-cluster-create-apps.md)並將其部署巨量資料叢集，叢集系統管理員入口網站顯示 pod 已部署應用程式為 「 不明 」 的 Admin 部分的 [控制器] 區段中的 SQL Server 上。
 
 #### <a name="external-tables"></a>外部資料表
 
@@ -710,7 +713,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - 如果您已經在 Windows 上安裝 Jupyter 和個別的 Python，Spark 筆記本可能會失敗。 若要解決此問題，請將 Jupyter 升級為最新版本。
 
-- 在筆記本中，如果您按一下 [新增文字]  命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
+- 在筆記本中，如果您按一下 [新增文字] 命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
 
 #### <a name="hdfs"></a>HDFS
 
@@ -722,7 +725,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - 不支援對 HDFS 所做的設定變更 (包括對 hdfs-site.xml 所做的變更)。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>安全性
 
 - SA_PASSWORD 是環境的一部分且可探索 (例如，在核心傾印檔案中)。 您必須在部署之後，於主要執行個體上重設 SA_PASSWORD。 這不是 Bug，而是一個安全性步驟。 如需如何在 Linux 容器中變更 SA_PASSWORD 的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
 
@@ -732,7 +735,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 下列各節說明 SQL Server 2019 CTP 2.0 中巨量資料叢集的新功能和已知問題。
 
-### <a name="new-features"></a>新增功能
+### <a name="new-features"></a>新功能
 
 - 使用 azdata 管理工具的簡單部署體驗
 - Azure Data Studio 中的原生筆記本體驗
@@ -751,7 +754,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>已知問題
 
-下列各節提供 CTP 2.0 中 SQL Server 巨量資料叢集的已知問題。
+下列各節提供 CTP 2.0 中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的已知問題。
 
 #### <a name="deployment"></a>部署
 
@@ -781,7 +784,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - 如果您已經在 Windows 上安裝 Jupyter 和個別的 Python，Spark 筆記本可能會失敗。 若要解決此問題，請將 Jupyter 升級為最新版本。
 
-- 在筆記本中，如果您按一下 [新增文字]  命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
+- 在筆記本中，如果您按一下 [新增文字] 命令，就會在預覽模式 (而非編輯模式) 中新增文字資料格。 您可以按一下 [預覽] 圖示來切換至編輯模式，並編輯資料格。
 
 #### <a name="hdfs"></a>HDFS
 
@@ -793,7 +796,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - 不支援對 HDFS 所做的設定變更 (包括對 hdfs-site.xml 所做的變更)。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>安全性
 
 - SA_PASSWORD 是環境的一部分且可探索 (例如，在核心傾印檔案中)。 您必須在部署之後，於主要執行個體上重設 SA_PASSWORD。 這不是 Bug，而是一個安全性步驟。 如需如何在 Linux 容器中變更 SA_PASSWORD 的詳細資訊，請參閱[變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。
 
@@ -801,4 +804,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 SQL Server 巨量資料叢集的詳細資訊，請參閱[什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)。
+如需有關[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的詳細資訊, 請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。

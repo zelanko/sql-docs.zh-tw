@@ -1,22 +1,22 @@
 ---
 title: 偵錯/診斷 Spark 應用程式
 titleSuffix: SQL Server big data clusters
-description: 使用 Spark 歷程記錄伺服器來偵錯及診斷在 SQL Server 2019 巨量資料叢集上執行的 Spark 應用程式。
+description: 使用 Spark 歷程記錄伺服器來偵測和診斷上執行的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]spark 應用程式。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: abf6b2b3383377a0647f873a8c4a1f6aa9508455
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028550"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653679"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>在 Spark 歷程記錄伺服器中的 SQL Server 巨量資料叢集上，對 Spark 應用程式進行偵錯和診斷
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>在 spark 歷程記錄伺服器中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] , 對 spark 應用程式進行偵錯工具和診斷
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -203,5 +203,5 @@ Spark 歷程記錄伺服器具有下列已知問題：
 
 ## <a name="next-steps"></a>後續步驟
 
-* [開始使用 SQL Server 巨量資料叢集](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [開始使用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [設定 Spark 設定](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

@@ -5,24 +5,24 @@ description: 使用 RStudio 的 sparklyr 連接到 big data cluster。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 04/08/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: d23ce447f097d092059f7298ca5478ed6c3f19fc
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67728381"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653329"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server big data cluster 中使用 sparklyr
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr 提供 Apache Spark 的 R 介面。 Sparklyr 是讓 R 開發人員使用 Spark 的熱門方式。 本文說明如何在使用 RStudio 的 SQL Server 2019 big data cluster (預覽) 中使用 sparklyr。
+Sparklyr 提供 Apache Spark 的 R 介面。 Sparklyr 是讓 R 開發人員使用 Spark 的熱門方式。 本文說明如何在中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]使用 sparklyr, 並使用 RStudio。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [部署 SQL Server 2019 big data](quickstart-big-data-cluster-deploy.md)叢集。
 
@@ -90,4 +90,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 big data 叢集的詳細資訊, 請參閱[什麼是 SQL Server 2019 big data](big-data-cluster-overview.md)叢集。
+如需有關 big data 叢集的詳細資訊, 請參閱[什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)。

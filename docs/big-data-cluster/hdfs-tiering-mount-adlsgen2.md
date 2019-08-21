@@ -1,20 +1,20 @@
 ---
 title: 掛接 ADLS Gen2 進行 HDFS 階層處理
 titleSuffix: How to mount ADLS Gen2
-description: 本文說明如何設定 HDFS 階層處理，以將外部 Azure Data Lake Storage 檔案系統掛接到 SQL Server 2019 巨量資料叢集 (預覽) 上的 HDFS。
+description: 本文說明如何設定 HDFS 階層處理, 以將外部 Azure Data Lake Storage 檔案系統掛接至上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83922206503b690a7b49c27d4686333bf7b966a1
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742727"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652312"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 ADLS Gen2 以進行 HDFS 階層處理
 
@@ -153,4 +153,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 SQL Server 2019 巨量資料叢集的詳細資訊，請參閱 [SQL Server 2019 巨量資料叢集是什麼](big-data-cluster-overview.md)。
+如需有關[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的詳細資訊, 請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。

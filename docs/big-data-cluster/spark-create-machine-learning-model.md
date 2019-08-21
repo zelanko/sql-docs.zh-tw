@@ -1,22 +1,22 @@
 ---
 title: 使用 MLeap 建立和匯出 Spark 機器學習模型
 titleSuffix: SQL Server big data clusters
-description: 使用 PySpark, 透過 SQL Server big data 叢集 (預覽) 上的 Spark 來定型和建立機器學習模型。 使用 MLeap 匯出, 然後在 SQL Server 中使用 JAVA 為模型評分。
+description: 使用 PySpark 來定型和建立使用 Spark on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (預覽) 的機器學習模型。 使用 MLeap 匯出, 然後在 SQL Server 中使用 JAVA 為模型評分。
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 07/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: bba570a4ac68cf5a4d1405d4152669ed9ed211a0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893961"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653417"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>在 SQL Server big data 叢集上建立、匯出和評分 Spark 機器學習模型
+# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>在上建立、匯出及評分 Spark 機器學習模型[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 下列範例示範如何使用[SPARK ML](https://spark.apache.org/docs/latest/ml-guide.html)建立模型、將模型匯出至[MLeap](http://mleap-docs.combust.ml/), 以及使用[JAVA 語言延伸](../language-extensions/language-extensions-overview.md)模組將模型評分 SQL Server。 這會在 SQL Server 2019 big data 叢集的內容中完成。
 
@@ -24,7 +24,7 @@ ms.locfileid: "68893961"
 
 ![使用 spark 訓練分數匯出](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 這個範例的所有檔案都位於[https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml)。
 
@@ -51,7 +51,7 @@ ms.locfileid: "68893961"
 
    此筆記本包含具有此範例區段之必要命令的儲存格。
 
-1. 在 Azure Data Studio 中開啟筆記本, 然後執行每個程式碼區塊。 如需使用筆記本的詳細資訊, 請參閱[如何在 SQL Server 2019 preview 中使用筆記本](notebooks-guidance.md)。
+1. 在 Azure Data Studio 中開啟筆記本, 然後執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何在 SQL Server 2019 Preview 中使用筆記本](notebooks-guidance.md)。
 
 資料會先讀入 Spark 並分割成定型和測試資料集。 然後, 程式碼會使用定型資料來訓練管線模型。 最後, 它會將模型匯出至 MLeap 組合。
 
@@ -68,4 +68,4 @@ ms.locfileid: "68893961"
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 big data 叢集的詳細資訊, 請參閱[如何在 Kubernetes 上部署 SQL Server big data](deployment-guidance.md)叢集
+如需 big data 叢集的詳細資訊, 請參閱[如何[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在 Kubernetes 上部署](deployment-guidance.md)

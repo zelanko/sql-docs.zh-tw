@@ -1,28 +1,28 @@
 ---
 title: 設定 minikube
 titleSuffix: SQL Server big data clusters
-description: 了解如何在單一電腦上針對 SQL Server 2019 巨量資料叢集 (預覽) 部署設定 minikube。
+description: 瞭解如何在單一電腦上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]設定部署的 minikube。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1991176de132062c46f36f30f4f384e483c069f9
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: b2022fe6ad8a0aa23c4dd7d917e925ae1daba572
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969417"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652409"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>針對 SQL Server 巨量資料叢集部署設定 minikube
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文描述如何在單一電腦上針對 SQL Server 2019 巨量資料叢集 (預覽) 部署設定 **minikube**。 Minikube 是可讓您在單一電腦 (例如膝上型電腦或桌上型電腦) 上輕鬆執行 Kubernetes 的工具。 Minikube 會在您膝上型電腦的 VM 中，為想要試用 Kubernetes 或每天使用它進行開發的使用者，執行單一節點的 Kubernetes 叢集。 
+本文說明如何在單一電腦上設定**minikube**以進行[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署。 Minikube 是可讓您在單一電腦 (例如膝上型電腦或桌上型電腦) 上輕鬆執行 Kubernetes 的工具。 Minikube 會在您膝上型電腦的 VM 中，為想要試用 Kubernetes 或每天使用它進行開發的使用者，執行單一節點的 Kubernetes 叢集。 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 64 GB 的記憶體。
 
@@ -41,7 +41,7 @@ ms.locfileid: "68969417"
 
 ## <a name="install-minikube"></a>安裝 minikube
 
-根據[1.3.0 版本](https://github.com/kubernetes/minikube/releases/tag/v1.3.0)的指示安裝 minikube 版本。 SQL Server 2019 big data cluster (預覽) 僅適用于1.0.0 版和更新版本。
+根據[1.3.0 版本](https://github.com/kubernetes/minikube/releases/tag/v1.3.0)的指示安裝 minikube 版本。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]僅適用于1.0.0 版和更新版本。
 
 ## <a name="create-a-minikube-cluster"></a>建立 minikube 叢集
 
@@ -71,4 +71,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 本文中的步驟設定了 minikube 叢集。 下一個步驟是部署 SQL Server 2019 巨量資料叢集。 如需指示，請參閱下列文章：
 
-[在 Kubernetes 上部署 SQL Server 2019 巨量資料叢集](deployment-guidance.md#deploy)
+[在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Kubernetes 上部署](deployment-guidance.md#deploy)

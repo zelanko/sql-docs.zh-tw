@@ -1,26 +1,26 @@
 ---
 title: 使用 Spark 作業內嵌資料
 titleSuffix: SQL Server big data clusters
-description: 本教學課程示範如何使用 Azure Data Studio 中的 Spark 作業，將資料內嵌至 SQL Server 2019 巨量資料叢集 (預覽) 的資料集區。
+description: 本教學課程示範如何[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]使用 Azure Data Studio 中的 Spark 作業, 將資料內嵌到的資料集區。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957819"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653292"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：使用 Spark 作業將資料內嵌至 SQL Server 資料集區
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程示範如何使用 Spark 作業，將資料載入 SQL Server 2019 巨量資料叢集 (預覽) 的[資料集區](concept-data-pool.md)。 
+本教學課程示範如何使用 Spark 作業, 將資料載入的[資料集](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]區。 
 
 在本教學課程中，您將了解如何：
 
@@ -46,7 +46,7 @@ ms.locfileid: "67957819"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
-1. 按兩下 [伺服器]  視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]  。
+1. 按兩下 [伺服器] 視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]。
 
    ![SQL Server 主要執行個體查詢](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
@@ -81,21 +81,21 @@ ms.locfileid: "67957819"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的主要執行個體。 如需詳細資訊，請參閱[連線到巨量資料叢集](connect-to-big-data-cluster.md)。
 
-1. 按兩下 [伺服器]  視窗中的 HDFS/Spark 閘道連線。 然後選取 [New Spark Job] \(新增 Spark 作業\)  。
+1. 按兩下 [伺服器] 視窗中的 HDFS/Spark 閘道連線。 然後選取 [New Spark Job] \(新增 Spark 作業\)。
 
    ![新增 Spark 作業](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
 
-1. 在 [新增作業]  視窗的 [作業名稱]  欄位中，輸入名稱。
+1. 在 [新增作業] 視窗的 [作業名稱] 欄位中，輸入名稱。
 
-1. 在 [Jar/py File] \(Jar/py 檔案\)  下拉式清單中，選取 [HDFS]  。 然後輸入下列 jar 檔案路徑：
+1. 在 [Jar/py File] \(Jar/py 檔案\) 下拉式清單中，選取 [HDFS]。 然後輸入下列 jar 檔案路徑：
 
    ```text
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
-1. 在 [主要類別]  欄位中，輸入 `FileStreaming`。
+1. 在 [主要類別] 欄位中，輸入 `FileStreaming`。
 
-1. 在 [引數]  欄位中，輸入下列文字，並在 `<your_password>` 預留位置中指定 SQL Server 主要執行個體的密碼。 
+1. 在 [引數] 欄位中，輸入下列文字，並在 `<your_password>` 預留位置中指定 SQL Server 主要執行個體的密碼。 
 
    ```text
    --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
@@ -103,12 +103,12 @@ ms.locfileid: "67957819"
 
    下表描述每一個引數：
 
-   | 引數 | Description |
+   | 引數 | 描述 |
    |---|---|
    | 伺服器名稱 (server name) | 用於讀取資料表結構描述的 SQL Server |
    | 連接埠編號 | SQL Server 正在接聽的連接埠 (預設值 1433) |
    | username | SQL Server 登入使用者名稱 |
-   | 密碼 | SQL Server 登入密碼 |
+   | password | SQL Server 登入密碼 |
    | 資料庫名稱 | 目標資料庫 |
    | 外部資料表名稱 | 用於表示結果的資料表 |
    | 串流的來源目錄 | 這必須是完整的 URI，例如 "hdfs:///clickstream_data" |
@@ -116,7 +116,7 @@ ms.locfileid: "67957819"
    | 啟用檢查點 | true 或 false |
    | timeout | 結束前可執行作業的時間 (以毫秒為單位) |
 
-1. 按下 [提交]  ，提交作業。
+1. 按下 [提交]，提交作業。
 
    ![Spark 作業提交](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
 

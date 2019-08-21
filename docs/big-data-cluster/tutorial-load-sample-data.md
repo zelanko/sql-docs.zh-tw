@@ -5,25 +5,25 @@ description: 本教學課程示範如何將範例資料載入 SQL Server 巨量�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621670"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653280"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 巨量資料叢集
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程說明如何使用指令碼將範例資料載入 SQL Server 2019 巨量資料叢集 (預覽)。 文件中的許多其他教學課程都使用此範例資料。
+本教學課程說明如何使用腳本, 將範例資料載入中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 文件中的許多其他教學課程都使用此範例資料。
 
 > [!TIP]
-> 您可以在 [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 存放庫中找到 SQL Server 2019 巨量資料叢集 (預覽) 的其他範例。 這些範例位於 **sql-server-samples/samples/features/sql-big-data-cluster/** 路徑中。
+> 您可以[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]在[sql server 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)GitHub 存放庫中找到的其他範例。 這些範例位於 **sql-server-samples/samples/features/sql-big-data-cluster/** 路徑中。
 
 ## <a name="prerequisites"></a>必要條件
 

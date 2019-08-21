@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715208"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634554"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 實例中的機器學習 (R 和 Python) 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -239,7 +239,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>步驟 1：解除系結
+### <a name="step-1-unbind"></a>步驟 1:解除系結
 
 您有兩個復原系結的選項: 重新執行安裝程式, 或使用 SqlBindR 命令列公用程式。
 
@@ -264,7 +264,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>步驟 2：修復 SQL Server 實例
+###  <a name="step-2-repair-the-sql-server-instance"></a>步驟 2:修復 SQL Server 實例
 
 執行 SQL Server 安裝程式, 以修復具有 R 和 Python 功能的 database engine 實例。 系統會保留現有的更新, 但如果您錯過 R 和 Python 套件的任何 SQL Server 服務更新, 此步驟會套用這些修補程式。
 
@@ -274,7 +274,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ### <a name="step-3-add-any-third-party-packages"></a>步驟 3：新增任何協力廠商套件
 
-您可能已將其他開放原始碼或協力廠商套件新增至您的套件程式庫。 由於反轉系結會切換預設封裝程式庫的位置, 因此您必須將套件重新安裝至 R 和 Python 現在使用的程式庫。 如需詳細資訊, 請參閱[預設封裝](../package-management/default-packages.md)、[安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)和[安裝新的 Python 套件](../python/install-additional-python-packages-on-sql-server.md)。
+您可能已將其他開放原始碼或協力廠商套件新增至您的套件程式庫。 由於反轉系結會切換預設封裝程式庫的位置, 因此您必須將套件重新安裝至 R 和 Python 現在使用的程式庫。 如需詳細資訊, 請參閱[R 封裝資訊](../package-management/r-package-information.md)和[安裝](../package-management/install-additional-r-packages-on-sql-server.md), 以及[Python 套件資訊](../package-management/python-package-information.md)和[安裝](../package-management/install-additional-python-packages-on-sql-server.md)。
 
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR .exe 命令語法
 
@@ -284,7 +284,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ### <a name="parameters"></a>參數
 
-|名稱|描述|
+|Name|描述|
 |------|------|
 |*list*| 顯示目前電腦上所有 SQL 資料庫執行個體識別碼的清單|
 |*bind*| 將指定的 SQL 資料庫執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|

@@ -1,26 +1,26 @@
 ---
 title: 設定 HDFS 階層處理
 titleSuffix: SQL Server big data clusters
-description: 本文說明如何設定 HDFS 階層處理，以將外部 Azure Data Lake Storage 檔案系統掛接到 SQL Server 2019 巨量資料叢集 (預覽) 上的 HDFS。
+description: 本文說明如何設定 HDFS 階層處理, 以將外部 Azure Data Lake Storage 檔案系統掛接至上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419383"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652320"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>在 SQL Server 巨量資料叢集上設定 HDFS 階層處理
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>設定 HDFS 分層[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS 階層處理提供在 HDFS 中掛接外部、HDFS 相容檔案系統的功能。 本文說明如何為 SQL Server 2019 巨量資料叢集 (預覽) 設定 HDFS 階層處理。 目前，我們支援連線至 Azure Data Lake Storage Gen2 和 Amazon S3。 
+HDFS 階層處理提供在 HDFS 中掛接外部、HDFS 相容檔案系統的功能。 本文說明如何為[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (預覽) 設定 HDFS 分層。 目前，我們支援連線至 Azure Data Lake Storage Gen2 和 Amazon S3。 
 
 ## <a name="hdfs-tiering-overview"></a>HDFS 階層處理概觀
 
@@ -38,7 +38,7 @@ HDFS 階層處理提供在 HDFS 中掛接外部、HDFS 相容檔案系統的功�
 
 HDFS 階層處理支援重新整理。 針對遠端資料的最新快照集重新整理現有掛接。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - [部署巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)
@@ -52,9 +52,9 @@ HDFS 階層處理支援重新整理。 針對遠端資料的最新快照集重�
 - [如何在巨量資料叢集中掛接 ADLS Gen2 以進行 HDFS 階層處理](hdfs-tiering-mount-adlsgen2.md)
 - [如何在巨量資料叢集中掛接 S3 以進行 HDFS 階層處理](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> 已知問題和限制
+## <a id="issues"></a>已知問題與限制
 
-下列清單提供在 SQL Server 巨量資料叢集中使用 HDFS 階層處理時的已知問題和目前限制：
+下列清單提供在中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]使用 HDFS 分層時的已知問題和目前的限制:
 
 - 如果掛接長時間停滯在 `CREATING` 狀態中，則可能已失敗。 在此情況下，請取消命令並視需要刪除掛接。 請先確認您的參數和認證是否正確再重試。
 
@@ -76,4 +76,4 @@ HDFS 階層處理支援重新整理。 針對遠端資料的最新快照集重�
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 SQL Server 2019 巨量資料叢集的詳細資訊，請參閱 [SQL Server 2019 巨量資料叢集是什麼](big-data-cluster-overview.md)。
+如需有關[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的詳細資訊, 請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。

@@ -1,20 +1,20 @@
 ---
 title: 控制器是什麼？
 titleSuffix: SQL Server big data clusters
-description: 本文描述 SQL Server 2019 巨量資料叢集 (預覽) 的控制器。
+description: 本文說明的控制器[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e984c3dced4bde713ac98d67c22481e54491cd68
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 643cb2b4e252e1818940bda2be54917c23cefe06
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419542"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652280"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集上的控制器？
 
@@ -36,13 +36,13 @@ ms.locfileid: "68419542"
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服務
 
-控制器會部署並裝載在客戶想要建立巨量資料叢集的相同 Kubernetes 命名空間中。 這項服務是由 Kubernetes 系統管理員在叢集啟動程序期間使用 **azdata** 命令列公用程式來安裝。 如需詳細資訊，請參閱[開始使用 SQL Server 巨量資料叢集](deploy-get-started.md)。
+控制器會部署並裝載在客戶想要建立巨量資料叢集的相同 Kubernetes 命名空間中。 這項服務是由 Kubernetes 系統管理員在叢集啟動程序期間使用 **azdata** 命令列公用程式來安裝。 如需詳細資訊, 請參閱[開始[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]使用](deploy-get-started.md)。
 
 增建工作流程會在 Kubernetes 功能齊全的 SQL Server 巨量資料叢集之上進行配置，其中包含[概觀](big-data-cluster-overview.md)一文中所述的所有元件。 啟動程序工作流程會先建立控制器服務，在完成部署之後，控制器服務會協調主要、計算、資料和存放集區中其餘服務部分的安裝與設定。
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>透過控制器服務管理叢集
 
-您可以使用任一 **azdata** 命令來透過控制器服務管理叢集。 如果您將其他 Kubernetes 物件 (例如 Pod) 部署至相同的命名空間，控制器服務就不會管理或監視它們。 您也可以使用 **kubectl** 命令來管理 Kubernetes 層級的叢集。 如需詳細資訊，請參閱[監視 SQL Server 巨量資料叢集並進行疑難排解](cluster-troubleshooting-commands.md)。
+您可以使用任一 **azdata** 命令來透過控制器服務管理叢集。 如果您將其他 Kubernetes 物件 (例如 Pod) 部署至相同的命名空間，控制器服務就不會管理或監視它們。 您也可以使用 **kubectl** 命令來管理 Kubernetes 層級的叢集。 如需詳細資訊, 請參閱[監視[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]和疑難排解](cluster-troubleshooting-commands.md)。
 
 針對巨量資料叢集建立的控制器和 Kubernetes 物件 (具狀態集合、Pod、祕密等) 都位於專用的 Kubernetes 命名空間。 控制器服務將由 Kubernetes 叢集管理員授與，以管理該命名空間內的所有資源。  此案例的 RBAC 原則會在使用 **azdata** 進行初始叢集部署的過程中自動設定。
 
@@ -61,7 +61,7 @@ ms.locfileid: "68419542"
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解 SQL Server 巨量資料叢集，請參閱下列資源：
+若要深入瞭解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], 請參閱下列資源:
 
-- [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
-- [工作坊：Microsoft SQL Server 巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

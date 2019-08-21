@@ -1,20 +1,20 @@
 ---
 title: 使用 Bash 指令碼部署至單一節點 kubeadm 叢集
 titleSuffix: SQL Server big data clusters
-description: 使用 Bash 部署指令碼，將 SQL Server 2019 巨量資料叢集 (預覽) 部署至單一節點 kubeadm 叢集。
+description: 使用 bash 部署腳本, 將部署[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]至單一節點 kubeadm 叢集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 09f1d487e82f1e57762a0949f20bf9d43e40abfc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715888"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652348"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>使用 Bash 指令碼部署至單一節點 kubeadm 叢集
 
@@ -22,7 +22,7 @@ ms.locfileid: "68715888"
 
 在本教學課程中，您會使用範例 Bash 部署指令碼，利用 kubeadm 和 SQL Server 巨量資料叢集來部署單一節點 Kubernetes 叢集。  
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - Vanilla Ubuntu 18.04 或 16.04**伺服器**虛擬或實體機器。 所有相依性都由指令碼設定，您可以從 VM 內執行指令碼。
 

@@ -1,26 +1,26 @@
 ---
 title: 安裝巨量資料工具
 titleSuffix: SQL Server big data clusters
-description: 了解如何安裝搭配 SQL Server 2019 巨量資料叢集 (預覽) 來使用的工具。
+description: 瞭解如何安裝搭配 (預覽) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]使用的工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 757209ff89fd40dcc737b65d3b19f2a7d4ef247b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f30b3b2e3c8503d2ac74ede8c1a45114a6b1d555
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419462"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653402"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-此文章說明您必須安裝的用戶端工具，以使用它來建立、管理和使用 SQL Server 2019 巨量資料叢集 (預覽)。 下列小節提供工具和安裝指示連結的清單。 在部署巨量資料叢集之前，請先設定標示為在 Windows 或 Linux 上是必要的工具。
+本文說明應該安裝來建立、管理和使用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (預覽) 的用戶端工具。 下列小節提供工具和安裝指示連結的清單。 在部署巨量資料叢集之前，請先設定標示為在 Windows 或 Linux 上是必要的工具。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "68419462"
 
 下表列出常見的巨量資料叢集工具和其安裝方式：
 
-| 工具 | 必要項 | Description | 安裝 |
+| 工具 | 必要項 | 描述 | 安裝 |
 |---|---|---|---|
 | **python** | 是 | Python 是具有動態語意的直譯物件導向高階程式設計語言。 SQL Server 巨量資料叢集的許多部分都使用 python。 | [安裝 python](#python)|
 | **azdata** | 是 | 用於安裝和管理巨量資料叢集的命令列工具。 | [安裝](deploy-install-azdata.md) |
@@ -36,7 +36,7 @@ ms.locfileid: "68419462"
 | **Azure Data Studio (測試人員)** | 是 | 用於查詢 SQL Server 的跨平台圖形化工具 ([詳細資訊](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15) \(部分機器翻譯\))。 | [安裝](https://aka.ms/azdata-insiders) |
 | **SQL Server 2019 擴充功能** | 是 | 支援連線至巨量資料叢集的 Azure Data Studio 擴充功能。 也提供資料虛擬化精靈。 | [安裝](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | 對於 AKS | 用於管理 Azure 服務的新式命令列介面。 與 AKS 巨量資料叢集部署搭配使用 ([詳細資訊](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安裝](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
-| **mssql-cli** | 選擇性 | 用於查詢 SQL Server 的新式命令列介面 ([詳細資訊](https://github.com/dbcli/mssql-cli/blob/master/README.rst) \(英文\))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \(英文\) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) \(英文\) |
+| **mssql-cli** | 選擇性 | 用於查詢 SQL Server 的新式命令列介面 ([詳細資訊](https://github.com/dbcli/mssql-cli/blob/master/README.rst) \(英文\))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | 對於某些指令碼 | 用於查詢 SQL Server 的舊版命令列工具 ([詳細資訊](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15) \(部分機器翻譯\))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | 對於某些指令碼 | 使用 URL 傳送資料的命令列工具。 | [Windows](https://curl.haxx.se/windows/) \(英文\) \| Linux：安裝 curl 套件 |
 
@@ -74,7 +74,7 @@ ms.locfileid: "68419462"
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |
    | OSX     | [https://go.microsoft.com/fwlink/?linkid=2065976](https://go.microsoft.com/fwlink/?linkid=2065976) |
 
-1. 將壓縮檔案複製到目標機器，並將它解壓縮至您選擇的資料夾。
+1. 將壓縮檔案複製到目標機器，並將其解壓縮至您選擇的資料夾。
 
 1. (僅針對 Windows) 在該資料夾中執行 `installLocalPythonPackages.bat`，並將相同資料夾的完整路徑傳遞為參數。
 
@@ -87,6 +87,6 @@ ms.locfileid: "68419462"
 設定工具之後，將 SQL Server 2019 巨量資料叢集部署到在雲端或內部部署的 Kubernetes。 如需詳細資訊，請參閱下列部署文章：
 
 - [快速入門：在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
-- [如何在 Kubernetes 上部署 SQL Server 巨量資料叢集](deployment-guidance.md)
+- [如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署](deployment-guidance.md)
 
-如需巨量資料叢集的詳細資訊，請參閱[什麼是 SQL Server 2019 巨量資料叢集](big-data-cluster-overview.md)。
+如需有關 big data 叢集的詳細資訊, 請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。
