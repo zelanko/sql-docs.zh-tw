@@ -24,12 +24,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68045935"
 ---
-# <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
+# <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   確認已正確設定資料庫的抽取式媒體散發作業，並向使用者報告任何問題。  
   
-> **重要！！** [!包含[Ssnotedepfutureavoid&lt](../../t-sql/statements/create-database-sql-server-transact-sql.md)改。  
+> **重要！！** [!包含[Ssnotedepfutureavoid&lt](../../t-sql/statements/create-database-sql-server-transact-sql.md) 改。  
   
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
