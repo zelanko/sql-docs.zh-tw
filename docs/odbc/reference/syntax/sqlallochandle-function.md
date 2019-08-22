@@ -77,20 +77,20 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>環境控制碼配置錯誤  
  環境配置會同時在驅動程式管理員和每個驅動程式內發生。 **SQLAllocHandle**傳回*HandleType*為 SQL_HANDLE_ENV 的錯誤取決於發生錯誤的層級。  
   
- 如果在呼叫*HandleType*為 SQL_HANDLE_ENV 的**SQLAllocHandle**時, 驅動程式管理員無法為 *\*OutputHandlePtr*配置記憶體, 或應用程式為*OutputHandlePtr*提供 null 指標, **SQLAllocHandle**會傳回 SQL_ERROR。 驅動程式管理員會將 **OutputHandlePtr*設定為 SQL_Null_HENV (除非應用程式提供了 Null 指標, 這會傳回 SQL_ERROR)。 沒有用來與其他診斷資訊產生關聯的控制碼。  
+ 如果在呼叫*HandleType*為 SQL_HANDLE_ENV 的**SQLAllocHandle**時, 驅動程式管理員無法為 *\*OutputHandlePtr*配置記憶體, 或應用程式為*OutputHandlePtr*提供 null 指標, **SQLAllocHandle**會傳回 SQL_ERROR。 驅動程式管理員會將 *OutputHandlePtr*設定為 SQL_Null_HENV (除非應用程式提供了 Null 指標, 這會傳回 SQL_ERROR)。 沒有用來與其他診斷資訊產生關聯的控制碼。  
   
  在應用程式呼叫**SQLConnect**、 **SQLBrowseConnect**或**SQLDriverConnect**之前, 驅動程式管理員不會呼叫驅動層級的環境控制碼配置函式。 如果驅動程式層級的**SQLAllocHandle**函式中發生錯誤, 驅動程式管理員層級的**SQLConnect**、 **SQLBrowseConnect**或**SQLDriverConnect**函數會傳回 SQL_ERROR。 診斷資料結構包含 SQLSTATE IM004 (驅動程式的**SQLAllocHandle**失敗)。 此錯誤會在連接控制碼上傳回。  
   
  如需驅動程式管理員和驅動程式之間的函式呼叫流程的詳細資訊, 請參閱[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)函式。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLAllocHandle**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時, 可以藉由呼叫**SQLGetDiagRec**並將適當的*HandleType*和*Handle*設定為 InputHandle 的值, 來取得相關聯的 SQLSTATE 值。  . 可以針對*OutputHandle*引數傳回 SQL_SUCCESS_WITH_INFO (但不是 SQL_ERROR)。 下表列出通常由**SQLAllocHandle**所傳回的 SQLSTATE 值, 並在此函式的內容中說明每一個值;「(DM)」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明, 否則, 與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
+ 當**SQLAllocHandle**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時, 可以藉由呼叫**SQLGetDiagRec**並將適當的*HandleType*和*Handle*設定為 InputHandle 的值, 來取得相關聯的 SQLSTATE 值。. 可以針對*OutputHandle*引數傳回 SQL_SUCCESS_WITH_INFO (但不是 SQL_ERROR)。 下表列出通常由**SQLAllocHandle**所傳回的 SQLSTATE 值, 並在此函式的內容中說明每一個值;「(DM)」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明, 否則, 與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
   
 |SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驅動程式特定的參考用訊息。 (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
 |08003|連接未開啟|(DM) *HandleType*引數為 HANDLETYPE 來或 SQL_HANDLE_DESC, 但*InputHandle*引數所指定的連接未開啟。 連接程式必須成功完成 (而且必須開啟連接), 驅動程式才能配置語句或描述項控制碼。|  
-|HY000|一般錯誤|發生錯誤, 但沒有任何特定 SQLSTATE, 且未定義任何執行特定的 SQLSTATE。 **MessageText*緩衝區中的**SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。|  
+|HY000|一般錯誤|發生錯誤, 但沒有任何特定 SQLSTATE, 且未定義任何執行特定的 SQLSTATE。 *MessageText*緩衝區中的 **SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。|  
 |HY001|記憶體配置錯誤|(DM) 驅動程式管理員無法為指定的控制碼配置記憶體。<br /><br /> 驅動程式無法為指定的控制碼配置記憶體。|  
 |HY009|Null 指標的使用不正確|(DM) *OutputHandlePtr*引數為 null 指標。|  
 |HY010|函數順序錯誤|(DM) *HandleType*引數是 SQL_HANDLE_DBC, 而且尚未呼叫**SQLSETEN加值稅TR**來設定 SQL_ODBC_VERSION 環境屬性。<br /><br /> (DM) 已針對**InputHandle**呼叫非同步執行的函式, 而且當呼叫**SQLAllocHandle**函數時, 如果**HANDLETYPE**設定為 handletype 來或 SQL_HANDLE_DESC, 仍在執行中。|  
@@ -129,7 +129,7 @@ SQLRETURN SQLAllocHandle(
   
  若要要求環境控制碼, 應用程式會呼叫*HandleType*為 SQL_HANDLE_ENV 且*InputHandle*為 SQL_Null_HANDLE 的**SQLAllocHandle** 。 驅動程式會為環境資訊配置記憶體, 並將相關聯的控制碼值傳遞回 *\*OutputHandlePtr*引數中。 應用程式會在所有需要環境控制碼引數的後續呼叫中傳遞 *\*OutputHandle*值。 如需詳細資訊, 請參閱配置[環境控制碼](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)。  
   
- 在驅動程式管理員的環境控制碼之下, 如果已有驅動程式的環境控制碼, 則在建立連線時, 不會在該驅動程式中呼叫具有 SQL_HANDLE_ENV *HandleType*的**SQLAllocHandle** , 只會**SQLAllocHandle***HandleType*為 SQL_HANDLE_DBC。 驅動程式管理員的環境控制碼若驅動程式的環境控制碼不存在, 則會在第一次連線時于驅動程式中呼叫具有 HandleType SQL_HANDLE_ENV 和 SQLAllocHandle HandleType SQL_HANDLE_DBC 的 SQLAllocHandle環境的控制碼已連接到驅動程式。  
+ 在驅動程式管理員的環境控制碼之下, 如果已有驅動程式的環境控制碼, 則在建立連線時, 不會在該驅動程式中呼叫具有 SQL_HANDLE_ENV *HandleType*的**SQLAllocHandle** , 只會**SQLAllocHandle** *HandleType*為 SQL_HANDLE_DBC。 驅動程式管理員的環境控制碼若驅動程式的環境控制碼不存在, 則會在第一次連線時于驅動程式中呼叫具有 HandleType SQL_HANDLE_ENV 和 SQLAllocHandle HandleType SQL_HANDLE_DBC 的 SQLAllocHandle環境的控制碼已連接到驅動程式。  
   
  當驅動程式管理員以 SQL_HANDLE_ENV 的*HandleType*處理**SQLAllocHandle**函數時, 它會檢查系統資訊 [ODBC] 區段中的**Trace**關鍵字。 如果設定為 1, 驅動程式管理員就會啟用目前應用程式的追蹤。 如果已設定追蹤旗標, 則會在配置第一個環境控制碼時開始追蹤, 並在最後一個環境控制碼釋放時結束。 如需詳細資訊, 請參閱設定[資料來源](../../../odbc/reference/install/configuring-data-sources.md)。  
   
