@@ -10376,17 +10376,8 @@
             - name: 容器的高可用性
               href: linux/sql-server-linux-container-ha-overview.md
               items:
-                - name: SQL Server 容器的 Always On 可用性群組
-                  href: linux/sql-server-ag-kubernetes.md
-                  items:
-                    - name: 部署
-                      href: linux/sql-server-linux-kubernetes-deploy.md
-                    - name: 管理
-                      href: linux/sql-server-linux-kubernetes-manage.md
-                    - name: 連線
-                      href: linux/sql-server-linux-kubernetes-connect.md
-                    - name: 建立部署指令碼
-                      href: linux/sql-server-linux-kubernetes-create-deployment.md
+                - name: 在 Kubernetes 中設定容器
+                  href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Security
           href: linux/sql-server-linux-security-overview.md
           items:

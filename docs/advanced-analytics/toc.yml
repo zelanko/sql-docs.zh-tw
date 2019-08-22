@@ -183,6 +183,8 @@
   items:
     - name: 連線
       items:
+        - name: Loopback 連線
+          href: ../advanced-analytics/connect/loopback-connection.md
         - name: 從 R 連線至 OLAP
           items:
             - name: 在 R 中使用 OLAP Cube 的資料
@@ -225,34 +227,22 @@
           href: ../advanced-analytics/sql-native-scoring.md
     - name: 套件管理
       items:
-        - name: 預設套件
-          href: ../advanced-analytics/package-management/default-packages.md
-        - name: 取得套件資訊
-          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: 安裝新的 Python 套件
+          items:
+            - name: 取得 Python 套件資訊
+              href: ../advanced-analytics/package-management/python-package-information.md
+            - name: 安裝 Python 套件
+              href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
         - name: 安裝新的 R 套件
           items:
+            - name: 取得 Python 資訊
+              href: ../advanced-analytics/package-management/r-package-information.md
             - name: 安裝 R 套件
-              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-            - name: 使用 T-SQL
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: 使用套件管理員
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: 使用 RevoScaleR
-              items:
-                - name: 使用 RevoScaleR 安裝
-                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-                - name: 啟用遠端 R 套件管理
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: 同步 R 套件
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+              href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
             - name: 建立 miniCRAN 存放庫
               href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
             - name: 使用 R 套件的祕訣
               href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: 安裝新的 Python 套件
-          items:
-            - name: 使用套件管理員
-              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: 系統管理
       items:
         - name: 管理整合
