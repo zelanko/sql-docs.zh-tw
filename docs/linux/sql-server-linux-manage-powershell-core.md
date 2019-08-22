@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952530"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028718"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>使用 PowerShell Core 管理 Linux 上的 SQL Server
 
@@ -54,13 +54,13 @@ pwsh
 
 SQL Server 提供名為 **SqlServer** 的 PowerShell 模組。 您可以使用 **SqlServer** 模組，將 SQL Server 元件 (SQL Server 提供者和 Cmdlet) 匯入 PowerShell 環境或指令碼中。
 
-在 PowerShell 提示字元中複製並貼上下列命令，以將 **SqlServer** 模組匯入到目前的 PowerShell 工作階段：
+在 PowerShell 提示字元中複製並貼上下列命令，將 **SqlServer** 模組匯入到目前的 PowerShell 工作階段：
 
 ```powershell
 Import-Module SqlServer
 ```
 
-在 PowerShell 提示字元中輸入下列命令，以確認 **SqlServer** 模組已正確匯入：
+在 PowerShell 提示字元中鍵入下列命令，確認 **SqlServer** 模組已正確匯入：
 
 ```powershell
 Get-Module -Name SqlServer
@@ -81,7 +81,7 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 在 PowerShell 提示字元中複製並貼上下列命令。 當您執行這些命令時，PowerShell 將會：
 - 顯示對話方塊，提示您輸入執行個體的主機名稱或 IP 位址
 - 顯示 [PowerShell 認證要求]  對話方塊，它會提示您輸入認證。 您可以使用「SQL 使用者名稱」  和「SQL 密碼」  連線至 Linux 上的 SQL Server 執行個體
-- 使用 **Get-SqlInstance** Cmdlet 來連線至**伺服器**，並顯示一些屬性
+- 使用 **Get-SqlInstance** Cmdlet 連線到**伺服器**，並顯示一些屬性
 
 (選擇性) 您可以將 `$serverInstance` 變數取代為您 SQL Server 執行個體的 IP 位址或主機名稱。
 
@@ -108,7 +108,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>使用 SQL Server PowerShell 提供者
 
-連線至 SQL Server 執行個體的另一個選項是使用 [SQL Server PowerShell 提供者](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)。  使用提供者可讓您瀏覽 SQL Server 執行個體，如同您在 [物件總管] 中瀏覽樹狀結構一樣，但是在 cmdline 上。  根據預設，此提供者會顯示為名為 `SQLSERVER:\` 的 PSDrive，您可以用來連線與瀏覽您的網域帳戶可存取的SQL Server 執行個體。  如需如何對 Linux 上的 SQL Server 設定 Active Directory 驗證的詳細資訊，請參閱[設定步驟](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) \(部分機器翻譯\)。
+連線至 SQL Server 執行個體的另一個選項是使用 [SQL Server PowerShell 提供者](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)。  使用提供者可讓您瀏覽 SQL Server 執行個體，如同您在 [物件總管] 中瀏覽樹狀結構一樣，但是在 cmdline 上。  根據預設，此提供者會顯示為名為 `SQLSERVER:\` 的 PSDrive，您可以用來連線與瀏覽您的網域帳戶可存取的SQL Server 執行個體。  如需如何對 Linux 上的 SQL Server 設定 Active Directory 驗證的詳細資訊，請參閱 [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) (設定步驟)。
 
 您也可以搭配 SQL Server PowerShell 提供者使用 SQL 驗證。 若要這麼做，請使用 `New-PSDrive` Cmdlet 來建立新的 PSDrive，並提供適當的認證來進行連線。
 
@@ -126,7 +126,7 @@ New-PSDrive -Name SQLonDocker -PSProvider SqlServer -Root 'SQLSERVER:\SQL\localh
 Get-PSDrive
 ```
 
-建立新的 PSDrive 之後，您就可以開始瀏覽。
+建立新的 PSDrive 之後，您就可以開始巡覽。
 
 ```powershell
 dir SQLonDocker:\Databases
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>探索 PS Core 中目前可用的 Cmdlet
-雖然 SqlServer 模組目前在 Windows PowerShell 中有 106 個 Cmdlet，但 PSCore 只提供 106 個其中的 59 個。 以下包含目前可用的 59 個 Cmdlet 完整清單。  如需 SqlServer 模組中所有 Cmdlet 的深入文件，請參閱 SqlServer [Cmdlet 參考](https://docs.microsoft.com/powershell/module/sqlserver/) \(英文\)。
+雖然 SqlServer 模組目前在 Windows PowerShell 中有 109 個 Cmdlet，但 PSCore 只提供 109 個中的 62 個。 以下包含目前可用的 59 個 Cmdlet 完整清單。  如需 SqlServer 模組中所有 Cmdlet 的深入文件，請參閱 SqlServer [Cmdlet 參考](https://docs.microsoft.com/powershell/module/sqlserver/) \(英文\)。
 
 下列命令會顯示您所使用的 PowerShell 版本上所有可用的 Cmdlet。
 
@@ -216,6 +216,8 @@ SELECT Name
 - Get-SqlAgentJobSchedule
 - Get-SqlAgentJobStep
 - Get-SqlAgentSchedule
+- Invoke-SqlAssessment
+- Get-SqlAssessmentItem
 - Remove-SqlAvailabilityDatabase
 - Resume-SqlAvailabilityDatabase
 - Add-SqlAvailabilityDatabase
@@ -266,6 +268,7 @@ SELECT Name
 - Read-SqlTableData
 - Write-SqlTableData
 - Read-SqlViewData
+- Read-SqlXEvent
 - Convert-UrnToPath
 
 ## <a name="see-also"></a>另請參閱

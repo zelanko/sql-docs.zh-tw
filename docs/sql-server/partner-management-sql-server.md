@@ -9,10 +9,10 @@ ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 1e4d29fb73c11b727c21730a71eb8d97331296f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "68049785"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理夥伴
@@ -23,10 +23,10 @@ ms.locfileid: "68049785"
 
 | Partner | Description | 連結 |
 | --- | --- | --- | --- |
-|![idera][1] |**IDERA**<br>SQL 合規性管理員是全方位的稽核解決方案，會顯示執行者在 SQL Server 上執行的事項、時機和方式，以協助確保法規和資料安全性需求的合規性。<br><br>[系統需求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[網站][idera_website]<br>[Twitter][idera_twitter]<br>[影片][idera_youtube]<br>後續步驟 | |
+|![idera][1] |**IDERA**<br>SQL 合規性管理員是全方位的稽核解決方案，會顯示執行者在 SQL Server 上執行的事項、時機和方式，以協助確保法規和資料安全性需求的合規性。<br><br>[系統需求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[網站][idera_website]<br>[Twitter][idera_twitter]<br>[影片][idera_youtube] | |
 
-## <a name="next-steps"></a>若要深入了解我們的其他夥伴，請參閱[高可用性和災害復原夥伴][hadr_partners], [management partners][monitor_partners]和[開發夥伴][dev_partners]。
-To learn more about some of our other partners, see <bpt id="p1">[</bpt>High availability, and disaster recovery partners<ept id="p1">][hadr_partners]</ept>, <bpt id="p2">[</bpt>management partners<ept id="p2">][monitor_partners]</ept>, and <bpt id="p3">[</bpt>development partners<ept id="p3">][dev_partners]</ept>.
+## <a name="next-steps"></a>後續步驟
+若要深入了解我們的其他合作夥伴，請參閱[高可用性和災害復原夥伴][hadr_partners]、[管理夥伴][monitor_partners]與[開發夥伴][dev_partners]。
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png

@@ -3,19 +3,19 @@ title: SQL Server 2019 延伸模組 (預覽)
 titleSuffix: Azure Data Studio
 description: 適用於 Azure Data Studio 的 SQL Server 2019 Preview 延伸模組
 ms.custom: seodec18
-ms.date: 06/25/2019
+ms.date: 08/15/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959210"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494046"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 延伸模組 (預覽)
 
@@ -29,9 +29,9 @@ SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019]
 
    |平台|下載|發行日期|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 年 6 月 25 日 |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 年 6 月 25 日 |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 年 6 月 25 日 |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|2019 年 8 月 15 日 |0.15.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|2019 年 8 月 15 日 |0.15.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|2019 年 8 月 15 日 |0.15.0
 
 1. 在 Azure Data Studio 的 [檔案]  功能表中，選擇 [從 VSIX 套件安裝延伸模組]  ，然後選取已下載的 .vsix 檔案。
 
@@ -42,6 +42,13 @@ SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019]
 1. 重新載入之後，此延伸模組將會安裝相依性。 您可以在 [輸出] 視窗中查看進度，這可能需要幾分鐘的時間。
 
 1. 當相依性完成安裝之後，關閉並重新開啟 Azure Data Studio。 在您重新啟動 Azure Data Studio 之前，將無法使用 **SQL Server 巨量資料叢集**連線類型。
+
+## <a name="changes-in-release-015"></a>0\.15 版中的變更
+* 建立外部資料表精靈：
+  * 已縮短在物件對應頁面上載入資料表和資料行資訊所花費的時間。
+  * 已修正在連線詳細資料頁面上載入現有資料庫範圍認證的錯誤 (Bug)。
+* 從 CSV 檔案精靈建立外部資料表：
+  * 已增加用於 PROSE 剖析的預設樣本大小。
 
 ## <a name="changes-in-release-0141"></a>版本 0.14.1 中的變更
 * 支援 CTP 3.1 資料來源支援

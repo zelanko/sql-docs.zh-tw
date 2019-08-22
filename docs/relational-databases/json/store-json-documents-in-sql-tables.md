@@ -9,15 +9,21 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059573"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957449"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>將 JSON 文件儲存在 SQL Server 或 SQL Database
-SQL Server 和 Azure SQL Database 有原生 JSON 函式，可讓您使用標準 SQL 語言剖析 JSON 文件。 現在您可以在 SQL Server 或 SQL Database 中儲存 JSON 文件和查詢 JSON 資料，如同在 NoSQL 資料庫中一樣。 本文描述將 JSON 文件儲存在 SQL Server 或 SQL Database 中的選項。
+SQL Server 和 Azure SQL Database 有原生 JSON 函式，可讓您使用標準 SQL 語言剖析 JSON 文件。 您可以在 SQL Server 或 SQL Database 中儲存 JSON 文件及查詢 JSON 資料，如同在 NoSQL 資料庫中一樣。 本文描述將 JSON 文件儲存在 SQL Server 或 SQL Database 中的選項。
+
+## <a name="json-storage-format"></a>JSON 儲存體格式
+
+第一個儲存體設計決策是如何將 JSON 文件儲存在資料表中。 有兩個可用的選項：
+- **LOB 儲存體** - JSON 文件可以依現況儲存在 `NVARCHAR` 資料行中。 這是快速載入資料和內嵌的最佳方式，因為載入速度與字串資料行的載入相符。 如果未執行針對 JSON 值編製索引，這種方法可能會對查詢/分析時間造成額外的效能影響，因為原始 JSON 文件必須在查詢執行時進行剖析。 
+- **關聯式儲存體** - JSON 文件可以在使用 `OPENJSON`、`JSON_VALUE` 或 `JSON_QUERY` 函式插入資料表時進行剖析。 來自輸入 JSON 文件的片段，可以儲存在 SQL 資料類型資料行或包含 JSON 子元素的 NVARCHAR 資料行中。 這種方法會增加載入時間，因為 JSON 剖析會在載入期間完成；不過，查詢會比對關聯式資料的傳統查詢效能。
 
 ## <a name="classic-tables"></a>傳統的資料表
 

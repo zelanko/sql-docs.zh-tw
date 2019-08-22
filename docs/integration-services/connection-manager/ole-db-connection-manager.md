@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 70e439dd6ed176fbb9c2d2fe666b314bd48f2f9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3b1526d55321e5f32a243a48f64bde2f579caa6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904275"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028788"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 連接管理員
 
@@ -93,6 +93,9 @@ ms.locfileid: "67904275"
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 資源驗證的受控識別
 在 [Azure Data Factory 中的 Azure-SSIS 整合執行階段](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上執行 SSIS 套件時，您可以使用與您資料處理站建立關聯的[受控識別](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)來進行 Azure SQL Database (或受控執行個體) 驗證。 指定的處理站可以使用此身分識別從您資料庫存取資料，或從您的資料庫複製資料。
 
+> [!NOTE]
+>  當您使用 Azure AD 驗證 (包括受控識別驗證) 連線到 Azure SQL Database (或受控執行個體) 時，會發生已知的問題，可能會導致套件執行失敗或非預期的行為變更。 如需詳細資訊，請參閱 [Azure AD 功能和限制](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)。
+
 若要使用 Azure SQL Database 的受控識別驗證，請遵循下列步驟來設定您的資料庫：
 
 1. **在 Azure AD 中建立群組。** 將受控識別新增為群組的成員。
@@ -113,7 +116,7 @@ ms.locfileid: "67904275"
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 依照您平常為 SQL 使用者和其他人所進行的操作一樣**授與 Azure AD 群組所需權限**。 例如，執行下列程式碼：
+1. 依照您平常為 SQL 使用者和其他人所進行的操作一樣**授與 Azure AD 群組所需權限**。 如需適當的角色，請參閱[資料庫層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。  例如，執行下列程式碼：
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -138,11 +141,11 @@ ms.locfileid: "67904275"
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **授與資料處理站受控識別所需的權限**。 對您要複製資料的資料庫執行下列 T-SQL：
+1. **授與資料處理站受控識別所需的權限**。 如需適當的角色，請參閱[資料庫層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。 對您要複製資料的資料庫執行下列 T-SQL：
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 然後為 OLE DB 連線管理員**設定 OLE DB 提供者**。 有兩種選項可以執行此操作。
@@ -167,7 +170,7 @@ ms.locfileid: "67904275"
     >  在 Azure-SSIS 整合執行階段中，當受控識別驗證用於建立資料庫連線時，會**覆寫** OLE DB 連線管理員上預先設定的所有其他驗證方法 (例如整合式安全性、密碼)。
 
 > [!NOTE]
->  若要在現有套件上設定受控識別驗證，請務必至少使用[最新的 SSIS 設計工具](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)來重建您的 SSIS 專案一次，然後將 SSIS 專案重新部署至您的 Azure-SSIS 整合執行階段，以便新連線管理員的 **ConnectUsingManagedIdentity** 屬性自動新增至您 SSIS 專案中的所有 OLE DB 連線管理員。
+>  若要在現有套件上設定受控識別驗證，慣用的方式是使用[最新的 SSIS 設計工具](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)來重建您的 SSIS 專案至少一次，然後將 SSIS 專案重新部署至您的 Azure-SSIS 整合執行階段，以便新連線管理員的 **ConnectUsingManagedIdentity** 屬性自動新增至您 SSIS 專案中的所有 OLE DB 連線管理員。 替代方式是在執行階段直接搭配屬性路徑 **\Package.Connections[{您的連線管理員名稱}].Properties[ConnectUsingManagedIdentity]** 使用屬性覆寫。
 
 ## <a name="see-also"></a>另請參閱    
  [OLE DB 來源](../../integration-services/data-flow/ole-db-source.md)     

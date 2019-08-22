@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/27/2019
+ms.date: 08/13/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809729"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028966"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -431,7 +431,7 @@ BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ } 指定實體區�
 
 BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 指定要用於備份作業的 I/O 緩衝區總數。 您可以指定任何正整數，不過，緩衝區的數目很大時，可能會因為 Sqlservr.exe 處理序中的虛擬位址空間不足而造成「記憶體不足」錯誤。
 
-緩衝區所使用的總空間可由下列公式判斷：*buffercount/maxtransfersize*。
+緩衝區使用的總空間可由下列公式判斷：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
 > 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。
@@ -1041,7 +1041,7 @@ BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ } 指定實體區�
 
 BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 指定要用於備份作業的 I/O 緩衝區總數。 您可以指定任何正整數，不過，緩衝區的數目很大時，可能會因為 Sqlservr.exe 處理序中的虛擬位址空間不足而造成「記憶體不足」錯誤。
 
-緩衝區所使用的總空間可由下列公式判斷：*buffercount/maxtransfersize*。
+緩衝區使用的總空間可由下列公式判斷：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
 > 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。

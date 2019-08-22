@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9538ad04a6e9e1e95a1fafc1080d132e218a196d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062203"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561115"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 
@@ -72,6 +72,9 @@ ms.locfileid: "68062203"
 3. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]  。  
 
    ![PolyBase 服務](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服務")  
+   
+   >[!NOTE]
+   >SQL Server 2019 PolyBase 現在包含額外選項 [適用於 HDFS 資料來源的 Java 連接器]  。 如需此功能的詳細資訊，請參閱 [SQL Server 預覽功能](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) \(英文\)。
    
 4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務]  和 [SQL Server PolyBase 資料移動服務]  設定為在同一個網域帳戶下執行。  
 

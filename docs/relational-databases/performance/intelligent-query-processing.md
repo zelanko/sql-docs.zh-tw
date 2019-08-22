@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 65395c9ab5b97d27f38497b64bbab9c7b6a072a3
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388374"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553287"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
@@ -35,7 +35,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 下表詳述了所有智慧查詢處理功能，以及這些功能對於資料庫相容性層級的任何要求。
 
-| **IQP 功能** | **Azure SQL Database 支援** | **SQL Server 支援** |**說明** |
+| **IQP 功能** | **Azure SQL Database 支援** | **SQL Server 支援** |**描述** |
 | --- | --- | --- |--- |
 | [自適性聯結 (批次模式)](#batch-mode-adaptive-joins) | 是，屬於相容性層級 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始屬於相容性層級 140|自適性聯結會在執行階段，依據實際輸入列而機動選取聯結類型。|
 | [近似的相異計數](#approximate-query-processing) | 是，公開預覽| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 開始|為巨量資料案例提供約略的 COUNT DISTINCT，享有高效能及低磁碟使用量的好處。 |
@@ -406,10 +406,9 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
 ## <a name="see-also"></a>另請參閱
-
 [SQL Server 資料庫引擎和 Azure SQL Database 的效能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)    
 [邏輯和實體運算子參考執行程序表](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [聯結](../../relational-databases/performance/joins.md)    
-[示範自適性查詢處理](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[示範智慧型 QP](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
+[示範自適性查詢處理](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)       
+[示範智慧查詢處理](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing) \(英文\)   

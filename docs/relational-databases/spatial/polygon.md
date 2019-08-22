@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081658"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026138"
 ---
 # <a name="polygon"></a>多邊形
 
@@ -49,9 +49,9 @@ ms.locfileid: "68081658"
  已接受的 **Polygon** 執行個體是指可儲存在 **geometry** 或 **geography** 變數中而不會擲回例外狀況的執行個體。 已接受的 **Polygon** 執行個體如下：  
   
 -   空白的 **Polygon** 執行個體  
--   具有可接受之外部環形以及零或多個可接受之內部環形的 **Polygon** 執行個體。  
+-   具有可接受之外環 (**LineString**) 以及零或多個可接受之內環 (**LineStrings**) 的 **Polygon** 執行個體。  
   
-要讓環形成為可接受環形所需的準則如下。  
+要讓環形成為可接受環 (**LineString**) 所需的條件如下。  
   
 -   系統必須接受 **LineString** 執行個體。  
 -   **LineString** 執行個體至少必須具有四個點。  

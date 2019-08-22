@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 8661bc871018b542b3388adfcbd63f255c1d32a2
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809836"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553300"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 追蹤旗標用來設定特定的伺服器特性，或變更特定行為。 例如，追蹤旗標 3226 是常用的啟動追蹤旗標，可隱藏錯誤記錄檔中的成功備份訊息。 追蹤旗標經常用來診斷效能問題，或是針對預存程序或複雜電腦系統進行偵錯，但 Microsoft 支援服務也可能會建議使用它們來解決對特定工作負載產生負面影響的行為。  按照指示使用時，生產環境完全支援所有記錄的追蹤旗標，以及 Microsoft 支援服務所提供的建議。  請注意，這份清單中的追蹤旗標可能有其特定使用方式的額外考量，因此建議您仔細檢閱此處及/或支援工程師提供的所有建議。 此外，如同 SQL Server 中的任何設定變更一樣，最好一律在部署之前於非生產環境中徹底測試旗標。
 
@@ -51,8 +51,10 @@ ms.locfileid: "68809836"
 
 ## <a name="trace-flags"></a>追蹤旗標
 
-  
-下表列出並描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的追蹤旗標。
+下表列出並描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的追蹤旗標。 
+
+> [!NOTE]
+> Azure SQL Database 受控執行個體支援下列全域追蹤旗標：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 與 11024。 受控執行個體中尚未支援工作階段追蹤旗標。
  
 > [!NOTE]
 > 某些追蹤旗標已導入特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需適當版本的詳細資訊，請參閱與特定追蹤旗標相關聯的 Microsoft 支援服務文章。

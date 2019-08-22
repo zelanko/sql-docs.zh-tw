@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040602"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553254"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 啟用指定的追蹤旗標。
   
@@ -48,12 +48,12 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 這是一個預留位置，表示可以指定多個追蹤旗標。  
   
 -1  
-在指定的追蹤旗標上進行全域切換。  
+在指定的追蹤旗標上進行全域切換。 Azure SQL 受控執行個體中需要這個引數。 
   
 WITH NO_INFOMSGS  
 隱藏所有參考訊息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 在實際伺服器上，為了防止無法預期的行為發生，我們建議您使用下列一種方法，僅在伺服器範圍啟用追蹤旗標：
 -   使用 Sqlservr.exe 的 **-T** 命令列啟動選項。 這是建議採用的最佳做法，因為它可以確定所有的陳述式在執行時，都啟用追蹤旗標。 其中包括啟動指令碼中的命令。 如需詳細資訊，請參閱 [sqlservr Application](../../tools/sqlservr-application.md)。  
 -   只有當使用者或應用程式未在系統上並行執行陳述式時，才使用 DBCC TRACEON **(** _trace#_ [ **,** ... *.n*] **,-1)** 。  
@@ -61,7 +61,9 @@ WITH NO_INFOMSGS
 追蹤旗標用來控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的運作方式來自訂特定性質。 追蹤旗標在啟用之後，會在伺服器中保持啟用狀態，直到您執行 DBCC TRACEOFF 陳述式停用它為止。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有兩種類型的追蹤旗標：工作階段和全域。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。 若要判定追蹤旗標的狀態，請使用 DBCC TRACESTATUS。 若要停用追蹤旗標，請使用 DBCC TRACEOFF。
   
 在開啟影響查詢計劃的追蹤旗標之後，執行 `DBCC FREEPROCCACHE;` 以使用影響計畫的新行為重新編譯快取的計劃。
-  
+
+Azure SQL Database 受控執行個體支援下列全域追蹤旗標：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 與 11024
+
 ## <a name="result-sets"></a>結果集  
  DBCC TRACEON 會傳回下列結果集 (訊息)：  
   

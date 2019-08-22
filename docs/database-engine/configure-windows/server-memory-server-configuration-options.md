@@ -1,7 +1,7 @@
 ---
 title: 伺服器記憶體設定選項 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/14/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - manual memory options [SQL Server]
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
-ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763175"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028744"
 ---
 # <a name="server-memory-configuration-options"></a>伺服器記憶體設定選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,9 @@ ms.locfileid: "68763175"
 >[!NOTE]
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保證能夠配置 [最小伺服器記憶體]  中指定的記憶體數量。 如果伺服器的負載從不需要配置 [最小伺服器記憶體]  中指定的記憶體大小，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以較少的記憶體執行。
 
-<a name="max_server_memory"></a> 您可使用 **max_server_memory** 確保 OS 不會遇到有害的記憶體壓力。 若要設定最大伺服器記憶體設定，請監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的整體取用量，以判斷記憶體需求。
-
-- 從 OS 總記憶體中保留足夠的記憶體給 OS 本身。
-- 然後減去等於不受 [最大伺服器記憶體]  控制的潛在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體配置，算法為 **_堆疊大小** <sup>1</sup> **\* 計算得出的最大背景工作執行緒數**<sup>2</sup>。 餘數即為單一執行個體安裝的 max_server_memory 設定。
+<a name="max_server_memory"></a> 您可使用 **max_server_memory** 確保 OS 不會遇到有害的記憶體壓力。 若要設定最大伺服器記憶體設定，請監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的整體取用量，以判斷記憶體需求。 若要為單一執行個體進行更準確的計算：
+- 從 OS 總記憶體中保留 1GB - 4GB 的記憶體給 OS 本身。
+- 接著減去等於不受 [最大伺服器記憶體]  控制的潛在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體配置，算法為**堆疊大小 <sup>1</sup> \* 計算得出的最大背景工作執行緒數 <sup>2</sup>** 。 餘數即為單一執行個體安裝的 max_server_memory 設定。
 
 <sup>1</sup> 如需每個架構之執行緒堆疊大小的資訊，請參閱[記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md#stacksizes)。
 

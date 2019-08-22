@@ -1,6 +1,6 @@
 ---
-title: SQL Server 文件導覽指南
-description: 巡覽 SQL Server 技術文件的指南，其說明中樞頁面、目錄、標頭等內容，並示範如何使用階層連結以及如何使用版本篩選。
+title: SQL Server 文件導覽提示
+description: 瀏覽 SQL Server 技術文件的提示與訣竅 - 說明中樞頁面、目錄、標頭等內容，以及如何使用階層連結以及如何使用版本篩選。
 ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,14 +8,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941159"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028829"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文件導覽指南 
 
@@ -61,11 +60,11 @@ TOC 中具有 `>>` 的項目，表示該項目會帶您前往具備不同目錄�
 ## <a name="version-filter"></a>版本篩選
 SQL Server 技術文件提供數個 SQL Server 版本及變體的內容。 不同 SQL Server 版本和變體間的功能可能會有所差異，因此內容本身有時候也會有所差異。 
 
-您可以使用版本篩選來確保您正在查看適當版本及變體的 SQL Server 內容： 
+您可以使用[版本篩選](versioning-system-monikers-ui-sql-server.md)來確保您正在查看適當 SQL Server 版本及變體的內容： 
 
 ![SQL 文件版本篩選](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-請選取 [所有 SQL]   > [不隱藏任何內容]  可確保您能看見所有內容，同時版本篩選後不會隱藏任何項目。 
+選取 [All SQL]  \(所有 SQL\) \>[Hide nothing]  \(不隱藏任何內容\) 可確保您能看見所有內容，且版本篩選沒有隱藏任何項目。 [不建議例行性地使用 [Hide nothing]  \(不隱藏任何內容\) 選項](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。
 
 ## <a name="breadcrumbs"></a>階層連結
 
