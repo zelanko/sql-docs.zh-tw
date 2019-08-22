@@ -10,12 +10,12 @@ ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 568cb46a17ac29cabe45b79212400fd020be84c3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888421"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890829"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自動分組屬性成員
   當您瀏覽 Cube 時，通常會按另一個屬性階層的成員建立一個屬性階層成員的維度。 例如，您可以按縣 (市)、按購買的產品或按性別將客戶銷售加以分組。 不過，對於特定類型的屬性，讓 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 依據屬性階層內成員的散發情形自動建立屬性成員的群組，很有幫助。 例如，您可以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 為客戶建立年收入值的群組。 如此一來，瀏覽這個屬性階層的使用者會看到群組的名稱和值而不是成員本身。 這樣可限制使用者看到的層級數，對於分析更有幫助。  
@@ -108,7 +108,7 @@ ms.locfileid: "68888421"
   
 2.  在 [屬性] 視窗中，將 [DiscretizationBucketCount] 屬性的值變更為 [10]。  
   
-3.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+3.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services 教學課程)]。  
   
 4.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 Cube 設計師。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68888421"
      請注意，現在 [假期時數] 屬性有 3 個成員群組有產品的銷售值。 (其他七個群組包含沒有銷售資料的成員)。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [隱藏及停用屬性階層](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [隱藏及停用屬性階層](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [群組屬性成員 &#40;分隔&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  

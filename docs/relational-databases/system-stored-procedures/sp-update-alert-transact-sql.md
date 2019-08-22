@@ -1,5 +1,5 @@
 ---
-title: sp_update_alert (TRANSACT-SQL) |Microsoft Docs
+title: sp_update_alert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084953"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890839"
 ---
-# <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
+# <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更新現有警示的設定。  
@@ -62,21 +62,21 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'name'` 要更新的警示名稱。 *名稱*已**sysname**，沒有預設值。  
+`[ @name = ] 'name'`要更新的警示名稱。 *名稱*是**sysname**, 沒有預設值。  
   
-`[ @new_name = ] 'new_name'` 警示的新名稱。 名稱必須是唯一的。 *new_name*已**sysname**，預設值是 NULL。  
+`[ @new_name = ] 'new_name'`警示的新名稱。 名稱必須是唯一的。 *new_name*是**sysname**, 預設值是 Null。  
   
-`[ @enabled = ] enabled` 指定是否啟用警示 (**1**)，或未啟用 (**0**)。 *已啟用*已**tinyint**，預設值是 NULL。 您必須啟用警示，才能引發警示。  
+`[ @enabled = ] enabled`指定是否啟用 (**1**) 或未啟用 (**0**) 警示。 *enabled*是**Tinyint**, 預設值是 Null。 您必須啟用警示，才能引發警示。  
   
-`[ @message_id = ] message_id` 警示定義新訊息或錯誤號碼。 通常*message_id*對應至中的錯誤號碼**sysmessages**資料表。 *message_id*已**int**，預設值是 NULL。 訊息識別碼可用於警示的嚴重性層級設定才**0**。  
+`[ @message_id = ] message_id`警示定義的新訊息或錯誤號碼。 一般來說, *message_id*會對應到**sysmessages**資料表中的錯誤號碼。 *message_id*是**int**, 預設值是 Null。 只有當警示的嚴重性層級設定為**0**時, 才可以使用訊息識別碼。  
   
-`[ @severity = ] severity` 新的嚴重性層級 (從**1**透過**25**) 為警示定義。 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳送至 Windows 應用程式記錄檔，且含有指定嚴重性的訊息都會啟動警示。 *嚴重性*已**int**，預設值是 NULL。 警示的訊息識別碼設定時，才可以使用嚴重性層級**0**。  
+`[ @severity = ] severity`警示定義的新嚴重性層級 (從**1**到**25**)。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳送至 Windows 應用程式記錄檔且具有指定嚴重性的訊息都會啟動警示。 *嚴重性*是**int**, 預設值是 Null。 只有在警示的訊息識別碼設定為**0**時, 才能使用嚴重性層級。  
   
-`[ @delay_between_responses = ] delay_between_responses` 新等待期間，以秒為單位，以警示回應之間。 *delay_between_responses*已**int**，預設值是 NULL。  
+`[ @delay_between_responses = ] delay_between_responses`警示回應之間的新等待期間 (以秒為單位)。 *delay_between_responses*是**int**, 預設值是 Null。  
   
-`[ @notification_message = ] 'notification_message'` 電子郵件，傳送給操作員之附加訊息的修訂的文字**網路傳送**，或呼叫器通知。 *notification_message*已**nvarchar(512)** ，預設值是 NULL。  
+`[ @notification_message = ] 'notification_message'`在電子郵件、 **net send**或呼機通知中, 傳送至操作員之其他訊息的修訂文字。 *notification_message*是**Nvarchar (512)** , 預設值是 Null。  
   
-`[ @include_event_description_in = ] include_event_description_in` 指定是否 popis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 應用程式記錄檔的錯誤應該包含在通知訊息。 *include_event_description_in*已**tinyint**，預設值是 NULL，而且可以是下列其中一個或多個這些值。  
+`[ @include_event_description_in = ] include_event_description_in`指定是否應該將 Windows 應用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式記錄檔中的錯誤描述包含在通知訊息中。 *include_event_description_in*是**Tinyint**, 預設值是 Null, 它可以是一或多個這些值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -84,56 +84,56 @@ sp_update_alert
 |**1**|電子郵件|  
 |**2**|呼叫器|  
 |**4**|**net send**|  
-|**7**|All|  
+|**7**|全部|  
   
-`[ @database_name = ] 'database'` 要引發的警示會因發生錯誤的資料庫名稱。 *資料庫*是**sysname。** 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
+`[ @database_name = ] 'database'`必須發生錯誤, 才會引發警示的資料庫名稱。 *資料庫*為**sysname。** 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` 必須找到的錯誤訊息記錄檔中的錯誤描述中的字元序列。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 運算式模式比對字元。 *event_description_keyword*已**nvarchar(100)** ，預設值是 NULL。 此參數可用於篩選的物件名稱 (例如 **%customer_table%** )。  
+`[ @event_description_keyword = ] 'event_description_keyword'`在錯誤訊息記錄檔的錯誤描述中, 必須找到的字元序列。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 運算式模式比對字元。 *event_description_keyword*是**Nvarchar (100)** , 預設值是 Null。 此參數適用于篩選物件名稱 (例如, **% customer_table%** )。  
   
-`[ @job_id = ] job_id` 作業識別碼中。 *job_id*已**uniqueidentifier**，預設值是 NULL。 如果*job_id*指定，則*job_name*必須省略。  
+`[ @job_id = ] job_id`作業識別碼。 *job_id*是**uniqueidentifier**, 預設值是 Null。 如果指定*job_id* , 則必須省略*job_name* 。  
   
-`[ @job_name = ] 'job_name'` 而為了回應這個警示所執行之作業的名稱。 *job_name*已**sysname**，預設值是 NULL。 如果*job_name*指定，則*job_id*必須省略。  
+`[ @job_name = ] 'job_name'`回應此警示所執行的作業名稱。 *job_name*是**sysname**, 預設值是 Null。 如果指定*job_name* , 則必須省略*job_id* 。  
   
-`[ @occurrence_count = ] occurrence_count` 重設警示的發生次數。 *occurrence_count*已**int**，預設值是 NULL，而且可以只設定**0**。  
+`[ @occurrence_count = ] occurrence_count`重設警示的發生次數。 *occurrence_count*是**int**, 預設值是 Null, 而且只能設定為**0**。  
   
-`[ @count_reset_date = ] count_reset_date` 重設上次重設出現計數的日期。 *count_reset_date*已**int**，預設值是 NULL。  
+`[ @count_reset_date = ] count_reset_date`重設上次重設發生計數的日期。 *count_reset_date*是**int**, 預設值是 Null。  
   
-`[ @count_reset_time = ] count_reset_time` 重設上次重設出現計數的時間。 *count_reset_time*已**int**，預設值是 NULL。  
+`[ @count_reset_time = ] count_reset_time`重設上次重設發生計數的時間。 *count_reset_time*是**int**, 預設值是 Null。  
   
-`[ @last_occurrence_date = ] last_occurrence_date` 重設警示上次發生的日期。 *last_occurrence_date*已**int**，預設值是 NULL，而且可以只設定**0**。  
+`[ @last_occurrence_date = ] last_occurrence_date`重設警示上次發生的日期。 *last_occurrence_date*是**int**, 預設值是 Null, 而且只能設定為**0**。  
   
-`[ @last_occurrence_time = ] last_occurrence_time` 重設警示上次發生的時間。 *last_occurrence_time*已**int**，預設值是 NULL，而且可以只設定**0**。  
+`[ @last_occurrence_time = ] last_occurrence_time`重設警示上次發生的時間。 *last_occurrence_time*是**int**, 預設值是 Null, 而且只能設定為**0**。  
   
-`[ @last_response_date = ] last_response_date` 重設警示上次回應到 SQLServerAgent 服務的日期。 *last_response_date*已**int**，預設值是 NULL，而且可以只設定**0**。  
+`[ @last_response_date = ] last_response_date`重設 SQLServerAgent 服務上次回應警示的日期。 *last_response_date*是**int**, 預設值是 Null, 而且只能設定為**0**。  
   
-`[ @last_response_time = ] last_response_time` 重設警示上次回應到 SQLServerAgent 服務的時間。 *last_response_time*已**int**，預設值是 NULL，而且可以只設定**0**。  
+`[ @last_response_time = ] last_response_time`重設 SQLServerAgent 服務上次回應警示的時間。 *last_response_time*是**int**, 預設值是 Null, 而且只能設定為**0**。  
   
-`[ @raise_snmp_trap = ] raise_snmp_trap` 保留。  
+`[ @raise_snmp_trap = ] raise_snmp_trap`留.  
   
-`[ @performance_condition = ] 'performance_condition'` 值，以表示格式 **'***itemcomparatorvalue***'** 。 *performance_condition*已**nvarchar(512)** ，預設值是 NULL，這些元素組成。  
+`[ @performance_condition = ] 'performance_condition'`以 **'** _itemcomparatorvalue_ **'** 格式表示的值。 *performance_condition*是**Nvarchar (512)** , 預設值是 Null, 並由這些元素組成。  
   
 |格式元素|描述|  
 |--------------------|-----------------|  
-|*項目*|計數器的效能物件、效能計數器或具名執行個體|  
-|*Comparator*|是下列運算子之一： **>** ， **<** ， **=**|  
+|*Item*|計數器的效能物件、效能計數器或具名執行個體|  
+|*Comparator*|下列其中一個運算子: **>** 、 **<** 、 **=**|  
 |*值*|計數器的數值|  
   
-`[ @category_name = ] 'category'` 警示類別目錄名稱。 *類別目錄*已**sysname**預設值是 NULL。  
+`[ @category_name = ] 'category'`警示類別目錄的名稱。 *category*是**sysname** , 預設值是 Null。  
   
-`[ @wmi_namespace = ] 'wmi_namespace'` 進行事件查詢 WMI 命名空間。 *wmi_namespace*已**sysname**，預設值是 NULL。  
+`[ @wmi_namespace = ] 'wmi_namespace'`要查詢事件的 WMI 命名空間。 *wmi_namespace*是**sysname**, 預設值是 Null。  
   
-`[ @wmi_query = ] 'wmi_query'` 指定警示之 WMI 事件查詢。 *wmi_query*已**nvarchar(512)** ，預設值是 NULL。  
+`[ @wmi_query = ] 'wmi_query'`指定警示之 WMI 事件的查詢。 *wmi_query*是**Nvarchar (512)** , 預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- 只有**sysmessages**寫入至[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔可以引發警示。  
+ 只有寫入 Windows 應用程式[!INCLUDE[msCoName](../../includes/msconame-md.md)]記錄檔的 sysmessages 才會引發警示。  
   
- **sp_update_alert**只變更這些警示設定的參數提供值。 如果省略某個參數，就會保留目前的設定。  
+ **sp_update_alert**只會變更提供參數值的警示設定。 如果省略某個參數，就會保留目前的設定。  
   
 ## <a name="permissions"></a>Permissions  
- 若要執行這個預存程序，使用者必須隸屬**sysadmin**固定的伺服器角色。  
+ 若要執行這個預存程式, 使用者必須是**系統管理員 (sysadmin** ) 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會將 `Test Alert` 已啟用的設定值改成 `0`。  
