@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c752adc6ea3c97900956b64a026a5acd13899a98
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 21d90c94c73eb6e49fcfedf997fffe2881146a22
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771376"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903633"
 ---
-# <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
+# <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   卸除對於發行者的特定發行項、發行集或訂閱集的訂閱。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -46,7 +46,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 `[ @article = ] 'article'`這是發行項的名稱。 發行項是**sysname**, 預設值是 Null。 如果是**all**, 就會卸載每個指定發行集和訂閱者之所有發行項的訂閱。 對於允許立即更新的發行集, 請使用 [**全部**]。  
   
-`[ @subscriber = ] 'subscribe_r'`這是將卸載其訂閱的訂閱者名稱。 *訂閱者*是**sysname**, 沒有預設值。 如果是**all**, 就會卸載所有訂閱者的所有訂閱。  
+`[ @subscriber = ] 'subscriber'`這是將卸載其訂閱的訂閱者名稱。 *訂閱者*是**sysname**, 沒有預設值。 如果是**all**, 就會卸載所有訂閱者的所有訂閱。  
   
 `[ @destination_db = ] 'destination_db'`這是目的地資料庫的名稱。 *destination_db*是**sysname**, 預設值是 Null。 如果是 NULL，就會卸除這個訂閱者的所有訂閱。  
   
