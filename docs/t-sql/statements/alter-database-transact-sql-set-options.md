@@ -53,7 +53,7 @@ ms.locfileid: "68495454"
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_ ** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |**\* _SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -1047,7 +1047,7 @@ OFF
 > [!IMPORTANT]
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，ANSI_PADDING 一律為 ON，而且明確將此選項設定為 OFF 的應用程式將會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您一律將 ANSI_PADDING 設為 ON。 當您建立或操作計算資料行索引或索引檢視表時，ANSI_PADDING 也必須是 ON。
 
-當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char( _)** 和 **binary( _)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char( _)** 和 **binary( _)** 資料行一律會填補到資料行的長度。
+當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行一律會填補到資料行的長度。
 
 利用 SET 陳述式來設定的連接層級設定會覆寫 ANSI_PADDING 的預設資料庫層級設定。 根據預設，ODBC 和 OLE DB 用戶端會發出連線層級的 SET 陳述式，將工作階段的 ANSI_PADDING 設定為 ON。 當您連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，用戶端會執行此陳述式。 如需詳細資訊，請參閱 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -1398,7 +1398,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1939,7 +1939,7 @@ OFF
 > [!IMPORTANT]
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，ANSI_PADDING 一律為 ON，而且明確將此選項設定為 OFF 的應用程式將會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您一律將 ANSI_PADDING 設為 ON。 當您建立或操作計算資料行索引或索引檢視表時，ANSI_PADDING 也必須是 ON。
 
-當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char( _)** 和 **binary( _)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char( _)** 和 **binary( _)** 資料行一律會填補到資料行的長度。
+當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行一律會填補到資料行的長度。
 
   利用 SET 陳述式來設定的連接層級設定會覆寫 ANSI_PADDING 的預設資料庫層級設定。 根據預設，ODBC 和 OLE DB 用戶端會發出連線層級的 SET 陳述式，將工作階段的 ANSI_PADDING 設定為 ON。 當您連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，用戶端會執行此陳述式。 如需詳細資訊，請參閱 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -2189,7 +2189,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _** &nbsp;||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />受控執行個體 \*_** &nbsp;||[SQL 資料<br />倉儲](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2672,7 +2672,7 @@ OFF
 > [!IMPORTANT]
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，ANSI_PADDING 一律為 ON，而且明確將此選項設定為 OFF 的應用程式將會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 我們建議您一律將 ANSI_PADDING 設為 ON。 當您建立或操作計算資料行索引或索引檢視表時，ANSI_PADDING 也必須是 ON。
 
-當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char( _)** 和 **binary( _)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char( _)** 和 **binary( _)** 資料行一律會填補到資料行的長度。
+當 ANSI_PADDING 設定為 ON 時，允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行會填補到資料行長度。 當 ANSI_PADDING 為 OFF 時，則會修剪尾端空格和尾端零。 不允許 Null 的 **char(_n_)** 和 **binary(_n_)** 資料行一律會填補到資料行的長度。
 
   利用 SET 陳述式來設定的連接層級設定會覆寫 ANSI_PADDING 的預設資料庫層級設定。 根據預設，ODBC 和 OLE DB 用戶端會發出連線層級的 SET 陳述式，將工作階段的 ANSI_PADDING 設定為 ON。 當您連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，用戶端會執行此陳述式。 如需詳細資訊，請參閱 [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)。
 
@@ -2893,7 +2893,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;||||
 
 &nbsp;
 

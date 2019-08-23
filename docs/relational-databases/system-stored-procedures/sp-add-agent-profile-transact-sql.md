@@ -22,7 +22,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770848"
 ---
-# <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
+# <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   建立複寫代理程式的新設定檔。 這個預存程序執行於任何資料庫中的散發者端。  

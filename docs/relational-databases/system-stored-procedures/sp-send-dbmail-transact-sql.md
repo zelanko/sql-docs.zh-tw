@@ -25,7 +25,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68126297"
 ---
-# <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
+# <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將電子郵件訊息傳送給指定的收件者。 訊息可能包含查詢結果集、檔案附件，或兩者皆有。 當郵件順利放在 Database Mail 佇列中， **sp_send_dbmail**會傳回**mailitem_id**的訊息。 這個預存程序處於**msdb**資料庫。  

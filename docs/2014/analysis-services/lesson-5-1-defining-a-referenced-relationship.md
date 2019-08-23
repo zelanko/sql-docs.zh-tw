@@ -52,7 +52,7 @@ ms.locfileid: "69493937"
   
      下圖顯示 [定義關聯性] 對話方塊，其中在 [DimCustomer] 維度資料表和 [FactInternetSales] 量值群組資料表之間有一般關聯性。  
   
-     [![定義關聯性] 對話方塊][(../../2014/tutorials/media/l5-referencedrelationship-4.gif "定義關聯性] 對話方塊")  
+     ![定義關聯性 對話方塊](../../2014/tutorials/media/l5-referencedrelationship-4.gif "定義關聯性 對話方塊")  
   
 9. 按一下 [取消]。  
   

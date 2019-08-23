@@ -63,7 +63,7 @@ ms.locfileid: "68809794"
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_ ** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -683,7 +683,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL Database<br />受控執行個體 \*_**<br />&nbsp;|
 
 &nbsp;
 

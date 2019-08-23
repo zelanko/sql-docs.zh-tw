@@ -46,11 +46,11 @@ ms.locfileid: "69493819"
   
 6.  在 [傳回資料行] 清單中，選取 [項目描述] 和 [訂單號碼] 核取方塊，然後按一下 [確定]。 下圖所示範的是，程序此時應該顯示的動作範本。  
   
-     [![鑽取資料行]] 方塊[(../../2014/tutorials/media/l8-action3.gif "鑽取資料行")] 方塊  
+     ![鑽取資料行](../../2014/tutorials/media/l8-action3.gif "方塊鑽取資料行") 方塊  
   
 7.  展開 [其他屬性] 方塊，如下圖所示。  
   
-     ![其他屬性]方塊(../../2014/tutorials/media/l8-action4.gif "其他屬性")方塊  
+     ![其他屬性](../../2014/tutorials/media/l8-action4.gif "方塊其他屬性")方塊  
   
 8.  在 [**最大資料列數**] 方塊中, 輸入`10`。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "69493819"
   
      這些設定會限制傳回的資料列數，指定在用戶端應用程式功能表中所顯示的標題。 下圖顯示 [其他屬性] 方塊中的這些設定。  
   
-     ![其他屬性]方塊(../../2014/tutorials/media/l8-action5.gif "其他屬性")方塊  
+     ![其他屬性](../../2014/tutorials/media/l8-action5.gif "方塊其他屬性")方塊  
   
 ## <a name="using-the-drillthrough-action"></a>使用鑽研動作  
   
@@ -122,7 +122,7 @@ ms.locfileid: "69493819"
   
      下圖所顯示的是這些選取的資料行。  
   
-     [![鑽取資料行]] 方塊[(../../2014/tutorials/media/l8-action7.gif "鑽取資料行")] 方塊  
+     ![鑽取資料行](../../2014/tutorials/media/l8-action7.gif "方塊鑽取資料行") 方塊  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>檢閱修改後的鑽研動作  
   

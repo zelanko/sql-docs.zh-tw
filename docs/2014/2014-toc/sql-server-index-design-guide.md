@@ -198,7 +198,7 @@ ON Purchasing.PurchaseOrderDetail
   
  排序順序只能針對索引鍵資料行指定。 [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) 目錄檢視及 INDEXKEY_PROPERTY 函數可回報索引資料行是按遞增還是遞減的順序排序。  
   
- 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
+ 搭配 ![回到頁首 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Clustered"></a> 叢集索引設計指導方針  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      寬索引鍵是由數個資料行或是數個大型資料行所組成。 所有的非叢集索引都使用叢集索引的索引鍵值做為查閱索引鍵。 任何在相同資料表上所定義的非叢集索引將會非常大，因為非叢集索引項目包含叢集索引鍵，同時也包含在該非叢集索引上所定義的索引鍵資料行。  
   
- 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
+ 搭配 ![回到頁首 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Nonclustered"></a> 非叢集索引設計指導方針  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  您必須決定，提高查詢效能，與修改資料時對效能的影響和需要額外磁碟空間，兩者熟輕熟重。  
   
- 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
+ 搭配 ![回到頁首 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Unique"></a> 唯一索引設計指導方針  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   唯一非叢集索引可有內含的非索引鍵之索引資料行。 如需詳細資訊，請參閱 [內含資料行的索引](#Included_Columns)。  
   
- 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
+ 搭配 ![回到頁首 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Filtered"></a> 篩選索引設計指導方針  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  將資料轉換從比較運算子的左側移至右側可能會變更轉換的意義。 在上述範例中，當 CONVERT 運算子新增至右側時，比較作業會從整數比較變更為 `varbinary` 比較。  
   
- 搭配 [![回到頁首] 連結使用的箭號圖示]搭配 [(media/uparrow16x16.gif "回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
+ 搭配 ![回到頁首 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本指南](#Top)  
   
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
 
