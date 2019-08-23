@@ -66,7 +66,7 @@ ms.locfileid: "69493783"
   
      此時會出現每一個 Cube 物件以預設語言表示的中繼資料，如下圖所示。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的預設語言是英文。  
   
-     [翻譯] 索引標籤![中的預設語言][翻譯] 索引標籤(../../2014/tutorials/media/l9-translations-5.gif "中的預設語言")  
+     [翻譯] 索引標籤![中的預設語言](../../2014/tutorials/media/l9-translations-5.gif "[翻譯] 索引標籤中的預設語言")  
   
 2.  在 [翻譯] 索引標籤的工具列上，按一下 [新增翻譯] 按鈕。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69493783"
   
      請注意，[中繼資料] 窗格中的項目會重新擴展。 [中繼資料] 窗格中的項目重新擴展之後，請注意，[網際網路銷售 - 銷售量] 量值就不會出現在 [網際網路銷售] 顯示資料夾中了， 相反地, 它會在名為的新顯示資料夾`Ventas del lnternet`中顯示為西班牙文, 如下圖所示。  
   
-     重新擴展![元資料窗格]重新擴展(../../2014/tutorials/media/l9-translations-6.gif "元資料窗格")  
+     重新擴展![元資料窗格](../../2014/tutorials/media/l9-translations-6.gif "重新擴展元資料窗格")  
   
 6.  在 [中繼資料] 窗格中, `Cantidad de las Ventas del Internet`以滑鼠右鍵按一下, 然後選取 [**加入至查詢**]。  
   

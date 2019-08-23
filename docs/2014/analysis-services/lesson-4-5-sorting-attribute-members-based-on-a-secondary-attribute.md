@@ -79,7 +79,7 @@ ms.locfileid: "69493898"
   
      下圖顯示 [通勤距離] 屬性階層的成員，它們是按照成員索引鍵的 ASCII 值來排序。  
   
-     ![路程距離屬性]階層(../../2014/tutorials/media/l4-memberproperties-4.gif "路程距離屬性")階層  
+     ![路程距離屬性](../../2014/tutorials/media/l4-memberproperties-4.gif "階層路程距離屬性")階層  
   
 2.  切換到 [客戶] 維度之 [維度設計師] 的 [維度結構] 索引標籤，並以滑鼠右鍵按一下 [資料來源檢視] 窗格中的 [客戶] 資料表的 [通勤距離排序]，然後按一下 [從資料行新增屬性]。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69493898"
   
      請注意，屬性階層成員現在是依據遞增的距離按邏輯順序排序，如下圖所示。  
   
-     ![重新排序的路程距離屬性]階層(../../2014/tutorials/media/l4-memberproperties-5.gif "重新排序的路程距離屬性")階層  
+     ![重新排序的路程距離屬性](../../2014/tutorials/media/l4-memberproperties-5.gif "階層重新排序的路程距離屬性")階層  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [在使用者定義階層的屬性之間指定屬性關聯性](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

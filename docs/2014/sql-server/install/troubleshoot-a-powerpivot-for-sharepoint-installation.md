@@ -31,7 +31,7 @@ ms.locfileid: "68892447"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>PowerPivot 圖庫縮圖顯示為紅色的 X  
  其中一個可能的原因是 **[網站集合的 PowerPivot 功能整合]** 非使用中。 完成以下動作：  
   
-1.  在 PowerPivot 圖庫文件庫中, 從齒輪圖示 [ ![Sharepoint 設定]] [(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 設定")] 或 [**首頁**] 清單按一下 [**網站設定**]。  
+1.  在 PowerPivot 圖庫文件庫中, 從齒輪圖示 ![Sharepoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 設定") 或 [**首頁**] 清單按一下 [**網站設定**]。  
   
 2.  在 **[網站集合管理]** 區段中，按一下 **[網站集合功能]** 。  
   

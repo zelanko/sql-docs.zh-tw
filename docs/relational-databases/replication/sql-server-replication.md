@@ -72,7 +72,7 @@ ms.locfileid: "68769479"
   
 -   [定義及修改資料行篩選](publish/define-and-modify-a-column-filter.md)    
 -   [定義及修改靜態資料列篩選](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [針對合併發行項定義及修改參數化資料列篩選](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [最佳化參數化資料列篩選](publish/optimize-parameterized-row-filters.md)    
 -   [定義和修改合併發行項之間的聯結篩選](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
