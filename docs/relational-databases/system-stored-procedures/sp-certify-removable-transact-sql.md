@@ -29,7 +29,7 @@ ms.locfileid: "68045935"
 
   確認已正確設定資料庫的抽取式媒體散發作業，並向使用者報告任何問題。  
   
-> **重要！！** [!包含[Ssnotedepfutureavoid&lt](../../t-sql/statements/create-database-sql-server-transact-sql.md) 改。  
+> **重要！！** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

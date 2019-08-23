@@ -23,7 +23,7 @@ ms.locfileid: "67949950"
   
  您可以使用管理工具的 [重新執行]  選項以起始 Distributed Replay 的事件重新執行階段。 這個階段是由兩個部分組成：追蹤資料分派以及分散式重新執行的啟動和同步處理。  
   
- ![分散式事件]重新執行(../../tools/distributed-replay/media/eventreplay.gif "分散式事件")重新執行  
+ ![分散式事件](../../tools/distributed-replay/media/eventreplay.gif "重新執行 分散式事件")重新執行  
   
  您可以在下列其中一種順序模式中重新執行追蹤資料：壓力模式或同步處理模式。 預設行為是在壓力模式中重新執行追蹤資料。 如需有關事件重新執行階段和順序模式的詳細資訊，請參閱＜ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)＞  
   
