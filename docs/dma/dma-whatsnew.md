@@ -1,7 +1,7 @@
 ---
-title: 什麼是新 Data Migration Assistant (SQL Server) |Microsoft 文件
+title: Data Migration Assistant (SQL Server) 中的新功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/15/2019
+ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,161 +13,165 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 4bce2ed84dbaac8d6ec95bbcf34827a8113c1f54
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2a4780c9be50275959a0f32091b90c518ccea124
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262267"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000588"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
-本文章列出新增的項目在每個版本的 Data Migration Assistant (DMA)。
+本文列出每個 Data Migration Assistant 版本 (DMA) 中的新增專案。
 
-## <a name="dma-v44"></a>DMA 4.4 版
+## <a name="dma-v45"></a>DMA 4。5
 
-DMA 的 4.4 版本提供支援上傳至 Azure Migrate 的評量。
+4\.5 版的 DMA 支援評估將檔案系統中裝載的 SQL Server Integration Services (SSIS) 套件遷移至 Azure SQL Database 或 Azure SQL Database 受控實例。
+
+## <a name="dma-v44"></a>DMA 4。4
+
+4\.4 版的 DMA 提供將評量上傳至 Azure Migrate 的支援。
 
 ## <a name="dma-v43"></a>DMA v4.3
 
-DMA 的 v4.3 版本提供支援：
+第4.3 版的 DMA 提供下列支援:
 
-* SKU 建議為 Azure SQL Database 受控執行個體根據工作負載評估。
+* 根據工作負載評估 Azure SQL Database 受控實例的 SKU 建議。
 * RDS SQL Server 做為評量的來源。
-* 代理程式作業評估為 Azure SQL Database 受控執行個體做為目標。
-* 是能夠忽略特定的評估規則;在 DMA 評估結果，不會顯示在 DMA 中所設定的 'ignoreErrorCodes' 屬性中指定的錯誤碼的清單。
-* 在 作業活動的步驟，並提供適當的建議的 T-SQL 查詢的評估
-* 擴充的事件評定 （公開預覽狀態）。
+* Azure SQL Database 受控實例的代理程式作業評量做為目標。
+* 忽略特定評估規則的能力;dma 中設定的 ' ignoreErrorCodes ' 屬性中指定的錯誤碼清單不會顯示在 DMA 評估結果中。
+* 評估作業活動步驟中的 T-SQL 查詢, 並提供適當的建議
+* 擴充事件評量 (公開預覽)。
 
-此外，這一版的 DMA 提供改善的效能來處理大量的結構描述物件的資料庫，以及相關 bug 修正：
+此外, 這一版的 DMA 提供了在資料庫中處理大量架構物件的改良效能, 以及與相關的錯誤修正:
 
-* 使用原生編譯，在某些情況下所編譯的程序。
-* 複雜的資料庫結構描述。
+* 在某些情況下, 使用原生編譯編譯的程式。
+* 複雜的資料庫架構。
 
 ## <a name="dma-v42"></a>DMA v4.2
 
-DMA 的 4.2 版版本在從內部部署 SQL Server 移轉至 Azure SQL Database 受控執行個體時，會提供一或多個伺服器執行個體的目標整備性評估的命令列支援。 客戶現在可以收集關於其資料庫結構描述的中繼資料、 偵測阻礙，請使用 DMA 命令列，並了解影響移轉至 Azure SQL Database 受控執行個體的部分支援或不受支援的功能。 結果接著可以使用提供的 Power BI 範本來轉譯。
+當從內部部署 SQL Server 遷移至 Azure SQL Database 受控實例時, 第4.2 版的 DMA 會針對一或多個伺服器實例的目標就緒性評估提供命令列支援。 客戶現在可以使用 DMA 命令列來收集其資料庫架構的中繼資料、偵測封鎖程式, 並瞭解影響遷移至 Azure SQL Database 受控實例的部分支援或不支援的功能。 然後, 可以使用提供的 Power BI 範本來呈現結果。
 
 ## <a name="dma-v41"></a>DMA v4.1
 
-DMA 的 v4.1 版本引進了支援的內部部署 SQL Server 資料庫移轉至 Azure SQL Database 受控執行個體的全方位評估。
+4\.1 版的 DMA 引進了全面評估內部部署 SQL Server 資料庫移轉至 Azure SQL Database 受控執行個體的支援。
 
-評估工作流程可協助您偵測可能會影響您移轉至 Azure SQL Database 受控執行個體的下列問題：
+評估工作流程可協助您偵測下列問題, 這可能會影響您的遷移至 Azure SQL Database 受控執行個體:
 
-* **不支援，或僅部分支援功能**。 DMA 會評估來源 SQL Server 資料庫使用中或在目標 Azure SQL Database 受控執行個體上不支援部分支援的功能。 然後此工具會提供一組完整的建議，Azure，以及緩和步驟，以便規劃移轉專案時，客戶可以用這項資訊到帳戶中可用的替代方法。
+* **不支援或部分支援的功能**。 DMA 會針對目標 Azure SQL Database 受控執行個體上部分支援或不支援的使用中功能, 評估您的來源 SQL Server 資料庫。 然後, 此工具會提供一組完整的建議、Azure 中可用的替代方法, 以及減少步驟, 讓客戶在規劃其遷移專案時可以將這項資訊列入考慮。
 
-* **相容性問題**。 DMA 也會識別下列領域的相關的相容性問題：
+* **相容性問題**。 DMA 也會識別與下列領域相關的相容性問題:
 
-  * 重大變更：可能會中斷移轉到目標資料庫的功能特定的結構描述物件。  我們建議修正資料庫移轉後的這些結構描述物件。
-  * 行為變更：報告的結構描述物件可能會繼續運作，但它們可能會出現不同的行為，例如效能降低。
-  * 告知性問題：這些物件不會影響移轉，但可能已被取代的 SQL Server 版本的功能。
+  * 重大變更:可能會中斷遷移至目標資料庫之功能的特定架構物件。  我們建議在資料庫移轉之後修正這些架構物件。
+  * 行為變更:所報告的架構物件可能會繼續運作, 但它們可能會表現出不同的行為, 例如效能降低。
+  * 參考問題:這些物件不會影響遷移, 但可能已從功能 SQL Server 版本中淘汰。
 
-完成評估之後，使用我們[Azure 資料庫移轉服務](https://azure.microsoft.com/services/database-migration/)(DMS) 來執行的 SQL Server 資料庫到 Azure SQL Database 受控執行個體移轉。  同時支援 DMS[離線](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)（單次） 和[線上](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)（最少停機時間） 的資料庫移轉至 Azure SQL Database 受控執行個體。
+評量完成之後, 請使用我們的[Azure 資料庫移轉服務](https://azure.microsoft.com/services/database-migration/)(DMS) 來執行 SQL Server 資料庫的遷移, 以 Azure SQL Database 受控執行個體。  DMS 同時支援[離線](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)(一次性) 和[線上](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)(最短停機時間) 資料庫移轉至 Azure SQL Database 受控執行個體。
 
 ## <a name="dma-v40"></a>DMA v4.0
 
-DMA 的 v4.0 版本引進了 「 Azure SQL 資料庫 SKU 建議 」 功能，可讓使用者能夠識別建議從裝載資料庫的電腦收集效能計數器為基礎的 Azure SQL 資料庫 SKU 的最小。 這項功能提供定價層、 計算層級，和最大的資料大小，以及每月預估的成本的相關建議。 它也提供佈建所有資料庫到 Azure 中大量的能力。
+4\.0 版的 DMA 引進了 Azure SQL Database SKU 建議功能, 可讓使用者根據從裝載您資料庫的電腦所收集的效能計數器, 識別最小的建議 Azure SQL Database SKU。 這項功能會提供與定價層、計算層級和最大資料大小的相關建議, 以及每個月的預估成本。 它也能讓您將所有資料庫大量布建至 Azure。
 
 > [!NOTE]
-> 這項功能目前是只能透過命令列介面 (CLI)。
+> 此功能目前僅透過命令列介面 (CLI) 提供。
 
-如需詳細資料，請參閱文章[找出您的內部部署資料庫正確的 Azure SQL 資料庫 SKU](dma-sku-recommend-sql-db.md)。
+如需其他詳細資訊, 請參閱為[您的內部部署資料庫識別正確的 AZURE SQL DATABASE SKU 一](dma-sku-recommend-sql-db.md)文。
 
 ## <a name="dma-v36"></a>DMA v3.6
 
-DMA 的 3.6 版版本導入了 「 自動修復 」 會受到最常見的移轉封鎖器的結構描述物件。
+3\.6 版的 DMA 針對受最常見的遷移封鎖程式所影響的架構物件, 引進了「自動修正」功能。
 
-此版本中提供下列移轉封鎖程式 autofix 和行為變更的問題：
+此版本提供下列遷移封鎖程式和行為變更問題的 autofix:
 
-* 使用未限定 Join 語法的結構描述物件。
-* 使用舊版的 RAISEERROR 陳述式的結構描述物件。
-* 使用順序的整數常值的 SQL 陳述式。
+* 使用不合格聯結語法的架構物件。
+* 使用舊版 RAISEERROR 語句的架構物件。
+* 使用 Order By 整數常值的 SQL 語句。
 
-DMA 會自動結構描述轉換執行列出的問題所影響的物件，並會提示使用者進行確認，再繼續進行結構描述的轉換。 使用者可以檢閱建議的程式碼變更，然後選擇接受或拒絕任何給定的資料庫物件的所有轉換。
+DMA 會針對列出的問題所影響的物件執行自動架構轉換, 並在繼續進行架構轉換之前提示使用者確認。 使用者可以檢查建議的程式碼變更, 然後接受或拒絕任何指定資料庫物件的所有轉換。
 
-DMA 會使用 Microsoft 程式合成 （文字） 技術來提供建議的程式碼修正。 深入了解[PROSE](https://microsoft.github.io/prose/)。
+DMA 使用 Microsoft 程式合成 (PROSE) 技術來建議程式碼修正。 深入瞭解[PROSE](https://microsoft.github.io/prose/)。
 
 ## <a name="dma-v35"></a>DMA v3.5
 
-DMA 的 v3.5 版本包含下列各項：
+3\.5 版的 DMA 包含下列新增專案:
 
-* 移轉至 Azure SQL Database （基準測試表示處理程序四次較快，與舊版 DMA） 的顯著效能改善。
-* 記憶體使用量已進一步最佳化，改善移轉工作流程的穩定性。
-* 能夠在結構描述和資料移轉期間略過評估，（如果您已經執行評估並解決任何重大結構描述物件，在移轉之前）。
-* 若要解決與損毀時升級舊版的 SQL Server 的內部部署至更新版本，或在 Azure Vm 上的 SQL server 備份的檔案，提供不正確的網路共用路徑時，此工具的問題修正。
+* 遷移至 Azure SQL Database 的顯著效能改善 (基準測試表示進程的速度比舊版的 DMA 快四倍)。
+* 記憶體使用量會進一步優化, 以改善遷移工作流程的穩定性。
+* 在架構和資料移轉期間略過評量的功能 (如果您已經執行評量, 並在遷移前解決任何中斷的架構物件)。
+* 修正以解決當為備份檔案提供了不正確網路共用路徑時, 此工具會損毀的問題、將舊版 SQL Server 內部部署升級至較新版本, 或在 Azure Vm 上 SQL Server。
 
 ## <a name="dma-v34"></a>DMA v3.4
 
-DMA 的 v3.4 版本包含下列各項：
+第3.4 版的 DMA 包含下列新增專案:
 
-* 做為來源移轉到 Azure SQL Database 的 SQL Server 2017 的支援。
-* 穩定性、 效能及評估規則正確性增強功能。
+* 支援 SQL Server 2017 做為 Azure SQL Database 遷移的來源。
+* 穩定性、效能及評估規則正確性的增強功能。
 
 ## <a name="dma-v33"></a>DMA v3.3
 
-DMA 的 v3.3 版本可讓移轉至新版本的 Windows 和 Linux 上的 SQL Server 2017 的內部部署 SQL Server 執行個體。 雖然 Windows 和 Linux 的整體移轉工作流程中都相同，移至 SQL Server 2017 linux 會需要幾個額外的考量。
+在 v2.0 版本的 DMA 中, 可以將內部部署 SQL Server 實例遷移至 Windows 和 Linux 上的新版本 SQL Server 2017。 雖然 Windows 和 Linux 的整體遷移工作流程相同, 但移至適用于 Linux 的 SQL Server 2017 需要一些額外的考慮。
 
-### <a name="specifying-the-back-up-path"></a>指定的備份路徑
+### <a name="specifying-the-back-up-path"></a>指定備份路徑
 
-Linux 和 Windows 使用不同的路徑格式。 如此一來，移轉至 Linux 上的 SQL Server 2017 會要求使用者提供 Windows 與 Linux 兩種版本的實體檔案位置的路徑。 您可以根據實體檔案的位置不同的方式提供兩個版本的路徑。
-如果實體的備份檔案是執行的電腦上：
+Linux 和 Windows 使用不同的路徑格式。 因此, 若要在 Linux 上遷移至 SQL Server 2017, 使用者必須同時將 Windows 和 Linux 版本的路徑提供給實體檔案的位置。 您可以根據實體檔案的位置, 以不同的方式提供兩種版本的路徑。
+如果實體備份檔案在執行的電腦上:
 
-* Linux，請使用 'samba' 會與網路上的其他電腦共用檔案共用。
-* Windows 中，會使用 '/mnt' 命令來掛接到執行 Linux 的電腦上的共用。
+* Linux, 請使用 ' samba ' 共用來與網路上的其他電腦共用檔案。
+* Windows, 請使用 ' mnt ' 命令將共用掛接到執行 Linux 的電腦上。
 
 > [!NOTE]
-> 使用 'samba' 共用或 '/mnt' 命令的詳細資料已超出本文的範圍。
+> 使用 ' samba ' 共用或 ' mnt ' 命令的詳細資料已超出本文的範圍。
 
-### <a name="migrating-windows-logins"></a>移轉的 Windows 登入
+### <a name="migrating-windows-logins"></a>遷移 Windows 登入
 
-雖然在 Linux 上的 SQL Server 2017 正式支援的 Active Directory (AD) 登入移轉，它會需要額外的設定，才能順利運作。 請參閱文章[在 Linux 上的 SQL server 的 Active Directory 驗證](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication)上 SQL Server 2017 Linux 上的 Active Directory 登入所設定的詳細資訊。 在執行之後所需的設定，設定完成後，您可以如往常般移轉 Active Directory 登入。 如預期般運作，而不需要任何額外的設定，適用於標準的 SQL 驗證。
+雖然 Linux 上的 SQL Server 2017 已正式支援 Active Directory (AD) 登入的遷移, 但它需要額外的設定才能成功工作。 如需在 Linux 上的 SQL Server 2017 上設定 Active Directory 登入的詳細資訊, 請參閱[使用 Linux 上的 SQL Server Active Directory 驗證](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication)一文。 執行必要的設定之後, 安裝已完成, 您可以照常遷移 Active Directory 登入。 標準 SQL 驗證會如預期般運作, 而不需要任何額外的設定。
 
 ## <a name="dma-v32"></a>DMA v3.2
 
-DMA 的 v3.2 版本包含下列各項：
+3\.2 版的 DMA 包含下列新增專案:
 
-* 結構描述和資料移轉會啟用內部部署 SQL Server 資料庫從 Azure SQL Database 使用新的移轉工作流程。
-* 在結構描述移轉至 Azure SQL Database 時，DMA 來源資料庫物件的指令碼、 如何修正任何潛在的相容性問題，提供指引，然後將您的結構描述部署至 Azure。
+* 架構和資料移轉會從內部部署 SQL Server 資料庫啟用, 以使用新的遷移工作流程來 Azure SQL Database。
+* 在架構遷移至 Azure SQL Database 中, DMA 會編寫您的源資料庫物件的腳本, 提供如何修正任何潛在相容性問題的指引, 然後將您的架構部署至 Azure。
 
 ## <a name="dma-v31"></a>DMA v3.1
 
-DMA 的 v3.1 版本包含下列各項：
+第3.1 版的 DMA 包含下列新增專案:
 
-* Azure SQL Database 資料庫的定序，以改善的評估建議使用的不受支援的系統預存程序和 CLR 物件。
-* 相容性層級 130、 120、 110 和 100 在移轉到 Azure SQL Database 時的評估指引。
+* 已改善 Azure SQL database 的評估建議 (根據資料庫定序)、使用不支援的系統預存程式和 CLR 物件。
+* 遷移至 Azure SQL 資料庫時, 相容性層級130、120、110和100的評估指南。
 
 ## <a name="dma-v30"></a>DMA v3.0
 
-DMA v3.0 發行擴充 Azure SQL 資料庫評估，以提供完整的建議，可協助修正的相關問題：
+3\.0 版的 DMA 延伸了 Azure SQL database 評量, 以提供完整的建議來協助修正與下列相關的問題:
 
-* 阻礙移轉的問題。
-* 部分或不支援的功能和函式。
+* 遷移封鎖問題。
+* 部分或不支援的功能和功能。
 
 ## <a name="dma-v21"></a>DMA v2.1
 
-DMA 的 v2.1 版本包含下列各項：
+2\.1 版的 DMA 包含下列新增專案:
 
-* 支援命令列以自動模式，以協助執行大規模的評定執行評定。 如需詳細資料，請參閱文章[執行 Data Migration Assistant 從命令列](dma-commandline.md)。
-* 當使用者啟動，然後關閉 DMA 的效能改進。
-* 設定 SQL 連線逾時的功能。如需詳細資料，請參閱文章[組態設定，Data Migration assistant](dma-configurationsettings.md)。
+* 以自動模式執行評量的命令列支援, 可協助大規模執行評估。 如需其他詳細資料, 請參閱[從命令列執行 Data Migration Assistant](dma-commandline.md)一文。
+* 使用者啟動和關閉 DMA 時的效能改進。
+* 設定 SQL 連接逾時的能力。如需其他詳細資料, 請參閱[Data Migration Assistant 的設定](dma-configurationsettings.md)一文。
 
 ## <a name="dma-v20"></a>DMA v2.0
 
-DMA 的 v2.0 發行版本包含改善的 Stretch database 功能建議，以提供最大化省下的儲存體的適當優先順序的資料表。
+V2.0 版本的 DMA 包含改良的 Stretch database 功能建議, 以提供適當的優先順序資料表, 以最大化儲存空間。
 
 ## <a name="dma-v10"></a>DMA v1.0
 
-DMA v1.0 發行時的初始版本，並提供：
+第1.0 版的 DMA 是初始版本, 它提供下列功能:
 
-* 探索可能會影響升級至 SQL Server 的內部部署版本的問題。 任何所發現的錯誤會被稱為相容性問題，並加以分類成下列區域：
+* 探索可能會影響升級至內部部署版本 SQL Server 的問題。 所有的發現都會描述為相容性問題, 而且會分類成下列領域:
   * 重大變更
   * 行為變更
   * 即將淘汰的功能
-* 探索的目標 SQL Server 平台的資料庫可以受益於在升級後的新功能。 任何所發現的錯誤會被稱為功能建議，並加以分類成下列區域：
+* 探索目標 SQL Server 平臺中, 資料庫在升級後可受益的新功能。 所有的發現都會描述為功能建議, 且會分類為下欄區域:
   * 效能
   * 安全性
   * 儲存體
-* 若要執行評估的現代化使用者體驗。
+* 執行評量的現代化使用者體驗。
 
 ## <a name="see-also"></a>另請參閱
 
-[Data Migration Assistant 的概觀](../dma/dma-overview.md)
+[Data Migration Assistant 總覽](../dma/dma-overview.md)

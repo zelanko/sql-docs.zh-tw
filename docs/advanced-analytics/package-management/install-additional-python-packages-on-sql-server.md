@@ -1,137 +1,143 @@
 ---
-title: 安裝新的 Python 語言套件
-description: 將新的 Python 套件新增至 SQL Server Machine Learning 服務 (資料庫內) 和 Machine Learning Server (獨立式)。
+title: 使用 pip 安裝 Python 套件
+description: 瞭解如何使用 Python pip 在 SQL Server Machine Learning 服務的實例上安裝新的 Python 套件。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/16/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e107622655d5f00d27de6abcea46a92526f47ada
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
+ms.openlocfilehash: 50463f27f37f9da410d1598002989f7cea6d8158
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641195"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000777"
 ---
-# <a name="install-new-python-packages-on-sql-server"></a>在 SQL Server 上安裝新的 Python 套件
+# <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝 Python 套件
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文說明如何在 SQL Server Machine Learning 服務的實例上安裝新的 Python 套件。 一般而言, 安裝新套件的程式類似于標準 Python 環境中。 不過, 如果伺服器沒有網際網路連線, 則需要一些額外的步驟。
+本文說明如何使用[**sqlmlutils**](https://github.com/Microsoft/sqlmlutils)封裝中的函式, 將新的 Python 封裝安裝至 SQL Server Machine Learning 服務的實例。 您安裝的套件可用於使用 T-sql [sp-執行-external](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) ----sql 語句在資料庫中執行的 Python 腳本。
 
-如需套件位置和安裝路徑的詳細資訊, 請參閱[取得 R 或 Python 套件資訊](../package-management/installed-package-information.md)。
+如需套件位置和安裝路徑的詳細資訊, 請參閱[取得 Python 套件資訊](../package-management/python-package-information.md)。
+
+> [!NOTE]
+> 不建議將`pip install`標準 python 命令新增至 SQL Server 上的 python 套件。 相反地, 請使用**sqlmlutils** , 如本文中所述。
 
 ## <a name="prerequisites"></a>必要條件
 
-+ 使用 Python 語言選項[SQL Server Machine Learning 服務 (資料庫內)](../install/sql-machine-learning-services-windows-install.md) 。 
++ 您必須使用 Python 語言選項安裝[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)。
 
-+ 套件必須符合 Python 3.5 規範, 並可在 Windows 上執行。 
++ 在您用來連接到 SQL Server 的用戶端電腦上安裝[python](https://www.python.org/) 。 您也可能想要 Python 開發環境, 例如具有[Python 擴充](https://marketplace.visualstudio.com/items?itemName=ms-python.python)功能的[Visual Studio Code](https://code.visualstudio.com/download) 。 
 
-+ 必須要有伺服器的系統管理存取權, 才能安裝封裝。
++ 在您用來連線到 SQL Server 的用戶端電腦上安裝[Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)或[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS)。 您可以使用其他資料庫管理或查詢工具, 但本文假設 Azure Data Studio 或 SSMS。
 
-## <a name="considerations"></a>考量
+### <a name="other-considerations"></a>其他考慮
 
-在新增封裝之前, 請考慮套件是否適合用於 SQL Server 環境。 資料庫伺服器通常是可容納多個工作負載的共用資產。 如果您新增的封裝在伺服器上放置過多的計算壓力, 效能將會受到影響。 
++ 套件必須符合 Python 3.5 規範, 並可在 Windows 上執行。
 
-此外, 某些熱門的 Python 套件 (例如 Flask) 會執行更適合獨立環境的工作, 如 web 程式開發。 我們建議您在資料庫中使用 Python, 以進行與資料庫引擎緊密整合 (例如機器學習服務) 的工作, 而不是單純查詢資料庫的工作。
++ Python 套件程式庫位於 SQL Server 實例的 Program Files 資料夾中, 而且根據預設, 在此資料夾中安裝需要系統管理員許可權。 如需詳細資訊, 請參閱[套件程式庫位置](../package-management/python-package-information.md#default-python-library-location)。
 
-資料庫伺服器經常被鎖定。 在許多情況下, 會完全封鎖網際網路存取。 針對具有較長相依性清單的套件, 您必須事先識別這些相依性, 並願意手動安裝每個相依性。
++ 套件安裝是每個實例。 如果您有多個 Machine Learning 服務實例, 則必須將封裝新增至每一個。
 
-## <a name="add-a-new-python-package"></a>新增 Python 套件
++ 新增封裝之前, 請考慮套件是否適合用於 SQL Server 環境。
 
-在此範例中, 我們假設您想要直接在 SQL Server 電腦上安裝新的套件。
+  + 我們建議您在資料庫中使用 Python, 以進行與資料庫引擎緊密整合 (例如機器學習服務) 的工作, 而不是單純查詢資料庫的工作。
 
-套件安裝是每個實例。 如果您有多個 Machine Learning 服務實例, 則必須將封裝新增至每一個。
+  + 如果您新增的封裝在伺服器上放置過多的計算壓力, 效能將會受到影響。
 
-在此範例中安裝的套件是[CNTK](https://docs.microsoft.com/cognitive-toolkit/), 這是一種適用于 Microsoft 的深度學習架構, 可支援自訂、訓練和共用不同類型的類神經網路。
+  + 在強化的 SQL Server 環境中, 您可能會想要避免下列情況:
+    + 需要網路存取的套件
+    + 需要提升檔案系統存取權的封裝
+    + 在 SQL Server 內執行時, 用於 網頁程式開發或其他工作的套件不會有任何好處
 
-### <a name="step-1-download-the-windows-version-of-the-python-package"></a>步驟 1： 下載 Python 套件的 Windows 版本
+## <a name="install-sqlmlutils-on-the-client-computer"></a>在用戶端電腦上安裝 sqlmlutils
 
-+ 如果您要在沒有網際網路存取的伺服器上安裝 Python 套件, 您必須將 .WHL 檔案下載到不同的電腦, 然後將它複製到伺服器。
+若要使用**sqlmlutils**, 您必須先將它安裝在用來連接到 SQL Server 的用戶端電腦上。
 
-    例如, 在另一部電腦上, 您可以從這個網站[https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)下載 .whl 檔案, 然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl` 到 SQL Server 電腦上的本機資料夾。
+1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist 將最新的**sqlmlutils** zip 檔案下載到用戶端電腦。 不要解壓縮檔案。
 
-+ SQL Server 2017 使用 Python 3.5。 
+1. 開啟**命令提示**字元, 然後執行下列命令來安裝**sqlmlutils**套件。 以您下載的**sqlmlutils** zip 檔案的完整路徑取代-此範例假設下載的檔案是`c:\temp\sqlmlutils_0.6.0.zip`。
 
-> [!IMPORTANT]
-> 請確定您取得套件的 Windows 版本。 如果檔案的結尾是 gz, 它可能不是正確的版本。
+   ```console
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
+   ```
 
-此頁面包含適用于多個平臺和多個 Python 版本的下載:[設定 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+## <a name="add-a-python-package-on-sql-server"></a>在 SQL Server 上新增 Python 套件
 
-### <a name="step-2-open-a-python-command-prompt"></a>步驟 2： 開啟 Python 命令提示字元
+在下列範例中, 您會將[文字工具](https://pypi.org/project/text-tools/)封裝加入 SQL Server。
 
-找出 SQL Server 所使用的預設 Python 程式庫位置。 如果您已安裝多個實例, 請找出您想要新增封裝之實例的 PYTHON_SERVICE 資料夾。
+### <a name="add-the-package-online"></a>線上新增封裝
 
-例如, 如果 Machine Learning 服務已使用預設值安裝, 而且預設實例上已啟用機器學習, 則路徑會如下所示:
+如果您用來連線到 SQL Server 的用戶端電腦可以存取網際網路, 您可以使用**sqlmlutils**來尋找**文字工具**套件, 以及透過網際網路的任何相依性, 然後從遠端將封裝安裝到 SQL Server 實例。
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+1. 在用戶端電腦上, 開啟 [ **python** ] 或 [python 環境]。
 
-開啟與實例相關聯的 Python 命令提示字元。
+1. 使用下列命令來安裝**文字工具**套件。 以您自己的 SQL Server 資料庫連接資訊取代。
 
-> [!TIP]
-> 針對未來的偵錯工具和測試, 您可能會想要設定實例程式庫專屬的 Python 環境。
+   ```python
+   import sqlmlutils
+   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+   sqlmlutils.SQLPackageManager(connection).install("text-tools")
+   ```
 
-### <a name="step-3-install-the-package-using-pip"></a>步驟 3： 使用 pip 安裝套件
+### <a name="add-the-package-offline"></a>離線新增封裝
 
-+ 如果您習慣使用 Python 命令列, 請使用 PIP 來安裝新的封裝。 您可以在`Scripts`子資料夾中找到**pip**安裝程式。 
+如果您用來連接到 SQL Server 的用戶端電腦沒有網際網路連線, 您可以在具有網際網路存取的電腦上使用**pip** , 將套件和任何相依套件下載到本機資料夾。 然後將資料夾複製到用戶端電腦, 讓您可以離線安裝套件。
 
-  SQL Server 安裝程式不會將腳本新增至系統路徑。 如果您收到無法辨識為`pip`內部或外部命令的錯誤, 您可以將 Scripts 資料夾新增至 Windows 中的 PATH 變數。
+#### <a name="on-a-computer-with-internet-access"></a>在有網際網路存取的電腦上
 
-  在預設安裝中,**腳本**資料夾的完整路徑如下所示:
+1. 開啟**命令提示**字元並執行下列命令, 以建立包含**文字工具**套件的本機資料夾。 這個範例會建立資料夾`c:\temp\text-tools`。
 
-    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+   ```command
+   pip download text-tools -d c:\temp\text-tools
+   ```
 
-+ 如果您使用 Visual Studio 2017, 或 Visual Studio 2015 搭配 python 延伸模組, 您可以從 [ `pip install` **python 環境**] 視窗執行。 按一下 [**套件**], 然後在文字方塊中提供要安裝之封裝的名稱或位置。 您不需要輸入`pip install`, 系統會自動為您填入。 
+1. `text-tools`將資料夾複製到用戶端電腦。 下列範例假設您已將它複製`c:\temp\packages\text-tools`到。
 
-    - 如果電腦可以存取網際網路, 請提供封裝的名稱, 或特定封裝和版本的 URL。 
-    
-    例如, 若要安裝 Windows 和 Python 3.5 支援的 CNTK 版本, 請指定下載 URL:`https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+#### <a name="on-the-client-computer"></a>在用戶端電腦上
 
-    - 如果電腦無法存取網際網路, 您必須先下載 .WHL 檔案, 然後再開始安裝。 然後, 指定本機檔案路徑和名稱。 例如, 請貼上下列路徑和檔案, 以安裝從網站下載的 .WHL 檔案:`"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+使用**sqlmlutils**來安裝您在**pip**建立的本機資料夾中找到的每個套件 (.whl 檔案)。 您安裝套件的順序並不重要。
 
-系統可能會提示您提高許可權以完成安裝。
+在此範例中,**文字工具**沒有相依性, 因此您可以安裝`text-tools`資料夾中只有一個檔案。 相反地, 套件 (例如**scikit-learn** ) 有11個相依性, 因此您可以在資料夾中找到12個檔案 ( **scikit-learn 圖**套件和11個相依套件), 然後安裝每個檔案。
 
-當安裝進行時, 您可以在 [命令提示字元] 視窗中看到狀態訊息:
-
-```python
-pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
-Collecting cntk==2.1 from https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
-  Downloading https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl (34.1MB)
-    100% |################################| 34.1MB 13kB/s
-...
-Installing collected packages: cntk
-Successfully installed cntk-2.1
-```
-
-
-### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>步驟 4： 載入封裝或其函式作為腳本的一部分
-
-安裝完成時, 您可以立即開始使用封裝, 如下一個步驟所述。
-
-如需使用 CNTK 進行深度學習的範例, 請參閱下列教學課程:[適用于 CNTK 的 Python API](https://cntk.ai/pythondocs/tutorials.html)
-
-若要在腳本中使用套件中的函式, 請`import <package_name>`在腳本的初始行中插入標準語句:
+執行下列 Python 腳本。 以您自己的 SQL Server 資料庫連接資訊, 以及封裝的實際檔案路徑和名稱取代。 針對資料夾中的每個封裝檔案重複語句。`sqlmlutils.SQLPackageManager`
 
 ```python
-import numpy as np
-import cntk as cntk
-cntk._version_
+import sqlmlutils
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## <a name="list-installed-packages-using-conda"></a>使用 conda 列出已安裝的套件
+## <a name="use-the-package-in-sql-server"></a>在 SQL Server 中使用套件
 
-有不同的方式可讓您取得已安裝套件的清單。 例如, 您可以在 Visual Studio 的 [ **Python 環境**] 視窗中, 查看已安裝的套件。
+您現在可以在 SQL Server 的 Python 腳本中使用套件。 例如:
 
-如果您使用的是 Python 命令列, 您可以使用**Pip**或**conda**套件管理員 (隨附于 SQL Server 安裝程式所新增的 Anaconda Python 環境中)。
+```python
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
+from text_tools.finders import find_best_string
+corpus = "Lorem Ipsum text"
+query = "Ipsum"
+first_match = find_best_string(query, corpus)
+print(first_match)
+  '
+```
 
-1. 移至 C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Scripts
+## <a name="remove-the-package-from-sql-server"></a>從 SQL Server 移除封裝
 
-1. 以滑鼠右鍵按一下 [ **conda**  > ] [以**系統管理員**身分`conda list`執行], 然後輸入以傳回目前環境中所安裝的套件清單。
+如果您想要移除**文字工具**套件, 請使用您稍早定義的相同連接變數, 在用戶端電腦上使用下列 Python 命令。
 
-1. 同樣地, 以滑鼠右鍵按一下 [ **pip**  > ] [以**系統管理員身分執行**], 然後輸入`pip list`以傳回相同的資訊。 
+```python
+sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
+```
 
-如需**conda**以及如何使用它來建立和管理多個 Python 環境的詳細資訊, 請參閱[使用 conda 管理環境](https://conda.io/docs/user-guide/tasks/manage-environments.html)。
+## <a name="see-also"></a>另請參閱
 
-> [!Note]
-> SQL Server 安裝程式不會在系統路徑和生產 SQL Server 實例上新增 Pip 或 Conda, 因此最佳做法是將非必要的可執行檔保留在路徑外。 不過, 針對開發和測試環境, 您可以將 Scripts 資料夾新增至系統 PATH 環境變數, 以從任何位置執行 Pip 和 Conda on 命令。
++ 若要查看安裝在 SQL Server Machine Learning 服務中之 Python 套件的相關資訊, 請參閱[取得 python 套件資訊](../package-management/python-package-information.md)。
+
++ 如需有關在 SQL Server Machine Learning 服務中安裝 R 套件的詳細資訊, 請參閱[在 SQL Server 上安裝新的 r 套件](../r/install-additional-r-packages-on-sql-server.md)。

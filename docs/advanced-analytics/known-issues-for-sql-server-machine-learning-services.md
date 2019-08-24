@@ -1,23 +1,23 @@
 ---
-title: R 語言和 Python 整合的已知問題
+title: Python 和 R 的已知問題
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 9a8237887786066a8789cb319fc7de550fa7f535
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715197"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000455"
 ---
-# <a name="known-issues-in-machine-learning-services"></a>Machine Learning 服務中的已知問題
+# <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務中的已知問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文說明在[SQL Server 2016 R services](r/sql-server-r-services.md)中提供的機器學習服務元件已知問題或限制, 以及[使用 R 和 Python SQL Server Machine Learning 服務](what-is-sql-server-machine-learning.md)的選項。
+本文說明在[SQL Server Machine Learning 服務](what-is-sql-server-machine-learning.md)和[SQL Server 2016 R 服務](r/sql-server-r-services.md)中提供的機器學習服務元件已知問題或限制。
 
 ## <a name="setup-and-configuration-issues"></a>安裝和設定問題
 
@@ -43,7 +43,7 @@ R_SERVER 使用 Intel 數學核心程式庫 (MKL)。 對於涉及 MKL 的計算,
 3. 重新開機 R_SERVER。 在 SQL Server 上, 您可以重新開機 SQL Server Launchpad 服務。
 
 > [!NOTE]
-> 如果您在 Linux 上執行 SQL Server 2019 Preview, 請在使用者的主目錄中編輯或建立*bash_profile* , 並新增這`export MKL_CBWR="AUTO"`一行。 在 bash 命令提示字元`source .bash_profile`中輸入來執行此檔案。 在 R 命令提示`Sys.getenv()`字元中輸入, 以重新開機 R_SERVER。
+> 如果您在 Linux 上執行 SQL Server 2019 Preview, 請在使用者的主目錄中編輯或建立*bash_profile* , 並新增這`export MKL_CBWR="AUTO"`一行。 在 bash 命令提示字元中輸入 `source .bash_profile` 來執行此檔案。 在 R 命令提示`Sys.getenv()`字元中輸入, 以重新開機 R_SERVER。
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2.R 腳本執行階段錯誤 (SQL Server 2017 CU5-CU7 回歸)
 
@@ -238,7 +238,7 @@ DACPAC 模型目前不支援 R Services 或 Machine Learning 服務所使用的�
 
 換句話說, 針對序列化和還原序列化作業, 請使用相同版本的 RevoScaleR。
 
-### <a name="3-real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>3.即時計分無法正確處理樹狀結構和樹系模型中的_learningRate_參數
+### <a name="3-real-time-scoring-does-not-correctly-handle-the-_learningrate_-parameter-in-tree-and-forest-models"></a>3.即時計分無法正確處理樹狀結構和樹系模型中的_learningRate_參數
 
 如果您使用決策樹或決策樹系方法建立模型, 並指定學習速率, 則使用`sp_rxpredict`或 SQL `PREDICT`函數時可能會看到不一致的結果, 相較于`rxPredict`使用。
 
@@ -322,7 +322,7 @@ data <- RxSqlServerData(
 
 當您使用 rxDataStep 函式將結果寫入資料表時, 使用*varsToKeep*和*varsToDrop*是一種便利的方式, 可指定要包含或排除在作業中的資料行。 不過, SQL Server 的資料來源不支援這些引數。
 
-### <a name="11-limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>11.對 sp\_執行\_外部\_腳本中 SQL 資料類型的有限支援
+### <a name="11-limited-support-for-sql-data-types-in-sp_execute_external_script"></a>11.對 sp\_執行\_外部\_腳本中 SQL 資料類型的有限支援
 
 並非 SQL 中支援的所有資料類型都可以在 R 中使用。因應措施是, 將不支援的資料類型轉換為支援的資料類型, 然後再將\_資料\_傳遞\_至 sp 執行外部腳本。
 
@@ -334,7 +334,7 @@ data <- RxSqlServerData(
 
 若要將任何非 ASCII 字串資料從[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]傳送至 R/Python, 請使用 utf-8 編碼 (適用于[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]), 或使用 Nvarchar 類型進行相同的。
 
-### <a name="13-only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>13.只能從傳回一個型`raw`別的值`sp_execute_external_script`
+### <a name="13-only-one-value-of-type-raw-can-be-returned-from-sp_execute_external_script"></a>13.只能從傳回一個型`raw`別的值`sp_execute_external_script`
 
 當 R 傳回二進位資料類型 (R **raw**資料類型) 時, 此值必須在輸出資料框架中傳送。
 
@@ -502,6 +502,33 @@ SQL Server 2017 累計更新 3 (CU3) 中已修正此問題。
 
 SQL Server 2017 累計更新 14 (CU14) 中已修正此問題。
 
+### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6.在 Linux 上安裝具有 pip 的 Python 套件時, 發生錯誤的解譯器錯誤 
+
+在 SQL Server 2019 上, 如果您嘗試使用**pip**。 例如:
+
+```bash
+/opt/mssql/mlservices/runtime/python/bin/pip -h
+```
+
+接著, 您會收到此錯誤:
+
+> *bash:/opt/mssql/mlservices/runtime/python/bin/pip:/opt/microsoft/mlserver/9.4.7/bin/python/python: 錯誤的解譯器:無此檔案或目錄*
+
+**因應措施**
+
+從[Python 套件授權單位 (PyPA)](https://www.pypa.io)安裝**pip** :
+
+```bash
+wget 'https://bootstrap.pypa.io/get-pip.py' 
+/opt/mssql/mlservices/bin/python/python ./get-pip.py 
+```
+
+**建議**
+
+使用[sqlmlutils](https://github.com/microsoft/sqlmlutils/tree/master/Python)或[建立外部程式庫](../t-sql/statements/create-external-library-transact-sql.md)來安裝 Python 套件。
+
+**適用於：** Linux 上的 SQL Server 2019
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 和 Microsoft R Open
 
 本節列出由革新分析所提供的 R 連線能力、開發和效能工具特有的問題。 這些工具是在舊版的[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]發行前版本中提供。
@@ -522,8 +549,6 @@ SQL Server 2017 累計更新 14 (CU14) 中已修正此問題。
 
 SQLite ODBC 驅動程式的修訂0.92 與 RevoScaleR 不相容。 修訂 0.88-0.91 和0.93 和更新版本已知相容。
 
-## <a name="see-also"></a>另請參閱
-
-[SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)
+## <a name="next-steps"></a>後續步驟
 
 [SQL Server 中的機器學習服務疑難排解](machine-learning-troubleshooting-faq.md)

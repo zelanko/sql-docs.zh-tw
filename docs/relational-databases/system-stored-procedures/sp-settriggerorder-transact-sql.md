@@ -1,5 +1,5 @@
 ---
-title: sp_settriggerorder (TRANSACT-SQL) |Microsoft Docs
+title: sp_settriggerorder (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 910e615cc5257eb5be65fe88b1694e0a3bc218c5
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032934"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000819"
 ---
-# <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
+# <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   指定第一個或最後一個引發的 AFTER 觸發程序。 在第一個及最後一個觸發程序之間啟動的 AFTER 觸發程序，會以未定義的順序執行。  
@@ -43,12 +43,12 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` 觸發程序和結構描述名稱其所屬，如果適用的話，是設定或變更其順序。 [_triggerschema_ **。** ]*triggername*是**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 *triggerschema*不能指定 DDL 或登入觸發程序。  
+`[ @triggername = ] '[ _triggerschema.] _triggername'`這是觸發程式的名稱, 以及它所屬的架構 (如果適用的話), 其順序會設定或變更。 [_triggerschema_ **。** ]*triggername*為**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 無法為 DDL 或登入觸發程式指定*triggerschema* 。  
   
-`[ @order = ] 'value'` 是新的觸發程序順序的設定。 *值*已**varchar(10)** 和它可以是下列值之一。  
+`[ @order = ] 'value'`這是觸發程式新順序的設定。 *值*為**Varchar (10)** , 它可以是下列任何一個值。  
   
 > [!IMPORTANT]  
->  **第一**並**最後一個**觸發程序必須是兩個不同的觸發程序。  
+>  **第一個**和**最後一個**觸發程式必須是兩個不同的觸發程式。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -56,12 +56,12 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**最後一個**|最後引發觸發程序。|  
 |**無**|觸發程序的引發，沒有任何既定順序。|  
   
-`[ @stmttype = ] 'statement_type'` 指定引發觸發程序的 SQL 陳述式。 *statement_type*已**varchar(50**而且可以是 INSERT、 UPDATE、 DELETE、 登入，或任何[!INCLUDE[tsql](../../includes/tsql-md.md)]中所列的陳述式事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。 您不能指定事件群組。  
+`[ @stmttype = ] 'statement_type'`指定引發觸發程式的 SQL 語句。 *statement_type*是**Varchar (50)** , 可以是 INSERT、UPDATE、DELETE、LOGON, 或[!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中所列的任何語句事件。 您不能指定事件群組。  
   
- 觸發程序可以指定為**第一**或是**最後一個**陳述式類型，該觸發程序已定義為該陳述式類型的觸發程序之後，才觸發程序。 比方說，觸發程序**TR1**您可以指定**第一次**資料表的插入**T1**如果**TR1**定義為 INSERT 觸發程序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]會傳回錯誤，如果**TR1**，其中已定義為 INSERT 觸發程序，只會設定為**第一個**，或**上次**，UPDATE 陳述式的觸發程序。 如需詳細資訊，請參閱＜備註＞一節。  
+ 只有在該觸發程式已定義為該語句類型的觸發程式之後, 才可以將觸發程式指定為語句類型的**第一個**或**最後一個**觸發程式。 例如, 如果將**TR1**定義為 insert 觸發程式, 就可以**先**針對資料表**T1**上的 insert 指定觸發程式**TR1** 。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)] **TR1**(已定義為 INSERT 觸發程式) 已設定為 UPDATE 語句的**第一個**或**最後**一個觸發程式, 則會傳回錯誤。 如需詳細資訊，請參閱＜備註＞一節。  
   
- **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
- 當*triggername* DDL 觸發程序 **@namespace** 指定是否*triggername*建立使用資料庫範圍或伺服器範圍。 如果*triggername*登入觸發程序，必須指定伺服器。 如需有關 DDL 觸發程序範圍的詳細資訊，請參閱 < [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定，或指定 NULL，則*triggername* DML 觸發程序。  
+ 命名空間 = { **' 資料庫 '**  |  **' 伺服器 '** | **\@** Null  
+ 當*triggername*是 DDL 觸發程式時,  **\@namespace**會指定是否使用資料庫範圍或伺服器範圍來建立*triggername* 。 如果*triggername*是登入觸發程式, 則必須指定伺服器。 如需 DDL 觸發程式範圍的詳細資訊, 請參閱[Ddl 觸發](../../relational-databases/triggers/ddl-triggers.md)程式。 如果未指定, 或指定了 Null, *triggername*就是 DML 觸發程式。  
   
 ||  
 |-|  
@@ -73,31 +73,31 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="remarks"></a>備註  
   
 ## <a name="dml-triggers"></a>DML 觸發程序  
- 可以是其中之一**第一個**一個**最後一個**單一資料表上的每個陳述式的觸發程序。  
+ 單一資料表上的每個語句都只能有一個**第一個**和**最後**一個觸發程式。  
   
- 如果**第一個**觸發程序已定義在資料表、 資料庫或伺服器上，您不能指定新的觸發程序，當做**第一次**相同的資料表、 資料庫或伺服器相同*statement_type*. 這項限制也適用於**最後一個**觸發程序。  
+ 如果資料表、資料庫或伺服器上已定義了**第一個**觸發程式, 您就不能為相同*statement_type*的相同資料表、資料庫或伺服器指定新的觸發程式。 這種限制也會套用**最後**的觸發程式。  
   
- 複寫會為包含在即時更新或佇列式更新訂閱的資料表，自動產生第一個觸發程序。 複寫需要觸發程序是第一個觸發程序。 當您嘗試將含有第一個觸發程序的資料表包括在立即更新或佇列更新訂閱中，複寫會引發錯誤。 如果您嘗試在資料表已加入訂閱後，將觸發程序變成第一個觸發程序，則 **sp_settriggerorder** 會傳回錯誤。 如果您複寫的觸發程序，使用 ALTER TRIGGER，或使用**sp_settriggerorder**複寫觸發程序來變更**最後一個**或是**無**觸發程序，訂閱會執行無法正確運作。  
+ 複寫會為包含在即時更新或佇列式更新訂閱的資料表，自動產生第一個觸發程序。 複寫需要觸發程序是第一個觸發程序。 當您嘗試將含有第一個觸發程序的資料表包括在立即更新或佇列更新訂閱中，複寫會引發錯誤。 如果您嘗試在資料表已加入訂閱後，將觸發程序變成第一個觸發程序，則 **sp_settriggerorder** 會傳回錯誤。 如果您對複寫觸發程式使用 ALTER TRIGGER, 或使用**sp_settriggerorder**將複寫觸發程式變更為**最後一個**或**無**觸發程式, 則訂閱無法正常運作。  
   
 ## <a name="ddl-triggers"></a>DDL 觸發程序  
- 如果資料庫範圍的 DDL 觸發程序和具有伺服器範圍的 DDL 觸發程序存在於相同的事件，您可以指定這兩個觸發程序會**第一**觸發程序或**最後一個**觸發程序。 不過，伺服器範圍的觸發程序一定會先觸發。 一般來說，存在於相同事件上之 DDL 觸發程序的執行順序如下：  
+ 如果具有資料庫範圍的 DDL 觸發程式和具有伺服器範圍的 DDL 觸發程式存在於相同的事件上, 您可以指定這兩個觸發程式是**第一個**觸發程式或**最後**一個觸發程式。 不過，伺服器範圍的觸發程序一定會先觸發。 一般來說，存在於相同事件上之 DDL 觸發程序的執行順序如下：  
   
-1.  伺服器層級觸發程序標示**第一個**。  
+1.  已標記為**First**的伺服器層級觸發程式。  
   
 2.  其他伺服器層級觸發程序。  
   
-3.  伺服器層級觸發程序標示**最後一個**。  
+3.  標示為**Last**的伺服器層級觸發程式。  
   
-4.  資料庫層級觸發程序標示**第一個**。  
+4.  標記為**第一個**的資料庫層級觸發程式。  
   
 5.  其他資料庫層級觸發程序。  
   
-6.  資料庫層級觸發程序標示**最後一個**。  
+6.  標示為**Last**的資料庫層級觸發程式。  
   
 ## <a name="general-trigger-considerations"></a>一般觸發程序考量  
- 如果 ALTER TRIGGER 陳述式變更第一個或最後一個觸發程序**第一個**或**上次**卸除觸發程序最初所設定的屬性和值會取代**None**。 將順序值必須使用重設**sp_settriggerorder**。  
+ 如果 ALTER TRIGGER 語句變更第一個或最後一個觸發程式, 則會捨棄原先在觸發程式上設定的**第一個**或**最後**一個屬性, 而該值會取代為**None**。 您必須使用**sp_settriggerorder**來重設順序值。  
   
- 如果相同的觸發程序必須指定為一個以上的陳述式類型的第一個或最後一個順序**sp_settriggerorder**必須執行每個陳述式類型。 此外，觸發程序必須先定義陳述式類型之前被指定為**第一個**或是**最後一個**引發該陳述式類型的觸發程序。  
+ 如果您必須將相同的觸發程式指定為一個以上語句類型的第一個或最後一個順序, 則必須針對每個語句類型執行**sp_settriggerorder** 。 此外, 您必須先針對語句型別定義觸發程式, 才能將它指定為要針對該語句型別引發的**第一個**或**最後一個**觸發程式。  
   
 ## <a name="permissions"></a>Permissions  
  若要設定具有伺服器範圍 (在 ON ALL SERVER 上建立) 的 DDL 觸發程序或登入觸發程序的順序，便需要 CONTROL SERVER 權限。  
@@ -128,7 +128,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [資料庫引擎預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   
