@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742937"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653826"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教學課程：準備 SQL Server 進行複寫 (發行者、散發者、訂閱者)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -234,8 +234,6 @@ ms.locfileid: "68742937"
 
    ![檢視 [物件總管] 中的所有四個帳戶](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
- 6. 在散發代理程式和合併代理程式的訂閱者上重複步驟 1-4，將電腦名稱變更為訂閱者的名稱。 
-  
   
 如需詳細資訊，請參閱：
 - [設定散發](../../relational-databases/replication/configure-distribution.md) 

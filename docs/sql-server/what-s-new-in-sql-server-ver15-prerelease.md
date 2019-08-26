@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 CTP 公告封存 |Microsoft Docs
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 8c34126f84987f0255d815b972e87118f184d070
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028872"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653781"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>SQL Server 2019 CTP 公告封存
 
@@ -25,6 +25,39 @@ ms.locfileid: "69028872"
 本文將在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 發行到生產環境時移除。
 
 如需最新資訊，請參閱 [SQL Server 2019 的新功能](what-s-new-in-sql-server-ver15.md)。
+
+## <a name="ctp-32-july-2019"></a>CTP 3.2 2019 年 7 月
+
+### <a name="new-in-big-data-clusters"></a>巨量資料叢集的新功能
+
+|新功能或更新 | 詳細資料 |
+|:---|:---|
+|公開預覽 |在 CTP 3.2 之前，已將 SQL Server 巨量資料叢集提供給註冊的早期採用者使用。 此版本讓任何人都能體驗 SQL Server 巨量資料叢集的功能。 <br/><br/> 請參閱[開始使用 SQL Server 巨量資料叢集](../big-data-cluster/deploy-get-started.md)。|
+|`azdata` |CTP 3.2 引進了 `azdata`，這是一種以 Python 編寫的命令列公用程式，可讓叢集管理員透過 REST API 啟動程序和管理巨量資料叢集。 `azdata` 取代了 `mssqlctl`。 請參閱[安裝 `azdata`](../big-data-cluster/deploy-install-azdata.md)。 |
+|PolyBase |外部資料表資料行名稱現在可用來查詢 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 資料來源。 在先前的 CTP 版本中，資料行僅根據目的地上的序數進行繫結，而不會使用外部資料表定義中的資料行名稱。|
+|HDFS 階層重新整理 |針對 HDFS 階層處理引進了重新整理功能，以便能夠針對遠端資料的最新快照集重新整理現有的裝載。 請參閱 [HDFS 階層處理](../big-data-cluster/hdfs-tiering.md) |
+|以筆記本為基礎的疑難排解 |CTP 3.2 引進了 Jupyter Notebook，用來協助您針對 SQL Server 巨量資料叢集中的元件進行[開發](../big-data-cluster/deploy-notebooks.md)與[探索、診斷和疑難排解](../big-data-cluster/manage-notebooks.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-analysis-services"></a>Analysis Services 的新功能
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---| 
+| Power BI 快取重新整理的治理設定。  | Power BI 服務會快取儀表板磚的資料和報表資料，以進行 Live Connect 報表的初始載入，進而導致將過多的快取查詢提交給 SSAS，且在極端情況下使伺服器超載。 此版本引進了 **ClientCacheRefreshPolicy** 屬性。 這個屬性可讓您在伺服器層級覆寫此行為。 若要深入了解，請參閱[一般屬性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
+| 線上附加  | 此功能可讓您將表格式模型附加為線上作業。 線上附加可用於同步處理內部部署查詢擴充環境中的唯讀複本。 若要深入了解，請參閱[線上附加](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)的詳細資料。 |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-language-extensions"></a>語言延伸模組的新功能
+
+|新功能或更新 | 詳細資料 |
+|:---|:---|
+| 新增預設 JAVA 執行階段  | SQL Server 現在在整個產品中包含 Azul 系統適用於 JAVA 的 Zulu Embedded 支援。 如需詳細資訊，請參閱 [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/) (現已推出 SQL Server 2019 中的免費支援 JAVA)。 |
+
+### <a name="new-in-sql-server-on-linux"></a>Linux 上 SQL Server 的新功能
+
+|新功能或更新 | 詳細資料 |
+|:---|:---|
+| 異動資料擷取 (CDC) 支援 | 在 Linux 上現在已針對 SQL Server 2019 支援異動資料擷取 (CDC)。 |
 
 ## <a name="ctp-31-june-2019"></a>2019 年 6 月 CTP 3.1
 
@@ -43,7 +76,7 @@ ms.locfileid: "69028872"
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---|
-|加密索引的資料行|可在使用隨機加密方式以及啟用記憶體保護區的索引鍵所加密的資料行上建立索引，改善雜雜查詢 (使用 `LIKE` 與比較運算子) 的效能。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+|加密索引的資料行|可在使用隨機加密方式以及啟用記憶體保護區的索引鍵所加密的資料行上建立索引，改善複雜查詢 (使用 `LIKE` 與比較運算子) 的效能。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 |可於安裝期間設定 `MIN` 與 `MAX` 的伺服器記憶體值 |在安裝期間，您可設定伺服器記憶體的值。 可以使用預設值、導出的建議值，若您已選擇 [建議]  選項 [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)，也可以手動指定您自己的值。
 |新的圖形函式 - `SHORTEST_PATH` | 可使用 `MATCH` 中的 `SHORTEST_PATH`，尋找圖形中兩個節點之間最短的路徑，或是執行任意長度的周遊。|
 |圖形資料庫的分割區資料表與索引|分割區資料表與索引的資料，會分成可分散於圖形資料庫中多個檔案群組之間的單位。 |
