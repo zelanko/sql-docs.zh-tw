@@ -18,12 +18,12 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912097"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009399"
 ---
 # <a name="columnstore-indexes-overview"></a>資料行存放區索引：概觀
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "67912097"
 |從資料行存放區索引刪除資料列。|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|使用 [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) 刪除資料列。<br /><br /> **資料行存放區資料列**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將該資料列標示為邏輯刪除，但在重建索引之前，不會回收該資料列的實體儲存體。<br /><br /> **差異存放區資料列**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以邏輯方式和實際方式刪除該資料列。|  
 |更新資料行存放區索引中的資料列。|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|使用 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) 更新資料列。<br /><br /> **資料行存放區資料列**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將該資料列標示為邏輯刪除，然後將更新的資料列插入差異存放區中。<br /><br /> **差異存放區資料列**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會更新差異存放區中的該資料列。|  
 |將資料載入資料行存放區索引。|[資料行存放區索引資料載入](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
-|強制將差異存放區中的所有資料列移入資料行存放區。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [資料行存放區索引重組](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|`ALTER INDEX` 搭配 `REBUILD` 選項會強制將所有資料列移入資料行存放區。|  
+|強制將差異存放區中的所有資料列移入資料行存放區。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|`ALTER INDEX` 搭配 `REBUILD` 選項會強制將所有資料列移入資料行存放區。|  
 |重組資料行存放區索引。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE` 會線上重組資料行存放區索引。|  
 |合併具有資料行存放區索引的資料表。|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d2ade42e25593911ea25b2a16ad53372ced0438
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: e7eb7457723470056e60758c4ac560d5eb49dd74
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941111"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009359"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68941111"
 
 - [資料倉儲的資料行存放區索引](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 
-- [資料行存放區索引重組](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)
+- [重新組織與重建索引](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 
 ## <a name="database-scoped-configurations"></a>資料庫範圍的設定

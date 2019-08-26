@@ -80,7 +80,7 @@ SQLRETURN SQLFetchScroll(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLFetchScroll**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時, 可以藉由呼叫 SQLGetDiagRec 和 HandleType 的 Handletype 來  和 StatementHandle 的控制碼來取得相關聯的 SQLSTATE 值。 下表列出**SQLFetchScroll**常傳回的 SQLSTATE 值, 並在此函式的內容中說明每一個值;「(DM)」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明, 否則, 與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。 如果單一資料行發生錯誤, 則可以使用 SQL_DIAG_COLUMN_NUMBER 的以來呼叫**SQLGetDiagField** , 以判斷發生錯誤的資料行;您可以使用 SQL_DIAG_ROW_NUMBER 的以來呼叫和**SQLGetDiagField** , 以判斷包含該資料行的資料列。  
+ 當**SQLFetchScroll**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時, 可以藉由呼叫 SQLGetDiagRec 和 HandleType 的 Handletype 來和 StatementHandle 的控制碼來取得相關聯的 SQLSTATE 值。 下表列出**SQLFetchScroll**常傳回的 SQLSTATE 值, 並在此函式的內容中說明每一個值;「(DM)」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明, 否則, 與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。 如果單一資料行發生錯誤, 則可以使用 SQL_DIAG_COLUMN_NUMBER 的以來呼叫**SQLGetDiagField** , 以判斷發生錯誤的資料行;您可以使用 SQL_DIAG_ROW_NUMBER 的以來呼叫和**SQLGetDiagField** , 以判斷包含該資料行的資料列。  
   
  對於可傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 的所有 SQLSTATEs (01xxx SQLSTATEs 除外), 如果一或多個 (但非全部) SQL_SUCCESS_WITH_INFO 作業的資料列發生錯誤, 則會傳回多資料列, 如果發生錯誤, 則會傳回 SQL_ERROR單一資料列作業。  
   
@@ -88,15 +88,15 @@ SQLRETURN SQLFetchScroll(
 |--------------|-----------|-----------------|  
 |01000|一般警告|驅動程式特定的參考用訊息。 (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
 |01004|字串資料, 右邊已截斷|傳回資料行的字串或二進位資料導致截斷非空白字元或非 Null 的二進位資料。 如果它是字串值, 則會被右截斷。|  
-|01S01|資料列發生錯誤|提取一或多個資料列時發生錯誤。<br /><br /> (如果當 ODBC 3.x 應用程式與 ODBC 2.x  驅動程式搭配使用時, 會傳回此  SQLSTATE, 則可以略過)。|  
+|01S01|資料列發生錯誤|提取一或多個資料列時發生錯誤。<br /><br /> (如果當 ODBC 3.x 應用程式與 ODBC 2.x驅動程式搭配使用時, 會傳回此 SQLSTATE, 則可以略過)。|  
 |01S06|嘗試在結果集傳回第一個資料列集之前提取|當 FetchOrientation 為 SQL_FETCH_PRIOR、目前的位置超出第一個資料列, 且目前資料列的數目小於或等於資料列集大小時, 要求的資料列集會重迭結果集的開頭。<br /><br /> 當 FetchOrientation 為 SQL_FETCH_PRIOR、目前的位置超出結果集的結尾, 且資料列集大小大於結果集大小時, 要求的資料列集會重迭結果集的開頭。<br /><br /> 當 FetchOrientation 為 SQL_FETCH_RELATIVE、FetchOffset 為負數, 且 FetchOffset 的絕對值小於或等於資料列集大小時, 要求的資料列集會重迭結果集的開頭。<br /><br /> 當 FetchOrientation 為 SQL_FETCH_ABSOLUTE、FetchOffset 為負數, 且 FetchOffset 的絕對值大於結果集大小, 但小於或等於資料列集大小時, 要求的資料列集就會重迭結果集的開頭。<br /><br /> (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
 |01S07|小數截斷|針對資料行傳回的資料已被截斷。 若為數值資料類型, 則會截斷數位的小數部分。 若為包含時間元件的時間、時間戳記和間隔資料類型, 則會截斷時間的小數部分。<br /><br /> (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
 |07006|限制的資料類型屬性違規|在結果集中, 資料行的資料值無法轉換成**SQLBindCol**中*TargetType*所指定的資料類型。<br /><br /> 資料行0是以 SQL_C_BOOKMARK 的資料類型系結, 且 SQL_ATTR_USE_BOOKMARKS 語句屬性已設定為 SQL_UB_VARIABLE。<br /><br /> 資料行0是以 SQL_C_VARBOOKMARK 的資料類型系結, 而 SQL_ATTR_USE_BOOKMARKS 語句屬性並未設定為 SQL_UB_VARIABLE。|  
-|07009|不正確描述項索引|驅動程式是一個不支援  **SQLExtendedFetch**的 ODBC 2.x 驅動程式, 而且資料行的系結中指定的資料行編號是0。<br /><br /> 已系結資料行 0, 而且 SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_OFF。|  
+|07009|不正確描述項索引|驅動程式是一個不支援 **SQLExtendedFetch**的 ODBC 2.x 驅動程式, 而且資料行的系結中指定的資料行編號是0。<br /><br /> 已系結資料行 0, 而且 SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_OFF。|  
 |08S01|通訊連結失敗|在函式完成處理之前, 驅動程式連線到驅動程式的資料來源之間的通訊連結失敗。|  
 |22001|字串資料, 右邊已截斷|針對資料行傳回的可變長度書簽已截斷。|  
 |22002|需要指標變數, 但未提供|已將 Null 資料提取至*StrLen_or_IndPtr*由**SQLBindCol** (或**SQLSETDESCFIELD**或**SQLSetDescRec**設定的 SQL_DESC_INDICATOR_PTR) 所設定的資料行, 其為 null 指標。|  
-|22003|數值超出範圍|傳回一個或多個系結資料行的數值 (例如數值或字串), 會造成截斷的整個數位部分 (相對於分數)。<br /><br /> 如需詳細資訊, [](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)請參閱[附錄 D:資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22003|數值超出範圍|傳回一個或多個系結資料行的數值 (例如數值或字串), 會造成截斷的整個數位部分 (相對於分數)。<br /><br /> 如需詳細資訊, [將數據從SQL轉換為C數據類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 請參閱 [附錄 D:資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md) 。|  
 |22007|不正確日期時間格式|結果集中的字元資料行已系結至日期、時間或時間戳記 C 結構, 而且資料行中的值分別為不正確日期、時間或時間戳記。|  
 |22012|除數為零|傳回算術運算式的值, 導致零除。|  
 |22015|間隔欄位溢位|從精確的數值或間隔 SQL 類型指派到間隔 C 類型, 會導致前置欄位中的有效位數遺失。<br /><br /> 將資料提取到 interval C 類型時, 不會在間隔 C 類型中表示 SQL 類型的值。|  
@@ -104,7 +104,7 @@ SQLRETURN SQLFetchScroll(
 |24000|指標狀態無效|*StatementHandle*處於執行中狀態, 但沒有與*StatementHandle*相關聯的結果集。|  
 |40001|序列化失敗|執行提取的交易已終止, 以避免發生鎖死。|  
 |40003|語句完成不明|此函式執行期間相關聯的連接失敗, 無法判斷交易的狀態。|  
-|HY000|一般錯誤|發生錯誤, 但沒有任何特定 SQLSTATE, 且未定義任何執行特定的 SQLSTATE。 MessageText 緩衝區中**的 SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。 *\**|  
+|HY000|一般錯誤|發生錯誤, 但沒有任何特定 SQLSTATE, 且未定義任何執行特定的 SQLSTATE。 *MessageText\*緩衝區中的 **SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
 |HY008|作業已取消|已啟用*StatementHandle*的非同步處理。 已呼叫函式, 在完成執行之前, 會在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。 然後在*StatementHandle*上再次呼叫函式。<br /><br /> 已呼叫函式, 並在完成執行之前, 從多執行緒應用程式中的不同執行緒在*StatementHandle*上呼叫**SQLCancel**或**SQLCancelHandle** 。|  
 |HY010|函數順序錯誤|(DM) 已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLFetchScroll**函數時, 這個非同步函式仍在執行中。<br /><br /> (DM) 已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** , 並傳回 SQL_PARAM_DATA_AVAILABLE。 在抓取所有資料流程參數的資料之前, 會呼叫這個函式。<br /><br /> (DM) 指定的*StatementHandle*不是處於執行中狀態。 在未先呼叫**SQLExecDirect**、 **SQLExecute**或目錄函式的情況下呼叫函式。<br /><br /> (DM) 已針對*StatementHandle*呼叫非同步執行的函式 (而非這個函式), 而且在呼叫這個函數時仍在執行中。<br /><br /> (DM) 已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** , 並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前, 已呼叫此函數。<br /><br /> (DM) 在呼叫**SQLExtendedFetch**之後, 以及呼叫具有 SQL_CLOSE 選項的**SQLFreeStmt**之前, 會呼叫*StatementHandle*的**SQLFetch** 。|  
@@ -158,19 +158,19 @@ SQLRETURN SQLFetchScroll(
 |*FetchOffset*|*FetchOffset*引數的值。|  
 |*BookmarkRow*|對應至 SQL_ATTR_FETCH_BOOKMARK_PTR 語句屬性所指定之書簽的資料列。|  
   
-## <a name="sqlfetchnext"></a>SQL_FETCH_NEXT  
+## <a name="sql_fetch_next"></a>SQL_FETCH_NEXT  
  適用下列規則。  
   
 |條件|新資料列集的第一個資料列|  
 |---------------|-----------------------------|  
 |*開始之前*|1|  
-|*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] * \<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*sha-1 *> LastResultRow*|*結束之後*|  
 |*結束之後*|*結束之後*|  
   
  [1] 如果資料列集大小在上一次呼叫提取資料列之後已經變更, 這就是與上一個呼叫搭配使用的資料列集大小。  
   
-## <a name="sqlfetchprior"></a>SQL_FETCH_PRIOR  
+## <a name="sql_fetch_prior"></a>SQL_FETCH_PRIOR  
  適用下列規則。  
   
 |條件|新資料列集的第一個資料列|  
@@ -186,7 +186,7 @@ SQLRETURN SQLFetchScroll(
   
  [2] 如果資料列集大小在上一次呼叫提取資料列之後已經變更, 這就是新的資料列集大小。  
   
-## <a name="sqlfetchrelative"></a>SQL_FETCH_RELATIVE  
+## <a name="sql_fetch_relative"></a>SQL_FETCH_RELATIVE  
  適用下列規則。  
   
 |條件|新資料列集的第一個資料列|  
@@ -206,7 +206,7 @@ SQLRETURN SQLFetchScroll(
   
  [3] 如果資料列集大小在上一次呼叫提取資料列之後已經變更, 這就是新的資料列集大小。  
   
-## <a name="sqlfetchabsolute"></a>SQL_FETCH_ABSOLUTE  
+## <a name="sql_fetch_absolute"></a>SQL_FETCH_ABSOLUTE  
  適用下列規則。  
   
 |條件|新資料列集的第一個資料列|  
@@ -224,14 +224,14 @@ SQLRETURN SQLFetchScroll(
   
  針對動態資料指標執行的絕對提取無法提供所需的結果, 因為動態資料指標中的資料列位置無法確定。 這類作業相當於第一個 fetch, 後面接著 fetch 相對的;這不是不可部分完成的作業, 因為它是靜態資料指標上的絕對提取。  
   
-## <a name="sqlfetchfirst"></a>SQL_FETCH_FIRST  
+## <a name="sql_fetch_first"></a>SQL_FETCH_FIRST  
  適用下列規則。  
   
 |條件|新資料列集的第一個資料列|  
 |---------------|-----------------------------|  
 |*任何*|*1*|  
   
-## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
+## <a name="sql_fetch_last"></a>SQL_FETCH_LAST  
  適用下列規則。  
   
 |條件|新資料列集的第一個資料列|  
@@ -241,7 +241,7 @@ SQLRETURN SQLFetchScroll(
   
  [1] 如果資料列集大小在上一次呼叫提取資料列之後已經變更, 這就是新的資料列集大小。  
   
-## <a name="sqlfetchbookmark"></a>SQL_FETCH_BOOKMARK  
+## <a name="sql_fetch_bookmark"></a>SQL_FETCH_BOOKMARK  
  適用下列規則。  
   
 |條件|新資料列集的第一個資料列|  
@@ -257,7 +257,7 @@ SQLRETURN SQLFetchScroll(
   
  如果資料指標偵測到已加入至結果集的資料列, 或移除從結果集刪除的資料列, 就會顯示為只有在提取資料時才會偵測到這些變更。 這包括在呼叫**SQLFetchScroll**時, 將 FetchOrientation 設為 SQL_FETCH_RELATIVE, 並將 FetchOffset 設定為 0, 以重新擷取相同的資料列集, 但不包括使用 SQLSetPos 設定為 fOption 來呼叫 SQL_REFRESH 時的情況。 在後者的情況下, 資料列集緩衝區中的資料會重新整理, 但不會根據, 而且不會從結果集中移除已刪除的資料列。 因此, 當資料列從目前的資料列集刪除或插入時, 資料指標不會修改資料列集緩衝區。 相反地, 它會在提取任何先前包含已刪除資料列的資料列集, 或現在包含插入的資料列時, 偵測到變更。  
   
- 例如:  
+ 例如:   
   
 ```cpp  
 // Fetch the next rowset.  
@@ -327,7 +327,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  在套用至個別資料列的每個狀態記錄群組中, SQLExtendedFetch 所傳回的第一個狀態記錄必須包含 SQLSTATE 01S01 (資料列中的錯誤)。**SQLFetchScroll**不會傳回此 SQLSTATE。 如果 SQLExtendedFetch 無法傳回其他 SQLSTATEs, 它仍然必須傳回此 SQLSTATE。  
   
 ## <a name="sqlfetchscroll-and-optimistic-concurrency"></a>SQLFetchScroll 和開放式平行存取  
- 如果資料指標使用開放式平行存取 (亦即, SQL_ATTR_CONCURRENCY 語句屬性的值為 SQL_CONCUR_VALUES 或 SQL_CONCUR_ROWVER),  則會更新資料來源所使用的開放式並行值, 以偵測是否資料列已變更。 每當**SQLFetchScroll**提取新的資料列集時, 就會發生這種情況, 包括 refetches 目前資料列集的時間。 (其呼叫方式是將 FetchOrientation 設定為 SQL_FETCH_RELATIVE, 並將 FetchOffset 設定為0。)  
+ 如果資料指標使用開放式平行存取 (亦即, SQL_ATTR_CONCURRENCY 語句屬性的值為 SQL_CONCUR_VALUES 或 SQL_CONCUR_ROWVER), 則會更新資料來源所使用的開放式並行值, 以偵測是否資料列已變更。 每當**SQLFetchScroll**提取新的資料列集時, 就會發生這種情況, 包括 refetches 目前資料列集的時間。 (其呼叫方式是將 FetchOrientation 設定為 SQL_FETCH_RELATIVE, 並將 FetchOffset 設定為0。)  
   
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll 和 ODBC 2.x 驅動程式  
  當應用程式在 ODBC 2.x 驅動程式中呼叫**SQLFetchScroll**時, 驅動程式管理員會將此呼叫對應至**SQLExtendedFetch**。 它會傳遞**SQLExtendedFetch**之引數的下列值。  
@@ -346,7 +346,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  **SQLFetchScroll**與描述項的互動方式與**SQLFetch**相同。 如需詳細資訊, 請參閱[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)函式中的 < 描述項和 SQLFetchScroll 一節。  
   
 ## <a name="code-example"></a>程式碼範例  
- 請參閱資料行取向系[](../../../odbc/reference/develop-app/row-wise-binding.md)結、資料列取向系結、[定位 Update 和 Delete 語句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md), 以及[使用 SQLSetPos 更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)資料列集中的資料[列](../../../odbc/reference/develop-app/column-wise-binding.md)。  
+ 請參閱資料行取向系結、[資料列取向系結](../../../odbc/reference/develop-app/row-wise-binding.md)、[定位 Update 和 Delete 語句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md), 以及[使用 SQLSetPos 更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)資料列集中的資料[列](../../../odbc/reference/develop-app/column-wise-binding.md)。  
   
 ## <a name="related-functions"></a>相關函數  
   
