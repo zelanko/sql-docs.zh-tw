@@ -1,5 +1,5 @@
 ---
-title: sp_autostats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_autostats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d390cff9bf101167db277c1c7614ee68d10edb6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046098"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026253"
 ---
-# <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
+# <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   顯示或變更索引、統計資料物件、資料表或索引檢視表的自動統計資料更新選項 AUTO_UPDATE_STATISTICS。  
   
- 如需有關 AUTO_UPDATE_STATISTICS 選項的詳細資訊，請參閱 < [ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)並[統計](../../relational-databases/statistics/statistics.md)。  
+ 如需 AUTO_UPDATE_STATISTICS 選項的詳細資訊, 請參閱[ALTER DATABASE SET &#40;選項&#41; transact-sql](../../t-sql/statements/alter-database-transact-sql-set-options.md)和[STATISTICS](../../relational-databases/statistics/statistics.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,32 +39,32 @@ ms.locfileid: "68046098"
 ```  
   
 sp_autostats [ @tblname = ] 'table_or_indexed_view_name'   
-    [ , [ @flagc = ] 'stats_value' ]   
+    [ , [ @flagc = ] 'stats_flag' ]   
     [ , [ @indname = ] 'statistics_name' ]  
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @tblname = ] 'table_or_indexed_view_name'` 資料表的名稱或索引檢視，要顯示 AUTO_UPDATE_STATISTICS 選項。 *table_or_indexed_view_name&lt*已**nvarchar(776)** ，沒有預設值。  
+`[ @tblname = ] 'table_or_indexed_view_name'`這是要在其中顯示 AUTO_UPDATE_STATISTICS 選項的資料表或索引視圖名稱。 *table_or_indexed_view_name*是**Nvarchar (776)** , 沒有預設值。  
   
-`[ @flagc = ] 'stats_value'` AUTO_UPDATE_STATISTICS 選項更新這些值的其中一個：  
+`[ @flagc = ] 'stats_flag'`將 AUTO_UPDATE_STATISTICS 選項更新為下列其中一個值:  
   
  **ON** = ON  
   
- **OFF** = OFF  
+ **關閉**= 關閉  
   
- 當*stats_flag*是未指定，顯示目前的 AUTO_UPDATE_STATISTICS 設定。 *stats_value*已**varchar(10)** ，預設值是 NULL。  
+ 未指定*stats_flag*時, 會顯示目前的 AUTO_UPDATE_STATISTICS 設定。 *stats_flag*是**Varchar (10)** , 預設值是 Null。  
   
-`[ @indname = ] 'statistics_name'` 是要顯示或更新 AUTO_UPDATE_STATISTICS 選項之統計資料名稱。 若要顯示索引的統計資料，您可以使用索引的名稱。索引及其對應的統計資料物件會具有相同的名稱。  
+`[ @indname = ] 'statistics_name'`這是要在其中顯示或更新 AUTO_UPDATE_STATISTICS 選項的統計資料名稱。 若要顯示索引的統計資料，您可以使用索引的名稱。索引及其對應的統計資料物件會具有相同的名稱。  
   
- *statistics_name*已**sysname**，預設值是 NULL。  
+ *statistics_name*是**sysname**, 預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 如果*stats_flag*指定，則**sp_autostats**報告的動作，擷取，但會傳回任何結果集。  
+ 如果指定了*stats_flag* , **sp_autostats**會報告所採取的動作, 但不會傳回任何結果集。  
   
- 如果*stats_flag*未指定，則**sp_autostats**會傳回下列結果集。  
+ 如果未指定*stats_flag* , **sp_autostats**會傳回下列結果集。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -72,7 +72,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 |**AUTOSTATS**|**varchar(3)**|AUTO_UPDATE_STATISTICS 選項的目前值。|  
 |**上次更新日期**|**datetime**|最近更新統計資料的日期。|  
   
- 在結果集的資料表或索引檢視表包含建立索引，使用 AUTO_CREATE_STATISTICS 選項所產生的單一資料行統計資料的統計資料，並使用所建立的統計資料[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式。  
+ 資料表或索引視圖的結果集包括針對索引所建立的統計資料、使用 AUTO_CREATE_STATISTICS 選項產生的單一資料行統計資料, 以及使用[CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md)語句所建立的統計資料。  
   
 ## <a name="remarks"></a>備註  
  如果停用了指定的索引，或指定的資料表具有停用的叢集索引，就會顯示一則錯誤訊息。  
@@ -80,7 +80,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  如果是記憶體最佳化的資料表，AUTO_UPDATE_STATISTICS 永遠都是 OFF。  
   
 ## <a name="permissions"></a>Permissions  
- 若要變更 AUTO_UPDATE_STATISTICS 選項，您需要**db_owner**固定資料庫角色或 ALTER 權限*table_name*。若要顯示 AUTO_UPDATE_STATISTICS 選項需要的成員資格**公開**角色。  
+ 若要變更 AUTO_UPDATE_STATISTICS 選項, 需要**db_owner**固定資料庫角色的成員資格, 或*TABLE_NAME*上的 ALTER 許可權。若要顯示 AUTO_UPDATE_STATISTICS 選項, 需要**public**角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   
@@ -94,7 +94,7 @@ EXEC sp_autostats 'Production.Product';
 GO  
 ```  
   
-### <a name="b-enable-autoupdatestatistics-for-all-statistics-on-a-table"></a>B. 針對資料表的所有統計資料啟用 AUTO_UPDATE_STATISTICS  
+### <a name="b-enable-auto_update_statistics-for-all-statistics-on-a-table"></a>B. 針對資料表的所有統計資料啟用 AUTO_UPDATE_STATISTICS  
  下列範例會針對 `Product` 資料表的所有統計資料啟用 AUTO_UPDATE_STATISTICS 選項。  
   
 ```  
@@ -104,7 +104,7 @@ EXEC sp_autostats 'Production.Product', 'ON';
 GO  
 ```  
   
-### <a name="c-disable-autoupdatestatistics-for-a-specific-index"></a>C. 針對特定索引停用 AUTO_UPDATE_STATISTICS  
+### <a name="c-disable-auto_update_statistics-for-a-specific-index"></a>C. 針對特定索引停用 AUTO_UPDATE_STATISTICS  
  下列範例會針對 `AK_Product_Name` 資料表的 `Product` 索引停用 AUTO_UPDATE_STATISTICS 選項。  
   
 ```  
@@ -117,7 +117,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [統計資料](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [資料庫引擎預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   

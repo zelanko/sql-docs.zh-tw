@@ -8,19 +8,33 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
+author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: 8088334f4bc9cfd03c23af654fbef9eb478aa9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e3f7929c17b161d3534474d3d9ad99e559714d2
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989447"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653800"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows 的功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
     
+## <a name="microsoft-odbc-driver-174-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver 17.4 for SQL Server
+
+ODBC 驅動程式17.4 包括調整 TCP Keep-alive 設定的能力。 您可以藉由將值新增至驅動程式或 DSN 登錄機碼來進行修改。 金鑰位於中`HKEY_LOCAL_MACHINE\Software\ODBC\` , 適用于系統資料來源, 而在`HKEY_CURRENT_USER\Software\ODBC\`中則用於使用者資料來源。 對於 DSN, 必須將值新增至`...\Software\ODBC\ODBC.INI\<DSN Name>` , 並將驅動程式加入至。 `...\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`
+
+如需詳細資訊, 請參閱[ODBC 元件](../../../odbc/reference/install/registry-entries-for-odbc-components.md)的登錄專案。
+
+值為 `REG_SZ`，如下所示：
+
+- `KeepAlive`藉由傳送 keep-alive 封包, 控制 TCP 嘗試驗證閒置連線是否仍保持不變的頻率。 預設值是 30 秒。
+
+- `KeepAliveInterval`決定在收到回應之前, 用來分隔 keep-alive 重新傳輸的間隔。 預設值為 1 秒。
+
+
+
 ## <a name="microsoft-odbc-driver-131-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver 13.1 for SQL Server
 
 ODBC Driver 13.1 for SQL Server 包含舊版 (11) 的所有功能, 並在與 Microsoft SQL Server 2016 搭配使用時, 新增 Always Encrypted 和 Azure Active Directory 驗證的支援。  

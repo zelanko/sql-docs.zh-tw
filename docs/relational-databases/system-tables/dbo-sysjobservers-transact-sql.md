@@ -1,7 +1,7 @@
 ---
-title: dbo.sysjobservers (TRANSACT-SQL) |Microsoft Docs
+title: dbo. sysjobservers (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/26/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -19,29 +19,34 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 590fa6eff10c11af303b7bb9d4750ef98852cc44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004801"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026199"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  儲存特定作業與一或多部目標伺服器的關聯或關係。此資料表會儲存在 msdb 資料庫中。  
+儲存特定作業與一部或多部目標伺服器的關聯或關係。 此資料表會儲存在 msdb 資料庫中。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|作業識別碼。|  
 |server_id|**int**|伺服器識別碼。|  
-|last_run_outcome|**tinyint**|作業上次執行的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = 取消|  
+|last_run_outcome|**tinyint**|作業上次執行的結果：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 取消<br /><br /> **4** = 進行中<br /><br /> **5** = 未知 (請參閱下列備註一節) |  
 |last_outcome_ 訊息|**nvarchar(1024)**|關聯的訊息 (如果有的話)，包含 last_run_outcome 資料行。|  
 |last_run_date|**int**|上次執行作業的日期。|  
 |last_run_time|**int**|前次執行作業的時間。|  
 |last_run_duration|**int**|此作業執行的持續時間 (以時、分和秒為單位)。 使用公式來計算: (*小時*\*10000) + (*分鐘*\*100) +*秒*。|  
-  
-## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
-  
-  
+
+
+## <a name="remarks"></a>備註
+
+大於*4*的值表示 SQL 代理程式不知道該作業的狀態。 建立作業時, *last_run_outcome*一開始會設為*5* 。
+
+
+## <a name="see-also"></a>另請參閱
+
+[SQL Server Agent 資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

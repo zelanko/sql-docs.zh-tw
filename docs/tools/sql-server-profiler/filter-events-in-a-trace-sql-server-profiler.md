@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07c8261bdfbae6bd05d6a543d500066a47868c3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8dc3d0c27b1fae754c4a6fb5f38984f4c8c4a324
+ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929969"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69979496"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>篩選追蹤中的事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67929969"
   
 2.  按一下 [資料行篩選]。   
   
-     [編輯篩選]  對話方塊隨即顯示。 您可以使用 [編輯篩選]  對話方塊包含的比較運算子清單，篩選追蹤中的事件。  
+     會顯示 [編輯篩選]  對話方塊。 您可以使用 [編輯篩選]  對話方塊包含的比較運算子清單，篩選追蹤中的事件。  
   
 3.  若要套用篩選，請按一下比較運算子，再輸入篩選要用的值。  
   
