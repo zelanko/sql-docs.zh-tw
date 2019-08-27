@@ -643,6 +643,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>相關內容  
- www.mattmasson.com 上的部落格文章： [結束碼、DTEXEC 和 SSIS 目錄](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
+ [www.mattmasson.com](www.mattmasson.com) 上的部落格文章： [結束碼、DTEXEC 和 SSIS 目錄](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
   
   
