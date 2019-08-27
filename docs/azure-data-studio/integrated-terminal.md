@@ -63,7 +63,7 @@ ms.locfileid: "67959531"
 ```
 
 > [!NOTE]
-> 若要作為整合式終端，殼層可執行檔必須是主控台應用程式，才能重新導向 `stdin/stdout/stderr`。
+> 若要作為整合式終端使用，殼層可執行檔必須是主控台應用程式，才能重新導向 `stdin/stdout/stderr`。
 
 > [!TIP]
 > 整合式終端殼層是以 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的權限執行。 如果您需要以較高 (系統管理員) 或不同的權限執行殼層命令，您可以在終端內使用平台公用程式 (例如 `runas.exe`)。
@@ -109,7 +109,7 @@ ms.locfileid: "67959531"
 
 其中包括：
 
-* `workbench.action.terminal.focus`:將焦點放在終端。 這就像是切換，但如果可見，則焦點會放在終端而不是隱藏起來。
+* `workbench.action.terminal.focus`:將焦點放在終端。 這就像是切換，但如果終端可見，則會聚焦於終端，而不是加以隱藏。
 * `workbench.action.terminal.focusNext`:將焦點放在下一個終端執行個體。
 * `workbench.action.terminal.focusPrevious`:將焦點放在上一個終端執行個體。
 * `workbench.action.terminal.kill`:移除目前的終端執行個體。
