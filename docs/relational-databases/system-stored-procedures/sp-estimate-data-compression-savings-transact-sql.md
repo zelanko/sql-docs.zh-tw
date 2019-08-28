@@ -1,7 +1,7 @@
 ---
 title: sp_estimate_data_compression_savings (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 08/26/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0e7d9c1e2f3c6d0de5e41775c445b46f232d5985
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 447f3cf0f304fb167b85ba49f5a8a583f08cd912
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811377"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059308"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,27 +31,26 @@ ms.locfileid: "68811377"
   傳回要求之物件目前的大小，並針對要求的壓縮狀態預估物件大小。 可以針對整個資料表或部分資料表評估壓縮， 這包括堆積、叢集索引、非叢集索引、資料行存放區索引、索引視圖, 以及資料表和索引資料分割。 您可以使用資料列、頁面、資料行存放區或資料行存放區封存壓縮來壓縮物件。 如果資料表、索引或資料分割已經壓縮，您可以使用此程序來估計已重新壓縮之資料表、索引或資料分割的大小。  
   
 > [!NOTE]
->  並非所有版本[!INCLUDE[msCoName](../../includes/msconame-md.md)]都可使用壓縮和 sp_estimate_data_compression_savings。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 並非所有版本[!INCLUDE[msCoName](../../includes/msconame-md.md)]都可使用壓縮和 sp_estimate_data_compression_savings。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  若要預估使用要求壓縮設定之物件的大小，此預存程序會取樣來源物件，並將此資料載入 tempdb 內所建立的同等資料表和索引中。 然後會將 tempdb 內所建立的資料表或索引壓縮成要求的設定，並計算預估的壓縮節省程度。  
   
  若要變更資料表、索引或資料分割的壓縮狀態, 請使用[ALTER table](../../t-sql/statements/alter-table-transact-sql.md)或[alter index](../../t-sql/statements/alter-index-transact-sql.md)語句。 如需有關壓縮的一般資訊, 請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
 > [!NOTE]  
->  如果現有的資料已分割，您或許能夠減少資料的大小，而不需要重建索引來使用壓縮。 如果是索引，將會在索引重建時套用填滿因數， 這樣可能會增加索引的大小。  
+> 如果現有的資料已分割，您或許能夠減少資料的大小，而不需要重建索引來使用壓縮。 如果是索引，將會在索引重建時套用填滿因數， 這樣可能會增加索引的大小。  
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_estimate_data_compression_savings   
      [ @schema_name = ] 'schema_name'    
    , [ @object_name = ] 'object_name'   
-   , [@index_id = ] index_id   
-   , [@partition_number = ] partition_number   
-   , [@data_compression = ] 'data_compression'   
+   , [ @index_id = ] index_id   
+   , [ @partition_number = ] partition_number   
+   , [ @data_compression = ] 'data_compression'   
 [;]  
 ```  
   
@@ -62,10 +61,10 @@ sp_estimate_data_compression_savings
  [ @object_name=] '*object_name*'  
  這是索引所在的資料表或索引檢視表名稱。 *object_name* 是 **sysname**.  
   
- [ @index_id=] '*index_id*'  
+ [ @index_id=] *index_id*  
  這是索引的識別碼。 *index_id*是**int**, 而且可以是下列其中一個值: 索引的識別碼、Null 或 0 (如果*object_id*是堆積)。 若要傳回基底資料表或檢視表的所有索引相關資訊，請指定 NULL。 如果您指定 Null, 也必須為*partition_number*指定 null。  
   
- [ @partition_number=] '*partition_number*'  
+ [ @partition_number=] *partition_number*  
  這是物件的分割區編號。 *partition_number*是**int**, 而且可以是下列其中一個值: 索引或堆積的資料分割編號、Null 或 1 (代表非資料分割索引或堆積)。  
   
  若要指定分割區, 您也可以指定[$partition](../../t-sql/functions/partition-transact-sql.md)函數。 若要傳回主控物件之所有資料分割的相關資訊，請指定 NULL。  
@@ -91,11 +90,11 @@ sp_estimate_data_compression_savings
 |sample_size_with_requested_compression_setting (KB)|**bigint**|使用要求之壓縮設定所建立的樣本大小，以及適用的現有填滿因數 (沒有片段)。|  
   
 ## <a name="remarks"></a>備註  
- 使用 sp_estimate_data_compression_savings 來估計當您啟用資料列、頁面、資料行存放區或資料行存放區封存壓縮的資料表或資料分割時, 可能會發生的節約。 例如，如果資料列的平均大小可縮減 40%，您就可能會將物件的大小縮減 40%。 您可能無法節省空間，因為這是根據填滿因數和資料列的大小而定。 例如，如果您有一個長度為 8000 個位元組的資料列，而且您將它的大小縮減 40%，則仍然只能在資料頁面上容納單一資料列。 無法節省任何空間。  
+ 用`sp_estimate_data_compression_savings`來估計當您啟用資料列、頁面、資料行存放區或資料行存放區封存壓縮的資料表或資料分割時, 可能會發生的節約。 例如，如果資料列的平均大小可縮減 40%，您就可能會將物件的大小縮減 40%。 您可能無法節省空間，因為這是根據填滿因數和資料列的大小而定。 例如, 如果您有一個長度為8000個位元組的資料列, 而您將其大小縮減為 40%, 則您仍然只能在資料頁面上容納一個資料列。 無法節省任何空間。  
   
- 如果執行 sp_estimate_data_compression_savings 的結果指示資料表將會成長，就表示資料表中的許多資料列都使用資料類型的幾乎完整有效位數，而且壓縮格式所需的小型負擔增加會比壓縮的空間節省更大。 在這種罕見情況下，請勿啟用壓縮。  
+ 如果執行的結果`sp_estimate_data_compression_savings`指出資料表將會成長, 這表示資料表中的許多資料列都使用幾乎完整的資料類型有效位數, 而壓縮格式所需的小型額外負荷則比程度. 在這種罕見情況下，請勿啟用壓縮。  
   
- 如果資料表已啟用壓縮，請使用 sp_estimate_data_compression_savings 來估計未壓縮資料表時的資料列平均大小。  
+ 如果資料表已啟用壓縮, 請使用`sp_estimate_data_compression_savings`來估計資料列的平均大小 (如果資料表未壓縮)。  
   
  進行這項作業期間，將會取得資料表的 (IS) 鎖定。 如果無法取得 (IS) 鎖定，此程序將會遭到封鎖。 資料表會在讀取認可的隔離等級下掃描。  
   
@@ -104,13 +103,13 @@ sp_estimate_data_compression_savings
  如果此索引或資料分割識別碼不存在，則不會傳回任何結果。  
   
 ## <a name="permissions"></a>Permissions  
- 需要資料表的 SELECT 權限。  
+ 需要`SELECT`資料表的許可權。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  在 SQL Server 2019 之前, 此程式不會套用至資料行存放區索引, 因此不接受資料壓縮參數資料行存放區和 COLUMNSTORE_ARCHIVE。  從 SQL Server 2019 開始, 資料行存放區索引可以用來做為估計的來源物件, 以及做為要求的壓縮類型。
 
 ## <a name="considerations-for-columnstore-indexes"></a>資料行存放區索引的考慮
- 從 SQL Server 2019 開始, sp_estimate_compression_savings 支援估計資料行存放區和資料行存放區封存壓縮。 不同于頁面和資料列壓縮, 對物件套用資料行存放區壓縮時, 需要建立新的資料行存放區索引。 因此, 在使用此程式的資料行存放區和 COLUMNSTORE_ARCHIVE 選項時, 提供給程式的來源物件類型會決定用於壓縮大小估計的資料行存放區索引類型。 下表說明當參數設定為 [資料行存放區] 或 [ @data_compression COLUMNSTORE_ARCHIVE] 時, 用來估計每個來源物件類型之壓縮節省量的參考物件。
+ 從開始`sp_estimate_compression_savings` , 支援同時評估資料行存放區和資料行存放區封存壓縮。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不同于頁面和資料列壓縮, 對物件套用資料行存放區壓縮時, 需要建立新的資料行存放區索引。 因此, 在使用此程式的資料行存放區和 COLUMNSTORE_ARCHIVE 選項時, 提供給程式的來源物件類型會決定用於壓縮大小估計的資料行存放區索引類型。 下表說明當參數設定為 [資料行存放區] 或 [ @data_compression COLUMNSTORE_ARCHIVE] 時, 用來估計每個來源物件類型之壓縮節省量的參考物件。
 
  |來源物件|參考物件|
  |-----------------|---------------|
@@ -123,7 +122,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > 當您從 rowstore 來源物件 (叢集索引、非叢集索引或堆積) 評估資料行存放區壓縮時, 如果來源物件中的任何資料行具有資料行存放區索引不支援的資料類型, sp_estimate_compression_savings將會失敗並產生錯誤。
 
- 同樣地, 當@data_compression參數設定為 [無]、[資料列] 或 [頁面], 而來源物件為數據行存放區索引時, 下表會列出所使用的參考物件。
+ 同樣地, 當`@data_compression`參數設定為`NONE`、 `ROW`或`PAGE` , 而來源物件為數據行存放區索引時, 下表會列出所使用的參考物件。
 
  |來源物件|參考物件|
  |-----------------|---------------|
@@ -136,8 +135,8 @@ sp_estimate_data_compression_savings
 ## <a name="examples"></a>範例  
  下列範例會估計 `Production.WorkOrderRouting` 資料表的大小 (如果使用 `ROW` 壓縮來將它壓縮)。  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2016;  
 GO  
 EXEC sp_estimate_data_compression_savings 'Production', 'WorkOrderRouting', NULL, NULL, 'ROW' ;  
 GO  
