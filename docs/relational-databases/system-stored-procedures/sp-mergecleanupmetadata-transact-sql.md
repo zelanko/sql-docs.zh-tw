@@ -1,5 +1,5 @@
 ---
-title: sp_mergecleanupmetadata (TRANSACT-SQL) |Microsoft Docs
+title: sp_mergecleanupmetadata (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ebdc7b55cde31198007e05de1603df7134ed3bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a62445553364fc7756444986a5bd8cf57d576ecd
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019997"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123088"
 ---
-# <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
+# <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  應該只能用在所包含的伺服器執行版本的複寫拓撲[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 1。**sp_mergecleanupmetadata**可讓管理員清除中繼資料**MSmerge_genhistory**， **MSmerge_contents**和**MSmerge_tombstone**系統資料表。 這個預存程序執行於發行集資料庫的發行者端。  
+  只能用於包含執行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 之前版本之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]伺服器的複寫拓撲中。**sp_mergecleanupmetadata**可讓管理員清除**MSmerge_genhistory**、 **MSmerge_contents**和**MSmerge_tombstone**系統資料表中的中繼資料。 這個預存程序執行於發行集資料庫的發行者端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,51 +38,51 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 **%** ，會清除所有發行集的中繼資料。 如果明確指定的話，發行集必須已存在。  
+`[ @publication = ] 'publication'`這是發行集的名稱。 *發行*集是**sysname**, 預設值 **%** 是, 這會清除所有發行集的中繼資料。 如果明確指定的話，發行集必須已存在。  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` 指定是否要重新初始化訂閱者。 *訂閱者*是**nvarchar(5)** ，可以是**TRUE**或**FALSE**，預設值是**TRUE**。 如果 **，則為 TRUE**，訂用帳戶會標示重新初始化。 如果**FALSE**，訂用帳戶未標示為重新初始化。  
+`[ @reinitialize_subscriber = ] 'subscriber'`指定是否要重新初始化訂閱者。 *訂閱者*是**Nvarchar (5)** , 可以是**true**或**FALSE**, 預設值是**true**。 若**為 TRUE**, 則會將訂閱標示為重新初始化。 若為**FALSE**, 則不會將訂閱標示為重新初始化。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_mergecleanupmetadata**應該只能用在所包含的伺服器執行版本的複寫拓撲[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 1。 只包含 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 或更新版本的拓撲，應該使用以自動保留為基礎的中繼資料清除功能。 當執行這個預存程序時，請注意，執行這個預存程序的電腦之記錄檔必然會成長，且可能會大幅成長。  
+ **sp_mergecleanupmetadata**只能用在包含執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 之前版本之伺服器的複寫拓撲中。 只包含 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 或更新版本的拓撲，應該使用以自動保留為基礎的中繼資料清除功能。 當執行這個預存程序時，請注意，執行這個預存程序的電腦之記錄檔必然會成長，且可能會大幅成長。  
   
 > [!CAUTION]
->  在後**sp_mergecleanupmetadata**執行時，根據預設，所有訂用帳戶在訂閱者端的發行集的中繼資料儲存在**MSmerge_genhistory**， **MSmerge_contents**並**MSmerge_tombstone**會標示為重新初始化，訂閱者的任何暫止的變更都會遺失，和目前的快照集已標記為過時。  
+>  在執行**sp_mergecleanupmetadata**之後, 根據預設, 在**MSmerge_genhistory**、 **MSmerge_contents**和**MSmerge_tombstone**中儲存中繼資料之發行集訂閱者的所有訂閱都會標示為重新初始化, 訂閱者端的任何暫止變更都會遺失, 而目前的快照集會標示為過時。  
 > 
 > [!NOTE]
->  如果有多個發行集資料庫上，且任何一個發行集都會使用無限期的發行保留期限 ( **@retention** =**0**)、 執行**sp_mergecleanupmetadata**就不會清除追蹤資料庫中繼資料的合併式複寫變更。 因此，在使用無限期的發行期限時，一定要特別小心。  
+>  如果資料庫上有多個發行集, 而且其中任何一個發行集使用無限期的發行集保留=期限 ( **\@保留** **0**), 則執行**sp_mergecleanupmetadata**並不會清除資料庫的合併式複寫變更追蹤中繼資料。 因此，在使用無限期的發行期限時，一定要特別小心。  
   
- 當執行這個預存程序時，您可以選擇是否要重新初始化訂閱者，藉由設定 **@reinitialize_subscriber** 參數來**TRUE** （預設值） 或**FALSE**. 如果**sp_mergecleanupmetadata**執行 **@reinitialize_subscriber** 參數設為**TRUE**，快照集也會重新套用在訂閱者即使訂用帳戶建立沒有初始快照集 （例如，如果快照集資料和結構描述已手動套用，或已存在於訂閱者）。 將參數設定為**FALSE**應小心，因為如果不會重新初始化發行集，您必須確定在發行者和訂閱者的資料會同步處理。  
+ 執行此預存程式時, 您可以將 **\@reinitialize_subscriber**參數設定為**TRUE** (預設值) 或**FALSE**, 以選擇是否要重新初始化訂閱者。 如果執行sp_mergecleanupmetadata 時, 將**reinitialize_subscriber參數設定為TRUE,即使在沒有初始快照集的情況下建立訂閱,也會在訂閱者端重新套用快照集(適用于\@** 例如, 如果快照集資料和架構已手動套用, 或已存在於訂閱者端)。 將參數設定為**FALSE**應謹慎使用, 因為如果發行集不是重新初始化, 您必須確定「發行者」和「訂閱者」端的資料已同步處理。  
   
- 值為何 **@reinitialize_subscriber** ， **sp_mergecleanupmetadata**失敗，如果有進行中合併正要將變更上傳到 「 發行者 」 或在重新發行訂閱者的程序預存程序會叫用的時間。  
+ 不論 **\@reinitialize_subscriber**的值為何, 如果有正在進行的合併程式嘗試將變更上傳至發行者或重新發行的訂閱者 (在儲存的時間), **sp_mergecleanupmetadata**就會失敗程式已叫用。  
   
- **執行與 sp_mergecleanupmetadata @reinitialize_subscriber = TRUE:**  
+ **執行具有 reinitialize_subscriber \@= TRUE 的 sp_mergecleanupmetadata:**  
   
 1.  建議您停止發行集和訂閱資料庫的所有更新，但您不一定需要如此。 如果繼續更新，當發行集重新初始化時，您將失去自上次合併之後，在訂閱者端進行的任何更新，但仍會維護資料的聚合。  
   
-2.  執行合併代理程式來執行合併。 我們建議您改用 **-驗證**代理程式命令列選項，當您執行 「 合併代理程式時，每個訂閱者端。 如果您在執行連續模式合併，請參閱*連續模式合併的特殊考量*本主題稍後的。  
+2.  執行合併代理程式來執行合併。 當您執行合併代理程式時, 建議您在每個「訂閱者」**端使用-Validate**代理程式命令列選項。 如果您正在執行連續模式合併, 請參閱本節稍後*的連續模式合併的特殊考慮*。  
   
-3.  所有合併都完成之後，請執行**sp_mergecleanupmetadata**。  
+3.  完成所有合併之後, 請執行**sp_mergecleanupmetadata**。  
   
-4.  執行**sp_reinitmergepullsubscription**上所有的訂閱者使用具名或匿名提取訂閱，以確保資料聚合。  
+4.  在所有使用命名或匿名提取訂閱的訂閱者上執行**sp_reinitmergepullsubscription** , 以確保資料的聚合。  
   
-5.  如果您在執行連續模式合併，請參閱*連續模式合併的特殊考量*本主題稍後的。  
+5.  如果您正在執行連續模式合併, 請參閱本節稍後*的連續模式合併的特殊考慮*。  
   
 6.  重新產生所有層級所涉及之所有合併式發行集的快照集檔案。 如果您試圖在尚未重新產生快照集前進行合併，系統會提示您重新產生快照集。  
   
 7.  備份發行集資料庫。 如果沒有完成這個動作，在還原發行集資料庫之後，合併可能會失敗。  
   
- **執行與 sp_mergecleanupmetadata @reinitialize_subscriber = FALSE:**  
+ **使用\@reinitialize_subscriber = FALSE 執行 sp_mergecleanupmetadata:**  
   
-1.  停止**所有**發行集和訂閱資料庫的更新。  
+1.  停止發行集和訂閱資料庫的**所有**更新。  
   
-2.  執行合併代理程式來執行合併。 我們建議您改用 **-驗證**代理程式命令列選項，當您執行 「 合併代理程式時，每個訂閱者端。 如果您在執行連續模式合併，請參閱*連續模式合併的特殊考量*本主題稍後的。  
+2.  執行合併代理程式來執行合併。 當您執行合併代理程式時, 建議您在每個「訂閱者」**端使用-Validate**代理程式命令列選項。 如果您正在執行連續模式合併, 請參閱本節稍後*的連續模式合併的特殊考慮*。  
   
-3.  所有合併都完成之後，請執行**sp_mergecleanupmetadata**。  
+3.  完成所有合併之後, 請執行**sp_mergecleanupmetadata**。  
   
-4.  如果您在執行連續模式合併，請參閱*連續模式合併的特殊考量*本主題稍後的。  
+4.  如果您正在執行連續模式合併, 請參閱本節稍後*的連續模式合併的特殊考慮*。  
   
 5.  重新產生所有層級所涉及之所有合併式發行集的快照集檔案。 如果您試圖在尚未重新產生快照集前進行合併，系統會提示您重新產生快照集。  
   
@@ -90,36 +90,36 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- **連續模式合併的特殊考量**  
+ **連續模式合併的特殊考慮**  
   
  如果您在執行連續模式的合併，您必須執行下列動作之一：  
   
--   停止合併代理程式，然後再執行另一個合併，但不 **-連續**指定的參數。  
+-   停止合併代理程式, 然後執行另一個合併, 但不指定 **-連續**參數。  
   
--   停用發行集中**sp_changemergepublication** ，確保任何輪詢發行集狀態的連續模式合併會失敗。  
+-   使用**sp_changemergepublication**停用發行集, 以確保輪詢發行集狀態的任何連續模式合併都會失敗。  
   
     ```  
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
     ```  
   
- 當您完成的步驟 3 中執行**sp_mergecleanupmetadata**，根據您對它們所做的停止連續模式合併的繼續。 您可以執行下列動作之一：  
+ 當您完成執行**sp_mergecleanupmetadata**的步驟3時, 請根據您停止的方式繼續連續模式合併。 您可以執行下列動作之一：  
   
--   新增 **-連續**回 「 合併代理程式參數。  
+-   為合併代理程式新增 **-連續**參數。  
   
--   重新啟動發行集中**sp_changemergepublication。**  
+-   使用 sp_changemergepublication 重新開機發行集 **。**  
   
     ```  
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'active'  
     ```  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_mergecleanupmetadata**。  
+ 只有**系統管理員 (sysadmin** ) 固定伺服器角色或**db_owner**固定資料庫角色的成員, 才能夠執行**sp_mergecleanupmetadata**。  
   
- 若要使用這個預存程序，發行者必須執行 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 訂閱者必須執行[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]或是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 Service Pack 2。  
+ 若要使用這個預存程序，發行者必須執行 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 訂閱者必須[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]執行或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 Service Pack 2。  
   
 ## <a name="see-also"></a>另請參閱  
- [MSmerge_genhistory &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

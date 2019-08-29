@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 50463f27f37f9da410d1598002989f7cea6d8158
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: dc5addca9c9bbf01408cea89f85676813b97506c
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000777"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70109752"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝 Python 套件
 
@@ -92,7 +92,7 @@ ms.locfileid: "70000777"
 
 1. 開啟**命令提示**字元並執行下列命令, 以建立包含**文字工具**套件的本機資料夾。 這個範例會建立資料夾`c:\temp\text-tools`。
 
-   ```command
+   ```console
    pip download text-tools -d c:\temp\text-tools
    ```
 

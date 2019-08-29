@@ -1,5 +1,5 @@
 ---
-title: 安全性目錄檢視 (TRANSACT-SQL) |Microsoft Docs
+title: 安全性目錄 Views (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5986d2e9c6e61f3d0fa73e1f9460f6a056a4d211
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b36067bc90bfb78ead35bf0aac8647e241828fe
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018313"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123067"
 ---
 # <a name="security-catalog-views-transact-sql"></a>安全性目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "68018313"
 |[sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)|[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) |  
 |[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|[sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) |  
 |[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|[sys.user_token](../../relational-databases/system-catalog-views/sys-user-token-transact-sql.md) |  
-|[sys.sql_feature_restrictions](sys-sql-feature-restrictions.md)|
   
 ## <a name="server-level-views"></a>伺服器層級檢視  
   

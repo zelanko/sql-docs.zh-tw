@@ -14,19 +14,19 @@ f1_keywords:
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- editions [SQL Server], feature restrictions
+- editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cd8c4d6fb71e98a13cab1b01f34b7c5dc7e99331
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b1e9f56c4321ca0289f6e6a456586f418c1e4dbb
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345074"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123069"
 ---
-# <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
+# <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的某些功能會變更 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將資訊儲存在資料庫檔案中的方式， 這些功能受限為特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 包含這些功能的資料庫無法移至不支援它們的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 使用 _db_persisted_sku_features 動態管理檢視, 列出目前資料庫中已啟用的版本特定功能。
