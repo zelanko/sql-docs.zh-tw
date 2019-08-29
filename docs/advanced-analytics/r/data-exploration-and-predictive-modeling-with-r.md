@@ -60,7 +60,7 @@ RevoScaleR 封裝也支援變更 *「執行內容」* (execution context)。 這
   
      **RevoPemaR** 封裝可讓您使用 R 開發自己的平行外部記憶體演算法。  
   
-     如需這些封裝及其使用方式的詳細資訊, 請參閱 <<c0>什麼是 RevoScaleR和[RevoPemaR 的開始](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar)使用。 
+     如需這些封裝及其使用方式的詳細資訊, 請參閱 <<c0>什麼是 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler)和[RevoPemaR 的開始](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar)使用。 
 
 + **MicrosoftML**包含 Microsoft 資料科學小組的高度優化機器學習演算法和資料轉換的集合。 許多演算法也會在 Azure Machine Learning 中使用。 如需詳細資訊, 請參閱[SQL Server 中的 MicrosoftML](ref-r-microsoftml.md)。
 

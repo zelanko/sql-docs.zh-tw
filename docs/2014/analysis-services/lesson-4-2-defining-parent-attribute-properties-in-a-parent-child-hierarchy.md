@@ -101,7 +101,7 @@ ms.locfileid: "69494008"
   
      下圖顯示您對 [Employees] 階層所做的變更。 請注意，Stephen Y. Jiang 不再顯示為自己的員工。  
   
-     ![已修改的員工]階層(../../2014/tutorials/media/l4-employee-2.png "已修改的員工")階層  
+     ![已修改的員工](../../2014/tutorials/media/l4-employee-2.png "已修改的員工")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [自動分組屬性成員](lesson-4-3-automatically-grouping-attribute-members.md)  
