@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028829"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621745"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文件導覽指南 
 
@@ -39,16 +39,15 @@ ms.locfileid: "69028829"
 
 ## <a name="toc-navigation-hints"></a>TOC 導覽提示
 
-目錄 (TOC) 中其結尾具有 `>` 的項目，表示該項目會帶您離開 docs.microsoft.com。 
+目錄 (TOC) 中其結尾具有 `>` 的項目，表示會帶您前往具有不同目錄的技術文件。 
 
 ![TOC 中的單一胡蘿蔔箭號](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-TOC 中具有 `>>` 的項目，表示該項目會帶您前往具備不同目錄的技術文件。 
+TOC 中具有 `>>` 的項目，表示會帶您離開 docs.microsoft.com。 
 
 ![TOC 導覽標記](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-若您巡覽到這些頁面中的其中之一，您可以選取每個目錄頂端的 [歡迎使用 SQL Server >>] 項目來返回主要 SQL Server 技術頁面及目錄。 
+若您巡覽到這些頁面中的其中之一，您可以選取每個目錄頂端的 [歡迎使用 SQL Server >] 項目來返回主要 SQL Server 技術頁面與目錄。 
 
 ![巡覽回 SQL TOC](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
@@ -64,7 +63,7 @@ SQL Server 技術文件提供數個 SQL Server 版本及變體的內容。 不�
 
 ![SQL 文件版本篩選](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-選取 [All SQL]  \(所有 SQL\) \>[Hide nothing]  \(不隱藏任何內容\) 可確保您能看見所有內容，且版本篩選沒有隱藏任何項目。 [不建議例行性地使用 [Hide nothing]  \(不隱藏任何內容\) 選項](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。
+選取 [All SQL]  \(所有 SQL\) \>[Hide nothing]  \(不隱藏任何內容\) 可確保您能看見所有內容，且版本篩選沒有隱藏任何項目。 [不隱藏任何內容]  選項可能會顯示相同文章中許多不同版本 SQL Server 的相關內容，這可能會有衝突、不清楚或令人困惑。 [不建議例行性地使用 [不隱藏任何內容]  選項](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。 
 
 ## <a name="breadcrumbs"></a>階層連結
 

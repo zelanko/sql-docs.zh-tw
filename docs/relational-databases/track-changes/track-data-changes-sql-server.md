@@ -19,16 +19,16 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3299d13c2ff371f0194c501f34d5615486decc84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88cfc841f3e8cdf2a04cccdc76eb3bbf7f5e2147
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006108"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621782"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供兩個追蹤資料庫資料變更的功能： [異動資料擷取](#Capture) 和 [變更追蹤](#Tracking)。 這些功能可協助應用程式判斷對資料庫中使用者資料表所做的 DML 變更 (插入、更新和刪除作業)。 可在同一個資料庫上啟用異動資料擷取和變更追蹤；無需特殊考量。 如需支援異動資料擷取和變更追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]支援變更追蹤。 只有 SQL Server 和 Azure SQL Database 受控執行個體支援異動資料擷取。
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供兩個追蹤資料庫資料變更的功能：[異動資料擷取](#Capture) 和 [變更追蹤](#Tracking)。 這些功能可協助應用程式判斷對資料庫中使用者資料表所做的 DML 變更 (插入、更新和刪除作業)。 可在同一個資料庫上啟用異動資料擷取和變更追蹤；無需特殊考量。 如需支援異動資料擷取和變更追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]支援變更追蹤。 只有 SQL Server 和 Azure SQL Database 受控執行個體支援異動資料擷取。
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>使用異動資料擷取或變更追蹤的優點  
  在資料庫中查詢已經變更之資料的能力，是讓某些應用程式具有效率的重要需求。 一般而言，若要判斷資料變更，應用程式開發人員必須使用觸發程序、時間戳記資料行和其他資料表的組合，在其應用程式中實作自訂追蹤方法。 不過，建立這些應用程式通常需要實作大量工作、導致結構描述更新，而且經常會產生很高的效能負擔。  
@@ -114,7 +114,7 @@ ms.locfileid: "68006108"
  如需資料庫鏡像的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 #### <a name="transactional-replication"></a>異動複寫  
- 雖然變更資料擷取和異動複寫可以同時存在同一個資料庫中，但是同時啟用這兩項功能時，系統會以不同的方式處理變更資料表的擴展。 變更資料擷取和異動複寫一定會使用相同的程序 [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)，從交易記錄中讀取變更。 單獨啟用變更資料擷取時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業就會呼叫 **sp_replcmds**。 在同一個資料庫上同時啟用這兩項功能時，記錄讀取器代理程式就會呼叫 **sp_replcmds**。 這個代理程式會同時擴展變更資料表和散發資料庫資料表。 如需詳細資訊，請參閱 [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)。  
+ 雖然變更資料擷取和異動複寫可以同時存在同一個資料庫中，但是同時啟用這兩項功能時，系統會以不同的方式處理變更資料表的擴展。 變更資料擷取和異動複寫一定會使用相同的程序 [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)，從交易記錄中讀取變更。 單獨啟用變更資料擷取時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業就會呼叫 **sp_replcmds**。 在同一個資料庫上同時啟用這兩項功能時，記錄讀取器代理程式就會呼叫 **sp_replcmds**。 這個代理程式會同時擴展變更資料表和散發資料庫資料表。 如需詳細資訊，請參閱 [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)。  
   
  假設您在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上啟用了變更資料擷取，而且有兩份資料表啟用了擷取。 為了擴展變更資料表，擷取作業會呼叫 **sp_replcmds**。 資料庫啟用了異動複寫，而且建立了發行集。 此時，會針對資料庫建立記錄讀取器代理程式，並且刪除擷取作業。 記錄讀取器代理程式會繼續掃描記錄，從變更資料表所認可的最後一個記錄序號開始。 如此可確保變更資料表中的資料保持一致。 如果這個資料庫停用了異動複寫，系統就會移除記錄讀取器代理程式並且重新建立擷取作業。  
   
@@ -132,21 +132,21 @@ ms.locfileid: "68006108"
   
 -   如果資料庫卸離並附加至相同伺服器或其他伺服器，變更資料擷取就會維持啟用狀態。  
   
--   如果您使用 **KEEP_CDC** 選項，將資料庫附加或還原至 Enterprise 以外的任何版本，此作業就會遭封鎖，因為變更資料擷取需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。 此時會顯示錯誤訊息 932：  
+-   如果您使用 **KEEP_CDC** 選項，將資料庫附加或還原至 Standard 或 Enterprise 以外的任何版本，此作業就會遭封鎖，因為變更資料擷取需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 或 Enterprise 版本。 此時會顯示錯誤訊息 932：  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   
- 您可以使用 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) ，從還原或附加的資料庫中移除變更資料擷取。  
+ 您可以使用 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)，從還原或附加的資料庫中移除變更資料擷取。  
   
-##  <a name="Tracking"></a> Change Tracking  
- 變更追蹤會擷取資料表中資料列變更的事實，但是不會擷取變更的資料。 這項功能可讓應用程式使用直接從使用者資料表中取得的最新資料列資料，判斷已經變更的資料列。 因此，與異動資料擷取相較之下，變更追蹤在它可回答的歷程記錄問題方面具有較多限制。 不過，對於不需要歷程記錄資訊的應用程式而言，由於不會擷取變更的資料，因此儲存負擔會非常低。 這項功能會使用同步追蹤機制來追蹤變更。 其設計目的是要對 DML 作業產生最低負擔。  
+##  <a name="Tracking"></a> 變更追蹤  
+ 變更追蹤會擷取資料表中資料列變更的事實，但是不會擷取變更的資料。 此功能可讓應用程式使用直接從使用者資料表中取得的最新資料列資料，判斷已經變更的資料列。 因此，與異動資料擷取相較之下，變更追蹤在它可回答的歷程記錄問題方面具有較多限制。 不過，對於不需要歷程記錄資訊的應用程式而言，由於不會擷取變更的資料，因此儲存負擔會非常低。 此功能會使用同步追蹤機制來追蹤變更。 其設計目的是要對 DML 作業產生最低負擔。  
   
  下圖將顯示使用變更追蹤所獲益的同步處理狀況。 在此案例中，應用程式需要下列資訊：自從資料表上次同步處理以來已經變更的所有資料表資料列，以及只有目前的資料列資料。 由於使用了同步機制來追蹤變更，因此應用程式可以執行雙向同步處理，而且能夠可靠地偵測出可能已經發生的任何衝突。  
   
  ![變更追蹤的概念圖例](../../relational-databases/track-changes/media/cdcart2.gif "變更追蹤的概念圖例")  
   
 ### <a name="change-tracking-and-sync-services-for-adonet"></a>變更追蹤和 Sync Services for ADO.NET  
- [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 可以在資料庫之間同步處理，並提供一套直覺式和具彈性的 API，可讓您用來建立針對離線和共同作業案例的應用程式。 [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 提供了可同步處理變更的 API，但是它實際上不會追蹤伺服器或對等 (Peer) 資料庫中的變更。 您可以建立自訂變更追蹤系統，但是這樣做通常會大幅增加複雜度和效能負擔。 若要追蹤伺服器或對等資料庫中的變更，我們建議您使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的變更追蹤，因為這項功能容易設定而且可提供高效能追蹤。  
+ [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 可以在資料庫之間同步處理，並提供一套直覺式和具彈性的 API，可讓您用來建立針對離線和共同作業案例的應用程式。 [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 提供了可同步處理變更的 API，但是它實際上不會追蹤伺服器或對等 (Peer) 資料庫中的變更。 您可以建立自訂變更追蹤系統，但是這樣做通常會大幅增加複雜度和效能負擔。 若要追蹤伺服器或對等資料庫中的變更，我們建議您使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的變更追蹤，因為此功能容易設定而且可提供高效能追蹤。  
   
  如需有關變更追蹤和 [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)]的詳細資訊，請使用下列連結：  
   

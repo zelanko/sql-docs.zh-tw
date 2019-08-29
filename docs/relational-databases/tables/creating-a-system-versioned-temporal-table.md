@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2daf65d8c080700767fc4c94c5e4e9e0aeafa9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058663"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903591"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   由系統設定版本的時態表必須定義主索引鍵，且只能有一個 **PERIOD FOR SYSTEM_TIME** 使用兩個 datetime2 資料行定義，其宣告為 **GENERATED ALWAYS AS ROW START / END**。  
   
--   **PERIOD** 資料行一律假定為不可為 Null，即使未指定可 Null 性亦同。 如果  **PERIOD** 資料行明確定義為可為 Null，則 **CREATE TABLE** 陳述式會失敗。  
+-   **PERIOD** 資料行一律假定為不可為 Null，即使未指定可 Null 性亦同。 如果 **PERIOD** 資料行明確定義為可為 Null，則 **CREATE TABLE** 陳述式會失敗。  
   
 -   記錄資料表和目前資料表或時態表的結構描述，在資料行數量、資料行名稱、順序和資料類型上必須一致。  
   
@@ -148,8 +148,8 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 -   最低的維護成本  
   
- 當轉換現有的資料表時，請考慮使用 **HIDDEN** 子句隱藏新的 **PERIOD** 資料行，以免影響無處理新資料行設計的現有應用程式。  
-  
+ 當轉換現有的資料表時，請考慮使用 **HIDDEN** 子句隱藏新的 **PERIOD** 資料行 (datetime2 資料行 **SysStartTime** 和 **SysEndTime**)，以免影響無處理新資料行設計的現有應用程式。  
+
 ### <a name="adding-versioning-to-non-temporal-tables"></a>在非時態表中加入版本控制  
  如果您想要開始追蹤包含資料的非時態表變更，您需要加入 **PERIOD** 定義，並選擇性地提供 SQL Server 將為您建立之空白記錄資料表的名稱︰  
   
@@ -203,11 +203,11 @@ ALTER TABLE ProjectTaskCurrent
   
 #### <a name="important-remarks"></a>重要備註  
   
--   參考 **PERIOD** 定義中現有的資料行時，系統會隱含地將 generated_always_type 變更成這些資料行的 **AS_ROW_START** 和 **AS_ROW_END** 。  
+-   參考 **PERIOD** 定義中現有的資料行時，系統會隱含地將 generated_always_type 變更成這些資料行的 **AS_ROW_START** 和 **AS_ROW_END**。  
   
 -   加入 **PERIOD** 時，系統會執行目前資料表的資料一致性檢查，以確定時段資料行的現有值為有效。  
   
--   強烈建議您將 **SYSTEM_VERSIONING** 設為 **DATA_CONSISTENCY_CHECK = ON** ，以強制執行現有資料的資料一致性檢查。  
+-   強烈建議您將 **SYSTEM_VERSIONING** 設為 **DATA_CONSISTENCY_CHECK = ON**，以強制執行現有資料的資料一致性檢查。  
 
 -   如果慣用隱藏的資料行，請使用命令 `ALTER TABLE [tableName] ALTER COLUMN [columnName] ADD HIDDEN;`。
   

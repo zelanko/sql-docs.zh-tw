@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f3ce558bb9e5856e0cd5828f8facce28dc2c729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107085"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009495"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>開始使用資料行存放區進行即時作業分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "68107085"
   SQL Server 2016 導入了即時作業分析，能夠同時在同一個資料庫資料表上執行分析和 OLTP 工作負載。 除了執行即時分析，您也可免除 ETL 和資料倉儲的需要。  
   
 ## <a name="real-time-operational-analytics-explained"></a>說明即時作業分析  
- 傳統上，企業會有各種可用於作業 (也就是 OLTP) 和分析工作負載的系統。 在這類系統中，擷取、轉換和載入 (ETL) 工作會定期將資料從作業存放區移至分析存放區。 分析資料通常儲存於專門用來執行分析查詢的資料倉儲或資料超市中。 儘管此解決方案已是標準，但它仍有下列這三個主要挑戰︰  
+ 傳統上，企業會有個別可用於作業 (也就是 OLTP) 和分析工作負載的系統。 在這類系統中，擷取、轉換和載入 (ETL) 工作會定期將資料從作業存放區移至分析存放區。 分析資料通常儲存於專門用來執行分析查詢的資料倉儲或資料超市中。 儘管此解決方案已是標準，但它仍有下列這三個主要挑戰︰  
   
--   **複雜度。** 實作 ETL 需要相當多的編碼，特別是只載入修改的資料列。 要找出哪些資料列已修改是相當複雜的。  
+-   **複雜度。** 實作 ETL 需要相當多的程式碼撰寫作業，特別是只載入修改的資料列。 要找出哪些資料列已修改是相當複雜的。  
   
 -   **成本。** 實作 ETL 需要購買額外硬體和軟體授權的成本。  
   
@@ -105,9 +105,7 @@ ms.locfileid: "68107085"
   
 -   [使用壓縮延遲 - 效能數目，將非叢集資料行存放區索引維護的影響降到最低](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
--   [使用記憶體最佳化資料表的即時作業分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
-  
--   [將資料行存放區索引中的索引片段最小化](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
+-   [使用記憶體最佳化資料表的即時作業分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/) \(英文\)  
   
 -   [資料行存放區索引和適用於資料列群組的合併原則](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
@@ -116,7 +114,7 @@ ms.locfileid: "68107085"
   
  若要將維護作業工作負載上非叢集資料行存放區索引的額外負荷降到最低，您可以使用篩選的條件，僅在「暖」  或緩時變的資料上建立非叢集資料行存放區索引。 例如，在訂單管理應用程式中，您可以在已經出貨的訂單上建立非叢集資料行存放區索引。 一旦訂單已出貨之後，就很少變更，因此可視為暖資料。 透過篩選的索引，非叢集資料行存放區索引中的資料所需的更新很少，因而可降低對交易式工作負載的影響。  
   
- 分析查詢可視需要明確地存取暖和熱資料，來提供即時分析。 如果作業工作負載的某個重要部分會接觸到「熱」資料，這些作業就不需要對資料行存放區索引進行額外的維護。 最佳做法是，在篩選的索引定義中使用的資料行上具備資料列存放區叢集索引。   SQL Server 會使用叢集索引，快速掃描不符合篩選條件的資料列。 如果沒有這個叢集索引，就會要求對資料列存放區資料表進行完整的資料表掃描，以尋找會對分析查詢效能造成顯著負面影響的資料列。 如果沒有叢集索引，您可以建立互補且篩選的非叢集 btree 索引來識別這類資料列，但不建議使用，因為透過非叢集的 btree 索引存取大範圍資料列的成本很高。  
+ 分析查詢可視需要明確地存取暖和熱資料，來提供即時分析。 如果作業工作負載的某個重要部分會接觸到「熱」資料，這些作業就不需要對資料行存放區索引進行額外的維護。 最佳做法是，在篩選的索引定義中使用的資料行上具備資料列存放區叢集索引。   SQL Server 會使用叢集索引，快速掃描不符合篩選條件的資料列。 如果沒有這個叢集索引，就必須對資料列存放區資料表進行完整的資料表掃描，以尋找會對分析查詢效能造成顯著負面影響的資料列。 如果沒有叢集索引，您可以建立互補且篩選的非叢集 btree 索引來識別這類資料列，但不建議使用，因為透過非叢集的 btree 索引存取大範圍資料列的成本很高。  
   
 > [!NOTE]  
 >  只有以磁碟為基礎的資料表上才支援篩選的非叢集資料行存放區索引。 記憶體最佳化的資料表上並不支援。  
@@ -202,9 +200,9 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
  以下是建議的最佳做法：  
   
 -   **插入/查詢工作負載︰** 如果您的工作負載主要是插入資料並加以查詢，則建議的選項是預設為 0 的 COMPRESSION_DELAY。 將 1 百萬個資料列插入單一差異資料列群組之後，即會壓縮最新插入的資料列。  
-    這類工作負載的部分範例是，當您需要在 Web 應用程式中分析按一下模式時所進行的 (a) 傳統 DW 工作負載 (b) 按一下資料流分析。  
+    這類工作負載的部分範例是，(a) 傳統 DW 工作負載 (b) 當您需要在 Web 應用程式中分析按一下模式時所進行的按一下資料流分析。  
   
--   **OLTP 工作負載：** 如果工作負載是大量的 DML (也就是大量更新、刪除和插入的混合)，您可以透過檢查 DMV sys 來查看資料行存放區索引片段。 dm_db_column_store_row_group_physical_stats。 如果您看到最近壓縮的資料列群組中有 > 10% 的資料列標示為已刪除，您可以使用 COMPRESSION_DELAY 選項，在資料列變成能夠壓縮時，新增時間延遲。 例如，針對您的工作負載，如果最新插入的資料列假設在 60 分鐘內會保持「熱」(也就是多次取得更新)，您應該選擇讓 COMPRESSION_DELAY 為 60。  
+-   **OLTP 工作負載：** 如果工作負載是大量的 DML (也就是大量更新、刪除和插入的混合)，您可以透過檢查 DMV sys 來查看資料行存放區索引片段。 dm_db_column_store_row_group_physical_stats。 如果您看到最近壓縮的資料列群組中有 > 10% 的資料列標示為已刪除，您可以使用 COMPRESSION_DELAY 選項，在資料列變成能夠壓縮時，新增時間延遲。 例如，針對您的工作負載，如果最新插入的資料列假設在 60 分鐘內會保持「熱」(也就是進行多次更新)，您應該選擇讓 COMPRESSION_DELAY 為 60。  
   
  我們預期大多數客戶不需要執行任何動作。 他們應該適用 COMPRESSION_DELAY 選項的預設值。  
 對於進階使用者，我們建議執行下列查詢，並收集過去 7 天已刪除資料列的 %。  
@@ -226,6 +224,5 @@ ORDER BY created_time DESC
  [資料行存放區索引資料載入](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [資料行存放區索引效能](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [資料倉儲的資料行存放區索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [資料行存放區索引重組](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

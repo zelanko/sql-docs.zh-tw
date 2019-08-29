@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1e2d8f01370978074a07eaa0e5f784927bef511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024972"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009369"
 ---
 # <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
 
@@ -24,7 +24,7 @@ ms.locfileid: "68024972"
 
   針對達到資料行存放區索引設計來提供的快速查詢效能的建議。    
     
- 資料行存放區索引的分析和資料倉儲工作負載效能可提升高達 100 倍，且資料壓縮比傳統的資料列存放區索引提升高達 10 倍。 這些建議能讓您的查詢達到資料行存放區索引設計來提供的快速查詢效能。 本文結尾部分有資料行存放區效能的進一步說明。    
+ 資料行存放區索引的分析和資料倉儲工作負載效能可提升高達 100 倍，且資料壓縮比傳統的資料列存放區索引提升高達 10 倍。 這些建議能讓您的查詢達到資料行存放區索引設計來提供的快速查詢效能。 此文章結尾部分有資料行存放區效能的進一步說明。    
     
 ## <a name="recommendations-for-improving-query-performance"></a>改善查詢效能的建議    
  以下是針對達到資料行存放區索引設計來提供的高效能的建議。    
@@ -63,14 +63,14 @@ ms.locfileid: "68024972"
 -   例如，如果一個事實資料表儲存客戶的地址，並有國家/地區的資料行，則可能值的總數量小於 200。 某些值會重複許多次。 如果該事實資料表有 1 億個資料列，則輕鬆就能壓縮國家/地區的資料列，且只需非常小的儲存空間。 逐列壓縮無法這樣利用資料行內值的相似性，且壓縮國家/地區資料行內的值會使用更多位元組。    
     
 ### <a name="column-elimination"></a>資料行刪除    
- 資料行存放區索引讀取資料行時會略過查詢結果不需要的值。 這項功能稱為資料行刪除，能夠進一步減少查詢執行的 I/O，因而改善查詢效能。    
+ 資料行存放區索引讀取資料行時會略過查詢結果不需要的值。 此功能稱為資料行刪除，能夠進一步減少查詢執行的 I/O，因而改善查詢效能。    
     
 -   能夠進行資料行刪除的原因是資料以行為單位組織及壓縮。 相較之下，當逐列儲存資料時，每個資料行中的資料列值在實體上已經儲存在一起，且無法輕易分離。 查詢處理器需要讀取整個資料列來擷取特定行的值，這樣會增加 I/O，因為不必要的額外資料也會讀取到記憶體中。    
     
 -   例如，如果資料表有 50 個資料行，而查詢只使用其中 5 個資料行，則資料行存放區索引只會從磁碟機擷取那 5 個資料行。 它會略過讀取其他 45 個資料行。 假設所有資料行大小相同，這樣能額外減少 90% 的 I/O。 如果是儲存在資料列存放區，則查詢處理器必須讀取額外的 45 個資料行。    
     
 ### <a name="rowgroup-elimination"></a>資料列群組刪除    
- 對於完整資料表掃描，大部分的資料通常都不符合查詢述詞準則。 透過使用中繼資料，資料行存放區索引能夠略過讀取不包含查詢結果所需資料的資料列群組，完全不需要實際 I/O。 這項功能稱為群組資料列刪除，能夠進一步減少查詢執行的 I/O，因而改善查詢效能。    
+ 對於完整資料表掃描，大部分的資料通常都不符合查詢述詞準則。 透過使用中繼資料，資料行存放區索引能夠略過讀取不包含查詢結果所需資料的資料列群組，完全不需要實際 I/O。 此功能稱為群組資料列刪除，能夠進一步減少查詢執行的 I/O，因而改善查詢效能。    
     
  **資料行存放區索引何時需要執行完整資料表掃描？**    
     
@@ -110,7 +110,7 @@ ms.locfileid: "68024972"
 |頂端排序||否|否|是||    
 |視窗彙總||NA|NA|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新運算子。|    
     
-<sup>1</sup>適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層、標準層 - S3 與更新版本，以及所有 vCore 層，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup> 適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 進階層、標準層 - S3 及更新版本，和所有 vCore 層，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>彙總下推    
  彙總計算從 SCAN 擷取符合之資料列並在「批次模式」中彙總其值的一般執行路徑。 儘管這提供良好的效能，但在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，可將彙總作業推入 SCAN 節點，若符合下列條件，則能夠以依據重要順序提升「批次模式」執行上彙總運算的效能： 
@@ -166,7 +166,7 @@ FROM FactResellerSalesXL_CCI
  [資料行存放區索引資料載入指導](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [資料倉儲的資料行存放區索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [資料行存放區索引重組](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
+ [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [資料行存放區索引架構](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

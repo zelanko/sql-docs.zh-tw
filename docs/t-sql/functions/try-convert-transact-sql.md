@@ -3,7 +3,7 @@ title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 02e4b66b1f215e513b005c770aebf9afc256ea8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73f0b159230f89503aac00b4cc0b4ec5d0da5e39
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098761"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123171"
 ---
-# <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   如果轉換成功，則會傳回轉換為指定之資料類型的值，否則會傳回 Null。  
   
@@ -64,7 +64,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-tryconvert-returns-null"></a>A. TRY_CONVERT 傳回 Null。  
+### <a name="a-try_convert-returns-null"></a>A. TRY_CONVERT 傳回 Null。  
  以下的範例證明當轉換失敗時，TRY_CONVERT 會傳回 null。  
   
 ```sql  
@@ -104,7 +104,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-tryconvert-fails-with-an-error"></a>B. TRY_CONVERT 失敗並出現錯誤  
+### <a name="b-try_convert-fails-with-an-error"></a>B. TRY_CONVERT 失敗並出現錯誤  
  以下的範例證明當明確不允許轉換時，TRY_CONVERT 會傳回錯誤。  
   
 ```sql  
@@ -118,7 +118,7 @@ GO
 Explicit conversion from data type int to xml is not allowed.  
 ```  
   
-### <a name="c-tryconvert-succeeds"></a>C. TRY_CONVERT 成功  
+### <a name="c-try_convert-succeeds"></a>C. TRY_CONVERT 成功  
  這個範例示範運算式必須採用所需的格式。  
   
 ```  

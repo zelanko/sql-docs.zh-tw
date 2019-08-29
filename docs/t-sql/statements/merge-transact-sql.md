@@ -1,7 +1,7 @@
 ---
 title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 08/20/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,25 +24,25 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d3a3f484bc05411f4d7b78c1734a4a3dba4330d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129446"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653351"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 從與來源資料表聯結的結果，在目標資料表上執行插入、更新或刪除作業。 例如，根據在另一個資料表中所找到的差異在資料表中插入、更新或刪除資料列，以同步處理兩個資料表。  
   
 **效能提示：** 當兩個資料表有複雜的比對的特性時，MERGE 陳述式的條件式行為表現最佳。 例如沒有資料列時插入資料列，或資料列相符時更新資料列。 只要根據另一個資料表的資料列更新資料表，就能以基本 INSERT、UPDATE 及 DELETE 陳述式來改善效能及延展性。 例如：  
   
-```  
+```sql
 INSERT tbl_A (col, col2)  
-SELECT col, col2   
-FROM tbl_B   
+SELECT col, col2
+FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
@@ -50,12 +50,12 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
   
 ## <a name="syntax"></a>語法  
   
-```  
+```
 [ WITH <common_table_expression> [,...n] ]  
-MERGE   
-    [ TOP ( expression ) [ PERCENT ] ]   
+MERGE
+    [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>   
+    USING <table_source>
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -64,11 +64,11 @@ MERGE
     [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
     [ <output_clause> ]  
-    [ OPTION ( <query_hint> [ ,...n ] ) ]      
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
 ;  
   
 <target_table> ::=  
-{   
+{
     [ database_name . schema_name . | schema_name . ]  
   target_table  
 }  
@@ -79,18 +79,18 @@ MERGE
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
   
-<table_source> ::=   
+<table_source> ::=
 {  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]   
-        [ WITH ( table_hint [ [ , ]...n ] ) ]   
-  | rowset_function [ [ AS ] table_alias ]   
-        [ ( bulk_column_alias [ ,...n ] ) ]   
+    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
+        [ WITH ( table_hint [ [ , ]...n ] ) ]
+  | rowset_function [ [ AS ] table_alias ]
+        [ ( bulk_column_alias [ ,...n ] ) ]
   | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>   
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]   
-  | <joined_table>   
-  | <pivoted_table>   
-  | <unpivoted_table>   
+  | OPENXML <openxml_clause>
+  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
+  | <joined_table>
+  | <pivoted_table>
+  | <unpivoted_table>
 }  
   
 <merge_search_condition> ::=  
@@ -112,11 +112,11 @@ SET
   | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
   | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
   | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]   
+  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
-    INSERT [ ( column_list ) ]   
+    INSERT [ ( column_list ) ]
         { VALUES ( values_list )  
         | DEFAULT VALUES }  
 }  
@@ -126,36 +126,36 @@ SET
   
 <search condition> ::=  
     MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-    
+
 <search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> ) 
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
+    { [ NOT ] <predicate> | ( <search_condition_without_match> )
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
 [ ,...n ]  
 
-<predicate> ::=   
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
-    | string_expression [ NOT ] LIKE string_expression   
-  [ ESCAPE 'escape_character' ]   
-    | expression [ NOT ] BETWEEN expression AND expression   
-    | expression IS [ NOT ] NULL   
-    | CONTAINS   
-  ( { column | * } , '< contains_search_condition >' )   
-    | FREETEXT ( { column | * } , 'freetext_string' )   
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )   
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
-  { ALL | SOME | ANY} ( subquery )   
-    | EXISTS ( subquery ) }   
+<predicate> ::=
+    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
+    | string_expression [ NOT ] LIKE string_expression
+  [ ESCAPE 'escape_character' ]
+    | expression [ NOT ] BETWEEN expression AND expression
+    | expression IS [ NOT ] NULL
+    | CONTAINS
+  ( { column | * } , '< contains_search_condition >' )
+    | FREETEXT ( { column | * } , 'freetext_string' )
+    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
+    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
+  { ALL | SOME | ANY} ( subquery )
+    | EXISTS ( subquery ) }
 
 <graph_search_pattern> ::=
-    { <node_alias> { 
-                      { <-( <edge_alias> )- } 
+    { <node_alias> {
+                      { <-( <edge_alias> )- }
                     | { -( <edge_alias> )-> }
-                    <node_alias> 
-                   } 
+                    <node_alias>
+                   }
     }
   
 <node_alias> ::=
-    node_table_name | node_table_alias 
+    node_table_name | node_table_alias
 
 <edge_alias> ::=
     edge_table_name | edge_table_alias
@@ -168,7 +168,7 @@ SET
 }  
   
 <dml_select_list>::=  
-    { <column_name> | scalar_expression }   
+    { <column_name> | scalar_expression }
         [ [AS] column_alias_identifier ] [ ,...n ]  
   
 <column_name> ::=  
@@ -176,7 +176,8 @@ SET
     | $action  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
+
 WITH \<common_table_expression>  
 指定在 MERGE 陳述式範圍內定義的暫存具名結果集或檢視表，也稱為通用資料表運算式。 結果集是從簡單查詢衍生而來，由 MERGE 陳述式參考。 如需詳細資訊，請參閱 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
@@ -185,7 +186,7 @@ TOP ( *expression* ) [ PERCENT ]
   
 當整個來源資料表和整個目標資料表聯結在一起，且不符合插入、更新或刪除動作的聯結資料列移除之後，才會套用 TOP 子句。 TOP 子句會進一步將聯結資料列數目減少至指定的值。 Insert、update 或 delete 動作會以未排序的方式套用至剩餘聯結資料列中。 亦即，將資料列散發到 WHEN 子句中定義的動作時，沒有任何特定順序。 例如，指定 TOP (10) 會影響 10 個資料列。 在這些資料列中，可能會更新 7 個及插入 3 個，或者可能會刪除 1 個、更新 5 個及插入 4 個，依此類推。  
   
-因為 MERGE 陳述式會針對來源和目標資料表執行完整資料表掃描，所以當使用 TOP 子句 來藉由建立多個批次以修改大型資料表時，I/O 效能有時會受到影響。 在此狀況中，請務必確保所有後續批次都以新的資料列為目標。  
+因為 MERGE 陳述式會針對來源和目標資料表執行完整資料表掃描，所以當使用 TOP 子句來藉由建立多個批次以修改大型資料表時，I/O 效能有時會受到影響。 在此狀況中，請務必確保所有後續批次都以新的資料列為目標。  
   
 *database_name*  
 *target_table* 所在的資料庫名稱。  
@@ -204,17 +205,17 @@ TOP ( *expression* ) [ PERCENT ]
 用於參考資料表的替代名稱。  
   
 USING \<table_source>  
-會根據 \<merge_search condition>，指定與 *target_table* 中資料列進行比對的資料來源。 此項比對的結果會指定 MERGE 陳述式的 WHEN 子句所採取的動作。 \<table_source> 可以是遠端資料表或存取遠端資料表的衍生資料表。 
+會根據 \<merge_search condition>，指定與 *target_table* 中資料列進行比對的資料來源。 此項比對的結果會指定 MERGE 陳述式的 WHEN 子句所採取的動作。 \<table_source> 可以是遠端資料表或存取遠端資料表的衍生資料表。
   
 \<table_source> 可以是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)的衍生資料表，藉由指定多個資料列來建構資料表。  
   
 如需有關此子句語法和引數的詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。  
   
 ON \<merge_search_condition>  
-指定條件，在這些條件下，\<table_source> 會與 *target_table* 聯結以決定其相符之處。 
+指定條件，在這些條件下，\<table_source> 會與 *target_table* 聯結以決定其相符之處。
   
 > [!CAUTION]  
->  請務必只從目標資料表指定用於比對用途的資料行。 也就是說，從目標資料表中指定要與來源資料表的對應資料行進行比較的資料行。 請勿嘗試在 ON 子句中篩選出目標資料表的資料列 (例如指定 `AND NOT target_table.column_x = value`) 來改善查詢效能。 這樣做可能會傳回非預期且不正確的結果。  
+> 請務必只從目標資料表指定用於比對用途的資料行。 也就是說，從目標資料表中指定要與來源資料表的對應資料行進行比較的資料行。 請勿嘗試在 ON 子句中篩選出目標資料表的資料列 (例如指定 `AND NOT target_table.column_x = value`) 來改善查詢效能。 這樣做可能會傳回非預期且不正確的結果。  
   
 WHEN MATCHED THEN \<merge_matched>  
 指定所有符合 \<table_source> ON \<merge_search_condition> 傳回的資料列，且滿足任何其他搜尋條件的 *target_table 資料列，都會根據 \<merge_matched> 子句更新或刪除。  
@@ -242,7 +243,7 @@ AND \<clause_search_condition>
 指定 INSERT 陳述式目標資料表之 TABLOCK 提示的效果，與指定 TABLOCKX 提示相同。 獨佔鎖定是在資料表上取得的。 當指定 FORCESEEK 時，該提示會套用到與來源資料表聯結之目標資料表的隱含執行個體。  
   
 > [!CAUTION]  
->  使用 WHEN NOT MATCHED [ BY TARGET ] THEN INSERT 指定 READPAST 可能會導致違反 UNIQUE 條件約束的 INSERT 作業。  
+> 使用 WHEN NOT MATCHED [ BY TARGET ] THEN INSERT 指定 READPAST 可能會導致違反 UNIQUE 條件約束的 INSERT 作業。  
   
 INDEX ( index_val [ ,...n ] )  
 在目標資料表上指定一或多個索引的名稱或識別碼，以用於與來源資料表執行隱含聯結。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
@@ -284,7 +285,8 @@ DEFAULT VALUES
 \<圖形搜尋模式>  
 指定圖形搜尋模式。 如需此子句的引數詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註
+
 必須至少指定三個 MATCHED 子句中的一個，但可依任何順序指定這些子句。 在同一個 MATCHED 子句中，不能更新變數一次以上。  
   
 在目標資料表上由 MERGE 陳述式所指定的任何插入、更新或刪除動作，都受限於資料表上定義的任何條件約束，包括任何串聯式參考完整性條件約束。 如果在目標資料表上將任何唯一索引的 IGNORE_DUP_KEY 設定為 ON，則 MERGE 會忽略此設定。  
@@ -297,7 +299,8 @@ MERGE 陳述式需要使用分號 (;) 做為陳述式結束字元。 若 MERGE �
   
 使用佇列更新複寫時，不應該使用 **MERGE** 陳述式。 **MERGE** 與佇列更新觸發程序不相容。 請將 **MERGE** 陳述式取代成 Insert 或 Update 陳述式。  
   
-## <a name="trigger-implementation"></a>觸發程序實作  
+## <a name="trigger-implementation"></a>觸發程序實作
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對 MERGE 陳述式中指定的每個插入、更新或刪除動作，引發目標資料表上定義的對應 AFTER 觸發程序，但並不能保證哪一個動作會最先或最後引發觸發程序。 為相同動作所定義的觸發程序會接受您指定的順序。 如需有關設定觸發程序引發順序的詳細資訊，請參閱[指定第一個及最後一個觸發程序](../../relational-databases/triggers/specify-first-and-last-triggers.md)。  
   
 如果針對 MERGE 陳述式所執行的插入、更新或刪除動作在目標資料表上定義啟用的 INSTEAD OF 觸發程序，則 MERGE 陳述式中指定的所有動作在目標資料表上都必須啟用 INSTEAD OF 觸發程序。  
@@ -306,22 +309,106 @@ MERGE 陳述式需要使用分號 (;) 做為陳述式結束字元。 若 MERGE �
   
 如果在 *target_table* 上定義任何 INSTEAD OF INSERT 觸發程序，則不會執行插入作業。 反之，會據此填入資料表。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>權限
+
 來源資料表需要 SELECT 權限，目標資料表則需要 INSERT、UPDATE 或 DELETE 權限。 如需詳細資訊，請參閱 [SELECT](../../t-sql/queries/select-transact-sql.md)、[INSERT](../../t-sql/statements/insert-transact-sql.md)、[UPDATE](../../t-sql/queries/update-transact-sql.md) 和 [DELETE](../../t-sql/statements/delete-transact-sql.md) 主題中的＜權限＞一節。  
   
+## <a name="optimizing-merge-statement-performance"></a>最佳化 MERGE 陳述式效能
+
+您可以藉由使用 MERGE 陳述式，以單一陳述式來取代個別 DML 陳述式。 這樣可以提升查詢效能，因為作業會在單一陳述式內執行，因此會讓來源和目標資料表中的資料處理次數減至最少。 但是，效能改善取決於是否有正確的索引、聯結以及適當進行其他考量。
+
+### <a name="index-best-practices"></a>索引最佳做法
+
+若要改善 MERGE 陳述式的效能，我們建議您遵循索引指導方針：
+
+- 在來源資料表的聯結資料行上，建立唯一且涵蓋的索引。
+- 在目標資料表的聯結資料行上，建立唯一的叢集索引。
+
+這些索引可確保聯結索引鍵是唯一的，而且排序資料表中的資料已經過排序。 查詢效能已經過改良，因為查詢最佳化工具不需要執行額外的驗證處理，也可以尋找及更新重複的資料列，而且不需要其他排序作業。
+
+### <a name="join-best-practices"></a>JOIN 最佳做法
+
+若要改善 MERGE 陳述式的效能，並確保可得到正確的結果，我們建議您遵循聯結指導方針：
+
+- 在決定用來比對來源和目標資料表資料之準則的 ON <merge_search_condition> 子句中，只指定搜尋條件。 也就是說，只指定是來自目標資料表且要與來源資料表之對應資料行進行比較的資料行。 
+- 請勿包含與其他值 (例如，常數) 的比較。
+
+若要從來源或目標資料表中篩選掉資料列，請使用下列其中一個方法。
+
+- 在適當的 WHEN 子句中指定資料列篩選的搜尋條件。 例如，WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT....
+- 在來源或目標上定義一個可傳回篩選過之資料列的檢視表，並將此檢視表當做來源或目標資料表來參考。 如果此檢視表定義在目標資料表上，則對其進行的任何動作都必須滿足更新檢視表的條件。 如需有關使用檢視表來更新資料的詳細資訊，請參閱＜透過檢視修改資料＞。
+- 使用 `WITH <common table expression>` 子句，從來源或目標資料表中篩選掉資料列。 這個方法類似於在 ON 子句中指定其他搜尋條件，而且可能會產生不正確的結果。 我們建議您避免使用這個方法，或是在實作這個方法之前先徹底加以測試。
+
+MERGE 陳述式中的聯結作業會使用與 SELECT 陳述式中的聯結相同的方式來最佳化。 也就是說，當 SQL Server 處理聯結時，查詢最佳化工具將從多種可能性選擇最有效率的聯結處理方式。 當來源和目標的大小類似，而且先前所述的索引指導方針適用於來源和目標資料表時，合併聯結運算子就是最有效率的查詢計畫。 這是因為這兩個資料表都會掃描一次，而且不需要排序資料。 當來源小於目標資料表時，偏好的是巢狀迴圈運算子。
+
+您可以在 MERGE 陳述式中指定 `OPTION (<query_hint>)` 子句來強制使用特定聯結。 我們建議您不要針對 MERGE 陳述式使用雜湊聯結當做查詢提示，因為這個聯結類型不使用索引。
+
+### <a name="parameterization-best-practices"></a>參數化最佳做法
+
+如果執行 SELECT、INSERT、UPDATE 或 DELETE 陳述式時不含參數，SQL Server 查詢最佳化工具可選擇在內部參數化該陳述式。 這表示會以參數替代包含在查詢中的任何常值。 例如，陳述式 INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10)，可以在內部實作為 INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2)。 稱為簡單參數化的這個程序會提高關聯式引擎的能力，好讓新的 SQL 陳述式符合先前編譯過的現有執行計畫。 查詢效能可能會提升，因為查詢編譯與重新編譯的頻率會減少。 查詢最佳化工具不會將簡單參數化程序套用到 MERGE 陳述式。 因此，包含常值的 MERGE 陳述式可能不會與個別 INSERT、UPDATE 或 DELETE 陳述式一樣運作順利，因為每當執行 MERGE 陳述式時，都會編譯新的計畫。
+
+若要改善查詢效能，我們建議您遵循參數化指導方針：
+
+- 將 MERGE 陳述式的 `ON <merge_search_condition>` 子句和 `WHEN` 子句內的所有常值參數化。 例如，您可以將 MERGE 陳述式併入預存程序中，以適當的輸入參數取代常值。
+- 如果您不能將此陳述式參數化，請建立 `TEMPLATE` 類型的計畫指南，並在此計畫指南中指定 `PARAMETERIZATION FORCED` 查詢提示。
+- 如果經常在資料庫中執行 MERGE 陳述式，請考慮在資料庫上將 PARAMETERIZATION 選項設定為 FORCED。 當設定這個選項時，請務必小心。 `PARAMETERIZATION` 選項是資料庫層級設定，而且會影響對資料庫進行之所有查詢的處理方式。
+
+### <a name="top-clause-best-practices"></a>TOP 子句最佳做法
+
+在 MERGE 陳述式中，TOP 子句會指定在來源及目標資料表聯結後，以及在移除不符合插入、更新或刪除動作的資料列後，受影響之資料列的數目或百分比。 TOP 子句會進一步將聯結的資料列數減少為指定的值，而且插入、更新或刪除動作會依照未排序的方式套用到剩餘的聯結資料列。 也就是說，將資料列散發到 WHEN 子句中定義的動作時，沒有任何特定順序。 例如，指定 TOP (10) 會影響 10 個資料列；在這些資料列中，可能會更新 7 個及插入 3 個，或者可能會刪除 1 個、更新 5 個及插入 4 個，依此類推。
+
+使用 TOP 子句依照批次在大型資料表上執行資料操作語言 (DML) 作業是很常見的情形。 基於這個目的在 MERGE 陳述式中使用 TOP 子句時，了解以下含意是很重要的事情。
+
+- I/O 效能可能會受到影響。
+
+  MERGE 陳述式會對來源和目標資料表執行完整資料表掃描。 將作業分成若干批次時，將會減少每一個批次執行的寫入作業數；但是，每一個批次都將會執行來源和目標資料表的完整資料表掃描。 產生的讀取活動可能會影響查詢的效能。
+
+- 可能產生不正確的結果。
+
+  請務必確定所有後續批次都是以新的資料列為目標，否則可能會發生不想要的行為，例如錯誤地將重複資料列插入目標資料表。 當來源資料表包含的資料列不在目標批次中，而是在整體目標資料表中時，可能會發生這個狀況。
+
+- 若要確保結果正確：
+
+  - 使用 ON 子句來判斷哪些來源資料列會影響現有的全新目標資料列。
+  - 在 WHEN MATCHED 子句中使用其他條件來判斷上一個批次是否已經更新目標資料列。
+
+因為只有在套用這些子句之後才會套用 TOP 子句，所以每一次的執行會插入一個完全不相符的資料列，或是更新一個現有的資料列。
+
+### <a name="bulk-load-best-practices"></a>大量載入最佳做法
+
+使用 MERGE 陳述式可有效率地從來源資料檔將資料大量載入目標資料表中，其方式是將 `OPENROWSET(BULK…)` 子句指定為資料表來源。 這樣做的話，整個檔案都會在單一批次中處理。
+
+若要改善大量合併程序的效能，我們建議您遵循下列指導方針：
+
+- 在目標資料表的聯結資料行上，建立叢集索引。
+- 在 `OPENROWSET(BULK…)` 子句中使用 ORDER 和 UNIQUE 提示來指定來源資料檔的排序方式。
+
+  依預設，大量作業會假設資料檔沒有排序。 因此，根據目標資料表上的叢集索引來排序來源資料以及使用 ORDER 提示來指示排序，好讓查詢最佳化工具可以產生更有效率的查詢計畫，都是很重要的事情。 提示會在執行階段驗證；如果資料流不符合指定的提示，就會引發錯誤。
+
+這些指導方針可確保聯結索引鍵是唯一的，而且來源檔案中的資料排序次序會符合目標資料表。 查詢效能會有所提升，因為不需要其他排序作業，而且也不需要不必要的資料複製。
+
+### <a name="measuring-and-diagnosing-merge-performance"></a>衡量及診斷 MERGE 效能
+
+下列功能可協助您衡量及診斷 MERGE 陳述式的效能。
+
+- 在 [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) 動態管理檢視表中使用 merge stmt 計數器可傳回適用於 MERGE 陳述式的查詢最佳化數目。
+- 在 [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) 動態管理檢視表中使用 merge_action_type 屬性可傳回當做 MERGE 陳述式結果使用的觸發程序執行計畫類型。
+- 請使用 SQL 追蹤來蒐集 MERGE 陳述式的疑難排解資料，就像是處理其他資料操作語言 (DML) 陳述式一樣。 如需詳細資訊，請參閱 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)。
+
 ## <a name="examples"></a>範例  
-  
-### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. 以單一陳述式使用 MERGE 在資料表上執行 INSERT 和 UPDATE 作業  
+
+### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. 以單一陳述式使用 MERGE 在資料表上執行 INSERT 和 UPDATE 作業
+
 如果存在相符的資料列，則常見情況是更新資料表中的一或多個資料行。 另一個情況是，如果沒有相符的資料列，則將資料作為新資料列插入。 您通常會透過將參數傳遞到包含適當 UPDATE 和 INSERT 陳述式的預存程序，依照上述情況之一來執行。 您可以使用 MERGE 陳述式，在單一陳述式中同時執行兩個工作。 以下範例示範 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中同時包含 INSERT 陳述式和 UPDATE 陳述式的預存程序。 接著，程序會經過修改，以便使用單一 MERGE 陳述式來執行等同的作業。  
   
 ```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
-AS   
+AS
 BEGIN  
     SET NOCOUNT ON;  
--- Update the row if it exists.      
+-- Update the row if it exists.
     UPDATE Production.UnitMeasure  
 SET Name = @Name  
 WHERE UnitMeasureCode = @UnitMeasureCode  
@@ -339,9 +426,9 @@ SELECT UnitMeasureCode, Name FROM Production.UnitMeasure
 WHERE UnitMeasureCode = 'ABC';  
 GO  
   
--- Rewrite the procedure to perform the same operations using the 
+-- Rewrite the procedure to perform the same operations using the
 -- MERGE statement.  
--- Create a temporary table to hold the updated or inserted values 
+-- Create a temporary table to hold the updated or inserted values
 -- from the OUTPUT clause.  
 CREATE TABLE #MyTempTable  
     (ExistingCode nchar(3),  
@@ -356,14 +443,14 @@ GO
 ALTER PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
-AS   
+AS
 BEGIN  
     SET NOCOUNT ON;  
   
     MERGE Production.UnitMeasure AS target  
     USING (SELECT @UnitMeasureCode, @Name) AS source (UnitMeasureCode, Name)  
     ON (target.UnitMeasureCode = source.UnitMeasureCode)  
-    WHEN MATCHED THEN   
+    WHEN MATCHED THEN
         UPDATE SET Name = source.Name  
     WHEN NOT MATCHED THEN  
         INSERT (UnitMeasureCode, Name)  
@@ -377,13 +464,14 @@ EXEC InsertUnitMeasure @UnitMeasureCode = 'XYZ', @Name = 'Test Value';
 EXEC InsertUnitMeasure @UnitMeasureCode = 'ABC', @Name = 'Another Test Value';  
   
 SELECT * FROM #MyTempTable;  
--- Cleanup   
+-- Cleanup
 DELETE FROM Production.UnitMeasure WHERE UnitMeasureCode IN ('ABC','XYZ');  
 DROP TABLE #MyTempTable;  
 GO  
 ```  
   
-### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. 以單一陳述式使用 MERGE 在資料表上執行 UPDATE 和 DELETE 作業  
+### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. 以單一陳述式使用 MERGE 在資料表上執行 UPDATE 和 DELETE 作業
+
 下列範例使用 MERGE，根據在 `ProductInventory` 資料表中處理的順序，每日更新 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中的 `SalesOrderDetail` 資料表。 `Quantity` 資料表中的 `ProductInventory` 資料行會藉著減去 `SalesOrderDetail` 資料表中每個產品每日所下的訂單數量來進行更新。 如果產品的訂單數量使產品的存貨降為 0 或 0 以下，該產品的資料列就會從 `ProductInventory` 資料表中刪除。  
   
 ```sql  
@@ -399,10 +487,10 @@ USING (SELECT ProductID, SUM(OrderQty) FROM Sales.SalesOrderDetail AS sod
 ON (target.ProductID = source.ProductID)  
 WHEN MATCHED AND target.Quantity - source.OrderQty <= 0  
     THEN DELETE  
-WHEN MATCHED   
-    THEN UPDATE SET target.Quantity = target.Quantity - source.OrderQty,   
+WHEN MATCHED
+    THEN UPDATE SET target.Quantity = target.Quantity - source.OrderQty,
                     target.ModifiedDate = GETDATE()  
-OUTPUT $action, Inserted.ProductID, Inserted.Quantity, 
+OUTPUT $action, Inserted.ProductID, Inserted.Quantity,
     Inserted.ModifiedDate, Deleted.ProductID,  
     Deleted.Quantity, Deleted.ModifiedDate;  
 GO  
@@ -410,7 +498,8 @@ GO
 EXECUTE Production.usp_UpdateInventory '20030501'  
 ```  
   
-### <a name="c-using-merge-to-do-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. 使用 MERGE 在目標資料表上透過衍生的來源資料表來執行 UPDATE 和 INSERT 作業  
+### <a name="c-using-merge-to-do-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. 使用 MERGE 在目標資料表上透過衍生的來源資料表來執行 UPDATE 和 INSERT 作業
+
 以下範例會使用 MERGE，藉由更新或插入資料列來修改 `SalesReason` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 當來源資料表中的 `NewName` 值符合目標資料表 (`Name`) 中 `SalesReason` 資料行內的值時，就會更新目標資料表中的 `ReasonType` 資料行。 當 `NewName` 的值不相符時，來源資料列會插入目標資料表中。 來源資料表是一種衍生資料表，可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值建構函式針對來源資料表指定多個資料列。 如需有關在衍生資料表中使用資料表值建構函式的詳細資訊，請參閱[資料表值建構函式 &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)。 此範例也示範如何將 OUTPUT 子句的結果儲存在資料表變數中。 接著，您執行簡單的選取作業來摘要 MERGE 陳述式的結果，該作業會傳回插入和更新的資料列數。  
   
 ```sql  
@@ -418,7 +507,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
 MERGE INTO Sales.SalesReason AS Target  
-USING (VALUES ('Recommendation','Other'), ('Review', 'Marketing'), 
+USING (VALUES ('Recommendation','Other'), ('Review', 'Marketing'),
               ('Internet', 'Promotion'))  
        AS Source (NewName, NewReasonType)  
 ON Target.Name = Source.NewName  
@@ -434,7 +523,8 @@ FROM @SummaryOfChanges
 GROUP BY Change;  
 ```  
   
-### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. 將 MERGE 陳述式的結果插入另一個資料表  
+### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. 將 MERGE 陳述式的結果插入另一個資料表
+
 下列範例將擷取從 MERGE 陳述式的 OUTPUT 子句中傳回的資料，並將該資料插入另一個資料表中。 MERGE 陳述式會根據在 `Quantity` 資料表中處理的順序，來更新 `ProductInventory` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的 `SalesOrderDetail` 資料行。 此範例會擷取更新的資料列，並將其插入至另一個資料表，該資料表用於追蹤存貨變更。  
   
 ```sql  
@@ -443,35 +533,36 @@ CREATE TABLE Production.UpdatedInventory
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  
 GO  
 INSERT INTO Production.UpdatedInventory  
-SELECT ProductID, LocationID, NewQty, PreviousQty   
+SELECT ProductID, LocationID, NewQty, PreviousQty
 FROM  
 (    MERGE Production.ProductInventory AS pi  
-     USING (SELECT ProductID, SUM(OrderQty)   
+     USING (SELECT ProductID, SUM(OrderQty)
             FROM Sales.SalesOrderDetail AS sod  
             JOIN Sales.SalesOrderHeader AS soh  
             ON sod.SalesOrderID = soh.SalesOrderID  
             AND soh.OrderDate BETWEEN '20030701' AND '20030731'  
             GROUP BY ProductID) AS src (ProductID, OrderQty)  
      ON pi.ProductID = src.ProductID  
-    WHEN MATCHED AND pi.Quantity - src.OrderQty >= 0   
+    WHEN MATCHED AND pi.Quantity - src.OrderQty >= 0
         THEN UPDATE SET pi.Quantity = pi.Quantity - src.OrderQty  
-    WHEN MATCHED AND pi.Quantity - src.OrderQty <= 0   
+    WHEN MATCHED AND pi.Quantity - src.OrderQty <= 0
         THEN DELETE  
-    OUTPUT $action, Inserted.ProductID, Inserted.LocationID, 
+    OUTPUT $action, Inserted.ProductID, Inserted.LocationID,
         Inserted.Quantity AS NewQty, Deleted.Quantity AS PreviousQty)  
- AS Changes (Action, ProductID, LocationID, NewQty, PreviousQty) 
+ AS Changes (Action, ProductID, LocationID, NewQty, PreviousQty)
  WHERE Action = 'UPDATE';  
 GO  
 ```  
 
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. 使用 MERGE 對圖形資料庫中的目標邊緣資料表執行 INSERT 或 UPDATE
+
 在此範例中，您會建立 `Person` 和 `City` 節點資料表以及 `livesIn` 邊緣資料表。 您將在 `livesIn` 邊緣使用 MERGE 陳述式，以在 `Person` 與 `City` 之間還未存在邊緣時插入新資料列。 如果邊緣已經存在，則您只需更新 `livesIn` 邊緣上的 StreetAddress 屬性。
 
 ```sql
 -- CREATE node and edge tables
 CREATE TABLE Person
     (
-        ID INTEGER PRIMARY KEY, 
+        ID INTEGER PRIMARY KEY,
         PersonName VARCHAR(100)
     )
 AS NODE
@@ -479,8 +570,8 @@ GO
 
 CREATE TABLE City
     (
-        ID INTEGER PRIMARY KEY, 
-        CityName VARCHAR(100), 
+        ID INTEGER PRIMARY KEY,
+        CityName VARCHAR(100),
         StateName VARCHAR(100)
     )
 AS NODE
@@ -535,20 +626,18 @@ GO
 
 -- Verify that all the address were added/updated correctly
 SELECT PersonName, CityName, StreetAddress
-FROM Person , City , livesIn 
+FROM Person , City , livesIn
 WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
   
-## <a name="see-also"></a>另請參閱  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
-[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
-[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
-[OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
-[Integration Services 套件中的 MERGE](../../integration-services/control-flow/merge-in-integration-services-packages.md)   
-[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
-[資料表值建構函式 &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
 
+- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
+- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
+- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)
+- [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)
+- [Integration Services 套件中的 MERGE](../../integration-services/control-flow/merge-in-integration-services-packages.md)
+- [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)
+- [資料表值建構函式 &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  

@@ -21,13 +21,13 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 08/26/2019
 ms.locfileid: "68419598"
 ---
-# <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+# <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函式會傳回 **varbinary** 位元模式，指出資料表或檢視的已插入或更新資料行。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 觸發程序主體內的任何位置使用 `COLUMNS_UPDATED`，來測試觸發程序是否應該執行特定動作。
@@ -74,7 +74,7 @@ WHERE TABLE_NAME = 'Person';
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. 利用 COLUMNS_UPDATED 來測試資料表的前八個資料行  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. 利用 COLUMNS_UPDATED 來測試資料表的前八個資料行  
 此範例會建立兩份資料表：`employeeData` 和 `auditEmployeeData`。 `employeeData` 資料表保留機密的員工薪資資訊，而人力資源部門成員可以修改這項資訊。 如果員工的社會保險號碼 (SSN)、年薪或銀行帳戶變更，就會產生一筆稽核記錄，並將其插入 `auditEmployeeData` 稽核資料表。
   
 使用 `COLUMNS_UPDATED()` 函式，即可快速測試包含對機密員工資訊的資料行進行的任何變更。 只有在嘗試偵測資料表中前八個資料行的變更時，則以這個方式來使用 `COLUMNS_UPDATED()` 才有效。
@@ -183,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. 利用 COLUMNS_UPDATED 來測試八個以上資料行  
+### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. 利用 COLUMNS_UPDATED 來測試八個以上資料行  
 若要測試會影響前八個資料表資料行以外之資料行的更新，請使用 `SUBSTRING` 函式來測試 `COLUMNS_UPDATED` 所傳回的正確位元。 此範例會測試影響 `AdventureWorks2012.Person.Person` 資料表中第 `3` 個、第 `5` 個和第 `9` 個資料行的更新。
   
 ```sql

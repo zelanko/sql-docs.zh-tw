@@ -1,7 +1,7 @@
 ---
 title: 使用查詢存放區的最佳做法 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 917a471183d31fab92aa871b6f71a5835c7999d1
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495384"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903607"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -135,7 +135,7 @@ SET QUERY_STORE = ON
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
       QUERY_CAPTURE_MODE = AUTO,
-      MAX_STORAGE_SIZE_MB = 1024,
+      MAX_STORAGE_SIZE_MB = 1000,
       INTERVAL_LENGTH_MINUTES = 60
     );
 ```  
@@ -149,7 +149,8 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,
@@ -157,7 +158,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-下列範例會將查詢擷取模式設定為 Auto，並在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中設定其他建議選項，也可選擇將自訂擷取原則設定為預設值：  
+下列範例會將查詢擷取模式設定為 Auto，並在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中設定其他建議選項，也可**選擇性地**將自訂擷取原則設定為預設值，而不是新的預設值「自動擷取模式」：  
 
 ```sql
 ALTER DATABASE [QueryStoreDB]  
@@ -166,7 +167,7 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,
@@ -211,7 +212,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |---------------|--------------|  
 |迴歸查詢|找出執行計量最近迴歸的查詢 (也就是變更為更糟)。 <br />使用此檢視將您的應用程式中觀察到的需要修正或改善的效能問題，與實際查詢相互關聯。|  
 |整體資源耗用量|針對任何執行計量，分析資料庫的整體資源耗用量。<br />使用此檢視來識別資源模式 (每日與每晚的工作負載) 和最佳化資料庫的整體耗用量。|  
-|熱門資源取用查詢|選擇一個感興趣的執行計量，並識別針對提供的時間間隔具有最極端值的查詢。 <br />使用此檢視將注意力放在最相關的查詢， 也就是對資料庫資源耗用量有最大影響的查詢。|  
+|熱門資源取用查詢|選擇一個感興趣的執行計量，並識別針對提供的時間間隔具有最極端值的查詢。 <br />使用此檢視將注意力放在最相關的查詢，也就是對資料庫資源耗用量有最大影響的查詢。|  
 |強制計畫的查詢|使用查詢存放區列出先前的強制計畫。 <br />使用此檢視快速存取所有目前的強制計畫。|  
 |高變化的查詢|在關聯到任何可用的維度 (例如，所需時間間隔的持續時間、CPU 時間、IO 和記憶體使用量) 時，分析高執行變化的查詢。<br />您可以使用此檢視來識別含有廣泛變體效能的查詢，此效能會影響不同應用程式的使用者體驗。|  
 |查詢等候統計資料|分析資料庫中最常使用的等候類別，以及哪些查詢最常參與所選取的等候類別。<br />使用此檢視來分析等候統計資料，並識別可能影響使用者在應用程式間之體驗的查詢。<br /><br />**適用於：** 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始|  
@@ -289,7 +290,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 -   最後，您應該考慮將 [查詢擷取模式] 設定為 [Auto]，它會篩選掉和您的工作負載通常較不相關的查詢。  
   
 ### <a name="error-state"></a>錯誤狀態  
- 若要復原查詢存放區， 請嘗試明確地重新設定讀寫模式，並檢查實際狀態。  
+ 若要復原查詢存放區，請嘗試明確地重新設定讀寫模式，並檢查實際狀態。  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   

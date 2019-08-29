@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.openlocfilehash: 46174db6dc0008dbeb9490cc96cf41cdef1bc3ed
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68823128"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123099"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -81,7 +81,6 @@ SQL Server Management Studio 18.2：
 | 查詢執行或結果 | 在訊息中新增了「完成時間」，用來追蹤指定的查詢何時完成其執行。 |
 | 查詢執行或結果  | 允許顯示更多的資料 (結果為文字) 並將其儲存在資料格 (結果為方格) 中。 SSMS 現在允許這兩者最多有 2M 個字元 (最高分別從 256 和 64K)。 這也解決了使用者無法從方格資料格抓取超過 43680 個字元的問題。 |
 | 執行程序表 | 啟用內嵌純量 UDF 功能時(ContainsInlineScalarTsqlUdfs)，在 QueryPlan 中新增了新屬性。 |
-| SMO | 新增「功能限制」的支援。 如需功能本身的詳細資訊，請參閱[功能限制](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)。 如需評定延伸模組的詳細資訊，請參閱 [SQL 評定 API 簡介](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570)。 |
 | Integration Services (SSIS) | Azure 中 SSIS 套件排程器的效能最佳化 |
 |  |  |
 

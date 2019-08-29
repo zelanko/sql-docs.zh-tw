@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006530"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000824"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -356,7 +356,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 ## <a name="best-practices"></a>最佳作法  
  雖然這不是最詳盡的最佳作法清單，但這些建議可能會改善程序效能。  
   
--   使用 SET NOCOUNT ON 陳述式做為程序主體中的第一個陳述式。 亦即，將該陳述式放在 AS 關鍵字正後方。 這樣會關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在執行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 陳述式之後，傳回用戶端的訊息。 排除這不必要的網路負擔會改善資料庫和應用程式的整體效能。 如需詳細資訊，請參閱 [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)。  
+-   使用 SET NOCOUNT ON 陳述式做為程序主體中的第一個陳述式。 亦即，將該陳述式放在 AS 關鍵字正後方。 這樣會關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在執行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 陳述式之後，傳回用戶端的訊息。 這樣能讓所產生的輸出為最小，以保持清晰。 但在現今的硬體上，沒有可測量的效能優勢。 如需詳細資訊，請參閱 [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)。  
   
 -   建立或參考程序中的資料庫物件時，請使用結構描述名稱。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不必搜尋多個結構描述，解析物件名稱所需的處理時間會較少。 它也能防止在不指定結構描述的情況下建立物件時，因指派使用者預設結構描述所引起的權限和存取問題。  
   
@@ -440,7 +440,7 @@ GO
 ## <a name="metadata"></a>中繼資料  
  下表列出可用於傳回預存程序之詳細資訊的目錄檢視和動態管理檢視。  
   
-|檢視|Description|  
+|檢視|描述|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|傳回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序的定義。 您無法使用 **sys.sql_modules** 目錄檢視來檢視以 ENCRYPTION 選項建立的程序文字。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|傳回 CLR 程序的詳細資訊。|  
@@ -457,7 +457,7 @@ GO
   
  \* 這些計數器可供各種類別目錄的快取物件使用，包括隨選 [!INCLUDE[tsql](../../includes/tsql-md.md)]、已備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、程序、觸發程序等等。 如需詳細資訊，請參閱 [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
  需要資料庫的 **CREATE PROCEDURE** 權限，以及要在其中建立程序之結構描述的 **ALTER** 權限，或者需要 **db_ddladmin** 固定資料庫角色的成員資格。  

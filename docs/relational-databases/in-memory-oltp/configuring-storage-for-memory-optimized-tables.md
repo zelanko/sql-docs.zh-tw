@@ -10,19 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d4c7f50e791324d7e0a0a13164875c5095eb5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915280"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634571"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>設定記憶體最佳化資料表的儲存體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您必須設定儲存容量和每秒的輸入/輸出作業 (IOPS)。  
   
 ## <a name="storage-capacity"></a>儲存容量  
- 請使用 [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 中的資訊來預估資料庫的持久性記憶體最佳化資料表在記憶體中的大小。 因為不會針對記憶體最佳化資料表保存索引，所以請勿包含索引的大小。 一旦您決定大小之後，您提供的磁碟空間就必須是持久性記憶體中資料表大小的四倍。  
+
+請使用 [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 中的資訊來預估資料庫的持久性記憶體最佳化資料表在記憶體中的大小。 因為不會針對記憶體最佳化資料表保存索引，所以請勿包含索引的大小。 
+ 
+在您決定大小之後，必須提供足夠磁碟空間來保存檢查點檔案，這些檔案是用來儲存新變更的資料。 所儲存的資料不只包含新增至記憶體中資料表的新資料列內容，也包含現有資料列的新版本。 當插入或更新資料列時，此儲存體會隨之增加。 資料列版本會合並，並在發生記錄截斷時回收儲存體。 如果記錄截斷因任何原因而延遲，記憶體內 OLTP 存放區將會增加。
+
+為此區域調整儲存體大小的好起點是，保留持久記憶體內部資料表四倍大小的空間。 監視空間使用量，並準備好在需要時，擴充它能使用的儲存體。
   
 ## <a name="storage-iops"></a>儲存體 IOPS  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 可能會大幅增加您的工作負載輸送量。 因此，請務必確定 IO 不是瓶頸。  

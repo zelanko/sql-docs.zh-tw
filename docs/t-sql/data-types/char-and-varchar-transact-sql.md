@@ -24,12 +24,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e625e1d532f42f2e72e57590943de7e5834dbf
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8162c14620143aa70ea2e87f582ec99e613f234c
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354617"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "69653667"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "68354617"
 ## <a name="arguments"></a>引數  
 **char** [ ( *n* ) ] 固定大小字串資料。 *n* 會定義字串大小 (單位為位元組)，且必須是 1 到 8,000 之間的值。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組，但可儲存的字元數目可能小於 *n*。 **char** 的 ISO 同義字為 **character**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
-**varchar** [ ( *n* | **max** ) ] 可變大小字串資料。 *n* 會定義字串大小 (單位為位元組)，且可以是 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組 + 2 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組 + 2 位元組，但可儲存的字元數目可能小於 *n*。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
+**varchar** [ ( *n* | **max** ) ] 可變大小字串資料。 您可以使用 *n* 以位元組為單位來定義字串大小，該值可以介於 1 到 8,000，或使用 **max** 來表示資料行大小限制最多為 2^31-1 個位元組 (2 GB) 的儲存體。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組 + 2 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組 + 2 位元組，但可儲存的字元數目可能小於 *n*。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 常見的誤解是假設 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)，*n* 會定義字元數。 但是在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)，*n* 會定義字串長度 (以**位元組**為單位) (0-8,000)。 *n* 一律不會定義可儲存的字元數。 這類似於 [NCHAR (*n*) 和 NVARCHAR (*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 的定義。    
 發生誤解的原因是，使用單一位元組編碼時，CHAR 和 VARCHAR 的儲存體大小是 *n* 位元組，而字元數目也是 *n*。 不過，針對多位元組編碼 (例如 [UTF-8](https://www.wikipedia.org/wiki/UTF-8))，較高的 Unicode 範圍 (128-1,114,111) 會使用二或多個位元組來產生單一字元。 例如，在定義為 CHAR (10) 的資料行中，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以儲存 10 個使用單一位元組編碼的字元 (Unicode 範圍 0-127)，但使用多位元組編碼時，則小於 10 個字元 (Unicode 範圍 128-1,114,111)。 如需 Unicode 儲存和字元範圍的詳細資訊，請參閱 [UTF-8 和 UTF-16 之間的儲存差異](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。      
 

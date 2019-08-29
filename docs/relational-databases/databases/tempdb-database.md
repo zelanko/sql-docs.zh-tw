@@ -2,7 +2,7 @@
 title: tempdb 資料庫 | Microsoft Docs
 description: 本主題提供有關在 SQL Server 和 Azure SQL Database 中設定和使用 tempdb 資料庫的詳細資料
 ms.custom: P360
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e921c5b95a3d7fd4eb1e8c5b0cb9010c7d2344c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127144"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653776"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 
@@ -46,7 +46,7 @@ ms.locfileid: "68127144"
   - 由資料庫中的資料修改交易所產生的資料列版本，該資料庫採用使用資料列版本設定隔離的讀取認可或快照集隔離交易。  
   - 由以下這類功能的資料修改交易所產生的資料列版本：線上索引作業、Multiple Active Result Set (MARS) 和 AFTER 觸發程序。  
   
-至少會記錄 **tempdb** 內的作業，以便回復交易。 每次啟動**時都會重新建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這樣系統永遠會以乾淨的資料庫複本啟動。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此， **tempdb** 中的任何資料都不會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個工作階段儲存到其他的工作階段。 **tempdb**不允許進行備份和還原作業。  
+至少會記錄 **tempdb** 內的作業，以便回復交易。 每次啟動**時都會重新建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這樣系統永遠會以乾淨的資料庫複本啟動。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此，**tempdb** 中的任何資料都不會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個工作階段儲存到其他的工作階段。 **tempdb**不允許進行備份和還原作業。  
   
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 實體屬性
 
@@ -109,9 +109,9 @@ ms.locfileid: "68127144"
 
 ### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>以 DTU 為基礎的服務層 tempdb 大小
 
-|SLO|Tempdb 資料檔案大小上限 (GB)|Tempdb資料檔案數|Tempdb 資料檔案大小上限 (GB)|
+|SLO|Tempdb 資料檔案大小上限 (GB)|Tempdb 資料檔案數|Tempdb 資料檔案大小上限 (GB)|
 |---|---:|---:|---:|
-|[基本]|13|1|13|
+|基本|13|1|13|
 |S0|13|1|13|
 |S1|13|1|13|
 |S2|13|1|13|
@@ -217,13 +217,13 @@ GO
 
 ## <a name="memory-optimized-tempdb-metadata"></a>記憶體最佳化的 TempDB 中繼資料
 
-TempDB 中繼資料競爭一直以來都是在 SQL Server 上執行之許多工作負載的延展性瓶頸。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分，記憶體最佳化的 tempdb 中繼資料能有效移除此瓶頸，並解除鎖定大量 tempdb 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。 請使用下列指令碼，選擇加入這項新功能：
+TempDB 中繼資料競爭一直以來都是在 SQL Server 上執行之許多工作負載的延展性瓶頸。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分，記憶體最佳化的 tempdb 中繼資料能有效移除此瓶頸，並解除鎖定大量 tempdb 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分，記憶體最佳化的 tempdb 中繼資料能有效移除此瓶頸，並解除鎖定大量 tempdb 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。若要選擇加入此功能，請使用下列指令碼：
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
 ```
 
-這項設定變更需要重新啟動服務才會生效。
+此設定變更需要重新啟動服務才會生效。
 
 此實作有些限制請務必注意：
 
@@ -256,7 +256,7 @@ SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 容量規劃
 
-在決定 SQL Server 生產環境中的 tempdb 適當大小時，您需要考量許多因素。 如本文先前所述，這些因素包括現有的工作負載和使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 我們建議您在 SQL Server 測試環境中執行下列工作來分析現有的工作負載：
+在決定 SQL Server 生產環境中的 tempdb 適當大小時，您需要考量許多因素。 如此文章先前所述，這些因素包括現有的工作負載和使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 我們建議您在 SQL Server 測試環境中執行下列工作來分析現有的工作負載：
 
 - 將 tempdb 的自動成長設為開啟。
 - 執行個別查詢或工作負載追蹤檔案，並監視 tempdb 空間使用量。
@@ -319,7 +319,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
 - [移動資料庫檔案](../../relational-databases/databases/move-database-files.md)  
   
-## <a name="see-also"></a>另請參閱
-
-- [使用 SQL Server 2005 中的 tempdb](https://technet.microsoft.com/library/cc966545.aspx)  
-- [tempdb 磁碟空間不足的疑難排解](https://msdn.microsoft.com/library/ms176029.aspx)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 143bba36c1f85877fd3a0504dd8345c754ec055d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9cbb85bafae51929676de93e4de285472bc5443
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023596"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621700"
 ---
 # <a name="install-integration-services"></a>安裝 Integration Services
 
@@ -34,7 +34,7 @@ ms.locfileid: "68023596"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了單一安裝程式，以安裝它的任何或所有元件，包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在內。 使用安裝程式來安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，不論單一電腦上是否有其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。    
     
- 本文特別介紹在您安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之前應該先了解的重要考量事項。 本文的資訊有助您評估安裝選項，以便做出讓安裝成功的選擇。    
+ 此文章特別介紹在您安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之前應該先了解的重要考量事項。 此文章的資訊有助您評估安裝選項，以便做出讓安裝成功的選擇。    
     
 ## <a name="get-ready-to-install-integration-services"></a>準備好安裝 Integration Services    
  在安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之前，請檢閱下列資訊：    
@@ -44,9 +44,9 @@ ms.locfileid: "68023596"
 -   [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)    
     
 ## <a name="install-standalone-or-side-by-side"></a>獨立或並存安裝    
-您可以在以下組態中安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ：    
+您可以在以下組態中安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]：    
     
--   您可以將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安裝在沒有舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的電腦上。    
+-   您可以將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安裝在沒有舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦上。    
     
 -   您可以將 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的現有執行個體並存安裝。    
     
@@ -78,7 +78,7 @@ ms.locfileid: "68023596"
 
 ### <a name="configuring-ssis-event-logging"></a>設定 SSIS 事件記錄
     
-根據預設，在新的安裝中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會設定為不要將與封裝執行相關的事件記錄至應用程式事件記錄檔。 當您使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的資料收集器功能時，這個設定可避免產生過多的事件記錄項目。 不會記錄的事件包括 EventID 12288「封裝已啟動」和 EventID 12289「封裝已成功完成」。 若要將這些事件記錄到應用程式事件記錄檔，請開啟登錄進行編輯。 在登錄中找出 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 節點，然後將 LogPackageExecutionToEventLog 設定的 DWORD 值從 0 變更為 1。    
+根據預設，在新的安裝中，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會設定為不要將與封裝執行相關的事件記錄至應用程式事件記錄檔。 當您使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的資料收集器功能時，這個設定可避免產生過多的事件記錄項目。 不會記錄的事件包括 EventID 12288「封裝已啟動」和 EventID 12289「封裝已成功完成」。 若要將這些事件記錄到應用程式事件記錄檔，請開啟登錄進行編輯。 在登錄中找出 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 節點，然後將 LogPackageExecutionToEventLog 設定的 DWORD 值從 0 變更為 1。    
     
 ## <a name="install-additional-components-for-integration-services"></a>安裝 Integration Services 的其他元件
 
@@ -122,6 +122,6 @@ ms.locfileid: "68023596"
 
 -   **其他選用元件**： 您可以從 SQL Server Feature Pack 選擇性下載其他協力廠商的元件。
 
-    -   MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ®。 若要取得這些元件，請參閱 [MicrosoftÂ® SQL ServerÂ® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992)。
+    -   Microsoft® Connector for SAP BW for Microsoft SQL Server®。 若要取得這些元件，請參閱 [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992)。
 
     -   Microsoft Connector Version 5.0 for Oracle by Attunity 和 Microsoft Connector Version 5.0 for Teradata by Attunity。 若要取得這些元件，請參閱 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)。

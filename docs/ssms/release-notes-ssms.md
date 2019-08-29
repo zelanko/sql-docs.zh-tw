@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: e499f58eff6c09ac8d32d4cd630afc4c7855c299
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809861"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122988"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -62,7 +62,6 @@ SSMS 18.2 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 | 查詢執行或結果 | 在訊息中新增了「完成時間」  ，用來追蹤指定的查詢何時完成其執行。 |
 | 查詢執行或結果 | 允許顯示更多的資料 (結果為文字) 並將其儲存在資料格 (結果為方格) 中。 SSMS 現在允許這兩者最多有 2M 個字元 (最高分別從 256 和 64K)。 這也解決了使用者無法從方格資料格抓取超過 43680 個字元的問題。 |
 | 執行程序表 | 啟用[內嵌純量 UDF 功能](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) (ContainsInlineScalarTsqludfs) 時，在 QueryPlan 中新增了新屬性。 |
-| SMO | 新增「功能限制」  的支援。 如需功能本身的詳細資訊，請參閱[功能限制](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)。 |
 | SMO | 已新增 *SQL 評定 API* 的支援。 如需詳細資訊，請參閱 [SQL 評定 API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview)。 |
 |  |  |
 
@@ -239,7 +238,6 @@ SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 |Always Encrypted| [連線至伺服器] 對話方塊之新 [Always Encrypted] 索引標籤中的 [啟用 Always Encrypted] 核取方塊現在提供簡單的方法來啟用/停用資料庫連線的 Always Encrypted。|
 |具有安全記憶體保護區的 Always Encrypted| 在 SQL Server 2019 Preview 中，已完成數個增強功能來支援具有安全記憶體保護區的 Always Encrypted：[連線至伺服器] 對話方塊中用於指定記憶體保護區證明 URL 的文字欄位 (新的 [Always Encrypted] 索引標籤)。  [新增資料行主要金鑰] 對話方塊中用來控制新資料行主要金鑰是否允許記憶體保護區計算的新核取方塊。  其他 Always Encrypted 金鑰管理對話方塊現在會公開哪些資料行主要金鑰允許記憶體保護區計算的資訊。|
 |稽核檔案|將驗證方法從儲存體帳戶金鑰驗證變更為 Azure AD 驗證。|
-|稽核檔案|已更新已知的稽核動作清單，而納入 FEATURE RESTRICTION ADD/CHANGE GROUP/DROP。|
 |資料分類| 重新組織資料分類工作功能表：新增資料庫工作功能表的子功能表，並新增選項讓您從功能表開啟報表，而不需要先開啟分類資料視窗。|
 |資料分類|在 SMO 中新增 [資料分類] 功能。 資料行物件公開了新的屬性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId，及 IsClassified (唯讀)。 如需詳細資訊，請參閱 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
 |資料分類|在 [資料分類] 飛出視窗中新增 [分類報告] 功能表項目。|

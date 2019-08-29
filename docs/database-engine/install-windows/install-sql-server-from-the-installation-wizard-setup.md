@@ -14,20 +14,20 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742910"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009388"
 ---
-# <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
+# <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server (安裝程式)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
+此文章說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
 
-本文提供的逐步程序，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新執行個體。 安裝精靈會提供單一功能樹狀目錄以供安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，所以您不必個別安裝它們。 如需個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
+此文章提供的逐步程序，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新執行個體。 安裝精靈會提供單一功能樹狀目錄以供安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，所以您不必個別安裝它們。 如需個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
 
 如需其他安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的方式，請參閱：  
 
@@ -52,10 +52,9 @@ ms.locfileid: "68742910"
 
 ###  <a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求
 
-Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，SQL Server 2016 和 2017 必須安裝這些二進位檔。 已提供修正此問題的更新。 如未安裝這項 Visual C++ Runtime 二進位檔的更新，SQL Server 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 之前，請先遵循 [SQL Server 版本資訊](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)的指示，查看您的電腦是否需要 Visual C++ Runtime 二進位檔的修補程式。 
+Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，SQL Server 2016 和 2017 必須安裝這些二進位檔。 已提供修正此問題的更新。 如未安裝這個 Visual C++ Runtime 二進位檔的更新，SQL Server 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 之前，請先遵循 [SQL Server 版本資訊](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)的指示，查看您的電腦是否需要 Visual C++ Runtime 二進位檔的修補程式。 
 
-這不適用於 SQL Server 2019。  
-  
+這不適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]。
 
 ## <a name="to-install-sql-server-2016-and-2017"></a>安裝 SQL Server 2016 和 2017  
 
@@ -105,14 +104,14 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 如果所有規則都通過，[功能規則]  頁面會自動前進。  
   
-1. 在 [執行個體設定]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體設定](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
+1. 在 [執行個體組態]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體組態](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
   
-     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 若是預設執行個體，則執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
+     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 針對預設執行個體，執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
   
        > [!NOTE]  
        > 一般的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 獨立執行個體，無論是預設還是具名執行個體，執行個體識別碼都不會使用非預設值。  
   
-       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
+       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的每一個元件。  
   
      * **已安裝的執行個體**：方格內會顯示正在執行安裝程式電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的具名執行個體。  
   
@@ -196,7 +195,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
      * 指定 Distributed Replay Client 服務的 **工作目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
   
-     * 指定 Distributed Replay Client 服務的 **結果目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
+     * 指定 Distributed Replay Client 服務的 **結果目錄**。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
   
      * 若要繼續，請選取 [下一步]  。  
   
@@ -267,22 +266,22 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 如果所有規則都通過，[功能規則]  頁面會自動前進。  
   
-1. 在 [執行個體設定]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體設定](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
+1. 在 [執行個體組態]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體組態](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
   
-     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 若是預設執行個體，則執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
+     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 針對預設執行個體，執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
   
        > [!NOTE]  
        > 一般的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 獨立執行個體，無論是預設還是具名執行個體，執行個體識別碼都不會使用非預設值。  
   
-       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
+       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的每一個元件。  
   
      * **已安裝的執行個體**：方格內會顯示正在執行安裝程式電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的具名執行個體。  
   
      其餘的安裝工作流程會因您對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。 
 
-1. 從 SQL Server 2019 開始，Polybase 就不再要求在安裝此功能之前必須先在電腦上預先安裝 Oracle JRE 7 Update 51 (至少)。 選擇安裝 PolyBase 功能會將 [Java 安裝位置]  頁面新增至 SQL Server 安裝程式，並顯示在 [執行個體組態]  頁面之後。 在 [Java 安裝位置] 頁面上，您可以選擇安裝包含於 SQL Server 2019 安裝的 Azul Zulu Open JRE，或提供電腦上已安裝的其他 JRE 或 JDK 位置。
+1. 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，Polybase 就不再要求在安裝此功能之前必須先在電腦上預先安裝 Oracle JRE 7 Update 51 (至少)。 選擇安裝 PolyBase 功能會將 [Java 安裝位置]  頁面新增至 SQL Server 安裝程式，並顯示在 [執行個體組態]  頁面之後。 在 [Java 安裝位置] 頁面上，您可以選擇安裝包含於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 安裝的 Azul Zulu Open JRE，或提供電腦上已安裝的其他 JRE 或 JDK 位置。
 
-1. 從 SQL Server 2019 開始，已透過語言擴充功能新增 Java。 選擇安裝 Java 功能會將 [Java 安裝位置]  頁面新增至 SQL Server 安裝程式對話方塊視窗，並顯示在 [執行個體組態]  頁面之後。 在 [Java 安裝位置]  頁面上，您可以選擇安裝包含於 SQL Server 2019 安裝的 Zulu Open JRE，或提供電腦上已安裝的其他 JRE 或 JDK 位置。
+1. 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，已透過語言擴充功能新增 Java。 選擇安裝 Java 功能會將 [Java 安裝位置]  頁面新增至 SQL Server 安裝程式對話方塊視窗，並顯示在 [執行個體組態]  頁面之後。 在 [Java 安裝位置]  頁面上，您可以選擇安裝包含於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 安裝的 Zulu Open JRE，或提供電腦上已安裝的其他 JRE 或 JDK 位置。
 
 1. 使用 [伺服器設定 - 服務帳戶]  頁面指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的登入帳戶。 您在此頁面上設定的實際服務會隨您選取安裝的功能而不同。 如需組態設定的詳細資訊，請參閱[安裝精靈說明](../../sql-server/install/instance-configuration.md#serverconfig)。
   
@@ -314,13 +313,29 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
      如需詳細資訊，請參閱 [[資料庫引擎設定 - 資料目錄] 頁面](../../sql-server/install/instance-configuration.md#datadir)。
 
      使用 [資料庫引擎設定 - TempDB]  頁面來設定 **tempdb** 的檔案大小、檔案數目、非預設安裝目錄和檔案成長設定。 如需詳細資訊，請參閱 [[資料庫引擎設定 - TempDB] 頁面](../../sql-server/install/instance-configuration.md#tempdb)。
-
+< < < < < < < HEAD
   
-     使用 [[!INCLUDE[ssDE](../../includes/ssde-md.md)]設定 - MaxDOP]  索引標籤指定平行處理原則的最大程度。 此設定會決定單一陳述式在執行期間可以使用的處理器數目。 安裝期間會自動計算出建議的值。 如需詳細資訊，請參閱[平行處理原則的最大程度指導方針](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)。 此選項僅自 SQL Server 2019 起提供。 
+     使用 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - MaxDOP]  頁面指定平行處理原則的最大程度。 此設定會決定單一陳述式在執行期間可以使用的處理器數目。 安裝期間會自動計算出建議的值。 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) 頁面。 
 
-     使用 [資料庫引擎設定 - 記憶體]  索引標籤來指定此 SQL Server 執行個體在啟動後將使用的 MIN 和 MAX 記憶體值。 您可以使用預設值、使用計算出的建議值，或在選擇 [建議]  選項之後手動指定您自己的值。 此功能自 SQL Server 2019 起僅於安裝程式中提供。 
+     使用 [資料庫引擎組態 - 記憶體]  頁面來指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在啟動後將使用的**最小伺服器記憶體**與**最大伺服器記憶體**值。 您可以使用預設值、使用計算出的建議值，或在選擇 [建議]  選項之後手動指定您自己的值。 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
+=======
 
-     使用 [資料庫引擎設定 - FILESTREAM]  頁面針對您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用 FILESTREAM。 如需詳細資訊，請參閱 [[資料庫引擎設定 - FILESTREAM] 頁面](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)。  
+     使用 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - MaxDOP]  頁面指定平行處理原則的最大程度。 此設定會決定單一陳述式在執行期間可以使用的處理器數目。 安裝期間會自動計算出建議的值。 
+     
+    > [!NOTE]  
+    > 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 
+    
+    如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) 頁面。 
+
+     使用 [資料庫引擎組態 - 記憶體]  頁面來指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在啟動後將使用的**最小伺服器記憶體**與**最大伺服器記憶體**值。 您可以使用預設值、使用計算出的建議值，或在選擇 [建議]  選項之後手動指定您自己的值。
+     
+    > [!NOTE]  
+    > 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 
+    
+    如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
+>>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
+
+     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. 使用 [Analysis Services 設定 - 帳戶佈建]  頁面指定伺服器模式以及擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員權限的使用者或帳戶。 伺服器模式會決定伺服器上使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選取預設的伺服器模式選項 [多維度和資料採礦]  。
 
@@ -361,9 +376,9 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
        * 如果尚未設定控制器，可將控制器名稱留白。 不過，您必須在 [用戶端組態]  檔中，手動輸入控制器名稱。  
   
-     * 指定 Distributed Replay Client 服務的 **工作目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
+     * 指定 Distributed Replay Client 服務的 **工作目錄**。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
   
-     * 指定 Distributed Replay Client 服務的 **結果目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
+     * 指定 Distributed Replay Client 服務的 **結果目錄**。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
   
      * 若要繼續，請選取 [下一步]  。  
   
@@ -388,7 +403,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 
 [設定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017)。  
   
-為了減少系統的可攻擊介面區， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以選擇性地安裝和啟用主要服務和功能。 如需詳細資訊，請參閱[介面區設定](../../relational-databases/security/surface-area-configuration.md)。  
+為了減少系統的可攻擊介面區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以選擇性地安裝和啟用主要服務和功能。 如需詳細資訊，請參閱[介面區設定](../../relational-databases/security/surface-area-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱
   

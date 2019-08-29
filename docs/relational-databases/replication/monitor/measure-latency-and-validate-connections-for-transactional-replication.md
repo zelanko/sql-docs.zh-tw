@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 31e5f5e89a6421c72ecb381685f9450ac9ba9331
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770565"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633407"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,23 +113,23 @@ ms.locfileid: "68770565"
   
 2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 請確認訂閱存在且狀態為使用中。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)，並指定 **@publication** 。 請注意 **@tracer_token_id** 輸出參數的值。  
+3.  在發行集資料庫的發行者上，執行 [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)，並指定 **\@publication**。 請注意 **\@tracer_token_id** 輸出參數的值。  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>若要針對異動複寫判斷延遲並驗證連接  
   
 1.  使用上一個程序將追蹤 Token 公佈到發行集。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **@publication** 。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中所要的 **tracer_id** 。  
+2.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **\@publication**。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中所要的 **tracer_id**。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)，並指定 **@publication** ，而且針對 **@tracer_id** 指定步驟 2 的追追蹤 Token 識別碼。 這麼做會傳回所選取追蹤 Token 的延遲資訊。  
+3.  在發行集資料庫的發行者上，執行 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)，並指定 **\@publication**，而且針對 **\@tracer_id** 指定步驟 2 的追蹤 Token 識別碼。 這麼做會傳回所選取追蹤 Token 的延遲資訊。  
   
 #### <a name="to-remove-tracer-tokens"></a>若要移除追蹤 Token  
   
-1.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **@publication** 。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中要刪除之追蹤 Token 的 **tracer_id** 。  
+1.  在發行集資料庫的發行者上，執行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，並指定 **\@publication**。 如此會傳回公佈到發行集的所有追蹤 Token 清單。 請注意結果集中要刪除之追蹤 Token 的 **tracer_id**。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)，並指定 **@publication** ，而且針對 **@tracer_id** 指定步驟 2 的要刪除的追蹤識別碼。  
+2.  在發行集資料庫的發行者上，執行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)，並指定 **\@publication**，而且針對 **@tracer_id** 指定步驟 2 的要刪除的追蹤識別碼。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  這麼做會公佈追蹤 Token 記錄，並使用傳回的公佈追蹤 Token 識別碼檢視延遲資訊。  
   
  [!code-sql[HowTo#sp_tracertokens](../../../relational-databases/replication/codesnippet/tsql/measure-latency-and-vali_1.sql)]  
@@ -176,7 +176,7 @@ ms.locfileid: "68770565"
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> 方法。 傳遞其中一個值：  
   
-    -   步驟 5 追蹤 Token 的 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 。 這麼做會刪除所選取 Token 的資訊。  
+    -   步驟 5 追蹤 Token 的 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A>。 這麼做會刪除所選取 Token 的資訊。  
   
     -   <xref:System.DateTime> 物件。 這麼做會刪除所有早於指定日期和時間的 Token 資訊。  
   

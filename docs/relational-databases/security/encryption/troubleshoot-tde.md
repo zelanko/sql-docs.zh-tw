@@ -10,35 +10,32 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 04/26/2019
+ms.date: 08/20/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f67d1ed9bf809baaa4d934947e86d3fd1b7ed0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111527"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903616"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>在 Azure Key Vault 中使用客戶受控金鑰進行透明資料加密的常見錯誤
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-此文章說明在 Azure Key Vault 中使用透明資料加密 (TDE) 搭配客戶受控金鑰的需求，以及如何識別及解決常見的錯誤。
+此文章說明如何找出並解決造成資料庫 (設定為使用 [Azure Key Vault 中的透明資料加密 (TDE) 搭配客戶管理金鑰](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql)) 變得無法存取的 Azure Key Vault 金鑰存取問題。
 
-## <a name="requirements"></a>需求
+## <a name="introduction"></a>簡介
+當 TDE 是設定為在 Azure Key Vault 使用客戶管理金鑰時，資料庫必須持續存取 TDE 保護裝置才能保持在線上。  如果邏輯 SQL server 無法存取 Azure Key Vault 中的客戶管理 TDE 保護裝置，資料庫將會拒絕所有連線，並在 Azure 入口網站中顯示為無法存取。
 
-若要在 Key Vault 中使用客戶受控 TDE 保護裝置對 TDE 進行疑難排解，必須符合這些需求：
+在前 48 小時，如果基礎 Azure Key vault 金鑰存取問題已解決，資料庫將會自動修復並自動上線。  這表示在所有間歇性和暫時性網路中斷的情況下，使用者不需要採取動作，資料庫就會自動上線。  在大部分情況下，使用者必須採取動作，才能解決基礎金鑰保存庫的金鑰存取問題。 
 
-- 邏輯 SQL Server 執行個體和金鑰保存庫必須位於相同區域中。
-- Azure Active Directory (Azure AD) 所提供之邏輯 SQL Server 執行個體身分識別 (Azure Key Vault 中的 AppId) 必須是原始訂用帳戶中的租用戶。 如果將伺服器移至與其建立位置不同的其他訂用帳戶，則必須重新建立伺服器身分識別 (AppId)。
-- 金鑰保存庫必須啟動並執行。 若要了解如何檢查金鑰保存庫狀態，請參閱 [Azure 資源健康狀態](https://docs.microsoft.com/azure/service-health/resource-health-overview) \(部分機器翻譯\)。 若要註冊通知，請參閱[動作群組](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\)。
-- 在異地災害復原情節中，這兩個金鑰保存庫必須包含相同的金鑰內容，容錯移轉才能運作。
-- 邏輯伺服器必須具有 Azure AD 身分識別 (AppId) 才能對金鑰保存庫進行驗證。
-- AppId 必須能夠存取金鑰保存庫，且它必須具備選取為 TDE 保護裝置之金鑰的 Get、Wrap 和 Unwrap 權限。
+如果無法存取的資料庫已經不再需要，可以立即將它刪除，以停止產生成本。  除非已還原對 Azure Key Vault 金鑰的存取權，且資料庫已重新上線，否則不允許資料庫上的所有其他動作。   當使用客戶管理金鑰加密的資料庫無法存取時，也不支援將伺服器上的 TDE 選項從「客戶管理」變更為「服務管理」金鑰。 當 TDE 保護裝置遭撤銷時，這是保護資料免於未經授權存取的必要動作。 
 
-如需詳細資訊，請參閱[使用 Azure Key Vault 設定 TDE 的指導方針](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault) \(部分機器翻譯\)。
+當資料庫無法存取超過 48 小時之後，就不會再自動修復。  如果已經還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證存取權，才能讓資料庫重新上線。  資料庫變得無法存取 48 小時之後，要讓它重新上線可能需要花很多時間，取決於資料庫大小，且目前需要支援票證。 一旦資料庫重新上線，先前設定的設定，例如，異地連結 (如果已設定異地 DR)、PITR 歷程記錄和標籤將會遺失。  因此，我們建議使用[動作群組](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 來實作通知系統，以在 48 小時內解決基礎金鑰保存庫問題。 
 
-## <a name="common-misconfigurations"></a>常見錯誤設定
+
+## <a name="common-errors-causing-databases-to-become-inaccessible"></a>導致資料庫變得無法存取的常見錯誤
 
 搭配金鑰保存庫使用 TDE 時，出現的大多數問題都是由下列其中一個錯誤設定所造成：
 
@@ -46,10 +43,11 @@ ms.locfileid: "68111527"
 
 - 意外刪除金鑰保存庫。
 - 已針對 Azure Key Vault 設定防火牆，但它不允許存取 Microsoft 服務。
+- 間歇網路錯誤導致無法使用金鑰保存庫。
 
 ### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>沒有存取金鑰保存庫的權限或金鑰不存在
 
-- 意外刪除金鑰。
+- 意外刪除、停用金鑰或金鑰已過期。
 - 意外刪除邏輯 SQL Server 執行個體 AppId。
 - 邏輯 SQL Server 執行個體已移至不同的訂用帳戶。 如果將邏輯伺服器移至不同的訂用帳戶，則必須建立新的 AppId。
 - 針對金鑰授與 AppId 的權限不足 (它們不包括 Get、Wrap 和 Unwrap)。
@@ -89,7 +87,7 @@ ms.locfileid: "68111527"
 若要深入了解，請參閱[將 Azure AD 身分識別指派給您的伺服器](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server) \(部分機器翻譯\)。
 
 > [!IMPORTANT]
-> 如果在初始設定搭配 Key Vault 的 TDE 之後，邏輯 SQL Server 執行個體已移至新的訂用帳戶，就必須重複設定 Azure AD 身分識別的步驟以建立新的 AppId。 然後，將 AppId 新增至金鑰保存庫，並為金鑰指派正確的權限。 
+> 如果在初始設定搭配 Key Vault 的 TDE 之後，邏輯 SQL Server 執行個體已移至新的租用戶，就必須重複設定 Azure AD 身分識別的步驟以建立新的 AppId。 然後，將 AppId 新增至金鑰保存庫，並為金鑰指派正確的權限。 
 >
 
 ### <a name="missing-key-vault"></a>遺漏索金鑰保存庫
@@ -164,8 +162,82 @@ ms.locfileid: "68111527"
 - 如果 AppId 已存在，請確定 AppID 擁有下列金鑰權限：取得、包裝及解除包裝。
 - 如果 AppId 不存在，請使用 [新增]  按鈕加以新增。 
 
+## <a name="getting-tde-status-from-the-activity-log"></a>從活動記錄中取得 TDE 狀態
+
+為了允許因 Azure Key Vault 金鑰存取問題而要允許監視資料庫狀態，系統將會根據 Azure Resource Manager URL 和 Subscription+Resourcegroup+ServerName+DatabseName，將下列事件記錄到資源識別碼的[活動記錄](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) \(部分機器翻譯\) 中： 
+
+**當服務失去 Azure Key Vault 金鑰存取權時的事件**
+
+EventName：MakeDatabaseInaccessible 
+
+狀態：Started 
+
+描述：資料庫已失去 Azure 金鑰保存庫金鑰的存取權，現在無法存取資料庫：<error message>   
+
+ 
+
+**當 48 小時的自我修復等候時間開始時的事件** 
+
+EventName：MakeDatabaseInaccessible 
+
+狀態：InProgress 
+
+描述：資料庫正在等候使用者於 48 小時內重新建立 Azure 金鑰保存庫金鑰的存取權。   
+
+ 
+
+**當資料庫自動重新上線的事件**
+
+EventName：MakeDatabaseAccessible 
+
+狀態：成功 
+
+描述：已重新建立資料庫的 Azure 金鑰保存庫金鑰存取權，且資料庫現在已上線。 
+
+ 
+
+**當問題未在 48 小時內解決，且必須以手動方式驗證 Azure Key Vault 金鑰存取權時的事件** 
+
+EventName：MakeDatabaseInaccessible 
+
+狀態：成功 
+
+描述：無法存取資料庫，而且需要使用者解決 Azure 金鑰保存庫錯誤，並使用「重新驗證」金鑰重新建立 Azure 金鑰保存庫金鑰存取權。 
+
+ 
+
+**當資料庫在手動重新驗證金鑰後重新上線時的事件**
+
+EventName：MakeDatabaseAccessible 
+
+狀態：成功 
+
+描述：已重新建立資料庫的 Azure 金鑰保存庫金鑰存取權，且資料庫現在已上線。 
+
+ 
+
+**當 Azure Key Vault 金鑰存取權的重新驗證已成功，且資料庫正在上線時的事件**
+
+EventName：MakeDatabaseAccessible 
+
+狀態：Started 
+
+描述：已開始還原資料庫的 Azure 金鑰保存庫金鑰存取權。 
+
+ 
+
+**當 Azure Key Vault 金鑰存取權的重新驗證失敗時的事件**
+
+EventName：MakeDatabaseAccessible 
+
+狀態：失敗 
+
+描述：還原資料庫的 Azure 金鑰保存庫金鑰存取權失敗。 
+
+
 ## <a name="next-steps"></a>後續步驟
 
-- 請檢閱[使用 Azure Key Vault 設定 TDE 的指導方針](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault) \(部分機器翻譯\)。
 - 深入了解[Azure 資源健康狀態](https://docs.microsoft.com/azure/service-health/resource-health-overview) \(部分機器翻譯\)。
-- 重新了解如何[將 Azure AD 身分識別指派給您的伺服器](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server) \(部分機器翻譯\)。
+- 設定[動作群組](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\)，以根據您的偏好來接收通知和警示，例如，電子郵件/簡訊/推播/語音、邏輯應用程式、Webhook、ITSM 或自動化 Runbook。 
+
+

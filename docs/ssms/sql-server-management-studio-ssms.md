@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
 ms.date: 05/29/2019
-ms.openlocfilehash: 8632bd86a19bdce57114e36247f0b805da6804e7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3def38b576103a7343816d0dc1c472d3bd64e1a1
+ms.sourcegitcommit: 7e63c612047f2bb1779c872b5180a3ea9afe7e80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893266"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976122"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什麼是 SQL Server Management Studio (SSMS)？ 
 
@@ -35,7 +35,7 @@ ms.locfileid: "68893266"
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件  
   
-|Description|元件|  
+|描述|元件|  
 |---------------|---------|  
 |使用 **物件總管** 檢視及管理一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體中的所有物件。|[物件總管](../ssms/object/object-explorer.md)|  
 |如何使用 [範本總管]  建立及管理重複使用文字的檔案，以用來加快查詢與指令碼的開發速度。|[範本總管](../ssms/template/template-explorer.md)|  
@@ -87,8 +87,8 @@ ms.locfileid: "68893266"
 ## <a name="support-policy-for-ssms"></a>SSMS 的支援原則
 
 - 從 SSMS 17.0 開始，SQL 工具小組採用 [Microsoft 現代化生命週期原則](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
-- 請閱讀原始[現代化生命週期原則公告](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)。
-- 如需詳細資訊，請參閱[現代化原則常見問題集](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)。
+- 請閱讀原始[現代化生命週期原則公告](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)。 如需詳細資訊，請參閱[現代化原則常見問題集](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)。
+- 如需診斷資料收集和功能使用方式的詳細資訊，請參閱 [SQL Server 隱私權補充](https://docs.microsoft.com/sql/sql-server/sql-server-privacy)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

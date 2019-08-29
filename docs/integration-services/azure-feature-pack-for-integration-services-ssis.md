@@ -1,7 +1,7 @@
 ---
 title: 適用於 Integration Services (SSIS) 的 Azure Feature Pack | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 08/17/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9241725a9f1da67ef93701b62c5cc4e8d9093a7a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: abe8c731a066ed764c2fc55da42bd630e46f3ae8
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892734"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69610759"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 
@@ -99,7 +99,7 @@ Azure Feature Pack 所使用的 TLS 版本遵循系統 .NET Framework 設定。
 
 ## <a name="dependency-on-java"></a>Java 的相依性
 
-需要 Java 才能使用某些功能。
+需要 Java 才能搭配 Azure Data Lake Store/一般檔案連結器使用 ORC/Parquet 檔案格式。  
 JAVA 組建架構 (32/64 位元) 應該符合所要使用的 SSIS 執行階段架構。
 下列 JAVA 組建已經過測試。
 
