@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/15/2018
-ms.openlocfilehash: a05ef92709974b314ea5865362946c1f053c5343
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 08/28/2019
+ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262802"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123010"
 ---
 # <a name="create-a-report-server-database"></a>建立報表伺服器資料庫 
 
@@ -24,10 +24,9 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生�
 
 兩個資料庫會一起建立，並依名稱繫結。 使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，資料庫會命名為 **reportserver** 和 **reportservertempdb**。 這兩個資料庫統稱為**報表伺服器資料庫**或**報表伺服器目錄**。
 
-SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 模式**包括用於資料警示中繼資料的第三個資料庫。 系統會為每個 SSRS 服務應用程式建立這三個資料庫。 根據預設，資料庫名稱包括代表服務應用程式的 GUID。 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-> [!NOTE]
-> SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 模式**包括用於資料警示中繼資料的第三個資料庫。 系統會為每個 SSRS 服務應用程式建立這三個資料庫。 根據預設，資料庫名稱包括代表服務應用程式的 GUID。 
 
 以下是這三個 SharePoint 模式資料庫的範例名稱：
 
@@ -36,6 +35,8 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 - ReportingService_90a9f37075544f22953c4a62e4a9f370TempDB  
   
 - ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
+
+::: moniker-end
   
 > [!IMPORTANT]  
 > 請勿撰寫對報表伺服器資料庫執行查詢的應用程式。 報表伺服器資料庫並非公用結構描述。 前後版次的資料表結構可能會變更。 如果您撰寫的應用程式需要存取報表伺服器資料庫，請一定要使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API 來存取報表伺服器資料庫。  
@@ -65,7 +66,18 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 ## <a name="database-server-version-requirements"></a>資料庫伺服器版本需求
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用來主控報表伺服器資料庫。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體可以在本機或遠端。 下列支援的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本可以裝載報表伺服器資料庫：  
-  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+- Azure SQL 受控執行個體
+
+- SQL Server 2019
+
+::: moniker-end
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+- SQL Server 2017  
+::: moniker-end
+
 - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -73,9 +85,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
-- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
-  
+
 如果您在遠端電腦上建立報表伺服器資料庫，請設定連線以使用網域使用者帳戶，或是擁有網路存取權的服務帳戶。 如果您使用遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請考慮報表伺服器要用來連線到執行個體的認證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 > [!IMPORTANT]  
