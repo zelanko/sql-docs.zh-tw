@@ -12,20 +12,20 @@ helpviewer_keywords:
 - SQL Server Management Objects, properties
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf121a37bf0229ba3366e18c149530f316fcdc56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098294"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148710"
 ---
 # <a name="setting-properties---smo"></a>設定屬性 - SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  屬性是儲存有關物件之描述性資訊的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]組態選項都由<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>物件的屬性。 您可以使用屬性集合來直接或間接地存取屬性。 直接存取屬性會使用下列語法：  
+  屬性是儲存有關物件之描述性資訊的值。 例如, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]設定選項會以物件的屬性來表示。<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 您可以使用屬性集合來直接或間接地存取屬性。 直接存取屬性會使用下列語法：  
   
  `objInstance.PropertyName`  
   
@@ -58,11 +58,11 @@ ms.locfileid: "68098294"
  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法會針對其餘的應用程式設定屬性載入行為，或等到應用程式重設為止。 您可以使用 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 方法來儲存原始的行為，並依需求加以還原。  
   
 ## <a name="examples"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>在 Visual Basic 中取得和設定屬性  
- 此程式碼範例示範如何取得<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>屬性<xref:Microsoft.SqlServer.Management.Smo.Information>物件，以及如何設定<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A>屬性<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>屬性設**ExecuteSql**隸屬<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列舉型別。  
+ 這個程式碼範例示範<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>如何取得<xref:Microsoft.SqlServer.Management.Smo.Information>物件的屬性<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> , 以及如何<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>將屬性 (property) 的屬性 (property)設定為<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列舉類型的 ExecuteSql 成員。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>在 Visual C# 中取得和設定屬性  
- 此程式碼範例示範如何取得<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>屬性<xref:Microsoft.SqlServer.Management.Smo.Information>物件，以及如何設定<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A>屬性<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>屬性設**ExecuteSql**隸屬<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列舉型別。  
+ 這個程式碼範例示範<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>如何取得<xref:Microsoft.SqlServer.Management.Smo.Information>物件的屬性<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> , 以及如何<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>將屬性 (property) 的屬性 (property)設定為<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列舉類型的 ExecuteSql 成員。  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>在 Visual Basic 中反覆運算物件的所有屬性  
- 此程式碼範例會逐一**屬性**的集合<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件，並上顯示[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]輸出畫面。  
+ 這個程式碼範例會逐一查看<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件的 Properties 集合, 並將[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]它們顯示在輸出畫面上。  
   
  在此範例中已將 <xref:Microsoft.SqlServer.Management.Smo.Property> 物件放入方括號中，因為它也是 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 關鍵字。  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>在 Visual C# 中反覆運算物件的所有屬性  
- 此程式碼範例會逐一**屬性**的集合<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件，並上顯示[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]輸出畫面。  
+ 這個程式碼範例會逐一查看<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件的 Properties 集合, 並將[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]它們顯示在輸出畫面上。  
   
 ```csharp  
 {   

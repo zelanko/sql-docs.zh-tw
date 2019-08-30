@@ -13,12 +13,12 @@ author: v-redu
 ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4ca791a1a0ce46929f4d409d234f8dbc7efdec3
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: 0081ea193452e4e92938051bc7b4a40bc8631eaa
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794905"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155375"
 ---
 # <a name="host-database-on-managed-instance"></a>受控實例上的主機資料庫
 
@@ -26,7 +26,7 @@ ms.locfileid: "68794905"
 
   本文涵蓋如何設定受控實例上的 MDS 資料庫。
   
-## <a name="preparation"></a>準備
+## <a name="preparation"></a>準備工作
 
 我們需要完成準備中的下列步驟。
 - 完成建立和設定的受控實例。 包含虛擬網路和點對站 VPN。
@@ -36,7 +36,7 @@ ms.locfileid: "68794905"
 
 **資料庫端:**
 
-1. 建立 Azure SQL Database 受控實例包含虛擬網路。 [入門建立 Azure SQL Database 受控實例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)
+1. 建立 Azure SQL Database 受控實例包含虛擬網路。 [快速入門：建立 Azure SQL Database 受控實例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)
 2. 設定點對站連線。 [使用原生 Azure 憑證驗證設定 VNet 的點對站連線:Azure 入口網站](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)
 3. 使用 SQL Database 受控實例來設定 Azure Active Directory 驗證。 [使用 SQL 設定及管理 Azure Active Directory 驗證](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)
 
@@ -108,7 +108,7 @@ ms.locfileid: "68794905"
 
 **設定資料庫和網站**
 
-1. 連接 Windows Azure 虛擬網路, 以確保您可以連接到受控實例。
+1. 連接 Azure 虛擬網路, 以確保您可以連線到受控實例。
 
     ![mds-SQLServer2019-Config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "mds-SQLServer2019-Config-MI_P2SVPNConnect")  
 

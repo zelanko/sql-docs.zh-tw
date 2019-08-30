@@ -12,17 +12,17 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1d3dd0bf00f9ca0917e94e2d942dcb929ef35055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480746"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154477"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client 首頁畫面
   使用這個畫面以存取 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 三大工作群組的使用者介面：知識庫管理、資料品質專案，以及系統管理。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="knowledge-base-management"></a>知識庫管理  
  DQS 知識庫是中繼資料的儲存機制，DQS 使用中繼資料以改善資料品質。 此中繼資料是由 DQS 平台在電腦輔助的知識探索程序中以及資料服務員在互動式定義域管理程序中所建立。  
@@ -57,7 +57,7 @@ ms.locfileid: "65480746"
  顯示與連接之 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]相關的所有目前和歷程記錄活動的狀態檢視。 監視的活動類型包含知識管理、資料品質專案和以 SSIS 為基礎的資料更正。  
   
  **Configuration**  
- 顯示 Reference Data Service 帳戶 (透過 Windows Azure Marketplace 並直接到 Reference Data Services) 的組態屬性、一般設定 (互動式清理、比對和分析)，以及記錄嚴重性設定。  
+ 顯示參考資料服務帳戶的設定屬性 (透過 Azure Marketplace 並直接參考資料服務)、一般設定 (互動式清理、比對和程式碼剖析) 和記錄嚴重性設定。  
   
 ## <a name="see-also"></a>另請參閱  
  [DQS 知識庫與定義域](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   

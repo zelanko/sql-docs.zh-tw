@@ -1,5 +1,5 @@
 ---
-title: 實作端點 |Microsoft Docs
+title: 執行端點 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 057e949e752abfe8dd4179fe9b1f61af8866dad4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f63ee89bf2b338ec6d9145eb7ca36f04a27f8cf0
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111433"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148444"
 ---
 # <a name="implementing-endpoints"></a>實作端點
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68111433"
  在建立和完整地定義端點後，就可以對資料庫使用者、群組、角色和登入等授與、撤銷和拒絕存取權限。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>在 Visual Basic 中建立資料庫鏡像端點服務  
  此程式碼範例示範如何在 SMO 中建立資料庫鏡像端點。 您必須先進行這項作業，才能建立資料庫鏡像。 請使用 <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> 物件上的 <xref:Microsoft.SqlServer.Management.Smo.Database> 和其他屬性建立資料庫鏡像。  

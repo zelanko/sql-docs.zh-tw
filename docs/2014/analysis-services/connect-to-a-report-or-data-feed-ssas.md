@@ -12,12 +12,12 @@ ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bc15a005371b719f880f9b64a11a7b33e81ff51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087166"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151833"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>連接到報表或資料摘要 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您連接到資料摘要。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]** 。  
@@ -35,7 +35,7 @@ ms.locfileid: "66087166"
  導覽至有報表可用的位置。  
   
  **進階**  
- 使用 [設定進階屬性]  對話方塊設定其他連接屬性。  
+ 使用 [設定進階屬性] 對話方塊設定其他連接屬性。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  
@@ -44,8 +44,8 @@ ms.locfileid: "66087166"
  **易記連接名稱**  
  輸入資料摘要連接的易記名稱。  
   
- **資料摘要的 URL**  
- 輸入 Atom 服務文件 (.atomsvc、.atom) 的完整路徑或是單一資料摘要的 URL，或是按一下 [瀏覽]  選取 Atom 服務文件。  
+ **資料摘要 URL**  
+ 輸入 Atom 服務文件 (.atomsvc、.atom) 的完整路徑或是單一資料摘要的 URL，或是按一下 [瀏覽] 選取 Atom 服務文件。  
   
  **瀏覽**  
  導覽至有報表可用的位置。  
@@ -53,16 +53,16 @@ ms.locfileid: "66087166"
  按一下 **[檢視可用的 Azure DataMarket 資料集]** 可顯示可用資料集。  
   
  **帳戶金鑰**  
- 指定用於存取 Windows Azure Marketplace 資料集訂閱的帳號金鑰。  
+ 指定用來存取 Azure Marketplace 資料集訂閱的帳戶金鑰。  
   
  **尋找**  
  找出與 Windows Live 帳戶關聯的帳號金鑰。  
   
- **儲存我的帳號金鑰**  
+ **儲存我的帳戶金鑰**  
  將帳號金鑰 (已加密) 與資料連接一起儲存。  
   
  **進階**  
- 使用 [設定進階屬性]  對話方塊設定其他連接屬性。  
+ 使用 [設定進階屬性] 對話方塊設定其他連接屬性。  
   
  **測試連接**  
  嘗試使用目前的設定建立與資料來源之間的連接。 顯示一則訊息，指出連接是否成功。  
@@ -71,8 +71,8 @@ ms.locfileid: "66087166"
  **易記連接名稱**  
  輸入資料摘要連接的易記名稱。  
   
- **資料摘要的 URL**  
- 輸入 Atom 服務文件 (.atomsvc、.atom) 的完整路徑或是單一資料摘要的 URL，或是按一下 [瀏覽]  選取 Atom 服務文件。  
+ **資料摘要 URL**  
+ 輸入 Atom 服務文件 (.atomsvc、.atom) 的完整路徑或是單一資料摘要的 URL，或是按一下 [瀏覽] 選取 Atom 服務文件。  
   
  按一下 **[包含所有摘要資料行]** 可指定是否要匯入所有資料摘要資料行。  
   

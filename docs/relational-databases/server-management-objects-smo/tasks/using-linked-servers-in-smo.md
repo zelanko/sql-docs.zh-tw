@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - linked servers [SQL Server], SMO
 ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a48f7a2baf9ab59a2f08040ebc1df8b058631829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c55ef4914c02aca954a15930e754194e5b3419cc
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030016"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148385"
 ---
 # <a name="using-linked-servers-in-smo"></a>在 SMO 中使用連結的伺服器
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68030016"
  在 SMO 中，已安裝的 OLE-DB 提供者是由 <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings> 物件的集合表示。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-visual-c"></a>在 Visual C# 中建立與 OLE-DB 提供者伺服器的連結  
  此程式碼範例示範如何使用 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 物件來建立與異質資料來源 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 的連結。 藉由將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指定為產品名稱，連結伺服器上的資料可藉由使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB Provider ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的官方 OLE DB 提供者) 來存取。  

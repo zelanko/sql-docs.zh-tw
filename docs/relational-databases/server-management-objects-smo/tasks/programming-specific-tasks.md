@@ -1,5 +1,5 @@
 ---
-title: 程式設計特有的工作 |Microsoft Docs
+title: 程式設計特定工作 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030227"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148401"
 ---
 # <a name="programming-specific-tasks"></a>程式設計特有的工作
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "68030227"
 |[實作全文檢索搜尋](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|描述如何在 SMO 中實作全文檢索搜尋目錄與索引。|  
 |[實作端點](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|描述如何建立端點來處理資料庫鏡像、SOAP 要求與 Service Broker 的裝載。|  
 |[建立和更新統計資料](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|描述如何在 SMO 中設定與監視資料庫上的統計資料。|  
-|[追蹤及重新執行事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|描述如何使用**追蹤**並**重新執行**在 SMO 中追蹤和重新執行事件的物件。|  
+|[追蹤及重新執行事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|描述如何在 SMO 中使用**trace**和**replay**物件來追蹤和重新執行事件。|  
   
   

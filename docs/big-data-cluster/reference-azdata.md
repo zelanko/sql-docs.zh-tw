@@ -5,33 +5,33 @@ description: azdata 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33cc3070647c58e6ae57c8bff3d587a76ae0a28d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6d737b8e8b353100d5585a625fe9a53232c78f75
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653092"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155124"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
-下列文章提供適用[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]于 (預覽)](big-data-cluster-overview.md)之**azdata**工具的參考。 如需有關如何安裝**azdata**工具的詳細資訊, 請參閱[install azdata to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]manage ](deploy-install-azdata.md)。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
+|[azdata notebook](reference-azdata-notebook.md) | 用來從終端機查看、執行和管理筆記本的命令。 |
+|[azdata sql](reference-azdata-sql.md) | SQL DB CLI 可讓使用者透過 T-SQL 與 SQL Server 互動。 |
 |[azdata app](reference-azdata-app.md) | 建立、刪除、執行和管理應用程式。 |
 |[azdata bdc](reference-azdata-bdc.md) | 選取、管理和操作 SQL Server 巨量資料叢集。 |
-|[azdata login](#azdata-login) | 登入叢集的控制器端點。
-|[azdata logout](#azdata-logout) | 登出叢集。
-
+|[azdata 控制項](reference-azdata-control.md) | 建立、刪除和管理控制平面。 |
+[azdata login](#azdata-login) | 登入叢集的控制器端點。
+[azdata logout](#azdata-logout) | 登出叢集。
 ## <a name="azdata-login"></a>azdata login
-當您部署叢集時, 它會在部署期間列出控制器端點, 您應該使用這種方式來登入。  如果您不知道控制器端點, 您可以登入, 方法是在系統上將叢集的 kube 設定設為預設位置<user home>/.kube/config, 或使用 KUBECONFIG env var, 也就是 export KUBECONFIG = path/to/. kube/config。
+當叢集已部署時，它會在部署期間列出控制器端點，您應該使用此端點來登入。  如果您不知道控制器端點，您可以藉由將您叢集的 Kube 組態放在您系統的預設位置 <user home>/.kube/config 來登入，或使用 KUBECONFIG 環境變數，也就是 export KUBECONFIG=路徑/至/.kube/config。
 ```bash
 azdata login [--cluster-name -n] 
              [--controller-username -u]  
@@ -43,7 +43,7 @@ azdata login [--cluster-name -n]
 ```bash
 azdata login
 ```
-登入 (非互動)。 將叢集名稱、控制器使用者名稱、控制器端點和 EULA 接受設定為引數來登入。 必須設定環境變數 CONTROLLER_PASSWORD。  如果您不想要指定控制器端點, 請在您的電腦上, 將 kube 設定置於預設位置<user home>/.kube/config, 或使用 KUBECONFIG env var, 也就是 export KUBECONFIG = path/to/. kube/config。
+登入 (非互動)。 將叢集名稱、控制器使用者名稱、控制器端點和 EULA 接受設定為引數來登入。 必須設定環境變數 CONTROLLER_PASSWORD。  如果您不想要指定控制器端點，請將 Kube 組態放在您機器上的預設位置 <user home>/.kube/config，或使用 KUBECONFIG 環境變數，也就是 export KUBECONFIG=路徑/至/.kube/config。
 ```bash
 azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
@@ -57,9 +57,9 @@ azdata login -n ClusterName
 #### `--controller-username -u`
 帳戶使用者。 如果不想要使用此引數，您可以設定環境變數 CONTROLLER_USERNAME。
 #### `--controller-endpoint -e`
-叢集控制器端點 "https://host:port"。 如果不想要使用此引數，您可以使用您機器上的 Kube 組態。 請確定設定位於<user home>/.kube/config 的預設位置, 或使用 KUBECONFIG env var。
+叢集控制器端點 "https://host:port"。 如果不想要使用此引數，您可以使用您機器上的 Kube 組態。 請確定組態位於預設位置 <user home>/.kube/config，或使用 KUBECONFIG 環境變數。
 #### `--accept-eula -a`
-您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 
+您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://aka.ms/azdata-eula 檢視。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -68,7 +68,7 @@ azdata login -n ClusterName
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊, [http://jmespath.org/](http://jmespath.org/])請參閱, 以取得詳細資訊和範例。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-logout"></a>azdata logout
@@ -89,10 +89,10 @@ azdata logout
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊, [http://jmespath.org/](http://jmespath.org/])請參閱, 以取得詳細資訊和範例。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關如何安裝**azdata**工具的詳細資訊, 請參閱[install azdata to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]manage ](deploy-install-azdata.md)。
+- 如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](deploy-install-azdata.md)。

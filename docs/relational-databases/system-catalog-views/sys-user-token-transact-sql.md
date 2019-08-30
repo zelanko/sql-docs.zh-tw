@@ -23,12 +23,13 @@ helpviewer_keywords:
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9e2f093083277d23bad91ea268da0026d6c4dc1a
-ms.sourcegitcommit: f517f1e2e7cac983fdb41229e60ca7ad019ecd48
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions|| = azure-sqldw-latest
+ms.openlocfilehash: 9b3e389b97cee8a8a6d548eb93ad70b94d09ba40
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70064046"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160743"
 ---
 # <a name="sysuser_token-transact-sql"></a>sys.user_token (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

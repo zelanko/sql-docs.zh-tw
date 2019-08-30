@@ -14,15 +14,15 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b8ce22855cfbc3239f4ab2e8695400d92386b858
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cd3599ff68fadf6a55af1c57379e9cdd8cc4b5d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480929"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154489"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
-  此主題描述如何設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 來使用參考資料清理您的資料。 您可以使用 Windows Azure Marketplace 所提供的參考資料，以及直接線上協力廠商參考資料提供者所提供的參考資料。  
+  此主題描述如何設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 來使用參考資料清理您的資料。 您可以使用來自 Azure Marketplace 的參考資料, 或從直接線上協力廠商參考資料提供者。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
@@ -77,6 +77,6 @@ ms.locfileid: "65480929"
  您現在已經準備好開始在 DQS 中使用來自新設定的直接線上協力廠商參考資料服務提供者所提供的參考資料服務。  
   
 ##  <a name="FollowUp"></a> 後續操作：設定 DQS 使用參考資料之後  
- 您現在必須將必要的知識庫定義域對應到您剛才設定的資料提供者所提供的參考資料。 若要這樣做，請參閱[將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
+ 您現在必須將必要的知識庫定義域對應到您剛才設定的資料提供者所提供的參考資料。 若要這樣做, 請參閱[將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
   
   

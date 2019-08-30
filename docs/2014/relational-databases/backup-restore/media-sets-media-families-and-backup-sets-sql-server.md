@@ -23,18 +23,18 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6f9d80f8ea696bfbe85a7f5a7aefac32eba1211
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876243"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154794"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的基本備份媒體詞彙，適合供初次使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者閱讀。 此主題描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於備份媒體的格式、備份媒體與備份裝置之間的對應、備份在備份媒體上的組織，以及媒體集和媒體家族的數個考量。 此主題也描述第一次使用備份媒體，或將舊媒體集取代為新媒體集之前初始化或格式化備份媒體的步驟、如何覆寫媒體集中舊備份組的步驟，以及如何將新備份組附加至媒體集的步驟。  
   
 > [!NOTE]  
->  如需有關將 SQL Server 備份放至 Windows Azure Blob 儲存體服務的詳細資訊，請參閱＜ [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)＞。  
+>  如需 SQL Server 備份至 Azure Blob 儲存體服務的詳細資訊, 請參閱[SQL Server 使用 Azure Blob 儲存體服務的備份與還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
   
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
@@ -48,15 +48,15 @@ ms.locfileid: "62876243"
  透過成功的備份作業，加入至媒體集的備份內容。  
   
   
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> 媒體集、 媒體家族與備份組的概觀  
- 單一媒體集是由一組一個或多個備份媒體上的備份組成。 *「媒體集」* (Media Set) 是按順序排列的 *「備份媒體」* (Backup Media) 集合 (磁帶或磁碟檔案或是 Windows Azure Blob)，由一個或多個備份作業使用固定的備份裝置類型與數量寫入。 給定的媒體集會使用磁帶機或磁碟機或是 Windows Azure Blob，但是不得為兩個以上的組合。 例如，與媒體集相關的備份裝置可能是三個磁帶機，分別稱為 `\\.\TAPE0`、 `\\.\TAPE1`與 `\\.\TAPE2`。 此媒體集僅包含磁帶，一開始最少有三個磁帶 (每個磁帶機一個)。 備份裝置類型與數量是在媒體集建立時確立，而且無法變更。 不過，可在必要時以相同類型的裝置取代備份和還原作業間的指定裝置。  
+##  <a name="OvMediaSetsFamiliesBackupSets"></a>媒體集、媒體家族和備份組的總覽  
+ 單一媒體集是由一組一個或多個備份媒體上的備份組成。 「媒體集」(Media Set) 是按順序排列的「備份媒體」(Backup Media) 集合 (磁帶、磁碟檔案或Azure Blob)，由一個或多個備份作業使用固定的備份裝置類型與數量寫入。 給定的媒體集會使用磁帶機、磁碟機或Azure Blob，但是不得為兩個以上的組合。 例如，與媒體集相關的備份裝置可能是三個磁帶機，分別稱為 `\\.\TAPE0`、 `\\.\TAPE1`與 `\\.\TAPE2`。 此媒體集僅包含磁帶，一開始最少有三個磁帶 (每個磁帶機一個)。 備份裝置類型與數量是在媒體集建立時確立，而且無法變更。 不過，可在必要時以相同類型的裝置取代備份和還原作業間的指定裝置。  
   
  媒體集是在備份作業格式化備份媒體期間，於備份媒體上建立。 如需詳細資訊，請參閱本主題稍後的 [建立新媒體集](#CreatingMediaSet)。 完成格式化後，每個檔案或磁帶會包含媒體集的媒體標頭，且備妥要接收備份內容。 有了適當的標頭，備份作業就可以在指定供作業使用的所有備份裝置上，繼續將指定的資料備份至備份媒體。  
   
 > [!NOTE]  
 >  媒體集可以鏡像，避免損毀媒體磁碟區 (磁帶或磁碟檔案)。 如需詳細資訊，請參閱本主題稍後的 [鏡像備份媒體集 &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)的使用者閱讀。  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] 或更新版本可以讀取壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]或更新版本可以讀取壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
   
   
 ### <a name="media-families"></a>媒體家族  
@@ -89,7 +89,7 @@ ms.locfileid: "62876243"
 -   媒體描述是否包含 MTF 媒體標籤或媒體描述。  
   
     > [!NOTE]  
-    >  用於備份或還原作業的所有媒體都使用標準的備份格式，稱為[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]保留另一個應用程式寫入的任何 MTF 媒體標籤，但不會寫入 MTF 媒體標籤。  
+    >  用於備份或還原作業的所有媒體都使用名[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]為的標準備份格式, 保留由另一個應用程式所寫入的任何 mtf 媒體標籤, 但是不會寫入 mtf 媒體標籤。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format 媒體標籤或媒體描述 (自由形式文字)。  
   
@@ -166,12 +166,12 @@ GO
   
 -   備份組數量  
   
-##  <a name="ConsiderationsForMediaSetFamilies"></a> 使用媒體集和家族  
+##  <a name="ConsiderationsForMediaSetFamilies"></a>使用媒體集和家族  
  本節討論使用媒體集與媒體家族的一些考量。  
   
   
   
-###  <a name="CreatingMediaSet"></a> 建立新的媒體集  
+###  <a name="CreatingMediaSet"></a>建立新的媒體集  
  若要建立新的媒體集，您必須將備份媒體 (一個或多個磁帶或磁碟檔案) 格式化。 格式化的過程會變更備份媒體，如下所示：  
   
 1.  刪除舊標頭 (若有的話)，有效率地刪除備份媒體上先前的內容。  
@@ -181,7 +181,7 @@ GO
 2.  在每個備份裝置的備份媒體 (磁帶或磁碟檔案) 上寫入新的媒體標頭。  
   
   
-###  <a name="UseExistingMediaSet"></a> 備份至現有媒體集  
+###  <a name="UseExistingMediaSet"></a>備份至現有的媒體集  
  備份至現有的媒體集時，您有下列兩個選項：  
   
 -   附加至現有的媒體集。  
@@ -200,7 +200,7 @@ GO
     > [!NOTE]  
     >  若要覆寫現有的備份組，可以使用 BACKUP 陳述式的 INIT 選項來指定。  
   
-####  <a name="Appending"></a> 附加至現有的備份組  
+####  <a name="Appending"></a>附加至現有的備份組  
  不同時間執行的備份可以寫在相同的媒體上，不論是不是來自相同的資料庫。 藉由將另一個備份組附加至現有媒體的方法，就可以不影響媒體原先的內容，而在媒體最後一個備份結尾處寫入新的備份。  
   
  依預設值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一定會將新備份附加至媒體。 附加只可以發生在媒體結尾。 例如，如果媒體磁碟區包含五個備份組，就無法跳過前三個備份組，而使用新的備份組覆寫第四個備份組。  
@@ -210,10 +210,10 @@ GO
  Microsoft Windows 備份和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份可以共用相同的媒體，但是無法相互操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份無法備份 Windows 資料。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] 或更新版本可以讀取壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]或更新版本可以讀取壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
   
   
-####  <a name="Overwriting"></a> 覆寫備份組  
+####  <a name="Overwriting"></a>覆寫備份組  
  若要覆寫現有的備份組，可以使用 BACKUP 陳述式的 INIT 選項來指定。 這個選項會覆寫媒體中的所有備份組，並保留媒體標頭 (如果有的話)。 如果沒有媒體標頭，就會加以建立。  
   
  針對磁帶標頭，適當地保留標頭有其意義。 對於磁碟備份媒體而言，只有備份作業中指定的備份裝置所用的檔案會被覆寫，磁碟上的其他檔案則不受影響。 覆寫備份時會保留任何現有的媒體標頭，而新的備份會建立為備份裝置上的第一個備份。 如果沒有現有的媒體標頭，則會自動寫入含相關媒體名稱與媒體描述的有效媒體標頭。 如果現有的媒體標頭無效，備份作業會終止。 若為空白媒體，則會以給定的 MEDIANAME、MEDIAPASSWORD 與 MEDIADESCRIPTION (若有的話) 來產生新的媒體標頭。  
@@ -236,7 +236,7 @@ GO
  若備份媒體受到 Microsoft Windows 的密碼保護，Microsoft SQL Server 就無法寫入此媒體。 若要覆寫受到密碼保護的媒體，您必須重新初始化該媒體。  
   
   
-###  <a name="SequenceNumbers"></a> 序號  
+###  <a name="SequenceNumbers"></a>序號  
  對於媒體集或媒體家族內的多個備份媒體而言，有正確的順序很重要。 因此，備份會依照下列方式指派序號：  
   
 -   媒體集內的連續媒體家族  
@@ -261,21 +261,21 @@ GO
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要建立新的媒體集**  
   
--   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([備份至新的媒體集，並清除所有現有的備份組]  選項)  
+-   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([備份至新的媒體集，並清除所有現有的備份組] 選項)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (FORMAT 選項)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.FormatMedia%2A>  
   
- **若要將新備份附加至現有媒體**  
+ **將新備份附加至現有媒體**  
   
--   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([附加至現有的備份組]  選項)  
+-   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([附加至現有的備份組] 選項)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (NOINIT 選項)  
   
  **若要覆寫現有的備份組**  
   
--   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([覆寫所有現有的備份組]  選項)  
+-   [建立完整資料庫備份 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) ([覆寫所有現有的備份組] 選項)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (INIT 選項)  
   
@@ -283,13 +283,13 @@ GO
   
 -   [設定備份的到期日 &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
- **若要檢視媒體順序與家族序號**  
+ **若要查看媒體順序和家族序號**  
   
 -   [檢視邏輯備份裝置的屬性和內容 &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [backupmediafamily &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql) (**family_sequence_number** 資料行)  
   
- **若要檢視特定備份裝置上的備份組**  
+ **若要查看特定備份裝置上的備份組**  
   
 -   [檢視備份組中的資料和記錄檔 &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   

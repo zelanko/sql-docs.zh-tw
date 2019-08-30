@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SMO [SQL Server], events
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ec6dccc41e160d2b56df3e3c6e7f85804552cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126738"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148720"
 ---
 # <a name="handling-smo-events"></a>處理 SMO 事件
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "68126738"
 ## <a name="event-subscription"></a>事件訂閱  
  您可藉由下列步驟來處理事件：撰寫事件處理常式類別、建立其執行個體、將事件處理常式指派給父物件，然後再訂閱事件。  
   
- 您必須撰寫事件處理常式類別，才能處理事件。 事件處理常式類別可以包含一個以上的事件處理常式函數，而且必須加以安裝，才能處理事件。 事件處理常式函式會接收來自事件的相關資訊*ServerEventNotificatificationArgs*可以用來報告該事件的相關資訊的參數。  
+ 您必須撰寫事件處理常式類別，才能處理事件。 事件處理常式類別可以包含一個以上的事件處理常式函數，而且必須加以安裝，才能處理事件。 事件處理常式函式會從*ServerEventNotificatificationArgs*參數接收事件的相關資訊, 可用來報告事件的相關資訊。  
   
- 資料庫和伺服器可以處理的事件類型會列在<xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet>類別和<xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>類別。  
+ 可以處理的資料庫和伺服器事件種類會列在<xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet>類別<xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>和類別中。  
   
 ## <a name="example"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>在 Visual Basic 中註冊事件處理常式及訂閱事件處理  

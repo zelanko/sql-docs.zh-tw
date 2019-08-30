@@ -5,27 +5,39 @@ description: 本文說明[!INCLUDE[big-data-clusters-2019](../includes/ssbigdata
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653431"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160688"
 ---
-# <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server 上巨量資料叢集的版本資訊
+# <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server Big Data 叢集的版本資訊
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文列出最新版本[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的更新和已知問題。
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a>候選版 (八月)
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+下列各節說明 SQL Server 2019 候選版中 big data 叢集的新功能和已知問題。
+
+### <a name="whats-new"></a>新功能
+
+|新功能或更新 | 詳細資料 |
+|:---|:---|
+|SQL Server Always On 可用性群組 |當您部署 SQL Server Big Data 叢集時, 您可以設定部署來建立可用性群組, 以提供:<br/><br/>-高可用性 <br/><br/>-讀取-相應放大 <br/><br/>-向外延展資料插入資料集區<br/><br>請參閱[使用高可用性進行部署](../big-data-cluster/deployment-high-availability.md)。 |
+|`azdata` |使用[安裝管理](./deploy-install-azdata-linux-package.md)程式簡化的工具安裝<br/><br/>[`azdata notebook`命令](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`命令](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[下載 Azure Data Studio 的候選版組建](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)。<br/><br/>已透過 SQL Server 2019 guide Jupyter Book 新增對筆記本的疑難排解。<br/><br/>已新增控制器登入體驗。<br/><br/>已新增控制器儀表板來查看服務端點、查看叢集健全狀況狀態, 以及存取疑難排解筆記本。<br/><br/>改良的筆記本資料格輸出/編輯效能。|
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+
+SQL Server 2019 Big Data 叢集候選版重新整理組建編號`15.0.1900.47`為。
 
 ## <a id="ctp32"></a> CTP 3.2 (7 月)
 
@@ -48,13 +60,13 @@ ms.locfileid: "69653431"
 
 #### <a name="polybase"></a>PolyBase
 
-- 此版本不支援當計數 > 1000 時向下推展 TOP 子句。 在這類情況下，將從遠端資料來源讀取所有資料列。
+- 此版本不支援當計數 > 1000 時向下推展 TOP 子句。 在這類情況下，將從遠端資料來源讀取所有資料列。 (在候選版中已修正)
 
 - 此版本不支援將共置聯結向下推展至外部資料來源。 例如，向下推展 ROUND_ROBIN 散發類型的兩個資料集區資料表，將取得 SQL 主要執行個體或計算集區執行個體的資料，以執行聯結作業。
 
 #### <a name="compute-pool"></a>計算集區
 
-- 巨量資料叢集部署只支援具有一個執行個體的計算集區。
+- 巨量資料叢集部署只支援具有一個執行個體的計算集區。 (在候選版中已修正)
 
 #### <a name="storage-pool"></a>存放集區
 

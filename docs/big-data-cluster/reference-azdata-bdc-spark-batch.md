@@ -5,22 +5,22 @@ description: azdata bdc spark batch 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d1c8246d4df885aa0ce6859d55d8c979ba83411
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4fecf9d6beca3f4a46e49451fee0f554027e2e19
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653500"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155213"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-下列文章提供 **azdata** 工具中 **bdc spark batch** 命令的參考。 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)
+本文是**azdata**的參考文章。 
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -53,7 +53,7 @@ azdata bdc spark batch create --file -f
 ### <a name="examples"></a>範例
 建立新的 Spark 批次。
 ```bash
-azdata bdc spark batch create --code "2+2"
+azdata spark batch create --code "2+2"
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--file -f`
@@ -106,7 +106,7 @@ azdata bdc spark batch list
 ### <a name="examples"></a>範例
 列出所有作用中批次。
 ```bash
-azdata bdc spark batch list
+azdata spark batch list
 ```
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
@@ -128,7 +128,7 @@ azdata bdc spark batch info --batch-id -i
 ### <a name="examples"></a>範例
 取得識別碼為 0 之批次的批次資訊。
 ```bash
-azdata bdc spark batch info --batch-id 0
+azdata spark batch info --batch-id 0
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--batch-id -i`
@@ -153,7 +153,7 @@ azdata bdc spark batch log --batch-id -i
 ### <a name="examples"></a>範例
 取得識別碼為 0 之批次的批次記錄。
 ```bash
-azdata bdc spark batch log --batch-id 0
+azdata spark batch log --batch-id 0
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--batch-id -i`
@@ -178,7 +178,7 @@ azdata bdc spark batch state --batch-id -i
 ### <a name="examples"></a>範例
 取得識別碼為 0 之批次的批次狀態。
 ```bash
-azdata bdc spark batch state --batch-id 0
+azdata spark batch state --batch-id 0
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--batch-id -i`
@@ -203,7 +203,7 @@ azdata bdc spark batch delete --batch-id -i
 ### <a name="examples"></a>範例
 刪除批次。
 ```bash
-azdata bdc spark batch delete --batch-id 0
+azdata spark batch delete --batch-id 0
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--batch-id -i`
@@ -222,4 +222,6 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 
 ## <a name="next-steps"></a>後續步驟
 
-如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需有關如何安裝**azdata**工具的詳細資訊, 請參閱[install azdata to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]manage ](deploy-install-azdata.md)。
+- 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 
+
+- 如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](deploy-install-azdata.md)。

@@ -1,5 +1,5 @@
 ---
-title: 指令碼 |Microsoft Docs
+title: 腳本 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - dependencies [SMO]
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d85c412cd5fc3f8a1bda330ba90af1fa562cba6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c6c99edd1d52e3175dcd8793bd4bf7afcd605b7
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030246"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148340"
 ---
 # <a name="scripting"></a>指令碼
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  在 SMO 中撰寫指令碼會受到<xref:Microsoft.SqlServer.Management.Smo.Scripter>物件及其子物件，則**指令碼**個別物件的方法。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件可控制從相依性關聯性物件的執行個體上的對應[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  SMO 中的<xref:Microsoft.SqlServer.Management.Smo.Scripter>腳本是由物件及其子物件或個別物件上的**腳本**方法所控制。 物件會[!INCLUDE[msCoName](../../../includes/msconame-md.md)]針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例上物件的相依性關聯性控制對應。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件所進行的進階指令碼作業是三階段的程序：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68030246"
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- 探索階段會使用 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 物件。 如果已給定物件 URN 清單，則 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 方法會針對 URN 清單中的物件傳回 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件。 布林值*fParents*參數用來選取要探索的父代或指定之物件的子系是否。 在這個階段可以修改相依性樹狀目錄。  
+ 探索階段會使用 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 物件。 如果已給定物件 URN 清單，則 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 方法會針對 URN 清單中的物件傳回 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件。 布林值*fParents*參數是用來選取是否要探索指定物件的父系或子系。 在這個階段可以修改相依性樹狀目錄。  
   
  在產生清單階段會傳入樹狀目錄並傳回產生的清單。 這個物件清單會以指令碼作業順序排列，且可以操作。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "68030246"
  在第三個也就是最後階段時，會產生具有指定清單和指令碼選項的指令碼。 結果會以 <xref:System.Collections.Specialized.StringCollection> 系統物件傳回。 接下來在這個階段中會從 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件的 Items 集合以及 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> 之類的屬性擷取相依物件的名稱。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
- 此程式碼範例需要**匯入**System.Collections.Specialized 命名空間陳述式。 請在應用程式中，將這個陳述式與其他的 Imports 陳述式一同插入任何宣告之前。  
+ 這個程式碼範例需要 system.string 命名空間的**Imports**語句。 請在應用程式中，將這個陳述式與其他的 Imports 陳述式一同插入任何宣告之前。  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  

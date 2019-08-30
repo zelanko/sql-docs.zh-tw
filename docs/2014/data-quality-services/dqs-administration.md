@@ -14,12 +14,12 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cc8f84eb268fab041b65e4fc2faced7ee9b0103a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f4ddc16bdfcc7e0d3acdfabe83e81f3d06c0b93
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480626"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154443"
 ---
 # <a name="dqs-administration"></a>dqs 管理
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 可讓您管理在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上執行的各種 DQS 活動、設定與 DQS 活動相關的伺服器層級屬性、設定 Reference Data Service 設定，以及設定 DQS 記錄設定。 這些操作是透過 **中的** [管理] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能完成。 根據您在 DQS 中的安全性存取權 (角色) 而定，您會被授與/拒絕對此區域中某些功能的存取。  
@@ -32,7 +32,7 @@ ms.locfileid: "65480626"
   
 -   讓 DQS 系統管理員從 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 監控 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]上的 DQS 活動，並 *終止* 正在執行的活動或 *停止* 活動中正在執行的程序 (如有需要)。  
   
--   設定 Reference Data Service 設定 (例如設定與 Windows Azure Marketplace 的連線，以及管理協力廠商的直接參考資料服務提供者。  
+-   設定參考資料服務設定, 例如使用 Azure Marketplace 和管理直接協力廠商參考資料服務提供者的連線能力。  
   
 -   設定清理與比對活動的臨界值。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65480626"
 ### <a name="configuration"></a>組態  
  **中的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 畫面可讓 DQS 系統管理員進行下列操作：  
   
--   **參考資料**：設定參考資料服務提供者：Windows Azure Marketplace 或直接參考資料提供者。 設定參考資料服務提供者之後，您可以在知識庫中的定義域管理活動期間，對應具有參考資料的定義域/複合定義域，然後使用相同的知識庫，在資料品質專案中進行清理活動。 它也可讓您指定連接網際網路所使用的 Proxy 設定，以使用 Windows Azure Marketplace。  
+-   **參考資料**：設定參考資料服務提供者：Azure Marketplace 或直接參考資料服務提供者。 設定參考資料服務提供者之後，您可以在知識庫中的定義域管理活動期間，對應具有參考資料的定義域/複合定義域，然後使用相同的知識庫，在資料品質專案中進行清理活動。 它也可讓您指定用來連線到網際網路的 proxy 設定, 以使用 Azure Marketplace。  
   
 -   **一般設定**：指定資料清理和資料比對的閾值，以及是否在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中啟用分析所使用的通知。 這些臨界值是由 DQS 在資料品質專案中，於電腦輔助的清理和比對活動期間所使用。  
   

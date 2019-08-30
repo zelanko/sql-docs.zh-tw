@@ -1,5 +1,5 @@
 ---
-title: 連接至 Windows Azure 儲存體 |Microsoft Docs
+title: 連接到 Azure 儲存體 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3525f28864c3260bd2b50d98f441f6ed5072accb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808569"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154298"
 ---
-# <a name="connect-to-windows-azure-storage"></a>連接到 Windows Azure 儲存體
-  使用 [Windows Azure 儲存體連接] 對話方塊可以指定儲存體帳戶並且驗證 Windows Azure 的連接。  
+# <a name="connect-to-azure-storage"></a>連線到 Azure 儲存體
+  使用 [ **Azure 儲存體連接**] 對話方塊來指定儲存體帳戶, 並驗證您對 Azure 的連線。  
   
-## <a name="options"></a>選項  
- 請指定有關 Windows Azure 帳戶的下列資訊，然後按一下 [下一步] 繼續進行。  
+## <a name="options"></a>選項。  
+ 指定下列有關您 Azure 帳戶的資訊, 然後按 **[下一步]** 繼續。  
   
 1.  **儲存體帳戶** - 指定儲存體帳戶名稱。  
   

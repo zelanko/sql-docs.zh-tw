@@ -1,5 +1,5 @@
 ---
-title: sys.database_usage (Azure SQL Database) |Microsoft Docs
+title: database_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -20,36 +20,36 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d64f3e03db3eaf12755eb36d41814d4548a2ae52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079404"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155538"
 ---
-# <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
+# <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注意：只適用於 Azure SQL Database V11。**  
+  **注意：這只適用于 Azure SQL Database V11。**  
   
- 列出數目、 類型和持續時間的資料庫上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]伺服器。  
+ 列出[!INCLUDE[ssSDS](../../includes/sssds-md.md)]伺服器上資料庫的數目、類型和持續時間。  
   
- **Sys.database_usage**檢視包含下列資料行。  
+ **Database_usage** view 包含下列資料行。  
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |time|使用事件發生的日期。|  
-|sku|資料庫服務層的類型：**Web**，**商務**，**基本**，**標準**， **Premium**|  
+|sku|資料庫的服務層級類型:**Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  
 |quantity|當天存在之 SKU 類型資料庫的數目上限。|  
   
 ## <a name="permissions"></a>Permissions  
- 唯讀存取此檢視會提供給有權連接到的所有使用者**主要**資料庫。  
+ 此視圖的唯讀存取權可供所有具有連接到**master**資料庫之許可權的使用者使用。  
   
 ## <a name="remarks"></a>備註  
- **Sys.database_usage**檢視會傳回一個資料列，每一天的訂用帳戶。  
+ **Database_usage** view 會針對訂用帳戶的每一天傳回一個資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Database 定價詳細資料](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [帳戶和 Windows Azure SQL Database 中的計費](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Azure SQL Database 中的帳戶和計費](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

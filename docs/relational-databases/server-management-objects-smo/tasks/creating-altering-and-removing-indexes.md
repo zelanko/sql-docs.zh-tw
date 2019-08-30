@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 404bd1d31a910f0fd2d181ab4198ffab065ffd4f
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 566cec97b8c26f21602807b3dd36c307864f62ec
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811508"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148481"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>建立、改變和移除索引
 

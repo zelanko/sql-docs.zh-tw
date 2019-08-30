@@ -5,22 +5,25 @@ description: 本文提供用於監視和疑難排解的[!INCLUDE[big-data-cluste
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653026"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153636"
 ---
 # <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>監視和疑難排解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文說明數個實用的 Kubernetes 命令, 可讓您用來監視和[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]疑難排解。 它會示範如何檢視位於巨量資料叢集中的 Pod 或其他 Kubernetes 成品的深入詳細資料。 此文章也涵蓋一般工作，例如，將檔案複製到執行其中一項 SQL Server 巨量資料叢集服務的容器，或從其中複製檔案。
+
+> [!TIP]
+> 若要監視 big data 叢集元件的狀態, 您可以使用[**azdata bdc 狀態**](deployment-guidance.md#status)命令或隨附于 Azure Data Studio 的內建[疑難排解筆記本](manage-notebooks.md)。
 
 > [!TIP]
 > 在 Windows (cmd or PS) 或 Linux (bash) 用戶端電腦上執行下列 **kubectl** 命令。 它們需要叢集中先前的驗證，以及要執行的目標叢集內容。 例如，針對先前建立的 AKS 叢集，您可以執行 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` 來下載 Kubernetes 叢集組態檔並設定叢集內容。

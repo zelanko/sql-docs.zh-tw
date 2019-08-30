@@ -14,25 +14,25 @@ helpviewer_keywords:
 - SMO [SQL Server], versions
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7936eaf327f9df3cb0f3d8545d7bf557ef1471ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098043"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148661"
 ---
 # <a name="files-and-version-numbers"></a>檔案和版本號碼
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  所有必要的 SQL Server 管理物件 (SMO) 元件包含在 Microsoft.SqlServer.SqlManagementObjects NuGet 套件。 SMO 是實作於數個 Managed 組件中。 您可以在用戶端或伺服器上開發 SMO 應用程式。  
+  SqlManagementObjects NuGet 套件中包含所有必要的 SQL Server 管理物件 (SMO) 元件。 SMO 是實作於數個 Managed 組件中。 您可以在用戶端或伺服器上開發 SMO 應用程式。  
 
 > > [!Important]
-> > SMO 組件的檔案版本會顯示為主要。**0**。Build.Revision。 但內嵌組件的版本為主要。**100**。Build.Revision。 這是為了讓其中一個更新並不會影響任何其他人將 SMO 在每個應用程式中使用的版本是分開。
+> > SMO 元件的檔案版本會顯示為 [主要]。**0**。組建. 修訂。 但是內嵌元件版本是主要的。**100**。組建. 修訂。 這樣做的目的是要讓每個應用程式中所使用的 SMO 版本分開, 如此一來, 更新就不會影響其他任何專案。
 > > 
-> > 因此您應該**不**安裝這些版本的組件至全域組件快取 (GAC) 中。 這樣可能會造成其他應用程式，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio 中，若要中斷。 
+> > 因此, 您**不**應該將這些版本的元件安裝至全域組件快取 (GAC)。 這麼做可能會導致其他應用程式 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]例如 Management Studio) 中斷。 
   
 |檔案|描述|  
 |-----------|-----------------|  

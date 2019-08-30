@@ -14,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917074"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154577"
 ---
 # <a name="databases"></a>資料庫
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫是由資料表集合所組成，該集合內儲存了一組特定的結構資料。 而資料表中則包含資料列集合 (也稱為記錄或 Tuple) 和資料行 (也稱為屬性) 集合。 資料表中的每個資料行都是為了儲存某類型資訊而設計，例如，日期、名稱、金額和數字。  
@@ -42,7 +42,7 @@ ms.locfileid: "62917074"
 |-|-|  
 |[系統資料庫](system-databases.md)|[刪除資料庫的資料或記錄檔](delete-data-or-log-files-from-a-database.md)|  
 |[自主資料庫](contained-databases.md)|[顯示資料庫的資料和記錄空間資訊](display-data-and-log-space-information-for-a-database.md)|  
-|[Windows Azure 中的 SQL Server 資料檔案](sql-server-data-files-in-microsoft-azure.md)|[增加資料庫的大小](increase-the-size-of-a-database.md)|  
+|[在 Azure 中 SQL Server 資料檔案](sql-server-data-files-in-microsoft-azure.md)|[增加資料庫的大小](increase-the-size-of-a-database.md)|  
 |[資料庫檔案與檔案群組](database-files-and-filegroups.md)|[重新命名資料庫](rename-a-database.md)|  
 |[資料庫狀態](database-states.md)|[將資料庫設定為單一使用者模式](set-a-database-to-single-user-mode.md)|  
 |[檔案狀態](file-states.md)|[壓縮資料庫](shrink-a-database.md)|  

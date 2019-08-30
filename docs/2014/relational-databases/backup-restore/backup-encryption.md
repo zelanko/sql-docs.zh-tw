@@ -10,12 +10,12 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e007dfaf2e14b488fb538f6b0c0ad958988a4c0
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922169"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154848"
 ---
 # <a name="backup-encryption"></a>備份加密
   本主題提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的加密選項概觀。 內容包括在備份期間加密的用法、益處和建議做法等詳細資料。  
@@ -26,20 +26,20 @@ ms.locfileid: "62922169"
   
  若要在備份期間加密，您必須指定加密演算法以及確保加密金鑰的加密程式。 以下為支援的加密選項：  
   
--   **加密演算法：** 支援的加密演算法包括：AES 128、 AES 192、 AES 256 和 Triple DES  
+-   **加密演算法：** 支援的加密演算法包括：AES 128、AES 192、AES 256 和 Triple DES  
   
 -   **加密程式：** 憑證或非對稱金鑰  
   
 > [!CAUTION]  
 >  備份憑證或非對稱金鑰是非常重要的，而且最好與其用以加密的備份檔案存放於不同位置。 若沒有憑證或非對稱金鑰，您將無法還原備份，而此備份檔案將無法使用。  
   
- **還原加密的備份：** SQL Server 還原不需要在還原過程中指定的任何加密參數。 但它要求用以加密備份檔案的憑證或非對稱金鑰可用於您要進行還原的執行個體上。 執行還原的使用者帳戶必須擁有憑證或金鑰的 `VIEW DEFINITION` 權限。 若您要將加密的備份還原到不同的執行個體，您必須確定憑證可用於該執行個體上。  
+ **從加密備份還原：** 在還原期間，SQL Server 還原不要求指定任何加密參數。 但它要求用以加密備份檔案的憑證或非對稱金鑰可用於您要進行還原的執行個體上。 執行還原的使用者帳戶必須擁有憑證或金鑰的 `VIEW DEFINITION` 權限。 若您要將加密的備份還原到不同的執行個體，您必須確定憑證可用於該執行個體上。  
   
  若您要從 TDE 加密資料庫中還原備份，TDE 憑證需可用於您要進行還原的執行個體上。  
   
 ##  <a name="Benefits"></a> 優點  
   
-1.  加密資料庫備份，可協助保護資料：SQL Server 提供建立備份時加密備份資料的選項。  
+1.  加密資料庫備份能幫助您確保資料的安全：SQL Server 提供建立備份時加密備份資料的選項。  
   
 2.  加密亦可用於使用 TDE 加密的資料庫。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "62922169"
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
  在下列任一對話方塊中建立資料庫備份時，您可以加密備份：  
   
-1.  [備份資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)：您可以在 [備份選項]  頁面選取 [加密]  ，並指定用於加密的加密演算法以及憑證或非對稱金鑰。  
+1.  [備份資料庫 &#40;備份選項頁面&#41;](back-up-database-backup-options-page.md)：您可以在 [備份選項] 頁面選取 [加密]，並指定用於加密的加密演算法以及憑證或非對稱金鑰。  
   
-2.  [使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)：當您選取備份工作時，您可以在 [Define Backup ()Task (定義備份 () 工作)]  頁面的 [選項]  索引標籤上，選取 [備份加密]  ，並指定用於加密的加密演算法以及憑證或金鑰。  
+2.  [使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)：當您選取備份工作時，您可以在 [Define Backup ()Task (定義備份 () 工作)] 頁面的 [選項] 索引標籤上，選取 [備份加密]，並指定用於加密的加密演算法以及憑證或金鑰。  
   
 ### <a name="using-transact-sql"></a>使用 Transact SQL  
  下列為加密備份檔案的範例 Transact-SQL 陳述式：  
@@ -135,7 +135,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |主題/工作|描述|  
 |-----------------|-----------------|  
 |[建立加密的備份](create-an-encrypted-backup.md)|描述建立加密備份所需的基本步驟|  
-|[SQL Server Managed Backup 到 Windows Azure - 保留和儲存體設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|描述指定加密選項時設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所需的基本步驟。|  
+|[SQL Server 受管理的備份至 Azure-保留和儲存體設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|描述指定加密選項時設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所需的基本步驟。|  
 |[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|提供在 Azure 金鑰保存庫中建立受金鑰保護的加密備份範例。|  
   
 ## <a name="see-also"></a>另請參閱  

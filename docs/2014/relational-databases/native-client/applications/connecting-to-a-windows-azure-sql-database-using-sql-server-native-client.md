@@ -1,5 +1,5 @@
 ---
-title: 連接到 Azure SQL Database 使用 SQL Server Native Client |Microsoft Docs
+title: 使用 SQL Server Native Client 連接到 Azure SQL Database |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5599bbb0aa1736ba5c88904ae5152a0d73856dc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8df1db964dc62e416260589b45dec2d85254550a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213775"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152857"
 ---
 # <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>使用 SQL Server Native Client 連接至 Azure SQL 資料庫
-  如需相關範例，示範如何連接到[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，請參閱[開發：使用說明主題 (Windows Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx)。  
+  如需顯示如何使用[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 連接至的範例, 請參閱[開發:How to 主題 (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx)。  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>連接至 SQL 資料庫時的已知問題  
  以下是使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client 連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時的已知問題：  

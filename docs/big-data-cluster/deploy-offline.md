@@ -5,16 +5,16 @@ description: 了解如何執行 SQL Server 巨量資料叢集的離線部署。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 243771141bbd255e045ef0a1667235f1c414777b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652362"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155272"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>執行 SQL Server 巨量資料叢集的離線部署
 
@@ -33,7 +33,7 @@ ms.locfileid: "69652362"
 > [!TIP]
 > 下列步驟說明此程序。 不過，若要簡化工作，您可以使用[自動化的指令碼](#automated)來取代以手動執行這些命令。
 
-1. 重複下列命令以提取巨量資料叢集容器映像。 將 `<SOURCE_IMAGE_NAME>` 取代為每個[映像名稱](#images)。 將 `<SOURCE_DOCKER_TAG>` 取代為巨量資料叢集本的標籤，例如 **2019-CTP3.2-ubuntu**。  
+1. 重複下列命令以提取巨量資料叢集容器映像。 將 `<SOURCE_IMAGE_NAME>` 取代為每個[映像名稱](#images)。 將`<SOURCE_DOCKER_TAG>`取代為 big data cluster 版本的標記, 例如**2019-RC1-ubuntu**。  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -60,27 +60,31 @@ ms.locfileid: "69652362"
 ### <a id="images"></a> 巨量資料叢集容器映像
 
 離線安裝需要下列巨量資料叢集容器映像：
+- **mssql-app-service-proxy**
+- **mssql-控制項-監視程式**
+- **mssql-controller**
+- **mssql-dns**
+- **mssql-hadoop**
+- **mssql-mleap-serving-runtime**
+- **mssql-mlserver-py-runtime**
+- **mssql-mlserver-r-runtime**
+- **mssql-monitor-collectd**
+- **mssql-monitor-elasticsearch**
+- **mssql-monitor-fluentbit**
+- **mssql-monitor-grafana**
+- **mssql-monitor-influxdb**
+- **mssql-monitor-kibana**
+- **mssql-monitor-telegraf**
+- **mssql-安全性-domainctl**
+- **mssql-security-knox**
+- **mssql-security-support**
+- **mssql-server**
+- **mssql-server-controller**
+- **mssql-server-data**
+- **mssql-伺服器-ha**
+- **mssql-service-proxy**
+- **mssql-ssis-app-runtime**
 
- - **mssql-appdeploy-init**
- - **mssql-monitor-fluentbit**
- - **mssql-monitor-collectd**
- - **mssql-server-data**
- - **mssql-hadoop**
- - **mssql-monitor-elasticsearch**
- - **mssql-monitor-influxdb**
- - **mssql-security-knox**
- - **mssql-mlserver-r-runtime**
- - **mssql-mlserver-py-runtime**
- - **mssql-controller**
- - **mssql-server-controller**
- - **mssql-monitor-grafana**
- - **mssql-monitor-kibana**
- - **mssql-service-proxy**
- - **mssql-app-service-proxy**
- - **mssql-ssis-app-runtime**
- - **mssql-monitor-telegraf**
- - **mssql-mleap-serving-runtime**
- - **mssql-security-support**
 
 ## <a id="automated"></a> 自動化指令碼
 
@@ -113,7 +117,7 @@ ms.locfileid: "69652362"
 
 ## <a name="install-tools-offline"></a>離線安裝工具
 
-巨量資料叢集部署需要幾項工具，包括 **Python**、**azdata** 和 **kubectl**。 遵循下列步驟，在離線伺服器上安裝這些工具。
+Big data cluster 部署需要數項工具,包括 Python `azdata`、和**kubectl**。 遵循下列步驟，在離線伺服器上安裝這些工具。
 
 ### <a id="python"></a> 離線安裝 python
 
@@ -135,13 +139,13 @@ ms.locfileid: "69652362"
 
 ### <a id="azdata"></a> 離線安裝 azdata
 
-1. 在能存取網際網路並具有 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的電腦上執行下列命令，將所有 **azdata** 套件下載至目前的資料夾。
+1. 在具有網際網路存取和[Python](https://wiki.python.org/moin/BeginnersGuide/Download)的電腦上, 執行下列命令以將所有`azdata`套件從封裝下載至目前的資料夾。
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. 將下載的套件和 **requirements.txt** 檔案複製到目標電腦。
+1. 將下載的套件和`requirements.txt`檔案複製到目的電腦。
 
 1. 在目標電腦上執行下列命令，並指定您將先前檔案複製到其中的資料夾。
 
@@ -159,7 +163,7 @@ ms.locfileid: "69652362"
 
 ## <a name="deploy-from-private-repository"></a>從私人存放庫部署
 
-若要從私人存放庫部署，請使用[部署指南](deployment-guidance.md)中所述的步驟，但使用可指定您私人 Docker 存放庫資訊的自訂部署設定檔。 下列 **azdata** 命令示範如何在名為 **control.json** 的自訂部署設定檔中變更 Docker 設定：
+若要從私人存放庫部署，請使用[部署指南](deployment-guidance.md)中所述的步驟，但使用可指定您私人 Docker 存放庫資訊的自訂部署設定檔。 下列`azdata`命令示範如何在名為`control.json`的自訂部署設定檔中變更 Docker 設定:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -167,7 +171,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-部署會提示您提供 Docker 使用者名稱和密碼，或是您也可以在 **DOCKER_USERNAME** 和 **DOCKER_PASSWORD** 環境變數中指定它們。
+部署會提示您提供 docker 使用者名稱和密碼, 或者您可以在`DOCKER_USERNAME`和`DOCKER_PASSWORD`環境變數中指定它們。
 
 ## <a name="next-steps"></a>後續步驟
 

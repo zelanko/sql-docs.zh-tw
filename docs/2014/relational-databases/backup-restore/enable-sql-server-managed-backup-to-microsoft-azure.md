@@ -1,5 +1,5 @@
 ---
-title: 設定 SQL Server 受控備份到 Windows Azure |Microsoft Docs
+title: 設定 SQL Server 受控備份至 Azure |Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b72fcf0a067838651d9c41205c3604750fecc6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: b69439226b55965e37f24f2131c77340ae833590
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028638"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154717"
 ---
-# <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>設定 SQL Server Managed Backup 到 Windows Azure
+# <a name="setting-up-sql-server-managed-backup-to-azure"></a>設定 SQL Server 受控備份至 Azure
   本主題包含兩個教學課程：  
   
  在資料庫層級設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]、啟用電子郵件通知，以及監視備份活動。  

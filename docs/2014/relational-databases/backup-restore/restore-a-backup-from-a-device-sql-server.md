@@ -15,24 +15,24 @@ ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5e272dde5ca7a3c0ff7246d42131f1e70331689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4834a25b9100a37e027d8174897d86655c3690d1
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921947"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154737"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>從裝置還原備份 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中從裝置還原備份。  
   
 > [!NOTE]  
->  如需有關 SQL Server 備份至 Windows Azure Blob 儲存服務的詳細資訊，請參閱＜ [SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)＞。  
+>  如需 SQL Server 備份至 Azure Blob 儲存體服務的相關資訊, 請參閱[SQL Server 使用 Azure Blob 儲存體服務的備份與還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  **本主題內容**  
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目，從裝置還原備份：**  
   
@@ -57,9 +57,9 @@ ms.locfileid: "62921947"
   
 2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]  ，然後按一下 [還原]  。  
+3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [還原]。  
   
-4.  按一下您想要的還原作業類型 ([資料庫]  、[檔案和檔案群組]  或 [交易記錄檔]  )。 這會開啟對應的還原對話方塊。  
+4.  按一下您想要的還原作業類型 ([資料庫]、[檔案和檔案群組] 或 [交易記錄檔])。 這會開啟對應的還原對話方塊。  
   
 5.  在 **[一般]** 頁面的 **[還原來源]** 區段中，按一下 **[來源裝置]** 。  
   

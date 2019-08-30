@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2ee3474d5fedd467170c601a7807117c23e37096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 660c48540bb7d7763eb149c0882f5b37f2cc0d1e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935401"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152581"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client 首頁畫面
 
@@ -60,7 +60,7 @@ ms.locfileid: "67935401"
  顯示與連接之 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]相關的所有目前和歷程記錄活動的狀態檢視。 監視的活動類型包含知識管理、資料品質專案和以 SSIS 為基礎的資料更正。  
   
  **Configuration**  
- 顯示 Reference Data Service 帳戶 (透過 Windows Azure Marketplace 並直接到 Reference Data Services) 的組態屬性、一般設定 (互動式清理、比對和分析)，以及記錄嚴重性設定。  
+ 顯示參考資料服務帳戶的設定屬性 (透過 Azure Marketplace 並直接參考資料服務)、一般設定 (互動式清理、比對和程式碼剖析) 和記錄嚴重性設定。  
   
 ## <a name="see-also"></a>另請參閱  
  [DQS 知識庫與定義域](../data-quality-services/dqs-knowledge-bases-and-domains.md)   

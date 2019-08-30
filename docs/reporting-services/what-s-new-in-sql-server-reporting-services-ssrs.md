@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 05/08/2019
-ms.openlocfilehash: be255547163bb37d1222e1c9b21e123f35d2888e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.date: 08/27/2019
+ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000281"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123117"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
@@ -32,9 +32,21 @@ ms.locfileid: "70000281"
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 Preview Reporting Services
+## <a name="sql-server-2019-reporting-services-preview"></a>SQL Server 2019 Reporting Services 預覽
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]預覽 Reporting Services 可供使用, 並可從 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=100122)** 下載。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]您可以從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=100122)下載 Reporting Services preview。
+
+### <a name="azure-sql-managed-instance-support"></a>Azure SQL 受控執行個體支援
+
+您現在可以在裝載于 VM 或資料中心的 Azure SQL 受控執行個體 (MI) 中, 託管用於 SQL Server Reporting Services (SSRS) 的資料庫目錄。 支援僅限於使用資料庫認證來連接到 SQL MI。
+
+### <a name="power-bi-premium-dataset-support"></a>Power BI Premium 資料集支援
+
+您可以使用 Microsoft 報表產生器或 SQL Server Data Tools (SSDT) 連接到 Power BI 資料集。 然後, 您可以使用 SQL Server Analysis Services 連線功能, 將這些報表發行至 SSRS 2019。 使用者必須使用已儲存的 Windows 使用者名稱和密碼來啟用此案例。
+
+### <a name="alttext-alternative-text-support-for-report-elements"></a>報表元素的 AltText (替代文字) 支援
+
+撰寫報表時, 您可以使用工具提示來指定報表上每個元素的文字。 螢幕閱讀程式技術會適當地識別這些工具提示。
 
 ::: moniker-end
 
@@ -67,7 +79,8 @@ ms.locfileid: "70000281"
 * 下載 [SQL Server 報表產生器](https://go.microsoft.com/fwlink/?LinkId=734968)。
 * 下載 [SQL Server Data Tools - 候選版](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)。
 
-> **注意**：您只能搭配使用 DAX 的查詢設計工具與 SQL Server 2016+ 內建的 SSAS 表格式資料來源。
+> [!NOTE]
+> 您只能搭配使用 DAX 的查詢設計工具與 SQL Server 2016+ 內建的 SSAS 表格式資料來源。
 ::: moniker-end
 
 ## <a name="ssrs-2016"></a>SSRS 2016

@@ -5,37 +5,51 @@ description: azdata bdc control status 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c30fa0bdb9e74941387393a7dffeaadcae05b303
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 33a479f30617fae22ecfc46ddaf115d3a29eed6c
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653218"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155290"
 ---
 # <a name="azdata-bdc-control-status"></a>azdata bdc control status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-下列文章提供 **azdata** 工具中 **bdc control status** 命令的參考。 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
+本文是**azdata**的參考文章。 
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[azdata bdc control status show](#azdata-bdc-control-status-show) | 控制項狀態。
+[azdata bdc control status show](#azdata-bdc-control-status-show) | 控制服務狀態。
 ## <a name="azdata-bdc-control-status-show"></a>azdata bdc control status show
-控制項狀態。
+控制服務狀態。
 ```bash
-azdata bdc control status show 
+azdata bdc control status show [--resource -r] 
+                               [--all -a]
 ```
 ### <a name="examples"></a>範例
-取得控制項的狀態。
+取得服務的狀態。
 ```bash
 azdata bdc control status show
 ```
+取得所有實例之控制服務的狀態。
+```bash
+azdata bdc control status show --all
+```
+取得控制服務內控制項資源的狀態。
+```bash
+azdata bdc control status show --resource control
+```
+### <a name="optional-parameters"></a>選擇性參數
+#### `--resource -r`
+在此服務中取得此資源。
+#### `--all -a`
+顯示服務內每個資源的所有實例。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -50,4 +64,6 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關如何安裝**azdata**工具的詳細資訊, 請參閱[install azdata to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]manage ](deploy-install-azdata.md)。
+- 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 
+
+- 如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](deploy-install-azdata.md)。

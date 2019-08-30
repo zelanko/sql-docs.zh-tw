@@ -12,20 +12,20 @@ helpviewer_keywords:
 - SQL Server Management Objects
 - programming [SMO]
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2381d3485b2c6d2ad2d21ef1e71a4bdf99a34e8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2dd5a5e2aa8c9003c06ae80f1cf077a0f54f4e21
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092799"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148562"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SQL Server 管理物件 (SMO) 程式設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 是針對程式設計管理的所有層面所設計的物件的集合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects (RMO) 是封裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫管理的物件集合。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件 (SMO) 是一種物件集合, 其設計目的是為了進行管理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有層面。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects (RMO) 是封裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫管理的物件集合。  
   
 |主題|描述|  
 |-----------|-----------------|

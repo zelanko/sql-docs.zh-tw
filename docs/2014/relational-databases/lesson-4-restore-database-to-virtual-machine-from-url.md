@@ -1,5 +1,5 @@
 ---
-title: 第 5 課 （選擇性）加密您的資料庫使用 TDE |Microsoft Docs
+title: 第 5 課 選擇性使用 TDE 加密您的資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e78a787a67c430ec82bea4788fd1c92c4c72c4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4eda59ac47444eb589e17d6e1aab2428c77a991f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090683"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154523"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>第 5 課 (選擇性) 使用 TDE 加密資料庫
-  您可以選擇加密新建立的資料庫。 透明資料加密 (TDE) 會執行資料和記錄檔的即時 I/O 加密和解密。 這類加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 如需詳細資訊，請參閱 <<c0> [ 透明資料加密&#40;TDE&#41; ](security/encryption/transparent-data-encryption.md)並[將 TDE 保護的資料庫移至另一個 SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。</c0>  
+  您可以選擇加密新建立的資料庫。 透明資料加密 (TDE) 會執行資料和記錄檔的即時 I/O 加密和解密。 這類加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 如需詳細資訊,[請&#40;參閱&#41;透明資料加密 TDE](security/encryption/transparent-data-encryption.md) , 並[將受 TDE 保護的資料庫移至另一個 SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。  
   
  這個課程假設您已完成下列步驟：  
   
--   您擁有 Windows Azure 儲存體帳戶。  
+-   您有 Azure 儲存體帳戶。  
   
--   您已在 Windows Azure 儲存體帳戶下建立容器。  
+-   您已在 Azure 儲存體帳戶底下建立容器。  
   
 -   您已在容器上建立具有讀取、寫入和列出權限的原則。 您也已經產生 SAS 金鑰。  
   
@@ -87,10 +87,10 @@ GO
   
 ```  
   
- 曾經在這一課的詳細的資訊的 TRANSACT-SQL 陳述式，請參閱 < [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)， [ALTER DATABASE &#40;-&#41; ](/sql/t-sql/statements/alter-database-transact-sql)， [CREATE MASTER KEY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)， [CREATE CERTIFICATE &#40;-&#41;](/sql/t-sql/statements/create-certificate-transact-sql)，並[sys.dm_database_encryption_keys &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)。  
+ 如需本課程中使用之 transact-sql 語句的詳細資訊, 請參閱[CREATE &#40;DATABASE SQL Server transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER DATABASE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql), [CREATE MASTER KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql)、 [CREATE CERTIFICATE &#40;transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)和[sys.databases _database_encryption_keys &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)等。  
   
  **下一課：**  
   
- [第 6 課：將資料庫移轉來源機器內部部署至 Windows Azure 中的目的地電腦](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [第 6 課：將資料庫從內部部署的來源機器遷移至 Azure 中的目的地機器](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

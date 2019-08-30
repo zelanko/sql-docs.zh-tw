@@ -1,33 +1,33 @@
 ---
 title: azdata bdc config 參考
 titleSuffix: SQL Server big data clusters
-description: azdata bdc 命令的參考文章。
+description: Azdata bdc config 命令的參考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 73db63c485b7a6cd2e9355be935ff574ef827a5d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cb999ede4516f903b7d2f409e53940adc79b4f9a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653510"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155282"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-下列文章提供 **azdata** 工具中 **bdc config** 命令的參考。 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。
+本文是**azdata**的參考文章。 
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | 初始化可以搭配叢集建立使用的巨量資料叢集設定檔。
 [azdata bdc config list](#azdata-bdc-config-list) | 列出可用的設定檔選項。
-[azdata bdc config show](#azdata-bdc-config-show) | 顯示 BDC 的目前設定，或是您指定的本機檔案設定 (也就是 custom/cluster.json)。
+[azdata bdc config show](#azdata-bdc-config-show) | 顯示 BDC 的目前設定, 或您指定的本機檔案 (也就是自訂/BDC. json) 的設定檔。
 [azdata bdc config add](#azdata-bdc-config-add) | 針對設定檔中的 json 路徑新增值。
 [azdata bdc config remove](#azdata-bdc-config-remove) | 針對設定檔中的 json 路徑移除值。
 [azdata bdc config replace](#azdata-bdc-config-replace) | 針對設定檔中的 json 路徑取代值。
@@ -53,11 +53,11 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 您想要放置設定檔的檔案路徑，預設為 cwd 並使用 custom-config.json。
 #### `--source -s`
-設定檔來源：['aks-dev-test'、'kubeadm-dev-test'、'minikube-dev-test']
+設定設定檔來源: [' aks-開發/測試 ', ' kubeadm-生產」, ' minikube-開發/測試 ', ' kubeadm-開發/測試 ']
 #### `--force -f`
 強制覆寫目標檔案。
 #### `--accept-eula -a`
-您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 
+您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://aka.ms/azdata-eula 檢視。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -87,12 +87,12 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--config-profile -c`
-預設設定檔：['aks-dev-test'、'kubeadm-dev-test'、'minikube-dev-test']
+預設設定設定檔: [' aks-開發/測試 ', ' kubeadm-生產」, ' minikube-開發/測試 ', ' kubeadm-開發/測試 ']
 #### `--type -t`
 您想要的設定類型。
 `cluster`
 #### `--accept-eula -a`
-您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 
+您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://aka.ms/azdata-eula 檢視。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -105,7 +105,7 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
-顯示 BDC 的目前設定，或是您指定的本機檔案設定 (也就是 custom/cluster.json)。 如果您只想要取得某個區段，該命令也可以接受 json 路徑。  您也可以指定要輸出至的目標檔案。  如果未指定目標檔案，系統只會將它輸出至終端機。
+顯示 BDC 的目前設定, 或您指定的本機檔案 (也就是自訂/BDC. json) 的設定檔。 如果您只想要取得某個區段，該命令也可以接受 json 路徑。  您也可以指定要輸出至的目標檔案。  如果未指定目標檔案，系統只會將它輸出至終端機。
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
@@ -119,15 +119,15 @@ azdata bdc config show
 ```
 在本機設定檔中，在簡單 json 金鑰路徑的結尾取得值。
 ```bash
-azdata bdc config show --config-file custom-config/cluster.json --json-path 'metadata.name' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
 ```
-在本機設定檔中，在簡單 json 金鑰路徑的結尾搭配條件取得值
+在本機設定檔案中, 取得服務內的資源
 ```bash
-azdata bdc config show --config-file custom-config/cluster.json  --json-path '$.spec.pools[?(@.spec.type=="Storage")].spec' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json  --json-path '$.spec.services.sql.resources' --target section.json
 ```
 ### <a name="optional-parameters"></a>選擇性參數
 #### `--config-file -c`
-巨量資料叢集設定檔路徑 (如果您不想要目前登入之叢集的設定，也就是 custom/cluster.json)
+如果您不想要 currentlylogged 到的叢集設定 (也就是自訂/bdc json), 則需要大型資料叢集設定檔案路徑。
 #### `--target -t`
 要用來儲存結果的輸出檔案。 預設：導向至 stdout。
 #### `--json-path -j`
@@ -158,9 +158,9 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--config-file -c`
-您想要設定之設定的巨量資料叢集設定檔路徑，也就是 custom/cluster.json
+您想要設定之設定檔的 Big data cluster config 檔案路徑, 亦即自訂/bdc json
 #### `--json-values -j`
-針對值之 json 路徑的機碼值組清單：key1.subkey1=value1,key2.subkey2=value2. 您可以提供內嵌 json 值，例如 key='{"kind":"cluster","name":"test-cluster"}'，或是提供檔案路徑，例如 key=./values.json。 新增作業不支援條件。  請參閱 http://jsonpatch.com/ \(英文\) 以取得路徑外觀的範例。  如果您想要存取陣列，您必須指出索引 (例如 key.0=value) 來這麼做
+針對值之 json 路徑的機碼值組清單：key1.subkey1=value1,key2.subkey2=value2. 您可以提供內嵌 json 值，例如 key='{"kind":"cluster","name":"test-cluster"}'，或是提供檔案路徑，例如 key=./values.json。 新增作業不支援條件。  如果您提供的內嵌值是具有 ' = ' 和 ' 的機碼值組本身, 請將這些字元換行。  例如, key1 = "key2\=val2\,key3\=val3"。 請參閱 http://jsonpatch.com/ \(英文\) 以取得路徑外觀的範例。  如果您想要存取陣列，您必須指出索引 (例如 key.0=value) 來這麼做
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -185,7 +185,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--config-file -c`
-您想要設定之設定的巨量資料叢集設定檔路徑，也就是 custom/cluster.json
+您想要設定之設定檔的 Big data cluster config 檔案路徑, 亦即自訂/bdc json
 #### `--json-path -j`
 根據 jsonpatch 程式庫的 json 路徑清單，其能指出您想要移除的值，例如：key1.subkey1,key2.subkey2。 移除作業不支援條件。 請參閱 http://jsonpatch.com/ \(英文\) 以取得路徑外觀的範例。  如果您想要存取陣列，您必須指出索引 (例如 key.0=value) 來這麼做
 ### <a name="global-arguments"></a>全域引數
@@ -214,15 +214,15 @@ azdata bdc config replace --config-file custom/control.json --json-values '$.spe
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
 ```
-範例 3 - 取代集區儲存體，包括複本 (存放集區)。
+Ex 3-取代儲存體-0 資源規格, 包括複本。
 ```bash
-azdata bdc config replace --config-file custom/cluster.json --json-values '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--config-file -c`
-您想要設定之設定的巨量資料叢集設定檔路徑，也就是 custom/cluster.json
+您想要設定之設定檔的 Big data cluster config 檔案路徑, 亦即自訂/bdc json
 #### `--json-values -j`
-針對值之 json 路徑的機碼值組清單：key1.subkey1=value1,key2.subkey2=value2. 您可以提供內嵌 json 值，例如 key='{"kind":"cluster","name":"test-cluster"}'，或是提供檔案路徑，例如 key=./values.json。 取代作業可透過 jsonpath 程式庫支援條件。  若要使用此方法，請以 $ 作為路徑開頭。 這能讓您執行如-j $.key1.key2[?(@.key3=='someValue'].key4=value 的條件。 您可以參閱底下的範例。 如需其他協助，請參閱： https://jsonpath.com/ \(英文\)
+針對值之 json 路徑的機碼值組清單：key1.subkey1=value1,key2.subkey2=value2. 您可以提供內嵌 json 值，例如 key='{"kind":"cluster","name":"test-cluster"}'，或是提供檔案路徑，例如 key=./values.json。 取代作業可透過 jsonpath 程式庫支援條件。  若要使用此方法，請以 $ 作為路徑開頭。 這能讓您執行如-j $.key1.key2[?(@.key3=='someValue'].key4=value 的條件。 如果您提供的內嵌值是具有 ' = ' 和 ' 的機碼值組本身, 請將這些字元換行。  例如, key1 = "key2\=val2\,key3\=val3"。 您可以參閱底下的範例。 如需其他協助，請參閱： https://jsonpath.com/ \(英文\)
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -257,14 +257,14 @@ azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 ```
 範例 3 - 搭配修補檔案取代集區儲存體，包括複本 (存放集區)。
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 
     Patch File Example (patch.json): 
-        {"patch":[{"op":"replace","path":"$.spec.pools[?(@.spec.type == 'Storage')].spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
+        {"patch":[{"op":"replace","path":"$.spec.resources.storage-0.spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
 ### <a name="required-parameters"></a>必要參數
 #### `--config-file -c`
-您想要設定之設定的巨量資料叢集設定檔路徑，也就是 custom/cluster.json
+您想要設定之設定檔的 Big data cluster config 檔案路徑, 亦即自訂/bdc json
 #### `--patch-file -p`
 以 jsonpatch 程式庫 http://jsonpatch.com/ \(英文\) 為基礎之修補 json 檔案的路徑。 您必須以名為 "patch" 的機碼作為修補 json 檔案的開頭，其值是您要執行之修補作業的陣列。 針對修補作業的路徑，您可以使用點標記法，例如可針對大部分作業使用的 key1.key2。 如果您想要進行取代作業，且您是要取代需要條件之陣列中的值，請透過以 $ 作為路徑開頭來使用 jsonpath 標記法。 這能讓您執行如 $.key1.key2[?(@.key3=='someValue'].key4 的條件。 請參閱以下的範例。 如需條件的其他協助，請參閱： https://jsonpath.com/ \(英文\)。
 ### <a name="global-arguments"></a>全域引數
@@ -281,4 +281,6 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 
 ## <a name="next-steps"></a>後續步驟
 
-如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 如需有關如何安裝**azdata**工具的詳細資訊, 請參閱[install azdata to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]manage ](deploy-install-azdata.md)。
+- 如需其他 **azdata** 命令的詳細資訊，請參閱 [azdata 參考](reference-azdata.md)。 
+
+- 如需如何安裝 **azdata** 工具的詳細資訊，請參閱[安裝 azdata 來管理 SQL Server 2019 巨量資料叢集](deploy-install-azdata.md)。

@@ -10,12 +10,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872664"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154615"
 ---
 # <a name="database-engine-tutorials"></a>Database Engine 教學課程
   本節包含 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]的教學課程。  
@@ -44,17 +44,17 @@ ms.locfileid: "62872664"
  [教學課程：使用原則式管理來管理伺服器](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  這個教學課程將說明如何建立強制執行網站管理標準的原則。  
   
- [教學課程：使用原則式管理來評估最佳做法](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [教學課程：使用以原則為基礎的管理來評估最佳作法](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  這個教學課程將說明如何建立可用於分析 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的已知問題的原則。  
   
- [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- 本教學課程將說明如何執行 SQL Server 備份及還原到 Windows Azure Blob 儲存體服務。  
+ [教學課程：SQL Server 備份和還原至 Azure Blob 儲存體服務](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ 本教學課程說明如何執行 SQL Server 備份和還原至 Azure Blob 儲存體服務。  
   
- [教學課程：Windows Azure 儲存體服務中的 SQL Server 資料檔案](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- 本教學課程可協助您了解如何直接將 SQL Server 資料檔案儲存在 Windows Azure Blob 儲存體服務中。  
+ [教學課程：Azure 儲存體服務中 SQL Server 資料檔案](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ 本教學課程可協助您瞭解如何直接將 SQL Server 資料檔案儲存在 Azure Blob 儲存體服務中。  
   
 ## <a name="see-also"></a>另請參閱  
- [適用於 SQL Server 2014 的教學課程](../tutorials/tutorials-for-sql-server-2014.md)   
+ [SQL Server 2014 的教學課程](../tutorials/tutorials-for-sql-server-2014.md)   
  [TechNet WIKI：SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734) (SQL Server 2012 範例)  
   
   

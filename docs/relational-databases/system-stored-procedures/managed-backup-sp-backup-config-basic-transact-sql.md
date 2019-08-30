@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_basic (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup. sp_backup_config_basic (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d09fa38377910c2960b43eb6534dba4546538b4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92cbea99941b6e9378c4400ae0b563d462c34f27
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942111"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152027"
 ---
-# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic & Amp;#40;transact-SQL&AMP;#41;
+# <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup. sp_backup_config_basic (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  會設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]針對特定資料庫或執行個體的基本設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  設定特定資料庫或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的基本設定。[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
 > [!NOTE]  
->  此程序可以呼叫其本身建立基本的受管理備份設定。 不過，如果您計劃新增進階的功能或自訂排程，先設定這些設定使用[managed_backup.sp_backup_config_advanced &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)並[managed_backup.sp_backup_config_schedule &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)再啟用受管理的備份，此程序。  
+>  您可以自行呼叫此程式, 以建立基本的受管理備份設定。 不過，如果您計劃新增進階的功能或自訂排程，先設定這些設定使用[managed_backup.sp_backup_config_advanced &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)並[managed_backup.sp_backup_config_schedule &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)再啟用受管理的備份，此程序。  
    
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,25 +47,25 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="Arguments"></a> 引數  
  @enable_backup  
- 啟用或停用指定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup已 **元**。 設定時為必要參數[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]第一個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您要變更現有[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態，這是選擇性參數。 在此情況下，未指定任何組態值會保留其現有的值。  
+ 啟用或停用指定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup已 **元**。 設定的第一個[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例時, 所需的參數。 如果您要變更現有[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的設定, 此參數是選擇性的。 在此情況下, 任何未指定的設定值都會保留其現有的值。  
   
  @database_name  
- 啟用特定資料庫上的受管理的備份的資料庫名稱。  
+ 在特定資料庫上啟用受管理備份的資料庫名稱。  
   
  @container_url  
- 指出備份的位置 URL。 當@credential_name是 NULL，此 URL 是 Azure 儲存體中的 blob 容器的共用的存取簽章 (SAS) URL，並備份使用新的備份至區塊 blob 功能。 如需詳細資訊，請檢閱[了解 SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 當@credential_name指定，則這是儲存體帳戶 URL，並備份使用已被取代的備份分頁 blob 的功能。  
+ 指出備份位置的 URL。 當@credential_name為 Null 時, 此 URL 是 Azure 儲存體中 blob 容器的共用存取簽章 (SAS) url, 而備份則使用新的備份來封鎖 blob 功能。 如需詳細資訊, 請參閱[瞭解 SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 當@credential_name指定時, 這會是儲存體帳戶 URL, 而備份會使用已被取代的備份來分頁 blob 功能。  
   
 > [!NOTE]  
->  只有一個 SAS URL 是目前支援這個參數。  
+>  此參數目前僅支援 SAS URL。  
   
  @retention_days  
- 備份檔案的保留期限，以天數為單位。 @storage_url為 int。 這是必要的參數設定時[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]第一次的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 變更時[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態，這是選擇性參數。 如果未指定，則會保留現有的組態值。  
+ 備份檔案的保留期限，以天數為單位。 @storage_url為 INT。 當您第一次在[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例上設定時, 這是必要的參數。 變更設定時[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , 這個參數是選擇性的。 如果未指定，則會保留現有的組態值。  
   
  @credential_name  
- 用來驗證 Windows Azure 儲存體帳戶之 SQL 認證的名稱。 @credentail_name 已**SYSNAME**。 指定時，備份會儲存至分頁 blob。 如果此參數為 NULL，則備份將儲存為區塊 blob。 備份至分頁 blob 已淘汰，因此最好使用新的區塊 blob 備份功能。 用來變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態時為選擇性參數。 如果未指定，會保留現有的組態值。  
+ 用來向 Azure 儲存體帳戶進行驗證的 SQL 認證名稱。 @credentail_name為**SYSNAME**。 當指定時, 備份會儲存至分頁 blob。 如果此參數為 Null, 備份將會儲存為區塊 blob。 備份至分頁 blob 已淘汰, 因此最好使用新的區塊 blob 備份功能。 用來變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態時為選擇性參數。 如果未指定, 則會保留現有的設定值。  
   
 > [!WARNING]
->  **@credential_name** 此時不支援參數。 支援只備份至區塊 blob，需要此參數為 NULL。  
+>  目前不支援此**參數。@credential_name** 僅支援備份至區塊 blob, 這需要此參數為 Null。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -73,10 +73,10 @@ EXEC managed_backup.sp_backup_config_basic
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
- 需要的成員資格**db_backupoperator**資料庫角色，使用**ALTER ANY CREDENTIAL**權限，並**EXECUTE**的權限**sp_delete_backuphistory**預存程序。  
+ 需要**db_backupoperator**資料庫角色中的成員資格、具有**ALTER ANY CREDENTIAL**許可權, 以及**Sp_delete_backuphistory**預存程式的**EXECUTE**許可權。  
   
 ## <a name="examples"></a>範例  
- 您可以使用最新的 Azure PowerShell 命令來建立儲存體帳戶容器和 SAS URL。 下列範例 mystorageaccount 的儲存體帳戶中建立新的容器，mycontainer，，然後將它的 SAS URL 會取得具有完整權限。  
+ 您可以使用最新的 Azure PowerShell 命令來建立儲存體帳戶容器和 SAS URL。 下列範例會在 mystorageaccount 儲存體帳戶中建立新的容器 mycontainer, 然後取得具有完整許可權的 SAS URL。  
   
 ```powershell  
 $context = New-AzureStorageContext -StorageAccountName mystorageaccount -StorageAccountKey (Get-AzureStorageKey -StorageAccountName mystorageaccount).Primary  
@@ -84,7 +84,7 @@ New-AzureStorageContainer -Name mycontainer -Context $context
 New-AzureStorageContainerSASToken -Name mycontainer -Permission rwdl -FullUri -Context $context  
 ```  
   
- 下列範例會啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]如，執行的 SQL Server 執行個體設定為 30 天的保留原則，設定目的地容器，名為 'mycontainer' 的儲存體帳戶中名為 'mystorageaccount'。  
+ 下列範例會針對[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]在其上執行的 SQL Server 實例啟用, 並將保留原則設為30天, 並將目的地設定為名為 ' mystorageaccount ' 的儲存體帳戶中名為 ' mycontainer ' 的容器。  
   
 ```Transact-SQL 
 Use msdb;  

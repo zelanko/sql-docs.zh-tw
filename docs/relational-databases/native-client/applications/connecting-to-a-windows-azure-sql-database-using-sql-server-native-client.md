@@ -1,5 +1,5 @@
 ---
-title: 連接到 Windows Azure SQL Database 使用 SQL Server Native Client |Microsoft Docs
+title: 使用 SQL Server Native Client 連接到 Azure SQL Database |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -10,23 +10,23 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f08eb266c857ff98b4bc14e5eca117d7a89a6a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c0c81acd1caa362b3aa0d15919fe000a282568a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069328"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155715"
 ---
-# <a name="connecting-to-a-windows-azure-sql-database-using-sql-server-native-client"></a>使用 SQL Server Native Client 連接至 Windows Azure SQL 資料庫
+# <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>使用 SQL Server Native Client 連接至 Azure SQL 資料庫
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  如需相關範例，示範如何連接到[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，請參閱[開發：使用說明主題 (Windows Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx)。  
+  如需顯示如何使用[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 連接至的範例, 請參閱[開發:How to 主題 (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx)。  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>連接至 SQL 資料庫時的已知問題  
  以下是使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client 連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時的已知問題：  
   
--   使用所建立的連接**SQLBrowseConnect**如果可能會遭到拒絕**SQLBrowseConnect**在階段中。  例如，如果在第一次呼叫中傳送驅動程式名稱，在第二次呼叫中傳送伺服器和認證 (使用者和密碼)，然後建立連接，再於第三次呼叫中傳送資料庫名稱和語言，  則第三次呼叫會導致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 發出 USE 陳述式以變更資料庫。 但是，[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 不支援 USE 陳述式，因此產生下列錯誤：  
+-   如果在階段中使用**SQLBrowseConnect** , 則與**SQLBrowseConnect**建立的連接可能會遭到拒絕。  例如，如果在第一次呼叫中傳送驅動程式名稱，在第二次呼叫中傳送伺服器和認證 (使用者和密碼)，然後建立連接，再於第三次呼叫中傳送資料庫名稱和語言，  則第三次呼叫會導致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 發出 USE 陳述式以變更資料庫。 但是，[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 不支援 USE 陳述式，因此產生下列錯誤：  
   
     ```  
     [Microsoft][SQL Server Native Client 11.0][SQL Server]USE statement is not supported to switch between databases. Use a new connection to connect to a different Database.  

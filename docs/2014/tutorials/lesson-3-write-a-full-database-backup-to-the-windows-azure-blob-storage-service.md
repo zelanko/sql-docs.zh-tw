@@ -1,5 +1,5 @@
 ---
-title: 第 3 課：完整資料庫備份寫入 Windows Azure Blob 儲存體服務 |Microsoft Docs
+title: 第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653683"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153470"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>第 3 課：將完整資料庫備份寫入 Windows Azure Blob 儲存體服務
-  這一課將示範如何使用 tsql 陳述式來執行 Windows Azure Blob 儲存體服務的完整資料庫備份。  
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務
+  這一課將示範如何使用 tsql 語句來執行 Azure Blob 儲存體服務的完整資料庫備份。  
   
-## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>執行 Windows Azure Blob 儲存體服務的完整資料庫備份  
+## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>執行 Azure Blob 儲存體服務的完整資料庫備份  
  若要建立完整資料庫備份，請使用下列步驟：  
   
 1.  連接到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
@@ -44,6 +44,6 @@ ms.locfileid: "62653683"
 5.  在 [物件總管] 中，連接到 Azure 儲存體。 瀏覽並尋找容器以及新建立的備份檔案。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 4 課：從完整資料庫備份執行還原](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)。  
+ [第 4 課：從完整資料庫備份](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)執行還原。  
   
   

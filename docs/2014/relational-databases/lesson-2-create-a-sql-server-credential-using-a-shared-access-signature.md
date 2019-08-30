@@ -10,22 +10,22 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85e60c359df2a209742b5b10693fcb72ac9cb37a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090847"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153827"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>第 3 課：建立 SQL Server 認證
-  在這一課，您將會建立認證以儲存用來存取 Windows Azure 儲存體帳戶的安全性資訊。  
+  在這一課, 您將建立認證, 以儲存用來存取 Azure 儲存體帳戶的安全性資訊。  
   
  SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。 認證會儲存儲存體容器的 URI 路徑以及共用存取簽章金鑰值。 對於資料或記錄檔所使用的每一個儲存體容器，您必須建立名稱符合容器路徑的 SQL Server 認證。  
   
- 如需認證的一般資訊，請參閱[認證&#40;資料庫引擎&#41;](security/authentication-access/credentials-database-engine.md)。  
+ 如需認證的一般資訊,[請&#40;參閱&#41;認證資料庫引擎](security/authentication-access/credentials-database-engine.md)。  
   
 > [!IMPORTANT]  
->  建立 SQL Server 認證，如下所述的需求特有[在 Windows Azure 中的 SQL Server 資料檔案](databases/sql-server-data-files-in-microsoft-azure.md)功能。 如需建立 Azure 儲存體中的認證以備份程序的詳細資訊，請參閱[第 2 課：建立 SQL Server 認證](../tutorials/lesson-2-create-a-sql-server-credential.md)。  
+>  以下所述建立 SQL Server 認證的需求, 僅適用于[Azure 功能中 SQL Server 的資料檔案](databases/sql-server-data-files-in-microsoft-azure.md)。 如需在 Azure 儲存體中建立備份程式認證的相關資訊[, 請參閱第2課:建立 SQL Server 認證](../tutorials/lesson-2-create-a-sql-server-credential.md)。  
   
  若要建立 SQL Server 認證，請依照下列步驟進行：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66090847"
   
 3.  在 [標準] 工具列上，按一下 [新增查詢]。  
   
-4.  將下列範例複製並貼入查詢視窗中，並視需要修改。 下列陳述式會建立 SQL Server 認證來儲存您的儲存體容器的共用存取憑證。  
+4.  將下列範例複製並貼入查詢視窗中，並視需要修改。 下列語句會建立 SQL Server 認證, 以儲存儲存體容器的共用存取憑證。  
   
     ```sql  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66090847"
   
     ```  
   
-     如需詳細資訊，請參閱 < [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) SQL Server 線上叢書 》 中。  
+     如需詳細資訊, 請參閱 SQL Server 線上叢書中的[CREATE CREDENTIAL &#40;transact-sql&#41; ](/sql/t-sql/statements/create-credential-transact-sql) 。  
   
 5.  若要查看所有可用的認證，可以在查詢視窗中執行下列陳述式：  
   
@@ -55,10 +55,10 @@ ms.locfileid: "66090847"
     SELECT * from sys.credentials  
     ```  
   
-     如需有關 sys.credentials 的詳細資訊，請參閱 < [sys.credentials &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) SQL Server 線上叢書 》 中。  
+     如需有關 sys.databases 的詳細資訊, 請參閱 SQL Server 線上叢書中的[sys &#40;.&#41;認證 transact-sql](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) 。  
   
  **下一課：**  
   
- [第 4 課：在 Windows Azure 儲存體中建立資料庫](lesson-3-database-backup-to-url.md)  
+ [第 4 課：在 Azure 儲存體中建立資料庫](lesson-3-database-backup-to-url.md)  
   
   

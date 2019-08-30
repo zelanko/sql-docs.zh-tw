@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a84ff61d1656743953f5f854a1b658b303a7acf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b801dd3792755c93006c1c6a48cfa9dc5af9cc37
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992126"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152465"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 
@@ -35,7 +35,7 @@ ms.locfileid: "67992126"
   
 -   讓 DQS 系統管理員從 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 監控 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]上的 DQS 活動，並 *終止* 正在執行的活動或 *停止* 活動中正在執行的程序 (如有需要)。  
   
--   設定 Reference Data Service 設定 (例如設定與 Windows Azure Marketplace 的連線，以及管理協力廠商的直接參考資料服務提供者。  
+-   設定參考資料服務設定, 例如使用 Azure Marketplace 和管理直接協力廠商參考資料服務提供者的連線能力。  
   
 -   設定清理與比對活動的臨界值。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67992126"
 ### <a name="configuration"></a>組態  
  **中的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 畫面可讓 DQS 系統管理員進行下列操作：  
   
--   **參考資料**：設定參考資料服務提供者：Windows Azure Marketplace 或直接參考資料提供者。 設定參考資料服務提供者之後，您可以在知識庫中的定義域管理活動期間，對應具有參考資料的定義域/複合定義域，然後使用相同的知識庫，在資料品質專案中進行清理活動。 它也可讓您指定連接網際網路所使用的 Proxy 設定，以使用 Windows Azure Marketplace。  
+-   **參考資料**：設定參考資料服務提供者：Azure Marketplace 或直接參考資料服務提供者。 設定參考資料服務提供者之後，您可以在知識庫中的定義域管理活動期間，對應具有參考資料的定義域/複合定義域，然後使用相同的知識庫，在資料品質專案中進行清理活動。 它也可讓您指定用來連線到網際網路的 proxy 設定, 以使用 Azure Marketplace。  
   
 -   **一般設定**：指定資料清理和資料比對的閾值，以及是否在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中啟用分析所使用的通知。 這些臨界值是由 DQS 在資料品質專案中，於電腦輔助的清理和比對活動期間所使用。  
   

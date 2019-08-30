@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad52c1f1d431e1ded8f63728bf17c951196c406d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480726"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154449"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
   本主題將提供知識管理、資料品質專案和資料品質管理中 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念的簡短摘要。  
@@ -37,7 +37,7 @@ ms.locfileid: "65480726"
   
  **Reference Data Services**  
   
- 您可以使用參考資料來驗證、更正和充實資料，並運用保證其參考資料品質之公司的服務。 您可以使用 Windows Azure Marketplace 的服務來連接到參考資料提供者，也可以使用提供者的直接連接。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
+ 您可以使用參考資料來驗證、更正和充實資料，並運用保證其參考資料品質之公司的服務。 您可以使用 Azure Marketplace 的服務來連接到參考資料提供者, 也可以使用提供者的直接連接。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
   
  如需有關 DQS 中知識管理的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   

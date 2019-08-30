@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d56e3109c0820b800bbd72c9cc86bed9b7a09eea
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: e762354a2f391ba4c52f8bc0aa5fece537c79288
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030297"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155364"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務中的已知問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ SQL Server 2016 要求用戶端上的 R 程式庫必須完全符合伺服器上�
 
 ### <a name="9-remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>9.在 Azure 虛擬機器上執行的 SQL Server 實例中, 防火牆封鎖了遠端計算內容
 
-如果您已在[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Windows Azure 虛擬機器上安裝, 您可能無法使用需要使用虛擬機器工作區的計算內容。 原因是, 根據預設, Azure 虛擬機器上的防火牆包含封鎖本機 R 使用者帳戶網路存取的規則。
+如果您已在[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Azure 虛擬機器上安裝, 您可能無法使用需要使用虛擬機器工作區的計算內容。 原因是, 根據預設, Azure 虛擬機器上的防火牆包含封鎖本機 R 使用者帳戶網路存取的規則。
 
 因應措施是在 Azure VM 上, 開啟 [**具有 Advanced Security 的 Windows 防火牆**], 選取 [**輸出規則**], 然後停用下列規則:**封鎖 SQL Server 實例 MSSQLSERVER 中 R 本機使用者帳戶的網路存取**。 您也可以讓規則保持啟用狀態, 但是將 [安全性] 屬性變更為 [**允許安全**]。
 

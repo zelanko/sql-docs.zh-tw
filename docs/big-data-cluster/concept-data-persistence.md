@@ -5,16 +5,16 @@ description: 了解資料持續性在 SQL Server 2019 巨量資料叢集中的�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028596"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155345"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上使用 SQL Server 2019 巨量資料叢集的資料持續性
 
@@ -83,7 +83,7 @@ Kubeadm 並未隨附內建的儲存類別。 您必須使用本機儲存體或�
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-這會建立兩個檔案 **cluster.json** 和 **control.json**，它們可透過手動編輯，或者可以使用 **azdata bdc config** 命令來自訂。 您可以使用 jsonpath 和 jsonpatch 程式庫的組合，以提供編輯組態檔的方式。
+這會建立兩個檔案, 也就是可透過手動編輯來自訂的檔案 ( **bdc. json**和**control** ), 或者您可以使用**azdata bdc config**命令。 您可以使用 jsonpath 和 jsonpatch 程式庫的組合，以提供編輯組態檔的方式。
 
 
 ### <a id="config-samples"></a> 設定儲存類別名稱和/或宣告大小
@@ -109,7 +109,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "$.spec.resources.storage-0.spec",
       "value": {
         "type":"Storage",
         "replicas":2,
@@ -134,7 +134,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 套用修補檔案。 使用 **azdata bdc config patch** 命令，將變更套用至 JSON 修補檔案。 下列範例會將 patch. json 檔案套用至目標部署組態檔自訂 json。
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>後續步驟

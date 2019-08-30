@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0aeb3d94bf1b67674b59f756f330e1d460f0cde7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771116"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160709"
 ---
-# <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
+# <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   如果將資料庫還原到在其他情況下無法執行複寫處理的非原始伺服器、資料庫或系統，便移除複寫設定。 將複寫的資料庫還原到並非備份來源的伺服器或資料庫時，無法保留複寫設定。 在還原時, 伺服器會直接呼叫**sp_restoredbreplication** , 以自動從還原的資料庫中移除複寫中繼資料。  
@@ -40,13 +40,17 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @srv_orig = ] 'original_server_name'`建立備份的伺服器名稱。 *original_server_name*是**sysname**, 沒有預設值。  
+`[ @srv_orig = ] 'original_server_name'`  
+ 建立備份的伺服器名稱。 *original_server_name*是**sysname**, 沒有預設值。  
   
-`[ @db_orig = ] 'original_database_name'`已備份的資料庫名稱。 *original_database_name*是**sysname**, 沒有預設值。  
+`[ @db_orig = ] 'original_database_name'`  
+ 已備份資料庫的名稱。 *original_database_name*是**sysname**, 沒有預設值。  
   
-`[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @keep_replication = ] keep_replication`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @perform_upgrade = ] perform_upgrade`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** (成功) 或**1** (失敗)  

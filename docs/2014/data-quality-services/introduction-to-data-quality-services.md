@@ -12,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c5898910a5280e797080c99fde978bb3da1c3c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19ef3eacc2fc1dbe6408ea1b51c5135ba37740e5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484208"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154475"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的資料品質方案可讓資料管理人或 IT 專業人員維護其資料的品質，並確保資料適合其商業用途。 DQS 是知識驅動方案，可同時提供電腦輔助和互動式方法來管理資料來源的完整性和品質。 DQS 可讓您探索、建立以及管理資料的相關知識。 然後您可以使用該知識執行資料清理、比對和分析。 您也可以在 DQS 資料品質專案中使用參考資料提供者的雲端式服務。  
@@ -29,7 +29,7 @@ ms.locfileid: "65484208"
   
  DQS 可讓非資料庫專家或程式設計人員的商務使用者、資訊工作者與 IT 專業人員能夠花最少的安裝或準備時間，即可建立、維護及執行其組織的資料品質作業。  
   
-##  <a name="Answer"></a> 回應 DQS 的需求  
+##  <a name="Answer"></a>使用 DQS 來回答需求  
  資料品質並沒有絕對的定義。 其定義取決於資料是否適合它原本設計的用途。 DQS 會識別可能不正確的資料，並提供您資料實際上不正確之可能性的評估。 DQS 會提供您對於資料語意上的了解，讓您可以決定其適當性。 DQS 可讓您解決與不完整、不符合、不一致、不正確、無效以及資料重複相關的問題。  
   
  DQS 會提供下列功能以解決資料品質問題。  
@@ -38,7 +38,7 @@ ms.locfileid: "65484208"
   
 -   **比對** ：在以規則為基礎的程序中識別語意重複，這個程序可讓您判斷構成符合項目的元素，並執行刪除重複作業。 如需詳細資訊，請參閱 [Data Matching](../../2014/data-quality-services/data-matching.md)。  
   
--   **Reference Data Services** ：使用參考資料提供者的服務驗證資料的品質。 您可以使用 Windows Azure Marketplace DataMarket 中的 Reference Data Services 輕鬆清理、驗證、比對與充實資料。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
+-   **Reference Data Services** ：使用參考資料提供者的服務驗證資料的品質。 您可以使用 Azure Marketplace DataMarket 中的參考資料服務, 輕鬆地清理、驗證、比對及充實資料。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
   
 -   **分析** ：分析資料來源，讓您得以深入了解在知識探索、定義域管理、比對以及資料清理程序每個階段的資料品質。 分析在 DQS 資料品質方案中是一個功能強大的工具。 您可以建立資料品質方案，其中分析就如同知識管理、比對或資料清理一樣重要。 如需詳細資訊，請參閱 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   

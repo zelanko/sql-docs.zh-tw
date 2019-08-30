@@ -18,17 +18,17 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bc6c150f8c8f4f4e6f68b275a901ab8f1f5e8e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 296163b64d565ae3a65a16f1dbbf002bfc464bee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832479"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153964"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
   ADO NET 來源會從 .NET 提供者取用資料，並使該資料可供資料流程使用。  
   
- 您可以使用 ADO NET 來源連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的詳細資訊，請參閱 [Azure SQL Database 一般限制與方針](https://go.microsoft.com/fwlink/?LinkId=248228)。  
+ 您可以使用 ADO NET 來源連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需的詳細[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資訊, 請參閱[一般方針和限制 (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)。  
   
 ## <a name="data-type-support"></a>資料類型支援  
  此來源會將未對應到特定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的所有資料類型轉換成 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 即使資料類型為 `System.Object`，還是會發生轉換。  
@@ -37,7 +37,7 @@ ms.locfileid: "62832479"
   
  您可以在 ADO NET 來源之後使用資料轉換，將 DT_NTEXT 資料類型轉換成 DT_BYTES 或 DT_STR 資料類型。 如需詳細資訊，請參閱 [Data Conversion Transformation](transformations/data-conversion-transformation.md)。  
   
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，資料類型 DT_DBDATE、DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的某些日期資料類型。 您可以設定 ADO NET 來源，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的日期資料類型轉換成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的資料類型。 如果要設定 ADO NET 來源，以轉換這些日期資料類型，請將 **連接管理員的** [Type System Version] [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 屬性設定為 **[Latest]** 。 (**Type System Version** 屬性位於 [連線管理員]  對話方塊的 [全部]  頁面上。 若要開啟 [連線管理員]  對話方塊，請以滑鼠右鍵按一下 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，然後按一下 [編輯]  。)  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，資料類型 DT_DBDATE、DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 會對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的某些日期資料類型。 您可以設定 ADO NET 來源，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的日期資料類型轉換成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的資料類型。 如果要設定 ADO NET 來源，以轉換這些日期資料類型，請將 **連接管理員的** [Type System Version] [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 屬性設定為 **[Latest]** 。 (**Type System Version** 屬性位於 [連線管理員] 對話方塊的 [全部] 頁面上。 若要開啟 [連線管理員] 對話方塊，請以滑鼠右鍵按一下 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，然後按一下 [編輯]。)  
   
 > [!NOTE]  
 >  如果 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員的 **Type System Version** 屬性設定為 **SQL Server 2005**，系統會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型轉換成 DT_WSTR。  

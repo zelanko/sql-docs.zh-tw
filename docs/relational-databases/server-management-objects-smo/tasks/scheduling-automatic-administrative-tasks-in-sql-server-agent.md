@@ -1,5 +1,5 @@
 ---
-title: 排程 SQL Server Agent 中的自動管理工作 |Microsoft Docs
+title: 在 SQL Server Agent 中排程自動管理工作 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Agent [SMO]
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64de081adef73e1480fd0bc4ca6b9bf3aacded7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030180"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148332"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "68030180"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空間中。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
-程式使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程式，您必須包含**使用**陳述式來限定 Agent 命名空間。 Insert 陳述式逐一**使用**應用程式中的任何宣告之前的陳述式，例如：
+對於使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agent 的程式, 您必須包含**using**語句以限定代理程式命名空間。 在應用程式中的任何宣告之前, 于其他**using**語句後面插入語句, 例如:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -166,9 +166,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>在 Visual C# 中建立警示  
  此程式碼範例會建立由效能條件觸發的警示。 該條件必須以特定格式提供：  
   
- **ObjectName |CounterName |執行個體 |ComparisionOp |CompValue**  
+ **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
- 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>類型需要方括號，因為**運算子**是[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]關鍵字。  
+ 警示通知需要有操作員。 類型需要使用[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]方括弧, 因為運算子是關鍵字。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>  
   
 ```csharp  
 {  
@@ -199,9 +199,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>在 PowerShell 中建立警示  
  此程式碼範例會建立由效能條件觸發的警示。 該條件必須以特定格式提供：  
   
- **ObjectName |CounterName |執行個體 |ComparisionOp |CompValue**  
+ **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
- 警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>類型需要方括號，因為**運算子**是[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]關鍵字。  
+ 警示通知需要有操作員。 類型需要使用[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]方括弧, 因為運算子是關鍵字。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -267,7 +267,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 代理程式](../../../ssms/agent/sql-server-agent.md)   
+ [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)   
  [實作作業](../../../ssms/agent/implement-jobs.md)  
   
   

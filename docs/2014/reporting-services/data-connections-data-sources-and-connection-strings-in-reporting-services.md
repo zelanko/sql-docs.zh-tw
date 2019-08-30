@@ -19,12 +19,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8147471dc662b651ac9c99cc9290a383cc235ee8
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fc918b390cedbca9016e4d14f72dea8c9ce8d148
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891567"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154596"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   若要在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表中包括資料，您必須先建立「資料來源」 與「資料集」。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 和[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
@@ -130,7 +130,7 @@ ms.locfileid: "68891567"
 |本機伺服器上的 SQL Server 資料庫|`data source="(local)";initial catalog=AdventureWorks`|將資料來源類型設定為 `Microsoft SQL Server`。|  
 |SQL Server 執行個體<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|將資料來源類型設定為 `Microsoft SQL Server`。|  
 |SQL Server Express 資料庫|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|將資料來源類型設定為 `Microsoft SQL Server`。|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)]在雲端中|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|將資料來源類型設定為 `Windows Azure SQL Database`。 如需詳細資訊，請參閱 [SQL Azure 連接類型 &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md)。|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)]在雲端中|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|將資料來源類型設定為 `Azure SQL Database`。 如需詳細資訊，請參閱 [SQL Azure 連接類型 &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md)。|  
 |SQL Server 平行資料倉儲|`HOST=<IP address>;database= AdventureWorks; port=<port>`|將資料來源類型設定為 `Microsoft SQL Server Parallel Data Warehouse`。 如需詳細資訊，請參閱 [SQL Server 平行資料倉儲連接類型 &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
 |本機伺服器上的 Analysis Services 資料庫|`data source=localhost;initial catalog=Adventure Works DW`|將資料來源類型設定為 `Microsoft SQL Server Analysis Services`。 如需詳細資訊，請參閱 [MDX 的 Analysis Services 連線類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或 [DMX 的 Analysis Services 連線類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
 |具有 Sales 檢視方塊的 Analysis Services 表格式模型資料庫|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|將資料來源類型設定為 `Microsoft SQL Server Analysis Services`。 在 cube= 設定中指定檢視方塊名稱。 如需詳細資訊，請參閱 [檢視方塊 &#40;SSAS 表格式&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular)。|  

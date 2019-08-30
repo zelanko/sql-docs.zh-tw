@@ -1,27 +1,24 @@
 ---
-title: 什麼是巨量資料叢集？
-titleSuffix: SQL Server big data clusters
+title: 什麼是 Big Data 叢集？
+titleSuffix: SQL Server Big Data Clusters
 description: 瞭解在 Kubernetes 上執行的(預覽),並提供關聯式和HDFS資料的相應放大選項。[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15002f9d5633336fb61474a834c913a0d7dbf1c5
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c75005c35e743a87ff742352946c4fdde5fcf0b8
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653174"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153655"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 從開始[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] , 可讓您部署在 Kubernetes 上執行之 SQL Server、Spark 和 HDFS 容器的可擴充叢集。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 這些元件會並存執行，可供您讀取、寫入和處理來自 Transact-SQL 或 Spark 的巨量資料，讓您輕鬆地結合與分析具有大量巨量資料的高價值關聯式資料。
 
