@@ -240,9 +240,9 @@
             - name: 安裝 R 套件
               href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
             - name: 建立 miniCRAN 存放庫
-              href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
+              href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
             - name: 使用 R 套件的祕訣
-              href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
+              href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: 系統管理
       items:
         - name: 管理整合
