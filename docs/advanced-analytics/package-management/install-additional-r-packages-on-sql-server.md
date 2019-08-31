@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 579f4c4e236fcc9ee22067522c47a8286b869d51
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: 2c6fd8a9339756c6c22870e4eca6203064dc27f4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000781"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190362"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝新的 R 套件
 
@@ -64,13 +64,13 @@ ms.locfileid: "70000781"
 如果用戶端電腦沒有網際網路連線, 您必須使用可存取網際網路的電腦, 預先下載套件**sqlmlutils**和**RODBCext** 。 接著, 您可以將檔案複製到用戶端電腦上的資料夾, 並離線安裝套件。
 
 **RODBCext**套件有數個相依封裝, 識別套件的所有相依性會變得複雜。 建議您使用[**miniCRAN**](https://andrie.github.io/miniCRAN/)來建立包含所有相依封裝之封裝的本機存放庫資料夾。
-如需詳細資訊, 請參閱[使用 MiniCRAN 建立本機 R 封裝存放庫](../r/create-a-local-package-repository-using-minicran.md)。
+如需詳細資訊, 請參閱[使用 MiniCRAN 建立本機 R 封裝存放庫](create-a-local-package-repository-using-minicran.md)。
 
 **Sqlmlutils**套件是由單一 zip 檔案所組成, 您可以將它複製到用戶端電腦並安裝。
 
 在具有網際網路存取的電腦上:
 
-1. 安裝**miniCRAN**。 如需詳細資訊, 請參閱[安裝 miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) 。
+1. 安裝**miniCRAN**。 如需詳細資訊, 請參閱[安裝 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 。
 
 1. 在 RStudio 中, 執行下列 R 腳本以建立封裝**RODBCext**的本機存放庫。 這個範例會在資料夾`c:\downloads\rodbcext`中建立存放庫。
 
@@ -147,7 +147,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 ### <a name="add-the-package-offline"></a>離線新增封裝
 
 如果用戶端電腦沒有網際網路連線, 您可以使用**miniCRAN** , 以使用可存取網際網路的電腦來下載**粘連**套件。 然後將套件複製到用戶端電腦, 您可以在其中離線安裝套件。
-如需安裝**miniCRAN**的相關資訊, 請參閱[安裝 miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) 。
+如需安裝**miniCRAN**的相關資訊, 請參閱[安裝 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 。
 
 在具有網際網路存取的電腦上:
 
@@ -249,6 +249,6 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 ## <a name="next-steps"></a>後續步驟
 
 - 如需已安裝 R 套件的詳細資訊, 請參閱[取得 r 封裝資訊](r-package-information.md)
-- 如需使用 R 封裝的說明, 請參閱[使用 r 套件的秘訣](../r/packages-installed-in-user-libraries.md)
+- 如需使用 R 封裝的說明, 請參閱[使用 r 套件的秘訣](tips-for-using-r-packages.md)
 - 如需安裝 Python 套件的詳細資訊, 請參閱[使用 Pip 安裝 python 套件](install-additional-python-packages-on-sql-server.md)
 - 如需 SQL Server Machine Learning 服務的詳細資訊, 請參閱[什麼是 SQL Server Machine Learning 服務 (Python 和 R)？](../what-is-sql-server-machine-learning.md)

@@ -1,6 +1,6 @@
 ---
-title: 還原 master 資料庫-Analytics Platform System |Microsoft Docs
-description: 還原 master 資料庫中分析平台系統。
+title: 還原 master 資料庫-分析平臺系統 (AP) |Microsoft Docs
+description: 在 Analytics Platform System (AP) 中還原 master 資料庫。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,32 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7c9931ab6fb0946de83c3113a36de723a7a05cd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 624e1199fb953945ae6476a1f935dded48508bab
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960132"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176133"
 ---
-# <a name="restore-the-master-database-in-analytics-platform-system"></a>還原 master 資料庫中 Analytics Platform System
-**還原 Master**頁面的 SQL Server PDW 組態管理員可讓您從備份還原 master 資料庫。  
+# <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>在 Analytics Platform System (AP) 中還原 master 資料庫
+SQL Server PDW Configuration Manager 的 [**還原主版**] 頁面可讓您從備份還原 master 資料庫。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
 > [!IMPORTANT]  
-> 若要執行還原，SQL Server PDW 必須刪除目前的主要資料庫，其中包含使用者的安全性資訊和資料庫目錄。 建議您讓目前的主要資料庫的備份，然後執行還原。  
+> 若要執行還原, SQL Server PDW 必須刪除目前的 master 資料庫, 其中包含使用者安全性資訊和資料庫目錄。 建議您在執行還原之前, 先備份目前的 master 資料庫。  
   
 ## <a name="to-restore-the-master-database"></a>還原 master 資料庫  
   
-1.  啟動組態管理員。 如需詳細資訊，請參閱 <<c0> [ 啟動組態管理員 &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。</c0>  
+1.  啟動 Configuration Manager。 如需詳細資訊, 請參閱[啟動&#40;Configuration Manager 分析平臺&#41;系統](launch-the-configuration-manager.md)。  
   
-2.  在左窗格的 Configuration Manager 中，按一下**還原 Master**。  
+2.  在 Configuration Manager 的左窗格中, 按一下 [**還原主要**]。  
   
 3.  選取要還原的主要備份。  
   
 4.  按一下 **[套用]** 。  
   
-5.  若要執行還原，SQL Server PDW 將關閉所有設備的服務，並中斷與所有使用者。 在還原完成之後，SQL Server PDW 會重新啟動的設備服務。  
+5.  若要執行還原, SQL Server PDW 將會關閉所有設備服務, 並中斷所有使用者的連線。 還原完成之後, SQL Server PDW 會重新開機設備服務。  
   
-![DWConfig 應用裝置 PDW 還原 master](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
+![DWConfig 設備 PDW 還原主機](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

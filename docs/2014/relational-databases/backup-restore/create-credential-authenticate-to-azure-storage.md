@@ -12,12 +12,12 @@ ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 991a909ba1ab40ec3fc48f365b4799ec35c9d17b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6de7b5c8f9cdc7162eb9c6a8ddd214d0486255c6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154716"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175961"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>建立認證 - 向 Azure 儲存體驗證
   使用 [備份至 URL - 建立認證] 對話方塊建立新的 SQL 認證。  

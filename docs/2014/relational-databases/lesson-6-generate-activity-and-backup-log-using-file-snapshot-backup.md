@@ -10,12 +10,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85b3395420963e3052caa8eda7e760b9db60bd89
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154984"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175461"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>第 7 課：將資料檔案移至 Azure 儲存體
   在這一課, 您將學習如何將資料檔案移至 Azure 儲存體 (而不是您的 SQL Server 實例)。 進行這一課並不需要完成第 4、5 和 6 課。  

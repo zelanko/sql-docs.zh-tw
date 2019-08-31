@@ -10,12 +10,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 761b1cf51304bddae4bed9b7bbc835794ddca0c8
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: c1ecaf46ebf96ab5b8d06cb5eefb69ae50ff882e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154685"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175833"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
   本主題將介紹使用 Azure Blob 儲存體服務作為備份目的地所需的概念、需求和元件。 使用磁碟或磁帶時，備份和還原功能相同或類似，只有些許的差異。 這些差異在於許多顯而易見的例外狀況，本主題中將內含某些程式碼範例。  

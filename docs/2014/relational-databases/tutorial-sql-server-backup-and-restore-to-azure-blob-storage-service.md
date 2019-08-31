@@ -10,12 +10,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8a9cbb46b04491be3fe97cb707ad79c98990ff19
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155324"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176120"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>教學課程：SQL Server 備份及還原至 Azure Blob 儲存體服務
   歡迎使用 SQL Server 備份和還原與 Azure Blob 儲存體服務的消費者入門教學課程。 本教學課程可協助您了解如何將備份寫入 Azure Blob 儲存體服務以及從中還原。  
@@ -24,7 +24,7 @@ ms.locfileid: "70155324"
  本教學課程會為您示範如何建立 Windows 儲存體帳戶和 Blob 容器、建立認證以存取儲存體帳戶、將備份寫入 Blob 服務，以及執行簡單還原。 這個教學課程分成四個課程：  
   
  [第 1 課：建立 Azure 儲存體物件](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
- 在這一課, 您會建立 Azure 儲存體帳戶和 blob 容器。  
+ 在這一課，您會建立 Azure 儲存體帳戶和 Blob 容器。  
   
  [第 2 課：建立 SQL Server 認證](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  在這一課，您會建立認證以儲存用來存取 Azure 儲存體帳戶的安全性資訊。  
@@ -40,7 +40,7 @@ ms.locfileid: "70155324"
   
 -   已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的執行個體以及 AdventureWorks2012 資料庫。  
   
-     SQL Server 實例可以是內部部署或 Azure 虛擬機器。  
+     SQL Server 執行個體可以採用內部部署，也可以位於 Azure 虛擬機器中。  
   
      您可以使用使用者資料庫來取代 AdventureWorks2012，並且據以修改 tsql 語法。  
   

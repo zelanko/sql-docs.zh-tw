@@ -10,12 +10,12 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f5a35fe9e2df55dd6b1f76c52503c5d4cad50bf
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154067"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176071"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>SQL Server 受管理的備份至 Azure:互通性與共存性
   本主題說明[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]與 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中之數項功能的互通性與並存性。 這些功能包括：AlwaysOn 可用性群組、資料庫鏡像、備份維護計畫、記錄傳送、臨機操作備份、卸離資料庫, 以及卸載資料庫。  

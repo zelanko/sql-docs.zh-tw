@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Native Client 建置應用程式 |Microsoft Docs
+title: 使用 SQL Server Native Client 建立應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c6f7333b9a0fea3ef0408ed1eea4c8c84287222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213807"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175421"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 建立應用程式
   當您開發使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 程式庫的應用程式時，會遇到一些問題。 本章節的主題將討論其中的許多問題，包括從 MDAC 升級到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔和程式庫檔案)，以及可搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用的各種連接字串概觀。  
@@ -50,7 +50,7 @@ ms.locfileid: "63213807"
  [SQL Server Native Client 的支援原則](support-policies-for-sql-server-native-client.md)  
  討論要如何搭配不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用各種資料存取元件。  
   
- [使用 SQL Server Native Client 連線到 Azure SQL Database](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 連接到 Azure SQL Database](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  討論如何使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client 連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -24,12 +24,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7650f579a42453486a1d8483b9537496d454a036
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 42ede73866c45662cf653d538f59be48684c5a45
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155016"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176190"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   本主題概略說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器，這是 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝的主要元件。 其中包含一組處理引擎，加上一組可處理驗證、資料處理、轉譯和傳遞作業的特殊用途延伸模組。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器會在兩種部署模式的其中一個模式下執行，也就是原生模式或 SharePoint 模式。 請參閱 [SharePoint 和原生模式的功能比較](#bkmk_featuresupport) 一節中的功能比較。  
@@ -44,7 +44,7 @@ ms.locfileid: "70155016"
   
 -   [SQL Server Azure 虛擬機器中的商業智慧](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx)。  
   
--   [使用 PowerShell 建立具有原生模式報表伺服器的 AZURE VM](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx)。  
+-   [透過原生模式報表伺服器使用 PowerShell 建立 Azure VM](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx)。  
   
 ##  <a name="bkmk_top"></a> 本主題內容  
   

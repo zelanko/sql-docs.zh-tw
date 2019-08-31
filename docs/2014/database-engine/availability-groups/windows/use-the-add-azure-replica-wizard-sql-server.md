@@ -12,12 +12,12 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85f5dc758a6f9243fc553f597687552fdb22a481
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154397"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176001"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用加入 Azure 複本精靈 (SQL Server)
   使用 [加入 Azure 複本] 嚮導, 協助您在混合式 IT 中建立新的 Azure VM, 並將其設定為新的或現有 AlwaysOn 可用性群組的次要複本。  
@@ -41,7 +41,7 @@ ms.locfileid: "70154397"
   
 -   您的可用性群組必須包含內部部署可用性複本。  
   
--   如果可用性群組接聽程式的用戶端想要在可用性群組故障切換至 Azure 複本時維持與接聽程式的連線, 則該使用者必須能夠連接到網際網路。  
+-   如果可用性群組接聽程式的用戶端想要在可用性群組故障切換至 Azure 複本時維持與接聽程式的連線, 則其必須能夠連接到網際網路。  
   
 -   **使用完整初始資料同步處理的必要條件** ：您需要指定網路共用，才能讓精靈建立及存取備份。 對於主要複本，用於啟動 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帳戶必須具有網路共用的讀取與寫入檔案系統權限。 如果是次要複本，此帳戶必須有網路共用的讀取權限。  
   

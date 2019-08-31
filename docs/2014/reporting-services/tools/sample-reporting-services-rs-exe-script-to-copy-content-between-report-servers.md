@@ -10,12 +10,12 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c8434c0db2ca394ec3fbfbab3613b2ea69ac042d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2f8ccf455e9b20c4b8dffc4cc433ce68319a8251
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153807"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176155"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼
   本主題包括並描述範例 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS 指令碼，該指令碼會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. 不論是原生或 SharePoint 模式，RS.exe 都會和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]一起安裝。 這個指令碼會在伺服器之間複製 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 項目，例如報表和訂閱。 這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。  
@@ -299,7 +299,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
   
 -   從原生模式報表伺服器 **SourceServer**。  
   
--   在 Azure 虛擬機器上執行的**TargetServer**原生模式報表伺服器。 **TargetServer**不會聯結至**SourceServer**的網域, 而人員則是 Azure 虛擬機器**TargetServer**上的系統管理員。  
+-   至在 Azure 虛擬機器上執行的**TargetServer**原生模式報表伺服器。 **TargetServer**不會聯結至**SourceServer**的網域, 而人員則是 Azure 虛擬機器**TargetServer**上的系統管理員。  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
@@ -313,7 +313,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
 -   從包含 "sites/bi" 網站集合和共用文件庫的 SharePoint 模式報表伺服器 **SourceServer** 。  
   
--   在 Azure 虛擬機器上執行的**TargetServer**原生模式報表伺服器。 **TargetServer**不會聯結至**SourceServer**的網域, 而人員則是 Azure 虛擬機器**TargetServer**上的系統管理員。  
+-   至在 Azure 虛擬機器上執行的**TargetServer**原生模式報表伺服器。 **TargetServer**不會聯結至**SourceServer**的網域, 而人員則是 Azure 虛擬機器**TargetServer**上的系統管理員。  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  

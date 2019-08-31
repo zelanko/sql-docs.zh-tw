@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 806c8ad1023c10c0176d1608841138a7380a8def
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5ab74dc982416e3c18f2a0ad649e52de23770c5a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154458"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176042"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：新增複本精靈)
   此主題描述 **[指定複本]** 頁面的選項。 此頁面適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 和 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用 **[指定複本]** 頁面指定與設定要加入可用性群組的一個或多個可用性複本。 此頁面包含四個索引標籤，其說明如下表所示。 按一下表格中的索引標籤名稱即可前往對應的章節，如本主題稍後所示。  

@@ -10,12 +10,12 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f17384b979e960995a3522a81c4f0611287cb15
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153746"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175423"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>第 8 課： 將資料庫還原至 Azure 儲存體
   在這一課, 您將學習如何在本機建立備份檔案, 然後將它還原到 Azure 儲存體。 請注意, 您可以將資料庫置於內部部署或 Azure 虛擬機器中。 進行這一課並不需要完成第 4、5、6 和 7 課。  

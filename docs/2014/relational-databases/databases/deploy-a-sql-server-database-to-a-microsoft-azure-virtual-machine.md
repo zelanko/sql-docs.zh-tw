@@ -42,12 +42,12 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfea092757a708e0a83cefd581f8321f08d344e3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154566"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175735"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>將 SQL Server Database 部署到 Microsoft Azure 虛擬機器
   使用 [將**SQL Server 資料庫部署到 azure VM** ] wizard, 將實例[!INCLUDE[ssDE](../../includes/ssde-md.md)]中的資料庫部署到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] azure 虛擬機器 (VM) 中的。 此精靈會利用完整的資料庫備份作業，因此它一定會從 SQL Server 使用者資料庫複製完整的資料庫結構描述和資料。 此精靈也會為您執行所有的 Azure VM 組態設定，因此不需要進行 VM 的預先組態設定。  

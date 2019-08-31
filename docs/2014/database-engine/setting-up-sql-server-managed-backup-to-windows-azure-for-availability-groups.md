@@ -10,12 +10,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76b19ace362d147520b9f39cecae3ce1cc65d53b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: aa2cbce81827c9085f87112b366d532077915f58
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154100"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176094"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>針對可用性群組設定 SQL Server 受控備份至 Azure
   本主題是設定參與 AlwaysOn 可用性群組之資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]之教學課程。  
@@ -68,7 +68,7 @@ ms.locfileid: "70154100"
 #### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>啟用及設定可用性資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  此教學課程說明為電腦 Node1 和 Node2 上資料庫 (AGTestDB) 啟用及設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的步驟，後面接著啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]健康情況之監視功能的步驟。  
   
-1.  **建立 Azure 儲存體帳戶:** 這些備份會儲存在 Azure Blob 儲存體服務中。 如果您還沒有 Azure 儲存體帳戶, 您必須先建立它。 如需詳細資訊, 請參閱[建立 Azure 儲存體帳戶](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 記下儲存體帳戶的儲存體帳戶名稱、存取金鑰和 URL。 儲存體帳戶名稱和存取金鑰資訊可用來建立 SQL 認證。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會在備份作業期間使用 SQL 認證來驗證儲存體帳戶。  
+1.  **建立 Azure 儲存體帳戶：** 這些備份會儲存在 Azure Blob 儲存體服務中。 如果您還沒有 Azure 儲存體帳戶, 您必須先建立它。 如需詳細資訊, 請參閱[建立 Azure 儲存體帳戶](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 記下儲存體帳戶的儲存體帳戶名稱、存取金鑰和 URL。 儲存體帳戶名稱和存取金鑰資訊可用來建立 SQL 認證。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會在備份作業期間使用 SQL 認證來驗證儲存體帳戶。  
   
 2.  **建立 SQL 認證:** 使用儲存體帳戶的名稱做為身分識別, 並使用儲存體存取金鑰做為密碼, 以建立 SQL 認證。  
   

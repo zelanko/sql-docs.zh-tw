@@ -10,12 +10,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 55f0ab0cf2f1d4a29c0fca252c45f9e92740851c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 445a43d54dc4578f8e93a18d4a13d31912b8494c
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154543"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175701"
 ---
 # <a name="sql-server-data-files-in-azure"></a>在 Azure 中 SQL Server 資料檔案
   在 Azure 中 SQL Server 資料檔案可對儲存為 Azure Blob 的 SQL Server 資料庫檔案提供原生支援。 它可讓您在內部部署或 Azure 虛擬機器中執行的 SQL Server 中建立資料庫, 其具有 Azure Blob 儲存體中資料的專用儲存位置。 此增強功能特別簡化了使用卸離和附加作業，在電腦之間移動資料庫的工作。 此外, 它也可讓您從或 Azure 儲存體還原, 為您的資料庫備份檔案提供替代儲存位置。 因此，它會針對資料虛擬化、資料移動、安全性和可用性提供許多優點，進而實現許多混合式方案，而且成本低廉、維護簡單，即可達到高可用性和彈性調整的效果。  
@@ -93,7 +93,7 @@ ON
   
 -   **SQL Server 內部部署：** SQL Server 2014 版本包含這項功能。 若要了解如何下載 SQL Server 2014，請參閱＜ [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)＞。  
   
--   在 Azure 虛擬機器中執行 SQL Server:如果您要在 Azure 虛擬機器上安裝 SQL Server, 請安裝 SQL Server 2014, 或更新現有的實例。 同樣地, 您也可以使用 SQL Server 2014 平臺映射在 Azure 中建立新的虛擬機器。 若要了解如何下載 SQL Server 2014，請參閱＜ [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)＞。  
+-   在 Azure 虛擬機器中執行的 SQL Server：如果您要在 Azure 虛擬機器上安裝 SQL Server, 請安裝 SQL Server 2014, 或更新現有的實例。 同樣地, 您也可以使用 SQL Server 2014 平臺映射在 Azure 中建立新的虛擬機器。 若要了解如何下載 SQL Server 2014，請參閱＜ [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)＞。  
   
 ###  <a name="bkmk_Limitations"></a> 限制  
   

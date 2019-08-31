@@ -10,12 +10,12 @@ ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6c43678851427d6498e57e8a2297449825adfb4f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154356"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176103"
 ---
 # <a name="lesson-1-create-azure-storage-objects"></a>第 1 課：建立 Azure 儲存體物件
   您必須先建立儲存體帳戶，然後建立 Blob 容器，才能在雲端儲存體上建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份。 第1課會引導您完成登入 Azure 管理入口網站、建立儲存體帳戶和 blob 容器的步驟。  

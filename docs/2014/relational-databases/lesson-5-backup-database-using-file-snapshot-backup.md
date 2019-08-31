@@ -10,12 +10,12 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59c063b0aca4a373671efc28c9b0d45baced836a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 3c91512bcc254a1ff778606726d54a9cdff7f67f
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153734"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175569"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>第 6 課：將資料庫從內部部署的來源機器遷移至 Azure 中的目的地機器
   本課程假設您已有另一個 SQL Server, 其可能位於另一個內部部署電腦或 Azure 中的虛擬機器。 如需有關如何在 Azure 中建立 SQL Server 虛擬機器的詳細資訊, 請參閱[在 azure 上布建 SQL Server 虛擬機器](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)。 在 Azure 中布建 SQL Server 虛擬機器之後, 請確定您可以透過另一部電腦中的 SQL Server Management Studio, 連接到這部虛擬機器中 SQL Server 的實例。  

@@ -10,14 +10,14 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8df1db964dc62e416260589b45dec2d85254550a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: f154e32b5a7782a083db73de1deef327f44e3ee2
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152857"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175404"
 ---
-# <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>使用 SQL Server Native Client 連接至 Azure SQL 資料庫
+# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>使用 SQL Server Native Client 連接到 Azure SQL Database
   如需顯示如何使用[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 連接至的範例, 請參閱[開發:How to 主題 (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx)。  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>連接至 SQL 資料庫時的已知問題  
