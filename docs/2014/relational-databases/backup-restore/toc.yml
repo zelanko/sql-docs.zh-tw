@@ -1,10 +1,10 @@
 - name: SQL Server 資料庫的備份與還原
   href: back-up-and-restore-of-sql-server-databases.md
   items:
-    - name: SQL Server 備份及還原與 Windows Azure Blob 儲存體服務
+    - name: 使用 Azure Blob 儲存體服務的 SQL Server 備份及還原
       href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
-        - name: 使用 PowerShell 將多個資料庫備份至 Windows Azure Blob 儲存體服務
+        - name: 使用 PowerShell 將多個資料庫備份到 Azure Blob 儲存體服務
           href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
     - name: SQL Server 備份至 URL
       href: sql-server-backup-to-url.md
@@ -13,24 +13,24 @@
           href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
     - name: 刪除擁有使用中租用的備份 Blob 檔案
       href: deleting-backup-blob-files-with-active-leases.md
-- name: SQL Server Managed Backup 到 Windows Azure
+- name: SQL Server Managed Backup 到 Azure
   href: sql-server-managed-backup-to-microsoft-azure.md
   items:
-    - name: 設定 SQL Server Managed Backup 到 Windows Azure
+    - name: 設定 SQL Server Managed Backup 到 Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: SQL Server Managed Backup 到 Windows Azure：互通性與共存性
+    - name: SQL Server Managed Backup 到 Azure：互通性與共存性
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
-    - name: SQL Server Managed Backup to Windows Azure - 保留和儲存體設定
+    - name: SQL Server Managed Backup 到 Azure - 保留和儲存體設定
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
-    - name: 針對可用性群組設定 SQL Server Managed Backup 到 Windows Azure
+    - name: 針對可用性群組設定 SQL Server Managed Backup 到 Azure
       href: ../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md
-    - name: 監視 SQL Server Managed Backup 到 Windows Azure
+    - name: 監視 SQL Server Managed Backup 到 Azure
       href: ../../database-engine/monitor-sql-server-managed-backup-to-windows-azure.md
-    - name: 針對 SQL Server Managed Backup 到 Windows Azure 進行疑難排解
+    - name: SQL Server Managed Backup 到 Azure 的疑難排解
       href: ../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md
     - name: 設定受管理的備份 (SQL Server Management Studio)
       href: ../../database-engine/configure-managed-backup-sql-server-management-studio.md
-    - name: 從儲存在 Windows Azure 的備份還原
+    - name: 從儲存在 Azure 中的備份還原
       href: restoring-from-backups-stored-in-microsoft-azure.md
 - name: 復原模式
   href: recovery-models-sql-server.md
@@ -160,7 +160,7 @@
       href: dbengine-continue-with-restore.md
     - name: 選取備份裝置
       href: select-backup-device.md
-    - name: 連接到 Windows Azure 儲存體 (還原)
+    - name: 連線到 Azure 儲存體 (還原)
       href: connect-to-microsoft-azure-storage-restore.md
     - name: 將資料庫還原到新位置
       href: restore-a-database-to-a-new-location-sql-server.md

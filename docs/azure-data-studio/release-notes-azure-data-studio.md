@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 08/15/2019
-ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553112"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059261"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
@@ -33,7 +33,7 @@ ms.locfileid: "69553112"
 | Notebook 改進 | &bull; &nbsp; 以內嵌方式新增程式碼或文字資料格 <br/>&bull; &nbsp; 已新增以滑鼠右鍵按一下 SQL 結果方格以將結果儲存為 CSV、JSON 等的功能。 <br/> &bull; &nbsp; 已改善筆記本載入效能，加快載入 JSON 的速度 <br/> &bull; &nbsp; 在[此處](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) \(英文\) 檢視完整的改進清單 |
 | SQL Server 2019 支援 |  此版本包含對額外 SQL Server 2019 巨量資料叢集功能的支援，包括： <br/> &bull; &nbsp; 已縮短在物件對應頁面上載入資料表和資料行資訊所花費的時間。 <br/> &bull; &nbsp; 已修正在連線詳細資料頁面上載入現有資料庫範圍認證的錯誤 (Bug)。 <br/> &bull; &nbsp; 已增加用於 PROSE 剖析的預設樣本大小。 | 
 | Dacpac 延伸模組現在支援 AAD | 
-| Visual Studio Code 5 月版本合併 1.37 | 您可以在[此處](https://code.visualstudio.com/updates/v1_37) \(英文\) 找到最新的改進。 |
+| Visual Studio Code 7 月版本合併 1.37 | 您可以在[此處](https://code.visualstudio.com/updates/v1_37) \(英文\) 找到最新的改進。 |
 | 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
 
@@ -69,7 +69,7 @@ ms.locfileid: "69553112"
 | 結構描述比較改進 | &bull; &nbsp; 已新增排除/包含選項 <br/>&bull; &nbsp; [產生指令碼] 會在產生之後開啟指令碼 <br/>&bull; &nbsp; 已移除雙重捲軸  <br/>&bull; &nbsp; 格式設定和配置改進 <br/>&bull; &nbsp; 您可以在[此處](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed) \(英文\) 找到完整的變更|
 | 已將 [訊息] 區段移至自己的索引標籤 | 當使用者執行 SQL 查詢時，結果和訊息均位於堆疊的面板上。 現在，它們都位於一個面板的個別索引標籤中 (例如在 SSMS 中)。 |
 | SQL Notebook 改進 | &bull; &nbsp; 使用者現在可以選擇在筆記本中使用自己的 Python 3 或 Anaconda 安裝 <br/>&bull; &nbsp; 多重穩定性 + 調整/完成修正 <br/> &bull; &nbsp; 在[此處](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22) \(英文\) 檢視完整的改進清單|
-| Visual Studio Code 5 月版本合併 1.34 | 您可以在[此處](https://code.visualstudio.com/updates/v1_34) \(英文\) 找到最新的改進 |
+| Visual Studio Code 7 月版本合併 1.34 | 您可以在[此處](https://code.visualstudio.com/updates/v1_34) \(英文\) 找到最新的改進 |
 | 已解決的 Bug 和問題。 | 請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
 

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fc60a102a56aa5cb8c749db93290d20ec4b7f30e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126245"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030340"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 

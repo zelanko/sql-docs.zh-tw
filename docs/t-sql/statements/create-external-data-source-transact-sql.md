@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ec2100d50364ae0e85d2a28375bd454608af34a
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123163"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190413"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "70123163"
 
 ||||||
 |---|---|---|---|---|
-|**\*_ SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -95,7 +95,7 @@ WITH
 位置路徑：
 
 - `<`Namenode`>` = Hadoop 叢集中 `Namenode` 的電腦名稱、名稱服務 URI 或 IP 位置。 PolyBase 必須解析 Hadoop 叢集所使用的任何 DNS 名稱。 <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = 外部資料來源正在接聽的連接埠。 在 Hadoop 中，此連接埠可使用 `fs.default.name` 設定參數來尋找。 預設值為 8020。
+- `port` = 外部資料來源正在接聽的連接埠。 在 Hadoop 中，此連接埠可使用 `fs.defaultFS` 設定參數來尋找。 預設值為 8020。
 - `<container>` = 保留資料的儲存體帳戶容器。 根容器是唯讀的，因此無法將資料寫回至容器。
 - `<storage_account>` = Azure 資源的儲存體帳戶名稱。
 - `<server_name>` = 主機名稱。
@@ -312,7 +312,7 @@ WITH
 ## <a name="examples-bulk-operations"></a>範例:大量作業
 
 > [!NOTE]
-> 針對大量作業設定外部資料來源時，請不要將後置 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
+> 針對大量作業設定外部資料來源時，請不要將後置 **/** 、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
 
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
 
@@ -540,7 +540,7 @@ WITH
 ## <a name="examples-bulk-operations"></a>範例:大量作業
 
 > [!NOTE]
-> 針對大量作業設定外部資料來源時，請不要將後置 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
+> 針對大量作業設定外部資料來源時，請不要將後置 **/** 、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
 
@@ -899,7 +899,7 @@ WITH
 位置路徑：
 
 - `<`Namenode`>` = Hadoop 叢集中 `Namenode` 的電腦名稱、名稱服務 URI 或 IP 位置。 PolyBase 必須解析 Hadoop 叢集所使用的任何 DNS 名稱。 <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = 外部資料來源正在接聽的連接埠。 在 Hadoop 中，此連接埠可使用 `fs.default.name` 設定參數來尋找。 預設值為 8020。
+- `port` = 外部資料來源正在接聽的連接埠。 在 Hadoop 中，此連接埠可使用 `fs.defaultFS` 設定參數來尋找。 預設值為 8020。
 - `<container>` = 保留資料的儲存體帳戶容器。 根容器是唯讀的，因此無法將資料寫回至容器。
 - `<storage_account>` = Azure 資源的儲存體帳戶名稱。
 

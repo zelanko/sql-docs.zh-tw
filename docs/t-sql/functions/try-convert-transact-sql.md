@@ -17,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 73f0b159230f89503aac00b4cc0b4ec5d0da5e39
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
+ms.openlocfilehash: ace985045db2bf10b1ef0e80a2b05ea3e0cb85ca
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123171"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151958"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

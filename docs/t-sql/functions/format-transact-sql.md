@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 9b7ce2b7a9374579255974ae110f4d9167fc8fa8
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123207"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155801"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 

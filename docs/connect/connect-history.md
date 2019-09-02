@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 05936a9555cacfc88c9219e19bc57772109ed047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957516"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154178"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server 的驅動程式歷程記錄
 
@@ -57,7 +57,7 @@ ADO.NET 是由 Microsoft .NET Framework 引進, 並持續改進和維護。 這�
 
 ### <a name="microsoft-driver-for-nodejs-for-sql-server"></a>適用于 node.js 的 Microsoft 驅動程式 SQL Server
 
-適用于 node.js 的 Microsoft 驅動程式 SQL Server 可讓 Microsoft Windows 和 Microsoft Windows Azure 上的 node.js 應用程式存取 Microsoft SQL Server 和 Microsoft Windows Azure SQL Database。 開發工作不再著重于此驅動程式。 不建議使用適用于 node.js 的 Microsoft 驅動程式來建立新的應用程式, 以進行 SQL Server。
+適用于 node.js 的 Microsoft 驅動程式 SQL Server 可讓 Microsoft Windows 和 Microsoft Azure 上的 node.js 應用程式存取 Microsoft SQL Server 和 Microsoft Azure SQL Database。 開發工作不再著重于此驅動程式。 不建議使用適用于 node.js 的 Microsoft 驅動程式來建立新的應用程式, 以進行 SQL Server。
 
 如需適用于 SQL Server 的 Microsoft Driver for node.js 的詳細資訊, 請參閱[windowsazure.storage/Node-sqlserver](https://github.com/Azure/node-sqlserver)。
 

@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2997665339c2326b1fd99f8d2e09ba48089b9f2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136645"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110275"
 ---
 # <a name="specify-parameters"></a>指定參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,6 +83,9 @@ GO
   
 > [!NOTE]  
 >  如果預設值是包含內嵌空白或標點的字串，或是以數字開頭 (例如 6xxx)，就必須將它括在單引號中。  
+
+> [!NOTE] 
+> 在 Azure SQL 資料倉儲或 Parallel Data Warehouse 中不支援預設參數。 
   
  如果無法指定適當的數值做為參數的預設值，您可以指定 NULL 做為預設值。 在沒有參數值的狀況下執行程序時，最好讓程序傳回自訂的訊息  
   

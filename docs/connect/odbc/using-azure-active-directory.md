@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9e60c376e0bced63241674b82d05700281a06ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008493"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176165"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68008493"
 
 |[屬性]|值|預設|Description|
 |-|-|-|-|
-|`Authentication`|(未設定)、(空字串)、 `SqlPassword` `ActiveDirectoryIntegrated`、 `ActiveDirectoryPassword` `ActiveDirectoryInteractive`、、、`ActiveDirectoryMsi` |(未設定)|控制驗證模式。<table><tr><th>ReplTest1<th>Description<tr><td>(未設定)<td>由其他關鍵字 (現有的舊版連接選項) 決定的驗證模式。<tr><td>(空字串)<td>連接字串是: "{0}"覆寫並`Authentication`取消設定在 DSN 中設定的值。<tr><td>`SqlPassword`<td>使用使用者名稱和密碼直接向 SQL Server 實例進行驗證。<tr><td>`ActiveDirectoryPassword`<td>使用使用者名稱和密碼, 以 Azure Active Directory 身分識別進行驗證。<tr><td>`ActiveDirectoryIntegrated`<td>_僅限 Windows 驅動程式_。 使用整合式驗證, 透過 Azure Active Directory 身分識別進行驗證。<tr><td>`ActiveDirectoryInteractive`<td>_僅限 Windows 驅動程式_。 使用互動式驗證以 Azure Active Directory 身分識別進行驗證。<tr><td>`ActiveDirectoryMsi`<td>使用受控服務識別驗證, 以 Azure Active Directory 身分識別進行驗證。 針對使用者指派的身分識別，UID 會設為使用者身分識別的物件識別碼。</table>|
+|`Authentication`|(未設定)、(空字串)、 `SqlPassword` `ActiveDirectoryIntegrated`、 `ActiveDirectoryPassword` `ActiveDirectoryInteractive`、、、`ActiveDirectoryMsi` |(未設定)|控制驗證模式。<table><tr><th>ReplTest1<th>Description<tr><td>(未設定)<td>由其他關鍵字 (現有的舊版連接選項) 決定的驗證模式。<tr><td>(空字串)<td>連接字串說明覆寫並`Authentication`取消設定在 DSN 中設定的值。<tr><td>`SqlPassword`<td>使用使用者名稱和密碼直接向 SQL Server 實例進行驗證。<tr><td>`ActiveDirectoryPassword`<td>使用使用者名稱和密碼, 以 Azure Active Directory 身分識別進行驗證。<tr><td>`ActiveDirectoryIntegrated`<td>_僅限 Windows 驅動程式_。 使用整合式驗證, 透過 Azure Active Directory 身分識別進行驗證。<tr><td>`ActiveDirectoryInteractive`<td>_僅限 Windows 驅動程式_。 使用互動式驗證以 Azure Active Directory 身分識別進行驗證。<tr><td>`ActiveDirectoryMsi`<td>使用受控服務識別驗證, 以 Azure Active Directory 身分識別進行驗證。 針對使用者指派的身分識別，UID 會設為使用者身分識別的物件識別碼。</table>|
 |`Encrypt`|(未設定)、`Yes`、`No`|(請參閱描述)|控制連接的加密。 如果在 DSN 或連接字串中, `Authentication`設定的前置屬性值不是_none_ , 則預設為`Yes`。 否則預設為 `No`。 如果屬性`SQL_COPT_SS_AUTHENTICATION`會覆寫的前置屬性`Authentication`值, 請在 DSN 或連接字串或連接屬性中明確設定 Encryption 的值。 如果在 DSN 或連接字串中將`Yes`值設為`Yes` , 則 Encryption 的前置屬性值為。|
 
 ## <a name="new-andor-modified-connection-attributes"></a>新增和/或修改的連接屬性
@@ -99,7 +99,7 @@ ms.locfileid: "68008493"
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. (_僅限 Windows 驅動程式_)。使用 ADAL 的整合式 Windows 驗證, 其牽涉到兌換 AAD 發行之存取權杖的 Windows 帳號憑證, 假設目標資料庫在 Azure SQL Database 中。 無論加密設定為何, 伺服器憑證都會經過驗證 (除非`TrustServerCertificate`設定為`true`)。 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-7. (_僅限 Windows 驅動程式_)。AAD 互動式驗證會使用 Azure 多重要素驗證技術來設定連線。 在此模式中, 藉由提供登入識別碼, 會觸發 Windows Azure 驗證對話方塊, 並允許使用者輸入密碼以完成連接。 使用者名稱會在連接字串中傳遞。
+7. (_僅限 Windows 驅動程式_)。AAD 互動式驗證會使用 Azure 多重要素驗證技術來設定連線。 在此模式中, 藉由提供登入識別碼, 就會觸發 Azure 驗證對話方塊, 並允許使用者輸入密碼以完成連接。 使用者名稱會在連接字串中傳遞。
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
@@ -129,7 +129,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-是由4個位元組_長度_組成的可變長度結構, 後面接著構成存取權杖的不透明資料_長度_位元組。  `ACCESSTOKEN` 由於 SQL Server 如何處理存取權杖, 因此必須展開透過[OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 回應取得的權杖, 讓每個位元組後面接著0個填補位元組, 類似于僅包含 ASCII 字元的 UCS-2 字串。不過, 此標記是不透明的值, 而指定的長度 (以位元組為單位) 不得包含任何 null 結束字元。 由於這種驗證方法的長度和格式條件約束, 因此只能透過`SQL_COPT_SS_ACCESS_TOKEN`連接屬性以程式設計方式使用, 而且沒有對應的 DSN 或連接字串關鍵字。 連接字串不能`UID`包含、 `PWD`、 `Authentication`或`Trusted_Connection`關鍵字。
+是由4個位元組_長度_組成的可變長度結構, 後面接著構成存取權杖的不透明資料長度位元組。  `ACCESSTOKEN` 由於 SQL Server 如何處理存取權杖, 因此必須展開透過[OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 回應取得的權杖, 讓每個位元組後面接著0個填補位元組, 類似于僅包含 ASCII 字元的 UCS-2 字串。不過, 此標記是不透明的值, 而指定的長度 (以位元組為單位) 不得包含任何 null 結束字元。 由於這種驗證方法的長度和格式條件約束, 因此只能透過`SQL_COPT_SS_ACCESS_TOKEN`連接屬性以程式設計方式使用, 而且沒有對應的 DSN 或連接字串關鍵字。 連接字串不能`UID`包含、 `PWD`、 `Authentication`或`Trusted_Connection`關鍵字。
 
 > [!NOTE]
 > ODBC 驅動程式13.1 版僅支援在_Windows_上進行這種驗證。
@@ -163,7 +163,7 @@ typedef struct AccessToken
     ...
     free(pAccToken);
 ~~~
-以下是與 Azure Active Directory 互動式驗證搭配使用的範例連接字串。 請注意, 它不包含 [PWD] 欄位, 因為密碼會使用 Windows Azure 驗證畫面輸入。
+以下是與 Azure Active Directory 互動式驗證搭配使用的範例連接字串。 請注意, 它不包含 [PWD] 欄位, 因為密碼會使用 Azure 驗證畫面輸入。
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~

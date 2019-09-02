@@ -23,12 +23,13 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 843b624e155df6aba6a0f2ccbd194f7b2f99bc09
-ms.sourcegitcommit: f517f1e2e7cac983fdb41229e60ca7ad019ecd48
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70064028"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70161342"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -82,13 +83,13 @@ ms.locfileid: "70064028"
   
  如需如何還原到先前內容的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)。  
   
- COOKIE INTO **@***varbinary_variable*  
- 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 **@***varbinary_variable* 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 **@***varbinary_variable*。 **COOKIE INTO** 選項只能在特定層級使用。  
+ COOKIE INTO * *@***varbinary_variable*  
+ 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 * *@***varbinary_variable* 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 * *@***varbinary_variable*。 **COOKIE INTO** 選項只能在特定層級使用。  
   
- **@** *varbinary_variable* 是 **varbinary(8000)**。  
+ **@** *varbinary_variable* 是 **varbinary(8000)** 。  
   
 > [!NOTE]  
->  Cookie **OUTPUT** 參數目前記載為 **varbinary(8000)**，這是正確的長度上限。 但目前的實作會傳回 **varbinary(100)**。 應用程式應保留 **varbinary(8000)**，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。  
+>  Cookie **OUTPUT** 參數目前記載為 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(100)** 。 應用程式應保留 **varbinary(8000)** ，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。  
   
  CALLER  
  用於模組內部時，指定模組內部的陳述式是在模組呼叫者的內容中執行。

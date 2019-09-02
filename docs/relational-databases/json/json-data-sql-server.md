@@ -13,12 +13,12 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42f33a886122f0443497934ec39d413e63b71555
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f97c2e52c92a4ad6313ca6b18ed17fa89d831e93
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083103"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190394"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -292,10 +292,10 @@ SET @jsonVariable = N'[
           }  
        }  
   ]'
-  
-INSERT INTO SalesReport  
+
+--INSERT INTO <sampleTable>  
 SELECT SalesOrderJsonData.*  
-FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')  
+FROM OPENJSON (@jsonVariable, N'$')  
            WITH (  
               Number   varchar(200) N'$.Order.Number',   
               Date     datetime     N'$.Order.Date',  

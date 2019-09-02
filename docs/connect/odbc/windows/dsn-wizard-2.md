@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-ms.openlocfilehash: c997dd30b6d1e9844843ff4fa626c46b42fed463
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ab8be02351a23c78251a99ca707e946ee8944c8
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936577"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152571"
 ---
 # <a name="data-source-wizard-screen-2"></a>資料來源精靈螢幕 2
 
@@ -43,7 +43,7 @@ ms.locfileid: "67936577"
 
 ### <a name="with-active-directory-interactive-authentication"></a>使用 Active Directory 互動式驗證
 
-指定驅動程式會藉由提供登入識別碼, 使用 Azure Active Directory 互動模式來驗證 SQL Server。 這會觸發 [Windows Azure 驗證提示] 對話方塊。
+指定驅動程式會藉由提供登入識別碼, 使用 Azure Active Directory 互動模式來驗證 SQL Server。 這會觸發 [Azure 驗證提示] 對話方塊。
 
 ### <a name="login-id"></a>登入識別碼
 

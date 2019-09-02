@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130134"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190372"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -503,7 +503,7 @@ FOR DROP_SYNONYM
 AS   
 IF (@@ROWCOUNT = 0)
 RETURN;
-   RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
+   RAISERROR ('You must disable Trigger "safety" to remove synonyms!', 10, 1)  
    ROLLBACK  
 GO  
 DROP TRIGGER safety  

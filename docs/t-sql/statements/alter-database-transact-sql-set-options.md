@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495454"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110277"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -379,14 +379,14 @@ OFF
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
 ON         
-指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新為非同步。 查詢最佳化工具在編譯查詢之前，不會等候統計資料更新完成。
+指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是非同步的。 查詢最佳化工具在編譯查詢之前，不會等候統計資料更新完成。
 
 除非 AUTO_UPDATE_STATISTICS 設為 ON，否則將這個選項設為 ON 沒有作用。
 
 預設會將 AUTO_UPDATE_STATISTICS_ASYNC 選項設為 OFF，而且查詢最佳化工具會同步更新統計資料。
 
 OFF         
-指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新為同步。 查詢最佳化工具在編譯查詢之前，會先等候統計資料更新完成。
+指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 查詢最佳化工具在編譯查詢之前，會先等候統計資料更新完成。
 
 除非 AUTO_UPDATE_STATISTICS 設為 ON，否則將這個選項設為 OFF 沒有作用。
 
@@ -853,7 +853,7 @@ TORN_PAGE_DETECTION
 值不符合表示該頁面只有一部分寫入磁碟中。 在此狀況下，系統會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔和 Windows 事件記錄檔中回報錯誤訊息 824 (表示發生損毀頁的錯誤)。 如果真的是頁面寫入不完整，通常會由資料庫復原作業來偵測出損毀頁。 不過，其他 I/O 路徑失敗也可能隨時造成損毀頁。
 
 無         
-資料庫頁面寫入不會產生 CHECKSUM 或 TORN_PAGE_DETECTION 值。 即使頁首包含 CHECKSUM 或 TORN_PAGE_DETECTION 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也不會在讀取期間驗證總和檢查碼或損毀頁。
+資料庫頁面寫入不會產生 CHECKSUM 或 TORN_PAGE_DETECTION 值。 在讀取期間，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使頁首包含 CHECKSUM 或 TORN_PAGE_DETECTION 值，亦不會驗證總和檢查碼或損毀頁。
 
 當您使用 PAGE_VERIFY 選項時，請考慮下列要點：
 
@@ -1751,7 +1751,7 @@ RESTRICTED_USER
 RESTRICTED_USER 只允許 db_owner 固定資料庫角色以及資料庫建立者 (dbcreator) 和系統管理員 (sysadmin) 固定伺服器角色的成員連線到資料庫，但並不限制他們的數目。 在 ALTER DATABASE 陳述式的 termination 子句所指定的時間範圍中，會中斷資料庫的所有連接。 在資料庫進入 RESTRICTED_USER 狀態之後，不合格使用者的連接嘗試都會遭到拒絕。 **RESTRICTED_USER** 無法使用 SQL Database 受控執行個體來修改。
 
 MULTI_USER         
-允許所有具備適當權限來連線至資料庫的使用者。
+允許所有具備適當權限來連接資料庫的使用者。
 
 您可以檢查 sys.databases 目錄檢視中的 user_access 資料行或 DATABASEPROPERTYEX 函式的 UserAccess 屬性來判斷這個選項的狀態。
 
@@ -1784,7 +1784,7 @@ FORCED
 **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]         
-控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。
+控制是否在此資料庫中啟用查詢存放區，並且控制查詢存放區內容的移除。
 
 ON         
 啟用查詢存放區。
@@ -2484,7 +2484,7 @@ RESTRICTED_USER
 RESTRICTED_USER 只允許 db_owner 固定資料庫角色以及資料庫建立者 (dbcreator) 和系統管理員 (sysadmin) 固定伺服器角色的成員連線到資料庫，但並不限制他們的數目。 在 ALTER DATABASE 陳述式的 termination 子句所指定的時間範圍中，會中斷資料庫的所有連接。 在資料庫進入 RESTRICTED_USER 狀態之後，不合格使用者的連接嘗試都會遭到拒絕。 **RESTRICTED_USER** 無法使用 SQL Database 受控執行個體來修改。
 
 MULTI_USER         
-允許所有具備適當權限來連線至資料庫的使用者。
+允許所有具備適當權限來連接資料庫的使用者。
 
 您可以檢查 sys.databases 目錄檢視中的 user_access 資料行或 DATABASEPROPERTYEX 函式的 UserAccess 屬性來判斷這個選項的狀態。
 
@@ -2517,7 +2517,7 @@ FORCED
 **\<query_store_options> ::=**         
 
 ON | OFF | CLEAR [ ALL ]         
-控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。
+控制是否在此資料庫中啟用查詢存放區，並且控制查詢存放區內容的移除。
 
 ON         
 啟用查詢存放區。
@@ -2912,6 +2912,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2919,6 +2920,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2929,7 +2936,7 @@ RESULT_SET_CACHING {ON | OFF}
 這是要修改之資料庫的名稱。
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-適用於 Azure SQL 資料倉儲 (預覽)
+**適用於** Azure SQL 資料倉儲 (預覽)
 
 此命令必須在連線到 `master` 資料庫時執行。  對此資料庫設定的變更會立即生效。  儲存體費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 `sys.databases` 中引進了新資料行 is_result_set_caching_on，用來顯示資料庫的結果快取設定。  
 
@@ -2947,6 +2954,21 @@ OFF
 command|相似|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**適用於** Azure SQL 資料倉儲 (預覽)
+
+ON 會啟用資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
+
+OFF 會關閉資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
+
+開啟或關閉資料庫的 READ_COMMITTED_SNAPSHOT，將會終止此資料庫的所有開放連線。  建議您在資料庫維護期間或等到資料庫沒有使用中的連線再進行此變更，除了執行 ALTER DATABSE 命令的連線以外。  資料庫不一定要處於單一使用者模式。  不支援變更工作階段層級的 READ_COMMITTED_SNAPSHOT 設定。  若要確認資料庫的這項設定，請檢查 sys.databases 中的 is_read_committed_snapshot_on 資料行。
+
+在已啟用 READ_COMMITTED_SNAPSHOT 的資料庫中，如果有多個資料版本存在，查詢可能會遭遇較低的效能。 如果這些交易的資料變更會封鎖版本清除，則長時間開啟的交易也會導致資料庫大小增加。  
+
+
+
+
 ## <a name="remarks"></a>Remarks
 
 如果符合下列所有需求，則會對查詢重複使用快取結果集：
@@ -2959,12 +2981,9 @@ command|相似|%DWResultCacheDb%|
 
 ## <a name="permissions"></a>權限
 
-需要下列權限：
+若要設定 RESULT_SET_CACHING 選項，使用者需要伺服器層級主體登入 (由佈建程序所建立) 或為 `dbmanager` 資料庫角色的成員。  
 
-- 由佈建程序建立的伺服器層級主體登入，或
-- `dbmanager` 資料庫角色的成員。
-
-除非資料庫擁有者是 dbmanager 角色的成員，否則無法改變資料庫。
+若要設定 READ_COMMITTED_SNAPSHOT 選項，使用者需要資料庫的 ALTER 權限。
 
 ## <a name="examples"></a>範例
 
@@ -3027,6 +3046,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### <a name="enable-read_committed_snapshot-option-for-a-database"></a>啟用資料庫的 Read_Committed_Snapshot 選項
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## <a name="see-also"></a>另請參閱

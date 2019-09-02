@@ -18,19 +18,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68231723"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123120"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查詢調整小幫手來升級資料庫
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本，並升級到最新的[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)時，工作負載可能會有效能衰退的風險。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和任何較新版本之間升級時，這種情況的程度也可能較小。
 
-從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始 (以及所有新的版本)，所有的查詢最佳化工具變更都會調控至最新的資料庫相容性層級；因此，執行計劃不會在升級時立即變更，而是在使用者將 `COMPATIBILITY_LEVEL` 資料庫選項變更為最新可用版本時變更。 如需 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中引入的查詢最佳化工具變更的相關詳細資訊，請參閱[基數估計工具](../../relational-databases/performance/cardinality-estimation-sql-server.md)。 如需相容性層級及其它們如何影響升級的相關詳細資訊，請參閱[相容性層級與 SQL Server 升級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)。
+從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始 (以及所有新的版本)，所有的查詢最佳化工具變更都會調控至最新的資料庫相容性層級；因此，執行計劃不會在升級時立即變更，而是在使用者將 `COMPATIBILITY_LEVEL` 資料庫選項變更為最新可用版本時變更。 如需 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中引入的查詢最佳化工具變更的相關詳細資訊，請參閱[基數估計工具](../../relational-databases/performance/cardinality-estimation-sql-server.md)。 如需相容性層級及其如何影響升級的相關詳細資訊，請參閱[相容性層級與資料庫引擎升級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)。
 
 如果升級遵循如下所示的建議工作流程，則資料庫相容性層級提供的此調控功能與查詢存放區結合，可讓您在升級過程中充分掌控查詢效能。 如需升級相容性層級之建議工作流程的詳細資訊，請參閱[變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 
 
@@ -210,7 +210,7 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
 需要 **db_owner** 角色的成員資格。
   
 ## <a name="see-also"></a>另請參閱  
- [相容性層級和 SQL Server 升級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [相容性層級和資料庫引擎升級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [效能監視及微調工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

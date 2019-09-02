@@ -23,12 +23,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086764"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148830"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "68086764"
 |使用方式|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |預設的字串常值格式 (用於下層用戶端)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |日期範圍|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
-|時間範圍|00:00:00 到 23:59:59.9999999 (Informatica 中不支援毫秒)|  
-|時區位移範圍|-14:00 到 +14:00 (Informatica 中會忽略時區位移)|  
-|元素範圍|YYYY 是代表年份的四位數，範圍介於 0001 至 9999 之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數，範圍介於 01 至 31 之間 (視月份而定)。<br /><br /> hh 是代表小時的兩位數，範圍介於 00 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數，範圍介於 00 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數，範圍介於 00 至 59 之間。<br /><br /> n* 是代表小數秒數的零至七位數，範圍介於 0 至 9999999 之間。 Informatica 中不支援毫秒。<br /><br /> hh 是兩位數，範圍介於 -14 至 +14 之間。 Informatica 中會忽略時區位移。<br /><br /> mm 是兩位數，範圍介於 00 至 59 之間。 Informatica 中會忽略時區位移。|  
+|時間範圍|00:00:00 到 23:59:59.9999999|  
+|時區位移範圍|-14:00 到 +14:00|  
+|元素範圍|YYYY 是代表年份的四位數，範圍介於 0001 至 9999 之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數，範圍介於 01 至 31 之間 (視月份而定)。<br /><br /> hh 是代表小時的兩位數，範圍介於 00 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數，範圍介於 00 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數，範圍介於 00 至 59 之間。<br /><br /> n* 是代表小數秒數的零至七位數，範圍介於 0 至 9999999 之間。<br /><br /> hh 是兩位數，範圍介於 -14 至 +14 之間。 <br /><br /> mm 是兩位數，範圍介於 00 至 59 之間。|  
 |字元長度|最小 26 個位置 (YYYY-MM-DD hh:mm:ss {+&#124;-}hh:mm)，最大 34 個位置 (YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)|  
 |有效位數，小數位數|請參閱下表。|  
 |儲存體大小|10 個位元組 (固定) 是預設值，而且具有 100ns 小數秒數有效位數的預設值。|  

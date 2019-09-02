@@ -18,18 +18,18 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77b8244efda0a1f06e16821d817339feebc9384f
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 9707f0b23d9461418536c2b9f9015623124d5436
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561145"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059844"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-從字串的開頭或結尾移除空白字元 `char(32)` 或其他指定的字元。  
+從字串的開頭和結尾移除空白字元 `char(32)` 或其他指定字元。  
 
 ## <a name="syntax"></a>語法
 

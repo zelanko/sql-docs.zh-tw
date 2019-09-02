@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20c6b4a4235e384f9a5c32ee6cef28d0f136f106
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5a2475de5c318a937c1290d9f235f074909a7954
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768687"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030323"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>設定 Always On 可用性群組中的複寫散發資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,13 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
 
 ## <a name="limitations-or-exclusions"></a>限制或排除
 
-- 不支援本機散發者。 例如，發行者和散發者必須是不同的 SQL Server 執行個體。 使用自己作為散發者的發行者 (也稱為 本機散發者) 無法支援 AG 中的散發資料庫。
+- 不支援本機散發者。 例如，發行者和散發者必須是不同的 SQL Server 執行個體。 這些執行個體可以裝載在相同的節點集上。  使用自己作為散發者的發行者 (也稱為 本機散發者) 無法支援 AG 中的散發資料庫。
 - 不支援 Oracle 發行者。
 - 合併式複寫不受到支援。
 - 不支援與立即或已排入佇列更新訂閱者的異動複寫。
 - 不支援點對點複寫。
-- 所有裝載散發資料庫複本的 SQL Server 執行個體都必須是 SQL Server 2017 CU 6 或更新版本。 
+- 所有裝載散發資料庫複本的 SQL Server 2017 執行個體都必須是 SQL Server 2017 CU 6 或更新版本。 
+- 所有裝載散發資料庫複本的 SQL Server 2016 執行個體都必須是 SQL Server 2016 SP2-CU3 或更新版本。
 - 所有裝載散發資料庫複本的 SQL Server 執行個體都必須是相同的版本，但進行升級時的短時間範圍期間除外。
 - 散發資料庫必須處於完整復原模式。
 - 若要復原，以及允許交易記錄截斷，請設定完整和交易記錄備份。

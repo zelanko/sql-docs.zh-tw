@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e21761c221ec83770be7c9aa19f8a4ec971617e2
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910459"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030319"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入門：在 Ubuntu 上安裝 SQL Server 並建立資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -48,6 +48,9 @@ ms.locfileid: "67910459"
 
 如需其他系統需求，請參閱 [SQL Server 在 Linux 上的系統需求](sql-server-linux-setup.md#system)。
 
+> [!NOTE]
+> 尚未正式支援 Ubuntu 18.04，但藉由[修改](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/)則可能可以執行 SQL Server。
+
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
@@ -68,7 +71,7 @@ ms.locfileid: "67910459"
    ```
 
    > [!TIP]
-   > 如果您想要試用 SQL Server 2019，您必須改為註冊 **Preview (2019)** 存放庫。 請針對 SQL Server 2019 安裝使用下列命令：
+   > 如果您想要試用 SQL Server 2019，您必須改為註冊 **Preview (2019)** 存放庫。 請使用下列命令安裝 SQL Server 2019：
    >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 相容性層級 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2019
+ms.date: 08/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 047dc16f8eeebe2547aef453a9a86e08be714ff6
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471165"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122978"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
@@ -54,6 +54,8 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
 資料庫所要相容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可以設定下列相容性層級值 (並非所有版本都支援上述所列的所有相容性層級)：
 
+<a name="supported-dbcompats"></a>
+
 |產品|資料庫引擎版本|預設相容性層級指定|支援的相容性層級值|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
@@ -69,8 +71,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |SQL Server 2000|8|80|80|
 
 ## <a name="remarks"></a>Remarks
-
-針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級設定為 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 資料庫會設定為這個層級，除非 **model** 資料庫具有更低的相容性層級。 當資料庫從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級時，資料庫會保留其現有的相容性層級 (如果它至少為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之執行個體所允許的最低層級)。 升級相容性層級低於所允許層級的資料庫時，自動將資料庫設定為允許的最低相容性層級。 這同樣適用於系統和使用者資料庫。
+針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級設定為 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 新資料庫會設定為這個層級，除非 **model** 資料庫具有更低的相容性層級。 針對從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接或還原的資料庫，資料庫會保留其現有的相容性層級 (如果其至少為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體所允許最低層級)。 移動相容性層級低於 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 所允許層級的資料庫時，會自動將資料庫設定為允許的最低相容性層級。 這同樣適用於系統和使用者資料庫。
 
 附加或還原資料庫以及就地升級之後，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 預期會有下列行為：
 
@@ -85,10 +86,13 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 > [!NOTE]
 > 舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所建立並升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 或 Service Pack 1 的[散發資料庫](../../relational-databases/replication/distribution-database.md)具有相容性層級 90，其他資料庫則不予支援。 這不會影響複寫功能。 升級至更新版本的 Service Pack 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本會增加散發資料庫的相容性層級，以符合 **master** 資料庫的相容性層級。
 
-從 **2018 年 1 月**開始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新建資料庫的預設相容性層級是 140。 我們不會更新現有資料庫的資料庫相容性層級。 這是由客戶自己決定。 Microsoft 強烈建議客戶規劃升級至最新的相容性層級，以利用最新的查詢最佳化改善項目。
+> [!NOTE]
+> 從 **2018 年 1 月**開始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新建資料庫的預設相容性層級是 140。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不會更新現有資料庫的資料庫相容性層級。 這是由客戶自己決定。        
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 強烈建議客戶規劃升級至最新的相容性層級，以利用最新的查詢最佳化改善項目。        
+
 若要針對整個資料庫利用相容性層級 140，但同時又要加入對應至資料庫相容性層級 110 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的[**基數估計**](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特別是其關鍵字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 
-如需有關如何評估您 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]最重要查詢的效能差異，請參閱[在 Azure SQL Database 中使用相容性層級 130 改善查詢效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)。 請注意，本文是指相容性層級 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但相同的方法也適用於移動至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的 140。
+如需如何在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上兩個不同相容性層級之間評估您最重要查詢的效能差異詳細資料，請參閱 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/) (在 Azure SQL Database 中使用相容性層級 130 改善的查詢效能)。 請注意，本文是指相容性層級 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用相同的方法升級至 140。
 
 請執行以下查詢來判斷您所連線至的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本。
 
@@ -105,57 +109,34 @@ SELECT SERVERPROPERTY('ProductVersion');
 SELECT name, compatibility_level FROM sys.databases;
 ```
 
-## <a name="compatibility-levels-and-sql-server-upgrades"></a>相容性層級和 SQL Server 升級
+## <a name="compatibility-levels-and-database-engine-upgrades"></a>相容性層級和資料庫引擎升級
+資料庫相容性層級是協助資料庫現代化的重要工具，它允許升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，同時透過維護升級前的相同資料庫相容性層級，來讓連線的應用程式保持在運作狀態。 這表示可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的舊版 (例如 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (包括受控執行個體)，而不需要變更任何應用程式 (資料庫連線除外)。 如需詳細資訊，請參閱[相容性憑證](../../database-engine/install-windows/compatibility-certification.md)。
 
-資料庫相容性層級是協助資料庫現代化的重要工具，它允許升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，同時透過維護升級前的相同資料庫相容性層級，來讓連線的應用程式保持在運作狀態。
-只要應用程式不需要使用僅限較高資料庫相容性層級的增強功能，即為升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 並維護先前資料庫相容性層級的有效方法。 如需使用相容性層級來提供回溯相容性的詳細資訊，請參閱本文稍後的[使用相容性層級來提供回溯相容性](#using-compatibility-level-for-backward-compatibility)。
+只要應用程式不需要使用僅限較高資料庫相容性層級的增強功能，即為升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 並維護先前資料庫相容性層級的有效方法。 如需使用相容性層級來提供回溯相容性的詳細資訊，請參閱[相容性憑證](../../database-engine/install-windows/compatibility-certification.md)。
 
-若要進行新的開發工作，或是現有的應用程式需要使用新功能，以及在查詢最佳化工具空間中完成的效能提升，請規劃將資料庫相容性層級升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新層級，並確認您的應用程式適用於該相容性層級。 如需升級資料庫相容性層級的詳細資料，請參閱本文稍後的[升級資料庫相容性層級的最佳做法](#best-practices-for-upgrading-database-compatibility-level)。
+## <a name="best-practices-for-upgrading-database-compatibility-level"></a>升級資料庫相容性層級的最佳做法
+如需升級相容性層級的建議工作流程，請參閱[變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 此外，如需升級資料庫相容性層級的協助體驗，請參閱[使用 Query Tuning Assistant 升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。
 
-> [!TIP]
-> 如果應用程式已在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上經過測試和認證，則已隱含在該 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的原生資料庫相容性層級上經過測試和認證。
->
-> 因此，使用對應至經過測試之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的資料庫相容性層級時，資料庫相容性層級會為現有的應用程式提供簡單的憑證路徑。
->
-> 如需相容性層級之間差異的詳細資訊，請參閱本文稍後的適當章節。
-
-若要將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 升級至最新版本，同時維護升級前已存在的資料庫相容性層級及其可支援性狀態，建議使用 [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 工具 (DMA)，執行資料庫 (可程式性物件，例如預存程序、函數、觸發程序等) 及應用程式 (使用擷取應用程式所傳送動態程式碼的工作負載追蹤) 中應用程式程式碼的靜態功能介面區驗證。 在 DMA 工具輸出中，由於沒有關於遺失或不相容功能的錯誤，因此可防止應用程式在新的目標版本上出現任何功能迴歸的情況。 如需 DMA 工具的詳細資訊，請參閱[這裡](https://blogs.msdn.microsoft.com/datamigration/dma)。
-
-> [!NOTE]
-> DMA 支援資料庫相容性層級 100 (含) 以上。 已排除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 作為來源版本。   
-
-> [!IMPORTANT]
-> Microsoft 建議執行一些基本測試，以驗證升級是否成功，同時維護先前的資料庫相容性層級。 您應該決定基本測試對您自己的應用程式和情節所代表的意義。   
-
-> [!NOTE]
-> Microsoft 會在下列情況下提供查詢計劃圖形保護：
->
-> - 新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (目標) 執行所在的硬體，相當於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (來源) 執行所在的硬體。
-> - 目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上使用相同的[受支援資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks)。
->
-> 上述情況中所發生的任何查詢計劃圖形迴歸 (相較於來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 都會予以解決。 如果發生這種情況，請連絡 Microsoft 客戶支援。
+## <a name="compatibility-levels-and-stored-procedures"></a>相容性層級和預存程序
+當執行預存程序時，它會使用定義所在之資料庫的目前相容性層級。 當資料庫的相容性設定改變時，也會同時自動重新編譯它的所有預存程序。
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>使用相容性層級來提供回溯相容性
-
-「資料庫相容性層級」  設定只會影響指定之資料庫的行為，而不會影響整個伺服器的行為。 資料庫相容性層級提供與先前版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 和查詢最佳化行為相關的回溯相容性。 
-
-> [!TIP]
-> 因為「資料庫相容性層級」  是資料庫層級設定，所以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 更新版本上執行的應用程式雖使用較舊的資料庫相容性層級，仍可以利用伺服器層級增強功能，而完全無需變更應用程式。
->
-> 這些包括豐富的監視和疑難排解增強功能，還有新的[系統動態管理檢視](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)與[擴充事件](../../relational-databases/extended-events/extended-events.md)。 此外，也改善延展性，例如使用[自動軟體 NUMA ](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。
+[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)設定提供與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 相關之舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的回溯相容性，以及僅針對指定資料庫的查詢最佳化行為，而不是針對整部伺服器。  
 
 從相容性模式 130 開始，任何會影響功能的新查詢計劃只會刻意新增至新的相容性層級。 這種作法是為了將升級期間因新的查詢最佳化行為而可能引發的查詢計劃變更，所導致效能降低而產生的風險降到最低。      
-從應用程式觀點而言，目標仍然應該在某個時間點升級為最新的相容性層級，以透過受控方式繼承一些新功能，例如[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)。 請使用較低的相容性層級作為更安全的移轉協助，協助您解決相關相容性層級設定所控制之行為的版本差異。
-如需詳細資料，包括升級資料庫相容性層級的建議工作流程，請參閱本文稍後的[升級資料庫相容性層級的最佳做法](#best-practices-for-upgrading-database-compatibility-level)。
+
+從應用程式的觀點來看，請使用較低相容性層級作為更安全的移轉路徑，協助您解決相關相容性層級設定所控制行為的版本差異。 目標仍然應該在某個時間點升級為最新的相容性層級，以透過受控方式繼承一些新功能，例如[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)。 
+
+如需詳細資料，包括升級資料庫相容性層級的建議工作流程，請參閱[升級資料庫相容性層級的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)。
 
 > [!IMPORTANT]
-> 在指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的已停用功能不會受到相容性層級保護。 這是指 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中已移除的功能。
+> 在指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的**已停用**功能**不會**受到相容性層級保護。 這是指 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中已移除的功能。
 > 例如，`FASTFIRSTROW` 提示已在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中停用，並以 `OPTION (FAST n )` 提示取代。 將資料庫相容性層級設定為 110 不會還原已停用的提示。  
 >  
 > 如需已停用功能的詳細資訊，請參閱 [SQL Server 2016 中已停用的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)、[SQL Server 2014 中已停用的資料庫引擎功能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)，以及 [SQL Server 2012 中已停用的資料庫引擎功能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)。    
 
 > [!IMPORTANT]
-> 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的重大變更**可能**不會受到相容性層級保護。 這是指 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之間的行為變更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行為通常會受到相容性層級保護。 但是，已變更或已移除的系統物件**不會**受到相容性層級保護。
+> 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的**重大變更** **可能不會**受到相容性層級保護。 這是指 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之間的行為變更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行為通常會受到相容性層級保護。 但是，已變更或已移除的系統物件**不會**受到相容性層級保護。
 >
 > 一個受相容性層級**保護**的重大變更範例為從日期時間轉換成日期時間 2 資料類型的隱含轉換。 在資料庫相容性層級 130 之下，這些會顯示藉由考量小數部分的毫秒而改善的精確度，會導致不同的轉換值。 若要還原先前的轉換行為，請將資料庫相容性層級設定為 120 或更低。
 >
@@ -166,16 +147,7 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > 如需重大變更的詳細資訊，請參閱 [SQL Server 2017 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)、[SQL Server 2014 中資料庫引擎功能的重大變更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)，以及 [SQL Server 2012 中資料庫引擎功能的重大變更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)。
 
-## <a name="best-practices-for-upgrading-database-compatibility-level"></a>升級資料庫相容性層級的最佳做法
-
-如需升級相容性層級的建議工作流程，請參閱[變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 此外，如需升級資料庫相容性層級的協助體驗，請參閱[使用 Query Tuning Assistant 升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。
-
-## <a name="compatibility-levels-and-stored-procedures"></a>相容性層級和預存程序
-
-當執行預存程序時，它會使用定義所在之資料庫的目前相容性層級。 當資料庫的相容性設定改變時，也會同時自動重新編譯它的所有預存程序。
-
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>相容性層級 140 和 150 之間的差異
-
 本節描述相容性層級 150 所導入的新行為。
 
 適用於 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的資料庫相容性層級 150，目前在公開預覽階段。 此資料庫相容性層級將會與下一帶的查詢處理改善相關聯，超在越資料庫相容性層級 140 中導入的功能。
@@ -305,7 +277,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 
 ## <a name="permissions"></a>權限
 
-需要資料庫的 ALTER 權限。
+需要資料庫的 `ALTER` 權限。
 
 ## <a name="examples"></a>範例
 
@@ -410,11 +382,14 @@ SELECT @v = BusinessEntityID FROM
 SELECT @v;
 ```
 
-## <a name="see-also-alter-databaset-sqlstatementsalter-database-transact-sqlmd"></a>另請參閱 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)
-
-- [保留關鍵字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
-- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)
+## <a name="see-also"></a>另請參閱 
+[相容性憑證](../../database-engine/install-windows/compatibility-certification.md)       
+[改變資料庫](../../t-sql/statements/alter-database-transact-sql.md)       
+[保留關鍵字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)       
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)       
+[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)       
+[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)       
+[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)       
+[檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
+[變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       
+[使用查詢調整小幫手來升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

@@ -17,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 79ad225fd74b4c8fd136295f69f26d48c061692a
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
+ms.openlocfilehash: 915ea023442ab9d787a481cab44259b1fc4a3857
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123139"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151947"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

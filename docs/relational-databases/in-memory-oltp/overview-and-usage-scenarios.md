@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715289"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059285"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "68715289"
 
 - [Quorum 利用 Azure SQL Database 中的 In-Memory OLTP，將主要資料庫的工作負載加倍，同時降低 70% 的使用率](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中記憶體內部 OLTP 改善了批次資料載入的效能，並已移除維護中層快取的需求：[資料服務公司利用記憶體內部技術來即時存取產品資料](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅改善網域控制站的資料擷取率，並處理尖峰工作負載：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
+- Beth Israel Deaconess Medical Center 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅改善網域控制站的資料擷取率，並處理尖峰工作負載： https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
 
 ### <a name="caching-and-session-state"></a>快取和工作階段狀態
 

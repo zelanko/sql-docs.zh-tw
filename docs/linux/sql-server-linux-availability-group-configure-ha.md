@@ -5,17 +5,17 @@ description: 了解如何建立 SQL Server Always On 可用性群組 (AG) 以確
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 02/14/2018
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027251"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030302"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>設定 SQL Server Always On 可用性群組以確保 Linux 上的高可用性
 
@@ -49,7 +49,7 @@ ms.locfileid: "68027251"
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
    >[!IMPORTANT]
-   >生產環境需要 STONITH 這類隔離代理程式來取得高可用性。 本文件中的示範不會使用隔離代理程式。 這些示範僅適用於測試和驗證。 
+   >生產環境需要 STONITH 這類隔離代理程式來取得高可用性。 此文件的示範不會使用隔離代理程式。 這些示範僅適用於測試和驗證。 
    
    >Linux 叢集會使用隔離功能將叢集回復為已知的狀態。 設定隔離的方式取決於發行版本和環境。 目前，有些雲端環境無法使用隔離。 如需詳細資訊，請參閱 [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) (RHEL 高可用性叢集的支援原則 - 虛擬化平台)。
    
@@ -135,7 +135,7 @@ ms.locfileid: "68027251"
 - 建立具有兩個同步複本和一個設定複本的 AG：
 
    >[!IMPORTANT]
-   >此結構可讓任何版本的 SQL Server 裝載第三個複本。 例如，您可以在 SQL Server Enterprise Edition 上裝載第三個複本。 在 Enterprise Edition 中，唯一有效的端點類型是 `WITNESS`。 
+   >此結構可讓任何版本的 SQL Server 裝載第三個複本。 例如，您可以在 SQL Server Express Edition 上裝載第三個複本。 在 Express Edition 中，唯一有效的端點類型是 `WITNESS`。 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -193,16 +193,16 @@ ms.locfileid: "68027251"
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>將次要複本加入 AG
 
-Pacemaker 使用者需具備所有複本上可用性群組的 `ALTER`、`VIEW DEFINITION` 和 `CONTROL` 權限。 若要授與權限，請在主要複本及每個次要複本上建立可用性群組，並將這些權限新增至可用性群組之後，立即執行下列 Transact-SQL 指令碼。 請將 `<pacemakerLogin>` 取代為 Pacemaker 使用者帳戶名稱，再執行指令碼。
+Pacemaker 使用者需具備所有複本上可用性群組的 `ALTER`、`VIEW DEFINITION` 和 `CONTROL` 權限。 若要授與權限，請在主要複本及每個次要複本上建立可用性群組，並將這些權限新增至可用性群組之後，立即執行下列 Transact-SQL 指令碼。 請將 `<pacemakerLogin>` 取代為 Pacemaker 使用者帳戶名稱，再執行指令碼。 如果您沒有 Pacemaker 的登入，請[建立 pacemaker 的 SQL Server 登入](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker)。
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 下列 Transact-SQL 指令碼會將 SQL Server 執行個體加入名為 `ag1` 的 AG。 更新您環境中的指令碼。 在每個裝載次要複本的 SQL Server 執行個體上，執行下列 Transact-SQL 以加入 AG。
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
          
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
@@ -226,8 +226,8 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>後續步驟
 
-[設定 SQL Server 可用性群組叢集資源的 Red Hat Enterprise Linux 叢集](sql-server-linux-availability-group-cluster-rhel.md)
+[設定 Red Hat Enterprise Linux 叢集的 SQL Server 可用性群組叢集資源](sql-server-linux-availability-group-cluster-rhel.md)
 
-[設定 SQL Server 可用性群組叢集資源的 SUSE Linux Enterprise Server 叢集](sql-server-linux-availability-group-cluster-sles.md)
+[設定 SUSE Linux Enterprise Server 叢集的 SQL Server 可用性群組叢集資源](sql-server-linux-availability-group-cluster-sles.md)
 
-[設定 SQL Server 可用性群組叢集資源的 Ubuntu 叢集](sql-server-linux-availability-group-cluster-ubuntu.md)
+[設定 Ubuntu 叢集的 SQL Server 可用性群組叢集資源](sql-server-linux-availability-group-cluster-ubuntu.md)
