@@ -1,9 +1,9 @@
 ---
 title: EXECUTE AS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 08/27/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -20,17 +20,18 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: 1908228b12db7256351945b474016a707db56b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 843b624e155df6aba6a0f2ccbd194f7b2f99bc09
+ms.sourcegitcommit: f517f1e2e7cac983fdb41229e60ca7ad019ecd48
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084446"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064028"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   設定工作階段的執行內容。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68084446"
  指定您要模擬的執行內容是登入。 模擬範圍是在伺服器層級。  
   
 > [!NOTE]  
->  自主資料庫或 SQL Database 無法使用這個選項。  
+>  此選項在自主資料庫或 SQL Database 或 SQL 資料倉儲中無法使用。  
   
  使用者  
  指定您要模擬的內容是目前資料庫中的使用者。 模擬範圍僅限於目前資料庫。 通往資料庫使用者的內容切換不會繼承該使用者的伺服器層級權限。  
@@ -67,7 +68,7 @@ ms.locfileid: "68084446"
 > [!IMPORTANT]  
 >  如果通往資料庫使用者的內容切換在使用中，任何人想要存取資料庫以外的資源，都會導致陳述式失敗。 其中包括 USE *database* 陳述式、分散式查詢，以及參考其他使用三部分或四部分識別碼的資料庫查詢。  
   
- **'** _name_ **'**  
+ **'** *name* **'**  
  有效的使用者或登入名稱。 *name* 必須是 **sysadmin** 固定伺服器角色的成員，或是以主體形式分別存在於 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 或 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 中。  
   
  *name* 可以指定為本機變數。  
@@ -77,22 +78,23 @@ ms.locfileid: "68084446"
  如需詳細資訊，請參閱本主題稍後的[指定使用者或登入名稱](#_user)。  
   
  NO REVERT  
- 指定內容切換不能還原回先前的內容。 **NO REVERT** 選項只能在特定層級使用。
+ 指定內容切換不能還原回先前的內容。 **NO REVERT** 選項只能在特定層級使用。  
   
  如需如何還原到先前內容的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)。  
   
- COOKIE INTO **@** _varbinary_variable_  
- 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 **@** _varbinary_variable_ 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 **@** _varbinary_variable_。 **COOKIE INTO** 選項只能在特定層級使用。  
+ COOKIE INTO **@***varbinary_variable*  
+ 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 **@***varbinary_variable* 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 **@***varbinary_variable*。 **COOKIE INTO** 選項只能在特定層級使用。  
   
- **@** _varbinary_variable_ 是 **varbinary(8000)** 。  
+ **@** *varbinary_variable* 是 **varbinary(8000)**。  
   
 > [!NOTE]  
->  Cookie **OUTPUT** 參數目前記載為 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(100)** 。 應用程式應保留 **varbinary(8000)** ，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。  
+>  Cookie **OUTPUT** 參數目前記載為 **varbinary(8000)**，這是正確的長度上限。 但目前的實作會傳回 **varbinary(100)**。 應用程式應保留 **varbinary(8000)**，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。  
   
  CALLER  
- 用於模組內部時，指定模組內部的陳述式是在模組呼叫者的內容中執行。  
-  
- 用於模組外部時，陳述式沒有動作。  
+ 用於模組內部時，指定模組內部的陳述式是在模組呼叫者的內容中執行。
+用於模組外部時，陳述式沒有動作。
+ > [!NOTE]  
+>  此選項在 SQL 資料倉儲中無法使用。  
   
 ## <a name="remarks"></a>Remarks  
  執行內容中的變更持續有效，直到發生下列項目之一為止：  
@@ -125,11 +127,9 @@ ms.locfileid: "68084446"
 >  只要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以解析名稱，EXECUTE AS 陳述式即可順利地運作。 即使 Windows 使用者無權存取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，只要網域使用者存在，Windows 或許可以解析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者。 這可能會導致無權存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者順利地登入，但模擬登入只有 public 或 guest 的權限。  
   
 ## <a name="using-with-no-revert"></a>使用 WITH NO REVERT  
- 當 EXECUTE AS 陳述式包括選擇性的 WITH NO REVERT 子句時，不能使用 REVERT 或藉由執行另一個 EXECUTE AS 陳述式來重設工作階段的執行內容。 陳述式設定的內容會持續有效，直到卸除工作階段為止。   請注意，如果啟用連線共用，`sp_reset_connection` 將會失敗，且連線會中斷。  事件記錄檔中的錯誤訊息將如下：
- 
-> 此連接已經卸除，因為開啟的主體假設新的安全性內容，然後嘗試在其模擬的安全性內容之下重設連接。 不支援此狀況。 請參閱線上叢書中的＜模擬概觀＞。
+ 當 EXECUTE AS 陳述式包括選擇性的 WITH NO REVERT 子句時，不能使用 REVERT 或藉由執行另一個 EXECUTE AS 陳述式來重設工作階段的執行內容。 陳述式設定的內容會持續有效，直到卸除工作階段為止。  
   
- 指定 WITH NO REVERT COOKIE = @*varbinary_variable* 子句時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將 Cookie 值傳遞到 @*varbinary_variable*。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含相同的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
+ 指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將 Cookie 值傳遞到 @*varbinary_variabl*e。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含相同的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
   
  這個選項在使用連接共用的環境中相當有用。 連接共用是資料庫連接群組的維護，這些連接是供應用程式伺服器上的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳送到 *@varbinary_variable* 的值，因此呼叫者可以保證其所建立的執行內容不會被別人變更。  
   
@@ -186,7 +186,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
- 下列範例會將工作階段的執行內容設為指定使用者，且指定 WITH NO REVERT COOKIE = @*varbinary_variable* 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
+ 下列範例會將工作階段的執行內容設為指定使用者，並且指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
   
 ```  
 DECLARE @cookie varbinary(8000);  

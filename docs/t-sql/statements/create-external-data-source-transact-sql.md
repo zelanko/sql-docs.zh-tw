@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05742e279d65d828fcbd9a7917033fcf8df2825d
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 5ec2100d50364ae0e85d2a28375bd454608af34a
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984587"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123163"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68984587"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\*_ SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -89,7 +89,7 @@ WITH
 | Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | MongoDB 或 CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019+) - 僅限 Windows           |
+| ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019+) - 僅限 Windows           |
 | 大量作業             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                  |
 
 位置路徑：
@@ -312,7 +312,7 @@ WITH
 ## <a name="examples-bulk-operations"></a>範例:大量作業
 
 > [!NOTE]
-> 針對大量作業設定外部資料來源時，請不要將後置 **/** 、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
+> 針對大量作業設定外部資料來源時，請不要將後置 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
 
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
 
@@ -540,7 +540,7 @@ WITH
 ## <a name="examples-bulk-operations"></a>範例:大量作業
 
 > [!NOTE]
-> 針對大量作業設定外部資料來源時，請不要將後置 **/** 、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
+> 針對大量作業設定外部資料來源時，請不要將後置 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源
 
@@ -792,6 +792,24 @@ WITH
 ,    TYPE       = HADOOP
 )
 [;]
+```
+
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D. 建立外部資料來源以參考 Polybase 與 Azure Data Lake Store Gen 2 的連線
+
+當連線至具有[受控識別](/azure/active-directory/managed-identities-azure-resources/overview
+)機制的 Azure Data Lake 存放區 Gen2 帳戶時，不需要指定祕密。
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+
+--Create database scoped credential with **IDENTITY = 'Managed Service Identity'**
+
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
+
+--Create external data source with abfss:// scheme for connecting to your Azure Data Lake Store Gen2 account
+
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
 ```
 
 ## <a name="see-also"></a>另請參閱

@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 275ef0ef83c073726cebf80b63e1d8f9640eca81
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903635"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026236"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -21,7 +21,7 @@ ms.locfileid: "69903635"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。
 
-此文章摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和增強功能。
+本文摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和增強功能。
 
 如需詳細資訊和已知問題，請參閱 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊](sql-server-ver15-release-notes.md)。
 
@@ -52,7 +52,7 @@ ms.locfileid: "69903635"
 
 ## <a name="database-engine"></a>資料庫引擎
 
-### <a name="security"></a>安全性
+### <a name="security"></a>Security
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
@@ -91,7 +91,7 @@ ms.locfileid: "69903635"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|支援 UTF-8 字元編碼 |支援匯入和匯出編碼的 UTF-8 字元，以及作為字串資料的資料庫層級或資料行層級定序。 這支援延伸至全球規模的應用程式，其中提供全球多語系資料庫應用程式與服務的需求，對於滿足客戶需求與特定市場法規而言非常重要。 請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/>[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候選版啟用 Polybase 外部資料表和 Always Encrypted 的 UTF-8 支援。|
+|支援 UTF-8 字元編碼 |支援匯入和匯出編碼的 UTF-8 字元，以及作為字串資料的資料庫層級或資料行層級定序。 這支援延伸至全球規模的應用程式，其中提供全球多語系資料庫應用程式與服務的需求，對於滿足客戶需求與特定市場法規而言非常重要。 請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候選版啟用 Polybase 外部資料表和 Always Encrypted 的 UTF-8 支援。|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
@@ -99,7 +99,7 @@ ms.locfileid: "69903635"
 |新功能或更新 | 詳細資料 |
 |:---|:---|
 |查詢外部資料表 |外部資料表資料行名稱現在可用來查詢 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 資料來源。 請參閱[什麼是 PolyBase](../relational-databases/polybase/polybase-guide.md)。|
-|支援 UTF-8 字元編碼|支援具有外部資料表的 UTF-8 字元。 請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)|
+|支援 UTF-8 字元編碼|支援具有外部資料表的 UTF-8 字元。 請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)。|
 | &nbsp; | &nbsp; |
 
 ### <a name="server-settings"></a>伺服器設定
@@ -138,7 +138,7 @@ ms.locfileid: "69903635"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-| 新增空間參考識別碼 (SRID) |[澳洲 GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) 提供更強大且精確的資料，可與全球定位系統更加緊密結合。 新的 SRID 為：<br/><br/> - 7843 (適用於地理 2D)<br/> - 7844 (適用於地理 3D) <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) 檢視包含新 SRID 的定義。 |
+| 新增空間參考識別碼 (SRID) |[澳洲 GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) 提供更強大且精確的資料，可與全球定位系統更加緊密結合。 新的 SRID 包含：<br/><br/> - 7843 (適用於地理 2D)<br/> - 7844 (適用於地理 3D) <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) 檢視包含新 SRID 的定義。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance"></a>效能
@@ -147,15 +147,16 @@ ms.locfileid: "69903635"
 |:---|:---|
 |加速資料庫復原 | 啟用每個資料庫的加速資料庫復原。 請參閱[加速資料庫復原](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)。|
 |強制執行向前快轉及靜態資料指標 | 查詢存放區計畫強制支援向前快轉及靜態資料指標。 請參閱[計畫強制支援向前快轉及靜態資料指標](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23)。|
+|資源管理| `CREATE WORKLOAD GROUP` 和 `ALTER WORKLOAD GROUP` 的 `REQUEST_MAX_MEMORY_GRANT_PERCENT` 選項可設定值，已從整數變更為浮動資料類型，以允許對記憶體限制採取更細微的控制。 請參閱 [ALTER 工作負載群組](../t-sql/statements/alter-workload-group-transact-sql.md)和[建立工作負載群組](../t-sql/statements/create-workload-group-transact-sql.md)。|
 |減少對工作負載的重新編譯| 改善跨多個範圍使用暫存資料表的功能。 請參閱[減少對工作負載的重新編譯](../relational-databases/tables/tables.md#ctp23) |
 |間接檢查點延展性 |請參閱[改善的間接檢查點延展性](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)。|
 |經記憶體最佳化的 `tempdb` 中繼資料| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../relational-databases/in-memory-database.md)功能系列的一部分，記憶體最佳化的 `tempdb` 中繼資料能有效移除此瓶頸，並解除鎖定大量 `tempdb` 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。 請參閱[記憶體最佳化的 `tempdb` 中繼資料](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
 |並行 PFS 更新|[PFS 分頁](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) \(英文\) 是資料庫檔案中的特殊分頁，SQL Server 在配置物件的空間時，可使用這些特殊分頁來協助找出可用空間。 PFS 分頁上的頁面閂鎖爭用通常與 [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 相關聯，但在有許多並行物件配置執行緒時，也可能會發生在使用者資料庫上。 這種改進會改變使用 PFS 更新來管理並行的方式，使其可以在共用閂鎖下更新，而不是獨佔閂鎖。 此行為在從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始的所有資料庫 (包括 `tempdb`) 中預設為啟用。|
 |資料列模式記憶體授與意見反應 |透過調整批次和資料列模式運算子的記憶體授與大小，以在批次模式記憶體授與意見反應功能上擴充。 這會自動修正導致記憶體浪費和並行降低的過多授與，並修正導致佔用大量磁碟資源的記憶體授與不足。 請參閱[資料列模式記憶體授與意見反應](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。 |
-|資料表變數延後編譯|針對參考資料表變數的查詢，提升計畫品質與整體效能。 在最佳化和初始編譯期間，此功能會根據實際資料表變數的資料列計數，傳播基數估計值。 這個精確的資料列計數資訊會最佳化下游計畫作業。 請參閱[資料表變數延後編譯](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)。 |
+|資料表變數延後編譯|針對參考資料表變數的查詢，提升計畫品質與整體效能。 在最佳化和初始編譯期間，此功能會根據實際資料表變數的資料列計數，傳播基數估計值。 這項精確的資料列計數資訊會最佳化下游計畫作業。 請參閱[資料表變數延後編譯](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)。 |
 |`APPROX_COUNT_DISTINCT `|針對絕對有效位數不重要但回應性很重要的情節，`APPROX_COUNT_DISTINCT` 使用比 `COUNT(DISTINCT())` 更少的資源彙總大型資料集以獲得更高的並行。 請參閱[近似查詢處理](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)。|
-|資料列存放區上的批次模式|資料列存放區上的批次模式可啟用批次模式執行功能，而不需要資料行存放區索引。 批次模式執行在分析工作負載期間會更有效率地使用 CPU，但在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 之前，只有當查詢包含具有資料行存放區索引的作業時才會使用它。 不過，有些應用程式可能使用資料行存放區索引不支援的功能，因此無法利用批次模式。 從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始，會在符合條件的分析工作負載 (其查詢包括對任何類型的索引 (資料列存放區或資料行存放區) 的作業) 上啟用批次模式。 請參閱[資料列存放區上的批次模式](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)。 |
-|純量 UDF 內嵌|將純量 UDF 自動轉換成關聯運算式，並將它們內嵌在呼叫 SQL 查詢中。 此轉換可改善利用純量 UDF 的工作負載效能。 [純量 UDF 內嵌](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。|
+|資料列存放區上的批次模式|資料列存放區上的批次模式可啟用批次模式執行功能，而不需要資料行存放區索引。 批次模式執行在分析工作負載期間會更有效率地使用 CPU，但在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 之前，只有當查詢包含具有資料行存放區索引的作業時才會使用它。 不過，有些應用程式可能使用資料行存放區索引不支援的功能，因此無法利用批次模式。 從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始，會在符合條件的分析工作負載 (其查詢包括對任何類型索引 (資料列存放區或資料行存放區) 的作業) 上啟用批次模式。 請參閱[資料列存放區上的批次模式](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)。 |
+|純量 UDF 內嵌|將純量 UDF 自動轉換成關聯運算式，並將它們內嵌在呼叫 SQL 查詢中。 此轉換可改善利用純量 UDF 的工作負載效能。 請參閱[純量 UDF 內嵌](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。|
 | &nbsp; | &nbsp; |
 
 ### <a name="availability-groups"></a>可用性群組
@@ -195,14 +196,6 @@ ms.locfileid: "69903635"
 | 異動資料擷取 (CDC) 支援 | 在 Linux 上現在已針對 SQL Server 2019 支援異動資料擷取 (CDC)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="setup"></a>安裝程式
-
-|新功能或更新 | 詳細資料 |
-|:---|:---|
-|新的記憶體設定選項 | 設定安裝期間的 [最小伺服器記憶體 (MB)] 與 [最大伺服器記憶體 (MB)] 伺服器設定。 如需詳細資訊，請參閱 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 與[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXMEMORY` 參數。 建議的值會與[伺服器記憶體設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的記憶體設定指導方針一致。|
-|新平行處理原則設定選項 | 在安裝期間設定 [平行處理原則的最大程度] 伺服器設定。 如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 參數。 預設值將會與[設定 max degree of parallelism 伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的平行處理原則的最大程度指導方針一致。|
-| &nbsp; | &nbsp; |
-
 ## <a id="ml"></a> SQL Server 機器學習服務
 
 |新功能或更新 | 詳細資料 |
@@ -227,7 +220,7 @@ ms.locfileid: "69903635"
 |MDX 查詢支援具有計算群組的表格式模型 | 請參閱[計算群組](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24)。 |
 |表格式模型中的計算群組| [表格式模型中的計算群組](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24) |
 |MDX 查詢支援具有計算群組的表格式模型 | 請參閱[計算群組](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24)。 |
-|使用計算群組的量值動態格式 |此功能可讓您依條件變更具有[計算群組](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24)之量值的格式字串。 例如，透過貨幣轉換，量值可以使用不同的外幣格式顯示。|
+|使用計算群組的量值動態格式 |這項功能可讓您依條件變更具有[計算群組](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24)之量值的格式字串。 例如，透過貨幣轉換，量值可以使用不同的外幣格式顯示。|
 |表格式模型中的多對多關聯性|[表格式模型中的多對多關聯性](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24)|
 |資源管理的屬性設定|[資源治理的屬性設定](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24)|
 | Power BI 快取重新整理的治理設定。  | Power BI 服務會快取儀表板磚的資料和報表資料，以進行 Live Connect 報表的初始載入，進而導致將過多的快取查詢提交給 SSAS，且在極端情況下使伺服器超載。 此版本引進了 **ClientCacheRefreshPolicy** 屬性。 這個屬性可讓您在伺服器層級覆寫此行為。 若要深入了解，請參閱[一般屬性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
@@ -247,7 +240,7 @@ ms.locfileid: "69903635"
 
 ## <a name="next-steps"></a>後續步驟
 
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊](sql-server-ver15-release-notes.md)。
+- [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊] (sql-server-ver15-release-notes.md)。
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]：Technical white paper](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />在 2018 年 9 月發佈。 適用於 Windows、Linux 及 Docker 容器的 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0。
 
