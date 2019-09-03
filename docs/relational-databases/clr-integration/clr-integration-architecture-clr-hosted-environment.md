@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2bbb7465b3d012d5aa786a0e8c614a9d4689074
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329334"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212451"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構 - CLR 主控環境
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 .NET Framework Common Language Runtime (CLR) 整合可讓資料庫程式設計人員使用 Visual C#、Visual Basic .NET 和 Visual C++ 等語言。 程式設計人員可以使用這些語言所撰寫的商務邏輯種類包括函數、預存程序、觸發程序、資料類型和彙總。  
   
   CLR 會功能垃圾收集的記憶體、先占式執行緒、中繼資料服務 (型別反映)、程式碼可驗證性和代碼啟用安全性。 CLR 會使用中繼資料來找出並載入類別、配置記憶體中的執行個體、解析方法引動過程、產生機器碼、強制使用安全性，和設定執行階段內容界限。  

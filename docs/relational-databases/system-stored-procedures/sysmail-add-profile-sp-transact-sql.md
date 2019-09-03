@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_profile_sp & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sysmail_add_profile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f70661db4dbd34475a5708b8ae9ca3691c94e689
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4bd7f90688d61f9ecee487d553393e38bed82e3
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017804"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211275"
 ---
-# <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   建立新的 Database Mail 設定檔。  
   
@@ -41,26 +41,29 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_name = ] 'profile\_name'` 新的設定檔的名稱。 *profile_name*已**sysname**，沒有預設值。  
+`[ @profile_name = ] 'profile\_name'`新設定檔的名稱。 *profile_name*是**sysname**, 沒有預設值。  
+ 
+   > [!NOTE]
+   > 使用 Azure SQL 受控執行個體 SQL 代理程式的設定檔名稱必須呼叫**AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'` 新的設定檔的選擇性描述。 *描述*已**nvarchar(256)** ，沒有預設值。  
+`[ @description = ] 'description'`新設定檔的選擇性描述。 *描述*是**Nvarchar (256)** , 沒有預設值。  
   
-`[ @profile_id = ] _new\_profile\_idOUTPUT` 傳回新的設定檔的識別碼。 *new_profile_id*已**int**，預設值是 NULL。  
+`[ @profile_id = ] _new\_profile\_id OUTPUT`傳回新設定檔的識別碼。 *new_profile_id*是**int**, 預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="remarks"></a>備註  
- Database Mail 設定檔會保存任意數目的 Database Mail 帳戶。 Database Mail 預存程序可以利用這個程序所產生的設定檔名稱或設定檔識別碼來參考設定檔。 如需有關將帳戶新增至設定檔的詳細資訊，請參閱 < [sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
+ Database Mail 設定檔會保存任意數目的 Database Mail 帳戶。 Database Mail 預存程序可以利用這個程序所產生的設定檔名稱或設定檔識別碼來參考設定檔。 如需將帳戶新增至設定檔的詳細資訊, 請參閱[sysmail_add_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
   
- 預存程序，則可以變更設定檔名稱和描述**sysmail_update_profile_sp**，而這個設定檔識別碼維持不變的存留期間的設定檔。  
+ 設定檔名稱和描述可以使用預存程式**sysmail_update_profile_sp**來變更, 而設定檔識別碼在設定檔的生命週期內會保持不變。  
   
  Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的設定檔名稱必須是唯一的，否則，預存程序會傳回一則錯誤。  
   
- 預存程序**sysmail_add_profile_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程式**sysmail_add_profile_sp**在**msdb**資料庫中, 而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**, 就必須以三部分的名稱來執行此程式。  
   
 ## <a name="permissions"></a>Permissions  
- 執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
+ 此程式的執行許可權預設為**系統管理員 (sysadmin** ) 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  **A.建立新的設定檔**  
@@ -73,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B.建立新的設定檔，將設定檔識別碼儲存在變數中**  
+ **B.建立新的設定檔, 將設定檔識別碼儲存在變數中**  
   
  下列範例會建立名稱為 `AdventureWorks Administrator` 的新 Database Mail 設定檔。 這個範例會將設定檔識別碼儲存在 `@profileId` 變數中，且會傳回包含新設定檔之設定檔識別碼的結果集。  
   
@@ -91,7 +94,7 @@ SELECT @profileId ;
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail 組態物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail 預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

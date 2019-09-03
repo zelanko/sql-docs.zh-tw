@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028157"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155104"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
 
@@ -52,7 +52,7 @@ ms.locfileid: "69028157"
   
 重新啟動電腦，讓這些登錄設定生效。  
 
-若要在 Windows Azure 中執行時完成此作業，請建立啟動工作以加入登錄機碼。  例如，您可以將下列啟動工作加入至服務定義檔：  
+若要在 Azure 中執行時完成此作業，請建立啟動工作以加入登錄機碼。  例如，您可以將下列啟動工作加入至服務定義檔：  
 
 ```xml
 <Startup>  

@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 5d2587a6150807841edc9773478f1b798ee60d84
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: a22cf1c2da261805309c8ac223a8535afbcd34d1
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742816"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152745"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver to SQL Server 版本資訊
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-此文章列出並描述 Linux 和 macOS 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行版本的新增功能。
+本文列出並描述 Linux 和 macOS 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行版本的新增功能。
 
 <!--
 Going forward, please use the new 2-column markdown table for each new H2 version section.
@@ -35,7 +35,7 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
-## <a name="174-august-2019"></a>17.4, 2019 年8月
+## <a name="174-august-2019"></a>17.4，2019 年 8 月
 
 | 新增功能 | 詳細資料 |
 | :------------ | :------ |
@@ -133,6 +133,6 @@ ODBC Driver on SUSE Linux (預覽) 支援 64 位元 SUSE Linux Enterprise 11 Ser
 
 Linux 上的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需詳細資訊，請參閱 [Linux 上 ODBC Driver 對於高可用性、災害復原的支援](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
 
-ODBC Driver on Linux 支援對 Microsoft Azure SQL Database 的連接。 如需詳細資訊，請參閱 [如何：使用 ODBC 連接到 Windows Azure SQL Database](https://msdn.microsoft.com/library/hh974312.aspx)。  
+ODBC Driver on Linux 支援對 Microsoft Azure SQL Database 的連接。 如需詳細資訊，請參閱 [如何：使用 ODBC 連接到 Azure SQL Database](https://msdn.microsoft.com/library/hh974312.aspx)。  
 
 `-l` 選項 (登入逾時) 已新增至 `bcp`。 如需詳細資訊，請參閱[使用 **bcp** 連線](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。

@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_account_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_delete_account_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 365fc36d7933a8db31e2e7c608417e3621600c9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b6adc5f6c02eae49a5f5e2598c6b02e5b00534e
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017710"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211270"
 ---
-# <a name="sysmaildeleteaccountsp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   刪除 Database Mail SMTP 帳戶。 您也可以利用 Database Mail 組態精靈來刪除帳戶。  
   
@@ -39,12 +39,12 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @account_id = ] account_id` 要刪除的帳戶識別碼。 *account_id*已**int**，沒有預設值。 任一*account_id*或是*account_name*必須指定。  
+`[ @account_id = ] account_id`要刪除之帳戶的識別碼。 *account_id*是**int**, 沒有預設值。 必須指定*account_id*或*account_name* 。  
   
-`[ @account_name = ] 'account_name'` 要刪除的帳戶名稱。 *account_name*已**sysname**，沒有預設值。 任一*account_id*或是*account_name*必須指定。  
+`[ @account_name = ] 'account_name'`要刪除的帳戶名稱。 *account_name*是**sysname**, 沒有預設值。 必須指定*account_id*或*account_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="result-sets"></a>結果集  
  None  
@@ -52,10 +52,10 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="remarks"></a>備註  
  不論是否有設定檔正在使用指定的帳戶，這個程序皆會予以刪除。 未包含任何帳戶的設定檔，無法順利傳送電子郵件。  
   
- 預存程序**sysmail_delete_account_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程式**sysmail_delete_account_sp**在**msdb**資料庫中, 而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**, 就必須以三部分的名稱來執行此程式。  
   
 ## <a name="permissions"></a>Permissions  
- 執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
+ 此程式的執行許可權預設為**系統管理員 (sysadmin** ) 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示刪除名稱為 `AdventureWorks Administrator` 的 Database Mail 帳戶。  
@@ -68,10 +68,10 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail 組態物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
- [sysmail_delete_profile_sp &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
- [sysmail_delete_profileaccount_sp &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
+ [sysmail_delete_profile_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
+ [sysmail_delete_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
  [sysmail_help_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)   
  [sysmail_help_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profile-sp-transact-sql.md)   
  [sysmail_help_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profileaccount-sp-transact-sql.md)   

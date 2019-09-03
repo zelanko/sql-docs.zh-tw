@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5caa2cc419943d3de3d5645b1cedfcfd8a18a3aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b172399d5e7a04365cf8005b5dc52ebc9795c13a
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068476"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212386"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Common Language Runtime (CLR) 整合程式設計概念
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具備 .NET Framework for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的 Common Language Runtime (CLR) 元件整合功能。 這表示您現在可以使用任何 .NET Framework 語言 (包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#)，撰寫預存程序、觸發程序、使用者定義型別、使用者定義函數、使用者定義彙總及資料流資料表值函數。  
   
  Microsoft.SqlServer.Server 命名空間在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中包含用於 CLR 程式設計的核心功能。 不過，Microsoft.SqlServer.Server 命名空間會記載在 .NET Framework SDK 中。 此文件不包含在《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中。  
   
 > [!IMPORTANT]  
->  根據預設，.NET Framework 會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安裝，但是 .NET Framework SDK 則不會。 如果 SDK 未安裝在電腦上，也不包含在線上叢書集合中，本節中的 SDK 內容連結將不會有任何作用。 請安裝 .NET Framework SDK。 安裝之後，將 SDK 加入至線上叢書集合和目錄中的指示[安裝.NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)。  
+>  根據預設，.NET Framework 會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安裝，但是 .NET Framework SDK 則不會。 如果 SDK 未安裝在電腦上，也不包含在線上叢書集合中，本節中的 SDK 內容連結將不會有任何作用。 請安裝 .NET Framework SDK。 安裝之後, 請遵循[安裝 .NET FRAMEWORK sdk](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)中的指示, 將 SDK 新增至線上叢書集合和目錄。  
   
 > [!NOTE]  
->  CLR 功能，例如 CLR 使用者函式，都*不*支援 Azure SQL Database。  
+>  Azure SQL Database*不*支援 clr 功能 (例如 clr 使用者函數)。  
   
  下表列出本節的主題。  
   
@@ -68,6 +68,6 @@ ms.locfileid: "68068476"
   
 ## <a name="see-also"></a>另請參閱  
  [組件&#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [安裝.NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+ [安裝 .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

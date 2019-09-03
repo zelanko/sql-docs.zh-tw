@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 的新功能 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026236"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155473"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -21,7 +21,7 @@ ms.locfileid: "70026236"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。
 
-本文摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和增強功能。
+此文章摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和增強功能。
 
 如需詳細資訊和已知問題，請參閱 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊](sql-server-ver15-release-notes.md)。
 
@@ -40,19 +40,16 @@ ms.locfileid: "70026236"
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---|
-| 可擴充的巨量資料解決方案 | 為 Kubernetes 上執行的 SQL Server、Spark 和 HDFS 容器[部署可擴充叢集](../big-data-cluster/deploy-get-started.md) <br/><br/> 讀取、寫入及處理來自 Transact-SQL 或 Spark 的巨量資料<br/><br/> 輕鬆結合及分析含有大量巨量資料的高價值關聯式資料<br/><br/>查詢外部資料來源<br/><br/>在 SQL Server 的受控 HDFS 中儲存巨量資料<br/><br/>透過叢集查詢來自多個外部資料來源的資料<br/><br/> 使用 AI、機器學習服務和其他分析工作的資料<br/><br/> 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中部署及執行應用程式 <br/>|
+| 可擴充的巨量資料解決方案 | 為 Kubernetes 上執行的 SQL Server、Spark 和 HDFS 容器[部署可擴充叢集](../big-data-cluster/deploy-get-started.md) <br/><br/> 讀取、寫入及處理來自 Transact-SQL 或 Spark 的巨量資料<br/><br/> 輕鬆結合及分析含有大量巨量資料的高價值關聯式資料<br/><br/>查詢外部資料來源<br/><br/>在 SQL Server 的受控 HDFS 中儲存巨量資料<br/><br/>透過叢集查詢來自多個外部資料來源的資料<br/><br/> 使用 AI、機器學習服務和其他分析工作的資料<br/><br/> 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中部署及執行應用程式 <br/><br/> SQL Server master 執行個體資料庫使用 AlwaysOn 可用性群組<br/>|
 | &nbsp; | &nbsp; |
 
 如需詳細資料，請參閱[什麼是 SQL Server[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]](../big-data-cluster/big-data-cluster-overview.md)。
 
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) 公告封存](what-s-new-in-sql-server-ver15-prerelease.md)包含此功能所有先前 CTP 版本所公告和變更的功能清單。
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
-
 ## <a name="database-engine"></a>資料庫引擎
 
-### <a name="security"></a>Security
+### <a name="security"></a>安全性
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
@@ -171,8 +168,8 @@ ms.locfileid: "70026236"
 
 |新功能或更新 | 詳細資料 | 
 |:---|:---| 
-|新的記憶體設定選項 | 設定安裝期間的 [最小伺服器記憶體 (MB)] 與 [最大伺服器記憶體 (MB)] 伺服器設定。 如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 與 `SQLMAXMEMORY` 參數。 建議的值會與[伺服器記憶體設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的記憶體設定指導方針一致。| 
-|新平行處理原則設定選項 | 在安裝期間設定 [平行處理原則的最大程度] 伺服器設定。 如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP 頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 參數。 預設值將會與[設定 max degree of parallelism 伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的平行處理原則的最大程度指導方針一致。| 
+|新的記憶體設定選項 | 設定安裝期間的 [最小伺服器記憶體 (MB)]  與 [最大伺服器記憶體 (MB)]  伺服器設定。 如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 與 `SQLMAXMEMORY` 參數。 建議的值會與[伺服器記憶體設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的記憶體設定指導方針一致。| 
+|新平行處理原則設定選項 | 在安裝期間設定 [平行處理原則的最大程度]  伺服器設定。 如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP 頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 參數。 預設值將會與[設定 max degree of parallelism 伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的平行處理原則的最大程度指導方針一致。| 
 | &nbsp; | &nbsp; |
 
 ### <a name="error-messages"></a>錯誤訊息
