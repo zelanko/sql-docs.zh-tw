@@ -69,9 +69,9 @@ ms.locfileid: "67948740"
   
  如果選擇此選項，應在復原發行集資料庫之後，立即產生新的快照集以傳遞給重新初始化的「訂閱者」。  
   
- 若要重新初始化訂閱，請參閱＜ [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)＞。  
+ 若要重新初始化訂閱，請參閱＜ [重新初始化訂閱](../../../relational-databases/replication/reinitialize-a-subscription.md)＞。  
   
- 若要建立並套用快照集，請參閱＜ [Create ＞和＜ Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) ＞和＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
+ 若要建立並套用快照集，請參閱＜ [建立和套用初始快照集](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) ＞和＜ [使用參數化篩選建立合併式發行集的快照集](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>備份與還原散發資料庫  
  對於合併式複寫，散發資料庫應定期備份，並且只要使用的備份不晚於使用「散發者」之所有發行集的最短保留期限，無需任何特殊考量即可還原。 例如，如果有三個保留期間分別為 10、20 及 30 天的發行集，則用來還原資料庫的備份不應晚於 10 天。 散發資料庫在合併式複寫中擁有有限的角色：它不儲存變更追蹤中使用的任何資料，也不提供要轉送到訂閱資料庫之合併式複寫變更的暫時儲存 (與它在異動複寫中一樣)。  
