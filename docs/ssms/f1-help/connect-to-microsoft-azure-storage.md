@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7f3a8d7168e9e1b9e321a83e7e1d7143b5bcf1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265083"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155674"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>連接到 Microsoft Azure 儲存體
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [Windows Azure 儲存體連接]  對話方塊可以指定儲存體帳戶並且驗證 Windows Azure 的連接。  
+使用 [Azure 儲存體連線] 對話方塊，以指定儲存體帳戶並驗證 Azure 的連線。  
   
 ## <a name="options"></a>選項。  
-請指定有關 Windows Azure 帳戶的下列資訊，然後按一下 [下一步]  繼續進行。  
+請指定有關 Azure 帳戶的下列資訊，然後按一下 [下一步] 繼續進行。  
   
 1.  **儲存體帳戶** - 指定儲存體帳戶名稱。
 

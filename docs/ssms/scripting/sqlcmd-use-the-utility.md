@@ -17,18 +17,18 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbdb412284c67fdccce8c3628aed41b6be0cae04
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: de9d2f1c06704e7bedc4592aa7062dbc8a4b8569
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267629"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155748"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **sqlcmd** 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 **sqlcmd** ，或是要建立透過 **sqlcmd**執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言， **sqlcmd** 公用程式的使用方式如下：  
   
--   使用者可以像是在命令提示字元中工作一般，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟命令提示字元視窗，請在 [Windows 搜尋] 方塊中輸入 "cmd"，並按一下 [命令提示字元]  來開啟。 在命令提示字元中，輸入 **sqlcmd** ，後面接著您要使用的一串選項。 如需 **sqlcmd**所支援選項的完整清單，請參閱 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
+-   使用者可以像是在命令提示字元中工作一般，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟命令提示字元視窗，請在 [Windows 搜尋] 方塊中輸入 "cmd"，並按一下 [命令提示字元] 來開啟。 在命令提示字元中，輸入 **sqlcmd** ，後面接著您要使用的一串選項。 如需 **sqlcmd**所支援選項的完整清單，請參閱 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
   
 -   使用者可指定要執行的單一 **陳述式，或者將公用程式指向包含要執行之** 陳述式的文字檔，來提交 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] 工作。 輸出通常會導向文字檔，不過，也可以在命令提示字元上顯示。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "68267629"
   
 ## <a name="typically-used-sqlcmd-options"></a>一般使用的 sqlcmd 選項  
   
--   伺服器選項 ( **-S**) 識別 **sqlcmd** 所連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+-   伺服器選項 (**-S**) 識別 **sqlcmd** 所連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
--   驗證選項 ( **-E**、 **-U** 和 **-P**) 指定供 **sqlcmd** 用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 **注意：** **-E** 選項是預設，不需要予以指定。  
+-   驗證選項 (**-E**、**-U** 和 **-P**) 指定供 **sqlcmd** 用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 **注意：**** -E** 選項是預設，不需要予以指定。  
   
--   輸入選項 ( **-Q**、 **-q** 和 **-i**) 識別 **sqlcmd** 的輸入位置。  
+-   輸入選項 (**-Q**、**-q** 和 **-i**) 識別 **sqlcmd** 的輸入位置。  
   
--   輸出選項 ( **-o**) 指定 **sqlcmd** 存放其輸出的檔案。  
+-   輸出選項 (**-o**) 指定 **sqlcmd** 存放其輸出的檔案。  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>連接到 sqlcmd 公用程式  
   
@@ -473,7 +473,7 @@ ms.locfileid: "68267629"
   
  `SQLCMD returned 100 to the command shell`  
   
-### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>G. 使用 sqlcmd 設定 Windows Azure SQL 資料庫的加密  
+### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. 使用 sqlcmd 設定 Azure SQL Database 的加密  
  **sqlcmd**可以在與 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料的連接上執行，以指定加密及憑證信任。 有兩個 **sqlcmd**`` 選項可以使用：  
   
 -   -N 參數是由用戶端用來要求加密的連接。 這個選項相當於 ADO.net 選項 `ENCRYPT = true`。  

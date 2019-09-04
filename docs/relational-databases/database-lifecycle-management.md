@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
-- Windows Azure Training Kit
+- Azure Training Kit
 - Database development
 - Database backup
 - Database connection management
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - Backup and restore
 - Database import and export
 - SQL Data Sync
-- Windows Azure Service Dashboard
+- Azure Service Dashboard
 - SQL Server Management Studio
 - Database management
 - Database export
@@ -31,12 +31,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39045b1fae3920c0c173d4e1d3419b0d0ad41fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ed1f0716e3919e88ad7dfd1ae6c54f8e702761f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134604"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155491"
 ---
 # <a name="database-lifecycle-management"></a>資料庫生命週期管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68134604"
  若要閱讀完整主題，請參閱 [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)(資料庫生命週期管理 (DLM))。  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows Azure 首頁](https://www.windowsazure.com/)   
- [Windows Azure 開發人員中心](https://www.windowsazure.com/develop/overview/)   
- [Windows Azure 管理中心](https://www.windowsazure.com/manage/overview/)   
- [Windows Azure 團隊部落格](https://www.windowsazure.com/community/blog/)   
- [Windows Azure 支援選項](https://www.windowsazure.com/support/contact/)  
+ [Azure 首頁](https://www.windowsazure.com/)   
+ [Azure 開發人員中心](https://www.windowsazure.com/develop/overview/)   
+ [Azure 管理中心](https://www.windowsazure.com/manage/overview/)   
+ [Azure 團隊部落格](https://www.windowsazure.com/community/blog/)   
+ [Azure 支援選項](https://www.windowsazure.com/support/contact/)  
   
   

@@ -24,18 +24,18 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811195"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154649"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的版本及支援功能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文提供 Linux 上各種 SQL Server 2017 版本支援的功能詳細資料。 如需 Windows 上 SQL Server 的版本和支援功能，請參閱 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)。  
+此文章提供 Linux 上各種 SQL Server 2017 版本支援的功能詳細資料。 如需 Windows 上 SQL Server 的版本和支援功能，請參閱 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
 安裝需求根據應用程式的需要而異。 不同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本可配合組織和個人的獨特效能、執行階段和價格需求。 安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件也將取決於您的特定需求。 下列章節幫助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的可用版本和元件之間做出最好的選擇。  
 
@@ -110,7 +110,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |鏡像備份|是|否|否|否|
 |熱新增記憶體和 CPU|是|否|否|否|
 |加密的備份|是|是|否|否|
-|混合式備份至 Windows Azure (備份至 URL)|是|是|否|否|
+|混合式備份至 Azure (備份至 URL)|是|是|否|否|
   
 <sup>1</sup> 在 Enterprise 版本上，節點數目是作業系統最大值。 Standard Edition 支援兩個節點。 
 

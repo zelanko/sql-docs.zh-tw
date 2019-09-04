@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9658f2b395ad83951e8fa9b243296046a0a48b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4644cc6d4c74e16e61842622f6210fcef235e005
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937641"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155643"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>從裝置還原備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中從裝置還原備份。  
   
 > [!NOTE]  
->  如需將 SQL Server 備份放至 Windows Azure Blob 儲存體服務的相關資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+>  如需將 SQL Server 備份放至 Azure Blob 儲存體服務的相關資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  **本主題內容**  
   
@@ -56,17 +56,17 @@ ms.locfileid: "67937641"
   
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
-2.  展開 **[資料庫]** ，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
+2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向 [工作]  ，然後按一下 [還原]  。  
+3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [還原]。  
   
-4.  按一下您想要的還原作業類型 ([資料庫]  、[檔案和檔案群組]  或 [交易記錄檔]  )。 這會開啟對應的還原對話方塊。  
+4.  按一下您想要的還原作業類型 ([資料庫]、[檔案和檔案群組] 或 [交易記錄檔])。 這會開啟對應的還原對話方塊。  
   
-5.  在 **[一般]** 頁面的 **[還原來源]** 區段中，按一下 **[來源裝置]** 。  
+5.  在 **[一般]** 頁面的 **[還原來源]** 區段中，按一下 **[來源裝置]**。  
   
 6.  按一下 **[來源裝置]** 文字方塊的瀏覽按鈕，這會開啟 **[指定備份]** 對話方塊。  
   
-7.  在 **[備份媒體]** 文字方塊中，選取 **[備份裝置]** ，然後按一下 **[加入]** 按鈕，以開啟 **[選取備份裝置]** 對話方塊。  
+7.  在 **[備份媒體]** 文字方塊中，選取 **[備份裝置]**，然後按一下 **[加入]** 按鈕，以開啟 **[選取備份裝置]** 對話方塊。  
   
 8.  在 **[備份裝置]** 文字方塊中，選取您要用於還原作業的裝置。  
 
@@ -78,7 +78,7 @@ ms.locfileid: "67937641"
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在標準列中，按一下 **[新增查詢]** 。  
+2.  在標準列中，按一下 **[新增查詢]**。  
   
 3.  在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式中，指定備份作業要用的邏輯或實體備份裝置。 這個範例會從實體名稱為 `Z:\SQLServerBackups\AdventureWorks2012.bak`的磁碟檔案還原。  
   

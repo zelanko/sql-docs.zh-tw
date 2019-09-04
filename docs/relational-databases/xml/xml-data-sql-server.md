@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cf71ed3b7bba7eabf66c4a282b16bd76e1f5bdbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc11a8dd385266d38bb12f067d2ffa1a88030b87
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096964"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190433"
 ---
 # <a name="xml-data-sql-server"></a>XML 資料 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,4 +44,5 @@ ms.locfileid: "68096964"
 ## <a name="related-content"></a>相關內容  
  [大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
  [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
+ [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)
   

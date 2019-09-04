@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db74b6381962d200242f1db912a18404d67ef06a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5cc065dc6f7b8e5b3d7ac5e84867029c9bd50f0f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938890"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155840"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -176,15 +176,15 @@ CREATE USER user_name
  指定在這個資料庫內用來識別使用者的名稱。 *user_name* 是一種 **sysname**。 該名稱長度最多可達 128 個字元。 當建立依據 Windows 主體的使用者時，除非指定另一個使用者名稱，否則 Windows 主體名稱會成為使用者名稱。  
   
  LOGIN *login_name*  
- 指定目前建立之資料庫使用者的登入。 *login_name* 必須是伺服器中的有效登入。 可以是依據 Windows 主體 (使用者或群組) 的登入，或是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 當這個 SQL Server 登入進入資料庫時，它會取得正在建立之資料庫使用者的名稱和識別碼。 在建立與 Windows 主體對應的登入時，請使用以下格式： **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** 。 如需範例，請參閱[語法摘要](#SyntaxSummary)。  
+ 指定目前建立之資料庫使用者的登入。 *login_name* 必須是伺服器中的有效登入。 可以是依據 Windows 主體 (使用者或群組) 的登入，或是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 當這個 SQL Server 登入進入資料庫時，它會取得正在建立之資料庫使用者的名稱和識別碼。 在建立與 Windows 主體對應的登入時，請使用以下格式：**[**_\<domainName\>_**\\**_\<loginName\>_**]**。 如需範例，請參閱[語法摘要](#SyntaxSummary)。  
   
- 如果 CREATE USER 陳述式是 SQL 批次中的唯一陳述式，Windows Azure SQL Database 會支援 WITH LOGIN 子句。 如果 CREATE USER 陳述式不是 SQL 批次中的唯一陳述式或是在動態 SQL 中執行，則不支援 WITH LOGIN 子句。  
+ 如果 CREATE USER 陳述式是 SQL 批次中的唯一陳述式，Azure SQL Database 會支援 WITH LOGIN 子句。 如果 CREATE USER 陳述式不是 SQL 批次中的唯一陳述式或是在動態 SQL 中執行，則不支援 WITH LOGIN 子句。  
   
  WITH DEFAULT_SCHEMA = *schema_name*  
  指定在解析這個資料庫使用者的物件名稱時，伺服器所搜尋到的第一個結構描述。  
   
  '*windows_principal*'  
- 為正在建立的資料庫使用者指定 Windows 主體。 *windows_principal* 可以是 Windows 使用者或 Windows 群組。 即使 *windows_principal* 不具備登入，也可以建立使用者。 當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，如果 *windows_principal* 不具備登入，則 Windows 主體必須透過具有登入的 Windows 群組成員資格在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 進行驗證，或者，連接字串必須將自主資料庫指定為初始目錄。 要透過 Windows 主體建立使用者時，請使用以下格式： **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** 。 如需範例，請參閱[語法摘要](#SyntaxSummary)。 具有 Active Directory 使用者身分的使用者，其名稱僅限 21 個字元以內。
+ 為正在建立的資料庫使用者指定 Windows 主體。 *windows_principal* 可以是 Windows 使用者或 Windows 群組。 即使 *windows_principal* 不具備登入，也可以建立使用者。 當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，如果 *windows_principal* 不具備登入，則 Windows 主體必須透過具有登入的 Windows 群組成員資格在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 進行驗證，或者，連接字串必須將自主資料庫指定為初始目錄。 要透過 Windows 主體建立使用者時，請使用以下格式：**[**_\<domainName\>_**\\**_\<loginName\>_**]**。 如需範例，請參閱[語法摘要](#SyntaxSummary)。 具有 Active Directory 使用者身分的使用者，其名稱僅限 21 個字元以內。
   
  '*Azure_Active_Directory_principal*'  
  **適用於**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
@@ -198,7 +198,7 @@ CREATE USER user_name
   - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
   - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
 
-- 適用於 Azure AD 群組和 Azure AD 應用程式之 Azure AD 物件的 DisplayName。 如果您有「護士」  安全性群組，則可以使用：  
+- 適用於 Azure AD 群組和 Azure AD 應用程式之 Azure AD 物件的 DisplayName。 如果您有「護士」安全性群組，則可以使用：  
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
@@ -258,7 +258,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
   
  WITHOUT LOGIN 子句會建立沒有對應至 SQL Server 登入的使用者。 這個使用者可以用 guest 的身分連接到其他資料庫。 可指派權限給這位沒有登入的使用者，而且在安全性內容變更為沒有登入的使用者時，原始使用者會收到沒有登入之使用者的權限。 請參閱範例 [D. 建立及使用不含登入的使用者](#withoutLogin)。  
   
- 只有對應到 Windows 主體的使用者可以包含反斜線字元 ( **\\** )。
+ 只有對應到 Windows 主體的使用者可以包含反斜線字元 (**\\**)。
   
  您不能以 CREATE USER 建立 guest 使用者，因為每一個資料庫都已經有 guest 使用者了。 您可以授與 guest 使用者 CONNECT 權限來啟用它，如下所示：  
   

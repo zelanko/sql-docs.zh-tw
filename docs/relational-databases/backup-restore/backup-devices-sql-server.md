@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a44b8b9c4ae4c70ec41a7c699572ecf4adcc224
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103768"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152129"
 ---
 # <a name="backup-devices-sql-server"></a>備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」  ) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
    
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
  備份磁碟  
@@ -46,7 +46,7 @@ ms.locfileid: "68103768"
  實體備份裝置  
  磁帶機或作業系統所提供的磁碟檔案。 備份可以寫入 1 到 64 部備份裝置。 如果備份需要多部備份裝置，這些裝置都必須對應至單一裝置類型 (磁碟或磁帶)。  
   
- 除了磁碟或磁帶之外，SQL Server 備份也可以寫入 Windows Azure Blob 儲存體服務。  
+ 除了磁碟或磁帶之外，SQL Server 備份也可以寫入 Azure Blob 儲存體服務。  
  
   
 ##  <a name="DiskBackups"></a> 使用磁碟備份裝置  
@@ -66,7 +66,7 @@ ms.locfileid: "68103768"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  例如：  
   
@@ -80,7 +80,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  例如，  
   
@@ -116,7 +116,7 @@ GO
     > **重要！** 透過網路備份資料可能會受到網路問題的影響。因此，我們建議您在使用遠端磁碟時，於備份作業完成後進行驗證。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>指定通用命名慣例 (UNC) 名稱  
- 若要在備份或還原命令中指定網路共用，請使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\** <系統名稱>  **\\** <共用名稱>  **\\** <路徑>  **\\** <檔案名稱>  。  
+ 若要在備份或還原命令中指定網路共用，請使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\**<系統名稱>**\\**<共用名稱>**\\**<路徑>**\\**<檔案名稱>。  
   
  例如：  
   
@@ -133,7 +133,7 @@ GO
    
  磁帶機必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 作業系統所支援的，才能將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 資料備份到磁帶中。 此外，對指定的磁帶機而言，我們建議您僅使用磁帶機製造商所建議的磁帶。 如需有關如何安裝磁帶機的詳細資訊，請參閱 Windows 作業系統的文件。  
   
- 使用磁帶機時，備份作業可能會填滿一捲磁帶，然後繼續寫入另一捲磁帶。 每個磁帶都含有媒體標頭。 第一個使用的媒體稱為 *「初始磁帶」* 。 後續的磁帶都稱為 *接續磁帶* ，每捲磁帶都有一個媒體序號，後面的磁帶編號比前面的高。 例如，與四個磁帶裝置相關聯的媒體集，內含至少四捲初始磁帶；而如果一捲磁帶裝不下整個資料庫，則還會有四捲接續磁帶。 附加備份組的時候，您必須掛載整組媒體中的最後一捲磁帶。 若未掛載最後一捲磁帶， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 往前掃描到掛載磁帶的結尾時，便會要求您更換磁帶。 此時，請掛載最後一捲磁帶。  
+ 使用磁帶機時，備份作業可能會填滿一捲磁帶，然後繼續寫入另一捲磁帶。 每個磁帶都含有媒體標頭。 第一個使用的媒體稱為 *「初始磁帶」*。 後續的磁帶都稱為 *接續磁帶* ，每捲磁帶都有一個媒體序號，後面的磁帶編號比前面的高。 例如，與四個磁帶裝置相關聯的媒體集，內含至少四捲初始磁帶；而如果一捲磁帶裝不下整個資料庫，則還會有四捲接續磁帶。 附加備份組的時候，您必須掛載整組媒體中的最後一捲磁帶。 若未掛載最後一捲磁帶， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 往前掃描到掛載磁帶的結尾時，便會要求您更換磁帶。 此時，請掛載最後一捲磁帶。  
   
  使用磁帶備份裝置就像使用磁碟裝置一樣，但有以下例外情況：  
   
@@ -146,7 +146,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  例如：  
   
@@ -160,7 +160,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> 磁帶專用的 BACKUP 和 RESTORE 選項 (Transact-SQL)  
  為了方便磁帶管理作業，BACKUP 陳述式提供了下列磁帶專用的選項：  
@@ -178,11 +178,11 @@ GO
 ###  <a name="OpenTapes"></a> 管理開啟的磁帶  
  若要檢視開啟的磁帶裝置清單以及掛載要求的狀態，請查詢 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 動態管理檢視。 這個檢視顯示所有開啟的磁帶。 這包括正在等待下一個 BACKUP 或 RESTORE 作業而暫時閒置的使用中磁帶。  
   
- 如果磁帶不慎保持在開啟狀態，釋放磁帶最快速的方式就是使用下列命令：RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_。 如需詳細資訊，請參閱 [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)。  
+ 如果磁帶不慎保持在開啟狀態，釋放磁帶最快速的方式就是使用下列命令：RESTORE REWINDONLY FROM TAPE **=**_backup_device_name_。 如需詳細資訊，請參閱 [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)。  
   
   
-## <a name="using-the-windows-azure-blob-storage-service"></a>使用 Windows Azure Blob 儲存體服務  
- SQL Server 備份可以寫入 Windows Azure Blob 儲存體服務。  如需如何針對備份使用 Windows Azure Blob 儲存體服務的詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+## <a name="using-the-azure-blob-storage-service"></a>使用 Azure Blob 儲存體服務  
+ SQL Server 備份可以寫入 Azure Blob 儲存體服務。  如需如何針對備份使用 Azure Blob 儲存體服務的詳細資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 ##  <a name="LogicalBackupDevice"></a> 使用邏輯備份裝置  
  *「邏輯備份裝置」* (Logical backup device) 是選擇性的使用者自訂名稱，而且它會指向特定的實體備份裝置 (磁碟檔案或磁帶機)。 邏輯備份裝置可讓您在參考對應的實體備份裝置時，使用間接取值。  
@@ -218,7 +218,7 @@ GO
   
   
 ##  <a name="Archiving"></a> 封存 SQL Server 備份  
- 建議您使用檔案系統備份公用程式來封存磁碟備份，並將封存保存在異地。 使用磁碟的優點是，您可以使用網路將封存的備份寫入異地磁碟。 Windows Azure Blob 儲存體服務可做為異地封存選項。  您可以上傳磁碟備份，或是直接將備份寫入 Windows Azure Blob 儲存體服務中。  
+ 建議您使用檔案系統備份公用程式來封存磁碟備份，並將封存保存在異地。 使用磁碟的優點是，您可以使用網路將封存的備份寫入異地磁碟。 Azure Blob 儲存體服務可作為異地封存選項。  您可以上傳磁碟備份，或是直接將備份寫入 Azure Blob 儲存體服務中。  
   
  另一種常見的封存方法是將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入本機備份磁碟、將備份封存至磁帶，然後將磁帶存放在異地。  
 

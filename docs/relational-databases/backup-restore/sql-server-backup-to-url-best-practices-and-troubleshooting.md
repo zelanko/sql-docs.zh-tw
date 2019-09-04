@@ -10,32 +10,32 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4c93f36ca78bbd6cdeedf8d88314f7374f34a9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041385"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176370"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  本主題包含從 SQL Server 備份及還原至 Windows Azure Blob 服務的最佳作法和疑難排解提示。  
+  本主題包含從 SQL Server 備份及還原至 Azure Blob 服務的最佳做法和疑難排解提示。  
   
- 如需有關使用 Windows Azure Blob 儲存體服務進行 SQL Server 備份或還原作業的詳細資訊，請參閱：  
+ 如需有關使用 Azure Blob 儲存體服務進行 SQL Server 備份或還原作業的詳細資訊，請參閱：  
   
 -   [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教學課程：SQL Server 備份及還原至 Azure Blob 儲存體服務](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>管理備份  
  下列清單包含管理備份的一般建議：  
   
 -   建議針對每個備份使用唯一的檔案名稱，避免不小心覆寫 Blob。  
   
--   建立容器時，建議您將存取層級設定為 [私用]  ，如此只有能夠提供必要驗證資訊的使用者或帳戶才能讀取或寫入容器中的 Blob。  
+-   建立容器時，建議您將存取層級設定為 [私用]，如此只有能夠提供必要驗證資訊的使用者或帳戶才能讀取或寫入容器中的 Blob。  
   
--   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫位於 Microsoft Azure 虛擬機器中執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，請使用與虛擬機器位於相同地區的儲存體帳戶，避免產生不同地區之間的資料傳輸成本。 使用相同的地區也可以確保備份與還原作業達到最佳效能。  
+-   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫位於在 Azure 虛擬機器中執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，請使用與虛擬機器位於相同地區的儲存體帳戶，避免產生不同地區之間的資料傳輸成本。 使用相同的地區也可以確保備份與還原作業達到最佳效能。  
   
 -   失敗的備份活動可能會產生無效的備份檔案。 我們建議您定期識別失敗的備份並刪除 Blob 檔案。 如需詳細資訊，請參閱[刪除擁有使用中租用的備份 Blob 檔案](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
@@ -45,18 +45,18 @@ ms.locfileid: "68041385"
   
 ## <a name="handling-large-files"></a>處理大型檔案  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份作業會使用多個執行緒來最佳化 Windows Azure Blob 儲存體服務的資料傳輸。  不過，其效能取決於各種因素，例如 ISV 頻寬和資料庫的大小。 如果您計畫要備份內部部署 SQL Server 資料庫中的大型資料庫或檔案群組，建議您先進行一些輸送量測試。 Azure [儲存體 SLA](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) 具有最大的 Blob 處理時間，您可以參考使用。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份作業會使用多個執行緒來最佳化 Azure Blob 儲存體服務的資料傳輸。  不過，其效能取決於各種因素，例如 ISV 頻寬和資料庫的大小。 如果您計畫要備份內部部署 SQL Server 資料庫中的大型資料庫或檔案群組，建議您先進行一些輸送量測試。 Azure [儲存體 SLA](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) 具有最大的 Blob 處理時間，您可以參考使用。  
   
 -   備份大型檔案時，務必遵循[管理備份](##managing-backups)一節中的建議使用 `WITH COMPRESSION` 選項。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>疑難排解備份至 URL 或從中還原  
- 以下是一些快速疑難排解備份至 Windows Azure Blob 儲存體服務或從中還原時發生之錯誤的方法。  
+ 以下是對備份至 Azure Blob 儲存體服務或從中還原時發生的錯誤，進行疑難排解的一些快速方法。  
   
  若要避免由於不支援的選項或限制而發生的錯誤，請在 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 文章中檢閱限制的清單，以及支援 BACKUP 和 RESTORE 命令的資訊。  
   
  **驗證錯誤：**  
   
--   `WITH CREDENTIAL` 是新的選項，而且必須在備份至 Microsoft Azure Blob 儲存體服務或從中還原時使用。 與認證有關的失敗可能包括：  
+-   `WITH CREDENTIAL` 是新的選項，而且在備份至 Azure Blob 儲存體服務或從中還原時是必要的。 與認證有關的失敗可能包括：  
   
      **BACKUP** 或 **RESTORE** 命令中指定的認證不存在。 若要避免此問題，您可以在 Backup 陳述式中加入 T-SQL 陳述式來建立認證 (如果認證不存在的話)。 以下是您可以使用的範例：  
   
@@ -70,11 +70,11 @@ ms.locfileid: "68041385"
   
 -   認證存在，但是用來執行 Backup 命令的登入帳戶沒有存取認證的權限。 請使用具備 **更改任何認證** 權限的 ***db_backupoperator*** 角色登入帳戶。  
   
--   確認儲存體帳戶名稱與金鑰值。 儲存在認證中的資訊必須符合您在備份和還原作業中使用之 Windows Azure 儲存體帳戶的屬性值。  
+-   確認儲存體帳戶名稱與金鑰值。 儲存在認證中的資訊必須符合您在備份和還原作業中使用之 Azure 儲存體帳戶的屬性值。  
   
  **備份錯誤/失敗：**  
   
--   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗]  錯誤。  
+-   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗] 錯誤。  
   
 -   使用下列錯誤記錄來協助疑難排解備份錯誤：  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: dbfcc5df16b1801154f9be9af46c7bad07925f3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ce8040b37ec08c82b11c9ff572c13125064523b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093483"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155783"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server、HTTP 儲存體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SQLServer:HTTP Storage** 效能物件包含監視 Microsoft Azure 儲存體帳戶的效能計數器。 您可以使用 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) 功能，在 Windows Azure 儲存體 Blob 中儲存資料庫檔案。 這個效能物件會將每個 Windows Azure 儲存體帳戶視為不同的磁碟機。  
+  **SQLServer:HTTP Storage** 效能物件包含監視 Microsoft Azure 儲存體帳戶的效能計數器。 您可以使用 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)功能，在 Azure 儲存體 Blob 中儲存資料庫檔案。 這個效能物件將每個 Azure 儲存體帳戶視為不同的磁碟機。  
   
 |計數器名稱|Description|  
 |------------------|-----------------|  

@@ -10,16 +10,16 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136485"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155692"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
-本文描述 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 版本 (包括相關 Service Pack) 的已知問題。
+此文章說明 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 版本 (包括相關 Service Pack) 的已知問題。
 
 ## <a name="sql-server-2014-service-pack-2-sp2"></a>SQL Server 2014 Service Pack 2 (SP2)
 
@@ -190,7 +190,7 @@ memory-optimized table DLLs.
   
 **因應措施：** 如果您使用雜湊索引，請查看查詢和查詢計畫，以判斷查詢在索引鍵的子集或不等比較述詞上是否可以從索引搜尋作業獲益。 如果您需要進行索引鍵子集的搜尋，請使用 NONCLUSTERED 索引，或是在您正好需要搜尋的資料行上使用 HASH 索引。 如果您需要進行不等號比較述詞的搜尋，請使用 NONCLUSTERED 索引而不是 HASH 索引。  
   
-#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>在相同查詢中使用經記憶體最佳化資料表和經記憶體最佳化資料表變數時，如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON 則會發生失敗  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>在相同查詢中使用經記憶體最佳化資料表和經記憶體最佳化資料表變數時，如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON 則會發生失敗  
 **問題：** 如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON，且您在使用者交易內容外的相同陳述式中存取記憶體最佳化資料表及記憶體最佳化資料表變數，可能會收到下列錯誤訊息：  
   
 ```  
@@ -213,7 +213,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
   
 **因應措施：** 無。 若要在以原生方式編譯的預存程序中執行短期的查詢，請勿依賴執行統計資料 DMV 中所報告的 worker_time。  
   
-#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>如果原生編譯的預存程序包含長的運算式，則 SHOWPLAN_XML 會發生錯誤  
+#### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>如果原生編譯的預存程序包含長的運算式，則 SHOWPLAN_XML 會發生錯誤  
 **問題：** 如果以原生方式編譯的預存程序包含長運算式，則使用 T-SQL 選項 SET SHOWPLAN_XML ON 或是使用 Management Studio 中 [顯示估計執行計畫] 選項來取得此程序的 SHOWPLAN_XML 時，就可能會產生下列錯誤：  
   
 ```  
@@ -334,10 +334,10 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 如需詳細資訊，請參閱 [SQL Server 2014 Reporting Services 提示、秘訣和疑難排解](https://go.microsoft.com/fwlink/?LinkID=391254)。  
   
-### <a name="AzureVM"></a>Windows Azure 虛擬機器上的 SQL Server 2014 RTM  
+### <a name="AzureVM"></a>Azure 虛擬機器上的 SQL Server 2014 RTM  
   
-#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>在 Windows Azure 中設定可用性群組接聽程式時，[新增 Azure 複本精靈] 傳回錯誤  
-**問題：** 如果可用性群組有接聽程式，嘗試在 Windows Azure 中設定接聽程式時，[新增 Azure 複本精靈] 將會傳回錯誤。  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>在 Azure 中設定可用性群組接聽程式時，[新增 Azure 複本精靈] 傳回錯誤  
+**問題：** 如果可用性群組有接聽程式，嘗試在 Azure 中設定接聽程式時，[新增 Azure 複本精靈] 將會傳回錯誤。  
   
 這個問題會發生是因為可用性群組接聽程式需要在每一個主控可用性群組複本的子網路 (包括 Azure 子網路) 中指派一個 IP 位址。  
   
@@ -345,9 +345,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  在 [接聽程式] 頁面中，將 Azure 子網路中將會主控可用性群組複本的免費靜態 IP 位址指派給可用性群組接聽程式。  
   
-    這項因應措施可讓精靈完成在 Windows Azure 中新增複本的工作。  
+    這項因應措施可讓精靈完成在 Azure 中新增複本的工作。  
   
-2.  當精靈完成之後，您必須在 Windows Azure 中完成接聽程式的組態，如 [教學課程：Windows Azure 中 AlwaysOn 可用性群組的接聽程式組態](https://msdn.microsoft.com/library/dn376546.aspx)中所述。  
+2.  當精靈完成之後，您必須在 Azure 中完成接聽程式的組態，如 [Azure 中 AlwaysOn 可用性群組的接聽程式設定](https://msdn.microsoft.com/library/dn376546.aspx)中所述  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   
@@ -410,7 +410,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 升級建議程式會回報與 SQL Server Reporting Services 無關的升級問題  
 **問題：** 隨附於 SQL Server 2014 媒體的 SQL Server Upgrade Advisor (SSUA)，在分析 SQL Server Reporting Services 伺服器時誤報多項錯誤。  
   
-**因應措施：** [SSUA 的 SQL Server 2014 功能套件](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server Upgrade Advisor 已修正此問題。  
+**因應措施：**[SSUA 的 SQL Server 2014 功能套件](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server Upgrade Advisor 已修正此問題。  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 升級建議程式在分析 SQL Server Integration Services 伺服器時回報錯誤  
 **問題：** 隨附於 SQL Server 2014 媒體的 SQL Server Upgrade Advisor (SSUA) 在分析 SQL Server Integration Services 伺服器時回報錯誤。  顯示給使用者看的錯誤如下：  
@@ -421,6 +421,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**因應措施：** [SSUA 的 SQL Server 2014 功能套件](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server Upgrade Advisor 已修正此問題。  
+**因應措施：**[SSUA 的 SQL Server 2014 功能套件](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server Upgrade Advisor 已修正此問題。  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

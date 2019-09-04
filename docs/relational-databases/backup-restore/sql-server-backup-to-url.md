@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6be8d736294df50a5ca3d288b77e4b0daac556b8
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941121"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176361"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,22 +41,22 @@ ms.locfileid: "68941121"
   
 -   [使用 [維護計畫精靈] 將 SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)  
   
--   [使用 SQL Server Management Studio 從 Windows Azure 儲存體還原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
+-   [使用 SQL Server Management Studio 從 Azure 儲存體還原](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
   
 ###  <a name="security"></a> 安全性  
  以下是備份至 Microsoft Azure Blob 儲存體服務或從中還原時的安全性考量和需求。  
   
--   建立 Microsoft Azure Blob 儲存體服務的容器時，建議您將存取權設為 [私用]  。 將存取權設定為 [私用] 可將存取對象限制為能夠提供必要資訊來驗證 Windows Azure 帳戶的使用者或帳戶。  
+-   建立 Microsoft Azure Blob 儲存體服務的容器時，建議您將存取權設為 [私用]  。 將存取權設定為 [私用] 可限制只有能夠提供必要資訊向 Azure 帳戶驗證的使用者或帳戶，才有存取權。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中儲存 Windows Azure 帳戶名稱和存取金鑰驗證或共用存取簽章和存取 Token。 當 Windows Azure 帳戶執行備份或還原作業時，這項資訊就會用來驗證該帳戶。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中儲存 Azure 帳戶名稱和存取金鑰驗證或共用存取簽章和存取權杖。 在執行備份或還原作業時，系統會使用此資訊向該 Azure 帳戶驗證。  
   
 -   用來發出 BACKUP 或 RESTORE 命令的使用者帳戶應該位於擁有 **改變任何認證** 權限的 **db_backup 運算子** 資料庫角色中。  
   
 ###  <a name="intorkeyconcepts"></a> 重要元件和概念簡介  
  下列兩節將介紹 Microsoft Azure Blob 儲存體服務，以及備份至 Microsoft Azure Blob 儲存體服務或從中還原時使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。 為了備份至 Microsoft Azure Blob 儲存體服務或從中還原，請務必了解這些元件以及它們之間的互動方式。  
   
- 在您的 Azure 訂閱內建立 Windows Azure 儲存體帳戶是這個程序的第一個步驟。 這個儲存體帳戶是系統管理帳戶，有以儲存體帳戶建立之所有容器和物件的完整系統管理權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Windows Azure 儲存體帳戶名稱及其存取金鑰值來驗證和讀寫 Blob 至 Microsoft Azure Blob 儲存體服務，或使用針對特定容器產生的共用存取簽章 Token 授與它讀寫權限。 如需 Azure 儲存體帳戶的詳細資訊，請參閱[關於 Azure 儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)，如需共用存取簽章的詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。  
+ 在您的 Azure 訂用帳戶內建立 Azure 儲存體帳戶是這個程序的第一個步驟。 這個儲存體帳戶是系統管理帳戶，有以儲存體帳戶建立之所有容器和物件的完整系統管理權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Azure 儲存體帳戶名稱及其存取金鑰值來驗證和讀寫 Blob 至 Microsoft Azure Blob 儲存體服務，或使用針對特定容器產生的共用存取簽章 Token 授與它讀寫權限。 如需 Azure 儲存體帳戶的詳細資訊，請參閱[關於 Azure 儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)，如需共用存取簽章的詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。  
   
 ###  <a name="blockbloborpageblob"></a> 備份至區塊 Blob 與分頁 Blob 
  Microsoft Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 SQL Server 備份可以使用這兩種 Blob 類型，視所使用的 Transact-SQL 語法而定：如果認證中使用儲存體金鑰，則會使用分頁 Blob；如果使用共用存取簽章，就會使用區塊 Blob。
@@ -71,7 +71,7 @@ ms.locfileid: "68941121"
 - 備份至多個區塊 Blob
 
 ###  <a name="Blob"></a> Microsoft Azure Blob 儲存體服務  
- **儲存體帳戶：** 儲存體帳戶是所有儲存體服務的起點。 若要存取 Microsoft Azure Blob 儲存體服務，請先建立 Microsoft Azure 儲存體帳戶。 如需詳細資訊，請參閱 [建立儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。  
+ **儲存體帳戶：** 儲存體帳戶是所有儲存體服務的起點。 若要存取 Microsoft Azure Blob 儲存體服務，請先建立 Azure 儲存體帳戶。 如需詳細資訊，請參閱 [建立儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。  
   
  **容器：** 容器會提供一組 Blob 的群組，且可以儲存不限數目的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Microsoft Azure Blob 服務，您至少必須建立根容器。 您可以針對容器產生共用存取簽章 Token，並僅對特定容器的物件授與存取權。  
   
@@ -211,7 +211,7 @@ ms.locfileid: "68941121"
 > [!NOTE]  
 >  若要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份，或覆寫現有的媒體集，您必須在 SQL Server Management Studio 中使用 Transact-SQL、Powershell 或 C#，而不是使用備份工作。  
   
- 下列步驟說明在 SQL Server Management Studio 中對備份資料庫工作進行變更，以允許備份至 Windows Azure 儲存體：  
+ 下列步驟說明如何在 SQL Server Management Studio 中對備份資料庫工作進行變更，以允許備份至 Azure 儲存體：  
   
 1.  在物件總管  中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
 
@@ -242,7 +242,7 @@ ms.locfileid: "68941121"
  [建立認證 - 向 Azure 儲存體驗證](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 使用 [維護計畫精靈] 將 SQL Server 備份至 URL  
- 與先前所述的備份工作類似，SQL Server Management Studio 中的 [維護計畫精靈] 可包含 **URL** 作為其中一個目的地選項，以及作為備份至 Microsoft Azure 儲存體 (像是 SQL 認證) 所需的其他支援物件。 如需詳細資訊，請參閱 **Using Maintenance Plan Wizard** 中的 [Define Backup Tasks](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)一節。  
+ 與先前所述的備份工作類似，SQL Server Management Studio 中的 [維護計畫精靈] 包含 **URL** 作為其中一個目的地選項，也包含備份至 Microsoft Azure 儲存體所需的其他支援物件 (像是 SQL 認證)。 如需詳細資訊，請參閱 **Using Maintenance Plan Wizard** 中的 [Define Backup Tasks](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)一節。  
   
 > [!NOTE]  
 >  若要建立等量的備份組、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案快照集備份，或使用共用存取權杖的 SQL 認證，您必須在 [維護計畫精靈] 中使用 Transact-SQL、Powershell 或 C#，而不是使用備份工作。  

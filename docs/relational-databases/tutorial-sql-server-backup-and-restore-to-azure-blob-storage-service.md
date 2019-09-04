@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893620"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155704"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL Server 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "68893620"
 
 1. 開啟 Azure 入口網站。 
 1. 巡覽至您的儲存體帳戶。 
-1. 選取儲存體帳戶，向下捲動至 [Blob 服務]  。
-1. 選取 [Blob]  ，然後選取 [+容器]  以新增新的容器。 
+1. 選取儲存體帳戶，向下捲動至 [Blob 服務]。
+1. 選取 [Blob]，然後選取 [+容器] 以新增新的容器。 
 1. 輸入容器名稱，並記下您指定的容器名稱。 此資訊會在本快速入門稍後的 T-SQL 陳述式內的 URL (備份檔路徑) 中用到。 
-1. 選取 [確定]  。 
+1. 選取 [確定]。 
     
     ![新增容器](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
@@ -54,8 +54,8 @@ ms.locfileid: "68893620"
 ## <a name="create-a-test-database"></a>建立測試資料庫 
 
 1. 啟動 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 並連線至 SQL Server 執行個體。
-1. 開啟 [新增查詢]  視窗。 
-1. 執行下列 Transact-SQL (T-SQL) 程式碼以建立測試資料庫。 重新整理 [物件總管]  中的 [資料庫]  節點以查看新的資料庫。 
+1. 開啟 [新增查詢] 視窗。 
+1. 執行下列 Transact-SQL (T-SQL) 程式碼以建立測試資料庫。 重新整理 [物件總管] 中的 [資料庫] 節點以查看新的資料庫。 
 
 ```sql
 USE [master]
@@ -90,7 +90,7 @@ GO
 
 
 ## <a name="create-a-sql-server-credential"></a>建立 SQL Server 認證
-SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。 此處，SQL Server 備份和還原程序會使用認證，向 Windows Azure Blob 儲存體服務驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需認證的詳細資訊，請參閱[認證](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)。 
+SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。 此處，SQL Server 備份和還原程序會使用認證，向 Azure Blob 儲存體服務驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需認證的詳細資訊，請參閱[認證](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)。 
 
   > [!IMPORTANT]
   > 以下所述建立 SQL Server 認證的需求是特別針對 SQL Server 備份程序 ([SQL Server 備份至 URL](backup-restore/sql-server-backup-to-url.md) 及 [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)) 的需求。 在存取 Azure 儲存體以寫入或讀取備份時，SQL Server 會使用儲存體帳戶名稱與存取金鑰資訊。
@@ -98,8 +98,8 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 ### <a name="access-keys"></a>存取金鑰
 您將需要儲存體帳戶的存取金鑰，才可建立認證。 
 
-1. 巡覽至 Azure 入口網站的 [儲存體帳戶]  。 
-1. 選取 [設定]  下的 [存取金鑰]  。 
+1. 巡覽至 Azure 入口網站的 [儲存體帳戶]。 
+1. 選取 [設定] 下的 [存取金鑰]。 
 1. 儲存金鑰和連接字串，以便稍後於本快速入門中使用。 
 
    ![存取金鑰](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)
@@ -108,7 +108,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 使用您儲存的存取金鑰，遵循下列步驟以建立 SQL Server 認證。 
 
 1. 使用 SQL Server Management Studio 連線到 SQL Server 
-1. 選取 **SQLTestDB** 資料庫，並開啟 [新增查詢]  視窗。 
+1. 選取 **SQLTestDB** 資料庫，並開啟 [新增查詢] 視窗。 
 1. 將下列範例複製並貼入查詢視窗中，視需要修改並執行： 
 
    ```sql
@@ -119,11 +119,11 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 
 1. 執行陳述式以建立認證。 
 
-## <a name="back-up-database-to-the-windows-azure-blob-storage-service"></a>將資料庫備份至 Windows Azure Blob 儲存體服務
-在本節中，您將使用 T-SQL 陳述式來執行 Windows Azure Blob 儲存體服務的完整資料庫備份。 
+## <a name="back-up-database-to-the-azure-blob-storage-service"></a>將資料庫備份至 Azure Blob 儲存體服務
+在本節中，您將使用 T-SQL 陳述式來執行 Azure Blob 儲存體服務的完整資料庫備份。 
 
 1. 使用 SQL Server Management Studio 連線到 SQL Server 
-1. 選取 **SQLTestDB** 資料庫，並開啟 [新增查詢]  視窗。 
+1. 選取 **SQLTestDB** 資料庫，並開啟 [新增查詢] 視窗。 
 1. 將下列範例複製並貼入查詢視窗中，並視需要修改： 
 
      ```sql
@@ -138,11 +138,11 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 1. 執行陳述式，以將 SQLTestDB 資料庫備份至 URL。 
 
  
-## <a name="restore-database-from-windows-azure-blob-storage-service"></a>從 Windows Azure Blob 儲存體服務還原資料庫
+## <a name="restore-database-from-azure-blob-storage-service"></a>從 Azure Blob 儲存體服務還原資料庫
 在本節中，您將使用 T-SQL 陳述式，還原完整資料庫備份。 
 
 1. 使用 SQL Server Management Studio 連線到 SQL Server 
-1. 開啟 [新增查詢]  視窗。 
+1. 開啟 [新增查詢] 視窗。 
 1. 將下列範例複製並貼入查詢視窗中，並視需要修改： 
 
  ```sql

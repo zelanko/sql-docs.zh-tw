@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d5fa3b8a91147789dfafad6a69ac6210dfd8119
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a8ee23c8eb8a51328ccc9808207f04823e9b980
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940889"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176302"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>將多個資料庫備份至 Azure Blob 儲存體服務 - Powershell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主題提供範例指令碼，可讓您使用 PowerShell 指令程式，自動執行 Windows Azure BLOB 儲存體服務的備份作業。  
+  本主題提供範例指令碼，可讓您使用 PowerShell Cmdlet，自動執行 Azure Blob 儲存體服務的備份作業。  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>備份與還原之 PowerShell 指令程式的概觀  
- **Backup-SqlDatabase** 和 **Restore-SqlDatabase** 是可用於備份和復原作業的兩個主要 Cmdlet。 此外，自動操作 Windows Azure BLOB 儲存體備份作業可能還需要其他指令程式，例如 **SqlCredential** 指令程式集。以下是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所提供可用於備份及還原之 PowerShell 指令程式的清單︰  
+ **Backup-SqlDatabase** 和 **Restore-SqlDatabase** 是可用於備份和復原作業的兩個主要 Cmdlet。 此外，自動操作 Azure Blob 儲存體備份作業可能還需要其他 Cmdlet，例如 **SqlCredential** Cmdlet。以下是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所提供可用於備份及還原之 PowerShell Cmdlet 的清單︰  
   
  Backup-SqlDatabase  
  此指令程式可用於建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。  
@@ -32,7 +32,7 @@ ms.locfileid: "67940889"
  可用於還原資料庫。  
   
  New-SqlCredential  
- 此指令程式可用於建立 SQL Server 備份至 Windows Azure 儲存體時所使用的 SQL 認證。 如需有關認證及其在 SQL Server 備份與還原中之用法的詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 此 Cmdlet 可用於建立 SQL Server 備份至 Azure 儲存體時所使用的 SQL 認證。 如需有關認證及其在 SQL Server 備份與還原中之用法的詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  Get-SqlCredential  
  此指令程式可用於擷取認證物件及其屬性。  
@@ -44,7 +44,7 @@ ms.locfileid: "67940889"
  此指令程式可用於變更或設定 SQL 認證物件的屬性。  
   
 > [!TIP]  
->  如需備份及還原至 Windows Azure BLOB 儲存體，即可使用 Credential 指令程式。  
+>  Credential Cmdlet 是用於備份及還原至 Azure Blob 儲存體的情節。  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>多個資料庫的 PowerShell，多個執行個體的備份作業  
  下列各節包含多種作業的指令碼，例如建立多個 SQL Server 執行個體的 SQL 認證、備份 SQL Server 執行個體中的所有使用者資料庫等等。 您可以根據環境的需求，利用這些指令碼自動化或排程備份作業。 此處所提供的指令碼僅為範例，您可以針對您的環境的需要而修改或擴充。  
@@ -59,7 +59,7 @@ ms.locfileid: "67940889"
   
      如需詳細資訊，請參閱 [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)。  
   
-3.  雖然您可以利用變更變數值，嘗試個別變更每一個程式碼範例，但您還是必須先建立 Windows Azure Blob 儲存體服務之備份及還原作業所需和必要條件的 Windows Azure BLOB 儲存體帳戶與 SQL 認證。  
+3.  雖然您可以利用變更變數值，嘗試個別變更每一個程式碼範例，但您還是必須針對 Azure Blob 儲存體服務之備份及還原作業，建立其必要條件：Azure Blob 儲存體帳戶與 SQL 認證。  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>建立所有 SQL Server 執行個體的 SQL 認證  
  下列兩個範例指令碼都會為電腦上所有的 SQL Server 執行個體上建立 SQL 認證 "mybackupToURL"。 第一個範例比較簡單而且會建立認證，但不會設陷例外狀況。  例如，如果電腦上的某一個執行個體目前已有同名的認證，此指令碼將會失敗。 第二個範例會設陷錯誤，並允許指令碼繼續執行。  
