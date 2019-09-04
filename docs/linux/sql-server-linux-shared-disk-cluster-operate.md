@@ -1,6 +1,6 @@
 ---
 title: 操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
-description: 本文說明如何操作 Linux 上的 SQL Server 容錯移轉叢集執行個體 (FCI)。
+description: 此文章說明如何操作 Linux 上的 SQL Server 容錯移轉叢集執行個體 (FCI)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
+ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "68032293"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154568"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文說明如何操作 Linux 上的 SQL Server 容錯移轉叢集執行個體 (FCI)。 如果您尚未在 Linux 上建立 SQL Server FCI，請參閱[設定容錯移轉叢集執行個體 - Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)。 
+此文章說明如何操作 Linux 上的 SQL Server 容錯移轉叢集執行個體 (FCI)。 如果您尚未在 Linux 上建立 SQL Server FCI，請參閱[設定容錯移轉叢集執行個體 - Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)。 
 
 ## <a name="failover"></a>容錯移轉
 
@@ -30,10 +30,10 @@ FCI 的容錯移轉類似於 Windows Server 容錯移轉叢集 (WSFC)。 如果�
 
 容錯移轉的方式取決於 Linux 發行版本而定。 請遵循 Linux 發行版本的指示。
 
-- [RHEL 或 Ubuntu](#-manual-failover-rhel-or-ubuntu)
-- [SLES](#-manual-failover-sles)
+- [RHEL 或 Ubuntu](#manual-failover-rhel-or-ubuntu)
+- [SLES](#manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> 手動容錯移轉 (RHEL 或 Ubuntu)
+## <a name="manual-failover-rhel-or-ubuntu"></a>手動容錯移轉 (RHEL 或 Ubuntu)
 
 若要執行手動容錯移轉，請在 Red Hat Enterprise Linux (RHEL) 或 Ubuntu 伺服器上執行下列步驟。
 1.  發出下列命令： 
@@ -54,7 +54,7 @@ FCI 的容錯移轉類似於 Windows Server 容錯移轉叢集 (WSFC)。 如果�
 
 \<FCIResourceName> 是 FCI 的 Pacemaker 資源名稱。 
 
-## <a name = "#-manual-failover-sles"></a> 手動容錯移轉 (SLES)
+## <a name="manual-failover-sles"></a>手動容錯移轉 (SLES)
 
 
 在 Suse Linux Enterprise Server (SLES) 中，使用 `migrate` 命令手動容錯移轉至 SQL Server FCI。 例如：

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c423f3df3f2dce99caa8ec085ab12f5eac8060c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a658c990296de88ebdf8f9d3fb6373ea6a9a2c18
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127155"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153107"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68127155"
 ## <a name="concepts-and-requirements"></a>概念和需求  
   
 ### <a name="azure-storage-concepts"></a>Azure 儲存體概念  
- 使用 Windows Azure 功能中的 SQL Server 資料檔案時，您必須在 Windows Azure 中建立儲存體帳戶和容器。 然後，您必須建立 SQL Server 認證，其中包括容器原則的相關資訊以及存取容器所需的共用存取簽章。  
+ 使用 Azure 功能中的 SQL Server 資料檔案時，您必須在 Azure 中建立儲存體帳戶和容器。 然後，您必須建立 SQL Server 認證，其中包括容器原則的相關資訊以及存取容器所需的共用存取簽章。  
   
  在 [Microsoft Azure](https://azure.microsoft.com)中， [Azure 儲存體](https://azure.microsoft.com/services/storage/) 帳戶代表存取 Blob 之命名空間的最高層級。 儲存體帳戶可以包含不限制數目的容器，只要其總大小低於儲存體限制即可。 如需有關儲存體限制的最新資訊，請參閱 [Azure 訂閱與服務限制、配額及條件約束](https://docs.microsoft.com/azure/azure-subscription-service-limits)。 容器會提供一組 [Blob](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)的群組。 所有 Blob 都必須位於容器中。 帳戶可以包含不限制數目的容器。 同樣地，容器也可以儲存不限制數目的 Blob。 Azure 儲存體可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 這項新功能使用的是分頁 Blob，而且當檔案中的位元組範圍經常修改時，更有效率。 您可以使用以下 URL 格式存取 Blob： `https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
   
@@ -124,7 +124,7 @@ ON
  您可以使用 PowerShell Cmdlet，藉由參考 Blob 儲存體 URL 路徑而非檔案路徑，將 SQL Server 資料檔案儲存在 Azure Blob 儲存體服務中。 請使用下列 URL 格式來存取 Blob：`https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server 物件和效能計數器支援  
- 從 SQL Server 2014 開始，已加入新的 SQL Server 物件，以用於 Azure 儲存體功能中的 SQL Server 資料檔案。 這個新的 SQL Server 物件稱為 [SQL Server:HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) ，而且系統監視器可以在使用 Windows Azure 儲存體執行 SQL Server 時，使用此物件來監視活動。  
+ 從 SQL Server 2014 開始，已加入新的 SQL Server 物件，以用於 Azure 儲存體功能中的 SQL Server 資料檔案。 這個新的 SQL Server 物件稱為 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)，而且系統監視器可以在使用 Azure 儲存體執行 SQL Server 時，使用此物件來監視活動。  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支援  
  SQL Server Management Studio 可讓您經由許多對話方塊視窗使用此功能。 例如，您可以鍵入儲存體容器的 URL 路徑，例如 https://teststorageaccnt.blob.core.windows.net/testcontainer/ ：

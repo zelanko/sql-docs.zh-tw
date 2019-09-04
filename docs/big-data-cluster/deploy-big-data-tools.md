@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 84c7181bfd7c0ee014b382052bb6493d68251331
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: afd036dfe33ab538d3d845e73f45e804052a9903
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153615"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238696"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
@@ -40,7 +40,7 @@ ms.locfileid: "70153615"
 | **sqlcmd** | 對於某些指令碼 | 用於查詢 SQL Server 的舊版命令列工具 ([詳細資訊](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15) \(部分機器翻譯\))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | 對於某些指令碼 | 使用 URL 傳送資料的命令列工具。 | [Windows](https://curl.haxx.se/windows/) \(英文\) \| Linux：安裝 curl 套件 |
 
-<sup>1</sup> 您必須使用 kubectl 1.10 版或更新版本。 此外，kubectl 的版本應該是您 Kubernetes 叢集的次要版本加上或減去一。 如果您想要在 kubectl 用戶端上安裝特定版本，請參閱[透過 curl 安裝 kubectl 二進位檔](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (在 Windows 10 上，請使用 cmd.exe 執行 curl，而不是使用 Windows PowerShell)。
+<sup>1</sup>您必須使用 kubectl 1.13 版或更新版本。 此外，kubectl 的版本應該是您 Kubernetes 叢集的次要版本加上或減去一。 如果您想要在 kubectl 用戶端上安裝特定版本，請參閱[透過 curl 安裝 kubectl 二進位檔](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (在 Windows 10 上，請使用 cmd.exe 執行 curl，而不是使用 Windows PowerShell)。
 
 > [!TIP]
 > 若要搭配使用 kubectl 和先前部署在 Azure Kubernetes Service (AKS) 上的叢集，您必須使用下列 Azure CLI 命令來設定叢集內容：

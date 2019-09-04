@@ -1,7 +1,7 @@
 ---
 title: SQL Server 連接器維護和疑難排解 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/05/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140695"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148784"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "68140695"
   
 ### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的升級  
 
-1\.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 生產環境支援 1.0.1.0 版及更新版本。 請使用下列指示升級至 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)可用的最新版本。
+1\.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 生產環境支援 1.0.1.0 版及更新版本。 請使用下列指示升級至可在 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)上取得的最新版本。
 
 目前使用的版本若為 1.0.1.0 版或更新版本，請執行下列步驟更新至最新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。 這些指示不需要重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。
  
@@ -138,11 +138,12 @@ ms.locfileid: "68140695"
 8.  驗證更新運作之後，即可刪除舊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器資料夾 (如果您選擇將它重新命名，而不是在步驟 3 中解除安裝)。  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務主體  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中所建立的服務主體作為存取金鑰保存庫的認證。  服務主體擁有用戶端識別碼和驗證金鑰。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證是使用 **VaultName**、 **用戶端識別碼**和 **驗證金鑰**進行設定。  **驗證金鑰** 將於一段時間內有效 (1 或 2 年)。   在時間間隔到期之前，必須在 Azure AD 中為服務主體產生新的金鑰。  然後必須在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中變更認證。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會在目前的工作階段中為認證維持一份快取，因此認證變更時，應該重新啟動 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中所建立的服務主體作為存取金鑰保存庫的認證。  服務主體擁有用戶端識別碼和驗證金鑰。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證是使用 **VaultName**、 **用戶端識別碼**和 **驗證金鑰**進行設定。  **驗證金鑰** 將於一段時間內有效 (一或兩年)。   在時間間隔到期之前，必須在 Azure AD 中為服務主體產生新的金鑰。  然後必須在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中變更認證。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會在目前的工作階段中為認證維持一份快取，因此認證變更時，應該重新啟動 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
   
 ### <a name="key-backup-and-recovery"></a>金鑰備份和復原  
 金鑰保存庫應該要定期備份。 如果遺失保存庫中的非對稱金鑰，便可以從備份還原它。 必須使用與以前相同的名稱來還原金鑰，作用與 [還原 PowerShell] 命令相同 (請參閱下面的步驟)。  
-如果遺失保存庫，您便需要重新建立保存庫，並使用和先前相同的名稱將非對稱金鑰還原至保存庫。 保存庫名稱可以不同 (或是和先前相同)。 您也必須在新的保存庫上設定存取權限，以授與 SQL Server 服務主體針對 SQL Server 加密案例所需的存取權限，然後調整 SQL Server 認證以反映新的保存庫名稱。  
+如果遺失保存庫，您便需要重新建立保存庫，並使用和先前相同的名稱將非對稱金鑰還原至保存庫。 保存庫名稱可以不同 (或是和先前相同)。 您也必須在新的保存庫上設定存取權限，以授與 SQL Server 服務主體針對 SQL Server 加密案例所需的存取權限，然後調整 SQL Server 認證以反映新的保存庫名稱。
+
 綜上所述，以下為其步驟：  
   
 * 備份保存庫金鑰 (使用 Backup-AzureKeyVaultKey Powershell Cmdlet)。  
@@ -212,7 +213,7 @@ ms.locfileid: "68140695"
 6 | scp_err_InvalidArgument | 提供的引數無效。    
 7 | scp_err_ProviderError | 在 SQL 引擎捕捉到的 EKM 提供者中發生未指定的錯誤。    
 2049 | scp_err_KeyNameDoesNotFitThumbprint | 金鑰名稱太長，而無法放入 SQL 引擎的指紋。 金鑰名稱不得超過 26 個字元。    
-2050 | scp_err_PasswordTooShort | 串連 AAD 用戶端識別碼和機密的機密字串小於 32 個字元。    
+2050 | scp_err_PasswordTooShort | AAD 用戶端識別碼和祕密串連成的祕密字串小於 32 個字元。    
 2051 | scp_err_OutOfMemory | SQL 引擎已用盡記憶體，且無法配置 EKM 提供者的記憶體。    
 2052 | scp_err_ConvertKeyNameToThumbprint | 無法將金鑰名稱轉換成指紋。    
 2053 | scp_err_ConvertThumbprintToKeyName|  無法將指紋轉換成金鑰名稱。    
@@ -221,7 +222,7 @@ ms.locfileid: "68140695"
 3002 | ErrorHttpCreateHttpClientOutOfMemory | 因為記憶體不足，所以無法建立 AKV 作業的 HttpClient。    
 3003 | ErrorHttpOpenSession | 因為發生網路錯誤，所以無法開啟 HTTP 工作階段。    
 3004 | ErrorHttpConnectSession | 因為發生網路錯誤，所以無法連接 HTTP 工作階段。    
-3005 | ErrorHttpAttemptConnect | 因為發生網路錯誤，所以無法嘗試連接。    
+3005 | ErrorHttpAttemptConnect | 因為發生網路錯誤，所以無法嘗試連線。    
 3006 | ErrorHttpOpenRequest | 因為發生網路錯誤，所以無法開啟要求。    
 3007 | ErrorHttpAddRequestHeader | 無法新增要求標頭。    
 3008 | ErrorHttpSendRequest | 因為發生網路錯誤，所以無法傳送要求。    
@@ -292,9 +293,9 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 -   PowerShell [Azure 金鑰保存庫 Cmdlet](/powershell/module/azurerm.keyvault/) 參考  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Azure Key Vault 進行可延伸金鑰管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
- [EKM provider enabled 伺服器組態選項](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+ [使用 Azure Key Vault 進行可延伸金鑰管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)  
+ [EKM provider enabled 伺服器組態選項](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)

@@ -13,12 +13,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f41eb44b026c78a3d99814b231f52b518c18a177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136575"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148294"
 ---
 # <a name="stored-procedures-database-engine"></a>預存程序 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,18 +59,19 @@ ms.locfileid: "68136575"
  若資料表或程序所參照的資料有大幅變更，先行編譯的計畫實際上可能會導致程序執行變慢。 在此情況下，重新編譯程序並強制新的執行計畫可以改善效能。  
   
 ## <a name="types-of-stored-procedures"></a>預存程序類型  
- 使用者自訂  
+
+ **使用者定義**  
  您可以在使用者定義的資料庫或所有系統資料庫 ( **Resource** 資料庫除外) 中，建立使用者定義的程序。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 方法作為參照的形式來建立程序。  
   
- 暫存  
+ **暫存**  
  暫存程序是一種使用者定義的程序。 暫存程序與永久程序類似，只不過暫存程序是儲存於 **tempdb**中。 暫存程序有兩種：本機與全域。 它們在名稱、可見性和可用性方面有些差異。 本機暫存程序是以單一數字符號 (#) 做為名稱的第一個字元；只有目前使用者連接才能看見，當連接中斷時，會將其刪除。 全域暫存程序是以兩個數字符號 (#) 做為名稱的前兩個字元；只要一建立好，任何使用者都能看見，只有當使用程序的最後一個工作階段結束時，才會將其刪除。  
   
- 系統  
+ **系統**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包括系統程序。 它們實際上是儲存在內部隱藏的 **Resource** 資料庫中，但邏輯上會出現在每個系統和使用者定義資料庫的 **sys** 結構描述中。 此外， **msdb** 資料庫也包含 **dbo** 結構描述中用於排程警示和作業的系統預存程序。 因為系統程序會以 **sp_** 作為前置詞開頭，因此建議您命名使用者定義的程序時不要使用此前置詞。 如需系統程序的完整清單，請參閱[系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的系統程序，可對各種維護活動提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到外部程式的介面。 這些擴充程序會使用 xp_ 前置詞。 如需擴充程序的完整清單，請參閱[一般擴充預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)。  
   
- 擴充使用者定義  
+ **擴充使用者定義**  
  擴充程序能夠在 C 這類程式設計語言中，建立外部常式。這些程序是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可以動態載入和執行的 DLL。  
   
 > [!NOTE]  
@@ -94,6 +95,6 @@ ms.locfileid: "68136575"
 |描述如何在預存程序中使用參數。|[參數](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>相關內容  
- [CLR 預存程序](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
-  
+ [CLR 預存程序](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [延遲名稱解析](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
   
