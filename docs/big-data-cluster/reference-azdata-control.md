@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fceea54c6ea7d5c904cc27c87033c4a40cff59f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2ce02ef0b212070b4a52944e055404137c78c98b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158213"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304727"
 ---
 # <a name="azdata-control"></a>azdata 控制項
 
@@ -28,7 +28,7 @@ ms.locfileid: "70158213"
 [azdata 控制項建立](#azdata-control-create) | 建立控制平面。
 [azdata 控制項刪除](#azdata-control-delete) | 刪除控制平面。
 ## <a name="azdata-control-create"></a>azdata 控制項建立
-建立控制平面-您的系統上必須有 kube 設定, 以及下列環境變數 [' CONTROLLER_USERNAME '、' CONTROLLER_PASSWORD '、' MSSQL_SA_PASSWORD '、' KNOX_PASSWORD ']。
+建立控制平面-您的系統上必須有 kube 設定，以及下列環境變數 [' CONTROLLER_USERNAME '、' CONTROLLER_PASSWORD '、' MSSQL_SA_PASSWORD '、' KNOX_PASSWORD ']。
 ```bash
 azdata control create [--name -n] 
                       [--config-profile -c]  
@@ -45,11 +45,11 @@ azdata control create
 #### `--name -n`
 用於 kubernetes 命名空間的控制項平面名稱。
 #### `--config-profile -c`
-叢集設定檔, 用於部署叢集: [' aks-開發/測試 ', ' kubeadm-生產」, ' minikube-開發/測試 ', ' kubeadm-開發/測試 ']
+叢集設定檔，用於部署叢集： [' aks-開發/測試 '，' kubeadm-生產」，' minikube-開發/測試 '，' kubeadm-開發/測試 ']
 #### `--accept-eula -a`
-您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://aka.ms/azdata-eula 檢視。
+您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 
 #### `--node-label -l`
-節點標籤, 用來指定要部署的目標節點。
+節點標籤，用來指定要部署的目標節點。
 #### `--force -f`
 強制建立，系統不會提示使用者輸入任何值，而且所有問題都會列印成標準錯誤輸出的一部分。
 ### <a name="global-arguments"></a>全域引數

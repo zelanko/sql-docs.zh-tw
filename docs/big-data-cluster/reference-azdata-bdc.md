@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 408b3c2d55d5e2515a2df979cd54b380a0d54704
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 689b01b7798a5a1f4ec282343bfea0a1781e3437
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155134"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304738"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -40,7 +40,7 @@ ms.locfileid: "70155134"
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模組提供用來存取 HDFS 檔案系統的命令。
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 命令可讓使用者透過建立和管理工作階段、陳述式和批次，與 Spark 系統進行互動。
 ## <a name="azdata-bdc-create"></a>azdata bdc create
-建立 SQL Server Big Data 叢集-您的系統上必須有 Kubernetes 設定, 以及下列環境變數 [' CONTROLLER_USERNAME '、' CONTROLLER_PASSWORD '、' MSSQL_SA_PASSWORD '、' KNOX_PASSWORD ']。
+建立 SQL Server Big Data 叢集-您的系統上必須有 Kubernetes 設定，以及下列環境變數 [' CONTROLLER_USERNAME '、' CONTROLLER_PASSWORD '、' MSSQL_SA_PASSWORD '、' KNOX_PASSWORD ']。
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -69,9 +69,9 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 巨量資料叢集名稱，用於 kubernetes 命名空間。
 #### `--config-profile -c`
-用於部署叢集的大型資料叢集設定設定檔: [' aks-開發/測試 ', ' kubeadm-生產」, ' minikube-開發/測試 ', ' kubeadm-開發/測試 ']
+用於部署叢集的大型資料叢集設定設定檔： [' aks-開發/測試 '，' kubeadm-生產」，' minikube-開發/測試 '，' kubeadm-開發/測試 ']
 #### `--accept-eula -a`
-您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://aka.ms/azdata-eula 與 https://go.microsoft.com/fwlink/?LinkId=2002534 檢視。
+您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://go.microsoft.com/fwlink/?LinkId=2002534 檢視。
 #### `--node-label -l`
 巨量資料叢集節點標籤，用來指定要部署至的目標節點。
 #### `--force -f`

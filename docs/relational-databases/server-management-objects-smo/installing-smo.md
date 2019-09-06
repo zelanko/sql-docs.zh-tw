@@ -12,36 +12,36 @@ helpviewer_keywords:
 - SMO [SQL Server], installing
 - SQL Server Management Objects, installing
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f57fc3ea1a677a2655f5358a1d5c4b27045ea6ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2785054fa9cc445b6ff03c46f7f145b4f422cb60
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098025"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148632"
 ---
 # <a name="installing-smo"></a>安裝 SMO
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-此頁面提供有關如何安裝使用 SMO 應用程式和使用 SMO 的系統需求的資訊。
+此頁面提供有關如何安裝 SMO 以供應用程式使用的資訊, 以及使用 SMO 的系統需求。
 
 ## <a name="smo-nuget-package"></a>SMO NuGet 套件
 
-開頭[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]形式散發 2017 SMO [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) NuGet 套件，可讓使用者使用 SMO 開發應用程式。
+從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2017 SMO 開始, 會以 [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) NuGet 套件的形式散發, 讓使用者能夠使用 SMO 開發應用程式。
 
-這是取代 SharedManagementObjects.msi，先前發行為每個版本的 SQL Server SQL Feature Pack 的一部分。 使用 SMO 應用程式應該要改為使用 NuGet 套件更新，而且會負責確保二進位碼檔案會隨正在開發的應用程式。
+這是 Sharedmanagementobjects.msi 的取代, 先前已發行為每個 SQL Server 版本的 SQL Feature Pack 的一部分。 使用 SMO 的應用程式應該更新為使用 NuGet 套件, 而且會負責確保二進位檔會隨著開發的應用程式一起安裝。
 
 >>[!Important]
->>上所述[檔案和版本號碼](files-and-version-numbers.md) 頁面上，您不應該安裝 SMO 組件到 GAC。 如此一來可能會造成問題與其他應用程式也使用 SMO 的這些版本 (例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio)。
+>>如 [檔案[和版本號碼](files-and-version-numbers.md)] 頁面上所述, 您不應該將 SMO 元件安裝到 GAC 中。 這麼做可能會造成其他應用程式的問題, 也就是使用這些版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (例如 Management Studio)。
 
 ## <a name="installing-the-package"></a>安裝套件
 
-請參閱[NuGet 快速入門-使用套件](https://docs.microsoft.com/nuget/quickstart/use-a-package)指示和範例的安裝與使用 NuGet 套件。 
+如需安裝和使用 NuGet 套件的指示和範例, 請參閱[NuGet 快速入門-使用套件](https://docs.microsoft.com/nuget/quickstart/use-a-package)。 
   
 ## <a name="system-requirements"></a>系統需求
   
- SMO 需要[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]4.0，才能執行，所以使用它的任何應用程式必須確定用戶端電腦有該版本或更新版本。 某些安裝 NetFx SMO 程式庫的原生二進位檔也需要安裝; VC 2013 執行階段該執行階段不會納入封裝。 您可以下載適用於您的目標架構，從可轉散發的套件 https://www.microsoft.com/download/details.aspx?id=40784
+ SMO 需要[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 才能執行, 因此使用它的任何應用程式都必須確定用戶端電腦已安裝該版本或更高版本。 使用 NetFx SMO 程式庫安裝的某些原生二進位檔也需要安裝 VC 2013 執行時間;該執行時間不會包含在封裝中。 您可以從下載適用于您的目標架構的可轉散發套件 https://www.microsoft.com/download/details.aspx?id=40784
   

@@ -8,27 +8,27 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ebc5ccef3130a490a6563531dd61e66a0218083d
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715836"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304817"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>SQL Server 資料庫內分析實例之累計更新的 CAB 下載
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-針對資料庫內分析所設定的 SQL Server 實例包括 R 和 Python 功能。 這些功能會隨附于封包檔中, 並透過 SQL Server 安裝程式進行安裝和服務。 在連線到網際網路的裝置上, CAB 更新通常會透過 Windows Update 套用。 在中斷連線的伺服器上, 必須手動下載並套用 CAB 檔案。 
+針對資料庫內分析所設定的 SQL Server 實例包括 R 和 Python 功能。 這些功能會隨附于封包檔中，並透過 SQL Server 安裝程式進行安裝和服務。 在連線到網際網路的裝置上，CAB 更新通常會透過 Windows Update 套用。 在中斷連線的伺服器上，必須手動下載並套用 CAB 檔案。 
 
-本文提供每個累計更新之 CAB 檔案的下載連結。 如需離線安裝的詳細資訊, 請參閱在[沒有網際網路存取的情況下安裝 SQL Server 機器學習元件](sql-ml-component-install-without-internet-access.md#apply-cu)。
+本文提供每個累計更新之 CAB 檔案的下載連結。 如需離線安裝的詳細資訊，請參閱在[沒有網際網路存取的情況下安裝 SQL Server 機器學習元件](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
 ## <a name="prerequisites"></a>必要條件
 
 開始進行基準安裝。
 
-+ 在 SQL Server Machine Learning 服務上, 初始版本是基準安裝。 
-+ 在 SQL Server 2016 R Services 上, 您可以從初始版本、SP1 或 SP2 開始。 
++ 在 SQL Server Machine Learning 服務上，初始版本是基準安裝。 
++ 在 SQL Server 2016 R Services 上，您可以從初始版本、SP1 或 SP2 開始。 
 
 您也可以將累計更新套用到獨立伺服器。
 
@@ -36,25 +36,25 @@ ms.locfileid: "68715836"
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 Cab
 
-CAB 檔案會以反向時間順序列出。 當您下載封包檔並將它們傳送到目的電腦時, 請將它們放在方便的資料夾中, 例如**下載**或安裝使用者的% temp% 資料夾。
+CAB 檔案會以反向時間順序列出。 當您下載封包檔並將它們傳送到目的電腦時，請將它們放在方便的資料夾中，例如**下載**或安裝使用者的% temp% 資料夾。
 
 |版本  |元件 | 下載連結  | 解決的問題 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 封裝內的二進位檔現在已經過簽署。 |
 | | R 伺服器      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| 封裝內的二進位檔現在已經過簽署。 |
 | | Microsoft Python 開啟     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| 封裝內的二進位檔現在已經過簽署。 |
 | | Python 伺服器    |[SPS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2071421&clcid=1033)| 封裝內的二進位檔現在已經過簽署。  |
 |**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 先前版本沒有任何變更。 |
-| | R 伺服器      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| 包含升級[運作獨立 R 伺服器](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)的修正程式, 透過 SQL Server 安裝程式安裝。 使用 CU13 Cab, 並遵循[這些指示](sql-machine-learning-standalone-windows-install.md#apply-cu)來套用更新。 |
+| | R 伺服器      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| 包含升級[運作獨立 R 伺服器](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)的修正程式，透過 SQL Server 安裝程式安裝。 使用 CU13 Cab，並遵循[這些指示](sql-machine-learning-standalone-windows-install.md#apply-cu)來套用更新。 |
 | | Microsoft Python 開啟     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 先前版本沒有任何變更。 |
-| | Python 伺服器    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| 包含升級[運作獨立 Python 伺服器](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)的修正程式, 如透過 SQL Server 安裝程式安裝。 使用 CU13 Cab, 並遵循[這些指示](sql-machine-learning-standalone-windows-install.md#apply-cu)來套用更新。 |
+| | Python 伺服器    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| 包含升級[運作獨立 Python 伺服器](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)的修正程式，如透過 SQL Server 安裝程式安裝。 使用 CU13 Cab，並遵循[這些指示](sql-machine-learning-standalone-windows-install.md#apply-cu)來套用更新。 |
 |**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 先前版本沒有任何變更。 |
 | | R 伺服器      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| 微幅修正。|
 | | Microsoft Python 開啟     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 先前版本沒有任何變更。 |
-| | Python 伺服器    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| 移除重複專案時, Python rx_data_step 會失去資料列順序。 <br/>SPEE 在叢集資料行存放區索引上的 datatype 偵測失敗。 <br/>當資料行包含所有 null 值時, 會傳回空的資料表。 |
+| | Python 伺服器    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| 移除重複專案時，Python rx_data_step 會失去資料列順序。 <br/>SPEE 在叢集資料行存放區索引上的 datatype 偵測失敗。 <br/>當資料行包含所有 null 值時，會傳回空的資料表。 |
 |**[SQL Server 2017 CU8](https://support.microsoft.com/help/4338363)-[CU9](https://support.microsoft.com/help/4341265)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 先前版本沒有任何變更。 |
 | | R 伺服器      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|
@@ -79,12 +79,12 @@ CAB 檔案會以反向時間順序列出。 當您下載封包檔並將它們傳
 | | Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 | | R 伺服器      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 | | Microsoft Python 開啟     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 先前版本沒有任何變更。 |
-| | Python 伺服器    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| 使用[rx_serialize_model 函數](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model), 在 revoscalepy 中進行 Python 模型序列化。<br/>[原生評分](../sql-native-scoring.md)支援, 加上[即時評分](../real-time-scoring.md)的增強功能。 
+| | Python 伺服器    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| 使用[rx_serialize_model 函數](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)，在 revoscalepy 中進行 Python 模型序列化。<br/>[原生評分](../sql-native-scoring.md)支援，加上[即時評分](../real-time-scoring.md)的增強功能。 
 |**[SQL Server 2017 CU1](https://support.microsoft.com/help/4038634) - [CU2](https://support.microsoft.com/help/4052574)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| 先前版本沒有任何變更。 |
 | | R 伺服器      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 | | Microsoft Python 開啟     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 先前版本沒有任何變更。 | 
-| | Python 伺服器    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | 加入 rx_create_col_info 以傳回架構資訊。 <br/>[Rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)的增強功能, 可支援使用計算`RxLocalParallel`內容的平行案例。|
+| | Python 伺服器    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | 加入 rx_create_col_info 以傳回架構資訊。 <br/>[Rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)的增強功能，可支援使用計算`RxLocalParallel`內容的平行案例。|
 |**初始版本** |  |  |
 | | Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 | | R 伺服器      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
@@ -99,7 +99,7 @@ CAB 檔案會以反向時間順序列出。 當您下載封包檔並將它們傳
 
 ## <a name="sql-server-2016-cabs"></a>SQL Server 2016 Cab
 
-針對 SQL Server 2016 R 服務, 基準版本為 RTM 版本或 Service Pack 版本。
+針對 SQL Server 2016 R 服務，基準版本為 RTM 版本或 Service Pack 版本。
 
 |版本  |下載連結  |
 |---------|---------------|
@@ -136,9 +136,9 @@ CAB 檔案會以反向時間順序列出。 當您下載封包檔並將它們傳
 
 > [!NOTE]
 > 
-> 當您離線安裝 SQL Server 2016 SP1 CU4 或 SP1 CU5 時, 請下載 SRO_ 3.2.2.16000 _1033 .cab。 如果您已依照 [安裝程式] 對話方塊中的指示, 從 FWLINK 831785 下載 SRO_ 3.2.2.13000 _1033, 請在安裝累積更新之前, 將檔案重新命名為 SRO_ 3.2.2.16000 _1033 .cab。
+> 當您離線安裝 SQL Server 2016 SP1 CU4 或 SP1 CU5 時，請下載 SRO_ 3.2.2.16000 _1033 .cab。 如果您已依照 [安裝程式] 對話方塊中的指示，從 FWLINK 831785 下載 SRO_ 3.2.2.13000 _1033，請在安裝累積更新之前，將檔案重新命名為 SRO_ 3.2.2.16000 _1033 .cab。
 
-如果您想要查看 Microsoft R 的原始程式碼, 可以將其下載為. tar 格式的封存:[下載 R Server 安裝程式](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
+如果您想要查看 Microsoft R 的原始程式碼，可以將其下載為. tar 格式的封存：[下載 R Server 安裝程式](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 ::: moniker-end
 
