@@ -92,13 +92,13 @@
         - name: 將客戶分類 (k-means 叢集)
           items:
             - name: 1 - 簡介
-              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
+              href: ../advanced-analytics/tutorials/python-clustering-model.md
             - name: 2 - 準備資料
-              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-prepare-data.md
+              href: ../advanced-analytics/tutorials/python-clustering-model-prepare-data.md
             - name: 3 - 建立模型
-              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
+              href: ../advanced-analytics/tutorials/python-clustering-model-build.md
             - name: 4 - 部署模型
-              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
+              href: ../advanced-analytics/tutorials/python-clustering-model-deploy.md
         - name: 使用 revoscalepy 建立 Python 模型
           href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
         - name: 適用於 SQL 的 Python 開發人員
