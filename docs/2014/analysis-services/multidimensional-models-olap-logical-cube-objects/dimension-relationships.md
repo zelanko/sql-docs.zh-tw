@@ -38,7 +38,7 @@ ms.locfileid: "68887933"
 ## <a name="reference-dimension-relationships"></a>參考維度關聯性  
  當維度的索引鍵資料行透過其他維度資料表中的索引鍵間接聯結到事實資料表時，Cube 維度與量值群組之間就會有參考維度關聯性 (如下圖所示)。  
   
- ![邏輯圖表, 參考的維度關聯]性(https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "邏輯圖表, 參考的維度關聯")性  
+ ![邏輯圖表, 參考的維度關聯性](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "邏輯圖表, 參考的維度關聯")性  
   
  參考維度關聯性代表在雪花式結構描述設計中，維度資料表與事實資料表之間的關聯性。 當您在雪花式結構描述中連接維度資料表時，可以使用多份資料表中的資料行來定義單一維度；或者根據不同的維度資料表來定義個別的維度，然後使用參考維度關聯性設定來定義這些維度之間的連結。 下圖顯示一個名為**InternetSales**的事實資料表, 以及一個雪花式架構中名為**Customer**和**Geography**的兩個維度資料表。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68887933"
   
  可鏈結在一起的參考維度數目不限，如下圖所示。  
   
- ![邏輯圖表, 參考的維度關聯]性(https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension2.gif "邏輯圖表, 參考的維度關聯")性  
+ ![邏輯圖表, 參考的維度關聯性](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension2.gif "邏輯圖表, 參考的維度關聯")性  
   
  如需參考關聯性的詳細資訊, 請參閱[定義參考的關聯性和參考的關聯性屬性](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
   

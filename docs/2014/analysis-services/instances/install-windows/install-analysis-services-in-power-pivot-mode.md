@@ -121,7 +121,7 @@ ms.locfileid: "68888660"
   
      按一下 [下一步]。  
   
-     ![SSAS 伺服器]設定(../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS 伺服器")設定  
+     ![SSAS 伺服器 設定](../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS 伺服器 設定")  
   
 14. 若您正安裝 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，則隨即會出現 **[資料庫引擎組態]** 頁面。 在 [資料庫引擎組態] 中按一下 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [加入目前使用者] **，為您的使用者帳戶授與** 執行個體的管理員權限。  
   

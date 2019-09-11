@@ -268,7 +268,7 @@ ms.locfileid: "68890272"
   
      開啟瀏覽器，移至所要的 SharePoint 網站。 例如， http://\<伺服器名稱>/sites/bi  
   
-2.  按一下 [**設定**] [![sharepoint 設定]] [(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 設定")]。  
+2.  按一下 [**設定**] ![sharepoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 設定")。  
   
 3.  按一下 **[網站設定]** 。  
   

@@ -103,7 +103,7 @@ ms.locfileid: "70176155"
 |Subscriptions|是|是||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |處理選項|是|是||  
-|快取重新整理選項|是|是|相依設定會隨目錄項目一起移轉。 以下範例將示範指令碼移轉報表 (.rdl) 以及相關的設定 (例如快取重新整理選項)：<br /><br /> 移轉報表 TitleOnly.rdl 的參數: 找到 0 個項目。<br /><br /> 遷移報表 Titleonly.rdl 的訂閱:找到1個專案。<br /><br /> 正在將訂用\\帳戶儲存在 \server\public\savedreports 中做為 titleonly.rdl .。。SUCCESS<br /><br /> 正在遷移報表 Titleonly.rdl 的歷程記錄設定 .。。SUCCESS<br /><br /> 正在遷移報表 Titleonly.rdl 的處理選項 .。。找到 0 個項目。<br /><br /> 正在遷移報表 Titleonly.rdl 的快取重新整理選項 .。。SUCCESS<br /><br /> 遷移報表 Titleonly.rdl 的快取重新整理計畫:找到1個專案。<br /><br /> 正在遷移快取重新整理計畫 titleonly_refresh735amM2F .。。SUCCESS|  
+|快取重新整理選項|是|是|相依設定會隨目錄項目一起移轉。 以下範例將示範指令碼移轉報表 (.rdl) 以及相關的設定 (例如快取重新整理選項)：<br /><br /> 移轉報表 TitleOnly.rdl 的參數: 找到 0 個項目。<br /><br /> 遷移報表 Titleonly.rdl 的訂閱:找到1個專案。<br /><br /> 正在將訂用\\帳戶儲存在 \server\public\savedreports 中做為 titleonly.rdl ...SUCCESS<br /><br /> 正在遷移報表 Titleonly.rdl 的歷程記錄設定 ...SUCCESS<br /><br /> 正在遷移報表 Titleonly.rdl 的處理選項 ...找到 0 個項目。<br /><br /> 正在遷移報表 Titleonly.rdl 的快取重新整理選項 ...SUCCESS<br /><br /> 遷移報表 Titleonly.rdl 的快取重新整理計畫:找到1個專案。<br /><br /> 正在遷移快取重新整理計畫 titleonly_refresh735amM2F ...SUCCESS|  
 |快取重新整理計劃|是|是||  
 |影像|是|是||  
 |報表組件|是|是||  

@@ -98,8 +98,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_p2p_conflictdetection|**int**|指定散發代理程式是否會偵測啟用點對點複寫之發行集的衝突。 值為**1**表示偵測到衝突。 如需相關資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |originator_id|**int**|針對點對點拓撲中的節點指定識別碼。 如果**enabled_for_p2p_conflictdetection**設定為**1**, 此識別碼就會用於衝突偵測。 如需已經使用的識別碼清單，請查詢 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系統資料表。|  
 |p2p_continue_onconflict|**int**|指定散發代理程式是否會在偵測到衝突時繼續處理變更。 值為**1**表示代理程式會繼續處理變更。<br /><br /> 請注意, 我們建議您使用預設值**0**。 **\* \* \* \*** 當此選項設定為**1**時, 散發代理程式會嘗試藉由套用具有最高訂閱者識別碼之節點的衝突資料列, 來聚合拓撲中的資料。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。|  
-|allow_partition_switch|**int**|指定是否要更改資料表 .。。SWITCH 語句可以針對已發行的資料庫執行。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
-|replicate_partition_switch|**int**|指定是否要更改資料表 .。。針對已發行的資料庫執行的 SWITCH 語句應該複寫到訂閱者。 只有在*allow_partition_switch*設為**1**時, 這個選項才有效。|  
+|allow_partition_switch|**int**|指定是否要更改資料表 ...SWITCH 語句可以針對已發行的資料庫執行。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
+|replicate_partition_switch|**int**|指定是否要更改資料表 ...針對已發行的資料庫執行的 SWITCH 語句應該複寫到訂閱者。 只有在*allow_partition_switch*設為**1**時, 這個選項才有效。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** (成功) 或**1** (失敗)  

@@ -22,7 +22,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68762422"
 ---
-# <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
+# <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   變更發行集的屬性。 這個預存程序執行於發行集資料庫的發行者端。  
@@ -55,8 +55,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|不能建立給定發行集的匿名訂閱。 點對點發行集的這個項目不能變更。|  
 |**allow_initialize_from_backup**|**true**|訂閱者能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集的這個屬性不能變更。|  
 ||**false**|訂閱者必須使用初始快照集。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
-|**allow_partition_switch**|**true**|ALTER TABLE .。。SWITCH 語句可以針對已發行的資料庫執行。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
-||**false**|ALTER TABLE .。。SWITCH 語句無法針對已發行的資料庫執行。|  
+|**allow_partition_switch**|**true**|ALTER TABLE ...SWITCH 語句可以針對已發行的資料庫執行。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
+||**false**|ALTER TABLE ...SWITCH 語句無法針對已發行的資料庫執行。|  
 |**allow_pull**|**true**|允許給定發行集的提取訂閱。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**false**|不允許給定發行集的提取訂閱。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 |**allow_push**|**true**|允許給定發行集的發送訂閱。|  
@@ -99,8 +99,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**快照集**|只發行已排程的同步處理事件。|  
 |**replicate_ddl**|**1**|複寫在發行者端執行的資料定義語言 (DDL) 陳述式。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**0**|不複寫 DDL 陳述式。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。 使用點對點複寫時，不能停用結構描述變更的複寫。|  
-|**replicate_partition_switch**|**true**|ALTER TABLE .。。針對已發行的資料庫執行的 SWITCH 語句應該複寫到訂閱者。 只有在*allow_partition_switch*設定為 TRUE 時, 這個選項才有效。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
-||**false**|ALTER TABLE .。。SWITCH 語句不應該複寫到訂閱者。|  
+|**replicate_partition_switch**|**true**|ALTER TABLE ...針對已發行的資料庫執行的 SWITCH 語句應該複寫到訂閱者。 只有在*allow_partition_switch*設定為 TRUE 時, 這個選項才有效。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
+||**false**|ALTER TABLE ...SWITCH 語句不應該複寫到訂閱者。|  
 |**retention**||**int** , 代表訂用帳戶活動的保留期限 (以小時為單位)。 如果在保留期限內，訂閱不在使用中，就會移除它。|  
 |**snapshot_in_defaultfolder**|**true**|快照集檔案儲存在預設快照集資料夾中。 如果也指定了*alt_snapshot_folder*, 快照集檔案就會同時儲存在預設和替代位置中。|  
 ||**false**|快照集檔案會儲存在*alt_snapshot_folder*所指定的替代位置中。|  

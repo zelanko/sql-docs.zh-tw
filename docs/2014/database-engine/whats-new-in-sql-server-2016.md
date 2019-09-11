@@ -129,7 +129,7 @@ ms.locfileid: "70176074"
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>CLUSTERED 和 NONCLUSTERED 的內嵌指定  
  以磁碟為基礎的資料表現在允許 `CLUSTERED` 和 `NONCLUSTERED` 索引的內嵌指定。 建立包含內嵌索引的資料表相當於發出 create table 且後面緊接著對應的 `CREATE INDEX` 陳述式。 內嵌索引不支援包含的資料行和篩選條件。  
   
-### <a name="select--into"></a>選取 .。。INTO  
+### <a name="select--into"></a>選取 ...INTO  
  `SELECT ... INTO` 陳述式已經改良，現在可以平行操作。 資料庫相容性層級必須至少為 110。  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>記憶體中 OLTP 的 [!INCLUDE[tsql](../includes/tsql-md.md)] 增強功能  

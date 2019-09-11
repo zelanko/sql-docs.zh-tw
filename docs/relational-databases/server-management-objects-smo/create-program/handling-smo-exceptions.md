@@ -46,7 +46,7 @@ ms.locfileid: "70148707"
  如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
   
 ## <a name="catching-an-exception-in-visual-basic"></a>在 Visual Basic 中攔截例外狀況  
- 此程式碼範例示範如何使用 [**嘗試 ...]Catch .。。Finally 語句來**攔截SMO例外狀況[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 。 所有的 SMO 例外狀況都具有 SmoException 類型，而且會列於 SMO 參考中。 內部例外狀況的順序會顯示，以指出錯誤的根源所在。 如需詳細資訊，請參閱 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文件集。  
+ 此程式碼範例示範如何使用 [**嘗試 ...]Catch...Finally 語句來**攔截SMO例外狀況[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]。 所有的 SMO 例外狀況都具有 SmoException 類型，而且會列於 SMO 參考中。 內部例外狀況的順序會顯示，以指出錯誤的根源所在。 如需詳細資訊，請參閱 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文件集。  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.
@@ -83,7 +83,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>在 Visual C# 中攔截例外狀況  
- 此程式碼範例示範如何使用 [**嘗試 ...]Catch .。。最後**, C#用來攔截 SMO 例外狀況的視覺化語句。 所有的 SMO 例外狀況都具有 SmoException 類型，而且會列於 SMO 參考中。 內部例外狀況的順序會顯示，以指出錯誤的根源所在。 如需詳細資訊，請參閱 Visual C# 文件集。  
+ 此程式碼範例示範如何使用 [**嘗試 ...]Catch...最後**, C#用來攔截 SMO 例外狀況的視覺化語句。 所有的 SMO 例外狀況都具有 SmoException 類型，而且會列於 SMO 參考中。 內部例外狀況的順序會顯示，以指出錯誤的根源所在。 如需詳細資訊，請參閱 Visual C# 文件集。  
   
 ```csharp  
 {   

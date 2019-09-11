@@ -26,7 +26,7 @@ ms.locfileid: "68887965"
 > [!NOTE]  
 >  若要使用 `Microsoft.AnalysisServices.AdomdServer` 命名空間 (以及這些物件)，必須將 msmgdsrv.dll 的參考加入 UDF 專案或是預存程序。  
   
- ![顯示 ADOMD.NET 伺服器中的物件關聯]性(https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "顯示 ADOMD.NET 伺服器中的物件關聯")性  
+ ![顯示 ADOMD.NET 伺服器中的物件關聯 性](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "顯示 ADOMD.NET 伺服器中的物件關聯 性")  
 ADOMD.NET 物件模型  
   
  與 ADOMD.NET 物件階層互動通常是從最頂層中的一或多個物件開始，如下表所述。  
