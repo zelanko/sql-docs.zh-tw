@@ -39,7 +39,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  若要傳回遺漏狀態的支援, 請將預測\<的狀態 > 設定為 Null。  
   
 > [!NOTE]  
->  支援值會以不同的方式計算，或者根據您要查詢的模型類型而有不同的解譯。 如需如何針對任何特定模型類型計算支援的詳細資訊, 請參閱 <<c0>採礦模型內容&#40;中的個別演算法類型 Analysis Services-&#41;資料採礦。</c0>  
+>  支援值會以不同的方式計算，或者根據您要查詢的模型類型而有不同的解譯。 如需如何針對任何特定模型類型計算支援的詳細資訊, [請參閱 採礦模型內容&#40;中的個別演算法類型 Analysis Services-&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)資料採礦。  
   
 ## <a name="examples"></a>範例  
  下列範例根據 TM Decision Tree 採礦模型，使用單一查詢來預測個人是否可能成為腳踏車買主，也判斷預測的支援。  
