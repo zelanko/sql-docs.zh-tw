@@ -146,7 +146,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     ```  
   
 ###  <a name="bkmk_remote"></a>啟用遠端系統管理  
- 您必須先啟用遠端管理和檔案共用，然後才能使用 Analysis Services PowerShell 搭配遠端 Analysis Services 執行個體。 下列錯誤表示防火牆設定問題:*RPC 伺服器無法使用。 (來自 HRESULT 的例外狀況:0x800706BA)」。  
+ 您必須先啟用遠端管理和檔案共用，然後才能使用 Analysis Services PowerShell 搭配遠端 Analysis Services 執行個體。 下列錯誤表示防火牆設定問題:RPC 伺服器無法使用。 (來自 HRESULT 的例外狀況:0x800706BA)」。  
   
 1.  確認本機和遠端電腦都有 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 版本的用戶端與伺服器工具。  
   
