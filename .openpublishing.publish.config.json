@@ -71,6 +71,11 @@
       "branch": "master"
     },
     {
+      "path_to_root": "sql-server-samples",
+      "url": "https://github.com/Microsoft/sql-server-samples",
+      "branch": "master"
+    },
+    {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/MicrosoftDocs/sql-docs-pr",
       "branch": "live",
