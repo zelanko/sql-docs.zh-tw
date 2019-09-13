@@ -119,7 +119,7 @@ ms.locfileid: "68890042"
   
 4.  在 **[特徵選取]** 頁面上，選取 **[Analysis Services OLE DB Provider for SQL Server]** 。 取消選取其他元件，並完成安裝。 如需 Sppowerpivot.msi 的詳細資訊, 請參閱[安裝或卸載 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
   
-5.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx)＞。  
+5.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://technet.microsoft.com/library/hh758436.aspx)。  
   
   
 ##  <a name="bkmk_kj"></a>安裝 SQL Server 2008 R2 OLE DB 提供者以裝載舊版活頁簿  
