@@ -1,7 +1,8 @@
 ---
-title: SQL Server、Azure SQL Database 和 Azure SQL 資料倉儲的 SQL 工具和公用程式 |Microsoft Docs
+title: 適用于 SQL Server、Azure SQL （Azure sql 資料庫、Azure SQL 受控實例、SQL 虛擬機器）和 Azure SQL 資料倉儲的 SQL 查詢和管理工具 |Microsoft Docs
+description: 適用于 SQL Server、Azure SQL （Azure SQL database、Azure SQL 受控實例、SQL 虛擬機器）和 Azure SQL 資料倉儲的 SQL 查詢與管理工具
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 09/11/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,23 +12,25 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe249e4df9c33fcbb292fc93f218e16ae111b0bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56ed7a0cf53a026b470c90c36b37da95f02ac5bc
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105666"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913571"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL Server、Azure SQL Database 和 Azure SQL 資料倉儲的 SQL 工具和公用程式
+# <a name="sql-query-and-management-tools-for-sql-server-azure-sql-azure-sql-database-azure-sql-managed-instance-sql-virtual-machines-and-azure-sql-data-warehouse"></a>適用于 SQL Server、Azure SQL （Azure SQL database、Azure SQL 受控實例、SQL 虛擬機器）和 Azure SQL 資料倉儲的 SQL 查詢與管理工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 若要管理 (查詢、監視等等) 您的資料庫, 您需要工具。 當您的資料庫可以在雲端、Windows 或[Linux](../linux/sql-server-linux-overview.md)上執行時, 您的工具不需要在與資料庫相同的平臺上執行。 
 
 有許多資料庫工具可供使用, 因此本文提供一些適用于使用 SQL 資料庫之可用工具的說明和指標。 如果您需要協助來決定所需的工具, 請參閱[應該使用哪一種工具？](#which-tool-should-i-choose)。
 
+如需其他資訊，以及下載工具，請在下表中選取 [工具] 欄中的連結。 若要下載 SQL Server，請參閱[安裝 SQL Server](../database-engine/install-windows/install-sql-server.md)。 
+
 ## <a name="gui-tools-to-manage-databases"></a>用來管理資料庫的 GUI 工具  
 
-下列是主要的圖形化使用者介面 (GUI) 工具:
+下列工具提供圖形化使用者介面（GUI）：
 
 | 工具 | Description | 執行于 |
 |:--|:--|:--|

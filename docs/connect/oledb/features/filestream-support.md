@@ -2,7 +2,7 @@
 title: FILESTREAM 支援 |Microsoft Docs
 description: OLE DB Driver for SQL Server 中的 FILESTREAM 支援
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c4f8b047a18d2bfc3aea33c72a29efcde1869c3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a548cfda44d40ba7ac37aaf4465c589c7256ffe7
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989086"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978053"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -61,9 +61,9 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 如果是使用 SQLOLEDB 的用戶端或是在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前發行的其他提供者，**varbinary(max)** 將會對應到 image。  
   
 ## <a name="comments"></a>註解
-- 若要傳送和接收大於 2 GB 的**Varbinary (max)** 值, 應用程式會在參數和結果系結中使用**DBTYPE_IUNKNOWN** 。 針對參數, 提供者必須針對 ISequentialStream 呼叫 IUnknown:: QueryInterface, 並針對傳回 ISequentialStream 的結果。  
+- 若要傳送和接收大於 2 GB 的**Varbinary （max）** 值，應用程式會在參數和結果系結中使用**DBTYPE_IUNKNOWN** 。 針對參數, 提供者必須針對 ISequentialStream 呼叫 IUnknown:: QueryInterface, 並針對傳回 ISequentialStream 的結果。  
 
--  針對 OLE DB, 將會放寬與 ISequentialStream 值相關的檢查。 當*wType*在**DBBINDING**結構中**DBTYPE_IUNKNOWN**時, 可以從*dwPart*省略**DBPART_LENGTH**或設定資料的長度 (在資料的位移*obLength*中), 藉以停用長度檢查buffer) 到 ~ 0。 在此情況下，提供者將不會檢查值的長度，而且將會透過資料流要求並傳回所有可用的資料。 這項變更將會套用到所有大型物件 (LOB) 類型與 XML，但是只會在連接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (或更新版本) 伺服器時才會套用。 這將會提供開發人員更大的彈性，同時維持現有應用程式與下層伺服器的一致性與回溯相容性。  這種變更會影響所有傳輸資料的介面, 主要是 IRowset:: ICommand:: Execute 和 IRowsetFastLoad:: InsertRow。
+-  針對 OLE DB, 將會放寬與 ISequentialStream 值相關的檢查。 當*wType*在**DBBINDING**結構中**DBTYPE_IUNKNOWN**時，可以從*dwPart*省略**DBPART_LENGTH**或設定資料的長度（在資料的位移*obLength*中），藉以停用長度檢查buffer）到 ~ 0。 在此情況下，提供者將不會檢查值的長度，而且將會透過資料流要求並傳回所有可用的資料。 這項變更將會套用到所有大型物件 (LOB) 類型與 XML，但是只會在連接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (或更新版本) 伺服器時才會套用。 這將會提供開發人員更大的彈性，同時維持現有應用程式與下層伺服器的一致性與回溯相容性。  這種變更會影響所有傳輸資料的介面, 主要是 IRowset:: ICommand:: Execute 和 IRowsetFastLoad:: InsertRow。
  
 
 ## <a name="see-also"></a>另請參閱  
