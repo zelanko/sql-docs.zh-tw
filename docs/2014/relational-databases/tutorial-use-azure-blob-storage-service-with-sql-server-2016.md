@@ -39,7 +39,7 @@ ms.locfileid: "70176082"
  **[第4課:在 Azure 儲存體中建立資料庫](../relational-databases/lesson-3-database-backup-to-url.md)**  
  在這一課, 您會使用 [建立資料庫檔案名] 選項, 在 Azure 儲存體中建立資料庫。  
   
- **第5課:&#40;選擇性&#41;使用 TDE 加密您的資料庫**  
+ **[第5課:&#40;選擇性&#41;使用 TDE 加密您的資料庫](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  在這一課，您會使用透明資料加密 (TDE) 和伺服器憑證來加密資料庫。  
   
  **[第6課:將資料庫從內部部署的來源機器遷移至 Azure 中的目的地機器](lesson-5-backup-database-using-file-snapshot-backup.md)**  
