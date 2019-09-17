@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a8a5955d56d635a56899653b7cd2bd98b4924ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134444"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228429"
 ---
 # <a name="common-errors-with-database-mail"></a>使用 Database Mail 的常見錯誤 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 本文描述使用 Database Mail 及其解決方案時會發生的一些常見錯誤。
 
-## <a name="could-not-find-stored-procedure-spsenddbmail"></a>找不到預存程序 'sp_send_dbmail'
+## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>找不到預存程序 'sp_send_dbmail'
 [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 預存程序已安裝在 msdb 資料庫。 您必須從 msdb 資料庫執行 **sp_send_dbmail**，或為預存程序指定三段式名稱。
 
 範例
@@ -48,7 +48,7 @@ EXEC dbo.sp_send_dbmail ...
 
 若要檢查設定檔的權限，請使用設定檔名稱執行預存程序 [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md)。 使用預存程序 [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) 或 [Database Mail 設定精靈](configure-database-mail.md)授與 msdb 使用者或群組存取設定檔的權限。
 
-## <a name="permission-denied-on-spsenddbmail"></a>sp_send_dbmail 拒絕權限
+## <a name="permission-denied-on-sp_send_dbmail"></a>sp_send_dbmail 拒絕權限
 
 此主題描述如何針對嘗試傳送 Database Mail 之使用者沒有權限執行 sp_send_dbmail 的錯誤訊息進行疑難排解。
 
@@ -68,7 +68,7 @@ GO
 ```
 如需詳細資訊，請參閱 [sp_addrolemember](../system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember](../system-stored-procedures/sp-droprolemember-transact-sql.md)。
 
-## <a name="database-mail-queued-no-entries-in-sysmaileventlog-or-windows-application-event-log"></a>Database Mail 已排入佇列，sysmail_event_log 或 Windows 應用程式事件記錄檔中沒有項目 
+## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>Database Mail 已排入佇列，sysmail_event_log 或 Windows 應用程式事件記錄檔中沒有項目 
 
 Database Mail 依賴 Service Broker 佇列電子郵件訊息。 如已停止 Database Mail，或如果未在 **msdb** 資料庫中啟動 Service Broker 訊息傳遞，則 Database Mail 會將訊息佇列於資料庫中，但無法傳遞訊息。 在此情況下，Service Broker 訊息會保留在 Service Broker 郵件佇列中。 Service Broker 不啟動外部程式，因此 **sysmail_event_log** 中沒有項目，且 **sysmail_allitems** 與相關檢視中的項目狀態不會更新。
 

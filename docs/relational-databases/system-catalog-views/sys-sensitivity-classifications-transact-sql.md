@@ -1,14 +1,13 @@
 ---
-title: sys.sensitivity_classifications (TRANSACT-SQL) |Microsoft Docs
+title: sensitivity_classifications （Transact-sql） |Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 ms.custom: ''
-ms.manager: craigg
-ms.author: arib
-author: vainolo
+ms.author: mibar
+author: barmichal
 f1_keywords:
 - 'sys.sensitivity_classifications '
 dev_langs:
@@ -23,44 +22,44 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a47b311af70c58c36c8c467115c277f300092376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d14cd93b08c0094ad984a6469b433e0b266479
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014426"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929783"
 ---
-# <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications & Amp;#40;transact-SQL&AMP;#41;
+# <a name="syssensitivity_classifications-transact-sql"></a>sensitivity_classifications （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-傳回資料庫中的每個分類的項目資料列。
+針對資料庫中的每個分類專案，各傳回一個資料列。
 
 |資料行名稱|資料類型|描述|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|識別類別的分類所在處的項目|  
-|**class_desc**|**varchar(16)**|類別的分類所在處的項目描述|  
-|**major_id**|**int**|分類所在處的項目識別碼。 < b \>< b\>如果 class 是 0，則 major_id 一律為 0。<br>如果 class 是 1、2 或 7，則 major_id 就是 object_id。|  
-|**minor_id**|**int**|第二個項目 ID 的分類所在處，根據其類別加以解譯。<br><br>如果類別 = 1，minor_id 是 column_id (如果資料行)，否則就是 0 (如果物件)。<br>如果 class = 2，minor_id 就是 parameter_id。<br>如果類別 = 7，7,minor_id 就是 index_id。 |  
-|**label**|**sysname**|指派敏感度分類的標籤 （可讀取）|  
-|**label_id**|**sysname**|相關聯的標籤，可供 Azure 資訊保護 (AIP) 等資訊保護系統識別碼|  
-|**information_type**|**sysname**|指派敏感度分類的資訊類型 （可讀取）|  
-|**information_type_id**|**sysname**|資訊類型，可用的資訊保護系統等 Azure 資訊保護 (AIP) 相關聯識別碼|  
+|**class**|**int**|識別分類所在專案的類別|  
+|**class_desc**|**varchar(16)**|分類所在專案的類別描述|  
+|**major_id**|**int**|分類所在專案的識別碼。 < br \>< br \>如果類別為0，major_id 一律為0。<br>如果 class 是 1、2 或 7，則 major_id 就是 object_id。|  
+|**minor_id**|**int**|分類所在專案的次要識別碼，會根據其類別加以解讀。<br><br>如果 class = 1，minor_id 就是 column_id （如果是 column），否則就是0（如果是 object）。<br>如果 class = 2，minor_id 就是 parameter_id。<br>如果 class = 7，minor_id 就是 index_id。 |  
+|**label**|**sysname**|指派給敏感度分類的標籤（人類可讀取）|  
+|**label_id**|**sysname**|與標籤相關聯的識別碼，可供資訊保護系統（例如 Azure 資訊保護（AIP））使用|  
+|**information_type**|**sysname**|指派給敏感度分類的資訊類型（人類可讀取）|  
+|**information_type_id**|**sysname**|與資訊類型相關聯的識別碼，可供資訊保護系統（例如 Azure 資訊保護（AIP））使用|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>備註  
 
-- 此檢視會提供資料庫分類狀態的可視性。 它可用來管理資料庫分類，以及產生報表。
-- 支援的資料庫資料行的目前只支援分類。 因此：
-    - **類別**-永遠會將值 1 （代表的資料行）
+- 這個視圖可讓您看到資料庫的分類狀態。 它可以用來管理資料庫分類，以及產生報表。
+- 目前僅支援資料庫資料行的分類。 隨後
+    - **類別**-一律會有值1（表示資料行）
     - **class_desc** -一律會有值*OBJECT_OR_COLUMN*
-    - **則 major_id 就**-代表與 sys.all_objects.object_id 對應包含分類的資料行，資料表的識別碼
-    - **minor_id** -代表分類所在處，sys.all_columns.column_id 與對應的資料行的識別碼
+    - **major_id** -代表包含已分類資料行之資料表的識別碼，對應于 sys.databases. all _objects. object_id
+    - **minor_id** -代表分類所在的資料行識別碼，對應于 sys.databases. all _columns. column_id
 
 ## <a name="examples"></a>範例
 
-### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 列出所有分類資料行和其對應的分類
+### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 列出所有分類的資料行及其對應的分類
 
-下列範例傳回的資料表，其中列出的資料表名稱、 資料行名稱、 標籤，標籤識別碼、 資訊類型，每個已分類資料行在資料庫中的資訊類型識別碼。
+下列範例會傳回一個資料表，其中列出資料庫中每個分類資料行的資料表名稱、資料行名稱、標籤、標籤識別碼、資訊類型、資訊類型識別碼。
 
 > [!NOTE]
 > 標籤是 Azure SQL 資料倉儲的關鍵字。

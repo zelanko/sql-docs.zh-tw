@@ -1,7 +1,7 @@
 ---
 title: 版本資訊
 titleSuffix: SQL Server big data clusters
-description: 本文說明[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (預覽) 的最新更新和已知問題。
+description: 本文說明[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （預覽）的最新更新和已知問題。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160688"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988099"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server Big Data 叢集的版本資訊
 
@@ -22,7 +22,7 @@ ms.locfileid: "70160688"
 
 本文列出最新版本[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的更新和已知問題。
 
-## <a id="rc"></a>候選版 (八月)
+## <a id="rc"></a>候選版（八月）
 
 下列各節說明 SQL Server 2019 候選版中 big data 叢集的新功能和已知問題。
 
@@ -30,14 +30,16 @@ ms.locfileid: "70160688"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|SQL Server Always On 可用性群組 |當您部署 SQL Server Big Data 叢集時, 您可以設定部署來建立可用性群組, 以提供:<br/><br/>-高可用性 <br/><br/>-讀取-相應放大 <br/><br/>-向外延展資料插入資料集區<br/><br>請參閱[使用高可用性進行部署](../big-data-cluster/deployment-high-availability.md)。 |
+|SQL Server Always On 可用性群組 |當您部署 SQL Server Big Data 叢集時，您可以設定部署來建立可用性群組，以提供：<br/><br/>-高可用性 <br/><br/>-讀取-相應放大 <br/><br/>-向外延展資料插入資料集區<br/><br>請參閱[使用高可用性進行部署](../big-data-cluster/deployment-high-availability.md)。 |
 |`azdata` |使用[安裝管理](./deploy-install-azdata-linux-package.md)程式簡化的工具安裝<br/><br/>[`azdata notebook`命令](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`命令](./reference-azdata-bdc-status.md) |
-|Azure Data Studio|[下載 Azure Data Studio 的候選版組建](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)。<br/><br/>已透過 SQL Server 2019 guide Jupyter Book 新增對筆記本的疑難排解。<br/><br/>已新增控制器登入體驗。<br/><br/>已新增控制器儀表板來查看服務端點、查看叢集健全狀況狀態, 以及存取疑難排解筆記本。<br/><br/>改良的筆記本資料格輸出/編輯效能。|
+|Azure Data Studio|[下載 Azure Data Studio 的候選版組建](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)。<br/><br/>已透過 SQL Server 2019 guide Jupyter Book 新增對筆記本的疑難排解。<br/><br/>已新增控制器登入體驗。<br/><br/>已新增控制器儀表板來查看服務端點、查看叢集健全狀況狀態，以及存取疑難排解筆記本。<br/><br/>改良的筆記本資料格輸出/編輯效能。|
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知問題
 
-SQL Server 2019 Big Data 叢集候選版重新整理組建編號`15.0.1900.47`為。
+* SQL Server 2019 Big Data 叢集候選版重新整理組建編號`15.0.1900.47`為。
+
+* 具有上述組建編號的 SQL Server 2019 Big Data 叢集發行候選版本中不支援「kubeadm-生產」部署設定檔。 相反地，請使用「kubeadm-開發/測試」設定檔進行 Kubeadm 部署。
 
 ## <a id="ctp32"></a> CTP 3.2 (7 月)
 
@@ -60,13 +62,13 @@ SQL Server 2019 Big Data 叢集候選版重新整理組建編號`15.0.1900.47`�
 
 #### <a name="polybase"></a>PolyBase
 
-- 此版本不支援當計數 > 1000 時向下推展 TOP 子句。 在這類情況下，將從遠端資料來源讀取所有資料列。 (在候選版中已修正)
+- 此版本不支援當計數 > 1000 時向下推展 TOP 子句。 在這類情況下，將從遠端資料來源讀取所有資料列。 （在候選版中已修正）
 
 - 此版本不支援將共置聯結向下推展至外部資料來源。 例如，向下推展 ROUND_ROBIN 散發類型的兩個資料集區資料表，將取得 SQL 主要執行個體或計算集區執行個體的資料，以執行聯結作業。
 
 #### <a name="compute-pool"></a>計算集區
 
-- 巨量資料叢集部署只支援具有一個執行個體的計算集區。 (在候選版中已修正)
+- 巨量資料叢集部署只支援具有一個執行個體的計算集區。 （在候選版中已修正）
 
 #### <a name="storage-pool"></a>存放集區
 
@@ -167,7 +169,7 @@ SQL Server 2019 Big Data 叢集候選版重新整理組建編號`15.0.1900.47`�
 
 #### <a name="kibana-logs-dashboards"></a>Kibana 記錄儀表板
 
-- 在 Aris CTP 3.0 和 3.1 之間，Kibana 版本已從 6.3.1 升級為 7.0.1。  這使得 Edge 瀏覽器與 Kibana 不相容。 在 Edge 中載入目前版本的 Kibana 儀表板時，使用者將會看到空白頁面。 如需 Kibana.rs 支援的瀏覽器，請參閱[這裡]( https://www.elastic.co/support/matrix#matrix_browse) \(英文\) 
+- 在 Aris CTP 3.0 和 3.1 之間，Kibana 版本已從 6.3.1 升級為 7.0.1。  這會讓 Microsoft Edge 瀏覽器與 Kibana 不相容。 當您在 Microsoft Edge 中載入目前版本的 Kibana 儀表板時，使用者會看到空白頁面。 如需 Kibana.rs 支援的瀏覽器，請參閱[這裡]( https://www.elastic.co/support/matrix#matrix_browse) \(英文\) 
 
 
 ## <a id="ctp30"></a> CTP 3.0 (5 月)
@@ -816,4 +818,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的詳細資訊, 請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。
+如需有關[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的詳細資訊，請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。

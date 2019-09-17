@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 56ed7a0cf53a026b470c90c36b37da95f02ac5bc
 ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/11/2019
 ms.locfileid: "70913571"

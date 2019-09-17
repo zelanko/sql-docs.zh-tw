@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 590ca8048d45d9832ff53775512f991268843872
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809448"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774172"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的版本資訊
 
@@ -35,10 +35,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="183-sqlpackage"></a>18.3 sqlpackage
+
+|平台|下載|發行日期|Version|建置
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2102893)|2019年9月6日|18。3|15.0.4532.1|
+|macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102894)|2019年9月6日| 18。3|15.0.4532.1|
+|Linux .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102978)|2019年9月6日| 18。3|15.0.4532.1|
+|Windows .NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102979)|2019年9月6日| 18。3|15.0.4532.1|
+
+### <a name="features"></a>功能
+
+| 功能 | 詳細資料 |
+| :------ | :------ |
+| Azure SQL 資料倉儲 (預覽) | 新增支援以部署至 Azure SQL 資料倉儲。 | 
+| 部署 | 將/p： DatabaseLockTimeout = （INT32 ' 60 '）參數新增至 sqlpackage。 | 
+| 部署 | 將/p： LongRunningCommandTimeout = （INT32）參數新增至 sqlpackage。 |
+| 匯出/解壓縮 | 將/p： TempDirectoryForTableData = （STRING）參數新增至 sqlpackage。 |
+| 部署 | 允許從其他位置載入部署參與者。 部署參與者將會從與要部署的目標相同的目錄載入、擴充目錄相對於 sqlpackage 的二進位檔，以及已新增至 sqlpackage 的/p： AdditionalDeploymentContributorPaths = （STRING）參數。可以指定其他目錄位置的位置。 |
+| 部署 | 新增對 OPTIMIZE_FOR_SEQUENTIAL_KEY 的支援。 |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>修正
+
+| Fix | 詳細資料 |
+| :-- | :------ |
+| 部署 | 修正以忽略自動索引，使其不會在部署時中斷。 | 
+| Always Encrypted | 修正以處理 Always Encrypted Varchar 資料行。 | 
+| 組建/部署 | 修正以解析 xml 資料行集的節點（）方法。| 
+| ScriptDom | 修正 ' URL ' 字串被視為最上層 token 的其他情況。 | 
+| 圖表 | 修正條件約束中的虛擬資料行參考所產生的 TSQL。  | 
+| 匯出 | 產生符合複雜性需求的隨機密碼。 | 
+| 部署 | 修正，以在抓取條件約束時接受命令逾時。 | 
+| .NET Core （預覽） | 修正檔案的診斷記錄。 | 
+| .NET Core （預覽） | 使用串流來匯出資料表資料，以支援大型資料表。 | 
+| &nbsp; | &nbsp; |
+
 ## <a name="182-sqlpackage"></a>18.2 sqlpackage
 
-發行日期：&nbsp;2019 年 4 月 15 日  
-組建：&nbsp; 15.0.4384.2 
+|平台|下載|發行日期|Version|建置
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2087429)|2019 年 4 月 15 日|18.2|15.0.4384.2|
+|macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2087247)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
+|Linux .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2087431)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
 
 ### <a name="features"></a>功能
 

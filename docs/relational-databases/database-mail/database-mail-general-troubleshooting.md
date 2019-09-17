@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01b58ac9ebbcb7cdfba9ac8c8fe3f58b67278547
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ea44a55a7c58e64f327a97943481dfd63289324
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134408"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228428"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Database Mail 疑難排解的一般步驟 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 若要針對 Database Mail 進行疑難排解，必須檢查下列 Database Mail 系統的一般區域。 這些程序是以邏輯順序來呈現，但您可以採用任何順序來進行評估。
 

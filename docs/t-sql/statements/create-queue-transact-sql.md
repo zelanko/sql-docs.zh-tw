@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d2ea60a1babc5cc0869586db13a7dfcb39c6277
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 395a2190baf46734cdc85357bc39a34473ee0e42
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117347"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745500"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   在資料庫中建立新的佇列。 佇列會儲存訊息。 當服務的訊息到達時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將訊息放在與服務相關聯的佇列中。  
   

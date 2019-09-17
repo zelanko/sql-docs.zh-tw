@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13306a16233195f4af686a5d9f8b68b6d1ccb2f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3aa589de707e6f2edaac83db40ba908bf7177ae
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997881"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212344"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例使用憑證設定資料庫鏡像 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,7 +262,7 @@ ms.locfileid: "67997881"
     ```  
   
     > [!NOTE]  
-    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，請保持交易安全性設定為 FULL (預設值)，並在執行第二個 SET PARTNER **'***partner_server***'** 陳述式後儘快新增見證。 請注意，必須先為傳入與傳出設定見證。  
+    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，請保持交易安全性設定為 FULL (預設值)，並在執行第二個 SET PARTNER **'** _partner_server_ **'** 陳述式後儘快新增見證。 請注意，必須先為傳入與傳出設定見證。  
   
  [[範例頂端]](#ExampleH2)  
   

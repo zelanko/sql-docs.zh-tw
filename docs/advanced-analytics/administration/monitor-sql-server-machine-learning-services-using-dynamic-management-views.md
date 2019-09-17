@@ -1,35 +1,35 @@
 ---
-title: 使用動態管理檢視 (Dmv) 來監視 R 和 Python 腳本執行
-description: 使用動態管理檢視 (Dmv) 來監視 SQL Server Machine Learning 服務中的 R 和 Python 外部腳本執行。
+title: 使用 Dmv 監視 Python 和 R 腳本執行
+description: 使用動態管理檢視（Dmv）來監視 SQL Server Machine Learning 服務中的 Python 和 R 外部腳本執行。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 09/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ade3714459ebc0457b6afea2600cc0547c9940a1
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715324"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978399"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用動態管理檢視 (Dmv) 監視 SQL Server Machine Learning 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-使用動態管理檢視 (Dmv) 來監視外部腳本 (R 和 Python) 的執行、使用的資源、診斷問題, 以及微調 SQL Server Machine Learning 服務中的效能。
+使用動態管理檢視（Dmv）來監視外部腳本的執行（Python 和 R）、使用的資源、診斷問題，以及微調 SQL Server Machine Learning 服務中的效能。
 
 在本文中, 您會找到 SQL Server Machine Learning 服務的特定 Dmv。 您也會找到範例查詢, 其中顯示:
 
 + 機器學習服務的設定和設定選項
-+ 執行外部 R 或 Python 腳本的作用中會話
-+ 適用于 R 和 Python 的外部執行時間的執行統計資料
++ 執行外部 Python 或腳本的作用中會話
++ 適用于 Python 和 R 的外部執行時間的執行統計資料
 + 外部腳本的效能計數器
 + OS、SQL Server 和外部資源集區的記憶體使用量
 + SQL Server 和外部資源集區的記憶體配置
 + Resource Governor 資源集區, 包括外部資源集區
-+ 適用于 R 和 Python 的已安裝套件
++ 適用于 Python 和 R 的已安裝套件
 
 如需有關 Dmv 的一般資訊, 請參閱[系統動態管理檢視](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。
 
@@ -56,7 +56,7 @@ ms.locfileid: "68715324"
 
 ![設定和設定查詢的輸出](media/dmv-settings-and-configuration.png "設定和設定查詢的輸出")
 
-執行下列查詢以取得此輸出。 如需所使用之視圖和功能的詳細資訊, 請參閱[_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)、 [sys.databases](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)。
+執行下列查詢以取得此輸出。 如需所使用之視圖和功能的詳細資訊，請參閱[_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)、 [sys.databases](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)。
 
 ```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -91,7 +91,7 @@ WHERE name = 'external scripts enabled';
 
 ![使用中設定查詢的輸出](media/dmv-active-sessions.png "使用中設定查詢的輸出")
 
-執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊, 請參閱[_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)、 [_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[sys.databases _exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)。
+執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊，請參閱[_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)、 [_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[sys.databases _exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)。
 
 ```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -114,7 +114,7 @@ ON s.session_id = r.session_id;
 | database_name | 每個會話的目前資料庫名稱。 |
 | login_name | 目前用來執行會話的 SQL Server 登入名稱。 |
 | wait_time | 若要求目前被封鎖，這個資料行會傳回目前等候的持續時間 (以毫秒為單位)。 不可為 Null。 |
-| wait_type | 若要求目前被封鎖，這個資料行會傳回等候的類型。 如需等候類型的詳細資訊, 請參閱[sys.databases _os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 |
+| wait_type | 若要求目前被封鎖，這個資料行會傳回等候的類型。 如需等候類型的詳細資訊，請參閱[sys.databases _os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 |
 | last_wait_type | 如果這個要求先前被封鎖，這個資料行會傳回上次等候的類型。 |
 | total_elapsed_time | 要求到達後所經過的總時間 (以毫秒為單位)。 |
 | cpu_time | 要求所用的 CPU 時間 (以毫秒為單位)。 |
@@ -131,7 +131,7 @@ ON s.session_id = r.session_id;
 
 ![執行統計資料查詢的輸出](media/dmv-execution-statistics.png "執行統計資料查詢的輸出")
 
-執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊, 請參閱[_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 查詢只會傳回已執行一次以上的函式。
+執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊，請參閱[_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 查詢只會傳回已執行一次以上的函式。
 
 ```sql
 SELECT language, counter_name, counter_value
@@ -154,7 +154,7 @@ ORDER BY language, counter_name;
 
 ![效能計數器查詢的輸出](media/dmv-performance-counters.png "效能計數器查詢的輸出")
 
-執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊, 請參閱[_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)。
+執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊，請參閱[_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)。
 
 ```sql
 SELECT counter_name, cntr_value
@@ -162,12 +162,12 @@ FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%'
 ```
 
-**_os_performance_counters**會輸出下列外部腳本的效能計數器:
+**_os_performance_counters**會輸出下列外部腳本的效能計數器：
 
 | 計數器 | 描述 |
 |---------|-------------|
 | 執行總計 | 由本機或遠端呼叫啟動的外部進程數目。 |
-| 平行執行 | 腳本包含 _@parallel_ 規格[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]以及能夠產生和使用平行查詢計劃的次數。 |
+| 平行執行 | 腳本包含 _\@平行_規格，且[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能夠產生和使用平行查詢計劃的次數。 |
 | 串流執行 | 已叫用串流功能的次數。 |
 | SQL CC 執行 | 外部腳本的執行次數, 其中會從遠端具現化呼叫, 並使用 SQL Server 做為計算內容。 |
 | 隱含驗證登入 | 使用隱含驗證進行 ODBC 回送呼叫的次數;也就是說, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]會代表傳送腳本要求的使用者執行呼叫。 |
@@ -180,7 +180,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 ![記憶體使用量查詢的輸出](media/dmv-memory-usage.png "記憶體使用量查詢的輸出")
 
-執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊, 請參閱[_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)和[_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。
+執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊，請參閱[_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)和[_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。
 
 ```sql
 SELECT physical_memory_kb, committed_kb
@@ -200,11 +200,11 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>記憶體組態
 
-以 SQL Server 和外部資源集區的百分比來查看最大記憶體設定的相關資訊。 如果 SQL Server 是以預設值`max server memory (MB)`執行, 則會將它視為 OS 記憶體的 100%。
+以 SQL Server 和外部資源集區的百分比來查看最大記憶體設定的相關資訊。 如果 SQL Server 是以預設值`max server memory (MB)`執行，則會將它視為 OS 記憶體的 100%。
 
 ![記憶體設定查詢的輸出](media/dmv-memory-configuration.png "記憶體設定查詢的輸出")
 
-執行下列查詢以取得此輸出。 如需所使用之視圖的詳細資訊, 請參閱[sys.databases](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
+執行下列查詢以取得此輸出。 如需所使用之視圖的詳細資訊，請參閱[sys.databases](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
 
 ```sql
 SELECT 'SQL Server' AS name
@@ -232,7 +232,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 ![資源集區查詢的輸出](media/dmv-resource-pools.png "資源集區查詢的輸出")
 
-執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊, 請參閱[_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)和[_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
+執行下列查詢以取得此輸出。 如需所使用動態管理檢視的詳細資訊，請參閱[_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)和[_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
 
 ```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name

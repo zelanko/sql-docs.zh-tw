@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 449633953c0561191471733fa3a3dcba0fb24b83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 293b58adde0ccbfe6394cd3917d2671f23f3b290
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006400"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212357"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>資料庫鏡像監視器 (狀態頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "68006400"
 -   **具有自動容錯移轉的高安全性 (同步)**  
   
 ## <a name="remarks"></a>Remarks  
- **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 它們必須透過 [資料庫鏡像監視器作業]  來定期更新狀態資料表。 若要了解顯示狀態的時間，使用者可以查看 [主體記錄 (\<時間>)]  和 [鏡像記錄 (\<時間>)]  標籤中的時間。  
+ **dbm_monitor** 固定資料庫角色的成員可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorresults** 預存程序，檢視現有的鏡像狀態。 但是這些使用者無法更新狀態資料表。 它們必須透過 [資料庫鏡像監視器作業]  來定期更新狀態資料表。 若要了解顯示狀態的時間，使用者可以查看 **[主體記錄 (** _\<時間>_ **)]** 和 **[鏡像記錄 (** _\<時間>_ **)]** 標籤中的時間。  
   
  如果這項作業不存在，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 已停止，則狀態將會越來越過時，因此可能再也無法反映鏡像工作階段的組態。 例如，在容錯移轉之後，夥伴可能看起來像是共用相同的角色 (主體或鏡像)，或者目前的主體伺服器可能會顯示為鏡像，而目前的鏡像伺服器則顯示為主體。  
   

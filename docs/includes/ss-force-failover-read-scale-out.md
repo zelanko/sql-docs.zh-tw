@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 87fce17db46dc590fbffe0bae0b27c17bd54320e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68213089"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70963565"
 ---
 每個可用性群組只有一個主要複本。 主要複本允許讀取和寫入。 若要變更作為主要的複本，您可以進行容錯移轉。 在高可用性的可用性群組中，叢集管理員會自動化容錯移轉程序。 在叢集類型為 NONE 的可用性群組中，容錯移轉程序是手動的。 
 
@@ -72,7 +72,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        SET REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1;
+        SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1);
    ```
 
    這項設定可確保所有使用中交易都已認可至主要複本及至少一個同步次要複本。 

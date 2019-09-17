@@ -10,10 +10,10 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "68702789"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和連接字串關鍵字和屬性
@@ -45,8 +45,8 @@ ms.locfileid: "68702789"
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)(v 17.4 +, 僅限 DSN)| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)(v 17.4 +, 僅限 DSN) | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)（v 17.4 +，僅限 DSN）| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)（v 17.4 +，僅限 DSN） | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -124,7 +124,7 @@ ms.locfileid: "68702789"
 
 用於描述資料來源。
 
-### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
+### <a name="sql_copt_ss_ansi_oem"></a>SQL_COPT_SS_ANSI_OEM
 
 控制 ANSI 至 OEM 的資料轉換。 
 
@@ -133,7 +133,7 @@ ms.locfileid: "68702789"
 | SQL_AO_OFF | (預設) 不執行轉譯。 |
 | SQL_AO_ON | 執行轉譯。 |
 
-### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
+### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 控制 SQL Server 後援連線的使用。 這一項已不再支援。
 
@@ -146,7 +146,7 @@ ms.locfileid: "68702789"
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>新的連接字串關鍵字和連接屬性
 
-###  <a name="authentication---sqlcoptssauthentication"></a>驗證 - SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sql_copt_ss_authentication"></a>驗證 - SQL_COPT_SS_AUTHENTICATION
 
 設定連線到 SQL Server 時要使用的驗證模式。 如需詳細資訊，請參閱[使用 Azure Active Directory](using-azure-active-directory.md)。
 
@@ -163,7 +163,7 @@ ms.locfileid: "68702789"
 > [!NOTE]
 > 使用 `Authentication` 關鍵字或屬性時，明確地將 `Encrypt` 設定指定為連接字串/DSN/連接屬性中所要的值。 如需詳細資訊，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
 控制透明的資料行加密 (Always Encrypted)。 如需詳細資訊，請參閱[使用 Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md)。
 
@@ -173,7 +173,7 @@ ms.locfileid: "68702789"
 |已停用|SQL_CE_DISABLED|(預設) 停用 Always Encrypted。|
 | |SQL_CE_RESULTSETONLY|只啟用解密 (結果和傳回值)。|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
 控制透明網路 IP 解析功能，它會與 MultiSubnetFailover 互動，以允許更快的重新連線嘗試。 如需詳細資訊，請參閱[使用透明網路 IP 解析](using-transparent-network-ip-resolution.md)。
 
@@ -191,7 +191,7 @@ ms.locfileid: "68702789"
 |否|(預設) 如果有的話，對中繼資料使用 sp_describe_first_result_set。 |
 |是| 對中繼資料使用 SET FMTONLY。 |
 
-### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
+### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 允許使用 Azure Active Directory 存取權杖進行驗證。 如需詳細資訊，請參閱[使用 Azure Active Directory](using-azure-active-directory.md)。
 
@@ -200,7 +200,7 @@ ms.locfileid: "68702789"
 | NULL | (預設) 不提供任何存取權杖。 |
 | ACCESSTOKEN* | 存取權杖的指標。 |
 
-### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
+### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
 與載入的金鑰儲存區提供者程式庫通訊。 請參閱＜控制透明的資料行加密 (Always Encrypted)＞。 此屬性沒有預設值。 如需詳細資訊，請參閱[自訂金鑰儲存區提供者](custom-keystore-providers.md)。
 
@@ -208,7 +208,7 @@ ms.locfileid: "68702789"
 |-|-|
 | CEKEYSTOREDATA * | 金鑰儲存區提供者程式庫的通訊資料結構 |
 
-### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
+### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
 載入 Always Encrypted 的金鑰儲存區提供者程式庫，或擷取載入的金鑰儲存區提供者程式庫名稱。 如需詳細資訊，請參閱[自訂金鑰儲存區提供者](custom-keystore-providers.md)。 此屬性沒有預設值。
 
@@ -216,7 +216,7 @@ ms.locfileid: "68702789"
 |-|-|
 | char * | 金鑰儲存區提供者程式庫路徑 |
 
-### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
+### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
 若要啟用與 XA 相容交易處理器 (TP) 的 XA 交易，應用程式需要呼叫 **SQLSetConnectAttr**，且使用 SQL_COPT_SS_ENLIST_IN_XA 與 `XACALLPARAM` 物件的指標。 這個選項在 Windows、(17.3 和更新版本) Linux 和 Mac 上受到支援。
 ```

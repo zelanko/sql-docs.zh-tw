@@ -1,70 +1,109 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: SQL Server Machine Learning Services (Python 和 R) 檔
+### YamlMime:Landing
+title: SQL Server Machine Learning Services （Python 和 R）檔
+summary: 瞭解如何使用 SQL Server Machine Learning 服務來執行關聯式資料的 Python 和 R 腳本。 教學課程、程式碼範例、安裝指南和其他檔會為您示範作法。
 metadata:
-  title: SQL Server Machine Learning Services (Python、R) 檔-教學課程、快速入門和安裝指南 |Microsoft Docs
-  titleSuffix: ''
+  title: SQL Server Machine Learning Services （Python、R）檔-教學課程、快速入門和安裝指南
   description: 瞭解如何使用 SQL Server Machine Learning 服務來執行關聯式資料的 Python 和 R 腳本。 教學課程、程式碼範例、安裝指南和其他檔會為您示範作法。
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 08/01/2019
-abstract:
-  description: 瞭解如何使用 SQL Server Machine Learning 服務來執行關聯式資料的 Python 和 R 腳本。 教學課程、程式碼範例、安裝指南和其他檔會為您示範作法。
-  aside:
-    image:
-      alt: null
-      height: 124
-      src: media/index/video.png
-      width: 250
-    title: '觀看影片 (3:00)'
-    href: 'https://www.youtube.com/watch?v=ACejZ9optCQ'
-    width: 250
-sections:
-  - title: 5 分鐘快速入門
-    items:
-      - type: paragraph
-        text: '<a href="install/sql-machine-learning-services-windows-install">安裝 SQL Server Machine Learning 服務</a>之後, 您可以開始使用下列快速入門:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="tutorials/quickstart-python-run-using-t-sql">在 Python</a>或<a href="tutorials/quickstart-r-run-using-tsql">R 中</a>執行 "Hello world" 腳本
-          - html: <a href="tutorials/quickstart-python-train-score-in-tsql">在 Python</a>或<a href="tutorials/quickstart-r-create-predictive-model">R 中</a>建立預測模型
-  - title: 逐步教學課程
-    items:
-      - type: paragraph
-        text: '瞭解如何流覽資料、進行功能工程設計、定型和部署模型, 以及進行預測:'
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">在 t-sql 中使用 Python</a>:探索資料、執行特徵工程設計、定型和部署模型, 以及進行預測 (五個部分的系列)'
-          - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">在 t-sql 中使用 R</a>:探索資料、執行特徵工程設計、定型和部署模型, 以及進行預測 (五個部分的系列)'
-          - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">使用 R 工具中的 Machine Learning 服務</a>:流覽資料、建立圖形和繪圖、執行特徵工程設計、定型和部署模型, 以及進行預測 (六個部分的系列)'
-  - title: 方案
-    items:
-      - type: paragraph
-        text: 尋找<a href="tutorials/data-science-scenarios-and-solution-templates">可協助您在 SQL Server 上建立機器學習服務解決方案的範本</a>。
-  - title: 參考資料
-    items:
-      - type: paragraph
-        text: '使用開放原始碼套件和架構, 以及 SQL Server Machine Learning 服務中的 Microsoft Python 和 R 套件:'
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="python/ref-py-revoscalepy">Python 中的 revoscalepy</a>:Python 工作的分散式和平行處理: 資料轉換、探索、視覺效果、統計和預測性分析'
-          - html: '<a href="python/ref-py-microsoftml">Python 中的 microsoftml</a>:以適用于 Python 的 Microsoft AI 演算法為基礎的函數'
-          - html: '<a href="r/ref-r-revoscaler">R 中的 RevoScaleR</a>:R 工作的分散式和平行處理: 資料轉換、探索、視覺效果、統計和預測性分析'
-          - html: '<a href="r/ref-r-microsoftml">R 中的 MicrosoftML</a>:以適用于 R 的 Microsoft AI 演算法為基礎的函數'
-          - html: '<a href="r/ref-r-olapr">R 中的 olapR</a>:從 OLAP cube 匯入資料'
-          - html: '<a href="r/ref-r-sqlrutils">R 中的 sqlRUtils</a>:用於封裝 R 和 T-sql 的 Helper 函式'
-  - title: 其他 Machine Learning 技術
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning 服務<a>
-          - html: <a href="/azure/machine-learning/">Azure Machine Learning</a>
-          - html: <a href="/dotnet/machine-learning/">ML.NET</a>
-          - html: <a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">Microsoft 的機器學習服務產品有哪些？</a>
+  ms.date: 09/12/2019
+  ms.openlocfilehash: e1851799ee4c46c8b639a2f50bce129e672aecfa
+  ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 09/12/2019
+  ms.locfileid: "70929544"
+landingContent:
+- title: 關於 Machine Learning 服務
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 什麼是 SQL Server Machine Learning 服務（Python 和 R）？
+      url: what-is-sql-server-machine-learning.md
+  - linkListType: whats-new
+    links:
+    - text: Machine Learning 服務有哪些新功能？
+      url: what-s-new-in-sql-server-machine-learning-services.md
+  - linkListType: video
+    links:
+    - text: 如何使用 Machine Learning 服務在 SQL Server 中執行 R/Python
+      url: https://www.youtube.com/watch?v=ACejZ9optCQ
+- title: 開始使用 Python
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 在 SQL Server 上執行 "Hello world" Python 腳本
+      url: tutorials/quickstart-python-run-using-t-sql.md
+    - text: 處理輸入和輸出
+      url: tutorials/quickstart-python-inputs-and-outputs.md
+    - text: SQL Server 中的 Python 資料結構
+      url: tutorials/quickstart-python-data-structures.md
+    - text: 訓練並使用您的第一個模型
+      url: tutorials/quickstart-python-train-score-in-tsql.md
+  - linkListType: tutorial
+    links:
+    - text: 使用線性回歸來預測 ski 出租
+      url: tutorials/python-ski-rental-linear-regression.md
+    - text: 使用 k--表示叢集分類客戶
+      url: tutorials/python-clustering-model.md
+- title: 開始使用 R
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 在 SQL Server 上執行 "Hello world" R 腳本
+      url: tutorials/quickstart-r-run-using-tsql.md
+    - text: 處理輸入和輸出
+      url: tutorials/quickstart-r-inputs-and-outputs.md
+    - text: SQL Server 中的 R 資料結構
+      url: tutorials/quickstart-r-data-types-and-objects.md
+    - text: 建立預測模型
+      url: tutorials/quickstart-r-create-predictive-model.md
+  - linkListType: tutorial
+    links:
+    - text: 在 T-SQL 中使用 R
+      url: tutorials/sqldev-in-database-r-for-sql-developers.md
+    - text: 在 R 工具中使用 Machine Learning 服務
+      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+- title: 安裝 Machine Learning 服務
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 在 Windows 上安裝 Machine Learning 服務
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: 在 Linux 上安裝 Machine Learning 服務
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+  - linkListType: how-to-guide
+    links:
+    - text: 設定 Python 用戶端
+      url: python/setup-python-client-tools-sql.md
+    - text: 設定 R 用戶端
+      url: r/set-up-a-data-science-client.md
+- title: 架構和安全性
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Extensibility Framework
+      url: concepts/extensibility-framework.md
+    - text: Python 延伸模組
+      url: concepts/extension-python.md
+    - text: R 延伸模組
+      url: concepts/extension-r.md
+  - linkListType: concept
+    links:
+    - text: Externsibility 架構的安全性
+      url: /concepts/security.md
+- title: 管理 Python 和 R 套件
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 取得 Python 套件資訊
+      url: package-management/python-package-information.md
+    - text: 使用 sqlmlutils 安裝 Python 套件
+      url: package-management/install-additional-python-packages-on-sql-server.md
+    - text: 取得 Python 資訊
+      url: package-management/r-package-information.md
+    - text: 使用 sqlmlutils 安裝新的 R 套件
+      url: package-management/install-additional-r-packages-on-sql-server.md

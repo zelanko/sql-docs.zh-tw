@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190380"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774202"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -86,7 +86,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定是否應該忽略權限。|
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|指定是否忽略使用者與登入之間的關聯性。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定支援儲存體的類型，以供結構描述模型在擷取期間使用。|
-|**/p:**|TableData=(STRING)|指出將從中解壓縮資料的資料表。 以下列格式指定包含或不含名稱部分之括弧的資料表名稱: schema_name. table_identifier。|
+|**/p:**|TableData=(STRING)|指出將從中解壓縮資料的資料表。 以下列格式指定包含或不含名稱部分之括弧的資料表名稱： schema_name. table_identifier。|
+|**/p:**| TempDirectoryForTableData = （字串）|指定在寫入封裝檔案之前，用來緩衝資料表資料的臨時目錄。|
 |**/p:**|VerifyExtraction=(BOOLEAN)|指定是否應該驗證擷取的 dacpac。|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>Publish 參數、屬性與 SQLCMD 變數
@@ -149,6 +150,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|這個設定表示資料庫的定序於部署期間的處理方式。如果目標資料庫的定序不符合來源所指定的定序，預設會更新目標資料庫的定序。 當設定這個選項時，則應該使用目標資料庫 (或伺服器) 的定序。|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|指定當您發行至資料庫時，應該更新目標資料庫或應該卸除並重新建立目標資料庫。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|定義 Azure SQL Database 的版本。|
+|**/p:**|DatabaseLockTimeout = （INT32 ' 60 '）|指定對 SQLServer 執行查詢時的資料庫鎖定逾時 (秒)。 請使用-1 來無限期地等待。|
 |**/p:**|DatabaseMaximumSize=(INT32)|定義 Azure SQL Database 的大小上限 (以 GB 表示)。|
 |**/p:**|DatabaseServiceObjective=(STRING)|定義 Azure SQL Database 的效能等級，例如 "P0" 或 "S1"。|
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|若為 true，則資料庫會在設定為單一使用者模式後部署。|
@@ -207,6 +209,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新外部索引鍵之 WITH NOCHECK 子句值的差異。|
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|將所有複合項目包含在單一發行作業中。|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|指定當您發行至資料庫時，是否應該盡可能使用交易陳述式。|
+|**/p:**|LongRunningCommandTimeout = （INT32）|以秒為單位指定對 SQL Server 執行查詢時的長時間執行命令逾時。 使用0可無限期等候。|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|指定發行在發現差異時一定要卸除並重新建立組件，而不是發出 ALTER ASSEMBLY 陳述式。|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|指定在目標資料庫中建立新 FileGroup 時，是否一併建立新檔案。|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|指定結構描述是否向資料庫伺服器註冊。|
@@ -267,7 +270,8 @@ SqlPackage 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL Data
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定支援儲存體的類型，以供結構描述模型在擷取期間使用。|
-|**/p:**|TableData=(STRING)|指出將從中解壓縮資料的資料表。 以下列格式指定包含或不含名稱部分之括弧的資料表名稱: schema_name. table_identifier。|
+|**/p:**|TableData=(STRING)|指出將從中解壓縮資料的資料表。 以下列格式指定包含或不含名稱部分之括弧的資料表名稱： schema_name. table_identifier。|
+|**/p:**|TempDirectoryForTableData = （字串）|指定在寫入封裝檔案之前，用來緩衝資料表資料的臨時目錄。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|指定預期的目標引擎版本。 這會影響在產生的 bacpac 中, 是否允許具有 V12 功能的 Azure SQL Database 伺服器支援的物件, 例如記憶體優化資料表。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|指定是否要驗證 Microsoft Azure SQL Database v12 支援的全文檢索文件類型。|
   

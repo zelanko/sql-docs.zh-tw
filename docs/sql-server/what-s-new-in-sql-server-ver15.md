@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155473"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228459"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -21,7 +21,7 @@ ms.locfileid: "70155473"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。
 
-此文章摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和增強功能。
+本文摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和增強功能。
 
 如需詳細資訊和已知問題，請參閱 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊](sql-server-ver15-release-notes.md)。
 
@@ -49,7 +49,7 @@ ms.locfileid: "70155473"
 
 ## <a name="database-engine"></a>資料庫引擎
 
-### <a name="security"></a>安全性
+### <a name="security"></a>Security
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
@@ -88,7 +88,7 @@ ms.locfileid: "70155473"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|支援 UTF-8 字元編碼 |支援匯入和匯出編碼的 UTF-8 字元，以及作為字串資料的資料庫層級或資料行層級定序。 這支援延伸至全球規模的應用程式，其中提供全球多語系資料庫應用程式與服務的需求，對於滿足客戶需求與特定市場法規而言非常重要。 請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候選版啟用 Polybase 外部資料表和 Always Encrypted 的 UTF-8 支援。|
+|支援 UTF-8 字元編碼 |支援匯入和匯出編碼的 UTF-8 字元，以及作為字串資料的資料庫層級或資料行層級定序。 這支援延伸至全球規模的應用程式，其中提供全球多語系資料庫應用程式與服務的需求，對於滿足客戶需求與特定市場法規而言非常重要。 請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候選版啟用 Polybase 外部資料表和 Always Encrypted 的 UTF-8 支援。|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase

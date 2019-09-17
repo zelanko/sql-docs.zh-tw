@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91ad9771c9133dc3194f25fa530bd3ba458f865a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117115"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745393"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   建立新的服務。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務是一項特定工作或一組工作的名稱。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會利用服務的名稱路由傳送訊息，將訊息傳遞至資料庫內的正確佇列，以及強制使用合約進行交談。  
   

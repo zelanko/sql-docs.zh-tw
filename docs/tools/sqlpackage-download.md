@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 406fb50ceaba177d02bf8d79d0c37191dbe178f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986261"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874396"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
@@ -24,9 +24,10 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 
 |平台|下載|發行日期|Version|建置
 |:---|:---|:---|:---|:---|
-|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2087429)|2019 年 4 月 15 日|18.2|15.0.4384.2|
-|macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2087247)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
-|Linux .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2087431)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
+|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2102893)|2019年9月6日|18。3|15.0.4532.1|
+|macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102894)|2019年9月6日| 18。3|15.0.4532.1|
+|Linux .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102978)|2019年9月6日| 18。3|15.0.4532.1|
+|Windows .NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102979)|2019年9月6日| 18。3|15.0.4532.1|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。
 
@@ -36,14 +37,26 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 
 此版本的 sqlpackage 包含標準的 Windows 安裝程式體驗，以及 .zip： 
 
-1. 下載並執行[適用於Windows 的 DacFramework.msi 安裝程式](https://go.microsoft.com/fwlink/?linkid=2087429)。
+1. 下載並執行[適用於Windows 的 DacFramework.msi 安裝程式](https://go.microsoft.com/fwlink/?linkid=2102893)。
 2. 開啟新的 [命令提示字元] 視窗，然後執行 sqlpackage.exe
     - sqlpackage 會安裝到 ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` 資料夾中
     - 在 x64 電腦上安裝 x86 版本，sqlpackage 會安裝在 ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` 資料夾中
 
-## <a name="get-sqlpackage-preview-for-macos"></a>取得適用於 macOS 的 sqlpackage (預覽)
+## <a name="get-sqlpackage-net-core-preview-for-windows"></a>取得適用于 Windows 的 sqlpackage .NET Core （預覽）
 
-1. 下載[適用於 macOS 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2087247)。
+1. 下載 [sqlpackage for Windows](https://go.microsoft.com/fwlink/?linkid=2102979)。
+2. 以滑鼠右鍵按一下 Windows Explorer 中的檔案，然後選取 [解壓縮全部]，然後選取目標目錄，來解壓縮檔案。
+3. 開啟新的終端機視窗，可以 cd 到 exracted sqlpackage 的位置：
+
+   **.zip 安裝：**
+
+   ```bash
+   sqlpackage
+   ```
+
+## <a name="get-sqlpackage-net-core-preview-for-macos"></a>取得適用于 macOS 的 sqlpackage .NET Core （預覽）
+
+1. 下載[適用於 macOS 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2102894)。
 2. 若要將檔案解壓縮並啟動 sqlpackage，請開啟新的終端機視窗並輸入下列命令：
 
    **.zip 安裝：**
@@ -56,9 +69,9 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
    sqlpackage
    ```
 
-## <a name="get-sqlpackage-preview-for-linux"></a>取得適用於 Linux 的 sqlpackage (預覽)
+## <a name="get-sqlpackage-net-core-preview-for-linux"></a>取得適用于 Linux 的 sqlpackage .NET Core （預覽）
 
-1. 使用其中一種安裝程式或 tar.gz 封存下載[適用於 Linux 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2087431)：
+1. 使用其中一種安裝程式或 tar.gz 封存下載[適用於 Linux 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2102978)：
 2. 若要將檔案解壓縮並啟動 sqlpackage，請開啟新的終端機視窗並輸入下列命令：
 
    **.zip 安裝：**

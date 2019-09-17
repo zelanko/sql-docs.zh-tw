@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952613"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809959"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>適用於 Linux 部署的 SQL Server 可用性基本概念
 
@@ -71,7 +71,7 @@ scp MyAGCert.cer username@servername:/folder/subfolder
 
 Samba 是伺服器訊息區 (SMB) 的 Linux 變體，也可以用來建立 UNC 路徑 (例如 `\\SERVERNAME\SHARE`) 所存取的共用。 如需設定 Samba 的詳細資訊，請參閱下列適用於每個發行版本之連結中的相關資訊：
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html) \(英文\)
--   [SLES](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html) \(英文\)
+-   [SLES](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
 -   [Ubuntu](https://help.ubuntu.com/community/Samba)
 
 您也可以使用 Windows 型 SMB 共用；SMB 共用不需要是 Linux 型的，只要 Samba 的用戶端部分會在裝載 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 Linux 伺服器上正確設定，且共用具有適當的存取權即可。 針對混合式環境中的人員，這是利用 Linux 型 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署之現有基礎結構的一種方式。
@@ -215,9 +215,6 @@ Pacemaker 叢集的記錄檔位置會因發行版本而有所不同。
 -   Hyper-V 文件：[使用客體叢集以提供高可用性](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx) \(英文\)
 -   白皮書 (專為 Windows 型部署所撰寫，但大部分的概念仍適用)：[使用 VMware vSphere 規劃高可用性、任務關鍵性 SQL Server 部署](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf) \(英文\)
 
->[!NOTE]
->Hyper-V 尚未支援使用具有 STONITH 之 Pacemaker 叢集的 RHEL。 支援該 RHEL 之前，如需詳細資訊和更新，請參閱[適用於 RHEL 高可用性叢集的支援原則](https://access.redhat.com/articles/29440#3physical_host_mixing) \(英文\)。
-
 ### <a name="networking"></a>網路
 與 WSFC 不同，Pacemaker 不需要專用名稱，或至少一個固定 IP 位址以供 Pacemaker 叢集本身使用。 AG 和 FCI 將需要 IP 位址 (請參閱各自的文件，以取得詳細資訊)，但不需要名稱，因為沒有網路名稱資源。 SLES 確實允許基於系統管理目的來設定 IP 位址，但並非必要，因為可以在[建立 Pacemaker 叢集中](sql-server-linux-deploy-pacemaker-cluster.md#create)查看它。
 
@@ -229,9 +226,6 @@ Pacemaker 叢集的記錄檔位置會因發行版本而有所不同。
 仲裁設定和需求與 AG 或 FCI 特定的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署有關。
 
 支援的 Pacemaker 叢集需要 STONITH。 使用發行版本的文件來設定 STONITH。 適用於 SLES 之[以儲存體為基礎的隔離](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) \(英文\) 即為一例。 針對以 ESXI 為基礎的解決方案，還有適用於 VMware vCenter 的 STONITH 代理程式。 如需詳細資訊，請參閱[適用於 VMWare VM VCenter SOAP 隔離的 STONITH 外掛程式代理程式 (非官方)](https://github.com/olafrv/fence_vmware_soap) \(英文\)。
-
-> [!NOTE]
-> 撰寫此文章時，Hyper-V 沒有適用於 STONITH 的解決方案。 這適用於內部部署，同時也會影響使用特定發行版本 (例如 RHEL) 的 Azure 型 Pacemaker 部署。
 
 ### <a name="interoperability"></a>互通性
 本節記載 Linux 型叢集如何與 WSFC 或其他 Linux 發行版本互動。

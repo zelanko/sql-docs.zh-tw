@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81a832b4372dc2b35893c329d0b7ca909224fb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041515"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278761"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>還原檔案和檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,21 +140,21 @@ ms.locfileid: "68041515"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-     **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
-     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **回復未認可的交易，讓資料庫保持備妥可用。無法還原其他交易記錄。(RESTORE WITH RECOVERY)**  
+  復原資料庫。 這是預設行為。 只有在您要立即還原所有必要的備份時，才選擇這個選項。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH RECOVERY。  
   
-     **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
-     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)**  
+  讓資料庫保持在還原狀態。 若要復原資料庫，就必須使用先前的 RESTORE WITH RECOVERY 選項 (請參閱上面說明) 執行另一個還原。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH NORECOVERY。  
   
-     If you select this option, the **Preserve replication settings** option is unavailable.  
+  如果選取此選項，將無法使用 **[保留複寫設定]** 選項。  
   
-     **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
-     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **讓資料庫保持唯讀模式。回復未認可的交易，但是將回復作業儲存在檔案中，以便能夠恢復復原結果。(RESTORE WITH STANDBY)**  
+  讓資料庫處於待命狀態。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH STANDBY。  
   
-     Choosing this option requires that you specify a standby file.  
+  您必須指定待命資料庫檔案，才能選擇此選項。  
   
-     **Rollback undo file**  
-     Specify a standby file name in the **Rollback undo file** text box. This option is required if you leave the database in read-only mode (RESTORE WITH STANDBY).  
+  **回復恢復檔案**  
+  在 [回復恢復檔案]  文字方塊中，指定待命資料庫檔案名稱。 如果您讓資料庫保持唯讀模式 (RESTORE WITH STANDBY)，就需要指定此選項。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
