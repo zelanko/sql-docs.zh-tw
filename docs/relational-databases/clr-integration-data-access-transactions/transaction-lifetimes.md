@@ -1,5 +1,5 @@
 ---
-title: 交易存留期間 |Microsoft Docs
+title: 交易存留期 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 759af22d445bb3c67db1f39ecf69dbeee1b666fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902480"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874848"
 ---
 # <a name="transaction-lifetimes"></a>交易存留期間
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67902480"
   
 -   嘗試認可未在相同程序中啟動的交易時，會造成執行階段錯誤。  
   
--   嘗試回復未在相同程序中啟動的交易時，會造成交易停止回應 (以防發生其他任何副作用作業)。 交易會停止，直到 CLR 程式碼超出範圍為止。 請注意，當您在程序內部偵測到錯誤，而且想要確認整個交易結束時，這可能相當實用。  
+-   嘗試回復不是在相同程式中啟動的交易，會導致交易停止回應（防止任何其他副作用的作業發生）。 交易會停止，直到 CLR 程式碼超出範圍為止。 請注意，當您在程序內部偵測到錯誤，而且想要確認整個交易結束時，這可能相當實用。  
   
 ## <a name="see-also"></a>另請參閱  
  [CLR 整合和交易](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

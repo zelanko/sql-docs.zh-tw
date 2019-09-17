@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c4886ba812a18ea6571e10c8b1fe2060fa8fc5ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8aa971142e1154f50ebc0cf17107682b47529c68
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015609"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874618"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>顯示資料行與疏鬆資料行的目錄中繼資料 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,7 +116,7 @@ void DumpErrorInfo ( IUnknown* pObjectWithError, REFIID IID_InterfaceWithError )
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    // Only ask for error information if the interface supports it.  

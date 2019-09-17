@@ -10,12 +10,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e4dd52a33fbfb84f65658db6c645a5317b39c44
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070876"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874481"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 圖庫
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊用途的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
@@ -29,13 +29,13 @@ ms.locfileid: "66070876"
   
 -   [將 Excel 活頁簿儲存至 PowerPivot 圖庫](#add)  
   
--   [建立新的報表或活頁簿已發行的 PowerPivot 活頁簿為基礎](#newdocs)  
+-   [根據發行的 PowerPivot 活頁簿建立新的報表或活頁簿](#newdocs)  
   
 -   [在整頁模式中開啟活頁簿或報表](#view)  
   
--   [在 PowerPivot 圖庫中的 PowerPivot 活頁簿排程資料重新整理](#newdr)  
+-   [為 PowerPivot 圖庫中的 PowerPivot 活頁簿排程資料重新整理](#newdr)  
   
--   [刪除活頁簿或 PowerPivot 圖庫中的報表](#delete)  
+-   [刪除 PowerPivot 圖庫中的活頁簿或報表](#delete)  
   
 -   [重新整理縮圖影像](#image)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "66070876"
   
 > [!NOTE]  
 >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。   
-> 若要檢視 Edge 中的程式庫內容，請按一下 Powerpivot 圖庫中的 [程式庫]  索引標籤，然後將文件庫檢視變更為 [所有文件] 。    
-> 若要變更預設檢視，請按一下 [程式庫]  索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
->  如需 Edge 支援的詳細資訊，請參閱 Windows 部落格[揮別以往，第 2 部分：ActiveX、 VBScript...說再見](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+> 若要在 Microsoft Edge 中查看**文件庫內容**，請按一下 Power Pivot 圖庫中的 [程式庫] 索引標籤，然後將 [文件庫] 視圖變更為 [**所有檔**]。    
+> 若要變更預設檢視，請按一下 [程式庫] 索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
+>  如需有關 Microsoft Edge 支援之功能的詳細資訊，請參閱[Windows blog，這是過去的一環，第2篇：對 ActiveX、VBScript 說再見 .。。](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- 如必要條件的完整清單，請參閱 <<c0> [ 建立及自訂 PowerPivot 圖庫](create-and-customize-power-pivot-gallery.md)。  
+ 如需必要條件的完整清單，請參閱[建立和自訂 PowerPivot 圖庫](create-and-customize-power-pivot-gallery.md)。  
   
-##  <a name="icons"></a> PowerPivot 圖庫中的圖示  
+##  <a name="icons"></a>PowerPivot 圖庫中的圖示  
  圖示會提供有關內容可用性和狀態的視覺指標。  
   
 |圖示|描述|  
@@ -64,18 +64,18 @@ ms.locfileid: "66070876"
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|當您上傳的文件無法在 PowerPivot 圖庫中轉譯時，將會出現無法使用的內容圖示。 支援的文件類型包括使用 SQL Server 2008 R2 Reporting Services 報表產生器所建立的 PowerPivot 活頁簿和報表。<br /><br /> 如果您從 [資源回收筒] 回收文件，也會出現這個圖示。<br /><br /> 如果您要針對先前呈現有效預覽影像的文件取得此圖示，您可以編輯文件屬性然後儲存變更來重新整理影像。|  
 |![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|當特意停用這個文件的縮圖頁面時，將會出現鎖定的內容圖示。 PowerPivot 圖庫不會針對不包含 PowerPivot 資料的 Excel 活頁簿，或不符合快照集產生需求的 PowerPivot 活頁簿或 Reporting Services 報表，產生縮圖影像。 如需詳細資訊，請參閱本主題中的＜必要條件＞一節。|  
   
-##  <a name="add"></a> 將 Excel 活頁簿儲存至 PowerPivot 圖庫  
+##  <a name="add"></a>將 Excel 活頁簿儲存至 PowerPivot 圖庫  
  您可以使用 Excel 2010 提供的所有共用技術，將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿發行至文件庫。 例如，您可以使用 Excel 2010 中的 [另存新檔] 來指定文件庫的所有或部分 SharePoint 路徑。  
   
 1.  儲存檔案。  
   
-2.  1.  **Excel 2010:** 在 [檔案] 功能表中，按一下**儲存和傳送**。  
+2.  1.  **Excel 2010：** 在 檔案 功能表中，按一下 **儲存 & 傳送**。  
   
-    2.  按一下 **[儲存至 SharePoint]**。  
+    2.  按一下 **[儲存至 SharePoint]** 。  
   
     3.  如果您要使用 [Excel Services 選項] 來選取要發行的個別工作表或參數，請按一下 **[發行選項]** 。 例如，[Excel Services 選項] 中的 [參數] 索引標籤可讓您選擇哪些交叉分析篩選器要出現在發行的活頁簿中。  
   
-    1.  **Excel 2013:** 在 [檔案] 功能表中，按一下**儲存**。  
+    1.  **Excel 2013：** 在 [檔案] 功能表中，按一下 [**儲存**]。  
   
     2.  如果您要使用 [Excel Services 選項] 來選取要發行的個別工作表或參數，請按一下 **[瀏覽器檢視選項]** 。 例如，[Excel Services 選項] 中的 [參數] 索引標籤可讓您選擇哪些交叉分析篩選器要出現在發行的活頁簿中。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "66070876"
   
 1.  在 SharePoint 網站中，開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫。  
   
-2.  在文件庫功能區中，按一下 **[文件]**。  
+2.  在文件庫功能區中，按一下 **[文件]** 。  
   
 3.  在 **[上載文件]** 中，選取上傳選項，然後輸入您要上傳之檔案的名稱和位置。 文件庫設定會決定文件出現的位置。 您可能需要重新整理瀏覽器視窗來檢視最新加入的文件。  
   
-##  <a name="newdocs"></a> 建立新的報表或活頁簿已發行的 PowerPivot 活頁簿為基礎  
+##  <a name="newdocs"></a>根據發行的 PowerPivot 活頁簿建立新的報表或活頁簿  
  對於您發行到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，可以建立使用發行的活頁簿做為連接的資料來源之其他活頁簿或 Reporting Services 報表。  
   
 |||  
@@ -118,19 +118,19 @@ ms.locfileid: "66070876"
   
  在瀏覽器中檢視活頁簿的替代方法，是在用戶端工作站上的 Excel 中開啟它。 您必須擁有 Excel 2013 或 Excel 2010 與 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 增益集，才能檢視檔案。 您可以使用 Excel 2007 來開啟檔案，但是您不能使用它對資料進行樞紐分析。 因此，建議使用 Excel 2013 或 Excel 2010 來檢視和建立 PowerPivot 資料。 如果您沒有所需的應用程式，則必須使用瀏覽器來檢視 SharePoint 的活頁簿。  
   
-##  <a name="newdr"></a> 在 PowerPivot 圖庫中的 PowerPivot 活頁簿排程資料重新整理  
+##  <a name="newdr"></a>為 PowerPivot 圖庫中的 PowerPivot 活頁簿排程資料重新整理  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料。  
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|按一下 [管理資料重新整理] 按鈕以建立或檢視排程，從連接的資料來源擷取更新的資料。 如需有關如何建立排程的指示，請參閱 <<c0> [ 排程資料重新整理&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)。</c0>|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|按一下 [管理資料重新整理] 按鈕以建立或檢視排程，從連接的資料來源擷取更新的資料。 如需如何建立排程的指示，請參閱[排程資料重新整理&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)。|  
   
-##  <a name="delete"></a> 刪除活頁簿或 PowerPivot 圖庫中的報表  
+##  <a name="delete"></a>刪除 PowerPivot 圖庫中的活頁簿或報表  
  若要從文件庫中刪除文件，請先切換至 [所有文件] 檢視。  
   
 1.  在 SharePoint 網站中，開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫。  
   
-2.  在功能區中，按一下 **[文件庫]**。  
+2.  在功能區中，按一下 **[文件庫]** 。  
   
 3.  在 [管理檢視] 的 [目前檢視] 清單中，按一下向下箭頭，然後選取 [所有文件]。  
   
@@ -141,29 +141,29 @@ ms.locfileid: "66070876"
 ##  <a name="image"></a> 重新整理縮圖影像  
  使用下列步驟，為 PowerPivot 圖庫中的文件重新產生縮圖影像。  
   
-1.  將 PowerPivot 圖庫切換到 [所有文件] 檢視。 若要執行這項操作，請按一下功能區中的 **[文件庫]** ，然後將 **[目前檢視]** 變更為 **[所有文件]**。  
+1.  將 PowerPivot 圖庫切換到 [所有文件] 檢視。 若要執行這項操作，請按一下功能區中的 **[文件庫]** ，然後將 **[目前檢視]** 變更為 **[所有文件]** 。  
   
 2.  選取您要重新整理其縮圖影像的活頁簿或報表。  
   
-3.  按一下右邊的向下箭號，然後選取 **[編輯屬性]**。  
+3.  按一下右邊的向下箭號，然後選取 **[編輯屬性]** 。  
   
-4.  按一下 [儲存] 。 儲存文件會強制快照服務重新產生預覽影像。  
+4.  按一下 [儲存]。 儲存文件會強制快照服務重新產生預覽影像。  
   
 ##  <a name="bkmk_known_issues"></a> 已知問題  
   
 ### <a name="document-type-is-not-supported"></a>不支援的文件類型  
  不支援 **[PowerPivot 圖庫文件]** 內容類型。 如果您啟用 **[PowerPivot 圖庫文件]** 內容類型做為文件庫，並嘗試建立該類型的新文件，則會看見類似下列其中一項的錯誤訊息：  
   
--   [新文件] 需要 Microsoft Sharepoint Foundation 相容應用程式和 web 瀏覽器。 若要加入此文件庫中的文件，請按一下 [上載文件] 按鈕。  
+-   「新檔」需要與 Microsoft Sharepoint Foundation 相容的應用程式和網頁瀏覽器。 若要將檔加入此文件庫，請按一下 [上傳檔] 按鈕。  
   
--   「 網際網路位址 'http://[server 名稱] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx' 無效。""Microsoft Excel 無法存取檔案 ' http://[server 名稱] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx '。 有幾項可能的原因：  
+-   「網際網路位址 ' HTTP：//[伺服器名稱]/testSite/PowerPivot 圖庫/ReportGallery/Forms/Template .xlsx ' 無效。」Microsoft Excel 無法存取檔案 ' HTTP：//[伺服器名稱]/testSite/PowerPivot 圖庫/ReportGallery/Forms/Template .xlsx '。 有幾項可能的原因：  
   
  **[PowerPivot 圖庫文件]** 內容類型不會自動加入至文件庫。除非您手動啟用不支援的內容類型，否則不會發生這個問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [在管理中心建立 PowerPivot 網站的信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [刪除 PowerPivot 圖庫](delete-power-pivot-gallery.md)   
- [建立及自訂 PowerPivot 圖庫](create-and-customize-power-pivot-gallery.md)   
+ [建立和自訂 PowerPivot 圖庫](create-and-customize-power-pivot-gallery.md)   
  [排程資料重新整理&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

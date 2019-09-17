@@ -14,15 +14,15 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9583ae760a53e3d3ab68f69b21317b370df726b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789177"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874468"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>工作階段期間可用性複本之間可能發生失敗 (SQL Server)
-  實體、作業系統或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 問題都可能會在兩個可用性複本之間的工作階段中導致失敗。 可用性複本不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」  。 為了偵測其他沒有通知的失敗，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]會實作其本身的工作階段逾時機制。 指定工作階段逾時期限 (以秒為單位)。 逾時期限是伺服器執行個體在將另一個執行個體視為中斷連接之前，等待接收該執行個體發出之 PING 訊息的最長時間。 如果兩個可用性複本之間發生工作階段逾時，可用性複本會假設失敗已經發生，並宣告「軟體錯誤」  。  
+  實體、作業系統或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 問題都可能會在兩個可用性複本之間的工作階段中導致失敗。 可用性複本不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」。 為了偵測其他沒有通知的失敗，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]會實作其本身的工作階段逾時機制。 指定工作階段逾時期限 (以秒為單位)。 逾時期限是伺服器執行個體在將另一個執行個體視為中斷連接之前，等待接收該執行個體發出之 PING 訊息的最長時間。 如果兩個可用性複本之間發生工作階段逾時，可用性複本會假設失敗已經發生，並宣告「軟體錯誤」。  
   
 > [!IMPORTANT]  
 >  系統無法偵測主要資料庫以外之資料庫中的失敗。 此外，除非是因為資料磁碟錯誤而重新啟動資料庫，否則不太可能偵測得到資料磁碟錯誤。  
@@ -75,21 +75,21 @@ ms.locfileid: "62789177"
   
 -   網路錯誤，例如 TCP 連結逾時、卸除或損毀的封包或順序不正確的封包。  
   
--   停滯的作業系統、伺服器或資料庫狀態。  
+-   沒有回應的作業系統、伺服器或資料庫。  
   
 -   Windows 伺服器逾時。  
   
 -   運算資源不足，例如 CPU 或磁碟負擔過重、交易記錄已滿，或系統的記憶體或執行緒用盡。 在這些情況下，您必須增加逾時期限、降低工作負載或更換硬體來因應工作負載。  
   
 ### <a name="the-session-timeout-mechanism"></a>工作階段逾時機制  
- 因為伺服器執行個體無法直接偵測到軟性錯誤，所以軟性錯誤可能會造成可用性複本在工作階段中永遠等候來自另一個可用性複本的回應。 為了避免這種狀況， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會實作工作階段逾時機制，而在此機制中，連接的可用性複本都會以固定間隔在每個開啟連接上送出 Ping。 在逾時期限接收到 Ping，表示連接仍為開啟狀態，且伺服器執行個體是透過它進行通訊。 接收到 Ping 時，複本會重設它在該連接上的逾時計數器。 如需關聯性的可用性模式和工作階段逾時的資訊，請參閱[可用性模式 （AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
+ 因為伺服器執行個體無法直接偵測到軟性錯誤，所以軟性錯誤可能會造成可用性複本在工作階段中永遠等候來自另一個可用性複本的回應。 為了避免這種狀況， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會實作工作階段逾時機制，而在此機制中，連接的可用性複本都會以固定間隔在每個開啟連接上送出 Ping。 在逾時期限接收到 Ping，表示連接仍為開啟狀態，且伺服器執行個體是透過它進行通訊。 接收到 Ping 時，複本會重設它在該連接上的逾時計數器。 如需可用性模式和會話超時關聯性的詳細資訊，請參閱[可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
   
  主要和次要複本會互相執行 Ping，讓對方知道他們仍在作用中，而工作階段逾時限制則可防止任一複本無限期地等候接收來自另一複本的 Ping。 工作階段逾時限制是使用者可設定的複本屬性，其預設值為 10 秒。 在逾時期限接收到 Ping，表示連接仍為開啟狀態，且伺服器執行個體是透過它進行通訊。 接收到 Ping 時，可用性複本會重設它在該連接上的逾時計數器。  
   
  如果在工作階段逾時期限內未收到另一個複本的 Ping，則連接會逾時。連接會關閉，而逾時的複本則進入 DISCONNECTED 狀態。 即使中斷連接的複本設定成同步認可模式，交易仍不會等候該複本重新連接及重新同步處理。  
   
 ## <a name="responding-to-an-error"></a>回應錯誤  
- 不論錯誤的類型為何，偵測到錯誤的伺服器執行個體都會根據執行個體的角色、工作階段的可用性模式和工作階段中其他連接的狀態，進行適當的回應。 如需遺失夥伴上可能發生的狀況資訊，請參閱[可用性模式 （AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
+ 不論錯誤的類型為何，偵測到錯誤的伺服器執行個體都會根據執行個體的角色、工作階段的可用性模式和工作階段中其他連接的狀態，進行適當的回應。 如需有關遺失夥伴時所發生之情況的詳細資訊，請參閱[可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
  **若要變更逾時值 (僅限同步認可可用性模式)**  
@@ -101,6 +101,6 @@ ms.locfileid: "62789177"
 -   查詢 [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql) 中的 **session_timeout**。  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組&#40;SQL Server 總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

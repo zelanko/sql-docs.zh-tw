@@ -9,14 +9,14 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653679"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878697"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>在 spark 歷程記錄伺服器中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] , 對 spark 應用程式進行偵錯工具和診斷
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>在 spark 歷程記錄伺服器中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ，對 spark 應用程式進行偵錯工具和診斷
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -27,7 +27,7 @@ ms.locfileid: "69653679"
 來自開放原始碼的 Spark 歷程記錄伺服器使用者體驗已透過資訊加以增強，其中包括作業特定資料以及作業圖表的互動式視覺效果，以及適用於巨量資料叢集的資料流程。 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>依 URL 開啟 Spark 歷程記錄伺服器 Web UI
-藉由瀏覽至下列 URL 來開啟 Spark 歷程記錄伺服器，並將 `<Ipaddress>` 和 `<Port>` 取代為巨量資料叢集特定資訊。 如需詳細資訊，可以參考：[部署 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+藉由瀏覽至下列 URL 來開啟 Spark 歷程記錄伺服器，並將 `<Ipaddress>` 和 `<Port>` 取代為巨量資料叢集特定資訊。 請注意，在基本驗證（使用者名稱/密碼） big data cluster 設定中，當系統提示您登入閘道（Knox）端點時，您必須提供使用者**根目錄**。 如需詳細資訊，可以參考：[部署 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -91,7 +91,7 @@ Spark 歷程記錄伺服器 Web UI 如下所示：
 
     ![圖表作業識別碼](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ 我們將 [進度] 保留為預設值。 使用者可以在**顯示**的下拉式清單中選取 [**讀取**] 或 [**寫入**], 以檢查資料流程。
++ 我們將 [進度] 保留為預設值。 使用者可以在**顯示**的下拉式清單中選取 [**讀取**] 或 [**寫入**]，以檢查資料流程。
 
     ![圖表顯示](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 

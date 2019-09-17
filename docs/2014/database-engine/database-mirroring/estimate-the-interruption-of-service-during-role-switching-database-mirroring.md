@@ -1,5 +1,5 @@
 ---
-title: 預估角色切換 （資料庫鏡像） 期間的服務中斷時間 |Microsoft Docs
+title: 預估角色切換期間的服務停機時間（資料庫鏡像） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806842"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874442"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
   在角色切換期間，資料庫鏡像無法服務的時間量視角色切換類型和角色切換原因而定。  
@@ -37,7 +37,7 @@ ms.locfileid: "62806842"
 -   若為手動容錯移轉，則只有發出容錯移轉命令之後資料庫容錯移轉所需的時間。  
   
 ## <a name="error-detection"></a>錯誤偵測  
- 系統注意到錯誤的時間取決於錯誤的類型；例如，網路錯誤幾乎會立即注意到，而依預設，注意到伺服器沒有回應則需要 10 秒，也就是預設的逾時期間。  
+ 系統注意到錯誤的時間取決於錯誤的類型。例如，幾乎會立即注意到網路錯誤，而注意到沒有回應的伺服器需要10秒（預設超時）。  
   
  如需在具有自動容錯移轉的高安全性模式下進行資料庫鏡像工作階段以及逾時偵測期間，可能導致失敗之錯誤的資訊，請參閱 [資料庫鏡像期間可能發生的失敗](possible-failures-during-database-mirroring.md)。  
   
@@ -45,21 +45,21 @@ ms.locfileid: "62806842"
  容錯移轉時間主要包含：先前的鏡像伺服器向前復原其重做佇列中剩餘之所有記錄檔所需的時間，加上其他很短的時間 (如需鏡像伺服器如何處理記錄檔記錄的詳細資訊，請參閱＜[資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md))。 如需預估容錯移轉時間的詳細資訊，請參閱此主題稍後的「預估容錯移轉重做速率」。  
   
 > [!IMPORTANT]  
->  如果在交易期間建立了索引或資料表之後又變更，而發生容錯移轉，容錯移轉的時間會比平常更久。  例如，在下面一系列作業期間的容錯移轉可能會增加容錯移轉時間：BEGIN TRANSACTION，在資料表上的 CREATE INDEX 和 SELECT INTO 資料表。 在這種交易期間，仍有增加容錯移轉時間的可能性，直到以 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式完成它為止。  
+>  如果在交易期間建立了索引或資料表之後又變更，而發生容錯移轉，容錯移轉的時間會比平常更久。  例如，在下列一系列作業期間執行容錯移轉可能會增加容錯移轉的時間：在資料表上 BEGIN TRANSACTION、CREATE INDEX，以及 SELECT INTO 資料表。 在這種交易期間，仍有增加容錯移轉時間的可能性，直到以 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式完成它為止。  
   
 ### <a name="the-redo-queue"></a>重做佇列  
- 向前恢復資料庫涉及套用目前在鏡像伺服器上重做佇列中的記錄。 「重做佇列」  包含已寫入鏡像伺服器上的磁碟，但尚未在鏡像資料庫上向前復原的記錄檔記錄。  
+ 向前恢復資料庫涉及套用目前在鏡像伺服器上重做佇列中的記錄。 「重做佇列」包含已寫入鏡像伺服器上的磁碟，但尚未在鏡像資料庫上向前復原的記錄檔記錄。  
   
  資料庫的容錯移轉時間取決於鏡像伺服器向前恢復重做佇列中記錄的速度，而這主要又是由系統硬體與目前工作負載所決定。 主體資料庫有可能會變得很忙碌，使主體伺服器以比向前恢復記錄檔更快的速度，將記錄檔轉送到鏡像伺服器。 在此情況下，當鏡像伺服器向前恢復重做佇列中的記錄時，容錯移轉可能花費很多時間。 若要了解重做佇列的目前大小，請使用資料庫鏡像效能物件中的 **Redo Queue** 計數器。 如需詳細資訊，請參閱 [SQL Server 的 Database Mirroring 物件](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)。  
   
 ### <a name="estimating-the-failover-redo-rate"></a>預估容錯移轉重做速率  
- 您可利用生產資料庫的測試複本，測量向前復原記錄檔記錄所需的時間量 (「重做速率」  )。  
+ 您可利用生產資料庫的測試複本，測量向前復原記錄檔記錄所需的時間量 (「重做速率」)。  
   
  預估容錯移轉期間之向前恢復時間的方法，取決於重做階段期間鏡像伺服器所使用的執行緒數目。 執行緒的數目取決下列：  
   
 -   在 [!INCLUDE[ssStandard](../../includes/ssstandard-md.md)]中，鏡像伺服器永遠會使用單一執行緒來向前復原資料庫。  
   
--   在 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 中，少於五個 CPU 之電腦上的鏡像伺服器也只會使用單一執行緒。 如果有五個以上的 CPU，鏡像伺服器會在容錯移轉期間，將其向前復原作業散發到多個執行緒 (也稱為「平行重做」  )。 平行重做已完成最佳化，針對每四個 CPU 使用一個執行緒。  
+-   在 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 中，少於五個 CPU 之電腦上的鏡像伺服器也只會使用單一執行緒。 如果有五個以上的 CPU，鏡像伺服器會在容錯移轉期間，將其向前復原作業散發到多個執行緒 (也稱為「平行重做」)。 平行重做已完成最佳化，針對每四個 CPU 使用一個執行緒。  
   
 #### <a name="estimating-the-single-threaded-redo-rate"></a>預估單一執行緒的重做速率  
  對於單一執行緒重做，在容錯移轉期間向前恢復鏡像資料庫所花費的時間，大約與記錄備份還原要向前恢復相同數量的記錄相同。 若要預估容錯移轉時間，請在您要執行鏡像的環境中建立測試資料庫。 然後，從實際資料庫中取得記錄備份。 若要計算該記錄備份的重做速率，請計時您在測試資料庫上還原記錄備份 WITH NORECOVERY 的時間長度。  

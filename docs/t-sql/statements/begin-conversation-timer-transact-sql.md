@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09b935ccc5f8ac1d357168f2032e822c9c0bcd8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141204"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211221"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   啟動計時器。 當逾時到期時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 將 `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` 型別的訊息放在交談的本機佇列上。  
   

@@ -1,5 +1,5 @@
 ---
-title: 擷取錯誤資訊 |Microsoft Docs
+title: 正在抓取錯誤資訊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffc13d634c5f213980f837db958860ea7ff51b32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a62997caa5625a901684e2e8da3c5dc8c46a82b9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186127"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874595"
 ---
 # <a name="retrieving-error-information"></a>擷取錯誤資訊
-  此範例會從所公開之各種錯誤介面取得資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
+  這個範例會從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者公開的各種錯誤介面中取得資訊。  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  
@@ -64,7 +64,7 @@ void DumpErrorInfo
     SSERRORINFO*            pSSErrorInfo = NULL;  
     OLECHAR*                pSSErrorStrings = NULL;  
   
-    // Hard-code an American English locale for the example.  
+    // Hard-code an English (United States) locale for the example.  
     DWORD                   MYLOCALEID = 0x0409;  
   
     // Only ask for error information if the interface supports  

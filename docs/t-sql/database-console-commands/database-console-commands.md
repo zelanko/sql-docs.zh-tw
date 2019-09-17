@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: e1346cf21d0fb7fe9d81afc9740edf02957a0009
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dcf26d7720a8ca35be9202d0e5765b338ec6a59b
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102173"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211206"
 ---
 # <a name="database-console-commands"></a>資料庫主控台命令
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供以下管理命令。
   

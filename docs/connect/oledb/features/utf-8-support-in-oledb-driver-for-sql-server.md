@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775166"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70392022"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 中的 UTF-8 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "64775166"
 Microsoft OLE DB Driver for SQL Server (18.2.1 版) 新增 UTF-8 伺服器編碼的支援。 如需有關 SQL Server UTF-8 支援的相關資訊，請參閱：
 - [定序與 Unicode 支援](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8 支援](#ctp23)
+
+> [!IMPORTANT]
+> 適用于 SQL Server 的 Microsoft OLE DB 驅動程式會使用[GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp)函數來判斷 DBTYPE_STR 輸入緩衝區的編碼方式。 不支援 GetACP 傳回 UTF-8 編碼的案例。 如果緩衝區需要儲存 Unicode 資料，緩衝區資料類型應該設定為 DBTYPE_WSTR （UTF-16 編碼）。
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>將資料插入至 UTF-8 編碼的 CHAR 或 VARCHAR 資料行
 建立輸入參數緩衝區以用於插入時，會使用 [DBBINDING 結構](https://go.microsoft.com/fwlink/?linkid=2071182) \(英文\) 的陣列來描述緩衝區。 每個 DBBINDING 結構都會將單一參數關聯至取用者的緩衝區，並包含資料值的類型與長度等資訊。 針對類型 CHAR 的輸入參數緩衝區，應該將 DBBINDING 結構的 *wType* 設定為 DBTYPE_STR。 針對類型 WCHAR 的輸入參數緩衝區，應該將 DBBINDING 結構的 *wType* 設定為 DBTYPE_WSTR。

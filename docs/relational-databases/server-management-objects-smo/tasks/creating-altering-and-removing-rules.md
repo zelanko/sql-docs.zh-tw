@@ -1,5 +1,5 @@
 ---
-title: 建立、 改變和移除規則 |Microsoft Docs
+title: 建立、改變和移除規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,30 +10,30 @@ ms.topic: reference
 helpviewer_keywords:
 - rules [SMO]
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf1075d29ee070e9ca3cf15e30e26552e22effa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b96824bf3f79e2166a0198b0a56a60f8e7a3cf3
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115127"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911131"
 ---
 # <a name="creating-altering-and-removing-rules"></a>建立、改變和移除規則
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   在 SMO 中，規則會以 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件表示， 並由 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 屬性定義，該屬性是文字字串，包含使用運算子或述詞 (例如 IN、LIKE 或 BETWEEN) 的條件運算式。 規則不能參考資料行或其他資料庫物件。 未參考資料庫物件的內建函數可以包括在內。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 屬性中的定義必須包含參考所輸入之資料值的變數。 任何名稱或符號可用來代表值，當建立規則，但第一個字元必須是\@符號。  
+ <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 屬性中的定義必須包含參考所輸入之資料值的變數。 建立規則時，可以使用任何名稱或符號來代表值，但第一個字元必須是\@符號。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除規則  
  此程式碼範例示範如何建立規則、將規則附加至資料行、修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的屬性、將規則從資料行卸離，然後再加以卸除。  
   
- **Dim**陳述式<xref:Microsoft.SqlServer.Management.Smo.Rule>使用完整組件路徑，以避免模稜兩可，與指定物件<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data 組件中的物件。  
+ <xref:Microsoft.SqlServer.Management.Smo.Rule>物件的**Dim**語句是以完整元件路徑指定，以<xref:Microsoft.SqlServer.Management.Smo.Rule>避免與 system.string 中的物件不明確。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -65,7 +65,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>在 Visual C# 中建立、改變和移除規則  
  此程式碼範例示範如何建立規則、將規則附加至資料行、修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的屬性、將規則從資料行卸離，然後再加以卸除。  
   
- **Dim**陳述式<xref:Microsoft.SqlServer.Management.Smo.Rule>使用完整組件路徑，以避免模稜兩可，與指定物件<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data 組件中的物件。  
+ <xref:Microsoft.SqlServer.Management.Smo.Rule>物件的**Dim**語句是以完整元件路徑指定，以<xref:Microsoft.SqlServer.Management.Smo.Rule>避免與 system.string 中的物件不明確。  
   
 ```csharp  
 {  
@@ -98,7 +98,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>在 PowerShell 中建立、改變和移除規則  
  此程式碼範例示範如何建立規則、將規則附加至資料行、修改 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件的屬性、將規則從資料行卸離，然後再加以卸除。  
   
- **Dim**陳述式<xref:Microsoft.SqlServer.Management.Smo.Rule>使用完整組件路徑，以避免模稜兩可，與指定物件<xref:Microsoft.SqlServer.Management.Smo.Rule>System.Data 組件中的物件。  
+ <xref:Microsoft.SqlServer.Management.Smo.Rule>物件的**Dim**語句是以完整元件路徑指定，以<xref:Microsoft.SqlServer.Management.Smo.Rule>避免與 system.string 中的物件不明確。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

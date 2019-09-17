@@ -1,5 +1,5 @@
 ---
-title: SMO 使用者入門 |Microsoft Docs
+title: SMO 中的消費者入門 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -11,34 +11,34 @@ helpviewer_keywords:
 - SQL Server Management Objects, about SQL Server Management Objects
 - SMO [SQL Server], about SQL Server Management Objects
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6473cffbb4bdc611a5d4cb63693eb43ff4666fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098036"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911267"
 ---
 # <a name="getting-started-in-smo"></a>SMO 使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-此頁面提供連結的主題可協助您開始使用 SQL Server 管理物件 (SMO)。 這些主題會列出封面 SMO 物件階層中，SMO、 SMO 及不同的程式設計語言和特定的程式設計工作中撰寫程式。  
+本頁面提供的主題連結，可協助您開始使用 SQL Server 管理物件（SMO）。 列出的主題涵蓋 SMO 物件階層、以 SMO 撰寫程式、SMO 和不同的程式設計語言，以及特定的程式設計工作。  
  
 ## <a name="installing-smo"></a>安裝 SMO
-[安裝 SMO](installing-smo.md)提供安裝和參考 SMO 組件的指示。
+[安裝 smo](installing-smo.md)會提供安裝和參考 smo 元件的指示。
 
 ## <a name="object-model"></a>物件模型  
-[物件模型](../../relational-databases/server-management-objects-smo/smo-object-model.md)描述 SMO 物件階層以及物件與彼此的關聯。  
+[物件模型](../../relational-databases/server-management-objects-smo/smo-object-model.md)描述 SMO 物件階層，以及物件彼此之間的關聯性。  
   
 ## <a name="programming-languages"></a>程式語言：  
-[程式設計語言](../../relational-databases/server-management-objects-smo/smo-programming-languages.md)描述程式設計環境，並包含開始使用 C# 中撰寫 SMO 程式的詳細程序。  
+程式[設計語言](../../relational-databases/server-management-objects-smo/smo-programming-languages.md)描述程式設計環境，並包含在中C#開始撰寫 SMO 程式的詳細程式。  
   
 ## <a name="general-programming-in-smo"></a>SMO 中的一般程式設計  
-[SMO 中的一般程式設計](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)是使用 SMO 進行程式設計的簡介。 本主題描述如何連接到 SQL server 執行個體，以及如何使用屬性、 方法和集合。 更進階的主題會描述資料類型、交易、設定擷取模式和事件以及例外狀況處理。  
+[Smo 的一般程式設計](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)是使用 smo 進行程式設計的簡介。 本主題描述如何連接到 SQL Server 的實例，以及如何使用屬性、方法和集合。 更進階的主題會描述資料類型、交易、設定擷取模式和事件以及例外狀況處理。  
   
 ## <a name="programming-specific-tasks"></a>程式設計特有的工作  
-[特定工作的程式設計](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md)包括概念和有關如何設計使用 SMO 的特定工作的程序。 此主題也描述 SQL Server 的完整程式設計的管理。  
+程式[設計特定](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md)工作包含有關如何使用 SMO 來撰寫特定工作的概念和程式。 本主題也描述 SQL Server 的完整程式設計管理。  
   
   

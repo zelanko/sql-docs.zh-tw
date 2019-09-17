@@ -1,5 +1,5 @@
 ---
-title: 記錄物件屬性、 方法和事件 |Microsoft Docs
+title: Record 物件屬性、方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ecb09e15a0d54573cf921a5b2a7633c9d1e61704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712301"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737660"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
@@ -26,11 +25,11 @@ ms.locfileid: "66712301"
   
  [Fields 集合](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
- [模式屬性](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode 屬性](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [ParentURL 屬性](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [屬性集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties 集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [RecordType 屬性](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66712301"
   
  [Open 方法 (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  無。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: 建立、 改變和移除結構描述 |Microsoft Docs
+title: 建立、改變和移除架構 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1184cc02ceb5507d254abffc17685f8379652b18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c42b16ed0564154b75f60ff16e0e9bea170f2223
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939063"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911130"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>建立、改變和移除結構描述
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "67939063"
   <xref:Microsoft.SqlServer.Management.Smo.Schema> 物件表示資料庫物件的擁有權內容。 <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Database> 屬性表示 <xref:Microsoft.SqlServer.Management.Smo.Schema> 物件的集合。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除結構描述  
  此程式碼範例示範如何建立結構描述，並將其指派給資料庫物件。 程式接著會授與權限給使用者，然後再於結構描述中建立新的資料表。  

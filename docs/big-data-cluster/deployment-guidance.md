@@ -1,7 +1,7 @@
 ---
 title: 部署指導
 titleSuffix: SQL Server big data clusters
-description: 瞭解如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上部署 (預覽)。
+description: 瞭解如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上部署（預覽）。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153442"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878713"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
 
@@ -39,7 +39,7 @@ SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器�
 
 ## <a id="prereqs"></a> Kubernetes 先決條件
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]伺服器和用戶端 (kubectl) 至少需要 v2.0 的最低 Kubernetes 版本。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]伺服器和用戶端（kubectl）至少需要 v2.0 的最低 Kubernetes 版本。
 
 > [!NOTE]
 > 請注意，用戶端和伺服器 Kubernetes 版本應該在 +1 或 -1 次要版本內。 如需詳細資訊，請參閱 [Kubernetes 版本資訊和版本誤差 SKU 原則](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew) \(英文\)。
@@ -67,7 +67,7 @@ SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器�
 kubectl config view
 ```
 
-設定 Kubernetes 叢集之後，您可以繼續部署新的 SQL Server 巨量資料叢集。 如果您是從上一版升級, 請參閱[如何升級[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md)。
+設定 Kubernetes 叢集之後，您可以繼續部署新的 SQL Server 巨量資料叢集。 如果您是從上一版升級，請參閱[如何升級[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md)。
 
 ## <a id="deploy"></a> 部署概觀
 
@@ -77,7 +77,7 @@ kubectl config view
 
 ## <a id="configfile"></a> 預設組態
 
-巨量資料叢集部署選項均定義於 JSON 組態檔中。 您可以使用開發/測試環境的預設設定, 從內建的部署設定檔開始自訂叢集部署:
+巨量資料叢集部署選項均定義於 JSON 組態檔中。 您可以使用開發/測試環境的預設設定，從內建的部署設定檔開始自訂叢集部署：
 
 | 部署設定檔 | Kubernetes 環境 |
 |---|---|
@@ -120,7 +120,7 @@ azdata bdc create --accept-eula=yes
 1. 若要在您的部署組態設定檔中自訂設定，您可以在適用於編輯 JSON 檔案的工具 (例如 VS Code) 中編輯部署組態檔。 針對已編寫指令碼的自動化，您也可以使用 **azdata bdc config** 命令來編輯自訂部署設定檔。 例如，下列命令會改變自訂部署設定檔，以將部署的叢集名稱從預設值 (**mssql-cluster**) 變更為 **test-cluster**：  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
    > [!TIP]
@@ -147,7 +147,7 @@ azdata bdc create --accept-eula=yes
 | **CONTROLLER_USERNAME** | 必要項 |叢集管理員的使用者名稱。 |
 | **CONTROLLER_PASSWORD** | 必要項 |叢集管理員的密碼。 |
 | **MSSQL_SA_PASSWORD** | 必要項 |適用於 SQL 主要執行個體的 SA 使用者密碼。 |
-| **KNOX_PASSWORD** | 必要項 |Knox 使用者的密碼。 |
+| **KNOX_PASSWORD** | 必要項 |Knox**根**使用者的密碼。 請注意，在基本驗證設定中，只有 Knox 支援的使用者才是**root**。|
 | **ACCEPT_EULA**| 第一次使用 `azdata` 時的必要項| 不需要任何值。 設定為環境變數時，會將 EULA 套用至 SQL Server 和 `azdata`。 如果未設定為環境變數，您可以在第一次使用 `azdata` 命令時包含 `--accept-eula`。|
 | **DOCKER_USERNAME** | 選擇性 | 用來存取容器映像的使用者名稱，以防它們儲存於私人存放庫中。 如需如何使用私人 Docker 存放庫來進行巨量資料叢集部署的詳細資訊，請參閱[離線部署](deploy-offline.md)主題。|
 | **DOCKER_PASSWORD** | 選擇性 |用來存取上述私人存放庫的密碼。 |
@@ -169,6 +169,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> 您必須使用具有上述密碼之 Knox 閘道的**根**使用者。 **root**是此基本驗證（使用者名稱/密碼）設定中唯一支援的使用者。 針對 SQL Server master，布建要與上述密碼搭配使用的使用者名稱為**sa**。
+
 
 設定環境變數之後，您必須執行 `azdata bdc create` 來觸發部署。 此範例會使用上方所建立的叢集組態設定檔：
 
@@ -201,7 +205,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> 由於下載巨量資料叢集元件的容器映像所需的時間，整個部署可能需要很長的時間。 不過，應該不會花費到數小時。 如果您的部署遇到問題, 請參閱[監視和疑難排解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)。
+> 由於下載巨量資料叢集元件的容器映像所需的時間，整個部署可能需要很長的時間。 不過，應該不會花費到數小時。 如果您的部署遇到問題，請參閱[監視和疑難排解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)。
 
 完成部署時，輸出會通知您成功：
 
@@ -354,7 +358,7 @@ Bdc: ready                                                                      
  appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-您也可以使用下列命令取得更詳細的狀態:
+您也可以使用下列命令取得更詳細的狀態：
 
 - [azdata bdc 控制狀態顯示](reference-azdata-bdc-control-status.md)會傳回與控制管理服務相關聯之所有元件的健全狀況狀態
 ```
@@ -397,7 +401,7 @@ Sql: ready                                                                      
 ```
 
 > [!IMPORTANT]
-> 使用 **--all**參數時, 這些命令的輸出會包含 Kibana 和 Grafana 儀表板的 url, 以進行更詳細的分析。
+> 使用 **--all**參數時，這些命令的輸出會包含 Kibana 和 Grafana 儀表板的 url，以進行更詳細的分析。
 
 除了使用 **azdata**，您也可以使用 Azure Data Studio 來尋找端點和狀態資訊。 如需使用 **azdata** 和 Azure Data Studio 來檢視叢集狀態的詳細資訊，請參閱[如何檢視巨量資料叢集的狀態](view-cluster-status.md)。
 

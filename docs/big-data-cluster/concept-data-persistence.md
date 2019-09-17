@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb6d87803c0a3839afd8dbd1333b52c3abcc4518
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155345"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878743"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上使用 SQL Server 2019 巨量資料叢集的資料持續性
 
@@ -28,7 +28,7 @@ SQL Server 巨量資料叢集耗用這些永久性磁碟區的方式是透過使
 
 ## <a name="configure-big-data-cluster-storage-settings"></a>設定巨量資料叢集儲存體設定
 
-與其他自訂類似，您可以在部署時為每個集區和控制平面在叢集組態檔中指定儲存體設定。 如果集區規格中沒有任何儲存體組態設定，則會使用控制平面儲存體設定。 這是您可以包含在規格中的儲存體組態區段範例：
+類似于其他自訂專案，您可以在部署期間，針對**bdc. json**設定檔中的每個集區，以及針對**控制 json**檔案中的控制服務，指定叢集設定檔案中的存放裝置設定。 如果集區規格中沒有任何存放裝置設定設定，則會將控制項儲存設定用於**所有其他元件**，包括 SQL Server 主機（**主要**資源）、HDFS （**儲存體-0**資源）或資料資源. 這是您可以包含在規格中的儲存體組態區段範例：
 
 ```json
     "storage": 
@@ -83,7 +83,7 @@ Kubeadm 並未隨附內建的儲存類別。 您必須使用本機儲存體或�
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-這會建立兩個檔案, 也就是可透過手動編輯來自訂的檔案 ( **bdc. json**和**control** ), 或者您可以使用**azdata bdc config**命令。 您可以使用 jsonpath 和 jsonpatch 程式庫的組合，以提供編輯組態檔的方式。
+這會建立兩個檔案，也就是可透過手動編輯來自訂的檔案（ **bdc. json**和**control** ），或者您可以使用**azdata bdc config**命令。 您可以使用 jsonpath 和 jsonpatch 程式庫的組合，以提供編輯組態檔的方式。
 
 
 ### <a id="config-samples"></a> 設定儲存類別名稱和/或宣告大小

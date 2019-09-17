@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1a9b34362f95f6450afaec77370f8876f76d4f07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083850"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874747"
 ---
 # <a name="create-a-maintenance-plan"></a>建立維護計畫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "68083850"
     GO  
     -- Attaches the RunOnce schedule to the job HistoryCleanupTask_1.   
     EXEC sp_attach_schedule  
-       @job_name = N'HistoryCleanupTask_1'  
+       @job_name = N'HistoryCleanupTask_1',  
        @schedule_name = N'RunOnce' ;   
     GO  
   

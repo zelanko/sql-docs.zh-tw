@@ -10,25 +10,25 @@ ms.topic: reference
 helpviewer_keywords:
 - messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d30b267a0a821c015990ff54ac47eb91e925e982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73dbbb93c226c145dc16f5148f903900b602760e
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030003"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911221"
 ---
 # <a name="using-messages"></a>使用訊息
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  在 SMO 中，系統訊息由<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>所屬的物件**Server**物件。 無法修改系統訊息，因為**SystemMessage**物件屬性是唯讀。  
+  在 SMO 中，系統訊息是由<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>屬於**伺服器**物件的物件表示。 因為系統訊息無法修改，所以**SystemMessage**物件屬性是唯讀的。  
   
- 在 SMO 中，使用者定義的訊息是由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 物件以程式設計的方式表示。 現有的使用者定義的訊息可以藉由反覆運算集合而找到。 您可以建立新的使用者定義訊息具現化新**UserDefinedMessage**物件和設定適當的屬性。  
+ 在 SMO 中，使用者定義的訊息是由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 物件以程式設計的方式表示。 現有的使用者定義的訊息可以藉由反覆運算集合而找到。 您可以藉由具現化新的**UserDefinedMessage**物件並設定適當的屬性，來建立新的使用者自訂訊息。  
   
 ## <a name="examples"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>在 Visual Basic 中尋找特定的系統訊息  
  此程式碼範例示範如何依識別碼辨識系統訊息並加以顯示。  

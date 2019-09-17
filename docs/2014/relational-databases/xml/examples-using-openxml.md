@@ -1,5 +1,5 @@
 ---
-title: 範例:使用 OPENXML | Microsoft Docs
+title: 例如：使用 OPENXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,14 +26,14 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205112"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874697"
 ---
-# <a name="examples-using-openxml"></a>範例:使用 OPENXML
+# <a name="examples-using-openxml"></a>例如：使用 OPENXML
   在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](specify-metaproperties-in-openxml.md)。  
   
 ## <a name="examples"></a>範例  
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 結果是以邊緣資料表傳回。 您可以針對邊緣資料表寫入查詢以取得資訊。 例如：  
+ 結果是以邊緣資料表傳回。 您可以針對邊緣資料表寫入查詢以取得資訊。 例如:  
   
 -   以下查詢傳回文件中 **Customer** 節點的數目。 由於未指定 WITH 子句，因此 OPENXML 傳回邊緣資料表。 SELECT 陳述式查詢邊緣資料表。  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 指定含有多個文字節點的 XML 文件  
- 若在 XML 文件中具有多個文字節點，含有 *ColPattern* **text()** 的 SELECT 陳述式將只傳回第一個文字節點，而不是所有節點。 例如：  
+ 若在 XML 文件中具有多個文字節點，含有 *ColPattern* **text()** 的 SELECT 陳述式將只傳回第一個文字節點，而不是所有節點。 例如:  
   
 ```  
 DECLARE @h int  
@@ -691,7 +691,7 @@ AS
 DECLARE @t varchar(500)  
 DECLARE @id varchar(5)  
   
-/* Temporary Edge table */  
+/* Temporary edge table */  
 SELECT *   
 INTO #TempEdge   
 FROM OPENXML(@xmldoc, @xpath)  

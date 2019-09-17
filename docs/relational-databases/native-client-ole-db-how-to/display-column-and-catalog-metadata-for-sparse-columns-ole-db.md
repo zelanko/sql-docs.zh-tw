@@ -11,12 +11,12 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c5c2503a47ef0c28ad0e8762c8f876967ac1db3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a89e8b96c64e741c5fb68f5a699e170ef0f28b96
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110347"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874795"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>顯示資料行與疏鬆資料行的目錄中繼資料 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68110347"
 
   此範例會建立包含三個資料行的資料表：疏鬆資料行、非疏鬆資料行的資料行，以及資料行集資料行。 接著，範例會顯示 OLE DB 旗標以顯示非疏鬆資料行和資料行集資料行的資料行和目錄中繼資料。  
   
- 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。 如需有關疏鬆資料行的詳細資訊，請參閱 < [SQL Server Native Client 中的疏鬆資料行支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。 如需稀疏資料行的詳細資訊，請參閱[SQL Server Native Client 中的稀疏資料行支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
@@ -116,7 +116,7 @@ void DumpErrorInfo ( IUnknown* pObjectWithError, REFIID IID_InterfaceWithError )
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    // Only ask for error information if the interface supports it.  

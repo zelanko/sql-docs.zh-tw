@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 28c13ad423cb8ba01e91c7d8810723538ec41eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa56e918238d3f6b5309e923f899ce00b2ab5749
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025655"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212414"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM 服務 - 將執行個體設定為自動啟動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68025655"
   
 3.  在詳細資料窗格中，以滑鼠右鍵按一下您想要自動啟動的執行個體名稱，然後按一下 [屬性]  。  
   
-4.  在 [SQL Server \<執行個體名稱> 屬性] 對話方塊中，將 [啟動模式] 設定為 [自動]。 **\<**    
+4.  在 [SQL Server \<執行個體名稱> 屬性]    對話方塊中，將 [啟動模式]  設定為 [自動]  。  
   
 5.  按一下 **[確定]** ，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   

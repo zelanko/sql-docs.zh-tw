@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 9a637e6b12c674102bd09239739a137e1d442e12
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065096"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874760"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安裝 SQL Server 全文檢索搜尋
 
@@ -86,13 +86,13 @@ sudo zypper update mssql-server-fts
 
 全文檢索搜尋會使用[文字分隔](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)，決定如何根據語言識別個別字詞。 您可以查詢 **sys.fulltext_languages** 目錄檢視來取得已註冊的文字分隔清單。 下列語言的文字分隔會隨著 SQL Server 一起安裝：
 
-| 語言 | 語言識別碼 |
+| Language | 語言識別碼 |
 |---|---|
 | 中性語言 | 0 |
 | 阿拉伯文 | 1025 |
 | 孟加拉文 (印度) | 1093 |
 | 巴克摩 | 1044 |
-| 巴西文 | 1046 |
+| 葡萄牙文 (巴西) | 1046 |
 | 英式英文 | 2057 |
 | 保加利亞文 | 1026 |
 | 卡達隆尼亞文 | 1027 |

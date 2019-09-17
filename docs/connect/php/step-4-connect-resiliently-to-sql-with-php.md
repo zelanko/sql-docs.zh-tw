@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b32bbb0df1c5977e814eecca7a1e6d1ddee5eca4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 002c27145360e0877d4e1bff816c25070247ddd8
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992635"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874372"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>步驟 4︰使用 PHP 彈性地連接到 SQL
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "67992635"
   
 此程式碼範例的長度大多是 catch 例外狀況邏輯的到期時間。   
   
-[Sqlsrv_query ()](../../connect/php/sqlsrv-query.md)函數可用來從查詢針對 SQL Database 取出結果集。 此函式基本上會接受任何查詢和連線物件, 並傳回結果集, 而您可以使用[sqlsrv_fetch_array ()](../../connect/php/sqlsrv-fetch-array.md)逐一查看該結果集。 
+[Sqlsrv_query （）](../../connect/php/sqlsrv-query.md)函數可用來從查詢針對 SQL Database 取出結果集。 此函式基本上會接受任何查詢和連線物件，並傳回結果集，而您可以使用[sqlsrv_fetch_array （）](../../connect/php/sqlsrv-fetch-array.md)逐一查看該結果集。 
   
 ```php
 
@@ -61,7 +61,7 @@ ms.locfileid: "67992635"
                 sqlsrv_close( $conn); 
                 break;  
             } else {    
-                // [A.4] Check whether the error code is on the whitelist of transients.  
+                // [A.4] Check whether the error code is on the list of allowed transients.  
                 $isTransientError = false;  
                 $errorCode = '';
                 if (($errors = sqlsrv_errors()) != null) {

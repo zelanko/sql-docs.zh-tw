@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304823"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745447"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>設定叢集資源和服務的部署設定
 
@@ -126,7 +126,7 @@ ms.locfileid: "70304823"
 }
 ```
 
-如果您想要針對與多個資源相關聯的服務套用相同的設定，您將會更新 [**服務**] 區段中的對應**設定**。 例如，如果您想要在存放集區和 Spark 集區中同時設定 Spark 的相同設定，您將會更新**bdc json**設定檔中**spark**服務區段的 [**設定**] 區段。
+如果您想要針對與多個資源相關聯的服務套用相同的設定，您將會更新 [**服務**] 區段中的對應**設定**。 例如，如果您想要在儲存集區和 Spark 集區內設定 Spark 的相同設定，您將會更新**bdc json**設定檔中**spark**服務區段的 [**設定**] 區段。
 
 ```json
 "services": {

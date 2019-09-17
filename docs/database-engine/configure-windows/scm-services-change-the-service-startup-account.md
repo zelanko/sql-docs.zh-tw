@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecc222a9f2c57aa92535d6f2e0c85586a6714108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024700"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212316"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM 服務 - 變更服務啟動帳戶
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68024700"
   
 3.  在詳細資料窗格中，以滑鼠右鍵按一下您要變更服務啟動帳戶的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後按一下 [屬性]  。  
   
-4.  在 [SQL Server \<執行個體名稱> 屬性] 對話方塊中，按一下 [登入] 索引標籤，然後選取 [登入身分] 帳戶類型。 **\<**    
+4.  在 [SQL Server \<執行個體名稱> 屬性]    對話方塊中，按一下 [登入]  索引標籤，然後選取 [登入身分]  帳戶類型。  
   
 5.  選取新的服務啟動帳戶之後，請按一下 **[確定]** 。  
   

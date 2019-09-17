@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f578ae9dbc60b255959de406999feb8b68171389
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476195"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913557"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>在 Linux 上安裝 SQL Server 2019 機器學習服務 (R、Python)
+# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>在 Linux 上安裝 SQL Server 機器學習服務 (R、Python)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

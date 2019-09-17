@@ -17,20 +17,23 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34cd282331a2f7bd8c0146d954b0ff76b7f42109
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee2c2b825bd706284805bf91fb4c89ba46f265a6
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941744"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810616"
 ---
-# <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  加入 SQLServerAgent 服務所執行的新作業。  
+  加入 SQL 代理程式服務所執行的新作業。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+ > [!IMPORTANT]  
+ > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ 
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -54,21 +57,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_name = ] 'job_name'` 作業名稱。 名稱必須是唯一的而且不能包含百分比 ( **%** ) 字元。 *job_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，沒有預設值。  
+`[ @job_name = ] 'job_name'`作業的名稱。 名稱必須是唯一的，而且不能包含百分比 **%** （）字元。 *job_name*是**Nvarchar （128）** ，沒有預設值。  
   
-`[ @enabled = ] enabled` 指出所加入作業的狀態。 *已啟用*已**tinyint**，預設值是 1 （已啟用）。 如果**0**，作業不會啟用，且不會執行根據其排程; 不過，它可以手動執行。  
+`[ @enabled = ] enabled`表示已加入作業的狀態。 [*已啟用*] 是**Tinyint**，預設值是1（已啟用）。 如果為**0**，則不會啟用作業，且不會根據其排程執行。不過，它可以手動執行。  
   
-`[ @description = ] 'description'` 作業描述。 *描述*已**nvarchar(512)** ，預設值是 NULL。 如果*描述*已省略，會使用 「 沒有可用的說明 」。  
+`[ @description = ] 'description'`作業的描述。 *description*是**Nvarchar （512）** ，預設值是 Null。 如果省略*description* ，則會使用「沒有可用的描述」。  
   
-`[ @start_step_id = ] step_id` 執行作業的第一個步驟的識別碼。 *step_id*已**int**，預設值是 1。  
+`[ @start_step_id = ] step_id`要針對作業執行之第一個步驟的識別碼。 *step_id*是**int**，預設值是1。  
   
-`[ @category_name = ] 'category'` 作業類別目錄。 *類別目錄*已**sysname**，預設值是 NULL。  
+`[ @category_name = ] 'category'`作業的類別目錄。 *category*是**sysname**，預設值是 Null。  
   
-`[ @category_id = ] category_id` 指定作業類別目錄的語言無關的機制。 *category_id*已**int**，預設值是 NULL。  
+`[ @category_id = ] category_id`一種與語言無關的機制，用來指定作業類別目錄。 *category_id*是**int**，預設值是 Null。  
   
-`[ @owner_login_name = ] 'login'` 擁有作業的登入名稱。 *登入*已**sysname**，預設值是 NULL，它解譯為目前的登入名稱。 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值 **@owner_login_name** 。 如果使用者不是成員的**sysadmin**角色設定，或變更的值 **@owner_login_name** ，此預存程序的執行會失敗，且會傳回錯誤。  
+`[ @owner_login_name = ] 'login'`擁有作業的登入名稱。 *login*是**sysname**，預設值是 Null，它會被視為目前的登入名稱。 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才可以設定 **@owner_login_name** 或變更的值。 如果不是**系統管理員** **@owner_login_name** （sysadmin）角色成員的使用者設定或變更的值，則此預存程式的執行會失敗，並傳回錯誤。  
   
-`[ @notify_level_eventlog = ] eventlog_level` 值，指出項目放在這個工作的 Microsoft Windows 應用程式記錄檔的時機。 *eventlog_level*已**int**，而且可以是下列值之一。  
+`[ @notify_level_eventlog = ] eventlog_level`值，指出何時將專案放在 Microsoft Windows 應用程式記錄檔中，以供此作業使用。 *eventlog_level*是**int**，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -77,42 +80,42 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (預設值)|失敗時|  
 |**3**|永遠|  
   
-`[ @notify_level_email = ] email_level` 值，指出當傳送電子郵件的這項作業完成時。 *email_level*已**int**，預設值是**0**，表示永不。 *email_level*會使用相同的值*eventlog_level*。  
+`[ @notify_level_email = ] email_level`值，指出在此作業完成時，何時傳送電子郵件。 *email_level*是**int**，預設值是**0**，表示 never。 *email_level*會使用與*eventlog_level*相同的值。  
   
-`[ @notify_level_netsend = ] netsend_level` 值，指出何時傳送網路訊息的這項作業完成時。 *netsend_level*已**int**，預設值是**0**，表示永不。 *netsend_level*會使用相同的值*eventlog_level*。  
+`[ @notify_level_netsend = ] netsend_level`值，指出在此作業完成時，何時傳送網路訊息。 *netsend_level*是**int**，預設值是**0**，表示 never。 *netsend_level*會使用與*eventlog_level*相同的值。  
   
-`[ @notify_level_page = ] page_level` 值，指出何時傳送這項作業完成時的頁面。 *page_level*已**int**，預設值是**0**，表示永不。 *page_level*會使用相同的值*eventlog_level*。  
+`[ @notify_level_page = ] page_level`值，指出在此作業完成時，何時傳送頁面。 *page_level*是**int**，預設值是**0**，表示 never。 *page_level*會使用與*eventlog_level*相同的值。  
   
-`[ @notify_email_operator_name = ] 'email_name'` 要傳送電子郵件時的人員的電子郵件名稱*email_level*為止。 *email_name*已**sysname**，預設值是 NULL。  
+`[ @notify_email_operator_name = ] 'email_name'`當達到*email_level*時，傳送電子郵件給該人員的電子郵件名稱。 *email_name*是**sysname**，預設值是 Null。  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'` 此作業完成時傳送網路訊息的對象的操作員名稱。 *netsend_name*已**sysname**，預設值是 NULL。  
+`[ @notify_netsend_operator_name = ] 'netsend_name'`完成這項作業時，網路訊息所要送往的操作員名稱。 *netsend_name*是**sysname**，預設值是 Null。  
   
-`[ @notify_page_operator_name = ] 'page_name'` 要完成此作業時呼叫的人員名稱。 *page_name*已**sysname**，預設值是 NULL。  
+`[ @notify_page_operator_name = ] 'page_name'`完成此工作時要分頁的人員名稱。 *page_name*是**sysname**，預設值是 Null。  
   
-`[ @delete_level = ] delete_level` 值，指出何時要刪除作業。 *delete_value*已**int**，預設值是 0，表示永不刪除。 *delete_level*會使用相同的值*eventlog_level*。  
+`[ @delete_level = ] delete_level`指出何時要刪除作業的值。 *delete_value*是**int**，預設值是0，這表示永遠不會。 *delete_level*會使用與*eventlog_level*相同的值。  
   
 > [!NOTE]  
->  當*delete_level*是**3**一次執行作業，不論任何排程定義的作業。 此外，如果作業刪除作業本身，也會同時刪除作業的所有記錄。  
+>  當*delete_level*為**3**時，此作業只會執行一次，不論針對作業定義的任何排程為何。 此外，如果作業刪除作業本身，也會同時刪除作業的所有記錄。  
   
-`[ @job_id = ] _job_idOUTPUT` 指派給作業，如果已成功建立作業識別碼。 *job_id*是 output 變數型別的**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] _job_idOUTPUT`成功建立時指派給作業的作業識別碼。 *job_id*是**uniqueidentifier**類型的輸出變數，預設值是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- **@originating_server** 存在於**sp_add_job，** 但並未列在引數。 **@originating_server** 是保留供內部使用。  
+ **@originating_server** 存在於**sp_add_job 中，** 但未列在 [引數] 之下。 **@originating_server** 已保留供內部使用。  
   
- 在後**sp_add_job**來加入作業，執行**sp_add_jobstep**可用來新增執行活動的工作的步驟。 **sp_add_jobschedule**可以用來建立排程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務用來執行作業。 使用**sp_add_jobserver**來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體執行作業，以及**sp_delete_jobserver**若要移除的作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
+ 在執行**sp_add_job**以新增作業之後， **sp_add_jobstep**可以用來新增執行作業活動的步驟。 **sp_add_jobschedule**可以用來建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務用來執行作業的排程。 使用**sp_add_jobserver**設定作業執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所在的實例，然後**sp_delete_jobserver** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以從實例中移除作業。  
   
- 如果作業將會執行在多伺服器環境中的一或多個目標伺服器上，使用**sp_apply_job_to_targets**設定目標伺服器或目標伺服器群組的作業。 若要移除目標伺服器或目標伺服器群組的作業，請使用**sp_remove_job_from_targets**。  
+ 如果作業將在多伺服器環境中的一或多個目標伺服器上執行，請使用**sp_apply_job_to_targets**來設定作業的目標伺服器或目標伺服器群組。 若要從目標伺服器或目標伺服器群組中移除作業，請使用**sp_remove_job_from_targets**。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
 ## <a name="permissions"></a>Permissions  
- 若要執行這個預存程序，使用者必須隸屬**sysadmin**固定伺服器角色，或被授與下列其中一種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 固定資料庫角色，位於**msdb**資料庫：  
+ 若要執行這個預存程式，使用者必須是**系統管理員（sysadmin** ）固定伺服器角色的成員，或被授[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與在**msdb**資料庫中的下列其中一個 Agent 固定資料庫角色：  
   
 -   **SQLAgentUserRole**  
   
@@ -120,9 +123,9 @@ sp_add_job [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- 如需有關與每一種固定相關聯的特定權限資訊中，資料庫角色，請參閱 < [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
+ 如需與每個固定資料庫角色相關聯之特定許可權的詳細資訊，請參閱[SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值 **@owner_login_name** 。 如果使用者不是成員的**sysadmin**角色設定，或變更的值 **@owner_login_name** ，此預存程序的執行會失敗，且會傳回錯誤。  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才可以設定 **@owner_login_name** 或變更的值。 如果不是**系統管理員** **@owner_login_name** （sysadmin）角色成員的使用者設定或變更的值，則此預存程式的執行會失敗，並傳回錯誤。  
   
 ## <a name="examples"></a>範例  
   

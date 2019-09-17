@@ -12,14 +12,14 @@ ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 840898cb41274a1871e5d087e2be1d2ab9e39e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e25752cd1f12143f4d05b8b4b02f138784a72a1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913184"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874571"
 ---
-# <a name="mssqlserver846"></a>MSSQLSERVER_846
+# <a name="mssqlserver_846"></a>MSSQLSERVER_846
     
 ## <a name="details"></a>詳細資料  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62913184"
 |訊息文字|等候緩衝閂時發生逾時 -- 類型 %d，bp %p，頁面 %d:%d，狀態 %#x，資料庫識別碼: %d，配置單位識別碼: %I64d%ls，工作 0x%p : %d，等候時間 %d，旗標 0x%I64x，主控工作 0x%p。 不繼續等候。|  
   
 ## <a name="explanation"></a>說明  
- 就在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將緩衝閂鎖錯誤寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔的同時，電腦可能停止回應 (凍結)，或者發生逾時或其他例行作業中止。  
+ 電腦可能會停止回應，或在將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]緩衝區閂鎖錯誤[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]寫入錯誤記錄檔時，可能會同時發生一般作業的超時或一些其他中斷。  
   
  如果訊息中的狀態欄位值為 0x04 on，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正等候 I/O 作業完成。 您可能也會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中看到 [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) 訊息。  
   

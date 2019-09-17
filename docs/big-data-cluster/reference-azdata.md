@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d737b8e8b353100d5585a625fe9a53232c78f75
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155124"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70391943"
 ---
 # <a name="azdata"></a>azdata
 
@@ -59,7 +59,7 @@ azdata login -n ClusterName
 #### `--controller-endpoint -e`
 叢集控制器端點 "https://host:port"。 如果不想要使用此引數，您可以使用您機器上的 Kube 組態。 請確定組態位於預設位置 <user home>/.kube/config，或使用 KUBECONFIG 環境變數。
 #### `--accept-eula -a`
-您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 此產品的授權條款可在 https://aka.ms/azdata-eula 檢視。
+您接受授權條款嗎? [yes/no]。 如果您不想要使用此引數，可以將環境變數 ACCEPT_EULA 設定為 'yes'。 
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -89,7 +89,7 @@ azdata logout
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 

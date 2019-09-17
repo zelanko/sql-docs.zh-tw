@@ -1,10 +1,7 @@
 ---
 title: 方案總管 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0f392462b9bd3adf05f5cbbb528daf838fa7aa3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/19/2017
+ms.openlocfilehash: a0e2a3512528bdddc62d89e182a6f074b05bdc75
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264748"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988130"
 ---
 # <a name="solution-explorer"></a>方案總管
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
   

@@ -10,12 +10,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b13b484806775a9a1eb8826a22cf446a17a3a9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d66dad7c13187711cf1422c9ad932cfe0ed4ed8
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021104"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874901"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>將搜索所使用的斷詞工具還原為舊版
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68021104"
   
  **受影響語言的清單**  
   
-|語言|縮寫<br />用於<br />登錄|LCID|  
+|Language|縮寫<br />用於<br />登錄|LCID|  
 |--------------|---------------------------------------|----------|  
 |孟加拉文|ben|1093|  
 |保加利亞文|bgr|1026|  
@@ -80,7 +80,7 @@ ms.locfileid: "68021104"
 |中性語言|中性語言|0000|  
 |挪威文 (巴克摩)|nor|1044|  
 |旁遮普文|pan|1094|  
-|巴西葡萄牙文|ptb|1046|  
+|葡萄牙文 (巴西)|ptb|1046|  
 |葡萄牙文|ptg|2070|  
 |羅馬尼亞文|rom|1048|  
 |斯洛伐克文|sky|1051|  
@@ -130,7 +130,7 @@ ms.locfileid: "68021104"
   
  **受影響語言的清單**  
   
-|語言|縮寫<br />用於<br />登錄|LCID|  
+|Language|縮寫<br />用於<br />登錄|LCID|  
 |--------------|---------------------------------------|----------|  
 |阿拉伯文|ara|1025|  
 |德文|deu|1031|  
@@ -259,7 +259,7 @@ ms.locfileid: "68021104"
   
  **受影響語言的清單**  
   
-|語言|縮寫<br />用於<br />登錄|LCID|  
+|Language|縮寫<br />用於<br />登錄|LCID|  
 |--------------|---------------------------------------|----------|  
 |簡體中文|chs|2052|  
 |繁體中文|cht|1028|  

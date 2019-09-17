@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6be64ffc819157b95729f855bb81a5e12c78a7f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 789d56e63572f6744055bb78e819e69e2e15c824
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134479"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211252"
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   您可以使用 [Database Mail 組態精靈]  或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立 Database Mail 公用和私人設定檔。 如需郵件設定檔的詳細資訊，請參閱 [Database Mail 設定檔](database-mail-configuration-objects.md)。
   
 -   **開始之前：** [必要條件](#Prerequisites)、[安全性](#Security)  

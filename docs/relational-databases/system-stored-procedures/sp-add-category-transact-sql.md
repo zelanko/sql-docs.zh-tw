@@ -1,5 +1,5 @@
 ---
-title: sp_add_category (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_category （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,19 +17,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b29f3e348800c300698533fb8aad47066bd0b46a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941767"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810549"
 ---
-# <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  將作業、警示或操作員的指定類別目錄加入伺服器中。  
+  將作業、警示或操作員的指定類別目錄加入伺服器中。 如需替代方法，請參閱[使用 SQL Server Management Studio 建立作業類別目錄](/sql/ssms/agent/create-a-job-category)。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+ > [!IMPORTANT]  
+ > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +45,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'` 要加入的類別目錄類別。 *類別*已**varchar(8)** 預設值是 JOB，而且可以是下列值之一。  
+`[ @class = ] 'class'`要加入之類別目錄的類別。 *class*為**Varchar （8）** ，預設值為 JOB，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -50,27 +53,27 @@ sp_add_category
 |ALERT|加入警示類別目錄。|  
 |OPERATOR|加入操作員類別目錄。|  
   
-`[ @type = ] 'type'` 要加入的類別目錄的類型。 *型別*已**varchar(12)** ，預設值是**本機**，而且可以是下列值之一。  
+`[ @type = ] 'type'`要加入之類別目錄的類型。 *類型*為**Varchar （12）** ，預設值為**LOCAL**，而且可以是下列其中一個值。  
   
 |值|描述|  
 |-----------|-----------------|  
 |LOCAL|本機作業類別目錄。|  
 |多伺服器|多伺服器作業類別目錄。|  
-|無|工作以外的類別分類 **。**|  
+|無|作業以外之類別的分類 **。**|  
   
-`[ @name = ] 'name'` 要加入的類別目錄名稱。 在指定的類別內，這個名稱必須是唯一的。 *名稱*已**sysname**，沒有預設值。  
+`[ @name = ] 'name'`要加入之類別目錄的名稱。 在指定的類別內，這個名稱必須是唯一的。 *名稱*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** (成功) 或**1** (失敗)  
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- **sp_add_category**必須從執行**msdb**資料庫。  
+ **sp_add_category**必須從**msdb**資料庫中執行。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_category**。  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_add_category**。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立名稱為 `AdminJobs` 的本機作業類別目錄。  
@@ -89,7 +92,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_update_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

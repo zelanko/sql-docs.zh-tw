@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: dd5d5003970f87d39148a058ca02befaf006775c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027298"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874637"
 ---
 # <a name="understanding-ssl-support"></a>了解 SSL 支援
 
@@ -28,9 +28,9 @@ ms.locfileid: "69027298"
 > [!NOTE]  
 > 確定傳遞給 **serverName** 的值完全符合伺服器憑證中主旨替代名稱 (SAN) 內的一般名稱 (CN) 或 DNS 名稱，SSL 連線才會成功。  
 >
-> 如需如何針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定 SSL 的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的＜加密 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線＞主題。  
+> 如需如何設定 SSL 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詳細資訊，請參閱[啟用資料庫引擎的加密連接](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 
 為了讓應用程式能夠使用 SSL 加密，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 已從 1.2 版起引入下列連線屬性：**encrypt**、**trustServerCertificate**、**trustStore**、**trustStorePassword** 和 **hostNameInCertificate**。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   

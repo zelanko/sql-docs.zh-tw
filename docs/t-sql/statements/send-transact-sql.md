@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af65ac5257da6bc04a5a33649007ae849366e10c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913901"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211424"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 利用一個或多個現有的交談來傳送訊息。  
   

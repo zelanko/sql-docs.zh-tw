@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdbf53aae89ee6beb8e06fef9c51e1b72e34ab0e
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073673"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211333"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   此主題說明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立連結的伺服器以及存取來自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料。 透過建立連結的伺服器，您可以處理多個來源的資料。 連結的伺服器不必是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的另一個執行個體，但那是常見狀況。  
   
