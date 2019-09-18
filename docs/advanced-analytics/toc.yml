@@ -187,7 +187,7 @@
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
 - name: 範例 >>
   href: 'https://github.com/Microsoft/sql-server-samples'
-- name: 方案
+- name: 解決方案
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
 - name: 概念
   items:

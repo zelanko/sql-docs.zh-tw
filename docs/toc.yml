@@ -113,7 +113,7 @@
           href: big-data-cluster/concept-storage-pool.md
         - name: 計算集區
           href: big-data-cluster/concept-compute-pool.md
-        - name: 安全性
+        - name: Security
           href: big-data-cluster/concept-security.md
     - name: 使用說明指南
       items:
@@ -177,7 +177,7 @@
               href: big-data-cluster/manage-notebooks.md
             - name: 使用控制器儀表板來管理
               href: big-data-cluster/manage-with-controller-dashboard.md
-        - name: Notebooks
+        - name: 筆記型電腦
           items:
             - name: Notebooks 概觀
               href: big-data-cluster/notebooks-guidance.md
@@ -209,7 +209,7 @@
                   href: big-data-cluster/reference-azdata.md
                 - name: control
                   href: big-data-cluster/reference-azdata-control.md
-                - name: notebook
+                - name: 筆記本
                   href: big-data-cluster/reference-azdata-notebook.md
                 - name: sql
                   href: big-data-cluster/reference-azdata-sql.md
@@ -243,7 +243,7 @@
                   href: big-data-cluster/reference-azdata-bdc-gateway-status.md
                 - name: bdc hdfs
                   href: big-data-cluster/reference-azdata-bdc-hdfs.md
-                - name: bdc hdfs mount
+                - name: bdc hdfs 掛接
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc hdfs status
                   href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
@@ -253,11 +253,11 @@
                   href: big-data-cluster/reference-azdata-bdc-pool-status.md
                 - name: bdc spark
                   href: big-data-cluster/reference-azdata-bdc-spark.md
-                - name: bdc spark batch
+                - name: bdc spark 批次
                   href: big-data-cluster/reference-azdata-bdc-spark-batch.md
-                - name: bdc spark session
+                - name: bdc spark 工作階段
                   href: big-data-cluster/reference-azdata-bdc-spark-session.md
-                - name: bdc spark statement
+                - name: bdc spark 陳述式
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
                 - name: bdc spark status
                   href: big-data-cluster/reference-azdata-bdc-spark-status.md
@@ -289,19 +289,19 @@
               items:
                 - name: 備份到 URL
                   href: relational-databases/backup-restore/sql-server-backup-to-url.md
-                - name: 備份到 Azure Blob 儲存體 (PowerShell)
+                - name: 備份至 Azure Blob 儲存體
                   href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-                - name: 刪除備份部落格檔案
+                - name: 刪除備份記錄檔
                   href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
-                - name: 還原
+                - name: Restore
                   href: relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
                 - name: 受控備份
                   items:
-                    - name: 啟用
+                    - name: Enable
                       href: relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md
                     - name: 設定進階選項
                       href: relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
-                    - name: 停用
+                    - name: Disable
                       href: relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
                     - name: 從 SQL Server 2014 移轉設定
                       href: relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
@@ -319,7 +319,7 @@
                   href: relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
                 - name: 至鏡像媒體集
                   href: relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
-            - name: 還原
+            - name: Restore
               items:
                 - name: 使用 SQL Server Management Studio (SSMS)
                   href: relational-databases/backup-restore/restore-a-database-backup-using-ssms.md
@@ -525,6 +525,66 @@
                       href: relational-databases/backup-restore/select-backup-device.md
                     - name: 連線到 Azure 儲存體
                       href: relational-databases/backup-restore/connect-to-microsoft-azure-storage-restore.md
+            - name: VDI 參考
+              items:
+                - name: VDI 概觀
+                  href: relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md
+                - name: IClientVirtualDevice
+                  items:
+                    - name: CompleteCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-completecommand.md
+                    - name: GetCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
+                - name: IClientVirtualDeviceSet2
+                  items:
+                    - name: 關閉
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
+                    - name: CreateEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
+                    - name: GetBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getbufferhandle.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getconfiguration.md
+                    - name: MapBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-mapbufferhandle.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-opendevice.md
+                    - name: OpenInSecondaryEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-openinsecondaryex.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-signalabort.md
+                - name: IServerVirtualDevice
+                  items:
+                    - name: CloseDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-closedevice.md
+                    - name: SendCommand
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-sendcommand.md
+                - name: IServerVirtualDeviceSet2
+                  items:
+                    - name: AllocateBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
+                    - name: BeginConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
+                    - name: 關閉
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
+                    - name: EndConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
+                    - name: ExecuteCompletionAgent
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-executecompletionagent.md
+                    - name: FreeBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-freebuffer.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-getconfiguration.md
+                    - name: IsSharedBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-issharedbuffer.md
+                    - name: 開啟
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-open.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-opendevice.md
+                    - name: RequestBuffers
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-requestbuffers.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
     - name: AlwaysOn 可用性群組
       href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       items:
@@ -786,7 +846,7 @@
                       href: database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md
                 - name: AlwaysOn 儀表板
                   items:
-                    - name: 選項
+                    - name: 選項。
                       href: database-engine/availability-groups/windows/options-sql-server-always-on-dashboard-page.md
                     - name: 原則評估結果
                       href: database-engine/availability-groups/windows/policy-evaluation-result-always-on.md
@@ -916,7 +976,7 @@
           items:
             - name: 組態
               items:
-                - name: 升級
+                - name: UPGRADE
                   href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
                 - name: 仲裁模型與投票
                   href: sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
@@ -943,7 +1003,7 @@
               href: database-engine/database-mirroring/mirroring-states-sql-server.md
             - name: 作業模式
               href: database-engine/database-mirroring/database-mirroring-operating-modes.md
-            - name: 見證
+            - name: Witness
               href: database-engine/database-mirroring/database-mirroring-witness.md
         - name: 操作方式
           items:
@@ -968,11 +1028,11 @@
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
                         - name: 範例使用憑證設定 (T-SQL)
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
-                    - name: 升級
+                    - name: UPGRADE
                       href: database-engine/database-mirroring/upgrading-mirrored-instances.md
                     - name: 移除鏡像
                       href: database-engine/database-mirroring/remove-database-mirroring-sql-server.md
-                - name: 見證
+                - name: Witness
                   items:
                     - name: 使用 Windows 驗證新增
                       href: database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
@@ -1048,7 +1108,7 @@
                   href: database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md
                 - name: 移除鏡像
                   href: database-engine/database-mirroring/removing-database-mirroring-sql-server.md
-            - name: 安全性
+            - name: Security
               items:
                 - name: 端點
                   href: database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
@@ -1100,7 +1160,7 @@
               href: database-engine/log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
             - name: 移除次要資料庫
               href: database-engine/log-shipping/remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
-            - name: 移除
+            - name: Remove
               href: database-engine/log-shipping/remove-log-shipping-sql-server.md
             - name: 檢視報表
               href: database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md
@@ -1173,7 +1233,7 @@
                   href: relational-databases/databases/increase-the-size-of-a-database.md
                 - name: 管理中繼資料
                   href: relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md
-                - name: 重新命名
+                - name: Rename
                   href: relational-databases/databases/rename-a-database.md
                 - name: 設定單一使用者模式
                   href: relational-databases/databases/set-a-database-to-single-user-mode.md
@@ -1227,7 +1287,7 @@
                   href: relational-databases/databases/view-a-database-snapshot-sql-server.md
                 - name: 還原為快照集
                   href: relational-databases/databases/revert-a-database-to-a-database-snapshot.md
-                - name: 卸除
+                - name: Drop
                   href: relational-databases/databases/drop-a-database-snapshot-transact-sql.md
                 - name: 檢視疏鬆檔案大小
                   href: relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
@@ -1349,7 +1409,7 @@
               href: relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
         - name: FileTable
           items:
-            - name: 先決條件
+            - name: Prerequisites
               href: relational-databases/blob/enable-the-prerequisites-for-filetable.md
             - name: 建立、改變與卸除
               href: relational-databases/blob/create-alter-and-drop-filetables.md
@@ -1389,7 +1449,7 @@
                   href: relational-databases/indexes/create-filtered-indexes.md
                 - name: 具有內含資料行
                   href: relational-databases/indexes/create-indexes-with-included-columns.md
-            - name: 刪除
+            - name: DELETE
               href: relational-databases/indexes/delete-an-index.md
             - name: 修改
               href: relational-databases/indexes/modify-an-index.md
@@ -1399,11 +1459,11 @@
               href: relational-databases/indexes/indexes-on-computed-columns.md
             - name: SORT_IN_TEMPDB
               href: relational-databases/indexes/sort-in-tempdb-option-for-indexes.md
-            - name: 停用
+            - name: Disable
               href: relational-databases/indexes/disable-indexes-and-constraints.md
-            - name: 啟用
+            - name: Enable
               href: relational-databases/indexes/enable-indexes-and-constraints.md
-            - name: 重新命名
+            - name: Rename
               href: relational-databases/indexes/rename-indexes.md
             - name: Set 選項
               href: relational-databases/indexes/set-index-options.md
@@ -1513,13 +1573,13 @@
           href: relational-databases/stored-procedures/create-a-stored-procedure.md
         - name: 修改
           href: relational-databases/stored-procedures/modify-a-stored-procedure.md
-        - name: 刪除
+        - name: DELETE
           href: relational-databases/stored-procedures/delete-a-stored-procedure.md
-        - name: 執行
+        - name: Execute
           href: relational-databases/stored-procedures/execute-a-stored-procedure.md
         - name: 指定參數
           href: relational-databases/stored-procedures/specify-parameters.md
-        - name: 授與權限
+        - name: '[授與權限]'
           href: relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md
         - name: 參數
           href: relational-databases/stored-procedures/parameters.md
@@ -1529,7 +1589,7 @@
           href: relational-databases/stored-procedures/return-data-from-a-stored-procedure.md
         - name: 重新編譯
           href: relational-databases/stored-procedures/recompile-a-stored-procedure.md
-        - name: 重新命名
+        - name: Rename
           href: relational-databases/stored-procedures/rename-a-stored-procedure.md
         - name: 檢視定義
           href: relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
@@ -1551,11 +1611,11 @@
           items:
             - name: 建立
               href: relational-databases/tables/create-tables-database-engine.md
-            - name: 刪除
+            - name: DELETE
               href: relational-databases/tables/delete-tables-database-engine.md
             - name: 重複
               href: relational-databases/tables/duplicate-tables.md
-            - name: 重新命名
+            - name: Rename
               href: relational-databases/tables/rename-tables-database-engine.md
             - name: 檢視資料表定義
               href: relational-databases/tables/view-the-table-definition.md
@@ -1583,12 +1643,12 @@
               href: relational-databases/tables/use-column-sets.md
             - name: 資料表值參數
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-        - name: 邊緣條件約束
+        - name: Microsoft Edge 限制
           href: relational-databases/tables/graph-edge-constraints.md
           items:
             - name: 建立
               href: relational-databases/tables/create-edge-constraints.md
-            - name: 刪除
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: 修改
               href: relational-databases/tables/modify-edge-constraint.md
@@ -1601,7 +1661,7 @@
               href: relational-databases/tables/create-primary-keys.md
             - name: 修改
               href: relational-databases/tables/modify-primary-keys.md
-            - name: 刪除
+            - name: DELETE
               href: relational-databases/tables/delete-primary-keys.md
         - name: 外部索引鍵
           items:
@@ -1624,7 +1684,7 @@
               href: relational-databases/tables/create-unique-constraints.md
             - name: 修改
               href: relational-databases/tables/modify-unique-constraints.md
-            - name: 刪除
+            - name: DELETE
               href: relational-databases/tables/delete-unique-constraints.md
         - name: 檢查條件約束
           items:
@@ -1632,7 +1692,7 @@
               href: relational-databases/tables/create-check-constraints.md
             - name: 修改
               href: relational-databases/tables/modify-check-constraints.md
-            - name: 刪除
+            - name: DELETE
               href: relational-databases/tables/delete-check-constraints.md
             - name: 停用複寫
               href: relational-databases/tables/disable-check-constraints-for-replication.md
@@ -1929,7 +1989,7 @@
                   href: relational-databases/xml/use-the-binary-base64-option.md
                 - name: 用來形成傳回之 XML 的 AUTO 模式啟發式方法
                   href: relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
-                - name: 範例：使用 AUTO 模式
+                - name: '範例:使用 AUTO 模式'
                   href: relational-databases/xml/examples-using-auto-mode.md
             - name: EXPLICIT 模式
               href: relational-databases/xml/use-explicit-mode-with-for-xml.md
@@ -1971,7 +2031,7 @@
                   href: relational-databases/xml/columns-that-contain-a-null-value-by-default.md
                 - name: PATH 模式中的命名空間支援
                   href: relational-databases/xml/namespace-support-in-path-mode.md
-                - name: 範例：使用 PATH 模式
+                - name: '範例:使用 PATH 模式'
                   href: relational-databases/xml/examples-using-path-mode.md
             - name: 巢狀查詢
               href: relational-databases/xml/use-nested-for-xml-queries.md
@@ -2002,7 +2062,7 @@
         - name: OPENXML
           href: relational-databases/xml/openxml-sql-server.md
           items:
-            - name: 範例：使用 OPENXML
+            - name: '範例:使用 OPENXML'
               href: relational-databases/xml/examples-using-openxml.md
             - name: 指定中繼屬性
               href: relational-databases/xml/specify-metaproperties-in-openxml.md
@@ -2170,7 +2230,7 @@
           items:
             - name: 新功能
               href: relational-databases/clr-integration/clr-integration-what-s-new.md
-            - name: 啟用
+            - name: Enable
               href: relational-databases/clr-integration/clr-integration-enabling.md
             - name: 效能
               href: relational-databases/clr-integration/clr-integration-architecture-performance.md
@@ -2214,7 +2274,7 @@
               href: relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md
             - name: 查詢
               href: relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md
-            - name: 移除
+            - name: Remove
               href: relational-databases/extended-stored-procedures-programming/removing-an-extended-stored-procedure-from-sql-server.md
             - name: 傳送結果集
               href: relational-databases/extended-stored-procedures-programming/sending-result-sets-to-the-server-extended-stored-procedure-api.md
@@ -3296,7 +3356,7 @@
                   href: relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md
                 - name: datetime 資料類型從 SQL 轉換成 C
                   href: relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md
-        - name: 錯誤
+        - name: Errors
           href: relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md
           items:
             - name: 診斷記錄與欄位
@@ -3376,7 +3436,7 @@
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md
             - name: 資料庫
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md
-            - name: 預設值
+            - name: Defaults
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-defaults.md
             - name: 索引鍵
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-foreign-keys.md
@@ -4781,7 +4841,7 @@
                       href: relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md
                     - name: 刪除發行項
                       href: relational-databases/replication/publish/delete-an-article.md
-                - name: 訂閱
+                - name: 訂用帳戶
                   href: relational-databases/replication/subscribe-to-publications.md
                   items:
                     - name: 建立提取訂閱
@@ -5281,7 +5341,7 @@
                   items:
                     - name: 訂閱監看清單
                       href: relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
-                    - name: 訂閱
+                    - name: 訂用帳戶
                       href: relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
                     - name: 警告
                       href: relational-databases/replication/publication-information-warnings-transactional-publication.md
@@ -5299,7 +5359,7 @@
                   items:
                     - name: 訂閱監看清單
                       href: relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md
-                    - name: 訂閱
+                    - name: 訂用帳戶
                       href: relational-databases/replication/publication-information-all-subscriptions-merge-publication.md
                     - name: 警告
                       href: relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md
@@ -5311,7 +5371,7 @@
                   items:
                     - name: 訂閱監看清單
                       href: relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md
-                    - name: 訂閱
+                    - name: 訂用帳戶
                       href: relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md
                     - name: 警告
                       href: relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
@@ -5700,7 +5760,7 @@
                   href: sql-server/stretch-database/configure-compatible-sql-server-features-with-stretch-database.md
         - name: 如何
           items:
-            - name: 啟用
+            - name: Enable
               items:
                 - name: 啟用資料庫
                   href: sql-server/stretch-database/enable-stretch-database-for-a-database.md
@@ -6483,7 +6543,7 @@
               href: relational-databases/data-compression/page-compression-implementation.md
             - name: Unicode 壓縮
               href: relational-databases/data-compression/unicode-compression-implementation.md
-            - name: 啟用
+            - name: Enable
               href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md
             - name: Disable
               href: relational-databases/data-compression/disable-compression-on-a-table-or-index.md
@@ -7332,7 +7392,7 @@
         - name: 資源管理員
           href: relational-databases/resource-governor/resource-governor.md
           items:
-            - name: 啟用
+            - name: Enable
               href: relational-databases/resource-governor/enable-resource-governor.md
             - name: Disable
               href: relational-databases/resource-governor/disable-resource-governor.md
@@ -7515,7 +7575,7 @@
               href: relational-databases/search/troubleshoot-full-text-indexing.md
             - name: 備份與還原目錄與索引
               href: relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md
-        - name: 搜尋
+        - name: Search
           items:
             - name: 搜尋的篩選
               href: relational-databases/search/configure-and-manage-filters-for-search.md
@@ -8143,8 +8203,6 @@
               href: relational-databases/security/row-level-security.md
             - name: 動態資料遮罩
               href: relational-databases/security/dynamic-data-masking.md
-            - name: 靜態資料遮罩
-              href: relational-databases/security/static-data-masking.md
             - name: 憑證與非對稱金鑰
               href: relational-databases/security/sql-server-certificates-and-asymmetric-keys.md
         - name: 驗證存取
@@ -9209,7 +9267,7 @@
                       href: ssms/agent/new-job-schedule-job-schedule-properties.md
                     - name: Notify an Operator of Job Status
                       href: ssms/agent/notify-an-operator-of-job-status.md
-                    - name: 操作員
+                    - name: Operators
                       href: ssms/agent/operators.md
                     - name: 組織作業
                       href: ssms/agent/organize-jobs.md
@@ -9335,7 +9393,7 @@
                       href: ssms/agent/edit-an-alert.md
                     - name: 編輯操作員
                       href: ssms/agent/edit-an-operator.md
-                - name: 將
+                - name: Set
                   items:
                     - name: SQL Server Agent 服務的別名
                       href: ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
@@ -9634,7 +9692,7 @@
                   href: ssms/solution/copy-items-in-a-solution.md
                 - name: 管理方案與專案的檔案
                   href: ssms/solution/files-that-manage-solutions-and-projects.md
-                - name: 方案
+                - name: 解決方案
                   href: ssms/solution/solutions-sql-server-management-studio.md
                 - name: 在專案中建立查詢與連接的關聯性
                   href: ssms/solution/associate-a-query-with-a-connection-in-a-project.md
@@ -15214,7 +15272,7 @@
                   href: t-sql/spatial-geography/envelopeangle-geography-data-type.md
                 - name: EnvelopeCenter
                   href: t-sql/spatial-geography/envelopecenter-geography-data-type.md
-                - name: 篩選
+                - name: Filter
                   href: t-sql/spatial-geography/filter-geography-data-type.md
                 - name: HasM
                   href: t-sql/spatial-geography/hasm-geography-data-type.md
@@ -15420,7 +15478,7 @@
                   href: t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md
                 - name: CurveToLineWithTolerance
                   href: t-sql/spatial-geometry/curvetolinewithtolerance-geometry-data-type.md
-                - name: 篩選
+                - name: Filter
                   href: t-sql/spatial-geometry/filter-geometry-data-type.md
                 - name: HasM
                   href: t-sql/spatial-geometry/hasm-geometry-datatype.md
@@ -16382,7 +16440,7 @@
                   href: t-sql/language-elements/coalesce-transact-sql.md
                 - name: NULLIF
                   href: t-sql/language-elements/nullif-transact-sql.md
-            - name: 操作員
+            - name: Operators
               href: t-sql/language-elements/operators-transact-sql.md
               items:
                 - name: 一元 - 正數
