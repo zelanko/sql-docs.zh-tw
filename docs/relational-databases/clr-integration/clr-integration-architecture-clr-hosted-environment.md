@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 016d8af878a75a0a4e72b17fc9fa09f8791b242b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212451"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096919"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構 - CLR 主控環境
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ Thread.EndThreadAffinity();
   
  基於這些考量，我們不鼓勵使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所使用之類別的靜態變數和靜態資料成員。 對於 SAFE 和 EXTERNAL_ACCESS 組件而言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在 CREATE ASSEMBLY 時檢查組件的中繼資料；如果發現有使用靜態資料成員和變數，則會讓這類組件的建立作業失敗。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也不允許呼叫以**SharedState**、* * 同步處理和**ExternalProcessMgmt**主機保護屬性標注的 .NET Framework api。 這會讓 SAFE 和 EXTERNAL_ACCESS 組件無法呼叫可啟用共用狀態、執行同步處理，以及影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序完整性的任何 API。 如需詳細資訊, 請參閱[CLR 整合程式設計模型限制](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也不允許呼叫以**SharedState**、**同步**處理和**ExternalProcessMgmt**主機保護屬性標注的 .NET Framework api。 這會讓 SAFE 和 EXTERNAL_ACCESS 組件無法呼叫可啟用共用狀態、執行同步處理，以及影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序完整性的任何 API。 如需詳細資訊, 請參閱[CLR 整合程式設計模型限制](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CLR 整合安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)   

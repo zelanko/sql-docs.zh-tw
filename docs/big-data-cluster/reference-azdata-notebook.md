@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f147e2b4ec785c3723d09cac6eb3548511946780
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158233"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118152"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
@@ -61,6 +61,10 @@ JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespat
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 此命令會建立暫存目錄，並在其中執行指定的筆記本作為工作目錄。
+
+>[!NOTE]
+>已針對 azdata v 15.0.1900 進行驗證：僅支援 Python 3 筆記本的執行命令。
+
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
@@ -81,13 +85,13 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output-path`
 要用於筆記本輸出的目錄路徑。  包含輸出資料的筆記本和任何筆記本產生的檔案都會相對於此目錄產生。
 #### `--output-html`
-選擇性旗標指出是否要另外將輸出筆記本轉換成 HTML 格式。  建立第二個輸出檔。
+選擇性旗標，指出是否要另外將輸出筆記本轉換成 HTML 格式。  建立第二個輸出檔。
 #### `--arguments -a`
-要插入筆記本執行的選擇性筆記本引數清單。  編碼為 JSON 字典。  範例: ' {"name": "value", "name2": "value2"} '
+要插入筆記本執行的選擇性筆記本引數清單。  編碼為 JSON 字典。  範例： ' {"name"： "value"，"name2"： "value2"} '
 #### `--interactive -i`
 在互動模式中執行筆記本。
 #### `--clear -c`
-在互動模式中, 在轉譯儲存格之前清除主控台。
+在互動模式中，在轉譯儲存格之前清除主控台。
 ### <a name="global-arguments"></a>全域引數
 #### `--debug`
 增加記錄詳細資訊，以顯示所有偵錯記錄。
@@ -96,7 +100,7 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 
