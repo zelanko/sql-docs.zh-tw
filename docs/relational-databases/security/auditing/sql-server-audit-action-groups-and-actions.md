@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b15e8f19e189dcf3363b90464ab76f482de1753
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 2efe63ae57e80e06d616938c0dcdf77dbe055ac6
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742865"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929699"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "68742865"
 |BACKUP_RESTORE_GROUP|每當發出備份或還原命令時，就會引發這個事件。 相當於 [Audit Backup 和 Restore 事件類別](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)。|  
 |BROKER_LOGIN_GROUP|引發這個事件來報告與 Service Broker 傳輸安全性相關的稽核訊息。 等於＜ [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md)＞。|  
 |DATABASE_CHANGE_GROUP|當建立、改變或卸除資料庫時，就會引發這個事件。 每當建立、改變或卸除任何資料庫時，就會引發這個事件。 等於＜ [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)＞。|  
-|DATABASE_LOGOUT_GROUP|當自主資料庫使用者登出資料庫時，就會引發這個事件。 等於 Audit Database Logout 事件類別。|  
+|DATABASE_LOGOUT_GROUP|當自主資料庫使用者登出資料庫時，就會引發這個事件。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|引發這個事件來報告與資料庫鏡像傳輸安全性相關的稽核訊息。 等於＜ [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)＞。|  
 |DATABASE_OBJECT_ACCESS_GROUP|每當存取類似訊息類型、組件和合約等資料庫物件時，就會引發這個事件。 任何資料庫中的任何存取都會引發這個事件。 注意:這可能會產生大型稽核記錄。<br /><br /> 等於＜ [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)＞。|  
 |DATABASE_OBJECT_CHANGE_GROUP|在資料庫物件 (如結構描述) 上執行 CREATE、ALTER 或 DROP 陳述式時，就會引發這個事件。 每當建立、改變或卸除任何資料庫物件時，就會引發這個事件。 注意:這可能會產生非常大量的稽核記錄。<br /><br /> 等於＜ [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)＞。|  
@@ -93,8 +93,7 @@ ms.locfileid: "68742865"
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|每當從資料庫角色中加入或移除登入時，就會引發這個事件。 這個事件類別會針對 sp_addrolemember、sp_changegroup 及 sp_droprolemember 預存程序而引發。 任何資料庫中的任何資料庫角色成員變更都會引發這個事件。 等於＜ [Audit Add Member to DB Role 事件類別
 ](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md)＞。|  
 |DBCC_GROUP|每當主體發出任何 DBCC 命令時，就會引發這個事件。 等於＜ [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md)＞。|  
-|FAILED_DATABASE_AUTHENTICATION_GROUP|表示某個主體嘗試登入自主資料庫卻失敗。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)＞。|  
-|FAILED_LOGIN_GROUP|表示主體嘗試登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 但失敗。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)＞。|  
+|FAILED_DATABASE_AUTHENTICATION_GROUP|表示某個主體嘗試登入自主資料庫卻失敗。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)＞。|    
 |FULLTEXT_GROUP|表示發生全文檢索事件。 等於＜ [Audit Fulltext Event Class](../../../relational-databases/event-classes/audit-fulltext-event-class.md)＞。|  
 |LOGIN_CHANGE_PASSWORD_GROUP|每當透過 ALTER LOGIN 陳述式或 sp_password 預存程序變更登入的密碼時，就會引發這個事件。 等於＜ [Audit Login Change Password Event Class](../../../relational-databases/event-classes/audit-login-change-password-event-class.md)＞。|  
 |LOGOUT_GROUP|表示主體已登出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md)＞。|  
@@ -106,13 +105,13 @@ ms.locfileid: "68742865"
 |SERVER_OBJECT_OWNERSHIP_CHANGE_GROUP|當伺服器範圍內的物件擁有者改變時，就會引發這個事件。 等於＜ [Audit Server Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-server-object-take-ownership-event-class.md)＞。|  
 |SERVER_OBJECT_PERMISSION_CHANGE_GROUP|每當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的任何主體對伺服器物件權限發出 GRANT、REVOKE 或 DENY 時，就會引發這個事件。 等於＜ [Audit Server Object GDR Event Class](../../../relational-databases/event-classes/audit-server-object-gdr-event-class.md)＞。|  
 |SERVER_OPERATION_GROUP|當使用安全性稽核作業 (如改變設定、資源、外部存取或權限) 時，將會引發這個事件。 等於＜ [Audit Server Operation Event Class](../../../relational-databases/event-classes/audit-server-operation-event-class.md)＞。|  
-|SERVER_PERMISSION_CHANGE_GROUP|當發出 GRANT、REVOKE 或 DENY 以取得伺服器範圍的權限 (例如建立登入) 時，就會引發這個事件。 等於＜ [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)＞。|  
+|SERVER_PERMISSION_CHANGE_GROUP|當針對伺服器範圍的權限發出 GRANT、REVOKE 或 DENY 時，就會引發這個事件。 等於＜ [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)＞。|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|當建立、改變或卸除伺服器主體時，就會引發這個事件。 等於＜ [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md)＞。<br /><br /> 每當主體發出 sp_defaultdb 或 sp_defaultlanguage 預存程序或是 ALTER LOGIN 陳述式時，就會引發這個事件。 等於＜ [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md)＞。<br /><br /> 這個事件會在 sp_addlogin 和 sp_droplogin 預存程序上引發。 也等於＜ [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md)＞。<br /><br /> 這個事件會針對 sp_grantlogin 或 sp_revokelogin 預存程序而引發。 等於＜ [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md)＞。|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|當伺服器範圍內有模擬情況 (如 EXECUTE AS \<登入>) 時，就會引發這個事件。 等於＜ [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)＞。|  
 |SERVER_ROLE_MEMBER_CHANGE_GROUP|每當從固定伺服器角色中加入或移除登入時，就會引發這個事件。 此事件會針對 sp_addsrvrolemember 和 sp_dropsrvrolemember 預存程序而引發。 等於＜ [Audit Add Login to Server Role 事件類別
 ](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)＞。|  
 |SERVER_STATE_CHANGE_GROUP|當修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務狀態時，就會引發這個事件。 等於＜ [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)＞。|  
-|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|表示主體已成功登入自主資料庫。 等於稽核成功資料庫驗證事件類別。|  
+|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|表示主體已成功登入自主資料庫。|  
 |SUCCESSFUL_LOGIN_GROUP|表示主體已成功登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。 等於＜ [Audit Login Event Class](../../../relational-databases/event-classes/audit-login-event-class.md)＞。|  
 |TRACE_CHANGE_GROUP|這個事件會針對檢查是否有 ALTER TRACE 權限的所有陳述式而引發。 等於＜ [Audit Server Alter Trace Event Class](../../../relational-databases/event-classes/audit-server-alter-trace-event-class.md)＞。|  
 |TRANSACTION_GROUP|BEGIN TRANSACTION、ROLLBACK TRANSACTION 和 COMMIT TRANSACTION 作業，明確呼叫這些陳述式和隱含的交易作業，都會引發這個事件。 交易回復所造成的個別陳述式 UNDO 作業也會引發這個事件。|  
@@ -155,7 +154,7 @@ ms.locfileid: "68742865"
 |SCHEMA_OBJECT_CHANGE_GROUP|在結構描述上執行 CREATE、ALTER 或 DROP 作業時，就會引發這個事件。 等於＜ [Audit Schema Object Management Event Class](../../../relational-databases/event-classes/audit-schema-object-management-event-class.md)＞。<br /><br /> 這個事件會在結構描述物件上引發。 等於＜ [Audit Object Derived Permission Event Class](../../../relational-databases/event-classes/audit-object-derived-permission-event-class.md)＞。 也等於＜ [Audit Statement Permission Event Class](../../../relational-databases/event-classes/audit-statement-permission-event-class.md)＞。|  
 |SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP|當檢查是否有變更結構描述物件 (例如，資料表、程序或函數) 之擁有者的權限時，就會引發這個事件。 這是在使用 ALTER AUTHORIZATION 陳述式指派物件的擁有者時發生。 等於＜ [Audit Schema Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-schema-object-take-ownership-event-class.md)＞。|  
 |SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP|針對結構描述物件發出授與、拒絕或撤銷時，就會引發這個事件。 等於＜ [Audit Schema Object GDR Event Class](../../../relational-databases/event-classes/audit-schema-object-gdr-event-class.md)＞。|  
-|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|表示主體已成功登入自主資料庫。 等於稽核成功資料庫驗證事件類別。|  
+|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|表示主體已成功登入自主資料庫。|  
 |USER_CHANGE_PASSWORD_GROUP|每當使用 ALTER USER 陳述式來變更自主資料庫使用者的密碼時，就會引發這個事件。|  
 |USER_DEFINED_AUDIT_GROUP|這個群組會監視使用 [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) 所引發的事件。|  
   

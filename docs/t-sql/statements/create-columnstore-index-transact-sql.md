@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52aeeca0dc61f36fbde2ad4a708d359f1dd19567
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3c3a4b8956be43328bba679eef2d1fb4304cc4b4
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809749"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929681"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -747,11 +747,35 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
-### <a name="f-create-an-ordered-clustered-columnstore-index"></a>F. 建立已排序的叢集資料行存放區索引
-
-建立已排序的叢集資料行存放區索引，根據 SHIPDATE 進行排序。
+### <a name="f-create-an-ordered-clustered-columnstore-index-on-a-table-with-no-index"></a>F. 在沒有索引的資料表上建立已排序的叢集資料行存放區索引
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( SHIPDATE );
 ```
+
+### <a name="g-convert-a-clustered-columnstore-index-to-an-ordered-clustered-columnstore-index"></a>G. 將叢集資料行存放區索引轉換為已排序的叢集資料行存放區索引
+
+```sql  
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+WITH (DROP_EXISTING = ON)
+```
+
+### <a name="h-add-a-column-to-the-ordering-of-an-ordered-clustered-columnstore-index"></a>H. 將資料行新增到已排序叢集資料行存放區索引的順序
+
+```sql
+-- The original ordered clustered columnstore index was ordered on SHIPDATE column only.  Add PRODUCTKEY column to the ordering.
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE, PRODUCTKEY );
+WITH (DROP_EXISTING = ON)
+```
+### <a name="i-change-the-ordinal-of-ordered-columns"></a>I. 變更已排序資料行的序數  
+```sql
+-- The original ordered clustered columnstore index was ordered on SHIPDATE, PRODUCTKEY.  Change the ordering to PRODUCTKEY, SHIPDATE.  
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( PRODUCTKEY,SHIPDATE );
+WITH (DROP_EXISTING = ON)
+```
+
+

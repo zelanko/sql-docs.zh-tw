@@ -1,7 +1,7 @@
 ---
 title: 記憶體最佳化資料表的索引 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2019
+ms.date: 09/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f283868f180764f5b3276cce9678de075f3d0483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050210"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929691"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-所有記憶體最佳化資料表都必須至少有一個索引，因為它是將資料列連線在一起的索引。 在記憶體最佳化資料表上，每個索引也會進行記憶體最佳化。 有數種方式可用來區分記憶體最佳化索引上的索引和以磁碟為基礎之資料表上的傳統索引：  
+所有記憶體最佳化資料表都必須至少有一個索引，因為它是將資料列連線在一起的索引。 在記憶體最佳化資料表上，每個索引也會進行記憶體最佳化。 有數種方式可用來區分經記憶體最佳化的資料表上的索引和以磁碟為基礎之資料表上的傳統索引：  
 
 - 資料列不會儲存在頁面上，因此沒有頁面或數量單位的集合，沒有可以參照以取得資料表所有頁面的資料分割或配置單位。 索引頁面的概念是可用類型的索引之一，但其儲存方式不同於以磁碟為基礎之資料表的索引。 其不會在網頁內產生傳統類型的的片段，因此不具填滿因數。
 - 在資料操作期間，對經記憶體最佳化的資料表上索引的變更永遠不會寫入磁碟。 只有資料列和資料的變更會寫入交易記錄。 
@@ -59,6 +59,7 @@ ms.locfileid: "68050210"
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 針對每個經記憶體最佳化的資料表或資料表類型最多可以有 8 個索引。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中不再有特定於經記憶體最佳化的資料表和資料表類型的索引數目限制。
   

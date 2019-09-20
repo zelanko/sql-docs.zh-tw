@@ -1,7 +1,7 @@
 ---
 title: 搭配使用 SQL Server 連接器與 SQL 加密功能 | Microsoft 文件
 ms.custom: ''
-ms.date: 07/18/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329261"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929740"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ ms.locfileid: "68329261"
 > [!NOTE]  
 >  1\.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)頁面＜SQL Server 連接器升級＞下的指示，升級為 1.0.1.0 版或更新版本。  
   
-## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>使用 Azure 金鑰保存庫中的非對稱金鑰進行透明資料加密  
- 完成＜使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟＞主題的第 I 部分到第 IV 部分之後，請使用 Azure 金鑰保存庫金鑰以使用 TDE 來加密資料庫加密金鑰。  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>使用 Azure 金鑰保存庫中的非對稱金鑰進行透明資料加密
+
+完成＜使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟＞主題的第 I 部分到第 IV 部分之後，請使用 Azure 金鑰保存庫金鑰以使用 TDE 來加密資料庫加密金鑰。 如需使用 PowerShell 輪替金鑰的詳細資訊，請參閱 [Rotate the Transparent Data Encryption (TDE) protector using PowerShell](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation) (使用 PowerShell 輪替透明資料加密 (TDE) 保護裝置)。
+ 
 您需要建立認證和登入，並建立資料庫加密金鑰來加密資料和資料庫中的記錄檔。 若要加密資料庫，則需要資料庫的 **CONTROL** 權限。 下圖顯示使用 Azure 金鑰保存庫時的加密金鑰階層。  
   
  ![含有 AKV 的 EKM 金鑰階層](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "含有 AKV 的 EKM 金鑰階層")  

@@ -1,7 +1,7 @@
 ---
 title: 設定 Azure Kubernetes Service
 titleSuffix: SQL Server big data clusters
-description: 瞭解如何設定部署的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Kubernetes Service (AKS)。
+description: 瞭解如何設定部署的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Kubernetes Service （AKS）。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160706"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016893"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>針對 SQL Server 巨量資料叢集部署設定 Azure Kubernetes Service
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何設定部署的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Kubernetes Service (AKS)。
+本文說明如何設定部署的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Kubernetes Service （AKS）。
 
 AKS 可讓使用者輕鬆地建立、設定及管理已預先設定 Kubernetes 叢集的虛擬機器叢集，以執行容器化的應用程式。 這可讓您使用自己現有的技能，或是運用大量且不斷成長的社群專業知識，來在 Microsoft Azure 上部署及管理容器型應用程式。
 
@@ -39,9 +39,9 @@ AKS 可讓使用者輕鬆地建立、設定及管理已預先設定 Kubernetes �
 
 - Kubernetes 伺服器的最低1.13 版本。 針對 AKS，您必須使用 `--kubernetes-version` 參數來指定與預設版本不同的版本。
 
-- 若要在 AKS 上驗證基本案例時取得最佳體驗，請使用：
+- 為確保在 AKS 上驗證基本案例時，部署成功且獲得最佳體驗，您可以使用單一節點或多節點 AKS 叢集，並提供下列資源：
    - 8 個 vCPU (跨所有節點)
-   - 32 GB 的記憶體 (每個 VM)
+   - 每個 VM 64 GB 的記憶體
    - 24 個或更多的已連接磁碟 (跨所有節點)
 
    > [!TIP]
