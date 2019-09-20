@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276670"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149933"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什麼是 SQL Server Machine Learning 服務（Python 和 R）？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Machine Learning Services 會使用擴充性架構，在 SQL Server 中執行 Py
 |分類/分類|自動將客戶意見分割成正面和負面的類別|
 |回歸/預測連續值|根據大小和位置來預測房屋價格|
 |異常偵測|偵測詐騙銀行交易 |
-|建議|根據先前的購買專案，建議線上購物者可能想要購買的產品|
+|建議|根據先前的購買專案, 建議線上購物者可能想要購買的產品|
 
 ### <a name="how-to-execute-python-and-r-scripts"></a>如何執行 Python 和 R 腳本
 
@@ -95,8 +95,8 @@ Machine Learning Services 會使用擴充性架構，在 SQL Server 中執行 Py
 
 1. 撰寫您的第一個 Python 或 R 腳本
 
-    + 快速入門：[在 Python](tutorials/quickstart-python-run-using-t-sql.md)或[R 中](tutorials/quickstart-r-run-using-tsql.md)執行 "Hello world" 腳本
-    + 快速入門：[在 Python](tutorials/quickstart-python-train-score-in-tsql.md)或[R 中](tutorials/quickstart-r-create-predictive-model.md)建立預測模型
+    + 快速入門：[在 SQL 中建立和執行簡單的 R 腳本](tutorials/quickstart-r-create-script.md)
+    + 快速入門：[在 R 中建立和定型預測模型](tutorials/quickstart-r-train-score-model.md)
     + 教學課程：[在 t-sql 中使用 Python](tutorials/sqldev-in-database-python-for-sql-developers.md)：探索資料、執行特徵工程設計、定型和部署模型，以及進行預測（五個部分的系列）
     + 教學課程：[在 t-sql 中使用 R](tutorials/sqldev-in-database-r-for-sql-developers.md)：探索資料、執行特徵工程設計、定型和部署模型，以及進行預測（五個部分的系列）
     + 教學課程：[使用 R 工具中的 Machine Learning 服務](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)：流覽資料、建立圖形和繪圖、執行特徵工程設計、定型和部署模型，以及進行預測（六個部分的系列）

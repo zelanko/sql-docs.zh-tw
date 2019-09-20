@@ -1,39 +1,45 @@
 ---
-title: R 和 SQL 資料類型和物件的快速入門
-description: 在本快速入門中, 瞭解如何使用 R 和 SQL Server 中的資料類型和資料物件。
+title: 使用 R 和 SQL 資料類型和物件
+titleSuffix: SQL Server Machine Learning Services
+description: 在本快速入門中，瞭解如何在 R 中使用資料類型和資料物件，並使用 SQL Server Machine Learning 服務 SQL Server。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 09/17/2019
 ms.topic: quickstart
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb007525834c312952f9eb02809edadebaefa305
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715435"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149955"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>快速入門：在 SQL Server 中使用 R 處理資料類型和物件
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>快速入門：在 SQL Server Machine Learning 服務中使用 R 處理資料類型和物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入門中, 取得在 R 與 SQL Server 之間移動資料時常見問題的實際操作簡介。 當您在自己的腳本中使用資料時, 您在此練習中取得的體驗會提供基本的背景。
+在本快速入門中，您將瞭解在 R 與 SQL Server 之間移動資料時所發生的常見問題。 當您在自己的腳本中使用資料時, 您在此練習中取得的體驗會提供基本的背景。
 
 事先知道的常見問題包括:
 
-+ 資料類型有時不相符
-+ 可能會發生隱含轉換
-+ 有時需要轉型和轉換作業
-+ R 和 SQL 會使用不同的資料物件
+- 資料類型有時不相符
+- 可能會發生隱含轉換
+- 有時需要轉型和轉換作業
+- R 和 SQL 會使用不同的資料物件
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-先前的快速入門[中, 驗證 R 存在於 SQL Server 中](quickstart-r-verify.md), 提供設定本快速入門所需之 R 環境的相關資訊和連結。
+- 本快速入門需要使用已安裝 R 語言的[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)，來存取 SQL Server 的實例。
+
+  您的 SQL Server 實例可以位於 Azure 虛擬機器或內部部署中。 請注意，預設會停用外部腳本功能，因此您可能需要[啟用外部腳本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)，並在開始之前確認**SQL Server Launchpad 服務**正在執行。
+
+- 您也需要工具來執行包含 R 腳本的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些腳本，只要它可以連接到 SQL Server 實例，並執行 T-SQL 查詢或預存程式即可。 本快速入門使用[SQL Server Management Studio （SSMS）](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
 
 ## <a name="always-return-a-data-frame"></a>一律傳回資料框架
 
-當您的指令碼將結果從 R 傳回到 SQL Server 時，它必須傳回資料做為 **data.frame**。 您在腳本中產生的任何其他物件類型 (無論是清單、因數、向量或二進位資料), 如果您想要將其輸出為預存程式結果的一部分, 則必須將它轉換為數據框架。 幸好有多個 R 函數可用來支援將其他物件變更為資料框架。 您甚至可將二進位模型序列化，並在資料框架中傳回它，您將在本教學課程稍後執行此動作。
+當您的指令碼將結果從 R 傳回到 SQL Server 時，它必須傳回資料做為 **data.frame**。 您在腳本中產生的任何其他物件類型 (無論是清單、因數、向量或二進位資料), 如果您想要將其輸出為預存程式結果的一部分, 則必須將它轉換為數據框架。 幸好有多個 R 函數可用來支援將其他物件變更為資料框架。 您甚至可以序列化二進位模型，並將它傳回資料框架中，稍後會在本快速入門中進行。
 
 首先, 讓我們使用一些 R 基本 R 物件 (向量、矩陣和清單) 來進行實驗, 並瞭解轉換至資料框架如何變更傳遞至 SQL Server 的輸出。
 
@@ -60,7 +66,7 @@ EXECUTE sp_execute_external_script
 
 ## <a name="identify-schema-and-data-types"></a>識別架構和資料類型
 
-為何結果如此不同？ 
+為何結果如此不同？
 
 您通常可以使用 R `str()` 命令來找到答案。 在 R 指令碼中的任一處加入函數 `str(object_name)`，以傳回指定 R 物件的資料結構描述做為資訊訊息。 若要檢視訊息，可查看 Visual Studio Code 的 [訊息] 窗格，或 SSMS 中的 [訊息] 索引標籤。
 
@@ -119,6 +125,22 @@ $ c..world..: Factor w/ 1 level "world": 1
 
 如果這兩個資料物件具有相同數目的維度，或者如果任一個資料類型包含異質資料類型，則每個 R 資料物件都會有自己的規則，用於在結合其他資料物件時如何處理資料。
 
+首先，建立測試資料的小型資料表。
+
+```sql
+CREATE TABLE RTestData (col1 INT NOT NULL)
+
+INSERT INTO RTestData
+VALUES (1);
+
+INSERT INTO RTestData
+VALUES (10);
+
+INSERT INTO RTestData
+VALUES (100);
+GO
+```
+
 例如, 假設您執行下列語句, 使用 R 執行矩陣乘法。您可以將單一資料行矩陣乘以具有四個值的陣列, 並預期會產生4x3 矩陣。
 
 ```sql
@@ -158,7 +180,7 @@ execute sp_execute_external_script
 R 現在會傳回單一值做為結果。
 
 **結果**
-    
+
 |Col1|
 |---|
 |1542|
@@ -167,10 +189,8 @@ R 現在會傳回單一值做為結果。
 
 > [!TIP]
 > 
-> 收到錯誤？ 這些範例需要資料表**RTestData**。 如果您尚未建立測試資料表, 請回到本主題以建立資料表:[處理輸入和輸出](../tutorials/rtsql-working-with-inputs-and-outputs.md)。
-> 
-> 如果您已建立資料表, 但仍然收到錯誤, 請確定您是在包含資料表的資料庫內容中執行預存程式, 而不是在**master**或其他資料庫中。
-> 
+> 收到錯誤？ 請確定您是在包含資料表的資料庫內容中執行預存程式，而不是**master**或其他資料庫。
+>
 > 此外, 我們建議您避免在這些範例中使用臨時表。 有些 R 用戶端會終止批次之間的連接, 並刪除臨時表。
 
 ## <a name="merge-or-multiply-columns-of-different-length"></a>合併或相乘不同長度的資料行
@@ -193,7 +213,7 @@ EXECUTE sp_execute_external_script
 為了填滿資料框架，R 會根據比對陣列 `df1` 中元素數目所需的次數，多次重複使用擷取自 RTestData 的元素。
 
 **結果**
-    
+
 |*Col2*|*Col3*|
 |----|----|
 |1|1|
@@ -229,7 +249,7 @@ SELECT ReportingDate
 ```
 
 > [!NOTE]
-> 
+>
 > 您可以使用任何版本的 AdventureWorks, 或使用您自己的資料庫建立不同的查詢。 重點是嘗試處理一些包含文字、日期時間和數值的資料。
 
 現在, 請嘗試將此查詢貼入預存程式的輸入。
@@ -262,25 +282,29 @@ STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M20
 STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950
 ```
 
-+ 已使用 R 資料類型 **POSIXct** 來處理 datetime 資料行。
-+ 文字資料行 "ProductSeries" 已識別為**因素**, 這表示類別變數。 預設會處理字串值以做為因數。 如果您將字串傳遞至 R，則會將它轉換為整數，以供內部使用，接著對應回輸出上的字串。
+- 已使用 R 資料類型 **POSIXct** 來處理 datetime 資料行。
+- 文字資料行 "ProductSeries" 已識別為**因素**, 這表示類別變數。 預設會處理字串值以做為因數。 如果您將字串傳遞至 R，則會將它轉換為整數，以供內部使用，接著對應回輸出上的字串。
 
 ### <a name="summary"></a>總結
 
 從這些簡短的範例中, 您可以看到在傳遞 SQL 查詢做為輸入時, 檢查資料轉換效果的需求。 由於 R 不支援某些 SQL Server 資料類型, 因此請考慮使用下列方式來避免發生錯誤:
 
-+ 事先測試您的資料, 並確認架構中的資料行或值在傳遞至 R 程式碼時可能會發生問題。
-+ 個別指定輸入資料來源中的資料行，而不是使用 `SELECT *`，並了解將如何處理每個資料行。
-+ 在準備輸入資料時視需要執行明確的轉型，以避免出現意外狀況。
-+ 避免傳遞造成錯誤且不適用於模型化的資料行 (例如 GUID 或 rowguids)。
+- 事先測試您的資料, 並確認架構中的資料行或值在傳遞至 R 程式碼時可能會發生問題。
+- 個別指定輸入資料來源中的資料行，而不是使用 `SELECT *`，並了解將如何處理每個資料行。
+- 在準備輸入資料時視需要執行明確的轉型，以避免出現意外狀況。
+- 避免傳遞造成錯誤且不適用於模型化的資料行 (例如 GUID 或 rowguids)。
 
 如需支援和不支援之資料類型的詳細資訊, 請參閱[R 程式庫和資料類型](../r/r-libraries-and-data-types.md)。
 
 如需有關執行時間將字串轉換為數值因數之效能影響的詳細資訊, 請參閱[SQL Server R Services 效能微調](../r/sql-server-r-services-performance-tuning.md)。
 
-## <a name="next-step"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
-在下一個快速入門中, 您將瞭解如何將 R 函數套用至 SQL Server 資料。
+若要瞭解如何在 SQL Server 中撰寫 advanced R 函數，請遵循此快速入門：
 
 > [!div class="nextstepaction"]
-> [入門搭配 SQL Server 資料使用 R 函數](quickstart-r-functions.md)
+> [使用 SQL Server Machine Learning 服務撰寫 advanced R 函數](quickstart-r-functions.md)
+
+如需 SQL Server Machine Learning 服務的詳細資訊，請參閱：
+
+- [什麼是 SQL Server Machine Learning 服務（Python 和 R）？](../what-is-sql-server-machine-learning.md)

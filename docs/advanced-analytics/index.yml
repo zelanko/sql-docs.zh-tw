@@ -10,12 +10,12 @@ metadata:
   author: dphansen
   ms.author: davidph
   ms.date: 09/12/2019
-  ms.openlocfilehash: 4e368143f525f836cc094e9f855dff998884a7aa
-  ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+  ms.openlocfilehash: e8725cad09bd59d30f5094d59386b666fdf7c3a4
+  ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/18/2019
-  ms.locfileid: "71096895"
+  ms.lasthandoff: 09/20/2019
+  ms.locfileid: "71149948"
 landingContent:
 - title: 關於 Machine Learning 服務
   linkLists:
@@ -39,7 +39,7 @@ landingContent:
       url: tutorials/quickstart-python-run-using-t-sql.md
     - text: 處理輸入和輸出
       url: tutorials/quickstart-python-inputs-and-outputs.md
-    - text: SQL Server 中的 Python 資料結構
+    - text: 在 SQL Server 中使用 Python 資料結構
       url: tutorials/quickstart-python-data-structures.md
     - text: 訓練並使用您的第一個模型
       url: tutorials/quickstart-python-train-score-in-tsql.md
@@ -54,13 +54,13 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: 在 SQL Server 上執行 "Hello world" R 腳本
-      url: tutorials/quickstart-r-run-using-tsql.md
+      url: tutorials/quickstart-r-create-script.md
     - text: 處理輸入和輸出
-      url: tutorials/quickstart-r-inputs-and-outputs.md
-    - text: SQL Server 中的 R 資料結構
+      url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
+    - text: 在 SQL Server 中使用 R 資料結構
       url: tutorials/quickstart-r-data-types-and-objects.md
-    - text: 建立預測模型
-      url: tutorials/quickstart-r-create-predictive-model.md
+    - text: 訓練並使用您的第一個模型
+      url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
     - text: 在 T-SQL 中使用 R

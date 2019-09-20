@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 248a2e12199466cfaf686bcfcf10341a75981ef7
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715680"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149901"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server Machine Learning 服務中使用預存程式來讓 R 程式碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68715680"
 
 傳統上, 資料科學解決方案的整合意味著會進行大量的編碼, 以支援效能與整合。 SQL Server Machine Learning 服務可簡化這項工作, 因為 R 和 Python 程式碼可以在 SQL Server 中執行, 並使用預存程式來呼叫。 如需在預存程式中內嵌程式碼之機制的詳細資訊, 請參閱:
 
-+ [入門SQL Server 中的 "Hello world" R 腳本](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
++ [在 SQL Server 中建立和執行簡單的 R 腳本](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 如需使用預存程式來將 R 程式碼部署到生產環境的更完整[範例, 請參閱教學課程:適用于 SQL 開發人員的 R 資料分析](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
@@ -43,7 +43,7 @@ ms.locfileid: "68715680"
 
 評分是很重要的工作, 可以輕鬆地自動化, 或從外部應用程式啟動。 您可以事先使用 R 或 Python 或預存程式來定型模型, 並將[模型以二進位格式](../tutorials/walkthrough-build-and-save-the-model.md)儲存至資料表。 然後, 您可以使用下列其中一個選項, 將模型當做預存程序呼叫的一部分載入變數中, 以便從 T-sql 進行評分:
 
-+ [即時評分, 針對小型批次優化
++ [即時評分，針對小型批次優化
 + 單一資料列評分, 用於從應用程式呼叫
 + [原生評分](../sql-native-scoring.md), 用於從 SQL Server 的快速批次預測, 而不需要呼叫 R
 
