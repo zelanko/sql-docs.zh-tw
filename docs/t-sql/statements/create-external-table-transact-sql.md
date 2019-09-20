@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c2aa732a98079fd88ebfcafa476f20566e6dc5a
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 51464e85f1d9eaabb377caf851e6bdcef46a014d
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68698302"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70391960"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "68698302"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_ ** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -573,7 +573,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|** _** &nbsp;|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -582,7 +582,7 @@ WITH
 
 在 Azure SQL Database 中，建立[彈性查詢](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)的外部資料表以與 Azure SQL Database 搭配使用。
 
-使用外部資料表來建立外部資料表，以與彈性查詢搭配使用。
+使用外部資料表來建立外部資料表，以搭配彈性查詢使用。
 
 另請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
@@ -701,7 +701,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|** _** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -809,7 +809,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentag
 REJECTED_ROW_LOCATION = *Directory Location*
 
 指定外部資料來源中，已拒絕資料列和相應錯誤檔案應寫入的目錄。
-若指定的路徑不存在，PolyBase 會為您建立一個目錄。 會建立名稱為 " _ " 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料中寫入了兩種類型的檔案，分別是 _reason 檔案與資料檔案。
+若指定的路徑不存在，PolyBase 會為您建立一個目錄。 會建立名稱為 "_rejectedrows" 的子目錄。"_ " 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料中寫入了兩種類型的檔案，分別是 _reason 檔案與資料檔案。
 
 原因檔案與資料檔案均具有與 CTAS 陳述式相關的 queryID。 因為資料與原因檔案在不同的檔案中，所以對應的檔案會具有相符尾碼。
 
@@ -929,7 +929,7 @@ AS SELECT * FROM
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|** _** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;

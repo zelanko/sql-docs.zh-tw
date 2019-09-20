@@ -18,12 +18,12 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed88293239d29533b4374541ab4af8e12fb55900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86d3f0bcc0d791a025165d8bda3188d443fce1e1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126867"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874834"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "68126867"
   
 |||  
 |-|-|  
-|**自動化稽核**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核 (伺服器和資料庫層級)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 稽核 (資料庫層級)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 威脅偵測| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL 資料庫稽核](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [開始使用 SQL Database 威脅偵測](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL Database 弱點評量](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) |  
+|**自動化稽核**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核 (伺服器和資料庫層級)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 稽核 (資料庫層級)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 偵測威脅| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL 資料庫稽核](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [開始使用 SQL Database 進階威脅防護](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL Database 弱點評量](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) |  
 |**自訂稽核**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 觸發程序|實作自訂的稽核：建立 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) 和 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  
 |**遵循**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 合規性|SQL Server:<br />                        [Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL Database：<br />                        [Microsoft Azure Trust Center:Compliance by Feature](https://azure.microsoft.com/support/trust-center/services/) (Microsoft Azure 信任中心：功能符合規範的狀況)|  
   

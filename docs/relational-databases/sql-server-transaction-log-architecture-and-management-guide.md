@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f0011d8ad44a34aee1c6e18f66aa99e2068902c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8626b9b1a00d62273165706bda5b742eebab3251
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895216"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874207"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "67895216"
   
  回復作業也會留下記錄。 每筆交易都會在交易記錄檔中保留空間，以確保有足夠的記錄檔空間可支援由明確回復陳述式所造成的回復，或因發生錯誤而造成的回復。 保留的空間大小須視交易中執行的作業而定，但通常會等於用來記錄每個作業的空間大小。 當交易完成後就會釋放這個保留空間。  
   
-<a name="minlsn"></a> 在記錄檔中，從對成功回復全資料庫而言不可或缺的第一筆記錄檔記錄，一直到最後寫入的記錄檔記錄的這個區段，稱為記錄檔的使用中部分，或「使用中的記錄」  。 這是需要進行完整資料庫復原的記錄區段。 沒有任何使用中的記錄部分可被截斷。 此第一個記錄檔記錄的[記錄序號 (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 就稱為**最小復原 LSN (*MinLSN*)** 。  
+<a name="minlsn"></a> 在記錄檔中，從對成功回復全資料庫而言不可或缺的第一筆記錄檔記錄，一直到最後寫入的記錄檔記錄的這個區段，稱為記錄檔的使用中部分，或「使用中的記錄」  。 這是需要進行完整資料庫復原的記錄區段。 沒有任何使用中的記錄部分可被截斷。 此第一個記錄檔記錄的記錄序號 (LSN) 稱為**最小復原 LSN (*MinLSN*)** 。  
   
 ##  <a name="physical_arch"></a> 交易記錄實體架構  
 資料庫中的交易記錄會對應到一個或多個實體檔案。 從概念上來說，記錄檔是記錄的字串。 就實際上來說，記錄的順序必須有效地儲存在實作交易記錄的一組實體檔案中。 每個資料庫至少要有一個記錄檔。  

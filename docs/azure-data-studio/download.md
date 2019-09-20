@@ -8,30 +8,30 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 9f666423853fef859c9944d086d700985d20257e
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 43a035b7be4cdd0f4f45549d4f9a7070aa173c15
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494054"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874708"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、macOS 和 Linux 上執行。
 
 
-請下載並安裝最新版的「八月版本」  ：
+請下載並安裝最新版的「九月版本」  ：
 
 > [!NOTE]
 > 如果您是從 SQL Operations Studio 更新，並想要保留您的設定、鍵盤快速鍵或程式碼片段，請參閱[移動使用者設定](#move-user-settings)。
 
-|平台|下載|發行日期| Version |
+|平台|Download|發行日期| Version |
 |:---|:---|:---|:---|
-|Windows|[使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2100710)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2100711)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2100712)|2019 年 8 月 15 日 |1.10.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2100809)|2019 年 8 月 15 日 |1.10.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2100672)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2100810)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2100714)|2019 年 8 月 15 日 |1.10.0|
+|Windows|[使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2102927)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2102926)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2102839)|2019 年 9 月 10 日 |1.11.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2102925)|2019 年 9 月 10 日 |1.11.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2103004)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2102924)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2102838)|2019 年 9 月 10 日 |1.11.0|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
@@ -43,24 +43,24 @@ ms.locfileid: "69494054"
 
 **使用者安裝程式** (建議)
 
-1. 下載並執行[適用於Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「使用者」  安裝程式](https://go.microsoft.com/fwlink/?linkid=2100710)。
+1. 下載並執行[適用於Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「使用者」  安裝程式](https://go.microsoft.com/fwlink/?linkid=2102927)。
 2. 啟動 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 應用程式。
 
 **系統安裝程式**
 
-1. 下載並執行[適用於Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「系統」  安裝程式](https://go.microsoft.com/fwlink/?linkid=2100711)。
+1. 下載並執行[適用於Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]「系統」  安裝程式](https://go.microsoft.com/fwlink/?linkid=2102926)。
 2. 啟動 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 應用程式。
 
 **壓縮檔**
 
-1. 下載[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2100712)。
+1. 下載[適用於 Windows 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2102839)。
 2. 瀏覽至下載的檔案並解壓縮。
 3. `\azuredatastudio-windows\azuredatastudio.exe`執行
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>取得適用於 macOS 的 Azure Data Studio
 
-1. 下載[適用於 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2100809)。
+1. 下載[適用於 macOS 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2102925)。
 2. 若要展開壓縮檔的內容，請按兩下檔案。
 3. 若要在「啟動控制板」  中提供 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，請將 *Azure Data Studio.app* 拖曳至 [應用程式]  資料夾。
 
@@ -68,9 +68,9 @@ ms.locfileid: "69494054"
 ## <a name="get-azure-data-studio-for-linux"></a>取得適用於 Linux 的 Azure Data Studio
 
 1. 使用其中一種安裝程式或 tar.gz 封存，下載適用於 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2100672)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2100810)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2100714)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2103004)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2102924)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2102838)
 1. 若要將檔案解壓縮並啟動 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，請開啟新的終端視窗並鍵入下列命令：
 
    **Debian 安裝：**

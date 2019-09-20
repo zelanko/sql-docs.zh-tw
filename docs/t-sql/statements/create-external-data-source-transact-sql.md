@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 427aa6c21f108f9c488e8209e311d242d0a785df
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190413"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70274734"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -40,10 +40,10 @@ ms.locfileid: "70190413"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                               |                                                              |                                                              |                                                              |      |
+| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| **\* _SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
 
@@ -81,16 +81,16 @@ WITH
 
 提供連線通訊協定和路徑給外部資料來源。
 
-| 外部資料來源        | 位置前置詞 | 位置路徑                                         | 支援的位置 (依產品/服務)    |
-| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera 或 Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+)                     |
-| Azure Blob 儲存體          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+)        |
-| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                          |
-| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| MongoDB 或 CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019+) - 僅限 Windows           |
-| 大量作業             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                  |
+| 外部資料來源    | 位置前置詞 | 位置路徑                                         | 支援的位置 (依產品/服務) |
+| ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Cloudera 或 Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+)                       |
+| Azure Blob 儲存體      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+)                       |
+| SQL Server              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                       |
+| Oracle                  | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| MongoDB 或 CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019+) - 僅限 Windows        |
+| 大量作業         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                       |
 
 位置路徑：
 
@@ -375,10 +375,10 @@ WITH
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                                                              |                                 |                                                              |                                                              |      |
+| ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                                                              |                                 |                                                              |                                                              |      |
 
 &nbsp;
 
@@ -414,11 +414,11 @@ WITH
 
 提供連線通訊協定和路徑給外部資料來源。
 
-| 外部資料來源        | 位置前置詞 | 位置路徑                                         |
-| --------------------------- | --------------- | ----------------------------------------------------- |
-| 大量作業             | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| 彈性查詢 (分區)       | 不需要    | `<shard_map_server_name>.database.windows.net`        |                                 |
-| 彈性查詢 (遠端)      | 不需要    | `<remote_server_name>.database.windows.net`           |                                |
+| 外部資料來源   | 位置前置詞 | 位置路徑                                         |
+| ---------------------- | --------------- | ----------------------------------------------------- |
+| 大量作業        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
+| 彈性查詢 (分區)  | 不需要    | `<shard_map_server_name>.database.windows.net`        |
+| 彈性查詢 (遠端) | 不需要    | `<remote_server_name>.database.windows.net`           |
 
 位置路徑：
 
@@ -461,10 +461,10 @@ WITH
 
 當 `TYPE` 設定為 `RDBMS` 或 `SHARD_MAP_MANAGER` 時，請設定此引數。
 
-| TYPE              | DATABASE_NAME 的值                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
+| TYPE              | DATABASE_NAME 的值                                       |
+| ----------------- | ------------------------------------------------------------ |
 | RDBMS             | 使用 `LOCATION` 所提供伺服器上的遠端資料庫名稱 |
-| SHARD_MAP_MANAGER | 以分區對應管理員運作的資料庫名稱                 |
+| SHARD_MAP_MANAGER | 以分區對應管理員運作的資料庫名稱      |
 
 如需示範如何建立外部資料來源 (其中 `TYPE` = `RDBMS`) 的範例，請參閱[建立 RDBMS 外部資料來源](#b-create-an-rdbms-external-data-source)
 
@@ -602,10 +602,10 @@ WITH
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                                                              |                                                              |                                            |                                                              |      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* SQL 資料<br />倉儲 \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
 
@@ -623,7 +623,7 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
-[,   TYPE                      =  HADOOP | BLOB_STORAGE]
+[,   TYPE                      =  HADOOP
 )
 [;]
 ```
@@ -642,7 +642,7 @@ WITH
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Azure Blob 儲存體          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gen 2 | `abfs[s]`         | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
 
 位置路徑：
 
@@ -667,7 +667,7 @@ WITH
 
 若要建立資料庫範圍認證，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
-### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type--hadoop"></a>TYPE = *HADOOP*
 
 指定要設定的外部資料來源類型。 不一定需要此參數。
 
@@ -857,10 +857,10 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
-||||||
+|                                                              |                                                              |                                                              |                                                         |      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL 資料<br />倉儲](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+|                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
 
@@ -891,10 +891,10 @@ WITH
 
 提供連線通訊協定和路徑給外部資料來源。
 
-| 外部資料來源        | 位置前置詞 | 位置路徑                                |
-| --------------------------- | --------------- |  ------------------------------------------- |
-| Cloudera 或 Hortonworks     | `hdfs`          | `<Namenode>[:port]`                          |
-| Azure Blob 儲存體          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
+| 外部資料來源    | 位置前置詞 | 位置路徑                                         |
+| ----------------------- | --------------- | ----------------------------------------------------- |
+| Cloudera 或 Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   |
+| Azure Blob 儲存體      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 位置路徑：
 

@@ -18,24 +18,25 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eb6cf7d397bc8fdc8ab37d17e830ad2b373882e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140820"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913552"
 ---
 # <a name="write-international-transact-sql-statements"></a>撰寫國際通用的 Transact-SQL 陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   如果遵循下列的指導方針，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的資料庫與資料庫應用程式將更能從一個語言移植至另一個語言，或可支援多種語言：  
 
--   從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，使用：
-    -   **char**、**varchar** 及 **varchar(max)** 資料類型 (使用啟用 [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 的定序)。
-    -   **char**、**varchar** 及 **varchar(max)** 資料類型 (使用啟用[增補字元](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters)的定序)。      
+-   從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始並在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，使用下列任一項：
+    -   **char**、**varchar** 及 **varchar(max)** 資料類型 (使用啟用 [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 的定序)，則會使用 UTF-8 來編碼資料。
+    -   **nchar**、**nvarchar** 及 **nvarchar(max)** 資料類型 (使用啟用[增補字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序)，則會使用 UTF-16 來編碼資料。 使用非 SC 定序會導致使用 UCS-2 來編碼資料。      
 
     這可避免字碼頁轉換問題。 如需其它考量事項，請參閱 [UTF-8 和 UTF-16 間的儲存差異](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。  
 
--   最多到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，使用 **nchar**、**nvarchar** 及 **nvarchar(max)** 來取代所有使用的 **char**、**varchar** 及 **varchar(max)** 資料類型。 這可避免字碼頁轉換問題。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 
+-   最多到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，使用 **nchar**、**nvarchar** 及 **nvarchar(max)** 來取代所有使用的 **char**、**varchar** 及 **varchar(max)** 資料類型。 如果使用啟用[增補字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序，則會使用 UTF-16 來編碼資料。 使用非 SC 定序會導致使用 UCS-2 來編碼資料。 這可避免字碼頁轉換問題。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 
+
     > [!IMPORTANT]
     > **text** 資料類型已淘汰，不應用於新的開發工作。 計劃將 **text** 資料轉換為 **varchar(max)** 。
   

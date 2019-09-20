@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c55e8bbd7001fb28b7661d31ced79e9bcb919894
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e5ece02e70639ce91aeec72827838c9ad8d7ab8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768194"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846698"
 ---
 # <a name="delete-a-push-subscription"></a>刪除發送訂閱
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "68768194"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>刪除快照式或交易式發行集的發送訂閱  
   
-1.  在發行集資料庫的發行者端，執行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **@publication** 和 **@subscriber** 。 為 **@article** 指定 **@article** 。 (選擇性) 如果無法存取散發者，請為 **@ignore_distributor** 指定 **@ignore_distributor** 的值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
+1.  在發行集資料庫的發行者端，執行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **\@publication** 和 **\@subscriber**。 為 **\@article** 指定 **all** 值。 (選擇性) 如果無法存取散發者，請為 **\@ignore_distributor** 指定 **1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
   
 2.  (選擇性) 在訂閱資料庫的訂閱者端，執行 [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) 來移除訂閱資料庫中的複寫中繼資料。  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>刪除合併式發行集的發送訂閱  
   
-1.  在發行者端，執行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)，並指定 **@publication** 、 **@subscriber** 和 **@subscriber_db** 。 (選擇性) 如果無法存取散發者，請為 **@ignore_distributor** 指定 **@ignore_distributor** 的值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
+1.  在發行者端，執行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)，並指定 **\@publication**、 **\@subscriber** 和 **\@subscriber_db**。 (選擇性) 如果無法存取散發者，請為 **\@ignore_distributor** 指定 **1** 值來刪除此訂閱，而不需要移除散發者端上的相關物件。  
   
-2.  在訂閱資料庫的訂閱者端，執行 [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)。 指定 **@publisher** 或 Replication Management Objects (RMO) 來重新初始化 **@publisher_db** 和 **@publication** 資料夾中可用。 這樣會移除訂閱資料庫中的合併中繼資料。  
+2.  在訂閱資料庫的訂閱者端，執行 [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)。 指定 **\@publisher**、 **\@publisher_db** 和 **\@publication**。 這樣會移除訂閱資料庫中的合併中繼資料。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  此範例會刪除交易式發行集的發送訂閱。  

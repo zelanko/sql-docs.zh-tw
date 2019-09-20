@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae61bdd59202db73b404bf2c639c2f1cee98e81f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058113"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874866"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>進階合併式複寫 - 衝突偵測與解決方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,8 @@ ms.locfileid: "68058113"
 ## <a name="conflict-resolution"></a>衝突解決  
  在偵測到衝突後，「合併代理程式」會啟動選取的衝突解析程式，並使用該解析程式決定衝突成功者。 成功的資料列已套用至「發行者」與「訂閱者」，而失敗的資料列則已寫入衝突資料表。 衝突會在解析程式執行後立即解決，除非您選擇以互動方式解決衝突。  
 
-解決合併式複寫衝突 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+解決合併式複寫衝突  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   發行者與訂閱者連接並進行同步處理時，合併代理程式會偵測是否有任何衝突。 如果偵測到衝突，「合併代理程式」會使用衝突解決器來決定要接受並傳播到其他網站的資料。  
   
 > [!NOTE]  

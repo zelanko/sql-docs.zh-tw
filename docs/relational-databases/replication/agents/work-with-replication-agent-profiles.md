@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 80d8d7d5f4a02c119a1b038023505d60eddec6ab
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a1a0b084175de3e06eb69f245c3c634c12dd8364
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768156"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846779"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "68768156"
   
 ###  <a name="Create_tsql"></a> 若要建立新的代理程式設定檔  
   
-1.  在散發者端，執行 [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)。 指定 **@name** 、針對 **@profile_type** 指定 **@profile_type** 的值，並針對 **@agent_type** 指定下列其中一個值：  
+1.  在散發者端，執行 [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)。 指定 **\@name**、為 **\@profile_type** 指定 **1** 值，並為 **\@agent_type** 指定下列其中一個值：  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -152,13 +152,13 @@ ms.locfileid: "68768156"
   
     -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     如果此設定檔將成為其複寫代理程式類型的新預設設定檔，請針對 **@profile_type** 指定 **@default** 。 新設定檔的識別碼會使用 **@profile_id** 輸出參數傳回。 如此會根據給定的代理程式類型，建立具有一組設定檔參數的新設定檔。  
+     如果此設定檔將成為其複寫代理程式類型的新預設設定檔，請為 **\@default** 指定 **1** 值。 系統會使用 **\@profile_id** 輸出參數傳回新設定檔的識別碼。 如此會根據給定的代理程式類型，建立具有一組設定檔參數的新設定檔。  
   
 2.  在建立新設定檔之後，可以加入、移除或修改預設的參數來自訂該設定檔。  
   
 ###  <a name="Modify_tsql"></a> 若要修改現有的代理程式設定檔  
   
-1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 針對 **@agent_type** 指定下列其中一個值：  
+1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 為 **\@agent_type** 指定下列其中一個值：  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -172,24 +172,24 @@ ms.locfileid: "68768156"
   
      這會傳回指定的代理程式類型的所有設定檔。 請注意結果集中要變更之設定檔的 **profile_id** 值。  
   
-2.  在散發者端，執行 [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)。 針對 **@profile_id** 。 這會傳回設定檔的所有參數。 請注意要在設定檔中修改或移除的任何參數的名稱。  
+2.  在散發者端，執行 [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)。 為 **\@profile_id** 指定步驟 1 的設定檔識別碼。 這會傳回設定檔的所有參數。 請注意要在設定檔中修改或移除的任何參數的名稱。  
   
-3.  若要變更設定檔中的參數值，請執行 [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)。 針對 **@profile_id** 指定步驟 1 中的設定檔識別碼、針對 **@parameter_name** 指定要變更的參數名稱，並針對 **@parameter_value** 。  
+3.  若要變更設定檔中的參數值，請執行 [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)。 為 **\@profile_id** 指定步驟 1 中的設定檔識別碼、為 **\@parameter_name** 指定要變更的參數名稱，並為 **\@parameter_value** 指定參數的新值。  
   
     > [!NOTE]  
     >  您無法變更現有的代理程式設定檔，使其成為代理程式的預設設定檔， 而必須建立新的預設檔當做預設設定檔，如前述程序所示。  
   
-4.  若要從設定檔移除參數，請執行 [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)。 針對 **@profile_id** 指定步驟 1 中的設定檔識別碼，並針對 **@parameter_name** 。  
+4.  若要從設定檔移除參數，請執行 [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)。 為 **\@profile_id** 指定步驟 1 中的設定檔識別碼，並為 **\@parameter_name** 指定要移除的參數名稱。  
   
 5.  若要在設定檔中加入新參數，您必須執行下列動作：  
   
     -   查詢「散發者」端的 [MSagentparameterlist &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) 資料表，以判斷可針對每個代理程式類型所設定的設定檔參數。  
   
-    -   在散發者端，執行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。 針對 **@profile_id** 指定步驟 1 中的設定檔識別碼、針對 **@parameter_name** 指定要加入的有效參數的名稱，並針對 **@parameter_value** 。  
+    -   在散發者端，執行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。 為 **\@profile_id** 指定步驟 1 中的設定檔識別碼、為 **\@parameter_name** 指定要新增的有效參數的名稱，並為 **\@parameter_value** 指定參數的值。  
   
 ###  <a name="Delete_tsql"></a> 若要刪除代理程式設定檔  
   
-1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 針對 **@agent_type** 指定下列其中一個值：  
+1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 為 **\@agent_type** 指定下列其中一個值：  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -203,11 +203,11 @@ ms.locfileid: "68768156"
   
      這會傳回指定的代理程式類型的所有設定檔。 請注意結果集中要移除之設定檔的 **profile_id** 值。  
   
-2.  在散發者端，執行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)。 針對 **@profile_id** 。  
+2.  在散發者端，執行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)。 為 **\@profile_id** 指定步驟 1 的設定檔識別碼。  
   
 ###  <a name="Synch_tsql"></a> 若要在同步處理期間使用代理程式設定檔  
   
-1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 針對 **@agent_type** 指定下列其中一個值：  
+1.  在散發者端，執行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 為 **\@agent_type** 指定下列其中一個值：  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   

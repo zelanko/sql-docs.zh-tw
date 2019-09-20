@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81dbaedcb67b7e641e00c37ebb27e35fb2fceca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134567"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211258"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>設定 SQL Server Agent Mail 使用 Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,16 @@ ms.locfileid: "68134567"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
+  > [!NOTE]
+  > 受控執行個體上的 SQL Agent 一律設定為使用 Database Mail，因此本內容不適用於受控執行個體。 在受控執行個體中，您需要有一個稱為 **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 的設定檔，才能將 SQL Agent 與 Database Mail 繫結。 
+  
 ###  <a name="Prerequisites"></a> 必要條件  
   
 -   [啟用 Database Mail](../../relational-databases/database-mail/configure-database-mail.md)。  
   
 -    對[Agent 服務帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md) 建立要使用的 Database Mail 帳戶 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
--   [建立 Database Mail 設定檔](../../relational-databases/database-mail/create-a-database-mail-profile.md) ，供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶使用並將使用者新增至 **msdb** 資料庫中的 **DatabaseMailUserRole** 。  
+-   [建立 Database Mail 設定檔](../../relational-databases/database-mail/create-a-database-mail-profile.md) ，供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶使用並將使用者新增至 **msdb** 資料庫中的 **DatabaseMailUserRole** 。
   
 -   將設定檔設為 **msdb** 資料庫的預設設定檔。  
   
@@ -64,7 +67,7 @@ ms.locfileid: "68134567"
   
 -   在 **[郵件系統]** 清單中，選取 **[Database Mail]** 。  
   
--   在 **[郵件設定檔]** 清單中，選取 Database Mail 的郵件設定檔。  
+-   在 **[郵件設定檔]** 清單中，選取 Database Mail 的郵件設定檔。 
   
 -   重新啟動 SQL Server Agent。  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8285b4de85be5ce6f6fe79b60afe68650634a2b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17a7c0e27dbb6cb80cb0069a2ea76036654280e3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128076"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846679"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>為合併發行項實作商務邏輯處理常式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68128076"
   
 2.  針對下列命名空間加入此專案的參考。  
   
-    |組件參考|位置|  
+    |組件參考|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (預設安裝)|  
     |<xref:System.Data>|GAC (.NET Framework 的元件)|  
@@ -100,18 +100,18 @@ ms.locfileid: "68128076"
   
 1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，以確定此組件尚未註冊為商務邏輯處理常式。  
   
-2.  在散發者端，執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)，為 **@article_resolver** 指定商務邏輯處理常式的易記名稱、為 **@is_dotnet_assembly** 指定 **true** 值、為 **@dotnet_assembly_name** 指定組件名稱，以及為 **@dotnet_class_name** 指定覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的類別完整名稱。  
+2.  在散發者上執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)，為 **\@article_resolver** 指定商務邏輯處理常式的易記名稱、為 **\@is_dotnet_assembly** 指定 **true** 值、為 **\@dotnet_assembly_name** 指定組件名稱，並為 **\@dotnet_class_name** 指定覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的類別完整名稱。  
   
     > [!NOTE]  
-    >  如果此組件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或是全域組件快取 (GAC) 中，您就必須將 **@dotnet_assembly_name** ＞。 當您正在使用 Web 同步處理時，必須指定組件在 Web 伺服器上的位置。  
+    >  如果此組件未部署在合併代理程式可執行檔的相同目錄中、同步啟動合併代理程式的應用程式相同目錄中，或是全域組件快取 (GAC) 中，您就必須將 **\@dotnet_assembly_name** 指定為包含組件名稱的完整路徑。 當您正在使用 Web 同步處理時，必須指定組件在 Web 伺服器上的位置。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>搭配新的資料表發行項使用商務邏輯處理常式  
   
-1.  執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 來定義發行項，並針對 **@article_resolver** 指定商務邏輯處理常式的易記名稱。 如需詳細資訊，請參閱 [定義發行項](../../relational-databases/replication/publish/define-an-article.md)。  
+1.  執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 來定義發行項，並為 **\@article_resolver** 指定商務邏輯處理常式的易記名稱。 如需詳細資訊，請參閱 [定義發行項](../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>搭配現有的資料表發行項使用商務邏輯處理常式  
   
-1.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，並指定 **@publication** 、 **@article** 、 **@property** 的 **article_resolver** 值，以及 **@value** 的商務邏輯處理常式易記名稱。  
+1.  執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，為 **\@property** 指定 **\@publication**、 **\@article** 以及 **article_resolver** 值，並將 **\@value** 指定為步驟 1 中商務邏輯處理常式的易記名稱。  
   
 ###  <a name="TsqlExample"></a> 範例 (複寫程式設計)  
  這個範例會示範建立稽核記錄的商務邏輯處理常式。  
@@ -132,7 +132,7 @@ ms.locfileid: "68128076"
   
 2.  針對下列命名空間加入此專案的參考。  
   
-    |組件參考|位置|  
+    |組件參考|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (預設安裝)|  
     |<xref:System.Data>|GAC (.NET Framework 的元件)|  

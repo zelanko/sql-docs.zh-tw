@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7f57ec339ffd1deed54fb780361792bee46d9126
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013655"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70910790"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68013655"
   
 -   一定要將 AG 容錯移轉至同步認可的次要複本執行個體。 若您容錯移轉到非同步認可的次要複本執行個體，資料庫將會很容易遺失資料，而且資料移動會自動暫停，直到您手動繼續資料移動為止。  
   
--   在您升級或更新其他任何次要複本執行個體之前，請勿升級主要複本執行個體。 已升級的主要複本將無法再傳送記錄到尚未升級 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體至相同版本的次要複本。 當移至次要複本的資料移動作業暫停時，該複本無法進行自動容錯移轉，而且您的可用性資料庫很容易發生資料遺失。  
+-   在您升級或更新其他任何次要複本執行個體之前，請勿升級主要複本執行個體。 已升級的主要複本將無法再傳送記錄到尚未升級 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體至相同版本的次要複本。 當移至次要複本的資料移動作業暫停時，該複本無法進行自動容錯移轉，而且您的可用性資料庫很容易發生資料遺失。 這也適用於輪流升級期間，在其中您可以從舊的主要複本手動容錯移轉至新主要複本。 因此，在升級舊的主要複本之後，您可能需要繼續同步處理。
   
 -   在容錯移轉 AG 之前，請確認容錯移轉目標的同步處理狀態為 SYNCHRONIZED。  
 

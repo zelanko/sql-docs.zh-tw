@@ -9,17 +9,37 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 08/15/2019
-ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.date: 09/11/2019
+ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059261"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878631"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](download.md)**
+
+## <a name="september-2019"></a>2019 年 9 月
+
+2019 年 9 月 10 日 &nbsp; / &nbsp; 版本：1.11.0 
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 啟用 SQLCMD 模式 | 查詢編輯器現在支援切換 SQLCMD 模式，以將查詢撰寫和編輯為 SQLCMD 指令碼 |
+| 社群延伸模組：查詢編輯器提升 | 查詢編輯器提升是一種開放原始碼延伸模組，著重於為經常撰寫查詢的使用者增強 Azure Data Studio 查詢編輯器。 &bull; &nbsp; 將目前的查詢儲存為程式碼片段 <br/>&bull; &nbsp; 使用 Ctrl+U 切換資料庫 <br/> &bull; &nbsp; 從範本新增查詢 <br/> &bull; &nbsp; 在[此處](https://github.com/dzsquared/query-editor-boost) \(英文\) 檢視完整的改進清單 |
+| Notebook 改進 | &bull; &nbsp; 支援較大筆記本檔案的效能改善 <br/> &bull; &nbsp; 在[此處](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed) \(英文\) 檢視完整的改進清單 |
+| Visual Studio Code 8 月版本合併 1.38 | 您可以在[此處](https://code.visualstudio.com/updates/v1_38) \(英文\) 找到最新的改進。 |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1) \(英文\)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+- 筆記型電腦
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
+
 
 ## <a name="august-2019"></a>2019 年 8 月
 

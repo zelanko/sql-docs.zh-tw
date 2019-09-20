@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027226"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304846"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always On 可用性群組容錯移轉
 
@@ -43,7 +43,7 @@ ms.locfileid: "68027226"
 
    其次，[移除位置條件約束](#removeLocConstraint)。
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"> 步驟 1. 移動可用性群組資源來手動容錯移轉
+#### <a name="manualMove"></a> 步驟 1： 移動可用性群組資源來手動容錯移轉
 
 若要手動將名為 *ag_cluster* 的 AG 資源容錯移轉至名為 *nodeName2* 的叢集節點，請針對您的發行版本執行適用命令：
 
@@ -62,7 +62,7 @@ ms.locfileid: "68027226"
 >[!IMPORTANT]
 >在您手動為資源進行容錯移轉後，您需要移除自動新增的位置條件約束。
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> 步驟 2. 移除位置條件約束
+#### <a name="removeLocConstraint"> </a> 步驟 2： 移除位置條件約束
 
 在手動容錯移轉期間，`pcs` 命令 `move` 或 `crm` 命令 `migrate` 會針對要放置在新目標節點上的資源新增位置條件約束。 若要查看新的條件約束，請在手動移動資源後執行下列命令：
 
@@ -168,8 +168,8 @@ ms.locfileid: "68027226"
 
 ## <a name="next-steps"></a>後續步驟
 
-[設定 SQL Server 可用性群組叢集資源的 Red Hat Enterprise Linux 叢集](sql-server-linux-availability-group-cluster-rhel.md)
+[設定 Red Hat Enterprise Linux 叢集的 SQL Server 可用性群組叢集資源](sql-server-linux-availability-group-cluster-rhel.md)
 
-[設定 SQL Server 可用性群組叢集資源的 SUSE Linux Enterprise Server 叢集](sql-server-linux-availability-group-cluster-sles.md)
+[設定 SUSE Linux Enterprise Server 叢集的 SQL Server 可用性群組叢集資源](sql-server-linux-availability-group-cluster-sles.md)
 
-[設定 SQL Server 可用性群組叢集資源的 Ubuntu 叢集](sql-server-linux-availability-group-cluster-ubuntu.md)
+[設定 Ubuntu 叢集的 SQL Server 可用性群組叢集資源](sql-server-linux-availability-group-cluster-ubuntu.md)

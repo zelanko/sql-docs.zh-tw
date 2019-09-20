@@ -10,18 +10,18 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b04e7ffb9a1f1a00035b04994869c55d8173ad2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba47ee7f719763cce2d2ac4502d8c2c9bd8693d3
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909282"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70910827"
 ---
 # <a name="import-json-documents-into-sql-server"></a>將 JSON 文件匯入 SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-本主題描述如何將 JSON 檔案匯入 SQL Server 中。 目前，檔案中儲存有許多 JSON 文件。 應用程式記錄資訊儲存在 JSON 檔案中、感應器所產生的資訊儲存在 JSON 檔案中，以此類推。 請務必要能夠讀取檔案中所儲存的 JSON 資料、將資料載入至 SQL Server，以及對它進行分析。
+本文描述如何將 JSON 檔案匯入 SQL Server 中。 目前，檔案中儲存有許多 JSON 文件。 應用程式記錄資訊儲存在 JSON 檔案中、感應器所產生的資訊儲存在 JSON 檔案中，以此類推。 請務必要能夠讀取檔案中所儲存的 JSON 資料、將資料載入至 SQL Server，以及對它進行分析。
 
 ## <a name="import-a-json-document-into-a-single-column"></a>將 JSON 文件匯入至單一資料行
 
@@ -139,9 +139,7 @@ SELECT value
  CROSS APPLY OPENJSON(BulkColumn)
 ```
 
-### <a name="example-2"></a>範例 2
-
-OPENROWSET 會讀取檔案中的單一文字值，並將它傳回為 BulkColumn，然後將它傳遞至 OPENJSON 函式。 OPENJSON 會逐一查看 BulkColumn 陣列中的 JSON 物件陣列，並在每個資料列中傳回一本書，且格式化為 JSON：
+上述 OPENROWSET 會從檔案讀取單一文字值。 OPENROWSET 會傳回值作為 BulkColumn，並將 BulkColumn 傳遞至 OPENJSON 函式。 OPENJSON 會逐一查看 BulkColumn 陣列中的 JSON 物件陣列，並在每個資料列中傳回一本書。 每個資料列都會格式化為 JSON，如下所示。
 
 ```json
 {"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
@@ -150,7 +148,7 @@ OPENROWSET 會讀取檔案中的單一文字值，並將它傳回為 BulkColumn�
 {"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
-### <a name="example-3"></a>範例 3
+### <a name="example-2"></a>範例 2
 
 OPENJSON 函式可以剖析 JSON 內容，並將它轉換成資料表或結果集。 下列範例會載入內容、剖析載入的 JSON，並將五個欄位傳回為資料行︰
 

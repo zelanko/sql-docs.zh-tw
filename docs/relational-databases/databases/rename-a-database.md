@@ -14,12 +14,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ade7deb2fd86f5dfd0f89aa1f13d5352e6e5fc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da717e212e03fce4550e7af1a8810980f1b8321
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127286"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810132"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
 
@@ -63,6 +63,7 @@ ms.locfileid: "68127286"
 ## <a name="rename-a-database-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 重新命名資料庫
 
 使用 SQL Server Management Studio，透過下列步驟重新命名 SQL Server 或 Azure SQL 資料庫。
+
   
 1. 在 [物件總管]  中，連線至 SQL 執行個體。  
   
@@ -71,6 +72,8 @@ ms.locfileid: "68127286"
 3. 在 [物件總管] 中，展開 [資料庫]  ，並以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]  。  
   
 4. 輸入新的資料庫名稱，然後按一下 **[確定]** 。  
+  
+5. (選擇性) 如果資料庫是您的預設資料庫，請參閱[在重新命名之後重設您的預設資料庫](#reset-your-default-database-after-rename)。
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -95,6 +98,8 @@ ms.locfileid: "68127286"
    GO
    ```  
 
+4. (選擇性) 如果資料庫是您的預設資料庫，請參閱[在重新命名之後重設您的預設資料庫](#reset-your-default-database-after-rename)。
+
 ### <a name="to-rename-an-azure-sql-database-database"></a>重新命名 Azure SQL Database 資料庫
 
 在 SQL Server Management Studio 中使用 T-SQL，透過下列步驟重新命名 Azure SQL 資料庫。
@@ -112,6 +117,19 @@ ms.locfileid: "68127286"
 
 在 SQL Server 中重新命名資料庫之後，請備份 `master` 資料庫。 在 Azure SQL Database 中，不需要這麼做，因為會自動備份。  
   
+## <a name="reset-your-default-database-after-rename"></a>在重新命名之後重設您的預設資料庫
+
+如果您要重新命名的資料庫已設定為預設資料庫，請使用下列命令將預設值重設為重新命名的資料庫：
+
+
+```sql
+USE [master]
+GO
+ALTER LOGIN [your-login] WITH DEFAULT_DATABASE=[new-database-name]
+GO
+```
+
+
 ## <a name="see-also"></a>另請參閱
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

@@ -8,12 +8,12 @@ author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 79d089282cdf243768138ea972f7d817534bf386
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b07d97563406a464bfdb38dba7b3aa1d51e27c34
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062308"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874785"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
 
@@ -81,7 +81,7 @@ SQL Server 2019 中的 PolyBase 可讓您透過 ODBC 連接器連接到 ODBC 相
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    We recommend creating statistics on external table columns especially the ones used for joins, filters and aggregates,for optimal query performance.
+為了取得最佳查詢效能，我們建議在外部資料表資料行上建立統計資料 (尤其是用於聯結、篩選和彙總的資料行)。
 
     ```sql
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

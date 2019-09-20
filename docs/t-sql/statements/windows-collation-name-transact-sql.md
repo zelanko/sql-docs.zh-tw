@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051428"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874460"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 定序名稱 (Transact-SQL)
 
@@ -139,9 +139,9 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |阿姆哈拉文 (衣索比亞)|Latin1_General_100_|無法使用|
 |亞美尼亞文 (亞美尼亞)|Cyrillic_General_100_|無法使用|
 |阿薩姆文 (印度)|Assamese_100_ <sup>1</sup>|無法使用|
+|孟加拉文 (孟加拉)|Bengali_100_<sup>1</sup>|無法使用|
 |巴什喀爾文 (俄羅斯)|Bashkir_100_|無法使用|
 |巴斯克文 (巴斯克)|Latin1_General_100_|無法使用|
-|孟加拉文 (孟加拉)|Bengali_100_<sup>1</sup>|無法使用|
 |孟加拉文 (印度)|Bengali_100_<sup>1</sup>|無法使用|
 |波士尼亞文 (波士尼亞赫塞哥維納，斯拉夫)|Bosnian_Cyrillic_100_|無法使用|
 |波士尼亞文 (波士尼亞赫塞哥維納，拉丁)|Bosnian_Latin_100_|無法使用|
@@ -187,7 +187,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |挪威文 (巴克摩，挪威)|Norwegian_100_|無法使用|
 |挪威文 (耐諾斯克，挪威)|Norwegian_100_|無法使用|
 |奧西坦文 (法國)|French_100_|無法使用|
-|歐利亞文 (印度)|Indic_General_100_<sup>1</sup>|無法使用|
+|歐迪亞文 (印度)|Indic_General_100_<sup>1</sup>|無法使用|
 |普什圖文 (阿富汗)|Pashto_100_<sup>1</sup>|無法使用|
 |波斯文 (伊朗)|Persian_100_|無法使用|
 |旁遮普語 (印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
@@ -226,7 +226,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |威爾斯文 (英國)|Welsh_100_|無法使用|
 |沃洛夫文 (塞內加爾)|French_100_|無法使用|
 |科薩文/科薩文 (南非)|Latin1_General_100_|無法使用|
-|雅庫特語 (俄羅斯)|Yakut_100_|無法使用|
+|薩哈文 (俄羅斯)|Yakut_100_|無法使用|
 |爨文 (中國)|Latin1_General_100_|無法使用|
 |優魯巴文 (奈及利亞)|Latin1_General_100_|無法使用|
 |祖魯文/祖魯文 (南非)|Latin1_General_100_|無法使用|
@@ -235,9 +235,9 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |已被取代，無法用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本的伺服器層級|Lithuanian_Classic|Lithuanian_Classic|
 |已被取代，無法用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本的伺服器層級|Macedonian|Macedonian|
 
-<sup>1</sup>僅限 Unicode 的 Windows 定序只能套用至資料行層級或運算式層級的資料。 它們無法當做伺服器或資料庫定序使用。
+<sup>1</sup> 僅限 Unicode 的 Windows 定序只能套用至資料行層級或運算式層級的資料。 它們無法當做伺服器或資料庫定序使用。
 
-<sup>2</sup>中文 (澳門) 與中文 (台灣) 定序相同之處在於兩者都使用簡體中文的規則；中文 (澳門) 與中文 (台灣) 不同之處則在於前者使用字碼頁 950。
+<sup>2</sup> 中文 (澳門) 與中文 (台灣) 定序相同之處在於兩者都使用簡體中文的規則；中文 (澳門) 與中文 (台灣) 不同之處則在於前者使用字碼頁 950。
 
 ## <a name="see-also"></a>另請參閱
 

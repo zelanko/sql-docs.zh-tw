@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 439294b36c03d36a2747c17ab53b630d39c8caea
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 46fb32fcd6f3aa0d78f748f1ef1e8ec419084f46
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742879"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878692"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -144,13 +144,18 @@ ms.locfileid: "68742879"
 ### <a name="data-definition-language-statements"></a>資料定義語言陳述式  
  您可以使用下列 DDL 陳述式來建立、改變和卸除稽核規格：  
   
-|||  
+|DDL 陳述式|Description| 
 |-|-|  
-|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|  
+|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|變更安全性實體的擁有權。|  
+|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|使用 SQL Server Audit 功能改變資料庫稽核規格物件。|  
+|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|使用 SQL Server Audit 功能改變伺服器稽核物件。|  
+|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|使用 SQL Server Audit 功能改變伺服器稽核規格物件。|  
+|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|使用 SQL Server Audit 功能建立資料庫稽核規格物件。|  
+|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|使用 SQL Server Audit 來建立伺服器稽核物件。|  
+|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|使用 SQL Server Audit 功能建立伺服器稽核規格物件。|  
+|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|使用 SQL Server Audit 功能卸除資料庫稽核規格物件。|  
+|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|使用 SQL Server Audit 功能卸除伺服器稽核物件。|  
+|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|使用 SQL Server Audit 功能卸除伺服器稽核規格物件。|  
   
 ### <a name="dynamic-views-and-functions"></a>動態檢視和函數  
  下表列出可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核的動態檢視和函數。  

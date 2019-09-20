@@ -15,12 +15,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cbb1985f30dc87520273da62e62a34bc838d5b6a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f26e62210052e297cc47eef97f44ac9bfb462bb1
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764106"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846579"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>定義及修改靜態資料列篩選
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,15 +113,15 @@ ms.locfileid: "68764106"
   
 1.  定義要篩選的發行項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 針對 **@article** 指定發行項的名稱、針對 **@publication** 指定發行集的名稱、針對 **@filter_name** 指定篩選的名稱，並針對 **@filter_clause** (不包括 `WHERE`) 指定篩選子句。  
+2.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 為 **\@article** 指定發行項的名稱、為 **\@publication** 指定發行集的名稱、為 **\@filter_name** 指定篩選的名稱，並為 **\@filter_clause** (不包括 `WHERE`) 指定篩選子句。  
   
-3.  如果仍然必須定義資料行篩選，請參閱＜ [定義及修改資料行篩選](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)＞。 否則，執行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 針對 **@publication** 指定發行集的名稱、針對 **@article** 指定篩選的發行項名稱，並針對 **@filter_clause** 中定義及修改靜態資料列篩選。 這樣會針對篩選的發行項建立同步處理物件。  
+3.  如果仍然必須定義資料行篩選，請參閱＜ [定義及修改資料行篩選](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)＞。 否則，執行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 為 **\@publication** 指定發行集的名稱、為 **\@article** 指定篩選的發行項名稱，並為 **\@filter_clause** 指定步驟 2 中所指定的篩選子句。 這樣會針對篩選的發行項建立同步處理物件。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集修改靜態資料列篩選  
   
-1.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 針對 **@article** 指定發行項的名稱、針對 **@publication** 指定發行集的名稱、針對 **@filter_name** 指定新的篩選名稱，並針對 **@filter_clause** (不包括 `WHERE`) 指定篩選子句。 由於這項變更將會讓現有訂閱中的資料失效，所以請針對 **@force_reinit_subscription** 指定 **@force_reinit_subscription** 中定義及修改靜態資料列篩選。  
+1.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 為 **\@article** 指定發行項的名稱、為 **\@publication** 指定發行集的名稱、為 **\@filter_name** 指定新的篩選名稱，並為 **\@filter_clause** (不包括 `WHERE`) 指定新的篩選子句。 由於這項變更將會讓現有訂閱中的資料失效，所以請為 **\@force_reinit_subscription** 指定 **1** 值。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 針對 **@publication** 指定發行集的名稱、針對 **@article** 指定篩選的發行項名稱，並針對 **@filter_clause** 中定義及修改靜態資料列篩選。 這樣會重新建立可定義篩選之發行項的檢視。  
+2.  在發行集資料庫的發行者端，執行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 為 **\@publication** 指定發行集的名稱、為 **\@article** 指定篩選的發行項名稱，並為 **\@filter_clause** 指定步驟 1 中所指定的篩選子句。 這樣會重新建立可定義篩選之發行項的檢視。  
   
 3.  針對此發行集重新執行快照集代理程式作業，以產生更新的快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68764106"
   
 #### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集刪除靜態資料列篩選  
   
-1.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 針對 **@article** 指定發行項的名稱、針對 **@publication** 指定發行集的名稱、針對 **@filter_name** 指定 NULL 的值，並針對 **@filter_clause** 中定義及修改靜態資料列篩選。 由於這項變更將會讓現有訂閱中的資料失效，所以請針對 **@force_reinit_subscription** 指定 **@force_reinit_subscription** 中定義及修改靜態資料列篩選。  
+1.  在發行集資料庫的發行者端，執行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 為 **\@article** 指定發行項的名稱、為 **\@publication** 指定發行集的名稱、為 **\@filter_name** 指定 NULL 的值，並為 **\@filter_clause** 指定 NULL 的值。 由於這項變更將會讓現有訂閱中的資料失效，所以請為 **\@force_reinit_subscription** 指定 **1** 值。  
   
 2.  針對此發行集重新執行快照集代理程式作業，以產生更新的快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
@@ -137,13 +137,13 @@ ms.locfileid: "68764106"
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>為合併式發行集定義靜態資料列篩選  
   
-1.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 **@subset_filterclause** (不包括 `WHERE`) 指定篩選子句。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 為 **\@subset_filterclause** (不包括 `WHERE`) 指定篩選子句。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  如果仍然必須定義資料行篩選，請參閱＜ [定義及修改資料行篩選](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)＞。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>為合併式發行集修改靜態資料列篩選  
   
-1.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 **@publication** 指定發行集的名稱、針對 **@article** 指定篩選的發行項名稱、針對 **@property** 指定 **@property** 指定新的篩選名稱，並針對 **@value** (不包括 `WHERE`) 指定篩選子句。 由於這項變更將會讓現有訂閱中的資料失效，所以請針對 **@force_reinit_subscription** 中定義及修改靜態資料列篩選。  
+1.  在發行集資料庫的發行者端，執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為 **\@publication** 指定發行集的名稱、為 **\@article** 指定篩選的發行項名稱、為 **\@property** 指定 **subset_filterclause** 值，並為 **\@value** (不包括 `WHERE`) 指定新的篩選子句。 由於這項變更將會讓現有訂閱中的資料失效，所以請為 **\@force_reinit_subscription** 指定 1 值。  
   
 2.  針對此發行集重新執行快照集代理程式作業，以產生更新的快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   

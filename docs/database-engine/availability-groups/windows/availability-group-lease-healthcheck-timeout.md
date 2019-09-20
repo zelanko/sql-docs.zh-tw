@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 51a683d7566fb9a4e7d25da4c89e7ef3ceb1b007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991456"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874367"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性群組租用、叢集和健全狀況檢查逾時的機制和方針 
 
@@ -45,7 +45,7 @@ Always On 資源 DLL 會監視內部 SQL Server 元件的狀態。 `sp_server_di
 
 租用機制會強制在 SQL Server 與 Windows Server 容錯移轉叢集之間同步處理。 發出容錯移轉命令時，叢集服務會對目前主要複本的資源 DLL 發出離線呼叫。 資源 DLL 會先嘗試使用預存程序將 AG 離線。 如果此預存程序失敗或逾時，則會對叢集服務回報失敗，然後發出終止命令。 此終止會再次嘗試執行相同的預存程序，但叢集這次不會等候資源 DLL 回報成功或失敗，就會將 AG 連線到新的複本。 如果第二個程序呼叫失敗，則資源主機將必須依賴租用機制將執行個體離線。 呼叫資源 DLL 將 AG 離線時，資源 DLL 會發出租用停止事件信號，並喚醒 SQL Server 租用背景工作執行緒來將 AG 離線。 即使未發出此停止事件信號，租用仍會過期，且複本會轉換成解析中狀態。 
 
-租用基本上是主要執行個體與叢集之間的同步處理機制，但它也可以建立不需要容錯移轉的失敗狀況。 舉例來說，高 CPU、記憶體不足的情況 (虛擬記憶體低下、處理序分頁)、SQL 處理序在產生記憶體傾印時無法回應、整個系統停止回應、叢集 (WSFC) 離線 (例如因為仲裁遺失)，都可能導致從 SQL 執行個體更新租用失敗，並引發重新啟動或容錯移轉。 
+租用基本上是主要執行個體與叢集之間的同步處理機制，但它也可以建立不需要容錯移轉的失敗狀況。 例如，高 CPU、記憶體不足的情況 (虛擬記憶體不足、處理序分頁)、SQL 處理序在產生記憶體傾印時沒有回應、系統沒有回應、叢集 (WSFC) 離線 (例如因為仲裁遺失)，都可能導致從 SQL 執行個體更新租用失敗，並引發重新啟動或容錯移轉。 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>叢集逾時值方針 
 
@@ -155,9 +155,9 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   
  | 逾時設定 | 目的 | 介於 | 使用 | IsAlive 與 LooksAlive | 原因 | 結果 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
- | 租用逾時 </br> **預設值：20000** | 防止核心分裂 | 主要至叢集 </br> (HADR) | [Windows 事件物件](/windows/desktop/Sync/event-objects)| 用於兩者 | OS 停止回應、虛擬記憶體低下、工作集分頁、產生傾印、限制的 CPU、WSFC 關閉 (遺失仲裁) | AG 資源離線/連線、容錯移轉 |  
- | 工作階段逾時 </br> **預設值：10000** | 通知主要與次要之間發生通訊問題 | 次要至主要 </br> (HADR) | [TCP 通訊端 (透過 DBM 端點傳送訊息)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 不用於兩者 | 網路通訊、 </br> 次要相關問題 - 關閉、作業系統停止回應、資源爭用 | 次要 - 已中斷連線 | 
- |健全狀況檢查逾時  </br> **預設值：30000** | 表示嘗試判斷主要複本健全狀況時逾時 | 叢集至主要 </br> (FCI 與 HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 用於兩者 | 符合失敗條件、作業系統停止回應、虛擬記憶體不足、修剪工作集、正在產生傾印、WSFC (遺失仲裁)、排程器問題 (鎖死的排程器)| AG 資源離線/連線或容錯移轉、FCI 重新啟動/容錯移轉 |  
+ | 租用逾時 </br> **預設值：20000** | 防止核心分裂 | 主要至叢集 </br> (HADR) | [Windows 事件物件](/windows/desktop/Sync/event-objects)| 用於兩者 | OS 沒有回應、虛擬記憶體不足、工作集分頁、正在產生傾印、限制的 CPU、WSFC 關閉 (遺失仲裁) | AG 資源離線/連線、容錯移轉 |  
+ | 工作階段逾時 </br> **預設值：10000** | 通知主要與次要之間發生通訊問題 | 次要至主要 </br> (HADR) | [TCP 通訊端 (透過 DBM 端點傳送訊息)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 不用於兩者 | 網路通訊、 </br> 次要相關問題 - 關閉、OS 沒有回應、資源爭用 | 次要 - 已中斷連線 | 
+ |健全狀況檢查逾時  </br> **預設值：30000** | 表示嘗試判斷主要複本健全狀況時逾時 | 叢集至主要 </br> (FCI 與 HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 用於兩者 | 符合失敗條件、OS 沒有回應、虛擬記憶體不足、修剪工作集、正在產生傾印、WSFC (遺失仲裁)、排程器問題 (鎖死的排程器)| AG 資源離線/連線或容錯移轉、FCI 重新啟動/容錯移轉 |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另請參閱    

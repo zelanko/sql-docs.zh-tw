@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c77649367b94cc2df914a121c068e5fa6db51234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ae8e8c1394372347f9e26bb7163f0e1cf0bf47e
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083846"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846749"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,18 +120,18 @@ ms.locfileid: "68083846"
   
 1.  在發行集資料庫的發行者端，執行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定下列參數：  
   
-    -   將 **@publication** 。  
+    -   為 **\@publication** 設定為發行集的名稱。  
   
-    -   將 **@allow_subscriber_initiated_snapshot** @allow_subscriber_initiated_snapshot **@allow_subscriber_initiated_snapshot** 的值，這樣可讓訂閱者起始快照集處理。  
+    -   為 **\@allow_subscriber_initiated_snapshot** 設定為 **true** 值，這樣可讓訂閱者起始快照集處理。  
   
-    -   (選擇性) 將 **@max_concurrent_dynamic_snapshots** 。 如果正在執行最大的處理序數目，而且訂閱者嘗試產生快照集，則會將此處理序置於佇列中。 根據預設，並行處理序的數目沒有任何限制。  
+    -   (選擇性) 為 **\@max_concurrent_dynamic_snapshots** 設定為可以並行執行的動態快照集處理序數目。 如果正在執行最大的處理序數目，而且訂閱者嘗試產生快照集，則會將此處理序置於佇列中。 根據預設，並行處理序的數目沒有任何限制。  
   
-2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login [@password](../../relational-databases/replication/agents/replication-snapshot-agent.md) 和 **@job_login** 指定執行 **@password** 。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定執行 **@publisher_password** 。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
+2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **\@publication** 指定步驟 1 中所使用的發行集名稱，並為 **\@job_login** 和 **\@password** 指定[複寫快照集代理程式](../../relational-databases/replication/agents/replication-snapshot-agent.md)執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證。 如果代理程式會在與發行者連接時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-3.  若要將發行項新增至發行集中，請執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 必須針對發行集中的每一個發行項執行一次此預存程序。 在使用參數化篩選時，您必須使用 **@subset_filterclause** 參數來指定一個或多個發行項的參數化資料列篩選器。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+3.  若要將發行項新增至發行集中，請執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 必須針對發行集中的每一個發行項執行一次此預存程序。 在使用參數化篩選時，您必須使用 **\@subset_filterclause** 參數來指定一或多個發行項的參數化資料列篩選器。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 4.  如果將根據參數化資料列篩選器來篩選其他發行項，請執行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 來定義兩個發行項之間的聯結或邏輯記錄關聯性。 必須針對每一個定義的關聯性執行一次此預存程序。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
@@ -141,31 +141,31 @@ ms.locfileid: "68083846"
   
 1.  若要建立發行集，請執行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 如需詳細資訊，請參閱 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 1 中所使用的發行集名稱，以及針對 **@job_login** 指定執行 **@password** 。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定執行 **@publisher_password** 。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
+2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **\@publication** 指定步驟 1 中所使用的發行集名稱，並為 **\@job_login** 和 **\@password** 指定執行快照集代理程式時所使用的 Windows 認證。 如果代理程式會在與發行者連接時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-3.  若要將發行項新增至發行集中，請執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 必須針對發行集中的每一個發行項執行一次此預存程序。 在使用參數化篩選時，您必須使用 **@subset_filterclause** 參數來指定一個或多個發行項的參數化資料列篩選器。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+3.  若要將發行項新增至發行集中，請執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 必須針對發行集中的每一個發行項執行一次此預存程序。 在使用參數化篩選時，您必須使用 **\@subset_filterclause** 參數來指定一個發行項的參數化資料列篩選器。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 4.  如果將根據參數化資料列篩選器來篩選其他發行項，請執行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 來定義兩個發行項之間的聯結或邏輯記錄關聯性。 必須針對每一個定義的關聯性執行一次此預存程序。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
-5.  在發行集資料庫的發行者端，執行 [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，並指定步驟 1 中的 **@publication** 值。 請注意結果集中 **snapshot_jobid** 的值。  
+5.  在發行集資料庫的發行者端，執行 [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，並指定步驟 1 中的 **\@publication** 值。 請注意結果集中 **snapshot_jobid** 的值。  
   
 6.  將步驟 5 取得之 **snapshot_jobid** 的值轉換成 **uniqueidentifier**。  
   
-7.  在 **msdb** 資料庫的發行者端，執行 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)，並針對 **@job_id** 指定步驟 6 中所取得的轉換值。  
+7.  在 **msdb** 資料庫的發行者端，執行 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)，並為 **\@job_id** 指定步驟 6 中所取得的轉換值。  
   
-8.  在發行集資料庫的發行者端，執行 [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)。 針對 **@publication** 指定步驟 1 中的發行集名稱，並針對 **@suser_sname** (如果 [SUSER_SNAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md) 用於篩選子句) 或是針對 **@host_name** (如果 [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md) 用於篩選子句) 指定用於定義資料分割的值。  
+8.  在發行集資料庫的發行者端，執行 [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)。 為 **\@publication** 指定步驟 1 中的發行集名稱，並為 **\@suser_sname** (如果 [SUSER_SNAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md) 用於篩選子句) 或是為 **\@host_name** (如果 [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md) 用於篩選子句) 指定用於定義資料分割的值。  
   
-9. 在發行集資料庫的發行者端，執行 [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)。 針對 **@publication** 指定步驟 1 中的發行集名稱、步驟 8 中的 **@suser_sname** 或 **@host_name** 的值，以及此作業的排程。 這樣會建立針對指定的資料分割產生參數化快照集的作業。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
+9. 在發行集資料庫的發行者端，執行 [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)。 為 **\@publication** 指定步驟 1 中的發行集名稱、步驟 8 中的 **\@suser_sname** 或 **\@host_name** 的值，以及此作業的排程。 這樣會建立針對指定的資料分割產生參數化快照集的作業。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
     > [!NOTE]  
     >  這個作業會使用與步驟 2 中定義的初始快照集作業相同的 Windows 帳戶來執行。 若要移除參數化快照集作業及其相關的資料分割，請執行 [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)。  
   
-10. 在發行集資料庫的發行者端，執行 [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)，並指定步驟 1 中的 **@publication** 值，以及步驟 8 中的 **@suser_sname** 或 **@host_name** 值。 請注意結果集中 **dynamic_snapshot_jobid** 的值。  
+10. 在發行集資料庫的發行者上，執行 [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)，指定步驟 1 中 **\@publication** 的值以及步驟 8 中 **\@suser_sname** 或 **\@host_name** 的值。 請注意結果集中 **dynamic_snapshot_jobid** 的值。  
   
-11. 在 **msdb** 資料庫的散發者端，執行 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)，並針對 **@job_id** 指定步驟 9 中所取得的值。 這樣會啟動資料分割的參數化快照集作業。  
+11. 在 **msdb** 資料庫的散發者端，執行 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)，並為 **\@job_id** 指定步驟 9 中所取得的值。 這樣會啟動資料分割的參數化快照集作業。  
   
 12. 針對每一個訂閱重複步驟 8-11 來產生分割快照集。  
   
@@ -173,12 +173,12 @@ ms.locfileid: "68083846"
   
 1.  若要建立發行集，請執行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 如需詳細資訊，請參閱 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 1 中所使用的發行集名稱，以及針對 **@job_login** 指定執行 **@password** 。 如果代理程式會在與「發行者」時連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須指定 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 指定步驟 1 中所用的發行集名稱，並針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定執行 **@publisher_password** 。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
+2.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **\@publication** 指定步驟 1 中所使用的發行集名稱，並為 **\@job_login** 和 **\@password** 指定執行快照集代理程式時所使用的 Windows 認證。 如果代理程式會在與發行者連接時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-3.  若要將發行項新增至發行集中，請執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 必須針對發行集中的每一個發行項執行一次此預存程序。 在使用參數化篩選時，您必須使用 **@subset_filterclause** 參數來指定一個或多個發行項的參數化資料列篩選器。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+3.  若要將發行項新增至發行集中，請執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 必須針對發行集中的每一個發行項執行一次此預存程序。 在使用參數化篩選時，您必須使用 **\@subset_filterclause** 參數，至少為一個發行項指定參數化資料列篩選器。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 4.  如果將根據參數化資料列篩選器來篩選其他發行項，請執行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 來定義兩個發行項之間的聯結或邏輯記錄關聯性。 必須針對每一個定義的關聯性執行一次此預存程序。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
@@ -202,11 +202,11 @@ ms.locfileid: "68083846"
 >  如需複寫代理程式之程式設計的詳細資訊，請參閱[複寫代理程式可執行檔概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
- 這個範例會使用參數化篩選來建立合併式發行集，其中的訂閱者會起始快照集的產生程序。 **@job_login** 和 **@job_password** 的值會使用指令碼變數來傳遞。  
+ 這個範例會使用參數化篩選來建立合併式發行集，其中的訂閱者會起始快照集的產生程序。 **\@job_login** 和 **\@job_password** 的值會使用指令碼變數來傳遞。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_1.sql)]  
   
- 這個範例會使用參數化篩選建立發行集，其中的每一個訂閱者會藉由執行 [sp_addmergepartition](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) 來定義其資料分割，並藉由執行 [sp_adddynamicsnapshot_job](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md) 來建立篩選的快照集作業，傳遞資料分割資訊。 **@job_login** 和 **@job_password** 的值會使用指令碼變數來傳遞。  
+ 這個範例會使用參數化篩選建立發行集，其中的每一個訂閱者會藉由執行 [sp_addmergepartition](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) 來定義其資料分割，並藉由執行 [sp_adddynamicsnapshot_job](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md) 來建立篩選的快照集作業，傳遞資料分割資訊。 **\@job_login** 和 **\@job_password** 的值會使用指令碼變數來傳遞。  
   
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_2.sql)]  
   

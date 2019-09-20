@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494304"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874821"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 資料庫引擎
 
 SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效能提升。 
-- **CLR 組件**現在可以新增至白名單，以解決 CTP 2.0 中所述的 `clr strict security` 問題。 新增了 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支援信任組件的白名單 (RC1)。  
+- **CLR 組件**現在可以新增至信任組件的清單，以解決 CTP 2.0 中所述的 `clr strict security` 功能問題。 已新增 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支援信任組件的清單 (RC1)。  
 - **繼續線上索引重建**可從容錯移轉至複本或磁碟空間不足等失敗後的停止處繼續線上索引重建作業，或暫停並於稍後繼續線上索引重建作業。 請參閱 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[線上索引作業的指導方針](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION 的 **IDENTITY_CACHE** 選項可讓您在伺服器意外地重新啟動或容錯移轉至次要伺服器時，避免識別欄位的值出現間隙。 請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
 - 新一代的查詢處理功能改善會調整最佳化策略，使其符合您應用程式工作負載的執行階段條件。 為了這個第一版**自適性查詢處理**功能家族，我們推出了三項新的功能更新：**批次模式自適性聯結**、**批次模式記憶體授與回饋**，以及適用於多陳述式資料表值函式的**交錯執行**。  請參閱 [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md) (SQL 資料庫中的智慧查詢處理)。

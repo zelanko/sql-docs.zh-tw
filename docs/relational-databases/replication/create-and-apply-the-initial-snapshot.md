@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 65d0b89dfc2862c63d9fbb8f81d4145aba9d391f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768636"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846706"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,13 +90,13 @@ ms.locfileid: "68768636"
 
 1.  建立快照式、交易式或合併式發行集。 如需詳細資訊，請參閱[建立發行集](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定 **@publication** 及下列參數：  
+2.  執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定 **\@publication** 及下列參數：  
   
-    -   **@job_login，它會指定**散發者上的快照集代理程式執行時所用的 Windows 驗證認證。  
+    -   **\@job_login**，其會指定散發者上快照集代理程式執行時所用的 Windows 驗證認證。  
   
-    -   **@job_password** ，它是提供之 Windows 認證的密碼。  
+    -   **\@job_password**，其為所提供 Windows 認證的密碼。  
   
-    -   (選擇性) 如果代理程式在連接到發行者時將使用「SQL Server 驗證」，會將 **@publisher_security_mode** 設定為 **@publisher_security_mode** 的值。 在此情況下，您也必須針對 **@publisher_login** ＞和＜ **@publisher_password** 。  
+    -   (選擇性) 如果代理程式會在連接到發行者時使用 SQL Server 驗證，請為 **\@publisher_security_mode** 設定為 **0** 值。 在此情況下，您也必須為 **\@publisher_login** 和 **\@publisher_password** 指定 SQL Server 驗證的登入資訊。  
   
     -   (選擇性) 快照集代理程式作業的同步排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68768636"
   
 3.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](../../relational-databases/replication/publish/define-an-article.md)。  
   
-4.  在發行集資料庫的發行者端，執行 [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)，並指定步驟 1 中的 **@publication** 值。  
+4.  在發行集資料庫的發行者端，執行 [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)，並指定步驟 1 中的 **\@publication** 值。  
   
 ## <a name="apply-a-snapshot"></a>套用快照集  
 

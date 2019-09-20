@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5e737f230ce7462aa59c0bfbcbfe19be55b66a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044576"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846657"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>資料庫鏡像 - 使用傳出連接的憑證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68044576"
   
 ## <a name="procedure"></a>程序  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>設定 (HOST_A 上) 傳出鏡像連接的伺服器執行個體  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>設定 (HOST_A 上) 傳出鏡像連接的伺服器執行個體  
   
 1.  在 **master** 資料庫中，若無資料庫「主要金鑰」存在，請加以建立。 若要檢視資料庫的現有金鑰，請使用 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目錄檢視。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68044576"
      例如，建立 HOST_A 系統的憑證。  
   
     > [!IMPORTANT]  
-    >  如果您想要使用此憑證一年以上，請在 CREATE CERTIFICATE 陳述式中使用 EXPIRY_DATE 選項來指定 UTC 時間格式的到期日。 此外，我們建議您使用 SQL Server Management Studio 建立原則式管理規則，在您的憑證即將過期時通知您。 使用原則管理的 **[建立新條件]** 對話方塊，在 **@ExpirationDate** Facet 的 **[@ExpirationDate]** 欄位上建立這個規則。 如需詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)。  
+    >  如果您想要使用此憑證一年以上，請在 CREATE CERTIFICATE 陳述式中使用 EXPIRY_DATE 選項來指定 UTC 時間格式的到期日。 此外，我們建議您使用 SQL Server Management Studio 建立原則式管理規則，在您的憑證即將過期時通知您。 使用 [原則管理] 的 [建立新條件]  對話方塊，在 [憑證]  Facet 的 **\@ExpirationDate** 欄位上建立這個規則。 如需詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保護 SQL Server 的安全](../../relational-databases/security/securing-sql-server.md)。  
   
     ```  
     USE master;  

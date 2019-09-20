@@ -1,7 +1,7 @@
 ---
 title: 圖形邊緣條件約束 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731059"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873878"
 ---
 # <a name="edge-constraints"></a>邊緣條件約束
 
@@ -48,6 +48,14 @@ ms.locfileid: "67731059"
 ### <a name="indexes-on-edge-constraints"></a>邊緣條件約束的索引
 
 建立邊緣條件約束並不會自動在邊緣資料表的 `$from_id` 和 `$to_id` 資料行上建立對應的索引。 如果您有點查閱查詢或 OLTP 工作負載，則建議在 `$from_id` 和 `$to_id` 配對上手動建立索引。
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>邊緣條件約束的 ON DELETE 參考動作
+邊緣條件約束串聯式動作可讓使用者定義當使用者刪除指定邊緣所連接節點時，資料庫引擎將採取的動作。 可以定義下列參考動作：  
+*NO ACTION*   
+當您嘗試刪除具有連接邊緣的節點時，資料庫引擎會引發錯誤。  
+
+*CASCADE*   
+從資料庫刪除節點時，將會刪除連接邊緣。  
 
 ## <a name="working-with-edge-constraints"></a>使用邊緣條件約束
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>在新的邊緣資料表上定義參考動作 
+
+下列範例會在 **bought** 邊緣資料表上建立邊緣條件約束，並定義 ON DELETE CASCADE 參考動作。 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -248,9 +284,10 @@ DROP CONSTRAINT EC_BOUGHT;
 
 若要使用 Transact-SQL 來修改邊緣條件約束，您必須先刪除現有的邊緣條件約束，然後使用新的定義來重新建立。
 
+
 ### <a name="view-edge-constraints"></a>檢視邊緣條件約束
 
-[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱[中繼資料可見性組態](../../relational-databases/security/metadata-visibility-configuration.md)。
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
 
 此範例會針對 tempdb 資料庫中的 `bought` 邊緣資料表傳回所有邊緣條件約束和其屬性。  
 
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>相關工作
 
+[CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 如需 SQL Server 中圖形技術的相關資訊，請參閱 [SQL Server 和 Azure SQL Database 的圖表處理](../graphs/sql-graph-overview.md?view=sql-server-2017)。
+

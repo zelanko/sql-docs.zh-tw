@@ -10,266 +10,163 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2a8ee23c8eb8a51328ccc9808207f04823e9b980
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: dbfcee4bd7ceafb7d09f9719744e5d1e89776499
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176302"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383763"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>將多個資料庫備份至 Azure Blob 儲存體服務 - Powershell
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主題提供範例指令碼，可讓您使用 PowerShell Cmdlet，自動執行 Azure Blob 儲存體服務的備份作業。  
+本主題提供範例指令碼，可讓您使用 PowerShell Cmdlet，自動執行 Azure Blob 儲存體服務的備份作業。  
   
-## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>備份與還原之 PowerShell 指令程式的概觀  
- **Backup-SqlDatabase** 和 **Restore-SqlDatabase** 是可用於備份和復原作業的兩個主要 Cmdlet。 此外，自動操作 Azure Blob 儲存體備份作業可能還需要其他 Cmdlet，例如 **SqlCredential** Cmdlet。以下是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所提供可用於備份及還原之 PowerShell Cmdlet 的清單︰  
-  
- Backup-SqlDatabase  
- 此指令程式可用於建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。  
-  
- Restore-SqlDatabase  
- 可用於還原資料庫。  
-  
- New-SqlCredential  
- 此 Cmdlet 可用於建立 SQL Server 備份至 Azure 儲存體時所使用的 SQL 認證。 如需有關認證及其在 SQL Server 備份與還原中之用法的詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
-  
- Get-SqlCredential  
- 此指令程式可用於擷取認證物件及其屬性。  
-  
- Remove-SqlCredential  
- 刪除 SQL 認證物件  
-  
- Set-SqlCredential  
- 此指令程式可用於變更或設定 SQL 認證物件的屬性。  
+## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>備份與還原之 PowerShell 指令程式的概觀
+
+**Backup-SqlDatabase** 和 **Restore-SqlDatabase** 是可用於備份和復原作業的兩個主要 Cmdlet。
+
+此外，您也可能需要其他 Cmdlet，才能將備份自動化至 Windows Azure Blob 儲存體，例如 **SqlCredential** Cmdlet 的集合。
+
+如需所有可用 Cmdlet 的清單，請參閱 [SqlServer Cmdlet](/powershell/module/sqlserver)。
   
 > [!TIP]  
->  Credential Cmdlet 是用於備份及還原至 Azure Blob 儲存體的情節。  
+> **SqlCredential** Cmdlet 是用於備份及還原至 Azure Blob 儲存體的情節。 如需認證及其用法的詳細資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
   
-### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>多個資料庫的 PowerShell，多個執行個體的備份作業  
- 下列各節包含多種作業的指令碼，例如建立多個 SQL Server 執行個體的 SQL 認證、備份 SQL Server 執行個體中的所有使用者資料庫等等。 您可以根據環境的需求，利用這些指令碼自動化或排程備份作業。 此處所提供的指令碼僅為範例，您可以針對您的環境的需要而修改或擴充。  
+### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>多個資料庫的 PowerShell，多個執行個體的備份作業
 
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+下列各節包含多種作業的指令碼，例如建立多個 SQL Server 執行個體的 SQL 認證、備份 SQL Server 執行個體中的所有使用者資料庫等等。 您可以根據環境的需求，利用這些指令碼自動化或排程備份作業。 此處所提供的指令碼僅為範例，您可以針對您的環境的需要而修改或擴充。  
+  
+以下是範例指令碼的注意事項︰  
+  
+- SQL Server PowerShell 會實作 Cmdlet 以巡覽路徑結構，而路徑結構代表 PowerShell 提供者所支援物件的階層。 在您導覽至路徑中的節點時，可以使用其他 Cmdlet 來執行目前物件的基本作業。
 
- 以下是範例指令碼的注意事項︰  
+  如需詳細資訊，請參閱 [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)。
+
+- **Get-ChildItem** Cmdlet：**Get-ChildItem** 傳回的資訊內容，視在 SQL Server PowerShell 路徑中的位置而定。 例如，如果位置在電腦層級，此指令程式會傳回所有安裝在電腦上的 SQL Server Database Engine 執行個體。 或者，如果位置在物件層級 (例如資料庫)，則其會傳回資料庫物件的清單。 **Get-ChildItem** Cmdlet 預設不會傳回任何系統物件。 使用 `–Force` 參數來查看系統物件。
+
+- Azure 儲存體帳戶和 SQL 認證都是 Azure Blob 儲存體服務所有備份和還原作業所需的必要條件。
   
-1.  **瀏覽 SQL Server PowerShell 路徑：** Windows PowerShell 實作 Cmdlet 以瀏覽路徑結構，而路徑結構代表 PowerShell 提供者所支援物件的階層。 在您導覽至路徑中的節點時，可以使用其他 Cmdlet 來執行目前物件的基本作業。  
+### <a name="create-a-sql-credential-on-all-instances-of-sql-server"></a>建立所有 SQL Server 執行個體的 SQL 認證
+
+下列指令碼可用來建立電腦上所有 SQL Server 執行個體的一般 SQL 認證。 如果電腦上的某一個執行個體目前已有同名的認證，此指令碼會顯示錯誤並繼續。  
   
-2.  **Get-ChildItem** Cmdlet：**Get-ChildItem** 傳回的資訊內容，視在 SQL Server PowerShell 路徑中的位置而定。 例如，如果位置在電腦層級，此指令程式會傳回所有安裝在電腦上的 SQL Server Database Engine 執行個體。 又例如，如果位置在物件層級 (例如資料庫)，此指令程式會傳回資料庫物件的清單。  **Get-ChildItem** Cmdlet 預設不會傳回任何系統物件。  使用 -Force 參數即可看到系統物件。  
-  
-     如需詳細資訊，請參閱 [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)。  
-  
-3.  雖然您可以利用變更變數值，嘗試個別變更每一個程式碼範例，但您還是必須針對 Azure Blob 儲存體服務之備份及還原作業，建立其必要條件：Azure Blob 儲存體帳戶與 SQL 認證。  
-  
-### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>建立所有 SQL Server 執行個體的 SQL 認證  
- 下列兩個範例指令碼都會為電腦上所有的 SQL Server 執行個體上建立 SQL 認證 "mybackupToURL"。 第一個範例比較簡單而且會建立認證，但不會設陷例外狀況。  例如，如果電腦上的某一個執行個體目前已有同名的認證，此指令碼將會失敗。 第二個範例會設陷錯誤，並允許指令碼繼續執行。  
-  
-```  
-  
+```powershell
+# load the sqlps module
 import-module sqlps  
   
-# create variables  
-$storageAccount = "mystorageaccount"  
-$storageKey = "<storageaccesskeyvalue>"  
-$secureString = convertto-securestring $storageKey  -asplaintext -force  
-$credentialName = "mybackuptoURL"  
+# set parameters
+$sqlPath = "sqlserver:\sql\$($env:COMPUTERNAME)"
+$storageAccount = "<myStorageAccount>"  
+$storageKey = "<myStorageAccessKey>"  
+$secureString = ConvertTo-SecureString $storageKey -AsPlainText -Force  
+$credentialName = "myCredential-$(Get-Random)"
+
+Write-Host "Generate credential: " $credentialName
   
-#cd to computer level  
-cd SQLServer:\SQL\$env:COMPUTERNAME  
-# get the list of instances  
-$instances = Get-childitem  
-#pipe the instances to new-sqlcredentail cmdlet to create SQL credential  
-$instances | new-sqlcredential -Name $credentialName  -Identity $storageAccount -Secret $secureString  
+#cd to sql server and get instances  
+cd $sqlPath
+$instances = Get-ChildItem
+
+#loop through instances and create a SQL credential, output any errors
+foreach ($instance in $instances)  {
+    try {
+        $path = "$($sqlPath)\$($instance.DisplayName)\credentials"
+        New-SqlCredential -Name $credentialName -Identity $storageAccount -Secret $secureString -Path $path -ea Stop | Out-Null
+        Write-Host "...generated credential $($path)\$($credentialName)."  }
+    catch { Write-Host $_.Exception.Message } }
+```
+
+> [!NOTE]
+> `-ea Stop | Out-Null` 陳述式用於使用者定義的例外狀況輸出。 如果您偏好預設的 PowerShell 錯誤訊息，則可以移除此陳述式。 
+
+### <a name="remove-a-sql-credential-from-all-instances-of-sql-server"></a>移除所有 SQL Server 執行個體的 SQL 認證
+
+下列指令碼可用來移除電腦上所安裝所有 SQL Server 執行個體的特定認證。 如果特定執行個體的認證不存在，則系統會顯示錯誤訊息，並繼續執行指令碼，直到檢查過所有執行個體為止。  
+  
+```powershell
+import-module sqlps
+
+$sqlPath = "sqlserver:\sql\$($env:COMPUTERNAME)"
+$credentialName = "<myCredential>"
+
+Write-Host "Delete credential: " $credentialName
+
+cd $sqlPath
+$instances = Get-ChildItem
+
+#loop through instances and delete a SQL credential
+foreach ($instance in $instances)  {
+    try {
+        $path = "$($sqlPath)\$($instance.DisplayName)\credentials\$($credentialName)"
+        Remove-SqlCredential -Path $path -ea Stop | Out-Null
+        Write-Host "...deleted credential $($path)."  }
+    catch { Write-Host $_.Exception.Message } }
 ```  
   
-```  
+### <a name="full-backup-for-all-databases"></a>針對所有資料庫進行完整備份
+
+下列指令碼會為電腦上的所有資料庫建立備份。 這包括使用者資料庫和 **msdb** 系統資料庫。 此指令碼會篩選 **tempdb** 和 **model** 系統資料庫。  
   
+```powershell
 import-module sqlps  
-  
-# set the parameter values  
-  
-$storageAccount = "mystorageaccount"  
-$storageKey = "<storageaccesskeyvalue>"  
-$secureString = convertto-securestring $storageKey  -asplaintext -force  
-$credentialName = "mybackuptoURL"  
-  
-#cd to computer level  
-cd SQLServer:\SQL\$env:COMPUTERNAME  
-# get the list of instances  
-$instances = Get-childitem  
-#loop through instances and create a SQL credential, output any errors  
-foreach ($instance in $instances)  
-{  
-    Try  
-{  
-     new-sqlcredential -Name $credentialName -path "SQLServer:\SQL\$($instance.name)" -Identity $storageAccount -Secret $secureString -ea Stop   
-}  
-Catch [Exception]  
-    {  
-  
-            write-host "instance - $($instance.name): "$_.Exception.Message  
-  
-    }  
-  
- }  
-  
-```  
-  
-### <a name="remove-a-sql-credential-from-all-the-instances-of-sql-server"></a>移除所有 SQL Server 執行個體的 SQL 認證  
- 此指令碼可用於移除電腦上所安裝之所有 SQL Server 執行個體的特定認證。 如果指定執行個體的認證物件不存在，將會顯示錯誤訊息，而指令碼將會繼續執行，直到檢查過所有執行個體為止。  
-  
-```  
-  
-import-module sqlps  
-  
-cd SQLServer:\SQL\$env:COMPUTERNAME  
-$credentialName = "mybackuptoURL"  
-  
-$instances = Get-childitem  
-  
-foreach ($instance in $instances)  
-   {   
-    try  
-        {  
-            $path = "SQLServer:\SQL\$($instance.name)\credentials\$credentialName"   
-            Remove-sqlCredential -path $path -ea stop   
-         }  
-         catch [Exception]  
-         {  
-            write-host $_.Exception.Message  
-  
-        }  
-  
-    }  
-```  
-  
-### <a name="full-database-backup-for-all-databases-including-system-databases"></a>所有資料庫的完整資料庫備份 (包括系統資料庫)  
- 下列指令碼會為電腦上的所有資料庫建立備份。 這包括使用者資料庫和 **msdb** 系統資料庫。 此指令碼會篩選 **tempdb** 和 **model** 系統資料庫。  
-  
-```  
-  
-import-module sqlps  
-# set the parameter values  
-$storageAccount = "mystorageaccount"  
-$blobContainer = "privatecontainertest"  
+
+$sqlPath = "sqlserver:\sql\$($env:COMPUTERNAME)"
+$storageAccount = "<myStorageAccount>"  
+$blobContainer = "<myBlobContainer>"  
 $backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
-$credentialName = "mybackuptoURL"  
+$credentialName = "<myCredential>"
+
+Write-Host "Backup database: " $backupUrlContainer
   
-# cd to computer level  
-  
-cd SQLServer:\SQL\$env:COMPUTERNAME  
-$instances = Get-childitem   
-# loop through each instances and backup up all the  databases -filter out tempdb and model databases  
-  
- foreach ($instance in $instances)  
- {  
-   $path = "sqlserver:\sql\$($instance.name)\databases"  
-   $alldatabases = get-childitem -Force -path $path |Where-object {$_.name -ne "tempdb" -and $_.name -ne "model"}   
-  
-   $alldatabases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On -script   
- }  
-  
+cd $sqlPath
+$instances = Get-ChildItem
+
+#loop through instances and backup all databases (excluding tempdb and model)
+foreach ($instance in $instances)  {
+    $path = "$($sqlPath)\$($instance.DisplayName)\databases"
+    $databases = Get-ChildItem -Force -Path $path | Where-object {$_.name -ne "tempdb" -and $_.name -ne "model"}
+
+    foreach ($database in $databases) {
+        try {
+            $databasePath = "$($path)\$($database.Name)"
+            Write-Host "...starting backup: " $databasePath
+            Backup-SqlDatabase -Database $database.Name -Path $path -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On
+            Write-Host "...backup complete."  }
+        catch { Write-Host $_.Exception.Message } } }
 ```  
   
-### <a name="full-database-backup-for-all-user-databases"></a>所有使用者資料庫的完整資料庫備份  
- 下列指令碼可用於備份電腦上所有 SQL Server 執行個體的所有使用者資料庫。  
+### <a name="full-backup-for-system-databases-only-on-a-specific-instance-of-sql-server"></a>僅針對特定 SQL Server 執行個體的系統資料庫進行完整備份
+
+完整的指令碼可用來備份具名 SQL Server 執行個體的 **master** 和 **msdb** 資料庫。 您可以變更執行個體參數值，以將相同的指令碼用於任何執行個體。 SQL Server 的預設執行個體名為 `DEFAULT`。
   
-```  
-  
-import-module sqlps   
-  
-$storageAccount = "mystorageaccount"  
-$blobContainer = "privatecontainertest"  
-$backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
-$credentialName = "mybackuptoURL"  
-  
-# cd to computer level  
-  
-cd SQLServer:\SQL\$env:COMPUTERNAME  
-$instances = Get-childitem   
-# loop through each instances and backup up all the user databases  
- foreach ($instance in $instances)  
- {  
-    $databases = dir "sqlserver:\sql\$($instance.name)\databases"  
-   $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On   
- }  
-```  
-  
-### <a name="full-database-backup-for-master-and-msdb-system-databases-on-all-the-instances-of-sql-server"></a>所有 SQL Server 執行個體上之 Master 和 MSDB 資料庫 (系統資料庫) 的完整資料庫備份  
- 下列指令碼可用於備份電腦上安裝之所有 SQL Server 執行個體的 **master** 和 **msdb** 資料庫。  
-  
-```  
-  
+```powershell
 import-module sqlps  
-  
-$storageAccount = "mystorageaccount"  
-$blobContainer = "privatecontainertest"  
+
+$sqlPath = "sqlserver:\sql\$($env:COMPUTERNAME)"
+$instanceName = "DEFAULT"
+$storageAccount = "<myStorageAccount>"  
+$blobContainer = "<myBlobContainer>"  
 $backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
-$credentialName = "mybackupToUrl"  
-$sysDbs = "master", "msdb"  
+$credentialName = "<myCredential>"
+
+Write-Host "Backup database: " $instanceName " to " $backupUrlContainer
   
-#cd to computer level  
-cd SQLServer:\SQL\$env:COMPUTERNAME  
-$instances = Get-childitem   
-foreach ($instance in $instances)  
- {  
-      foreach ($s in $sysdbs)  
-     {  
-Backup-SqlDatabase -Database $s -path "sqlserver:\sql\$($instance.name)" -BackupContainer  $backupUrlContainer -SqlCredential $credentialName -Compression On   
-}    
- }  
-  
+cd "$($sqlPath)\$($instanceName)"
+
+#loop through instance and backup specific databases
+$databases = "master", "msdb"  
+foreach ($database in $databases) {
+    try {
+        Write-Host "...starting backup: " $database
+        Backup-SqlDatabase -Database $database -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On
+        Write-Host "...backup complete." }
+    catch { Write-Host $_.Exception.Message } }
 ```  
   
-### <a name="full-database-backup-for-all-user-databases-on-an-instance-of-sql-server"></a>SQL Server 執行個體上之所有使用者資料庫的完整資料庫備份  
- 下列指令碼可用於只備份具名 SQL Server 執行個體上的使用者資料庫。 只要變更 $srvPath 參數值，電腦上的預設執行個體即可使用相同的指令碼。  
-  
-```  
-  
-import-module sqlps  
-  
-$storageAccount = "mystorageaccount"  
-$blobContainer = "privatecontainertest"  
-$backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
-$srvPath = "SQLServer:\SQL\$env:COMPUTERNAME\INSTANCENAME"  # for default instance, the $srvpath variable is "SQLServer:\SQL\$env:COMPUTERNAME\DEFAULT"  
-$credentialName = "mybackupToUrl"  
-  
-#cd to computer level  
-cd SQLServer:\SQL\$env:COMPUTERNAME  
-  
-#retrieves the database objects for a specific instance  
-$databases = dir $srvPath\databases  
-  
-#backup all the user databases  
-$databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On  
-```  
-  
-### <a name="full-database-backup-for-only-system-databases-master-and-msdb-on-an-instance-of-sql-server"></a>僅限 SQL Server 執行個體上之系統資料庫 (Master 和 MSDB) 的完整資料庫備份  
- 完整的指令碼可用來備份具名 SQL Server 執行個體的 **master** 和 **msdb** 資料庫。 只要變更 $srvPath 參數值，電腦上的預設執行個體即可使用相同的指令碼。  
-  
-```  
-  
-import-module sqlps  
-  
-$storageAccount = "mystorageaccount"  
-$blobContainer = "privatecontainertest"  
-$backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
-$srvPath = "SQLServer:\SQL\$env:COMPUTERNAME\INSTANCENAME" # for default instance, the $srvpath variable is "SQLServer:\SQL\$env:COMPUTERNAME\DEFAULT"  
-$credentialName = "mybackupToUrl"  
-  
-#navigate to instance level  
-cd $srvPath  
-  
-$sysDbs = "master", "msdb"  
-foreach ($s in $sysDbs)   
-{  
-Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On  
-}  
-  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
- [SQL Server 備份至 URL 的最佳作法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+[使用 Azure Blob 儲存體服務的 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
+
+[SQL Server 備份至 URL 的最佳作法和疑難排解](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

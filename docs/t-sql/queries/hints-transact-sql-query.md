@@ -1,7 +1,7 @@
 ---
 title: 查詢提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 09/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e319fb56760f78df56105873f26a9bbec004dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902006"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228408"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -218,17 +218,17 @@ NO_PERFORMANCE_SPOOL
   
 防止多工緩衝處理運算子加入查詢計劃 (需有多工緩衝處理才能保證有效的更新語意的計劃除外)。 在某些情況下，多工緩衝處理運算子可能會降低效能。 例如，多工緩衝處理會使用 tempdb，因此如果有許多並行查詢與多工緩衝處理作業一起執行，可能會發生 tempdb 競爭。  
   
-OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
 指示查詢最佳化工具在查詢進行編譯和最佳化時，使用特定的本機變數值。 只有在查詢最佳化期間，才使用這個值，在查詢執行期間，不使用這個值。  
   
-_@variable\_name_  
+_\@variable\_name_  
 這是查詢所用之本機變數的名稱，您可以指派這個本機變數的值來搭配使用 OPTIMIZE FOR 查詢提示。  
   
 _UNKNOWN_  
 指定查詢最佳化工具使用統計資料 (而非初始值) 來判斷查詢最佳化期間的區域變數值。  
   
 _literal\_constant_  
-這是指派給 _@variable\_name_ 以與 OPTIMIZE FOR 查詢提示搭配使用的常值常數值。 只有在查詢最佳化時才會使用 _literal\_constant_，此值不可作為查詢執行期間 _@variable\_name_ 的值使用。 _literal\_constant_ 可以是任何能以常值常數表示的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。 _literal\_constant_ 資料類型必須可以隱含地轉換為 _@variable\_name_ 在查詢中參考的資料類型。  
+這是指派給 _\@variable\_name_ 以與 OPTIMIZE FOR 查詢提示搭配使用的常值常數值。 只有在查詢最佳化時才會使用 _literal\_constant_，且此值不可作為查詢執行期間 _\@variable\_name_ 的值使用。 _literal\_constant_ 可以是任何能以常值常數表示的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。 _literal\_constant_ 資料類型必須可以隱含地轉換為 _\@variable\_name_ 在查詢中參考的資料類型。  
   
 OPTIMIZE FOR 可以抵制最佳化工具的預設參數偵測行為。 當您建立計畫指南時，也請使用 OPTIMIZE FOR。 如需詳細資訊，請參閱[重新編譯預存程序](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)。  
   
@@ -327,7 +327,7 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > 一些 USE HINT 提示可能會與在全域或工作階段層級啟用的追蹤旗標發生衝突，或與資料庫範圍設定的設定發生衝突。 在此情況下，查詢層級提示 (USE HINT) 一律優先。 如果 USE HINT 與其他查詢提示或在查詢層級啟用的追蹤旗標 (例如由 QUERYTRACEON 啟用) 發生衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在嘗試執行查詢時會產生錯誤。 
 
- USE PLAN N **'** _xml\_plan_ **'**      
+USE PLAN N'_xml\_plan_'  
  強制查詢最佳化工具針對 **'** _xml\_plan_ **'** 所指定的查詢使用現有查詢計劃。 USE PLAN 無法搭配 INSERT、UPDATE、MERGE 或 DELETE 陳述式一起指定。  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** 將指定資料表提示套用到與 _exposed\_object\_name_ 對應的資料表或檢視。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
@@ -366,7 +366,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
 您可以針對沒有任何現有資料表提示的查詢，指定 INDEX、FORCESCAN 和 FORCESEEK 資料表提示作為查詢提示。 您也可以使用它們分別取代查詢中的現有 INDEX、FORCESCAN 或 FORCESEEK 提示。 
 
-除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 在此情況下，還必須指定相符的提示作為查詢提示。 請在 OPTION 子句中使用 TABLE HINT，以指定相符的提示作為查詢提示。 此規格會保留查詢的語意。 例如，如果查詢包含資料表提示 NOLOCK，則計劃指南的 **@hints** 參數中的 OPTION 子句也必須包含 NOLOCK 提示。 請參閱＜範例 K＞。 
+除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 在此情況下，還必須指定相符的提示作為查詢提示。 請在 OPTION 子句中使用 TABLE HINT，以指定相符的提示作為查詢提示。 此規格會保留查詢的語意。 例如，如果此查詢包含資料表提示 NOLOCK，則計劃指南 **\@hints** 參數中的 OPTION 子句也必須包含 NOLOCK 提示。 請參閱＜範例 K＞。 
 
 在幾個案例中會發生錯誤 8072。 其中一個案例是當您在沒有相符查詢提示的 OPTION 子句中使用 TABLE HINT，指定 INDEX、FORCESCAN 或 FORCESEEK 以外的資料表提示。 第二個案例是使用其他方式。 此錯誤指出 OPTION 子句可能會造成查詢語意的變更，因而查詢失敗。  
   

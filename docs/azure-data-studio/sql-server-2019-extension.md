@@ -3,19 +3,19 @@ title: SQL Server 2019 延伸模組 (預覽)
 titleSuffix: Azure Data Studio
 description: 適用於 Azure Data Studio 的 SQL Server 2019 Preview 延伸模組
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494046"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878620"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 延伸模組 (預覽)
 
@@ -27,11 +27,11 @@ SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019]
 
 1. 將 SQL Server 2019 延伸模組 (預覽) .vsix 檔案下載到本機目錄：
 
-   |平台|下載|發行日期|Version
+   |平台|Download|發行日期|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|2019 年 8 月 15 日 |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|2019 年 8 月 15 日 |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|2019 年 8 月 15 日 |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|2019 年 9 月 11 日 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019 年 9 月 11 日 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019 年 9 月 11 日 |0.16.0
 
 1. 在 Azure Data Studio 的 [檔案]  功能表中，選擇 [從 VSIX 套件安裝延伸模組]  ，然後選取已下載的 .vsix 檔案。
 
@@ -42,6 +42,10 @@ SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019]
 1. 重新載入之後，此延伸模組將會安裝相依性。 您可以在 [輸出] 視窗中查看進度，這可能需要幾分鐘的時間。
 
 1. 當相依性完成安裝之後，關閉並重新開啟 Azure Data Studio。 在您重新啟動 Azure Data Studio 之前，將無法使用 **SQL Server 巨量資料叢集**連線類型。
+
+## <a name="changes-in-release-016"></a>0\.16 版中的變更
+* 建立外部資料表精靈：
+  * 已改善在物件對應頁面上載入資料表和檢視時的錯誤處理。
 
 ## <a name="changes-in-release-015"></a>0\.15 版中的變更
 * 建立外部資料表精靈：

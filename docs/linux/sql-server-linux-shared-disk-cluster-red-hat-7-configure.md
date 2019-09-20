@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810977"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809785"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用磁碟叢集
 
@@ -38,7 +38,7 @@ ms.locfileid: "68810977"
 
 下列各節將逐步解說設定容錯移轉叢集解決方案的步驟。 
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成下列端對端情節，您需要兩部電腦來部署兩個節點叢集，以及另一個伺服器來設定 NFS 伺服器。 以下步驟概述這些伺服器的設定方式。
 
@@ -308,6 +308,10 @@ ms.locfileid: "68810977"
    sudo yum install mssql-server-ha
    ```
 
+## <a name="configure-fencing-agent"></a>設定隔離代理程式
+
+STONITH 裝置提供隔離代理程式。 [在 Azure 的 Red Hat Enterprise Linux 中設定 Pacemaker](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) 提供範例，說明如何在 Azure 中為此叢集建立 STONITH 裝置。 修改環境的指示。
+
 ## <a name="create-the-cluster"></a>建立叢集 
 
 1. 在其中一個節點上建立叢集。
@@ -316,15 +320,6 @@ ms.locfileid: "68810977"
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
-   ```
-
-   > RHEL HA 附加元件具有適用於 VMWare 和 KVM 的隔離代理程式。 隔離必須在所有其他的 Hypervisor 上停用。 不建議在生產環境中停用隔離代理程式。 截至時間範圍，HyperV 或雲端環境沒有防護代理程式。 如果您正在執行其中一項設定，則必須停用隔離。 \*這不建議用於生產系統中！* 
-
-   下列命令會停用隔離代理程式。
-
-   ```bash
-   sudo pcs property set stonith-enabled=false
-   sudo pcs property set start-failure-is-fatal=false
    ```
 
 2. 設定 SQL Server、檔案系統和虛擬 IP 資源的叢集資源，並將設定推送至叢集。 您需要下列資訊：

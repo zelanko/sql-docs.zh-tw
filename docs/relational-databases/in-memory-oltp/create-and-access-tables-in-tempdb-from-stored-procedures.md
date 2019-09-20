@@ -11,12 +11,12 @@ ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0db885db7e3138b4a863dc93a022950a8a30a5ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14f1d7712973c2c51812a8606b1fc4c1ba15264d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915321"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846795"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>從預存程序建立及存取 TempDB 中的資料表
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "67915321"
 
 如需暫存資料表記憶體最佳化及資料表變數案例的詳細資料，請參閱：[使用記憶體最佳化加快暫存資料表與資料表變數的速度](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)。
   
-  下列範例示範如何使用 **@OrderQuantityByProduct** 類型的 **@OrderQuantityByProduct**資料表變數取代暫存資料表 (其中含有 id、ProductID、Quantity 這三個資料行)：  
+  下列範例示範如何使用 **dbo.OrderQuantityByProduct** 類型的 **\@OrderQuantityByProduct** 資料表變數取代暫存資料表 (其具有 id、ProductID、Quantity 這三個資料行)：  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

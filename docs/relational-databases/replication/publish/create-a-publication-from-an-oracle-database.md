@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 448870b31500b0a1f214b215d342ce27e3c36b61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b62c9aa125bf249ed3dc895055030feb8e178b1
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907907"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284010"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>從 Oracle 資料庫建立發行集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,32 +117,32 @@ ms.locfileid: "67907907"
   
 2.  如果遠端散發者不存在，請設定遠端散發者。 如需詳細資訊，請參閱 [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md)。  
   
-3.  在 Oracle 發行者將使用的遠端散發者端，執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)。 針對 **@publisher** 指定 Oracle 資料庫執行個體的透明網路基質 (Transparent Network Substrate，TNS) 名稱，以及針對 **@publisher_type** 或 Replication Management Objects (RMO)，在 **ORACLE** 指定 **@publisher_type** 中從 Oracle 資料庫建立發行集。 `Specify` 指定當從 Oracle 發行者連接到遠端 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者時所使用的安全性模式，如下列其中一項：  
+3.  在 Oracle 發行者將使用的遠端散發者端，執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 資料庫執行個體的透明網路基質 (Transparent Network Substrate，TNS) 名稱，並針對 **\@publisher_type** 指定 **ORACLE** 或 **ORACLE GATEWAY** 值。 `Specify` 指定當從 Oracle 發行者連接到遠端 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者時所使用的安全性模式，如下列其中一項：  
   
-    -   若要使用預設值 Oracle 標準驗證，請將 **@security_mode** 指定 **@security_mode** 的值、將 **@login** 指定為組態設定期間在 Oracle 發行者上建立之複寫管理使用者結構描述的登入，並將 **@password** 中從 Oracle 資料庫建立發行集。  
+    -   若要使用預設值 Oracle 標準驗證，請將 **\@security_mode** 指定為 **0** 值、將 **\@login** 指定為設定期間您在 Oracle 發行者上所建立複寫管理使用者結構描述的登入，並為 **\@password** 指定密碼。  
   
         > [!IMPORTANT]  
         >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您將認證儲存在指令碼檔案中，必須保護該檔案免於未經授權的存取。  
   
-    -   若要使用「Windows 驗證」，請將 **@security_mode** 指定 **@security_mode** 中從 Oracle 資料庫建立發行集。  
+    -   若要使用 Windows 驗證，請將 **\@security_mode** 指定為 **1** 值。  
   
         > [!NOTE]  
         >  若要使用「Windows 驗證」，必須使用 Windows 認證將 Oracle 伺服器設定為允許連接 (如需詳細資訊，請參閱 Oracle 文件集)；並且您目前的登入帳戶必須與您為複寫管理使用者結構描述指定的 Microsoft Windows 帳戶相同。  
   
 4.  針對發行集資料庫建立記錄讀取器代理程式作業。  
   
-    -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在散發資料庫上由 Oracle 發行者使用的散發者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。 針對 **@publisher** 。 如果結果集是空的，就必須建立記錄讀取器代理程式作業。  
+    -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在散發資料庫上由 Oracle 發行者使用的散發者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。 針對 **\@publisher** 指定 Oracle 發行者的名稱。 如果結果集是空的，就必須建立記錄讀取器代理程式作業。  
   
     -   如果記錄讀取器代理程式作業已存在發行集資料庫中，請繼續進行步驟 5。  
   
-    -   在散發資料庫上由 Oracle 發行者使用的散發者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 針對 **@job_login** ＞和＜ **@job_password** 中從 Oracle 資料庫建立發行集。  
+    -   在散發資料庫上由 Oracle 發行者使用的散發者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 針對 **\@job_login** 和 **\@job_password** 指定此代理程式執行時所用的 Windows 認證。  
   
         > [!NOTE]  
-        >  [完整] **@job_login** 參數必須符合步驟 3 中所提供的登入。 請勿提供發行者安全性資訊。 記錄讀取器代理程式會使用步驟 3 中所提供的安全性資訊連接到發行者。  
+        >  **\@job_login** 參數必須符合步驟 3 中所提供的登入。 請勿提供發行者安全性資訊。 記錄讀取器代理程式會使用步驟 3 中所提供的安全性資訊連接到發行者。  
   
 5.  在散發資料庫的散發者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 來建立發行集。 如需詳細資訊，請參閱 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
-6.  在散發資料庫的散發者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **@publication** 指定步驟 4 中所使用的發行集名稱，以及針對 **@job_name** ＞和＜ **@password** 中從 Oracle 資料庫建立發行集。 若要在連接到發行者時使用「Oracle 標準驗證」，您也必須針對 **@security_mode** 指定 **@publisher_security_mode** 的值，以及針對 **@publisher_login** ＞和＜ **@publisher_password** 中從 Oracle 資料庫建立發行集。 這麼做會為發行集建立快照集代理程式作業。  
+6.  在散發資料庫的散發者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 針對 **\@publication** 指定步驟 4 中所使用的發行集名稱，並針對 **\@job_name** 和 **\@password** 指定執行快照集代理程式時所使用的 Windows 認證。 若要在連接到發行者時使用 Oracle 標準驗證，您也必須針對 **\@publisher_security_mode** 指定 **0** 值，並針對 **\@publisher_login** 和 **\@publisher_password** 指定 Oracle 登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

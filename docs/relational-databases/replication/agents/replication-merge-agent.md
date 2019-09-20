@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085947"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846743"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 若要限制上傳，請改用 **@subscriber_upload_options** 的 **sp_addmergearticle** 。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 若要限制上傳，請改用 **sp_addmergearticle** 的 **\@subscriber_upload_options**。  
   
  指定同步處理期間資料交換的類型，它可以是下列其中一個值：  
   
@@ -320,7 +320,7 @@ replmerg [-?]
  指定合併代理程式從來源列舉變更所用的來源執行緒數目。 在上傳期間，來源是訂閱者，而在下載期間，來源則是發行者。 預設為 **3**。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 這是當執行中並行合併處理序數目到達 **@max_concurrent_merge** 的 **@max_concurrent_merge**。 如果已到達最大秒數而且合併代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
+ 這是當執行中並行合併處理序數目到達 **sp_addmergepublication** 的 **\@max_concurrent_merge** 屬性所設定的限制時，合併代理程式等候的最大秒數。 如果已到達最大秒數而且合併代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  如果 **SubscriberType** 是 **2** (允許連接至沒有 ODBC 資料來源名稱 (DSN) 的 Jet 資料庫)，這就是 Jet 資料庫 (.mdb 檔) 的名稱。  

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 6e1291537495f6c59295d607203ff4c8a450008b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110277"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304802"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -732,9 +732,6 @@ OFF
 
 CLEAR         
 移除查詢存放區的內容。
-
-> [!NOTE]
-> 針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，您必須從使用者資料庫中執行 `ALTER DATABASE SET QUERY_STORE`。 不支援從另一個資料倉儲執行個體執行陳述式。
 
 OPERATION_MODE {READ_ONLY |READ_WRITE}         
 描述查詢存放區的作業模式。 
@@ -2911,20 +2908,43 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
-|<snapshot_option>
+    <auto_option>
+  | <db_encryption_option>
+  | <query_store_options>
+  | <result_set_caching>
+  | <snapshot_option>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<auto_option> ::=
 {
-RESULT_SET_CACHING {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON }
 }
 
-<snapshot_option>::=
+<db_encryption_option> ::=
 {
-READ_COMMITTED_SNAPSHOT {ON | OFF }
+    ENCRYPTION { ON | OFF }
 }
+
+<query_store_option> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON
+    }
+}
+
+<result_set_caching_option> ::=
+{
+    RESULT_SET_CACHING { ON | OFF }
+}
+
+<snapshot_option> ::=
+{
+    READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 
 ```
@@ -2935,8 +2955,47 @@ READ_COMMITTED_SNAPSHOT {ON | OFF }
 
 這是要修改之資料庫的名稱。
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-**適用於** Azure SQL 資料倉儲 (預覽)
+**<auto_option> ::=**
+
+控制自動選項。
+
+AUTO_CREATE_STATISTICS { ON | OFF } ON 查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計劃和查詢效能。 這些單一資料行統計資料都是在查詢最佳化工具編譯查詢時建立的。 它只會針對尚未成為現有統計資料物件之第一個資料行的資料行建立單一資料行統計資料。
+
+預設值是 ON。 我們建議您針對大部分資料庫使用預設設定。
+
+OFF 查詢最佳化工具不會在編譯查詢時，針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
+您可以檢查 sys.databases 目錄檢視中 is_auto_create_stats_on 資料行來判斷這個選項的狀態。 您也可以檢查 DATABASEPROPERTYEX 函式的 IsAutoCreateStatistics 屬性來判斷狀態。
+如需詳細資訊，請參閱＜統計資料＞中的＜使用資料庫範圍統計資料選項＞一節。
+
+**<db_encryption_option> ::=**
+
+控制資料庫加密狀態。
+
+ENCRYPTION {ON | OFF} ON 將資料庫設為加密。
+
+OFF 將資料庫設為不加密。
+
+如需資料庫加密的詳細資訊，請參閱＜透明資料加密＞和＜Azure SQL Database 的透明資料加密＞。
+
+在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新的檔案群組都會繼承加密的屬性。 如果資料庫內有任何檔案群組設定為 READ ONLY，則資料庫加密作業將會失敗。
+您可以使用 sys.dm_database_encryption_keys 動態管理檢視來查看資料庫的加密狀態，以及加密掃描的狀態。
+
+**\<query_store_option> ::=**
+
+ON | OFF   
+控制此資料倉儲中是否已啟用查詢存放區。     
+
+ON         
+啟用查詢存放區。
+
+OFF         
+停用查詢存放區。 OFF 是預設值。
+
+> [!NOTE]
+> 針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，您必須從使用者資料庫中執行 `ALTER DATABASE SET QUERY_STORE`。 不支援從另一個資料倉儲執行個體執行陳述式。
+
+**\<result_set_caching_option> ::=**    
+**適用於**：Azure SQL 資料倉儲 (預覽)
 
 此命令必須在連線到 `master` 資料庫時執行。  對此資料庫設定的變更會立即生效。  儲存體費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 `sys.databases` 中引進了新資料行 is_result_set_caching_on，用來顯示資料庫的結果快取設定。  
 
@@ -2954,22 +3013,7 @@ OFF
 command|相似|%DWResultCacheDb%|
 | | |
 
-
-<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
-**適用於** Azure SQL 資料倉儲 (預覽)
-
-ON 會啟用資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
-
-OFF 會關閉資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
-
-開啟或關閉資料庫的 READ_COMMITTED_SNAPSHOT，將會終止此資料庫的所有開放連線。  建議您在資料庫維護期間或等到資料庫沒有使用中的連線再進行此變更，除了執行 ALTER DATABSE 命令的連線以外。  資料庫不一定要處於單一使用者模式。  不支援變更工作階段層級的 READ_COMMITTED_SNAPSHOT 設定。  若要確認資料庫的這項設定，請檢查 sys.databases 中的 is_read_committed_snapshot_on 資料行。
-
-在已啟用 READ_COMMITTED_SNAPSHOT 的資料庫中，如果有多個資料版本存在，查詢可能會遭遇較低的效能。 如果這些交易的資料變更會封鎖版本清除，則長時間開啟的交易也會導致資料庫大小增加。  
-
-
-
-
-## <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Remarks
 
 如果符合下列所有需求，則會對查詢重複使用快取結果集：
 
@@ -2979,6 +3023,21 @@ OFF 會關閉資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
 
 一旦開啟資料庫的結果集快取功能，除了具有非決定性函數 (例如 DateTime.Now()) 的查詢以外，會快取查詢的其他全部結果，直到快取滿為止。   具有大型結果集 (例如 > 1 百萬個資料列) 的查詢在第一次執行時，可能會在建立結果快取時，出現效能較低的情形。
 
+**<snapshot_option> ::=**
+
+計算交易隔離等級。
+
+READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**適用於**：Azure SQL 資料倉儲 (預覽)
+
+ON 會啟用資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
+
+OFF 會關閉資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
+
+開啟或關閉資料庫的 READ_COMMITTED_SNAPSHOT，將會終止此資料庫的所有開放連線。  建議您在資料庫維護期間或等到資料庫沒有使用中的連線再進行此變更，除了執行 ALTER DATABSE 命令的連線以外。  資料庫不一定要處於單一使用者模式。  不支援變更工作階段層級的 READ_COMMITTED_SNAPSHOT 設定。  若要確認資料庫的這項設定，請檢查 sys.databases 中的 is_read_committed_snapshot_on 資料行。
+
+在已啟用 READ_COMMITTED_SNAPSHOT 的資料庫中，如果有多個資料版本存在，查詢可能會遭遇較低的效能。 如果這些交易的資料變更會封鎖版本清除，則長時間開啟的交易也會導致資料庫大小增加。  
+
 ## <a name="permissions"></a>權限
 
 若要設定 RESULT_SET_CACHING 選項，使用者需要伺服器層級主體登入 (由佈建程序所建立) 或為 `dbmanager` 資料庫角色的成員。  
@@ -2987,28 +3046,90 @@ OFF 會關閉資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
 
 ## <a name="examples"></a>範例
 
-### <a name="enable-result-set-caching-for-a-database"></a>啟用資料庫的結果集快取
+### <a name="a-enabling-the-query-store"></a>A. 啟用查詢存放區
+
+下列範例會啟用查詢存放區，並設定查詢存放區參數。
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="b-enabling-the-query-store-with-wait-statistics"></a>B. 啟用包含等候統計資料的查詢存放區
+
+下列範例會啟用查詢存放區，並設定查詢存放區參數。
+
+```sql
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="c-enabling-the-query-store-with-custom-capture-policy-options"></a>C. 啟用包含擷取自訂原則選項的查詢存放區
+
+下列範例會啟用查詢存放區，並設定查詢存放區參數。
+
+```sql
+ALTER DATABASE AdventureWorksDW 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### <a name="d-enable-result-set-caching-for-a-database"></a>D. 啟用資料庫的結果集快取
+
+```sql
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="disable-result-set-caching-for-a-database"></a>停用資料庫的結果集快取
+### <a name="d-disable-result-set-caching-for-a-database"></a>D. 停用資料庫的結果集快取
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### <a name="check-result-set-caching-setting-for-a-database"></a>檢查資料庫的結果集快取設定
+### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. 檢查資料庫的結果集快取設定
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>檢查結果集快取命中和快取遺漏的查詢數
+### <a name="d-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>D. 檢查結果集快取命中和快取遺漏的查詢數
 
 ```sql
 SELECT  
@@ -3028,7 +3149,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>檢查查詢的結果集快取命中或快取遺漏
+### <a name="d-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>D. 檢查查詢的結果集快取命中或快取遺漏
 
 ```sql
 If
@@ -3040,7 +3161,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>檢查結果集快取命中的所有查詢
+### <a name="d-check-for-all-queries-with-result-set-cache-hits"></a>D. 檢查結果集快取命中的所有查詢
 
 ```sql
 SELECT *  
@@ -3049,6 +3170,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
 ### <a name="enable-read_committed_snapshot-option-for-a-database"></a>啟用資料庫的 Read_Committed_Snapshot 選項
+
 ```sql
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
@@ -3064,3 +3186,4 @@ SET READ_COMMITTED_SNAPSHOT ON
 - [SQL Data Warehouse language elements](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements) (SQL 資料倉儲語言元素)
 
 ::: moniker-end
+

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
-ms.date: 05/29/2019
-ms.openlocfilehash: 3def38b576103a7343816d0dc1c472d3bd64e1a1
-ms.sourcegitcommit: 7e63c612047f2bb1779c872b5180a3ea9afe7e80
+ms.date: 09/11/2019
+ms.openlocfilehash: 2d4dd0491d7328250f73047d64233dd6df84fb2b
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976122"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988111"
 ---
-# <a name="what-is-sql-server-management-studio-ssms"></a>什麼是 SQL Server Management Studio (SSMS)？ 
+# <a name="what-is-sql-server-management-studio-ssms"></a>什麼是 SQL Server Management Studio (SSMS)？
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -33,27 +33,29 @@ ms.locfileid: "69976122"
 - [**下載 SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**下載 Visual Studio**](https://www.visualstudio.com/downloads/)
 
+![SSMS 簡介畫面](media/download-sql-server-management-studio-ssms/what-is-ssms.png)
+
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件  
   
-|描述|元件|  
+|Description|元件|  
 |---------------|---------|  
 |使用 **物件總管** 檢視及管理一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體中的所有物件。|[物件總管](../ssms/object/object-explorer.md)|  
 |如何使用 [範本總管]  建立及管理重複使用文字的檔案，以用來加快查詢與指令碼的開發速度。|[範本總管](../ssms/template/template-explorer.md)|  
 |如何使用即將淘汰的 **方案總管** 建立專案，以管理管理項目 (例如指令碼與查詢)。|[方案總管](../ssms/solution/solution-explorer.md)|  
 |如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]隨附的視覺化設計工具。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 語言編輯器以互動的方式建立查詢與指令碼，以及對其執行偵錯。|[查詢與文字編輯器 (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|
+|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 語言編輯器以互動的方式建立查詢與指令碼，以及對其執行偵錯。|[查詢與文字編輯器](scripting/query-and-text-editors-sql-server-management-studio.md)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>適用於商業智慧的 SQL Server Management Studio
 
 若要存取、設定及管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 雖然這三種商業智慧技術全都依賴 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，但是與每一項技術有關的管理工作則會有些微的差異。
-  
+
 > [!NOTE]
 > 若要建立及修改 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 解決方案，請使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)]，而不要使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] 是一個以 [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]為根據的開發環境。
-  
+
 ### <a name="managing-analysis-services-solutions-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理 Analysis Services 解決方案
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可讓您管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 物件，例如執行備份及處理物件。
-  
+
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 會提供一個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 指令碼專案，您可在其中開發及儲存使用多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 和 XML for Analysis (XMLA) 所撰寫的指令碼。 您可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 指令碼專案來執行管理工作或是在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 執行個體上重新建立物件，例如資料庫和 Cube。 例如，您可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 指令碼專案中開發 XMLA 指令碼，該指令碼會直接在現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 執行個體上建立新的物件。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 指令碼專案可儲存成為方案的一部分，並與原始程式碼控制整合。
   
 如需如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的詳細資訊，請參閱 [使用 SQL Server Management Studio 進行開發和實作](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)。
@@ -66,17 +68,17 @@ ms.locfileid: "69976122"
 
 使用 SQL Server Management Studio 可啟用 Reporting Services 功能、管理服務和資料庫，以及管理角色和作業。
 
-您可使用 [共用排程] 資料夾來管理共用排程，並管理報表伺服器資料庫 (ReportServer、ReportServerTempdb)。 當您將報表伺服器資料庫移到新的或另一個 SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]) 時，您也會在 Master 系統資料庫中建立 RSExecRole。 如需有關這些工作的詳細資訊，請參閱下列主題：  
+您可使用 [共用排程] 資料夾來管理共用排程，並管理報表伺服器資料庫 (ReportServer、ReportServerTempdb)。 當您將報表伺服器資料庫移到新的或另一個 SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]) 時，您也會在 Master 系統資料庫中建立 RSExecRole。 如需這些工作的詳細資訊，請參閱下列文章：  
 
-- [Management Studio 的如何主題](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)
+- [SSMS 中的 Reporting Services](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [管理報表伺服器資料庫](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
-- [如何：建立 RSExecRole](../reporting-services/security/create-the-rsexecrole.md)
-  
-您也可以透過以下方式來管理伺服器：啟用及設定各種功能、設定伺服器預設值及管理角色和作業。 如需有關這些工作的詳細資訊，請參閱下列主題：
+- [建立 RSExecRole](../reporting-services/security/create-the-rsexecrole.md)
 
-- [如何：設定報表伺服器屬性 (Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)
-- [如何：建立、刪除或修改角色 (Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)
-- [啟用和停用 Reporting Services 的用戶端列印](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)
+您也可以透過以下方式來管理伺服器：啟用及設定各種功能、設定伺服器預設值及管理角色和作業。 如需這些工作的詳細資訊，請參閱下列文章：
+
+- [設定報表伺服器屬性](../reporting-services/tools/set-report-server-properties-management-studio.md)
+- [建立、刪除或修改角色](../reporting-services/security/role-definitions-create-delete-or-modify.md)
+- [啟用和停用 Reporting Services 的用戶端列印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)
 
 ## <a name="non-english-language-versions-of-sql-server-management-studio-ssms"></a>非英文版本的 SQL Server Management Studio (SSMS)
 
@@ -94,11 +96,9 @@ ms.locfileid: "69976122"
 
 ## <a name="next-steps"></a>後續步驟
 
-- [安裝非英文版本的 SQL Server Management Studio (SSMS)](install-other-languages.md)
-- [教學課程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
-- [教學課程：撰寫 Transact-SQL 陳述式](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
-- [使用 SQL Server Data Tools 進行開發和實作](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)
-- [SQL Server 資料工具中的 Reporting Services](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)
-- [教學課程：SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [安裝非英文版本的 SSMS](install-other-languages.md)
+- [連線及查詢 SQL Server 執行個體](tutorials/connect-query-sql-server.md)
+- [撰寫 Transact-SQL 陳述式](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

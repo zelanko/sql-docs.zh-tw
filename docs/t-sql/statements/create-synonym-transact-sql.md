@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78dd9533a33d3b28f4fffcb2bb0ff4cd6604713f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 4e8476ef7fafde1d891736938e1cdedd6933f697
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155817"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383826"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,10 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  不支援函數基底物件的四部份名稱。  
   
- 動態 SQL 中的同義字可以建立、卸除和參考。  
+ 動態 SQL 中的同義字可以建立、卸除和參考。
+ 
+ > [!NOTE]
+ > 同義字是資料庫特定的，且無法由其他資料庫存取。
   
 ## <a name="permissions"></a>權限  
  若要以給定結構描述建立同義字，使用者必須擁有 CREATE SYNONYM 權限，並擁有該結構描述或 ALTER SCHEMA 權限。  

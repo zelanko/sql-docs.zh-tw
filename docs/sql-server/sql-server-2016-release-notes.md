@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a0bc3d50808c25999f1791a752e069bc02bed0d
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 51ee5e3eb1298c2f33aeecdb104be14245107e7c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811557"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874920"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 
  **F1 說明：** 依設計，當您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按下 F1 時，瀏覽器即會顯示 F1 說明文章的線上版本。 此問題是以瀏覽器為基礎的說明，即使您已設定並安裝本機說明也是一樣。
 
-**更新內容：** 在 SQL Server Management Studio 和 Visual Studio 中，加入文件程序期間可能會凍結 (擱置) 說明檢視器應用程式。 若要解決此問題，請完成下列步驟。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](https://msdn.microsoft.com/library/mt654096.aspx)。
+**更新內容：** 在 SQL Server Management Studio 和 Visual Studio 中，說明檢視器應用程式可能會在新增文件程序期間停止回應。 若要解決此問題，請完成下列步驟。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](https://msdn.microsoft.com/library/mt654096.aspx)。
 
 * 以 [記事本] 開啟 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings 檔案，將下列程式碼中的日期變更為未來的日期。
 

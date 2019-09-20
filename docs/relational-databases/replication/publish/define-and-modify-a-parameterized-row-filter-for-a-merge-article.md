@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93d3946f712c3b4287e2589a69b94351dacca049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907758"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846764"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>針對合併發行項定義及修改參數化資料列篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "67907758"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>針對合併式發行集中的發行項定義參數化資料列篩選器  
   
-1.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 指定 **@publication** 、針對 **@article** 指定發行項的名稱、針對 **@source_object** 指定發行的資料表、針對 **@subset_filterclause** (不包括 `WHERE`) 指定定義參數化篩選器的 WHERE 子句，以及針對 **@partition_options** (用來描述從參數化資料列篩選器產生的資料分割類型) 指定下列其中一個值：  
+1.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 指定 **\@publication**、為 **\@article** 指定發行項的名稱、為 **\@source_object** 指定發行的資料表、為 **\@subset_filterclause** (不包括 `WHERE`) 指定定義參數化篩選器的 WHERE 子句，以及為 **\@partition_options** (用來描述從參數化資料列篩選器產生的資料分割類型) 指定下列其中一個值：  
   
     -   **0** - 發行項的篩選是靜態的，或是不產生每個資料分割的唯一資料子集 (也就是「重疊」的資料分割)。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "67907758"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>針對合併式發行集中的發行項變更參數化資料列篩選器  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 指定 **@publication** 、指定 **@article** 、針對 **@property** @property **@property** 值、針對 **@value** (不包括 `WHERE`) 指定定義參數化篩選器的運算式、針對 **1** 和 **@force_invalidate_snapshot** 和 **@force_reinit_subscription** 中定義及修改參數化資料列篩選。  
+1.  在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 指定 **\@publication**、指定 **\@article**、為 **\@property** 指定 **subset_filterclause** 值、為 **\@value** (不包括 `WHERE`) 指定定義參數化篩選器的運算式，並為 **\@force_invalidate_snapshot** 和 **\@force_reinit_subscription** 指定 **1** 值。  
   
-2.  如果此變更會產生不同的資料分割行為，則再次執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 指定 **@publication** 、指定 **@article** 、針對 **@property** @property **@property** 的值，以及針對 **@value** 指定最適當的資料分割選項，可以是下列其中一項：  
+2.  如果此變更會產生不同的資料分割行為，則再次執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 指定 **\@publication**、指定 **\@article**、為 **\@property** 指定 **partition_options** 值，並為 **\@value** 指定最適當的資料分割選項，其可為下列其中一項：  
   
     -   **0** - 發行項的篩選是靜態的，或是不產生每個資料分割的唯一資料子集 (也就是「重疊」的資料分割)。  
   

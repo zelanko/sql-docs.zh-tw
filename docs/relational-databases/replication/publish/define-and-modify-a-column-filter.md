@@ -16,12 +16,12 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e9da7e08751fc7c8bc72b85d174678e783cb79a3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 761c6b6bd1c92e7dd22cc231e46417b4b971a614
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769895"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846596"
 ---
 # <a name="define-and-modify-a-column-filter"></a>定義及修改資料行篩選
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,17 +76,17 @@ ms.locfileid: "68769895"
   
 2.  在發行集資料庫的發行者上，執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)。 這樣會定義要在發行項中包含或移除的資料行。  
   
-    -   如果只要從包含許多資料行的資料表發行一些資料行，請針對加入的每一個資料行執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次。 針對 **@column** 指定資料行名稱，並針對 **@operation** 指定 **@operation** 中定義及修改資料行篩選。  
+    -   如果只要從包含許多資料行的資料表發行一些資料行，請針對加入的每一個資料行執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次。 為 **\@column** 指定資料行名稱，並為 **\@operation** 指定 **add** 值。  
   
-    -   如果要在包含許多資料行的資料表中發行大多數的資料行，請執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、針對 **@column** 指定 **@column** 指定資料行名稱，並針對 **@operation** 指定 **@operation** 的值來加入所有資料行。 然後針對每一個排除的資料行執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)一次，針對 **@operation** 指定 **@operation** 的值，並針對 **@column** 中定義及修改資料行篩選。  
+    -   如果要在包含許多資料行的資料表中發行大多數的資料行，請執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、為 **\@column** 指定 **null** 值，以及為 **\@operation** 指定 **add** 值來新增所有資料行。 然後為每一個排除的資料行執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次，為 **\@operation** 指定 **drop** 值，並為 **\@column** 指定排除的資料行名稱。  
   
-3.  在發行集資料庫的發行者上，執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 針對 **@publication** 指定發行集名稱，並針對 **@article** 中定義及修改資料行篩選。 這樣會針對篩選的發行項建立同步處理物件。  
+3.  在發行集資料庫的發行者上，執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 為 **\@publication** 指定發行集名稱，並為 **\@article** 指定篩選的發行項名稱。 這樣會針對篩選的發行項建立同步處理物件。  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>針對快照式或交易式發行集中發行的發行項變更要包含其他資料行的資料行篩選  
   
-1.  在發行集資料庫的發行者上，針對每一個加入的資料行執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次。 針對 **@column** 指定資料行名稱，並針對 **@operation** 指定 **@operation** 中定義及修改資料行篩選。  
+1.  在發行集資料庫的發行者上，針對每一個加入的資料行執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次。 為 **\@column** 指定資料行名稱，並為 **\@operation** 指定 **add** 值。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 針對 **@publication** 指定發行集名稱，並針對 **@article** 中定義及修改資料行篩選。 如果此發行集有現有的訂閱，請針對 **@change_active** 指定 **@change_active** 中定義及修改資料行篩選。 這樣會針對篩選的發行項重新建立同步處理物件。  
+2.  在發行集資料庫的發行者上，執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 為 **\@publication** 指定發行集名稱，並為 **\@article** 指定篩選的發行項名稱。 如果此發行集有現有的訂閱，請為 **\@change_active** 指定 **1** 值。 這樣會針對篩選的發行項重新建立同步處理物件。  
   
 3.  針對此發行集重新執行快照集代理程式作業，以產生更新的快照集。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "68769895"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>針對快照式或交易式發行集中發行的發行項變更要移除資料行的資料行篩選  
   
-1.  在發行集資料庫的發行者上，針對每一個移除的資料行執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次。 針對 **@column** 指定資料行名稱，並針對 **@operation** 指定 **@operation** 中定義及修改資料行篩選。  
+1.  在發行集資料庫的發行者上，針對每一個移除的資料行執行 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 一次。 為 **\@column** 指定資料行名稱，並為 **\@operation** 指定 **drop** 值。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 針對 **@publication** 指定發行集名稱，並針對 **@article** 中定義及修改資料行篩選。 如果此發行集有現有的訂閱，請針對 **@change_active** 指定 **@change_active** 中定義及修改資料行篩選。 這樣會針對篩選的發行項重新建立同步處理物件。  
+2.  在發行集資料庫的發行者上，執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 為 **\@publication** 指定發行集名稱，並為 **\@article** 指定篩選的發行項名稱。 如果此發行集有現有的訂閱，請為 **\@change_active** 指定 **1** 值。 這樣會針對篩選的發行項重新建立同步處理物件。  
   
 3.  針對此發行集重新執行快照集代理程式作業，以產生更新的快照集。  
   
@@ -108,13 +108,13 @@ ms.locfileid: "68769895"
   
 2.  在發行集資料庫的發行者上，執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)。 這樣會定義要在發行項中包含或移除的資料行。  
   
-    -   如果只要從包含許多資料行的資料表發行一些資料行，請針對加入的每一個資料行執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 一次。 針對 **@column** 指定資料行名稱，並針對 **@operation** 指定 **@operation** 中定義及修改資料行篩選。  
+    -   如果只要從包含許多資料行的資料表發行一些資料行，請針對加入的每一個資料行執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 一次。 為 **\@column** 指定資料行名稱，並為 **\@operation** 指定 **add** 值。  
   
-    -   如果要在包含許多資料行的資料表中發行大多數的資料行，請執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)、針對 **@column** 指定 **@column** 指定資料行名稱，並針對 **@operation** 指定 **@operation** 的值來加入所有資料行。 然後針對每一個排除的資料行執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)一次，針對 **@operation** 指定 **@operation** 的值，並針對 **@column** 中定義及修改資料行篩選。  
+    -   如果要在包含許多資料行的資料表中發行大多數的資料行，請執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)、為 **\@column** 指定 **null** 值，以及為 **\@operation** 指定 **add** 值來新增所有資料行。 然後為每一個排除的資料行執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 一次，為 **\@operation** 指定 **drop** 值，並為 **\@column** 指定排除的資料行名稱。  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-merge-publication"></a>針對合併式發行集中發行的發行項變更要包含其他資料行的資料行篩選  
   
-1.  在發行集資料庫的發行者上，針對每一個加入的資料行執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 一次。 針對 **@column** 指定資料行名稱、針對 **@operation** 指定 **@operation** 指定資料行名稱，並針對 **@change_active** 和 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription** 中定義及修改資料行篩選。  
+1.  在發行集資料庫的發行者上，針對每一個加入的資料行執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 一次。 為 **\@column** 指定資料行名稱、為 **\@operation** 指定 **add** 值，以及為 **\@force_invalidate_snapshot** 和 **\@force_reinit_subscription** 指定 **1** 值。  
   
 2.  針對此發行集重新執行快照集代理程式作業，以產生更新的快照集。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68769895"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-merge-publication"></a>針對合併式發行集中發行的發行項變更要移除資料行的資料行篩選  
   
-1.  在發行集資料庫的發行者上，針對每一個移除的資料行執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 一次。 針對 **@column** 指定資料行名稱、針對 **@operation** 指定 **@operation** 指定資料行名稱，並針對 **@change_active** 和 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription** 中定義及修改資料行篩選。  
+1.  在發行集資料庫的發行者上，針對每一個移除的資料行執行 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 一次。 為 **\@column** 指定資料行名稱、為 **\@operation** 指定 **drop** 值，以及為 **\@force_invalidate_snapshot** 和 **\@force_reinit_subscription** 指定 **1** 值。  
   
 2.  針對此發行集重新執行快照集代理程式作業，以產生更新的快照集。  
   

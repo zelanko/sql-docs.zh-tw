@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcd857c9a493528b5759d83dd3b89924a2c22f74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e46578c4d06d430a037a6af066903faa7a6a8e1
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058090"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846535"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>啟用和停用異動資料擷取 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -74,11 +74,11 @@ GO
   
  **來源資料表中要擷取的資料行**。  
   
- 根據預設，系統會將來源資料表中的所有資料行識別為擷取資料行。 如果只需要追蹤資料行的子集 (例如，基於隱私或效能的原因)，請使用 *@captured_column_list* 參數來指定資料行的子集。  
+ 根據預設，系統會將來源資料表中的所有資料行識別為擷取資料行。 如果只需要追蹤部分資料行 (例如，基於隱私或效能原因)，請使用 *\@captured_column_list* 參數來指定這部分的資料行。  
   
  **要包含變更資料表的檔案群組。**  
   
- 根據預設，變更資料表位於資料庫的預設檔案群組中。 想要控制個別變更資料表位置的資料庫擁有者可以使用 *@filegroup_name* 參數，指定與擷取執行個體相關聯之變更資料表的特定檔案群組。 此指定的檔案群組必須已存在。 一般而言，我們建議您將變更資料表放在與來源資料表不同的檔案群組中。 如需示範 *@filegroup_name* 參數用法的範例，請參閱**啟用指定檔案群組選項的資料表**範本。  
+ 根據預設，變更資料表位於資料庫的預設檔案群組中。 如果資料庫擁有者想要控制個別變更資料表的位置，可以使用 *\@filegroup_name* 參數來指定與擷取執行個體建立關聯的變更資料表特定檔案群組。 此指定的檔案群組必須已存在。 一般而言，我們建議您將變更資料表放在與來源資料表不同的檔案群組中。 如需示範 *\@filegroup_name* 參數用法的範例，請參閱**啟用指定檔案群組選項的資料表**範本。  
   
 ```sql  
 -- =========  
@@ -100,7 +100,7 @@ GO
   
  指定角色的目的是要控制變更資料的存取權。 指定的角色可以是現有的固定伺服器角色或資料庫角色。 如果指定的角色不存在，則會自動建立該名稱的資料庫角色。 **系統管理員** 或 **db_owner** 角色的成員對於變更資料表中的資料擁有完整存取權。 其他所有使用者對於來源資料表的所有擷取資料行必須具備 SELECT 權限。 此外，指定角色時，不屬於 **系統管理員** 或 **db_owner** 角色之成員的使用者也必須是指定角色的成員。  
   
- 如果您不想要使用控制角色，請將 *@role_name* 參數明確設定為 NULL。 如需在不使用控制角色的情況下啟用資料表的範例，請參閱 **在不使用控制角色的情況下啟用資料表** 範本。  
+ 如果您不想要使用控制角色，請將 *\@role_name* 參數明確設定為 NULL。 如需在不使用控制角色的情況下啟用資料表的範例，請參閱 **在不使用控制角色的情況下啟用資料表** 範本。  
   
 ```sql  
 -- =========  
@@ -121,9 +121,9 @@ GO
   
  擷取執行個體一定會包含資料表值函式，以便傳回在定義間隔內發生的所有變更資料表項目。 這個函數的命名方式是將擷取執行個體名稱附加至 "cdc.fn_cdc_get_all_changes_"。 如需詳細資訊，請參閱 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)。  
   
- 如果 *@supports_net_changes* 參數設為 1，擷取執行個體也會產生淨變更函數。 此函數僅會針對在呼叫中指定之間隔內變更的每個不同資料列，傳回一個變更。 如需詳細資訊，請參閱 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
+ 如果您將 *\@supports_net_changes* 參數設為 1，則擷取執行個體也會產生淨變更函式。 此函數僅會針對在呼叫中指定之間隔內變更的每個不同資料列，傳回一個變更。 如需詳細資訊，請參閱 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
- 若要支援淨變更查詢，來源資料表必須具有主索引鍵或唯一的索引才能唯一識別資料列。 如果使用了唯一的索引，就必須使用 *@index_name* 參數來指定該索引的名稱。 在主索引鍵或唯一索引中定義的資料行必須包含在要擷取之來源資料行的清單中。  
+ 若要支援淨變更查詢，來源資料表必須具有主索引鍵或唯一的索引才能唯一識別資料列。 如果您使用唯一索引，就必須使用 *\@index_name* 參數來指定該索引的名稱。 在主索引鍵或唯一索引中定義的資料行必須包含在要擷取之來源資料行的清單中。  
   
  如需示範建立含有兩個查詢函數之擷取執行個體的範例，請參閱 **針對所有和淨變更查詢啟用資料表** 範本。  
   
@@ -142,7 +142,7 @@ GO
 ```  
   
 > [!NOTE]
->  如果在含有現有主索引鍵的資料表上啟用 [異動資料擷取]，而且並未使用 *@index_name* 參數來識別替代的唯一索引鍵，異動資料擷取功能就會使用此主索引鍵。 如果沒有先針對資料表停用異動資料擷取，系統就不允許對主索引鍵進行後續變更。 不論設定異動資料擷取時是否要求淨變更查詢的支援，都是如此。 如果啟用異動資料擷取時，資料表沒有任何主索引鍵，則異動資料擷取就會忽略後續加入主索引鍵的作業。 由於異動資料擷取不會使用啟用資料表之後所建立的主索引鍵，因此您可以移除此索引鍵和索引鍵資料行，而且沒有任何限制。  
+>  如果您在具有現有主索引鍵的資料表上啟用異動資料擷取，且並未使用 *\@index_name* 參數來識別替代的唯一索引，則異動資料擷取功能就會使用此主索引鍵。 如果沒有先針對資料表停用異動資料擷取，系統就不允許對主索引鍵進行後續變更。 不論設定異動資料擷取時是否要求淨變更查詢的支援，都是如此。 如果啟用異動資料擷取時，資料表沒有任何主索引鍵，則異動資料擷取就會忽略後續加入主索引鍵的作業。 由於異動資料擷取不會使用啟用資料表之後所建立的主索引鍵，因此您可以移除此索引鍵和索引鍵資料行，而且沒有任何限制。  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>針對資料表停用異動資料擷取  
  **db_owner** 固定資料庫角色的成員可以使用 **sys.sp_cdc_disable_table**預存程序，針對個別的來源資料表移除擷取執行個體。 若要判斷是否已經啟用異動資料擷取的來源資料表，請檢查 **sys.tables** 目錄檢視中的 **is_tracked_by_cdc** 資料行。 如果進行停用之後，資料庫中沒有任何資料表啟用，系統也會移除異動資料擷取作業。  

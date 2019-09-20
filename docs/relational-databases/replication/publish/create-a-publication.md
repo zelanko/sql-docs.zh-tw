@@ -16,12 +16,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7e4676ec5360a235b1a5ec9f1bece8566f63625c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: dc432ca82662d098b970b2dbeab6a43243e2ead6
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769937"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846635"
 ---
 # <a name="create-a-publication"></a>建立發行集
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -110,16 +110,16 @@ ms.locfileid: "68769937"
   
     -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在發行集資料庫的發行者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。  
   
-    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 針對 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] @job_name **@job_name** @password **@password** 中啟用交易式發行集的訂閱更新。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，則也必須指定 **@publisher_security_mode** 的值 **@publisher_security_mode** ，以及 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 **@publisher_login** 以及 **@publisher_password** ＞。 請繼續進行步驟 3。  
+    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 請繼續進行步驟 3。  
   
-3.  在發行者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 針對 **@publication** 指定發行集名稱，並針對 **@repl_freq** 參數，指定 **snapshot** (適用於快照式發行集) 或 **continuous** (適用於交易式發行集) 的值。 指定任何其他發行集選項。 這樣會定義此發行集。  
+3.  在發行者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 為 **\@publication** 指定發行集名稱，並為 **\@repl_freq** 參數指定 **snapshot** 值 (適用於快照式發行集) 或 **continuous** (適用於交易式發行集) 值。 指定任何其他發行集選項。 這樣會定義此發行集。  
   
     > [!NOTE]  
     >  發行集名稱不能包含下列字元：  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-4.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **@publication** 指定步驟 2 中所使用的發行集名稱，以及針對 **@snapshot_job_name** @password **@password** 中啟用交易式發行集的訂閱更新。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，則也必須指定 **@publisher_security_mode** 的值 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 **@publisher_login** @password **@publisher_password** 中啟用交易式發行集的訂閱更新。 這麼做會為發行集建立快照集代理程式作業。  
+4.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **\@publication** 指定步驟 3 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -132,14 +132,14 @@ ms.locfileid: "68769937"
   
 1.  在發行者端執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)，以便使用合併式複寫來啟用目前資料庫的發行集。  
   
-2.  在發行集資料庫的發行者端，執行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 針對 **@publication** 指定發行集的名稱，並指定其他任何發行集選項。 這樣會定義此發行集。  
+2.  在發行集資料庫的發行者端，執行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 為 **\@publication** 指定發行集的名稱，並指定其他任何發行集選項。 這樣會定義此發行集。  
   
     > [!NOTE]  
     >  發行集名稱不能包含下列字元：  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-3.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **@publication** 指定步驟 3 中所使用的發行集名稱，以及快照集代理程式針對 **@snapshot_job_name** 以及 **@password** ＞。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，則也必須指定 **@publisher_security_mode** 的值 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 **@publisher_login** @password **@publisher_password** 中啟用交易式發行集的訂閱更新。 這麼做會為發行集建立快照集代理程式作業。  
+3.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **\@publication** 指定步驟 2 中所使用的發行集名稱，並為 **\@snapshot_job_name** 和 **\@password** 指定快照集代理程式執行時所使用的 Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 這麼做會為發行集建立快照集代理程式作業。  
   
     > [!IMPORTANT]  
     >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  

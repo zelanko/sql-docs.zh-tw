@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997856"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874186"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67997856"
 -   若為手動容錯移轉，則只有發出容錯移轉命令之後資料庫容錯移轉所需的時間。  
   
 ## <a name="error-detection"></a>錯誤偵測  
- 系統注意到錯誤的時間取決於錯誤的類型；例如，網路錯誤幾乎會立即注意到，而依預設，注意到伺服器沒有回應則需要 10 秒，也就是預設的逾時期間。  
+ 系統注意到錯誤時間取決於錯誤的類型；例如，網路錯誤幾乎會立即注意到，而注意到伺服器沒有回應則需要 10 秒 (預設逾時)。  
   
  如需在具有自動容錯移轉的高安全性模式下進行資料庫鏡像工作階段以及逾時偵測期間，可能導致失敗之錯誤的資訊，請參閱 [資料庫鏡像期間可能發生的失敗](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)。  
   

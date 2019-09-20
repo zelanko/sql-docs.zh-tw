@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eab23cafc4e73efd16dd2feb096db12495d8f354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014528"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874528"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>判斷在可用性複本之間連線失敗的可能原因
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "68014528"
   
 -   網路錯誤，例如 TCP 連結逾時、卸除或損毀的封包或順序不正確的封包。  
   
--   停滯的作業系統、伺服器或資料庫狀態。  
+-   沒有回應的作業系統、伺服器或資料庫。  
   
 -   Windows 伺服器逾時。  
   

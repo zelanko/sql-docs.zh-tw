@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcec50b2ddda2b8ddaef8135aee52cf54c1ae07b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066028"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874525"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -209,7 +209,7 @@ ALTER AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值會針對給定群組定義「彈性容錯移轉原則」  。 這個具彈性的容錯移轉原則讓您能夠更精確控制哪些條件必須造成自動容錯移轉。 如需詳細資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
  HEALTH_CHECK_TIMEOUT **=** *毫秒*  
- 指定在 WSFC 叢集假設伺服器執行個體很慢或無回應之前，[sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序傳回伺服器健康情況資訊的等候時間 (以毫秒為單位)。 HEALTH_CHECK_TIMEOUT 是在群組層級上設定，但是只有在為具有自動容錯移轉的同步認可可用性模式 (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。  此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，健康情況檢查逾時才可以觸發自動容錯移轉。  
+ 指定在 WSFC 叢集假設伺服器執行個體緩慢或沒有回應之前，[sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序傳回伺服器健全狀況資訊的等候時間 (以毫秒為單位)。 HEALTH_CHECK_TIMEOUT 是在群組層級上設定，但是只有在為具有自動容錯移轉的同步認可可用性模式 (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。  此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，健康情況檢查逾時才可以觸發自動容錯移轉。  
   
  預設 HEALTH_CHECK_TIMEOUT 值為 30000 毫秒 (30 秒)。 最小值為 15000 毫秒 (15 秒)，最大值為 4294967295 毫秒。  
   

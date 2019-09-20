@@ -1,5 +1,5 @@
 ---
-title: 啟用 SQL Server Managed Backup to Microsoft Azure | Microsoft Docs
+title: 啟用 SQL Server 到 Azure 的受控備份 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -10,74 +10,103 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089823"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238739"
 ---
-# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>啟用 SQL Server Managed Backup to Microsoft Azure
+# <a name="enable-sql-server-managed-backup-to-azure"></a>啟用 SQL Server 到 Azure 的受控備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題說明如何使用資料庫和執行個體層級的預設設定來啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 它也會說明啟用電子郵件通知以及監視備份活動的方式。  
   
  本教學課程使用 Azure PowerShell。 開始本教學課程之前，請 [下載並安裝 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
   
 > [!IMPORTANT]  
->  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
+>  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱[設定 SQL Server 到 Azure 的受控備份進階選項](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
   
-## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 並使用預設值進行設定  
-  
-#### <a name="create-the-azure-blob-container"></a>建立 Azure Blob 容器  
-  
-1.  **註冊 Azure：** 如果您已經有 Azure 訂用帳戶，請移至下一個步驟。 否則，您可以開始使用 [免費試用版](https://azure.microsoft.com/pricing/free-trial/) 或瀏覽 [購買選項](https://azure.microsoft.com/pricing/purchase-options/)。  
-  
-2.  **建立 Azure 儲存體帳戶：** 如果您已經有儲存體帳戶，請移至下一個步驟。 否則，您可以使用 [Azure 管理入口網站](https://manage.windowsazure.com/) 或 Azure PowerShell 來建立儲存體帳戶。 下列 `New-AzureStorageAccount` 命令會在美東地區建立名為 `managedbackupstorage` 的儲存體帳戶。  
-  
-    ```powershell  
-    New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
-    ```  
-  
-     如需儲存體帳戶的詳細資訊，請參閱 [關於 Azure 儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。  
-  
-3.  **建立適用於備份檔案的 Blob 容器：** 您可以在 Azure 管理入口網站中或使用 Azure PowerShell 建立 Blob 容器。 下列 `New-AzureStorageContainer` 命令會在 `backupcontainer` 儲存體帳戶中建立名為 `managedbackupstorage` 的 Blob 容器。  
-  
-    ```powershell  
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
-    New-AzureStorageContainer -Name backupcontainer -Context $context  
-    ```  
-  
-4.  **產生共用存取簽章 (SAS)：** 若要存取此容器，您必須建立 SAS。 您可以在某些工具、程式碼和 Azure PowerShell 中完成此動作。 下列 `New-AzureStorageContainerSASToken` 命令可為一年內過期的 `backupcontainer` Blob 容器建立 SAS 權杖。  
-  
-  ```powershell  
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
-  ```  
+## <a name="create-the-azure-blob-container"></a>建立 Azure Blob 容器
 
-針對 Azure，使用下列命令：
-  ```powershell
-  Connect-AzAccount
-  Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
-  $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
-  ```  
+此程序需要 Azure 帳戶。 如果您已經有帳戶，請移至下一個步驟。 否則，您可以開始使用 [免費試用版](https://azure.microsoft.com/pricing/free-trial/) 或瀏覽 [購買選項](https://azure.microsoft.com/pricing/purchase-options/)。
+
+如需儲存體帳戶的詳細資訊，請參閱 [關於 Azure 儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。 
+
+#### <a name="azure-clitabazure-cli"></a>[Azure CLI](#tab/azure-cli)
+
+1. 登入您的 Azure 帳戶。
+
+    ```azurecli-interactive
+    az login
+    ```
   
-此命令的輸出將包含容器和 SAS 權杖的 URL。 以下是一個範例：  
+1. 建立 Azure 儲存體帳戶。 如果您已經有儲存體帳戶，請移至下一個步驟。 下列命令會在美國東部區域建立名為 `<backupStorage>` 的儲存體帳戶。  
+  
+    ```azurecli-interactive
+    az storage account create -n <backupStorage> -l "eastus" --resource-group <resourceGroup>
+    ```  
+    
+1. 建立名為 `<backupContainer>` 的 Blob 容器以用於備份檔案。
+  
+    ```azurecli-interactive
+    $keys = az storage account keys list --account-name <backupStorage> --resource-group <resourceGroup> | ConvertFrom-Json
+    az storage container create --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value 
+    ```  
+  
+1. 產生共用存取簽章 (SAS) 以存取容器。 下列命令可為將於一年內過期的 `<backupContainer>` Blob 容器建立 SAS 權杖。  
+  
+    ```azurecli-interactive 
+    az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
+    ```
+
+#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+
+1. 下列命令可登入您的 Azure 帳戶。
+
+    ```azurepowershell-interactive
+    Connect-AzAccount
+    Set-AzContext -SubscriptionId "<subscriptionId>"
+    ```
+  
+1. 建立 Azure 儲存體帳戶。 如果您已經有儲存體帳戶，請移至下一個步驟。 下列命令會在美國東部區域建立名為 `<backupStorage>` 的儲存體帳戶。  
+  
+    ```azurepowershell-interactive
+    New-AzStorageAccount -StorageAccountName <backupStorage> -Location "EAST US" -ResourceGroupName <resourceGroup> -SkuName Standard_GRS
+    ```   
+  
+1. 建立名為 `<backupContainer>` 的 Blob 容器以用於備份檔案。  
+  
+    ```azurepowershell-interactive
+    $context = New-AzStorageContext -StorageAccountName <backupStorage> -StorageAccountKey (Get-AzStorageAccountKey -Name <backupStorage> -ResourceGroupName <resourceGroup>).Value[0]  
+    New-AzStorageContainer -Name <backupContainer> -Context $context  
+    ```  
+  
+1. 產生共用存取簽章 (SAS) 以存取容器。 下列命令可為將於一年內過期的 `<backupContainer>` Blob 容器建立 SAS 權杖。
+  
+    ```azurepowershell-interactive 
+    New-AzStorageContainerSASToken -Name <backupContainer> -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context 
+    ```
+
+* * *
+
+> [!NOTE]
+> 您也可以使用 [Azure 入口網站](https://portal.azure.com/)來完成這些步驟。
+
+輸出將包含容器和/或 SAS 權杖的 URL。 以下是一個範例：  
   
   `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-在上述範例中，使用問號來分隔容器 URL 和 SAS 權杖 (不包含問號)。 例如，上述輸出會產生下列這兩個值。  
+如果其中包含 URL，請使用問號將其和 SAS 權杖分隔 (不包含問號)。 例如，上述輸出會產生下列這兩個值。  
   
 |||  
 |-|-|  
-|**容器 URL：**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-|**SAS 權杖︰**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|**容器 URL**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
+|**SAS 權杖**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
 記下容器 URL 和 SAS，以便在建立 SQL 認證時使用。 如需 SAS 的詳細資訊，請參閱[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
   
-#### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## <a name="enable-managed-backup-to-azure"></a>啟用 Azure 受控備份
   
 1.  **建立適用於 SAS URL 的 SQL 認證：** 使用 SAS 權杖來建立適用於 Blob 容器 URL 的 SQL 認證。 在 SQL Server Management Studio 中，使用下列 TRANSACT-SQL 查詢，根據下列範例來建立適用於 Blob 容器 URL 的認證：  
   
@@ -97,7 +126,7 @@ ms.locfileid: "68089823"
     >  若要在執行個體層級啟用受管理的備份，請針對 `NULL` 參數指定 `database_name` 。  
   
     ```sql  
-    Use msdb;  
+    USE msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   
      @enable_backup = 1,   
@@ -111,7 +140,7 @@ ms.locfileid: "68089823"
   
 5.  **檢閱延伸事件預設設定：** 執行下列 Transact-SQL 陳述式，以檢閱擴充事件設定。  
   
-    ```  
+    ```sql
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
     ```  
   
@@ -125,21 +154,20 @@ ms.locfileid: "68089823"
   
     3.  **啟用電子郵件通知接收備份錯誤和警告：** 從 [查詢] 視窗中，執行下列 Transact-SQL 陳述式：  
   
-        ```  
+        ```sql
         EXEC msdb.managed_backup.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email1;email2>'  
-  
         ```  
   
-7.  **檢視 Microsoft Azure 儲存體帳戶中的備份檔案：** 從 SQL Server Management Studio 或 Azure 管理入口網站連線到儲存體帳戶。 您將會看到指定容器中的所有備份檔案。 請注意，您可能會在針對資料庫啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 5 分鐘內，看到資料庫和記錄備份。  
+7.  **檢視 Azure 儲存體帳戶中的備份檔案：** 從 SQL Server Management Studio 或 Azure 入口網站連線到儲存體帳戶。 您將會看到指定容器中的所有備份檔案。 請注意，您可能會在針對資料庫啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的 5 分鐘內，看到資料庫和記錄備份。  
   
 8.  **監視健康狀態：** 您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
   
     ```sql  
     --  view all admin events  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -157,21 +185,19 @@ ms.locfileid: "68089823"
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
     ```sql  
     -- to enable debug events  
-    Use msdb;  
-    Go  
-             EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    USE msdb;  
+    GO  
+    EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
     ```sql  
     --  View all events in the current week  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -180,7 +206,7 @@ ms.locfileid: "68089823"
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
     ```
   
- 本節所描述的步驟是針對第一次在資料庫上設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 您可以使用相同的系統預存程序來修改現有的組態並提供新值。  
+本節所描述的步驟是針對第一次在資料庫上設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 您可以使用相同的系統預存程序來修改現有的組態並提供新值。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server 到 Azure 的受控備份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

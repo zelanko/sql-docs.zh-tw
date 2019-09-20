@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9cff330e7dc69f4d99ffdbf3df82e2ff0b154ab5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907825"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846608"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定義合併資料表發行項之間的邏輯記錄關聯性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "67907825"
   
     -   如果這個值是 **1**，則表示已經使用預先計算的資料分割。  
   
-    -   如果這個值是 **0**，請在發行集資料庫的發行者上執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 請為 **use_partition_groups** 指定 **@property** 的值，並為 **@value** 指定 **@value** 。  
+    -   如果這個值是 **0**，請在發行集資料庫的發行者上執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 為 **\@property** 指定 **use_partition_groups** 值，並為 **\@value** 指定 **true** 值。  
   
         > [!NOTE]  
         >  如果發行集不支援預先計算的資料分割，將無法使用邏輯記錄。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)主題中的＜使用預先計算的資料分割之需求＞。  
@@ -101,13 +101,13 @@ ms.locfileid: "67907825"
   
 2.  如果組成此邏輯記錄的發行項不存在，請在發行集資料庫的發行者上執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 。 針對此邏輯記錄指定下列其中一個衝突偵測和解決選項：  
   
-    -   若要偵測及解決邏輯記錄中相關資料列內所發生的衝突，請為 **@value** 指定 **@logical_record_level_conflict_detection** ＞和＜ **@logical_record_level_conflict_resolution** 。  
+    -   若要偵測及解決邏輯記錄中相關資料列內所發生的衝突，請針對 **\@logical_record_level_conflict_detection** 和 **\@logical_record_level_conflict_resolution** 指定 **true** 值。  
   
-    -   若要使用標準資料列層級或資料行層級的衝突偵測與解決方法，請為 **@logical_record_level_conflict_detection** 指定 **@logical_record_level_conflict_detection** ＞和＜ **@logical_record_level_conflict_resolution** 的值 (這是預設值)。  
+    -   若要使用標準資料列層級或資料行層級的衝突偵測與解決方法，請為 **\@logical_record_level_conflict_detection** 和 **\@logical_record_level_conflict_resolution** 指定 **false** 值 (這是預設值)。  
   
 3.  針對組成此邏輯記錄的每一個發行項重複步驟 2。 您必須針對此邏輯記錄中的每一個發行項使用相同的衝突偵測和解決選項。 如需詳細資訊，請參閱 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
-4.  在發行集資料庫的發行者上，執行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 **@publication** 、關聯性中 **@article** 的一個發行項名稱、 **@join_articlename** 的第二個發行項名稱、 **@filtername** 的關聯性名稱、為 **@join_filterclause** 定義兩個發行項之間之關聯性的子句、 **@join_unique_key** 的聯結類型，以及 **@filter_type** 的下列其中一個值：  
+4.  在發行集資料庫的發行者上，執行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 **\@publication**、 **\@article** 關聯性中的一個發行項名稱、 **\@join_articlename** 的第二個發行項名稱、 **\@filtername** 的關聯性名稱、為 **\@join_filterclause** 定義兩個發行項之間的關聯性子句、 **\@join_unique_key** 的聯結類型，並為 **\@filter_type** 指定下列其中一個值：  
   
     -   **2** - 定義邏輯關聯性。  
   
@@ -122,15 +122,15 @@ ms.locfileid: "67907825"
   
 1.  若要偵測及解決邏輯記錄中相關資料列內所發生的衝突：  
   
-    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 請為 **@property** 指定 **@property** 的值，並為 **@value** 指定 **@value** 。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription** 。  
+    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為 **\@property** 指定 **logical_record_level_conflict_detection** 值，並為 **\@value** 指定 **true** 值。 為 **\@force_invalidate_snapshot** 和 **\@force_reinit_subscription** 指定 **1** 值。  
   
-    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 請為 **@property** 指定 **@property** 的值，並為 **@value** 指定 **@value** 。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription** 。  
+    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為 **\@property** 指定 **logical_record_level_conflict_resolution** 值，並為 **\@value** 指定 **true** 值。 為 **\@force_invalidate_snapshot** 和 **\@force_reinit_subscription** 指定 **1** 值。  
   
 2.  若要使用標準資料列層級或資料行層級的衝突偵測與解決方式：  
   
-    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 請為 **@property** 指定 **@property** 的值，並為 **@logical_record_level_conflict_detection** 指定 **@value** 。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription** 。  
+    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為 **\@property** 指定 **logical_record_level_conflict_detection** 值，並為 **\@value** 指定 **false** 值。 為 **\@force_invalidate_snapshot** 和 **\@force_reinit_subscription** 指定 **1** 值。  
   
-    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 請為 **@property** 指定 **@property** 的值，並為 **@logical_record_level_conflict_detection** 指定 **@value** 。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription** 。  
+    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 為 **\@property** 指定 **logical_record_level_conflict_resolution** 值，並為 **\@value** 指定 **false** 值。 為 **\@force_invalidate_snapshot** 和 **\@force_reinit_subscription** 指定 **1** 值。  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>移除邏輯記錄關聯性  
   
@@ -143,7 +143,7 @@ ms.locfileid: "67907825"
     > [!NOTE]  
     >  此查詢會傳回與 [sp_helpmergefilter](../../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)相同的資訊，但是此系統預存程序只會傳回也屬於聯結篩選之邏輯記錄關聯性的相關資訊。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)。 指定 **@publication** 、關聯性中 **@article** 的其中一個發行項名稱，以及步驟 1 中 **@filtername** 。  
+2.  在發行集資料庫的發行者上，執行 [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)。 指定 **\@publication**、 **\@article** 關聯性中的其中一個發行項名稱，並為 **\@filtername** 指定步驟 1 中的關聯性名稱。  
   
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  這個範例會在現有的發行集上啟用預先計算的資料分割，並針對 `SalesOrderHeader` 和 `SalesOrderDetail` 資料表建立組成兩個新發行項的邏輯記錄。  

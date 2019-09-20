@@ -16,12 +16,12 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 90c09b0d6c2d4c8e2a3c4fa7288d7a2ef2451ce0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ede5586c8ea7fab69360c12394834fa681eb113c
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769856"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846564"
 ---
 # <a name="delete-a-publication"></a>刪除發行集
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ ms.locfileid: "68769856"
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者上執行 [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) 。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 針對 **@type** @type **@type** 資料夾中刪除發行集。 (選擇性) 如果無法存取散發者，或是資料庫的狀態有疑問或離線，請針對 **@force** @type **@force** 資料夾中刪除發行集。 (選擇性) 如果未在發行集資料庫上執行 **@dbname** ，請針對 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 為 **\@type** 指定 **tran** 值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為 **\@force** 指定 **1** 值。 (選擇性) 如果未在發行集資料庫上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，請為 **\@dbname** 指定資料庫的名稱。  
   
         > [!NOTE]  
-        >  針對 **@force** @type **@force** 的值可能會將與複寫有關的發行物件留在資料庫中。  
+        >  為 **\@force** 指定 **1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
   
 2.  (選擇性) 如果此資料庫沒有任何其他發行集，請執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)，以便使用快照式或異動複寫來停用目前資料庫的發行集。  
   
@@ -75,10 +75,10 @@ ms.locfileid: "68769856"
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者端執行 [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 針對 **@type** @type **@type** 資料夾中刪除發行集。 (選擇性) 如果無法存取散發者，或是資料庫的狀態有疑問或離線，請針對 **@force** @type **@force** 資料夾中刪除發行集。 (選擇性) 如果未在發行集資料庫上執行 **@dbname** ，請針對 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 為 **\@type** 指定 **merge** 值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為 **\@force** 指定 **1** 值。 (選擇性) 如果未在發行集資料庫上執行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，請為 **\@dbname** 指定資料庫的名稱。  
   
         > [!NOTE]  
-        >  針對 **@force** @type **@force** 的值可能會將與複寫有關的發行物件留在資料庫中。  
+        >  為 **\@force** 指定 **1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
   
 2.  (選擇性) 如果此資料庫沒有任何其他發行集，請執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)，以便使用合併式複寫來停用目前資料庫的發行集。  
   

@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d9d6f1f0bdf1a0e38bf26fdc18bc91c5825ca412
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653057"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911191"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 預覽版版本資訊
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "69653057"
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
-## <a name="documentation"></a>文件
+## <a name="documentation"></a>文件集
 
 - **問題和對客戶的影響**︰SQL Server 2019 (15.x) 的文件有所限制，且內容會隨附於 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 文件集。 文中專門針對 SQL Server 2019 (15.x) 的內容會以**適用於**來標示。
 
@@ -44,7 +44,11 @@ ms.locfileid: "69653057"
 
 - **問題和對客戶的影響**︰SQL Server 2019 (15.x) 未提供任何離線內容。
 
-## <a name="hardware-and-software-requirements"></a>硬體與軟體需求
+## <a name="build-number"></a>組建編號
+
+Windows、Linux 和容器上的 SQL Server 2019 RC 組建編號為 `15.0.1900.25`。  巨量資料叢集中使用的 SQL Server 2019 RC 組建編號為 `15.0.1900.47`。
+
+## <a name="hardware-and-software-requirements"></a>硬體和軟體需求
 
 - **問題和對客戶的影響**︰仍然會檢閱硬體和軟體需求，而且不是產品版本的最終需求。
 
@@ -129,6 +133,16 @@ ms.locfileid: "69653057"
 - **因應措施**：None
 
 - **適用於**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 候選版
+
+## <a name="master-data-service-notification-email-contains-broken-link"></a>Master Data Service 通知電子郵件包含中斷的連結
+
+- **問題和對客戶的影響**︰來自 Master Data Services (MDS) 的通知電子郵件包含中斷的連結。 此連結會巡覽至傳回錯誤的頁面，如下列訊息所示：
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **因應措施**：開啟 MDS 入口網站，並手動移至資源。
+
+- **適用於**：SQL Server 2019 候選版。
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68085717"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910799"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安裝 SQL Server 命令列工具 sqlcmd 和 bcp
 
@@ -77,7 +77,7 @@ ms.locfileid: "68085717"
    >   sudo yum update mssql-tools
    >   ```
 
-1. **選用**：在 Bash Shell 中將 `/opt/mssql-tools/bin/` 新增至您的 **PATH** 環境變數。
+1. **選擇性**：在 Bash Shell 中將 `/opt/mssql-tools/bin/` 新增至您的 **PATH** 環境變數。
 
    若要讓登入工作階段的 Bash Shell 可存取 **sqlcmd/bcp**，請使用下列命令修改您在 **~/.bash_profile** 檔案中的 **PATH**：
 
@@ -96,7 +96,7 @@ ms.locfileid: "68085717"
 
 遵循下列步驟，在 Ubuntu 上安裝 **mssql-tools**。 
 
-1. 匯入公用存放庫 GPG 金鑰。
+1. 匯入公開存放庫 GPG 金鑰。
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -122,7 +122,7 @@ ms.locfileid: "68085717"
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **選用**：在 Bash Shell 中將 `/opt/mssql-tools/bin/` 新增至您的 **PATH** 環境變數。
+1. **選擇性**：在 Bash Shell 中將 `/opt/mssql-tools/bin/` 新增至您的 **PATH** 環境變數。
 
    若要讓登入工作階段的 Bash Shell 可存取 **sqlcmd/bcp**，請使用下列命令修改您在 **~/.bash_profile** 檔案中的 **PATH**：
 
@@ -161,7 +161,7 @@ ms.locfileid: "68085717"
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **選用**：在 Bash Shell 中將 `/opt/mssql-tools/bin/` 新增至您的 **PATH** 環境變數。
+1. **選擇性**：在 Bash Shell 中將 `/opt/mssql-tools/bin/` 新增至您的 **PATH** 環境變數。
 
    若要讓登入工作階段的 Bash Shell 可存取 **sqlcmd/bcp**，請使用下列命令修改您在 **~/.bash_profile** 檔案中的 **PATH**：
 
@@ -197,7 +197,7 @@ brew install mssql-tools
 
 ## <a id="docker"></a> Docker
 
-SQL Server 命令列工具包含在 Docker 映像中。 如果您使用互動式命令提示字元來附加至映像，則可在本機執行這些工具。
+如果您[在 Docker 容器中執行 SQL Server](quickstart-install-connect-docker.md)，則 SQL Server 命令列工具已包含在 SQL Server Linux 容器映射中。 如果您使用互動式 Bash Shell 來附加至正在執行的容器，則您可以在本機執行這些工具。
 
 ## <a name="offline-installation"></a>離線安裝
 

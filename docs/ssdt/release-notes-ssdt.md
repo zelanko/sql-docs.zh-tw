@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531035"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874896"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
@@ -497,7 +497,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 - 已修正在結構資料來源上變更來源不會在內容運算式中保留變更的問題
 - 已修正 M 運算式錯誤可能會導致更新模型失敗但未顯示錯誤訊息的問題
 - 已修正關閉 SSDT 並出現錯誤「此組建必須在方案可被關閉前停止」的問題
-- 已修正在 1400 相容性層級模型中設定錯誤的模擬模式時，VS 可能看似已停止回應的問題 
+- 修正在 1400 相容性層級模型中設定錯誤的模擬模式時，VS 可能看似停止回應的問題 
 - 詳細資料列屬性現在只會在非空白時 (預設值已變更)，才能序列化為 JSON
 - 表格式直接查詢模式清單現在提供 Oracle OLEDB 驅動程式
 - 在 1400 相容性表格式模型中新增 M 運算式現在會在表格式模型檔案總管 (TME) 中顯示/重新整理
@@ -844,7 +844,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 * 已修正 SSDT AS 專案屬性對話方塊在高 DPI 縮放比例調整大小時正確錨定的問題。
 * 已修正在 SSDT AS 專案中升級內含貼上的資料表的特定模型時可能會造成錯誤的問題。
 * 已修正在 SSDT AS 中從 Excel 貼上整個工作表列緩慢且建立許多不必要欄的問題。
-* 已修正在 SSDT AS 中大型靜態 DataTable 運算式的剖析和反白顯示緩慢或似乎停止回應的問題。
+* 修正在 SSDT AS 中大型靜態 DataTable 運算式的剖析和醒目提示緩慢或似乎停止回應的問題。
 * 已修正在 SSDT AS 中將量值和 KPI 值新增至編輯器中目前所選檢視方塊的問題。
 * 已修正在 SSDT 中從 SQL Azure 匯入 AS 專案的資料不支援除了 "dbo" 以外之結構描述類型的問題。
 
