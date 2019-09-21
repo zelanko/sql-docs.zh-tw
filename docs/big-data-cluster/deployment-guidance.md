@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878713"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174275"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
 
@@ -148,7 +148,7 @@ azdata bdc create --accept-eula=yes
 | **CONTROLLER_PASSWORD** | 必要項 |叢集管理員的密碼。 |
 | **MSSQL_SA_PASSWORD** | 必要項 |適用於 SQL 主要執行個體的 SA 使用者密碼。 |
 | **KNOX_PASSWORD** | 必要項 |Knox**根**使用者的密碼。 請注意，在基本驗證設定中，只有 Knox 支援的使用者才是**root**。|
-| **ACCEPT_EULA**| 第一次使用 `azdata` 時的必要項| 不需要任何值。 設定為環境變數時，會將 EULA 套用至 SQL Server 和 `azdata`。 如果未設定為環境變數，您可以在第一次使用 `azdata` 命令時包含 `--accept-eula`。|
+| **ACCEPT_EULA**| 第一次使用 `azdata` 時的必要項| 設定為 [是]。 設定為環境變數時，會將 EULA 套用至 SQL Server 和 `azdata`。 如果未設定為環境變數，您可以在第一次使用 `azdata` 命令時包含 `--accept-eula=yes`。|
 | **DOCKER_USERNAME** | 選擇性 | 用來存取容器映像的使用者名稱，以防它們儲存於私人存放庫中。 如需如何使用私人 Docker 存放庫來進行巨量資料叢集部署的詳細資訊，請參閱[離線部署](deploy-offline.md)主題。|
 | **DOCKER_PASSWORD** | 選擇性 |用來存取上述私人存放庫的密碼。 |
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
