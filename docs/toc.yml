@@ -1643,7 +1643,7 @@
               href: relational-databases/tables/use-column-sets.md
             - name: 資料表值參數
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-        - name: Microsoft Edge 限制
+        - name: 邊緣條件約束
           href: relational-databases/tables/graph-edge-constraints.md
           items:
             - name: 建立
@@ -4183,8 +4183,12 @@
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
         - name: 使用量和診斷資料集合
           items:
-            - name: 隱私權補充
-              href: sql-server/sql-server-privacy.md
+            - name: SQL Server 隱私權聲明補充
+              items:
+                - name: SQL Server 2017 與舊版
+                  href: sql-server/sql-server-privacy.md
+                - name: SQL Server 2019
+                  href: sql-server/sql-server-privacy-ver15.md
             - name: "設定 SQL Server\_使用量和診斷資料"
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: 設定工具使用量和診斷資料
@@ -6495,6 +6499,12 @@
   items:
     - name: 管理
       items:
+        - name: 加速資料庫復原
+          items:
+            - name: 概觀
+              href: relational-databases/accelerated-database-recovery-concepts.md
+            - name: 管理
+              href: relational-databases/accelerated-database-recovery-management.md
         - name: 中央管理伺服器
           href: relational-databases/administer-multiple-servers-using-central-management-servers.md
         - name: 組態管理員

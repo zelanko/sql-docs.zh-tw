@@ -59,20 +59,14 @@
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
     - name: R
       items:
-        - name: 驗證 R 存在於 SQL Server 中
-          href: ../advanced-analytics/tutorials/quickstart-r-verify.md
-        - name: 以 R 和 SQL 撰寫的 Hello World
-          href: ../advanced-analytics/tutorials/quickstart-r-run-using-tsql.md
-        - name: 處理輸入和輸出
-          href: ../advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md
+        - name: 建立 R 指令碼
+          href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
+        - name: 訓練模型並為其評分
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: 處理資料類型和物件
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-        - name: 使用 R 函式
+        - name: 撰寫 R 函式
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
-        - name: 建立預測模型
-          href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
-        - name: 從模型預測
-          href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
 - name: 教學課程
   items:
     - name: Python
