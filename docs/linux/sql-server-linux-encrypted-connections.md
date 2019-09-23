@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 3f658ba8723b142f37763ea8b4f0c8f7b0c5d0e1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077293"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016855"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密與 Linux 上 SQL Server 的連線
 
@@ -28,7 +28,7 @@ Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用
 - 目前的系統時間必須在憑證的 [有效期限自] 屬性值之後，並且在憑證的 [有效期限至] 屬性值之前。
 - 憑證必須是為了伺服器驗證而準備的。 這會要求憑證的 [增強金鑰使用方法] 屬性指定 [伺服器驗證 (1.3.6.1.5.5.7.3.1)]。
 - 憑證必須使用 AT_KEYEXCHANGE 的 KeySpec 選項來建立。 通常，憑證的金鑰使用方法屬性 (KEY_USAGE) 也包括金鑰編密 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)。
-- 憑證的 [主旨] 屬性必須指出一般名稱 (CN) 與伺服器電腦的主機名稱或完整網域名稱 (FQDN) 相同。 注意：支援「萬用字元憑證」。
+- 憑證的 [主旨] 屬性必須指出一般名稱 (CN) 與伺服器電腦的主機名稱或完整網域名稱 (FQDN) 相同。 注意:支援「萬用字元憑證」。
 
 ## <a name="configuring-the-openssl-libraries-for-use-optional"></a>設定要使用的 OpenSSL 程式庫 (選擇性)
 您可以在 `/opt/mssql/lib/` 目錄中建立會參考應使用哪些 `libcrypto.so` 和 `libssl.so` 程式庫來進行加密的符號連結。 如果您想要強制 SQL Server 使用特定版本的 OpenSSL 而不是系統提供的預設值，這會相當有用。 如果這些符號連結不存在，SQL Server 就會在系統上載入預設設定的 OpenSSL 程式庫。
@@ -69,8 +69,8 @@ TLS 可用來加密從用戶端應用程式到 [!INCLUDE[ssNoVersion](../include
         - **Windows**：將 .pem 檔案匯入成 [目前的使用者] -> [受信任的根憑證授權單位] -> [憑證] 底下的憑證
         - **macOS**： 
            - 將憑證複製到 ```/usr/local/etc/openssl/certs```
-           - 執行下列命令以取得雜湊值：```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 將憑證重新命名成值。 例如：```mv mssql.pem dc2dd900.0```。 確定 dc2dd900.0 在 ```/usr/local/etc/openssl/certs``` 中
+           - 執行下列命令以取得雜湊值：```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```
+           - 將憑證重新命名成值。 例如： ```mv mssql.pem dc2dd900.0```＞。 確定 dc2dd900.0 在 ```/usr/local/etc/openssl/certs``` 中
     
 -   **範例連接字串** 
 
@@ -129,7 +129,7 @@ TLS 可用來加密從用戶端應用程式到 [!INCLUDE[ssNoVersion](../include
 
 ## <a name="common-connection-errors"></a>常見的連線錯誤  
 
-|錯誤訊息 |修正 |
+|錯誤訊息 |Fix |
 |--- |--- |
 |此憑證鏈結是由不受信任的授權單位發出的。  |當用戶端無法驗證 SQL Server 在 TLS 信號交換期間所出示憑證上的簽章時，就會發生此錯誤。 確定用戶端直接信任 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 憑證，或信任簽署 SQL Server 憑證的 CA。 |
 |目標主體名稱不正確。  |確定 SQL Server 憑證上的 [一般名稱] 欄位與用戶端連接字串中指定伺服器名稱相符。 |  

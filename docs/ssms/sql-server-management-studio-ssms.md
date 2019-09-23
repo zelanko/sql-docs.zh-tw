@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
 ms.date: 09/11/2019
-ms.openlocfilehash: 2d4dd0491d7328250f73047d64233dd6df84fb2b
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: a185d7506b23931787699b52fedddfddf21c1cb8
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988111"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038850"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什麼是 SQL Server Management Studio (SSMS)？
 
@@ -33,7 +33,7 @@ ms.locfileid: "70988111"
 - [**下載 SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**下載 Visual Studio**](https://www.visualstudio.com/downloads/)
 
-![SSMS 簡介畫面](media/download-sql-server-management-studio-ssms/what-is-ssms.png)
+![SSMS](media/sql-server-management-studio-ssms/ssms.png)
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件  
   

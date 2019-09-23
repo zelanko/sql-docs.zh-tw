@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7376d783bd2aab594d0beeb18dc1cc03af4b9c50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0acec2dd2e4e7e9d08d979febf85cf98f883e77
+ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025886"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71066880"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,14 +131,14 @@ AdventureWorks_snapshot_evening
   
 -   A. [在 AdventureWorks 資料庫上建立快照集](#Creating_on_AW)  
   
--   B. [在 Sales 資料庫上建立快照集](#Creating_on_Sales)  
+-   B. [在 Sales 資料庫上建立快照集](#Creating_on_Sales)
   
 ####  <a name="Creating_on_AW"></a> A. 在 AdventureWorks 資料庫上建立快照集  
  此範例會在 `AdventureWorks` 資料庫上建立資料庫快照集。 快照集名稱 `AdventureWorks_dbss_1800`與疏鬆檔案的檔案名稱 `AdventureWorks_data_1800.ss`，表示建立時間是 6 P.M (1800 小時)。  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
-( NAME = AdventureWorks_Data, FILENAME =   
+( NAME = AdventureWorks, FILENAME =   
 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks_data_1800.ss' )  
 AS SNAPSHOT OF AdventureWorks;  
 GO  

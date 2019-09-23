@@ -13,12 +13,12 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f97c2e52c92a4ad6313ca6b18ed17fa89d831e93
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 3a18105727079997710ece9047ef87788d57b8d7
+ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190394"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71077520"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -60,10 +60,10 @@ SQL Server 中的 JSON 函數可讓您將 NoSQL 與關聯式概念結合在同�
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>從 JSON 文字中擷取值，然後在查詢中使用它們
 如有儲存在資料庫資料表中的 JSON 文字，您可以使用下列內建函式來讀取或修改 JSON 文字中的值：  
     
--   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) 可測試字串是否包含有效的 JSON。
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 可從 JSON 字串擷取純量值。
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) 可從 JSON 字串擷取物件或陣列。
--   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 變更 JSON 字串中的值。
+- [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) 可測試字串是否包含有效的 JSON。
+- [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 可從 JSON 字串擷取純量值。
+- [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) 可從 JSON 字串擷取物件或陣列。
+- [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 變更 JSON 字串中的值。
 
 
 **範例**

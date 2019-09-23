@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 309d97c52130eeb3477952cb70446c20787351cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929807"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096942"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -728,7 +728,7 @@ WHERE ProductID = 63;
 -  透過 sp_executesql 提交的查詢 
 -  準備查詢
 
-如需如何針對錯誤參數探測問題進行疑難排解的詳細資訊，請參閱[針對含參數敏感查詢執行計畫問題的查詢進行疑難排解](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues)。
+如需如何針對錯誤參數探測問題進行疑難排解的詳細資訊，請參閱[針對含參數敏感查詢執行計畫問題的查詢進行疑難排解](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems)。
 
 > [!NOTE]
 > 若是使用 `RECOMPILE` 提示的查詢，則會探查參數值和區域變數的目前值。 探查到的值 (參數和區域變數值) 是存在於批次中具有 `RECOMPILE` 提示的陳述式之前位置的值。 特別是對於參數，不會探查批次引動過程呼叫隨附的值。
