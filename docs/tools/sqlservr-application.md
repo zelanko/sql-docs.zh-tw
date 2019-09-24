@@ -45,7 +45,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 ## <a name="arguments"></a>引數
 
-**-s***instance_name*指定要連接的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]實例。 如果未指定任何具名執行個體， **sqlservr** 會啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的預設執行個體。
+**-s** *instance_name* 指定要連接的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]實例。 如果未指定任何具名執行個體， **sqlservr** 會啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的預設執行個體。
 
 > [!IMPORTANT]
 >啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體時，您必須使用該執行個體之適當目錄中的 **sqlservr** 應用程式。 如果是預設的執行個體，請執行 \MSSQL\Binn 目錄中的 **sqlservr** 。 如果是具名執行個體，請執行 \MSSQL$ **instance_name** \Binn 目錄中的*sqlservr*。
