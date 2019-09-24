@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 87c05fafb122e292c45033bb019548c84df44de0
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634544"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199471"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>在 SQL Server Machine Learning 服務上設定用於 Python 開發的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "69634544"
 
 針對 Python 開發, 您可以使用 Jupyter 筆記本, 這會隨附于 SQL Server 所安裝的 Anaconda 散發套件中。 本文說明如何開始 Jupyter 筆記本, 讓您可以在 SQL Server 本機和遠端執行 Python 程式碼。
 
-SSMS 是個別的下載, 適用于在 SQL Server 上建立和執行預存程式, 包括包含 Python 程式碼的程式。 您在 Jupyter 筆記本中撰寫的任何 Python 程式碼, 幾乎都可以內嵌在預存程式中。 您可以逐步執行其他快速入門, 以瞭解[SSMS 和內嵌的 Python](../tutorials/quickstart-python-verify.md)。
+SSMS 是個別的下載, 適用于在 SQL Server 上建立和執行預存程式, 包括包含 Python 程式碼的程式。 您在 Jupyter 筆記本中撰寫的任何 Python 程式碼, 幾乎都可以內嵌在預存程式中。 您可以逐步執行其他快速入門, 以瞭解[SSMS 和內嵌的 Python](../tutorials/quickstart-python-create-script.md)。
 
 ## <a name="1---install-python-packages"></a>1-安裝 Python 套件
 
@@ -52,7 +52,7 @@ SSMS 是個別的下載, 適用于在 SQL Server 上建立和執行預存程式,
 
   + [https://aka.ms/mls-py](https://aka.ms/mls-py)安裝 Microsoft Python 套件的版本9.2.1。 這個版本會對應到預設的 SQL Server 實例。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)會安裝 Microsoft Python 套件的9.3 版。 如果您的遠端 SQL Server 實例系結[至 Machine Learning Server 9.3](../install/upgrade-r-and-python.md), 此版本是較好的選擇。
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)會安裝 Microsoft Python 套件的9.3 版。 如果您的遠端 SQL Server 實例系結[至 Machine Learning Server 9.3](../install/upgrade-r-and-python.md)，此版本是較好的選擇。
 
 2. 以較高的系統管理員許可權開啟 PowerShell 視窗 (以滑鼠右鍵按一下 [**以系統管理員身分執行**])。
 
@@ -136,7 +136,7 @@ Anaconda 包含 Jupyter 筆記本。 在下一個步驟中, 建立筆記本並�
 要求資料庫管理員在您使用 Python 的資料庫中, 為[您的帳戶設定下列許可權](../security/user-permission.md):
 
 + **執行任何外部腳本**, 以在伺服器上執行 Python。
-+ **db_datareader**許可權, 以執行用來定型模型的查詢。
++ **db_datareader**許可權，以執行用來定型模型的查詢。
 + **db_datawriter**以寫入定型資料或評分資料。
 + **db_owner**以建立預存程式、資料表、函數等物件。 
   您也需要**db_owner**來建立範例和測試資料庫。 
@@ -227,7 +227,7 @@ def send_this_func_to_sql():
 
 ### <a name="send-the-function-to-sql-server"></a>將函數傳送至 SQL Server
 
-在此範例中, 建立遠端計算內容, 然後使用[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)將函數的執行傳送至 SQL Server。 **Rx_exec**函數很有用, 因為它接受計算內容做為引數。 您想要從遠端執行的任何函式都必須具有 compute 內容引數。 某些函式 (例如[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) ) 直接支援此引數。 針對不是的作業, 您可以使用**rx_exec**在遠端計算內容中傳遞您的程式碼。
+在此範例中，建立遠端計算內容，然後使用[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)將函數的執行傳送至 SQL Server。 **Rx_exec**函數很有用，因為它接受計算內容做為引數。 您想要從遠端執行的任何函式都必須具有 compute 內容引數。 某些函式（例如[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) ）直接支援此引數。 針對不是的作業，您可以使用**rx_exec**在遠端計算內容中傳遞您的程式碼。
 
 在此範例中, 沒有任何原始資料必須從 SQL Server 傳輸到 Jupyter Notebook。 所有計算都是在鳶尾花資料庫內進行, 只有影像檔案會傳回給用戶端。
 
@@ -305,4 +305,4 @@ display.Image(data=image)
 現在您已有工具和 SQL Server 的連線, 您可以使用[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)透過 Python 快速入門來擴充您的技能。
 
 > [!div class="nextstepaction"]
-> [快速入門：確認 Python 存在於 SQL Server](../tutorials/quickstart-python-verify.md)
+> [快速入門：使用 SQL Server Machine Learning 服務來建立及執行簡單的 Python 腳本](../tutorials/quickstart-python-create-script.md)

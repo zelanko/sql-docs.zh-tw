@@ -12,12 +12,12 @@ manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 4530d07ceb284f6f7c5a795836b979e846562f40
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118109"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199322"
 ---
 # <a name="query-options-execution-advanced-page"></a>查詢選項執行 (進階頁面)
 
@@ -58,11 +58,11 @@ ms.locfileid: "71118109"
 
 **顯示完成時間**可讓您在查詢結果之後或 [訊息] 索引標籤中，列印查詢執行完成的時間。
 
-**適用于 Always Encrypted 的 VBS 記憶體保護區證明通訊協定**可讓您為 Always Encrypted 與安全記憶體保護區搭配使用的虛擬化安全性（VBS）記憶體保護區設定證明通訊協定。 
+**適用于 Always Encrypted 的 VBS 記憶體保護區證明通訊協定**可讓您為 always Encrypted 與安全記憶體保護區所使用的虛擬化安全性（VBS）記憶體保護區設定證明通訊協定。
 
-  目前支援的證明通訊協定為：
+目前支援的證明通訊協定為：
 
-  * 主機守護者服務–使用 Windows 主機守護者服務（HGS）的證明通訊協定。
+* 主機守護者服務-使用 Windows 主機守護者服務（HGS）的證明通訊協定。
 
 如需詳細資訊，請參閱[使用 secure 記憶體保護區](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions)和[secure 記憶體保護區證明](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)Always Encrypted。
 

@@ -1,22 +1,22 @@
 ---
-title: 在 Windows 上安裝 SQL Server Machine Learning Services (Python、R)
+title: 在 Windows 上安裝 SQL Server Machine Learning Services （Python、R）
 titleSuffix: ''
 description: 本文說明如何在 Windows 上安裝 SQL Server Machine Learning 服務。 您可以使用 Machine Learning 服務來執行 Python 和資料庫內的 R 腳本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 58db08edb6afd8738a1aeecec6745e4419d2fd92
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634560"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199361"
 ---
-# <a name="install-sql-server-machine-learning-services-on-windows"></a>在 Windows 上安裝 SQL Server Machine Learning 服務
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安裝 SQL Server Machine Learning Services （Python 和 R）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -24,7 +24,7 @@ ms.locfileid: "69634560"
 
 ## <a name="bkmk_prereqs"></a>預先安裝檢查清單
 
-+ 如果您想要安裝具有 R 或 Python 語言支援的 Machine Learning 服務, 則需要 SQL Server 2017 (或更新版本) 安裝程式。 如果您改為 SQL Server 2016 安裝媒體, 您可以安裝[SQL Server R Services (資料庫內)](sql-r-services-windows-install.md)來取得 R 語言支援。
++ 如果您想要安裝具有 R 或 Python 語言支援的 Machine Learning 服務, 則需要 SQL Server 2017 (或更新版本) 安裝程式。 如果您改為 SQL Server 2016 安裝媒體，您可以安裝[SQL Server R Services （資料庫內）](sql-r-services-windows-install.md)來取得 R 語言支援。
 
 + 需要資料庫引擎實例。 您不能只安裝 R 或 Python 功能, 雖然您可以將它們累加新增至現有的實例。
 
@@ -105,7 +105,7 @@ ms.locfileid: "69634560"
 
 ## <a name="set-environment-variables"></a>設定環境變數
 
-僅適用于 R 功能整合, 您應該設定**MKL_CBWR**環境變數, 以確保從 Intel 數學核心程式庫 (MKL) 計算的[輸出一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
+僅適用于 R 功能整合，您應該設定**MKL_CBWR**環境變數，以確保從 Intel 數學核心程式庫（MKL）計算的[輸出一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
 
 1. 在 [控制台] 中, 按一下 [**系統及安全性** > **系統** > ] [系統**設定** > ] [**環境變數**]。
 
@@ -246,7 +246,7 @@ ms.locfileid: "69634560"
 * [管理磁片配額](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas), 以避免外部腳本執行耗盡磁碟空間的工作
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-在 Windows 上的 SQL Server 2019 中, 隔離機制已經變更。 這會影響**SQLRUserGroup**、防火牆規則、檔案許可權, 以及隱含的驗證。 如需詳細資訊, 請參閱[Machine Learning 服務的隔離變更](sql-server-machine-learning-services-2019.md)。
+在 Windows 上的 SQL Server 2019 中，隔離機制已經變更。 這會影響**SQLRUserGroup**、防火牆規則、檔案許可權，以及隱含的驗證。 如需詳細資訊，請參閱[Machine Learning 服務的隔離變更](sql-server-machine-learning-services-2019.md)。
 ::: moniker-end
 
 <a name="bkmk_configureAccounts"></a> 
@@ -289,7 +289,7 @@ ms.locfileid: "69634560"
 
 您想要從 SQL Server 使用的套件，必須安裝在執行個體所使用的預設程式庫中。 如果您在電腦上個別安裝 R, 或如果您已將套件安裝至使用者程式庫, 則無法從 T-sql 使用這些套件。
 
-若要安裝和管理 R 封裝, 您可以將使用者群組設定為在每個資料庫層級上共用封裝, 或設定資料庫角色以讓使用者安裝自己的封裝。 如需詳細資訊, 請參閱[在 SQL Server 中安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
+若要安裝和管理 R 封裝，您可以將使用者群組設定為在每個資料庫層級上共用封裝，或設定資料庫角色以讓使用者安裝自己的封裝。 如需詳細資訊, 請參閱[在 SQL Server 中安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="next-steps"></a>後續步驟
 

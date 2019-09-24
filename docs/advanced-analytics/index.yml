@@ -10,12 +10,12 @@ metadata:
   author: dphansen
   ms.author: davidph
   ms.date: 09/12/2019
-  ms.openlocfilehash: e8725cad09bd59d30f5094d59386b666fdf7c3a4
-  ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+  ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
+  ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/20/2019
-  ms.locfileid: "71149948"
+  ms.lasthandoff: 09/23/2019
+  ms.locfileid: "71199397"
 landingContent:
 - title: 關於 Machine Learning 服務
   linkLists:
@@ -36,13 +36,13 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: 在 SQL Server 上執行 "Hello world" Python 腳本
-      url: tutorials/quickstart-python-run-using-t-sql.md
+      url: tutorials/quickstart-python-create-script.md
     - text: 處理輸入和輸出
-      url: tutorials/quickstart-python-inputs-and-outputs.md
+      url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
     - text: 在 SQL Server 中使用 Python 資料結構
       url: tutorials/quickstart-python-data-structures.md
     - text: 訓練並使用您的第一個模型
-      url: tutorials/quickstart-python-train-score-in-tsql.md
+      url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
     - text: 使用線性回歸來預測 ski 出租

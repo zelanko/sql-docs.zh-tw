@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd458727fad637414d7c71865b2633f3caf80175
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383552"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199404"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>適用于 SQL Server Machine Learning 服務的 Python 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,9 @@ ms.locfileid: "70383552"
 
 | 快速入門 | 描述 |
 |-|-|
-| [Python 和 SQL Server 中的 Hello World](quickstart-python-run-using-t-sql.md) | 瞭解如何在 T-sql 中呼叫 Python 的基本概念。 |
-| [在 SQL Server 中使用 Python 處理輸入和輸出](quickstart-python-inputs-and-outputs.md) | 瞭解如何在[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)中處理 Python 的輸入和輸出。 |
-| [SQL Server 中的 Python 資料結構](quickstart-python-data-structures.md) | 顯示 SQL Server 如何使用 Python pandas 封裝來處理資料結構。 |
-| [定型和使用您的第一個模型](quickstart-python-train-score-in-tsql.md) | 說明如何建立、定型和使用 Python 模型來預測新的資料。 |
+| [Python 和 SQL Server 中的 Hello World](quickstart-python-create-script.md) | 瞭解如何使用[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)在 t-sql 中呼叫 Python 的基本概念。 |
+| [在 SQL Server 中使用 Python 處理資料類型和物件](quickstart-python-data-structures.md) | 顯示 SQL Server 如何使用 Python pandas 封裝來處理資料結構。 |
+| [在 Python 中建立預測模型並為其評分](quickstart-python-train-score-model.md) | 說明如何建立、定型和使用 Python 模型，以從新的資料進行預測。 |
 
 ## <a name="next-steps"></a>後續步驟
 
