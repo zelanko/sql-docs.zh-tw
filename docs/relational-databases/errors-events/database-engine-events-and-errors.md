@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77c095ac35d9b3068882be81d0ddf6293904f8bb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810331"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127364"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 
@@ -2725,7 +2725,7 @@ ms.locfileid: "68810331"
 |   6234    |   16  |   否  |   資料截斷錯誤。 長度 (%d) 超過類型 '%.*ls' 的最大長度 (%d)。    |
 |   6235    |   16  |   否  |   資料序列化錯誤。 長度 (%d) 小於類型 '%.*ls' 的固定長度 (%d)。  |
 |   6236    |   16  |   否  |   %s ASSEMBLY 失敗，因為檔名 '%.*ls' 太長。    |
-|   6237    |   16  |   否  |   %s ASSEMBLY 失敗，因為組件 "%.*ls" 中類型 "%.*ls" 上的方法 "%.* ls" 含無效的自訂屬性 "%.* ls"。  |
+|   6237    |   16  |   否  |   %s ASSEMBLY 失敗，因為組件 "%.*ls" 中類型 "%.* ls" 上的方法 "%.*ls" 含無效的自訂屬性 "%.* ls"。  |
 |   6238    |   16  |   否  |   %s ASSEMBLY 失敗，因為組件 "%.*ls" 中類型 "%.* ls" 的欄位 "%.*ls" 含無效的自訂屬性 "%.* ls"。   |
 |   6239    |   16  |   否  |   %s ASSEMBLY 失敗，因為組件 "%.*ls" 中類型 "%.* ls" 含無效的自訂屬性 "%.*ls"。    |
 |   6240    |   16  |   否  |   ALTER ASSEMBLY 失敗，因為類型 '%s' 的函數 '%s' 不再滿足可索引性需求，並已用在索引檢視表 '%s' 中。  |
@@ -4999,7 +4999,7 @@ ms.locfileid: "68810331"
 |   11297   |   16  |   否  |   已經收到損毀的訊息。 私用變數資料區段位移不正確。   |
 |   11298   |   16  |   否  |   已經收到損毀的訊息。 公用變數資料區段位移不正確。    |
 |   11299   |   10  |   否  |   已經收到損毀的訊息。 非循序訊息中含有非零序號。 這發生在具有交談識別碼 '%.*ls'、起始端: %d 以及訊息序號: %I64d 的訊息中。 |
-|   11300   |   10  |   是 |   認可唯讀或 TEMPDB XDES 時發生錯誤，伺服器正在關閉。    |
+|   11300   |   10  |   是 |   認可唯讀或 TEMPDB XDES 時發生錯誤，伺服器正在關閉。   |
 |   11301   |   10  |   是 |   對物件 %p 事件 %d 執行交易通知時發生錯誤。 |
 |   11302   |   10  |   是 |   在復原期間發生錯誤。 正在關閉資料庫 (位置: %d)。   |
 |   11303   |   10  |   是 |   釋放保留的記錄檔空間時發生錯誤: %ls 空間 %I64d，代碼 %d，狀態 %d。 |
