@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: HT
+ms.openlocfilehash: d8422146e3569ff991ef16179e54f0f78961fc79
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874396"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016872"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
@@ -22,12 +22,12 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 
 下載並安裝最新的 .NET Framework 版本以及 macOS 和 Linux 預覽：
 
-|平台|下載|發行日期|Version|建置
+|平台|Download|發行日期|Version|建置
 |:---|:---|:---|:---|:---|
-|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2102893)|2019年9月6日|18。3|15.0.4532.1|
-|macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102894)|2019年9月6日| 18。3|15.0.4532.1|
-|Linux .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102978)|2019年9月6日| 18。3|15.0.4532.1|
-|Windows .NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102979)|2019年9月6日| 18。3|15.0.4532.1|
+|Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2102893)|2019 年 9 月 13 日|18.3.1|15.0.4538.1|
+|macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102894)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
+|Linux .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102978)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
+|Windows .NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102979)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。
 
@@ -46,7 +46,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 
 1. 下載 [sqlpackage for Windows](https://go.microsoft.com/fwlink/?linkid=2102979)。
 2. 以滑鼠右鍵按一下 Windows Explorer 中的檔案，然後選取 [解壓縮全部]，然後選取目標目錄，來解壓縮檔案。
-3. 開啟新的終端機視窗，可以 cd 到 exracted sqlpackage 的位置：
+3. 開啟新的終端機視窗，並將 cd 放到解壓縮 sqlpackage 的位置：
 
    **.zip 安裝：**
 

@@ -47,26 +47,22 @@
   items:
     - name: Python
       items:
-        - name: 驗證 Python 存在於 SQL Server
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: Python 和 SQL 中的 Hello World
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: 處理輸入和輸出
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Python 資料結構與 SQL
+        - name: 建立 Python 指令碼
+          href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+        - name: 處理資料類型和物件
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: 訓練並使用您的第一個模型
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+        - name: 訓練模型並為其評分
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
         - name: 建立 R 指令碼
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: 訓練模型並為其評分
-          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: 處理資料類型和物件
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
         - name: 撰寫 R 函式
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
+        - name: 訓練模型並為其評分
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: 教學課程
   items:
     - name: Python
