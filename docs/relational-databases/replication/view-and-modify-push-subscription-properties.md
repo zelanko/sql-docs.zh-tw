@@ -18,12 +18,12 @@ ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6647af394964f0b8ef88fd6cb9909ac0ef9bfbdf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769235"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174229"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>檢視及修改發送訂閱屬性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,23 +64,23 @@ ms.locfileid: "68769235"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>檢視快照式或交易式發行集之發送訂閱的屬性  
   
-1.  在發行集資料庫的發行者上，執行 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 指定 **@publication** 或 Replication Management Objects (RMO)，在 **@subscriber** ，並針對 **@article** 指定 **@article** 存取。  
+1.  在發行集資料庫的發行者上，執行 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber**，並針對 **\@article** 將值指定為 **all**。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，並指定 **@subscriber** 存取。  
+2.  在發行集資料庫的發行者上，執行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，並指定 **\@subscriber**。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>變更快照式或交易式發行集之發送訂閱的屬性  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)，並指定 **@subscriber** 及針對所變更的訂閱者屬性指定任何參數。  
+1.  在發行集資料庫的發行者上，執行 [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)，並指定 **\@subscriber** 及針對所變更的訂閱者屬性指定任何參數。  
   
-2.  在發行集資料庫的發行者上，執行 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。 指定 **@publication** 或 Replication Management Objects (RMO)，在 **@subscriber** 或 Replication Management Objects (RMO)，在 **@destination_db** ，並將 **@article** 指定 **@article** 的值、將變更的訂閱屬性指定為 **@property** ，並將新的值指定為 **@value** 存取。 這樣會變更發送訂閱的安全性設定。  
+2.  在發行集資料庫的發行者上，執行 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber**、 **\@destination_db**，並將 **\@article** 指定為 **all** 值、將變更的訂閱屬性指定為 **\@property**，並將新的值指定為 **\@value**。 這樣會變更發送訂閱的安全性設定。  
   
-3.  (選擇性) 若要變更訂閱的 Data Transformation Services (DTS) 封裝屬性，請在訂閱資料庫的訂閱者上，執行 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) 。 針對 **@jobid** 指定散發代理程式作業的識別碼以及下列 DTS 封裝屬性：  
+3.  (選擇性) 若要變更訂閱的 Data Transformation Services (DTS) 封裝屬性，請在訂閱資料庫的訂閱者上，執行 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) 。 針對 **\@jobid** 指定散發代理程式作業的識別碼及下列 DTS 套件屬性：  
   
-    -   **@dts_package_name**  
+    -   **\@dts_package_name**  
   
-    -   **@dts_package_password**  
+    -   **\@dts_package_password**  
   
-    -   **@dts_package_location**  
+    -   **\@dts_package_location**  
   
      這樣會變更訂閱的 DTS 封裝屬性。  
   
@@ -89,13 +89,13 @@ ms.locfileid: "68769235"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>檢視合併式發行集之發送訂閱的屬性  
   
-1.  在發行集資料庫的發行者上，執行 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)。 指定 **@publication** 和 **@subscriber** 存取。  
+1.  在發行集資料庫的發行者上，執行 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)。 指定 **\@publication** 和 **\@subscriber**。  
   
-2.  在發行者端，執行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，並指定 **@subscriber** 存取。  
+2.  在發行者端，執行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，指定 **\@subscriber**。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>變更合併式發行集之發送訂閱的屬性  
   
-1.  在發行集資料庫的發行者上，執行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)。 指定 **@publication** 或 Replication Management Objects (RMO)，在 **@subscriber** 或 Replication Management Objects (RMO)，在 **@subscriber_db** 的值、將變更的訂閱屬性指定為 **@property** ，並將新的值指定為 **@value** 存取。  
+1.  在發行集資料庫的發行者上，執行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)。 指定 **\@publication**、 **\@subscriber**、 **\@subscriber_db**、將變更的訂閱屬性指定為 **\@property**，並將新值指定為 **\@value**。  
   
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
   

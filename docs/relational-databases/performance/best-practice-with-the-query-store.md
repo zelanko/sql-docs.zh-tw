@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 4627118daa91305dc905eb5f306e6bd2fcc1b91c
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903607"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163891"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -212,7 +212,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |---------------|--------------|  
 |迴歸查詢|找出執行計量最近迴歸的查詢 (也就是變更為更糟)。 <br />使用此檢視將您的應用程式中觀察到的需要修正或改善的效能問題，與實際查詢相互關聯。|  
 |整體資源耗用量|針對任何執行計量，分析資料庫的整體資源耗用量。<br />使用此檢視來識別資源模式 (每日與每晚的工作負載) 和最佳化資料庫的整體耗用量。|  
-|熱門資源取用查詢|選擇一個感興趣的執行計量，並識別針對提供的時間間隔具有最極端值的查詢。 <br />使用此檢視將注意力放在最相關的查詢，也就是對資料庫資源耗用量有最大影響的查詢。|  
+|熱門資源取用查詢|選擇一個感興趣的執行計量，並識別針對提供的時間間隔具有最極端值的查詢。 <br />使用此檢視將注意力放在最相關的查詢， 也就是對資料庫資源耗用量有最大影響的查詢。|  
 |強制計畫的查詢|使用查詢存放區列出先前的強制計畫。 <br />使用此檢視快速存取所有目前的強制計畫。|  
 |高變化的查詢|在關聯到任何可用的維度 (例如，所需時間間隔的持續時間、CPU 時間、IO 和記憶體使用量) 時，分析高執行變化的查詢。<br />您可以使用此檢視來識別含有廣泛變體效能的查詢，此效能會影響不同應用程式的使用者體驗。|  
 |查詢等候統計資料|分析資料庫中最常使用的等候類別，以及哪些查詢最常參與所選取的等候類別。<br />使用此檢視來分析等候統計資料，並識別可能影響使用者在應用程式間之體驗的查詢。<br /><br />**適用於：** 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始|  
@@ -229,11 +229,13 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 
 > [!NOTE]
 > 上圖對於特定查詢計劃可能具有不同形狀，每個可能狀態的意義如下：<br />  
-> |形狀圖|意義|  
+> 
+> |形狀|意義|  
 > |-------------------|-------------|
 > |Circle|查詢已完成 (已順利完成正常執行)|
 > |Square|已取消 (用戶端起始已中止執行)|
 > |Triangle|失敗 (例外狀況已中止執行)|
+> 
 > 此外，該形狀的大小會反映指定時間間隔內的查詢執行計數，隨著執行數目提高而增加大小。  
 
 -   您可能會推斷您的查詢遺失最佳執行的索引。 此資訊會顯示於查詢執行計畫內。 建立遺失的索引，並使用查詢存放區檢查查詢效能。  
@@ -290,7 +292,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 -   最後，您應該考慮將 [查詢擷取模式] 設定為 [Auto]，它會篩選掉和您的工作負載通常較不相關的查詢。  
   
 ### <a name="error-state"></a>錯誤狀態  
- 若要復原查詢存放區，請嘗試明確地重新設定讀寫模式，並檢查實際狀態。  
+ 若要復原查詢存放區， 請嘗試明確地重新設定讀寫模式，並檢查實際狀態。  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -306,9 +308,9 @@ FROM sys.database_query_store_options;
   
  如果問題持續發生，表示已損毀的查詢存放區資料會持續保存在磁碟上。
  
- 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，您可以透過在受影響的資料庫中執行 **sp_query_store_consistency_check** 預存程序來復原查詢存放區。 針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，您將需要從查詢存放區清除資料，如下所示。
+ 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，您可以透過在受影響的資料庫中執行 **sp_query_store_consistency_check** 預存程序來復原查詢存放區。 必須先停用查詢存放區，才能嘗試進行復原作業。 針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，您將需要從查詢存放區清除資料，如下所示。
  
- 如果沒有幫助，您可以嘗試在要求讀寫模式之前，先清除查詢存放區。  
+ 若復原失敗，您可以嘗試清除查詢存放區，再設定讀寫模式。  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -337,7 +339,7 @@ FROM sys.database_query_store_options;
 |Custom|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 會在 `ALTER DATABASE SET QUERY_STORE` 命令下引進 CUSTOM 擷取模式。 啟用後，即可在新的查詢存放區擷取原則設定下使用額外查詢存放區設定，來微調特定伺服器中的資料收集。<br /><br />新的自訂設定會定義在內部擷取原則時間閾值期間所發生的情況：會評估可設定條件的時間界限，且如果成立的話，查詢即可由查詢存放區來擷取。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|  
 
 > [!NOTE]
-> 當查詢擷取模式設定為 All、Auto 或 Custom 時，一律都會擷取資料指標、預存程序中的查詢，以及原生編譯的查詢。
+> 當查詢擷取模式設定為 All、Auto 或 Custom 時，一律會擷取資料指標、預存程序中的查詢，以及原生編譯的查詢。 若要擷取原生編譯查詢，請使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 來啟用收集每個查詢的統計資料。 
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>在查詢存放區中保留最相關的資料  
  設定查詢存放區僅包含相關的資料，且可以持續提供絕佳的疑難排解體驗，對您的一般工作負載的影響最小。  

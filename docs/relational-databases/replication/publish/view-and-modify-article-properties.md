@@ -22,12 +22,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfbe6ede99184ea806b24bb7f8565b616a561cd
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b11273743ecdd54fa7a48aa4b8750d1925e8cca0
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769755"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174308"
 ---
 # <a name="view-and-modify-article-properties"></a>檢視和修改發行項屬性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -104,29 +104,29 @@ ms.locfileid: "68769755"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>檢視屬於快照式或交易式發行集之發行項的屬性  
   
-1.  執行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)，針對 **@publication** 參數指定發行集的名稱，並針對 **@article** 參數指定發行項的名稱。 如果您不指定 **@article** ，將會傳回發行集中所有發行項的資訊。  
+1.  執行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)，針對 **\@publication** 參數指定發行集的名稱，並針對 **\@article** 參數指定發行項的名稱。 如果您不指定 **\@article**，將會傳回發行集中所有發行項的資訊。  
   
 2.  針對資料表發行項執行 [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) ，以列出基底資料表中可用的所有資料行。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>修改屬於快照式或交易式發行集之發行項的屬性  
   
-1.  執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)，在 **@property** 參數中指定變更的發行項屬性，並在 **@value** 參數指定發行項的名稱。  
+1.  執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)，在 **\@property** 參數中指定變更的發行項屬性，並在 **\@value** 參數中指定這個屬性的新值。  
   
     > [!NOTE]  
-    >  如果此變更需要產生新的快照集，您也必須針對 **@force_invalidate_snapshot** 指定 **@force_invalidate_snapshot** 的值，而如果此變更需要重新初始化訂閱者，您也必須針對 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription** 。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果此變更需要產生新的快照集，您也必須針對 **\@force_invalidate_snapshot** 將值指定為 **1**，而如果此變更需要重新初始化訂閱者，您也必須針對 **\@force_reinit_subscription** 將值指定為 **1**。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>檢視屬於合併式發行集之發行項的屬性  
   
-1.  執行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)，針對 **@publication** 參數指定發行集的名稱，並針對 **@article** 參數指定發行項的名稱。 如果您不指定這些參數，將會傳回發行集中或發行者上所有發行項的資訊。  
+1.  執行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)，針對 **\@publication** 參數指定發行集的名稱，並針對 **\@article** 參數指定發行項的名稱。 如果您不指定這些參數，將會傳回發行集中或發行者上所有發行項的資訊。  
   
 2.  針對資料表發行項執行 [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) ，以列出基底資料表中可用的所有資料行。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>修改屬於合併式發行集之發行項的屬性  
   
-1.  執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，在 **@property** 參數中指定變更的發行項屬性，並在 **@value** 參數指定發行項的名稱。  
+1.  執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，在 **\@property** 參數中指定變更的發行項屬性，並在 **\@value** 參數中指定這個屬性的新值。  
   
     > [!NOTE]  
-    >  如果此變更需要產生新的快照集，您也必須針對 **@force_invalidate_snapshot** 指定 **@force_invalidate_snapshot** 的值，而如果此變更需要重新初始化訂閱者，您也必須針對 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription** 。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果此變更需要產生新的快照集，您也必須針對 **\@force_invalidate_snapshot** 將值指定為 **1**，而如果此變更需要重新初始化訂閱者，您也必須針對 **\@force_reinit_subscription** 將值指定為 **1**。 如需當變更時需要新的快照集或重新初始化之屬性的詳細資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  這個異動複寫範例會傳回已發行之發行項的屬性。  

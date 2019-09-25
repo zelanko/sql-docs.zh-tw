@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228459"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096884"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -53,7 +53,7 @@ ms.locfileid: "70228459"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|加密索引的資料行|可在使用隨機加密方式以及啟用記憶體保護區的索引鍵所加密的資料行上建立索引，改善複雜查詢 (使用 `LIKE` 與比較運算子) 的效能。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+|具有安全記憶體保護區的 Always Encrypted|透過在伺服器端安全記憶體保護區中啟用純文字資料上的計算，在具備就地加密和豐富計算的 Always Encrypted 上進行擴充。 就地加密可改善密碼編譯作業 (加密資料行、輪換資料行加密金鑰等) 的效能和可靠性，因為它會避免將資料移出資料庫。 支援豐富計算 (模式比對和比較作業) 可讓更多的範例適用 Always Encypted，以及要求敏感資料保護，但同時也需要在 Transact-SQL 查詢中擁有更豐富功能的應用程式。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。|
 |暫止和繼續透明資料加密 (TDE) 的初始掃描|請參閱[透明資料加密 (TDE) 掃描 - 暫止和繼續](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)。|
 |SQL Server 組態管理員中的憑證管理|請參閱[憑證管理 (SQL Server 組態管理員)](../database-engine/configure-windows/manage-certificates.md)。|
 | &nbsp; | &nbsp; |

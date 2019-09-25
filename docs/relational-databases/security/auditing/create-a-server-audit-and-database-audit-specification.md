@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5199849b0f3dced34ced0ec7a102f03cb054d789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da064aa2e8cd8c32a96f52ad06ef29ed4e835997
+ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095203"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71066886"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>建立伺服器稽核和資料庫稽核規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "68095203"
      資料庫稽核規格的名稱。 當您建立新的伺服器稽核規格時會自動產生這個名稱，但是可加以編輯。  
   
      **稽核**  
-     現有資料庫稽核規格的名稱。 請輸入稽核名稱或從清單中選取。  
+     現有伺服器稽核物件的名稱。 請輸入稽核名稱或從清單中選取。  
   
      **稽核動作類型**  
      指定要擷取之資料庫層級的稽核動作群組和稽核動作。 如需資料庫層級稽核動作群組和稽核動作的清單以及其所包含的事件描述，請參閱 [SQL Server Audit 動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  

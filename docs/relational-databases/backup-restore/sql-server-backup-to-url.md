@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176361"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118191"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,8 +66,10 @@ ms.locfileid: "70176361"
 - 您可以備份至多個區塊 Blob，以取得更佳的備份及還原效能，並支援更大的資料庫備份。
 - [區塊 Blob](https://azure.microsoft.com/pricing/details/storage/blobs/) 比[分頁 Blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/) 更便宜。 
 
-當您備份至區塊 Blob 時，您可以指定的最大區塊大小為 4 MB。 單一區塊 Blob 檔案的大小上限為 4 MB * 50000 = 195 GB。 若您的資料庫大小超過 195 GB，我們建議您：
-- 使用備份壓縮
+將大型資料庫備份到 Blob 儲存體會受限於[受控執行個體 T-SQL 差異、限制和已知問題](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup)中所列的限制。
+
+ 若資料庫太大，請執行以下其中一項操作：
+- 使用備份壓縮或
 - 備份至多個區塊 Blob
 
 ###  <a name="Blob"></a> Microsoft Azure Blob 儲存體服務  

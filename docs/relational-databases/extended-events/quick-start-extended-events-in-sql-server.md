@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a378daeb4307b9f99e055edafd5cb21d95c30977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009414"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016847"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入門：SQL Server 中的延伸事件
 
@@ -120,7 +120,7 @@ SSMS UI 經年累月的調整結果，可能會造成文字和支援的螢幕擷
 
 9. 按一下左上方的 [資料存放區]  頁面。
 
-10. 在 [目標]  區域中，按一下 [按一下此處以加入目標]  。
+10. 在 [目標]  區域中，按一下 [按一下此處以新增目標]  。
     - 在 [類型]  下拉式清單中，選擇 **event_file**。
     - 這表示事件資料將會儲存在我們可以檢視的檔案中。
 
@@ -623,7 +623,7 @@ SELECT
 ```
 
 
-#### <a name="haspermsbyname-function"></a>HAS_PERMS_BY_NAME 函數
+#### <a name="has_perms_by_name-function"></a>HAS_PERMS_BY_NAME 函數
 
 
 下列 SELECT 會報告您的權限。 它需要內建函數 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)。

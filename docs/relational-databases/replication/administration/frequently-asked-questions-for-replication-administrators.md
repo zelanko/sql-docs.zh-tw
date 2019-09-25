@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e4ad8e1ec6d70f6155afd49712fdd8b2b3d1626b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8641b1466a4f836c32259ac4f46022d43f8fe216
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770816"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174247"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "68770816"
   
 -   指定在重新初始化訂閱時不應卸除物件。 在重新初始化之前，執行下列其中一項：  
   
-    -   執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 或 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 指定**sp_changearticle**參數的 'pre_creation_cmd' (**sp_changemergearticle**) 或 'pre_creation_command' ( **@property** )，以及 **@value** 。  
+    -   執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 或 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 **\@property** 參數指定 'pre_creation_cmd' (**sp_changearticle**) 或 'pre_creation_command' (**sp_changemergearticle**)，以及針對 **\@value** 參數指定 'none'、'delete' 或 'truncate' 值。  
   
     -   在 [發行項屬性 - \<發行項>]  對話方塊的 [目的地物件]  區段中，選取 [不要變更現有物件]  、[刪除資料。  如果發行項有資料列篩選，僅刪除符合篩選的資料。] 或 [截斷現有物件中的所有資料]  作為 [如果名稱使用中，則採取動作]  選項的值。 如需存取這個對話方塊的詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   

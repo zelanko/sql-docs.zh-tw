@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123120"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163899"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查詢調整小幫手來升級資料庫
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "70123120"
 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 開始，新的**查詢調整小幫手 (QTA)** 功能將引導使用者完成建議的工作流程，以便在升級到較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本期間保持效能穩定性，如[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)的*在升級至更新版 SQL Server 期間保持效能的穩定性*一節所述。 但是，QTA 不會像建議工作流程的最後一個步驟中所見，復原至先前已知的良好計畫。 QTA 會改為追蹤任何在[查詢存放區**迴歸查詢**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed)檢視中找到的迴歸，並會逐一查看適用最佳化工具模型變化的可能排列，以產生更好的新計畫。
 
 > [!IMPORTANT]
-> QTA 不會產生使用者工作負載。 如果在您的應用程式未使用的環境中執行 QTA，請確保您仍然可以透過其他方式在目標 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上執行代表性的測試工作負載。 
+> QTA 不會產生使用者工作負載。 如果在您應用程式未使用的環境中執行 QTA，請確保您仍然可以透過其他方式在目標 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上執行代表性的測試工作負載。 
 
 ## <a name="the-query-tuning-assistant-workflow"></a>查詢調整小幫手工作流程
 QTA 的起始點假設將舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫 (透過 [CREATE DATABASE ...FOR ATTACH](../..//relational-databases/databases/attach-a-database.md) 或 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)) 移動到較新版本的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，且升級前的資料庫相容性層級不會立即變更。 QTA 將引導完成下列步驟：

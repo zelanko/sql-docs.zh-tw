@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d8c31adb0dff16b84e4c606dc3b5479a43a1092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075207"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174292"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ FETCH
  LAST  
  傳回資料指標中的最後一個資料列，使它成為目前資料列。  
   
- ABSOLUTE { *n*| @*nvar*}  
- 如果 *n* 或 @*nvar* 是正數，則會從資料指標前端傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是負數，則會在資料指標結尾之前傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是 0，則不會傳回任何資料列。 *n* 必須是整數常數，而 @*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
+ ABSOLUTE { *n*| \@*nvar*}  
+ 如果 *n* 或 \@*nvar* 是正數，則會從資料指標前端傳回 *n* 個資料列，使所傳回資料列成為新的目前資料列。 如果 *n* 或 \@*nvar* 是負數，則會在資料指標結尾之前傳回 *n* 個資料列，使所傳回資料列成為新的目前資料列。 如果 *n* 或 \@*nvar* 是 0，則不會傳回任何資料列。 *n* 必須是整數常數，而 \@*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
   
- RELATIVE { *n*| @*nvar*}  
- 如果 *n* 或 @*nvar* 是正數，則會在目前資料列之後傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是負數，則會在目前資料列之前傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是 0，則會傳回目前資料列。 在針對資料指標執行的第一個擷取上，如果在指定 `FETCH RELATIVE` 時將 *n* 或 @*nvar* 設為負數或 0，就不會傳回任何資料列。 *n* 必須是整數常數，而 @*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
+ RELATIVE { *n*| \@*nvar*}  
+ 如果 *n* 或 \@*nvar* 是正數，則會在目前資料列之後傳回 *n* 個資料列，使傳回資料列成為新的目前資料列。 如果 *n* 或 \@*nvar* 是負數，則會在目前資料列之前傳回 *n* 個資料列，使傳回資料列成為新的目前資料列。 如果 *n* 或 \@*nvar* 是 0，則會傳回目前資料列。 在針對資料指標執行的第一個擷取上，如果在指定 `FETCH RELATIVE` 時將 *n* 或 \@*nvar* 設為負數或 0，就不會傳回任何資料列。 *n* 必須是整數常數，而 \@*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
   
  GLOBAL  
  指定 *cursor_name* 是全域資料指標。  

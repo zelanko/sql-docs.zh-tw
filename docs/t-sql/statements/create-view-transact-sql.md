@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938887"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038869"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +165,7 @@ OR ALTER
   
  如果檢視相依於已卸除的資料表或檢視，任何人試圖使用這份檢視時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 一律會產生錯誤訊息。 如果建立新的資料表或檢視，且並未變更先前基底資料表的資料表結構來取代已卸除的資料表或檢視，此時又可以使用這份檢視。 如果新資料表或檢視的結構有了改變，就必須卸除再重新建立這份檢視。  
   
- 如果未以 SCHEMABINDING 子句來建立檢視，當檢視中的物件有所變更並會影響檢視定義時，就應該執行 [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)。 否則，在查詢檢視時，可能會產生非預期的結果。  
+ 如果未以 SCHEMABINDING 子句來建立檢視，當檢視中的物件有所變更並會影響檢視定義時，請執行 [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)。 否則，在查詢檢視時，可能會產生非預期的結果。  
   
  建立檢視時，檢視的相關資訊會儲存在下列目錄檢視中：[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)、[sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 和 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)。 CREATE VIEW 陳述式的文字會儲存在 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 目錄檢視中。  
   
@@ -245,11 +245,11 @@ FROM Tn;
   
 1.  選取 `list`  
   
-    -   在檢視定義的資料行清單中，應該已選取成員資料表中的所有資料行。  
+    -   在檢視定義的資料行清單中，選取成員資料表中的所有資料行。  
   
-    -   每份 `select list` 的相同序數位置中之各個資料行都應該是相同類型，定序也包括在內。 資料行只是如同 UNION 的情況一樣，能夠隱含地轉換類型，是不足的。  
+    -   確認每份 `select list` 相同序數位置中的資料行都是相同類型，包括定序。 資料行只是如同 UNION 的情況一樣，能夠隱含地轉換類型，是不足的。  
   
-         另外，至少必須有一個資料行 (如 `<col>`) 出現在所有選取清單的相同序數位置中。 這個 `<col>` 的定義方式應該是 `T1, ..., Tn` 等成員資料表在 `C1, ..., Cn` 上分別定義了 `<col>` 等 CHECK 條件約束。  
+         另外，至少必須有一個資料行 (如 `<col>`) 出現在所有選取清單的相同序數位置中。 透過讓成員資料表 `T1, ..., Tn` 分別在 `<col>` 上具有 CHECK 條件約束 `C1, ..., Cn` 的方式來定義 `<col>`。  
   
          `C1` 資料表所定義之 `T1` 條件約束的形式必須如下：  
   
@@ -263,7 +263,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   條件約束的方式是 `<col>` 的任何指定值都能夠滿足 `C1, ..., Cn` 等條件約束中的最多一項條件約束，因此，這些條件約束應該形成一組無關聯或不重疊的間隔。 定義無關聯的條件約束之 `<col>` 資料行稱為分割區資料行。 請注意，在基礎資料表中，分割區資料行可能會有不同的名稱。 條件約束應該在已啟用和受信任的狀態中，才能符合先前所提到的分割區資料行的條件。 如果條件約束是停用的，請利用 ALTER TABLE 的 CHECK CONSTRAINT *constraint_name* 選項來重新啟用條件約束檢查，並利用 WITH CHECK 選項來進行驗證。  
+    -   條件約束的方式必須讓 `<col>` 的任何指定值都能夠滿足 `C1, ..., Cn` 等條件約束中的最多一項條件約束；因此，這些條件約束會形成一組無關聯或不重疊的間隔。 定義無關聯的條件約束之 `<col>` 資料行稱為分割區資料行。 請注意，在基礎資料表中，分割區資料行可能會有不同的名稱。 條件約束必須在已啟用和受信任的狀態中，才能符合先前所提到的分割資料行條件。 如果條件約束是停用的，請利用 ALTER TABLE 的 CHECK CONSTRAINT *constraint_name* 選項來重新啟用條件約束檢查，並利用 WITH CHECK 選項來進行驗證。  
   
          下列範例會顯示各組有效的條件約束：  
   
@@ -280,7 +280,7 @@ FROM Tn;
   
     -   它不能是計算、識別、預設或 **timestamp** 資料行。  
   
-    -   如果成員資料表的相同資料行有多個條件約束，Database Engine 會忽略所有條件約束，當判斷檢視是否為分割區檢視時，並不會考量它們。 若要符合分割區檢視的條件，分割區資料行只應該有一項分割區條件約束。  
+    -   如果成員資料表的相同資料行有多個條件約束，Database Engine 會忽略所有條件約束，當判斷檢視是否為分割區檢視時，並不會考量它們。 若要符合分割檢視的條件，分割資料行只應該有一項分割區條件約束。  
   
     -   對於分割區資料行能不能更新並沒有任何限制。  
   
@@ -294,16 +294,16 @@ FROM Tn;
   
     -   成員資料表不能有資料表的計算資料行所建立的索引。  
   
-    -   成員資料表應該在相同數目的資料行上，具備所有 PRIMARY KEY 條件約束。  
+    -   成員資料表在相同數目的資料行上，具備所有 PRIMARY KEY 條件約束。  
   
-    -   檢視中的所有成員資料表都應該有相同的 ANSI 填補設定。 您可以利用 **sp_configure** 或 SET 陳述式中的 **user options** 選項來設定這個項目。  
+    -   檢視中所有成員資料表都有相同的 ANSI 填補設定。 您可以利用 **sp_configure** 或 SET 陳述式中的 **user options** 選項來設定這個項目。  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>修改分割區檢視中修改資料的條件  
  下列限制適用於在分割區檢視中修改資料的陳述式：  
   
--   INSERT 陳述式必須提供檢視中所有資料行的值，即使基礎成員資料表有這些資料行的 DEFAULT 條件約束或允許 Null 值，也是如此。 對於有 DEFAULT 定義的成員資料表資料行而言，這些陳述式不能明確使用 DEFAULT 關鍵字。  
+-   INSERT 陳述式需提供檢視中所有資料行的值，即使基礎成員資料表有這些資料行的 DEFAULT 條件約束或允許 Null 值，也是如此。 對於有 DEFAULT 定義的成員資料表資料行而言，這些陳述式不能明確使用 DEFAULT 關鍵字。  
   
--   插入分割區資料行的值應該滿足至少一個基礎條件約束；否則，插入動作會因條件約束違規而失敗。  
+-   插入分割資料行的值需滿足至少一個基礎條件約束；否則，插入動作會因條件約束違規而失敗。  
   
 -   UPDATE 陳述式不能指定 DEFAULT 關鍵字作為 SET 子句中的值，即使資料行有對應成員資料表所定義的 DEFAULT 值也是如此。  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   將啟動分散式交易來確保跨越更新所影響的所有節點之不可部分完成的特性。  
   
--   XACT_ABORT SET 選項應該設為 ON，INSERT、UPDATE 或 DELETE 陳述式才能夠運作。  
+-   將 XACT_ABORT SET 選項設為 ON，INSERT、UPDATE 或 DELETE 陳述式才能夠運作。  
   
 -   針對 **smallmoney** 類型之遠端資料表中的任何資料行，如果它們受到資料分割檢視所參考，則系統會將這些資料行對應為 **money**。 因此，本機資料表中對應的資料行 (在選取清單的相同序數位置中) 也必須為 **money** 類型。  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>複寫的考量  
  若要在複寫所涉及的成員資料表上建立分割區檢視，適用下列考量：  
   
--   如果基礎資料表包括合併式複寫或具有可更新訂閱的異動複寫，選取清單也應該包括 **uniqueidentifier** 資料行。  
+-   如果基礎資料表包括合併式複寫或具有可更新訂閱的異動複寫，請確認選取清單也包括 **uniqueidentifier** 資料行。 
   
      資料分割檢視中的任何 INSERT 動作都必須為 **uniqueidentifier** 資料行提供 NEWID() 值。 由於無法使用 DEFAULT 關鍵字，因此 **uniqueidentifier** 資料行的 UPDATE 動作必須提供 NEWID() 值。  
   

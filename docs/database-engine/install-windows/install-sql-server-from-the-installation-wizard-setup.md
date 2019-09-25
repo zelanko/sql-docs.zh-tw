@@ -14,20 +14,20 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009388"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149976"
 ---
-# <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server (安裝程式)
+# <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-此文章說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
+本文說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
 
-此文章提供的逐步程序，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新執行個體。 安裝精靈會提供單一功能樹狀目錄以供安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，所以您不必個別安裝它們。 如需個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
+本文提供的逐步程序，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新執行個體。 安裝精靈會提供單一功能樹狀目錄以供安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，所以您不必個別安裝它們。 如需個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
 
 如需其他安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的方式，請參閱：  
 
@@ -41,7 +41,7 @@ ms.locfileid: "70009388"
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，請檢閱[規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70009388"
 
 ###  <a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求
 
-Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，SQL Server 2016 和 2017 必須安裝這些二進位檔。 已提供修正此問題的更新。 如未安裝這個 Visual C++ Runtime 二進位檔的更新，SQL Server 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 之前，請先遵循 [SQL Server 版本資訊](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)的指示，查看您的電腦是否需要 Visual C++ Runtime 二進位檔的修補程式。 
+Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，SQL Server 2016 和 2017 必須安裝這些二進位檔。 已提供修正此問題的更新。 如未安裝這項 Visual C++ Runtime 二進位檔的更新，SQL Server 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 之前，請先遵循 [SQL Server 版本資訊](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)的指示，查看您的電腦是否需要 Visual C++ Runtime 二進位檔的修補程式。 
 
 這不適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]。
 
@@ -104,14 +104,14 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 如果所有規則都通過，[功能規則]  頁面會自動前進。  
   
-1. 在 [執行個體組態]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體組態](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
+1. 在 [執行個體設定]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體設定](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
   
-     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 針對預設執行個體，執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
+     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 若是預設執行個體，則執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
   
        > [!NOTE]  
        > 一般的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 獨立執行個體，無論是預設還是具名執行個體，執行個體識別碼都不會使用非預設值。  
   
-       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的每一個元件。  
+       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
   
      * **已安裝的執行個體**：方格內會顯示正在執行安裝程式電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的具名執行個體。  
   
@@ -132,7 +132,11 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
     > [!NOTE]
     > 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，選取 [對 SQL Server 資料庫引擎服務授與「執行磁碟區維護工作」權限]  核取方塊，允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務帳戶使用[資料庫檔案立即初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
   
-     使用 [伺服器設定 - 定序]  頁面，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。 如需詳細資訊，請參閱[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
+1. 使用 [伺服器組態 - 定序]  頁面，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。    
+
+   預設安裝設定會由作業系統 (OS) 的地區設定決定。 您可以在安裝期間變更伺服器層級的定序，也可以在安裝之前變更 OS 地區設定。 預設定序會設定為與每個特定地區設定建立關聯的最舊可用版本。 這樣做是為了與舊版相容。 因此，此定序不一定是建議的定序。 若要利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，請變更預設安裝設定以使用 Windows 定序。 例如，針對 OS 地區設定 [英文 (美國)]  (字碼頁 1252)，安裝期間的預設定序是 **SQL_Latin1_General_CP1_CI_AS**，且可以變更為與其最接近的 Windows 定序對應項目 **Latin1_General_100_CI_AS_SC**。
+
+   如需詳細資訊，請參閱[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 1. 使用 [資料庫引擎設定 - 伺服器設定]  頁面指定下列選項：  
   
@@ -195,7 +199,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
      * 指定 Distributed Replay Client 服務的 **工作目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
   
-     * 指定 Distributed Replay Client 服務的 **結果目錄**。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
+     * 指定 Distributed Replay Client 服務的 **結果目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
   
      * 若要繼續，請選取 [下一步]  。  
   
@@ -266,14 +270,14 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 如果所有規則都通過，[功能規則]  頁面會自動前進。  
   
-1. 在 [執行個體組態]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體組態](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
+1. 在 [執行個體設定]  頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱[執行個體設定](../../sql-server/install/instance-configuration.md#instance-configuration-page)。  
   
-     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 針對預設執行個體，執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
+     * **執行個體識別碼**：根據預設，此執行個體名稱會作為執行個體識別碼使用。 此識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 預設執行個體和具名執行個體有相同的行為。 若是預設執行個體，則執行個體名稱和執行個體識別碼是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請在 [執行個體識別碼]  文字方塊中指定其他值。  
   
        > [!NOTE]  
        > 一般的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 獨立執行個體，無論是預設還是具名執行個體，執行個體識別碼都不會使用非預設值。  
   
-       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的每一個元件。  
+       所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
   
      * **已安裝的執行個體**：方格內會顯示正在執行安裝程式電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的具名執行個體。  
   
@@ -376,9 +380,9 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
        * 如果尚未設定控制器，可將控制器名稱留白。 不過，您必須在 [用戶端組態]  檔中，手動輸入控制器名稱。  
   
-     * 指定 Distributed Replay Client 服務的 **工作目錄**。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
+     * 指定 Distributed Replay Client 服務的 **工作目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\。  
   
-     * 指定 Distributed Replay Client 服務的 **結果目錄**。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
+     * 指定 Distributed Replay Client 服務的 **結果目錄** 。 預設工作目錄為 \<磁碟機代號  >:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\。  
   
      * 若要繼續，請選取 [下一步]  。  
   
@@ -403,7 +407,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
 
 [設定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017)。  
   
-為了減少系統的可攻擊介面區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以選擇性地安裝和啟用主要服務和功能。 如需詳細資訊，請參閱[介面區設定](../../relational-databases/security/surface-area-configuration.md)。  
+為了減少系統的可攻擊介面區， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以選擇性地安裝和啟用主要服務和功能。 如需詳細資訊，請參閱[介面區設定](../../relational-databases/security/surface-area-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱
   

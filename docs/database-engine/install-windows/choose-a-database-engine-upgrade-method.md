@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 309ef92b105ae022cfc543ce0e73107af6870331
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054240"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149985"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "68054240"
      ![SAN 儲存體使用卸離和附加的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 儲存體使用卸離和附加的新安裝升級方法")  
   
 ## <a name="rolling-upgrade"></a>輪流升級  
- 當 SQL Server 解決方案環境涉及必須以特定順序升級的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便需要輪流升級，盡可能增加執行時間、減少風險並保留功能。 輪流升級基本上是有特定順序的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的升級，會在現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體執行就地升級，或執行新的安裝升級，加速升級專案中硬體和/或作業系統的升級。 在許多案例中，您都需要使用輪流升級方法。 下列文章記載這些案例：  
+ 當 SQL Server 解決方案環境涉及必須以特定順序升級的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便需要輪流升級，盡可能增加執行時間、減少風險並保留功能。 輪流升級基本上是有特定順序的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體升級，會在現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體執行就地升級，或執行新安裝升級來加速升級專案中硬體和/或作業系統的升級。 在許多案例中，您都需要使用輪流升級方法。 下列文章記載這些案例：  
   
 -   Always On 可用性群組：如需了解在此環境中執行輪流升級的詳細步驟，請參閱[升級 Always On 可用性群組複本執行個體](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。    
 -   容錯移轉叢集執行個體：如需了解在此環境中執行輪流升級的詳細步驟，請參閱[升級 SQL Server 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)    

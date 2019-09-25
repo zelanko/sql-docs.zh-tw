@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f01150c469af8d12535e6858bb68ec9b758aab8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 195e9d549ab85a8abe1a38cfb8fd0f4d8473b559
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111316"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149867"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ComputerNamePhysicalNetBIOS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體目前執行所在之本機電腦的 NetBIOS 名稱。<br /><br /> 如果是容錯移轉叢集中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集執行個體，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體容錯移轉到容錯移轉叢集中的其他節點時，這個值會跟著改變。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體中，這個值會維持不變，且會傳回與 MachineName 屬性相同的值。<br /><br /> **注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在容錯移轉叢集中，且您想要取得容錯移轉叢集執行個體的名稱，請使用 MachineName 屬性。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |版本|已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體產品版本。 使用這個屬性值決定功能和限制，例如[根據 SQL Server 版本計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。 64 位元版的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 (64 位元) 附加至版本中。<br /><br /> 傳回：<br /><br /> 'Enterprise Edition'<br /><br /> 「Enterprise 版:核心授權」<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' 表示 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |EditionID|EditionID 表示安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體產品版本。 使用這個屬性值決定功能和限制，例如[根據 SQL Server 版本計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition：核心授權<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL 資料庫或 SQL 資料倉儲<br /><br /> 基底資料型別：**bigint**|  
-|EngineEdition|安裝在伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。<br /><br /> 1 = Personal 或 Desktop Engine (不適用於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中)。<br /><br /> 2 = Standard (Standard、Web 和 Business Intelligence 都會傳回這個值)。<br /><br /> 3 = Enterprise (Enterprise、Developer 和兩種 Enterprise 版本都會傳回這個項目)。<br /><br /> 4 = Express (Express、Express with Tools 和 Express with Advanced Services 都會傳回這個值)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 - [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = 受控執行個體<br /><br /> 基底資料類型：**int**|  
+|EngineEdition|安裝在伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。<br /><br /> 1 = Personal 或 Desktop Engine (不適用於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中)。<br /><br /> 2 = Standard (Standard、Web 和 Business Intelligence 都會傳回這個值)。<br /><br /> 3 = Enterprise (Evaluation、Developer 和 Enterprise 版本都會傳回這個項目。)<br /><br /> 4 = Express (Express、Express with Tools 和 Express with Advanced Services 都會傳回這個項目)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = 受控執行個體<br /><br /> 基底資料類型：**int**|  
 |HadrManagerStatus|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指出 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 管理員是否已經啟動。<br /><br /> 0 = 未啟動，暫止通訊。<br /><br /> 1 = 已啟動且在執行中。<br /><br /> 2 = 未啟動且失敗。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。|  
 |InstanceDefaultDataPath|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 執行個體資料檔案的預設路徑名稱。|  
 |InstanceDefaultLogPath|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至目前版本 (從 2015 晚期開始的更新)。<br /><br /> 執行個體記錄檔的預設路徑名稱。|  
@@ -116,15 +116,7 @@ GO
 ### <a name="version-properties"></a>Version 屬性  
  `SERVERPROPERTY` 函式會傳回與版本資訊相關的個別屬性，而 [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) 函式則會將輸出結合成一個字串。 若您的應用程式需要個別屬性字串，您可以使用 `SERVERPROPERTY` 函式傳回它們，而非剖析 [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) 的結果。  
 
-> [!NOTE]  
-> 我們了解由 SERVERPROPERTY 回報的版本屬性對於 Azure SQL Database 而言並不正確的問題。 Azure SQL Database 所執行的 SQL Server 資料庫引擎之版本，一定會領先於 SQL Server 的內部部署版本，且會包含最新的安全性修正。 這表示修補程式等級一律會與 SQL Server 的內部部署版本對等或領先，且在 SQL Server 中提供的最新功能，在 Azure SQL Database 中也會提供。
->
-> 若要以程式設計方式判斷引擎版本，請使用 SELECT SERVERPROPERTY('EngineEdition')。 此查詢將針對單一資料庫/彈性集區傳回 '5'，並針對 Azure SQL Database 中的受控執行個體傳回 '8'。 
->
-> 解決此問題之後，將會更新文件。
-
 ## <a name="permissions"></a>權限
-
 所有使用者都可以查詢伺服器屬性。 
   
 ## <a name="examples"></a>範例  
