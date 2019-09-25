@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69633640"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上設定適用于 R 開發的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-當您在[SQL Server 2016 R services](../install/sql-r-services-windows-install.md)或[SQL Server Machine Learning Services (資料庫內)](../install/sql-machine-learning-services-windows-install.md)安裝中包含 r 語言選項時, 會在 SQL Server 2016 或更新版本中提供 r 整合。 
+當您在[SQL Server 2016 R services](../install/sql-r-services-windows-install.md)或[SQL Server Machine Learning Services （資料庫內）](../install/sql-machine-learning-services-windows-install.md)安裝中包含 r 語言選項時，會在 SQL Server 2016 或更新版本中提供 r 整合。 
 
 若要開發及部署適用于 SQL Server 的 R 解決方案, 請在您的開發工作站上安裝[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) , 以取得[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和其他 R 程式庫。 RevoScaleR 程式庫 (在遠端 SQL Server 實例上也需要) 會協調兩個系統之間的計算要求。 
 
@@ -49,20 +49,20 @@ Microsoft 的 R 套件適用于多項產品和服務。 在本機工作站上, �
 
   當安裝完成時, [歡迎使用] 畫面會向您介紹產品和檔。
 
-3. 建立 MKL_CBWR 系統內容變數, 以確保在 Intel 數學核心程式庫 (MKL) 計算上有一致的輸出。
+3. 建立 MKL_CBWR 系統內容變數，以確保在 Intel 數學核心程式庫（MKL）計算上有一致的輸出。
 
   + 在 [控制台] 中, 按一下 [**系統及安全性** > **系統** > ] [系統**設定** > ] [**環境變數**]。
-  + 建立名為**MKL_CBWR**的新系統變數, 並將其值設定為**AUTO**。
+  + 建立名為**MKL_CBWR**的新系統變數，並將其值設定為**AUTO**。
 
 ## <a name="2---locate-executables"></a>2-尋找可執行檔
 
 找出並列出安裝資料夾的內容, 以確認已安裝 R .exe、RGUI.EXE 和其他套件。 
 
-1. 在 [檔案管理器] 中, 開啟 C:\Program Files\Microsoft\R Client\R_SERVER\bin 資料夾以確認 R .exe 的位置。
+1. 在 [檔案管理器] 中，開啟 C:\Program Files\Microsoft\R Client\R_SERVER\bin 資料夾以確認 R .exe 的位置。
 
 2. 開啟 x64 子資料夾以確認**rgui.exe**。 您將在下一個步驟中使用此工具。
 
-3. 開啟 C:\Program Files\Microsoft\R Client\R_SERVER\library, 以查看與 R 用戶端一起安裝的套件清單, 包括 RevoScaleR、MicrosoftML 和其他。
+3. 開啟 C:\Program Files\Microsoft\R Client\R_SERVER\library，以查看與 R 用戶端一起安裝的套件清單，包括 RevoScaleR、MicrosoftML 和其他。
 
 
 <a name="R-tools"></a>
@@ -71,7 +71,7 @@ Microsoft 的 R 套件適用于多項產品和服務。 在本機工作站上, �
 
 當您使用 SQL Server 安裝 R 時, 會取得 R 的任何基底安裝標準的相同 R 工具, 例如 Rgui.exe、Rterm 等等。 這些工具很輕量, 適用于檢查套件和程式庫資訊、執行臨機操作命令或腳本, 或逐步解說教學課程。 您可以使用這些工具來取得 R 版本資訊, 並確認連線能力。
 
-1. 開啟 [C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64], 然後按兩下 [ **rgui.exe** ], 使用 r 命令提示字元啟動 r 會話。
+1. 開啟 [C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64]，然後按兩下 [ **rgui.exe** ]，使用 r 命令提示字元啟動 r 會話。
 
   當您從 Microsoft 程式資料夾啟動 R 會話時, 會自動載入數個套件 (包括 RevoScaleR)。 
 
@@ -93,7 +93,7 @@ Microsoft 的 R 套件適用于多項產品和服務。 在本機工作站上, �
 要求資料庫管理員在您使用 R 的資料庫中, 為[您的帳戶設定下列許可權](../security/user-permission.md):
 
 + **執行任何外部腳本**, 以在伺服器上執行 R 腳本。
-+ **db_datareader**許可權, 以執行用來定型模型的查詢。
++ **db_datareader**許可權，以執行用來定型模型的查詢。
 + **db_datawriter**以寫入定型資料或評分資料。
 + **db_owner**以建立預存程式、資料表、函數等物件。 
   您也需要**db_owner**來建立範例和測試資料庫。 
@@ -205,8 +205,8 @@ Microsoft 的 R 套件適用于多項產品和服務。 在本機工作站上, �
 
 1. 在 RStudio 中,[更新您的 r 路徑](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R), 以指向提供 RevoScaleR、Microsoft R Open 和其他 Microsoft 套件的 r 環境。 
 
-  + 針對 R 用戶端安裝, 尋找 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
-  + 針對獨立伺服器, 尋找 C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library 或 C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
+  + 針對 R 用戶端安裝，尋找 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+  + 針對獨立伺服器，尋找 C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library 或 C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
 
 2. 關閉, 然後開啟 RStudio。
 
@@ -225,9 +225,9 @@ Microsoft 的 R 套件適用于多項產品和服務。 在本機工作站上, �
 
 這個範例會使用已安裝資料科學工作負載的 Visual Studio 2017 社區版。
 
-1. 從 [檔案] 功能表中, 選取 [**新增**], 然後選取 [**專案**]。
+1. 從 [ 檔案] 功能表中, 選取 [**新增**], 然後選取 [**專案**]。
 
-2. 左窗格包含預先安裝的範本清單。 按一下 [ **r**], 然後選取 [ **r 專案**]。 在 [**名稱**] 方塊中`dbtest` , 輸入, 然後按一下 **[確定]** 。 
+2. 左窗格包含預先安裝的範本清單。 按一下 [ **r**], 然後選取 [ **r 專案**]。 在 [**名稱**] 方塊中`dbtest` , 輸入, 然後按一下 **[確定]**。 
 
   Visual Studio 會建立新的專案資料夾和預設的腳本`Script.R`檔案。 
 

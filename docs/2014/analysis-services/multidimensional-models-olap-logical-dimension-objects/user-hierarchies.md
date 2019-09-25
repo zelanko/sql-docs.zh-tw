@@ -26,14 +26,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1192deaa556dd8546d0d9fbf17d5ff79335173a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68887831"
 ---
 # <a name="user-hierarchies"></a>使用者階層
-  使用者定義階層是使用者定義的屬性階層, 可用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來將維度的成員組織成階層式結構, 並在 cube 中提供導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
+  使用者定義階層是使用者定義的屬性階層，可用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來將維度的成員組織成階層式結構，並在 cube 中提供導覽路徑。 例如，下表定義時間維度的維度資料表， 此維度資料表支援三個屬性，名為年份、季度和月份。  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -55,7 +55,7 @@ ms.locfileid: "68887831"
  ![時間維度的層級和成員]階層(https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-levelconcepts.gif "時間維度的層級和成員")階層  
   
 > [!NOTE]  
->  預設兩層級屬性階層之外的任何階層都稱為使用者自訂階層。 如需屬性階層的詳細資訊, 請參閱[屬性和屬性](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)階層。  
+>  預設兩層級屬性階層之外的任何階層都稱為使用者自訂階層。 如需屬性階層的詳細資訊，請參閱[屬性和屬性](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)階層。  
   
 ## <a name="member-structures"></a>成員結構  
  除了父子式階層以外，成員在階層內的位置是由階層定義裡之屬性的順序控制。 此階層定義中的每一個屬性都會在階層中組成一個層級； 層級內之成員的位置，是由用來建立層級之屬性的順序決定。 使用者自訂階層的成員結構依成員間互相關聯的方式，可以具有四種基本形式之一。  
@@ -80,7 +80,7 @@ ms.locfileid: "68887831"
  省份層級會使用與國家 (地區) 層級中之其他成員相關聯的成員進行擴展，而縣 (市) 層級中的成員會與省份層級中之對應的成員相關聯。 但是，由於國家 (地區) 層級中的 Vatican City 成員在省份層級裡沒有關聯的成員，因此必須直接從縣 (市) 層級，將成員與國家 (地區) 層級裡的 Vatican City 成員相關聯。 因為這些變更，所以維度的階層會變成不完全。 Vatican City 縣 (市) 的父系是 Vatican City 國家 (地區)，這並不會在國家 (地區) 層級中 Vatican City 成員的直接上層層級裡。 如需詳細資訊，請參閱 [不完全階層](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)。  
   
 ### <a name="parent-child-hierarchies"></a>父子式階層  
- 維度的父子式階層是使用一個特殊屬性 (稱為父屬性) 定義，以決定各成員如何互相關聯。 父屬性描述維度主資料表內的「自我參考關聯性」或「自我聯結」。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層的維度結構描述，相依於維度主資料表上所顯示的自我參考關聯性。 例如, 下圖說明[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]範例資料庫中 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]的 DimOrganization 維度主資料表。  
+ 維度的父子式階層是使用一個特殊屬性 (稱為父屬性) 定義，以決定各成員如何互相關聯。 父屬性描述維度主資料表內的「自我參考關聯性」或「自我聯結」。 父子式階層是由單一父屬性所建構的。 因為階層中的層級是從與父屬性相關之成員間的父子式關聯性衍生而來，所以只會將一個層級指派給父子式階層。 父子式階層的維度結構描述，相依於維度主資料表上所顯示的自我參考關聯性。 例如，下圖說明[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]範例資料庫中 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]的 DimOrganization 維度主資料表。  
   
  ![DimOrganization 資料表中的自我參考聯結](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimorganization.gif "DimOrganization 資料表中的自我參考聯結")  
   

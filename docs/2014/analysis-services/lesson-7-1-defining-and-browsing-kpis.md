@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493797"
 ---
 # <a name="defining-and-browsing-kpis"></a>定義和瀏覽 KPI
@@ -67,7 +67,7 @@ ms.locfileid: "69493797"
   
      ![顯示窗格中的空白 KPI 範本](../../2014/tutorials/media/l7-kpi-2.gif "顯示窗格中的空白 KPI 範本")  
   
-3.  在 [**名稱**] 方塊中`Reseller Revenue`, 輸入, 然後在 [**相關聯的量值群組**] 清單中選取 [**轉售商銷售**]。  
+3.  在 [**名稱**] 方塊中`Reseller Revenue`，輸入，然後在 [**相關聯的量值群組**] 清單中選取 [**轉售商銷售**]。  
   
 4.  在 [計算工具] 窗格的 [中繼資料] 索引標籤上，依序展開 [量值] 和 [轉售商銷售]，然後將 [轉售商銷售 - 銷售量] 量值拖曳到 [值運算式] 方塊。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69493797"
   
 1.  按一下 [KPI] 索引標籤之工具列上的 [表單檢視] 按鈕，然後按一下 [新增 KPI] 按鈕。  
   
-2.  在 **名稱** 方塊中`Product Gross Profit Margin`, 輸入, 然後確認 **\<所有 >** 都會出現在 **相關聯的量值群組** 清單中。  
+2.  在 **名稱** 方塊中`Product Gross Profit Margin`，輸入，然後確認 **\<所有 >** 都會出現在 **相關聯的量值群組** 清單中。  
   
 3.  在 [計算工具] 窗格的 [中繼資料] 索引標籤中，將 [總毛利率] 量值拖曳到 [值運算式] 方塊。  
   
@@ -261,7 +261,7 @@ ms.locfileid: "69493797"
   
 2.  當您順利完成部署時，請在 [KPI] 索引標籤的工具列上按一下 [重新連接]，然後按一下 [瀏覽器檢視]。  
   
-     Kpi 隨即出現, 並顯示**Q3 CY 2007**和北美洲 sales 領域的 KPI 值。 `Product Gross Profit Margin`  
+     Kpi 隨即出現，並顯示**Q3 CY 2007**和北美洲 sales 領域的 KPI 值。 `Product Gross Profit Margin`  
   
 3.  在 [篩選] 窗格中，從 [維度] 清單中選取 [產品]、從 [階層] 清單中選取 [類別目錄]、從 [運算子] 清單中選取 [等於]，並從 [篩選運算式] 清單中選取 [自行車]，然後按一下 [確定]。  
   

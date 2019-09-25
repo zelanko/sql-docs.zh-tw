@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2c204e06edd830d8036b6d0119ce1aff1a9c6833
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68715374"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課：探索資料並加以視覺化
@@ -63,7 +63,7 @@ ms.locfileid: "68715374"
 
 若要建立繪圖, 請使用[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), 這是[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)中提供的其中一個增強型 R 函數。 此步驟會根據[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢中的資料繪製長條圖。 您可以將此函式包裝在預存程式**PlotRxHistogram**中。
 
-1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的物件總管中, 以滑鼠右鍵按一下**NYCTaxi_Sample**資料庫, 然後選取 [追加**查詢**]。
+1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的物件總管中，以滑鼠右鍵按一下**NYCTaxi_Sample**資料庫，然後選取 [追加**查詢**]。
 
 2. 貼上下列腳本, 以建立繪製長條圖的預存程式。 這個範例名為 **RPlotRxHistogram*。
 
@@ -92,7 +92,7 @@ ms.locfileid: "68715374"
 
 在此腳本中可瞭解的重點包括下列各項: 
   
-+ `@query` 變數會定義查詢文字 (`'SELECT tipped FROM nyctaxi_sample'`)，以當成指令碼輸入變數 `@input_data_1`的引數傳遞給 R 指令碼。 針對當做外部進程執行的 R 腳本, 您應該在腳本的輸入之間有一對一的對應, 以及在 SQL Server 上啟動 R 會話的[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系統預存程式的輸入。
++ `@query` 變數會定義查詢文字 (`'SELECT tipped FROM nyctaxi_sample'`)，以當成指令碼輸入變數 `@input_data_1`的引數傳遞給 R 指令碼。 針對當做外部進程執行的 R 腳本，您應該在腳本的輸入之間有一對一的對應，以及在 SQL Server 上啟動 R 會話的[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系統預存程式的輸入。
   
 + 在 R 腳本中, 會定義變數`image_file`() 來儲存影像。 
 
@@ -165,7 +165,7 @@ ms.locfileid: "68715374"
 
 這個預存程式會使用**歷程**函數來建立長條圖, 將二進位資料匯出為常用的格式, 例如。JPG、。PDF 和。PNG. 
 
-1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的物件總管中, 以滑鼠右鍵按一下**NYCTaxi_Sample**資料庫, 然後選取 [追加**查詢**]。
+1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的物件總管中，以滑鼠右鍵按一下**NYCTaxi_Sample**資料庫，然後選取 [追加**查詢**]。
 
 2. 貼上下列腳本, 以建立繪製長條圖的預存程式。 這個範例的名稱是**RPlotHist** 。
   

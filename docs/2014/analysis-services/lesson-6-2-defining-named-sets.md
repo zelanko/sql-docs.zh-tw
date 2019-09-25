@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493888"
 ---
 # <a name="defining-named-sets"></a>定義命名集
@@ -32,11 +32,11 @@ ms.locfileid: "69493888"
   
      當您在 [計算] 索引標籤上定義新的計算時，請記住，計算是根據它們出現在 [指令碼組合管理] 窗格中的順序加以解析的。 在建立新計算時，您在窗格內的焦點，決定了執行計算的順序；新的計算會在焦點計算進行之後立即定義。  
   
-3.  在 [**名稱**] 方塊中, 將新命名集的名稱變更`[Core Products]`為。  
+3.  在 [**名稱**] 方塊中，將新命名集的名稱變更`[Core Products]`為。  
   
      在 [指令碼組合管理] 窗格中，請注意分辨命名集與指令碼命令或導出成員所用的唯一圖示。  
   
-4.  在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上, 依`Members`序展開 [**產品**]、[類別]、[] 和 [**所有產品**]。  
+4.  在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，依`Members`序展開 [**產品**]、[類別]、[] 和 [**所有產品**]。  
   
     > [!NOTE]  
     >  如果您無法在 [計算工具] 窗格中檢視任何中繼資料，請在工具列上按一下 [重新連接]。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體。  
@@ -47,11 +47,11 @@ ms.locfileid: "69493888"
   
 ## <a name="defining-a-large-resellers-named-set"></a>定義大型轉售商命名集  
   
-1.  以滑鼠右鍵`[Core Products]`按一下 [**腳本召集人**] 窗格, 然後按一下 [**新增命名集**]。  
+1.  以滑鼠右鍵`[Core Products]`按一下 [**腳本召集人**] 窗格，然後按一下 [**新增命名集**]。  
   
-2.  在 [**名稱**] 方塊中, 將這個命名集的名稱`[Large Resellers]`變更為。  
+2.  在 [**名稱**] 方塊中，將這個命名集的名稱`[Large Resellers]`變更為。  
   
-3.  在 [**運算式**] 方塊中`Exists()`, 輸入。  
+3.  在 [**運算式**] 方塊中`Exists()`，輸入。  
   
      您會使用 Exists 函數，傳回 [轉售商名稱] 屬性階層中的成員集合，這個成員集合與 [員工數目] 屬性階層中，具有最多員工的成員集合交集。  
   
@@ -67,25 +67,25 @@ ms.locfileid: "69493888"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     既然您已定義 Exists 集合運算式的第一個集合, 就可以加入第二個集合, 也就是包含最多員工的「轉售商」維度成員集合。  
+     既然您已定義 Exists 集合運算式的第一個集合，就可以加入第二個集合，也就是包含最多員工的「轉售商」維度成員集合。  
   
-7.  在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上, 展開 [轉售商`Members`] 維度中的 [**員工數目**], 展開, 然後展開 [**所有轉售商**]  
+7.  在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，展開 [轉售商`Members`] 維度中的 [**員工數目**]，展開，然後展開 [**所有轉售商**]  
   
      請注意，這個屬性階層的成員並未分組。  
   
 8.  針對 [轉售商] 維度開啟 [維度設計師]，然後按一下 [屬性] 窗格中的 [員工數目]。  
   
-9. 在屬性視窗中, 將屬性`DiscretizationMethod`變更為 [**自動**], 然後將`DiscretizationBucketCount`屬性變更`5`為。 如需詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
+9. 在屬性視窗中，將屬性`DiscretizationMethod`變更為 [**自動**]，然後將`DiscretizationBucketCount`屬性變更`5`為。 如需詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
   
 10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services 教學課程)]。  
   
 11. 順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師]，然後按一下 [計算] 索引標籤之工具列上的 [重新連接]。  
   
-12. 在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上, 展開 [**轉售商**] 維度中的 [ `Members`**員工數目**], 展開, 然後展開 [**所有轉售商**]  
+12. 在 [**計算工具**] 窗格的 [**中繼資料**] 索引標籤上，展開 [**轉售商**] 維度中的 [ `Members`**員工數目**]，展開，然後展開 [**所有轉售商**]  
   
      請注意，這個屬性階層的成員現已包含在編號 0 到 4 的五個群組中。 若要檢視群組的數目，請將資料指標暫停在該群組上，以檢視資訊提示。 對於範圍 `2 -17`，資訊提示應該會包含 `[Reseller].[Number of Employees].&[0]`。  
   
-     這個屬性階層的成員會進行分組, 因為 DiscretizationBucketCount 屬性設定為`5` , 而且 DiscretizationMethod 屬性設定為**自動**。  
+     這個屬性階層的成員會進行分組，因為 DiscretizationBucketCount 屬性設定為`5` ，而且 DiscretizationMethod 屬性設定為**自動**。  
   
 13. 在 [運算式] 方塊中，Exists 集合運算式的 Members 函數後面和右括弧前面加入逗號，然後將 [83 - 100] 從 [中繼資料] 窗格拖曳到逗號後面。  
   
