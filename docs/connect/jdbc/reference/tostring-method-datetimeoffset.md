@@ -32,7 +32,7 @@ public String toString()
 ## <a name="return-value"></a>傳回值  
  **DateTimeOffset**物件的字串表示。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  字串格式為 `YYYY-MM-DD HH:mm:ss[.fffffff] [+|-]HH:mm`。  
   
  產生之字串的小數秒會以零填補到宣告的有效位數。 例如, 值為 "2010-03-10 12:34: 56.78-08:00" 的**datetimeoffset (6)** 將由 datetimeoffset 格式設定為 "2010-03-10 12:34: 56.780000-08:00"。  

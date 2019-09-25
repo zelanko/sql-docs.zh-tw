@@ -37,7 +37,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ## <a name="1831-sqlpackage"></a>18.3.1 sqlpackage
 
-|平台|Download|發行日期|Version|建置
+|平台|下載|發行日期|版本|建置
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2102893)|2019 年 9 月 13 日|18.3.1|15.0.4538.1|
 |macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102894)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
@@ -58,7 +58,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細資料 |
+| 修正 | 詳細資料 |
 | :-- | :------ |
 | 部署 | 修正以忽略自動索引，使其不會在部署時中斷。 | 
 | Always Encrypted | 修正以處理 Always Encrypted Varchar 資料行。 | 
@@ -73,7 +73,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ## <a name="182-sqlpackage"></a>18.2 sqlpackage
 
-|平台|Download|發行日期|Version|建置
+|平台|下載|發行日期|版本|建置
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2087429)|2019 年 4 月 15 日|18.2|15.0.4384.2|
 |macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2087247)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
@@ -89,7 +89,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細資料 |
+| 修正 | 詳細資料 |
 | :-- | :------ |
 | 修正因為使用了不支援的查詢提示，而對 SQL Server 2016 RTM 資料庫進行反向工程。 | &nbsp; |
 | 修正在建立檔案群組陳述式前發生之自動關閉 alter 陳述式的部署順序。 | &nbsp; |
@@ -116,7 +116,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細資料 |
+| 修正 | 詳細資料 |
 | :-- | :------ |
 | 使用舊版基數估計工具進行反向工程查詢的效能修正。 | &nbsp; |
 | 已修正在產生指令碼時所發生的重大結構描述比較效能問題。 | &nbsp; |
@@ -156,7 +156,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細資料 |
+| 修正 | 詳細資料 |
 | :-- | :------ |
 | 已針對圖形資料表修正無法解析的虛擬資料行。 | &nbsp; |
 | 已修正在使用記憶體最佳化的資料表時，透過記憶體最佳化的檔案群組來建立資料庫。 | &nbsp; |
@@ -178,7 +178,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細資料 |
+| 修正 | 詳細資料 |
 | :-- | :------ |
 | 已修正使用 SQL 2017 和更新版本的 XML 資料行集的反向工程問題。 | &nbsp; |
 | 已針對 Azure SQL Database 修正對資料庫相容性層級 140 進行指令碼處理會遭到忽略的問題。 | &nbsp; |
@@ -199,7 +199,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細資料 |
+| 修正 | 詳細資料 |
 | :-- | :------ |
 | 將 Azure SQL Database .bacpac 匯入至內部部署執行個體時，已修正因為「此版本的 SQL Server 不支援沒有密碼的資料庫主要金鑰」  而引發的錯誤。 | &nbsp; |
 | 已針對圖形資料表修正無法解析的虛擬資料行錯誤。 | &nbsp; |
@@ -222,7 +222,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| Fix | 詳細資料 |
+| 修正 | 詳細資料 |
 | :-- | :------ |
 | 在遇到不了解的資料庫相容性層級時不要封鎖。 | 相反地，將假設為最新的 Azure SQL Database 或內部部署平台。 |
 | &nbsp; | &nbsp; |

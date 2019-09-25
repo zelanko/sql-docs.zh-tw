@@ -1,10 +1,12 @@
-- name: APS 概觀 (PDW)
+- name: SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?&view=sql-server-2017&toc=../toc/toc.json
+- name: APS 的概觀
   href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
-- name: 歡迎使用 SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: APS 的新功能
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
+    - name: APS CU7.5
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.5'
     - name: APS CU7.4
       href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.4'
     - name: APS CU7.3
@@ -17,7 +19,7 @@
       href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au7'
     - name: APS 2016
       href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au6'
-- name: Architecture
+- name: 架構
   items:
     - name: 平行處理資料倉儲概觀
       href: ../analytics-platform-system/parallel-data-warehouse-overview.md

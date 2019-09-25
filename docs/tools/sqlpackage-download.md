@@ -22,7 +22,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行。
 
 下載並安裝最新的 .NET Framework 版本以及 macOS 和 Linux 預覽：
 
-|平台|Download|發行日期|Version|建置
+|平台|下載|發行日期|版本|建置
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2102893)|2019 年 9 月 13 日|18.3.1|15.0.4538.1|
 |macOS .NET Core (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2102894)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
@@ -147,7 +147,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上執行，並支援下列平台：
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 
 - 深入了解 [sqlpackage](sqlpackage.md)
 
