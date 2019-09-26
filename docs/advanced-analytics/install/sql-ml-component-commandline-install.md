@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e1e74c9d14c93cf44a7da5db4795a1524d238be
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f60aa3684778a7347b1ffd613a924c3bf0b7b94a
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715277"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271942"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>從命令列安裝 SQL Server machine learning R 和 Python 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文提供從命令列安裝 SQL Server 機器學習服務元件的指示:
+本文提供從命令列安裝 SQL Server 機器學習服務元件的指示：
 
 + [新的資料庫內實例](#indb)
 + [加入至現有的資料庫引擎實例](#add-existing)
@@ -49,8 +49,8 @@ FEATURES 引數是必要的, 如同授權條款協定。
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | 引數 | 描述 |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | 安裝資料庫內版本:SQL Server R Services (資料庫內)。  |
-| /FEATURES = SQL_SHARED_MR | 安裝獨立版本的 R 功能:SQL Server R Server (獨立式)。 獨立伺服器是指未系結至 database engine 實例的「共用功能」。|
+| /FEATURES = AdvancedAnalytics | 安裝資料庫內版本:SQL Server R Services （資料庫內）。  |
+| /FEATURES = SQL_SHARED_MR | 安裝獨立版本的 R 功能:SQL Server R Server （獨立式）。 獨立伺服器是指未系結至 database engine 實例的「共用功能」。|
 | /IACCEPTROPENLICENSETERMS  | 表示您已接受使用開放原始碼 R 元件的授權條款。 |
 | /IACCEPTPYTHONLICENSETERMS | 表示您已接受使用 Python 元件的授權條款。 |
 | /IACCEPTSQLSERVERLICENSETERMS | 表示您已接受使用 SQL Server 的授權條款。|
@@ -60,16 +60,16 @@ FEATURES 引數是必要的, 如同授權條款協定。
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 | 引數 | 描述 |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | 安裝資料庫內版本:SQL Server Machine Learning 服務 (資料庫內)。  |
+| /FEATURES = AdvancedAnalytics | 安裝資料庫內版本:SQL Server Machine Learning 服務（資料庫內）。  |
 | /FEATURES = SQL_INST_MR | 將此與 AdvancedAnalytics 配對。 安裝 (資料庫內) R 功能, 包括 Microsoft R Open 和專屬的 R 套件。 |
 | /FEATURES = SQL_INST_MPY | 將此與 AdvancedAnalytics 配對。 安裝 (資料庫內) Python 功能, 包括 Anaconda 和專屬的 Python 套件。 |
-| /FEATURES = SQL_SHARED_MR | 安裝獨立版本的 R 功能:SQL Server Machine Learning Server (獨立式)。 獨立伺服器是指未系結至 database engine 實例的「共用功能」。|
-| /FEATURES = SQL_SHARED_MPY | 安裝獨立版本的 Python 功能:SQL Server Machine Learning Server (獨立式)。 獨立伺服器是指未系結至 database engine 實例的「共用功能」。|
+| /FEATURES = SQL_SHARED_MR | 安裝獨立版本的 R 功能:SQL Server Machine Learning Server （獨立式）。 獨立伺服器是指未系結至 database engine 實例的「共用功能」。|
+| /FEATURES = SQL_SHARED_MPY | 安裝獨立版本的 Python 功能:SQL Server Machine Learning Server （獨立式）。 獨立伺服器是指未系結至 database engine 實例的「共用功能」。|
 | /IACCEPTROPENLICENSETERMS  | 表示您已接受使用開放原始碼 R 元件的授權條款。 |
 | /IACCEPTPYTHONLICENSETERMS | 表示您已接受使用 Python 元件的授權條款。 |
 | /IACCEPTSQLSERVERLICENSETERMS | 表示您已接受使用 SQL Server 的授權條款。|
 | /MRCACHEDIRECTORY | 若是離線安裝, 會設定包含 R 元件 CAB 檔案的資料夾。 |
-| /MPYCACHEDIRECTORY | 保留供日後使用。 使用% TEMP% 來儲存 Python 元件 CAB 檔案, 以便在沒有網際網路連線的電腦上進行安裝。 |
+| /MPYCACHEDIRECTORY | 保留供未來使用。 使用% TEMP% 來儲存 Python 元件 CAB 檔案，以便在沒有網際網路連線的電腦上進行安裝。 |
 ::: moniker-end
 
 ## <a name="indb"></a>資料庫內實例安裝
@@ -82,7 +82,7 @@ FEATURES 引數是必要的, 如同授權條款協定。
 > 安裝之後, 仍會保留兩個額外的設定步驟。 在執行這些工作之前, 整合不會完成。 如需相關指示, 請參閱[安裝後](#post-install)工作。
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server Machine Learning 服務: 資料庫引擎、使用 Python 和 R 的先進分析
+### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server Machine Learning 服務：資料庫引擎、使用 Python 和 R 的先進分析
 
 若為資料庫引擎實例的並行安裝, 請提供實例名稱和系統管理員 (Windows) 登入。 包含安裝核心和語言元件, 以及接受所有授權條款的功能。
 
@@ -110,7 +110,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services: 使用 R 的資料庫引擎和 advanced analytics
+### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services：使用 R 的資料庫引擎和 advanced analytics
 
 若為資料庫引擎實例的並行安裝, 請提供實例名稱和系統管理員 (Windows) 登入。 包含安裝核心和語言元件, 以及接受所有授權條款的功能。
 
@@ -133,13 +133,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 1. 重新開機資料庫引擎服務。
 
-1. SQL Server Machine Learning 服務:啟用外部腳本, 才能使用此功能。 依照[安裝 SQL Server Machine Learning 服務 (資料庫內)](sql-machine-learning-services-windows-install.md)中的指示做為下一個步驟。 
+1. SQL Server Machine Learning 服務：啟用外部腳本, 才能使用此功能。 依照[安裝 SQL Server Machine Learning 服務（資料庫內）](sql-machine-learning-services-windows-install.md)中的指示做為下一個步驟。 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 1. 重新開機資料庫引擎服務。
 
-1. SQL Server R Services:啟用外部腳本, 才能使用此功能。 依照[安裝 SQL Server R Services (資料庫內)](sql-r-services-windows-install.md)中的指示進行下一個步驟。 
+1. SQL Server R Services：啟用外部腳本, 才能使用此功能。 依照[安裝 SQL Server R Services （資料庫內）](sql-r-services-windows-install.md)中的指示進行下一個步驟。 
 ::: moniker-end
 
 ## <a name="add-existing"></a>將 advanced analytics 加入至現有的資料庫引擎實例
@@ -153,7 +153,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a>無訊息安裝
 
-無訊息安裝會隱藏 .cab 檔案位置的檢查。 基於這個理由, 您必須指定要解壓縮 .cab 檔案的位置。 針對 Python, CAB 檔案必須位於% TEMP *。 針對 R, 您可以使用此的臨時目錄來設定資料夾路徑。
+無訊息安裝會隱藏 .cab 檔案位置的檢查。 基於這個理由, 您必須指定要解壓縮 .cab 檔案的位置。 針對 Python，CAB 檔案必須位於% TEMP *。 針對 R, 您可以使用此的臨時目錄來設定資料夾路徑。
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
@@ -167,7 +167,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 獨立伺服器是指未系結至 database engine 實例的「共用功能」。 下列範例顯示獨立伺服器安裝的有效語法。
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server Machine Learning Server 支援獨立伺服器上的 Python 和 R:
+SQL Server Machine Learning Server 支援獨立伺服器上的 Python 和 R：
 
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  
@@ -175,7 +175,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 ```
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server R 伺服器僅限 R:
+SQL Server R 伺服器僅限 R：
 
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
@@ -185,9 +185,9 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 當安裝程式完成時, 您會有一部伺服器、Microsoft 封裝、R 和 Python 的開放原始碼散發、工具、範例, 以及屬於發佈一部分的腳本。 
 
-若要開啟 R 主控台視窗, 請移`\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`至, 然後按兩下 [ **rgui.exe**]。 不熟悉 R 嗎？ 嘗試此教學課程:[基本 R 命令和 RevoScaleR 函式:25個常見](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)的範例。
+若要開啟 R 主控台視窗，請移`\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`至，然後按兩下 [ **rgui.exe**]。 不熟悉 R 嗎？ 嘗試此教學課程:[基本 R 命令和 RevoScaleR 函式:25個常見](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)的範例。
 
-若要開啟 python 命令, 請移`\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64`至, 然後按兩下 [ **python .exe**]。
+若要開啟 python 命令，請移`\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64`至，然後按兩下 [ **python .exe**]。
 
 ## <a name="get-help"></a>取得說明
 
@@ -201,14 +201,14 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 ## <a name="next-steps"></a>後續步驟
 
-R 開發人員可以開始使用一些簡單的範例, 並瞭解 R 如何與 SQL Server 搭配運作的基本概念。 如需下一個步驟, 請參閱下列連結:
+R 開發人員可以從一些簡單的範例開始，並了解 R 如何搭配 SQL Server 使用的基本概念。 如需下一個步驟，請參閱下列連結：
 
-+ [教學課程：在 T-sql 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [教學課程：適用于 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 R](../tutorials/quickstart-r-create-script.md)
++ [教學課程：適用於 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Python 開發人員可以遵循下列教學課程, 瞭解如何搭配使用 Python 與 SQL Server:
+Python 開發人員可以遵循下列教學課程，以了解如何搭配使用 Python 與 SQL Server：
 
-+ [教學課程：在 T-sql 中執行 Python](../tutorials/run-python-using-t-sql.md)
-+ [教學課程：適用于 Python 開發人員的資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 Python](../tutorials/run-python-using-t-sql.md)
++ [教學課程：適用於 Python 開發人員的資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-若要查看以真實世界案例為基礎的機器學習範例, 請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。
+若要檢視以真實世界案例為基礎的機器學習範例，請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。

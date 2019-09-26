@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58db08edb6afd8738a1aeecec6745e4419d2fd92
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: bdd1a9e20379ae66335baa7d3c415cf68e570d47
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199361"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271923"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安裝 SQL Server Machine Learning Services （Python 和 R）
 
@@ -295,7 +295,7 @@ ms.locfileid: "71199361"
 
 R 開發人員可以從一些簡單的範例開始，並了解 R 如何搭配 SQL Server 使用的基本概念。 如需下一個步驟，請參閱下列連結：
 
-+ [教學課程：在 T-SQL 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教學課程：在 T-SQL 中執行 R](../tutorials/quickstart-r-create-script.md)
 + [教學課程：適用於 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 開發人員可以遵循下列教學課程，以了解如何搭配使用 Python 與 SQL Server：

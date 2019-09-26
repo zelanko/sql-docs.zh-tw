@@ -8,18 +8,18 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f9835bae00aab15ee902dfe77dcf211eb412bc96
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715841"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271948"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安裝程式安裝 Machine Learning Server (獨立式) 或 R Server (獨立式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server 安裝套裝程式含一個**共用功能**選項, 可用於安裝在 SQL Server 外部執行的非實例感知獨立機器學習伺服器。 它稱為**Machine Learning Server (獨立式)** , 並包含 R 和 Python。 
+SQL Server 安裝套裝程式含一個**共用功能**選項, 可用於安裝在 SQL Server 外部執行的非實例感知獨立機器學習伺服器。 它稱為**Machine Learning Server （獨立式）** ，並包含 R 和 Python。 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 SQL Server 安裝套裝程式含一個**共用功能**選項, 可用於安裝在 SQL Server 外部執行的非實例感知獨立機器學習伺服器。 在 SQL Server 2016 中, 這項功能稱為**R Server (獨立式)** 。  
@@ -44,7 +44,7 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
 
 一般來說, 我們建議您將獨立伺服器和資料庫引擎實例感知安裝視為互斥, 以避免資源爭用, 但如果您有足夠的資源, 就無法在相同的實體電腦。
 
-電腦上只能有一部獨立伺服器: SQL Server Machine Learning Server (獨立式) 或 SQL Server R Server (獨立式)。 在新增新版本之前, 請務必先卸載其中一個版本。
+電腦上只能有一部獨立伺服器： SQL Server Machine Learning Server （獨立式）或 SQL Server R Server （獨立式）。 在新增新版本之前, 請務必先卸載其中一個版本。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -134,7 +134,7 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
 
 ## <a name="set-environment-variables"></a>設定環境變數
 
-僅適用于 R 功能整合, 您應該設定**MKL_CBWR**環境變數, 以確保從 Intel 數學核心程式庫 (MKL) 計算的[輸出一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
+僅適用于 R 功能整合，您應該設定**MKL_CBWR**環境變數，以確保從 Intel 數學核心程式庫（MKL）計算的[輸出一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
 
 1. 在 [控制台] 中, 按一下 [**系統及安全性** > **系統** > ] [系統**設定** > ] [**環境變數**]。
 
@@ -157,7 +157,7 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
 |----|----|----|
 |SQL Server 2017 Machine Learning Server (獨立) |  SQL Server 2017 安裝程式嚮導 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (獨立式) |  Windows 獨立安裝程式 |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
-|SQL Server Machine Learning 服務 (資料庫內) |使用 R 語言選項 SQL Server 2017 安裝程式嚮導|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|SQL Server Machine Learning 服務（資料庫內） |使用 R 語言選項 SQL Server 2017 安裝程式嚮導|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 |SQL Server 2016 R Server (獨立式) |  SQL Server 2016 安裝程式嚮導 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services (資料庫內) |SQL Server 2016 安裝程式嚮導|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 
@@ -214,16 +214,16 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
 
 ## <a name="next-steps"></a>後續步驟
 
-R 開發人員可以開始使用一些簡單的範例, 並瞭解 R 如何與 SQL Server 搭配運作的基本概念。 如需下一個步驟, 請參閱下列連結:
+R 開發人員可以從一些簡單的範例開始，並了解 R 如何搭配 SQL Server 使用的基本概念。 如需下一個步驟，請參閱下列連結：
 
-+ [教學課程：在 T-sql 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [教學課程：適用于 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 R](../tutorials/quickstart-r-create-script.md)
++ [教學課程：適用於 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Python 開發人員可以遵循下列教學課程, 瞭解如何搭配使用 Python 與 SQL Server:
+Python 開發人員可以遵循下列教學課程，以了解如何搭配使用 Python 與 SQL Server：
 
-+ [教學課程：在 T-sql 中執行 Python](../tutorials/run-python-using-t-sql.md)
-+ [教學課程：適用于 Python 開發人員的資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 Python](../tutorials/run-python-using-t-sql.md)
++ [教學課程：適用於 Python 開發人員的資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
-若要查看以真實世界案例為基礎的機器學習範例, 請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。
+若要檢視以真實世界案例為基礎的機器學習範例，請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。

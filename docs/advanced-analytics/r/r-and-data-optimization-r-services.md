@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a65afba9455fb475b760439e92ad8d4d38a70be8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a8143bae69e85ecf0056dcb9433707a681a69077
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715651"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271896"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services 的效能-資料優化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ c("fruit" = c(type = "factor", levels= c("apple", "orange", "banana")))
 
     如果可以平行處理 R 腳本, 而且 SQL 查詢可以平行化, 則資料庫引擎會建立多個平行進程。 可以建立的進程數目上限等於實例的平行處理原則的**最大程度**(MAXDOP) 設定。 接著, 所有處理常式都會執行相同的腳本, 但只會接收部分資料。
     
-    因此, 此方法不適用於必須查看所有資料的腳本, 例如在定型模型時。 不過，在以平行方式執行工作 (例如批次預測) 時非常實用。 如需搭配使用平行`sp_execute_external_script`處理原則的詳細資訊, 請參閱在[transact-sql 中使用 R 程式碼](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)的**Advanced 秘訣: 平行處理**一節。
+    因此, 此方法不適用於必須查看所有資料的腳本, 例如在定型模型時。 不過，在以平行方式執行工作 (例如批次預測) 時非常實用。 如需搭配使用平行`sp_execute_external_script`處理原則的詳細資訊, 請參閱在[transact-sql 中使用 R 程式碼](../tutorials/quickstart-r-create-script.md)的**Advanced 秘訣: 平行處理**一節。
 
 -   **請使用 numTasks = 1。** 在 SQL Server 計算內容中使用**rx**函數時, 請將_numTasks_參數的值設定為您想要建立的進程數目。 建立的進程數目不能超過**MAXDOP**;不過, 所建立的實際進程數目是由 database engine 所決定, 而且可能會小於您的要求。
 

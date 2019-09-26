@@ -1,6 +1,6 @@
 ---
 title: 使用機器學習模型產生預測和預測
-description: 使用 rxPredict 或 sp_rxPredict 進行即時計分, 或預測 T-sql 以在 R 和 Python 的 SQL Server Machine Learning 中進行預測和預測。
+description: 使用 rxPredict 或 sp_rxPredict 進行即時計分，或預測 T-sql 以在 R 和 Python 的 SQL Server Machine Learning 中進行預測和預測。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 14ccd4beb2186213cb3d94b10031ac732224f4d9
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715690"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271905"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何在 SQL Server 中使用機器學習模型產生預測和預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ _評分_是一個兩個步驟的流程。 首先, 您要指定已定型的模型
 
 為了提高詐騙偵測之類案例的計分速度, SQL Server 將內建計分程式庫新增C++為和 CLR 延伸模組, 以消除 R 和 Python 啟動程式的額外負荷。
 
-[**即時計分**](../real-time-scoring.md)是高效能計分的第一個解決方案。 在舊版的 SQL Server 2017 和更新版本的 SQL Server 2016 中引進, 即時評分依賴 CLR 程式庫, 其適用于 R 和 Python 處理在 RevoScaleR、MicrosoftML (R)、revoscalepy 和中由 Microsoft 控制的函式。microsoftml (Python)。 CLR 程式庫是使用**sp_rxPredict**預存程式來叫用, 以從任何支援的模型類型產生分數, 而不需要呼叫 R 或 Python 執行時間。
+[**即時計分**](../real-time-scoring.md)是高效能計分的第一個解決方案。 在舊版的 SQL Server 2017 和更新版本的 SQL Server 2016 中引進, 即時評分依賴 CLR 程式庫, 其適用于 R 和 Python 處理在 RevoScaleR、MicrosoftML (R)、revoscalepy 和中由 Microsoft 控制的函式。microsoftml (Python)。 CLR 程式庫是使用**sp_rxPredict**預存程式來叫用，以從任何支援的模型類型產生分數，而不需要呼叫 R 或 Python 執行時間。
 
 [**原生評分**](../sql-native-scoring.md)是 SQL Server 2017 功能, 實作為原生C++程式庫, 但僅適用于 RevoScaleR 和 revoscalepy 模型。 這是最快速且更安全的方法, 但支援與其他方法相關的較小功能集。
 
@@ -84,7 +84,7 @@ _評分_是一個兩個步驟的流程。 首先, 您要指定已定型的模型
 
 **使用 SQL**
 
-在 SQL 程式碼中, 您可以使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)來定型模型, 並在**Varbinary (max)** 類型的資料行中, 將定型的模型直接插入資料表中。 如需簡單的範例, 請參閱[在 R 中建立 preditive 模型](../tutorials/rtsql-create-a-predictive-model-r.md)
+在 SQL 程式碼中，您可以使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)來定型模型，並在**Varbinary （max）** 類型的資料行中，將定型的模型直接插入資料表中。 如需簡單的範例, 請參閱[在 R 中建立 preditive 模型](../tutorials/quickstart-r-train-score-model.md)
 
 **使用 R**
 

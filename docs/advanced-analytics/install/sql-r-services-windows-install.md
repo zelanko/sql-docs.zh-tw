@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a255b70b71f29f9cc28e4022ecfdf2741f9a838d
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715814"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271877"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明如何安裝和設定**SQL Server 2016 R Services**。 如果您有 SQL Server 2016, 請安裝此功能, 以在 SQL Server 中啟用 R 程式碼的執行。
 
-在 SQL Server 2017 中, 會在[Machine Learning 服務](../r/r-server-standalone.md)中提供 R 整合, 以反映 Python 的新增。 如果您想要 R 整合並擁有 SQL Server 2017 安裝媒體, 請參閱[安裝 SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)以新增功能。 
+在 SQL Server 2017 中, 會在[Machine Learning 服務](../r/r-server-standalone.md)中提供 R 整合, 以反映 Python 的新增。 如果您想要 R 整合並擁有 SQL Server 2017 安裝媒體，請參閱[安裝 SQL Server Machine Learning 服務](sql-machine-learning-services-windows-install.md)以新增功能。 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -28,7 +28,7 @@ ms.locfileid: "68715814"
 
 + 需要資料庫引擎實例。 您不能只安裝 R, 雖然您可以將它累加地新增至現有的實例。
 
-+ 針對商務持續性, R 服務支援[Always On 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 您必須在每個節點上安裝 R Services 和設定封裝。
++ 針對商務持續性，R 服務支援[Always On 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 您必須在每個節點上安裝 R Services 和設定封裝。
 
 + 請勿在容錯移轉叢集上安裝 R Services。 用於隔離 R 進程的安全性機制, 與 Windows Server 容錯移轉叢集環境不相容。
 
@@ -95,7 +95,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 
 ## <a name="set-environment-variables"></a>設定環境變數
 
-僅適用于 R 功能整合, 您應該設定**MKL_CBWR**環境變數, 以確保從 Intel 數學核心程式庫 (MKL) 計算的[輸出一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
+僅適用于 R 功能整合，您應該設定**MKL_CBWR**環境變數，以確保從 Intel 數學核心程式庫（MKL）計算的[輸出一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)。
 
 1. 在 [控制台] 中, 按一下 [**系統及安全性** > **系統** > ] [系統**設定** > ] [**環境變數**]。
 
@@ -255,9 +255,9 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 
 ## <a name="next-steps"></a>後續步驟
 
-R 開發人員可以開始使用一些簡單的範例, 並瞭解 R 如何與 SQL Server 搭配運作的基本概念。 如需下一個步驟, 請參閱下列連結:
+R 開發人員可以從一些簡單的範例開始，並了解 R 如何搭配 SQL Server 使用的基本概念。 如需下一個步驟，請參閱下列連結：
 
-+ [教學課程：在 T-sql 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [教學課程：適用于 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 R](../tutorials/quickstart-r-create-script.md)
++ [教學課程：適用於 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-若要查看以真實世界案例為基礎的機器學習範例, 請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。
+若要檢視以真實世界案例為基礎的機器學習範例，請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。
