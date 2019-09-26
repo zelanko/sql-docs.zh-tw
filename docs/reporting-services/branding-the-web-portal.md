@@ -8,12 +8,12 @@ description: 在本文中，您將了解如何透過品牌套件建立符合您�
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68221715"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199412"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
@@ -27,7 +27,7 @@ ms.locfileid: "68221715"
   
 Reporting Services 的品牌封裝包含三個項目且會封裝為 zip 檔案。   
   
-- color.json  
+- colors.json  
 - metadata.xml  
 - logo.png (選擇性)  
   
@@ -91,7 +91,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 介面區段分成下列群組。  
   
-|章節|Description|  
+|章節|描述|  
 |---|---|  
 |primary|按鈕和暫留色彩。|  
 |次要|標題列、搜尋列、左邊功能表 (如果顯示) 及這些項目的文字色彩|  
