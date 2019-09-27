@@ -132,7 +132,7 @@ azdata bdc endpoint list -e sql-server-master-readonly -o table
 
 - 藉由建立新的 Kubernetes 服務來公開外部端點
 
-    針對 kubeadm 叢集，請執行下列命令。 以`podName`上一個步驟所傳回的伺服器名稱取代， `serviceName`並以所建立的 Kubernetes 服務的慣用名稱取代`namespaceName`*，並以您的 BDC 叢集名稱取代 *。
+    針對 kubeadm 叢集，請執行下列命令。 以`podName`上一個步驟所傳回的伺服器名稱取代， `serviceName`並以所建立的 Kubernetes 服務的慣用名稱取代`namespaceName`*，並以您的 BDC 叢集名稱取代 。
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort

@@ -23,7 +23,7 @@ ms.locfileid: "70874901"
   
  本文不討論以下語言：  
   
--   **英文**。 若要還原英文元件，請參閱＜ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)＞。  
+-   **英文**。 若要還原英文元件，請參閱＜ [變更用於美式英文與英式英文的斷詞工具](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)＞。  
   
 -   **丹麥文、波蘭文和土耳其文**： 舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附之丹麥文、波蘭文及土耳其文的協力廠商斷詞工具已取代為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 元件。  
   
@@ -380,6 +380,6 @@ ms.locfileid: "70874901"
 |目前檔案名稱|MsWb70804.dll|  
   
 ## <a name="see-also"></a>另請參閱  
- [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [變更用於美式英文與英式英文的斷詞工具](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [全文檢索搜尋的行為變更](/sql/database-engine/behavior-changes-to-full-text-search)
  
