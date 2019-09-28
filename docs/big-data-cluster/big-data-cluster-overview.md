@@ -1,7 +1,7 @@
 ---
 title: 什麼是 Big Data 叢集？
 titleSuffix: SQL Server Big Data Clusters
-description: 瞭解在 Kubernetes 上執行的(預覽),並提供關聯式和HDFS資料的相應放大選項。[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+description: 瞭解在 Kubernetes 上執行的 @no__t 0 （預覽），並提供關聯式和 HDFS 資料的相應放大選項。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c75005c35e743a87ff742352946c4fdde5fcf0b8
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: f7790c133ae9f686f2551de8744c6836ffc8ae25
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153655"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342035"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
+# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-從開始[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] , 可讓您部署在 Kubernetes 上執行之 SQL Server、Spark 和 HDFS 容器的可擴充叢集。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 這些元件會並存執行，可供您讀取、寫入和處理來自 Transact-SQL 或 Spark 的巨量資料，讓您輕鬆地結合與分析具有大量巨量資料的高價值關聯式資料。
+從 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 開始，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可讓您部署可調整的叢集，這些叢集是在 Kubernetes 上執行的 SQL Server、Spark 和 HDFS 容器。 這些元件會並存執行，可供您讀取、寫入和處理來自 Transact-SQL 或 Spark 的巨量資料，讓您輕鬆地結合與分析具有大量巨量資料的高價值關聯式資料。
 
 如需最新版本新功能和已知問題的詳細資訊，請參閱[版本資訊](release-notes-big-data-cluster.md)。
 
@@ -28,11 +28,11 @@ ms.locfileid: "70153655"
 
 ## <a name="scenarios"></a>案例
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]提供與您的 big 資料互動的彈性。 您可以查詢外部資料源、在 SQL Server 管理的 HDFS 中儲存巨量資料，或透過叢集查詢來自多個外部資料源的資料。 接著您可以使用 AI、機器學習服務和其他分析工作的資料。 下列各節提供這些案例的詳細資訊。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 提供與您的 big 資料互動的彈性。 您可以查詢外部資料源、在 SQL Server 管理的 HDFS 中儲存巨量資料，或透過叢集查詢來自多個外部資料源的資料。 接著您可以使用 AI、機器學習服務和其他分析工作的資料。 下列各節提供這些案例的詳細資訊。
 
 ### <a name="data-virtualization"></a>資料虛擬化
 
-利用[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md), 可以[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]查詢外部資料源, 而不需要移動或複製資料。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 為資料源引進新的連接器。
+藉由利用[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)，[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 可以查詢外部資料源，而不需要移動或複製資料。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 為資料源引進新的連接器。
 
 ![資料虛擬化](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -44,13 +44,13 @@ SQL Server 巨量資料叢集包含可調整的 HDFS「存放集區」。 這可
 
 ### <a name="scale-out-data-mart"></a>向外延展資料超市
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]提供相應放大計算和儲存體, 以改善分析任何資料的效能。 來自各種來源的資料可以作為快取以在「資料集區」節點之間內嵌並散發來供進一步分析。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 提供向外延展計算和儲存體，以改善分析任何資料的效能。 來自各種來源的資料可以作為快取以在「資料集區」節點之間內嵌並散發來供進一步分析。
 
 ![資料超市](media/big-data-cluster-overview/data-mart.png)
 
 ### <a name="integrated-ai-and-machine-learning"></a>整合的 AI 與機器學習
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在儲存于 HDFS 儲存集區和資料集區中的資料上啟用 AI 和機器學習工作。 您可以利用 R、Python、Scala 或 JAVA，在 SQL Server 中使用 Spark 和內建 AI 工具。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 會針對儲存在 HDFS 儲存集區和資料集區中的資料啟用 AI 和機器學習工作。 您可以利用 R、Python、Scala 或 JAVA，在 SQL Server 中使用 Spark 和內建 AI 工具。
 
 ![AI 和 ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -80,7 +80,7 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 | **Pod** | Pod 是 Kubernetes 的不可部分完成部署單位。 Pod 是執行應用程式所需一或多個容器以及相關聯資源的邏輯群組。 每個 Pod 都會在一個節點上執行，每個節點可以執行一或多個 Pod。 Kubernetes 主機會自動將 Pod 指派給叢集中的節點。 |
 | &nbsp; ||
 
-在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]中, Kubernetes 會負責的狀態[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)];Kubernetes 會建立和設定叢集節點、將 pod 指派給節點, 以及監視叢集的健全狀況。
+在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 中，Kubernetes 會負責 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的狀態;Kubernetes 會建立和設定叢集節點、將 pod 指派給節點，以及監視叢集的健全狀況。
 
 ### <a name="big-data-clusters-architecture"></a>巨量資料叢集架構
 
@@ -105,8 +105,8 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 存放集區包含由 Linux 上的 SQL Server、Spark 和 HDFS 組成的存放集區 Pod。 SQL Server 巨量資料叢集中的所有存放裝置節點都是 HDFS 叢集成員。
 
 > [!TIP]
-> 如需深入了解叢集架構和安裝，請參閱[工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
+> 如需深入了解叢集架構和安裝，請參閱[工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 架構 @ no__t-1。
 
 ## <a name="next-steps"></a>後續步驟
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]第一次是透過 SQL Server 2019 早期採用方案, 以有限的公開預覽形式提供。 若要要求存取權，請在[這裡](https://aka.ms/eapsignup)註冊，並指出您希望試用巨量資料叢集的原因。 Microsoft 會將所有要求分級並盡快回應。
+如需部署 SQL Server Big Data 叢集的詳細資訊，請參閱[開始使用 SQL Server Big data](deploy-get-started.md)叢集。

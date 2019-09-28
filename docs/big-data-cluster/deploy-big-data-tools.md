@@ -1,7 +1,7 @@
 ---
 title: 安裝巨量資料工具
 titleSuffix: SQL Server big data clusters
-description: 瞭解如何安裝搭配 (預覽) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]使用的工具。
+description: 瞭解如何安裝與 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （預覽）搭配使用的工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd036dfe33ab538d3d845e73f45e804052a9903
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: cbb34d5cd209281a5c97d819c7741503d234ad2d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238696"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342019"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明應該安裝來建立、管理和使用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (預覽) 的用戶端工具。 下列小節提供工具和安裝指示連結的清單。 在部署巨量資料叢集之前，請先設定標示為在 Windows 或 Linux 上是必要的工具。
+本文說明應該安裝來建立、管理及使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （預覽）的用戶端工具。 下列小節提供工具和安裝指示連結的清單。 在部署巨量資料叢集之前，請先設定標示為在 Windows 或 Linux 上是必要的工具。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -32,8 +32,8 @@ ms.locfileid: "70238696"
 |---|---|---|---|
 | **python** | 是 | Python 是具有動態語意的直譯物件導向高階程式設計語言。 SQL Server 巨量資料叢集的許多部分都使用 python。 | [安裝 python](#python)|
 | **azdata** | 是 | 用於安裝和管理巨量資料叢集的命令列工具。 | [安裝](deploy-install-azdata.md) |
-| **kubectl**<sup>1</sup> | 是 | 用於監視基礎 Kuberentes 叢集的命令列工具 ([詳細資訊](https://kubernetes.io/docs/tasks/tools/install-kubectl/) \(英文\))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio-SQL Server 2019 候選版 (RC)** | 是 | 用於查詢 SQL Server 的跨平臺圖形化工具。 | [安裝](#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc) |
+| **kubectl**<sup>1</sup> | 是 | 用於監視基礎 Kuberentes 叢集的命令列工具 ([詳細資訊](https://kubernetes.io/docs/tasks/tools/install-kubectl/) \(英文\))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
+| **Azure Data Studio-SQL Server 2019 候選版（RC）** | 是 | 用於查詢 SQL Server 的跨平臺圖形化工具。 | [安裝](#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc) |
 | **SQL Server 2019 擴充功能** | 是 | 支援連線至巨量資料叢集的 Azure Data Studio 擴充功能。 也提供資料虛擬化精靈。 | [安裝](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | 對於 AKS | 用於管理 Azure 服務的新式命令列介面。 與 AKS 巨量資料叢集部署搭配使用 ([詳細資訊](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安裝](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 選擇性 | 用於查詢 SQL Server 的新式命令列介面 ([詳細資訊](https://github.com/dbcli/mssql-cli/blob/master/README.rst) \(英文\))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
@@ -82,11 +82,11 @@ ms.locfileid: "70238696"
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-## <a name="download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc"></a>下載並安裝 Azure Data Studio SQL Server 2019 候選版 (RC)
+## <a name="download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc"></a>下載並安裝 Azure Data Studio SQL Server 2019 候選版（RC）
 
 Azure Data Studio SQL Server 2019 RC 提供特別針對 SQL Server 2019 RC 的功能和功能。
 
-如需 Azure Data Studio 的一般生產版本, 請遵循[下載並安裝 Azure Data Studio](../azure-data-studio/download.md)中的指示。
+如需 Azure Data Studio 的一般生產版本，請遵循[下載並安裝 Azure Data Studio](../azure-data-studio/download.md)中的指示。
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
@@ -216,4 +216,4 @@ Azure Data Studio SQL Server 2019 RC 提供特別針對 SQL Server 2019 RC 的�
 - [快速入門：在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
 - [如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署](deployment-guidance.md)
 
-如需有關 big data 叢集的詳細資訊, 請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。
+如需 big data 叢集的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。
