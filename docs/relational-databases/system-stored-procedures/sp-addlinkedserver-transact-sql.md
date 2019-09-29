@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ef386d6643be7742c0bc042a2b2a16f1877f2e2
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 0d54f307ce71418af0b43ebae5353d2c6200e677
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314514"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341984"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,28 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-[ @server =] *伺服器\' \'*           
+[@server =] *\'server @ no__t-3*          
 這是您要建立的連結伺服器名稱。 *server* 是 **sysname**，沒有預設值。  
   
-[ @srvproduct =] *_\'\'*           
+[@srvproduct =] *\'product_name @ no__t-3*          
 這是要當做連結伺服器加入的 OLE DB 資料來源產品名稱。 l *t*是**Nvarchar （** 128 **）** ，預設值是 Null。 如果**SQL Server**，則不需要指定*provider_name*、 *data_source*、 *location*、 *provider_string*和*catalog* 。  
   
-[ @provider =] *provider_name\' \'*           
-這是對應於這個資料來源之 OLE DB 提供者的唯一程式化識別碼 (PROGID)。 針對目前電腦上所安裝的指定 OLE DB 提供者， *provider_name*必須是唯一的。 *provider_name*是**Nvarchar （** 128 **）** ，預設值是 Null;不過，如果省略*provider_name* ，則會使用 SQLNCLI。 (使用 SQLNCLI 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會重新導向至最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者)。OLE DB 提供者預期會在登錄中向指定的 PROGID 註冊。  
+[@provider =] *\'provider_name @ no__t-3*          
+這是對應於這個資料來源之 OLE DB 提供者的唯一程式化識別碼 (PROGID)。 針對目前電腦上所安裝的指定 OLE DB 提供者， *provider_name*必須是唯一的。 *provider_name*是**Nvarchar （128）** ，預設值是 Null;不過，如果省略*provider_name* ，則會使用 SQLNCLI。 
+
+> [!NOTE]
+> 使用 SQLNCLI 會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新導向至 @no__t 1 Native Client OLE DB 提供者的最新版本。 OLE DB 提供者預期會在登錄中向指定的 PROGID 註冊。
+
+> [!IMPORTANT] 
+> 先前的 Microsoft OLE DB Provider for SQL Server （SQLOLEDB）和 SQL Server Native Client OLE DB 提供者（SQLNCLI）仍已淘汰，不建議用於新的開發工作。 請改用新的[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) （內含 msoledbsql.h），這將會以最新的伺服器功能更新。
   
-[ @datasrc =] *data_source\' \'*           
+[@datasrc =] *\'data_source @ no__t-3*          
  這是資料來源的名稱，如 OLE DB 提供者所解譯。 *data_source*是**Nvarchar （** 4000 **）** 。 *data_source*會當做 DBPROP_INIT_DATASOURCE 屬性傳遞，以初始化 OLE DB 提供者。  
   
-[ @location =] *位置\' \'*           
+[@location =] *\'location @ no__t-3*          
  這是 OLE DB 提供者解譯的資料庫位置。 *location*是**Nvarchar （** 4000 **）** ，預設值是 Null。 *location*會當做 DBPROP_INIT_LOCATION 屬性來傳遞，以初始化 OLE DB 提供者。  
   
-[ @provstr =] *provider_string\' \'*           
+[@provstr =] *\'provider_string @ no__t-3*          
  這是 OLE DB 提供者特定的連接字串，用來識別唯一資料來源。 *provider_string*是**Nvarchar （** 4000 **）** ，預設值是 Null。 *provstr*會傳遞至 IDataInitialize，或設定為 DBPROP_INIT_PROVIDERSTRING 屬性以初始化 OLE DB 提供者。  
   
  當連結的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]伺服器是針對 Native Client OLE DB 提供者建立時，可以使用 server 關鍵字 as server =*servername* \\ *instancename*來指定實例，以指定的特定實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *servername*是執行之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]電腦的名稱，而*instancename*是使用者將連接之特定實例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名稱。  
@@ -66,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > [!NOTE]
 > 若要存取鏡像資料庫，連接字串必須包含資料庫名稱。 這個名稱是讓資料存取提供者進行容錯移轉嘗試所需的名稱。 可以在 **@provstr** 或 **@catalog** 參數中指定資料庫。 此外，連接字串也可以提供容錯移轉夥伴名稱。  
   
-[ @catalog =] *目錄\' \'*        
+[@catalog =] *\'catalog @ no__t-3*       
  這是連接 OLE DB 提供者時所用的目錄。 *目錄*是**sysname**，預設值是 Null。 *目錄*會當做 DBPROP_INIT_CATALOG 屬性來傳遞，以初始化 OLE DB 提供者。 當您對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體定義連結伺服器時，目錄會參考連結伺服器所對應的預設資料庫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -104,14 +110,14 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  **sp_addlinkedserver**無法在使用者自訂交易內執行。  
   
 > [!IMPORTANT]
->  使用**sp_addlinkedserver**建立連結的伺服器時，會為所有本機登入新增預設的自我對應。 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供者， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已驗證的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入可能可以在服務帳戶下取得提供者的存取權。 管理員應該考慮使用 `sp_droplinkedsrvlogin <linkedserver_name>, NULL` 來移除全域對應。  
+> 使用**sp_addlinkedserver**建立連結的伺服器時，會為所有本機登入新增預設的自我對應。 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供者， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已驗證的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入可能可以在服務帳戶下取得提供者的存取權。 管理員應該考慮使用 `sp_droplinkedsrvlogin <linkedserver_name>, NULL` 來移除全域對應。  
   
 ## <a name="permissions"></a>Permissions  
  `sp_addlinkedserver` 語句`ALTER ANY LINKED SERVER`需要許可權。 （[ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **新增連結的伺服器**] 對話方塊會以`sysadmin`需要固定伺服器角色成員資格的方式來執行）。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-the-microsoft-sql-server-native-client-ole-db-provider"></a>A. 使用 Microsoft SQL Server Native Client OLE DB Provider  
+### <a name="a-using-the-microsoft-sql-server-ole-db-provider"></a>A. 使用 Microsoft SQL Server OLE DB 提供者  
  下列範例會建立一個名為 `SEATTLESales` 的連結伺服器。 產品名稱是 `SQL Server`，另外，不使用任何提供者名稱。  
   
 ```sql  
@@ -122,8 +128,21 @@ EXEC sp_addlinkedserver
    N'SQL Server';  
 GO  
 ```  
-  
+
+ 下列範例會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 驅動程式，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的實例上建立連結的伺服器 `S1_instance1`。  
+
+```sql  
+EXEC sp_addlinkedserver     
+   @server=N'S1_instance1',   
+   @srvproduct=N'',  
+   @provider=N'MSOLEDBSQL',   
+   @datasrc=N'S1\instance1';  
+```  
+
  下列範例會使用`S1_instance1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例上建立連結的伺服器。  
+ 
+> [!IMPORTANT] 
+> SQL Server Native Client OLE DB 提供者（SQLNCLI）仍已淘汰，不建議將它用於新的開發工作。 請改用新的[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) （內含 msoledbsql.h），這將會以最新的伺服器功能更新。
   
 ```sql  
 EXEC sp_addlinkedserver     
@@ -163,7 +182,7 @@ GO
 ```  
   
 ### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-data_source-parameter"></a>C. 搭配 data_source 參數來使用 Microsoft OLE DB Provider for ODBC  
- 下列範例會建立名為`SEATTLE Payroll`的連結伺服器，其使用 ODBC （`MSDASQL`）的[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 提供者和*data_source*參數。  
+ 下列範例會建立名為 `SEATTLE Payroll` 的連結伺服器，其使用 ODBC 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 提供者（`MSDASQL`）和*data_source*參數。  
   
 > [!NOTE]  
 > 您必須先在伺服器中，將指定的 ODBC 資料來源名稱定義為系統 DSN，才可以使用該連結伺服器。  
