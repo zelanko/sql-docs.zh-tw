@@ -11,14 +11,14 @@ helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 63d3031ccbee2d6ae242ee3531cf4c5b946c3949
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 891e0fa855ec422efbdfd93abe9905f4ee7bffc0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967889"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297412"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 運算式)
 

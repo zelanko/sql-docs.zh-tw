@@ -21,14 +21,14 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0a586ebad99fb8580ae4b303993a775487efa815
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 671c49e0b36107682994fdc2192a11db0b40d9d1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062812"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297120"
 ---
 # <a name="developing-a-custom-task"></a>開發自訂工作
 

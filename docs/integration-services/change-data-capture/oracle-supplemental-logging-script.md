@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c3a05d8b23a6e1f0790e5a9799d0608052f7fcae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 976c495cca321a5731a59ff69e3d7935323cdce5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096693"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294655"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
 

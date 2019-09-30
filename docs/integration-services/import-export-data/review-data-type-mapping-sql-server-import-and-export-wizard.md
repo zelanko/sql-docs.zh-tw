@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 91f45e228c2dd1142c8bc08387ba2309eac318fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901759"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296271"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
 
@@ -47,7 +47,7 @@ ms.locfileid: "67901759"
   
  下表描述 [資料表]  清單中的資料行。  
   
-|「資料行」|Description|  
+|資料行|Description|  
 |------------|-----------------|  
 |(來源圖示)|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料表的所有資料類型轉換都會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的個別轉換。 若要檢閱這些轉換，請選取資料表，然後在 **[資料類型對應]** 清單中檢閱個別資料行的轉換。<br />- **紅色** 的錯誤圖示表示精靈無法確實針對這個資料表執行某些轉換。|  
 |**來源**|來源資料表的名稱。|  
@@ -63,7 +63,7 @@ ms.locfileid: "67901759"
 
 下表描述 [資料類型對應]  清單中的資料行。 
 
-|「資料行」|Description|  
+|資料行|Description|  
 |------------|-----------------|  
 |(轉換圖示)|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料行的資料類型轉換會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的轉換。 若要檢閱轉換，請按兩下資料行，即可檢視 [資料行轉換詳細資訊]  對話方塊。 如需詳細資訊，請參閱 [資料行轉換詳細資訊對話方塊](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)。<br />- **紅色** 錯誤圖示表示精靈無法確實執行轉換。|  
 |**來源資料行**|來源資料行的名稱。|  

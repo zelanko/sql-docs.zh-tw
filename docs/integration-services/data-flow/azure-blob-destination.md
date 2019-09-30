@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.afpblobdest.f1
 - sql14.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3194e2dbb6563b5260fcc390e84e73a17e09542c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7ec0d571fe219719a22e841c43dedd0716ef5a4a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045466"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293450"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 目的地
 

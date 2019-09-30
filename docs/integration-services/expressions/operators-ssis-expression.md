@@ -13,14 +13,14 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f6b7846dbf4c9c1ae89914252887aeecec6b89cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b625b23dc45a3a5ed9abc00f0068ed3e7fbfeb58
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968070"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297444"
 ---
 # <a name="operators-ssis-expression"></a>運算子 (SSIS 運算式)
 

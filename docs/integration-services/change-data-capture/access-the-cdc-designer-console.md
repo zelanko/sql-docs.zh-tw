@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ae840ae1dd1f1e80e3e6f5f252d78faf5586afe8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 92f6384d099a6f29ec43387283a1e52a3e600076
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098587"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298925"
 ---
 # <a name="access-the-cdc-designer-console"></a>存取 CDC 設計工具主控台
 

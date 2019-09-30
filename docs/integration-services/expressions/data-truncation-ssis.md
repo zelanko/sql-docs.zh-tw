@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c7b122bde62bdae597498c0cf0992ff1c0732c6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 03b521f06925ad21847cf588b27c211167dbd425
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081135"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297648"
 ---
 # <a name="data-truncation-ssis"></a>資料截斷 (SSIS)
 

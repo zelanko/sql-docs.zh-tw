@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2f8a622f35245e50c75354efef9d7dfc9aaf7eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b1e6e2278e20cf9ae7b3d31edaebd44ee4d3956
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105578"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298382"
 ---
 # <a name="control-flow"></a>控制流程
 

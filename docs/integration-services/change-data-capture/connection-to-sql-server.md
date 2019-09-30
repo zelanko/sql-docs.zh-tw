@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3dafccc85b6ca100177364ae9d33e55a8ddc93b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e87e29349cdef9db94e917f6fe543b327c5abf9f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060847"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298859"
 ---
 # <a name="connection-to-sql-server"></a>連接到 SQL Server
 

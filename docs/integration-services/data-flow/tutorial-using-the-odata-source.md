@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c88e14257630f74b168c89bc2cd8409763358f40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95dceade62e487db05a66df6b7986f23723b1303
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113686"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297762"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教學課程：使用 OData 來源
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 23b2dc528a3e5b8d920fc14f3a60df120ea45aa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8347b0b1860041c6bd2a9241e015e2bfd71e5135
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034386"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298151"
 ---
 # <a name="raw-file-custom-properties"></a>原始檔案自訂屬性
 

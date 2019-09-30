@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08be945b7703902e72fc92acd2a5462dbbe38fe3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049524"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293148"
 ---
 # <a name="data-flow"></a>資料流程
 

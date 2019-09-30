@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], raising events
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a3b39885a7a7bc5c6259e4fa764f61c69320edb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 27eade7d5b0095d18b2c0dcbfa4dac06408649f1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103957"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296938"
 ---
 # <a name="raising-events-in-the-script-component"></a>在指令碼元件中引發事件
 

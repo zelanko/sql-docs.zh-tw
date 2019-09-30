@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 32afa6d65929fda676f7eebb1bc78ab1d05cd789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52ce0e96ce131b1ea1a69f2ba9f7466850cbf4cf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074023"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290938"
 ---
 # <a name="xml-source-custom-properties"></a>XML 來源自訂屬性
 

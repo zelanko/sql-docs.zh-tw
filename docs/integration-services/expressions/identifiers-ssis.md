@@ -18,14 +18,14 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 796b03941fde8bfebc276f0cd5fb1e8c56c3b6b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ddde15e9ca4fac2fd98b598ee8334f3ff28d6df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080838"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297559"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
 

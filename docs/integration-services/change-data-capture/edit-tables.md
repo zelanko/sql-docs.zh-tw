@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1bdff1386edf4563eadfb04694cbe573f6b1d5c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b9c25ae3771a8ca7087f4668b717643fbe4b2648
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060749"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298801"
 ---
 # <a name="edit-tables"></a>編輯資料表
 

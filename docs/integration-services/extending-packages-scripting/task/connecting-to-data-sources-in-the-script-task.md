@@ -21,14 +21,14 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 - SSIS Script task, connections
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f56ff74270f7d27bf868ff5bd20b7f380fac45b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bda11bd7e4a3cdb90dde0cba5992c91f6fffd7f9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102839"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296905"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>連接至指令碼工作中的資料來源
 

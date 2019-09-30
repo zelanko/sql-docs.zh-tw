@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 796446e4254a9d2e62fc3e1ed302324a0e37baae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062978"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292932"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
 

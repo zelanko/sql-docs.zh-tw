@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2d106d69de37da310dbb1d7ebdf06d0542490dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a271b9dd9da2a4b21040a89145d9f2ab1fe84b68
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088741"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297585"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
 

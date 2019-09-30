@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7c0cf53d9757e4ee068b2b7d9672d945fbcc1add
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e6015aa5f7d9271c71a534fab6126cba9a8dcbf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947650"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297278"
 ---
 # <a name="creating-a-custom-connection-manager"></a>建立自訂連接管理員
 

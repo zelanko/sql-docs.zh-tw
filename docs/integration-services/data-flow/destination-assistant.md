@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.destinationassistant.f1
 - sql13.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 075f061eadf98385b75de1f0cbf3558a08bd9a41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f302227746b0479f096fbfc29e50c328b61f114
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111237"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292907"
 ---
 # <a name="destination-assistant"></a>Destination Assistant
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b908609b362fdc92ca77f8678e8934d65d1c3e61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e154659500155a2a171f03ee18f5c62319142a8c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080847"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297568"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (大於) (SSIS 運算式)
 

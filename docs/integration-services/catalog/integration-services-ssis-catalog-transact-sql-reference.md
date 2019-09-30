@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c20925a1cc31647812f47526cf244f2a8371a42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f1484b14b492094d21e18c5752def4b8114cd857
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070836"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298960"
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Integration Services (SSIS) 目錄 Transact-SQL 參考
 

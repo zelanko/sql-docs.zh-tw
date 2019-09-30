@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.resolvereferences.preview.F1
 - sql13.dts.designer.resolvereferences.mapper.F1
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1e765db6d06af4f4a409ccc15660489c4af65f60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4340dfcaa7807616ccd8c3cdf4e504d0e33423c0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034277"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298112"
 ---
 # <a name="resolve-column-reference-editor"></a>解析資料行參考編輯器
 

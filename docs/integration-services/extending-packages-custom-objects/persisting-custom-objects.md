@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 20ad93d4ccb103dfcd8dc37807161f0c9874cd8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7c82aee360987868b393de88ee062f39898f9569
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062958"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287128"
 ---
 # <a name="persisting-custom-objects"></a>保存自訂物件
 

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - expressions [Integration Services], string padding
 - string padding
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29b7f35f41ede90c0b5cc54e336fb1d3e331ef81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 183761474b6841e092f1bc40da4ee2473e13bab6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967743"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297363"
 ---
 # <a name="string-padding-ssis"></a>字串填補 (SSIS)
 

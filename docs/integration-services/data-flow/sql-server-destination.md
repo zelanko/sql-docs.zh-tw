@@ -19,14 +19,14 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f77bf8bc61b471c51c8f090a72a113c33a1c7e7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 481cac0715f00c7d29a92b77101c4a09a28056a6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019631"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298044"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
 

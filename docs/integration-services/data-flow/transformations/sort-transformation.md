@@ -18,14 +18,14 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 706a2259cbf333f500f1a8e5812de494dd6b863c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b8c49f0f462bf62bde8e92a1e51f981d18d7ef7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943958"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297742"
 ---
 # <a name="sort-transformation"></a>排序轉換
 

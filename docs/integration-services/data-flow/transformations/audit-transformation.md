@@ -14,14 +14,14 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8dff7efc56a39da27c9a2f5f391071cbc1ddab79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112809"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298020"
 ---
 # <a name="audit-transformation"></a>稽核轉換
 

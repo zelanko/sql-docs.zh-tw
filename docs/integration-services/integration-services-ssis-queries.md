@@ -15,14 +15,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 338f515547b146d67eeec5d288cce3d433ae2aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d24d4e8bdebca82ec0541132b52ac84de6c9c271
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057430"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284486"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
 

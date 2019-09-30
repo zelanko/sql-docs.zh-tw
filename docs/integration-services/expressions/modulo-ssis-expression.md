@@ -12,14 +12,14 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cbd48fc88f2b7298418f2e428c283131bf2e08fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6b663a99e8e0e5dd7d9d91a81fe39fecef6802b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941229"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288802"
 ---
 # <a name="modulo-ssis-expression"></a>(模數) (SSIS 運算式)
 

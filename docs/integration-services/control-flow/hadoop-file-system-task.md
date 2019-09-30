@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0b75f26a4eae2643ebec512492788bcc60102648
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e97ae33bcccee338be576138ca335bd6298e0128
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988169"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294074"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 檔案系統工作
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SMO connection manager
 - connection managers [Integration Services], SMO
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d91dd8952b1dccbfd0c78f0b0b0fa8aa7c26d53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 87400e2216b51bfab0132f369e452f27447b0572
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904238"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294404"
 ---
 # <a name="smo-connection-manager"></a>SMO 連線管理員
 

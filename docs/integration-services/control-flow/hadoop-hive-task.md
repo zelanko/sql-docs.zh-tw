@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4389cbf6e4e4f81c27e452aa8d5f63c4b42a306a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f157b2b802142f6f00b7a3e9ffb2596ef80f1773
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086097"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298252"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive 工作
 

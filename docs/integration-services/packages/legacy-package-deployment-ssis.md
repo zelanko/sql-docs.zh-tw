@@ -29,14 +29,14 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a4ab95832616c95ab1634814d191117bdf53926
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051160"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295820"
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
 
@@ -219,7 +219,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表描述 [封裝組態組合管理]  對話方塊中組態清單中的資料行。  
   
-|「資料行」|Description|  
+|資料行|Description|  
 |------------|-----------------|  
 |**組態名稱**|組態的名稱。|  
 |**組態類型**|組態類型。|  

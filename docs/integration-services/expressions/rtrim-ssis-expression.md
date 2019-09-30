@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RTRIM function
 - trailing blanks
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c1a637f55f2aedcb27844777ef2b392c3cd2f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb899229cf38697ea7abf25fb82dddb7d2826842
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967861"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297390"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (SSIS 運算式)
 

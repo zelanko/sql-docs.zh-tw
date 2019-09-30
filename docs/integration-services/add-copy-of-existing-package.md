@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 949cf06676ea13c2e765abec312d700f01a90a55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cb86b202db40fb3bde858a43fb5dac550a2aaada
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052239"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299115"
 ---
 # <a name="add-copy-of-existing-package"></a>加入現有封裝的副本
 

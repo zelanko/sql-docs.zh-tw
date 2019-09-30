@@ -19,14 +19,14 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29237d844b224197d5262b44aca93736cdea498d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0d2546e349859b8f059623f25b2e8ac971ba5643
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109136"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297329"
 ---
 # <a name="developing-a-custom-source-component"></a>開發自訂來源元件
 

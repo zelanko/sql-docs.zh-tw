@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 708982797ef56d05325969711fe1edfa14167ed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: edb7f78fd1d1d64980e7874f953a91030e7ecdc9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120636"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296034"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>第 2-1 課：建置部署公用程式
 

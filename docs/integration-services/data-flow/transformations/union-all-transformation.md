@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ea530fca45a23293f1b08a1a7b4061bda904c1ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0b9f629126dcd5a8f81eeab444aef50456589e4a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943881"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291011"
 ---
 # <a name="union-all-transformation"></a>聯集全部轉換
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b6d5e59c07874ead6eeba97cc2aeaaa240464c21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f325c9322d9194ff9dfb99dcf5bcae902a59faa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055922"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295972"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>第 3 課：安裝 SSIS 套件
 

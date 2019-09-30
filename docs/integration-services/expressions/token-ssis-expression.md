@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 26fe36ec71463721adf2810221fa3fc118917ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c025eac60079e601d755439573b35257038d9275
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967687"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297359"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 運算式)
 

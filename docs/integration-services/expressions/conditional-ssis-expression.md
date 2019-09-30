@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 21797dffcb3f3343c05658d24199191510fe31b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 758cd90c3932d59e725f6a8a9bf829e59ecf5474
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027554"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290167"
 ---
 # <a name="--conditional-ssis-expression"></a>? 所解碼的字元：(條件) (SSIS 運算式)
 

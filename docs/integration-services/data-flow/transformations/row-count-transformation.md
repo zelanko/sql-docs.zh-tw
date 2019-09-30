@@ -16,14 +16,14 @@ helpviewer_keywords:
 - variables [Integration Services], updating
 - counting rows
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dd476f2119705501eff4fad2aedf15ce24d978d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4cd1b3a72a91eb3c2a2252eefcec6cf7416cae8f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944036"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297871"
 ---
 # <a name="row-count-transformation"></a>資料列計數轉換
 

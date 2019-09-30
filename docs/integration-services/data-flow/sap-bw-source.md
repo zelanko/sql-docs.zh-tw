@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 404071adb9795f8df1e239180803e9444f13999c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f510f17f6a03320e8a20bf8a39e0452bfbeb718
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111907"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298063"
 ---
 # <a name="sap-bw-source"></a>SAP BW 來源
 

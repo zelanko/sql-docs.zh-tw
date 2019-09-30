@@ -19,14 +19,14 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9f90f42b21946b4a29c81f33f8f484656c6f5919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52acb1db548f6425dcfaf6339d38a4b55e57b76e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944450"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297951"
 ---
 # <a name="export-column-transformation"></a>匯出資料行轉換
 

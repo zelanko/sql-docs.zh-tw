@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data correction
 - correct data
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8b2435f1d3ca162e98eca8842ff66af23068cef9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112543"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291473"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清理轉換
 

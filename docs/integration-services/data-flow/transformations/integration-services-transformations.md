@@ -19,14 +19,14 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c6844aab4ee859ef3444991544317953867572e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944237"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297906"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 轉換
 

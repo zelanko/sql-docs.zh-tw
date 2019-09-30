@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0757a9c140a78642f9b6c1d58a4333e24d3d8733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997836"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296524"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB 資料庫)
 

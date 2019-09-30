@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6edecaf72b8644dbc70e438a1e9bb895d8bdc14f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c5736704fd170c629dacdadb89cb3466a0180db
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941310"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298238"
 ---
 # <a name="look-up-infopackage"></a>查閱 InfoPackage
 

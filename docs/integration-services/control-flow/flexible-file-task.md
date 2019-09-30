@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPEXTFILETASK.F1
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cc95201ec856d5e7daa998c7de52b91981af5552
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316633"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298279"
 ---
 # <a name="flexible-file-task"></a>彈性檔案工作
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - largest integer less than or equal to expression
 - FLOOR function [SSIS]
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1ecf37fce2f62a4cadfe574531548aa9351e0057
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 56f69743e8bbfb8290e492613daeb07885f5ed7d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080926"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289619"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 運算式)
 

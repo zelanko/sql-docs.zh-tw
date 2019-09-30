@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 072fc285fa5470aa5fa589f028e3e5aba7e3f5fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101557"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298351"
 ---
 # <a name="data-flow-task"></a>資料流程工作
 
@@ -92,12 +92,12 @@ ms.locfileid: "68101557"
   
  例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  :1185 :OLE DB 來源輸出 :1180 :排序 :1181 :排序輸入 :76"，剖析為資料行。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 **OnPipelineRowsSent** 事件寫入。  
   
-|「資料行」|Description|ReplTest1|  
+|資料行|Description|ReplTest1|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB 來源和「排序」轉換之間路徑的 **ID** 屬性的值。|1185|  
 |**PathName**|路徑之 **Name** 屬性的值。|OLE DB 來源輸出|  
 |**ComponentID**|「排序」轉換之 **ID** 屬性的值。|1180|  
-|**ComponentName**|「排序」轉換之 **Name** 屬性的值。|排序|  
+|**ComponentName**|「排序」轉換之 **Name** 屬性的值。|Sort|  
 |**InputID**|「排序」轉換之輸入的 **ID** 屬性的值。|1181|  
 |**InputName**|「排序」轉換之輸入的 **Name** 屬性的值。|排序輸入|  
 |**RowsSent**|已傳送至「排序」轉換之輸入的資料列數目。|76|  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f8c690b90d3a0e4daa7d8030f9a2f83bae8382e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 03d0bab629c717b39e09d66e37f7664e1491ef65
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011560"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298752"
 ---
 # <a name="edit-the-advanced-properties"></a>編輯進階屬性
 

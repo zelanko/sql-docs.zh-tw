@@ -18,14 +18,14 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a247a49aa35d4291e7f7d0f3dec978227df06ad1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011340"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293934"
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
 

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], ADO
 - ADO connection manager [Integration Services]
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 920885c27d849ac49dc5e6c801a432ccdb493e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a9fdbe8cca12779e6666e0305ddfb081f3649f44
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898835"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294471"
 ---
 # <a name="ado-connection-manager"></a>ADO 連接管理員
 

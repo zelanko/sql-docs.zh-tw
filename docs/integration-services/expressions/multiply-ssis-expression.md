@@ -11,14 +11,14 @@ helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fc570f8787d85019a8181dc7ec212bf6e19681eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bc5c349835acb6211fb3d46c0bad37d377760063
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941115"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288835"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乘) (SSIS 運算式)
 

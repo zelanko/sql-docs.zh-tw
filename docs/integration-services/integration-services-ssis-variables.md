@@ -16,14 +16,14 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1e7c309f3317e541c0ebaaec60707473ae4a78da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057420"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296156"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
 

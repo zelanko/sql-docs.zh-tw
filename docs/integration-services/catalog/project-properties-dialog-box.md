@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.ssms.isprojectprop.general.f1
 - sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f792df0fbfd7f78e82f0ce049dc1ef205576ae38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9aee0d7233b5f163a5f9c39f9053b9f0842aa7e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007957"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298949"
 ---
 # <a name="project-properties-dialog-box"></a>專案屬性對話方塊
 

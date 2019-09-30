@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.afppigtask.f1
 - sql14.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 892177b1406b24fb5641f2ab087a91d380fc577a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 44d6fd9052b2f36381b95223222ec9008a8e4728
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947225"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298408"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 工作
 

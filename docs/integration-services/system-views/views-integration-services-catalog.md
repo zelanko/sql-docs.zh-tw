@@ -10,14 +10,14 @@ ms.topic: language-reference
 helpviewer_keywords:
 - views [Integration Services]
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8c7d6a6f0de0ec6c9e14b5d6c9df8ff9ab2bf9cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6e1f54ee39981785f17c4883ec5dd191ecf7ccbc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945648"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295154"
 ---
 # <a name="views-integration-services-catalog"></a>檢視 (Integration Services 目錄)
 

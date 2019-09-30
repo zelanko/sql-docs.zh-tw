@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8d9eb72289597b873a340815ea0e388b952de37c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fce60dd2a2663e23001805621e622b4334126a1e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112576"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291536"
 ---
 # <a name="create-relationships"></a>建立關聯性
 

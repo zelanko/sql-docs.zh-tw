@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a8844f65431167f73f0927007b58c4e0970cc046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 039b36c2092d9e08e81802e441f42587be66445c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996456"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298155"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自訂屬性
 

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6cd6827a10bdacd11b092aa157b28604373aa018
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019657"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294104"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 

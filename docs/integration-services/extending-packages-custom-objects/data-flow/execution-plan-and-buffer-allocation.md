@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9fde8338f7728197d2e2482f30d2b1f09964f4e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dba5ae3bf996f469f18a9802dd8cc8232a5bc885
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908727"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297232"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>執行計劃和緩衝區配置
 

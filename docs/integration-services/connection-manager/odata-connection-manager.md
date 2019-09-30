@@ -11,14 +11,14 @@ ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2382495a0d30e6daae07a9a6865403249981e484
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104099"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298452"
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
 

@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3796b56d66ec2a4862d71454422bb2b248469977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8e85c35552a8bcbf4190bd3ce36b4a65be96789
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897803"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295297"
 ---
-# <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value 
+# <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

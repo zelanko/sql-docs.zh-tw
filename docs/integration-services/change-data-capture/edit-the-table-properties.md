@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29901bc63223da1004995b86e15f74cfd3d0b23c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae05c1015fe885c7488af0b0c9c7e340dc25d056
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011527"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294744"
 ---
 # <a name="edit-the-table-properties"></a>編輯資料表屬性
 

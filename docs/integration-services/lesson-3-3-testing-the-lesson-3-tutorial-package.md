@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7f0bf7d9a38f25af008be3bf77ce8dc31070f5bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9cdb19c6df46e3c24625bfb740c82771f0adcc1d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055935"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283172"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>課程 3-3：測試第 3 課教學課程套件
 

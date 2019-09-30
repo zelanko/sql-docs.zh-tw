@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6ec05696c511ea14e481fdde8512861f2a343f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897098"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292240"
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
 

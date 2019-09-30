@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.ssis.ssms.iscreatefolder.f1
 - sql13.ssis.ssms.isfolderprop.general.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 302d529f062b31eed4c4cbda583c06b86d1a8c1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 19f23e57fdb77a88ecf7c7b531c9c837e2c740ce
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070567"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298993"
 ---
 # <a name="folder-properties-dialog-box"></a>資料夾屬性對話方塊
 

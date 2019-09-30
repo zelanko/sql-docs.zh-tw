@@ -17,14 +17,14 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 31a5d85546a8760dc8853c4bdd25369dc36c2152
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e605c4fb62e56113a5cc36e418d5648ed6ba3031
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112547"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297958"
 ---
 # <a name="derived-column-transformation"></a>衍生的資料行轉換
 

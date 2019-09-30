@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0e178d20d77b454e649b43c91d5e54513b4a53b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d74a4a6ab596f6762e405a81b2365281b4f6b95c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112476"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297109"
 ---
 # <a name="additional-script-component-examples"></a>額外的指令碼元件範例
 

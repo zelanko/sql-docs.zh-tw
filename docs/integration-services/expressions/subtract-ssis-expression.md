@@ -11,14 +11,14 @@ helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d11088abe6327c9e3466ea115dd03834d2a0a1c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e26df3ba35f81fb386cd208e8df207360510254c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967709"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297374"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減) (SSIS 運算式)
 

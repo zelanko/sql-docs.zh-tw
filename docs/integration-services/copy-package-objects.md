@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d0d82dcc4e9caa3e61f5c8d33d034b9395e57fd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4636dde3123cc3742a7dde57fa2a468583e2f2bd
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057710"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293605"
 ---
 # <a name="copy-package-objects"></a>複製封裝物件
 

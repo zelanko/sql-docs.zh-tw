@@ -15,14 +15,14 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1e24da5c7cf22cd0f192d29a063e2aa7d20746cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: de9df087cd068ad27029cb17ae553390b054a2f8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968058"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297458"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>數值、字串及布林常值
 

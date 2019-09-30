@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 437e919b8dfba5d375a80fc53267a539d907aaa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec7514eeb2e614c1313fba81c4a48b8803f0c29d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902507"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296086"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>課程 1-9：測試第 1 課套件
 

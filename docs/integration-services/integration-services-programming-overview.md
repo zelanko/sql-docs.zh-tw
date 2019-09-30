@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data flow engine [Integration Services]
 - languages [Integration Services]
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 487fe7483ed2a53ade9d64ab1fdca503cf748e94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057526"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296218"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 程式設計概觀
 

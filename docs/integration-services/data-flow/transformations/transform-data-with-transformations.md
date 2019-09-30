@@ -12,14 +12,14 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d03bf325bd96b6646f683b0034c0246505e4fb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ccabb3d2964d1a2a5d4de6beab7e299eb9befb03
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912607"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297728"
 ---
 # <a name="transform-data-with-transformations"></a>使用轉換來轉換資料
 

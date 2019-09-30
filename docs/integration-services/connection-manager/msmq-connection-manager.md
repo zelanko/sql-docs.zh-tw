@@ -15,14 +15,14 @@ helpviewer_keywords:
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: abe5321f4f8f8cedfb9442e1137b7c2be68a2b12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104170"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298531"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 連接管理員
 
