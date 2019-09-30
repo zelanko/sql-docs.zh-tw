@@ -183,7 +183,7 @@ ms.locfileid: "70846679"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - 當您存取商務邏輯處理常式時所要使用的易記名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - **@is_dotnet_assembly**＞。  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - **\@is_dotnet_assembly**＞。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>部署商務邏輯處理常式  
   
