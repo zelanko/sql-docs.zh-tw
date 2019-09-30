@@ -20,14 +20,14 @@ helpviewer_keywords:
 - packages [Integration Services], samples
 - datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 456527f6c198060f57ce237b3a7cce1f7985731a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 432c461f90f89eb625e923af342f7c96f323709c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928220"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297824"
 ---
 # <a name="row-sampling-transformation"></a>資料列取樣轉換
 

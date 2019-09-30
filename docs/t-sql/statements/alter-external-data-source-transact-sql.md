@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9bd9eb928819d943f902d96c8d76bcc15fb24016
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70911290"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227162"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   修改用來建立外部資料表的外部資料來源。 外部資料源可以是適用於 SQL SERVER 的 Hadoop 或 Azure Blob 儲存體 (WASBS)，以及適用於 Azure SQL 資料倉儲的 Azure Blob 儲存體 (WASBS) 或 Azure Data Lake 儲存體 (ABFSS/ADL)。 
 
@@ -34,7 +34,7 @@ ms.locfileid: "70911290"
 
 ```  
 -- Modify an external data source
--- Applies to: SQL Server (2016 or later)
+-- Applies to: SQL Server (2016 or later) and APS
 ALTER EXTERNAL DATA SOURCE data_source_name SET
     {   
         LOCATION = 'server_name_or_IP' [,] |

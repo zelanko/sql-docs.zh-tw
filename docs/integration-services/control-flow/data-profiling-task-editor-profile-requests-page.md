@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec3158e07a4c6fee9045bb468f3d00d6a3a0c46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003627"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294184"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
 

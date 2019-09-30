@@ -13,14 +13,14 @@ helpviewer_keywords:
 - history tables [SQL Server]
 - History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56610e5418ff242d39f722add6da103960b11647
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1844f4088c026dda5636cd31a7f90b5effe4bfbc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929872"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298250"
 ---
 # <a name="history-cleanup-task"></a>記錄清除工作
 

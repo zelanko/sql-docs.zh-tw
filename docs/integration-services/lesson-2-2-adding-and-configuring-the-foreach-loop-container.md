@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d4e570f5dda2531ddb7ef5f3089c1bb1c4c05f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088795"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296051"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>第 2-2 課：新增和設定 Foreach 迴圈容器
 

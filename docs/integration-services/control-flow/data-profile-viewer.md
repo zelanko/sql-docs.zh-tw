@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 70eb07072e77e9626e8617e03cc74928d53b8c4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934621"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294220"
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器
 

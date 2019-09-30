@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c84ac5751d4d2046d3ac392f526bae8dc79f1022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5c636138358dda82c758ab2db70fab8d315f9b9d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929815"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294026"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
 

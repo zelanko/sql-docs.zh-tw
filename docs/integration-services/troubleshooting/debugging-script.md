@@ -12,14 +12,14 @@ helpviewer_keywords:
 - debugging [Integration Services], scripts
 - scripts [Integration Services], debugging
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a8dee34e6d2bb7cfb858ee1f10378d5ac4916f9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e4ad4f9578913e3a6fd9d78e50a7c44e9c8642bf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945575"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295096"
 ---
 # <a name="debugging-script"></a>偵錯指令碼
 

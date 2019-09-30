@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dde3637c5307fdfbd40a5ade78ebd7de077d0e73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d6933f45d70636b2c7ea8b2ca20f71e1ab2fd02
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968260"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298891"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取設計工具
 

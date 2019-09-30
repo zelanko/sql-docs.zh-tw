@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0ad340a2ec0d94dca701849dd2a658efc7bcab2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944159"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291249"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>使用聯集全部轉換來合併資料
 

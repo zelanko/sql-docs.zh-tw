@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - packages [Integration Services], troubleshooting
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61233900def55fc28627869a134bddaf786f5548
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9280f92233909077afd0507c5c2de7b93467ccb1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028446"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282061"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>了解本機和遠端執行之間的差異
 

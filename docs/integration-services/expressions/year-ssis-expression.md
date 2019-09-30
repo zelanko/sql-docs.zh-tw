@@ -11,14 +11,14 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3043894d07ee65ba5389c03b949610bd189f5fbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3583baedb1766944a89b9f4491c53a94a17f3fa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109177"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297306"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 運算式)
 

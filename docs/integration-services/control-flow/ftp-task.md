@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c41f2ba3fdd8b514a37951b623643584841c9a23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988212"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294135"
 ---
 # <a name="ftp-task"></a>FTP 工作
 

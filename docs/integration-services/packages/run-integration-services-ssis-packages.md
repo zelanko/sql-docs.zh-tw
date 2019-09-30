@@ -19,14 +19,14 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5046708ffd705ca937b89a7780e47cd62cdc3f97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913698"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282602"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
 

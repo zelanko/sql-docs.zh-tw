@@ -13,14 +13,14 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ea5012b367aedd86be7b0180b975964c61c50905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e5a444d6dea225f37b8640fd642d91ae83618d5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967573"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297338"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 運算式)
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b22bee1313c1c1ef6122c5c24b9d552216ba91c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4bf9a4a922c8aeed7ca344b423193e8b01c19037
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902691"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296148"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>課程 1-3：新增及設定 OLE DB 連線管理員
 

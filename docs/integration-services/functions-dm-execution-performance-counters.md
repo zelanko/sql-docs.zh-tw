@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 820d4b3dae7643db7f03f4e761b63208f20263e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 957d0fa1d5b311fbecfd76340e443e8f2f3f81f5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102795"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296425"
 ---
-# <a name="functions---dmexecutionperformancecounters"></a>函式 - dm_execution_performance_counters
+# <a name="functions---dm_execution_performance_counters"></a>函式 - dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

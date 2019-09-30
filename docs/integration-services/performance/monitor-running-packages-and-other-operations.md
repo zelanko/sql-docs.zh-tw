@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 847f3fccdca31f62ecaebe9451426283fa741b04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120577"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295794"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
 
@@ -155,7 +155,7 @@ ms.locfileid: "68120577"
   
 |章節|Description|  
 |-------------|-----------------|  
-|篩選|顯示目前套用至報表的篩選，例如 [開始時間範圍]。|  
+|Filter|顯示目前套用至報表的篩選，例如 [開始時間範圍]。|  
 |執行資訊|顯示每個封裝執行的開始時間、結束時間和期間。您可以檢視封裝執行使用的參數值清單，例如使用 [執行封裝] 工作傳遞至子封裝的值。 若要檢視參數清單，請按一下 [概觀]。|  
   
  如需使用「執行封裝」工作將值提供給子封裝的詳細資訊，請參閱 [執行封裝工作](../../integration-services/control-flow/execute-package-task.md)。  
@@ -169,7 +169,7 @@ ms.locfileid: "68120577"
   
 |章節|Description|  
 |-------------|-----------------|  
-|篩選|顯示目前套用至報表的篩選，例如具有指定字串和 [上次失敗時間]  範圍的連接。<br /><br /> 設定 [上次失敗時間]  範圍，就可以只顯示某個日期範圍內發生的連接失敗。 範圍可以跨多天、數個月或數年。|  
+|Filter|顯示目前套用至報表的篩選，例如具有指定字串和 [上次失敗時間]  範圍的連接。<br /><br /> 設定 [上次失敗時間]  範圍，就可以只顯示某個日期範圍內發生的連接失敗。 範圍可以跨多天、數個月或數年。|  
 |詳細資料|顯示連接字串、發生連接失敗的執行數目，以及上一次連接失敗的日期。|  
   
 ### <a name="all-operations-report"></a>所有作業報表  

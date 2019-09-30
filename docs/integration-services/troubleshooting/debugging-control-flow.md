@@ -17,14 +17,14 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5682fc63f92000705f13afdaa35c20d4898190e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945597"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295125"
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
 

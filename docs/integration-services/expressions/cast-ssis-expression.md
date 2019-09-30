@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bf33110b09b4ecc5e3709a59a19eaa47bdafad2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 618c30a29473e7ade84812abeba52d23ff52da9e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033996"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290348"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 運算式)
 

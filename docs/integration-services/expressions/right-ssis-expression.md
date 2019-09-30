@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b524da5aedb728c7c7fdb9da8dbcfc66d5b240c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1dcd15de93893b34a6842110767b2242fbc3a146
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967897"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297403"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 運算式)
 

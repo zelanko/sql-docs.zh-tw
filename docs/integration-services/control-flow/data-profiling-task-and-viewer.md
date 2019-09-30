@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 854a6ed0f2ef688643cb7b452696daf6257df89b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bd42f62e51e44e218c39d0907cb16db1ef502c79
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003653"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298329"
 ---
 # <a name="data-profiling-task-and-viewer"></a>資料分析工作和檢視器
 

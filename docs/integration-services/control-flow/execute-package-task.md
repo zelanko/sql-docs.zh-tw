@@ -17,14 +17,14 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b01580216ffb47a5d0d78cf08b8d7c9c14b861b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043906"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294185"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
 

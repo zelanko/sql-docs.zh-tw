@@ -12,14 +12,14 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8308a8449dd41d1eef7ad6784dffc8d8939f64f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f149ca01b71b7611264f28d14532d7827554585f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941531"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292546"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 來源來擷取資料
 

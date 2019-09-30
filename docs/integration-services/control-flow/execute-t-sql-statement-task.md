@@ -14,14 +14,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6dde0ecb97efe4390cda6c2eb1ba70047fc9511e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e7b51e71feef1dcd30b3e63c38b6cf10598cd80
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988345"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294164"
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
 

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f3e4a41f3fef4cb8b8d64de6015c5e3011490d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 805ca71b22a0c5f280c6e3475ba21133bef6dd6e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019527"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298023"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
 

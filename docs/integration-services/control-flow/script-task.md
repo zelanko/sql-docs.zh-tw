@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 392804caab3af4a9bfe7f652fc8f618df430f924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 44c8739327d84999456302bf2a21fd6858658d4c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68215790"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294001"
 ---
 # <a name="script-task"></a>指令碼工作
 

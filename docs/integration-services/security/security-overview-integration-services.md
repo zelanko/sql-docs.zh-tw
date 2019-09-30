@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 674661a385218db1210b1052925db85f282a08db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896110"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281942"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
 

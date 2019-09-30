@@ -20,14 +20,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fedd86edddc93953a91d2fbfcbfe8de7b897fe3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104116"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298510"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
 

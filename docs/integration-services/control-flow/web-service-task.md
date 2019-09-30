@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c3c18f666c4e7b7e5f1d161fb78535e8005f1a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045607"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293803"
 ---
 # <a name="web-service-task"></a>Web 服務工作
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 69583b01752e37f5b223e98aba105e21291ee4d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c33d928d7cba81c58053ecc983a3d32b4bffd59d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944169"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297861"
 ---
 # <a name="map-columns-to-composite-domains"></a>將資料行對應到複合定義域
 

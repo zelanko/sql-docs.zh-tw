@@ -31,14 +31,14 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3ce9b298e096666e8e87cbe83af7c1881905f7eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944311"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291499"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
 

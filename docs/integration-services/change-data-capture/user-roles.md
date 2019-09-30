@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fb0412abb3f7c352b1904dd8cc3925531cf9b457
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 194eb7232aaf0ffd1f323d6291c0efb06f88a397
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898957"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298585"
 ---
 # <a name="user-roles"></a>使用者角色
 

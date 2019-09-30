@@ -13,14 +13,14 @@ helpviewer_keywords:
 - regenerating package GUID
 - updating package properties
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b3fb32d6fcec7238637f99661dc7df4c0afb3b4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b374955ea4a07cd94de88202fe02ffbb572d0a1c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057736"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293644"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中複製封裝
 

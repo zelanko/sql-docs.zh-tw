@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SSIS Script task, variables
 - variables [Integration Services], Script task
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0714aa2a016f8b9c7f2546e2da2972bbd001c590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c01695891e1d41fed5e1e5c293a18f74462a4151
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102816"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285981"
 ---
 # <a name="using-variables-in-the-script-task"></a>在指令碼工作中使用變數
 

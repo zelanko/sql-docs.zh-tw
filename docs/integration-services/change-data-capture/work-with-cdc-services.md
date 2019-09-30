@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 160d7125cb729ee19bbfb31fe5990e4aa1196688
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f29f257e6e50a5c835ddcccb323c557bd693bbe5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898952"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298573"
 ---
 # <a name="work-with-cdc-services"></a>使用 CDC 服務
 

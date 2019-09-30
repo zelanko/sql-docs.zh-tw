@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.afpextfilesrc.f1
 - sql14.dts.designer.afpextfilesrc.f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 694a6c2307983c7003be80be5dc318fc756af392
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bdebcba1d6313c1e8c6363faa147a3e6a275e9dc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892331"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292401"
 ---
 # <a name="flexible-file-source"></a>彈性檔案來源
 

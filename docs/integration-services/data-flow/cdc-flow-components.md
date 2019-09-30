@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 576565cb5bf688c3dc784eaa377ba7cf8d4a67b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045416"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293407"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
 

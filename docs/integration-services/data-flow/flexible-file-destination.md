@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.afpextfiledest.f1
 - sql14.dts.designer.afpextfiledest.f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4572651bb90098c9afb3a01c574401356dac6706
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9bb840838794d7fc5a2e67acc7a4a2438ea2faf1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892304"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292450"
 ---
 # <a name="flexible-file-destination"></a>彈性檔案目的地
 

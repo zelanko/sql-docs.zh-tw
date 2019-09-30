@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4fc078aa37b7e3bb264d2542c52510601f156906
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a06374e2803a5e482e6d5a7a665756e38cb7f2f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941880"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292440"
 ---
 # <a name="hdfs-file-source"></a>HDFS 檔案來源
 

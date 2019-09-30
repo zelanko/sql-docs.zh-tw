@@ -11,16 +11,16 @@ helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 81209c7e194f70536f9da27ac7358da5df265fcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0dedb0034099dcb803bb6354a0806b613108da8d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897864"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296800"
 ---
-# <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
+# <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

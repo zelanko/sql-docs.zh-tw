@@ -11,14 +11,14 @@ helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29890b85ccd19d17d74a560a2c1264de879a4e1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e85eb7e41a3211f132ea32858bf859c153f15de7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081113"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290287"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 運算式)
 

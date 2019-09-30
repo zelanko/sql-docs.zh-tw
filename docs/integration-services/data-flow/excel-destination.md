@@ -16,14 +16,14 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4dff3986f3f733095adc1d4d0bc20d59b386eb2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 418d3c214f667807df997902f97bfa271c8c4742
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941580"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292823"
 ---
 # <a name="excel-destination"></a>Excel 目的地
 

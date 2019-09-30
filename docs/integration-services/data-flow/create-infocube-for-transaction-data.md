@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0ca83c61a09c03c5c066da4b65a5a342f86c631
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 07e92734aebb13d04d715a727c8b2bbe2e0dc785
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045255"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293273"
 ---
 # <a name="create-infocube-for-transaction-data"></a>建立交易資料的 InfoCube
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dd7dab4f59aa5667b72e51a065a7698e5f76c697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9202cf969f87c23af7af7d68b01b4a42cff167d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101743"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298702"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服務
 

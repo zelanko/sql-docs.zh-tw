@@ -12,14 +12,14 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02fcad7bd52248f8bc1daf5066c90453c08718b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 88893b16dcb6e0529f166ab3c6e3f255110b6f71
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913757"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295778"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
 

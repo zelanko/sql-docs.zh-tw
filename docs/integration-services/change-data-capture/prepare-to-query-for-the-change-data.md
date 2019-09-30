@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9bef8a000619284cc46f96659d2ca6fd03ea5af7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 610f75fa8b706dab60b9691b4f5e5e82c2bdb93f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084358"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294617"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>準備查詢變更資料
 

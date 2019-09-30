@@ -26,14 +26,14 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8367157d0b3547690b4675a9da7cc8f0bfc58966
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944412"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297940"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
 

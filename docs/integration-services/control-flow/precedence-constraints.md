@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cb2d6637098e791a61cbceaf6a6823dfc25cef6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 10deeb5de3a74e765f99a76d59d2184a6b76b106
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099654"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294005"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
 

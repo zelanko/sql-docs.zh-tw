@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 66bb8f1853515f88fc43770fce2d36b767f23de3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9aa748fff6c0986290267815b90b43fd8fecb6b1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096707"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294645"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
 

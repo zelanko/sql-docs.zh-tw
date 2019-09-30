@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb521fa88cdfe5bc95cacceb7f5c0ebf521e337f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031285"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298219"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
 
@@ -155,7 +155,7 @@ ms.locfileid: "68031285"
 #### <a name="inputoutput"></a>輸入/輸出  
  檢視資料來源的名稱。  
   
-#### <a name="column"></a>「資料行」  
+#### <a name="column"></a>資料行  
  未使用。  
   
 #### <a name="error"></a>錯誤  

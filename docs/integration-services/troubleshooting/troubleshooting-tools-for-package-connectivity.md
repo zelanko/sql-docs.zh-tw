@@ -15,14 +15,14 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ebdbf30851cf15ff6bac392f1b6be01312e0f90b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70e53f37056357fbaff315d6cd432b2171eb478b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945463"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295055"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>疑難排解封裝連接的工具
 

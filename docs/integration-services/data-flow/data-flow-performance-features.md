@@ -21,14 +21,14 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d02e9b3ab775305c5b7052f1535a612c836957e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 552d4b6094a4cc890124399039ee61ba775ec715
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049507"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293134"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
 
