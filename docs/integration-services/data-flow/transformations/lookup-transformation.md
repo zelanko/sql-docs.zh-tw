@@ -21,14 +21,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0b530cf3a73baa961fa2db5e39563e6a585b1f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d4c44f8920fc3a8060dcff6112eb41055f1584d2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944212"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291264"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
 

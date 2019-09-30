@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 04cbee02e86d1715e7f411e39c9988172baf51bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 22f9918800930be9534441d2bb3706ad7844e9f7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901819"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285361"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在執行作業 (SQL Server 匯入和匯出精靈)
 

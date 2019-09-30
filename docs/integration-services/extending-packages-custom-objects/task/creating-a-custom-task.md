@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom tasks [Integration Services], creating
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5803aeb6271d36faae9dbf6df40e5850deaf0959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb82df6839e15c3b710d40c52899d661fe9e55ca
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062843"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297085"
 ---
 # <a name="creating-a-custom-task"></a>建立自訂工作
 

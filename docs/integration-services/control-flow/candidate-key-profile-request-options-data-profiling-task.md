@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 97431776b8851253f18a0747daa61b798ebcb404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 09b2eafcd061df5c9f407fc08a9eef0002b1bc23
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104898"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294282"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候選索引鍵設定檔要求選項 (資料分析工作)
 

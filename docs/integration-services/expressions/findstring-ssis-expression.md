@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9795b15cf47fbaad588139aff0658978ae868807
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a9eb015bbab987c37df2390eee81af2f3338644b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088773"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297592"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 運算式)
 

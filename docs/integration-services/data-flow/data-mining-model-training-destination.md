@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d0e3f3106b7f4a51cf4423497c248c801ed7d6f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f064ad734e90d2748b959e7fdc9d5868b22c25cf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891431"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293113"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
 

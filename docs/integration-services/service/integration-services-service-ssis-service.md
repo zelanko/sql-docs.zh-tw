@@ -20,14 +20,14 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 55f58c1b286182a6fff5e72e960e30d3bea62911
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947130"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296942"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38b16211ccb15e0a0a2f77d1b4f470ef9ad3c51b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ca9674a5bb3128e86d9cceaca4a971066da0fef
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902604"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283674"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>課程 1-4 - 新增套件設定
 

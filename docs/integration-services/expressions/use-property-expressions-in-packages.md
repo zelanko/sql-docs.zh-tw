@@ -17,14 +17,14 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e917a042fc760170b6dabe12bb90c20e2a38bc7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967548"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287877"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
 

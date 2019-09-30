@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff67ed908a9fe89d24c23d836ce608206575d649
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 048ead08bf4a0f3f275eb265434581c8be4405bc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941293"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292327"
 ---
 # <a name="look-up-process-chain"></a>查閱 ProcessChain
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 705f104eb6f3ab78f32a68af9277b2b4d9cef14d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7ce0a8e44a89dbac275b8c2df320a20e7bc14f14
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027425"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297501"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (邏輯 Not) (SSIS 運算式)
 

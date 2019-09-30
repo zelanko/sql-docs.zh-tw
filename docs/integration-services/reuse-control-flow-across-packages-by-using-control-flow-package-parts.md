@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 977f68acf532ffdb7e691010534b33d50d4d54f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2fa693e4e5c8f21b9d8fc8ad02369bff7623b59e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121478"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295790"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>使用控制流程封裝組件在封裝之間重複使用控制流程
 

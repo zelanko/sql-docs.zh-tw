@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.afpblobuptask.f1
 - sql14.dts.designer.afpblobuptask.f1
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bdc915d459144cd2c745f0ca97df55380f819138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e903de279e4373e234dab18401465edd997e7407
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947396"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298428"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 上傳工作
 

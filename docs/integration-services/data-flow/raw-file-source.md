@@ -16,14 +16,14 @@ helpviewer_keywords:
 - raw data [Integration Services]
 - Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8c65fe330869f5059fdce928bd529141505f4298
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e35fffa75f72b4edaddba344d166cb1c89fb3338
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034350"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298134"
 ---
 # <a name="raw-file-source"></a>原始檔案來源
 

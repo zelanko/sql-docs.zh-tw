@@ -18,14 +18,14 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f8f9bd1a31fd395daea280a4718f87e12c774de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5af33c29f1c013937cff99f8d357b0b538b9ffdb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941490"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292485"
 ---
 # <a name="flat-file-source"></a>一般檔案來源
 

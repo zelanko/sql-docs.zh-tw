@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 97eddaf05a3ac7eec342d696691a6f38a9b57488
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060807"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294774"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒
 

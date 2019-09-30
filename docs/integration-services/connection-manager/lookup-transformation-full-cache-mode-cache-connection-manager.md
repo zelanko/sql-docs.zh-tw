@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6b5fa4a7eefece109dfa5b7f423b4f7c6af3e159
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1ae22daf218c65bc0aa95068d6162a7b966c838c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904680"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298512"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
 

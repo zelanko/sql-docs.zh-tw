@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2cb7bc4b2d828861c4b772a03306d07486da327e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d964639bbcf7679c71191d4b3a8e2a455a4635e8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049588"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298558"
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新增執行個體精靈
 

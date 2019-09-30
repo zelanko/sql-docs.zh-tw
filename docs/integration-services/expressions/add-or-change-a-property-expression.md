@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 032eaa357b601bfd72f018443725542ef2253592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8f3aef5f587e590dcad0ab0490679a480529387a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088940"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290498"
 ---
 # <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
 

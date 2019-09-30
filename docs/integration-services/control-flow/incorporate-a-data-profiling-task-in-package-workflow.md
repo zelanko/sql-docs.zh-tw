@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 127a58c702c5098310416970621932fe44223e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929852"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294124"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>在封裝工作流程中納入資料分析工作
 

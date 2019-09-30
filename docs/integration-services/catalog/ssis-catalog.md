@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 09348b39919c13caa35879609abbd6470660f803
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070536"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294957"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
 
@@ -53,7 +53,7 @@ ms.locfileid: "68070536"
 >   
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的容錯移轉是叢集容錯移轉的一部分，就不會重新啟動執行中的套件。 您可以使用檢查點重新啟動封裝。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
-## <a name="features-and-capabilities"></a>特性與功能  
+## <a name="features-and-capabilities"></a>功能  
   
 -   [目錄物件識別碼](../../integration-services/catalog/ssis-catalog.md#CatalogObjectIdentifiers)  
   

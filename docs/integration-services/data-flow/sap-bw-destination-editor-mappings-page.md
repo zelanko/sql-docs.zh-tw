@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7b935ea743d052c9efa15fb1598d4cec1818e7b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034186"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298096"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目的地編輯器 (對應頁面)
 

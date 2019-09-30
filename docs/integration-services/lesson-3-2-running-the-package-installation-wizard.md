@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d0bd82529575d1907d8a3948ef9301e6925eced8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086508"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283322"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>課程 3-2 - 執行套件安裝精靈
 

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f12d6b633433cb01b19a57c969be8ac3f8f913d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904712"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294414"
 ---
 # <a name="http-connection-manager"></a>HTTP 連接管理員
 

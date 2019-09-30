@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08a38e8a907c32a2614b3bda07a3153141b127d5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893818"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284352"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各版本支援的 Integration Services 功能
 

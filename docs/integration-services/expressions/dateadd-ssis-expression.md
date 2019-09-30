@@ -12,14 +12,14 @@ helpviewer_keywords:
 - dates [Integration Services]
 - DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e25fade61e60a5e2cab4aef67a8ba8e2a836ef02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088816"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290171"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 運算式)
 

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56cb5497b842903edd132a45cdc768e89327f841
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0001806e1a8f0cba9a879297b4dab49367dd84a8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112225"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297017"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>以指令碼工作蒐集 ForEach 迴圈的清單
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2725731d216b651d310b204f4cdf6b19612ae435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba5766483def3dc357bc8f1bf65dd1048fa94b48
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055815"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295912"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>課程 4-5：測試第 4 課套件
 

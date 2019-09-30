@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad4fd039aa163a8fce8bc4cd56259774f861e8c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3a4aebf354f999b26be59efc2f3c25a205dd3d9d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011456"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298782"
 ---
 # <a name="error-handling"></a>錯誤處理
 

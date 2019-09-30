@@ -14,14 +14,14 @@ helpviewer_keywords:
 - jobs [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec6fc06bdcb7a7e622590b66698257b671b4dd98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 361a7cf30b000c2b28259eefd134b7a17a15957d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988352"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294171"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>執行 SQL Server Agent 作業工作
 

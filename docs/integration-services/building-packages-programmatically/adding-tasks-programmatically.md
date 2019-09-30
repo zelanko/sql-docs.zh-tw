@@ -14,14 +14,14 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bad96bbe83bf2b4c9046a1bd305e351284a2111c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052247"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299064"
 ---
 # <a name="adding-tasks-programmatically"></a>以程式設計方式加入工作
 

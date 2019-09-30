@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7bf44403cc058e130c59fe65515eaa19c45f08c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110533"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295569"
 ---
-# <a name="catalogadddatatap"></a>catalog.add_data_tap 
+# <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

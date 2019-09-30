@@ -16,14 +16,14 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eef20d5dce1d76d6870a39e34a3da1404838917f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155180"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293521"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
 

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Data Mining Query transformation
 - prediction queries [Integration Services]
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0ebcbe8d0263a31f772f711dd40853267dcd238a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e3b6783969376b20921d960e79c8909b5fda4aa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893145"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291461"
 ---
 # <a name="data-mining-query-transformation"></a>資料採礦查詢轉換
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 13695f6226331455754839a5e26198ae49d186c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b05b7ffa40bb5b44c9dd3a5fa0d320cfadba0a43
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929868"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294056"
 ---
 # <a name="integration-services-containers"></a>整合服務容器
 

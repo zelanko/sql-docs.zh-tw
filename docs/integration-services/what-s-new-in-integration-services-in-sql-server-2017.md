@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7e9a5e7f4a1f290673ca1a914e883ab359dcc8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2baea8e71a3730a100eda8971ad70a28f1a97773
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945348"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296462"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 中的 Integration Services 新功能
 

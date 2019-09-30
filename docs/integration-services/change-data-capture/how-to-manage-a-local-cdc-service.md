@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1e3c026f4feb230cc89982b9a2c39a177239740a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 722db3a272c99ba6733551f4fa1a4131971e2416
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076330"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298740"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本機 CDC 服務
 

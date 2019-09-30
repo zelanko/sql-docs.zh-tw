@@ -12,14 +12,14 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4fe4e538c03ab711da811ae6dcac33e602c333a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 767340b1c888c9cc25bad494ae13ae8559be31ac
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945441"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295054"
 ---
 # <a name="use-annotations-in-packages"></a>使用封裝中的註解
 

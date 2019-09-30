@@ -19,14 +19,14 @@ helpviewer_keywords:
 - connections [Integration Services], external data sources
 - SSIS custom tasks, external data sources
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eca56f08abae691cb106e02e0aa3215b78616be0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3a93743753cf63514557e363af05c428f23899c4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062855"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297093"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>連接至自訂工作中的資料來源
 

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 39c0937448194dba61eb20d5e1492c71a57bf80a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 58b73e5bd1f82d619f00e50d554d2043196d7884
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968062"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298542"
 ---
 # <a name="excel-connection-manager"></a>Excel 連接管理員
 

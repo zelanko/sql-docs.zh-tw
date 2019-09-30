@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8156ce9aba96d01253b84c15309c6c19a46eaff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114487"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285439"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
 

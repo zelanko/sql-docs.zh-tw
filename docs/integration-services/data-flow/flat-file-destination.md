@@ -17,14 +17,14 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c62f746d13fdc818ed9caf8010be84065ffe8fbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941518"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292536"
 ---
 # <a name="flat-file-destination"></a>一般檔案目的地
 

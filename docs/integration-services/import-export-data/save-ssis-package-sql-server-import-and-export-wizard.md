@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dbf07e5a0583520b563bb33a0c5823c5fa458b4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901753"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296252"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
 

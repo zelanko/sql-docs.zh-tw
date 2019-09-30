@@ -11,16 +11,16 @@ helpviewer_keywords:
 - validate_package stored procedure [Integration Services]
 - catalog.validate_package stored procedure [Integration Services]
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8fe58243b9a5c4091b281114438bfe1520de7cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0a7ecbe24971e4138dfc55c847d07efa5e901f1f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038557"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295258"
 ---
-# <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (SSISDB 資料庫)
+# <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

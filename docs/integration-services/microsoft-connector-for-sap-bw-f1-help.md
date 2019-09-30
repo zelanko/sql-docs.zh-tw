@@ -10,14 +10,14 @@ ms.topic: reference
 f1_keywords:
 - sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1628bd2d70aa9d9c2fbb15e95386e108ed118aae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1676f6aeec77fa3feb6b46365536de3ac36bff6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065289"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282544"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 說明
 

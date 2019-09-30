@@ -11,14 +11,14 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - managing packages [Integration Services]
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4b0911b650d164e1ae53281b70d6822353b1f2cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fa5d6c780ce80e8f6de0493494f736f7049edc16
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070683"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298967"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 伺服器與目錄
 

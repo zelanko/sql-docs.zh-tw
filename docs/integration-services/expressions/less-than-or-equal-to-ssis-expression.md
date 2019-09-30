@@ -11,14 +11,14 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c886f27f99c671367ef1646bf95c2833a99f5408
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca7ea792717e7a8069ee54724543b0d5d78f2322
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027500"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289549"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (小於或等於) (SSIS 運算式)
 

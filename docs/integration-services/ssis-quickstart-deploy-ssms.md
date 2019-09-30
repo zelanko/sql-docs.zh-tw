@@ -6,14 +6,14 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b600ebb27007504d0625222be713a8d7d39535c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d22df5141535e5ebfdb8120161a1776db616aef1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068891"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281681"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 部署 SSIS 專案
 

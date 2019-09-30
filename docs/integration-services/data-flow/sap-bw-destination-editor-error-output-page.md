@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.erroroutput.f1
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b30f3ba05726b038b802c704df855e9896da082c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9016a943848247ce7c9ba81d70cf542b470b6e2a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034190"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291970"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 目的地編輯器 (錯誤輸出頁面)
 

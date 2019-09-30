@@ -15,14 +15,14 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - inserting data
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f83987664a6f15fc66b45347f6e56b760690b912
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 58534c37ab2ee5d857bcf9ce823b3aa336c1f477
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944269"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291371"
 ---
 # <a name="import-column-transformation"></a>匯入資料行轉換
 

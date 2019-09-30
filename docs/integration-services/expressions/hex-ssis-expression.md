@@ -11,14 +11,14 @@ helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 486babd40e6afdb576772dc825b8d080c67d13dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c28f8dbaa649e0755c6f18f7cc0f1485f022e4a6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051195"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289565"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 運算式)
 

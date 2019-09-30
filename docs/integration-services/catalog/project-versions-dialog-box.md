@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.isprojectprop.versions.f1
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f61073e5b04e36a5ba6028e47e5c6c13e5c819a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9b1715b517f6933a9f904b17ff268fdf7162464d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070553"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294901"
 ---
 # <a name="project-versions-dialog-box"></a>專案版本對話方塊
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6078f133e8f14f570540ff02a9f107578c5fada1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 12fd42ba8f7fa5abf7f35c14001cb1bc68f10096
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086533"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295982"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>課程 3-1 - 複製部署配套
 

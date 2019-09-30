@@ -15,14 +15,14 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c196f1514afcb447f584d0fea6c71917ae2a5ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988221"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294147"
 ---
 # <a name="for-loop-container"></a>For 迴圈容器
 

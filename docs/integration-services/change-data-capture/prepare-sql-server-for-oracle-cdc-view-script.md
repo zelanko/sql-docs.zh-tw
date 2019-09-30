@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e6f89b0cd9d3e5680fdcd4e8b594223fe4d1ddd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77f3575375ec991119462a5933e85df13de80795
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084393"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298682"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>為 Oracle CDC 檢視指令碼準備 SQL Server
 

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86eefc940e54389ec823e1d1e3b2c0ae51836a7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913766"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296235"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 回溯相容性
 

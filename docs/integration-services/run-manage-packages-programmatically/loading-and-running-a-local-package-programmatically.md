@@ -18,14 +18,14 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3f127aeb7d9e86e70460190d11ea7c61b57c1d24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d8f9264a456464b40cfce4382cb7d70cbb7ce4cf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028580"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295759"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以程式設計的方式載入和執行本機封裝
 

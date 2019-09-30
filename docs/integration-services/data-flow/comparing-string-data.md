@@ -14,14 +14,14 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ca45017c7afe4b8e877018d0a121211e4eb9700e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3c84997d8ec11a4eb620daf7bf34af7adf3e8de1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045340"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293242"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
 

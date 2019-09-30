@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 164b66b3e4c6770d3722f32deeca6c2fbaf8478c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f6370319091d4326adbe2d11d1f92e19cd88695a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037186"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282642"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>第 6 課：在 SSIS 中搭配專案部署模型使用參數
 

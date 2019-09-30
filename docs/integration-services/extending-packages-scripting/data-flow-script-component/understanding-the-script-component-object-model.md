@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ef94f1b94ac0f8a75b186a733b8143d1bd29ac51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103955"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286583"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
 

@@ -14,15 +14,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b3c7d1474164741ef8380ce1904f99a05e833456
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 986461eb17ed8c5980139fd8789f4fcbed458734
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769308"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251082"
 ---
 # <a name="transactional-replication"></a>異動複寫
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   通常以發行集資料庫物件和資料的快照集啟動異動複寫。 使用初始快照集後，在「發行者」端進行的後續資料變更和結構描述修改，通常會立即 (近乎即時) 傳遞到「訂閱者」。 資料變更會以相同的順序，並且在相同於「發行者」端發生之變更的交易界限內套用到「訂閱者」；因此，在發行集內會保證交易的一致性。  
   
  異動複寫一般用於伺服器對伺服器環境，並適用於下列各案例：  
@@ -38,6 +38,8 @@ ms.locfileid: "68769308"
 -   發行者或訂閱者為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫，如 Oracle。  
   
  依預設，交易式發行集的訂閱者應當成唯讀處理，因為變更並不會傳播回發行者。 不過，異動複寫的確有提供選項讓訂閱者更新。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ##  <a name="HowWorks"></a> 異動複寫的運作方式  
  異動複寫是由「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照集代理程式」、「記錄讀取器代理程式」及「散發代理程式」實作。 「快照集代理程式」會準備快照集檔案，內含結構描述及已發行資料表與資料庫物件的資料、將檔案儲存在快照集資料夾內，然後將同步作業記錄至散發者的散發資料庫中。  

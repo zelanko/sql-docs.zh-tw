@@ -16,14 +16,14 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9d969db282002919775fa9e77198686e4ee1ef3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068925"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295709"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
 

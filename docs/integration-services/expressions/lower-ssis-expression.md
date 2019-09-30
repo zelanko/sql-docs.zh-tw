@@ -13,14 +13,14 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fc0309a47b19cc4df0ece6c0785ba47644082a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a61d3a72990914599efa807e388e94f96b0f9754
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941267"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297482"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 運算式)
 

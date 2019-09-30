@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fb8fde9c20fdab07d7fa77644a7af7463ec6401d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904249"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298480"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
 

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7921fa58dc8f318a1b1b0c6dd4c7e408a40b7a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38af7d056eab840a5cf83eefa96ec2731e58bc67
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941579"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292775"
 ---
 # <a name="excel-source"></a>Excel 來源
 

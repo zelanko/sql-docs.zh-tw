@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 82cbd4586c5a1340f4c6382ece0cf8952064585b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a746df126c3652108217ea3dfedeb37be4f1751e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945480"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295093"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>疑難排解封裝執行的報表
 

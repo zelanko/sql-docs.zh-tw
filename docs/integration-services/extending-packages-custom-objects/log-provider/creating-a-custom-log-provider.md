@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - custom log providers [Integration Services], creating
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2bbc83ad424f5c6ed0ef7e56802175f05b1d6a2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d946868dad2aa9facc9b08a8ab32a1a4218406e9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951882"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297202"
 ---
 # <a name="creating-a-custom-log-provider"></a>建立自訂記錄提供者
 

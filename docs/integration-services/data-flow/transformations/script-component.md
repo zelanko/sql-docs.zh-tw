@@ -20,14 +20,14 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7e65aa1624874b976002e8a9bd5f3cfa8932e365
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928196"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297874"
 ---
 # <a name="script-component"></a>指令碼元件
 

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - connections [Integration Services], SQL Server Compact
 - connection managers [Integration Services], SQL Server Compact
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1b723984f03c67d7468c7531a8c67c9f46cb2116
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62c5a0400918ffe86cca4ec9ff98dd9254d29621
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904225"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294346"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 連接管理員
 

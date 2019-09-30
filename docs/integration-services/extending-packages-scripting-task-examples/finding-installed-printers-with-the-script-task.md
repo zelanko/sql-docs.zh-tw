@@ -19,14 +19,14 @@ helpviewer_keywords:
 - finding printers [SQL Server]
 - Script task [Integration Services], printers
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 198366cb00b16c029936460082c114d3499ff78f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cece5cb3e406bdc0fe5b437691528eb4cf6bf848
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112263"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286852"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>以指令碼工作尋找安裝的印表機
 

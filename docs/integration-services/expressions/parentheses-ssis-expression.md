@@ -12,14 +12,14 @@ helpviewer_keywords:
 - evaluation order [Integration Services]
 - parentheses operator ()
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ffdc00f4f8f0c009512eace3b3724a7fc419e8a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 968ab3afbdb5d184364758797180102d65293eb7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967947"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288523"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (括號) (SSIS 運算式)
 

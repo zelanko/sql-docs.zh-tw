@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.dts.designer.afpstorageconn.f1
 - sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a494881eab27578348fd08f5aea3481e8c9ce67c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155034"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294456"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
 

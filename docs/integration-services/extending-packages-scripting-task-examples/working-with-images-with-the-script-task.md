@@ -21,14 +21,14 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a1c662fb5584fec6de91a98710d13412c828899
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074635"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296972"
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
 

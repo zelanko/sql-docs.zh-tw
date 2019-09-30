@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2e8f7d2b4354b5f4670a408752d1a92c2aee7751
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b28d1c4cb3f17ae5a22e98735730a94ae186885
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060866"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298901"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>連接到 SQL Server 進行刪除
 

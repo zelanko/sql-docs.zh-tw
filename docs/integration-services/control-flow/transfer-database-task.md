@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 32f0cf8076931ebb569c69e9abf9af72798c57d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011196"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293901"
 ---
 # <a name="transfer-database-task"></a>傳送資料庫工作
 

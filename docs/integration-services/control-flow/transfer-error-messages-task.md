@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2f226fb77fa0b690427da8121992ce15a44c6ce2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 363a2761472f544e2c995fba25f4650ee6242b36
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011177"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293876"
 ---
 # <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作
 

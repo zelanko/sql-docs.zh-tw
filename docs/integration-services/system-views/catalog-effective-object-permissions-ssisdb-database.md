@@ -11,16 +11,16 @@ helpviewer_keywords:
 - catalog.effective_object_permissions views [Integration Services]
 - effective_object_permissions view [Integration Services]
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 37c0e5d8695129a5611e8bf42ea7ef693b7d6a15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a612ca0ed4efcaac2a6f9f9ba588ce9ce68aabf8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038430"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296664"
 ---
-# <a name="catalogeffectiveobjectpermissions-ssisdb-database"></a>catalog.effective_object_permissions (SSISDB 資料庫)
+# <a name="catalogeffective_object_permissions-ssisdb-database"></a>catalog.effective_object_permissions (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

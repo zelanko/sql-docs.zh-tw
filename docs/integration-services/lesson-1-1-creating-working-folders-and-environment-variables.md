@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f8c738987803390872217a0eee19682fa23c29d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 08de88d45b31e4c00c9ce5a7790405c6da1542a2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057292"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284139"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>課程 1-1 - 建立工作資料夾與環境變數
 

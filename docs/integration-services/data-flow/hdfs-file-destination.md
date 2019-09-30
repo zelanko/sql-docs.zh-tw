@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6ae333cce365fb9bede046fcea911b633a0f2311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941476"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292368"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 檔案目的地
 

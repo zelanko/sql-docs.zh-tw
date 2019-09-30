@@ -19,14 +19,14 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 97dda725d0b1def3fd18251437a25d54614e75a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c51d65dabef5efa4de7ecb4c62b633e62ed0b082
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944078"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297883"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換
 

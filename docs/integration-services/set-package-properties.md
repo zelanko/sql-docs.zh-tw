@@ -23,14 +23,14 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9227289bd6ad587744d9025a70d625f6aedb21e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912515"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281932"
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
 

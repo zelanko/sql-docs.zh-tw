@@ -12,14 +12,14 @@ helpviewer_keywords:
 - custom foreach enumerators [Integration Services], about custom foreach enumerators
 - foreach enumerators [Integration Services]
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e5e8ac60eb14289618e436e90c9bfe480fd411bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3aedd7aef35555fe11bf67a11254833c52083f9d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116223"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297174"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>開發自訂 ForEach 列舉值
 

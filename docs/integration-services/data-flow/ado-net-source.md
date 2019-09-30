@@ -19,14 +19,14 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e3881b16729a1999b3be47dafd2fec396d495c29
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155155"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293518"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
 

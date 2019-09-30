@@ -16,14 +16,14 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a981ec4f29cd1fe5dd9629498799dd488f03e3f8
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893230"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298360"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
 

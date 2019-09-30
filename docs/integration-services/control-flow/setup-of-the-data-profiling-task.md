@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 184c1e29296a14d530648ae2e621fdc5da188864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0230354bfe53de8c362bcdb70caa597652706ee2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011326"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293977"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
 

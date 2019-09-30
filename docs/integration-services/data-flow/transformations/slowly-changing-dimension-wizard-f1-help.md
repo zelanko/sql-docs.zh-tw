@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 75713193ae858452ccf3c0fa9f9c6d38091696ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85f97f8e7fe754a4c52b34f52ecb45d142a43c4b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943985"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297774"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩時變維度精靈 F1 說明
 

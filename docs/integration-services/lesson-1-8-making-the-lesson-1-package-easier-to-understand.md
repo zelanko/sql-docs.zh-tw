@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a494dd0ea0a4c5691bee93cd1a973132d6c4d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17c69ca2ecb09f734f5d2018baea299d282917ed
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902522"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283812"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>課程 1-8：為第 1 課套件加上註解並設定格式 
 

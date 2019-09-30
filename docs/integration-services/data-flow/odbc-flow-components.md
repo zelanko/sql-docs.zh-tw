@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 00099c0e8d23238b7536a187ee1f38450afda6f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e7035802b5b4e13c2696af9d76c6a2904547ea25
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038774"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292279"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流程元件
 

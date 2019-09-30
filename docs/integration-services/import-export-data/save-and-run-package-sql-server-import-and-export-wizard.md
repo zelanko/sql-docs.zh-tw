@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 46e1f5f0f6eb868d6590ffdd01fd0aa2cca6a4af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901746"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284944"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>儲存並執行套件 (SQL Server 匯入和匯出精靈)
 

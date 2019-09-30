@@ -21,14 +21,14 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dccf6bd22d6e68271f83d686cf8ddffe9e190ead
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3ed4c8c8feacdd41d2e806a4d2d663f639633e07
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904674"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294425"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
 

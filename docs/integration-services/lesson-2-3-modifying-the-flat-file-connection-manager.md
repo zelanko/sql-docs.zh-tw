@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1cb492b9b162c9494c4cd009fd3ad5b68427a030
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f09ac0b6b7a1d0536205596a553eddb06765b93
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086577"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296022"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>課程 2-3：修改一般檔案連線管理員
 

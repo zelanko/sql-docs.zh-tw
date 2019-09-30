@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dbb3f7aaf77a80176e8b49a342683aa328b746b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086526"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283264"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>課程 3-2：新增及設定記錄
 

@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.afpdelcltask.f1
 - sql14.dts.designer.afpdelcltask.f1
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b984fcb2eb292b63e3b99065404b6b7799a06601
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a82b5abf846bb9904d6ea8db879ff73e98f43a8c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947260"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298412"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 刪除叢集工作
 

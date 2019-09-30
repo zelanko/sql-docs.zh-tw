@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Reorganize Index task [Integration Services]
 - indexes [Integration Services]
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2321bf4ab724f7707311aaa61d402793f112f627
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a70f690c646e9f8662a65525cf34d43541b7b41
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061648"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293966"
 ---
 # <a name="reorganize-index-task"></a>重新組織索引工作
 

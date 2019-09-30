@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 446143898d6537ac03ab0203f81973ed7fdaba36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3cb5949943cb03095328bc43599fbfef2fa74da2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086617"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294566"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
 

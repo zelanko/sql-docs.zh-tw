@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 661a4584e429b3e0a5ed97786d7061b1da9bff24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1d2cbcf5d9b6751bf0b5842af77462b1b753267
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099813"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294804"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle Change Data Capture (CDC) 服務使用說明指南
 

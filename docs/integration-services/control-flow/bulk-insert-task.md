@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cb49dd2ea145d118a075ed21479047f1e42b4a3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947170"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294333"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
 

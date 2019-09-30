@@ -12,14 +12,14 @@ helpviewer_keywords:
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c14525dbffc38c9c46c5747898efe649654d1e19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028595"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295762"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>以程式設計方式列舉可用的封裝
 

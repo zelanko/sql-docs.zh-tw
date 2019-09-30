@@ -22,14 +22,14 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 798ec9b823c324ea67d50023dd12f4fe585c5de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100853"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295671"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
 

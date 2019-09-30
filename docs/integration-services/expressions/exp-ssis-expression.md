@@ -11,14 +11,14 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d98032d040c29e8c1455bbc0e037f920a8588e4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f53939adac7e0593245c4dfd35222696961a83b8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080947"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289771"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS 運算式)
 

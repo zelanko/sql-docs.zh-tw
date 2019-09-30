@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 75aaf9cca75ea90e036acb9d11f0793af2835438
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902618"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283683"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>課程 1-5：新增及設定一般檔案來源
 

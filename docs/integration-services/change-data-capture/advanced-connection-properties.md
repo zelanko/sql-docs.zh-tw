@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a6d17e67b5f4b48f20752e84300dc8c993a67d1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70e8c3cbc08837bce7c3b8aa9afeb3222165996c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074649"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298919"
 ---
 # <a name="advanced-connection-properties"></a>進階連接屬性
 

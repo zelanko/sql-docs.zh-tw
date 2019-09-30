@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 689dc578f28f9b27961fbb5cec161924fdbe54fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 385db632232fabe3639384b4792a621e1023075a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988318"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298282"
 ---
 # <a name="expression-task"></a>運算式工作
 

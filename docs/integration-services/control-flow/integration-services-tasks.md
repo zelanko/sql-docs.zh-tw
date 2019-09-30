@@ -24,14 +24,14 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 91b623f2fe2c6608684e31c50fac687ef10fbffa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45e7828421f6a8d4bca6084c6b9e0d215b432cc9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929836"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294082"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
 

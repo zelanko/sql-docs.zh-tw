@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 31f0febc7bcf4a4a8ee646d9a3d90e3eef95a813
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988259"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294131"
 ---
 # <a name="file-system-task"></a>檔案系統工作
 

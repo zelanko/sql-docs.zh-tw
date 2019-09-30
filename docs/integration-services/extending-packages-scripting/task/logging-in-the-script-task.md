@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f55c4b022d0656575c6807660e3b342532786822
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84817da83d50edb592ab11dea16b3b21b8d3818d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102826"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296441"
 ---
 # <a name="logging-in-the-script-task"></a>在指令碼工作中記錄
 

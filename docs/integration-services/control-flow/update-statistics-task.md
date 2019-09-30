@@ -13,14 +13,14 @@ helpviewer_keywords:
 - updating statistics
 - Update Statistics task [Integration Services]
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9ffc0e83be57232670e53ef78ca4793309b8dae3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a48d827f621f37e73d82d4a8fa144bb1b95515e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025192"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293822"
 ---
 # <a name="update-statistics-task"></a>更新統計資料工作
 

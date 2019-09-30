@@ -11,14 +11,14 @@ f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: abe8c731a066ed764c2fc55da42bd630e46f3ae8
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e8188dd6b26b3eb81596394ce8b7947654b00df5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69610759"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294945"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 

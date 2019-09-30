@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data flow components [Integration Services]
 - data flow components [Integration Services], developing
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5076d158ce4d8f58d06ba30ecf51083ecf7e1386
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 93a2d0db91c8e22146ed3d83bf30d72d9cc3a00e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024714"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297291"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>建立自訂資料流程元件
 

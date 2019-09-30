@@ -16,14 +16,14 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f820ea8a58ac85024a0550a8499aa997333f3de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fca2fd4670fae2838eb0512c68483024bdb4dee
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944100"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297832"
 ---
 # <a name="multicast-transformation"></a>多點傳送轉換
 

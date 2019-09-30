@@ -13,14 +13,14 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 00c1fed0bf79774a9e3f52d00f69be5c6222deae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057684"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290615"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
 

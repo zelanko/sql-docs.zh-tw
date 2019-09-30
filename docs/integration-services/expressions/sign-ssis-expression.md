@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 962f92044ea81cb7bb420176103a3df63c4b7ddd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d98782b0c007f584c5d013c49dafe47a01106a38
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967803"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288638"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 運算式)
 

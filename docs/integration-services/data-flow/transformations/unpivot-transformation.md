@@ -16,14 +16,14 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 393ebc9ac1d1854b5cf2e07ebbd8304f3c8f555f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c89af926fdb8476ec53b27fde17503c4a34f124
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943898"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291004"
 ---
 # <a name="unpivot-transformation"></a>取消樞紐轉換
 

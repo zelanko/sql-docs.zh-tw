@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad6efe1291adffd73769f8f6f4defa28abe8fbef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 595af36a5eb19ff6fd019df8a2b9203537350c5a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968300"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298903"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 執行個體部署指令碼
 

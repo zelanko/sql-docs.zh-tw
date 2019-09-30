@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 66ea50d0a0b298f45efbb0ed255c2e354bf30b47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 204fe65afa6684a3090c226d2fc5a028aa5f4079
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968108"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294443"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>DQS 清理連接管理員
 

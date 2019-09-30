@@ -16,14 +16,14 @@ helpviewer_keywords:
 - TaskResult property
 - SSIS Script task, status information
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9a291a51aee2160d3b6680a2c5baac415e66bdf5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c5fa5e546f566362b76691ffc2e316d0ff6a485
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102857"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296388"
 ---
 # <a name="returning-results-from-the-script-task"></a>從指令碼工作中傳回結果
 

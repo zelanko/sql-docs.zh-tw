@@ -11,14 +11,14 @@ helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1ef97c568d1e5704229be1713639ed5de3112f3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 106dba74e37f79e2f2e3811d97c108a56ae716cd
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080978"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289728"
 ---
 # <a name="-equal-ssis-expression"></a>== (等於) (SSIS 運算式)
 

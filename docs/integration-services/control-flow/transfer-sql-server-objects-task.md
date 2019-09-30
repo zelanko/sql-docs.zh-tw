@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cbde5c7832767f4baf64261973b15dc46513c0bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105587"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293837"
 ---
 # <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作
 
@@ -41,7 +41,7 @@ ms.locfileid: "68105587"
 |檢視|  
 |預存程序|  
 |使用者定義的函式|  
-|預設值|  
+|Defaults|  
 |使用者自訂資料類型|  
 |資料分割函數|  
 |資料分割配置|  

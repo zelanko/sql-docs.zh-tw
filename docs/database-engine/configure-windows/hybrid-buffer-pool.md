@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: ''
-author: DBArgenis
-ms.author: argenisf
-ms.openlocfilehash: e4808c0895695eba562c25ea0ee412348dc148f5
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+author: briancarrig
+ms.author: brcarrig
+ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68697560"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251062"
 ---
 # <a name="hybrid-buffer-pool"></a>混合式緩衝集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

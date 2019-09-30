@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: acae1d88d7bfd6e61eeeca582444f6be5627414c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25f1497b7801c7891681324b12fa9a5eda4eb842
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110566"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293206"
 ---
 # <a name="create-infopackage"></a>建立 InfoPackage
 

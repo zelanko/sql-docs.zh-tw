@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 63c820efc9473f5e297345c6a595973daf2e47b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86bf6dc67143ea539ea0329fc1783629b26aa802
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081144"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297659"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 運算式)
 

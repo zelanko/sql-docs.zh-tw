@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 45096a10f377b88e36f0d84e77963a7321cbef8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 87acb8f9b15fa2b22f4a7f1dbe01669eff08b92e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110357"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281021"
 ---
-# <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level 
+# <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

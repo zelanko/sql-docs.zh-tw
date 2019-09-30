@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 51cdfca39f0f0124f34f4b2fd380fe0de7bb396a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898864"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294501"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>加入檔案連接管理員對話方塊 UI 參考
 

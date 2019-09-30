@@ -13,14 +13,14 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4819bc46da8f42a6f5fb30ef24f91acbefa8bea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 90855baaa61e242488a7fb6a91a52e34d77e5f48
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057401"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284405"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
 

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb2f04e556d2ebdeb0776e112beb75aad9c637b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e1d5cde6cef1d6ce53d29fb04f330aa2c06c1c8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026015"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287926"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>開發具有非同步輸出的自訂轉換元件
 

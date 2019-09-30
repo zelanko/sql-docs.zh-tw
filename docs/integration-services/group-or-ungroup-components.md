@@ -13,14 +13,14 @@ helpviewer_keywords:
 - containers [Integration Services], grouping
 - grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9da09f5b8c2936cf0fadf3a281169e1d03523659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 999bdd02c0cbfa2f8d2df6be93b3261c5bdc1dc5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102739"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296373"
 ---
 # <a name="group-or-ungroup-components"></a>將元件分組或取消分組
 

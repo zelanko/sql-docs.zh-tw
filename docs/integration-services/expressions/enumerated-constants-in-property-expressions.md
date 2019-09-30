@@ -15,14 +15,14 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 826f96ab6dec92053bc60b58044a21e1377f551c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081047"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297632"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
 
@@ -334,7 +334,7 @@ ms.locfileid: "68081047"
   
 |ExistingData 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
-|取代|0|  
+|Replace|0|  
 |附加|1|  
   
 ### <a name="web-service-task"></a>Web 服務工作  
@@ -494,7 +494,7 @@ ms.locfileid: "68081047"
 |None|0|  
 |All|1|  
 |系統|2|  
-|使用者|3|  
+|User|3|  
 |Specific|4|  
   
  **TableSelectionType** 屬性：使用來自 **TableSelection** 列舉的值進行設定。  
@@ -568,7 +568,7 @@ ms.locfileid: "68081047"
   
 |StatisticsTarget 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
-|「資料行」|1|  
+|資料行|1|  
 |索引|2|  
 |All|3|  
   

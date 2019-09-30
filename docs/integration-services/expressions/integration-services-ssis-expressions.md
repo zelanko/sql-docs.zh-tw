@@ -14,14 +14,14 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 60789eddd79f591996d6b1b4b18b36320f7813f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f2e884e7a34af6cae14b4b057038e54b20255200
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080717"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289680"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 運算式
 

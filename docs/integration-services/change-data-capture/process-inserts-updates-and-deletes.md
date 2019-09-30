@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 673b265a3e8b0855095c6bcc0d3ba10206eaab94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 035c31286e0594763c1063b606ad56473c41fbf5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084335"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294614"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
 

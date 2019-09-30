@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ca0deffc2082fe4d69005504f50e340361f85ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8662905f72262cede8913c2a549cbca0df470875
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100863"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294705"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何編輯 CDC 執行個體屬性
 

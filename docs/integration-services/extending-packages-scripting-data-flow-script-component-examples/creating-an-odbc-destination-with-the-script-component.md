@@ -13,14 +13,14 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: be4616aa2ea73d2f4c78d7fe06bb3674486ff022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb28965af992a19864ccf2e6959decd778468403
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114694"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296495"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用指令碼元件建立 ODBC 目的地
 

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - AND, logical AND
 - logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6af08121e05227d066a712970ae0b22b8a644507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cda41d0db42f72b56c84b184138ade1e345fdaa9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027466"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289061"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (邏輯 AND) (SSIS 運算式)
 

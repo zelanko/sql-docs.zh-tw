@@ -19,14 +19,14 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 141c9d7c23a75ca78cf908cbf0a48feeafdc6641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e12088669f56dce1b6dee69202284f3cc044e274
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062786"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286950"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>開發自訂工作的使用者介面
 

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f9d48f0510a4b4666f60e2df7171c759e10207ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f865a560cb530060cf8f2f0a2f0a6208fcc924ed
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904779"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298598"
 ---
 # <a name="flat-file-connection-manager"></a>一般檔案連接管理員
 

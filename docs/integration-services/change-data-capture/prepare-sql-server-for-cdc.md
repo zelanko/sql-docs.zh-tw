@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - prepSqlSrv
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77524cc56a848b9eef844ff604fa79f6f28a2743
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3664aa3565a1df42657f206e1f102f4e1f2a8db6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086647"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294644"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>為 CDC 準備 SQL Server
 

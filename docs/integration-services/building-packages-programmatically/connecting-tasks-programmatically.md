@@ -15,14 +15,14 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], connecting tasks
 - constraints [Integration Services]
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1713d70ecf6ae18517d23f778643def53fcf9e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51cce76a41cfcc513e633a20b16ca5e861fa492a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052167"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299033"
 ---
 # <a name="connecting-tasks-programmatically"></a>以程式設計方式連接工作
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - LEN function
 - number of characters
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fe71d2e914d665392b9728fdeb55c4ddd53431c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f84bb32435afe7cbe52cea6ed25f59940dbd42c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027546"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297531"
 ---
 # <a name="len-ssis-expression"></a>LEN (SSIS 運算式)
 

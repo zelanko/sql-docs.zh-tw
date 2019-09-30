@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb34223b2bfcb896c2f5b6fa6ec01e7e3487a072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e81d5b1c85b1a2105e0e9a54c11c63bd5c25344
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112847"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291748"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>將資料品質規則套用至資料來源
 

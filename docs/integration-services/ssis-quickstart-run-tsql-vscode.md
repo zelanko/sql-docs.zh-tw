@@ -6,14 +6,14 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 539df425bcdc5cb7dd60fe7d73574cfcec08a2c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cdd1dc130efb795b957911c51d5d8c2243522d38
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068778"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281613"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 執行 SSIS 套件
 

@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.afpblobsrc.f1
 - sql14.dts.designer.afpblobsrc.f1
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2b90f56f69aed9da7194f2a95b0fa9598db0da50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8342fc3595f695225ee5ea3e4a12259c2bb8301a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045449"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293456"
 ---
 # <a name="azure-blob-source"></a>Azure Blob 來源
 

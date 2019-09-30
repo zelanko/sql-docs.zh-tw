@@ -6,14 +6,14 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ca79ace2f6ad401b4a8df16c885ca6375da4c26a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2155697d4c936c81c082553e2e499f006e7b945
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068777"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295633"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 執行 SSIS 套件
 

@@ -28,14 +28,14 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6285426e0503433157632dddeb71b57a9452154f
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621685"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298295"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
 
@@ -58,7 +58,7 @@ ms.locfileid: "69621685"
   
 -   「Foreach 項目」列舉值，用來列舉集合項目。 例如，您可以列舉「執行處理」工作使用之可執行檔與工作目錄的名稱。  
   
--   Foreach Nodelist 列舉值，用來列舉 XML 路徑語言 (XPath) 運算式的結果集。 例如，此運算式會列舉並取得一份古典時期所有作者的清單：`/authors/author[@period='classical']`。  
+-   Foreach Nodelist 列舉值，用來列舉 XML 路徑語言 (XPath) 運算式的結果集。 例如，此運算式會列舉並取得一份古典時期所有作者的清單： `/authors/author[@period='classical']`。  
   
 -   Foreach SMO 列舉值，用來列舉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) 物件。 例如，您可以列舉並取得一份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中檢視的清單。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "69621685"
  **列舉值**  
  從清單中選取列舉值類型。 此屬性具有下表所列的選項：  
   
-|值|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Foreach 檔案列舉值**|列舉檔案。 選取這個值就會在 **[Foreach 檔案列舉值]** 區段中顯示動態選項。|  
 |**Foreach 項目列舉值**|列舉項目中的值。 選取這個值就會在 **[Foreach 項目列舉值]** 區段中顯示動態選項。|  
@@ -215,12 +215,12 @@ ms.locfileid: "69621685"
 |**Foreach NodeList 列舉值**|以 XML 文件列舉節點。 選取這個值就會在 **[Foreach NodeList 列舉值]** 區段中顯示動態選項。|  
 |**Foreach SMO 列舉值**|列舉 SMO 物件。 選取這個值就會在 **[Foreach SMO 列舉值]** 區段中顯示動態選項。|  
 |**Foreach HDFS 檔案列舉值**|列舉所指定 HDFS 位置中的 HDFS 檔案。 選取這個值就會在 [Foreach HDFS 檔案列舉值]  區段中顯示動態選項。|  
-|**Foreach Azure Blob 列舉值**|列舉指定 Blob 位置中的 Blob 檔案。 選取此值可在 [Foreach Azure Blob 列舉值]  區段中顯示動態選項。|  
+|**Foreach Azure Blob 列舉值**|列舉指定 Blob 位置中的 Blob 檔案。 選取此值可在 **[Foreach ADO 列舉值]** 區段中顯示動態選項。|  
 |**Foreach ADLS 檔案列舉值**|列舉指定的 Data Lake Store 目錄中的檔案。 選取這個值就會在 [Foreach ADLS 檔案列舉值]  區段中顯示動態選項。|
 |**Foreach Data Lake Storage Gen2 檔案列舉程式**|列舉指定之 Data Lake Storage Gen2 目錄中的檔案。 選取這個值就會在 [Foreach Data Lake Storage Gen2 File 檔案列舉程式]  區段中顯示動態選項。|
   
  **運算式**  
- 按一下或展開 [運算式]  ，即可檢視現有屬性運算式的清單。 按一下省略符號 **(...)** 按鈕以新增列舉值屬性的屬性運算式，或是編輯和評估現有的屬性運算式。  
+ 按一下或展開 **[運算式]** ，即可檢視現有屬性運算式的清單。 按一下省略符號 **(...)** 按鈕以新增列舉值屬性的屬性運算式，或是編輯和評估現有的屬性運算式。  
   
  **相關主題：** [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)、[屬性運算式編輯器](../../integration-services/expressions/property-expressions-editor.md)、[運算式產生器](../../integration-services/expressions/expression-builder.md)  
   
@@ -268,7 +268,7 @@ ms.locfileid: "69621685"
 #### <a name="enumerator--foreach-item-enumerator"></a>列舉值 = Foreach 項目列舉值  
  Foreach 項目列舉值可用來列舉集合中的項目。 您指定資料行和資料行值，即可定義集合中的項目。 一個資料列中的所有資料行都可定義項目。 例如，指定用來執行「執行處理」工作之可執行檔及該工作所使用之工作目錄的項目會有兩個資料行，一個會列出可執行檔名稱，而另一個會列出工作目錄。 資料列數目會決定迴圈的重複次數。 如果資料表有 10 個資料列，則迴圈會重複 10 次。  
   
- 若要更新執行處理工作的屬性，則使用資料行的索引，您可以將變數對應至項目資料行。 列舉值項目中所定義之第一個資料行的索引值為 0，第二個資料行則為 1，以此類推。 每次重複迴圈時，都會更新變數值。 Execute Process 工作的 **Executable** 與 **WorkingDirectory** 屬性接著可由使用這些變數的屬性運算式更新。  
+ 若要更新執行處理工作的屬性，則使用資料行的索引，您可以將變數對應至項目資料行。 列舉值項目中所定義之第一個資料行的索引值為 0，第二個資料行則為 1，以此類推。 每次重複迴圈時，都會更新變數值。 **Executable** 然後，會透過使用這些變數的屬性運算式來更新「執行處理」工作的 **WorkingDirectory** 和  屬性。  
   
  **定義 For Each 項目集合中的項目**  
  提供資料表中每個資料行的值。  
@@ -347,7 +347,7 @@ ms.locfileid: "69621685"
  **DocumentSourceType**  
  選取 XML 文件的來源類型。 此屬性具有下表所列的選項：  
   
-|值|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -367,7 +367,7 @@ ms.locfileid: "69621685"
  **EnumerationType**  
  從清單中選取列舉類型。 此屬性具有下表所列的選項：  
   
-|值|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Navigator**|使用 XPathNavigator 列舉。|  
 |**節點**|列舉 XPath 作業傳回的節點。|  
@@ -377,7 +377,7 @@ ms.locfileid: "69621685"
  **OuterXPathStringSourceType**  
  選取 XPath 字串的來源類型。 此屬性具有下表所列的選項： 
   
-|值|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -400,7 +400,7 @@ ms.locfileid: "69621685"
  **InnerXPathStringSourceType**  
  選取內部 XPath 字串的來源類型。 此屬性具有下表所列的選項：  
   
-|值|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -600,7 +600,7 @@ Data Lake Storage Gen2 權限由 [RBAC](https://docs.microsoft.com/azure/storage
  使用位置列舉類型。 此選項僅適用於檔案。  
 
 ## <a name="use-property-expressions-with-foreach-loop-containers"></a>使用屬性運算式與 Foreach 迴圈容器  
- 封裝可以設定成同時執行多個可執行檔。 當封裝包含實作屬性運算式的「Foreach 迴圈」容器時，請謹慎使用此組態。  
+ 封裝可以設定成同時執行多個可執行檔。 當封裝包含實作屬性運算式的「Foreach 迴圈」容器時，請謹慎使用這項組態。  
   
  實作屬性運算式通常非常適合用來設定「Foreach 迴圈」列舉值所使用之連線管理員的 ConnectionString 屬性值。 ConnectionString 的屬性運算式是由對應至列舉值之集合值的變數加以設定，並於迴圈的每個反覆運算中進行更新。  
   

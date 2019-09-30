@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8ce7ac47e5de47db98a6986ed471ba0f7fdb01dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 668b7343ae893d302a27c0a68aec58e536cffcc9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045385"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293284"
 ---
 # <a name="cdc-source"></a>CDC 來源
 

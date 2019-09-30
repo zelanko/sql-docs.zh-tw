@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 71852015f9595e51c61f0840ebcec6e41431a660
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 733e6c8000f3a14127b0f3a8704b43af81fa0f85
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941416"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292335"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>使用 ODBC 目的地來載入資料
 

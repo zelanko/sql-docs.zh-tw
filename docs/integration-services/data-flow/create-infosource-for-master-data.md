@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f7512331c57fb69ee953261b08b4bfeeef167dde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1fb9be98dbbdf2935fe79c6f579be7ab0e357624
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009926"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293201"
 ---
 # <a name="create-infosource-for-master-data"></a>[建立主要資料的 InfoSource]
 

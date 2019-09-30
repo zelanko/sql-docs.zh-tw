@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3be8fb2d2a918aafdbec48e5eba1c23885585294
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7c6c5cdc269c757b8578314d39fd07f9f947a5e7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951890"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287142"
 ---
 # <a name="coding-a-custom-log-provider"></a>撰寫自訂記錄提供者的程式碼
 

@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 940f4b2adcb586dce923f33d02b2e75b9ce2b5b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904857"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294449"
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
 

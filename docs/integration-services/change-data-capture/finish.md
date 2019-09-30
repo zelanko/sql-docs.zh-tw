@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - finish
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8425657fb22f3ee137a4faa1d0319d1aad28f463
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 379fda6761bac54a38b668044da97bb99f102bed
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011425"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294727"
 ---
 # <a name="finish"></a>[完成] 
 

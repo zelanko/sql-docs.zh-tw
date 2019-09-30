@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.sourceassistant.f1
 - sql13.dts.designer.addNewSource.f1
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 493d5a0d7ab5e9971747abe022fa46edbf615ae4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0312349652ad1854efdeacdbfc25726e1766862f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096657"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298041"
 ---
 # <a name="source-assistant"></a>Source Assistant
 

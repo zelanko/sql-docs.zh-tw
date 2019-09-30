@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 548ca5fcbe851d84f884857acb72cb200e3420fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eaf4308f05b7a7fb1f450947754736d0cf565b61
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101708"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294668"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>如何檢視 CDC 執行個體屬性
 

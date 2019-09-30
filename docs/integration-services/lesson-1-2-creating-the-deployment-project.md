@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 80c5e4e9fe4faf0bfc11d9ed1e193d4ca43f2c18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26803904c22953b919c568b2798ecf02ad6a94a7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902714"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283759"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>課程 1-2 - 建立部署專案
 

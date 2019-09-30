@@ -16,14 +16,14 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 88aa12fe6a02cce0788eab3ffafeb49769a9991f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112756"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291660"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
 

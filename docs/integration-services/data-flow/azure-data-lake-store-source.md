@@ -11,14 +11,14 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSSRC.F1
 - sql14.dts.designer.afpadlssrc.f1
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7b3bda4e977d5a3f7b6c3029d5151bca8af267ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2699b5d76f15ea81875256cddcd63af1b6451f04
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045433"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293381"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 來源
 

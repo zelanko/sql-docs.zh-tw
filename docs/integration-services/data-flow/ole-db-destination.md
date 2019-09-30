@@ -21,14 +21,14 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0e406e5966b9b865d7e25d8156880f333d5cba26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897167"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298182"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
 

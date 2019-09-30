@@ -21,14 +21,14 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 69bfdefda7d28425ddee9add8963ee19f093cc04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896119"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281979"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>封裝中的敏感性資料存取控制
 

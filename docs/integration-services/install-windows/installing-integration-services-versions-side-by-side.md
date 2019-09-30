@@ -11,14 +11,14 @@ helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dc0ecf43373da19585e434515aa793b9d4928513
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 89126793193172dbdc35de2cb059a91173bb6faa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057665"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296229"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>並存安裝 Integration Services 版本
 

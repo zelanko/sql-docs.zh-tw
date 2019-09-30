@@ -19,14 +19,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c4b8c2bc73a0b7e2fac49f430a34885fd2f39a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ad9f44e88f92242e516001457d15ba1d93ad9ce
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116364"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287386"
 ---
 # <a name="validating-a-data-flow-component"></a>驗證資料流程元件
 

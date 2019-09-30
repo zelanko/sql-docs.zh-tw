@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d1274b263bc546a917f9a46d6adaa5c61f7cd49d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4b06f56346e8e17fbdb9284dded2bfc154b9ae1a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944333"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297921"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>記錄屬性選項 (緩時變維度精靈)
 

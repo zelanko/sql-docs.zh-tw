@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dfab14edde8351d014714e314c500c5319a265f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057490"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296165"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
 
@@ -103,7 +103,7 @@ ms.locfileid: "68057490"
   
  在準備封裝執行的特定執行個體時，系統會指派值 5 給 **pkgOptions** 參數。 這個值就是執行值，因為只能針對執行的該特定執行個體，將此值套用至該參數。 執行啟動時，系統會將值 5 指派給對應至 **pkgOptions** 參數的封裝屬性。  
   
-## <a name="create-parameters"></a>Create Parameters
+## <a name="create-parameters"></a>建立參數
 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 來建立專案參數和封裝參數。 下列程序會提供建立封裝/專案參數的逐步指示。  
   
 > **注意：** 如果要將使用舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建立的專案轉換為專案部署模型，可以使用 **[Integration Services 專案轉換精靈]** ，根據組態建立參數。 如需詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  

@@ -10,14 +10,14 @@ ms.topic: language-reference
 helpviewer_keywords:
 - stored procedures [Integration Services]
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f1666742af5a17cfbb900814c9486233847ed74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e1eea2f9e83069b18b47b1563e60a0c31c0bfcb0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038496"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296682"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>預存程序 (Integration Services 目錄)
 

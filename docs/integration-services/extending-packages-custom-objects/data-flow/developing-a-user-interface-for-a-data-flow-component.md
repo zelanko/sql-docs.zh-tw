@@ -20,14 +20,14 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f3f1d43a1f77317e1852a2b261ec960df4908c4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908738"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287771"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>開發資料流程元件的使用者介面
 

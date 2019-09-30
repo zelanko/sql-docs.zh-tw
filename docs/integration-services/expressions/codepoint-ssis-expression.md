@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d097a135cbca0714b53797fbaa4d5357849b15c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06c015c2f96bf2f7206a3e802d44a65871828d2c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107678"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290266"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (SSIS 運算式)
 

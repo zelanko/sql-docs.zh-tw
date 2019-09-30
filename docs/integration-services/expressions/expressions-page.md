@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 826e9ba34d114d7c18c81915f099fdcf34ca0976
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9e3bbe6e788512144211ed35d1cfa8326d8f3ef7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080940"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290020"
 ---
 # <a name="expressions-page"></a>運算式頁面
 

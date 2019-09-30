@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadooppigtask.f1
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a8746d50744a5498b0f36a7d19103f653b866d33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a624228a0df45ee0ba2954d27e38be511db629fe
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929906"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294088"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 工作
 

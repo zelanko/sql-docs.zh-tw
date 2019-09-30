@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 68f3d3c7d49d5951296e3c3cee42a7cb3299b4e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912534"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285871"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>選擇目的地 (SQL Server 匯入和匯出精靈)
 

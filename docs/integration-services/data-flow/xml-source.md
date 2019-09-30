@@ -17,14 +17,14 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9e0bd0a6045b0d4e96fd88d5cd0828100f2bd631
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074007"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290834"
 ---
 # <a name="xml-source"></a>XML 來源
 

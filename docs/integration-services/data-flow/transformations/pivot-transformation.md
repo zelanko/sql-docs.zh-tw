@@ -16,14 +16,14 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ca3c25c3d5b2df2427543722a4b95809a736b805
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944050"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291227"
 ---
 # <a name="pivot-transformation"></a>樞紐轉換
 

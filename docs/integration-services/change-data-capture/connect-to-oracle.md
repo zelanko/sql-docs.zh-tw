@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - connOra
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6d605a5ed646df46e90440780a08e32ae82ad390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e745a2277a01cac3dd120af241e0ae1d7575b562
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099776"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294752"
 ---
 # <a name="connect-to-oracle"></a>連接到 Oracle
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 65fcfef4cbb28d8c07190dbd71819c89d269477e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9df960fa5018ad8f4368c99a91c5aed3fe0aab15
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011358"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294793"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>如何建立及編輯 CDC 服務
 

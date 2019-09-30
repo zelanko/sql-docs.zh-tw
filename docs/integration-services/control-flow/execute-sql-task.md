@@ -18,14 +18,14 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cb2167462eaa219dab3b105b37bca3253e69e1d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988357"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298308"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
 

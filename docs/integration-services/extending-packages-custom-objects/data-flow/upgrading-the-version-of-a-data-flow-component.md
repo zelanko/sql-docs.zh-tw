@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4fb0ba18bf88d14320235452c73f4b5e74fb00e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 728308339d062c855a50372fd2cb001245dd6091
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116390"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287418"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>升級資料流程元件的版本
 

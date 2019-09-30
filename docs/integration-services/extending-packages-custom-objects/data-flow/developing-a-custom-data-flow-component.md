@@ -16,14 +16,14 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4b60aeb599e14881f69f548bff235f62e578c125
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cd3ef168c8d3c58fb387787e8635ef94c512a475
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908731"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297243"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>開發自訂資料流程元件
 

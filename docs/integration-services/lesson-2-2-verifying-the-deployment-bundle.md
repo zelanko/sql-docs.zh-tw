@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e2bef735ab6a0f798df175fc9fd8749126056f42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba8767f4d1b4f8c38638dc1d12adb1a351511fc7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086595"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283600"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>課程 2-2 - 確認部署配套
 

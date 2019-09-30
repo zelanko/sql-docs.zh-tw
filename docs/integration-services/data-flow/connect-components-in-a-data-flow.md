@@ -11,14 +11,14 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d075cb578046862c4598efd9da3c060891ae7a7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6033c2d21b10755601f9ef82cabd829db5ad820
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045296"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293215"
 ---
 # <a name="connect-components-in-a-data-flow"></a>連接資料流程中的元件
 

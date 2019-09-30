@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d535c24ee291018cc65ae00a04d9906a68c1cd2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114671"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285687"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>連線至 MySQL 資料來源 (SQL Server 匯入和匯出精靈)
 

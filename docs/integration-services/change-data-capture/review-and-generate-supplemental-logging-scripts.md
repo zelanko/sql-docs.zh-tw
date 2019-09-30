@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 17df9f0ab491fde590e77bfdc84e2b82c0d3d304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2de7acdd60a4d88c6523929615541cbed7674d12
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086643"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294584"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>檢閱及產生補充記錄指令碼
 

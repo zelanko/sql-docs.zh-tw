@@ -17,14 +17,14 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - File connection manager
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 769803ee3f6b0c706d4807185fcf1825351552ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6c2578e1f002878ade93551a5abc48dfd2144709
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102970"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294512"
 ---
 # <a name="file-connection-manager"></a>檔案連接管理員
 

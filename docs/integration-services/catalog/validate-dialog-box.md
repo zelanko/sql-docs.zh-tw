@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.ssms.isprojectvalidate.f1
 - sql13.ssis.ssms.ispackagevalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 999b409025cce7ec209f527841d8ecb9fc416af9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070514"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294865"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
 

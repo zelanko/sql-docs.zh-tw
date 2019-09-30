@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f7298cbcb3152d0bfaff2b0cc287ca6db2d332a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a11a67f64a40aa5fe08d375a9f11fa186c568b1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049627"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298611"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服務
 

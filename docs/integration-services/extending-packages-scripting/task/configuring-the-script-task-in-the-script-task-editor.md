@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Script Task Editor
 - SSIS Script task, configuring
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 78daa1ab0b231d0c28e29354ed9faaa2342b7f8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9ac35433b8e197da585f18a6cf87328d493c9bda
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102924"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286048"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在指令碼工作編輯器設定指令碼工作
 

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b2184475ac3da6629a70b5013277686636a6fc8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897069"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295732"
 ---
 # <a name="save-packages"></a>儲存封裝
 

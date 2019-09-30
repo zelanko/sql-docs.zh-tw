@@ -14,14 +14,14 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e955e931903a56a1f4ac24ce66bd206f4b5a032a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f1380370862b735e00799cbcb6a9ba46d69fd3f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904761"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294418"
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
 

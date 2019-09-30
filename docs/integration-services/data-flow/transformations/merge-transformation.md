@@ -17,14 +17,14 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ceaa9cfcf08d9dd96acbb2647a057e1bc15c1979
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5badfcd6c8b9603e30e2a413bb6486fcf9d2c6b8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944133"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291237"
 ---
 # <a name="merge-transformation"></a>合併轉換
 

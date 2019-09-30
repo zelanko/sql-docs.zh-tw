@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: adfe75aa70a4bd46a0c3e7aac6a1ea6b45473335
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b47e4f57101e05eb70dbdb464d6a4b36498dd3f7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045387"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293245"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC 來源自訂屬性
 
@@ -26,7 +26,7 @@ ms.locfileid: "68045387"
   
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
-|連接|ADO.Net 連接|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 資料庫的 ADO.NET 連接，以存取變更資料表。|  
+|Connection|ADO.Net 連接|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 資料庫的 ADO.NET 連接，以存取變更資料表。|  
 |StateVariable|String|SSIS 字串封裝變數，用於維護目前 CDC 執行的 CDC 狀態。|  
 |CdcProcessingMode|整數 (列舉)|此模式決定如何處理。 可能的選項為 [全部]  、[全部 (含舊值)]  、[淨]  、[淨 (含更新遮罩)]  和 [淨 (含合併)]  。<br /><br /> 開頭為 [全部] 的模式會傳回所有變更，開頭為 [淨] 的模式只會傳回淨變更。<br /><br /> 不含主索引鍵的資料表只可以接受 [全部] 值。<br /><br /> **淨 (含更新遮罩)** 新增名稱模式為 **__$\<資料行名稱>\__Changed** 的布林資料行，表示目前變更資料列中的變更資料行。<br /><br /> 如需此屬性之值的詳細資訊，請參閱 [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)。|  
 |CaptureInstance|String|要讀取之 CDC 資料表的 CDC 擷取執行個體名稱。 擷取的來源資料表可以具有一個或兩個擷取執行個體，以便透過結構描述變更處理資料表定義的流暢轉換。 如果針對所擷取的來源資料表定義了多個擷取執行個體，請在此選取您想要使用的擷取執行個體。 [schema].[table] 資料表的預設擷取執行個體名稱是 \<結構描述>_\<資料表>，但是使用中的實際擷取執行個體名稱可能有所不同。 實際讀取的資料表是 CDC 資料表 **cdc .\<capture-instance>_CT**。|  

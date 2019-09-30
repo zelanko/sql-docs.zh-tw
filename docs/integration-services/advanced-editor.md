@@ -14,14 +14,14 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0d5c4f71605b8d03549d19ff4943a928f981e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eedc7754a9bb5f48a07b4865cfb426f7e234d192
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070787"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294978"
 ---
 # <a name="advanced-editor"></a>進階編輯器
 

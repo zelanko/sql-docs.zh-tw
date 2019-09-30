@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2955f910a603641ef845b878e76f03949dcb2d7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2100176fa0bb6f02deff6cdf2a210ea81e04f9a6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116335"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287446"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>使用資料流程中的資料類型
 

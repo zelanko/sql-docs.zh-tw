@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5e0f3f4b7f9adfd0d0d5bbe805ec1e607ccac5c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901767"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285120"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供來源查詢 (SQL Server 匯入和匯出精靈)
 

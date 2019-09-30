@@ -11,14 +11,14 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4b59e8f0256cba7e747ac6ee41d7e4e2fdf9feb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 74b18ed725b70e1086b22515a0a051d2521383b7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967929"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288326"
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS 運算式)
 

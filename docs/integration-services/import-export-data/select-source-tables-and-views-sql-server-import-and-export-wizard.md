@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8c42b4c7438eade57b8615d5011945112d9451a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3d3019419538c05efc28ceabc5324d373500f65c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901729"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285139"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
 

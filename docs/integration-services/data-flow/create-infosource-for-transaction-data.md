@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8bfb1d81c83da0e62ced89456b04e234ce2e2c67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 19c8384a389db2032c36291e669d5dd2885ac8dd
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049576"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293311"
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
 

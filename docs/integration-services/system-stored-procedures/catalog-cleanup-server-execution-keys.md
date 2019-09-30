@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 619fea014d695cb4601eaf876dcca0add3604f2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62cbd5141dfb6254415657dc3ef03d1402b0f3b4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110476"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281363"
 ---
-# <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys 
+# <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

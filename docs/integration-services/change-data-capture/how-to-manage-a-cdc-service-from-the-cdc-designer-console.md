@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bcf5e0ca1ac399ef27db98e6147a99251856c66f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d54fb221cd4440ca5332ee47b0b183b857572c9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076333"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294781"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何從 CDC 設計工具主控台管理 CDC 服務
 

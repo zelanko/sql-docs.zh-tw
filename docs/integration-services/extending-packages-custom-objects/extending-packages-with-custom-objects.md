@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38bfd8cd4f67b3344e7c898ff003f4b41729a481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 07454f4b273e6a0fab698574bb5d66cdd8adc7af
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116292"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287236"
 ---
 # <a name="extending-packages-with-custom-objects"></a>使用自訂物件擴充封裝
 

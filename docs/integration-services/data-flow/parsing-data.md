@@ -11,14 +11,14 @@ helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0df149ce4d390de52e535587d1d9fac7580819b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 71582dbdccc331ec4b43d87071952879f304395c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928260"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292269"
 ---
 # <a name="parsing-data"></a>剖析資料
 

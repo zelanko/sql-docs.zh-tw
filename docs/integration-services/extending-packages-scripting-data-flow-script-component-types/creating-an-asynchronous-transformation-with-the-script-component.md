@@ -14,14 +14,14 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 52600384a59ba02adee6dd897ff027f5611adf90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55c02331a87c078b3f510f36dab6c7260d12ad4b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112513"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297052"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用指令碼元件建立非同步轉換
 

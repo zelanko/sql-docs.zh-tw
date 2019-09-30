@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 50de6cd55b2dcd916967e241ae9b62a2a960df06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc7e5d4deb17335dfc1910b44306f611092e0984
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101688"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294682"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
 

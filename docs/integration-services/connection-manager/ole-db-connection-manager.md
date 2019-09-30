@@ -16,14 +16,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a1a7c3d0e1648bb2c05e20c78ed293e33a34fe47
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ffc7da76c7291bbf8e0d4dd6003c572cd9610e92
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155167"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294378"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 連接管理員
 
@@ -57,14 +57,14 @@ OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料�
 -   指示是否在執行階段保留從連線管理員建立的連線。    
     
 ## <a name="log-calls-and-troubleshoot-connections"></a>記錄呼叫和對連線進行疑難排解    
- 您可以記錄 OLE DB 連接管理員對外部資料提供者執行的呼叫。 您可以對 OLE DB 連線管理員的外部資料來源連線進行疑難排解。 若要記錄 OLE DB 連線管理員對外部資料提供者執行的呼叫，請啟用套件記錄，然後在套件層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。    
+ 您可以記錄 OLE DB 連接管理員對外部資料提供者執行的呼叫。 您可以對 OLE DB 連線管理員的外部資料來源連線進行疑難排解。 若要記錄 OLE DB 連線管理員對外部資料提供者執行的呼叫，請啟用套件記錄，然後在套件層級選取 [診斷]  事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。    
     
 ## <a name="configure-the-ole-db-connection-manager"></a>設定 OLE DB 連線管理員    
  您可以透過「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具」或以程式設計方式設定屬性。 如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請參閱 [設定 OLE DB 連線管理員](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)。 如需以程式設計方式設定連線管理員的相關資訊，請參閱《開發人員指南》中 **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** 類別的文件集。    
     
 ### <a name="configure-ole-db-connection-manager"></a>設定 OLE DB 連線管理員
 
-使用 [設定 OLE DB 連線管理員] 對話方塊，將連線加入資料來源。 此連線可以是新的或現有連線的複本。  
+使用 [設定 OLE DB 連線管理員]  對話方塊，將連線加入資料來源。 此連線可以是新的或現有連線的複本。  
   
 > [!NOTE]  
 >  如果資料來源為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，則資料來源需要舊版 Excel 以外的連接管理員。 如需詳細資訊，請參閱 [連接至 Excel 活頁簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)。  
@@ -81,10 +81,10 @@ OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料�
  檢視選取之 OLE DB 資料連接的屬性和值。  
   
  **新增**  
- 使用 [連線管理員] 對話方塊來建立 OLE DB 資料連線。  
+ 使用 [連線管理員]  對話方塊來建立 OLE DB 資料連線。  
   
  **刪除**  
- 選取一個資料連線，然後選取 [刪除] 來刪除它。  
+ 選取一個資料連線，然後選取 [刪除]  來刪除它。  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 資源驗證的受控識別
 在 [Azure Data Factory 中的 Azure-SSIS 整合執行階段](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) \(部分機器翻譯\) 上執行 SSIS 套件時，請使用與您資料處理站建立關聯的[受控識別](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) \(部分機器翻譯\) 來進行 Azure SQL Database (或受控執行個體) 驗證。 指定的處理站可以使用此身分識別從您資料庫存取資料，或從您的資料庫複製資料。
@@ -122,7 +122,7 @@ OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料�
     
 1. 在 Azure 入口網站為您的受控執行個體[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) \(部分機器翻譯\)，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 2-5。 系統管理員將擁有資料庫的完整存取權。
 
-1. [從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 前往您資料處理站的**屬性**。 複製 [受控識別應用程式識別碼] (不是 [受控識別物件識別碼])。
+1. [從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 前往您資料處理站的**屬性**。 複製 [受控識別應用程式識別碼]  (不是 [受控識別物件識別碼]  )。
 
 1. 將資料處理站受控識別轉換成二進位類型。 使用您的 SQL 或 Active Directory 系統管理員帳戶，使用 SSMS 等工具連線至您受控執行個體的 **master** 資料庫。 對 **master** 資料庫執行下列 T-SQL，以二進位格式取得您的受控識別應用程式識別碼：
     
@@ -146,7 +146,7 @@ OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料�
 
 然後為 OLE DB 連線管理員設定 OLE DB 提供者。 有兩個選項可以執行此操作：
     
-- **在設計階段設定。** 在 SSIS 設計工具中按兩下 [OLE DB 連線管理員]，開啟 [連線管理員] 視窗。 在 [提供者] 下拉式清單中選取 [Microsoft OLE DB Driver for SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)。
+- **在設計階段設定。** 在 SSIS 設計工具中按兩下 [OLE DB 連線管理員]，開啟 [連線管理員]  視窗。 在 [提供者]  下拉式清單中選取 [Microsoft OLE DB Driver for SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)  。
     > [!NOTE]
     >  下拉式清單中的其他提供者可能不支援受控識別驗證。
     
@@ -157,7 +157,7 @@ OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料�
 
 最後，為 OLE DB 連線管理員設定受控識別驗證。 有兩個選項可以執行此操作：
     
-- **在設計階段設定。** 在 [SSIS 設計工具] 中，以滑鼠右鍵按一下 [OLE DB 連線管理員]，然後選取 [屬性]。 將 `ConnectUsingManagedIdentity` 屬性更新為 `True`。
+- **在設計階段設定。** 在 [SSIS 設計工具] 中，以滑鼠右鍵按一下 [OLE DB 連線管理員]，然後選取 [屬性]  。 將 `ConnectUsingManagedIdentity` 屬性更新為 `True`。
     > [!NOTE]
     >  目前，當您在 SSIS 設計工具中或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中執行 SSIS 套件時，連線管理員的 `ConnectUsingManagedIdentity` 屬性不會生效 (表示受控識別驗證無法運作)。
 

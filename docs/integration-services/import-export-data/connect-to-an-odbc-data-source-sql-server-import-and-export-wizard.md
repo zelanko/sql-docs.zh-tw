@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bfd2e82d861ad36499de86688f346135d2d516b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cd4dbec9e08b19a0c06c991a7007b449dff02485
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114574"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285497"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>連線至 ODBC 資料來源 (SQL Server 匯入和匯出精靈)
 

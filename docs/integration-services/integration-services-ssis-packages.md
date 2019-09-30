@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f1491859d5d1cddebf7d6b955a5e1ecc8de2ee15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057467"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296190"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
 

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 62a39e7ea876a405459a23d91e140b2d087d771a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45e97657bf70bdf023388f97497f9c2a8c5dd0f4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070660"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294937"
 ---
 # <a name="enabling-logging-programmatically"></a>以程式設計的方式啟用記錄
 

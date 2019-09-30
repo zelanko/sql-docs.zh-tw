@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 03c327267cf1bc9370bda84925b44204a521fd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c35024df0f34f1a66a64bc587aa928cb0daf4475
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027515"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289387"
 ---
 # <a name="left-ssis-expression"></a>LEFT (SSIS 運算式)
 

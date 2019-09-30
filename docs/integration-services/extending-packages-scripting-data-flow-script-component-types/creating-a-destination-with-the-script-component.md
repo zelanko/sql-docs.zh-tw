@@ -14,14 +14,14 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - input columns [Integration Services]
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0a357eea4f29dc65365db7d5ca7274cf8c385aaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 946fc77d3bde2814176ebefce4102742a0288a91
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112409"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296482"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
 

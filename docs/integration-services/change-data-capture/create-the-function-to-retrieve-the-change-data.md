@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e4da506162bc50e4089c0077b4b2e94854282c3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae7aa810e58cf7e21a4045e0c408c76e8754a620
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060829"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298831"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
 

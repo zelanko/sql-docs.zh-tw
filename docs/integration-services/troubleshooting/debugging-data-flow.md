@@ -14,14 +14,14 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c87cd625222fc320d2a9a6f022a19361e74964f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945589"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295122"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
 

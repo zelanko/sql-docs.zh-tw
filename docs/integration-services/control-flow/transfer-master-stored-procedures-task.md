@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8c5d69b6618b544d4ca38b73c1dd331cd78a980c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cee2dfed374c3f479e32b8d81602eff924287356
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105623"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293851"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作
 

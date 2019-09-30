@@ -18,14 +18,14 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8b8dd37b2c97c7c78f2699f5742b33ee773ff98d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941422"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292402"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路徑
 

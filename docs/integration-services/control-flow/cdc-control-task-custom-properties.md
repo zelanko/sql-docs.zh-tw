@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 52abc0392a20325288be4803f83b5350af63429e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 048cbe154dde064d43178da6c58e5f948130ca7b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947147"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294274"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制工作自訂屬性
 
@@ -26,7 +26,7 @@ ms.locfileid: "67947147"
   
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
-|連接|ADO.NET 連接|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 資料庫的 ADO.NET 連接，以存取變更資料表和 CDC 狀態 (如果儲存在相同的資料庫中)。<br /><br /> 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
+|Connection|ADO.NET 連接|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 資料庫的 ADO.NET 連接，以存取變更資料表和 CDC 狀態 (如果儲存在相同的資料庫中)。<br /><br /> 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |TaskOperation|整數 (列舉)|CDC 控制工作的選定作業。 可能值為 **[標記初始載入開始]** 、 **[標記初始載入結束]** 、 **[標記 CDC 開始]** 、 **[取得處理範圍]** 、 **[標記處理的範圍]** 和 **[重設 CDC 狀態]** 。<br /><br /> 如果您在 **CDC (亦即，非 Oracle) 上工作時選取了**MarkCdcStart **、** MarkInitialLoadStart **或** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，連線管理員中指定的使用者就必須是  **db_owner** 或 **系統管理員**。<br /><br /> 如需有關這些作業的詳細資訊，請參閱＜ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) ＞和＜ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)＞。|  
 |OperationParameter|String|目前用於 **MarkCdcStart** 作業。 此參數允許特定作業所需的額外輸入。 例如， **MarkCdcStart** 作業所需的 LSN 號碼。|  
 |StateVariable|String|SSIS 封裝變數，儲存目前 CDC 內容的 CDC 狀態。 CDC 控制工作會將狀態讀寫至 **StateVariable** ，而且不會在永續性儲存體中載入或儲存它，除非已選取 **AutomaticStatePersistence** 。 請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。|  

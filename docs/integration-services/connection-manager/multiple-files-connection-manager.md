@@ -15,14 +15,14 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 758bf428032d0eb66cca054032c094d30fa85c30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104133"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294366"
 ---
 # <a name="multiple-files-connection-manager"></a>多個檔案連接管理員
 

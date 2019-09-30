@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4643942e18927d9feb3929ccdb96d591575487d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62297d0a947b77288db843f0c16bd0799c90bca1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086658"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298658"
 ---
 # <a name="select-oracle-tables-and-columns"></a>選取 Oracle 資料表和資料行
 

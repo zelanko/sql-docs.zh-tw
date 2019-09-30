@@ -13,14 +13,14 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: affcdf9fe7a26f0bf81e3079fea04adb6bfbac8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 207037818c81f91be0e48b51f00ba30f7f169adc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908671"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297192"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>在資料流程元件中記錄和定義記錄項目
 

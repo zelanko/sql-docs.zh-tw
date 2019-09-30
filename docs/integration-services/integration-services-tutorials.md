@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1af0995a9225bdde48aa8c113d6a276f5055c903
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 724fca0d77c897ae15d3f6ed1ab1848c265e37de
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057333"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296133"
 ---
 # <a name="integration-services-tutorials"></a>Integration Services 教學課程
 

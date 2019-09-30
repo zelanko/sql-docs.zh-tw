@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.welcome.f1
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b75d728536da8ba89fbbf8bc6ca315016cdacf6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f989a68f104387095f4b834a2152fc1fc04f9c8c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943857"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290950"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>歡迎使用緩時變維度精靈
 

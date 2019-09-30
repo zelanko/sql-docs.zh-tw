@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f07faf757a8d2bf4b8f2f93042e0af196e6e6d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1ef859193b0a2410b7057365c64506976d7ee8ab
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904187"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294264"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
 

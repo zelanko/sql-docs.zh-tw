@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DataReader destination
 - destinations [Integration Services], DataReader
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bbdb529678496669febaf7d97d9a09c8e9ae3217
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 484464550b08f209bb271a806c496e87417c0d99
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107688"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293061"
 ---
 # <a name="datareader-destination"></a>DataReader 目的地
 

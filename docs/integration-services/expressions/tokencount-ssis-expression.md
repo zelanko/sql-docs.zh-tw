@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7883ec1ed76f5b619c395e317a13a3fb57f091c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0fd9c3a09bf5e901591b2837fcd163534db5f52c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967679"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288145"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 運算式)
 

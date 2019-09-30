@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2ea8d17c11c47c4a31f21a2e538bcc9918ad0fea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9e3a8be595188b0eef11a78826c7447af40bec4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904656"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294386"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
 

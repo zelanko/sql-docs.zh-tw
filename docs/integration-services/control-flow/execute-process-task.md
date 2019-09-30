@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d87dd85b63a669ae0d390ac83203889f78c5cbfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043865"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298333"
 ---
 # <a name="execute-process-task"></a>執行處理工作
 

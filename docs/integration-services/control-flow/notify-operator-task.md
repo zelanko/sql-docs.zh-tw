@@ -14,14 +14,14 @@ helpviewer_keywords:
 - notifications [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0f64a6b850fb1434df91284479c68b59c004dc8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30f1707c8d326942d2247bd3bcab31cdc38ab133
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019683"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294036"
 ---
 # <a name="notify-operator-task"></a>通知操作員工作
 

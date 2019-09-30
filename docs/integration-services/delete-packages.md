@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 640979be225a435c8b6cbafe96990d0f6b88d321
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b32f52bd01cb0f19bc107f5f94118d699c239e27
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074003"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290717"
 ---
 # <a name="delete-packages"></a>刪除封裝
 

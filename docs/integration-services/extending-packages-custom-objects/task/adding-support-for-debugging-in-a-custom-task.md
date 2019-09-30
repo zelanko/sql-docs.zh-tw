@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 45608dbc2fbdd1fc1938e06df71035830dfbc634
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8f09e1b7bb54e6f694469e406dbf80232569105f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062900"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287007"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>新增自訂工作中的偵錯支援
 

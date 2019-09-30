@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 533a9feb545466a6892af1e59e37f6d259b73cf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dd60d40c612df33b46ea7394d3bf9b1e53e24df6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019599"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291771"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 目的地自訂屬性
 

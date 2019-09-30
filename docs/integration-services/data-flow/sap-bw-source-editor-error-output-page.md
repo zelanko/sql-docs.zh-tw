@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2d823b1155a07f7bb3dc44f84f852d747692ae58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9973a785efd0e3327ac7fe1e12360bd202601f1e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002368"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291830"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 來源編輯器 (錯誤輸出頁面)
 

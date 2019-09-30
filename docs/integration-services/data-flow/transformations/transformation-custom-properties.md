@@ -39,14 +39,14 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c4efdff475f51eab9ffd55a491ace3dd2084cd41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943917"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291127"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
 

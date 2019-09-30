@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 112c94119959410509bb2381b472c1fc0a6a66ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 83df88c61e99d4d13c4b5bc866aa8f1dff5d5b1a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084346"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294601"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>擷取與了解變更資料
 

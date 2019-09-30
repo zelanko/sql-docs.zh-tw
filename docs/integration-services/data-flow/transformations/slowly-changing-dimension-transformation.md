@@ -15,14 +15,14 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 231d69585368660a63adab2b74b64e0c2e5c648b
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1fd5584a5c43762c4d732c677de225436e191a7e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211312"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297807"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換
 

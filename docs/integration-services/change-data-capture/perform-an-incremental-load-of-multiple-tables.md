@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2d1e9adb43a260cc1cd0fa450bc300eb39169065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f933683e11229500ceea29c3a10180a13c154baf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084397"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294627"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>執行多個資料表的累加式載入
 

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 73da7a9cf4a8eddc1f2bdf947306e2b59cd11793
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 530a0e9a472638d5c401488cc408adc3957007f4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908678"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297227"
 ---
 # <a name="implementing-external-metadata"></a>實作外部中繼資料
 

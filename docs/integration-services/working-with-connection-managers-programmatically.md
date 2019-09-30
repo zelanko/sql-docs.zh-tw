@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f003e2a127fb5e665be7ece4cf3f7590dc984c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4dff74cd1e21ba743fa425bb632c736ee1cce158
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945290"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295011"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以程式設計方式使用連接管理員
 

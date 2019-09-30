@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], using variables
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f8c55cc39659c4fac68bf21dfb2a1dc1eb101b09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 990797242acb57f36530315c416011325cce6358
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103928"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286421"
 ---
 # <a name="using-variables-in-the-script-component"></a>在指令碼元件中使用變數
 

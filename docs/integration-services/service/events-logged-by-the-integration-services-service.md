@@ -12,14 +12,14 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1d1e4a801a8f7ac102ece4099084310714dcab6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b2f033557c566050dffbd82bc64df84feabb7b6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947152"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296923"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 服務所記錄的事件
 
@@ -35,7 +35,7 @@ ms.locfileid: "67947152"
 ## <a name="service-status-messages"></a>服務狀態訊息
  當您選取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 進行安裝時，系統就會安裝並啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，而且它的啟動類型會設定為自動。  
   
-|事件識別碼|符號名稱|文字|注意|  
+|事件識別碼|符號名稱|Text|注意|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|正在啟動 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務。|服務即將啟動。|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務已啟動。|服務已啟動。|  
@@ -46,7 +46,7 @@ ms.locfileid: "67947152"
 ## <a name="settings-file-messages"></a>設定檔案訊息  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的設定會儲存在您可以修改的 XML 檔案中。 如需詳細資訊，請參閱 [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Integration Services 服務 (SSIS 服務))。  
   
-|事件識別碼|符號名稱|文字|注意|  
+|事件識別碼|符號名稱|Text|注意|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務: %n指定組態檔的登錄設定不存在。 %n嘗試載入預設組態檔。|包含組態檔路徑的登錄項目不存在或是空的。|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務組態檔不存在。%n載入預設值。|組態檔本身不存在指定的位置中。|  
@@ -54,7 +54,7 @@ ms.locfileid: "67947152"
   
 ## <a name="other-messages"></a>其他訊息  
   
-|事件識別碼|符號名稱|文字|注意|  
+|事件識別碼|符號名稱|Text|注意|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務: 停止執行中的封裝。%n封裝執行個體識別碼: %1%n封裝識別碼: %2%n封裝名稱: %3%n封裝描述: %4%n封裝|服務正嘗試停止執行中的封裝。 您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中監視並停止執行中的封裝。 如需如何在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中管理封裝的資訊，請參閱[封裝管理 &#40;SSIS 服務&#41;](../../integration-services/service/package-management-ssis-service.md)。|  
 

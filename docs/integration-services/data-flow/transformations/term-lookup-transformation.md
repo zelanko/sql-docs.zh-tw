@@ -21,14 +21,14 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eae1f4798d1c98e5b6ef02e8fef9f450588fc799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61dad85fb7857b8694712f79b860f58d88e7d650
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943923"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291199"
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
 

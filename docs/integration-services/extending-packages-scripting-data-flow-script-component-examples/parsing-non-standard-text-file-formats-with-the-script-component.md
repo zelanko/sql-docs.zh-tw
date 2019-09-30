@@ -13,14 +13,14 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 54a74b05aeba61c630ab1e6b432c2b9d3c8028d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 733c3a909629514b55042d21f02cfca563d3c531
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112418"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297068"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用指令碼元件剖析非標準文字檔案格式
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom log providers
 - custom log providers [Integration Services], developing custom user interface
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f3dccd3641592ebaadb7df3dd467cb28cf9a617f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fccc03acb846fe1fe7db12d339c633b7d4c7e306
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062940"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297133"
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>開發自訂記錄提供者的使用者介面
 

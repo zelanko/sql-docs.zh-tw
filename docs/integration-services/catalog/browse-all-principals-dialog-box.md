@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8fb8a254b32f2c01192cbb799a75692a954b5a6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070577"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299018"
 ---
 # <a name="browse-all-principals-dialog-box"></a>瀏覽所有主體對話方塊
 

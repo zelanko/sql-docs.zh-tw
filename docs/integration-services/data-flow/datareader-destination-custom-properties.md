@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eb252810f2136cfd478bf7ce02690d1ba84dc8d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5b2e9ebcf8464b17712d36fc43c86b7785de9ae7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049368"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292999"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目的地自訂屬性
 

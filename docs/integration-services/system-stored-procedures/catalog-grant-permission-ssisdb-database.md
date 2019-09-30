@@ -11,16 +11,16 @@ helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: acf530363e942b35b69b9b53c0c2b23ed7bb874a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9053a5ab4ac64bea8104ce7d9079bf891ffa887a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007763"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296763"
 ---
-# <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB 資料庫)
+# <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

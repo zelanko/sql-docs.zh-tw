@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 36253c495b20b7c2220593282410ecc059d8e12f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 28e1a73ae5175009234948d1fa413ba1b52c7216
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034478"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292260"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>資料分割處理目的地自訂屬性
 

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff3a7b7c39eb8f161621b22315ad5ff8e8f6f807
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 09850707b83481909a881dcefdf00e710e6a8790
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928239"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291241"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令轉換
 

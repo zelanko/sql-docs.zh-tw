@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8d9e46d1834c9a07ba3a90645033db99254e05df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057326"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284162"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 使用者介面
 

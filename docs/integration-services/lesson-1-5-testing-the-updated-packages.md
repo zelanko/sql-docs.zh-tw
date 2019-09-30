@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d490cf8907859e85eef12aef54d29be01e0fb9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e90af0ecf9972b7365f42fcc307181c4d657e3c5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019539"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296102"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>課程 1-5 - 測試更新的封裝
 

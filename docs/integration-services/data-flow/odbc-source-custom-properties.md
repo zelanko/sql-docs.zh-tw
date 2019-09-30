@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93bdaf392909a03c704aba74d7b75abaa59846dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c8a84015c19df80f252e9e0364fc1f68917d1dcd
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038747"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298178"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
 
@@ -26,7 +26,7 @@ ms.locfileid: "68038747"
   
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
-|連接|ODBC 連接|用來存取來源資料庫的 ODBC 連接。|  
+|Connection|ODBC 連接|用來存取來源資料庫的 ODBC 連接。|  
 |AccessMode|整數 (列舉)|用來存取資料庫的模式。 可能值為資料表名稱 (0) 和 SQL 命令(1)。<br /><br /> 預設值為資料表名稱 (0)。|  
 |BatchSize|Integer|大量擷取的批次大小。 這是當做陣列擷取的記錄數目。 如果選定的 ODBC 提供者不支援陣列，批次大小為 1。|  
 |BindCharColumnAs|整數 (列舉)|此屬性決定 ODBC 來源如何繫結具有多位元組字串類型 (如 SQL_CHAR、SQL_VARCHAR 或 SQL_LONGVARCHAR) 的資料行。<br /><br /> 可能值為 Unicode (0) 和 ANSI (1)。前者繫結 SQL_C_WCHAR 等資料行，後者則繫結 SQL_C_CHAR 等資料行。 預設值為 Unicode (0)。<br /><br /> **注意**：雖然您無法在 [ODBC 來源編輯器]  中使用這個屬性，但是可以使用 [進階編輯器]  來設定這個屬性。|  

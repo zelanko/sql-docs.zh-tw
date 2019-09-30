@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d1f81c5a81bc4d1e2a096b3fd49e39497c5922c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 24c7f4c128998484be5d75d5db554de605feead7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023547"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284421"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>安裝 Microsoft Connector for SAP BW
 

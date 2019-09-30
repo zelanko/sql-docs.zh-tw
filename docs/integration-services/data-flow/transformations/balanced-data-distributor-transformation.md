@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 69d9972a8f1a24242915bdf2a0d4ddd31b0a12c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 50cf62449d789684324a25c4c0bd09bbe28ce28a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112786"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291710"
 ---
 # <a name="balanced-data-distributor-transformation"></a>平衡資料分佈器轉換
 

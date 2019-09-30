@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3ae127844a2ffba0a988c23636f487673d737b2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011157"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293873"
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
 

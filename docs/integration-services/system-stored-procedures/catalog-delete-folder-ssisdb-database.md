@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e98392da70a0ad5fbf457ed953927f02fb5ad0aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 496de1c9dd7e37542f5d3588a9662948ef8aabd4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079806"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281332"
 ---
-# <a name="catalogdeletefolder-ssisdb-database"></a>catalog.delete_folder (SSISDB 資料庫)
+# <a name="catalogdelete_folder-ssisdb-database"></a>catalog.delete_folder (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

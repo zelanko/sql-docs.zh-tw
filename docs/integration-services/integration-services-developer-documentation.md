@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3156de859f7a4389797e56bfbe40c37018b71c1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9fdcc10cd21714681578489fd1c71db607226086
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913815"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284392"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 開發人員文件
 

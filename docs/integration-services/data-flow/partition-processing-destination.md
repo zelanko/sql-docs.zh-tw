@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ea401d3adb8dd6278d133d2ea84c4be429455f4b
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 23292c0ac898ca035bca4b499de4bfc3fe2a7ebc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893306"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292151"
 ---
 # <a name="partition-processing-destination"></a>資料分割處理目的地
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - database shrinking [Integration Services]
 - shrinking databases
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fbdd4f4efd4bd467996364b235ab1ff6f2e7fbb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b403f8badbed6abdf0e946244515bc6367018a67
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011315"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293915"
 ---
 # <a name="shrink-database-task"></a>壓縮資料庫工作
 

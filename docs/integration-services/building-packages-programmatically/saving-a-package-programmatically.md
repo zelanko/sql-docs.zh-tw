@@ -11,14 +11,14 @@ helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e2a39d00ca84d7bcc428957ef254cc03a81648bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a65b7559770b6de0d1ebd928815458c02acfd41
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070636"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299045"
 ---
 # <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - scripts [Integration Services], breakpoints
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 844dcbe71a2f5d362b26cb5f006956b62c6d9cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b9fddccdf8f6f89c7b03074d052c49c94692bc6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102947"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286286"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼
 

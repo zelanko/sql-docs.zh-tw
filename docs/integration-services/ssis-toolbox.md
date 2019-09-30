@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.dts.designer.toolbox.F1
 - sql13.dts.designer.toolboxcommon.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 030a3d080f7f02669201160bf1546f25bcd59b45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5b6c50ffe5278003a70fcba77818cb8333800dc5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068732"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295628"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
 

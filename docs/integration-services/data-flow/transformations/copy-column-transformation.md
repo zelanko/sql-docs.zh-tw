@@ -15,14 +15,14 @@ helpviewer_keywords:
 - copying columns
 - Copy Column transformation
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a66c170d45fbdcd56e974318ba690f9ea93df51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c9f0671e364ae22440d84874f3fff2f80865ab1e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112654"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291581"
 ---
 # <a name="copy-column-transformation"></a>複製資料行轉換
 

@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4766cac774707ffc9f9d74d38682a420b0e08403
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d49ffcf03fab810eefd190ffea91aa3e5ff38cfe
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099796"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298843"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>連接到 Oracle 來源資料庫
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c7a12e543298b1d22afdec08557a7ed979a7d546
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 490374eaf6c5e1eefc768235bd4f3571bfd6f7b4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968286"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294988"
 ---
 # <a name="certification-by-sap"></a>SAP 認證
 

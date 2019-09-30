@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 418b113429e31fdd0c6ad75bbc1707ef3a417b1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: be3dcb5bd42624ee943db4393809e2889808a11e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902660"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283833"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>課程 1-3 - 加入封裝和其他檔案
 

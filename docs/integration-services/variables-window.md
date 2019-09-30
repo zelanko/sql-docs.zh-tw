@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 746c1e1d7cea1282892dd8859f7aa838fc089b72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ef2e4b408dabf7b054465149b2489e07fbdefef8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945396"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295034"
 ---
 # <a name="variables-window"></a>變數視窗
 

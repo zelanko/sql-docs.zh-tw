@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f89dd69a069c33d366cbc53dfc3bb451f1f381d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6bb017bdd22b98c255f5b40b680f9e7aa5ef31f5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967735"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288269"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 運算式)
 

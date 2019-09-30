@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b998e396ee99e570e816d12a309dac687f6be9a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa6215e3fafbbf962c687daf329f6781f466342d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057849"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293806"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含設定檔要求選項 (資料分析工作)
 

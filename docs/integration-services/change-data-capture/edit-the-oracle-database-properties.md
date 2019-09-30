@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bc7a37a2989d50cda1722aef066107ed35f09f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e9178a16bf828d585e5f9fd3ae74a905fa6a0428
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011511"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298778"
 ---
 # <a name="edit-the-oracle-database-properties"></a>編輯 Oracle 資料庫屬性
 

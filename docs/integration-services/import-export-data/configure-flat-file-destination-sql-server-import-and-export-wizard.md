@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c3435ae2275b9d83b3631bb426ac060bddd3c7c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c596f37cb0a83682c5c8dff370a92a5d3d73eb5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091221"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285790"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
 

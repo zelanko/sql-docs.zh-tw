@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f473e21219704f0474fec519d8b4870fc0930b46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049544"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293168"
 ---
 # <a name="create-new-infoobject"></a>建立新的 InfoObject
 

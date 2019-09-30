@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1120ffadb47e2494213b15a5859fcc6d591820dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b934ea191a0dc4f9f276b4e483f5f5671bd0cc3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112790"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297992"
 ---
 # <a name="cache-transform"></a>快取轉換
 

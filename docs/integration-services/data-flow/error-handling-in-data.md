@@ -20,14 +20,14 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f2ed70f204fd0a70e6fa123ace6dd11d47414832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68215775"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292757"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
 

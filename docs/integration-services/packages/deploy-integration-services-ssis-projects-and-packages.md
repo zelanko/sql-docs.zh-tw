@@ -16,14 +16,14 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d00e1dfcbab82984c83c4f4a0c24ee17ad60ee39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f35fb523d95b47b64e10feab8d4caa2370b79b5f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951860"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282637"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
 

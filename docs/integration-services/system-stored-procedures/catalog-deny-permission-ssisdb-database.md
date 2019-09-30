@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84bd5a432886cfa3fe209688a6a6cde563eed970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6fe8a8e0fa76201ad4f363f0a91440d1c62958e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007890"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281035"
 ---
-# <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (SSISDB 資料庫)
+# <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

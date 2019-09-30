@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d3e27e4f4fdf813e30775c2cf44cfb4ca272b10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da1688881523723206b03d7f7dec3abc2e518370
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114664"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296304"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>連線至 PostgreSQL 資料來源 (SQL Server 匯入和匯出精靈)
 

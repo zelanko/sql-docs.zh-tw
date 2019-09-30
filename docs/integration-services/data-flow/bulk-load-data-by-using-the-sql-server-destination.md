@@ -14,14 +14,14 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 52cba3151568396bafd51ffac3e608151039f8ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bf8e8c7bafb72b90edfe108c5702ad330bc3e700
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045420"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293472"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
 

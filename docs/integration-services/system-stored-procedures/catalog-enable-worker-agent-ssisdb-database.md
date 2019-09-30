@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77c0c1218d1bde6c238d65206852f589a2ad8299
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8fd9d387d84836ca35c1b0bfb9fd564e2efd4a48
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007767"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281030"
 ---
-# <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB 資料庫)
+# <a name="catalogenable_worker_agent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

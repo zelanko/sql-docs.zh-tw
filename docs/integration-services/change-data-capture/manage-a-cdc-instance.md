@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 04c7c9818bd008b87a0b6a76760674ea7112a605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074029"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294694"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
 

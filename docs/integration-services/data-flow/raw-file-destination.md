@@ -18,14 +18,14 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 390039cae99e160ca95f2b2460db268f34bef8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034368"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292183"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
 

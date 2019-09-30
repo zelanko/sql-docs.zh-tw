@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d3087f5816b32ffa83876a32a07ccca521c9394
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ecc8678da81b9d4559f36d3cb70a88a7444f87e5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038640"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295265"
 ---
 # <a name="catalogstartup"></a>catalog.startup 
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: abecb27ec519c9517fd9e5ee4a3e64dca6b433e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 35e8d152cbffb5a5f34be4cda5c7e97fc8140d2d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941760"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292811"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 來源擷取變更資料
 

@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 401422fcd3c2e32dcd83bebc3ef51351ca83555f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079817"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297733"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說：發行 SSIS 封裝做為 SQL 檢視
 

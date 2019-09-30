@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d15beadf6ee7dcc765afa4dee182a6d05e1ce43c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8c4908e3a2269733a71dc8fe5c6d6a9e697a576
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034335"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292045"
 ---
 # <a name="recordset-destination-custom-properties"></a>資料錄集目的地自訂屬性
 

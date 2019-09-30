@@ -18,14 +18,14 @@ helpviewer_keywords:
 - events [Integration Services], raising
 - predefined events [Integration Services]
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 428092c62ef49b3a9f6f543afd9c68a7b7b5237b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 588883a254b465cfe1fa9b9b1ea9567e421fb8d4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908618"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287569"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>在資料流程元件中引發和定義事件
 

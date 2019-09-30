@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9bdb25380e74039a7ba62a89d4b1ba9c6d794d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae02b9188ecc9917d26532633e4d5a253d4f326b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055803"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295951"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>課程 4-4：新增一般檔案目的地
 

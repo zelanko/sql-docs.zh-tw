@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ee848e7ceab362fb71189312104e32e2b5957fae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c2a89293e0cfa3428723a19e7ee2938fd7e8ca6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099783"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294838"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
 

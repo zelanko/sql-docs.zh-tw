@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Script task [Integration Services], performance counters
 - counters [Integration Services]
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c8c0fcc59f0ebac385b00a125f9ea6b8687d160f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed4bca496d48e5fe268c1a425223fe03c8fcc6e7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112197"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297032"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>以指令碼工作監視效能計數器
 

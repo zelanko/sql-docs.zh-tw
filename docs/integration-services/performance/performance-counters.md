@@ -14,14 +14,14 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 995c4c6719bfa24ccd07f72b5317f6262d5b914e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086498"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282615"
 ---
 # <a name="performance-counters"></a>效能計數器
 

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3b7a527770e41870729c194bd9c7651b77cffd2d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0c1b30985bf93ff1b04af85e45bf64e53c75853
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890851"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293724"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作
 

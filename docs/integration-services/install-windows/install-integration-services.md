@@ -17,14 +17,14 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 78d4e25fed6b972759a14e32ee9833db90d60324
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f265d2af5ad6fc30708d57f162c8d6395858673f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118168"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284824"
 ---
 # <a name="install-integration-services-ssis"></a>安裝 Integration Services (SSIS)
 

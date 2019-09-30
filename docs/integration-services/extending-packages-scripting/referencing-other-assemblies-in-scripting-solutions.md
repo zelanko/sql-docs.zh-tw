@@ -22,14 +22,14 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - referencing Web services
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 33afeed0cfc5a33e223bb82813f49baab626eb30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa693a941ed5f6d56952c4e720aba7dc318600e0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912597"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286270"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>參考指令碼解決方案中的其他組件
 

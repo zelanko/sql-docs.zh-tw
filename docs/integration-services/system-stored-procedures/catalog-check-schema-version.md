@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 23746065ca7096b0405114344d4f6a752bfedda1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7d7ec8899e880220dc2011014501a883fafa4470
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110461"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295617"
 ---
-# <a name="catalogcheckschemaversion"></a>catalog.check_schema_version 
+# <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

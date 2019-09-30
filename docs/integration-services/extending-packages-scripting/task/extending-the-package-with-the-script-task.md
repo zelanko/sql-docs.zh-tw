@@ -17,14 +17,14 @@ helpviewer_keywords:
 - scripts [Integration Services], about Script task with packages
 - SSIS Script task, about Script task
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: db9f93551e3d75e83cd0ff43b4232761f0797b9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 99e3aabca44728cc23cebf73ce92cedc45df5284
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102847"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296889"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>以指令碼工作擴充封裝
 

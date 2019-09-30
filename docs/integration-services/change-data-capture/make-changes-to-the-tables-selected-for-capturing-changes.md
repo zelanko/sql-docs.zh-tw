@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - makChanToTab
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d363df2409f51186a3b459e2e75398c6f5e1dd4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7ee52054e14c641aad64eaa96b146af86e048d95
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101703"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298699"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>變更為了擷取變更所選取的資料表
 

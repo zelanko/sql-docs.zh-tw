@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 028aceabe89183d4aec0c75606f6fe58c91192d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e603b7e7342ee349b885392c43e42f33009700ae
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049465"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293121"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>資料採礦模型定型目的地自訂屬性
 

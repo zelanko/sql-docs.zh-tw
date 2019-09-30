@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SSIS, scripting
 - scripts [Integration Services], about scripting
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 881fbf113da1746e97f0e884b2cd39f14f41ed30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5d95556fcb02cb559926074edb90fb2749fc958
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118907"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286310"
 ---
 # <a name="extending-packages-with-scripting"></a>使用指令碼擴充封裝
 

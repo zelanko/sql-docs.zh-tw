@@ -18,14 +18,14 @@ helpviewer_keywords:
 - DTS [Integration Services], about Integration Services
 - data integration [Integration Services]
 - Data Transformation Services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 782f1fb04ae8167c342bbe39f1f640f090c8c434
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912498"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296868"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -45,7 +45,7 @@ ms.locfileid: "67912498"
 
 如需安裝 SQL Server Integration Services 與 SQL Server 及您可能想要或所需其他下載的詳細資訊，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。
 
-##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) 資源
+##  <a name="info_tipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) 資源
 -   [在 SSIS 論壇中取得協助](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
 -   [在 Stack Overflow 取得協助](https://stackoverflow.com/questions/tagged/ssis)  
 -   [關注 SSIS 小組部落格](https://blogs.msdn.microsoft.com/ssis/)

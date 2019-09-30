@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d50cef16424f5524429c6b4285af0ae8568391be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: de1e0cddcee34685e5921b7cc31837a301f44166
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038703"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295335"
 ---
-# <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB 資料庫)
+# <a name="catalogset_environment_reference_type-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

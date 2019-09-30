@@ -11,14 +11,14 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 829b28ad1c70daff15f0ba4676746998667efc71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 67aa61e65bc89246cfb0c685d08a32371a5fc4df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967613"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287909"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (不等於) (SSIS 運算式)
 

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 575950a1bb98441240cb38fd387c3efb4872d23b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114467"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296290"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>建立資料庫 (SQL Server 匯入和匯出精靈)
 

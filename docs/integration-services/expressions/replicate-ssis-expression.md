@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 720104d8ad0c69898377eb909bc4e92a1c3d4d08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 198a1161d6af7f1b57f9480b3d00cd8dec3436d1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967919"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297431"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (SSIS 運算式)
 

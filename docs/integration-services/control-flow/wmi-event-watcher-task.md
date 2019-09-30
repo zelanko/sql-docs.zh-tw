@@ -15,14 +15,14 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d519d0c298e3a92506902bc42d3fdb4e8b1d2cc7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d31b2d7515eaebc7d0c2e5fb5861d8b6b51ad6f7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893755"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293707"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
 

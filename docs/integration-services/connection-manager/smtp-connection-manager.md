@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SMTP connection manager [Integration Services]
 - connection managers [Integration Services], SMTP
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5e946568e41b6ba8df928f370d3b8ba2ebc9e354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904220"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298483"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 連接管理員
 

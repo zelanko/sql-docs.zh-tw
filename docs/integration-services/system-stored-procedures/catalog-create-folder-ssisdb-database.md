@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 41e68c4ab43a4c2838721321341ce42ce12883d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d2533c09f530b0fc3fcebdfbd4a50a460534a42f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023424"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295521"
 ---
-# <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (SSISDB 資料庫)
+# <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder (SSISDB 資料庫)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

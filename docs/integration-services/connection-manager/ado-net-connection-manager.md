@@ -15,14 +15,14 @@ helpviewer_keywords:
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43348955140600ca174781beed4adc1089ee5add
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d61b7423bb39267fe4171d661e8fe7a74fbc6faa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155189"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294494"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 連接管理員
 
@@ -88,7 +88,7 @@ ms.locfileid: "70155189"
 在 [Azure Data Factory 中的 Azure-SSIS 整合執行階段](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) \(部分機器翻譯\) 上執行 SSIS 套件時，您可以使用與您資料處理站建立關聯的[受控識別](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) \(部分機器翻譯\) 來進行 Azure SQL Database (或受控執行個體) 驗證。 指定的處理站可以使用此身分識別從您資料庫存取資料，或從您的資料庫複製資料。
 
 > [!NOTE]
->  當您使用 Azure Active Directory (Azure AD) 驗證 (包括受控識別驗證) 連線到 Azure SQL Database (或受控執行個體) 時，會遇到有關套件執行失敗或非預期行為變更的問題。 如需詳細資訊，請參閱 [Azure AD 功能和限制](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations) \(部分機器翻譯\)。
+>  當您使用 Azure Active Directory (Azure AD) 驗證 (包括受控識別驗證) 連線到 Azure SQL Database (或受控執行個體) 時，可能會遇到有關套件執行失敗或非預期行為變更的問題。 如需詳細資訊，請參閱 [Azure AD 功能和限制](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations) \(部分機器翻譯\)。
 
 若要使用 Azure SQL Database 的受控識別驗證，請遵循下列步驟來設定您的資料庫：
 
@@ -120,7 +120,7 @@ ms.locfileid: "70155189"
     
 1. 在 Azure 入口網站為您的受控執行個體[佈建 Azure Active Directory 系統管理員](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) \(部分機器翻譯\)，如果您尚未這麼做。 Azure AD 系統管理員可以是 Azure AD 使用者或 Azure AD 群組。 如果您授與受控識別系統管理員角色，請略過步驟 2-5。 系統管理員將擁有資料庫的完整存取權。
 
-1. [從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 前往您資料處理站的**屬性**。 複製 [受控識別應用程式識別碼]  \(不是 [受控識別物件識別碼]  \)。
+1. [從 Azure 入口網站尋找資料處理站受控識別](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 前往您資料處理站的**屬性**。 複製 [受控識別應用程式識別碼]  (不是 [受控識別物件識別碼]  )。
 
 1. 將資料處理站受控識別轉換成二進位類型。 使用您的 SQL 或 Active Directory 系統管理員帳戶，使用 SSMS 等工具連線至您受控執行個體的 **master** 資料庫。 對 **master** 資料庫執行下列 T-SQL，以二進位格式取得您的受控識別應用程式識別碼：
     

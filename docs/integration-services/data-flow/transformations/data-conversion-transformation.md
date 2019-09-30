@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2167462d00e8a142ddfe7f4cf6cfe151f31b01f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e1573167bfe50e5dcb63734a90c7b9b5bd00e40a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112633"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297963"
 ---
 # <a name="data-conversion-transformation"></a>資料轉換
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 39e1fea1a230d831a24ee1eab1dc8abf9483711f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1e4cddbdad631a5602096f92915a4fe78b23d67
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112763"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298009"
 ---
 # <a name="conditional-split-transformation"></a>條件式分割轉換
 

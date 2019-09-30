@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149918"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251084"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "71149918"
 |二進位字碼指標 (\_BIN2) <sup>1</sup> | 依據 Unicode 資料的 Unicode 字碼指標來排序和比較 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中資料。 針對非 Unicode 資料，二進位字碼指標將使用與二進位排序相同的比較。<br/><br/> 使用二進位字碼指標排序次序的好處，就是在比較已排序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的應用程式中不需要對資料進行重新排序。 因此，二進位字碼指標排序次序可簡化應用程式的開發並提升效能。 如需詳細資訊，請參閱此頁面的[＜二進位定序＞](#Binary-collations)一節。|
 |UTF-8 (\_UTF8)|讓 UTF-8 編碼資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未選取此選項，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用適用資料類型的預設非 Unicode 編碼格式。 如需詳細資訊，請參閱此頁面的[＜UTF-8 支援＞](#utf8)一節。| 
 
-<sup>1</sup> 如果選取二進位或二進位字碼指標，則無法使用區分大小寫 (\_CS)、區分腔調字 (\_AS)、區分假名 (\_KS) 和區分全半形 (\WS) 選項。      
+<sup>1</sup> 如果選取二進位或二進位字碼指標，則無法使用區分大小寫 (\_CS)、區分腔調字 (\_AS)、區分假名 (\_KS) 和區分全半形 (\_WS) 選項。      
 
 #### <a name="examples-of-collation-options"></a>定序選項的範例
 每一個定序都會結合成一系列後置詞，來定義大小寫、腔調字、全半形或假名的區分。 下列範例描述不同後置詞結合的排序次序行為。

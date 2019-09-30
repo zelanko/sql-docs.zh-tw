@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - POWER function
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 325691a7ab4a61fcf563e5f9a662db3e1db01827
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 818f99100150c366c3caf982555f802b2ca6fc68
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967903"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297440"
 ---
 # <a name="power-ssis-expression"></a>POWER (SSIS 運算式)
 

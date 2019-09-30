@@ -12,14 +12,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f63fabadc4cf4dea98536c3ef2f8f863fa0dc642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82bebe29ff6fe9eb385a078aa762d5b8f171783a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941546"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292601"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 來源來擷取資料
 

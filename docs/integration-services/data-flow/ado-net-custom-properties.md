@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 923ff84b7f5e6616083f0d965f917cd1ecc21b6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a4e670cf37550734d672047f2d7cf4a9f8045473
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045561"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293499"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自訂屬性
 

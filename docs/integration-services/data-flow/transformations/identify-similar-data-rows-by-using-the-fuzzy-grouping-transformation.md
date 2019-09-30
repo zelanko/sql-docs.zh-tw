@@ -13,14 +13,14 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 04dd344f9d62e3bc10d26c66a87c8e4bf8395787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9c47bd07fd48431f850744e58ba2838b61d5969d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944328"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291551"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>使用模糊群組轉換來識別相似的資料列
 

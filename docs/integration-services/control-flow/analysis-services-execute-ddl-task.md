@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 837ac4263d5cc8ae864c579f2dc186764e2d4d13
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493915"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294335"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
 

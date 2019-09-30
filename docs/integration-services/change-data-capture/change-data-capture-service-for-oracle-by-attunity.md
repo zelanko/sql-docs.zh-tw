@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cac42c7e892f81e7182d075cb5ac251eb42fc921
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78be5b59dd2397ef361a981219989d27d88b5ae2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099856"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294821"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取服務
 

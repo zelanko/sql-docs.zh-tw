@@ -18,14 +18,14 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e421382b578d8494f7311414f93fec458014d552
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b873c611c0e997c5033c2efed341f93e0ec5aa5e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057701"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290732"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
 

@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ef27717471df324afe9b55f0f0a0f56d77849486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d98a0a0293114e1b701ecd90f4a7b1ab058b0aa4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112400"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296402"
 ---
 # <a name="developing-specific-types-of-script-components"></a>開發特定類型的指令碼元件
 

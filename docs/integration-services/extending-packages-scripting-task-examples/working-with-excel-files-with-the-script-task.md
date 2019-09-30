@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 602eed32ba52be9f7e4119a767f064d228440278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094566"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286579"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
 

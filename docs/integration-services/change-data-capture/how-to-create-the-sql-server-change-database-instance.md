@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3e31e6b619e652f0802258f5bad6f2c6e7e1c8a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e71c9a5c8dcb45346c3111a924770321c1008cb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100873"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298729"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>如何建立 SQL Server 變更資料庫執行個體
 

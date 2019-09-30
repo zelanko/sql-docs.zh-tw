@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941463"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292421"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941463"
 ### <a name="converting-datetime-data-types"></a>轉換日期/時間資料類型  
  您也可以變更具有日期/時間資料之資料行的資料類型，以擷取該資料的日期或時間部分。 下表列出將日期/時間資料類型變更為其他日期/時間資料類型的結果。  
   
-#### <a name="converting-from-dtfiletime"></a>從 DT_FILETIME 轉換  
+#### <a name="converting-from-dt_filetime"></a>從 DT_FILETIME 轉換  
   
 |轉換 DT_FILETIME 到|結果|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941463"
 |DT_DBTIMESTAMP2|當小數秒值的小數位數大於 DT_DBTIMESTAMP2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時區欄位設定為零。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMPOFFSET 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdate"></a>從 DT_DATE 轉換  
+#### <a name="converting-from-dt_date"></a>從 DT_DATE 轉換  
   
 |轉換 DT_DATE 到|結果|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941463"
 |DT_DBTIMESTAMP2|轉換資料類型。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時區欄位設定為零。|  
   
-#### <a name="converting-from-dtdbdate"></a>從 DT_DBDATE 轉換  
+#### <a name="converting-from-dt_dbdate"></a>從 DT_DBDATE 轉換  
   
 |轉換 DT_DBDATE 到|結果|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941463"
 |DT_DBTIMESTAMP2|將 DT_DBTIMESTAMP 資料類型中的時間欄位設定為零。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時間欄位和時區欄位設定為零。|  
   
-#### <a name="converting-from-dtdbtime"></a>從 DT_DBTIME 轉換  
+#### <a name="converting-from-dt_dbtime"></a>從 DT_DBTIME 轉換  
   
 |轉換 DT_DBTIME 到|結果|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941463"
 |DT_DBTIMESTAMP2|將 DT_DBTIMESTAMP2 資料類型中的日期欄位設定為目前的日期。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的日期欄位和時區欄位分別設定為目前的日期和零。|  
   
-#### <a name="converting-from-dtdbtime2"></a>從 DT_DBTIME2 轉換  
+#### <a name="converting-from-dt_dbtime2"></a>從 DT_DBTIME2 轉換  
   
 |轉換 DT_DBTIME2 到|結果|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941463"
 |DT_DBTIMESTAMP2|將 DT_DBTIMESTAMP2 資料類型中的日期欄位設定為目前的日期。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMP2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的日期欄位和時區欄位分別設定為目前的日期和零。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMPOFFSET 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>從 DT_DBTIMESTAMP 轉換  
+#### <a name="converting-from-dt_dbtimestamp"></a>從 DT_DBTIMESTAMP 轉換  
   
 |轉換 DT_DBTIMESTAMP 到|結果|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941463"
 |DT_DBTIMESTAMP2|當小數秒值的小數位數大於 DT_DBTIMESTAMP2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時區欄位設定為零。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMPOFFSET 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>從 DT_DBTIMESTAMP2 轉換  
+#### <a name="converting-from-dt_dbtimestamp2"></a>從 DT_DBTIMESTAMP2 轉換  
   
 |轉換 DT_DBTIMESTAMP2 到|結果|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941463"
 |DT_DBTIMESTAMP2|當小數秒值的小數位數大於目的地 DT_DBTIMESTAMP2 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|將 DT_DBTIMESTAMPOFFSET 資料類型中的時區欄位設定為零。<br /><br /> 當小數秒值的小數位數大於 DT_DBTIMESTAMPOFFSET 資料類型可包含的小數秒位數時，將小數秒值移除。 在移除小數秒值之後，產生有關此資料截斷的報表。 如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>從 DT_DBTIMESTAMPOFFSET 轉換  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>從 DT_DBTIMESTAMPOFFSET 轉換  
   
 |轉換 DT_DBTIMESTAMPOFFSET 到|結果|  
 |--------------------------------------|------------|  

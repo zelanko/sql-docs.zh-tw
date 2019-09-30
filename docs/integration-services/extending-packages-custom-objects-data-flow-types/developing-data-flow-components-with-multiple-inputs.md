@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 223dd67ec46264606e605a4dadb99b2fdaad7cbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: df06f7dad35edcbdd299794a7724b3e52e7974f0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026005"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287719"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>開發具有多個輸入的資料流程元件
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e416575b77cfa4a944bfb6feadf98e74b898db26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062953"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287220"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支援自訂元件中的多目標
 

@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d06e1b4ea0302bc8da4d7ad7a95927593c199d40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06f2d0cef2cafa90476b4e3f5b6e68efe208c21b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049416"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293105"
 ---
 # <a name="data-streaming-destination"></a>資料流目的地
 

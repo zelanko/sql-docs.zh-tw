@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9985969215ba1351e2b5e62b2c2c7b68d081704b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f152f3c0115ad2af67a1b258ff19aa0142b277d9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109167"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294053"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
 

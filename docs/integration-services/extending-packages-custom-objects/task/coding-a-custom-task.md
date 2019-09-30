@@ -16,14 +16,14 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a520c9d35087574a98a9366bcbb463338fc517f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062878"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297122"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
 

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53008c12ead3f9450edd6fbe26c08728a0b47558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa922a5a850a6cee9b782d894994835d8e1d9a1c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070148"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291762"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
 
@@ -39,8 +39,8 @@ ms.locfileid: "68070148"
 |作業|Description|  
 |---------------|-----------------|  
 |群組依據|將資料集分割成群組。 任何資料類型的資料行都可用於群組。 如需詳細資訊，請參閱 [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md)。|  
-|SUM|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md)。|  
-|平均值|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md)。|  
+|Sum|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md)。|  
+|Average|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md)。|  
 |Count|傳回群組中的項目數。 如需詳細資訊，請參閱 [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md)。|  
 |計算相異|傳回群組中唯一非 Null 值的數目。|  
 |最小值|傳回群組中的最小值。 如需詳細資訊，請參閱 [MIN &#40;Transact-SQL&#41;](../../../t-sql/functions/min-transact-sql.md)。 與 Transact-SQL MIN 函數的不同之處，在於此作業只適用於數值、日期和時間資料類型。|  

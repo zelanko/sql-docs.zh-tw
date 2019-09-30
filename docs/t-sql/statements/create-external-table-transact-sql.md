@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51464e85f1d9eaabb377caf851e6bdcef46a014d
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70391960"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227143"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -344,7 +344,7 @@ SELECT DISTINCT user.FirstName, user.LastName
 INTO ms_user
 FROM user INNER JOIN (
     SELECT * FROM ClickStream WHERE cs.url = 'www.microsoft.com'
-    ) AS ms_user
+    ) AS ms
 ON user.user_ip = ms.user_ip
 ;
 ```

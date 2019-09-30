@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ddbbeb80664c06b517eee1f766294d9fa0bfe232
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9c0e005ee8dbb1c01cdaf5d3af031fd9ffba31ac
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967699"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288250"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
 
@@ -44,7 +44,7 @@ ms.locfileid: "67967699"
 ## <a name="literals"></a>常值  
  運算式可以包含數值、字串及布林常值。 運算式中使用的字串常值必須加上引號。 數值和布林常值則不使用引號。 運算式語言包括常逸出之字元的逸出序列。 如需詳細資訊，請參閱[常值 &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  
   
-## <a name="operators"></a>操作員  
+## <a name="operators"></a>Operators  
  運算式評估工具包含一組運算子，提供與 Transact-SQL、C++ 和 C# 語言中運算子類似的功能。 不過，運算式語言還包括額外的運算子，並且使用您可能不熟悉的不同符號。 如需詳細資訊，請參閱[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md)。  
   
 ### <a name="namespace-resolution-operator"></a>命名空間解析運算子  

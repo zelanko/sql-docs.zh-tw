@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c494c4880ee1ffe2cafa2eae61c617b1222b4a84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ab96499d8c4185e14481e18518cad514992b2e96
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099820"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294814"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity
 

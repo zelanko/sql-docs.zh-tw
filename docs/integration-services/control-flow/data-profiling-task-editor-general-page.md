@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c7d215f956b02f33a14ba91fd769a691acdd622
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003619"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294203"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>資料分析工作編輯器 (一般頁面)
 

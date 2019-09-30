@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 22f1d99709ea131ee28e9f5c5cef2ee0b6fe3693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 561495eaad4dbe41a0af05e80d3c2ba35d91cb74
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68215782"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293957"
 ---
 # <a name="select-a-package"></a>選取封裝
 

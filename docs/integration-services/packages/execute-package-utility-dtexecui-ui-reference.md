@@ -21,14 +21,14 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 95dbf7aabbc124a9419b0cff30ec5d4685eacf27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051175"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295825"
 ---
 # <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
 

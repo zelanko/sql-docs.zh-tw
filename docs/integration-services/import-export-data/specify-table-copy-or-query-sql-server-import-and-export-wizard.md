@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d25caed1ed159ff3cbb63851eb0f9a22487511b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025177"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296248"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
 

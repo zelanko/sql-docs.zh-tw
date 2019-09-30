@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 39403bec40e76b66a57d8c2276001aa15e558b65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023577"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284973"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>歡迎使用 SQL Server 匯入和匯出精靈
 

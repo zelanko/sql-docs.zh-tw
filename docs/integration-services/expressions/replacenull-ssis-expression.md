@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 16c2c3028dfe3481089de9e661ddcece1fb6404b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 335ccdfb3857ba7d32147424a46f76bc0ccdbe17
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967923"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288426"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 運算式)
 

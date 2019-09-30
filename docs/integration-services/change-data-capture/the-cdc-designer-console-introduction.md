@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d1b7f0690703311d52d67a532952d694ab06a72a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a9c07061634c39d6a5d1b7a2a0b698b27d90c68c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049716"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294531"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 設計工具主控台簡介
 

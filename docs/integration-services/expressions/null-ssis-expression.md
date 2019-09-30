@@ -11,14 +11,14 @@ helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86add979aa790e438454c319dee68b8df95a6669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d4750f030dc1193ef8ed8be1b14198ca21e99be6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968092"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288729"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 運算式)
 

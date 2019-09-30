@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 27af17bfd3b59d119bbe4d64dd52840c90e88a0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112323"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296071"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 來建立專案和基本套件
 

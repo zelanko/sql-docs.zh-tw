@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3851f85bf353e1ebe39f9bb24c88406550e1c286
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 518835df5ae78a39360cad1a6aab1db35be675ec
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941288"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292306"
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
 

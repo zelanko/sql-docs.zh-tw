@@ -14,14 +14,14 @@ helpviewer_keywords:
 - indexes [Integration Services]
 - Rebuild Index task
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1c0e72745631104a3ee5dd436f7e63de752c8684
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: af10da0db8cff17e6cf06c155a85713a3fae50eb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099658"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294023"
 ---
 # <a name="rebuild-index-task"></a>重建索引工作
 

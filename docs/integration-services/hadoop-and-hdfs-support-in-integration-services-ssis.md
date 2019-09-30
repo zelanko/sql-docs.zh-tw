@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL13.SSIS.HADOOP.F1
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a511d9142bb59014b5ab0093235df7adf793be7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102704"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285863"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services (SSIS) 中的 Hadoop 和 HDFS 支援
 

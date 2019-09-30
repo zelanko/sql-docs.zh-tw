@@ -11,14 +11,14 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - running packages [Integration Services]
 ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02fc0b5a135ff54b7545fadd8371f889f44f015b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae990092e930bb1f017e10c0b6e1f07917e3a446
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028452"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281965"
 ---
 # <a name="managing-running-packages-programmatically"></a>以程式設計方式管理執行中的封裝
 

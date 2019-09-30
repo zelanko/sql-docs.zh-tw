@@ -22,14 +22,14 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 777de208f2e9eeb392cf69c5b067ee61458dbc9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 461750eee78c631adef9b012b971c9bab60bf29f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062765"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286890"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>引發並在自訂工作中定義事件
 

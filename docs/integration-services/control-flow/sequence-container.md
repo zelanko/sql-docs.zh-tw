@@ -15,14 +15,14 @@ helpviewer_keywords:
 - containers [Integration Services], Sequence
 - subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38f22a3e65822300eb0a585ed2339a10d7bb349f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6255a348383804bb2bb37ae88b5d91dbc6db3eca
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011327"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293944"
 ---
 # <a name="sequence-container"></a>時序容器
 

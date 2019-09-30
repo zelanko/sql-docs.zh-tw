@@ -12,14 +12,14 @@ helpviewer_keywords:
 - roles [Integration Services]
 - packages [Integration Services], roles
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5833ff25bc698b94e1798aa77e3fc776d5955a1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9a2ba8d4b8497acd907ea3521c3f73728b2a155
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028510"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282041"
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>以程式設計方式管理封裝角色 (SSIS 服務)
 

@@ -23,14 +23,14 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0293a6b1be32c5b4b7dbb12ca3319f75859edf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 19f179ae869a175ea6238ba4ade9e5f87d663e08
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057687"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297793"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 

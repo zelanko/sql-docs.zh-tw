@@ -12,14 +12,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], Analysis Services
 - Analysis Services connection manager
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7cecf0294e1225dcb8f9476c1f0f3c85a0b6ab47
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62e22823d19ab7dff113566927f0d59dfd4a693e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892968"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294475"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 連接管理員
 

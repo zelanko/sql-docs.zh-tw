@@ -12,14 +12,14 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 07d486b580cb09f9f6fcb0f9462edfffb2520581
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 325d5cde9ae15bb58c6173a974f14f48847c3361
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051151"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282480"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>使用 SQL Server Agent 在遠端伺服器上設定封裝負載平衡
 

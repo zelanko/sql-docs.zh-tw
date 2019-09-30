@@ -27,14 +27,14 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2782537178c00055e1db7cb7c653fb863ead8724
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913636"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282568"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
 
@@ -71,7 +71,7 @@ ms.locfileid: "67913636"
   
  下表列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含之記錄提供者的 ProgID 和 ClassID，以及記錄提供者寫入記錄檔的位置。  
   
-|記錄提供者|ProgID|ClassID|位置|  
+|記錄提供者|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |文字檔|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|記錄提供者所使用的「檔案」連接管理員會指定文字檔的路徑。|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|記錄提供者所使用的「檔案」連線管理員會指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]所使用之檔案的路徑。|  

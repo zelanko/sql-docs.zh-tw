@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8cf5e17a750c9626ea555d35598058b58afec51e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f213a9eb8375f05967700a6aeec81bae5e41ec1d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102833"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286051"
 ---
 # <a name="raising-events-in-the-script-task"></a>在指令碼工作中引發事件
 

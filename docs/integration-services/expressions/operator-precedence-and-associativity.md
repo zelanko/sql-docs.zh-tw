@@ -11,14 +11,14 @@ helpviewer_keywords:
 - associativity [Integration Services]
 - precedence [Integration Services]
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2b5ad688f3ca9192f80b45d7141b7d9ec9576a58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5e1c394cd8b58fccdae23e83b163164776de3948
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085715"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288707"
 ---
 # <a name="operator-precedence-and-associativity"></a>運算子優先順序與關聯性
 

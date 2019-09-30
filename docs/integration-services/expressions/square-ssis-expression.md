@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 21a5b491cd359546c20559f10cb04410c0e7f90c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06bf3ea82f026a36fece8266354e79992473df44
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967769"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288646"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS 運算式)
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 83022e612afa862ae657f7f93dbe3a80ed8d0bb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a3e056e60eeab6dfdb79a448b4fc95bf1c01f50
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070538"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298941"
 ---
 # <a name="set-parameter-value-dialog-box"></a>設定參數值對話方塊
 

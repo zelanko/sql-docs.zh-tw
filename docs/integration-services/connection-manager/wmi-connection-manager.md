@@ -14,14 +14,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], WMI
 - WMI connection manager [Integration Services]
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5b0f16004dc21e91be932cc7343e812e0d25b4a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b3f33d0c37ba9c856d9cc0b66674c8ca4221e0d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904157"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294361"
 ---
 # <a name="wmi-connection-manager"></a>WMI 連接管理員
 

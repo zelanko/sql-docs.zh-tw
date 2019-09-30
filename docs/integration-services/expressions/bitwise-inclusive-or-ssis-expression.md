@@ -11,14 +11,14 @@ helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce9f7bf141a4db582c368de26a8465c884b169dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17a92a32fba02d8c4da167d412d02eed0d5f6b77
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034039"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290418"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (位元包含 OR) (SSIS 運算式)
 

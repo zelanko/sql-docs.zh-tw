@@ -13,14 +13,14 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eb09e3904fbfaf6a7b285eb297b5568f2f8e51b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 96110e35227fbca970fd3bc92bcee314b5ebae6c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045604"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293697"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立封裝
 

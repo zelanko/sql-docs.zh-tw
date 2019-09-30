@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d0e7778e6e5bac7a537394bede929766c5709aed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a4d89c6302b55e0182e5f14f8cfab463d5aafeed
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023576"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284712"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 封裝升級精靈來升級 Integration Services 封裝
 

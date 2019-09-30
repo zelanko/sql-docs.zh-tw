@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7a6ada37281bb1f248a806bf51b7924658821c1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3f0545a3c72627bc45ab40003522d4f3ac1da5c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947706"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287783"
 ---
 # <a name="coding-a-custom-connection-manager"></a>撰寫自訂連接管理員的程式碼
 

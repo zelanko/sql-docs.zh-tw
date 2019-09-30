@@ -12,14 +12,14 @@ helpviewer_keywords:
 - + (concatenate operator)
 - concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f72d59c29453cd877c91c571ed6be124fb01a1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 366e307220d08192df04b95201758751cce90112
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088986"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297663"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (串連) (SSIS 運算式)
 

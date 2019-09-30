@@ -11,14 +11,14 @@ helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cf6579c7fbf11fe068947f5ca4358193d4c21db1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109712"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293826"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 

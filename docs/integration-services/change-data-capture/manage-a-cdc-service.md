@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 41a01902287ac3021bce03306a7f4079328bd965
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6838ae985c16f4188ed43e3442b4f86c4a3557b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045617"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298681"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服務
 

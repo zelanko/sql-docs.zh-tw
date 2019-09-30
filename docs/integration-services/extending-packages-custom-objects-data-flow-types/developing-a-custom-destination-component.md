@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: af7ae4c5adba2b32a38c4b0da7dc1e73a0b92208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1912b398ca0d5db28bef668572a3a07d752694e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109163"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287941"
 ---
 # <a name="developing-a-custom-destination-component"></a>開發自訂目的地元件
 

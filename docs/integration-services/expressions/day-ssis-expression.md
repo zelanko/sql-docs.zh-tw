@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DAY function
 - dates [Integration Services], DAY
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: be761d45a99c06120f52348bd5d565824fa6aca0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 344e3eca9359d3bafa0dd0fd529c939f84575921
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081089"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297621"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 運算式)
 

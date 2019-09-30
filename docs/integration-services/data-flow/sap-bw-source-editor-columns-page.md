@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: caf9e1724d72113ed67421f516ac9fdcd298e936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d523437dd2deaddac4462f2e825ff0c197b26bf6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034095"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291842"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 來源編輯器 (資料行頁面)
 

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - destinations [Integration Services], Recordset
 - in-memory ADO recordsets [Integration Services]
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9efb20e7c182d1d8a2426347fcfe2eafa09d35ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc14bf340407903674014a84a6b48f2ff14522fc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034340"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298123"
 ---
 # <a name="recordset-destination"></a>資料錄集目的地
 

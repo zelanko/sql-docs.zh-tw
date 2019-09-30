@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: edcd0b961f6a3955ea633c84b275bfa1a687cc92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997831"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295245"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB 資料庫)
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5b25db014397545cc2d510d96d09bbc156a68d1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba6298d5ead650b5e6f6bc3cb68d0c5926624741
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065307"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295863"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 元件
 

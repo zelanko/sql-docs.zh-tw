@@ -18,14 +18,14 @@ helpviewer_keywords:
 - destinations [Integration Services], Dimension Processing
 - dimensions [Analysis Services], processing
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b506f75e4418caa95afaf54ece9d4aa9f622d39a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ef381f9ff470422ed85b81832b1078d6c8767dcf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893847"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292879"
 ---
 # <a name="dimension-processing-destination"></a>維度處理目的地
 

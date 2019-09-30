@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fa1b13f006c5bae86613b56a313376e68bb00a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034107"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291838"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>設定資料流程元件的屬性
 
@@ -140,7 +140,7 @@ ms.locfileid: "68034107"
 |PipelineVersion|Integer|專門用來執行元件的資料流程工作版本。|  
 |UsesDispositions|布林|指示元件是否有錯誤輸出。|  
 |ValidateExternalMetadata|布林|指示是否會驗證外部資料行的中繼資料。 此屬性的預設值為 **True**。|  
-|Version|Integer|元件的版本。|  
+|版本|Integer|元件的版本。|  
   
 ###  <a name="inputs"></a> 輸入屬性  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中，轉換和目的地都有輸入。 資料流程中元件的輸入會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> 介面。  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d610b40e38832e2dc82b02edf276475d2b27d74c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e45060a494fad2fbd0310a31bdf433e624becdc2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947181"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294296"
 ---
 # <a name="back-up-database-task"></a>備份資料庫工作
 

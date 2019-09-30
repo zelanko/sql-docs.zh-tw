@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.afpcreatecltask.f1
 - sql14.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1420b0954faef9d031a6b80503f19dd981ec2b8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa9599ae0a4c3a38a409131b3f9f344bd478e15b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947326"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294305"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 建立叢集工作
 
@@ -44,7 +44,7 @@ ms.locfileid: "67947326"
 |AzureStorageConnection|選取現有的 Azure 儲存體連線管理員，或建立參考 Azure 儲存體帳戶的新連線管理員，該連線管理員會與 HDInsight 叢集建立關聯。|
 |SubscriptionId|指定 HDInsight 叢集日後建立所在的訂用帳戶識別碼。|
 |ResourceGroup|指定 HDInsight 叢集日後建立所在的 Azure 資源群組。|
-|位置|指定 HDInsight 叢集的位置。 叢集必須建立在和 Azure 儲存體帳戶指定位置相同的位置。|  
+|Location|指定 HDInsight 叢集的位置。 叢集必須建立在和 Azure 儲存體帳戶指定位置相同的位置。|  
 |ClusterName|指定要建立的 HDInsight 叢集名稱。|  
 |ClusterSize|指定要在叢集中建立的節點數目。|  
 |BlobContainer|指定要與 HDInsight 叢集建立關聯的預設儲存體容器名稱。|  

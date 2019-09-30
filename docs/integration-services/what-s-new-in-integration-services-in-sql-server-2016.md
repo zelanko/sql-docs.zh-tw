@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 032d65b45f1eea7858fe706413a44845ac95179c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945369"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295037"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
 

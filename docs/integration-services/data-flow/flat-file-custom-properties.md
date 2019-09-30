@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1f32ea9b76560eaa66f5e386d6343dfe922df472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00387fee6a11d3a2416d8440fdb7ae35665c472b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941520"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292505"
 ---
 # <a name="flat-file-custom-properties"></a>一般檔案自訂屬性
 
