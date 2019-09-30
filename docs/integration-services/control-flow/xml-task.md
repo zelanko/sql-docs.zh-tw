@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5eeba11501703a9c64c3e883b87899c7262ececa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca59166f994a0bd982c2f00c5c60c39207e9e02a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057744"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293655"
 ---
 # <a name="xml-task"></a>XML 工作
 
@@ -62,7 +62,7 @@ ms.locfileid: "68057744"
 |---------------|-----------------|  
 |Diff|比較兩份 XML 文件。 差異作業使用來源 XML 文件做為基底文件，將其與第二個 XML 文件相比較，偵測兩者的差異，並將差異寫入 XML Diffgram 文件。 此作業包含用於自訂比較的屬性。|  
 |合併式|合併兩份 XML 文件。 「合併」作業使用來源 XML 文件做為基底文件，將第二個文件的內容加入此基底文件。 此作業可以指定基底文件中的合併位置。|  
-|修補|將差異作業的輸出 (稱為 Diffgram 文件) 套用到 XML 文件，以新建包含 Diffgram 文件內容的父文件。|  
+|Patch|將差異作業的輸出 (稱為 Diffgram 文件) 套用到 XML 文件，以新建包含 Diffgram 文件內容的父文件。|  
 |Validate|針對「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述來驗證 XML 文件。|  
 |XPath|執行 XPath 查詢和評估。|  
 |XSLT|在 XML 文件上執行 XSL 轉換。|  
