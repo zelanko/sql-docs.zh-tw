@@ -55,20 +55,20 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228408"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207744"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-查詢提示會指定所指出的提示應該用於整個查詢。 查詢提示會影響陳述式中的所有運算子。 如果主要查詢涉及 UNION，只有最後一個包含 UNION 作業的查詢可以有 OPTION 子句。 查詢提示是在 [OPTION 子句](../../t-sql/queries/option-clause-transact-sql.md)中指定。 如果一或多個查詢提示造成查詢最佳化工具不會產生有效的計畫，就會產生 8622 錯誤。  
+查詢提示會指定所指出的提示應該用於整個查詢。 查詢提示會影響陳述式中的所有運算子。 如果主要查詢涉及 UNION，只有最後一個包含 UNION 作業的查詢可以有 OPTION 子句。 查詢提示是在 [OPTION 子句](../../t-sql/queries/option-clause-transact-sql.md)中指定。 如果一或多個查詢提示造成查詢最佳化工具不會產生有效的計劃，就會產生 8622 錯誤。  
   
 > [!CAUTION]  
-> 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計畫，因此，我們建議資深的開發人員和資料庫管理員將它當做最後的解決辦法。  
+> 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具通常會選取最好的查詢執行計劃；因此，我們建議資深開發人員和資料庫管理員將它當作最後的解決辦法。  
   
 **適用於：**  
   
@@ -107,7 +107,8 @@ ms.locfileid: "70228408"
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE PLAN N'xml_plan'  
+  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
@@ -140,7 +141,7 @@ ms.locfileid: "70228408"
 指定查詢之 GROUP BY 或 DISTINCT 子句所描述的彙總應使用雜湊或排序。  
   
 { MERGE | HASH | CONCAT } UNION  
-指定所有 UNION 作業都是藉由合併、雜湊或串連各個 UNION 集來執行。 如果指定了多個 UNION 提示，查詢最佳化工具會從指定的提示中選取成本最低的策略。  
+指定所有 UNION 作業都是藉由合併、雜湊或串連各個 UNION 集來執行。 如果指定了多個 UNION 提示，則查詢最佳化工具會從所指定提示中選取成本最低的策略。  
   
 { LOOP | MERGE | HASH } JOIN  
 指定所有聯結作業都是由整個查詢中的 LOOP JOIN、MERGE JOIN 或 HASH JOIN 來執行。 如果您指定多個聯結提示，最佳化工具會從允許使用的聯結提示中，選取成本最低的聯結策略。  
@@ -219,7 +220,7 @@ NO_PERFORMANCE_SPOOL
 防止多工緩衝處理運算子加入查詢計劃 (需有多工緩衝處理才能保證有效的更新語意的計劃除外)。 在某些情況下，多工緩衝處理運算子可能會降低效能。 例如，多工緩衝處理會使用 tempdb，因此如果有許多並行查詢與多工緩衝處理作業一起執行，可能會發生 tempdb 競爭。  
   
 OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
-指示查詢最佳化工具在查詢進行編譯和最佳化時，使用特定的本機變數值。 只有在查詢最佳化期間，才使用這個值，在查詢執行期間，不使用這個值。  
+指示查詢最佳化工具在查詢進行編譯和最佳化時，使用特定的區域變數值。 只有在查詢最佳化期間，才使用這個值，在查詢執行期間，不使用這個值。  
   
 _\@variable\_name_  
 這是查詢所用之本機變數的名稱，您可以指派這個本機變數的值來搭配使用 OPTIMIZE FOR 查詢提示。  
@@ -235,7 +236,7 @@ OPTIMIZE FOR 可以抵制最佳化工具的預設參數偵測行為。 當您建
 OPTIMIZE FOR UNKNOWN  
 指示查詢最佳化工具在編譯及最佳化查詢時，將統計資料 (而非初始值) 用於所有的區域變數。 這項最佳化會包含以強制參數化所建立的參數。  
   
-如果您使用 OPTIMIZE FOR @variable_name = _literal\_constant_，且在相同的查詢提示中使用 OPTIMIZE FOR UNKNOWN，查詢最佳化工具會將指定的 _literal\_constant_ 用於特定值。 查詢最佳化工具會將 UNKNOWN 用於其餘的變數值。 只有在查詢最佳化期間才使用這些值，查詢執行期間則不使用這些值。  
+如果您使用 OPTIMIZE FOR @variable_name = _literal\_constant_，且在相同的查詢提示中使用 OPTIMIZE FOR UNKNOWN，則查詢最佳化工具會將指定的 _literal\_constant_ 用於特定值。 查詢最佳化工具會將 UNKNOWN 用於其餘的變數值。 只有在查詢最佳化期間才使用這些值，查詢執行期間則不使用這些值。  
   
 PARAMETERIZATION { SIMPLE | FORCED }     
 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具在查詢完成時套用到查詢的參數化規則。  
@@ -244,7 +245,7 @@ PARAMETERIZATION { SIMPLE | FORCED }
 > 您只能在計劃指南內指定 PARAMETERIZATION 查詢提示，以覆寫 PARAMETERIZATION 資料庫 SET 選項目前的設定。 您不能在查詢中直接指定它。    
 > 如需詳細資訊，請參閱[使用計劃指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。
   
-SIMPLE 指示查詢最佳化工具嘗試簡單參數化。 FORCED 指示查詢最佳化工具嘗試使用強制參數化。 如需詳細資訊，請參閱[查詢處理架構指南中的強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)和[查詢處理架構指南中的簡單參數化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。  
+SIMPLE 指示查詢最佳化工具嘗試使用簡單參數化。 FORCED 指示查詢最佳化工具嘗試使用強制參數化。 如需詳細資訊，請參閱[查詢處理架構指南中的強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)和[查詢處理架構指南中的簡單參數化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。  
 
 RECOMPILE  
 指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 針對查詢產生新的暫時計畫，並在查詢完成執行之後立即捨棄該計畫。 在沒有 RECOMPILE 提示的情況下執行相同查詢時，產生的查詢計畫不會取代快取中儲存的計畫。 在未指定 RECOMPILE 的情況下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會快取查詢計劃並重複使用。 在編譯查詢計畫時，RECOMPILE 查詢提示會在查詢中使用任何區域變數的目前值。 如果查詢是在預存程序內，則將目前值傳遞給任何參數。  
@@ -252,9 +253,9 @@ RECOMPILE
 RECOMPILE 是建立預存程序的有用替代方案。 當不必重新編譯整個預存程序，而只需要重新編譯預存程序內的部分查詢時，RECOMPILE 會使用 WITH RECOMPILE 子句。 如需詳細資訊，請參閱[重新編譯預存程序](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)。 另外，當您建立計畫指南時，RECOMPILE 也非常有用。  
   
 ROBUST PLAN  
-強制查詢最佳化工具嘗試一項適用於最大潛在資料列大小的計畫，可能會犧牲效能。 當處理查詢時，中繼資料表和運算子可能需要儲存和處理比任何輸入資料列還寬的資料列。 這些資料列的寬度，有時會使特定運算子無法處理資料列。 如果資料列具有該寬度，在查詢執行期間，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤。 您可以使用 ROBUST PLAN 來指示查詢最佳化工具，不考慮任何可能遇到這個問題的查詢計畫。  
+強制查詢最佳化工具嘗試一項適用於最大潛在資料列大小的計劃，可能會犧牲效能。 當處理查詢時，中繼資料表和運算子可能需要儲存和處理比任何輸入資料列還寬的資料列。 這些資料列的寬度，有時會使特定運算子無法處理資料列。 如果資料列具有該寬度，在查詢執行期間，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤。 您可以使用 ROBUST PLAN 來指示查詢最佳化工具，不考慮任何可能遇到這個問題的查詢計劃。  
   
-如果不可能執行這類計畫，查詢最佳化工具會傳回錯誤，而不是將錯誤偵測延遲到查詢執行時。 資料列可能包含可變長度的資料行；[!INCLUDE[ssDE](../../includes/ssde-md.md)] 允許資料列定義成超出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力的最大潛在大小。 一般而言，雖然有最大潛在大小，但應用程式仍會儲存實際大小在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力限制之內的資料列。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 遇到太長的資料列，便會傳回執行錯誤。  
+如果無法執行這類計劃，則查詢最佳化工具會傳回錯誤，而不是將錯誤偵測延遲到查詢執行時。 資料列可能包含可變長度的資料行；[!INCLUDE[ssDE](../../includes/ssde-md.md)] 允許資料列定義成超出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力的最大潛在大小。 一般而言，雖然有最大潛在大小，但應用程式仍會儲存實際大小在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力限制之內的資料列。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 遇到太長的資料列，便會傳回執行錯誤。  
  
 <a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 起) 與 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -264,7 +265,7 @@ ROBUST PLAN
 支援下列提示名稱：    
  
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
-   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用簡易內含項目假設產生計畫，而不使用預設的基底內含項目假設。 這個提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
+   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用簡易內含項目假設產生查詢計劃，而不使用聯結的預設基底內含項目假設。 這個提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在評估篩選條件的 AND 述詞以說明相互關聯時，使用最小選擇性來產生計劃。 這個提示名稱在搭配 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本的基數估計模型使用時會與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 相同，而且在將[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的基數估計模型使用時，會有類似效果。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
@@ -287,7 +288,7 @@ ROBUST PLAN
    
    這個提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 相同。
 *  'DISABLE_PARAMETER_SNIFFING'      
-   指示查詢最佳化工具在編譯有一或多個參數的查詢時使用平均資料分佈。 這個指令會讓查詢計畫與查詢在編譯時一開始使用的參數值無關。 這個提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)的 `PARAMETER_SNIFFING = OFF` 設定相同。
+   指示查詢最佳化工具在編譯有一或多個參數的查詢時，使用平均資料分佈。 這個指令會讓查詢計畫與查詢在編譯時一開始使用的參數值無關。 這個提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)的 `PARAMETER_SNIFFING = OFF` 設定相同。
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
   停用資料列模式記憶體授與意見反應。 如需詳細資訊，請參閱[資料列模式記憶體授與意見反應](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
@@ -327,8 +328,8 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > 一些 USE HINT 提示可能會與在全域或工作階段層級啟用的追蹤旗標發生衝突，或與資料庫範圍設定的設定發生衝突。 在此情況下，查詢層級提示 (USE HINT) 一律優先。 如果 USE HINT 與其他查詢提示或在查詢層級啟用的追蹤旗標 (例如由 QUERYTRACEON 啟用) 發生衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在嘗試執行查詢時會產生錯誤。 
 
-USE PLAN N'_xml\_plan_'  
- 強制查詢最佳化工具針對 **'** _xml\_plan_ **'** 所指定的查詢使用現有查詢計劃。 USE PLAN 無法搭配 INSERT、UPDATE、MERGE 或 DELETE 陳述式一起指定。  
+<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
+ 強制查詢最佳化工具針對 **'** _xml\_plan_ **'** 所指定的查詢使用現有查詢計劃。 USE PLAN 無法搭配 INSERT、UPDATE、MERGE 或 DELETE 陳述式一起使用。  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** 將指定資料表提示套用到與 _exposed\_object\_name_ 對應的資料表或檢視。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
   
@@ -385,7 +386,7 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. 使用 OPTIMIZE FOR  
- 下列範例指示查詢最佳化工具在最佳化查詢時，將 `'Seattle'` 值用於區域變數 `@city_name` 及使用統計資料判斷區域變數 `@postal_code` 的值。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
+ 下列範例指示查詢最佳化工具在最佳化查詢時，將 `'Seattle'` 值用於區域變數 `@city_name` 並使用統計資料來判斷區域變數 `@postal_code` 的值。 此範例會使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。  
   
 ```sql  
 DECLARE @city_name nvarchar(30);  

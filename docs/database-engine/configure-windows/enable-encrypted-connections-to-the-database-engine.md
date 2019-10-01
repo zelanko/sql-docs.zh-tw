@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2e4fd4583b7e43c04e03e6450c1fb958cf064b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874325"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314503"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
  用戶端必須可確認伺服器所使用之憑證的擁有權。 如果用戶端具有已簽署伺服器憑證之憑證授權單位的公開金鑰憑證，則不需要進一步進行組態設定。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 包含許多憑證授權單位的公開金鑰憑證。 如果伺服器憑證是由用戶端沒有公開金鑰憑證的公開或私人憑證授權單位所簽署，則您必須安裝已簽署伺服器憑證之憑證授權單位的公開金鑰憑證。  
   
 > [!NOTE]  
-> 若要在容錯移轉叢集中使用加密功能，請務必在容錯移轉叢集中的所有節點上，對於虛擬伺服器使用完整的 DNS 名稱來安裝伺服器憑證。 例如，假設您有一個雙節點的叢集，節點的名稱分別為 ***test1.\*\<您的公司>\*.com*** 和 ***test2.\*\<您的公司>\*.com***，且您有一個名為 ***virtsql*** 的虛擬伺服器，則兩個節點上都需要安裝 ***virtsql.\*\<您的公司>\*.com*** 的憑證。 您可以將 <bpt id="p1">**</bpt>ForceEncryption<ept id="p1">**</ept> 選項 (位於 [SQL Server 網路組態]<bpt id="p3">**</bpt><ept id="p3">**</ept> 的 [virtsql 的通訊協定]<bpt id="p2">**</bpt><ept id="p2">**</ept> 屬性方塊上) 設定為 <bpt id="p4">**</bpt>Yes<ept id="p4">**</ept>。
+> 若要在容錯移轉叢集中使用加密功能，請務必在容錯移轉叢集中的所有節點上，對於虛擬伺服器使用完整的 DNS 名稱來安裝伺服器憑證。 例如，假設您有一個雙節點的叢集，節點的名稱分別為 ***test1.\*\<您的公司>\*.com*** 和 ***test2.\*\<您的公司>\*.com***，且您有一個名為 ***virtsql*** 的虛擬伺服器，則兩個節點上都需要安裝 ***virtsql.\*\<您的公司>\*.com*** 的憑證。 您可以在 [SQL Server 網路組態]  的 [virtsql 通訊協定]  屬性方塊中，將 **ForceEncryption** 選項的值設為 [是]  。
 
 > [!NOTE]
 > 在 Azure VM 上建立 Azure 搜尋服務索引器到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密連線時，請參閱[在 Azure VM 上設定從 Azure 搜尋服務索引器到 SQL Server 的連線](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)。 
@@ -82,14 +82,14 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
 
 - 憑證的 [主旨]  屬性必須指出一般名稱 (CN) 與伺服器電腦的主機名稱或完整網域名稱 (FQDN) 是相同的。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在容錯移轉叢集上執行，則一般名稱必須符合虛擬伺服器的主機名稱或 FQDN，且容錯移轉叢集中的所有節點都必須提供憑證。
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的原生用戶端 (SNAC) 支援萬用字元憑證。 SNAC 已淘汰，並取代為 <bpt id="p1">[</bpt>Microsoft OLE DB Driver for SQL Server<ept id="p1">](../../connect/oledb/oledb-driver-for-sql-server.md)</ept> 和 <bpt id="p2">[</bpt>Microsoft ODBC Driver for SQL Server<ept id="p2">](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)</ept>。 其他用戶端可能不支援萬用字元憑證。 如需詳細資訊，請參閱用戶端文件和 [KB 258858](http://support.microsoft.com/kb/258858)。       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 的原生用戶端 (SNAC) 支援萬用字元憑證。 SNAC 已淘汰，並已替換成 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) 和 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。 其他用戶端可能不支援萬用字元憑證。 如需詳細資訊，請參閱用戶端文件和 [KB 258858](http://support.microsoft.com/kb/258858)。       
   使用 SQL Server 組態管理員不能選取萬用字元憑證。 若要使用萬用字元憑證，您必須編輯 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 登錄機碼，在 [憑證]  值輸入不含空格的憑證指紋。  
 
   > [!WARNING]  
   > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 ## <a name="to-provision-install-a-certificate-on-a-single-server"></a>在單一伺服器上佈建 (安裝) 憑證  
-在 <ph id="ph1">[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]</ph> 中，憑證管理已整合到 SQL Server 組態管理員。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的 SQL Server 組態管理員可以與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 搭配使用。 請參閱[憑證管理 (SQL Server 組態管理員)](../../database-engine/configure-windows/manage-certificates.md)，在單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上新增憑證。
+在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，憑證管理已整合到 SQL Server 組態管理員。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的 SQL Server 組態管理員可以與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 搭配使用。 請參閱[憑證管理 (SQL Server 組態管理員)](../../database-engine/configure-windows/manage-certificates.md)，在單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上新增憑證。
 
 如果使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]，且無法使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的 SQL Server 組態管理員，請遵循下列步驟：
 
@@ -124,7 +124,10 @@ TLS 使用的加密層級 (40 位元或 128 位元) 視應用程式和資料庫�
   
 2. 完成 **[憑證匯出精靈]** ，並將憑證檔儲存在方便取得的位置。  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>設定伺服器強制加密連線  
+## <a name="to-configure-the-server-to-force-encrypted-connections"></a>設定伺服器強制加密連線
+
+> [!IMPORTANT]
+> SQL Server 服務帳戶必須擁有用來在 SQL Server 上強制加密的憑證讀取權限。 針對不具有特殊權限的服務帳戶，則必須將讀取權限新增至憑證。 若不進行此操作，可能會導致 SQL Server 服務重新啟動失敗。
   
 1. 在 [SQL Server 組態管理員]  中，展開 [SQL Server 網路組態]  ，並以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]   ，然後選取 [屬性]  。  
   

@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的純量 UDF 內嵌 | Microsoft Docs
 description: 純量 UDF 內嵌功能可針對在 SQL Server (2018 和更新版本) 及 Azure SQL Database 中叫用純量 UDF 的查詢改善其效能。
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030340"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299132"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
@@ -154,7 +154,8 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 - UDF 會使用 `EXECUTE AS CALLER` 子句 (如果未指定 `EXECUTE AS` 子句，則為預設行為)。
 - UDF 不會參考資料表變數或資料表值參數。
 - 叫用純量 UDF 的查詢不會在其 `GROUP BY` 子句中參考純量 UDF 呼叫。
-- 在 SELECT 清單中使用 `DISTINCT` 子句叫用純量 UDF 的查詢，不會在其 `ORDER BY` 子句中參考純量 UDF 呼叫。
+- 在其選取清單中搭配 `DISTINCT` 子句叫用純量 UDF 的查詢不會具備 `ORDER BY` 子句。
+- UDF 不會用在 `ORDER BY` 子句中。
 - 不會以原生方式編譯 UDF (支援 Interop)。
 - UDF 不會用於計算資料行或檢查條件約束定義。
 - UDF 不會參考使用者定義型別。

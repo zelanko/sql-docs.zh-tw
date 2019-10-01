@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 09/04/2019
-ms.openlocfilehash: 10f5290275a921e923ca49492eab78e4fb019475
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.date: 09/24/2019
+ms.openlocfilehash: 776f251e574ae2fa8165e4dd4d4feee6a5cf9968
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149880"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326086"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -41,13 +41,68 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-182"></a>SSMS 18.2
+## <a name="ssms-183"></a>SSMS 18.3 
 
-下載：[下載 SSMS 18.2](download-sql-server-management-studio-ssms.md)  
+下載：[下載 SSMS 18.3](download-sql-server-management-studio-ssms.md)  
+組建編號：15.0.18178.0  
+發行日期：2019 年 9 月 23 日
+
+SSMS 18.3 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SSMS，請參閱[舊版 SSMS](release-notes-ssms.md#previous-ssms-releases)。
+
+18.3 是 18.2 的更新，其中包括下列新項目和 Bug 修正。
+
+## <a name="whats-new-in-183"></a>18.3 的新功能
+
+| 新項目 | 詳細資料 |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 資料分類 | 將資料分類資訊新增到資料行屬性 UI ([資訊類型]  、[資訊類型識別碼]  、[敏感度標籤]  和 [敏感度標籤識別碼]  不會在 SSMS UI 中公開)。 |
+| IntelliSense/編輯器 | 更新最近新增至 SQL Server 2019 功能 (例如，「ALTER SERVER CONFIGURATION」) 的支援。 | 
+| Integration Services | 新增新的選取功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，該項目會在 ADF 管線中，將 Azure-SSIS Integration Runtime 上的 SSIS 封裝執行作為執行 SSIS 封裝活動叫用。 |
+| SMO/指令碼 | 新增 Azure SQL DW 唯一條件約束支援指令碼的支援。 |
+| SMO/指令碼 | 資料分類 </br> - 新增 SQL 版本 10 (SQL 2008) 及更高版本的支援。 </br> - 新增 SQL 版本 15 (SQL 2019) 及更高版本，以及 Azure SQL DB 的新敏感性屬性 'rank'。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 將版本設定新增至規則集格式。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 新增新的檢查。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 新增 Azure SQL Database 受控執行個體的支援。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新 Cmdlet 的預設檢視，將結果顯示為資料表。 |
+
+## <a name="bug-fixes-in-183"></a>18.3 中的 Bug 修正
+
+| 新項目 | 詳細資料 |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Analysis Services | 修正 MDX 查詢編輯器中的縮放問題。|
+| Analysis Services | 修正 XEvent UI 中的問題，該問題會讓使用者無法建立新的工作階段。 |
+| Azure SQL Database 的資料庫部署 | 修正問題 (DacFx 中)，該問題會造成此功能無法運作。|
+| 一般 SSMS | 修正在 XEvent 檢視器中使用排序功能會造成 SSMS 當機的問題。 |
+| 一般 SSMS | 修正 SSMS 還原資料庫可能會無限期停止回應的長期問題。 </br></br> 請參閱 UserVoice 項目以取得詳細資料：  </br> [Restore Database - Select Backup Devices Slow to Load](https://feedback.azure.com/forums/908035/suggestions/32899099/) (還原資料庫 - 選取備份裝置載入緩慢)。  </br> [SSMS 2016 very slow in the database restore dialogs](https://feedback.azure.com/forums/908035/suggestions/32900767/) (SSMS 2016 在資料庫還原對話方塊中非常緩慢)。 </br> [Restoring database is slow](https://feedback.azure.com/forums/908035/suggestions/32900224/) (還原資料庫相當緩慢)。  </br> [Restore Database from Device HANGS on clicking "..."](https://feedback.azure.com/forums/908035/suggestions/34281658/) (從裝置還原資料庫在按一下 "..." 時停止回應)。  |
+| 一般 SSMS | 修正將所有登入之預設語言顯示為阿拉伯文的問題。 </br></br> 請參閱 UserVoice 項目以取得詳細資料：[SSMS 18.2 default language display bug](https://feedback.azure.com/forums/908035/suggestions/38236363) (SSMS 18.2 預設語言顯示 Bug)。 |
+| 一般 SSMS | 藉由將其設為可調整大小來修正難以查看 [查詢選項]  對話方塊 (使用者以滑鼠右鍵按一下 T-SQL 編輯器視窗時) 的問題。|
+| 一般 SSMS | 結果方格/檔案 (於 SSMS 18.2 中引進) 中可見的 [完成時間]  訊息現在可以在 [工具] > [選項] > [查詢執行] > [SQL Server] > [進階] > [顯示完成時間] 中進行設定。 |
+| 一般 SSMS | 在 [連線] 對話方塊中，分別將 [Active Directory - 密碼]  和 [Active Directory - 整合]  替換成 [Azure Active Directory - 密碼]  和 [Azure Active Directory - 整合]  。 |
+| 一般 SSMS | 修正位於具有負值 UTC 時差的時區時，讓使用者無法使用 SSMS 來在 Azure SQL Database 受控執行個體上設定稽核的問題。 |
+| 一般 SSMS | 修正 XEvent UI 中，暫留在方格上會選取資料列的問題。 </br></br> 請參閱 UserVoice 項目以取得詳細資料：[SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124) (SSMS 延伸事件 UI 在暫留時會選取動作)。 |
+| 匯入一般檔案 | 藉由讓使用者選擇簡易或豐富的資料類型偵測，以修正匯入一般檔案不會匯入所有資料的問題。</br></br> 請參閱 UserVoice 項目以取得詳細資料：[SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989) (SSMS 匯入一般檔案無法匯入所有資料)。 |
+| Integration Services | 為 SSIS 作業報表新增新的作業類型 *StartNonCatalogExecution*。|
+| SMO/指令碼 | 修正造成 SMO 使用 **SMO.Server.SetDefaultInitFields(true)** 擷取屬性時擲回錯誤的問題。|
+| 查詢存放區 UI | 修正在 [追蹤查詢]  檢視中選取 [執行計數]  計量時，Y 軸無法調整大小的問題。 |
+| 弱點評量 | 停用 Azure SQL DB 的清除和核准基準。|
+
+### <a name="known-issues-183"></a>已知問題 (18.3)
+
+- 從電腦 A 上所執行 SSMS 建立的資料庫圖表無法從電腦 B 進行修改 (SSMS 當機)。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
+
+- 在多個查詢視窗間進行切換時的重繪問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此問題的因應措施是在 [工具] > [選項] 下停用硬體加速。
+
+您可以參考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 以取得其他已知問題．並提供意見反應給產品小組。
+
+## <a name="previous-ssms-releases"></a>舊版 SSMS
+
+按一下下列各節中的標題連結，以下載舊版 SSMS：
+
+## <a name="downloadssdtmediadownloadpng-ssms-182httpsgomicrosoftcomfwlinklinkid2099720"></a>![下載](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+
+版本號碼：18.2  
 組建編號：15.0.18142.0  
 發行日期：2019 年 7 月 25 日
-
-SSMS 18.2 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SSMS，請參閱[舊版 SSMS](release-notes-ssms.md#previous-ssms-releases)。
 
 18.2 是 18.1 的更新，其中包括下列新項目和 Bug 修正。
 
@@ -93,7 +148,7 @@ SSMS 18.2 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 | SQL 代理程式 | 已修正新增、插入、編輯或移除作業步驟，導致焦點重設為第一個資料列，而不是使用中資料列的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892)。 |
 | SMO/指令碼 | 修正 *CREATE OR ALTER* 不會針對具有擴充屬性之物件編寫指令碼的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748)。 |
 | SMO/指令碼 | 修正 SSMS 無法正確編寫 CREATE EXTERNAL LIBRARY 指令碼的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37868089)。 |
-| SMO/指令碼 |  修正嘗試對具有數千個資料表之資料庫執行「產生指令碼」  的問題 (導致進度對話方塊似乎停滯)。 |
+| SMO/指令碼 | 修正嘗試對具有數千個資料表之資料庫執行「產生指令碼」  的問題 (導致進度對話方塊似乎停滯)。 |
 | SMO/指令碼 | 修正 SQL 2019 上「外部資料表」  指令碼無法正常運作的問題。 |
 | SMO/指令碼 | 修正 SQL 2019 上「外部資料來源」  指令碼無法正常運作的問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080)。 |
 | SMO/指令碼 | 已修正當目標為 Azure SQL DB 時，不會撰寫資料行上「擴充屬性」的問題。 如需詳細資料，請參閱 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)。 |
@@ -105,19 +160,13 @@ SSMS 18.2 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 
 - 從電腦 A 上執行的 SSMS 所建立資料庫圖表無法從電腦 B 進行修改 (它會造成 SSMS 損毀)。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 
-- SSMS 18.0 會在多個查詢視窗之間進行切換時重繪問題。 請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此問題的因應措施是停用 [工具]   > [選項]  下方的硬體加速。
+- 在多個查詢視窗間進行切換時的重繪問題。 請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此問題的因應措施是停用 [工具]   > [選項]  下方的硬體加速。
 
 - 您從方格、文字或檔案中顯示的 SSMS 結果所看到資料大小具有限制。
 
-- 有一個刪除 [物件總管] 中的 Azure SQL Database 時發生錯誤，但實際上是成功的問題。 此工作會顯示不正確的錯誤訊息。
+- 有一個刪除 [物件總管] 中的 Azure SQL Database 時發生錯誤，但實際上是成功的問題。
 
 - 在 [登入屬性] 對話方塊中，不論是針對登入所設定的實際預設語言為何，SQL 登入的預設語言都可能會顯示為 [阿拉伯文]。 若要檢視指定登入的實際預設語言，請使用 T-SQL 從 **master.sys.server_principles** 中選取登入的 **default_language_name**。
-
-您可以參考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 以取得其他已知問題．並提供意見反應給產品小組。
-
-## <a name="previous-ssms-releases"></a>舊版 SSMS
-
-按一下下列各節中的標題連結，以下載舊版 SSMS：
 
 ## <a name="downloadssdtmediadownloadpng-ssms-181httpsgomicrosoftcomfwlinklinkid2094583"></a>![下載](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
@@ -126,8 +175,6 @@ SSMS 18.2 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 - 發行日期：2019 年 6 月 11 日  
 
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
-
-SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SSMS，請參閱[舊版 SSMS](release-notes-ssms.md#previous-ssms-releases)。
 
 18.1 是 18.0 的小型更新，其中包括下列新項目和錯誤修正。
 
@@ -162,7 +209,7 @@ SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 | IntelliSense/編輯器 | 降低 IntelliSense 前往 Azure SQL Database 的 SMO 查詢流量。 |
 | IntelliSense/編輯器 | 鍵入 T-SQL 建立使用者時，所顯示工具提示中的文法錯誤已修正。 此外，也修正了錯誤訊息，釐清使用者與登入。 |
 | 記錄檢視器 | 已修正即使按兩下 [物件總管] 上較舊的封存符號，SSMS 也一律會開啟目前伺服器 (或代理程式) 記錄的問題：。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37633648)。 |
-| SSMS 安裝程式 | 已修正安裝程式記錄檔路徑包含空格時，造成 SSMS 安裝程式失敗的問題：。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110)。 |
+| SSMS 安裝程式 | 已修正下列問題：安裝程式記錄檔路徑包含空格時，造成 SSMS 安裝程式失敗。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110)。 |
 | SSMS 安裝程式 | 已修正下列問題：SSMS 在顯示啟動顯示畫面之後立即結束。 </br> 如需詳細資料，請參閱下列網站：[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37502512)、[SSMS Refuses to Start](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start) (SSMS 拒絕啟動)，以及 [Database Administrators](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up) (資料庫管理員)。 |
 | 物件總管 | 提高當連線到 Linux 上的 SQL 時，啟用 [啟動 PowerShell]  的限制。 |
 | 物件總管 | 已修正下列問題：嘗試展開 [PolyBase/向外延展群組] 節點時 (連線到計算節點時)，造成 SSMS 當機。 |
@@ -187,7 +234,9 @@ SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 
 - 關閉 SSMS 18.1 之後，不會保留 [選項]-> [文字編輯器]-> [編輯器] 索引標籤及狀態列 -> [狀態列配置和色彩] 下的 [群組連線]  與 [單一伺服器連線]  色彩選項。 當您重新開啟 SSMS 之後，[狀態列配置和色彩] 選項會還原成預設值 (白色)。
 
-- 您從方格、文字或檔案中顯示的 SSMS 結果所看到資料大小具有限制
+- 您從方格、文字或檔案中顯示的 SSMS 結果所看到資料大小具有限制。
+
+- 從電腦 A 上所執行 SSMS 建立的資料庫圖表無法從電腦 B 進行修改 (SSMS 當機)。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-180httpsgomicrosoftcomfwlinklinkid2088649"></a>![下載](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
@@ -455,6 +504,8 @@ SSMS 18.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 - 您可能會在安裝 18.0 版時，遇到無法執行 SQL Server Management Studio 的問題。 如果您遇到此問題，請依照 [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) (SSMS2018 - 已安裝但未執行) 一文中的步驟進行。
 
 - 您從方格、文字或檔案中顯示的 SSMS 結果所看到資料大小具有限制
+
+- 在多個查詢視窗間進行切換時的重繪問題。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此問題的因應措施是在 [工具] > [選項] 下停用硬體加速。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![下載](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 

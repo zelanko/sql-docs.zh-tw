@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: febf3a874ba0632c90117d52e74ce31926bfbbc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118946"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314526"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 用來加密憑證私密金鑰的密碼。 *cert_password* 必須具有 Unicode 資料格式。  
   
  @cert_password  
-**nchar** 或 **nvarchar** 類型的變數，其中包含用來加密憑證私密金鑰的密碼。 *@cert_password* 必須具有 Unicode 資料格式。  
+**nchar** 或 **nvarchar** 類型的變數，其中包含用來加密憑證私密金鑰的密碼。 *\@cert_password* 必須是 Unicode 資料格式。  
 
 ## <a name="return-types"></a>傳回類型  
 **varbinary**，大小上限為 8,000 個位元組。  

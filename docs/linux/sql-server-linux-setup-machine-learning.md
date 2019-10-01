@@ -1,31 +1,37 @@
 ---
-title: 在 Linux 上安裝 SQL Server 機器學習服務 (R、Python)
-description: 了解如何在 Red Hat、Ubuntu 和 SUSE 上安裝 SQL Server 機器學習服務 (R、Python)。
+title: 在 Linux 上安裝 SQL Server 機器學習服務 (Python、R)
+description: 了解如何在 Linux 上安裝 SQL Server 機器學習服務 (Python 和 R)：Red Hat、Ubuntu 和 SUSE。
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.openlocfilehash: b3d2fb6c05a078e222a68e8de8998d4edff3c1a8
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913557"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271969"
 ---
-# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>在 Linux 上安裝 SQL Server 機器學習服務 (R、Python)
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-從 SQL Server 2019 的此預覽版本開始，[SQL Server 機器學習服務](../advanced-analytics/index.yml)可在 Linux 作業系統上執行。 請遵循此文章中的步驟來安裝適用於 R 和 Python 的機器學習服務擴充功能。
+本文解釋如何在 Linux 上安裝 [SQL Server 機器學習服務](../advanced-analytics/index.yml)。 您可以使用機器學習服務來在資料庫中執行 Python 和 R 指令碼。
 
-機器學習和程式設計擴充功能是資料庫引擎的附加元件。 雖然您可以[同時安裝資料庫引擎和機器學習服務](#install-all)，但最佳做法是先安裝和設定 SQL Server 資料庫引擎，以便在新增更多元件之前解決任何問題。 
+支援下列 Linux 發行版本：
 
-R 和 Python 擴充功能的套件位置在 SQL Server Linux 來源存放庫中。 如果您已經為資料庫引擎安裝設定來源存放庫，您可以使用相同的存放庫登錄來執行 **mssql-mlservices** 套件安裝命令。
+- Red Hat Enterprise Linux (RHEL)
+- SUSE Linux Enterprise Server (SLES)
+- Ubuntu
+
+機器學習服務是資料庫引擎的附加功能。 雖然您可以[同時安裝資料庫引擎和機器學習服務](#install-all)，但最佳做法是先安裝和設定 SQL Server 資料庫引擎，以便在新增更多元件之前解決任何問題。 
+
+Python 和 R 延伸模組的套件位置位於 SQL Server Linux 來源存放庫中。 如果您已經為資料庫引擎安裝設定來源存放庫，您可以使用相同的存放庫登錄來執行 **mssql-mlservices** 套件安裝命令。
 
 Linux 容器上也支援機器學習服務。 我們沒有提供含機器學習服務的預先建立容器，但您可以使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) \(英文\)，從 SQL Server 容器建立一個。
 
@@ -52,8 +58,8 @@ ls /opt/microsoft/mssql/bin
 
 | 平台  | 套件移除命令 | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
-| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
+| Red Hat   | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
+| SUSE  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
@@ -74,7 +80,7 @@ ls /opt/microsoft/mssql/bin
 
 2. 使用適用於您作業系統的套件管理員和語法來執行安裝命令： 
 
-   + [RedHat](#RHEL)
+   + [Red Hat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
@@ -128,7 +134,7 @@ dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 ```
 
-#### <a name="mro-on-rhel"></a>RHEL 上的 MRO
+#### <a name="mro-on-red-hat"></a>Red Hat 上的 MRO
 
 ```bash
 # Import the Microsoft repository key
@@ -143,6 +149,7 @@ rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rp
 # Update packages on your system (optional)
 yum update
 ```
+
 #### <a name="mro-on-suse"></a>SUSE 上的 MRO
 
 ```bash
@@ -531,7 +538,7 @@ Linux 上的 R 和 Python 整合仍在開發中。 預覽版本中尚未啟用�
 
 R 開發人員可以從一些簡單的範例開始，並了解 R 如何搭配 SQL Server 使用的基本概念。 如需下一個步驟，請參閱下列連結：
 
-+ [教學課程：在 T-SQL 中執行 R](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教學課程：在 T-SQL 中執行 R](../advanced-analytics/tutorials/quickstart-r-create-script.md)
 + [教學課程：適用於 R 開發人員的資料庫內分析](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 開發人員可以遵循下列教學課程，以了解如何搭配使用 Python 與 SQL Server：

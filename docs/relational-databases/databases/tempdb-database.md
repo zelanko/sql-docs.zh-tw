@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653776"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326111"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 
@@ -46,8 +46,10 @@ ms.locfileid: "69653776"
   - 由資料庫中的資料修改交易所產生的資料列版本，該資料庫採用使用資料列版本設定隔離的讀取認可或快照集隔離交易。  
   - 由以下這類功能的資料修改交易所產生的資料列版本：線上索引作業、Multiple Active Result Set (MARS) 和 AFTER 觸發程序。  
   
-至少會記錄 **tempdb** 內的作業，以便回復交易。 每次啟動**時都會重新建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這樣系統永遠會以乾淨的資料庫複本啟動。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此，**tempdb** 中的任何資料都不會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個工作階段儲存到其他的工作階段。 **tempdb**不允許進行備份和還原作業。  
-  
+至少會記錄 **tempdb** 內的作業，以便回復交易。 每次啟動**時都會重新建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這樣系統永遠會以乾淨的資料庫複本啟動。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此， **tempdb** 中的任何資料都不會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個工作階段儲存到其他的工作階段。 **tempdb**不允許進行備份和還原作業。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 實體屬性
 
 下表列出 SQL Server 中的 **tempdb** 資料和記錄檔的初始設定值，其是以 Model 資料庫的預設值為依據。 對於不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這些檔案的大小稍有不同。  
@@ -109,9 +111,9 @@ ms.locfileid: "69653776"
 
 ### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>以 DTU 為基礎的服務層 tempdb 大小
 
-|SLO|Tempdb 資料檔案大小上限 (GB)|Tempdb 資料檔案數|Tempdb 資料檔案大小上限 (GB)|
+|SLO|Tempdb 資料檔案大小上限 (GB)|Tempdb資料檔案數|Tempdb 資料檔案大小上限 (GB)|
 |---|---:|---:|---:|
-|基本|13|1|13|
+|[基本]|13|1|13|
 |S0|13|1|13|
 |S1|13|1|13|
 |S2|13|1|13|
@@ -223,7 +225,7 @@ TempDB 中繼資料競爭一直以來都是在 SQL Server 上執行之許多工�
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
 ```
 
-此設定變更需要重新啟動服務才會生效。
+這項設定變更需要重新啟動服務才會生效。
 
 此實作有些限制請務必注意：
 
@@ -242,9 +244,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     COMMIT TRAN
     ```
 3. 針對經記憶體最佳化之資料表的查詢不支援鎖定和隔離提示，因此針對經記憶體最佳化之 TempDB 目錄檢視的查詢不支援鎖定和隔離提示。 至於 SQL Server 中的其他系統目錄檢視，針對系統檢視表的所有交易都會是 READ COMMITTED 隔離 (或在本例中為 READ COMMITTED SNAPSHOT)。
-4. 啟用經記憶體最佳化的 tempdb 中繼資料後，暫存資料表可能會有一些資料行存放區索引的問題。 在此預覽版本中，使用經記憶體最佳化的 tempdb 中繼資料時，最好避免在暫存資料表上使用資料行存放區索引。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4. 啟用經記憶體最佳化的 tempdb 中繼資料時，無法在暫存資料表上建立[資料行存放區索引](../indexes/columnstore-indexes-overview.md)。
 
 > [!NOTE] 
 > 這些限制僅適用於參考 TempDB 系統檢視表時，如有需要，您可在存取使用者資料庫中經記憶體最佳化的資料表時，在相同的交易中建立暫存資料表。
@@ -254,9 +254,11 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
+若伺服器在啟用經記憶體最佳化的 TempDB 中繼資料後因為任何原因而無法啟動，您可以使用 **-f** 啟動選項，以[最小組態](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)啟動 SQL Server 來略過功能。 這可以讓您停用功能，然後以一般模式重新啟動 SQL Server。
+
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 容量規劃
 
-在決定 SQL Server 生產環境中的 tempdb 適當大小時，您需要考量許多因素。 如此文章先前所述，這些因素包括現有的工作負載和使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 我們建議您在 SQL Server 測試環境中執行下列工作來分析現有的工作負載：
+在決定 SQL Server 生產環境中的 tempdb 適當大小時，您需要考量許多因素。 如本文先前所述，這些因素包括現有的工作負載和使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 我們建議您在 SQL Server 測試環境中執行下列工作來分析現有的工作負載：
 
 - 將 tempdb 的自動成長設為開啟。
 - 執行個別查詢或工作負載追蹤檔案，並監視 tempdb 空間使用量。

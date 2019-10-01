@@ -14,12 +14,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140372"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326132"
 ---
 # <a name="use-column-sets"></a>使用資料行集
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68140372"
   
  當資料表中的資料行數目很大，而且個別操作資料行很麻煩時，您應該考慮使用資料行集。 當應用程式在擁有許多資料行的資料表上使用資料行集來選取及插入資料時，可能會看到一些效能上的改善。 但是，當資料表中的資料行上定義許多索引時，資料行集的效能可能會降低。 這是因為執行計畫所需的記憶體數量增加的緣故。  
   
- 若要定義資料行集，請在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式中使用 *<資料行集名稱>* FOR ALL_SPARSE_COLUMNS 關鍵字。  
+ 若要定義資料行集，請在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 陳述式中使用 <資料行集名稱>  FOR ALL_SPARSE_COLUMNS 關鍵字。  
   
 ## <a name="guidelines-for-using-column-sets"></a>使用資料行集的指導方針  
  使用資料行集時，請考慮下列指導方針：  
@@ -91,14 +91,14 @@ ms.locfileid: "68140372"
 -   資料行集的 XML 表示中會省略包含 null 值的疏鬆資料行。  
   
 > [!WARNING]  
->  加入資料行集會變更 SELECT * 查詢的行為 此查詢會將資料行集當做 XML 資料行傳回，而且不會傳回個別的疏鬆資料行。 結構描述設計人員和軟體開發人員必須要小心，不能破壞現有的應用程式。  
+>  新增資料行集會變更 `SELECT *` 查詢的行為。 此查詢會將資料行集當做 XML 資料行傳回，而且不會傳回個別的疏鬆資料行。 結構描述設計人員和軟體開發人員必須要小心，不能破壞現有的應用程式。  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>在資料行集內插入或修改資料  
  若要執行疏鬆資料行的資料操作，可以使用個別資料行的名稱，或是參考資料行集的名稱，以及使用資料行集的 XML 格式來指定資料行集的值。 疏鬆資料行可依任何順序出現在 XML 資料行中。  
   
  當您使用 XML 資料行集來插入或更新疏鬆資料行值時，插入基礎疏鬆資料行內的值會從 **xml** 資料類型隱含地轉換。 如果是數值資料行，數值資料行之 XML 內的空白值會轉換成空白字串。 這樣會將零插入數值資料行中，如下列範例所示。  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -109,7 +109,7 @@ GO
   
  在此範例中， `i`資料行未指定任何值，但是插入了 `0` 的值。  
   
-## <a name="using-the-sqlvariant-data-type"></a>使用 sql_variant 資料類型  
+## <a name="using-the-sql_variant-data-type"></a>使用 sql_variant 資料類型  
  **sql_variant** 資料類型可以儲存多種不同的資料類型，例如 **int**、 **char**和 **date**。 資料行集會將與 **sql_variant** 值相關聯的資料類型資訊 (例如小數位數、有效位數和地區設定資訊)，輸出為產生之 XML 資料行內的屬性。 如果您嘗試在自訂產生的 XML 陳述式內提供這些屬性當做資料行集上插入或更新作業的輸入，某些屬性會是必要的，而且其中一些屬性會指派預設值。 下表列出當未提供值時，伺服器所產生的資料類型和預設值。  
   
 |資料類型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大長度|有效位數|小數位數|  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  此資料表只有五個資料行，以方便顯示及閱讀。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -166,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. 使用疏鬆資料行的名稱，將資料插入資料表中  
  下列範例會將兩個資料列插入範例 A 建立的資料表中。此範例會使用疏鬆資料行的名稱，而且不會參考資料行集。  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. 使用資料行集的名稱，將資料插入資料表中  
  下列範例會將第三個資料列插入範例 A 建立的資料表中。這次不會使用疏鬆資料行的名稱， 而是使用資料行集的名稱，而且插入作業會提供四個疏鬆資料行其中兩個的值 (使用 XML 格式)。  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -188,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. 在使用 SELECT * 時觀察資料行集的結果  
  以下範例會從包含資料行集的資料表中選取所有資料行， 它會傳回 XML 資料行，其中包含疏鬆資料行的結合值。 但是不會個別傳回疏鬆資料行。  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. 觀察依據名稱選取資料行集的結果  
  由於生產部門對於行銷資料不感興趣，所以此範例加入 `WHERE` 子句來限制輸出。 此範例會使用資料行集的名稱。  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -213,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. 觀察依據名稱選取疏鬆資料行的結果  
  當資料表包含資料行集時，您仍然可以使用個別資料行名稱來查詢此資料表，如下列範例所示。  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -230,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>G. 使用資料行集更新資料表  
  下列範例會使用該資料列所用之兩個疏鬆資料行的新值來更新第三筆記錄。  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -251,7 +250,7 @@ GO
   
  下列範例會更新第三筆記錄，但是只會指定兩個已填入之資料行其中一個的值。 第二個資料行 `ProductionLocation` 不會併入 `UPDATE` 陳述式中，而且會更新為 NULL。  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  

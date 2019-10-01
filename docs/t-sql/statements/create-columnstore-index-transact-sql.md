@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b8956be43328bba679eef2d1fb4304cc4b4
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: b17fe334b1261d463e8389564912e48b7553dc7f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929681"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326107"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -396,7 +396,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 特定的限制**  
 這些限制僅套用到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 在此版本中，我們引進了可更新的叢集資料行存放區索引。 非叢集資料行存放區索引仍然是唯讀的。  
 
--   變更追蹤。 因為非叢集資料行存放區索引 (NCCI) 是唯讀的，因此您法使用變更追蹤。 這個功能對於叢集資料行存放區索引 (CCI) 不起作用。  
+-   變更追蹤。 您無法搭配資料行存放區索引使用變更追蹤。  
 -   異動資料擷取。 因為非叢集資料行存放區索引 (NCCI) 是唯讀的，因此您法使用異動資料擷取。 這個功能對於叢集資料行存放區索引 (CCI) 不起作用。  
 -   可讀取的次要複本。 您無法從 AlwaysOn 可用性群組的可讀取次要複本來存取叢集資料行存放區索引 (CCI)。  您可以從可讀取的次要複本來存取非叢集資料行存放區索引 (NCCI)。  
 -   Multiple Active Result Sets (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用 MARS 來與具有資料行存放區索引的資料表進行唯讀連線。 不過，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支援 MARS 在具備資料行存放區索引的資料表上，進行並行資料操作語言 (DML) 作業。 發生這種情況時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會終止連線並中止交易。  

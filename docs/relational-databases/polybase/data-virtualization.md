@@ -1,5 +1,5 @@
 ---
-title: 虛擬化 SQL Server 2019 CTP 2.0 中的外部資料 | Microsoft Docs
+title: 在 SQL Server 2019 中虛擬化外部資料 | Microsoft Docs
 description: 此頁面詳述針對關聯式資料來源使用 [建立外部資料表精靈] 的步驟
 author: Abiola
 ms.author: aboke
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7d2abf18c7442a8f57448532e5211fc5c60e1ea7
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418771"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341828"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>搭配使用外部資料表精靈與關聯式資料來源
 
-其中一個 SQL Server 2019 CTP 2.0 重要情節是可以虛擬化資料。 此程序允許將資料保留在其原始位置。 您可以在 SQL Server 執行個體中「虛擬化」  資料，以在該處查詢它，如同 SQL Server 中的任何其他資料表。 此程序會將 ETL 程序的需求降到最低。 此程序只要使用 PolyBase 連接器就能達成。 如需資料虛擬化的詳細資訊，請參閱[開始使用 PolyBase](polybase-guide.md)。
+其中一個 SQL Server 2019 重要情節是可以虛擬化資料。 此程序允許將資料保留在其原始位置。 您可以在 SQL Server 執行個體中「虛擬化」  資料，以在該處查詢它，如同 SQL Server 中的任何其他資料表。 此程序會將 ETL 程序的需求降到最低。 此程序只要使用 PolyBase 連接器就能達成。 如需資料虛擬化的詳細資訊，請參閱[開始使用 PolyBase](polybase-guide.md)。
 
 ## <a name="start-the-external-table-wizard"></a>啟動外部資料表精靈
 
@@ -44,10 +44,7 @@ ms.locfileid: "68418771"
 ![建立資料庫主要金鑰](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> 如果您已經有資料庫主要金鑰，則會限制輸入欄位，而且您可以略過此步驟。 選取 [下一步]  繼續進行。
-
-> [!NOTE]
-> 如果您未選擇強式密碼，精靈會在最後一個步驟中執行此作業。 這是已知的問題。
+> 如果您已經有資料庫主要金鑰，將會自動略過此步驟。
 
 ## <a name="enter-external-data-source-credentials"></a>輸入外部資料來源認證
 

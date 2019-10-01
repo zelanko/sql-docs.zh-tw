@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdd652c18af72c73566afac978c4dc00e2867a8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065853"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227184"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -44,8 +44,9 @@ ms.locfileid: "68065853"
 - 啟用或停用原生編譯 T-SQL 模組的執行統計資料收集。
 - 為支援 `ONLINE =` 語法的 DDL 陳述式啟用或停用預設為線上的選項。
 - 為支援 `RESUMABLE =` 語法的 DDL 陳述式啟用或停用預設為可繼續的選項。
-- 啟用或停用全域暫存資料表的自動卸除功能。
 - 啟用或停用[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能。
+- 啟用或停用加速強制執行計劃。
+- 啟用或停用全域暫存資料表的自動卸除功能。
 - 啟用或停用[輕量型查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
 - 啟用或停用新的 `String or binary data would be truncated` 錯誤訊息。
 - 啟用或停用 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中最後一個實際執行計畫的集合。
@@ -82,6 +83,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | ACCELERATED_PLAN_FORCING = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
@@ -287,11 +289,20 @@ DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 > [!NOTE]
 > 針對資料庫相容性層級 140 (含) 以下，這個資料庫範圍設定沒有任何作用。
 
+ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
+
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
+
+針對強制執行查詢計劃啟用最佳化機制，適用於所有形式的強制執行計劃，例如[查詢存放區強制執行計劃](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed)、[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction)或[使用計劃](../../t-sql/queries/hints-transact-sql-query.md#use-plan)查詢提示。 預設值是 ON。
+
+> [!NOTE]
+> 不建議停用加速強制執行計劃。
+
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
 
-允許設定[全域暫存資料表](create-table-transact-sql.md)的自動卸除功能。 預設值為 [ON]，表示全域暫存資料表會在沒有任何工作階段使用時自動卸除。 當設為 [OFF] 時，將需要使用 DROP TABLE 陳述式，才能明確卸除全域暫存資料表，或是等到伺服器重新啟動時再自動卸除。
+允許設定[全域暫存資料表](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)的自動卸除功能。 預設值為 [ON]，表示全域暫存資料表會在沒有任何工作階段使用時自動卸除。 當設為 [OFF] 時，將需要使用 DROP TABLE 陳述式，才能明確卸除全域暫存資料表，或是等到伺服器重新啟動時再自動卸除。
 
 - 使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區，此選項可以在 SQL Database 伺服器的個別使用者資料庫中進行設定。
 - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體中，此選項會在 `TempDB` 中設定，且個別使用者資料庫的設定不會有任何效果。
@@ -356,7 +367,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 - 資源管理員設定會覆寫 `sp_configure` 設定。
 
-### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
+### <a name="query_optimizer_hotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
 使用 `QUERYTRACEON` 提示來啟用 SQL Server 7.0 到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的預設查詢最佳化工具或查詢最佳化工具 Hotfix 時，在查詢提示與資料庫範圍組態設定之間會是 OR 條件；也就是說，如果啟用兩者其中之一，就會套用資料庫範圍設定選項。
 
@@ -368,11 +379,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 因為 `ALTER DATABASE SCOPED CONFIGURATION` 是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 中會影響資料庫結構描述的新功能，所以匯出的結構描述 (不論有無資料) 不能匯入至較舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，例如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 例如，從使用此新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫匯出至 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的匯出項目，將無法匯入至舊版伺服器。
 
-### <a name="elevateonline"></a>ELEVATE_ONLINE
+### <a name="elevate_online"></a>ELEVATE_ONLINE
 
 此選項僅適用於支援 `WITH (ONLINE = <syntax>)` 的 DDL 陳述式。 不會影響 XML 索引。
 
-### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
+### <a name="elevate_resumable"></a>ELEVATE_RESUMABLE
 
 此選項僅適用於支援 `WITH (RESUMABLE = <syntax>)` 的 DDL 陳述式。 不會影響 XML 索引。
 
@@ -404,7 +415,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = 4 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
-### <a name="c-set-legacycardinalityestimation"></a>C. 設定 LEGACY_CARDINALITY_ESTIMATION
+### <a name="c-set-legacy_cardinality_estimation"></a>C. 設定 LEGACY_CARDINALITY_ESTIMATION
 此範例會在異地複寫案例中，將次要資料庫的 LEGACY_CARDINALITY_ESTIMATION 設定為 ON。
 
 ```sql
@@ -417,7 +428,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
-### <a name="d-set-parametersniffing"></a>D. 設定 PARAMETER_SNIFFING
+### <a name="d-set-parameter_sniffing"></a>D. 設定 PARAMETER_SNIFFING
 此範例會在異地複寫案例中，將主要資料庫的 PARAMETER_SNIFFING 設定為 OFF。
 
 ```sql
@@ -436,7 +447,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY ;
 ```
 
-### <a name="e-set-queryoptimizerhotfixes"></a>E. 設定 QUERY_OPTIMIZER_HOTFIXES
+### <a name="e-set-query_optimizer_hotfixes"></a>E. 設定 QUERY_OPTIMIZER_HOTFIXES
 在異地複寫案例中，將主要資料庫的 QUERY_OPTIMIZER_HOTFIXES 設定為 ON。
 
 ```sql
@@ -450,7 +461,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
-### <a name="g-set-identitycache"></a>G. 設定 IDENTITY_CACHE
+### <a name="g-set-identity_cache"></a>G. 設定 IDENTITY_CACHE
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (功能目前為公開預覽版)
 
 此範例會停用識別快取。
@@ -459,7 +470,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
-### <a name="h-set-optimizeforadhocworkloads"></a>H. 設定 OPTIMIZE_FOR_AD_HOC_WORKLOADS
+### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. 設定 OPTIMIZE_FOR_AD_HOC_WORKLOADS
 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 此範例會允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。
@@ -468,7 +479,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
-### <a name="i-set-elevateonline"></a>I. 設定 ELEVATE_ONLINE
+### <a name="i-set-elevate_online"></a>I. 設定 ELEVATE_ONLINE
 **適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
 
 此範例會將 ELEVATE_ONLINE 設定為 FAIL_UNSUPPORTED。
@@ -477,7 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
-### <a name="j-set-elevateresumable"></a>J. 設定 ELEVATE_RESUMABLE
+### <a name="j-set-elevate_resumable"></a>J. 設定 ELEVATE_RESUMABLE
 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
 
 此範例會將 ELEVEATE_RESUMABLE 設定為 WHEN_SUPPORTED。
@@ -502,26 +513,26 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 - [平行處理原則的程度](../../relational-databases/query-processing-architecture-guide.md#DOP)
 - [SQL Server 的 "max degree of parallelism" 組態選項的建議和指導方針](https://support.microsoft.com/kb/2806535)
 
-### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 資源
+### <a name="legacy_cardinality_estimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 資源
 
 - [基數估計 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃)
 
-### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 資源
+### <a name="parameter_sniffing-resources"></a>PARAMETER_SNIFFING 資源
 
 - [參數探測](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 - [參數的運用](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/) \(英文\)
 
-### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 資源
+### <a name="query_optimizer_hotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 資源
 
 - [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [SQL Server 查詢最佳化工具 Hotfix 追蹤旗標 4199 服務模型](https://support.microsoft.com/kb/974006)
 
-### <a name="elevateonline-resources"></a>ELEVATE_ONLINE 資源
+### <a name="elevate_online-resources"></a>ELEVATE_ONLINE 資源
 
 [線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-### <a name="elevateresumable-resources"></a>ELEVATE_RESUMABLE 資源
+### <a name="elevate_resumable-resources"></a>ELEVATE_RESUMABLE 資源
 
 [線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 

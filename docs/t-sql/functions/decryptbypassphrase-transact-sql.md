@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d24a636e47c6e969b339350caba0f8609a86d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079933"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314517"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 以金鑰加密的資料字串。 *ciphertext* 具有 **varbinary** 資料類型。  
  
 @ciphertext  
-**varbinary** 類型的變數，其中包含以金鑰加密的資料。 *@ciphertext* 變數的大小上限為 8,000 個位元組。  
+**varbinary** 類型的變數，其中包含以金鑰加密的資料。 *\@ciphertext* 變數的大小上限為 8,000 個位元組。  
   
 *add_authenticator*  
 指出原始加密程序是否隨純文字一同包含及加密驗證器。 如果加密程序使用驗證器，則 *add_authenticator* 的值為 1。 *add_authenticator* 具有 **int** 資料類型。  
   
 @add_authenticator  
-指出原始加密程序是否隨純文字一同包含及加密驗證器的變數。 如果加密程序使用驗證器，則 *@add_authenticator* 的值為 1。 *@add_authenticator* 具有 **int** 資料類型。  
+指出原始加密程序是否隨純文字一同包含及加密驗證器的變數。 如果加密處理序使用驗證器，則 *\@add_authenticator* 的值為 1。 *\@add_authenticator* 具有 **int** 資料類型。  
 
 *authenticator*  
 作為驗證器產生基礎使用的資料。 *authenticator* 具有 **sysname** 資料類型。  
   
 @authenticator  
-變數，其中包含作為驗證器產生基礎使用的資料。 *@authenticator* 具有 **sysname** 資料類型。  
+變數，其中包含作為驗證器產生基礎使用的資料。 *\@authenticator* 具有 **sysname** 資料類型。  
   
 ## <a name="return-types"></a>傳回類型  
 **varbinary**，大小上限為 8,000 個位元組。  

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1214bde9a4c36a928f21c43b63c067cbb7bd0340
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163917"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227173"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -3041,7 +3041,9 @@ command|相似|%DWResultCacheDb%|
 1. 新查詢與產生結果集快取的上一個查詢完全相符。
 1. 產生快取結果集的來源資料表中沒有資料或結構描述變更。  
 
-一旦開啟資料庫的結果集快取功能，除了具有非決定性函數 (例如 DateTime.Now()) 的查詢以外，會快取查詢的其他全部結果，直到快取滿為止。   具有大型結果集 (例如 > 1 百萬個資料列) 的查詢在第一次執行時，可能會在建立結果快取時，出現效能較低的情形。
+一旦開啟資料庫的結果集快取功能，除了使用非決定性函數 (例如 DateTime.Now()) 的查詢和傳回資料列大小大於 64KB 之資料的查詢以外，會快取所有查詢的結果，直到快取已滿為止。   
+
+具有大型結果集 (例如 > 1 百萬個資料列) 的查詢在第一次執行時，可能會在建立結果快取時，出現效能較低的情形。
 
 **<snapshot_option> ::=**        
 

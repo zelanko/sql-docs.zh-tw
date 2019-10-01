@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70911191"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326122"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 預覽版版本資訊
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -60,17 +60,6 @@ Windows、Linux 和容器上的 SQL Server 2019 RC 組建編號為 `15.0.1900.25
     - Microsoft .NET Framework 4.6.2。 可從[下載中心](https://www.microsoft.com/download/details.aspx?id=53344)取得。
     - 針對 Linux，請參閱 [Linux - 支援的平台](../linux/sql-server-linux-setup.md#supportedplatforms)
 
-## <a name = "release-notes"></a>不支援的功能
-
-- **問題和對客戶的影響**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]不支援下列元件、功能和案例：
-  - SQL Server Analysis Services
-  - SQL Server Reporting Services
-  - Kubernetes 上的 Always On 可用性群組
-
-- **因應措施**：無。 排除適用於所有客戶，包括 SQL 早期採用者方案的參與者。
-
-- **適用於**：候選版
-
 ## <a name="updated-compiler"></a>更新的編譯器
 
 - **問題和對客戶的影響**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 是以更新的編譯器所建置。 CTP 2.1 有個已知的問題，由於更新編譯器的緣故，浮點數和其他轉換案例可能傳回與舊版不同的值。 CTP 2.2 內含可確保受影響案例傳回與舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 相同結果的運作。 截至候選版為止已無任何已知問題。 如果發現與 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] 相較之下有任何結果異常，請立即回報 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 小組](https://aka.ms/sqlfeedback)。
@@ -114,7 +103,7 @@ Windows、Linux 和容器上的 SQL Server 2019 RC 組建編號為 `15.0.1900.25
 
 ## <a name="sql-server-configuration-manager-may-not-start"></a>SQL Server 組態管理員可能不會啟動
 
-- **問題和對客戶的影響**︰若無 VCRuntime 140，電腦上的 SQL Server 組態管理員 (SSCM) 不會啟動。 使用者可能會在啟動 SSCM 時見到下列對話方塊： 
+- **問題和對客戶的影響**︰若沒有 VCRuntime 140 (VCRUNTIME140.dll) 檔案，則不會啟動電腦上的 SQL Server 組態管理員 (SSCM)。 使用者可能會在啟動 SSCM 時見到下列對話方塊： 
 
 
   `MMC could not create the snap-in. The snap-in might not have been installed correctly.`

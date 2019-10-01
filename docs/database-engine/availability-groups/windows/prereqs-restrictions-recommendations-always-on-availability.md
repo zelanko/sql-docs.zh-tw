@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014484"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250978"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性群組的必要條件、限制和建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "68014484"
   
 -   **每一部電腦之可用性群組和可用性資料庫的最大數量：** 您可以放到電腦的資料庫和可用性群組 (VM 或實體) 的實際數量取決於硬體和工作負載，但沒有強制執行的限制。 Microsoft 已針對每部實體機器測試了多達 10 個 AG 和 100 個 DB，不過，這不是繫結限制。 根據伺服器和工作負載的硬體規格，您可以在 SQL Server 執行個體上輸入更高數目的資料庫和可用性群組。 超載系統的徵狀包括 (但不限於)：工作者執行緒耗盡、AlwaysOn 系統檢視和 DMV 的回應時間緩慢，及/或停止的發送器系統傾印。 請確實透過類似實際執行的工作負載徹底測試您的環境，確保其能夠在應用程式 SLA 範圍內處理尖峰工作負載容量。 在考量 SLA 的情況下，務必考慮失敗情況下的負載，以及預期的回應時間。  
   
--   **不要使用容錯移轉叢集管理員操作可用性群組：**  
+-   **不要使用容錯移轉叢集管理員操作可用性群組**。 SQL Server 容錯移轉叢集執行個體 (FCI) 的狀態會在 SQL Server 和 Windows 容錯移轉叢集 (WSFC) 之間共用，其中 SQL Server 會保留比叢集在意程度更詳細的執行個體狀態資訊。 管理模型是 SQL Server 必須驅動交易，且負責將叢集狀態檢視與 SQL Server 的狀態檢視保持同步。 若叢集狀態在 SQL Server 的外部產生變更，狀態便可能會在 WSFC 和 SQL Server 間失去同步，並可能導致無法預期的行為。
   
      例如：  
   

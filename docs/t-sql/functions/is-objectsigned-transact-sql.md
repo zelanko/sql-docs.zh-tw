@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1891180d7fa3b1a064cf0cdebc5295303ecf7b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086703"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314607"
 ---
-# <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
+# <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   指出物件是否由指定的憑證或非對稱金鑰所簽署。  
@@ -44,20 +44,20 @@ IS_OBJECTSIGNED (
  **'OBJECT'**  
  安全性實體類別的類型。  
   
- *@object_id*  
- 正在測試之物件的 object_id。 *@object_id* 的類型為 **int**。  
+ *\@object_id*  
+ 正在測試之物件的 object_id。 *\@object_id* 的類型是 **int**。  
   
- *@class*  
+ *\@class*  
  物件的類別：  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- *@class* 為 **sysname**。  
+ *\@class* 是 **sysname**。  
   
- *@thumbprint*  
- 物件的 SHA 指模。 *@thumbprint* 的類型為 **varbinary(32)** 。  
+ *\@thumbprint*  
+ 物件的 SHA 指模。 *\@thumbprint* 的類型是 **varbinary(32)** 。  
   
 ## <a name="returned-types"></a>傳回的類型  
  **int**  

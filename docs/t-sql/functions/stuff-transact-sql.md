@@ -24,12 +24,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 564edb184c5b9d56159c6b931557daf85beeb295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117721"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341998"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  這是一個開始刪除和插入之位置的整數值。 如果 *start* 是負數或零，則會傳回 Null 字串。 如果 *start* 長度超出第一個 *character_expression*，則會傳回 Null 字串。 *start* 可以是 **bigint** 類型。  
   
  *length*  
- 這是一個整數，指定要刪除的字元數。 如果 *length* 是負數，則會傳回 Null 字串。 如果 *length* 長度超出第一個 *character_expression*，則刪除動作就會進行到最後一個 *character_expression*的最後一個字元。  如果 *length* 為零，則會在字串中的第一個字元之前進行插入。 *length* 可以是 **bigint** 類型。
+ 這是一個整數，指定要刪除的字元數。 如果 *length* 是負數，則會傳回 Null 字串。 如果 *length* 長度超出第一個 *character_expression*，則刪除動作就會進行到最後一個 *character_expression*的最後一個字元。  如果 *length* 為零，則會在 *start* 位置進行插入，且不會刪除任何字元。 *length* 可以是 **bigint** 類型。
 
  *replaceWith_expression*  
  這是字元資料的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是字元或二進位資料的常數、變數或資料行。 這個運算式會從 *start* 開始取代 *character_expression* 的 *length* 字元。 提供 `NULL` 當做 *replaceWith_expression*，移除字元且不插入任何內容。   

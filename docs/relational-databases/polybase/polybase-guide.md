@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: b414cf8eb783a64deb65010ab549c9791e82580c
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: c33e212ea513cbb5271c1271f938b1009855559c
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495383"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326157"
 ---
 # <a name="what-is-polybase"></a>什麼是 PolyBase？
 
@@ -39,13 +39,13 @@ PolyBase 可讓您的 SQL Server 2016 執行個體處理會從 Hadoop 讀取資�
 PolyBase 將某些計算推送到 Hadoop 節點以最佳化整體查詢。 不過，PolyBase 外部存取並非僅限於 Hadoop。 也支援其他非結構化資料表，例如分隔文字檔。
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 引進 PolyBase 的新連接器 (包含 SQL Server、Oracle、Teradata 和 MongoDB)。 如需相關資訊，請參閱 [SQL Server 2019 CTP 2.0 的 PolyBase 文件](polybase-guide.md?view=sql-server-ver15)
+> SQL Server 2019 引進 PolyBase 的新連接器 (包含 SQL Server、Oracle、Teradata 和 MongoDB)。 如需詳細資訊，請參閱 [SQL Server 2019 的 PolyBase 文件](polybase-guide.md?view=sql-server-ver15)
 
 ::: moniker-end
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-PolyBase 可讓您的 SQL Server 執行個體處理會從外部資料來源讀取資料的 Transact-SQL 查詢。 SQL Server 2016 和更新版本可以存取 Hadoop 和 Azure Blob 儲存體中的外部資料。 從 SQL Server 2019 CTP 2.0 開始，您現在可以使用 PolyBase 在 [SQL Server](polybase-configure-sql-server.md)、[Oracle](polybase-configure-oracle.md)、[Teradata](polybase-configure-teradata.md) 和 [MongoDB](polybase-configure-mongodb.md) 中存取外部資料。
+PolyBase 可讓您的 SQL Server 執行個體處理會從外部資料來源讀取資料的 Transact-SQL 查詢。 SQL Server 2016 和更新版本可以存取 Hadoop 和 Azure Blob 儲存體中的外部資料。 從 SQL Server 2019 開始，您現在可以使用 PolyBase 來存取 [SQL Server](polybase-configure-sql-server.md)、[Oracle](polybase-configure-oracle.md)、[Teradata](polybase-configure-teradata.md) 和 [MongoDB](polybase-configure-mongodb.md) 中的外部資料。
 
 存取外部資料的相同查詢也可以將目標設為您 SQL Server 執行個體中的關聯式資料表。 這可讓您結合來自外部來源的資料與資料庫中的高價值關聯式資料。 在 SQL Server 中，[外部資料表](../../t-sql/statements/create-external-table-transact-sql.md)或[外部資料來源](../../t-sql/statements/create-external-data-source-transact-sql.md)提供到 Hadoop 的連線。
 

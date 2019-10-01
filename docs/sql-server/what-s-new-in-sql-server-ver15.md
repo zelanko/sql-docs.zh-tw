@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096884"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326183"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -77,11 +77,12 @@ ms.locfileid: "71096884"
 |可繼續的線上建置資料列存放區索引 | 請參閱[線上執行索引作業](../relational-databases/indexes/perform-index-operations-online.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="in-memory-databases"></a>記憶體內部資料庫
+### <a name="in-memory-database"></a>記憶體內部資料庫
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|混合式緩衝集區的 DDL 控制項 |透過[混合式緩衝集區](../database-engine/configure-windows/hybrid-buffer-pool.md)，坐落在置於持續性記憶體 (PMEM) 裝置上之資料庫檔案上的資料庫頁面，可在必要時直接存取。|
+|混合式緩衝集區| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的新功能，坐落在置於持續性記憶體 (PMEM) 裝置上之資料庫檔案上的資料庫頁面，可在必要時直接存取。 請參閱[混合式緩衝集區](../database-engine/configure-windows/hybrid-buffer-pool.md)。|
+|經記憶體最佳化的 `tempdb` 中繼資料| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../relational-databases/in-memory-database.md)功能系列的一部分，記憶體最佳化的 `tempdb` 中繼資料能有效移除此瓶頸，並解除鎖定大量 `tempdb` 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。 請參閱[記憶體最佳化的 `tempdb` 中繼資料](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
 | &nbsp; | &nbsp; |
 
 ### <a name="unicode-support"></a>Unicode 支援
@@ -99,13 +100,6 @@ ms.locfileid: "71096884"
 |支援 UTF-8 字元編碼|支援具有外部資料表的 UTF-8 字元。 請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)。|
 | &nbsp; | &nbsp; |
 
-### <a name="server-settings"></a>伺服器設定
-
-|新功能或更新 | 詳細資料 |
-|:---|:---|
-|混合式緩衝集區| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的新功能，坐落在置於持續性記憶體 (PMEM) 裝置上之資料庫檔案上的資料庫頁面，可在必要時直接存取。 請參閱[混合式緩衝集區](../database-engine/configure-windows/hybrid-buffer-pool.md)。|
-| &nbsp; | &nbsp; |
-
 ### <a name="performance-monitoring"></a>效能監控
 
 |新功能或更新 | 詳細資料 |
@@ -117,6 +111,7 @@ ms.locfileid: "71096884"
 |`sys.dm_exec_query_plan_stats` |新 DMF 在大多數查詢中會傳回最後一個已知實際執行計畫的對等項目。 請參閱 [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)。|
 |`LAST_QUERY_PLAN_STATS` | 可啟用 `sys.dm_exec_query_plan_stats` 的新資料庫範圍設定。 請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|
 |`query_post_execution_plan_profile` | 不同於使用標準分析的 `query_post_execution_showplan`，擴充事件會根據輕量型分析收集實際執行計畫的對等項目。 請參閱[查詢分析基礎結構](../relational-databases/performance/query-profiling-infrastructure.md)。|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | 新的 DMF 會傳回資料庫中頁面相關資訊。 請參閱 [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)。|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>語言延伸模組
@@ -147,7 +142,6 @@ ms.locfileid: "71096884"
 |資源管理| `CREATE WORKLOAD GROUP` 和 `ALTER WORKLOAD GROUP` 的 `REQUEST_MAX_MEMORY_GRANT_PERCENT` 選項可設定值，已從整數變更為浮動資料類型，以允許對記憶體限制採取更細微的控制。 請參閱 [ALTER 工作負載群組](../t-sql/statements/alter-workload-group-transact-sql.md)和[建立工作負載群組](../t-sql/statements/create-workload-group-transact-sql.md)。|
 |減少對工作負載的重新編譯| 改善跨多個範圍使用暫存資料表的功能。 請參閱[減少對工作負載的重新編譯](../relational-databases/tables/tables.md#ctp23) |
 |間接檢查點延展性 |請參閱[改善的間接檢查點延展性](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)。|
-|經記憶體最佳化的 `tempdb` 中繼資料| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../relational-databases/in-memory-database.md)功能系列的一部分，記憶體最佳化的 `tempdb` 中繼資料能有效移除此瓶頸，並解除鎖定大量 `tempdb` 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。 請參閱[記憶體最佳化的 `tempdb` 中繼資料](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
 |並行 PFS 更新|[PFS 分頁](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) \(英文\) 是資料庫檔案中的特殊分頁，SQL Server 在配置物件的空間時，可使用這些特殊分頁來協助找出可用空間。 PFS 分頁上的頁面閂鎖爭用通常與 [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 相關聯，但在有許多並行物件配置執行緒時，也可能會發生在使用者資料庫上。 這種改進會改變使用 PFS 更新來管理並行的方式，使其可以在共用閂鎖下更新，而不是獨佔閂鎖。 此行為在從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始的所有資料庫 (包括 `tempdb`) 中預設為啟用。|
 |資料列模式記憶體授與意見反應 |透過調整批次和資料列模式運算子的記憶體授與大小，以在批次模式記憶體授與意見反應功能上擴充。 這會自動修正導致記憶體浪費和並行降低的過多授與，並修正導致佔用大量磁碟資源的記憶體授與不足。 請參閱[資料列模式記憶體授與意見反應](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。 |
 |資料表變數延後編譯|針對參考資料表變數的查詢，提升計畫品質與整體效能。 在最佳化和初始編譯期間，此功能會根據實際資料表變數的資料列計數，傳播基數估計值。 這項精確的資料列計數資訊會最佳化下游計畫作業。 請參閱[資料表變數延後編譯](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)。 |

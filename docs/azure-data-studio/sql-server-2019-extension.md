@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878620"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326024"
 ---
-# <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 延伸模組 (預覽)
+# <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 SQL Server 2019 延伸模組 (預覽)
 
-SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和工具提供預覽支援。 這包括對於下列各項的預覽支援：[SQL Server 2019 巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)、整合式[筆記本體驗](../big-data-cluster/notebooks-guidance.md)，以及 PolyBase 的 [建立外部資料表精靈](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
+Azure Data Studio 的 SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和工具，提供預覽支援。 這包括對於下列各項的預覽支援：[SQL Server 2019 巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)、整合式[筆記本體驗](../big-data-cluster/notebooks-guidance.md)，以及 PolyBase 的 [建立外部資料表精靈](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>安裝 SQL Server 2019 延伸模組 (預覽)
 
@@ -27,7 +27,7 @@ SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019]
 
 1. 將 SQL Server 2019 延伸模組 (預覽) .vsix 檔案下載到本機目錄：
 
-   |平台|Download|發行日期|Version
+   |平台|下載|發行日期|版本
    |:---|:---|:---|:---|
    |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|2019 年 9 月 11 日 |0.16.0
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019 年 9 月 11 日 |0.16.0
@@ -143,58 +143,3 @@ SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019]
 * 如果目標伺服器中未啟用或執行 PolyBase，則會封鎖使用 [建立外部資料] 精靈。
 * 與 SQL Server 2019 和 [建立外部資料] 相關的拼寫與命名修正。
 * 已從 Azure Data Studio 的偵錯主控台中移除大量錯誤。
-
-##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 巨量資料叢集支援
-
-* 按一下 [物件總管]  中的 [新增連線]  ，然後選擇 [SQL Server 巨量資料叢集]  作為連線類型。
-
-   > [!TIP]
-   > 如果您未看見 [SQL Server 巨量資料叢集]  連線類型，請重新啟動 Azure Data Studio。
-
-* 輸入叢集端點的主機名稱或 IP 位址，再加上用來連線的使用者名稱和密碼。
-* (選擇性) 在 [名稱]  欄位中包含易記的顯示名稱。
-* 按一下 [連線]  ，接著您可以從儀表板啟動一般工作、在 [物件總管] 中瀏覽 **HDFS**，然後從該處執行內容中的工作。
-* 若要針對叢集提交 Spark 作業，以滑鼠右鍵按一下 [物件總管]  中的伺服器節點，然後選擇 [提交 Spark 作業]  以顯示提交對話方塊。
-* 若要開啟 Notebook，請參閱下一節。
-
-如需詳細資訊，請參閱[巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)。
-
-
-## <a name="azure-data-studio-notebooks"></a>Azure Data Studio Notebooks
-
-* 使用下列其中一種方式來開啟筆記本：
-  * 從「命令選擇區」  開啟新的筆記本。
-  * 開啟適用於 SQL Server 2019 巨量資料叢集的 HDFS 物件總管樹狀結構，並執行下列其中一項：
-    * 以滑鼠右鍵按一下伺服器節點，然後選擇 [新增 Jupyter Notebook]  。
-    * 以滑鼠右鍵按一下 CSV 檔案，然後選擇 [在 Notebook 中分析]  。
-  * 從 [檔案]  功能表或檔案瀏覽器中開啟現有的 .ipynb 檔案 (.ipynb 檔案必須升級為版本 4 或更高版本，才能正確載入) 
-* 選擇核心。 針對本機筆記本執行，選擇 [Python 3]。 針對遠端執行，選擇 [PySpark] 或 [Spark | Scala].
-* 如果是遠端執行，則選擇要連線的 SQL Server 巨量資料叢集端點 (如果是使用 Python 3 進行本機開發，則不需選擇此項)。
-* 透過筆記本標頭中的按鈕來新增程式碼或 Markdown 資料格。 使用每個資料格左邊的垃圾桶圖示來移除資料格。
-* 使用程式碼資料格的播放按鈕來執行資料格，並使用眼睛圖示來切換 Markdown 編輯和預覽
-
-## <a name="polybase-create-external-table-wizard"></a>PolyBase 的建立外部資料表精靈
-
-* 從 SQL Server 2019 執行個體中，可以使用下列三種方式來開啟「建立外部資料表精靈」  ：
-  * 以滑鼠右鍵按一下伺服器、選擇 [管理]  、按一下 SQL Server 2019 (預覽) 的索引標籤，然後選擇 [建立外部資料表]  。
-  * 使用在 [物件總管]  中選取的 SQL Server 2019 執行個體，透過「命令選擇區」  來啟動 [建立外部精靈]  。
-  * 以滑鼠右鍵按一下 [物件總管]  中的 SQL Server 2019 資料庫，然後選擇 [建立外部資料表]  。
-* 在此版本的延伸模組中，可能會建立外部資料表來存取遠端 SQL Server 和 Oracle 資料表。
-
-  > [!NOTE]
-  > 雖然外部資料表功能是 SQL 2019 的功能，但遠端 SQL Server 可能正在執行更早版本的 SQL Server。
-
-* 在精靈的第一頁選擇您是否要存取 SQL Server 或 Oracle，然後繼續進行。
-* 如果尚未建立資料庫主要金鑰，系統將提示您建立一個 (將封鎖複雜性不足的密碼)。
-* 針對遠端伺服器建立資料來源連線和具名的認證。
-* 選擇要對應至新外部資料表的物件。
-* 選擇 [產生指令碼]  或 [建立]  以完成精靈。
-* 建立外部資料表之後，它會立即出現在其建立所在之資料庫的物件樹狀結構中。
-
-
-## <a name="known-issues"></a>已知問題
-
-* 如果在建立連線時未儲存密碼，某些動作 (例如提交 Spark 作業) 可能會失敗。
-* 現有的 .ipynb 筆記本必須升級至版本 4 或更高版本，才能在檢視器中載入內容。
-* 執行 [重新安裝筆記本相依性]  命令可能會在工作檢視中顯示 2 個工作，其中一個工作失敗。 這並不會導致安裝失敗。
-* 選擇 Notebook 中的 [加入新連線]  ，然後按一下 [取消]，將導致 [選取連線]  顯示，即使您已連線也一樣。

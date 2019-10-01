@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035015"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199294"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定預先部署或部署後指令碼
-預先部署和部署後指令碼會分別執行主要部署指令碼前後的 Transact\-SQL 陳述式，主要部署指令碼則是從資料庫專案產生。 專案中只能有一個預先部署指令碼和一個部署後指令碼。 這些指令碼有許多用途。 例如：  
+預先部署和部署後指令碼會分別執行主要部署指令碼前後的 Transact\-SQL 陳述式，主要部署指令碼則是從資料庫專案產生。 從 Visual Studio 中的結構描述比較結果更新目標時，將不會執行預先部署指令碼。 專案中只能有一個預先部署指令碼和一個部署後指令碼。 這些指令碼有許多用途。 例如：  
   
 -   預先部署指令碼可以從將要變更的資料表複製資料到暫存資料表，之後再由部署後指令碼將資料重新格式化並套用到所變更的資料表。  
   
@@ -30,7 +30,7 @@ BEGIN
     DELETE FROM [dbo].[MyReferenceTable]  
 END  
 ```  
-  
+
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>若要加入和修改預先部署或部署後指令碼  
   
 1.  在 [方案總管]  中，展開資料庫專案以顯示 [指令碼] 資料夾。  
