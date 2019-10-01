@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7036a88ddb2940a16593806cfe1ec679653e30d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295001"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688304"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>在多部電腦上設定 Kubernetes 以進行 SQL Server 巨量資料叢集部署
 
@@ -33,6 +33,9 @@ ms.locfileid: "71295001"
    - 8 個 CPU
    - 64 GB 的記憶體
    - 100 GB 的儲存空間
+ 
+> [!Important] 
+> 開始進行 big data 叢集部署之前，請確定已在部署的目標所有 Kubernetes 節點之間同步處理時鐘。 Big data 叢集具有內建健全狀況屬性，適用于區分時間和時鐘誤差的各種服務，可能會導致不正確的狀態。
 
 ## <a name="prepare-the-machines"></a>準備電腦
 

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745447"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682037"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>設定叢集資源和服務的部署設定
 
@@ -576,7 +576,7 @@ azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 }
 ```
 
-您可以用手動方式編輯**控制項. json** ，並將上述區段新增至**規格**，或者您可以建立類似下面的 patch 檔案**elasticsearch** ，並使用**azdata** CLI 來修補**config.xml**檔案：
+您可以用手動方式編輯**控制項 json** ，並將上述區段新增至**規格**，或者您可以建立類似下面的 patch 檔案**elasticsearch** ，並使用**azdata** CLI 來修補**控制 json**檔案：
 
 ```json
 {

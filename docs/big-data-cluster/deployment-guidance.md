@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 66aeb6b6e13de8cc076d2ff1b4c77d4fadf2b94a
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174275"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688317"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
 
@@ -66,6 +66,9 @@ SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器�
 ```bash
 kubectl config view
 ```
+
+> [!Important] 
+> 如果您要在使用 kubeadm 啟動的多節點 Kuberntes 叢集上部署，則在開始進行 big data 叢集部署之前，請確定已在部署的目標所有 Kubernetes 節點之間同步處理時鐘。 Big data 叢集具有內建健全狀況屬性，適用于區分時間和時鐘誤差的各種服務，可能會導致不正確的狀態。
 
 設定 Kubernetes 叢集之後，您可以繼續部署新的 SQL Server 巨量資料叢集。 如果您是從上一版升級，請參閱[如何升級[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md)。
 
