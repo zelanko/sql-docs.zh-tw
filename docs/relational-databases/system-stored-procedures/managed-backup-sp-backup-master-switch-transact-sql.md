@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> 引數  
  @state  
- 設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的狀態。 @state參數是**元**。 當值設定為 0 時，作業會暫停；當值設定為 1 時，作業會繼續執行。  
+ 設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的狀態。 @state參數是 **元**。 當值設定為 0 時，作業會暫停；當值設定為 1 時，作業會繼續執行。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
