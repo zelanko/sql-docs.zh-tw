@@ -1151,7 +1151,7 @@
   href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
 - name: catalog.revoke_permission
   href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-- name: 將
+- name: Set
   items:
     - name: catalog.set_customized_logging_level_description
       href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
@@ -1558,6 +1558,8 @@
       href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
     - name: Oracle CDC 資料庫
       href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
+    - name: 疑難排解
+      href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
     - name: Attunity Oracle Change Data Capture (CDC) 設計工具 F1 說明參考
       href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
       items:
