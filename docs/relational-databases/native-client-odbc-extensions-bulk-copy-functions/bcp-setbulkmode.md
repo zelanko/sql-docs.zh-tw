@@ -10,21 +10,21 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9de8b347aa0df4dc79570cae737525f0b1ca7eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7f6dfcb6049811fa12899570b11c110b16dc400
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099445"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707470"
 ---
-# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
+# <a name="bcp_setbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  bcp_setbulkmode 可讓您指定在大量複製作業中，設定單一函式呼叫中的所有資料行屬性的資料行格式。  
+  bcp_setbulkmode 可讓您在大量複製作業中指定資料行格式，並在單一函式呼叫中設定所有資料行屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,26 +63,26 @@ RETCODE bcp_setbulkmode (
  SUCCEED 或 FAIL  
   
 ## <a name="remarks"></a>備註  
- bcp_setbulkmode 可用來大量複製查詢或資料表。 Bcp_setbulkmode 來大量複製查詢陳述式，它必須在之前呼叫 bcp_control 再使用 bcp_hint 來呼叫。  
+ bcp_setbulkmode 可以用來從查詢或資料表大量複製。 當使用 bcp_setbulkmode 來大量複製查詢語句時，必須先呼叫它，才能使用 BCP_HINT 呼叫 bcp_control。  
   
- bcp_setbulkmode 是使用替代[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)並[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)，它只能讓您指定每個函式呼叫的一個資料行的格式。  
+ bcp_setbulkmode 是使用[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)和[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)的替代方法，其只可讓您指定每個函式呼叫的一個資料行格式。  
   
  下表將列出 *property* 參數的常數。  
   
 |屬性|描述|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應到 BCP 中的-c 選項。EXE，並使用 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLCHARACTER**。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應到 BCP 中的-w 選項。EXE 和與 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLNCHAR**。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應到 BCP 中的-N 選項。EXE 和與 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLNCHAR**如果資料行類型是字串 （預設值如果不是字串）。|  
-|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應到 BCP 中的-n 選項。EXE 和與 bcp_setcolfmt **BCP_FMT_TYPE**屬性設為預設值。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE，以及 bcp_setcolfmt，並將**BCP_FMT_TYPE**屬性設定為**SQLCHARACTER**。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。將**BCP_FMT_TYPE**屬性設定為**SQLNCHAR**的 EXE 和 bcp_setcolfmt。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP 中的-N 選項。如果資料行類型是字串，則 EXE 和 bcp_setcolfmt 會將**BCP_FMT_TYPE**屬性設定為**SQLNCHAR** （如果不是字串，則為預設值）。|  
+|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP 中的-n 選項。EXE 和 bcp_setcolfmt，並將**BCP_FMT_TYPE**屬性設定為預設值。|  
   
- 您不應該使用 bcp_setbulkmode 具有包含 bcp_setcolfmt、 bcp_control 和 bcp_readfmt 函式呼叫的順序。 例如，您不應該呼叫 bcp_control(BCPTEXTFILE) 和 bcp_setbulkmode。  
+ 您不應該將 bcp_setbulkmode 與包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫順序搭配使用。 例如，您不應該呼叫 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
   
- 您可以呼叫 bcp_control 和 bcp_setbulkmode bcp_setbulkmode 不衝突的 bcp_control 選項。 例如，您可以呼叫 bcp_control(BCPFIRST) 和 bcp_setbulkmode。  
+ 您可以針對不與 bcp_setbulkmode 衝突的 bcp_control 選項呼叫 bcp_control 和 bcp_setbulkmode。 例如，您可以呼叫 bcp_control （BCPFIRST）和 bcp_setbulkmode。  
   
- 如果您嘗試呼叫 bcp_setbulkmode 與包含 bcp_setcolfmt、 bcp_control 和 bcp_readfmt 函數呼叫的序列，其中一個函式呼叫會傳回順序錯誤失敗。 如果您選擇要更正失敗，請呼叫 bcp_init 來重設所有設定，並重新開始。  
+ 如果您嘗試使用包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫序列來呼叫 bcp_setbulkmode，其中一個函式呼叫將會傳回序列錯誤失敗。 如果您選擇更正失敗，請呼叫 bcp_init 來重設所有設定並重新開始。  
   
- 以下是產生函數順序錯誤的函式呼叫的一些範例：  
+ 以下是一些會導致函式順序錯誤的函式呼叫範例:  
   
 ```  
 bcp_init("table", DB_IN);  

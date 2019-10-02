@@ -3,17 +3,17 @@ title: 使用 Dmv 監視 Python 和 R 腳本執行
 description: 使用動態管理檢視（Dmv）來監視 SQL Server Machine Learning 服務中的 Python 和 R 外部腳本執行。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/13/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70978399"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713183"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用動態管理檢視 (Dmv) 監視 SQL Server Machine Learning 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,7 +200,7 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>記憶體組態
 
-以 SQL Server 和外部資源集區的百分比來查看最大記憶體設定的相關資訊。 如果 SQL Server 是以預設值`max server memory (MB)`執行，則會將它視為 OS 記憶體的 100%。
+以 SQL Server 和外部資源集區的百分比來查看最大記憶體設定的相關資訊。 如果 SQL Server 執行時的預設值是 `max server memory (MB)`，則會將它視為 OS 記憶體的 100%。
 
 ![記憶體設定查詢的輸出](media/dmv-memory-configuration.png "記憶體設定查詢的輸出")
 

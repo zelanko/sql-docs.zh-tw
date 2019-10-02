@@ -1,9 +1,6 @@
 ---
 title: 使用 bcp 公用程式匯入及匯出大量資料 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/14/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +8,22 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b291b24d18420005cdda4e5b079eb08abee27b8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/14/2017
+ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011924"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708215"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 公用程式匯入及匯出大量資料 (SQL Server)
-  本主題提供有關使用 [bcp 公用程式](../../tools/bcp-utility.md)，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫任何執行 SELECT 陳述式的位置 (包括資料分割檢視) 匯出資料的概觀。  
+
+本主題提供有關使用 [bcp 公用程式](../../tools/bcp-utility.md)，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫任何執行 SELECT 陳述式的位置 (包括資料分割檢視) 匯出資料的概觀。  
   
  bcp 公用程式 (Bcp.exe) 是使用大量複製程式 (BCP) API 的命令列工具。 bcp 公用程式可執行以下工作：  
   
@@ -45,7 +46,8 @@ ms.locfileid: "66011924"
   
  如需 **bcp** 命令語法的描述，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)。  
   
-## <a name="examples"></a>範例  
+## <a name="examples"></a>範例
+
  如需 **bcp** 範例，請參閱：  
   
 -   [bcp 公用程式](../../tools/bcp-utility.md)  
@@ -69,15 +71,11 @@ ms.locfileid: "66011924"
 -   [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [SELECT 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
- [bcp Utility](../../tools/bcp-utility.md)   
- [準備大量匯入資料 &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [資料的大量匯入及匯出 &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
-  
-  
+
+## <a name="see-also"></a>另請參閱
+
+[插入&#40;transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql)
+[SELECT 子句&#40;transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql)
+[bcp 公用程式](../../tools/bcp-utility.md)   
+[準備大量匯入&#40;資料&#41;SQL Server](prepare-to-bulk-import-data-sql-server.md)@no__t-[3 &#40;BULK INSERT&#41;transact-sql](/sql/t-sql/statements/bulk-insert-transact-sql)
+[大量匯入和匯出資料&#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)1[OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[建立格式檔案&#40;SQL Server&#41; ](create-a-format-file-sql-server.md)

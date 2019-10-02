@@ -15,21 +15,21 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45c79a3b3d1c9e75d410d948c977ad4b521521b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1dd7b42ba6fcf4ea5b45fb779d4e6c67cd3074a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895740"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707727"
 ---
-# <a name="bcpbatch"></a>bcp_batch
+# <a name="bcp_batch"></a>bcp_batch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  認可所有資料列先前大量複製從程式變數，並且傳送至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)。  
+  認可先前從程式變數大量複製，並透過[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有資料列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,12 +44,12 @@ DBINT bcp_batch (HDBC
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
 ## <a name="returns"></a>傳回值  
- 在上次呼叫之後儲存的資料列數目**bcp_batch**，則為-1，如果發生錯誤。  
+ 在最後一次呼叫**bcp_batch**之後所儲存的資料列數，如果發生錯誤，則為-1。  
   
 ## <a name="remarks"></a>備註  
- 大量複製批次會定義交易。 當應用程式時，使用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)並**bcp_sendrow**若要大量複製資料列從程式變數到 SQL Server 資料表，會認可資料列只有在程式呼叫時，才**bcp_batch**或是[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)。  
+ 大量複製批次會定義交易。 當應用程式使用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和**bcp_sendrow** ，將資料列從程式變數大量複製到 SQL Server 資料表時，只有在程式呼叫**bcp_batch**或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)時，才會認可這些資料列。  
   
- 您可以呼叫**bcp_batch**一旦每*n*資料列或是當您有暫停情況發生 （如同遙測的應用程式） 的內送資料中。 如果應用程式不會呼叫**bcp_batch**大量複製資料列的認可時，才**bcp_done**呼叫。  
+ 您可以每隔*n*個數據列或在傳入的資料中有牢靠時（如同在遙測應用程式中），呼叫**bcp_batch**一次。 如果應用程式沒有呼叫**bcp_batch** ，只有在呼叫**bcp_done**時，才會認可大量複製的資料列。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
