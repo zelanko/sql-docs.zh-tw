@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 2071fc91e36116ca2ad298362646d545d8ac2569
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3576058239674049691826048f51558153fe5d81
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68185394"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71717032"
 ---
-Machine Learning 服務 (資料庫內) 
+機器學習服務 
