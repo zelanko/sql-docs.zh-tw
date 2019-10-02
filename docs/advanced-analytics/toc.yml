@@ -255,28 +255,26 @@
               href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: 系統管理
       items:
-        - name: 管理整合
-          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
         - name: 監視器
           items:
             - name: 使用 SSMS 報告來監視
-              href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+              href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
             - name: 使用 DMV 來監視
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
             - name: 擴充事件
               items:
-                - name: 擴充事件
-                  href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-                - name: 延伸的事件 PREDICT T-SQL
-                  href: ../advanced-analytics/xe-event-predict-tsql.md
+                - name: 使用擴充事件監視
+                  href: ../advanced-analytics/administration/extended-events.md
+                - name: 監視 PREDICT T-SQL
+                  href: ../advanced-analytics/administration/extended-events-predict-tsql.md
         - name: 調整指令碼執行規模
-          href: ../advanced-analytics/administration/modify-user-account-pool.md
+          href: ../advanced-analytics/administration/scale-concurrent-execution-external-scripts.md
         - name: 資源管理員
           items:
             - name: 使用資源管理員
-              href: ../advanced-analytics/administration/resource-governance.md
+              href: ../advanced-analytics/administration/resource-governor.md
             - name: 建立資源集區
-              href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
+              href: ../advanced-analytics/administration/create-external-resource-pool.md
     - name: Security
       items:
         - name: 授與使用者權限

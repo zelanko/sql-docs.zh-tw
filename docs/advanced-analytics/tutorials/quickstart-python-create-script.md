@@ -90,7 +90,7 @@ GO
 | @language | 定義要呼叫的語言擴充功能，在此案例中為 Python |
 | @script | 定義傳遞至 Python 執行時間的命令<br>您的整個 Python 腳本必須以 Unicode 文字的形式包含在此引數中。 您也可以將文字新增至**Nvarchar**類型的變數，然後呼叫變數 |
 | @input_data_1 | 查詢所傳回的資料，傳遞至 Python 執行時間，這會將資料傳回 SQL Server 做為資料框架 |
-|WITH 結果集 | 子句會定義 SQL Server 所傳回之資料表的架構，在此案例中，會加入 "Hello World" 做為資料行名稱，並將**int**用於資料類型 |
+|WITH RESULT SETS | 子句會定義 SQL Server 所傳回之資料表的架構，在此案例中，會加入 "Hello World" 做為資料行名稱，並將**int**用於資料類型 |
 
 此命令會輸出下列文字：
 

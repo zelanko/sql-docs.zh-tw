@@ -2406,14 +2406,14 @@
           href: ../connect/jdbc/validating-user-input.md
         - name: 應用程式安全性
           href: ../connect/jdbc/application-security.md
-        - name: 使用 SSL 加密
+        - name: 使用加密
           href: ../connect/jdbc/using-ssl-encryption.md
           items:
-            - name: 了解 SSL 支援
+            - name: 了解加密支援
               href: ../connect/jdbc/understanding-ssl-support.md
-            - name: 使用 SSL 加密連接
+            - name: 使用加密連線
               href: ../connect/jdbc/connecting-with-ssl-encryption.md
-            - name: 設定 SSL 加密的用戶端
+            - name: 為用戶端設定加密
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: FIPS 模式
           href: ../connect/jdbc/fips-mode.md
@@ -3996,7 +3996,7 @@
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
                             - name: SQL 轉換為 C：字元
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: SQL 轉換為 C：date
+                            - name: SQL 轉換為 C：Date
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
                             - name: SQL 轉換為 C：日期時間間隔
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
@@ -4021,7 +4021,7 @@
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
                             - name: C 轉換為 SQL：字元
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: C 轉換為 SQL：date
+                            - name: C 轉換為 SQL：Date
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
                             - name: C 轉換為 SQL：日期時間間隔
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
@@ -5176,7 +5176,7 @@
                   href: ../connect/oledb/ole-db-transactions/supporting-distributed-transactions.md
                 - name: 支援本機交易
                   href: ../connect/oledb/ole-db-transactions/supporting-local-transactions.md
-            - name: 錯誤
+            - name: Errors
               href: ../connect/oledb/ole-db-errors/errors.md
               items:
                 - name: 錯誤介面中的資訊
