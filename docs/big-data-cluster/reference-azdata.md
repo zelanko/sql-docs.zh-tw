@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.openlocfilehash: e12a6a19ae076a42bef345a05076adab0d9ea471
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70391943"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816655"
 ---
 # <a name="azdata"></a>azdata
 
@@ -27,9 +27,8 @@ ms.locfileid: "70391943"
 |[azdata sql](reference-azdata-sql.md) | SQL DB CLI 可讓使用者透過 T-SQL 與 SQL Server 互動。 |
 |[azdata app](reference-azdata-app.md) | 建立、刪除、執行和管理應用程式。 |
 |[azdata bdc](reference-azdata-bdc.md) | 選取、管理和操作 SQL Server 巨量資料叢集。 |
-|[azdata 控制項](reference-azdata-control.md) | 建立、刪除和管理控制平面。 |
-[azdata login](#azdata-login) | 登入叢集的控制器端點。
-[azdata logout](#azdata-logout) | 登出叢集。
+|[azdata login](#azdata-login) | 登入叢集的控制器端點。
+|[azdata logout](#azdata-logout) | 登出叢集。
 ## <a name="azdata-login"></a>azdata login
 當叢集已部署時，它會在部署期間列出控制器端點，您應該使用此端點來登入。  如果您不知道控制器端點，您可以藉由將您叢集的 Kube 組態放在您系統的預設位置 <user home>/.kube/config 來登入，或使用 KUBECONFIG 環境變數，也就是 export KUBECONFIG=路徑/至/.kube/config。
 ```bash
@@ -68,7 +67,7 @@ azdata login -n ClusterName
 #### `--output -o`
 輸出格式。  允許的值：json、jsonc、table、tsv。  預設值：json。
 #### `--query -q`
-JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查詢字串。 如需詳細資訊和範例，請參閱 [http://jmespath.org/](http://jmespath.org/)。
 #### `--verbose`
 增加記錄詳細資訊。 使用 --debug 來取得完整偵錯記錄。
 ## <a name="azdata-logout"></a>azdata logout

@@ -3,17 +3,17 @@ title: 使用 Resource Governor 管理 Python 和 R 工作負載
 description: 瞭解如何使用 Resource Governor 來管理 SQL Server Machine Learning 服務中適用于 Python 和 R 工作負載的 CPU、實體 IO 和記憶體資源配置。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eec3d2762366252fbc170c2a6c4176fe0283edce
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 9000ab8bb15e8f9910b8b780aa38d134fa984032
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714312"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823538"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>使用 SQL Server Machine Learning 服務中的 Resource Governor 管理 Python 和 R 工作負載
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,11 +31,11 @@ Python 和 R 中的機器學習演算法通常需要大量計算。 視您的工
 
 根據預設，機器學習服務的外部腳本執行時間限制為不超過全部電腦記憶體的 20%。 這取決於您的系統, 但在一般情況下, 您可能會發現此限制不足以進行重要的機器學習工作, 例如訓練模型或預測多個資料列。 
 
-## <a name="use-resource-governor-to-control-resourcing"></a>使用 Resource Governor 來控制管理
+## <a name="manage-resources-with-resource-governor"></a>使用 Resource Governor 管理資源
  
 根據預設，外部進程最多會在本機伺服器上使用 20% 的總主機記憶體。 您可以修改預設資源集區來進行伺服器範圍的變更, 其中 R 和 Python 進程會利用您提供給外部進程的任何容量。
 
-或者, 您可以使用相關聯的工作負載群組和分類器來建立自訂*外部資源*集區, 以判斷源自特定程式、主機或您提供的其他準則之要求的資源配置。 外部資源集區是中[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]引進的一種資源集區, 可協助管理資料庫引擎外部的 R 和 Python 進程。
+或者，您可以使用相關聯的工作負載群組和分類器來建立自訂**外部資源**集區，以判斷源自特定程式、主機或您提供的其他準則之要求的資源配置。 外部資源集區是中[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]引進的一種資源集區, 可協助管理資料庫引擎外部的 R 和 Python 進程。
 
 1. [啟用資源管理](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor)(預設為關閉)。
 
