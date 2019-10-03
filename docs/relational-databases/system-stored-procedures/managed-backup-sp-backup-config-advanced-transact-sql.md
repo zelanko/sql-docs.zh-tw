@@ -50,7 +50,7 @@ EXEC managed_backup.sp_backup_config_advanced
  啟用特定資料庫上的受管理的備份的資料庫名稱。 如果是 NULL 或 *，則此受管理的備份套用至伺服器上的所有資料庫。  
   
  @encryption_algorithm  
- 備份期間用來加密備份檔案的加密演算法名稱。 @encryption_algorithm已**SYSNAME**。 第一次設定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]時為必要參數。 指定**NO_ENCRYPTION**如果您不想加密備份檔案。 當變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態設定，這是選擇性參數-如果參數未指定，則會保留現有的組態值。 此參數允許的值為：  
+ 備份期間用來加密備份檔案的加密演算法名稱。 @encryption_algorithm已 **SYSNAME** 。 第一次設定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]時為必要參數。 指定**NO_ENCRYPTION**如果您不想加密備份檔案。 當變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態設定，這是選擇性參數-如果參數未指定，則會保留現有的組態值。 此參數允許的值為：  
   
 -   AES_128  
   
@@ -68,7 +68,7 @@ EXEC managed_backup.sp_backup_config_advanced
  加密程式，它可以是任一個 [憑證] 的型別或 ' ASYMMETRIC_KEY"。 @encryptor_type已 **nvarchar(32)** 。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  
   
  @encryptor_name  
- 用來加密備份之現有憑證或非對稱金鑰的名稱。 @encryptor_name已**SYSNAME**。 如果使用非對稱金鑰，則必須透過可延伸金鑰管理 (EKM) 設定。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  
+ 用來加密備份之現有憑證或非對稱金鑰的名稱。 @encryptor_name已 **SYSNAME** 。 如果使用非對稱金鑰，則必須透過可延伸金鑰管理 (EKM) 設定。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  
   
  如需詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
