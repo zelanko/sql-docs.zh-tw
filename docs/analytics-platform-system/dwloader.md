@@ -135,7 +135,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 使用參數檔案 ( *parameter_file_name*) 來取代命令列參數。 *parameter_file_name*可以包含任何命令列參數, 除了 [*使用者名*] 和 [*密碼*]。 如果在命令列和參數檔案中指定參數, 命令列會覆寫 file 參數。  
   
-參數檔案包含一個參數, 每行沒有 **-** 前置詞。  
+參數檔案包含一個參數, 每行沒有**-** 前置詞。  
   
 例如：  
   
@@ -143,7 +143,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 `rv=25`  
   
-**-S***target_appliance*  
+**-S** *target_appliance*  
 指定將接收已載入資料的 SQL Server PDW 設備。  
   
 *對於*不會連線的連線, *target_appliance*會指定為 < 設備名稱 >-SQLCTL01。 若要設定此命名的連線, 請參閱設定不能的[網路介面卡](configure-infiniband-network-adapters.md)。  
@@ -156,10 +156,10 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T***target_database_name。* [*架構*]。*table_name*  
+**-T** *target_database_name。* [ *架構*]。*table_name*  
 目的地資料表的三部分名稱。  
   
-**-I***source_data_location*  
+**-I** *source_data_location*  
 要載入的一個或多個來源檔案的位置。 每個原始程式檔都必須是文字檔, 或是以 gzip 壓縮的文字檔。 只有一個原始檔可以壓縮到每個 gzip 檔案。  
   
 若要格式化來源檔案:  
@@ -489,7 +489,7 @@ fastappend 需要 **-m** 。
 ## <a name="return-code-values"></a>傳回碼值  
 0 (成功) 或其他整數值 (失敗)  
   
-在命令視窗或批次檔中, 使用`errorlevel`來顯示傳回碼。 例如:  
+在命令視窗或批次檔中, 使用`errorlevel`來顯示傳回碼。 例如:   
   
 ```  
 dwloader  
@@ -694,7 +694,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-r \r\n*會指定 dbo.dimaccount 中的每個資料列都以回車和換行字元做為結尾。  
   
--   *-U < login_name >-P <password>* 指定具有執行負載之許可權的登入和密碼。  
+-   *-U < login_name >-P <password> *指定具有執行負載之許可權的登入和密碼。  
   
 
 <!-- MISSING LINK

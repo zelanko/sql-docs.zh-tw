@@ -62,7 +62,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @description = ] 'description'`這是設定檔的描述。 *描述*是**Nvarchar (3000)** , 沒有預設值。  
   
-`[ @default = ] default`指出設定檔是否為*agent_type * ** 的預設值。 *預設值*是**bit**, 預設值是**0**。 **1**表示要加入的設定檔會成為*agent_type*所指定之代理程式的新預設設定檔。  
+`[ @default = ] default`指出設定檔是否為*agent_type* ** 的預設值。 *預設值*是**bit**, 預設值是**0**。 **1**表示要加入的設定檔會成為*agent_type*所指定之代理程式的新預設設定檔。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** (成功) 或**1** (失敗)  

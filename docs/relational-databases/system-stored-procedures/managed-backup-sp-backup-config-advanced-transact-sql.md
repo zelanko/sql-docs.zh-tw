@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_config_advanced
  如需有關加密演算法的詳細資訊，請參閱＜ [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)＞。  
   
  @encryptor_type  
- 加密程式，它可以是任一個 [憑證] 的型別或 ' ASYMMETRIC_KEY"。 @encryptor_type已**nvarchar(32)** 。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  
+ 加密程式，它可以是任一個 [憑證] 的型別或 ' ASYMMETRIC_KEY"。 @encryptor_type已 **nvarchar(32)** 。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  
   
  @encryptor_name  
  用來加密備份之現有憑證或非對稱金鑰的名稱。 @encryptor_name已**SYSNAME**。 如果使用非對稱金鑰，則必須透過可延伸金鑰管理 (EKM) 設定。 這個參數是選擇性，如果您指定的 NO_ENCRYPTION@encryption_algorithm參數。  

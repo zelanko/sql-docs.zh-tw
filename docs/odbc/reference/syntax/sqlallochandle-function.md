@@ -90,7 +90,7 @@ SQLRETURN SQLAllocHandle(
 |--------------|-----------|-----------------|  
 |01000|一般警告|驅動程式特定的參考用訊息。 (函數會傳回 SQL_SUCCESS_WITH_INFO)。|  
 |08003|連接未開啟|(DM) *HandleType*引數為 HANDLETYPE 來或 SQL_HANDLE_DESC, 但*InputHandle*引數所指定的連接未開啟。 連接程式必須成功完成 (而且必須開啟連接), 驅動程式才能配置語句或描述項控制碼。|  
-|HY000|一般錯誤|發生錯誤, 但沒有任何特定 SQLSTATE, 且未定義任何執行特定的 SQLSTATE。 *MessageText*緩衝區中的 **SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。|  
+|HY000|一般錯誤|發生錯誤, 但沒有任何特定 SQLSTATE, 且未定義任何執行特定的 SQLSTATE。 \* *MessageText*緩衝區中的 **SQLGetDiagRec**所傳回的錯誤訊息描述錯誤及其原因。|  
 |HY001|記憶體配置錯誤|(DM) 驅動程式管理員無法為指定的控制碼配置記憶體。<br /><br /> 驅動程式無法為指定的控制碼配置記憶體。|  
 |HY009|Null 指標的使用不正確|(DM) *OutputHandlePtr*引數為 null 指標。|  
 |HY010|函數順序錯誤|(DM) *HandleType*引數是 SQL_HANDLE_DBC, 而且尚未呼叫**SQLSETEN加值稅TR**來設定 SQL_ODBC_VERSION 環境屬性。<br /><br /> (DM) 已針對**InputHandle**呼叫非同步執行的函式, 而且當呼叫**SQLAllocHandle**函數時, 如果**HANDLETYPE**設定為 handletype 來或 SQL_HANDLE_DESC, 仍在執行中。|  
