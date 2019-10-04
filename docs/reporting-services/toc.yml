@@ -123,12 +123,12 @@
       href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
     - name: SQL Server 版本中的 Reporting Services 功能
       href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: 安裝 Reporting Services
+- name: 安裝 Reporting Services 版本
   items:
-    - name: 安裝 Reporting Services 2017
+    - name: 安裝 Reporting Services
       href: ../reporting-services/install-windows/install-reporting-services.md
       items:
-        - name: 尋找 Reporting Services 2017 產品金鑰
+        - name: 尋找 Reporting Services 產品金鑰
           href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
     - name: 使用原生模式安裝 Reporting Services 2016
       href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
@@ -1672,7 +1672,7 @@
       href: ../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md
     - name: 針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解
       href: ../reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services.md
-- name: Developer
+- name: 開發人員
   items:
     - name: REST API
       href: ../reporting-services/developer/rest-api.md
