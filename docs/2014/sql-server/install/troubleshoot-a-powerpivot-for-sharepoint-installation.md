@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 797405386e8a6c0b9e62328699f3a73a6d845313
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892447"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951998"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>疑難排解 PowerPivot for SharePoint 安裝
   如果您看到的是錯誤，而不是預期的頁面和功能，請執行下列操作。  
@@ -39,6 +39,6 @@ ms.locfileid: "68892447"
   
 4.  確認 **[網站集合的 PowerPivot 功能整合]** 為 **[使用中]** 。  
   
- 如需此問題的其他原因, 請參閱[PowerPivot 圖庫會針對圖示顯示紅色 X 的](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559) 。  
+ 如需此問題的其他原因，請參閱[PowerPivot 圖庫會針對圖示顯示紅色 X](https://support.microsoft.com/kb/2361559) （ https://support.microsoft.com/kb/2361559) 。  
   
   

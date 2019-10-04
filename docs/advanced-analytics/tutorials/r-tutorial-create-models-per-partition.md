@@ -9,21 +9,21 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04393e7a43ef240fb8a48de49352b183d79a9208
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714747"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952025"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立以資料分割為基礎的模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2019 中, 分割型模型化是透過分割資料建立模型並將其定型的能力。 針對自然分割成指定分類配置的分層資料 (例如地理區域、日期和時間、年齡或性別), 您可以在整個資料集上執行腳本, 並能夠對維持不變的分割區進行模型、定型和評分所有這些作業。 
 
-以分割為基礎的模型會透過[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)上的兩個新參數來啟用:
+以分割為基礎的模型會透過[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)上的兩個新參數來啟用：
 
-+ **input_data_1_partition_by_columns**, 指定要做為分割依據的資料行。
++ **input_data_1_partition_by_columns**，指定要做為分割依據的資料行。
 + **input_data_1_order_by_columns**指定排序依據的資料行。 
 
 在本教學課程中, 您將瞭解使用傳統 NYC 計程車範例資料和 R 腳本的資料分割型模型化。 資料分割資料行是付款方法。
@@ -33,7 +33,7 @@ ms.locfileid: "68714747"
 > * 在每個資料分割上建立和定型模型, 並將物件儲存在資料庫中。
 > * 使用針對該用途保留的範例資料, 預測每個資料分割模型的 tip 結果機率。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
  
 若要完成本教學課程, 您必須具備下列各項:
 
@@ -41,7 +41,7 @@ ms.locfileid: "68714747"
 
 + 適用于 T-SQL 查詢執行的工具, 例如[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-+ [NYCTaxi_Sample](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), 您可以[下載並還原](demo-data-nyctaxi-in-sql.md)至您的本機資料庫引擎實例。 檔案大小大約是 90 MB。
++ [NYCTaxi_Sample](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，您可以[下載並還原](demo-data-nyctaxi-in-sql.md)至您的本機資料庫引擎實例。 檔案大小大約是 90 MB。
 
 + SQL Server 2019 preview 資料庫引擎實例, 具有 Machine Learning 服務和 R 整合。
 
@@ -63,13 +63,13 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>連接到資料庫
 
-啟動 Management Studio 並連接到 database engine 實例。 在物件總管中, 確認[NYCTaxi_Sample 資料庫](demo-data-nyctaxi-in-sql.md)存在。 
+啟動 Management Studio 並連接到 database engine 實例。 在物件總管中，確認[NYCTaxi_Sample 資料庫](demo-data-nyctaxi-in-sql.md)存在。 
 
 ## <a name="create-calculatedistance"></a>建立 CalculateDistance
 
 示範資料庫隨附用來計算距離的純量函數, 但我們的預存程式更適合使用資料表值函式。 執行下列腳本, 以建立稍後在[定型步驟](#training-step)中使用的**CalculateDistance**函數。
 
-若要確認已建立函式, 請在物件總管中, 檢查**NYCTaxi_Sample**資料庫下的 \Programmability\Functions\Table-valued 函數。
+若要確認已建立函式，請在物件總管中，檢查**NYCTaxi_Sample**資料庫下的 \Programmability\Functions\Table-valued 函數。
 
 ```sql
 USE NYCTaxi_sample
@@ -103,11 +103,11 @@ GO
 
 本教學課程會將 R 腳本包裝在預存程式中。 在此步驟中, 您會建立使用 R 建立輸入資料集的預存程式、建立用於預測 tip 結果的分類模型, 然後將模型儲存在資料庫中。
 
-在此腳本使用的參數輸入中, 您會看到**input_data_1_partition_by_columns**和**input_data_1_order_by_columns**。 回想一下, 這些參數是進行分割模型化所使用的機制。 參數會當做輸入傳遞至[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) , 以處理每個分割區執行一次之外部腳本的資料分割。 
+在此腳本使用的參數輸入中，您會看到**input_data_1_partition_by_columns**和**input_data_1_order_by_columns**。 回想一下, 這些參數是進行分割模型化所使用的機制。 參數會當做輸入傳遞至[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) ，以處理每個分割區執行一次之外部腳本的資料分割。 
 
 針對此預存程式, 請[使用平行](#parallel)處理來加快完成的時間。
 
-執行此腳本之後, 您應該會在物件總管的**NYCTaxi_Sample**資料庫下的 \Programmability\Stored 程式中看到**train_rxLogIt_per_partition** 。 您也應該會看到用來儲存模型的新資料表: **dbo. nyctaxi_models**。
+執行此腳本之後，您應該會在物件總管的**NYCTaxi_Sample**資料庫下的 \Programmability\Stored 程式中看到**train_rxLogIt_per_partition** 。 您也應該會看到用來儲存模型的新資料表： **dbo. nyctaxi_models**。
 
 ```sql
 USE NYCTaxi_Sample
@@ -167,14 +167,12 @@ GO
 
 ### <a name="parallel-execution"></a>平行執行
 
-請注意, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)輸入包括 **@parallel= 1**, 用來啟用平行處理。 與舊版不同的是, 在 SQL Server 2019 中, 設定 **@parallel= 1**會對查詢最佳化工具提供更強的提示, 讓平行執行更有可能的結果。
+請注意， [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)輸入包括 `@parallel=1`，用來啟用平行處理。 與舊版不同的是，在 SQL Server 2019 中，設定 `@parallel=1` 會對查詢最佳化工具提供更強的提示，讓平行執行更有可能的結果。
 
-根據預設, 查詢最佳化工具通常會在具有超過256個數據列的資料表上操作 **@parallel= 1** , 但如果您可以藉由設定 **@parallel= 1**明確處理此作業, 如此腳本所示。
+根據預設，查詢最佳化工具通常會在具有超過256個數據列的資料表上，于 `@parallel=1` 下運作，但如果您可以藉由設定 `@parallel=1` 來明確處理此作業（如此腳本所示）。
 
 > [!Tip]
-> 針對定型 workoads, 您可以使用 **@parallel** 搭配任何任意定型腳本, 甚至是使用非 Microsoft rx 演算法的程式碼。 一般來說, 只有 RevoScaleR 演算法 (具有 rx 前置詞) 在 SQL Server 的定型案例中提供平行處理。 但是有了新的參數, 您就可以平行處理呼叫函式的腳本, 包括開放原始碼 R 函數, 而不是特別使用該功能進行設計。 這是因為分割區與特定執行緒具有相似性, 因此在腳本中呼叫的所有作業都會在指定的執行緒上以每個分割區為基礎執行。
-
-<a name="training-step"></a>
+> 針對定型 workoads，您可以使用 `@parallel` 搭配任何任意訓練腳本，甚至是使用非 Microsoft rx 演算法的程式碼。 一般來說, 只有 RevoScaleR 演算法 (具有 rx 前置詞) 在 SQL Server 的定型案例中提供平行處理。 但是有了新的參數, 您就可以平行處理呼叫函式的腳本, 包括開放原始碼 R 函數, 而不是特別使用該功能進行設計。 這是因為分割區與特定執行緒具有相似性，因此在腳本中呼叫的所有作業都是以每個分割區為基礎執行，而在指定 @ no__t-0<a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>執行程式並訓練模型
 
@@ -336,7 +334,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中, 您已使用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)來反覆運算分割資料的作業。 如需深入瞭解如何在預存程式中呼叫外部腳本, 以及如何使用 RevoScaleR 函數, 請繼續進行下列教學課程。
+在本教學課程中，您已使用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)來反覆運算分割資料的作業。 如需深入瞭解如何在預存程式中呼叫外部腳本, 以及如何使用 RevoScaleR 函數, 請繼續進行下列教學課程。
 
 > [!div class="nextstepaction"]
 > [R 和 SQL Server 的逐步解說](walkthrough-data-science-end-to-end-walkthrough.md)

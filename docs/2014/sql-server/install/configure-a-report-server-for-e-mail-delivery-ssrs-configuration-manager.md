@@ -1,5 +1,5 @@
 ---
-title: 設定報表伺服器電子郵件傳遞 （SSRS 組態管理員） |Microsoft Docs
+title: 為電子郵件傳遞設定報表伺服器（SSRS Configuration Manager） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - local SMTP service [Reporting Services]
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 196bfdc78ea29b1d334660a732f087a50ae9c2ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096116"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952327"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)
 
@@ -42,7 +42,7 @@ ms.locfileid: "66096116"
   
  
   
-##  <a name="bkmk_configuration_requirements"></a> 組態需求  
+##  <a name="bkmk_configuration_requirements"></a>設定需求  
   
 -   報表伺服器電子郵件傳遞是在 Collaboration Data Objects (CDO) 上實作，並需要本機或遠端 Simple Mail Transfer Protocol (SMTP) 伺服器或 SMTP 轉送器。 並非所有的 Windows 作業系統都支援 SMTP。 如果您是使用 Itanium 型版本的 Windows Server 2008，SMTP 將不受支援。 如需有關透過 CDO 提供之組態選項的詳細資訊，請參閱 MSDN 上的 [組態 CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) 。  
   
@@ -55,26 +55,26 @@ ms.locfileid: "66096116"
   
  
   
-##  <a name="bkmk_configure_for_local_or_remote_SMTP"></a> 設定報表伺服器的本機或遠端 SMTP 服務  
+##  <a name="bkmk_configure_for_local_or_remote_SMTP"></a>設定本機或遠端 SMTP 服務的報表伺服器  
  您可以使用本機 SMTP 服務，或遠端 SMTP 伺服器或轉送子以支援電子郵件傳遞。 如果您擁有現有之遠端 SMTP 伺服器的存取權，應該考慮使用該存取權。 如果沒有可用的 SMTP 伺服器，或者您隨後遇到因為電腦連接失敗造成的報表傳遞錯誤，則應該切換到使用本機 SMTP 服務。 此主題會進一步提供有關如何設定報表伺服器，以供本機或遠端服務的詳細資料。  
   
   
   
-##  <a name="bkmk_setting_email_delivery"></a> 設定電子郵件傳遞的組態選項  
+##  <a name="bkmk_setting_email_delivery"></a>設定電子郵件傳遞的設定選項  
  您必須先設定提供要使用哪個 SMTP 伺服器之相關資訊的組態值，才能使用報表伺服器電子郵件傳遞。  
   
  若要為電子郵件傳遞設定報表伺服器，請執行下列步驟：  
   
--   如果您只是要指定 SMTP 伺服器和一個擁有傳送電子郵件之權限的使用者帳戶，請使用 Reporting Services 組態管理員。 這些是設定報表伺服器電子郵件傳遞延伸模組時所需的最小設定。 如需詳細資訊，請參閱 <<c0> [ 電子郵件設定-Configuration Manager &#40;SSRS 原生模式&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)並[Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。</c0>  
+-   如果您只是要指定 SMTP 伺服器和一個擁有傳送電子郵件之權限的使用者帳戶，請使用 Reporting Services 組態管理員。 這些是設定報表伺服器電子郵件傳遞延伸模組時所需的最小設定。 如需詳細資訊，請參閱[電子郵件&#40;設置-Configuration Manager&#41; SSRS 原生模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)和[Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
--   (選擇性) 請使用文字編輯器在 RSreportserver.config 檔案中指定其他設定。 這個檔案包含報表伺服器電子郵件傳遞的所有組態設定。 如果您要使用本機 SMTP 伺服器，或要設定只能對特定主機進行電子郵件傳遞的限制，則必須在這些檔案中指定其他設定。 如需有關尋找和修改組態檔的詳細資訊，請參閱 <<c0> [ 修改 Reporting Services 組態檔&#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) SQL Server 線上叢書 》 中。</c0>  
+-   (選擇性) 請使用文字編輯器在 RSreportserver.config 檔案中指定其他設定。 這個檔案包含報表伺服器電子郵件傳遞的所有組態設定。 如果您要使用本機 SMTP 伺服器，或要設定只能對特定主機進行電子郵件傳遞的限制，則必須在這些檔案中指定其他設定。 如需尋找和修改設定檔的詳細資訊，請參閱 SQL Server 線上叢書中的[修改 Reporting Services &#40;配置&#41;檔 rsreportserver.config。](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
 > [!NOTE]  
 >  報表伺服器電子郵件設定是以 CDO 為基礎。 如果您想要取得有關特定設定的詳細資料，可以參考 CDO 產品文件集。  
   
 
   
-##  <a name="bkmk_example_config_file"></a> 範例報表伺服器電子郵件組態  
+##  <a name="bkmk_example_config_file"></a>報表伺服器電子郵件設定範例  
  下列範例說明遠端 SMTP 伺服器之 RSreportserver.config 檔案中的設定。 若要查看有關設定描述和有效值的資訊，請參閱《 [ssNoVersion](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 線上叢書》中的＜ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl線上叢書》中的＜e or the CDO product documentation.  
   
 ```  
@@ -107,7 +107,7 @@ ms.locfileid: "66096116"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> 設定郵件至：在訊息中的欄位  
+##  <a name="bkmk_setting_TO_field"></a>設定選項，以將設為：訊息中的欄位  
  如果依據 **[管理個別訂閱]** 工作所授與的權限建立使用者自訂訂閱，這些訂閱中便會包含以網域使用者帳戶為基礎的預設使用者名稱。 當使用者建立訂閱時，系統就會利用建立訂閱之使用者的網域使用者帳戶，自行處理 **[收件者:]** 欄位中的收件者名稱。  
   
  如果使用 SMTP 伺服器或轉送器，而伺服器或轉送器所使用的電子郵件帳戶與網域使用者帳戶不同時，則 SMTP 伺服器嘗試將報表傳遞給該使用者時便會失敗。  
@@ -124,14 +124,14 @@ ms.locfileid: "66096116"
   
   
   
-##  <a name="bkmk_options_remote_SMTP"></a> 遠端 SMTP 服務的組態選項  
+##  <a name="bkmk_options_remote_SMTP"></a>遠端 SMTP 服務的設定選項  
  報表伺服器和 SMTP 伺服器或轉寄站之間的連接，是由下列組態設定決定：  
   
 -   `SendUsing` 指定傳送訊息的方法。 您可以選擇網路 SMTP 服務或本機 SMTP 服務收取目錄。 若要使用遠端 SMTP 服務，必須在 RSReportServer.config 檔案中將此值設定為 **2** 。  
   
 -   `SMTPServer` 指定遠端 SMTP 伺服器或轉送子。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。  
   
--   [`From`] 設定的值，會在電子郵件訊息 [寄件者:]  行內顯示。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。  
+-   [`From`] 設定的值，會在電子郵件訊息 [寄件者:] 行內顯示。 如果您使用的是遠端 SMTP 伺服器或轉送子，此值為必要的。  
   
  用於遠端 SMTP 服務的其他值包括下列項目 (請注意，除非您要覆寫預設值，否則不需要指定這些值)。  
   
@@ -143,8 +143,8 @@ ms.locfileid: "66096116"
   
 
   
-##  <a name="bkmk_options_local_SMTP"></a> 本機 SMTP 服務的組態選項  
- 如果您是測試報表伺服器電子郵件傳遞或進行疑難排解，則設定本機 SMTP 服務很有用。 根據預設，不會啟用本機 SMTP 服務。 如需如何加以啟用的指示，請參閱[（SSRS 組態管理員） 的電子郵件傳遞設定報表伺服器](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)並[電子郵件設定-Configuration Manager &#40;SSRS 原生模式&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
+##  <a name="bkmk_options_local_SMTP"></a>本機 SMTP 服務的設定選項  
+ 如果您是測試報表伺服器電子郵件傳遞或進行疑難排解，則設定本機 SMTP 服務很有用。 根據預設，不會啟用本機 SMTP 服務。 如需如何啟用它的指示，請參閱[為電子郵件傳遞設定報表伺服器（SSRS Configuration Manager）](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)和[電子郵件設定&#40;-Configuration Manager SSRS&#41;原生模式](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。  
   
  報表伺服器和本機 SMTP 伺服器或轉寄站之間的連接，是由下列組態設定決定：  
   
@@ -153,13 +153,13 @@ ms.locfileid: "66096116"
 -   **[SMTPServerPickupDirectory]** 設定為本機磁碟機上的資料夾。  
   
     > [!NOTE]  
-    >  請確定您執行不設定`SMTPServer`如果您使用本機 SMTP 伺服器。  
+    >  如果您使用的是本機 SMTP 伺服器，請確定您未設定 `SMTPServer`。  
   
--   [`From`] 設定的值，會在電子郵件訊息 [寄件者:]  行內顯示。 這是必要的值。  
+-   [`From`] 設定的值，會在電子郵件訊息 [寄件者:] 行內顯示。 這是必要的值。  
   
  
   
-##  <a name="bkmk_use_configuration_manager"></a> 若要設定報表伺服器電子郵件使用 Reporting Services 組態管理員  
+##  <a name="bkmk_use_configuration_manager"></a>若要使用 Reporting Services 組態管理員設定報表伺服器電子郵件  
   
 1.  確認報表伺服器 Windows 服務擁有 SMTP 伺服器的 `Send As` 權限。  
   
@@ -173,21 +173,21 @@ ms.locfileid: "66096116"
   
 
   
-##  <a name="bkmk_confiugre_remote_SMTP"></a> 若要設定報表伺服器的遠端 SMTP 服務  
+##  <a name="bkmk_confiugre_remote_SMTP"></a>若要設定報表伺服器的遠端 SMTP 服務  
   
 1.  確認報表伺服器 Windows 服務擁有 SMTP 伺服器的 `Send As` 權限。  
   
 2.  在文字編輯器中開啟 RSReportServer.config 檔。  
   
-3.  確認 <`UrlRoot`> 設為報表伺服器 URL 位址。 此值是在您設定報表伺服器時設定的，所以它應該已被填入。 如果未設定此值，請輸入報表伺服器的 URL 位址。  
+3.  確認 < `UrlRoot` > 設定為報表伺服器 URL 位址。 此值是在您設定報表伺服器時設定的，所以它應該已被填入。 如果未設定此值，請輸入報表伺服器的 URL 位址。  
   
-4.  在 [傳遞] 區段中，尋找 <`ReportServerEmail`>。  
+4.  在 [傳遞] 區段中，尋找 < `ReportServerEmail` >。  
   
-5.  在 <`SMTPServer`>，輸入 SMTP 伺服器的名稱。 此值可以是 IP 位址、您公司內部網路之電腦的 UNC 名稱，或是完整的網域名稱。  
+5.  在 [< `SMTPServer`] > 中，輸入 SMTP 伺服器的名稱。 此值可以是 IP 位址、您公司內部網路之電腦的 UNC 名稱，或是完整的網域名稱。  
   
-6.  確認 <`SendUsing`> 設定為 2。 如果將它設定為其他值，報表伺服器就不會設定為使用遠端 SMTP 服務。  
+6.  確認 < `SendUsing` > 設定為2。 如果將它設定為其他值，報表伺服器就不會設定為使用遠端 SMTP 服務。  
   
-7.  在 <`From`>，輸入擁有從 SMTP 伺服器傳送電子郵件的權限的帳戶名稱。  
+7.  在 [< `From`] > 中，輸入具有從 SMTP 伺服器傳送電子郵件之許可權的帳戶名稱。  
   
 8.  儲存檔案。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "66096116"
   
 
   
-##  <a name="bkmk_confiugre_local_SMTP"></a> 若要設定報表伺服器的本機 SMTP 服務  
+##  <a name="bkmk_confiugre_local_SMTP"></a>若要設定報表伺服器的本機 SMTP 服務  
   
 1.  在 [控制台] 中，按兩下 **[新增或移除程式]** 。  
   

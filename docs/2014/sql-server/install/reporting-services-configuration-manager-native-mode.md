@@ -12,15 +12,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bbd786485915405de36511f5710e3490bdfd8a3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092655"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952487"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
   您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝。 如果您是利用僅限檔案安裝選項來安裝報表伺服器，就必須利用組態管理員來設定伺服器，才能使用該伺服器。 如果您使用預設組態安裝選項來安裝報表伺服器，則可以使用組態管理員來驗證或修改在安裝過程中所指定的設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可用於設定本機或遠端報表伺服器執行個體。  
@@ -28,7 +28,7 @@ ms.locfileid: "66092655"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
   
 > [!NOTE]  
->  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員並非設計成管理 SharePoint 模式的報表伺服器。 SharePoint 模式是使用 SharePoint 管理中心和 PowerShell 指令碼來管理並設定。 如需資訊，請參閱[Reporting Services SharePoint 模式安裝&#40;SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
+>  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員並非設計成管理 SharePoint 模式的報表伺服器。 SharePoint 模式是使用 SharePoint 管理中心和 PowerShell 指令碼來管理並設定。 如需相關資訊，請參閱[Reporting Services &#40;sharepoint 模式安裝 SharePoint 2010&#41;和 SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
  **本節內容：**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66092655"
  [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  描述如何設定使用者帳戶以自動模式處理報表。  
   
- [為電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [設定報表伺服器用於以電子郵件&#40;傳遞 SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  描述如何設定報表伺服器，以支援電子郵件報表散發。  
   
  [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
@@ -64,7 +64,7 @@ ms.locfileid: "66092655"
   
  **本主題內容：**  
   
--   [若要使用 Reporting Services 組態管理員的案例](#bkmk_scenarios)  
+-   [使用 Reporting Services 組態管理員的案例](#bkmk_scenarios)  
   
 -   [需求](#bkmk_requirements)  
   

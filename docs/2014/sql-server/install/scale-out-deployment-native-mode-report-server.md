@@ -1,5 +1,5 @@
 ---
-title: 向外延展部署 （原生模式報表伺服器） |Microsoft Docs
+title: 向外延展部署（原生模式報表伺服器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092424"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952423"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>向外延展部署 (原生模式報表伺服器)
   請使用 **組態管理員中的** [向外延展部署] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面檢視向外延展部署的初始化狀態，或將報表伺服器聯結到向外延展部署。 *「向外延展部署」* (Scale-out Deployment) 是指共用單一報表伺服器資料庫的兩個或多個報表伺服器執行個體。  
@@ -36,7 +36,7 @@ ms.locfileid: "66092424"
   
  若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並選取導覽窗格中的 **[向外延展部署]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **SQL Server 名稱**  
  指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體名稱。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66092424"
   
      如果報表伺服器已經是向外延展部署的一部分，您可以使用此頁面來加入或移除節點。  
   
- **初始化**  
+ **Initialize**  
  按一下 **[初始化]** ，將報表伺服器加入向外延展部署中。 這個步驟會設定報表伺服器在共用報表伺服器資料庫中使用對稱金鑰。 您可以使用 **[初始化]** 將報表伺服器執行個體加入向外延展部署中，或疑難排解移轉或安裝問題。  
   
  只有在先前已設定共用報表伺服器資料庫的連接時，您才可以使用報表伺服器執行個體。 此外，您必須從已初始化為使用報表伺服器資料庫的報表伺服器中執行初始化。  
@@ -73,7 +73,7 @@ ms.locfileid: "66092424"
   
  做為預防措施，在移除對稱金鑰之前，請先為其建立備份副本。 移除清單中最後一個報表伺服器的加密金鑰之後，該資料庫任何後續的報表伺服器初始化將導入新需求。 這項新需求是初始化報表伺服器之後，您必須還原對稱金鑰的備份副本。 如果您要存取目前報表伺服器資料庫中的加密資料，就必須還原對稱金鑰。  
   
- 如果您不再需要加密資料，或者如果您沒有金鑰的備份副本，則必須刪除加密資料。 如需詳細資訊，請參閱 <<c0> [ 加密金鑰&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。</c0>  
+ 如果您不再需要加密資料，或者如果您沒有金鑰的備份副本，則必須刪除加密資料。 如需詳細資訊，請參閱[加密金鑰&#40;SSRS&#41;原生模式](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

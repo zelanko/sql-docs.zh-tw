@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 組態管理員 F1 說明主題 （SSRS 原生模式） |Microsoft Docs
+title: Reporting Services 組態管理員 F1 說明主題（SSRS 原生模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95d18bdc96a8215f5050c3b8ecd68ec2b133e28f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092670"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952037"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 組態管理員 F1 說明主題 (SSRS 原生模式)
   本節提供 Reporting Services 組態管理員的 F1 說明。  
@@ -34,13 +34,13 @@ ms.locfileid: "66092670"
   
 -   [Web 服務 URL](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
--   [進階多重網站組態](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
+-   [Advanced Multiple 網站設定](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
 -   [[資料庫備份]](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
--   [變更資料庫精靈](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
+-   [變更資料庫 Wizard](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
--   [變更認證精靈](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
+-   [變更認證嚮導](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   
 -   [報表管理員 URL](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   

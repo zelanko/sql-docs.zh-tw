@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: dd1f843159e4fcbfc4d46c762647f21bd7fec843
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 837843ec91a5bce8475d8153a15f61ad62721f12
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893492"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951987"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>解除安裝 PowerPivot for SharePoint
   解除安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝是一個多步驟的作業，其中包括準備解除安裝、從伺服器陣列移除功能和方案，以及移除程式檔案與登錄設定。  
@@ -32,7 +32,7 @@ ms.locfileid: "68893492"
   
 -   [步驟 3：執行 SQL Server 安裝程式以便從本機電腦移除程式](#bkmk_uninstall)  
   
--   [步驟 4：卸載 PowerPivot for SharePoint 增益集](#bkmk_addin)  
+-   [步驟 4：卸載 PowerPivot for SharePoint 增益集 @ no__t-0  
   
 -   [步驟 5：確認解除安裝](#verify)  
   
@@ -112,7 +112,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  若要尋找並移除已經在佇列中的部署或撤銷作業，請執行下列操作：  
   
-1.  至於其他所有錯誤，請檢查 ULS 記錄檔。 如需詳細資訊, 請參閱[設定及查看 SharePoint 記錄檔和&#40;診斷&#41;記錄 PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging)。  
+1.  至於其他所有錯誤，請檢查 ULS 記錄檔。 如需詳細資訊，請參閱[設定及查看 SharePoint 記錄檔和&#40;診斷&#41;記錄 PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging)。  
   
 2.  以管理員身分啟動 SharePoint 管理命令介面，然後執行下列命令來檢視佇列中的作業：  
   
@@ -122,7 +122,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  檢閱現有部署的下列資訊：[類型] 是 [撤銷] 或 [部署]、[檔案] 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
-4.  針對與 PowerPivot 方案相關的部署或若是方案撤銷, 複製**JobId**的 GUID 值, 然後將它貼入下列命令 (使用 Shell 的 [編輯] 功能表上的 [標記]、[複製] 和 [貼上] 命令來複製 GUID):  
+4.  針對與 PowerPivot 方案相關的部署或若是方案撤銷，複製**JobId**的 GUID 值，然後將它貼入下列命令（使用 Shell 的 [編輯] 功能表上的 [標記]、[複製] 和 [貼上] 命令來複製 GUID）：  
   
     ```  
     Stsadm -o canceldeployment -id "<GUID>"  
@@ -130,7 +130,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 5.  依序按一下 **[驗證]** 和 **[執行]** ，重試組態工具中的工作。  
   
- 或者，您可以使用 PowerShell 從伺服器陣列移除功能和方案。 如需詳細資訊, 請參閱[PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
+ 或者，您可以使用 PowerShell 從伺服器陣列移除功能和方案。 如需詳細資訊，請參閱[PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
   
 ##  <a name="bkmk_uninstall"></a> 步驟 3：執行 SQL Server 安裝程式以便從本機電腦移除程式  
  刪除程式檔案需要您執行 SQL Server 安裝程式來解除安裝軟體。 解除安裝會移除安裝程式所建立的檔案和登錄項目。 您可以使用 [程式和功能] 頁面解除安裝軟體。 安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是安裝 SQL Server 的一部分。  
@@ -146,7 +146,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      您可以從安裝程式選取 **[PowerPivot]** 執行個體，然後選取 **[Analysis Services]** 和 **[Analysis Services SharePoint 整合]** 只移除該功能，而保留其他所有功能。  
   
 ##  <a name="bkmk_addin"></a> 步驟 4：卸載 PowerPivot for SharePoint 增益集  
- 如果您的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署包含兩部以上的伺服器，而且已安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 增益集，請從 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 增益集安裝所在的每一部伺服器上解除安裝增益集，以便完整解除安裝所有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 檔案。 如需詳細資訊, 請參閱[安裝或卸載 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
+ 如果您的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署包含兩部以上的伺服器，而且已安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 增益集，請從 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 增益集安裝所在的每一部伺服器上解除安裝增益集，以便完整解除安裝所有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 檔案。 如需詳細資訊，請參閱[安裝或卸載 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
   
 ##  <a name="verify"></a> 步驟 5：確認解除安裝  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cff16617c187b56e03ed076b07e2820c67da23c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3909d6adb64b798fa17926620a7e7bd5914bf504
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893487"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952683"
 ---
 # <a name="uninstall-reporting-services"></a>解除安裝 Reporting Services
   解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會移除您已建立的內容或是您已修改的組態。 不過，如果有解除安裝完成之後需要的內容，建議您先建立內容的複本，然後再開始進行解除安裝程序。  
@@ -40,7 +40,7 @@ ms.locfileid: "68893487"
 -   **報表伺服器警示資料庫：** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>解除安裝適用於 SharePoint 產品的增益集  
- 當您從電腦解除安裝增益集時，可以選擇只從伺服器陣列解除安裝檔案，或是一併移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 如需卸載[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]適用于 sharepoint 產品之增益集的詳細資訊, 請參閱[安裝或卸載 sharepoint &#40;sharepoint 2010 和 sharepoint 2013&#41;的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
+ 當您從電腦解除安裝增益集時，可以選擇只從伺服器陣列解除安裝檔案，或是一併移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 如需卸載適用于 SharePoint 產品之 @no__t 0 增益集的詳細資訊，請參閱[安裝或卸載適用&#40;于 sharepoint SharePoint 2010 和 sharepoint 2013&#41;的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
   
 ## <a name="uninstall-native-mode"></a>解除安裝原生模式  
  當您解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式時，安裝之後所 **建立** 或 **修改** 的任何內容都會保持原狀。 例如，資料庫檔案、記錄檔、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔和內容項目 (如報表和資料來源檔案)。  

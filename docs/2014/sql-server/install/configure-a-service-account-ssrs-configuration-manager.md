@@ -1,5 +1,5 @@
 ---
-title: 設定服務帳戶 （SSRS 組態管理員） |Microsoft Docs
+title: 設定服務帳戶（SSRS Configuration Manager） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Report Server Windows service, accounts
 - Web service [Reporting Services], report server
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096100"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952578"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>設定服務帳戶 (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中，報表伺服器 Web 服務、報表管理員和背景處理應用程式會在單一服務中執行。 當您在 [服務識別] 頁面中指定此服務執行所用的帳戶時，安裝期間會定義此帳戶，但是如果您想要使用不同的帳戶或更新密碼，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
@@ -38,7 +38,7 @@ ms.locfileid: "66096100"
   
 1.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到報表伺服器。  
   
-2.  在 [服務帳戶] 頁面上，選取可描述您想要使用之帳戶類型的選項。 如需有關哪一個帳戶類型，若要指定，請參閱建議[設定報表伺服器服務帳戶&#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+2.  在 [服務帳戶] 頁面上，選取可描述您想要使用之帳戶類型的選項。 如需所要指定之帳戶類型的建議，請參閱[設定報表伺服器&#40;服務帳戶&#41;SSRS Configuration Manager](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 3.  如果您選取了 Windows 使用者帳戶，請指定新的帳戶和密碼。 此帳戶不能超過 20 個字元。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66096100"
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [服務帳戶&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
+ [服務帳戶&#40;SSRS 原生&#41;模式](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

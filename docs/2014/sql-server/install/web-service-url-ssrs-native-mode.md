@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - Reporting Services, Web service
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090992"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952358"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服務 URL (SSRS 原生模式)
-  使用 [Web 服務 URL] 頁面可設定或修改用來存取報表伺服器的 URL。 將會根據您指定的 URL 來建立 *「URL 保留項目」* 。 此 URL 保留項目會針對後續可用來存取報表伺服器 Web 服務的所有 URL 來定義語法和規則。 它會針對此報表伺服器 Web 服務指定前置詞、主機、通訊埠和虛擬目錄。 根據您指定主機的方式而定，單一保留項目可能會有多個 URL。 主機的預設值會指定強式萬用字元， 強式萬用字元可讓您在 URL 中指定任何可解析為主控報表伺服器之電腦的主機名稱。 如需有關 URL 組態和保留的詳細資訊，請參閱[設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)並[設定報表伺服器 Url &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+  使用 [Web 服務 URL] 頁面可設定或修改用來存取報表伺服器的 URL。 將會根據您指定的 URL 來建立 *「URL 保留項目」* 。 此 URL 保留項目會針對後續可用來存取報表伺服器 Web 服務的所有 URL 來定義語法和規則。 它會針對此報表伺服器 Web 服務指定前置詞、主機、通訊埠和虛擬目錄。 根據您指定主機的方式而定，單一保留項目可能會有多個 URL。 主機的預設值會指定強式萬用字元， 強式萬用字元可讓您在 URL 中指定任何可解析為主控報表伺服器之電腦的主機名稱。 如需 URL 設定和保留的詳細資訊，請參閱[設定&#40;url ssrs&#41; Configuration Manager](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)和[設定報表伺服器&#40;url ssrs&#41;Configuration Manager](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66090992"
   
  如果您已重新安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後發現您在嘗試使用 [全部指派] 的預設 IP 位址值和通訊埠 80 時得到錯誤，通常可以在重新啟動此服務之後，重新建立 URL 來解決錯誤。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **虛擬目錄**  
  為報表伺服器 Web 服務指定虛擬目錄名稱。 相同電腦上的每一個報表伺服器 Web 服務執行個體只能有一個虛擬名稱。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66090992"
   
 -   **[127.0.0.1]** 是用來存取 localhost， 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
   
--   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 定址的 IP 位址會是 128 位元值的 8 4 位元組欄位，類似於下列格式：\<標頭 >:*nnnn:nnnn:nnnn:nnnn*  
+-   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<header >：*nnnn： nnnn： nnnn： nnnn*  
   
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66090992"
 >  若要更正這個問題，請刪除所有繫結，然後使用唯一的設定建立新繫結，或設定包含萬用字元的 Reporting Services URL 註冊。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生&#41;模式](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

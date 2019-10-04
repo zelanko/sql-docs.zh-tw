@@ -1,5 +1,5 @@
 ---
-title: 虛擬目錄中有不支援的驗證方法 (Upgrade Advisor) |Microsoft Docs
+title: 虛擬目錄具有不支援的驗證方法（Upgrade Advisor） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - virtual directories [Reporting Services]
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 992e0f125d80a4735a356a853dab55439149e7ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091059"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952013"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>虛擬目錄具有不支援的驗證方法 (Upgrade Advisor)
   Upgrade Advisor 在報表管理員或報表伺服器虛擬目錄上偵測到不支援的驗證方法。 升級不支援的驗證方法包括匿名驗證、摘要式驗證和 .NET Passport。  
@@ -44,6 +44,6 @@ ms.locfileid: "66091059"
  若要繼續進行升級，請在 IIS 中針對 ReportServer 和 Reports 虛擬目錄修改驗證方法。 如需有關在 IIS 中修改驗證方法的詳細資訊，請參閱 IIS 文件集。 在您針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虛擬目錄修改驗證方法之後，請重新執行 Upgrade Advisor 來確認沒有其他升級問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 升級問題&#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Reporting Services 升級問題&#40;upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

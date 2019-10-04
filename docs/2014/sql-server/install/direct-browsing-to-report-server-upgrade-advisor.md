@@ -1,5 +1,5 @@
 ---
-title: 直接瀏覽報表伺服器 (Upgrade Advisor) |Microsoft Docs
+title: 直接流覽至報表伺服器（Upgrade Advisor） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3d2814a4-318a-45ed-b093-1e852fab561f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 870937f4dffe356ca2216335c74566efc73d2a52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6945828b2eba829c32d717c13393c9fbda4fc43e
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095541"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952215"
 ---
 # <a name="direct-browsing-to-report-server-upgrade-advisor"></a>直接瀏覽報表伺服器 (Upgrade Advisor)
-  Upgrade Advisor 偵測到您目前安裝的[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]是直接瀏覽報表伺服器虛擬目錄。  
+  Upgrade Advisor 偵測到您目前安裝的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接流覽至報表伺服器虛擬目錄。  
   
 ||  
 |-|  
@@ -28,12 +28,12 @@ ms.locfileid: "66095541"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>描述  
- Upgrade Advisor 偵測到您目前安裝的[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]瀏覽直接向報表伺服器虛擬目錄，例如**http://\<伺服器名稱 > / ReportServer**。 在目前 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本中不支援。  
+ Upgrade Advisor 偵測到您目前安裝的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 正在直接流覽至報表伺服器虛擬目錄，例如**HTTP://\<server name >/ReportServer**。 在目前 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本中不支援。  
   
 > [!NOTE]  
 >  此規則是警告，升級未遭到封鎖。  
   
 ## <a name="corrective-action"></a>更正動作  
- 瀏覽文件庫中使用 SharePoint 使用者介面或使用**http://\<伺服器名稱 > / sharepoint 網站 >/_vti_bin/reportserver**。  
+ 使用文件庫的 SharePoint 使用者介面流覽，或使用**HTTP://\<server name >/sharepoint site >/_vti_bin/reportserver**。  
   
   

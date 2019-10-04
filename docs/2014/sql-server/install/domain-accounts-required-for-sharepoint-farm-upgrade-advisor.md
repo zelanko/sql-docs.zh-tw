@@ -1,5 +1,5 @@
 ---
-title: 網域帳戶所需的 SharePoint 伺服器陣列 (Upgrade Advisor) |Microsoft Docs
+title: SharePoint 伺服器陣列所需的網域帳戶（Upgrade Advisor） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3e6d9802eafeea7babdcf23a3e8ea0f6b732e308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4079ea4213d7ecbec0165c32c82b3449bbb5aee
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095506"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952513"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 伺服陣列所需的網域帳戶 (Upgrade Advisor)
   針對伺服陣列環境設定的 SharePoint 產品需要使用網域帳戶。  
@@ -35,17 +35,17 @@ ms.locfileid: "66095506"
  「報表伺服器是以內建的 NT AUTHORITY\NETWORK SERVICE 帳戶執行，但 SharePoint 伺服陣列安裝不支援該帳戶。 請將報表伺服器重新設定成以網域帳戶執行。」  
   
 ## <a name="corrective-action"></a>更正動作  
- 針對[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和舊版中，使用 Reporting Services 組態管理員來變更指派為報表伺服器服務帳戶的帳戶。  
+ 若為 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及舊版，請使用 Reporting Services 組態管理員來變更指派為報表伺服器服務帳戶的帳戶。  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>若要從組態管理員變更服務帳戶  
   
-1.  從**開始**功能表上，選取**所有程式**，然後按一下**Microsoft SQL Server 2008 R2**。  
+1.  從 [**開始**] 功能表選取 [**所有程式**]，然後按一下 [ **Microsoft SQL Server 2008 R2**]。  
   
-2.  選取 **組態工具**，然後按一下**Reporting Services 組態管理員**。  
+2.  選取 [**組態工具**]，然後按一下 [ **Reporting Services 組態管理員**]。  
   
-3.  在 組態管理員 中，選取**服務帳戶** 索引標籤。  
+3.  在 Configuration Manager 中，選取 [**服務帳戶**] 索引標籤。  
   
-4.  選取 **使用另一個帳戶**，然後輸入網域帳戶的認證。  
+4.  選取 [**使用其他帳戶**]，然後輸入網域帳戶的認證。  
   
 5.  按一下 **[套用]** 。  
   

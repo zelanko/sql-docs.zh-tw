@@ -1,10 +1,10 @@
 ---
 title: _exec_requests （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326161"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923780"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -47,7 +47,7 @@ ms.locfileid: "71326161"
 |database_id|**smallint**|要求執行目標的資料庫識別碼。 不可為 Null。|  
 |user_id|**int**|提交要求之使用者的識別碼。 不可為 Null。|  
 |connection_id|**uniqueidentifier**|要求到達所用連接的識別碼。 可為 Null。|  
-|blocking_session_id|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，目前無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
+|blocking_session_id|**smallint**|封鎖要求之工作階段的識別碼。 如果此資料行為 Null 或等於0，則不會封鎖要求，或封鎖會話的會話資訊無法使用（或無法識別）。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，目前無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
 |wait_type|**nvarchar(60)**|若要求目前被封鎖，這個資料行會傳回等候的類型。 可為 Null。<br /><br /> 如需等候類型的詳細資訊，請參閱[sys.databases _os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
 |wait_time|**int**|若要求目前被封鎖，這個資料行會傳回目前等候的持續時間 (以毫秒為單位)。 不可為 Null。|  
 |last_wait_type|**nvarchar(60)**|如果這個要求先前被封鎖，這個資料行會傳回上次等候的類型。 不可為 Null。|  
@@ -77,7 +77,7 @@ ms.locfileid: "71326161"
 |ansi_padding|**bit**|1 = 這項要求的 ANSI_PADDING 設定是 ON。<br /><br /> 否則，它是0。<br /><br /> 不可為 Null。|  
 |ansi_nulls|**bit**|1 = 這項要求的 ANSI_NULLS 設定是 ON。 否則，它是0。<br /><br /> 不可為 Null。|  
 |concat_null_yields_null|**bit**|1 = 這項要求的 CONCAT_NULL_YIELDS_NULL 設定是 ON。 否則，它是0。<br /><br /> 不可為 Null。|  
-|transaction_isolation_level|**smallint**|建立這項要求之交易所用的隔離等級。 不可為 Null。<br /><br /> 0 = Unspecified<br /><br /> 1 = ReadUncomitted<br /><br /> 2 = ReadCommitted<br /><br /> 3 = Repeatable<br /><br /> 4 = Serializable<br /><br /> 5 = Snapshot|  
+|transaction_isolation_level|**smallint**|建立這項要求之交易所用的隔離等級。 不可為 Null。<br /> 0 = Unspecified<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = Repeatable<br /> 4 = Serializable<br /> 5 = Snapshot|  
 |lock_timeout|**int**|這項要求的鎖定逾時期限 (以毫秒為單位)。 不可為 Null。|  
 |deadlock_priority|**int**|這項要求的 DEADLOCK_PRIORITY 設定。 不可為 Null。|  
 |row_count|**bigint**|這項要求傳回用戶端的資料列數。 不可為 Null。|  
@@ -96,6 +96,7 @@ ms.locfileid: "71326161"
 |is_resumable |**bit** |**適用於**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指出要求是否為可繼續的索引作業。 |  
 |page_resource |**binary(8)** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果`wait_resource`資料行包含頁面，則為頁面資源的8位元組十六進位標記法。 如需詳細資訊，請參閱[fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
 |page_server_reads|**bigint**|**適用於**：Azure SQL Database 超大規模資料庫<br /><br /> 此要求所執行的頁面伺服器讀取數目。 不可為 Null。|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>備註 
 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部的程式碼 (例如，擴充預存程序和分散式查詢)，執行緒必須在非先佔式排程器的控制之外執行。 若要這麼做，工作者必須切換到先佔式模式。 這個動態管理檢視傳回的時間值不包括先佔式模式所花費的時間。
@@ -125,14 +126,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 尋找執行中批次持有的所有鎖定
 
-下列範例會查詢 **_exec_requests**以尋找感興趣的批次，並從輸出`transaction_id`複製其。
+下列範例會查詢 **_exec_requests**以尋找感興趣的批次，並從輸出複製其 `transaction_id`。
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-然後，若要尋找鎖定資訊，請使用`transaction_id`以系統函數 **_tran_locks**所複製的。  
+然後，若要尋找鎖定資訊，請使用複製的 `transaction_id` 和系統函數**sys.databases _tran_locks**。  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

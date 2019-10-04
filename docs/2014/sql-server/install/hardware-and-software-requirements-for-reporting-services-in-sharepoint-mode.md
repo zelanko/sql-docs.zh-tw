@@ -1,5 +1,5 @@
 ---
-title: 硬體和軟體需求的 Reporting Services SharePoint 模式 |Microsoft Docs
+title: SharePoint 模式下 Reporting Services 的硬體和軟體需求 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5584984121403b1a70e15fb02e85b7afcc169843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d17e0087c2d2899178d15845f58e03265e9f6c47
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094983"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952197"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式的 Reporting Services 之硬體和軟體需求
 
@@ -37,7 +37,7 @@ ms.locfileid: "66094983"
   
 -   以 SharePoint 模式執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要 SharePoint Server。 如需有關 SharePoint 需求和組態的詳細資訊，請參閱下列主題：  
   
-    -   [硬體和軟體需求 (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=256365) (https://go.microsoft.com/fwlink/p/?LinkId=256365)  
+    -   [硬體和軟體需求（SharePoint 2013）](https://go.microsoft.com/fwlink/p/?LinkId=256365) （ https://go.microsoft.com/fwlink/p/?LinkId=256365)  
   
     -   [SharePoint Server 2013 的容量管理和調整大小](https://technet.microsoft.com/library/cc261700.aspx)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66094983"
   
 ##  <a name="bkmk_more_information"></a> 其他資訊
 
- 如需 SharePoint 變更的詳細資訊，請參閱[SharePoint 2013 會從 SharePoint 2010 變成](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx) 。  
+ 如需 SharePoint 變更的相關資訊，請參閱[從 sharepoint 2010 變更為 sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) （ https://technet.microsoft.com/library/ff607742(office.15).aspx) 。  
   
  [SQL Server 2014 版本資訊](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   
