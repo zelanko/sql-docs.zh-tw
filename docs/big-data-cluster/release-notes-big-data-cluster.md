@@ -1,7 +1,7 @@
 ---
 title: 版本資訊
 titleSuffix: SQL Server big data clusters
-description: 本文說明[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （預覽）的最新更新和已知問題。
+description: 本文說明 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （預覽）的最新更新和已知問題。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 758e87a0c74df695c06cb0f0005f6a19d8978625
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988099"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974388"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server Big Data 叢集的版本資訊
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文列出最新版本[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的更新和已知問題。
+本文列出最新版本 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的更新和已知問題。
 
 ## <a id="rc"></a>候選版（八月）
 
@@ -31,13 +31,13 @@ ms.locfileid: "70988099"
 |新功能或更新 | 詳細資料 |
 |:---|:---|
 |SQL Server Always On 可用性群組 |當您部署 SQL Server Big Data 叢集時，您可以設定部署來建立可用性群組，以提供：<br/><br/>-高可用性 <br/><br/>-讀取-相應放大 <br/><br/>-向外延展資料插入資料集區<br/><br>請參閱[使用高可用性進行部署](../big-data-cluster/deployment-high-availability.md)。 |
-|`azdata` |使用[安裝管理](./deploy-install-azdata-linux-package.md)程式簡化的工具安裝<br/><br/>[`azdata notebook`命令](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`命令](./reference-azdata-bdc-status.md) |
+|`azdata` |使用[安裝管理](./deploy-install-azdata-linux-package.md)程式簡化的工具安裝<br/><br/>[`azdata notebook` 命令](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status` 命令](./reference-azdata-bdc-status.md) |
 |Azure Data Studio|[下載 Azure Data Studio 的候選版組建](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)。<br/><br/>已透過 SQL Server 2019 guide Jupyter Book 新增對筆記本的疑難排解。<br/><br/>已新增控制器登入體驗。<br/><br/>已新增控制器儀表板來查看服務端點、查看叢集健全狀況狀態，以及存取疑難排解筆記本。<br/><br/>改良的筆記本資料格輸出/編輯效能。|
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知問題
 
-* SQL Server 2019 Big Data 叢集候選版重新整理組建編號`15.0.1900.47`為。
+* SQL Server 2019 Big Data 叢集候選版重新整理組建編號 `15.0.1900.47`。
 
 * 具有上述組建編號的 SQL Server 2019 Big Data 叢集發行候選版本中不支援「kubeadm-生產」部署設定檔。 相反地，請使用「kubeadm-開發/測試」設定檔進行 Kubeadm 部署。
 
@@ -49,7 +49,7 @@ ms.locfileid: "70988099"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|公開預覽 |在 CTP 3.2 之前，已將 SQL Server 巨量資料叢集提供給註冊的早期採用者使用。 此版本讓任何人都能體驗 SQL Server 巨量資料叢集的功能。 <br/><br/> 請參閱[開始使用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md)。|
+|公開預覽 |在 CTP 3.2 之前，已將 SQL Server 巨量資料叢集提供給註冊的早期採用者使用。 此版本讓任何人都能體驗 SQL Server 巨量資料叢集的功能。 <br/><br/> 請參閱[開始使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md)。|
 |`azdata` |CTP 3.2 引進了 `azdata`，這是一種以 Python 編寫的命令列公用程式，可讓叢集管理員透過 REST API 啟動程序和管理巨量資料叢集。 `azdata` 取代了 `mssqlctl`。 請參閱[安裝 `azdata`](deploy-install-azdata.md)。 |
 |PolyBase |外部資料表資料行名稱現在可用來查詢 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 資料來源。 在先前的 CTP 版本中，外部資料來源中的資料行只會根據序數位置進行繫結，而不會使用 EXTERNAL TABLE 定義中所指定的名稱。 |
 |HDFS 階層處理重新整理 |針對 HDFS 階層處理引進了重新整理功能，以便能夠針對遠端資料的最新快照集重新整理現有的裝載。 請參閱 [HDFS 階層處理](hdfs-tiering.md) |
@@ -169,7 +169,7 @@ ms.locfileid: "70988099"
 
 #### <a name="kibana-logs-dashboards"></a>Kibana 記錄儀表板
 
-- 在 Aris CTP 3.0 和 3.1 之間，Kibana 版本已從 6.3.1 升級為 7.0.1。  這會讓 Microsoft Edge 瀏覽器與 Kibana 不相容。 當您在 Microsoft Edge 中載入目前版本的 Kibana 儀表板時，使用者會看到空白頁面。 如需 Kibana.rs 支援的瀏覽器，請參閱[這裡]( https://www.elastic.co/support/matrix#matrix_browse) \(英文\) 
+- 在 CTP 3.0 和3.1 之間，Kibana 版本已從6.3.1 升級至7.0.1 版。  這會讓 Microsoft Edge 瀏覽器與 Kibana 不相容。 當您在 Microsoft Edge 中載入目前版本的 Kibana 儀表板時，使用者會看到空白頁面。 如需 Kibana 支援的瀏覽器，請參閱[這裡]( https://www.elastic.co/support/matrix#matrix_browse)。
 
 
 ## <a id="ctp30"></a> CTP 3.0 (5 月)
@@ -498,9 +498,9 @@ make: *** [deploy-clean] Error 2
 
 | 新功能或更新 | 詳細資料 |
 | :---------- | :------ |
-| 在 IntelliJ 中於巨量資料叢集上提交 Spark 作業。 | [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在 IntelliJ 中提交 Spark 作業](spark-submit-job-intellij-tool-plugin.md) |
-| 適用於應用程式部署和叢集管理的一般 CLI。 | [如何在上部署應用程式[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
-| 用來將應用程式部署到巨量資料叢集的 VS Code 延伸模組。 | [如何使用 VS Code 將應用程式部署至[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
+| 在 IntelliJ 中於巨量資料叢集上提交 Spark 作業。 | [在 IntelliJ 的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上提交 Spark 作業](spark-submit-job-intellij-tool-plugin.md) |
+| 適用於應用程式部署和叢集管理的一般 CLI。 | [如何在 @no__t 上部署應用程式-1](big-data-cluster-create-apps.md) |
+| 用來將應用程式部署到巨量資料叢集的 VS Code 延伸模組。 | [如何使用 VS Code 將應用程式部署至 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | **azdata** 工具命令使用方式的變更。 | 如需詳細資料，請參閱 [azdata 的已知問題](#azdatactp23)。 |
 | 在巨量資料叢集中使用 Sparklyr。 | [在 SQL Server 2019 巨量資料叢集中使用 Sparklyr](sparklyr-from-RStudio.md) |
 | 將外部 HDFS 相容儲存體裝載至具備 **HDFS 階層處理**的巨量資料叢集。 | 請參閱 [HDFS 階層處理](hdfs-tiering.md)。 |
@@ -693,7 +693,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>已知問題
 
-下列各節提供 CTP 2.1 中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的已知問題。
+下列各節提供 CTP 2.1 中 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的已知問題。
 
 #### <a name="deployment"></a>部署
 
@@ -768,7 +768,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>已知問題
 
-下列各節提供 CTP 2.0 中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的已知問題。
+下列各節提供 CTP 2.0 中 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的已知問題。
 
 #### <a name="deployment"></a>部署
 
@@ -818,4 +818,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的詳細資訊，請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。
+如需 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。
