@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 101e3773c2c027ed6cec8291a67448ce31e8c6dd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7c36fa3cce2008601152b02f0db45b0eccac81d8
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68161123"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974261"
 ---
- SQL Server 2016 (13.x) 
+ SQL Server 2016 (13.x)
