@@ -6,13 +6,13 @@ ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
-ms.openlocfilehash: 1c9797eb7020b4381d21e5324ab2a3b23bb14b29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: ''
+ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061959"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710460"
 ---
 # <a name="type-mapping-with-polybase"></a>使用 PolyBase 進行類型對應
 
@@ -98,7 +98,7 @@ ms.locfileid: "68061959"
 | 二進位資料        | nvarchar        |
 | 物件識別碼          | nvarchar        |
 | 布林            | bit             |
-| date               | Datetime2       |
+| Date               | Datetime2       |
 | 32 位元整數     | int             |
 | 時間戳記          | nvarchar        |
 | 64 位元整數     | BigInt          |
@@ -134,7 +134,7 @@ MongoDB 會使用 BSON 文件來儲存資料記錄。 不同於先前的案例�
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|DATE                |date             |
+|DATE                |Date             |
 |timestamp           |Datetime2        |
 |TIME                |Time             |
 |TIME WITH TIME ZONE |Time             |

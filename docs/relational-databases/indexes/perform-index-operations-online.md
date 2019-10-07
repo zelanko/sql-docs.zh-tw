@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1c10bfefd80a121e858cc0175f08b6ee68ab6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 914d2a3bfd73c76fc89b1ca6ed0302f32e0a4d32
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909607"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680794"
 ---
 # <a name="perform-index-operations-online"></a>線上執行索引作業
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,12 +96,11 @@ ms.locfileid: "67909607"
 ### <a name="to-create-rebuild-or-drop-an-index-online"></a>若要線上建立、重建或卸除索引  
   
 下列範例會在 AdventureWorks 資料庫中重建現有線上索引。
-  
- ```sql  
- ALTER INDEX AK_Employee_NationalIDNumber
-   ON HumanResources.Employee  
-   REBUILD WITH (ONLINE = ON)
-;
+
+```sql
+ALTER INDEX AK_Employee_NationalIDNumber
+    ON HumanResources.Employee
+    REBUILD WITH (ONLINE = ON);
 ```  
   
 下列範例會在線上刪除叢集索引，並利用 `NewGroup` 子句，將產生的資料表 (堆積) 移到 `MOVE TO` 檔案群組。 它會查詢 `sys.indexes`、 `sys.tables`和 `sys.filegroups` 目錄檢視來確認在移動之前和之後，索引和資料表在檔案群組中的位置。  

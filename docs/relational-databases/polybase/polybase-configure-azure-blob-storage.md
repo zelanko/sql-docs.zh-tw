@@ -6,14 +6,14 @@ ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: e7ac4cda37a211c73b9895bdface7e6ade56ad11
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 81334dbfee970f7ce26ef723a463e10f7349d841
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874842"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710649"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 存取 Azure Blob 儲存體中的外部資料
 

@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c9e96d5ebbe71273204b39ed5d387ecab598654a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764363"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710962"
 ---
 # <a name="change-publication-and-article-properties"></a>變更發行集與發行項屬性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68764363"
 |Description|預存程序|屬性|需求|  
 |-----------------|----------------------|----------------|------------------|  
 |卸除發行項|**sp_droparticle**|所有參數。|可以在建立訂閱之前卸除發行項。 使用預存程序，可以卸除發行項訂閱；使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，必須卸除、重新建立並同步處理整個訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。|  
-|變更資料行篩選。|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|新的快照集。<br /><br /> 重新初始化訂閱。|  
+|變更資料行篩選。|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |新增資料列篩選。|**sp_articlefilter**|所有參數。|新的快照集。<br /><br /> 重新初始化訂閱。|  
-|卸除資料列篩選。|**sp_articlefilter**|**@article**|新的快照集。<br /><br /> 重新初始化訂閱。|  
-|變更資料列篩選。|**sp_articlefilter**|**@filter_clause**|新的快照集。<br /><br /> 重新初始化訂閱。|  
+|卸除資料列篩選。|**sp_articlefilter**|`@article`|新的快照集。<br /><br /> 重新初始化訂閱。|  
+|變更資料列篩選。|**sp_articlefilter**|`@filter_clause`|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |變更資料列篩選。|**sp_changearticle**|**filter**|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |變更結構描述選項。|**sp_changearticle**|**schema_option**|新的快照集。|  
 |在套用快照集之前，變更在「訂閱者」端處理資料表的方式。|**sp_changearticle**|**pre_creation_cmd**|新的快照集。|  
@@ -58,7 +58,7 @@ ms.locfileid: "68764363"
 |變更 INSERT、UPDATE 或 DELETE 命令。|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |變更目的地資料表名稱|**sp_changearticle**|**dest_table**|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |變更目的地資料表擁有者 (結構描述)。|**sp_changearticle**|**destination_owner**|新的快照集。<br /><br /> 重新初始化訂閱。|  
-|變更資料類型對應 (僅套用至 Oracle 發行)。|**sp_changearticlecolumndatatype**|**@type**<br /><br /> **@length**<br /><br /> **@precision**<br /><br /> **@scale**|新的快照集。<br /><br /> 重新初始化訂閱。|  
+|變更資料類型對應 (僅套用至 Oracle 發行)。|**sp_changearticlecolumndatatype**|`@type` <br /><br /> `@length` <br /><br /> `@precision`<br /><br /> `@scale`|新的快照集。<br /><br /> 重新初始化訂閱。|  
   
 ## <a name="publication-properties-for-merge-replication"></a>合併式複寫的發行集屬性  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68764363"
 |變更前快照集或後快照集指令碼。|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|新的快照集 (如果您變更指令碼內容，也需要這項)。<br /><br /> 將新的指令碼套用至訂閱者需要重新初始化。|  
 |新增聯結篩選或邏輯記錄。|**sp_addmergefilter**|所有參數。|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |卸除聯結篩選或邏輯記錄。|**sp_dropmergefilter**|所有參數。|新的快照集。<br /><br /> 重新初始化訂閱。|  
-|變更聯結篩選或邏輯記錄。|**sp_changemergefilter**|**@property**<br /><br /> **@value**|新增快照集<br /><br /> 重新初始化訂閱。|  
+|變更聯結篩選或邏輯記錄。|**sp_changemergefilter**|`@property`<br /><br /> `@value`|新增快照集<br /><br /> 重新初始化訂閱。|  
 |停用參數化篩選 (啟用參數化篩選不需要執行任何特殊動作)。|**sp_changemergepublication**|**false** 的 **false**值|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |啟用或停用預先計算的資料分割。|**sp_changemergepublication**|**use_partition_groups**|新的快照集。|  
 |啟用或停用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 資料分割最佳化。|**sp_changemergepublication**|**keep_partition_changes**|重新初始化訂閱。|  
@@ -86,7 +86,7 @@ ms.locfileid: "68764363"
 |卸除發行項，其中發行項在發行集中具有最終參數化篩選。|**sp_dropmergearticle**|所有參數|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |卸除發行項，其中發行項是聯結篩選或邏輯記錄中的父系 (這會有卸除聯結的副作用)。|**sp_dropmergearticle**|所有參數|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |卸除發行項，所有其他情形。|**sp_dropmergearticle**|所有參數|新的快照集。|  
-|包括先前未發行的資料行篩選。|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|新的快照集。<br /><br /> 重新初始化訂閱。|  
+|包括先前未發行的資料行篩選。|**sp_mergearticlecolumn**|`@column`<br /><br /> `@operation`|新的快照集。<br /><br /> 重新初始化訂閱。|  
 |新增、卸除或變更資料列篩選。|**sp_changemergearticle**|**subset_filterclause**|新的快照集。<br /><br /> 重新初始化訂閱。<br /><br /> 如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。<br /><br /> 如果發行項與所有聯結篩選無關，您可以卸除發行項，然後再使用不同的資料列篩選將其新增，這並不需要重新初始化整個訂閱。 如需新增及卸除發行項的詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。|  
 |變更結構描述選項。|**sp_changemergearticle**|**schema_option**|新的快照集。|  
 |將追蹤從資料行層級變更為資料列層級 (從資料列層級追蹤變更為資料行追蹤不需要執行任何特殊動作)。|**sp_changemergearticle**|**false** 的 **false**值|新的快照集。<br /><br /> 重新初始化訂閱。|  

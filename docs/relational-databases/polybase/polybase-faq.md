@@ -4,15 +4,15 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 49376b0a4fa95c673255420962d173903b84ca15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d4cda6dd0fdade80521a801799e5ee53a80c140
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062211"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710558"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 

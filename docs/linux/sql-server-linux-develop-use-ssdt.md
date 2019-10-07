@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT) 可將 Visual Studio 轉化為適用於 Linux SQL S
 
 2. 在 Visual Studio 安裝期間，請針對 [選擇安裝類型]  選項選取 [自訂]  。 按 **[下一步]**
 
-3. 從功能選取清單中，選取 [Microsoft SQL Server Data Tools] ****、[Git for Windows]** **和 [Visual Studio 的 GitHub 延伸模組]**** 。
+3. 從功能選取清單中，選取 [Microsoft SQL Server Data Tools]、[Git for Windows] 和 [Visual Studio 的 GitHub 延伸模組]。   
 
     <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 
@@ -109,8 +109,8 @@ SSDT 17.0 RC 或更新版本支援 Linux 上的 SQL Server。
 
 如需使用 SQL Data Tools 開發資料庫的詳細資訊，請參閱 [SSDT MSDN 文件]
 
-[下載及安裝 Visual Studio]: https://www.visualstudio.com/downloads/
+[下載及安裝 Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN 文件]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[教學課程：撰寫 Transact-SQL 陳述式]: https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL 參考 (資料庫引擎)]: https://msdn.microsoft.com/library/bb510741.aspx
+[SSDT MSDN 文件]:https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
+[教學課程：撰寫 Transact-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
+[Transact-SQL 參考 (資料庫引擎)]:https://msdn.microsoft.com/library/bb510741.aspx

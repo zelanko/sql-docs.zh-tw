@@ -10,14 +10,14 @@ helpviewer_keywords:
 - PolyBase, SQL objects
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3ed8ea01f7eb653c9c28fb58d083d2a5a01ef46f
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: e1e07db85220c9312ab71bb5fb020b9a9d611a5f
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329348"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710519"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL 參考
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ba155568a2933c7ce74f2aef33e64a9b6905d090
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062098"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710478"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 

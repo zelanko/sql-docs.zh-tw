@@ -21,12 +21,12 @@ ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0b19216ce352256355da9b2f0c458f49c036773
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 266d03b1eb5b96f4f4e78ed1a7985e5071a12d20
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075076"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823607"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ IF Boolean_expression
   
 ## <a name="example"></a>範例  
   
-```  
+```sql
 IF DATENAME(weekday, GETDATE()) IN (N'Saturday', N'Sunday')
        SELECT 'Weekend';
 ELSE 
@@ -72,23 +72,20 @@ ELSE
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例使用 `IF...ELSE`，以根據 `DimProduct` 資料表中項目的權數，來判斷要向使用者顯示兩個回應中的哪一個。  
   
-```  
+```sql
 -- Uses AdventureWorksDW  
-  
+
 DECLARE @maxWeight float, @productKey integer  
 SET @maxWeight = 100.00  
 SET @productKey = 424  
-IF @maxWeight <= (SELECT Weight from DimProduct 
-                  WHERE ProductKey = @productKey)   
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is too heavy to ship and is only available for pickup.' 
+IF @maxWeight <= (SELECT Weight from DimProduct WHERE ProductKey = @productKey)   
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is too heavy to ship and is only available for pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ELSE  
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is available for shipping or pickup.' 
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ```  
   
 ## <a name="see-also"></a>另請參閱  
@@ -98,8 +95,3 @@ ELSE
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
-  
-  
-
-
-

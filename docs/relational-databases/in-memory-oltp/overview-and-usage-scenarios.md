@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.openlocfilehash: 47726a76f853b8728369a2b406de1fdc8456facd
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059285"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961940"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ETL 工作流程通常包含將資料載入暫存資料表、轉換資料，然�
 
 您可以在下列位置使用指令碼，在預設資料夾中建立檔案群組，並設定建議的設定：
 
-- [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+- [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 
 下列指令碼將說明您可以在資料庫中建立的記憶體內部 OLTP 物件：
 
@@ -225,7 +225,7 @@ GO
 [提高 T-SQL 效能的記憶體內部 OLTP 技術](https://msdn.microsoft.com/library/mt694156.aspx)   
 如需使用記憶體內部 OLTP 的效能示範，請參閱：[in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [說明記憶體內部 OLTP 並顯示示範的 17 分鐘影片](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
-[啟用記憶體內部 OLTP 並設定建議選項的指令碼](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
+[啟用記憶體內部 OLTP 並設定建議選項的指令碼](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)   
 [主要的記憶體內部 OLTP 文件](in-memory-oltp-in-memory-optimization.md)   
 [Performance and resource utilization benefits of In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/) (Azure SQL Database 中記憶體內部 OLTP 的效能與資源使用率優點)  
 [使用記憶體最佳化提升暫存資料表與資料表變數效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   

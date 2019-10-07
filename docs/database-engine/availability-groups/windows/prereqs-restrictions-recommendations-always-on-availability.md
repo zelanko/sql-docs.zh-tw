@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 54b58cefb736fd4429c54c773f2fd6c0a9e86f59
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250978"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708481"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性群組的必要條件、限制和建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "71250978"
   
      下列 PowerShell 範例會針對名為 `SQL Network Name (SQL35)` 的網路名稱資源將 HostRecordTTL 設定為 300 秒。  
   
-    ```  
+    ```powershell
     Import-Module FailoverClusters  
   
     $nameResource = "SQL Network Name (SQL35)"  

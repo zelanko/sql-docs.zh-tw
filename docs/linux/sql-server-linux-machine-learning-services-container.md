@@ -1,6 +1,6 @@
 ---
 title: 在容器中執行 SQL Server 機器學習服務 | Microsoft Docs
-description: 此教學課程示範如何在 Docker 上執行的 Linux 容器中使用 SQL Server 機器學習服務。
+description: 本教學課程示範如何在 Docker 上執行的 Linux 容器中使用 SQL Server 機器學習服務。
 author: uc-msft
 ms.author: umajay
 ms.date: 06/26/2019
@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.collection: linux-container
-moniker: '>= sql-server-linux-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4fa470ce5b35cf8e78f919080988b5091af6e04e
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
+ms.openlocfilehash: 28bdf20b51769e15a887b4f9ec227f7aaf6afc95
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890920"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923816"
 ---
 # <a name="run-sql-server-machine-learning-services-in-a-container"></a>在容器中執行 SQL Server 機器學習服務
 
@@ -29,7 +29,7 @@ ms.locfileid: "69890920"
 > * 使用 Transact-SQL 陳述式執行 R 或 Python 指令碼。
 > * 停止並移除 SQL Server Linux 容器。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 * Git 命令列介面。
 * 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
@@ -150,7 +150,7 @@ ms.locfileid: "69890920"
 
 ## <a name="next-steps"></a>後續步驟
 
-在此教學課程中，您已了解如何執行下列動作：
+在本教學課程中，您已了解如何執行下列動作：
 
 > [!div class="checklist"]
 > * 複製 mssql-docker 存放庫

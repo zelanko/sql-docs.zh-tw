@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Hadoop import, PolyBase overview
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: c33e212ea513cbb5271c1271f938b1009855559c
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 7e9e09cece42b84e5fa9691aa0d353d2ed22431b
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326157"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710587"
 ---
 # <a name="what-is-polybase"></a>什麼是 PolyBase？
 

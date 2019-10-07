@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ca1ff898841b946c0823b71b065f360a59e69696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071698"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816765"
 ---
 # <a name="attach-a-database"></a>附加資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,35 +56,33 @@ ms.locfileid: "68071698"
   
 2.  以滑鼠右鍵按一下 **[資料庫]** ，然後按一下 **[附加]** 。  
   
-3.  在 **[附加資料庫]** 對話方塊中，若要指定要附加的資料庫，請按一下 **[加入]** ；在 **[尋找資料庫檔案]** 對話方塊中，選取資料庫所在的磁碟機、展開目錄樹狀結構，尋找並選取資料庫的 .mdf 檔案；例如：  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  在 **[附加資料庫]** 對話方塊中，若要指定要附加的資料庫，請按一下 **[加入]** ；在 **[尋找資料庫檔案]** 對話方塊中，選取資料庫所在的磁碟機、展開目錄樹狀結構，尋找並選取資料庫的 .mdf 檔案；例如：
 
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Trying to select a database that is already attached generates an error.  
+    > 嘗試選取已經附加的資料庫，會產生錯誤。  
   
-     **Databases to attach**  
-     Displays information about the selected databases.  
+     **要附加的資料庫**  
+     顯示有關所選資料庫的資訊。  
   
-     \<no column header>  
-     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
+     \<無資料行標頭>  
+     顯示指出附加作業之狀態的圖示。 可能的圖示將在以下的 **[狀態]** 描述中加以描述。  
   
-     **MDF File Location**  
-     Displays the path and file name of the selected MDF file.  
+     **MDF 檔案位置**  
+     顯示選取之 MDF 檔的路徑和檔案名稱。  
   
      **Database Name**  
-     Displays the name of the database.  
+     顯示資料庫的名稱。  
   
-     **Attach As**  
-     Optionally, specifies a different name for the database to attach as.  
+     **附加為**  
+     選擇性地針對要附加的資料庫指定不同的名稱。  
   
-     **Owner**  
-     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
+     **[擁有者]**  
+     提供包含可能的資料庫擁有者的下拉式清單，且您可以選擇性地從中選取不同的擁有者。  
   
-     **Status**  
-     Displays the status of the database according to the following table.  
+     **狀態**  
+     根據下表顯示資料庫的狀態。  
   
     |圖示|狀態文字|Description|  
     |----------|-----------------|-----------------|  
@@ -95,32 +93,32 @@ ms.locfileid: "68071698"
     |包含兩個黑色的象限 (在左方和右方) 以及兩個白色的象限 (在上方和下方)|Stopped|附加作業未順利完成，因為使用者已停止作業。|  
     |包含指向逆時針方向之彎曲箭頭的圓圈|已回復|附加作業已順利完成，但是因為在附加其他物件的期間發生了錯誤，所以已將其回復。|  
   
-     **Message**  
-     Displays either a blank message or a "File not found" hyperlink.  
+     **訊息**  
+     顯示空白訊息或「找不到檔案」超連結。  
   
-     **Add**  
-     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
+     **[加入]**  
+     尋找需要的主要資料庫檔案。 使用者選取 .mdf 檔案之後，適用的資訊會自動填入 **[要附加的資料庫]** 方格的對應欄位中。  
   
-     **Remove**  
-     Removes the selected file from the **Databases to attach** grid.  
+     **移除**  
+     從 **[要附加的資料庫]** 方格中移除選取的檔案。  
   
-     **"** *<database_name>* **" database details**  
-     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
+     **"** *<database_name>* **" 資料庫詳細資料**  
+     顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽]  按鈕 ( **...** )。  
   
     > [!NOTE]  
-    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
+    > 如果檔案不存在， **[訊息]** 資料行就會顯示「找不到」。 如果找不到記錄檔，它就存在於其他目錄中，或是已遭刪除。 您必須更新 **[資料庫詳細資料]** 方格中的檔案路徑，以指向正確的位置，或是從方格中移除該記錄檔。 如果找不到 .ndf 資料檔，您就必須更新該檔案在方格中的路徑，以指向正確的位置。  
   
-     **Original File Name**  
-     Displays the name of the attached file belonging to the database.  
+     **原始檔案名稱**  
+     顯示屬於資料庫之附加檔案的名稱。  
   
-     **File Type**  
-     Indicates the type of file, **Data** or **Log**.  
+     **檔案類型**  
+     指出檔案的類型，即 **資料** 或 **記錄**。  
   
-     **Current File Path**  
-     Displays the path to the selected database file. The path can be edited manually.  
+     **目前的檔案路徑**  
+     顯示選取之資料庫檔案的路徑。 路徑可以用手動的方式編輯。  
   
-     **Message**  
-     Displays either a blank message or a "**File not found**" hyperlink.  
+     **訊息**  
+     顯示空白訊息或 **「找不到檔案」** 超連結。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

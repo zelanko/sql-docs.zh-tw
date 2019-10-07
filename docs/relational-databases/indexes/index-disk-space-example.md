@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: caf70d087a7df27248457df40f6ceb4d3ab9e3d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909723"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816698"
 ---
 # <a name="index-disk-space-example"></a>索引磁碟空間範例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,7 @@ ms.locfileid: "67909723"
   
 3.  決定額外的暫存磁碟空間以供排序。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
+     會顯示在 **tempdb** 排序 (SORT_IN_TEMPDB 設為 ON) 和在目標位置排序 (SORT_IN_TEMPDB 設為 OFF) 的空間需求。  
   
     1.  當 SORT_IN_TEMPDB 設為 ON 時， **tempdb** 必須有足夠的磁碟空間，才能保留最大的索引 (1 百萬 * 200 位元組 ~ 200 MB)。 在排序作業中不考慮填滿因數。  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0acec2dd2e4e7e9d08d979febf85cf98f883e77
-ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
+ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71066880"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708281"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,8 +99,6 @@ AdventureWorks_snapshot_evening
   
 2.  在使用 AS SNAPSHOT OF 子句的檔案上，發出 CREATE DATABASE 陳述式。 建立快照集必須指定來源資料庫之每個資料庫檔案的邏輯名稱。 其語法如下：  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -117,10 +115,10 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     其中 *source_**database_name* 是來源資料庫，*logical_file_name* 是參考檔案時 SQL Server 中所使用的邏輯名稱，*os_file_name* 是建立檔案時作業系統所使用的路徑和檔案名稱，而 *database_snapshot_name* 是要還原資料庫的目標快照集名稱。 如需此語法的完整描述，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)資料庫快照集的唯一方式。  
   
     > [!NOTE]  
-    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
+    >  建立資料庫快照集時，CREATE DATABASE 陳述式中不允許記錄檔、離線檔案、還原檔案與無用檔案。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
   

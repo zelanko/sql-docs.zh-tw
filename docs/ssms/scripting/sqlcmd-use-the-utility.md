@@ -17,18 +17,18 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de9d2f1c06704e7bedc4592aa7062dbc8a4b8569
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7fd1c2eafec0d0dd832e4d01d43195d7ec175485
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155748"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816618"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **sqlcmd** 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 **sqlcmd** ，或是要建立透過 **sqlcmd**執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言， **sqlcmd** 公用程式的使用方式如下：  
   
--   使用者可以像是在命令提示字元中工作一般，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟命令提示字元視窗，請在 [Windows 搜尋] 方塊中輸入 "cmd"，並按一下 [命令提示字元] 來開啟。 在命令提示字元中，輸入 **sqlcmd** ，後面接著您要使用的一串選項。 如需 **sqlcmd**所支援選項的完整清單，請參閱 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
+-   使用者可以像是在命令提示字元中工作一般，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟命令提示字元視窗，請在 [Windows 搜尋] 方塊中輸入 "cmd"，並按一下 [命令提示字元]  來開啟。 在命令提示字元中，輸入 **sqlcmd** ，後面接著您要使用的一串選項。 如需 **sqlcmd**所支援選項的完整清單，請參閱 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
   
 -   使用者可指定要執行的單一 **陳述式，或者將公用程式指向包含要執行之** 陳述式的文字檔，來提交 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] 工作。 輸出通常會導向文字檔，不過，也可以在命令提示字元上顯示。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "70155748"
   
 ## <a name="typically-used-sqlcmd-options"></a>一般使用的 sqlcmd 選項  
   
--   伺服器選項 (**-S**) 識別 **sqlcmd** 所連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+-   伺服器選項 ( **-S**) 識別 **sqlcmd** 所連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
--   驗證選項 (**-E**、**-U** 和 **-P**) 指定供 **sqlcmd** 用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 **注意：**** -E** 選項是預設，不需要予以指定。  
+-   驗證選項 ( **-E**、 **-U** 和 **-P**) 指定供 **sqlcmd** 用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 **注意：** **-E** 選項是預設，不需要予以指定。  
   
--   輸入選項 (**-Q**、**-q** 和 **-i**) 識別 **sqlcmd** 的輸入位置。  
+-   輸入選項 ( **-Q**、 **-q** 和 **-i**) 識別 **sqlcmd** 的輸入位置。  
   
--   輸出選項 (**-o**) 指定 **sqlcmd** 存放其輸出的檔案。  
+-   輸出選項 ( **-o**) 指定 **sqlcmd** 存放其輸出的檔案。  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>連接到 sqlcmd 公用程式  
   
@@ -249,13 +249,13 @@ ms.locfileid: "70155748"
   
  `C:\>sqlcmd -S ServerName -A`  
   
- `1> SELECT blocked FROM sys.dm_exec_requests WHERE blocked <> 0;`  
+ `1> SELECT session_id, blocking_session_id FROM sys.dm_exec_requests WHERE blocking_session_id <> 0;`  
   
  `2> GO`  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `spid   blocked`  
+ `session_id   blocking_session_id`  
   
  `------ -------`  
   

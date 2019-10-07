@@ -24,18 +24,18 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 927b3366c609eae4d98787ead646e8b613bfdcba
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154649"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687383"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的版本及支援功能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-此文章提供 Linux 上各種 SQL Server 2017 版本支援的功能詳細資料。 如需 Windows 上 SQL Server 的版本和支援功能，請參閱 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)。  
+本文提供 Linux 上各種 SQL Server 2017 版本支援的功能詳細資料。 如需 Windows 上 SQL Server 的版本和支援功能，請參閱 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
 安裝需求根據應用程式的需要而異。 不同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本可配合組織和個人的獨特效能、執行階段和價格需求。 安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件也將取決於您的特定需求。 下列章節幫助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的可用版本和元件之間做出最好的選擇。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "70154649"
 |Enterprise|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise 版本這套頂級供應項目不但提供完整的高階資料中心功能且具備急速效能，可為任務關鍵性工作負載提供最高等級的服務。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 版本針對部門和小型組織提供基本的資料管理來執行應用程式，且支援內部部署和雲端的一般開發工具 - 以最少的 IT 資源提供最具效率資料庫管理。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition 對於 Web 主控者和 Web VAP 而言是一個整體擁有成本很低的選擇，可針對小型到大型規模的 Web 屬性提供可擴充、負擔輕鬆而且管理方便的功能。|  
-|Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是供應用程式建立和測試人員使用的理想選擇。|  
+|開發人員|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是供應用程式建立和測試人員使用的理想選擇。|  
 |Express 版本|Express Edition 是入門級免費伺服器，非常適合用來學習及建置桌上型電腦和小型伺服器資料驅動應用程式。 這個版本是獨立軟體廠商、開發人員及建置用戶端應用程式之愛好者的最佳選擇。 如果您需要更進階的資料庫功能， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 可以順利地升級為其他更高階的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>搭配用戶端/伺服器應用程式使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
@@ -161,15 +161,15 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
   
 |功能|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|專用管理員連接|是|是|是|是，附追蹤旗標|是，附追蹤旗標|   
+|專用管理員連接|是|是|是|是，附追蹤旗標|   
 |PowerShell 指令碼支援|是|是|是|是| 
 |資料層應用程式元件作業的支援 - 擷取、部署、升級、刪除|是|是|是|是| 
-|原則自動化 (依排程和變更檢查)|是|是|是|否|否|   
-|效能資料收集器|是|是|是|否|否| 
-|標準效能報告|是|是|是|否|否| 
-|計畫指南和計畫指南的計畫凍結|是|是|是|否|否|   
+|原則自動化 (依排程和變更檢查)|是|是|是|否|  
+|效能資料收集器|是|是|是|否|
+|標準效能報告|是|是|是|否|
+|計畫指南和計畫指南的計畫凍結|是|是|是|否| 
 |索引檢視表的直接查詢 (使用 NOEXPAND 提示)|是|是|是|是| 
-|自動索引檢視表維護|是|是|是|否|否| 
+|自動索引檢視表維護|是|是|是|否|
 |分散式分割區檢視|是|否|否|否| 
 |平行索引作業|是|否|否|否|  
 |查詢最佳化工具自動使用索引檢視表|是|否|否|否| 
@@ -188,10 +188,10 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |MERGE 與 UPSERT 功能|是|是|是|是|   
 |日期和時間資料類型|是|是|是|是|  
 |國際化支援|是|是|是|是| 
-|全文檢索和語意搜尋|是|是|是|是|否| 
-|查詢中的語言規格|是|是|是|是|否|   
-|Service Broker (訊息)|是|是|否 (僅限用戶端)|否 (僅限用戶端)|否 (僅限用戶端)|   
-|Transact-SQL 端點|是|是|是|否|否| 
+|全文檢索和語意搜尋|是|是|是|是|
+|查詢中的語言規格|是|是|是|是|
+|Service Broker (訊息)|是|是|否 (僅限用戶端)|否 (僅限用戶端)|
+|Transact-SQL 端點|是|是|是|否|
 |圖表|是|是|是|是|  
 
 

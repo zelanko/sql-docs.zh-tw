@@ -1,6 +1,5 @@
 ---
 title: ReportViewer 控制項 2016 中的資料收集
-uthor: markingmyname
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -10,12 +9,12 @@ ms.technology: application-integration
 ms.topic: reference
 ms.custom: ''
 ms.date: 09/18/2018
-ms.openlocfilehash: 747c073907158e16a16dc8acd7f36ec457e32e80
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2372adbf0fd0b9ad15383d6538d25ef955b27426
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256089"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923795"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控制項整合 Reporting Services - 資料收集
 

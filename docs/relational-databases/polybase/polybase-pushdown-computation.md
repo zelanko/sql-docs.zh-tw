@@ -6,14 +6,14 @@ ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: dcc59e6aad686cb97e4439701967dddd21182e45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94e360c19c4f734b891701a4ec40c82cdb57927d
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062126"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710487"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase 中的下推計算
 

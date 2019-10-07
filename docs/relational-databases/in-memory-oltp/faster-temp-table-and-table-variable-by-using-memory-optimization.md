@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffea82cc9abdd016ec63771510109046e7da5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092233"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713255"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ go
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. 案例：資料表變數可設為 MEMORY_OPTIMIZED=ON  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. 案例：資料表變數可設為 MEMORY_OPTIMIZED=ON  
   
   
 傳統資料表變數代表 tempdb 資料庫中的資料表。 如需更快的效能，您可以對資料表變數進行記憶體最佳化。  
@@ -298,7 +298,7 @@ go
 ```  
 
 
-下列指令碼會為您建立檔案群組，並進行建議之資料庫的設定︰ [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+下列指令碼會為您建立檔案群組，並進行建議之資料庫的設定︰ [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
   
 如需 FILE 和 FILEGROUP 之 `ALTER DATABASE ... ADD` 的詳細資訊，請參閱：  
   

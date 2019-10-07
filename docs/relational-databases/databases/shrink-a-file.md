@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 330bdd5e1857df0ad605ca42e3bd5f83c8072b8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127392"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961924"
 ---
 # <a name="shrink-a-file"></a>壓縮檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

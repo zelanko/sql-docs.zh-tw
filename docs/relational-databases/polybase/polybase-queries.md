@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 021e73a48da72cf02aa561cbd2ad757a5958d070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8912a290723e3f0e1d0a0b951a6a5d1ce04b725
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062133"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710510"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase 查詢情節
 

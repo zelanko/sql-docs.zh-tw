@@ -24,12 +24,12 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 013304c2f36b335c0df8e01ea3b6fa565c257985
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70978724"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816840"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 
@@ -42,15 +42,6 @@ ms.locfileid: "70978724"
 ## <a name="syntax"></a>語法
 
 ```
--- Syntax for SQL Server and Parallel Data Warehouse
-
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password'
-[ ; ]
-```
-
-```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
-
 CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 [ ; ]
 ```

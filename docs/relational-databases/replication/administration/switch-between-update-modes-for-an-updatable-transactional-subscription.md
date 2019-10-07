@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0b7ea891c0c4ee5dfbcd8301cff4e364dcd5cae7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f621bf9839e5f0e36051461f144a4070ff715489
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909230"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710405"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切換可更新之交易式訂閱的更新模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "67909230"
   
 1.  針對提取訂閱執行 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) ，或針對發送訂閱執行 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) ，確定訂閱支援容錯移轉。 如果結果集中 **update mode** 的值是 **3** 或 **4**，即支援容錯移轉。  
   
-2.  在訂閱資料庫的「訂閱者」端執行 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)。 指定 **@publisher** 、 **@publisher_db** 、 **@publication** 和 **@failover_mode** 的下列其中一個值：  
+2.  在訂閱資料庫的「訂閱者」端執行 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)。 指定 `@publisher`、 `@publisher_db`、 `@publication`，並對 `@failover_mode`指定下列其中一個值：  
   
     -   **queued** - 當連接已暫時遺失時，容錯移轉到佇列更新。  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a658c990296de88ebdf8f9d3fb6373ea6a9a2c18
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bf2d5d29d080064f5958ec467b55b90ded8afff8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153107"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816701"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,11 +169,9 @@ ON
   
 3.  *錯誤碼 5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*   
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
+    解決方案：目前，這項新增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 *5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"* 。  
   
-     To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, simply remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  
+     若要解決此問題，請先判斷您是否需要讓 ServerA 存取 Azure 儲存體中的資料庫檔案。 如果不需要，只要移除 ServerA 與 Azure 儲存體中資料庫檔案之間的任何連接即可。 若要這樣做，請遵循下列步驟：  
   
     1.  使用 ALTER Database 陳述式，將 Server A 的檔案路徑設定為本機資料夾。  
   

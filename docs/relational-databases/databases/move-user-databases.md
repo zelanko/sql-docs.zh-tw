@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7dde1fac1d47d497a7afed7fd5404e52a62281f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b9a43e33b9476c874b2d5a0f64d17d48aec46605
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007112"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816756"
 ---
 # <a name="move-user-databases"></a>移動使用者資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,6 @@ ms.locfileid: "68007112"
     ```  
   
 5.  執行下列查詢以驗證檔案變更。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
