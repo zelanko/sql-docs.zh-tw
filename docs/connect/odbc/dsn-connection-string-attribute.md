@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68702789"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712923"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和連接字串關鍵字和屬性
 
@@ -45,8 +45,8 @@ ms.locfileid: "68702789"
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)（v 17.4 +，僅限 DSN）| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)（v 17.4 +，僅限 DSN） | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) （v 17.4 +，僅限 DSN）| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) （v 17.4 +，僅限 DSN） | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -116,6 +116,8 @@ ms.locfileid: "68702789"
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
+| [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
+| [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 以下是[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)、[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLSetConnectAttr 函式](../../odbc/reference/syntax/sqlsetconnectattr-function.md)中所未記載的一些連接字串關鍵字和連接屬性。
@@ -190,6 +192,31 @@ ms.locfileid: "68702789"
 |-|-|
 |否|(預設) 如果有的話，對中繼資料使用 sp_describe_first_result_set。 |
 |是| 對中繼資料使用 SET FMTONLY。 |
+
+
+## <a name="clientcertificate"></a>ClientCertificate
+
+指定要用於驗證的憑證。 選項包括： 
+
+| 選項值 | Description |
+|-|-|
+| sha1：`<hash_value>` | ODBC 驅動程式會使用 SHA1 雜湊來尋找 Windows 憑證存放區中的憑證 |
+| 主旨：`<subject>` | ODBC 驅動程式會使用主旨來尋找 Windows 憑證存放區中的憑證 |
+| 檔案： `<file_location>` [，密碼： `<password>`] | ODBC 驅動程式會使用憑證檔案。 |
+
+如果憑證是 PFX 格式，且 PFX 憑證內的私密金鑰受到密碼保護，則需要 password 關鍵字。 針對 PEM 和 DER 格式的憑證，ClientKey 屬性為必要項
+
+
+## <a name="clientkey"></a>ClientKey
+
+針對 ClientCertificate 屬性所指定的 PEM 或 DER 憑證，指定私密金鑰的檔案位置。 格式： 
+
+| 選項值 | Description |
+|-|-|
+| 檔案： `<file_location>` [，密碼： `<password>`] | 指定私密金鑰檔案的位置。 |
+
+如果私密金鑰檔案受到密碼保護，則需要 password 關鍵字。 如果密碼包含任何 "，" 字元，則會緊接在每個字元之後加入一個額外的 "，" 字元。 例如，如果密碼是 "a，b，c"，則連接字串中的已轉義密碼會是 "a，，b，，c"。 
+    
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 

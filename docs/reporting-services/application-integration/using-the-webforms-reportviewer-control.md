@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb7c8687d1fa873c3439288a138f2d8af3778eee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194803"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687375"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WebForms ReportViewer 控制項在 Web 應用程式中加以轉譯。  
@@ -26,7 +26,7 @@ ms.locfileid: "63194803"
   
      \- 或 -  
   
-     開啟現有的 ASP.NET 網站並加入新的 Web Form。  
+     開啟現有的 ASP.NET 網站並新增 Web Form。  
   
 2.  從 [工具箱]  視窗的 [AJAX 延伸模組]  群組中找出 **ScriptManager** 控制項，並將它拖曳到 Web 表單的設計介面。  
   

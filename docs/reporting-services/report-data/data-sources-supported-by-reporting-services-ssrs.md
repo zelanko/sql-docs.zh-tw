@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26a9703bea3e2c5647f2a96bac5e3673a55e09b7
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500456"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951779"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services (SSRS) 支援的資料來源
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會透過使用資料處理延伸模組的模組化與可延伸資料層，擷取資料來源中的報表資料。 若要擷取資料來源中的報表資料，您必須選取資料處理延伸模組，其同時支援資料來源的類型 (也就是在資料來源上執行的軟體版本) 與資料來源平台 (32 位元或 64 位元 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])。  
@@ -106,14 +106,14 @@ ms.locfileid: "66500456"
 |SQL 資料倉儲|[Microsoft Azure SQL Database](#Azure)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充 System.Data.SqlClient|不適用|不適用|SQL 資料倉儲|Y|Y| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 應用裝置|[Microsoft Parallel Data Warehouse](#PWD)|已被取代的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|不適用|不適用|不適用|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫|[Microsoft SQL Server Analysis Services](#AnalysisServices)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|使用 ADOMD.NET|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及更新版本|Y|Y|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫|OLEDB|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充 System.Data.OledbClient<br /><br /> 10\.0 版|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|   
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫|OLEDB|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充 System.Data.OledbClient<br /><br /> 10.0 版|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|   
 |SharePoint 清單|[Microsoft SharePoint 清單](#SharePointList)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|從 Lists.asmx 或 SharePoint 物件模型 API 介面取得資料。<br /><br /> 請參閱 [注意事項](#SharePointList)。|N|Y|SharePoint 2013 產品及更新版本|Y|Y|   
 |XML|[XML](#XML)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|XML 資料來源沒有平台相依性。|不適用|不適用|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] 或文件|Y|Y|  
 |報表伺服器模型|報表模型|已發行之 SMDL 檔案的已被取代 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|模型的資料來源使用內建的資料處理延伸模組。<br /><br /> 以 Oracle 為基礎的模型需要 Oracle 用戶端元件。<br /><br /> 以 Teradata 為基礎的模型需要來自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 請參閱平台支援的 Teradata 文件集。|不適用|不適用|模型可以從以下版本建立：[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 或更新版本<br /><br /> Teradata V14、v13、v12 和 v6.2|N|N|  
 |SAP 多維度資料庫|SAP BW|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|請參閱平台支援的 SAP 文件集。|不適用|不適用|SAP BW 7.0-7.5|Y|不適用|  
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|請參閱平台支援的 Hyperion 文件集。|Y|不適用|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Y|不適用|  
 |Oracle 關聯式資料庫|[Oracle](#OracleClient)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|需要 Oracle 用戶端元件 12c 或更高版本。|Y|不適用|Oracle 11g、11g R2、12c|Y|Y|  
-|Teradata 關聯式資料庫|[Teradata](#Teradata)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充來自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 需要來自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 請參閱平台支援的 Teradata 文件集。|Y|不適用|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Y|N|  
+|Teradata |[Teradata](#Teradata)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充來自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 需要來自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 請參閱平台支援的 Teradata 文件集。|Y|不適用|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Y|N|  
 |DB2 關聯式資料庫|自訂的已註冊資料延伸模組名稱||2004 Host Integration (HI) Server<br /><br /> 請參閱 [HI Server 文件](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx)(英文)。|Y|不適用|不適用|Y|N|  
 |一般 OLE DB 資料來源|OLEDB|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|支援 OLE DB 的任何資料來源。<br /><br /> 請參閱平台支援的資料來源文件。|Y|不適用|支援 OLE DB 的任何資料來源。 請參閱 [注意事項](#OLEDBStandard)。|Y|不適用|  
 |一般 ODBC 資料來源|[ODBC](#ODBCGeneric)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|支援 ODBC 的任何資料來源。<br /><br /> 請參閱平台支援的資料來源文件。|Y|不適用|支援 ODBC 的任何資料來源。 請參閱 [注意事項](#ODBCGeneric)。|Y|Y|  
@@ -244,13 +244,13 @@ ms.locfileid: "66500456"
  [返回資料來源資料表](#DataSourcesTable)  
   
 ###  <a name="Teradata"></a> Teradata 資料處理延伸模組  
- 當您選取資料來源類型 **Teradata**時，您選取的是可擴展 .NET Framework Data Provider for Teradata 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組。 若要從 Teradata 資料庫擷取報表資料，系統管理員必須在報表撰寫用戶端上安裝 .NET Framework Data Provider for Teradata，才能在用戶端上編輯和預覽報表，並在報表伺服器上檢視已發行的報表。  
+ 當您選取資料來源類型 **Teradata**時，您選取的是可擴展 .NET Framework Data Provider for Teradata 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組。 若要從 Teradata 擷取報表資料，系統管理員必須在報表撰寫用戶端上安裝 .NET Framework Data Provider for Teradata，才能在用戶端上編輯和預覽報表，並在報表伺服器上檢視已發行的報表。  
   
  對於報表伺服器專案而言，沒有可用於此延伸模組的圖形化查詢設計工具。 您必須使用以文字為基礎的查詢設計工具來建立查詢。  
   
  下表顯示哪個版本的 .NET Data Provider for Teradata 支援定義在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]之報表定義中的資料來源：  
   
-|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 版本|Teradata 資料庫版本|.NET Framework Data Provider for Teradata 版本|  
+|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 版本|Teradata 版本|.NET Framework Data Provider for Teradata 版本|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
@@ -269,9 +269,7 @@ ms.locfileid: "66500456"
  此延伸模組支援多重值參數。 您可以在 TEXT 查詢模式下使用 EXECUTE 命令指定查詢中的巨集。  
   
  如需詳細資訊，請參閱 [Teradata 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。  
-  
- 您也可以根據 Teradata 資料庫建立模型。 如需詳細資訊，請參閱 Teradata 網站上的以下白皮書： [Microsoft SQL Server 2012 Reporting Services 和 Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(英文)。  
-  
+ 
  [返回資料來源資料表](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> SharePoint 清單資料延伸模組  

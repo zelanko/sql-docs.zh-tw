@@ -1,40 +1,40 @@
 ---
-title: 瞭解 SSL 支援 |Microsoft Docs
+title: 瞭解加密支援 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dd5d5003970f87d39148a058ca02befaf006775c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874637"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713303"
 ---
-# <a name="understanding-ssl-support"></a>了解 SSL 支援
+# <a name="understanding-encryption-support"></a>了解加密支援
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，如果應用程式要求加密而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體設定為支援 SSL 加密，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會起始 SSL 交握。 交握可讓伺服器與用戶端交涉要用來保護資料的加密和密碼編譯演算法。 SSL 交握完成後，用戶端和伺服器就可以安全地傳送加密的資料。 在 SSL 交握期間，伺服器會將其公開金鑰憑證傳送到用戶端。 公開金鑰憑證的發行者也就是所謂的「憑證授權單位 (CA)」。 用戶端負責驗證憑證授權單位為用戶端所信任的憑證授權單位。  
+連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，如果應用程式要求加密而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體設定為支援 TLS 加密，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會起始 TLS 交握。 交握可讓伺服器與用戶端交涉要用來保護資料的加密和密碼編譯演算法。 TLS 交握完成後，用戶端和伺服器就可以安全地傳送加密的資料。 在 TLS 交握期間，伺服器會將其公開金鑰憑證傳送到用戶端。 公開金鑰憑證的發行者也就是所謂的「憑證授權單位 (CA)」。 用戶端負責驗證憑證授權單位為用戶端所信任的憑證授權單位。  
   
-如果應用程式沒有要求加密，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將不會強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 SSL 加密。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體未設定成強制 SSL 加密，這時不用加密就可以建立連線。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體設定為強制 SSL 加密，則在正確設定的 Java Virtual Machine (JVM) 上執行時，此驅動程式將會自動啟用 SSL 加密，否則連線會中止，而且驅動程式會引發錯誤。  
+如果應用程式沒有要求加密，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將不會強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 TLS 加密。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體未設定成強制 TLS 加密，這時不用加密就可以建立連線。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體設定為強制 TLS 加密，則在正確設定的 Java Virtual Machine (JVM) 上執行時，此驅動程式將會自動啟用 TLS 加密，否則連線會中止，而且驅動程式會引發錯誤。  
   
 > [!NOTE]  
-> 確定傳遞給 **serverName** 的值完全符合伺服器憑證中主旨替代名稱 (SAN) 內的一般名稱 (CN) 或 DNS 名稱，SSL 連線才會成功。  
+> 確定傳遞給 **serverName** 的值完全符合伺服器憑證中主旨替代名稱 (SAN) 內的一般名稱 (CN) 或 DNS 名稱，TLS 連線才會成功。  
 >
-> 如需如何設定 SSL 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]詳細資訊，請參閱[啟用資料庫引擎的加密連接](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+> 如需如何為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定 TLS 的詳細資訊，請參閱[啟用資料庫引擎的加密連接](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 ## <a name="remarks"></a>Remarks
 
-為了讓應用程式能夠使用 SSL 加密，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 已從 1.2 版起引入下列連線屬性：**encrypt**、**trustServerCertificate**、**trustStore**、**trustStorePassword** 和 **hostNameInCertificate**。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
+為了讓應用程式能夠使用 TLS 加密，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 已從 1.2 版起引入下列連線屬性：**encrypt**、**trustServerCertificate**、**trustStore**、**trustStorePassword** 和 **hostNameInCertificate**。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 下表摘要說明 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 版本如何針對可能的 SSL 連線狀況運作。 每個狀況都使用一組不同的 SSL 連接屬性。 此資料表包括：  
+ 下表摘要說明 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 版本如何針對可能的 TLS 連線狀況運作。 每個狀況都使用一組不同的 TLS 連線屬性。 此資料表包括：  
   
 - **空白**：「屬性不存在於連接字串中」  
   
@@ -47,18 +47,18 @@ ms.locfileid: "70874637"
   
 | encrypt        | trustServerCertificate | hostNameInCertificate | trustStore | trustStorePassword | 行為                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | -------------- | ---------------------- | --------------------- | ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| false 或空白 | 任意                    | 任意                   | 任意        | 任意                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將不會強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 SSL 加密。 如果伺服器有自我簽署憑證，驅動程式會起始 SSL 憑證交換。 SSL 憑證將不會經過驗證，而且只有認證 (在登入封包中) 會經過加密。<br /><br /> 如果伺服器需要用戶端支援 SSL 加密，驅動程式將會起始 SSL 憑證交換。 SSL 憑證將不會經過驗證，但是整個通訊將會經過加密。                                                                                                                                                                                    |
-| true           | true                   | 任意                   | 任意        | 任意                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSL 加密。<br /><br /> 如果伺服器要求用戶端支援 SSL 加密，或者，如果伺服器支援加密，驅動程式將會起始 SSL 憑證交換。 請注意，如果 **trustServerCertificate** 屬性設定為 "true"，驅動程式將不會驗證 SSL 憑證。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                                                                                          |
-| true           | false 或空白         | 空白                 | 空白      | 空白              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSL 加密。<br /><br /> 如果伺服器要求用戶端支援 SSL 加密，或者，如果伺服器支援加密，驅動程式將會起始 SSL 憑證交換。<br /><br /> 驅動程式將使用在連線 URL 上指定的 **serverName** 屬性，驗證伺服器 SSL 憑證，並依賴信任管理員 Factory 的查閱規則來決定要使用的憑證存放區。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                             |
-| true           | false 或空白         | value                 | 空白      | 空白              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSL 加密。<br /><br /> 如果伺服器要求用戶端支援 SSL 加密，或者，如果伺服器支援加密，驅動程式將會起始 SSL 憑證交換。<br /><br /> 驅動程式將會使用針對 **hostNameInCertificate** 屬性指定的值，驗證 SSL 憑證的主旨值。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                                                                 |
-| true           | false 或空白         | 空白                 | value      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSL 加密。<br /><br /> 如果伺服器要求用戶端支援 SSL 加密，或者，如果伺服器支援加密，驅動程式將會起始 SSL 憑證交換。<br /><br /> 驅動程式將會使用 **trustStore** 屬性值來尋找憑證 trustStore 檔案與 **trustStorePassword** 屬性值以檢查 trustStore 檔案的完整性。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                |
-| true           | false 或空白         | 空白                 | 空白      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSL 加密。<br /><br /> 如果伺服器要求用戶端支援 SSL 加密，或者，如果伺服器支援加密，驅動程式將會起始 SSL 憑證交換。<br /><br /> 驅動程式將會使用 **trustStorePassword** 屬性值來檢查預設 trustStore 檔案的完整性。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                                                                                  |
-| true           | false 或空白         | 空白                 | value      | 空白              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSL 加密。<br /><br /> 如果伺服器要求用戶端支援 SSL 加密，或者，如果伺服器支援加密，驅動程式將會起始 SSL 憑證交換。<br /><br /> 驅動程式將會使用 **trustStore** 屬性值來查閱 trustStore 檔案的位置。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                                                                                                 |
-| true           | false 或空白         | value                 | 空白      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSL 加密。<br /><br /> 如果伺服器要求用戶端支援 SSL 加密，或者，如果伺服器支援加密，驅動程式將會起始 SSL 憑證交換。<br /><br /> 驅動程式將會使用 **trustStorePassword** 屬性值來檢查預設 trustStore 檔案的完整性。 此外，驅動程式將會使用 **hostNameInCertificate** 屬性值來驗證 SSL 憑證。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                   |
-| true           | false 或空白         | value                 | value      | 空白              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSL 加密。<br /><br /> 如果伺服器要求用戶端支援 SSL 加密，或者，如果伺服器支援加密，驅動程式將會起始 SSL 憑證交換。<br /><br /> 驅動程式將會使用 **trustStore** 屬性值來查閱 trustStore 檔案的位置。 此外，驅動程式將會使用 **hostNameInCertificate** 屬性值來驗證 SSL 憑證。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                  |
-| true           | false 或空白         | value                 | value      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSL 加密。<br /><br /> 如果伺服器要求用戶端支援 SSL 加密，或者，如果伺服器支援加密，驅動程式將會起始 SSL 憑證交換。<br /><br /> 驅動程式將會使用 **trustStore** 屬性值來尋找憑證 trustStore 檔案與 **trustStorePassword** 屬性值以檢查 trustStore 檔案的完整性。 此外，驅動程式將會使用 **hostNameInCertificate** 屬性值來驗證 SSL 憑證。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。 |
+| false 或空白 | 任意                    | 任意                   | 任意        | 任意                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將不會強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 TLS 加密。 如果伺服器有自我簽署憑證，驅動程式會起始 TLS 憑證交換。 TLS 憑證將不會經過驗證，而且只有認證 (在登入封包中) 會經過加密。<br /><br /> 如果伺服器需要用戶端支援 TLS 加密，驅動程式將會起始 TLS 憑證交換。 TLS 憑證將不會經過驗證，但是整個通訊將會經過加密。                                                                                                                                                                                    |
+| true           | true                   | 任意                   | 任意        | 任意                | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果伺服器要求用戶端支援 TLS 加密，或者，如果伺服器支援加密，驅動程式將會起始 TLS 憑證交換。 請注意，如果 **trustServerCertificate** 屬性設定為 "true"，驅動程式將不會驗證 TLS 憑證。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                                                                                          |
+| true           | false 或空白         | 空白                 | 空白      | 空白              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果伺服器要求用戶端支援 TLS 加密，或者，如果伺服器支援加密，驅動程式將會起始 TLS 憑證交換。<br /><br /> 驅動程式將使用在連線 URL 上指定的 **serverName** 屬性，驗證伺服器 TLS 憑證，並依賴信任管理員 Factory 的查閱規則來決定要使用的憑證存放區。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                             |
+| true           | false 或空白         | value                 | 空白      | 空白              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果伺服器要求用戶端支援 TLS 加密，或者，如果伺服器支援加密，驅動程式將會起始 TLS 憑證交換。<br /><br /> 驅動程式將會使用針對 **hostNameInCertificate** 屬性指定的值，驗證 TLS 憑證的主旨值。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                                                                 |
+| true           | false 或空白         | 空白                 | value      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果伺服器要求用戶端支援 TLS 加密，或者，如果伺服器支援加密，驅動程式將會起始 TLS 憑證交換。<br /><br /> 驅動程式將會使用 **trustStore** 屬性值來尋找憑證 trustStore 檔案與 **trustStorePassword** 屬性值以檢查 trustStore 檔案的完整性。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                |
+| true           | false 或空白         | 空白                 | 空白      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果伺服器要求用戶端支援 TLS 加密，或者，如果伺服器支援加密，驅動程式將會起始 TLS 憑證交換。<br /><br /> 驅動程式將會使用 **trustStorePassword** 屬性值來檢查預設 trustStore 檔案的完整性。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                                                                                  |
+| true           | false 或空白         | 空白                 | value      | 空白              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果伺服器要求用戶端支援 TLS 加密，或者，如果伺服器支援加密，驅動程式將會起始 TLS 憑證交換。<br /><br /> 驅動程式將會使用 **trustStore** 屬性值來查閱 trustStore 檔案的位置。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                                                                                                                                 |
+| true           | false 或空白         | value                 | 空白      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果伺服器要求用戶端支援 TLS 加密，或者，如果伺服器支援加密，驅動程式將會起始 TLS 憑證交換。<br /><br /> 驅動程式將會使用 **trustStorePassword** 屬性值來檢查預設 trustStore 檔案的完整性。 此外，驅動程式將會使用 **hostNameInCertificate** 屬性值來驗證 TLS 憑證。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                   |
+| true           | false 或空白         | value                 | value      | 空白              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果伺服器要求用戶端支援 TLS 加密，或者，如果伺服器支援加密，驅動程式將會起始 TLS 憑證交換。<br /><br /> 驅動程式將會使用 **trustStore** 屬性值來查閱 trustStore 檔案的位置。 此外，驅動程式將會使用 **hostNameInCertificate** 屬性值來驗證 TLS 憑證。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。                                                                                  |
+| true           | false 或空白         | value                 | value      | value              | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 要求搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 TLS 加密。<br /><br /> 如果伺服器要求用戶端支援 TLS 加密，或者，如果伺服器支援加密，驅動程式將會起始 TLS 憑證交換。<br /><br /> 驅動程式將會使用 **trustStore** 屬性值來尋找憑證 trustStore 檔案與 **trustStorePassword** 屬性值以檢查 trustStore 檔案的完整性。 此外，驅動程式將會使用 **hostNameInCertificate** 屬性值來驗證 TLS 憑證。<br /><br /> 如果伺服器的設定不支援加密，驅動程式將引發錯誤，並中止連接。 |
   
-如果 encrypt 屬性設定為 **true**，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會使用 JVM 的預設 JSSE 安全性提供者與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交涉 SSL 加密。 預設的安全性提供者可能不支援成功交涉 SSL 加密所需的所有功能。 例如，預設的安全性提供者可能不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 憑證中使用之 RSA 公開金鑰的大小。 在此情況下，預設的安全性提供者可能會引發錯誤，造成 JDBC 驅動程式中止連接。 若要解決這個問題，請執行下列其中之一：  
+如果 encrypt 屬性設定為 **true**，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會使用 JVM 的預設 JSSE 安全性提供者與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交涉 TLS 加密。 預設的安全性提供者可能不支援成功交涉 TLS 加密所需的所有功能。 例如，預設的安全性提供者可能不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TLS 憑證中使用的 RSA 公開金鑰大小。 在此情況下，預設的安全性提供者可能會引發錯誤，造成 JDBC 驅動程式中止連接。 若要解決這個問題，請執行下列其中之一：  
   
 - 使用具有較小 RSA 公開金鑰的伺服器憑證設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -66,9 +66,9 @@ ms.locfileid: "70874637"
   
 - 使用不同的 JVM  
   
-## <a name="validating-server-ssl-certificate"></a>驗證 Server SSL 憑證  
+## <a name="validating-server-tls-certificate"></a>正在驗證服務器 TLS 憑證  
 
-在 SSL 交握期間，伺服器會將其公開金鑰憑證傳送到用戶端。 JDBC 驅動程式或用戶端必須驗證伺服器憑證是由用戶端所信任的憑證授權單位發行。 驅動程式會要求伺服器憑證必須符合下列條件：  
+在 TLS 交握期間，伺服器會將其公開金鑰憑證傳送到用戶端。 JDBC 驅動程式或用戶端必須驗證伺服器憑證是由用戶端所信任的憑證授權單位發行。 驅動程式會要求伺服器憑證必須符合下列條件：  
   
 - 憑證由信任的憑證授權單位所發行。  
   
@@ -82,6 +82,6 @@ ms.locfileid: "70874637"
   
 ## <a name="see-also"></a>另請參閱
 
-[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)
+[使用加密](../../connect/jdbc/using-ssl-encryption.md)
 
 [保護 JDBC 驅動程式應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  

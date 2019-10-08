@@ -1,26 +1,34 @@
 ---
-title: 安裝 SQL Server Reporting Services (2017 和更新版本) | Microsoft Docs
-ms.date: 12/20/2017
+title: 安裝 SQL Server Reporting Services | Microsoft Docs
+ms.date: 10/02/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502694"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952737"
 ---
-# <a name="install-sql-server-reporting-services-2017-and-later"></a>安裝 SQL Server Reporting Services (2017 和更新版本)
+# <a name="install-sql-server-reporting-services"></a>安裝 SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報表項目、轉譯報表，以及處理訂閱和其他報表服務。 
 
-請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)下載 SQL Server 2017 Reporting Services。
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+從 Microsoft 下載中心下載 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)。
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+從 Microsoft 下載中心下載 [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。
+
+::: moniker-end
 
 > [!NOTE]
 > 尋找 Power BI 報表伺服器嗎？ 請參閱[安裝 Power BI 報表伺服器](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)。
@@ -40,34 +48,24 @@ SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報�
 
 2. 選取 [安裝 Reporting Services]  。
 
-    ![安裝 Reporting Services](media/install-reporting-services/report-server-install.png)
-
 3. 選擇安裝版本，然後選取 [下一步]  。
-
-    ![選擇版本](media/install-reporting-services/report-server-install-edition.png)
 
     在免費版本中，從下拉式清單中選擇 Evaluation 或 Developer。
 
     ![Evaluation 或 Developer 版本](media/install-reporting-services/report-server-install-edition-select.png)
 
-    否則，請輸入產品金鑰。 [尋找 SQL Server 2017 Reporting Services 的產品金鑰](find-reporting-services-product-key-ssrs.md).
+    否則，請輸入產品金鑰。 [尋找 SQL Server Reporting Services 的產品金鑰](find-reporting-services-product-key-ssrs.md)。
 
 4. 閱讀並同意授權條款，然後選取 [下一步]  。
 
 5. 您需要有資料庫引擎以儲存報表伺服器資料庫。 選取 [下一步]  只安裝報表伺服器。
 
-    ![安裝不需要資料庫](media/install-reporting-services/report-server-install-db-engine.png)
-
 6. 指定報表伺服器的安裝位置。 選取 [安裝]  繼續進行。
-
-    ![指定安裝路徑](media/install-reporting-services/report-server-install-file-path.png)
 
     > [!NOTE]
     > 預設路徑為 C:\Program Files\Microsoft SQL Server Reporting Services。
 
 7. 成功安裝之後，選取 [設定報表伺服器]  啟動 Reporting Services 設定管理員。
-
-    ![設定報表伺服器](media/install-reporting-services/report-server-install-configure.png)
 
 ## <a name="configuration-your-report-server"></a>設定報表伺服器
 
