@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 在本快速入門中，您將瞭解如何使用 SQL Server Machine Learning 服務，撰寫 R 函數來進行高階統計計算。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 747a6b06d1c9ad198971ff50068ac48d862a83da
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951857"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006033"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server Machine Learning 服務撰寫 advanced R 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "71951857"
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>建立預存程序來產生亂數
 
-為了簡單起見，讓我們使用 r `stats`封裝，預設會在安裝 r 的 SQL Server Machine Learning 服務中安裝並載入。 該套件包含數百個用來進行一般統計工作的函式，其中 `rnorm` 函式會在指定標準差和平均值的情況下，使用常態分佈產生指定數目的亂數。
+為了簡單起見，讓我們使用 R `stats` 套件，此封裝預設會安裝並載入至已安裝 R 的 SQL Server Machine Learning 服務。 該套件包含數百個用來進行一般統計工作的函式，其中 `rnorm` 函式會在指定標準差和平均值的情況下，使用常態分佈產生指定數目的亂數。
 
 例如，下列 R 程式碼會在指定標準差3的情況下，傳回平均值為50的100數位。
 
@@ -40,7 +40,7 @@ ms.locfileid: "71951857"
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-若要從 t-sql 呼叫這行 r，請在的 r 腳本參數`sp_execute_external_script`中新增 r 函數，如下所示：
+若要從 T-sql 呼叫這行 R，請在 `sp_execute_external_script` 的 R 腳本參數中新增 R 函數，如下所示：
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -103,9 +103,14 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> 許多使用者想要使用 r 中的系統計時函數（例如`system.time`和`proc.time`）來捕捉 r 進程所使用的時間，並分析效能問題。 如需範例，請參閱教學課程：[建立資料功能](../tutorials/walkthrough-create-data-features.md)，其中 R 計時函數內嵌于方案中。
+> 許多使用者想要使用 R 中的系統計時函數（例如 `system.time` 和 `proc.time`）來捕捉 R 進程所使用的時間，並分析效能問題。 如需範例，請參閱教學課程：[建立資料功能](../tutorials/walkthrough-create-data-features.md)，其中 R 計時函數內嵌于方案中。
 
 ## <a name="next-steps"></a>後續步驟
+
+若要在 SQL Server 中使用 R 建立機器學習模型，請遵循此快速入門：
+
+> [!div class="nextstepaction"]
+> [使用 SQL Server Machine Learning 服務在 R 中建立預測模型並為其評分](quickstart-r-train-score-model.md)
 
 如需 SQL Server Machine Learning 服務的詳細資訊，請參閱：
 

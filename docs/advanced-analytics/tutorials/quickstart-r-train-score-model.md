@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 使用 SQL Server Machine Learning 服務在 R 中建立簡單的預測模型，然後使用新的資料來預測結果。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5aad027f84bc1116aa57c6b0bc0d7b0893519c36
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150331"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005975"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server Machine Learning 服務在 R 中建立預測模型並為其評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "71150331"
    );
    ```
 
-1. 插入內建資料集`mtcars`的資料。
+1. 將來自內建資料集的資料插入 `mtcars`。
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -72,13 +72,13 @@ ms.locfileid: "71150331"
    ```
 
    > [!TIP]
-   > R 執行階段隨附許多大大小小的資料集。 若要取得隨 r 安裝的資料集清單， `library(help="datasets")`請從 r 命令提示字元輸入。
+   > R 執行階段隨附許多大大小小的資料集。 若要取得使用 R 安裝的資料集清單，請從 R 命令提示字元輸入 `library(help="datasets")`。
 
 ### <a name="create-and-train-the-model"></a>建立和定型模型
 
-汽車速度資料包含兩個數據行，也就是`hp`數值：動力（`wt`）和權數（）。 您將從這種資料建立一般化線性模型（GLM），以評估車輛已符合手動傳輸的機率。
+汽車速度資料包含兩個數據行，也就是數值：動力（`hp`）和權數（`wt`）。 您將從這種資料建立一般化線性模型（GLM），以評估車輛已符合手動傳輸的機率。
 
-若要建立模型, 請在您的 R 程式碼內定義公式, 並將資料當做輸入參數傳遞。
+若要建立模型，請在您的 R 程式碼內定義公式，並將資料當做輸入參數傳遞。
 
 ```sql
 DROP PROCEDURE IF EXISTS generate_GLM;
@@ -98,7 +98,7 @@ END;
 GO
 ```
 
-- 的第一個自`glm`變數是*公式*參數, 其`hp + wt`定義`am`為相依于。
+- @No__t-0 的第一個引數是*公式*參數，它會將 @no__t 2 定義為相依于 `hp + wt`。
 - 輸入資料儲存在變數 `MTCarsData` 中，會由 SQL 查詢填入。 如果您沒有為輸入資料指定特定的名稱，預設變數名稱將會是 _InputDataSet_。
 
 ### <a name="store-the-model-in-the-sql-database"></a>將模型儲存在 SQL 資料庫中
@@ -107,7 +107,7 @@ GO
 
 1. 建立用來儲存模型的資料表。
 
-   建立模型的 R 套件輸出通常是二進位物件。 因此, 您用來儲存模型的資料表必須提供**Varbinary (max)** 類型的資料行。
+   建立模型的 R 套件輸出通常是二進位物件。 因此，您用來儲存模型的資料表必須提供**Varbinary （max）** 類型的資料行。
 
    ```sql
    CREATE TABLE GLM_models (
@@ -138,7 +138,7 @@ GO
 
 ### <a name="create-a-table-of-new-data"></a>建立新資料的資料表
 
-首先, 建立含有新資料的資料表。
+首先，建立含有新資料的資料表。
 
 ```sql
 CREATE TABLE dbo.NewMTCars(
@@ -170,7 +170,7 @@ GO
 1. 取得新的輸入資料
 1. 呼叫與該模型相容的 R 預測函數
 
-一段時間之後，資料表可能會包含多個 R 模型、使用不同的參數或演算法來建立，或在不同的資料子集上進行定型。 在此範例中，我們將使用名為`default model`的模型。
+一段時間之後，資料表可能會包含多個 R 模型、使用不同的參數或演算法來建立，或在不同的資料子集上進行定型。 在此範例中，我們將使用名為 `default model` 的模型。
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
@@ -192,7 +192,7 @@ EXEC sp_execute_external_script
 WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3)));
 ```
 
-上述腳本會執行下列步驟:
+上述腳本會執行下列步驟：
 
 - 使用 SELECT 陳述式，從資料表取得單一模型，並傳遞它做為輸入參數。
 
@@ -201,7 +201,7 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 - 搭配適當引數將 `predict` 函數套用至模型，並提供新的輸入資料。
 
 > [!NOTE]
-> 在此範例中, `str`會在測試階段加入函式, 以檢查從 R 傳回的資料架構。您稍後可以移除此語句。
+> 在此範例中，會在測試階段加入 `str` 函式，以檢查從 R 傳回的資料架構。您稍後可以移除此語句。
 >
 > R 腳本中使用的資料行名稱不一定會傳遞至預存程式輸出。 這裡使用 WITH RESULTS 子句來定義一些新的資料行名稱。
 
@@ -213,12 +213,6 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 ## <a name="next-steps"></a>後續步驟
 
-若要瞭解如何在 SQL Server 中處理 R 資料類型，請遵循此快速入門：
+如需 SQL Server Machine Learning 服務的詳細資訊，請參閱：
 
-> [!div class="nextstepaction"]
-> [在 SQL Server Machine Learning 服務中使用 R 處理資料類型和物件](quickstart-r-data-types-and-objects.md)
-
-如需 SQL Server Machine Learning 服務的詳細資訊，請參閱下列文章。
-
-- [使用 SQL Server Machine Learning 服務撰寫 advanced R 函數](quickstart-r-functions.md)
 - [什麼是 SQL Server Machine Learning 服務（Python 和 R）？](../what-is-sql-server-machine-learning.md)

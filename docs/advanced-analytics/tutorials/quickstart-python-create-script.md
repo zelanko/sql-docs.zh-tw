@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 在具有 SQL Server Machine Learning 服務的 SQL Server 實例中，建立並執行簡單的 Python 腳本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6f7fe62f746a8f6e74ebdf9f766b76c0edc720a
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: ecf99f1ae70cf44b32955ae164dbe3017bdf5f24
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204295"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006123"
 ---
 # <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server Machine Learning 服務來建立及執行簡單的 Python 腳本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ print(c, d)
 
 1. 在連接到您的 SQL Server 實例的**SQL Server Management Studio**中，開啟新的查詢視窗。
 
-1. 將完整的 Python 腳本傳遞給`sp_execute_external_script`預存程式。
+1. 將完整的 Python 腳本傳遞至 @no__t 0 預存程式。
 
-   腳本會透過`@script`引數傳遞。 引數內`@script`的所有專案都必須是有效的 Python 程式碼。
+   腳本會透過 `@script` 引數傳遞。 @No__t-0 引數內的所有專案都必須是有效的 Python 程式碼。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -60,7 +60,7 @@ print(c, d)
     '
     ```
 
-1. 會計算正確的結果，且 Python `print`函式會將結果傳回至 [**訊息**] 視窗。
+1. 會計算正確的結果，且 Python `print` 函式會將結果傳回至 [**訊息**] 視窗。
 
    看起來應該會像這樣。
 
@@ -83,7 +83,7 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-預存程式`sp_execute_external_script`的輸入包括：
+@No__t-0 預存程式的輸入包括：
 
 | | |
 |-|-|
@@ -100,9 +100,9 @@ GO
 
 ## <a name="use-inputs-and-outputs"></a>使用輸入和輸出
 
-根據預設， `sp_execute_external_script`會接受單一資料集做為輸入，這通常是您以有效 SQL 查詢的形式提供。 然後，它會傳回單一 Python 資料框架作為輸出。
+根據預設，`sp_execute_external_script` 會接受單一資料集做為輸入，這通常是您以有效 SQL 查詢的形式提供。 然後，它會傳回單一 Python 資料框架作為輸出。
 
-現在，讓我們使用的預設輸入和輸出變數`sp_execute_external_script`：**InputDataSet**和**OutputDataSet**。
+現在，讓我們使用 `sp_execute_external_script` 的預設輸入和輸出變數：**InputDataSet**和**OutputDataSet**。
 
 1. 建立測試資料的小型資料表。
 
@@ -120,7 +120,7 @@ GO
     GO
     ```
 
-1. `SELECT`使用語句來查詢資料表。
+1. 使用 `SELECT` 語句來查詢資料表。
   
     ```sql
     SELECT *
@@ -131,7 +131,7 @@ GO
 
     ![PythonTestData 資料表的內容](./media/select-pythontestdata.png)
 
-1. 執行下列 Python 腳本。 它會使用`SELECT`語句來抓取資料表中的資料、透過 Python 執行時間傳遞，然後傳回資料做為資料框架。 子句會定義針對 SQL 傳回之資料表的架構，並加入資料行名稱*NewColName。* `WITH RESULT SETS`
+1. 執行下列 Python 腳本。 它會使用 `SELECT` 語句來抓取資料表中的資料、透過 Python 執行時間傳遞，然後以資料框架的形式傳回資料。 @No__t-0 子句會定義針對 SQL 傳回之資料表的架構，並加入資料行名稱*NewColName*。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -155,12 +155,12 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    請注意，Python 會區分大小寫。 Python 腳本中使用的輸入和輸出變數（**SQL_out**、 **SQL_in**）必須符合以`@input_data_1_name`和`@output_data_1_name`定義的名稱，包括大小寫。
+    請注意，Python 會區分大小寫。 Python 腳本中使用的輸入和輸出變數（**SQL_out**、 **SQL_in**）必須符合以 `@input_data_1_name` 和 `@output_data_1_name` （包括大小寫）定義的名稱。
 
    > [!TIP]
-   > 只有一個輸入資料集可以當作參數傳遞，您只能傳回一個資料集。 不過, 您可以從 Python 程式碼內部呼叫其他資料集, 而且除了資料集之外, 您還可以傳回其他類型的輸出。 您也可以將 OUTPUT 關鍵字新增至任何參數，讓它傳回結果。
+   > 只有一個輸入資料集可以當作參數傳遞，您只能傳回一個資料集。 不過，您可以從 Python 程式碼內部呼叫其他資料集，而且除了資料集之外，您還可以傳回其他類型的輸出。 您也可以將 OUTPUT 關鍵字新增至任何參數，讓它傳回結果。
 
-1. 您也可以使用不含輸入資料的 Python 腳本（`@input_data_1`設為空白）來產生值。
+1. 您也可以使用不含輸入資料的 Python 腳本來產生值（`@input_data_1` 會設定為空白）。
 
    下列腳本會輸出 "hello" 和 "world" 文字。
 
@@ -177,7 +177,7 @@ GO
 
    **結果**
 
-   ![使用@script作為輸入的查詢結果](./media/python-data-generated-output.png)
+   ![使用 @script 做為輸入的查詢結果](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > Python 會使用開頭的空格來分組語句。 因此，當內嵌的 Python 腳本跨越多行（如上述腳本所示）時，請勿嘗試將 Python 命令縮排到與 SQL 命令相同的行。 例如，此腳本將會產生錯誤：
@@ -206,7 +206,7 @@ print(sys.version)
 GO
 ```
 
-Python `print`函式會將版本傳回至 [**訊息**] 視窗。 在下面的範例輸出中，您可以看到，在此情況下，已安裝 Python 版本3.5.2。
+Python `print` 函式會將版本傳回至 [**訊息**] 視窗。 在下面的範例輸出中，您可以看到，在此情況下，已安裝 Python 版本3.5.2。
 
 **結果**
 
@@ -231,7 +231,7 @@ for i in pip.get_installed_distributions():
 GO
 ```
 
-輸出來自`pip.get_installed_distributions()`于 Python 中的，並以`STDOUT`訊息的形式傳回。
+輸出是從 Python 中的 `pip.get_installed_distributions()` 開始，並以 `STDOUT` 訊息的形式傳回。
 
 **結果**
 
@@ -254,12 +254,13 @@ toolz 0.8.2
 
 ## <a name="next-steps"></a>後續步驟
 
-若要在 SQL Server 中使用 Python 建立機器學習模型，請遵循此快速入門：
+若要瞭解如何在 SQL Server Machine Learning 服務中使用 Python 時使用資料結構，請遵循此快速入門：
 
 > [!div class="nextstepaction"]
-> [使用 SQL Server Machine Learning 服務在 Python 中建立預測模型並為其評分](quickstart-python-train-score-model.md)
+> [在 SQL Server Machine Learning 服務中使用 Python 處理資料類型和物件](quickstart-python-data-structures.md)
 
-如需 SQL Server Machine Learning 服務的詳細資訊，請參閱下列文章。
+如需在 SQL Server Machine Learning 服務中使用 Python 的詳細資訊，請參閱下列文章：
 
-- [在 SQL Server Machine Learning 服務中使用 Python 處理資料類型和物件](quickstart-python-data-structures.md)
+- [使用 SQL Server Machine Learning 服務撰寫先進的 Python 功能](quickstart-python-functions.md)
+- [使用 SQL Server Machine Learning 服務在 Python 中建立預測模型並為其評分](quickstart-python-train-score-model.md)
 - [什麼是 SQL Server Machine Learning 服務（Python 和 R）？](../what-is-sql-server-machine-learning.md)

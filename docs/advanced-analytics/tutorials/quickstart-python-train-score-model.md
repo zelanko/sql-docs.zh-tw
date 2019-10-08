@@ -4,32 +4,32 @@ titleSuffix: SQL Server Machine Learning Services
 description: 使用 SQL Server Machine Learning 服務在 Python 中建立簡單的預測模型，然後使用新的資料來預測結果。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad067e81bdb132d7958451d711e49ca57e308bac
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 504b37002bedf0e73cfefe0aeb36faf2cca45bfe
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204285"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006023"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server Machine Learning 服務在 Python 中建立預測模型並為其評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入門中，您將使用 Python 建立和定型預測模型、將模型儲存至 SQL Server 實例中的資料表，然後使用模型，利用[SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)來預測新資料中的值。
 
-您將建立並執行在 SQL 中執行的兩個預存程式。 第一個使用傳統的鳶尾花花資料集, 並產生一個一般的貝氏機率分類模型, 以根據花卉特性來預測鳶尾花物種。 第二個程式適用于計分-它會呼叫在第一個程式中產生的模型，以根據新的資料輸出一組預測。 藉由將程式碼放入預存程式中, 其他預存程式和用戶端應用程式就可以包含、可重複使用和呼叫作業。
+您將建立並執行在 SQL 中執行的兩個預存程式。 第一個使用傳統的鳶尾花花資料集，並產生一個一般的貝氏機率分類模型，以根據花卉特性來預測鳶尾花物種。 第二個程式適用于計分-它會呼叫在第一個程式中產生的模型，以根據新的資料輸出一組預測。 藉由將程式碼放入預存程式中，其他預存程式和用戶端應用程式就可以包含、可重複使用和呼叫作業。
 
 藉由完成本快速入門，您將瞭解：
 
 > [!div class="checklist"]
-> * 如何在預存程式中內嵌 Python 程式碼
-> * 如何透過預存程式上的輸入, 將輸入傳遞至您的程式碼
-> * 如何使用預存程式來讓模型
+> - 如何在預存程式中內嵌 Python 程式碼
+> - 如何透過預存程式上的輸入，將輸入傳遞至您的程式碼
+> - 如何使用預存程式來讓模型
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -50,15 +50,15 @@ ms.locfileid: "71204285"
     GO
     ```
 
-1. 複製下列程式碼, 以建立新的預存程式。
+1. 複製下列程式碼，以建立新的預存程式。
 
    執行時，此程式會呼叫[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)來啟動 Python 會話。 
    
-   您的 Python 程式碼所需的輸入會當做此預存程式上的輸入參數來傳遞。 輸出將會是經過訓練的模型, 以適用于機器學習服務演算法的 Python **scikit-learn-瞭解**程式庫為基礎。 
+   您的 Python 程式碼所需的輸入會當做此預存程式上的輸入參數來傳遞。 輸出將會是經過訓練的模型，以適用于機器學習服務演算法的 Python **scikit-learn-瞭解**程式庫為基礎。 
 
    這段程式碼會使用[**pickle**](https://docs.python.org/2/library/pickle.html)來序列化模型。 此模型將使用來自**iris_data**資料表的資料行0到4來定型。 
    
-   您在程式的第二個部分中看到的參數會詳述資料輸入和模型輸出。 您可能會想要在預存程式中執行的 Python 程式碼, 有清楚定義的輸入和輸出, 其對應至在執行時間傳入的預存程式輸入和輸出。
+   您在程式的第二個部分中看到的參數會詳述資料輸入和模型輸出。 您可能會想要在預存程式中執行的 Python 程式碼，有清楚定義的輸入和輸出，其對應至在執行時間傳入的預存程式輸入和輸出。
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model VARBINARY(max) OUTPUT)
@@ -87,11 +87,11 @@ ms.locfileid: "71204285"
 
 在此步驟中，您會執行程式來執行內嵌程式碼，並建立定型和序列化模型做為輸出。 
 
-儲存以在 SQL Server 中重複使用的模型會序列化為位元組資料流程, 並儲存在資料庫資料表的 VARBINARY (MAX) 資料行中。 建立、定型、序列化模型並儲存到資料庫之後, 其他程式或評分工作負載中的[預測 t-sql 函式](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)可以呼叫它。
+儲存以在 SQL Server 中重複使用的模型會序列化為位元組資料流程，並儲存在資料庫資料表的 VARBINARY （MAX）資料行中。 建立、定型、序列化模型並儲存到資料庫之後，其他程式或評分工作負載中的[預測 t-sql 函式](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)可以呼叫它。
 
-1. 執行下列腳本來執行程式。 執行預存程式的特定語句位於`EXECUTE`第四行。
+1. 執行下列腳本來執行程式。 執行預存程式的特定語句是第四行 `EXECUTE`。
 
-   此特定腳本會刪除相同名稱 ("貝氏貝氏機率分類") 的現有模型, 以騰出空間給透過重新執行相同程式所建立的新。 若未刪除模型, 就會發生錯誤, 指出物件已經存在。 模型會儲存在名為**iris_models**的資料表中（當您建立**irissql**資料庫時布建）。
+   此特定腳本會刪除相同名稱（"貝氏貝氏機率分類"）的現有模型，以騰出空間給透過重新執行相同程式所建立的新。 若未刪除模型，就會發生錯誤，指出物件已經存在。 模型會儲存在名為**iris_models**的資料表中（當您建立**irissql**資料庫時布建）。
 
     ```sql
     DECLARE @model varbinary(max);
@@ -117,9 +117,9 @@ ms.locfileid: "71204285"
 
 ## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>建立和執行預存程式以產生預測
 
-現在您已建立、定型及儲存模型, 請繼續進行下一個步驟: 建立會產生預測的預存程式。 若要這麼做，您`sp_execute_external_script`可以呼叫執行 Python 腳本來載入序列化模型，並將新的資料輸入提供給分數。
+現在您已建立、定型及儲存模型，請繼續進行下一個步驟：建立會產生預測的預存程式。 若要這麼做，您可以呼叫 `sp_execute_external_script` 來執行 Python 腳本，以載入序列化模型，並提供新的資料輸入分數。
 
-1. 執行下列程式碼, 以建立執行計分的預存程式。 在執行時間, 此程式會載入二進位模型、使用資料行`[1,2,3,4]`做為輸入, 並指定`[0,5,6]`資料行做為輸出。
+1. 執行下列程式碼，以建立執行計分的預存程式。 在執行時間，此程式會載入二進位模型、使用資料行 `[1,2,3,4]` 做為輸入，並將 `[0,5,6]` 的資料行指定為輸出。
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))
@@ -153,39 +153,34 @@ ms.locfileid: "71204285"
    GO
    ```
 
-2. 執行預存程式, 並提供模型名稱 "貝氏貝氏機率分類", 讓程式知道要使用哪一個模型。
+2. 執行預存程式，並提供模型名稱 "貝氏貝氏機率分類"，讓程式知道要使用哪一個模型。
 
    ```sql
    EXECUTE predict_species 'Naive Bayes';
    GO
    ```
 
-   當您執行預存程式時, 它會傳回 Python 資料。框架。 這一行 T-sql 會指定傳回結果的架構: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`。 您可以將結果插入新的資料表中, 或將其傳回至應用程式。
+   當您執行預存程式時，它會傳回 Python 資料。框架。 這一行 T-sql 會指定傳回結果的架構： `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`。 您可以將結果插入新的資料表中，或將其傳回至應用程式。
 
    ![執行預存程式的結果集](media/train-score-using-python-NB-model-results.png)
 
-   結果是使用花卉特性做為輸入的物種的150預測。 對於大部分的觀察, 預測的物種會符合實際的物種。
+   結果是使用花卉特性做為輸入的物種的150預測。 對於大部分的觀察，預測的物種會符合實際的物種。
 
-   這個範例是使用 Python 鳶尾花資料集進行定型和評分的簡單方法。 較常見的方法牽涉到執行 SQL 查詢來取得新的資料，並將其當做提供給 Python `InputDataSet`。
+   這個範例是使用 Python 鳶尾花資料集進行定型和評分的簡單方法。 較常見的方法包含執行 SQL 查詢來取得新的資料，並將其以 `InputDataSet` 的形式傳遞至 Python。
 
 ## <a name="conclusion"></a>結論
 
-在此練習中，您已瞭解如何建立專門用於不同工作的預存程式，其中每個預存程式`sp_execute_external_script`都使用系統預存程式來啟動 Python 進程。 Python 處理常式的輸入會當做參數`sp_execute_external`傳遞至。 Python 腳本本身和 SQL Server 資料庫中的資料變數都會當做輸入傳遞。
+在此練習中，您已瞭解如何建立專門用於不同工作的預存程式，其中每個預存程式使用系統預存程式 `sp_execute_external_script` 來啟動 Python 進程。 Python 進程的輸入會傳遞給 `sp_execute_external` 做為參數。 Python 腳本本身和 SQL Server 資料庫中的資料變數都會當做輸入傳遞。
 
-一般來說, 您應該只打算使用具有精美 Python 程式碼的 SSMS, 或簡單的 Python 程式碼, 以傳回以資料列為基礎的輸出。 SSMS 是一種工具, 可支援 T-sql 之類的查詢語言, 並傳回簡維資料列集。 如果您的程式碼會產生像是散佈圖或長條圖的視覺效果輸出, 您需要可呈現影像的工具或使用者應用程式。
+一般來說，您應該只打算使用具有精美 Python 程式碼的 SSMS，或簡單的 Python 程式碼，以傳回以資料列為基礎的輸出。 SSMS 是一種工具，可支援 T-sql 之類的查詢語言，並傳回簡維資料列集。 如果您的程式碼會產生像是散佈圖或長條圖的視覺效果輸出，您需要可呈現影像的工具或使用者應用程式。
 
-對於用來撰寫處理各種作業之全內含腳本的 Python 開發人員而言, 將工作組織成不同的程式可能看似不必要。 但定型和計分有不同的使用案例。 藉由分隔它們，您可以將每個工作放在不同的排程上，並將每個作業的許可權設為範圍。
+對於用來撰寫處理各種作業之全內含腳本的 Python 開發人員而言，將工作組織成不同的程式可能看似不必要。 但定型和計分有不同的使用案例。 藉由分隔它們，您可以將每個工作放在不同的排程上，並將每個作業的許可權設為範圍。
 
-同樣地，您也可以利用 SQL Server 的資源功能，例如平行處理、資源管理，或撰寫腳本以在支援資料流程處理和平行執行的[microsoftml](../python/ref-py-microsoftml.md)中使用演算法。 藉由分隔定型和評分, 您可以將特定工作負載的優化設為目標。
+同樣地，您也可以利用 SQL Server 的資源功能，例如平行處理、資源管理，或撰寫腳本以在支援資料流程處理和平行執行的[microsoftml](../python/ref-py-microsoftml.md)中使用演算法。 藉由分隔定型和評分，您可以將特定工作負載的優化設為目標。
 
-最後的優點是可以使用參數來修改程式。 在此練習中, 已將建立模型的 Python 程式碼 (在此範例中名為 "貝氏貝氏機率分類") 當做輸入傳遞至第二個預存程式, 以在計分進程中呼叫模型。 此練習只會使用一個模型, 但您可以想像如何在評分工作中將模型參數化, 讓該腳本更有用。
+最後的優點是可以使用參數來修改程式。 在此練習中，已將建立模型的 Python 程式碼（在此範例中名為 "貝氏貝氏機率分類"）當做輸入傳遞至第二個預存程式，以在計分進程中呼叫模型。 此練習只會使用一個模型，但您可以想像如何在評分工作中將模型參數化，讓該腳本更有用。
 
 ## <a name="next-steps"></a>後續步驟
-
-若要瞭解如何在 SQL Server 中處理 Python 資料類型，請遵循此快速入門：
-
-> [!div class="nextstepaction"]
-> [在 SQL Server Machine Learning 服務中使用 Python 處理資料類型和物件](quickstart-python-data-structures.md)
 
 如需 SQL Server Machine Learning 服務的詳細資訊，請參閱：
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 在具有 SQL Server Machine Learning 服務的 SQL Server 實例中，建立並執行簡單的 R 腳本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d723fa9b90659eb31e96626a3a85c1299c17fa2f
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: e49b01d3c3a4ac743d6614d66cc7864aee946460
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150311"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006037"
 ---
 # <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server Machine Learning 服務來建立和執行簡單的 R 腳本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ print(c(c, d))
 
 1. 開啟**SQL Server Management Studio** ，並連接到您的 SQL Server 實例。
 
-1. 將完整的 R 腳本傳遞給`sp_execute_external_script`預存程式。
+1. 將完整的 R 腳本傳遞至 @no__t 0 預存程式。
 
-   腳本會透過`@script`引數傳遞。 引數內`@script`的所有專案都必須是有效的 R 程式碼。
+   腳本會透過 `@script` 引數傳遞。 @No__t-0 引數內的所有專案都必須是有效的 R 程式碼。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -62,7 +62,7 @@ print(c(c, d))
     '
     ```
 
-1. 會計算正確的結果，且 R `print`函數會將結果傳回至 [**訊息**] 視窗。
+1. 會計算正確的結果，且 R `print` 函數會將結果傳回至 [**訊息**] 視窗。
 
    看起來應該會像這樣。
 
@@ -85,14 +85,14 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-預存程式`sp_execute_external_script`的輸入包括：
+@No__t-0 預存程式的輸入包括：
 
 | | |
 |-|-|
 | @language | 定義要呼叫的語言擴充功能，在此案例中為 R |
 | @script | 定義傳遞至 R 執行時間的命令。 您的整個 R 指令碼必須以 Unicode 文字的格式包含在此引數中。 您也可以將文字新增至**Nvarchar**類型的變數，然後呼叫變數 |
 | @input_data_1 | 查詢所傳回的資料，傳遞至 R 執行時間，會將資料傳回 SQL Server 做為資料框架 |
-|WITH 結果集 | 子句會定義 SQL Server 的傳回資料表的架構，並加入 "Hello World" 做為資料行名稱，並將**int**用於資料類型 |
+|WITH RESULT SETS | 子句會定義 SQL Server 的傳回資料表的架構，並加入 "Hello World" 做為資料行名稱，並將**int**用於資料類型 |
 
 此命令會輸出下列文字：
 
@@ -102,9 +102,9 @@ GO
 
 ## <a name="use-inputs-and-outputs"></a>使用輸入和輸出
 
-根據預設， `sp_execute_external_script`會接受單一資料集做為輸入，這通常是您以有效 SQL 查詢的形式提供。 然後，它會傳回單一 R 資料框架作為輸出。
+根據預設，`sp_execute_external_script` 會接受單一資料集做為輸入，這通常是您以有效 SQL 查詢的形式提供。 然後，它會傳回單一 R 資料框架作為輸出。
 
-現在，讓我們使用的預設輸入和輸出變數`sp_execute_external_script`：**InputDataSet**和**OutputDataSet**。
+現在，讓我們使用 `sp_execute_external_script` 的預設輸入和輸出變數：**InputDataSet**和**OutputDataSet**。
 
 1. 建立測試資料的小型資料表。
 
@@ -122,7 +122,7 @@ GO
     GO
     ```
 
-1. `SELECT`使用語句來查詢資料表。
+1. 使用 `SELECT` 語句來查詢資料表。
   
     ```sql
     SELECT *
@@ -133,7 +133,7 @@ GO
 
     ![RTestData 資料表的內容](./media/select-rtestdata.png)
 
-1. 執行下列 R 腳本。 它會使用`SELECT`語句從資料表中抓取資料，透過 R 執行時間傳遞，並以資料框架的形式傳回資料。 子句會定義針對 SQL 傳回之資料表的架構，並加入資料行名稱*NewColName。* `WITH RESULT SETS`
+1. 執行下列 R 腳本。 它會使用 `SELECT` 語句來抓取資料表中的資料，並透過 R 執行時間傳遞，然後傳回資料做為資料框架。 @No__t-0 子句會定義針對 SQL 傳回之資料表的架構，並加入資料行名稱*NewColName*。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -157,12 +157,12 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    請注意，R 會區分大小寫。 R 腳本中使用的輸入和輸出變數（**SQL_out**、 **SQL_in**）必須符合以`@input_data_1_name`和`@output_data_1_name`定義的名稱，包括大小寫。
+    請注意，R 會區分大小寫。 R 腳本中使用的輸入和輸出變數（**SQL_out**、 **SQL_in**）必須符合以 `@input_data_1_name` 和 `@output_data_1_name` （包括大小寫）定義的名稱。
 
    > [!TIP]
    > 只有一個輸入資料集可以當作參數傳遞，您只能傳回一個資料集。 不過，您可以從 R 程式碼內部呼叫其他資料集，而且除了資料集之外，您還可以傳回其他類型的輸出。 您也可以將 OUTPUT 關鍵字新增至任何參數，讓它傳回結果。
 
-1. 您也可以使用沒有輸入資料的 R 腳本（`@input_data_1`設為空白）來產生值。
+1. 您也可以使用沒有輸入資料的 R 腳本來產生值（`@input_data_1` 會設定為空白）。
 
    下列腳本會輸出 "hello" 和 "world" 文字。
 
@@ -178,7 +178,7 @@ GO
 
     **結果**
 
-    ![使用@script作為輸入的查詢結果](./media/r-data-generated-output.png)
+    ![使用 @script 做為輸入的查詢結果](./media/r-data-generated-output.png)
 
 ## <a name="check-r-version"></a>檢查 R 版本
 
@@ -190,7 +190,7 @@ EXECUTE sp_execute_external_script @language = N'R'
 GO
 ```
 
-R `print`函數會將版本傳回至 [**訊息**] 視窗。 在下面的範例輸出中，您可以看到，在此情況下，已安裝 R 版本3.4.4。
+R `print` 函數會將版本傳回至 [**訊息**] 視窗。 在下面的範例輸出中，您可以看到，在此情況下，已安裝 R 版本3.4.4。
 
 **結果**
 
@@ -232,7 +232,7 @@ WITH result sets((
             ));
 ```
 
-輸出來自`installed.packages()`于 R 中的，並會當做結果集傳回。
+輸出來自于 R 中的 `installed.packages()`，並以結果集的形式傳回。
 
 **結果**
 
@@ -240,13 +240,13 @@ WITH result sets((
 
 ## <a name="next-steps"></a>後續步驟
 
-若要在 SQL Server 中使用 R 建立機器學習模型，請遵循此快速入門：
+若要瞭解如何在 SQL Server Machine Learning 服務中使用 R 時使用資料結構，請遵循此快速入門：
 
 > [!div class="nextstepaction"]
-> [使用 SQL Server Machine Learning 服務在 R 中建立預測模型並為其評分](quickstart-r-train-score-model.md)
+> [在 SQL Server Machine Learning 服務中使用 R 處理資料類型和物件](quickstart-r-data-types-and-objects.md)
 
-如需 SQL Server Machine Learning 服務的詳細資訊，請參閱下列文章。
+如需在 SQL Server Machine Learning 服務中使用 R 的詳細資訊，請參閱下列文章：
 
-- [在 SQL Server Machine Learning 服務中使用 R 處理資料類型和物件](quickstart-r-data-types-and-objects.md)
 - [使用 SQL Server Machine Learning 服務撰寫 advanced R 函數](quickstart-r-functions.md)
+- [使用 SQL Server Machine Learning 服務在 R 中建立預測模型並為其評分](quickstart-r-train-score-model.md)
 - [什麼是 SQL Server Machine Learning 服務（Python 和 R）？](../what-is-sql-server-machine-learning.md)
