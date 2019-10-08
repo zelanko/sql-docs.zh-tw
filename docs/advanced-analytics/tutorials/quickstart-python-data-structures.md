@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: HT
+ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006055"
+ms.locfileid: "72008426"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>快速入門：在 SQL Server Machine Learning 服務中使用 Python 處理資料類型和物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ SQL Server 依賴 Python **pandas**套件，這非常適合用來處理表格式
 - 資料框架的單一值稱為儲存格，並依索引存取。
 
 如果資料框架需要表格式結構，您要如何將計算的單一結果公開為數據框架？ 其中一個答案是以數列的形式來表示單一純量值，這可以輕鬆地轉換成資料框架。 
+
+> [!NOTE]
+> 傳回日期時，SQL 中的 Python 會使用包含 1753-01-01 （-53690）到 9999-12-31 （2958463）之受限制日期範圍的日期時間。 
 
 ## <a name="prerequisites"></a>必要條件
 
