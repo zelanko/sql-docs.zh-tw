@@ -1,5 +1,5 @@
 ---
-title: 路徑名稱 (TRANSACT-SQL) |Microsoft Docs
+title: PathName （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140583"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251957"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回 FILESTREAM 二進位大型物件 (BLOB) 的路徑。 OpenSqlFilestream API 會使用此路徑來傳回應用程式可用來使用 Win32 Api 處理 BLOB 資料的控制代碼。 PathName 是唯讀的。  
+  傳回 FILESTREAM 二進位大型物件 (BLOB) 的路徑。 OpenSqlFilestream API 會使用這個路徑來傳回一個控制碼，應用程式可以使用 Win32 Api 來處理 BLOB 資料。 PathName 是唯讀的。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,12 +40,12 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>引數  
  *column_name*  
- 資料行名稱**varbinary （max)** FILESTREAM 資料行。 *column_name*必須是資料行名稱。 它不能是運算式或是 CAST 或 CONVERT 陳述式的結果。  
+ 這是**Varbinary （max）** FILESTREAM 資料行的資料行名稱。 *column_name*必須是資料行名稱。 它不能是運算式或是 CAST 或 CONVERT 陳述式的結果。  
   
- 要求的資料行的任何其他資料型別或 PathName **varbinary （max)** columnthat 沒有 FILESTREAM 儲存體屬性將會產生查詢編譯時間錯誤。  
+ 針對任何其他資料類型或**Varbinary （max）** columnthat 的資料行要求路徑名稱時，不會有 FILESTREAM 儲存屬性會造成查詢編譯時期錯誤。  
   
- *@option*  
- 整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，定義如何格式化之路徑的伺服器元件。 *@option* 可以是下列值之一。 預設值是 0。  
+ *\@option*  
+ 定義路徑的伺服器元件如何格式化的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *@no__t 1option*可以是下列其中一個值。 預設值為 0。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -54,11 +54,11 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |2|傳回完整伺服器路徑，例如：`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- 定義的伺服器名稱應該如何傳回 Always On 可用性群組中的位元值。  
+ 定義伺服器名稱應如何在 Always On 可用性群組中傳回的位值。  
   
- 當資料庫不屬於 Always On 可用性群組時，則會忽略這個引數的值。 電腦名稱一定會用於路徑中。  
+ 當資料庫不屬於 Always On 可用性群組時，就會忽略這個引數的值。 電腦名稱一定會用於路徑中。  
   
- 當資料庫屬於 Alwayson 可用性群組時，windows 7 *use_replica_computer_name*具有下列的輸出結果**PathName**函式：  
+ 當資料庫屬於 Always On 可用性群組時， *use_replica_computer_name*的值會對**PathName**函數的輸出產生下列影響：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -149,7 +149,7 @@ DROP DATABASE PathNameDB;
   
 ## <a name="see-also"></a>另請參閱  
  [二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;transact-sql&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [使用 OpenSqlFilestream 存取 FILESTREAM 資料](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

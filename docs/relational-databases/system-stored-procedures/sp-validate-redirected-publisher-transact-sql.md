@@ -1,5 +1,5 @@
 ---
-title: sp_validate_redirected_publisher (TRANSACT-SQL) |Microsoft Docs
+title: sp_validate_redirected_publisher （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dc600aeabd1c988c0f9a6768da7fd0f0d280552b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119421"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252057"
 ---
-# <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
+# <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  請確認發行之資料庫的目前主機是否能夠支援複寫。 必須從散發資料庫執行。 此程序會呼叫**sp_get_redirected_publisher**。  
+  請確認發行之資料庫的目前主機是否能夠支援複寫。 必須從散發資料庫執行。 這個程式是由**sp_get_redirected_publisher**所呼叫。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,27 +40,27 @@ ms.locfileid: "68119421"
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @original_publisher = ] 'original_publisher'` 執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當初發行資料庫。 *original_publisher*已**sysname**，沒有預設值。  
+`[ @original_publisher = ] 'original_publisher'`：原先發行資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的實例名稱。 *original_publisher*是**sysname**，沒有預設值。  
   
-`[ @publisher_db = ] 'publisher_db'` 發行的資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 已發行的資料庫名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` 重新導向的目標時指定**sp_redirect_publisher**針對發行者/資料庫配對呼叫。 *redirected_publisher*已**sysname**，沒有預設值。  
+`[ @redirected_publisher = ] 'redirected_publisher'` 當針對發行者/資料庫配對呼叫**sp_redirect_publisher**時，所指定的重新導向目標。 *redirected_publisher*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  無。  
   
 ## <a name="remarks"></a>備註  
- 如果 「 發行者 」 和發行的資料庫，項目不存在**sp_validate_redirected_publisher**會傳回輸出參數中的 null *@redirected_publisher* 。 如果有項目存在，則成功和失敗案例的輸出參數中都會傳回此項目。  
+ 如果發行者和發行資料庫沒有專案存在， **sp_validate_redirected_publisher**會在輸出參數 *\@redirected_publisher*中傳回 null。 如果有項目存在，則成功和失敗案例的輸出參數中都會傳回此項目。  
   
- 如果驗證成功， **sp_validate_redirected_publisher**傳回成功指示。  
+ 如果驗證成功， **sp_validate_redirected_publisher**會傳回成功指示。  
   
  如果驗證失敗，則會引發描述失敗的錯誤。  
   
 ## <a name="permissions"></a>Permissions  
- 呼叫端必須是隸屬**sysadmin**固定伺服器角色**db_owner**散發資料庫或定義的發行集的發行集存取清單成員的固定的資料庫角色發行者資料庫相關聯。  
+ 呼叫者必須是**系統管理員（sysadmin** ）固定伺服器角色的成員、散發資料庫的**db_owner**固定資料庫角色，或是與發行者資料庫相關聯之定義發行集的發行集存取清單的成員。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

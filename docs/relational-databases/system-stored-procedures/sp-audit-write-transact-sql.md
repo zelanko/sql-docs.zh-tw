@@ -1,5 +1,5 @@
 ---
-title: sp_audit_write (TRANSACT-SQL) |Microsoft Docs
+title: sp_audit_write （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046137"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251977"
 ---
-# <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
+# <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  將使用者定義稽核事件，來加入**USER_DEFINED_AUDIT_GROUP**。 如果**USER_DEFINED_AUDIT_GROUP**未啟用，則**sp_audit_write**會被忽略。  
+  將使用者定義的 audit 事件加入至**USER_DEFINED_AUDIT_GROUP**。 如果未啟用**USER_DEFINED_AUDIT_GROUP** ，則會忽略**sp_audit_write** 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>引數  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- 使用者定義的參數，而且記錄在**user_defined_event_id**稽核記錄的資料行。 *@user_defined_event_id* 是型別**smallint**。  
+ 使用者定義的參數，並記錄在 audit 記錄檔的**user_defined_event_id**資料行中。 *@no__t 1user_defined_event_id*的類型為**Smallint**。  
   
  `[ @succeeded = ] succeeded`  
- 由使用者傳遞的參數，指出事件是否成功。 這會顯示在稽核記錄的 succeeded 資料行中。 `@succeeded` 已**元**。  
+ 由使用者傳遞的參數，指出事件是否成功。 這會顯示在稽核記錄的 succeeded 資料行中。 `@succeeded` 是**bit**。  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- 由使用者定義並且記錄在稽核記錄之新 user_defined_event_id 資料行中的文字。 `@user_defined_information` 已**nvarchar(4000)** 。  
+ 由使用者定義並且記錄在稽核記錄之新 user_defined_event_id 資料行中的文字。 `@user_defined_information` 是**Nvarchar （4000）** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -56,10 +56,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  輸入參數錯誤或無法寫入目標稽核記錄都會造成失敗。  
   
 ## <a name="remarks"></a>備註  
- 當**USER_DEFINED_AUDIT_GROUP**新增至伺服器稽核規格或資料庫稽核規格，所觸發的事件**sp_audit_write**將會包含在稽核記錄檔。  
+ 當**USER_DEFINED_AUDIT_GROUP**加入伺服器 audit 規格或資料庫審核規格時， **sp_audit_write**所觸發的事件就會包含在 AUDIT 記錄中。  
   
 ## <a name="permissions"></a>Permissions  
- 需要的成員資格**公開**資料庫角色。  
+ 需要**public**資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   

@@ -1,5 +1,5 @@
 ---
-title: 部署和使用預存程序執行 SSIS 套件 |Microsoft Docs
+title: 使用預存程式部署及執行 SSIS 套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 56141595c62e5190bf3ef797059acd602f801ed7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059610"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251311"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用預存程序部署及執行 SSIS 封裝
   當您設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案來使用專案部署模型時，您可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 目錄中的預存程序來部署專案及執行封裝。 如需有關專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
@@ -26,7 +26,7 @@ ms.locfileid: "66059610"
 >  您可以執行以下動作，輕鬆地針對底下程序中所列的預存程序產生 Transact-SQL 陳述式 (除了 catalog.deploy_project 以外)：  
 > 
 >  1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，展開 [物件總管] 中的 **Integration Services 目錄** 節點，並導覽到您要執行的封裝。  
-> 2.  以滑鼠右鍵按一下封裝，然後按一下 [執行]  。  
+> 2.  以滑鼠右鍵按一下封裝，然後按一下 [執行]。  
 > 3.  請視需要在 **[進階]** 索引標籤中設定參數值、連接管理員屬性和選項，例如記錄層次。  
 > 
 >      如需有關記錄層級的詳細資訊，請參閱＜ [在 SSIS 伺服器上啟用封裝執行的記錄功能](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)＞。  
@@ -36,9 +36,9 @@ ms.locfileid: "66059610"
   
 1.  呼叫 [catalog.deploy_project &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) 將包含封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。  
   
-     若要擷取 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署檔案的二進位內容，請針對 *@project_stream* 參數使用 SELECT 陳述式搭配 OPENROWSET 函數和 BULK 資料列集提供者。 BULK 資料列集提供者可讓您從檔案讀取資料。 BULK 資料列集提供者的 SINGLE_BLOB 引數會傳回資料檔的內容當做類型為 varbinary(max) 的單一資料列、單一資料行資料列集。 如需詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
+     若要取出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署檔案的二進位內容，請針對 *\@project_stream*參數，使用含有 OPENROWSET 函數和 BULK 資料列集提供者的 SELECT 語句。 BULK 資料列集提供者可讓您從檔案讀取資料。 BULK 資料列集提供者的 SINGLE_BLOB 引數會傳回資料檔的內容當做類型為 varbinary(max) 的單一資料列、單一資料行資料列集。 如需詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   
-     在下列範例中，SSISPackages_ProjectDeployment 專案會部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上的 [SSIS 封裝] 資料夾。 二進位資料會從專案檔 (SSISPackage_ProjectDeployment.ispac) 讀取，並且儲存在類型為 varbinary(max) 的 *@ProjectBinary* 參數中。 *@ProjectBinary* 參數值會指派給 *@project_stream* 參數。  
+     在下列範例中，SSISPackages_ProjectDeployment 專案會部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上的 [SSIS 封裝] 資料夾。 二進位資料會從專案檔（SSISPackage_ProjectDeployment. .ispac）讀取，並儲存在 Varbinary （max）類型的 *\@ProjectBinary*參數中。 *@No__t 1ProjectBinary*參數值會指派給 *\@project_stream*參數。  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -99,7 +99,7 @@ ms.locfileid: "66059610"
   
      在 **[連結的伺服器屬性]** 對話方塊的 **[伺服器選項]** 頁面上，將 **[RPC]** 和 **[RPC 輸出]** 設定為 **[True]** 。 此外，也將 **[啟用 RPC 的分散式交易促銷]** 設定為 **[False]** 。  
   
--   若要針對您為連結的伺服器選取的提供者啟用動態參數，請在物件總管中展開 [連結的伺服器]  下方的 [提供者]  節點，以滑鼠右鍵按一下此提供者，然後按一下 [屬性]  。 選取 **[動態參數]** 旁邊的 **[啟用]** 。  
+-   若要針對您為連結的伺服器選取的提供者啟用動態參數，請在物件總管中展開 [連結的伺服器] 下方的 [提供者] 節點，以滑鼠右鍵按一下此提供者，然後按一下 [屬性]。 選取 **[動態參數]** 旁邊的 **[啟用]** 。  
   
 -   確認兩部伺服器上都已啟動分散式交易協調器 (DTC)。  
   

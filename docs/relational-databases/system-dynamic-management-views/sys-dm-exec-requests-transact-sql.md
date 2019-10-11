@@ -20,19 +20,19 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: dbd8e8898bf6453e456156e7c6c070a4867761b9
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923780"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261565"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行之每項要求的相關資訊。  
-  
+傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行之每個要求的相關資訊。 如需有關要求的詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|這個要求相關的工作階段識別碼。 不可為 Null。|  
@@ -94,17 +94,17 @@ ms.locfileid: "71923780"
 |parallel_worker_count |**int** |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 如果這是平行查詢，則為保留的平行背景工作數目。  |  
 |external_script_request_id |**uniqueidentifier** |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 與目前要求相關聯的外部腳本要求識別碼。 |  
 |is_resumable |**bit** |**適用於**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指出要求是否為可繼續的索引作業。 |  
-|page_resource |**binary(8)** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果`wait_resource`資料行包含頁面，則為頁面資源的8位元組十六進位標記法。 如需詳細資訊，請參閱[fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
+|page_resource |**binary(8)** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果 @no__t 0 資料行包含頁面，則為頁面資源的8位元組十六進位標記法。 如需詳細資訊，請參閱[fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
 |page_server_reads|**bigint**|**適用於**：Azure SQL Database 超大規模資料庫<br /><br /> 此要求所執行的頁面伺服器讀取數目。 不可為 Null。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>備註 
 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部的程式碼 (例如，擴充預存程序和分散式查詢)，執行緒必須在非先佔式排程器的控制之外執行。 若要這麼做，工作者必須切換到先佔式模式。 這個動態管理檢視傳回的時間值不包括先佔式模式所花費的時間。
 
-在資料[列模式](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)中執行平行要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，會指派背景工作執行緒來協調負責完成指派給它們之工作的工作者執行緒。 在此 DMV 中，只會顯示要求的協調器執行緒。 系統**不**會針對協調器執行緒更新資料行 [**讀取**]、[**寫入**]、[ **logical_reads**] 和 [ **row_count** ]。 只有協調器執行緒**才會更新** **wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory**資料行。 如需詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+以資料[列模式](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)執行平行要求時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派背景工作執行緒，以協調負責完成指派給它們之工作的工作者執行緒。 在此 DMV 中，只會顯示要求的協調器執行緒。 系統**不**會針對協調器執行緒更新資料行 [**讀取**]、[**寫入**]、[ **logical_reads**] 和 [ **row_count** ]。 只有協調器執行緒**才會更新** **wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory**資料行。 如需詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
 
 ## <a name="permissions"></a>Permissions
-如果使用者具有`VIEW SERVER STATE`伺服器的許可權，則使用者會看到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例上所有執行中的會話; 否則，使用者只會看到目前的會話。 `VIEW SERVER STATE`無法在中[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]授與`sys.dm_exec_requests` ，因此一律限制為目前的連接。
+如果使用者在伺服器上有 `VIEW SERVER STATE` 的許可權，則使用者會看到實例上所有執行中的會話 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];否則，使用者只會看到目前的會話。 `VIEW SERVER STATE` 無法在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 中授與，因此 `sys.dm_exec_requests` 一律會限制為目前的連接。
   
 ## <a name="examples"></a>範例  
   
@@ -184,11 +184,12 @@ GO
 ```
 
 ## <a name="see-also"></a>另請參閱
-
-- [動態管理檢視和函數](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [執行相關的動態管理檢視和函數](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
-- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+[動態管理檢視和功能](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)    
+[執行相關的動態管理檢視和函數](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)     
+[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)    
+[_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)    
+[_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)    
+[_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
