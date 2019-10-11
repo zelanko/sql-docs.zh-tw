@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1737524acd1397a30299e7c5147ae9a6cb10efc6
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893309"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173682"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68893309"
  新的連接行為會由用戶端實作，因此，該行為對於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本而言不是專屬的。  
   
 ## <a name="linked-servers-and-delegation"></a>連結的伺服器與委派  
- 建立連結的伺服器時，可以使用 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 **@provstr** 參數來指定伺服器和容錯移轉夥伴 SPN。 此做法的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更為簡單且更可靠。  
+ 建立連結的伺服器時，可以使用[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的 **@no__t 1provstr**參數來指定伺服器和容錯移轉夥伴 spn。 此做法的優點與在用戶端連接字串中指定 SPN 相同：建立使用 Kerberos 驗證的連接更為簡單且更可靠。  
   
  利用連結的伺服器委派需要 Kerberos 驗證。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "68893309"
   
 -   安全性：指定的 SPN 是否公開受保護的資訊？  
   
--   穩定性若要啟用預設 spn, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例執行所在的服務帳戶必須具有足夠的許可權, 才能更新 KDC 上的 Active Directory。  
+-   穩定性若要啟用預設 Spn，執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 實例的服務帳戶必須具有足夠的許可權，才能更新 KDC 上的 Active Directory。  
   
--   便利性和位置透明度:如果應用程式的資料庫移到不同[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的實例, 會如何影響其 spn？ 如果您使用資料庫鏡像，這樣會同時套用到主體伺服器及其容錯移轉夥伴。 如果伺服器變更意指必須變更 SPN，這會如何影響應用程式？ 將會管理任何變更嗎？  
+-   便利性和位置透明度：如果應用程式的資料庫移到不同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 實例，將會如何受到影響？ 如果您使用資料庫鏡像，這樣會同時套用到主體伺服器及其容錯移轉夥伴。 如果伺服器變更意指必須變更 SPN，這會如何影響應用程式？ 將會管理任何變更嗎？  
   
 ## <a name="specifying-the-spn"></a>指定 SPN  
  您可以在對話方塊和程式碼中指定 SPN。 本節討論如何指定 SPN。  
