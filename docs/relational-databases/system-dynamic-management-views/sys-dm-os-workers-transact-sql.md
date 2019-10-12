@@ -20,12 +20,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 822f4fea2764c6420da731845e8defc05807d3cf
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261653"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289357"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,8 @@ ms.locfileid: "72261653"
  當通知等待事件的工作者時，會將工作者放在可執行佇列的開頭。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓它在資料列出現一千次，之後就會將工作者放在佇列結尾。 將工作者移到佇列結尾，會有一些效能隱含作用。  
   
 ## <a name="permissions"></a>Permissions
-
 在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 上，需要 `VIEW SERVER STATE` 許可權。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高階層級上，需要資料庫中的 `VIEW DATABASE STATE` 許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層上，需要**伺服器管理員**或 Azure Active Directory 的系統**管理員**帳戶。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高階層級上，需要資料庫中的 `VIEW DATABASE STATE` 許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層上，需要 `Server Admin` 角色成員資格，或 @no__t 2 帳戶。   
 
 ## <a name="examples"></a>範例  
  您可以使用下列查詢來查明工作者在 SUSPENDED 或 RUNNABLE 狀態下執行的時間長度。  
@@ -137,6 +136,6 @@ SELECT
  在輸出中，當 `w_runnable` 和 `w_suspended` 相等時，這代表工作者處於 SUSPENDED 狀態的時間。 否則，`w_runnable` 便代表工作者在 RUNNABLE 狀態中所花的時間。 在此輸出中，工作階段 `52` 處於 `SUSPENDED` 狀態的時間為 `35,094` 毫秒。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
- [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#DOP)       
- [執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)    
+[SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)    

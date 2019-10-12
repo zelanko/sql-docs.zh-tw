@@ -11,6 +11,7 @@ apiname:
 - SQLBindCol
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBindCol
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a3bb9eeb85b8d651d89d58d78868d262b49e242b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: c1c89ff79ee0fcac37f7b6e231e957e051c9db2e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974344"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289281"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **標準**  

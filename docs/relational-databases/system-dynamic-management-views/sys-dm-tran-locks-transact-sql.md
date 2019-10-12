@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_locks (TRANSACT-SQL) |Microsoft Docs
+title: _tran_locks （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32140a9ef5b1a8965876c4ee30fe72559ba8b7ce
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e52b36ff9cb8c7d0f4f7fc6086563616325cdc92
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262619"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289367"
 ---
-# <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
+# <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回有關 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中目前使用中鎖定管理員資源的資訊。 每一個資料列皆代表一個對鎖定管理員針對已經授與或在等待授與的鎖定的目前使用中要求。  
@@ -35,44 +35,43 @@ ms.locfileid: "68262619"
  結果集中的資料行，共分成資源和要求兩個主要群組。 資源群組描述鎖定要求所針對的資源，而要求群組則描述該鎖定要求。  
   
 > [!NOTE]  
-> 若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_tran_locks**。  
+> 若要從 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 呼叫此，請使用名稱 **_pdw_nodes_tran_locks**。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar(60)**|代表資源類型。 這個值可以是下列值之一：資料庫、 檔案、 物件、 頁面、 索引鍵、 範圍、 RID、 應用程式、 中繼資料、 HOBT 或 ALLOCATION_UNIT。|  
-|**resource_subtype**|**nvarchar(60)**|表示的子型別**resource_type**。 在技術上即使不保留父類型的非子類型鎖定，它也可以取得子類型鎖定。 不同的子類型，並不會彼此衝突，也不會與非子類型的父類型相衝突。 不過並非所有的資源類型都有子類型。|  
+|**resource_type**|**nvarchar(60)**|代表資源類型。 這個值可以是下列值之一：DATABASE、FILE、OBJECT、PAGE、KEY、範圍、RID、APPLICATION、METADATA、HOBT 或 ALLOCATION_UNIT。|  
+|**resource_subtype**|**nvarchar(60)**|代表**resource_type**的子類型。 在技術上即使不保留父類型的非子類型鎖定，它也可以取得子類型鎖定。 不同的子類型，並不會彼此衝突，也不會與非子類型的父類型相衝突。 不過並非所有的資源類型都有子類型。|  
 |**resource_database_id**|**int**|決定這個資源範圍所用的資料庫識別碼。 所有由鎖定管理員處理的資源，都由資料庫識別碼決定範圍。|  
 |**resource_description**|**nvarchar(256)**|資源的描述，其中只包含無法從其他資源資料行取得的資訊。|  
 |**resource_associated_entity_id**|**bigint**|資料庫中與資源相關聯的實體識別碼。 視資源類型而定，它可以是物件識別碼、Hobt 識別碼或配置單位識別碼。|  
 |**resource_lock_partition**|**整數**|資料分割鎖定資源的鎖定資料分割識別碼。 非資料分割鎖定資源的值是 0。|  
 |**request_mode**|**nvarchar(60)**|要求的模式。 如果是已授與的要求，則為已授與的模式；如果是等待授與的要求，則為正在要求的模式。|  
 |**request_type**|**nvarchar(60)**|要求類型。 值為 LOCK。|  
-|**request_status**|**nvarchar(60)**|這項要求的目前狀態。 可能的值是 GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT 或 ABORT_BLOCKERS。 如需有關低優先順序等候和中止封鎖器的詳細資訊，請參閱 < *low_priority_lock_wait*一節[ALTER INDEX &#40;-&#41;](../../t-sql/statements/alter-index-transact-sql.md)。|  
+|**request_status**|**nvarchar(60)**|這項要求的目前狀態。 可能的值是 GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT 或 ABORT_BLOCKERS。 如需低優先順序等候和中止封鎖器的詳細資訊，請參閱[ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)的*low_priority_lock_wait*一節。|  
 |**request_reference_count**|**smallint**|傳回同一個要求器要求這項資源的大約次數。|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|目前擁有這項要求的工作階段識別碼。 主控工作階段識別碼會隨著分散式和繫結式交易而改變。 -2 值表示要求屬於被遺棄的分散式交易。 -3 值表示該要求是屬於延遲的復原交易，例如，由於回復作業無法順利完成，因而在復原時延遲的交易。|  
 |**request_exec_context_id**|**int**|目前擁有這項要求之處理序的工作階段內容識別碼。|  
 |**request_request_id**|**int**|目前擁有這項要求之處理序的要求識別碼 (批次識別碼)。 只要交易的使用中 Multiple Active Result Set (MARS) 連接一改變，這個值就會隨之改變。|  
-|**request_owner_type**|**nvarchar(60)**|擁有要求的實體類型。 鎖定管理員要求可以由各種實體所擁有。 可能的值為：<br /><br /> TRANSACTION = 要求是由交易所擁有。<br /><br /> CURSOR = 要求是由資料指標所擁有。<br /><br /> SESSION = 要求是由使用者工作階段所擁有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求是由交易工作空間的共用部分所擁有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求是由交易工作空間的獨佔部分所擁有。<br /><br /> NOTIFICATION_OBJECT = 要求是由內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所擁有。 這個元件已要求鎖定管理員在另一個元件等候取得鎖定時通知它。 FileTable 功能是使用此值的元件。<br /><br /> **注意：** 工作空間會在內部用來鎖定已登錄的工作階段。|  
-|**request_owner_id**|**bigint**|這項要求的特定擁有者識別碼。<br /><br /> 當交易是要求的擁有者時，這個值包含交易識別碼。<br /><br /> 當 FileTable 是要求的擁有者**request_owner_id**具有下列值之一。<br /><br /> <br /><br /> -4:已取得資料庫鎖定的 FileTable。<br /><br /> -3:資料表鎖定時，已取得 FileTable。<br /><br /> 其他值：此值代表檔案控制代碼。 此值也會顯示為**fcb_id**動態管理檢視中[sys.dm_filestream_non_transacted_handles &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
+|**request_owner_type**|**nvarchar(60)**|擁有要求的實體類型。 鎖定管理員要求可以由各種實體所擁有。 可能的值為：<br /><br /> TRANSACTION = 要求是由交易所擁有。<br /><br /> CURSOR = 要求是由資料指標所擁有。<br /><br /> SESSION = 要求是由使用者工作階段所擁有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求是由交易工作空間的共用部分所擁有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求是由交易工作空間的獨佔部分所擁有。<br /><br /> NOTIFICATION_OBJECT = 要求是由內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所擁有。 這個元件已要求鎖定管理員在另一個元件等候取得鎖定時通知它。 FileTable 功能是使用此值的元件。<br /><br /> **注意：** 工作空間會在內部用來保存已登記會話的鎖定。|  
+|**request_owner_id**|**bigint**|這項要求的特定擁有者識別碼。<br /><br /> 當交易是要求的擁有者時，這個值包含交易識別碼。<br /><br /> 當 FileTable 是要求的擁有者時， **request_owner_id**有下列其中一個值。<br /><br /> <br /><br /> 4gbFileTable 已取得資料庫鎖定。<br /><br /> 第FileTable 已取得表鎖。<br /><br /> 其他值：值代表檔案控制代碼。 這個值也會在動態管理檢視的[ &#40;_filestream_non_transacted_handles transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)中顯示為**fcb_id** 。|  
 |**request_owner_guid**|**uniqueidentifier**|此要求之特定擁有者的 GUID。 只有值對應於該交易之 MS DTC GUID 的分散式交易才會使用這個值。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 這個值代表要求器的鎖定空間識別碼。 鎖定空間識別碼可以判斷兩個要求器是否彼此相容，如果其模式會彼此衝突，是否可被授與鎖定。|  
-|**lock_owner_address**|**varbinary(8)**|追蹤這項要求所用的內部資料結構記憶體位址。 可以聯結此資料行具有**sys.dm_os_waiting_tasks**中的資料行**sys.dm_os_waiting_tasks**。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> 這個分佈是在節點的識別碼。|  
+|**lock_owner_address**|**varbinary(8)**|追蹤這項要求所用的內部資料結構記憶體位址。 此資料行可以聯結至 **_os_waiting_tasks**中的 with **resource_address**資料行。|  
+|**pdw_node_id**|**int**|**適用于**： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> 此散發所在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions
-
-在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，則需要**伺服器系統管理員**該**Azure Active Directory 管理員**帳戶。   
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 上，需要 `VIEW SERVER STATE` 許可權。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高階層級上，需要資料庫中的 `VIEW DATABASE STATE` 許可權。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 標準和基本層上，需要**伺服器管理員**或 Azure Active Directory 的系統**管理員**帳戶。   
  
 ## <a name="remarks"></a>備註  
- 如果是已授與的要求狀態，表示已將資源鎖定授與要求器。 而等待中的要求，表示尚未授與該要求。 傳回下列等候要求類型**request_status**資料行：  
+ 如果是已授與的要求狀態，表示已將資源鎖定授與要求器。 而等待中的要求，表示尚未授與該要求。 **Request_status**資料行傳回下列等候要求類型：  
   
 -   如果是轉換要求狀態，表示要求器已被授與該資源的要求，目前正在等候升級為即將授與的起始要求。  
   
 -   如果是等候要求狀態，則表示要求器目前沒有已授與的資源要求。  
   
- 因為**sys.dm_tran_locks**填入從內部鎖定管理員資料結構，維護這項資訊不會新增額外的負擔為一般處理。 若要將檢視具體化，需要具備鎖定管理員內部資料結構的存取權。 這可能會對伺服器的正常處理作業產生一些影響。 這些影響應該很難查覺，而且只會影響到常用的資源。 由於這份檢視的資料對應到活性鎖定管理員狀態，因此資料隨時可以變更，而且只要一取得和釋放鎖定，就可以加入和移除資料列。 這份檢視沒有記錄資訊。  
+ 因為從內部鎖定管理員資料結構擴展了 **_tran_locks** ，所以維護這種資訊並不會對一般處理增加額外的負荷。 若要將檢視具體化，需要具備鎖定管理員內部資料結構的存取權。 這可能會對伺服器的正常處理作業產生一些影響。 這些影響應該很難查覺，而且只會影響到常用的資源。 由於這份檢視的資料對應到活性鎖定管理員狀態，因此資料隨時可以變更，而且只要一取得和釋放鎖定，就可以加入和移除資料列。 這份檢視沒有記錄資訊。  
   
  只有當所有的資源群組資料行都相等時，才能在相同的資源上進行兩項要求。  
   
@@ -80,32 +79,35 @@ ms.locfileid: "68262619"
   
 -   SET TRANSACTION ISOLATION LEVEL，用來指定工作階段的鎖定層級。 如需詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
--   鎖定資料表提示，用來在 FROM 子句中指定資料表之個別參考的鎖定層級。 如需語法和限制，請參閱[資料表提示&#40;TRANSACT-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
+-   鎖定資料表提示，用來在 FROM 子句中指定資料表之個別參考的鎖定層級。 如需語法和限制，請參閱[資料表提示&#40;transact-sql&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- 在一個工作階段識別碼下執行資源，可以有一個以上的授與鎖定。 執行下一個工作階段的不同實體可以各自擁有相同的資源，而資訊會顯示在**request_owner_type**並**request_owner_id**的資料行所傳回**sys.dm_tran_locks**。 如果多個執行個體的相同**request_owner_type**存在**request_owner_id**資料行用來區別每個執行個體。 若是分散式交易， **request_owner_type**並**request_owner_guid**資料行會顯示不同的實體資訊。  
+ 在一個工作階段識別碼下執行資源，可以有一個以上的授與鎖定。 在一個會話下執行的不同實體可以擁有相同資源的鎖定，而資訊會顯示在**sys.databases _tran_locks**傳回的**request_owner_type**和**request_owner_id**資料行中。 如果有多個相同**request_owner_type**的實例存在，則會使用**request_owner_id**資料行來區別每個實例。 若為分散式交易， **request_owner_type**和**request_owner_guid**資料行會顯示不同的實體資訊。  
   
- 比方說，工作階段 S1 在擁有共用的鎖定時**Table1**; 和交易 T1，工作階段 S1 下執行時，也在擁有共用的鎖定**Table1**。 在此情況下， **resource_description**所傳回的資料行**sys.dm_tran_locks**會顯示兩個相同的資源執行個體。 **Request_owner_type**資料行將會顯示為工作階段，交易另一個執行個體。 此外， **resource_owner_id**資料行都會有不同的值。  
+ 例如，會話 S1 在**Table1**上擁有共用鎖定;而在會話 S1 下執行的交易 T1 也在**Table1**上擁有共用鎖定。 在此情況下， **sys.databases _tran_locks**所傳回的**resource_description**資料行將會顯示相同資源的兩個實例。 **Request_owner_type**資料行會將一個實例顯示為一個會話，另一個當做交易。 此外， **resource_owner_id**資料行也會有不同的值。  
   
  在一個工作階段下執行的多個資料指標是無法區分的，它們會被視為一個實體。  
   
  與工作階段識別碼值無關的分散式交易是被遺棄的交易，系統會指派 -2 值做為交易的工作階段識別碼。 如需詳細資訊，請參閱 [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)。  
-  
+
+## <a name="locks"></a> 鎖定
+鎖定發生於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源上，例如交易期間讀取或修改的資料列，以避免不同交易同時使用資源。 例如，若某個交易將資料表內的資料列獨佔 (X) 鎖定，就沒有其他交易可修改該資料列，直到鎖定解除為止。 將鎖定減至最少可增加並行 (Concurrency)，以改善效能。 
+
 ## <a name="resource-details"></a>資源詳細資料  
- 下表列出的資源，以表示**resource_associated_entity_id**資料行。  
+ 下表列出**resource_associated_entity_id**資料行中所代表的資源。  
   
 |資源類型|資源描述|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
 |DATABASE|代表資料庫。|不適用|  
 |FILE|代表資料庫檔案。 這個檔案可以是資料或記錄檔。|不適用|  
 |OBJECT|代表資料庫物件。 這個物件可以是資料表、檢視、預存程序、擴充預存程序或任何具有物件識別碼的物件。|物件識別碼|  
-|PAGE|代表資料檔中的一頁。|HoBt 識別碼。 這個值會對應到**sys.partitions.hobt_id**。 HoBt 識別碼不一定都適用於 PAGE 資源，因為 HoBt 識別碼是可由呼叫端提供的額外資訊，但不是所有的呼叫端都可以提供這些資訊。|  
-|KEY|代表索引中的一個資料列。|HoBt 識別碼。 這個值會對應到**sys.partitions.hobt_id**。|  
+|PAGE|代表資料檔中的一頁。|HoBt 識別碼。 這個值會對應至**hobt_id**。 HoBt 識別碼不一定都適用於 PAGE 資源，因為 HoBt 識別碼是可由呼叫端提供的額外資訊，但不是所有的呼叫端都可以提供這些資訊。|  
+|KEY|代表索引中的一個資料列。|HoBt 識別碼。 這個值會對應至**hobt_id**。|  
 |EXTENT|代表資料檔範圍。 一個範圍是八個連續頁的群組。|不適用|  
-|RID|代表堆積中的一個實體資料列。|HoBt 識別碼。 這個值會對應到**sys.partitions.hobt_id**。 HoBt 識別碼不一定都適用於 RID 資源，因為 HoBt 識別碼是可由呼叫端提供的額外資訊，但不是所有的呼叫端都可以提供這些資訊。|  
+|RID|代表堆積中的一個實體資料列。|HoBt 識別碼。 這個值會對應至**hobt_id**。 HoBt 識別碼不一定都適用於 RID 資源，因為 HoBt 識別碼是可由呼叫端提供的額外資訊，但不是所有的呼叫端都可以提供這些資訊。|  
 |APPLICATION|代表應用程式指定的資源。|不適用|  
 |METADATA|代表中繼資料資訊。|不適用|  
-|HOBT|代表堆積或 B 型樹狀目錄。 這些是基本的存取路徑結構。|HoBt 識別碼。 這個值會對應到**sys.partitions.hobt_id**。|  
-|ALLOCATION_UNIT|代表一組相關頁面，例如，索引資料分割。 每一個配置單位都涵蓋一個索引配置對應 (IAM) 鏈結。|配置單位識別碼。 這個值會對應到**sys.allocation_units.allocation_unit_id**。|  
+|HOBT|代表堆積或 B 型樹狀目錄。 這些是基本的存取路徑結構。|HoBt 識別碼。 這個值會對應至**hobt_id**。|  
+|ALLOCATION_UNIT|代表一組相關頁面，例如，索引資料分割。 每一個配置單位都涵蓋一個索引配置對應 (IAM) 鏈結。|配置單位識別碼。 這個值對應于**allocation_units. allocation_unit_id**。|  
   
  下表列出各資源類型所關聯的子類型。  
   
@@ -193,20 +195,20 @@ ms.locfileid: "68262619"
 |METADATA.XML_COMPONENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- 下表提供的格式**resource_description**每個資源類型的資料行。  
+ 下表提供每個資源類型的**resource_description**資料行格式。  
   
 |Resource|格式|描述|  
 |--------------|------------|-----------------|  
-|DATABASE|不適用|資料庫識別碼已有可用**resource_database_id**資料行。|  
+|DATABASE|不適用|**Resource_database_id**資料行中已提供資料庫識別碼。|  
 |FILE|<file_id>|這項資源所代表的檔案識別碼。|  
-|OBJECT|<object_id>|這項資源所代表的物件識別碼。 這個物件可以是任何物件中所列**sys.objects**，不只是資料表。|  
-|PAGE|< file_id >: < page_in_file >|代表這項資源所代表之頁面的檔案和頁面識別碼。|  
+|OBJECT|<object_id>|這項資源所代表的物件識別碼。 這個物件可以是**sys.databases**中列出的任何物件，而不只是資料表。|  
+|PAGE|< file_id >： < page_in_file >|代表這項資源所代表之頁面的檔案和頁面識別碼。|  
 |KEY|<hash_value>|代表這項資源所代表之資料列的索引鍵資料行雜湊。|  
-|EXTENT|< file_id >: < page_in_files >|代表這項資源所代表之範圍的檔案和頁面識別碼。 這個範圍識別碼，與範圍中第一頁的頁面識別碼相同。|  
-|RID|< file_id >: < page_in_file >: < row_on_page >|代表這項資源所代表之資料列的頁面識別碼和資料列識別碼。 請注意，如果相關聯的物件識別碼是 99，這項資源就代表 IAM 鏈結的第一個 IAM 頁面上，八個混合頁面位置之一。|  
-|APPLICATION|\<DbPrincipalId >:\<最多 32 個字元 >:(< hash_value >)|代表制定這個應用程式鎖定資源範圍所用之資料庫主體的識別碼。 其中包含來自對應於這個應用程式鎖定資源的資源字串，最多可以包含 32 個字元。 在某些情況下，由於完整字串已經無法使用，因此只能顯示 2 個字元。 這個行為只發生在資料庫復原時，復原程序必須重新取得應用程式鎖定。 雜湊值代表對應於這個應用程式鎖定資源的完整資源字串雜湊。|  
-|HOBT|不適用|HoBt 識別碼會當做**resource_associated_entity_id**。|  
-|ALLOCATION_UNIT|不適用|配置單位識別碼是納入**resource_associated_entity_id**。|  
+|EXTENT|< file_id >： < page_in_files >|代表這項資源所代表之範圍的檔案和頁面識別碼。 這個範圍識別碼，與範圍中第一頁的頁面識別碼相同。|  
+|RID|< file_id >： < page_in_file >： < row_on_page >|代表這項資源所代表之資料列的頁面識別碼和資料列識別碼。 請注意，如果相關聯的物件識別碼是 99，這項資源就代表 IAM 鏈結的第一個 IAM 頁面上，八個混合頁面位置之一。|  
+|APPLICATION|@no__t 0DbPrincipalId >： \<upto 32 字元 >:(< hash_value >）|代表制定這個應用程式鎖定資源範圍所用之資料庫主體的識別碼。 其中包含來自對應於這個應用程式鎖定資源的資源字串，最多可以包含 32 個字元。 在某些情況下，由於完整字串已經無法使用，因此只能顯示 2 個字元。 這個行為只發生在資料庫復原時，復原程序必須重新取得應用程式鎖定。 雜湊值代表對應於這個應用程式鎖定資源的完整資源字串雜湊。|  
+|HOBT|不適用|HoBt 識別碼會以**resource_associated_entity_id**的形式包含。|  
+|ALLOCATION_UNIT|不適用|配置單位識別碼會包含為**resource_associated_entity_id**。|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -273,7 +275,7 @@ ms.locfileid: "68262619"
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- 下列 Xevent 與資料分割相關**交換器**和線上索引重建。 如需語法的詳細資訊，請參閱 < [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)和[ALTER INDEX &#40;-&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
+ 下列 XEvents 與資料分割**切換**和線上索引重建相關。 如需語法的詳細資訊，請參閱[ &#40;alter TABLE&#41; transact-sql](../../t-sql/statements/alter-table-transact-sql.md)和[alter &#40; &#41;INDEX transact-sql](../../t-sql/statements/alter-index-transact-sql.md)。  
   
 -   lock_request_priority_state  
   
@@ -281,12 +283,12 @@ ms.locfileid: "68262619"
   
 -   ddl_with_wait_at_low_priority  
   
- 現有的 XEvent **progress_report_online_index_operation**線上索引作業已擴充加上**partition_number**並**sys.partitions**。  
+ 線上索引作業的現有 XEvent **progress_report_online_index_operation**是藉由新增**partition_number**和**partition_id**擴充。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-sysdmtranlocks-with-other-tools"></a>A. 使用 sys.dm_tran_locks 與其他工具  
- 下列範例將使用更新作業遭其他交易封鎖的案例。 藉由使用**sys.dm_tran_locks**和其他工具中，會提供有關鎖定的資源資訊。  
+### <a name="a-using-sysdm_tran_locks-with-other-tools"></a>A. 使用 sys.dm_tran_locks 與其他工具  
+ 下列範例將使用更新作業遭其他交易封鎖的案例。 藉由使用 **_tran_locks**和其他工具，系統會提供有關鎖定資源的資訊。  
   
 ```sql  
 USE tempdb;  
@@ -324,7 +326,7 @@ BEGIN TRAN
     UPDATE t_lock SET c1 = 10  
 ```  
   
- 下列查詢將會顯示鎖定資訊。 值`<dbid>`應該取代成**database_id**從**sys.databases**。  
+ 下列查詢將會顯示鎖定資訊。 @No__t-0 的值應該取代為**sys.databases**中的**database_id** 。  
   
 ```sql  
 SELECT resource_type, resource_associated_entity_id,  
@@ -383,7 +385,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_tran_database_transactions &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
+[_tran_database_transactions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
+[動態管理檢視與函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+[交易相關的動態管理檢視和&#40;函數 transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
+[SQL Server 的 Locks 物件](../../relational-databases/performance-monitor/sql-server-locks-object.md)      
