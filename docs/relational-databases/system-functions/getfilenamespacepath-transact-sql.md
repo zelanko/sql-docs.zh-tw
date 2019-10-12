@@ -1,5 +1,5 @@
 ---
-title: GetFileNamespacePath & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: GetFileNamespacePath （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab369b619bc0ad378292cf71573ab973dc056c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101433"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278329"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,20 +38,20 @@ ms.locfileid: "68101433"
   
 ## <a name="arguments"></a>引數  
  *column-name*  
- Varbinary （max） 的資料行名稱**file_stream** FileTable 中的資料行。  
+ FileTable 中 VARBINARY （MAX） **file_stream**資料行的資料行名稱。  
   
- *資料行名稱*值必須是有效的資料行名稱。 它不可以是運算式，或是從其他資料類型之資料行轉換或轉型的值。  
+ 資料*行名稱*值必須是有效的資料行名稱。 它不可以是運算式，或是從其他資料類型之資料行轉換或轉型的值。  
   
  *is_full_path*  
- 指定傳回相對路徑或絕對路徑的整數運算式。 *is_full_path*可以有下列值之一：  
+ 指定傳回相對路徑或絕對路徑的整數運算式。 *is_full_path*可以有下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  
 |**0**|傳回資料庫層級目錄內的相對路徑。<br /><br /> 這是預設值。|  
 |**1**|傳回以 `\\computer_name` 開始的完整 UNC 路徑。|  
   
- *@option*  
- 定義路徑之伺服器元件格式化方式的整數運算式。 *@option* 可以有下列值之一：  
+ *\@option*  
+ 定義路徑之伺服器元件格式化方式的整數運算式。 *@no__t 1option*可以有下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -64,17 +64,17 @@ ms.locfileid: "68101433"
   
  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在容錯移轉叢集中叢集化，則當做此路徑一部分傳回的電腦名稱是叢集執行個體的虛擬主機名稱。  
   
- 當資料庫屬於 Alwayson 可用性群組，則**FileTableRootPath**函式會傳回虛擬網路名稱 (VNN) 而非電腦名稱。  
+ 當資料庫屬於 Always On 可用性群組時， **FileTableRootPath**函數會傳回虛擬網路名稱（VNN），而不是電腦名稱稱。  
   
 ## <a name="general-remarks"></a>一般備註  
- 路徑可**GetFileNamespacePath**函式會傳回邏輯的目錄或檔案路徑格式如下：  
+ **GetFileNamespacePath**函數所傳回的路徑為邏輯目錄或檔案路徑，格式如下：  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- 這個邏輯路徑不會直接對應到實體 NTFS 路徑。 FILESTREAM 的檔案系統篩選器驅動程式和 FILESTREAM 代理程式，它會轉譯成實體路徑。 邏輯路徑與實體路徑之間的這個分隔可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新組織內部資料，而不會影響路徑的有效性。  
+ 這個邏輯路徑不會直接對應到實體 NTFS 路徑。 FILESTREAM 的檔案系統篩選器驅動程式和 FILESTREAM 代理程式會將它轉譯成實體路徑。 邏輯路徑與實體路徑之間的這個分隔可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新組織內部資料，而不會影響路徑的有效性。  
   
 ## <a name="best-practices"></a>最佳作法  
- 若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，使用取得的檔案在執行階段的完整路徑**FileTableRootPath**並**GetFileNamespacePath**函式放在一起，如下列範例所示。 根據預設， **GetFileNamespacePath** 函數會傳回資料庫根路徑之下的檔案相對路徑。  
+ 若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，請在執行時間使用**FileTableRootPath**和**GetFileNamespacePath**函數來取得檔案的完整路徑，如下列範例所示。 根據預設， **GetFileNamespacePath** 函數會傳回資料庫根路徑之下的檔案相對路徑。  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -89,7 +89,7 @@ WHERE Name = N'document.docx';
 ## <a name="remarks"></a>備註  
   
 ## <a name="examples"></a>範例  
- 下列範例示範如何呼叫**GetFileNamespacePath**函式來取得檔案或目錄在 FileTable 中的 UNC 路徑。  
+ 下列範例示範如何呼叫**GetFileNamespacePath**函數，以取得 FileTable 中檔案或目錄的 UNC 路徑。  
   
 ```  
 -- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  
