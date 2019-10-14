@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17c69ca2ecb09f734f5d2018baea299d282917ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71283812"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680976"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>課程 1-8：為第 1 課套件加上註解並設定格式 
 
@@ -55,7 +55,7 @@ ms.locfileid: "71283812"
   
     若要讓註解方塊中的文字換行，請將游標放在您要開始新行的位置，然後按 **Enter** 鍵。  
   
-    如果您沒有在註解方塊中新增文字，當您在方塊外按一下時，方塊就會消失。  
+    如果您沒有在註解方塊中新增文字，當您在方塊外按一下時，方塊就會消失。  由於此行為，如果您要在選取 [新增註解] 之前於註解方塊中貼上文字，然後複製文字到剪貼簿。 
   
 ## <a name="go-to-next-task"></a>移至下一個工作
 [步驟 9：測試第 1 課套件](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  

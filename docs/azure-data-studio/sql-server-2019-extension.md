@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326024"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961954"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>適用於 Azure Data Studio 的 SQL Server 2019 延伸模組 (預覽)
 
-Azure Data Studio 的 SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和工具，提供預覽支援。 這包括對於下列各項的預覽支援：[SQL Server 2019 巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)、整合式[筆記本體驗](../big-data-cluster/notebooks-guidance.md)，以及 PolyBase 的 [建立外部資料表精靈](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
+Azure Data Studio 的 SQL Server 2019 延伸模組 (預覽) 會針對支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和工具，提供預覽支援。 這項支援包括對下列各項的預覽支援：[SQL Server 2019 巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)、整合式[筆記本體驗](../big-data-cluster/notebooks-guidance.md)，以及 PolyBase 的[建立外部資料表精靈](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>安裝 SQL Server 2019 延伸模組 (預覽)
 
@@ -33,7 +33,7 @@ Azure Data Studio 的 SQL Server 2019 延伸模組 (預覽) 會針對支援 [!IN
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019 年 9 月 11 日 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019 年 9 月 11 日 |0.16.0
 
-1. 在 Azure Data Studio 的 [檔案]  功能表中，選擇 [從 VSIX 套件安裝延伸模組]  ，然後選取已下載的 .vsix 檔案。
+1. 在 Azure Data Studio 的 [檔案]  功能表中，選擇 [從 VSIX 套件安裝延伸模組]  ，然後選取下載的 .vsix 檔案。
 
 1. 當系統提示您確認安裝時選擇 [是]  ，然後等候安裝成功的通知。
 
@@ -65,7 +65,7 @@ Azure Data Studio 的 SQL Server 2019 延伸模組 (預覽) 會針對支援 [!IN
 * 建立外部資料表精靈：
   * 支援使用現有的外部資料來源建立外部資料表。
   * 整個精靈的效能改進。
-  * 已使用特殊字元改進物件名稱的處理。 在某些情況下，這些會導致精靈失敗。
+  * 已使用特殊字元改進物件名稱的處理。 在某些情況下，這些會導致精靈失敗
   * 對於 [物件對應] 頁面的可靠性改進。
   * 已從 [資料庫] 下拉式清單中移除系統資料庫：'DWConfiguration'、'DWDiagnostics'、'DWQueue'。
   * 支援在 [從 CSV 檔案建立外部資料表]  精靈中設定外部檔案格式物件的名稱。
@@ -82,15 +82,15 @@ Azure Data Studio 的 SQL Server 2019 延伸模組 (預覽) 會針對支援 [!IN
 
 ## <a name="release-notes-v0102"></a>版本資訊 (v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 支援
-已更新對 SQL Server 2019 的支援。 連線到 SQL Server 巨量資料叢集執行個體時，新的「資料服務」  資料夾將會出現在瀏覽器樹狀結構中。 此資料夾含有諸如下列各項的動作啟動點：針對連線開啟新的 Notebook、提交 Spark 作業，以及使用 HDFS。 請注意，對於某些動作 (例如透過 HDFS 檔案/資料夾「建立外部資料」  )，必須安裝 _SQL Server 2019 Preview_ 延伸模組。
+已更新對 SQL Server 2019 的支援。 連線到 SQL Server 巨量資料叢集執行個體之後，總管樹狀目錄中會出現新的「資料服務」  資料夾。 此資料夾含有下列各項動作的啟動點：針對連線開啟新的筆記本、提交 Spark 作業，以及使用 HDFS。 針對某些動作 (例如透過 HDFS 檔案/資料夾「建立外部資料」  )，您必須安裝 _SQL Server 2019 Preview_ 延伸模組。
 
 ### <a name="notebook-support"></a>Notebook 支援
 我們已在此版本中對 Notebook 使用者介面進行重大更新。 我們的重點在於能夠輕鬆閱讀與您共用的 Notebook。 這表示會移除資料格周圍的所有外框方塊，但保留已選取或滑鼠游標暫留的資料格外框；新增在不需選取資料格的情況下，對簡單資料格層級動作的滑鼠游標暫留支援；以及藉由新增執行計數、動畫的「停止執行」  按鈕和其他項目來釐清執行狀態。 我們也針對「新增筆記本」  (`Ctrl+Shift+N`)、「執行資料格」  (`F5`)、「新增程式碼資料格」  (`Ctrl+Shift+C`)、「新增文字資料格」  (`Ctrl+Shift+T`) 新增了鍵盤快速鍵。 繼續進行，我們的目標將是讓所有重要動作都可透過快速鍵啟動，好讓我們能夠知道您遺漏了什麼！
 
 其他改進和修正包括：
-* 「SQL Server 2019 Preview」  延伸模組現在會提示使用者挑選適用於 Python 相依性的安裝目錄。 它也不再於 `.vsix file` 中包含 Python，因而可縮減整個延伸模組的大小。 需要有 Python 相依性才能支援 Spark 和 Python3 核心，因此，必須安裝此延伸模組才能使用這些項目。
+* 現在，_SQL Server 2019 Preview_ 延伸模組會提示使用者挑選適用於 Python 相依性的安裝目錄。 它也不再於 `.vsix file` 中包含 Python，因而可縮減整個延伸模組的大小。 Python 相依性支援 Spark 和 Python3 核心。
 * 已新增從命令列啟動新筆記本的支援。 使用 `--command=notebook.command.new --server=myservername` 引數來啟動，應該會開啟新的筆記本並連線到此伺服器。
-* 對於資料格內具有大型程式碼長度之筆記本的效能修正。 如果程式碼資料格超過 250 行，則將新增捲軸。
+* 對於資料格內具有大型程式碼長度之筆記本的效能修正。 如果程式碼儲存格超過 250 行，則會新增捲軸。
 * 已改進 .ipynb 檔案支援。 現在支援版本 3 或更高版本。 請注意，儲存檔案將更新為版本 4 或更高版本。
 * 由於內建的 Notebook 檢視器目前處於穩定狀態，因而已移除 `notebook.enabled` 使用者設定。
 * 在此情況下，目前會透過對物件版面配置進行的數個修正來支援高對比佈景主題。

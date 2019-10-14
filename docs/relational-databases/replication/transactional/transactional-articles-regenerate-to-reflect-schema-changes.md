@@ -15,12 +15,12 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ef3e6d3daae23e48feae3e1723326c990e427075
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ff1a4e5c9c185e97f3dd31c8c2ec96d10bceda42
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769317"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710701"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>交易式發行項 - 重新產生以反映結構描述變更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "68769317"
   
 -   第一種方式是使用自訂指令碼程序以取代複寫所使用的預設值：  
   
-    1.  執行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)時，確保 **@schema_option** 0x02 位元是 **true**。  
+    1.  執行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 時，確保 `@schema_option` 0x02 位元為 **true**。  
   
-    2.  執行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 並為參數 **@type** 指定 'insert'、'update' 或 'delete' 的值，然後為參數 **@value** 指定自訂指令碼程序的名稱。  
+    2.  執行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 並為參數 `@type` 指定 'insert'、'update' 或 'delete' 的值，然後為參數 `@value` 指定自訂指令碼程序的名稱。  
   
      在下次變更結構描述時，複寫將呼叫此預存程序以為新使用者自訂預存程序的定義編寫指令碼，然後將此程序傳播給每個「訂閱者」。  
   
 -   第二個選項是使用包含新自訂程序定義的指令碼：  
   
-    1.  在執行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 時，將 **@schema_option** 0x02 位元設定為 **false**，這樣複寫便不會在「訂閱者」端自動產生自訂程序。  
+    1.  在執行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 時，將 `@schema_option` 0x02 位元設定為 **false**，這樣複寫便不會在訂閱者端自動產生自訂程序。  
   
-    2.  在變更每個結構描述之前，會建立新的指令碼檔案並透過執行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 使用複寫註冊指令碼。 為參數 **@type** 指定 'custom_script' 的值，並為參數 **@value** 。  
+    2.  在變更每個結構描述之前，會建立新的指令碼檔案並透過執行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 使用複寫註冊指令碼。 針對參數 `@type` 指定 'custom_script' 的值，並針對參數 `@value` 指定發行者上指令碼的路徑。  
   
      在下次變更相關結構描述時，此指令碼在相同交易中於每個「訂閱者」上做為 DDL 命令執行。 在變更結構描述後，指令碼將取消註冊。 您必須重新註冊指令碼，以便在隨後變更結構描述後執行該指令碼。  
   

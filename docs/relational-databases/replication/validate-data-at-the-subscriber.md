@@ -17,12 +17,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769295"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710759"
 ---
 # <a name="validate-replicated-data"></a>驗證複寫的資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68769295"
 
 #### <a name="all-articles"></a>所有發行項 
   
-1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 指定 **@publication** ，以及下列其中一個 **@rowcount_only** 值：  
+1.  在發行集資料庫的發行者端，執行 [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)。 針對 `@rowcount_only` 指定 `@publication` 和下列其中一個值：  
   
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
@@ -120,7 +120,7 @@ ms.locfileid: "68769295"
   
 #### <a name="single-article"></a>單一發行項  
   
-1.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication** 、 **@article** 的發行項名稱，及 **@rowcount_only** 值：  
+1.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 `@publication`，針對 `@article` 指定發行項名稱及針對 `@rowcount_only` 指定下列其中一個值：  
   
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
@@ -134,9 +134,9 @@ ms.locfileid: "68769295"
 #### <a name="single-subscriber"></a>單一訂閱者 
   
 1.  在發行集資料庫的發行者端，使用 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md) 來開啟明確交易。    
-2.  在發行集資料庫的發行者端，執行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)。 指定 **@publication** 的發行集、 **@subscriber** 的「訂閱者」名稱，及 **@destination_db** ＞。    
+2.  在發行集資料庫的發行者端，執行 [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)。 指定 `@publication` 的發行集、`@subscriber` 的訂閱者名稱及 `@destination_db` 的訂閱資料庫名稱。    
 3.  (選擇性) 針對每個要驗證的訂閱重複步驟 2。    
-4.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 **@publication** 、 **@article** 的發行項名稱，及 **@rowcount_only** 值：    
+4.  在發行集資料庫的發行者端，執行 [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)。 指定 `@publication`，針對 `@article` 指定發行項名稱及針對 `@rowcount_only` 指定下列其中一個值：    
     -   **1** - 只限列數檢查 (預設值)    
     -   **2** - 列數及二進位總和檢查碼。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "68769295"
     3.  在 **[同步處理記錄]** 索引標籤上的 **[所選取工作階段的最後訊息]** 測試區域中檢視資訊。  
 
 ### <a name="using-transact-sql"></a>使用 Transact-SQL
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 **@publication** 的發行集、 **@subscriber** 的「訂閱者」名稱、 **@subscriber_db** 的發行項名稱，及 **@level** 值：   
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)。 指定 `@publication`、`@subscriber` 的發行集、`@subscriber_db` 的訂閱者資料庫名稱，以及針對 `@level` 指定下列其中一個值：   
     -   **1** - 只驗證列數。    
     -   **3** - 驗證列數二進位總和檢查碼。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "68769295"
     3.  在 **[同步處理記錄]** 索引標籤上的 **[所選取工作階段的最後訊息]** 測試區域中檢視資訊。 
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL
-1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 指定 **@publication** ，以及下列其中一個 **@level** 值：    
+1.  在發行集資料庫的發行者端，執行 [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)。 針對 `@level` 指定 `@publication` 和下列其中一個值：    
     -   **1** - 只驗證列數。   
     -   **3** - 驗證列數二進位總和檢查碼。  
   

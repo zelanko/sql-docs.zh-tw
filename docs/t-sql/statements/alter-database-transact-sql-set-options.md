@@ -1,6 +1,6 @@
 ---
 title: ALTER DATABASE SET 選項 (Transact-SQL) | Microsoft Docs
-description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動調整、加密、查詢存放區
+description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動調整、加密、查詢存放區。
 ms.custom: ''
 ms.date: 09/19/2019
 ms.prod: sql
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - offline database state [SQL Server]
 - snapshot isolation framework option
 - checksums [SQL Server]
-- Automatic Tuning
+- Automatic tuning
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,24 +30,24 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227173"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952748"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
 設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的資料庫選項。 如需其他 ALTER DATABASE 選項，請參閱 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。
 
-按一下下列其中一個索引標籤，以查看您所使用之特定 SQL 版本的語法、引數、備註、權限和範例。
+選取下列其中一個索引標籤，以查看您所使用特定 SQL 版本的語法、引數、備註、權限和範例。
 
 如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
-## <a name="click-a-product"></a>按一下產品！
+## <a name="select-a-product"></a>選取產品
 
-在下列資料列中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
+在下列資料列中，選取您感興趣的產品名稱。 視您所選取的產品而定會在本網頁的這裡顯示不同內容。
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -63,7 +63,7 @@ ms.locfileid: "71227173"
 資料庫範圍設定用來設定數個個別資料庫層級的資料庫設定。 如需詳細資訊，請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 
 > [!NOTE]
-> 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，而且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 以下所述的資料庫選項皆為未明確提供其他 SET 選項值，因而可針對工作階段進行設定的值。
+> 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 下列章節所述的資料庫選項皆為未明確提供其他 SET 選項值，您可針對工作階段進行設定的值。
 
 ## <a name="syntax"></a>語法
 
@@ -293,7 +293,7 @@ ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ## <a name="arguments"></a>引數
 
 *database_name*        
-這是要修改之資料庫的名稱。
+要修改之資料庫的名稱。
 
 CURRENT        
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
@@ -303,7 +303,7 @@ CURRENT
 **\<accelerated_database_recovery> ::=**         
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
 
-啟用每個資料庫的[加速資料庫復原](../../relational-databases/accelerated-database-recovery-management.md) (ADR)。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，ADR 預設為 **OFF**。 使用此語法，您可以選擇性地為持續版本存放區 (PVS) 資料指定特定檔案群組。 若沒有指定檔案群組，PVS 將會儲存在 PRIMARY 檔案群組中。 如需範例和詳細資訊，請參閱[加速資料庫復原](../../relational-databases/accelerated-database-recovery-management.md)。
+啟用每個資料庫的[加速資料庫復原](../../relational-databases/accelerated-database-recovery-management.md) (ADR)。 依據 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中的預設，ADR 設定為 OFF。 透過使用此語法，您就有為持續版本存放區 (PVS) 資料指定特定檔案群組的選項。 若沒有指定檔案群組，PVS 將會儲存在 PRIMARY 檔案群組中。 如需範例和詳細資訊，請參閱[加速資料庫復原](../../relational-databases/accelerated-database-recovery-management.md)。
 
 **\<auto_option> ::=**        
 
@@ -313,31 +313,31 @@ CURRENT
 ON        
 資料庫會完整關閉，而當最後一位使用者結束之後，便會將其資源釋放出來。
 
-當使用者試圖重新使用資料庫時，便會自動重新開啟資料庫。 例如，藉由發出 `USE database_name` 陳述式。 當 AUTO_CLOSE 設定為 ON 時，資料庫可能會正常關機。 如果是這種情況，則要等到使用者嘗試在下次重新啟動[!INCLUDE[ssDE](../../includes/ssde-md.md)]時使用資料庫之後，才會重新開啟資料庫。
+當使用者試圖重新使用資料庫時，便會自動重新開啟資料庫。 例如，當使用者發出 `USE database_name` 陳述式時，就會發生重新開啟行為。 當 AUTO_CLOSE 設定為 ON 時，資料庫可能會正常關機。 如果是這種情況，則要等到使用者嘗試在下次重新啟動[!INCLUDE[ssDE](../../includes/ssde-md.md)]時使用資料庫之後，才會重新開啟資料庫。
 
 OFF        
 在最後一個使用者結束之後，資料庫仍保持開啟狀態。
 
-對於桌面資料庫而言，AUTO_CLOSE 選項非常有用，因為它可讓您將資料庫檔案當做一般檔案來管理。 您可以移動它們、複製它們來建立備份，甚至可以用電子郵件將它們傳給其他使用者。 AUTO_CLOSE 處理序是非同步的；重複開啟和關閉資料庫不會降低效能。
+對於桌面資料庫而言，AUTO_CLOSE 選項非常有用，因為它可讓您將資料庫檔案當做一般檔案來管理。 您可以移動它們、複製它們來建立備份，甚至可以用電子郵件將它們傳給其他使用者。 AUTO_CLOSE 處理序為非同步；重複開啟和關閉資料庫不會降低效能。
 
 > [!NOTE]
 > 自主資料庫或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 無法使用 AUTO_CLOSE 選項。
-> 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_auto_close_on` 資料行或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsAutoClose` 屬性來判斷這個選項狀態。
+> 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_auto_close_on` 資料行或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式 `IsAutoClose` 屬性來判斷這個選項的狀態。
 >
-> 當 AUTO_CLOSE 是 ON 時，[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中某些資料行及 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式會傳回 NULL，因為資料庫無法擷取資料。 若要解決這個問題，請執行 USE 陳述式來開啟資料庫。
+> 當 AUTO_CLOSE 設為 ON 時，[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中某些資料行及 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式會傳回 NULL，因為資料庫無法擷取資料。 若要解決這個問題，請執行 USE 陳述式來開啟資料庫。
 >
 > 資料庫鏡像需要 AUTO_CLOSE OFF。
 
-當資料庫設定為 AUTOCLOSE = ON 時，起始自動資料庫關閉的作業會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中，針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+當資料庫設定為 AUTOCLOSE = ON 時，起始自動資料庫關閉的作業會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2 和更新版本中，針對每個清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }        
 ON        
-查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計劃和查詢效能。 這些單一資料行統計資料都是在查詢最佳化工具編譯查詢時建立的。 它只會針對尚未成為現有統計資料物件之第一個資料行的資料行建立單一資料行統計資料。
+查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計劃和查詢效能。 這些單一資料行統計資料是在查詢最佳化工具編譯查詢時所建立。 它只會針對尚未成為現有統計資料物件第一個資料行的資料行建立單一資料行統計資料。
 
-預設值為 **ON**。 我們建議您針對大部分資料庫使用預設設定。
+預設值是 ON。 我們建議您針對大部分資料庫使用預設設定。
 
 OFF        
-查詢最佳化工具不會在編譯查詢時，針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
+查詢最佳化工具不會在編譯查詢時針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_auto_create_stats_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsAutoCreateStatistics` 屬性來判斷狀態。
 
@@ -346,19 +346,19 @@ OFF
 INCREMENTAL = ON | **OFF**        
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-將 AUTO_CREATE_STATISTICS 設定為 ON，並將 INCREMENTAL 設定為 ON。 此設定會在每次支援累加統計資料時，以累加方式建立自動建立的統計資料。 預設值是 **OFF**。 如需詳細資訊，請參閱 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)。
+將 AUTO_CREATE_STATISTICS 設定為 ON，並將 INCREMENTAL 設定為 ON。 此設定會在每次支援累加統計資料時，以累加方式自動建立統計資料。 預設值是 OFF。 如需詳細資訊，請參閱 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)。
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | **OFF** } ON        
 資料庫檔案是定期壓縮的候選項。
 
-資料檔案和記錄檔都可以自動壓縮。 只有在您將資料庫設定為 SIMPLE 復原模式或備份記錄時，AUTO_SHRINK 才會縮減交易記錄的大小。 當設定為 OFF 時，便不會在定期檢查未用空間時，自動壓縮資料庫檔案。
+資料檔案和記錄檔都可以自動壓縮。 只有在您將資料庫設定為 SIMPLE 復原模式或備份記錄時，AUTO_SHRINK 才會縮減交易記錄的大小。 當您將 AUTO_SHRINK 設定為 OFF 時，便不會在定期檢查未用空間時，自動壓縮資料庫檔案。
 
-當超出 25% 的檔案包含未用空間時，AUTO_SHRINK 選項便會壓縮檔案。 此選項會使檔案壓縮成兩種大小之一。 它會壓縮成兩者中的較大者：
+當超出 25% 的檔案包含未用空間時，AUTO_SHRINK 選項便會壓縮檔案。 它會將檔案壓縮成兩種大小的其中一種 (以較大者為準)：
 
-- 25% 的檔案是未使用空間的大小
+- 25% 的檔案是未用空間大小
 - 檔案建立時的大小
 
-您不能壓縮唯讀資料庫。
+您無法壓縮唯讀資料庫。
 
 OFF        
 在定期檢查未用空間時，不自動壓縮資料庫檔案。
@@ -370,18 +370,18 @@ OFF
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { **ON** | OFF }        
 ON        
-指定當查詢使用統計資料且它們可能已過期時，查詢最佳化工具就會更新這些統計資料。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並將修改次數與某個臨界值比較，藉以判斷統計資料是否可能已經過期。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
+指定當查詢使用統計資料且它們可能已過期時，查詢最佳化工具就會更新這些統計資料。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並將修改次數與某個閾值比較，藉以判斷統計資料是否可能已經過期。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
 
-查詢最佳化工具會在編譯查詢及執行快取查詢計劃之前，檢查是否有過期的統計資料。 查詢最佳化工具會在查詢述詞中使用資料行、資料表和索引檢視表，來判斷哪些統計資料可能已過期。 查詢最佳化工具會在編譯查詢之前判斷這項資訊。 在執行快取查詢計劃之前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。
+查詢最佳化工具會在編譯查詢及執行快取查詢計劃之前，檢查是否有過期的統計資料。 查詢最佳化工具會在查詢述詞中使用資料行、資料表和索引檢視表，來判斷哪些統計資料可能已過期。 查詢最佳化工具會在編譯查詢之前判斷這項資訊。 在執行快取查詢計劃之前，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。
 
 AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料、查詢述詞中的單一資料行，以及使用 CREATE STATISTICS 陳述式所建立的統計資料。 此外，這個選項也會套用至篩選的統計資料。
 
-預設值為 **ON**。 我們建議您針對大部分資料庫使用預設設定。
+預設值是 ON。 我們建議您針對大部分資料庫使用預設設定。
 
 您可以使用 AUTO_UPDATE_STATISTICS_ASYNC 選項來指定要以同步或非同步方式更新統計資料。
 
 OFF        
-指定當查詢使用統計資料時，查詢最佳化工具不會更新這些統計資料。 即使統計資料可能已過期時，查詢最佳化工具也不會更新這些統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
+指定當查詢使用統計資料時，查詢最佳化工具不會更新這些統計資料。 當統計資料可能已過期時，查詢最佳化工具也不會更新這些統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_auto_update_stats_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsAutoUpdateStatistics` 屬性來判斷狀態。
 
@@ -389,11 +389,11 @@ OFF
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
-指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是非同步的。 在查詢最佳化工具編譯查詢之前，它不會等候統計資料更新完成。
+指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是非同步的。 查詢最佳化工具在編譯查詢之前，不會等候統計資料更新完成。
 
 除非 AUTO_UPDATE_STATISTICS 設為 ON，否則將這個選項設為 ON 沒有作用。
 
-根據預設，AUTO_UPDATE_STATISTICS_ASYNC 選項為 **OFF**，而查詢最佳化工具會同步更新統計資料。
+根據預設，AUTO_UPDATE_STATISTICS_ASYNC 選項為 OFF，而查詢最佳化工具會同步更新統計資料。
 
 OFF        
 指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 查詢最佳化工具在編譯查詢之前，會先等候統計資料更新完成。
@@ -408,16 +408,16 @@ OFF
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始)
 
-啟用或停用 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)選項。
+啟用或停用`FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)選項。
 
 FORCE_LAST_GOOD_PLAN = { ON | **OFF** }        
 ON        
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。
 
-如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」  模式下，陳述式便會失敗。
+如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」  模式中，陳述式便會失敗。
 
 OFF        
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告查詢計劃變更所造成可能的查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 預設值是 **OFF**。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告查詢計劃變更所造成可能的查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 預設值是 OFF。
 
 **\<change_tracking_option> ::=**         
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
@@ -482,7 +482,7 @@ LOCAL
 批次、預存程序或觸發程序內的區域資料指標變數或是預存程序 OUTPUT 參數可以參考資料指標。 當批次、預存程序或觸發程序結束時，會隱含地解除配置資料指標。 除非在 OUTPUT 參數中傳回資料指標，否則會解除配置資料指標。 資料指標可能會在 OUTPUT 參數中傳回。 如果資料指標以此方式傳回，則當最後一個參考資料指標的變數解除配置或離開範圍時，便會解除配置資料指標。
 
 GLOBAL        
-當指定 GLOBAL，且資料指標並未在建立時定義為 LOCAL 時，資料指標的範圍對連線而言便是全域。 連接所執行的任何預存程序或批次內都可以參考資料指標名稱。
+如果指定 GLOBAL，且資料指標並未在建立時定義為 LOCAL，則資料指標範圍即為連線的全域範圍。 連接所執行的任何預存程序或批次內都可以參考資料指標名稱。
 
 只有在中斷連接時，才會隱含地取消配置資料指標。 如需詳細資訊，請參閱 [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)。
 
@@ -505,7 +505,7 @@ ON
 OFF        
 不維護相互關聯統計資料。
 
-若要將 DATE_CORRELATION_OPTIMIZATION 設定為 ON，則除了正在執行 ALTER DATABASE 陳述式的連接外，資料庫都不可以有使用中的連接。 之後就可以支援多個連接。
+若要將 DATE_CORRELATION_OPTIMIZATION 設定為 ON，除了正在執行 ALTER DATABASE 陳述式的連線外，資料庫都不可以有使用中連線。 之後就可以支援多個連接。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_date_correlation_on` 資料行來判斷此選項的目前設定。
 
@@ -530,7 +530,7 @@ RESUME
 
 如需資料庫加密的詳細資訊，請參閱[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md) 和 [Azure SQL Database 的透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。
 
-在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新的檔案群組都會繼承加密的屬性。 如果資料庫內有任何檔案群組設定為 **READ ONLY**，則資料庫加密作業將會失敗。
+在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新檔案群組都會繼承加密的屬性。 如果資料庫中有任何檔案群組設定為 READ ONLY，則資料庫加密作業將會失敗。
 
 您可以使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動態管理檢視來查看資料庫的加密狀態，以及加密掃描的狀態。
 
@@ -540,7 +540,7 @@ RESUME
 控制資料庫的狀態。
 
 OFFLINE        
-關閉資料庫，並將它完整關機，再標示為離線。 資料庫在離線狀態時，無法修改。
+關閉資料庫，並將其完整關機，再標示為離線。 資料庫在離線狀態時，無法修改。
 
 ONLINE        
 資料庫在開啟狀態，可供使用。
@@ -552,7 +552,7 @@ EMERGENCY
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `state` 和 `state_desc` 資料行來判斷此選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `Status` 屬性來判斷狀態。 如需詳細資訊，請參閱 [Database States](../../relational-databases/databases/database-states.md)。
 
-標示為 RESTORING 的資料庫不能設為 OFFLINE、ONLINE 或 EMERGENCY。 在使用中的還原作業期間，或是由於備份檔損毀導致資料庫或記錄檔的還原作業失敗時，資料庫都有可能處於 RESTORING 狀態。
+標示為 RESTORING 的資料庫不能設定為 OFFLINE、ONLINE 或 EMERGENCY。 在使用中的還原作業期間，或是由於備份檔損毀導致資料庫或記錄檔的還原作業失敗時，資料庫都有可能處於 RESTORING 狀態。
 
 **\<db_update_option> ::=**        
 
@@ -582,7 +582,7 @@ SINGLE_USER **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 資料庫會保留在 SINGLE_USER 模式中，即使當設定選項的使用者已登出也一樣。此時其他使用者可以連接到這個資料庫，但只能有一位。
 
-將資料庫設為 SINGLE_USER 之前，請先確定 AUTO_UPDATE_STATISTICS_ASYNC 選項是否設為 OFF。 當設為 ON 時，更新統計資料的背景執行緒會取得資料庫連接，而您就無法以單一使用者模式存取資料庫。 若要檢視這個選項的狀態，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 `is_auto_update_stats_async_on` 資料行。 如果選項設為 ON，請執行下列工作：
+將資料庫設為 SINGLE_USER 之前，請先確定 AUTO_UPDATE_STATISTICS_ASYNC 選項是否設為 OFF。 當設定為 ON 時，用來更新統計資料的背景執行緒會取得資料庫連線，而您將無法以單一使用者模式存取資料庫。 若要檢視這個選項的狀態，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 `is_auto_update_stats_async_on` 資料行。 如果選項設為 ON，請執行下列工作：
 
 1. 將 AUTO_UPDATE_STATISTICS_ASYNC 設為 OFF。
 
@@ -638,7 +638,7 @@ ON
 使用模擬內容的資料庫模組 (如使用者定義函式或預存程序) 能夠在資料庫之外存取資源。
 
 OFF        
-模擬內容中的資料庫模組無法存取資料庫之外的資源。
+模擬內容中的資料庫模組無法存取資料庫之外資源。
 
 每當附加資料庫時，TRUSTWORTHY 都設為 OFF。
 
@@ -711,7 +711,7 @@ OFF
 ON        
 資料庫可以使用混合範圍建立起始頁面。
 
-針對所有系統資料庫，這項設定為 **ON**。 **tempdb**是支援 OFF 的唯一系統資料庫。
+對於所有系統資料庫，這項設定是 ON。 **tempdb**是支援 OFF 的唯一系統資料庫。
 
 **\<PARAMETERIZATION_option> ::=**        
 
@@ -736,7 +736,7 @@ ON
 啟用查詢存放區。
 
 OFF        
-停用查詢存放區。 **OFF** 為預設值。
+停用查詢存放區。 OFF 是預設值。
 
 CLEAR        
 移除查詢存放區的內容。
@@ -748,7 +748,7 @@ READ_WRITE
 查詢存放區會收集並保存查詢計劃和執行階段執行統計資料資訊。
 
 READ_ONLY        
-可以從查詢存放區進行讀取，但不會新增新的資訊。 如果查詢存放區所發出的最大空間已用盡，則查詢存放區會將作業模式變更為 READ_ONLY。
+可以從查詢存放區讀取資訊，但不會新增資訊。 如果查詢存放區所發出的最大空間已用盡，則查詢存放區會將作業模式變更為 READ_ONLY。
 
 CLEANUP_POLICY        
 描述查詢存放區的資料保留原則。 STALE_QUERY_THRESHOLD_DAYS 會決定在查詢存放區中保留查詢資訊的天數。 STALE_QUERY_THRESHOLD_DAYS 的類型為 **bigint**。
@@ -759,14 +759,18 @@ DATA_FLUSH_INTERVAL_SECONDS
 MAX_STORAGE_SIZE_MB        
 決定發給查詢存放區的空間。 MAX_STORAGE_SIZE_MB 的類型為 **bigint**。
 
+> [!NOTE]
+> 系統不會嚴格強制執行 MAX_STORAGE_SIZE_MB 的限制。 只有當查詢存放區將資料寫入磁碟時，系統才會檢查儲存體大小。 這個間隔是由 DATA_FLUSH_INTERVAL_SECONDS 選項或是 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 查詢存放區對話方塊選項的 [資料排清間隔]  所設定。 間隔預設值為 900 秒 (15 分鐘)。       
+> 如果查詢存放區違反儲存體大小檢查之間的 MAX_STORAGE_SIZE_MB 限制，即會轉換為唯讀模式。 如果啟用 SIZE_BASED_CLEANUP_MOD，也會觸發強制執行 MAX_STORAGE_SIZE_MB 限制的清除機制。 
+
 INTERVAL_LENGTH_MINUTES        
 決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要將空間使用量最佳化，在執行階段統計資料存放區中的執行階段執行統計資料會透過固定的時段彙總。 這個固定的時段是使用 INTERVAL_LENGTH_MINUTES 引數所設定。 INTERVAL_LENGTH_MINUTES 的類型為 **bigint**。
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }        
-控制當總資料量接近大小上限時，是否自動啟用清除。
+控制當總資料量接近大小上限時，是否會自動啟用清除。
 
 AUTO        
-當磁碟上的大小達到 90% 的 **max_storage_size_mb** 時，就會自動啟用以大小為依據的清除。 以大小為依據之清除會先移除成本最高和最舊的查詢。 它會在達到 **max_storage_size_mb** 的大約 80% 處停止。這個值是預設設定值。
+當磁碟上大小達到 90% 的 **MAX_STORAGE_SIZE_MB** 時，就會自動啟用以大小為依據的清除。 以大小為依據之清除會先移除成本最高和最舊的查詢。 它會在達到 **MAX_STORAGE_SIZE_MB** 的 80% 左右停止。這個值是預設設定值。
 
 OFF        
 不會自動啟用以大小為依據的清除。
@@ -841,7 +845,7 @@ ON
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 能夠偵測出不完整的頁面。
 
 OFF        
-[!INCLUDE[ssDE](../../includes/ssde-md.md)] 無法偵測到非完整頁面。
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] 無法偵測出不完整的頁面。
 
 > [!IMPORTANT]
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 TORN_PAGE_DETECTION ON | OFF 語法結構。 請避免在新的開發工作中使用這項語法結構，並規劃修改目前使用這項語法結構的應用程式。 請改用 PAGE_VERIFY 選項。
@@ -855,7 +859,7 @@ CHECKSUM
 TORN_PAGE_DETECTION        
 將每個 512 位元組磁區的 2 位元模式儲存在 8 KB 資料庫頁面上，當頁面寫入磁碟時，便將其儲存在資料庫頁首。 當從磁碟中讀取頁面時，會比較頁首中所儲存的損毀位元和實際的頁面磁區資訊。
 
-值不符合表示該頁面只有一部分寫入磁碟中。 在此狀況下，系統會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔和 Windows 事件記錄檔中回報錯誤訊息 824 (表示發生損毀頁的錯誤)。 如果真的是頁面寫入不完整，通常會由資料庫復原作業來偵測出損毀頁。 不過，其他 I/O 路徑失敗也可能隨時造成損毀頁。
+值不符合表示該頁面只有一部分寫入磁碟中。 在這個狀況下，會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔和 Windows 事件記錄檔中，報告錯誤訊息 824 (表示發生損毀頁的錯誤)。 如果真的是頁面寫入不完整，通常會由資料庫復原作業來偵測出損毀頁。 不過，其他 I/O 路徑失敗也可能隨時造成損毀頁。
 
 無        
 資料庫頁面寫入不會產生 CHECKSUM 或 TORN_PAGE_DETECTION 值。 在讀取期間，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使頁首包含 CHECKSUM 或 TORN_PAGE_DETECTION 值，亦不會驗證總和檢查碼或損毀頁。
@@ -866,7 +870,7 @@ TORN_PAGE_DETECTION
 - 當使用者或系統資料庫升級至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本時，PAGE_VERIFY 值 (NONE 或 TORN_PAGE_DETECTION) 不會變更。 我們建議您變更為 CHECKSUM。
 
     > [!NOTE]
-    > 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，tempdb 資料庫的 PAGE_VERIFY 資料庫選項會設為 NONE 且無法修改。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 tempdb 資料庫的預設值為 CHECKSUM。 升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝時，預設值仍然維持 NONE。 此選項可以進行修改。 我們建議您針對 tempdb 資料庫使用 CHECKSUM。
+    > 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，tempdb 資料庫的 PAGE_VERIFY 資料庫選項設定為 NONE 且無法修改。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 tempdb 資料庫的預設值為 CHECKSUM。 升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝時，預設值仍然維持 NONE。 此選項可以進行修改。 我們建議您針對 tempdb 資料庫使用 CHECKSUM。
 
 - TORN_PAGE_DETECTION 可以使用較少資源，但所提供的 CHECKSUM 保護最少。
 - 在資料庫不離線、不鎖定，或不妨礙資料庫並行作業的情況下，可以設定 PAGE_VERIFY。
@@ -909,14 +913,14 @@ FEDERATED_SERVICE_ACCOUNT = { ON | OFF }
 - 遠端 Azure 伺服器已設定支援 Azure Active Directory 驗證。
 - 正在執行的 SQL Server 執行個體下服務帳戶必須設定為遠端 Azure 伺服器上 `dbmanager` 或 `sysadmin` 帳戶。
 
-如果您指定同盟服務帳戶為 ON，則您無法同時指定 CREDENTIAL 引數。 如果您指定 OFF，請提供 CREDENTIAL 引數。
+如果您指定同盟服務帳戶為 ON，則您無法也指定 CREDENTIAL 引數。 如果您指定 OFF，請提供 CREDENTIAL 引數。
 
 OFF        
 為資料庫停用 Stretch Database。 如需詳細資訊，請參閱 [停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。
 
 只有資料庫不再包含任何已啟用 Stretch Database 的資料表後，您才能為資料庫停用 Stretch Database。 停用 Stretch Database 之後，資料移轉即會停止。 此外，查詢結果不再包含來自遠端資料表的結果。
 
-停用 Stretch 時，並不會移除遠端資料庫。 若要刪除遠端資料庫，請使用 Azure 入口網站將其卸除。
+停用 Stretch 並不會移除遠端資料庫。 若要刪除遠端資料庫，請使用 Azure 入口網站將其卸除。
 
 **\<service_broker_option> ::=**         
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -924,7 +928,7 @@ OFF
 控制下列 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 選項：啟用或停用訊息傳遞、設定新的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼，或是將交談優先權設定為 ON 或 OFF。
 
 ENABLE_BROKER        
-指定啟用指定之資料庫的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。 啟動訊息傳遞，且 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 is_broker_enabled 旗標會設為 true。 資料庫會保留現有的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼。 當資料庫是資料庫鏡像組態中的主體時，無法啟用 Service Broker。
+指定啟用指定之資料庫的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。 啟動訊息傳遞，且 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 is_broker_enabled 旗標會設為 true。 資料庫會保留現有的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼。 當資料庫是資料庫鏡像設定中的主體時，無法啟用 Service Broker。
 
 > [!NOTE]
 > ENABLE_BROKER 需要獨佔式資料庫鎖定。 如果其他工作階段已鎖定資料庫內的資源，ENABLE_BROKER 將會等候到其他工作階段釋放其鎖定為止。 若要在使用者資料庫內啟用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，請確定在您執行 ALTER DATABASE SET ENABLE_BROKER 陳述式之前，沒有其他工作階段正在使用此資料庫，例如將資料庫置於單一使用者模式。 若要在 msdb 資料庫中啟用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，請先停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，使 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 可以取得必要的鎖定。
@@ -955,14 +959,14 @@ HONOR_BROKER_PRIORITY 選項的變更對於沒有等候要傳送之訊息的新�
 
 ALLOW_SNAPSHOT_ISOLATION { ON | **OFF** }        
 ON        
-在資料庫層級啟用快照集選項。 啟用時，即使沒有交易使用快照集隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，交易可以指定 SNAPSHOT 交易隔離等級。 當交易執行的隔離等級是 SNAPSHOT 時，所有陳述式都會見到在交易開頭便存在的資料快照集。 如果執行 SNAPSHOT 隔離等級的交易存取多個資料庫中的資料，此時所有資料庫中的 ALLOW_SNAPSHOT_ISOLATION 都必須設為 ON，或是每當 FROM 子句參考 ALLOW_SNAPSHOT_ISOLATION 是 OFF 的資料庫中的資料表時，交易中的每個陳述式都必須使用鎖定提示。
+在資料庫層級啟用快照集選項。 啟用時，即使沒有交易使用快照隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，交易可以指定 SNAPSHOT 交易隔離等級。 當交易執行的隔離等級是 SNAPSHOT 時，所有陳述式都會見到在交易開頭便存在的資料快照集。 如果執行 SNAPSHOT 隔離等級的交易存取多個資料庫中的資料，此時所有資料庫中的 ALLOW_SNAPSHOT_ISOLATION 都必須設為 ON，或是每當 FROM 子句參考 ALLOW_SNAPSHOT_ISOLATION 是 OFF 的資料庫中的資料表時，交易中的每個陳述式都必須使用鎖定提示。
 
 OFF        
 在資料庫層級關閉快照集選項。 交易無法指定 SNAPSHOT 交易隔離等級。
 
-當您將 ALLOW_SNAPSHOT_ISOLATION 設為新狀態 (從 ON 設成 OFF，或從 OFF 設成 ON)，認可資料庫中的所有現有交易之前，ALTER DATABASE 並不會將控制權傳回呼叫端。 如果資料庫已在 ALTER DATABASE 陳述式所指定的狀態中，控制權會立即傳回呼叫端。 如果 ALTER DATABASE 陳述式並沒有很快傳回，請利用 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 來判斷是否有長期執行的交易。 如果取消了 ALTER DATABASE 陳述式，資料庫會保留在 ALTER DATABASE 啟動時的狀態中。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視指出資料庫中快照集隔離交易的狀態。 如果 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON，ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF 會暫停六秒，然後重試作業。
+當您將 ALLOW_SNAPSHOT_ISOLATION 設為新狀態 (從 ON 設成 OFF，或從 OFF 設成 ON) 時，在認可資料庫中的所有現有交易之前，ALTER DATABASE 並不會將控制權傳回呼叫端。 如果資料庫已在 ALTER DATABASE 陳述式所指定的狀態中，控制權會立即傳回呼叫端。 如果 ALTER DATABASE 陳述式並沒有很快傳回，請使用 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 來判斷是否有長期執行的交易。 如果取消了 ALTER DATABASE 陳述式，資料庫會保留在 ALTER DATABASE 啟動時的狀態中。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視指出資料庫中快照集隔離交易的狀態。 如果 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON，ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF 會暫停六秒，然後重試作業。
 
-如果資料庫是 OFFLINE，您不能變更 ALLOW_SNAPSHOT_ISOLATION 的狀態。
+如果資料庫是 OFFLINE，則您無法變更 ALLOW_SNAPSHOT_ISOLATION 的狀態。
 
 如果您在 READ_ONLY 資料庫中設定 ALLOW_SNAPSHOT_ISOLATION，資料庫後來又設為 READ_WRITE，會保留這個設定。
 
@@ -974,12 +978,12 @@ OFF
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-在資料庫層級啟用讀取認可快照集選項。 啟用時，即使沒有交易使用快照隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，指定讀取認可隔離等級的交易即會使用資料列版本設定，而不是鎖定。 在讀取認可隔離等級執行交易時，所有陳述式都會看到資料的快照，就與陳述式開始時所存在的資料一樣。
+在資料庫層級啟用讀取認可快照集選項。 啟用時，即使沒有交易使用快照隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，指定讀取認可隔離等級的交易即會使用資料列版本設定，而不是鎖定。 在 READ COMMITTED 隔離等級執行交易時，所有陳述式都會看到資料的快照，就與陳述式開始時所存在的資料一樣。
 
 OFF        
 在資料庫層級關閉讀取認可快照集選項。 指定 READ COMMITTED 隔離等級的交易會使用鎖定。
 
-若要設定 READ_COMMITTED_SNAPSHOT ON 或 OFF，除了執行 ALTER DATABASE 命令的連接之外，不能有任何使用中的資料庫連接。 不過，資料庫不一定要處於單一使用者模式。 當資料庫是 OFFLINE 時，您便不能變更這個選項的狀態。
+若要設定 READ_COMMITTED_SNAPSHOT ON 或 OFF，除了執行 ALTER DATABASE 命令的連接之外，不能有任何使用中資料庫連線。 不過，資料庫不一定要處於單一使用者模式。 當資料庫是 OFFLINE 時，您無法變更這個選項的狀態。
 
 如果您在 READ_ONLY 資料庫中設定 READ_COMMITTED_SNAPSHOT，則當資料庫後來又設為 READ_WRITE 時，會保留這個設定。
 
@@ -997,11 +1001,11 @@ ON
 當交易隔離等級設定為 SNAPSHOT 以下的任何隔離等級時，記憶體最佳化資料表上所有解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業都會在 SNAPSHOT 隔離下執行。 SNAPSHOT 以下的隔離等級範例包括 READ COMMITTED 或 READ UNCOMMITTED。 不論是在工作階段層級明確設定交易隔離等級，或隱含使用預設值，都會執行這些作業。
 
 OFF        
-不會為經記憶體最佳化資料表的解譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業提高交易隔離等級。
+不會為經記憶體最佳化資料表上解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業提高交易隔離等級。
 
-如果資料庫是 OFFLINE，您不能變更 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 的狀態。
+如果資料庫是 OFFLINE，則您無法變更 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 的狀態。
 
-預設選項為 **OFF**。
+預設選項為 OFF。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_memory_optimized_elevate_to_snapshot_on` 資料行來判斷此選項的目前設定。
 
@@ -1009,7 +1013,7 @@ OFF
 
 控制資料庫層級的 ANSI 合規性選項。
 
-ANSI_NULL_DEFAULT { ON | **OFF** } 決定未在 CREATE TABLE 或 ALTER TABLE 陳述式中明確定義其可 NULL 性的資料行或 [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)，其預設值為 NULL 或 NOT NULL。 條件約束所定義的資料行會遵循條件約束規則，不論這個設定可能為何。
+ANSI_NULL_DEFAULT { ON | **OFF** } 決定未在 CREATE TABLE 或 ALTER TABLE 陳述式中明確定義其可 NULL 性的資料行或[CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)，其預設值為 NULL 或 NOT NULL。 條件約束所定義的資料行會遵循條件約束規則，不論這個設定可能為何。
 
 ON        
 未定義資料行的預設值為 NULL。
@@ -1098,7 +1102,7 @@ OFF
 > [重要] 當您建立或變更計算資料行索引或索引檢視表時，CONCAT_NULL_YIELDS_NULL 也必須設為 ON。
 
 > [!IMPORTANT]
-> 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，CONCAT_NULL_YIELDS_NULL 一律為 ON，而且明確將此選項設定為 OFF 的應用程式將會產生錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。
+> 在將來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，CONCAT_NULL_YIELDS_NULL 一律會是 ON，且明確將此選項設定為 OFF 的應用程式將會觸發錯誤。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。
 
 利用 SET 陳述式來設定的連接層級設定會覆寫 CONCAT_NULL_YIELDS_NULL 的預設資料庫設定。 根據預設，當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，ODBC 和 OLE DB 用戶端會發出連接層級的 SET 陳述式，將工作階段的 CONCAT_NULL_YIELDS_NULL 設為 ON。 如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。
 
@@ -1126,7 +1130,7 @@ ON
 當運算式中遺失有效位數時，系統會產生錯誤。
 
 OFF        
-遺失精確度並不會產生錯誤訊息，且結果會捨入到用於儲存結果資料行或變數的精確度。
+遺失有效位數並不會產生錯誤訊息，且結果會四捨五入到儲存結果的資料行或變數有效位數。
 
 > [!IMPORTANT]
 > 當您建立或變更計算資料行索引或索引檢視表時，NUMERIC_ROUNDABORT 必須設為 OFF。
@@ -1167,7 +1171,7 @@ MINUTES
 指定資料庫狀態轉換時，何時回復不完整的交易。 如果省略 termination 子句，且資料庫有任何鎖定，則 ALTER DATABASE 陳述式會無限等候。 只能指定一個 termination 子句，它在 SET 子句之後。
 
 > [!NOTE]
-> 並非所有的資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本文＜備註＞一節中[設定選項](#SettingOptions)下的表格。
+> 並非所有的資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本文＜備註＞一節中[＜設定選項＞](#SettingOptions)下的表格。
 
 ROLLBACK AFTER *number* [SECONDS] | ROLLBACK IMMEDIATE        
 
@@ -1179,7 +1183,7 @@ NO_WAIT
 ## <a name="SettingOptions"></a> 設定選項
 若要擷取資料庫選項的目前設定，請使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
-設好資料庫選項之後，修改會立即生效。
+設好資料庫選項之後，新設定會立即生效。
 
 您可以針對所有新建立的資料庫，變更任何一個資料庫選項的預設值。 若要執行這項操作，請變更 model 資料庫中的適當資料庫選項。
 
@@ -1226,7 +1230,7 @@ NO_WAIT
 - 您還原資料庫備份。
 - 您卸離資料庫。
 
-清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 針對計畫快取中每個清除的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 ## <a name="examples"></a>範例
 
@@ -1409,7 +1413,7 @@ SET QUERY_STORE = ON
 相容性層級為 `SET` 選項，但在 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中描述。
 
 > [!NOTE]
-> 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，而且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 以下所述的資料庫選項皆為未明確提供其他 SET 選項值，因而可針對工作階段進行設定的值。
+> 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，而且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 下列章節所述的資料庫選項皆為未明確提供其他 SET 選項值，因而可針對工作階段進行設定的值。
 
 ## <a name="syntax"></a>語法
 
@@ -1557,12 +1561,12 @@ CURRENT
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }        
 ON        
-查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計劃和查詢效能。 這些單一資料行統計資料都是在查詢最佳化工具編譯查詢時建立的。 它只會針對尚未成為現有統計資料物件之第一個資料行的資料行建立單一資料行統計資料。
+查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計劃和查詢效能。 這些單一資料行統計資料是在查詢最佳化工具編譯查詢時所建立。 它只會針對尚未成為現有統計資料物件之第一個資料行的資料行建立單一資料行統計資料。
 
 預設值是 ON。 我們建議您針對大部分資料庫使用預設設定。
 
 OFF        
-查詢最佳化工具不會在編譯查詢時，針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
+查詢最佳化工具不會在編譯查詢時針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_auto_create_stats_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsAutoCreateStatistics` 屬性來判斷狀態。
 
@@ -1582,7 +1586,7 @@ ON
 - 25% 的檔案是未使用空間的大小
 - 檔案建立時的大小
 
-您不能壓縮唯讀資料庫。
+您無法壓縮唯讀資料庫。
 
 OFF        
 在定期檢查未用空間時，不自動壓縮資料庫檔案。
@@ -1594,9 +1598,9 @@ OFF
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { **ON** | OFF }        
 ON        
-指定當查詢使用統計資料且它們可能已過期時，查詢最佳化工具就會更新這些統計資料。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並將修改次數與某個臨界值比較，藉以判斷統計資料是否可能已經過期。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
+指定當查詢使用統計資料且它們可能已過期時，查詢最佳化工具就會更新這些統計資料。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並將修改次數與某個閾值比較，藉以判斷統計資料是否可能已經過期。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
 
-查詢最佳化工具會在編譯查詢及執行快取查詢計劃之前，檢查是否有過期的統計資料。 查詢最佳化工具會在查詢述詞中使用資料行、資料表和索引檢視表，來判斷哪些統計資料可能已過期。 查詢最佳化工具會在編譯查詢之前判斷這項資訊。 在執行快取查詢計劃之前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。
+查詢最佳化工具會在編譯查詢及執行快取查詢計劃之前，檢查是否有過期的統計資料。 查詢最佳化工具會在查詢述詞中使用資料行、資料表和索引檢視表，來判斷哪些統計資料可能已過期。 查詢最佳化工具會在編譯查詢之前判斷這項資訊。 在執行快取查詢計劃之前，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。
 
 AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料、查詢述詞中的單一資料行，以及使用 CREATE STATISTICS 陳述式所建立的統計資料。 此外，這個選項也會套用至篩選的統計資料。
 
@@ -1605,7 +1609,7 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料、
 您可以使用 AUTO_UPDATE_STATISTICS_ASYNC 選項來指定要以同步或非同步方式更新統計資料。
 
 OFF        
-指定當查詢使用統計資料時，查詢最佳化工具不會更新這些統計資料。 即使統計資料可能已過期時，查詢最佳化工具也不會更新這些統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
+指定當查詢使用統計資料時，查詢最佳化工具不會更新這些統計資料。 當統計資料可能已過期時，查詢最佳化工具也不會更新這些統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_auto_update_stats_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsAutoUpdateStatistics` 屬性來判斷狀態。
 
@@ -1613,11 +1617,11 @@ OFF
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
-指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是非同步的。 在查詢最佳化工具編譯查詢之前，它不會等候統計資料更新完成。
+指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是非同步的。 查詢最佳化工具在編譯查詢之前，不會等候統計資料更新完成。
 
 除非 AUTO_UPDATE_STATISTICS 設為 ON，否則將這個選項設為 ON 沒有作用。
 
-預設會將 AUTO_UPDATE_STATISTICS_ASYNC 選項設為 OFF，而且查詢最佳化工具會同步更新統計資料。
+預設會將 AUTO_UPDATE_STATISTICS_ASYNC 選項設為 OFF，且查詢最佳化工具會同步更新統計資料。
 
 OFF        
 指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 查詢最佳化工具在編譯查詢之前，會先等候統計資料更新完成。
@@ -1653,7 +1657,7 @@ ON
 啟用時，會在資料庫自動產生缺少的索引。 在建立索引之後，會驗證工作負載效能的增量。 當這類建立的索引不再對工作負載效能有助益時，會自動還原。 自動建立的索引會加上旗標，表示是系統產生的索引。
 
 OFF        
-不自動在資料庫產生缺少的索引。
+不會自動產生資料庫上遺漏的索引。
 
 啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動索引管理 `DROP_INDEX` 選項。
 
@@ -1665,7 +1669,7 @@ ON
 自動卸除重複索引或不再對效能工作負載有用的索引。
 
 OFF        
-不自動卸除資料庫上缺少的索引。
+不會自動卸除資料庫上遺漏的索引。
 
 啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動計劃修正 `FORCE_LAST_GOOD_PLAN` 選項。
 
@@ -1674,7 +1678,7 @@ DEFAULT
 從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。
 
 ON        
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」  模式下，陳述式便會失敗。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」  模式中，陳述式便會失敗。
 
 OFF        
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告查詢計劃變更所造成可能的查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。
@@ -1725,7 +1729,7 @@ OFF
 ENCRYPTION { ON | OFF }        
 設定資料庫要加密 (ON) 或是不要加密 (OFF)。 如需資料庫加密的詳細資訊，請參閱[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md) 和 [Azure SQL Database 的透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。
 
-在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新的檔案群組都會繼承加密的屬性。 如果資料庫內有任何檔案群組設定為 **READ ONLY**，則資料庫加密作業將會失敗。
+在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新檔案群組都會繼承加密的屬性。 如果資料庫中有任何檔案群組設定為 READ ONLY，則資料庫加密作業將會失敗。
 
 您可以使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動態管理檢視來查看資料庫的加密狀態。
 
@@ -1800,7 +1804,7 @@ CLEAR
 移除查詢存放區的內容。
 
 OPERATION_MODE        
-描述查詢存放區的作業模式。 有效值為 READ_ONLY 和 READ_WRITE。 在 READ_WRITE 模式中，查詢存放區會收集並保存查詢計劃和執行階段執行統計資料資訊。 在 READ_ONLY 模式中，可以從查詢存放區讀取資訊，但不會新增新的資訊。 如果查詢存放區所配置的最大空間已用盡，則查詢存放區會將作業模式變更為 READ_ONLY。
+描述查詢存放區的作業模式。 有效值為 READ_ONLY 和 READ_WRITE。 在 READ_WRITE 模式中，查詢存放區會收集並保存查詢計劃和執行階段執行統計資料資訊。 在 READ_ONLY 模式中，可以從查詢存放區讀取資訊，但不會新增資訊。 如果查詢存放區所配置的最大空間已用盡，則查詢存放區會將作業模式變更為 READ_ONLY。
 
 CLEANUP_POLICY        
 描述查詢存放區的資料保留原則。 STALE_QUERY_THRESHOLD_DAYS 會決定在查詢存放區中保留查詢資訊的天數。 STALE_QUERY_THRESHOLD_DAYS 的類型為 **bigint**。
@@ -1815,13 +1819,13 @@ INTERVAL_LENGTH_MINUTES
 決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要將空間使用量最佳化，在執行階段統計資料存放區中的執行階段執行統計資料會透過固定的時段彙總。 這個固定的時段是使用 INTERVAL_LENGTH_MINUTES 引數所設定。 INTERVAL_LENGTH_MINUTES 的類型為 **bigint**。
 
 SIZE_BASED_CLEANUP_MODE        
-控制當總資料量接近大小上限時，是否將自動啟用清除：
+控制當總資料量接近大小上限時，是否將自動啟用清除。
 
 OFF        
 不會自動啟用以大小為依據的清除。
 
 AUTO        
-當磁碟上的大小達到 90% 的 **max_storage_size_mb** 時，就會自動啟用以大小為依據的清除。 以大小為依據的清除會先移除成本最高和最舊的查詢。 它會在達到 **max_storage_size_mb** 的大約 80% 處停止。 這是預設組態值。
+當磁碟上的大小達到 90% 的 **max_storage_size_mb** 時，就會自動啟用以大小為依據的清除。 以大小為依據之清除會先移除成本最高和最舊的查詢。 它會在達到 **max_storage_size_mb** 的大約 80% 處停止。 這是預設組態值。
 
 SIZE_BASED_CLEANUP_MODE 的類型為 **nvarchar**。
 
@@ -1835,7 +1839,7 @@ AUTO
 根據執行計數和資源耗用量擷取相關的查詢。 這是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的預設組態值。
 
 無        
-停止擷取新的查詢。 查詢存放區將會繼續收集已擷取查詢的編譯和執行階段統計資料。 因為您可能會錯過擷取重要查詢，請小心使用此組態。
+停止擷取新的查詢。 查詢存放區將會繼續收集已擷取查詢的編譯和執行階段統計資料。 因為您可能會錯過擷取重要查詢，請小心使用此設定。
 
 QUERY_CAPTURE_MODE 的類型為 **nvarchar**。
 
@@ -1848,14 +1852,14 @@ max_plans_per_query
 
 ALLOW_SNAPSHOT_ISOLATION { ON | **OFF** }        
 ON        
-在資料庫層級啟用快照集選項。 啟用時，即使沒有交易使用快照集隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，交易可以指定 SNAPSHOT 交易隔離等級。 當交易執行的隔離等級是 SNAPSHOT 時，所有陳述式都會見到在交易開頭便存在的資料快照集。 如果執行 SNAPSHOT 隔離等級的交易存取多個資料庫中的資料，此時所有資料庫中的 ALLOW_SNAPSHOT_ISOLATION 都必須設為 ON，或是每當 FROM 子句參考 ALLOW_SNAPSHOT_ISOLATION 是 OFF 的資料庫中的資料表時，交易中的每個陳述式都必須使用鎖定提示。
+在資料庫層級啟用快照集選項。 啟用時，即使沒有交易使用快照隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，交易可以指定 SNAPSHOT 交易隔離等級。 當交易執行的隔離等級是 SNAPSHOT 時，所有陳述式都會見到在交易開頭便存在的資料快照集。 如果執行 SNAPSHOT 隔離等級的交易存取多個資料庫中的資料，此時所有資料庫中的 ALLOW_SNAPSHOT_ISOLATION 都必須設為 ON，或是每當 FROM 子句參考 ALLOW_SNAPSHOT_ISOLATION 是 OFF 的資料庫中的資料表時，交易中的每個陳述式都必須使用鎖定提示。
 
 OFF        
 在資料庫層級關閉快照集選項。 交易無法指定 SNAPSHOT 交易隔離等級。
 
-當您將 ALLOW_SNAPSHOT_ISOLATION 設為新狀態 (從 ON 設成 OFF，或從 OFF 設成 ON)，認可資料庫中的所有現有交易之前，ALTER DATABASE 並不會將控制權傳回呼叫端。 如果資料庫已在 ALTER DATABASE 陳述式所指定的狀態中，控制權會立即傳回呼叫端。 如果 ALTER DATABASE 陳述式並沒有很快傳回，請利用 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 來判斷是否有長期執行的交易。 如果取消了 ALTER DATABASE 陳述式，資料庫會保留在 ALTER DATABASE 啟動時的狀態中。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視指出資料庫中快照集隔離交易的狀態。 如果 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON，ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF 會暫停六秒，然後重試作業。
+當您將 ALLOW_SNAPSHOT_ISOLATION 設為新狀態 (從 ON 設成 OFF，或從 OFF 設成 ON) 時，在認可資料庫中的所有現有交易之前，ALTER DATABASE 並不會將控制權傳回呼叫端。 如果資料庫已在 ALTER DATABASE 陳述式所指定的狀態中，控制權會立即傳回呼叫端。 如果 ALTER DATABASE 陳述式並沒有很快傳回，請使用 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 來判斷是否有長期執行的交易。 如果取消了 ALTER DATABASE 陳述式，資料庫會保留在 ALTER DATABASE 啟動時的狀態中。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視指出資料庫中快照集隔離交易的狀態。 如果 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON，ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF 會暫停六秒，然後重試作業。
 
-如果資料庫是 OFFLINE，您不能變更 ALLOW_SNAPSHOT_ISOLATION 的狀態。
+如果資料庫是 OFFLINE，則您無法變更 ALLOW_SNAPSHOT_ISOLATION 的狀態。
 
 如果您在 READ_ONLY 資料庫中設定 ALLOW_SNAPSHOT_ISOLATION，資料庫後來又設為 READ_WRITE，會保留這個設定。
 
@@ -1867,12 +1871,12 @@ OFF
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-在資料庫層級啟用讀取認可快照集選項。 啟用時，即使沒有交易使用快照隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，指定讀取認可隔離等級的交易即會使用資料列版本設定，而不是鎖定。 在讀取認可隔離等級執行交易時，所有陳述式都會看到資料的快照，就與陳述式開始時所存在的資料一樣。
+在資料庫層級啟用讀取認可快照集選項。 啟用時，即使沒有交易使用快照隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，指定 READ COMMITTED 隔離等級的交易即會使用資料列版本設定，而不是鎖定。 在 READ COMMITTED 隔離等級執行交易時，所有陳述式都會看到資料的快照，就與陳述式開始時所存在的資料一樣。
 
 OFF        
 在資料庫層級關閉讀取認可快照集選項。 指定 READ COMMITTED 隔離等級的交易會使用鎖定。
 
-若要設定 READ_COMMITTED_SNAPSHOT ON 或 OFF，除了執行 ALTER DATABASE 命令的連接之外，不能有任何使用中的資料庫連接。 不過，資料庫不一定要處於單一使用者模式。 當資料庫是 OFFLINE 時，您便不能變更這個選項的狀態。
+若要設定 READ_COMMITTED_SNAPSHOT ON 或 OFF，除了執行 ALTER DATABASE 命令的連接之外，不能有任何使用中資料庫連線。 不過，資料庫不一定要處於單一使用者模式。 當資料庫是 OFFLINE 時，您無法變更這個選項的狀態。
 
 如果您在 READ_ONLY 資料庫中設定 READ_COMMITTED_SNAPSHOT，則當資料庫後來又設為 READ_WRITE 時，會保留這個設定。
 
@@ -1888,9 +1892,9 @@ ON
 當交易隔離等級設定為 SNAPSHOT 以下的任何隔離等級時，記憶體最佳化資料表上所有解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業都會在 SNAPSHOT 隔離下執行。 SNAPSHOT 以下的隔離等級範例包括 READ COMMITTED 或 READ UNCOMMITTED。 不論是在工作階段層級明確設定交易隔離等級，或隱含使用預設值，都會執行這些作業。
 
 OFF        
-不會為經記憶體最佳化資料表的解譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業提高交易隔離等級。
+不會為經記憶體最佳化資料表上解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業提高交易隔離等級。
 
-如果資料庫是 OFFLINE，您不能變更 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 的狀態。
+如果資料庫是 OFFLINE，則您無法變更 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 的狀態。
 
 預設值是 OFF。
 
@@ -2058,7 +2062,7 @@ MINUTES
 指定資料庫狀態轉換時，何時回復不完整的交易。 如果省略 termination 子句，且資料庫有任何鎖定，則 ALTER DATABASE 陳述式會無限等候。 只能指定一個 termination 子句，它在 SET 子句之後。
 
 > [!NOTE]
-> 並非所有的資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本文＜備註＞一節中[設定選項](#SettingOptions)下的表格。
+> 並非所有的資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本文＜備註＞一節中[＜設定選項＞](#SettingOptions)下的表格。
 
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE        
 指定在指定的秒數之後回復，或是立即回復。
@@ -2070,7 +2074,7 @@ NO_WAIT
 
 若要擷取資料庫選項的目前設定，請使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
-設好資料庫選項之後，修改會立即生效。
+設好資料庫選項之後，新設定會立即生效。
 
 您可以針對所有新建立的資料庫，變更任何一個資料庫選項的預設值。 若要執行這項操作，請變更 model 資料庫中的適當資料庫選項。
 
@@ -2205,7 +2209,7 @@ SET QUERY_STORE = ON
 相容性層級為 `SET` 選項，但在 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中描述。
 
 > [!NOTE]
-> 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，而且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 以下所述的資料庫選項皆為未明確提供其他 SET 選項值，因而可針對工作階段進行設定的值。
+> 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，而且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 下列章節所述的資料庫選項皆為未明確提供其他 SET 選項值，因而可針對工作階段進行設定的值。
 
 ## <a name="syntax"></a>語法
 
@@ -2335,12 +2339,12 @@ CURRENT
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }        
 ON        
-查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計劃和查詢效能。 這些單一資料行統計資料都是在查詢最佳化工具編譯查詢時建立的。 它只會針對尚未成為現有統計資料物件之第一個資料行的資料行建立單一資料行統計資料。
+查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計劃和查詢效能。 這些單一資料行統計資料是在查詢最佳化工具編譯查詢時所建立。 它只會針對尚未成為現有統計資料物件之第一個資料行的資料行建立單一資料行統計資料。
 
-預設值為 **ON**。 我們建議您針對大部分資料庫使用預設設定。
+預設值是 ON。 我們建議您針對大部分資料庫使用預設設定。
 
 OFF        
-查詢最佳化工具不會在編譯查詢時，針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
+查詢最佳化工具不會在編譯查詢時針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_auto_create_stats_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsAutoCreateStatistics` 屬性來判斷狀態。
 
@@ -2360,7 +2364,7 @@ ON
 - 25% 的檔案是未使用空間的大小
 - 檔案建立時的大小
 
-您不能壓縮唯讀資料庫。
+您無法壓縮唯讀資料庫。
 
 OFF        
 在定期檢查未用空間時，不自動壓縮資料庫檔案。
@@ -2372,9 +2376,9 @@ OFF
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { **ON** | OFF }        
 ON        
-指定當查詢使用統計資料且它們可能已過期時，查詢最佳化工具就會更新這些統計資料。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並將修改次數與某個臨界值比較，藉以判斷統計資料是否可能已經過期。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
+指定當查詢使用統計資料且它們可能已過期時，查詢最佳化工具就會更新這些統計資料。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並將修改次數與某個閾值比較，藉以判斷統計資料是否可能已經過期。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
 
-查詢最佳化工具會在編譯查詢及執行快取查詢計劃之前，檢查是否有過期的統計資料。 查詢最佳化工具會在查詢述詞中使用資料行、資料表和索引檢視表，來判斷哪些統計資料可能已過期。 查詢最佳化工具會在編譯查詢之前判斷這項資訊。 在執行快取查詢計劃之前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。
+查詢最佳化工具會在編譯查詢及執行快取查詢計劃之前，檢查是否有過期的統計資料。 查詢最佳化工具會在查詢述詞中使用資料行、資料表和索引檢視表，來判斷哪些統計資料可能已過期。 查詢最佳化工具會在編譯查詢之前判斷這項資訊。 在執行快取查詢計劃之前，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。
 
 AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料、查詢述詞中的單一資料行，以及使用 CREATE STATISTICS 陳述式所建立的統計資料。 此外，這個選項也會套用至篩選的統計資料。
 
@@ -2383,7 +2387,7 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料、
 您可以使用 AUTO_UPDATE_STATISTICS_ASYNC 選項來指定要以同步或非同步方式更新統計資料。
 
 OFF        
-指定當查詢使用統計資料時，查詢最佳化工具不會更新這些統計資料。 即使統計資料可能已過期時，查詢最佳化工具也不會更新這些統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
+指定當查詢使用統計資料時，查詢最佳化工具不會更新這些統計資料。 當統計資料可能已過期時，查詢最佳化工具也不會更新這些統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 is_auto_update_stats_on 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsAutoUpdateStatistics` 屬性來判斷狀態。
 
@@ -2391,11 +2395,11 @@ OFF
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
-指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是非同步的。 在查詢最佳化工具編譯查詢之前，它不會等候統計資料更新完成。
+指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是非同步的。 查詢最佳化工具在編譯查詢之前，不會等候統計資料更新完成。
 
 除非 AUTO_UPDATE_STATISTICS 設為 ON，否則將這個選項設為 ON 沒有作用。
 
-預設會將 AUTO_UPDATE_STATISTICS_ASYNC 選項設為 OFF，而且查詢最佳化工具會同步更新統計資料。
+預設會將 AUTO_UPDATE_STATISTICS_ASYNC 選項設為 OFF，且查詢最佳化工具會同步更新統計資料。
 
 OFF        
 指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 查詢最佳化工具在編譯查詢之前，會先等候統計資料更新完成。
@@ -2404,16 +2408,16 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 is_auto_update_stats_async_on 資料行來判斷這個選項的狀態。
 
-如需描述使用同步或非同步統計資料更新之時機的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)中的＜使用資料庫範圍統計資料選項＞一節。
+如需描述使用同步或非同步統計資料更新的時機詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)中的＜使用資料庫範圍統計資料選項＞一節。
 
 <a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **適用於**：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-啟用或停用 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)選項。
+啟用或停用`FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)選項。
 
 FORCE_LAST_GOOD_PLAN = { ON | **OFF** }        
 ON        
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」  模式下，陳述式便會失敗。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新查詢計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會產生新的查詢計劃。 如果未啟用查詢存放區，或其不在「讀寫」  模式中，陳述式便會失敗。
 
 OFF        
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告查詢計劃變更所造成可能的查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。
@@ -2464,7 +2468,7 @@ OFF
 ENCRYPTION { ON | **OFF** }        
 設定資料庫要加密 (ON) 或是不要加密 (OFF)。 如需資料庫加密的詳細資訊，請參閱[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md) 和 [Azure SQL Database 的透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。
 
-在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新的檔案群組都會繼承加密的屬性。 如果資料庫內有任何檔案群組設定為 **READ ONLY**，則資料庫加密作業將會失敗。
+在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新檔案群組都會繼承加密的屬性。 如果資料庫中有任何檔案群組設定為 READ ONLY，則資料庫加密作業將會失敗。
 
 您可以使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動態管理檢視來查看資料庫的加密狀態。
 
@@ -2535,7 +2539,7 @@ CLEAR
 移除查詢存放區的內容。
 
 OPERATION_MODE        
-描述查詢存放區的作業模式。 有效值為 READ_ONLY 和 READ_WRITE。 在 READ_WRITE 模式中，查詢存放區會收集並保存查詢計劃和執行階段執行統計資料資訊。 在 READ_ONLY 模式中，可以從查詢存放區讀取資訊，但不會新增新的資訊。 如果查詢存放區所配置的最大空間已用盡，則查詢存放區會將作業模式變更為 READ_ONLY。
+描述查詢存放區的作業模式。 有效值為 READ_ONLY 和 READ_WRITE。 在 READ_WRITE 模式中，查詢存放區會收集並保存查詢計劃和執行階段執行統計資料資訊。 在 READ_ONLY 模式中，可以從查詢存放區讀取資訊，但不會新增資訊。 如果查詢存放區所配置的最大空間已用盡，則查詢存放區會將作業模式變更為 READ_ONLY。
 
 CLEANUP_POLICY        
 描述查詢存放區的資料保留原則。 STALE_QUERY_THRESHOLD_DAYS 會決定在查詢存放區中保留查詢資訊的天數。 STALE_QUERY_THRESHOLD_DAYS 的類型為 **bigint**。
@@ -2550,13 +2554,13 @@ INTERVAL_LENGTH_MINUTES
 決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要將空間使用量最佳化，在執行階段統計資料存放區中的執行階段執行統計資料會透過固定的時段彙總。 這個固定的時段是使用 INTERVAL_LENGTH_MINUTES 引數所設定。 INTERVAL_LENGTH_MINUTES 的類型為 **bigint**。
 
 SIZE_BASED_CLEANUP_MODE        
-控制當總資料量接近大小上限時，是否將自動啟用清除：
+控制當總資料量接近大小上限時，是否將自動啟用清除。
 
 OFF        
 不會自動啟用以大小為依據的清除。
 
 AUTO        
-當磁碟上的大小達到 90% 的 **max_storage_size_mb** 時，就會自動啟用以大小為依據的清除。 以大小為依據的清除會先移除成本最高和最舊的查詢。 它會在達到 **max_storage_size_mb** 的大約 80% 處停止。 這是預設組態值。
+當磁碟上的大小達到 90% 的 **max_storage_size_mb** 時，就會自動啟用以大小為依據的清除。 以大小為依據之清除會先移除成本最高和最舊的查詢。 它會在達到 **max_storage_size_mb** 的大約 80% 處停止。 這是預設組態值。
 
 SIZE_BASED_CLEANUP_MODE 的類型為 **nvarchar**。
 
@@ -2570,7 +2574,7 @@ AUTO
 根據執行計數和資源耗用量擷取相關的查詢。 這是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的預設組態值。
 
 無        
-停止擷取新的查詢。 查詢存放區將會繼續收集已擷取查詢的編譯和執行階段統計資料。 因為您可能會錯過擷取重要查詢，請小心使用此組態。
+停止擷取新的查詢。 查詢存放區將會繼續收集已擷取查詢的編譯和執行階段統計資料。 因為您可能會錯過擷取重要查詢，請小心使用此設定。
 
 QUERY_CAPTURE_MODE 的類型為 **nvarchar**。
 
@@ -2583,14 +2587,14 @@ max_plans_per_query
 
 ALLOW_SNAPSHOT_ISOLATION { ON | OFF }        
 ON        
-在資料庫層級啟用快照集選項。 啟用時，即使沒有交易使用快照集隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，交易可以指定 SNAPSHOT 交易隔離等級。 當交易執行的隔離等級是 SNAPSHOT 時，所有陳述式都會見到在交易開頭便存在的資料快照集。 如果執行 SNAPSHOT 隔離等級的交易存取多個資料庫中的資料，此時所有資料庫中的 ALLOW_SNAPSHOT_ISOLATION 都必須設為 ON，或是每當 FROM 子句參考 ALLOW_SNAPSHOT_ISOLATION 是 OFF 的資料庫中的資料表時，交易中的每個陳述式都必須使用鎖定提示。
+在資料庫層級啟用快照集選項。 啟用時，即使沒有交易使用快照隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，交易可以指定 SNAPSHOT 交易隔離等級。 當交易執行的隔離等級是 SNAPSHOT 時，所有陳述式都會見到在交易開頭便存在的資料快照集。 如果執行 SNAPSHOT 隔離等級的交易存取多個資料庫中的資料，此時所有資料庫中的 ALLOW_SNAPSHOT_ISOLATION 都必須設為 ON，或是每當 FROM 子句參考 ALLOW_SNAPSHOT_ISOLATION 是 OFF 的資料庫中的資料表時，交易中的每個陳述式都必須使用鎖定提示。
 
 OFF        
 在資料庫層級關閉快照集選項。 交易無法指定 SNAPSHOT 交易隔離等級。
 
-當您將 ALLOW_SNAPSHOT_ISOLATION 設為新狀態 (從 ON 設成 OFF，或從 OFF 設成 ON)，認可資料庫中的所有現有交易之前，ALTER DATABASE 並不會將控制權傳回呼叫端。 如果資料庫已在 ALTER DATABASE 陳述式所指定的狀態中，控制權會立即傳回呼叫端。 如果 ALTER DATABASE 陳述式並沒有很快傳回，請利用 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 來判斷是否有長期執行的交易。 如果取消了 ALTER DATABASE 陳述式，資料庫會保留在 ALTER DATABASE 啟動時的狀態中。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視指出資料庫中快照集隔離交易的狀態。 如果 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON，ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF 會暫停六秒，然後重試作業。
+當您將 ALLOW_SNAPSHOT_ISOLATION 設為新狀態 (從 ON 設成 OFF，或從 OFF 設成 ON) 時，在認可資料庫中的所有現有交易之前，ALTER DATABASE 並不會將控制權傳回呼叫端。 如果資料庫已在 ALTER DATABASE 陳述式所指定的狀態中，控制權會立即傳回呼叫端。 如果 ALTER DATABASE 陳述式並沒有很快傳回，請使用 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 來判斷是否有長期執行的交易。 如果取消了 ALTER DATABASE 陳述式，資料庫會保留在 ALTER DATABASE 啟動時的狀態中。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視指出資料庫中快照集隔離交易的狀態。 如果 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON，ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF 會暫停六秒，然後重試作業。
 
-如果資料庫是 OFFLINE，您不能變更 ALLOW_SNAPSHOT_ISOLATION 的狀態。
+如果資料庫是 OFFLINE，則您無法變更 ALLOW_SNAPSHOT_ISOLATION 的狀態。
 
 如果您在 READ_ONLY 資料庫中設定 ALLOW_SNAPSHOT_ISOLATION，資料庫後來又設為 READ_WRITE，會保留這個設定。
 
@@ -2602,12 +2606,12 @@ OFF
 
 READ_COMMITTED_SNAPSHOT { ON | **OFF** }        
 ON        
-在資料庫層級啟用讀取認可快照集選項。 啟用時，即使沒有交易使用快照隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，指定讀取認可隔離等級的交易即會使用資料列版本設定，而不是鎖定。 在讀取認可隔離等級執行交易時，所有陳述式都會看到資料的快照，就與陳述式開始時所存在的資料一樣。
+啟用資料庫層級的 [讀取認可快照集] 選項。 啟用時，即使沒有交易使用快照隔離，DML 陳述式也會開始產生資料列版本。 啟用此選項之後，指定 READ COMMITTED 隔離等級的交易即會使用資料列版本設定，而不是鎖定。 在 READ COMMITTED 隔離等級執行交易時，所有陳述式都會看到資料的快照，與陳述式開始時所存在的資料一樣。
 
 OFF        
-在資料庫層級關閉讀取認可快照集選項。 指定 READ COMMITTED 隔離等級的交易會使用鎖定。
+在資料庫層級關閉 [讀取認可快照集] 選項。 指定 READ COMMITTED 隔離等級的交易會使用鎖定。
 
-若要設定 READ_COMMITTED_SNAPSHOT ON 或 OFF，除了執行 ALTER DATABASE 命令的連接之外，不能有任何使用中的資料庫連接。 不過，資料庫不一定要處於單一使用者模式。 當資料庫是 OFFLINE 時，您便不能變更這個選項的狀態。
+若要設定 READ_COMMITTED_SNAPSHOT 為 ON 或 OFF，除了執行 ALTER DATABASE 命令的連線之外，不能有任何使用中資料庫連線。 不過，資料庫不一定要處於單一使用者模式。 當資料庫是 OFFLINE 時，您無法變更這個選項的狀態。
 
 如果您在 READ_ONLY 資料庫中設定 READ_COMMITTED_SNAPSHOT，則當資料庫後來又設為 READ_WRITE 時，會保留這個設定。
 
@@ -2623,9 +2627,9 @@ ON
 當交易隔離等級設定為 SNAPSHOT 以下的任何隔離等級時，記憶體最佳化資料表上所有解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業都會在 SNAPSHOT 隔離下執行。 SNAPSHOT 以下的隔離等級範例包括 READ COMMITTED 或 READ UNCOMMITTED。 不論是在工作階段層級明確設定交易隔離等級，或隱含使用預設值，都會執行這些作業。
 
 OFF        
-不會為經記憶體最佳化資料表的解譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業提高交易隔離等級。
+不會為經記憶體最佳化資料表上解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業提高交易隔離等級。
 
-如果資料庫是 OFFLINE，您不能變更 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 的狀態。
+如果資料庫是 OFFLINE，則您無法變更 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 的狀態。
 
 預設值是 OFF。
 
@@ -2798,7 +2802,7 @@ NO_WAIT
 
 若要擷取資料庫選項的目前設定，請使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 
-設好資料庫選項之後，修改會立即生效。
+設好資料庫選項之後，新設定會立即生效。
 
 您可以針對所有新建立的資料庫，變更任何一個資料庫選項的預設值。 若要執行這項操作，請變更 model 資料庫中的適當資料庫選項。
 
@@ -2942,24 +2946,18 @@ SET
 
 <query_store_option> ::=
 {
-    QUERY_STORE
-    {
- = OFF
-        | = ON
-    }
+    QUERY_STORE { OFF |  ON }
 }
 
 <result_set_caching_option> ::=
 {
-    RESULT_SET_CACHING { ON | OFF }
+    RESULT_SET_CACHING {ON | OFF}
 }
 
 <snapshot_option> ::=
 {
     READ_COMMITTED_SNAPSHOT {ON | OFF }
 }
-
-
 
 ```
 
@@ -2973,13 +2971,14 @@ SET
 控制自動選項。
 
 AUTO_CREATE_STATISTICS { **ON** | OFF }        
-ON        
-查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計劃和查詢效能。 這些單一資料行統計資料都是在查詢最佳化工具編譯查詢時建立的。 它只會針對尚未成為現有統計資料物件之第一個資料行的資料行建立單一資料行統計資料。
 
-預設值為 **ON**。 我們建議您針對大部分資料庫使用預設設定。
+ON        
+查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計劃和查詢效能。 這些單一資料行統計資料是在查詢最佳化工具編譯查詢時所建立。 它只會針對尚未成為現有統計資料物件之第一個資料行的資料行建立單一資料行統計資料。
+
+預設值是 ON。 我們建議您針對大部分資料庫使用預設設定。
 
 OFF        
-查詢最佳化工具不會在編譯查詢時，針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
+查詢最佳化工具不會在編譯查詢時針對查詢述詞中的單一資料行建立統計資料。 將這個選項設定為 OFF 可能會導致次佳查詢計劃並降低查詢效能。
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 i`s_auto_create_stats_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsAutoCreateStatistics` 屬性來判斷狀態。
 
@@ -2990,6 +2989,7 @@ OFF
 控制資料庫加密狀態。
 
 ENCRYPTION { ON | OFF }        
+
 ON        
 將資料庫設為加密。
 
@@ -2998,27 +2998,32 @@ OFF
 
 如需資料庫加密的詳細資訊，請參閱＜透明資料加密＞和＜Azure SQL Database 的透明資料加密＞。
 
-在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新的檔案群組都會繼承加密的屬性。 如果資料庫內有任何檔案群組設定為 READ ONLY，則資料庫加密作業將會失敗。
+在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新檔案群組都會繼承加密的屬性。 如果資料庫中有任何檔案群組設定為 READ ONLY，則資料庫加密作業將會失敗。
+
 您可以使用 sys.dm_database_encryption_keys 動態管理檢視來查看資料庫的加密狀態，以及加密掃描的狀態。
 
-**\<query_store_option> ::=**        
+**<query_store_option> ::=**        
 
-ON | **OFF**        
 控制此資料倉儲中是否已啟用查詢存放區。
+
+QUERY_STORE { ON |  **OFF**  }
 
 ON        
 啟用查詢存放區。
 
 OFF        
+
 停用查詢存放區。 OFF 是預設值。
 
 > [!NOTE]
 > 針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，您必須從使用者資料庫中執行 `ALTER DATABASE SET QUERY_STORE`。 不支援從另一個資料倉儲執行個體執行陳述式。
 
-**\<result_set_caching_option> ::=**         
+**<result_set_caching_option> ::=**         
 **適用於**：Azure SQL 資料倉儲 (預覽)
 
-此命令必須在連線到 `master` 資料庫時執行。  對此資料庫設定的變更會立即生效。  儲存體費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中引進了新資料行 is_result_set_caching_on，用來顯示資料庫的結果快取設定。  
+控制是否要在資料庫中快取查詢結果。
+
+RESULT_SET_CACHING {ON | OFF}
 
 ON        
 指定從此資料庫傳回的查詢結果集將快取於 Azure SQL 資料倉儲儲存體中。
@@ -3035,9 +3040,11 @@ command|相似|%DWResultCacheDb%|
 | | |
 
 ### <a name="remarks"></a>Remarks
+此命令必須在連線到 `master` 資料庫時執行。  對此資料庫設定的變更會立即生效。  儲存體費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中引進了新資料行 is_result_set_caching_on，用來顯示資料庫的結果快取設定。  
+
 如果符合下列所有需求，則會對查詢重複使用快取結果集：
 
-1. 執行查詢的使用者可以存取查詢中參考的所有資料表。
+1. 執行查詢的使用者可以存取查詢中所參考所有資料表。
 1. 新查詢與產生結果集快取的上一個查詢完全相符。
 1. 產生快取結果集的來源資料表中沒有資料或結構描述變更。  
 
@@ -3045,22 +3052,23 @@ command|相似|%DWResultCacheDb%|
 
 具有大型結果集 (例如 > 1 百萬個資料列) 的查詢在第一次執行時，可能會在建立結果快取時，出現效能較低的情形。
 
-**<snapshot_option> ::=**        
+**<snapshot_option> ::=**         
+**適用於**：Azure SQL 資料倉儲 (預覽)
 
-計算交易隔離等級。
+控制資料庫的交易隔離等級。
 
 READ_COMMITTED_SNAPSHOT  { ON | **OFF** }        
-**適用於**：Azure SQL 資料倉儲 (預覽)
 
 ON        
 啟用資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
 
 OFF        
-關閉資料庫層級的 READ_COMMITTED_SNAPSHOT 選項。
+在資料庫層級關閉 READ_COMMITTED_SNAPSHOT 選項。
 
-開啟或關閉資料庫的 READ_COMMITTED_SNAPSHOT，將會終止此資料庫的所有開放連線。 建議您在資料庫維護期間或等到資料庫沒有使用中的連線再進行此變更，除了執行 ALTER DATABSE 命令的連線以外。  資料庫不一定要處於單一使用者模式。  不支援變更工作階段層級的 READ_COMMITTED_SNAPSHOT 設定。  若要確認資料庫的這項設定，請檢查 sys.databases 中的 is_read_committed_snapshot_on 資料行。
+### <a name="remarks"></a>Remarks
+此命令必須在連線到 `master` 資料庫時執行。 開啟或關閉使用者資料庫的 READ_COMMITTED_SNAPSHOT，將會終止此資料庫的所有開放連線。 建議您在資料庫維護期間或等到資料庫沒有使用中的連線再進行此變更，除了執行 ALTER DATABSE 命令的連線以外。  資料庫不一定要處於單一使用者模式。 不支援變更工作階段層級的 READ_COMMITTED_SNAPSHOT 設定。  若要確認資料庫的這項設定，請檢查 sys.databases 中的 is_read_committed_snapshot_on 資料行。
 
-在已啟用 READ_COMMITTED_SNAPSHOT 的資料庫中，如果有多個資料版本存在，查詢可能會遭遇較低的效能。 如果這些交易的資料變更會封鎖版本清除，則長時間開啟的交易也會導致資料庫大小增加。  
+在已啟用 READ_COMMITTED_SNAPSHOT 的資料庫中，如果有多個資料版本存在，查詢可能會遭遇較低的效能。 長時間開啟的交易也會導致資料庫大小增加。 如果封鎖版本清除的這些交易進行資料變更，就會發生此問題。  
 
 ## <a name="permissions"></a>權限
 
@@ -3070,56 +3078,33 @@ OFF
 
 ## <a name="examples"></a>範例
 
-### <a name="a-enabling-the-query-store"></a>A. 啟用查詢存放區
-下列範例會啟用查詢存放區。
+### <a name="check-statistics-setting-for-a-database"></a>檢查資料庫的統計資料設定
+
+```sql
+SELECT name, is_auto_create_stats_on FROM sys.databases
+```
+### <a name="enable-query-store-for-a-database"></a>啟用資料庫的查詢存放區
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON;
 ```
 
-### <a name="b-enable-result-set-caching-for-a-database"></a>B. 啟用資料庫的結果集快取
+### <a name="enable-result-set-caching-for-a-database"></a>啟用資料庫的結果集快取
 
 ```sql
 ALTER DATABASE [database_name]
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="c-disable-result-set-caching-for-a-database"></a>C. 停用資料庫的結果集快取
-
-```sql
-ALTER DATABASE [database_name]  
-SET RESULT_SET_CACHING OFF;
-```
-
-### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. 檢查資料庫的結果集快取設定
+### <a name="check-result-set-caching-setting-for-a-database"></a>檢查資料庫的結果集快取設定
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="e-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>E. 檢查結果集快取命中和快取遺漏的查詢數
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A;
-```
-
-### <a name="f-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>F. 檢查查詢的結果集快取命中或快取遺漏
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>檢查查詢的結果集快取命中或快取遺漏
 
 ```sql
 If
@@ -3131,7 +3116,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="g-check-for-all-queries-with-result-set-cache-hits"></a>G. 檢查結果集快取命中的所有查詢
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>檢查結果集快取命中的所有查詢
 
 ```sql
 SELECT *  
@@ -3139,7 +3124,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
-### <a name="h-enable-read_committed_snapshot-option-for-a-database"></a>H. 啟用資料庫的 Read_Committed_Snapshot 選項
+### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>啟用資料庫的 Read_Committed_Snapshot 選項
 
 ```sql
 ALTER DATABASE MyDatabase  

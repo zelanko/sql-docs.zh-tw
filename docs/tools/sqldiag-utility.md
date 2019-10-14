@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986293"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251364"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,10 +112,10 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** 在啟動時不會將輸出附加至目前的輸出資料夾。 它只能覆寫預設輸出資料夾 (選項 1)，或重新命名資料夾 (選項 2)，然後將輸出寫入新的預設輸出資料夾 SQLDIAG 中。  
   
- **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *\@machinelistfile*  
  覆寫組態檔中指定的電腦。 依預設，組態檔是 SQLDiag.Xml，或是以 **/I** 參數來設定。 當指定一部以上的電腦時，請用空格隔開每一個電腦名稱。  
   
- 使用 *@machinelistfile* 指定要儲存在組態檔中的電腦清單檔案名稱。  
+ 使用 *\@machinelistfile* 指定要儲存在組態檔中的電腦清單檔案名稱。  
   
  **/C** _file_compression_type_  
  設定 **SQLdiag** 輸出資料夾檔案所用的檔案壓縮類型。 可用的選項如下：  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901089"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710930"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 發行者的設計考量與限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "67901089"
   
 -   標準異動複寫支援含多達 1000 個資料行的資料表。 Oracle 交易式發行集支援 995 個資料行 (複寫會在每個發行資料表中新增五個資料行)。  
   
--   定序子句會新增到 CREATE TABLE 陳述式中以啟用大小寫比較，此功能對主索引鍵和唯一條件約束很重要。 此行為由結構描述選項 0x1000 控制，該選項使用 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 **@schema_option** 參數指定。  
+-   定序子句會新增到 CREATE TABLE 陳述式中以啟用大小寫比較，此功能對主索引鍵和唯一條件約束很重要。 此行為由結構描述選項 0x1000 控制，該選項使用 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 `@schema_option` 參數來指定。  
   
 -   如果使用預存程序來設定或維護「Oracle 發行者」，請勿在明確交易中使用該程序。 用於連接到「Oracle 發行者」連結伺服器不支援此功能。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "67901089"
   
 -   「快照集代理程式」和「記錄讀取器代理程式」建立從「發散者」至「訂閱者」連接所使用的帳戶透過下列方法之一指定：  
   
-    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 的 **@security_mode** 參數 (如果使用「Oracle 驗證」，還要指定 **@login** 和 **@password** 的值)  
+    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 的 `@security_mode` 參數 (如果使用 Oracle 驗證，另請指定 `@login` 和 `@password` 的值)  
   
     -   位於 SQL Server Management Studio 的 **[連接到伺服器]** 對話方塊中，會在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端設定「Oracle 發行者」時用到。  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67901089"
   
 -   快照集代理程式和記錄讀取器代理程式建立連線所使用的帳戶無法使用 [sp_changedistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) 或透過屬性表進行變更，但可以變更密碼。  
   
--   如果將 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 的 **@security_mode** 參數值指定為 1 (Windows 整合式驗證)：  
+-   如果將 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 的 `@security_mode` 參數值指定為 1 (Windows 整合式驗證)：  
   
-    -   快照集代理程式和記錄讀取器代理程式所使用的處理帳戶和密碼 ([sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 和 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) 的 **@job_login** 和 **@job_password** 參數) 必須與連接到 Oracle 發行者的帳戶和密碼相同。  
+    -   快照集代理程式和記錄讀取器代理程式所使用處理帳戶和密碼 ([sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 和 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) 的 `@job_login` 與 `@job_password` 參數) 必須與連接到 Oracle 發行者的帳戶和密碼相同。  
   
-    -   您無法透過 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) 來變更 **@job_login** 參數，但可以變更密碼。  
+    -   您無法透過 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) 來變更 `@job_login` 參數，但可以變更密碼。  
   
  如需有關複寫安全性的詳細資訊，請參閱[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   

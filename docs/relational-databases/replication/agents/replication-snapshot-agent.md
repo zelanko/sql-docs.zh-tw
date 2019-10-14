@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768283"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710347"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ snapshot [ -?]
  這是指無關的刪除動作是否會傳送至訂閱者。 無關的刪除動作是針對不屬於訂閱者資料分割的資料列傳送至訂閱者的 DELETE 命令。 雖然無關的刪除動作不會影響資料完整性或聚合，但是它們可能會產生不必要的網路流量。 **MaxNetworkOptimization** 的預設值為 **0**。 將 **MaxNetworkOptimization** 設定為 **1** 會盡可能減少無關刪除動作的機會，因而縮減網路流量並擴大網路最佳化。 如果聯結篩選和複雜子集篩選的多重層級存在，將這個參數設定為 **1** 也可能會增加中繼資料的儲存體，而且導致發行者端的效能降低。 您應該仔細地評估複寫拓撲，並且只有在無關刪除動作的網路流量高得無法接受，才將 **MaxNetworkOptimization** 設定為 **1** 。  
   
 > [!NOTE]
->  只有當合併式發行集的同步處理最佳化選項設定為 **true** ([sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 **@keep_partition_changes** 參數) 時，將這個參數設定為 **1** 才有用。  
+>  只有當合併式發行集之同步處理最佳化選項設定為 **true** ([sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@keep_partition_changes**` 參數) 時，將這個參數設定為 **1** 才有用。  
   
  **-Output** _output_path_and_file_name_  
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
@@ -250,7 +250,7 @@ snapshot [ -?]
  這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示資料列結尾的字元或字元序列。 預設值是 \n\<,@g>\n。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 這是當執行中並行動態快照集處理序數目到達 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 **@max_concurrent_dynamic_snapshots** 屬性所設定的限制時，快照集代理程式等候的最大秒數。 如果已到達最大秒數而且快照集代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
+ 這是當執行中並行動態快照集處理序數目到達 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@max_concurrent_dynamic_snapshots` 屬性所設定限制時，快照集代理程式等候的最大秒數。 如果已到達最大秒數而且快照集代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  這個參數已被取代，而且是為了回溯相容性才提供支援。  

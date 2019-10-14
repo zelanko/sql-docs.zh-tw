@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/11/2019
-ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.date: 10/03/2019
+ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878631"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816648"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](download.md)**
+
+## <a name="october-2019"></a>2019 年 10 月
+
+2019 年 10 月 2 日 &nbsp; / &nbsp; 版本：1.12.0
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 發行查詢記錄延伸模組 | SQL 記錄延伸模組會儲存所有在 Azure Data Studio 工作階段中執行的過去查詢，並依執行順序列出它們。 使用者可以看到開啟查詢、執行查詢、刪除查詢、暫停查詢記錄或刪除所有查詢記錄項目。 |
+| 新增複製/貼上結果 | 我們已新增從結果方格複製/貼上結果的其他方式。 |
+| 更新為 Powershell 延伸模組 |  |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/milestone/42?closed=1) \(英文\)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+- 筆記型電腦
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
 
 ## <a name="september-2019"></a>2019 年 9 月
 

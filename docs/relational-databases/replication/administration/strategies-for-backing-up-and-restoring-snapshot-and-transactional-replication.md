@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 94135f0fea3373dbab2b1bfba363e9cd9e8385e8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768735"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710336"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>備份與還原快照式和異動複寫的策略
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,19 +207,19 @@ ms.locfileid: "68768735"
   
     1.  在資料庫 **B** 上重新建立發行集。移至步驟 b。  
   
-    2.  重新建立資料庫 **B** 的發行集之資料庫 **A**的訂閱，指定該訂閱應使用備份 ( **sp_addsubscription** 之 **@sync_type** 參數的 [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)值) 來初始化。 移至步驟 c。  
+    2.  重新建立資料庫 **B** 的發行集至資料庫 **A** 的訂閱，指定該訂閱應使用備份 ([sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 之 `@sync_type` 參數的 **initialize with backup** 值) 來初始化。 移至步驟 c。  
   
-    3.  重新建立資料庫 **A** 的發行集之資料庫 **B**的訂閱，指定「訂閱者」已擁有資料 ( **sp_addsubscription** 之 **@sync_type** 參數的 [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)值) 來初始化。 移至步驟 8。  
+    3.  重新建立資料庫 **A** 的發行集至資料庫 **B** 的訂閱，指定訂閱者已擁有資料 ( [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 之 `@sync_type` 參數的 **replication support only** 值) 來初始化。 移至步驟 8。  
   
 8.  執行散發代理程式，以便同步處理資料庫 **A** 和 **B** 中的訂閱。如果已發行資料表中有任何識別資料行，則移至步驟 9。 若為否，請移至步驟 10。  
   
 9. 還原之後，您針對資料庫 **A** 中的每一個資料表指派的識別範圍也會在資料庫 **B** 中使用。請確保還原的資料庫 **B** 已接收到來自失敗資料庫 **B** 中已傳播至資料庫 **A** 和資料庫 **C** 的所有變更；然後為每個資料表的識別範圍重設種子資料。  
   
-    1.  在資料庫 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id** ＞。 移至步驟 b。  
+    1.  在資料庫 **B** 執行 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)，並擷取輸出參數 `@request_id`。 移至步驟 b。  
   
     2.  依預設，「散發代理程式」設定為連續執行；因此 Token 應該會自動傳送到所有的節點。 如果散發代理程式並非以連續模式執行，請執行代理程式。 如需詳細資訊，請參閱[複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)或[啟動和停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。 移至步驟 c。  
   
-    3.  在資料庫 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)，提供步驟 b 中所擷取的 **@request_id** 值。 請稍候，直到所有節點都指示已經收到對等要求為止。 移至步驟 d。  
+    3.  執行 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)，提供步驟 b 中所擷取的 `@request_id` 值。 請稍候，直到所有節點都指示已經收到對等要求為止。 移至步驟 d。  
   
     4.  使用 [DBCC CHECKIDENT](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) 重設資料庫 **B** 上每個資料表的種子資料，以確保使用適當的範圍。 移至步驟 10。  
   
@@ -231,11 +231,11 @@ ms.locfileid: "68768735"
   
     1.  停止點對點拓撲中已發行資料表上的所有活動。 移至步驟 b。  
   
-    2.  在資料庫 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 中還原資料庫 **B** ，並擷取輸出參數 **@request_id** ＞。 移至步驟 c。  
+    2.  在資料庫 **B** 執行 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)，並擷取輸出參數 `@request_id`。 移至步驟 c。  
   
     3.  依預設，「散發代理程式」設定為連續執行；因此 Token 應該會自動傳送到所有的節點。 如果散發代理程式並非以連續模式執行，請執行代理程式。 移至步驟 d。  
   
-    4.  在資料庫 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)，提供步驟 b 中所擷取的 **@request_id** 值。 請稍候，直到所有節點都指示已經收到對等要求為止。 移至步驟 e。  
+    4.  執行 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)，提供步驟 b 中所擷取的 `@request_id` 值。 請稍候，直到所有節點都指示已經收到對等要求為止。 移至步驟 e。  
   
     5.  重新建立資料庫 **C** 的發行集之資料庫 **B**的訂閱，指定「訂閱者」已具有資料。 移至步驟 b。  
   
@@ -245,7 +245,7 @@ ms.locfileid: "68768735"
   
     1.  在資料庫 **B**中查詢 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 資料表，以擷取資料庫 **B** 已從資料庫 **C**所接收之最新交易的記錄序號。  
   
-    2.  重新建立資料庫 **B** 的發行集之資料庫 **C**的訂閱，指定該訂閱應依據 LSN ( **sp_addsubscription** 之 **@sync_type** 參數的 [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)值) 來初始化。 移至步驟 b。  
+    2.  重新建立資料庫 **B** 的發行集至資料庫 **C** 的訂閱，指定該訂閱應依據 LSN ( [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 之 `@sync_type` 參數的 **initialize with backup** 值) 來初始化。 移至步驟 b。  
   
     3.  重新建立資料庫 **B** 的發行集之資料庫 **C**的訂閱，指定「訂閱者」已具有資料。 移至步驟 13。  
   

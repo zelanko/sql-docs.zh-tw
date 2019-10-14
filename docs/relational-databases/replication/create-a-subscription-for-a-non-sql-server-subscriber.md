@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d199fff8243584ee86dd97f97bcc3b8b68beb3dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063109"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710436"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,27 +156,27 @@ ms.locfileid: "68063109"
   
     -   如果 **enabled_for_het_sub** 的值為 1，表示支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
   
-    -   如果 **enabled_for_het_sub** 的值為 0，請執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，並針對 **@property** 指定 **enabled_for_het_sub**，以及針對 **@value** 指定 **true**。  
+    -   如果 **enabled_for_het_sub** 的值為 0，請執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，並針對 `@property` 指定 **enabled_for_het_sub**，以及針對 `@value` 指定 **true**。  
   
         > [!NOTE]  
         >  在將 **enabled_for_het_sub** 變更為 **true**之前，您必須先卸除此發行集的任何現有訂閱。 當此發行集同時支援更新訂閱時，您無法將 **enabled_for_het_sub** 設定為 **true** 。 變更 **enabled_for_het_sub** 會影響其他發行集屬性。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **@publication** 、 **@subscriber** 、 **[訂閱資料庫]** @property **@destination_db** 、 **@subscription_type** @property **@subscription_type** 值，以及 **@subscriber_type** (指定 OLE DB 提供者) 的值 3。  
+3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 `@publication`、`@subscriber`，針對 `@destination_db` 指定 `(default destination)` 值、針對 `@subscription_type` 指定 **push** 值，並針對 `@subscriber_type` 指定值 3 (指定 OLE DB 提供者)。  
   
 4.  在發行集資料庫的發行者端，執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列項目：  
   
-    -   **@subscriber** 和 **@publication** 參數。  
+    -   `@subscriber` 和 `@publication` 參數。  
   
-    -   (選擇性) **[訂閱資料庫]** @property **@subscriber_db** 、  
+    -   `@subscriber_db` 的值  (預設目的地)  
   
-    -   針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @subscriber_provider **@subscriber_provider** 、 **@subscriber_datasrc** 、 **@subscriber_location** 、 **@subscriber_provider_string** 及 **@subscriber_catalog** 中針對非 SQL Server 訂閱者建立訂閱。  
+    -   針對 `@subscriber_provider`、`@subscriber_datasrc`、`@subscriber_location`、`@subscriber_provider_string` 及 `@subscriber_catalog` 的非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源屬性。  
   
-    -   將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證，「散發者」上的「散發代理程式」執行時會針對 **@job_login** ，並將 **@job_password** ＞。  
+    -   散發代理程式在散發者上執行時，針對 `@job_login` 和 `@job_password` 所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證。  
   
-        > [!NOTE]  
-        >  使用「Windows 整合式驗證」建立的連接一律使用由 **@job_login** 及 **@job_password** 中針對非 SQL Server 訂閱者建立訂閱。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
+       > [!NOTE]  
+       > 使用 Windows 整合式驗證所建立連接一律使用由 `@job_login` 和 `@job_password` 指定的 Windows 驗證。 散發代理程式一律使用「Windows 整合式驗證」建立與散發者的本機連接。 依預設，代理程式會使用「Windows 整合式驗證」連接到訂閱者。  
   
-    -   (選擇性) **@subscriber_security_mode** @property **@subscriber_security_mode** ，以及 **@subscriber_login** 及 **@subscriber_password** 中針對非 SQL Server 訂閱者建立訂閱。  
+    -   `@subscriber_security_mode` 的 **0** 值與 `@subscriber_login` 和 `@subscriber_password` 的 OLE DB 提供者登入資訊。  
   
     -   此訂閱之散發代理程式作業的排程。 如需詳細資訊，請參閱 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   

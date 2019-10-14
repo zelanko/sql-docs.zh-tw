@@ -1,10 +1,10 @@
 ---
 title: 部署 Integration Services (SSIS) 專案和套件 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -18,31 +18,31 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35fb523d95b47b64e10feab8d4caa2370b79b5f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71282637"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680967"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和舊版封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
 如需舊版封裝部署模型的詳細資訊，請參閱[舊版封裝部署 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]引進專案部署模型。 在此部署模型中，您無法在未部署整個專案的情況下部署一或多個套件。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引進累加套件部署功能，可讓您部署一或多個套件，而不需部署整個專案。  
+>  [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]引進專案部署模型。 在此部署模型中，您無法在未部署整個專案的情況下部署一或多個套件。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引進累加套件部署功能，可讓您部署一或多個套件，而不需部署整個專案。
 
 > [!NOTE]
 > 本文描述如何在一般情況下部署 SSIS 套件，以及如何在內部部署部署套件。 您也可以將 SSIS 套件部署到下列平台：
 > - **Microsoft Azure 雲端**。 如需詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 > - **Linux**。 如需詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../../linux/sql-server-linux-migrate-ssis.md)。
 
-## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>專案部署模型與舊版封裝部署模型的比較  
+## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>專案部署模型與舊版封裝部署模型的比較
+
  您為專案選擇的部署模型類型，會決定可用於該專案的開發及管理選項。 下表顯示使用專案部署模型與使用封裝部署模型之間的差異和相似性。  
   
 |使用專案部署模型時|使用舊版封裝部署模型時|  
@@ -58,9 +58,8 @@ ms.locfileid: "71282637"
 |在執行期間，會自動擷取封裝所產生的事件，並儲存至目錄。 您可以用 Transact-SQL 檢視來查詢這些事件。|在執行期間，不會自動擷取封裝所產生的事件。 必須將記錄提供者加入封裝，才能擷取事件。|  
 |封裝是在單獨的 Windows 處理序中執行。|封裝是在單獨的 Windows 處理序中執行。|  
 |使用 SQL Server Agent 來排定封裝執行的時程。|使用 SQL Server Agent 來排定封裝執行的時程。|  
-  
- [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]引進專案部署模型。 如果您使用此模型，您就無法在未部署整個專案的情況下部署一或多個封裝。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引進累加封裝部署功能，可讓您部署一個或多個封裝，而不需部署整個專案。   
-  
+
+
 ## <a name="features-of-project-deployment-model"></a>專案部署模型的功能  
  下表列出可用於專為專案部署模型開發之專案的功能。  
   
@@ -79,9 +78,10 @@ ms.locfileid: "71282637"
 
 如果您變更預設 SSIS 服務帳戶，則可能需要先將其他權限授與非預設服務帳戶，才能成功部署套件。 如果非預設服務帳戶沒有必要權限，您可能會看到下列錯誤訊息。
 
-*執行使用者自訂常式或彙總 "deploy_project_internal" 時，發生 .NET Framework 錯誤：System.ComponentModel.Win32Exception:用戶端沒有必要的權限。*
+`A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.`
 
-此錯誤通常是缺少 DCOM 權限的結果。 若要修正錯誤，請執行下列動作。
+此錯誤通常是缺少 DCOM 權限的結果。 若要修正錯誤，請執行下列動作：
 
 1.  開啟 [元件服務]  主控台 (或執行 Dcomcnfg.exe)。
 2.  在 [元件服務]  主控台中，展開 [元件服務]   > [電腦]   > [我的電腦]   > [DCOM 設定]  。
@@ -92,8 +92,9 @@ ms.locfileid: "71282637"
 7.  在 [權限]  對話方塊中，新增非預設服務帳戶，並視需要授與 [允許]  權限。 帳戶通常會有 [本機啟動]  和 [本機啟用]  權限。
 8.  按兩次 [確定]  ，然後關閉 [元件服務]  主控台。
 
-如需本節中所述錯誤的詳細資訊，以及 SSIS 服務帳戶所需權限的詳細資訊，請參閱下列部落格文章。  
-[System.ComponentModel.Win32Exception:部署 SSIS 專案時，用戶端沒有這項特殊權限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+如需本節中所述錯誤及 SSIS 服務帳戶所需權限的詳細資訊，請參閱下列部落格文章：
+ 
+- [System.ComponentModel.Win32Exception:部署 SSIS 專案時，用戶端沒有這項特殊權限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>將專案部署至 Integration Services 伺服器
   在目前版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以將專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器可讓您管理封裝、執行封裝，以及利用環境設定封裝的執行值。  
@@ -105,7 +106,7 @@ ms.locfileid: "71282637"
   
 1.  建立 SSISDB 目錄 (如果尚未建立)。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
-2.  請執行 [Integration Services 專案轉換精靈]  將專案轉換為專案部署模型。 如需詳細資訊，請參閱以下指示：[將專案轉換為專案部署模型](#convert)  
+2.  請執行 [Integration Services 專案轉換精靈]  將專案轉換為專案部署模型。 如需詳細資訊，請參閱下列指示：[將專案轉換為專案部署模型](#convert)  
   
     -   如果您在 [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 或更新版本中建立專案，則專案會根據預設使用專案部署模型。  
   
@@ -144,17 +145,17 @@ ms.locfileid: "71282637"
   
 1.  開啟 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的專案，然後從 [專案]  功能表中選取 [部署]  ，以啟動 [Integration Services 部署精靈]  。  
   
-     -或-  
+     中的多個  
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，展開 [物件總管] 內的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > SSISDB  節點，然後找出您要部署之專案的 [專案] 資料夾。 以滑鼠右鍵按一下 [專案]  資料夾，然後按一下 [部署專案]  。  
   
-     -或-  
+     中的多個  
   
      在命令提示字元中，從 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 執行 **isdeploymentwizard.exe**。 64 位元的電腦上的 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**也有提供 32 位元版本的工具。  
   
 2.  在 [選取來源]  頁面上，按一下 [專案部署檔案]  以選取專案的部署檔案。  
   
-     -或-  
+     中的多個  
   
      按一下 [Integration Services 目錄]  ，選取已經部署至 SSISDB 目錄的專案。  
   
@@ -167,7 +168,7 @@ ms.locfileid: "71282637"
   
 1.  在命令提示字元中，從 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 執行 **isdeploymentwizard.exe**。 64 位元的電腦上的 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn** 也有提供 32 位元版本的工具。  
   
-2.  在 [選取來源]  頁面上，切換至 [封裝部署模型]  。 然後，選取含有來源封裝的資料夾並設定封裝。  
+2.  在 [選取來源]  頁面上，切換至 [封裝部署模型]  。 然後，選取含有來源套件的資料夾並設定套件。  
   
 3.  完成精靈。 遵循 [Package Deployment Model](#PackageModel)(封裝部署模型) 中所述的其餘步驟。  
   
@@ -179,7 +180,7 @@ ms.locfileid: "71282637"
   
 3.  如果您看到 [簡介]  頁面，按一下 [下一步]  以繼續。  
   
-4.  在 [選取來源]  頁面上，切換至 [封裝部署模型]  。 然後，選取含有來源封裝的資料夾並設定封裝。  
+4.  在 [選取來源]  頁面上，切換至 [封裝部署模型]  。 然後，選取含有來源套件的資料夾並設定套件。  
   
 5.  完成精靈。 遵循 [Package Deployment Model](#PackageModel)(封裝部署模型) 中所述的其餘步驟。  
   
@@ -266,8 +267,7 @@ static void Main()
 
 ## <a name="convert-to-package-deployment-model-dialog-box"></a>轉換成封裝部署模型對話方塊
   **[轉換成封裝部署模型]** 命令可讓您在檢查專案和專案中的每個封裝是否與該模型相容之後，將封裝轉換成封裝部署模型。 如果某個封裝使用專案部署模型獨有的功能 (例如參數)，則無法轉換該封裝。  
-  
-### <a name="task-list"></a>工作清單  
+
  將封裝轉換成封裝部署模型需要兩個步驟。  
   
 1.  當您從 **[專案]** 功能表選取 **[轉換成封裝部署模型]** 命令時，會檢查專案和每個封裝是否與此模型相容。 結果會顯示在 **[結果]** 資料表中。  
@@ -276,7 +276,8 @@ static void Main()
   
 2.  如果專案和所有封裝通過相容性測試，則按一下 **[確定]** 以轉換封裝。  
   
-> **注意：** 若要將專案轉換為專案部署模型，請使用 **[Integration Services 專案轉換精靈]** 。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
+> [!NOTE]
+> 若要將專案轉換為專案部署模型，請使用 **[Integration Services 專案轉換精靈]** 。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 部署精靈
   [Integration Services 部署精靈]  支援兩種部署模型：
@@ -287,14 +288,15 @@ static void Main()
  
  **套件部署模型** 可讓您將已更新的套件部署至 SSIS 目錄，而無須部署整個專案。 
  
- > **注意：** 此精靈的預設部署為專案部署模型。  
+ > [!NOTE]
+ > 此精靈的預設部署為專案部署模型。  
   
 ### <a name="launch-the-wizard"></a>啟動精靈
 透過下列其中一個方式來啟動精靈：
 
  - 在 Windows Search 中輸入「SQL Server 部署精靈」  
 
-**OR**
+ 中的多個
 
  - 在 SQL Server 安裝資料夾下搜尋可執行檔 **ISDeploymentWizard.exe**，例如："C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn"。 
  
@@ -304,41 +306,50 @@ static void Main()
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>選取來源  
+#### <a name="select-source"></a>選取來源
+
  若要部署您建立的專案部署檔案，請選取 [專案部署檔案]  ，並輸入 .ispac 檔案的路徑。 若要部署位於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的專案，請選取 **[Integration Services 目錄]** ，然後輸入伺服器名稱以及該專案在目錄中的路徑。 按一下 [下一步]  ，以查看 [選取目的地]  頁面。  
   
-#### <a name="select-destination"></a>選取目的地  
+#### <a name="select-destination"></a>選取目的地
+
  若要選取專案在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的目的地資料夾，請輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或按一下 **[瀏覽]** ，從伺服器清單中選取。 在 SSISDB 中輸入專案路徑，或按一下 **[瀏覽]** 來選取路徑。 按一下 [下一步]  ，以切換至 [檢閱]  頁面。  
   
-#### <a name="review-and-deploy"></a>檢閱 (和部署)  
+#### <a name="review-and-deploy"></a>檢閱 (和部署)
+
  此頁面可讓您檢閱所選取的設定。 您可以按一下 **[上一步]** ，或按一下左窗格中的任何步驟來變更您的選取項目。 按一下 [部署]  開始部署程序。  
   
-#### <a name="results"></a>結果  
+#### <a name="results"></a>結果
+
  完成部署程序之後，您應該會看到 [結果]  頁面。 此頁面會顯示每個動作執行成功或失敗。 如果動作失敗，按一下 **[結果]** 資料行中的 **[失敗]** 以顯示錯誤的說明。 按一下 [儲存報表]  將結果儲存至 XML 檔案，或按一下 [關閉]  結束精靈。
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>選取來源  
+#### <a name="select-source"></a>選取來源
+
  若您選取 [封裝部署]  選項做為 **部署模型** ，則 **Integration Services 部署精靈** 中的 [選取來源]  頁面會顯示封裝部署模型的特定設定。  
   
- 若要選取來源封裝，請按一下 [瀏覽...]  按鈕以選取包含封裝的**資料夾**，或是在 [封裝資料夾路徑]  文字方塊中輸入資料夾路徑，然後在頁面底端按一下 [重新整理]  按鈕。 現在，您應會於清單方塊中的指定資料夾看見所有封裝。 根據預設，系統會選取所有封裝。 按一下第一個資料行的 **核取方塊** ，選擇您想要部署至伺服器的封裝。  
+ 若要選取來源套件，請按一下 [瀏覽...]  按鈕以選取包含套件的**資料夾**，或是在 [套件資料夾路徑]  文字方塊中鍵入資料夾路徑，然後在頁面底端按一下 [重新整理]  按鈕。 現在，您應會於清單方塊中的指定資料夾看見所有封裝。 根據預設，系統會選取所有封裝。 按一下第一個資料行的 **核取方塊** ，選擇您想要部署至伺服器的封裝。  
   
- 參閱 [狀態]  和 [訊息]  資料行，以確認封裝的狀態。 若狀態設為 [準備就緒]  或 [警告]  ，則部署精靈不會封鎖部署處理程序。 然而，若狀態設為 [錯誤]  ，則精靈將不會繼續部署所選的封裝。 若要檢視詳細的警告/錯誤訊息，請按一下 [訊息]  資料行中的連結。  
+ 參閱 [狀態]  和 [訊息]  資料行，以確認封裝的狀態。 若狀態設為 [準備就緒]  或 [警告]  ，則部署精靈不會封鎖部署處理程序。 若狀態設為 [錯誤]  ，則精靈將不會繼續部署所選的套件。 若要檢視詳細的警告或錯誤訊息，請按一下 [訊息]  資料行中的連結。  
   
- 若使用密碼將敏感性資料或封裝資料加密處理，請在 [密碼]  資料行中輸入密碼，然後按一下 [重新整理]  按鈕確認密碼已獲接受。 若密碼正確，則狀態會變更為 [準備就緒]  ，且警告訊息會消失。 若有多個具相同密碼的封裝，請選取具相同加密密碼的封裝，在 [密碼]  文字方塊中輸入密碼，然後按一下 [套用]  按鈕。 密碼會套用至選取的封裝。  
+ 若使用密碼將敏感性資料或封裝資料加密處理，請在 [密碼]  資料行中輸入密碼，然後按一下 [重新整理]  按鈕確認密碼已獲接受。 若密碼正確，則狀態會變更為 [準備就緒]  ，且警告訊息會消失。 若有多個具相同密碼的套件，請選取具相同加密密碼的套件，在 [密碼]  文字方塊中鍵入密碼，然後選取 [套用]  按鈕。 密碼會套用至選取的封裝。  
   
  若所有選取的封裝狀態皆未設定為 [錯誤]  ，則會啟用 [下一步]  按鈕讓您得以繼續執行封裝部署處理程序。  
   
-#### <a name="select-destination"></a>選取目的地  
- 選取封裝來源後，按一下 [下一步]  按鈕切換至 [選取目的地]  頁面。 封裝必須部署至 SSIS 目錄 (SSISDB) 中的專案。 因此在部署封裝前，請確定目的地專案已存在於 SSIS 目錄。 否則會建立空白專案。在 [選取目的地]  頁面的 [伺服器名稱]  文字方塊中輸入伺服器名稱，或是按一下 [瀏覽...]  按鈕以選取伺服器執行個體。 然後按一下 [路徑]  文字方塊旁的 [瀏覽...]  按鈕，以指定目的地專案。 若專案不存在，請按一下 [新增專案...]  以建立空白專案做為目的地專案。 專案 **必須** 建立在資料夾下方。  
+#### <a name="select-destination"></a>選取目的地
+
+ 選取套件來源後，按一下 [下一步]  按鈕切換至 [選取目的地]  頁面。 封裝必須部署至 SSIS 目錄 (SSISDB) 中的專案。 在部署套件前，請確定目的地專案已存在於 SSIS 目錄。 如果專案不存在，請建立空白專案。 在 [選取目的地]  頁面的 [伺服器名稱]  文字方塊中鍵入伺服器名稱，或按一下 [瀏覽...]  按鈕以選取伺服器執行個體。 然後按一下 [路徑]  文字方塊旁的 [瀏覽...]  按鈕，以指定目的地專案。 若專案不存在，請按一下 [新增專案...]  按鈕以建立空白專案作為目的地專案。 專案必須建立在資料夾下方。  
   
-#### <a name="review-and-deploy"></a>檢閱和部署  
- 在 [選取目的地]  頁面上，按一下 [下一步]  切換至 **Integration Services 部署精靈** 中的 [檢閱]  頁面。 在檢閱頁面上，檢閱有關部署動作的摘要報告。 驗證完成後，按一下 [部署]  按鈕以執行部署動作。  
+#### <a name="review-and-deploy"></a>檢閱和部署
+
+ 在 [選取目的地]  頁面上，按一下 [下一步]  切換至 **Integration Services 部署精靈** 中的 [檢閱]  頁面。 在檢閱頁面上，檢閱有關部署動作的摘要報告。 驗證完成後，請按一下 [部署]  按鈕以執行部署動作。  
   
-#### <a name="results"></a>結果  
- 部署完成後，您應該會看見 [結果]  頁面。 在 [結果]  頁面中，檢閱部署處理程序中每個步驟的結果。 在 [結果]  頁面上，按一下 [儲存報表]  以儲存部署報表，或是按一下 [關閉]  以關閉精靈。  
+#### <a name="results"></a>結果
+
+ 部署完成後，您應該會看見 [結果]  頁面。 在 [結果]  頁面中，檢閱部署程序中每個步驟的結果。 按一下 [儲存報表]  以儲存部署報表，或按一下 [關閉]  以關閉精靈。  
 
 ## <a name="create-and-map-a-server-environment"></a>建立和對應伺服器環境
+
   您可以建立伺服器環境，針對已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器之專案中所包含的封裝，指定執行值。 接著您可以針對特定封裝、進入點封裝，或給定專案中的所有封裝，將環境變數對應至參數。 進入點封裝通常是執行子封裝的父封裝。  
   
 > [!IMPORTANT]  
@@ -348,17 +359,17 @@ static void Main()
   
 ### <a name="to-create-and-use-a-server-environment"></a>若要建立和使用伺服器環境  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的物件總管中，展開 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄> **SSISDB** 節點，然後針對您要建立其環境的專案，尋找 [環境]  資料夾。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [物件總管] 中，展開 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄 **SSISDB** 節點，然後針對您要建立其環境的專案，尋找 [環境]  資料夾。  
   
 2.  在以滑鼠右鍵按一下 [環境]  資料夾，然後按一下 [建立環境]  。  
   
-3.  輸入環境的名稱，並選擇性地輸入描述，然後按一下 [確定]  。  
+3.  鍵入環境的名稱，並選擇性地新增描述。 按一下 [確定]  。  
   
 4.  以滑鼠右鍵按一下新環境，然後按一下 [屬性]  。  
   
 5.  在 [變數]  頁面上執行下列動作，以加入變數。  
   
-    1.  選取變數的 [類型]  。 變數的名稱**無須**與對應至該變數之專案參數的名稱相符。  
+    1.  選取變數的 [類型]  。 變數名稱無須與對應至該變數的專案參數名稱相符。  
   
     2.  選擇性地輸入變數的 [描述]  。  
   
@@ -378,7 +389,7 @@ static void Main()
   
     2.  在 [登入或角色]  區域內，選取您想要授與或拒絕其權限的使用者或角色。  
   
-    3.  在 [明確]  區域內，按一下每項權限旁的 [授與]  或 [拒絕]  。  
+    3.  在 [明確]  區域內，選取每項權限旁的 [授與]  或 [拒絕]  。  
   
 7.  若要編寫環境的指令碼，請按一下 [指令碼]  。 預設情況下，指令碼會顯示在新的 [查詢編輯器] 視窗中。  
   
@@ -393,7 +404,7 @@ static void Main()
   
 11. 再次以滑鼠右鍵按一下專案，然後按一下 [設定]  。  
   
-12. 若要將環境變數對應至您在設計階段加入封裝中的參數，或對應至您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案轉換為專案部署模型時所產生的參數，請執行下列操作。  
+12. 若要將環境變數對應至您在設計階段新增至套件的參數，或對應至您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案轉換為專案部署模型時所產生的參數，請執行下列動作：
   
     1.  在 [參數]  頁面的 [參數]  索引標籤中，按一下 [值]  欄位旁的瀏覽按鈕。  
   
@@ -401,19 +412,20 @@ static void Main()
   
 13. 若要將環境變數對應至連線管理員屬性，請執行下列操作。 SSIS 伺服器上會自動產生連接管理員屬性的參數。  
   
-    1.  在 [參數]  頁面的 [連線管理員]  索引標籤中，按一下 [值]  欄位旁的瀏覽按鈕。  
+    1.  在 [參數]  頁面的 [連線管理員]  索引標籤中，按一下 [值]  欄位的 [瀏覽]  按鈕。  
   
     2.  按一下 [使用環境變數]  ，然後選取您建立的環境變數。  
   
 14. 按兩次 [確定]  ，以儲存您的變更。  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用預存程序部署及執行 SSIS 封裝
-  當您設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案來使用專案部署模型時，您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 目錄中的預存程序來部署專案及執行封裝。 如需有關專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)＞。  
+
+  當您設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案來使用專案部署模型時，您可以使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 目錄中的預存程序來部署專案及執行封裝。 如需有關專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model)＞。  
   
  您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 部署專案及執行封裝。 如需詳細資訊，請參閱＜ **另請參閱** ＞一節中的主題。  
   
 > [!TIP]
->  您可以執行以下動作，輕鬆地針對底下程序中所列的預存程序產生 Transact-SQL 陳述式 (除了 catalog.deploy_project 以外)：  
+>  您可以執行以下動作，輕鬆地針對底下程序中所列的預存程序產生 Transact-SQL 陳述式 (除了 catalog.deploy_project 以外)：
 > 
 >  1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開 [物件總管] 中的 **Integration Services 目錄** 節點，並導覽到您要執行的封裝。  
 > 2.  以滑鼠右鍵按一下封裝，然後按一下 [執行]  。  
@@ -426,9 +438,9 @@ static void Main()
   
 1.  呼叫 [catalog.deploy_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) 將包含封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
-     若要擷取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署檔案的二進位內容，請針對 *@project_stream* 參數使用 SELECT 陳述式搭配 OPENROWSET 函數和 BULK 資料列集提供者。 BULK 資料列集提供者可讓您從檔案讀取資料。 BULK 資料列集提供者的 SINGLE_BLOB 引數會傳回資料檔的內容當做類型為 varbinary(max) 的單一資料列、單一資料行資料列集。 如需詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)。  
+     若要擷取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署檔案的二進位內容，請針對 _\@project_stream_ 參數_，使用 SELECT 陳述式搭配 OPENROWSET 函式和 BULK 資料列集提供者。 BULK 資料列集提供者可讓您從檔案讀取資料。 BULK 資料列集提供者的 SINGLE_BLOB 引數會傳回資料檔的內容當做類型為 varbinary(max) 的單一資料列、單一資料行資料列集。 如需詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)。  
   
-     在下列範例中，SSISPackages_ProjectDeployment 專案會部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的 [SSIS 封裝] 資料夾。 二進位資料會從專案檔 (SSISPackage_ProjectDeployment.ispac) 讀取，並且儲存在類型為 varbinary(max) 的 *@ProjectBinary* 參數中。 *@ProjectBinary* 參數值會指派給 *@project_stream* 參數。  
+     在下列範例中，SSISPackages_ProjectDeployment 專案會部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的 [SSIS 封裝] 資料夾。 二進位資料會從專案檔 (SSISPackage_ProjectDeployment.ispac) 讀取，且儲存在類型為 varbinary(max) 的 _\@ProjectBinary 參數中。 _\@ProjectBinary_ 參數值會指派給 _\@project_stream_ 參數。  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -480,7 +492,8 @@ static void Main()
   
     ```  
   
-### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>若要使用預存程序在不同伺服器之間部署專案  
+### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>若要使用預存程序在不同伺服器之間部署專案
+
  您可以使用 [catalog.get_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md) 和 [catalog.deploy_project &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) 預存程序在不同伺服器之間部署專案。  
   
  在執行預存程序之前，您必須執行下列動作。  
@@ -547,7 +560,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   開啟 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的專案，然後在方案總管中，以滑鼠右鍵按一下該專案，並按一下 [轉換為專案部署模型]  。  
   
--   從 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的物件總管中，以滑鼠右鍵按一下 [專案]  節點，然後選取 [匯入封裝]  。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [物件總管] 中，以滑鼠右鍵按一下 [Integration Services目錄] 中的  [專案]  節點，然後選取 [匯入套件]  。  
   
  根據您是從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 還是從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [Integration Services 專案轉換精靈]  ，此精靈會執行不同的轉換工作。   
   

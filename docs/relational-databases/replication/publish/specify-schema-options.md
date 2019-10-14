@@ -16,12 +16,12 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 516434ca2bb44701b432cb095d252f16278134a0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b427d9cdf471133d78db71159041b03f8cddebf8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764099"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710847"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>指定 SQL Server 複寫的結構描述選項
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68764099"
   
 ###  <a name="Recommendations"></a> 建議  
   
--   如需完整結構描述選項清單，請參閱 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 和 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 **@schema_option** 參數。  
+-   如需結構描述選項的完整清單，請參閱 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 `@schema_option` 參數。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在 [發行項屬性 - \<發行項>]  對話方塊的 [屬性]  索引標籤上指定結構描述選項，例如是否將條件約束與觸發程序複製至訂閱者。 [新增發行集精靈] 與 [發行集屬性 - \<發行集>]  對話方塊中都有提供此索引標籤。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)和[檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
@@ -86,15 +86,15 @@ ms.locfileid: "68764099"
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>在針對快照式或交易式發行集定義發行項時，指定結構描述選項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱、針對 **@article** 指定發行項名稱、針對 **@source_object** 指定發行的資料庫物件、針對 **@type** 指定資料庫物件的類型，並針對 [| (Bitwise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 指定一個或多個結構描述選項的 **@schema_option** 中指定結構描述選項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 `@publication` 指定發行項所屬的發行集名稱、針對 `@article` 指定發行項名稱、針對 `@source_object` 指定發行的資料庫物件、針對 `@type` 指定資料庫物件的類型，並針對 `@schema_option` 指定一或多個結構描述選項的 [| (Bitwise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 結果。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>在針對合併式發行集定義發行項時，指定結構描述選項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱、針對 **@article** 指定發行項名稱、針對 **@source_object** 指定資料庫物件的類型，並針對 [| (Bitwise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 指定一個或多個結構描述選項的 **@schema_option** 中指定結構描述選項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 `@publication` 指定發行項所屬的發行集名稱、針對 `@article` 指定發行項名稱、針對 `@source_object` 指定發行的資料庫物件、並針對 `@schema_option` 指定一或多個結構描述選項的 [| (Bitwise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 結果。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>針對快照式或交易式發行集中的現有發行項變更結構描述選項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱，並針對 **@article** 中指定結構描述選項。 請記下結果集中 **schema_option** 資料行的值。  
+1.  在發行集資料庫的發行者上，執行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。 針對 `@publication` 指定發行項所屬的發行集名稱，並針對 `@article` 中指定發行項名稱。 請記下結果集中 `schema_option` 資料行的值。  
   
 2.  請使用步驟 1 中的值及所要的結構描述選項值來執行 [& (Bitwise AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 運算，以判斷是否已設定選項。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "68764099"
   
 3.  如果未設定此選項，請使用步驟 1 中的值及所要的結構描述選項值來執行 [| (Bitwise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 運算。  
   
-4.  在發行集資料庫的發行者上，執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱、針對 **@article** 指定發行項名稱、針對 **schema_option** 指定 **@property** 的值，並針對 **@value** 中指定結構描述選項。  
+4.  在發行集資料庫的發行者上，執行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 針對 `@publication` 指定發行項所屬的發行集名稱、針對 `@article` 指定發行項名稱、針對 `@property` 指定 `schema_option` 的值，並針對 `@value` 指定步驟 3 中的十六進位結果。  
   
 5.  執行快照集代理程式來產生新的快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>變更合併發行中現有發行項的結構描述選項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱，並針對 **@article** 中指定結構描述選項。 請記下結果集中 **schema_option** 資料行的值。  
+1.  在發行集資料庫的發行者上，執行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)。 針對 `@publication` 指定發行項所屬的發行集名稱，並針對 `@article` 指定發行項名稱。 請記下結果集中 **schema_option** 資料行的值。  
   
 2.  請使用步驟 1 中的值及所要的結構描述選項值來執行 [& (Bitwise AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 運算，以判斷是否已設定選項。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68764099"
   
 3.  如果未設定此選項，請使用步驟 1 中的值及所要的結構描述選項值來執行 [| (Bitwise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 運算。  
   
-4.  在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 **@publication** 指定發行項所屬的發行集名稱、針對 **@article** 指定發行項名稱、針對 **schema_option** 指定 **@property** 的值，並針對 **@value** 中指定結構描述選項。  
+4.  在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 `@publication` 指定發行項所屬的發行集名稱、針對 `@article` 指定發行項名稱、針對 `@property` 指定 `schema_option` 的值，並針對 `@value` 指定步驟 3 中的十六進位結果。  
   
 5.  執行快照集代理程式來產生新的快照集。 如需詳細資訊，請參閱 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   

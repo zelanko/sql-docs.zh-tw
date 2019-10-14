@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903097"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710315"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "67903097"
   
      如需有關代理程式所需權限的詳細資訊，請參閱＜ [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
   
--   請指定網域帳戶，此帳戶應與您在指定「新增訂閱精靈」之 **[Web 伺服器資訊]** 頁面中的帳戶和密碼，或指定 **@internet_url** 及 **@internet_login** 和 [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)＞。 此帳戶必須具有快照集共用的讀取權限。  
+-   請指定網域帳戶，此帳戶應與您在指定 [新增訂閱精靈] 的 [網頁伺服器資訊]  頁面中帳戶和密碼，或指定 [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) 的 `@internet_url` 和 `@internet_login` 參數值時，合併代理程式所使用的網域帳戶相同。 此帳戶必須具有快照集共用的讀取權限。  
   
 -   每個發行集應使用個別的 IIS 虛擬目錄。  
   

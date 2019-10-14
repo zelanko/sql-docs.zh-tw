@@ -17,12 +17,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fa63ed5cf1367bc0834b0241f40fa9e52f741c87
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b8a72455aafbf31f5a926719e821f3d15393d953
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769647"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710785"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>管理發行集存取清單中的登入
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,15 +62,15 @@ ms.locfileid: "68769647"
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>檢視屬於 PAL 的群組和登入  
   
-1.  在發行集資料庫的發行者上，執行 [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)。 針對 **@publication** 指定發行集名稱。 這樣會顯示有關 PAL 中群組和登入的資訊。  
+1.  在發行集資料庫的發行者上，執行 [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)。 針對 `@publication` 指定發行集名稱。 這樣會顯示有關 PAL 中群組和登入的資訊。  
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>將群組和登入加入 PAL  
   
-1.  在發行集資料庫的發行者上，執行 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)。 針對 **@publication** 指定發行集名稱，並針對 **@login** 指定加入的登入或群組名稱。  
+1.  在發行集資料庫的發行者上，執行 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)。 針對 `@publication` 指定發行集名稱，並針對 `@login` 指定正在新增之登入或群組的名稱。  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>從 PAL 中移除群組和登入  
   
-1.  在發行集資料庫的發行者上，執行 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)。 針對 **@publication** 指定發行集名稱，並針對 **@login** 指定移除的登入或群組名稱。  
+1.  在發行集資料庫的發行者上，執行 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)。 針對 `@publication` 指定發行集名稱，並針對 `@login` 指定正在移除之登入或群組名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理發行集存取清單中的登入](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   

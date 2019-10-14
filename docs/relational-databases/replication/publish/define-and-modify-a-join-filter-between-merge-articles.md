@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907801"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710908"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>定義和修改合併發行項之間的聯結篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "67907801"
   
 2.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 來針對發行集定義一個或多個相關發行項，這些發行項也稱為子發行項。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
-3.  在發行集資料庫的發行者端，執行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 **@publication** 、針對 **@filtername** 指定此篩選的唯一名稱、針對 **@article** 指定步驟 2 中建立的子發行項名稱、針對 **@join_articlename** 指定聯結的父發行項名稱，以及針對 **@join_unique_key** 指定下列其中一個值：  
+3.  在發行集資料庫的發行者端，執行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 `@publication`、針對 `@filtername` 指定此篩選的唯一名稱、針對 `@article` 指定步驟 2 中建立的子發行項名稱、針對 `@join_articlename` 指定聯結的父發行項名稱，以及針對 `@join_unique_key` 指定下列其中一個值：  
   
     -   **0** - 指示父發行項與子發行項之間的多對一或多對多的聯結。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67907801"
      這樣會定義兩個發行項之間的聯結篩選。  
   
     > [!CAUTION]  
-    >  只有當保證唯一性的父發行項之基礎資料表中的聯結資料行上有條件約束時，才能將 **@join_unique_key** 設為 **1** 。 如果將 **@join_unique_key** 錯誤地設定為 **1** ，可能會發生資料無法聚合。  
+    >  只有當保證唯一性的父發行項基礎資料表中聯結資料行上有條件約束時，才能將 `@join_unique_key` 設為 **1**。 如果將 `@join_unique_key` 錯誤地設定為 **1**，可能會發生資料無法聚合。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例會針對合併式發行集定義發行項，其中會針對 `SalesOrderDetail` 資料表篩選 `SalesOrderHeader` 資料表發行項 (前者資料表本身會使用靜態資料列篩選來進行篩選)。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  

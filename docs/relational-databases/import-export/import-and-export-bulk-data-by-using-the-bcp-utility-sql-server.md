@@ -1,10 +1,7 @@
 ---
 title: 使用 bcp 公用程式匯入及匯出大量資料 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +9,25 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 09/28/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0df035eaca45f10c8030e0ae30326035b304b2bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0a1a510e717ebb962f39c3b0bb1a342ef52751d
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035674"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708001"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 公用程式匯入及匯出大量資料 (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題提供有關使用 [bcp 公用程式](../../tools/bcp-utility.md)，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫任何執行 SELECT 陳述式的位置 (包括資料分割檢視) 匯出資料的概觀。  
+本主題提供有關使用 [bcp 公用程式](../../tools/bcp-utility.md)，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫任何執行 SELECT 陳述式的位置 (包括資料分割檢視) 匯出資料的概觀。  
   
  bcp 公用程式 (Bcp.exe) 是使用大量複製程式 (BCP) API 的命令列工具。 bcp 公用程式可執行以下工作：  
   
@@ -53,15 +55,20 @@ ms.locfileid: "68035674"
 |---|
 |[bcp Utility](../../tools/bcp-utility.md)<br /><br />大量匯入或大量匯出的資料格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用原生格式匯入或匯出資料 (SQL Server)](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字元格式匯入或匯出資料 (SQL Server)](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 原生格式匯入或匯出資料 (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字元格式匯入或匯出資料 (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定欄位與資料列結束字元 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[大量匯入期間保留 Null 或使用預設值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[大量匯入資料時保留識別值 (SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />匯入或匯出資料的格式檔案 (SQL Server)<br />&emsp;&#9679;&emsp;[建立格式檔案 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案大量匯入資料 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料表資料行 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料欄位 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[大量匯入與匯出 XML 文件的範例 (SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
 
-  
-## <a name="more-examples-and-information"></a>更多範例和資訊  
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [SELECT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
- [準備大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-to-bulk-import-data-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
- [資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
-  
-  
+## <a name="more-examples-and-information"></a>更多範例和資訊
+
+- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
+
+- [SELECT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)
+
+- [bcp 公用程式](../../tools/bcp-utility.md)
+
+- [準備大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-to-bulk-import-data-sql-server.md)
+
+- [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)
+
+- [資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
+
+- [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)
+
+- [建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)

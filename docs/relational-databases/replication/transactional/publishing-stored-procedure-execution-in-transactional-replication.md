@@ -15,12 +15,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769328"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710737"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在異動複寫中發行預存程序執行
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio：[在交易式發行集中發行預存程序的執行項 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   複寫 Transact-SQL 程式設計：執行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)，並指定值 'serializable proc exec' (建議) 或為參數 **@type** 指定 'proc exec'。 如需定義發行項的詳細資訊，請參閱[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
+-   複寫 Transact-SQL 程式設計：執行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)，並指定值 'serializable proc exec' (建議) 或針對 `@type` 參數指定 'proc exec'。 如需定義發行項的詳細資訊，請參閱[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>在訂閱者端修改程序  
  根據預設值，「發行者」的預存程序定義會傳播到各個「訂閱者」。 但是，您也可以在「訂閱者」端修改預存程序。 若您想在「發行者」和「訂閱者」執行不同的邏輯，這個方式就非常有幫助。 例如，考慮 **sp_big_delete**這個「發行者」的預存程序有兩個功能：它會從複寫資料表 **big_table1** 刪除 1,000,000 個資料列，然後更新非複寫的資料表 **big_table2**。 若要降低網路資源的需求，您應該透過發行 **sp_big_delete**，將一百萬個資料列刪除做為預存程序傳播。 在「訂閱者」端，您可以將 **sp_big_delete** 修改為只刪除一百萬個資料列，並且不執行後續對 **big_table2**的更新。  
@@ -90,7 +90,7 @@ COMMIT TRANSACTION T2
   
  當您在序列化交易內執行程序時，鎖定的時間更長且可能導致並行性降低。  
   
-## <a name="the-xactabort-setting"></a>XACT_ABORT 設定  
+## <a name="the-xact_abort-setting"></a>XACT_ABORT 設定  
  複寫預存程序執行時，執行預存程序之工作階段的設定應將 XACT_ABORT 指定為 ON。 如果 XACT_ABORT 設定為 OFF，並在「發行者」端執行程序時出現錯誤，則「訂閱者」端也會出現相同的錯誤，導致「散發代理程式」失敗。 將 XACT_ABORT 指定為 ON 可確保「發行者」端執行期間遇到的任何錯誤，都會使整個執行回復，以避免「散發代理程式」失敗。 如需設定 XACT_ABORT 的詳細資訊，請參閱 [SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md)。  
   
  如果您需要將 XACT_ABORT 設定為 OFF，請指定「散發代理程式」的 **-SkipErrors** 參數。 這將允許代理程式在遇到錯誤後，繼續在「訂閱者」端套用變更。  

@@ -1,6 +1,6 @@
 ---
 title: 操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
-description: 此文章說明如何操作 Linux 上的 SQL Server 容錯移轉叢集執行個體 (FCI)。
+description: 本文說明如何操作 Linux 上的 SQL Server 容錯移轉叢集執行個體 (FCI)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1df7f6a53bb8d634b5d347f7a043605f7610ed78
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154568"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682111"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-此文章說明如何操作 Linux 上的 SQL Server 容錯移轉叢集執行個體 (FCI)。 如果您尚未在 Linux 上建立 SQL Server FCI，請參閱[設定容錯移轉叢集執行個體 - Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)。 
+本文說明如何操作 Linux 上的 SQL Server 容錯移轉叢集執行個體 (FCI)。 如果您尚未在 Linux 上建立 SQL Server FCI，請參閱[設定容錯移轉叢集執行個體 - Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)。 
 
 ## <a name="failover"></a>容錯移轉
 

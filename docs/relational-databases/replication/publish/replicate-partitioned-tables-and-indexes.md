@@ -17,12 +17,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9750e85aefab0db07978cbba6a98a845888cec3d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b12d35d27fd4c90603cce6d798d8011ad1e65b81
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769790"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710837"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>複寫資料分割資料表及索引
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68769790"
 ### <a name="enabling-partition-switching"></a>啟用資料分割切換  
  交易式發行集的下列屬性可讓使用者控制複寫環境中的資料分割切換行為：  
   
--   **@allow_partition_switch** ，當設定為 **[複製資料表資料分割配置]** 時，SWITCH PARTITION 可以針對發行集資料庫來執行。  
+-   `@allow_partition_switch`，當設定為 `true` 時，SWITCH PARTITION 可以針對發行集資料庫來執行。  
   
--   **@replicate_partition_switch** 會決定 SWITCH PARTITION DDL 陳述式是否應該複寫到訂閱者。 只有當 **@allow_partition_switch** 設定為 **[複製資料表資料分割配置]** ＞。  
+-   `@replicate_partition_switch` 會決定 SWITCH PARTITION DDL 陳述式是否應該複寫到訂閱者。 只有當 `@allow_partition_switch` 設定為 `true` 時，這個選項才有效。  
   
  您可以在建立發行集時使用 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 來設定這些屬性，或是在建立發行集之後使用 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 來設定。 如前所述，合併式複寫不支援資料分割切換。 若要在已啟用合併式複寫的資料表上執行 SWITCH PARTITION，請從發行集中移除此資料表。  
   

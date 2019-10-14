@@ -1,7 +1,7 @@
 ---
 title: decimal 和 numeric (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086744"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682105"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ p (有效位數)
   
 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在將數字轉換成有效位數與小數位數較小的 **decimal** 或 **numeric** 值時會使用四捨五入。 相反地，如果 SET ARITHABORT 選項是 ON，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在發生溢位時產生錯誤。 只是流失有效位數與小數位數還不足以產生錯誤。
   
-將浮點值或實數值轉換成十進位或數值時，十進位值一定不會超過 17 個小數位數。 任何浮點值若 < 5E-18 一律會轉換為 0。
+在 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 之前，**float** 值轉換至 **decimal** 或 **numeric**，就會限制為只有 17 個有效位數的值。 任何小於 5E-18 (當設定使用 5E-18 科學記號標記法或 0.0000000000000000050000000000000005 十進位標記法時) 的 **float** 值都會捨去為 0。 這不再是 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 的限制。
   
 ## <a name="examples"></a>範例  
 下列範例會使用 **decimal** 和 **numeric** 資料類型建立資料表。  值會插入至每個資料行。 結果會使用 SELECT 陳述式傳回。

@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3429a9c1e99277c9113e1773e99c8bd58a1cc01a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 841c5d3a40d74cbf0d24f7da0c3899882f820176
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769832"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710878"
 ---
 # <a name="replicate-identity-columns"></a>複寫識別欄位
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,16 +74,16 @@ ms.locfileid: "68769832"
 ### <a name="merge-replication"></a>合併式複寫  
  識別範圍由「發行者」管理，並由「合併代理程式」傳播至「訂閱者」(在重新發行階層中，範圍由根「發行者」與重新發行者管理)。 識別值從「發行者」端的集區指派。 您在 [新增發行集精靈] 中或使用 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 將具有識別欄位的發行項新增至發行集時，指定下列的值：  
   
--   **@identity_range** 參數，控制最初配置給「發行者」以及具有主訂閱之「訂閱者」的識別範圍大小。  
+-   `@identity_range` 參數，控制最初配置給發行者及具有客訂閱之訂閱者的識別範圍大小。  
   
     > [!NOTE]  
-    >  對於執行舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的「訂閱者」，此參數 (而非 **@pub_identity_range** 參數) 還控制重新發行「訂閱者」端的識別範圍大小。  
+    >  針對執行舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的訂閱者，此參數 (而非 `@pub_identity_range` 參數) 亦控制重新發行訂閱者端的識別範圍大小。  
   
--   **@pub_identity_range** 參數，控制配置給「訂閱者」(具有主訂閱，為重新發行資料所需要) 之重新發行的識別範圍大小。 所有具有主訂閱的「訂閱者」都會收到重新發行的範圍，即使它們實際並未重新發行資料。  
+-   `@pub_identity_range` 參數，控制用於重新發行配置給具有主訂閱 (為重新發行資料所需要) 之訂閱者的識別範圍大小。 所有具有主訂閱的「訂閱者」都會收到重新發行的範圍，即使它們實際並未重新發行資料。  
   
--   **@threshold** 參數，用於確定 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 或舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的訂閱何時需要新的識別範圍。  
+-   `@threshold` 參數，用於確定 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 或舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱何時需要新的識別範圍。  
   
- 例如，您可以為 **@identity_range** 指定 10000，為 **@pub_identity_range** 。 執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者和所有訂閱者 (包括具有主訂閱的訂閱者) 都會被指派 10000 的主要範圍。 具有主訂閱的訂閱者也會被指派 500000 的主要範圍，這可供與重新發行訂閱者同步的訂閱者使用 (您還必須為重新發行訂閱者端之發行集中的發行項指定 **@identity_range** 、 **@pub_identity_range** 與 **@threshold** )。  
+ 例如，您可以針對 `@identity_range` 指定 10000，並針對 `@pub_identity_range` 指定 500000。 執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的發行者和所有訂閱者 (包括具有主訂閱的訂閱者) 都會被指派 10000 的主要範圍。 具有主訂閱之訂閱者也會被指派 500000 的主要範圍，這可供由重新發行訂閱者同步的訂閱者使用 (您還必須為重新發行訂閱者端的發行集中發行項指定 `@identity_range`、`@pub_identity_range` 和 `@threshold`)。  
   
  執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的每一個訂閱者還會收到次要識別範圍。 次要範圍的大小等於主要範圍；當主要範圍用盡時，就會使用次要範圍，並且「合併代理程式」會為「訂閱者」指派新的範圍。 新範圍隨即成為次要範圍，且當「訂閱者」使用識別值時處理會繼續。  
   
@@ -91,13 +91,13 @@ ms.locfileid: "68769832"
 ### <a name="transactional-replication-with-queued-updating-subscriptions"></a>具有佇列更新訂閱的異動複寫  
  識別範圍由「散發者」管理，並由「散發代理程式」傳播至「訂閱者」。 識別值從「散發者」端的集區指派。 集區大小基於資料類型的大小以及用於識別欄位的遞增值。 您在 [新增發行集精靈] 中或使用 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 將具有識別欄位的發行項新增至發行集時，指定下列的值：  
   
--   **@identity_range** 參數，控制最初配置給所有「訂閱者」的識別範圍大小。  
+-   `@identity_range` 參數，控制最初配置給所有訂閱者的識別範圍大小。  
   
--   **@pub_identity_range** 參數，控制配置給發行者的識別範圍大小。  
+-   `@pub_identity_range` 參數，控制配置給發行者的識別範圍大小。  
   
--   **@threshold** 參數，用於確定訂閱何時需要新的識別範圍。  
+-   `@threshold` 參數，用於確定訂閱何時需要新的識別範圍。  
   
- 例如，您可以為 **@pub_identity_range** 指定 10000，為 **@identity_range** 指定 1000 (假設在「訂閱者」端沒有什麼更新)，為 **@threshold** 。 在「訂閱者」端執行 800 次插入 (1000 的 80%) 之後，將為「訂閱者」指派新範圍。 在「發行者」端執行 8000 次插入之後，將為「發行者」指派新範圍。 指派新範圍時，資料表裡的識別範圍值中會有一個間隔。 指定的臨界值越高間距就越小，但系統的容錯功能也就越弱：如果「散發代理程式」因某種原因無法執行，「訂閱者」可能更容易用盡識別。  
+ 例如，您可以為 `@pub_identity_range` 指定 10000，為 `@identity_range` 指定 1000 (假設在訂閱者端沒有什麼更新)，並為 `@threshold` 指定 80%。 在「訂閱者」端執行 800 次插入 (1000 的 80%) 之後，將為「訂閱者」指派新範圍。 在「發行者」端執行 8000 次插入之後，將為「發行者」指派新範圍。 指派新範圍時，資料表裡的識別範圍值中會有一個間隔。 指定的臨界值越高間距就越小，但系統的容錯功能也就越弱：如果「散發代理程式」因某種原因無法執行，「訂閱者」可能更容易用盡識別。  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>為手動識別範圍管理指派範圍  
  如果指定手動識別範圍管理，則必須確定「發行者」與每個「訂閱者」都使用不同的識別範圍。 例如，考慮識別欄位定義為 `IDENTITY(1,1)`之「發行者」端的資料表：識別欄位從 1 開始，每插一個資料列即遞增 1。 如果「發行者」端的資料表有 5,000 個資料列，而您希望在應用程式使用期間資料表有所成長，「發行者」可以使用範圍 1-10,000。 假設有兩個「訂閱者」，「訂閱者 A」可以使用 10,001-20,000，「訂閱者 B」可以使用 20,001-30,000。  

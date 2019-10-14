@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251062"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823566"
 ---
 # <a name="hybrid-buffer-pool"></a>混合式緩衝集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
 下例會傳回混合式緩衝集區系統設定之 SQL Server 執行個體的目前狀態。
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 下例會傳回兩份資料表：
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>混合式緩衝集區的最佳做法
 
-小於 16-GB RAM 的執行個體，不建議啟用混合式緩衝集區。
-
 在 Windows 上格式化 PMEM 裝置時，請使用 NTFS 可提供的最大配置單位大小 (Windows Server 2019 為 2 MB)，並確定裝置已針對 DAX (直接存取) 格式化。
+
+為了獲得最佳效能，請在 Windows 上啟用[鎖定記憶體頁面](./enable-the-lock-pages-in-memory-option-windows.md)。
 
 檔案大小應該是 2 MB 的倍數 (模數 2 MB 應該等於零)。
 

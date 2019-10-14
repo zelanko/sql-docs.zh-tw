@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6776cea91288d22ed6765e8c4651266c0bcffa7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943701"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710361"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新訂閱的登入
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67943701"
   
 -   複寫建立的連結伺服器；以在訂閱者端執行變更的使用者認證來建立連接。  
   
- 此精靈中可以指定前兩個選項。 最後一個選項只能使用 [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 指定；指定 **1** 給 **@security_mode** 參數。  
+ 此精靈中可以指定前兩個選項。 最後一個選項只能使用 [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 指定；針對 `@security_mode` 參數指定值 **1** 。  
   
 ## <a name="options"></a>選項。  
  **建立使用下列 SQL Server 驗證登入進行連接的連結伺服器：**  

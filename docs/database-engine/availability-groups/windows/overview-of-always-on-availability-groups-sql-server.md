@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742936"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974382"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68742936"
   
  容錯移轉的形式共有三種：自動、手動和強制 (有遺失資料的可能)。 給定次要複本支援的容錯移轉形式取決於其可用性模式，而且針對同步認可模式，則取決於主要複本和目標次要複本上的容錯移轉模式，如下所示。  
   
--   如果目標次要複本目前與 avt1 同步處理，同步認可模式支援兩種容錯移轉形式：「已規劃的手動容錯移轉」  和「自動容錯移轉」  。 這些容錯移轉形式的支援取決於容錯移轉夥伴上的 *「容錯移轉模式屬性」* (Failover Mode Property) 設定。 如果容錯移轉模式在主要或次要複本上設為「手動」，則只支援該次要複本的手動容錯移轉。 如果容錯移轉模式在主要和次要複本上都設為「自動」，則在該次要複本上同時支援自動和手動容錯移轉。  
+-   如果目標次要複本目前與主要複本同步處理，則同步認可模式支援兩種容錯移轉形式：「規劃的手動容錯移轉」  和「自動容錯移轉」  。 這些容錯移轉形式的支援取決於容錯移轉夥伴上的 *「容錯移轉模式屬性」* (Failover Mode Property) 設定。 如果容錯移轉模式在主要或次要複本上設為「手動」，則只支援該次要複本的手動容錯移轉。 如果容錯移轉模式在主要和次要複本上都設為「自動」，則在該次要複本上同時支援自動和手動容錯移轉。  
   
     -   **已規劃的手動容錯移轉** (不會遺失資料)  
   

@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e6a20ac4fb319119692ce41eeef80b1912de33
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 1678db946145ae7780ed35fcf142f915aa2a8fa7
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009319"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961950"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -77,8 +77,10 @@ ms.locfileid: "70009319"
 ```sql
 -- Create a nonclustered index on a table or view
 CREATE INDEX i1 ON t1 (col1);
---Create a clustered index on a table and use a 3-part name for the table
+
+-- Create a clustered index on a table and use a 3-part name for the table
 CREATE CLUSTERED INDEX i1 ON d1.s1.t1 (col1);
+
 -- Syntax for SQL Server and Azure SQL Database
 -- Create a nonclustered index with a unique constraint
 -- on 3 columns and specify the sort order for each column
@@ -192,11 +194,21 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 ### <a name="syntax-for-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL 資料倉儲和平行處理資料倉儲的語法
 
 ```
+
+CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
+    ON [ database_name . [ schema ] . | schema . ] table_name
+    [ORDER (column[,...n])]
+    [WITH ( DROP_EXISTING = { ON | OFF } )]
+[;]
+
+
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name
         ( { column [ ASC | DESC ] } [ ,...n ] )
     WITH ( DROP_EXISTING = { ON | OFF } )
 [;]
+
+
 ```
 
 ## <a name="arguments"></a>引數
@@ -204,7 +216,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 UNIQUE      
 在資料表或檢視上建立唯一索引。 在唯一索引中，任兩個資料列都不能有相同的索引鍵值。 檢視表中的叢集索引必須是唯一的。
 
-不論 IGNORE_DUP_KEY 是否設為 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 都不允許在已包含重複值的資料行上建立唯一索引。 如果嘗試執行此作業，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會顯示錯誤訊息。 必須先移除重複值，才能在資料行上建立唯一索引。 唯一索引中使用的資料行應設為 NOT NULL，因為當建立唯一索引時，多個 Null 值會被視為重複值。
+不論 IGNORE_DUP_KEY 是否設為 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 都不允許在已包含重複值的資料行上建立唯一索引。 如果嘗試執行這項作業，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會顯示錯誤訊息。 必須先移除重複值，才能在資料行上建立唯一索引。 唯一索引中使用的資料行應設為 NOT NULL，因為當建立唯一索引時，多個 Null 值會被視為重複值。
 
 CLUSTERED      
 建立索引，在該索引中，索引鍵值的邏輯順序會決定資料表中對應資料列的實體順序。 叢集索引的層級 (底部或分葉) 包含資料表的實際資料列。 資料表或檢視表一次只允許一個叢集索引。
@@ -276,7 +288,7 @@ ON *partition_scheme_name* **( _column_name_ )**
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-指定分割區配置來定義要做為分割區索引之分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name*。 此限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。
+指定分割區配置來定義要做為分割區索引之分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name*。 這項限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。
 
 > [!NOTE]
 > 當您分割一個非唯一的叢集索引時，如果尚未指定分割區資料行，依預設，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它加入至叢集索引鍵清單。 當您分割一個非唯一的非叢集索引時，如果尚未指定分割區資料行，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它新增為索引的非索引鍵 (內含) 資料行。
@@ -376,7 +388,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-指定是否要將暫時排序結果儲存在 **tempdb** 中。 預設值為 OFF。
+指定是否要將暫時排序結果儲存在 **tempdb** 中。 預設值為 OFF (除了 Azure SQL Database 超大規模資料庫以外)。若是超大規模資料庫中的所有索引建置作業，除非使用可繼續的索引重建，否則 SORT_IN_TEMPDB 一律會是 ON。
 
 ON      
 用來建置索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 位於與使用者資料庫所在磁碟不同的磁碟上，這可能會減少建立索引所需的時間。 不過，這會增加建立索引時所使用的磁碟空間量。
@@ -425,7 +437,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
 
 若設定為 **ON**，所建立的統計資料會以每個資料分割統計資料為依據。 若設定為 **OFF**，則會卸除統計資料樹狀結構，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 **OFF**。
 
-如果不支援每個分割區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：
+如果不支援每個分割區區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：
 
 - 建立統計資料時，所使用的索引未與基底資料表進行分割區對齊。
 - 在 AlwaysOn 可讀取次要資料庫上建立的統計資料。
@@ -585,13 +597,13 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_
 ```sql
 REBUILD WITH
 (
-DATA_COMPRESSION = NONE ON PARTITIONS (1),
-DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
-DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
+  DATA_COMPRESSION = NONE ON PARTITIONS (1),
+  DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
+  DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );
 ```
 
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 CREATE INDEX 陳述式的最佳化方式與其他任何查詢一樣。 若要儲存在 I/O 作業上，查詢處理器可以選擇掃描另一個索引，而不是執行資料表掃描。 在某些情況下，排序作業可以省略。 在多處理器電腦上，CREATE INDEX 可以利用更多的處理器來執行與建立索引相關聯的掃描和排序作業，執行方式與其他查詢的執行方式相同。 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。
 
 如果資料庫復原模式設為大量記錄或簡單模式，建立索引作業就可以利用最低限度記錄。
@@ -691,14 +703,14 @@ UNIQUE 或 PRIMARY KEY 條件約束只要符合索引作業的所有條件就可
 在計算資料行上建立索引，可能會使先前有效的插入或更新作業失敗。 當計算資料行導致算術錯誤時，就可能發生這類失敗。 例如在下表中，雖然計算資料行 `c` 導致算術錯誤，但 INSERT 陳述式仍可運作。
 
 ```sql
-CREATE TABLE t1 (a int, b int, c AS a/b);
+CREATE TABLE t1 (a INT, b INT, c AS a/b);
 INSERT INTO t1 VALUES (1, 0);
 ```
 
 但是，如果在建立資料表之後，您在計算資料行 `c` 上建立索引，相同的 `INSERT` 陳述式在這種情況下則會失敗。
 
 ```sql
-CREATE TABLE t1 (a int, b int, c AS a/b);
+CREATE TABLE t1 (a INT, b INT, c AS a/b);
 CREATE UNIQUE CLUSTERED INDEX Idx1 ON t1(c);
 INSERT INTO t1 VALUES (1, 0);
 ```
@@ -750,7 +762,7 @@ INSERT INTO t1 VALUES (1, 0);
 - 若要立即暫停索引作業，您可以停止 (Ctrl-C) 進行中的命令，執行 [ALTER INDEX](alter-index-transact-sql.md) PAUSE 命令，或執行 `KILL <session_id>` 命令。 暫停命令之後，可以使用 [ALTER INDEX](alter-index-transact-sql.md) 命令繼續執行該命令。
 - 重新執行可繼續索引的原始 CREATE INDEX 陳述式，會自動繼續已暫停索引的建立作業。
 - 可繼續的索引不支援 `SORT_IN_TEMPDB = ON` 選項。
-- `RESUMABLE = ON` 的 DDL 命令無法在明確交易內部執行 (不能是開始 TRAN...COMMIT 區塊的一部分 )。
+- `RESUMABLE = ON` 的 DDL 命令無法在明確交易內部執行 (不能是開始 TRAN...COMMIT 區塊的一部份)。
 - 若要繼續/中止建立/重建索引，請使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 語法
 
 > [!NOTE]
@@ -786,7 +798,7 @@ INSERT INTO t1 VALUES (1, 0);
 
 最後一頁的插入競爭是大量並行的執行緒在嘗試將資料列插入具備循序索引鍵的索引時，經常發生的一種效能問題。 當開頭的索引鍵資料行包含總是在增加 (或減少) 的值 (例如識別欄位或預設為目前日期/時間的日期) 時，便會將索引視為循序。 因為要插入的索引鍵是循序的，所有新的資料列都會在索引結構的結尾插入，也就是位於相同的頁面。 這會導致頁面在記憶體中互相競爭，可觀察到的結果就是數個執行緒不明所以地在 PAGELATCH_EX 持續等待頁面。
 
-開啟 OPTIMIZE_FOR_SEQUENTIAL_KEY 索引選項，可在資料庫引擎中啟用最佳化，協助改善對索引進行高並行插入時的輸送量。 它適用於因具備循序索引鍵，而可能發生最後一頁插入競爭的索引，但它也可以協助在 B 型樹狀索引結構中其他區域內包含熱點的索引。
+開啟 OPTIMIZE_FOR_SEQUENTIAL_KEY 索引選項，可在資料庫引擎中啟用最佳化，協助改善對索引進行高並行插入時的輸送量。 它適用於因具備循序索引鍵，而可能發生最後一頁插入競爭的索引，但它也可以協助在 B 型樹狀索引結構中其它區域內包含熱點的索引。
 
 ## <a name="viewing-index-information"></a>檢視索引資訊
 若要傳回有關索引的資訊，您可以使用目錄檢視、系統函數和系統預存程序。
@@ -852,12 +864,12 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (V
 下列範例會使用 dbo.FactFinance 資料表的兩個資料行建立索引 IX_FF。 下一個陳述式會使用多個資料行重建索引，並保留現有的名稱。
 
 ```sql
-CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey ASC, DateKey ASC );
+CREATE INDEX IX_FF ON dbo.FactFinance (FinanceKey ASC, DateKey ASC);
 
---Rebuild and add the OrganizationKey
-CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey, DateKey, OrganizationKey DESC)
-WITH ( DROP_EXISTING = ON );
- ```
+-- Rebuild and add the OrganizationKey
+CREATE INDEX IX_FF ON dbo.FactFinance (FinanceKey, DateKey, OrganizationKey DESC)
+  WITH (DROP_EXISTING = ON);
+```
 
 ## <a name="examples-sql-server-azure-sql-database"></a>範例:SQL Server、Azure SQL Database
 
@@ -872,11 +884,12 @@ CREATE UNIQUE INDEX AK_UnitMeasure_Name
 下列查詢會藉由嘗試插入與現有資料列具有相同值的資料列，以測試條件約束的唯一性。
 
 ```sql
---Verify the existing value.
+-- Verify the existing value.
 SELECT Name FROM Production.UnitMeasure WHERE Name = N'Ounces';
 GO
+
 INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name, ModifiedDate)
-  VALUES ('OC', 'Ounces', GetDate());
+  VALUES ('OC', 'Ounces', GETDATE());
 ```
 
 產生的錯誤訊息如下：
@@ -890,16 +903,20 @@ Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_Un
 下列範例分別利用兩種不同的選項設定 (先將選項設為 `IGNORE_DUP_KEY`，再將選項設為 `ON`) 將多個資料列插入暫存資料表中，示範 `OFF` 選項的效果。 單一資料列會插入 `#Test` 資料表中，該資料表則會在第二個多重資料列 `INSERT` 陳述式執行時刻意造成重複的值。 資料表中的資料列計數會傳回所插入的資料列數目。
 
 ```sql
-CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);
+CREATE TABLE #Test (C1 NVARCHAR(10), C2 NVARCHAR(50), C3 DATETIME);
 GO
+
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)
   WITH (IGNORE_DUP_KEY = ON);
 GO
+
 INSERT INTO #Test VALUES (N'OC', N'Ounces', GETDATE());
 INSERT INTO #Test SELECT * FROM Production.UnitMeasure;
 GO
-SELECT COUNT(*)AS [Number of rows] FROM #Test;
+
+SELECT COUNT(*) AS [Number of rows] FROM #Test;
 GO
+
 DROP TABLE #Test;
 GO
 ```
@@ -919,16 +936,20 @@ Number of rows
 重新執行相同的陳述式，但將 `IGNORE_DUP_KEY` 設為 `OFF`。
 
 ```sql
-CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);
+CREATE TABLE #Test (C1 NVARCHAR(10), C2 NVARCHAR(50), C3 DATETIME);
 GO
+
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)
   WITH (IGNORE_DUP_KEY = OFF);
 GO
+
 INSERT INTO #Test VALUES (N'OC', N'Ounces', GETDATE());
 INSERT INTO #Test SELECT * FROM Production.UnitMeasure;
 GO
-SELECT COUNT(*)AS [Number of rows] FROM #Test;
+
+SELECT COUNT(*) AS [Number of rows] FROM #Test;
 GO
+
 DROP TABLE #Test;
 GO
 ```
@@ -968,40 +989,45 @@ SET NUMERIC_ROUNDABORT OFF;
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,
   QUOTED_IDENTIFIER, ANSI_NULLS ON;
 GO
+
 -- Create view with schemabinding
 IF OBJECT_ID ('Sales.vOrders', 'view') IS NOT NULL
-DROP VIEW Sales.vOrders ;
+  DROP VIEW Sales.vOrders;
 GO
+
 CREATE VIEW Sales.vOrders
-WITH SCHEMABINDING
+  WITH SCHEMABINDING
 AS
-  SELECT SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Revenue,
+  SELECT SUM(UnitPrice * OrderQty * (1.00 - UnitPriceDiscount)) AS Revenue,
     OrderDate, ProductID, COUNT_BIG(*) AS COUNT
   FROM Sales.SalesOrderDetail AS od, Sales.SalesOrderHeader AS o
   WHERE od.SalesOrderID = o.SalesOrderID
   GROUP BY OrderDate, ProductID;
 GO
+
 -- Create an index on the view
 CREATE UNIQUE CLUSTERED INDEX IDX_V1
   ON Sales.vOrders (OrderDate, ProductID);
 GO
+
 -- This query can use the indexed view even though the view is
 -- not specified in the FROM clause.
-SELECT SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Rev,
+SELECT SUM(UnitPrice * OrderQty * (1.00 - UnitPriceDiscount)) AS Rev,
   OrderDate, ProductID
 FROM Sales.SalesOrderDetail AS od
-  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID=o.SalesOrderID
-    AND ProductID BETWEEN 700 and 800
-    AND OrderDate >= CONVERT(datetime,'05/01/2002',101)
+  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID = o.SalesOrderID
+    AND ProductID BETWEEN 700 AND 800
+    AND OrderDate >= CONVERT(DATETIME, '05/01/2002', 101)
 GROUP BY OrderDate, ProductID
 ORDER BY Rev DESC;
 GO
+
 -- This query can use the above indexed view
-SELECT OrderDate, SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Rev
+SELECT OrderDate, SUM(UnitPrice * OrderQty * (1.00 - UnitPriceDiscount)) AS Rev
 FROM Sales.SalesOrderDetail AS od
-  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID=o.SalesOrderID
-    AND DATEPART(mm,OrderDate)= 3
-  AND DATEPART(yy,OrderDate) = 2002
+  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID = o.SalesOrderID
+    AND DATEPART(mm, OrderDate) = 3
+  AND DATEPART(yy, OrderDate) = 2002
 GROUP BY OrderDate
 ORDER BY OrderDate ASC;
 GO
@@ -1015,6 +1041,7 @@ CREATE NONCLUSTERED INDEX IX_Address_PostalCode
   ON Person.Address (PostalCode)
   INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 GO
+
 SELECT AddressLine1, AddressLine2, City, StateProvinceID, PostalCode
 FROM Person.Address
 WHERE PostalCode BETWEEN N'98000' and N'99999';
@@ -1048,7 +1075,7 @@ CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"
 ```sql
 CREATE NONCLUSTERED INDEX IX_INDEX_1
   ON T1 (C2)
-WITH ( DATA_COMPRESSION = ROW );
+  WITH (DATA_COMPRESSION = ROW);
 GO
 ```
 
@@ -1056,8 +1083,8 @@ GO
 
 ```sql
 CREATE CLUSTERED INDEX IX_PartTab2Col1
-ON PartitionTable1 (Col1)
-WITH ( DATA_COMPRESSION = ROW );
+  ON PartitionTable1 (Col1)
+  WITH (DATA_COMPRESSION = ROW);
 GO
 ```
 
@@ -1065,9 +1092,11 @@ GO
 
 ```sql
 CREATE CLUSTERED INDEX IX_PartTab2Col1
-ON PartitionTable1 (Col1)
-WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
-  DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;
+  ON PartitionTable1 (Col1)
+  WITH (
+    DATA_COMPRESSION = PAGE ON PARTITIONS(1),
+    DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4)
+  );
 GO
 ```
 
@@ -1076,24 +1105,24 @@ GO
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
-CREATE INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
+CREATE INDEX test_idx1 ON test_table (col1) WITH (ONLINE = ON, MAXDOP = 1, RESUMABLE = ON);
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
 -- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
-CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)
+CREATE INDEX test_idx2 ON test_table (col2) WITH (ONLINE = ON, RESUMABLE = ON, MAX_DURATION = 240);
 
 -- Pause a running resumable online index creation
-ALTER INDEX test_idx1 on test_table PAUSE
-ALTER INDEX test_idx2 on test_table PAUSE
+ALTER INDEX test_idx1 ON test_table PAUSE;
+ALTER INDEX test_idx2 ON test_table PAUSE;
 
 -- Resume a paused online index creation
-ALTER INDEX test_idx1 on test_table RESUME
-ALTER INDEX test_idx2 on test_table RESUME
+ALTER INDEX test_idx1 ON test_table RESUME;
+ALTER INDEX test_idx2 ON test_table RESUME;
 
 -- Abort resumable index create operation which is running or paused
-ALTER INDEX test_idx1 on test_table ABORT
-ALTER INDEX test_idx2 on test_table ABORT
+ALTER INDEX test_idx1 ON test_table ABORT;
+ALTER INDEX test_idx2 ON test_table ABORT;
 ```
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -1105,21 +1134,21 @@ ALTER INDEX test_idx2 on test_table ABORT
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
-CREATE INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
+CREATE INDEX test_idx ON test_table WITH (ONLINE = ON, MAXDOP = 1, RESUMABLE = ON);
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
 -- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
-CREATE INDEX test_idx on test_table WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)
+CREATE INDEX test_idx ON test_table WITH (ONLINE = ON, RESUMABLE = ON, MAX_DURATION = 240);
 
 -- Pause a running resumable online index creation
-ALTER INDEX test_idx on test_table PAUSE
+ALTER INDEX test_idx ON test_table PAUSE;
 
 -- Resume a paused online index creation
-ALTER INDEX test_idx on test_table RESUME
+ALTER INDEX test_idx ON test_table RESUME;
 
 -- Abort resumable index create operation which is running or paused
-ALTER INDEX test_idx on test_table ABORT
+ALTER INDEX test_idx ON test_table ABORT;
 ```
 
 ### <a name="o-create-a-nonclustered-index-on-a-table-in-the-current-database"></a>O. 在目前資料庫的資料表上建立非叢集索引
@@ -1136,6 +1165,24 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
   ON Purchasing..ProductVendor (VendorID);
+```
+### <a name="q-create-an-ordered-clustered-index-on-a-table"></a>Q. 在資料表上建立已排序的叢集索引  
+下列範例會在 `MyDB` 資料庫中 `T1` 資料表的 `c1` 和 `c2` 資料行上建立已排序叢集索引。
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T1 
+ORDER (c1, c2);
+
+```
+
+### <a name="r-convert-a-cci-to-an-ordered-clustered-index-on-a-table"></a>R. 在資料表上將 CCI 轉換成已排序的叢集索引  
+下列範例會將現有叢集資料行存放區索引轉換成已排序的叢集資料行存放區索引，其稱為 `MyOrderedCCI` (位於 `MyDB` 資料庫中 `T2` 資料表的 `c1` 和 `c2` 資料行)。
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T2
+ORDER (c1, c2)
+WITH (DROP_EXISTING = ON);
+
 ```
 
 ## <a name="see-also"></a>另請參閱

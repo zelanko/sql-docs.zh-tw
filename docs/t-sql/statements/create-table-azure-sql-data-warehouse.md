@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419606"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961794"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 
@@ -51,7 +51,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        <cci_option> --default for Azure SQL Data Warehouse
+       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -63,8 +64,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
-<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
-  
 <data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
@@ -165,7 +164,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>已排序的叢集資料行存放區索引選項 (針對 Azure SQL 資料倉儲為預覽)
 
-叢集資料行存放區索引是在 Azure SQL 資料倉儲中建立資料表的預設。  ORDER 指定規格預設為 COMPOUND 索引鍵。  排序一律會以遞增排序進行。 若沒有指定任何 ORDER 子句，資料行存放區將不會進行排序。 由於排序流程，若資料表具有已排序的叢集資料行存放區索引，則該資料表所經歷的資料載入時間可能比未排序的叢集資料行存放區索引還長。 如果您在載入資料時需要更多 tempdb 空間，您可以減少每個插入的資料量。
+叢集資料行存放區索引 (CCI) 是在 Azure SQL 資料倉儲中建立資料表的預設值。  CCI 中的資料在壓縮成資料行存放區區段之前，不會進行排序。  建立具有順序的 CCI 時，資料會先進行排序，再新增至索引區段，且可改善查詢效能。 瀏覽[使用已排序叢集資料行存放區索引的效能微調](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci)以取得詳細資料。  
 
 使用者可以查詢 sys.index_columns 中的 column_store_order_ordinal 資料行，以取得資料表排序所在的資料行，以及排序中的順序。  
 
@@ -379,17 +378,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> C. 建立已排序的叢集資料行存放區索引
-
-下列範例會示範如何建立已排序的叢集資料行存放區索引。 索引會根據 SHIPDATE 進行排序。
-
-```sql
-CREATE TABLE Lineitem  
-WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
-AS  
-SELECT * FROM ext_Lineitem
-```
-
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>暫存資料表範例
 
@@ -432,11 +420,22 @@ WITH
   )  
 ;  
 ```  
- 
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> E. 建立已排序的叢集資料行存放區索引
+
+下列範例會示範如何建立已排序的叢集資料行存放區索引。 索引會根據 SHIPDATE 進行排序。
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
+
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>資料表散發範例
 
-### <a name="RoundRobin"></a> E. 建立 ROUND_ROBIN 資料表  
+### <a name="RoundRobin"></a> F. 建立 ROUND_ROBIN 資料表  
  以下範例會建立一個具有三個資料行且沒有資料分割的 ROUND_ROBIN 資料表。 資料會分散到所有散發。 資料表是使用 CLUSTERED COLUMNSTORE INDEX 所建立的，可提供比堆積或資料列存放區叢集索引更好的效能和資料壓縮。  
   
 ```sql
@@ -449,7 +448,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. 建立雜湊分散式資料表
+### <a name="HashDistributed"></a> G. 建立雜湊分散式資料表
 
  以下範例會建立和上一個範例相同的資料表。 但是，針對這個資料表，資料列會被散發 (在 `id` 資料行上)，而不是像 ROUND_ROBIN 資料表一樣隨機分散。 資料表是使用 CLUSTERED COLUMNSTORE INDEX 所建立的，可提供比堆積或資料列存放區叢集索引更好的效能和資料壓縮。  
   
@@ -467,7 +466,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> G. 建立複寫資料表  
+### <a name="Replicated"></a> H. 建立複寫資料表  
  以下範例會建立和上一個範例類似的複寫資料表。 複寫資料表會完整複製到每個計算節點。 當每個計算節點上都有此複本時，就可以在查詢時減少資料移動。 此範例使用叢集索引建立，提供比堆積更佳的資料壓縮。 堆積可能未包含足夠的資料列以達成良好叢集資料行存放區索引壓縮。  
   
 ```sql
@@ -487,7 +486,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>資料表資料分割範例
 
-###  <a name="PartitionedTable"></a> H. 建立資料分割資料表
+###  <a name="PartitionedTable"></a> I. 建立資料分割資料表
 
  以下範例會建立如範例 A 中所示的相同資料表，並在 `id` 資料行中加上 RANGE LEFT 資料分割。 它會指定四個資料分割界限值，結果會產生五個資料分割。  
   
@@ -522,7 +521,7 @@ WITH
 - 分割區 4：30 <= col < 40
 - 分割區 5：40 <= col  
   
-### <a name="OnePartition"></a> I. 建立具有一個資料分割的資料分割資料表
+### <a name="OnePartition"></a> J. 建立具有一個資料分割的資料分割資料表
 
  以下範例會建立具有一個資料分割的資料分割資料表。 不會指定任何界限值，從而產生單一資料分割。  
   
@@ -539,7 +538,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. 建立具有日期資料分割的資料表
+### <a name="DatePartition"></a> K. 建立具有日期資料分割的資料表
 
  以下範例會建立一個名為 `myTable` 新資料表，並在 `date` 資料行上具有資料分割。 透過使用 RANGE RIGHT 和日期作為界限值，它會在每個資料分割中放置一個月的資料。  
   

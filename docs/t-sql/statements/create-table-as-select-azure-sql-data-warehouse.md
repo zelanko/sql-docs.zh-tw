@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dcef896bed81f094f1ab0e22f40ec5ac31bfb9d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116971"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961801"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
       <distribution_option> -- required
       [ , <table_option> [ ,...n ] ]    
     )  
-    AS <select_statement>   
+    AS <select_statement>  
+    OPTION <query_hint> 
 [;]  
 
 <distribution_option> ::=
@@ -59,16 +60,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <table_option> ::= 
     {   
         CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
       | HEAP --default for Parallel Data Warehouse   
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
     }  
-    | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
+      | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) ) 
   
 <select_statement> ::=  
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT select_criteria  
 
+<query_hint> ::=
+    {
+        MAXDOP 
+    }
 ```  
 
 <a name="arguments-bk"></a>
@@ -102,7 +108,7 @@ CTAS 陳述式需要一個散發選項，而且沒有預設值。 這和 CREATE 
 
 <a name="select-options-bk"></a>
 
-### <a name="select-options"></a>選取選項
+### <a name="select-statement"></a>SELECT 陳述式
 選取陳述式是 CTAS 與 CREATE TABLE 之間的基本差異。  
 
  `WITH` *common_table_expression*  
@@ -110,7 +116,11 @@ CTAS 陳述式需要一個散發選項，而且沒有預設值。 這和 CREATE 
   
  `SELECT` *select_criteria*  
  將 SELECT 陳述式產生的結果填入新資料表。 *select_criteria* 是 SELECT 陳述式的主體，可決定要複製到新資料表的資料。 如需 SELECT 陳述式的相關資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
-  
+ 
+### <a name="query-hint"></a>查詢提示
+使用者可以將 MAXDOP 設定為整數值，以控制平行處理原則的最大程度。  當 MAXDOP 設為 1 時，會由單一執行緒執行查詢。
+
+ 
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>權限  
@@ -820,6 +830,14 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 ```
 
 因此，您便知道 CTAS 上的類型一致性以及維護可 Null 性屬性，是正確的操縱最佳作法。 這有助於維護計算的完整性，也能夠確定資料分割切換的可行性。
+
+### <a name="n-create-an-ordered-clustered-columnstore-index-with-maxdop-1"></a>N. 使用 MAXDOP 1 建立已排序的叢集資料行存放區索引  
+```sql
+CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )
+AS SELECT * FROM ExampleTable
+OPTION (MAXDOP 1);
+```
+
  
 ## <a name="see-also"></a>另請參閱  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   

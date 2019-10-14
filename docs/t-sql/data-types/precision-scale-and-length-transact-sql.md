@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f3689bdad636d7df4281975167984425a8049aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000622"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682056"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>有效位數、小數位數和長度 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "68000622"
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，**numeric** 和 **decimal** 資料類型的預設最大有效位數為 38。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，預設的最大值是 28。
   
-數值資料類型的長度是用來儲存數字的位元組數目。 字元字串或 Unicode 資料類型的長度是字元的數目。 **binary**、**varbinary** 及 **image** 資料類型的長度為位元組的數目。 例如，**int** 資料類型可以保留 10 位數，儲存在 4 個位元組中且不接受小數點。 **int** 資料類型的有效位數是 10，長度是 4，小數位數是 0。
+數值資料類型的長度是用來儲存數字的位元組數目。 若為 varchar 和 cha，則其字元字串的長度即是位元組的數目。 若為 nvarchar 和 nchar，則其字元字串的長度即是位元組配對的數目。 **binary**、**varbinary** 及 **image** 資料類型的長度為位元組的數目。 例如，**int** 資料類型可以保留 10 位數，儲存在 4 個位元組中且不接受小數點。 **int** 資料類型的有效位數是 10，長度是 4，小數位數是 0。
   
-當串連兩個 **char**、**varchar**、**binary** 或 **varbinary** 運算式時，所產生運算式長度是兩個來源運算式長度的總和，最多為 8,000 個字元。
+當串連兩個 **char**、**varchar**、**binary** 或 **varbinary** 運算式時，所產生運算式長度是兩個來源運算式長度的總和，最多為 8,000 個位元組。
   
-當串連兩個 **nchar** 或 **nvarchar** 運算式時，所產生運算式長度是兩個來源運算式長度的總和，最多為 4,000 個字元。
+當串連兩個 **nchar** 或 **nvarchar** 運算式時，所產生運算式長度是兩個來源運算式長度的總和，最多為 4,000 個位元組配對。
   
 使用 UNION、EXCEPT 或 INTERSECT 來比較資料類型相同但長度不同的兩個運算式時，所產生長度是兩個運算式中較長的長度。
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f08360562112b23344543d2c63c28ebfa39bc88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69766a9278b09f081bbfaaced90e45acd1cf91c5
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907837"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710980"
 ---
 # <a name="define-an-article"></a>定義發行項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "67907837"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>為快照式或交易式發行集定義發行項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 為 **@publication** 指定發行項所屬的發行集名稱、為 **@article** 指定發行項名稱、為 **@source_object** 指定發行的資料庫物件，以及指定其他任何選擇性參數。 使用 **@source_owner** 來指定此物件的結構描述擁有權 (如果不是 **dbo**＞。 如果此發行項不是記錄式資料表發行項，請為 **@type** 指定發行項類型；如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 針對 `@publication` 指定發行項所屬發行集名稱、 針對 `@article` 指定發行項名稱、針對 `@source_object` 指定正在發行的資料庫物件，以及指定其他任何選擇性參數。 使用 `@source_owner` 來指定此物件的結構描述擁有權 (如果不是 **dbo**。 如果此發行項不是記錄式資料表發行項，請針對 `@type` 指定發行項類型；如需詳細資訊，請參閱[指定發行項類型 &#40; Transact-SQL 程式設計&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
 2.  若要以水平方式篩選資料表中的資料列或是檢視發行項，請使用 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 來定義篩選子句。 如需詳細資訊，請參閱 [定義及修改靜態資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "67907837"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>為合併式發行集定義發行項  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 為 **@publication** 指定發行集的名稱、為 **@article** 指定發行項的名稱，以及為 **@source_object** ＞。 若要以水平方式篩選資料表資料列，請指定 **@subset_filterclause** ＞。 如需相關資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 以及 [定義及修改靜態資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。 如果此發行項不是資料表發行項，請為 **@type** ＞。 如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 `@publication` 指定發行集的名稱、針對 `@article` 指定發行項的名稱，以及針對 `@source_object` 指定發行的物件。 若要以水平方式篩選資料表資料列，請指定 `@subset_filterclause` 的值。 如需相關資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 以及 [定義及修改靜態資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。 如果此發行項不是資料表發行項，請針對 `@type` 指定發行項類型。 如需詳細資訊，請參閱[指定發行項類型 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)。  
   
 2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) ，以定義兩個發行項之間的聯結篩選。 如需詳細資訊，請參閱 [定義和修改合併發行項之間的聯結篩選](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   

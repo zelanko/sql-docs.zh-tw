@@ -1,7 +1,7 @@
 ---
 title: 將 Excel 中的資料匯入到 SQL | Microsoft Docs
 ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,35 +10,35 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab41b5497e95b454db07926c55dd926df1c86135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031065"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708145"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-有數種方式可以將 Excel 檔案中的資料匯入到 SQL Server 或 Azure SQL Database。 某些方法可讓您只執行一個步驟，便能直接從 Excel 檔案匯入資料；其他方法會要求先將 Excel 資料匯出成文字，然後您再匯入這些文字。 本文摘要說明常用的方法，並提供連結，為您提供更詳細的資訊。
+有數種方式可以將 Excel 檔案中的資料匯入到 SQL Server 或 Azure SQL Database。 某些方法可讓您只執行一個步驟，便能直接從 Excel 檔案匯入資料；其他方法會要求先將 Excel 資料匯出成文字 (CSV 檔案) 才可匯入這些文字。 本文摘要說明常用的方法，並提供連結，為您提供更詳細的資訊。
 
 ## <a name="list-of-methods"></a>方法清單
 
-您可以使用下列工具來從 Excel 匯入資料： 
+您可以使用下列工具來從 Excel 匯入資料：
 
-| 先匯出成文字                        | 直接從 Excel 匯出                             |
-| :------------------------------------------ |:----------------------------------------------- |
-| [匯入一般檔案精靈](#import-wiz)      |[SQL Server 匯入和匯出精靈](#wiz)      |
-| [BULK INSERT](#bulk-insert) 陳述式       |[SQL Server Integration Services (SSIS)](#ssis)  |
-| [BCP](#bcp)                                 |[OPENROWSET](#openrowset) 函數               |
-| [複製精靈 (Azure Data Factory)](#adf-wiz)|                                                 |
-| [Azure Data Factory](#adf)                  |                                                 |
+| 先匯出成文字 (SQL Server 和 SQL Database) | 直接從 Excel 匯入 (僅限 SQL Server 內部部署) |
+| :------------------------------------------------- |:------------------------------------------------- |
+| [匯入一般檔案精靈](#import-wiz)             |[SQL Server 匯入和匯出精靈](#wiz)        |
+| [BULK INSERT](#bulk-insert) 陳述式              |[SQL Server Integration Services (SSIS)](#ssis)    |
+| [BCP](#bcp)                                        |[OPENROWSET](#openrowset) 函數 <br>            |
+| [複製精靈 (Azure Data Factory)](#adf-wiz)       |                                                   |
+| [Azure Data Factory](#adf)                         |                                                   |
 | &nbsp; | &nbsp; |
-
 
 如果您想要從 Excel 活頁簿匯入多個工作表，您通常必須針對每個工作表執行每個工具一次。
 
-針對複雜工具和服務 (例如 SSIS 或 Azure Data Factory) 的完整描述不在此清單的涵蓋範圍內。 若要深入了解您感興趣的解決方案，請遵循提供的連結。 
+針對複雜工具和服務 (例如 SSIS 或 Azure Data Factory) 的完整描述不在此清單的涵蓋範圍內。 若要深入了解您感興趣的解決方案，請遵循提供的連結。
 
 > [!IMPORTANT]
 > 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../../integration-services/load-data-to-from-excel-with-ssis.md)。
@@ -49,16 +49,17 @@ ms.locfileid: "68031065"
 
 逐步執行 [SQL Server 匯入和匯出精靈] 的頁面，以從 Excel 檔案直接匯入資料。 您也可以將設定儲存為 SQL Server Integration Services (SSIS) 套件，以便日後自訂及重複使用。
 
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。
-    
-2.  展開 **[資料庫]** 。
-3.  以滑鼠右鍵按一下資料庫。
-4.  指向 [工作]  。
-5.  按一下下列其中一個選項。  
-    -   **匯入資料**      
-    -   **匯出資料**  
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。
 
-    ![啟動精靈 (SSMS)](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
+2. 展開 **[資料庫]** 。
+3. 以滑鼠右鍵按一下資料庫。
+4. 指向 [工作]  。
+5. 按一下下列其中一個選項。
+
+  - **匯入資料**
+  - **匯出資料**
+
+    ![啟動精靈 (SSMS)](../../integration-services/import-export-data/media/start-wizard-ssms.jpg)
 
 ![連線至 Excel 資料來源](media/excel-connection.png)
 
@@ -71,8 +72,9 @@ ms.locfileid: "68031065"
 如果您熟悉 SSIS 且不想執行 SQL Server 匯入和匯出精靈，請建立在資料流程中使用 Excel 來源和 SQL Server 目的地的 SSIS 套件。
 
 如需這些 SSIS 元件的詳細資訊，請參閱下列主題：
--   [Excel 來源](../../integration-services/data-flow/excel-source.md)
--   [SQL Server 目的地](../../integration-services/data-flow/sql-server-destination.md)
+
+- [Excel 來源](../../integration-services/data-flow/excel-source.md)
+- [SQL Server 目的地](../../integration-services/data-flow/sql-server-destination.md)
 
 若要開始學習如何建置 SSIS 套件，請參閱[如何建立 ETL 套件](../../integration-services/ssis-how-to-create-an-etl-package.md)的教學課程。
 
@@ -80,15 +82,18 @@ ms.locfileid: "68031065"
 
 ## <a name="openrowset"></a> OPENROWSET 和連結的伺服器
 
-> [!NOTE]
-> 在 Azure 中，OPENROWSET 與 OPENDATASOURCE 函式僅適用於 SQL Database 受控執行個體。
+> [!IMPORTANT]
+> 在 Azure SQL Database 中，您無法直接從 Excel 匯入。 您必須先將資料匯出成文字 (CSV) 檔案。 如需範例，請參閱[範例](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。
 
 > [!NOTE]
-> 連接至 Excel 資料來源的 ACE 提供者 (先前稱為 Jet 提供者) 是供互動式用戶端使用。 如果您在伺服器上使用 ACE 提供者 (特別是在自動化程序或平行執行的程序中)，可能會看到非預期的結果。
+> 連接至 Excel 資料來源的 ACE 提供者 (先前稱為 Jet 提供者) 是供互動式用戶端使用。 如果您在 SQL 伺服器上使用 ACE 提供者 (特別是在自動化程序或平行執行的程序中)，可能會看到非預期的結果。
 
 ### <a name="distributed-queries"></a>分散式查詢
 
-使用 Transact-SQL `OPENROWSET` 或 `OPENDATASOURCE` 函式，直接從 Excel 檔案匯入資料。 此使用方式稱為「分散式查詢」  。
+使用 Transact-SQL `OPENROWSET` 或 `OPENDATASOURCE` 函式，直接從 Excel 將資料匯入至 SQL Server。 此使用方式稱為「分散式查詢」  。
+
+> [!IMPORTANT]
+> 在 Azure SQL Database 中，您無法直接從 Excel 匯入。 您必須先將資料匯出成測試 (CSV) 檔案。 如需範例，請參閱[範例](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。
 
 在您可以執行分散式查詢之前，必須啟用 `ad hoc distributed queries` 伺服器設定選項，如下列範例所示。 如需詳細資訊，請參閱[特定分散式查詢伺服器設定選項](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)。
 
@@ -128,13 +133,14 @@ GO
 若要查詢 Excel 資料但不進行匯入，請直接使用標準 `SELECT ... FROM ...` 語法。
 
 如需分散式查詢的詳細資訊，請參閱下列主題：
--   [分散式查詢](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) (SQL Server 2016 仍支援分散式查詢，但適用於此功能的文件並未更新。)
--   [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
--   [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
+
+- [分散式查詢](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) (SQL Server 2016 仍支援分散式查詢，但適用於此功能的文件並未更新。)
+- [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
+- [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
 ### <a name="linked-servers"></a>連結的伺服器
 
-您也可以將針對 Excel 檔案的持續連線設定為「連結的伺服器」  。 下列範例會將資料從現有 Excel 連結的伺服器 `EXCELLINK` 的 `Data` 工作表匯入至名為 `Data_ls` 的新資料庫資料表。
+您也可以將 SQL Server 到 Excel 檔案的持續連線設定為「連結的伺服器」  。 下列範例會將資料從現有 Excel 連結伺服器 `EXCELLINK` 的 `Data` 工作表匯入至名為 `Data_ls` 的新 SQL Server 資料庫資料表。
 
 ```sql
 USE ImportFromExcel;
@@ -168,14 +174,17 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 ```
 
 如需連結的伺服器的詳細資訊，請參閱下列主題：
--   [建立連結的伺服器](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
--   [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
+
+- [建立連結的伺服器](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
+- [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
 
 如需連結的伺服器和分散式查詢的更多範例及詳細資訊，請參閱下列主題：
--   [如何搭配使用 Excel 以及 SQL Server 連結伺服器和分散式查詢](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
--   [如何將 Excel 中的資料匯入到 SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
+
+- [如何搭配使用 Excel 以及 SQL Server 連結伺服器和分散式查詢](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
+- [如何將 Excel 中的資料匯入到 SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
 ## <a name="prereq"></a> 必要條件：將 Excel 資料儲存為文字
+
 若要使用此頁面所描述的剩餘方法 (BULK INSERT 陳述式、BCP 工具或 Azure Data Factory)，您必須先將 Excel 資料匯出為文字檔。
 
 在 Excel 中，選取 [檔案 | 另存新檔]  ，然後選取 [文字檔 (Tab 字元分隔) (\*.txt)]  或 [CSV (逗號分隔) (\*.csv)]  作為目的地檔案類型。
@@ -197,7 +206,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 
 `BULK INSERT` 是您可從 SQL Server Management Studio 執行的 Transact-SQL 命令。 下列範例會將來自 `Data.csv` 逗號分隔檔案的資料載入至現有資料庫資料表。
 
-如先前[必要條件](#prereq)一節中所述，您必須將 Excel 資料匯出成文字，才能使用 BULK INSERT 將它匯入。 BULK INSERT 無法直接讀取 Excel 檔案。
+如先前[必要條件](#prereq)一節中所述，您必須將 Excel 資料匯出成文字，才能使用 BULK INSERT 將它匯入。 BULK INSERT 無法直接讀取 Excel 檔案。 您可以使用 BULK INSERT 命令匯入儲存在本機或 Azure Blob 儲存體中的 CSV 檔案。
 
 ```sql
 USE ImportFromExcel;
@@ -210,66 +219,77 @@ BULK INSERT Data_bi FROM 'C:\Temp\data.csv'
 GO
 ```
 
-如需詳細資訊，請參閱下列主題：
--   [使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
--   [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
+如需 SQL Server 和 SQL Database 的詳細資訊和範例，請參閱下列主題：
+
+- [使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
 ## <a name="bcp"></a> BCP 工具
 
 BCP 是您從命令提示字元執行的程式。 下列範例會將來自 `Data.csv` 逗號分隔檔案的資料載入至現有 `Data_bcp` 資料庫資料表。
 
-如先前[必要條件](#prereq)一節中所述，您必須將 Excel 資料匯出成文字，才能使用 BCP 將它匯入。 BCP 無法直接讀取 Excel 檔案。
+如先前[必要條件](#prereq)一節中所述，您必須將 Excel 資料匯出成文字，才能使用 BCP 將它匯入。 BCP 無法直接讀取 Excel 檔案。 用於從儲存在本機儲存體的測試 (CSV) 檔案匯入至 SQL Server 或 SQL Database。
+
+> [!IMPORTANT]
+> 針對儲存在 Azure Blob 儲存體中的文字 (CSV) 檔案，請使用 BULK INSERT 或 OPENROWSET。 如需範例，請參閱[範例](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。
 
 ```console
 bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 ```
 
 如需 BCP 的詳細資訊，請參閱下列主題：
--   [使用 bcp 公用程式匯入及匯出大量資料](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
--   [bcp 公用程式](../../tools/bcp-utility.md)
--   [準備大量匯出或匯入的資料](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
+
+- [使用 bcp 公用程式匯入及匯出大量資料](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
+- [bcp 公用程式](../../tools/bcp-utility.md)
+- [準備大量匯出或匯入的資料](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
 ## <a name="adf-wiz"></a> 複製精靈 (Azure Data Factory)
+
 逐步設定「Azure Data Factory 複製精靈」的每個頁面，匯入儲存為文字檔的資料。
 
 如先前[必要條件](#prereq)一節中所述，您必須將 Excel 資料匯出成文字，才能使用 Azure Data Factory 將它匯入。 Data Factory 無法直接讀取 Excel 檔案。
 
 如需 [複製精靈] 的詳細資訊，請參閱下列主題：
--   [Data Factory 複製精靈](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
--   [教學課程：使用 Data Factory 複製精靈建立具有複製活動的管線](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
+
+- [Data Factory 複製精靈](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
+- [教學課程：使用 Data Factory 複製精靈建立具有複製活動的管線](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
 ## <a name="adf"></a> Azure Data Factory
+
 如果您熟悉 Azure Data Factory，且不想執行 [複製精靈]，請建立具有 [複製] 活動的管線，以從文字檔複製至 SQL Server 或 Azure SQL Database。
 
 如先前[必要條件](#prereq)一節中所述，您必須將 Excel 資料匯出成文字，才能使用 Azure Data Factory 將它匯入。 Data Factory 無法直接讀取 Excel 檔案。
 
 如需使用這些 Data Factory 來源與接收的詳細資訊，請參閱下列主題：
--   [檔案系統](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
--   [[SQL Server]](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
--   [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+
+- [檔案系統](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
+- [[SQL Server]](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
+- [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
 若要開始學習如何使用 Azure Data Factory 複製資料，請參閱下列主題：
--   [使用複製活動來移動資料](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
--   [教學課程：使用 Azure 入口網站建立具有複製活動的管線](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+
+- [使用複製活動來移動資料](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
+- [教學課程：使用 Azure 入口網站建立具有複製活動的管線](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>常見錯誤
 
-###  <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0 尚未註冊
-此錯誤的發生原因為未安裝 OLEDB 提供者。 請從 [Microsoft Access Database Engine 2010 可轉散發套件](https://www.microsoft.com/en-us/download/details.aspx?id=13255)安裝它。 如果 Windows 和 SQL Server 都是 64 位元，請務必安裝 64 位元版本。 
+### <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0 尚未註冊
 
-完整錯誤如下： 
+此錯誤的發生原因為未安裝 OLEDB 提供者。 請從 [Microsoft Access Database Engine 2010 可轉散發套件](https://www.microsoft.com/en-us/download/details.aspx?id=13255)安裝它。 如果 Windows 和 SQL Server 都是 64 位元，請務必安裝 64 位元版本。
+
+完整錯誤如下：
 
 ```
 Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>無法建立連結伺服器 "(null)" 的 OLE DB 提供者 "Microsoft.ACE.OLEDB.12.0" 的執行個體。
+## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>無法建立連結伺服器 "(null)" OLE DB 提供者 "Microsoft.ACE.OLEDB.12.0" 的執行個體
 
 這表示 Microsoft OLEDB 並未正確設定。 執行下列 Transact-SQL 程式碼來解決此問題：
 
-```sql 
-EXEC sp_MSset_oledb_prop N'Microsoft.ACE.OLEDB.12.0', N'AllowInProcess', 1   
+```sql
+EXEC sp_MSset_oledb_prop N'Microsoft.ACE.OLEDB.12.0', N'AllowInProcess', 1
 EXEC sp_MSset_oledb_prop N'Microsoft.ACE.OLEDB.12.0', N'DynamicParameters', 1
 ```
 
@@ -282,7 +302,7 @@ Cannot create an instance of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for link
 
 ### <a name="the-32-bit-ole-db-provider-microsoftaceoledb120-cannot-be-loaded-in-process-on-a-64-bit-sql-server"></a>64 位元 SQL Server 無法以同處理序方式載入 32 位元 OLE DB 提供者 "Microsoft.ACE.OLEDB.12.0"。
 
-使用 64 位元 SQL Server 安裝 32 位元版本的 OLD DB 提供者時，即會發生此錯誤。  若要解決此問題，請解除安裝 32 位元版本，並改為安裝 64 位元版本的 OLE DB 提供者。 
+使用 64 位元 SQL Server 安裝 32 位元版本的 OLD DB 提供者時，即會發生此錯誤。 若要解決此問題，請解除安裝 32 位元版本，並改為安裝 64 位元版本的 OLE DB 提供者。
 
 完整錯誤如下：
 
@@ -291,10 +311,11 @@ Msg 7438, Level 16, State 1, Line 3
 The 32-bit OLE DB provider "Microsoft.ACE.OLEDB.12.0" cannot be loaded in-process on a 64-bit SQL Server.
 ```
 
-### <a name="the-ole-db-provider-microsoftaceoledb120-for-linked-server-null-reported-an-error-the-provider-did-not-give-any-information-about-the-error"></a>連結伺服器 "(null)" 的 OLE DB 提供者 "Microsoft.ACE.OLEDB.12.0" 報告了錯誤。 提供者並未給予任何關於錯誤的資訊。
-### <a name="cannot-initialize-the-data-source-object-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>無法初始化連結伺服器 "(null)" 的 OLE DB 提供者 "Microsoft.ACE.OLEDB.12.0" 的資料來源物件。
+### <a name="the-ole-db-provider-microsoftaceoledb120-for-linked-server-null-reported-an-error-the-provider-did-not-give-any-information-about-the-error"></a>連結伺服器 "(null)" 的 OLE DB 提供者 "Microsoft.ACE.OLEDB.12.0" 報告了錯誤。 提供者並未給予任何關於錯誤的資訊
 
-這兩個錯誤通常表示在 SQL Server 處理序和檔案之間發生權限問題。 請確定執行 SQL Server 服務的帳戶具有檔案的完整存取權限。 我們建議您不要嘗試從桌面匯入檔案。 
+### <a name="cannot-initialize-the-data-source-object-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>無法初始化連結伺服器 "(null)" OLE DB 提供者 "Microsoft.ACE.OLEDB.12.0" 的資料來源物件
+
+這兩個錯誤通常表示在 SQL Server 處理序和檔案之間發生權限問題。 請確定執行 SQL Server 服務的帳戶具有檔案的完整存取權限。 我們建議您不要嘗試從桌面匯入檔案。
 
 完整錯誤如下：
 
@@ -308,7 +329,6 @@ Msg 7303, Level 16, State 1, Line 3
 Cannot initialize the data source object of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)".
 ```
 
-
-
 ## <a name="see-also"></a>另請參閱
+
 [使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel](../../integration-services/load-data-to-from-excel-with-ssis.md)

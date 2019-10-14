@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121331"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710725"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>點對點 - 異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,19 @@ ms.locfileid: "68121331"
   
 -   散發代理程式參數 **-SubscriptionStreams** 和記錄讀取器代理程式參數 **-MaxCmdsInTran**。  
   
--   發行項屬性 **@destination_owner** 及 **@destination_table** ) 來提供向外延展和高可用性解決方案。
+-   `@destination_owner` 和 `@destination_table` 的發行項屬性。
 
 -   點對點異動複寫不支援建立點對點發行集的單向交易式訂閱   
   
  下列屬性有特殊考量：  
   
--   發行集屬性 **@allow_initialize_from_backup** 需要 **true**) 來提供向外延展和高可用性解決方案。  
+-   發行集屬性 `@allow_initialize_from_backup` 需要 **true** 值。  
   
--   發行項屬性 **@replicate_ddl** 需要 **true**值， **@identityrangemanagementoption** 需要 **manual**值，而 **@status** 則必須設定選項 **24** 。  
+-   發行項屬性 `@replicate_ddl` 需要 **true** 值；`@identityrangemanagementoption` 需要 **manual** 值；而`@status` 則必須設定選項 **24**。  
   
--   發行項屬性 **@ins_cmd** 、 **@del_cmd** 和 **@upd_cmd** 的值不能設定為 **SQL**) 來提供向外延展和高可用性解決方案。  
+-   發行項屬性 `@ins_cmd`、`@del_cmd` 及 `@upd_cmd` 的值不能設定為 **SQL**。  
   
--   訂閱屬性 **@sync_type** 需要 **none** 或 **automatic**) 來提供向外延展和高可用性解決方案。  
+-   訂閱屬性 `@sync_type` 需要 **none** 或 **automatic** 值。  
   
 ### <a name="maintenance-considerations"></a>維護考量  
  某些動作需要停止系統。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dca1dfc281ac4ea63c2c28b35dc93805f2c19b2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021405"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710790"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>發行者資訊，訂閱監看清單 (合併式發行集)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,12 +73,12 @@ ms.locfileid: "68021405"
  每一個訂閱的名稱，格式為：*SubscriberName:SubscriptionDatabaseName*。  
   
  **易記名稱**  
- 每一個訂閱的描述。 此描述輸入於 **[訂閱屬性]** 對話方塊中，或以 **@description** 或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 的 [@description](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
+ 每一個訂閱的描述。 此描述輸入於 [訂閱屬性]  對話方塊或以 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 的 `@description` 參數或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 指定。 使用者通常使用描述作為訂閱的「易記名稱」或暱稱。  
   
  **發行集**  
  與訂閱同步處理的發行集名稱，格式為：*PublicationDatabaseName:PublicationName*。  
   
- **[效能]**  
+ **效能**  
  每一個訂閱的效能評比，是以複寫監視器所測量之傳遞速率的最新數據為基礎。 評比會根據相同連接類型 (撥號或 LAN) 的發行集訂閱，進行個別訂閱效能和平均記錄效能的比較來決定。 在相同連接類型上發生過五次同步處理，且每次同步處理都具有 50 或更多個變更之後，複寫監視器才會顯示值。 如果具有 50 或更多個變更的同步處理少於五次，或者最近的同步處理少於 50 個變更，則此資料行為空白。  
   
 > [!NOTE]  

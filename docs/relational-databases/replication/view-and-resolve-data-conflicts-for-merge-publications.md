@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a66a95a1b2f0561d7598c5a6e400641833e5a221
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e3de9c6652de3ddd8d80bbc2d09b003acfe5220
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115166"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710681"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>合併式複寫的衝突解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68115166"
   
  複寫衝突檢視器可以在衝突保留期限指定的時間內使用衝突資料 (預設為 14 天)。 若要設定衝突保留期限，可以：  
   
--   為 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 **@conflict_retention** 參數指定保留值。  
+-   針對 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_retention` 參數指定保留值。  
   
--   為 **@property** 參數指定 **conflict_retention** 的值，並且為 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 的 **@value** 參數指定保留值。  
+-   針對 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 的 `@property` 參數指定 **conflict_retention** 的值，且為 `@value` 參數指定保留值。  
   
  依預設，會儲存衝突資訊：    
 -   如果發行集相容性層級為 90RTM 或更高，則是在「發行者」與「訂閱者」端。   
@@ -85,9 +85,9 @@ ms.locfileid: "68115166"
     -   **decentralized_conflicts** - 1 表示在訂閱者上儲存衝突資料列，0 則表示不會在訂閱者上儲存衝突資料列。  
   
         > [!NOTE]  
-        >  合併式發行集的衝突記錄行為是使用 **@conflict_logging** 的 [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 已取代使用 **@centralized_conflicts** 參數。  
+        >  合併式發行集之衝突記錄行為是使用 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_logging` 參數來設定。 已淘汰使用 `@centralized_conflicts` 參數。  
   
-     下表描述這些資料行的值 (根據針對 **@conflict_logging** 。  
+     下表描述這些資料行的值 (根據針對 `@conflict_logging` 所指定的值)。  
   
     |@conflict_logging 值|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -95,13 +95,13 @@ ms.locfileid: "68115166"
     |**訂閱者**|0|1|  
     |**兩者**|1|1|  
   
-2.  在發行集資料庫的發行者上或是在訂閱資料庫的訂閱者上，執行 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)。 針對 **@publication** 指定值，只傳回屬於特定發行集之發行項的衝突資訊。 這樣會傳回有衝突之發行項的衝突資料表資訊。 請記下感興趣之任何發行項的 **conflict_table** 值。 如果發行項的 **conflict_table** 值為 NULL，只要刪除此發行項中已發生的衝突。  
+2.  在發行集資料庫的發行者上或是在訂閱資料庫的訂閱者上，執行 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)。 針對 `@publication` 指定值，只傳回屬於特定發行集的發行項衝突資訊。 這樣會傳回有衝突之發行項的衝突資料表資訊。 請記下感興趣之任何發行項的 **conflict_table** 值。 如果發行項的 **conflict_table** 值為 NULL，只要刪除此發行項中已發生的衝突。  
   
 3.  (選擇性) 檢閱感興趣之發行項的衝突資料列。 根據步驟 1 中 **centralized_conflicts** 和 **decentralized_conflicts** 的值而定，執行下列其中一項：  
   
-    -   在發行集資料庫的發行者上，執行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 針對 **@conflict_table** 。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回遺失之資料列的資料列資料和其他資訊。  
+    -   在發行集資料庫的發行者上，執行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 針對 `@conflict_table` 指定發行項的衝突資料表 (來自步驟 1)。 (選擇性) 指定 `@publication` 的值，將傳回的衝突資訊限制為特定發行集。 這樣會傳回遺失之資料列的資料列資料和其他資訊。  
   
-    -   在訂閱資料庫的訂閱者上，執行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 針對 **@conflict_table** 。 這樣會傳回遺失之資料列的資料列資料和其他資訊。  
+    -   在訂閱資料庫的訂閱者上，執行 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)。 針對 `@conflict_table` 指定發行項的衝突資料表 (來自步驟 1)。 這樣會傳回遺失之資料列的資料列資料和其他資訊。  
   
 ## <a name="conflict-where-delete-failed"></a>發生刪除失敗的衝突   
   
@@ -112,15 +112,15 @@ ms.locfileid: "68115166"
     -   **decentralized_conflicts** - 1 表示在訂閱者上儲存衝突資料列，0 則表示不會在訂閱者上儲存衝突資料列。  
   
         > [!NOTE]  
-        >  合併式發行集的衝突記錄行為是使用 **@conflict_logging** 的 [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 已取代使用 **@centralized_conflicts** 參數。  
+        >  合併式發行集之衝突記錄行為是使用 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@conflict_logging` 參數來設定。 已淘汰使用 `@centralized_conflicts` 參數。  
   
-2.  在發行集資料庫的發行者上或是在訂閱資料庫的訂閱者上，執行 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)。 針對 **@publication** 指定值，只傳回屬於特定發行集之發行項的衝突資料表資訊。 這樣會傳回有衝突之發行項的衝突資料表資訊。 請記下感興趣之任何發行項的 **source_object** 值。 如果發行項的 **conflict_table** 值為 NULL，只要刪除此發行項中已發生的衝突。  
+2.  在發行集資料庫的發行者上或是在訂閱資料庫的訂閱者上，執行 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)。 針對 `@publication` 指定值，只傳回屬於特定發行集的發行項衝突資料表資訊。 這樣會傳回有衝突之發行項的衝突資料表資訊。 請記下感興趣之任何發行項的 **source_object** 值。 如果發行項的 **conflict_table** 值為 NULL，只要刪除此發行項中已發生的衝突。  
   
 3.  (選擇性) 檢閱刪除衝突的衝突資訊。 根據步驟 1 中 **centralized_conflicts** 和 **decentralized_conflicts** 的值而定，執行下列其中一項：  
   
-    -   在發行集資料庫的發行者上，執行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 針對 **@source_object** 。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回儲存在發行者上的刪除衝突資訊。  
+    -   在發行集資料庫的發行者上，執行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 針對 `@source_object` 指定衝突發生所在的來源資料表名稱 (來自步驟 1)。 (選擇性) 指定 `@publication` 的值，將傳回的衝突資訊限制為特定發行集。 這樣會傳回儲存在發行者上的刪除衝突資訊。  
   
-    -   在訂閱資料庫的訂閱者上，執行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 針對 **@source_object** 。 (選擇性) 指定 **@publication** 的值，將傳回的衝突資訊限制為特定的發行集。 這樣會傳回儲存在訂閱者上的刪除衝突資訊。  
+    -   在訂閱資料庫的訂閱者上，執行 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)。 針對 `@source_object` 指定衝突發生所在的來源資料表名稱 (來自步驟 1)。 (選擇性) 指定 `@publication` 的值，將傳回的衝突資訊限制為特定發行集。 這樣會傳回儲存在訂閱者上的刪除衝突資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

@@ -11,12 +11,12 @@ ms.reviewer: v-jizho2, v-chojas, genemi
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: d6eebce61ede6e1e3dd76028a653a00ffa06990e
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702749"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041165"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>ODBC to SQL Server on Windows 版本資訊
 
@@ -43,6 +43,16 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## <a name="1742-october-2019"></a>17.4.2，2019 年 10 月
+
+| 新增功能 | 詳細資料 |
+| :------------ | :------ |
+| 支援額外的 Azure Key Vault 端點 | 請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| 支援設定資料分類版本 | 請參閱[資料分類](../data-classification.md#bkmk-version)。 |
+| 驅動程式現在會將用於驗證的 Azure Active Drirectory Authentication Library （adal）安裝至 Azure | |
+| 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="174-july-2019"></a>17.4，2019 年 7 月
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227184"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713207"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -91,6 +91,12 @@ ALTER DATABASE SCOPED CONFIGURATION
 }
 ```
 
+> [!IMPORTANT]
+> 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中已變更部分選項名稱：      
+> -  `DISABLE_INTERLEAVED_EXECUTION_TVF` 變更為 `INTERLEAVED_EXECUTION_TVF`
+> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 變更為 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+> -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 變更為 `BATCH_MODE_ADAPTIVE_JOINS`
+
 ## <a name="arguments"></a>引數
 
 FOR SECONDARY
@@ -113,6 +119,9 @@ MAXDOP **=** {\<值> | PRIMARY } **\<值>**
 您可以使用 max degree of parallelism 選項來限制要用於平行計畫執行的處理器數目。 SQL Server 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行統計資料收集，以及靜態和索引鍵集驅動資料指標填入，考慮進行平行執行計劃。
 
 若要在執行個體層級設定此選項，請參閱[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+
+> [!NOTE]
+> 在 Azure SQL Database 中，伺服器層級 **max degree of parallelism** 設定一律設為 0。 您可以為每個資料庫設定 MAXDOP，如本文中所述。 如需設定 MAXDOP 的最佳建議，請參閱[其他資源](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources)一節。
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請新增 **MAXDOP** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。
@@ -351,6 +360,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 `ALTER_DATABASE_SCOPED_CONFIGURATION` 事件會以 DDL 事件的形式新增，可用來引發 DDL 觸發程序，且是 `ALTER_DATABASE_EVENTS` 觸發程序群組的子觸發程序。
 
 資料庫範圍組態設定會伴隨資料庫，這表示當還原或附加特定資料庫時，會保留現有的組態設定。
+
+從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中已變更部分選項名稱：      
+-  `DISABLE_INTERLEAVED_EXECUTION_TVF` 變更為 `INTERLEAVED_EXECUTION_TVF`
+-  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 變更為 `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+-  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 變更為 `BATCH_MODE_ADAPTIVE_JOINS`
 
 ## <a name="limitations-and-restrictions"></a>限制事項
 

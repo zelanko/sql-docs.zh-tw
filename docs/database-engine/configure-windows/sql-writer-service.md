@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb5b16d81ce78b6dbd587b74730b84a6139f53e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037188"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816669"
 ---
 # <a name="sql-writer-service"></a>SQL 寫入器服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68037188"
 > 使用 VSS 來備份裝載基本可用性群組的虛擬機器時，若虛擬機器目前裝載處於次要狀態的資料庫，從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 與 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 開始，那些資料庫將「不」會  隨著虛擬機器備份。  這是因為基本可用性群組不支援備份次要複本上的資料庫。  在這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之前的版本上，備份將會因為發生錯誤而失敗。
   
 ## <a name="virtual-backup-device-interface-vdi"></a>虛擬備份裝置介面 (VDI)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一種稱為「虛擬備份裝置介面 (VDI)」的 API，可讓獨立軟體廠商將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 整合到他們的產品中，以對備份和還原作業提供支援。 這些 API 可提供最高的可靠性與效能，並能支援所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原功能，包括所有熱備份與快照集備份能力。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一種稱為「虛擬備份裝置介面 (VDI)」的 API，可讓獨立軟體廠商將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 整合到他們的產品中，以對備份和還原作業提供支援。 這些 API 可提供最高的可靠性與效能，並能支援所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原功能，包括所有熱備份與快照集備份能力。 如果協力廠商應用程式要求快照集 (VSS) 備份，則 SQL 寫入器服務會呼叫 VDI API 函式來執行實際備份。 請注意，VDI API 與 VSS 無關，且經常用於不採用 VSS API 的軟體解決方案。
   
 ## <a name="permissions"></a>權限  
  SQL 寫入器服務必須以 **本機系統** 帳戶執行。 SQL 寫入器服務使用 **NT Service\SQLWriter** 登入連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用 **NT Service\SQLWriter** 登入可讓 SQL 寫入器處理序在指定為 **沒有登入**的帳戶中，以較低權限層級執行，藉此限制漏洞。 如果停用 SQL 寫入器服務，則依賴 VSS 快照集的任何公用程式 (例如 System Center Data Protection Manager) 以及其他一些協力廠商產品都將損毀，更糟的情況會導致資料庫備份不一致的風險。 如果執行所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統或主機系統 (在虛擬機器的情況下) 只需要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 備份，則可以放心停用 SQL 寫入器服務並移除登入。  請注意，系統或磁碟區層級備份都可能叫用 SQL 寫入器服務，而不論備份是否直接以快照集為基礎。 某些系統備份產品使用 VSS 避免遭到開啟或鎖定檔案的封鎖。 由於 SQL 寫入器服務在活動過程中會暫時凍結 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有 I/O，因此 SQL 寫入器服務需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的更高權限。  

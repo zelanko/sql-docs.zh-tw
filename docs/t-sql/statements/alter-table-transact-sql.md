@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889813"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823617"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -473,6 +473,9 @@ ALTER COLUMN
 *column_name*  
 要改變、新增或卸除的資料欄名稱。 *Column_name* 最多為 128 個字元。 針對以 **timestamp** 資料類型建立的新資料行，您可以省略 *column_name*。 如果您沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。
 
+> [!NOTE]
+> 在變更資料表中的所有現有資料行之後會新增新資料行。
+
 [ _type\_schema\_name_ **.** ] _type\_name_  
 所改變資料行的新資料類型，或是所新增資料行的資料類型。 您無法為資料分割資料表的現有資料行指定 *type_name*。 *type_name* 可以是下列類型之一：
 
@@ -614,6 +617,9 @@ ALTER INDEX *index_name*
 
 ADD  
 指定已新增一或多個資料行定義、計算資料行定義或資料表條件約束。 或者，會新增系統用於系統版本設定的資料行。 您可以對記憶體最佳化資料表新增索引。
+
+> [!NOTE]
+> 在變更資料表中的所有現有資料行之後會新增新資料行。
 
 > [!IMPORTANT]
 > 在未使用 ALTER TABLE 陳述式的情況下，記憶體最佳化資料表上的索引就不支援 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 與 [PAD_INDEX](alter-table-index-option-transact-sql.md) 陳述式。

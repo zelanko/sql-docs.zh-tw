@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045639"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687363"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045639"
 |GROUP BY、ORDER BY 的資料行||僅受限於位元組數||  
 |GROUP BY WITH CUBE 或 WITH ROLLUP 陳述式中的資料行或運算式||10||  
 |每個索引鍵的資料行數||32|如果資料表包含一或多個 XML 索引，則使用者資料表的叢集索引鍵限制為 31 個資料行，因為 XML 資料行會加入主要 XML 索引的叢集索引鍵中。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，您可以在非叢集索引中包含非索引鍵資料行，以避免達到最多 32 個索引鍵資料行的限制。 如需詳細資訊，請參閱 [建立內含資料行的索引](../relational-databases/indexes/create-indexes-with-included-columns.md)。|  
-|每個外部索引鍵的資料行數||32||  
-|每個主索引鍵的資料行數||32||  
-|每個非寬型資料表的資料行數||1,024||  
-|每個寬型資料表的資料行數||30,000||  
-|每個 SELECT 陳述式的資料行數||4,096||  
-|每個 INSERT 陳述式的資料行數||4,096||  
+|每個外部索引鍵或主索引鍵的資料行數||32||  
+|每個 `INSERT` 陳述式的資料行數||4,096||  
+|每個 `SELECT` 陳述式的資料行數||4,096||  
+|資料表的資料行數||1,024|包含疏鬆資料行集的資料表最多含有 30,000 個資料行。 請參閱[疏鬆資料行集合](../relational-databases/tables/use-column-sets.md)。|  
+|每個 `UPDATE` 陳述式的資料行數||4,096|適用於[疏鬆資料行集合](../relational-databases/tables/use-column-sets.md)的不同限制。|  
+|每個檢視的資料行數||1,024||  
 |每個用戶端的連接數目||已設定之連接的最大值||  
 |資料庫大小||524,272 TB||  
 |每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -99,7 +99,6 @@ ms.locfileid: "68045639"
 |非索引資料行的統計資料||30,000|| 
 |每個 SELECT 陳述式的資料表數||僅受限於可用的資源||  
 |每份資料表的觸發程序數||受限於資料庫的物件數|資料庫物件包含像資料表、檢視、預存程序、使用者定義函數、觸發程序、規則、預設值和條件約束等物件。 資料庫中所有物件數的總和不得超過 2,147,483,647。|  
-|每個 UPDATE 陳述式 (寬型資料表) 的資料行數||4096||  
 |使用者連線||32,767||  
 |XML 索引||249||  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653351"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680831"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -186,7 +186,7 @@ TOP ( *expression* ) [ PERCENT ]
   
 當整個來源資料表和整個目標資料表聯結在一起，且不符合插入、更新或刪除動作的聯結資料列移除之後，才會套用 TOP 子句。 TOP 子句會進一步將聯結資料列數目減少至指定的值。 Insert、update 或 delete 動作會以未排序的方式套用至剩餘聯結資料列中。 亦即，將資料列散發到 WHEN 子句中定義的動作時，沒有任何特定順序。 例如，指定 TOP (10) 會影響 10 個資料列。 在這些資料列中，可能會更新 7 個及插入 3 個，或者可能會刪除 1 個、更新 5 個及插入 4 個，依此類推。  
   
-因為 MERGE 陳述式會針對來源和目標資料表執行完整資料表掃描，所以當使用 TOP 子句來藉由建立多個批次以修改大型資料表時，I/O 效能有時會受到影響。 在此狀況中，請務必確保所有後續批次都以新的資料列為目標。  
+因為 MERGE 陳述式會針對來源和目標資料表執行完整資料表掃描，所以當使用 TOP 子句 來藉由建立多個批次以修改大型資料表時，I/O 效能有時會受到影響。 在此狀況中，請務必確保所有後續批次都以新的資料列為目標。  
   
 *database_name*  
 *target_table* 所在的資料庫名稱。  
@@ -223,8 +223,8 @@ WHEN MATCHED THEN \<merge_matched>
 MERGE 陳述式最多可以具有兩個 WHEN MATCHED 子句。 如果指定兩個子句，則第一個子句必須附帶 AND \<search_condition> 子句。 對於任何指定的資料列，只有第一個 WHEN MATCHED 子句未套用時，才會套用第二個 WHEN MATCHED 子句。 如果有兩個 WHEN MATCHED 子句，則一個必須指定 UPDATE 動作，另一個則必須指定 DELETE 動作。 在 \<merge_matched> 子句中指定 UPDATE，且根據 \<merge_search_condition>，有一個以上的 \<table_source> 資料列符合 *target_table* 的資料列時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。 MERGE 陳述式無法更新同一資料列一次以上或更新及刪除同一資料列。  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-指定由 \<table_source> ON \<merge_search_condition> 傳回的每一資料列若不符合 *target_table* 的資料列，但滿足其他的搜尋條件 (若存在)，就會在 *target_table* 中插入一個資料列。 插入的值是由 \<merge_not_matched> 子句決定。 MERGE 陳述式只能具有一個 WHEN NOT MATCHED 子句。  
-  
+指定由 \<table_source> ON \<merge_search_condition> 傳回的每一資料列若不符合 *target_table* 的資料列，但滿足其他的搜尋條件 (若存在)，就會在 *target_table* 中插入一個資料列。 插入的值是由 \<merge_not_matched> 子句決定。 MERGE 陳述式只能具有一個 WHEN NOT MATCHED [ BY TARGET ] 子句。
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 指定所有不符合 \<table_source> ON \<merge_search_condition> 傳回的資料列，卻能滿足任何其他搜尋條件的 *target_table 資料列，都會根據 \<merge_matched> 子句更新或刪除。  
   
@@ -285,7 +285,7 @@ DEFAULT VALUES
 \<圖形搜尋模式>  
 指定圖形搜尋模式。 如需此子句的引數詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 
 必須至少指定三個 MATCHED 子句中的一個，但可依任何順序指定這些子句。 在同一個 MATCHED 子句中，不能更新變數一次以上。  
   

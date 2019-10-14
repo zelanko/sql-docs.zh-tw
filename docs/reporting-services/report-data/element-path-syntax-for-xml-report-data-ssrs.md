@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573162"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173830"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
   在「報表設計師」中，可藉由定義區分大小寫的元素路徑來指定要用於 XML 資料來源中之報表的資料。 元素路徑會指出在 XML 資料來源中周遊 XML 階層式節點及其屬性的方法。 若要使用預設的元素路徑，請將資料集查詢或 XML **ElementPath** (屬於 XML **Query** ) 保留空白。 由 XML 資料來源擷取資料時，具有文字值的元素節點以及元素節點屬性會變成結果集內的資料行。 執行查詢時，節點及屬性的值會變成資料列資料。 這些資料行會以資料集欄位集合的方式顯示在 [報表資料] 窗格中。 此主題描述元素路徑語法。  
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |**編碼方式**|指出本元素的 **Value** 是已編碼的 XML，需要加以解碼並加入做為此元素的子元素。|  
 |**FieldList**|定義用來擷取資料的元素與屬性組合。<br /><br /> 如果沒有指定，所有屬性和子元素都會做為欄位使用。 如果指定了空的欄位清單 ( **{}** )，就不會使用這個節點中的任何欄位。<br /><br /> **FieldList** 可能不會同時包含 **Value** 及 **Element** 或 **ElementNode**。|  
 |**欄位**|指定擷取做為資料集欄位的資料。|  
-|**Attribute**|**ElementNode**中名稱與值的配對。 例如，在 \<Customer ID="1"> 元素節點中，**ID** 為一屬性，而 **@ID(Integer)** 會在對應的資料欄位 **ID** 中以整數資料類型傳回 "1"。|  
+|**Attribute**|**ElementNode**中名稱與值的配對。 例如，在元素節點 \<Customer ID="1"> 中，**ID** 是屬性，而 **\@ID(Integer)** 會在對應的資料欄位 **ID** 中以整數資料類型傳回 "1"。|  
 |**ReplTest1**|元素的值。 **Value** 只能用於元素路徑中的最後一個 **ElementNode** 上。 例如，因為 \<Return> 是分葉節點，如果將其加入元素路徑的結尾，**Return {@}** 的值會是 **Chair**。|  
 |**Element**|具名子元素的值。 例如，Customers {}/Customer {}/LastName 只會擷取 LastName 元素的值。|  
 |**型別**|此元素建立之欄位所使用的選擇性資料類型。|  

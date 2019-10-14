@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a22cf1c2da261805309c8ac223a8535afbcd34d1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: e7a3d7b7f67abae251041ff2b702d93b60228958
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152745"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173140"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver to SQL Server 版本資訊
 
@@ -35,6 +35,19 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="1742-october-2019"></a>17.4.2，2019 年 10 月
+
+| 新增功能 | 詳細資料 |
+| :------------ | :------ |
+| 支援額外的 Azure Key Vault 端點 | 請參閱[搭配 ODBC 驅動程式使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| 支援設定資料分類版本 | 請參閱[資料分類](../data-classification.md#bkmk-version)。 |
+| 錯誤修正。 | 請參閱 [Bug 修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
+
+**已知問題：**
+
+搭配安全記憶體保護區和 Azure Key Vault 使用 Always Encrypted 時，奇數機碼路徑長度可能會導致 CMK 簽章驗證錯誤。 如果您遇到這個問題，請嘗試重新命名 AKV 索引鍵，以將 keypath 的長度變更為一個字元。
+
 ## <a name="174-august-2019"></a>17.4，2019 年 8 月
 
 | 新增功能 | 詳細資料 |

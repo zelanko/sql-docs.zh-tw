@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575993"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278236"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括檔案共用傳遞延伸模組，讓您可以傳遞報表到資料夾。 依預設，可以使用檔案共用傳遞延伸模組，且不需額外的組態。 若要順利完成檔案傳遞，您必須設定共用資料夾的寫入權限。 需要寫入者權限之帳戶可以是訂用帳戶中所設定認證或針對報表伺服器所設定的**檔案共用帳戶**。 如需檔案共用帳戶的詳細資訊，請參閱 [訂閱設定與檔案共用帳戶 &#40;組態管理員&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要存取報表的使用者必須擁有共用資料夾的讀取權限。  
@@ -72,7 +72,7 @@ ms.locfileid: "65575993"
   
  **覆寫** ：您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
   
- 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請將 **@timestamp** 變數加入檔案名稱 (例如 *CompanySales@timestamp* )。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
+ 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請將 **\@timestamp** 變數加入檔案名稱 (例如 *CompanySales@timestamp* )。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
   
  下圖是針對檔案共用傳遞所設定之訂用帳戶的檔案設定範例。  
   

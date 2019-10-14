@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041695"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252134"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
 在本教學課程中，您可以將參數新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，讓報表讀者可以篩選報表資料中的一或多個值。 
@@ -142,9 +142,9 @@ ms.locfileid: "63041695"
     WHERE StoreID = (@StoreID)  
     ```  
   
-    **其中**子句限制擷取的資料，查詢參數所指定的商店識別碼 *@StoreID* 。  
+    **WHERE** 子句會將擷取的資料限制為查詢參數 *\@StoreID* 所指定的商店識別碼。  
   
-4.  在查詢設計工具工具列上，按一下 **[執行]** \( **!** )。 **定義查詢參數** 對話方塊隨即開啟，並且提示您輸入查詢參數的值 *@StoreID* 。  
+4.  在查詢設計工具工具列上，按一下 **[執行]** \( **!** )。 [定義查詢參數]  對話方塊隨即開啟，並且提示您輸入查詢參數 *\@StoreID* 的值。  
   
 5.  在 **[參數值]** 中，輸入 **200**。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "63041695"
   
 8.  在 [報表資料] 窗格中，展開 **[參數]** 資料夾。  
   
-請注意，現在已有名為 *@StoreID* 的報表參數，以及可配置報表參數的 [參數] 窗格。   
+請注意，現在已有名為 *\@StoreID* 的報表參數，以及可配置報表參數的 [參數] 窗格。   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "63041695"
   
 根據預設，所建立參數的資料類型為 [文字]  。 因為商店識別碼是整數，所以您可以將資料類型變更為 Integer。  
   
-1.  在 報表資料窗格的 **參數** 節點，以滑鼠右鍵按一下 *@StoreID* ，然後按一下 **參數屬性**。  
+1.  在 [報表資料] 窗格的 [參數]  節點下，並以滑鼠右鍵按一下 *\@StoreID*，然後按一下 [參數屬性]  。  
   
 2.  在 [提示]  中輸入 [商店識別碼？]  。當您執行報表時，此文字會出現在報表檢視器工具列上。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "63041695"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  按一下 **[執行]** 預覽報表。 報表檢視器會顯示提示**商店識別碼？** 如 *@StoreID* 。  
+6.  按一下 **[執行]** 預覽報表。 報表檢視器會針對 *\@StoreID* 顯示 [商店識別碼？]  提示。  
   
 7.  在報表檢視器工具列上，就在 Store ID 旁，輸入 **200**，然後按一下 **[檢視報表]** 。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "63041695"
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>若要從資料集提供可用的參數值  
   
-1.  在 報表資料 窗格中，以滑鼠右鍵按一下參數 *@StoreID* ，然後按一下 **參數屬性**。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下參數 *\@StoreID*，然後按一下 [參數屬性]  。  
   
 2.  按一下 **[可用的值]** ，然後按一下 **[從查詢取得值]** 。  
   
@@ -253,7 +253,7 @@ ms.locfileid: "63041695"
   
 1.  切換至 [設計] 檢視。  
   
-2.  在 報表資料 窗格中，以滑鼠右鍵按一下 *@StoreID* ，然後按一下 **參數屬性**。  
+2.  在 [報表資料] 窗格中，以滑鼠右鍵按一下 *\@StoreID*，然後按一下 [參數屬性]  。  
   
 3.  按一下 [預設值]  ，然後按一下 [從查詢取得值]  。  
   
@@ -265,13 +265,13 @@ ms.locfileid: "63041695"
   
 7.  預覽報表。  
   
-對於 *@StoreID* ，報表檢視器會顯示值 "Contoso North America Online Store"，原因是它來自 **Stores**。 報表會針對商店識別碼 **199**顯示  Digital Cameras 售出的數量。  
+針對 *\@StoreID*，報表檢視器會顯示值 "Contoso North America Online Store"，原因是它來自 **Stores** 資料集之結果集的第一個值。 報表會針對商店識別碼 **199**顯示  Digital Cameras 售出的數量。  
   
 ### <a name="to-specify-a-custom-default-value"></a>若要指定自訂預設值  
   
 1.  切換至 [設計] 檢視。  
   
-2.  在 報表資料 窗格中，以滑鼠右鍵按一下 *@StoreID* ，然後按一下 **參數屬性**。  
+2.  在 [報表資料] 窗格中，以滑鼠右鍵按一下 *\@StoreID*，然後按一下 [參數屬性]  。  
   
 3.  按一下 [預設值]   > [指定值]   > [加入]  。 新的值資料列隨即加入。  
   
@@ -281,7 +281,7 @@ ms.locfileid: "63041695"
   
 6.  預覽報表。  
   
-對於 *@StoreID* ，報表檢視器會顯示 "Contoso Catalog Store"，因為這是商店識別碼 **200**。 報表會針對商店識別碼 **200**顯示 Accessories、Camcorders 與 Digital SLR Cameras 售出的數量。  
+針對 *\@StoreID*,，報表檢視器會顯示 "Contoso Catalog Store"，因為這是商店識別碼 **200** 的顯示名稱。 報表會針對商店識別碼 **200**顯示 Accessories、Camcorders 與 Digital SLR Cameras 售出的數量。  
   
 ## <a name="NameValue"></a>4d. 查閱名稱/值組  
 資料集可能同時包含識別碼與對應的名稱欄位。 如果您只有識別碼，那麼可以查詢包含名稱/值組之資料集 (您先前建立) 中的對應名稱。  
@@ -323,7 +323,7 @@ ms.locfileid: "63041695"
   
 2.  以滑鼠右鍵按一下頁尾 > [插入]   > [文字方塊]  。 將文字方塊拖曳到具有時間戳記的文字方塊中。 抓取文字方塊的側邊控點，然後拉長寬度。  
   
-3.  從 [報表資料] 窗格中，將 *@StoreID* 參數拖曳至文字方塊。 此文字方塊便會顯示 `[@StoreID]`。  
+3.  從 [報表資料] 窗格中，將 *\@StoreID* 參數拖曳至文字方塊。 此文字方塊便會顯示 `[@StoreID]`。  
   
 4.  若要顯示參數標籤，按一下文字方塊，直到插入游標出現在現有運算式之後，輸入一個空格，然後將參數的其他複本從 [報表資料] 窗格拖曳至文字方塊。 此文字方塊便會顯示 `[@StoreID] [@StoreID]`。  
   
@@ -371,7 +371,7 @@ ms.locfileid: "63041695"
   
 1.  切換至 [設計] 檢視。  
   
-2.  在 報表資料 窗格中，以滑鼠右鍵按一下 *@StoreID* ，然後按一下 **參數屬性**。  
+2.  在 [報表資料] 窗格中，以滑鼠右鍵按一下 *\@StoreID*，然後按一下 [參數屬性]  。  
   
 3.  選取 **[允許多個值]** 。  
   

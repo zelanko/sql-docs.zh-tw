@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251099"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710297"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>從備份初始化交易式訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71251099"
   
     -   如果此值是 **1**，表示發行集支援此功能。  
   
-    -   如果這個值是 **0**，請在發行集資料庫的發行者端執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 **allow_initialize_from_backup** 指定 **@property** 的值，並針對 **@value** 指定 **@value** 。  
+    -   如果這個值是 **0**，請在發行集資料庫的發行者端執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 針對 `@property` 指定 **allow_initialize_from_backup** 的值，並針對 `@value` 指定 **true** 的值。  
   
 2.  如果是新的發行集，請在發行集資料庫的發行者端執行 [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 針對 **allow_initialize_from_backup** 指定 **true**的值。 如需詳細資訊，請參閱[建立發行集](../../relational-databases/replication/publish/create-a-publication.md)。  
   
@@ -48,23 +48,23 @@ ms.locfileid: "71251099"
   
 5.  在發行集資料庫的發行者端，執行預存程序 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定下列參數：  
   
-    -   **@sync_type** - **initialize with backup**。  
+    -   `@sync_type` - **以備份初始化**的值。  
   
-    -   **@backupdevicetype** - 備份裝置的類型： **logical** (預設值)、 **disk**或 **tape**。  
+    -   `@backupdevicetype` - 備份裝置的類型：**logical** (預設值)、**disk** 或 **tape**。  
   
-    -   **@backupdevicename** - 要用於還原的邏輯或實體備份裝置。  
+    -   `@backupdevicename` - 要用於還原的邏輯或實體備份裝置。  
   
          如果是邏輯裝置，請指定使用 **sp_addumpdevice** 來建立裝置時所指定的備份裝置名稱。  
   
          如果是實體裝置，請指定完整路徑和檔案名稱，例如 `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\BACKUP\Mybackup.dat'` 或 `TAPE = '\\.\TAPE0'`。  
   
-    -   (選擇性) **@password** - 當建立備份組時所提供的密碼。  
+    -   (選擇性) `@password` - 當建立備份組時所提供的密碼。  
   
-    -   (選擇性) **@mediapassword** - 當格式化媒體集時所提供的密碼。  
+    -   (選擇性) `@mediapassword` - 當格式化媒體集時所提供的密碼。  
   
-    -   (選擇性) **@fileidhint** - 要還原之備份組的識別碼。 例如，指定 **1** 表示備份媒體上的第一個備份組，指定 **2** 則表示第二個備份組。  
+    -   (選擇性) `@fileidhint` - 要還原之備份組的識別碼。 例如，指定 **1** 表示備份媒體上的第一個備份組，指定 **2** 則表示第二個備份組。  
   
-    -   (適用於磁帶裝置的選擇項) **@unload** - 如果在完成還原之後應該從磁碟機卸載磁帶，請指定 **1** (預設值) 的值；如果不應該將它卸載，請指定 **0** 的值。  
+    -   (適用於磁帶裝置的選擇項) `@unload` - 如果在完成還原之後應該從磁碟機卸載磁帶，請指定 **1** (預設值) 的值；如果不應該將它卸載，請指定 **0** 的值。  
   
 6.  (選擇性) 針對提取訂閱，在訂閱資料庫的訂閱者端執行 [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) 和 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 如需詳細資訊，請參閱 [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)。  
   

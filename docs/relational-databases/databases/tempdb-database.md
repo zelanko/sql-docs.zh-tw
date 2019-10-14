@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: f75bbb285ea99eba41accc76851db997c54d1027
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326111"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708249"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 
@@ -219,7 +219,7 @@ GO
 
 ## <a name="memory-optimized-tempdb-metadata"></a>記憶體最佳化的 TempDB 中繼資料
 
-TempDB 中繼資料競爭一直以來都是在 SQL Server 上執行之許多工作負載的延展性瓶頸。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分，記憶體最佳化的 tempdb 中繼資料能有效移除此瓶頸，並解除鎖定大量 tempdb 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分，記憶體最佳化的 tempdb 中繼資料能有效移除此瓶頸，並解除鎖定大量 tempdb 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。若要選擇加入此功能，請使用下列指令碼：
+TempDB 中繼資料競爭一直以來都是在 SQL Server 上執行之許多工作負載的延展性瓶頸。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../in-memory-database.md)功能系列的一部分，記憶體最佳化的 tempdb 中繼資料能有效移除此瓶頸，並解除鎖定大量 tempdb 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。 請使用下列指令碼，選擇加入這項新功能：
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -244,7 +244,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     COMMIT TRAN
     ```
 3. 針對經記憶體最佳化之資料表的查詢不支援鎖定和隔離提示，因此針對經記憶體最佳化之 TempDB 目錄檢視的查詢不支援鎖定和隔離提示。 至於 SQL Server 中的其他系統目錄檢視，針對系統檢視表的所有交易都會是 READ COMMITTED 隔離 (或在本例中為 READ COMMITTED SNAPSHOT)。
-4. 啟用經記憶體最佳化的 tempdb 中繼資料時，無法在暫存資料表上建立[資料行存放區索引](../indexes/columnstore-indexes-overview.md)。
+4. 啟用經記憶體最佳化的 TempDB 中繼資料時，無法在暫存資料表上建立[資料行存放區索引](../indexes/columnstore-indexes-overview.md)。
+5. 由於資料行存放區索引的限制，在啟用記憶體最佳化 TempDB 中繼資料的情況下不支援使用 sp_estimate_data_compression_savings 系統預存程式搭配 COLUMNSTORE 或 COLUMNSTORE_ARCHIVE 資料壓縮參數。
 
 > [!NOTE] 
 > 這些限制僅適用於參考 TempDB 系統檢視表時，如有需要，您可在存取使用者資料庫中經記憶體最佳化的資料表時，在相同的交易中建立暫存資料表。

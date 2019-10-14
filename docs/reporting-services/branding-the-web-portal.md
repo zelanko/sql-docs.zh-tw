@@ -8,12 +8,12 @@ description: 在本文中，您將了解如何透過品牌套件建立符合您�
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199412"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251908"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
@@ -75,7 +75,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-已處理的輸出會查閱 **@primaryButtonBg** LESS 變數，且會看見它對應到名為 **primary**的 json 屬性，在此範例中是 #009900。 因此，它就能輸出正確的 CSS。  
+已處理的輸出會查閱 **\@primaryButtonBg** 變數，且會看見它對應到名為 **primary** 的 json 屬性，在此範例中是 #009900。 因此，它就能輸出正確的 CSS。  
   
     .btn-primary {   
         color:#ffffff;   

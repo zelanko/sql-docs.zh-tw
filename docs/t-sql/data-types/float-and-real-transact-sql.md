@@ -1,7 +1,7 @@
 ---
 title: float 和 real (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086748"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682014"
 ---
 # <a name="float-and-real-transact-sql"></a>float 和 real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "68086748"
   
 當您想要從 **float** 或 **real** 轉換成字元資料時，使用 STR 字串函式比 CAST( ) 來得有用。 這是因為 STR 可以對格式有較多的控制。 如需詳細資訊，請參閱 [STR &#40;Transact-SQL&#41](../../t-sql/functions/str-transact-sql.md) 和 [函式 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)。
   
-如果您將使用科學記號標記法的 **float** 值轉換成 **decimal** 或 **numeric**，就會限制為只有 17 個有效位數的值。 任何小於 5E-18 的值都會捨去為 0。
+在 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 之前，**float** 值轉換成 **decimal** 或 **numeric** 會限制為只有 17 個有效位數的值。 任何小於 5E-18 (當設定使用 5E-18 科學記號標記法或 0.0000000000000000050000000000000005 十進位標記法時) 的 **float** 值都會捨去為 0。 這不再是 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 的限制。
   
 ## <a name="see-also"></a>另請參閱
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

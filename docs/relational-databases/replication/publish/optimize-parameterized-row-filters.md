@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df643e5881a4c53ee2a55c2cda53cdc3b3279ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059443"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710861"
 ---
 # <a name="optimize-parameterized-row-filters"></a>最佳化參數化資料列篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,34 +112,34 @@ ms.locfileid: "68059443"
   
 #### <a name="to-set-optimize-synchronization"></a>若要設定最佳化同步處理  
   
-1.  在 [發行集屬性 - \<發行集>]  對話方塊的 [訂閱選項]  頁面上，針對 [最佳化同步處理]  選項，選取 [True]  值。  
+1.  在  [發行屬性 - \<發行集>]  對話方塊的 [發行集選項]  頁面上，針對 [最佳化同步處理]  選項，請選取 `True` 的值。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 如需 **@keep_partition_changes** 和 **@use_partition_groups** 之篩選選項的定義，請參閱＜ [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)中最佳化參數化資料列篩選。  
+ 如需 `@keep_partition_changes` 和 `@use_partition_groups` 的篩選選項定義，請參閱 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>在建立新的發行集時指定合併篩選最佳化  
   
-1.  在發行集資料庫的發行者上，執行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 **@publication** ，並針對下列其中一個參數指定 **true** 的值：  
+1.  在發行集資料庫的發行者上，執行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 `@publication`，並針對下列其中一個參數指定 `true` 的值：  
   
-    -   **@use_partition_groups** ：- 最高效能最佳化，前提是發行項符合預先計算的資料分割需求。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
+    -   `@use_partition_groups` - 最高效能最佳化，前提是發行項符合預先計算的資料分割需求。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
-    -   **@keep_partition_changes** - 在無法使用預先計算的資料分割時，使用此最佳化。  
+    -   `@keep_partition_changes` - 當無法使用預先計算的資料分割時，請使用此最佳化。  
   
 2.  加入此發行集的快照集作業。 如需詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 3.  在發行集資料庫的發行者上，執行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)並指定下列參數：  
   
-    -   **@publication** - 步驟 1 中發行集的名稱。  
+    -   `@publication` - 步驟 1 中發行集的名稱。  
   
-    -   **@article** - 發行項的名稱。  
+    -   `@article` - 發行項的名稱  
   
-    -   **@source_object** - 發行的資料庫物件。  
+    -   `@source_object` - 發行的資料庫物件。  
   
-    -   **@subset_filterclause** - 用來以水平方式篩選發行項的選擇性參數化篩選子句。  
+    -   `@subset_filterclause` - 用來以水平方式篩選發行項的選擇性參數化篩選子句。  
   
-    -   **@partition_options** - 篩選之發行項的資料分割選項。  
+    -   `@partition_options` - 經篩選發行項的資料分割選項。  
   
 4.  針對發行集中的每一個發行項重複步驟 3。  
   
@@ -147,16 +147,16 @@ ms.locfileid: "68059443"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>檢視及修改現有發行集的合併篩選行為  
   
-1.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，指定 **@publication** 中最佳化參數化資料列篩選。 請注意結果集中 **keep_partition_changes** 和 **use_partition_groups** 的值。  
+1.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，指定 `@publication`。 請注意結果集中 `keep_partition_changes` 和 `use_partition_groups` 的值。  
   
-2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對 **use_partition_groups** 指定 **@property** 的值，以及針對 **true** ，在 **false** 指定 **@value** 中最佳化參數化資料列篩選。  
+2.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對 `@property` 指定 `use_partition_groups` 的值，並為 `@value` 指定 `true` 或 `false` 值。  
   
-3.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對 **keep_partition_changes** 指定 **@property** 的值，以及針對 **true** ，在 **false** 指定 **@value** 中最佳化參數化資料列篩選。  
+3.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 針對 `@property` 指定 `keep_partition_changes` 的值，並為 `@value` 指定 `true` 或 `false` 值。  
   
     > [!NOTE]  
-    >  在啟用 **keep_partition_changes**時，您必須先停用 **use_partition_groups** ，並針對 **@force_reinit_subscription** 指定 **@force_reinit_subscription** 中最佳化參數化資料列篩選。  
+    >  當啟用 `keep_partition_changes` 時，您必須先停用 `use_partition_groups`，並針對 `@force_reinit_subscription` 指定 `1` 的值。  
   
-4.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 **@property** 指定 **@property** 的值，並針對 **@value** 中最佳化參數化資料列篩選。 如需這些篩選選項的定義，請參閱 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 。  
+4.  (選擇性) 在發行集資料庫的發行者上，執行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 `@property` 指定 `partition_options` 的值，並針對 *@value` 指定適當的值。 如需這些篩選選項的定義，請參閱 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 。  
   
 5.  (選擇性) 在必要時，啟動快照集代理程式來重新產生快照集。 如需哪些變更需要產生新快照集的資訊，請參閱[變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   

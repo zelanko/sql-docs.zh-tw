@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aaf2c556af354cf9b928cf9f2cb945e1ab6737a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6444a2a91a17f4f24ff9b70c713c22c7c894435
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126615"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952188"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>設定追蹤篩選 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68126615"
   
 ### <a name="to-set-a-trace-filter"></a>若要設定追蹤篩選  
   
-1.  如果追蹤已在執行，請執行 **sp_trace_setstatus** 並指定 **@status = 0**，以停止追蹤。  
+1.  如果追蹤已在執行，請執行 **sp_trace_setstatus** 並指定 `@status = 0`，以停止追蹤。  
   
 2.  執行 **sp_trace_setfilter** 以設定要從追蹤的事件中擷取的相關資訊類型。  
 

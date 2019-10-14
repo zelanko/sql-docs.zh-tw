@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44c3549b04bd2bf534e626764bbc56c688b3ca5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5b6deb043b12dc90a6543f7ef394046b00aaf5e
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085846"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710291"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>將資料大量載入合併式發行集中的資料表
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "68085846"
   
     -   使用 FIRE_TRIGGERS 選項執行大量複製。  
   
-    -   在插入資料的資料庫上，執行 [sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md)。 指定要在其中插入 **@table_name** 。  
+    -   在插入資料的資料庫上，執行 [sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md)。 指定要在其中插入 `@table_name` 資料的資料表名稱。  
   
   

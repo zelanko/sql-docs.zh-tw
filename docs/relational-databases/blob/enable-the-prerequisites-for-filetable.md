@@ -11,12 +11,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 4f339b343da4adc12b7b5cf692d217c5fb0419c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085376"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974315"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>啟用 FileTable 的必要條件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,31 +56,31 @@ ms.locfileid: "68085376"
   
 ###  <a name="HowToCheckAccess"></a> 如何：檢查是否已在資料庫上啟用非交易式存取  
  查詢 [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) 目錄檢視，並檢查 **non_transacted_access** 和 **non_transacted_access_desc** 資料行。  
-  
-```sql  
+
+```sql
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
-```  
-  
+```
+
 ###  <a name="HowToNTAccess"></a> 如何：在資料庫層級啟用非交易式存取  
  非交易式存取的可用層級是 FULL、READ_ONLY 和 OFF。  
   
  **使用 Transact-SQL 指定非交易式存取的層級**  
- -   **建立新資料庫**時，請使用 **NON_TRANSACTED_ACCESS** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
--   **改變現有資料庫**時，請使用 **NON_TRANSACTED_ACCESS** FILESTREAM 選項，呼叫 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 陳述式。  
-  
-    ```sql  
-    ALTER DATABASE database_name  
-        SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
+ - **建立新資料庫**時，請使用 **NON_TRANSACTED_ACCESS** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
+- **改變現有資料庫**時，請使用 **NON_TRANSACTED_ACCESS** FILESTREAM 選項，呼叫 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 陳述式。
+
+   ```sql
+   ALTER DATABASE database_name  
+     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
  **使用 SQL Server Management Studio 指定非交易式存取的層級**  
  在 [資料庫屬性]  對話方塊中，您可以透過 [選項]  頁面的 [FILESTREAM 非交易式存取]  欄位，來指定非交易式存取的層級。 如需此對話方塊的詳細資訊，請參閱[資料庫屬性 &#40;選項頁面&#41;](../../relational-databases/databases/database-properties-options-page.md)。  
   
@@ -92,15 +92,15 @@ GO
 ###  <a name="HowToDirectory"></a> 如何：在資料庫層級指定 FileTable 的目錄  
  跨資料庫層級目錄的執行個體中，指定的名稱必須是唯一的。  
   
- **使用 Transact-SQL 指定 FileTable 的目錄**  
- -   **建立新資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
-    GO  
-    ```  
-  
+**使用 Transact-SQL 指定 FileTable 的目錄**  
+- **建立新資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 陳述式。
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
+   GO  
+   ```
+
 -   **改變現有資料庫**時，請使用 **DIRECTORY_NAME** FILESTREAM 選項，呼叫 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 陳述式。 當您使用這些選項來變更目錄名稱時，資料庫必須獨佔鎖定，而且沒有任何開啟的檔案控制代碼。  
   
     ```sql  
@@ -151,6 +151,6 @@ GO
   
 -   當您在資料庫層級中啟用或停用非交易式存取時，此作業不會檢查是否已經指定目錄名稱，或者目錄名稱是否唯一。  
   
--   當您卸除已針對 FileTable 啟用的資料庫時，會一併移除資料庫層級目錄和其下所有 FileTable 的所有目錄結構。  
+-   當您卸除為 FileTable 啟用的資料庫時，會一併移除資料庫層級目錄和其下所有 FileTable 的全部目錄結構。  
   
   

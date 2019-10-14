@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68122184"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816825"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,7 +192,7 @@ GO
 |LIKE 'abc[def]'|abcd、abce 和 abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>含 ESCAPE 子句的模式比對  
- 您可以搜尋包括一個或多個特殊萬用字元的字元字串。 例如，customers 資料庫中的 discounts 資料表可能會儲存包括百分比符號 (%) 的折扣值。 若要將百分比符號當做字元而不是萬用字元來搜尋，您必須提供 ESCAPE 關鍵字和逸出字元。 例如，包含名稱為 comment 的資料行且資料行中有 30% 這個文字的範例資料庫。 若要搜尋 comment 資料行的任何位置含有 30% 這個字串的任何資料列，請指定 WHERE 子句，例如 `WHERE comment LIKE '%30!%%' ESCAPE '!'`。 如果未指定 ESCAPE 和逸出字元，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回任何含有 30 這個字串的資料列。  
+ 您可以搜尋包括一個或多個特殊萬用字元的字元字串。 例如，customers 資料庫中的 discounts 資料表可能會儲存包括百分比符號 (%) 的折扣值。 若要將百分比符號當做字元而不是萬用字元來搜尋，您必須提供 ESCAPE 關鍵字和逸出字元。 例如，包含名稱為 comment 的資料行且資料行中有 30% 這個文字的範例資料庫。 若要搜尋 comment 資料行的任何位置含有 30% 這個字串的任何資料列，請指定 WHERE 子句，例如 `WHERE comment LIKE '%30!%%' ESCAPE '!'`。 如果未指定 ESCAPE 和逸出字元，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回任何含有 30! 這個字串的資料列。  
   
  如果 LIKE 模式中逸出字元之後沒有任何字元，模式便無效，且 LIKE 會傳回 FALSE。 如果逸出字元之後的字元不是萬用字元，就會捨棄萬用字元，並將之後的字元當作一般字元來處理。 這些字元包括用一組左右括弧 ([ ]) 括住的百分比符號 (%)、底線 (_) 和左括弧 ([) 萬用字元。 逸出字元也可以在左右括弧字元 ([ ]) 中使用，包括用來逸出插入號 (^)、連字號 (-) 或右括弧 (])。  
   

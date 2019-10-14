@@ -1,10 +1,10 @@
 ---
 title: Integration Services (SSIS) 專案和方案 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2016
+ms.date: 09/20/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d31bad0e0438ec331f674124e907fd098b2cefd7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296173"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680979"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 專案及解決方案
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 以用於開發 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件位在專案中。 若要建立及使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，您必須安裝 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境。 如需詳細資訊，請參閱[安裝 Integration Services](../integration-services/install-windows/install-integration-services.md)。  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件位在專案中。 若要建立及使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，您必須安裝 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。 如需詳細資訊，請參閱[安裝 Integration Services](../integration-services/install-windows/install-integration-services.md)。  
   
- 當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，[新增專案]  對話方塊將包含 [Integration Services 專案]  範本。 此專案範本會建立包含單一封裝的新專案。  
+ 當您在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時，[新增專案]  對話方塊將包含 [Integration Services 專案]  範本。 此專案範本會建立包含單一封裝的新專案。
   
 ## <a name="projects-and-solutions"></a>專案和方案  
  專案會儲存在方案中。 您可以先建立方案，然後將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案加入方案。 如果沒有方案存在， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會在您第一次建立專案時自動為您建立一個方案。 方案可以包含多個不同類型的專案。  
@@ -65,40 +64,46 @@ ms.locfileid: "71296173"
 ## <a name="folders-in-integration-services-projects"></a>Integration Services 專案中的資料夾  
  下圖顯示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中位於 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]專案內的資料夾。  
   
- ![Integration Services 專案中的資料夾](../integration-services/media/solutionexplorer.gif "Integration Services 專案中的資料夾")  
+![ssis-solution-explorer.png](media/ssis-solution-explorer.png)
   
  下表描述顯示在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中的資料夾。  
   
 |資料夾|Description|  
-|------------|-----------------|  
+|------------|-----------------|
+|連接管理員|包含專案連線管理員。 如需詳細資訊，請參閱 [Integration Services (SSIS) 連線](../integration-services/connection-manager/integration-services-ssis-connections.md)。|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|包含封裝。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 封裝](../integration-services/integration-services-ssis-packages.md)。|  
+|套件組件|包含可以重複使用或匯入的套件組件。 如需詳細資訊，請參閱[使用控制流程套件組件在套件之間重複使用控制流程](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)
 |其他|包含封裝檔案之外的檔案。|  
   
 ## <a name="files-in-integration-services-projects"></a>Integration Services 專案中的檔案  
- 當您將新的或現有的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案加入方案時， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會建立副檔名為 .dtproj、.dtproj.user 和 .database 的專案檔案。  
+ 當您將新或現有的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案新增至解決方案時，[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 會建立副檔名為 .dtproj、.dtproj.user、.database 和 Project.params 的專案檔案。 
   
 -   *.dtproj 檔案包含有關專案組態以及封裝之類項目的資訊。  
   
 -   *.dtproj.user 檔案包含有關您在使用專案時的偏好設定之資訊。  
   
--   *.database 檔案包含 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 在開啟 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時所需的資訊。  
+-   *.database 檔案包含 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 在開啟 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時所需的資訊。
+
+-   Project.params 檔案包含與[專案參數](integration-services-ssis-package-and-project-parameters.md)相關的資訊。
   
 ## <a name="version-targeting-in-integration-services-projects"></a>Integration Services 專案中的目標版本  
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，您可以建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，您可以建立、維護和執行目標為 SQL Server 2017、SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的套件。  
   
- 在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [組態屬性]  的 [一般]  索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
+ 在方案總管中，在 Integration Services 專案上按一下滑鼠右鍵，然後選取 [屬性]  以開啟專案的屬性頁。 在 [設定屬性]  的 [一般]  索引標籤中，選取 TargetServerVersion  屬性，然後選擇 SQL Server 2017、SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
  ![專案屬性對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
- 
+
 ## <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案  
   
 1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
 2.  在 **[檔案]** 功能表上，指向 **[開新檔案]** ，然後按一下 **[專案]** 。  
   
-3.  在 **[新增專案]** 對話方塊的 **[範本]** 窗格中，選取 **[Integration Services 專案]** 範本。  
+3.  在 [新增專案]  對話方塊中，選取 [商業智慧]  ，然後選取 [Integration Services 專案]  範本。  
   
-     **[Integration Services 專案]** 範本會建立一個包含單一、空白封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+     **[Integration Services 專案]** 範本會建立一個包含單一、空白封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。
+
+  ![ssis-ssdt-new-project.png](media/ssis-ssdt-new-project.png)
   
 4.  (選擇性) 編輯專案名稱和位置。  
   
@@ -113,16 +118,6 @@ ms.locfileid: "71296173"
     > **注意：** 若要檢視和變更選取的原始檔控制外掛程式，以及設定原始檔控制環境，請按一下 [工具]  功能表上的 [選項]  ，然後展開 [原始檔控制]  節點。  
   
 8.  按一下 [確定]  ，將方案加入 **方案總管** 中，並將專案加入方案中。  
-  
-## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>選擇專案和其封裝的目標版本  
-  
-1.  在方案總管中，以滑鼠右鍵按一下 Integration Services 專案，然後選取 [屬性]  以開啟專案的屬性頁。  
-  
-2.  在 [組態屬性]  的 [一般]  索引標籤中，選取 [TargetServerVersion]  屬性，然後選擇 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
-  
-     ![專案屬性對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
-  
- 您可以建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝。  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>使用匯入專案精靈匯入現有專案
   
@@ -142,9 +137,9 @@ ms.locfileid: "71296173"
   
 8.  按 **[下一步]** ，切換到 **[選取來源]** 頁面。  
   
-9. 如果您要從 **.ispac** 檔匯入，請在 **[路徑]** 文字方塊中輸入路徑，包括檔案名稱。 按一下 **[瀏覽]** 導覽到您希望儲存方案的資料夾，並在 **[檔案名稱]** 文字方塊中輸入檔案名稱，然後按一下 **[開啟]** 。  
+9. 如果您要從 **.ispac** 檔匯入，請在 [路徑]  文字方塊中鍵入路徑，包括檔案名稱。 按一下 **[瀏覽]** 導覽到您希望儲存方案的資料夾，並在 **[檔案名稱]** 文字方塊中輸入檔案名稱，然後按一下 **[開啟]** 。  
   
-     如果您要從 **[Integration Services 目錄]** 匯入，請在 **[伺服器名稱]** 文字方塊中輸入資料庫執行個體名稱，或按一下 **[瀏覽]** ，然後選取包含該目錄的資料庫執行個體。  
+     如果您要從 [Integration Services 目錄]  匯入，請在 [伺服器名稱]  文字方塊中鍵入資料庫執行個體名稱，或按一下 [瀏覽]  ，然後選取包含該目錄的資料庫執行個體。  
   
      按一下 **[路徑]** 文字方塊旁的 **[瀏覽]** 、展開目錄中的資料夾、選取您要匯入的專案，然後按一下 **[確定]** 。  
   
@@ -217,5 +212,9 @@ ms.locfileid: "71296173"
   
 4.  以滑鼠右鍵按一下要複製到其中的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後按一下 [貼上]  。  
   
-     這些項目會自動複製到正確的資料夾。 如果您將項目複製到不是封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，這些項目會複製到 **[其他]** 資料夾中。  
-     
+     這些項目會自動複製到正確的資料夾。 如果您將項目複製到不是套件的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，則這些項目會複製到 [其他]  資料夾中。  
+
+## <a name="next-steps"></a>後續步驟
+
+- 下載並安裝 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。
+- [SSIS 如何建立 ETL 封裝](ssis-how-to-create-an-etl-package.md)

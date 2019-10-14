@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 09/24/2019
-ms.openlocfilehash: 776f251e574ae2fa8165e4dd4d4feee6a5cf9968
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.date: 10/03/2019
+ms.openlocfilehash: eedec59438b13f9a2e9ac92562921ef0504b8f58
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326086"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816798"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -41,23 +41,23 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-183"></a>SSMS 18.3 
+## <a name="ssms-1831"></a>SSMS 18.3.1
 
-下載：[下載 SSMS 18.3](download-sql-server-management-studio-ssms.md)  
-組建編號：15.0.18178.0  
-發行日期：2019 年 9 月 23 日
+下載：[下載 SSMS 18.3.1](download-sql-server-management-studio-ssms.md)  
+組建編號：15.0.18183.0  
+發行日期：2019 年 10 月 2 日
 
-SSMS 18.3 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SSMS，請參閱[舊版 SSMS](release-notes-ssms.md#previous-ssms-releases)。
+SSMS 18.3.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SSMS，請參閱[舊版 SSMS](release-notes-ssms.md#previous-ssms-releases)。
 
-18.3 是 18.2 的更新，其中包括下列新項目和 Bug 修正。
+18.3.1 是 18.2 的更新，其中包括下列新項目和 Bug 修正。
 
-## <a name="whats-new-in-183"></a>18.3 的新功能
+## <a name="whats-new-in-1831"></a>18.3.1 的新功能
 
 | 新項目 | 詳細資料 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 資料分類 | 將資料分類資訊新增到資料行屬性 UI ([資訊類型]  、[資訊類型識別碼]  、[敏感度標籤]  和 [敏感度標籤識別碼]  不會在 SSMS UI 中公開)。 |
-| IntelliSense/編輯器 | 更新最近新增至 SQL Server 2019 功能 (例如，「ALTER SERVER CONFIGURATION」) 的支援。 | 
-| Integration Services | 新增新的選取功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，該項目會在 ADF 管線中，將 Azure-SSIS Integration Runtime 上的 SSIS 封裝執行作為執行 SSIS 封裝活動叫用。 |
+| IntelliSense/編輯器 | 更新最近新增至 SQL Server 2019 功能 (例如，「ALTER SERVER CONFIGURATION」) 的支援。 |
+| Integration Services | 新增新選取功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，該項目會在 ADF 管線中，將 Azure-SSIS Integration Runtime 上的 SSIS 套件執行叫用為執行 SSIS 套件活動。 |
 | SMO/指令碼 | 新增 Azure SQL DW 唯一條件約束支援指令碼的支援。 |
 | SMO/指令碼 | 資料分類 </br> - 新增 SQL 版本 10 (SQL 2008) 及更高版本的支援。 </br> - 新增 SQL 版本 15 (SQL 2019) 及更高版本，以及 Azure SQL DB 的新敏感性屬性 'rank'。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 將版本設定新增至規則集格式。 |
@@ -65,7 +65,7 @@ SSMS 18.3 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 新增 Azure SQL Database 受控執行個體的支援。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新 Cmdlet 的預設檢視，將結果顯示為資料表。 |
 
-## <a name="bug-fixes-in-183"></a>18.3 中的 Bug 修正
+## <a name="bug-fixes-in-1831"></a>18.3.1 中的 Bug 修正
 
 | 新項目 | 詳細資料 |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -82,11 +82,12 @@ SSMS 18.3 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 | 一般 SSMS | 修正 XEvent UI 中，暫留在方格上會選取資料列的問題。 </br></br> 請參閱 UserVoice 項目以取得詳細資料：[SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124) (SSMS 延伸事件 UI 在暫留時會選取動作)。 |
 | 匯入一般檔案 | 藉由讓使用者選擇簡易或豐富的資料類型偵測，以修正匯入一般檔案不會匯入所有資料的問題。</br></br> 請參閱 UserVoice 項目以取得詳細資料：[SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989) (SSMS 匯入一般檔案無法匯入所有資料)。 |
 | Integration Services | 為 SSIS 作業報表新增新的作業類型 *StartNonCatalogExecution*。|
+| Integration Services | 已修正 Azure 啟用的 `DTExec` 公用程式所產生 Azure Data Factory 管線中問題，以使用正確的參數類型。 (明確用於 18.3.1) |
 | SMO/指令碼 | 修正造成 SMO 使用 **SMO.Server.SetDefaultInitFields(true)** 擷取屬性時擲回錯誤的問題。|
 | 查詢存放區 UI | 修正在 [追蹤查詢]  檢視中選取 [執行計數]  計量時，Y 軸無法調整大小的問題。 |
 | 弱點評量 | 停用 Azure SQL DB 的清除和核准基準。|
 
-### <a name="known-issues-183"></a>已知問題 (18.3)
+### <a name="known-issues-1831"></a>已知問題 (18.3.1)
 
 - 從電腦 A 上所執行 SSMS 建立的資料庫圖表無法從電腦 B 進行修改 (SSMS 當機)。 如需詳細資料，請參閱 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 

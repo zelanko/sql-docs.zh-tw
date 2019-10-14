@@ -13,12 +13,12 @@ ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b39dafbff7c9923ca730538b46eb75ecedb040c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2fa52b0c0126c737fc3c55985aadbd596713f26b
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767667"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711029"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>允許非管理員使用複寫監視器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,14 +77,14 @@ ms.locfileid: "68767667"
   
 1.  在散發資料庫的「散發者」端，執行 [sp_helpuser &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)。 如果使用者未列於結果集中的 **UserName**，則必須使用 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) 陳述式，授與使用者散發資料庫的存取權。  
   
-2.  在散發資料庫的「散發者」端執行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，並指定 **replmonitor** 值給 **@rolename** 參數。 如果使用者列於結果集中的 **MemberName** ，則該使用者已屬於此角色。  
+2.  在散發資料庫的散發者端執行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，並針對 `@rolename` 參數指定 **replmonitor** 的值。 如果使用者列於結果集中的 **MemberName** ，則該使用者已屬於此角色。  
   
-3.  如果使用者不屬於 **replmonitor** 角色，請在散發資料庫的「散發者」端執行 [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)。 針對 **replmonitor** @rolename **@rolename** 的值，並指定資料庫使用者的名稱或針對 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] @membername **@membername** 中使用複寫監視器。  
+3.  如果使用者不屬於 **replmonitor** 角色，請在散發資料庫的「散發者」端執行 [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)。 針對 `@rolename` 指定 **replmonitor** 的值和資料庫使用者的名稱，或為 `@membername` 新增 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 登入。  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>若要從 replmonitor 固定資料庫角色移除使用者  
   
-1.  若要確認使用者屬於 **replmonitor** 角色，請在散發資料庫的「散發者」端執行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，並指定 **replmonitor** 值給 **@rolename** 。 如果使用者未列於結果集中的 **MemberName** ，則該使用者目前不屬於此角色。  
+1.  若要確認使用者屬於 **replmonitor** 角色，請在散發資料庫的散發者端執行 [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)，並針對 `@rolename` 指定 **replmonitor** 的值。 如果使用者未列於結果集中的 **MemberName** ，則該使用者目前不屬於此角色。  
   
-2.  如果使用者屬於 **replmonitor** 角色，請在散發資料庫的「散發者」端執行 [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。 針對 **replmonitor** @rolename **@rolename** 的值，並指定資料庫使用者的名稱或針對 **@membername** 中使用複寫監視器。  
+2.  如果使用者屬於 **replmonitor** 角色，請在散發資料庫的「散發者」端執行 [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。 針對 `@rolename` 指定 **replmonitor** 的值和資料庫使用者名稱，或針對 `@membername` 指定正在移除的 Windows 登入。 
   
   

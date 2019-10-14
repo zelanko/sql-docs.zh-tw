@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bec94a3aaa6faab3fa88d4cd2b0d21a2bdcfd29e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d5b1f22408ecffd2ec3250441239bb423e921b66
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768607"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710277"
 ---
 # <a name="disable-publishing-and-distribution"></a>停用發行和散發
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68768607"
 7.  在散發者上，執行 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) 從伺服器移除散發者的指定。  
   
     > [!NOTE]  
-    >  如果在您執行 [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) 和 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)之前，尚未卸除所有複寫發行和散發物件，這些程序將會傳回錯誤。 若要在卸除了發行者或散發者時，一併卸除所有複寫相關的物件， **@no_checks** 參數必須設定為 **1**。 如果發行者或散發者已離線或是無法連上， **@ignore_distributor** 參數可以設定為 **1** ，好讓它們可以卸除；但是，必須手動移除任何留下來的發行和散發物件。  
+    > 如果在您執行 [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) 和 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)之前，尚未卸除所有複寫發行和散發物件，這些程序將會傳回錯誤。 若要在卸除發行者或散發者時，一併卸除所有與複寫相關的物件，`@no_checks` 參數必須設定為 **1**。 如果發行者或散發者已離線或是無法連上，則 `@ignore_distributor` 參數可以設定為 **1**，好讓它們可以卸除；但是，必須手動移除任何留下來的發佈和散發物件。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  這個範例指令碼會從訂閱資料庫中移除複寫物件。  

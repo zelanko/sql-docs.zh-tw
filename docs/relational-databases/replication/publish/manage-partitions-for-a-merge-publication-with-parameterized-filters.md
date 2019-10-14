@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1171d30f7b21b99a3d4a396937b1e94c58787859
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002689"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710890"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選管理合併式發行集的資料分割
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,25 +103,25 @@ ms.locfileid: "68002689"
   
 #### <a name="to-view-information-on-existing-partitions"></a>若要在現有的資料分割上檢視資訊  
   
-1.  在發行集資料庫的發行者端，執行 [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)。 指定 **@publication** 。 (選擇性) 指定 **@suser_sname** 或 **@host_name** ，以根據單一篩選準則僅傳回資訊。  
+1.  在發行集資料庫的發行者端，執行 [sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)。 指定 `@publication` 的發行集名稱。 (選擇性) 指定 `@suser_sname` 或 `@host_name`，以根據單一篩選準則僅傳回資訊。  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>若要定義新的資料分割並產生新的資料分割快照集  
   
-1.  在發行集資料庫的發行者端，執行 [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)。 指定 **@publication** 的發行集名稱，並針對下列其中一個項目定義資料分割的參數化值：  
+1.  在發行集資料庫的發行者端，執行 [sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)。 指定 `@publication` 的發行集名稱，並針對下列其中一個項目定義資料分割的參數化值：  
   
-    -   **@suser_sname** - 當參數化篩選是由 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 所傳回的值定義時。  
+    -   `@suser_sname` - 當參數化篩選是由 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 所傳回的值定義時。  
   
-    -   **@host_name** - 當參數化篩選是由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 所傳回的值定義時。  
+    -   `@host_name` - 當參數化篩選是由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).所傳回的值定義時。  
   
 2.  建立並初始化這個新資料分割的參數化快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 #### <a name="to-delete-a-partition"></a>若要刪除資料分割  
   
-1.  在發行集資料庫的發行者端，執行 [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)。 指定 **@publication** 的發行集名稱，並針對下列其中一個項目定義資料分割的參數化值：  
+1.  在發行集資料庫的發行者端，執行 [sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)。 指定 `@publication` 的發行集名稱，並針對下列其中一個項目定義資料分割的參數化值：  
   
-    -   **@suser_sname** - 當參數化篩選是由 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 所傳回的值定義時。  
+    -   `@suser_sname` - 當參數化篩選是由 [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) 所傳回的值定義時。  
   
-    -   **@host_name** - 當參數化篩選是由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 所傳回的值定義時。  
+    -   `@host_name` - 當參數化篩選是由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).所傳回的值定義時。  
   
      這也會移除資料分割的快照集作業和快照集檔案。  
   
@@ -165,5 +165,6 @@ ms.locfileid: "68002689"
 ## <a name="see-also"></a>另請參閱  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+  
   
   

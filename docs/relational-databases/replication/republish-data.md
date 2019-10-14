@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c96a881443c03362f58fdfa857d6244789a7fe7e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769627"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710769"
 ---
 # <a name="republish-data"></a>重新發行資料
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68769627"
 |合併式發行集|合併訂閱/合併式發行集|合併訂閱|  
 |合併式發行集|合併訂閱/交易式發行集|交易式訂閱|  
   
- \*您應該設定合併式發行集的 **@published_in_tran_pub** 屬性。 依預設，異動複寫預期於訂閱者端的資料表會被視為唯讀資料表。 如果合併式複寫變更交易式訂閱中資料表的資料，就可能導致資料無法聚合。 若要避免此風險，建議合併式發行集中的任何此類資料表應指定為僅限下載。 這會防止合併式訂閱者將資料變更上傳至資料表。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
+ \*您應該設定合併式發行集的 `@published_in_tran_pub` 屬性。 依預設，異動複寫預期於訂閱者端的資料表會被視為唯讀資料表。 如果合併式複寫變更交易式訂閱中資料表的資料，就可能導致資料無法聚合。 若要避免此風險，建議合併式發行集中的任何此類資料表應指定為僅限下載。 這會防止合併式訂閱者將資料變更上傳至資料表。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [[設定散發]](../../relational-databases/replication/configure-distribution.md)   

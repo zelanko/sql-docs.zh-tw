@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31e3101499ff046d6741dbbc7b86fdf196deec3e
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096932"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713274"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定分散式交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,8 @@ ms.locfileid: "71096932"
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 不能防止可用性群組中的資料庫分散式交易，即使未針對分散式交易設定可用性群組。 但是當未針對分散式交易設定可用性群組時，容錯移轉在某些情況下可能不會成功。 特別是新的主要複本 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體可能無法從 DTC 取得交易結果。 若要在容錯移轉之後，讓 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體從 DTC 取得可疑交易的結果，請針對分散式交易設定可用性群組。 
 
+除非資料庫也是容錯移轉叢集的成員，否則 DTC 不會牽涉到可用性群組處理。 在可用性群組內，複本之間的一致性是由可用性群組邏輯所維護：主要複本不會完成認可並認同對呼叫端的認可，直到次要複本確認主要複本已將記錄保存在永久性儲存體中。 只有在此時，主要複本會宣告交易完成。 在非同步模式中，我們不會等候次要複本認可，且的確有可能遺失少量資料。
+
 ## <a name="prerequisites"></a>Prerequisites
 
 設定可用性群組支援分散式交易之前，必須先符合下列必要條件：
@@ -50,6 +52,8 @@ ms.locfileid: "71096932"
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>建立分散式交易的可用性群組
 
 設定可用性群組支援分散式交易。 設定可用性群組允許每個資料庫註冊為資源管理員。 本文會說明如何設定可用性群組，讓每個資料庫在 DTC 中都是資源管理員。
+
+
 
 您可以在 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更新版本上建立分散式交易的可用性群組。 在可用性群組定義中建立分散式交易的可用性群組，包括 `DTC_SUPPORT = PER_DB`。 下列指令碼會建立分散式交易的可用性群組。 
 

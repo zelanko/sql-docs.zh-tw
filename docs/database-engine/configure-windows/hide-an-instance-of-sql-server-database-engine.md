@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3ac7c2a6cd6b1f714e4dd1aad2c04ef32854c4f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998068"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682093"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隱藏 SQL Server Database Engine 的執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,11 @@ ms.locfileid: "67998068"
   如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
 ### <a name="clustering"></a>群集  
- 如果隱藏了叢集具名執行個體，叢集服務可能無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 而如此會導致叢集執行個體的 **IsAlive** 檢查失敗，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會離線。 建議您在叢集執行個體的所有節點中都建立別名，以反映為該執行個體所設定的靜態連接埠。  
- 如需詳細資訊，請參閱[建立或刪除用戶端使用的伺服器別名 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
+ 如果隱藏叢集執行個體或可用性群組，則叢集服務可能無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 而如此會導致叢集執行個體的 **IsAlive** 檢查失敗，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會離線。 
+ 
+若要避免這種情況，請在叢集執行個體的所有節點或所有本機可用性群組複本中都建立別名，以反映為該執行個體所設定的靜態連接埠。  舉例而言，在含有兩個複本的可用性群組中，針對節點 2 執行個體在節點 1 上建立別名，例如 `node-two\instancename`。 在節點 2 上，建立稱為 `node-one\instancename` 的別名。 這些別名是成功容錯移轉的必要項目。 
+ 
+ 如需詳細資訊，請參閱[建立或刪除用戶端使用的伺服器別名 &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   
  如果隱藏了叢集具名執行個體，而當 **LastConnect** 登錄機碼 (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前接聽的連接埠有不同的連接埠時，叢集服務可能無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果叢集服務將無法連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能會看到類似如下的錯誤：  
 **事件識別碼：1001：事件名稱：容錯移轉叢集資源鎖死。**  
