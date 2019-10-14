@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bc96e1eaf22c304a4751bb39c40319da2f16659
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 9ca108b3336a77becc605040b12c0361db4ac903
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314536"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251374"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 作為驗證器產生基礎使用的資料。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *authenticator* 具有 **sysname** 資料類型。  
 
 **\@authenticator**  
-含有驗證器從中產生之資料的變數。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *@authenticator* 具有 **sysname** 資料類型。  
+含有驗證器從中產生之資料的變數。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *\@authenticator* 具有 **sysname** 資料類型。  
 
 ## <a name="return-types"></a>傳回類型  
 **varbinary**，大小上限為 8,000 個位元組。 如果未開啟用於資料加密的對稱金鑰，或「加密文字」  為 NULL，則 `DECRYPTBYKEY` 會傳回 NULL。  

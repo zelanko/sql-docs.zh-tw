@@ -14,12 +14,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559480"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041175"
 ---
 # <a name="performance-dashboard"></a>效能儀表板
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "67559480"
   
 ![[效能儀表板] 主畫面](../../relational-databases/performance/media/perf_dashboard.png "[效能儀表板] 主畫面")  
   
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 [遺漏索引]  報表顯示「查詢最佳化工具」在查詢編譯期間所識別出的可能遺漏索引。 不過，不應該全然採信這些建議。 Microsoft 建議應該針對分數超過 100,000 的索引評估是否需要建立，因為這些索引最有可能大幅改善使用者查詢效能。 
 
 > [!TIP]
@@ -78,7 +78,7 @@ ms.locfileid: "67559480"
 [佔用大量資源的查詢]  報表在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動時會重設，因為系統會清除基礎 DMV 中的資料。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，可在 [查詢存放區] 中找到有關佔用大量資源查詢的詳細資訊。 
 
 > [!NOTE]
-> [效能儀表板] 一開始是以 [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602) 的獨立下載項目形式發行，之後再針對 [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063) 進行更新。
+> [效能儀表板] 一開始是以 [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) 的獨立下載項目形式發行，之後再針對 [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063) 進行更新。
 
 ## <a name="permissions"></a>權限  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，需要 `VIEW SERVER STATE` 與 `ALTER TRACE` 權限。 在 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 上，需要資料庫中的 `VIEW DATABASE STATE` 權限。

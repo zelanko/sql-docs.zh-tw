@@ -7,13 +7,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 10/09/2019
+ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264978"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239373"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
 
@@ -105,6 +105,13 @@ ms.locfileid: "68264978"
 #### <a name="using-a-sql-server-login"></a>使用 SQL Server 登入
 
 您可以指定單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，以連接到報表伺服器資料庫。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，而報表伺服器資料庫位於遠端電腦上，請利用 IPSec 來保護伺服器之間資料傳輸的安全。 如果您使用資料庫登入，則每當您變更密碼或帳戶時，您必須更新報表伺服器資料庫連接。  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> 使用 Azure SQL 受控執行個體來裝載 Reporting Services 2019 資料庫時，支援僅限於使用 SQL Server 登入認證來進行連線。
+
+::: moniker-end
 
 ### <a name="database-permissions"></a>資料庫權限
 

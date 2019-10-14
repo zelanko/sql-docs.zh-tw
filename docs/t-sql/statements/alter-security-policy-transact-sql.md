@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca38818b0c64c46631d3ec17348f0189f2844bf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140985"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173861"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
            [ <block_dml_operation> ] }  
         | { DROP { FILTER | BLOCK } PREDICATE ON table_schema_name.table_name }   
         | [ <additional_add_alter_drop_predicate_statements> [ , ...n ] ]  
-    )    [ WITH ( STATE = { ON | OFF } ]  
+    )    [ WITH ( STATE = { ON | OFF } ) ]  
     [ NOT FOR REPLICATION ]  
 [;]  
   

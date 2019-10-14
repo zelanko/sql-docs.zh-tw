@@ -29,12 +29,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dccb751fa7ea88a0dfa6d47c6a1f4058871f48e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140284"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278102"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ COMMIT [ TRAN | TRANSACTION ]
  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會忽略這個項目。 *transaction_name* 會指定先前的 BEGIN TRANSACTION 所指派的交易名稱。 *transaction_name* 必須符合識別碼規則，但不能超過 32 個字元。 *transaction_name* 向程式設計人員指出與 COMMIT TRANSACTION 建立關聯的巢狀 BEGIN TRANSACTION。  
   
- *@tran_name_variable*  
+ *\@tran_name_variable*  
  **適用於：** SQL Server 和 Azure SQL Database  
  
 這是包含有效交易名稱之使用者定義變數的名稱。 此變數必須以 char、varchar、nchar 或 nvarchar 資料類型來宣告。 如果超出 32 個字元傳給變數，只會使用 32 個字元；其餘字元會截斷。  

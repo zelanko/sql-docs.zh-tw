@@ -19,12 +19,12 @@ ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebe60252bc1f0b950ff2f5b4342c30d99c5bd6c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058537"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041234"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,8 +106,8 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
  ```
---------  ----------
-123.45    100.00
+----------  ----------
+123.4500    100.00
 ```
   
 ### <a name="c-using-round-to-truncate"></a>C. 利用 ROUND 截斷  
