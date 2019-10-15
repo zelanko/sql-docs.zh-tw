@@ -1,5 +1,5 @@
 ---
-title: sp_purge_jobhistory (TRANSACT-SQL) |Microsoft Docs
+title: sp_purge_jobhistory （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ce9b0972bc95a927729f55e10e329cddb2993c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896464"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313754"
 ---
-# <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
+# <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   移除作業的記錄。  
@@ -43,30 +43,30 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_name = ] 'job_name'` 若要刪除記錄之工作的名稱。 *job_name*已**sysname**，預設值是 NULL。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
+`[ @job_name = ] 'job_name'`，這是要刪除記錄記錄的作業名稱。 *job_name*是**sysname**，預設值是 Null。 必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
   
 > [!NOTE]  
->  成員**sysadmin**固定伺服器角色或成員**SQLAgentOperatorRole**固定的資料庫角色可以執行**sp_purge_jobhistory**但未指定*job_name*或是*job_id*。 當**sysadmin**使用者未指定這些引數，指定時間內會刪除所有本機作業和多伺服器作業的作業記錄*oldest_date*。 當**SQLAgentOperatorRole**使用者未指定這些引數，指定時間內會刪除所有本機作業的作業記錄*oldest_date*。  
+>  **系統管理員（sysadmin** ）固定伺服器角色的成員，或**SQLAgentOperatorRole**固定資料庫角色的成員，可以在不指定*job_name*或*job_id*的情況下執行**sp_purge_jobhistory** 。 當**系統管理員（sysadmin** ）使用者未指定這些引數時，會在*oldest_date*所指定的時間內刪除所有本機和多伺服器作業的作業歷程記錄。 當**SQLAgentOperatorRole**使用者未指定這些引數時，會在*oldest_date*指定的時間內刪除所有本機作業的作業歷程記錄。  
   
-`[ @job_id = ] job_id` 作業識別碼是要刪除記錄的作業。 *job_id*已**uniqueidentifier**，預設值是 NULL。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。 請參閱說明中的注意事項 **@job_name** 如需**sysadmin**或是**SQLAgentOperatorRole**使用者可以使用這個引數。  
+`[ @job_id = ] job_id` 作業的作業識別碼，表示要刪除的記錄。 *job_id*是**uniqueidentifier**，預設值是 Null。 必須指定*job_id*或*job_name* ，但不能同時指定兩者。 如需**系統管理員（sysadmin** ）或**SQLAgentOperatorRole**使用者可以如何使用此引數的相關資訊，請參閱 **@no__t 1job_name**描述中的附注。  
   
-`[ @oldest_date = ] oldest_date` 要保留在歷程記錄的最舊記錄。 *oldest_date*已**datetime**，預設值是 NULL。 當*oldest_date*指定，則**sp_purge_jobhistory**只會移除比指定的值還舊的記錄。  
+`[ @oldest_date = ] oldest_date` 要保留在歷程記錄中的最舊記錄。 *oldest_date*是**datetime**，預設值是 Null。 當指定*oldest_date*時， **sp_purge_jobhistory**只會移除早于指定值的記錄。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- 當**sp_purge_jobhistory**已順利完成，將會傳回訊息。  
+ 當**sp_purge_jobhistory**順利完成時，會傳回一則訊息。  
   
 ## <a name="permissions"></a>Permissions  
- 根據預設，只有成員**sysadmin**固定的伺服器角色或**SQLAgentOperatorRole**固定的資料庫角色可以執行這個預存程序。 成員**sysadmin**可以清除所有本機作業和多伺服器作業的作業記錄。 成員**SQLAgentOperatorRole**可以清除只所有本機作業的作業記錄。  
+ 根據預設，只有**系統管理員（sysadmin** ）固定伺服器角色或**SQLAgentOperatorRole**固定資料庫角色的成員，才能夠執行這個預存程式。 **系統管理員（sysadmin** ）的成員可以清除所有本機和多伺服器作業的作業歷程記錄。 **SQLAgentOperatorRole**的成員只能清除所有本機作業的作業歷程記錄。  
   
- 其他使用者，包括成員**SQLAgentUserRole**和成員**SQLAgentReaderRole**，必須明確被授與 EXECUTE 權限上**sp_purge_jobhistory**. 被授與此預存程序的 EXECUTE 權限之後，這些使用只能清除他們自己的作業記錄。  
+ 其他使用者（包括**SQLAgentUserRole**的成員和**SQLAgentReaderRole**的成員）必須明確授與**sp_purge_jobhistory**的 EXECUTE 許可權。 被授與此預存程序的 EXECUTE 權限之後，這些使用只能清除他們自己的作業記錄。  
   
- **SQLAgentUserRole**， **SQLAgentReaderRole**，並**SQLAgentOperatorRole**固定的資料庫角色都處於**msdb**資料庫。 如需有關其權限的詳細資訊，請參閱 < [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
+ **SQLAgentUserRole**、 **SQLAgentReaderRole**和**SQLAgentOperatorRole**固定資料庫角色是在**msdb**資料庫中。 如需有關其許可權的詳細資訊，請參閱[SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -85,7 +85,7 @@ GO
 ### <a name="b-remove-history-for-all-jobs"></a>B. 移除所有作業的記錄  
   
 > [!NOTE]  
->  只有成員**sysadmin**固定伺服器角色和成員**SQLAgentOperatorRole**可以移除所有作業記錄。 當**sysadmin**使用者執行這個預存程序，不含任何參數，會清除所有本機作業和多伺服器作業的作業記錄。 當**SQLAgentOperatorRole**使用者執行此預存程序，不含任何參數，會清除只所有本機作業的作業記錄。  
+>  只有**系統管理員（sysadmin** ）固定伺服器角色的成員和**SQLAgentOperatorRole**的成員，才能夠移除所有作業的歷程記錄。 當**系統管理員（sysadmin** ）使用者不使用參數執行此預存程式時，會清除所有本機和多伺服器作業的作業歷程記錄。 當**SQLAgentOperatorRole**使用者執行此預存程式時，如果沒有參數，則只會清除所有本機作業的作業歷程記錄。  
   
  下列範例會執行不含任何參數的程序來移除所有記錄。  
   
