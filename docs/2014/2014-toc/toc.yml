@@ -46,6 +46,8 @@
       href: ../sql-server/install/sql-server-2014-upgrade-advisor.md
     - name: 安裝程式和服務安裝 +
       href: ../sql-server/install/setup-and-servicing-installation.md
+- name: Transact-SQL 參考 +
+  href: 'https://docs.microsoft.com/sql/t-sql/?view=sql-server-2016'
 - name: 設定管理員說明 +
   href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
 - name: 索引設計指南
