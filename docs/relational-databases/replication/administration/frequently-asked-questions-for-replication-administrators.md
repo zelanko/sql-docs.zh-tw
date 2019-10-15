@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710394"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041204"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ ms.locfileid: "71710394"
 ## <a name="logins-and-object-ownership"></a>登入和物件擁有權  
   
 ### <a name="are-logins-and-passwords-replicated"></a>登入和密碼是否會被複寫？  
- 資料分割 您可以建立 DTS 封裝以將登入和密碼從「發行者」傳送給一個或多個「訂閱者」。  
+ 資料分割 您可以建立 SSIS 套件以將登入和密碼從「發行者」傳送給一個或多個「訂閱者」。  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>結構描述什麼是以及它們是如何進行複寫的？  
  從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *「結構描述」* 具有兩重含義：  
   
--   物件的定義，例如 CREATE TABLE 陳述式。 依預設，複寫將所有複寫物件的定義複製到「訂閱者」。  
+-   物件的定義，例如 `CREATE TABLE` 陳述式。 依預設，複寫將所有複寫物件的定義複製到「訂閱者」。  
   
--   作為物件建立位置的命名空間：\<資料庫>.\<結構描述>.\<物件>。 結構描述使用 CREATE SCHEMA 陳述式來定義。  
+-   作為物件建立位置的命名空間：\<資料庫>.\<結構描述>.\<物件>。 結構描述使用 `CREATE SCHEMA` 陳述式來定義。  
   
 -   針對結構描述和物件擁有權，複寫在新增複寫精靈中具有下列預設行為：  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710394"
  有各種重建索引的機制。 這些機制在使用時沒有針對複寫的特殊考量，下列情況例外：交易式發行集中的資料表上需要主索引鍵，因此您無法在這些資料表中卸除和重新建立主索引鍵。  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>如何在發行集和訂閱資料庫上新增或變更索引？  
- 可以在「發行者」或「訂閱者」端新增索引，而沒有針對複寫的特殊考量 (請注意，索引會影響效能)。 CREATE INDEX 和 ALTER INDEX 不會複寫，因此如果您新增或變更索引 (例如在「發行者」端)，則必須在「訂閱者」端進行同樣的新增或變更 (如果您要在那裡反映出來)。  
+ 可以在「發行者」或「訂閱者」端新增索引，而沒有針對複寫的特殊考量 (請注意，索引會影響效能)。 `CREATE INDEX` 和 `ALTER INDEX` 不會複寫，因此如果您新增或變更索引 (例如在「發行者」端)，則必須在「訂閱者」端進行同樣的新增或變更 (如果您要在那裡反映出來)。  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>如何移動或重新命名涉及複寫的資料庫？  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本中，移動或重新命名資料庫檔案需要卸離及重新附加資料庫。 因為複寫的資料庫無法卸離，所以必須先從這些資料庫中移除複寫。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，您可以在不卸離或重新附加資料庫的情況下移動或重新命名檔案，而不會影響複寫。 如需移動和重新命名檔案的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)。  
@@ -187,7 +187,7 @@ ms.locfileid: "71710394"
  首先使用 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 或 [發行集屬性 - \<發行集>]  對話方塊從發行集中卸除發行項，然後使用 `DROP <Object>` 將其從資料庫中卸除。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>如何在已發行的資料表中新增或卸除資料行？  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 例如，在發行者端執行 ALTER TABLE ... DROP COLUMN，並將陳述式複寫至訂閱者，然後執行以卸除資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 和 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 舉例來說，於發行者執行 `ALTER TABLE … DROP COLUMN`，並將陳述式複寫至訂閱者，然後執行以卸除資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 和 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="replication-maintenance"></a>複寫維護  
   

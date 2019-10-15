@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952748"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251351"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -3029,18 +3029,36 @@ ON
 指定從此資料庫傳回的查詢結果集將快取於 Azure SQL 資料倉儲儲存體中。
 
 OFF        
-指定從此資料庫傳回的查詢結果集將不會快取於 Azure SQL 資料倉儲儲存體中。 使用者可以特定 request_id 查詢 sys.pdw_request_steps，來知道是否有結果為命中或遺漏的已執行查詢。   如果有快取命中，則查詢結果會具有包含以下詳細資料的單一步驟：
-
-|**資料行名稱** |**[運算子]** |**ReplTest1** |
-|----|----|----|
-| operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-command|相似|%DWResultCacheDb%|
-| | |
+指定從此資料庫傳回的查詢結果集將不會快取於 Azure SQL 資料倉儲儲存體中。 
 
 ### <a name="remarks"></a>Remarks
-此命令必須在連線到 `master` 資料庫時執行。  對此資料庫設定的變更會立即生效。  儲存體費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 我們在 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 中引進了新資料行 is_result_set_caching_on，用來顯示資料庫的結果快取設定。  
+此命令必須在連線到 `master` 資料庫時執行。  對此資料庫設定的變更會立即生效。  儲存體費用會以快取查詢結果集的數目計算。 停用資料庫的結果快取後，會立即從 Azure SQL 資料倉儲儲存體中刪除先前保存的結果快取。 
+
+執行此命令來檢查資料庫的結果集快取設定。  如果結果集快取已開啟，is_result_set_caching_on 將傳回 1。
+
+```sql
+
+SELECT name, is_result_set_caching_on FROM sys.databases 
+WHERE name = <'Your_Database_Name'>
+
+```
+
+執行此命令來檢查所執行查詢的結果快取是否有命中。  如果快取命中，result_cache_hit 將傳回 1。 
+
+```sql
+
+SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+WHERE request_id = <'Your_Query_Request_ID'>
+
+```
+
+一旦開啟資料庫的結果集快取功能，除了這些查詢以外，會快取查詢的其他全部結果，直到快取滿為止：
+
+- 使用 DateTime.Now() 等不具決定性函式的查詢 
+- 使用使用者定義函式的查詢
+- 傳回資料的資料列大小超過 64KB 的查詢   
+
+具有大型結果集 (例如 > 1 百萬個資料列) 的查詢在第一次執行時，可能會在建立結果快取時，出現效能較低的情形。
 
 如果符合下列所有需求，則會對查詢重複使用快取結果集：
 
@@ -3048,9 +3066,6 @@ command|相似|%DWResultCacheDb%|
 1. 新查詢與產生結果集快取的上一個查詢完全相符。
 1. 產生快取結果集的來源資料表中沒有資料或結構描述變更。  
 
-一旦開啟資料庫的結果集快取功能，除了使用非決定性函數 (例如 DateTime.Now()) 的查詢和傳回資料列大小大於 64KB 之資料的查詢以外，會快取所有查詢的結果，直到快取已滿為止。   
-
-具有大型結果集 (例如 > 1 百萬個資料列) 的查詢在第一次執行時，可能會在建立結果快取時，出現效能較低的情形。
 
 **<snapshot_option> ::=**         
 **適用於**：Azure SQL 資料倉儲 (預覽)

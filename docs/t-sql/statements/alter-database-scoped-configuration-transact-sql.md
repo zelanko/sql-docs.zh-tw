@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713207"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261010"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -114,17 +114,22 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 MAXDOP **=** {\<值> | PRIMARY } **\<值>**
 
-指定應該用於陳述式的預設 MAXDOP 設定。 0 是預設值，表示將改用伺服器組態。 資料庫範圍的 MAXDOP 會覆寫 (設定為 0 時除外) sp_configure 在伺服器層級設定的**平行處理原則的最大程度**。 查詢提示仍然可以覆寫 DB 範圍的 MAXDOP 來調整需要不同設定的特定查詢。 所有這些設定都會受到針對「工作負載群組」設定的 MAXDOP 限制。
+指定應該用於陳述式的預設**平行處理原則最大程度 (MAXDOP)** 設定。 0 是預設值，表示將改用伺服器組態。 資料庫範圍的 MAXDOP 會覆寫 (設定為 0 時除外) sp_configure 在伺服器層級設定的**平行處理原則的最大程度**。 查詢提示仍然可以覆寫資料庫範圍的 MAXDOP 來調整需要不同設定的特定查詢。 所有這些設定都會受到針對[工作負載群組]()設定的 MAXDOP 限制。
 
-您可以使用 max degree of parallelism 選項來限制要用於平行計畫執行的處理器數目。 SQL Server 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行統計資料收集，以及靜態和索引鍵集驅動資料指標填入，考慮進行平行執行計劃。
+您可以使用 MAXDOP 選項來限制執行平行計畫所用的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行收集統計資料，以及靜態和索引鍵集驅動資料指標擴展，考慮平行執行計畫。
+
+> [!NOTE]
+> **平行處理原則最大程度 (MAXDOP)** 限制的設定會根據[工作](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 其不會根據[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示平行查詢執行期間，單一要求可能會產生指派至[排程器](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)的多個工作。 如需詳細資訊，請參閱[執行緒與工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。 
 
 若要在執行個體層級設定此選項，請參閱[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 
 > [!NOTE]
-> 在 Azure SQL Database 中，伺服器層級 **max degree of parallelism** 設定一律設為 0。 您可以為每個資料庫設定 MAXDOP，如本文中所述。 如需設定 MAXDOP 的最佳建議，請參閱[其他資源](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources)一節。
+> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，伺服器層級**平行處理原則最大程度**設定一律設為 0。 您可以為每個資料庫設定 MAXDOP，如本文中所述。 如需設定 MAXDOP 的最佳建議，請參閱[其他資源](#additional-resources)一節。
 
 > [!TIP]
-> 若要在查詢層級完成此操作，請新增 **MAXDOP** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。
+> 若要在查詢層級完成此操作，請使用 **MAXDOP** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。    
+> 若要在查詢層級完成此操作，請使用**平行處理原則最大程度 (MAXDOP**[伺服器設定選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。     
+> 若要在工作負載層級完成此操作，請使用 **MAX_DOP** [資源管理員工作負載群組設定選項](../../t-sql/statements/create-workload-group-transact-sql.md)。    
 
 PRIMARY
 
@@ -344,7 +349,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) (功能目前為公開預覽版)
 
-可讓您啟用或停用 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中最後一個查詢計畫統計資料 (相當於實際執行計畫) 的集合。
+可讓您啟用或停用 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中最後一個查詢計劃統計資料 (相當於實際執行計畫) 的集合。
 
 ## <a name="Permissions"></a> 權限
 
@@ -550,13 +555,13 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 [線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## <a name="more-information"></a>詳細資訊
-
-- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
-- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
-- [資料庫和檔案目錄檢視](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [伺服器設定選項](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)
-- [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)
-- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+## <a name="more-information"></a>詳細資訊   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+ [SQL Server 中 [平行處理原則最大程度] 設定選項的建議和指導方針](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+ [資料庫和檔案目錄檢視](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+ [伺服器設定選項](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+ [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)    
+ [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)    
+ [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    

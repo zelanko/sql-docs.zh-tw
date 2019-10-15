@@ -9,17 +9,28 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/03/2019
-ms.openlocfilehash: 58efc144832fb97a3a32c764299c3ee83373976b
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.date: 10/08/2019
+ms.openlocfilehash: 991bc20600936ac61ab291db68d9e5f7728b96b5
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816648"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041117"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](download.md)**
+
+## <a name="october-2019-hotfix"></a>2019 年 10 月 (Hotfix)
+
+2019 年 10 月 8 日 &nbsp; / &nbsp; 版本：1.12.1
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 修正 Notebooks 中的引號和反斜線問題以正確逸出。 |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019"></a>2019 年 10 月
 
@@ -36,7 +47,7 @@ ms.locfileid: "71816648"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知問題
-- 筆記型電腦
+- Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
 
 ## <a name="september-2019"></a>2019 年 9 月
@@ -55,7 +66,7 @@ ms.locfileid: "71816648"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知問題
-- 筆記型電腦
+- Notebooks
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 不正確地序列化筆記本的罕見案例
 
 
@@ -118,7 +129,7 @@ ms.locfileid: "71816648"
     - 並非所有物件都有屬性對話方塊
     - 對話方塊需要很長的時間才能啟動
     - 啟動具有某些連線類型 (例如 AAD) 的伺服器時發生錯誤
-- 筆記型電腦
+- Notebooks
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) \(英文\) 允許使用者使用適用於 Notebooks 的系統 Python
 - 結構描述比較
     - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) \(英文\) 結構描述比較工作顯示不會執行任何作業的預設取消捷徑功能表

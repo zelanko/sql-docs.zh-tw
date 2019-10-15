@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06237e28f9ba75e798da1af57964cc8b251d0b26
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974413"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006072"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ OFF
 
 **\<memory_optimized> ::=**
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起)。
 
 ON <br>
 啟用所有屬於[記憶體內部資料庫](../../relational-databases/in-memory-database.md)功能系列的執行個體層級功能。 目前這包括[經記憶體最佳化的 tempdb 中繼資料](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)和[混合式緩衝集區](../../database-engine/configure-windows/hybrid-buffer-pool.md)。 需要重新開機才會生效。
@@ -284,9 +284,11 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 此陳述式不支援 DDL 觸發程序。  
   
 ## <a name="permissions"></a>權限  
-需要處理序相似性選項的 ALTER SETTINGS 權限。 診斷記錄檔和容錯移轉叢集屬性選項的 ALTER SETTINGS 與 VIEW SERVER STATE 權限，以及 HADR 叢集內容選項的 CONTROL SERVER 權限。  
-  
-需要緩衝集區延伸模組選項的 ALTER SERVER STATE 權限。  
+需要：
+- 處理序相似性選項的 `ALTER SETTINGS` 權限。
+- 診斷記錄和容錯移轉叢集屬性選項的 `ALTER SETTINGS` 與 `VIEW SERVER STATE` 權限。
+- HADR 叢集內容選項的 `CONTROL SERVER` 權限。  
+- 緩衝集區延伸模組選項的 `ALTER SERVER STATE` 權限。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 資源 DLL 是以本機系統帳戶執行。 因此，本機系統帳戶必須具備存取診斷記錄選項中指定路徑的讀取和寫入權限。  
   
@@ -337,14 +339,14 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 #### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>D. 在具有兩個 CPU 的系統上，將相似性設定為 CPU 0  
 下列範例會在具有兩個 CPU 的電腦上，將相似性設定為 `CPU=0`。 執行下列陳述式之前，內部相似性位元遮罩是 00。  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
 #### <a name="e-setting-affinity-to-auto"></a>E. 將相似性設定為 AUTO  
 下列範例會將相似性設定為 `AUTO`。  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  

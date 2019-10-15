@@ -1,6 +1,6 @@
 ---
 title: SQL Server 的最大容量規格 | Microsoft Docs
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687363"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008444"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,8 @@ ms.locfileid: "71687363"
 |每個連接的鎖定數||每部伺服器的最大鎖定數||  
 |每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||僅受限於記憶體|這個值是針對靜態鎖定配置。 動態鎖定僅受限於記憶體。|  
 |巢狀預存程序層級||32|如果預存程序存取超過 64 個資料庫或以交錯方式超過 2 個資料庫，您會收到錯誤訊息。|  
-|巢狀子查詢||32||  
+|巢狀子查詢||32||    
+|巢狀交易||4,294,967,296||     
 |巢狀觸發程序層級||32||  
 |每份資料表的非叢集索引數||999||  
 |當下列任何一個存在時，GROUP BY 子句內相異運算式的數目：CUBE、ROLLUP、GROUPING SETS、WITH CUBE、WITH ROLLUP||32||  
