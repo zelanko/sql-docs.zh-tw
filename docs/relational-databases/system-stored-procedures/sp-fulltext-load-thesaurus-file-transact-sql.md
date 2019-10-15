@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_load_thesaurus_file (TRANSACT-SQL) |Microsoft Docs
+title: sp_fulltext_load_thesaurus_file （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a71c4d61ec920b51146cc3d3111adefc09f23b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124226"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305208"
 ---
-# <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
+# <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  造成伺服器執行個體從對應至 LCID 已指定之語言的同義字檔案中剖析並載入資料。 這個預存程序在更新同義字檔案之後很有用。 執行**sp_fulltext_load_thesaurus_file**會導致重新編譯會使用指定之 LCID 同義字的全文檢索查詢。  
+  造成伺服器執行個體從對應至 LCID 已指定之語言的同義字檔案中剖析並載入資料。 這個預存程序在更新同義字檔案之後很有用。 執行**sp_fulltext_load_thesaurus_file**會導致重新編譯使用指定 LCID 之同義字的全文檢索查詢。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,14 +42,14 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>引數  
  *lcid*  
- 對應您想要載入同義字 XML 定義之語言地區設定識別碼 (LCID) 的整數。 若要取得之伺服器執行個體可用的語言的 Lcid，請使用[sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)目錄檢視。  
+ 對應您想要載入同義字 XML 定義之語言地區設定識別碼 (LCID) 的整數。 若要取得伺服器實例上可用語言的 lcid，請使用[fulltext_languages &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)目錄檢視。  
   
- **@loadOnlyIfNotLoaded**  = *action*  
- 指定同義字檔案是否會載入內部同義字資料表中，即使已經載入也是一樣。 *動作*是其中一個：  
+ **\@loadOnlyIfNotLoaded** = *動作*  
+ 指定同義字檔案是否會載入內部同義字資料表中，即使已經載入也是一樣。 *動作*為下列其中一項：  
   
 |值|定義|  
 |-----------|----------------|  
-|**0**|載入同義字檔案，不管是否已經載入。 這是預設行為**sp_fulltext_load_thesaurus_file**。|  
+|**0**|載入同義字檔案，不管是否已經載入。 這是**sp_fulltext_load_thesaurus_file**的預設行為。|  
 |1|只有在尚未載入同義字檔案時，才會載入。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -59,12 +59,12 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  None  
   
 ## <a name="remarks"></a>備註  
- 同義字檔案會自動由使用此同義字的全文檢索查詢載入。 若要避免這種對全文檢索查詢第一次效能影響，我們建議您執行**sp_fulltext_load_thesaurus_file**。  
+ 同義字檔案會自動由使用此同義字的全文檢索查詢載入。 若要避免對全文檢索查詢進行第一次的效能影響，我們建議您執行**sp_fulltext_load_thesaurus_file**。  
   
- 使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' 來更新使用全文檢索搜尋註冊之語言的清單。  
+ 使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' 來更新以全文檢索搜尋註冊的語言清單。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或系統管理員能夠執行**sp_fulltext_load_thesaurus_file**預存程序。  
+ 只有系統管理員（ **sysadmin** ）固定伺服器角色或系統管理員的成員，才能夠執行**sp_fulltext_load_thesaurus_file**預存程式。  
   
  只有系統管理員能夠更新、修改或刪除同義字檔案。  
   

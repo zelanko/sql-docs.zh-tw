@@ -1,5 +1,5 @@
 ---
-title: sp_sequence_get_range (TRANSACT-SQL) |Microsoft Docs
+title: sp_sequence_get_range （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2015
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e92b9ec98ee08579164c403fe1be6ff6ef47816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104500"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304769"
 ---
-# <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
+# <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   從順序物件傳回順序值的範圍。 順序物件會產生及發出要求的值數目，並將範圍相關的中繼資料提供給應用程式。  
   
- 如有關序號的詳細資訊，請參閱 <<c0> [ 序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+ 如需序號的詳細資訊，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,27 +51,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @sequence_name = ] N'sequence'` 順序物件的名稱。 此結構描述是選擇性的。 *sequence_name*已**nvarchar(776)** 。  
+`[ @sequence_name = ] N'sequence'`：順序物件的名稱。 此結構描述是選擇性的。 *sequence_name*是**Nvarchar （776）** 。  
   
-`[ @range_size = ] range_size` 若要從順序擷取的值數目。 **@range_size** 已**bigint**。  
+`[ @range_size = ] range_size` 要從序列中提取的值數目。 **\@range_size**是**Bigint**。  
   
-`[ @range_first_value = ] range_first_value` 輸出參數會傳回順序物件，用來計算要求的範圍的第一個 （最小值或最大值） 值。 **@range_first_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @range_first_value = ] range_first_value` 輸出參數會傳回用來計算所要求範圍之順序物件的第一個（最小值或最大值）值。 **@no__t 1range_first_value**是**SQL_variant** ，其基底類型與要求中所用順序物件的型別相同。  
   
-`[ @range_last_value = ] range_last_value` 選擇性輸出參數傳回要求的範圍的最後一個值。 **@range_last_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @range_last_value = ] range_last_value` 選擇性輸出參數會傳回所要求範圍的最後一個值。 **@no__t 1range_last_value**是**SQL_variant** ，其基底類型與要求中所用順序物件的型別相同。  
   
-`[ @range_cycle_count = ] range_cycle_count` 選擇性輸出參數傳回的順序物件循環來傳回要求的範圍的次數。 **@range_cycle_count** 已**int**。  
+`[ @range_cycle_count = ] range_cycle_count` 選擇性輸出參數會傳回順序物件為了傳回要求的範圍而迴圈的次數。 **\@range_cycle_count**是**int**。  
   
-`[ @sequence_increment = ] sequence_increment` 選擇性輸出參數傳回的遞增順序物件，用來計算要求的範圍。 **@sequence_increment** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @sequence_increment = ] sequence_increment` 選擇性輸出參數會傳回用來計算所要求範圍之順序物件的增量。 **@no__t 1sequence_increment**是**SQL_variant** ，其基底類型與要求中所用順序物件的型別相同。  
   
-`[ @sequence_min_value = ] sequence_min_value` 選擇性輸出參數傳回順序物件的最小值。 **@sequence_min_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @sequence_min_value = ] sequence_min_value` 選擇性輸出參數會傳回順序物件的最小值。 **@no__t 1sequence_min_value**是**SQL_variant** ，其基底類型與要求中所用順序物件的型別相同。  
   
-`[ @sequence_max_value = ] sequence_max_value` 選擇性輸出參數傳回順序物件的最大值。 **@sequence_max_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @sequence_max_value = ] sequence_max_value` 選擇性輸出參數會傳回順序物件的最大值。 **@no__t 1sequence_max_value**是**SQL_variant** ，其基底類型與要求中所用順序物件的型別相同。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 在 sys sp_sequence_get_rangeis。 結構描述，而且可以當做 sys.sp_sequence_get_range 參考。  
+ sys 中的 sp_sequence_get_rangeis。 架構和可以參考為 sp_sequence_get_range。  
   
 ### <a name="cycling-sequences"></a>循環的順序  
  必要時，順序物件會以適當次數循環，以提供要求的範圍。 循環次數是透過 `@range_cycle_count` 參數傳回給呼叫端。  
@@ -88,7 +88,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  需要順序物件或順序物件之結構描述的 UPDATE 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用名為 Test.RangeSeq 的順序物件。 您可以使用下列陳述式來建立 Test.RangeSeq 順序。  
+ 下列範例會使用名為 RangeSeq 的順序物件。 使用下列語句來建立 RangeSeq 序列。  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -106,7 +106,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. 擷取序列值的範圍  
- 下列陳述式從 Test.RangeSeq 順序物件取得四個序號，並傳回數字的第一個給使用者。  
+ 下列語句會從 RangeSeq 序列物件取得四個序號，並將第一個數位傳回給使用者。  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -122,7 +122,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>B. 傳回所有輸出參數  
- 下列範例會傳回所有輸出值，從 sp_sequence_get_range 程序。  
+ 下列範例會從 sp_sequence_get_range 程式傳回所有輸出值。  
   
 ```  
 DECLARE    
@@ -157,7 +157,7 @@ SELECT
  將 `@range_size` 引數變更為大數值 (例如 75) 會造成順序物件循環。 請檢查 `@range_cycle_count` 引數，以判斷順序物件是否已循環以及循環次數。  
   
 ### <a name="c-example-using-adonet"></a>C. 使用 ADO.NET 的範例  
- 下列範例使用 ADO.NET，從 Test.RangeSeq 取得範圍。  
+ 下列範例會使用 ADO.NET 從 RangeSeq 取得範圍。  
   
 ```  
 SqlCommand cmd = new SqlCommand();  

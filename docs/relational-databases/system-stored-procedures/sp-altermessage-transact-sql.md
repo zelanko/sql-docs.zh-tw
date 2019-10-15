@@ -1,5 +1,5 @@
 ---
-title: sp_altermessage (TRANSACT-SQL) |Microsoft Docs
+title: sp_altermessage （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0722bbc713804af6b2b97b5651df5b564d17a136
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4949307cdaf2cc712e56525e872381c2af8256fd
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117798"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304800"
 ---
-# <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
+# <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  變更使用者定義狀態或在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中之系統訊息。 可以使用來檢視使用者自訂訊息**sys.messages**目錄檢視。  
+  變更使用者定義狀態或在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體中之系統訊息。 您可以使用**sys.databases**目錄檢視來查看使用者定義的訊息。  
 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,14 +42,14 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
   
 ## <a name="arguments"></a>引數  
  [ **@message_id =** ] *message_number*  
- 要從訊息錯誤號碼**sys.messages**。 *message_number*已**int** ，沒有預設值。  
+ 這是要從**sys.databases**改變之訊息的錯誤號碼。 *message_number*是**int** ，沒有預設值。  
   
-`[ @parameter = ] 'write\_to\_log_'` 可搭配 **@parameter_value** 表示訊息會寫入至[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔。 *write_to_log*已**sysname** ，沒有預設值。 *write_to_log*必須設為 WITH_LOG 或 NULL。 如果*write_to_log*設為 WITH_LOG 或 NULL，且值 **@parameter_value** 是**true**，訊息會寫入 Windows 應用程式記錄檔。 如果*write_to_log*設為 WITH_LOG 或 NULL，且值 **@parameter_value** 是**false**，訊息不一定會寫入 Windows 應用程式記錄檔，但可能寫入錯誤的產生方式而定。 如果*write_to_log*指定的值 **@parameter_value** 也必須指定。  
+`[ @parameter = ] 'write\_to\_log_'` 會與 **@no__t 2parameter_value**搭配使用，以指出要將訊息寫入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔。 *write_to_log*是**sysname** ，沒有預設值。 *write_to_log*必須設定為 WITH_LOG 或 Null。 如果*write_to_log*設定為 WITH_LOG 或 Null，且 **\@parameter_value**的值為**true**，則會將訊息寫入 Windows 應用程式記錄檔。 如果*write_to_log*設定為 WITH_LOG 或 Null，且 **\@parameter_value**的值為**false**，則訊息不一定會寫入 Windows 應用程式記錄檔，但可能會根據錯誤的產生方式來寫入。 如果指定*write_to_log* ，則也必須指定 **\@parameter_value**的值。  
   
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  
   
-`[ @parameter_value = ]'value_'` 可搭配 **@parameter** 表示錯誤會寫入至[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔。 *值*已**varchar(5)** ，沒有預設值。 如果 **，則為 true**，錯誤一律會寫入 Windows 應用程式記錄檔。 如果**false**，錯誤不一定會寫入 Windows 應用程式記錄檔，但也可能會寫入錯誤的產生方式而定。 如果*值*指定，則*write_to_log* for **@parameter** 也必須指定。  
+`[ @parameter_value = ]'value_'` 會與 **@no__t 2parameter**搭配使用，以指出要將錯誤寫入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔。 *值*為**Varchar （5）** ，沒有預設值。 若**為 true**，則錯誤一律會寫入 Windows 應用程式記錄檔。 如果**為 false**，則不一定會將錯誤寫入 Windows 應用程式記錄檔，但可能會根據錯誤的產生方式來寫入。 如果指定了*value* ，則也必須指定*write_to_log* for **\@parameter** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -58,12 +58,12 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  None  
   
 ## <a name="remarks"></a>備註  
- 效果**sp_altermessage**了 with_log 選項是類似於 RAISERROR WITH LOG 參數，不同之處在於**sp_altermessage**變更現有訊息的記錄行為。 如果訊息已改成 WITH_LOG，它便一律會寫入 Windows 應用程式記錄檔中，不論使用者如何叫用錯誤都是如此。 即使執行 RAISERROR 時未設定 WITH_LOG 選項，仍會將錯誤寫入 Windows 應用程式記錄檔中。  
+ **Sp_altermessage**與 WITH_LOG 選項的作用與使用 LOG 參數 RAISERROR 的效果相似，不同之處在于**sp_altermessage**會變更現有訊息的記錄行為。 如果訊息已改成 WITH_LOG，它便一律會寫入 Windows 應用程式記錄檔中，不論使用者如何叫用錯誤都是如此。 即使執行 RAISERROR 時未設定 WITH_LOG 選項，仍會將錯誤寫入 Windows 應用程式記錄檔中。  
   
- 系統訊息可以藉由修改**sp_altermessage**。  
+ 您可以使用**sp_altermessage**來修改系統訊息。  
   
 ## <a name="permissions"></a>Permissions  
- 需要的成員資格**serveradmin**固定的伺服器角色。  
+ 需要**serveradmin**固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會使現有的訊息 `55001` 記錄到 Windows 應用程式記錄檔中。  

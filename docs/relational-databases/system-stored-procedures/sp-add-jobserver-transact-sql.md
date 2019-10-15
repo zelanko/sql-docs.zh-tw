@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078192"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305244"
 ---
-# <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
+# <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將指定作業的目標鎖定在指定的伺服器上。  
@@ -40,23 +40,23 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id` 作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 作業的識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'` 作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'`，這是作業的名稱。 *job_name*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
+>  必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
   
-`[ @server_name = ] 'server'` 要以工作為目標伺服器的名稱。 *伺服器*已**nvarchar(30)** ，預設值是 （local） '。 *伺服器*可以是 **(LOCAL)** 本機伺服器，或現有目標伺服器的名稱。  
+`[ @server_name = ] 'server'`，此為作業的目標伺服器名稱。 *伺服器*是**Nvarchar （30）** ，預設值是 N ' （LOCAL） '。 *伺服器*可以是 **（local）** 做為本機伺服器，或是現有目標伺服器的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- **@automatic_post** 存在於**sp_add_jobserver**，但並未列在引數。 **@automatic_post** 是保留供內部使用。  
+ **1automatic_post**存在於**sp_add_jobserver**中，但未列在 [引數] 之下。 @no__t **@no__t 1automatic_post**已保留供內部使用。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
@@ -71,7 +71,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_jobserver**牽涉到多部伺服器的作業。  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才可以針對牽涉到多部伺服器的工作執行**sp_add_jobserver** 。  
   
 ## <a name="examples"></a>範例  
   

@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_configure_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_configure_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909068"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304744"
 ---
-# <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
+# <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   顯示 Database Mail 的組態設定。  
@@ -40,13 +40,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>引數  
  [ **@parameter_name** = ] **'***parameter_name***'**  
- 要擷取之組態設定的名稱。 指定時，組態設定的值都會傳入 **@parameter_value** 輸出參數。 若未 **@parameter_name** 指定，此預存程序傳回的結果集包含所有執行個體中的 Database Mail 組態設定。  
+ 要擷取之組態設定的名稱。 當指定時，會在 **@no__t 1parameter_value**輸出參數中傳回 configuration 設定的值。 當未指定 **@no__t 1parameter_name**時，這個預存程式會傳回包含實例中所有 Database Mail 設定值的結果集。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 若未 **@parameter_name** 指定，則會傳回含下列資料行的結果集。  
+ 當未指定 **@no__t 1parameter_name**時，會傳回具有下列資料行的結果集。  
   
 ||||  
 |-|-|-|  
@@ -56,14 +56,14 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**description**|**nvarchar(256)**|組態參數的描述。|  
   
 ## <a name="remarks"></a>備註  
- 預存程序**sysmail_help_configure_sp**列出執行個體目前的 Database Mail 組態設定。  
+ [預存程式] **sysmail_help_configure_sp**會列出實例目前的 Database Mail 設定。  
   
- 當 **@parameter_name** 指定，但沒有輸出參數供 **@parameter_value** ，此預存程序會產生任何輸出。  
+ 當指定了 **@no__t 1parameter_name** ，但沒有為 **@no__t 3parameter_value**提供輸出參數時，這個預存程式不會產生任何輸出。  
   
- 預存程序**sysmail_help_configure_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須以叫用三部分名稱如果不是目前的資料庫**msdb**。  
+ 預存程式**sysmail_help_configure_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱叫用此程式。  
   
 ## <a name="permissions"></a>Permissions  
- 執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
+ 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示如何列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 Database Mail 組態設定。  
@@ -89,6 +89,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

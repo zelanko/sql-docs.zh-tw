@@ -1,5 +1,5 @@
 ---
-title: sp_attach_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_attach_db （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cf96da996996a98a965d2563c729321318ac400c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046202"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305268"
 ---
-# <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
+# <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   將資料庫附加至伺服器。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用 CREATE DATABASE *database_name* FOR ATTACH 改。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]，建議您改用 CREATE DATABASE *database_name* FOR ATTACH。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 > [!NOTE]  
->  若要重建多個記錄檔，當一或多個有新的位置時，使用 CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG。  
+>  若要在有一或多個記錄檔有新位置時重建多個記錄檔，請使用 CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG。  
   
 > [!IMPORTANT]  
 >  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
@@ -47,9 +47,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @dbname = ] 'dbnam_ '` 是要連接到伺服器之資料庫的名稱。 名稱必須是唯一的。 *dbname*已**sysname**，預設值是 NULL。  
+`[ @dbname = ] 'dbnam_ '` 是要附加至伺服器的資料庫名稱。 名稱必須是唯一的。 *dbname*是**sysname**，預設值是 Null。  
   
-`[ @filename1 = ] 'filename_n'` 是實體的名稱，包括路徑，資料庫檔案。 *filename_n*已**nvarchar(260)** ，預設值是 NULL。 您最多可以指定 16 個檔案名稱。 參數名稱開始於 **@filename1** 並以遞增 **@filename16** 。 檔案名稱清單至少必須包括主要檔案。 主要檔案包含指向資料庫中其他檔案的系統資料表。 這份清單也必須包括資料庫卸離之後所移動的任何檔案。  
+`[ @filename1 = ] 'filename_n'` 是資料庫檔案的機構名稱，包括路徑。 *filename_n*是**Nvarchar （260）** ，預設值是 Null。 您最多可以指定 16 個檔案名稱。 參數名稱的開頭為 **\@filename1** ，而遞增為 **@no__t 3filename16**。 檔案名稱清單至少必須包括主要檔案。 主要檔案包含指向資料庫中其他檔案的系統資料表。 這份清單也必須包括資料庫卸離之後所移動的任何檔案。  
   
 > [!NOTE]  
 >  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
@@ -63,7 +63,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  None  
   
 ## <a name="remarks"></a>備註  
- **Sp_attach_db**先前卸離資料庫伺服器使用明確的資料庫上應該只執行預存程序**sp_detach_db**作業或對已複製的資料庫。 如果您必須指定 16 個以上的檔案，請使用 CREATE DATABASE *database_name* FOR ATTACH 或 CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ **Sp_attach_db**預存程式只能在先前從資料庫伺服器卸離的資料庫上執行，方法是使用明確的**sp_detach_db**作業或複製的資料庫。 如果您必須指定16個以上的檔案，請針對 [附加] 或 [建立資料庫*database_name* FOR_ATTACH_REBUILD_LOG] 使用 [建立資料庫*database_name* ]。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
  任何未指定的檔案都假設為在前次的已知位置中。 若要在不同位置使用檔案，您必須指定新位置。  
   
@@ -83,7 +83,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。  
   
 ## <a name="permissions"></a>Permissions  
- 如需附加資料庫時，如何處理權限資訊，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 如需如何在附加資料庫時處理許可權的詳細資訊，請參閱[CREATE &#40;database SQL Server transact-sql&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的檔案附加至目前的伺服器。  

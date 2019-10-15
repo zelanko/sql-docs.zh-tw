@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_job （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 94b77b30d96b5361967398a35335f6aa96587f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085334"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306277"
 ---
-# <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
+# <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   刪除作業。  
@@ -42,31 +42,31 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_id = ] job_id` 這是要刪除之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 是要刪除之作業的識別碼。 *job_id*是**uniqueidentifier**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'` 是要刪除之作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 是要刪除的作業名稱。 *job_name*是**sysname**，預設值是 Null。  
   
 > [!NOTE]  
->  任一*job_id*或是*job_name*必須指定; 不能同時指定這兩者。  
+>  必須指定*job_id*或*job_name*;兩者都無法指定。  
   
 `[ @originating_server = ] 'server'` 供內部使用。  
   
-`[ @delete_history = ] delete_history` 指定是否要刪除作業的記錄。 *delete_history*已**位元**，預設值是**1**。 當*delete_history*是**1**，刪除作業的作業記錄。 當*delete_history*是**0**，不會刪除作業記錄。  
+`[ @delete_history = ] delete_history` 指定是否要刪除作業的歷程記錄。 *delete_history*是**bit**，預設值是**1**。 當*delete_history*為**1**時，就會刪除作業的作業歷程記錄。 當*delete_history*為**0**時，不會刪除作業歷程記錄。  
   
- 請注意，當刪除作業並不會刪除歷程記錄時，作業的歷程記錄資訊不會顯示於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式圖形化使用者介面工作歷程記錄，但資訊仍存留在**sysjobhistory**資料表中**msdb**資料庫。  
+ 請注意，刪除作業並不刪除記錄時，不會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式圖形化使用者介面作業歷程記錄中顯示作業的歷程記錄資訊，但資訊仍然會位於 msdb 的**sysjobhistory**資料表中。資料庫。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否刪除排程附加至這個作業不會附加至任何其他作業。 *delete_unused_schedule*已**位元**，預設值是**1**。 當*delete_unused_schedule*是**1**，如果沒有其他作業參考排程，會刪除附加至這項作業的排程。 當*delete_unused_schedule*是**0**，不會刪除排程。  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否要刪除附加至此作業的排程（如果未附加至任何其他工作）。 *delete_unused_schedule*是**bit**，預設值是**1**。 當*delete_unused_schedule*為**1**時，如果沒有其他作業參考排程，則會刪除附加至此作業的排程。 當*delete_unused_schedule*為**0**時，不會刪除排程。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
  None  
   
 ## <a name="remarks"></a>備註  
- **@originating_server** 引數保留供內部使用。  
+ **@No__t 1originating_server**引數已保留供內部使用。  
   
- **@delete_unused_schedule** 引數會提供回溯相容性的先前版本的 SQL Server 會自動移除未附加至任何作業的排程。 請注意，這個參數預設相容於舊版的行為。 若要保留未附加至作業的排程，您必須提供值**0**作為 **@delete_unused_schedule** 引數。  
+ **@No__t 1delete_unused_schedule**引數會自動移除未附加至任何作業的排程，以提供與舊版 SQL Server 的回溯相容性。 請注意，這個參數預設相容於舊版的行為。 若要保留未附加至作業的排程，您必須提供值**0**做為 **\@delete_unused_schedule**引數。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
