@@ -25,12 +25,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 669ed425772a311a1eb35531a4c80c785430ef12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24d03b268abe381e8a1ad3308f630626f5a3d455
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119147"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278342"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-如果 *date* 指定為變數或資料表資料行，而該變數或資料行的資料類型沒有指定的 *datepart*，`DATENAME` 會傳回錯誤 9810。 在此範例中，變數 *@t* 具有 **time** 資料類型。 此範例會失敗，因為 DATEPART year 對 **time** 資料類型無效：
+如果 *date* 指定為變數或資料表資料行，而該變數或資料行的資料類型沒有指定的 *datepart*，`DATENAME` 會傳回錯誤 9810。 在此範例中，變數 *\@t* 具有 **time** 資料類型。 此範例會失敗，因為 DATEPART year 對 **time** 資料類型無效：
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

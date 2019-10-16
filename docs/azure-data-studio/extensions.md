@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: e114c4991d5f3df10537e459263b49152c466f99
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.date: 10/03/2019
+ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
+ms.sourcegitcommit: cf268c4e39edf00a8552466e9440e79e6a5d0084
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70274807"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72166731"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>擴充 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的功能
 
@@ -26,9 +26,11 @@ ms.locfileid: "70274807"
 
 ## <a name="add-azure-data-studio-extensions"></a>新增 Azure Data Studio 延伸模組
 
-1. 若要開啟延伸模組管理員並存取可用的延伸模組，請選取延伸模組圖示，或選取 [檢視]  功能表中的 [延伸模組]  。\
-    您也可以按下 `Ctrl+Shift+X` (Windows/Linux) 或 `Command+Shift+X` (Mac) 快速存取延伸模組管理員。\
+1. 透過選取 [延伸模組] 圖示或透過選取 [檢視]  功能表中的 [延伸模組]  ，以存取可用的延伸模組。
+
     ![延伸模組管理員圖示](media/extensions/extension-manager-icon.png)
+
+    您也可以按下 `Ctrl+Shift+X` (Windows/Linux) 或 `Command+Shift+X` (Mac) 以快速存取延伸模組管理員。
 
 2. 選取可用的延伸模組，檢視詳細資料。
     ![延伸模組詳細資料](media/extensions/extension-details.png)
@@ -36,6 +38,8 @@ ms.locfileid: "70274807"
 3. 選取您想要的延伸模組並加以**安裝**。
 
 4. 安裝之後，請**重新載入**以在 Azure Data Studio 中啟用延伸模組 (只有在第一次安裝延伸模組時才需要)。
+
+若無法存取 Azure Data Studio 上的延伸模組管理員，您可以在我們的 [GitHub Wiki](https://github.com/microsoft/azuredatastudio/wiki/List-of-Extensions) \(英文\) 下載延伸模組。
 
 
 ## <a name="access-installed-azure-data-studio-extensions"></a>存取已安裝的 Azure Data Studio 延伸模組

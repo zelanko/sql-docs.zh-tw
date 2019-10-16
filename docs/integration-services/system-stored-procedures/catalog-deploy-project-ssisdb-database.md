@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 77ddbd16decffcf5250fbd1de6ba087e9647f0ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281162"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251322"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB 資料庫)
 
@@ -72,7 +72,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   參數參考到不存在的物件、參數會嘗試建立物件已經存在的物件，或參數因為其他原因而無效  
   
--   參數 *@project_name* 的值與部署檔案中的專案名稱不符  
+-   參數 *\@project_name* 的值與部署檔案中的專案名稱不符  
   
 -   使用者未具備足夠的權限  
   

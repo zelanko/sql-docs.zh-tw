@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082403"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252181"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ REVERT
   
 ## <a name="arguments"></a>引數  
  WITH COOKIE = @*varbinary_variable*  
- 指定在對應 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 獨立陳述式中建立的 Cookie。 *@varbinary_variable* 是 **varbinary(100)** 。  
+ 指定在對應 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 獨立陳述式中建立的 Cookie。 *\@varbinary_variable* 是 **varbinary(100)** 。  
   
 ## <a name="remarks"></a>Remarks  
  您可以在模組 (例如，預存程序或使用者定義函數，或是獨立陳述式) 中指定 REVERT。 如果 REVERT 是在模組內部指定，則只能用於模組中定義的 EXECUTE AS 陳述式。 例如，下列預存程序會發出後面接有 `EXECUTE AS` 的 `REVERT` 陳述式。  
@@ -77,9 +77,9 @@ EXECUTE dbo.usp_myproc;
  當 REVERT 被指定為獨立陳述式時，則會套用至批次或工作階段內定義的 EXECUTE AS 陳述式。 如果對應的 EXECUTE AS 陳述式含有 WITH NO REVERT 子句，REVERT 就沒有任何影響。 此時，在工作階段卸除之前，執行內容仍然有效。  
   
 ## <a name="using-revert-with-cookie"></a>使用 REVERT WITH COOKIE  
- 用來設定工作階段執行內容的 EXECUTE AS 陳述式，可包含選擇性子句 WITH NO REVERT COOKIE = @*varbinary_variable*。 當這個陳述式執行時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳遞給 @*varbinary_variable*。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含正確的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
+ 用來設定工作階段執行內容的 EXECUTE AS 陳述式，可包含選擇性子句 WITH NO REVERT COOKIE = @*varbinary_variable*。 當這個陳述式執行時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳遞給 @*varbinary_variable*。 只有當呼叫的 EVERT WITH COOKIE = @*varbinary_variable* 陳述式包含正確的 *\@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
   
- 這項機制在使用連接共用的環境中相當有用。 連接共用是一組資料庫連接的維護，這些連接是供多位使用者的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳送到 *@varbinary_variable* 的值 (本例是指應用程式)，因此呼叫者可以保證叫用應用程式的使用者不能變更他們所建立的執行內容。 在還原執行內容之後，應用程式就可以將內容切換回另一個主體。  
+ 這項機制在使用連接共用的環境中相當有用。 連接共用是一組資料庫連接的維護，這些連接是供多位使用者的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳遞到 *\@varbinary_variable* 的值 (在此案例中是應用程式)，因此呼叫者可以保證叫用應用程式的使用者不能變更他們所建立的執行內容。 在還原執行內容之後，應用程式就可以將內容切換回另一個主體。  
   
 ## <a name="permissions"></a>權限  
  不需要任何權限。  

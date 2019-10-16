@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bf4f3d11eeb9975bb399fc58a0fd52d0d56dc5a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051309"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278152"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ select @x.exist('true()');
 ## <a name="examples"></a>範例  
  下列範例會示範如何指定 **exist()** 方法。  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>範例針對 XML 類型變數指定 exist() 方法  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>範例：針對 XML 類型變數指定 exist() 方法  
  在下列範例中，@x 是 **xml** 類型變數 (不具類型的 xml)，而 @f 則是整數類型變數，用以儲存 **exist()** 方法所傳回的值。 如果儲存在 XML 執行個體中的日期值是 `2002-01-01`，**exist()** 方法會傳回 True (1)。  
   
 ```  
@@ -72,7 +72,7 @@ select @f;
   
 -   程式碼 `cast as xs:date?` 是用以將值轉換成 **xs:date** 類型以利進行比較。  
   
--   **@Somedate** 屬性的值是不具類型的。 在比較此值時，會隱含地將它轉換成比較右邊的類型，即 **xs:date** 類型。  
+-   **\@Somedate** 屬性的值是不具類型的。 在比較此值時，會隱含地將它轉換成比較右邊的類型，即 **xs:date** 類型。  
   
 -   不是使用 **cast as xs:date()** ，而是改用 **xs:date()** 建構函式。 如需詳細資訊，請參閱[建構函式 &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md)。  
   
@@ -90,7 +90,7 @@ SELECT @f;
   
 -   **text()** 方法會傳回一個文字節點，其中包含不具類型的值 `2002-01-01`。 (XQuery 類型是 **xdt:untypedAtomic**。)您必須明確地將此具類型的值從 **x** 轉換成 **xsd:date**，因為在此例中不支援隱含轉換。  
   
-### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>範例針對具有類型的 XML 變數指定 exist() 方法  
+### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>範例：針對具有類型的 XML 變數指定 exist() 方法  
  下列範例說明針對 **xml** 類型變數使用 **exist()** 方法。 它是 XML 類型變數，因為它指定結構描述命名空間的集合名稱 `ManuInstructionsSchemaCollection`。  
   
  在本範例中，會先指派製造指示文件給此變數，然後使用 **exist()** 方法尋找文件中是否包含 **LocationID** 屬性值為 50 的 <`Location`> 元素。  
@@ -110,7 +110,7 @@ SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlser
 SELECT @f;  
 ```  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>範例針對 XML 類型資料行指定 exist() 方法  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>範例：針對 XML 類型資料行指定 exist() 方法  
  下列查詢將擷取目錄描述不包含 <`Specifications`> 元素規格的產品型號識別碼：  
   
 ```  

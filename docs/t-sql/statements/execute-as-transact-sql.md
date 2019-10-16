@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9d174dab31e6a3f508d3d3858b87844854f6ee7e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161342"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252213"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -63,14 +63,13 @@ ms.locfileid: "70161342"
 > [!NOTE]  
 >  此選項在自主資料庫或 SQL Database 或 SQL 資料倉儲中無法使用。  
   
- 使用者  
+ USER  
  指定您要模擬的內容是目前資料庫中的使用者。 模擬範圍僅限於目前資料庫。 通往資料庫使用者的內容切換不會繼承該使用者的伺服器層級權限。  
   
 > [!IMPORTANT]  
 >  如果通往資料庫使用者的內容切換在使用中，任何人想要存取資料庫以外的資源，都會導致陳述式失敗。 其中包括 USE *database* 陳述式、分散式查詢，以及參考其他使用三部分或四部分識別碼的資料庫查詢。  
   
- **'** *name* **'**  
- 有效的使用者或登入名稱。 *name* 必須是 **sysadmin** 固定伺服器角色的成員，或是以主體形式分別存在於 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 或 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 中。  
+ '*name*' 是有效的使用者或登入名稱。 *name* 必須是 **sysadmin** 固定伺服器角色的成員，或是以主體形式分別存在於 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 或 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 中。  
   
  *name* 可以指定為本機變數。  
   
@@ -83,10 +82,10 @@ ms.locfileid: "70161342"
   
  如需如何還原到先前內容的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)。  
   
- COOKIE INTO * *@***varbinary_variable*  
- 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 * *@***varbinary_variable* 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 * *@***varbinary_variable*。 **COOKIE INTO** 選項只能在特定層級使用。  
+ COOKIE INTO @*varbinary_variable*  
+ 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 @*varbinary_variable* 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳遞到 @*varbinary_variable*。 **COOKIE INTO** 選項只能在特定層級使用。  
   
- **@** *varbinary_variable* 是 **varbinary(8000)** 。  
+ @*varbinary_variable* 是 **varbinary(8000)** 。  
   
 > [!NOTE]  
 >  Cookie **OUTPUT** 參數目前記載為 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(100)** 。 應用程式應保留 **varbinary(8000)** ，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。  

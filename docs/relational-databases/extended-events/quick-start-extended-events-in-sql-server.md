@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016847"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251531"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>快速入門：SQL Server 中的延伸事件
 
@@ -410,7 +410,7 @@ SELECT
 有無數個有效使用擴充事件的案例。 下列文章提供有關查詢期間取得鎖定的範例案例。
 
 
-這些特定的事件工作階段案例旨在評估下列文章中所述的鎖定。 這些文章也會示範一些進階技術，例如使用 **@dbid** ，以及使用動態 `EXECUTE (@YourSqlString)`：
+這些特定的事件工作階段案例旨在評估下列文章中所述的鎖定。 這些文章也會示範一些進階技術，例如使用 **\@dbid**，以及使用動態 `EXECUTE (@YourSqlString)`：
 
 - [尋找持有最多鎖定的物件](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 此案例使用目標 package0.histogram，它會處理未經處理的事件資料，再向您顯示。

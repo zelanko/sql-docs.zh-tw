@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9da0204a19161b918c1a19d5babe28f707f3af52
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087168"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173655"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 課：建立和套用命名標準原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68087168"
   
 2.  在 [建立新條件]  對話方塊的 [名稱]  方塊中，輸入 **Finance Tables**。  
     1. 在 [Facet]  清單中，選取 [多部分名稱]  。 
-    1. 在 [運算式]  區域的 [欄位]  方塊中，選取 **@Name** ；在 [運算子]  方塊中，選取 [Like]  ；然後在 [值]  方塊中，鍵入 ```'fintbl%'```，強制所有資料表名稱都以字母 **fintbl** 為開頭。
+    1. 在 [運算式]  區域的 [欄位]  方塊中，選取 **\@名稱**；在 [運算子]  方塊中，選取 [Like]  ；然後在 [值]  方塊中，輸入 ```'fintbl%'```，強制所有資料表名稱都以字母 **fintbl** 為開頭。
     1. 在 [描述]  頁面上，輸入**財務資料表名稱的開頭必須是 fintbl**，然後按一下 [確定]  建立條件。  
 
     ![Finance 資料表條件](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)

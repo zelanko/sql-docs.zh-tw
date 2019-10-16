@@ -3,17 +3,17 @@ title: Linux 上的 SQL Server 2017 版本資訊
 description: 此文章包含在 Linux 上執行之 SQL Server 2017 的版本資訊和支援功能。 其中包含最新版本和數個先前版本的版本資訊。
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 93472679a524214010ccc2d10eacfd37d7e001e8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763152"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278260"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 版本資訊
 
@@ -44,8 +44,9 @@ ms.locfileid: "68763152"
 
 下表列出 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的版本歷程記錄。
 
-| 版本               | Version       | 發行日期 |
+| 版本               | 版本       | 發行日期 |
 |-----------------------|---------------|--------------|
+| [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
@@ -78,9 +79,23 @@ ms.locfileid: "68763152"
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU17"></a> CU17 (2019 年 10 月)
+
+這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 17 (CU17) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3238.1。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4515579)。
+
+### <a name="package-details"></a>套件詳細資料
+
+針對手動或離線套件安裝，您可以運用下表中的資訊下載 RPM 和 Debian 套件：
+
+| 封裝 | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3238.1-19 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3238.1-19 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 套件 | 14.0.3238.1-19 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3238.1-19_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3238.1-19_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3238.1-19_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU16"></a> CU16 (2019 年 8 月)
 
-這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 16 (CU16) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3223.3。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951)。
+這是 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的累積更新 16 (CU16) 版本。 此版本 (Release) 的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 版本 (Version) 是 14.0.3223.3。 如需有關此版本中的修正和改進資訊，請參閱 [https://support.microsoft.com/en-us/help/4508218](https://support.microsoft.com/en-us/help/4508218)。
 
 ### <a name="whats-new"></a>新功能
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d3a5d0271f1adc4c402518422997e6f7f7c3db8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 177da1486d7cab622bacaea56cd886bd8dc06d06
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056696"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251494"
 ---
-# <a name="mssqlserver21889"></a>MSSQLSERVER_21889
+# <a name="mssqlserver_21889"></a>MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -36,5 +36,5 @@ ms.locfileid: "68056696"
 若要裝載發行者資料庫， SQL Server 執行個體必須是複寫發行者。 **sp_validate_redirected_publisher**會呼叫遠端伺服器上的 **sp_helpdistributor**，以便判斷伺服器是否為複寫發行者。 此錯誤表示 SQL Server 的目標執行個體不是複寫發行者。  
   
 ## <a name="user-action"></a>使用者動作  
-請在裝載發行者資料庫的 SQL Server 執行個體上執行 **sp_adddistributor**。 執行 **sp_adddistributor** 時，請指定正確的散發者。 針對 *@password* 參數，請使用與 **sp_adddistributor** 一開始在散發者端執行時使用的相同值。  
+請在裝載發行者資料庫的 SQL Server 執行個體上執行 **sp_adddistributor**。 執行 **sp_adddistributor** 時，請指定正確的散發者。 針對 *\@password* 參數，請使用與 **sp_adddistributor** 一開始在散發者端執行時使用的相同值。  
   

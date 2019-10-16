@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 版本資訊 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 9b6895abfa0b09459911eba03b52837379f2d162
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326122"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041195"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 預覽版版本資訊
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -59,6 +59,22 @@ Windows、Linux 和容器上的 SQL Server 2019 RC 組建編號為 `15.0.1900.25
     - Windows Server 2016 或更新版本。 如需其他需求，請參閱[安裝 SQL Server 的需求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
     - Microsoft .NET Framework 4.6.2。 可從[下載中心](https://www.microsoft.com/download/details.aspx?id=53344)取得。
     - 針對 Linux，請參閱 [Linux - 支援的平台](../linux/sql-server-linux-setup.md#supportedplatforms)
+
+## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>如果已安裝 SSMS 18.x，SQL Server 安裝可能會失敗
+
+- **問題與對客戶的影響**：當依序進行下列安裝時，[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 安裝失敗：
+  1. 在伺服器上安裝 SQL Server Management Studio (SSMS) 18.0、18.1、18.2 或 18.3 版。
+  1. 嘗試從抽取式媒體進行 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 安裝。 例如，安裝媒體是 DVD。
+
+- **因應措施**：
+  1. 解除安裝比 SSMS 18.3.1 舊的任何版本。
+  1. 安裝比 SSMS (18.3.1 或更新版本) 新的任何版本。 如需最新版本，請參閱[下載 SSMS](../ssms/download-sql-server-management-studio-ssms.md)。
+  1. 以正常方式安裝 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]。
+
+  >[!NOTE]
+  >需要解除安裝。
+
+- **適用於**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 候選版。
 
 ## <a name="updated-compiler"></a>更新的編譯器
 
@@ -111,7 +127,7 @@ Windows、Linux 和容器上的 SQL Server 2019 RC 組建編號為 `15.0.1900.25
 - **因應措施**：安裝最新的 VC 執行階段 2013 (x86)：
 
   - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [直接](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [直接](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **適用於**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1、CTP 3.0、CTP 2.5。
 
@@ -132,6 +148,10 @@ Windows、Linux 和容器上的 SQL Server 2019 RC 組建編號為 `15.0.1900.25
 - **因應措施**：開啟 MDS 入口網站，並手動移至資源。
 
 - **適用於**：SQL Server 2019 候選版。
+
+## <a name="machine-learning-services"></a>機器學習服務
+
+如需 SQL Server Microsoft 機器學習服務中的問題，請參閱 [SQL Server Microsoft 機器學習服務機器學習服務中的已知問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)。
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

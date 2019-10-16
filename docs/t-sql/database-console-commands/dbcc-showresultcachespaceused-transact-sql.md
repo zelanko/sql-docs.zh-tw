@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476311"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174652"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -42,7 +42,12 @@ DBCC SHOWRESULTCACHESPACEUSED
 - 若結果集尚未使用，則為每 48 小時撤出一次。
 - 當結果集快取接近大小上限時。
 
-使用者可以透過關閉結果集快取功能或透過使用 `DBCC DROPRESULTSETCACHE` 命令，手動清空資料庫的結果集快取。   暫停資料庫將不會清空結果集快取。  
+若要手動清空資料庫的結果集快取，使用者可以使用下列其中一個選項：
+
+- 關閉資料庫的結果集快取功能
+- 在連線到資料庫的情況下執行 `DBCC DROPRESULTSETCACHE` 
+
+暫停資料庫將不會清空結果集快取。  
 
 ## <a name="permissions"></a>權限
 
@@ -50,7 +55,7 @@ DBCC SHOWRESULTCACHESPACEUSED
   
 ## <a name="result-sets"></a>結果集  
   
-|「資料行」|資料類型|Description|  
+|資料行|資料類型|Description|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|資料庫使用的總空間 (KB)。 當快取的結果集增加時，此數字就會變更。|  
 |data_space|BIGINT|資料使用的空間 (KB)。|  

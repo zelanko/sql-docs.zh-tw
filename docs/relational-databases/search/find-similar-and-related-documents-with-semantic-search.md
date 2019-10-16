@@ -11,12 +11,12 @@ ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 051e0a70bedaf7c7731b5f8cd0b9dfe91f078fea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed2ab9fadcb9a546d26fd150abaad5d7cc785f86
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082802"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278305"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>使用語意搜尋尋找相似及相關的文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68082802"
 >  您設定為目標的資料行必須已啟用全文檢索和語意索引。  
   
 ###  <a name="HowToIdentifySimilar"></a> 範例：尋找與另一份文件相似的前幾份文件  
- 下列範例從 AdventureWorks2012 範例資料庫的 HumanResources.JobCandidate 資料表中擷取類似於 *@CandidateID* 所指定候選人的前 10 個候選人。  
+ 下列範例從 AdventureWorks2012 範例資料庫的 HumanResources.JobCandidate 資料表中擷取類似於 *\@CandidateID* 所指定候選人的前 10 個候選人。  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

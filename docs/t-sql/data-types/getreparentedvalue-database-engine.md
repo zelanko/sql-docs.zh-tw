@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077957"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278365"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ _newRoot_
 ## <a name="examples"></a>範例  
   
 ### <a name="a-comparing-two-node-locations"></a>A. 比較兩個節點位置  
-下列範例會顯示某個節點的目前 hierarchyid。 此外，它也會顯示如果您移動此節點來成為 **@NewParent** 節點的子系，則該節點的 **hierarchyid** 會是什麼。 它會使用 `ToString()` 方法來顯示階層式關聯性。
+下列範例會顯示某個節點的目前 hierarchyid。 此外，它也會顯示如果您移動此節點來成為 **\@NewParent** 節點的子系，則該節點的 **hierarchyid** 會是什麼。 它會使用 `ToString()` 方法來顯示階層式關聯性。
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

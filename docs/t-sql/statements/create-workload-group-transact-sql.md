@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea6501c4bfd516b99d53f9ac7e90a2cd0d59ba8c
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: e78ab71081c991b5e42726ed4dd594e016f324f0
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026216"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260325"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -96,7 +96,8 @@ REQUEST_MAX_CPU_TIME_SEC = *value*
 指定要求可以使用的最大 CPU 時間量 (以秒為單位)。 *value* 必須是 0 或正整數。 *value* 的預設設定為 0，這代表沒有限制。
 
 > [!NOTE]
-> 根據預設，Resource Governor 不會在超過最大時間時，阻止要求繼續執行。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。
+> 根據預設，Resource Governor 不會在超過最大時間時，阻止要求繼續執行。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。     
+
 > [!IMPORTANT]
 > 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始，並使用[追蹤旗標 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，Resource Governor 將在超過時間上限時中止要求。
 
@@ -107,13 +108,17 @@ REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*
 > 到達記憶體授權的逾時值時，查詢不一定會失敗。 只有當有太多並行的查詢正在執行時，查詢才會失敗。 否則，查詢可能只會得到最小的記憶體授權，導致查詢效能降低。
 
 MAX_DOP = *value*     
-為平行要求指定平行處理原則的最大程度 (DOP)。 *value* 必須是 0 或正整數。 *value* 允許範圍是從 0 至 64。 *value* 的預設設定 0 會使用全域設定。 MAX_DOP 會以下列方式處理：
+為平行查詢執行指定**平行處理原則的最大程度 (MAXDOP)** 。 *value* 必須是 0 或正整數。 *value* 允許範圍是從 0 至 64。 *value* 的預設設定 0 會使用全域設定。 MAX_DOP 會以下列方式處理：
 
-- 當做查詢提示的 MAX_DOP 會維持有效，直到它超過工作負載群組 MAX_DOP 為止。 如果 MAXDOP 查詢提示值超過使用資源管理員所設定的值，Database Engine 就會使用資源管理員 MAXDOP 值。
-- 當做查詢提示的 MAX_DOP 永遠會覆寫 sp_configure 的「平行處理原則的最大程度」。
-- 工作負載群組 MAX_DOP 會覆寫 sp_configure 的「平行處理原則的最大程度」。
-- 如果查詢在編譯時間被標示為序列，不管工作負載群組或 sp_configure 設定為何，都無法在執行階段將該查詢變更回平行。
-- DOP 經過設定後，在授與記憶體不足的壓力下，僅能將其降低。 在授與記憶體佇列中等候時，看不到工作負載群組的重新組態。
+> [!NOTE]
+> 工作負載群組 MAX_DOP 會覆寫[平行處理原則的最大程度伺服器組態](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)與 **MAXDOP** [資料庫範圍組態](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
+
+> [!TIP]
+> 若要在查詢層級完成此操作，請使用 **MAXDOP** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。 將平行處理原則的最大程度設定為查詢提示非常有效，只要它不預期工作負載群組 MAX_DOP。 如果 MAXDOP 查詢提示值超過使用 Resource Governor 所設定的值，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會使用 Resource Governor `MAX_DOP` 值。 MAXDOP [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)一律會覆寫[平行處理原則的最大程度伺服器組態](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。      
+>   
+> 若要在資料庫層級完成此操作，請使用 **MAXDOP** [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。      
+>   
+> 若要在伺服器層級完成此操作，請使用**平行處理原則的最大程度 (MAXDOP)** [伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。     
 
 GROUP_MAX_REQUESTS = *value*     
 指定在工作負載群組中可允許執行的最大同時要求數。 *value* 必須為 0 或正整數。 *value* 的預設值為 0，會允許無限制的要求。 達到最大並行要求時，該群組中的使用者可以登入，但是會處於等候狀態，直到並行要求低於指定的值為止。
@@ -137,19 +142,20 @@ EXTERNAL external_pool_name | "default"
 ## <a name="remarks"></a>Remarks
 使用 `REQUEST_MEMORY_GRANT_PERCENT` 時，在建立索引時將可使用比一開始授與的記憶體更多的工作空間記憶體來改善效能。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，資源管理員支援這種特殊的處理。 不過，初始授與和任何額外的記憶體授與都受到資源集區和工作負載群組設定的限制。
 
-### <a name="index-creation-on-a-partitioned-table"></a>在資料分割資料表上建立索引
+`MAX_DOP` 限制是以[工作](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)為基礎。 它不是根據[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示在平行查詢執行期間，單一要求可能會繁衍指派至[排程器](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)的多個工作。 如需詳細資訊，請參閱[執行緒與工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+
+當使用 `MAX_DOP` 且查詢在編譯時間被標示為序列，不管工作負載群組或伺服器組態設定為何，都無法在執行階段將該查詢變更回平行。 在設定 `MAX_DOP` 之後，只有在由於記憶體壓力的情況下才能將它降低。 在授與記憶體佇列中等候時，看不到工作負載群組的重新組態。
+
+### <a name="index-creation-on-a-partitioned-table"></a>分割區資料表上的索引建立
 
 非對齊式分割區資料表上之索引建立所耗用的記憶體，與相關的分割區數目成正比。 如果所需的總記憶體超出資源管理員工作負載群組設定所設的每個查詢限制 `REQUEST_MAX_MEMORY_GRANT_PERCENT`，這個索引建立動作就可能無法執行。 由於 *"default"* 工作負載群組允許查詢超過每個查詢限制，而且具有所需的記憶體下限，因此使用者或許能夠在 *"default"* 工作負載群組中執行相同的索引建立動作，但前提是 *"default"* 資源集區有設定足夠的總記憶體來執行這類查詢。
 
 ## <a name="permissions"></a>權限
-
 需要 `CONTROL SERVER` 權限。
 
 ## <a name="example"></a>範例
 
-- 建立名為 newReports 的工作負載群組
-
-它會使用資源管理員預設值，而且位於資源管理員預設集區中。 此範例會指定 `default` 集區，但這不是必要的。
+建立名為 `newReports` 的工作負載群組，它會使用 Resource Governor 預設設定，而且位於 Resource Governor 預設集區中。 此範例會指定 `default` 集區，但這不是必要的。
 
 ```sql
 CREATE WORKLOAD GROUP newReports

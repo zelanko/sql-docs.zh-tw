@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54f2bdb3d844a8e5aab947f19f7905173b2cb04f
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 79818fa5cb41b27a15d531f22a21b86c10cb018a
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419566"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008466"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安裝 SQL Server 2008 R2 的硬體和軟體需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -174,7 +174,7 @@ ms.locfileid: "68419566"
 下表顯示 SQL Server 2019 哪些版本可與 Windows 的哪些版本相容：  
   
 
-| SQL Server 版本：               | Enterprise | Developer | Standard | Web | Express |  
+| SQL Server 版本：               | Enterprise | 開發人員 | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
@@ -189,7 +189,7 @@ ms.locfileid: "68419566"
 
 下表顯示 SQL Server 2016 哪些版本或 2017 可與 Windows 的哪些版本相容：  
   
-| SQL Server 版本：               | Enterprise | Developer | Standard | Web | Express |  
+| SQL Server 版本：               | Enterprise | 開發人員 | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
@@ -274,7 +274,14 @@ ms.locfileid: "68419566"
 -   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝到電腦上以後，您無法將電腦從網域控制站變成網域成員。 在您將主機電腦變更為網域成員之前，必須先解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不受唯讀網域控制站的支援。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式無法在唯讀的網域控制站上建立安全性群組或提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 在此狀況中，安裝程式將會失敗。 
+
+  > [!NOTE]
+  > 此限制也適用於網域成員節點上的安裝。
+
 - 只能存取唯讀網域控制站的環境不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。 
+
+  > [!NOTE]
+  > 此限制也適用於網域成員節點上的安裝。
   
 ## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)   

@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2532e7c2a173441cf804cdc5bdcd9be8e69bb135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988457"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251937"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
 
@@ -32,7 +32,7 @@ ms.locfileid: "67988457"
   
  散發資料庫不能搭配 SQL Server 2012 和 SQL Server 2014 置於可用性群組中。 SQL 2016 和更新版本支援將散發資料庫放置到可用性群組內。 如需詳細資訊，請參閱[在可用性群組中設定散發資料庫](../../../relational-databases/replication/configure-distribution-availability-group.md)。
   
-1.  在散發者端設定散發。 如果預存程序正用於組態，請執行 **sp_adddistributor**。 您可以使用 *@password* 參數來識別遠端發行者連接到散發者時使用的密碼。 設定遠端散發者時，每個遠端發行者也需要此密碼。  
+1.  在散發者端設定散發。 如果預存程序正用於組態，請執行 **sp_adddistributor**。 您可以使用 *\@password* 參數來識別遠端發行者連接到散發者時使用的密碼。 設定遠端散發者時，每個遠端發行者也需要此密碼。  
   
     ```  
     USE master;  

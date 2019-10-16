@@ -1,7 +1,7 @@
 ---
 title: STLineFromText (geometry 資料類型) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9c3dfad17abfe2113807bf8eb9a1570ed0a2f7a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129457"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278136"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,17 +51,38 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
  OGC 類型：**LineString**  
   
 ## <a name="remarks"></a>Remarks  
- 如果輸入的格式不正確，這個方法將會擲回 **FormatException**。  
+如果輸入的格式不正確，此方法將會擲回 **FormatException**。 不支援來自 SQL 規格 1.2.1 版之開放地理空間協會 (OGC) 簡單功能的三維與已測量幾何 WKT 標記法。 查看範例以了解支援的 Z (高度) 與 M (測量) 值表示法。
   
 ## <a name="examples"></a>範例  
- 下列範例會使用 `STLineFromText()` 建立 `geometry` 例項。  
-  
+ 下列範例使用 `STLineFromText()` 來建立 `geometry` 執行個體。
+
+### <a name="example-1-two-dimension-geometry-wkt"></a>範例 1：二維幾何 WKT
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  
 SELECT @g.ToString();  
 ```  
   
+### <a name="example-2-three-dimension-geometry-wkt"></a>範例 2：三維幾何 WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100, 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### <a name="example-3-two-dimension-measured-geometry-wkt"></a>範例 3：二維測量幾何 WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 NULL 100, 200 200 NULL 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### <a name="example-4-three-dimension-measured-geometry-wkt"></a>範例 4：三維測量幾何 WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
 ## <a name="see-also"></a>另請參閱  
  [OGC 靜態幾何方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   

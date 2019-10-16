@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1d510ad8d52aedb46cf591712467c22c0929c42e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051265"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278168"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ XQuery
 此節提供一些使用 **xml** 資料類型的 query() 方法之範例。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. 針對 xml 類型變數使用 query() 方法  
-下列範例可宣告 **xml** 類型的 **@myDoc** 變數並指派 XML 執行個體給它。 **query()** 方法可用以指定針對文件的 XQuery。  
+下列範例可宣告 **xml** 類型的 **\@myDoc** 變數並指派 XML 執行個體給它。 **query()** 方法可用以指定針對文件的 XQuery。  
   
 查詢會擷取 <`ProductDescription`> 元素的 <`Features`> 子元素：  
   

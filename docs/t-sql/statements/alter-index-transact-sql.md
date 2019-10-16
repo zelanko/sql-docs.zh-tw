@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66e4ecf9e2858c37145a7b6bd63bbfa8511349a4
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: e032b93772658c90c67dafe948c6542ce3510494
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009396"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174460"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -226,7 +226,7 @@ ALTER INDEX { index_name | ALL }
   
 -  不使用排序次序。  
 -  在進行重建時，取得資料表或分割區上的獨佔鎖定。  在重建期間，資料處於「離線」狀態而且無法使用，即使使用 NOLOCK、RCSI 或 SI 亦然。  
--  將所有資料重新壓縮到資料行存放區。 當重建進行時，有兩個資料行存放區索引複本存在。 當重建完成時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除原始資料行存放區索引。  
+-  將所有資料重新壓縮到資料行存放區。 當重建進行時，有兩個資料行存放區索引複本存在。 當重建完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會刪除原始資料行存放區索引。  
 
 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。 
   
@@ -341,7 +341,7 @@ FILLFACTOR = *fillfactor*
  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 指定是否將排序結果儲存在 **tempdb** 中。 預設值為 OFF。  
+ 指定是否將排序結果儲存在 **tempdb** 中。 預設值是關閉，但 Azure SQL Database 超大規模資料庫例外。 針對超大規模資料庫中的所有索引重建作業，不論指定的選項為何，除非使用可繼續的索引重建，否則 SORT_IN_TEMPDB 一律會是 ON。  
   
  ON  
  用來建置索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 是在使用者資料庫以外的磁碟組中，這可能會縮短建立索引所需要的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
@@ -388,7 +388,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
 
 若設定為 **ON**，所建立的統計資料會以每個資料分割統計資料為依據。 若設定為 **OFF**，則會卸除統計資料樹狀結構，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重新計算統計資料。 預設值為 **OFF**。  
   
- 如果不支援每個分割區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：  
+ 如果不支援每個分割區區的統計資料，則會忽略該選項，並產生警告。 針對下列統計資料類型，不支援累加統計資料：  
   
 -   建立統計資料時，所使用的索引未與基底資料表進行分割區對齊  
 -   在 Always On 可讀取次要資料庫上建立的統計資料  
@@ -508,7 +508,7 @@ COMPRESSION_DELAY **=** { **0** |*持續時間 [分鐘]* }
 
 **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始)  
   
- 至於磁碟資料表，延遲會指定關閉狀態下的差異資料列群組，必須在差異資料列群組中至少保留多少分鐘的時間，然後 SQL Server 才能將它壓縮到壓縮的資料列群組。 因為磁碟資料表不會追蹤個別資料列的插入和更新時間，因此 SQL Server 會將這段延遲時間套用於關閉狀態下的差異資料列群組。  
+ 至於磁碟資料表，延遲會指定關閉 狀態下的差異資料列群組，必須在差異資料列群組中至少保留多少分鐘的時間，然後 SQL Server 才能將它壓縮到壓縮的資料列群組。 因為磁碟資料表不會追蹤個別資料列的插入和更新時間，因此 SQL Server 會將這段延遲時間套用於關閉狀態下的差異資料列群組。  
 預設值是 0 分鐘。  
   
  預設值是 0 分鐘。  
@@ -633,7 +633,7 @@ ABORT
 
 中止已宣告為可繼續的執行中或已暫停的索引作業。 您必須明確地執行 **ABORT** 命令，以終止可繼續的索引重建作業。 失敗或暫停可繼續的索引作業不會終止其執行；相反地，它會使作業進入無限期暫停狀態。
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一個檔案群組。 您不能利用這個陳述式來修改索引定義，例如新增或刪除資料行，或變更資料行順序。 請搭配 DROP_EXISTING 子句來使用 CREATE INDEX，以執行這些作業。  
   
 未明確指定選項時，會套用目前的設定。 例如，如果 REBUILD 子句並未指定 FILLFACTOR 設定，在重建過程中，會使用系統目錄中所儲存的填滿因數值。 若要檢視目前的索引選項設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。  
@@ -653,7 +653,7 @@ ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一�
 ## <a name="reorganizing-indexes"></a> 重新組織索引
 重新組織索引所用的系統資源最少。 它會實際重新排序分葉層級的頁面，使它們由左至右符合分葉節點的邏輯順序，以重新組織資料表和檢視表之叢集和非叢集索引的分葉層級。 重新組織也會壓縮索引頁面。 壓縮是以現有填滿因數值為基礎。 
   
-當指定 `ALL` 時，會重新組織資料表的叢集和非叢集關聯式索引及 XML 索引。 當指定 ALL 時，適用某些限制，請參閱此文章＜引數＞一節中的 ALL 定義。  
+當指定 `ALL` 時，會重新組織資料表的叢集和非叢集關聯式索引及 XML 索引。 當指定 ALL 時，適用某些限制，請參閱本文＜引數＞一節中的 ALL 定義。  
   
 如需詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
 
@@ -891,7 +891,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
  從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，REORGANIZE 不只能將差異資料列群組壓縮到資料行存放區，還能執行其他作業。 它也會執行線上重組。 首先，它會在資料列群組中 10% 或更多資料列已遭到刪除時，實際移除已刪除的資料列，以縮小資料行存放區大小。  然後，它會合併資料列群組以構成較大的資料列群組，每個資料列群組最多可包含 1,024,576 個資料列。  所有變更的資料列群組都會重新壓縮。  
   
 > [!NOTE]
-> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，在大部分情況下已不再需要重建資料行存放區索引，因為 REORGANIZE 會實際移除已刪除的資料列並合併資料列群組。 COMPRESS_ALL_ROW_GROUPS 選項會將所有開啟或關閉的差異資料列群組強制移動到資料行存放區中，之前只能使用重建執行此作業。 REORGANIZE 在線上且會在背景執行，因此可以在作業執行時繼續進行查詢。  
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，在大部分情況下已不再需要重建資料行存放區索引，因為 REORGANIZE 會實際移除已刪除的資料列並合併資料列群組。 COMPRESS_ALL_ROW_GROUPS 選項會將所有開啟或關閉的差異資料列群組強制移動到資料行存放區中，之前只能使用重建執行這項作業。 REORGANIZE 在線上且會在背景執行，因此可以在作業執行時繼續進行查詢。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -952,7 +952,7 @@ REBUILD PARTITION = 12;
 ### <a name="g-change-a-clustered-columstore-index-to-use-archival-compression"></a>G. 變更叢集資料行存放區索引以使用封存壓縮  
  不適用於：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
- 您可以使用 COLUMNSTORE_ARCHIVE 資料壓縮選項，進一步縮小叢集資料行存放區索引的大小。 此功能非常適合用於想要保存在較便宜儲存裝置上的較舊資料。 我們建議只針對不常存取的資料使用此功能，因為解壓縮速度會比使用一般的 COLUMNSTORE 壓縮慢。  
+ 您可以使用 COLUMNSTORE_ARCHIVE 資料壓縮選項，進一步縮小叢集資料行存放區索引的大小。 這項功能非常適合用於想要保存在較便宜儲存裝置上的較舊資料。 我們建議只針對不常存取的資料使用此功能，因為解壓縮速度會比使用一般的 COLUMNSTORE 壓縮慢。  
   
  下列範例會重建叢集資料行存放區索引來使用封存壓縮，然後示範如何移除封存壓縮。 最後的結果只會使用資料行存放區壓縮。  
   
@@ -1125,7 +1125,7 @@ GO
 
 2. 在索引作業暫停之後再次執行相同命令 (請參閱上述說明)，會自動繼續索引重建作業。
 
-3. 以 MAX_DURATION 設為 240 分鐘的可繼續作業方式，執行線上索引重建。
+3. 以 MAX_DURATION 設為 240 分鐘 的可繼續作業方式，執行線上索引重建。
 
    ```sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240) ; 

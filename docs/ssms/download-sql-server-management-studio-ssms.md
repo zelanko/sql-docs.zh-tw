@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 3f5b4cbe56d395b88dc756d823b526b05b2fde74
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816808"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251399"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ SSMS 是免費的！
 
 **SSMS 18.3.1 現已可供使用，且是 *SQL Server Management Studio* 的公開推出 (GA) 版本，它提供對 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援！**
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+**[下載 SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
 
 SSMS 18.3.1 是 SSMS 最新的公開推出 (GA) 版本。 若您已安裝 SSMS 18 的先前 GA 版本，安裝 SSMS 18.3.1 會將它升級到 18.3.1 若您已安裝舊的 SSMS 18.x 預覽  版本，安裝 SSMS 18.3.1 之前必須先將它解除安裝。
 
@@ -75,8 +75,8 @@ SQL Server Management Studio 18.3.1：
 | 新項目 | 詳細資料 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 資料分類 | 將資料分類資訊新增到資料行屬性 UI ([資訊類型]  、[資訊類型識別碼]  、[敏感度標籤]  和 [敏感度標籤識別碼]  不會在 SSMS UI 中公開)。 |
-| IntelliSense/編輯器 | 更新最近新增至 SQL Sever 2019 功能的支援 (例如"ALTER SERVER CONFIGURATION")。 |
-| Integration Services | 新增新的選取功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，該項目會在 ADF 管線中，將 Azure-SSIS Integration Runtime 上的 SSIS 封裝執行作為執行 SSIS 封裝活動叫用。 |
+| IntelliSense/編輯器 | 更新最近新增至 SQL Server 2019 功能 (例如，"ALTER SERVER CONFIGURATION") 的支援。 |
+| Integration Services | 新增新選取功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，該項目會在 ADF 管線中，將 Azure-SSIS Integration Runtime 上的 SSIS 套件執行叫用為執行 SSIS 套件活動。 |
 | SMO/指令碼 | 新增 Azure SQL DW 唯一條件約束支援指令碼的支援。 |
 | SMO/指令碼 | 資料分類 - 新增 SQL 版本 10 (SQL 2008) 及更高版本的支援。  - 新增 SQL 版本 15 (SQL 2019) 及更高版本，以及 Azure SQL DB 的新敏感性屬性 'rank'。 |
 

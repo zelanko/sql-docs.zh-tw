@@ -13,12 +13,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fa2f5a4694b8f8f9f59a5663d996777d0c78df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986653"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251291"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>使用含有記憶體內部 OLTP 的查詢存放區
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67986653"
   
 -   啟用查詢存放區時，預設會收集查詢、計劃和編譯時間統計資料。 不過，除非您明確使用 [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 明確啟用執行階段統計資料收集，則不會啟用此功能。  
   
--   當您將 *@new_collection_value* 設為 0 時，查詢存放區將針對受影響的程序或整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，停止收集執行階段統計資料。  
+-   當您將 *\@new_collection_value* 設定為 0 時，查詢存放區將針對受影響的程序或整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，停止收集執行階段統計資料。  
   
 -   使用 [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 設定的值不會保留。 請務必在重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後，再次檢查並設定統計資料收集。  
   

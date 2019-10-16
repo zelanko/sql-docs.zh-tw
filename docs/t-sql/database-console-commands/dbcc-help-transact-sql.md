@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: a2b4899d3485af4a499c5018a8889a6ec37bbbbb
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: eaad7e6f3e66bb39ec43f402c531b7f89bdcf980
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211391"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251390"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## <a name="arguments"></a>引數  
- *dbcc_statement* |  *@dbcc_statement_var*  
+ *dbcc_statement* |  *\@dbcc_statement_var*  
  這是接收語法資訊之 DBCC 命令的名稱。 它只提供 DBCC 後面的 DBCC 命令部分，例如，只提供 CHECKDB 而不是 DBCC CHECKDB。  
   
  ?  

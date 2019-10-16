@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b9443f1c33a89dd5eb51c143f23e65c2a12e3d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119137"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278189"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +150,7 @@ SET DATEFIRST 7 -- ( Sunday )
 ## <a name="year-month-and-day-datepart-arguments"></a>year、month 和 day datepart 引數  
 針對 DATEPART (**year**、*date*)、DATEPART (**month**、*date*) 和 DATEPART (**day**、*date*) 所傳回的值分別與 [YEAR](../../t-sql/functions/year-transact-sql.md)、[MONTH](../../t-sql/functions/month-transact-sql.md) 和 [DAY](../../t-sql/functions/day-transact-sql.md) 函式傳回的值相同。
   
-## <a name="isoweek-datepart"></a>ISO_WEEK datepart  
+## <a name="iso_week-datepart"></a>ISO_WEEK datepart  
 ISO 8601 包含 ISO 週-日期系統 (週數的編號系統)。 每一週都與星期四所在的年份相關聯。 例如，2004 年第 1 週 (2004W01) 從 2003 年 12 月 29 日星期一到 2004 年 1 月 4 日星期日結束。 歐洲國家/地區通常會使用這種編號樣式。 非歐洲國家/地區通常不會使用。
 
 注意：一年的最高週數可能是 52 或 53。
@@ -194,7 +194,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-如果 *date* 指定為變數或資料表資料行，而該變數或資料行的資料類型沒有指定的 *datepart*，`DATEPART` 會傳回錯誤 9810。 在此範例中，變數 *@t* 具有 **time** 資料類型。 此範例會失敗，因為 DATEPART year 對 **time** 資料類型無效：
+如果 *date* 指定為變數或資料表資料行，而該變數或資料行的資料類型沒有指定的 *datepart*，`DATEPART` 會傳回錯誤 9810。 在此範例中，變數 *\@t* 具有 **time** 資料類型。 此範例會失敗，因為 DATEPART year 對 **time** 資料類型無效：
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

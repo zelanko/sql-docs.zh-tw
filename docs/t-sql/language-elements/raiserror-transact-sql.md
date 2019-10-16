@@ -29,12 +29,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 704bcba5e6b21ade748c7a549f5b88c131fa578c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121876"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252044"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,8 +122,8 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  若要轉換 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 資料型別的值，請指定 **%I64d**。  
   
- *@local_variable*  
- 這是任何有效字元資料類型的變數，其中包含採用與 *msg_str* 相同方法格式化的字串。 *@local_variable* 必須是 **char** 或 **varchar**，或能隱含地轉換成這些資料型別。  
+ *\@local_variable*  
+ 這是任何有效字元資料類型的變數，其中包含採用與 *msg_str* 相同方法格式化的字串。 *\@local_variable* 必須是 **char** 或 **varchar**，或者必須能夠隱含轉換為這兩種資料類型。  
   
  *severity*  
  這是與這則訊息相關聯的使用者自訂嚴重性層級。 當利用 *msg_id* 來引發使用 sp_addmessage 建立的使用者自訂訊息時，RAISERROR 上指定的嚴重性會覆寫 sp_addmessage 中指定的嚴重性。  

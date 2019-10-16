@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d01bb0a6d61220daa49b60dce1cb173f344d9f84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076742"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278282"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68076742"
   
  DAC 驅動部署優於指令碼驅動方法，因為此工具協助 DBA 識別及驗證不同來源和目標資料庫的行為。 在升級期間，如果升級可能會導致資料遺失，工具會警告 DBA，而且還提供升級計畫。 DBA 可以評估該計畫，然後利用該工具進行升級。  
   
- DAC 還支援版本設定，協助開發人員和 DBA 維護和管理資料庫生命週期中的資料庫歷程。  
+ DAC 也支援版本設定，以協助開發人員和 DBA 維護和管理資料庫生命週期中的資料庫歷程。  
   
 ## <a name="dac-concepts"></a>DAC 概念  
  DAC 會簡化支援應用程式之資料層元素的開發、部署與管理：  
@@ -53,7 +53,7 @@ ms.locfileid: "68076742"
   
 -   DACPAC 是副檔名為 .dacpac 的 Windows 檔案。 檔案支援開放式格式，包含代表 DACPAC 來源詳細資料、資料庫的物件和其他特性的多個 XML 區段。 進階使用者可以使用產品隨附的 DacUnpack.exe 公用程式來解除封裝檔案，更仔細檢查每個區段。  
   
--   使用者必須是 dbmanager 角色的成員或被指派 CREATE DATABASE 權限，才能建立資料庫，包括部署 DAC 封裝來建立資料庫。 使用者必須是 dbmanager 角色的成員或被指派 DROP DATABASE 權限，才能卸除資料庫。  
+-   使用者必須是 **dbmanager** 角色的成員或被指派 **CREATE DATABASE** 權限，才能建立資料庫，包括部署 DAC 封裝來建立資料庫。 使用者必須是 **dbmanager** 角色的成員或被指派 **DROP DATABASE** 權限，才能卸除資料庫。  
   
 ## <a name="dac-tools"></a>DAC 工具  
  DACPAC 可以橫跨 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 隨附的多個工具緊密地使用。 這些工具將 DACPAC 做為互通性單位，解決不同使用者角色的需求。  
@@ -64,7 +64,7 @@ ms.locfileid: "68076742"
   
     -   可以將 DACPAC 匯入資料庫專案中並繼續進行資料庫設計。  
   
-        SQL Server Data Tools 還支援 Local DB，以進行未連接的用戶端資料庫應用程式開發。 開發人員可以取得此本機資料庫的快照集，以建立包含在 .dacpac 檔案中的 DACPAC。  
+        SQL Server Data Tools 還支援 Local DB，以進行未連接的用戶端資料庫應用程式開發。 開發人員可以建立此本機資料庫的快照集，以建立包含在 .dacpac 檔案中的 DACPAC。  
   
     -   開發人員可以獨立地將資料庫專案直接發行至資料庫，甚至不需產生 DACPAC。 發行作業遵循類似於其他工具部署作業的行為。  
   
@@ -96,8 +96,7 @@ ms.locfileid: "68076742"
 -   **UPGRADE** - 可以使用 DACPAC 來升級資料庫。 即使以前未註冊為資料層應用程式的資料庫也支援升級，但因為升級，資料庫會隱含註冊。  
   
 ## <a name="bacpac"></a>BACPAC  
- BACPAC 是副檔名為 .bacpac 的 Windows 檔案，可封裝資料庫的結構描述和資料。 BACPAC 的主要使用案例是將資料庫從某個伺服器移至另一個伺服器 (或[將資料庫從本機伺服器移轉至雲端](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/))，以及以開放式格式封存現有資料庫。  
-  
+ BACPAC 是副檔名為 .bacpac 的 Windows 檔案，它封裝資料庫的結構描述和資料。 BACPAC 的主要使用案例是將資料庫從某個伺服器移至另一個伺服器 (或[將資料庫從本機伺服器移轉至雲端](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/))，以及以開放式格式封存現有資料庫。  
  類似於 DACPAC，BACPAC 檔案格式是開放式；BACPAC 的結構描述內容與 DACPAC 的結構描述內容相同。 BACPAC 中的資料是以 JSON 格式儲存。  
   
  DACPAC 和 BACPAC 相似，但它們以不同的案例為目標。 DACPAC 專注於擷取及部署架結構描述，包括升級現有資料庫。 DACPAC 的主要使用案例是將嚴格定義的結構描述部署至開發、測試，最後至實際執行環境。 也以及反向：擷取實際執行的結構描述並將它反向套用至測試和開發環境。  

@@ -1,7 +1,7 @@
 ---
 title: CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2019
+ms.date: 10/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6c29cfba3f47506cb88860763d6650cfb3ecab7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e659ae78b81cb6888e749bd40546efe16b4c542d
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026396"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261334"
 ---
-# <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
+# <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-此函式傳回伺服器或執行個體所觀察到之時區的名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`CURRENT_TIMEZONE` 會從執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統衍生這個傳回值。 SQL Database 受控執行個體傳回的值是根據執行個體本身在執行個體建立期間受指派的時區，而不是基礎作業系統的時區。
+此函式傳回伺服器或執行個體所觀察到之時區的名稱。 針對 SQL Database 受控執行個體，傳回的值是以執行個體本身在執行個體建立期間受指派的時區為基礎，而不是以底層作業系統的時區為基礎。
   
 > [!NOTE]  
 > 對於單一和集區 SQL Database，時區一律是設定為 UTC 且 `CURRENT_TIMEZONE` 會傳回 UTC 時區的名稱。

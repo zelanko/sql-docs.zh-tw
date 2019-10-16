@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6cb2cf4bae18604d77c8644f18efd32702b8197
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211301"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252182"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "70211301"
  WAITFOR  
  指定如果目前沒有訊息，GET CONVERSATION GROUP 陳述式便會等待訊息到達佇列。  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  這是一個變數，用來儲存 GET CONVERSATION GROUP 陳述式所傳回的交談群組識別碼。 變數必須是 **uniqueidentifier** 類型。 如果沒有可用的交談群組，變數就設為 NULL。  
   
  FROM  
@@ -72,7 +72,7 @@ ms.locfileid: "70211301"
  這是取得交談群組所在的佇列名稱。  
   
  TIMEOUT *timeout*  
- 指定 Service Broker 等待訊息到達佇列的時間長度 (以毫秒為單位)。 這個子句只適用於 WAITFOR 子句。 如果使用 WAITFOR 的陳述式不包含這個子句，或者 *timeout* 為 -1，則等候時間沒有限制。 如果過逾時設定到期，GET CONVERSATION GROUP 會將 *@conversation_group_id* 變數設為 NULL。  
+ 指定 Service Broker 等待訊息到達佇列的時間長度 (以毫秒為單位)。 這個子句只適用於 WAITFOR 子句。 如果使用 WAITFOR 的陳述式不包含這個子句，或者 *timeout* 為 -1，則等候時間沒有限制。 如果已經逾時，GET CONVERSATION GROUP 會將 *\@conversation_group_id* 變數設定為 NULL。  
   
 ## <a name="remarks"></a>Remarks  
   

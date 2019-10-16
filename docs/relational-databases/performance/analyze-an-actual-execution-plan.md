@@ -1,7 +1,7 @@
 ---
 title: 分析實際執行計劃 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,18 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68219571"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289328"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>分析實際執行計劃
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 計劃分析功能，分析實際圖形化執行計劃。 
+
+此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 計劃分析功能來分析實際圖形化執行計劃。 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4 開始提供此功能。 我們一般建議您[安裝最新版的 SSMS](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 > [!NOTE]
 > 實際執行計畫是在執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或 Batch 後產生。 基於這個緣故，實際執行計劃包含執行階段資訊；例如，實際資料列數目、資源使用量計量和執行階段警告 (如果有的話)。 如需詳細資訊，請參閱[顯示實際執行計劃](../../relational-databases/performance/display-an-actual-execution-plan.md)。

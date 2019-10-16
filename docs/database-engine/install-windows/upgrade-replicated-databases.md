@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934760"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008461"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>升級或修補複寫的資料庫
 
@@ -104,7 +104,7 @@ SQL Server 的升級路徑視部署模式而有所不同。 SQL Server 在一般
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>將散發者並存移轉至 Windows Server 2012 R2 的步驟
-如果您規劃將 SQL Server 執行個體升級至 SQL 2016 (或更新版本)，且您目前的 OS 是 Windows 2008 (或 2008 R2)，則必須將 OS 並存升級至 Windows Server 2012 R2 或更新版本。 使用此中繼 OS 升級的原因是 SQL Server 2016 不能安裝在 Windows Server 2008/2008 R2 上，且 Windows Server 2008/20008 R2 不允許就地升級容錯移轉叢集。 您可以在獨立 SQL Server 執行個體，或 Always On 容錯移轉叢集執行個體 (FCI) 內的 SQL Server 執行個體上執行下列步驟。
+如果您規劃將 SQL Server 執行個體升級至 SQL Server 2016 (或更新版本)，且您目前的 OS 是 Windows 2008 (或 2008 R2)，則必須將 OS 並存升級至 Windows Server R2 或更新版本。 使用此中繼 OS 升級的原因是 SQL Server 2016 不能安裝在 Windows Server 2008/2008 R2 上，且 Windows Server 2008/20008 R2 不允許就地升級至 Windows Server 2016。 雖然您可以執行從 Windows Server 2008/2008 R2 到 Windows Server 2012 的就地升級，然後就地升級到 Windows Server 2016，但通常不建議這樣做，因為停機時間與多出來的複雜度會使得您無法獲得簡單的復原路徑。 針對參與容錯移轉叢集的 SQL Server，並存升級是唯一可用的升級路徑。  您可以在獨立 SQL Server 執行個體，或 Always On 容錯移轉叢集執行個體 (FCI) 內的 SQL Server 執行個體上執行下列步驟。
 
 1. 在 Windows Server 2012 R2/2016 上使用不同的 Windows 叢集和 SQL Server FCI 名稱或獨立主機名稱，設定新的 SQL Server 執行個體 (獨立或 Always On 容錯移轉叢集)、版次和版本作為散發者。 您必須使目錄結構與舊散發者保持相同，以確保可以在新環境的相同路徑中找到複寫代理程式可執行檔、複寫資料夾及資料庫檔案路徑。 這會減少任何必要的移轉後/升級後步驟。
 1. 請確定您的複寫已同步，然後關閉所有的複寫代理程式。 

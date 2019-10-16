@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959016"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278241"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教學課程：使用 Transact-SQL 編輯器建立資料庫物件 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -54,7 +54,7 @@ ms.locfileid: "67959016"
 
    ![快速搜尋小工具](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 編輯第一個資料列中的 [電子郵件]  資料行，鍵入 *orlando0@adventure-works.com* ，然後按 **Enter** 儲存變更。
+1. 編輯第一個資料列中的 [電子郵件]  資料行，輸入 *orlando0\@adventure-works.com*，然後按 **Enter** 儲存變更。
 
    ![編輯資料](./media/tutorial-sql-editor/edit-data.png)
 
@@ -182,7 +182,7 @@ ms.locfileid: "67959016"
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用將查詢結果另存為 JSON，測試 setCustomer 預存程序
 
-在上一節中建立的 *setCustomer* 預存程序需要將 JSON 資料傳遞至 *@json_val* 參數。 本節說明如何取得一些格式正確的 JSON 並傳遞至參數，讓我們可以測試預存程序。
+在上一節中建立的 *setCustomer* 預存程序需要將 JSON 資料傳遞至 tion requires JSON data be passed into the *\@json_val* 參數。 本節說明如何取得一些格式正確的 JSON 並傳遞至參數，讓我們可以測試預存程序。
 
 1. 在 [伺服器]  提要欄位中，以滑鼠右鍵按一下 [dbo.Customers]  資料表，然後按一下 [SELECT TOP 1000 Rows] \(選取前 1000 個資料列\)  。
 

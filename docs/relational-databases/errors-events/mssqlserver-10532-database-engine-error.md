@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fa07d4adada303c9e1b2470879574f554992bf36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060763"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005993"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,13 +30,13 @@ ms.locfileid: "68060763"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|PG_NO_ELIGIBLE_STMT|  
-|訊息文字|無法建立計畫指南 '%.\*ls'，因為 **@plan_handle** 指定的批次或模組中未包含適用於計畫指南的陳述式。 請為 **@plan_handle** 指定其他值。|  
+|訊息文字|無法建立計畫指南 '%.\*ls'，因為 **\@plan_handle** 指定的批次或模組中未包含適用於計畫指南的陳述式。 請為 **\@plan_handle** 指定其他值。|  
   
 ## <a name="explanation"></a>說明  
-**@plan_handle** 指定的批次或模組中未包含適用於計畫指南的陳述式。  
+**\@plan_handle** 指定的批次或模組中未包含適用於計畫指南的陳述式。  
   
 ## <a name="user-action"></a>使用者動作  
-請為 **@plan_handle** 指定其他值。  
+請為 **\@plan_handle** 指定其他值。  
   
 ## <a name="see-also"></a>另請參閱  
 [計畫指南](~/relational-databases/performance/plan-guides.md)  

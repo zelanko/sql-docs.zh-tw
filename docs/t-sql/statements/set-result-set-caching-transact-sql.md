@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0f92c1a492ff23c8d783927c6e462c2147b72b9c
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 095680b9ff4fcfd58c1d655acaba7e07f70fcffb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809764"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251995"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -38,6 +38,8 @@ SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
 ## <a name="remarks"></a>Remarks  
+
+在連線到您要設定其 result_set_caching 設定的使用者資料庫時執行此命令。
 
 **開啟**   
 啟用目前用戶端工作階段的結果集快取。  若在資料庫層級關閉結果集快取，便無法為工作階段開啟此功能。

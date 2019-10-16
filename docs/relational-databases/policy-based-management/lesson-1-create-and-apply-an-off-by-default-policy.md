@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087116"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251288"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>第 1 課：建立和套用 Off By Default 原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68087116"
   
 2.  在 [建立新條件]  對話方塊的 [名稱]  方塊中，輸入 **Mail Off**。   
     1. 在 [Facet]  方塊中，確認已選取 [介面區組態]  Facet。
-    1. 在 [運算式]  區域的 [欄位]  方塊中，選取 [@DatabaseMailEnabled]  、在 [運算子]  方塊中選取 [=]  ，然後在 [值]  中選取 [False]  。  
+    1. 在 [運算式]  區域的 [欄位]  方塊中，選取 **\@DatabaseMailEnabled**、在 [運算子]  方塊中選取 [=]  ，然後在 [值]  中選取 [False]  。  
     1. 在 [描述]  頁面上，輸入條件的描述，然後按一下 [確定]  建立條件。  
 
     ![Mail off 條件](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 

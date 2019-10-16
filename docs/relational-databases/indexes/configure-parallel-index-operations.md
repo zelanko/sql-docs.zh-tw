@@ -17,20 +17,22 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e5a258436c521eec380114a42e68c3f20b75fd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d06c62167071f8044d6c732efbbb5c4590e3a37
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025006"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289319"
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  本主題定義平行處理原則的最大程度，並說明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]修改此設定。 在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或更新版本的多處理器電腦上，索引陳述式可能會如同其他查詢般，使用多個處理器來執行與索引陳述式相關聯的掃描、排序和索引作業。 執行單一索引陳述式所用的處理器數目，取決於 [平行處理原則的最大程度](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 組態選項、目前的工作負載以及索引統計資料。 max degree of parallelism 選項會決定用於執行平行計畫的最大處理器數目。 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 偵測到系統忙碌中，在陳述式執行開始之前，會先自動降低索引作業之平行處理原則的程度。 如果非資料分割索引的前端索引鍵資料行具有有限的相異值數目，或者每個相異值的頻率具有大幅差異， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也可能會降低平行處理原則的程度。  
+本主題定義平行處理原則的最大程度，並說明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]修改此設定。 
+
+在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或更新版本的多處理器系統上，索引陳述式可能會如同其他查詢般，使用多個處理器 (CPU) 來執行與索引陳述式相關聯的掃描、排序和索引作業。 執行單一索引陳述式所用的 CPU 數目是由[平行處理原則的最大程度](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)伺服器組態選項、目前的工作負載以及索引統計資料所決定的。 max degree of parallelism 選項會決定用於執行平行計畫的最大處理器數目。 如果 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 偵測到系統忙碌中，在陳述式執行開始之前，會先自動降低索引作業之平行處理原則的程度。 如果非資料分割索引的前端索引鍵資料行具有有限的相異值數目，或者每個相異值的頻率具有大幅差異， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 也可能會降低平行處理原則的程度。 如需詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用平行索引作業。 如需詳細資訊，請參閱＜SQL Server 2016 版本支援的功能＞。  
+> 並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用平行索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
  **本主題內容**  
   
@@ -62,24 +64,22 @@ ms.locfileid: "68025006"
   
 -   平行索引執行與 MAXDOP 索引選項適用於下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-    -   CREATE INDEX  
+    -   [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
   
-    -   ALTER INDEX REBUILD  
+    -   [ALTER INDEX (...)REBUILD](../../t-sql/statements/alter-index-transact-sql.md)  
   
-    -   DROP INDEX (僅適用於叢集索引。)  
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (僅適用於叢集索引。)  
   
-    -   ALTER TABLE ADD (索引) CONSTRAINT  
+    -   [ALTER TABLE ADD (索引) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md) 
   
-    -   ALTER TABLE DROP (叢集索引) CONSTRAINT  
+    -   [ALTER TABLE DROP (叢集索引) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
   
--   在 ALTER INDEX REORGANIZE 陳述式中無法指定 MAXDOP 索引選項。  
+-   在 `ALTER INDEX (...) REORGANIZE` 陳述式中無法指定 MAXDOP 索引選項。  
   
--   如果查詢最佳化工具將平行處理原則的程度套用至建立作業，則需要排序的資料分割索引作業可能需要更多的記憶體。 平行處理原則的程度愈高，所需的記憶體就愈大。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+-   如果查詢最佳化工具將平行處理原則的程度套用至建立作業，則需要排序的資料分割索引作業可能需要更多的記憶體。 平行處理原則的程度愈高，所需的記憶體就愈大。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> 權限  
- 需要資料表或檢視表的 ALTER 權限。  
+###  <a name="Security"></a> <a name="Permissions"></a> 權限  
+ 必須具備資料表或檢視的 `ALTER` 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68025006"
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     /*Alters the IX_ProductVendor_VendorID index on the Purchasing.ProductVendor table so that, if the server has eight or more processors, the Database Engine will limit the execution of the index operation to eight or fewer processors.  
@@ -133,7 +133,7 @@ ms.locfileid: "68025006"
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE INDEX IX_ProductVendor_NewVendorID   
@@ -141,7 +141,12 @@ ms.locfileid: "68025006"
     WITH (MAXDOP=8);  
     GO  
     ```  
-  
- 如需詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
-  
-  
+ 
+## <a name="see-also"></a>另請參閱
+[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)    
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
+[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     
+[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)      
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)      
+[ALTER TABLE table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)       
+[ALTER TABLE index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md)    

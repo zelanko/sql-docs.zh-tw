@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: c70ba17073030f4fbbe4851fffb84a4c4a30fbbc
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988135"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278257"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上設定 SQL Server 容器映像
 
@@ -25,6 +25,9 @@ ms.locfileid: "70988135"
 
 > [!NOTE]
 > 此文章特別著重於 mssql-server-linux 映像的使用。 Windows 映像並未涵蓋其中，但您可以在 [mssql-server-windows Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) \(英文\) 上深入了解。
+
+> [!IMPORTANT]
+> 為產品使用案例選擇執行 SQL Server 容器之前，請檢閱我們的 [SQL Server 容器支援原則](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) \(部分機器翻譯\) 以確定您是以支援的設定執行。
 
 ## <a name="pull-and-run-the-container-image"></a>提取及執行容器映像
 
