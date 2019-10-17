@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b69c6193720dd9975c364f5f4d729bba1e35d821
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952524"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式
@@ -31,7 +31,7 @@ ms.locfileid: "71952524"
   
 
   
-##  <a name="bkmk_prereq"></a> 必要條件  
+##  <a name="bkmk_prereq"></a> Prerequisites  
   
 -   > [!IMPORTANT]  
     >  設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式時，不再需要或支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 您可以使用 SharePoint 管理中心，在 SharePoint 模式下設定報表伺服器。 如需詳細資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "71952524"
   
 -   確認**SharePoint 2010 Administration**服務已在 Windows 伺服器管理員中啟動。  
   
- 1台![伺服器上的 ssrs 元件]安裝(../../../2014/sql-server/install/media/rs-deployment-1-server.gif "1 台伺服器上的 ssrs 元件")  
+ ![1個伺服器安裝上的 SSRS 元件](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "1個伺服器安裝上的 SSRS 元件")  
   
 ### <a name="database-considerations-for-a-single-server-configuration"></a>單一伺服器組態的資料庫考量  
   
@@ -76,29 +76,29 @@ ms.locfileid: "71952524"
   
 6.  在 [**產品金鑰**] 頁面上，輸入您的金鑰或接受「企業評估版」的預設值。  
   
-     按一下 [下一步]。  
+     按一下 **[下一步]** 。  
   
 7.  檢閱並接受授權條款。 Microsoft 感謝您同意傳送功能使用資料，協助改進產品功能及支援。  
   
-     按一下 [下一步]。  
+     按一下 **[下一步]** 。  
   
 8.  在 [**安裝程式角色**] 頁面上，選取 [ **SQL Server 功能安裝**]。  
   
      按 **[下一步]**  
   
-     ![適用於安裝程式角色的 SQL Server 功能安裝](../../../2014/sql-server/install/media/rs-setuprole.gif "適用於安裝程式角色的 SQL Server 功能安裝")  
+     ![安裝程式角色的 SQL Server 功能安裝](../../../2014/sql-server/install/media/rs-setuprole.gif "安裝程式角色的 SQL Server 功能安裝")  
   
 9. 在 **[特徵選取]** 頁面上，選取下列選項：  
   
     -   **Reporting Services - SharePoint**  
   
-    -   **適用于 SharePoint 2010 產品的 Reporting Services 增益集**。 ![請](../../../2014/reporting-services/media/rs-fyinote.png "注意，")安裝增益集的安裝精靈選項是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的新功能。  
+    -   **適用于 SharePoint 2010 產品的 Reporting Services 增益集**。 ![注意](../../../2014/reporting-services/media/rs-fyinote.png "note")安裝增益集的安裝精靈選項是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的新功能。  
   
     -   如果您尚未有 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體，您也可以針對完整的環境選取 **[Database Engine Services]** 和 **[管理工具 - 完整]** 。  
   
-     按一下 [下一步]。  
+     按一下 **[下一步]** 。  
   
-     適用于 sharepoint 模式的![Ssrs 功能選取]sharepoint 模式(../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "的 ssrs 功能選取")  
+     ![適用于 SharePoint 模式的 SSRS 功能選取](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "適用于 SharePoint 模式的 SSRS 功能選取")  
   
 10. 按一下 [**安裝規則**] 頁面上的 **[下一步]** 。 檢閱任何警告或封鎖問題。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "71952524"
   
 13. 在 [**伺服器**設定] 頁面上，輸入適當的認證。 如果您想要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示或訂閱功能，則必須將 SQL Server Agent 的 **[啟動類型]** 變更為 **[自動]** 。  
   
-     按一下 [下一步]。  
+     按一下 **[下一步]** 。  
   
 14. 如果您選取了 Database Engine 服務，就會看到 **[資料庫引擎組態]** 頁面。請將適當的帳戶加入至 SQL 管理員清單，然後按 **[下一步]** 。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71952524"
   
 16. 按一下 **[錯誤報告]** 頁面上的核取方塊傳送錯誤報告，協助 Microsoft 改進 SQL Server 功能與服務。  
   
-     按一下 [下一步]。  
+     按一下 **[下一步]** 。  
   
 17. 檢閱任何警告，然後在 **[安裝組態規則]** 頁面上按 **[下一步]** 。  
   
@@ -197,11 +197,11 @@ ms.locfileid: "71952524"
   
 9. 在 **[Web 應用程式關聯]** 區段中，選取要佈建以供目前 Reporting Services 服務應用程式存取的 Web 應用程式。 您可以建立一個 Reporting Services 服務應用程式與一個 Web 應用程式的關聯。 如果目前所有的 Web 應用程式已有相關聯的 Reporting Services 服務應用程式，則會顯示警告訊息。  
   
-10. 按一下 [確定]。  
+10. 按一下 **[確定]** 。  
   
-11. 服務應用程式的建立程序會需要數分鐘才能完成。 完成後，您會看到確認訊息及 **[提供訂閱和警示]** 頁面的連結。 如果您想使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱和警示功能，請完成佈建步驟。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂用帳戶及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
+11. 服務應用程式的建立程序會需要數分鐘才能完成。 完成後，您會看到確認訊息及 **[提供訂閱和警示]** 頁面的連結。 如果您想使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱和警示功能，請完成佈建步驟。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂閱及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
- ![Powershell 相關內容](../../../2014/reporting-services/media/rs-powershellicon.jpg "powershell 相關內容")如需有關使用 powershell 建立 @no__t 2 服務應用程式的詳細資訊，請參閱[使用 Powershell 建立 Reporting Services 服務應用程式](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)。  
+ ![PowerShell 相關內容](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 相關內容")如需使用 PowerShell 建立 @no__t 1 服務應用程式的詳細資訊，請參閱[使用 powershell 建立 Reporting Services 服務應用程式](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)。  
   
 
   
@@ -247,7 +247,7 @@ ms.locfileid: "71952524"
 ### <a name="activate-the-file-sync-feature"></a>啟用檔案同步處理功能  
  如果使用者經常直接上傳已發行的報表項目至 SharePoint 文件庫，報表伺服器檔案同步處理功能會很有協助。 檔案同步處理功能會更頻繁地同步處理報表伺服器目錄與文件庫中的項目。 如需詳細資訊，請參閱 [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)  版本支援的功能  
  [Reporting Services SharePoint 服務和服務應用程式](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d1d8d503fc5020fb9d44bb8daa4be79abd00dc0d
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952646"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Deployment Topologies for SQL Server BI Features in SharePoint
@@ -60,7 +60,7 @@ ms.locfileid: "71952646"
 ###  <a name="bkmk_bi_Sharepoint2013_3tier"></a>PowerPivot for SharePoint 2013 和 Reporting Services 三部伺服器部署  
  在下面的三重伺服器部署中，SQL Server Database Engine、以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，以及 SharePoint，會個別在不同的伺服器上執行。 [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 2013 安裝程式套件 (**spPowerPivot.msi**) 必須在 SharePoint 伺服器上執行。  
   
- ![Ssas 和 Ssrs sharepoint 模式3伺服器部署](../../../2014/sql-server/install/media/as-and-rs-3server-deployment.gif "Ssas 和 ssrs Sharepoint 模式3伺服器部署")  
+ ![SSAS 和 SSRS SharePoint 模式3伺服器部署](../../../2014/sql-server/install/media/as-and-rs-3server-deployment.gif "SSAS 和 SSRS SharePoint 模式3伺服器部署")  
   
 |||  
 |-|-|  
@@ -72,7 +72,7 @@ ms.locfileid: "71952646"
 |**(6)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
 |**(7)**|SharePoint 內容、組態和服務應用程式資料庫。|  
   
- ![Sharepoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 設定")[透過 Microsoft SQL Server Connect 提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback)（ https://connect.microsoft.com/SQLServer/Feedback) 。  
+ ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback)（ https://connect.microsoft.com/SQLServer/Feedback) 。  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a>PowerPivot for SharePoint 2013 單一伺服器部署  
  單一伺服器部署對於測試很有用，但是不建議用於實際部署。  
@@ -108,7 +108,7 @@ ms.locfileid: "71952646"
 ###  <a name="bkmk_powerpivot_sharepoint2013_3server"></a>PowerPivot for SharePoint 2013 3 伺服器部署  
  在下面的三重伺服器部署中，SQL Server Database Engine、以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，以及 SharePoint，會個別在不同的伺服器上執行。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 安裝程式套件 (spPowerPivot.msi) 必須安裝在 SharePoint 伺服器上。  
   
- ![做為 Powerpivot Mode3 伺服器部署]做(../../../2014/sql-server/install/media/as-powerpivot-mode-3server-deployment.gif "為 Powerpivot Mode3 伺服器部署")  
+ ![做為 PowerPivot Mode3 伺服器部署](../../../2014/sql-server/install/media/as-powerpivot-mode-3server-deployment.gif "做為 PowerPivot Mode3 伺服器部署")  
   
 |||  
 |-|-|  
@@ -121,7 +121,7 @@ ms.locfileid: "71952646"
 ###  <a name="bkmk_powerpivot_ssrs_sharepoint2013_1server"></a>PowerPivot for SharePoint 2013 和 Reporting Services 單一伺服器部署  
  單一伺服器部署對於測試很有用，但是不建議用於實際部署。  
   
- ![Ssas 和 Ssrs sharepoint 模式1伺服器部署](../../../2014/sql-server/install/media/as-and-rs-1server-deployment.gif "Ssas 和 ssrs Sharepoint 模式1伺服器部署")  
+ ![SSAS 和 SSRS SharePoint 模式1伺服器部署](../../../2014/sql-server/install/media/as-and-rs-1server-deployment.gif "SSAS 和 SSRS SharePoint 模式1伺服器部署")  
   
 |||  
 |-|-|  
@@ -135,7 +135,7 @@ ms.locfileid: "71952646"
 ###  <a name="bkmk_powerpivot_ssrs_sharepoint2013_2server"></a>PowerPivot for SharePoint 2013 和 Reporting Services 兩個伺服器部署  
  在下列雙重伺服器部署中，SQL Server Database Engine 和以 SharePoint 模式執行的 Analysis Services 伺服器會與 SharePoint 在不同的伺服器上執行。 PowerPivot for SharePoint 2013 安裝程式套件 **（sppowerpivot.msi .msi）** 必須在 SharePoint 伺服器上執行。  
   
- ![Ssas 和 Ssrs Sharepoint 模式2伺服器部署](../../../2014/sql-server/install/media/as-and-rs-2server-deployment.gif "Ssas 和 ssrs Sharepoint 模式2伺服器部署")  
+ ![SSAS 和 SSRS SharePoint 模式2伺服器部署](../../../2014/sql-server/install/media/as-and-rs-2server-deployment.gif "SSAS 和 SSRS SharePoint 模式2伺服器部署")  
   
 |||  
 |-|-|  
@@ -155,7 +155,7 @@ ms.locfileid: "71952646"
 ##  <a name="bkmk_sharepoint2010_1server"></a>單一伺服器部署  
  您可以將所有伺服器元件 (包括資料層) 安裝在單一電腦上。 如果您要評估軟體或在 SharePoint 模式下開發包含 Reporting Services 的自訂應用程式，此部署組態相當實用。 此部署最容易設定。 所有元件都安裝在相同的電腦上，因此它也使用最少的授權數目。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 及 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的單一授權複本來安裝。  
   
- 若要在單一伺服器上安裝所有功能，請在相同的實體伺服器上循序安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。 如需獨立伺服器設定的指示，請參閱 @no__t 0Deployment 檢查清單：Reporting Services、Power View 和 PowerPivot for SharePoint @ no__t-0。  
+ 若要在單一伺服器上安裝所有功能，請在相同的實體伺服器上循序安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。 如需獨立伺服器設定的指示，請參閱[部署檢查清單： Reporting Services、Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。  
   
 ##  <a name="bkmk_sharepoint2010_2server"></a>兩層式部署  
  雙層部署通常是 SharePoint Server 2010 在一部電腦上，而 SQL Server Database Engine 在第二部電腦上。 將資料層移至專用伺服器是兩部電腦之伺服器陣列的最常見組態。 在雙層伺服器陣列中，您需要在 SharePoint 伺服器上安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。 前端的所有 Web 服務和應用程式層的共用服務會在相同的實體伺服器上執行。 雙層部署的安裝步驟與獨立部署非常類似；在這兩個部署中，您都會在相同的實體伺服器上循序安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 及 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。  
@@ -168,11 +168,11 @@ ms.locfileid: "71952646"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a>三層向外延展部署  
  此拓撲描述在多部伺服器上執行相同共用服務的向外延展部署，可服務 PowerPivot 資料或 Reporting Services 報表的大量要求，並提供更佳的處理能力。 下圖顯示三個應用程式伺服器叢集，每個叢集執行不同的共用服務組合。 在 SharePoint 環境中，服務探索及可用性會內建於伺服器陣列中。 在執行相同共用服務應用程式之多部實體伺服器之間的平衡負載，是共用服務架構的一部分。  
   
- 部署多伺服器陣列時，請務必遵循下列 SharePoint 文章中的指示：[適用于三層式伺服器陣列的多部伺服器（SharePoint Server 2010）](https://go.microsoft.com/fwlink/?linkID=219834)。  
+ 部署多伺服器的伺服器陣列時，請務必遵循下列 SharePoint 文章中的指示： [適合三層伺服器陣列的多伺服器 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)。  
   
  ![5-伺服器拓撲](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-伺服器拓撲")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Reporting Services sharepoint 模式安裝&#40;sharepoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
  [PowerPivot for SharePoint 2013 安裝](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
  [PowerPivot for SharePoint 2010 安裝](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

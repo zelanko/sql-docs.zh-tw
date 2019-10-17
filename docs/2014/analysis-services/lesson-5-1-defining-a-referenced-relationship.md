@@ -118,13 +118,13 @@ ms.locfileid: "69493937"
   
      請注意，[地理位置] 使用者定義階層的 [國家地區] 屬性現在已正確設定 [轉售商銷售 - 銷售量] 量值的維度，如下圖所示。  
   
-     [![定義關聯性] 對話方塊][(../../2014/tutorials/media/l5-referencedrelationship-5.gif "定義關聯性] 對話方塊")  
+     ![定義關聯性 對話方塊](../../2014/tutorials/media/l5-referencedrelationship-5.gif "定義關聯性 對話方塊")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [定義事實關聯性](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [中，使用 [維度設計師] 的](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [中，使用 維度設計師 的](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [定義參考的關聯性及參考的關聯性屬性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   
