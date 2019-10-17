@@ -117,7 +117,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **堆積**  
   
- 如果使用了內含停用之堆積的資料表，將會引發下列錯誤。 若要重新啟用這些物件, 請在升級之後, **藉由呼叫 ALTER INDEX ALL ON .。。REBUILD**。  
+ 如果使用了內含停用之堆積的資料表，將會引發下列錯誤。 若要重新啟用這些物件, 請在升級之後, **藉由呼叫 ALTER INDEX ALL ON ...REBUILD**。  
   
 ```  
 // ErrorNumber: 8674  
