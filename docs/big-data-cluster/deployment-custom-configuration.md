@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 31c745a585adf26b521054cbcd0234fd4087a114
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682037"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542170"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>設定叢集資源和服務的部署設定
 
@@ -151,11 +151,11 @@ ms.locfileid: "71682037"
 
 若要自訂您的叢集部署設定檔，您可以使用任何 JSON 格式編輯器，例如 VSCode。 若要針對自動化目的編寫這些編輯的指令碼，請使用 **azdata bdc config** 命令。 此文章說明如何透過修改部署設定檔來設定巨量資料叢集部署。 它會提供如何針對不同案例變更設定的範例。 如需設定檔如何用於部署中的詳細資訊，請參閱[部署指導](deployment-guidance.md#configfile)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - [安裝 azdata](deploy-install-azdata.md)。
 
-- 本節中的每個範例皆假設您已建立其中一個標準設定的複本。 如需詳細資訊，請參閱[建立自訂設定](deployment-guidance.md#customconfig)。 例如，下列命令會`custom`根據預設的**aks-開發/測試**設定，建立名為的目錄，其中包含兩個 json 部署設定檔（ **bdc. json**和**control. json**）：
+- 本節中的每個範例皆假設您已建立其中一個標準設定的複本。 如需詳細資訊，請參閱[建立自訂設定](deployment-guidance.md#customconfig)。 例如，下列命令會根據預設的**aks-開發/測試**設定，建立一個名為 `custom` 的目錄，其中包含兩個 JSON 部署設定檔（ **bdc. json**和**control. json**）：
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
@@ -539,18 +539,8 @@ JSON 修補檔會同時設定多個設定。 如需 JSON 修補的詳細資訊�
       "op": "add",
       "path": "spec.services.hdfs.resources/-",
       "value": "spark-0"
-    },
-    {
-      "op": "add",
-      "path": "spec.services.spark.settings",
-      "value": {
-        "DriverMemory": "2g",
-        "DriverCores": "1",
-        "ExecutorInstances": "2",
-        "ExecutorMemory": "2g",
-        "ExecutorCores": "1"
-      }
     }
+   }
   ]
 }
 ```
@@ -633,6 +623,6 @@ azdata bdc config patch --config-file control.json --patch-file elasticsearch-pa
 
 > [!IMPORTANT]
 > 建議您在 Kubernetes 叢集中的每個主機上手動手動更新**max_map_count**設定，[如本文中](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)的指示所述。
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
-如需在 big data cluster 部署中使用設定檔的詳細資訊，請參閱 how [to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile)。
+如需在 big data cluster 部署中使用設定檔的詳細資訊，請參閱[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md#configfile)。

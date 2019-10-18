@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276465"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542156"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安裝 Python 套件
 
@@ -25,9 +25,9 @@ ms.locfileid: "70276465"
 如需套件位置和安裝路徑的詳細資訊，請參閱[取得 Python 套件資訊](../package-management/python-package-information.md)。
 
 > [!NOTE]
-> 不建議將`pip install`標準 python 命令新增至 SQL Server 上的 python 套件。 相反地，請使用**sqlmlutils** ，如本文中所述。
+> 標準 Python `pip install` 命令不建議用於在 SQL Server 上新增 Python 套件。 相反地，請使用**sqlmlutils** ，如本文中所述。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 + 您必須使用 Python 語言選項安裝[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)。
 
@@ -60,7 +60,7 @@ ms.locfileid: "70276465"
 
 1. 從 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist 將最新的**sqlmlutils** zip 檔案下載到用戶端電腦。 不要解壓縮檔案。
 
-1. 開啟**命令提示**字元，然後執行下列命令來安裝**sqlmlutils**套件。 以您下載的**sqlmlutils** zip 檔案的完整路徑取代-此範例假設下載的檔案是`c:\temp\sqlmlutils_0.6.0.zip`。
+1. 開啟**命令提示**字元，然後執行下列命令來安裝**sqlmlutils**套件。 以您下載的**sqlmlutils** zip 檔案的完整路徑取代-此範例假設下載的檔案已 `c:\temp\sqlmlutils_0.6.0.zip`。
 
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
@@ -76,11 +76,11 @@ ms.locfileid: "70276465"
 
 1. 在用戶端電腦上，開啟 [ **python** ] 或 [python 環境]。
 
-1. 使用下列命令來安裝**文字工具**套件。 以您自己的 SQL Server 資料庫連接資訊取代。
+1. 使用下列命令來安裝**文字工具**套件。 以您自己的 SQL Server 資料庫連接資訊取代（如果您不使用 Windows 驗證，請新增 `uid` 和 `pwd` 參數）。
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
@@ -90,31 +90,31 @@ ms.locfileid: "70276465"
 
 #### <a name="on-a-computer-with-internet-access"></a>在有網際網路存取的電腦上
 
-1. 開啟**命令提示**字元並執行下列命令，以建立包含**文字工具**套件的本機資料夾。 這個範例會建立資料夾`c:\temp\text-tools`。
+1. 開啟**命令提示**字元並執行下列命令，以建立包含**文字工具**套件的本機資料夾。 這個範例會建立 `c:\temp\text-tools` 的資料夾。
 
    ```console
    pip download text-tools -d c:\temp\text-tools
    ```
 
-1. `text-tools`將資料夾複製到用戶端電腦。 下列範例假設您已將它複製`c:\temp\packages\text-tools`到。
+1. 將 [`text-tools`] 資料夾複製到用戶端電腦。 下列範例假設您已將它複製到 `c:\temp\packages\text-tools`。
 
 #### <a name="on-the-client-computer"></a>在用戶端電腦上
 
 使用**sqlmlutils**來安裝您在**pip**建立的本機資料夾中找到的每個套件（.whl 檔案）。 您安裝套件的順序並不重要。
 
-在此範例中，**文字工具**沒有相依性，因此您可以安裝`text-tools`資料夾中只有一個檔案。 相反地，套件（例如**scikit-learn** ）有11個相依性，因此您可以在資料夾中找到12個檔案（ **scikit-learn 圖**套件和11個相依套件），然後安裝每個檔案。
+在此範例中，**文字工具**沒有相依性，因此 `text-tools` 資料夾中只有一個檔案可供您安裝。 相反地，套件（例如**scikit-learn** ）有11個相依性，因此您可以在資料夾中找到12個檔案（ **scikit-learn 圖**套件和11個相依套件），然後安裝每個檔案。
 
-執行下列 Python 腳本。 以您自己的 SQL Server 資料庫連接資訊，以及封裝的實際檔案路徑和名稱取代。 針對資料夾中的每個封裝檔案重複語句。`sqlmlutils.SQLPackageManager`
+執行下列 Python 腳本。 取代實際的檔案路徑和封裝的名稱，以及您自己的 SQL Server 資料庫連接資訊（如果您未使用 Windows 驗證，請新增 `uid` 和 `pwd` 參數）。 針對資料夾中的每個封裝檔案重複 `sqlmlutils.SQLPackageManager` 語句。
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
 sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>在 SQL Server 中使用套件
 
-您現在可以在 SQL Server 的 Python 腳本中使用套件。 例如:
+您現在可以在 SQL Server 的 Python 腳本中使用套件。 例如：
 
 ```python
 EXECUTE sp_execute_external_script

@@ -1,7 +1,7 @@
 ---
 title: 以高可用性部署 SQL Server Big Data 叢集
 titleSuffix: Deploy SQL Server Big Data Cluster with high availability
-description: 瞭解如何使用高[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]可用性將（預覽）部署至。
+description: 瞭解如何部署具有高可用性的 SQL Server Big Data 叢集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4053ac15309b821a9cf50cf067ad459256369418
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 43d651c46282d7de0ffdd60f326740e7821b9bbe
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823581"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542166"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>以高可用性部署 SQL Server Big Data 叢集
 
@@ -26,23 +26,23 @@ ms.locfileid: "71823581"
 
 以下是可用性群組可啟用的部分功能：
 
-1. 如果部署設定檔中指定了高可用性設定，則會建立名`containedag`為的單一可用性群組。 根據預設， `containedag`有三個複本，包括 primary。 可用性群組的所有 CRUD 作業都是在內部進行管理。
-1. 所有資料庫都會自動加入至可用性群組，包括`master`和。 `msdb` Polybase 設定資料庫不會包含在可用性群組中，因為它們包含每個複本特有的實例層級中繼資料。
-1. 系統會自動布建外部端點以連接到 AG 資料庫。 此端點`master-svc-external`扮演 AG 接聽程式的角色。
+1. 如果部署設定檔中指定了高可用性設定，就會建立名為 `containedag` 的單一可用性群組。 根據預設，`containedag` 有三個複本，包括 [主要]。 可用性群組的所有 CRUD 作業都是在內部進行管理。
+1. 所有資料庫都會自動加入至可用性群組，包括 `master` 和 `msdb`。 Polybase 設定資料庫不會包含在可用性群組中，因為它們包含每個複本特有的實例層級中繼資料。
+1. 系統會自動布建外部端點以連接到 AG 資料庫。 此端點 `master-svc-external` 扮演 AG 接聽程式的角色。
 1. 第二個外部端點是針對次要複本的唯讀連接所布建。 
 
 
-# <a name="deploy"></a>部署
+## <a name="deploy"></a>部署
 
 若要在可用性群組中部署 SQL Server master：
 
-1. `hadr`啟用功能
+1. 啟用 `hadr` 功能
 1. 指定 AG 的複本數目（最小值為3）
 1. 設定針對連接至唯讀次要複本所建立之第二個外部端點的詳細資料
 
-下列步驟示範如何建立包含這些設定的修補檔案，以及如何將它套用至`aks-dev-test`或`kubeadm-dev-test`設定檔。 這些步驟會逐步解說如何修補`aks-dev-test`設定檔以新增 HA 屬性的範例。針對 kubeadm 叢集上的部署，將會套用類似的修補程式，但請確定您在 [**端點**] 區段中使用的是 [ **serviceType** ] *NodePort* 。
+下列步驟示範如何建立包含這些設定的修補檔案，以及如何將它套用至 `aks-dev-test` 或 `kubeadm-dev-test` 設定檔。 這些步驟會逐步解說如何修補 `aks-dev-test` 設定檔以新增 HA 屬性的範例。針對 kubeadm 叢集上的部署，將會套用類似的修補程式，但請確定您在 [**端點**] 區段中使用的是 [ **serviceType** ] *NodePort* 。
 
-1. `patch.json`建立檔案
+1. 建立 `patch.json` 檔案
 
     ```json
     {
@@ -99,7 +99,7 @@ ms.locfileid: "71823581"
 
 ### <a name="connect-to-databases-on-the-primary-replica"></a>連接到主要複本上的資料庫
 
-若要連接到主要複本，請`sql-server-master`使用 [端點]。 這個端點也是 AG 的接聽程式。 所有連接都在可用性群組的內容中。 例如，使用此端點的預設連接會導致連接到 AG 中的`master`資料庫，而不是 SQL Server 實例`master`資料庫。
+若要連接到主要複本，請使用 `sql-server-master` 端點。 這個端點也是 AG 的接聽程式。 所有連接都在可用性群組的內容中。 例如，使用此端點的預設連接會導致連接到 AG 中的 `master` 資料庫，而不是 SQL Server 實例 `master` 資料庫。
 
 ```bash
 azdata bdc endpoint list -e sql-server-master -o table
@@ -115,7 +115,7 @@ azdata bdc endpoint list -e sql-server-master -o table
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>連接到次要複本上的資料庫
 
-如需次要複本中資料庫的唯讀連接，請使用`sql-server-master-readonly`端點。 此端點的作用就像是所有次要複本上的負載平衡器。 在連接字串中提供使用者資料庫內容。
+如需次要複本中資料庫的唯讀連接，請使用 `sql-server-master-readonly` 端點。 此端點的作用就像是所有次要複本上的負載平衡器。 在連接字串中提供使用者資料庫內容。
 
 ```bash
 azdata bdc endpoint list -e sql-server-master-readonly -o table
@@ -129,7 +129,7 @@ azdata bdc endpoint list -e sql-server-master-readonly -o table
 
 針對某些作業，例如設定伺服器層級設定，或手動將資料庫加入至可用性群組（如果資料庫是使用還原工作流程所建立），您需要實例的連接。 若要提供此連接，請公開外部端點。 以下範例顯示如何公開此端點，然後將使用還原工作流程建立的資料庫加入至可用性群組。
 
-- 藉由連接到`sql-server-master`端點並執行，判斷裝載主要複本的 pod：
+- 藉由連接到 `sql-server-master` 端點並執行，判斷裝載主要複本的 pod：
 
     ```sql
     SELECT @@SERVERNAME
@@ -143,13 +143,13 @@ azdata bdc endpoint list -e sql-server-master-readonly -o table
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort
     ```
 
-    針對 aks 叢集執行，請執行相同的命令，但所建立之服務的類型會是`LoadBalancer`。 例如: 
+    針對 aks 叢集執行，請執行相同的命令，但所建立的服務類型將會 `LoadBalancer`。 例如： 
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=LoadBalancer
     ```
 
-    以下是針對 aks 執行此命令的範例，其中裝載主要的 pod 為`master-0`：
+    以下是針對 aks 執行此命令的範例，其中裝載主要的 pod `master-0`：
 
     ```bash
     kubectl -n mssql-cluster expose pod master-0 --port=1533  --name=master-sql-0 --type=LoadBalancer
@@ -178,7 +178,7 @@ azdata bdc endpoint list -e sql-server-master-readonly -o table
     ALTER AVAILABILITY GROUP containedag ADD DATABASE <databaseName>
     ```
 
-    下列範例會加入已在實例`sales`上還原之名為的資料庫：
+    下列範例會加入已在實例上還原之名為 `sales` 的資料庫：
 
     ```sql
     ALTER DATABASE sales SET RECOVERY FULL;
@@ -190,11 +190,11 @@ azdata bdc endpoint list -e sql-server-master-readonly -o table
 
 這些是大型資料叢集中 SQL Server 主機之可用性群組的已知問題和限制：
 
-- 建立為非`CREATE DATABASE` `RESTORE`like 工作流程結果的資料庫不會自動加入至可用性群組。 `CREATE DATABASE FROM SNAPSHOT` [連接到實例](#instance-connect)，並手動將資料庫加入至可用性群組。
-- 某些作業（例如執行伺服器設定設定`sp_configure` ）需要連接到主要實例。 您不能使用對應的主要端點。 遵循[指示](#instance-connect)連接到 SQL Server 實例，並執行`sp_configure`。
+- 建立為非 `CREATE DATABASE` （例如 `RESTORE` `CREATE DATABASE FROM SNAPSHOT`）工作流程結果的資料庫不會自動加入至可用性群組。 [連接到實例](#instance-connect)，並手動將資料庫加入至可用性群組。
+- 某些作業（例如使用 `sp_configure` 執行伺服器設定設定）需要連接到主要實例。 您不能使用對應的主要端點。 遵循[指示](#instance-connect)連接到 SQL Server 實例，並執行 `sp_configure`。
 - 部署 BDC 時，必須建立高可用性設定。 部署後，您無法啟用可用性群組的高可用性設定。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
-- 如需在 big data cluster 部署中使用設定檔的詳細資訊，請參閱 how [to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile)。
+- 如需在 big data cluster 部署中使用設定檔的詳細資訊，請參閱[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md#configfile)。
 - 如需 SQL Server 之可用性群組功能的詳細資訊，請參閱[Always On 可用性群組的總覽（SQL Server）](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2017)。
