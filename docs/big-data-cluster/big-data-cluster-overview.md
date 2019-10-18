@@ -1,7 +1,7 @@
 ---
 title: 什麼是 Big Data 叢集？
 titleSuffix: SQL Server Big Data Clusters
-description: 瞭解在 Kubernetes 上執行的 @no__t 0 （預覽），並提供關聯式和 HDFS 資料的相應放大選項。
+description: 瞭解在 Kubernetes 上執行的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （預覽），並提供關聯式和 HDFS 資料的相應放大選項。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7790c133ae9f686f2551de8744c6836ffc8ae25
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: cffb1bcf353932183703f810c876b6adacaa7bbf
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342035"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359535"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -44,13 +44,13 @@ SQL Server 巨量資料叢集包含可調整的 HDFS「存放集區」。 這可
 
 ### <a name="scale-out-data-mart"></a>向外延展資料超市
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 提供向外延展計算和儲存體，以改善分析任何資料的效能。 來自各種來源的資料可以作為快取以在「資料集區」節點之間內嵌並散發來供進一步分析。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 提供相應放大計算和儲存體，以改善分析任何資料的效能。 來自各種來源的資料可以作為快取以在「資料集區」節點之間內嵌並散發來供進一步分析。
 
 ![資料超市](media/big-data-cluster-overview/data-mart.png)
 
 ### <a name="integrated-ai-and-machine-learning"></a>整合的 AI 與機器學習
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 會針對儲存在 HDFS 儲存集區和資料集區中的資料啟用 AI 和機器學習工作。 您可以利用 R、Python、Scala 或 JAVA，在 SQL Server 中使用 Spark 和內建 AI 工具。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 在儲存于 HDFS 儲存集區和資料集區中的資料上啟用 AI 和機器學習工作。 您可以利用 R、Python、Scala 或 JAVA，在 SQL Server 中使用 Spark 和內建 AI 工具。
 
 ![AI 和 ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -90,7 +90,7 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 
 ### <a id="controlplane"></a> 控制器
 
-控制器會提供叢集的管理和安全性。 其中包含 cntrol 服務、設定存放區以及其他叢集層級的服務 (例如 Kibana、Grafana 和彈性搜尋)。
+控制器會提供叢集的管理和安全性。 它包含控制服務、設定存放區，以及其他叢集層級的服務，例如 Kibana、Grafana 和彈性搜尋。
 
 ### <a id="computeplane"></a> 計算集區
 
@@ -105,8 +105,8 @@ Kubernetes 是開放原始碼容器協調器，可根據需求調整容器部署
 存放集區包含由 Linux 上的 SQL Server、Spark 和 HDFS 組成的存放集區 Pod。 SQL Server 巨量資料叢集中的所有存放裝置節點都是 HDFS 叢集成員。
 
 > [!TIP]
-> 如需深入了解叢集架構和安裝，請參閱[工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 架構 @ no__t-1。
+> 如需深入瞭解 big data cluster 架構和安裝，請參閱[研討會： Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 如需部署 SQL Server Big Data 叢集的詳細資訊，請參閱[開始使用 SQL Server Big data](deploy-get-started.md)叢集。

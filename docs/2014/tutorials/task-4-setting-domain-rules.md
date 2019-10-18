@@ -1,5 +1,5 @@
 ---
-title: 工作 4：設定定義域規則 |Microsoft Docs
+title: 工作4：設定定義域規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,55 +10,55 @@ ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489072"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381735"
 ---
 # <a name="task-4-setting-domain-rules"></a>工作 4：設定定義域規則
-  在這個工作中，您建立的規則**Contact Email**網域來驗證是否電子郵件地址結尾 **@adventure-works.com** 。 請參閱[建立定義域規則](https://msdn.microsoft.com/library/hh510397.aspx)如需詳細資料頁面上的主題。  
+  在這項工作中，您會建立**連絡人電子郵件**網域的規則，以驗證電子郵件地址的結尾是否為 **\@adventure-works.com**。 如需此頁面的詳細資訊，請參閱[建立定義域規則](https://msdn.microsoft.com/library/hh510397.aspx)主題。  
   
-1.  按一下  **Contact Email**中**定義域清單**。  
+1.  按一下 [**網域] 清單**中的 [**連絡人電子郵件**]。  
   
-2.  若要切換**定義域規則**右窗格中的索引標籤。  
+2.  切換至右窗格中的 [**定義域規則**] 索引標籤。  
   
-     ![加入新的定義域規則 工具列按鈕](../../2014/tutorials/media/et-settingdomainrules-01.jpg "新增新的定義域規則 工具列按鈕")  
+     ![[加入新的定義域規則] 工具列按鈕](../../2014/tutorials/media/et-settingdomainrules-01.jpg "[加入新的定義域規則] 工具列按鈕")  
   
-3.  在右窗格中，按一下**加入新的定義域規則**工具列上的按鈕 （請參閱映像） 新增規則。  
+3.  在右窗格中，按一下工具列上的 [**加入新的定義域規則**] 按鈕（請參閱影像）以新增規則。  
   
-4.  型別**電子郵件驗證**for**規則名稱**然後按**ENTER**。 **Active**預設應該核取核取方塊。 這個控制項可讓您暫時停用規則。  
+4.  輸入 [**規則名稱**的**電子郵件驗證**]，然後按**enter**。 [作用中] 核取方塊預設為核取**狀態**。 這個控制項可讓您暫時停用規則。  
   
-5.  在**建立規則**窗格中，按一下**向下箭號**，然後選取**值結尾為**。  
+5.  在 [**建立規則**] 窗格中，按一下**向下箭**號，然後選取 [**值結尾為**]。  
   
-6.  型別 **@adventure-works.com** 文字方塊中，然後按下 **索引標籤** 。 您可以加入更多條件，依序按一下 **將新條件加入選取的子句** 中的工具列按鈕 **建置規則** 窗格。  
+6.  在文字方塊中輸入 **\@adventure-works.com** ，然後按**tab**鍵。 您可以在 [**建立規則**] 窗格中，按一下 **[將新條件新增至選取的子句**] 工具列按鈕來新增更多條件。  
   
      ![電子郵件驗證規則](../../2014/tutorials/media/et-settingdomainrules-02.jpg "電子郵件驗證規則")  
   
-7.  按一下 **測試資料上執行選取的定義域規則**測試規則針對取樣資料的右窗格的工具列上的按鈕。  
+7.  在右窗格中，按一下工具列上的 **[在測試資料上執行選取的定義域規則**] 按鈕，對範例資料測試規則。  
   
-     ![在 [測試資料] 工具列按鈕上執行定義域規則](../../2014/tutorials/media/et-settingdomainrules-03.jpg "測試資料 工具列按鈕上執行定義域規則")  
+     ![在測試資料工具列按鈕上執行定義域規則](../../2014/tutorials/media/et-settingdomainrules-03.jpg "在測試資料工具列按鈕上執行定義域規則")  
   
-8.  在 [**測試定義域規則**] 對話方塊中，按一下**加入定義域規則的新測試詞彙**工具列上的按鈕。  
+8.  在 [**測試定義域規則**] 對話方塊中，按一下工具列上**的 [加入定義域規則的新測試詞彙**] 按鈕。  
   
-     ![測試定義域規則 對話方塊](../../2014/tutorials/media/et-settingdomainrules-04.jpg "測試定義域規則 對話方塊")  
+     ![[測試定義域規則] 對話方塊](../../2014/tutorials/media/et-settingdomainrules-04.jpg "[測試定義域規則] 對話方塊")  
   
-9. 型別 **frank7@adventure-works.com** （有效的值） 中 **Contact Email** 資料行。  
+9. 在 [**連絡人電子郵件**] 資料行中，輸入**frank7 \@adventure-works.com** （有效的值）。  
   
-10. 重複上述兩個步驟來加入 **joe2@adventure-work.com** (含無效值的 ')。  
+10. 重複先前的兩個步驟，以新增**joe2 \@adventure-work.com** （不含 ' s ' 的無效值）。  
   
-11. 按一下最後一個按鈕 (**對所有詞彙測試定義域規則**) 測試輸入的資料依規則 工具列上。  
+11. 按一下工具列上的 [最後一個] 按鈕（**針對所有詞彙測試定義域規則**），以根據規則測試輸入資料。  
   
-     ![測試定義域規則的所有詞彙 工具列按鈕](../../2014/tutorials/media/et-settingdomainrules-05.jpg "測試定義域規則的所有詞彙 工具列按鈕")  
+     ![在所有詞彙上測試定義域規則工具列按鈕](../../2014/tutorials/media/et-settingdomainrules-05.jpg "在所有詞彙上測試定義域規則工具列按鈕")  
   
 12. 請注意，第一個輸入顯示為有效的項目，第二個輸入則顯示為無效的項目。  
   
      ![測試定義域規則結果](../../2014/tutorials/media/et-settingdomainrules-06.jpg "測試定義域規則結果")  
   
-13. 按一下 **關閉** 以關閉**測試定義域規則** 對話方塊。  
+13. 按一下 [**關閉**] 以關閉 [**測試定義域規則**] 對話方塊。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5：設定以詞彙為主的關聯性](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [工作 5：設定以詞彙為主的關聯](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   
