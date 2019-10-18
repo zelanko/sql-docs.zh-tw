@@ -11,15 +11,135 @@
 - name: ADO.NET
   items:
     - name: Microsoft ADO.NET for SQL Server
-      href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-    - name: '步驟 1:設定 ADO.NET 開發的開發環境'
-      href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-    - name: '步驟 2:建立 ADO.NET 開發的 SQL 資料庫'
-      href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
-    - name: 步驟 3：使用 ADO.NET 連線到 SQL 的概念證明
-      href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
-    - name: 步驟 4：使用 ADO.NET 彈性地連線到 SQL
-      href: ../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md
+      href: ../connect/ado-net/microsoft-ado-net-sql-server.md
+    - name: 開始使用 SqlClient 驅動程式
+      href: ../connect/ado-net/get-started-sqlclient-driver.md
+      items:
+        - name: '步驟 1:設定 ADO.NET 開發的開發環境'
+          href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
+        - name: '步驟 2:建立 ADO.NET 開發的 SQL 資料庫'
+          href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
+        - name: 步驟 3：使用 ADO.NET 連線到 SQL 的概念證明
+          href: ../connect/ado-net/step-3-connect-sql-ado-net.md
+        - name: 步驟 4：使用 ADO.NET 彈性地連線到 SQL
+          href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
+    - name: SqlClient 驅動程式概觀
+      href: ../connect/ado-net/overview-sqlclient-driver.md
+      items:
+        - name: Microsoft.Data.SqlClient 命名空間簡介
+          href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
+        - name: 下載適用於 SQL Server 的 Microsoft SqlClient Data Provider
+          href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: SqlClient 驅動程式支援生命週期
+          href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
+        - name: 尋找其他 SqlClient 驅動程式資訊
+          href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: SQL Server 和 ADO.NET
+      href: ../connect/ado-net/sql/index.md
+      items:
+        - name: SQL Server 安全性
+          href: ../connect/ado-net/sql/sql-server-security.md
+          items:
+            - name: 在 SQL Server 中進行驗證
+              href: ../connect/ado-net/sql/authentication-sql-server.md
+            - name: SQL Server 中的應用程式安全性案例
+              href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
+              items:
+                - name: 在 SQL Server 中撰寫安全的動態 SQL
+                  href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
+            - name: SQL Server Express 安全性
+              href: ../connect/ado-net/sql/sql-server-express-security.md
+        - name: SQL Server 資料類型和 ADO.NET
+          href: ../connect/ado-net/sql/sql-server-data-types.md
+          items:
+            - name: SqlTypes 和資料集
+              href: ../connect/ado-net/sql/sqltypes-dataset.md
+            - name: 處理 Null 值
+              href: ../connect/ado-net/sql/handle-null-values.md
+            - name: 比較 GUID 和 uniqueidentifier 值
+              href: ../connect/ado-net/sql/compare-guid-uniqueidentifier-values.md
+            - name: 日期和時間資料
+              href: ../connect/ado-net/sql/date-time-data.md
+            - name: 大型 UDT
+              href: ../connect/ado-net/sql/large-udts.md
+            - name: SQL Server 中的 XML 資料
+              href: ../connect/ado-net/sql/xml-data-sql-server.md
+              items:
+                - name: SQL XML 資料行值
+                  href: ../connect/ado-net/sql/sql-xml-column-values.md
+                - name: 將 XML 值指定為參數
+                  href: ../connect/ado-net/sql/specify-xml-values-parameters.md
+        - name: SQL Server 二進位和大型數值資料
+          href: ../connect/ado-net/sql/sql-server-binary-large-value-data.md
+          items:
+            - name: 修改 ADO.NET 中的大型數值 (max) 資料
+              href: ../connect/ado-net/sql/modify-large-value-max-data.md
+            - name: FILESTREAM 資料
+              href: ../connect/ado-net/sql/filestream-data.md
+            - name: 從檔案插入影像
+              href: ../connect/ado-net/sql/insert-image-file.md
+        - name: ADO.NET 中的 SQL Server 資料作業
+          href: ../connect/ado-net/sql/sql-server-data-operations.md
+          items:
+            - name: SQL Server 中的大量複製作業
+              href: ../connect/ado-net/sql/bulk-copy-operations-sql-server.md
+              items:
+                - name: 大量複製範例設定
+                  href: ../connect/ado-net/sql/bulk-copy-example-setup.md
+                - name: 單一大量複製作業
+                  href: ../connect/ado-net/sql/single-bulk-copy-operations.md
+                - name: 多項大量複製作業
+                  href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
+                - name: 交易和大量複製作業
+                  href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+            - name: Multiple Active Result Set (MARS)
+              href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
+              items:
+                - name: 啟用 Multiple Active Result Set
+                  href: ../connect/ado-net/sql/enable-multiple-active-result-sets.md
+                - name: 操作資料
+                  href: ../connect/ado-net/sql/manipulate-data.md
+            - name: 非同步作業
+              href: ../connect/ado-net/sql/asynchronous-operations.md
+              items:
+                - name: 使用回撥的 Windows 應用程式
+                  href: ../connect/ado-net/sql/windows-applications-callbacks.md
+                - name: 使用 Wait 控制代碼的 ASP.NET 應用程式
+                  href: ../connect/ado-net/sql/aspnet-apps-use-wait-handles.md
+                - name: 在主控台應用程式中輪詢
+                  href: ../connect/ado-net/sql/poll-console-applications.md
+            - name: 資料表值參數
+              href: ../connect/ado-net/sql/table-valued-parameters.md
+        - name: SQL Server 功能和 ADO.NET
+          href: ../connect/ado-net/sql/sql-server-features-adonet.md
+          items:
+            - name: 列舉 SQL Server 的執行個體 (ADO.NET)
+              href: ../connect/ado-net/sql/enumerate-instances-sql-server.md
+            - name: SQL Server 的提供者統計資料
+              href: ../connect/ado-net/sql/provider-statistics-sql-server.md
+            - name: SQL Server Express 使用者執行個體
+              href: ../connect/ado-net/sql/sql-server-express-user-instances.md
+            - name: SQL Server 中的資料庫鏡像
+              href: ../connect/ado-net/sql/database-mirroring-sql-server.md
+            - name: 內容連線
+              href: ../connect/ado-net/sql/context-connection.md
+            - name: SQL Server 中的查詢通知
+              href: ../connect/ado-net/sql/query-notifications-sql-server.md
+              items:
+                - name: 啟用查詢通知
+                  href: ../connect/ado-net/sql/enable-query-notifications.md
+                - name: ASP.NET 應用程式中的 SqlDependency
+                  href: ../connect/ado-net/sql/sqldependency-aspnet-app.md
+                - name: 使用 SqlDependency 偵測變更
+                  href: ../connect/ado-net/sql/detect-changes-sqldependency.md
+                - name: 使用 SqlNotificationRequest 執行 SqlCommand
+                  href: ../connect/ado-net/sql/sqlcommand-execution-sqlnotificationrequest.md
+            - name: SQL Server 中的快照集隔離
+              href: ../connect/ado-net/sql/snapshot-isolation-sql-server.md
+            - name: SqlClient 對高可用性、災害復原的支援
+              href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
+            - name: SqlClient 對 LocalDB 的支援
+              href: ../connect/ado-net/sql/sqlclient-support-localdb.md
 - name: JDBC
   items:
     - name: 用於 SQL Server 的 Microsoft JDBC 驅動程式
