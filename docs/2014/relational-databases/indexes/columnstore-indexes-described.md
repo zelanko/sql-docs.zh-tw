@@ -17,14 +17,14 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68811045"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  記憶體內部資料行存放區索引會使用以資料行為基礎的資料儲存和資料行為基礎的查詢處理來儲存和管理資料。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料行存放區索引可在主要執行大量載入和唯讀查詢的資料倉儲工作負載中順利運作。 與傳統的資料列導向儲存相較之下，使用資料行存放區索引最高可達到 **10 倍查詢效能** 改善，與未壓縮資料大小相較之下，最高可達到 **7 倍資料壓縮** 。  
+  @No__t_0 記憶體內部資料行存放區索引會使用*以*資料行為基礎的資料儲存和資料行為基礎的查詢處理來儲存和管理資料。 資料行存放區索引可在主要執行大量載入和唯讀查詢的資料倉儲工作負載中順利運作。 與傳統的資料列導向儲存相較之下，使用資料行存放區索引最高可達到 **10 倍查詢效能**改善，與未壓縮資料大小相較之下，最高可達到 **7 倍資料壓縮**。  
   
 > [!NOTE]  
 >  我們將叢集資料行存放區索引視為儲存大型資料倉儲事實資料表的標準，並期望它能廣泛用於資料倉儲案例中。 由於叢集資料行存放區索引可更新，工作負載可以執行大量的插入、更新和刪除作業。  
@@ -90,7 +90,7 @@ ms.locfileid: "68811045"
   
 -   需要額外的儲存體將資料行的副本儲存到索引中。  
   
--   透過重建索引或將資料分割切換移入和移出的方式進行更新。無法使用如插入、更新及刪除等 DML 作業加以更新。  
+-   會藉由重建索引或將資料分割切換入和移出來進行更新。它無法使用 DML 作業（例如 insert、update 和 delete）進行更新。  
   
 -   可與資料表上的其他索引合併。  
   
@@ -125,19 +125,19 @@ ms.locfileid: "68811045"
   
 -   每個資料行區段會各自壓縮成一體並且儲存到實體媒體上。  
   
- ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ ![資料行區段](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "資料行區段")  
   
  非叢集資料行存放區索引  
  非叢集資料行存放區*索引*是在現有叢集索引或堆積資料表上建立的唯讀索引。 其包含了資料行子集的副本，截至包括資料表中的所有資料行。 當資料表包含非叢集資料行存放區索引時，這是唯讀的。  
   
  非叢集資料行存放區索引讓您單憑資料行存放區索引既可執行分析查詢，同時又能對原始資料表執行唯讀作業。  
   
- ![非]叢集資料行存放區索引(../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "非")叢集資料行存放區索引  
+ ![非叢集資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "非叢集資料行存放區索引")  
   
  叢集資料行存放區索引  
  叢集資料行存放區*索引*是整個資料表的實體儲存體，而且是資料表的唯一索引。 叢集索引可更新。 您可以對索引執行插入、刪除和更新作業，還可將資料大量載入索引。  
   
- ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+ ![叢集資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "叢集資料行存放區索引")  
   
  為了減少資料行區段的片段化情況並改善效能，資料行存放區索引可能會暫時將一些資料儲存到資料列存放區資料表 (稱為差異存放區)，加上 B 型樹狀目錄含有已刪除之資料列的識別碼。 差異存放區作業將由幕後處理。 為了能傳回正確的查詢結果，叢集資料行存放區索引會結合資料行存放區和差異存放區兩方面的查詢結果。  
   
@@ -153,14 +153,14 @@ ms.locfileid: "68811045"
 ###  <a name="dataload_nci"></a>將資料載入非叢集資料行存放區索引  
  若要將資料載入非叢集的資料行存放區索引，請先將資料載入至儲存為堆積或叢集索引的傳統 rowstore 資料表，然後使用 Create 資料行存放區[ &#40;索引&#41; transact-sql](/sql/t-sql/statements/create-columnstore-index-transact-sql)來建立非叢集的資料行存放區索引.  
   
- ![將資料載入資料]行存放區索引(../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "將資料載入資料")行存放區索引  
+ ![將資料載入資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "將資料載入資料行存放區索引")  
   
- 凡是具有非叢集資料行存放區索引的資料表，直到卸除或停用索引之前都是唯讀的。 若要更新此資料表和非叢集資料行存放區索引，您可以將資料分割切換移入和移出。您也可以停用索引、更新資料表，然後再重建索引。  
+ 凡是具有非叢集資料行存放區索引的資料表，直到卸除或停用索引之前都是唯讀的。 若要更新資料表和非叢集資料行存放區索引，您可以將資料分割切換入和移出。您也可以停用索引、更新資料表，然後重建索引。  
   
  如需詳細資訊，請參閱＜ [Using Nonclustered Columnstore Indexes](indexes.md)＞。  
   
 ###  <a name="dataload_cci"></a>將資料載入叢集資料行存放區索引  
- ![載入至叢集資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "載入至叢集資料行存放區索引")  
+ ![載入叢集資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "載入叢集資料行存放區索引")  
   
  如圖中所示，若要將資料載入叢集資料行存放區索引中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68811045"
 ### <a name="clustered-columnstore-indexes"></a>叢集資料行存放區索引  
  如需相關的一般工作，請參閱＜ [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)＞。  
   
--   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [建立叢集資料行&#40;存放區索引 transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
 -   [ALTER INDEX &#40;transact-sql&#41; ](/sql/t-sql/statements/alter-index-transact-sql) with REBUILD 或重新組織。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68811045"
   
 -   [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)  
   
-### <a name="metadata"></a>中繼資料  
+### <a name="metadata"></a>[中繼資料]  
  資料行存放區索引中的所有資料行都將儲存於中繼資料內成為內含資料行。 資料行存放區索引沒有索引鍵資料行。  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  

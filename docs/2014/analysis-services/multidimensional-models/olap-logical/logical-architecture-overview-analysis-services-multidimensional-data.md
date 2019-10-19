@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68889603"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
@@ -26,9 +26,9 @@ ms.locfileid: "68889603"
  本主題說明 Analysis Services 以多維度和資料採礦模式運作時的基本架構。 如需其他模式的詳細資訊，請參閱[表格式&#40;模型&#41;化 ssas 表格式](../../tabular-models/tabular-models-ssas.md)和[比較 ssas &#40; &#41;的表格式和多維度方案](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)。  
   
 ## <a name="basic-architecture"></a>基本架構  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體可包含多個資料庫，而且資料庫可同時有 OLAP 物件和資料採礦物件。 應用程式會連接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體和指定的資料庫。 伺服器電腦可主控多個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]實例會命名為 "\<ServerName >\\< InstanceName\>"。 下圖顯示物件之間[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]所有提及的關聯性。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體可包含多個資料庫，而且資料庫可同時有 OLAP 物件和資料採礦物件。 應用程式會連接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體和指定的資料庫。 伺服器電腦可主控多個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 @No__t_0 的實例會命名為 "\<ServerName > \\ < InstanceName \>"。 下圖顯示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件之間所有提及的關聯性。  
   
- ![AMO 執行物件關聯]性(https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 執行物件關聯")性  
+ ![AMO 執行物件關聯性](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 執行物件關聯性")  
   
  基本類別是建立 Cube 所需的最小一組物件。 此最小一組的物件是維度、量值群組和資料分割。 彙總是選擇性。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68889603"
  每個資料庫物件都包含一或多個 Cube 物件。 Cube 是由其量值和維度所定義。 Cube 中的量值和維度是衍生自 Cube 所依據之資料來源檢視中的資料表和檢視，或是從量值和維度定義所產生。  
   
 ## <a name="object-inheritance"></a>物件繼承  
- ASSL 物件模型包含許多重複元素群組。 例如，元素群組`Dimensions` 「包含`Hierarchies`」會定義元素的維度階層。 `Cubes` 和 `MeasureGroups` 都包含元素群組「`Dimensions` 包含 `Hierarchies`」。  
+ ASSL 物件模型包含許多重複元素群組。 例如，專案群組「`Dimensions` 包含 `Hierarchies`」，會定義元素的維度階層。 `Cubes` 和 `MeasureGroups` 都包含元素群組「`Dimensions` 包含 `Hierarchies`」。  
   
  除非明確被覆寫，否則元素會從更高的層級繼承這些重複元素群組的詳細資料。 例如，`Translations` 對於 `CubeDimension` 與 `Translations` 對於它的上階項目 `Cube` 是相同的作用。  
   
@@ -61,11 +61,11 @@ ms.locfileid: "68889603"
 ## <a name="example"></a>範例  
  Imports Cube 包含 Packages 和 Last 兩個量值，以及 Route、Source 和 Time 三個相關維度。  
   
- ![Cube 範例 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Cube 範例 1")  
+ ![Cube 範例1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Cube 範例1")  
   
  圍繞 Cube 的較小英數字值是該維度的成員。 範例成員為 ground (Route 維度的成員)、Africa (Source 維度的成員) 和 1st quarter (Time 維度的成員)。  
   
-### <a name="measures"></a>量值  
+### <a name="measures"></a>[量值]  
  Cube 資料格內的值代表 Packages 和 Last 兩個量值。 Packages 量值代表所匯入的封裝數，而 `Sum` 函數則是用來彙總事實。 Last 量值代表回條日期，而 `Max` 函數則是用來彙總事實。  
   
 ### <a name="dimensions"></a>維度  
@@ -101,7 +101,7 @@ ms.locfileid: "68889603"
 |Route 維度中的 Route 類別層級|nonground,ground|RouteDimensionTable|Route_Category|Nonground|  
 |Route 維度的 Route 屬性|air,sea,road,rail|RouteDimensionTable|路由|Sea|  
 |Source 維度的 Hemisphere 屬性|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|  
-|Source 維度的 Continent 屬性|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|歐洲|  
+|Source 維度的 Continent 屬性|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|Europe|  
 |Time 維度的 Half 屬性|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Time 維度的 Quarter 屬性|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
@@ -110,12 +110,12 @@ ms.locfileid: "68889603"
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|Packages|最後一個|  
-|3516987|1|6|1|15|Jan-10-99|  
-|3554790|1|6|1|40|Jan-19-99|  
-|3572673|1|6|1|34|Jan-27-99|  
-|3600974|1|6|1|45|Feb-02-99|  
-|3645541|1|6|1|20|Feb-09-99|  
-|3674906|1|6|1|36|Feb-17-99|  
+|3516987|@shouldalert|6|@shouldalert|15|Jan-10-99|  
+|3554790|@shouldalert|6|@shouldalert|40|Jan-19-99|  
+|3572673|@shouldalert|6|@shouldalert|34|Jan-27-99|  
+|3600974|@shouldalert|6|@shouldalert|45|Feb-02-99|  
+|3645541|@shouldalert|6|@shouldalert|20|Feb-09-99|  
+|3674906|@shouldalert|6|@shouldalert|36|Feb-17-99|  
   
  在上表中，每個資料列的**RouteKey**、 **SourceKey**和**TimeKey**資料行都有相同的值，表示這些資料列會構成相同的 cube 資料格。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68889603"
   
  此處所顯示的範例只包含單一事實資料表。 當 Cube 具有多份事實資料表時，會將每份事實資料表的量值組成量值群組，並根據定義的維度關聯性讓量值群組與特定的維度集產生關聯。 而透過指定資料來源檢視的參與資料表和關聯性的資料粒度，即可建立這些關聯性。 **相關主題：** [維度關聯](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [多維度模型資料庫 &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   
