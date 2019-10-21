@@ -81,7 +81,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用科威特演算法來支援阿拉伯文樣式的日期格式。
   
-|不含世紀 (yy) (<sup>1</sup>)|含世紀 (yyyy)|Standard|輸入/輸出 (<sup>3</sup>)|  
+|不含世紀 (yy) (<sup>1</sup>)|含世紀 (yyyy)|標準|輸入/輸出 (<sup>3</sup>)|  
 |---|---|--|---|
 |-|**0** 或 **100** (<sup>1,</sup><sup>2</sup>)|datetime 和 smalldatetime 的預設值|mon dd yyyy hh:miAM (或 PM)|  
 |**1**|**101**|美式英文|  1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
@@ -131,7 +131,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="float-and-real-styles"></a>float 和 real 樣式
 針對 **float** 或 **real** *expression*，*style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。
   
-|ReplTest1|輸出|  
+|值|輸出|  
 |---|---|
 |**0** (預設)|最多 6 位數。 在適當時機，供科學記號標記法使用。|  
 |**1**|一律 8 位數。 一律用在科學記號標記法中。|  
@@ -142,7 +142,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="money-and-smallmoney-styles"></a>money 和 smallmoney 樣式
 針對 **money** 或 **smallmoney** *expression*，*style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。
   
-|ReplTest1|輸出|  
+|值|輸出|  
 |---|---|
 |**0** (預設)|小數點左側並不會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例4235.98。|  
 |**1**|小數點左側會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例3,510.92。|  
@@ -152,7 +152,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="xml-styles"></a>xml 樣式
 針對 **xml** *expression*，*style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。
   
-|ReplTest1|輸出|  
+|值|輸出|  
 |---|---|
 |**0** (預設)|使用預設剖析行為，以捨棄無意義的空白字元，而且不允許內部 DTD 子集。<br /><br />**注意：** 轉換成  資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無意義空白字元的處理方式會與 XML 1.0 不同。 如需詳細資訊，請參閱[建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
 |**1**|保留無意義的空格。 此樣式設定會設定預設 **xml:space** 處理，以符合 **xml:space="preserve"** 的行為。|  
@@ -162,7 +162,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="binary-styles"></a>二進位樣式
 針對 **binary(n)** 、**char(n)** 、**varbinary(n)** 或 **varchar(n)** *expression*，*style* 可以具有下表中所顯示的其中一個值。 此表中未列出的樣式值將傳回錯誤。
   
-|ReplTest1|輸出|  
+|值|輸出|  
 |---|---|
 |**0** (預設)|將 ASCII 字元轉譯成二進位位元組，或將二進位位元組轉譯成 ASCII 字元。 每個字元或位元組都會以 1:1 的方式轉換。<br /><br /> 針對二進位 *data_type*，會在結果的左側新增字元 0x。|  
 |**1**、**2**|針對二進位 *data_type*，運算式必須是字元運算式。 *expression* 必須具有**偶數**個十六進位數字 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f)。 如果 *style* 設定為 1，則必須具有 0x 作為前兩個字元。 如果運算式包含奇數個字元，或者有任何字元無效，則會引發錯誤。<br /><br /> 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 大於已轉換結果的固定長度 *data_type* 會在結果的右側新增零。<br /><br /> 字元類型的 *data_type* 需要二進位運算式。 每個二進位字元都會轉換成兩個十六進位字元。 如果所轉換運算式的長度超過 *data_type* 的長度，結果就是自右截斷。<br /><br /> 針對固定大小字元類型 *data_type*，如果已轉換結果的長度小於 *data_type* 的長度，則會在所轉換運算式的右側新增空格，以維持偶數個十六進位數字。<br /><br /> 針對 *style* 1 的已轉換結果，系統會在它的左邊加入字元 0x。|  
@@ -171,7 +171,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 隱含轉換不需要指定 CAST 函式或 CONVERT 函式。 明確轉換需要指定 CAST 函式或 CONVERT 函式。 下圖顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統提供之資料類型所能使用的所有明確和隱含資料類型轉換。 這些包含 **bigint**、**sql_variant** 和 **xml**。 從 **sql_variant** 資料類型進行指派時，不可使用隱含轉換，但可以隱含轉換成 **sql_variant**。
   
 > [!TIP]  
-> [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35834)可將此圖表當成 PDF 檔案下載。  
+> 可在 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35834)將此圖表下載為 PDF 檔案。  
   
 ![資料類型轉換表](../../t-sql/data-types/media/lrdatahd.png "資料類型轉換表")
   
@@ -507,13 +507,13 @@ Rachel           Valdez              2241204.0424      289
 SELECT CONVERT(XML, '<root><child/></root>')  
 ```  
   
-這個範例會將含有空格、文字和標記的類似字串轉換成 XML 類型，且會保留所有無意義的空格 (節點之間的界限空格)：
+這個範例會將含有空格、文字和標記的類似字串轉換成 XML 類型，而且會保留所有無意義的空白字元 (節點之間的界限空白字元)：
   
 ```sql
 SELECT CONVERT(XML, '<root>          <child/>         </root>', 1)  
 ```  
   
-這個範例會將含有空格、文字和標記的字串轉換成 XML 類型：
+這個範例會將含有空白字元、文字和標記的字串轉換成 XML 類型：
   
 ```sql
 SELECT CAST('<Name><FName>Carol</FName><LName>Elliot</LName></Name>'  AS XML)  

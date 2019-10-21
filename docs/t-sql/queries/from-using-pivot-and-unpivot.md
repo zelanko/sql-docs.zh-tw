@@ -1,7 +1,7 @@
 ---
 title: 使用 PIVOT 和 UNPIVOT | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559413"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305174"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 
@@ -62,7 +62,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 `UNPIVOT` 子句中的資料行識別碼會依照目錄定序。 就 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 而言，定序一律為 `SQL_Latin1_General_CP1_CI_AS`。 就 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 部分自主資料庫而言，定序一律為 `Latin1_General_100_CI_AS_KS_WS_SC`。 如果資料行與其他資料行結合，就必須使用定序子句 (`COLLATE DATABASE_DEFAULT`) 來避免衝突。  
 
   
@@ -153,7 +153,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-由 `EmployeeID` 資料行所傳回的唯一值會變成最終結果集中的欄位。 因此，樞紐子句指定的每個 `EmployeeID` 編號都會有一個資料行：在此情況下是員工 `164`、`198`、`223`、`231` 和 `233`。 `PurchaseOrderID` 資料行會當作數值資料行，這是在最終輸出中傳回的資料行 (稱為群組資料行) 所根據以進行分組的資料行。 在此情況下，`COUNT` 函數會對群組資料行進行彙總。 請注意，此時會顯示警告訊息，指出計算每個員工的 `PurchaseOrderID` 時，並未考慮 `COUNT` 資料行中出現的任何 Null 值。  
+由 `EmployeeID` 資料行所傳回的唯一值會變成最終結果集中的欄位。 因此，樞紐子句指定的每個 `EmployeeID` 編號都會有一個資料行：在此情況下是員工 `250`、`251`、`256`、`257` 和 `260`。 `PurchaseOrderID` 資料行會當作數值資料行，這是在最終輸出中傳回的資料行 (稱為群組資料行) 所根據以進行分組的資料行。 在此情況下，`COUNT` 函數會對群組資料行進行彙總。 請注意，此時會顯示警告訊息，指出計算每個員工的 `PurchaseOrderID` 時，並未考慮 `COUNT` 資料行中出現的任何 Null 值。  
   
 > [!IMPORTANT]  
 >  搭配 `PIVOT` 使用彙總函數時，在計算彙總期間不會考慮值資料行中出現的任何 Null 值。  

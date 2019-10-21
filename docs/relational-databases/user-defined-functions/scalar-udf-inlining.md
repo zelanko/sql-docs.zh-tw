@@ -15,16 +15,16 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71299132"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517995"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文介紹純量 UDF 內嵌，這是智慧型查詢處理功能套件下的一項功能。 此功能可針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 開始) 及 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中叫用 UDF 的查詢改善其效能。
 

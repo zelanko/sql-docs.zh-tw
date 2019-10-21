@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a8cdb93274b8db61d62194b412543cccca79e155
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914804"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313743"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   在指定的連結伺服器上，執行指定的傳遞查詢。 這部伺服器是 OLE DB 資料來源。 您可以依照資料表名稱的相同方式，在查詢的 FROM 子句中參考 OPENQUERY。 OPENQUERY 也可以被當作 INSERT、UPDATE 或 DELETE 陳述式的目標資料表加以參考。 它是根據 OLE DB 提供者的功能而定。 雖然查詢可以傳回多個結果集，但 OPENQUERY 只傳回第一個結果集。  
   

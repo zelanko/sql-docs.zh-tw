@@ -106,7 +106,7 @@ ms.locfileid: "72008466"
   
 |元件|需求|  
 |---------------|-----------------|  
-|記憶體 \*|**最小值：**<br/><br/> Express 版本：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建議使用：**<br/><br/> Express 版本：1 GB<br/><br/> 所有其他版本：至少 4 GB，並應隨著資料庫大小增加以確保最佳效能。|  
+|記憶體 \*|**最低規格：**<br/><br/> Express 版本：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建議使用：**<br/><br/> Express 版本：1 GB<br/><br/> 所有其他版本：至少 4 GB，並應隨著資料庫大小增加以確保最佳效能。|  
 |處理器速度|**最小值：** x64 處理器：1.4 GHz<br/><br/> **建議使用：** 2.0 GHz 或更快|  
 |處理器類型|x64 處理器：AMD Opteron、AMD Athlon 64、具有 Intel EM64T 支援的 Intel Xeon、具有 EM64T 支援的 Intel Pentium IV|  
   
@@ -262,7 +262,7 @@ ms.locfileid: "72008466"
 -   [儲存空間直接存取 \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
 -   SMB 檔案共用  
     - 獨立或叢集安裝的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔案不支援 SMB 儲存體。 請改用直接連結存放裝置、存放區域網路或 S2D。 
-    - SMB 儲存體可由 Windows 檔案伺服器或第三方 SMB 存放裝置所裝載。 如果使用了 Windows File Server，則 Windows File Server 版本應為 2008 或更新版本。 如需有關使用 SMB 檔案共用安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為儲存體選項的詳細資訊，請參閱＜ [將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)的最低軟硬體需求。  
+    - SMB 儲存體可由 Windows 檔案伺服器或第三方 SMB 存放裝置所裝載。 如果使用了 Windows File Server，則 Windows File Server 版本應為 2008 或更新版本。 如需有關使用 SMB 檔案共用安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為儲存體選項的詳細資訊，請參閱[＜安裝 SQL Server 與 SMB 檔案共用儲存體＞](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
   
   
   
