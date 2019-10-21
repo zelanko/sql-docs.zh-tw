@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: 概觀
   items:
-    - name: SQL Server 的新功能
+    - name: 新功能
       items:
         - name: SQL Server 2019
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -23,6 +23,8 @@
           href: database-engine/whats-new-in-sql-server-2016.md
     - name: 版本與功能
       items:
+        - name: SQL Server 2019
+          href: sql-server/editions-and-components-of-sql-server-version-15.md
         - name: SQL Server 2017
           href: sql-server/editions-and-components-of-sql-server-2017.md
         - name: SQL Server 2016
@@ -89,8 +91,6 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
-                - name: Minikube
-                  href: big-data-cluster/deploy-on-minikube.md
             - name: 部署指令碼
               items:
                 - name: AKS python 指令碼
@@ -8348,27 +8348,27 @@
         - name: 延伸模組
           href: azure-data-studio/extensions.md
           items:
-            - name: PostgreSQL 延伸模組 (預覽)
+            - name: PostgreSQL 延伸模組
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019 (預覽)
+            - name: SQL Server 2019
               href: azure-data-studio/sql-server-2019-extension.md
-            - name: SQL Server Agent (預覽)
+            - name: SQL Server Agent
               href: azure-data-studio/sql-server-agent-extension.md
-            - name: SQL Server 中央管理伺服器延伸模組 (預覽)
+            - name: SQL Server 中央管理伺服器延伸模組
               href: azure-data-studio/sql-server-cms-extension.md
-            - name: SQL Server dacpac 延伸模組 (預覽)
+            - name: SQL Server dacpac 延伸模組
               href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: SQL Server 匯入 (預覽)
+            - name: SQL Server 匯入
               href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler (預覽)
+            - name: SQL Server Profiler
               href: azure-data-studio/sql-server-profiler-extension.md
-            - name: 結構描述比較延伸模組(預覽)
+            - name: 結構描述比較延伸模組
               href: azure-data-studio/schema-compare-extension.md
             - name: PowerShell 延伸模組
               href: azure-data-studio/powershell-extension.md
-            - name: 受控執行個體延伸模組 (預覽)
+            - name: 受控執行個體延伸模組
               href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: SandDance 延伸模組 (預覽)
+            - name: SandDance 延伸模組
               href: azure-data-studio/sanddance-extension.md
         - name: 延伸模組製作
           items:
@@ -10293,7 +10293,7 @@
           items:
             - name: SQL Server 2017
               href: linux/sql-server-linux-release-notes.md
-            - name: SQL Server 2019 預覽
+            - name: SQL Server 2019
               href: linux/sql-server-linux-release-notes-2019.md
         - name: 新功能
           href: linux/sql-server-linux-whats-new.md
