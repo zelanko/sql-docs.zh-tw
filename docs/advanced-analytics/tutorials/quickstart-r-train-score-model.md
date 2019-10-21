@@ -10,24 +10,31 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005975"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542119"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server Machine Learning 服務在 R 中建立預測模型並為其評分
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server Machine Learning 服務在 R 中建立和評分預測模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入門中，您將使用 R 建立和定型預測模型、將模型儲存至 SQL Server 實例中的資料表，然後使用模型，利用[SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)來預測新資料中的值。
 
-您將在本快速入門中使用的模型是一個簡單的一般化線性模型（GLM），可預測車輛已符合手動傳輸的機率。 您將使用 R 隨附的**mtcars**資料集。
+您將建立並執行在 SQL 中執行的兩個預存程式。 第一個是使用 R 隨附的**mtcars**資料集，並產生簡單的一般化線性模型（GLM），預測車輛已符合手動傳輸的機率。 第二個程式適用于計分-它會呼叫在第一個程式中產生的模型，以根據新的資料輸出一組預測。 藉由將 R 程式碼放在 SQL 預存程式中，作業會包含在 SQL 中、可重複使用，而且可由其他預存程式和用戶端應用程式呼叫。
 
 > [!TIP]
-> 如果您需要對線性模型進行重新整理程式，請嘗試此教學課程，其中描述使用 rxLinMod 來調整模型的程式：[調整線性模型 (英文)](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> 如果您需要對線性模型進行重新整理程式，請嘗試此教學課程，其中描述使用 rxLinMod 調整模型的程式：[調整線性模型](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
-## <a name="prerequisites"></a>必要條件
+藉由完成本快速入門，您將瞭解：
+
+> [!div class="checklist"]
+> - 如何在預存程式中內嵌 R 程式碼
+> - 如何透過預存程式上的輸入，將輸入傳遞至您的程式碼
+> - 如何使用預存程式來讓模型
+
+## <a name="prerequisites"></a>Prerequisites
 
 - 本快速入門需要使用已安裝 R 語言的[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)，來存取 SQL Server 的實例。
 
@@ -41,7 +48,7 @@ ms.locfileid: "72005975"
 
 ### <a name="create-the-source-data"></a>建立來源資料
 
-1. 開啟**SQL Server Management Studio** ，並連接到您的 SQL Server 實例。
+1. 開啟 SSMS，連接到您的 SQL Server 實例，然後開啟新的查詢視窗。
 
 1. 建立用來儲存定型資料的資料表。
 
@@ -61,7 +68,7 @@ ms.locfileid: "72005975"
    );
    ```
 
-1. 將來自內建資料集的資料插入 `mtcars`。
+1. 將資料從內建資料集 `mtcars` 中插入。
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -98,7 +105,7 @@ END;
 GO
 ```
 
-- @No__t-0 的第一個引數是*公式*參數，它會將 @no__t 2 定義為相依于 `hp + wt`。
+- @No__t_0 的第一個引數是*公式*參數，它會將 `am` 定義為相依于 `hp + wt`。
 - 輸入資料儲存在變數 `MTCarsData` 中，會由 SQL 查詢填入。 如果您沒有為輸入資料指定特定的名稱，預設變數名稱將會是 _InputDataSet_。
 
 ### <a name="store-the-model-in-the-sql-database"></a>將模型儲存在 SQL 資料庫中
@@ -124,7 +131,7 @@ GO
    ```
 
    > [!TIP]
-   > 如果您第二次執行此程式碼，就會收到此錯誤：「違反 PRIMARY KEY 條件約束 ...無法在物件 dbo. stopping_distance_models 中插入重複的索引鍵。 有一個可避免發生此錯誤的選項，就是更新每個新模型的名稱。 例如，您可以將名稱變更成更具描述性且包含模型類型、模型建立日期等等的名稱。
+   > 如果您第二次執行此程式碼，就會收到下列錯誤：「違反 PRIMARY KEY 條件約束 .。。無法在物件 dbo. stopping_distance_models 中插入重複的索引鍵。 有一個可避免發生此錯誤的選項，就是更新每個新模型的名稱。 例如，您可以將名稱變更成更具描述性且包含模型類型、模型建立日期等等的名稱。
 
      ```sql
      UPDATE GLM_models
@@ -211,7 +218,7 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 您也可以使用[PREDICT （transact-sql）](../../t-sql/queries/predict-transact-sql.md)語句，根據預存模型產生預測值或分數。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 如需 SQL Server Machine Learning 服務的詳細資訊，請參閱：
 
