@@ -118,7 +118,7 @@ ms.locfileid: "68941087"
   
     -   ins_cmd-指定<strong>CALL sp_MSins_*article_name*</strong>的值, 其中 **\@** **_article_name_** 是針對發行項所指定的值。 **\@**  
   
-    -   \@      **del_cmd-指定CALLsp_MSdel_article_name或XCALLsp_MSdel_article_name的值,其中article_name是針對_*文章**所\@** 指定的值。  
+    -   \@  **del_cmd-指定CALLsp_MSdel_article_name或XCALLsp_MSdel_article_name的值,其中article_name是針對_*文章**所\@** 指定的值。  
   
     -   upd_cmd-指定<strong>SCALL sp_MSupd_*article_name*</strong>、 <strong>CALL sp_MSupd_*article_name*</strong>、 <strong>XCALL *</strong>sp_MSupd__article_name 或<strong>MCALL sp_MSupd_* article_name *</strong>的值, 其中 **\@** _**article_name**_ 是針對 **\@** 發行項指定的值。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "68941087"
   
     -   ins_cmd-指定<strong>CALL sp_MSins_*article_name*</strong>的值, 其中 **\@** _**article_name**_ 是針對發行項所指定的值。 **\@**  
   
-    -   **\@**       **del_cmd-指定CALLsp_MSdel_article_name或XCALLsp_MSdel_article_name的值,其中article_name是針對發行項所\@** 指定的值。  
+    -   **\@**  **del_cmd-指定CALLsp_MSdel_article_name或XCALLsp_MSdel_article_name的值,其中article_name是針對發行項所\@** 指定的值。  
   
     -   upd_cmd-指定<strong>SCALL sp_MSupd_*article_name*</strong>、 <strong>CALL sp_MSupd_*article_name*</strong>、 <strong>XCALL sp_MSupd_*article_name*</strong>、MCALL sp_MSupd_ article_name 的值 **\@** , 其中 _**article_name**_ 是針對 **\@** 發行項指定的值。  
   
