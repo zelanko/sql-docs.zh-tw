@@ -1,7 +1,7 @@
 ---
-title: 使用 Microsoft 分散式交易協調器 (ODBC) |Microsoft Docs
+title: 使用 Microsoft 分散式交易協調器（ODBC） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -12,12 +12,12 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 739d87c7a590489a2dd263535356b0b520a4a9b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 425f9fc0b7637aab1869130a2830c2f3c134fe7d
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200224"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688694"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>使用 Microsoft 分散式交易協調器 (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "63200224"
   
 1.  使用 MS DTC OLE DtcGetTransactionManager 函數來連接至 MS DTC。 如需有關 MS DTC 的詳細資訊，請參閱 Microsoft 分散式交易協調器。  
   
-2.  每個 microsoft 呼叫一次 SQL DriverConnect?? SQL Server 篇 您想要建立的連接。  
+2.  針對您想要建立的每個 Microsoft SQL Server 連接呼叫 SQL DriverConnect 一次。  
   
 3.  呼叫 MS DTC OLE ITransactionDispenser::BeginTransaction 函數來開始 MS DTC 交易並取得代表此交易的交易物件。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63200224"
 > [!NOTE]  
 >  您也可以針對每個 SQL Server 依序呼叫 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)，而非依照先前步驟 4 和 5 所建議的方式呼叫它們。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行交易&#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

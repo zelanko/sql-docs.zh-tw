@@ -1,7 +1,7 @@
 ---
 title: CircularString | Microsoft 文件
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -10,18 +10,18 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: efe15f6eea386522fc6139601af66ce736e980f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3eacaba2ad0ddc2c0475d29b151d0a50be98fc0
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014417"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688711"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString` 是零個或多個連續圓弧線段的集合。 圓弧線段是指由二維平面中三個點所定義的弧形線段。第一個點不得與第三個點相同。 如果圓弧線段的三個點都是共線，此圓弧線段就會被視為直線線段。  
   
 > [!IMPORTANT]  
->  詳細的說明和中導入的新空間功能的範例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，包括`CircularString`子類型，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引進的新空間功能（包括 `CircularString` 子類型）的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ## <a name="circularstring-instances"></a>CircularString 執行個體  
  下圖顯示有效的 `CircularString` 執行個體：  
@@ -29,9 +29,9 @@ ms.locfileid: "66014417"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
- A`CircularString`還是可接受，如果它是空的或包含奇數點 n，其中 n > 1。 下面是已接受的 `CircularString` 執行個體。  
+ 如果 `CircularString` 實例是空的或包含奇數的點（n），其中 n > 1，則會接受。 下面是已接受的 `CircularString` 執行個體。  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
@@ -39,7 +39,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
   
  `@g3` 顯示 `CircularString` 執行個體可被系統接受但卻無效。 系統無法接受下列 CircularString 執行個體宣告。 這個宣告會擲回 `System.FormatException`。  
   
-```  
+```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
@@ -58,7 +58,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
  下列範例會顯示有效的 `CircularString` 執行個體。  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1, 0 1)';  
@@ -70,7 +70,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();
   
  下列範例會顯示無效的 CircularString 執行個體。  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING(1 1, 2 0, 1 1)';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
@@ -95,7 +95,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>B. 使用 CircularString 搭配一個圓弧線段來具現化 Geometry 執行個體  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>b. 使用 CircularString 搭配一個圓弧線段來具現化 Geometry 執行個體  
  下列範例會示範如何建立具有單一圓弧線段 (半圓形) 的 `CircularString` 執行個體：  
   
 ```sql  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- 請注意，值`CircularString`範例很接近 2 篇，也就是圓形的實際圓周。  
+ 請注意，`CircularString` 範例的值接近 2&#x03c0; （2 * pi），這是圓形的實際圓周。  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. 在相同的陳述式中使用 CircularString 來宣告和具現化 Geometry 執行個體  
  這個程式碼片段會示範如何在相同的陳述式中使用 `geometry` 來宣告和具現化 `CircularString` 執行個體：  
@@ -157,7 +157,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [空間資料類型概觀](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
  [MakeValid &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   

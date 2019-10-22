@@ -1,7 +1,7 @@
 ---
 title: 定序與 Unicode 支援 | Microsoft 文件
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -27,12 +27,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918950"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688729"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的定序會提供資料的排序規則、大小寫和區分腔調字屬性。 與字元資料類型 (例如 `char` 和 `varchar`) 搭配使用的定序會指示字碼頁，以及可針對該資料類型表示的對應字元。 不論您是安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新執行個體、還原資料庫備份，還是將伺服器連接至用戶端資料庫，請務必了解您即將使用之資料的地區設定需求、排序次序和區分大小寫與腔調字。 若要列出您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所提供的定序，請參閱 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
@@ -49,11 +49,11 @@ ms.locfileid: "62918950"
   
  與定序相關聯的選項是區分大小寫、區分腔調字、區分假名和區分全半形。 這些選項的指定方式是將它們附加至定序名稱。 例如，此定序 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 區分大小寫、區分腔調字、區分假名和區分全半形。 下表描述與這些選項相關聯的行為。  
   
-|選項|描述|  
+|選項|[描述]|  
 |------------|-----------------|  
 |區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 如果未選取此選項，則定序不區分大小寫。 也就是說，在排序用途上，SQL Server 會將大寫和小寫字母視為相同。 指定 _CI，就可以明確地選取不區分大小寫。|  
-|區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，' a' 不等於 ' 篇 '。 如果未選取此選項，則定序不區分腔調字。 也就是說，在排序用途上，SQL Server 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地選取不區分腔調字。|  
-|區分假名 (_KS)|區分兩種類型的日文假名字元：平假名與片假名。 如果未選取此選項，定序就不會區分假名。 也就是說，在排序用途上，SQL Server 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|  
+|區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，' a ' 不等於 '&#x1EA5;'。 如果未選取此選項，則定序不區分腔調字。 也就是說，在排序用途上，SQL Server 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地選取不區分腔調字。|  
+|區分假名 (_KS)|區分兩種類型的日文假名字元：平假名和片假名。 如果未選取此選項，定序就不會區分假名。 也就是說，在排序用途上，SQL Server 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|  
 |區分全半形 (_WS)|區分全形與半形字元。 如果未選取此選項，在排序用途上，SQL Server 會將相同字元的全形和半形表示法視為相同。 省略此選項，是指定不區分全形與半形的唯一方法。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列定序集：  
@@ -144,7 +144,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Supplementary_Characters"></a> 增補字元  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供資料類型，例如`nchar`和`nvarchar`來儲存 Unicode 資料。 這些資料類型會使用稱為 *UTF-16*的格式來編碼文字。 Unicode Consortium 會為每個字元配置唯一的字碼指標，其值介於 0x0000 到 0x10FFFF 的範圍。 最常用的字元具有可在記憶體和磁碟上納入 16 位元單字的字碼指標值，但是字碼指標值大於 0xFFFF 的字元則需要兩個連續的 16 位元單字。 這些字元稱為 *「增補字元」*(Supplementary Character)，而這兩個連續的 16 位元單字則稱為 *「Surrogate 字組」*(Surrogate Pair)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供資料類型，例如 `nchar` 和 `nvarchar` 儲存 Unicode 資料。 這些資料類型會使用稱為 *UTF-16*的格式來編碼文字。 Unicode Consortium 會為每個字元配置唯一的字碼指標，其值介於 0x0000 到 0x10FFFF 的範圍。 最常用的字元具有可在記憶體和磁碟上納入 16 位元單字的字碼指標值，但是字碼指標值大於 0xFFFF 的字元則需要兩個連續的 16 位元單字。 這些字元稱為 *「增補字元」* (Supplementary Character)，而這兩個連續的 16 位元單字則稱為 *「Surrogate 字組」* (Surrogate Pair)。  
   
  如果您使用增補字元：  
   
@@ -216,7 +216,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  [Unicode Consortium 網站](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [自主資料庫定序](../databases/contained-database-collations.md)   
  [選擇建立全文檢索索引時的語言](../search/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  

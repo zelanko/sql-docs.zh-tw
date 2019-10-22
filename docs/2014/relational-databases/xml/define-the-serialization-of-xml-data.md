@@ -1,7 +1,7 @@
 ---
 title: 定義 XML 資料的序列化 | Microsoft 文件
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637576"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688890"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定義 XML 資料的序列化
   將 XML 資料類型明確或隱含轉換成 SQL 字串或二進位類型時，會根據本主題中所列的規則來序列化 XML 資料類型的內容。  
@@ -33,8 +33,8 @@ ms.locfileid: "62637576"
   
  例如：  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
  以下是結果：  
@@ -47,25 +47,25 @@ select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))
   
  例如：  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  以下是結果：  
   
 ```  
-<??/>  
+<Δ/>  
 ```  
   
  如果 SQL 目標類型是 VARCHAR 或 NCHAR，其結果會以對應於資料庫定序字碼頁的編碼序列化，但沒有位元組順序標示或 XML 宣告。 如果目標類型太小，或值無法對應至目標定序字碼頁，則會引發錯誤。  
   
  例如：  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- 這可能會導致發生錯誤時，如果目前的定序字碼頁無法表示 Unicode 字元 」，或它會表示該特定的編碼方式。  
+ 如果目前定序的字碼頁無法表示 Unicode 字元&#x10300;，這可能會導致錯誤，或者它會以特定的編碼方式來表示它。  
   
  將 XML 結果傳回至用戶端時，資料是以 UTF-16 編碼格式傳送。 接著，用戶端提供者會根據其 API 規則來公開此資料。  
   
@@ -89,7 +89,7 @@ select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))
   
  例如：  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
@@ -100,19 +100,19 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
 ```  
 <a a="  
-    ????>">     
+    𐌀>">     
 </a>  
 ```  
   
  如果您不想套用最後一個空格的保護規則，您可以在從 **XML** 轉換成字串或二進位類型時，使用明確的 CONVERT 選項 1。 例如，若要避免實體化，您可以執行下列動作：  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  請注意， [query() 方法 (XML 資料類型)](/sql/t-sql/xml/query-method-xml-data-type) 會產生 XML 資料類型執行個體。 因此，轉換成字串或二進位類型的 **query()** 方法的任何結果，將根據前述規則而實體化。 如果您要取得未實體化的字串值，請改用 [value() 方法 (XML 資料類型)](/sql/t-sql/xml/value-method-xml-data-type) 。 以下是使用 **query()** 方法的範例：  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
@@ -126,7 +126,7 @@ This example contains an entitized char: <.
   
  以下是使用 **value()** 方法的範例：  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
@@ -141,7 +141,7 @@ This example contains an entitized char: <.
   
  例如，xs:double 值 1.34e1 序列化為 13.4，如下列範例所顯示：  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
@@ -149,7 +149,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  這會傳回字串值 13.4。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XQuery 中的類型轉換規則](/sql/xquery/type-casting-rules-in-xquery)   
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
