@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 729443d2e9a9758a6ebedb15ac981e945128fa17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e780d6afaddc5ac3af0e87e6b629fb39c987879
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002827"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305036"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -33,13 +33,13 @@ ms.locfileid: "68002827"
 |訊息文字|必須宣告純量變數 "%.*ls"。|  
   
 ## <a name="explanation"></a>說明  
-當您在 SQL 指令碼中使用某個變數，但卻沒有先宣告該變數時，就會發生這個錯誤。 下列範例會針對 SET 和 SELECT 陳述式傳回錯誤 137，因為未宣告 **@mycol** 。  
+當您在 SQL 指令碼中使用某個變數，但卻沒有先宣告該變數時，就會發生這個錯誤。 下列範例會針對 SET 和 SELECT 陳述式傳回錯誤 137，因為沒有宣告 **\@mycol**。  
   
 SET @mycol = 'ContactName';  
   
 SELECT @mycol;  
   
-導致這個錯誤的其中一個更複雜原因包括使用了在 EXECUTE 陳述式外部宣告的變數。 例如，在 SELECT 陳述式中指定的變數 **@mycol** 是 SELECT 陳述式的本機變數。因此，這個變數就位於 EXECUTE 陳述式外部。  
+導致這個錯誤的其中一個更複雜原因包括使用了在 EXECUTE 陳述式外部宣告的變數。 例如，在 SELECT 陳述式中所指定變數 **\@mycol** 是 SELECT 陳述式的區域變數；因此，這個變數位於 EXECUTE 陳述式外部。  
   
 USE AdventureWorks2012;  
   

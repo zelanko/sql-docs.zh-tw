@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e30bc0e3dd0402d4b62ac55a897268c021507560
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063996"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517937"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   安裝 SQL Server 容錯移轉叢集之前，您必須先選取硬體以及要執行 SQL Server 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
   
- 如果 Windows 叢集有本機磁碟機，而且同一個磁碟機代號在一個或多個叢集節點上也做為共用磁碟機使用時，您無法將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝在該磁碟機上。  
+ 如果 Windows 叢集有本機磁碟機，而且同一個磁碟機代號在一個或多個叢集節點上也做為共用磁碟機使用時，您無法將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝在該磁碟機上。 這項限制適用屬於 Windows 容錯移轉叢集執行個體的伺服器上 SQL Server 容錯移轉叢集執行個體和獨立執行個體。
   
  您可能也想要檢閱下列主題，以進一步了解 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集概念、功能及工作。  
   

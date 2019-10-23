@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d841f7aa8a5aacfa684b984791a15128b306ab1d
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: a0bf701395723b1d21efea38f969024a1921c3f6
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109767"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545081"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (預覽)
 
@@ -111,8 +111,8 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 Azure 資料倉儲中的具體化檢視非常類似 SQL Server 中的索引檢視表。  它的限制幾乎與索引檢視表相同 (請參閱[建立索引檢視表](/sql/relational-databases/views/create-indexed-views)以取得詳資訊)，不過具體化檢視支援彙總函式。   具體化檢視有其他考量事項。  
  
 只有具體化檢視才支援 CLUSTERED COLUMNSTORE INDEX。 
- 
-具體化檢視可透過 DROP VIEW 來捨棄。  您可以使用 ALTER MATERIALIZED VIEW 來停用或重建具體化檢視。   
+
+具體化檢視無法參考其他檢視。  
  
 具體化檢視可在資料分割資料表上建立。  具體化檢視中參考的資料表上支援 SPLIT/MERGE 作業。  具體化檢視中參考的資料表上不支援 SWITCH。 若嘗試，使用者將會看到錯誤 `Msg 106104, Level 16, State 1, Line 9`
  
@@ -129,6 +129,8 @@ Azure 資料倉儲中的具體化檢視非常類似 SQL Server 中的索引檢�
 一旦建立，具體化檢視在 SQL Server Management Studio 內 Azure SQL 資料倉儲執行個體的檢視資料夾下就是可見的。
 
 使用者可以執行 [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) 與 [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) 來判斷具體化檢視取用的空間。  
+
+具體化檢視可透過 DROP VIEW 來捨棄。  您可以使用 ALTER MATERIALIZED VIEW 來停用或重建具體化檢視。   
 
 SQL Server Management Studio 中的 EXPLAIN 計畫與圖形化預估執行計畫可以顯示具體化檢視是否由查詢最佳化工具考量為查詢執行使用。 SQL Server Management Studio 中的 與圖形化預估執行計畫可以顯示具體化檢視是否由查詢最佳化工具考量為查詢執行使用。
 

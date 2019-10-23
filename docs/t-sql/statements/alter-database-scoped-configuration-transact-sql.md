@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261010"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589988"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -114,12 +114,12 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 MAXDOP **=** {\<值> | PRIMARY } **\<值>**
 
-指定應該用於陳述式的預設**平行處理原則最大程度 (MAXDOP)** 設定。 0 是預設值，表示將改用伺服器組態。 資料庫範圍的 MAXDOP 會覆寫 (設定為 0 時除外) sp_configure 在伺服器層級設定的**平行處理原則的最大程度**。 查詢提示仍然可以覆寫資料庫範圍的 MAXDOP 來調整需要不同設定的特定查詢。 所有這些設定都會受到針對[工作負載群組]()設定的 MAXDOP 限制。
+指定應該用於陳述式的預設**平行處理原則最大程度 (MAXDOP)** 設定。 0 是預設值，表示將改用伺服器組態。 資料庫範圍的 MAXDOP 會覆寫 (設定為 0 時除外) sp_configure 在伺服器層級設定的**平行處理原則的最大程度**。 查詢提示仍然可以覆寫資料庫範圍的 MAXDOP 來調整需要不同設定的特定查詢。 所有這些設定都會受到針對[工作負載群組](create-workload-group-transact-sql.md)設定的 MAXDOP 限制。
 
 您可以使用 MAXDOP 選項來限制執行平行計畫所用的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行收集統計資料，以及靜態和索引鍵集驅動資料指標擴展，考慮平行執行計畫。
 
 > [!NOTE]
-> **平行處理原則最大程度 (MAXDOP)** 限制的設定會根據[工作](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 其不會根據[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示平行查詢執行期間，單一要求可能會產生指派至[排程器](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)的多個工作。 如需詳細資訊，請參閱[執行緒與工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。 
+> **平行處理原則最大程度 (MAXDOP)** 限制的設定會根據[工作](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 其不會根據[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示在平行查詢執行期間，單一要求可能會繁衍指派至[排程器](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)的多個工作。 如需詳細資訊，請參閱[執行緒與工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。 
 
 若要在執行個體層級設定此選項，請參閱[設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
 

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 62074eb9c621c2243a079a21ae9bbcba66c930cd
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251351"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586702"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -3051,20 +3051,8 @@ SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
-
-一旦開啟資料庫的結果集快取功能，除了這些查詢以外，會快取查詢的其他全部結果，直到快取滿為止：
-
-- 使用 DateTime.Now() 等不具決定性函式的查詢 
-- 使用使用者定義函式的查詢
-- 傳回資料的資料列大小超過 64KB 的查詢   
-
-具有大型結果集 (例如 > 1 百萬個資料列) 的查詢在第一次執行時，可能會在建立結果快取時，出現效能較低的情形。
-
-如果符合下列所有需求，則會對查詢重複使用快取結果集：
-
-1. 執行查詢的使用者可以存取查詢中所參考所有資料表。
-1. 新查詢與產生結果集快取的上一個查詢完全相符。
-1. 產生快取結果集的來源資料表中沒有資料或結構描述變更。  
+### <a name="permissions"></a>權限
+若要設定 RESULT_SET_CACHING 選項，使用者需要伺服器層級主體登入 (由佈建程序所建立) 或為 `dbmanager` 資料庫角色的成員。  
 
 
 **<snapshot_option> ::=**         
@@ -3085,10 +3073,7 @@ OFF
 
 在已啟用 READ_COMMITTED_SNAPSHOT 的資料庫中，如果有多個資料版本存在，查詢可能會遭遇較低的效能。 長時間開啟的交易也會導致資料庫大小增加。 如果封鎖版本清除的這些交易進行資料變更，就會發生此問題。  
 
-## <a name="permissions"></a>權限
-
-若要設定 RESULT_SET_CACHING 選項，使用者需要伺服器層級主體登入 (由佈建程序所建立) 或為 `dbmanager` 資料庫角色的成員。  
-
+### <a name="permissions"></a>權限
 若要設定 READ_COMMITTED_SNAPSHOT 選項，使用者需要資料庫的 ALTER 權限。
 
 ## <a name="examples"></a>範例
@@ -3119,26 +3104,6 @@ SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>檢查查詢的結果集快取命中或快取遺漏
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit;
-```
-
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>檢查結果集快取命中的所有查詢
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0;
-```
-
 ### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>啟用資料庫的 Read_Committed_Snapshot 選項
 
 ```sql
@@ -3148,6 +3113,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>另請參閱
 
+- [使用結果集快取微調效能](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

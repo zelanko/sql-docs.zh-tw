@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95ca1cbd0929607b45c8f9cc429d4224a60b555c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68829d55be0b080e9b4beb9d7b284e3f57a46581
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068259"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305915"
 ---
-# <a name="mssqlserver10507"></a>MSSQLSERVER_10507
+# <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,7 +30,7 @@ ms.locfileid: "68068259"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|PG_STMT_DOES_NOT_MATCH|  
-|訊息文字|無法建立計畫指南 '%.\*ls'，因為 **@stmt** 和 **@module_or_batch** 或是 **@plan_handle** 和 **@statement_start_offset** 所指定的陳述式不符合指定的模組或批次中的任何陳述式。 請將值修改為與模組或批次中的陳述式相符。|  
+|訊息文字|無法建立計劃指南 '%.\*ls'，因為 **\@stmt** 和 **\@module_or_batch** 或 **\@plan_handle** 和 **\@statement_start_offset** 所指定的陳述式不符合指定模組或批次中任何陳述式。 請將值修改為與模組或批次中的陳述式相符。|  
   
 ## <a name="explanation"></a>說明  
 指定之模組或批次中的陳述式無法與指定的陳述式或陳述式位移值相符。  

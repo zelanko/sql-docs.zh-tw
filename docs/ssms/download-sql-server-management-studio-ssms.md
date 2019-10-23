@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: a51b0a3da9fda396b23f6ddcf9121fe7a30ec202
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251399"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542223"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -40,11 +40,7 @@ SQL Server Management Studio (SSMS) 是整合式環境，可用於管理任何 S
 
 SSMS 是免費的！
 
-## <a name="download-ssms-1831"></a>下載 SSMS 18.3.1
-
-**SSMS 18.3.1 現已可供使用，且是 *SQL Server Management Studio* 的公開推出 (GA) 版本，它提供對 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援！**
-
-**[下載 SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[下載 SSMS](https://aka.ms/ssmsfullsetup)
 
 SSMS 18.3.1 是 SSMS 最新的公開推出 (GA) 版本。 若您已安裝 SSMS 18 的先前 GA 版本，安裝 SSMS 18.3.1 會將它升級到 18.3.1 若您已安裝舊的 SSMS 18.x 預覽  版本，安裝 SSMS 18.3.1 之前必須先將它解除安裝。
 
@@ -60,6 +56,9 @@ SSMS 18.x 安裝不會升級或取代 SSMS 17.x 版或更早版本。 SSMS 18.x 
 
 如果電腦中包含並存安裝的 SSMS，請確認已針對您的特定需求啟動正確的版本。 最新版本會標記為 **Microsoft SQL Server Management Studio 18**
 
+> [!Note]
+> 如果您在非英文語言版本存取此頁面，且想要查看最新內容，請參閱本頁面的[英文版](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)。 您可以選取[可用的語言](#available-languages-ssms-1831)，從英文版網站下載不同語言版本。
+
 ## <a name="available-languages-ssms-1831"></a>可用語言 (SSMS 18.3.1)
 
 此版 SSMS 提供下列語言版本：
@@ -74,9 +73,9 @@ SQL Server Management Studio 18.3.1：
 
 | 新項目 | 詳細資料 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 資料分類 | 將資料分類資訊新增到資料行屬性 UI ([資訊類型]  、[資訊類型識別碼]  、[敏感度標籤]  和 [敏感度標籤識別碼]  不會在 SSMS UI 中公開)。 |
+| 資料分類 | 將資料分類資訊新增到資料行屬性 UI (SSMS UI 中不會公開 [資訊類型]  、[資訊類型識別碼]  、[敏感度標籤]  和 [敏感度標籤識別碼]  )。 |
 | IntelliSense/編輯器 | 更新最近新增至 SQL Server 2019 功能 (例如，"ALTER SERVER CONFIGURATION") 的支援。 |
-| Integration Services | 新增新選取功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，該項目會在 ADF 管線中，將 Azure-SSIS Integration Runtime 上的 SSIS 套件執行叫用為執行 SSIS 套件活動。 |
+| Integration Services | 新增新的選取功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，其可在 ADF 管線中，將 Azure-SSIS Integration Runtime 上的 Integration Services (SSIS) 套件執行叫用為執行 SSIS 套件活動。 |
 | SMO/指令碼 | 新增 Azure SQL DW 唯一條件約束支援指令碼的支援。 |
 | SMO/指令碼 | 資料分類 - 新增 SQL 版本 10 (SQL 2008) 及更高版本的支援。  - 新增 SQL 版本 15 (SQL 2019) 及更高版本，以及 Azure SQL DB 的新敏感性屬性 'rank'。 |
 

@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ba569631723bc456ceae2429d7c0fa8acac9769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031676"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586773"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,13 @@ ms.locfileid: "68031676"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中儲存資料的基本單位是分頁。 資料庫中配置給資料檔 (.mdf 或 .ndf) 的磁碟空間會邏輯區分為從 0 連續編號到 n 的分頁。 磁碟 I/O 作業在分頁層次上操作。 也就是說，SQL Server 會讀取或寫入整個資料分頁。
 
-範圍是八個實體連續分頁的集合，用來有效地管理這些分頁。 所有的分頁都儲存在範圍中。
+範圍是八個實體連續分頁的集合，用來有效地管理這些分頁。 所有頁面都會組織成範圍。
 
 ### <a name="pages"></a>頁面
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，分頁大小為 8 KB。 這意味著 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫是每 MB 有 128 個分頁。 每個分頁的開頭為 96 個位元組的標頭，用來儲存與分頁有關的系統資訊。 此資訊包括頁碼、分頁類型、分頁上可用空間的數量，以及擁有分頁的物件配置單位識別碼。
+定期記錄：其所有內容都會撰寫在頁面中。 類似書籍，SQL Server 中的所有資料列都會撰寫在頁面上。 在書籍中，所有頁面的大小都相同。 同樣地，SQL Server 所有資料頁的大小也都相同 - 8 KB。 在一本書中，大部分的頁面包含資料 (該書的主要內容)，有些頁面則包含內容的相關中繼資料 (例如目錄和索引)。 SQL Server 也一樣：大部分頁面包含使用者儲存的實際資料列，其稱為資料頁和文字/影像頁 (適用於特殊情況)。 索引頁包含資料所在位置的索引參考，且最後還有系統頁，其用來儲存有關資料組織 (PFS、GAM、SGAM、IAM、DCM、BCM 頁面) 的各種中繼資料。 請參閱下表以取得頁面類型及其描述。
+
+如前文所述，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，頁面大小為 8-KB。 這意味著 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫是每 MB 有 128 個分頁。 每個分頁的開頭為 96 個位元組的標頭，用來儲存與分頁有關的系統資訊。 此資訊包括頁碼、分頁類型、分頁上可用空間的數量，以及擁有分頁的物件配置單位識別碼。
 
 下表顯示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫資料檔案中使用的分頁類型。
 

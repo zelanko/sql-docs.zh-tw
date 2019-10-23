@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9808157b943a45f9d23320d270752e7ec712c310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cdf2c06311e703b6a07667ba41d1c853c17eb86
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068286"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305893"
 ---
-# <a name="mssqlserver10509"></a>MSSQLSERVER_10509
+# <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,10 +30,10 @@ ms.locfileid: "68068286"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|PG_INVALID_STMT|  
-|訊息文字|無法建立計畫指南 '%.\*ls'，因為 **@stmt** 或 **@statement_start_offset** 所指定的陳述式中含有語法錯誤或不適用於計畫指南。 請提供單一有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，或批次中陳述式的有效開始位置。 若要取得有效開始位置，請查詢 sys.dm_exec_query_stats 動態管理函數中的 statement_start_offset 資料行。|  
+|訊息文字|無法建立計劃指南 '%.\*ls'，因為 **\@stmt** 或 **\@statement_start_offset** 所指定的陳述式中含有語法錯誤或不符計劃指南使用資格。 請提供單一有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，或批次中陳述式的有效開始位置。 若要取得有效開始位置，請查詢 sys.dm_exec_query_stats 動態管理函數中的 statement_start_offset 資料行。|  
   
 ## <a name="explanation"></a>說明  
-**@stmt** 或 **@statement_start_offset** 所指定的陳述式中含有語法錯誤或不適用於計畫指南。  
+**\@stmt** 或 **\@statement_start_offset** 所指定的陳述式中含有語法錯誤或不符計劃指南使用資格。  
   
 ## <a name="user-action"></a>使用者動作  
 請提供單一有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，或批次中陳述式的有效開始位置。 若要取得有效開始位置，請查詢 sys.dm_exec_query_stats 動態管理函數中的 statement_start_offset 資料行。  

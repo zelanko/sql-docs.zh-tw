@@ -12,12 +12,12 @@ author: haoqian
 ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 25dc76122c8b4d1e68df4e83e3e1bd01d6f51890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092630"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305080"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>執行 Integration Services (SSIS) Scale Out 中的套件
 
@@ -65,7 +65,7 @@ ms.locfileid: "68092630"
 
 1.  建立執行。
 
-    針對每個套件，呼叫 `[catalog].[create_execution]`。 將 **@runinscaleout** 參數設定為 `True`。 如果不是所有 Scale Out Worker 電腦都可以執行套件，請將 **@useanyworker** 參數設定為 `False`。 如需此預存程序和 **@useanyworker** 參數的詳細資訊，請參閱 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)。 
+    針對每個套件，呼叫 `[catalog].[create_execution]`。 將參數 **\@runinscaleout** 設為 `True`。 如果並非所有 Scale Out Worker 電腦都可以執行套件，則請將參數 **\@useanyworker** 設為 `False`。 如需此預存程序和 **\@useanyworker** 參數的詳細資訊，請參閱 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)。 
 
 2. 設定執行參數。
 
@@ -77,7 +77,7 @@ ms.locfileid: "68092630"
 
 4. 開始執行。
 
-    呼叫 `[catalog].[start_execution]`。 設定 **@retry_count** 參數，以設定套件執行失敗時的重試次數。
+    呼叫 `[catalog].[start_execution]`。 設定參數 **\@retry_count**，以設定套件執行失敗時的重試次數。
     
 ### <a name="example"></a>範例
 下列範例會使用一個 Scale Out Worker 在 Scale Out 中執行兩個套件：`package1.dtsx` 和 `package2.dtsx`。  
@@ -118,7 +118,7 @@ GO
 
 2.  在 [目錄屬性]  對話方塊中，將 [全伺服器的預設執行模式]  設定為 [相應放大]  。
 
-設定這個預設執行模式之後，在呼叫 `[catalog].[create_execution]` 預存程序時，就不再需要指定 **@runinscaleout** 參數。 套件會自動以相應放大模式執行。 
+設定這個預設執行模式之後，在呼叫 `[catalog].[create_execution]` 預存程序時，就不再需要指定 **\@runinscaleout** 參數。 套件會自動以相應放大模式執行。 
 
 ![執行模式](media/exe-mode.PNG)
 

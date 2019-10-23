@@ -10,18 +10,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6cb2bdc652eb77908c044b640d315a90da8cf428
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: da38a5171694f1f563e67d4be6a852527fd0377b
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809816"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542196"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式的查詢計劃，而不執行陳述式。 使用 **EXPLAIN** 預覽哪些作業需要移動資料，以及檢視查詢作業的估計成本。 `WITH RECOMMENDATIONS` 適用於 Azure SQL 資料倉儲 (預覽)。
+  傳回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式的查詢計劃，而不執行陳述式。 使用 EXPLAIN 預覽哪些作業需要移動資料，以及檢視查詢作業的估計成本。 `WITH RECOMMENDATIONS` 適用於 Azure SQL 資料倉儲 (預覽)。
   
  如需查詢計劃的詳細資訊，請參閱 [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)] 中的＜了解查詢計劃＞。  
   
@@ -35,9 +35,12 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ## <a name="arguments"></a>引數
 
  *SQL_statement*  
- **EXPLAIN** 將執行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式。 *SQL_statement* 可以是以下任何一個命令：**SELECT**、**INSERT**、**UPDATE**、**DELETE**、**CREATE TABLE AS SELECT**、**CREATE REMOTE TABLE**。
 
-*WITH_RECOMMENDATIONS* 傳回含 SQL 陳述式效能最佳化建議的查詢計劃。  
+ 將執行 EXPLAIN 的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式。 *SQL_statement* 可以是以下任何一個命令：SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。
+
+*WITH_RECOMMENDATIONS* (預覽)
+
+傳回含 SQL 陳述式效能最佳化建議的查詢計劃。  
   
 ## <a name="permissions"></a>權限
 
@@ -310,7 +313,7 @@ GO
 **提交 EXPLAIN 陳述式 WITH_RECOMMENDATIONS**
 
 ```sql
--- EXPLAIN WITH_RECOMMENDATIONS
+EXPLAIN WITH_RECOMMENDATIONS
 select count(*)
 from ((select distinct c_last_name, c_first_name, d_date
        from store_sales, date_dim, customer
@@ -326,7 +329,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 ) top_customers
 ```
 
-**EXPLAIN WITH_RECOMMENDATIONS 的範例輸出** (預覽)
+**EXPLAIN WITH_RECOMMENDATIONS 的範例輸出**  
 
 下面的輸出包括建立名為 View1 的建議具體化檢視。  
 

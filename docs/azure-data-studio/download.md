@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 10/08/2019
+ms.date: 10/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: d56bf097bc38670fb7bad83933a1a48800172d5b
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: b7a9e9a13b5b19e2450ab1d4b12aea7a97cdc206
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173157"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313663"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -29,9 +29,9 @@ ms.locfileid: "72173157"
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|Windows|[使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|2019 年 10 月 8 日 |1.12.1|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|2019 年 10 月 8 日 |1.12.1|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://azuredatastudiobuilds.blob.core.windows.net/releases/1.12.1/azuredatastudio-linux-1.12.1.tar.gz)|2019 年 10 月 8 日 |1.12.1|
+|Windows|[使用者安裝程式 (建議)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2104938)|2019 年 10 月 11 日 |1.12.2|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2105133)|2019 年 10 月 11 日 |1.12.2|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105132)|2019 年 10 月 11 日 |1.12.2|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
@@ -68,7 +68,7 @@ ms.locfileid: "72173157"
 ## <a name="get-azure-data-studio-for-linux"></a>取得適用於 Linux 的 Azure Data Studio
 
 1. 使用其中一種安裝程式或 tar.gz 封存，下載適用於 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2103004)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2105131)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)
 1. 若要將檔案解壓縮並啟動 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，請開啟新的終端視窗並鍵入下列命令：

@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974247"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304959"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>使用序列化交易的範例  
- **Org_BreadthFirst** 索引可確定判斷 **@last_child** 會使用範圍搜尋。 除了應用程式可能想要檢查的其他錯誤情況之外，插入後的重複索引鍵違規會指出新增多個具有相同識別碼之員工的嘗試，因此必須重新計算 **@last_child** 。 下列程式碼會在可序列化的交易內計算新節點值：  
+ **Org_BreadthFirst** 索引可確定決定性的 **\@last_child** 使用範圍搜尋。 除了應用程式可能想要檢查的其他錯誤情況之外，插入後的重複索引鍵違規會指出使用相同識別碼新增多個員工的嘗試，因此必須重新計算 **\@last_child**。 下列程式碼會在可序列化的交易內計算新節點值：  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> 移動子樹  
- 另一個常見的作業是移動子樹。 以下的程序使用 **@oldMgr** 的樹狀子目錄，並讓其 (包括 **@oldMgr** ) 成為 **@newMgr** 進行子樹查詢時，速度明顯加快。  
+ 另一個常見的作業是移動子樹。 以下程序使用 **\@oldMgr** 的樹狀子目錄，並讓它 (包括 **\@oldMgr**) 成為 **\@newMgr** 的樹狀子目錄。  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

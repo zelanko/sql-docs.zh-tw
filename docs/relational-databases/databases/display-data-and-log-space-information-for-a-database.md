@@ -20,12 +20,12 @@ ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c12984568087b4ca825eb29cf81768dd403fdc41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f9d067869ce73bc0d5c048b62b264cd0a4e28add
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006148"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305285"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>顯示資料庫的資料和記錄空間資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68006148"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 權限  
- 執行 **sp_spaceused** 的權限會授與 **public** 角色。 只有 **db_owner** 固定資料庫角色的成員，才能夠指定 **@updateusage** 參數。  
+ 執行 **sp_spaceused** 的權限會授與 **public** 角色。 只有 **db_owner** 固定資料庫角色的成員，可以指定 **\@updateusage** 參數。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68006148"
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>使用 sp_spaceused 顯示資料庫的資料和記錄空間資訊  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-sp_spaceused"></a>使用 sp_spaceused 顯示資料庫的資料和記錄空間資訊  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
@@ -68,7 +68,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabasefiles"></a>透過查詢 sys.database_files 來顯示資料庫的資料和記錄空間資訊  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabase_files"></a>透過查詢 sys.database_files 來顯示資料庫的資料和記錄空間資訊  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   

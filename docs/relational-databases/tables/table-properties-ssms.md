@@ -17,12 +17,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f54ff6306e3a4b2066a05ded891f4b8e6e98f99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad8e6a73ee20a98f9dd97d8220a592c8c1600b2e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016226"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305002"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -75,9 +75,8 @@ ms.locfileid: "68016226"
  AUTO  
  此選項允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 選取適用於資料表結構描述的鎖定擴大資料粒度。  
   
--   如果資料表為資料分割，則允許鎖定擴大使用堆積或 B 型樹狀結構 (HoBT) 資料粒度。 鎖定在擴大為 HoBT 層級後，就無法再擴大為 TABLE 資料粒度。  
-  
--   如果資料表不是分割區，則會對 TABLE 資料粒度執行鎖定擴大。  
+- 如果資料表為資料分割，則允許鎖定擴大使用堆積或 B 型樹狀結構 (HoBT) 資料粒度。 亦即，允許升級至磁碟分割層級。 鎖定在擴大為 HoBT 層級後，就無法再擴大為 TABLE 資料粒度。
+- 如果資料表未分割，則會對 TABLE 資料粒度執行鎖定擴大。 
   
  TABLE  
  不論資料表是否為資料分割，鎖定擴大將在資料表層級的資料粒度完成。 TABLE 為預設值。  

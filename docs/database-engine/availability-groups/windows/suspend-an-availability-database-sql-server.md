@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 61b8ccb7a52cee68e709200c4d1d376379b5dd0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013890"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517956"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>暫止可用性資料庫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ ms.locfileid: "68013890"
   
 1.  連接至裝載您要暫停其資料庫之複本的伺服器執行個體。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
   
-2.  使用下列 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)陳述式暫停資料庫：  
+2.  使用下列 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 陳述式暫停資料庫：  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* SET HADR SUSPEND;
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要暫停資料庫**  

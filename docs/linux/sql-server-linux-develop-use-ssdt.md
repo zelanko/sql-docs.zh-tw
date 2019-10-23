@@ -8,22 +8,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: b98980837f6dce2ebd9f39be142b816f37f16cd8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077397"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545051"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 建立 Linux 的 SQL Server 資料庫
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) 可將 Visual Studio 轉化為適用於 Linux SQL Server 的強大開發和資料庫生命週期管理 (DLM) 環境。 您可以透過由原始檔控制的專案來開發、建置、測試及發佈資料庫，就像開發應用程式程式碼一樣。
+SQL Server Data Tools (SSDT) 可將 Visual Studio 轉化為適用於 Linux SQL Server 的強大開發和資料庫生命週期管理 (DLM) 環境。 您可以從原始檔控制的專案中來開發、建置、測試及發佈資料庫。 如同開發應用程式程式碼一樣。
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>安裝 Visual Studio 和 SQL Server Data Tools
 
-1. 如果您尚未在 Windows 電腦上安裝 Visual Studio，請[下載及安裝 Visual Studio]。 如果您沒有 Visual Studio 授權，Visual Studio Community 版本是一款免費且功能完整的 IDE，適用於學生、開放原始碼和個別開發人員。
+1. 如果您尚未在 Windows 電腦上安裝 Visual Studio，請[下載並安裝 Visual Studio](https://visualstudio.microsoft.com/downloads/)。 如果沒有 Visual Studio 授權，則 Visual Studio Community 版本是功能完整的 IDE，供學生、開放原始碼和個人開發人員免費使用。
 
 2. 在 Visual Studio 安裝期間，請針對 [選擇安裝類型]  選項選取 [自訂]  。 按 **[下一步]**
 
@@ -105,12 +105,12 @@ SSDT 17.0 RC 或更新版本支援 Linux 上的 SQL Server。
 
 ## <a name="next-steps"></a>後續步驟
 
-如果您不熟悉 T-SQL，請參閱[教學課程：撰寫 Transact-SQL 陳述式]和 [Transact-SQL 參考 (資料庫引擎)]。
+如果您不熟悉 T-SQL，請參閱[教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)。
 
-如需使用 SQL Data Tools 開發資料庫的詳細資訊，請參閱 [SSDT MSDN 文件]
+如需使用 SQL Data Tools 開發資料庫的詳細資訊，請參閱下列文章。
 
-[下載及安裝 Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN 文件]:https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[教學課程：撰寫 Transact-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL 參考 (資料庫引擎)]:https://msdn.microsoft.com/library/bb510741.aspx
+* [下載及安裝 Visual Studio](https://www.visualstudio.com/downloads/)
+* [下載並安裝 SSDT](https://aka.ms/ssdt-download)
+* [SSDT MSDN 文件](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
+* [教學課程：撰寫 Transact-SQL 陳述式](https://msdn.microsoft.com/library/ms365303.aspx)
+* [Transact-SQL 參考 (資料庫引擎)](https://msdn.microsoft.com/library/bb510741.aspx)

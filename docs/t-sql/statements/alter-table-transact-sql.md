@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 44c5a4c9a39f60616574a479637d3ab97230784c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823617"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304844"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -806,7 +806,7 @@ SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**
 AUTO  
 此選項允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 選取適用於資料表結構描述的鎖定擴大資料粒度。
 
-- 如果資料表已分割，則會允許鎖定擴大進行分割。 當鎖定擴大為資料分割層級後，就無法進一步擴大為 TABLE 資料粒度。
+- 如果資料表為資料分割，則允許鎖定擴大使用堆積或 B 型樹狀結構 (HoBT) 資料粒度。 亦即，允許升級至磁碟分割層級。 鎖定在擴大為 HoBT 層級後，就無法再擴大為 TABLE 資料粒度。
 - 如果資料表未分割，則會對 TABLE 資料粒度執行鎖定擴大。
 
 TABLE  

@@ -14,12 +14,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08efd7847fba1ad0b4df10d3a761475c735ceca8
+ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
 ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289378"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305194"
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72289378"
 ## <a name="sql-server-task-scheduling"></a>SQL Server 工作排程
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的範圍中，**要求**是查詢或批次的邏輯表示法。 要求也代表系統執行緒要求的作業，例如檢查點或記錄寫入器。 要求在其整個生命週期中以各種狀態存在，而且當執行要求所需的資源無法使用 (例如[鎖定](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks)或[閂鎖](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)) 時可累積等候。 如需有關要求狀態的詳細資訊，請參閱 [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。
 
-**工作**代表必須完成以滿足要求的工作單位。 您可以將一或多個工作指派給單一要求。 平行要求將有數個同時 (而非依序) 執行的作用中工作。 依序執行的要求在任何給定的時間點都只會有一個作用中工作。 工作在其整個生命週期中以各種狀態存在。 如需有關工作狀態的詳細資訊，請參閱 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 處於「已暫停」狀態的工作正在等候執行工作所需的資源成為可用。 如需有關等候中工作的詳細資訊，請參閱 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
+**工作**代表必須完成以滿足要求的工作單位。 您可以將一或多個工作指派給單一要求。 平行要求將有數個同時 (而非依序) 執行的作用中工作。 依序執行的要求在任何給定的時間點都只會有一個作用中工作。 工作在其整個生命週期中以各種狀態存在。 如需有關工作狀態的詳細資訊，請參閱 [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 處於「暫停」狀態的工作正在等候執行工作所需資源成為可用。 如需有關等候中工作的詳細資訊，請參閱 [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **工作執行緒** (亦稱為背景工作角色或執行緒) 是作業系統執行緒的邏輯表示法。 當執行序列要求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將會繁衍背景工作角色以執行作用中工作。 當以[資料列模式](../relational-databases/query-processing-architecture-guide.md#execution-modes)執行平行要求時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會指派背景工作角色以協調負責完成指派給它們的工作的子背景工作角色。 為每個工作繁衍的背景工作執行緒數目取決於：
 -   要求是否符合平行處理原則的資格 (由查詢最佳化工具判斷)。

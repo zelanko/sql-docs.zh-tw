@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3137bffef524faf061322224e92941687bb16046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987279"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305084"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>使用 SQL Server Profiler 建立及測試計畫指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  在 [記事本] 中開啟批次文字檔，將文字複製到「複製與貼上緩衝區」。  
   
-8.  建立計畫指南，並將所複製的文字貼到 **@stmt**引數所指定的引號內 ( **@stmt** )。 您必須在 **@stmt** 引數中的單引號前加上另一個單引號，以免除所有單引號。 當您插入這些單引號的時候，請小心不要加入或移除任何其他字元。 例如，您必須將 **'** 20000101 **'** 日期常值分隔為 **''** 20000101 **''** 。  
+8.  建立計劃指南，並將所複製的文字貼到 **\@stmt** 引數所指定的引號內 ( **''** )。 您必須在 **\@stmt** 引數中的單引號前加上另一個單引號，以逸出所有單引號。 當您插入這些單引號的時候，請小心不要加入或移除任何其他字元。 例如，您必須將 **'** 20000101 **'** 日期常值分隔為 **''** 20000101 **''** 。  
   
  以下是計畫指南：  
   

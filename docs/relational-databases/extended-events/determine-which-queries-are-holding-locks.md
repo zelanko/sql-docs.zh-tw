@@ -1,7 +1,7 @@
 ---
 title: 判斷哪些查詢持有鎖定 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,26 +17,26 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 413e395a865245b4e4a6c3c7705e654e6855c245
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f6bdf2ed730330e03068473e5db9f82015caacc
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021911"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589987"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>判斷哪些查詢持有鎖定
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  資料庫管理員經常需要識別阻礙資料庫效能的鎖定來源。  
+資料庫管理員經常需要識別阻礙資料庫效能的鎖定來源。  
   
- 例如，您懷疑伺服器上的效能問題可能是由鎖定造成。 當您查詢 sys.dm_exec_requests 時，您發現有數個工作階段處於已暫停模式，而且其等候類型指示鎖定是正在等候的資源。  
+例如，您懷疑伺服器上的效能問題可能是由鎖定造成。 當您查詢 sys.dm_exec_requests 時，您發現有數個工作階段處於已暫停模式，而且其等候類型指示鎖定是正在等候的資源。  
   
- 您查詢 sys.dm_tran_locks，而結果顯示有許多鎖定尚未處理，但是被授與鎖定的工作階段並沒有任何使用中的要求顯示在 sys.dm_exec_requests 中。  
+您查詢 sys.dm_tran_locks，而結果顯示有許多鎖定尚未處理，但是被授與鎖定的工作階段並沒有任何使用中的要求顯示在 sys.dm_exec_requests 中。  
   
- 這個範例會示範一個方法來決定哪一個查詢取得鎖定、查詢的計劃，以及取得鎖定時的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆疊。 這個範例也會示範如何將配對目標用於擴充的事件工作階段中。  
+這個範例會示範一個方法來決定哪一個查詢取得鎖定、查詢的計劃，以及取得鎖定時的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆疊。 這個範例也會示範如何將配對目標用於擴充的事件工作階段中。  
   
- 完成這項工作需要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用查詢編輯器來進行以下程序。  
+完成這項工作需要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用查詢編輯器來進行以下程序。  
   
 > [!NOTE]  
 >  這個範例會使用 AdventureWorks 資料庫。  
@@ -45,7 +45,7 @@ ms.locfileid: "68021911"
   
 1.  在查詢編輯器中，發出下列陳述式。  
   
-    ```  
+    ```sql
     -- Perform cleanup.   
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='FindBlockers')  
         DROP EVENT SESSION FindBlockers ON SERVER  
@@ -88,12 +88,11 @@ ms.locfileid: "68021911"
     --  
     ALTER EVENT SESSION FindBlockers ON SERVER  
     STATE = START  
-  
     ```  
   
 2.  在伺服器上執行工作負載之後，請在查詢編輯器中發出下列陳述式，以尋找仍然持有鎖定的查詢。  
   
-    ```  
+    ```sql
     --  
     -- The pair matching targets report current unpaired events using   
     -- the sys.dm_xe_session_targets dynamic management view (DMV)  
@@ -150,11 +149,17 @@ ms.locfileid: "68021911"
   
 3.  在識別問題之後，請卸除任何暫存資料表和事件工作階段。  
   
-    ```  
+    ```sql
     DROP TABLE #unmatched_locks  
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
-  
+
+> [!NOTE]
+> 上述的 Transact-SQL 程式碼範例會在 SQL Server 內部部署上執行，但極可能_無法在 Azure SQL Database 上執行。_ 直接涉及事件的範例核心部分，例如 `ADD EVENT sqlserver.lock_acquired` 也會在 Azure SQL Database 上工作。 但是初步項目 (例如 `sys.server_event_sessions`) 必須編輯至其 Azure SQL Database 對應項 (例如 `sys.database_event_sessions`)，才能執行範例。
+> 如需 SQL Server 內部部署與 Azure SQL Database 之間次要差異的詳細資訊，請參閱下列文章：
+> - [Azure SQL Database 中的擴充事件](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
+> - [支援擴充事件的系統物件](xevents-references-system-objects.md)
+
 ## <a name="see-also"></a>另請參閱  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   

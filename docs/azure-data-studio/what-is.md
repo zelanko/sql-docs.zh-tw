@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
-ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.date: 10/15/2019
+ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822620"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545060"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
@@ -68,6 +68,7 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 - 可以使用 sqlcmd 或 Powershell 透過整合式終端執行大部分的管理工作
 - 對精靈體驗的需求最少
 - 不需要深層管理設定
+- 希望 
 
 **在下列情況下使用 SQL Server Management Studio：**
 - 將大部分的時間花在資料庫管理工作
@@ -117,6 +118,8 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 |以文字顯示結果||是|
 |空間檢視器||是|
 |SQLCMD||是|
+|Notebooks|是||
+|將查詢儲存為程式碼片段|是||
 
 ### <a name="operating-system-support"></a>作業系統支援
 
@@ -132,13 +135,14 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 |:---|:---|:---|
 |建立外部資料表精靈|預覽||
 |HDFS 整合|預覽||
-|筆記型電腦|預覽||
+|Notebooks|預覽||
 
 ### <a name="database-administration"></a>資料庫管理
 
 |功能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |備份 / 還原|是|是|
+|巨量資料叢集支援|是||
 |一般檔案匯入|預覽|是|
 |SQL 代理程式|預覽|是|
 |SQL Profiler|預覽|是|
@@ -160,6 +164,7 @@ SQL 程式碼片段會產生適當的 SQL 語法，以便建立資料庫、資�
 |範本總管||是|
 |弱點評量||是|
 |XEvent 管理||是|
+|SQL 評定 API 整合||是|
 
 ## <a name="next-steps"></a>後續步驟
 

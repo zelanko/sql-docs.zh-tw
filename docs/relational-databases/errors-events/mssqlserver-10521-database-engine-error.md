@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f86922211e670cb59b4541071e9e7d7f67302bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2dde7bedad58273cb207b05f54824c9c5ddff5c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068149"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305856"
 ---
-# <a name="mssqlserver10521"></a>MSSQLSERVER_10521
+# <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -30,10 +30,10 @@ ms.locfileid: "68068149"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|PG_PARAM_NEEDED|  
-|訊息文字|無法建立計畫指南 '%.\*ls'，因為已將 **@type** 指定為 '%ls'，而且參數 '%ls' 為 NULL， 但這種類型要求參數必須為非 NULL 值。 請為參數指定非 NULL 值，或將參數類型變更為允許 NULL 值的類型。|  
+|訊息文字|無法建立計劃指南 '%.\*ls'，因為 **\@type** 已指定為 '%ls'，且參數 '%ls' 為 NULL。 但這種類型要求參數必須為非 NULL 值。 請為參數指定非 NULL 值，或將參數類型變更為允許 NULL 值的類型。|  
   
 ## <a name="explanation"></a>說明  
-在 **@type** 中指定的類型要求指定的參數必須為非 NULL 值，但是卻提供了 NULL 值。  
+在 **\@type** 中指定的類型要求指定參數必須為非 NULL 值，但提供的卻是 NULL 值。  
   
 ## <a name="user-action"></a>使用者動作  
 請為參數指定非 NULL 值，或將參數類型變更為允許 NULL 值的類型。  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c2a266c6cedcec3e11a57fcb08f152789a74097a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55fdc5242b43e3aa2f25b601edc1439cbbec3ece
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014259"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517954"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>繼續可用性資料庫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "68014259"
   
 1.  連接至裝載您要繼續其資料庫之次要複本的伺服器執行個體。  
   
-2.  使用下列 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)陳述式，繼續次要資料庫：  
-  
-     ALTER DATABASE *database_name* SET HADR RESUME  
+2.  使用下列 [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 陳述式，繼續次要資料庫：  
+
+     ALTER DATABASE *database_name* SET HADR RESUME;
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要繼續次要資料庫**  
