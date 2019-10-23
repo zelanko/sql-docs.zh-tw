@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493797"
 ---
 # <a name="defining-and-browsing-kpis"></a>定義和瀏覽 KPI
@@ -59,7 +59,7 @@ ms.locfileid: "69493797"
   
      下圖顯示 [Cube 設計師] 的 [KPI] 索引標籤。  
   
-     ![Cube 設計師的 [kpi]]索引標籤(../../2014/tutorials/media/l7-kpi-1.gif "Cube 設計師的 [kpi]")索引標籤  
+     ![Cube 設計師的 [Kpi] 索引標籤](../../2014/tutorials/media/l7-kpi-1.gif "Cube 設計師的 [Kpi] 索引標籤")  
   
 2.  在 [KPI] 索引標籤的工具列上，按一下 [新增 KPI] 按鈕。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "69493797"
   
      ![顯示窗格中的空白 KPI 範本](../../2014/tutorials/media/l7-kpi-2.gif "顯示窗格中的空白 KPI 範本")  
   
-3.  在 [**名稱**] 方塊中`Reseller Revenue`，輸入，然後在 [**相關聯的量值群組**] 清單中選取 [**轉售商銷售**]。  
+3.  在 [**名稱**] 方塊中，輸入 `Reseller Revenue`，然後選取 [**相關聯的量值群組**] 清單中的 [**轉售商銷售**]。  
   
 4.  在 [計算工具] 窗格的 [中繼資料] 索引標籤上，依序展開 [量值] 和 [轉售商銷售]，然後將 [轉售商銷售 - 銷售量] 量值拖曳到 [值運算式] 方塊。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69493797"
   
 1.  按一下 [KPI] 索引標籤之工具列上的 [表單檢視] 按鈕，然後按一下 [新增 KPI] 按鈕。  
   
-2.  在 **名稱** 方塊中`Product Gross Profit Margin`，輸入，然後確認 **\<所有 >** 都會出現在 **相關聯的量值群組** 清單中。  
+2.  在 [**名稱**] 方塊中，輸入 `Product Gross Profit Margin`，然後確認 [ **\<All] >** 會出現在 [**相關聯的量值群組**] 清單中。  
   
 3.  在 [計算工具] 窗格的 [中繼資料] 索引標籤中，將 [總毛利率] 量值拖曳到 [值運算式] 方塊。  
   
@@ -261,13 +261,13 @@ ms.locfileid: "69493797"
   
 2.  當您順利完成部署時，請在 [KPI] 索引標籤的工具列上按一下 [重新連接]，然後按一下 [瀏覽器檢視]。  
   
-     Kpi 隨即出現，並顯示**Q3 CY 2007**和北美洲 sales 領域的 KPI 值。 `Product Gross Profit Margin`  
+     [@No__t_0] KPI 隨即出現，並顯示 [ **Q3 CY 2007** ] 和 [**北美洲**銷售] 區域的 KPI 值。  
   
 3.  在 [篩選] 窗格中，從 [維度] 清單中選取 [產品]、從 [階層] 清單中選取 [類別目錄]、從 [運算子] 清單中選取 [等於]，並從 [篩選運算式] 清單中選取 [自行車]，然後按一下 [確定]。  
   
      北美地區轉售商 Q3 CY 2007 自行車銷售的毛利率隨即出現。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 8 課：定義動作](lesson-8-defining-actions.md)  
+ [第 8 課：定義動作 ](lesson-8-defining-actions.md)  
   
   

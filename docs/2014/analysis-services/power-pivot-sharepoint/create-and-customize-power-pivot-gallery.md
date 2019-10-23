@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 305ae31522a54a776c989f4b8f4b0c4ceabe6658
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "70874405"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>建立及自訂 PowerPivot 圖庫
@@ -42,7 +42,7 @@ ms.locfileid: "70874405"
     >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。   
     > 若要在 Microsoft Edge 中查看**文件庫內容**，請按一下 Power Pivot 圖庫中的 [程式庫] 索引標籤，然後將 [文件庫] 視圖變更為 [**所有檔**]。    
     > 若要變更預設檢視，請按一下 [程式庫] 索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
-    >  如需有關 Microsoft Edge 支援之功能的詳細資訊，請參閱[Windows blog，這是過去的一環，第2篇：對 ActiveX、VBScript 說再見 .。。](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  如需 Microsoft Edge 支援之功能的詳細資訊，請參閱 Windows blog，[A 中斷，第2部分：說不再見 ActiveX，VBScript ... ](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   您必須是網站擁有者才能建立文件庫。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "70874405"
   
  預覽圖像是以 Excel Services 轉譯活頁簿的方式為基礎。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中的展示方式應該與您在瀏覽器中檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿時所看到的外觀相同。 不過，預覽的介面區有限。 活頁簿或報表的部分可以修整，以便符合可用空間。 您可能需要開啟活頁簿或報表來檢視完整的文件。  
   
- 重新整理來自外部的資料來源的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿資料，在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中受到完整支援，但需要額外的設定。 伺服器陣列或服務管理員必須將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Services 信任位置。 如需相關資訊，請參閱 [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 重新整理來自外部的資料來源的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿資料，在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中受到完整支援，但需要額外的設定。 伺服器陣列或服務管理員必須將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Services 信任位置。 如需相關資訊，請參閱 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="createlib"></a>建立 PowerPivot 圖庫  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 時，將會為您建立 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 圖庫。 如果您將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 加入至現有的伺服器陣列，或是您想要其他的文件庫，則可以為應用程式或網站建立一個新的文件庫。  
@@ -70,7 +70,7 @@ ms.locfileid: "70874405"
   
     3.  在文件庫下，按一下 **[PowerPivot 圖庫]** 。  
   
-    1.  **SharePoint 2013**：按一下 [設定] 圖示 [ ![Sharepoint 設定]] [(../media/as-sharepoint2013-settings-gear.gif "sharepoint 設定")]。 按一下 **[網站內容]** 。  
+    1.  **SharePoint 2013**：按一下 [設定] 圖示 [ ![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")]。 按一下 **[網站內容]** 。  
   
     2.  按一下 **[新增應用程式]** 。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "70874405"
   
  下表描述呈現每個預覽頁面之縮圖草圖的不同版面配置：  
   
-|檢視|描述|  
+|檢視|Description|  
 |----------|-----------------|  
 |圖庫檢視 (預設值)|圖庫是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫的預設檢視。 預覽會顯示在左邊。 預覽旁邊會顯示每個工作表的小型縮圖，由左至右循序排列。|  
 |所有文件|這是文件庫的標準版面配置。 您可以選擇此檢視來管理個別的文件，或以清單格式來檢視文件庫內容。<br /><br /> 使用此檢視來編輯屬性、刪除或移動個別的文件。<br /><br /> 如果您啟用版本控制，必須使用此檢視來檢查文件庫內外的文件。|  
@@ -147,9 +147,9 @@ ms.locfileid: "70874405"
 3.  在 [自訂] 檢視的 [管理檢視] 中，從清單選取您要使用的檢視。 預先設計好的檢視包括 [圖庫]、[劇場] 和 [浮動切換]。 或者，如果您要移動、刪除或管理文件庫中的文件，您可以選擇 [所有文件]。  
   
 ## <a name="see-also"></a>另請參閱  
- [針對 PowerPivot for SharePoint 安裝進行疑難排解](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
+ 針對[PowerPivot for SharePoint 安裝   進行疑難排解](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)  
  [使用 PowerPivot 圖庫](use-power-pivot-gallery.md)   
- [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [在 [管理中心] 中建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [刪除 PowerPivot 圖庫](delete-power-pivot-gallery.md)  
   
   

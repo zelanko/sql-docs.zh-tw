@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493859"
 ---
 # <a name="defining-a-fact-relationship"></a>定義事實關聯性
@@ -51,7 +51,7 @@ ms.locfileid: "69493859"
   
 7.  在 [名稱資料行] 清單中，選取 [SalesOrderLineNumber]。  
   
-8.  按一下 [下一步]。  
+8.  按 [下一步]。  
   
 9. 在 [選取相關資料表] 頁面上，清除所有資料表旁的核取方塊，然後按一下 [下一步]。  
   
@@ -63,15 +63,15 @@ ms.locfileid: "69493859"
   
 13. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-14. 在 [**網際網路銷售訂單詳細資料**] 維度之 [維度設計師] 的 [**屬性**] 窗格中，選取 [**銷售訂單號碼**]，然後將屬性視窗中的 [**名稱**] 屬性變更為`Item Description.`  
+14. 在 [**網際網路銷售訂單詳細資料**] 維度之 [維度設計師] 的 [**屬性**] 窗格中，選取 [**銷售訂單號碼**]，然後將屬性視窗中的 [**名稱**] 屬性變更為 `Item Description.`  
   
 15. 在 [ **NameColumn** ] 屬性資料格中，按一下瀏覽按鈕 **（...）** 。從 [名稱資料行] 對話方塊的 [來源資料表] 清單中，選取 [Product]、針對 [來源資料行] 選取 [EnglishProductName]，然後按一下 [確定]。  
   
 16. 將 [SalesOrderNumber] 資料行從 [資料來源檢視] 窗格中的 [InternetSales] 資料表拖曳到 [屬性] 窗格，以這個方式將 [銷售訂單號碼] 屬性加入維度。  
   
-17. 將 [新**銷售訂單號碼**] 屬性的 [**名稱**] `Order Number`屬性變更為，並將 [ **OrderBy** ] 屬性變更為 [索引**鍵**]。  
+17. 將 [新**銷售訂單號碼**] 屬性的 [**名稱**] 屬性變更為 [`Order Number`]，然後將 [ **OrderBy** ] 屬性變更為 [索引**鍵**]。  
   
-18. 在 [**階層**] 窗格中，依序建立 [ `Order Number` **網際網路銷售訂單**] 使用者階層，其中包含和**專案描述**層級。  
+18. 在 [**階層**] 窗格中，依序建立 [**網際網路銷售訂單**] 使用者階層，其中包含 [`Order Number`] 和 [**專案描述**] 層級。  
   
 19. 在 [屬性] 窗格，選取 [網際網路銷售訂單的詳細資料]，然後在 [屬性] 視窗中檢閱 [StorageMode] 屬性的值。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493859"
   
      下圖顯示 [定義關聯性] 對話方塊中的事實關聯性屬性。  
   
-     ![定義關聯性 對話方塊](../../2014/tutorials/media/l5-factrelationship-2.gif "定義關聯性 對話方塊")  
+     ![[定義關聯性] 對話方塊](../../2014/tutorials/media/l5-factrelationship-2.gif "定義關聯性對話方塊")  
   
 3.  按一下 [取消]。  
   

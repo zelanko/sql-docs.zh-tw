@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69890829"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自動分組屬性成員
@@ -44,7 +44,7 @@ ms.locfileid: "69890829"
   
 4.  在 [屬性] 窗格中，選取 [年收入]。  
   
-5.  在 屬性視窗中，將  **DiscretizationMethod**  屬性的值變更為 **自動**，並將  **DiscretizationBucketCount**  屬性的值變更為`5`。  
+5.  在 屬性視窗中，將  **DiscretizationMethod**  屬性的值變更為 **自動**，並將  **DiscretizationBucketCount**  屬性的值變更為 `5`。  
   
      下圖顯示 [年收入] 的已修改屬性。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "69890829"
   
 4.  在 [屬性] 窗格中，選取 [病假時數]。  
   
-5.  在 屬性視窗中，將  **DiscretizationMethod**  屬性的值變更為 叢集，並將 DiscretizationBucketCount `5` 屬性的值**變更為。**  
+5.  在 屬性視窗中，將  **DiscretizationMethod**  屬性的值變更為 叢集，然後將  **DiscretizationBucketCount**  屬性的值**變更為**  `5`。  
   
 6.  在 [屬性] 窗格中，選取 [假期時數]。  
   
-7.  在 屬性視窗中，將  **DiscretizationMethod**  屬性的值變更為 **等於 區域**，並將  **DiscretizationBucketCount**  屬性的值變更為`5`。  
+7.  在 屬性視窗中，將  **DiscretizationMethod**  屬性的值變更為 **等於 區域**，並將  **DiscretizationBucketCount**  屬性的值變更為 `5`。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>瀏覽已修改的屬性階層  
   

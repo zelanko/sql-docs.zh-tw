@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 4eab56329c2b51f792394ffc37921e8a1ed8e117
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952247"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>安裝 PowerPivot for SharePoint 2010
@@ -26,9 +26,9 @@ ms.locfileid: "71952247"
   
  
   
- 如需有關如何在同一部伺服器上安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的指示，請參閱 @no__t 2Deployment 檢查清單：Reporting Services、Power View 和 PowerPivot for SharePoint @ no__t-0。  
+ 如需有關如何在相同伺服器上安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的指示，請參閱 [Deployment 檢查清單：Reporting Services、Power View 和 PowerPivot for SharePoint ](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 1.  您必須是本機系統管理員，才能執行 SQL Server 安裝程式。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "71952247"
   
 4.  在 [**產品金鑰**] 頁面上，指定評估版或輸入 enterprise edition 授權複本的產品金鑰。  
   
-     按一下 [下一步]。  
+     按 [下一步]。  
   
-5.  接受 Microsoft 軟體授權合約的條款，而且如果您一併開啟客戶經驗和錯誤報告，我們會非常感激。 按一下 [下一步]。  
+5.  接受 Microsoft 軟體授權合約的條款，而且如果您一併開啟客戶經驗和錯誤報告，我們會非常感激。 按 [下一步]。  
   
 6.  如果系統提示您如此做，請更新安裝程式檔。  
   
@@ -72,41 +72,41 @@ ms.locfileid: "71952247"
     > [!NOTE]  
     >  由於已啟用 Windows 防火牆，因此系統會警告您開放通訊埠才可啟用遠端存取。 這個警告通常不適用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝。 與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務及資料檔案之間的連接，是使用已針對 SharePoint 服務對服務通訊所開啟的 SharePoint 連接埠來建立。  
   
-     按一下 [下一步]。 正在伺服器上安裝 SQL Server 安裝程式檔案，請稍候。  
+     按 [下一步]。 正在伺服器上安裝 SQL Server 安裝程式檔案，請稍候。  
   
 8.  在 **[安裝程式角色]** 頁面上，選取 **[SQL Server PowerPivot for SharePoint]** 。  
   
-9. 您可選擇性地在安裝中加入一項 Database Engine 的執行個體。 如果您要設定新的伺服器陣列，且需要資料庫伺服器來執行伺服器陣列的設定和內容資料庫，您可能會這麼做。 若您加入 Database Engine，將會安裝為 PowerPivot 具名執行個體。 每當您需要指定與此實例的連接時（例如，如果您使用該 wizard 設定伺服器陣列，請在伺服器陣列設定向導中），以下列格式輸入資料庫名稱： < `servername` > \Powerpivot。  
+9. 您可選擇性地在安裝中加入一項 Database Engine 的執行個體。 如果您要設定新的伺服器陣列，且需要資料庫伺服器來執行伺服器陣列的設定和內容資料庫，您可能會這麼做。 若您加入 Database Engine，將會安裝為 PowerPivot 具名執行個體。 每當您需要指定與此實例的連接時（例如，如果您使用該嚮導來設定伺服器陣列，請在伺服器陣列設定 wizard 中），以下列格式輸入資料庫名稱： < `servername` > \Powerpivot。  
   
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")  
   
-10. 按一下 [下一步]。  
+10. 按 [下一步]。  
   
-11. 在 [**特徵選取**] 頁面上，會顯示要安裝之功能的唯讀清單，以供參考之用。 您不能加入或移除預先為這個角色選取的項目。 按一下 [下一步]。  
+11. 在 [**特徵選取**] 頁面上，會顯示要安裝之功能的唯讀清單，以供參考之用。 您不能加入或移除預先為這個角色選取的項目。 按 [下一步]。  
   
 12. 在 [**功能規則**] 頁面上，按 **[下一步]** 。 您可以略過此頁面。  
   
-13. 在 **[執行個體組態]** 頁面上，顯示 'PowerPivot' 的唯讀執行個體名稱是為了給使用者參考。 **POWERPIVOT**的這個實例名稱是**必要的，而且無法修改**。 但是，您可以輸入唯一的執行個體識別碼來指定描述性目錄名稱和登錄機碼。 按一下 [下一步]。  
+13. 在 **[執行個體組態]** 頁面上，顯示 'PowerPivot' 的唯讀執行個體名稱是為了給使用者參考。 **POWERPIVOT**的這個實例名稱是**必要的，而且無法修改**。 但是，您可以輸入唯一的執行個體識別碼來指定描述性目錄名稱和登錄機碼。 按 [下一步]。  
   
 14. 在 [**伺服器**設定] 頁面上，輸入所需的帳戶資訊。  
   
      若是 SQL Server Analysis Services，您必須指定網域使用者帳戶。 請不要指定內建帳戶。 需要網域帳戶，才能在 SharePoint 管理中心內管理 Analysis Services 服務帳戶做為*受管理的帳戶*。  
   
-     ![SSAS 伺服器 設定](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS 伺服器 設定")  
+     ![SSAS 伺服器設定](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS 伺服器設定")  
   
      若已新增 SQL Server Database Engine 與 SQL Server Agent，您可以將服務設定為利用網域使用者帳戶或預設虛擬帳戶加以執行。  
   
      絕不要使用您自己的網域使用者帳戶提供任何服務。 這麼做會授與伺服器您對網路中的資源所擁有的相同權限。 如果伺服器遭到惡意使用者的危害，該使用者將會以您的網域認證登入，而且能夠下載或使用您可以下載或使用的相同資料與應用程式。  
   
-15. 按一下 [下一步]。  
+15. 按 [下一步]。  
   
-16. 若您正安裝 Database Engine，則隨即會出現 Database Engine 組態頁面。 在資料庫引擎設定 中，按一下 **加入目前使用者**，將資料庫引擎實例的系統管理員許可權授與您的使用者帳戶。 按一下 [**新增**] 以新增其他帳戶。 按一下 [下一步]。  
+16. 若您正安裝 Database Engine，則隨即會出現 Database Engine 組態頁面。 在資料庫引擎設定 中，按一下 **加入目前使用者**，將資料庫引擎實例的系統管理員許可權授與您的使用者帳戶。 按一下 [**新增**] 以新增其他帳戶。 按 [下一步]。  
   
 17. 在 **[Analysis Services 組態]** 頁面上，按一下 **[加入目前使用者]** ，為您的使用者帳戶授與管理權限。 在完成安裝程式之後，您將會需要管理權限來設定伺服器。  
   
 18. 在相同的頁面上，加入也需要管理權限之任何人的 Windows 使用者帳戶。 例如，想要在 SQL Server Management Studio 中連接至 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體以疑難排解資料庫連接問題或取得版本資訊的所有使用者，都必須擁有該伺服器的系統管理權限。 請加入可能需要立即針對伺服器進行疑難排解或管理之任何人的使用者帳戶。  
   
-19. 按一下 [下一步]。  
+19. 按 [下一步]。  
   
 20. 在其餘每個頁面上按 **[下一步]** ，直到您進入 [準備安裝] 頁面為止。  
   
@@ -147,8 +147,8 @@ ms.locfileid: "71952247"
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot for SharePoint 2010 安裝](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- @no__t 0Deployment 檢查清單：Reporting Services、Power View 和 PowerPivot for SharePoint @ no__t-0 @ no__t-1  
- @no__t 0Deployment 檢查清單：將 PowerPivot 服務器新增至 SharePoint 2010 伺服器陣列 @ no__t-0 @ no__t-1 以向外延展  
- @no__t 0Deployment 檢查清單：PowerPivot for SharePoint 2010 @ no__t 的多伺服器安裝-0  
+ [Deployment 檢查清單：Reporting Services、Power View 和 PowerPivot for SharePoint ](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)    
+ [Deployment 檢查清單：藉由將 PowerPivot 服務器新增至 SharePoint 2010 伺服器陣列 ](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md) 來進行相應放大    
+ [Deployment 檢查清單：PowerPivot for SharePoint 2010 ](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md) 的多伺服器安裝  
   
   

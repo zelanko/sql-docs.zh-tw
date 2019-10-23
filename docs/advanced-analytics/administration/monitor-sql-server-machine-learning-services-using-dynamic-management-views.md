@@ -9,18 +9,18 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "71713183"
 ---
-# <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用動態管理檢視 (Dmv) 監視 SQL Server Machine Learning 服務
+# <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用動態管理檢視（Dmv）監視 SQL Server Machine Learning 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 使用動態管理檢視（Dmv）來監視外部腳本的執行（Python 和 R）、使用的資源、診斷問題，以及微調 SQL Server Machine Learning 服務中的效能。
 
-在本文中, 您會找到 SQL Server Machine Learning 服務的特定 Dmv。 您也會找到範例查詢, 其中顯示:
+在本文中，您會找到 SQL Server Machine Learning 服務的特定 Dmv。 您也會找到範例查詢，其中顯示：
 
 + 機器學習服務的設定和設定選項
 + 執行外部 Python 或腳本的作用中會話
@@ -28,27 +28,27 @@ ms.locfileid: "71713183"
 + 外部腳本的效能計數器
 + OS、SQL Server 和外部資源集區的記憶體使用量
 + SQL Server 和外部資源集區的記憶體配置
-+ Resource Governor 資源集區, 包括外部資源集區
++ Resource Governor 資源集區，包括外部資源集區
 + 適用于 Python 和 R 的已安裝套件
 
-如需有關 Dmv 的一般資訊, 請參閱[系統動態管理檢視](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。
+如需有關 Dmv 的一般資訊，請參閱[系統動態管理檢視](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。
 
 > [!TIP]
-> 您也可以使用自訂報表來監視 SQL Server Machine Learning 服務。 如需詳細資訊, 請參閱[在 Management Studio 中使用自訂報表來監視機器學習](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)服務。
+> 您也可以使用自訂報表來監視 SQL Server Machine Learning 服務。 如需詳細資訊，請參閱[在 Management Studio 中使用自訂報表來監視機器學習](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)服務。
 
 ## <a name="dynamic-management-views"></a>動態管理檢視
 
-在 SQL Server 中監視機器學習服務工作負載時, 可以使用下列動態管理檢視。 若要查詢 dmv, 您需要`VIEW SERVER STATE`實例的許可權。
+在 SQL Server 中監視機器學習服務工作負載時，可以使用下列動態管理檢視。 若要查詢 Dmv，您需要實例的 `VIEW SERVER STATE` 許可權。
 
-| 動態管理檢視 | Type | 描述 |
+| 動態管理檢視 | Type | Description |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 執行 | 逐資料列傳回正在執行外部指令碼的每個使用中背景工作帳戶。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 執行 | 逐資料列傳回各種類型的外部指令碼要求。 |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | 執行 | 針對伺服器所維護的每個效能計數器，各傳回一個資料列。 如果您使用搜尋條件`WHERE object_name LIKE '%External Scripts%'`, 您可以使用此資訊來查看已執行的腳本數目、哪些腳本是使用哪一個驗證模式執行, 或是在實例上發出多少個 R 或 Python 呼叫。 |
-| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | [資源管理員] | 傳回 Resource Governor 中目前外部資源集區狀態的相關資訊、資源集區的目前設定, 以及資源集區統計資料。 |
-| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | [資源管理員] | 傳回 Resource Governor 中目前外部資源集區設定的 CPU 親和性資訊。 針對 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中的每個排程器，各傳回一個資料列，其中每個排程器都會對應至個別的處理器。 請利用這份檢視來監視排程器的狀況或識別失控的工作。 |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | 執行 | 針對伺服器所維護的每個效能計數器，各傳回一個資料列。 如果您使用搜尋條件 `WHERE object_name LIKE '%External Scripts%'`，您可以使用此資訊來查看已執行的腳本數目、哪些腳本是使用哪一個驗證模式執行，或是在實例上發出多少個 R 或 Python 呼叫。 |
+| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | 資源管理員 | 傳回 Resource Governor 中目前外部資源集區狀態的相關資訊、資源集區的目前設定，以及資源集區統計資料。 |
+| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | 資源管理員 | 傳回 Resource Governor 中目前外部資源集區設定的 CPU 親和性資訊。 針對 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中的每個排程器，各傳回一個資料列，其中每個排程器都會對應至個別的處理器。 請利用這份檢視來監視排程器的狀況或識別失控的工作。 |
 
-如需監視[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]實例的詳細資訊, 請參閱[目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)和[Resource Governor 相關的動態管理檢視](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)。
+如需有關監視 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 實例的詳細資訊，請參閱[目錄檢視](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)和[Resource Governor 相關的動態管理檢視](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)。
 
 ## <a name="settings-and-configuration"></a>設定和設定
 
@@ -76,14 +76,14 @@ FROM sys.configurations
 WHERE name = 'external scripts enabled';
 ```
 
-此查詢會傳回下列資料行:
+此查詢會傳回下列資料行：
 
-| 「資料行」 | 描述 |
+| 資料行 | Description |
 |--------|-------------|
-| IsMLServicesInstalled | 如果已安裝實例的 SQL Server Machine Learning 服務, 則傳回1。 否則, 會傳回0。 |
-| ExternalScriptsEnabled | 如果已啟用實例的外部腳本, 則傳回1。 否則, 會傳回0。 |
-| ImpliedAuthenticationEnabled | 如果已啟用隱含驗證, 則會傳回1。 否則, 會傳回0。 確認 SQLRUserGroup 的登入是否存在, 以檢查隱含驗證的設定。 |
-| IsTcpEnabled | 如果已針對實例啟用 TCP/IP 通訊協定, 則會傳回1。 否則, 會傳回0。 如需詳細資訊, 請參閱[預設 SQL Server 網路通訊協定](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)設定。 |
+| IsMLServicesInstalled | 如果已安裝實例的 SQL Server Machine Learning 服務，則傳回1。 否則，會傳回0。 |
+| ExternalScriptsEnabled | 如果已啟用實例的外部腳本，則傳回1。 否則，會傳回0。 |
+| ImpliedAuthenticationEnabled | 如果已啟用隱含驗證，則會傳回1。 否則，會傳回0。 確認 SQLRUserGroup 的登入是否存在，以檢查隱含驗證的設定。 |
+| IsTcpEnabled | 如果已針對實例啟用 TCP/IP 通訊協定，則會傳回1。 否則，會傳回0。 如需詳細資訊，請參閱[預設 SQL Server 網路通訊協定](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)設定。 |
 
 ## <a name="active-sessions"></a>作用中的工作階段
 
@@ -104,9 +104,9 @@ INNER JOIN sys.dm_exec_sessions AS s
 ON s.session_id = r.session_id;
 ```
 
-此查詢會傳回下列資料行:
+此查詢會傳回下列資料行：
 
-| 「資料行」 | 描述 |
+| 資料行 | Description |
 |--------|-------------|
 | session_id | 識別每個使用中的主要連接所關聯的工作階段。 |
 | blocking_session_id | 封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。 |
@@ -140,9 +140,9 @@ WHERE counter_value > 0
 ORDER BY language, counter_name;
 ```
 
-此查詢會傳回下列資料行:
+此查詢會傳回下列資料行：
 
-| 「資料行」 | 描述 |
+| 資料行 | Description |
 |--------|-------------|
 | language | 註冊的外部指令碼語言名稱。 |
 | counter_name | 註冊的外部指令碼函數名稱。 |
@@ -164,13 +164,13 @@ WHERE object_name LIKE '%External Scripts%'
 
 **_os_performance_counters**會輸出下列外部腳本的效能計數器：
 
-| 計數器 | 描述 |
+| 計數器 | Description |
 |---------|-------------|
 | 執行總計 | 由本機或遠端呼叫啟動的外部進程數目。 |
-| 平行執行 | 腳本包含 _\@平行_規格，且[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能夠產生和使用平行查詢計劃的次數。 |
+| 平行執行 | 腳本包含 _\@parallel_規格，而且 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 能夠產生和使用平行查詢計劃的次數。 |
 | 串流執行 | 已叫用串流功能的次數。 |
-| SQL CC 執行 | 外部腳本的執行次數, 其中會從遠端具現化呼叫, 並使用 SQL Server 做為計算內容。 |
-| 隱含驗證登入 | 使用隱含驗證進行 ODBC 回送呼叫的次數;也就是說, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]會代表傳送腳本要求的使用者執行呼叫。 |
+| SQL CC 執行 | 外部腳本的執行次數，其中會從遠端具現化呼叫，並使用 SQL Server 做為計算內容。 |
+| 隱含驗證登入 | 使用隱含驗證進行 ODBC 回送呼叫的次數;也就是說，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 代表傳送腳本要求的使用者執行呼叫。 |
 | 執行時間總計 (毫秒) | 通話和呼叫完成之間經過的時間。 |
 | 執行錯誤 | 腳本報告錯誤的次數。 此計數不包含 R 或 Python 錯誤。 |
 
@@ -190,17 +190,17 @@ SELECT physical_memory_kb, committed_kb
 FROM sys.dm_os_sys_info;
 ```
 
-此查詢會傳回下列資料行:
+此查詢會傳回下列資料行：
 
-| 「資料行」 | 描述 |
+| 資料行 | Description |
 |--------|-------------|
 | physical_memory_kb | 電腦上的實體記憶體總量。 |
-| committed_kb | 記憶體管理員中的認可記憶體 (以 kb 為單位)。 不包含記憶體管理員中的保留記憶體。 |
-| external_pool_peak_memory_kb | 所有外部資源集區使用的記憶體數量上限 (以 kb 為單位)。 |
+| committed_kb | 記憶體管理員中的認可記憶體（以 kb 為單位）。 不包含記憶體管理員中的保留記憶體。 |
+| external_pool_peak_memory_kb | 所有外部資源集區使用的記憶體數量上限（以 kb 為單位）。 |
 
 ## <a name="memory-configuration"></a>記憶體組態
 
-以 SQL Server 和外部資源集區的百分比來查看最大記憶體設定的相關資訊。 如果 SQL Server 執行時的預設值是 `max server memory (MB)`，則會將它視為 OS 記憶體的 100%。
+以 SQL Server 和外部資源集區的百分比來查看最大記憶體設定的相關資訊。 如果 SQL Server 是以 `max server memory (MB)` 的預設值執行，則會被視為 OS 記憶體的 100%。
 
 ![記憶體設定查詢的輸出](media/dmv-memory-configuration.png "記憶體設定查詢的輸出")
 
@@ -219,16 +219,16 @@ SELECT CONCAT ('External Pool - ', ep.name) AS pool_name, ep.max_memory_percent
 FROM sys.dm_resource_governor_external_resource_pools AS ep;
 ```
 
-此查詢會傳回下列資料行:
+此查詢會傳回下列資料行：
 
-| 「資料行」 | 描述 |
+| 資料行 | Description |
 |--------|-------------|
 | name | 外部資源集區或 SQL Server 的名稱。 |
 | max_memory_percent | SQL Server 或外部資源集區可以使用的最大記憶體。 |
 
 ## <a name="resource-pools"></a>資源集區
 
-在[SQL Server Resource Governor](../../relational-databases/resource-governor/resource-governor.md)中,[資源集](../../relational-databases/resource-governor/resource-governor-resource-pool.md)區代表實例的實體資源子集。 您可以指定傳入應用程式要求的 CPU、實體 IO 和記憶體數量限制, 包括外部腳本的執行, 可以在資源集區中使用。 查看用於 SQL Server 和外部腳本的資源集區。
+在[SQL Server Resource Governor](../../relational-databases/resource-governor/resource-governor.md)中，[資源集](../../relational-databases/resource-governor/resource-governor-resource-pool.md)區代表實例的實體資源子集。 您可以指定傳入應用程式要求的 CPU、實體 IO 和記憶體數量限制，包括外部腳本的執行，可以在資源集區中使用。 查看用於 SQL Server 和外部腳本的資源集區。
 
 ![資源集區查詢的輸出](media/dmv-resource-pools.png "資源集區查詢的輸出")
 
@@ -244,18 +244,18 @@ SELECT CONCAT ('External Pool - ', ep.name) AS pool_name
 FROM sys.dm_resource_governor_external_resource_pools AS ep;
 ```
 
-此查詢會傳回下列資料行:
+此查詢會傳回下列資料行：
 
-| 「資料行」 | 描述 |
+| 資料行 | Description |
 |--------|-------------|
-| pool_name | 資源集區的名稱。 SQL Server 資源集區的前面`SQL Server`會加上, 而外部資源`External Pool`集區前面會加上。
-| total_cpu_usage_hours | 已重設資源管理員之後統計資料之後的累計 CPU 使用量 (以毫秒為單位)。 |
+| pool_name | 資源集區的名稱。 SQL Server 資源集區前面會加上 `SQL Server`，而外部資源集區前面會加上 `External Pool`。
+| total_cpu_usage_hours | 已重設資源管理員之後統計資料之後的累計 CPU 使用量（以毫秒為單位）。 |
 | read_io_completed_total | 重設資源管理員統計資料之後完成的讀取 IO 總數。 |
 | write_io_completed_total | 重設資源管理員統計資料之後完成的寫入 IO 總數。 |
 
 ## <a name="installed-packages"></a>已安裝的套件
 
-您可以藉由執行 R 或 Python 腳本來輸出這些套件, 以查看安裝在 SQL Server Machine Learning 服務中的 R 和 Python 封裝。
+您可以藉由執行 R 或 Python 腳本來輸出這些套件，以查看安裝在 SQL Server Machine Learning 服務中的 R 和 Python 封裝。
 
 ### <a name="installed-packages-for-r"></a>適用于 R 的已安裝套件
 
@@ -273,14 +273,14 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
     , License NVARCHAR(1000), LibPath NVARCHAR(2000)));
 ```
 
-傳回的資料行包括:
+傳回的資料行包括：
 
-| 「資料行」 | 描述 |
+| 資料行 | Description |
 |--------|-------------|
 | 套件 | 已安裝之封裝的名稱。 |
 | Version | 封裝的版本。 |
 | 相依 | 列出已安裝之封裝所相依的封裝。 |
-| 使用權 | 已安裝之套件的授權。 |
+| 授權 | 已安裝之套件的授權。 |
 | LibPath | 可在其中找到封裝的目錄。 |
 
 ### <a name="installed-packages-for-python"></a>適用于 Python 的已安裝套件
@@ -299,9 +299,9 @@ OutputDataSet = pandas.DataFrame([(i.key, i.version, i.location) for i in pip.ge
 WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHAR(1000)));
 ```
 
-傳回的資料行包括:
+傳回的資料行包括：
 
-| 「資料行」 | 描述 |
+| 資料行 | Description |
 |--------|-------------|
 | 套件 | 已安裝之封裝的名稱。 |
 | Version | 封裝的版本。 |
