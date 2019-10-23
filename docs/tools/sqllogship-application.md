@@ -13,17 +13,17 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68065448"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** 應用程式會對記錄傳送組態執行備份、複製或還原作業，以及相關的清除工作。 這些作業是在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定執行個體上對特定資料庫執行。  
   
- ![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")如需語法慣例, 請參閱[命令提示字元&#40;公用&#41;程式參考資料庫引擎](../tools/command-prompt-utility-reference-database-engine.md)。  
+ 如需語法慣例，請參閱![命令提示字元公用程式參考 &#40;Database Engine&#41;](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")。  
   
 ## <a name="syntax"></a>語法  
   
