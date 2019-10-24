@@ -16,14 +16,14 @@ ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 526e95490644b4fddae3e02e9ee73b57c00797c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211278"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783364"
 ---
-# <a name="write-the-job-status-to-the-windows-application-log"></a>將作業狀態寫入到 Windows 應用程式記錄
+# <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，將作業狀態寫入 Windows 應用程式事件記錄檔。  
   
  作業回應可確保資料庫管理員知道作業已完成，以及作業的執行頻率。 典型的作業回應包括：  
@@ -38,7 +38,7 @@ ms.locfileid: "68211278"
   
 -   **開始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要使用下列項目，將作業狀態寫入 Windows 應用程式記錄檔：**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68211278"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
@@ -63,25 +63,22 @@ ms.locfileid: "68211278"
   
 4.  勾選 **[寫入 Windows 應用程式事件記錄檔]** ，並選擇下列其中一項：  
   
-    -   按一下 [當作業成功時]  ，在作業成功完成時記錄作業狀態。  
+    -   按一下 [當作業成功時]，在作業成功完成時記錄作業狀態。  
   
-    -   按一下 [當作業失敗時]  ，在作業失敗時記錄作業狀態。  
+    -   按一下 [當作業失敗時]，在作業失敗時記錄作業狀態。  
   
-    -   按一下 [作業完成時]  ，不論完成狀態為何，一律記錄作業狀態。  
+    -   按一下 [作業完成時]，不論完成狀態為何，一律記錄作業狀態。  
   
-##  <a name="SMO"></a> 使用 SQL Server 管理物件  
- **若要將作業狀態寫入到 Windows 應用程式記錄**  
+##  <a name="SMO"></a>使用 SQL Server 管理物件  
+
+### <a name="to-write-job-status-to-the-windows-application-log"></a>若要將作業狀態寫入到 Windows 應用程式記錄
   
  使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，呼叫 `EventLogLevel` 類別的 `Job` 屬性。  
   
  下列程式碼範例會設定作業在作業執行完成時，產生作業系統事件記錄項目。  
   
- **PowerShell**  
-  
-```  
+```powershell
 $srv = new-object Microsoft.SqlServer.Management.Smo.Server("(local)")  
 $jb = new-object Microsoft.SqlServer.Management.Smo.Agent.Job($srv.JobServer, "Test Job")  
 $jb.EventLogLevel = [Microsoft.SqlServer.Management.Smo.Agent.CompletionAction]::Always  
 ```  
-  
-  

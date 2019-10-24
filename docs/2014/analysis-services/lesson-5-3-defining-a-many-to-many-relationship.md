@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/22/2019
 ms.locfileid: "69493871"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>定義多對多關聯性
@@ -33,9 +33,9 @@ ms.locfileid: "69493871"
   
 ## <a name="adding-required-tables-to-the-data-source-view"></a>將必要資料表加入資料來源檢視中  
   
-1.  請針對 **Adventure Works DW 2012** 資料來源檢視，開啟資料來源檢視設計師。  
+1.  請針對 [Adventure Works DW 2012] 資料來源檢視，開啟 [資料來源檢視設計師]。  
   
-2.  以滑鼠右鍵按一下 [**圖表召集人**] 窗格中的任何位置，然後`Internet Sales Order Reasons`按一下 [**新增圖表**]，並指定做為此新圖表的名稱。  
+2.  以滑鼠右鍵按一下 [**圖表召集人**] 窗格中的任何位置，然後按一下 [**新增圖表**]，再指定 `Internet Sales Order Reasons` 做為此新圖表的名稱。  
   
 3.  將 [InternetSales] 資料表從 [資料表] 窗格拖曳至 [圖表] 窗格。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "69493871"
   
 6.  在 [格式] 功能表上，指向 [自動配置]，然後按一下 [圖表]。  
   
-7.  在 屬性視窗中，將  **DimSalesReason**  `SalesReason`資料表的  **friendlyname**  屬性變更為，然後將  **FactInternetSalesReason**  資料表的`InternetSalesReason` **friendlyname**  屬性變更為。  
+7.  在 屬性視窗中，將  **DimSalesReason**  資料表的  **friendlyname**  屬性變更為 `SalesReason`，然後將  **FactInternetSalesReason**  資料表的  **friendlyname**  屬性變更為 `InternetSalesReason`。  
   
 8.  在 [資料表] 窗格中，展開 [InternetSalesReason (dbo.FactInternetSalesReason)]，並按一下 [SalesOrderNumber]，然後在 [屬性] 視窗中檢閱這個資料行的 [DataType] 屬性。  
   
      請注意， **SalesOrderNumber** 資料行的資料類型是字串資料類型。  
   
-9. 檢查`InternetSalesReason`資料表中其他資料行的資料類型。  
+9. 檢查 `InternetSalesReason` 資料表中其他資料行的資料類型。  
   
      請注意，這份資料表的其他兩個資料行的資料類型是數值資料類型。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "69493871"
   
 1.  請針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師]，然後按一下 [Cube 結構] 索引標籤。  
   
-2.  以滑鼠右鍵按一下 [量值] 窗格中的任何位置，然後按一下 [新增量值群組]。 如需詳細資訊，請參閱 [在多維度模型中建立量值和量值群組](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
+2.  以滑鼠右鍵按一下 [量值] 窗格中的任何位置，然後按一下 [新增量值群組]。 如需詳細資訊，請參閱[在多維度模型中建立量值和量值群組](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
   
-3.  在 [**新增量值群組**] 對話方塊中`InternetSalesReason` ，于 [**從資料來源視圖選取資料表**] 清單中選取，然後按一下 **[確定]** 。  
+3.  在 [**新增量值群組**] 對話方塊中，選取 [**從資料來源視圖選取資料表**] 清單中的 [`InternetSalesReason`]，然後按一下 **[確定]** 。  
   
      請注意，[網際網路銷售原因] 量值群組現在出現在 [量值] 窗格中。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "69493871"
   
 5.  選取 [網際網路銷售原因計數]，並在 [屬性] 視窗中檢閱這個量值的屬性。  
   
-     請注意，這個量值的 [AggregateFunction] 屬性是定義為 [計數] 而不是 [總和]。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]選擇 [**計數**] 是因為基礎資料類型是字串資料類型。 基礎事實資料表中的其他兩個資料行並未選取做為量值，因為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到它們是數值索引鍵而不是實際量值。 如需詳細資訊，請參閱[定義局部加總行為](multidimensional-models/define-semiadditive-behavior.md)。  
+     請注意，這個量值的 [AggregateFunction] 屬性是定義為 [計數] 而不是 [總和]。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 選擇 [**計數**] 是因為基礎資料類型是字串資料類型。 基礎事實資料表中的其他兩個資料行並未選取做為量值，因為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到它們是數值索引鍵而不是實際量值。 如需詳細資訊，請參閱[定義局部加總行為](multidimensional-models/define-semiadditive-behavior.md)。  
   
 6.  在 [屬性] 視窗中，將 [網際網路銷售原因計數] 量值的 [可見] 屬性變更為 **False**。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "69493871"
   
      下圖顯示 [網際網路銷售原因計數] 量值的屬性。  
   
-     [![網際網路銷售原因計數] 量值的屬性][(../../2014/tutorials/media/l5-many-to-many-2.gif "網際網路銷售原因計數] 量值的屬性")  
+     ![[網際網路銷售原因計數] 量值的屬性](../../2014/tutorials/media/l5-many-to-many-2.gif "[網際網路銷售原因計數] 量值的屬性")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>定義多對多維度  
   
@@ -99,29 +99,29 @@ ms.locfileid: "69493871"
   
 4.  在 [指定來源資訊] 頁面上，確認已選取 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 資料來源檢視。  
   
-5.  在 [**主資料表**] 清單中`SalesReason`，選取 []。  
+5.  在 [**主資料表**] 清單中，選取 [`SalesReason`]。  
   
 6.  在 [索引鍵資料行] 清單中，確認已列出 [SalesReasonKey]。  
   
 7.  在 [名稱資料行] 清單中，選取 [SalesReasonName]。  
   
-8.  按一下 [下一步]。  
+8.  按一下 **[下一步]** 。  
   
-9. 在 [選取維度屬性] 頁面上，系統會自動選取 [銷售原因索引鍵] 屬性，因為它是索引鍵屬性。 選取 [**銷售原因類型**] 屬性旁的核取方塊，將其名稱變更`Sales Reason Type`為，然後按 **[下一步]** 。  
+9. 在 [選取維度屬性] 頁面上，系統會自動選取 [銷售原因索引鍵] 屬性，因為它是索引鍵屬性。 選取 [**銷售原因類型**] 屬性旁的核取方塊，將其名稱變更為 `Sales Reason Type`，然後按 **[下一步]** 。  
   
 10. 在 [正在完成精靈] 頁面上，按一下 [完成] 建立 [銷售原因] 維度。  
   
 11. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-12. 在 [**銷售原因**] 維度之 [維度設計師] 的 [**屬性**] 窗格中，選取 [**銷售原因索引鍵**]，然後將屬性視窗中的 [**名稱**] 屬性變更為`Sales Reason.`  
+12. 在 [**銷售原因**] 維度之 [維度設計師] 的 [**屬性**] 窗格中，選取 [**銷售原因索引鍵**]，然後將屬性視窗中的 [**名稱**] 屬性變更為 `Sales Reason.`  
   
-13. 在 [**維度設計師] 的**[階層] 窗格中，依該順序建立包含 [ `Sales Reason Type`層級] 和 [**銷售原因**] 層級的 [**銷售原因**] 使用者階層。  
+13. 在 [維度**設計師] 的**[階層] 窗格中，依序建立 [**銷售原因**] 使用者階層，其中包含 [`Sales Reason Type` 層級] 和 [**銷售原因**] 層級。  
   
-14. 在屬性視窗中，將`All Sales Reasons`定義為 [銷售原因] 階層的 [ **AllMemberName** ] 屬性值。  
+14. 在屬性視窗中，將 `All Sales Reasons` 定義為 [銷售原因] 階層的 [ **AllMemberName** ] 屬性值。  
   
-15. 將`All Sales Reasons`定義為 [銷售原因] 維度的 [ **AttributeAllMemberName** ] 屬性值。  
+15. 將 `All Sales Reasons` 定義為 [銷售原因] 維度的 [ **AttributeAllMemberName** ] 屬性值。  
   
-16. 若要將新建立的維度新增至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 當成 Cube 維度，請切換至 [Cube 設計師]。 在 [Cube 結構] 索引標籤上，以滑鼠右鍵按一下 [維度] 窗格，然後選取 [新增 Cube 維度]。  
+16. 若要將新建立的維度加入 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 當作 Cube 維度，請切換至 [Cube 設計師]。 在 [Cube 結構] 索引標籤上，以滑鼠右鍵按一下 [維度] 窗格，然後選取 [加入 Cube 維度]。  
   
 17. 在 [新增 Cube 維度] 對話方塊中，選取 [銷售原因]，然後按一下 [確定]。  
   
@@ -143,9 +143,9 @@ ms.locfileid: "69493871"
   
      下圖顯示 [定義關聯性] 對話方塊中的變更。  
   
-     ![定義關聯性 對話方塊](../../2014/tutorials/media/l5-many-to-many-3.gif "定義關聯性 對話方塊")  
+     ![[定義關聯性] 對話方塊](../../2014/tutorials/media/l5-many-to-many-3.gif "定義關聯性對話方塊")  
   
-5.  按一下 [確定]。  
+5.  按一下 **[確定]** 。  
   
      請注意代表 [銷售原因] 維度和 [網際網路銷售] 量值群組之間關聯性的多對多圖示。  
   
@@ -161,18 +161,18 @@ ms.locfileid: "69493871"
   
 5.  在 [中繼資料] 窗格中，依序展開 [客戶]、[位置]、[客戶地理位置]、[成員]、[所有客戶] 和 [澳大利亞]，並以滑鼠右鍵按一下 [昆士蘭]，然後按一下 [新增至篩選]。  
   
-6.  展開`Sales Reason Type`層級的每個成員，以檢查與昆士蘭客戶在網際網路上購買[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]產品的每個原因相關聯的貨幣值。  
+6.  展開 [`Sales Reason Type`] 層級的每個成員，以檢查與昆士蘭中客戶透過網際網路購買 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 產品的每個原因相關聯的貨幣值。  
   
      請注意，與每一個銷售原因有關聯的總計累加超過總銷售量。 這是因為有些客戶針對其採購引用了多個原因。  
   
      下圖顯示 [Cube 設計師] 的 [篩選] 窗格和 [資料] 窗格。  
   
-     ![篩選和資料窗格的 Cube 設計師](../../2014/tutorials/media/l5-many-to-many-5.gif "Cube 設計師 的篩選和資料窗格")  
+     ![Cube 設計師的篩選和資料窗格](../../2014/tutorials/media/l5-many-to-many-5.gif "Cube 設計師的篩選和資料窗格")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [在量值群組內定義維度資料粒度](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定義多對多關聯性及多對多關聯性屬性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  

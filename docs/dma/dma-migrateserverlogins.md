@@ -1,8 +1,8 @@
 ---
-title: 移轉 SQL Server 登入，使用 Data Migration Assistant |Microsoft Docs
-description: 了解如何移轉 SQL Server 登入，使用 Data Migration Assistant
+title: 使用 Data Migration Assistant 遷移 SQL Server 登入 |Microsoft Docs
+description: 瞭解如何使用 Data Migration Assistant 遷移 SQL Server 登入
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,44 +13,47 @@ helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
-ms.openlocfilehash: 84740f9787a7244228ef16af139a9e0b18ffb3a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.author: jtoland
+ms.openlocfilehash: 265ab37c47956400baa759b73838c7f2e66cc83e
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054700"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783267"
 ---
-# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>移轉 SQL Server 登入，使用 Data Migration Assistant
+# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>使用 Data Migration Assistant 遷移 SQL Server 登入
 
-本文提供使用 Data Migration Assistant 移轉 SQL Server 登入的概觀。 
+本文概述如何使用 Data Migration Assistant 遷移 SQL Server 登入。
 
-## <a name="which-logins-are-migrated"></a>移轉的登入
+> [!IMPORTANT]
+> 本主題適用于涉及 SQL Server 升級至較新版本內部部署產品或在 Azure 虛擬機器上 SQL Server 的案例。
 
-- 您可以移轉 （例如網域使用者或 Windows 網域群組） 的 Windows 主體為基礎的登入。 您也可以移轉建立根據 SQL 驗證，也稱為 SQL Server 登入的登入。
+## <a name="which-logins-are-migrated"></a>哪些登入已遷移
 
-- Data Migration Assistant 目前不支援與獨立安全性憑證 （登入對應到憑證）、 獨立的非對稱金鑰 （對應至非對稱金鑰登入） 和對應至認證的登入相關聯的登入。
+- 您可以根據 Windows 主體（例如網域使用者或 Windows 網域群組）來遷移登入。 您也可以遷移根據 SQL 驗證所建立的登入，也稱為 SQL Server 登入。
 
-- 不會移動 data Migration Assistant **sa**登入和伺服器名稱加上雙引號的雜湊與原則 (\#\#)，這是僅供內部使用。
+- Data Migration Assistant 目前不支援與獨立安全性憑證（對應至憑證的登入）相關聯的登入、獨立非對稱金鑰（對應至非對稱金鑰的登入），以及對應至認證的登入。
 
-- 根據預設，資料移轉小幫手，請選取要移轉所有合格的登入。 或者，您可以選取要移轉的特定登入。 Data Migration Assistant 移轉時所有合格的登入，登入使用者的對應中保持不變的已移轉的資料庫。 
+- Data Migration Assistant 不會使用以雙重雜湊標記（\# \#）括住的名稱來移動**sa**登入和伺服器原則，這僅供內部使用。
 
-  如果您打算移轉特定登入，請務必選取對應至在選取要移轉的資料庫中的一或多個使用者的登入。
+- 根據預設，Data Migration Assistant 會選取要遷移的所有合格登入。 （選擇性）您可以選取要遷移的特定登入。 當 Data Migration Assistant 遷移所有合格的登入時，使用者對應在遷移的資料庫中會保持不變。
 
-- 登入移轉的一部分，Data Migration Assistant 也將使用者定義伺服器角色並將伺服器層級權限加入的使用者定義伺服器角色。 角色的擁有者將會設定為**sa**主體。
+  如果您打算遷移特定登入，請務必選取對應到所選資料庫中一或多個使用者的登入，以進行遷移。
 
-## <a name="during-and-after-migration"></a>在移轉前後和期間
+- 在登入遷移過程中，Data Migration Assistant 也會移動使用者定義的伺服器角色，並將伺服器層級許可權加入至使用者定義的伺服器角色。 角色的擁有者將會設定為**sa**主體。
 
-- 登入移轉的一部分，Data Migration Assistant 將指派權限給目標 SQL Server 上的安全性實體存在於來源 SQL Server 上。 
+## <a name="during-and-after-migration"></a>在遷移期間和之後
 
-  如果目標 SQL Server 上已有登入，Data Migration Assistant 移轉只指派給安全性實體的權限並不會重新建立整個登入。
+- 在進行登入遷移的過程中，Data Migration Assistant 會將目標 SQL Server 上的許可權指派給安全性實體，因為它們存在於來源 SQL Server 上。
 
-- 資料移轉小幫手會盡力將登入對應至資料庫使用者，如果目標伺服器上已經有登入。
+  如果登入已經存在於目標 SQL Server 上，Data Migration Assistant 只會遷移指派給安全性實體的許可權，而不會重新建立整個登入。
 
-- 建議您檢閱移轉的結果，以了解登入移轉及任何建議的移轉後動作的整體狀態。
+- 如果目標伺服器上已有登入，Data Migration Assistant 可讓您將登入對應至資料庫使用者的最佳做法。
+
+- 建議您檢查遷移結果，以瞭解登入遷移的整體狀態，以及任何建議的後續遷移動作。
 
 ## <a name="resources"></a>資源
 
-[Data Migration Assistant (DMA)](../dma/dma-overview.md)
+[Data Migration Assistant （DMA）](../dma/dma-overview.md)
 
-[資料移轉小幫手：組態設定](../dma/dma-configurationsettings.md)
+[Data Migration Assistant：設定](../dma/dma-configurationsettings.md)

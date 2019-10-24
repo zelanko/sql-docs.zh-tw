@@ -14,20 +14,19 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922881"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782756"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元會使用與 XPath 運算式類似的兩種運算式字串類型。 查詢運算式是字串，其中指定一組用來列舉物件模型階層中之一個或多個物件的準則。 統一資源名稱 (URN) 是可唯一識別單一物件的特定查詢運算式字串類型。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```
       Object1  
       [<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]<FilterExpression>::=  
 <PropertyExpression> [and <PropertyExpression>][...n]  
@@ -84,7 +83,7 @@ ms.locfileid: "62922881"
 |||  
 |-|-|  
 |yyyy|四位數的年份。|  
-|MM|兩位數的月份 (01 到 12)。|  
+|mm|兩位數的月份 (01 到 12)。|  
 |dd|兩位數的日期 (01 到 31)。|  
 |hh|兩位數的小時，使用 24 小時制 (01 到 23)。|  
 |mi|兩位數的分鐘 (01 到 59)。|  
@@ -97,9 +96,9 @@ ms.locfileid: "62922881"
  列舉指定之屬性具有 NULL 值的所有物件。  
   
  not(\<*PropertyExpression*>)  
- 執行 *PropertyExpression*評估值的否定運算，並且列舉不符合 *PropertyExpression*中指定之條件的所有物件。 例如，not(contains(\@Name, 'xyz')) 會列舉名稱中沒有 xyz 字串的所有物件。  
+ 執行 *PropertyExpression* 評估值的否定運算，並且列舉不符合 *PropertyExpression* 中指定之條件的所有物件。 例如，not(contains(\@Name, 'xyz')) 會列舉名稱中沒有 xyz 字串的所有物件。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  查詢運算式是列舉 SMO 模型階層中之節點的字串。 每個節點都具有指定準則的篩選運算式，用於決定要列舉位於該節點的哪些物件。 查詢運算式是以 XPath 運算式語言建立模型。 查詢運算式會實作 XPath 所支援之運算式的小型子集，而且也具有在 XPath 中找不到的某些延伸模組。 XPath 運算式是字串，其中指定一組用來列舉 XML 文件之一個或多個標記的準則。 如需有關 XPath 的詳細資訊，請參閱 [W3C XPath Language](http://www.w3.org/TR/xpath20/)(W3C XPath 語言)。  
   
  查詢運算式必須以伺服器物件的絕對參考為開頭。 不允許使用含有前置 / 的相對運算式。 在查詢運算式中指定之物件的順序必須遵循相關聯物件模型中之集合物件的階層。 例如，在 Microsoft.SqlServer.Management.Smo 命名空間中參考物件的查詢運算式必須以伺服器節點為開頭，後面接著資料庫節點等項目。  
@@ -122,7 +121,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>B. 使用 contains 列舉物件  
+### <a name="b-enumerating-objects-using-contains"></a>b. 使用 contains 列舉物件  
  這個查詢運算式會列舉不區分大小寫而且名稱具有 'm' 字元的所有資料庫。  
   
 ```  
@@ -150,15 +149,13 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>F. 使用 is_null 列舉物件  
+### <a name="f-enumerating-objects-using-is_null"></a>F. 使用 is_null 列舉物件  
  這個查詢運算式會列舉 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫中上次修改日期屬性沒有 NULL 的所有資料表：  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Invoke-PolicyEvaluation 指令程式](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
