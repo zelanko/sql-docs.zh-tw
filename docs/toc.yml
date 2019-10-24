@@ -10289,14 +10289,18 @@
   items:
     - name: 概觀
       items:
+        - name: 新功能
+          items:
+            - name: SQL Server 2019
+              href: linux/sql-server-linux-whats-new-2019.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-whats-new.md
         - name: 版本資訊
           items:
-            - name: SQL Server 2017
-              href: linux/sql-server-linux-release-notes.md
             - name: SQL Server 2019
               href: linux/sql-server-linux-release-notes-2019.md
-        - name: 新功能
-          href: linux/sql-server-linux-whats-new.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-release-notes.md
         - name: 版本和支援的功能
           href: linux/sql-server-linux-editions-and-components-2017.md
         - name: 常見問題集
