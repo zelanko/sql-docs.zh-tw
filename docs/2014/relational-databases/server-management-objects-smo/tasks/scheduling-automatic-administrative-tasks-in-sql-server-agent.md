@@ -1,5 +1,5 @@
 ---
-title: 排程 SQL Server Agent 中的自動管理工作 |Microsoft Docs
+title: 在 SQL Server Agent 中排程自動管理工作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 715a60d4a6f4a138a71e7de6095234a9e0d2a461
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519223"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782204"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 是由下列物件表示：  
@@ -35,7 +35,7 @@ ms.locfileid: "62519223"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空間中。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或是[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 1.  如果程式使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent，則您必須包含 `Imports` 陳述式來限定 Agent 命名空間。 將陳述式插入至其他 `Imports` 陳述式之後、在應用程式中的任何宣告之前，例如：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62519223"
 ## <a name="creating-a-job-with-steps-and-a-schedule-in-visual-c"></a>在 Visual C# 中建立具有步驟和排程的作業  
  此程式碼範例會建立具有步驟和排程的作業，然後通知操作員。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.  
             Server srv = new Server();  
@@ -112,7 +112,7 @@ ms.locfileid: "62519223"
 ## <a name="creating-a-job-with-steps-and-a-schedule-in-powershell"></a>在 PowerShell 中建立具有步驟和排程的作業  
  此程式碼範例會建立具有步驟和排程的作業，然後通知操作員。  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -145,7 +145,7 @@ $jbstp.OnFailAction =[Microsoft.SqlServer.Management.SMO.Agent.StepCompletionAct
 $jbstp.Create();   
   
 #Define a JobSchedule object variable by supplying the parent job and name arguments in the constructor.   
-$jbsch =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
+$jbsch = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
   
 #Set properties to define the schedule frequency, and duration.   
 $jbsch.FrequencyTypes =  [Microsoft.SqlServer.Management.SMO.Agent.FrequencyTypes]::Daily  
@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>在 Visual Basic 中建立警示  
  此程式碼範例會建立由效能條件觸發的警示。 該條件必須以特定格式提供：  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
  警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 Visual Basic 關鍵字。  
   
@@ -175,11 +175,11 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>在 Visual C# 中建立警示  
  此程式碼範例會建立由效能條件觸發的警示。 該條件必須以特定格式提供：  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
  警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
   
-```  
+```csharp
 {  
              //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
@@ -208,11 +208,11 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>在 PowerShell 中建立警示  
  此程式碼範例會建立由效能條件觸發的警示。 該條件必須以特定格式提供：  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName |CounterName |實例 |ComparisionOp |CompValue**  
   
  警示通知需要有操作員。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 類型需要使用方括號，因為 `operator` 是 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 關鍵字。  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -251,7 +251,7 @@ $op.Drop()
 ## <a name="allowing-user-access-to-subsystem-by-using-a-proxy-account-in-visual-c"></a>在 Visual C# 中允許使用者使用 Proxy 帳戶存取子系統  
  此程式碼範例示範如何允許使用者利用 <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> 方法來存取指定的子系統。  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
 {   
 Server srv = default(Server);   
@@ -280,8 +280,6 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 代理程式](../../../ssms/agent/sql-server-agent.md)   
+## <a name="see-also"></a>請參閱  
+ [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)    
  [實作作業](../../../ssms/agent/implement-jobs.md)  
-  
-  

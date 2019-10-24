@@ -1,5 +1,5 @@
 ---
-title: 指令碼 |Microsoft Docs
+title: 腳本 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f10289e099a0c3b6400b71d972c6f749ffb76ff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158789"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781924"
 ---
 # <a name="scripting"></a>指令碼
-  在 SMO 中，指令碼是由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件控制，或是由個別物件的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件可控制從相依性關聯性物件的執行個體上的對應[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  在 SMO 中，指令碼是由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件控制，或是由個別物件的 `Script` 方法控制。 @No__t_0 物件會針對 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 實例上物件的相依性關聯性控制對應。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件所進行的進階指令碼作業是三階段的程序：  
   
@@ -31,7 +31,7 @@ ms.locfileid: "63158789"
   
 3.  產生指令碼  
   
- 探索階段會使用 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 物件。 如果已給定物件 URN 清單，則 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 方法會針對 URN 清單中的物件傳回 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件。 布林值*fParents*參數用來選取要探索的父代或指定之物件的子系是否。 在這個階段可以修改相依性樹狀目錄。  
+ 探索階段會使用 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 物件。 如果已給定物件 URN 清單，則 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 方法會針對 URN 清單中的物件傳回 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件。 布林值*fParents*參數是用來選取是否要探索指定物件的父系或子系。 在這個階段可以修改相依性樹狀目錄。  
   
  在產生清單階段會傳入樹狀目錄並傳回產生的清單。 這個物件清單會以指令碼作業順序排列，且可以操作。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "63158789"
  在第三個也就是最後階段時，會產生具有指定清單和指令碼選項的指令碼。 結果會以 <xref:System.Collections.Specialized.StringCollection> 系統物件傳回。 接下來在這個階段中會從 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件的 Items 集合以及 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> 之類的屬性擷取相依物件的名稱。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或是[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
  這個程式碼範例需要針對 System.Collections.Specialized 命名空間使用 `Imports` 陳述式。 請在應用程式中，將這個陳述式與其他的 Imports 陳述式一同插入任何宣告之前。  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -53,7 +53,7 @@ Imports System.Collections.Specialized
 ## <a name="scripting-out-the-dependencies-for-a-database-in-visual-basic"></a>針對 Visual Basic 中的資料庫撰寫相依性的指令碼  
  這個程式碼範例示範如何探索相依性，並反覆運算清單以顯示結果。  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -101,7 +101,7 @@ End Class
 ## <a name="scripting-out-the-dependencies-for-a-database-in-visual-c"></a>針對 Visual C# 中的資料庫撰寫相依性的指令碼  
  這個程式碼範例示範如何探索相依性，並反覆運算清單以顯示結果。  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -149,7 +149,7 @@ public class A {
 ## <a name="scripting-out-the-dependencies-for-a-database-in-powershell"></a>在 PowerShell 中針對資料庫撰寫相依性的指令碼  
  這個程式碼範例示範如何探索相依性，並反覆運算清單以顯示結果。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default  
   
@@ -160,7 +160,6 @@ $scrp.Options.WithDependencies = $true
 $scrp.Options.IncludeIfNotExists = $true  
   
 # Set the path context to the tables in AdventureWorks2012.  
-  
 CD Databases\AdventureWorks2012\Tables  
   
 foreach ($Item in Get-ChildItem)  
@@ -168,5 +167,3 @@ foreach ($Item in Get-ChildItem)
  $scrp.Script($Item)  
  }  
 ```  
-  
-  
