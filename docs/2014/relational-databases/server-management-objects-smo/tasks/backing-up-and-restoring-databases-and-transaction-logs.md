@@ -1,5 +1,5 @@
 ---
-title: 備份和還原資料庫和交易記錄檔 |Microsoft Docs
+title: 備份與還原資料庫和交易記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,27 +19,27 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fc7ff4dc3142fa6f6cd18fc7b00e691d3bf29df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655693"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783044"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>備份和還原資料庫與交易記錄
-  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 類別和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 類別都是公用程式類別，可提供工具來完成備份及還原的特定工作。 A<xref:Microsoft.SqlServer.Management.Smo.Backup>物件表示特定的備份工作所需而不是[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]伺服器執行個體上的物件。  
+  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 類別和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 類別都是公用程式類別，可提供工具來完成備份及還原的特定工作。 @No__t_0 物件代表所需的特定備份工作，而不是伺服器實例上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件。  
   
  如果發生資料遺失或損毀，則必須完整或部分地還原備份。 部分還原會使用 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 集合來分割要還原的資料。 如果是進行交易記錄的備份，則可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Restore> 屬性還原至特定的時間點。 也可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 方法來驗證資料。 建議的備份程序是定期執行還原作業並檢查資料庫中的資料，以檢查備份的完整性。  
   
  與 <xref:Microsoft.SqlServer.Management.Smo.Backup> 物件類似，<xref:Microsoft.SqlServer.Management.Smo.Restore> 物件不需要藉由使用 `Create` 方法來建立，因為它不代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上的任何物件。 <xref:Microsoft.SqlServer.Management.Smo.Restore> 物件是一組用於還原資料庫的屬性和方法。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或是[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>在 Visual Basic 中備份資料庫和交易記錄  
  此程式碼範例示範如何將現有的資料庫備份至檔案，以及如何加以還原。  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Common  
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.VisualBasic.MyServices  
@@ -179,7 +179,7 @@ End Module
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-c"></a>在 Visual C# 中備份資料庫和交易記錄  
  此程式碼範例示範如何將現有的資料庫備份至檔案，以及如何加以還原。  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
   
@@ -317,9 +317,7 @@ class A {
 ## <a name="backing-up-databases-and-transaction-logs-in-powershell"></a>在 PowerShell 中備份資料庫和交易記錄  
  此程式碼範例示範如何將現有的資料庫備份至檔案，以及如何加以還原。  
   
-```  
-#Backing up and restoring a Database from PowerShell  
-  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -452,7 +450,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 > [!NOTE]  
 >  <xref:System.Collections.Specialized.StringCollection> 物件需要使用 `imports System.Collections.Specialized` 陳述式的命名空間參考。  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -482,7 +480,7 @@ End Module
 > [!NOTE]  
 >  <xref:System.Collections.Specialized.StringCollection> 物件需要使用 `imports System.Collections.Specialized` 陳述式的命名空間參考。  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
@@ -514,16 +512,14 @@ class A {
 > [!NOTE]  
 >  <xref:System.Collections.Specialized.StringCollection> 物件需要使用 `imports System.Collections.Specialized` 陳述式的命名空間參考。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 $sc = $db.CheckTables([Microsoft.SqlServer.Management.SMO.RepairType]::None)  
-foreach ($c in $sc)  
+ForEach ($c In $sc)  
 {  
     $c  
- }  
+}  
 ```  
-  
-  

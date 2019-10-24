@@ -10,12 +10,12 @@ ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 035cc8b8de493761b79ac391f2f543f96c941507
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a8092dc9ed731349a1948a74e3950eb32f4f47
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66102873"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783154"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服務和服務應用程式
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式是以 SharePoint 服務架構為基礎進行架構，並且利用 SharePoint 服務和一對多服務應用程式。 建立服務應用程式可讓服務變成可用，並產生服務應用程式資料庫。 您可以建立多個 Reporting Services 服務應用程式，但是一個服務應用程式就足以應付大部分的部署狀況。  
@@ -62,19 +62,19 @@ ms.locfileid: "66102873"
   
 1.  將應用程式集區名稱的應用程式集區物件加入至要傳遞到 [新增] 動作的變數中。  
   
-    ```  
-    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
+    ```powershell
+    $appPoolName = Get-SPServiceApplicationPool "<application pool name>"  
     ```  
   
 2.  使用您提供的名稱與應用程式集區名稱建立服務應用程式。  
   
-    ```  
+    ```powershell
     New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  取得新的服務應用程式物件，並且將物件以管道傳送至 Pipe 新 Proxy Cmdlet。  
   
-    ```  
+    ```powershell
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
@@ -84,5 +84,3 @@ ms.locfileid: "66102873"
 |----------|----------|  
 |管理服務應用程式的設定。|[管理 Reporting Services SharePoint 服務應用程式](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
 |備份和還原服務應用程式及相關元件，例如加密金鑰和 Proxy。|[備份與還原 Reporting Services SharePoint 服務應用程式](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
-  
-  

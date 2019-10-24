@@ -17,21 +17,21 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917863"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782673"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
   最好先檢閱 DAC 封裝的內容，再將它部署至實際執行環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  
   
-1.  **開始之前：** [必要條件](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **若要升級 DAC，請使用下列方式：** [檢視 DAC 內容](#ViewDACContents)、[檢視資料庫變更](#ViewDBChanges)、[檢視升級動作](#ViewUpgradeActions)、[比較 DAC](#CompareDACs)  
+2.  **使用下列項目，升級 DAC**  [檢視 DAC 內容](#ViewDACContents)、 [檢視資料庫變更](#ViewDBChanges)、 [檢視升級動作](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> 必要條件  
+##  <a name="Prerequisites"></a> Prerequisites  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 使用來源不明或來源不受信任的 DAC 之前，請先將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的隔離測試執行個體，並在資料庫上執行 [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)，然後檢查資料庫中的程式碼，例如預存程序或其他使用者定義的程式碼。  
   
 ##  <a name="ViewDACContents"></a> 檢視 DAC 內容  
@@ -39,17 +39,17 @@ ms.locfileid: "62917863"
   
  **在 SQL Server Developer Tools 中檢視 DAC**  
   
-1.  開啟 [檔案]  功能表，選取 [開新檔案]  ，然後選取 [專案...]  。  
+1.  開啟 [檔案] 功能表，選取 [開新檔案]，然後選取 [專案...]。  
   
 2.  選取 **[SQL Server]** 專案範本，並指定 **[名稱]** 、 **[位置]** 及 **[方案名稱]** 。  
   
-3.  在 [方案總管]  中，以滑鼠右鍵按一下專案節點，然後選取 [屬性...]  。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [屬性...]。  
   
-4.  在 [專案設定]  索引標籤的 [輸出類型]  區段中，選取 [資料層應用程式 (.dacpac 檔案)]  核取方塊，然後關閉屬性對話方塊。  
+4.  在 [專案設定] 索引標籤的 [輸出類型] 區段中，選取 [資料層應用程式 (.dacpac 檔案)] 核取方塊，然後關閉屬性對話方塊。  
   
-5.  在 [方案總管]  中，以滑鼠右鍵按一下專案節點，然後選取 [匯入資料層應用程式...]  。  
+5.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [匯入資料層應用程式...]。  
   
-6.  使用方案總管  開啟 DAC 中的所有檔案，例如伺服器選取原則和部署前後指令碼。  
+6.  使用方案總管開啟 DAC 中的所有檔案，例如伺服器選取原則和部署前後指令碼。  
   
 7.  使用 **[結構描述檢視]** 檢閱結構描述中的所有物件，特別是檢閱函數或預存程序這類物件中的程式碼時。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62917863"
   
  **使用精靈檢視資料庫變更**  
   
-1.  執行 [升級資料層應用程式精靈]  ，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
+1.  執行 [升級資料層應用程式精靈]，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
   
 2.  在 **[偵測變更]** 頁面上，檢閱已對資料庫進行之變更的報表。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62917863"
   
 4.  如需使用精靈的詳細資訊，請參閱 [升級資料層應用程式](upgrade-a-data-tier-application.md)。  
   
- **使用 PowerShell 檢視資料庫變更**  
+### <a name="view-database-changes-by-using-powershell"></a>使用 PowerShell 檢視資料庫變更
   
 1.  建立 SMO Server 物件，並將它設定為包含要檢視之 DAC 的執行個體。  
   
@@ -84,15 +84,14 @@ ms.locfileid: "62917863"
   
 4.  使用 `GetDatabaseChanges()` 方法擷取 `ChangeResults` 物件，並將該物件以管道傳送至文字檔以產生新的、已刪除和已變更之物件的簡單報表。  
   
-### <a name="view-database-changes-example-powershell"></a>檢視資料庫變更範例 (PowerShell)  
- **檢視資料庫變更範例 (PowerShell)**  
+### <a name="view-database-changes-example-powershell"></a>檢視資料庫變更範例 (PowerShell)
   
  下列範例報告在已部署的 DAC (名稱為 MyApplicaiton) 中所做的任何資料庫變更。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -111,7 +110,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
  **使用精靈來報告升級動作**  
   
-1.  執行 [升級資料層應用程式精靈]  ，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
+1.  執行 [升級資料層應用程式精靈]，同時指定目前部署的 DAC 以及含有新版 DAC 的 DAC 封裝。  
   
 2.  在 **[摘要]** 頁面上，檢閱升級動作的報表。  
   
@@ -133,15 +132,14 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  關閉用來讀取 DAC 封裝檔案的檔案資料流。  
   
-### <a name="view-upgrade-actions-example-powershell"></a>檢視升級動作範例 (PowerShell)  
- **檢視升級動作範例 (PowerShell)**  
+### <a name="view-upgrade-actions-example-powershell"></a>檢視升級動作範例 (PowerShell)
   
  下列範例報告 Transact-SQL 陳述式，可執行以將 DAC (名稱為 MyApplicaiton) 升級至 MyApplicationVNext.dacpac 檔案中所定義的結構描述。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -170,9 +168,7 @@ $fileStream.Close()
   
  您也可以將 DAC 解除封裝至不同的資料夾。 然後您可以使用差異工具 (如 WinDiff 公用程式) 來分析差異。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料層應用程式](data-tier-applications.md)   
  [部署資料層應用程式](deploy-a-data-tier-application.md)   
  [升級資料層應用程式](upgrade-a-data-tier-application.md)  
-  
-  
