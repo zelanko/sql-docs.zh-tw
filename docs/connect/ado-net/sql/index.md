@@ -1,7 +1,7 @@
 ---
 title: SQL Server 和 ADO.NET
 description: 說明如何使用 SQL Server 專屬的特性和功能
-ms.date: 09/26/2019
+ms.date: 10/15/2019
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 ms.reviewer: rothja
-ms.openlocfilehash: 232abf9c9f2d1af97288f8deae6b311bc92eb520
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.openlocfilehash: fa2e608851f3e66f0f6e77b4cf1ddf69c5537ee5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72453182"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907155"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 
@@ -46,4 +46,4 @@ ms.locfileid: "72453182"
   
 如需 SQL Server 資料庫引擎的完整文件，請依據您使用的 SQL Server 版本參閱 SQL Server 線上叢書。  
   
-[SQL Server 線上叢書](../../../sql-server/sql-server-technical-documentation.md)  
+[SQL Server 線上叢書](../../../sql-server/index.yml)

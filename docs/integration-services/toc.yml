@@ -1,7 +1,7 @@
 - name: SQL Server Integration Services (SSIS)
   href: ../integration-services/sql-server-integration-services.md
 - name: 歡迎使用 SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: 概觀
   items:
     - name: SQL Server 2016 Integration Services 的新功能
@@ -1119,7 +1119,7 @@
           href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
         - name: catalog.create_folder
           href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
-    - name: DELETE
+    - name: 刪除
       items:
         - name: catalog.delete_customized_logging_level
           href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
@@ -1153,7 +1153,7 @@
           href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
     - name: catalog.grant_permission
       href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
-    - name: '[移動]'
+    - name: 移動
       items:
         - name: catalog.move_environment
           href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
@@ -1161,7 +1161,7 @@
           href: ../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md
     - name: catalog.remove_data_tap
       href: ../integration-services/system-stored-procedures/catalog-remove-data-tap.md
-    - name: Rename
+    - name: 重新命名
       items:
         - name: catalog.rename_customized_logging_level
           href: ../integration-services/system-stored-procedures/catalog-rename-customized-logging-level.md
@@ -1205,7 +1205,7 @@
       href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
     - name: catalog.stop_operation
       href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
-    - name: Update
+    - name: 更新
       items:
         - name: catalog.update_logdb_info (SSISDB 資料庫)
           href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md

@@ -1,5 +1,5 @@
 - name: SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?&view=sql-server-2017&toc=../toc/toc.json
+  href: ../sql-server/index.yml
 - name: APS 的概觀
   href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
 - name: APS 的新功能
@@ -82,7 +82,7 @@
     - name: PDW 權限
       href: ../analytics-platform-system/pdw-permissions.md
       items:
-        - name: '[授與權限]'
+        - name: 授與權限
           href: ../analytics-platform-system/grant-permissions.md
     - name: 錯誤訊息
       href: ../analytics-platform-system/error-messages.md

@@ -1,7 +1,7 @@
 - name: 什麼是 SQL Server Reporting Services (SSRS)？
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: 歡迎使用 SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: 概觀
   items:
     - name: Reporting Services 的新功能
@@ -12,7 +12,7 @@
       href: ../reporting-services/reporting-services-concepts-ssrs.md
     - name: Reporting Services 功能及工作
       href: ../reporting-services/reporting-services-features-and-tasks-ssrs.md
-    - name: Backward Compatibility
+    - name: 回溯相容性
       href: ../reporting-services/reporting-services-backward-compatibility.md
       items:
         - name: 即將淘汰的功能
