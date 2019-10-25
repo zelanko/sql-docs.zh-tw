@@ -15,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6aff97c8bee8fe8ccc469c2ee57bc94466e1e31
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064711"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797864"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd 指令程式
   **Invoke-Sqlcmd** 是一種執行指令碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，該指令碼包含了 **sqlcmd** 公用程式所支援之語言 ([!INCLUDE[tsql](../includes/tsql-md.md)] 及 XQuery) 與命令的陳述式。  
@@ -30,40 +30,40 @@ ms.locfileid: "66064711"
   
  這是呼叫 Invoke-Sqlcmd 執行簡單查詢的範例，類似於指定 **sqlcmd** 且使用 **-Q** 和 **-S** 選項：  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
  這是呼叫 **Invoke-Sqlcmd**的範例，其會指定輸入檔案並將輸出傳送至檔案，類似於指定 **sqlcmd** 且使用 **-i** 和 **-o** 選項：  
   
-```  
-Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -filePath "C:\MyFolder\TestSQLCmd.rpt"  
+```powershell
+Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -FilePath "C:\MyFolder\TestSQLCmd.rpt"  
 ```  
   
  這是使用 Windows PowerShell 陣列將多個 **sqlcmd** 指令碼變數傳遞至 **Invoke-Sqlcmd**的範例。 用於識別 SELECT 陳述式中 **sqlcmd** 指令碼變數的 "$" 字元，已經使用 PowerShell 反勾號 "`" 逸出字元逸出：  
   
-```  
+```powershell
 $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"  
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
  這是使用適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者巡覽至 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體，然後使用 Windows PowerShell **Get-Item** Cmdlet 擷取此執行個體的 SMO Server 物件並將其傳遞給 **Invoke-Sqlcmd**的範例：  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance (Get-Item .)  
 ```  
   
  -Query 參數是位置性參數而且不需要加以命名。 如果傳遞給 **Invoke-Sqlcmd**的第一個字串未命名，就會將其視為 -Query 參數。  
   
-```  
+```powershell
 Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
 ## <a name="path-context-in-invoke-sqlcmd"></a>Invoke-Sqlcmd 中的路徑內容  
  如果您沒有使用 -Database 參數，Invoke-Sqlcmd 的資料庫內容就會由呼叫此指令程式時作用中的路徑所設定。  
   
-|`Path`|資料庫內容|  
+|路徑|資料庫內容|  
 |----------|----------------------|  
 |以磁碟機而非 SQLSERVER: 為開頭|本機電腦上預設執行個體中登入識別碼的預設資料庫。|  
 |SQLSERVER:\SQL|本機電腦上預設執行個體中登入識別碼的預設資料庫。|  
@@ -74,14 +74,14 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
   
  例如，假設在本機電腦的預設執行個體中，Windows 帳戶的預設資料庫是 master。 然後，下列命令就會傳回 master：  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
   
  下列命令則傳回 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]：  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Person  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
@@ -97,23 +97,23 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  **Invoke-Sqlcmd** 不會顯示訊息 (例如 PRINT 陳述式的輸出)，除非您指定 Windows PowerShell **-Verbose** 一般參數。 例如：  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
  PowerShell 環境不需要所有的 **sqlcmd** 參數。 例如，Windows PowerShell 會從 Cmdlet 格式化所有輸出，所以 **Invoke-Sqlcmd** 中不會實作指定格式化選項的 **sqlcmd**參數。 下表顯示 **Invoke-Sqlcmd** 參數與 **sqlcmd** 選項之間的關聯性：  
   
-|描述|sqlcmd 選項|Invoke-Sqlcmd 參數|  
+|[描述]|sqlcmd 選項|Invoke-Sqlcmd 參數|  
 |-----------------|-------------------|------------------------------|  
 |伺服器和執行個體名稱。|-S|-ServerInstance|  
 |要使用的初始資料庫。|-d|-Database|  
 |執行指定的查詢並結束。|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入識別碼。|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證密碼。|-P|-Password|  
-|變數定義。|-v|-Variable|  
-|查詢逾時間隔。|-t|-QueryTimeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證密碼。|-p|-Password|  
+|變數定義。|-V|-Variable|  
+|查詢逾時間隔。|-T|-QueryTimeout|  
 |發生錯誤時停止執行|-b|-AbortOnError|  
-|專用管理員連接。|-A|-DedicatedAdministratorConnection|  
+|專用管理員連接。|-a|-DedicatedAdministratorConnection|  
 |停用互動式命令、啟動指令碼和環境變數。|-X|-DisableCommands|  
 |停用變數替代。|-X|-DisableVariables|  
 |報表的最小嚴重性層級。|-v|-SeverityLevel|  
@@ -132,23 +132,21 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |用於輸出資料的字碼頁。|-f|無參數|  
 |變更密碼並維持執行中狀態|-Z|無參數|  
 |封包大小|-A|無參數|  
-|資料行分隔符號|-s|無參數|  
-|控制項輸出標頭|-h|無參數|  
+|資料行分隔符號|-S|無參數|  
+|控制項輸出標頭|-H|無參數|  
 |指定控制字元|-k|無參數|  
-|固定長度的顯示寬度|-Y|無參數|  
-|變動長度的顯示寬度|-Y|無參數|  
+|固定長度的顯示寬度|-y|無參數|  
+|變動長度的顯示寬度|-y|無參數|  
 |回應輸入。|-E|無參數|  
 |啟用引號識別碼|-i|無參數|  
 |移除尾端空白|-w|無參數|  
 |列出執行個體|-l|無參數|  
-|將輸出格式化為 Unicode|-u|無參數|  
-|列印統計資料|-p|無參數|  
+|將輸出格式化為 Unicode|-U|無參數|  
+|列印統計資料|-P|無參數|  
 |命令結束|-c|無參數|  
 |使用 Windows 驗證進行連接|-E|無參數|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 Database Engine Cmdlet](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [sqlcmd 公用程式](../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../tools/sqlcmd-utility.md)   
  [使用 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
-  
-  
