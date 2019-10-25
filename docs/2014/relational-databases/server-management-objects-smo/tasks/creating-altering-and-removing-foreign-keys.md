@@ -1,5 +1,5 @@
 ---
-title: 建立、 改變和移除外部索引鍵 |Microsoft Docs
+title: 建立、改變和移除外鍵 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021872"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796964"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>建立、改變和移除外部索引鍵
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中，外部索引鍵是由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件表示。  
@@ -27,7 +27,7 @@ ms.locfileid: "63021872"
  代表外部索引鍵的資料行會列在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件的 `Columns` 物件屬性中。 外部索引鍵所參考的主要金鑰是由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 屬性表示，該屬性位於 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 屬性所指定的資料表。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或是[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除外部索引鍵  
  此程式碼範例示範如何在某個資料表的一個或多個資料行以及另一個資料表的主要索引鍵資料行之間，建立外部索引鍵關聯性。  
@@ -37,7 +37,7 @@ ms.locfileid: "63021872"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-c"></a>在 Visual C# 中建立、改變和移除外部索引鍵  
  此程式碼範例示範如何在某個資料表的一個或多個資料行以及另一個資料表的主要索引鍵資料行之間，建立外部索引鍵關聯性。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -66,7 +66,7 @@ ms.locfileid: "63021872"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-powershell"></a>在 PowerShell 中建立、改變和移除外部索引鍵  
  此程式碼範例示範如何在某個資料表的一個或多個資料行以及另一個資料表的主要索引鍵資料行之間，建立外部索引鍵關聯性。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
@@ -92,7 +92,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>範例：外部索引鍵、 主索引鍵和唯一條件約束資料行  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>範例：外部索引鍵、主索引鍵和唯一條件約束資料行  
  此範例示範：  
   
 -   在現有物件上尋找外部索引鍵。  
@@ -103,7 +103,7 @@ $fk.Create()
   
  此範例的 C# 版本：  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -198,7 +198,7 @@ public class A {
   
  範例的 Visual Basic 版本：  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -291,5 +291,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

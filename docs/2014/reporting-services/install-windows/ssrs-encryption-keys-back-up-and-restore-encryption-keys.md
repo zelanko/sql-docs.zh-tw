@@ -15,12 +15,12 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c5a28cbac2c13d0662f744a12f3041458d9b0bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108709"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796399"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>備份與還原 Reporting Services 加密金鑰
   在報表伺服器組態中，建立用於加密機密資訊的對稱金鑰備份副本是很重要的一部分。 許多例行作業都需要金鑰的備份副本，這備份副本可以讓您在新安裝中重複使用現有的報表伺服器資料庫。  
@@ -46,9 +46,9 @@ ms.locfileid: "66108709"
 ## <a name="backing-up-the-encryption-keys"></a>備份加密金鑰  
  備份對稱金鑰的程序是將金鑰寫入您指定的檔案，然後使用您提供的密碼將金鑰加密。 對稱金鑰絕不能以未加密的狀態儲存，因此您將金鑰儲存到磁碟時，必須提供密碼將其加密。 檔案建立之後，您必須將其儲存在安全的位置，並 **記住用來解除檔案鎖定的密碼** 。 若要備份對稱金鑰，您可以使用下列工具：  
   
- **原生模式：** Reporting Services 組態管理員或**rskeymgmt**公用程式。  
+ **原生模式** ：Reporting Services 組態管理員或 **rskeymgmt** 公用程式。  
   
- **SharePoint 模式：** SharePoint 管理中心頁面或 PowerShell。  
+ **SharePoint 模式** ：SharePoint 管理中心頁面或 PowerShell。  
   
 ####  <a name="bkmk_backup_sharepoint"></a> 備份 SharePoint 模式報表伺服器  
  對於 SharePoint 模式報表伺服器，您可以使用 PowerShell 命令，或使用適用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。 如需詳細資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節  
@@ -69,7 +69,7 @@ ms.locfileid: "66108709"
   
 1.  在主控報表伺服器的本機電腦上，執行 **[rskeymgmt.exe]** 。 您必須使用 `-e` 擷取引數來複製金鑰、提供檔案名稱，並指定密碼。 下列範例說明您必須指定的引數：  
   
-    ```  
+    ```cmd
     rskeymgmt -e -f d:\rsdbkey.snk -p<password>  
     ```  
   
@@ -102,11 +102,9 @@ ms.locfileid: "66108709"
   
 1.  在主控報表伺服器的本機電腦上，執行 **[rskeymgmt.exe]** 。 使用 `-a` 引數還原金鑰。 您必須提供完整的檔案名稱，並指定密碼。 下列範例說明您必須指定的引數：  
   
-    ```  
+    ```cmd
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
-  
-  

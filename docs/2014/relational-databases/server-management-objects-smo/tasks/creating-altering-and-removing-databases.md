@@ -1,5 +1,5 @@
 ---
-title: 建立、 改變和移除資料庫 |Microsoft Docs
+title: 建立、改變和移除資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c718fee71538fcd5d1babde72ab87746b3e4e85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 645ba8428dddb36de9a3edeb784d64f96b5c0603
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223334"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797035"
 ---
 # <a name="creating-altering-and-removing-databases"></a>建立、改變和移除資料庫
   在 SMO 中，資料庫是由 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件表示。  
@@ -28,7 +28,7 @@ ms.locfileid: "63223334"
  您不必建立 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件，即可修改或移除該物件。 您可以利用集合來參考資料庫。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或是[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio .net 中建立 VISUAL BASIC SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除資料庫  
  此程式碼範例會建立新資料庫， 並自動為資料庫建立檔案和檔案群組。  
@@ -38,7 +38,7 @@ ms.locfileid: "63223334"
 ## <a name="creating-altering-and-removing-a-database-in-visual-c"></a>在 Visual C# 中建立、改變和移除資料庫  
  此程式碼範例會建立新資料庫， 並自動為資料庫建立檔案和檔案群組。  
   
-```  
+```csharp
 {  
                 //Connect to the local, default instance of SQL Server.   
                 Server srv;  
@@ -59,16 +59,16 @@ ms.locfileid: "63223334"
 ## <a name="creating-altering-and-removing-a-database-in-powershell"></a>在 PowerShell 中建立、改變和移除資料庫  
  此程式碼範例會建立新資料庫， 並自動為資料庫建立檔案和檔案群組。  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 cd \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Create a new database  
 $db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -argumentlist $srv, "Test_SMO_Database"  
 $db.Create()  
   
-#Reference the database and display the date when it was created.   
+#Reference the database and display the date when it was created.
 $db = $srv.Databases["Test_SMO_Database"]  
 $db.CreateDate  
   
@@ -76,7 +76,5 @@ $db.CreateDate
 $db.Drop()  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.SqlServer.Management.Smo.Database>  
-  
-  

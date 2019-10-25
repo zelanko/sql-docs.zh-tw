@@ -17,12 +17,12 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814008"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797958"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>暫止可用性資料庫 (SQL Server)
   您可以使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的 PowerShell，暫停 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的可用性資料庫。 請注意，暫停命令必須在裝載要暫停或回復之資料庫的伺服器執行個體上發出。  
@@ -55,7 +55,7 @@ ms.locfileid: "62814008"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **後續操作：**[避免填滿交易記錄](#FollowUp)  
+-   **後續操作：** [避免填滿交易記錄](#FollowUp)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -64,15 +64,15 @@ ms.locfileid: "62814008"
 ###  <a name="Restrictions"></a> 限制事項  
  一旦裝載目標資料庫的複本接受 SUSPEND 命令之後，就會將其傳回，但暫停資料庫實際上是以非同步方式進行。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="Prerequisites"></a> Prerequisites  
  您必須連接到裝載要暫停之資料庫的伺服器執行個體。 若要暫停主要資料庫和對應的次要資料庫，請連接到裝載主要複本的伺服器執行個體。 若要暫停次要資料庫，同時保留主要資料庫可用狀態，請連接到次要複本。  
   
 ###  <a name="Recommendations"></a> 建議  
- 出現瓶頸時，短暫暫停一個或多個次要資料庫，可能有助於暫時改善主要複本的效能。 只要次要資料庫保持暫停狀態，對應主要資料庫的交易記錄便無法截斷。 這會導致記錄檔記錄在主要資料庫上累積。 因此，我們建議您盡快恢復 (或移除) 暫停的次要資料庫。 如需詳細資訊，請參閱本主題稍後的[後續操作：避免填滿交易記錄](#FollowUp)。  
+ 出現瓶頸時，短暫暫停一個或多個次要資料庫，可能有助於暫時改善主要複本的效能。 只要次要資料庫保持暫停狀態，對應主要資料庫的交易記錄便無法截斷。 這會導致記錄檔記錄在主要資料庫上累積。 因此，我們建議您盡快恢復 (或移除) 暫停的次要資料庫。 如需詳細資訊，請參閱本主題稍後的＜ [待處理：避免填滿交易記錄](#FollowUp)＞。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料庫的 ALTER 權限。  
   
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
@@ -88,7 +88,7 @@ ms.locfileid: "62814008"
   
 4.  展開 [可用性資料庫] 節點，以滑鼠右鍵按一下資料庫，然後按一下 [暫停進行資料移動]。  
   
-5.  在 **[暫停資料移動]** 對話方塊中，按一下 **[確定]**。  
+5.  在 **[暫停資料移動]** 對話方塊中，按一下 **[確定]** 。  
   
      [物件總管] 會透過變更資料庫圖示以顯示暫停指標，指出資料庫已暫停。  
   
@@ -113,9 +113,8 @@ ms.locfileid: "62814008"
   
      例如，下列命令會針對 `MyDb3` 伺服器執行個體上 `MyAg` 可用性群組中的 `Computer\Instance`可用性資料庫暫停資料同步處理。  
   
-    ```  
-    Suspend-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Suspend-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
@@ -125,7 +124,7 @@ ms.locfileid: "62814008"
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 後續操作：避免填滿交易記錄  
+##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
  一般而言，在資料庫上執行自動檢查點時，交易記錄會在下一個記錄備份之後，截斷至該檢查點。 但在次要資料庫暫停時，所有目前的記錄檔記錄仍在主要資料庫作用中。 如果交易記錄已填滿 (因為已達到最大值，或者伺服器執行個體用盡空間)，資料庫就不能再執行其他更新。  
   
  若要避免這個問題，您應該執行下列其中一項工作：  
@@ -138,14 +137,12 @@ ms.locfileid: "62814008"
   
  **若要對寫滿交易記錄進行疑難排解**  
   
--   [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [為寫滿交易記錄進行疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
 -   [繼續可用性資料庫 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [繼續可用性資料庫 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
-  
-  

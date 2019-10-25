@@ -1,5 +1,5 @@
 ---
-title: 使用 WMI 提供者來管理服務和網路設定 |Microsoft Docs
+title: 使用 WMI 提供者管理服務和網路設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226216"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796625"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供者管理服務和網路設定
   WMI 提供者是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) 用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務和網路通訊協定的已發行介面。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件表示 WMI 提供者。  
@@ -30,7 +30,7 @@ ms.locfileid: "63226216"
 ## <a name="example"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- 程式使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]WMI 提供者，您必須包含`Imports`陳述式來限定 WMI 命名空間。 將陳述式插入至其他 `Imports` 陳述式之後、在應用程式中的任何宣告之前，例如：  
+ 對於使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI 提供者的程式，您必須包含 `Imports` 語句來限定 WMI 命名空間。 將陳述式插入至其他 `Imports` 陳述式之後、在應用程式中的任何宣告之前，例如：  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63226216"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-visual-basic"></a>在 Visual Basic 中使用 URN 字串啟用伺服器通訊協定  
  這個程式碼範例示範如何使用 URN 物件辨識伺服器通訊協定，然後啟用該通訊協定。  
   
-```  
+```vb
 'This program must run with administrator privileges.  
         'Declare the ManagedComputer WMI interface.  
         Dim mc As New ManagedComputer()  
@@ -68,7 +68,7 @@ ms.locfileid: "63226216"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-powershell"></a>在 PowerShell 中使用 URN 字串啟用伺服器通訊協定  
  這個程式碼範例示範如何使用 URN 物件辨識伺服器通訊協定，然後啟用該通訊協定。  
   
-```  
+```powershell
 #This example shows how to identify a server protocol using a URN object, and then enable the protocol  
 #This program must run with administrator privileges.  
   
@@ -95,7 +95,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-visual-c"></a>在 Visual C# 中啟動和停止服務  
  此程式碼範例示範如何停止和啟動 SQL Server 的執行個體。  
   
-```  
+```csharp
 {   
    //Declare and create an instance of the ManagedComputer   
    //object that represents the WMI Provider services.   
@@ -139,7 +139,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-powershell"></a>在 PowerShell 中啟動和停止服務  
  此程式碼範例示範如何停止和啟動 SQL Server 的執行個體。  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlWmiManagement")  
   
@@ -172,11 +172,8 @@ $svc.Refresh()
 $svc.ServiceState  
 }  
 $svc.ServiceState  
-"Service" + $svc.Name + "is now started"  
-  
+"Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [組態管理的 WMI 提供者概念](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
-  
-  

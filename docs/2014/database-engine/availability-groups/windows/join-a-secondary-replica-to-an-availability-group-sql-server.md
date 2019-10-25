@@ -16,12 +16,12 @@ ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f667ff368ca54f2ccfaeab47716338c7d694c1da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39ee8bfc079445e177aa9b175019ae385b9f9f36
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792144"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797655"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本聯結至可用性群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本聯結至 AlwaysOn 可用性群組。 當次要複本加入至 AlwaysOn 可用性群組之後，此次要複本必須聯結至可用性群組。 聯結複本作業必須在裝載次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行。  
@@ -40,11 +40,11 @@ ms.locfileid: "62792144"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **後續操作：** [設定次要資料庫](#FollowUp)  
+-   **待處理：** [設定次要資料庫](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   可用性群組的主要複本目前必須在線上。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62792144"
 > [!IMPORTANT]  
 >  如果不符合任何先決條件，聯結作業會失敗。 聯結嘗試失敗之後，您可能需要連接至裝載主要複本的伺服器執行個體，以移除及重新加入次要複本，然後將其聯結至可用性群組。 如需詳細資訊，請參閱[將次要複本從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md) 和[將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,7 +69,7 @@ ms.locfileid: "62792144"
   
 3.  選取所連接之次要複本的可用性群組。  
   
-4.  以滑鼠右鍵按一下次要複本，然後按一下 [加入可用性群組]  。  
+4.  以滑鼠右鍵按一下次要複本，然後按一下 [加入可用性群組]。  
   
 5.  這會開啟 **[將複本加入至可用性群組]** 對話方塊。  
   
@@ -82,13 +82,13 @@ ms.locfileid: "62792144"
   
 2.  使用 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 陳述式，如下所示：  
   
-     ALTER AVAILABILITY GROUP <群組名稱>  JOIN  
+     ALTER AVAILABILITY GROUP <群組名稱> JOIN  
   
-     其中 <群組名稱>  是可用性群組的名稱。  
+     其中 *group_name* 是可用性群組的名稱。  
   
      下列範例會將次要複本加入至 `MyAG` 可用性群組。  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG JOIN;  
     ```  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62792144"
   
      例如，下列命令會將位於指定路徑之伺服器執行個體所裝載的次要複本聯結至名為 `MyAg`的可用性群組。  這個伺服器執行個體必須裝載這個可用性群組中的次要複本。  
   
-    ```  
+    ```powershell
     Join-SqlAvailabilityGroup -Path SQLSERVER:\SQL\SecondaryServer\InstanceName -Name 'MyAg'  
     ```  
   
@@ -117,16 +117,14 @@ ms.locfileid: "62792144"
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 後續操作：設定次要資料庫  
+##  <a name="FollowUp"></a> 待處理：設定次要資料庫  
  對於可用性群組中的每個資料庫而言，您需要在裝載次要複本的伺服器執行個體上擁有次要資料庫。 在您將次要複本加入可用性群組之前或之後，您都可以設定次要資料庫，如下所示：  
   
 1.  針對每一個還原作業使用 RESTORE WITH NORECOVERY，將每一個主要資料庫的最新資料庫和記錄備份還原到裝載次要複本的伺服器執行個體上。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中建立和設定 AlwaysOn 可用性群組。  
   
 2.  將每一個次要資料庫加入可用性群組。 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [疑難排解 AlwaysOn 可用性群組組態&#40;SQL Server&#41;刪除](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
-  
-  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [&#40;SQL Server&#41;刪除 AlwaysOn 可用性群組設定的疑難排解](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

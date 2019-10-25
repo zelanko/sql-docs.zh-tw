@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624363"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797845"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation 指令程式
   **Invoke-PolicyEvaluation** 是一項 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，它會報告 SQL Server 物件的目標集是否符合在一或多個原則式管理原則中所指定的條件。  
@@ -49,34 +49,34 @@ ms.locfileid: "67624363"
   
  如果原則儲存在原則存放區中，您就必須傳入一組指向要評估之原則的 PSObjects。 您通常可以透過將 Get-Item 等 Cmdlet 的輸出傳送至 **Invoke-PolicyEvaluation**完成此作業，而且不需要指定 **-Policy** 參數。 例如，如果您已將 Microsoft 最佳作法原則匯入 Database Engine 的執行個體中，這個命令就會評估 **資料庫狀態** 原則：  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Get-Item "Database Status" | Invoke-PolicyEvaluation -TargetServerName "MYCOMPUTER"  
 ```  
   
  這則範例會示範如何使用 Where-Object 來根據 **PolicyCategory** 屬性篩選原則存放區中的多個原則。 **Invoke-PolicyEvaluation** 會取用 **Where-Object**傳送輸出的物件。  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 gci | Where-Object {$_.PolicyCategory -eq "Microsoft Best Practices: Maintenance"} | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
   
  如果原則儲存成 XML 檔，您就必須使用 **-Policy** 參數來提供每個原則的路徑和名稱。 如果您沒有在 **-Policy** 參數中指定路徑， **Invoke-PolicyEvaulation** 就會使用 **sqlps** 路徑的目前設定。 例如，這個命令會針對您登入的預設資料庫評估與 SQL Server 一起安裝的其中一個 Microsoft 最佳作法原則：  
   
-```  
+```powershell
 Invoke-PolicyEvaluation -Policy "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033\Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  這個命令會進行相同的作業，但是它會使用目前的 **sqlps** 路徑來建立原則 XML 檔的位置：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  此範例將示範如何使用 **Get-ChildItem** Cmdlet 擷取多個原則 XML 檔，然後將這些物件傳送至 **Invoke-PolicyEvaluation**中：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
@@ -88,13 +88,13 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** 會使用在目標集中代表 SQL Server 物件的物件或物件陣列。 例如，您可以建立要傳入 <xref:Microsoft.SqlServer.Management.Smo.Database> 的 **-TargetObjects**傳送輸出的物件。  
   
--   **-TargetExpressions** 會使用字串，其中包含在目標集中指定物件的查詢運算式。 查詢運算式的格式為以 '/' 字元分隔的節點。 每個節點的格式為 ObjectType[Filter]。 物件類型是其中一個 SQL Server 管理物件 (SMO) 物件階層架構中的物件。 篩選是篩選位於該節點之物件的運算式。 如需詳細資訊，請參閱 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
+-   **-TargetExpressions** 會使用字串，其中包含在目標集中指定物件的查詢運算式。 查詢運算式的格式為以 '/' 字元分隔的節點。 每個節點的格式為 ObjectType[Filter]。 物件類型是 SQL Server 管理物件（SMO）物件階層中的其中一個物件。 篩選是篩選位於該節點之物件的運算式。 如需詳細資訊，請參閱 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
   
  請指定 **-TargetObjects** 或 **-TargetExpression**，但不能同時指定。  
   
  這則範例會使用 Sfc.SqlStoreConnection 物件來指定目標伺服器：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 $conn = New-Object Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection("server='MYCOMPUTER';Trusted_Connection=True")  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn  
@@ -102,7 +102,7 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn
   
  此範例會使用 **-TargetExpression** 來識別要評估的特定資料庫：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyComputer" -TargetExpression "Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']"  
 ```  
@@ -110,10 +110,10 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyCompu
 ## <a name="evaluating-analysis-services-policies"></a>評估 Analysis Services 原則  
  若要為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體評估原則，您必須在 PowerShell 中載入並註冊組件、使用 Analysis Services 連接物件建立變數，然後將此變數傳遞給 **-TargetObject** 參數。 此範例將示範如何評估 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的最佳作法介面區組態原則：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\AnalysisServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.AnalysisServices")  
-$SSASsvr = new-object Microsoft.AnalysisServices.Server  
+$SSASsvr = New-Object Microsoft.AnalysisServices.Server  
 $SSASsvr.Connect("Data Source=Localhost")  
 Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Services Features.xml" -TargetObject $SSASsvr  
 ```  
@@ -121,7 +121,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Service
 ## <a name="evaluating-reporting-services-policies"></a>評估 Reporting Services 原則  
  若要評估 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原則，您必須在 PowerShell 中載入並註冊組件、使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 連接物件建立變數，然後將此變數傳遞給 **-TargetObject** 參數。 此範例將示範如何評估 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的最佳作法介面區組態原則：  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\ReportingServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Dmf.Adapters")  
 $SSRSsvr = new-object Microsoft.SqlServer.Management.Adapters.RSContainer('MyComputer')  
@@ -131,12 +131,10 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ## <a name="formatting-output"></a>格式化輸出  
  根據預設， **Invoke-PolicyEvaluation** 的輸出會在命令提示字元視窗中以使用者可讀取的格式顯示成精簡報表。 您可以使用 **-OutputXML** 參數，指定此 Cmdlet 要改為將詳細的報表產生成 XML 檔。 **Invoke-PolicyEvaluation** 會使用「系統模組化語言交換格式」(Systems Modeling Language Interchange Format, SML-IF) 結構描述，所以 SML-IF 讀取器可以讀取此檔案。  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -OutputXML > C:\MyReports\DatabaseStatusReport.xml  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [使用 Database Engine Cmdlet](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  
+## <a name="see-also"></a>請參閱  
+ [使用資料庫引擎 Cmdlet](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

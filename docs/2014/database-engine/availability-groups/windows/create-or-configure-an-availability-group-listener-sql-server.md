@@ -15,18 +15,18 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6665d039587a09bb373179ac6f9675791b45f53b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bddf15e6469e2fd347c716e98e750c077bcc29e7
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815552"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797693"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
   本主題描述如何使用 *、* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一 [!INCLUDE[tsql](../../../includes/tsql-md.md)]「可用性群組接聽程式」 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Availability Group Listener)。  
   
 > [!IMPORTANT]  
->  若要建立可用性群組的第一個可用性群組接聽程式，強烈建議您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell。 除非必要 (例如建立其他接聽程式)，否則避免在 WSFC 叢集中直接建立接聽程式。  
+>  若要建立可用性群組的第一個可用性群組接聽程式，強烈建議您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell。 除非必要 (例如建立其他接聽程式)，否則避免在 WSFC 叢集中直接建立接聽程式。  
   
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -37,7 +37,7 @@ ms.locfileid: "62815552"
 -   [檢視可用性群組接聽程式屬性 &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
 > [!NOTE]  
->  如果接聽程式已存在，而且您想要建立其他接聽程式，請參閱本主題稍後的 [為可用性群組建立其他接聽程式 (選擇性)](#CreateAdditionalListener)。  
+>  如果接聽程式已存在，而且您想要建立其他接聽程式，請參閱本主題稍後的[為可用性群組建立其他接聽程式 (選擇性)](#CreateAdditionalListener)。  
   
 ###  <a name="Restrictions"></a> 限制事項  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62815552"
 ###  <a name="Recommendations"></a> 建議  
  建議為多重子網路組態使用靜態 IP 位址，但並不是必要的。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
@@ -65,14 +65,14 @@ ms.locfileid: "62815552"
   
 ###  <a name="WinPermissions"></a> Windows 權限  
   
-|Permissions|連結|  
+|[權限]|連結|  
 |-----------------|----------|  
-|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」  權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」  權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意:在某些組織中，安全性原則會禁止將 [建立電腦物件]  權限授與個別使用者帳戶。|＜Steps for configuring the account for the person who installs the cluster＞(為叢集安裝人員設定帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)<br /><br /> ＜Steps for prestaging the cluster name account＞(預先設置叢集名稱帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)|  
-|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。<br /><br /> 提示：一般而言，不要為接聽程式虛擬網路名稱預先設置電腦帳戶是最簡單的。 如果可以，讓帳戶在您執行「WSFC 高可用性精靈」時自動建立並設定。|＜Steps for prestaging an account for a clustered service or application＞(為叢集服務或應用程式預先設置帳戶的步驟)  ，位於 [Failover Cluster Step-by-Step Guide:Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2) (容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶)。|  
+|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意：在某些組織中，安全性原則會禁止將「建立電腦物件」權限授與個別使用者帳戶。|*容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [為叢集安裝人員設定帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [預先設置叢集名稱帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。<br /><br /> 提示︰一般而言，不要為接聽程式虛擬網路名稱預先設置電腦帳戶是最簡單的。 如果可以，讓帳戶在您執行「WSFC 高可用性精靈」時自動建立並設定。|*容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [為叢集服務或應用程式預先設置帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)。|  
   
 ###  <a name="SqlPermissions"></a> SQL Server 權限  
   
-|工作|Permissions|  
+|工作|[權限]|  
 |----------|-----------------|  
 |建立可用性群組接聽程式|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |修改現有的可用性群組接聽程式|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
@@ -90,9 +90,9 @@ ms.locfileid: "62815552"
   
 3.  按一下您要設定其接聽程式的可用性群組，然後選擇下列其中一個替代方式：  
   
-    -   若要建立接聽程式，以滑鼠右鍵按一下 [可用性群組接聽程式]  節點，然後選取 [新增接聽程式]  命令。 這會開啟 **[新增可用性群組接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的[加入可用性群組接聽程式 (對話方塊)](#AddAgListenerDialog)。  
+    -   若要建立接聽程式，以滑鼠右鍵按一下 [可用性群組接聽程式] 節點，然後選取 [新增接聽程式] 命令。 這會開啟 **[新增可用性群組接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的 [加入可用性群組接聽程式 (對話方塊)](#AddAgListenerDialog)。  
   
-    -   若要變更現有接聽程式的通訊埠編號，展開 [可用性群組接聽程式]  節點、以滑鼠右鍵按一下接聽程式，然後選取 [屬性]  命令。 在 **[通訊埠]** 欄位中輸入新的通訊埠編號，然後按一下 **[確定]** 。  
+    -   若要變更現有接聽程式的通訊埠編號，展開 [可用性群組接聽程式] 節點、以滑鼠右鍵按一下接聽程式，然後選取 [屬性] 命令。 在 **[通訊埠]** 欄位中輸入新的通訊埠編號，然後按一下 **[確定]** 。  
   
 ###  <a name="AddAgListenerDialog"></a> 新增可用性群組接聽程式 (對話方塊)  
  **接聽程式 DNS 名稱**  
@@ -119,7 +119,7 @@ ms.locfileid: "62815552"
   
  資料行如下：  
   
- **子網路**  
+ **[子網路]**  
  顯示您加入至可用性群組接聽程式之每個子網路的識別碼。  
   
  **IP 位址**  
@@ -135,7 +135,8 @@ ms.locfileid: "62815552"
  按一下可建立指定的可用性群組接聽程式。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- **建立或設定可用性群組接聽程式**  
+
+### <a name="to-create-or-configure-an-availability-group-listener"></a>建立或設定可用性群組接聽程式
   
 1.  連接到裝載主要複本的伺服器執行個體。  
   
@@ -143,15 +144,15 @@ ms.locfileid: "62815552"
   
      下列範例會將可用性群組接聽程式加入至名為 `MyAg2`的現有可用性群組。 系統會針對此接聽程式指定唯一的 DNS 名稱 `MyAg2ListenerIvP6`。 兩個複本位於不同的子網路上，因此接聽程式使用靜態 IP 位址 (建議方法)。 針對這兩個可用性複本，WITH IP 子句都會指定使用 IPv6 格式的靜態 IP 位址： `2001:4898:f0:f00f::cf3c and 2001:4898:e0:f213::4ce2`。 此範例也會指定使用選用的 PORT 引數指定通訊埠 `60173` 做為接聽程式通訊埠。  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAg2   
           ADD LISTENER 'MyAg2ListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
     GO  
-  
     ```  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **建立或設定可用性群組接聽程式**  
+
+### <a name="to-create-or-configure-an-availability-group-listener"></a>建立或設定可用性群組接聽程式 
   
 1.  變更目錄 (`cd`) 為裝載主要複本的伺服器執行個體。  
   
@@ -162,11 +163,10 @@ ms.locfileid: "62815552"
   
      例如，下列 `New-SqlAvailabilityGroupListener` 命令會針對可用性群組 `MyListener` 建立名為 `MyAg` 的可用性群組接聽程式。 這個接聽程式將使用傳遞給 `-StaticIp` 參數的 IPv4 位址做為其虛擬 IP 位址。  
   
-    ```  
-    New-SqlAvailabilityGroupListener -Name MyListener `   
-    -StaticIp '192.168.3.1/255.255.252.0' `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg  
-  
+    ```powershell
+    New-SqlAvailabilityGroupListener -Name MyListener `
+    -StaticIp '192.168.3.1/255.255.252.0' `
+    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg
     ```  
   
      `Set-SqlAvailabilityGroupListener`  
@@ -174,10 +174,9 @@ ms.locfileid: "62815552"
   
      例如，下列 `Set-SqlAvailabilityGroupListener` 命令會將名為 `MyListener` 之可用性群組接聽程式的通訊埠編號設定為 `1535`。 這個通訊埠是用來接聽接聽程式的連接。  
   
-    ```  
-    Set-SqlAvailabilityGroupListener -Port 1535 `   
+    ```powershell
+    Set-SqlAvailabilityGroupListener -Port 1535 `
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\MyListener  
-  
     ```  
   
      `Add-SqlAGListenerstaticIp`  
@@ -185,27 +184,25 @@ ms.locfileid: "62815552"
   
      例如，下列 `Add-SqlAGListenerstaticIp` 命令會將靜態 IPv4 位址加入至可用性群組 `MyListener` 的可用性群組接聽程式 `MyAg`。 這個 IPv6 位址會做為子網路 `255.255.252.0`之接聽程式的虛擬 IP 位址。 如果可用性群組跨越多個子網路，您就應該將每個子網路的靜態 IP 位址加入至接聽程式。  
   
-    ```  
-    $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `   
-    Add-SqlAGListenerstaticIp -Path $path `   
+    ```powershell
+    $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `
+    Add-SqlAGListenerstaticIp -Path $path `
     -StaticIp "2001:0db8:85a3:0000:0000:8a2e:0370:7334"  
     ```  
   
     > [!NOTE]  
     >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
- **若要設定和使用 SQL Server PowerShell 提供者**  
-  
--   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
+若要設定及使用 SQL Server PowerShell 提供者，請參閱[SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)。
   
 ## <a name="troubleshooting"></a>疑難排解  
   
 ###  <a name="ADQuotas"></a> 由於 Active Directory 配額而無法建立可用性群組接聽程式  
  新可用性群組接聽程式的建立作業可能會在建立時失敗，因為您已達到參與叢集節點電腦帳戶的 Active Directory 配額。  如需詳細資訊，請參閱下列文件：  
   
--   [超連結"https://support.microsoft.com/kb/307532 "如何排解叢集服務帳戶修改電腦物件時](https://support.microsoft.com/kb/307532)  
+-   [超連結「 https://support.microsoft.com/kb/307532 」如何在修改電腦物件時疑難排解叢集服務帳戶](https://support.microsoft.com/kb/307532)  
   
--   [超連結"https://technet.microsoft.com/library/cc904295(WS.10).aspx 「 Active Directory 配額](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [超連結「 https://technet.microsoft.com/library/cc904295(WS.10).aspx 」 Active Directory 配額](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> 後續操作：建立可用性群組接聽程式之後  
   
@@ -224,21 +221,21 @@ ms.locfileid: "62815552"
   
  **NET Framework 3.5 或 OLEDB 不支援 MultiSubnetFailover=True**  
   
- **問題：** 如果您的可用性群組或容錯移轉叢集執行個體具有接聽程式名稱 （又稱為網路名稱或用戶端存取點在 WSFC 叢集管理員中） 取決於不同的子網路的多個 IP 位址，而且您使用 ADO.NET 搭配.NET Framework3.5 SP1 或 SQL Native Client 11.0 OLEDB，50%的可用性群組接聽程式用戶端連接要求可能會達到連接逾時。  
+ **問題** ：如果您的可用性群組或容錯移轉叢集執行個體具有相依於不同子網路中多個 IP 位址的接聽程式名稱 (WSFC 叢集管理員中稱為網路名稱或用戶端存取點)，而且您使用 ADO.NET 搭配 .NET Framework 3.5 SP1 或使用 SQL Native Client 11.0 OLEDB，對可用性群組接聽程式的 50% 用戶端連接要求可能會達到連接逾時。  
   
- **因應措施：** 我們建議您下列工作之一。  
+ **因應措施** ：建議您執行下列其中一項工作。  
   
 -   如果您沒有操作叢集資源的權限，請將連接逾時變更為 30 秒 (此值會產生 20 秒 TCP 逾時期間加上 10 秒緩衝時間)。  
   
      **優點**：如果發生跨子網路容錯移轉，用戶端復原時間很短。  
   
-     **缺點**：一半的用戶端連接需要 20 秒以上  
+     **缺點**：一半的用戶端連接需要 20 秒以上。  
   
 -   如果您有操作叢集資源的權限，比較建議的作法是將可用性群組接聽程式的網路名稱設定為 `RegisterAllProvidersIP=0`。 如需詳細資訊，請參閱本節稍後的＜RegisterAllProvidersIP 設定＞。  
   
-     **優點：** 您不需要增加用戶端連接逾時值。  
+     **優點** ：您不需要增加用戶端連接逾時值。  
   
-     **缺點：** 如果發生跨子網路容錯移轉，用戶端復原時間可能是 15 分鐘或更久，取決於您`HostRecordTTL`設定和跨網站 DNS/AD 複寫排程的設定。  
+     **缺點：** 如果發生跨子網容錯移轉，用戶端復原時間可能是15分鐘或更長，視您的 `HostRecordTTL` 設定和跨網站 DNS/AD 複寫排程的設定而定。  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP 設定  
  當您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 建立可用性群組接聽程式時，會在 WSFC 中建立用戶端存取點，且 `RegisterAllProvidersIP` 屬性會設定為 1 (true)。 這個屬性值的影響取決於用戶端連接字串，如下所示：  
@@ -247,7 +244,7 @@ ms.locfileid: "62815552"
   
      [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會將 `RegisterAllProvidersIP` 屬性設定為 1，以便在用戶端連接字串依建議指定 `MultiSubnetFailover = True` 的用戶端容錯移轉之後，縮短重新連接的時間。 請注意，若要利用接聽程式多重子網路功能，用戶端可能需要支援 `MultiSubnetFailover` 關鍵字的資料提供者。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)。  
   
-     如需多重子網路叢集的相關資訊，請參閱 [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)。  
+     如需多重子網路叢集的相關資訊，請參閱 [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)，您只可以為每個可用性群組建立一個接聽程式。  
   
     > [!TIP]  
     >  `RegisterAllProvidersIP = 1`時，如果您在 WSFC 叢集上執行 WSFC 驗證設定精靈，這個精靈會產生下列警告訊息：  
@@ -258,7 +255,7 @@ ms.locfileid: "62815552"
   
 -   未將 `MultiSubnetFailover` 設為 true 的連接字串  
   
-     `RegisterAllProvidersIP = 1`時，連接字串未使用 `MultiSubnetFailover = True`的任何用戶端將經歷嚴重的連線延遲。 這是因為這些用戶端嘗試循序連接到所有 IP。 相反地，如果 `RegisterAllProvidersIP` 變更為 0，則使用中 IP 位址會在 WSFC 叢集的用戶端存取點中註冊，因而減少舊版用戶端的延遲。 因此，如果您有需要連接到可用性群組接聽程式，而且不能使用的舊版用戶端`MultiSubnetFailover`屬性，建議您變更`RegisterAllProvidersIP`設為 0。  
+     `RegisterAllProvidersIP = 1`時，連接字串未使用 `MultiSubnetFailover = True`的任何用戶端將經歷嚴重的連線延遲。 這是因為這些用戶端嘗試循序連接到所有 IP。 相反地，如果 `RegisterAllProvidersIP` 變更為 0，則使用中 IP 位址會在 WSFC 叢集的用戶端存取點中註冊，因而減少舊版用戶端的延遲。 因此，如果您有需要連接到可用性群組接聽程式的舊版用戶端，而且無法使用 [`MultiSubnetFailover`] 屬性，我們建議您將 `RegisterAllProvidersIP` 變更為0。  
   
     > [!IMPORTANT]  
     >  當您透過 WSFC 叢集 (容錯移轉叢集管理員 GUI) 建立可用性群組接聽程式時，`RegisterAllProvidersIP` 會預設為 0 (false)。  
@@ -269,9 +266,9 @@ ms.locfileid: "62815552"
 ###  <a name="SampleScript"></a> 停用 RegisterAllProvidersIP 和減少 TTL 的範例 PowerShell 指令碼  
  下列 PowerShell 範例將示範如何設定接聽程式資源的 `RegisterAllProvidersIP` 和 `HostRecordTTL` 這兩個叢集參數。  系統將會快取 DNS 記錄 5 分鐘，而不是預設的 20 分鐘。  修改這兩個叢集參數可能會縮短無法使用 `MultiSubnetFailover` 參數的舊版用戶端在容錯移轉後連接到正確 IP 位址的時間。  將 `yourListenerName` 取代為您要變更的接聽程式名稱。  
   
-```  
+```powershell
 Import-Module FailoverClusters  
-Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0   
+Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0
 Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourAGResource  
@@ -286,7 +283,7 @@ Start-ClusterResource yourAGResource
   
 -   將接聽程式的 DNS 主機名稱提供給應用程式開發人員，以便在要求與這個可用性群組進行用戶端連接時，用於連接字串中。  
   
--   鼓勵開發人員將用戶端連接字串更新為指定 `MultiSubnetFailover = True` (可能的話)。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)。  
+-   鼓勵開發人員將用戶端連接字串更新為指定 `MultiSubnetFailover = True`(可能的話)。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)。  
   
 ###  <a name="CreateAdditionalListener"></a> 為可用性群組建立其他接聽程式 (選擇性)  
  您透過 SQL Server 建立一個接聽程式之後，可以加入另一個接聽程式，如下所示：  
@@ -301,7 +298,7 @@ Start-ClusterResource yourAGResource
   
         3.  將相依性加入至 WSFC 可用性群組資源。  
   
-         如需容錯移轉叢集管理員對話方塊和索引標籤的資訊，請參閱 [User Interface:The Failover Cluster Manager Snap-In](https://technet.microsoft.com/library/cc772502.aspx) (使用者介面：容錯移轉叢集管理員嵌入式管理單元)。  
+         如需容錯移轉叢集管理員之對話方塊和索引標籤的相關資訊，請參閱 [使用者介面：容錯移轉叢集管理員嵌入式管理單元](https://technet.microsoft.com/library/cc772502.aspx)。  
   
     -   **使用適用容錯移轉叢集的 Windows PowerShell：**  
   
@@ -327,11 +324,9 @@ Start-ClusterResource yourAGResource
   
 -   [如何為相同可用性群組建立多個接聽程式](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)  
   
--   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 小組 Blog：官方 SQL Server AlwaysOn 小組的 blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+## <a name="see-also"></a>請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
-  
-  

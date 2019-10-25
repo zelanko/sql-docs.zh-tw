@@ -1,5 +1,5 @@
 ---
-title: 設定彈性容錯移轉原則以控制自動容錯移轉 (Alwayson 可用性群組） 的條件 |Microsoft Docs
+title: 設定彈性容錯移轉原則以控制自動容錯移轉的條件（Always On 可用性群組） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9a063413a665d9e159cb513ea936ab851715ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 452d3ac4dae2164fa0fa172528ae398ea91fed31
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815225"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797748"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>設定彈性容錯移轉原則以控制自動容錯移轉的條件 (AlwaysOn 可用性群組)
   本主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 來設定 AlwaysOn 可用性群組的彈性容錯移轉原則。 彈性容錯移轉原則可讓您更精確地控制造成可用性群組之自動容錯移轉的狀況。 透過變更觸發自動容錯移轉的失敗狀況和健全狀況檢查的頻率，您可以提高或降低自動容錯移轉的可能性，以便支援高可用性的 SLA。  
@@ -37,15 +37,15 @@ ms.locfileid: "62815225"
   
 -   如果可用性群組超過其 WSFC 失敗臨界值，WSFC 叢集將不會嘗試進行可用性群組的自動容錯移轉。 此外，可用性群組的 WSFC 資源群組會維持失敗狀態，直到叢集管理員手動讓失敗的資源群組上線，或者資料庫管理員執行可用性群組的手動容錯移轉為止。 *「WSFC 失敗臨界值」* (WSFC Failure Threshold) 定義為可用性群組在給定的時間週期內支援的失敗次數上限。 預設的時間週期為六小時，而且在這段時間內失敗次數上限的預設值為 *n*-1，其中 *n* 是 WSFC 節點的數目。 若要變更給定可用性群組得失敗臨界值，請使用 WSFC 容錯移轉管理員主控台。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
-|工作|Permissions|  
+|工作|[權限]|  
 |----------|-----------------|  
 |若要設定新可用性群組的彈性容錯移轉原則|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改現有可用性群組的原則|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
@@ -61,16 +61,15 @@ ms.locfileid: "62815225"
   
          例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會將現有可用性群組 `AG1`的失敗狀況層級變更為層級一：  
   
-        ```  
-  
+        ```sql
         ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1);  
         ```  
   
          這些整數值與失敗狀況層級的關聯性如下所示：  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|層級|起始自動容錯移轉的狀況|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|level|起始自動容錯移轉的狀況|  
         |------------------------------|-----------|-------------------------------------------|  
-        |1|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
+        |@shouldalert|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
         |2|二|伺服器沒有回應時。 滿足任何狀況的較低值，而且 SQL Server 服務連接到叢集且超過健全狀況檢查逾時臨界值，或者目前主要複本處於失敗狀態。|  
         |3|三|發生嚴重伺服器錯誤時。 滿足任何狀況的較低值，或者發生內部嚴重伺服器錯誤。<br /><br /> 這是預設層級。|  
         |4|四|發生一般伺服器錯誤時。 滿足任何狀況的較低值，或者發生一般伺服器錯誤。|  
@@ -82,21 +81,21 @@ ms.locfileid: "62815225"
   
          例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會將現有可用性群組 `AG1`的健全狀況檢查逾時臨界值變更為 60,000 毫秒 (一分鐘)。  
   
-        ```  
-  
+        ```sql
         ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT = 60000);  
         ```  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **若要設定彈性容錯移轉原則**  
+
+### <a name="to-configure-the-flexible-failover-policy"></a>若要設定彈性容錯移轉原則 * *  
   
 1.  將預設值 (`cd`) 設定為裝載主要複本的伺服器執行個體。  
   
 2.  將可用性複本加入至可用性群組時，請使用 `New-SqlAvailabilityGroup` 指令程式。 修改現有的可用性複本時，請使用 `Set-SqlAvailabilityGroup` 指令程式。  
   
-    -   若要設定容錯移轉狀況層級，使用`FailureConditionLevel`*層級*參數，其中*層級*是下列值之一：  
+    -   若要設定容錯移轉狀況層級，請使用 `FailureConditionLevel`*level*參數，其中*level*是下列其中一個值：  
   
-        |值|層級|起始自動容錯移轉的狀況|  
+        |[值]|level|起始自動容錯移轉的狀況|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
         |`OnServerUnresponsive`|二|伺服器沒有回應時。 滿足任何狀況的較低值，而且 SQL Server 服務連接到叢集且超過健全狀況檢查逾時臨界值，或者目前主要複本處於失敗狀態。|  
@@ -108,20 +107,20 @@ ms.locfileid: "62815225"
   
          例如，下列命令會將現有可用性群組 `AG1`的失敗狀況層級變更為層級一。  
   
-        ```  
-        Set-SqlAvailabilityGroup `   
-        -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `   
-        -FailureConditionLevel OnServerDown  
+        ```powershell
+        Set-SqlAvailabilityGroup `
+         -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `
+         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   若要設定健全狀況檢查逾時臨界值，請使用`HealthCheckTimeout` *n*參數，其中*n*是介於 15000 毫秒 （15 秒） 到 4294967295 毫秒之間的整數。 預設值為 30000 毫秒 (30 秒)。  
+    -   若要設定健全狀況檢查超時閾值，請使用 `HealthCheckTimeout`*n*參數，其中*n*是介於15000毫秒（15秒）到4294967295毫秒之間的整數。 預設值為 30000 毫秒 (30 秒)。  
   
          例如，下列命令會將現有可用性群組 `AG1`的健全狀況檢查逾時臨界值變更為 120,000 毫秒 (兩分鐘)。  
   
-        ```  
-        Set-SqlAvailabilityGroup `   
-        -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
-        -HealthCheckTimeout 120000  
+        ```powershell
+        Set-SqlAvailabilityGroup `
+         -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `
+         -HealthCheckTimeout 120000  
         ```  
   
 > [!NOTE]  
@@ -131,14 +130,12 @@ ms.locfileid: "62815225"
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [取得 SQL Server PowerShell 說明](../../../powershell/sql-server-powershell.md)  
   
-## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性模式 （AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)   
- [容錯移轉及容錯移轉模式&#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+## <a name="see-also"></a>請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)    
+ [容錯移轉和故障&#40;轉移&#41;模式 AlwaysOn 可用性群組](failover-and-failover-modes-always-on-availability-groups.md)   
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
-  
-  

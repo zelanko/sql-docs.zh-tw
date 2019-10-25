@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893137"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798216"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
   作業步驟是指作業對資料庫或伺服器所採取的動作， 每一個作業必須至少有一個作業步驟。 作業步驟可以是：  
@@ -50,7 +50,7 @@ ms.locfileid: "68893137"
   
  每個作業步驟都是在特定的安全性內容中執行。 如果作業步驟指定 Proxy，則作業步驟會在該 Proxy 認證的安全性內容中執行。 如果作業步驟未指定 Proxy，則作業步驟會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶的內容中執行。 只有系統管理員 (sysadmin) 固定伺服器角色的成員，才可以建立未明確指定 Proxy 的作業。  
   
- 因為作業步驟是在特定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者的環境中執行，因此該使用者需具備讓作業步驟執行所需的權限和組態。 例如，如果您建立了一個作業，它需要磁碟機代號或通用命名慣例 (UNC) 路徑，則在測試工作時，其作業步驟可能會在您的 Windows 使用者帳戶下執行。 不過，作業步驟的 Windows 使用者也必須具備必要的權限、磁碟機代號組態或必要磁碟機的存取權， 否則，作業步驟會失敗。 若要防止此問題發生，請確定每一個作業步驟的 Proxy，對於作業步驟所執行的工作都具有必要權限。 如需詳細資訊, 請參閱[SQL Server 資料庫引擎和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。  
+ 因為作業步驟是在特定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者的環境中執行，因此該使用者需具備讓作業步驟執行所需的權限和組態。 例如，如果您建立了一個作業，它需要磁碟機代號或通用命名慣例 (UNC) 路徑，則在測試工作時，其作業步驟可能會在您的 Windows 使用者帳戶下執行。 不過，作業步驟的 Windows 使用者也必須具備必要的權限、磁碟機代號組態或必要磁碟機的存取權， 否則，作業步驟會失敗。 若要防止此問題發生，請確定每一個作業步驟的 Proxy，對於作業步驟所執行的工作都具有必要權限。 如需詳細資訊，請參閱[SQL Server 資料庫引擎和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。  
   
 ## <a name="job-step-logs"></a>作業步驟記錄  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可以將某些作業步驟的輸出寫入作業系統檔案，或寫入 msdb 資料庫中的 sysjobstepslogs 資料表。 以下作業步驟類型可以寫入輸出至兩個目的地：  
@@ -75,7 +75,7 @@ ms.locfileid: "68893137"
   
 -   指令成功時傳回的處理序結束代碼。  
   
--   要執行的命令。 若要執行作業系統命令，此處是指命令本身； 若為外部程式，則是指程式名稱和程式的引數，例如：**C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   要執行的命令。 若要執行作業系統命令，此處是指命令本身； 若為外部程式，則是指程式名稱和程式的引數，例如： **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  如果可執行檔不在系統路徑或執行作業步驟的使用者路徑中，您必須提供可執行檔的完整路徑。  
@@ -89,7 +89,7 @@ ms.locfileid: "68893137"
   
  (選擇性) 您也可以開啟現有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 檔案做為作業步驟的命令。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy。 相反地，如果作業步驟的擁有者是系統管理員 (sysadmin) 固定伺服器角色的成員，則作業步驟會以作業步驟的擁有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶的身分來執行。 系統管理員 (sysadmin) 固定伺服器角色的成員也可以指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟在另一個使用者內容之下執行，方法是使用 sp_add_jobstep 預存程序的 *database_user_name* 參數。 如需詳細資訊, 請參閱[sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy。 相反地，如果作業步驟的擁有者是系統管理員 (sysadmin) 固定伺服器角色的成員，則作業步驟會以作業步驟的擁有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶的身分來執行。 系統管理員 (sysadmin) 固定伺服器角色的成員也可以指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟在另一個使用者內容之下執行，方法是使用 sp_add_jobstep 預存程序的 *database_user_name* 參數。 如需詳細資訊，請參閱[sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 > [!NOTE]  
 >  單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟可包含多個批次。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟可包含內嵌 GO 命令。  
@@ -101,7 +101,7 @@ ms.locfileid: "68893137"
   
 -   要開啟之現有的 PowerShell 指令碼檔案。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell 子系統會開啟一個 PowerShell 工作階段，並載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元。當作作業步驟命令使用的 PowerShell 指令碼可以參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者和指令程式。 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元撰寫 PowerShell 指令碼的詳細資訊，請參閱 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell 子系統會開啟 PowerShell 會話，並載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元。當做作業步驟命令使用的 PowerShell 腳本可以參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者和 Cmdlet。 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元撰寫 PowerShell 指令碼的詳細資訊，請參閱 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX Scripting 作業步驟  
   
@@ -128,8 +128,7 @@ oServer.LoginSecure = True
 oServer.Connect "(local)"  
 'Disconnect and destroy the server object  
 oServer.DisConnect  
-Set oServer = nothing  
-  
+Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>複寫作業步驟  
@@ -166,7 +165,7 @@ Set oServer = nothing
   
 -   輸入要執行的陳述式。 陳述式必須為多維度運算式 (MDX) 查詢。  
   
- 如需 MDX 的詳細資訊, 請參閱[Mdx &#40;查詢&#41;基本概念 Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)。  
+ 如需 MDX 的詳細資訊，請參閱[Mdx &#40;查詢&#41;基本概念 Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)。  
   
 ## <a name="integration-services-packages"></a>Integration Services 封裝  
  當您建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝作業步驟時，必須執行以下動作：  
@@ -199,20 +198,18 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**描述**|**主題**|  
+|**說明**|**主題**|  
 |描述如何建立包含可執行程式的作業步驟。|[建立 CmdExec 作業步驟](create-a-cmdexec-job-step.md)|  
 |描述如何重設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 權限。|[設定使用者可建立及管理 SQL Server Agent 作業](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |描述如何建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟。|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|描述如何定義 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Transact-SQL 作業步驟的選項。|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|描述如何定義 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Transact-SQL 作業步驟的選項。|[定義 Transact-SQL 作業步驟選項](define-transact-sql-job-step-options.md)|  
 |描述如何建立 ActiveX 指令碼作業步驟。|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|描述如何建立及定義執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 命令與查詢的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|描述如何建立及定義執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 命令與查詢的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。|[建立 Analysis Services 作業步驟](create-an-analysis-services-job-step.md)|  
 |描述作業執行期間發生錯誤時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該採取的動作。|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |描述如何檢視 [作業步驟屬性] 對話方塊中的作業步驟詳細資料。|[檢視作業步驟資訊](view-job-step-information.md)|  
-|描述如何刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟記錄。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
+|描述如何刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟記錄。|[刪除作業步驟記錄](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>另請參閱  
- [sysjobstepslogs &#40;transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+## <a name="see-also"></a>請參閱  
+ [sysjobstepslogs &#40;transact-sql&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [建立作業](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
-  
-  

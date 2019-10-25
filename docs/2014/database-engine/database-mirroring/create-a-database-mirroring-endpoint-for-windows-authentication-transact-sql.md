@@ -16,12 +16,12 @@ ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62755296"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797934"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立使用 Windows 驗證的資料庫鏡像端點。 若要支援資料庫鏡像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個執行個體都需要一個資料庫鏡像端點。 伺服器執行個體只可有一個資料庫鏡像端點，而這個端點具有單一通訊埠。 建立資料庫鏡像端點後，該資料庫鏡像端點即可使用本機系統上的任何可用通訊埠。 伺服器執行個體上的所有資料庫鏡像工作階段都會接聽該通訊埠，且資料庫鏡像的所有內送連接也都會使用該通訊埠。  
@@ -31,19 +31,19 @@ ms.locfileid: "62755296"
   
  **本主題內容**  
   
--   **開始之前：** [安全性](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
--   **使用下列項目建立資料庫鏡像端點：** [Transact-SQL](#TsqlProcedure)  
+-   **使用下列項目，建立資料庫鏡像端點**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  伺服器執行個體的驗證及加密方法是由系統管理員所建立。  
   
 > [!IMPORTANT]  
 >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -56,8 +56,8 @@ ms.locfileid: "62755296"
   
 3.  使用下列陳述式決定資料庫鏡像端點是否已經存在。  
   
-    ```  
-    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
+    ```sql
+    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;
     ```  
   
     > [!IMPORTANT]  
@@ -65,33 +65,33 @@ ms.locfileid: "62755296"
   
 4.  若要以 Transact-SQL 來建立使用 Windows 驗證的端點，請使用 CREATE ENDPOINT 陳述式。 陳述式會採用下列一般形式：  
   
-     CREATE ENDPOINT \<端點名稱>   
+     CREATE ENDPOINT \<端點名稱>  
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = \<接聽程式通訊埠清單>  )  
+     AS TCP ( LISTENER_PORT = \<接聽程式通訊埠清單> )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = **WINDOWS** [ \<授權方法>  ]  
+     [ AUTHENTICATION = **WINDOWS** [ \<授權方法> ]  
   
      ]  
   
      [ [ **,** ] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { \<演算法>  } ]  
+     [ ALGORITHM { \<演算法> } ]  
   
      ]  
   
-     [ **,** ] ROLE = \<角色>   
+     [ **,** ] ROLE = \<角色>  
   
-     )  
+     ) 導向而來  
   
      其中  
   
-    -   \<端點名稱>  是伺服器執行個體之資料庫鏡像端點的唯一名稱。  
+    -   \<端點名稱> 是伺服器執行個體之資料庫鏡像端點的唯一名稱。  
   
     -   STARTED 指定要啟動及要開始接聽連接的端點。 資料庫鏡像端點通常是在 STARTED 狀態下建立。 您也可以在 STOPPED 狀態 (預設值) 或 DISABLED 狀態下啟動工作階段。  
   
@@ -106,11 +106,11 @@ ms.locfileid: "62755296"
         > [!IMPORTANT]  
         >  每個伺服器執行個體都需要一個且唯一的接聽程式通訊埠。  
   
-    -   若為 Windows 驗證，除非您想要端點只使用 NTLM 或 Kerberos 來驗證連接，否則 AUTHENTICATION 是選擇性選項。 \<授權方法>  指定用來驗證連線的下列其中一項方法：NTLM、KERBEROS 或 NEGOTIATE。 預設值 NEGOTIATE，將導致端點使用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。 視相對端點的驗證層級而定，交涉可讓連接需要或不需要驗證。  
+    -   若為 Windows 驗證，除非您想要端點只使用 NTLM 或 Kerberos 來驗證連接，否則 AUTHENTICATION 是選擇性選項。 \<授權方法> 將用來驗證連線的方法指定為下列其中一項：NTLM、KERBEROS 或 NEGOTIATE。 預設值 NEGOTIATE，將導致端點使用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。 視相對端點的驗證層級而定，交涉可讓連接需要或不需要驗證。  
   
     -   依預設，ENCRYPTION 是設定為 REQUIRED。 這表示此端點的所有連接都必須使用加密。 不過，您可以停用加密或使其在端點上為選擇性的。 替代方案如下所示：  
   
-        |值|定義|  
+        |[值]|[定義]|  
         |-----------|----------------|  
         |DISABLED|指定透過連接傳送的資料不加密。|  
         |SUPPORTED|指定只有在相對端點指定為 SUPPORTED 或 REQUIRED 時才加密資料。|  
@@ -118,19 +118,19 @@ ms.locfileid: "62755296"
   
          如果端點需要加密，其他的端點必須將 ENCRYPTION 設定為 SUPPORTED 或 REQUIRED。  
   
-    -   \<演算法>  提供用於指定端點加密標準的選項。 \<演算法>  的值可為下列任一演算法或演算法組合：RC4、AES、AES RC4 或 RC4 AES。  
+    -   \<演算法> 提供用於指定端點加密標準的選項。 \<演算法> 的值可為下列任一演算法或演算法組合：RC4、AES、AES RC4 或 RC4 AES。  
   
          AES RC4 指定此端點將交涉加密演算法，將優先權指定給 AES 演算法。 RC4 AES 指定此端點將交涉加密演算法，將優先權指定給 RC4 演算法。 如果這兩個端點都指定了這兩種演算法 (但指定順序不同)，則以接受連接的端點為準。  
   
         > [!NOTE]  
         >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
   
-    -   \<角色>  定義伺服器可以執行的一個或多個角色。 指定所需的 ROLE。 然而，端點的角色只與資料庫鏡像有關。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，端點的角色會被忽略。  
+    -   \<角色> 定義伺服器可以執行的一個或多個角色。 指定所需的 ROLE。 然而，端點的角色只與資料庫鏡像有關。 對於 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，端點的角色會被忽略。  
   
          若要允許伺服器執行個體做為一個資料庫鏡像工作階段的一個角色，並做為另一個工作階段的其他角色，請指定 ROLE=ALL。 若要限制伺服器執行個體做為夥伴或見證伺服器，請分別指定 ROLE=PARTNER 或 ROLE=WITNESS。  
   
         > [!NOTE]  
-        >  如需資料庫鏡像選項的不同版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+        >  如需不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本之資料庫鏡像選項的詳細資訊，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
      如需 CREATE ENDPOINT 語法的完整說明，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)中建立使用 Windows 驗證的資料庫鏡像端點。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "62755296"
 |-----------------------------|---------------------------|  
 |夥伴 (一開始為主體角色)|`SQLHOST01\.`|  
 |夥伴 (一開始為鏡像角色)|`SQLHOST02\.`|  
-|Witness|`SQLHOST03\.`|  
+|見證|`SQLHOST03\.`|  
   
  在此範例中，雖然任何可用的通訊埠編號都可以使用，不過三個終止點都會使用通訊埠編號 7022。 AUTHENTICATION 選項是不必要的，因為終止點會使用預設類型「Windows 驗證」。 ENCRYPTION 選項也沒有必要，因為終止點隨時會交涉連線的驗證方法，這是「Windows 驗證」的預設行為。 另外，所有終止點都需要加密，這也是預設行為。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62755296"
 > [!IMPORTANT]  
 >  每個伺服器執行個體都僅能有一個終止點。 因此，如果您要伺服器執行個體成為某些工作階段中的夥伴，而其他的為見證，請指定 ROLE=ALL。  
   
-```  
+```sql
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  
@@ -178,9 +178,10 @@ GO
 ```  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
- **若要設定資料庫鏡像端點**  
+
+### <a name="to-configure-a-database-mirroring-endpoint"></a>若要設定資料庫鏡像端點
   
--   [建立資料庫鏡像 AlwaysOn 可用性群組的&#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [建立 AlwaysOn 可用性群組&#40;SQL Server PowerShell 的資料庫鏡像端點&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -190,18 +191,16 @@ GO
   
 -   [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)  
   
--   [在加入或修改可用性複本時指定端點 URL &#40;Transact-SQL&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **若要檢視有關資料庫鏡像端點的資訊**  
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)   
  [範例：使用 Windows 驗證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
-  
-  

@@ -10,24 +10,24 @@ ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0992e3a956a2b498d92186fa91c0ed4fbddf6102
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a04e581758748d55b9defcab3beaa6a86f0eecf
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762049"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797804"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>管理 Database Engine PowerShell 中的驗證
   依預設，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體時， [!INCLUDE[ssDE](../includes/ssde-md.md)]PowerShell 元件會使用 Windows 驗證。 藉由定義 PowerShell 虛擬磁碟機，或指定 `-Username` 的 `-Password` 和 `Invoke-Sqlcmd` 參數，即可使用 SQL Server 驗證。  
   
-1.  **開始之前：** [權限](#Permissions)  
+1.  **Before you begin:**  [Permissions](#Permissions)  
   
-2.  **若要設定驗證，請使用：** [虛擬磁碟機](#SQLAuthVirtDrv)， [Invoke-sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **使用下列項目，設定驗證：** [虛擬磁碟機](#SQLAuthVirtDrv)、[Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  您在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的執行個體中可執行的所有動作，都是透過授與用來連接至執行個體之驗證認證的權限所控制。 依預設， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者和 Cmdlet 會使用用來建立 [!INCLUDE[ssDE](../includes/ssde-md.md)]之 Windows 驗證連接的 Windows 帳戶。  
   
- 若要進行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接，您必須提供 SQL Server 驗證登入識別碼和密碼。 使用時[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供者，您必須將產生關聯[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入認證與虛擬磁碟機，然後使用變更目錄命令 (`cd`) 連接到該磁碟機。 在 Windows PowerShell 中，安全性認證只能與虛擬磁碟機產生關聯。  
+ 若要進行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接，您必須提供 SQL Server 驗證登入識別碼和密碼。 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者時，您必須將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入認證與虛擬磁片磁碟機產生關聯，然後使用變更目錄命令（`cd`）連接到該磁片磁碟機。 在 Windows PowerShell 中，安全性認證只能與虛擬磁碟機產生關聯。  
   
 ##  <a name="SQLAuthVirtDrv"></a> 使用虛擬磁碟機的 SQL Server 驗證  
  **建立與 SQL Server 驗證登入相關聯的虛擬磁碟機**  
@@ -47,16 +47,16 @@ ms.locfileid: "62762049"
 ### <a name="example-virtual-drive"></a>範例 (虛擬磁碟機)  
  此範例會建立名為 **sqldrive** 的函數，可讓您用來建立與指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入和執行個體相關聯的虛擬磁碟機。  
   
- **sqldrive** 函數會提示您輸入登入的密碼，並且在您輸入時遮罩密碼。 然後，每當您使用變更目錄命令 (`cd`) 來使用虛擬磁碟機名稱，以連接到路徑，所有作業都都由使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]時建立磁碟機時所提供的驗證登入認證。  
+ **sqldrive** 函數會提示您輸入登入的密碼，並且在您輸入時遮罩密碼。 然後，每當您使用變更目錄命令（`cd`）連線到使用虛擬磁片磁碟機名稱的路徑時，就會使用您在建立磁片磁碟機時所提供的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication 登入認證來執行所有作業。  
   
-```  
+```powershell
 ## Create a function that specifies the login and prompts for the password.  
   
 function sqldrive  
 {  
     param( [string]$name, [string]$login = "MyLogin", [string]$root = "SQLSERVER:\SQL\MyComputer\MyInstance" )  
-    $pwd = read-host -AsSecureString -Prompt "Password"  
-    $cred = new-object System.Management.Automation.PSCredential -argumentlist $login,$pwd  
+    $pwd = Read-Host -AsSecureString -Prompt "Password"  
+    $cred = New-Object System.Management.Automation.PSCredential -argumentlist $login, $pwd  
     New-PSDrive $name -PSProvider SqlServer -Root $root -Credential $cred -Scope 1  
 }  
   
@@ -75,16 +75,14 @@ cd SQLAuth
 ### <a name="example-invoke-sqlcmd"></a>範例 (Invoke-Sqlcmd)  
  此範例使用 read-host Cmdlet 提示使用者輸入密碼，然後使用 SQL Server 驗證進行連接。  
   
-```  
+```powershell
 ## Prompt the user for their password.  
-$pwd = read-host -AsSecureString -Prompt "Password"  
+$pwd = Read-Host -AsSecureString -Prompt "Password"  
   
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server PowerShell](sql-server-powershell.md)   
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
- [Invoke-Sqlcmd 指令程式](../database-engine/invoke-sqlcmd-cmdlet.md)  
-  
-  
+ [Invoke-Sqlcmd Cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)  

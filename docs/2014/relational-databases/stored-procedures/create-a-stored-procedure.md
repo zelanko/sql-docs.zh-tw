@@ -14,22 +14,22 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016047"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796418"
 ---
 # <a name="create-a-stored-procedure"></a>建立預存程序
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 陳述式來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。  
   
 ##  <a name="Top"></a>   
--   **開始之前：**[權限](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **使用以下方式建立程序：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要建立程序，請使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  需要在資料庫中的 CREATE PROCEDURE 權限，以及在建立程序時所在的結構描述上的 ALTER 權限。  
   
 ##  <a name="Procedures"></a> 如何建立預存程序  
@@ -44,19 +44,19 @@ ms.locfileid: "63016047"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 **[資料庫]**、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫，以及 **[Programmability]**。  
+2.  依序展開 **[資料庫]** 、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫，以及 **[Programmability]** 。  
   
 3.  以滑鼠右鍵按一下 [預存程序]，然後按一下 [新增預存程序]。  
   
-4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]**。  
+4.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]** 。  
   
 5.  在 **[指定範本參數的值]** 對話方塊中，為顯示的參數輸入下列值。  
   
-    |參數|值|  
+    |參數|[值]|  
     |---------------|-----------|  
     |作者|*您的名字*|  
     |建立日期|*今天的日期*|  
-    |描述|傳回員工資料。|  
+    |[描述]|傳回員工資料。|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|`nvarchar`(50)|  
@@ -65,7 +65,7 @@ ms.locfileid: "63016047"
     |@Datatype_For_Param2|`nvarchar`(50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  按一下 [確定] 。  
+6.  按一下 **[確定]** 。  
   
 7.  在 **[查詢編輯器]** 中，以下列陳述式取代 SELECT 陳述式：  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63016047"
         AND EndDate IS NULL;  
     ```  
   
-8.  若要測試語法，請在 **[查詢]** 功能表上按一下 **[剖析]**。 如果傳回錯誤訊息，請比較陳述式與上列資訊，並視需要進行更正。  
+8.  若要測試語法，請在 **[查詢]** 功能表上按一下 **[剖析]** 。 如果傳回錯誤訊息，請比較陳述式與上列資訊，並視需要進行更正。  
   
-9. 若要建立程序，請在 **[查詢]** 功能表中，按一下 **[執行]**。 程序也可建立為資料庫中的物件。  
+9. 若要建立程序，請在 **[查詢]** 功能表中，按一下 **[執行]** 。 程序也可建立為資料庫中的物件。  
   
 10. 若要查看物件總管中所列的程序，請以滑鼠右鍵按一下 [預存程序]，然後選取 [重新整理]。  
   
@@ -94,42 +94,38 @@ ms.locfileid: "63016047"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
-2.  在 **[檔案]** 功能表中，按一下 **[新增查詢]**。  
+2.  在 **[檔案]** 功能表中，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會使用不同的程序名稱建立與上述相同的預存程序。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。 此範例會使用不同的程序名稱建立與上述相同的預存程序。  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
     CREATE PROCEDURE HumanResources.uspGetEmployeesTest2   
         @LastName nvarchar(50),   
         @FirstName nvarchar(50)   
-    AS   
+    AS
   
         SET NOCOUNT ON;  
         SELECT FirstName, LastName, Department  
         FROM HumanResources.vEmployeeDepartmentHistory  
         WHERE FirstName = @FirstName AND LastName = @LastName  
         AND EndDate IS NULL;  
-    GO  
-  
+    GO
     ```  
   
-4.  若要執行程序，請將下列範例複製並貼到新的查詢視窗中，然後按一下 **[執行]**。 請注意，此處顯示指定參數值的不同方法。  
+4.  若要執行程序，請將下列範例複製並貼到新的查詢視窗中，然後按一下 **[執行]** 。 請注意，此處顯示指定參數值的不同方法。  
   
-    ```  
+    ```sql
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  
     -- Or  
     EXEC HumanResources.uspGetEmployeesTest2 @LastName = N'Ackerman', @FirstName = N'Pilar';  
     GO  
     -- Or  
     EXECUTE HumanResources.uspGetEmployeesTest2 @FirstName = N'Pilar', @LastName = N'Ackerman';  
-    GO  
-  
+    GO
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
-  
   

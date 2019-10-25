@@ -10,12 +10,12 @@ ms.assetid: c9b1b8f1-b117-4e87-9704-2170f62c5c8b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06e59cd00382610e330e2c288f44fda50244256f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77b6031e91f59fc691f0b1c055e90464d660d3a9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065123"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797936"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>將 URN 轉換成 SQL Server 提供者路徑
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型 (SMO) 會針對它的物件建立統一資源名稱 (URN)。 每個 URN 都可以唯一識別 SMO 物件，而且可以使用 `Convert-UrnToPath` Cmdlet 來轉換為 SQL Server PowerShell 提供者路徑。  
@@ -35,13 +35,11 @@ ms.locfileid: "66065123"
   
  在 Windows PowerShell 中，如需使用 Cmdlet 的範例，請執行：  
   
-```  
+```powershell
 Get-Help Convert-UrnToPath -Examples  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [查詢運算式和統一的資源名稱](../powershell/query-expressions-and-uniform-resource-names.md)   
  [SQL Server PowerShell 提供者](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
-  
-  

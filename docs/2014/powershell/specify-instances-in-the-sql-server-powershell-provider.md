@@ -10,19 +10,19 @@ ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 595bd70b97b6586071177e2e93281e14ca62c32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762349"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797760"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>指定 SQL Server PowerShell 提供者中的執行個體
   針對 SQL Server PowerShell 提供者指定的路徑必須識別 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的執行個體及其執行所在的電腦。 用來指定電腦和執行個體的語法必須符合 SQL Server 識別碼和 Windows PowerShell 路徑的規則。  
   
-1.  **開始之前：** [限制事項](#LimitationsRestrictions)  
+1.  **開始之前：**  [限制事項](#LimitationsRestrictions)  
   
-2.  **若要指定執行個體：** [範例](#Examples)  
+2.  **若要指定執行個體：**  [範例](#Examples)  
   
 ## <a name="before-you-begin"></a>開始之前  
  SQL Server 提供者路徑中接在 SQLSERVER:\SQL 後面的第一個節點是執行 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體的電腦名稱。例如：  
@@ -51,33 +51,31 @@ SQLSERVER:\SQL\MyComputer\MyInstance
 ##  <a name="Examples"></a> 範例：電腦和執行個體名稱  
  此範例使用 localhost 和 DEFAULT 指定本機電腦上的預設執行個體：  
   
-```  
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT   
+```powershell
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT
 ```  
   
  (local) 中的括號字元通常會被 Windows PowerShell 視為命令。 因此，您必須：  
   
 -   使用引號括住路徑字串：  
   
-    ```  
+    ```powershell
     Set-Location "SQLSERVER:\SQL\(local)\DEFAULT"  
     ```  
   
 -   使用反勾號字元 (`) 來逸出括號：  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
     ```  
   
 -   使用十六進位表示法來編碼括號：  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [PowerShell 中的 SQL Server 識別碼](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

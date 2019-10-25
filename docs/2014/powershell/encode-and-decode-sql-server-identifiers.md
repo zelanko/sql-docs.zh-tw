@@ -10,19 +10,19 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46dbf6654b557d612bac6dd2b2a79da114603414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775064"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797766"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>編碼及解碼 SQL Server 識別碼
   SQL Server 分隔識別碼有時會包含 Windows PowerShell 路徑中不支援的字元。 編碼這些字元的十六進位值，就可以指定這些字元。  
   
-1.  **開始之前：** [限制事項](#LimitationsRestrictions)  
+1.  **開始之前：**  [限制事項](#LimitationsRestrictions)  
   
-2.  **處理特殊字元：** [編碼識別碼](#EncodeIdent)，[解碼識別碼](#DecodeIdent)  
+2.  **處理特殊字元：**  [編碼識別碼](#EncodeIdent)、 [解碼識別碼](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>開始之前  
  Windows PowerShell 路徑名稱中不支援的字元可以表示或編碼為 "%" 字元，後面緊接著代表此字元之位元模式的十六進位值，就像是 " **%** xx"。 編碼一定可以用來處理 Windows PowerShell 路徑中不支援的字元。  
@@ -55,7 +55,7 @@ Set-Location Table%3ATest
   
  您也可以使用 **Encode-SqlName** 來建立 Windows PowerShell 所支援的名稱：  
   
-```  
+```powershell
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
@@ -67,13 +67,11 @@ Set-Location (Encode-SqlName "Table:Test")
 ### <a name="examples-decoding"></a>範例 (解碼)  
  此範例會傳回 "Table:Test"：  
   
-```  
+```powershell
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [PowerShell 中的 SQL Server 識別碼](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

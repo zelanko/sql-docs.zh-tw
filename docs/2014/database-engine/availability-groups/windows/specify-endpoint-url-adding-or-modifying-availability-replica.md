@@ -1,5 +1,5 @@
 ---
-title: 指定端點 URL 時加入或修改可用性複本 (SQL Server) |Microsoft Docs
+title: 在加入或修改可用性複本時指定端點 URL （SQL Server） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788459"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797974"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>在加入或修改可用性複本時指定端點 URL (SQL Server)
-  若要裝載可用性群組的可用性複本，伺服器執行個體必須擁有資料庫鏡像端點。 伺服器執行個體使用此端點接聽來自其他伺服器執行個體所裝載之可用性複本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 訊息。 若要定義可用性群組的可用性複本，您必須指定將要裝載此複本之伺服器執行個體的端點 URL。 「端點 URL」  會識別資料庫鏡像端點的傳輸通訊協定 (TCP)、伺服器執行個體的系統位址，以及與端點相關聯的連接埠號碼。  
+  若要裝載可用性群組的可用性複本，伺服器執行個體必須擁有資料庫鏡像端點。 伺服器執行個體使用此端點接聽來自其他伺服器執行個體所裝載之可用性複本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 訊息。 若要定義可用性群組的可用性複本，您必須指定將要裝載此複本之伺服器執行個體的端點 URL。 「端點 URL」會識別資料庫鏡像端點的傳輸通訊協定 (TCP)、伺服器執行個體的系統位址，以及與端點相關聯的連接埠號碼。  
   
 > [!NOTE]  
 >  「端點 URL」一詞是資料庫鏡像使用者介面和文件集所用「伺服器網路位址」一詞的同義詞。  
@@ -39,7 +39,7 @@ ms.locfileid: "62788459"
 ##  <a name="SyntaxOfURL"></a> 端點 URL 的語法  
  端點 URL 的語法採用以下格式：  
   
- TCP<strong>://</strong> *\<系統位址>* <strong>:<strong> *\<通訊埠>*  
+ TCP<strong>://</strong> *\<系統位址>* <strong>:</strong> *\<通訊埠>*  
   
  其中  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62788459"
   
     -   因為 Windows Server 容錯移轉叢集 (WSFC) 叢集的節點都是在相同網域中，您可以使用電腦系統的名稱，例如 `SYSTEM46`。  
   
-    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如： **[** <IPv6 位址>  **]** 。  
+    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如： **[** <IPv6 位址> **]** 。  
   
          若要取得系統的 IP 位址，請在 Windows 命令提示字元下，輸入 **ipconfig** 命令。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "62788459"
   
      在端點 URL 中，只有通訊埠編號會識別與目標電腦上的鏡像端點相關聯的伺服器執行個體。 下圖說明單一電腦上兩個伺服器執行個體的端點 URL。 預設的執行個體會使用通訊埠 `7022` ，而具名執行個體則使用通訊埠 `7033`。 這兩個伺服器執行個體的端點 URL 分別為： `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` 和 `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`。 請注意，位址不包含伺服器執行個體的名稱。  
   
-     ![預設執行個體的伺服器網路位址](../../media/dbm-2-instances-ports-1-system.gif "預設執行個體的伺服器網路位址")  
+     ![預設實例的伺服器網路位址](../../media/dbm-2-instances-ports-1-system.gif "預設實例的伺服器網路位址")  
   
      若要識別目前關聯於伺服器執行個體之資料庫鏡像端點的通訊埠，請使用下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式：  
   
-    ```  
+    ```sql
     SELECT type_desc, port FROM sys.TCP_endpoints  
     ```  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62788459"
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>B. 使用完整網域名稱  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>b. 使用完整網域名稱  
  下列端點 URL 會指定一個完整網域名稱 `DBSERVER8.manufacturing.Adventure-Works.com`和通訊埠 `7024`。  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
@@ -102,9 +102,9 @@ ms.locfileid: "62788459"
   
  **IPCONFIG /ALL**  
   
- 若要形成完整的網域名稱，請串連 <主機名稱>  和 <主要 DNS 尾碼>  的值，如下所示：  
+ 若要形成完整的網域名稱，請串連 <主機名稱> 和 <主要 DNS 尾碼> 的值，如下所示：  
   
- <主機名稱>  **.** _<主要 DNS 尾碼>_  
+ <主機名稱> **.** _<主要 DNS 尾碼>_  
   
  例如，IP 組態  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62788459"
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要設定資料庫鏡像端點**  
   
--   [建立資料庫鏡像 AlwaysOn 可用性群組的&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [建立 AlwaysOn 可用性群組&#40;SQL Server PowerShell 的資料庫鏡像端點&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62788459"
   
 -   [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [疑難排解 AlwaysOn 可用性群組組態&#40;SQL Server&#41;刪除](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [&#40;SQL Server&#41;刪除 AlwaysOn 可用性群組設定的疑難排解](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **若要檢視有關資料庫鏡像端點的資訊**  
   
@@ -148,11 +148,9 @@ ms.locfileid: "62788459"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [適用于高可用性和嚴重損壞修復的 Microsoft SQL Server AlwaysOn 解決方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
-  
-  

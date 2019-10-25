@@ -13,28 +13,28 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe9a196424a8d3488a49c86f0996dece71eee0f7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 9c63930883642cf7f5e675cb57d5f83648a5787a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028527"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797468"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在無仲裁情況下強制啟動 WSFC 叢集
   本主題描述如何在沒有仲裁的情況下強制啟動 Windows Server 容錯移轉叢集 (WSFC) 叢集節點。  在災害復原和多重子網路案例中，可能需要這個方式才能針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體來復原資料及完整重新建立高可用性。  
   
 -   **開始之前：** [建議](#Recommendations)、[安全性](#Security)  
   
--   **在無仲裁的情況下，使用下列項目強制啟動叢集：** [使用容錯移轉叢集管理員](#FailoverClusterManagerProcedure)、[使用 Powershell](#PowerShellProcedure)、[使用 Net.exe](#CommandPromptProcedure)  
+-   **使用下列項目在沒有仲裁的情況下強制啟動叢集︰** [使用容錯移轉叢集管理員](#FailoverClusterManagerProcedure)、[使用 PowerShell](#PowerShellProcedure)、[使用 Net.exe](#CommandPromptProcedure)  
   
--   **後續操作：** [後續操作：在沒有仲裁的情況下強制啟動叢集之後](#FollowUp)  
+-   **後續操作：** [在沒有仲裁的情況下強制啟動叢集之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Recommendations"></a> 建議  
  除了明確指示的內容以外，如果您從 WSFC 叢集中的任何節點執行本主題的程序，都應該有效。  但是，如果您從打算在無仲裁情況下強制啟動的節點執行這些步驟，您可能會得到更好的結果並避免網路問題發生。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  使用者必須是屬於 WSFC 叢集之每一個節點上本機 Administrators 群組成員的網域帳戶。  
   
 ##  <a name="FailoverClusterManagerProcedure"></a> 使用容錯移轉叢集管理員  
@@ -47,7 +47,7 @@ ms.locfileid: "69028527"
   
 3.  在左窗格的 **[容錯移轉叢集管理員]** 樹狀目錄中，按一下叢集名稱。  
   
-4.  在 [摘要] 窗格中，確認目前 [仲裁設定] 值為：**警告：叢集正以 ForceQuorum 狀態執行**。  
+4.  在摘要窗格中，確認目前 **[仲裁設定]** 值為  **[警告: 叢集正在以 ForceQuorum 狀態執行]** 。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 Powershell  
   
@@ -78,13 +78,12 @@ Start-ClusterNode -Name $node -FixQuorum
 (Get-ClusterNode $node).NodeWeight = 1  
   
 $nodes = Get-ClusterNode -Cluster $node  
-$nodes | Format-Table -property NodeName, State, NodeWeight  
-  
+$nodes | Format-Table -property NodeName, State, NodeWeight
 ```  
   
 ##  <a name="CommandPromptProcedure"></a> 使用 Net.exe  
   
-##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>若要在無仲裁情況下強制啟動叢集  
+### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>若要在無仲裁情況下強制啟動叢集  
   
 1.  使用遠端桌面連接到所需的叢集節點，以強制連線。  
   
@@ -97,7 +96,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ### <a name="example-netexe"></a>範例 (Net.exe)  
  下列範例會在沒有仲裁情況下強制啟動節點叢集服務、設定 `NodeWeight = 1`，然後從新強制的節點列舉叢集節點狀態。  
   
-```ms-dos  
+```cmd
 net.exe stop clussvc  
 net.exe start clussvc /forcequorum  
 ```  
@@ -126,9 +125,7 @@ net.exe start clussvc /forcequorum
   
 -   [Get-ClusterLog 容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [設定叢集仲裁 NodeWeight 設定](configure-cluster-quorum-nodeweight-settings.md)   
  [Windows PowerShell 中由工作焦點列出的容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
-  
-  

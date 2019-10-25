@@ -1,5 +1,5 @@
 ---
-title: 疑難排解 SQL Server 公用程式 |Microsoft Docs
+title: 針對 SQL Server 公用程式進行疑難排解 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62842524"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797775"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>疑難排解 SQL Server 公用程式
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式問題的疑難排解可能包括解決 SQL Server 執行個體向 UCP 註冊作業失敗的問題、解決因無法收集資料而導致 UCP 上 Managed 執行個體清單檢視變為灰色圖示的問題、改善效能瓶頸或是解決資源健全狀況的問題。 如需有關所識別的資源健全狀況問題的緩和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]UCP，請參閱 <<c2> [ 疑難排解的 SQL Server 資源健全狀況&#40;SQL Server 公用程式&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。</c2>  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式問題的疑難排解可能包括解決 SQL Server 執行個體向 UCP 註冊作業失敗的問題、解決因無法收集資料而導致 UCP 上 Managed 執行個體清單檢視變為灰色圖示的問題、改善效能瓶頸或是解決資源健全狀況的問題。 如需有關減少 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP 所識別之資源健康狀態問題的詳細資訊，請參閱針對[SQL Server 資源健康狀態&#40; &#41;SQL Server 公用程式進行疑難排解](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>SQL Server 執行個體向 SQL Server 公用程式註冊的作業失敗  
  如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體進行註冊，並且指定隸屬不同於 UCP 所在位置的其他 Active Directory 網域的 Proxy 帳戶，那麼執行個體驗證會順利進行，但是註冊作業會失敗且出現下列錯誤訊息：  
   
  執行 Transact-SQL 陳述式或批次時發生例外狀況。 (Microsoft.SqlServer.ConnectionInfo)  
   
- 其他資訊：無法獲得關於 Windows NT 群組/使用者的資訊 '\<以 >'，錯誤碼 0x5。 (Microsoft SQL Server，錯誤：15404)  
+ 其他資訊: 無法獲得關於 Windows NT 群組/使用者 '\<域名稱\帳戶名稱>' 的資訊，錯誤碼 0x5。 (Microsoft SQL Server，錯誤：15404)  
   
  這個問題可能會在下列範例狀況中發生：  
   
@@ -35,11 +35,11 @@ ms.locfileid: "62842524"
   
 3.  要註冊到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體也是 "Domain_1" 的成員。  
   
-4.  在註冊過程中，連接到執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]註冊使用"sa"。 指定 "Domain_2" 的 Proxy 帳戶。  
+4.  在註冊作業期間，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的實例，以使用 "sa" 進行註冊。 指定 "Domain_2" 的 Proxy 帳戶。  
   
 5.  驗證會成功，但是註冊會失敗。  
   
- 這個問題，請使用上面的範例，因應措施是連接到的執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]註冊以納入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]公用程式使用"sa"，並提供 proxy 帳戶從"Domain_1"。  
+ 此問題的因應措施是使用上述範例，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的實例，以使用 "sa" 註冊到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式，並從 "Domain_1" 提供 proxy 帳戶。  
   
 ## <a name="failed-wmi-validation"></a>WMI 驗證失敗  
  如果沒有在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上正確設定 WMI，那麼 [建立 UCP] 與 [註冊受管理的執行個體] 作業會顯示警告，但是並不會封鎖作業。 此外，如果您變更 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 帳戶組態而讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 不具備存取必要 WMI 類別的權限，那麼在受影響之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體上進行的資料收集，會無法上傳到 UCP。 如此會造成 UCP 中顯示灰色圖示。  
@@ -48,9 +48,9 @@ ms.locfileid: "62842524"
   
  簡化的錯誤訊息如下：  
   
- 命令執行已停止因為 shell 變數"ErrorActionPreference"已設定為 停止：拒絕存取。  
+ 命令執行已停止因為 Shell 變數 "ErrorActionPreference" 已設定為 [停止: 拒絕存取]。  
   
- 錯誤：\<日期-時間 （MM/DD/YYYY hh: mm:） >:收集 cpu 屬性時攔截的例外狀況。  WMI 查詢可能已經失敗。  警告。  
+ 錯誤： \<日期時間（MM/DD/YYYY HH： MM： SS） >：在收集 cpu 屬性時攔截到例外狀況。  WMI 查詢可能已經失敗。  警告。  
   
  若要解決這個問題，請確認下列組態設定：  
   
@@ -87,7 +87,7 @@ Get-WmiObject Win32_Volume -ErrorAction Stop | Out-Null
 Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null  
 ```  
   
- 如需有關疑難排解 WMI 的詳細資訊，請參閱 <<c0> [ 疑難排解 WMI](https://go.microsoft.com/fwlink/?LinkId=178250)。 請注意，這些 SQL Server 公用程式作業中的查詢會於本機執行，因此，無法適用 DCOM 與遠端疑難排解內容。  
+ 如需疑難排解 WMI 的詳細資訊，請參閱[疑難排解 wmi](https://go.microsoft.com/fwlink/?LinkId=178250)。 請注意，這些 SQL Server 公用程式作業中的查詢會於本機執行，因此，無法適用 DCOM 與遠端疑難排解內容。  
   
 ## <a name="failed-data-collection"></a>資料收集失敗  
  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式資料收集事件失敗，請考慮以下的可能性：  
@@ -102,7 +102,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   如果資料收集或資料上傳因逾時問題而失敗，請更新 MSDB 資料庫中的 dbo.fn_sysutility_mi_get_collect_script() 函數。 特別是在 "Invoke-BulkCopyCommand()" 函數中加入下一行：  
   
-    ```  
+    ```
     $bulkCopy.BulkCopyTimeout=180  
     ```  
   
@@ -114,9 +114,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  在 SSMS 的 **[物件總管]** 中，展開 **[安全性]** 節點，然後展開 **[認證]** 節點。  
   
-    2.  以滑鼠右鍵按一下**UtilityAgentProxyCredential_\<GUID >** ，然後選取**屬性**。  
+    2.  以滑鼠右鍵按一下 [ **UtilityAgentProxyCredential_\<GUID] >** 然後選取 [**屬性**]。  
   
-    3.  在 [認證屬性] 對話方塊中，更新為所需的認證**UtilityAgentProxyCredential_\<GUID >** 認證。  
+    3.  在 [認證屬性] 對話方塊上，視需要更新**UtilityAgentProxyCredential_\<GUID >** 認證的認證。  
   
     4.  按一下 **[確定]** 以確認變更。  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   您應該啟動 UCP 上的 SQL Server Browser 服務，並將它設定為自動啟動。 如果您的組織阻止使用 SQL Server Browser 服務，請使用下列步驟讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的受管理的執行個體連接到 UCP：  
   
-    1.  在 Windows 工作列上的受管理的執行個體上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，按一下**開始**，然後按一下 **執行...** .  
+    1.  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]之受管理的實例上的 Windows 工作列上，按一下 [**開始**]，然後按一下 [**執行 ...** ]。  
   
     2.  在提供的空間內輸入 "cliconfg.exe"，然後按一下 **[確定]** 。  
   
     3.  如果系統允許 SQL 用戶端組態公用程式 EXE 啟動，請按一下 **[繼續]** 。  
   
-    4.  在  **SQL Server 用戶端網路公用程式**對話方塊中，選取**別名**索引標籤，然後按一下 **加入...** .  
+    4.  在 [ **SQL Server 用戶端網路公用程式**] 對話方塊中，選取 [**別名**] 索引標籤，然後按一下 [**新增 ...** ]。  
   
     5.  在 **[加入網路程式庫組態]** 對話方塊中：  
   
@@ -164,8 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  如果將使用者加入至這個群組之前，已經使用 UCP 註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請重新啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 服務。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [疑難排解 SQL Server 資源健全情況 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)  
-  
-  
+ [疑難排解 SQL Server 資源健全情況 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

@@ -15,12 +15,12 @@ ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c592964e5da7503c39b97db1f332a9420a1b53f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033721"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798174"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>設定作業步驟成功或失敗的流程
   建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業時，您可以指定作業執行期間發生失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應採取什麼動作。 決定每個作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應採取的動作。 接著，依照下列程序使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來設定作業步驟動作流程。  
@@ -39,7 +39,7 @@ ms.locfileid: "63033721"
   
 ## <a name="before-you-begin"></a>開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
@@ -48,15 +48,15 @@ ms.locfileid: "63033721"
   
 1.  在 **[物件總管]** 中，展開 **[SQL Server Agent]** ，然後展開 **[作業]** 。  
   
-2.  以滑鼠右鍵按一下要刪除的作業，然後按一下 [屬性]  。  
+2.  以滑鼠右鍵按一下要刪除的作業，然後按一下 [屬性]。  
   
 3.  按一下 **[步驟]** 頁面，再按一下步驟，然後按一下 **[編輯]** 。  
   
 4.  在 **[作業步驟屬性]** 對話方塊中，選取 **[進階]** 頁面。  
   
-5.  在 [成功時的動作]  清單中，按一下作業步驟順利完成時要執行的動作。  
+5.  在 [成功時的動作] 清單中，按一下作業步驟順利完成時要執行的動作。  
   
-6.  在 **[重試次數]** 方塊中，輸入介於 0 到 9999 間的值，此值是當發生作業步驟失敗前應該重試的次數。 如果在 [重試次數]  方塊中指定大於 0 的值，請在 [重試間隔 (分鐘)]  方塊內輸入 1 至 9999 間的分鐘數，此值為作業步驟在重試前所應等待的時間。  
+6.  在 **[重試次數]** 方塊中，輸入介於 0 到 9999 間的值，此值是當發生作業步驟失敗前應該重試的次數。 如果在 [重試次數] 方塊中指定大於 0 的值，請在 [重試間隔 (分鐘)] 方塊內輸入 1 至 9999 間的分鐘數，此值為作業步驟在重試前所應等待的時間。  
   
 7.  在 **[當動作失敗時]** 清單中，按一下當作業步驟失敗時要執行的動作。  
   
@@ -78,9 +78,9 @@ ms.locfileid: "63033721"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
   
-    ```  
+    ```sql
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -92,11 +92,10 @@ ms.locfileid: "63033721"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 < [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ 如需詳細資訊，請參閱[sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
-##  <a name="SMO"></a> 使用 SQL Server 管理物件  
- **若要設定作業步驟成功或失敗的流程**  
+##  <a name="SMO"></a>使用 SQL Server 管理物件  
+
+### <a name="to-set-job-step-success-or-failure-flow"></a>若要設定作業步驟成功或失敗的流程
   
  透過所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，使用 `JobStep` 類別。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
-  
-  

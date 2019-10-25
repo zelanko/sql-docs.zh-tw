@@ -13,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: b4eea3e75ed57dcf69c8d8c5bcaedf3aef1fa9f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68889603"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797644"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
   Analysis Services 會以伺服器部署模式運作，該模式可判斷不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境。 伺服器模式是在安裝期間決定。 多**維度和資料採礦模式**支援傳統的 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合模式**指的是安裝為 PowerPivot for SharePoint 的 Analysis Services 實例，用於載入和查詢活頁簿內的 Excel 或 PowerPivot 資料模型。  
@@ -26,9 +26,9 @@ ms.locfileid: "68889603"
  本主題說明 Analysis Services 以多維度和資料採礦模式運作時的基本架構。 如需其他模式的詳細資訊，請參閱[表格式&#40;模型&#41;化 ssas 表格式](../../tabular-models/tabular-models-ssas.md)和[比較 ssas &#40; &#41;的表格式和多維度方案](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)。  
   
 ## <a name="basic-architecture"></a>基本架構  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體可包含多個資料庫，而且資料庫可同時有 OLAP 物件和資料採礦物件。 應用程式會連接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體和指定的資料庫。 伺服器電腦可主控多個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 @No__t_0 的實例會命名為 "\<ServerName > \\ < InstanceName \>"。 下圖顯示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件之間所有提及的關聯性。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體可包含多個資料庫，而且資料庫可同時有 OLAP 物件和資料採礦物件。 應用程式會連接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體和指定的資料庫。 伺服器電腦可主控多個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的實例會命名為 "\<ServerName >\\< InstanceName\>"。 下圖顯示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件之間所有提及的關聯性。  
   
- ![AMO 執行物件關聯性](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 執行物件關聯性")  
+ ![AMO 執行物件關聯性](../../dev-guide/media/amo-runningobjects.gif "AMO 執行物件關聯性")  
   
  基本類別是建立 Cube 所需的最小一組物件。 此最小一組的物件是維度、量值群組和資料分割。 彙總是選擇性。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68889603"
 ## <a name="example"></a>範例  
  Imports Cube 包含 Packages 和 Last 兩個量值，以及 Route、Source 和 Time 三個相關維度。  
   
- ![Cube 範例1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Cube 範例1")  
+ ![Cube 範例1](../../dev-guide/media/cubeintro1.gif "Cube 範例1")  
   
  圍繞 Cube 的較小英數字值是該維度的成員。 範例成員為 ground (Route 維度的成員)、Africa (Source 維度的成員) 和 1st quarter (Time 維度的成員)。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889603"
 ### <a name="aggregates"></a>彙總  
  因為 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會視需要彙總較高層級的值，所以不論維度內的成員層級如何，Cube 的商務使用者都可決定每個維度之每個成員的任何量值。 例如，上圖中的量值可以根據標準行事曆階層來匯總，方法是使用時間維度中的行事歷時間階層，如下圖所示。  
   
- ![沿著時間維度組織量值的圖表](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "沿著時間維度組織量值的圖表")  
+ ![沿著時間維度組織量值的圖表](../../dev-guide/media/cubeintro2.gif "沿著時間維度組織量值的圖表")  
   
  除了使用單一維度來彙總量值之外，也可使用不同維度的成員組合來彙總量值。 這可讓商務使用者同時使用多個維度來評估量值。 例如，如果商務使用者想要分析每季從 Eastern Hemisphere 和 Western Hemisphere 的空運進口，則商務使用者可對 Cube 發出查詢，以擷取下列資料集。  
   

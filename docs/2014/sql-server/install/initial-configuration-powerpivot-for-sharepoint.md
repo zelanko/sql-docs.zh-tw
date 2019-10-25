@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0b7fee687c45dd0b96197e6c920971661c6b70dc
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: ba58e81cb802f3debe1c481443751de1947c595e
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952453"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798124"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初始組態 (PowerPivot for SharePoint)
   您可以使用本主題的步驟，設定 PowerPivot for SharePoint 的初始安裝。 設定初始安裝最簡單的方式為使用 PowerPivot 組態工具， 以自動化下列所述的各項組態步驟。  
@@ -24,7 +24,7 @@ ms.locfileid: "71952453"
   
  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  SharePoint 伺服器先使用 SharePoint 安裝程式中的伺服器陣列安裝選項加以安裝。 使用內建資料庫的獨立 SharePoint 伺服器不予支援。 如需詳細資訊，請參閱[在 SharePoint 2010 伺服器陣列中使用 SQL SERVER BI 功能的指導](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)方針。  
   
 > [!IMPORTANT]  
@@ -36,10 +36,10 @@ ms.locfileid: "71952453"
   
  您必須是伺服陣列管理員，才能將 PowerPivot for SharePoint 加入到伺服陣列中。 您必須知道複雜密碼，才可將伺服器及應用程式加入伺服器陣列。  
   
-##  <a name="deploywsp"></a> 步驟 1：部署 PowerPivot 方案  
+##  <a name="deploywsp"></a>步驟1：部署 PowerPivot 方案  
  您必須安裝及部署伺服器陣列方案及 Web 應用程式方案。  
   
- **安裝和部署伺服器陣列方案**  
+### <a name="install-and-deploy-the-farm-solution"></a>安裝和部署伺服器陣列方案
   
  在前一版中，SQL Server 安裝程式會安裝及部署伺服器陣列方案。 在本版中，您必須使用 PowerPivot 組態工具或 PowerShell 指令碼部署伺服器陣列方案。 您無法使用管理中心部署伺服器陣列方案。 這是 PowerPivot for SharePoint 組態步驟中，唯一無法在管理中心執行的步驟。 部署伺服器陣列方案之後，您即可使用管理中心及本主題的步驟設定 PowerPivot for SharePoint 安裝。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71952453"
   
 2.  執行第一個 Cmdlet：  
   
-    ```  
+    ```powershell
     Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
@@ -57,11 +57,11 @@ ms.locfileid: "71952453"
   
 3.  執行第二個 Cmdlet 部署方案：  
   
-    ```  
+    ```powershell
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
- **部署 web 應用程式方案**  
+### <a name="deploy-the-web-application-solution"></a>部署 web 應用程式方案
   
 1.  依序按一下 [開始] 按鈕、[**所有程式**]、[ **Microsoft SharePoint 產品 2010**]，然後選取 [ **SharePoint 2010 管理中心**]。  
   
@@ -75,12 +75,12 @@ ms.locfileid: "71952453"
   
 5.  在 [**部署至？** ] 中，選取您要加入 PowerPivot 功能支援的 SharePoint web 應用程式。  
   
-6.  按一下 [確定]。  
+6.  按一下 **[確定]** 。  
   
 7.  針對其他也支援 PowerPivot 資料存取的 SharePoint Web 應用程式重複以上步驟。  
   
-##  <a name="Geneva"></a> 步驟 2：啟動伺服器上的服務  
- PowerPivot for SharePoint 部署需要您的伺服器陣列包含下列服務：Excel Calculation Services、Secure Store Service 和對 Windows token 服務的宣告。  
+##  <a name="Geneva"></a>步驟2：啟動伺服器上的服務  
+ PowerPivot for SharePoint 部署會要求您的伺服陣列必須包含以下服務：Excel Calculation Services、Secure Store Service 及對 Windows Token Service 的宣告。  
   
  對於 Excel Services 和 PowerPivot for SharePoint，需要對 Windows Token Service 的宣告。 它會透過目前 SharePoint 使用者的 Windows 識別，用來建立外部資料來源的連線。 此服務必須在啟用 Excel Services 或 PowerPivot for SharePoint 的每部 SharePoint 伺服器上執行。 如果此服務尚未啟動，您必須立即將它啟動，以便讓 Excel Services 將經過驗證的要求轉送給 PowerPivot 系統服務。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "71952453"
   
 5.  確認 SQL Server Analysis Services 和 SQL Server PowerPivot 系統服務都已啟動。  
   
-##  <a name="createapp"></a> 步驟 3：建立 PowerPivot 服務應用程式  
+##  <a name="createapp"></a>步驟3：建立 PowerPivot 服務應用程式  
  下一步是建立 PowerPivot 服務應用程式。  
   
 1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
@@ -103,13 +103,13 @@ ms.locfileid: "71952453"
   
 3.  選取 [ **SQL Server PowerPivot 服務應用程式**]。 如果它沒有出現在清單中，表示未安裝 PowerPivot for SharePoint 或是未部署此方案。  
   
-4.  在 [**建立新的 PowerPivot 服務應用程式**] 頁面中，輸入應用程式的名稱。 預設值為 New-powerpivotserviceapplication @ no__t-0number >。 如果您要建立多個 PowerPivot 服務應用程式，描述性名稱將可協助其他系統管理員，了解如何使用應用程式。  
+4.  在 [**建立新的 PowerPivot 服務應用程式**] 頁面中，輸入應用程式的名稱。 預設值為 New-powerpivotserviceapplication\<number >。 如果您要建立多個 PowerPivot 服務應用程式，描述性名稱將可協助其他系統管理員，了解如何使用應用程式。  
   
 5.  在 [應用程式集區] 中，建立新的應用程式集區，並為它選取安全性帳戶。 需要網域使用者帳戶。  
   
 6.  在 [**資料庫伺服器**] 中，選擇要在其上建立服務應用程式資料庫的資料庫伺服器。 預設值是主控伺服陣列組態資料庫的 SQL Server Database Engine 執行個體。  
   
-7.  在 [**資料庫名稱**] 中，預設值為 PowerPivotServiceApplication1_ @ no__t-1guid >。 預設的資料庫名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。  
+7.  在 [**資料庫名稱**] 中，預設值為 PowerPivotServiceApplication1_\<guid >。 預設的資料庫名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。  
   
 8.  在 **[資料庫驗證]** 中，預設值是 Windows 驗證。 如果您選擇 **[SQL 驗證]** ，請參考 SharePoint 管理員指南，以了解有關如何在 SharePoint 部署中使用這個驗證類型的最佳作法。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "71952453"
   
 10. 按一下 **[確定].** 此服務將會與伺服器陣列服務應用程式清單中的其他受管理的服務一起顯示。  
   
-##  <a name="ExcelServ"></a> 步驟 4：啟用 Excel Services  
+##  <a name="ExcelServ"></a>步驟4：啟用 Excel Services  
  PowerPivot for SharePoint 會要求 Excel Services 支援伺服陣列中的 PowerPivot 資料存取。 您可以判斷是否已經啟用 Excel Services，其方式是確認 Excel Services 應用程式是否出現在管理中心的服務應用程式清單內。 如果未列出 Excel Services，請立即遵循以下步驟來將它啟用。  
   
 1.  在 [管理中心] 的 [應用程式管理] 中，按一下 **[管理服務應用程式]** 。  
@@ -136,11 +136,11 @@ ms.locfileid: "71952453"
   
 7.  保留預設核取方塊，將服務應用程式 Proxy 加入到預設的服務連接清單。  
   
-8.  按一下 [確定]。  
+8.  按一下 **[確定]** 。  
   
 9. 按一下您剛才建立的 Excel Services 應用程式。  
   
-10. 按一下 [信任的檔案**位置**]，然後在此頁面上選取您信任的位置。 （一般而言，這會在 [位址] 資料行中列為**HTTP://** ）。若要確保 Excel Services 和 PowerPivot 服務可存取活頁簿，您必須將 SharePoint 併入為 Excel Services 信任的位置。 PowerPivot 系統服務無法存取儲存在 SharePoint 伺服陣列外面的活頁簿。  
+10. 按一下 [信任的檔案**位置**]，然後在此頁面上選取您信任的位置。 （一般而言，這會在 [位址] 資料行中列為**HTTP://** ）。若要確保 Excel Services 和 PowerPivot 服務都能夠存取活頁簿，您必須將 SharePoint 納入為 Excel Services 信任的位置。 PowerPivot 系統服務無法存取儲存在 SharePoint 伺服陣列外面的活頁簿。  
   
 11. 在 [活頁簿屬性] 區域中，將 [**最大活頁簿大小**] 設定為50。  
   
@@ -148,13 +148,13 @@ ms.locfileid: "71952453"
   
 13. 清除 [**在資料重新整理時警告**] 核取方塊，以允許預覽 PowerPivot 圖庫中個別工作表的影像。 如果您選擇保留警告，而活頁簿設定指定在開啟時重新整理，您可能會得到警告的單一預覽影像，而不是活頁簿中的頁面。  
   
-14. 按一下 [確定]。  
+14. 按一下 **[確定]** 。  
   
-##  <a name="SSS"></a> 步驟 5：啟用 Secure Store Service 並設定資料重新整理  
+##  <a name="SSS"></a>步驟5：啟用 Secure Store Service 並設定資料重新整理  
  PowerPivot for SharePoint 需要 Secure Store Service 來儲存認證和無人看管的執行帳戶，以便重新整理資料。 您可以判斷是否已經啟用 Secure Store Service，其方式是確認它是否出現在服務應用程式清單內。  
   
 > [!IMPORTANT]  
->  如果已啟用 Secure Store Service，您仍然應該確認是否已經為它產生主要金鑰。 如需指示，請參閱第2部分：在下列程式中產生主要金鑰。  
+>  如果已啟用 Secure Store Service，您仍然應該確認是否已經為它產生主要金鑰。 如需相關指示，請參閱下列程序的＜第 2 部分：產生主要金鑰＞。  
   
  如果未列出 Secure Store Service，請立即遵循以下步驟來將它啟用。 啟用安全存放之後，當活頁簿作者和文件擁有者在排程其發行之活頁簿的資料重新整理時，就可以存取更大範圍的資料來源連接選項。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71952453"
   
 5.  在 [**資料庫**] 中，指定將裝載此服務應用程式之資料庫的 SQL Server 實例。 預設值是主控伺服陣列組態資料庫的 SQL Server Database Engine 執行個體。  
   
-6.  在 [**資料庫名稱**] 中，輸入服務應用程式資料庫的名稱。 預設值為 Secure_Store_Service_DB_ @ no__t-0guid >。 預設名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。  
+6.  在 [**資料庫名稱**] 中，輸入服務應用程式資料庫的名稱。 預設值為 Secure_Store_Service_DB_\<guid >。 預設名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。  
   
 7.  在 **[資料庫驗證]** 中，預設值是 Windows 驗證。 如果您選擇 [SQL 驗證]，請參考 SharePoint 管理員指南，以取得如何在伺服陣列中使用這個驗證類型的指引。  
   
@@ -188,27 +188,27 @@ ms.locfileid: "71952453"
   
 3.  在 [金鑰管理] 中，按一下 [**產生新金鑰**]。  
   
-4.  輸入複雜密碼，然後進行確認。 此複雜密碼將用於加入其他安全存放共用服務應用程式。  
+4.  輸入複雜密碼，然後進行確認。 此複雜密碼將用來加入其他安全存放共用服務應用程式。  
   
-5.  按一下 [確定]。  
+5.  按一下 **[確定]** 。  
   
-##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>第 3 部分：設定無人看管的 PowerPivot 資料重新整理帳戶  
+##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>第 3 部分：設定自動 PowerPivot 資料重新整理帳戶  
  在資料重新整理期間使用外部資料存取時，通常需要針對 PowerPivot 資料存取建立自動資料重新整理帳戶。 例如，如果未啟用 Kerberos，您必須建立一個自動帳戶，PowerPivot 服務可以使用此帳戶來連接外部資料來源。  
   
  如需有關如何建立自動 PowerPivot 資料重新整理帳戶或資料重新整理中所用其他預存認證的指示，請參閱[設定 PowerPivot 無人&#40;看管&#41;的資料重新整理帳戶 PowerPivot for SharePoint](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md)和[設定 PowerPivot 資料重新整理&#40;PowerPivot for SharePoint&#41;的預存認證](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
-##  <a name="Usage"></a> 步驟 6：啟用使用量資料收集  
+##  <a name="Usage"></a>步驟6：啟用使用量資料收集  
  PowerPivot for SharePoint 會使用 SharePoint 使用量資料收集基礎結構，以蒐集整個伺服陣列中有關 PowerPivot 使用量的資訊。 雖然使用量資料一定是 SharePoint 安裝的一部分，但是您可能必須先啟用這個功能才可以使用。 如需指示，請參閱[設定 PowerPivot for SharePoint 的&#40;使用量資料收集](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)。  
   
-##  <a name="Upload"></a>步驟7：增加 SharePoint Web 應用程式和 Excel Services 的上傳大小上限  
- 因為 PowerPivot 活頁簿可以很大，所以您可能會想要增加檔案大小上限。 有兩個要設定的檔案大小設定：Web 應用程式的最大上傳大小，以及 Excel Services 中的活頁簿大小上限。 檔案大小上限應該在兩個應用程式中設定為相同的值。 如需指示，請參閱[設定最大&#40;檔案&#41;上傳大小 PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)。  
+##  <a name="Upload"></a>步驟7：增加 SharePoint Web 應用程式和 Excel Services 的最大上傳大小  
+ 因為 PowerPivot 活頁簿可以很大，所以您可能會想要增加檔案大小上限。 要設定的檔案大小設定有兩個：Web 應用程式的 [最大上傳大小] 以及 Excel Services 中的 [最大活頁簿大小]。 檔案大小上限應該在兩個應用程式中設定為相同的值。 如需指示，請參閱[設定最大&#40;檔案&#41;上傳大小 PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)。  
   
 ##  <a name="activatePP"></a>步驟8：為網站集合啟用 PowerPivot 功能整合  
  網站集合層級的功能啟用可以將應用程式頁面和範本提供給網站使用，包括排程資料重新整理的組態頁面，以及 PowerPivot 圖庫和資料摘要文件庫的應用程式頁面。  
   
 1.  按一下 SharePoint 網站上的 [網站動作]。  
   
-     根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示您通常可以藉由輸入 HTTP://\<computer name > 來存取 SharePoint 網站，以開啟根網站集合。  
+     根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示您通常可以藉由輸入 HTTP://\<電腦名稱稱 > 來存取 SharePoint 網站，以開啟根網站集合。  
   
 2.  按一下 **[站台設定]** 。  
   
@@ -227,16 +227,16 @@ ms.locfileid: "71952453"
   
  安裝提供者可讓參考資料連接字串中 MSOLAP.4 的活頁簿在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 伺服器上正常運作。 安裝 SQL Server 2008 R2 OLE DB 提供者是升級舊版 PowerPivot for Excel 所建立之活頁簿的替代方式。  
   
- 您可以從[SQL Server 2008 R2 功能套件 頁面](https://go.microsoft.com/fwlink/?LinkId=159570)下載提供者。 尋找適用于**microsoft® SQL Server® 2008 R2 的 microsoft® Analysis Services OLE DB Provider**，然後下載 @no__t 1 安裝程式的 x64 封裝。  
+ 您可以從[SQL Server 2008 R2 功能套件 頁面](https://go.microsoft.com/fwlink/?LinkId=159570)下載提供者。 尋找適用于**microsoft® SQL Server® 2008 R2 的 microsoft® Analysis Services OLE DB Provider**，然後下載 `SQLServer2008_ASOLEDB10.msi` 安裝程式的 x64 封裝。  
   
  如需安裝提供者的詳細資訊，包括驗證步驟，請參閱[在 SharePoint 伺服器上安裝 Analysis Services OLE DB Provider](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
   
-##  <a name="verifyinstall"></a>步驟10：確認安裝  
+##  <a name="verifyinstall"></a>步驟10：驗證安裝  
  當使用者或應用程式開啟含有 PowerPivot 資料的 Excel 活頁簿時，就會在伺服陣列中進行 PowerPivot 查詢處理。 您至少可以檢查 SharePoint 網站上的頁面，以確認 PowerPivot 功能是可用的。 但是，為了完整確認安裝作業，您必須擁有可以發行到 SharePoint 並從文件庫存取的 PowerPivot 活頁簿。 為了測試用途，您可以發行已經包含 PowerPivot 資料的範例活頁簿，並用它來確認 SharePoint 整合已正確設定。  
   
  若要確認 PowerPivot 可與 SharePoint 網站整合，請執行下列動作：  
   
-1.  在瀏覽器中，開啟您建立的 Web 應用程式。 如果您使用預設值，您可以在 URL 位址中指定 HTTP://\<your 電腦名稱稱 >。  
+1.  在瀏覽器中，開啟您建立的 Web 應用程式。 如果您使用預設值，您可以在 URL 位址中指定 HTTP://\<您的電腦名稱稱 >。  
   
 2.  確認應用程式中可以使用 PowerPivot 資料存取和處理功能。 若要這樣做，您可以確認 PowerPivot 提供的文件庫範本是否存在：  
   
@@ -256,7 +256,7 @@ ms.locfileid: "71952453"
   
 5.  在 [伺服器類型] 中，選取 [Analysis Services]。  
   
-6.  在 [伺服器名稱] 中，輸入 **\<server-name > \powerpivot**，其中 **\<server-name >** 是具有 PowerPivot for SharePoint 安裝的電腦名稱稱。  
+6.  在 [伺服器名稱] 中，輸入 **\<的伺服器名稱 > \powerpivot**，其中 **\<伺服器名稱 >** 是具有 PowerPivot for SharePoint 安裝的電腦名稱稱。  
   
 7.  按一下 **[連接]** 。  
   
@@ -290,14 +290,12 @@ ms.locfileid: "71952453"
   
  根據您設定 PowerPivot 服務應用程式的方式而定，PowerPivot 系統服務將會加入到預設連接群組，將它提供給使用預設連接的所有 Web 應用程式使用。 但是，如果您已設定 Web 應用程式使用自訂服務應用程式連接清單，您需要將 PowerPivot 服務應用程式加入到您想要啟用 PowerPivot 資料處理的每一個 SharePoint Web 應用程式。 如需詳細資訊，請參閱[在管理中心將 PowerPivot 服務應用程式連接到 SharePoint Web 應用程式](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca)。  
   
- 一段時間之後，如果您判斷需要額外的資料儲存和處理功能，您可以將另一個 PowerPivot for SharePoint 伺服器執行個體加入到伺服器陣列中。 其安裝程序與您加入第一部伺服器的步驟相同，唯一例外的是您指定執行個體名稱和服務帳戶資訊的需求會不同。 如需指示，請參閱 @no__t 0Deployment 檢查清單：將 PowerPivot 服務器加入至 SharePoint 2010 伺服器陣列 @ no__t-0 以向外延展。  
+ 一段時間之後，如果您判斷需要額外的資料儲存和處理功能，您可以將另一個 PowerPivot for SharePoint 伺服器執行個體加入到伺服器陣列中。 其安裝程序與您加入第一部伺服器的步驟相同，唯一例外的是您指定執行個體名稱和服務帳戶資訊的需求會不同。 如需指示，請參閱[部署檢查清單：將 PowerPivot 服務器加入至 SharePoint 2010 伺服器陣列以向外](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)延展。  
   
-## <a name="see-also"></a>另請參閱  
- [SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  版本支援的功能  
+## <a name="see-also"></a>請參閱  
+ [SQL Server 2014 版本所支援的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [設定 PowerPivot 服務帳戶](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [在管理中心建立和設定 PowerPivot 服務應用程式](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
  [將 PowerPivot 方案部署到 SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)   
- [為在 [管理中心] 的 網站集合啟用 PowerPivot 功能整合](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)   
+ [在 [管理中心] 中啟用網站集合的 PowerPivot 功能整合](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)   
  [PowerPivot for SharePoint 2010 安裝](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
-  
-  

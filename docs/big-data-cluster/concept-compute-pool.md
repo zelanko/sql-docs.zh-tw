@@ -1,7 +1,7 @@
 ---
 title: 什麼是計算集區？
 titleSuffix: SQL Server big data clusters
-description: 本文說明中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的計算集區。
+description: 本文說明 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]中的計算集區。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6156d23fa55690224cd6df82e5f4bafe10e4d1ab
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 420c4705d86eb55b6b99a6cf432cb95f3b9a6694
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653088"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798242"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 巨量資料叢集中的計算集區？
 
@@ -28,11 +28,11 @@ ms.locfileid: "69653088"
 
 ## <a name="scale-out-groups"></a>向外延展群組
 
-計算集區可作為 PolyBase 向外延展群組，以便在不同的資料來源 (例如 HDFS、Oracle、MongoDB 或 Terradata) 上進行分散式查詢。 藉由使用 Kubernetes 中的計算 Pod，巨量資料叢集即可自動為 PolyBase 向外延展群組建立和設定計算 Pod。
+計算集區可以做為 PolyBase 向外延展群組，以便在不同的資料來源（例如 HDFS、Oracle、MongoDB 或 Teradata）上進行分散式查詢。 藉由使用 Kubernetes 中的計算 Pod，巨量資料叢集即可自動為 PolyBase 向外延展群組建立和設定計算 Pod。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
-若要深入瞭解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], 請參閱下列資源:
+若要深入瞭解 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，請參閱下列資源：
 
-- [什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
-- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [研討會： Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -13,14 +13,14 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7126b01fcaee1a0ab3f7776cc54e6eb0dbe2774d
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63131533"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798313"
 ---
-# <a name="create-a-job"></a>建立作業
+# <a name="create-a-job"></a>Create a Job
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件 (SMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立 SQL Server Agent 作業。  
   
  若要加入作業步驟、排程、警示以及可傳送給操作員的通知，請參閱＜請參閱＞一節中的主題連結。  
@@ -49,7 +49,7 @@ ms.locfileid: "63131533"
   
 -   本機作業會由本機的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 快取。 因此，任何修改會隱含地強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 重新快取作業。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會等到呼叫 **sp_add_jobserver** 時才快取作業，所以最後再呼叫 **sp_add_jobserver** 會更有效率。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
 -   您必須是系統管理員，才能夠變更作業的擁有者。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63131533"
     > [!NOTE]  
     >  如果將作業擁有權變更給非 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，而且作業正在執行要求 Proxy 帳戶的作業步驟 (例如， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件執行)，請確定使用者擁有該 Proxy 帳戶的存取權，否則作業將會失敗。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,19 +69,19 @@ ms.locfileid: "63131533"
   
 2.  按一下加號展開 **[SQL Server Agent]** 。  
   
-3.  以滑鼠右鍵按一下 [作業]  資料夾，然後選取 [新增作業...]  。  
+3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [新增作業...]。  
   
-4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業的屬性和新的工作&#40;[一般] 頁&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需此頁面上可用選項的詳細資訊，請參閱[作業屬性和新增&#40;作業一般&#41;頁面](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  在 **[步驟]** 頁面上，組織作業步驟。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;步驟 頁面&#41;](job-properties-new-job-steps-page.md)  
+5.  在 **[步驟]** 頁面上，組織作業步驟。 如需此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增&#40;作業步驟&#41;頁面](job-properties-new-job-steps-page.md)  
   
-6.  在 **[排程]** 頁面上，組織作業的排程。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;排程頁面&#41;](job-properties-new-job-schedules-page.md)  
+6.  在 **[排程]** 頁面上，組織作業的排程。 如需此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增&#40;作業排程&#41;頁面](job-properties-new-job-schedules-page.md)  
   
-7.  在 **[警示]** 頁面上，組織作業的警示。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;警示頁面&#41;](job-properties-new-job-alerts-page.md)  
+7.  在 **[警示]** 頁面上，組織作業的警示。 如需此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增&#40;作業警示&#41;頁面](job-properties-new-job-alerts-page.md)  
   
-8.  在 **[通知]** 頁面上，設定當作業完成時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;通知頁面&#41;](job-properties-new-job-notifications-page.md)。  
+8.  在 **[通知]** 頁面上，設定當作業完成時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增&#40;作業通知&#41;頁面](job-properties-new-job-notifications-page.md)。  
   
-9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;為目標頁面&#41;](job-properties-new-job-targets-page.md)。  
+9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需此頁面上可用選項的詳細資訊，請參閱[作業屬性：新增&#40;作業目標&#41;頁面](job-properties-new-job-targets-page.md)。  
   
 10. 完成後，請按一下 **[確定]** 。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "63131533"
   
 2.  在標準列上，按一下 **[新增查詢]** 。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
     EXEC dbo.sp_add_job  
@@ -134,9 +134,9 @@ ms.locfileid: "63131533"
   
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
-##  <a name="SMOProcedure"></a> 使用 SQL Server 管理物件  
+##  <a name="SMOProcedure"></a>使用 SQL Server 管理物件  
  **若要建立 SQL Server Agent 作業**  
   
  使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，呼叫 `Create` 類別的 `Job` 方法。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
