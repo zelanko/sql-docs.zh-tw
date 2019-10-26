@@ -1,5 +1,5 @@
 ---
-title: 大量複製 SELECT 結果集 (ODBC) |Microsoft Docs
+title: 大量複製 SELECT 結果集（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ca6bd8711bf0c3fb292f795141e9da981a5dcde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c73b98d623490d9885188a5d71fd5caac02e4c4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099408"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908102"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>大量複製 SELECT 結果集 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "68099408"
   
 3.  連接到 SQL Server。  
   
-4.  呼叫[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)設定下列資訊：  
+4.  呼叫[bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)以設定下列資訊：  
   
-    -   指定 NULL *szTable*參數。  
+    -   為*szTable*參數指定 Null。  
   
     -   接收結果集資料的資料檔案名稱。  
   
@@ -49,16 +49,14 @@ ms.locfileid: "68099408"
   
     -   複製的方向：DB_OUT。  
   
-5.  呼叫[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)、 將 eOption 設定為 BCPHINTS，並置於 iValue 包含 SELECT 陳述式之 SQLTCHAR 陣列的指標。  
+5.  呼叫[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)，將 eOption 設定為 BCPHINTS，並在 IVALUE 包含 SELECT 語句之 SQLTCHAR 陣列的指標位置。  
   
-6.  呼叫[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以便執行大量複製作業。  
+6.  呼叫[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)來執行大量複製作業。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- 使用這些步驟時，檔案會以原生格式建立。 您也可以使用其他資料型別轉換的資料值[bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 如需詳細資訊，請參閱 <<c0> [ 建立大量複製格式檔案&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)。</c0>  
+ 使用這些步驟時，檔案會以原生格式建立。 您可以使用[bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)，將資料值轉換成其他資料類型。 如需詳細資訊，請參閱[建立大量複製格式&#40;檔案&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)。  
   
 ## <a name="example"></a>範例  
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫 (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫 （您可以從[Microsoft SQL Server 範例和 [社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)] 首頁下載 AdventureWorks 範例資料庫）。此資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎（驅動程式名稱為 "SQL Server"）。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
@@ -168,7 +166,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [利用 SQL Server ODBC 驅動程式如何主題大量複製的&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+## <a name="see-also"></a>請參閱  
+ [使用 SQL Server ODBC 驅動程式的大量複製 how to 主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

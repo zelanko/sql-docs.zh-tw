@@ -18,12 +18,12 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5110057262eb09acc40f3c546184f7ee75b784a8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 6ddd9e8d0fb8b5c22dc73d0a11b6257583be07a8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707796"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907514"
 ---
 # <a name="using-data-files-and-format-files"></a>使用資料檔案與格式檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,8 +45,6 @@ ms.locfileid: "71707796"
   
 3.  呼叫**bcp_exec**來執行大量複製作業。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可能是會產生結果集的任何陳述式。 系統會建立包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式第一個結果集的資料檔案。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式產生多個結果集，則大量複製會忽略第一個結果集後的任何結果集。  
   
  若要建立資料檔，其中資料行資料的儲存方式與資料表中的格式不同，請呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)來指定要變更的資料行數目，然後針對您要變更其格式的每個資料行呼叫[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 。 這會在呼叫**bcp_init**之後，但在呼叫**bcp_exec**之前完成。 **bcp_colfmt**指定資料行的資料儲存在資料檔案中的格式。 在大量複製或輸出時，可以使用它。您也可以使用**bcp_colfmt**來設定資料列和資料行結束字元。 例如，如果您的資料未包含定位字元，您可以使用**bcp_colfmt**來建立 tab 鍵分隔的檔案，將定位字元設定為每個資料行的結束字元。  
@@ -57,7 +55,7 @@ ms.locfileid: "71707796"
   
  當大量複製到資料檔中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時， **bcp_control**函數會控制數個選項。 **bcp_control**會設定選項，例如終止前的錯誤最大數目、開始大量複製之檔案中的資料列、停止的資料列，以及批次大小。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

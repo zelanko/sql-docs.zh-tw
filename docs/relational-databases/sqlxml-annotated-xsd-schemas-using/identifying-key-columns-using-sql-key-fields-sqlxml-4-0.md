@@ -1,5 +1,5 @@
 ---
-title: '識別索引鍵資料行使用 sql: key-fields 來-欄位 (SQLXML 4.0) |Microsoft Docs'
+title: 使用 sql：索引鍵-欄位識別索引鍵資料行（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,35 +22,35 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c88c55a6a846a0907664730b3c185707a30c2600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d17e47f86060871ea7dd3f2b0b1e9ed2e06c241
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067063"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905902"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  針對 XSD 結構描述指定 XPath 查詢時，在大部分情況下都需要索引鍵資訊，才能在結果中取得正確的巢狀結構。 指定**sql: key-fields 來-欄位**註解是一種確保會產生適當階層。  
+  針對 XSD 結構描述指定 XPath 查詢時，在大部分情況下都需要索引鍵資訊，才能在結果中取得正確的巢狀結構。 指定 [ **sql：索引鍵-欄位**] 注釋是確保產生適當階層的方式。  
   
 > [!NOTE]  
->  若要確保適當的巢狀結構，建議您指定**sql: key-fields 來-欄位**對應至資料表的項目。 產生的 XML 會區分基礎結果集的排序。 如果**sql: key-fields 來-欄位**未指定，則產生的 XML 可能格式不正確。  
+>  若要確保適當的嵌套，建議您針對對應至資料表的專案指定**sql：索引鍵欄位**。 產生的 XML 會區分基礎結果集的排序。 如果未指定**sql：索引鍵-欄位**，則產生的 XML 格式可能不正確。  
   
- 值**sql: key-fields 來-欄位**識別可唯一識別關聯性中的資料列的資料行。 如果需要多個資料行才能唯一識別某個資料列，這些資料行值就會以空格隔開。  
+ **Sql：索引鍵-欄位**的值會識別可唯一識別關聯中資料列的資料行。 如果需要多個資料行才能唯一識別某個資料列，這些資料行值就會以空格隔開。  
   
- 您必須使用**sql: key-fields 來-欄位**註解時項目中含有 **\<sql: relationship >** 的項目和子元素之間定義，但並不提供的主索引鍵父元素中指定的資料表。  
+ 當元素包含在元素和子專案之間定義的 **\<sql： relationship >** ，但未提供在父元素中指定之資料表的主鍵時，您必須使用**sql： key-fields**注釋.  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 產生適當巢狀結構時\<sql: relationship > 不會提供足夠的資訊  
- 此範例會示範何處**sql: key-fields 來-欄位**必須指定。  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 當 \<sql： relationship > 未提供足夠的資訊時，產生適當的嵌套  
+ 這個範例會顯示必須指定**sql：索引鍵-欄位**的位置。  
   
- 請考慮下列結構描述。 結構描述指定的階層之間 **\<順序 >** 並 **\<客戶 >** 中的項目 **\<順序 >** 元素是父系和 **\<客戶 >** 項目是子系。  
+ 請考慮下列結構描述。 架構會指定 **\<順序 >** 和 **\<客戶 >** 專案之間的階層，其中 **\<Order >** 元素是父系，而 **\<customer >** 元素是子系。  
   
- **\<Sql: relationship >** 標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >** 不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有**sql: key-fields 來-欄位**註解，產生的階層是不正確。  
+ **\<sql： relationship >** 標記是用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 **\<sql： relationship >** 中提供的資訊，並不足以唯一識別父資料表（SalesOrderHeader）中的資料列。 因此，如果沒有**sql：索引鍵-欄位**注釋，所產生的階層就不會正確。  
   
- 具有 **sql: key-fields 來-欄位** 上指定 **\<順序 >** 、 註解可唯一識別父系 （Sales.SalesOrderHeader 資料表） 中的資料列，而且其子項目會顯示其父代。  
+ 在 **\<Order >** 上指定的**sql：索引鍵-欄位**，批註會唯一識別父系（SalesOrderHeader 資料表）中的資料列，而且其子項目會顯示在其父系之下。  
   
  這是結構描述：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68067063"
   
 1.  複製上述的結構描述程式碼，並將其貼到文字檔中。 將檔案儲存為 KeyFields1.xml。  
   
-2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields1T.xml，並放在儲存 KeyFields1.xml 的相同目錄中。 在範本中的 XPath 查詢會傳回所有 **\<順序 >** customerid 小於 3 的項目。  
+2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields1T.xml，並放在儲存 KeyFields1.xml 的相同目錄中。 範本中的 XPath 查詢會傳回 CustomerID 小於3的所有 **\<順序 >** 元素。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -107,9 +107,7 @@ ms.locfileid: "68067063"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  這是部分結果集：  
   
@@ -128,8 +126,8 @@ ms.locfileid: "68067063"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. 指定 sql:key-fields 在結果中產生適當的巢狀結構  
- 在下列結構描述中，沒有使用指定的階層 **\<sql: relationship >** 。 此結構描述仍然需要指定**sql: key-fields 來-欄位**註釋來唯一識別 HumanResources.Employee 資料表中的員工。  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>b. 指定 sql:key-fields 在結果中產生適當的巢狀結構  
+ 在下列架構中，沒有使用 **\<sql： relationship >** 指定的階層。 架構仍然需要指定**sql： key-fields**注釋，以唯一識別 HumanResources Employee 資料表中的員工。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -156,7 +154,7 @@ ms.locfileid: "68067063"
   
 1.  複製上述的結構描述程式碼，並將其貼到文字檔中。 將檔案儲存為 KeyFields2.xml。  
   
-2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields2T.xml，並放在儲存 KeyFields2.xml 的相同目錄中。 在範本中的 XPath 查詢會傳回所有 **\<HumanResources.Employee >** 項目：  
+2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields2T.xml，並放在儲存 KeyFields2.xml 的相同目錄中。 範本中的 XPath 查詢會傳回所有 **\<HumanResources 的 >** 元素：  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -174,7 +172,7 @@ ms.locfileid: "68067063"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下是結果：  
   

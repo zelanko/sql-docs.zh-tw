@@ -1,5 +1,5 @@
 ---
-title: '建立常數項目使用 sql: is-constant&lt (SQLXML 4.0) |Microsoft Docs'
+title: 使用 sql： is-常數建立常數元素（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -19,33 +19,33 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2155087406860a70c70d8a2be6a8ed64425adb57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1cb1223c7c72aa091a3dd15da3beacaf65c4b21b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126497"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906049"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  若要指定常數元素-也就是 XSD 結構描述沒有對應到任何資料庫資料表或資料行中的項目-您可以使用**sql: is-constant&lt**註釋。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 **Sql: is-constant&lt**註解，請指定沒有任何屬性的項目上。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  
+  若要指定常數元素（也就是 XSD 架構中未對應到任何資料庫資料表或資料行的元素），您可以使用**sql： is-常數**注釋。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 您可以在沒有任何屬性的元素上指定**sql： is-常數**注釋。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  
   
- **Sql: is-constant&lt**註解可用於：  
+ **Sql： is-常數**注釋可用於：  
   
 -   將最上層元素加入到 XML 文件中。 XML 需要單一的最上層元素 (根元素) 供文件使用。  
   
--   建立容器元素，例如 **\<訂單 >** 包裝所有訂單的項目。  
+-   建立容器元素，例如包裝所有訂單的 **\<訂單 >** 元素。  
   
- **Sql: is-constant&lt**註解可以加入至 **\<complexType >** 項目。  
+ **Sql： is-常數**注釋可以加入 **\<complexType >** 元素中。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 來加入容器元素  
- 在此註解式 XSD 結構描述，  **\<CustomerOrders >** 藉由指定定義為常數元素**sql: is-constant&lt**屬性的值為 1。 因此，  **\<CustomerOrders >** 未對應到任何資料庫資料表或資料行。 此常數元素組成 **\<順序 >** 子項目。  
+ 在這個批註式 XSD 架構中， **\<CustomerOrders >** 會藉由指定**sql： is-常數**屬性（其值為1）定義為常數元素。 因此， **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行。 這個常數元素是由 > 子項目的 **\<順序**所組成。  
   
- 雖然 **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行，它仍然會出現在產生的 XML，做為容器項目包含 **\<順序 >** 子項目。  
+ 雖然 **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行，但它仍會顯示在產生的 XML 中，做為包含 **\<順序 >** 子項目的容器元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -107,9 +107,7 @@ ms.locfileid: "68126497"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  這是部分結果集：  
   

@@ -1,5 +1,5 @@
 ---
-title: 排除結構描述元素，從 XML 文件使用 sql： 對應 |Microsoft Docs
+title: 使用 sql：對應從 XML 檔排除架構元素 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,30 +23,30 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e92b8b90793a82df9c38b819630070373e6e8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d466ad57d7644f73d7fdd44df62aac6a0c2a1b0b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067130"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905954"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>使用 sql:mapped 從 XML 文件排除結構描述項目
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您想要在 XSD 結構描述中，未對應到任何資料庫資料表 （檢視） 或資料行，並沒有出現在 XML 中建立項目，您可以指定**sql： 對應**註釋。  
+  XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您想要在 XSD 架構中建立未對應至任何資料庫資料表（view）或資料行的專案，而且沒有出現在 XML 中，您可以指定**sql：對應**的注釋。  
   
- **Sql： 對應**註釋是特別有用，如果無法修改結構描述，或者如果結構描述來驗證 XML，從其他來源，而且不包含不會儲存在資料庫中的資料。 **Sql： 對應**註解與不同**sql: is-constant&lt**在於未對應的元素和屬性不會出現在 XML 文件。  
+ 如果無法修改架構，或者架構是用來驗證來自其他來源的 XML，而且還包含未儲存在資料庫中的資料，則**sql：對應**的注釋特別有用。 **Sql：對應**的注釋與**sql： is-常數**不同之處在于，未對應的元素和屬性不會出現在 XML 檔中。  
   
- **Sql： 對應**註解接受布林值 (0 = false,1 = true)。 可接受的值為 0、1、true 和 false。  
+ **Sql：對應**的注釋會接受布林值（0 = false，1 = true）。 可接受的值為 0、1、true 和 false。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 註解  
- 假設您有來自其他來源的 XSD 結構描述。 此 XSD 結構描述組成 **\<Person.Contact >** 項目**ContactID**， **FirstName**， **LastName**，和**HomeAddress**屬性。  
+ 假設您有來自其他來源的 XSD 結構描述。 這個 XSD 架構是由 **\<Person 所組成。請聯絡**具有**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**屬性的 > 元素。  
   
- 此 XSD 結構描述對應至 AdventureWorks 資料庫中的 Person.Contact 資料表中**sql： 對應**上指定**HomeAddress**屬性，因為 Employees 資料表不會儲存首頁員工地址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
+ 在將這個 XSD 架構對應到 AdventureWorks 資料庫中的 Contact 資料表時，會在**HomeAddress**屬性上指定**sql：** mapping，因為 employees 資料表不會儲存員工的主位址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
   
- 預設的對應發生於其餘的結構描述。 **\<Person.Contact >** 元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中的相同名稱的資料行。  
+ 預設的對應發生於其餘的結構描述。 **\<Person. contact >** 元素會對應到 Person. contact 資料表，而所有屬性都會對應到 Person. contact 資料表中具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -85,9 +85,7 @@ ms.locfileid: "68067130"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  結果集如下：  
   
@@ -105,9 +103,9 @@ ms.locfileid: "68067130"
 </ROOT>  
 ```  
   
- 請注意，ContactID、 FirstName 和 LastName 存在，但是 HomeAddress 不因為對應結構描述指定為 0 時，才**sql： 對應**屬性。  
+ 請注意，ContactID、FirstName 和 LastName 都存在，但 HomeAddress 不是，因為對應架構為**sql：對應**的屬性指定0。  
   
-## <a name="see-also"></a>另請參閱  
- [XSD 元素和屬性對資料表和資料行的預設對應&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>請參閱  
+ [XSD 元素和屬性對資料表和資料行&#40;的預設對應 SQLXML 4。0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e94662043d3801cc7088533d7f0fbadd638bec5b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 9a26fb1282eb9181af9b1b04f40fd7f7c45c688a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874809"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907471"
 ---
 # <a name="creating-user-defined-types---coding"></a>建立使用者定義型別 - 編碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- SqlTypes**命名空間包含**UDT 的各種屬性所需的物件，而**system.object**則包含代表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可供使用之原生資料類型的類別。assembly. 若要能夠正確運作，您的組件還需要其他的命名空間。 **Point** UDT 也會使用**system.web**命名空間來處理字串。  
+ SqlTypes**命名空間包含**UDT 的各種屬性所需的物件，而 system.string 命名空間包含的類別代表元件可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料類型。 若要能夠正確運作，您的組件還需要其他的命名空間。 **Point** UDT 也會使用**system.web**命名空間來處理字串。  
   
 > [!NOTE]  
 >  不C++支援執行以 **/clr： pure**編譯的 Visual 資料庫物件（例如 udt）。  
@@ -88,11 +88,11 @@ public struct Point : INullable
 ```  
   
 ## <a name="implementing-nullability"></a>實作 Null 屬性  
- 除了正確指定組件的屬性以外，UDT 還必須支援 Null 屬性。 載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 udt 可感知 null，但為了讓 udt 能夠辨識 null 值，udt 必須執行**SqlTypes. INullable**介面。  
+ 除了正確指定組件的屬性以外，UDT 還必須支援 Null 屬性。 載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 Udt 可感知 null，但為了讓 UDT 能夠辨識 null 值，UDT 必須實**SqlTypes INullable**介面。  
   
  您必須建立名為**IsNull**的屬性，這是用來判斷 CLR 程式碼中的值是否為 null 的必要內容。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找到 UDT 的 Null 執行個體時，便會使用正常的 Null 處理方法來保存 UDT。 除非必要，否則伺服器不會浪費時間來序列化或還原序列化 UDT，而且它也不會浪費空間來儲存 Null UDT。 每次從 CLR 引入 UDT 時都會執行 Null 檢查，這表示使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 建構來檢查 Null UDT 的作業一定都可運作。 伺服器也會使用**IsNull**屬性來測試實例是否為 null。 伺服器一旦判定 UDT 為 Null，就可以使用其原生的 Null 處理。  
   
- **IsNull**的**get （）** 方法不是以任何方式進行特殊大小寫。 如果**Point**變數 **\@p**是**Null**，則 **\@p. IsNull**預設會評估為 "Null"，而不是 "1"。 這是因為**IsNull get （）** 方法的**SqlMethod （OnNullCall）** 屬性預設為 false。 因為物件是**Null**，所以當要求屬性時，物件不會還原序列化，也不會呼叫方法，而且會傳回預設值 "Null"。  
+ **IsNull**的**get （）** 方法不是以任何方式進行特殊大小寫。 如果 **\@p**的**Point**變數是**Null**，則 **\@p。 IsNull**預設會評估為 "Null"，而不是 "1"。 這是因為**IsNull get （）** 方法的**SqlMethod （OnNullCall）** 屬性預設為 false。 因為物件是**Null**，所以當要求屬性時，物件不會還原序列化，也不會呼叫方法，而且會傳回預設值 "Null"。  
   
 ### <a name="example"></a>範例  
  在下列範例中，`is_Null` 變數為私用，而且會針對 UDT 執行個體保留 Null 狀態。 您的程式碼必須維護對 `is_Null` 適當的值。 UDT 也必須有一個名為**Null**的靜態屬性，它會傳回 UDT 的 Null 值實例。 如果執行個體在資料庫中實際上為 Null，這可讓 UDT 傳回 Null 值。  
@@ -138,7 +138,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>為 Null 與IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL vs. IsNull  
  假設有一個包含架構點（識別碼 int，location Point）的資料表，其中**Point**是 CLR UDT，而下列查詢：  
   
 ```  
@@ -155,7 +155,7 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- 這兩個查詢都會傳回具有非**Null**位置之點的識別碼。 查詢 1 會使用正常 null 處理，而且不需要還原序列化 UDT。 另一方面，查詢2必須將每個非**Null**物件還原序列化，並呼叫 CLR 以取得**IsNull**屬性的值。 很明顯地，使用**IS Null**會展現更好的效能，而且永遠不會有理由從[!INCLUDE[tsql](../../includes/tsql-md.md)]程式碼讀取 UDT 的 IsNull 屬性。  
+ 這兩個查詢都會傳回具有非**Null**位置之點的識別碼。 查詢 1 會使用正常 null 處理，而且不需要還原序列化 UDT。 另一方面，查詢2必須將每個非**Null**物件還原序列化，並呼叫 CLR 以取得**IsNull**屬性的值。 很明顯地，使用**IS Null**會展現更好的效能，而且永遠不會有理由從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼讀取 UDT 的**IsNull**屬性。  
   
  那麼， **IsNull**屬性的用途為何？ 首先，需要從 CLR 程式碼中判斷值是否為**Null** 。 第二，伺服器需要一個方法來測試實例是否為**Null**，因此伺服器會使用這個屬性。 在判斷它是**Null**之後，它可以使用其原生的 Null 處理來處理它。  
   
@@ -493,7 +493,7 @@ public Int32 Y
  當編碼 UDT 方法時，請考慮使用的演算法是否可能隨著時間而改變。 如果會的話，您可能會想要考慮針對 UDT 使用的方法建立個別類別。 如果演算法變更，您可在不影響 UDT 的情況下，以新的程式碼重新編譯該類別，並將組件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在許多情況下，您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 陳述式重新載入 UDT，但是這樣做可能會導致現有資料發生問題。 例如，包含在**AdventureWorks**範例資料庫中的**currency** UDT 會使用**ConvertCurrency**函數來轉換貨幣值，這會在不同的類別中執行。 轉換演算法在未來有可能以非預期的方式變更，或者可能需要新的功能。 在規劃未來的變更時，將**ConvertCurrency**函數與**Currency** UDT 的實作為分隔，可提供更大的彈性。  
   
 ### <a name="example"></a>範例  
- **Point**類別包含三種計算距離的簡單方法：**距離**、 **DistanceFrom**和**DistanceFromXY**。 每個都會傳回**double** ，計算從**點**到零的距離、從指定點到**點**的距離，以及從指定的 X 和 Y 座標到**點**的距離。 **距離**和**DistanceFrom**每個呼叫**DistanceFromXY**，並示範如何針對每個方法使用不同的引數。  
+ **Point**類別包含三個簡單的方法來計算距離：**距離**、 **DistanceFrom**和**DistanceFromXY**。 每個都會傳回**double** ，計算從**點**到零的距離、從指定點到**點**的距離，以及從指定的 X 和 Y 座標到**點**的距離。 **距離**和**DistanceFrom**每個呼叫**DistanceFromXY**，並示範如何針對每個方法使用不同的引數。  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  **SqlMethodAttribute**類別所提供的自訂屬性可用來標示方法定義，以指定決定性、null 呼叫行為，以及指定方法是否為轉變子。 已假設這些屬性 (Property) 的預設值，而且只有在需要非預設值時才會使用自訂屬性 (Attribute)。  
   
 > [!NOTE]  
->  **SqlMethodAttribute**類別繼承自**SqlFunctionAttribute**類別，因此**SqlMethodAttribute**會從**TableDefinition**繼承**FillRowMethodName**和**SqlFunctionAttribute**欄位。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會編譯和元件部署，但在執行時間會引發有關**IEnumerable**傳回型別的錯誤，並顯示下列訊息：元件 '\< \< assembly>'中類別'class>'的「方法、屬性或欄位'name>'有不正確傳回\<型別。」  
+>  **SqlMethodAttribute**類別繼承自**SqlFunctionAttribute**類別，因此**SqlMethodAttribute**會從**TableDefinition**繼承**FillRowMethodName**和**SqlFunctionAttribute**欄位。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會編譯和元件部署，但在執行時間會引發有關**IEnumerable**傳回型別的錯誤，並出現下列訊息：「方法、屬性或 '\<名稱 > ' （在元件 ' 的類別 '\<類別 > ' 中）\<元件 > ' 有不正確傳回型別。」  
   
  下表描述一些可在 UDT 方法中使用的相關**SqlMethodAttribute**屬性，並列出其預設值。  
   
@@ -568,13 +568,13 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 > [!NOTE]  
 >  查詢中不允許使用 Mutator 方法。 它們只能在指派陳述式或資料修改陳述式中呼叫。 如果標記為轉變子的方法未傳回**void** （或不是 Visual Basic 中的**SUB** ），CREATE 類型會失敗並出現錯誤。  
   
- 下列語句假設有一個具有**旋轉**方法的**三角形**UDT 存在。 下列[!INCLUDE[tsql](../../includes/tsql-md.md)] update 語句會叫用**輪替**方法：  
+ 下列語句假設有一個具有**旋轉**方法的**三角形**UDT 存在。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] update 語句會叫用**輪替**方法：  
   
 ```  
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- **旋轉**方法會使用**SqlMethod**屬性設定**會**為**true**來裝飾，因此[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可將方法標示為轉變子方法。 此程式碼也會將**OnNullCall**設定為**false**，這會向伺服器表示如果任何輸入參數為 null 參考，則方法會傳回 null 參考（在 Visual Basic 中為**任何內容**）。  
+ **旋轉**方法會使用**SqlMethod**屬性設定**會**為**true**來裝飾，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以將方法標記為轉變子方法。 此程式碼也會將**OnNullCall**設定為**false**，這會向伺服器表示如果任何輸入參數為 null 參考，則方法會傳回 null 參考（在 Visual Basic 中為**任何內容**）。  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -600,7 +600,7 @@ public void Rotate(double anglex, double angley, double anglez)
  使用使用者定義格式來執行 UDT 時，您必須執行 IBinarySerialize 介面的**讀取**和**寫入**方法，以處理 UDT 資料的序列化和還原序列化。 您也必須指定**SqlUserDefinedTypeAttribute**的**MaxByteSize**屬性。  
   
 ### <a name="the-currency-udt"></a>Currency UDT  
- **Currency** UDT 包含在可以與一起[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝的 CLR 範例中，從開始。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+ **Currency** UDT 包含在 CLR 範例中，可以與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起安裝，從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始。  
   
  **Currency** UDT 支援在特定文化特性的貨幣系統中處理 money 金額。 您必須定義兩個欄位： **CultureInfo**的**字串**，它會指定發行貨幣的物件（例如 En-us），以及**CurrencyValue**的**十進位**數（以 money 為單位）。  
   
@@ -608,13 +608,11 @@ public void Rotate(double anglex, double angley, double anglez)
   
  在 CLR 上執行的程式碼會對貨幣值與文化特性分別進行比較。 如果是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，下列動作會決定比較：  
   
-1.  將**IsByteOrdered**屬性設定為 true，這會[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指示在磁片上使用保存的二進位表示來進行比較。  
+1.  將**IsByteOrdered**屬性設定為 true，以指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在磁片上使用保存的二進位表示來進行比較。  
   
-2.  使用**Currency** udt 的[!INCLUDE[tsql](../../includes/tsql-md.md)] **Write**方法來判斷 udt 如何保存在磁片上，因此 udt 值的比較和排序方式以進行作業。  
+2.  使用**Currency** Udt 的**Write**方法來判斷 udt 如何保存在磁片上，因此 udt 值的比較和排序方式，以進行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業。  
   
 3.  使用下列二進位格式來儲存**貨幣**UDT：  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  針對位元組 0-19 將文化特性儲存為 UTF-16 編碼的字串，並使用 null 字元填補到右邊。  
   
@@ -748,7 +746,7 @@ public void Read(System.IO.BinaryReader r)
   
  如需**貨幣**UDT 的完整程式代碼清單，請參閱[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

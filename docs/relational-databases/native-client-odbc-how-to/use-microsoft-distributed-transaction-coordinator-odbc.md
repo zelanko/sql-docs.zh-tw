@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft 分散式交易協調器 (ODBC) |Microsoft Docs
+title: 使用 Microsoft 分散式交易協調器（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b62fbf4a7f687b4aa65472556a4999d0323f9b0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec4623e2047819bd5b080a06516d2a0b9b4ea71c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937386"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908144"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>使用 Microsoft 分散式交易協調器 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67937386"
   
 1.  使用 MS DTC OLE DtcGetTransactionManager 函數來連接至 MS DTC。 如需有關 MS DTC 的詳細資訊，請參閱 Microsoft 分散式交易協調器。  
   
-2.  一旦您要建立的每個 SQL Server 連線，請呼叫 SQL DriverConnect。  
+2.  針對您想要建立的每個 SQL Server 連接呼叫 SQL DriverConnect 一次。  
   
 3.  呼叫 MS DTC OLE ITransactionDispenser::BeginTransaction 函數來開始 MS DTC 交易並取得代表此交易的交易物件。  
   
@@ -38,8 +38,6 @@ ms.locfileid: "67937386"
 5.  針對您想要更新的每個 SQL Server，呼叫 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 一次。  
   
 6.  呼叫 MS DTC OLE ITransaction::Commit 函數來認可 MS DTC 交易。 此時，交易物件便不再有效。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  若要執行一連串 MS DTC 交易，請重複步驟 3 到 6。  
   
@@ -50,7 +48,7 @@ ms.locfileid: "67937386"
 > [!NOTE]  
 >  您也可以針對每個 SQL Server 依序呼叫 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)，而非依照先前步驟 4 和 5 所建議的方式呼叫它們。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行交易&#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   
