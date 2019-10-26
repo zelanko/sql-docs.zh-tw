@@ -10301,8 +10301,12 @@
               href: linux/sql-server-linux-release-notes-2019.md
             - name: SQL Server 2017
               href: linux/sql-server-linux-release-notes.md
-        - name: 版本和支援的功能
-          href: linux/sql-server-linux-editions-and-components-2017.md
+        - name: 版本與功能
+          items:
+            - name: SQL Server 2019
+              href: linux/sql-server-linux-editions-and-components-2019.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-editions-and-components-2017.md
         - name: 常見問題集
           href: linux/sql-server-linux-faq.md
     - name: 快速入門
