@@ -1,5 +1,5 @@
 ---
-title: fn_all_changes_ @ no__t-0capture_instance @ no__t-1 （Transact-sql） |Microsoft Docs
+title: fn_all_changes_&lt;capture_instance&gt; （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c8dce82cd331e1cf35464fe7122521fcd3285fa
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b9b6e62d0f69c5182ad69e21cb46800d4ddcc86
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251259"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909402"
 ---
-# <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; & Amp;&#40;transact-SQL&AMP;&#41;
+# <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>fn_all_changes_&lt;capture_instance&gt; （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **所有變更**查詢函數的包裝函式。 sys.sp_cdc_generate_wrapper_function 系統預存程序會產生建立這些函數所需的指令碼。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,7 +58,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
  *end_time*  
  **Datetime**值，表示要包含在結果集內之變更資料表專案範圍的高階點。  
   
- 當呼叫 sp_cdc_generate_wrapper_function 來產生包裝函式的 create 腳本時 @no__t，這個參數可以採用兩個可能意義的其中一個：  
+ 當呼叫 sp_cdc_generate_wrapper_function 來產生包裝函式的 create 腳本時 @closed_high_end_point，這個參數可以採用兩個可能意義的其中一個：  
   
 -   @closed_high_end_point = 1  
   
@@ -83,15 +83,15 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料行類型|描述|  
+|資料行名稱|資料行類型|[描述]|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|與變更相關聯之交易的認可 LSN。 在相同交易中認可的所有變更都會共用相同的認可 LSN。|  
 |__CDC_SEQVAL|**binary(10)**|用來排序交易內資料列變更的序列值。|  
-|從 @column_list @no__t 0columns >|**差異**|當呼叫它來產生建立包裝函式的腳本時，所要 sp_cdc_generate_wrapper_function 的*column_list*引數中所識別的資料行。|  
+|@column_list的 \<資料行 >|**差異**|當呼叫它來產生建立包裝函式的腳本時，所要 sp_cdc_generate_wrapper_function 的*column_list*引數中所識別的資料行。|  
 |__CDC_OPERATION|**nvarchar(2)**|表示將資料列套用到目標環境所需之作業的作業碼。 它會根據呼叫中提供的引數*row_filter_option*值而有所不同：<br /><br /> *row_filter_option* = ' all '<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業新值<br /><br /> *row_filter_option* = ' 所有更新舊版本 '<br /><br /> 'D' - 刪除作業<br /><br /> 'I' - 插入作業<br /><br /> 'UN' - 更新作業新值<br /><br /> 'UO' - 更新作業舊值|  
-|從 @update_flag_list @no__t 0columns >|**bit**|藉由將 _uflag 附加到資料行名稱所命名的位元旗標。 當 @no__t 4.9.0-_CDC_OPERATION 是 ' UO ' 的 ' I ' 時，旗標一律會設為 Null。 當 @no__t 4.9.0-_CDC_OPERATION 是 ' UN ' 時，如果更新產生對應資料行的變更，它會設定為1。 否則為 0。|  
+|@update_flag_list的 \<資料行 >|**bit**|藉由將 _uflag 附加到資料行名稱所命名的位元旗標。 當 \__CDC_OPERATION 為 ' UO ' 時，旗標一律會設為 Null。 當 \__CDC_OPERATION 為 ' UN ' 時，如果更新產生對應資料行的變更，它會設定為1。 否則為 0。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  Fn_all_changes_ < capture_instance > 函數做為 fn_cdc_get_all_changes_ < capture_instance > query 函數的包裝函式。 sys.sp_cdc_generate_wrapper 預存程序是用來產生建立此包裝函數的指令碼。  
   
  系統不會自動建立包裝函數。 您必須執行兩項作業，才能建立包裝函數：  
@@ -100,20 +100,18 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 2.  執行指令碼來實際建立包裝函數。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- 包裝函式可讓使用者有系統地查詢在以**datetime**值（而不是 LSN 值）限制的間隔內發生的變更。 包裝函式會在提供的**datetime**值與內部所需的 LSN 值之間執行所有必要的轉換，做為查詢函數的引數。 當包裝函式使用順序來處理變更資料的資料流程時，它們會確保不會遺失或重復資料，但前提是已遵循下列慣例：與一個呼叫相關聯之間隔的 @end_time 值會提供為 @start_time與後續呼叫相關聯之間隔的值。  
+ 包裝函式可讓使用者有系統地查詢在以**datetime**值（而不是 LSN 值）限制的間隔內發生的變更。 包裝函式會在提供的**datetime**值與內部所需的 LSN 值之間執行所有必要的轉換，做為查詢函數的引數。 當包裝函式使用順序來處理變更資料的資料流程時，它們會確保不會遺失或重復資料，但前提是要遵循下列慣例：與一個呼叫相關聯之間隔的 @end_time 值會以 @start_time 的方式提供。與後續呼叫相關聯之間隔的值。  
   
  在建立指令碼時使用 @closed_high_end_point 參數，您便可以產生包裝函式來支援指定之查詢視窗上的封閉上限或開放上限。 也就是說，您可以決定具有認可時間的項目是否等於要包含在間隔內之擷取間隔的上限。 預設會包含上限。  
   
- **所有變更**包裝函式所傳回的結果集，會分別將變更資料表的 __ $ start_lsn 和 \_ @ no__t-2 $ seqval 資料行傳回為 \_ _cdc_startlsn 和 \_ _cdc_seqval 的資料行。 只有在產生包裝函式時，出現在 *@no__t 1column_list*參數中的追蹤資料行才會遵循這些步驟。 如果 *\@column_list*是 Null，則會傳回所有追蹤的來源資料行。 來源資料行後面接著 operation 資料行，@no__t 4.9.0-_CDC_OPERATION，這是可識別作業的一或兩個字元資料行。  
+ 「**所有變更**」包裝函式所傳回的結果集會將變更資料表的 __ $ start_lsn 和 \_\_$seqval 資料行分別當做 \__CDC_STARTLSN 和 \__CDC_SEQVAL 的資料行。 只有在產生包裝函式時，出現在 *\@column_list*參數中的追蹤資料行才會遵循這些步驟。 如果 *\@column_list*是 Null，則會傳回所有追蹤的來源資料行。 來源資料行後面接著 operation 資料行，\__CDC_OPERATION，這是可識別作業的一或兩個字元資料行。  
   
- 然後，系統會針對 @update_flag_list 參數內識別的每個資料行，將位元旗標附加到結果集。 對於 [**所有變更**] 包裝函式，如果 __CDC_OPERATION 為 ' '、' I ' 或 ' UO '，位旗標一定會是 Null。 如果 @no__t 4.9.0-_CDC_OPERATION 是 ' UN '，則會將旗標設定為1或0，這取決於更新作業是否會導致資料行變更。  
+ 然後，系統會針對 @update_flag_list 參數內識別的每個資料行，將位元旗標附加到結果集。 對於 [**所有變更**] 包裝函式，如果 __CDC_OPERATION 為 ' '、' I ' 或 ' UO '，位旗標一定會是 Null。 如果 \__CDC_OPERATION 為 ' UN '，則會將旗標設定為1或0，這取決於更新作業是否會導致資料行變更。  
   
  「變更資料捕獲設定範本」具現化架構的 CDC 包裝函式 Tvf 說明如何使用 sp_cdc_generate_wrapper_function 預存程式，針對架構定義的查詢函式的所有包裝函式取得建立腳本。 然後，此範本會建立這些指令碼。 如需範本的詳細資訊，請參閱[範本瀏覽器](../../ssms/template/template-explorer.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_generate_wrapper_function &#40;-SQL&#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+## <a name="see-also"></a>請參閱  
+ [sp_cdc_generate_wrapper_function &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

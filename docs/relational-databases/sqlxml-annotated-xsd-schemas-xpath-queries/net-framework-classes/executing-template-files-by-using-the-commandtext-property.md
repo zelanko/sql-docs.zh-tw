@@ -17,16 +17,16 @@ ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1cb0e0a39f0814051dbd5f2ce009526dd8558f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0992424ed4253bb783ad5713239e213cd2b86278
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934251"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909731"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 屬性執行範本檔案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  此範例說明如何指定 SQL 或 XPath 查詢所組成的範本檔案，使用 CommandTextproperty。 而不是做為 CommandText 值，指定 SQL 或 XPath 查詢，您可以指定檔案名稱的值。 在下列範例中，CommandType 屬性會指定為 SqlXmlCommandType.TemplateFile。  
+  這個範例說明如何使用 CommandTextproperty 來指定由 SQL 或 XPath 查詢所組成的範本檔案。 您可以指定檔案名做為值，而不是將 SQL 或 XPath 查詢指定為 CommandText 的值。 在下列範例中，CommandType 屬性指定為 SqlXmlCommandType. TemplateFile。  
   
  此範例應用程式會執行此範本：  
   
@@ -93,9 +93,7 @@ class Test
   
 5.  在命令提示字元中，執行 DocSample.exe。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- 如果您將參數傳遞給範本時，參數名稱必須以開頭 at 符號 (@);比方說，p.Name="\@ContactID"，其中 p 是 SqlXmlParameter 物件。  
+ 如果您將參數傳遞至範本，參數名稱必須以 @ 符號開頭，例如，p.Name = "\@ContactID"，其中 p 是 SqlXmlParameter 物件。  
   
  這是採用一個參數的已更新範本。  
   

@@ -1,5 +1,5 @@
 ---
-title: 'sql: relationship 和關鍵識別碼順序規則 (SQLXML 4.0) |Microsoft Docs'
+title: sql： relationship 和索引鍵排序規則（SQLXML 4.0） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d882e38d5c6c049013681f79a828f71e44d027c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cb8807e5a5fe63ee18e6932d6e102175e3d6cc63
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902207"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908741"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>註解解譯 - sql:relationship 和索引鍵順序規則
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   由於 XML 大量載入會產生記錄做為其節點進入範圍，並將這些記錄傳送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 做為其節點離開範圍，因此用於記錄的資料必須存在於節點的範圍內。  
   
- 請考慮下列 XSD 結構描述，在其中之間的一對多關聯性 **\<客戶 >** 並 **\<順序 >** 項目 （一個客戶可以下許多訂單） 是使用指定的 **\<sql: relationship >** 項目：  
+ 請考慮下列 XSD 架構，這是使用\<sql： relationship 來指定 **\<Customer >** 與 **\<Order >** 專案（一個客戶可以下多個訂單）之間的一對多關聯性 **>** 元素：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -60,7 +60,7 @@ ms.locfileid: "67902207"
 </xsd:schema>  
 ```  
   
- 作為 **\<客戶 >** 元素節點進入範圍時，XML 大量載入會產生客戶記錄。 此記錄會保留，直到 XML 大量載入讀取 **\</Customer >** 。 在處理 **\<順序 >** 項目節點中，XML 大量載入會使用 **\<sql: relationship >** 取得 CustOrder 資料表的 CustomerID 外部索引鍵資料行的值從 **\<客戶 >** 父項目，因為 **\<順序 >** 項目未指定**CustomerID**屬性。 這表示該定義在 **\<客戶 >** 元素中，您必須指定**CustomerID**中的結構描述，然後再指定屬性 **\<sql:關聯性 >** 。 否則，當 **\<順序 >** 元素進入範圍內，XML 大量載入會產生 CustOrder 資料表的記錄，當 XML 大量載入到達 **\</order >** 結束標記時，它會傳送至記錄[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]沒有 CustomerID 外部索引鍵資料行值。  
+ 當 **\<Customer >** 元素節點進入範圍內時，XML 大量載入會產生客戶記錄。 此記錄會持續，直到 XML 大量載入讀取 **\</Customer >** 。 在處理 **\<Order >** 元素節點時，XML 大量載入會使用 **\<sql： relationship >** ，從 **\<Customer >** 父元素取得 CustOrder 資料表的 CustomerID 外鍵資料行值。因為 **\<Order >** 元素並未指定**CustomerID**屬性。 這表示在定義 **\<Customer >** 元素時，您必須先在架構中指定**CustomerID**屬性，然後再指定 **\<sql： relationship >** 。 否則，當 **\<順序 >** 元素進入範圍內時，Xml 大量載入會產生 CustOrder 資料表的記錄，而當 XML 大量載入達到 **\</order >** 結束標記時，它會將記錄傳送至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而不會有CustomerID 外鍵資料行值。  
   
  將這個範例所提供的結構描述儲存為 SampleSchema.xml。  
   
@@ -107,8 +107,6 @@ ms.locfileid: "67902207"
   
 3.  若要執行 XML 大量載入，請儲存和執行下列 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) 範例為 MySample.vbs：  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -119,7 +117,7 @@ ms.locfileid: "67902207"
     set objBL=Nothing  
     ```  
   
-     The result is that XML Bulk Load inserts a NULL value in the CustomerID foreign key column of the CustOrder table. If you revise the XML sample data so that the **\<CustomerID>** child element appears before the **\<Order>** child element, you get the expected result: XML Bulk Load inserts the specified foreign key value into the column.  
+     結果是，XML 大量載入將 NULL 值插入到 CustOrder 資料表的 CustomerID 外部索引鍵資料行中。 如果您修改 XML 範例資料，使 **\<CustomerID >** 子項目出現在 **\<順序 >** 子項目之前，您會得到預期的結果： XML 大量載入會將指定的外鍵值插入資料行中。  
   
  這是相等的 XDR 結構描述：  
   

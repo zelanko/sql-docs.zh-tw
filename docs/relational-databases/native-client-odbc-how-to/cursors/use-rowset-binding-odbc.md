@@ -1,5 +1,5 @@
 ---
-title: 使用資料列集繫結 (ODBC) |Microsoft Docs
+title: 使用資料列集系結（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6e10c45331e1a2d4395506a0b687ecfd3510d77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99c2f54ce648358cdbb47cda9893078d69087ad2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898572"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908224"
 ---
 # <a name="use-rowset-binding-odbc"></a>使用資料列集繫結 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "67898572"
   
     -   或者，配置 R (或更多) 個資料行緩衝區的陣列來儲存資料長度。  
   
-    -   呼叫[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)到資料行的資料值和資料長度陣列繫結至資料列集資料行。  
+    -   呼叫[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) ，將資料行的資料值和資料長度陣列系結至資料列集的資料行。  
   
-2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
+2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)以設定下列屬性：  
   
     -   將 SQL_ATTR_ROW_ARRAY_SIZE 設定為資料列集的資料列數目 (R)。  
   
@@ -47,9 +47,7 @@ ms.locfileid: "67898572"
   
 3.  執行陳述式。  
   
-4.  每次呼叫[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或是[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)擷取 R 個資料列，並將資料傳送到繫結的資料行。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4.  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的每個呼叫都會抓取 R 資料列，並將資料傳輸至系結的資料行。  
 
 ### <a name="to-use-row-wise-binding"></a>使用資料列取向的繫結  
   
@@ -59,7 +57,7 @@ ms.locfileid: "67898572"
   
     -   第二個部分是 SQLINTEGER 變數，可保存資料行狀態指標。  
   
-2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
+2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)以設定下列屬性：  
   
     -   將 SQL_ATTR_ROW_ARRAY_SIZE 設定為資料列集的資料列數目 (R)。  
   
@@ -69,15 +67,15 @@ ms.locfileid: "67898572"
   
     -   將 SQL_ATTR_PARAMS_STATUS_PTR 設定為指向 SQLUSSMALLINT 變數的陣列[R]，以保存資料列狀態指標。  
   
-3.  在結果集中的每一個資料行，呼叫[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)以指向它們在步驟 1 中所配置之結構陣列的第一個項目中變數的資料值和資料行的資料長度指標。  
+3.  針對結果集中的每個資料行呼叫[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) ，以將資料行的資料值和資料長度指標指向其在步驟1所配置之結構陣列第一個元素中的變數。  
   
 4.  執行陳述式。  
   
-5.  每次呼叫[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或是[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)擷取 R 個資料列，並將資料傳送到繫結的資料行。  
+5.  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)的每個呼叫都會抓取 R 資料列，並將資料傳輸至系結的資料行。  
   
-## <a name="see-also"></a>另請參閱  
- [使用資料指標使用說明主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
- [如何實作資料指標](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [使用資料指標&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+## <a name="see-also"></a>請參閱  
+ [使用資料指標的 how to &#40;主題&#41; ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+ [如何實作為資料指標](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
+ [使用資料&#40;指標 ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

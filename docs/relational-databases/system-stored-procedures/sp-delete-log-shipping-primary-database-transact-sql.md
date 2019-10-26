@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_primary_database (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_log_shipping_primary_database （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d1d1d341a12e417c118e6dfb64ecd9a5da5f2bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aff19eabc5738e986fca1bf13f85130daead3217
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009162"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909872"
 ---
-# <a name="spdeletelogshippingprimarydatabase-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
+# <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  這個預存程序會移除主要資料庫的記錄傳送，其中包括備份作業及本機和遠端記錄。 您已移除使用次要資料庫之後，才能使用此預存程序**sp_delete_log_shipping_primary_secondary**。  
+  這個預存程序會移除主要資料庫的記錄傳送，其中包括備份作業及本機和遠端記錄。 只有在您使用**sp_delete_log_shipping_primary_secondary**移除次要資料庫之後，才使用這個預存程式。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @database = ] 'database'` 是記錄傳送主要資料庫的名稱。 *資料庫*已**sysname**，沒有預設值，不能是 NULL。  
+`[ @database = ] 'database'` 是記錄傳送主資料庫的名稱。 *資料庫*是**sysname**，沒有預設值，而且不能是 Null。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -48,37 +48,35 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>結果集  
  無。  
   
-## <a name="remarks"></a>備註  
- **sp_delete_log_shipping_primary_database**必須從執行**主要**主要伺服器上的資料庫。 這個預存程序會執行下列動作：  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_log_shipping_primary_database**必須從主伺服器的**master**資料庫中執行。 這個預存程序會執行下列動作：  
   
 1.  刪除指定主要資料庫的備份作業。  
   
-2.  移除在本機監視記錄**log_shipping_monitor_primary**主要伺服器上。  
+2.  移除主伺服器上**log_shipping_monitor_primary**中的本機監視記錄。  
   
-3.  中的對應項目中移除**log_shipping_monitor_history_detail**並**log_shipping_monitor_error_detail**。  
+3.  移除**log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**中的對應專案。  
   
-4.  如果監視伺服器不是從主要伺服器，會移除中的監視資料錄**log_shipping_monitor_primary**監視伺服器上。  
+4.  如果監視伺服器與主伺服器不同，則會在監視伺服器上移除**log_shipping_monitor_primary**中的監視記錄。  
   
-5.  中的對應項目中移除**log_shipping_monitor_history_detail**並**log_shipping_monitor_error_detail**監視伺服器上。  
+5.  在監視伺服器上移除**log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**中的對應專案。  
   
-6.  中的項目中移除**log_shipping_primary_databases**此主要資料庫。  
+6.  移除此主資料庫之**log_shipping_primary_databases**中的專案。  
   
-7.  呼叫**sp_delete_log_shipping_alert_job**監視伺服器上。  
+7.  在監視伺服器上呼叫**sp_delete_log_shipping_alert_job** 。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
+## <a name="permissions"></a>[權限]  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 此範例說明如何利用**sp_delete_log_shipping_primary_database**以刪除主要資料庫**AdventureWorks2012**。  
+ 這個範例說明如何使用**sp_delete_log_shipping_primary_database**來刪除主資料庫**AdventureWorks2012**。  
   
 ```  
 EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureWorks2012';  
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

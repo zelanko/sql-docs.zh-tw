@@ -17,12 +17,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2b5f8ce7f2b7e0fab2da5eed698fadfb9538c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 642e98a743585226d984c378607b83a7ad432d92
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135327"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909126"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 執行 SQLXML 4.0 查詢
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68135327"
   
  另一種選擇是利用在 Microsoft Data Access Components (MDAC) 2.6 和更新版本中初次引進的 ActiveX Data Objects (ADO) 的 SQL XML 延伸模組來執行查詢，並使用 SQLXML 4.0 來搭配以 COM 為基礎的應用程式。  
   
- 本主題示範使用 SQLXML 和 ADO 的 Visual Basic Scripting Edition (VBScript) 應用程式 （具有.vbs 副檔名的指令碼） 的一部分。 本主題提供初始的安裝程序，以協助您重建和測試 SQLXML 4.0 文件集中的查詢範例。  
+ 本主題示範如何使用 SQLXML 和 ADO 做為 Visual Basic Scripting Edition （VBScript）應用程式的一部分（具有 .vbs 副檔名的腳本）。 本主題提供初始的安裝程序，以協助您重建和測試 SQLXML 4.0 文件集中的查詢範例。  
   
 ## <a name="creating-the-sqlxml-40-test-script"></a>建立 SQLXML 4.0 測試指令碼  
  在此程序中，您會建立 VBScript (.vbs) 檔案 Sqlxml4test.vbs，這個檔案可利用 ADO 2.6 和更新版本的 SQLXML ADO 延伸模組來執行 SQLXML 查詢。  
@@ -107,8 +107,6 @@ ms.locfileid: "68135327"
   
 5.  請遵照下一節中的指示來使用 SQLXML 4.0 測試指令碼。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="using-the-sqlxml-40-test-script"></a>使用 SQLXML 4.0 測試指令碼  
  下列程序描述如何使用 Sqlxml4test.vbs 檔案來測試本文件集所提供的範例查詢。  
   
@@ -116,14 +114,14 @@ ms.locfileid: "68135327"
   
 1.  確認已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，如下所示：  
   
-    1.  從**開始**功能表上，指向**設定**，然後按一下**控制台**。  
+    1.  在 [**開始**] 功能表中，指向 [**設定**]，然後按一下 [**控制台**]。  
   
-    2.  在 [控制台] 開啟**新增或移除程式**  
+    2.  在 [控制台] 中，開啟 [**新增或移除程式**]  
   
-    3.  在目前安裝的程式清單中，確認**Microsoft SQL Server Native Client**出現在清單中。  
+    3.  在目前已安裝的程式清單中，確認 [ **Microsoft SQL Server Native Client** ] 出現在清單中。  
   
         > [!NOTE]  
-        >  如果您要安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，請參閱[安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
+        >  如果您需要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，請參閱[安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
 2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果需要確認 MDAC 版本資訊，可以使用 MDAC Component Checker 工具，此工具可從 Microsoft 網站 (www.microsoft.com) 免費下載。 如需詳細資訊，請在 Microsoft 網站上搜尋 "MDAC Component Checker"。  
   

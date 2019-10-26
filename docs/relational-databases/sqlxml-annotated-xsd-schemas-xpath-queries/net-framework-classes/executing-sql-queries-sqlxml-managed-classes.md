@@ -1,5 +1,5 @@
 ---
-title: 執行 SQL 查詢 (SQLXML Managed 類別) |Microsoft Docs
+title: 執行 SQL 查詢（SQLXML Managed 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08fc10138a8c0a6c6e55eb0c6f757f9abe0b5b9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ef6d18b4d302cd551db8e7e3e5ab7e96f077a20
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934277"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908469"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>執行 SQL 查詢 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   此範例示範：  
   
--   建立參數 （SqlXmlParameter 物件）。  
+-   建立參數（SqlXmlParameter 物件）。  
   
--   將值指派給 SqlXmlParameter 物件的屬性 （名稱和值）。  
+-   將值指派給 SqlXmlParameter 物件的屬性（名稱和值）。  
   
- 在此範例中，系統會執行簡單 SQL 查詢來擷取其姓氏值當做參數傳遞之員工的名字、姓氏和生日。 在指定參數 (*LastName*)，只有 [值] 屬性設定。 未設定 Name 屬性，因為在此查詢參數是位置參數，而且沒有名稱為必要項。  
+ 在此範例中，系統會執行簡單 SQL 查詢來擷取其姓氏值當做參數傳遞之員工的名字、姓氏和生日。 在指定參數（*LastName*）時，只會設定 Value 屬性。 未設定 Name 屬性，因為在此查詢中，參數是位置，而且不需要名稱。  
   
- SqlXmlCommand 物件，預設的 CommandType 屬性是**Sql**。 因此，未明確地設定屬性。  
+ SqlXmlCommand 物件的 CommandType 屬性預設為**Sql**。 因此，未明確地設定屬性。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  
@@ -99,11 +99,9 @@ public static int Main(String[] args)
   
 3.  在命令提示字元中，執行 DocSample.exe。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  若要測試此範例，您必須先在電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework。  
   
- 您可以指定執行 Updategram (也是一個範本) 的範本 (如以下程式碼片段所示) 來插入客戶記錄，而不是指定 SQL 查詢當做命令文字。 您可以在檔案中指定範本和 Updategrams 並執行這些檔案。 如需詳細資訊，請參閱 <<c0> [ 使用 CommandText 屬性執行範本檔案](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)。  
+ 您可以指定執行 Updategram (也是一個範本) 的範本 (如以下程式碼片段所示) 來插入客戶記錄，而不是指定 SQL 查詢當做命令文字。 您可以在檔案中指定範本和 Updategrams 並執行這些檔案。 如需詳細資訊，請參閱[使用 CommandText 屬性執行範本](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)檔案。  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -124,7 +122,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>使用 ExecuteToStream  
- 如果您有現有的資料流時，您可以使用 ExecuteToStream 方法，而不是建立 Stream 物件，並使用 Execute 方法。 前述範例中的程式碼會此處修訂以使用 ExecuteToStream 方法：  
+ 如果您有現有的資料流程，您可以使用 ExecuteToStream 方法，而不是建立資料流程物件，並使用 Execute 方法。 上述範例中的程式碼會在這裡修訂，以使用 ExecuteToStream 方法：  
   
 ```  
 using System;  
@@ -157,6 +155,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  您也可以使用傳回的 XmlReader 物件 ExecuteXMLReadermethod。 如需詳細資訊，請參閱 <<c0> [ 使用 ExecuteXMLReader 方法執行 SQL 查詢](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
+>  您也可以使用傳回 XmlReader 物件的 ExecuteXMLReadermethod。 如需詳細資訊，請參閱[使用 ExecuteXMLReader 方法執行 SQL 查詢](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
   
   
