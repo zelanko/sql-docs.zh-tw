@@ -11,12 +11,12 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030635af78475eebfa63169b712528b8beeafa38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021918"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909418"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>進階檢視 SQL Server 中擴充事件的目標資料
 
@@ -164,7 +164,7 @@ SSMS 可以顯示任何目標的資料。 但是，各種目標的顯示畫面�
 
 
 
-### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 使用 sys.fn_xe_file_target_read_file 函數檢視 .XEL
+### <a name="b4-view-xel-with-sysfn_xe_file_target_read_file-function"></a>B.4 使用 sys.fn_xe_file_target_read_file 函數檢視 .XEL
 
 
 對於批次處理，下列系統函數可以產生 .XEL 檔案中記錄的 XML：
@@ -180,8 +180,6 @@ SSMS 中有目標資料之後，即可執行下列動作以將資料匯出為各
 
 
 1. 將焦點放在資料顯示。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     - 擴充事件的新工具列和新功能表項目會突然變成可見。
 

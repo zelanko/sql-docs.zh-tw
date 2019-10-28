@@ -14,12 +14,12 @@ ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa0cac44c29f98a6adaa1f1301131781f400d1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 810dfbc7230171f59cb8f1df04ab1c7f4774e044
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136826"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907249"
 ---
 # <a name="modify-a-stored-procedure"></a>修改預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,8 +65,6 @@ ms.locfileid: "68136826"
 6.  若要將所做的修改儲存至程序定義，請在 **[查詢]** 功能表上按一下 **[執行]** 。  
   
 7.  若要將更新的程序定義儲存為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼，請在 **[檔案]** 功能表上按一下 **[另存新檔]** 。 接受檔案名稱，或將它取代成新名稱，然後按一下 **[儲存]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!IMPORTANT]  
 >  驗證所有使用者輸入。 在使用者輸入完成驗證前，請勿加以串連。 請勿執行由未經驗證之使用者輸入所建構的命令。  

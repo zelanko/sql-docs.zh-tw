@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769406"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907708"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個已完全連線伺服器之間的複寫 (異動)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,8 +115,6 @@ ms.locfileid: "68769406"
     ![[完成精靈] 頁面與發行集名稱](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. 建立發行集之後，選取 [關閉]  以完成精靈。 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 若您在嘗試建立發行集時 SQL Server Agent 未處於執行中狀態，則可能會遇到下列錯誤。 此錯誤表示您的發行集已成功建立，但快照集代理程式無法啟動。 如果發生這種情況，您需要啟動 SQL Server Agent，然後手動啟動快照集代理程式。 下一節會提供指示。 
 

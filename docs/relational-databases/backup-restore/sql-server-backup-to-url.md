@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118191"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908814"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -230,8 +230,6 @@ ms.locfileid: "71118191"
 
 > [!NOTE] 
 >  **加入**單一媒體集有多個備份檔案和儲存體容器的支援。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 當您選取 **URL** 作為目的地時，[媒體選項]  頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
   

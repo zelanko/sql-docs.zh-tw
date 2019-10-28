@@ -14,12 +14,12 @@ ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca38f321fa06434429b78606d5962cf8623955c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62346249b427f7a6d6162d2c09e22ce54b8b87df
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091488"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908604"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68091488"
 1.  將來源資料表中的資料大量匯出到資料檔  
   
 2.  將資料檔中的資料大量匯入目標資料表  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 在相同資料表之間使用原生格式，可避免資料類型與字元格式間進行不需要的來回轉換，因而可節省時間及空間。 不過，若要取得最佳的傳輸率，必須針對資料格式化做一些檢查。 若要防止所載入的資料發生問題，請參閱下列限制清單。  
 

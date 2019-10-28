@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7690198e904ab22c463da5a9de90c48ad8b9e15f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118571"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908694"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +67,6 @@ GO
 2.  **DIRECTORY_NAME** 於資料庫層級指定。  
   
 3.  **FILETABLE_DIRECTORY** 於 FileTable 層級指定。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  所產生的階層如下：  
   

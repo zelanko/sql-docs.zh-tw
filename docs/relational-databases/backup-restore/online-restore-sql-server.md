@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a3703082dedc3d6c5933904e07e8e8724a04d20d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033717"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908875"
 ---
 # <a name="online-restore-sql-server"></a>線上還原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "68033717"
 1.  還原資料。  
   
 2.  針對最後一次記錄還原，使用 WITH RECOVERY 來還原記錄。 這會使還原的資料上線。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  有時候會因為回復所需的資料在啟動期間離線，而無法回復未認可的交易。 在此情況下，將會延遲交易。 如需詳細資訊，請參閱 [延遲交易 &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)中無用的檔案群組。  
   

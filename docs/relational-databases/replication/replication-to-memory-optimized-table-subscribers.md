@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bf597d5a9be6a1e2e7fb3f045cd329f861379ad4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769663"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908302"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,6 @@ ms.locfileid: "68769663"
 4.  啟動快照集代理程式作業來產生此發行集的初始快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
 5.  現在建立一項新訂閱。 在 [新增訂閱精靈]  中，將 記憶體最佳化訂閱  設定為 [true]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  記憶體最佳化資料表現在應該會開始接收來自發行者的更新。  
   

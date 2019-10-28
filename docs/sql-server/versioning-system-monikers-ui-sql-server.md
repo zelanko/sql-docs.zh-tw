@@ -1,6 +1,6 @@
 ---
 title: 版本設定系統 SQL 文件 | Microsoft Docs
-ms.date: 08/09/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.technology: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c00dbad924f9a3f327593a5c377c807ef646a3b7
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 7813368e08c8d1fdf4da1e2ee1e6775f56557d0a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911291"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907943"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 版本設定系統文件
 
@@ -166,7 +166,7 @@ ms.locfileid: "70911291"
     - [SQL Server 2014 文件](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
 - 2016 及更新版本：  &nbsp; 版本設定系統已為 SQL Server 2016 及更新版本完全實作。
-    - [歡迎使用 SQL Server 文件 2016 及更新版本](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016)
+    - [歡迎使用 SQL Server 文件 2016 及更新版本](/sql/sql-server/index.yml?view=sql-server-2016)
 
 ## <a name="see-also"></a>另請參閱
 

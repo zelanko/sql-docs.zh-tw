@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a06a36b601d20d67263c76ef87d5b25437d0fea3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909611"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906376"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,8 +76,6 @@ ms.locfileid: "67909611"
 8.  按一下 [ **關閉**]。  
   
 9. 在 [檔案]  功能表上，選取 [儲存 _table_name_]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>若要在物件總管中將現有的索引移到不同的檔案群組  
   

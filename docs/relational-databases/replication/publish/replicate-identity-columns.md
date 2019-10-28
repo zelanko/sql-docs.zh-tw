@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 841c5d3a40d74cbf0d24f7da0c3899882f820176
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: a0e861a1619921081a81fa52f72ba6fc88e98668
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710878"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908343"
 ---
 # <a name="replicate-identity-columns"></a>複寫識別欄位
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -112,8 +112,6 @@ ms.locfileid: "71710878"
 1.  停止所有「訂閱者」上的所有活動。  
   
 2.  對於每個包括識別欄位的已發行資料表：  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  在每個「訂閱者」端的訂閱資料庫中，執行 `IDENT_CURRENT('<TableName>')`。  
   

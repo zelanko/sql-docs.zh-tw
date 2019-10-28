@@ -14,12 +14,12 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9bef4e304b592a6be1c9d59c44d691e07829d70f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3a3dfb5804c49ae3a5c2c78d985aa548f710dab2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768368"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907072"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>修改 SQL 複寫的快照集初始化選項 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,8 +37,6 @@ ms.locfileid: "68768368"
     >  建議您選取原生格式，除非此發行集必須支援對 SQL Server Compact 資料庫或非 SQL Server 資料庫的訂閱。  
   
 2.  選取 [確定]  。   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="snapshot-folder-locations"></a>快照集資料夾位置
 

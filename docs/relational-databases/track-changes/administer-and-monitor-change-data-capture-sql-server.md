@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add1b0fc86c5e43bedd1e3ebbf7921fb1e9847c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f16d6cd8cbc27e675da9f8153555dcaf9c99749f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058066"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909932"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
 
@@ -174,8 +174,6 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 3. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開 **[管理]** ，然後展開 **[資料收集]** 。 以滑鼠右鍵按一下 [CDC 效能資料收集器]  ，然後按一下 [啟動資料收集組]  。  
   
 4. 在步驟 1 中設定的資料倉儲內，找出資料表 custom_snapshots.cdc_log_scan_data。 這份資料表會提供記錄檔掃描工作階段之資料的歷程記錄快照集。 這份資料表可用於分析經過一段時間的延遲、輸送量和其他效能量值。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ScriptUpgrade"></a>指令碼升級模式
 

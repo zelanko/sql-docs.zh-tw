@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ea44a55a7c58e64f327a97943481dfd63289324
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 304306edc78229899b0660b99df6f6b78b60e6ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228428"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906079"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Database Mail 疑難排解的一般步驟 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ ms.locfileid: "70228428"
     ```
 
 1. 若要將 sp_configure 程序還原為預設狀態 (不顯示進階選項)，請執行下列程式碼：
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 

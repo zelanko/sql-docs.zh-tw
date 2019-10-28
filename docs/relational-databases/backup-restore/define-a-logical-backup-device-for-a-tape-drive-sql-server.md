@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65cb5e39b8bda5d0f964a1586588c5f6e60bb89c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f260ee4737f1d493986e5cfa8e308d8882328140
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075926"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908962"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>定義磁帶機的邏輯備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,6 @@ ms.locfileid: "68075926"
 5.  在目的地中，請按一下 **[磁帶]** ，選取尚未與其他備份裝置連接的磁帶機。 如果沒有這樣的磁帶機可用， **[磁帶]** 選項會停用。  
   
 6.  若要定義新裝置，請按一下 **[確定]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  若要備份至這個新裝置，請將它加入 [備份資料庫]  ([一般]  ) 對話方塊中的 [備份至:]  欄位。 如需詳細資訊，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)中建立差異資料庫備份。  
   

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811364"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907034"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>檢視及處理 Database Engine Tuning Advisor 的輸出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68811364"
 5.  取消選取 **[建議]** 索引標籤式頁面底部的 **[顯示現有的物件]** 。 這會讓方格只顯示建議中所參考的那些資料庫物件。 使用底部的捲軸來檢視建議方格中最右邊的欄位，然後按一下 [定義]  欄位中的一個項目，來檢視或複製會在資料庫中建立該物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。  
   
 6.  如果您要將所有會建立或卸除此項建議中所有資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼儲存到一個指令碼檔案中，請按一下 **[動作]** 功能表上的 **[儲存建議]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>若要以 Database Engine Tuning Advisor GUI 檢視微調摘要和報表  
   

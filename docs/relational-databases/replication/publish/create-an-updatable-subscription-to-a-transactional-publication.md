@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 406b27b21d5c212815cd171ceff0ab308fb48aa9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99e605f1ed2a924f504f118dd6d0865fda3229e0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907836"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908592"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>建立交易式發行集的可更新訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,6 @@ ms.locfileid: "67907836"
     如需連結伺服器帳戶所需權限的資訊，請參閱[在這裡輸入連結描述](../../../relational-databases/replication/security/secure-the-subscriber.md)的**佇列更新訂閱**。
 
 8. 完成精靈。
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>從訂閱者設定可更新訂閱
 

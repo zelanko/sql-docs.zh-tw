@@ -13,14 +13,14 @@ ms.assetid: fdc744d5-530e-48c4-9420-cca032fd482b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c077342016a8da6c660a991c6ccd577a59a92640
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0853bc504655b5fe97bab28b300134c0f5aab289
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770486"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908619"
 ---
-# <a name="mssqleng014144"></a>MSSQL_ENG014144
+# <a name="mssql_eng014144"></a>MSSQL_ENG014144
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>訊息詳細資料  
@@ -43,8 +43,6 @@ ms.locfileid: "68770486"
 1.  在「發行者」端的發行集資料庫中執行 [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) 以尋找訂閱。  
   
 2.  在發行集資料庫中執行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) 以卸除訂閱。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   

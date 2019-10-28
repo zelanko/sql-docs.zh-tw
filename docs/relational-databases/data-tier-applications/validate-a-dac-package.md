@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1d6549eaa6a90a60666db5a1e957b66a94a08167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7df5bb3b2ef677e597d12dad8b8d92ddbb22fcba
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134627"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908252"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68134627"
 1.  **開始之前：** [必要條件](#Prerequisites)  
   
 2.  **若要升級 DAC，請使用下列方式：** [檢視 DAC 內容](#ViewDACContents)、[檢視資料庫變更](#ViewDBChanges)、[檢視升級動作](#ViewUpgradeActions)、[比較 DAC](#CompareDACs)  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="Prerequisites"></a> 必要條件  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 使用來源不明或來源不受信任的 DAC 之前，請先將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的隔離測試執行個體，並在資料庫上執行 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)，然後檢查資料庫中的程式碼，例如預存程序或其他使用者定義的程式碼。  

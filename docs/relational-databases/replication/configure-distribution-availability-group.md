@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a2475de5c318a937c1290d9f235f074909a7954
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 13a883d71262a044555fe3d0a59a945461de426e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030323"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908481"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>設定 Always On 可用性群組中的複寫散發資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,8 +117,6 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
    `@working_directory` 的值應該是與 DIST1、DIST2 和 DIST3 無關的網路路徑。
 
 1. 在 DIST2 和 DIST3 上，執行：  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'

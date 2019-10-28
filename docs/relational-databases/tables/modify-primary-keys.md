@@ -14,12 +14,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c224493a9ada07b4153632f4a9aa4fd80646d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef278fbdc9fa2599e7612cd9c3b54b909a9bf1f0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999481"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907314"
 ---
 # <a name="modify-primary-keys"></a>修改主索引鍵
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "67999481"
     |變更資料行順序|選取 [資料行]  ，然後按一下屬性右邊的省略符號 **(…)** 。 在  **[索引資料行]** 對話方塊中，從主索引鍵移除資料行。 然後將資料行以所要的順序加回去。 若要從索引鍵移除資料行，只要從 **[資料行]** 名稱清單中移除資料行名稱即可。|  
   
 4.  在 [檔案]  功能表上，按一下 [儲存]  _table name_。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改主索引鍵**  

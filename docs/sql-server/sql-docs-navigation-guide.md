@@ -1,7 +1,7 @@
 ---
 title: SQL Server 文件導覽提示
 description: 瀏覽 SQL Server 技術文件的提示與訣竅 - 說明中樞頁面、目錄、標頭等內容，以及如何使用階層連結以及如何使用版本篩選。
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621745"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904306"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文件導覽指南 
 
@@ -93,6 +93,6 @@ SQL Server 技術文件提供數個 SQL Server 版本及變體的內容。 不�
 
 ## <a name="next-steps"></a>後續步驟
 
-- 開始使用 [SQL Server 技術文件](sql-server-technical-documentation.md)。 
+- 開始使用 [SQL Server 技術文件](index.yml)。
 - 如需提交意見反應或取得 SQL Server 協助的詳細資訊，請參閱[取得協助](sql-server-get-help.md)頁面。 
 - 若要快速存取所有快速入門和教學課程，請前往 [SQL Server 教育中心](../lp/sql-server/sql-education-center.md)。

@@ -19,12 +19,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 566a160121f9fd370621706539358931aa2ec14f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056226"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905539"
 ---
 # <a name="create-dml-triggers"></a>建立 DML 觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -98,8 +98,6 @@ ms.locfileid: "68056226"
 9. 若要建立 DML 觸發程序，請在 [查詢]  功能表中按一下 [執行]  。 DML 觸發程序會建立為資料庫中的物件。  
   
 10. 若要查看物件總管中所列的 DML 觸發程序，請以滑鼠右鍵按一下 [觸發程序]  ，然後選取 [重新整理]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  [開始之前](#Top)  
   

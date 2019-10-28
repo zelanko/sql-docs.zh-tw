@@ -15,12 +15,12 @@ ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70837481d5d1656e64eca99d8f98ddfde7e52f0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e41abc4ab3f798a3ee970061ddc21539403ef6b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126235"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907503"
 ---
 # <a name="modify-data-through-a-view"></a>透過檢視修改資料
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,9 +53,7 @@ ms.locfileid: "68126235"
   
 5.  若要插入資料列，向下捲動到資料列的結尾，然後插入新值。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
+    > **重要！** 如果檢視參考多個基底資料表，就不能插入資料列。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

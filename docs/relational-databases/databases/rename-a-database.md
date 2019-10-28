@@ -14,12 +14,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1da717e212e03fce4550e7af1a8810980f1b8321
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: a2cfe01b4df32e0966084866a67cea4bfd57bc11
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70810132"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907432"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
 
@@ -74,8 +74,6 @@ ms.locfileid: "70810132"
 4. 輸入新的資料庫名稱，然後按一下 **[確定]** 。  
   
 5. (選擇性) 如果資料庫是您的預設資料庫，請參閱[在重新命名之後重設您的預設資料庫](#reset-your-default-database-after-rename)。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="rename-a-database-using-transact-sql"></a>使用 Transact-SQL 重新命名資料庫  
   

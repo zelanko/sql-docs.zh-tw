@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: faa2d63e0d1104665768ea436986b8fd3a52c107
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 0e241d84ebc60acceafe09b1a9240711a72d2067
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251778"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798324"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步驟 3︰使用 pyodbc 連線到 SQL 的概念證明
 
@@ -55,7 +55,7 @@ Executefunction 可以用來從查詢針對 SQL Database 取出結果集。 此�
 cursor.execute("SELECT @@version;") 
 row = cursor.fetchone() 
 while row: 
-    print row[0] 
+    print(row[0])
     row = cursor.fetchone()
 
 ```  

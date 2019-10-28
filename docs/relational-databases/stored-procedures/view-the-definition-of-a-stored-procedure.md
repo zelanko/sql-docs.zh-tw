@@ -15,12 +15,12 @@ ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6feaa13db08a16e0171e1a8e3e8c44fa4ff70314
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de250fd158bdd02764e992e0ccbb69e072b4c6ab
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136571"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907339"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>檢視預存程序的定義
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68136571"
 3.  展開 [預存程序]  ，以滑鼠右鍵按一下程序，然後按一下 [產生預存程序的指令碼為]  ，然後按一下下列其中一個項目：[建立為]  、[變更為]  或 [DROP 並 CREATE 至]  。  
   
 4.  選取 **[新增查詢編輯器視窗]** 。 這會顯示程序定義。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查詢編輯器中檢視程序的定義**  

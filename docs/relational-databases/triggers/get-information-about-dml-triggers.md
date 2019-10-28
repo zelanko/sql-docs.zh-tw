@@ -17,12 +17,12 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1aefc7661b21f6fc6b93e74239820020796151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056075"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909283"
 ---
 # <a name="get-information-about-dml-triggers"></a>取得關於 DML 觸發程序的詳細資訊
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "68056075"
 2.  展開您要的資料庫，展開 **[資料表]** ，然後展開包含您要檢視其定義之觸發程序的資料表。  
   
 3.  展開 [觸發程序]  ，以滑鼠右鍵按一下您要的觸發程序，然後按一下 [修改]  。 DML 觸發程序的定義會出現在查詢視窗中。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>若要檢視 DML 觸發程序的相依性  
   

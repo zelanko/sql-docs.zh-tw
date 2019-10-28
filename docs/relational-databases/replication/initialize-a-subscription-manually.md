@@ -15,12 +15,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eff19816330eb512c48cc6a37237ecf6030d7e4f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 37aecafd3506d2cd47b7b4efd93a89f50ce4ec2d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768545"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905203"
 ---
 # <a name="initialize-a-subscription-manually"></a>手動初始化訂閱
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,8 +43,6 @@ ms.locfileid: "68768545"
 1.  確定將結構描述和資料複製到訂閱資料庫。  
   
 2.  清除「新增訂閱精靈」 **[初始化訂閱]** 頁面中的 **[初始化]** 核取方塊。 只有複製複寫物件和中繼資料時，才需要對每個訂閱執行此操作。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用複寫預存程序來手動初始化訂閱。  

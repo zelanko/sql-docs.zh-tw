@@ -19,12 +19,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8390690ebbdef66d0a5c754e7a0e5db2f31437de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123524"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905513"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,48 +70,46 @@ ms.locfileid: "68123524"
   
 4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]  。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
+     下列屬性會出現在 [函數屬性 - _function_name_]  對話方塊中。  
   
-     **Database**  
-     The name of the database containing this function.  
+     **[資料庫備份]**  
+     包含此函數之資料庫的名稱。  
   
      **Server**  
-     The name of the current server instance.  
+     目前伺服器執行個體的名稱。  
   
-     **User**  
-     The name of the user of this connection.  
+     **使用者**  
+     這個連接之使用者的名稱。  
   
-     **Created date**  
-     Displays the date the function was created.  
+     **建立日期**  
+     顯示建立函數的日期。  
   
-     **Execute As**  
-     Execution context for the function.  
+     **執行身分**  
+     函數的執行內容。  
   
-     **Name**  
-     The name of the current function.  
+     **名稱**  
+     目前函數的名稱。  
   
-     **Schema**  
-     Displays the schema that owns the function.  
+     **結構描述**  
+     顯示擁有函數的結構描述。  
   
-     **System object**  
-     Indicates whether the function is a system object. Values are True and False.  
+     **系統物件**  
+     指出函數是否為系統物件。 值為 True 與 False。  
   
-     **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     **ANSI NULLS**  
+     指出物件是否使用 ANSI NULLS 選項建立。  
   
-     **Encrypted**  
-     Indicates whether the function is encrypted. Values are True and False.  
+     **已加密**  
+     指出函數是否加密。 值為 True 與 False。  
   
-     **Function Type**  
-     The type of user defined function.  
+     **函數類型**  
+     使用者定義函數的類型。  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **引號識別碼**  
+     指出物件是否使用引號識別碼選項建立。  
   
-     **Schema bound**  
-     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+     **結構描述繫結**  
+     指出函數是否為結構描述繫結函數。 值為 True 與 False。 如需結構描述繫結函數的資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 的＜SCHEMABINDING＞一節。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

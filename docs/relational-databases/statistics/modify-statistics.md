@@ -13,12 +13,12 @@ ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 593a30631eed27db108c79dd70840d1fee3f6964
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6f34bf5db992f1d7062f9def1805996701eda5f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134006"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906212"
 ---
 # <a name="modify-statistics"></a>修改統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,8 +64,6 @@ ms.locfileid: "68134006"
 6.  在 [統計資料屬性 - *statistics_name*]  對話方塊的 [一般]  頁面上，按一下 [加入]  、[移除]  、[上移]  、[下移]  或任何組合，以改變統計資料的屬性。 請記住，資料行在 [統計資料行]  方格中位置會大幅影響統計資料的效益。  
   
 7.  按一下 [確定]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改統計資料**  

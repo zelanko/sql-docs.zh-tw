@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ad5b91a85db47b500d8a48d0fa3384eb65ba2a19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a028fc4ee35caf1b4b0900a4042691188a05fb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041542"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908839"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>將資料庫還原到失敗點 - 完整復原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +57,6 @@ ms.locfileid: "68041542"
     ```  
   
 5.  執行下列 RESTORE DATABASE 陳述式，復原資料庫：  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     RESTORE DATABASE <database_name>   

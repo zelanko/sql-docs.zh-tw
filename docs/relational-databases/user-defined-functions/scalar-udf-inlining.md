@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517995"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909316"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
@@ -134,8 +134,6 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 1. SQL Server 已推斷 `CUSTOMER` 與 `ORDERS` 之間的隱含聯結，並透過聯結運算子使其變成明確聯結。
 2. SQL Server 還會推斷隱含的 `GROUP BY O_CUSTKEY on ORDERS`，並使用 IndexSpool + StreamAggregate 來進行實作。
 3. SQL Server 現在正在所有的運算子之間使用平行處理原則。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 視 UDF 的邏輯複雜度而定，產生的查詢計劃也可能會變得更大且更複雜。 如我們所見，UDF 內的作業現在不再是黑盒子，因此查詢最佳化工具能夠估算這些作業的成本，並將其最佳化。 此外，因為計劃中不再有 UDF，所以反覆執行 UDF 叫用會取代為完全避免函式呼叫額外負荷的計劃。
 

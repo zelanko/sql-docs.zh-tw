@@ -11,12 +11,12 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75cf54d5e52b708bf50d45ddefa7beaf1f3a8fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97bac2561b7d022b2e5028d8f18410b206931b6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086267"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907453"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,9 +36,7 @@ ms.locfileid: "68086267"
   
 4.  按一下 [一般]  頁面，將檔案 (容器) 加入檔案群組中。 在 [資料庫檔案]  下，按一下 [新增]  。 將 [檔案類型]  選取為 [FILESTREAM 資料]  、指定容器的邏輯名稱、選取記憶體最佳化檔案群組，並且確定 [自動成長/大小上限]  設定為 [無限制]  。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
+     如需如何使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立新資料庫的詳細資訊，請參閱[建立資料庫](../../relational-databases/databases/create-a-database.md)。  
   
 ### <a name="to-create-a-memory-optimized-table"></a>若要建立記憶體最佳化的資料表  
   

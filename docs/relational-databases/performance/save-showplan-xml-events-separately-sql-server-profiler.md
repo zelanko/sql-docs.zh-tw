@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc0fcbe1a04e9b49f47c30e9eae40abbd1dccfd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a3530d3796cf65dd66dd509e3f168183d4b274a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113374"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908080"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>個別儲存 Showplan XML 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68113374"
 10. 選取 [所有 XML 執行程序表批次都在單一檔案中]  ，以便將所有 **Showplan XML** 事件儲存到單一 XML 檔案中。 或者選取 [每一個 XML 執行程序表批次都在相異檔案中]  ，針對每個 **Showplan XML** 事件建立新的 XML 檔案。  
   
 11. 若要在 SQL Server Management Studio 中檢視 **Showplan XML** 事件，請在 [檔案]  功能表上指向 [開啟]  ，然後選取 [檔案]  。 瀏覽至您儲存一或多個 **Showplan XML** 事件檔案的目錄，以便選取一個檔案並加以開啟。 **Showplan XML** 事件檔案的副檔名為 .SQLPlan。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>另請參閱  
  [在 SQL Server Profiler 中使用執行程序表結果分析查詢](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

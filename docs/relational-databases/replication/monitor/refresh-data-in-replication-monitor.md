@@ -13,12 +13,12 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: be4dde11a67c0391f753c29b411baf9ccb25d804
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f98fa5b39585c8e8cd66178a82a9d6c95b330c7a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770525"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909603"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>在複寫監視器中重新整理資料
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68770525"
 2.  在 **[發行者設定]** 對話方塊中，設定 **[自動重新整理]** 與 **[重新整理的速率]** 選項。 **[自動重新整理]** 設定會影響「複寫監視器」中的主視窗。 **[重新整理的速率]** 設定也可以影響所有設定為自動重新整理的詳細資料視窗 (設定的變更僅影響在變更後開啟的詳細資料視窗)。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-specify-that-a-detail-window-should-automatically-refresh"></a>若要指定詳細資料視窗應自動重新整理  
   

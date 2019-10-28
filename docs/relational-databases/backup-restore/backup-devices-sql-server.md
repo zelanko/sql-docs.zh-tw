@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152129"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909180"
 ---
 # <a name="backup-devices-sql-server"></a>備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」  ) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
    
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
  備份磁碟  
@@ -66,7 +66,7 @@ ms.locfileid: "70152129"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  例如：  
   
@@ -80,7 +80,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  例如，  
   
@@ -116,7 +116,7 @@ GO
     > **重要！** 透過網路備份資料可能會受到網路問題的影響。因此，我們建議您在使用遠端磁碟時，於備份作業完成後進行驗證。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>指定通用命名慣例 (UNC) 名稱  
- 若要在備份或還原命令中指定網路共用，請使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\**<系統名稱>**\\**<共用名稱>**\\**<路徑>**\\**<檔案名稱>。  
+ 若要在備份或還原命令中指定網路共用，請使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\** <系統名稱>  **\\** <共用名稱>  **\\** <路徑>  **\\** <檔案名稱>  。  
   
  例如：  
   
@@ -133,7 +133,7 @@ GO
    
  磁帶機必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 作業系統所支援的，才能將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 資料備份到磁帶中。 此外，對指定的磁帶機而言，我們建議您僅使用磁帶機製造商所建議的磁帶。 如需有關如何安裝磁帶機的詳細資訊，請參閱 Windows 作業系統的文件。  
   
- 使用磁帶機時，備份作業可能會填滿一捲磁帶，然後繼續寫入另一捲磁帶。 每個磁帶都含有媒體標頭。 第一個使用的媒體稱為 *「初始磁帶」*。 後續的磁帶都稱為 *接續磁帶* ，每捲磁帶都有一個媒體序號，後面的磁帶編號比前面的高。 例如，與四個磁帶裝置相關聯的媒體集，內含至少四捲初始磁帶；而如果一捲磁帶裝不下整個資料庫，則還會有四捲接續磁帶。 附加備份組的時候，您必須掛載整組媒體中的最後一捲磁帶。 若未掛載最後一捲磁帶， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 往前掃描到掛載磁帶的結尾時，便會要求您更換磁帶。 此時，請掛載最後一捲磁帶。  
+ 使用磁帶機時，備份作業可能會填滿一捲磁帶，然後繼續寫入另一捲磁帶。 每個磁帶都含有媒體標頭。 第一個使用的媒體稱為 *「初始磁帶」* 。 後續的磁帶都稱為 *接續磁帶* ，每捲磁帶都有一個媒體序號，後面的磁帶編號比前面的高。 例如，與四個磁帶裝置相關聯的媒體集，內含至少四捲初始磁帶；而如果一捲磁帶裝不下整個資料庫，則還會有四捲接續磁帶。 附加備份組的時候，您必須掛載整組媒體中的最後一捲磁帶。 若未掛載最後一捲磁帶， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 往前掃描到掛載磁帶的結尾時，便會要求您更換磁帶。 此時，請掛載最後一捲磁帶。  
   
  使用磁帶備份裝置就像使用磁碟裝置一樣，但有以下例外情況：  
   
@@ -146,7 +146,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  例如：  
   
@@ -160,7 +160,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> 磁帶專用的 BACKUP 和 RESTORE 選項 (Transact-SQL)  
  為了方便磁帶管理作業，BACKUP 陳述式提供了下列磁帶專用的選項：  
@@ -178,7 +178,7 @@ GO
 ###  <a name="OpenTapes"></a> 管理開啟的磁帶  
  若要檢視開啟的磁帶裝置清單以及掛載要求的狀態，請查詢 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 動態管理檢視。 這個檢視顯示所有開啟的磁帶。 這包括正在等待下一個 BACKUP 或 RESTORE 作業而暫時閒置的使用中磁帶。  
   
- 如果磁帶不慎保持在開啟狀態，釋放磁帶最快速的方式就是使用下列命令：RESTORE REWINDONLY FROM TAPE **=**_backup_device_name_。 如需詳細資訊，請參閱 [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)。  
+ 如果磁帶不慎保持在開啟狀態，釋放磁帶最快速的方式就是使用下列命令：RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_。 如需詳細資訊，請參閱 [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)。  
   
   
 ## <a name="using-the-azure-blob-storage-service"></a>使用 Azure Blob 儲存體服務  
@@ -208,8 +208,6 @@ GO
 1.  卸除原始邏輯備份裝置。  
   
 2.  定義使用原始邏輯裝置名稱，但對應至不同實體備份裝置的新邏輯備份裝置。 邏輯備份裝置對於識別磁帶備份裝置特別有用。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="MirroredMediaSets"></a> 鏡像備份媒體集  
  備份媒體集的鏡像功能可減少備份裝置功能異常時的影響。 這些功能異常會特別嚴重，因為備份是避免資料遺失的最後一道防線。 隨著資料庫大小的成長，備份裝置或媒體故障而導致備份無法還原的可能性也越大。 鏡像備份媒體可透過提供實體備份裝置的備援性，藉以提升備份的可靠性。 如需詳細資訊，請參閱本主題稍後的 [鏡像備份媒體集 &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)的使用者閱讀。  

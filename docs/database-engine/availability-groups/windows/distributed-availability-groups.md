@@ -2,7 +2,7 @@
 title: 什麼是分散式可用性群組
 description: 分散式可用性群組是跨兩個不同可用性群組之特殊類型的可用性群組。 參與分散式可用性群組的可用性群組不需要位於相同的位置中。
 ms.custom: seodec18
-ms.date: 07/31/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 93e95e52249a44c0ef7425d11f3400974e123f3f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702745"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907274"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-分散式可用性群組是 SQL Server 2016 中引進的新功能，為現有 AlwaysOn 可用性群組功能的變異。 本文釐清分散式可用性群組的某些層面，並補充現有 [SQL Server 文件](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)。
+分散式可用性群組是 SQL Server 2016 中引進的新功能，為現有 AlwaysOn 可用性群組功能的變異。 本文釐清分散式可用性群組的某些層面，並補充現有 [SQL Server 文件](https://docs.microsoft.com/sql/sql-server/index.yml)。
 
 > [!NOTE]
 > "DAG" 不是「分散式可用性群組」  的官方縮寫，因為這個縮寫已用於「Exchange 資料庫可用性群組」功能。 此 Exchange 功能與 SQL Server 可用性群組或分散式可用性群組無關。

@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 697de72ce644ffdce721745b33cde3372edfb2c8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 735d43f224fcfb8438f8fed9bdc6c3b254071195
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710664"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907600"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
 
@@ -78,8 +78,6 @@ SQL Server 2019 中的 PolyBase 可讓您透過 ODBC 連接器連接到 ODBC 相
     ```
 
 1. **選擇性：** 在外部資料表上建立統計資料。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 為了取得最佳查詢效能，我們建議在外部資料表資料行上建立統計資料 (尤其是用於聯結、篩選和彙總的資料行)。
 

@@ -19,12 +19,12 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 633ee52e9719631970b367ee8106e011cfa15e19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127185"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909619"
 ---
 # <a name="shrink-a-database"></a>壓縮資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,8 +105,6 @@ ms.locfileid: "68127185"
      輸入在資料庫壓縮後，資料庫檔案中剩餘可用空間的最大百分比。 允許值介於 0 和 99 之間。  
   
 4.  按一下 [確定]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

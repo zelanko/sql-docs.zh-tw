@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5115149afbcfb2796c8e821bd22c84e72eb2315
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082754"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903830"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68082754"
 設定全文檢索搜尋有兩個基本步驟︰  
 1.  建立全文檢索目錄。  
 2.  在您想要搜尋的資料表或索引檢視表上建立全文檢索索引。 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 每個全文檢索索引都必須屬於一個全文檢索目錄。 您可以針對每個全文檢索索引建立個別的文字目錄，也可以讓多個全文檢索索引與給定的目錄產生關聯。 全文檢索目錄是虛擬物件，而且不屬於任何檔案群組。 目錄是參考一組全文檢索索引的邏輯概念。
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7b39b4391780a8133dae199e39638a6db77d73aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64427c005dca0e7a69dcc73b953260429b325332
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083898"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908542"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -231,50 +231,48 @@ ms.locfileid: "68083898"
   
 12. 若要在記錄檔檢視器中檢視結果，請在物件總管  中以滑鼠右鍵按一下 [維護計畫]  資料夾或特定維護計畫，然後選取 [檢視記錄]  。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
+     [記錄檔檢視器 -_server\_name_]  對話方塊有下列選項。  
   
-     **Load Log**  
-     Open a dialog box where you can specify a log file to load.  
+     **載入記錄**  
+     開啟對話方塊供您指定所要載入的記錄檔。  
   
-     **Export**  
-     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
+     **匯出**  
+     開啟對話方塊，以讓您將 [記錄檔摘要]  格線中所顯示的資訊匯出至文字檔。  
   
-     **Refresh**  
-     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
+     **[重新整理]**  
+     重新整理所選取之記錄檔的檢視。 當套用任何篩選設定時， **[重新整理]** 按鈕會從目標伺服器重新讀取選取的記錄檔。  
   
-     **Filter**  
-     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
+     **篩選**  
+     開啟對話方塊，以讓您指定用來篩選記錄檔的設定，例如 [連接]  、[日期]  或其他的 [一般]  篩選準則。  
   
-     **Search**  
-     Search the log file for specific text. Searching with wildcard characters is not supported.  
+     **搜尋**  
+     搜尋記錄檔中的特定文字。 不支援使用萬用字元搜尋。  
   
-     **Stop**  
-     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
+     **停止**  
+     停止載入記錄檔項目。 例如，如果遠端或離線記錄檔需要長時間才能載入，而您只要檢視最新項目時，就可以使用這個選項。  
   
-     **Log file summary**  
-     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
+     **記錄檔摘要**  
+     此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]** 。 若篩選已套用到記錄檔，則會看到下列文字：**篩選記錄項目的準則:** \<篩選準則>。  
   
-     **Date**  
-     Displays the date of the event.  
+     **日期**  
+     顯示事件的日期。  
   
      **Source**  
-     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
+     顯示事件建立的來源功能，例如服務名稱 (如 MSSQLSERVER)。 不是所有記錄檔類型都會出現來源。  
   
-     **Message**  
-     Displays any messages associated with the event.  
+     **訊息**  
+     顯示與事件相關聯的任何訊息。  
   
-     **Log Type**  
-     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
+     **記錄類型**  
+     顯示事件所屬之記錄檔的類型。 所有選取的記錄檔都會出現在記錄檔摘要視窗中。  
   
-     **Log Source**  
-     Displays a description of the source log in which the event is captured.  
+     **記錄來源**  
+     顯示擷取事件之來源記錄的描述。  
   
-     **Selected row details**  
-     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
+     **選取的資料列詳細資料**  
+     選取資料列以顯示頁面下方有關選取之事件資料列的其他詳細資料。 將資料行拖曳至方格中的新位置，以重新排序資料行。 將方格標頭中的資料行分隔線拖曳至左邊或右邊，以調整資料行大小。 在方格標頭中按兩下資料行分隔線，自動將資料行大小調整為內容寬度。  
   
-     **Instance**  
-     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
+     **執行個體**  
+     發生事件之執行個體的名稱。 顯示為 *&lt;電腦名稱*\\*執行個體名稱&gt;* 。  
   
   

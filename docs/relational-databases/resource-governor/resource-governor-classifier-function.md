@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ae4caa882a2618ea57c84a33e8c9cb7e87db7c0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099218"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903919"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,6 @@ ms.locfileid: "68099218"
 2.  LOGON 觸發程序執行  
   
 3.  分類  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  開始分類時，資源管理員就會執行分類函數並使用此函數所傳回的值，將要求傳送至適當的工作負載群組。  
   

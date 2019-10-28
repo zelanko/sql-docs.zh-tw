@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 207f8816df5cc64240d91d389f7a662688123fc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1848be82d5ed1ddfbefd693303104ac4688eb59
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140767"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909672"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,6 @@ ms.locfileid: "68140767"
     -   以滑鼠右鍵按一下 [資料收集]  ，然後按一下 [屬性]  。 在 **[一般]** 索引標籤中，指定現有的管理資料倉儲以及它安裝所在的伺服器。  
   
 6.  重複步驟 5，直到使用資料收集器的所有資料庫執行個體都設定為可將資料上傳到共用管理資料倉儲為止。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ####  <a name="Wizard"></a> 設定管理資料倉儲精靈  
  **歡迎頁面**  

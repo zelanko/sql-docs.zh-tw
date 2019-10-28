@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2dd428c7f035cf73e679bbd6c47e78f1f745457
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111818"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908445"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,6 @@ ms.locfileid: "68111818"
   
 2.  [採取更正動作](#bkmk_takeCorrectiveAction)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="bkmk_openDAC"></a> 開啟 DAC (專用管理員連接)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供專用管理員連接 (DAC)。 即使伺服器對其他用戶端連接沒有回應，系統管理員也可以使用 DAC 來存取 SQL Server 資料庫引擎的執行中執行個體，以針對伺服器上的問題進行疑難排解。 您可以透過 `sqlcmd` 公用程式與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來存取 DAC。  
   
@@ -101,7 +99,7 @@ ms.locfileid: "68111818"
   
 #### <a name="increase-available-memory"></a>增加可用的記憶體  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>提高資源集區的 MAX_MEMORY_PERCENT 值  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>提高資源集區的 MAX_MEMORY_PERCENT 值  
  如果您尚未針對記憶體中的資料表建立具名資源集區，就應該先建立集區，並且將 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫繫結至該集區。 如需如何建立 [資料庫並繫結至資源集區的指引，請參閱](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) 將包含記憶體最佳化資料表的資料庫繫結至資源集區 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 主題。  
   
  如果您的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料庫已繫結至資源集區，您應該能夠提高集區可存取的記憶體百分比。 如需變更資源集區之 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT 值的指引，請參閱 [變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) 子主題。  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a44e97d97a98b1b3f10c77ca632a67437ca48ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127225"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909504"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,8 +117,6 @@ ms.locfileid: "68127225"
 5.  啟動資料庫。  
   
 6.  您可以選擇性地備份還原的資料庫，特別是當它使用完整 (或大量記錄) 復原模式時。 若要備份資料庫，請參閱[建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  本節包含將資料庫還原成資料庫快照集的下列範例：  

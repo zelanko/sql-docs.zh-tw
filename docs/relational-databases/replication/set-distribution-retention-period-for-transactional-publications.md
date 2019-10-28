@@ -14,12 +14,12 @@ ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af504ffb4bc6b9431e1745b712abe42fa869084b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9092662f88410812bd6c1c2035e8d04cfa9dd434
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769575"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907942"
 ---
 # <a name="set-distribution-retention-period-for-transactional-publications"></a>設定交易式發行集的散發保留週期
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,8 +32,6 @@ ms.locfileid: "68769575"
 2.  若要指定最短散發保留期限，請在 **[至少]** 方塊中輸入值；若要指定最長散發期限，請在 **[但是不能超過]** 方塊中輸入值。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>另請參閱  
  [[設定散發]](../../relational-databases/replication/configure-distribution.md)   

@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac146dc20fbbf078a7f71dfdbe81b4489ea1849f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934111"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907082"
 ---
 # <a name="statistics"></a>統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "67934111"
 
 下列長條圖顯示包含六個步驟的長條圖。 第一個上限值左側的區域就是第一個步驟。
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "長條圖") 
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 針對上述每一個長條圖步驟：
 -   粗線代表上限值 (*range_high_key*) 以及其所發生的次數 (*equal_rows*)  
@@ -104,7 +104,7 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-#### <a name="autoupdatestatistics-option"></a>AUTO_UPDATE_STATISTICS 選項  
+#### <a name="auto_update_statistics-option"></a>AUTO_UPDATE_STATISTICS 選項  
  開啟自動更新統計資料選項 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) 時，查詢最佳化工具會判斷統計資料何時過期，然後在查詢使用統計資料時加以更新。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並將修改次數與某個臨界值比較，藉以判斷統計資料是否可能已經過期。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。  
   
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (截至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 會使用變更資料列的百分比作為臨界值。 與資料表中的資料列數無關。 臨界值是：
@@ -122,7 +122,7 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
  
 如需控制 AUTO_UPDATE_STATISTICS 的詳細資訊，請參閱 [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行為](https://support.microsoft.com/help/2754171) \(機器翻譯\)。
   
-#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  非同步統計資料更新選項 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 根據預設，非同步統計資料更新選項會處於關閉狀態，而查詢最佳化工具會以同步方式更新統計資料。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式所建立的統計資料。  
  
  > [!NOTE]
@@ -161,8 +161,6 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
 1.  建立索引時，查詢最佳化工具就會針對資料表或檢視表的索引建立統計資料。 這些統計資料是針對索引的索引鍵資料行所建立的。 如果索引是篩選的索引，查詢最佳化工具就會在針對篩選索引所指定的相同資料列子集上建立篩選的統計資料。 如需篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)和 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
 2.  開啟 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 時，查詢最佳化工具會針對查詢述詞中的單一資料行建立統計資料。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 對於大部分查詢而言，這兩種建立統計資料的方法可確保高品質的查詢計劃。不過，在少數情況下，您可以使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式來建立其他統計資料，以便改善查詢計劃。 這些額外的統計資料可以擷取查詢最佳化工具在建立索引或單一資料行的統計資料時無法說明的統計相互關聯。 您的應用程式可能會在資料表資料中具有其他統計相互關聯，如果它們計算成統計資料物件，就可讓查詢最佳化工具改善查詢計劃。 例如，資料列子集的篩選統計資料或查詢述詞資料行的多重資料行統計資料可能會改善查詢計劃。  
   

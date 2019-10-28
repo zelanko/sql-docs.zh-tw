@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: defa71e8650afc1ef96e750cbbeb7f7f52325272
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 67db54183f186ce5a116aada3e5f6b058abb9dc5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768678"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907119"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,8 +41,6 @@ ms.locfileid: "68768678"
 2. 在以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[設定散發]** 。
 
 3. 遵循「設定散發精靈」的指示執行下列項目： 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   - 選取「散發者」。 若要使用本機「散發者」，請選取 [ServerName 將扮演本身的散發者; SQL Server 將建立散發資料庫和記錄]  。 若要使用遠端散發者，請選取 **[使用下列伺服器做為散發者]** ，然後選取伺服器。 伺服器必須已設定為散發者，且必須先啟用發行者才能使用散發者。 如需詳細資訊，請參閱[在散發者端啟用遠端發行者 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。
 

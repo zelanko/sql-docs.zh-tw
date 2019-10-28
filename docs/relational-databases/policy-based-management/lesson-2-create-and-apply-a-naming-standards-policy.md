@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9da0204a19161b918c1a19d5babe28f707f3af52
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173655"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907054"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 課：建立和套用命名標準原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,6 @@ ms.locfileid: "72173655"
     ```  
   
 2.  在物件總管中，按一下 [資料庫]  ，然後按下 F5 重新整理資料庫的清單。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>建立 Finance 資料表條件 
 

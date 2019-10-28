@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e8e11ec0256805d8bbe4ac37234660a9ea1a050
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c468376a67b955c467177161e3ea4bd932bb25a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132214"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907024"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>檢視已儲存的追蹤 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +29,7 @@ ms.locfileid: "68132214"
   
 1.  執行 **fn_trace_getinfo** ，並指定需要其資訊的追蹤識別碼。 此函數會傳回資料表，其中列出追蹤、追蹤屬性和屬性的相關資訊。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Invoke the function this way:  
+     以下列方式叫用函數：  
   
     ```  
     SELECT *  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bcb11ef0f2c6216b26957f732e5ed34fb233cc05
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 3506974f6eb1bc22aa6a20833b9205c3507c113c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710886"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904906"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>設定合併式發行集的相容性層級
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,6 @@ ms.locfileid: "71710886"
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>設定合併式發行集的發行集相容性層級  
   
 1.  在發行者端，執行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，針對 `@publication_compatibility_level` 指定值，讓發行集與舊版的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 相容。 如需詳細資訊，請參閱[建立發行集](../../../relational-databases/replication/publish/create-a-publication.md)。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>變更合併式發行集的發行集相容性層級  
   

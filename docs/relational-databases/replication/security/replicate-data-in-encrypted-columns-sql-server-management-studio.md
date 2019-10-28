@@ -15,12 +15,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e311043882f88f7063a5709c761a88f84cb76066
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: cbaf7db0d5c0e4588f22d0048c96e1f7c88d87b0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769586"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907434"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>複寫加密資料行中的資料 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,8 +41,6 @@ ms.locfileid: "68769586"
 6.  使用與步驟 1 相同的 ALGORITHM、KEY_SOURCE 和 IDENTITY_VALUE 值，於訂閱者端重新建立對稱金鑰。  
   
 7.  存取加密的資料行資料。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  您應該使用對稱金鑰來加密資料行資料。 在發行者端和訂閱者端可以用不同方式維護對稱金鑰本身的安全性。  

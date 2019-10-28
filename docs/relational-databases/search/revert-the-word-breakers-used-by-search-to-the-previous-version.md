@@ -10,12 +10,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d66dad7c13187711cf1422c9ad932cfe0ed4ed8
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: bf635c951c4705fcb726d4122414740b5293cc47
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874901"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903804"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>將搜索所使用的斷詞工具還原為舊版
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,8 +108,6 @@ ms.locfileid: "70874901"
     >  此變更影響在目前版本和舊版中都使用 NaturalLanguage6.dll 的所有語言。  
   
 4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="nl6nl6restore"></a> 若要還原目前元件  
   

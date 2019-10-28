@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ff66ea5a2e66ddd1f416d21d32130aabce0e6507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041291"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908804"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +70,6 @@ ms.locfileid: "68041291"
 6.  或者，您可以從不同的模式清單中選取來變更復原模式。 這些選擇包括 [完整]  、[大量記錄]  或 [簡單]  。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

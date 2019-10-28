@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6cf247d20cdc25fe18e5d263b62fd87b561b5b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69d5766b7431f1352b292306f595033a3070053b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055527"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909635"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>使用 SQL Server Profiler 建立 SQL 追蹤收集組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,8 +25,6 @@ ms.locfileid: "68055527"
 1.  建立和匯出 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤。  
   
 2.  根據匯出的追蹤，編寫新收集組的指令碼。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  下列程序的狀況包含收集需要 80 毫秒或更長時間才能完成之任何預存程序的相關資訊。 若要完成這些程序，您應該要能夠：  
   

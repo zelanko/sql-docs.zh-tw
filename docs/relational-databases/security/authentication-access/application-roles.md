@@ -21,12 +21,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b26765281f650a73e7c21e40ce63916eeb9fa21f
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68841588"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903783"
 ---
 # <a name="application-roles"></a>應用程式角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68841588"
 4.  若應用程式角色的名稱與密碼是有效的，則會啟用該應用程式角色。  
   
 5.  此時連接會遺失使用者的權限，並假設應用程式角色的權限。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  透過應用程式角色取得的權限在連接階段中仍為有效。  
   

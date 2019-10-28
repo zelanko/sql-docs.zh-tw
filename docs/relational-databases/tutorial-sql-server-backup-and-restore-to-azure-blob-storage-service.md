@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d04c2fb2fd405a582cb6c94b59bdca83ba3dbb5
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: cedb601d9a16bc7562463e78f2d1a6296b687f3d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239397"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906982"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>快速入門：SQL 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,9 +29,6 @@ ms.locfileid: "72239397"
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) 或使用透過 [Azure SQL 虛擬機器](/azure/sql-database/sql-database-managed-instance-configure-vm)或[點對站](/azure/sql-database/sql-database-managed-instance-configure-p2s)建立的連線來部署[受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started)。
 - 將使用者帳戶指派給 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 的角色，並授與 [ALTER ANY CREDENTIAL](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 權限。 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
 ## <a name="create-azure-blob-container"></a>建立 Azure Blob 容器
 容器會提供一組 Blob 的群組。 所有 Blob 都必須位於容器中。 儲存體帳戶可以包含不限數目的容器，但是至少必須具有一個容器。 容器可以儲存不限數目的 Blob。 

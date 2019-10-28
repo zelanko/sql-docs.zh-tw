@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8c7c50136b05c94bacda9d400bf8afd5d8640f0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138764"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908924"
 ---
 # <a name="file-restores-full-recovery-model"></a>檔案還原 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,8 +75,6 @@ ms.locfileid: "68138764"
      您必須還原在檔案備份之後建立的交易記錄備份，才能讓資料庫恢復一致的狀態。 交易記錄備份可以快速地向前復原，因為只需套用適用於還原檔案的變更。 還原個別檔案比還原整個資料庫更為理想，因為不需複製未受損的檔案，便可接著向前復原。 不過，仍然需要讀取記錄備份的整個鏈結。  
   
 5.  復原資料庫。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  檔案備份可以用來將資料庫還原至較早的時間點。 若要這樣做，您必須還原整個檔案備份組，然後依序還原交易記錄備份，以回到上一次還原的檔案備份結尾之後的目標時間點。 如需時間點還原的詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  

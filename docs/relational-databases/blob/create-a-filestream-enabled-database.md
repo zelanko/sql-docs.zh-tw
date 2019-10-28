@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 45a26647502841a87f6ba525e0296903cf64ef6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 033e90cbccbb6db9a454183ae982ed2a898c2054
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085423"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908756"
 ---
 # <a name="create-a-filestream-enabled-database"></a>建立啟用 FILESTREAM 的資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,6 @@ ms.locfileid: "68085423"
     >  在這個指令碼中，目錄 C:\Data 必須存在。  
   
 3.  若要建立資料庫，請按一下 **[執行]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>範例  
  下列程式碼範例會建立名為 `Archive`的資料庫。 此資料庫包含三個檔案群組： `PRIMARY`、 `Arch1`和 `FileStreamGroup1`。 `PRIMARY` 和 `Arch1` 是一般的檔案群組，不能包含 FILESTREAM 資料。 `FileStreamGroup1` 則為 `FILESTREAM` 檔案群組。  

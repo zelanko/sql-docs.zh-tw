@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4fafacc6dc11415ed691fdf64b494daebc8cc64
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 61d240262d491976eaa9e591fa15e4ffd1f1258e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176351"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904173"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,8 +40,6 @@ ms.locfileid: "70176351"
 1.  匯出會在匯出檔 (BACPAC 檔案) 中建置 DAC 定義，其方式相當於 DAC 擷取在 DAC 套件檔案中建置 DAC 定義。 匯出的 DAC 定義包含目前資料庫中的所有物件。 如果匯出程序是針對原本從 DAC 部署的資料庫來執行，並已在部署之後直接變更資料庫，則匯出的定義會符合資料庫中所設定的物件，而非原始 DAC 中所定義的物件。  
   
 2.  匯出會大量複製資料庫中所有資料表的資料，並將資料合併至匯出檔。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  匯出程序會將 DAC 版本設定為 1.0.0.0，而將匯出檔中的 DAC 描述設定為空字串。 如果已從 DAC 部署資料庫，則匯出檔中的 DAC 定義會包含指定給原始 DAC 的名稱，否則，DAC 名稱會設定為資料庫名稱。  
   
@@ -62,11 +60,11 @@ ms.locfileid: "70176351"
   
 1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中)。  
   
-2.  在物件總管 中，展開您要匯出 DAC 的執行個體來源節點。  
+2.  在物件總管  中，展開您要匯出 DAC 的執行個體來源節點。  
   
 3.  以滑鼠右鍵按一下資料庫名稱。  
   
-4.  按一下 [工作]，然後選取 [匯出資料層應用程式...]  
+4.  按一下 [工作]  ，然後選取 [匯出資料層應用程式...]   
   
 5.  完成精靈對話方塊：  
   
@@ -89,26 +87,26 @@ ms.locfileid: "70176351"
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
- **下一步** - 繼續進行 [Select DAC Package (選取 DAC 封裝)] 頁面。  
+ **下一步** - 繼續進行 [Select DAC Package (選取 DAC 封裝)]  頁面。  
   
  **取消** - 取消作業並關閉精靈。  
   
 ##  <a name="Export_settings"></a> 匯出設定頁面  
  請使用此頁面來指定要建立 BACPAC 檔案的位置。  
   
--   **儲存至本機磁碟** - 在本機電腦的目錄中建立 BACPAC 檔案。 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
+-   **儲存至本機磁碟** - 在本機電腦的目錄中建立 BACPAC 檔案。 按一下 [瀏覽...]  巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
   
 -   **儲存至 Azure** - 在 Azure 容器中建立 BACPAC 檔案。 您必須連線到 Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 請注意，暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
- 若要指定要匯出的資料表子集，請使用 [進階] 選項。  
+ 若要指定要匯出的資料表子集，請使用 [進階]  選項。  
   
 ##  <a name="Validation"></a> 驗證頁面  
- 您可以使用 [驗證] 頁面來檢閱封鎖作業的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 [重新執行驗證] 確定驗證成功。  
+ 您可以使用 [驗證] 頁面來檢閱封鎖作業的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 [重新執行驗證]  確定驗證成功。  
   
- 若要繼續進行，請按 **[下一步]**。  
+ 若要繼續進行，請按 **[下一步]** 。  
   
 ##  <a name="Summary"></a> 摘要頁面  
- 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯出作業，請按一下 [完成]。 若要取消匯出作業並結束精靈，請按一下 [取消]。  
+ 您可以使用此頁面來檢閱作業的指定來源和目標設定。 若要使用指定的設定來完成匯出作業，請按一下 [完成]  。 若要取消匯出作業並結束精靈，請按一下 [取消]  。  
   
 ##  <a name="Progress"></a> 進度頁面  
  此頁面會顯示進度列，指出作業的狀態。 若要檢視詳細狀態，請按一下 **[檢視詳細資料]** 選項。  

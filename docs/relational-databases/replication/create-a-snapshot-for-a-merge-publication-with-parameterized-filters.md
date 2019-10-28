@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ae8e8c1394372347f9e26bb7163f0e1cf0bf47e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: a803d848d12965f7e0c0b167bf3a2f20a235ecdc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846749"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907385"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,6 @@ ms.locfileid: "70846749"
 1.  使用「新增發行集精靈」建立合併發行集，並在精靈的 **[加入篩選]** 頁面上，指定一個或多個參數化資料列篩選器。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 2.  產生發行集的結構描述快照集。 依預設，當您完成「新增發行集精靈」時，便會產生結構描述快照集；您也可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]產生結構描述快照集。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-generate-a-schema-snapshot"></a>若要產生結構描述快照集  
   

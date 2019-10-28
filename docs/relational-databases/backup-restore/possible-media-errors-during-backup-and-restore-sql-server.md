@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ba9cba3a56a76fee51b6b21aec99f8019b59157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79bfbeec5a22dd387b97977d12b95a0e232125aa
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033640"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908863"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在備份和還原期間可能的媒體錯誤 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "68033640"
 2.  不論頁面總和檢查碼是否存在，BACKUP 都會產生備份資料流的個別備份總和檢查碼。 還原作業可以選擇性地利用備份總和檢查碼來驗證備份是否損毀。 備份總和檢查碼儲存在備份媒體中，而不是儲存在資料庫頁面中。 在還原時，您可以選擇性地使用備份總和檢查碼。  
   
 3.  備份組會以旗標標示為包含備份總和檢查碼 (在 **msdb..backupset** 的 **has_backup_checksums**資料行中)。 如需詳細資訊，請參閱 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  在還原作業期間，如果備份媒體上有備份總和檢查碼，依預設 RESTORE 和 RESTORE VERIFYONLY 陳述式都會驗證備份總和檢查碼及分頁總和檢查碼。 如果沒有備份總和檢查碼，這二種還原作業仍會繼續進行，但不會執行任何驗證；這是因為沒有備份總和檢查碼，還原作業就不能確實地驗證分頁總和檢查碼。  
   

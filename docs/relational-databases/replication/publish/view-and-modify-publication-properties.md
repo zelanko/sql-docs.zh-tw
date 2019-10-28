@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 76f5014ec7a7c06496c3850354da528da89e67b2
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: ff07e2eaa15b76fe45a3f3ef7128a47e9415a4d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846594"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908054"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,8 +90,6 @@ ms.locfileid: "70846594"
 3.  以滑鼠右鍵按一下發行集，然後按一下 **[屬性]** 。  
   
 4.  必要時修改任何屬性，然後按一下 **[確定]** 。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>若要在複寫監視器中檢視和修改發行集屬性  
   

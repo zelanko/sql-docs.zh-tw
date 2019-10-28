@@ -15,12 +15,12 @@ ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e62e76777e5f1f4e0cf410311dc7446fe5c7a452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b35c409389fa657e45ed3fcee57b28c3229dbbd9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069347"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907900"
 ---
 # <a name="delete-foreign-key-relationships"></a>刪除外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ ms.locfileid: "68069347"
 2.  以滑鼠右鍵按一下條件約束，然後按一下 [刪除]  。  
   
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

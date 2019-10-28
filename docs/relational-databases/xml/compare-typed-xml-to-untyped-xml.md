@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30b98cc763b1bfdd47a1d560639a9a6dff5cd49a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112884"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907201"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,14 +68,14 @@ ms.locfileid: "68112884"
   
  在下列範例中，會使用兩段式命名慣例來指定 XML 結構描述集合名稱。 第一個部分是結構描述名稱，而第二個部分是 XML 結構描述集合名稱。  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>範例將結構描述集合與 xml 類型變數產生關聯  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>範例：將結構描述集合與 xml 類型變數產生關聯  
  下列範例會建立一個 **xml** 類型變數，並將結構描述集合與此變數產生關聯。 範例中指定的結構描述集合已經匯入 **AdventureWorks** 資料庫。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>範例指定 xml 類型資料行的結構描述  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>範例：指定 xml 類型資料行的結構描述  
  下列範例會建立具有 **XML** 類型資料行的資料表，並為此資料行指定結構描述：  
   
 ```  
@@ -84,7 +84,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>範例將 xml 類型的參數傳遞給預存程序  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>範例：將 xml 類型的參數傳遞給預存程序  
  下列範例會將 **XML** 類型的參數傳遞給預存程序，並為此變數指定結構描述：  
   
 ```  
@@ -106,7 +106,7 @@ AS
   
  在資料類型階層中， **XML** 資料類型會出現在 **sql_variant** 和使用者定義類型的下面，但會出現在任何內建類型的上面。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例指定 Facet 來約束具類型的 xml 資料行  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例：指定 Facet 來約束具類型的 xml 資料行  
  對於具類型的 **XML** 資料行而言，您可以約束資料行，讓儲存在其中的每個執行個體只能有單一的最上層元素。 作法是，在建立資料表時指定選擇性的 `DOCUMENT` Facet，如下列範例所示：  
   
 ```  
@@ -153,8 +153,6 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  在下列情況下，任何小於 1 年 1 月 1 日的 **xs:date** 或 **xs:dateTime** 值都會導致發生執行階段錯誤：當重建索引時，或是針對包含該值的 XML 資料類型執行 XQuery 或 XML-DML 陳述式時。  
   
 2.  **xs:date** 或 **xs:dateTime** Facet 中的任何負數年份或是 XML 結構描述集合中的預設值，將會自動更新為基底 **xs:date** 或 **xs:dateTime** 類型所允許的最小值 (例如 **xs:dateTime**的 0001-01-01T00:00:00.0000000Z)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  請注意，您仍然可以使用簡單 SQL SELECT 陳述式來擷取整個 XML 資料類型，即使它包含負數年份。 建議您使用新支援範圍中的年份來取代負數年份，或是將元素或屬性的類型變更為 **xs:string**。  
   

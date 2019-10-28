@@ -24,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3115fa833f657236939200b262c862182d9117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132185"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903873"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,8 +207,6 @@ ALTER FULLTEXT INDEX ON Production.Document
     -   若要**移除**現有排程，請選取現有排程，然後按一下 [刪除]  。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="crawl"></a> 為全文檢索母體擴展 (搜耙) 中的錯誤疑難排解  
 搜耙發生錯誤時，「全文檢索搜尋」搜耙記錄功能會建立並維護搜耙記錄檔，此記錄檔是一個純文字檔。 每個搜耙記錄檔都對應至特定的全文檢索目錄。 所指定執行個體 (在此範例中為預設執行個體) 的編目記錄檔預設位於 `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` 資料夾中。

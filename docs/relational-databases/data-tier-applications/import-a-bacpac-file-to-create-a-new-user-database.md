@@ -25,12 +25,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e7a72be3cbf18cd2adf821f3310a1ea6801ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88f53ba0372b56fce72a23fe33790c822729d8d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134773"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908484"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "68134773"
 1.  匯入會使用儲存在匯出檔案中的 DAC 定義，建立新的 DAC 及相關聯的資料庫，其方式相當於 DAC 部署從 DAC 封裝檔案中的定義建立新的 DAC。  
   
 2.  匯入會從匯出檔案大量複製資料。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="sql-server-utility"></a>SQL Server 公用程式  
  如果您將 DAC 匯入至資料庫引擎執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  

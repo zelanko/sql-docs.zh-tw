@@ -23,12 +23,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1c5a46dda4c9b2c5793ff62aaf6eb8606efbe9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095285"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903814"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68095285"
 4. **斷詞工具的語言。** 從下拉式清單中選取語言。 將使用這個選項來識別索引的正確斷詞工具。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用斷詞工具來識別全文檢索索引資料中的字詞界限。  
   
 5.  **類型資料行。** 選取資料行的名稱，其中包含要建立全文檢索索引之資料行的文件類型。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **注意：** 只有在 [可用的資料行]  資料行中命名的資料行類型為 **varbinary(max)** 或 **image** 時，才會啟用 [類型資料行]  。  
   
@@ -82,7 +80,7 @@ ms.locfileid: "68095285"
 
      **選取目錄：** 從清單中選取全文檢索目錄。 資料庫的預設目錄是清單中預設選取的項目。 如果沒有任何目錄可以使用，系統就會停用此清單，而且會核取及停用 **[建立新的目錄]** 核取方塊。  
   
-  或
+  OR
   
  10. **[建立新的目錄]**
  - 選取全文檢索目錄。  

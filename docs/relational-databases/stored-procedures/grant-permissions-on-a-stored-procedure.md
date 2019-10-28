@@ -12,12 +12,12 @@ ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d662d90cf625921f2dc8eb9d1e7d45c14bb99406
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50a7df8f2c9479c957158e96f597655c72ac7b2c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934030"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909720"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授與預存程序的權限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,8 +67,6 @@ ms.locfileid: "67934030"
 7.  按一下 **[瀏覽]** 顯示使用者或角色的清單。 選取要獲得權限授與的使用者或角色。  
   
 8.  在 **[明確權限]** 方格中，選取要授與指定使用者或角色的權限。 如需權限的說明，請參閱 [權限 &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  選取 **[授與]** 表示要將指定的權限提供給被授與者。 選取 **[可授與]** 則表示授與者也能夠將指定的權限授與給其他主體。  
   

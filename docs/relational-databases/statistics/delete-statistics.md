@@ -13,12 +13,12 @@ ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67af7654f2148f3d4e6409eb49701e58a194fa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 588531a01a12dcec1a4832241e29dab38841f944
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091400"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906314"
 ---
 # <a name="delete-statistics"></a>刪除統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,8 +66,6 @@ ms.locfileid: "68091400"
 5.  以滑鼠右鍵按一下您想要刪除的統計資料物件，然後選取 [刪除]  。  
   
 6.  在 **[刪除物件]** 對話方塊中，確定已選取正確的統計資料，然後按一下 **[確定]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

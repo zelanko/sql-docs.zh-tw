@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1f0ae81c7b58fde86de13bc7cdd83451592183ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ebda9e472f2b276b66d393a808aaac3e8b595b1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946820"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907624"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>啟用或停用計畫指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "67946820"
 3.  以滑鼠右鍵按一下您想要停用或啟用的計畫指南，然後選取 [停用]  或 [啟用]  。  
   
 4.  在 **[停用計畫指南]** 或 **[啟用計畫指南]** 對話方塊中，確認選擇的動作已成功，然後按一下 **[關閉]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>若要停用或啟用資料庫中的所有計畫指南  
   

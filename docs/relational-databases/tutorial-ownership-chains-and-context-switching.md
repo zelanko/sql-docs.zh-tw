@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4795fd4ff2cc6c2c267e132062960ec492353cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f010b08f4e9bb7687d45175a70f8d619758e561
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138394"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906998"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>教學課程：擁有權鏈結和環境切換
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,6 @@ ms.locfileid: "68138394"
 2.  建立預存程序用於存取訂單資料。   
 3.  透過預存程序存取資料。  
 4.  重設環境。  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 此範例會在每個程式碼區塊中各行附上說明。 若要複製整個範例，請參閱本教學課程結尾處的＜ [完整範例](#CompleteExample) ＞一節。
 

@@ -13,12 +13,12 @@ ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0f7cca09018f9486c831e3803aedb5c969c422d1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7a1be23bebd3055c6c8e40664d37d666a4f09467
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769496"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908375"
 ---
 # <a name="sort-columns"></a>排序資料行
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68769496"
 1.  在方格的第一個資料列中，從 **[資料行名稱]** 資料行中選取 **[狀態]** ，然後從 **[排序順序]** 資料行中選取值。  
   
 2.  在方格的第二個資料列中，從 **[資料行名稱]** 資料行中選取 **[連接類型]** ，然後從 **[排序順序]** 資料行中選取值。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="options"></a>選項。  
  **[狀態]**  

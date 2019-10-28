@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d2fd69c58f9572a479e4ba95fab1d1af9e0214be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4314dbd1ab80fe8a26a1c6fa2b2429b68c6645fa
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937670"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908894"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>移除無用的檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,8 +78,6 @@ ms.locfileid: "67937670"
 5.  選取 **[檔案群組]** 頁面。  
   
 6.  在 **[資料列]** 方格中，選取要刪除的檔案群組，按一下 **[移除]** ，然後按一下 **[確定]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

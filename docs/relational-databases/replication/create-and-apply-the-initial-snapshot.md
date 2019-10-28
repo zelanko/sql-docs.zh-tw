@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 11628e5b490c30ef64329f6b9d06aee1b6c10fa9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846706"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908286"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "70846706"
     >  快照集代理程式必須有您指定之目錄的寫入權限，而散發代理程式或合併代理程式則必須有讀取權限。 如果使用提取訂閱，您必須指定一個共用目錄作為通用命名慣例 (UNC) 路徑，例如 \\\computername\snapshot。 如需詳細資訊，請參閱[保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-snapshot"></a>建立快照集
 根據預設，如果 SQL Server Agent 正在執行，則在使用「新增發行集精靈」建立發行集之後，「快照集代理程式」會立即產生快照集。 隨後，「散發代理程式」(針對快照式複寫和異動複寫) 或「合併代理程式」(針對合併訂閱) 預設會為所有訂閱套用該快照集。 也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和複寫監視器來產生快照集。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
@@ -136,7 +134,7 @@ ms.locfileid: "70846706"
   
     -   **-DistributorLogin**    
     -   **-DistributorPassword**   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**    
+    -   **-DistributorSecurityMode** =  **\@publisher_security_mode**    
     -   **-PublisherLogin**    
     -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** =  **@publisher_security_mode**  

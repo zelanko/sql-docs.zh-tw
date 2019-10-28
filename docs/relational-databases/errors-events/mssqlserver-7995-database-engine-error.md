@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8e8c1f982bfc912cac76207d81178037fb320f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16f2bebd761898fad44cd19c78c02470420b6d18
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007043"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906555"
 ---
-# <a name="mssqlserver7995"></a>MSSQLSERVER_7995
+# <a name="mssqlserver_7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -40,8 +40,6 @@ DBCC CHECKDB 處理序由下列三個階段組成：
 2.  系統資料表一致性的檢查。 這相當於針對必要的系統基底資料表，執行小型清單的 DBCC CHECKTABLE。  
   
 3.  完整資料庫一致性的檢查。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 MSSQLEngine_7995 在第 2 階段引發，指出 DBCC CHECKDB 已經找到命令無法修復或尚未指定 REPAIR 的錯誤。 DBCC CHECKDB 無法繼續進行第 3 階段，因為有問題的系統基底資料表儲存資料庫中所有物件的中繼資料，或是系統基底資料表已損毀。  
   

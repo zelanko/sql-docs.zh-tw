@@ -3,16 +3,16 @@ title: Linux 上的 SQL Server 常見問題集
 description: 本文提供 SQL Server 在 Linux 上執行的常見問題解答。
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952636"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72929911"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 常見問題集 (FAQ)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67952636"
 
 1. **Linux 上的 SQL Server 與 Windows 上的相同嗎？**
 
-   SQL Server 的核心資料庫引擎在 Linux 和 Windows 上都相同。 不過，有些功能目前在 Linux 上不支援。 如需 Linux 上不支援的功能清單，請參閱[不支援的功能與服務](sql-server-linux-release-notes.md#Unsupported)。 另請檢閱[已知問題](sql-server-linux-release-notes.md#known-issues)。 除了這些清單上所指定的之外，其他 SQL Server 功能與服務皆在 Linux 上支援。
+   SQL Server 的核心資料庫引擎在 Linux 和 Windows 上都相同。 不過，有些功能目前在 Linux 上不支援。 如需 Linux 上不支援的功能清單，請參閱[不支援的功能與服務](sql-server-linux-editions-and-components-2019.md#Unsupported)。 另請檢閱[已知問題](sql-server-linux-release-notes.md#known-issues)。 除了這些清單上所指定的之外，其他 SQL Server 功能與服務皆在 Linux 上支援。
 
 1. **SQL Server 的支援原則為何？**
 

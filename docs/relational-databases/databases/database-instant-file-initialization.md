@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ea9ab84a59fd020a7dc5c67b6ad74630e113ee55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037597"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909073"
 ---
 # <a name="database-file-initialization"></a>資料庫檔案初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68037597"
 5.  按一下 [套用]  ，然後關閉所有 [本機安全性原則]  對話方塊。  
 
 1. 重新啟動 SQL Server 服務。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此權限可在安裝期間進行安裝時授與給服務帳戶。 如果使用[命令提示字元安裝](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)，請新增 /SQLSVCINSTANTFILEINIT 引數，或在[安裝精靈](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中核取 [對 SQL Server Database Engine 服務授與「執行磁碟區維護工作」權限] 方塊  。

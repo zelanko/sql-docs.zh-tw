@@ -17,12 +17,12 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 086cb367b0ca533fcdb54ae815ccda1c3ba0b7e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cb02f0cbb395b8e3f730e62139eb7b7d89b4c96
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024925"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908112"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -125,8 +125,6 @@ ms.locfileid: "68024925"
 9. 在 [篩選]  頁面的 [篩選運算式]  底下，輸入要用來建立篩選索引的 SQL 運算式。  
   
 10. 按一下 [確定]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

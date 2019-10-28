@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a1a0b084175de3e06eb69f245c3c634c12dd8364
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 93ee480a595178627f65613b502c10e44dffc8e3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846779"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907812"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,8 +70,6 @@ ms.locfileid: "70846779"
 ###  <a name="Access_SSMS"></a> 若要透過 SQL Server Management Studio 存取代理程式設定檔對話方塊  
   
 1.  在 [散發者屬性 - \<散發者>]  對話方塊的 [一般]  頁面上，按一下 [設定檔預設值]  。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>若要透過複寫監視器存取代理程式設定檔對話方塊  
   

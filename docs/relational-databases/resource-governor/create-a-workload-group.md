@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6fa3223751de2b8b9019cd48473dc0b07d9d72d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b43793d8d43ca56d8001b986ecdb02af4b463e1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136884"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903959"
 ---
 # <a name="create-a-workload-group"></a>建立工作負載群組
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,8 +56,6 @@ ms.locfileid: "68136884"
 6.  在資料列中按一下或按兩下要變更預設值的任何其他資料格，然後輸入新值。  
   
 7.  若要儲存變更，請按一下 **[確定]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 建立工作負載群組  
  **若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

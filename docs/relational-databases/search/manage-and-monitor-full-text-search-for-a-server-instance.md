@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68d1ea1ee1adc7c5126606bd0cf72ca8e54a725c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8926e74c96c6da9796466a39c1a9ea3cb2bd953d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132264"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903833"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,8 +38,6 @@ ms.locfileid: "68132264"
 1.  在物件總管中，以滑鼠右鍵按一下伺服器，然後按一下 [屬性]  。  
   
 2.  在 [伺服器屬性]  對話方塊中，按一下 [進階]  頁面檢視全文檢索搜尋的相關伺服器資訊。 全文檢索屬性如下所示：  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   **預設全文檢索語言**  
   

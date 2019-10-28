@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e5ece02e70639ce91aeec72827838c9ad8d7ab8d
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846698"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908264"
 ---
 # <a name="delete-a-push-subscription"></a>刪除發送訂閱
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ ms.locfileid: "70846698"
 4.  以滑鼠右鍵按一下訂閱，然後按一下 **[刪除]** 。  
   
 5.  在確認對話方塊中，選取是否要連接訂閱者以刪除訂閱資訊。 如果您清除 **[連接到訂閱者]** 核取方塊，則稍後應連接到「訂閱者」以刪除資訊。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-delete-a-push-subscription-at-the-subscriber"></a>若要在訂閱者端刪除發送訂閱  
   

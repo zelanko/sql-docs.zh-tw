@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 13016fa1baf3dd01f7e00c11a322f10ba720c57c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b746c7ed116627f8fe57cdb43724c619eeb5dd4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099237"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903924"
 ---
 # <a name="disable-resource-governor"></a>停用資源管理員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ ms.locfileid: "68099237"
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]** 。  
   
 2.  以滑鼠右鍵按一下 [資源管理員]  ，然後按一下 [停用]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="RGOffProp"></a> 使用資源管理員屬性停用資源管理員  
  **若要使用資源管理員屬性頁面來停用資源管理員**  

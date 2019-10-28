@@ -16,12 +16,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1bc6b8506244b16a1c9592ed59e91684494bfa1e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768546"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908310"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 複寫發行者屬性對話方塊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68768546"
   
 1.  在發行者上停用發行。 如需詳細資訊，請參閱[停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)。    
 2.  重新設定發行和散發。 如需詳細資訊，請參閱 [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="distributor"></a>散發者 
 **[發行者屬性]** 對話方塊可讓您檢視和修改與發行者及其散發者之間的關聯性相關聯的屬性。  

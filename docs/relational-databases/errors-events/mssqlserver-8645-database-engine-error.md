@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a00288d4aa7d98ac74be6703cc0754ea4bedb798
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d867839a68e3b6fc595f0753872b8224f3bf51fb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132301"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908322"
 ---
-# <a name="mssqlserver8645"></a>MSSQLSERVER_8645
+# <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細資料  
@@ -57,8 +57,6 @@ ms.locfileid: "68132301"
 4.  當您看到這些錯誤訊息時，請觀察 DBCC MEMORYSTATUS 輸出以及它變更的方式。  
   
 5.  檢查工作負載 (例如，並行工作階段的數目以及目前正在執行的查詢數)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 下列動作可以為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供更多可用的記憶體：  
   

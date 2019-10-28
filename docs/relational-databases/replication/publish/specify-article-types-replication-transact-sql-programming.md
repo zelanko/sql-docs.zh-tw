@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fab59450a2403eadc080a5f246c0911b164eba3a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: cfa3710648e381dbd142c57180bf5395d9eee18f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710812"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904629"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>指定發行項類型 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "71710812"
 2.  針對 `logbased manualboth` 和 `logbased manualfilter` 發行項，請執行 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 來產生用於水平篩選之發行項的篩選預存程序。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
 3.  針對 `logbased manualboth`、`logbased manualview` 和 `logbased manualfilter` 發行項，請執行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 來產生定義垂直篩選之發行項的檢視。 如需詳細資訊，請參閱 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>在交易式或快照式發行集中發行檢視或索引檢視發行項  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be669093b3899744f8019eeb7c965b48dc4665bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50cdd9031d309a1bbfd6f4229749b5cc5de56125
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009184"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906880"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>檢視原則式管理 Facet 的屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,4 @@ ms.locfileid: "68009184"
 5.  以滑鼠右鍵按一下您想要檢視其屬性的 Facet，然後選取 [屬性]  。 如需有關 [Facet 屬性 - _Facet 名稱_]  對話方塊中可用選項的詳細資訊，請參閱 [Facet 屬性對話方塊，一般頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)、[Facet 屬性對話方塊，相依原則頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)和 [Facet 屬性對話方塊，相依條件頁面](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)。  
   
 6.  完成後，請按一下 **[關閉]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

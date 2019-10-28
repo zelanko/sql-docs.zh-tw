@@ -17,12 +17,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16625dea87649bde97a854a507ab89831b7681e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113391"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909789"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式儲存執行計畫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68113391"
      > [!NOTE] 
      > SHOWPLAN_XML 會產生查詢的編譯階段查詢執行計畫資訊，但不會執行查詢。 這就是所謂的**估計**執行計畫。 STATISTICS XML 會產生查詢的執行階段查詢執行計畫資訊，並且執行查詢。 這就是所謂的**實際**執行計畫。  
   
-3.  執行查詢。 範例  
+3.  執行查詢。 範例：  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -71,8 +71,6 @@ ms.locfileid: "68113391"
 5.  在 [儲存 \<方格或文字> 結果]   對話方塊的 [存檔類型]  方塊中，按一下 [所有檔案 (\*.\*)]  。  
   
 6.  在 [檔案名稱]  方塊中，提供格式為 \<名稱 **>.sqlplan** 的名稱，然後按一下 [儲存]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>若要使用 SQL Server Management Studio 選項來儲存執行計畫  
   

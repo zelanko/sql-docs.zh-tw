@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d901c19587db97532be101ff66af69a1808463f3
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289309"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909543"
 ---
 # <a name="tempdb-database"></a>TempDB 資料庫
 
@@ -47,8 +47,6 @@ ms.locfileid: "72289309"
   - 由以下這類功能的資料修改交易所產生的資料列版本：線上索引作業、Multiple Active Result Set (MARS) 和 AFTER 觸發程序。  
   
 至少會記錄 **TempDB** 內的作業，以便回復交易。 每次啟動**時都會重新建立** TempDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這樣系統永遠會以乾淨的資料庫複本啟動。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此， **TempDB** 中的任何資料都不會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個工作階段儲存到其他的工作階段。 **TempDB**不允許進行備份和還原作業。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server 中的 TempDB 實體屬性
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a7e63d314b11d19151cadf4acff5a35373e49205
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067396"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908083"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,6 @@ GO
 2.  在 [進階]  頁面的 [內含項目]  區段中，將 [啟用自主資料庫]  選項設定為 [True]  。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="convert"></a> 將資料庫轉換成部分自主資料庫  
  您可以透過變更 [內含項目]  選項，將資料庫轉換成自主資料庫。  

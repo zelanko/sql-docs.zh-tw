@@ -14,12 +14,12 @@ ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3500552ae0dde03b7cd4b354560bc3d0857eebec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b6ccdce58ca96a26a607996943e6d48d9bac1d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050906"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909733"
 ---
 # <a name="create-synonyms"></a>建立同義字
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,28 +54,26 @@ ms.locfileid: "68050906"
   
 3.  在 **[加入新的同義字]** 對話方塊中，輸入下列資訊。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     **Synonym name**  
-     Type the new name you will use for this object.  
+     **同義字名稱**  
+     輸入用於此物件的新名稱。  
   
-     **Synonym schema**  
-     Type the schema of the new name you will use for this object.  
+     **同義字結構描述**  
+     輸入用於此物件之新名稱的結構描述。  
   
-     **Server name**  
-     Type the server instance to connect to.  
+     **伺服器名稱**  
+     輸入要連接的伺服器執行個體。  
   
-     **Database name**  
-     Type or select the database containing the object.  
+     **資料庫名稱**  
+     輸入或選取含有物件的資料庫。  
   
-     **Schema**  
-     Type or select the schema that owns the object.  
+     **結構描述**  
+     輸入或選取擁有物件的結構描述。  
   
-     **Object type**  
-     Select the type of object.  
+     **物件類型**  
+     選取物件的類型。  
   
-     **Object name**  
-     Type the name of the object to which the synonym refers.  
+     **物件名稱**  
+     輸入同義字所參考之物件的名稱。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 726b9c7ab8e5eddde8fe4b4ab7b545dda35cad1e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ef4222b866be7979410f6a3f97dce8a4fc24ecd7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710640"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909423"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 設定和安全性
 
@@ -168,8 +168,6 @@ SQL Server 必須至少是 SQL Server 2016 SP1 CU7、SQL Server 2016 SP2 或 SQL
    |7|yarn-site.xml yarn。|yarn.resourcemanager.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： yarn/_HOST@YOUR-REALM.COM|  
 
 4. 建立資料庫範圍的認證物件，以指定每個 Hadoop 使用者的驗證資訊。 請參閱 [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md)(PolyBase T-SQL 物件)。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="next-steps"></a>後續步驟  
 

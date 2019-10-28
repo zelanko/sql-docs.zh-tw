@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7012ae6863394e6895a192f9ec7df3d8ceea3ee0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028810"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909682"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -89,8 +89,6 @@ ms.locfileid: "69028810"
    ```
 
 4. 執行下列命令來尋找 HGS 電腦的 IP 位址。 儲存此 IP 位址，供後續步驟使用。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```powershell
    Get-NetIPAddress  

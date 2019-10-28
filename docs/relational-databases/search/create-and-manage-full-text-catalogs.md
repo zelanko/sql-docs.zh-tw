@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 085e17c420b1edad10b988bbba1a15a339977624
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082963"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903856"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ GO
     >  全文檢索目錄識別碼從 00005 開始，每次新增一個目錄時識別碼便增加一號。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="props"></a> 取得全文檢索目錄的屬性  
 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式 **FULLTEXTCATALOGPROPERTY** 取得各種全文檢索目錄相關屬性的值。 如需詳細資訊，請參閱 [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)。

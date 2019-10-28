@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 5398b371ea4c969fedf54502d160ebd183cc2bdb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278761"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908854"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>還原檔案和檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,8 +137,6 @@ ms.locfileid: "70278761"
     |**還原成**|還原資料庫檔案的完整路徑。 若要指定新的還原檔案，請按一下文字方塊並編輯建議的路徑與檔案名稱。 變更 **[還原成]** 資料行中的路徑或檔案名稱相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中的 MOVE 選項。|  
   
 11. **[復原狀態]** 面板可決定資料庫在還原作業之後的狀態。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   **回復未認可的交易，讓資料庫保持備妥可用。無法還原其他交易記錄。(RESTORE WITH RECOVERY)**  
   復原資料庫。 這是預設行為。 只有在您要立即還原所有必要的備份時，才選擇這個選項。 此選項相當於在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中指定 WITH RECOVERY。  

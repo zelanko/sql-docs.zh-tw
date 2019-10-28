@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a77c321f5ba63e7c6db3d1aac47b6ad4b0c2027a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020027"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907192"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68020027"
 3.  在「 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」上安裝 Oracle 用戶端軟體和 OLE DB 提供者，然後停止並重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 如果「散發者」在 64 位元平台上執行，則必須使用 Oracle OLE DB 提供者的 64 位元版本。  
   
 4.  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端將 Oracle 資料庫設為「發行者」。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援下列交易式與快照式複寫的異質性情況：  
   

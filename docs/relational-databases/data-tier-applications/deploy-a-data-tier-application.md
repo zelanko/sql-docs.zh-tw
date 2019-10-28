@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7dcb81e48ddd4861e3f89547280b372df4c56ec3
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
+ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72359542"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907892"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,8 +66,6 @@ ms.locfileid: "72359542"
 2.  以滑鼠右鍵按一下 [資料庫]  節點，然後選取 [部署資料層應用程式…]   
   
 3.  完成精靈對話方塊，然後按一下 [完成]。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 進一步了解下面的某些精靈頁面： 
      

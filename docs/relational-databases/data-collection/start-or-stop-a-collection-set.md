@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 280fd8cd33893dc62afd129c2d3b55e75ec22b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8c7429c9352ca7f488317547eb082532c3916eb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133628"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909644"
 ---
 # <a name="start-or-stop-a-collection-set"></a>啟動或停止收集組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,7 @@ ms.locfileid: "68133628"
   
 2.  以滑鼠右鍵按一下您要啟動的收集組，然後按一下 [啟動資料收集組]  。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     A message box displays the results of this action, and a green arrow on the icon for the collection set indicates that the collection set has started.  
+     訊息方塊會顯示此動作的結果，而此收集組圖示上的綠色箭頭會指示此收集組已經啟動。  
   
 #### <a name="to-stop-a-collection-set"></a>若要停止收集組  
   

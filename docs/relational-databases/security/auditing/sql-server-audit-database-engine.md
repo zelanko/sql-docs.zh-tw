@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 46fb32fcd6f3aa0d78f748f1ef1e8ec419084f46
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878692"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903852"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -109,8 +109,6 @@ ms.locfileid: "70878692"
 3.  啟用稽核。  
   
 4.  使用 Windows [事件檢視器]  、[記錄檔檢視器]  或是 fn_get_audit_file 函數來閱讀稽核事件。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [建立伺服器稽核和資料庫稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   

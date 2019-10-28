@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b14ea78ab74849befcf966edf0c50a7e6ba30fcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115341"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908662"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>從 SQL Server 公用程式移除 SQL Server 執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68115341"
 3.  為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體指定具有系統管理員權限的認證：按一下 [連接]  、確認 [連接到伺服器]  對話方塊中的資訊，然後按一下 [連接]  。 您將會在 [移除 Managed 執行個體]  對話方塊中看到登入資訊。  
   
 4.  若要確認此作業，請按一下 [確定]  。 若要結束此作業，請按一下 [取消]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="manually-remove-a-managed-instance-of-sql-server-from-a-sql-server-utility"></a>從 SQL Server 公用程式中手動移除 SQL Server 的 Managed 執行個體  
  這個程序會從 UCP 清單檢視中移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式資料收集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體則不會解除安裝。  

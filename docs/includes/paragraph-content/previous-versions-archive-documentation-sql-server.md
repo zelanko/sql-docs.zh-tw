@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cac46ccdef1440613e4caa3e8458f03031a6ba1b
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: e80ca43ad2a16496673b20cb4144784988333a55
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969458"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72912842"
 ---
 
 我們會在一組封存網頁中累積及保留非常舊版 Microsoft SQL Server 的文件。 Bing.com 和 Google.com 之類的搜尋引擎不會處理封存網頁。 然而，您可以在我們 Docs 的 _previous-versions/sql/_ 位址上看到這些封存檔：
@@ -20,7 +20,7 @@ ms.locfileid: "68969458"
 
 我們的主要 Docs 位址仍然提供 [SQL Server 2014文件](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)。
 
-我們的主要 Docs 位址提供 [SQL Server 2019文件](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?toc=/sql/toc/toc.json&view=sql-server-ver15)。 接著使用頁面頂端附近的版本設定下拉式清單，選取另一個感興趣的版本。
+我們的主要 Docs 位址提供 [SQL Server 2019文件](https://docs.microsoft.com/sql/sql-server/index.yml?view=sql-server-ver15)。 接著使用頁面頂端附近的版本設定下拉式清單，選取另一個感興趣的版本。
 
 如需舊版 SQL Server 文件的詳細資訊，請參閱[舊版 SQL Server 文件](/sql/toc/previous-versions-sql-server)。
 

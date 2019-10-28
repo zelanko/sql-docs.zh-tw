@@ -17,12 +17,12 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d06c62167071f8044d6c732efbbb5c4590e3a37
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289319"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908131"
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,8 +100,6 @@ ms.locfileid: "72289319"
 7.  選取 **[平行處理原則的最大程度]** ，然後輸入介於 1 和 64 之間的一些值。  
   
 8.  按一下 [確定]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

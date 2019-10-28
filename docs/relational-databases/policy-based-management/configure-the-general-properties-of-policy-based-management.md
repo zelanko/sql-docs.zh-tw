@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7f7a0deba22f3799a3e4f4a293d9bb39322e2511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ac7dc65e839d875419673dbf8022fcb0f513a9d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109715"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907412"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>設定原則式管理的一般屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +70,6 @@ ms.locfileid: "68109715"
     -   當這個值為 true 時，成功和失敗的原則評估都會記錄下來。  
   
 4.  完成後，請按一下 **[確定]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

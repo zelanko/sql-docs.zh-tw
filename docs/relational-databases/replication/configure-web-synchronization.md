@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710315"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907239"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ ms.locfileid: "71710315"
 3.  將合併式發行集設定為允許 Web 同步處理。  
   
 4.  將一個或多個訂閱設定為使用 Web 同步處理。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  如果您打算複寫大量資料或使用大型資料類型 (例如 **varchar(max)** )，請參閱本主題的＜複寫大量資料＞一節。  

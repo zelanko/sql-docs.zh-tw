@@ -15,12 +15,12 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 791864168d216a3cb498b89c2e45ec4384fcdd27
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769376"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907872"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步處理發送訂閱
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68769376"
 5.  在 [檢視同步處理的狀態 - \<訂閱者>:\<訂閱資料庫>]  對話方塊中，按一下 [啟動]  。 同步處理完成後，會顯示 **[同步處理已完成]** 的訊息。  
   
 6.  按一下 [ **關閉**]。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>需要時在 Management Studio 上同步處理發送訂閱 (訂閱者端)  
   

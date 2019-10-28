@@ -17,12 +17,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad8e6a73ee20a98f9dd97d8220a592c8c1600b2e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305002"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905945"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,8 +38,6 @@ ms.locfileid: "72305002"
 3.  [FileTable 頁面](#FileTable)  
   
 4.  [儲存體頁面](#Storage)  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="GeneralPage"></a> 一般頁面  
  **[資料庫備份]**  

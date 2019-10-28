@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0240c3e4f9f58bfb453e2537695631d8be3aa793
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073708"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909705"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連線
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "68073708"
   
     > [!NOTE]  
     > 變更網路通訊協定之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務。不過，此步驟會在下一項工作中完成。  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="port"></a>設定固定通訊埠  
 為了加強安全性，Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]和 Windows 7 都會開啟 Windows 防火牆。 若要從另一部電腦連接到這個執行個體，您必須在防火牆中開啟通訊埠。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體會接聽通訊埠 1433，因此，您不需要設定固定通訊埠。 但是，包括 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 在內的具名執行個體則會接聽動態通訊埠。 在防火牆中開啟通訊埠之前，您必須先設定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 接聽特定的通訊埠 (稱為固定通訊埠或靜態通訊埠)，否則每次 [!INCLUDE[ssDE](../includes/ssde-md.md)] 啟動時可能會接聽不同的通訊埠。 如需防火牆、預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  

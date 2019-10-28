@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ab78eab73526568736dea8c4aef1525b2607c93
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72162564"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909753"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連線到資料庫引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,6 @@ ms.locfileid: "72162564"
 2.  在 [連接到伺服器]  對話方塊中，按一下 [取消]  。  
 3.  如果未顯示 [已註冊的伺服器]，請在 [檢視]  功能表上按一下 [已註冊的伺服器]  。
 4.  在 [已註冊的伺服器] 工具列上選取 [Database Engine]  之後，展開 [Database Engine]  、以滑鼠右鍵按一下 [本機伺服器群組]  、指向 [工作]  ，然後按一下 [註冊本機伺服器]  。 展開 [本機伺服器群組]  以查看電腦上安裝之 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的所有執行個體顯示。 預設的執行個體未命名，而是以電腦名稱顯示。 具名執行個體是顯示為電腦名稱，後面接著反斜線 (\\) 和執行個體名稱。 若為 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安裝期間變更名稱，否則執行個體是命名為 *<computer_name>* \sqlexpress。  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>確認 Database Engine 是否在執行中
 

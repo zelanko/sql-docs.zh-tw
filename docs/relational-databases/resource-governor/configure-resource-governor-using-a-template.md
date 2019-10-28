@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2d9317dba8c319e9af4d3068e183b6639c28fe34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b26aba44ff43de115268dcafa5ecc51e3f13c02
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136935"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903943"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用範本來設定資源管理員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68136935"
 5.  若要儲存您對範本所做的變更，請按一下 **[確定]** 。  
   
 6.  若要執行查詢，請按一下 **[執行]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>另請參閱  
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   

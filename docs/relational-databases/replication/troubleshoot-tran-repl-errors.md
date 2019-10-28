@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769355"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907283"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解員：尋找 SQL Server 異動複寫的錯誤 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68769355"
 1. 交易將在複寫的物件上發生，且在交易記錄中會標示為「供複寫」。 
 2. 記錄讀取器代理程式會掃描交易記錄，並尋找標示為「供複寫」的交易。 接著，這些交易會儲存到散發資料庫。 
 3. 散發代理程式會使用讀取器執行緒來掃描散發資料庫。 接著，此代理程式會使用寫入器執行緒連線至訂閱者，將這些變更套用到該訂閱者。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 此處理序的任何步驟都可能會發生錯誤。 尋找這些錯誤可能是同步處理問題疑難排解中最具挑戰性的層面。 幸好使用複寫監視器可簡化此處理序。 
 

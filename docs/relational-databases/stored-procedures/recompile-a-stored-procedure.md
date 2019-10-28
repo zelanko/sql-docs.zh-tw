@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72f0717ad537eea88948a156b5bc2756ab64b677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136711"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909007"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,8 +76,6 @@ ms.locfileid: "68136711"
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 此範例會建立程序定義。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -116,7 +114,7 @@ GO
   
 ```  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>若要使用 sp_recompile 重新編譯預存程序  
+#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>若要使用 sp_recompile 重新編譯預存程序  
   
 1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   

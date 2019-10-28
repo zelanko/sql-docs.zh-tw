@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8396b30122a393ea3532113e261a908d8079432a
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 14089cb8f302fbfee3f3a58c3f28edf634cbaa10
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228488"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909232"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "70228488"
 4.  在 **[類別目錄]** 方塊中，按一下 **[資料庫維護]** 。  
   
 5.  在 **[描述]** 方塊中，輸入 **[封存 Database Mail 訊息]** ，然後按一下 **[步驟]** 。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  [概觀](#Process_Overview)  
   

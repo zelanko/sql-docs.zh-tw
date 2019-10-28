@@ -22,12 +22,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22a591c770a09e0bd57f4c92116fcf72af45758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123414"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909886"
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,42 +63,40 @@ ms.locfileid: "68123414"
   
 2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[屬性]** 。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties show in the **View Properties** dialog box.  
+     下列屬性會在 **[檢視屬性]** 對話方塊中顯示。  
   
-     **Database**  
-     The name of the database containing this view.  
+     **[資料庫備份]**  
+     包含此檢視之資料庫的名稱。  
   
      **Server**  
-     The name of the current server instance.  
+     目前伺服器執行個體的名稱。  
   
-     **User**  
-     The name of the user of this connection.  
+     **使用者**  
+     這個連接之使用者的名稱。  
   
-     **Created date**  
-     Displays the date the view was created.  
+     **建立日期**  
+     顯示建立檢視的日期。  
   
-     **Name**  
-     The name of the current view.  
+     **名稱**  
+     目前檢視的名稱。  
   
-     **Schema**  
-     Displays the schema that owns the view.  
+     **結構描述**  
+     顯示擁有檢視的結構描述。  
   
-     **System object**  
-     Indicates whether the view is a system object. Values are True and False.  
+     **系統物件**  
+     指出檢視是否為系統物件。 值為 True 與 False。  
   
-     **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     **ANSI NULLS**  
+     指出物件是否使用 ANSI NULLS 選項建立。  
   
-     **Encrypted**  
-     Indicates whether the view is encrypted. Values are True and False.  
+     **已加密**  
+     指出檢視表是否已加密。 值為 True 與 False。  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **引號識別碼**  
+     指出物件是否使用引號識別碼選項建立。  
   
-     **Schema bound**  
-     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+     **結構描述繫結**  
+     指出檢視是否以結構描述繫結。 值為 True 與 False。 如需結構描述繫結檢視的相關資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) 的 SCHEMABINDING 部分。  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>透過使用檢視設計工具取得檢視屬性  
   

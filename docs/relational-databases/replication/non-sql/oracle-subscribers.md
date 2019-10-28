@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e7ee336c9f81c8d4258e16cf09aa9ffec177e0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110965"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907992"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68110965"
     |指定識別資料庫接聽程式的主機資訊|主機是 Oracle 接聽程式所執行之電腦 (通常與資料庫所在的電腦相同) 的名稱或 DNS 別名。 針對某些通訊協定，您必須提供其他的資訊。 例如，您若是選取 TCP，就必須提供接聽程式接聽對目標資料庫之連接要求的通訊埠。 預設 TCP 組態使用通訊埠 1521。|  
   
 3.  建立快照集或交易式發行集，並為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者啟用，然後再為訂閱者建立發送訂閱。 如需相關資訊，請參閱 [為非 SQL Server 訂閱者建立訂閱](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="setting-directory-permissions"></a>設定目錄權限  
  必須授與「散發者」端執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務所用之帳戶，對安裝 Oracle 用戶端網路軟體之目錄 (以及所有子目錄) 的讀取和執行權限。  

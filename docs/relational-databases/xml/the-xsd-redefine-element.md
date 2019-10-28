@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1b4a155e7f3c23508080a5fd55f15d05c5432c50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f32e6952634e5bd4d376ac06d6c3f067fb75a0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078118"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907562"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 項目
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "68078118"
 2.  重新輸入使用要重新定義之 XML 結構描述集合的所有 **xml** 資料類型 (XML DT)，以改用新的 XML 結構描述集合。 若要這樣做，請使用 ALTER TABLE 命令的 ALTER COLUMN 選項來重新輸入資料行，或是變更變數或參數上的 XML 結構描述集合條件約束。  
   
 3.  捨棄舊版的 XML 結構描述集合。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>另請參閱  
  [伺服器上 XML 結構描述集合的需求與限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

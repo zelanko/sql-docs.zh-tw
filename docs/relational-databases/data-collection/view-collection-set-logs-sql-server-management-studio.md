@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24c587168f9778601e672141775f822b1b0362fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41ad2257f18b73794fa788cefdd3e77e602e11b7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055482"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909629"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>檢視收集組記錄 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +32,6 @@ ms.locfileid: "68055482"
      這樣就會開啟 [記錄檔檢視器]  。每個收集組的所有記錄檔都會在檢視器的 [資料收集]  節點底下列出並預先選取。  
   
 3.  若要檢視特定的收集組記錄，請清除您不想要檢視記錄之每個收集組旁的核取方塊。 該收集組的記錄資訊就會從 **[記錄檔檢視器]** 詳細資料窗格中移除。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-view-a-specific-collection-set-log-file"></a>若要檢視特定的收集組記錄檔  
   

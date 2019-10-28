@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: be0f5865965ab419d1807783196e18a4e873c6a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8cdc8f15cedb170ae6c5aeab35c8f92a979d30d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073757"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909059"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>刪除資料庫的資料或記錄檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +67,6 @@ ms.locfileid: "68073757"
 4.  在 **[資料庫檔案]** 方格中，選取要刪除的檔案，再按一下 **[移除]** 。  
   
 5.  按一下 [確定]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
