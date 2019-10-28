@@ -23,12 +23,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0ed09a881d0bbf7a1f284b3b2971077725e6d91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094958"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903026"
 ---
 # <a name="create-a-login"></a>建立登入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,8 +97,6 @@ ms.locfileid: "68094958"
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### <a name="additional-options"></a>其他選項  
  [登入 - 新增]  對話方塊也在其他四個頁面上提供選項：[伺服器角色]  、[使用者對應]  、[安全性實體]  和 [狀態]  。  
   
@@ -156,7 +154,7 @@ ms.locfileid: "68094958"
  **資料庫角色成員資格對象: _資料庫名稱_**  
  在指定的資料庫中選取使用者的角色。 在每一個資料庫中，所有使用者都是 **public** 角色的成員，且無法移除。 如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](../../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
-### <a name="securables"></a>[安全性實體]  
+### <a name="securables"></a>安全性實體  
  **[安全性實體]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。 此頁面提供下列選項：  
   
  **上方格**  

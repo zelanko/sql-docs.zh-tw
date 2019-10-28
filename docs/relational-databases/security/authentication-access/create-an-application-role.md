@@ -15,12 +15,12 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ca72f042d8a41501cef58e321654fa8c8374a88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094933"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903154"
 ---
 # <a name="create-an-application-role"></a>建立應用程式角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,8 +69,6 @@ ms.locfileid: "68094933"
 8.  在 **[此角色擁有的結構描述]** 底下，選取或檢視此角色將擁有的結構描述。 結構描述僅能由一個結構描述或角色擁有。  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="additional-options"></a>其他選項  
  [應用程式角色 - 新增]  對話方塊也在其他兩個頁面上提供選項：[安全性實體]  和 [擴充屬性]  。  
