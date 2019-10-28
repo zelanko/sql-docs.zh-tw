@@ -19,12 +19,12 @@ ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659836"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798192"
 ---
 # <a name="make-a-target-server"></a>設為目標伺服器
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定目標伺服器。  
@@ -33,7 +33,7 @@ ms.locfileid: "62659836"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要設定目標伺服器，使用：**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62659836"
 ###  <a name="Security"></a> 安全性  
  具有與 Proxy 相關聯之步驟的散發式作業，而該 Proxy 是在目標伺服器上的 Proxy 帳戶內容下執行 。 請確保符合以下條件，否則與 Proxy 相關聯之作業步驟將不會從主要伺服器下載至目標：  
   
--   主要伺服器登錄子機碼 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*>\SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) 設定為 1 (true)。 依預設，這個子機碼設為 0 (False)。  
+-   主伺服器登錄子機碼 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL server Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）設定為1（true）。 依預設，這個子機碼設為 0 (False)。  
   
 -   存在於目標伺服器上的 Proxy 帳戶，而該帳戶名稱與執行作業步驟之主要伺服器上的 Proxy 帳戶名稱相同。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62659836"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]  、指向 [多重伺服器管理]  ，然後按一下 [設為目標伺服器]  。 **[目標伺服器精靈]** 將引導您執行將此伺服器設定為目標伺服器的程序。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]、指向 [多重伺服器管理]，然後按一下 [設為目標伺服器]。 **[目標伺服器精靈]** 將引導您執行將此伺服器設定為目標伺服器的程序。  
   
 3.  從 **[選取主要伺服器]** 頁面選取此目標伺服器將接收作業來源的主要伺服器。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62659836"
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。 這個範例會將目前的伺服器列入 AdventureWorks1 主要伺服器中。 目前伺服器的位置是「第 21 棟，309 室，機架 5」。  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -105,11 +105,9 @@ ms.locfileid: "62659836"
     GO;  
     ```  
   
-     如需詳細資訊，請參閱 < [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
+     如需詳細資訊，請參閱[sp_msx_enlist &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 SQL Server Management Objects (SMO)  
+##  <a name="PowerShellProcedure"></a>使用 SQL Server 管理物件（SMO）  
   
 ## <a name="see-also"></a>另請參閱  
  [將整個企業的管理自動化](automated-administration-across-an-enterprise.md)  
-  
-  

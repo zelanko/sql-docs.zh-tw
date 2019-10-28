@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 604eac1d089c488210db2d95ad92f2d23e09f373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c751f6d7b56cc43c6a8548d4776ce4c2b4f390cb
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789953"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782876"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的強制手動容錯移轉 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。 強制容錯移轉是一種手動容錯移轉形式，嚴格限於 [已規劃的手動容錯移轉](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 不可行時用來進行災難復原。 如果您強制容錯移轉至非同步的次要複本，有些資料可能會遺失。 因此，強烈建議您只有在主要複本不再執行、而且您願意承擔遺失資料的風險以還原可用性群組中對資料庫的存取時，才進行強制容錯移轉。  
@@ -32,7 +32,7 @@ ms.locfileid: "62789953"
   
  在下列緊急情況中，必須執行強制容錯移轉：  
   
--   在 WSFC 叢集上強制進行仲裁之後 (「強制仲裁」(Forced Quorum)  )，您需要強制容錯移轉每個可用性群組 (可能會遺失資料)。 強制容錯移轉是必要的，因為 WSFC 叢集值的實際狀態可能已遺失。 不過，您能夠在強制仲裁之前，在裝載主要複本的伺服器執行個體上強制容錯移轉，或是在強制仲裁之前容錯移轉至同步處理的次要複本，則可以避免資料遺失。 如需詳細資訊，請參閱本主題稍後的 [避免在強制仲裁之後遺失資料的可能方式](#WaysToAvoidDataLoss)。  
+-   在 WSFC 叢集上強制進行仲裁之後 (「強制仲裁」(Forced Quorum))，您需要強制容錯移轉每個可用性群組 (可能會遺失資料)。 強制容錯移轉是必要的，因為 WSFC 叢集值的實際狀態可能已遺失。 不過，您能夠在強制仲裁之前，在裝載主要複本的伺服器執行個體上強制容錯移轉，或是在強制仲裁之前容錯移轉至同步處理的次要複本，則可以避免資料遺失。 如需詳細資訊，請參閱本主題稍後的 [避免在強制仲裁之後遺失資料的可能方式](#WaysToAvoidDataLoss)。  
   
     > [!IMPORTANT]  
     >  如果仲裁透過自然而不是強制的方式重新取得，則可用性複本會進行一般復原。 如果在重新取得仲裁之後主要複本仍然無法使用，您可以執行規劃的手動容錯移轉至同步處理的次要複本。  
@@ -106,7 +106,7 @@ ms.locfileid: "62789953"
   
      如果 **is_failover_ready** = 1，資料庫在叢集中會標示為已同步處理，並且準備好進行容錯移轉。 如果在給定次要複本的每個資料庫上 **is_failover_ready** = 1，您可以執行強制容錯移轉 (FORCE_FAILOVER_ALLOW_DATA_LOSS)，而且這個次要複本的資料不會遺失。 同步處理的次要複本會在主要角色中變成線上，也就是成為新的主要複本，而且所有資料都保持不變。  
   
-     如果 **is_failover_ready** = 0，資料庫在叢集中不會標示為已同步處理，並且「尚未」  準備好進行規劃的手動容錯移轉。 如果您強制容錯移轉至主控次要複本，則這個資料庫中的資料將會遺失。  
+     如果 **is_failover_ready** = 0，資料庫在叢集中不會標示為已同步處理，並且「尚未」準備好進行規劃的手動容錯移轉。 如果您強制容錯移轉至主控次要複本，則這個資料庫中的資料將會遺失。  
   
     > [!NOTE]  
     >  當您強制容錯移轉至次要複本時，遺失的資料量將取決於容錯移轉目標落後於主要複本的距離。 不幸的是，當 WSFC 叢集缺少仲裁或已強制仲裁時，您就無法評估可能遺失的資料量。 不過請注意，一旦 WSFC 叢集重新取得狀況良好的仲裁，您就可以開始追蹤可能的資料遺失。 如需詳細資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md) 中的＜追蹤可能的資料遺失＞。  
@@ -123,7 +123,7 @@ ms.locfileid: "62789953"
   
 2.  依序展開 **[AlwaysOn 高可用性]** 節點和 **[可用性群組]** 節點。  
   
-3.  以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉]  命令。  
+3.  以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉] 命令。  
   
 4.  這會啟動「容錯移轉可用性群組精靈」。 如需詳細資訊，請參閱本主題稍後的 [使用容錯移轉可用性群組精靈 (SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62789953"
   
      下列範例會將 `AccountsAG` 可用性群組強制容錯移轉到本機次要複本。  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
     ```  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62789953"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要強制容錯移轉 (可能會遺失資料)**  
   
-1.  將目錄變更 (`cd`) 裝載角色處於 SECONDARY 或 RESOLVING 狀態，在需要容錯移轉之可用性群組複本的伺服器執行個體。  
+1.  將目錄（`cd`）變更為裝載複本的伺服器實例，其角色在需要故障切換之可用性群組中的「次要」或「正在解析」狀態。  
   
 2.  以下列其中一種形式，搭配 `Switch-SqlAvailabilityGroup` 參數使用 `AllowDataLoss` 指令程式：  
   
@@ -161,10 +161,8 @@ ms.locfileid: "62789953"
   
          以下範例會針對名稱為 `MyAg` 之伺服器執行個體上的次要複本，執行可用性群組 `SecondaryServer\InstanceName`的強制容錯移轉 (可能會遺失資料)。 您將會收到確認此作業的提示。  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss  
         ```  
   
     -   **-AllowDataLoss-Force**  
@@ -173,10 +171,8 @@ ms.locfileid: "62789953"
   
          以下範例會針對名稱為 `MyAg` 的伺服器執行個體，執行可用性群組 `SecondaryServer\InstanceName`的強制容錯移轉 (可能會遺失資料)。 `-Force` 選項會隱藏此作業的確認。  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss -Force  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss -Force  
         ```  
   
     > [!NOTE]  
@@ -263,11 +259,11 @@ ms.locfileid: "62789953"
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  下圖說明為了回應主要資料中心的重大錯誤，在遠端資料中心執行的一系列動作。  
   
- ![回應主要資料中心失敗的步驟](../../media/aoag-failurerecovery-actions-part1.gif "回應主要資料中心失敗的步驟")  
+ ![回應主要資料中心失敗失敗的步驟](../../media/aoag-failurerecovery-actions-part1.gif "回應主要資料中心失敗失敗的步驟")  
   
  此圖中的步驟會指出下列步驟：  
   
-|步驟|動作|連結|  
+|步驟|Action|連結|  
 |----------|------------|-----------|  
 |**1.**|DBA 或網路管理員確認 WSFC 叢集擁有狀況良好的仲裁。 在此範例中，需要強制仲裁。|[WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)<br /><br /> [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)|  
 |**2.**|DBA 連接到延遲最少的伺服器執行個體，(在 **節點 04**上)，並執行強制手動容錯移轉。 強制容錯移轉會將此次要複本轉換成主要角色，並且暫停其餘次要複本上的次要資料庫 (在 **節點 05**上)。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) (查詢 **end_of_log_lsn** 資料行。 如需詳細資訊，請參閱本主題前面的 [建議](#Recommendations))。|  
@@ -286,8 +282,8 @@ ms.locfileid: "62789953"
 ||步驟|連結|  
 |-|----------|-----------|  
 |**1.**|主要資料中心的節點再次上線，並且重新建立與 WSFC 叢集之間的通訊。 其可用性複本會做為含有暫停資料庫的次要複本重新上線，而 DBA 將需要盡快手動繼續每個資料庫。|[繼續可用性資料庫 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)<br /><br /> 提示：如果您擔心容錯移轉後的主要資料庫可能會遺失資料，就應該嘗試在其中一個同步認可的次要資料庫上，建立暫停資料庫的資料庫快照集。 務必記得，只要有任何次要資料庫暫停，主要資料庫上的交易記錄截斷就會延遲。 另外，只要任何本機資料庫持續暫停狀態，同步認可次要複本的同步健全狀態就無法轉換成 HEALTHY。|  
-|**2.**|資料庫繼續之後，DBA 會暫時將新的主要複本變更為同步認可模式。 這包含兩個步驟：<br /><br /> 1) 將一個離線可用性複本變更為非同步認可模式。 <br />2) 將新的主要複本變更為同步認可的模式。<br />注意:此步驟可讓繼續的同步認可次要資料庫變成 SYNCHRONIZED。|[變更可用性複本的可用性模式 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
-|**3.**|一旦 **節點 03** (原始主要複本) 上的同步認可次要複本進入 HEALTHY 同步狀態，DBA 就會對該複本執行規劃的手動容錯移轉，使其再次成為主要複本。 **節點 04** 上的複本會恢復為次要複本。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [使用 AlwaysOn 原則檢視可用性群組的健全狀況&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
+|**2.**|資料庫繼續之後，DBA 會暫時將新的主要複本變更為同步認可模式。 這包含兩個步驟：<br /><br /> 1) 將一個離線可用性複本變更為非同步認可模式。 <br />2) 將新的主要複本變更為同步認可的模式。<br />注意：此步驟可讓繼續的同步認可次要資料庫變成 SYNCHRONIZED。|[變更可用性複本的可用性模式 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
+|**3.**|一旦 **節點 03** (原始主要複本) 上的同步認可次要複本進入 HEALTHY 同步狀態，DBA 就會對該複本執行規劃的手動容錯移轉，使其再次成為主要複本。 **節點 04** 上的複本會恢復為次要複本。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [使用 AlwaysOn 原則來查看可用性群組&#40;的健全狀況 SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|DBA 連接到新的主要複本，並且：<br /><br /> 1) 將舊的主要複本 (位於遠端中心) 變更回非同步認可模式。<br />2) 將主要資料中心中的非同步認可次要複本變更回同步認可模式。|[變更可用性複本的可用性模式 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
@@ -307,30 +303,30 @@ ms.locfileid: "62789953"
   
  **若要疑難排解：**  
   
--   [疑難排解 AlwaysOn 可用性群組組態&#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+-   [針對 AlwaysOn 可用性群組設定&#40;SQL Server 進行疑難排解&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
--   [疑難排解失敗的加入檔案作業&#40;AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [針對失敗的新增檔案作業進行&#40;疑難排解 AlwaysOn 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
 -   **部落格：**  
   
-     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn Team Blog：官方 SQL Server AlwaysOn 小組的 Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮書：**  
   
-     [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [適用于高可用性和嚴重損壞修復的 Microsoft SQL Server AlwaysOn 解決方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客戶諮詢團隊白皮書](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性模式&#40;AlwaysOn 可用性群組&#41;](availability-modes-always-on-availability-groups.md)   
- [容錯移轉及容錯移轉模式&#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41; 總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [可用性模式&#40;AlwaysOn 可用性群組&#41; ](availability-modes-always-on-availability-groups.md)   
+ [容錯移轉和故障&#40;轉移&#41;模式 AlwaysOn 可用性群組](failover-and-failover-modes-always-on-availability-groups.md)   
  [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

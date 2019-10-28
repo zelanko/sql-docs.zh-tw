@@ -1,5 +1,5 @@
 ---
-title: 使用使用者定義的資料表 |Microsoft Docs
+title: 使用使用者定義資料表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04bc89c22ab2c49b047ed00b20b37f8abecf97c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270721"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781815"
 ---
 # <a name="using-user-defined-tables"></a>使用使用者定義的資料表
   使用者定義的資料表表示表格式資訊。 當您將表格式資料傳遞到預存程序或使用者定義函數時，這些資料表會當做參數。 使用者定義的資料表不能用於表示資料庫資料表中的資料行。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 物件具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 屬性，這個屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 物件。 每個<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>物件，因為集合中有**資料行**屬性，會參考的集合<xref:Microsoft.SqlServer.Management.Smo.Column>清單中的使用者定義資料表的資料行的物件。 請使用 Add 方法將資料行加入至使用者定義資料表。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 物件具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 屬性，這個屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 物件。 該集合中的每個 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 物件都有一個**Columns**屬性，它會參考列出使用者定義資料表中之資料行的 <xref:Microsoft.SqlServer.Management.Smo.Column> 物件集合。 請使用 Add 方法將資料行加入至使用者定義資料表。  
   
  當您使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 物件定義新的使用者定義資料表時，需要根據其中一個資料行提供資料行和主要金鑰。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63270721"
   
  此範例示範如何建立使用者定義資料表，以及如何在使用者定義函數中，將該資料表用於當做參數。  
   
-```  
+```vb
 'Connect to the local, default instance of SQL Server  
         Dim srv As Server  
         srv = New Server  
@@ -104,7 +104,7 @@ ms.locfileid: "63270721"
   
  此範例示範如何建立使用者定義資料表，以及如何在使用者定義函數中，以參數的方式使用該資料表。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server   
                Server srv = new Server();  
@@ -174,85 +174,72 @@ ms.locfileid: "63270721"
   
  此範例示範如何建立使用者定義資料表，以及如何在使用者定義函數中，以參數的方式使用該資料表。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 #Define a UserDefinedTableType object variable by supplying the  
-#database and name in the constructor.   
-$udtt = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedTableType `  
--argumentlist $db, "My_User_Defined_Table"  
+#database and name in the constructor.
+$udtt = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedTableType -ArgumentList $db, "My_User_Defined_Table"  
   
 #Add three columns of different types to the UserDefinedTableType object.  
   
 $type = [Microsoft.SqlServer.Management.SMO.DataType]::Int  
-$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column `  
--argumentlist $udtt, "col1",$type  
+$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -ArgumentList $udtt, "col1", $type  
 $udtt.Columns.Add($col)  
   
 $type = [Microsoft.SqlServer.Management.SMO.DataType]::VarCharMax  
-$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column `  
--argumentlist $udtt, "col2",$type  
+$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -ArgumentList $udtt, "col2", $type  
 $udtt.Columns.Add($col)  
   
  $type = [Microsoft.SqlServer.Management.SMO.DataType]::Money  
-$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column `  
--argumentlist $udtt, "col3",$type  
-$udtt.Columns.Add($col)          
+$col = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -ArgumentList $udtt, "col3", $type  
+$udtt.Columns.Add($col)
   
-#Define an Index object variable by supplying the user-defined   
-#table variable and name in the constructor.   
+#Define an Index object variable by supplying the user-defined table variable and name in the constructor.
 $idx = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index `  
 -argumentlist $udtt, "PK_UddtTable"  
   
-#Add the first column in the user-defined table as   
-#the indexed column.   
+#Add the first column in the user-defined table as the indexed column.
 $idxcol = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
 -argumentlist $idx, "Col1"  
 $idx.IndexedColumns.Add($idxcol)  
   
-#Specify that the index is a clustered, unique, primary key.   
+#Specify that the index is a clustered, unique, primary key.
 $idx.IsClustered = $true  
 $idx.IsUnique = $true  
 $idx.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriPrimaryKey;  
   
-#Add the index and create the user-defined table.   
+#Add the index and create the user-defined table.
 $udtt.Indexes.Add($idx)  
 $udtt.Create();  
   
-# Display the Transact-SQL creation script for the   
-# user-defined table.   
+# Display the Transact-SQL creation script for the user-defined table.
 $sc = $udtt.Script()  
 $sc  
   
-# Define a new user-defined function with a single parameter.   
-$udf = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunction `  
--argumentlist $db, "My_User_Defined_Function"  
+# Define a new user-defined function with a single parameter.
+$udf = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunction -ArgumentList $db, "My_User_Defined_Function"  
 $udf.TextMode = $false  
 $udf.FunctionType = [Microsoft.SqlServer.Management.SMO.UserDefinedFunctionType]::Scalar  
 $udf.ImplementationType = [Microsoft.SqlServer.Management.SMO.ImplementationType]::TransactSql  
 $udf.DataType = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
   
 # Specify the parameter as a UserDefinedTableTable object.  
-$udfp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunctionParameter `  
--argumentlist $udf, "@param"  
-$type    =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.DataType `  
--argumentlist $udtt  
+$udfp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.UserDefinedFunctionParameter -ArgumentList $udf, "@param"  
+$type = New-Object -TypeName Microsoft.SqlServer.Management.SMO.DataType -ArgumentList $udtt  
 $udfp.DataType = $type  
 $udfp.IsReadOnly = $true  
 $udf.Parameters.Add($udfp)  
   
-# Specify the TextBody property to the Transact-SQL definition of the   
-# user-defined function.   
+# Specify the TextBody property to the Transact-SQL definition of the user-defined function.   
 $udf.TextBody = "BEGIN RETURN (GETDATE());end"  
   
-# Create the user-defined function.   
-$udf.Create()           
+# Create the user-defined function.
+$udf.Create()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [資料庫檔案與檔案群組](../../databases/database-files-and-filegroups.md)  
-  
-  
