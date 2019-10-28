@@ -1,0 +1,40 @@
+---
+title: ADO.NET 中的 SQL Server 資料作業
+description: 說明如何使用 SQL Server 中的資料。 包含大量複製作業、MARS、非同步作業和資料表值參數的相關章節。
+ms.date: 08/15/2019
+ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: v-kaywon
+ms.author: v-kaywon
+ms.reviewer: rothja
+ms.openlocfilehash: ed9beea680575bba7fb01fc56af147e20b39218a
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.translationtype: MTE75
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452040"
+---
+# <a name="sql-server-data-operations-in-adonet"></a>ADO.NET 中的 SQL Server 資料作業
+
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[下載 ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
+本節說明適用于 SQL Server （<xref:Microsoft.Data.SqlClient>）之 Microsoft SqlClient Data Provider 特有的 SQL Server 特性和功能。  
+  
+## <a name="in-this-section"></a>本節內容  
+[SQL Server 中的大量複製作業](bulk-copy-operations-sql-server.md)  
+說明 .NET Data Provider for SQL Server 的大量複製功能。  
+  
+[Multiple Active Result Sets (MARS)](multiple-active-result-sets-mars.md)  
+描述當 <xref:Microsoft.Data.SqlClient.SqlDataReader> 的每個實例從個別命令啟動時，如何在連接上開啟一個以上的 <xref:Microsoft.Data.SqlClient.SqlDataReader>。  
+  
+[非同步作業](asynchronous-operations.md)  
+說明如何使用在 .NET Framework 所用非同步模型之後建立模型的 API，來執行非同步資料庫作業。  
+  
+[資料表值參數](table-valued-parameters.md)  
+描述如何使用在 SQL Server 2008 中引進的資料表值參數。  
+  
+## <a name="next-steps"></a>後續步驟
+- [SQL Server and ADO.NET](index.md) (SQL Server 和 ADO.NET)

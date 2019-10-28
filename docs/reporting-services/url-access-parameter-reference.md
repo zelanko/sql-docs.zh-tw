@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620592"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542178"
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)。  
   
 > [!IMPORTANT]  
->  如需使用 SharePoint 模式報表伺服器，請務必讓 URL 包含 `_vti_bin` Proxy 語法，以便透過 SharePoint 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP Proxy 路由傳送要求。 此 Proxy 會將內容加入至 HTTP 要求，其為確保針對 SharePoint 模式報表伺服器正確執行報表的所需內容。 如需範例，請參閱＜ [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md)＞。  
+>  如需使用 SharePoint 模式報表伺服器，請務必讓 URL 包含 `_vti_bin` Proxy 語法，以便透過 SharePoint 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP Proxy 路由傳送要求。 此 Proxy 會將內容新增至 HTTP 要求，其為確保針對 SharePoint 模式報表伺服器正確執行報表的所需內容。 如需範例，請參閱＜ [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md)＞。  
 >   
 >  如需有關在 URL 中包含報表參數的詳細資訊與範例，請參閱＜ [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)＞。  
   

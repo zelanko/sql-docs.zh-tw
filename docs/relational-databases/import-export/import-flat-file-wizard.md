@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 962ed44bad714125f78cac5adff5af42b0c76685
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138444"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907095"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,8 +43,6 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 1. 開啟 [SQL Server Management Studio]  。
 2. 連線至 SQL Server 資料庫引擎或 localhost 的執行個體。
 3. 展開 [資料庫]  ，在資料庫上按一下滑鼠右鍵 (下方範例中的測試)，指向 [工作]  ，然後按一下 [匯入資料] 上方的 [匯入一般檔案]  。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![精靈功能表](media/import-flat-file-wizard/importffmenu.png)
 

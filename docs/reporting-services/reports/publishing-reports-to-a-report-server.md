@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc4d75a6af4441d2030a71306801449ee74a6a02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579973"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359410"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>將報表發行至報表伺服器
   在您設計和測試完報表或報表集之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署功能，將報表發行至報表伺服器。 您可以發行個別報表，或可包含多個報表和資料來源的報表伺服器專案。 發行報表伺服器專案是發行多份報表最簡單的方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用「部署」  一詞，而不是「發行」  一詞。 這兩個詞可以互換。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會提供專案組態來管理報表發行。 組態會指定報表伺服器的位置、報表伺服器上所安裝之 SQL Server Reporting Services 的版本、是否覆寫發行到報表伺服器的資料來源等等。 例如，"Debug" 組態可以發行至與 "Release" 組態不同的伺服器。 除了使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 所提供的組態，您還可以建立其他組態。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會提供專案組態來管理報表發行。 組態會指定報表伺服器的位置、報表伺服器上所安裝之 SQL Server Reporting Services 的版本、是否覆寫發行到報表伺服器的資料來源等等。 例如，"Debug" 設定可以發佈至與 "Release" 設定不同的伺服器。 除了使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 所提供的組態，您還可以建立其他組態。  
  
 ## <a name="requirements-to-publish"></a>發行需求
 權限是透過由您報表伺服器管理員所定義的角色安全性所決定。 發行作業一般是透過 **發行者角色**授與。  

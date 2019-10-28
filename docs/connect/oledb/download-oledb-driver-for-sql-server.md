@@ -1,18 +1,18 @@
 ---
 title: 下載 Microsoft OLE DB Driver for SQL Server | Microsoft Docs
 description: Microsoft OLE DB Driver for SQL Server 的下載位置
-ms.date: 05/13/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c2a784a291bb7517f1c4a2cf867306388849f21f
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: dc0ee4de32be9cf146b4e185d5e973972dbc0fd2
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822727"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381837"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>下載 Microsoft OLE DB Driver for SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "66822727"
 
 下列版本的 Microsoft OLE DB Driver for SQL Server 已可下載：
 
-- [Microsoft OLE DB Driver 18.2.2 for SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)
+- [Microsoft OLE DB Driver 18.3.0 for SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)
 
 ## <a name="see-also"></a>另請參閱
 

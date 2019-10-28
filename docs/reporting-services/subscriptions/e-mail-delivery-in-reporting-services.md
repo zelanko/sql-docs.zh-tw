@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575571"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305042"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含了電子郵件傳遞延伸模組，可讓您透過電子郵件傳送報表給個別使用者或群組。 若要透過電子郵件散發報表，您可以 1) 設定報表伺服器的電子郵件傳遞以及 2) 定義標準訂閱或資料驅動訂閱。 單一訂閱無法在單一電子郵件訊息中傳遞多個報表。 不過，您可以建立多個訂閱。  
@@ -41,9 +41,9 @@ ms.locfileid: "65575571"
   
 -   在電子郵件訊息的 [主旨:] 傳送通知。 依預設，訂閱定義中的 [主旨:] 包含下列變數，處理訂閱時，會以報表特定資訊取代這些變數：  
   
-     **@ReportName** 指定報表的名稱。  
+     **\@ReportName** 指定報表的名稱。  
   
-     **@ExecutionTime** 指定報表執行的時間。  
+     **\@ExecutionTime** 指定報表執行的時間。  
   
      您可以將這些變數與靜態文字結合，或者修改每個訂閱 [主旨:] 中的文字。  
   
