@@ -16,12 +16,12 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11f30f1f2d4d3435c66792a462ba277fd00350f7
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 84a68ecbdd5d48447b17bbfd256aec982614cb3c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383526"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902977"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,11 +56,9 @@ PASSWORD = '<some strong password>';
   
 1. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2. 在標準列上，按一下 **[新增查詢]**。  
+2. 在標準列上，按一下 **[新增查詢]** 。  
   
-3. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
 
     ```sql
     USE AdventureWorks2012;  
@@ -116,9 +114,9 @@ PASSWORD = '<some strong password>';
   
 1. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2. 在標準列上，按一下 **[新增查詢]**。  
+2. 在標準列上，按一下 **[新增查詢]** 。  
   
-3. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
   
     ```sql
     USE AdventureWorks2012;  
