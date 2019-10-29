@@ -1,7 +1,7 @@
 ---
-title: 傳輸八位元長度 |Microsoft Docs
+title: 傳輸八位長度 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,34 +15,35 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ff187d5d2b67c5fc3d40a80a136ff9f0c65b2ed2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a92a9ead66736ff2b72813d6d4cbec5acfcda4fe
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070037"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032966"
 ---
 # <a name="transfer-octet-length"></a>傳輸八位元長度
-傳輸八位元長度的資料行是資料傳輸至其預設 C 資料類型時，應用程式傳回的位元組數目上限。 若是字元資料，傳輸八位元長度不包括 null 結束字元的空間。 傳輸八位元資料行的長度可能是不同的資料儲存在資料來源上所需的位元組數目。  
+資料行的傳輸八位長度是將資料傳輸至其預設 C 資料類型時，傳回給應用程式的最大位元組數目。 若是字元資料，傳輸八位長度不包含 null 終止字元的空間。 資料行的傳輸八位長度可能與將資料儲存在資料來源所需的位元組數目不同。  
   
- 傳輸八位元長度，為每個 ODBC SQL 資料類型定義下表所示。  
+ 下表顯示針對每個 ODBC SQL 資料類型所定義的傳輸八位長度。  
   
-|SQL 型別識別項|長度|  
+|SQL 類型識別碼|長度|  
 |-------------------------|------------|  
-|所有字元類型 [a]|定義或資料行，以位元組為單位的長度上限 （適用於變數類型）。 這是描述項欄位的 SQL_DESC_OCTET_LENGTH 相同的值。|  
-|SQL_DECIMAL<br />SQL_NUMERIC|保留字元表示法，此資料的字元集為 ANSI，如果所需的位元組數目，兩次這個數字的字元集是否為 UNICODE。 因為資料會傳回字元字串和字元所需的數字、 符號和小數點，這會是數字加上兩個的最大數目。 比方說，傳輸的資料行長度定義為 NUMERIC(10,3) 為 12。|  
-|SQL_TINYINT|1|  
+|所有字元類型 [a]|資料行的定義或最大值（針對變數類型）長度（以位元組為單位）。 這與描述項欄位 SQL_DESC_OCTET_LENGTH 的值相同。|  
+|SQL_DECIMAL<br />SQL_NUMERIC|如果字元集為 ANSI，則保留此資料的字元表示所需的位元組數目，如果字元集為 UNICODE，則為此數位的兩倍。 這是數位的最大數目加上二，因為資料是以字元字串傳回，而數位、符號和小數點則需要字元。 例如，定義為 NUMERIC （10，3）之資料行的傳輸長度為12。|  
+|SQL_TINYINT|@shouldalert|  
 |SQL_SMALLINT|2|  
 |SQL_INTEGER|4|  
-|SQL_BIGINT|保留字元表示法，此資料的字元集為 ANSI，如果所需的位元組數目，兩次此數字的字元集會是 UNICODE，因為此資料類型預設會傳回字元字串。 代表的字元是由 20 個字元所組成：19 的數字和符號，如果登入或如果不帶正負號的 20 位數。 因此，長度為 20。|  
+|SQL_BIGINT| 8 |  
 |SQL_REAL|4|  
 |SQL_FLOAT|8|  
 |SQL_DOUBLE|8|  
-|SQL_BIT|1|  
-|所有的二進位類型 [a]|保留 （適用於固定類型） 的定義所需的位元組或字元數目上限 （適用於變數的型別） 的數目。|  
-|SQL_TYPE_DATE<br />SQL_TYPE_TIME|6 （SQL_DATE_STRUCT 或 SQL_TIME_STRUCT 結構的大小）。|  
-|SQL_TYPE_TIMESTAMP|16 （SQL_TIMESTAMP_STRUCT 結構的大小）。|  
-|間隔的所有資料類型|34 （間隔結構的大小）。|  
-|SQL_GUID|16 （GUID 結構的大小）。|  
-  
- [a] 如果驅動程式無法判斷變數類型的資料行或參數的長度，則會傳回 SQL_NO_TOTAL。
+|SQL_BIT|@shouldalert|  
+|所有二進位類型 [a]|保留已定義（適用于固定類型）或最大值（針對變數類型）字元數所需的位元組數目。|  
+|SQL_TYPE_DATE<br />SQL_TYPE_TIME|6（SQL_DATE_STRUCT 或 SQL_TIME_STRUCT 結構的大小）。|  
+|SQL_TYPE_TIMESTAMP|16（SQL_TIMESTAMP_STRUCT 結構的大小）。|  
+|所有間隔資料類型|34（間隔結構的大小）。|  
+|SQL_GUID|16（GUID 結構的大小）。|  
+| &nbsp; | &nbsp; |
+
+ [a] 如果驅動程式無法判斷變數類型的資料行或參數長度，它會傳回 SQL_NO_TOTAL。

@@ -21,15 +21,15 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa19a06d3743e91665ee2355eb5f6c380df413d
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542231"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989511"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器稽核建立的稽核檔案中傳回資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
@@ -53,17 +53,17 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path > \\ \*** -收集指定位置中的所有 audit 檔案。  
   
-    -   **\<path > \LoginsAudit_{GUID}** -收集所有具有指定之名稱和 GUID 配對的 audit 檔案。  
+    -   **\<路徑 > \LoginsAudit_{GUID}** -收集所有具有指定之名稱和 GUID 配對的 audit 檔案。  
   
-    -   **\<path > \LoginsAudit_{GUID}_00_29384.sqlaudit** -收集特定的 audit 檔案。  
+    -   **\<路徑 > \LoginsAudit_{GUID}_00_29384.sqlaudit** -收集特定的 audit 檔案。  
   
- - **Azure SQL Database**：
+ - **Azure SQL Database 或 Azure SQL 資料倉儲**：
  
     這個引數是用來指定 blob URL （包括儲存體端點和容器）。 雖然它不支援星號萬用字元，但是您可以使用部分檔案（blob）名稱前置詞（而不是完整 blob 名稱）來收集以這個前置詞開頭的多個檔案（blob）。 例如：
  
-      - **\<Storage_endpoint \> / \<Container \> /** \<ServerName \> / 0DatabaseName 1 2-收集特定資料庫的所有 audit 檔案（blob）。    
+      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\>/** -收集特定資料庫的所有 audit 檔案（blob）。    
       
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> / 0DatabaseName 1 2 3AuditName 4 5 6CreationDate 7 89FileName 0。 .xel** -收集特定的 audit 檔案（blob）。
+      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<FileName\>. .xel** -收集特定的 audit 檔案（blob）。
   
 > [!NOTE]  
 >  如果傳遞路徑而沒有包含檔案名稱模式，則會產生錯誤。  
@@ -86,7 +86,7 @@ fn_get_audit_file ( file_pattern,
 | 資料行名稱 | [類型] | [描述] |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 動作的識別碼。 不可為 Null。 |  
-| additional_information | **nvarchar(4000)** | 只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  系統會剖析模組名稱，以將不正確 xml 字元（例如 `'\<'`、`'>'`、`'/'`、`'_x'`）取消。 它們會以 `_xHHHH\_` 的形式加以轉義。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。 |
+| additional_information | **nvarchar(4000)** | 只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  系統會剖析模組名稱，以將不正確 xml 字元（例如 `'\<'`、`'>'`、`'/'`、`'_x'`）取消。 它們會以 `_xHHHH\_`的形式加以轉義。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。 |
 | affected_rows | **bigint** | **適用**于：僅限 AZURE SQL DB<br /><br /> 受執行語句影響的資料列數目。 |  
 | application_name | **nvarchar(128)** | **適用**于： AZURE SQL DB + SQL Server （從2017開始）<br /><br /> 執行導致 audit 事件之語句的用戶端應用程式名稱 |  
 | audit_file_offset | **bigint** | **適用于**：僅 SQL Server<br /><br /> 檔案中包含稽核記錄的緩衝區位移。 不可為 Null。 |  
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL Database**
 
-  這個範例會從名為 `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel` 的檔案讀取：  
+  這個範例會從名為 `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`的檔案讀取：  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
