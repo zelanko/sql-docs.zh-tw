@@ -2507,8 +2507,6 @@
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: 部署 JDBC 驅動程式
           href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: 轉散發 Microsoft JDBC Driver
-          href: ../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md
         - name: 尋找其他 JDBC 驅動程式資訊
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: Microsoft JDBC Driver for SQL Server 支援對照表
