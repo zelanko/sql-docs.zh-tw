@@ -1,7 +1,7 @@
 ---
 title: 使用 curl 將資料載入 HDFS | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 使用捲曲將資料載入到中的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS。
+description: 使用捲曲將資料載入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上的 HDFS。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,22 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 729c3af97f98bafced482f7ead8ce85f93b55af3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c65ce7fb6752240f0dd23a6dab195539146e7933
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652224"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049881"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>使用捲曲將資料載入到中的 HDFS[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>使用捲曲將資料載入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上的 HDFS
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何使用**捲曲**將資料載入至 (預覽) 上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的 HDFS。
+本文說明如何使用**捲曲**將資料載入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （預覽）上的 HDFS。
+
+## <a id="prereqs"></a> Prerequisites
+
+- [將範例資料載入巨量資料叢集](tutorial-load-sample-data.md)
 
 ## <a name="obtain-the-service-external-ip"></a>取得服務外部 IP
 
@@ -31,7 +35,7 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 ```
 
 > [!NOTE]
-> 這裡的 `<big data cluster name>` 是您在部署組態檔中指定的叢集名稱。 預設名稱為 `mssql-cluster`。
+> 這裡的 `<big data cluster name>` 是您在部署組態檔中指定的叢集名稱。 預設名稱為`mssql-cluster`。
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>建構 URL 來存取 WebHDFS
 
@@ -39,24 +43,24 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-例如:
+例如：
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
 ## <a name="list-a-file"></a>列出檔案
 
-若要列出 **hdfs:///airlinedata** 下的檔案，請使用下列 curl 命令：
+若要列出**hdfs:///product_review_data**下的檔案，請使用下列捲曲的命令：
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>將本機檔案放入 HDFS
 
-若要將新的 **test.csv** 檔案從本機目錄放到 airlinedata 目錄，請使用下列 curl 命令 (**Content-Type** 參數是必要的)：
+若要將新的**file test.txt**從本機目錄放到 product_review_data 目錄，請使用下列捲曲命令（ **content-type**參數是必要的）：
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>建立目錄
@@ -67,6 +71,6 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 如需 SQL Server 巨量資料叢集的詳細資訊，請參閱[什麼是 SQL Server 巨量資料叢集](big-data-cluster-overview.md)。
