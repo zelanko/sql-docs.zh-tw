@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplfailovermode (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpreplfailovermode （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ff5bd9978be59f6a512ce4173b851692b9506d96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997561"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142841"
 ---
-# <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
+# <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  顯示訂閱目前的容錯移轉模式。 這個預存程序執行於任何資料庫的訂閱者端。 如需有關容錯移轉模式的詳細資訊，請參閱 <<c0> [ 異動複寫的可更新訂閱](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
+  顯示訂閱目前的容錯移轉模式。 這個預存程序執行於任何資料庫的訂閱者端。 如需容錯移轉模式的詳細資訊，請參閱[異動複寫的可更新訂閱](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,32 +41,32 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @publisher = ] 'publisher'` 是參與這個訂閱者更新發行者的名稱。 *發行者*已**sysname**，沒有預設值。 必須已設定發行者的發行作業。  
+`[ @publisher = ] 'publisher'` 是參與這個訂閱者更新的發行者名稱。 *publisher*是**sysname**，沒有預設值。 必須已設定發行者的發行作業。  
   
-`[ @publisher_db = ] 'publisher_db'` 是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是發行集資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
-`[ @publication = ] 'publication'` 是參與這個訂閱者更新的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是參與這個訂閱者更新的發行集名稱。 *發行*集是**sysname**，沒有預設值。  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 傳回容錯移轉模式的整數值，它是**輸出**參數。 *failover_mode_id*已**tinyint**預設值是**0**。 它會傳回**0**立即更新並**1**佇列更新。  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 會傳回容錯移轉模式的整數值，而且是**輸出**參數。 *failover_mode_id*是**Tinyint** ，預設值是**0**。 它會傳回**0**以進行立即更新， **1**則會傳回佇列更新。  
   
- [ **@failover_mode=** ] **'***failover_mode***'OUTPUT**  
- 傳回在訂閱者端修改資料的模式。 *failover_mode*已**nvarchar(10**預設值是 NULL。 已**輸出**參數。  
+ [ **\@failover_mode =** ] **'***failover_mode***' 輸出**  
+ 傳回在訂閱者端修改資料的模式。 *failover_mode*是**Nvarchar （10）** ，預設值是 Null。 是**輸出**參數。  
   
-|值|描述|  
+|[值]|[描述]|  
 |-----------|-----------------|  
-|**immediate**|立即更新：利用兩段式認可通訊協定 (2PC)，將訂閱者端的更新立即傳播到發行者。|  
-|**已排入佇列**|佇列更新：將訂閱者端的更新儲存在佇列中。|  
+|**最近**|立即更新：利用兩段式認可通訊協定 (2PC)，將訂閱者端的更新立即傳播到發行者。|  
+|**佇列**|佇列更新：將訂閱者端的更新儲存在佇列中。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
- **sp_helpreplfailovermode**的訂用帳戶已啟用進行立即更新，佇列更新進行容錯移轉的失敗時，快照式複寫或異動複寫中使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpreplfailovermode**用於快照式複寫或異動複寫中，其訂用帳戶已啟用以佇列更新作為容錯移轉，以便在發生失敗時進行立即更新。  
   
-## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helpreplfailovermode**。  
+## <a name="permissions"></a>[權限]  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_helpreplfailovermode**。  
   
-## <a name="see-also"></a>另請參閱  
- [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+## <a name="see-also"></a>請參閱  
+ [sp_setreplfailovermode &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

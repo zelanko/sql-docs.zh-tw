@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5ffc2773144d2b1a170e2f087d7abf607af99ef6
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
+ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049853"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182645"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：使用 Spark 作業將資料內嵌至 SQL Server 資料集區
 
@@ -131,9 +131,9 @@ ms.locfileid: "73049853"
 
 下列步驟顯示 Spark 串流作業已將來自 HDFS 的資料載入資料集區。
 
-1. 查詢內嵌資料之前，請先查看工作記錄輸出，看看作業是否完成。
+1. 查詢內嵌資料之前，請查看 Spark 執行狀態，包括 Yarn 應用程式識別碼、Spark UI 和驅動程式記錄檔。
 
-   ![Spark 作業記錄](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Spark 執行詳細資料](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. 返回您在本教學課程開頭開啟的 SQL Server 主要執行個體查詢視窗。
 

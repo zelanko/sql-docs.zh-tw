@@ -292,7 +292,7 @@ PAUSE
   
 2.  為發行集資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體、將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 If <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 傳回 **false**，請確認此資料庫確實存在。  
   
-3.  If <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 屬性為 **false**，請將它設定為 **@allow_subscriber_initiated_snapshot** 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
+3.  If <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 屬性為 **false**，請將它設定為 **\@allow_subscriber_initiated_snapshot** 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
   
 4.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體，並為此物件設定下列屬性：  
   
@@ -322,7 +322,7 @@ PAUSE
   
 8.  呼叫步驟 4 中建立之 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 物件的 <xref:Microsoft.SqlServer.Replication.MergePublication> 方法。 這樣會啟動可產生初始快照集的代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
   
-9. (選擇性) 檢查是否有為 **@allow_subscriber_initiated_snapshot** 屬性設定 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值，以判斷初始快照集何時可準備好供人使用。  
+9. (選擇性) 檢查是否有為 **\@allow_subscriber_initiated_snapshot** 屬性設定 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值，以判斷初始快照集何時可準備好供人使用。  
   
 10. 當訂閱者的合併代理程式第一次連接時，會自動產生分割快照集。  
   
@@ -336,7 +336,7 @@ PAUSE
   
 4.  呼叫步驟 1 中建立之 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 物件的 <xref:Microsoft.SqlServer.Replication.MergePublication> 方法。 這個方法會啟動可產生初始快照集的代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [建立和套用初始快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)＞。  
   
-5.  檢查是否有為 **@allow_subscriber_initiated_snapshot** 屬性設定 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值，以判斷初始快照集何時可準備好供人使用。  
+5.  檢查是否有為 **\@allow_subscriber_initiated_snapshot** 屬性設定 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值，以判斷初始快照集何時可準備好供人使用。  
   
 6.  建立 <xref:Microsoft.SqlServer.Replication.MergePartition> 類別的執行個體，並使用以下其中一個或兩個屬性來為訂閱者設定參數化篩選準則：  
   
