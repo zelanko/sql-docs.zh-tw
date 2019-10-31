@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f76f03e2953c6fe460aa958858709d0ca5943bbc
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d232d3985a1a4ab27f5cc69e9fd9e486e41f8fe4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586745"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798383"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,9 +165,12 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
  當設定為 **ON** 時，統計資料將針對未明確指定取樣百分比的後續更新，保留特定的取樣百分比。 當設定為 **OFF** 時，統計資料取樣百分比將重設為未明確指定取樣百分比之後續更新中的預設取樣。 預設值為 **OFF**。 
  
+ > [!NOTE]
+ > 如果資料表遭到截斷，則所有以遭截斷 HoBT 為基礎建置的統計資料都會還原至使用預設取樣百分比。
+
  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 開始) 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 開始)。    
   
- STATS_STREAM **=** _stats_stream_  
+ STATS_STREAM **=**_stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  

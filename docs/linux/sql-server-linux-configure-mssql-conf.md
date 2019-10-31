@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 19a2aab72c1e820e6d07af770a89196662c6fdd1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995887"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783395"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具在 Linux 上設定 SQL Server
 
@@ -510,7 +510,7 @@ sudo systemctl restart mssql-server
 | mssql-conf 設定 | Description |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | 針對分散式交易設定僅安全的 RPC 呼叫 |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | 設定僅安全的 RPC 呼叫以用於分散式 |交易
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 針對分散式交易設定僅限安全性的 RPC 呼叫 |
 | distributedtransaction.maxlogsize | DTC 交易記錄檔大小 (以 MB 為單位)。 預設值是 64MB |
 | distributedtransaction.memorybuffersize | 儲存追蹤的循環緩衝區大小。 此大小會以 MB 為單位，預設值為 10MB |
 | distributedtransaction.servertcpport | MSDTC rpc 伺服器連接埠 |
@@ -616,8 +616,8 @@ outboundnetworkaccess = 1
 |選項 |Description |
 |--- |--- |
 |**network.forceencryption** |如果是 1，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會強制加密所有連線。 根據預設，這個選項是 0。 |
-|**network.tlscert** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 針對 TLS 使用之憑證檔案的絕對路徑。 範例 `/etc/ssl/certs/mssql.pem` 憑證檔案必須可由 mssql 帳戶存取。 Microsoft 建議使用 `chown mssql:mssql <file>; chmod 400 <file>` 來限制檔案的存取。 |
-|**network.tlskey** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 針對 TLS 使用之私密金鑰檔案的絕對路徑。 範例`/etc/ssl/private/mssql.key` 憑證檔案必須可由 mssql 帳戶存取。 Microsoft 建議使用 `chown mssql:mssql <file>; chmod 400 <file>` 來限制檔案的存取。 |
+|**network.tlscert** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 針對 TLS 使用之憑證檔案的絕對路徑。 範例： `/etc/ssl/certs/mssql.pem` 憑證檔案必須可由 mssql 帳戶存取。 Microsoft 建議使用 `chown mssql:mssql <file>; chmod 400 <file>` 來限制檔案的存取。 |
+|**network.tlskey** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 針對 TLS 使用之私密金鑰檔案的絕對路徑。 範例：`/etc/ssl/private/mssql.key` 憑證檔案必須可由 mssql 帳戶存取。 Microsoft 建議使用 `chown mssql:mssql <file>; chmod 400 <file>` 來限制檔案的存取。 |
 |**network.tlsprotocols** |SQL Server 所允許的 TLS 通訊協定清單 (以逗號分隔)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一律會嘗試交涉最強的允許通訊協定。 如果用戶端不支援任何允許的通訊協定，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 就會拒絕連線嘗試。  若要取得相容性，預設允許所有支援的通訊協定 (1.2、1.1、1.0)。  如果您的用戶端支援 TLS 1.2，則 Microsoft 建議只允許 TLS 1.2。 |
 |**network.tlsciphers** |針對 TLS 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 允許哪些 Cipher。 此字串必須根據每個 [OpenSSL 的 Cipher 清單格式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html) \(英文\) 來格式化。 一般來說，您應該不需要變更此選項。 <br /> 預設允許下列 Cipher： <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab 檔案的路徑 |

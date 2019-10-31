@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710769"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908234"
 ---
 # <a name="republish-data"></a>重新發行資料
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "71710769"
   
 6.  初始化訂閱。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  如果在重新發行的拓撲中使用合併式複寫，則所有重新發行「訂閱者」均必須使用伺服器訂閱。 如需訂閱類型的詳細資訊，請參閱[訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)。  
   
  在下圖中，「發行者」與重新發行者都扮演其各自的本機「散發者」角色。 如果都設定為使用遠端「散發者」，每個「散發者」就必須如自己的「發行者」一樣，全部都在緩慢或昂貴通訊連結的同一邊。 「發行者」必須透過可靠、高速的通訊連結以連接到遠端「散發者」。  
   
- ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
+ ![重新發佈資料](../../relational-databases/replication/media/repl-06a.gif "重新發佈資料")  
   
  任何伺服器都可以同時扮演「發行者」與「訂閱者」的角色。 例如，假設下圖中的資料表發行集位於英國倫敦，且必須散發到美國四個不同城市：芝加哥、紐約、聖地牙哥和西雅圖。 位於紐約的伺服器將被選來訂閱在倫敦產生的發行資料表，因為紐約網站符合這些條件：  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71710769"
   
 -   從紐約到所有其他美國訂閱者網站有相當好的網路通訊線路。  
   
-     ![重新發行資料至分散的位置](../../relational-databases/replication/media/repl-06.gif "重新發行資料至分散的位置")  
+     ![重新發佈資料至分散的位置](../../relational-databases/replication/media/repl-06.gif "重新發佈資料至分散的位置")  
   
  複寫支援下表所示的重新發行案例。  
   

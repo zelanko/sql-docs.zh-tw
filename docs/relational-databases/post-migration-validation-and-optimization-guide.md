@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006129"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909154"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 
@@ -107,8 +107,6 @@ ms.locfileid: "68006129"
   -   這可能涉及將資料庫所儲存的任何使用者定義程式碼建構 (例如預存程序、使用者定義函數或檢視表)，與保存基礎表格所用資料類型相關資訊的系統資料表 (例如 [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)) 進行比較。
 2. 如果無法周遊所有程式碼到上一個點，則基於相同目的，請變更資料表的資料類型以符合任何變數/參數宣告。
 3. 推斷出下列結構的效益：
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   作為述詞使用的函數；
   -   萬用字元搜尋；

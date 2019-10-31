@@ -11,12 +11,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a362e060eb9fc9d8e39459007e50a0c81fba393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069657"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907539"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ ms.locfileid: "68069657"
   
 1.  啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  按一下 **[新增查詢]** 。  
+2.  按一下 **[新增查詢]**。  
   
 3.  將此程式碼貼入新查詢視窗，並執行每一個區段。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     -- create a database to be used  
@@ -139,7 +137,7 @@ ms.locfileid: "68069657"
   
 2.  在 [物件總管] 中，以滑鼠右鍵按一下要產生報表的資料庫。  
   
-3.  在操作功能表中，依序選取 [報表]   -> [標準報表]   -> [記憶體最佳化物件的記憶體使用量]   
+3.  在操作功能表中，依序選取 [報表] -> [標準報表] -> [記憶體最佳化物件的記憶體使用量]  
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
@@ -248,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  如需詳細資訊，請參閱 [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體  
  管理配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎和記憶體最佳化物件之記憶體的方式，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中其他任何記憶體取用者的管理方式相同。 MEMORYCLERK_XTP 類型的 Clerk 會考量所有配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎的記憶體。 使用下列查詢可找出 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎所使用的所有記憶體。  
   
 ```sql  

@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163916"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909312"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,16 +36,14 @@ ms.locfileid: "71163916"
   
 #### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [查詢存放區] 頁面  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性]  。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下資料庫，然後按一下 [屬性] 。  
   
     > [!NOTE]  
     > 至少需要 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 16 版。  
   
 2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。  
   
-3.  在 [作業模式 (要求)]  方塊中，選取 [讀取寫入]  。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  在 [作業模式 (要求)]  方塊中，選取 [讀取寫入] 。  
 
 #### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
@@ -111,29 +109,29 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> 使用迴歸查詢功能  
-啟用查詢存放區之後，請重新整理 [物件總管] 窗格中的資料庫部分，以新增查詢存放區  區段。  
+啟用查詢存放區之後，請重新整理 [物件總管] 窗格中的資料庫部分，以新增查詢存放區 區段。  
   
-![SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構")![SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構") 
+![SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構")   ![SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構") 
   
-選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件篩選查詢：**持續時間 (毫秒)** (預設)、CPU 時間 (毫秒)、邏輯讀取 (KB)、邏輯寫入 (KB)、實體讀取 (KB)、CLR 時間 (毫秒)、DOP、記憶體耗用量 (KB)、資料列計數、已使用的記錄記憶體 (KB)、已使用的暫存 DB 記憶體 (KB)，以及等候時間 (毫秒)。  
+選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件篩選查詢：**持續時間 (毫秒)** (預設)、CPU 時間 (毫秒)、邏輯讀取 (KB)、邏輯寫入 (KB)、實體讀取 (KB)、CLR 時間 (毫秒)、DOP、記憶體耗用量 (KB)、資料列計數、已使用的記錄記憶體 (KB)、已使用的暫存 DB 記憶體 (KB)，以及等候時間 (毫秒)。  
 選取計劃即可以圖形方式檢視查詢計劃。 按鈕可用來檢視來源查詢、強制執行及取消強制執行查詢計畫、在格線和圖表格式之間切換、比較所選取的計畫 (如果選取了多個)，以及重新整理顯示。  
   
 ![SSMS 物件總管中的 SQL Server 2016 迴歸查詢](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 物件總管中的 SQL Server 2016 迴歸查詢")  
   
-若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃]  。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。
+若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。
 
 ##  <a name="Waiting"></a> 尋找等候查詢
 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 開始，可在查詢存放區中使用每個查詢經過一段時間的等候統計資料。 
 
 在查詢存放區中，等候類型會合併到**等候類別**。 [sys.query_store_wait_stats & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
 
-選取 [查詢等候統計資料]  ，以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更新版本中開啟 [查詢等候統計資料]  窗格。 [查詢等候統計資料] 窗格會在查詢存放區中顯示包含前幾個等候類別的長條圖。 使用頂端的下拉式清單來選取等候時間的彙總準則：平均值、最大值、最小值、標準差及**總計** (預設值)。
+選取 [查詢等候統計資料]，以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更新版本中開啟 [查詢等候統計資料] 窗格。 [查詢等候統計資料] 窗格會在查詢存放區中顯示包含前幾個等候類別的長條圖。 使用頂端的下拉式清單來選取等候時間的彙總準則：平均值、最大值、最小值、標準差及**總計** (預設值)。
 
  ![SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料](../../relational-databases/performance/media/query-store-waits.PNG "SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料")
 
 按一下長條圖來選取等候類別，隨即顯示有關所選取等候類別的詳細資料檢視。 這個新的長條圖包含提供給該等候類別的查詢。 
   
- ![SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料詳細資料檢視](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料詳細資料檢視")
+ ![SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料詳細檢視](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料詳細檢視")
 
 使用頂端的下拉式清單方塊，根據所選取等候類別的各種等候時間準則來篩選查詢：平均值、最大值、最小值、標準差及**總計** (預設值)。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
 

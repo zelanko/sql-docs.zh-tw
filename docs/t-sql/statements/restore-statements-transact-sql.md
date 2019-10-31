@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c43f8296c6bb4d25c58ba65516601c37381d7b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082459"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916170"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 
@@ -63,7 +63,7 @@ ms.locfileid: "68082459"
 
 ||||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**\*_ SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -312,19 +312,17 @@ RESTORE LOG 可以包括一份檔案清單，讓您在向前復原期間建立�
 > 如果是使用完整或大量記錄復原模式的資料庫，在大部分情況下，您必須先備份記錄結尾，再還原資料庫。 除非 RESTORE DATABASE 陳述式包含 WITH REPLACE 或 WITH STOPAT 子句 (必須指定在資料備份結束之後發生的時間或交易)，否則如果沒有先備份記錄結尾便還原資料庫，就會產生錯誤。 如需結尾記錄備份的詳細資訊，請參閱[結尾記錄備份](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。
 
 ### <a name="comparison-of-recovery-and-norecovery"></a>比較 RECOVERY 和 NORECOVERY
+復原是由 RESTORE 陳述式透過 [ RECOVERY | NORECOVERY ] 選項控制：
 
-RESTORE 陳述式利用 [ RECOVERY | NORECOVERY ] 選項來控制回復：
-
-- NORECOVERY 指定不進行回復。 這使向前復原能夠繼續循序執行下一個陳述式。
+- NORECOVERY 指定不進行復原。 這使向前復原能夠繼續循序執行下一個陳述式。
 
   在這個情況下，還原順序可以還原其他備份，並將它們向前復原。
 
-- RECOVERY (預設值) 表示在完成目前備份的向前復原之後，應該執行回復。
+- RECOVERY (預設) 表示在完成目前備份的向前復原之後應該執行復原。
 
-  復原資料庫時，會要求要還原的整組資料 (向前復原集  ) 與資料庫一致。 如果向前復原集尚未向前復原到足以與資料庫一致的範圍，且指定了 RECOVERY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會發出錯誤。
+  復原資料庫時，會要求要還原的整組資料 (「向前復原集」) 與資料庫一致。 如果向前復原集尚未向前復原到足以與資料庫一致的範圍，且指定了 RECOVERY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會發出錯誤。 如需復原流程的詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ## <a name="compatibility-support"></a>相容性支援
-
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 無法還原使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來建立的 **master** **model** 及 **msdb** 備份。
 
 > [!NOTE]
@@ -337,14 +335,11 @@ RESTORE 陳述式利用 [ RECOVERY | NORECOVERY ] 選項來控制回復：
 當資料庫第一次連接或還原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，資料庫主要金鑰複本 (由服務主要金鑰加密) 尚未儲存在伺服器中。 您必須利用 **OPEN MASTER KEY** 陳述式來解密資料庫主要金鑰 (DMK)。 DMK 解密之後，您便可以選擇利用 **ALTER MASTER KEY REGENERATE** 陳述式來提供服務主要金鑰 (SMK) 所加密的 DMK 複本給伺服器，以在未來啟用自動解密。 當資料庫從舊版升級時，應該會重新產生 DMK 以使用較新的 AES 演算法。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新產生 DMK 金鑰以升級至 AES 所需的時間是取決於 DMK 所保護的物件數目而定。 重新產生 DMK 金鑰以升級至 AES 只需執行一次，且不會影響金鑰循環策略中後續的重新產生。
 
 ## <a name="general-remarks"></a>一般備註
-
 在離線還原期間，如果指定的資料庫在使用中，RESTORE 會在一小段延遲之後，強迫使用者結束作業。 如果是非主要檔案群組的線上還原，除非正在還原的檔案群組在離線中，否則，資料庫會保持使用中的狀態。 還原的資料會取代指定之資料庫中的任何資料。
-
-如需資料庫復原的詳細資訊，請參閱[還原和復原概觀](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。
 
 只要作業系統支援資料庫的定序，便可以執行跨平台的還原作業，即使在不同類型的處理器之間，也是如此。
 
-RESTORE 可以在發生錯誤之後，重新啟動。 另外，您也可以指示 RESTORE 不論是否發生錯誤，一律繼續作業，它會盡可能還原多一點的資料 (請參閱 CONTINUE_AFTER_ERROR 選項)。
+RESTORE 可以在發生錯誤之後，重新啟動。 另外，您也可以指示 RESTORE 不論是否發生錯誤，一律繼續作業，它會盡可能還原多一點的資料 (請參閱 `CONTINUE_AFTER_ERROR` 選項)。
 
 在明確或隱含的交易中，不允許使用 RESTORE。
 
@@ -384,7 +379,6 @@ RESTORE 可以在發生錯誤之後，重新啟動。 另外，您也可以指�
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含備份與還原記錄資料表，以便用來為每個伺服器執行個體進行追蹤備份和還原活動。 當執行還原時，也會修改備份記錄資料表。 如需這些資料表的資訊，請參閱[備份記錄與標頭資訊](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)。
 
 ## <a name="REPLACEoption"></a> REPLACE 選項影響
-
 REPLACE 不應經常使用，而且只應在審慎考量之後使用。 還原通常可以防止意外將資料庫覆寫成不同資料庫。 如果 RESTORE 陳述式中指定的資料庫已經存在於目前伺服器，而且指定的資料庫系列 GUID 與備份組中記錄的資料庫系列 GUID 不同，將不會還原資料庫。 這是重要的防護措施。
 
 REPLACE 選項會覆寫還原通常會執行的數項重要安全檢查。 會覆寫的檢查如下：
@@ -402,21 +396,18 @@ REPLACE 選項會覆寫還原通常會執行的數項重要安全檢查。 會�
   例如，作業失誤可能導致覆寫到錯誤的檔案類型 (例如 .xls 檔案)，或覆寫到其他資料庫 (目前不在線上) 正在使用的檔案。 如果覆寫了現有檔案，即使還原的資料庫是完整的，仍有可能遺失任意資料。
 
 ## <a name="redoing-a-restore"></a>重做還原
-
-您不可能恢復還原的效果；不過，您可以針對個別檔案重新開始，以消除資料複製和向前復原的效果。 若要重新開始，請還原所需要的檔案，再重新執行向前復原。 例如，如果您不慎還原太多記錄備份，超出您想要的停止點，您就必須重新開始這個順序。
+您無法復原還原的效果；不過，您可以針對個別檔案重新開始，以消除資料複製和向前復原的效果。 若要重新開始，請還原需要的檔案，再重新執行向前復原。 例如，如果您不慎還原太多記錄備份，超出您想要的停止點，您就必須重新開始這個順序。
 
 您可以還原受影響之檔案的整個內容來中止和重新開始還原順序。
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>將資料庫還原為資料庫快照集
-
-「還原資料庫作業」  (使用 DATABASE_SNAPSHOT 選項來指定) 會藉由將整個來源資料庫還原至資料庫快照集的時間，也就是使用在所指定資料庫快照集中維護的時間點資料來覆寫來源資料庫，讓整個來源資料庫回到過去的時間。 目前能存在的快照集只限於您要還原的目標快照集。 之後，還原作業會重建記錄檔 (因此，您無法稍後再將還原的資料庫向前復原到發生使用者錯誤的那個時間點)。
+「還原資料庫作業」(使用 DATABASE_SNAPSHOT 選項來指定) 會藉由將整個來源資料庫還原至資料庫快照集的時間，也就是使用在所指定資料庫快照集中維護的時間點資料來覆寫來源資料庫，讓整個來源資料庫回到過去的時間。 目前能存在的快照集只限於您要還原的目標快照集。 之後，還原作業會重建記錄 (因此，無法稍後再將所還原資料庫向前復原到發生使用者錯誤的該時間點)。
 
 您只會失去建立快照集之後的資料庫更新資料。 還原資料庫的中繼資料與建立快照集時的中繼資料相同。 不過，還原為快照集會卸除所有全文檢索目錄。
 
 從資料庫快照集還原的用途，並不在於復原媒體。 資料庫快照集不像正規的備份組，它是不完整的資料庫檔案副本。 如果資料庫或資料庫快照集損毀，可能就無法從快照集還原。 此外，即使可以還原，但是在損毀的情況下還原也不太可能會更正問題。
 
 ### <a name="restrictions-on-reverting"></a>還原限制
-
 在下列狀況下，不支援還原：
 
 - 來源資料庫包含任何唯讀或壓縮的檔案群組。
@@ -426,19 +417,18 @@ REPLACE 選項會覆寫還原通常會執行的數項重要安全檢查。 會�
 如需詳細資訊，請參閱[將資料庫還原成資料庫快照集](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)。
 
 ## <a name="security"></a>Security
-
 備份作業可以選擇性地指定媒體集的密碼及 (或) 備份組的密碼。 當在媒體集或備份組上定義密碼時，您必須在 RESTORE 陳述式中，指定一個或多個正確的密碼。 這些密碼可以防止他人利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具，在未獲授權的情況下，在媒體上執行還原作業及附加備份組。 不過，BACKUP 陳述式的 FORMAT 選項可以覆寫密碼所保護的媒體。
 
 > [!IMPORTANT]
 > 這個密碼所提供的保護很弱。 這是為了防止已獲授權或未獲授權的使用者使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具進行不正確的還原。 它無法防止透過其他方式或以取代密碼的方式來讀取備份資料。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保護備份的最佳做法是將備份磁帶存放在安全位置，或備份至受適當存取控制清單 (ACL) 保護的磁碟檔案中。 ACL 應該設在備份建立所在的根目錄下。
+
 > [!NOTE]
 > 如需使用 Microsoft Azure Blob 儲存體來進行 SQL Server 備份及還原的特定資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
 ### <a name="permissions"></a>權限
+如果還原的資料庫不存在，則使用者必須有 `CREATE DATABASE` 權限才能執行 RESTORE。 如果資料庫存在，則 RESTORE 權限預設為 `sysadmin` 和 `dbcreator` 固定伺服器角色成員以及資料庫擁有者 (`dbo`) (對 `FROM DATABASE_SNAPSHOT` 選項而言，資料庫一律存在)。
 
-如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，RESTORE 權限預設為 **系統管理員 (sysadmin)** 和 **資料庫建立者 (dbcreator)** 固定伺服器角色的成員以及資料庫的擁有者 (**dbo**) (對 FROM DATABASE_SNAPSHOT 選項而言，資料庫一律存在)。
-
-RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。
+RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此，`db_owner` 固定資料庫角色的成員並沒有 RESTORE 權限。
 
 ## <a name="examples"></a> 範例
 
@@ -625,7 +615,7 @@ RESTORE DATABASE AdventureWorks2012
 資料庫備份是在名為 `MyDatabaseBackups` 的邏輯備份裝置上，媒體集中的第九個備份組。 接下來是三個記錄備份，它們分別位於 `10` 裝置的後三個備份組中 (`11`、`12` 和 `MyDatabaseBackups`)，並且利用 `WITH NORECOVERY` 而還原。 在還原最後一個記錄備份之後，資料庫就可以復原。
 
 > [!NOTE]
-> 復原是以個別步驟執行，以降低過早復原的可能性，也就是在所有記錄備份都復原之前就進行復原。
+> 復原是以個別步驟執行，以降低過早復原的可能性，也就是在所有記錄備份都復原之前就進行復原。 如需復原流程的詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 請注意，在 `RESTORE DATABASE` 中有兩種 `FILE` 選項類型。 在備份裝置名稱之前的 `FILE` 選項指定要從備份組還原之資料庫檔案的邏輯檔案名稱；例如，`FILE = 'MyDatabase_data_1'`。 這個備份組並非媒體集中的第一個資料庫備份；因此，它在媒體集中的位置是利用 `FILE` 子句中的 `WITH` 選項 `FILE=9` 指出。
 
@@ -683,7 +673,8 @@ GO
 
 下面三個範例涉及使用 Microsoft Azure Blob 儲存體服務。 儲存體帳戶名稱為 `mystorageaccount`。 資料檔案的容器名為 `myfirstcontainer`。 備份檔案的容器名為 `mysecondcontainer`。 已針對每個容器建立具有讀取、寫入、刪除及列出權限的預存存取原則。 已使用與此「預存存取原則」關聯的「共用存取簽章」建立 SQL Server 認證。 如需使用 Microsoft Azure Blob 儲存體來進行 SQL Server 備份及還原的特定資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
-**K1.從 Microsoft Azure 儲存體服務還原完整資料庫備份** `Sales` 的完整資料庫備份 (位於 `mysecondcontainer`) 會還原至 `myfirstcontainer`。 `Sales` 目前不存在於伺服器上。
+**K1.從 Microsoft Azure 儲存體服務還原完整資料庫備份**    
+位於 `Sales` 之 `mysecondcontainer` 的完整資料庫備份將會還原至 `myfirstcontainer`。 `Sales` 目前不存在於伺服器上。
 
 ```sql
 RESTORE DATABASE Sales
@@ -717,18 +708,19 @@ RESTORE DATABASE Sales
 
 ## <a name="more-information"></a>詳細資訊
 
-- [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [系統資料庫的備份與還原 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
-- [備份並還原全文檢索目錄與索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
-- [備份及還原複寫的資料庫](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)
-- [媒體集、媒體家族與備份組](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
-- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [備份記錄與標頭資訊](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
+[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)     
+[SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)    
+[系統資料庫的備份與還原 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)      
+[Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
+[備份並還原全文檢索目錄與索引。](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
+[備份及還原複寫的資料庫](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
+[BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)      
+[媒體集、媒體家族與備份組](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
+[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
+[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     
+[RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)     
+[RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)     
+[備份記錄與標頭資訊](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -780,7 +772,7 @@ FROM URL
 
 ## <a name="general-remarks"></a>一般備註
 
-先決條件是，您需要使用符合 Blob 儲存體帳戶 URL 的名稱，以及放置為祕密的共用存取簽章來建立認證。 RESTORE 命令會使用 Blob 儲存體 URL 查閱認證，以尋找讀取備份裝置所需要的資訊。
+先決條件是，您需要使用符合 Blob 儲存體帳戶 URL 的名稱，以及放置為祕密的共用存取簽章來建立認證。 RESTORE 命令會使用 Blob 儲存體 URL 來查閱認證，以尋找讀取備份裝置所需資訊。
 
 還原作業非同步 - 即使用戶端連線中斷，還是會繼續還原。 如果您的連線中斷，可以檢查 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 檢視以取得還原作業 (以及建立和卸除資料庫) 的狀態。
 
@@ -806,19 +798,17 @@ FROM URL
 如需詳細資訊，請參閱[受控執行個體](/azure/sql-database/sql-database-managed-instance)
 
 ## <a name="restoring-an-encrypted-database"></a>還原加密資料庫
-
 若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。
 
 ## <a name="permissions"></a>權限
-
-使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。
+使用者必須具有 `CREATE DATABASE` 權限，才能執行 RESTORE。
 
 ```sql
 CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
 GRANT CREATE ANY DATABASE TO [mylogin];
 ```
 
-RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。
+RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此，`db_owner` 固定資料庫角色的成員並沒有 RESTORE 權限。
 
 ## <a name="examples"></a> 範例
 
@@ -935,8 +925,7 @@ RESTORE HEADERONLY 指定只傳回一個使用者資料庫備份的標頭資訊�
 RESTORE HEADERONLY 結果會比照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 結果的模式。 此結果有超過 50 個資料行，這些資料行不會完全供[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]使用。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 結果中資料行的描述，請參閱 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)。
 
 ## <a name="permissions"></a>權限
-
-需要 **CREATE ANY DATABASE** 權限。
+需要 `CREATE ANY DATABASE` 權限。
 
 需要具備備份目錄之存取和讀取權限的 Windows 帳戶。 您也必須將 Windows 帳戶名稱和密碼儲存在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中。
 
@@ -983,14 +972,13 @@ RESTORE HEADERONLY 結果會比照 [!INCLUDE[ssNoVersion](../../includes/ssnover
 - 您無法將在具有 SQL Server 2012 PDW 硬體之應用裝置上建立的備份，還原至具有 SQL Server 2008 R2 硬體的應用裝置。 即使原先購買應用裝置時是配備 SQL Server 2008 R2 PDW 硬體，而現在執行的是 SQL Server 2012 PDW 軟體，也適用此限制。
 
 ## <a name="locking"></a>鎖定
-
 在 DATABASE 物件上採用獨佔鎖定。
 
 ## <a name="examples"></a>範例
 
 ### <a name="a-simple-restore-examples"></a>A. 簡單的 RESTORE 範例
 
-下列範例會將完整資料庫備份還原至 `SalesInvoices2013` 資料庫。 備份檔案會儲存在 \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full 目錄中。 SalesInvoices2013 資料庫不可以是目標應用裝置上已經存在的資料庫，否則此命令會因發生錯誤而失敗。
+下列範例會將完整資料庫備份還原至 `SalesInvoices2013` 資料庫。 備份檔案會儲存在 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 目錄中。 SalesInvoices2013 資料庫不可以是目標應用裝置上已經存在的資料庫，否則此命令會因發生錯誤而失敗。
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1001,7 +989,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 下列範例會先將完整備份還原至 SalesInvoices2013 資料庫，然後再將差異備份還原至該資料庫
 
-還原資料庫完整備份時，會從儲存在 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' 目錄中的完整備份還原。 若還原順利完成，差異備份會還原至 SalesInvoices2013 資料庫。差異備份儲存在 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff' 目錄中。
+還原資料庫完整備份時，會從儲存在 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 目錄中的完整備份還原。 如果還原順利完成，系統就會將差異備份還原至 SalesInvoices2013 資料庫。 差異備份會儲存在 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` 目錄中。
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1013,7 +1001,7 @@ RESTORE DATABASE SalesInvoices2013
 
 ### <a name="c-restoring-the-backup-header"></a>C. 還原備份標頭
 
-此範例會還原資料庫備份 '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' 的標頭資訊。 此命令會為 Invoices2013Full 備份產生一列資訊。
+此範例會還原資料庫備份 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 的標頭資訊。 此命令會為 Invoices2013Full 備份產生一列資訊。
 
 ```sql
 RESTORE HEADERONLY
@@ -1024,7 +1012,6 @@ RESTORE HEADERONLY
 您可以使用此標頭資訊來檢查備份的內容，或在嘗試還原備份之前，先確認目標還原應用裝置與來源備份應用裝置相容。
 
 ## <a name="see-also"></a>另請參閱
-
-- [ DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)
+[ DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
 
 ::: moniker-end

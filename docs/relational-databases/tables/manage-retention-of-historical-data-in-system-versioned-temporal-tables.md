@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9066f82c01dede49307cd38565f40f263d7ae76f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031636"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909571"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統設定版本之時態表中的歷程記錄資料保留
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,32 +63,30 @@ ms.locfileid: "68031636"
   
 > **注意：** Stretch Database 能將資料移轉到 Azure。 因此，您必須擁有 Azure 帳戶和計費用的訂閱。 若要取得免費試用的 Azure 帳戶，請按一下[免費試用一個月](https://azure.microsoft.com/pricing/free-trial/)。  
   
- 您可以使用延展精靈或 Transact-SQL 來設定 Stretch 的時態歷程記錄資料表，而且可以在系統版本設定功能設定為 [ON]  時啟用時態歷程記錄資料表的延展功能。 您無法延展目前的資料表，因為延展目前的資料表不具意義。  
+ 您可以使用延展精靈或 Transact-SQL 來設定 Stretch 的時態歷程記錄資料表，而且可以在系統版本設定功能設定為 [ON] 時啟用時態歷程記錄資料表的延展功能。 您無法延展目前的資料表，因為延展目前的資料表不具意義。  
   
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>使用延展精靈來延展整個歷程記錄資料表  
  對初學者來說，最簡單的方法是使用延展精靈來啟用整個資料庫的延展功能，接著在延展精靈中選取時態歷程記錄資料表 (以下範例假設您已將 Department 資料表設定為空資料庫中的系統設定版本時態資料表)。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，您無法以滑鼠右鍵按一下時態歷程記錄資料表本身，然後再按一下 [延展]。  
   
-1.  以滑鼠右鍵按一下資料庫，並指向 [工作]  和 [延展]  ，然後按一下 [啟用]  來啟動精靈。  
+1.  以滑鼠右鍵按一下資料庫，並指向 [工作] 和 [延展]，然後按一下 [啟用] 來啟動精靈。  
   
-2.  在 [選取資料表]  視窗中，選取時態歷程記錄資料表的核取方塊，然後按 [下一步]。  
+2.  在 [選取資料表] 視窗中，選取時態歷程記錄資料表的核取方塊，然後按 [下一步]。  
   
-     ![在 [選取資料表] 頁面上選取歷程記錄資料表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "在 [選取資料表] 頁面上選取歷程記錄資料表")  
+     ![在 [選取資料表] 頁面上選取記錄資料表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "在 [選取資料表] 頁面上選取記錄資料表")  
   
-3.  在 [設定 Azure]  視窗中，提供您的登入認證。 登入 Microsoft Azure 或註冊帳戶。 選取要使用的訂閱，並選取 Azure 區域。 接下來，建立新伺服器或選取現有伺服器。 按 [下一步]  。  
+3.  在 [設定 Azure] 視窗中，提供您的登入認證。 登入 Microsoft Azure 或註冊帳戶。 選取要使用的訂閱，並選取 Azure 區域。 接下來，建立新伺服器或選取現有伺服器。 按 [下一步] 。  
   
      ![建立新的 Azure 伺服器 - Stretch Database 精靈](../../relational-databases/tables/media/stretch-wizard-4.png "建立新的 Azure 伺服器 - Stretch Database 精靈")  
   
-4.  在 [安全認證]  視窗中，提供資料庫主要金鑰的密碼來保護來源 SQL Server 資料庫認證，然後按 [下一步]。  
+4.  在 [安全認證] 視窗中，提供資料庫主要金鑰的密碼來保護來源 SQL Server 資料庫認證，然後按 [下一步]。  
   
      ![Stretch Database 精靈的 [安全認證] 頁面](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 精靈的 [安全認證] 頁面")  
   
-5.  在 [選取 IP 位址]  視窗中提供 SQL Server 的 IP 位址範圍，讓 Azure 伺服器得以與您的 SQL Server 通訊 (如果您選取已有防火牆規則的現有伺服器，在這裡只要按 [下一步] 就能使用現有的防火牆規則)。 依序按 [下一步]  和 [完成]  以啟用 Stretch Database 及延展時態歷程記錄資料表。  
+5.  在 [選取 IP 位址] 視窗中提供 SQL Server 的 IP 位址範圍，讓 Azure 伺服器得以與您的 SQL Server 通訊 (如果您選取已有防火牆規則的現有伺服器，在這裡只要按 [下一步] 就能使用現有的防火牆規則)。 依序按 [下一步] 和 [完成] 以啟用 Stretch Database 及延展時態歷程記錄資料表。  
   
-     ![Stretch Database 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")  
+     ![ 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")  
   
 6.  當精靈完成時，請確認資料庫是否成功啟用延展。 請注意物件總管中指出資料庫已延展的圖示。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **注意：** 如果 [啟用資料庫的延展] 失敗，請檢閱錯誤記錄檔。 常見錯誤是防火牆規則的設定不正確。  
   
@@ -190,7 +188,7 @@ COMMIT ;
   
  下圖說明週期性資料分割維護工作 (請參閱下文中的詳細步驟)。  
   
- ![資料分割2](../../relational-databases/tables/media/partitioning2.png "資料分割2")  
+ ![資料分割 2](../../relational-databases/tables/media/partitioning2.png "資料分割 2")  
   
  週期性資料分割維護工作的詳細步驟如下︰  
   
@@ -336,7 +334,7 @@ COMMIT TRANSACTION
   
  讓我們先以視覺化方式說明 RANGE LEFT 和 RANGE RIGHT 選項的意義：  
   
- ![資料分割3](../../relational-databases/tables/media/partitioning3.png "資料分割3")  
+ ![資料分割 3](../../relational-databases/tables/media/partitioning3.png "資料分割 3")  
   
  當您將資料分割函數定義為 RANGE LEFT 時，指定的值是資料分割的上限。 當您使用 RANGE RIGHT 時，指定的值是資料分割的下限。 當您使用 MERGE RANGE 作業來移除資料分割函數定義中的界限時，基礎實作也會移除包含界限的資料分割。 如果該資料分割不是空的，系統會將資料移動到 MERGE RANGE 作業產生的資料分割。  
   
@@ -357,7 +355,7 @@ COMMIT TRANSACTION
   
  下圖說明如何安排單一資料表的清除邏輯，以減少對執行中工作負載的影響。  
   
- ![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")  
+ ![自訂清除指令碼圖表](../../relational-databases/tables/media/customcleanupscriptdiagram.png "自訂清除指令碼圖表")  
   
  以下是一些實作程序的高階指導方針。 將清除邏輯排程為每天執行，並且逐一處理所有需要清除資料的時態表。 使用 SQL Server Agent 或其他工具來排程這個程序：  
   

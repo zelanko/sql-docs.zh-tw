@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278260"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930491"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 版本資訊
 
@@ -101,7 +101,7 @@ ms.locfileid: "72278260"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-| MSDTC 支援 | 適用於 SQL Sever 2017 之 Microsoft 分散式交易協調器 (MSDTC) 的支援。 如需詳細資訊，請參閱[如何在 Linux 上設定 Microsoft 分散式交易協調器 (MSDTC)](sql-server-linux-configure-msdtc.md)。 |
+| MSDTC 支援 | SQL Sever 2017 的 Microsoft Distributed Transaction Coordinator (MSDTC) 支援。 如需詳細資訊，請參閱[如何在 Linux 上設定 Microsoft Distributed Transaction Coordinator (MSDTC)](sql-server-linux-configure-msdtc.md)。 |
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -392,7 +392,7 @@ sudo systemctl start mssql-server
 
 ### <a name="package-details"></a>套件詳細資料
 
-下表列出 RPM 和 Debian 套件的套件詳細資料和下載位置。 請注意，如果您使用下列安裝指南中的步驟，則不需要直接下載這些套件：
+下表列出 RPM 和 Debian 套件的套件詳細資料和下載位置。 如果您使用下列安裝指南中的步驟，則不需要直接下載這些套件：
 
 - [安裝 SQL Server 套件](sql-server-linux-setup.md)
 - [安裝全文檢索搜尋套件](sql-server-linux-setup-full-text-search.md)
@@ -404,42 +404,6 @@ sudo systemctl start mssql-server
 | Red Hat RPM 套件 | 14.0.1000.169-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[SSIS 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.1000.169-2 | [mssql-server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server Agent RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian 套件 | 14.0.1000.169-2 | [引擎 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[高可用性 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[全文檢索搜尋 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server Agent Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
-
-## <a name="Unsupported"></a> 不支援的功能與服務
-
-以下是 GA 版本發行時 Linux 上未提供的功能與服務。 這些功能的支援將隨著時間逐漸啟用。
-
-| 區域 | 不支援的功能或服務 |
-|-----|-----|
-| **資料庫引擎** | 異動複寫 |
-| &nbsp; | 合併式複寫 |
-| &nbsp; | 異動資料擷取 (請參閱 SQL Server Agent) |
-| &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
-| &nbsp; | 搭配協力廠商連線的分散式查詢 |
-| &nbsp; | 連結至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外之資料來源的連結伺服器  |
-| &nbsp; | 系統擴充預存程序 (XP_CMDSHELL 等) |
-| &nbsp; | Filetable、FILESTREAM |
-| &nbsp; | 已設定 EXTERNAL_ACCESS 或 UNSAFE 權限的 CLR 組件 |
-| &nbsp; | 緩衝集區擴充 |
-| **SQL Server Agent** |  子系統：CmdExec、PowerShell、佇列讀取器、SSIS、SSAS、SSRS |
-| &nbsp; | 警示 |
-| &nbsp; | 記錄讀取器代理程式 |
-| &nbsp; | 異動資料擷取 (CDC) |
-| &nbsp; | 受管理備份 |
-| **高可用性** | 資料庫鏡像  |
-| **安全性** | 可延伸金鑰管理 |
-| &nbsp; | 適用於連結伺服器的 AD 驗證 | 
-| &nbsp; | 適用於可用性群組 (AG) 的 AD 驗證 | 
-| &nbsp; | 協力廠商 AD 工具 (Centrify、Vintela、Powerbroker) | 
-| **服務** | SQL Server Browser |
-| &nbsp; | SQL Server R Services |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-| &nbsp; | 分散式交易協調器 (DTC) |
 
 ## <a name="known-issues"></a>已知問題
 
@@ -471,9 +435,7 @@ sudo systemctl start mssql-server
 
 - 還原在 Windows 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份的資料庫時，您必須使用 Transact-SQL 陳述式中的 **WITH MOVE** 子句。
 
-- 在 Linux 上執行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援需要 Microsoft Distributed Transaction Coordinator 服務的分散式交易。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 連結伺服器除非涉及 DTC，否則會受到支援。 如需詳細資訊，請參閱[在 Linux 上執行的 SQL Server 不支援需要 Microsoft Distributed Transaction Coordinator 服務的分散式交易](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/) \(英文\)。
-
-- 某些適用於「傳輸層安全性」(TLS) 的演算法 (加密套件) 在搭配 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時無法正常運作。 這除了會導致在高可用性群組中的複本之間建立連線時發生問題，也會導致在嘗試連線至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時連線失敗。
+- 某些適用於「傳輸層安全性」(TLS) 的演算法 (加密套件) 在 Linux 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 上正常運作。 這除了會導致在高可用性群組中的複本之間建立連線時發生問題，也會導致在嘗試連線至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時連線失敗。
 
    - **解決方法**：透過執行下列動作，修改 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 **mssql.conf** 設定指令碼以停用有問題的加密套件：
 
@@ -493,7 +455,7 @@ sudo systemctl start mssql-server
       sudo systemctl restart mssql-server
       ```
 
-- 無法在 Linux 上的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 上還原 Windows 上 使用「記憶體內部 OLTP」的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 資料庫。 若要還原使用記憶體內部 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 資料庫，請先在 Windows 上將資料庫升級至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]，再透過備份/還原或中斷連結/連結，將它們移至 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
+- 無法在 Linux 的 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 上還原 Windows 上使用記憶體內部 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 資料庫。 若要還原使用記憶體內部 OLTP 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 資料庫，請先在 Windows 上將資料庫升級至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]，再透過備份/還原或中斷連結/連結，將它們移至 Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 - Linux 上目前不支援 **ADMINISTER BULK OPERATIONS** 使用者權限。
 
@@ -520,7 +482,7 @@ sudo systemctl start mssql-server
 #### <a name="network-file-system-nfs"></a>網路檔案系統 (NFS)
 如果您在生產環境中使用**網路檔案系統 (NFS)** 遠端共用，請注意下列支援需求：
 
-- 使用 NFS 版本 **4.2 或更新的版本**。 舊版的 NFS 不支援新式檔案系統常用的必要功能，例如 fallocate 和疏鬆檔案建立。
+- 使用 NFS 版本 **4.2 或更新的版本**。 舊版 NFS 不支援現代檔案系統常用的必要功能，例如 fallocate 和疏鬆檔案建立。
 - 僅尋找 NFS 掛接上的 **/var/opt/mssql** 目錄。 其他檔案 (例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系統二進位檔案) 並不受支援。
 - 確定 NFS 用戶端在裝載遠端共用時使用 'nolock' 選項。
 
@@ -546,7 +508,7 @@ sudo systemctl start mssql-server
 
 #### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
-- 此版本中在 SUSE 上不支援 **mssql-server-is** 套件。 目前在 Ubuntu 和 Red Hat Enterprise Linux (RHEL) 上有支援此套件。
+- 此版本中在 SUSE 上不支援 **mssql-server-is** 套件。 目前在 Ubuntu 和 Red Hat Enterprise Linux (RHEL) 上支援此套件。
 
 - 透過 Linux CTP 2.1 Refresh 和更新版本上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件可以在 Linux 上使用 ODBC 連接。 此功能已進行過 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 MySQL ODBC 驅動程式的測試，但也應該能夠與任何遵循 ODBC 規格的 Unicode ODBC 驅動程式搭配運作。 在設計階段，您可以提供 DSN 或連接字串來連接到 ODBC 資料；您也可以使用 Windows 驗證。 如需詳細資訊，請參閱[宣佈在 Linux 上提供 ODBC 支援的部落格文章](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/) \(英文\)。
 
@@ -572,11 +534,11 @@ sudo systemctl start mssql-server
 
 以下限制適用於 Windows 上連線至 Linux 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。
 
-- 不支援維護計畫。
+- 不支援維護計劃。
 
-- 不支援 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的「管理資料倉儲」(MDW) 和資料收集器。 
+- 不支援 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的管理資料倉儲 (MDW) 和資料收集器。 
 
-- 具有「Windows 驗證」或 Windows 事件記錄檔選項的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI 元件無法與 Linux 搭配運作。 您仍然可以將這些功能與其他選項搭配使用，例如 SQL 登入。 
+- 具有 Windows 驗證或 Windows 事件記錄檔選項的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI 元件無法與 Linux 搭配使用。 您仍然可以將這些功能與其他選項搭配使用，例如 SQL 登入。 
 
 - 無法修改要保留的記錄檔數目。
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1220ec831860baee2221004af19d9fd735c03cec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081413"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908965"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整的資料庫還原 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,15 +35,13 @@ ms.locfileid: "68081413"
   
 ### <a name="untrusted-sources"></a>不受信任的來源
 
-建議您「不」  要附加或還原來自未知來源或不受信任之來源的資料庫。 這些資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 在您使用來自未知或不受信任之來源的資料庫時，請在非生產環境伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。 此外，檢查資料庫中使用者撰寫的程式碼，如預存程序或其他使用者自訂的程式碼。
+建議您「不」要附加或還原來自未知來源或不受信任之來源的資料庫。 這些資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 在您使用來自未知或不受信任之來源的資料庫時，請在非生產環境伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。 此外，檢查資料庫中使用者撰寫的程式碼，如預存程序或其他使用者自訂的程式碼。
 
 ### <a name="backups-from-earlier-versions"></a>來自舊版的備份
 
 如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之備份支援的相關資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)的＜相容性支援＞一節。
   
 ##  <a name="PointOfFailure"></a> 將資料庫還原到失敗點  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  一般而言，將資料庫復原至失敗點的作業，包含下列基本步驟：  
   

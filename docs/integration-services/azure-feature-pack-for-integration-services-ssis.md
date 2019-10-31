@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8188dd6b26b3eb81596394ce8b7947654b00df5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: cef051bcd3e7de6f381bba3f15f4e2e720f2a254
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294945"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807440"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 
@@ -27,8 +27,9 @@ ms.locfileid: "71294945"
 
 SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模組，可提供此頁面上所列的元件，以便讓 SSIS 連接到 Azure 服務、在 Azure 和內部部署資料來源之間轉送資料，以及處理儲存在 Azure 中的資料。
 
-[![下載 SSIS Feature Pack for Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **下載**
+[![下載 SSIS Feature Pack for Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **下載**
 
+- SQL Server 2019 - [Microsoft SQL Server 2019 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
 - SQL Server 2014 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)
@@ -110,14 +111,14 @@ JAVA 組建架構 (32/64 位元) 應該符合所要使用的 SSIS 執行階段�
 
 1. 下載並解壓縮安裝 ZIP 套件。
 2. 從命令提示字元中，執行 `sysdm.cpl`。
-3. 在 [進階]  索引標籤上，選取 [環境變數]  。
-4. 在 [系統變數]  區段底下，選取 [新增]  。
-5. 針對 [變數名稱]  輸入 `JAVA_HOME`。
-6. 選取 [瀏覽目錄]  ，巡覽至解壓縮的資料夾，然後選取 `jre` 子資料夾。
-   然後選取 [確定]  ，系統會自動填入 [變數值]  。
-7. 選取 [確定]  以關閉 [新增系統變數]  對話方塊。
-8. 選取 [確定]  以關閉 [環境變數]  對話方塊。
-9. 選取 [確定]  以關閉 [系統內容]  對話方塊。
+3. 在 [進階] 索引標籤上，選取 [環境變數]。
+4. 在 [系統變數] 區段底下，選取 [新增]。
+5. 針對 [變數名稱] 輸入 `JAVA_HOME`。
+6. 選取 [瀏覽目錄]，巡覽至解壓縮的資料夾，然後選取 `jre` 子資料夾。
+   然後選取 [確定]，系統會自動填入 [變數值]。
+7. 選取 [確定] 以關閉 [新增系統變數] 對話方塊。
+8. 選取 [確定] 以關閉 [環境變數] 對話方塊。
+9. 選取 [確定] 以關閉 [系統內容] 對話方塊。
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>在 Azure-SSIS Integration Runtime 上設定 Zulu 的 OpenJDK
 
@@ -177,3 +178,16 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
+## <a name="release-notes"></a>版本資訊
+
+### <a name="version-1150"></a>版本 1.15.0
+
+#### <a name="improvements"></a>改善項目
+
+1. 將刪除資料夾/檔案作業新增至彈性檔案工作
+1. 在彈性檔案來源中新增外部/輸出資料類型轉換函式
+
+#### <a name="bugfixes"></a>Bug 修正
+
+1. 在某些情況下，Data Lake Storage Gen2 的測試連線會發生問題，並附帶錯誤訊息「嘗試以和陣列不相容的類型存取元素」
+1. 回復 Azure 儲存體模擬器的支援

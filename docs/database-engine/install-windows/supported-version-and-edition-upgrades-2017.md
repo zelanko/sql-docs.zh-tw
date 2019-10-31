@@ -15,12 +15,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68c18f0be55716f668e47576b3abd041bfb1c076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b8e9f5f6682b8d44785d9b2600f15013a2f615c
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990809"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717223"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>支援的版本與版本升級 - SQL Server 2017
 
@@ -42,7 +42,7 @@ ms.locfileid: "67990809"
   
 ## <a name="unsupported-scenarios"></a>不支援的案例  
   
--   不支援 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 的跨版本執行個體。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體內， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]元件的版本號碼都必須相同。  
+-   不支援 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 的跨版本執行個體。 在 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 執行個體內，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 元件的版本號碼必須相同。  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 僅適用於 64 位元平台。 不支援跨平台升級。 您無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式，將 32 位元的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體升級到原生 64 位元。 不過，您還是可以備份或卸離 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之 32 位元執行個體的資料庫，而且如果複寫時未發行這些資料庫，也可以將它們還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 位元) 的新執行個體。 您必須在 master、msdb 和 model 系統資料庫中重新建立任何登入及其他使用者物件。  
   

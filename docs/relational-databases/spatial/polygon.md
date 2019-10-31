@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026138"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907203"
 ---
 # <a name="polygon"></a>多邊形
 
@@ -33,7 +33,7 @@ ms.locfileid: "69026138"
   
 下圖顯示 **Polygon** 執行個體的範例。  
   
- ![幾何 Polygon 執行個體的範例](../../relational-databases/spatial/media/polygon.gif "幾何 Polygon 執行個體的範例")  
+ ![幾何多邊形執行個體的範例](../../relational-databases/spatial/media/polygon.gif "幾何多邊形執行個體的範例")  
   
 如本圖所示：  
   
@@ -42,8 +42,6 @@ ms.locfileid: "69026138"
 2.  圖 2 是 **Polygon** 執行個體，其界限是由一個外部環形和兩個內部環形所定義。 內部環形內的區域是 **Polygon** 執行個體外部的一部分。  
   
 3.  圖 3 是有效的 **Polygon** 執行個體，因為它的內部環形會在單一正切點上相交。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="accepted-instances"></a>已接受的執行個體  
  已接受的 **Polygon** 執行個體是指可儲存在 **geometry** 或 **geography** 變數中而不會擲回例外狀況的執行個體。 已接受的 **Polygon** 執行個體如下：  

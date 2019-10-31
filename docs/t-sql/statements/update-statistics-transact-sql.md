@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099799"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798405"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,6 +125,9 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > 若執行 AUTO_UPDATE_STATISTICS，它會在可用的情況下使用保存的取樣百分比，否則則會使用預設取樣百分比。
  > RESAMPLE 行為不會受此選項影響。
  
+ > [!NOTE]
+ > 如果資料表遭到截斷，則所有以遭截斷 HoBT 為基礎建置的統計資料都會還原至使用預設取樣百分比。
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 和 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 會針對選取的統計資料公開保存的取樣百分比值。
  
@@ -190,7 +193,7 @@ MAXDOP = *max_degree_of_parallelism*
 * `MAXDOP` 選項與 `STATS_STREAM`、`ROWCOUNT` 和 `PAGECOUNT` 選項不相容。
 * `MAXDOP` 選項受限於 Resource Governor 工作負載 `MAX_DOP` 設定 (如果已使用)。
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 來更新所有統計資料  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>使用 sp_updatestats 來更新所有統計資料  
 如需如何針對資料庫中所有使用者定義和內部資料表更新統計資料的詳細資訊，請參閱預存程序 [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，下列命令會呼叫 sp_updatestats 來更新資料庫的所有統計資料。  
   
 ```sql  

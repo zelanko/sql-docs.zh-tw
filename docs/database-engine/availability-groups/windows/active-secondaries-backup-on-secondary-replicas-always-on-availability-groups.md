@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ccaf0091472ed0b7c87dbb790228024d0224e91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991689"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807423"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>將支援的備份卸載至可用性群組次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "67991689"
   
 -   **BACKUP DATABASE** 只有在次要複本上執行時，才支援資料庫、檔案或檔案群組的只複製完整備份。 請注意，只複製備份不會影響記錄檔鏈結或清除差異式點陣圖。  
   
--   次要複本不支援差異備份。  
+-   次要複本不支援差異備份。
+
+-   目前不支援並行備份，例如在次要複本上執行完整資料庫備份時，在主要複本上執行交易記錄備份。 
   
 -   **BACKUP LOG** 只支援一般記錄備份 (次要複本的記錄備份不支援 COPY_ONLY 選項)。  
   

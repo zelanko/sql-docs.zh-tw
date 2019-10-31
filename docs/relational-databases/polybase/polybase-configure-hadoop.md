@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: f075ae6e8392b0eae2bb78da588c43f3a5c438b0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ecb0f89cb7093587feb9c7e57be56e2cafaee5a0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710635"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907574"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
@@ -59,8 +59,6 @@ ms.locfileid: "71710635"
    ```  
 
 2. 您必須使用 **services.msc** 重新啟動 SQL Server。 重新啟動 SQL Server 時，會重新啟動下列服務︰  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
@@ -226,7 +224,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssms"></a>在 SSMS 中檢視 PolyBase 物件  
 
-在 SSMS 中，外部資料表會顯示在個別的資料夾 [外部資料表]  中。 外部資料來源和外部檔案格式會在 [外部資源]  下方的子資料夾中。  
+在 SSMS 中，外部資料表會顯示在個別的資料夾 [外部資料表] 中。 外部資料來源和外部檔案格式會在 [外部資源] 下方的子資料夾中。  
   
 ![SSMS 中的 PolyBase 物件](media/polybase-management.png)  
 

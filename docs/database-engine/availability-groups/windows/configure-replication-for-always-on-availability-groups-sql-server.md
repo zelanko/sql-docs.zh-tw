@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251937"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689664"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
 
@@ -52,7 +52,7 @@ ms.locfileid: "72251937"
         @security_mode = 1;  
     ```  
   
-3.  設定遠端發行者。 如果預存程序正用於設定散發者，請執行 **sp_adddistpublisher**。 *@security_mode* 參數是用來決定從複寫代理程式執行的發行者驗證預存程序如何連接到目前主要複本。 如果設定為 1，就會使用 Windows 驗證來連接到目前主要複本。 如果設定為 0，就會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證搭配指定的 *@login* 和 *@password* 值。 在每個次要複本上指定的登入和密碼必須有效，才能讓驗證預存程序成功連接到該複本。  
+3.  設定遠端發行者。 如果預存程序正用於設定散發者，請執行 **sp_adddistpublisher**。 *\@security_mode* 參數是用來決定從複寫代理程式執行的發行者驗證預存程序如何連線到目前主要複本。 如果設定為 1，就會使用 Windows 驗證來連接到目前主要複本。 如果設定為 0，就會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證搭配指定的 *\@login* 和 *\@password* 值。 在每個次要複本上指定的登入和密碼必須有效，才能讓驗證預存程序成功連接到該複本。  
   
     > [!NOTE]  
     >  如果任何修改的複寫代理程式在散發者以外的電腦上執行，則使用 Windows 驗證來連接到主要複本時，就必須針對複本主機電腦之間的通訊設定 Kerberos 驗證。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入來連接到目前主要複本時，不需要 Kerberos 驗證。  
@@ -72,7 +72,7 @@ ms.locfileid: "72251937"
   
  **在原始發行者端設定發行者**  
   
-1.  設定遠端散發。 如果預存程序正用於設定發行者，請執行 **sp_adddistributor**。 請以在散發者端執行 *@password* 來設定散發時所使用的值，指定 **sp_adddistrbutor** 的值。  
+1.  設定遠端散發。 如果預存程序正用於設定發行者，請執行 **sp_adddistributor**。 請以在散發者端執行 **sp_adddistrbutor** 時用來設定散發的相同值，來指定 *\@password* 的值。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -122,10 +122,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- 如果 *@installed* 為 0，您就必須將複寫加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝。  
+ 如果 *\@installed* 為 0，您就必須將複寫新增到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝。  
   
 ##  <a name="step4"></a> 4.將次要複本主機設定為複寫發行者  
- 次要複本無法做為複寫發行者或重新發行者，但是您必須設定複寫，才能讓次要複本在容錯移轉之後接管。 在散發者端，設定每個次要複本主機的散發。 請指定當原始發行者加入至散發者時指定的相同散發資料庫和工作目錄。 如果您要使用預存程序來設定散發，請使用 **sp_adddistpublisher** ，讓遠端發行者與散發者產生關聯。 如果 *@login* 和 *@password* 已用於原始發行者，請在您加入次要複本主機做為發行者時，針對每個項目指定相同的值。  
+ 次要複本無法做為複寫發行者或重新發行者，但是您必須設定複寫，才能讓次要複本在容錯移轉之後接管。 在散發者端，設定每個次要複本主機的散發。 請指定當原始發行者加入至散發者時指定的相同散發資料庫和工作目錄。 如果您要使用預存程序來設定散發，請使用 **sp_adddistpublisher** ，讓遠端發行者與散發者產生關聯。 如果 *\@login* 和 *\@password* 已用於原始發行者，請在您新增次要複本主機作為發行者時，針對每個項目指定相同的值。  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -136,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 在每個次要複本主機上，設定散發。 您可以將原始發行者的散發者識別為遠端散發者。 請使用原本在散發者端執行 **sp_adddistributor** 時所使用的相同密碼。 如果預存程序正用於設定散發，就會使用 *@password* 的 **sp_adddistributor** 參數來指定密碼。  
+ 在每個次要複本主機上，設定散發。 您可以將原始發行者的散發者識別為遠端散發者。 請使用原本在散發者端執行 **sp_adddistributor** 時所使用的相同密碼。 如果預存程序正在用於設定散發，則會使用 **sp_adddistributor** 的 *\@password* 參數來指定密碼。  
   
 ```  
 EXEC sp_adddistributor   

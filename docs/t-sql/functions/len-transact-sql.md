@@ -20,12 +20,12 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c7fa3d9db220dcacf425399600166858300489dc
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653249"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798421"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ LEN ( string_expression )
   
  如果您使用 SC 定序，傳回的整數值也將 UTF-16 Surrogate 字組視為單一字元。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 LEN 會排除尾端空格。 如果這是個問題，請考慮使用不修剪字串的 [DATALENGTH &#40;Transact-SQL&#41; ](../../t-sql/functions/datalength-transact-sql.md) 函數。 如果處理的是 Unicode 字串，DATALENGTH 會傳回可能不等於字元數目的數字。 下列範例會示範有尾端空白的 LEN 和 DATALENGTH。  
   
 ```sql  
@@ -66,7 +66,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
 
 > [!NOTE]
-> 使用 [LEN](../../t-sql/functions/len-transact-sql.md) 傳回編碼成所給定字串運算式的字元數目，使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 則傳回所給定字串運算式的大小 (以位元組為單位)。 取決於資料行中所使用的資料類型和編碼類型而，這些輸出可能會有所不同。 如需不同編碼類型之間儲存體差異的詳細資訊，請參閱[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。
+> 使用 [LEN](../../t-sql/functions/len-transact-sql.md) 傳回指定字串運算式的編碼字元數，或使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 傳回指定字串運算式的位元組大小時，輸出可能會因資料類型和資料行中所使用的編碼類型而不同。 如需不同編碼類型之間儲存體差異的詳細資訊，請參閱[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 ## <a name="examples"></a>範例  
  下列範例會選取 `FirstName` 居民的 `Australia` 字元數和資料。 這個範例會使用 AdventureWorks 資料庫。  

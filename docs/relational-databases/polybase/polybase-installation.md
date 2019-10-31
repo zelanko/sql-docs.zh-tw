@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7823f9e76207802b7f05a21ccd11b5de1fa9d18d
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961972"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908663"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 
@@ -65,16 +65,16 @@ ms.locfileid: "71961972"
    
 1. 執行 SQL Server setup.exe。   
    
-2. 選取 [安裝]  ，然後選取 [新的獨立 SQL Server 安裝或新增功能]  。  
+2. 選取 [安裝]，然後選取 [新的獨立 SQL Server 安裝或新增功能]。  
    
-3. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]  。  
+3. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]。  
 
    ![PolyBase 服務](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服務")  
    
    >[!NOTE]
-   >SQL Server 2019 PolyBase 現在包含額外選項 [適用於 HDFS 資料來源的 Java 連接器]  。 如需此功能的詳細資訊，請參閱 [SQL Server 預覽功能](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) \(英文\)。
+   >SQL Server 2019 PolyBase 現在包含額外選項 [適用於 HDFS 資料來源的 Java 連接器]。 如需此功能的詳細資訊，請參閱 [SQL Server 預覽功能](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) \(英文\)。
    
-4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務]  和 [SQL Server PolyBase 資料移動服務]  設定為在同一個網域帳戶下執行。  
+4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎服務] 和 [SQL Server PolyBase 資料移動服務] 設定為在同一個網域帳戶下執行。  
 
    >[!IMPORTANT]
    >在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。 請參閱 [PolyBase 向外延展群組](#enable)。
@@ -90,8 +90,6 @@ ms.locfileid: "71961972"
      此選項也會啟用 Microsoft Distributed Transaction Coordinator (MSDTC) 防火牆連線，並修改 MSDTC 登錄設定。  
    
 6. 在 [PolyBase 設定] 頁面上，指定至少具有六個連接埠的連接埠範圍。 SQL Server 安裝程式會配置該範圍內前六個可用的連接埠。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > 安裝完成後，您必須[啟用 PolyBase 功能](#enable)。
@@ -114,7 +112,7 @@ ms.locfileid: "71961972"
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCPASSWORD|指定資料移動帳戶的密碼。|  
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定資料移動服務的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  
 |PolyBase|**選擇性**<br /><br /> /PBSCALEOUT|指定 SQL Server 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 <br />支援的值：True、False。|  
-|PolyBase|**選擇性**<br /><br /> /PBPORTRANGE|為 PolyBase 服務指定至少具有六個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|**選擇性**<br /><br /> /PBPORTRANGE|為 PolyBase 服務指定至少具有六個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 <!--SQL Server 2019-->
@@ -130,7 +128,7 @@ ms.locfileid: "71961972"
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCPASSWORD|指定資料移動帳戶的密碼。|  
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定資料移動服務的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  
 |PolyBase|**選擇性**<br /><br /> /PBSCALEOUT|指定 SQL Server 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 <br />支援的值：True、False。|  
-|PolyBase|**選擇性**<br /><br /> /PBPORTRANGE|為 PolyBase 服務指定至少具有六個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|PolyBase|**選擇性**<br /><br /> /PBPORTRANGE|為 PolyBase 服務指定至少具有六個連接埠的連接埠範圍。 範例：<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 
@@ -190,13 +188,13 @@ SQL Server PolyBase 安裝程式會在電腦上建立下列防火牆規則：
    
 #### <a name="to-enable-the-firewall-rules"></a>啟用防火牆規則  
 
-1. 開啟 [控制台]  。  
+1. 開啟 [控制台]。  
 
-2. 選取 [系統及安全性]  ，然後選取 [Windows 防火牆]  。  
+2. 選取 [系統及安全性]，然後選取 [Windows 防火牆]。  
    
-3. 選取 [進階設定]  ，然後選取 [輸入規則]  。  
+3. 選取 [進階設定]，然後選取 [輸入規則]。  
    
-4. 以滑鼠右鍵按一下已停用的規則，然後選取 [啟用規則]  。  
+4. 以滑鼠右鍵按一下已停用的規則，然後選取 [啟用規則]。  
    
 ### <a name="polybase-service-accounts"></a>PolyBase 服務帳戶
 

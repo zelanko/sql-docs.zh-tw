@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298279"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807418"
 ---
 # <a name="flexible-file-task"></a>彈性檔案工作
 
@@ -35,7 +35,9 @@ ms.locfileid: "71298279"
 若要將彈性檔案工作新增至套件，請將它從 SSIS 工具箱拖曳至設計師畫布。 接著，按兩下該工作，或以滑鼠右鍵按一下該工作並選取 [編輯]  ，以開啟 [彈性檔案工作編輯器]  對話方塊。
 
 **作業**屬性會指定要執行的檔案作業。
-目前僅支援**複製**作業。
+目前支援的作業包括：
+- **複製**作業
+- **刪除**作業
 
 目前已針對**複製**作業提供下列屬性。
 
@@ -48,6 +50,12 @@ ms.locfileid: "71298279"
 - **DestinationConnection：** 指定目的地連線管理員。
 - **DestinationFolderPath：** 指定目的地資料夾路徑。
 - **DestinationFileName：** 指定目的地檔案名稱。
+
+目前已針對**刪除**作業提供下列屬性。
+- **ConnectionType：** 指定連線管理員類型。
+- **Connection：** 指定連線管理員。
+- **FolderPath：** 指定資料夾路徑。
+- **FileName：** 指定檔案名稱。 若維持空白，將會刪除資料夾。 針對 Azure Blob 儲存體，不支援刪除資料夾。
 
 ***服務主體權限設定的注意事項***
 

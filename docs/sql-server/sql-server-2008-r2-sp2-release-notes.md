@@ -3,7 +3,7 @@ title: SQL Server 2008 R2 SP2 版本資訊 | Microsoft Docs
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 01/31/2017
+ms.date: 10/15/2019
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b591e7383861e878496553fd8091f8a5137fb8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61afc55e04f7cd317e11c7db527dc97fb80fc7be
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938981"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904257"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67938981"
 ## <a name="20-before-you-install"></a>2.0 安裝之前  
 如需有關如何安裝 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 更新的詳細資訊，請參閱 [SQL Server 2008 R2 服務文件](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx)。  
   
-如需有關如何開始使用並安裝 SQL Server 2008 R2 的一般資訊，請參閱 SQL Server 2008 R2 讀我檔案。 安裝媒體中提供此讀我檔案文件。 您也可以在 [SQL Server 線上叢書](sql-server-technical-documentation.md) 和 [SQL Server 論壇](https://social.msdn.microsoft.com/Forums/category/sqlserver/)中尋找更多資訊。  
+如需有關如何開始使用並安裝 SQL Server 2008 R2 的一般資訊，請參閱 SQL Server 2008 R2 讀我檔案。 安裝媒體中提供此讀我檔案文件。 您也可以在 [SQL Server 論壇](https://social.msdn.microsoft.com/Forums/category/sqlserver/)中尋找更多資訊。
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 選擇要下載並安裝的正確檔案  
 您可以使用下表來決定要下載並安裝的檔案。 在安裝 Service Pack 之前，請先確認您擁有正確的系統需求。 系統需求會列在資料表中所連結的下載頁面。  
@@ -42,7 +42,7 @@ ms.locfileid: "67938981"
 |SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 (包括 SQL Server 2008 R2 Management Studio) 之 32 位元版本的用戶端和管理能力工具|將用戶端和管理能力工具升級至 32 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x86-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
 |32 位元版本的 SQL Server 2008 R2 Management Studio Express 或 SQL Server 2008 R2 SP1 Management Studio Express|升級至 32 位元版本的 SQL Server 2008 R2 SP2 Management Studio Express|SQLManagementStudio_x86_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791)|  
 |32 位元版本的 SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 任何版， **以及** 32 位元版本的用戶端和管理能力工具 (包括 SQL Server 2008 R2 RTM Management Studio)|將所有產品升級至 32 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x86-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
-|[Microsoft SQL Server 2008 R2 RTM 功能套件](https://www.microsoft.com/download/en/details.aspx?id=16978)中一個或多個 32 位元版本的工具|將工具升級至 32 位元版本的 Microsoft SQL Server 2008 R2 SP2 功能套件|[Microsoft SQL Server 2008 R2 SP2 功能套件](https://go.microsoft.com/fwlink/?LinkId=251792)中一個或多個檔案|  
+| [Microsoft SQL Server 2008 R2 RTM 功能套件](https://www.microsoft.com/download/en/details.aspx?id=16978)中一個或多個 32 位元版本的工具|將工具升級至 32 位元版本的 Microsoft SQL Server 2008 R2 SP2 功能套件| [Microsoft SQL Server 2008 R2 SP2 功能套件](https://go.microsoft.com/fwlink/?LinkId=251792)中一個或多個檔案|  
 |無 32 位元版本的 SQL Server 2008 R2 安裝|安裝 Server 2008 R2，包括 SP2|移至 [SQL Server 2008 R2 SP2 - Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) 並依照指示執行。|  
 |無 32 位元版本的 SQL Server 2008 R2 Management Studio 安裝|安裝 SQL Server 2008 R2 Management Studio，包括 SP2|SQLManagementStudio_x86_ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791) ，可供免費安裝 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
 |64 位元版本的 SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 任何版|升級至 64 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x64-ENU 或 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
@@ -50,7 +50,7 @@ ms.locfileid: "67938981"
 |SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 (包括 SQL Server 2008 R2 Management Studio) 之 64 位元版本的用戶端和管理能力工具|將用戶端和管理能力工具升級至 64 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x64-ENU.exe 或 SQLServer2008R2SP2-KB2630455-IA64-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
 |64 位元版本的 SQL Server 2008 R2 Management Studio Express 或 SQL Server 2008 R2 SP1 Management Studio Express|升級至 64 位元版本的 SQL Server 2008 R2 SP2 Management Studio Express|SQLManagementStudio_x64_CHT.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791)|  
 |64 位元版本的 SQL Server 2008 R2 或 SQL Server 2008 R2 SP1 任何版， **以及** 64 位元版本的用戶端和管理能力工具 (包括 SQL Server 2008 R2 RTM Management Studio)|將所有產品升級至 64 位元版本的 SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x64-ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
-|[Microsoft SQL Server 2008 R2 RTM 功能套件](https://www.microsoft.com/download/en/details.aspx?id=16978)中一個或多個 64 位元版本的工具|將工具升級至 64 位元版本的 Microsoft SQL Server 2008 R2 SP2 功能套件|[Microsoft SQL Server 2008 R2 SP2 功能套件](https://go.microsoft.com/fwlink/?LinkId=251792)中一個或多個檔案|  
+| [Microsoft SQL Server 2008 R2 RTM 功能套件](https://www.microsoft.com/download/en/details.aspx?id=16978)中一個或多個 64 位元版本的工具|將工具升級至 64 位元版本的 Microsoft SQL Server 2008 R2 SP2 功能套件| [Microsoft SQL Server 2008 R2 SP2 功能套件](https://go.microsoft.com/fwlink/?LinkId=251792)中一個或多個檔案|  
 |無 64 位元版本的 SQL Server 2008 R2 安裝|安裝 Server 2008 R2，包括 SP2|移至 [SQL Server 2008 R2 SP2 - Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) 並依照指示執行。|  
 |無 64 位元版本的 SQL Server 2008 R2 Management Studio 安裝|安裝 SQL Server 2008 R2 Management Studio，包括 SP2|SQLManagementStudio_x64_ENU.exe 的下載位置在 [這裡](https://go.microsoft.com/fwlink/p/?LinkId=251791) ，可供免費安裝 SQL Server 2008 R2 SP2 Management Studio Express Edition。|  
   

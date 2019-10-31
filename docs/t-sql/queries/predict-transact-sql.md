@@ -1,11 +1,11 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 10/24/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
@@ -14,20 +14,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: VanMSFT
-ms.author: vanto
+author: dphansen
+ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c50bdedab94a2bd9dd1c6da6556fbd882412fe45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141311"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907254"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-根據預存模型產生預測值或分數。  
+根據預存模型產生預測值或分數。 如需詳細資訊，請參閱[使用 PREDICT T-SQL 函式進行原生評分](../../advanced-analytics/sql-native-scoring.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -92,7 +92,7 @@ WITH 子句用來指定 `PREDICT` 函數傳回之輸出的結構描述。
 
 ## <a name="remarks"></a>Remarks
 
-所有版本的 SQL Server 2017 和更新版本都支援 `PREDICT` 函數。 此支援包括 SQL Server 2017 的 Linux 版。 雲端的 Azure SQL Database 也支援 `PREDICT`。 這些支援都已啟用，不論是否已啟用其他機器學習功能。
+Windows 和 Linux 上所有版本的 SQL Server 2017 和更新版本都支援 `PREDICT` 函式。 雲端的 Azure SQL Database 也支援 `PREDICT`。 這些支援都已啟用，不論是否已啟用其他機器學習功能。
 
 在要使用 `PREDICT` 函數的伺服器上，不一定要安裝 R、Python 或其他機器學習語言。 您可以在另一個環境中訓練模型，並將它儲存到 SQL Server 資料表，搭配 `PREDICT` 使用，或從儲存模型的另一個 SQL Server 執行個體呼叫模型。
 
@@ -179,3 +179,7 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
+
+## <a name="next-steps"></a>後續步驟
+
+- [使用 PREDICT T-SQL 函式進行原生評分](../../advanced-analytics/sql-native-scoring.md)

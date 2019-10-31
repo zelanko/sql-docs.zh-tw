@@ -1,7 +1,7 @@
 ---
 title: 分次還原 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033666"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916002"
 ---
 # <a name="piecemeal-restores-sql-server"></a>分次還原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "68033666"
   
  分次還原適用於所有恢復模式，但它對於完整模式和大量記錄模式，可以提供比簡單模式更大的彈性。  
   
- 每個分次還原都會從稱為「部分還原順序」  (Partial-Restore Sequence) 的初始還原順序開始進行。 部分還原順序至少會還原並復原主要檔案群組，而在簡單復原模式下，則是所有的讀取/寫入檔案群組。 在分次還原順序期間，整個資料庫必須離線。 此後，資料庫便會在線上，而還原的檔案群組也可供使用。 不過，任何未還原的檔案群組會維持離線且無法存取。 但是，您可以稍後再利用檔案還原來還原離線檔案群組並讓它們回到線上。  
+ 每個分次還原都會從稱為「部分還原順序」(Partial-Restore Sequence) 的初始還原順序開始進行。 部分還原順序至少會還原並復原主要檔案群組，而在簡單復原模式下，則是所有的讀取/寫入檔案群組。 在分次還原順序期間，整個資料庫必須離線。 此後，資料庫便會在線上，而還原的檔案群組也可供使用。 不過，任何未還原的檔案群組會維持離線且無法存取。 但是，您可以稍後再利用檔案還原來還原離線檔案群組並讓它們回到線上。  
   
  不論資料庫使用的復原模式為何，部分還原順序從還原完整備份及指定 PARTIAL 選項的 RESTORE DATABASE 陳述式開始。 PARTIAL 選項永遠會開始新的分次還原，因此您只能在部分還原順序的初始陳述式中指定 PARTIAL 一次。 完成部分還原順序並讓資料庫回到線上後，其餘的檔案狀態都會變成「復原暫止」，因為檔案的復原已經延後。  
   
- 其後，分次還原通常包含一或多個還原順序，這稱為「檔案群組還原順序」  。 只要您願意等，就可以等著執行特定的檔案群組還原順序。 每個檔案群組還原順序都會將一或多個離線檔案群組還原並復原到與資料庫一致的點上。 檔案群組還原順序的時間和次數取決於您的復原目標、您要還原的離線檔案群組數目，以及您在每一檔案群組還原順序當中還原的檔案群組數。  
+ 其後，分次還原通常包含一或多個還原順序，這稱為「檔案群組還原順序」。 只要您願意等，就可以等著執行特定的檔案群組還原順序。 每個檔案群組還原順序都會將一或多個離線檔案群組還原並復原到與資料庫一致的點上。 檔案群組還原順序的時間和次數取決於您的復原目標、您要還原的離線檔案群組數目，以及您在每一檔案群組還原順序當中還原的檔案群組數。  
   
  執行分次還原的實際需求視資料庫的復原模式而定。 如需詳細資訊，請參閱本主題稍後的「在簡單復原模式下分次還原」與「在完整復原模式下分次還原」。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68033666"
      在 Enterprise 版中，可以在資料庫仍在線上運作時還原並復原任何離線的次要檔案群組。 如果特定唯讀檔案是未受損的，且與資料庫一致，就不需要還原檔案。 如需詳細資訊，請參閱[復原資料庫而不還原資料 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)。  
   
 ### <a name="applying-log-backups"></a>套用記錄備份  
- 如果唯讀檔案群組從建立檔案備份以前已經是唯讀，就不需要將記錄備份套用到檔案群組，而且檔案還原會將它略過。 如果檔案群組是可讀取/寫入，就必須套用無間斷記錄備份鏈結至最後一個完整或差異還原，才能將檔案群組向前復原到目前的記錄檔。  
+ 如果唯讀檔案群組從建立檔案備份以前已經是唯讀，就不需要將記錄備份套用到檔案群組，而且檔案還原會將它略過。 如果檔案群組是可讀取/寫入，就必須套用無間斷記錄備份鏈結至最後一個完整或差異還原，才能將檔案群組向前復原到目前的記錄檔。 如需復原流程的詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
   
 ### <a name="examples"></a>範例  
   
@@ -173,13 +173,11 @@ ms.locfileid: "68033666"
   
 4.  差異備份之後緊接著原始分次還原順序中所還原的任何其他備份，可還原資料直到原始的復原點為止。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>另請參閱  
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [規劃和執行還原順序 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [規劃和執行還原順序 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

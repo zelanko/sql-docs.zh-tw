@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec08bd8459e51c3ace52fc4eea433aaa046050b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d4d63a03c2b5b40f7d57fa5c2de5f0abfab3f36
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123557"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783301"
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68123557"
   
 ##  <a name="FunctionTypes"></a> 函式類型  
 **純量函式**  
- 使用者定義純量函數會傳回在 RETURNS 子句中所定義之類型的單一資料值。 內嵌純量函數並沒有函數主體；純量值為單一陳述式的結果。 若是多重陳述式純量函數，則定義於 BEGIN...END 區塊中的函數主體，會包含傳回單一值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式系列。 傳回類型可以是 **text**、 **ntext**、 **image**、 **cursor**和 **timestamp**以外的任何資料類型。 
+ 使用者定義純量函數會傳回在 RETURNS 子句中所定義之類型的單一資料值。 針對內嵌純量函式，傳回的純量值是單一陳述式的結果。 針對多重陳述式純量函式，函式主體可包含一系列傳回單一值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 傳回類型可以是 **text**、 **ntext**、 **image**、 **cursor**和 **timestamp**以外的任何資料類型。 
  **[範例。](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **資料表值函式**  

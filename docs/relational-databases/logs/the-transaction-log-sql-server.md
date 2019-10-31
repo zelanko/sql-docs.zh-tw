@@ -1,7 +1,7 @@
 ---
 title: 交易記錄 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083944"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916025"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,46 +39,48 @@ ms.locfileid: "68083944"
  交易記錄檔支援下列作業：  
   
 -   個別交易的復原。  
--   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，復原所有未完成的交易。  
+-   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，復原所有未完成的交易。 
 -   將還原的資料庫、檔案、檔案群組或頁面向前復原到失敗點。  
 -   支援異動複寫。  
 -   支援高可用性和災害復原解決方案： [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、資料庫鏡像和記錄傳送。
 
 ### <a name="individual-transaction-recovery"></a>個別交易復原
-如果應用程式發出一個 `ROLLBACK` 陳述式，或 Database Engine 偵測到與用戶端的通訊中斷等錯誤，記錄檔記錄可用來回復未完成之交易所作的修改。 
+若應用程式發出一個 `ROLLBACK` 陳述式，或若是 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 偵測到與用戶端的通訊中斷等錯誤，則記錄檔記錄可用來復原未完成交易所作的修改。 
 
 ### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時復原所有未完成的交易
-如果伺服器失敗，資料庫的狀態可能停留於緩衝區快取中有些修改尚未寫入資料檔中，並且未完成的交易已在資料檔中作了一些修改。 當啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，它會在每個資料庫上執行復原。 已記錄於記錄檔中、但尚未寫入資料檔中的每個修改將會向前復原。 將會回復交易記錄檔中所發現的每筆未完成交易，以確保資料庫的完整性。 
+如果伺服器失敗，資料庫的狀態可能停留於緩衝區快取中有些修改尚未寫入資料檔中，並且未完成的交易已在資料檔中作了一些修改。 當啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，它會在每個資料庫上執行復原。 已記錄於記錄中、但尚未寫入資料檔中的每個修改將會向前復原。 將會回復交易記錄檔中所發現的每筆未完成交易，以確保資料庫的完整性。 如需詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>將還原的資料庫、檔案、檔案群組或頁面向前復原到失敗點
 在硬體損毀或磁碟失敗影響資料庫檔案後，您可以將資料庫還原至失敗點。 請先還原最後一次的完整資料庫備份和最後一次的差異資料庫備份，然後將後續一連串的交易記錄備份還原到失敗點。 
 
-在還原每個記錄檔備份時，Database Engine 會重新套用記錄在記錄檔中的所有修改，以向前復原所有交易。 在還原最後一個記錄檔備份後，Database Engine 接著會使用記錄檔資訊來回復在該點尚未完成的所有交易。 
+在還原每個記錄備份時，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會重新套用記錄中的所有修改，以向前復原所有交易。 在還原最後一個記錄備份後，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 接著會使用記錄資訊來復原在該點尚未完成的所有交易。 如需詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ### <a name="supporting-transactional-replication"></a>支援異動複寫
-「記錄讀取器代理程式」會監視設定異動複寫的各資料庫交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。 如需詳細資訊，請參閱 [異動複寫的運作方式](https://msdn.microsoft.com/library/ms151706.aspx)。
+「記錄讀取器代理程式」會監視設定異動複寫的各資料庫交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。 如需詳細資訊，請參閱 [異動複寫的運作方式](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105))。
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>支援高可用性和災害復原解決方案
 待命伺服器方案、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、資料庫鏡像和記錄傳送都是高度依賴交易記錄。 
 
-在 **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 案例**中，資料庫的每個更新 (主要複本) 都會立即在另一個完整的資料庫複本 (次要複本) 中重製。 主要複本會立即將每筆記錄傳送至次要複本，而它會將收到的記錄套用至可用性群組資料庫，以持續向前復原。 如需詳細資訊，請參閱 [Always On 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+在 **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 案例**中，資料庫的每個更新 (主要複本) 都會立即在另一個完整的資料庫複本 (次要複本) 中重製。 主要複本會立即將每個記錄檔記錄傳送至次要複本，而它會將收到的記錄檔記錄套用到可用性群組資料庫，以持續向前復原。 如需詳細資訊，請參閱 [Always On 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
 在**記錄傳送案例**中，主要伺服器會傳送主要資料庫的使用中交易記錄至一或多個目的地。 每個次要伺服器都會將記錄檔還原至其本機次要資料庫。 如需詳細資訊，請參閱 [關於記錄傳送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。 
 
-在**資料庫鏡像案例**中，主體資料庫的每個更新都會立即在另一個完整的個別資料庫複本 (鏡像資料庫) 中重製。 主體伺服器執行個體會立即傳送每個記錄到鏡像伺服器執行個體，而它會將收到的記錄套用至鏡像資料庫，以持續向前復原。 如需詳細資訊，請參閱 [資料庫鏡像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
+在**資料庫鏡像案例**中，主體資料庫的每個更新都會立即在另一個完整的個別資料庫複本 (鏡像資料庫) 中重製。 主體伺服器執行個體會立即傳送每個記錄檔記錄到鏡像伺服器執行個體，而它會將傳入的記錄檔記錄套用至鏡像資料庫，以持續向前復原。 如需詳細資訊，請參閱 [資料庫鏡像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
 
-##  <a name="Characteristics"></a>Transaction Log characteristics
-
+##  <a name="Characteristics"></a>交易記錄特性
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 交易記錄的特性： 
 -  交易記錄是實作成資料庫中的個別檔案或一組檔案。 記錄檔快取是與資料頁的緩衝區快取分開管理，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 內產生簡單、快速和健全的程式碼。 如需詳細資訊，請參閱[交易記錄實體架構](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。
+
 -  記錄檔記錄與頁面的格式並不一定要遵照資料頁的格式。
+
 -  交易記錄檔可實作於多個檔案上。 可以設定記錄檔的 `FILEGROWTH` 值，以定義記錄檔為自動擴充。 這減少了交易記錄檔用完空間的可能性，而同時又減少了管理上的額外負擔。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+
 -  重複使用記錄檔空間的機制很迅速，並對於交易輸送量的影響很小。
 
 如需交易記錄架構與內部項目的資訊，請參閱 [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)。
 
 ##  <a name="Truncation"></a> 交易記錄截斷  
-記錄截斷會釋出記錄檔中的空間，以供交易記錄重複使用。 您必須定期截斷交易記錄檔，以防止它填滿所分配的空間。 有數種因素會延遲記錄的截斷，所以監控記錄大小很重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
+記錄截斷會釋出記錄檔中的空間，以供交易記錄重複使用。 您必須定期截斷交易記錄，以防止它填滿所分配的空間。 有數種因素會延遲記錄的截斷，所以監控記錄大小很重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
  
 記錄截斷會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的邏輯交易記錄中刪除非使用中的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，釋出邏輯記錄中的空間以供實體交易記錄重複使用。 如果永遠都不截斷交易記錄，最終將會填滿分配給實體記錄檔的所有磁碟空間。  
   
@@ -120,7 +122,7 @@ ms.locfileid: "68083944"
 |14|OTHER_TRANSIENT|這個值目前尚未使用。|  
   
 ##  <a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
-「最低限度記錄」  包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
+「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄 [復原模式](../backup-restore/recovery-models-sql-server.md) 下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
   
 > [!NOTE]
 > 記憶體最佳化資料表不支援最低限度記錄。  
@@ -136,7 +138,7 @@ ms.locfileid: "68083944"
   
 -   [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md) 作業。  
   
-啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 SELECT INTO 作業。  
+啟用異動複寫時，即使在大量記錄復原模式下也會完整記錄 `SELECT INTO`作業。  
   
 -   插入或附加新資料時，在 [UPDATE](../../t-sql/queries/update-transact-sql.md) 陳述式中使用 `.WRITE` 子句，對大數值資料類型執行的部分更新。 請注意，更新現有值時不使用最低限度記錄。 如需有關大數值資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
@@ -166,7 +168,9 @@ ms.locfileid: "68083944"
 **備份交易記錄 (完整復原模式)**  
   
 -   [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
-  
+
+-   [資料庫損毀時備份交易記錄 (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)
+
 **還原交易記錄 (完整復原模式)**  
   
 -   [還原交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
@@ -175,7 +179,8 @@ ms.locfileid: "68083944"
 [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)   
 [大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
-[SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+[SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
+[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [資料庫檢查點 &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
 [檢視或變更資料庫的屬性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  

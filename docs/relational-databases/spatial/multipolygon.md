@@ -13,12 +13,12 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfbe6343432453b26b3283959cf8dd15bfa7cf81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8522e65762e8c27ec65fb5fc4a56db0653b5f5c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048567"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907012"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,8 +64,6 @@ MultiPolygon 中的第二個執行個體是 LineString 執行個體，不是可�
 1.  組成 **MultiPolygon** 執行個體的所有執行個體都是有效的 **Polygon** 執行個體。 如需有效的 **Polygon** 執行個體，請參閱＜ [Polygon](../../relational-databases/spatial/polygon.md)＞。  
   
 2.  組成 **Polygon** 執行個體的所有 **MultiPolygon** 執行個體彼此不會重疊。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 下列範例示範兩個有效的 **MultiPolygon** 執行個體和一個無效的 **MultiPolygon** 執行個體。  
   

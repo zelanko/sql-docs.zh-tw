@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476221"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807462"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用環境變數在 Linux 上設定 SQL Server 設定
 
@@ -43,11 +43,11 @@ ms.locfileid: "68476221"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| 環境變數 | 描述 |
+| 環境變數 | Description |
 |-----|-----|
 | **ACCEPT_EULA** | 將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
 | **MSSQL_SA_PASSWORD** | 設定 SA 使用者密碼。 |
-| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
+| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
 | **MSSQL_LCID** | 為 SQL Server 設定要使用的語言識別碼。 例如 1036 是法文。 |
 | **MSSQL_COLLATION** | 設定 SQL Server 的預設定序。 這會覆寫語言識別碼 (LCID) 與定序的預設對應。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 設定 SQL Server 可使用的記憶體數量上限 (MB)。 預設為實體記憶體總計的 80%。 |
@@ -67,11 +67,11 @@ ms.locfileid: "68476221"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 環境變數 | 描述 |
+| 環境變數 | Description |
 |-----|-----|
 | **ACCEPT_EULA** | 將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
 | **MSSQL_SA_PASSWORD** | 設定 SA 使用者密碼。 |
-| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
+| **MSSQL_PID** | 設定 SQL Server 版本或產品金鑰。 可能的值包括： </br></br>**Evaluation**</br>**開發人員**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**產品金鑰**</br></br>如果指定產品金鑰，則其格式必須為 #####-#####-#####-#####-#####，其中 '#' 是數字或字母。|
 | **MSSQL_LCID** | 為 SQL Server 設定要使用的語言識別碼。 例如 1036 是法文。 |
 | **MSSQL_COLLATION** | 設定 SQL Server 的預設定序。 這會覆寫語言識別碼 (LCID) 與定序的預設對應。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 設定 SQL Server 可使用的記憶體數量上限 (MB)。 預設為實體記憶體總計的 80%。 |
@@ -94,7 +94,7 @@ ms.locfileid: "68476221"
 此範例會使用已設定的環境變數來執行 `mssql-conf setup`。 以下是已指定的環境變數：
 
 - **ACCEPT_EULA** 會接受使用者授權合約。
-- **MSSSQL_PID** 會指定自由授權的 Developer 版 SQL Server 供非生產環境使用。
+- **MSSQL_PID** 會指定自由授權的 SQL Server Developer Edition 供非生產環境使用。
 - **MSSQL_SA_PASSWORD** 會設定強式密碼。
 - **MSSQL_TCP_PORT**會將 SQL Server 進行接聽的 TCP 連接埠設定成 1234。
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 此範例 Docker 命令會使用下列環境變數來建立新的 SQL Server 容器：
 
 - **ACCEPT_EULA** 會接受使用者授權合約。
-- **MSSSQL_PID** 會指定自由授權的 Developer 版 SQL Server 供非生產環境使用。
+- **MSSQL_PID** 會指定自由授權的 SQL Server Developer Edition 供非生產環境使用。
 - **MSSQL_SA_PASSWORD** 會設定強式密碼。
 - **MSSQL_TCP_PORT**會將 SQL Server 進行接聽的 TCP 連接埠設定成 1234。 這意謂著在此範例中，必須使用 `-p 1234:1234` 命令來對應自訂 TCP 連接埠，而不是將連接埠 1433 (預設值) 對應至主機連接埠。
 

@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e85461ef0a6395904b0f80590a01f035eb51dc3a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: bb83237e33f477468cd58ea8a692970268bf1d66
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952764"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807479"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -69,7 +69,7 @@ ms.locfileid: "71952764"
 |新功能或更新 | 詳細資料 |
 |:---|:---|
 |混合式緩衝集區| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的新功能，坐落在置於持續性記憶體 (PMEM) 裝置上之資料庫檔案上的資料庫頁面，可在必要時直接存取。 請參閱[混合式緩衝集區](../database-engine/configure-windows/hybrid-buffer-pool.md)。|
-|經記憶體最佳化的 `tempdb` 中繼資料| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進的新功能是[記憶體內部資料庫](../relational-databases/in-memory-database.md)功能系列的一部分，記憶體最佳化的 `tempdb` 中繼資料能有效移除此瓶頸，並解除鎖定大量 `tempdb` 工作負載的新層級延展性。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。 請參閱[記憶體最佳化的 `tempdb` 中繼資料](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
+|經記憶體最佳化的 TempDB 中繼資料| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 所引進新功能是[記憶體內部資料庫](../relational-databases/in-memory-database.md)功能系列的一部分，經記憶體最佳化的 TempDB 中繼資料能有效移除此瓶頸，並為大量 TempDB 工作負載提供新一層的延展性。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，涉及管理暫存資料表中繼資料的系統資料表，可以移至不需閂鎖之非持久性經記憶體最佳化的資料表。 請參閱[經記憶體最佳化的 TempDB 中繼資料](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
 | 資料庫快照集的記憶體內部 OLTP 支援 | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進建立[資料庫快照集](../relational-databases/databases/database-snapshots-sql-server.md)的支援，包括記憶體最佳化檔案群組的資料庫。 |
 | &nbsp; | &nbsp; |
 
@@ -115,7 +115,7 @@ ms.locfileid: "71952764"
 
 |新功能或更新 | 詳細資料 |
 |:---|:---|
-|支援 UTF-8 字元編碼 |支援匯入和匯出編碼的 UTF-8 字元，以及作為字串資料的資料庫層級或資料行層級定序。 這支援延伸至全球規模的應用程式，其中提供全球多語系資料庫應用程式與服務的需求，對於滿足客戶需求與特定市場法規而言非常重要。 請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候選版啟用 Polybase 外部資料表和 Always Encrypted 的 UTF-8 支援。|
+|支援 UTF-8 字元編碼 |支援匯入和匯出編碼的 UTF-8 字元，以及作為字串資料的資料庫層級或資料行層級定序。 這支援延伸至全球規模的應用程式，其中提供全球多語系資料庫應用程式與服務的需求，對於滿足客戶需求與特定市場法規而言非常重要。 請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候選版提供 Polybase 外部資料表的 UTF-8 支援及 Always Encrypted (當未與記憶體保護區搭配使用時) 支援。|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>語言延伸模組
@@ -182,8 +182,8 @@ ms.locfileid: "71952764"
 
 |新功能或更新 | 詳細資料 | 
 |:---|:---| 
-|新的記憶體設定選項 | 設定安裝期間的 [最小伺服器記憶體 (MB)]  與 [最大伺服器記憶體 (MB)]  伺服器設定。 如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 與 `SQLMAXMEMORY` 參數。 建議的值會與[伺服器記憶體設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的記憶體設定指導方針一致。| 
-|新平行處理原則設定選項 | 在安裝期間設定 [平行處理原則的最大程度]  伺服器設定。 如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP 頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 參數。 預設值將會與[設定 max degree of parallelism 伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的平行處理原則的最大程度指導方針一致。| 
+|新的記憶體設定選項 | 設定安裝期間的 [最小伺服器記憶體 (MB)] 與 [最大伺服器記憶體 (MB)] 伺服器設定。 如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 與 `SQLMAXMEMORY` 參數。 建議的值會與[伺服器記憶體設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的記憶體設定指導方針一致。| 
+|新平行處理原則設定選項 | 在安裝期間設定 [平行處理原則的最大程度] 伺服器設定。 如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP 頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[從命令提示字元安裝 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 參數。 預設值將會與[設定 max degree of parallelism 伺服器組態選項](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的平行處理原則的最大程度指導方針一致。| 
 | &nbsp; | &nbsp; |
 
 ## <a name="platform-choice"></a>平台選擇
@@ -197,7 +197,7 @@ ms.locfileid: "71952764"
 |Microsoft Distributed Transaction Coordinator (MSDTC) 支援 |[如何在 Linux 上設定 MSDTC](../linux/sql-server-linux-configure-msdtc.md) |
 |第三方 AD 提供者的 OpenLDAP 支援 |[教學課程：在 Linux 上搭配使用 Active Directory 驗證與 SQL Server](../linux/sql-server-linux-active-directory-authentication.md) |
 |Linux 上的機器學習 |[在 Linux 上設定機器學習服務](../linux/sql-server-linux-setup-machine-learning.md) |
-|`tempdb` 改進功能 | 根據預設，在 Linux 上進行新的 SQL Server 安裝，會依據邏輯核心的數目建立多個 `tempdb` 資料檔 (最多 8 個資料檔案)。 此情況不適用於就地次要或主要版本升級。 每個 `tempdb` 檔都為 8 MB，且可自動成長到 64 MB。 此行為類似於 Windows 上的預設 SQL Server 安裝。 |
+|TempDB 的改善項目 | 根據預設，在 Linux 上進行新的 SQL Server 安裝，會依據邏輯核心的數目 (最多 8 個資料檔案) 來建立多個 TempDB 資料檔。 此情況不適用於就地次要或主要版本升級。 每個 TempDB 檔為 8 MB，且可自動成長到 64 MB。 此行為類似於 Windows 上的預設 SQL Server 安裝。 |
 | Linux 上的 PolyBase | 在 Linux 上為非 Hadoop 連接器[安裝 PolyBase](../relational-databases/polybase/polybase-linux-setup.md)。<br/><br/>[PolyBase 類型對應](../relational-databases/polybase/polybase-type-mapping.md)。 |
 | 異動資料擷取 (CDC) 支援 | 在 Linux 上現在已針對 SQL Server 2019 支援異動資料擷取 (CDC)。 |
 | &nbsp; | &nbsp; |

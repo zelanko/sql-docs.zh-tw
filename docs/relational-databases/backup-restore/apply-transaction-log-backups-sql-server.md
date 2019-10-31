@@ -1,7 +1,7 @@
 ---
 title: 套用異動記錄備份 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2016
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0b59c6973c8b1662d61a0ec022eba830558d51cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934543"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916193"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>套用異動記錄備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,6 @@ ms.locfileid: "67934543"
   
  此主題描述如何在還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的過程中套用交易記錄備份。  
  
-  
 ##  <a name="Requirements"></a> 還原交易記錄備份的需求  
  若要套用交易記錄備份，必須符合下列需求：  
   
@@ -39,14 +38,16 @@ ms.locfileid: "67934543"
   
 -   **資料庫尚未復原：** 直到套用了最後一個交易記錄之後，才能復原資料庫。 如果您只還原了其中一個中繼交易記錄備份 (尚未到達記錄鏈結的尾端) 之後便復原資料庫，則您無法還原該時間點之後的資料庫，除非您以完整資料庫備份開始重新啟動整個還原順序。  
   
-    > **提示！** 最佳做法就是還原所有的記錄備份 (RESTORE LOG *資料庫名稱* WITH NORECOVERY)。 然後，在還原最後一個記錄備份之後，以個別的作業來復原資料庫 (RESTORE DATABASE *資料庫名稱* WITH RECOVERY)。  
+    > [!TIP]
+    > 最佳做法是還原所有記錄備份 (`RESTORE LOG *database_name* WITH NORECOVERY`)。 然後，在還原最後一個記錄備份後，在另一個作業中復原資料庫 (`RESTORE DATABASE *database_name* WITH RECOVERY`)。  
   
 ##  <a name="RecoveryAndTlogs"></a> 復原與交易記錄  
- 當您完成還原作業並復原資料庫時，復原作業會回復所有未完成的交易。 此即稱為 *「恢復階段」* 。 需要進行回復，才能還原資料庫的完整性。 回復之後，資料庫會上線，而且不再有交易記錄備份可以套用到資料庫。  
+ 當您完成還原作業及復原資料庫後，會執行復原處理序以確保資料庫的完整性。 如需復原流程的詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
+ 
+ 在完成復原處理序後，資料庫會上線，且不可再將任何交易記錄備份套用到資料庫。 例如，一系列交易記錄備份中包含長時間執行的交易。 該交易的開頭記錄在第一個交易記錄備份，但是交易的結尾記錄在第二個交易記錄備份。 那麼一個交易記錄備份中將沒有認可或回復作業的記錄。 如果在套用第一個交易記錄備份時執行復原作業，則會將長時間執行的交易視為未完成，並且回復在交易的第一個交易記錄備份中記錄的資料修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許在此時間點之後套用第二個交易記錄備份。  
   
- 例如，一系列交易記錄備份中包含長時間執行的交易。 該交易的開頭記錄在第一個交易記錄備份，但是交易的結尾記錄在第二個交易記錄備份。 那麼一個交易記錄備份中將沒有認可或回復作業的記錄。 如果在套用第一個交易記錄備份時執行復原作業，則會將長時間執行的交易視為未完成，並且回復在交易的第一個交易記錄備份中記錄的資料修改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許在此時間點之後套用第二個交易記錄備份。  
-  
-> **注意：** 在某些狀況下，您可以在記錄還原期間明確加入檔案。  
+> [!NOTE]
+> 在某些狀況下，您可以在記錄還原期間明確加入檔案。  
   
 ##  <a name="PITrestore"></a> 使用記錄備份還原到失敗點  
  假設發生下列事件順序。  
@@ -63,8 +64,6 @@ ms.locfileid: "67934543"
 > 如需這個備份順序範例的說明，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要將資料庫還原至下午 9:45 的狀態 (失敗點)，您可以使用下列任何一個替代程序：  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **替代程序 1：使用最新的完整資料庫備份來還原資料庫**  
   
@@ -106,6 +105,6 @@ ms.locfileid: "67934543"
 -   [在不還原資料的情況下復原資料庫 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
-  
+ [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [SQL Server 交易記錄架構與管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

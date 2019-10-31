@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176370"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717233"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "70176370"
   
 -   相同 Blob 的平行備份會導致其中一個備份失敗並出現 [初始化失敗] 錯誤。  
   
--   使用下列錯誤記錄來協助疑難排解備份錯誤：  
+-   若您正在使用分頁 Blob (例如 `BACKUP... TO URL... WITH CREDENTIAL`)，請使用下列錯誤記錄來協助針對備份錯誤進行疑難排解：  
   
     -   您可以使用下列格式來設定追蹤旗標 3051，以便記錄至特定錯誤記錄：  
   

@@ -16,12 +16,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140316"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796636"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用資料表值參數 (Database Engine)
 
@@ -57,6 +57,9 @@ ms.locfileid: "68140316"
 - 具有強型別。
 - 可讓用戶端指定排序次序和唯一索引鍵。
 - 在預存程序中使用時，會像暫存資料表一樣被快取。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，也會為參數化查詢快取資料表值參數。
+
+## <a name="Permissions"></a> 權限
+若要建立使用者定義資料表類型的執行個體，或使用資料表值參數呼叫預存程序，則使用者必須在該類型上擁有 EXECUTE 權限，或結構描述或資料庫必須包含類型。
 
 ## <a name="Restrictions"></a> 限制
 

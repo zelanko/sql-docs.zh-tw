@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 62074eb9c621c2243a079a21ae9bbcba66c930cd
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: c9f7578623c7ba86003e8e8d7c611fb4e82a9502
+ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586702"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890470"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -76,7 +76,7 @@ SET
 
 <option_spec> ::=
 {
-    <acceleratred_database_recovery>
+    <accelerated_database_recovery>
   | <auto_option>
   | <automatic_tuning_option>
   | <change_tracking_option>
@@ -108,8 +108,8 @@ SET
 
 <accelerated_database_recovery> ::=
 {
-ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
-[(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];
+    ACCELERATED_DATABASE_RECOVERY = { ON | OFF }
+     [ ( PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name } ) ];
 }
 
 <auto_option> ::=
@@ -123,12 +123,12 @@ ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 <automatic_tuning_option> ::=
 {
-  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+    AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
 }
 
 <change_tracking_option> ::=
 {
-  CHANGE_TRACKING
+    CHANGE_TRACKING
    {
        = OFF
      | = ON [ ( <change_tracking_option_list > [,...n] ) ]
@@ -137,10 +137,10 @@ ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 }
 
 <change_tracking_option_list> ::=
-   {
-       AUTO_CLEANUP = { ON | OFF }
-     | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }
-   }
+{
+   AUTO_CLEANUP = { ON | OFF }
+ | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }
+}
 
 <containment_option> ::=
    CONTAINMENT = { NONE | PARTIAL }
@@ -271,7 +271,7 @@ ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
   | ANSI_PADDING { ON | OFF }
   | ANSI_WARNINGS { ON | OFF }
   | ARITHABORT { ON | OFF }
-  | COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
+  | COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }
   | NUMERIC_ROUNDABORT { ON | OFF }
   | QUOTED_IDENTIFIER { ON | OFF }
@@ -870,7 +870,7 @@ TORN_PAGE_DETECTION
 - 當使用者或系統資料庫升級至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本時，PAGE_VERIFY 值 (NONE 或 TORN_PAGE_DETECTION) 不會變更。 我們建議您變更為 CHECKSUM。
 
     > [!NOTE]
-    > 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，tempdb 資料庫的 PAGE_VERIFY 資料庫選項設定為 NONE 且無法修改。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 tempdb 資料庫的預設值為 CHECKSUM。 升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝時，預設值仍然維持 NONE。 此選項可以進行修改。 我們建議您針對 tempdb 資料庫使用 CHECKSUM。
+    > 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，TempDB 資料庫的 PAGE_VERIFY 資料庫選項設定為 NONE 且無法修改。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TempDB 資料庫的預設值為 CHECKSUM。 升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝時，預設值仍然維持 NONE。 此選項可以進行修改。 我們建議您針對 tempdb 資料庫使用 CHECKSUM。
 
 - TORN_PAGE_DETECTION 可以使用較少資源，但所提供的 CHECKSUM 保護最少。
 - 在資料庫不離線、不鎖定，或不妨礙資料庫並行作業的情況下，可以設定 PAGE_VERIFY。
@@ -1088,7 +1088,7 @@ OFF
 
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_arithabort_on` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsArithmeticAbortEnabled` 屬性來判斷狀態。
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }        
+COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }        
 
 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。
 
@@ -1444,6 +1444,7 @@ SET
   | <temporal_history_retention>
 }
 ;
+
 <auto_option> ::=
 {
     AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] }
@@ -1453,7 +1454,8 @@ SET
 }
 
 <automatic_tuning_option> ::=
-{AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }
+{
+    AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }
   | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
@@ -1461,12 +1463,12 @@ SET
 
 <change_tracking_option> ::=
 {
-  CHANGE_TRACKING
-   {
-       = OFF
-     | = ON [ ( <change_tracking_option_list > [,...n] ) ]
-     | ( <change_tracking_option_list> [,...n] )
-   }
+    CHANGE_TRACKING
+    {
+        = OFF
+      | = ON [ ( <change_tracking_option_list > [,...n] ) ]
+      | ( <change_tracking_option_list> [,...n] )
+    }
 }
 
 <change_tracking_option_list> ::=
@@ -1489,7 +1491,7 @@ SET
 <db_user_access_option> ::=
   { RESTRICTED_USER | MULTI_USER }
 
-<delayed_durability_option> ::=DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
+<delayed_durability_option> ::= DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 
 <parameterization_option> ::=
   PARAMETERIZATION { SIMPLE | FORCED }
@@ -1498,7 +1500,7 @@ SET
 {
   QUERY_STORE
   {
-    = OFF
+      = OFF
     | = ON [ ( <query_store_option_list> [,... n] ) ]
     | ( < query_store_option_list> [,... n] )
     | CLEAR [ ALL ]
@@ -1530,7 +1532,7 @@ SET
   | ANSI_PADDING { ON | OFF }
   | ANSI_WARNINGS { ON | OFF }
   | ARITHABORT { ON | OFF }
-  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
+  | COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }
   | NUMERIC_ROUNDABORT { ON | OFF }
   | QUOTED_IDENTIFIER { ON | OFF }
@@ -2247,17 +2249,17 @@ SET
 
 <automatic_tuning_option> ::=
 {
-  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+    AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
 }
 
 <change_tracking_option> ::=
 {
-  CHANGE_TRACKING
-   {
+    CHANGE_TRACKING
+    {
        = OFF
      | = ON [ ( <change_tracking_option_list > [,...n] ) ]
      | ( <change_tracking_option_list> [,...n] )
-   }
+    }
 }
 
 <change_tracking_option_list> ::=
@@ -2315,7 +2317,7 @@ SET
   | ANSI_PADDING { ON | OFF }
   | ANSI_WARNINGS { ON | OFF }
   | ARITHABORT { ON | OFF }
-  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
+  | COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }
   | NUMERIC_ROUNDABORT { ON | OFF }
   | QUOTED_IDENTIFIER { ON | OFF }

@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009495"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908030"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>開始使用資料行存放區進行即時作業分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "70009495"
 ## <a name="real-time-operational-analytics-explained"></a>說明即時作業分析  
  傳統上，企業會有個別可用於作業 (也就是 OLTP) 和分析工作負載的系統。 在這類系統中，擷取、轉換和載入 (ETL) 工作會定期將資料從作業存放區移至分析存放區。 分析資料通常儲存於專門用來執行分析查詢的資料倉儲或資料超市中。 儘管此解決方案已是標準，但它仍有下列這三個主要挑戰︰  
   
--   **複雜度。** 實作 ETL 需要相當多的程式碼撰寫作業，特別是只載入修改的資料列。 要找出哪些資料列已修改是相當複雜的。  
+-   **複雜度。** 實作 ETL 需要相當多的編碼，特別是只載入修改的資料列。 要找出哪些資料列已修改是相當複雜的。  
   
 -   **成本。** 實作 ETL 需要購買額外硬體和軟體授權的成本。  
   
@@ -84,8 +84,6 @@ ms.locfileid: "70009495"
   
 3.  您只需要執行這個動作！  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  您現在已準備好執行即時作業分析，而不需對應用程式進行任何變更。  分析查詢將針對資料行存放區索引執行，而 OLTP 作業將針對 OLTP btree 索引繼續執行。 OLTP 工作負載將繼續執行，但會產生一些額外的負荷來維護資料行存放區索引。 請參閱下一節中的效能最佳化。  
   
 ## <a name="blog-posts"></a>部落格文章  
@@ -122,7 +120,7 @@ ms.locfileid: "70009495"
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>範例 A：從 btree 索引存取熱資料，從資料行存放區索引存取暖資料  
  此範例會使用篩選的條件 (accountkey > 0)，來建立將存在於資料行存放區索引中的資料列。 目標是設計篩選的條件和後續查詢，以便從 btree 索引存取經常變更的「熱」資料，以及從資料行存放區索引存取更穩定的「暖」資料。  
   
- ![組合的暖和熱資料索引](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "組合的暖和熱資料索引")  
+ ![合併暖資料及熱資料的索引](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "合併暖資料及熱資料的索引")  
   
 > [!NOTE]  
 >  查詢最佳化工具會考慮 (但不一定會選擇) 針對查詢計劃使用資料行存放區索引。 當查詢最佳化工具選擇篩選的資料行存放區索引時，其會明確地結合來自資料行存放區索引的資料列以及不符合篩選條件的資料列，以允許即時分析。 這不同於一般非叢集的篩選索引，這類索引只能用於將它們自己限制為出現在索引中之資料列的查詢。  
@@ -165,7 +163,7 @@ Group By customername
   
  分析查詢將使用下列查詢計劃來執行。 您可以查看透過叢集的 btree 索引，存取不符合篩選條件的資料列。  
   
- ![查詢計畫](../../relational-databases/indexes/media/query-plan-columnstore.png "")  
+ ![查詢計劃](../../relational-databases/indexes/media/query-plan-columnstore.png "查詢計劃")  
   
  如需 [篩選的非叢集資料行存放區索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)的詳細資訊，請參閱此部落格。  
   

@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dee3fbbeced09ca66c42ab873ad2545655a1b72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057941"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905543"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -207,8 +207,6 @@ ON
   
 4.  使用 CHANGETABLE(CHANGES ...) 來取得 Salesorders 資料表的變更。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  在資料庫中進行的兩個處理序可能會影響先前步驟所傳回的結果：  
   
 -   清除處理序會在背景執行而且會移除早於指定之保留週期的變更追蹤資訊。  
@@ -267,6 +265,10 @@ COMMIT TRAN
   
  如需快照集交易的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>清除及快照集隔離   
+在相同資料庫或相同執行個體中兩個不同的資料庫上同時啟用快照集隔離及變更追蹤，可能會導致清除處理序在具有快照集隔離的資料庫中仍有已開啟交易時，將過期的資料列留在 sys.syscommittab 中。 發生這種情況的可能原因是變更追蹤清除處理序會在執行清除時，將全執行個體的低水位標記納入考量範圍 (此為安全的清除版本)。 這樣做的目的是確保變更追蹤自動清除處理序不會移除任何資料列，因為已啟用快照集隔離的資料庫中已開啟交易可能需要這些資料列。 盡可能地縮短讀取已認可快照集隔離的時間及快照集隔離交易，以確保及時清除 sys.syscommittab 中的過期資料列。 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>使用快照集隔離的替代方案  
  雖然我們提供了使用快照集隔離的替代方案，但是這些替代方案需要進行更多工作，才能確保符合所有應用程式需求。 若要確保 *last_synchronization_version* 有效，而且清除處理序不會在取得變更之前移除資料，請執行下列步驟：  
   
