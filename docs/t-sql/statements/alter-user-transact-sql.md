@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fc839390b89cb133bb51ae8c76552df1804c59b
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: d49b2489cc17388029a9e44cce415b4040fc035f
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783226"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049763"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "72783226"
 
 ||||||
 |-|-|-|-|-|
-|**\*_ SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -93,7 +93,7 @@ ALTER USER userName
 > [!NOTE]  
 > 只有包含的使用者能夠使用此選項。 如需詳細資訊，請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)。  
   
- OLD_PASSWORD **=**_'oldpassword'_  
+ OLD_PASSWORD **=** _'oldpassword'_  
  **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  目前的使用者密碼，將由 '*password*' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。  
@@ -101,7 +101,7 @@ ALTER USER userName
 > [!NOTE]  
 > 只有包含的使用者能夠使用此選項。
   
- DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<語言名稱> | \<語言別名> }_  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<語言名稱> | \<語言別名> }_  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定要指派給使用者的預設語言。 如果這個選項設為 NONE，預設語言將設為資料庫的目前預設語言。 如果稍後變更了資料庫的預設語言，使用者的預設語言會保持不變。 *DEFAULT_LANGUAGE* 可以是本機識別碼 (lcid)、語言名稱或語言別名。  
@@ -264,7 +264,7 @@ ALTER USER userName
  指定在這個資料庫內用來識別使用者的名稱。  
   
  LOGIN **=** _loginName_  
- 變更使用者的安全性識別碼 (SID) 使其符合登入的 SID，以便將使用者重新對應到另一個登入。  
+ 變更使用者安全性識別碼 (SID) 使其符合登入的 SID，以便將使用者重新對應到另一個登入。  
   
  如果 ALTER USER 陳述式是 SQL 批次中的唯一陳述式，Azure SQL Database 會支援 WITH LOGIN 子句。 如果 ALTER USER 陳述式不是 SQL 批次中的唯一陳述式或在動態 SQL 中執行，則不支援 WITH LOGIN 子句。  
   
@@ -282,7 +282,7 @@ ALTER USER userName
 > [!NOTE]  
 > 只有包含的使用者能夠使用此選項。 如需詳細資訊，請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)。
   
- OLD_PASSWORD **=**_'oldpassword'_  
+ OLD_PASSWORD **=** _'oldpassword'_  
  **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  目前的使用者密碼，將由 '*password*' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。  
@@ -469,7 +469,7 @@ ALTER USER userName
 > [!NOTE]  
 > 只有包含的使用者能夠使用此選項。
   
- DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<語言名稱> | \<語言別名> }_  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<語言名稱> | \<語言別名> }_  
   
  指定要指派給使用者的預設語言。 如果這個選項設為 NONE，預設語言將設為資料庫的目前預設語言。 如果稍後變更了資料庫的預設語言，使用者的預設語言會保持不變。 *DEFAULT_LANGUAGE* 可以是本機識別碼 (lcid)、語言名稱或語言別名。  
   
@@ -642,7 +642,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
  - [自主資料庫](../../relational-databases/databases/contained-databases.md)
  - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
  - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
- - [教學課程：使用 T-SQL DDL 語法將 SQL Server 內部部署 Windows 使用者和群組移轉至 Azure SQL Database 受控執行個體](/azure/sql-database/sql-database-managed-instance-aad-migration-tutorial)
+ - [教學課程：使用 T-SQL DDL 語法將 SQL Server 內部部署 Windows 使用者和群組移轉至 Azure SQL Database 受控執行個體](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

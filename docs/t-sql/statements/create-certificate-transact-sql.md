@@ -27,12 +27,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca161710f302bf0cb8b7ea252d279f7c15f7a49b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81beacc9a78800c288964fcfc4a186b921a27608
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061173"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064603"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -191,7 +191,7 @@ CREATE CERTIFICATE certificate_name
 ### <a name="a-creating-a-self-signed-certificate"></a>A. 建立自我簽署憑證  
  下列範例會建立一個稱為 `Shipping04` 的憑證。 這個憑證的私密金鑰是利用密碼來保護的。  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
    WITH SUBJECT = 'Sammamish Shipping Records',   
@@ -202,7 +202,7 @@ GO
 ### <a name="b-creating-a-certificate-from-a-file"></a>B. 從檔案建立憑證  
  下列範例在資料庫中建立憑證，並從檔案載入金鑰組。  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping11   
     FROM FILE = 'c:\Shipping\Certs\Shipping11.cer'   
     WITH PRIVATE KEY (FILE = 'c:\Shipping\Certs\Shipping11.pvk',   
@@ -215,7 +215,7 @@ GO
    
 ### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>C. 從簽署的可執行檔建立憑證  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping19   
     FROM EXECUTABLE FILE = 'c:\Shipping\Certs\Shipping19.dll';  
 GO  
@@ -223,7 +223,7 @@ GO
   
  另外，您也可以從 `dll` 檔建立組件，然後從該組件建立憑證。  
   
-```  
+```sql  
 CREATE ASSEMBLY Shipping19   
     FROM ' c:\Shipping\Certs\Shipping19.dll'   
     WITH PERMISSION_SET = SAFE;  
@@ -240,7 +240,7 @@ GO
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 建立自我簽署憑證  
  下列範例會建立稱為 `Shipping04` 的憑證，而不指定加密密碼。 這個範例可以搭配使用 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  

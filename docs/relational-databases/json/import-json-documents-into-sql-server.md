@@ -1,7 +1,7 @@
 ---
 title: 將 JSON 文件匯入 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -10,12 +10,12 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba47ee7f719763cce2d2ac4502d8c2c9bd8693d3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: a6a69047ca62f60cf071ac44e87bd741feea9b88
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70910827"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049885"
 ---
 # <a name="import-json-documents-into-sql-server"></a>將 JSON 文件匯入 SQL Server
 
@@ -51,23 +51,6 @@ SELECT BulkColumn
 
 在載入 JSON 檔案的內容之後，您可以將 JSON 文字儲存在資料表中。
 
-## <a name="import-multiple-json-documents"></a>匯入多個 JSON 文件
-
-您可以使用相同的方式，將一組 JSON 檔案從檔案系統載入至區域變數 (一次一個)。 假設檔案命名為 `book<index>.json`。
-  
-```sql
-DECLARE @i INT = 1
-DECLARE @json AS NVARCHAR(MAX)
-
-WHILE(@i < 10)
-BEGIN
-    SET @file = 'C:\JSON\Books\book' + cast(@i AS VARCHAR(5)) + '.json';
-    SELECT @json = BulkColumn FROM OPENROWSET (BULK (@file), SINGLE_CLOB) AS j
-    SELECT * FROM OPENJSON(@json) AS json
-    -- Optionally, save the JSON text in a table.
-    SET @i = @i + 1 ;
-END
-```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>從 Azure 檔案儲存體匯入 JSON 文件
 

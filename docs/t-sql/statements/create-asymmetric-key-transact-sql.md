@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b017b3cccbce4f993723d24f952eb605ce36a376
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141104"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064696"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ CREATE ASYMMETRIC KEY asym_key_name
 ### <a name="a-creating-an-asymmetric-key"></a>A. 建立非對稱金鑰  
  下列範例會利用 `PacificSales09` 演算法建立一個名稱為 `RSA_2048` 的非對稱金鑰，並利用密碼保護私密金鑰。  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
     WITH ALGORITHM = RSA_2048   
     ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';   
@@ -139,7 +139,7 @@ GO
 ### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>B. 從檔案建立非對稱金鑰，並提供授權給使用者  
  下列範例會從儲存在檔案中的金鑰組建立非對稱金鑰 `PacificSales19`，然後將非對稱金鑰的擁有權指派給使用者 `Christina`。 私密金鑰會受到資料庫主要金鑰所保護，其必須在建立非對稱金鑰之前建立。  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales19  
     AUTHORIZATION Christina  
     FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
@@ -149,7 +149,7 @@ GO
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. 從 EKM 提供者建立非對稱金鑰  
  下列範例會從稱為 `EKM_Provider1` 的可延伸金鑰管理提供者中所儲存的金鑰組來建立非對稱金鑰 `EKM_askey1`，並在稱為 `key10_user1` 的提供者上建立金鑰。  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   
     FROM PROVIDER EKM_Provider1  
     WITH   

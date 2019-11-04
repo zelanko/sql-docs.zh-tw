@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc2237ff2f7e7e5610a88288c386359c57937f90
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296811"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049954"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB 資料庫)
 
@@ -44,7 +44,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  參數所在的專案名稱。 *project_name* 是 **nvarchar(128)** 。  
   
  [ @package_name = ] *package_name*  
- 封裝名稱。 指定封裝名稱，以擷取所有專案參數和來自特定封裝的參數。 使用 NULL 即可擷取所有專案參數和來自所有封裝的參數。 *package_name* 是 **nvarchar(260)** 。  
+ 封裝名稱。 指定封裝名稱，以擷取所有專案參數和來自特定封裝的參數。 *package_name* 是 **nvarchar(260)** 。  
   
  [ @reference_id = ] *reference_id*  
  環境參考的唯一識別碼。 這個參數是選擇性的。 *reference_id* 是 **bigint**。  

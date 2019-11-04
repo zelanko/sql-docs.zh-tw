@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064643"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ CREATE CONTRACT contract_name
   
  下列範例會依據三種訊息類型建立費用償還合約。  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]           
     VALIDATION = WELL_FORMED_XML ;           

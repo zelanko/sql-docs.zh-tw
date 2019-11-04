@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141125"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064635"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  下列範例會建立彙總 `Concatenate`。 在建立這項彙總之前，會將 `StringUtilities.dll` 組件註冊在本機資料庫中。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  

@@ -10,18 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 288d96a116412eea133e881f2d13b6b4ce5fddb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991288"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240761"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>產生 Always On 可用性群組的 CLUSTER.LOG 並進行分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  作為容錯移轉叢集資源，在 SQL Server、Windows Server 容錯移轉叢集服務 (WSFC) 叢集和 SQL Server 資源 DLL (hadrres.dll) 之間，存在著無法在 SQL Server 內監視的外部互動。 WSFC 記錄 (CLUSTER.LOG) 可診斷 WSFC 叢集或 SQL Server 資源 DLL 中的問題。  
-  
- 下列圖表示範應用程式 (例如 SQL Server 和 Windows 叢集管理員) 之間的關係，其會起始可用性群組資源建立、解構或狀態變更。  
+  作為容錯移轉叢集資源，在 SQL Server、Windows Server 容錯移轉叢集服務 (WSFC) 叢集和 SQL Server 資源 DLL (hadrres.dll) 之間，存在著無法在 SQL Server 內監視的外部互動。 WSFC 記錄 (CLUSTER.LOG) 可診斷 WSFC 叢集或 SQL Server 資源 DLL 中的問題。 
   
 ## <a name="generate-cluster-log"></a>產生叢集記錄檔  
  您可以透過兩種方式產生叢集記錄檔：  

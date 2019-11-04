@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 680d4e62838ed49c72c8b637c19cc00af804c763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64dd9567588e3d3cc5dccf7ee1aef469a888c275
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084528"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064548"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ALL SERVER
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. 啟用資料表的 DML 觸發程序  
 下列範例會停用 AdventureWorks 資料庫中由 `uAddress` 資料表所建立的觸發程序 `Address`，然後啟用它。  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-enabling-a-ddl-trigger"></a>B. 啟用 DDL 觸發程序  
 下列範例會建立資料庫範圍的 DDL 觸發程序 `safety`，然後停用它並再次啟用。  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -109,7 +109,7 @@ GO
   
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

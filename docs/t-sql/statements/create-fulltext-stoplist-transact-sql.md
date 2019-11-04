@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912764"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064648"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ### <a name="a-creating-a-new-full-text-stoplist"></a>A. 建立新的全文檢索停用字詞表  
  下列範例會建立名為 `myStoplist` 的新全文檢索停用字詞表。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -94,7 +94,7 @@ GO
 ### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>B. 從現有的全文檢索停用字詞表複製全文檢索停用字詞表  
  下列範例會藉由複製名為 `myStoplist2` 的現有 AdventureWorks 停用字詞表來建立名為 `Customers.otherStoplist` 的新全文檢索停用字詞表。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -102,7 +102,7 @@ GO
 ### <a name="c-copying-a-full-text-stoplist-from-the-system-full-text-stoplist"></a>C. 從系統的全文檢索停用字詞表複製全文檢索停用字詞表  
  下列範例會藉由複製系統的停用字詞表來建立名為 `myStoplist3` 的新全文檢索停用字詞表。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

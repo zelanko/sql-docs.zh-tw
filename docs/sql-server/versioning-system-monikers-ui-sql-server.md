@@ -9,12 +9,12 @@ ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7813368e08c8d1fdf4da1e2ee1e6775f56557d0a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907943"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049912"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 版本設定系統文件
 
@@ -166,7 +166,7 @@ ms.locfileid: "72907943"
     - [SQL Server 2014 文件](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
 - 2016 及更新版本：  &nbsp; 版本設定系統已為 SQL Server 2016 及更新版本完全實作。
-    - [歡迎使用 SQL Server 文件 2016 及更新版本](/sql/sql-server/index.yml?view=sql-server-2016)
+    - [歡迎使用 SQL Server 文件 2016 及更新版本](/sql/sql-server/?view=sql-server-2016)
 
 ## <a name="see-also"></a>另請參閱
 

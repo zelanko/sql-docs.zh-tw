@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061147"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064677"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -220,7 +220,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. 使用服務來為目標服務建立三個優先權等級  
  支援提供三個效能層級的系統：金 (高)、銀 (中) 和銅 (低)。 這是一個合約，但是每一個等級都有不同的起始端服務。 所有的起始端服務都會與中央目標服務通訊。  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -262,7 +262,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. 使用合約來為多個服務建立三個優先權等級  
  支援提供三個效能層級的系統：金 (高)、銀 (中) 和銅 (低)。 每一個等級都有不同的合約。 這些優先權會套用到由使用合約的交談所參考的任何服務。  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  

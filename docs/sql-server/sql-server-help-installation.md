@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fb5b270acac06411d5758f49ce8037311727d62b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4be5552c60a6a401d9333976402088c7fa199f52
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908009"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049918"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 離線說明和說明檢視器
 
@@ -171,7 +171,7 @@ Microsoft Help Viewer 的主要版本有兩個。  版本 1.x 和 2.x。 每個�
 
 **在 SSMS 17.x 中檢視 SQL Server 線上說明**
 
-- 在 [說明]  功能表中，按一下 [檢視說明]  。 來自 [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/index.yml) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。
+- 在 [說明]  功能表中，按一下 [檢視說明]  。 來自 [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。
 
    ![檢視說明](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

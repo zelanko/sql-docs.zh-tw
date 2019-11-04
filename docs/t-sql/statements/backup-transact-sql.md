@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028966"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142866"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -608,7 +608,7 @@ DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
 DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
-  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
 GO
 ```
 
@@ -1205,6 +1205,8 @@ DIFFERENTIAL 指定執行使用者資料庫的差異備份。 如果省略，預
 - 目標網路共用沒有足夠的空間來進行備份。 BACKUP DATABASE 命令在起始備份之前，未先確認是否有足夠的空間存在，導致在執行 BACKUP DATABASE 時，可能產生磁碟空間不足錯誤。 發生磁碟空間不足問題時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會復原 BACKUP DATABASE 命令。 若要縮減資料庫大小，請執行 [DBCC SHRINKLOG (Azure SQL 資料倉儲)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - 嘗試在交易內啟動備份。
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>一般備註
 
 在您執行資料庫之前，請使用 [DBCC SHRINKLOG (Azure SQL 資料倉儲)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) 來縮減資料庫的大小。
@@ -1217,6 +1219,8 @@ DIFFERENTIAL 指定執行使用者資料庫的差異備份。 如果省略，預
 
 完整備份和差異備份儲存在個別的目錄中。 系統並未強制執行命名慣例來要求指定完整備份和差異備份彼此互屬。 您可以透過自己的命名慣例來進行此追蹤。 或者，您也可以藉由使用 WITH DESCRIPTION 選項來新增描述，然後使用 RESTORE HEADERONLY 陳述式來擷取描述，以進行此追蹤。
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 ## <a name="limitations-and-restrictions"></a>限制事項
 
 您無法對 master 資料庫執行差異備份。 僅支援對 master 資料庫執行完整備份。

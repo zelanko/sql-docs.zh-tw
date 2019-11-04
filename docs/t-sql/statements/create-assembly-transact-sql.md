@@ -23,12 +23,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 55324ac26eef5f685339b21162360544a4ae5af7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71c2dc90dd54fa1f263de1d04915760dc7a34762
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141114"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064613"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -173,7 +173,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  下列範例假設 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 範例是安裝在機電腦的預設位置，而且 HelloWorld.csproj 範例應用程式已經編譯。 如需詳細資訊，請參閱 [Hello World 範例](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld   
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
@@ -188,7 +188,7 @@ WITH PERMISSION_SET = SAFE;
   
  使用您的組件位元取代範例位元 (不完整或無效)。  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld  
     FROM 0x4D5A900000000000  
 WITH PERMISSION_SET = SAFE;  
