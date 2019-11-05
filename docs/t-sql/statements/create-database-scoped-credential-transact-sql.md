@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 233068e84dca3d7d61e10867443cf30bbf942a59
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 2fff507046ae5a53abbffbd91bb245f52d57a53c
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798359"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594142"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 
@@ -126,7 +126,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 -- Create a database scoped credential.
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
-    IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'
+    IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>',
     SECRET = '<key>'
 ;
 ```

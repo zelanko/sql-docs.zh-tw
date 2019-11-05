@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 32a4c21e924769a5e498b9fd597be0d51fca8de7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 991af6f353fb4862bd66426e7fdeed2664f3d101
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908364"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594319"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 **master** 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 **master** 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。   
    
 ##  <a name="Restrictions"></a> 限制事項  
   

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
 ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958286"

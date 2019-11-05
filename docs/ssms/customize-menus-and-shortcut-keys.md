@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,14 +19,16 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 528c9e96e8615224b6d081a4d953e95874fec766
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.openlocfilehash: 6492b85430ac29fe690de9c41cd7a1625e409b20
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266927"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532894"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自訂功能表與快速鍵
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 鍵盤快速鍵可讓您按 ALT+ *\<單一字母>* 來選取功能表命令或按鈕。 例如，若要開啟 [編輯]  功能表，請按下 ALT+E。 您可以利用 [自訂]  對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  
   

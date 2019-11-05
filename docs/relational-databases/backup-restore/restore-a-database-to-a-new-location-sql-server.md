@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278917"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989556"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,25 +108,25 @@ ms.locfileid: "70278917"
 2.  使用 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式來還原完整資料庫備份。 根據預設，資料和記錄檔會還原到其原始位置。 若要重新放置資料庫，請使用 MOVE 選項來重新放置每個資料庫檔案，避免與現有的檔案發生衝突。  
 
   將資料庫還原至新位置和新名稱的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法為：  
-  
+  ```sql
   RESTORE DATABASE *new_database_name*  
   
   FROM *backup_device* [ ,...*n* ]  
   
   [ WITH  
+ 
+   {  
   
-  {  
+      [ **RECOVERY** | NORECOVERY ]  
   
-  [ **RECOVERY** | NORECOVERY ]  
+      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
-  
-  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+      [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
   }  
   
   ;  
-  
+  ```
   > [!NOTE] 
   > 準備要在不同的磁碟上重新放置資料庫時，您應該確認有足夠的可用空間，並且識別與現有檔案發生衝突的任何可能性。 這項作業包括使用 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 陳述式，其中指定您打算在 RESTORE DATABASE 陳述式中使用的相同 MOVE 參數。  
   

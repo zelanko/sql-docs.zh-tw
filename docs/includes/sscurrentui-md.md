@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 586141659d552e56ba48ef1c81e997821a592cb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc5fd7c28a66e9bcc7deda45aa1660c1df51ce60
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68163885"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73590447"
 ---
-  **Microsoft SQL Server 2017**  
+  **Microsoft SQL Server 2019**  

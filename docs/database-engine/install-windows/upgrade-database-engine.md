@@ -1,7 +1,7 @@
 ---
 title: 升級資料庫引擎 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122967"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531556"
 ---
 # <a name="upgrade-database-engine"></a>升級 Database Engine
 
@@ -41,6 +41,6 @@ ms.locfileid: "70122967"
 
     如需變更資料庫相容性層級後可用的新功能和改善行為詳細資訊，請參閱[相容性層級之間的差異](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures)。
 
-5.  [利用新的 SQL Server 功能](https://www.microsoft.com/sql-server/sql-server-2017)。 最後，完成上述步驟之後，您就可以開始探索如何利用新資料庫引擎的特定增強功能。 本文提供其中一些增強功能的建議，以及詳細資訊的連結。  
+5.  [利用新的 SQL Server 功能](https://www.microsoft.com/sql-server/sql-server-2019)。 最後，完成上述步驟之後，您就可以開始探索如何利用新資料庫引擎的特定增強功能。 本文提供其中一些增強功能的建議，以及詳細資訊的連結。  
   
   

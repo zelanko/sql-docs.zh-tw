@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
 ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958292"
@@ -53,7 +53,7 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是 Po
 
 ### <a name="sql-kernel"></a>SQL 核心
 
-在筆記本內的程式碼儲存格中 (類似於我們的查詢編輯器)，我們支援新式 SQL 程式碼撰寫體驗；其可透過豐富的 SQL 編輯器、IntelliSense 和內建的程式碼片段等內建功能，讓您可以更輕鬆地完成日常工作。 程式碼片段可讓您產生適當的 SQL 語法，以建立資料庫、資料表、檢視、預存程式等，以及更新現有的資料庫物件。 使用程式碼片段來快速建立資料庫的複本以供進行開發或測試，以及產生和執行指令碼。
+在 Notebook 中的程式碼儲存格中 (類似於我們的查詢編輯器)，我們支援新式 SQL 程式碼撰寫體驗，透過豐富的 SQL 編輯器、IntelliSense 和內建的程式碼片段，讓您可以更輕鬆地完成日常工作。 程式碼片段可讓您產生適當的 SQL 語法，以建立資料庫、資料表、檢視、預存程式等，以及更新現有的資料庫物件。 使用程式碼片段來快速建立資料庫的複本以供進行開發或測試，以及產生和執行指令碼。
 
 按一下 [執行]  來執行每個儲存格。
 
@@ -127,7 +127,7 @@ SQL 核心也可用於連線 PostgreSQL 伺服器執行個體。 如果您是 Po
 
 ### <a name="trusted-and-non-trusted"></a>信任的和不信任的
 
-在 Azure Data Studio 中開啟的筆記本預設是 [信任的]  。
+在 Azure Data Studio 中開啟的 Notebooks 預設是 [受信任]  。
 
 如果您從其他來源開啟筆記本，它會以 [不信任的]  模式開啟，而您可以接著將它設為 [信任的]  。
 
@@ -187,7 +187,7 @@ Spark 應用程式已啟動，並傳回下列輸出：
 
 ## <a name="manage-packages"></a>管理套件
 
-我們針對本機 Python 開發最佳化的其中一個項目，就是提供安裝客戶案例所需之套件的能力。 根據預設，我們會包含像 `pandas`、`numpy` 等常見的套件，但如果您預期未被包含的套件，請在筆記本儲存格中撰寫下列程式碼： 
+我們針對本機 Python 開發最佳化的其中一個項目，就是提供安裝客戶案例所需之套件的能力。 根據預設，我們會包含像 `pandas`、`numpy` 等常見的套件，但如果您預期不會包含套件，請在 [筆記本] 儲存格中撰寫下列程式碼： 
 
 ```python
 import <package-name>
@@ -218,4 +218,4 @@ import <package-name>
 
 ## <a name="next-steps"></a>後續步驟
 
-若要了解如何使用現有的筆記本，請參閱[如何管理 Azure Data Studio 中的筆記本](notebooks-how-to-manage.md)。
+若要了解如何使用現有的筆記本，請參閱[如何管理 Azure Data Studio 中的筆記本](notebooks-how-to-manage.md) \(部分機器翻譯\)。
