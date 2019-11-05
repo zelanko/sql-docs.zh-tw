@@ -1,7 +1,7 @@
 ---
-title: external_libraries (Transact-sql) |Microsoft Docs
+title: sys.databases external_libraries （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -19,33 +19,33 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78923a0eb1404c1437c6e1144888261e542ebc5a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: ac6ad0872e813d36d9884a00f979b2a5284cd4a3
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471105"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536163"
 ---
-# <a name="sysexternallibraries-transact-sql"></a>external_libraries (Transact-sql)  
+# <a name="sysexternal_libraries-transact-sql"></a>sys.databases external_libraries （Transact-sql）  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-支援管理與外部執行時間 (例如 R、Python 和 JAVA) 相關的套件程式庫。
+支援管理與外部執行時間（例如 R、Python 和 JAVA）相關的套件程式庫。
 
 > [!NOTE]
-> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 在 SQL Server 2019 CTP 2.4 中，支援 Windows 和 Linux 平台上的 R、Python 和 Java。
+> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 SQL Server 2019 和更新版本支援 Windows 和 Linux 平臺上的 R、Python 和 JAVA。
 
-## <a name="sysexternallibraries"></a>sys.external_libraries
+## <a name="sysexternal_libraries"></a>sys.external_libraries
 
-目錄檢視 external_libraries 會針對每個已上傳至資料庫的外部程式庫列出一個資料列。
+目錄檢視 sys. external_libraries 會針對每個已上傳至資料庫的外部程式庫列出一個資料列。
 
-|資料行名稱 |資料類型 | 描述|
+|資料行名稱 |資料類型 | 說明|
 |------|------|------|
-|external_library_id |ssNoversion | 外部程式庫物件的識別碼。 |
-|name |sysname |外部程式庫的名稱。 在資料庫中, 每個擁有者都是唯一的。|
-|principal_id |ssNoversion |擁有此外部程式庫之主體的識別碼。 |
+|external_library_id |int | 外部程式庫物件的識別碼。 |
+|name |sysname |外部程式庫的名稱。 在資料庫中，每個擁有者都是唯一的。|
+|principal_id |int |擁有此外部程式庫之主體的識別碼。 |
 |language | sysname | 支援外部程式庫的語言或執行時間名稱。 有效值為「R」、「Python」和「JAVA」。 未來可能會加入其他執行時間。|
-|scope |ssNoversion |0代表公用範圍;1代表私用範圍 |  
-|scope_desc |Varchar (7) |指出封裝為公用或私用。|
+|範圍 (scope) |int |0代表公用範圍;1代表私用範圍 |  
+|scope_desc |Varchar （7） |指出封裝為公用或私用。|
 
 ## <a name="see-also"></a>另請參閱  
 

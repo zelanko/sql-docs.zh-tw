@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_compute_node_errors (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_exec_compute_node_errors （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,33 +22,35 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097879"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532794"
 ---
-# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.databases dm_exec_compute_node_errors （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  傳回錯誤發生在 PolyBase 計算節點。  
+  傳回 PolyBase 計算節點上發生的錯誤。  
   
-|資料行名稱|資料類型|描述|範圍|  
+|資料行名稱|資料類型|說明|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|與錯誤相關聯的唯一數值識別碼。|系統中的所有查詢錯誤|  
-|來源|**nvarchar(255)**|來源執行緒或處理序的描述||  
-|type|**nvarchar(255)**|錯誤的類型。||  
-|create_time|**datetime**|錯誤發生時間||  
-|compute_node_id|**int**|特定的計算節點的識別碼|請參閱的 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
-|rexecution_id|**nvarchar(36)**|PolyBase 查詢，如果有任何識別項。||  
-|spid|**int**|SQL Server 工作階段識別項||  
-|thread_id|**int**|發生錯誤之執行緒的數值識別碼。||  
-|details|nvarchar(4000)|完整描述錯誤的詳細資料。||  
+|error_id|`nvarchar(36)`|與錯誤相關聯的唯一數值識別碼。|在系統中的所有查詢錯誤中都是唯一的|  
+|來源|`nvarchar(255)`|來源執行緒或進程描述||  
+|型別|`nvarchar(255)`|錯誤的類型。||  
+|create_time|`datetime`|發生錯誤的時間||  
+|compute_node_id|`int`|特定計算節點的識別碼|請參閱 sys.databases 的 compute_node_id [dm_exec_compute_nodes &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|rexecution_id|`nvarchar(36)`|PolyBase 查詢的識別碼（如果有的話）。||  
+|spid|`int`|SQL Server 會話的識別碼||  
+|thread_id|`int`|發生錯誤之執行緒的數值識別碼。||  
+|詳細資料|nvarchar(4000)|錯誤詳細資料的完整描述。||
+|compute_pool_id|`int`|集區的唯一識別碼。|
+
   
 ## <a name="see-also"></a>另請參閱  
- [PolyBase 疑難排解動態管理檢視](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [使用動態管理檢視進行 PolyBase 疑難排解](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [資料庫相關的動態管理&#40;Views transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

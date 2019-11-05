@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_external_work (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_exec_external_work （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,40 +22,41 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 049bf084381adaa0bf7e817eb7ae3bdb24feb118
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5afdfd4f9a5f66845ae6d3798910fc2c4bf5ab8a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097750"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532946"
 ---
-# <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys.databases dm_exec_external_work （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  傳回每個計算節點上每個背景工作，工作負載的相關資訊。  
+  傳回每個計算節點上每個背景工作負載的相關資訊。  
   
- 查詢 sys.dm_exec_external_work 來識別工作可啟動與外部資料來源 （例如 Hadoop 或外部的 SQL Server） 進行通訊。  
+ 查詢 dm_exec_external_work sys.databases，以識別要與外部資料源（例如 Hadoop 或外部 SQL Server）進行通訊的工作。  
   
-|資料行名稱|資料類型|描述|範圍|  
+|資料行名稱|資料類型|說明|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|相關聯的 PolyBase 查詢的唯一識別碼。|請參閱*request_ID*中[sys.dm_exec_requests &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
-|step_index|**int**|這個背景工作正在執行要求。|請參閱*step_index*中[sys.dm_exec_requests &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
-|dms_step_index|**int**|這個背景工作正在執行的 DMS 計劃中的步驟。|請參閱[sys.dm_exec_dms_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
-|compute_node_id|**int**|背景工作角色節點上正在執行。|請參閱[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|type|**nvarchar(60)**|外部的工作類型。|' File 分割 '|  
-|work_id|**int**|實際分割的識別碼。|大於或等於 0。|  
-|input_name|**nvarchar(4000)**|要讀取輸入的名稱|使用 Hadoop 時的檔案名稱。|  
-|read_location|**bigint**|讀取位置或位移。|要讀取之檔案的位移。|  
-|bytes_processed|**bigint**|這個工作者所處理的位元組總數。|大於或等於 0。|  
-|長度|**bigint**|分割或發生 Hadoop HDFS 區塊的長度|使用者可定義。 預設值是 64 M|  
-|status|**nvarchar(32)**|背景工作角色的狀態|暫止，處理、 完成、 失敗、 已中止|  
-|start_time|**datetime**|開始工作||  
-|end_time|**datetime**|工作的結尾||  
-|total_elapsed_time|**int**|總時間 （毫秒）||  
-  
+|execution_id|`nvarchar(32)`|相關聯的 PolyBase 查詢的唯一識別碼。|請參閱 sys.databases 中的*request_ID* [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
+|step_index|`int`|此工作者正在執行的要求。|請參閱 sys.databases 中的*step_index* [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
+|dms_step_index|`int`|此工作者正在執行之 DMS 計畫中的步驟。|請參閱[sys.databases dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
+|compute_node_id|`int`|正在執行背景工作的節點。|請參閱[sys.databases dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|型別|`nvarchar(60)`|外部工作的類型。|「檔案分割」|  
+|work_id|`int`|實際分割的識別碼。|大於或等於0。|  
+|input_name|`nvarchar(4000)`|要讀取的輸入名稱|使用 Hadoop 時的檔案名。|  
+|read_location|`bigint`|位移或讀取位置。|要讀取之檔案的位移。|  
+|bytes_processed|`bigint`|此背景工作所處理的位元組總數。|大於或等於0。|  
+|長度|`bigint`|Hadoop 時的分割或 HDFS 區塊長度|使用者可定義。 預設值為 Ed-64m|  
+|status|`nvarchar(32)`|背景工作角色的狀態|擱置中、處理中、完成、失敗、已中止|  
+|start_time|`datetime`|工作開始||  
+|end_time|`datetime`|工作結束||  
+|total_elapsed_time|`int`|總時間（以毫秒為單位）||
+|compute_pool_id|`int`|集區的唯一識別碼。|
+
 ## <a name="see-also"></a>另請參閱  
- [PolyBase 疑難排解動態管理檢視](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [使用動態管理檢視進行 PolyBase 疑難排解](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [資料庫相關的動態管理&#40;Views transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
