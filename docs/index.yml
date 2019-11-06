@@ -1,0 +1,225 @@
+### YamlMime:Hub
+title: Microsoft SQL 文件
+summary: 了解如何使用 Microsoft SQL Server，來完美解決內部部署與雲端中的資料庫需求！
+brand: sql
+metadata:
+  title: Microsoft SQL 文件 | Microsoft Docs
+  description: 了解如何使用 Microsoft SQL Server，來完美管理內部部署與雲端中的資料庫需求！
+  ms.topic: hub-page
+  ms.openlocfilehash: dfacfdd1d8df0c90705a1d77a9a98937ea5ac692
+  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73595463"
+highlightedContent:
+  items:
+  - title: 試用 SQL Server 2019 (預覽)
+    itemType: download
+    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp
+  - title: 取得使用 SQL Server 的 Azure VM
+    itemType: overview
+    url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
+  - title: 下載查詢資料工具
+    itemType: download
+    url: tools/overview-sql-tools.md
+  - title: SQL Server 教育中心
+    itemType: learn
+    url: lp/sql-server/sql-education-center.md
+productDirectory:
+  items:
+  - title: Azure 上的 SQL
+    imageSrc: media/index/azure.png
+    links:
+    - url: https://docs.microsoft.com/azure/sql-database/
+      text: Azure SQL Database
+    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      text: Azure Synapse Analytics (SQL DW)
+  - title: Windows 上的 SQL Server
+    imageSrc: media/index/windows.png
+    links:
+    - url: sql-server/index.yml
+      text: 內部部署
+    - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
+      text: 在 Azure VM 上
+    - url: https://docs.microsoft.com/previous-versions/sql/
+      text: 舊版 (SQL 2005-2012)
+  - title: Linux 上的 SQL Server
+    imageSrc: media/index/linux.png
+    links:
+    - url: linux/sql-server-linux-overview.md
+      text: 內部部署
+    - url: linux/quickstart-install-connect-clouds.md
+      text: 在 Azure VM 上
+conceptualContent:
+  items:
+  - title: 使用者入門
+    links:
+    - text: 連線與查詢 (Azure Data Studio)
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+    - text: 連線與查詢 (SSMS)
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: quickstart
+    - text: 撰寫 Transact-SQL
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: quickstart
+    - text: SQL Server Docker 容器
+      url: linux/quickstart-install-connect-docker.md
+      itemType: quickstart
+    - text: SQL 文件瀏覽祕訣
+      url: sql-server/sql-docs-navigation-guide.md
+      itemType: get-started
+  - title: 新功能
+    links:
+    - text: SQL Server 2019
+      url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
+      itemType: whats-new
+    - text: SQL Server 巨量資料叢集
+      url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      itemType: whats-new
+    - text: Azure Data Studio
+      url: azure-data-studio/what-is.md
+      itemType: whats-new
+    - text: Azure 資料庫移轉服務
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+      itemType: whats-new
+    - text: SQL 機器學習服務
+      url: advanced-analytics/index.yml
+      itemType: whats-new
+  - title: 安裝
+    links:
+    - text: SQL Server
+      url: database-engine/install-windows/install-sql-server.md
+      itemType: deploy
+    - text: SQL Server Management Studio (SSMS)
+      url: ssms/download-sql-server-management-studio-ssms.md
+      itemType: deploy
+    - text: Analysis Services (SSAS)
+      url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
+      itemType: deploy
+    - text: Integration Services (SSIS)
+      url: integration-services/install-windows/install-integration-services.md
+      itemType: deploy
+    - text: Reporting Services (SSRS)
+      url: reporting-services/install-windows/install-reporting-services.md
+      itemType: deploy
+    footerLink:
+      text: 查看更多
+      url: lp/sql-server/install-sql-and-services.md
+  - title: 遷移
+    links:
+    - text: 資料移轉指南
+      url: https://datamigration.microsoft.com/
+      itemType: overview
+    - text: 資料庫相容性認證
+      url: https://aka.ms/dbcompat
+      itemType: overview
+    - text: Azure 資料庫移轉服務 (DMS)
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+      itemType: overview
+    - text: Database Migration Assistant (DMA)
+      url: dma/dma-overview.md
+      itemType: overview
+    - text: 資料庫測試助理 (DEA)
+      url: dea/database-experimentation-assistant-overview.md
+      itemType: overview
+    - text: SQL Server 移轉小幫手 (SSMA)
+      url: ssma/sql-server-migration-assistant.md
+      itemType: overview
+    footerLink:
+      text: 查看更多
+      url: lp/sql-server/load-move-data.md
+additionalContent:
+  sections:
+  - items:
+    - title: 系統管理
+      links:
+      - text: 動態管理檢視 (DMV)
+        url: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+      - text: 系統目錄檢視
+        url: relational-databases/system-catalog-views/catalog-views-transact-sql.md
+      - text: 擴充事件
+        url: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - text: 保護 SQL Server 的安全
+        url: relational-databases/security/securing-sql-server.md
+      - text: SQL PowerShell
+        url: powershell/sql-server-powershell.md
+      - text: Azure SQL REST API
+        url: https://docs.microsoft.com/rest/api/sql/
+      - text: Azure SQL PowerShell
+        url: https://docs.microsoft.com/powershell/module/az.sql/
+    - title: 安全性與隱私權
+      links:
+      - text: SQL Server 稽核
+        url: relational-databases/security/auditing/sql-server-audit-database-engine.md
+      - text: Azure SQL 資料庫稽核
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-auditing
+      - text: 資料分類
+        url: relational-databases/security/sql-data-discovery-and-classification.md
+      - text: Always Encrypted
+        url: relational-databases/security/encryption/always-encrypted-database-engine.md
+    - title: 部署
+      links:
+      - text: 使用 SQL Server 建置應用程式
+        url: https://www.microsoft.com/sql-server/developer-get-started/
+      - text: 在 DevOps 上應用 SQL Server
+        url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
+      - text: SQL Server 安全性
+        url: https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security
+      - text: Azure SQL DB 應用程式
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
+      - text: Azure SQL DB 連線程式庫
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
+      - text: SQL Server 用戶端連線
+        url: connect/homepage-sql-connection-programming.md
+      - text: Transact-SQL (T-SQL)
+        url: t-sql/language-reference.md
+      - text: 資料庫範例
+        url: samples/sql-samples-where-are.md
+    - title: 報表與機器學習
+      links:
+      - text: Power BI 報表伺服器
+        url: https://docs.microsoft.com/power-bi/report-server/get-started
+      - text: Power BI 服務
+        url: https://docs.microsoft.com/power-bi/service-get-started
+      - text: SQL Server Reporting Services (SSRS)
+        url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: Azure Machine Learning
+        url: https://docs.microsoft.com/azure/machine-learning/
+      - text: SQL 機器學習服務 (R & Python)
+        url: advanced-analytics/index.yml
+      - text: SQL Server R 服務
+        url: advanced-analytics/r/sql-server-r-services.md
+    - title: 巨量資料
+      links:
+      - text: SQL Server 2019 巨量資料叢集
+        url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      - text: 使用 Polybase 的資料虛擬化
+        url: relational-databases/polybase/polybase-guide.md
+      - text: Azure Synapse Analytics (SQL DW)
+        url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      - text: Azure SQL Database Hyperscale
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-service-tier-hyperscale
+      - text: Azure Analysis Services
+        url: https://docs.microsoft.com/azure/analysis-services/
+      - text: SQL Server Analysis Services (SSAS)
+        url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+      - text: Microsoft Analytics Platform System
+        url: analytics-platform-system/index.md
+    - title: 工具
+      links:
+      - text: Azure Data Studio
+        url: azure-data-studio/download.md
+      - text: SQL Server Management Studio (SSMS)
+        url: ssms/download-sql-server-management-studio-ssms.md
+      - text: mssql-cli
+        url: tools/mssql-cli.md
+      - text: Azure SQL CLI
+        url: https://docs.microsoft.com/cli/azure/sql
+      - text: SQL Server Data Tools (SSDT)
+        url: ssdt/download-sql-server-data-tools-ssdt.md
+      - text: Distributed Replay
+        url: tools/distributed-replay/sql-server-distributed-replay.md
+      - text: 查看其他工具
+        url: tools/overview-sql-tools.md

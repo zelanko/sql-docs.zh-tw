@@ -14,13 +14,6 @@
           href: sql-server/what-s-new-in-sql-server-2017.md
         - name: SQL Server 2016
           href: sql-server/what-s-new-in-sql-server-2016.md
-    - name: 資料庫引擎的新功能
-      href: database-engine/sql-server-database-engine-overview.md
-      items:
-        - name: SQL Server 2017
-          href: database-engine/whats-new-in-sql-server-2017.md
-        - name: SQL Server 2016
-          href: database-engine/whats-new-in-sql-server-2016.md
     - name: 版本與功能
       items:
         - name: SQL Server 2019
@@ -32,7 +25,7 @@
     - name: 版本資訊
       items:
         - name: SQL Server 2019
-          href: sql-server/sql-server-ver15-release-notes.md
+          href: sql-server/sql-server-version-15-release-notes.md
         - name: SQL Server 2017
           href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: SQL Server 2016
@@ -57,7 +50,7 @@
       items:
         - name: 開始使用
           items:
-            - name: 部署巨量資料叢集
+            - name: 部署
               href: big-data-cluster/deploy-get-started.md
             - name: 載入範例資料
               href: big-data-cluster/tutorial-load-sample-data.md
@@ -67,6 +60,8 @@
               href: big-data-cluster/deploy-big-data-tools.md
             - name: 安裝 azdata
               items:
+                - name: 使用 Windows Installer
+                  href: big-data-cluster/deploy-install-azdata-installer.md
                 - name: 使用 Linux 套件管理員
                   href: big-data-cluster/deploy-install-azdata-linux-package.md
                 - name: 使用 pip
@@ -83,8 +78,14 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: 離線部署
               href: big-data-cluster/deploy-offline.md
+            - name: Active Directory 模式
+              href: big-data-cluster/deploy-active-directory.md
             - name: 以高可用性部署
-              href: big-data-cluster/deployment-high-availability.md
+              items:
+                - name: 主要執行個體
+                  href: big-data-cluster/deployment-high-availability.md
+                - name: HDFS 節點名稱和 Spark
+                  href: big-data-cluster/deployment-high-availability-hdfs-spark.md
             - name: Kubernetes 叢集
               items:
                 - name: Azure Kubernetes Service
@@ -117,6 +118,10 @@
           href: big-data-cluster/concept-security.md
     - name: 使用說明指南
       items:
+        - name: 組態
+          items:
+            - name: SQL Server 主要執行個體
+              href: big-data-cluster/configure-sql-server-master-instance.md
         - name: 資料虛擬化
           items:
             - name: 關聯式資料
@@ -137,6 +142,8 @@
                   href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
                 - name: 掛接 S3 進行 HDFS 階層處理
                   href: big-data-cluster/hdfs-tiering-mount-s3.md
+                - name: 管理 HDFS 權限
+                  href: big-data-cluster/hdfs-tiering-manage-permissions.md
         - name: 資料擷取
           items:
             - name: 使用 curl 載入資料
@@ -157,6 +164,8 @@
               href: big-data-cluster/big-data-cluster-consume-apps.md
         - name: 巨量資料/機器學習
           items:
+            - name: 使用機器學習服務 (Python、R)
+              href: big-data-cluster/machine-learning-services.md
             - name: 使用 PROSE 程式碼加速器的資料整頓
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: 使用 MLeap 的 Spark 機器學習模型
@@ -165,9 +174,9 @@
               href: big-data-cluster/sparklyr-from-RStudio.md
             - name: 整合 Spark 與 SQL Server
               href: big-data-cluster/spark-mssql-connector.md
-        - name: 管理 SQL Server 巨量資料叢集
+        - name: 管理
           items:
-            - name: 連線至巨量資料叢集
+            - name: 連線
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: 檢視叢集狀態
               href: big-data-cluster/view-cluster-status.md
@@ -245,10 +254,6 @@
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc hdfs status
                   href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
-                - name: bdc pool
-                  href: big-data-cluster/reference-azdata-bdc-pool.md
-                - name: bdc pool status
-                  href: big-data-cluster/reference-azdata-bdc-pool-status.md
                 - name: bdc spark
                   href: big-data-cluster/reference-azdata-bdc-spark.md
                 - name: bdc spark batch
@@ -4168,7 +4173,11 @@
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
         - name: 硬體與軟體需求
-          href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+          items:
+            - name: SQL Server 2019
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+            - name: SQL Server 2017 和先前的版本
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: 安全性考量
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
         - name: 網路通訊協定與網路程式庫
@@ -4247,6 +4256,8 @@
       items:
         - name: 相容性認證
           href: database-engine/install-windows/compatibility-certification.md
+        - name: 支援的版本與版本升級 SQL Server 2019
+          href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
         - name: 支援的版本與版本升級 - SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: 支援的版本與版本升級 - SQL Server 2016
@@ -8125,29 +8136,91 @@
               href: relational-databases/security/authentication-access/create-a-credential.md
         - name: 加密
           items:
+            - name: Always Encrypted
+              items:
+                - name: 使用 PowerShell 設定永遠加密
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                - name: 使用 SSMS 設定永遠加密
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
+                - name: 佈建 Always Encrypted 金鑰
+                  items:
+                    - name: 建立及儲存資料行主要金鑰
+                      href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
+                    - name: 使用 SSMS 佈建 Always Encrypted 金鑰
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
+                    - name: 使用 Provision 佈建 Always Encrypted 金鑰
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                - name: 輪替 Always Encrypted 金鑰
+                  items:
+                    - name: 使用 SSMS 輪替 Always Encrypted 金鑰
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
+                    - name: 使用 PowerShell 輪替 Always Encrypted 金鑰
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                - name: 使用 Always Encrypted 設定資料行
+                  items:
+                    - name: 使用 Always Encrypted 精靈設定資料行加密
+                      href: relational-databases/security/encryption/always-encrypted-wizard.md
+                    - name: 使用 Always Encrypted 與 PowerShell 設定資料行加密
+                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
+                    - name: 使用 Always Encrypted 與 DAC 封裝設定資料行加密
+                      href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
+                - name: 使用 Always Encrypted 查詢資料行
+                  items:
+                    - name: 使用 Always Encrypted 與 SSMS 查詢資料行
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                - name: 使用 Always Encrypted 移轉敏感性資料
+                  items:
+                    - name: 使用 Always Encrypted 匯出和匯入資料庫
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
+                    - name: 使用 Always Encrypted 備份和還原資料庫
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
+                    - name: 使用匯入和匯出精靈移轉資料
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
+                    - name: 使用 Always Encrypted 將已加密資料大量載入資料行
+                      href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+                - name: 使用 Always Encrypted 開發應用程式
+                  items:
+                    - name: 使用 Always Encrypted 開發應用程式
+                      href: relational-databases/security/encryption/always-encrypted-client-development.md
+                    - name: 使用 .NET Framework 開發應用程式
+                      href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+            - name: 具有安全記憶體保護區的 Always Encrypted
+              href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+              items:
+                - name: 設定您的環境以支援記憶體保護區和證明
+                  items:
+                    - name: 使用主機守護者服務證明設定 VBS 記憶體保護區
+                      items:
+                        - name: 規劃主機守護者服務證明
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                - name: 為具有安全記憶體保護區的 Always Encrypted 管理金鑰
+                  items:
+                    - name: 管理已啟用記憶體保護區的金鑰
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
+                    - name: 佈建已啟用記憶體保護區的金鑰
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-provision-keys.md
+                    - name: 輪替已啟用記憶體保護區的金鑰
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
+                - name: 使用具有安全記憶體保護區的 Always Encrypted 設定資料行
+                  items:
+                    - name: 設定資料行加密
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+                    - name: 使用 Transact-SQL 就地設定資料行加密
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
+                    - name: 為現有的已加密資料行啟用具有安全記憶體保護區的 Always Encrypted
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
+                - name: 使用具有安全記憶體保護區的 Always Encrypted 查詢資料行
+                  items:
+                    - name: 使用具有安全記憶體保護區的 Always Encrypted 查詢資料行
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+                    - name: 使用具有安全記憶體保護區的 Always Encrypted 與 SSMS 查詢資料行
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+                - name: 在已啟用記憶體保護區的資料行上建立和使用索引
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
+                - name: 使用具有安全記憶體保護區的 Always Encrypted 開發應用程式
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md
             - name: 針對 TDE 進行疑難排解
               href: relational-databases/security/encryption/troubleshoot-tde.md
-            - name: 設定 Always Encrypted
-              items:
-                - name: 設定具有安全記憶體保護區的 Always Encrypted
-                  href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
-                - name: 使用 SQL Server Management Studio 設定
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: 使用 PowerShell 設定
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
-                  items:
-                    - name: 設定 Always Encrypted 金鑰
-                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                    - name: 輪替 Always Encrypted 金鑰
-                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                    - name: 設定資料行加密
-                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                - name: 建立及儲存資料行主要金鑰
-                  href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: 移轉敏感性資料
-                  href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-                - name: 使用 .NET Framework 開發應用程式
-                  href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: 移動 TDE 受保護的資料庫
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
             - name: 可延伸金鑰管理
@@ -8255,14 +8328,12 @@
             - name: Always Encrypted
               href: relational-databases/security/encryption/always-encrypted-database-engine.md
               items:
-                - name: 具有安全記憶體保護區的 Always Encrypted
-                  href: relational-databases/security/encryption/always-encrypted-enclaves.md
-                - name: 金鑰管理
+                - name: Always Encrypted 的金鑰管理概觀
                   href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
-                - name: Cryptography
+                - name: Always Encrypted 密碼編譯
                   href: relational-databases/security/encryption/always-encrypted-cryptography.md
-                - name: 用戶端開發
-                  href: relational-databases/security/encryption/always-encrypted-client-development.md
+            - name: 具有安全記憶體保護區的 Always Encrypted
+              href: relational-databases/security/encryption/always-encrypted-enclaves.md
             - name: 加密金鑰
               href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
@@ -8279,16 +8350,24 @@
               href: relational-databases/security/auditing/sql-server-audit-records.md
     - name: 教學課程
       items:
-        - name: 使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
-          href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
-        - name: 在具有安全記憶體保護區的 Always Encrypted 資料行建立及使用索引
-          href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+        - name: Always Encrypted
+          items:
+            - name: 在 Windows 憑證存放區中保護敏感性資料和存放加密金鑰 >
+              href: /azure/sql-database/sql-database-always-encrypted
+            - name: 在 Azure Key Vault 中保護敏感性資料和存放加密金鑰 >
+              href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+        - name: 具有安全記憶體保護區的 Always Encrypted
+          items:
+            - name: 使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
+              href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+            - name: 在具有安全記憶體保護區的 Always Encrypted 資料行建立及使用索引
+              href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+            - name: 使用具有安全記憶體保護區的 Always Encrypted 開發 .NET Framework 應用程式
+              href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
     - name: 參考
       items:
         - name: 權限或安全性實體頁面
           href: relational-databases/security/permissions-or-securables-page.md
-        - name: 永遠加密精靈
-          href: relational-databases/security/encryption/always-encrypted-wizard.md
 - name: 工具
   href: tools/overview-sql-tools.md
   items:
@@ -8350,8 +8429,8 @@
           items:
             - name: PostgreSQL 延伸模組
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019
-              href: azure-data-studio/sql-server-2019-extension.md
+            - name: 資料虛擬化延伸模組
+              href: azure-data-studio/data-virtualization-extension.md
             - name: SQL Server Agent
               href: azure-data-studio/sql-server-agent-extension.md
             - name: SQL Server 中央管理伺服器延伸模組
@@ -10255,6 +10334,10 @@
           href: relational-databases/sqltoolsvsnativehelpers.md
         - name: FrameWindowVisible
           href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+    - name: 擴充功能
+      items:
+        - name: 擴充功能與工具
+          href: tools/download-sql-feature-packs.md
 - name: 教學課程
   items:
     - name: SQL Server
@@ -10352,8 +10435,6 @@
           href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: 設定複寫
           href: linux/sql-server-linux-replication-tutorial-tsql.md
-        - name: 容器中的機器學習服務
-          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: 概念
       items:
         - name: 安裝
@@ -12479,6 +12560,12 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
             - name: sys.dm_tcp_listener_states
               href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+        - name: 巨量資料叢集
+          items:
+            - name: sys.dm_cluster_endpoints
+              href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
+            - name: sys.dm_exec_compute_pools
+              href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
         - name: 異動資料擷取
           items:
             - name: sys.dm_cdc_errors
@@ -12835,6 +12922,8 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md
             - name: sys.dm_audit_class_type_map
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md
+            - name: sys.dm_column_encryption_enclave
+              href: relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md
             - name: sys.dm_cryptographic_provider_algorithms
               href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md
             - name: sys.dm_cryptographic_provider_keys
