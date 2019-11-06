@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/14/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: facd5fe78ae3dd20390e9510a47e914dd6d3945e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0f9081562a0cb0f8ddba663f04305c7bd2b387fe
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708718"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989571"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 
@@ -45,7 +45,7 @@ ms.locfileid: "71708718"
 
 **b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定格式，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
 
-![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") 如需用於 **bcp** 語法的語法慣例，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") 針對用於 **bcp** 語法的語法慣例，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
 
 > [!NOTE]
 > 若您使用 **bcp** 備份資料，請建立格式檔案以記錄資料格式。 **bcp** 資料檔案 **不包含** 任何結構描述或格式資訊，所以如果資料表或檢視表遭到卸除，而您又沒有格式檔案，即可能就無法匯入資料。
@@ -55,7 +55,7 @@ ms.locfileid: "71708718"
 **[![下載](../ssdt/media/download.png) 下載適用於 SQL Server (x64) 的 Microsoft 命令列公用程式 15.0](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![下載](../ssdt/media/download.png) 下載適用於 SQL Server (x86) 的 Microsoft 命令列公用程式 15.0](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-命令列工具是公開上市（GA），不過，它們是使用 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的安裝程式套件來發行。
+命令列工具是公開上市（GA），不過，它們會與 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]的安裝程式套件一起發行。
 
 ### <a name="version-information"></a>版本資訊
 
@@ -68,11 +68,11 @@ ms.locfileid: "71708718"
 
 ### <a name="system-requirements"></a>系統需求
 
-Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2
+Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016
 
 此元件同時需要[Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483)和[Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
 
-若要檢查 BCP version execute `bcp /v` 命令，並確認15.0.1000.34 或更高版本正在使用中。
+若要檢查 BCP 版本的執行 `bcp /v` 命令，並確認15.0.1000.34 或更高的正在使用中。
 
 <table><th>語法</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -175,7 +175,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|特定字碼頁編號；如 850。<br /><br /> 13 版之前的版本 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 不支援字碼頁 65001 (UTF-8 編碼)。 從 13 版開始，可以將 UTF-8 編碼匯入舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。|  
   
  **-d** _**database\_name**_ <a name="d"></a>   
- 指定要連接的資料庫。 根據預設，bcp.exe 會連線到使用者的預設資料庫。 如果指定 * *-d database_name 和三部分名稱（database_name 做為第一個參數傳遞至 bcp .exe），就會發生錯誤，因為您無法指定資料庫名稱兩次。 如果 *database_name* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-d** 與資料庫名稱之間加上空格。  
+ 指定要連接的資料庫。 根據預設，bcp.exe 會連線到使用者的預設資料庫。 如果指定 * *-d database_name 和三部分名稱（database_name. schema. table，做為第一個參數傳遞至 bcp .exe），就會發生錯誤，因為您無法指定資料庫名稱兩次。 如果 *database_name* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-d** 與資料庫名稱之間加上空格。  
   
  **-e** _**err\_file**_ <a name="e"></a>  
  指定錯誤檔的完整路徑，該錯誤檔用來儲存 **bcp** 公用程式無法從檔案傳送至資料庫的任何資料列。 **bcp** 命令所產生的錯誤訊息，會送往使用者的工作站。 如果未使用這個選項，就不會建立錯誤檔。  
@@ -214,18 +214,18 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > Linux 或 macOS 目前不支援 AAD 整合和互動式驗證。
 
 > [!TIP]
->  若要檢查您的 bcp 版本是否支援 Azure Active Directory Authentication （AAD）類型**bcp--** （bcp\<space > \<dash > \<dash >），並確認您在可用的引數清單中看到-G。
+>  若要檢查您的 bcp 版本是否包含 Azure Active Directory Authentication （AAD）類型**bcp--** （bcp\<space >\<虛線 >\<破折號 >）的支援，並確認您在可用的引數清單中看到-G。
 
 - **Azure Active Directory 使用者名稱和密碼：** 
 
     當您想要使用 Azure Active Directory 使用者名稱和密碼時，您可以提供 **-G** 選項，並同時提供 **-U** 和 **-P** 選項來使用使用者名稱和密碼。 
 
-    下列範例會使用 Azure AD 使用者名稱和密碼來匯出資料，其中 user 和 password 是 AAD 認證。 此範例會從 Azure 伺服器 `aadserver.database.windows.net` 的資料庫 `testdb` 中匯出資料表 `bcptest`，並將資料儲存在 file `c:\last\data1.dat` 中：
+    下列範例會使用 Azure AD 使用者名稱和密碼來匯出資料，其中 user 和 password 是 AAD 認證。 範例會從 Azure 伺服器 `aadserver.database.windows.net` 的資料庫 `testdb` 匯出資料表 `bcptest`，並將資料儲存在檔案 `c:\last\data1.dat`中：
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    下列範例會使用 Azure AD 使用者名稱和密碼來匯入資料，其中 user 和 password 是 AAD 認證。 此範例會使用 Azure AD 使用者/密碼，將資料從檔案 `c:\last\data1.dat` 匯入資料表 `bcptest`，以用於 Azure 伺服器上的資料庫 `testdb` `aadserver.database.windows.net`：
+    下列範例會使用 Azure AD 使用者名稱和密碼來匯入資料，其中 user 和 password 是 AAD 認證。 此範例會使用 Azure AD 使用者/密碼，將資料從檔案 `c:\last\data1.dat` 匯入至 Azure `aadserver.database.windows.net` server 上資料庫 `testdb` 的資料表 `bcptest`：
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -240,7 +240,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    下列範例會使用 Azure AD 整合式驗證匯入資料。此範例會使用 Azure AD 整合式驗證，從檔案 `c:\last\data2.txt` 將資料匯入資料表 `bcptest`，以用於 Azure 伺服器上的資料庫 `testdb` `aadserver.database.windows.net`：
+    下列範例會使用 Azure AD 整合式驗證匯入資料。此範例會使用 Azure AD 整合式驗證，將資料從檔案 `c:\last\data2.txt` 匯入到 Azure `aadserver.database.windows.net` server 上資料庫 `testdb` 的資料表 `bcptest`：
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -262,7 +262,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   如果 Azure AD 使用者是使用 Windows 帳戶同盟的網域，則命令列中所需的使用者名稱會包含其網域帳戶（例如，joe@contoso.com，請參閱下文）：   
+   如果 Azure AD 使用者是使用 Windows 帳戶同盟的網域，則命令列中所需的使用者名稱會包含其網域帳戶（例如，joe@contoso.com 如下所示）：   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 

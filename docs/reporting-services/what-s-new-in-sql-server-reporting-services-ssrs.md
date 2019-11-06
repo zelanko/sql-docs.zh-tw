@@ -8,51 +8,63 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 08/27/2019
-ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 10/30/2019
+ms.openlocfilehash: 0fea81e009d4d281c36d1882ac41835af609294b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123117"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536286"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-了解 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新功能。 本文章涵蓋主要功能領域，並會在發行新的項目時更新。
-
-如需取得目前的版本資訊，請參閱 [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)。 
+瞭解不同版本 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的新功能。 本文章涵蓋主要功能領域，並會在發行新的項目時更新。
 
 如需 Power BI 報表伺服器的資訊，請參閱[什麼是 Power BI 報表伺服器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
 
-**下載** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
-
-請前往 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)** 下載 SQL Server 2017 Reporting Services。
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-reporting-services-preview"></a>SQL Server 2019 Reporting Services 預覽
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]您可以從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=100122)下載 Reporting Services preview。
+**下載**![下載](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "下載這篇文章")
+
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)可從 Microsoft 下載中心下載。
 
 ### <a name="azure-sql-managed-instance-support"></a>Azure SQL 受控執行個體支援
 
-您現在可以在裝載于 VM 或資料中心的 Azure SQL 受控執行個體 (MI) 中, 託管用於 SQL Server Reporting Services (SSRS) 的資料庫目錄。 支援僅限於使用資料庫認證來連接到 SQL MI。
+您現在可以在裝載于 VM 或資料中心的 Azure SQL 受控執行個體（MI）中，託管用於 SQL Server Reporting Services （SSRS）的資料庫目錄。 支援僅限於使用資料庫認證來連接到 SQL MI。
 
 ### <a name="power-bi-premium-dataset-support"></a>Power BI Premium 資料集支援
 
-您可以使用 Microsoft 報表產生器或 SQL Server Data Tools (SSDT) 連接到 Power BI 資料集。 然後, 您可以使用 SQL Server Analysis Services 連線功能, 將這些報表發行至 SSRS 2019。 使用者必須使用已儲存的 Windows 使用者名稱和密碼來啟用此案例。
+您可以使用 Microsoft 報表產生器或 SQL Server Data Tools （SSDT）連接到 Power BI 資料集。 然後，您可以使用 SQL Server Analysis Services 連線功能，將這些報表發行至 SSRS 2019。 使用者必須使用已儲存的 Windows 使用者名稱和密碼來啟用此案例。
 
-### <a name="alttext-alternative-text-support-for-report-elements"></a>報表元素的 AltText (替代文字) 支援
+### <a name="alttext-alternative-text-support-for-report-elements"></a>報表元素的 AltText （替代文字）支援
 
-撰寫報表時, 您可以使用工具提示來指定報表上每個元素的文字。 螢幕閱讀程式技術會適當地識別這些工具提示。
+撰寫報表時，您可以使用工具提示來指定報表上每個元素的文字。 螢幕閱讀程式技術會適當地識別這些工具提示。
+
+### <a name="azure-active-directory-application-proxy-support"></a>Azure Active Directory 應用程式 Proxy 支援
+
+有了 Azure Active Directory 應用程式 Proxy，您就不再需要管理自己的 web 應用程式 Proxy，以允許透過 web 或行動裝置應用程式進行安全存取。
+
+### <a name="transparent-database-encryption"></a>透明資料庫加密
+
+SQL Server 2019 現在支援適用于 Enterprise 和 Standard 版本的 SSRS 類別目錄資料庫的透明資料庫加密。 
+
+### <a name="microsoft-report-builder-update"></a>Microsoft 報表產生器更新
+
+新發行的報表產生器版本與 Reporting Services 的2016、2017和2019版本完全相容。 它也與所有已發行和支援的 Power BI 報表伺服器版本相容。
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## <a name="ssrs-2017"></a>SSRS 2017
+## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+**下載**![下載](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "下載這篇文章")
+
+請前往 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)** 下載 SQL Server 2017 Reporting Services。
 
 ### <a name="comments-on-reports"></a>報表的註解
 
@@ -129,7 +141,7 @@ Reporting Services 行動報表是針對各種外形規格最佳化的專用報�
 
 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]可讓您將 SQL Server 行動報表建立並發行到您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
 
-![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
+![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "|::ref4::|")  
 
 如需詳細資訊，請參閱 [使用 SQL Server 行動報表發行工具建立行動報表](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
 
@@ -137,7 +149,7 @@ Reporting Services 行動報表是針對各種外形規格最佳化的專用報�
 
 iPad 和 iPhone 上適用於 iOS 的 Power BI 行動裝置應用程式現在可以顯示裝載於本機報表伺服器的 SQL Server 行動報表。  
 
-![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
+![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "|::ref5::|")  
 
 根據預設，您必須進行幾項組態變更才能連接。 如需如何允許 Power BI Mobile 應用程式連接到報表伺服器的詳細資訊，請參閱 [啟用報表伺服器進行 Power BI 行動存取](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)。
 
@@ -165,7 +177,7 @@ iPad 和 iPhone 上適用於 iOS 的 Power BI 行動裝置應用程式現在可�
 
 **新式編頁報表：** 使用樣式新穎的圖表、量測計、地圖和其他資料視覺效果，設計美觀的新式編頁報表。
 
-**矩形式樹狀結構圖和放射環狀圖：** 使用矩形式樹狀結構圖 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 和放射環狀圖 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 增強報表，這是顯示階層式資料的不錯方式。 如需詳細資訊，請參閱 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)。  
+**矩形式樹狀結構圖和放射環狀圖：** 使用樹狀結構圖 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "|::ref6::|") 與放射環狀圖 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "|::ref7::|") 加強您的報表，這是顯示階層式資料的絕佳方式。 如需詳細資訊，請參閱 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)。  
 
 **報表內嵌：** 您現在可以使用 iframe 及 URL 參數，將行動和分頁報表內嵌到其他網頁和應用程式中。  
 
@@ -175,7 +187,7 @@ iPad 和 iPhone 上適用於 iOS 的 Power BI 行動裝置應用程式現在可�
 2. 選取要將項目釘選至的儀表板。
 3. 選取您儀表板更新磚的頻率。
 
-![注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")：重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。
+![注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意") 重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶及設定不同的重新整理排程。
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -219,11 +231,11 @@ SSDT 的新版本包括 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]�
 |||  
 |-|-|  
 |新增|Previous|  
-|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
+|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "|::ref9::|")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "|::ref10::|")|  
 
 **自訂參數窗格** ：您現在可以自訂參數窗格。 使用報表產生器中的設計界面，您可以將參數拖曳到參數窗格中的特定資料行及資料列。 您可以新增及移除資料行以變更窗格配置。 如需詳細資訊，請參閱 [自訂報表中的參數窗格 &#40;報表產生器&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中建立的行動報表。  
 
-![[報表資料] 窗格和參數窗格中的參數清單](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "[報表資料] 窗格和參數窗格中的參數清單")  
+![[報表資料] 窗格和 [參數] 窗格中的參數清單](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "|::ref11::|")  
 
 **高 DPI 支援：** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] 支援高 DPI (每英吋點數) 縮放比例及裝置。  如需高 DPI 的詳細資訊，請參閱下列主題：  
 

@@ -1,7 +1,7 @@
 ---
 title: 部署 JDBC 驅動程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028113"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049839"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,13 @@ ms.locfileid: "69028113"
  若要將 tar 檔案解壓縮，請將它移到您要安裝驅動程式的目錄，並輸入下列命令：  
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
-  
+
+## <a name="legalities-of-driver-redistribution"></a>驅動程式轉散發合法性
+
+JDBC 驅動程式版本6.0、6.2、6.4 和7.0 是可轉散發套件。 檢閱授權合約中的「可轉散發程式碼」  條款。
+
+JDBC 驅動程式1.x 版已過時且已淘汰。 4\.x 的支援將于2018之前過期。
+
 ## <a name="see-also"></a>另請參閱  
  [JDBC 驅動程式概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

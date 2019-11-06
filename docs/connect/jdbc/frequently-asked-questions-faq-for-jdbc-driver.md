@@ -1,7 +1,7 @@
 ---
 title: JDBC 驅動程式常見問題集 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2860034ae67fc7cc376e84251dbeebc5a123fade
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028067"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049813"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驅動程式常見問題集 (FAQ)
 
@@ -34,7 +34,7 @@ JDBC Driver 是開放原始碼，您可以在 [GitHub](https://github.com/micros
 **Microsoft 下載中心提供的 JDBC 驅動程式套件與 GitHub 上提供的 JDBC 驅動程式有何差異？**  
 GitHub 存放庫上針對 Microsoft JDBC 驅動程式提供的 JDBC 驅動程式檔案為 JDBC 驅動程式的核心，且屬於存放庫中列出的開放原始碼授權。 Microsoft 下載中心的驅動程式套件包含適用於 Windows 整合式驗證及透過 JDBC 驅動程式啟用 XA 交易的額外程式庫。 那些額外的程式庫均屬於可下載套件隨附的授權。
 
-**升級我的驅動程式前，我應該先知道哪些事？**
+**升級我的驅動程式前，我應該先知道哪些事？**  
 Microsoft JDBC Driver 7.4 支援 JDBC 4.2 和 4.3 (部份) 規格，同時也在安裝套件中包含了下列三個 JAR 類別庫：
 
 | JAR                        | JDBC 規格            | JDK 版本 |
@@ -42,20 +42,23 @@ Microsoft JDBC Driver 7.4 支援 JDBC 4.2 和 4.3 (部份) 規格，同時也在
 | mssql-jdbc-6.4.0.jre8.jar 7.4.1. jre12 .jar | JDBC 4.3 (部份) 和 4.2 | JDK 12.0    |
 | mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-7.2.2.jre11.jar .jar | JDBC 4.3 (部份) 和 4.2 | JDK 11.0    |
 | mssql-jdbc-6.4.0.jre8.jar 7.4.1. mssql-jdbc-6.2.2.jre8.jar .jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- Microsoft JDBC Driver 7.2 支援 JDBC 4.2 與 4.3 (部份) 規格，同時也在安裝套件中包含了下列兩個 JAR 類別庫：
+Microsoft JDBC Driver 7.2 支援 JDBC 4.2 與 4.3 (部份) 規格，同時也在安裝套件中包含了下列兩個 JAR 類別庫：
 
 | JAR                        | JDBC 規格            | JDK 版本 |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.2.2.jre11.jar | JDBC 4.3 (部份) 和 4.2 | JDK 11.0    |
 | mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
- Microsoft JDBC Driver 7.0 支援 JDBC 4.2 與 4.3 (部份) 規格，同時也在安裝套件中包含了下列兩個 JAR 類別庫：
+Microsoft JDBC Driver 7.0 支援 JDBC 4.2 與 4.3 (部份) 規格，同時也在安裝套件中包含了下列兩個 JAR 類別庫：
 
 | JAR                        | JDBC 規格            | JDK 版本 |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3 (部份) 和 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 6.4 支援 JDBC 4.1、4.2 及 4.3 (部份) 規格，同時也在安裝套件中包含了下列三個 JAR 類別庫：
 
@@ -64,6 +67,7 @@ Microsoft JDBC Driver 6.4 支援 JDBC 4.1、4.2 及 4.3 (部份) 規格，同時
 | mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3 (部份)、4.2 及 4.1 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2 與 4.1                  | JDK 8.0     |
 | mssql-jdbc-6.4.0.jre7.jar | JDBC 4.1                           | JDK 7.0     |
+| &nbsp;                    | &nbsp;                             | &nbsp;      |
 
 Microsoft JDBC Driver 6.2 支援 JDBC 4.0、4.1 及 4.2 規格，同時也在安裝套件中包含了下列兩個 JAR 類別庫：
 
@@ -71,6 +75,7 @@ Microsoft JDBC Driver 6.2 支援 JDBC 4.0、4.1 及 4.2 規格，同時也在安
 | ------------------------- | ---------------------- | ----------- |
 | mssql-jdbc-6.2.2.jre8.jar | JDBC 4.2、4.1 及 4.0 | JDK 8.0     |
 | mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1 及 4.0       | JDK 7.0     |
+| &nbsp;                    | &nbsp;                 | &nbsp;      |
 
 Microsoft JDBC Driver 6.0 和 4.2 for SQL Server支援 JDBC 4.0、4.1 及 4.2 規格，同時也在安裝套件中包含了下列兩個 JAR 類別庫：
 
@@ -78,12 +83,14 @@ Microsoft JDBC Driver 6.0 和 4.2 for SQL Server支援 JDBC 4.0、4.1 及 4.2 �
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.2、4.1 及 4.0 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1 及 4.0       | JDK 7.0     |
+| &nbsp;        | &nbsp;                 | &nbsp;      |
 
 Microsoft JDBC Driver 4.1 for SQL Server 支援 JDBC 4.0 規格，同時也在安裝套件中包含了下列這一個 JAR 類別庫：
 
 | JAR           | JDBC 規格 | JDK 版本     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 與 6.0 |
+| &nbsp;        | &nbsp;             | &nbsp;      |
 
 **若我想要在現有的 SQL Server 版本上使用最新版的驅動程式，我需要變更應用程式的任何程式碼嗎？**  
 一般而言，驅動程式的設計具有回溯相容功能，因此當您升級驅動程式時，並不需要變更現有的應用程式。 新驅動程式版本如有引進重大變更，就會在 [JDBC Driver 的版本資訊](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)一節中詳細說明這類變更，以及變更對於現有應用程式的影響。 此外，您也可以檢閱驅動程式隨附的版本資訊，查看該版本中已經修正之錯誤與已知問題的清單。
@@ -91,21 +98,20 @@ Microsoft JDBC Driver 4.1 for SQL Server 支援 JDBC 4.0 規格，同時也在�
 **此驅動程式的售價為何？**  
 Microsoft JDBC Driver for SQL Server 為免費提供。
 
-**我可以轉散發此驅動程式嗎？**
-JDBC Driver 4.1、4.2、6.0、6.2、6.4 及 7.0 均可轉散發。 請檢閱授權合約中的「可轉散發程式碼」條款。
+**我可以轉散發此驅動程式嗎？**  
+JDBC 驅動程式 6.0、6.2、6.4 與 7.0 是可轉發的。 請檢閱授權合約中的「可轉散發程式碼」條款。
 
-**我可以使用此驅動程式從 Linux 電腦存取 Microsoft SQL Server 嗎？**
+**我可以使用此驅動程式從 Linux 電腦存取 Microsoft SQL Server 嗎？**  
 當然可以。 您可以使用此驅動程式從 Linux、 Unix 及其他非 Windows 平台存取 SQL Server。 如需詳細資料，請參閱 [Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)。
 
-**此驅動程式支援安全通訊端層 (SSL) 加密嗎？**
+**此驅動程式支援安全通訊端層 (SSL) 加密嗎？**  
 此驅動程式自 1.2 版起，即支援安全通訊端層 (SSL) 加密。 如需詳細資訊，請參閱 [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)。
 
 **Microsoft JDBC Driver for SQL Server 支援哪些驗證類型？**  
 下表列出可用的驗證選項。 只有 4.0 版以後的驅動程式，才能使用純 Java Kerberos 驗證。
 
-|             |                                       |
-| ----------- | ------------------------------------- |
 | 平台    | 驗證                        |
+| ----------- | ------------------------------------- |
 | 非 Windows | 純 Java Kerberos                    |
 | 非 Windows | SQL Server                            |
 | 非 Windows | Azure Active Directory 驗證 |
@@ -114,6 +120,7 @@ JDBC Driver 4.1、4.2、6.0、6.2、6.4 及 7.0 均可轉散發。 請檢閱授�
 | 視窗     | Kerberos 加 NTLM 備份             |
 | Windows     | NTLM                                  |
 | Windows     | Azure Active Directory 驗證 |
+| &nbsp;      | &nbsp;                                |
 
 **此驅動程式支援網際網路通訊協定第 6 版 (IPv6) 位址嗎？**  
 是的。 此驅動程式支援使用 IPv6 位址。 使用連線屬性集合和 serverName 連接字串屬性。 如需詳細資訊，請參閱[建置連線 URL](../../connect/jdbc/building-the-connection-url.md)。
@@ -127,7 +134,7 @@ JDBC Driver 4.1、4.2、6.0、6.2、6.4 及 7.0 均可轉散發。 請檢閱授�
 **此驅動程式是否提供任何支援選項？**  
 此驅動程式提供數個支援選項。 您可以在我們的 [GitHub 存放庫](https://github.com/microsoft/mssql-jdbc) \(英文\) 上張貼或提出問題，這會由 Microsoft 監控。 [論壇](https://go.microsoft.com/fwlink/?LinkID=246673) \(英文\) 會由 Microsoft、MVP 和社群監控。 您也可以連絡 Microsoft 客戶支援服務。 開發小組可能會要求您重現任何第三方應用程式伺服器以外的問題。 若無法在裝載 Java 容器之環境以外之處重現問題，您必須連絡相關的第三方廠商，小組才能繼續協助您。 該小組也可能要求您在作業系統 (例如 Windows) 上重現您的問題，以便為該問題提供最佳支援。
 
-**此驅動程式是否通過認證，可與任何第三方應用程式伺服器搭配使用？**
+**此驅動程式是否通過認證，可與任何第三方應用程式伺服器搭配使用？**  
 此驅動程式已在多種應用程式伺服器上進行過測試，包括 IBM WebSphere 及 SAP NetWeaver。
 
 **如何啟用追蹤功能？**  

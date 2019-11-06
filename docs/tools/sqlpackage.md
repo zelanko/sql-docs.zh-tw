@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.openlocfilehash: 22d90b2f2eeb569f5c6ef587bdbcc98e252c8957
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70774202"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033037"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -21,7 +21,7 @@ ms.locfileid: "70774202"
   
 - [Extract](#help-for-the-extract-action)：從即時的 SQL Server 或 Azure SQL Database 建立資料庫快照集 (.dacpac) 檔案。  
   
-- [Publish](#publish-parameters-properties-and-sqlcmd-variables)：累加更新資料庫結構描述以符合來源 .dacpac 檔案的結構描述。 如果資料庫不存在伺服器上，發行作業會加以建立。 否則, 就會更新現有的資料庫。  
+- [Publish](#publish-parameters-properties-and-sqlcmd-variables)：累加更新資料庫結構描述以符合來源 .dacpac 檔案的結構描述。 如果資料庫不存在伺服器上，發行作業會加以建立。 否則，就會更新現有的資料庫。  
   
 - [Export](#export-parameters-and-properties)：將即時資料庫 (包括資料庫結構描述和使用者資料) 從 SQL Server 或 Azure SQL Database 匯出到 BACPAC 套件 (.bacpac 檔案)。  
   
@@ -55,19 +55,19 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
 |**/MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例: sqlpackage .exe/Action: Publish/？。 |
+|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage .exe/Action： Publish/？。 |
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隱藏詳細的意見反應。 預設為 False。 |
 |**/SourceConnectionString:**|**/scs**|{string}|指定來源資料庫的有效 SQL Server/Azure 連接字串。 如果指定了此參數，就應該以獨佔方式將其用於所有其他來源參數。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|定義來源資料庫的名稱。 |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|指定 SQL 加密是否應該用於來源資料庫連接。 |
 |**/SourcePassword:**|**/sp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的密碼。 |
-|**SourceServerName**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
+|**/SourceServerName：**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立來源資料庫連線的逾時 (以秒為單位)。 |
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否要使用 SSL 來加密來源資料庫連線並且略過驗證信任的憑證鏈結。 |
 |**/SourceUser:**|**/su**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的 SQL Server 使用者。 |
-|**/TargetFile:**|**/tf**|{string}| 指定要當做動作目標使用的目標檔案 (也就是 .dacpac 檔案), 而非資料庫。 如果使用此參數，其他目標參數都應該無效。 這個參數對於僅支援資料庫目標的動作而言是不正確。| 
-|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶 (如 outlook.com、hotmail.com 或 live.com), 則需要此選項。 如果省略此參數, 將會使用 Azure AD 的預設租使用者識別碼, 假設已驗證的使用者是此 AD 的原生使用者。 不過, 在此情況下, 不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及 (或) Microsoft 帳戶, 且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時, 會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證, 使用需要使用者輸入其使用者名稱和密碼或整合式驗證 (Windows 認證) 的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時, 不可以在 SourceConnectionString (/scs) 中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時, 必須在 SourceConnectionString (/scs) 中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TargetFile:**|**/tf**|{string}| 指定要當做動作目標使用的目標檔案（也就是 .dacpac 檔案），而非資料庫。 如果使用此參數，其他目標參數都應該無效。 這個參數對於僅支援資料庫目標的動作而言是不正確。| 
+|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶（如 outlook.com、hotmail.com 或 live.com），則需要此選項。 如果省略此參數，將會使用 Azure AD 的預設租使用者識別碼，假設已驗證的使用者是此 AD 的原生使用者。 不過，在此情況下，不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及（或） Microsoft 帳戶，且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時，會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證，使用需要使用者輸入其使用者名稱和密碼或整合式驗證（Windows 認證）的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時，不可以在 SourceConnectionString （/scs）中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時，必須在 SourceConnectionString （/scs）中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
 ### <a name="properties-specific-to-the-extract-action"></a>[解壓縮] 動作特有的屬性
 
@@ -78,16 +78,18 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DacApplicationName=(STRING)|定義要儲存在 DACPAC 中繼資料中的應用程式名稱。 預設值為資料庫名稱。|
 |**/p:**|DacMajorVersion=(INT32 '1')|定義要儲存在 DACPAC 中繼資料中的主要版本。|
 |**/p:**|DacMinorVersion=(INT32 '0')|定義要儲存在 DACPAC 中繼資料中的次要版本。|
-|**/p:**|ExtractAllTableData=(BOOLEAN)|指出是否已解壓縮所有使用者資料表中的資料。 如果為 ' true ', 則會解壓縮所有使用者資料表中的資料, 而且您不能指定個別的使用者資料表來解壓縮資料。 如果為 ' false ', 請指定一或多個要從中解壓縮資料的使用者資料表。|
+|**/p:**|DatabaseLockTimeout = （INT32 ' 60 '）| 指定對 SQLServer 執行查詢時的資料庫鎖定逾時 (秒)。 請使用-1 來無限期地等待。|
+|**/p:**|ExtractAllTableData=(BOOLEAN)|指出是否已解壓縮所有使用者資料表中的資料。 如果為 ' true '，則會解壓縮所有使用者資料表中的資料，而且您不能指定個別的使用者資料表來解壓縮資料。 如果為 ' false '，請指定一或多個要從中解壓縮資料的使用者資料表。|
 |**/p:**|ExtractApplicationScopedObjectsOnly=(BOOLEAN 'True')|如果為 true，則只擷取指定之來源的應用程式範圍物件。 如果為 false，則擷取指定之來源的所有物件。|
 |**/p:**|ExtractReferencedServerScopedElements=(BOOLEAN 'True')|如果為 true，則擷取來源資料庫物件所參考的登入、伺服器稽核及認證物件。|
 |**/p:**|ExtractUsageProperties=(BOOLEAN)|指定是否會從資料庫擷取用法屬性，例如資料表資料列計數和索引大小。|
 |**/p:**|IgnoreExtendedProperties=(BOOLEAN)|指定是否應該忽略擴充屬性。|
 |**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定是否應該忽略權限。|
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|指定是否忽略使用者與登入之間的關聯性。|
+|**/p:**|LongRunningCommandTimeout = （INT32）| 以秒為單位指定對 SQL Server 執行查詢時的長時間執行命令逾時。 使用0可無限期等候。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定支援儲存體的類型，以供結構描述模型在擷取期間使用。|
 |**/p:**|TableData=(STRING)|指出將從中解壓縮資料的資料表。 以下列格式指定包含或不含名稱部分之括弧的資料表名稱： schema_name. table_identifier。|
-|**/p:**| TempDirectoryForTableData = （字串）|指定在寫入封裝檔案之前，用來緩衝資料表資料的臨時目錄。|
+|**/p:**| TempDirectoryForTableData = （字串）|指定在寫入套件檔案之前，用於緩衝資料表資料的暫存目錄。|
 |**/p:**|VerifyExtraction=(BOOLEAN)|指定是否應該驗證擷取的 dacpac。|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>Publish 參數、屬性與 SQLCMD 變數
@@ -109,15 +111,15 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
 |**/Profile:**|**/pr**|{string}|指定 DAC 發行設定檔的檔案路徑。 設定檔會定義產生輸出時要使用之屬性及變數的集合。|
-|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例: sqlpackage .exe/Action: Publish/？。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage .exe/Action： Publish/？。|
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隱藏詳細的意見反應。 預設為 False。|
 |**/Secret:**|**/secr**|{string}|指定必要時驗證 Azure Key Vault 所要使用的用戶端密碼 |
 |**/SourceConnectionString:**|**/scs**|{string}|指定來源資料庫的有效 SQL Server/Azure 連接字串。 如果指定了此參數，就應該以獨佔方式將其用於所有其他來源參數。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|定義來源資料庫的名稱。 |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|指定 SQL 加密是否應該用於來源資料庫連接。 |
-|**SourceFile**|**/sf**|{string}|指定要當作動作來源使用的來源檔案，而非資料庫。 如果使用了此參數，其他來源參數都應該無效。 |
+|**/SourceFile：**|**/sf**|{string}|指定要當作動作來源使用的來源檔案，而非資料庫。 如果使用了此參數，其他來源參數都應該無效。 |
 |**/SourcePassword:**|**/sp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的密碼。 |
-|**SourceServerName**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
+|**/SourceServerName：**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立來源資料庫連線的逾時 (以秒為單位)。 |
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否要使用 SSL 來加密來源資料庫連線並且略過驗證信任的憑證鏈結。 |
 |**/SourceUser:**|**/su**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的 SQL Server 使用者。 |
@@ -125,12 +127,12 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/TargetDatabaseName:**|**/tdn**|{string}|指定 sqlpackage.exe 動作目標之資料庫名稱的覆寫。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|指定 SQL 加密是否應該用於目標資料庫連線。 |
 |**/TargetPassword:**|**/tp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取目標資料庫的密碼。 |
-|**TargetServerName**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
-|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD, 建議此值大於或等於30秒。|
+|**/TargetServerName：**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
+|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD，建議此值大於或等於30秒。|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**TargetUser**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶 (如 outlook.com、hotmail.com 或 live.com), 則需要此選項。 如果省略此參數, 將會使用 Azure AD 的預設租使用者識別碼, 假設已驗證的使用者是此 AD 的原生使用者。 不過, 在此情況下, 不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及 (或) Microsoft 帳戶, 且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時, 會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證, 使用需要使用者輸入其使用者名稱和密碼或整合式驗證 (Windows 認證) 的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時, 不可以在 SourceConnectionString (/scs) 中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時, 必須在 SourceConnectionString (/scs) 中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶（如 outlook.com、hotmail.com 或 live.com），則需要此選項。 如果省略此參數，將會使用 Azure AD 的預設租使用者識別碼，假設已驗證的使用者是此 AD 的原生使用者。 不過，在此情況下，不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及（或） Microsoft 帳戶，且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時，會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證，使用需要使用者輸入其使用者名稱和密碼或整合式驗證（Windows 認證）的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時，不可以在 SourceConnectionString （/scs）中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時，必須在 SourceConnectionString （/scs）中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/Variables:**|**/v**|{PropertyName}={Value}|指定動件特定變數的名稱/值對：{VariableName}={Value}。 DACPAC 檔案包含有效 SQLCMD 變數的清單。 如果未針對每一個變數提供值，則會產生錯誤。 |
 
 ### <a name="properties-specific-to-the-publish-action"></a>發行動作特有的屬性
@@ -139,6 +141,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。|
+|**/p:**|AdditionalDeploymentContributorPaths = （字串）| 指定要載入其他部署參與者的路徑。 這應該是以分號區隔的值清單。 | 
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|這個屬性是供 SqlClr 部署用來使任何封鎖的組件會在部署計畫中卸除。 根據預設，如果必須卸除任何參考組件，則該封鎖/參考組件會封鎖組件更新。|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|指定儘管 SQL Server 平台不相容，是否仍要嘗試動作。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|若此屬性設定為 true，請勿封鎖具有資料列層級安全性之資料表的資料動作。 預設值為 false。|
@@ -149,7 +152,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|指定在產生的發行指令碼中是否應該將 SETVAR 變數的宣告標記為註解。 如果您計畫在使用 SQLCMD.EXE 等工具進行發行時在命令列指定值，就可以選擇這種作法。|
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|這個設定表示資料庫的定序於部署期間的處理方式。如果目標資料庫的定序不符合來源所指定的定序，預設會更新目標資料庫的定序。 當設定這個選項時，則應該使用目標資料庫 (或伺服器) 的定序。|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|指定當您發行至資料庫時，應該更新目標資料庫或應該卸除並重新建立目標資料庫。|
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|定義 Azure SQL Database 的版本。|
+|**/p:**|DatabaseEdition = （{基本&#124;標準&#124;Premium&#124;倉儲&#124;GeneralPurpose&#124;BusinessCritical&#124;超大規模資料庫&#124;預設值} ' default '）|定義 Azure SQL Database 的版本。|
 |**/p:**|DatabaseLockTimeout = （INT32 ' 60 '）|指定對 SQLServer 執行查詢時的資料庫鎖定逾時 (秒)。 請使用-1 來無限期地等待。|
 |**/p:**|DatabaseMaximumSize=(INT32)|定義 Azure SQL Database 的大小上限 (以 GB 表示)。|
 |**/p:**|DatabaseServiceObjective=(STRING)|定義 Azure SQL Database 的效能等級，例如 "P0" 或 "S1"。|
@@ -157,7 +160,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|DisableAndReenableDdlTriggers=(BOOLEAN 'True')|指定是否在發行程序開始時停用資料定義語言 (DDL) 觸發程序，並在發行動作結束時重新啟用。|
 |**/p:**|DoNotAlterChangeDataCaptureObjects=(BOOLEAN 'True')|如果為 true，則不會改變異動資料擷取物件。|
 |**/p:**|DoNotAlterReplicatedObjects=(BOOLEAN 'True')|指定驗證期間是否識別有複寫的物件。|
-|**/p:**|DoNotDropObjectType=(STRING)|當 DropObjectsNotInSource 為 true 時, 不應卸載的物件類型。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。|
+|**/p:**|DoNotDropObjectType=(STRING)|當 DropObjectsNotInSource 為 true 時，不應卸載的物件類型。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。|
 |**/p:**|DoNotDropObjectTypes=(STRING)|當 DropObjectsNotInSource 為 true 時不應捨棄的分號分隔物件類型清單。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。|
 |**/p:**|DropConstraintsNotInSource=(BOOLEAN 'True')|指定當您發行至資料庫時，是否要從目標資料庫中卸除不存在資料庫快照集 (.dacpac) 檔案中的條件約束。|
 |**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|指定當您發行至資料庫時，是否要從目標資料庫中卸除不存在資料庫快照集 (.dacpac) 檔案中的 DML 觸發程序。|
@@ -202,7 +205,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新登入之角色成員資格的差異。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 T-SQL 陳述式間之分號的差異。|
-|**/p:**|IgnoreTableOptions = (布林值)|指定當您發行至資料庫時，將忽略或更新資料表選項的差異。|
+|**/p:**|IgnoreTableOptions = （布林值）|指定當您發行至資料庫時，將忽略或更新資料表選項的差異。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新使用者設定物件的差異。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|指定當您發行至資料庫時，將忽略或更新空白字元的差異。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新檢查條件約束之 WITH NOCHECK 子句值的差異。|
@@ -219,10 +222,10 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|指定是否應該在發行動作中設定或更新目標資料庫屬性。|
 |**/p:**|ScriptDeployStateChecks=(BOOLEAN)|指定是否在發行指令碼中產生陳述式，來驗證資料庫名稱和伺服器名稱是否符合資料庫專案中指定的名稱。|
 |**/p:**|ScriptFileSize=(BOOLEAN)|控制將檔案加入至檔案群組時是否指定大小。|
-|**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|在發行結束時, 所有條件約束都會驗證為一組, 避免在發行過程中由 check 或 foreign key 條件約束所造成的資料錯誤。 如果設為 False，則會發行您的條件約束，但不檢查對應的資料。|
+|**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|在發行結束時，所有條件約束都會驗證為一組，避免在發行過程中由 check 或 foreign key 條件約束所造成的資料錯誤。 如果設為 False，則會發行您的條件約束，但不檢查對應的資料。|
 |**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|在發行指令碼的結尾包含重新整理陳述式。|
 |**/p:**|Storage=({File&#124;Memory})|指定在建置資料庫模型時，如何儲存項目。 基於效能考量，預設值為 InMemory。 若為大型資料庫，則需要檔案型儲存體。|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否應該將發行驗證期間發生的錯誤視為警告。 系統會先針對產生的部署計畫執行檢查，再針對您的目標資料庫執行計畫。 計畫驗證會偵測出遺漏僅限於目標的物件 (如索引) 這類必須卸除後才能進行變更的問題。 驗證也會偵測因為參考複合專案而存在相依性 (如資料表或檢視)，但卻不存在於目標資料庫中的情況。 您可以選擇執行此動作, 以取得所有問題的完整清單, 而不是在第一個錯誤上停止發行動作。
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否應該將發行驗證期間發生的錯誤視為警告。 系統會先針對產生的部署計畫執行檢查，再針對您的目標資料庫執行計畫。 計畫驗證會偵測出遺漏僅限於目標的物件 (如索引) 這類必須卸除後才能進行變更的問題。 驗證也會偵測因為參考複合專案而存在相依性 (如資料表或檢視)，但卻不存在於目標資料庫中的情況。 您可以選擇執行此動作，以取得所有問題的完整清單，而不是在第一個錯誤上停止發行動作。
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|指定在無法修改的物件中發現差異時 (例如檔案的檔案大小或檔案路徑不同) 是否應該產生警告。|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|指定是否驗證定序相容性。|
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|指定是否應該在發行前執行檢查，以便在出現阻止發行成功的問題時停止發行動作。 例如，如果目標資料庫的外部索引鍵不存在資料庫專案中，因而在您發行時造成錯誤，則發行動作可能會停止。|
@@ -238,7 +241,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
   
 ## <a name="export-parameters-and-properties"></a>匯出參數與屬性
 
-SqlPackage 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL Database 匯出到 BACPAC 套件 (bacpac 檔案)。 依預設，所有資料表的資料將包括在 .bacpac 檔案中。 您可以選擇性地只指定要匯出資料的資料表子集。 驗證 Export 動作，可確保 Azure SQL Database 相容於完整目標資料庫，即使已指定資料表子集進行匯出也一樣。  
+SqlPackage 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL Database 匯出到 BACPAC 套件（bacpac 檔案）。 依預設，所有資料表的資料將包括在 .bacpac 檔案中。 您可以選擇性地只指定要匯出資料的資料表子集。 驗證 Export 動作，可確保 Azure SQL Database 相容於完整目標資料庫，即使已指定資料表子集進行匯出也一樣。  
   
 ### <a name="help-for-export-action"></a>匯出動作的說明
 
@@ -250,29 +253,31 @@ SqlPackage 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL Data
 |**/DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
 |**/MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例: sqlpackage .exe/Action: Publish/？。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage .exe/Action： Publish/？。|
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隱藏詳細的意見反應。 預設為 False。|
 |**/SourceConnectionString:**|**/scs**|{string}|指定來源資料庫的有效 SQL Server/Azure 連接字串。 如果指定了此參數，就應該以獨佔方式將其用於所有其他來源參數。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|定義來源資料庫的名稱。 |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|指定 SQL 加密是否應該用於來源資料庫連接。 |
 |**/SourcePassword:**|**/sp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的密碼。 |
-|**SourceServerName**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
+|**/SourceServerName：**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立來源資料庫連線的逾時 (以秒為單位)。 |
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否要使用 SSL 來加密來源資料庫連線並且略過驗證信任的憑證鏈結。 |
 |**/SourceUser:**|**/su**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的 SQL Server 使用者。 |
-|**/TargetFile:**|**/tf**|{string}| 指定要當做動作目標使用的目標檔案 (也就是 .dacpac 檔案), 而非資料庫。 如果使用此參數，其他目標參數都應該無效。 這個參數對於僅支援資料庫目標的動作而言是不正確。|
-|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶 (如 outlook.com、hotmail.com 或 live.com), 則需要此選項。 如果省略此參數, 將會使用 Azure AD 的預設租使用者識別碼, 假設已驗證的使用者是此 AD 的原生使用者。 不過, 在此情況下, 不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及 (或) Microsoft 帳戶, 且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時, 會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證, 使用需要使用者輸入其使用者名稱和密碼或整合式驗證 (Windows 認證) 的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時, 不可以在 SourceConnectionString (/scs) 中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時, 必須在 SourceConnectionString (/scs) 中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TargetFile:**|**/tf**|{string}| 指定要當做動作目標使用的目標檔案（也就是 .dacpac 檔案），而非資料庫。 如果使用此參數，其他目標參數都應該無效。 這個參數對於僅支援資料庫目標的動作而言是不正確。|
+|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶（如 outlook.com、hotmail.com 或 live.com），則需要此選項。 如果省略此參數，將會使用 Azure AD 的預設租使用者識別碼，假設已驗證的使用者是此 AD 的原生使用者。 不過，在此情況下，不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及（或） Microsoft 帳戶，且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時，會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證，使用需要使用者輸入其使用者名稱和密碼或整合式驗證（Windows 認證）的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時，不可以在 SourceConnectionString （/scs）中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時，必須在 SourceConnectionString （/scs）中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
 ### <a name="properties-specific-to-the-export-action"></a>匯出動作特有的屬性
 
 |屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
+|**/p:**|DatabaseLockTimeout = （INT32 ' 60 '）| 指定對 SQLServer 執行查詢時的資料庫鎖定逾時 (秒)。 請使用-1 來無限期地等待。|
+|**/p:**|LongRunningCommandTimeout = （INT32）| 以秒為單位指定對 SQL Server 執行查詢時的長時間執行命令逾時。 使用0可無限期等候。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定支援儲存體的類型，以供結構描述模型在擷取期間使用。|
 |**/p:**|TableData=(STRING)|指出將從中解壓縮資料的資料表。 以下列格式指定包含或不含名稱部分之括弧的資料表名稱： schema_name. table_identifier。|
-|**/p:**|TempDirectoryForTableData = （字串）|指定在寫入封裝檔案之前，用來緩衝資料表資料的臨時目錄。|
-|**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|指定預期的目標引擎版本。 這會影響在產生的 bacpac 中, 是否允許具有 V12 功能的 Azure SQL Database 伺服器支援的物件, 例如記憶體優化資料表。|
+|**/p:**|TempDirectoryForTableData = （字串）|指定在寫入套件檔案之前，用於緩衝資料表資料的暫存目錄。|
+|**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|指定預期的目標引擎版本。 這會影響在產生的 bacpac 中，是否允許具有 V12 功能的 Azure SQL Database 伺服器支援的物件，例如記憶體優化資料表。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|指定是否要驗證 Microsoft Azure SQL Database v12 支援的全文檢索文件類型。|
   
 ## <a name="import-parameters-and-properties"></a>匯入參數與屬性
@@ -288,30 +293,33 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/Diagnostics:**|**/d**|{True&#124;False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
 |**/DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
 |**/MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例: sqlpackage .exe/Action: Publish/？。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage .exe/Action： Publish/？。|
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隱藏詳細的意見反應。 預設為 False。|
-|**SourceFile**|**/sf**|{string}|指定要當作動作來源使用的來源檔案。 如果使用了此參數，其他來源參數都應該無效。 |
+|**/SourceFile：**|**/sf**|{string}|指定要當作動作來源使用的來源檔案。 如果使用了此參數，其他來源參數都應該無效。 |
 |**/TargetConnectionString:**|**/tcs**|{string}|指定目標資料庫的有效 SQL Server/Azure 連接字串。 如果指定此參數，就應該以獨佔方式將它用於所有其他目標參數。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|指定 sqlpackage.exe 動作目標之資料庫名稱的覆寫。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|指定 SQL 加密是否應該用於目標資料庫連線。 |
 |**/TargetPassword:**|**/tp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取目標資料庫的密碼。 |
-|**TargetServerName**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
-|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD, 建議此值大於或等於30秒。|
+|**/TargetServerName：**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
+|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD，建議此值大於或等於30秒。|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**TargetUser**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶 (如 outlook.com、hotmail.com 或 live.com), 則需要此選項。 如果省略此參數, 將會使用 Azure AD 的預設租使用者識別碼, 假設已驗證的使用者是此 AD 的原生使用者。 不過, 在此情況下, 不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及 (或) Microsoft 帳戶, 且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時, 會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證, 使用需要使用者輸入其使用者名稱和密碼或整合式驗證 (Windows 認證) 的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時, 不可以在 SourceConnectionString (/scs) 中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時, 必須在 SourceConnectionString (/scs) 中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶（如 outlook.com、hotmail.com 或 live.com），則需要此選項。 如果省略此參數，將會使用 Azure AD 的預設租使用者識別碼，假設已驗證的使用者是此 AD 的原生使用者。 不過，在此情況下，不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及（或） Microsoft 帳戶，且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時，會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證，使用需要使用者輸入其使用者名稱和密碼或整合式驗證（Windows 認證）的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時，不可以在 SourceConnectionString （/scs）中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時，必須在 SourceConnectionString （/scs）中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
-匯入動作特定的屬性:
+匯入動作特定的屬性：
 
 |屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|定義 Azure SQL Database 的版本。|
+|**/p:**|DatabaseEdition = （{基本&#124;標準&#124;Premium&#124;倉儲&#124;GeneralPurpose&#124;BusinessCritical&#124;超大規模資料庫&#124;預設值} ' default '）|定義 Azure SQL Database 的版本。|
+|**/p:**|DatabaseLockTimeout = （INT32 ' 60 '）| 指定對 SQLServer 執行查詢時的資料庫鎖定逾時 (秒)。 請使用-1 來無限期地等待。|
 |**/p:**|DatabaseMaximumSize=(INT32)|定義 Azure SQL Database 的大小上限 (以 GB 表示)。|
 |**/p:**|DatabaseServiceObjective=(STRING)|定義 Azure SQL Database 的效能等級，例如 "P0" 或 "S1"。|
 |**/p:**|ImportContributorArguments=(STRING)|指定部署參與者的部署參與者引數。 這應該是以分號區隔的值清單。|
 |**/p:**|ImportContributors=(STRING)|指定要在匯入 bacpac 時執行的部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。|
+|**/p:**|ImportContributorPaths = （字串）|指定要載入其他部署參與者的路徑。 這應該是以分號區隔的值清單。 |
+|**/p:**|LongRunningCommandTimeout = （INT32）| 以秒為單位指定對 SQL Server 執行查詢時的長時間執行命令逾時。 使用0可無限期等候。|
 |**/p:**|Storage=({File&#124;Memory})|指定在建置資料庫模型時，如何儲存項目。 基於效能考量，預設值為 InMemory。 若為大型資料庫，則需要檔案型儲存體。|
   
 ## <a name="deployreport-parameters-and-properties"></a>DeployReport 參數與屬性
@@ -330,28 +338,28 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/OutputPath:**|**/op**|{string}|指定輸出檔案產生位置的檔案路徑。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
 |**/Profile:**|**/pr**|{string}|指定 DAC 發行設定檔的檔案路徑。 設定檔會定義產生輸出時要使用之屬性及變數的集合。 |
-|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例: sqlpackage .exe/Action: Publish/？。 |
+|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage .exe/Action： Publish/？。 |
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隱藏詳細的意見反應。 預設為 False。 |
 |**/SourceConnectionString:**|**/scs**|{string}|指定來源資料庫的有效 SQL Server/Azure 連接字串。 如果指定了此參數，就應該以獨佔方式將其用於所有其他來源參數。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|定義來源資料庫的名稱。 |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|指定 SQL 加密是否應該用於來源資料庫連接。 |
-|**SourceFile**|**/sf**|{string}|指定要當作動作來源使用的來源檔案，而非資料庫。 如果使用了此參數，其他來源參數都應該無效。 |
+|**/SourceFile：**|**/sf**|{string}|指定要當作動作來源使用的來源檔案，而非資料庫。 如果使用了此參數，其他來源參數都應該無效。 |
 |**/SourcePassword:**|**/sp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的密碼。 |
-|**SourceServerName**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
+|**/SourceServerName：**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立來源資料庫連線的逾時 (以秒為單位)。 |
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否要使用 SSL 來加密來源資料庫連線並且略過驗證信任的憑證鏈結。 |
 |**/SourceUser:**|**/su**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的 SQL Server 使用者。 |
 |**/TargetConnectionString:**|**/tcs**|{string}|指定目標資料庫的有效 SQL Server/Azure 連接字串。 如果指定此參數，就應該以獨佔方式將它用於所有其他目標參數。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|指定 sqlpackage.exe 動作目標之資料庫名稱的覆寫。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|指定 SQL 加密是否應該用於目標資料庫連線。 |
-|**/TargetFile:**|**/tf**|{string}|指定要當做動作目標使用的目標檔案 (也就是 .dacpac 檔案), 而非資料庫。 如果使用此參數，其他目標參數都應該無效。 這個參數對於僅支援資料庫目標的動作而言是不正確。|
+|**/TargetFile:**|**/tf**|{string}|指定要當做動作目標使用的目標檔案（也就是 .dacpac 檔案），而非資料庫。 如果使用此參數，其他目標參數都應該無效。 這個參數對於僅支援資料庫目標的動作而言是不正確。|
 |**/TargetPassword:**|**/tp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取目標資料庫的密碼。 |
-|**TargetServerName**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
-|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD, 建議此值大於或等於30秒。|
+|**/TargetServerName：**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
+|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD，建議此值大於或等於30秒。|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**TargetUser**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶 (如 outlook.com、hotmail.com 或 live.com), 則需要此選項。 如果省略此參數, 將會使用 Azure AD 的預設租使用者識別碼, 假設已驗證的使用者是此 AD 的原生使用者。 不過, 在此情況下, 不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及 (或) Microsoft 帳戶, 且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時, 會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證, 使用需要使用者輸入其使用者名稱和密碼或整合式驗證 (Windows 認證) 的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時, 不可以在 SourceConnectionString (/scs) 中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時, 必須在 SourceConnectionString (/scs) 中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶（如 outlook.com、hotmail.com 或 live.com），則需要此選項。 如果省略此參數，將會使用 Azure AD 的預設租使用者識別碼，假設已驗證的使用者是此 AD 的原生使用者。 不過，在此情況下，不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及（或） Microsoft 帳戶，且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時，會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證，使用需要使用者輸入其使用者名稱和密碼或整合式驗證（Windows 認證）的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時，不可以在 SourceConnectionString （/scs）中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時，必須在 SourceConnectionString （/scs）中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/Variables:**|**/v**|{PropertyName}={Value}|指定動件特定變數的名稱/值對：{VariableName}={Value}。 DACPAC 檔案包含有效 SQLCMD 變數的清單。 如果未針對每一個變數提供值，則會產生錯誤。 |
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>DeployReport 動作特有的屬性
@@ -360,7 +368,8 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。|
-|**/p:**|AllowDropBlocking 元件 = (布林值)|這個屬性是供 SqlClr 部署用來使任何封鎖的組件會在部署計畫中卸除。 根據預設，如果必須卸除任何參考組件，則該封鎖/參考組件會封鎖組件更新。|
+|**/p:**|AdditionalDeploymentContributorPaths = （字串）| 指定要載入其他部署參與者的路徑。 這應該是以分號區隔的值清單。 | 
+|**/p:**|AllowDropBlocking 元件 = （布林值）|這個屬性是供 SqlClr 部署用來使任何封鎖的組件會在部署計畫中卸除。 根據預設，如果必須卸除任何參考組件，則該封鎖/參考組件會封鎖組件更新。|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|指定儘管 SQL Server 平台不相容，是否仍要嘗試動作。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|若此屬性設定為 true，請勿封鎖具有資料列層級安全性之資料表的資料動作。 預設值為 false。|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|在部署任何變更之前，先備份資料庫。|
@@ -370,14 +379,15 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|指定在產生的發行指令碼中是否應該將 SETVAR 變數的宣告標記為註解。 如果您計畫在使用 SQLCMD.EXE 等工具進行發行時在命令列指定值，就可以選擇這種作法。 |
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|這個設定表示資料庫的定序於部署期間的處理方式。如果目標資料庫的定序不符合來源所指定的定序，預設會更新目標資料庫的定序。 當設定這個選項時，則應該使用目標資料庫 (或伺服器) 的定序。 |
 |**/p:**|CreateNewDatabase=(BOOLEAN)|指定當您發行至資料庫時，應該更新目標資料庫或應該卸除並重新建立目標資料庫。 |
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|定義 Azure SQL Database 的版本。 |
+|**/p:**|DatabaseEdition = （{基本&#124;標準&#124;Premium&#124;倉儲&#124;GeneralPurpose&#124;BusinessCritical&#124;超大規模資料庫&#124;預設值} ' default '）|定義 Azure SQL Database 的版本。|
+|**/p:**|DatabaseLockTimeout = （INT32 ' 60 '）| 指定對 SQLServer 執行查詢時的資料庫鎖定逾時 (秒)。 請使用-1 來無限期地等待。|
 |**/p:**|DatabaseMaximumSize=(INT32)|定義 Azure SQL Database 的大小上限 (以 GB 表示)。|
 |**/p:**|DatabaseServiceObjective=(STRING)|定義 Azure SQL Database 的效能等級，例如 "P0" 或 "S1"。 |
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|若為 true，則資料庫會在設定為單一使用者模式後部署。 |
 |**/p:**|DisableAndReenableDdlTriggers=(BOOLEAN 'True')| 指定是否在發行程序開始時停用資料定義語言 (DDL) 觸發程序，並在發行動作結束時重新啟用。|
 |**/p:**|DoNotAlterChangeDataCaptureObjects=(BOOLEAN 'True')|如果為 true，則不會改變異動資料擷取物件。|
 |**/p:**|DoNotAlterReplicatedObjects=(BOOLEAN 'True')|指定驗證期間是否識別有複寫的物件。|
-|**/p:**|DoNotDropObjectType=(STRING)|當 DropObjectsNotInSource 為 true 時, 不應卸載的物件類型。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。 |
+|**/p:**|DoNotDropObjectType=(STRING)|當 DropObjectsNotInSource 為 true 時，不應卸載的物件類型。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。 |
 |**/p:**|DoNotDropObjectTypes=(STRING)|當 DropObjectsNotInSource 為 true 時不應捨棄的分號分隔物件類型清單。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。|
 |**/p:**|DropConstraintsNotInSource=(BOOLEAN 'True')|指定當您發行至資料庫時，是否要從目標資料庫中卸除不存在資料庫快照集 (.dacpac) 檔案中的條件約束。|
 |**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|指定當您發行至資料庫時，是否要從目標資料庫中卸除不存在資料庫快照集 (.dacpac) 檔案中的 DML 觸發程序。|
@@ -422,14 +432,15 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新登入之角色成員資格的差異。 |
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 T-SQL 陳述式間之分號的差異。| 
-|**/p:**|IgnoreTableOptions = (布林值)|指定當您發行至資料庫時，將忽略或更新資料表選項的差異。| 
+|**/p:**|IgnoreTableOptions = （布林值）|指定當您發行至資料庫時，將忽略或更新資料表選項的差異。| 
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新使用者設定物件的差異。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|指定當您發行至資料庫時，將忽略或更新空白字元的差異。 |
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新檢查條件約束之 WITH NOCHECK 子句值的差異。| 
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新外部索引鍵之 WITH NOCHECK 子句值的差異。| 
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|將所有複合項目包含在單一發行作業中。|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|指定當您發行至資料庫時，是否應該盡可能使用交易陳述式。|
- |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|指定發行在發現差異時一定要卸除並重新建立組件，而不是發出 ALTER ASSEMBLY 陳述式。 |
+|**/p:**|LongRunningCommandTimeout = （INT32）| 以秒為單位指定對 SQL Server 執行查詢時的長時間執行命令逾時。 使用0可無限期等候。|
+|**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|指定發行在發現差異時一定要卸除並重新建立組件，而不是發出 ALTER ASSEMBLY 陳述式。 |
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|指定在目標資料庫中建立新 FileGroup 時，是否一併建立新檔案。 |
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|指定結構描述是否向資料庫伺服器註冊。 
 |**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|指定執行其他作業時，是否應該執行 DeploymentPlanExecutor 參與者。|
@@ -438,10 +449,10 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|指定是否應該在發行動作中設定或更新目標資料庫屬性。 |
 |**/p:**|ScriptDeployStateChecks=(BOOLEAN)|指定是否在發行指令碼中產生陳述式，來驗證資料庫名稱和伺服器名稱是否符合資料庫專案中指定的名稱。|
 |**/p:**|ScriptFileSize=(BOOLEAN)|控制將檔案加入至檔案群組時是否指定大小。 |
-|**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|在發行結束時, 所有條件約束都會驗證為一組, 避免在發行過程中由 check 或 foreign key 條件約束所造成的資料錯誤。 如果設為 False，則會發行您的條件約束，但不檢查對應的資料。|
+|**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|在發行結束時，所有條件約束都會驗證為一組，避免在發行過程中由 check 或 foreign key 條件約束所造成的資料錯誤。 如果設為 False，則會發行您的條件約束，但不檢查對應的資料。|
 |**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|在發行指令碼的結尾包含重新整理陳述式。|
 |**/p:**|Storage=({File&#124;Memory})|指定在建置資料庫模型時，如何儲存項目。 基於效能考量，預設值為 InMemory。 若為大型資料庫，則需要檔案型儲存體。|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否應該將發行驗證期間發生的錯誤視為警告。 系統會先針對產生的部署計畫執行檢查，再針對您的目標資料庫執行計畫。 計畫驗證會偵測出遺漏僅限於目標的物件 (如索引) 這類必須卸除後才能進行變更的問題。 驗證也會偵測因為參考複合專案而存在相依性 (如資料表或檢視)，但卻不存在於目標資料庫中的情況。 您可以選擇執行此動作, 以取得所有問題的完整清單, 而不是在第一個錯誤上停止發行動作。 |
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否應該將發行驗證期間發生的錯誤視為警告。 系統會先針對產生的部署計畫執行檢查，再針對您的目標資料庫執行計畫。 計畫驗證會偵測出遺漏僅限於目標的物件 (如索引) 這類必須卸除後才能進行變更的問題。 驗證也會偵測因為參考複合專案而存在相依性 (如資料表或檢視)，但卻不存在於目標資料庫中的情況。 您可以選擇執行此動作，以取得所有問題的完整清單，而不是在第一個錯誤上停止發行動作。 |
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|指定在無法修改的物件中發現差異時 (例如檔案的檔案大小或檔案路徑不同) 是否應該產生警告。| 
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|指定是否驗證定序相容性。| 
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|指定是否應該在發行前執行檢查，以便在出現阻止發行成功的問題時停止發行動作。 例如，如果目標資料庫的外部索引鍵不存在資料庫專案中，因而在您發行時造成錯誤，則發行動作可能會停止。 |
@@ -466,12 +477,12 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/TargetDatabaseName:**|**/tdn**|{string}|指定 sqlpackage.exe 動作目標之資料庫名稱的覆寫。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|指定 SQL 加密是否應該用於目標資料庫連線。 |
 |**/TargetPassword:**|**/tp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取目標資料庫的密碼。 |
-|**TargetServerName**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
-|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD, 建議此值大於或等於30秒。|
+|**/TargetServerName：**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
+|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD，建議此值大於或等於30秒。|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**TargetUser**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶 (如 outlook.com、hotmail.com 或 live.com), 則需要此選項。 如果省略此參數, 將會使用 Azure AD 的預設租使用者識別碼, 假設已驗證的使用者是此 AD 的原生使用者。 不過, 在此情況下, 不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及 (或) Microsoft 帳戶, 且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時, 會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證, 使用需要使用者輸入其使用者名稱和密碼或整合式驗證 (Windows 認證) 的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時, 不可以在 SourceConnectionString (/scs) 中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時, 必須在 SourceConnectionString (/scs) 中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶（如 outlook.com、hotmail.com 或 live.com），則需要此選項。 如果省略此參數，將會使用 Azure AD 的預設租使用者識別碼，假設已驗證的使用者是此 AD 的原生使用者。 不過，在此情況下，不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及（或） Microsoft 帳戶，且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時，會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證，使用需要使用者輸入其使用者名稱和密碼或整合式驗證（Windows 認證）的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時，不可以在 SourceConnectionString （/scs）中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時，必須在 SourceConnectionString （/scs）中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
 ## <a name="script-parameters-and-properties"></a>指令碼參數與屬性
 
@@ -491,28 +502,28 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/OutputPath:**|**/op**|{string}|指定輸出檔案產生位置的檔案路徑。 |
 |**/OverwriteFiles:**|**/of**|{True&#124;False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
 |**/Profile:**|**/pr**|{string}|指定 DAC 發行設定檔的檔案路徑。 設定檔會定義產生輸出時要使用之屬性及變數的集合。|
-|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例: sqlpackage .exe/Action: Publish/？。|
+|**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage .exe/Action： Publish/？。|
 |**/Quiet:**|**/q**|{True&#124;False}|指定是否隱藏詳細的意見反應。 預設為 False。|
 |**/SourceConnectionString:**|**/scs**|{string}|指定來源資料庫的有效 SQL Server/Azure 連接字串。 如果指定了此參數，就應該以獨佔方式將其用於所有其他來源參數。 |
 |**/SourceDatabaseName:**|**/sdn**|{string}|定義來源資料庫的名稱。 |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|指定 SQL 加密是否應該用於來源資料庫連接。 |
-|**SourceFile**|**/sf**|{string}|指定要當作動作來源使用的來源檔案。 如果使用了此參數，其他來源參數都應該無效。 |
+|**/SourceFile：**|**/sf**|{string}|指定要當作動作來源使用的來源檔案。 如果使用了此參數，其他來源參數都應該無效。 |
 |**/SourcePassword:**|**/sp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的密碼。 |
-|**SourceServerName**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
+|**/SourceServerName：**|**/ssn**|{string}|定義裝載來源資料庫的伺服器名稱。 |
 |**/SourceTimeout:**|**/st**|{int}|指定建立來源資料庫連線的逾時 (以秒為單位)。 |
 |**/SourceTrustServerCertificate:**|**/stsc**|{True&#124;False}|指定是否要使用 SSL 來加密來源資料庫連線並且略過驗證信任的憑證鏈結。 |
 |**/SourceUser:**|**/su**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的 SQL Server 使用者。 |
 |**/TargetConnectionString:**|**/tcs**|{string}|指定目標資料庫的有效 SQL Server/Azure 連接字串。 如果指定此參數，就應該以獨佔方式將它用於所有其他目標參數。 |
 |**/TargetDatabaseName:**|**/tdn**|{string}|指定 sqlpackage.exe 動作目標之資料庫名稱的覆寫。 |
 |**/TargetEncryptConnection:**|**/tec**|{True&#124;False}|指定 SQL 加密是否應該用於目標資料庫連線。 |
-|**/TargetFile:**|**/tf**|{string}| 指定要當做動作目標使用的目標檔案 (也就是 .dacpac 檔案), 而非資料庫。 如果使用此參數，其他目標參數都應該無效。 這個參數對於僅支援資料庫目標的動作而言是不正確。|
+|**/TargetFile:**|**/tf**|{string}| 指定要當做動作目標使用的目標檔案（也就是 .dacpac 檔案），而非資料庫。 如果使用此參數，其他目標參數都應該無效。 這個參數對於僅支援資料庫目標的動作而言是不正確。|
 |**/TargetPassword:**|**/tp**|{string}|若為 SQL Server 驗證案例，則定義要用來存取目標資料庫的密碼。 |
-|**TargetServerName**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
-|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD, 建議此值大於或等於30秒。|
+|**/TargetServerName：**|**/tsn**|{string}|定義裝載目標資料庫的伺服器名稱。 |
+|**/TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 針對 Azure AD，建議此值大於或等於30秒。|
 |**/TargetTrustServerCertificate:**|**/ttsc**|{True&#124;False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**TargetUser**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶 (如 outlook.com、hotmail.com 或 live.com), 則需要此選項。 如果省略此參數, 將會使用 Azure AD 的預設租使用者識別碼, 假設已驗證的使用者是此 AD 的原生使用者。 不過, 在此情況下, 不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及 (或) Microsoft 帳戶, 且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
-|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時, 會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證, 使用需要使用者輸入其使用者名稱和密碼或整合式驗證 (Windows 認證) 的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時, 不可以在 SourceConnectionString (/scs) 中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時, 必須在 SourceConnectionString (/scs) 中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊, 請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證 (MFA 的 SSMS 支援)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|表示 Azure AD 的租使用者識別碼或功能變數名稱。 若要支援來賓或匯入的 Azure AD 使用者以及 Microsoft 帳戶（如 outlook.com、hotmail.com 或 live.com），則需要此選項。 如果省略此參數，將會使用 Azure AD 的預設租使用者識別碼，假設已驗證的使用者是此 AD 的原生使用者。 不過，在此情況下，不支援在此 Azure AD 中裝載的任何來賓或匯入的使用者及（或） Microsoft 帳戶，且作業將會失敗。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/UniversalAuthentication:**|**/ua**|{True&#124;False}|指定是否應該使用通用驗證。 設定為 True 時，會啟用互動式驗證通訊協定以支援 MFA。 此選項也可以用於沒有 MFA 的 Azure AD 驗證，使用需要使用者輸入其使用者名稱和密碼或整合式驗證（Windows 認證）的互動式通訊協定。 當/UniversalAuthentication 設定為 True 時，不可以在 SourceConnectionString （/scs）中指定任何 Azure AD 驗證。 當/UniversalAuthentication 設定為 False 時，必須在 SourceConnectionString （/scs）中指定 Azure AD authentication。 <br/> 如需 Active Directory 通用驗證的詳細資訊，請參閱[使用 SQL Database 和 SQL 資料倉儲的通用驗證（MFA 的 SSMS 支援）](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/Variables:**|**/v**|{PropertyName}={Value}|指定動件特定變數的名稱/值對：{VariableName}={Value}。 DACPAC 檔案包含有效 SQLCMD 變數的清單。 如果未針對每一個變數提供值，則會產生錯誤。 |
 
 ### <a name="properties-specific-to-the-script-action"></a>腳本動作特有的屬性
@@ -521,6 +532,7 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。
+|**/p:**|AdditionalDeploymentContributorPaths = （字串）| 指定要載入其他部署參與者的路徑。 這應該是以分號區隔的值清單。 | 
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|這個屬性是供 SqlClr 部署用來使任何封鎖的組件會在部署計畫中卸除。 根據預設，如果必須卸除任何參考組件，則該封鎖/參考組件會封鎖組件更新。
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|指定儘管 SQL Server 平台不相容，是否仍要嘗試動作。
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|若此屬性設定為 true，請勿封鎖具有資料列層級安全性之資料表的資料動作。 預設值為 false。
@@ -531,14 +543,15 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|指定在產生的發行指令碼中是否應該將 SETVAR 變數的宣告標記為註解。 如果您計畫在使用 SQLCMD.EXE 等工具進行發行時在命令列指定值，就可以選擇這種作法。
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|這個設定表示資料庫的定序於部署期間的處理方式。如果目標資料庫的定序不符合來源所指定的定序，預設會更新目標資料庫的定序。 當設定這個選項時，則應該使用目標資料庫 (或伺服器) 的定序。|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|指定當您發行至資料庫時，應該更新目標資料庫或應該卸除並重新建立目標資料庫。
-|**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|定義 Azure SQL Database 的版本。
+|**/p:**|DatabaseEdition = （{基本&#124;標準&#124;Premium&#124;倉儲&#124;GeneralPurpose&#124;BusinessCritical&#124;超大規模資料庫&#124;預設值} ' default '）|定義 Azure SQL Database 的版本。|
+|**/p:**|DatabaseLockTimeout = （INT32 ' 60 '）| 指定對 SQLServer 執行查詢時的資料庫鎖定逾時 (秒)。 請使用-1 來無限期地等待。|
 |**/p:**|DatabaseMaximumSize=(INT32)|定義 Azure SQL Database 的大小上限 (以 GB 表示)。
 |**/p:**|DatabaseServiceObjective=(STRING)|定義 Azure SQL Database 的效能等級，例如 "P0" 或 "S1"。
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|若為 true，則資料庫會在設定為單一使用者模式後部署。
 |**/p:**|DisableAndReenableDdlTriggers=(BOOLEAN 'True')| 指定是否在發行程序開始時停用資料定義語言 (DDL) 觸發程序，並在發行動作結束時重新啟用。|
 |**/p:**|DoNotAlterChangeDataCaptureObjects=(BOOLEAN 'True')|如果為 true，則不會改變異動資料擷取物件。
 |**/p:**|DoNotAlterReplicatedObjects=(BOOLEAN 'True')|指定驗證期間是否識別有複寫的物件。
-|**/p:**|DoNotDropObjectType=(STRING)|當 DropObjectsNotInSource 為 true 時, 不應卸載的物件類型。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
+|**/p:**|DoNotDropObjectType=(STRING)|當 DropObjectsNotInSource 為 true 時，不應卸載的物件類型。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
 |**/p:**|DoNotDropObjectTypes=(STRING)|當 DropObjectsNotInSource 為 true 時不應捨棄的分號分隔物件類型清單。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
 |**/p:**|DropConstraintsNotInSource=(BOOLEAN 'True')|指定在您將更新發佈至資料庫時，是否要從目標資料庫卸除資料庫快照集 (.dacpac) 檔案中不存在的條件約束。|
 |**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|指定在您將更新發佈至資料庫時，是否要從目標資料庫卸除資料庫快照集 (.dacpac) 檔案中不存在的 DML 觸發程序。|
@@ -583,13 +596,14 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新登入之角色成員資格的差異。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 T-SQL 陳述式間之分號的差異。|
-|**/p:**|IgnoreTableOptions = (布林值)|指定當您發行至資料庫時，將忽略或更新資料表選項的差異。|
+|**/p:**|IgnoreTableOptions = （布林值）|指定當您發行至資料庫時，將忽略或更新資料表選項的差異。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新使用者設定物件的差異。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|指定當您發行至資料庫時，將忽略或更新空白字元的差異。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新檢查條件約束之 WITH NOCHECK 子句值的差異。|
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|指定當您發行至資料庫時，將忽略或更新外部索引鍵之 WITH NOCHECK 子句值的差異。|
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|將所有複合項目包含在單一發行作業中。|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|指定當您發行至資料庫時，是否應該盡可能使用交易陳述式。|
+|**/p:**|LongRunningCommandTimeout = （INT32）| 以秒為單位指定對 SQL Server 執行查詢時的長時間執行命令逾時。 使用0可無限期等候。|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|指定發行在發現差異時一定要卸除並重新建立組件，而不是發出 ALTER ASSEMBLY 陳述式。|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|指定在目標資料庫中建立新 FileGroup 時，是否一併建立新檔案。|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|指定結構描述是否向資料庫伺服器註冊。|
@@ -599,17 +613,17 @@ SqlPackage 匯入動作會將架構和資料表資料從 BACPAC 套件-bacpac �
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|指定是否應該在發行動作中設定或更新目標資料庫屬性。|
 |**/p:**|ScriptDeployStateChecks=(BOOLEAN)|指定是否在發行指令碼中產生陳述式，來驗證資料庫名稱和伺服器名稱是否符合資料庫專案中指定的名稱。|
 |**/p:**|ScriptFileSize=(BOOLEAN)|控制將檔案加入至檔案群組時是否指定大小。|
-|**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|在發行結束時, 所有條件約束都會驗證為一組, 避免在發行過程中由 check 或 foreign key 條件約束所造成的資料錯誤。 如果設為 False，則會發行您的條件約束，但不檢查對應的資料。|
+|**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|在發行結束時，所有條件約束都會驗證為一組，避免在發行過程中由 check 或 foreign key 條件約束所造成的資料錯誤。 如果設為 False，則會發行您的條件約束，但不檢查對應的資料。|
 |**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|在發行指令碼的結尾包含重新整理陳述式。|
 |**/p:**|Storage=({File&#124;Memory})|指定在建置資料庫模型時，如何儲存項目。 基於效能考量，預設值為 InMemory。 若為大型資料庫，則需要檔案型儲存體。|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否應該將發行驗證期間發生的錯誤視為警告。 系統會先針對產生的部署計畫執行檢查，再針對您的目標資料庫執行計畫。 計畫驗證會偵測出遺漏僅限於目標的物件 (如索引) 這類必須卸除後才能進行變更的問題。 驗證也會偵測因為參考複合專案而存在相依性 (如資料表或檢視)，但卻不存在於目標資料庫中的情況。 您可以選擇執行此動作, 以取得所有問題的完整清單, 而不是在第一個錯誤上停止發行動作。|
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否應該將發行驗證期間發生的錯誤視為警告。 系統會先針對產生的部署計畫執行檢查，再針對您的目標資料庫執行計畫。 計畫驗證會偵測出遺漏僅限於目標的物件 (如索引) 這類必須卸除後才能進行變更的問題。 驗證也會偵測因為參考複合專案而存在相依性 (如資料表或檢視)，但卻不存在於目標資料庫中的情況。 您可以選擇執行此動作，以取得所有問題的完整清單，而不是在第一個錯誤上停止發行動作。|
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|指定在無法修改的物件中發現差異時 (例如檔案的檔案大小或檔案路徑不同) 是否應該產生警告。|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|指定是否驗證定序相容性。
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|指定是否應該在發行前執行檢查，以便在出現阻止發行成功的問題時停止發行動作。 例如，如果目標資料庫的外部索引鍵不存在資料庫專案中，因而在您發行時造成錯誤，則發行動作可能會停止。|
 
 ## <a name="exit-codes"></a>結束代碼
 
-傳回下列結束代碼的命令:
+傳回下列結束代碼的命令：
 
 - 0 = 成功
 - 非零 = 失敗
