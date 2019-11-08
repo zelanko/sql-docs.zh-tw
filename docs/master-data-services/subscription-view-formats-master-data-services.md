@@ -1,5 +1,5 @@
 ---
-title: 訂閱檢視格式 (Master Data Services) | Microsoft Docs
+title: 訂閱檢視格式
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ba0152d37b1a050c1e46594ab8a5820606b116c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085608"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728895"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>訂閱檢視格式 (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68085608"
   
 ## <a name="subscription-view-formats"></a>訂閱檢視格式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |**分葉成員**|包含分葉成員及其相關聯的屬性值。|  
 |**分葉成員歷程記錄**|包含分葉成員的歷程記錄資料及其相關聯的屬性值。 檢視格式是「緩時變維度類型 4」樣式。|  

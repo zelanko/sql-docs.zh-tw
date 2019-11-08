@@ -1,5 +1,5 @@
 ---
-title: 追蹤 (Master Data Services) | Microsoft Docs
+title: 追蹤
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263977"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727852"
 ---
 # <a name="tracing-master-data-services"></a>追蹤 (Master Data Services)
 
@@ -60,13 +60,13 @@ ms.locfileid: "68263977"
   
 -   記錄格式是 CSV。 下表描述記錄格式。  
   
-    |項目|描述|  
+    |元素|說明|  
     |-------------|-----------------|  
     |Time|追蹤項目的發生時間。|  
     |CorrelationID|每個要求會指派一個相互關聯識別碼。 此要求觸發的所有追蹤會共用相同的相互關聯識別碼。<br /><br /> 當 UI 中發生錯誤時，相互關聯識別碼會出現在錯誤訊息中。|  
     |運算|要求作業名稱。 如果要求是 Web UI 要求，作業名稱會是 URL。 如果要求是 API 要求，作業名稱會是服務名稱。|  
-    |層級|此追蹤項目的層級。|  
-    |Message|追蹤的訊息主體|  
+    |Level|此追蹤項目的層級。|  
+    |訊息|追蹤的訊息主體|  
   
 ## <a name="external-resources"></a>外部資源  
  msdn.com 上的部落格文章： [疑難排解記錄改進](https://go.microsoft.com/fwlink/p/?LinkId=615377)。  

@@ -1,5 +1,5 @@
 ---
-title: sp_showpendingchanges & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_showpendingchanges （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cc02137e23c3871066c01ae1a7e9655232c349c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032906"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632749"
 ---
-# <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
+# <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回結果集，顯示正等候複寫的變更。 這個預存程序執行於發行集資料庫的發行者端，以及訂閱資料庫的訂閱者端。  
@@ -43,34 +43,30 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @destination_server **=** ] **'***destination_server&lt***'**  
- 這是套用所複寫之變更的伺服器名稱。 *destination_server&lt*已**sysname**，預設值是 NULL。  
+`[ @destination_server = ] 'destination_server'` 是套用所複寫之變更的伺服器名稱。 *destination_server*是**sysname**，預設值是 Null。  
   
- [ @publication **=** ] **'***出版物***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。 當*發行集*指定，則結果只限於指定的發行集。  
+`[ @publication = ] 'publication'` 是發行集的名稱。 *發行*集是**sysname**，預設值是 Null。 當指定*發行*集時，結果只限于指定的發行集。  
   
- [ @article **=** ] **'***文章***'**  
- 這是發行項的名稱。 *發行項*已**sysname**，預設值是 NULL。 當*文章*指定，則結果只限於指定的發行項。  
+`[ @article = ] 'article'` 是發行項的名稱。 發行項是**sysname**，預設*值是 Null* 。 當*指定了發行*項時，結果只限于指定的發行項。  
   
- [ @show_rows **=** ] *show_rows*  
- 指定結果集是否包含更多特定資訊關於暫止的變更，預設值是**0**。 如果值為**1**指定，結果集包含資料行 is_delete 和 rowguid。  
+`[ @show_rows = ] 'show_rows'` 指定結果集是否包含有關暫止變更的更多特定資訊，預設值為**0**。 如果指定了**1**的值，結果集會包含 is_delete 和 rowguid 資料行。  
   
 ## <a name="result-set"></a>結果集  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|正要複寫變更所在的伺服器名稱。|  
 |pub_name|**sysname**|發行集的名稱。|  
 |destination_db_name|**sysname**|正要複寫變更所在的資料庫名稱。|  
-|is_dest_subscriber|**bit**|指出正要將變更複寫到訂閱者。 值為**1**表示所做的變更複寫到訂閱者。 **0**表示變更複寫到發行者。|  
+|is_dest_subscriber|**bit**|指出正要將變更複寫到訂閱者。 值為**1**表示正在將變更複寫到訂閱者。 **0**表示正在將變更複寫到發行者。|  
 |article_name|**sysname**|引發變更之資料表的發行項名稱。|  
 |pending_deletes|**int**|等候複寫的刪除數目。|  
 |pending_ins_and_upd|**int**|等候複寫的插入和更新數目。|  
-|is_delete|**bit**|表示暫止變更是否為刪除。 值為**1**表示變更為刪除。 需要的值為**1**如@show_rows。|  
-|rowguid|**uniqueidentifier**|識別所變更之資料列的 GUID。 需要的值為**1**如@show_rows。|  
+|is_delete|**bit**|表示暫止變更是否為刪除。 值為**1**表示變更為刪除。 @show_rows的值必須為**1** 。|  
+|rowguid|**uniqueidentifier**|識別所變更之資料列的 GUID。 @show_rows的值必須為**1** 。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
  sp_showpendingchanges 用於合併式複寫中。  
@@ -79,7 +75,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  sp_showpendingchanges 的結果並不包含層代 0 的資料列。  
   
- 當指定的發行項*發行項*不屬於指定的發行集*發行集，* 對 pending_deletes 和 pending_ins_and_upd 傳回計數 0。  
+ 當針對發行項所*指定的發行*項不屬於針對發行集所指定的發行集時 *，* 會傳回0的計數做為 pending_deletes 和 pending_ins_and_upd。  
   
 ## <a name="permissions"></a>Permissions  
  只有系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色的成員，才能夠執行 sp_showpendingchanges。  

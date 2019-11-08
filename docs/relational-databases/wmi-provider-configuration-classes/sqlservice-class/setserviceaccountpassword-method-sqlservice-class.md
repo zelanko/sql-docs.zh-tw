@@ -1,6 +1,6 @@
 ---
-title: SetServiceAccountPassword 方法 （SqlService 類別） |Microsoft Docs
-ms.custom: ''
+title: SetServiceAccountPassword 方法（SqlService）
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4f373a9e2a398cf7b1bd64db71ac7bbfb34ea43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb6a3649268455864148730ac4d4640a7dccc87f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054807"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660919"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>SetServiceAccountPassword 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)
  指定帳戶之新密碼的字串值。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- A **uint32**值，也就是 0，如果已成功修改此服務，不支援要求，則為 1，而其他數值則表示錯誤。  
+ **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1，以及其他指示錯誤的任何數位。  
   
 ## <a name="remarks"></a>備註  
   
