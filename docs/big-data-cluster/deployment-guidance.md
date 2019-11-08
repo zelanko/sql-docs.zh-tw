@@ -1,45 +1,43 @@
 ---
 title: 部署指導
-titleSuffix: SQL Server big data clusters
-description: 瞭解如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上部署（預覽）。
+titleSuffix: SQL Server Big Data Clusters
+description: 了解如何在 Kubernetes 上部署 SQL Server 巨量資料叢集。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66aeb6b6e13de8cc076d2ff1b4c77d4fadf2b94a
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688317"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532053"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器。 這是安裝和設定步驟的概觀：
 
 - 在單一 VM、VM 叢集或 Azure Kubernetes Service (AKS) 中設定 Kubernetes 叢集。
-- 在您的用戶端電腦上，安裝叢集組態工具 **azdata**。
+- 在您的用戶端電腦上安裝叢集設定工具 `azdata`。
 - 在 Kubernetes 叢集中部署 SQL Server 巨量資料叢集。
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
 部署 SQL Server 2019 巨量資料叢集之前，請先[安裝巨量資料工具](deploy-big-data-tools.md)：
 
-- **azdata**
-- **kubectl**
-- **Azure Data Studio**
-- **SQL Server 2019 延伸模組**
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- 適用於 Azure Data Studio 的 SQL Server 2019 延伸模組
 
 ## <a id="prereqs"></a> Kubernetes 先決條件
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]伺服器和用戶端（kubectl）至少需要 v2.0 的最低 Kubernetes 版本。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 針對伺服器和用戶端 (kubectl) 至少需要 v1.13 的 Kubernetes 版本。
 
 > [!NOTE]
 > 請注意，用戶端和伺服器 Kubernetes 版本應該在 +1 或 -1 次要版本內。 如需詳細資訊，請參閱 [Kubernetes 版本資訊和版本誤差 SKU 原則](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew) \(英文\)。
@@ -50,45 +48,65 @@ SQL Server 巨量資料叢集會部署為 Kubernetes 叢集上的 Docker 容器�
 
 您可以選擇以下列三種方式中的任一種來部署 Kubernetes：
 
-| 在下列項目上部署 Kubernetes： | 描述 | 連結 |
+| 在下列項目上部署 Kubernetes： | Description | 連結 |
 |---|---|---|
 | **Azure Kubernetes Service (AKS)** | Azure 中的受控 Kubernetes 容器服務。 | [指示](deploy-on-aks.md) |
-| **多部電腦 (kubeadm)** | 使用 **kubeadm**，在實體或虛擬機器上部署 Kubernetes 叢集 | [指示](deploy-with-kubeadm.md) |
-| **Minikube** | VM 中的單一節點 Kubernetes 叢集。 | [指示](deploy-on-minikube.md) |
+| **單一或多部電腦 (`kubeadm`)** | 使用 `kubeadm`，在實體或虛擬機器上部署 Kubernetes 叢集 | [指示](deploy-with-kubeadm.md) |
 
 > [!TIP]
 > 您也可以在一個步驟中編寫部署 AKS 和巨量資料叢集的指令碼。 如需詳細資訊，請參閱如何在 [Python 指令碼](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [筆記本](deploy-notebooks.md)中執行此動作。
 
 ### <a name="verify-kubernetes-configuration"></a>確認 Kubernetes 組態
 
-執行 **kubectl** 命令來檢視叢集組態。 確定 kubectl 指向正確的叢集內容。
+執行 `kubectl` 命令來檢視叢集設定。 確定 kubectl 指向正確的叢集內容。
 
 ```bash
 kubectl config view
 ```
 
 > [!Important] 
-> 如果您要在使用 kubeadm 啟動的多節點 Kuberntes 叢集上部署，則在開始進行 big data 叢集部署之前，請確定已在部署的目標所有 Kubernetes 節點之間同步處理時鐘。 Big data 叢集具有內建健全狀況屬性，適用于區分時間和時鐘誤差的各種服務，可能會導致不正確的狀態。
+> 如果您要在使用 `kubeadm` 所啟動的多節點 Kuberntes 叢集上部署，則在開始進行巨量資料叢集部署之前，請確定部署的所有目標 Kubernetes 節點上時鐘已同步。 巨量資料叢集針對仰賴正確時間的各項服務具有內建健全狀況屬性，而時鐘誤差可能會導致狀態不正確。
 
-設定 Kubernetes 叢集之後，您可以繼續部署新的 SQL Server 巨量資料叢集。 如果您是從上一版升級，請參閱[如何升級[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md)。
+設定 Kubernetes 叢集之後，您可以繼續部署新的 SQL Server 巨量資料叢集。 如果您從前一個版本升級，請參閱[如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
 
 ## <a id="deploy"></a> 部署概觀
 
-大部分的巨量資料叢集設定都定義於 JSON 部署組態檔中。 您可以針對 AKS、`kubeadm` 或 `minikube` 使用預設的部署設定檔，或者您可以自訂自己的部署組態檔以在設定期間使用。 基於安全因素，驗證設定會透過環境變數來傳遞。
+大部分的巨量資料叢集設定都定義於 JSON 部署組態檔中。 您可以針對 AKS 和透過 `kubeadm` 所建立的 Kubernetes 叢集使用預設部署設定檔，或自訂自己的部署設定檔以在設定期間使用。 基於安全因素，驗證設定會透過環境變數來傳遞。
 
 下列各節會提供更多有關如何設定巨量資料叢集部署的詳細資訊，以及一般自訂的範例。 此外，您一律可以使用 VS Code 之類的編輯器來編輯自訂部署組態檔。
 
 ## <a id="configfile"></a> 預設組態
 
-巨量資料叢集部署選項均定義於 JSON 組態檔中。 您可以使用開發/測試環境的預設設定，從內建的部署設定檔開始自訂叢集部署：
+巨量資料叢集部署選項均定義於 JSON 組態檔中。 您可以從 `azdata` 中可用的內建部署設定檔開始自訂叢集部署。 
+
+> [!NOTE]
+> 巨量資料叢集部署所需容器映像會裝載於 Microsoft 容器登錄 (`mcr.microsoft.com`) 的 `mssql/bdc` 存放庫中。 根據預設，這些設定已包含在 `azdata` 所隨附每個部署設定檔的 `control.json` 設定檔中。 此外，每個版本的容器映像標籤也會預先填入相同設定檔。 如果您需要將容器映像提取到自己的私人容器登錄中，以及/或修改容器登錄/存放庫設定，請遵循[＜離線安裝＞](deploy-offline.md)一文中的指示
+
+執行此命令來尋找可用的範本：
+
+```
+azdata bdc config list -o table 
+```
+
+例如，針對 SQL Server 2019 RTM 服務更新 (GDR1) 版本，上述命令會傳回：
+
+```
+Result
+----------------
+aks-dev-test
+aks-dev-test-ha
+kubeadm-dev-test
+kubeadm-prod
+```
 
 | 部署設定檔 | Kubernetes 環境 |
 |---|---|
-| **aks-dev-test** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test** | 多部電腦 (kubeadm) |
-| **minikube-dev-test** | minikube |
+| `aks-dev-test` | 在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集|
+| `aks-dev-test-ha` | 在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集。 這會設定任務關鍵性服務 (例如 SQL Server 主要和 HDFS 名稱節點) 以取得高可用性。|
+| `kubeadm-dev-test` | 在使用單一或多部實體或虛擬機器來透過 kubeadm 建立的 Kubernetes 叢集上部署 SQL Server 巨量資料叢集。|
+| `kubeadm-prod`| 在使用單一或多部實體或虛擬機器來透過 kubeadm 建立的 Kubernetes 叢集上部署 SQL Server 巨量資料叢集。 使用此範本可讓巨量資料叢集服務與 Active Directory 整合。 這會在高可用性設定中部署任務關鍵性服務 (例如 SQL Server 主要執行個體和 HDFS 名稱節點)。  |
 
-您可以執行 **azdata bdc create** 來部署巨量資料叢集。 這會提示您選擇其中一個預設組態，然後引導您完成部署。
+您可以執行 `azdata bdc create` 來部署巨量資料叢集。 這會提示您選擇其中一個預設組態，然後引導您完成部署。
 
 第一次執行 `azdata` 時，您必須包含 `--accept-eula=yes` 以接受使用者授權合約 (EULA)。
 
@@ -99,41 +117,41 @@ azdata bdc create --accept-eula=yes
 在此案例中，系統會提示您輸入任何不屬於預設組態 (例如密碼) 一部分的設定。 
 
 > [!IMPORTANT]
-> 巨量資料叢集的預設名稱是 **mssql-cluster**。 若要執行任何 **kubectl** 命令，以使用 `-n` 參數來指定 Kubernetes 命名空間，請務必了解這一點。
+> 巨量資料叢集的預設名稱為 `mssql-cluster`。 若要執行任何 `kubectl` 命令，以使用 `-n` 參數來指定 Kubernetes 命名空間，請務必了解這一點。
 
 ## <a id="customconfig"></a> 自訂組態
 
-您也可以自訂自己的部署組態設定檔。 您可以執行下列步驟來達成此目的：
+您也可以自訂部署來容納正在規劃執行的工作負載。 請注意，您無法在巨量資料叢集服務部署後變更規模 (複本數目) 或儲存體設定，因此請務必謹慎規劃您的部署設定，以避免發生容量問題。 若要自訂部署，請遵循下列步驟：
 
-1. 從符合您 Kubernetes 環境的其中一個標準部署設定檔開始。 您可以使用 **azdata bdc config list** 命令來列出它們：
+1. 從符合您 Kubernetes 環境的其中一個標準部署設定檔開始。 您可以使用 `azdata bdc config list` 命令來列出這些設定檔：
 
    ```bash
    azdata bdc config list
    ```
 
-1. 若要自訂部署，請使用 **azdata bdc config init** 命令來建立部署設定檔的複本。 例如，下列命令會在名為 `custom` 的目標目錄中建立 **aks-dev-test** 部署組態檔的複本：
+1. 若要自訂部署，請使用 `azdata bdc config init` 命令來建立部署設定檔的複本。 例如，下列命令會在名為 `custom` 的目標目錄中建立 `aks-dev-test` 部署設定檔複本：
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
    ```
 
-   azdata
-   > 會根據`--source`參數指定包含設定檔、bdc. json 和 control. json 的目錄`--target` 。
+   >[!TIP]
+   >`--target` 會根據 `--source` 參數來指定包含設定檔 (`bdc.json` 和 `control.json`) 的目錄。
 
-1. 若要在您的部署組態設定檔中自訂設定，您可以在適用於編輯 JSON 檔案的工具 (例如 VS Code) 中編輯部署組態檔。 針對已編寫指令碼的自動化，您也可以使用 **azdata bdc config** 命令來編輯自訂部署設定檔。 例如，下列命令會改變自訂部署設定檔，以將部署的叢集名稱從預設值 (**mssql-cluster**) 變更為 **test-cluster**：  
+1. 若要在您的部署組態設定檔中自訂設定，您可以在適用於編輯 JSON 檔案的工具 (例如 VS Code) 中編輯部署組態檔。 針對已編寫指令碼的自動化，您也可以使用 `azdata bdc config` 命令來編輯自訂部署設定檔。 例如，下列命令會改變自訂部署設定檔，以將部署的叢集名稱從預設值 (`mssql-cluster`) 變更為 `test-cluster`：  
 
    ```bash
    azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
-   
+
    > [!TIP]
    > 您也可以使用 *azdata create bdc* 命令的 *--name* 參數，在部署期間傳入叢集名稱。 命令中的參數優先於組態檔中的值。
-
+   >
    > 尋找 JSON 路徑的實用工具是 [JSONPath Online Evaluator](https://jsonpath.com/) \(英文\)。
-
+   >
    除了傳遞索引鍵/值組，您也可以提供內嵌的 JSON 值，或傳遞 JSON 修補檔案。 如需詳細資訊，請參閱[針對巨量資料叢集設定部署設定](deployment-custom-configuration.md)。
 
-1. 接著，將自訂組態檔傳遞至 **azdata bdc create**。 請注意，您必須設定必要的[環境變數](#env)，否則系統將提示您輸入下列值：
+1. 將自訂設定檔傳遞至 `azdata bdc create`。 請注意，您必須設定必要的[環境變數](#env)，否則終端會提示您輸入下列值：
 
    ```bash
    azdata bdc create --config-profile custom --accept-eula yes
@@ -145,37 +163,31 @@ azdata bdc create --accept-eula=yes
 
 下列環境變數用於不會儲存於部署組態檔中的安全性設定。 請注意，您可以在組態檔中設定認證以外的 Docker 設定。
 
-| 環境變數 | 需求 |描述 |
+| 環境變數 | 需求 |Description |
 |---|---|---|
-| **CONTROLLER_USERNAME** | 必要項 |叢集管理員的使用者名稱。 |
-| **CONTROLLER_PASSWORD** | 必要項 |叢集管理員的密碼。 |
-| **MSSQL_SA_PASSWORD** | 必要項 |適用於 SQL 主要執行個體的 SA 使用者密碼。 |
-| **KNOX_PASSWORD** | 必要項 |Knox**根**使用者的密碼。 請注意，在基本驗證設定中，只有 Knox 支援的使用者才是**root**。|
-| **ACCEPT_EULA**| 第一次使用 `azdata` 時的必要項| 設定為 [是]。 設定為環境變數時，會將 EULA 套用至 SQL Server 和 `azdata`。 如果未設定為環境變數，您可以在第一次使用 `azdata` 命令時包含 `--accept-eula=yes`。|
-| **DOCKER_USERNAME** | 選擇性 | 用來存取容器映像的使用者名稱，以防它們儲存於私人存放庫中。 如需如何使用私人 Docker 存放庫來進行巨量資料叢集部署的詳細資訊，請參閱[離線部署](deploy-offline.md)主題。|
-| **DOCKER_PASSWORD** | 選擇性 |用來存取上述私人存放庫的密碼。 |
+| `AZDATA_USERNAME` | 必要項 |SQL Server 巨量資料叢集管理員的使用者名稱。 SQL Server 主要執行個體中會建立具有相同名稱的系統管理員登入。 基於安全性最佳做法，`sa` 帳戶已停用。 |
+| `AZDATA_PASSWORD` | 必要項 |以上所建立使用者帳戶的密碼。 `root` 使用者會使用相同的密碼來保護 Knox 閘道和 HDFS。 |
+| `ACCEPT_EULA`| 第一次使用 `azdata` 時的必要項| 設定為 [是]。 設定為環境變數時，會將 EULA 套用至 SQL Server 和 `azdata`。 如果未設定為環境變數，您可以在第一次使用 `azdata` 命令時包含 `--accept-eula=yes`。|
+| `DOCKER_USERNAME` | 選擇性 | 用來存取容器映像的使用者名稱，以防它們儲存於私人存放庫中。 如需如何使用私人 Docker 存放庫來進行巨量資料叢集部署的詳細資訊，請參閱[離線部署](deploy-offline.md)主題。|
+| `DOCKER_PASSWORD` | 選擇性 |用來存取上述私人存放庫的密碼。 |
 
-呼叫 **azdata bdc create** 之前，必須先設定這些環境變數。 如果未設定任何變數，系統就會提示您輸入。
+呼叫 `azdata bdc create` 之前，必須先設定這些環境變數。 如果未設定任何變數，系統就會提示您輸入。
 
 下列範例示範如何設定適用於 Linux (Bash) 和 Windows (PowerShell) 的環境變數：
 
 ```bash
-export CONTROLLER_USERNAME=admin
-export CONTROLLER_PASSWORD=<password>
-export MSSQL_SA_PASSWORD=<password>
-export KNOX_PASSWORD=<password>
+export AZDATA_USERNAME=admin
+export AZDATA_PASSWORD=<password>
 export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
-SET CONTROLLER_USERNAME=admin
-SET CONTROLLER_PASSWORD=<password>
-SET MSSQL_SA_PASSWORD=<password>
-SET KNOX_PASSWORD=<password>
+SET AZDATA_USERNAME=admin
+SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> 您必須使用具有上述密碼之 Knox 閘道的**根**使用者。 **root**是此基本驗證（使用者名稱/密碼）設定中唯一支援的使用者。 針對 SQL Server master，布建要與上述密碼搭配使用的使用者名稱為**sa**。
+> 您必須針對 Knox 閘道使用 `root` 使用者來搭配上述密碼。 `root` 是此基本驗證 (使用者名稱/密碼) 設定中唯一支援的使用者。 針對 SQL Server 主要，搭配上述密碼使用的佈建使用者名稱為 `sa`。
 
 
 設定環境變數之後，您必須執行 `azdata bdc create` 來觸發部署。 此範例會使用上方所建立的叢集組態設定檔：
@@ -186,8 +198,8 @@ azdata bdc create --config-profile custom --accept-eula yes
 
 請注意下列方針：
 
-- 如果密碼包含任何特殊字元，請務必以雙引號括住密碼。 您可以將 **MSSQL_SA_PASSWORD** 設定為您喜歡的任何內容，但請確定密碼夠複雜，而且不要使用 `!`、`&` 或 `'` 字元。 請注意，雙引號分隔符號僅適用於 Bash 命令。
-- **SA** 登入是在安裝期間所建立之 SQL Server 主要執行個體上的系統管理員。 建立您的 SQL Server 容器之後，在容器中執行 `echo $MSSQL_SA_PASSWORD`，即可探索您指定的 **MSSQL_SA_PASSWORD** 環境變數。 基於安全因素，請根據[此處](../linux/quickstart-install-connect-docker.md#sapassword)記載的最佳做法來變更您的 SA 密碼。
+- 如果密碼包含任何特殊字元，請務必以雙引號括住密碼。 您可以將 `AZDATA_PASSWORD` 設定為您喜歡的任何內容，但請確定密碼夠複雜，且不要使用 `!`、`&` 或 `'` 字元。 請注意，雙引號分隔符號僅適用於 Bash 命令。
+- `AZDATA_USERNAME` 登入是在設定期間所建立 SQL Server 主要執行個體上的系統管理員。 建立您的 SQL Server 容器之後，在容器中執行 `echo $AZDATA_PASSWORD`，即可探索您指定的 `AZDATA_PASSWORD` 環境變數。 基於安全性考量，最佳做法是變更密碼。
 
 ## <a id="unattended"></a> 自動安裝
 
@@ -195,7 +207,7 @@ azdata bdc create --config-profile custom --accept-eula yes
 
 ## <a id="monitor"></a> 監視部署
 
-在叢集啟動程序期間，用戶端命令視窗將輸出部署狀態。 在部署過程中，您應該會看到一系列的訊息，表示其正在等候控制器 Pod：
+在叢集啟動程序期間，用戶端命令視窗會傳回部署狀態。 在部署程序中，您應該會看到一系列訊息，表示其正在等候控制器 Pod：
 
 ```output
 Waiting for cluster controller to start.
@@ -209,7 +221,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> 由於下載巨量資料叢集元件的容器映像所需的時間，整個部署可能需要很長的時間。 不過，應該不會花費到數小時。 如果您的部署遇到問題，請參閱[監視和疑難排解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)。
+> 由於下載巨量資料叢集元件的容器映像所需的時間，整個部署可能需要很長的時間。 不過，應該不會花費到數小時。 如果您在部署期間遇到問題，請參閱[監視和針對 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 進行疑難排解](cluster-troubleshooting-commands.md)。
 
 完成部署時，輸出會通知您成功：
 
@@ -222,25 +234,28 @@ Cluster deployed successfully.
 
 ## <a id="endpoints"></a> 取出端點
 
-成功完成部署指令碼之後，您可以使用下列步驟來取得巨量資料叢集之外部端點的 IP 位址。
+成功完成部署指令碼之後，您可以使用下列步驟來取得巨量資料叢集的外部端點位址。
 
-1. 部署之後，可從部署標準輸出來尋找控制器端點的 IP 位址，或查看下列 **kubectl** 命令的外部 IP 輸出來尋找該位址：
+1. 部署之後，可從部署標準輸出來尋找控制器端點的 IP 位址，或查看下列 `kubectl` 命令的外部 IP 輸出來尋找該位址：
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > 如果您未在部署期間變更預設名稱，則在上一個命令中使用 `-n mssql-cluster`。 **mssql-cluster** 是巨量資料叢集的預設名稱。
+   > 如果您未在部署期間變更預設名稱，則在上一個命令中使用 `-n mssql-cluster`。 `mssql-cluster` 是巨量資料叢集的預設名稱。
 
-1. 使用 [azdata login](reference-azdata.md) 來登入巨量資料叢集。 將 **--controller-endpoint** 參數設定為控制器端點的外部 IP 位址。
+1. 使用 [azdata login](reference-azdata.md) 來登入巨量資料叢集。 將 `--endpoint` 參數設定為控制器端點的外部 IP 位址。
 
    ```bash
-   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
    ```
 
-   指定您在部署期間為控制器所設定的使用者名稱和密碼 (CONTROLLER_USERNAME 和 CONTROLLER_PASSWORD)。
+   指定您在部署期間為巨量資料叢集管理員所設定的使用者名稱和密碼 (AZDATA_USERNAME 和 AZDATA_PASSWORD)。
 
+   > [!TIP]
+   > 如果您是 Kubernetes 叢集管理員並可存取叢集設定檔 (Kube 設定檔)，您可以將目前的內容設定為指向目標 Kubernetes 叢集。 在此情況下，您可以使用 `azdata login -n <namespaceName>` 登入，其中 `namespace` 是巨量資料叢集名稱。 如果未在登入命令中指定，系統會提示您提供認證。
+   
 1. 執行 [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) 來取得一份清單，其中包含每個端點的描述及其對應 IP 位址和連接埠值。 
 
    ```bash
@@ -265,18 +280,10 @@ Cluster deployed successfully.
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-您也可以執行下列 **kubectl** 命令，來取得針對叢集部署的所有服務端點：
+您也可以執行下列 `kubectl` 命令來取得針對叢集部署的所有服務端點：
 
 ```bash
 kubectl get svc -n <your-big-data-cluster-name>
-```
-
-### <a name="minikube"></a>Minikube
-
-如果您使用 minikube，則需要執行下列命令，以取得您需要連線的 IP 位址。 除了該 IP，還要指定您需要連線之端點的連接埠。
-
-```bash
-minikube ip
 ```
 
 ## <a id="status"></a> 確認叢集狀態
@@ -288,7 +295,7 @@ azdata bdc status show
 ```
 
 > [!TIP]
-> 若要執行狀態命令，您必須先使用 **azdata login** 命令登入，此動作已於先前的端點小節中示範過。
+> 若要執行狀態命令，您必須先使用 `azdata login` 命令登入，此動作已於先前的端點一節中示範過。
 
 下列顯示此命令的範例輸出：
 
@@ -362,13 +369,13 @@ Bdc: ready                                                                      
  appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-您也可以使用下列命令取得更詳細的狀態：
+您也可以使用下列命令來取得更詳細的狀態：
 
-- [azdata bdc 控制狀態顯示](reference-azdata-bdc-control-status.md)會傳回與控制管理服務相關聯之所有元件的健全狀況狀態
+- [azdata bdc control status show](reference-azdata-bdc-control-status.md) 會傳回與控制管理服務建立關聯的所有元件健全狀態
 ```
 azdata bdc control status show
 ```
-範例輸出:
+範例輸出：
 ```output
 Control: ready                                                                                                                                                                                                      Health Status:  healthy
  ===========================================================================================================================================================================================================================================
@@ -386,11 +393,11 @@ Control: ready                                                                  
  mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
 ```
 
-- **azdata bdc sql 狀態顯示**會傳回具有 SQL Server 服務之所有資源的健全狀況狀態
+- `azdata bdc sql status show` 會傳回具有 SQL Server 服務的所有資源健全狀態
 ```
 azdata bdc sql status show
 ```
-範例輸出:
+範例輸出：
 ```output
 Sql: ready                                                                                                                                                                                                          Health Status:  healthy
  ===========================================================================================================================================================================================================================================
@@ -405,9 +412,9 @@ Sql: ready                                                                      
 ```
 
 > [!IMPORTANT]
-> 使用 **--all**參數時，這些命令的輸出會包含 Kibana 和 Grafana 儀表板的 url，以進行更詳細的分析。
+> 使用 `--all` 參數時，這些命令之輸出會包含 Kibana 和 Grafana 儀表板的 URL，以取得更詳細分析。
 
-除了使用 **azdata**，您也可以使用 Azure Data Studio 來尋找端點和狀態資訊。 如需使用 **azdata** 和 Azure Data Studio 來檢視叢集狀態的詳細資訊，請參閱[如何檢視巨量資料叢集的狀態](view-cluster-status.md)。
+除了使用 `azdata`，您也可以使用 Azure Data Studio 來尋找端點和狀態資訊。 如需使用 `azdata` 和 Azure Data Studio 來檢視叢集狀態的詳細資訊，請參閱[如何檢視巨量資料叢集的狀態](view-cluster-status.md)。
 
 ## <a id="connect"></a> 連線到叢集
 
@@ -419,4 +426,4 @@ Sql: ready                                                                      
 
 - [針對巨量資料叢集設定部署設定](deployment-custom-configuration.md)
 - [執行 SQL Server 巨量資料叢集的離線部署](deploy-offline.md)
-- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) (工作坊：SQL Server 巨量資料叢集 - 架構)

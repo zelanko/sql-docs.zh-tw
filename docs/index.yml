@@ -6,17 +6,17 @@ metadata:
   title: Microsoft SQL 文件 | Microsoft Docs
   description: 了解如何使用 Microsoft SQL Server，來完美管理內部部署與雲端中的資料庫需求！
   ms.topic: hub-page
-  ms.openlocfilehash: dfacfdd1d8df0c90705a1d77a9a98937ea5ac692
-  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.openlocfilehash: b1e77857e3b4a9b5159a20c10eec5fdb5a403f85
+  ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73595463"
+  ms.lasthandoff: 11/07/2019
+  ms.locfileid: "73757206"
 highlightedContent:
   items:
-  - title: 試用 SQL Server 2019 (預覽)
+  - title: 試用 SQL Server 2019
     itemType: download
-    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp
+    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019
   - title: 取得使用 SQL Server 的 Azure VM
     itemType: overview
     url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
