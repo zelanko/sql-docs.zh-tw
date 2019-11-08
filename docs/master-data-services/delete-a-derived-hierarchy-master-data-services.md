@@ -1,5 +1,5 @@
 ---
-title: 刪除衍生階層 (Master Data Services) | Microsoft Docs
+title: 刪除衍生階層
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 437342af4f0aa188fb898bd951249629ee44be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9e36545c9d9e99f627cc8f4a1f0a92d50af5de
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906460"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728372"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>刪除衍生階層 (Master Data Services)
 
@@ -29,20 +29,20 @@ ms.locfileid: "67906460"
 > [!NOTE]  
 >  刪除衍生階層對於此階層所依據的屬性關聯性沒有影響。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>若要刪除衍生階層  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列指向 [管理]  ，然後按一下 [衍生階層]  。  
+2.  從功能表列指向 [管理]，然後按一下 [衍生階層]。  
   
-3.  在 [衍生階層維護]  頁面上，選取 [模型]  清單中的模型。  
+3.  在 [衍生階層維護] 頁面上，選取 [模型] 清單中的模型。  
   
 4.  選取要刪除之衍生階層的資料列。  
   

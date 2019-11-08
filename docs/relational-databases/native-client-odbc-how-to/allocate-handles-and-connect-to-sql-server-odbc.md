@@ -1,5 +1,5 @@
 ---
-title: 配置控制代碼並連接到 SQL Server (ODBC) |Microsoft Docs
+title: 配置控制碼並連接到 SQL Server （ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc7cad1d720489db4044bbd34c6516035305365
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce294636c4d01a143b640126832bc6cca31ece14
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090825"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782065"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>配置控制代碼並連接到 SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-allocate-handles-and-connect-to-sql-server"></a>配置控制代碼並連接到 SQL Server  
@@ -33,21 +32,21 @@ ms.locfileid: "68090825"
   
 2.  加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驅動程式專屬的標頭檔 Odbcss.h。  
   
-3.  呼叫[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)具有**HandleType** SQL_HANDLE_ENV 來初始化 ODBC 並配置環境控制代碼。  
+3.  以 SQL_HANDLE_ENV 的**HandleType**呼叫[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) ，以初始化 ODBC 並配置環境控制碼。  
   
-4.  呼叫[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)具有**屬性**設定為 SQL_ATTR_ODBC_VERSION 並**ValuePtr**設定為 sql_ov_odbc3 時，表示應用程式會使用 ODBC 3.x 格式函式呼叫。  
+4.  將**屬性**設定為 SQL_ATTR_ODBC_VERSION，並將**valueptr 是**設定為 [SQL_OV_ODBC3]，以指出應用程式將使用 ODBC 3.x 格式函式呼叫的呼叫[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 。  
   
-5.  （選擇性） 呼叫[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)來設定其他環境選項或呼叫[SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)來取得環境選項。  
+5.  （選擇性）呼叫[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)以設定其他環境選項，或呼叫[SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)來取得環境選項。  
   
-6.  呼叫[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)具有**HandleType**配置連接控制代碼的利用 SQL_HANDLE_DBC。  
+6.  以 SQL_HANDLE_DBC 的**HandleType**呼叫[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) ，以配置連接控制碼。  
   
-7.  （選擇性） 呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)來設定連接選項或呼叫[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)來取得連接選項。  
+7.  （選擇性）呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)來設定連接選項，或呼叫[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)來取得連接選項。  
   
-8.  呼叫，用以連接到現有的資料來源的 SQLConnect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+8.  呼叫 SQLConnect 以使用現有的資料來源連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
      或  
   
-     呼叫[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)若要使用的連接字串來連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     呼叫[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)以使用連接字串連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
      完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接字串至少擁有下列其中一種形式：  
   
@@ -56,27 +55,27 @@ ms.locfileid: "68090825"
     DRIVER={SQL Server Native Client 10.0};SERVER=server;Trusted_connection=yes;  
     ```  
   
-     如果連接字串並不完整， **SQLDriverConnect**可以提示所需的資訊。 這由指定的值控制*DriverCompletion*參數。  
+     如果連接字串不完整， **SQLDriverConnect**會提示您輸入必要的資訊。 這是由指定給*DriverCompletion*參數的值所控制。  
   
-     \-或-  
+     \- 或 -  
   
-     呼叫[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)多次以反覆的方式來建置連接字串，並連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     以反復方式多次呼叫[SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) ，以建立連接字串並連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-9. （選擇性） 呼叫[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)以取得驅動程式屬性和行為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源。  
+9. （選擇性）呼叫[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)以取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的驅動程式屬性和行為。  
   
 10. 配置與使用陳述式。  
   
-11. 呼叫中斷 SQLDisconnect[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並使連接控制代碼可供新的連接。  
+11. 呼叫 SQLDisconnect 以中斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線，並讓連接控制碼可用於新的連接。  
   
-12. 呼叫[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)具有**HandleType**來釋放連接控制代碼的利用 SQL_HANDLE_DBC。  
+12. 以 SQL_HANDLE_DBC 的**HandleType**呼叫[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) ，以釋放連接控制碼。  
   
-13. 呼叫**SQLFreeHandle**具有**HandleType** SQL_HANDLE_ENV 來釋放環境控制代碼。  
+13. 以 SQL_HANDLE_ENV 的**HandleType**呼叫**SQLFreeHandle** ，以釋放環境控制碼。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ## <a name="example"></a>範例  
- 此範例會示範呼叫**SQLDriverConnect**連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而不需要現有的 ODBC 資料來源。 藉由傳遞的不完整的連接字串**SQLDriverConnect**，它會使 ODBC 驅動程式會提示使用者輸入遺漏的資訊。  
+ 這個範例會顯示**SQLDriverConnect**的呼叫，以連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的實例，而不需要現有的 ODBC 資料來源。 藉由將不完整的連接字串傳遞至**SQLDriverConnect**，它會導致 ODBC 驅動程式提示使用者輸入遺漏的資訊。  
   
 ```  
 #define MAXBUFLEN   255  

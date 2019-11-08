@@ -1,6 +1,6 @@
 ---
-title: SetServiceAccount 方法 （SqlService 類別） |Microsoft Docs
-ms.custom: ''
+title: SetServiceAccount 方法（SqlService）
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cbd2e80a4d5484368a63e0d3c92c638e1a6294c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b500ca0f879430f0e5655348bdeebda0e0921292
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119931"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660902"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
   
 -   如果帳戶屬於內建網域，可以指定 \Username。  
   
--   如果指定 NULL，則服務會以登入**LocalSystem**帳戶。  
+-   如果指定了 Null，服務就會以**LocalSystem**帳戶的身分登入。  
   
- 核心或系統層級的驅動程式，如*StartName*包含驅動程式的物件名稱，\FileSystem\Rdr 或 \Driver\Xns，I/O 系統用來載入裝置驅動程式。 如果指定了 NULL，將會根據類似 DWDOM\Admin 的服務名稱，使用 I/O 系統所建立的預設物件名稱來執行驅動程式。  
+ 若是核心或系統層級的驅動程式， *StartName*會包含驅動程式物件名稱（\FileSystem\Rdr 或 \driver\xns)），以供 i/o 系統用來載入設備磁碟機。 如果指定了 NULL，將會根據類似 DWDOM\Admin 的服務名稱，使用 I/O 系統所建立的預設物件名稱來執行驅動程式。  
   
  *ServiceStartPassword*  
- 指定密碼中的帳戶名稱的字串值*StartName*參數。 如果您不要變更密碼，請指定 NULL。 如果此服務沒有密碼，請指定空字串。  
+ 字串值，指定*StartName*參數中帳戶名稱的密碼。 如果您不要變更密碼，請指定 NULL。 如果此服務沒有密碼，請指定空字串。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- A **uint32**值，則為 0，如果成功修改此服務或不支援要求，則為 1。 任何其他數字表示發生錯誤。  
+ **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1。 任何其他數字表示發生錯誤。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

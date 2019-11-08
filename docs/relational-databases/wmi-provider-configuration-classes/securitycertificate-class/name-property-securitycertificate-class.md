@@ -1,6 +1,6 @@
 ---
-title: Name 屬性 （SecurityCertificate 類別） |Microsoft Docs
-ms.custom: ''
+title: Name 屬性（SecurityCertificate）
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69790e059ca11f3981c81cc5420e70cbc4c40a32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48cfb1b071b3cc7a2ef653cc9b1149c64c954d65
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989904"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660357"
 ---
 # <a name="name-property-securitycertificate-class"></a>Name 屬性 (SecurityCertificate 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

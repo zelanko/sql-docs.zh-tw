@@ -1,5 +1,5 @@
 ---
-title: 暫存預存程序 (Master Data Services) | Microsoft Docs
+title: 暫存預存程序
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db04bda1a2147c226fb33db12ba829350aac77a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085623"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727890"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>暫存預存程序 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]起始暫存處理序時，可以使用下列三個預存程序其中之一：  
+  從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 起始暫存處理序時，可以使用下列三個預存程序其中之一：  
   
 -   stg.udp_\<名稱>_Leaf  
   
@@ -34,10 +34,10 @@ ms.locfileid: "68085623"
 ## <a name="staging-process-stored-procedure-parameters"></a>暫存處理序預存程序參數  
  下表列出這些預存程序的參數。  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> 必要項|版本的名稱。 是否區分大小寫取決於您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 集合設定。|  
-|**LogFlag**<br /><br /> 必要項|決定是否在暫存處理序期間記錄交易。 可能的值為：<br /><br /> **0**:不記錄交易。<br /><br /> **1**:記錄交易。<br /><br /> <br /><br /> 如需交易的詳細資訊，請參閱[交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)。|  
+|**VersionName**<br /><br /> Required|版本的名稱。 是否區分大小寫取決於您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 集合設定。|  
+|**LogFlag**<br /><br /> Required|決定是否在暫存處理序期間記錄交易。 可能的值為：<br /><br /> **0**：不記錄交易。<br /><br /> **1**：記錄交易。<br /><br /> <br /><br /> 如需交易的詳細資訊，請參閱[交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)。|  
 |**BatchTag**<br /><br /> 必要項，只有 Web 服務不需要|**BatchTag** 值，依暫存資料表中所指定。|  
 |**Batch_ID**<br /><br /> 只有 Web 服務需要|**Batch_ID** 值，依暫存資料表中所指定。|  
 |**使用者名稱**|選擇性參數|  

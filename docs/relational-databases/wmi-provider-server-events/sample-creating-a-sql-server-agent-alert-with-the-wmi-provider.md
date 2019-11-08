@@ -1,6 +1,6 @@
 ---
-title: 範例：使用 WMI 提供者建立 SQL Server Agent 警示 |Microsoft Docs
-ms.custom: ''
+title: 使用 WMI 提供者建立 SQL Server Agent 警示
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 875751bd4b2dffd0039ffb40aa884bb9731a75d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139485"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660524"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>範例：使用 WMI 提供者建立 SQL Server Agent 警示
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   使用 WMI 事件提供者的常見方式為建立回應特定事件的 SQL Server Agent 警示。 下列範例顯示一個簡單的警示，可將 XML 死結圖形事件儲存在資料表中，以便稍後進行分析。 SQL Server Agent 會提交 WQL 要求、接收 WMI 事件，以及執行工作來回應事件。 請注意，雖然在處理通知訊息時包含數個 Service Broker 物件，但是 WMI 事件提供者會處理建立與管理這些物件的詳細資料。  
   
 ## <a name="example"></a>範例  
- 首先，在 `AdventureWorks` 資料庫中建立一個資料表來容納死結圖形事件。 資料表包含兩個資料行：`AlertTime`資料行容納警示執行的時間和`DeadlockGraph`的資料行具有 XML 文件，其中包含死結圖表。  
+ 首先，在 `AdventureWorks` 資料庫中建立一個資料表來容納死結圖形事件。 此資料表包含兩個資料行：`AlertTime` 資料行容納警示執行的時間，而 `DeadlockGraph` 資料行容納其中包含死結圖形的 XML 文件。  
   
  接著，建立警示。 指令碼會先建立警示將執行的工作、將作業步驟加入到工作中，然後將工作目標瞄準為目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 然後，指令碼會建立警示。  
   
- 作業步驟會擷取**TextData**屬性的 WMI 事件執行個體和該值插入**DeadlockGraph**資料行**Deadlockgraph**資料表。 請注意，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以隱含的方式，將字串轉換為 XML 格式。 作業步驟會使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系統，因此，作業步驟不會指定 Proxy。  
+ 作業步驟會抓取 WMI 事件實例的**TextData**屬性，並將該值插入**DeadlockEvents**資料表的**DeadlockGraph**資料行中。 請注意，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以隱含的方式，將字串轉換為 XML 格式。 作業步驟會使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系統，因此，作業步驟不會指定 Proxy。  
   
  每當記錄死結圖形追蹤事件時，警示就會執行作業。 對於 WMI 警示，SQL Server Agent 會使用指定的命名空間和 WQL 陳述式來建立通知查詢。 SQL Server Agent 會針對此警示監視本機電腦上的預設執行個體。 WQL 陳述式會要求預設執行個體中的任何 `DEADLOCK_GRAPH` 事件。 若要變更警示所監視的執行個體，將警示的執行個體名稱取代為 `MSSQLSERVER` 中的 `@wmi_namespace`。  
   
 > [!NOTE]  
->  SQL Server agent 接收 WMI 事件[!INCLUDE[ssSB](../../includes/sssb-md.md)]必須在啟用**msdb**和[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
+>  若要讓 SQL Server Agent 接收 WMI 事件，必須在**msdb**和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]中啟用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。  
   
 ```  
 USE AdventureWorks ;  
@@ -90,7 +90,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>測試範例  
- 若要查看作業執行，請先誘發死結。 在  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，開啟兩個**SQL 查詢**索引標籤，然後連接到相同的執行個體的兩個查詢。 在其中一個查詢索引標籤中執行下列指令碼。 這個指令碼會產生一個結果集並完成。  
+ 若要查看作業執行，請先誘發死結。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟兩個 **[SQL 查詢**] 索引標籤，並將兩個查詢連接到相同的實例。 在其中一個查詢索引標籤中執行下列指令碼。 這個指令碼會產生一個結果集並完成。  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 第二個 [查詢] 索引標籤中，執行下列指令碼。此指令碼會產生一個結果集，然後封鎖，等待取得的鎖定上`Production.Product`。  
+ 在第二個 [查詢] 索引標籤中執行下列腳本。此腳本會產生一個結果集，然後封鎖，等待取得 `Production.Product`的鎖定。  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +119,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在第一個查詢索引標籤中，執行下列指令碼。此指令碼區塊，等候上取得鎖定`Production.Location`。 短暫的逾時之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會選擇此指令碼或範例中的指令碼，做為死結的犧牲者，然後結束交易。  
+ 在第一個 [查詢] 索引標籤中執行下列腳本。此腳本會封鎖，等待取得 `Production.Location`的鎖定。 短暫的逾時之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會選擇此指令碼或範例中的指令碼，做為死結的犧牲者，然後結束交易。  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

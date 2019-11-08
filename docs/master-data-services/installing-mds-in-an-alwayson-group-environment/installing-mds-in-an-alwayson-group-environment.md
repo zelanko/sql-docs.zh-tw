@@ -1,6 +1,6 @@
 ---
-title: Master Data Services 的高可用性和災害復原 | Microsoft Docs
-ms.custom: ''
+title: 高可用性和嚴重損壞修復
+ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 517438d6ffe1b2c69969a0f149cfa4a0a9481a8d
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874771"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728099"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 
@@ -68,7 +68,7 @@ ms.locfileid: "70874771"
 
 在災害復原資料中心內，具有的次要複本包含與主要複本的非同步認可關聯性。 此資料中心通常位在與主要資料中心不同的地區。 次要複本沒有 VOTE 權限。
 
-如果主要資料中心發生災害 (例如火災、地震等等)，會使用此組態來達成復原。此組態可使用相當低的成本來達成 HA 和災害復原。
+這項設定是用來在主要資料中心發生損毀（例如火災、地震等等）時完成復原。此設定以相對較低的成本達成 HA 和災難復原。
 
 ![Always On 可用性群組的一般設定](media/Fig1_TypicalConfig.png)
 
@@ -179,11 +179,11 @@ Windows Server 作業系統安裝於所有執行個體上，並修補所有更�
 
    如果您稍後需要新增節點，請按一下 [容錯移轉叢集管理員] 之右窗格中的 [新增節點] 動作。
 
-附註：
+注意：
 
 - 並非所有 Windows Server 版本都會提供 WSFC 功能。 請確定您的版本有這項功能。
 
-- 請確定您有適當的權限可在 Active Directory 中設定 WSFC。 如果有任何問題，請參閱 [Failover Cluster Step-by-Step Guide:Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (容錯移轉叢集逐步指南：在 Active Directory 中設定帳戶)。
+- 請確定您有適當的權限可在 Active Directory 中設定 WSFC。 如果有任何問題，請參閱 [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (容錯移轉叢集逐步指南：在 Active Directory 中設定帳戶)。
 
 如需 WSFC 的詳細資訊，請參閱 [Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx) (容錯移轉叢集)。
 
@@ -304,7 +304,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
 **自動容錯移轉**：如果選取自動容錯移轉，則在主要複本關閉時，AG 會自動容錯移轉至其次要複本。 這只能在具有同步認可的複本上啟用。
 
-**可讀取次要：** 使用者預設無法連接到任何次要複本。 這可讓使用者連接到具有唯讀存取權的次要複本。
+**可讀取次要**：使用者預設無法連接到任何次要複本。 這可讓使用者連接到具有唯讀存取權的次要複本。
 
 8. 在 [指定複本] 頁面上，按一下 [接聽程式] 索引標籤，然後執行下列動作。 請參閱圖 18。
 

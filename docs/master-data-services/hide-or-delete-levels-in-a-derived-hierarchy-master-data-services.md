@@ -1,5 +1,5 @@
 ---
-title: 隱藏或刪除衍生階層中的層級 (Master Data Services) | Microsoft Docs
+title: 隱藏或刪除衍生階層中的層級
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b6ce19214332e2a4f2ec85735657e7e55906c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b364213586b8f796101e099c1384cba9569f8ad9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945241"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728130"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>隱藏或刪除衍生階層中的層級 (Master Data Services)
 
@@ -31,25 +31,25 @@ ms.locfileid: "67945241"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ### <a name="to-hide-or-delete-levels-in-a-derived-hierarchy"></a>若要隱藏或刪除衍生階層中的層級  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列指向 [管理]  ，然後按一下 [衍生階層]  。  
+2.  從功能表列指向 [管理]，然後按一下 [衍生階層]。  
   
-3.  在 [衍生階層維護]  頁面上，選取 [模型]  清單中的模型。  
+3.  在 [衍生階層維護] 頁面上，選取 [模型] 清單中的模型。  
   
 4.  選取要編輯之衍生階層的資料列。  
   
 5.  按一下 **[編輯]** 。  
   
-6.  在 [目前層級]  窗格中：  
+6.  在 [目前層級] 窗格中：  
   
-    -   若要隱藏層級，請按一下頂端或底端以外的層級。 從 [可見]  清單中，選取 [否]  。 然後按一下 [儲存選取的階層項目]  。  
+    -   若要隱藏層級，請按一下頂端或底端以外的層級。 從 [可見] 清單中，選取 [否]。 然後按一下 [儲存選取的階層項目]。  
   
-    -   若要刪除最上層，請按一下 [刪除選取的階層項目]  。 在確認對話方塊中按一下 **[確定]** 。 您可以只刪除最上層。  
+    -   若要刪除最上層，請按一下 [刪除選取的階層項目]。 在確認對話方塊中按一下 **[確定]** 。 您可以只刪除最上層。  
   
 ## <a name="see-also"></a>另請參閱  
     

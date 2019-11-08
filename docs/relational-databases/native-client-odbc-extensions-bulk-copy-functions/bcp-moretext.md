@@ -1,5 +1,5 @@
 ---
-title: bcp_moretext | Microsoft Docs
+title: bcp_moretext |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ea8cb10227ccebe10e350ce82b0887eb8a8bacf
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 05d7a6ca9f90439f803032087f4032765cba2f88
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707526"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782619"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   將長的變動長度資料類型值的一部分傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -55,19 +54,19 @@ RETCODE bcp_moretext (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 此函式可與[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)搭配使用，以在數個較小的區塊中複製長時間可變長度的資料值，以 SQL Server。 **bcp_moretext**可以與具有下列 SQL Server 資料類型的資料行搭配使用： **text**、 **Ntext**、 **image**、 **Varchar （max）** 、 **Nvarchar （max）** 、 **VARBINARY （max）** 、使用者定義型別（UDT）和 XML。 **bcp_moretext**不支援資料轉換，提供的資料必須符合目標資料行的資料類型。  
+ 此函式可與[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)搭配使用，以將長的可變長度資料值複製到數個較社區塊中的 SQL Server。 **bcp_moretext**可以與具有下列 SQL Server 資料類型的資料行搭配使用： **text**、 **Ntext**、 **image**、 **Varchar （max）** 、 **Nvarchar （max）** 、 **VARBINARY （max）** 、使用者定義型別（UDT）和 XML。 **bcp_moretext**不支援資料轉換，所提供的資料必須符合目標資料行的資料類型。  
   
- 如果針對**bcp_moretext**所支援的資料類型，以非 Null 的*pData*參數呼叫**bcp_bind** ， **bcp_sendrow**會傳送整個資料值，而不論長度為何。 不過，如果**bcp_bind**針對支援的資料類型具有 Null *pData*參數，則**bcp_moretext**可用來在成功從**bcp_sendrow**傳回之後立即複製資料，表示有任何具有資料的綁定欄已處理。  
+ 如果針對**bcp_moretext**所支援的資料類型，以非 Null 的*pData*參數來呼叫**bcp_bind** ， **bcp_sendrow**會傳送整個資料值，而不論長度為何。 不過，如果**bcp_bind**針對支援的資料類型具有 Null *pData*參數， **bcp_moretext**可以在**bcp_sendrow**成功傳回後立即複製資料，表示有資料存在的任何系結資料行已處理。  
   
  如果您使用**bcp_moretext**在資料列中傳送一個支援的資料類型資料行，您也必須使用它來傳送資料列中所有其他支援的資料類型資料行。 不能略過任何資料行。 支援的資料類型為 SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT 和 SQLXML。 如果此資料行分別為 varchar(max)、nvarchar(max) 或 varbinary(max)，則 SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY 和 SQLVARBINARY 也會列入這個類別目錄。  
   
- 呼叫**bcp_bind**或[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)會設定要複製到 SQL Server 資料行之所有資料部分的總長度。 嘗試傳送 SQL Server 超過**bcp_bind**或**bcp_collen**呼叫中所指定的位元組數，會產生錯誤。 例如，如果應用程式使用**bcp_collen**將 SQL Server**文字**資料行的可用資料長度設定為4500，則會發生此錯誤，然後呼叫**bcp_moretext**五次，並在每次呼叫時指出資料緩衝區長度為1000個位元組長。  
+ 呼叫**bcp_bind**或[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)會設定要複製到 SQL Server 資料行之所有資料部分的總長度。 嘗試傳送 SQL Server 超過**bcp_bind**或**bcp_collen**的呼叫中所指定的位元組數，會產生錯誤。 例如，如果應用程式使用**bcp_collen**將 SQL Server**文字**資料行的可用資料長度設定為4500，則會呼叫**bcp_moretext**五次，並在每次呼叫時指出資料緩衝區長度為1000個位元組長。  
   
- 如果複製的資料列包含一個以上的長時間可變長度資料行，則**bcp_moretext**會先將其資料傳送至最低序數編號資料行，後面接著下一個最低的序數編號資料行，依此類推。 更正預期資料的總長度設定是很重要的一件事。 除了使用長度設定以外，沒有任何方法可以指示大量複製已經收到資料行的所有資料。  
+ 如果複製的資料列包含一個以上的長時間可變長度資料行， **bcp_moretext**首先會將其資料傳送到最低的序數編號資料行，後面接著下一個最低的序數編號資料行，依此類推。 更正預期資料的總長度設定是很重要的一件事。 除了使用長度設定以外，沒有任何方法可以指示大量複製已經收到資料行的所有資料。  
   
  當使用 bcp_sendrow 和 bcp_moretext 將**var （max）** 值傳送至伺服器時，不需要呼叫 bcp_collen 來設定資料行長度。 相反地，針對這些類型，值會藉由呼叫長度為零的 bcp_sendrow 來終止。  
   
- 應用程式通常會在迴圈內呼叫**bcp_sendrow**和**bcp_moretext** ，以傳送多個資料列。 以下概述如何針對包含兩個**文字**資料行的資料表執行這項操作：  
+ 應用程式通常會呼叫**bcp_sendrow** ，並在迴圈內**bcp_moretext**來傳送多個資料列。 以下概述如何針對包含兩個**文字**資料行的資料表執行這項操作：  
   
 ```  
 while (there are still rows to send)  

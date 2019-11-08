@@ -1,5 +1,5 @@
 ---
-title: 明確階層 (Master Data Services) | Microsoft Docs
+title: 明確階層
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e54ac7b6329a678d2965f135dadf5870ca19010b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b80665b6a3b3167b362be7912c70f81ce2add2ef
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915957"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729260"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明確階層 (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "67915957"
  強制的明確階層是一種階層，其中的所有分葉成員都必須包括在階層樹狀結構中。 根據預設，所有成員都會包含在樹狀結構的根。 您可以視需要重新排列成員。  
   
 ### <a name="non-mandatory-explicit-hierarchy"></a>非強制的明確階層  
- 非強制的明確階層是一種階層，其所有分葉成員都是位於系統建立的 [未使用]  節點。 您可以在需要時，將成員移出這個節點。 其餘的成員可以保留在 [未使用]  節點中。  
+ 非強制的明確階層是一種階層，其所有分葉成員都是位於系統建立的 [未使用] 節點。 您可以在需要時，將成員移出這個節點。 其餘的成員可以保留在 [未使用] 節點中。  
   
  當您使用非強制的明確階層時，在此階層上所做的任何報告或分析可能不會符合強制的階層上所做的報告或分析。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67915957"
   
  若要摘要列出在特定合併點上的分葉成員，您可以在 Product 實體中建立合併成員。 在階層樹狀結構中，於您想要摘要列出分葉成員的層級上插入合併成員。 您可以插入合併成員的位置並沒有任何限制，但是每一個成員 (分葉或合併成員) 只能使用一次。  
   
- ![越野車明確階層範例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "越野車明確階層範例")  
+ ![山地自行車明確階層範例](../master-data-services/media/mds-conc-explicit-hierarchy.gif "山地自行車明確階層範例")  
   
  合併成員可在任何層級用來分組成員，而且分葉成員和合併成員會依照您決定的順序來排序。  
   

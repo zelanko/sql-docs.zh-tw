@@ -1,5 +1,5 @@
 ---
-title: SQL Server 範例：模型部署套件 (MDS) | Microsoft Docs
+title: 模型部署封裝範例
 ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 411496c30f9b32d9c011252ce1d345e64a7d02c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085646"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727873"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 範例：模型部署套件 (MDS)
 
@@ -55,6 +55,6 @@ ms.locfileid: "68085646"
  在 Master Data Services 中，套件是一個 XML 檔案，其中包含可部署的模型結構，以及模型中的資料 (選擇性)。 使用模型套件將模型的複本從一個 MDS 環境移到另一個 MDS 環境，或在現有的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中建立新的模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 MDSModelDeploy 部署模型部署套件](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
+ [使用 MDSModelDeploy 部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

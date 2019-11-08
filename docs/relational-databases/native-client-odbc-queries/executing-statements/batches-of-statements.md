@@ -1,5 +1,5 @@
 ---
-title: 陳述式的批次 |Microsoft Docs
+title: 語句的批次 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,17 @@ ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9f8a4f0b1a917fdd2fbfc040c4637be88822ee7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19efcc8b4381694177d0ec3d64376368e8d23a7d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937290"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779773"
 ---
 # <a name="batches-of-statements"></a>陳述式的批次
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  批次[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式包含兩個或多個陳述式，並以分號 （;），單一字串傳遞至內建**SQLExecDirect**或是[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)。 例如:  
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 語句的批次包含兩個或多個語句，以分號（;)，內建在傳遞至**SQLExecDirect**或[SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360)函式的單一字串中。 例如：  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -37,11 +36,11 @@ SQLExecDirect(hstmt,
     SQL_NTS);  
 ```  
   
- 批次可能會比個別提交陳述式更有效率，因為其網路傳輸量通常較低。 使用[SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)來定位下一步 時，結果集已完成，但目前的結果集。  
+ 批次可能會比個別提交陳述式更有效率，因為其網路傳輸量通常較低。 當使用目前的結果集完成時，請使用[SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)來取得下一個結果集的位置。  
   
  當 ODBC 資料指標屬性設定為預設值 (資料列集大小為 1 的順向唯讀資料指標) 時，就一定可以使用批次。  
   
- 如果針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用伺服器資料指標時執行了批次，伺服器資料指標就會隱含地轉換成預設的結果集。 **SQLExecDirect**或是**SQLExecute**傳回 SQL_SUCCESS_WITH_INFO，而且呼叫**SQLGetDiagRec**傳回：  
+ 如果針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用伺服器資料指標時執行了批次，伺服器資料指標就會隱含地轉換成預設的結果集。 **SQLExecDirect**或**SQLExecute**會傳回 SQL_SUCCESS_WITH_INFO，而對**SQLGetDiagRec**的呼叫會傳回：  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  
@@ -49,6 +48,6 @@ szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type cha
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行陳述式&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [執行語句&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

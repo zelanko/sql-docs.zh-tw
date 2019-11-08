@@ -1,5 +1,5 @@
 ---
-title: Web 組態參考 (Master Data Services) | Microsoft Docs
+title: Web 組態參考
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9002f99435362e471467b6e8b24906dfd95e3ec8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9d3cd20fc219a7159de0b271dafcc0e9fb2c3ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017276"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728828"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 組態參考 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68017276"
 ## <a name="webconfig-elements"></a>Web.Config 元素  
  除了標準的 IIS、.NET Framework、ASP.NET 和 Windows Communication Foundation (WCF) 組態項目以外，Web.config 檔案還包含自訂的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 項目 ( **\<masterDataServices>** )。 下表描述 Web.config 檔案中包含的元素。  
   
-|組態元素|描述|  
+|組態元素|說明|  
 |---------------------------|-----------------|  
 |**masterDataServices**|自訂元素。 將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
 |**connectionStrings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [connectionStrings 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178347) 。|  
@@ -55,13 +55,13 @@ ms.locfileid: "68017276"
   
 ### <a name="elements-and-attributes"></a>元素和屬性  
   
-|項目|描述|  
+|項目|說明|  
 |----------|-----------------|  
 |**執行個體**|子元素。 包含指定 Web 服務和資料庫連接字串之資訊的屬性。|  
-|**virtualPath**|屬性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務的路徑。 這對應於 IIS ApplicationHost.config 檔案中 **\<site>** 項目下之 **\<application>** 項目的 **path** 屬性。|  
-|**siteName**|屬性。 指定主控 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務之網站的名稱。 這對應於 IIS ApplicationHost.config 檔案中 **\<sites>** 項目下之 **\<site>** 項目的 **name** 屬性。|  
-|**connectionName**|屬性。 指定要使用之連接的名稱。 這對應於 Web.config 中 **\<connectionStrings>** 項目下之 **\<add>** 項目的 **name** 屬性。|  
-|**serviceName**|屬性。 指定 Web 服務的名稱。 這對應於 Web.config 中 **\<services>** 項目下之 **\<service>** 項目的 **name** 屬性。|  
+|**virtualPath**|屬性。 指定 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務的路徑。 這對應於 IIS ApplicationHost.config 檔案中site> **項目下之 \<** application> **項目的 \<path** 屬性。|  
+|**siteName**|屬性。 指定主控 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和服務之網站的名稱。 這對應於 IIS ApplicationHost.config 檔案中sites> **項目下之 \<** site> **項目的 \<name** 屬性。|  
+|**connectionName**|屬性。 指定要使用之連接的名稱。 這對應於 Web.config 中connectionStrings> **項目下之 \<** add> **項目的 \<name** 屬性。|  
+|**serviceName**|屬性。 指定 Web 服務的名稱。 這對應於 Web.config 中services> **項目下之 \<** service> **項目的 \<name** 屬性。|  
   
 ### <a name="example"></a>範例  
  下列範例示範使用 MDSDB 指定之連接字串的 Contoso 網站和 /MDS 路徑上一項名為 MDS1 的服務。  

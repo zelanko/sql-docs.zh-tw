@@ -1,5 +1,5 @@
 ---
-title: 版本管理功能區域 (主資料管理員) | Microsoft Docs
+title: 版本管理功能區域
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac5d1cee329f1de8c838aede004cb44f03cc0d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b2421d38401b3d0ff6b1e33a7b07bd86a1ab22e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017327"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728882"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>版本管理功能區域 (主資料管理員)
 

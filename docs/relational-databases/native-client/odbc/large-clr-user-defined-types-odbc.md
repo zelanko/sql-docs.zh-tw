@@ -1,5 +1,5 @@
 ---
-title: 大型 CLR 使用者定義型別 (ODBC) |Microsoft Docs
+title: 大型 CLR 使用者定義型別（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,22 +14,21 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6af744a468c4853bf6fb3111b83c6480e175e321
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913223"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760587"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   本主題討論 SQL Server Native Client 中 ODBC 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
- 如需示範 ODBC 對於大型 CLR Udt 支援範例，請參閱[支援大型 Udt](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)。  
+ 如需顯示大型 CLR Udt 之 ODBC 支援的範例，請參閱[對大型 udt 的支援](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)。  
   
- 如需有關 SQL Server Native Client 中大型 CLR Udt 支援的詳細資訊，請參閱[Large CLR User-Defined 類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
+ 如需 SQL Server Native Client 中大型 CLR Udt 支援的詳細資訊，請參閱[大型 Clr 使用者定義類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
   
 ## <a name="data-format"></a>資料格式  
  SQL Server Native Client 會使用 SQL_SS_LENGTH_UNLIMITED 來表示大型物件 (LOB) 類型的資料行大小大於 8,000 個位元組。 從 SQL Server 2008 開始，當 CLR UDT 的值大於 8,000 個位元組時，將會針對 CLR UDT 使用相同的值。  
@@ -38,15 +37,15 @@ ms.locfileid: "67913223"
   
  下表顯示參數和結果集內的資料類型對應：  
   
-|SQL Server 資料類型|SQL 資料類型|值|  
+|SQL Server 資料類型|SQL 資料類型|Value|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- 下表討論對應的結構和 ODBC C 類型。 基本上，是 CLR UDT **varbinary**具有額外的中繼資料型別。  
+ 下表討論對應的結構和 ODBC C 類型。 基本上，CLR UDT 是具有其他中繼資料的**Varbinary**類型。  
   
 |SQL 資料類型|記憶體配置|C 資料類型|值 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * （不帶正負號的 char \*）|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>參數的描述項欄位  
  IPD 欄位中傳回的資訊如下所示：  
@@ -71,7 +70,7 @@ ms.locfileid: "67913223"
 |SQL_CA_SS_UDT_TYPE_NAME|UDT 的名稱。|UDT 的名稱。|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完整名稱。|UDT 的完整名稱。|  
   
- UDT 參數，SQL_CA_SS_UDT_TYPE_NAME 一定要設定透過**SQLSetDescField**。 SQL_CA_SS_UDT_CATALOG_NAME 和 SQL_CA_SS_UDT_SCHEMA_NAME 是選擇性的。  
+ 若為 UDT 參數，必須一律透過**SQLSetDescField**設定 SQL_CA_SS_UDT_TYPE_NAME。 SQL_CA_SS_UDT_CATALOG_NAME 和 SQL_CA_SS_UDT_SCHEMA_NAME 是選擇性的。  
   
  如果在相同的資料庫中使用與資料表不同的結構描述來定義 UDT，必須要設定 SQL_CA_SS_UDT_SCHEMA_NAME。  
   
@@ -124,18 +123,18 @@ ms.locfileid: "67913223"
 |SS_UDT_SCHEMA_NAME|包含 UDT 的結構描述名稱。|包含 UDT 的結構描述名稱。|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完整名稱。|UDT 的完整名稱。|  
   
- 最後三個資料行是驅動程式特有的資料行。 它們會加入任何 ODBC 定義的資料行之後, 但在任何現有的驅動程式專用資料行的 SQLColumns 或 SQLProcedureColumns 的結果集之前。  
+ 最後三個資料行是驅動程式特有的資料行。 它們會加入任何 ODBC 定義的資料行後面，但在 SQLColumns 或 SQLProcedureColumns 結果集的任何現有驅動程式特定資料行之前。  
   
- 針對個別 Udt 或泛型類型"udt"SQLGetTypeInfo，會不傳回任何資料列。  
+ SQLGetTypeInfo 不會針對個別的 Udt 或泛型型別 "udt" 傳回任何資料列。  
   
 ## <a name="bindings-and-conversions"></a>繫結和轉換  
  從 SQL 到 C 資料類型的支援轉換如下所示：  
   
 |來回轉換：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|支援 *|  
+|SQL_C_WCHAR|支援|  
 |SQL_C_BINARY|支援|  
-|SQL_C_CHAR|支援 *|  
+|SQL_C_CHAR|支援|  
   
  \* 二進位資料會轉換成十六進位字串。  
   
@@ -143,13 +142,13 @@ ms.locfileid: "67913223"
   
 |來回轉換：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|支援 *|  
+|SQL_C_WCHAR|支援|  
 |SQL_C_BINARY|支援|  
-|SQL_C_CHAR|支援 *|  
+|SQL_C_CHAR|支援|  
   
- \* 二進位資料轉換成十六進位字串，就會發生。  
+ 會發生二進位資料轉換 \* 的十六進位字串。  
   
-## <a name="sqlvariant-support-for-udts"></a>UDT 的 SQL_VARIANT 支援  
+## <a name="sql_variant-support-for-udts"></a>UDT 的 SQL_VARIANT 支援  
  SQL_VARIANT 資料行中不支援 UDT。  
   
 ## <a name="bcp-support-for-udts"></a>UDT 的 BCP 支援  
@@ -167,7 +166,7 @@ ms.locfileid: "67913223"
  本章節討論 SQL Server Native Client ODBC 函數為了支援大型 CLR UDT 所做的變更。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- UDT 結果資料行值會轉換是從 SQL 到 C 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
+ UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節所述。  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  UDT 所需的值如下所示：  
@@ -200,13 +199,13 @@ ms.locfileid: "67913223"
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- UDT 結果資料行值會轉換是從 SQL 到 C 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
+ UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節所述。  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- UDT 結果資料行值會轉換是從 SQL 到 C 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
+ UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節所述。  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- UDT 結果資料行值會轉換是從 SQL 到 C 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
+ UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「系結和轉換」一節所述。  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  有提供新類型的描述項欄位在本主題稍早的「參數的描述項欄位」和「結果的描述項欄位」章節中有加以描述。  
@@ -214,7 +213,7 @@ ms.locfileid: "67913223"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  針對 UDT 傳回的值如下所示：  
   
-|SQL 資料類型|type|子類型|長度|有效位數|小數位數|  
+|SQL 資料類型|類型|子類型|長度|有效位數|小數位數|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -226,7 +225,7 @@ ms.locfileid: "67913223"
  針對 UDT 傳回的值如同本主題稍早的「SQLColumns 和 SQLProcedureColumns 傳回的資料行中繼資料 (目錄中繼資料)」一節所述。  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- UDT 參數值會轉換是從 C 到 SQL 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
+ UDT 參數值會從 C 轉換成 SQL 資料類型，如本主題稍早的「系結和轉換」一節所述。  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  有提供新類型的描述項欄位在本主題稍早的「參數的描述項欄位」和「結果的描述項欄位」章節中有加以描述。  
@@ -234,7 +233,7 @@ ms.locfileid: "67913223"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT 允許的值如下所示：  
   
-|SQL 資料類型|type|子類型|長度|有效位數|小數位數|  
+|SQL 資料類型|類型|子類型|長度|有效位數|小數位數|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

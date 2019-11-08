@@ -1,7 +1,7 @@
 ---
-title: sys.column_master_keys (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases column_master_keys （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,43 +22,46 @@ helpviewer_keywords:
 - sys.column_master_key_definitions catalog view
 - sys.column_master_keys catalog view
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ae8a4077c0fe4e3f6b7754b4fc53a401d03e355
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140064"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594527"
 ---
-# <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
+# <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  傳回一個資料列，使用新增的每個資料庫主要金鑰[CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)陳述式。 每個資料列都代表單一資料行主要金鑰 (CMK)。  
+  針對使用[CREATE MASTER key](../../t-sql/statements/create-column-master-key-transact-sql.md)語句所新增的每個資料庫主要金鑰，各傳回一個資料列。 每個資料列都代表單一資料行主要金鑰（CMK）。  
     
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|CMK 的名稱。|  
 |**column_master_key_id**|**int**|資料行主要金鑰的識別碼。|  
-|**create_date**|**datetime**|資料行主要金鑰的建立日期。|  
+|**create_date**|**datetime**|建立資料行主要金鑰的日期。|  
 |**modify_date**|**datetime**|上次修改資料行主要金鑰的日期。|  
-|**key_store_provider_name**|**sysname**|包含 CMK 的資料行主要金鑰存放區提供者名稱。 允許的值為：<br /><br /> MSSQL_CERTIFICATE_STORE-如果資料行主要金鑰存放區是憑證存放區。<br /><br /> 使用者定義的值，如果資料行主要金鑰存放區的自訂型別。|  
-|**key_path**|**nvarchar(4000)**|索引鍵資料行主要金鑰存放區特定路徑。 路徑的格式取決於資料行主要金鑰存放區類型。 範例<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 自訂資料行主要金鑰存放區中，開發人員會負責定義哪些金鑰的路徑是自訂資料行主要金鑰存放區。|  
-|**allow_enclave_computations**|**bit**|指出資料行主要金鑰是否啟用 enclave 的 （如果使用這個主要金鑰加密的資料行加密金鑰可用於在伺服器端的安全 enclaves 計算）。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
-|**signature**|**varbinary(max)**|數位簽章**key_path**並**allow_enclave_computations**，使用資料行主要金鑰所產生，所參考**key_path**。|
+|**key_store_provider_name**|**sysname**|包含 CMK 之資料行主要金鑰存放區的提供者名稱。 允許的值為：<br /><br /> MSSQL_CERTIFICATE_STORE-如果資料行主要金鑰存放區是憑證存放區。<br /><br /> 如果資料行主要金鑰存放區是自訂類型，則為使用者定義的值。|  
+|**key_path**|**nvarchar(4000)**|金鑰的資料行主要金鑰存放區特定路徑。 路徑的格式取決於資料行主要金鑰存放區類型。 範例<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 對於自訂資料行主要金鑰存放區，開發人員負責定義自訂資料行主要金鑰存放區的金鑰路徑。|  
+|**allow_enclave_computations**|**bit**|指出資料行主要金鑰是否已啟用記憶體保護區，（如果使用此主要金鑰加密的資料行加密金鑰，可用於伺服器端安全記憶體保護區內的計算）。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
+|**signature**|**varbinary(max)**|使用**key_path**所參考的資料行主要金鑰所產生**key_path**和**allow_enclave_computations**的數位簽章。|
 
 
   
 ## <a name="permissions"></a>Permissions  
- 需要**VIEW ANY COLUMN MASTER KEY**權限。  
+ 需要**VIEW ANY COLUMN MASTER KEY**許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [永遠加密 &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted  的金鑰管理總覽](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+ [使用安全記憶體保護區管理 Always Encrypted 的金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ 
   
   

@@ -14,35 +14,34 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0d9cf214833497734ed7dee8fdddbc227d4b13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de11cf1346010881ae3af0bbdf69035583090dd1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030303"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783703"
 ---
 # <a name="metadata---catalog"></a>中繼資料 - 目錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  本主題描述傳回的資料行中繼資料**SQLColumns**並**SQLProcedureColumns**，並將資料類型所傳回的中繼資料**SQLGetTypeInfo**。  
+  本主題描述**SQLColumns**和**SQLProcedureColumns**傳回的資料行中繼資料，以及**SQLGetTypeInfo**所傳回的資料類型中繼資料。  
   
 ## <a name="remarks"></a>備註  
- 下列資料行值會傳回日期/時間類型所**SQLColumns**並**SQLProcedureColumns**。  
+ 下列資料行值是由**SQLColumns**和**SQLProcedureColumns**傳回日期/時間類型。  
   
 |參數類型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
+|COLUMN_SIZE|10|8、10、16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1. 7|1. 7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- 下列資料行值會傳回日期/時間類型所**SQLGetTypeInfo**:  
+ **SQLGetTypeInfo**會傳回日期/時間類型的下列資料行值：  
   
 |參數類型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
@@ -68,6 +67,6 @@ ms.locfileid: "68030303"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>另請參閱  
- [中繼資料&#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [元&#40;資料 ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

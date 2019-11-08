@@ -1,5 +1,5 @@
 ---
-title: ClientNetworkProtocol 類別 |Microsoft Docs
+title: ClientNetworkProtocol 類別
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59e4f4e8ed5c5532dfb9478dd9c6e50d1a69aebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d049434b53fee9f90d02a35e9e0284a4a266812
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040985"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659135"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)代表網路上允許的執行個體通訊的用戶端執行個體安裝的通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過網路。  
+  [ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)代表安裝在用戶端實例上的網路通訊協定，允許透過網路與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的實例進行通訊。  
   
- 具有[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)，您可以執行下列工作：  
+ 使用[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)，您可以執行下列工作：  
   
 -   設定索引值，以便從通訊協定清單中選取用戶端網路通訊協定。  
   

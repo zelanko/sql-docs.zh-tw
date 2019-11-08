@@ -1,5 +1,5 @@
 ---
-title: Master Data Services 功能及工作 | Microsoft Docs
+title: 功能及工作
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6a40e380b883e7a6fb160cdfc0f787d0ec3bdd2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896854"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728026"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能及工作
 

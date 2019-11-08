@@ -1,5 +1,5 @@
 ---
-title: 使用陳述式 (ODBC) |Microsoft Docs
+title: 使用語句（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,21 +13,20 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf5910d032b921f6cefa1aeb89fef1a6fcfbc44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3624253fa70ca12078a981d694c5e50b5030ce01
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898453"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781183"
 ---
 # <a name="use-a-statement-odbc"></a>使用陳述式 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-a-statement"></a>使用陳述式  
   
-1.  利用 SQL_HANDLE_STMT 的 *HandleType* 來呼叫 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)，以配置陳述式控制代碼。  
+1.  利用 SQL_HANDLE_STMT 的 [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396) 來呼叫 *SQLAllocHandle*，以配置陳述式控制代碼。  
   
 2.  您可以選擇呼叫 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 來設定陳述式選項，或是呼叫 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 來取得陳述式屬性。  
   
@@ -39,11 +38,11 @@ ms.locfileid: "67898453"
   
 5.  使用 SQLExecDirect 直接執行陳述式  
   
-     \-或-  
+     \- 或 -  
   
      如果此陳述式已備妥，請使用 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 將它執行多次。  
   
-     \-或-  
+     \- 或 -  
   
      呼叫目錄函數，這樣會傳回結果。  
   
@@ -51,11 +50,11 @@ ms.locfileid: "67898453"
   
      透過陳述式的結果集一次提取一個資料列。  
   
-     \-或-  
+     \- 或 -  
   
      透過結果集，利用區塊資料指標一次提取數個資料列。  
   
-     \-或-  
+     \- 或 -  
   
      呼叫 [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) 來判斷受到 INSERT、UPDATE 或 DELETE 陳述式影響的資料列數。  
   
@@ -71,9 +70,9 @@ ms.locfileid: "67898453"
   
     -   若要重複使用陳述式控制代碼，請移至步驟 2。  
   
-8.  使用 SQL_HANDLE_STMT 的 *HandleType* 呼叫 [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md)，以釋放陳述式控制代碼。  
+8.  使用 SQL_HANDLE_STMT 的 [HandleType](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 呼叫 *SQLFreeHandle*，以釋放陳述式控制代碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢使用說明主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [執行查詢 how to 主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 根據商務規則驗證版本 (Master Data Services) | Microsoft Docs
+title: 根據商務規則驗證版本
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57a78efbe6de9a4439846df69ac04e32d073fe3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2995a02e738b2c185edff26ee0d6a395df14f59f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102548"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727831"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>根據商務規則驗證版本 (Master Data Services)
 
@@ -33,24 +33,24 @@ ms.locfileid: "68102548"
 > [!NOTE]  
 >  所有成員都必須通過驗證之後，才能認可版本。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
--   版本的狀態必須是 [開啟]  或 [已鎖定]  。  
+-   版本的狀態必須是 [開啟] 或 [已鎖定]。  
   
--   在 [驗證版本]  頁面上，成員必須存在，且其狀態不得為 [驗證成功]  。  
+-   在 [驗證版本] 頁面上，成員必須存在，且其狀態不得為 [驗證成功]。  
   
 ### <a name="to-validate-a-version"></a>若要驗證版本  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]** 。  
   
-2.  在 [管理版本]  頁面上，按一下功能表列上的 [驗證版本]  。  
+2.  在 [管理版本] 頁面上，按一下功能表列上的 [驗證版本]。  
   
-3.  在 [驗證版本]  頁面上，選取要驗證的模型和版本。  
+3.  在 [驗證版本] 頁面上，選取要驗證的模型和版本。  
   
 4.  按一下 **[驗證]** 。  
   

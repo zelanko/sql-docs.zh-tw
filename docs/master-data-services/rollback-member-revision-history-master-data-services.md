@@ -1,5 +1,5 @@
 ---
-title: 回復成員修訂歷程記錄 (Master Data Services) | Microsoft Docs
+title: 回復成員修訂歷程記錄
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fb1768c056fae60e2ee3784306ac7882e123fe9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51465b3f3ae7193d925d30203c5a831a03b8d51a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085679"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727923"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>回復成員修訂歷程記錄 (Master Data Services)
 
@@ -35,9 +35,9 @@ ms.locfileid: "68085679"
   
 2.  選擇要復原的實體和成員。  
   
-3.  按一下 [檢視歷程記錄]  。  
+3.  按一下 [檢視歷程記錄]。  
   
-4.  選擇要回復的修訂，然後按一下 [回復]  。  
+4.  選擇要回復的修訂，然後按一下 [回復]。  
   
 ## <a name="see-also"></a>另請參閱  
  [成員修訂歷程記錄 &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)   

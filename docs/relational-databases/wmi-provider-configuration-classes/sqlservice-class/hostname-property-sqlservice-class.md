@@ -1,6 +1,6 @@
 ---
-title: HostName 屬性 （SqlService 類別） |Microsoft Docs
-ms.custom: ''
+title: HostName 屬性（SqlService）
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c14a4b77451ce566e576c597639580f6b404f4fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7237e84953ce8af4cd0b34e1e4dc219f772ef42
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929670"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659289"
 ---
 # <a name="hostname-property-sqlservice-class"></a>HostName 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,6 +45,6 @@ object.HostName [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

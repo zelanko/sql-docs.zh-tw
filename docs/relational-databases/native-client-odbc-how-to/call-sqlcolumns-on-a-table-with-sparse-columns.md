@@ -1,5 +1,5 @@
 ---
-title: 疏鬆資料行的資料表上呼叫 SQLColumns |Microsoft Docs
+title: 在具有稀疏資料行的資料表上呼叫 SQLColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,22 +12,21 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0690c5ed27f2dd7a0b4bfae55af06e8ac5f0c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987580"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781704"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>在具有疏鬆資料行的資料表上呼叫 SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   此範例會示範如何在已使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中之 ODBC 定義疏鬆資料行的資料表上呼叫 SQLColumns。  
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需疏鬆資料行功能的詳細資訊，請參閱[SQL Server Native Client 中的疏鬆資料行支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 如需有關「稀疏資料行」功能的詳細資訊，請參閱[SQL Server Native Client 中的稀疏資料行支援](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>範例  
  第一個清單是 C++ 原始程式碼。 請將 "MyServer" 變更為有效的伺服器名稱。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
@@ -36,7 +35,7 @@ ms.locfileid: "67987580"
   
  使用 /EHsc /D、"UNICODE" 和 odbc32.lib 編譯。  
   
- 第二個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所建立的資料表。  
+ 第二個（[!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會刪除此範例所建立的資料表。  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

@@ -1,5 +1,5 @@
 ---
-title: 將成員新增至集合 (Master Data Services) | Microsoft Docs
+title: 將成員加入至集合
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0c750efb1570db2e8b1f6e2d521cdb24773f01da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aaedf62b9702d5cec44116cb906acdf9aa415c39
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047880"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729805"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>將成員加入至集合 (Master Data Services)
 
@@ -36,13 +36,13 @@ ms.locfileid: "68047880"
   
 ### <a name="to-add-members-to-a-collection"></a>若要將成員加入至集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型]  清單中的模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型] 清單中的模型。  
   
 2.  從 **[版本]** 清單中選取版本。  
   
 3.  按一下 **[總管]** 。  
   
-4.  從功能表列指向 [集合]  ，然後按一下 *entity_name*。  
+4.  從功能表列指向 [集合]，然後按一下 *entity_name*。  
   
 5.  在方格中，按一下您想要在其中加入成員之集合的資料列。  
   

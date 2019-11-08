@@ -1,5 +1,5 @@
 ---
-title: 保護主資料管理員 Web 應用程式的安全 | Microsoft Docs
+title: 保護主資料管理員 Web 應用程式
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028797"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729177"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保護主資料管理員 Web 應用程式
 
@@ -25,10 +25,10 @@ ms.locfileid: "69028797"
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式可以使用 HTTP 或 HTTPS，但不能同時使用兩者。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
--   您必須是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 安裝所在之 Web 伺服器的系統管理員。  
+-   您必須是[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]安裝所在之 Web 伺服器的系統管理員。  
   
 -   MDS 必須安裝在 Web 伺服器，而且 Web 應用程式必須存在。 如需詳細資訊，請參閱 [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md) 和 [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "69028797"
   
 6.  選取 SSL 憑證。  
   
-7.  按一下 [確定]。  
+7.  按一下 **[確定]** 。  
   
 8.  選擇性。 若要移除 HTTP，讓使用者只能使用 HTTPS 存取網站，請從清單中按一下含有 **http** 的資料列。 按一下 [移除]，然後在確認對話方塊中按一下 [是]。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "69028797"
   
 10. 現在開啟 *磁碟機*:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication 中的 web.config 檔案。  
   
-11. 尋找字串 `<security mode="Message">` ，並將其變更為 `<security mode="Transport">`。  
+11. 尋找字串 `<security mode="Message">`，並將其變更為 `<security mode="Transport">`。  
 
 12. 將 `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` 變更為 `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` 以避免發生可能會出現在 Silverlight 用戶端中的問題。
 

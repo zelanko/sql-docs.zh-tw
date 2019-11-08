@@ -1,5 +1,5 @@
 ---
-title: 網域屬性 (Master Data Services) | Microsoft Docs
+title: 網域屬性
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a1a905ebe84754c792c32a1151740cf0134b0a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 966112716bfb484a9615c973ee397de04787862c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086487"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728266"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>網域屬性 (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "68086487"
  同一個實體可以當做多個實體的網域屬性。 例如，您可以建立稱為 YesNoIndicator 的實體，其具有成員：Yes、No 和 Maybe。 您可以建立名稱為 InStock 的網域屬性，並且使用 YesNoIndicator 實體做為來源。 您也可以建立名稱為 Approved 的其他網域屬性，並且使用 YesNoIndicator 實體做為來源。 每次您要使用者從 YesNoIndicator 實體成員清單中選擇時，都可以將此實體當做網域屬性使用。  
   
 ## <a name="domain-based-attributes-form-derived-hierarchies"></a>網域屬性可形成衍生階層  
- 網域屬性關聯性是衍生階層的基礎。 如需詳細資訊，請參閱 [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
+ 網域屬性關聯性是衍生階層的基礎。 如需詳細資訊，請參閱[衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   

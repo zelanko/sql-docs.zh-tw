@@ -1,5 +1,5 @@
 ---
-title: 重疊的模型和成員的權限 (Master Data Services) | Microsoft Docs
+title: 重疊的模型和成員的權限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 06767cbc1550ed7c1e9146a69e5e0f3932db10c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904034"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728976"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重疊的模型和成員的權限 (Master Data Services)
 
@@ -29,13 +29,13 @@ ms.locfileid: "67904034"
   
  如果成員擁有的權限與其對應模型物件的權限不同，則會套用下列規則：  
   
--   **[拒絕]** 會覆寫所有其他的權限。  
+-   **拒絕** 會覆寫所有其他的權限。  
   
--   模型層級的 [系統管理員]  權限會覆寫所有其他權限，並且變更為子層級的 [全部 (CRUD)] 存取權限。  
+-   模型層級的 [系統管理員] 權限會覆寫所有其他權限，並且變更為子層級的 [全部 (CRUD)] 存取權限。  
   
 -   有效存取權限會與成員和屬性的權限交集。  
   
-     例如，如果成員權限包括 [建立]  和 [更新]  ，則屬性的權限為 [更新]  。 有效權限是 [更新]  。  
+     例如，如果成員權限包括 [建立] 和 [更新]，則屬性的權限為 [更新]。 有效權限是 [更新]。  
   
  下圖顯示當屬性權限與成員權限不同時，個別屬性值的哪些權限會生效。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67904034"
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已被指派 **[更新]** 權限。  
   
- 結果：在 [總管]  中，使用者擁有 Mountain Bikes 節點中所有成員全部屬性值的 [更新]  權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 **[總管]** 中，使用者擁有 Mountain Bikes 節點中所有成員之所有屬性值的 **[更新]** 權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -57,20 +57,20 @@ ms.locfileid: "67904034"
   
  在 **[模型]** 索引標籤上，Subcategory 屬性已被指派 **[更新]** 權限。  
   
- 在 [階層成員]  索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已明確獲指派 [讀取]  權限。  
+ 在 [階層成員] 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已明確獲指派 [讀取] 權限。  
   
- 結果：在 [總管]  中，使用者擁有 Mountain Bikes 節點中成員 Subcategory 屬性值的 [讀取]  權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 [總管]中，使用者擁有 Mountain Bikes 節點中成員之 Subcategory 屬性值的 [讀取] 權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="example-3"></a>範例 3  
  ![mds_conc_overlap_model_3](../master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- 在 [模型]  索引標籤上，Subcategory 屬性已獲指派 [讀取]  權限。  
+ 在 [模型] 索引標籤上，Subcategory 屬性已獲指派 [讀取] 權限。  
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄已被明確指派 **[更新]** 權限。  
   
- 結果：在 [總管]  中，使用者擁有屬性值的 [讀取]  權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 [總管]中，使用者擁有屬性值的 [讀取] 權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

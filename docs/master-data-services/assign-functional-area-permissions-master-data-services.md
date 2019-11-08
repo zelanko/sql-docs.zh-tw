@@ -1,5 +1,5 @@
 ---
-title: 指派功能區域權限 (Master Data Services) | Microsoft Docs
+title: 指派功能區域權限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c868e9f574e9c38cdac287fa57f842854bbf06ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41ab7567a1037c2f0f625cd977a80e38a591bcee
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047660"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728764"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>指派功能區域權限 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68047660"
 
   指派功能區域權限，授予使用者或群組 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能區域的存取權。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -39,13 +39,13 @@ ms.locfileid: "68047660"
   
 3.  按一下 **[編輯選取的使用者]** 。  
   
-4.  按一下 [函數]  索引標籤。  
+4.  按一下 [函數] 索引標籤。  
   
 5.  按一下 **[編輯]** 。  
   
-6.  按一下功能區域，然後按一下 [加入]  箭號。  
+6.  按一下功能區域，然後按一下 [加入] 箭號。  
   
-7.  完成後，按一下 [儲存]  。  
+7.  完成後，按一下 [儲存]。  
   
 ## <a name="next-steps"></a>後續步驟  
   

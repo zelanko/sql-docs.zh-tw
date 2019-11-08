@@ -1,6 +1,6 @@
 ---
-title: RemoveCertificate 方法 （ServerSettings 類別） |Microsoft Docs
-ms.custom: ''
+title: RemoveCertificate 方法（ServerSettings）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 490587569d2d62f2b64cd3442acd1bfe055e81d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e60de9d569a9a471941e1b798b7147e968ede479
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052836"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73657389"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>RemoveCertificate 方法 (ServerSettings 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

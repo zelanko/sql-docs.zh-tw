@@ -1,5 +1,5 @@
 ---
-title: 匯入狀態 (Master Data Services) | Microsoft Docs
+title: 匯入狀態
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fb8193dd3e345ab8290239e0f01cbea82221a64c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fc49b96bbf9b1388c162b87c76ba31b1696991a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945097"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728192"
 ---
 # <a name="import-statuses-master-data-services"></a>匯入狀態 (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "67945097"
 
   在 **[整合管理]** 功能區域的 **[暫存批次]** 頁面上，可能會出現下列狀態。  
   
-|[狀態]|描述|Status_ID|  
+|狀態|說明|Status_ID|  
 |------------|-----------------|----------------|  
 |已排入執行佇列|批次尚未開始處理。|1|  
 |執行中|批次正進行處理。|2|  

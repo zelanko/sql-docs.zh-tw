@@ -1,6 +1,6 @@
 ---
-title: 使用組態管理的 WMI 提供者 |Microsoft Docs
-ms.custom: ''
+title: 使用 WMI 提供者進行設定管理
+ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,33 +19,33 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e6736c73f7cda435d91e3ec9c9f523bdc08f1b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139273"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73657369"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>針對組態管理使用 WMI 提供者
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-本文章提供有關如何搭配 WMI 提供者的程式的指導方針，針對電腦管理。
+本文提供有關如何使用 WMI 提供者進行電腦管理程式設計的指引。
 
 ## <a name="binding"></a>繫結  
  組態管理的 WMI 提供者是 COM 物件模型，而且可支援早期和晚期繫結。 藉由晚期繫結，您可以使用指令碼語言 (例如 VBScript) 透過程式設計的方式來操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務、網路設定和別名。  
   
 ## <a name="specifying-a-connection-string"></a>指定連接字串
 
-應用程式會藉由連接到組態管理的 WMI 提供者所定義的 WMI 命名空間，將該提供者導向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 Windows WMI 服務將此命名空間對應至提供者 DLL，並將 DLL 載入到記憶體。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體都會以單一的 WMI 命名空間代表。
+應用程式會藉由連接到組態管理的 WMI 提供者所定義的 WMI 命名空間，將該提供者導向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 Windows WMI 服務會將此命名空間對應至提供者 DLL，並將 DLL 載入記憶體中。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體都會以單一的 WMI 命名空間代表。
 
-命名空間預設值為下列格式。 格式，`VV`是 SQL Server 主要版本號碼。 藉由執行的數字是可探索`SELECT @@VERSION;`。
+命名空間預設為下列格式。 在格式中，`VV` 是 SQL Server 的主要版本號碼。 您可以藉由執行 `SELECT @@VERSION;`來探索此數目。
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-當您使用 PowerShell 連接，前置`\\.\`必須移除。 例如，下列 PowerShell 程式碼列出所有 WMI 類別適用於 SQL Server 2016 中，這是主要第 13 版。
+當您使用 PowerShell 進行連接時，必須移除前置 `\\.\`。 例如，下列 PowerShell 程式碼會列出 SQL Server 2016 的所有 WMI 類別，也就是主要版本13。
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -69,7 +69,7 @@ where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!I
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **注意：** 如果您透過 Windows 防火牆連線，您必須先確定您的電腦均正確無誤。 請參閱 「 連線透過 Windows 防火牆 」 文章中的 Windows Management Instrumentation 文件上[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[網站](https://go.microsoft.com/fwlink/?linkid=15426)。  
+ **注意：** 如果您是透過 Windows 防火牆進行連線，則必須確定您的電腦已正確設定。 請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN[網站](https://go.microsoft.com/fwlink/?linkid=15426)上 Windows Management Instrumentation 檔中的「透過 Windows 防火牆連線」文章。  
   
 ## <a name="permissions-and-server-authentication"></a>權限和伺服器驗證  
  若要存取組態管理的 WMI 提供者，用戶端 WMI 管理指令碼必須在目標電腦的管理員內容中執行。 您在要管理的電腦上必須是本機 Windows 管理員群組的成員。  
@@ -78,7 +78,7 @@ gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerMan
   
  WMI 管理指令碼可用來更新用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶。  
   
- 安全性憑證受到組態管理的 WMI 提供者支援。 如需有關憑證的詳細資訊，請參閱 <<c0> [ 加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
+ 安全性憑證受到組態管理的 WMI 提供者支援。 如需憑證的詳細資訊，請參閱[加密](../../relational-databases/security/encryption/encryption-hierarchy.md)階層。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)  

@@ -1,5 +1,5 @@
 ---
-title: Getparameterinfo (OLE DB) |Microsoft Docs
+title: ISSCommandWithParameters：： GetParameterProperties （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5e03e1ef1cd62dda40cd9b138c3d2ff3d7395ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 696b170c81177129e6e91cf65a37f2d1146a4133
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050996"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761969"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   傳回 SSPARAMPROPS 屬性集結構的陣列，而且每個 UDT 或 XML 參數使用一個 SSPARAMPROPS 屬性集。  
   
@@ -43,13 +42,13 @@ HRESULT GetParameterProperties(
  記憶體的指標，其中包含在 *prgParamProperties* 中傳回的 SSPARAMPROPS 結構數目。  
   
  *prgParamProperties*[out]  
- 藉其傳回 SSPARAMPROPS 結構陣列的記憶體指標。 提供者會為結構配置記憶體，並將位址傳回給這個記憶體中;取用者釋放這個記憶體**imalloc:: Free**當它不再需要的結構。 然後再呼叫**imalloc:: Free** for *prgParamProperties*，取用者還必須呼叫**VariantClear**如*vValue*屬性若要防止記憶體流失，在變數包含參考的情況下每個 DBPROP 結構的型別 （例如 BSTR。)如果*pcParams*是零個輸出，或發生錯誤 DB_E_ERRORSOCCURRED 之外，提供者不會配置任何記憶體並確保*prgParamProperties*輸出上的 null 指標。  
+ 藉其傳回 SSPARAMPROPS 結構陣列的記憶體指標。 提供者會為結構配置記憶體，並將位址傳回此記憶體;取用者不再需要結構時，會使用**IMalloc：： Free**釋放此記憶體。 在呼叫**IMalloc：： Free** for *prgParamProperties*之前，取用者也必須針對每個 DBPROP 結構的*vValue*屬性呼叫**VariantClear** ，以避免在 variant 包含的情況下發生記憶體流失的情況參考型別（例如 BSTR）。如果*時 pcparams*在輸出上為零，或發生 DB_E_ERRORSOCCURRED 以外的錯誤，則提供者不會配置任何記憶體，並可確保*prgParamProperties*在輸出上為 null 指標。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **GetParameterProperties**方法會傳回相同的錯誤碼與核心 OLE DB **icommandproperties:: Getproperties**除了 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 之外的方法，不可為引發。  
+ **GetParameterProperties**方法會傳回與 Core OLE DB **ICommandProperties：： GetProperties**方法相同的錯誤碼，不同之處在于無法引發 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED。  
   
 ## <a name="remarks"></a>備註  
- **Getparameterinfo**採取一致的行為相對於**GetParameterInfo**。 如果[isscommandwithparameters:: Setparameterproperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或是**SetParameterInfo**尚未呼叫或已經呼叫 cparams 等於零， **GetParameterInfo**衍生參數資訊並傳回此資訊。 如果**isscommandwithparameters:: Setparameterproperties**或是**SetParameterInfo**至少一個參數，呼叫**Getparameterinfo** ，會傳回這些參數的屬性**isscommandwithparameters:: Setparameterproperties**已呼叫。 如果**isscommandwithparameters:: Setparameterproperties**之後，會呼叫**Getparameterinfo**或是**GetParameterInfo**，後續呼叫**Getparameterinfo**為其傳回這些參數的覆寫的值**isscommandwithparameters:: Setparameterproperties**被呼叫。  
+ **ISSCommandWithParameters：： GetParameterProperties**的行為一致，與**GetParameterInfo**有關。 如果尚未呼叫[ISSCommandWithParameters：： SetParameterProperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo** ，或已使用 cParams 等於零的呼叫， **GetParameterInfo**會衍生參數資訊，並傳回這個。 如果至少已針對一個參數呼叫**ISSCommandWithParameters：： SetParameterProperties**或**SetParameterInfo** ， **ISSCommandWithParameters：： GetParameterProperties**只會傳回這些參數的屬性已呼叫的**ISSCommandWithParameters：： SetParameterProperties** 。 如果在**ISSCommandWithParameters：： GetParameterProperties**或**GetParameterInfo**之後呼叫**ISSCommandWithParameters：： SetParameterProperties** ，則後續呼叫**ISSCommandWithParameters：：GetParameterProperties**會傳回已呼叫**ISSCommandWithParameters：： SetParameterProperties**之參數的覆寫值。  
   
  SSPARAMPROPS 結構定義如下：  
   
@@ -63,7 +62,7 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
 |*cPropertySets*|*rgPropertySets* 中的 DBPROPSET 結構數目。|  

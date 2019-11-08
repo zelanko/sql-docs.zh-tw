@@ -1,5 +1,5 @@
 ---
-title: 捲動和提取資料列 |Microsoft Docs
+title: 滾動和提取資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,38 +21,37 @@ ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b45e71e5501a1c294760c4e7cadba5f96b169e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a8c0c0783ff51548143fa7fd670de2502482673
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078816"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784060"
 ---
 # <a name="scrolling-and-fetching-rows"></a>捲動與提取資料列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   若要使用可捲動的資料指標，ODBC 應用程式必須：  
   
--   設定使用的資料指標功能[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
+-   使用[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定資料指標功能。  
   
--   開啟資料指標使用**SQLExecute**或是**SQLExecDirect**。  
+-   使用**SQLExecute**或**SQLExecDirect**開啟資料指標。  
   
--   捲動與提取資料列，使用**SQLFetch**或是[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。  
+-   使用**SQLFetch**或[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)來滾動和提取資料列。  
   
- 兩者**SQLFetch**並**SQLFetchSroll**可以一次提取資料列的區塊。 指定使用時，傳回資料列數**SQLSetStmtAttr**設定 SQL_ATTR_ROW_ARRAY_SIZE 參數。  
+ **SQLFetch**和**SQLFetchSroll**都可以一次提取資料列區塊。 傳回的資料列數目是藉由使用**SQLSetStmtAttr**來設定 SQL_ATTR_ROW_ARRAY_SIZE 參數所指定。  
   
- ODBC 應用程式可以使用**SQLFetch**擷取順向資料指標。  
+ ODBC 應用程式可以使用**SQLFetch** ，透過順向資料指標來提取。  
   
- **SQLFetchScroll**可用來在資料指標周圍捲動。 **SQLFetchScroll**支援提取下一個、 第一個和最後一個資料列集除了相對提取 (提取資料列集*n*從目前的資料列集開始的資料列) 和絕對提取 （提取資料列集從資料列開始*n*)。 如果*n*是負的絕對提取中，會計算資料列從結果集的結尾。 資料列的絕對提取 -1 表示提取從結果集的最後一個資料列開始的資料列集。  
+ **SQLFetchScroll**是用來在資料指標周圍進行滾動。 除了相對提取以外， **SQLFetchScroll**支援提取下一個、先前的第一個和最後一個資料列集（從目前資料列集的開頭提取資料列集*n*個數據列）和絕對提取（提取從第*n*行開始的資料列集）。 如果*n*在絕對提取中為負數，則會從結果集的結尾計算資料列。 資料列的絕對提取 -1 表示提取從結果集的最後一個資料列開始的資料列集。  
   
- 使用應用程式**SQLFetchScroll**僅針對其區塊資料指標的功能，例如報表可能會通過結果集一次，僅使用選項來擷取下一個資料列集。 以螢幕為基礎的應用程式，相反地，可以利用所有的功能**SQLFetchScroll**。 如果應用程式設定的資料列集大小的螢幕上顯示的資料列數目，並將螢幕緩衝區繫結至結果集，它可以將轉譯直接到呼叫的捲軸作業**SQLFetchScroll**。  
+ 僅針對其區塊資料指標功能使用**SQLFetchScroll**的應用程式（例如報表）可能會通過單一時間的結果集，而只會使用提取下一個資料列集的選項。 另一方面，以螢幕為基礎的應用程式可以利用**SQLFetchScroll**的所有功能。 如果應用程式將資料列集大小設定為螢幕上顯示的資料列數目，並將螢幕緩衝區系結至結果集，則可以直接將捲軸作業轉譯為呼叫**SQLFetchScroll**。  
   
 |捲軸作業|SQLFetchScroll 捲動選項|  
 |--------------------------|-------------------------------------|  
 |向上捲動一頁|SQL_FETCH_PRIOR|  
 |向下捲動一頁|SQL_FETCH_NEXT|  
-|向上捲動一行|包含等於-1 的 FetchOffset 的 sql_fetch_relative|  
+|向上捲動一行|FetchOffset 等於-1 的 SQL_FETCH_RELATIVE|  
 |向下捲動一行|包含 FetchOffset 的 SQL_FETCH_RELATIVE 等於 1|  
 |捲動方塊到頂端|SQL_FETCH_FIRST|  
 |捲動方塊到底部|SQL_FETCH_LAST|  
@@ -63,6 +62,6 @@ ms.locfileid: "68078816"
 -   [在 ODBC 中為資料列上加上書籤](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料指標&#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [使用資料&#40;指標 ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

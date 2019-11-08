@@ -1,5 +1,5 @@
 ---
-title: 第 1 課：建立資料庫物件 |Microsoft Docs
+title: 課程 1：建立資料庫物件 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,19 +10,19 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 45eabd88d5753721b081c79d3dab03b0a6134c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704554"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632712"
 ---
 # <a name="lesson-1-creating-database-objects"></a>第 1 課：建立資料庫物件
   這一課會示範如何建立資料庫、在資料庫中建立資料表，然後在資料表中存取和變更資料。 因為這一課是使用 [!INCLUDE[tsql](../includes/tsql-md.md)]的簡介，所以並不會使用或描述這些陳述式所能使用的許多選項。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] 撰寫陳述式並且提交給 [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以採用下列方式：  
   
--   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 這個教學課程會假設您使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是您也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express，這個版本可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=67359)免費下載。  
+-   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 這個教學課程會假設您使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是您也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express，這個版本可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=7593)免費下載。  
   
 -   使用 [sqlcmd 公用程式](../tools/sqlcmd-utility.md)。  
   

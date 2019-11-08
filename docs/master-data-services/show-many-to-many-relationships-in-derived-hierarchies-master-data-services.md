@@ -1,6 +1,6 @@
 ---
-title: 在衍生階層 (Master Data Services) 中顯示多對多關聯性 | Microsoft Docs
-ms.custom: ''
+title: 在衍生階層中顯示多對多關聯性
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085648"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728947"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>在衍生階層 (Master Data Services) 中顯示多對多關聯性
 
@@ -40,9 +40,9 @@ ms.locfileid: "68085648"
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- 在上面的螢幕擷取畫面中，注意 **Employee** 實體作為中間唯一的層級顯示在 [目前層級]  之下。 右邊的衍生階層 [預覽]  只會顯示 **Employee** 實體的所有成員清單。 左邊的 [可用層級]  區段會顯示哪些層級可能會新增至目前最上層的上方 (**Employee**)。 大多數為 **Employee** 實體上以網域為基礎的屬性 (DBA)，包括 **Department** DBA。  
+ 在上面的螢幕擷取畫面中，注意 **Employee** 實體作為中間唯一的層級顯示在 [目前層級] 之下。 右邊的衍生階層 [預覽] 只會顯示 **Employee** 實體的所有成員清單。 左邊的 [可用層級] 區段會顯示哪些層級可能會新增至目前最上層的上方 (**Employee**)。 大多數為 **Employee** 實體上以網域為基礎的屬性 (DBA)，包括 **Department** DBA。  
   
- 自 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 開始，有新類型的層級可將 M2M 關聯性模型化，例如：**Class (mapped via ClassRegistration.Student)** 。 層級名稱會比其他項目具備更多詳細資訊，以反映所需的額外資訊，進而明確地描述對應的關聯性。 將此層級拖放至 [目前層級]  區段中的 **Employee** 層級︰  
+ 自 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 開始，有新類型的層級可將模型 M2M 關聯性模型化，例如︰[Class (mapped via ClassRegistration.Student)]。 層級名稱會比其他項目具備更多詳細資訊，以反映所需的額外資訊，進而明確地描述對應的關聯性。 將此層級拖放至 [目前層級] 區段中的 **Employee** 層級︰  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -56,11 +56,11 @@ ms.locfileid: "68085648"
   
  對應實體 **ClassRegistration** 的成員不會在衍生階層內的任何位置出現。 其僅用來定義階層中父系和子系成員之間的關聯性。  
   
- 您可以透過修改對應的實體成員來編輯 M2M 關聯性，方法是執行下列其中一項。 M2M 關聯性在 [衍生階層總管]  頁面中為唯讀。  
+ 您可以透過修改對應的實體成員來編輯 M2M 關聯性，方法是執行下列其中一項。 M2M 關聯性在 [衍生階層總管] 頁面中為唯讀。  
   
--   修改 [實體總管]  頁面中的對應實體成員，方法是使用適用於 Excel 的 Master Data Services 增益集，或使用資料暫存。  
+-   修改 [實體總管] 頁面中的對應實體成員，方法是使用適用於 Excel 的 Master Data Services 增益集，或使用資料暫存。  
   
--   拖放 [衍生階層探索]  頁面中父代之間的子節點。  
+-   拖放 [衍生階層探索]頁面中父代之間的子節點。  
   
      這個方法會在允許的情況下修改現有的成員，並視需要新增新成員。 不會刪除現有的成員。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68085648"
 如需部署 Customer 範例模型的指示，以及 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]隨附的其他範例模型，請參閱 [部署範例模型和資料](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)。   
   
 ## <a name="one-many-relationship"></a>一對多關聯性  
- DH 的成員可能是許多子成員的父系，但通常不能有一個以上的父代 (對於例外狀況，請參閱 [成員安全性](#bkmk_member_security))。 例如，假設有兩個實體：Employee 和 Department，其中每一位員工皆屬於單一部門。 此關聯性是透過加入 Employee 實體進行模型化，其為參考 Department 實體的以網域為基礎的屬性 (DBA)︰  
+ DH 的成員可能是許多子成員的父系，但通常不能有一個以上的父代 (對於例外狀況，請參閱 [成員安全性](#bkmk_member_security))。 例如，假設有兩個實體︰Employee 和 Department，其中每一位員工皆屬於單一部門。 此關聯性是透過加入 Employee 實體進行模型化，其為參考 Department 實體的以網域為基礎的屬性 (DBA)︰  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68085648"
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> 成員安全性  
- 可讓成員重複的階層 (允許成員有一個以上的父系) 不能用來指派成員安全性權限。 例如:  
+ 可讓成員重複的階層 (允許成員有一個以上的父系) 不能用來指派成員安全性權限。 例如：  
   
 -   遞迴衍生階層 (RDH)，其未錨點 null 遞迴 (遞迴層級的每個成員皆會出現在 ROOT 與其遞迴父系之下)。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt | Microsoft Docs
+title: SQLFreeStmt |Microsoft Docs
 ms.custom: ''
 ms.date: 11/23/2015
 ms.prod: sql
@@ -14,21 +14,20 @@ ms.assetid: d9666d0b-3446-480e-bf1a-10b01213e411
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1623779ba0fb47df1750e72b2e66ff7ad492a3e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b985db3cb58a7029a3b5ec489d2e23b0c1292919
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135479"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786735"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  通常   
-      **SQLFreeStmt**不建議使用在 ODBC 3.0 和更新版本。 不過如果應用程式需要重複使用陳述式仍建議您使用**SQLFreeStmt**具有**SQL_RESET_PARAMS**並**SQL_UNBIND**選項)。 您也可以使用[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)， [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)， [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)， [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)，和[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)來取代或重複的函式**SQLFreeStmt**應該改為使用它們。  
+  常見   
+      在 ODBC 3.0 和更新版本中不建議使用**SQLFreeStmt** 。 不過，如果應用程式需要重複使用語句，您仍然應該使用**SQLFreeStmt**搭配**SQL_RESET_PARAMS**和**SQL_UNBIND**選項）。 您也可以使用[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)、 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)、 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)、 [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)和[SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)來取代或複製**SQLFreeStmt**的函式，並應該改用這些函數。  
   
- 一般情況下，它是更有效率的方式重複使用比要卸除它們，並配置新的陳述式。 不過在某些情況下，例如陳述式中，重複使用 SQLFreeStmt 仍然必須使用。  
+ 一般來說，重複使用語句比卸載它們並配置新的更有效率。 不過，在某些情況下，例如重複使用語句，仍然必須使用 SQLFreeStmt。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLFreeStmt 函數](https://go.microsoft.com/fwlink/?LinkId=59346)   

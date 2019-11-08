@@ -1,6 +1,6 @@
 ---
-title: ProtocolDLL 屬性 （ServerNetworkProtocol 類別） |Microsoft Docs
-ms.custom: ''
+title: ProtocolDLL 屬性（ServerNetworkProtocol）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: abf588709c13dbcf487df3d2a1a5b98534e27494
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cbf2d7968f1e0af97cf28604768b01fb27511cf
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126651"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659437"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>ProtocolDLL 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ object.ProtocolDLL [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ServerNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)物件，表示執行個體所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 代表 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例所使用之網路通訊協定的[ServerNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定伺服器網路通訊協定所需之通訊協定 .dll 檔案的字串值。  

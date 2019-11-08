@@ -1,5 +1,5 @@
 ---
-title: 分類的 Web 服務作業 (Master Data Services) | Microsoft Docs
+title: 分類的 Web 服務作業
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ad01ae5dd8407fda8d7802681695200bf25b167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098592"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728299"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分類的 Web 服務作業 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務包含一組完整的作業，這組作業可讓您撰寫程式碼以控制 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 透過其使用者介面所執行的所有功能。 這些 Web 服務作業是透過 <xref:Microsoft.MasterDataServices.IService> 介面定義，並當做 <xref:Microsoft.MasterDataServices.ServiceClient> 類別中的方法實作。 本主題將 Web 服務作業分為概念性類別目錄，以協助您了解如何使用 Web 服務 API。  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務包含一組完整的作業，這組作業可讓您撰寫程式碼以控制 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 透過其使用者介面所執行的所有功能。{3} 這些 Web 服務作業是透過 <xref:Microsoft.MasterDataServices.IService> 介面定義，並當做 <xref:Microsoft.MasterDataServices.ServiceClient> 類別中的方法實作。 本主題將 Web 服務作業分為概念性類別目錄，以協助您了解如何使用 Web 服務 API。  
   
 ## <a name="model-operations"></a>模型作業  
  這些作業用於建立、更新與刪除模型，以及針對模型的所有內容操作，例如實體、階層和版本。 如需詳細資訊，請參閱[模型 &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)。  
@@ -121,7 +121,7 @@ ms.locfileid: "68098592"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>資料匯入作業  
- 這些作業用於將資料匯入至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如需詳細資訊，請參閱[概觀：從資料表匯入資料 &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
+ 這些作業用於將資料匯入至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 如需詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
 ||  
 |-|  
@@ -140,7 +140,7 @@ ms.locfileid: "68098592"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>資料匯出作業  
- 這些作業用於透過訂閱檢視匯出資料。 如需詳細資訊，請參閱[概觀：匯出資料 &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)。  
+ 這些作業用於透過訂閱檢視匯出資料。 如需詳細資訊，請參閱 [概觀：匯出資料 &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)。  
   
 ||  
 |-|  

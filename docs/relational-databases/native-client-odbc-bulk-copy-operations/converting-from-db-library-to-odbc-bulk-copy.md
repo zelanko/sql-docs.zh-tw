@@ -17,29 +17,28 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f41438f8ecd7a905201b8f912b3fee142716a2c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708085"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785193"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>從 DB-Library 轉換成 ODBC 大量複製
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  將 DB-LIBRARY 大量複製程式轉換成 ODBC 很簡單，因為 @no__t 0 Native Client ODBC 驅動程式所支援的大量複製函數與 DB-LIBRARY 大量複製函數類似，但有下列例外狀況：  
+  將 DB-LIBRARY 大量複製程式轉換成 ODBC 很簡單，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式所支援的大量複製函數與 DB-LIBRARY 大量複製函數類似，但有下列例外狀況：  
   
 -   DB-Library 應用程式會將指向 DBPROCESS 結構的指標當做大量複製函數的第一個參數傳遞。 在 ODBC 應用程式中，DBPROCESS 指標會由 ODBC 連接控制代碼所取代。  
   
--   DB-LIBRARY 應用程式會在連接之前呼叫**BCP_SETL** ，以啟用 DBPROCESS 上的大量複製作業。 ODBC 應用程式會改為在連接之前呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以在連接控制碼上啟用大量作業：  
+-   DB-LIBRARY 應用程式會在連接之前呼叫**BCP_SETL** ，以在 DBPROCESS 上啟用大量複製作業。 ODBC 應用程式會改為在連接之前呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以在連接控制碼上啟用大量作業：  
   
     ```  
     SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP,  
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   @No__t 0 Native Client ODBC 驅動程式不支援 DB-LIBRARY 訊息和錯誤處理常式;您必須呼叫**SQLGetDiagRec** ，以取得 ODBC 大量複製函數所引發的錯誤和訊息。 大量複製函數的 ODBC 版本會傳回標準的大量複製傳回碼 SUCCEED 或 FAILED，而非 ODBC 樣式的傳回碼，例如 SQL_SUCCESS 或 SQL_ERROR。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援 DB-LIBRARY 訊息和錯誤處理常式;您必須呼叫**SQLGetDiagRec** ，以取得 ODBC 大量複製函數所引發的錯誤和訊息。 大量複製函數的 ODBC 版本會傳回標準的大量複製傳回碼 SUCCEED 或 FAILED，而非 ODBC 樣式的傳回碼，例如 SQL_SUCCESS 或 SQL_ERROR。  
   
 -   針對 DB-LIBRARY [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*參數所指定的值，與 ODBC **bcp_bind**_cbData_參數的轉譯方式不同。  
   
@@ -51,13 +50,13 @@ ms.locfileid: "71708085"
   
      在 DB-LIBRARY 中， *varlen*值-1 表示正在提供可變長度的資料，而在 ODBC *cbData*中會將它解讀為表示只提供 Null 值。 將任何-1 的 DB-LIBRARY *varlen*規格變更為 SQL_VARLEN_DATA，並將任何0的*varlen*規格變更為 SQL_Null_DATA。  
   
--   DB-LIBRARY **bcp_colfmt**_file_collen_和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData*與上面所述的**bcp_bind**_varlen_和*cbData*參數有相同的問題。 將任何-1 的 DB-LIBRARY *file_collen*規格變更為 SQL_VARLEN_DATA，並將任何0的*file_collen*規格變更為 SQL_Null_DATA。  
+-   DB-LIBRARY **bcp_colfmt**_file_collen_和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData*與上面所述的**bcp_bind**_varlen_和*cbData*參數有相同的問題。 將任何-1 的 DB-LIBRARY *file_collen*規格變更為 SQL_VARLEN_DATA，並將任何*file_collen*規格0變更為 SQL_Null_DATA。  
   
 -   ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)函數的*iValue*參數是 void 指標。 在 DB-LIBRARY 中， *iValue*是整數。 將 ODBC *iValue*的值轉換為 void *。  
   
--   **Bcp_control**選項 BCPMAXERRS 會指定在大量複製作業失敗之前，有多少個個別的資料列可以有錯誤。 BCPMAXERRS 的預設值為0（在第一次錯誤時失敗）和 ODBC 版本中的**bcp_control**和10的程式庫版本。 相依于預設值0來終止大量複製作業的 DB-LIBRARY 應用程式必須變更為呼叫 ODBC **bcp_control** ，以將 BCPMAXERRS 設定為0。  
+-   **Bcp_control**選項 BCPMAXERRS 指定大量複製作業失敗之前，有多少個個別的資料列可以有錯誤。 BCPMAXERRS 的預設值為0（在第一次錯誤時失敗），位於 ODBC 版本的**bcp_control**和10中。 相依于預設值0來終止大量複製作業的 DB-LIBRARY 應用程式，必須變更為呼叫 ODBC **bcp_control**以將 BCPMAXERRS 設定為0。  
   
--   ODBC **bcp_control**函數支援**bcp_control**的 db-library 版本不支援的下列選項：  
+-   ODBC **bcp_control**函數支援下列不受 db-library 版本的**bcp_control**支援的選項：  
   
     -   BCPODBC  
   
@@ -91,7 +90,7 @@ ms.locfileid: "71708085"
   
          指定字元模式大量複製檔案為 Unicode 檔案。  
   
--   ODBC **bcp_colfmt**函數不支援 SQLCHAR 的*file_type*指標，因為它與 ODBC SQLCHAR typedef 衝突。 針對**bcp_colfmt**，請改用 SQLCHARACTER。  
+-   ODBC **bcp_colfmt**函數不支援 SQLCHAR 的*file_type*指標，因為它與 ODBC SQLCHAR typedef 衝突。 請改用 SQLCHARACTER 來進行**bcp_colfmt**。  
   
 -   在 ODBC 版本的大量複製函式中，在字元字串中使用**datetime**和**Smalldatetime**值的格式為 yyyy-mm-dd hh： MM： ss 的 odbc 格式。**Smalldatetime**值使用 yyyy-mm-dd hh： mm： SS 的 ODBC 格式。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "71708085"
   
     -   以 DB-LIBRARY **dbconvert**函數支援的任何格式的**datetime**和**Smalldatetime**字元字串。  
   
-    -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Network 公用程式的 [DB-LIBRARY**選項**] 索引標籤上核取 [**使用國際設定**] 方塊時，db-library 大量複製函式也會接受針對用戶端地區設定所定義之地區日期格式的日期電腦登錄。  
+    -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端網路公用程式的 [DB-LIBRARY**選項**] 索引標籤上核取 [**使用國際設定**] 方塊時，db-library 大量複製函數也會接受地區設定為用戶端電腦登錄。  
   
      DB-LIBRARY 大量複製函數不接受 ODBC **datetime**和**Smalldatetime**格式。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "71708085"
 -   以字元格式輸出**money**值時，ODBC 大量複製函數會提供四位數的精確度，而且不會有逗號分隔符號;DB-LIBRARY 版本只提供兩位數的精確度，並包含逗號分隔符號。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [執行大量複製作業&#40;ODBC&#41; ](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

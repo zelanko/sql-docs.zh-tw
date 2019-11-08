@@ -1,5 +1,5 @@
 ---
-title: 使用精靈部署模型部署套件 | Microsoft Docs
+title: 部署模型部署封裝（Wizard）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3c546fd0abb82b87cd3d992b5afd270156e84f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906241"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729400"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用精靈部署模型部署封裝
 
@@ -32,35 +32,35 @@ ms.locfileid: "67906241"
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
--   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理]  功能區域的權限。  
+-   在目標  **環境中，您必須擁有存取 [系統管理]** [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能區域的權限。  
   
 -   模型部署封裝必須存在。 如需詳細資訊，請參閱 [使用精靈建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)。  
   
--   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>若僅要部署模型物件的模型部署封裝  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [模型檢視]  頁面上，從功能表列指向 [系統]  ，然後按一下 [部署]  。  
+2.  在 [模型檢視] 頁面上，從功能表列指向 [系統]，然後按一下 [部署]。  
   
-3.  按一下 [模型部署精靈]  上的 [部署]  。  
+3.  按一下 [模型部署精靈] 上的 [部署]。  
   
 4.  按一下 **[瀏覽]** 。  
   
-5.  尋找您的部署套件 (.pkg 檔案)，然後按一下 [開啟]  。  
+5.  尋找您的部署套件 (.pkg 檔案)，然後按一下 [開啟]。  
   
-6.  按一下 [下一步]  。  
+6.  按一下 **[下一步]** 。  
   
-7.  載入套件之後，按一下 [下一步]  。  
+7.  載入套件之後，按一下 [下一步]。  
   
-8.  如果模型已存在，您可以選取 [更新現有模型]  來更新模型。 若要建立新的模型，請選取 [建立新模型]  ，然後在按 [下一步]  之後，輸入新模型的名稱。  
+8.  如果模型已存在，您可以選取 [更新現有模型] 來更新模型。 若要建立新的模型，請選取 [建立新模型]，然後在按 [下一步] 之後，輸入新模型的名稱。  
   
-9. 按一下 [完成]  結束精靈。  
+9. 按一下 [完成] 結束精靈。  
   
  **注意：**  
   
--   如果套件中訂閱檢視與現有模型中訂閱檢視同名，就會顯示這項警告：**部署器訂閱檢視已重新命名**。 且會將檢視建立為 *modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
+-   如果套件中的訂閱檢視與現有模型中的訂閱檢視同名，就會顯示這項警告： **部署者訂閱已重新命名**， 且會將檢視建立為 *modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
   
 -   部署程序有四個步驟：  
   

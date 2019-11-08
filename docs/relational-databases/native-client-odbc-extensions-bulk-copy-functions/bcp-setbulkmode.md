@@ -13,18 +13,17 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f6dfcb6049811fa12899570b11c110b16dc400
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707470"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782393"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  bcp_setbulkmode 可讓您在大量複製作業中指定資料行格式，並在單一函式呼叫中設定所有資料行屬性。  
+  bcp_setbulkmode 可讓您在大量複製作業中指定資料行格式，在單一函數呼叫中設定所有資料行屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,26 +62,26 @@ RETCODE bcp_setbulkmode (
  SUCCEED 或 FAIL  
   
 ## <a name="remarks"></a>備註  
- bcp_setbulkmode 可以用來從查詢或資料表大量複製。 當使用 bcp_setbulkmode 來大量複製查詢語句時，必須先呼叫它，才能使用 BCP_HINT 呼叫 bcp_control。  
+ bcp_setbulkmode 可以用來從查詢或資料表大量複製。 當 bcp_setbulkmode 用來大量複製查詢語句時，必須先呼叫它，才能使用 BCP_HINT 呼叫 bcp_control。  
   
- bcp_setbulkmode 是使用[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)和[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)的替代方法，其只可讓您指定每個函式呼叫的一個資料行格式。  
+ bcp_setbulkmode 是使用[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)和[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)的替代方法，其只可讓您針對每個函式呼叫指定一個資料行的格式。  
   
  下表將列出 *property* 參數的常數。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE，以及 bcp_setcolfmt，並將**BCP_FMT_TYPE**屬性設定為**SQLCHARACTER**。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。將**BCP_FMT_TYPE**屬性設定為**SQLNCHAR**的 EXE 和 bcp_setcolfmt。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP 中的-N 選項。如果資料行類型是字串，則 EXE 和 bcp_setcolfmt 會將**BCP_FMT_TYPE**屬性設定為**SQLNCHAR** （如果不是字串，則為預設值）。|  
-|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP 中的-n 選項。EXE 和 bcp_setcolfmt，並將**BCP_FMT_TYPE**屬性設定為預設值。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至 BCP 中的-c 選項。EXE，並 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLCHARACTER**。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至 BCP 中的-w 選項。**BCP_FMT_TYPE**屬性設定為**SQLNCHAR**的 EXE 和 bcp_setcolfmt。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應至 BCP 中的-N 選項。如果資料行類型是字串，則 EXE 和 bcp_setcolfmt 的**BCP_FMT_TYPE**屬性會設定為**SQLNCHAR** （如果不是字串，則為預設值）。|  
+|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應至 BCP 中的-n 選項。具有**BCP_FMT_TYPE**屬性設定為預設值的 EXE 和 bcp_setcolfmt。|  
   
- 您不應該將 bcp_setbulkmode 與包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫順序搭配使用。 例如，您不應該呼叫 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
+ 您不應將 bcp_setbulkmode 與包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫順序搭配使用。 例如，您不應該呼叫 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
   
  您可以針對不與 bcp_setbulkmode 衝突的 bcp_control 選項呼叫 bcp_control 和 bcp_setbulkmode。 例如，您可以呼叫 bcp_control （BCPFIRST）和 bcp_setbulkmode。  
   
- 如果您嘗試使用包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫序列來呼叫 bcp_setbulkmode，其中一個函式呼叫將會傳回序列錯誤失敗。 如果您選擇更正失敗，請呼叫 bcp_init 來重設所有設定並重新開始。  
+ 如果您嘗試使用包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函式呼叫序列來呼叫 bcp_setbulkmode，其中一個函式呼叫會傳回序列錯誤失敗。 如果您選擇更正失敗，請呼叫 bcp_init 以重設所有設定並重新開始。  
   
- 以下是一些會導致函式順序錯誤的函式呼叫範例:  
+ 以下是一些會導致函式順序錯誤的函式呼叫範例：  
   
 ```  
 bcp_init("table", DB_IN);  

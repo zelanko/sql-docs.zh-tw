@@ -1,5 +1,5 @@
 ---
-title: 使用 MDSModelDeploy 部署模型部署套件 | Microsoft Docs
+title: 部署模型部署套件（MDSModelDeploy）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7d2041effbc1e5bebb94a730d90c19e28e0a02be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906227"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728304"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署封裝
 
@@ -32,22 +32,22 @@ ms.locfileid: "67906227"
 > [!IMPORTANT]  
 >  封裝只能部署到之前建立封裝所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 這表示，在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中建立的套件無法部署到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
--   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理]  功能區域的權限。  
+-   在目標  **環境中，您必須擁有存取 [系統管理]** [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能區域的權限。  
   
 -   模型部署封裝必須存在。 如需詳細資訊，請參閱  [使用 MDSModelDeploy 建立模型部署套件](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
--   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是您要部署模型之環境中的管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
--   如果您正在使用資料更新模型，您所部署的目標版本不得為 [已鎖定]  或 [已認可]  。  
+-   如果您正在使用資料更新模型，您所部署的目標版本不得為 [已鎖定] 或 [已認可]。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>若要部署模型部署封裝  
   
 1.  決定您要部署新的模型、模型的複製，還是更新之前複製的模型。 如需詳細資訊，請參閱[模型部署選項 &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)。  
   
-2.  開啟 [系統管理員：命令提示字元]，並巡覽至 MDSModelDeploy.exe。  
+2.  開啟系統管理員：命令提示字元，並導覽至 MDSModelDeploy.exe。  
   
     -   如果 MDS 已安裝在預設位置，此工具會在 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration 中。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67906227"
     MDSModelDeploy listservices  
     ```  
   
-     隨即傳回值的清單，例如 `MDS1, Default Web Site, MDS`。 此清單中的第一個值 (此案例中為 `MDS1`) 是部署模型所需的項目。  
+     隨即傳回值的清單，例如 `MDS1, Default Web Site, MDS`。 需要此清單中的第一個值 (此案例中為 `MDS1`)，才能部署模型。  
   
 5.  根據您是建立模型、複製模型還是更新模型，在命令提示字元輸入以下命令並按 Enter 鍵。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "67906227"
   
  **注意：**  
   
--   如果套件中訂閱檢視與現有模型中訂閱檢視同名，就會顯示這項警告：**部署者訂閱檢視已重新命名**，且會將檢視建立為 *modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
+-   如果套件中的訂閱檢視與現有模型中的訂閱檢視同名，就會顯示這項警告： **部署者訂閱檢視已重新命名** ，且會將檢視建立為 *modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
   
 -   部署程序有四個步驟：  
   

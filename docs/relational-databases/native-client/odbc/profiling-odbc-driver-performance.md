@@ -20,16 +20,15 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6e35918f266d6dcf77c559c7243e519a0ec95cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913157"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760713"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可以分析兩種類型的效能資料：  
   
@@ -45,7 +44,7 @@ ms.locfileid: "67913157"
   
 -   連接至指定記錄的資料來源。  
   
--   呼叫[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)設定控制分析的驅動程式特定屬性。  
+-   呼叫[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)來設定控制分析的驅動程式特定屬性。  
   
  每個應用程式處理序都可以取得自己的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式複本，而且分析通用於驅動程式複本和應用程式處理序的組合。 當應用程式中的任何項目開啟分析時，分析會記錄來自該應用程式的驅動程式中，所有作用中連接的資訊。 甚至是沒有特別針對分析呼叫的連接也包含在內。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "67913157"
   
  如果應用程式開始記錄檔的分析，而且有另一個應用程式嘗試開始相同記錄檔的分析，則第二個應用程式無法記錄任何分析資料。 如果第二個應用程式在第一個應用程式卸載其驅動程式後開始分析，第二個應用程式會覆寫來自第一個應用程式的記錄檔。  
   
- 驅動程式應用程式連接到已啟用分析的資料來源，如果要在應用程式會呼叫傳回 SQL_ERROR **SQLSetConnectOption**來開始記錄。 呼叫**SQLGetDiagRec**則會傳回下列：  
+ 如果應用程式連接到已啟用分析的資料來源，則如果應用程式呼叫**SQLSetConnectOption**來開始記錄，驅動程式會傳回 SQL_ERROR。 呼叫**SQLGetDiagRec**之後，會傳回下列內容：  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -68,7 +67,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   應用程式設定檔  
   
--   連接  
+-   Connection  
   
 -   Network  
   
@@ -78,7 +77,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>應用程式設定檔統計資料  
   
-|SQLPERF 欄位|描述|  
+|SQLPERF 欄位|說明|  
 |-------------------|-----------------|  
 |TimerResolution|伺服器時間的最小解析 (以毫秒為單位)。 這通常會報告為 0 (零)，而且只有在報告的數字很大時，才考慮使用。 如果伺服器時間的最小解析大於某些以計時器為基礎之統計資料的可能間隔，這些統計資料可能會擴大。|  
 |SQLidu|SQL_PERF_START 之後的 INSERT、DELETE 或 UPDATE 陳述式數目。|  
@@ -86,9 +85,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|在 SQL_PERF_START 之後處理的 SELECT 陳述式數目。|  
 |SQLSelectRows|在 SQL_PERF_START 之後選取的資料列數目。|  
 |交易|SQL_PERF_START 之後的使用者交易數目，包括回復。 當 ODBC 應用程式使用 SQL_AUTOCOMMIT_ON 執行時，會將每個命令視為交易。|  
-|SQLPrepares|數目[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之後呼叫。|  
-|ExecDirects|數目**SQLExecDirect**在 SQL_PERF_START 之後呼叫。|  
-|SQLExecutes|數目**SQLExecute**在 SQL_PERF_START 之後呼叫。|  
+|SQLPrepares|SQL_PERF_START 之後的[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)調用數目。|  
+|ExecDirects|SQL_PERF_START 之後的**SQLExecDirect**呼叫數目。|  
+|SQLExecutes|SQL_PERF_START 之後的**SQLExecute**呼叫數目。|  
 |CursorOpens|驅動程式在 SQL_PERF_START 之後已經開啟伺服器資料指標的次數。|  
 |CursorSize|在 SQL_PERF_START 之後，資料指標開啟之結果集中的資料列數目。|  
 |CursorUsed|在 SQL_PERF_START 之後，透過驅動程式從資料指標實際擷取的資料列數目。|  
@@ -101,7 +100,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|目前在驅動程式中開啟的所有連接上開啟的陳述式控制代碼數目。|  
 |MaxOpenStmt|在 SQL_PERF_START 之後，同時開啟之陳述式控制代碼的最大數目。|  
 |SumOpenStmt|在 SQL_PERF_START 之後，已經開啟之陳述式控制代碼的數目。|  
-|**連線統計資料：**||  
+|**連接統計資料：**||  
 |CurrentConnectionCount|應用程式已經在伺服器上開啟之作用中連接控制代碼的目前數目。|  
 |MaxConnectionsOpened|在 SQL_PERF_START 之後開啟之並行連接控制代碼的最大數目。|  
 |SumConnectionsOpened|在 SQL_PERF_START 之後，已經開啟之連接控制代碼的數目總和。|  
@@ -116,13 +115,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>時間統計資料  
   
-|SQLPERF 欄位|描述|  
+|SQLPERF 欄位|說明|  
 |-------------------|-----------------|  
 |msExecutionTime|驅動程式在 SQL_PERF_START 之後，花在處理上的累計時間，包括花在等待伺服器回覆的時間。|  
 |msNetworkServerTime|驅動程式花在等待伺服器回覆的累計時間。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [分析 ODBC 驅動程式效能的如何主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [分析 ODBC 驅動程式效能的使用說明主題&#40;odbc&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

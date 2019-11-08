@@ -1,5 +1,5 @@
 ---
-title: 程式碼剖析驅動程式效能資料 (ODBC) |Microsoft Docs
+title: 分析驅動程式效能資料（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,60 +13,59 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1136efd8102268623de9caa6be6e4ed77930dcec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df90080d0c07b87d646c7c67cbe1fd672a2a582f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133415"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780668"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>分析 ODBC 驅動程式效能資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  此範例顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，以記錄效能統計資料。 此範例會建立一個檔案： Odbcperf.log 範例顯示如何建立效能資料記錄檔並直接從 SQLPERF 資料結構 （SQLPERF 結構定義於 Odbcss.h） 顯示效能資料。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
+  此範例顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，以記錄效能統計資料。 此範例會建立一個檔案： odbcperf.log。這個範例示範如何建立效能資料記錄檔，以及直接從 SQLPERF 資料結構顯示效能資料（SQLPERF 結構是定義在 Odbcss.h 中）。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>使用 ODBC 管理員記錄驅動程式效能資料  
   
-1.  在 **控制台**，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)** 。 或者，您可以叫用 odbcad32.exe。  
+1.  在 [**控制台**] 中，按兩下 [系統**管理工具**]，然後按兩下 **[資料來源（ODBC）** ]。 或者，您可以叫用 odbcad32.exe。  
   
-2.  按一下 [**使用者 DSN**，**系統 DSN**，或**檔案 DSN** ] 索引標籤。  
+2.  按一下 [**使用者 DSN**]、[**系統 DSN**] 或 [檔案**DSN** ] 索引標籤。  
   
 3.  按一下記錄效能的資料來源。  
   
-4.  按一下**設定**。  
+4.  按一下 [**設定**]。  
   
-5.  在 Microsoft SQL Server 設定 DSN 精靈，瀏覽至頁面**記錄檔記錄 ODBC 驅動程式統計資料**。  
+5.  在 Microsoft SQL Server 設定 DSN Wizard 中，流覽至包含**記錄檔 ODBC 驅動程式統計資料的頁面至記錄**檔。  
   
-6.  選取 **記錄檔記錄 ODBC 驅動程式統計資料**。 在方塊中，放置應該記錄其統計資料之檔案的名稱。 （選擇性） 按一下**瀏覽**瀏覽檔案系統的統計資料記錄。  
+6.  選取 **[記錄 ODBC 驅動程式統計資料至記錄檔]** 。 在方塊中，放置應該記錄其統計資料之檔案的名稱。 或者，按一下 **[流覽**] 來流覽檔案系統中的統計資料記錄檔。  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>以程式設計方式記錄驅動程式效能資料  
   
-1.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_DATA_LOG 以及效能資料記錄檔的完整路徑和檔案名稱。 例如:  
+1.  使用 SQL_COPT_SS_PERF_DATA_LOG 和效能資料記錄檔的完整路徑和檔案名來呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 。 例如：  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_START 開始記錄效能資料。  
+2.  使用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_START 呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以開始記錄效能資料。  
   
-3.  （選擇性） 呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_LOG_NOW 和 NULL 寫入效能資料記錄檔中的效能資料的 tab 鍵分隔記錄。 這可以在應用程式執行時完成多次。  
+3.  （選擇性）使用 SQL_COPT_SS_LOG_NOW 和 Null 呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，將效能資料的 tab 鍵分隔記錄寫入效能資料記錄檔。 這可以在應用程式執行時完成多次。  
   
-4.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_STOP 停止記錄效能資料。  
+4.  使用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_STOP 呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以停止記錄效能資料。  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>將驅動程式效能資料提取到應用程式中  
   
-1.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_START 開始分析效能資料。  
+1.  使用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_START 呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以開始分析效能資料。  
   
-2.  呼叫[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)利用 SQL_COPT_SS_PERF_DATA 和 SQLPERF 結構的指標位址。 第一個這類呼叫會將指標設定為有效 SQLPERF 結構的位址，其中包含目前的效能資料。 驅動程式不會在效能結構中持續重新整理資料。 應用程式必須重複呼叫[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)每次需要重新整理的結構與較新的效能資料。  
+2.  使用 SQL_COPT_SS_PERF_DATA 和 SQLPERF 結構之指標的位址來呼叫[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 。 第一個這類呼叫會將指標設定為有效 SQLPERF 結構的位址，其中包含目前的效能資料。 驅動程式不會在效能結構中持續重新整理資料。 應用程式必須在需要使用更多目前的效能資料重新整理結構時，重複呼叫[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 。  
   
-3.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_STOP 停止記錄效能資料。  
+3.  使用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_STOP 呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，以停止記錄效能資料。  
   
 ## <a name="example"></a>範例  
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫 (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫 （您可以從[Microsoft SQL Server 範例和 [社區專案](https://go.microsoft.com/fwlink/?LinkID=85384)] 首頁下載 AdventureWorks 範例資料庫）。此資料來源必須以作業系統所提供的 ODBC 驅動程式為基礎（驅動程式名稱為 "SQL Server"）。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
@@ -242,7 +241,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [分析 ODBC 驅動程式效能的如何主題&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
+ [分析 odbc 驅動程式效能的使用說明主題&#40;odbc&#41; ](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [分析 ODBC 驅動程式效能](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Isscommandwithparameters:: Setparameterproperties (OLE DB) |Microsoft Docs'
+title: ISSCommandWithParameters：： SetParameterProperties （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e4ec4a160920d8490cb7578de76656a1253adac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82422e9d2816f08f3a4df3f42f1eeddb1c13c3f5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050975"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761773"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   依照序數根據每個參數來設定參數的屬性，或指定 SSPARAMPROPS 結構的陣列來設定大量參數屬性。  
   
@@ -53,7 +52,7 @@ HRESULT SetParameterProperties(
   
  在呼叫 **ISSCommandWithParameters::SetParameterProperties** 方法之前，必須先呼叫 **SetParameterInfo** 方法。 呼叫 `SetParameterProperties(0, NULL)` 會清除所有指定的參數屬性，呼叫 `SetParameterInfo(0,NULL,NULL)` 則會清除所有的參數資訊，包括任何可能與參數相關聯的屬性。  
   
- 呼叫**isscommandwithparameters:: Setparameterproperties**即可指定屬性參數而不是型別 DBTYPE_XML 或 DBTYPE_UDT 會傳回 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED，並標記*dwStatus*所有 DBPROPs SSPARAMPROPS 中包含具有 DBPROPSTATUS_NOTSET 的該參數的欄位。 系統會周遊 SSPARAMPROPS 中包含的每個 DBPROPSET 的 DBPROP 陣列，以偵測 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED 所參考的是哪一個參數。  
+ 呼叫**ISSCommandWithParameters：： SetParameterProperties**以指定參數的屬性，而不是 DBTYPE_XML 類型或 DBTYPE_UDT 會傳回 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED，並將所有的*dwStatus*欄位標記為標示出 dbprop 包含在具有 DBPROPSTATUS_NOTSET 之該參數的 SSPARAMPROPS 中。 系統會周遊 SSPARAMPROPS 中包含的每個 DBPROPSET 的 DBPROP 陣列，以偵測 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED 所參考的是哪一個參數。  
   
  如果呼叫 **ISSCommandWithParameters::SetParameterProperties** 來指定參數 (尚未使用 **SetParameterInfo** 設定其參數資訊) 的屬性，則提供者會傳回 E_UNEXPECTED 且顯示下列錯誤訊息：  
   
@@ -73,9 +72,9 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- 在開始 database engine 的改進[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允許 isscommandwithparameters:: Setparameterproperties 以取得更精確的預期結果的描述。 這些更精確的結果可能不同於在舊版的 isscommandwithparameters:: Setparameterproperties 傳回的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
+ 從開始，資料庫引擎的改良功能 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可讓 ISSCommandWithParameters：： SetParameterProperties 取得預期結果的更精確描述。 這些更精確的結果可能與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中 ISSCommandWithParameters：： SetParameterProperties 所傳回的值不同。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
 |*cPropertySets*|*rgPropertySets* 中的 DBPROPSET 結構數目。|  

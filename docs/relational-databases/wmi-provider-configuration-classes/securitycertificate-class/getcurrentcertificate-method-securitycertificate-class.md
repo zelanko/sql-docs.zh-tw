@@ -1,6 +1,6 @@
 ---
-title: GetCurrentCertificate 方法 （SecurityCertificate 類別） |Microsoft Docs
-ms.custom: ''
+title: GetCurrentCertificate 方法（SecurityCertificate）
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c7f5c207f786936a6bb9aebec03fb6e14fe7c1cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d30807d8d20bc5bf969aafd2e700ed88bc3b8584
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912046"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660168"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>GetCurrentCertificate 方法 (SecurityCertificate 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ object.GetCurrentCertificate(SHA , SQLInstance)
   
 #### <a name="parameters"></a>參數  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
 |*SHA*|在方法完成之後指定目前安全性憑證 SHA 指模的字串值 (輸出參數)。|  
 |*SQLInstance*|指定需要憑證之執行個體的字串值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- A **uint32**值，也就是 0，如果已成功修改此服務，不支援要求，則為 1，而其他數值則表示錯誤。  
+ **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1，以及其他指示錯誤的任何數位。  
   
 ## <a name="remarks"></a>備註  
   

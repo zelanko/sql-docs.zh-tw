@@ -1,5 +1,5 @@
 ---
-title: 模型 (Master Data Services) | Microsoft Docs
+title: 模型
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0376509a71196a8b674d6101f65b4845c660ac28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079608"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727944"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
 
@@ -59,7 +59,7 @@ ms.locfileid: "68079608"
 ## <a name="model-example"></a>模型範例  
  在下列範例中，Product 模型中的物件以邏輯方式分組產品相關資料。  
   
- ![產品模型主要資料範例](../master-data-services/media/mds-conc-model.gif "產品模型主要資料範例")  
+ ![產品型號主要資料範例](../master-data-services/media/mds-conc-model.gif "產品型號主要資料範例")  
   
  其他常見的模型如下：  
   

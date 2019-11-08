@@ -1,6 +1,6 @@
 ---
-title: MultiIpConfigurationSupport 屬性 （ServerNetworkProtocol 類別） |Microsoft Docs
-ms.custom: ''
+title: MultiIpConfigurationSupport 屬性（ServerNetworkProtocol）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 apiname:
-- MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)
+- MultiIpConfigurationSupport Property (ServerNetworkProtocol
 apilocation:
 - sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25e7846efd18928dc42f0cdca5046ee7b95599ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ed53a60bd0ef285468d71c4018ba7a4ed9cd8c6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933710"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660377"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ object.MultiIpConfigurationSupport [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ProtocolName 屬性 （ServerNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)物件，表示執行個體所使用的網路通訊協定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例所使用之網路通訊協定的[ProtocolName 屬性（ServerNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 布林值，指定伺服器網路通訊協定是否支援多個 IP 位址：**真**如果伺服器網路通訊協定，支援多個 IP 位址或**false**如果伺服器網路通訊協定不支援多個 IP 位址。  
+ 指定伺服器網路通訊協定是否支援多個 IP 位址的布林值：如果伺服器網路通訊協定支援多個 IP 位址，則**為 true** ，如果不支援多個 ip 位址，則為**false** 。伺服器網路通訊協定。  
   
 ## <a name="remarks"></a>備註  
   

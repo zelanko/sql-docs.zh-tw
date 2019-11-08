@@ -1,6 +1,6 @@
 ---
-title: SetDefaults 方法 （CInstance 類別） |Microsoft Docs
-ms.custom: ''
+title: SetDefaults 方法（CInstance）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b89f082105b0723e3e9b725d2f7941502e16d04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d75a202b368df339b97a4a9588ad3ac073429c6e
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044325"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659635"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance 類別 - SetDefaults 方法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  設定執行個體的所有預設值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]覆寫現有資料的選項與用戶端。  
+  使用覆寫現有資料的選項，設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端實例的所有預設值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,12 +41,12 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>參數  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
-|*OverwriteAll*|布林值，指定是否要覆寫現有值執行個體上的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端： **，則為 true**覆寫現有的資料，或**false**則現有資料不會覆寫。|  
+|*OverwriteAll*|布林值，指定是否要覆寫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端實例上現有的值： **true**以覆寫現有的資料，如果不覆寫現有的資料，則為**false** 。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- A **uint32**值，也就是 0，如果已成功修改此服務，不支援要求，則為 1，而其他數值則表示錯誤。  
+ **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1，以及其他指示錯誤的任何數位。  
   
 ## <a name="remarks"></a>備註  
   

@@ -1,5 +1,5 @@
 ---
-title: 變更使用者的電子郵件地址 (Master Data Services) | Microsoft Docs
+title: 變更使用者&#39;的電子郵件地址
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0cf7c9eb150ce54a9ec04c996c4c7e4d1f58b858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b1941b6be24b926b870ad284b0aa8ce7242fba4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047346"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729689"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>變更使用者的電子郵件地址 (Master Data Services)
 
@@ -28,21 +28,21 @@ ms.locfileid: "68047346"
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
--   您必須擁有存取 [使用者及群組]  功能區域的權限。  
+-   您必須擁有存取 [使用者及群組] 功能區域的權限。  
   
 ### <a name="to-change-a-users-email-address-or-default-email-format"></a>變更使用者的電子郵件地址或預設電子郵件格式  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
-2.  在 [使用者]  頁面上，選取要編輯之使用者的資料列。  
+2.  在 [使用者] 頁面上，選取要編輯之使用者的資料列。  
   
 3.  按一下 **[編輯選取的使用者]** 。  
   
-4.  按一下 [一般]  索引標籤上方的 [編輯]  。  
+4.  按一下 [一般] 索引標籤上方的 [編輯]。  
   
 5.  更新電子郵件地址或電子郵件格式。  
   
-6.  按一下 [儲存]  。  
+6.  按一下 **[儲存]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
   

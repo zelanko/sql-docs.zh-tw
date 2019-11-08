@@ -1,6 +1,6 @@
 ---
-title: PauseService 方法 （SqlService 類別） |Microsoft Docs
-ms.custom: ''
+title: PauseService 方法（SqlService）
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c96a9d8639a9698d0c949981e152b369d36432cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37b0020c00af771096a2e9066ef99752c66d9e04
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057947"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659276"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,6 +45,6 @@ object.PauseService()
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

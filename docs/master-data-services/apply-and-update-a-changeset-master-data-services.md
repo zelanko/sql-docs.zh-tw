@@ -1,5 +1,5 @@
 ---
-title: 套用及更新變更集 (Master Data Services) | Microsoft Docs
+title: 套用及更新變更集
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 386bdbd2e7361567030a7d2a97e270172bdd21c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0e937ff9222553c42eacefc173dfec90bb6ebc6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047756"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728776"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>套用及更新變更集 (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68047756"
 
   變更集是對主要資料所做的暫止變更集合。 您可以在本機套用變更集，以檢視、新增、更新及刪除變更集中的暫止變更。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "68047756"
   
 ## <a name="to-apply-and-update-a-changeset"></a>套用及更新變更集  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [Explorer]  。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取模型和版本，然後按一下 [Explorer]。  
   
-2.  按一下 [實體]  功能表中的實體。  
+2.  按一下 [實體] 功能表中的實體。  
   
-3.  在右窗格中，選取 [變更集]  ，然後按兩下您要檢視及變更的變更集。  
+3.  在右窗格中，選取 [變更集]，然後按兩下您要檢視及變更的變更集。  
   
 4.  按一下 **[套用]** 。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68047756"
   
      建立、刪除及更新成員會在變更集中產生變更。  
   
-5.  若要還原暫止的變更，請在 [變更集]  窗格中，以滑鼠右鍵按一下方格，然後按一下 [還原]  。  
+5.  若要還原暫止的變更，請在 [變更集] 窗格中，以滑鼠右鍵按一下方格，然後按一下 [還原]。  
   
 ## <a name="next-steps"></a>後續步驟  
  [認可或提交變更集 &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  

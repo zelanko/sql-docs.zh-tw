@@ -1,5 +1,5 @@
 ---
-title: 實體 (Master Data Services) | Microsoft Docs
+title: 實體
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 23e4773e96fbee408290684c8e9c5092c1d7ea40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052037"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728162"
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "68052037"
   
  以您要管理的主要資料清單來擴展實體。  
   
- 實體可用來建立衍生階層，也就是以多個實體為基礎的層級型階層。 如需詳細資訊，請參閱 [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
+ 實體可用來建立衍生階層，也就是以多個實體為基礎的層級型階層。 如需詳細資訊，請參閱[衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
  您也可以讓實體包含明確階層 (以單一實體為基礎的不完全結構) 和集合 (成員子集的 One-off 合併)。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md) 和[集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)。  
   

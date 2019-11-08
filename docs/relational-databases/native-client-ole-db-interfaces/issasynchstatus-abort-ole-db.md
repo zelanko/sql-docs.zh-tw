@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus：： Abort （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55b018941fbd8bb4cecef7c5f10ea41bea566534
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7250c27e2ce35abbd15fc334f4f0ac07e94e985b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051027"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789526"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   取消非同步執行的作業。  
   
@@ -40,7 +39,7 @@ HRESULT Abort(
   
 ## <a name="arguments"></a>引數  
  *hChapter*[in]  
- 要中止作業之章節的控制代碼。 如果所呼叫的物件不是資料列集物件或者作業不適用於章節，呼叫端必須將*hChapter*為 DB_NULL_HCHAPTER。  
+ 要中止作業之章節的控制代碼。 如果所呼叫的物件不是資料列集物件，或作業不適用於某個章節，則呼叫端必須將*hchapter 設定*設定為 DB_Null_HCHAPTER。  
   
  *eOperation*[in]  
  要中止的作業。 這應該為下列值：  
@@ -61,14 +60,14 @@ HRESULT Abort(
  發生了提供者特定的錯誤。  
   
  E_INVALIDARG  
- *HChapter*參數不是 DB_NULL_HCHAPTER 或*eOperation*不是 DBASYNCH_OPEN。  
+ *Hchapter 設定*參數不 DB_Null_HCHAPTER，或*eOperation*不 DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
- **Issasynchstatus:: Abort**上的資料來源物件上呼叫**idbinitialize:: Initialize**尚未呼叫，或尚未完成。  
+ 在尚未呼叫**IDBInitialize：： Initialize**的資料來源物件上呼叫**ISSAsynchStatus：： Abort** ，或尚未完成。  
   
- 已在呼叫 **IDBInitialize::Initialize** 的資料來源物件上呼叫 **ISSAsynchStatus::Abort**，但是接著在初始化之前將它取消，或是它已經逾時。此資料來源物件仍未初始化。  
+ 在呼叫了**IDBInitialize：： Initialize**的資料來源物件上呼叫了**ISSAsynchStatus：： Abort** ，但後來在初始化之前取消，或已超時。資料來源物件仍未初始化。  
   
- **Issasynchstatus:: Abort**所在的資料列集上呼叫**itransaction:: Commit**或**itransaction:: Abort**先前已呼叫，以及資料列集未存留在認可或中止，且在廢止狀態。  
+ 在先前呼叫了**ITransaction：： Commit**或**ITransaction：： abort**的資料列集上呼叫**ISSAsynchStatus：： Abort** ，而且資料列集不會存留在 Commit 或 Abort，而且處於廢止狀態。  
   
  已在資料列集上呼叫 **ISSAsynchStatus::Abort**，這個資料列集已在其初始化階段非同步地取消。 此資料列集處於廢止狀態。  
   

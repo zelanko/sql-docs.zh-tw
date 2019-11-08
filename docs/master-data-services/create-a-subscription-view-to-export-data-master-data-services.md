@@ -1,5 +1,5 @@
 ---
-title: 建立訂閱檢視以匯出資料 (Master Data Services) | Microsoft Docs
+title: 建立訂閱檢視以匯出資料
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896912"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728476"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>建立訂閱檢視以匯出資料 (Master Data Services)
 
@@ -26,12 +26,12 @@ ms.locfileid: "67896912"
 
   建立訂閱檢視，以將 Master Data Services 資料匯出至訂閱系統。 您正要建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中資料的檢視。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[整合管理]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>建立和編輯訂閱檢視  
   
@@ -39,50 +39,50 @@ ms.locfileid: "67896912"
   
 2.  按一下功能表列上的 **[建立檢視表]** 。  
   
-3.  在 [訂閱檢視]  頁面上，按一下 [加入]  建立檢視，或按一下 [編輯]  編輯檢視。 隨即會在右側顯示面板。  
+3.  在 [訂閱檢視] 頁面上，按一下 [加入] 建立檢視，或按一下 [編輯] 編輯檢視。 隨即會在右側顯示面板。  
   
-4.  在 [建立訂閱檢視]  窗格的 [名稱]  方塊中，輸入該檢視的名稱。  
+4.  在 [建立訂閱檢視] 窗格的 [名稱] 方塊中，輸入該檢視的名稱。  
   
-     在 [編輯訂閱檢視]  窗格的 [名稱]  方塊中，輸入該檢視的已更新名稱。  
+     在 [編輯訂閱檢視] 窗格的 [名稱] 方塊中，輸入該檢視的已更新名稱。  
   
 5.  從 **[模型]** 清單中選取模型。  
   
-6.  選取 [Include soft-deleted members]\ (包含虛刪除成員)  以包含檢視中的虛刪除成員。  
+6.  選取 [Include soft-deleted members]\ (包含虛刪除成員)以包含檢視中的虛刪除成員。  
   
-7.  在 [版本選項]  中選取 [版本]  或 [版本旗標]  ，然後從對應的清單中選取。  
+7.  在 [版本選項] 中選取 [版本] 或 [版本旗標]，然後從對應的清單中選取。  
   
     > [!TIP]  
     >  根據版本旗標建立訂閱檢視。 當您鎖定版本時，您可以重新指派旗標給開啟的版本，而不用更新訂閱檢視。  
   
-8.  選取 [資料來源]  選項中的 [實體]  或 [衍生階層]  ，然後從對應的清單中選取。  
+8.  選取 [資料來源] 選項中的 [實體] 或 [衍生階層] ，然後從對應的清單中選取。  
   
 9. 從 **[格式]** 清單中選取訂閱檢視格式。  
   
 10. 如果您從 **[格式]** 清單中選擇 **[明確層級]** 或 **[衍生層級]** ，請輸入階層內要加入檢視中的層級數。  
   
-11. 按一下 [儲存]  。  
+11. 按一下 **[儲存]** 。  
   
 ## <a name="view-information"></a>檢視資訊  
  對於每個建立的檢視，會將含十個資料行的資料列加入方格中。 下表描述該資料行。  
   
-|「資料行」|描述|  
+|資料行|說明|  
 |------------|-----------------|  
-|[狀態]|檢視狀態。<br /><br /> 當您按一下 [儲存]  時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新檢視。<br /><br /> 如果建立或編輯檢視時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
+|狀態|檢視狀態。<br /><br /> 當您按一下 [**儲存**] 時，會顯示 [![正在更新狀態](../master-data-services/media/mds-statusicon-updating.png "I正在更新狀態的 con」)影像] 圖示，表示正在更新此視圖。<br /><br /> 如果建立或編輯檢視時發生錯誤，則會顯示 [![錯誤狀態](../master-data-services/media/mds-statusicon-error.png "I錯誤狀態的 con」)影像] 圖示。<br /><br /> 否則，狀態為 [確定]，並顯示 [![確定狀態影像] 圖示](../master-data-services/media/mds-statusicon-ok.png "I「確定」狀態的 con)。|  
 |名稱|訂閱檢視名稱。|  
-|[模型]|模型名稱。|  
-|Version|版本名稱。|  
+|模型|模型名稱。|  
+|版本|版本名稱。|  
 |版本旗標|版本旗標名稱。|  
 |衍生階層|衍生階層名稱。|  
 |實體|實體名稱。|  
-|[格式]|指定檢視中資料的類型。|  
-|層級|指定檢視中的層級數目 (僅用於明確層級或衍生層級檢視格式)。|  
+|格式|指定檢視中資料的類型。|  
+|Level|指定檢視中的層級數目 (僅用於明確層級或衍生層級檢視格式)。|  
 |包含刪除成員|表示檢視中是否包含虛刪除成員。|  
   
  當您按一下檢視時，會顯示下列資訊。  
   
 -   **建立者**：建立檢視的使用者名稱。  
   
--   **於**：建立檢視的日期和時間。  
+-   **於**：檢視的建立日期和時間。  
   
 -   **更新者**：上次更新檢視的使用者名稱。  
   

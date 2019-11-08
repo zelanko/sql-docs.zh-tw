@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpcolfmt (OLE DB) |Microsoft Docs'
+title: IBCPSession：： BCPColFmt （OLE DB） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b318557535552d910981bdb43c31973f0c845b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0471fc5fe8d7fc8b3b55d6fec39780e60f591db9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091136"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73765686"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   在程式變數與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行之間建立繫結。  
   
@@ -64,7 +63,7 @@ HRESULT BCPColFmt(
   
 -   選擇性結束位元組順序的長度。  
   
- **BCPColFmt** 的每個呼叫都會針對一個使用者檔案欄位指定格式。 例如，若要在五個欄位的使用者資料檔案中變更三個欄位的預設值，請先呼叫 `BCPColumns(5)`，然後呼叫 **BCPColFmt** 五次，其中三次呼叫會設定您的自訂格式。 針對其餘的兩個呼叫中，設定*eUserDataType*為 BCP_TYPE_DEFAULT，並將*cbIndicator*， *cbUserData*，和*cbUserDataTerm*至 0、bcp_variable_length 和 0 分別。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
+ **BCPColFmt** 的每個呼叫都會針對一個使用者檔案欄位指定格式。 例如，若要在五個欄位的使用者資料檔案中變更三個欄位的預設值，請先呼叫 `BCPColumns(5)`，然後呼叫 **BCPColFmt** 五次，其中三次呼叫會設定您的自訂格式。 針對剩餘的兩個呼叫，請將*eUserDataType*設定為 BCP_TYPE_DEFAULT，並分別將*cbIndicator*、 *cbUserData*和*cbUserDataTerm*設定為0、BCP_VARIABLE_LENGTH 和0。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
   
 > [!NOTE]  
 >  必須先呼叫 [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 方法，才能進行 **BCPColFmt** 的任何呼叫。 您必須在使用者檔案中，針對每個資料行呼叫 **BCPColFmt** 一次。 針對任何使用者檔案資料行多次呼叫 **BCPColFmt** 會產生錯誤。  
@@ -78,7 +77,7 @@ HRESULT BCPColFmt(
  使用者的資料檔案中的欄位索引。  
   
  *eUserDataType*[in]  
- 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 標頭檔 (sqlncli.h)，為 BCP_TYPE_XXX 格式，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 **eUserDataType** 引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行大量複製作業，並複製到檔案中：  
+ 使用者的資料檔案中欄位的資料類型。 可用的資料類型會列在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 標頭檔（sqlncli）中，BCP_TYPE_XXX 格式，例如 BCP_TYPE_SQLINT4。 如果指定了 BCP_TYPE_DEFAULT 值，提供者會嘗試使用與資料表或檢視表資料行類型相同的類型。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eUserDataType**引數為 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 時，要從** 進行大量複製作業，並複製到檔案中：  
   
 -   如果來源資料行不是小數或數值，便會使用預設的有效位數和小數位數。  
   

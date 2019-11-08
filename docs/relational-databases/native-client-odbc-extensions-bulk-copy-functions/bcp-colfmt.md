@@ -1,5 +1,5 @@
 ---
-title: bcp_colfmt | Microsoft Docs
+title: bcp_colfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,17 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a08973bcfadb88750129fd440eeabb3f69bb2ddb
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707735"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783147"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時， **bcp_colfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式指定為 @no__t 1 資料表。 當做目標格式使用時，會使用以**bcp_colfmt**指定的資料行格式建立資料檔案。  
+  在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時， **bcp_colfmt**會將當做大量複製中資料來源使用之現有資料檔案的格式指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 當做目標格式使用時，會使用以**bcp_colfmt**指定的資料行格式建立資料檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +61,7 @@ RETCODE bcp_colfmt (
   
  若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。  
   
- 當*eUserDataType*為 SQLDECIMAL 或 SQLNUMERIC 時，將大量複製超出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：  
+ 當*eUserDataType*為 SQLDECIMAL 或 SQLNUMERIC 時，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量複製到檔案中：  
   
 -   如果來源資料行不是**decimal**或**numeric**，就會使用預設的有效位數和小數位數。  
   
@@ -82,11 +81,11 @@ RETCODE bcp_colfmt (
  *cbUserData*  
  這是使用者檔案中此資料行之資料的最大長度 (以位元組為單位)，不包括任何長度指標或結束字元的長度。  
   
- 將*cbUserData*設定為 SQL_Null_DATA 表示資料檔案資料行中的所有值都是，或應設定為 Null。  
+ 將*cbUserData*設定為 SQL_Null_DATA 表示資料檔案欄位中的所有值都是，或應設定為 Null。  
   
  將*cbUserData*設定為 SQL_VARLEN_DATA 表示系統應該決定每個資料行中的資料長度。 對於某些資料行，這可能表示長度/null 指標會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複本之資料前產生，或者表示該指標應該會在複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料中出現。  
   
- 若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元和二進位資料類型， *cbUserData*可以是 SQL_VARLEN_DATA、SQL_Null_DATA、0或某個正數值。 如果*cbUserData*為 SQL_VARLEN_DATA，則系統會使用長度指標（如果有的話）或結束字元序列來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果*cbUserData*為 SQL_VARLEN_DATA，資料類型為 @no__t 1 個字元或二進位類型，而且長度指標和結束字元順序都未指定，系統會傳回錯誤訊息。  
+ 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元和二進位資料類型而言， *cbUserData*可以是 SQL_VARLEN_DATA、SQL_Null_DATA、0或某個正數值。 如果*cbUserData*為 SQL_VARLEN_DATA，則系統會使用長度指標（如果有的話）或結束字元序列來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果*cbUserData*為 SQL_VARLEN_DATA，則資料類型為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元或二進位類型，而且長度指標和結束字元順序都未指定，系統會傳回錯誤訊息。  
   
  如果 *cbUserData* 為 0 或正值，則系統會使用 *cbUserData* 當作最大的資料長度。 不過，如果除了正的 *cbUserData* 之外，也提供長度指標或結束字元順序，系統會使用導致複製最少量資料的方式決定資料長度。  
   
@@ -104,7 +103,7 @@ RETCODE bcp_colfmt (
  *cbUserDataTerm*  
  這是要用於此資料行的結束字元順序長度 (以位元組為單位)。 如果資料中沒有或不需要結束字元，將此值設定為 0。  
   
- *idxServerCol*  
+ *並將 idxservercol*  
  這是資料行在資料庫資料表中的序數位置。 第一個資料行編號為 1。 資料行的序數位置是由[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)所報告。  
   
  如果此值為 0，大量複製在資料檔案中會忽略資料行。  
@@ -131,9 +130,9 @@ RETCODE bcp_colfmt (
   
  若為*cbIndicator*，值為8表示大數數值型別現在有效。 如果有針對其對應資料行是新最大類型的欄位指定前置詞，則僅能將該前置詞設定為 8。 如需詳細資訊，請參閱[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)。  
   
- 呼叫**bcp_colfmt**之前，必須先呼叫**bcp_columns**函數。  
+ 呼叫**bcp_colfmt**之前，必須先呼叫**bcp_columns**函式。  
   
- 您必須針對使用者檔案中的每個資料行呼叫**bcp_colfmt**一次。  
+ 您必須針對使用者檔案中的每個資料行呼叫一次**bcp_colfmt** 。  
   
  針對任何使用者檔案資料行多次呼叫**bcp_colfmt**會造成錯誤。  
   

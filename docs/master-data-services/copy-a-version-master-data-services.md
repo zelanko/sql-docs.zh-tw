@@ -1,5 +1,5 @@
 ---
-title: 複製版本 (Master Data Services) | Microsoft Docs
+title: 複製版本
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcdf2ee38e3b45a6495c0d6b3dbc643ce2b6ea38
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079738"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728545"
 ---
 # <a name="copy-a-version-master-data-services"></a>複製版本 (Master Data Services)
 
@@ -31,20 +31,20 @@ ms.locfileid: "68079738"
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
--   您必須擁有存取 [版本管理] 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   您必須具有存取 [版本管理] 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 ### <a name="to-copy-a-version"></a>若要複製版本  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[版本管理]** 。  
   
-2.  在 [管理版本]  頁面上，選取要複製之版本的資料列。  
+2.  在 [管理版本] 頁面上，選取要複製之版本的資料列。  
   
     > [!NOTE]  
-    >  根據 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的設定，您或許只能複製 [已認可]  狀態的版本。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+    >  根據 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的設定，您或許只能複製 [已認可] 狀態的版本。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
-3.  按一下 [複製]  。  
+3.  按一下 [複製]。  
   
 4.  在確認對話方塊中按一下 **[確定]** 。  
   

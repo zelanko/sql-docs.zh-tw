@@ -1,5 +1,5 @@
 ---
-title: sys.databases _materialized_view_column_distribution_properties (Transact-sql) |Microsoft Docs
+title: sys.databases pdw_materialized_view_column_distribution_properties （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,20 +12,20 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 508d34ec59252407b79bb9863d82a46c6ce8627f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811433"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729861"
 ---
-# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>sys.databases _materialized_view_column_distribution_properties (Transact-sql) (預覽)
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys.databases pdw_materialized_view_column_distribution_properties （Transact-sql） 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 在具體化視圖中顯示資料行的散發資訊。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|資料行所屬物件的識別碼。 |  
 |column_id|**int**|資料行的識別碼。|  
@@ -34,9 +34,10 @@ ms.locfileid: "68811433"
 ## <a name="permissions"></a>Permissions 
 
 需要 VIEW DATABASE STATE 權限。
- 
+
 ## <a name="see-also"></a>另請參閱
 
+[使用具體化 View  進行效能微調](/azure/sql-data-warehouse/performance-tuning-materialized-views)  
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

@@ -1,5 +1,5 @@
 ---
-title: 衍生階層 (Master Data Services) | Microsoft Docs
+title: 衍生階層
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e75b76eda87580063dfdaea081a1b4f0efaa518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084215"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728282"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>衍生階層 (Master Data Services)
 
@@ -62,12 +62,12 @@ ms.locfileid: "68084215"
   
  在衍生階層中，您可以反白顯示 Product 與 Subcategory 之間的關聯性，然後反白顯示 Subcategory 與 Category 之間的關聯性。 當您在此階層中檢視成員時，樹狀結構中的每個層級都包含相同實體中的成員。  
   
- ![越野車衍生的階層範例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "越野車衍生的階層範例")  
+ ![山區自行車衍生階層範例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "山區自行車衍生階層範例")  
   
  這種類型的階層可防止您將成員移到無效的層級。 例如，您可以將某個子類別目錄 Road Bikes 中的 Road-650 自行車移到另一個子類別目錄 Mountain Bikes。 您無法像 1 {Bikes} 一樣直接移動類別目錄底下的 Road-650。 每當您在階層樹狀結構中移動成員時，該成員的網域屬性值都會隨之變更，以反映這個移動作業。  
   
 ## <a name="notes"></a>注意  
- 衍生的階層樹狀結構中的所有成員會依照 ID 都排序 您無法變更排序次序。  
+ 衍生階層樹狀結構中的所有成員都會依識別碼排序。 您無法變更排序次序。  
   
  如果成員的網域屬性為空白，而且此屬性用於衍生階層，則該成員不會顯示在階層中。 建立商務規則來要求填入屬性。 如需詳細資訊，請參閱[要求屬性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)。  
   

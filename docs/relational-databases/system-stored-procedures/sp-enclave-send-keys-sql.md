@@ -1,7 +1,7 @@
 ---
-title: sp_enclave_send_keys (Transact-sql) |Microsoft Docs
+title: sp_enclave_send_keys （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -19,17 +19,26 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ced2feee2227ba1db492f721f57907069c5d99
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661353"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593755"
 ---
-# <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys    (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys （Transact-sql）
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-將資料庫中所有已啟用記憶體保護區的資料行加密金鑰, 傳送至[安全記憶體保護區&#40;資料庫引擎&#41;Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)所使用的記憶體保護區。
+將資料庫中定義的資料行加密金鑰傳送至搭配[安全記憶體保護區 Always Encrypted](../security/encryption/always-encrypted-enclaves.md)使用的伺服器端安全記憶體保護區。
+
+`sp_enclave_send_keys` 只會傳送已啟用記憶體保護區的索引鍵，並將使用隨機加密的資料行加密並擁有索引。 針對一般使用者查詢，用戶端驅動程式會提供記憶體保護區，其中包含查詢中計算所需的索引鍵。 `sp_enclave_send_keys` 會傳送資料庫中定義的所有資料行加密金鑰，並用於索引加密的資料行。 
+
+`sp_enclave_send_keys` 提供簡單的方法，將金鑰傳送至記憶體保護區，並在資料行加密金鑰快取中填入後續的索引作業。 使用 `sp_enclave_send_keys` 啟用：
+- DBA 在加密資料庫資料行上重建或更改索引或統計資料（如果 DBA 無法存取資料行主要金鑰）。 請參閱使用快取的資料[行加密金鑰叫用索引作業](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys)。
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]，以完成已加密資料行上索引的復原。 請參閱[資料庫](../security/encryption/always-encrypted-enclaves.md#database-recovery)復原。
+- 使用 .NET Framework Data Provider SQL Server 的應用程式，將資料大量載入加密的資料行。
+
+若要成功叫用 `sp_enclave_send_keys`，您必須使用針對資料庫連接啟用的 Always Encrypted 和記憶體保護區計算來連接到資料庫。 您也必須能夠存取資料行主要金鑰，保護您要傳送的資料行加密金鑰，而且您需要存取資料庫中 Always Encrypted 金鑰中繼資料的許可權。 
 
 ## <a name="syntax"></a>語法  
   
@@ -50,16 +59,9 @@ sp_enclave_send_keys
 
 這個預存程式沒有任何結果集。
   
-## <a name="remarks"></a>備註
-
-如果符合下列所有條件, **sp_enclave_send_keys**會將已啟用記憶體保護區的資料行加密金鑰傳送至記憶體保護區:
-
-- SQL Server 實例中已啟用記憶體保護區。
-- 已從使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端驅動程式的應用程式叫用 sp_enclave_send_keys, 使用同時啟用 Always Encrypted 和記憶體保護區計算的資料庫連接, 支援安全記憶體保護區的 Always Encrypted。
-
 ## <a name="permissions"></a>Permissions
 
- 需要資料庫中的**VIEW ANY COLUMN ENCRYPTION KEY definition**和**VIEW ANY COLUMN MASTER KEY definition**許可權。  
+ 需要資料庫中的 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 和 `VIEW ANY COLUMN MASTER KEY DEFINITION` 許可權。  
   
 ## <a name="examples"></a>範例  
   
@@ -68,9 +70,8 @@ EXEC sp_enclave_send_keys;
 ```
 
 ## <a name="see-also"></a>另請參閱
+- [具有安全記憶體保護區的 Always Encrypted](../security/encryption/always-encrypted-enclaves.md) 
+ 
+- [使用具有安全記憶體保護區的 Always Encrypted，在資料行上建立及使用索引](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
- [使用 secure 記憶體保護區&#40;資料庫引擎的 Always Encrypted&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [教學課程：使用隨機加密在啟用記憶體保護區的資料行上建立和使用索引](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
- [使用快取的資料行加密金鑰叫用索引作業](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
- [使用隨機化加密之已啟用記憶體保護區的資料行索引](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
- [AlwaysOn 和資料庫移轉的考慮](../security/encryption/always-encrypted-enclaves.md#anchorname-1-considerations-availability-groups-db-migration)
+- [教學課程：使用隨機化加密在啟用記憶體保護區的資料行上建立及使用索引](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

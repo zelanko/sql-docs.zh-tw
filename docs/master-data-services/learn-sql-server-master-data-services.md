@@ -1,5 +1,5 @@
 ---
-title: 學習 SQL Server Master Data Services | Microsoft Docs
+title: 學習 SQL Server Master Data Services
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20920eb0a7a748b886444b44abef38708df0db46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4580db494d31a528a807cf4349e3ddc65b91aee
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007183"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729085"
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
 
@@ -26,16 +26,16 @@ ms.locfileid: "68007183"
   
   
 ## <a name="training"></a>訓練  
-* 若要瀏覽中導入的新功能[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，試試看[自學實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（使用您的 Microsoft 帳戶登入為必要）。  
-* 若要開發[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]解決方案來儲存和管理地理資料，使用適用於 Excel 的增益集的主要清單和[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]，試試看[自學實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 您將建立實體和階層，並使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 來擴展維度資料表。  
+* 若要探索 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中引進的新特性和功能，請嘗試[自學實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（必須使用您的 Microsoft 帳戶登入）。  
+* 若要使用適用于 Excel 的增益集和 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]開發 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 方案來儲存和管理主要資料清單，請試用一個自學的[實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 您將建立實體和階層，並使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 來擴展維度資料表。  
   
 ## <a name="videos"></a>視訊  
-* 若要了解 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]版的新功能，請 [**觀看這段影片**](https://www.youtube.com/watch?v=cKA72FpOVxI)。  
+* 若要了解 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 版的新功能，請[**觀看這段影片**](https://www.youtube.com/watch?v=cKA72FpOVxI)。  
   
 ## <a name="samples"></a>範例  
 * 若要深入了解如何使用模型、實體和階層來建構 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中的資料，請試用在安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]時所包含的範例模型。 如需部署範例的指示，請參閱 [部署範例模型和資料](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。   
   
-    如需範例模型 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 更新的資訊，請參閱 [SQL Server 範例：模型部署套件](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
+    如需範例模型 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 更新的資訊，請參閱 [SQL Server 範例︰模型部署套件](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
 * 如需如何自訂您和使用者與 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]之互動方式的示範，請試用 SQL Server 範例所隨附的MDS C# 主控台應用程式範例。 您可以從這個 [GitHub 儲存機制](https://github.com/Microsoft/sql-server-samples)，將 SQL Server 範例下載為 .zip 檔案。  
   

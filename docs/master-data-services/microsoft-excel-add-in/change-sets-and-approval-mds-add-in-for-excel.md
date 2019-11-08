@@ -1,5 +1,5 @@
 ---
-title: 變更集與核准 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+title: 變更集合並核准
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6239949729ba443d1b6d60b99bd4e888d72b20eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092470"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728016"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>變更集與核准 (適用於 Excel 的 MDS 增益集)
 

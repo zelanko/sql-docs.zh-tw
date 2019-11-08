@@ -1,5 +1,5 @@
 ---
-title: 主資料管理員 Web 應用程式 | Microsoft Docs
+title: 主資料管理員 Web 應用程式
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: be12690eac91a8e9c7746e12bc01fd64f35ba7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc881f7d3b232e8d2ae31041fd990e833acac901
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054487"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729095"
 ---
 # <a name="master-data-manager-web-application"></a>主資料管理員 Web 應用程式
 
@@ -26,7 +26,7 @@ ms.locfileid: "68054487"
 > [!IMPORTANT]
 >  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 僅適用於 Internet Explorer (IE) 9 或更新版本。 不支援 IE 8 和更早版本、Microsoft Edge 和 Chrome。  
 > 
-> **無法建立 MDS 網站嗎？**
+> **無法建立 MDS 網站？**
 > >如需如何解決此問題的指示，請參閱這份 Microsoft 技術支援文件。
 > [無法透過 SQL Server 2016 中的低權限帳戶建立 MDS 網站](https://aka.ms/mdssupport) 
   

@@ -1,5 +1,5 @@
 ---
-title: 階層 (Master Data Services) | Microsoft Docs
+title: 階層
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec9d1ce1e665abf0ce8f61218051e41e795b6441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945236"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729230"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
 
@@ -40,7 +40,7 @@ ms.locfileid: "67945236"
   
 -   來自單一實體的不完全階層，這些階層稱為明確階層。 如需詳細資訊，請參閱 [明確階層 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)。  
   
--   來自根據實體與及其屬性之間現有關聯性之多個實體的層級型階層，這些階層稱為衍生階層。 如需詳細資訊，請參閱 [衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
+-   來自根據實體與及其屬性之間現有關聯性之多個實體的層級型階層，這些階層稱為衍生階層。 如需詳細資訊，請參閱[衍生階層 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
 > [!NOTE]  
 >  階層中的所有成員都必須在相同的模型中。  
@@ -53,7 +53,7 @@ ms.locfileid: "67945236"
 ## <a name="hierarchy-example"></a>階層範例  
  在下列範例中，產品成員是依子類別目錄成員分組。  
   
- ![依子類別目錄分組之階層的範例](../master-data-services/media/mds-conc-hierarchy.gif "依子類別目錄分組之階層的範例")  
+ ![依子類別目錄分組的階層範例](../master-data-services/media/mds-conc-hierarchy.gif "依子類別目錄分組的階層範例")  
   
 ## <a name="related-tasks"></a>相關工作  
   

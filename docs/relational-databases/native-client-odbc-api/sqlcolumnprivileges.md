@@ -1,5 +1,5 @@
 ---
-title: SQLColumnPrivileges | Microsoft Docs
+title: SQLColumnPrivileges |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,22 +14,21 @@ ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f4ec3c0837f282193c937a4b0e8800b7456b57f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5356d408a5116f6ab2cd6ae6e0e16d2dc7c26df
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113585"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787472"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLColumnPrivileges**或是否有值存在都會傳回 SQL_SUCCESS*CatalogName*， *SchemaName*， *TableName*，或*ColumnName*參數。 **SQLFetch**無效的值用於這些參數時，會傳回 sql_no_data 為止。  
+  **SQLColumnPrivileges**會傳回 SQL_SUCCESS*CatalogName*、 *SchemaName*、 *TableName*或*ColumnName*參數的值是否存在。 當這些參數中使用了不正確值時， **SQLFetch**會傳回 SQL_NO_DATA。  
   
- **SQLColumnPrivileges**可以在靜態伺服器資料指標上執行。 嘗試執行**SQLColumnPrivileges**上可更新的 （動態或索引鍵集） 資料指標會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已變更。  
+ **SQLColumnPrivileges**可以在靜態伺服器資料指標上執行。 嘗試在可更新的（動態或索引鍵集）資料指標上執行**SQLColumnPrivileges**時，將會傳回 SQL_SUCCESS_WITH_INFO，表示資料指標類型已變更。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*CatalogName*參數：*Linked_Server_Name.Catalog_Name*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式藉由接受*CatalogName*參數的兩部分名稱，支援連結伺服器上之資料表的報告資訊： *Linked_Server_Name. Catalog_Name*。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLColumnPrivileges 函數](https://go.microsoft.com/fwlink/?LinkId=59335)   

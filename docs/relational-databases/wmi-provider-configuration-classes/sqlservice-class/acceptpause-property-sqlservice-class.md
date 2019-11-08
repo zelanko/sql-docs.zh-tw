@@ -1,6 +1,6 @@
 ---
-title: AcceptPause 屬性 （SqlService 類別） |Microsoft Docs
-ms.custom: ''
+title: AcceptPause 屬性（SqlService）
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6c6f79d468cefa3c9487a9827fc62c917bb39dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cacfdc65de94df31ab96559dc05888b85519bf59
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052323"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660819"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,6 +44,6 @@ object.AcceptPause [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

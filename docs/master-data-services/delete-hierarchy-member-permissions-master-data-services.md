@@ -1,5 +1,5 @@
 ---
-title: 刪除階層成員權限 (Master Data Services) | Microsoft Docs
+title: 刪除階層成員權限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bdb6a9b2c7e42406443b802803723fae4c60a7c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c441545bc88ef28031815cecb2c0f441fa1ea6a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906290"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729360"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>刪除階層成員權限 (Master Data Services)
 
@@ -27,12 +27,12 @@ ms.locfileid: "67906290"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ### <a name="to-delete-hierarchy-member-permissions"></a>若要刪除階層成員權限  
   
@@ -42,22 +42,22 @@ ms.locfileid: "67906290"
   
 3.  按一下 **[編輯選取的使用者]** 。  
   
-4.  按一下 [階層成員]  索引標籤。  
+4.  按一下 [階層成員] 索引標籤。  
   
-5.  從 [模型]  清單中選取模型。  
+5.  從 **[模型]** 清單中選取模型。  
   
 6.  從 **[版本]** 清單中選取版本。  
   
 7.  按一下 **[編輯]** 。  
   
-8.  在 [階層成員權限]  面板中，尋找擁有權限的樹狀節點。  
+8.  在 [階層成員權限] 面板中，尋找擁有權限的樹狀節點。  
   
-9. 按一下樹狀節點，然後在操作功能表中按一下 [節點]  。  
+9. 按一下樹狀節點，然後在操作功能表中按一下 [節點]。  
   
     > [!NOTE]  
     >  如果權限繼承自群組，則無法從使用者移除權限。 您必須改為從群組移除權限。  
   
-10. 按一下 [儲存]  。  
+10. 按一下 **[儲存]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層成員權限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   

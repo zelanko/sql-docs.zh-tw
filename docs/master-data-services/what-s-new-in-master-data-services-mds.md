@@ -1,5 +1,5 @@
 ---
-title: Master Data Services (MDS) 的新功能 | Microsoft Docs
+title: 新功能
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810498"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727785"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 
@@ -23,7 +23,7 @@ ms.locfileid: "68810498"
 
   本主題摘要 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本中變更及更新。 
   
- 如需如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中整理資料的概觀，請參閱 [Master Data Services 概觀](../master-data-services/master-data-services-overview-mds.md)。 
+ 如需如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 中整理資料的概觀，請參閱 [Master Data Services 概觀](../master-data-services/master-data-services-overview-mds.md)。 
   
  若要安裝 Master Data Services、設定資料庫和網站，以及部署範例模型，請參閱 [Master Data Services 概觀 (MDS)](../master-data-services/master-data-services-overview-mds.md)。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68810498"
   
  效能增強功能可讓您建立更大的模型、更有效率地載入資料，以及獲得更佳的整體效能。 這包括改進了 Microsoft Excel 增益集的效能，可降低資料載入時間，並可讓增益集能處理較大型的實體。  
   
- 如需 Microsoft Excel 增益集的詳細資訊，請參閱 [適用於 Microsoft Excel 的 Master Data Services 增益集](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
+ 如需 Microsoft Excel 增益集的詳細資訊，請參閱 [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)。  
   
  下列改良功能包括在內。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68810498"
 |原先安裝了 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的使用者具有伺服器系統管理員權限。|具有進階使用者函數權限的使用者|  
 |使用者具有模型層級的更新權限，但沒有任何模型子樹狀目錄的權限，因此暗示為模型管理員。|使用者擁有模型層級的明確系統管理員權限。|  
 |使用者擁有唯讀權限。|使用者擁有讀取存取權限。|  
-|使用者擁有更新權限。|使用者擁有所有四種存取權限：建立、更新、刪除與讀取。|  
+|使用者擁有更新權限。|使用者擁有所有四種存取權限︰建立、更新、刪除與讀取。|  
 |使用者擁有拒絕權限|使用者擁有拒絕權限|  
   
  如需有關權限的詳細資訊，請參閱[安全性 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)。  
@@ -177,7 +177,7 @@ ms.locfileid: "68810498"
     
  **自訂索引**  
   
- 您可以在一個屬性 (單一索引) 或實體的屬性清單 (複合索引) 上建立非叢集索引, 以協助改善查詢效能。 如需詳細資訊，請參閱[自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)。  
+ 您可以在一個屬性（單一索引）或實體的屬性清單（複合索引）上建立非叢集索引，以協助改善查詢效能。 如需詳細資訊，請參閱[自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)。  
  
   **屬性篩選**  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68810498"
    
  **已更新模型部署封裝範例**  
   
- 為支援新的案例，已更新了封裝範例。 如需詳細資訊，請參閱 [SQL Server 範例：模型部署套件 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
+ 為支援新的案例，已更新了封裝範例。 如需詳細資訊，請參閱 [SQL Server 範例：模型部署封裝 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

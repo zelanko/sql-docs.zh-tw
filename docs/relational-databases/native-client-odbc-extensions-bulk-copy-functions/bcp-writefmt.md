@@ -1,5 +1,5 @@
 ---
-title: bcp_writefmt | Microsoft Docs
+title: bcp_writefmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54b6f04dcc622cc5b8702d03d78a94e30e61fd7e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 388b51c79681589d3caec2ee3ea03b1ece6ff459
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707585"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782340"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   建立包含目前大量複製資料檔格式之描述的格式檔。  
   
@@ -44,21 +43,21 @@ RETCODE bcp_writefmt (
  *hdbc*  
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
- *szFormatFile*  
+ *Szformatfile 中*  
  這是用來接收資料檔格式值之使用者檔案的路徑和檔案名稱。  
   
 ## <a name="returns"></a>傳回值  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 格式檔案會指定大量複製所建立之資料檔的資料格式。 [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)的呼叫會定義資料檔案的格式。 **bcp_writefmt**會將此定義儲存在*szformatfile 中*所參考的檔案中。 如需詳細資訊，請參閱[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
+ 格式檔案會指定大量複製所建立之資料檔的資料格式。 呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)定義資料檔案的格式。 **bcp_writefmt**會將此定義儲存在*szformatfile 中*所參考的檔案中。 如需詳細資訊，請參閱[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
  如需**bcp**資料格式檔案結構的詳細資訊，請參閱[使用 bcp 公用程式&#40;SQL Server&#41;匯入和匯出大量資料](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
   
  若要載入儲存的格式檔案，請使用[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)。  
   
 > [!NOTE]  
->  **Bcp_writefmt**所產生的格式檔案僅支援與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0 和更新版本一起散發的**bcp**公用程式版本。  
+>  只有與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版及更新版本一起散發的**bcp**公用程式版本，才支援**bcp_writefmt**所產生的格式檔案。  
   
 ## <a name="example"></a>範例  
   

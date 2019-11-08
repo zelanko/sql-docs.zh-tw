@@ -1,5 +1,5 @@
 ---
-title: bcp_exec | Microsoft Docs
+title: bcp_exec |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85fc18ed18f157b47d9fd7b654cda4bf25e608ec
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0767886191923c15f65bde7b9fe4bfb7d270b271
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707682"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782758"
 ---
 # <a name="bcp_exec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   在資料庫資料表和使用者檔案間執行資料的完整大量複製。  
   
@@ -45,19 +44,19 @@ RETCODE bcp_exec (
  這是已啟用大量複製的 ODBC 連接控制代碼。  
   
  *pnRowsProcessed*  
- 這是 DBINT 的指標。 **Bcp_exec**函數會將成功複製的資料列數目填入此 DBINT。 如果*pnRowsProcessed*為 Null，則**bcp_exec**會忽略它。  
+ 這是 DBINT 的指標。 **Bcp_exec**函式會將成功複製的資料列數目填入此 DBINT。 如果*pnRowsProcessed*為 Null， **bcp_exec**會將它忽略。  
   
 ## <a name="returns"></a>傳回值  
- SUCCEED、SUCCEED_ASYNC 或 FAIL。 如果所有資料列都已複製， **bcp_exec**函數會傳回「成功」。 如果非同步大量複製作業仍未完成，則**bcp_exec**會傳回 SUCCEED_ASYNC。 如果發生完整失敗，或如果產生錯誤的資料列數到達使用[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)所指定的 BCPMAXERRS 值， **BCP_EXEC**會傳回 FAIL。 BCPMAXERRS 預設為 10。 BCPMAXERRS 選項僅會影響提供者在從資料檔讀取資料列 (而非傳送到伺服器的資料列) 時所偵測到的語法錯誤。 伺服器會在偵測到資料列的錯誤時中止批次。 檢查*pnRowsProcessed*參數是否有成功複製的資料列數目。  
+ SUCCEED、SUCCEED_ASYNC 或 FAIL。 如果所有資料列都已複製， **bcp_exec**函數會傳回成功。 如果非同步大量複製作業仍未完成， **bcp_exec**會傳回 SUCCEED_ASYNC。 如果發生完整失敗，或如果產生錯誤的資料列數到達使用[BCP_CONTROL](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)BCPMAXERRS 指定的值， **BCP_EXEC**會傳回 FAIL。 BCPMAXERRS 預設為 10。 BCPMAXERRS 選項僅會影響提供者在從資料檔讀取資料列 (而非傳送到伺服器的資料列) 時所偵測到的語法錯誤。 伺服器會在偵測到資料列的錯誤時中止批次。 檢查*pnRowsProcessed*參數是否有成功複製的資料列數目。  
   
 ## <a name="remarks"></a>備註  
- 此函式會根據[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)中的*eDirection*參數值，將資料從使用者檔案複製到資料庫資料表，反之亦然。  
+ 此函數會根據[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)中的*eDirection*參數值，將資料從使用者檔案複製到資料庫資料表，反之亦然。  
   
  呼叫**bcp_exec**之前，請使用有效的使用者檔案名來呼叫**bcp_init** 。 無法執行這項操作時，會發生錯誤。  
   
- **bcp_exec**是唯一可能會在任何時間長度內待處理的大量複製函數。 因此，它是唯一支援非同步模式的大量複製函數。 若要設定非同步模式，請在呼叫**bcp_exec**之前，先使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)將 SQL_ATTR_ASYNC_ENABLE 設定為 SQL_ASYNC_ENABLE_ON。 若要測試是否完成，請使用相同的參數來呼叫**bcp_exec** 。 如果大量複製尚未完成， **bcp_exec**會傳回 SUCCEED_ASYNC。 它也會在*pnRowsProcessed*中傳回已傳送到伺服器之資料列數目的狀態計數。 到達批次的結尾之前，不會認可傳送至伺服器的資料列。  
+ **bcp_exec**是唯一可能會在任何時間長度內待處理的大量複製函數。 因此，它是唯一支援非同步模式的大量複製函數。 若要設定非同步模式，請使用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) ，將 SQL_ATTR_ASYNC_ENABLE 設定為 SQL_ASYNC_ENABLE_ON，然後再呼叫**bcp_exec**。 若要測試是否完成，請使用相同的參數來呼叫**bcp_exec** 。 如果大量複製尚未完成， **bcp_exec**會傳回 SUCCEED_ASYNC。 它也會在*pnRowsProcessed*中傳回已傳送到伺服器之資料列數目的狀態計數。 到達批次的結尾之前，不會認可傳送至伺服器的資料列。  
   
- 如需從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始大量複製的重大變更相關資訊，請參閱[執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 如需從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]開始大量複製的重大變更相關資訊，請參閱[執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="example"></a>範例  
  下列範例顯示如何使用**bcp_exec**：  

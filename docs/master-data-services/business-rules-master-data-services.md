@@ -1,5 +1,5 @@
 ---
-title: 商務規則 (Master Data Services) | Microsoft Docs
+title: 商務規則
 ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: aa05b563fc72f3908fe2ab796d77917d58b16636
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047395"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728687"
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
 

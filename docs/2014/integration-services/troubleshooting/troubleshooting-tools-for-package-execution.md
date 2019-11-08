@@ -16,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f2c5a0f655a258492866d934d20bd8573f38757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766234"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637809"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的功能與工具，可讓您在完成及部署封裝之後，用以疑難排解封裝的執行問題。  
@@ -38,7 +38,7 @@ ms.locfileid: "62766234"
   
 -   **使用交易協助確保資料的完整性**。 如需詳細資訊，請參閱 [Integration Services 交易](../integration-services-transactions.md)。  
   
--   **使用檢查點從失敗點重新啟動封裝**。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../packages/restart-packages-by-using-checkpoints.md)。  
+-   **使用檢查點從失敗點重新啟動封裝**。 如需詳細資訊，請參閱[使用檢查點來重新啟動封裝](../packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>使用事件處理常式擷取及處理封裝錯誤  
  您可以使用事件處理常式，回應封裝以及封裝中的物件所引發的許多事件。  
@@ -52,21 +52,21 @@ ms.locfileid: "62766234"
   
 -   **將易懂資訊加入錯誤輸出**。 除了錯誤輸出所提供的兩個數值識別碼外，您還可以加入描述性的資訊，讓錯誤輸出更容易分析。  
   
-     **新增錯誤的描述**。 使用指令碼元件可以很容易地查閱錯誤描述。 如需詳細資訊，請參閱 <<c0> [ 指令碼元件增強錯誤輸出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+     **新增錯誤的描述**。 使用指令碼元件可以很容易地查閱錯誤描述。 如需詳細資訊，請參閱[增強腳本元件的錯誤輸出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
-     **將錯誤資料行名稱加入**。 在「指令碼」元件中，不容易以錯誤輸出所儲存之資料行識別碼，查閱相對應的資料行名稱，所以需要執行額外的步驟。 資料流程中的每一個資料行識別碼，在該資料流程工作內都是獨一無二的識別碼，並且在設計階段會保存於封裝中。 以下是將資料行名稱加入錯誤輸出的建議方法。 如需如何使用這種方法的範例，請參閱 <<c0> [ 將錯誤資料行名稱加入至錯誤輸出](https://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上。  
+     **加入錯誤資料行的名稱**。 在「指令碼」元件中，不容易以錯誤輸出所儲存之資料行識別碼，查閱相對應的資料行名稱，所以需要執行額外的步驟。 資料流程中的每一個資料行識別碼，在該資料流程工作內都是獨一無二的識別碼，並且在設計階段會保存於封裝中。 以下是將資料行名稱加入錯誤輸出的建議方法。 如需如何使用此方法的範例，請參閱[將錯誤資料行名稱新增至](https://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上的錯誤輸出。  
   
-    1.  **建立查閱資料表的資料行名稱**。 建立會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 的個別應用程式，以便反覆查看每個儲存的封裝、封裝中的每個資料流程、資料流程中的每個物件，以及資料流程物件中的每個輸入與輸出。 此應用程式應該保存查閱資料表中的資料行識別碼以及每個資料行的名稱，以及保存父資料流程工作的識別碼與封裝識別碼。  
+    1.  **建立資料行名稱的查閱資料表**。 建立會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 的個別應用程式，以便反覆查看每個儲存的封裝、封裝中的每個資料流程、資料流程中的每個物件，以及資料流程物件中的每個輸入與輸出。 此應用程式應該保存查閱資料表中的資料行識別碼以及每個資料行的名稱，以及保存父資料流程工作的識別碼與封裝識別碼。  
   
     2.  **將資料行名稱加入至輸出**。 將「查閱」轉換加入至錯誤輸出，以便查閱在先前步驟中所建立之查閱資料表中的資料行名稱。 查閱可以使用錯誤輸出中的資料行識別碼、封裝識別碼 (可在系統變數 System::PackageID 中找到)，以及資料流程工作識別碼 (可在系統變數 System::TaskID 中找到)。  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>使用作業報表針對封裝執行進行疑難排解  
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供標準作業報表，可協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 這些封裝報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別失敗原因。  
   
- 如需詳細資訊，請參閱[疑難排解封裝執行的報表](troubleshooting-reports-for-package-execution.md)。  
+ 如需詳細資訊，請參閱 [疑難排解封裝執行的報表](troubleshooting-reports-for-package-execution.md)。  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>使用 SSISDB 檢視疑難排解封裝執行  
- 系統提供一些您可以查詢的 SSISDB 資料庫檢視，用以監視封裝執行以及其他作業資訊。 如需詳細資訊，請參閱 <<c0> [ 監視封裝執行和其他作業](../performance/monitor-running-packages-and-other-operations.md)。  
+ 系統提供一些您可以查詢的 SSISDB 資料庫檢視，用以監視封裝執行以及其他作業資訊。 如需詳細資訊，請參閱[監視封裝執行和其他作業](../performance/monitor-running-packages-and-other-operations.md)。  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>使用記錄功能針對封裝執行進行疑難排解  
  您可以啟用記錄功能，追蹤執行中之封裝所發生的大部分事件。 記錄提供者會擷取指定之事件的相關資訊，以供稍後分析，並使用資料庫資料表、一般檔案、XML 檔案或其他支援的輸出格式儲存這項資訊。  
@@ -81,14 +81,14 @@ ms.locfileid: "62766234"
   
     1.  **建立可記錄封裝每次執行作業的父資料表**。 在這個父資料表中，封裝的各次執行作業只能分別記錄在單一資料列，並使用 ExecutionID 連結到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 記錄資料表中的子記錄。 您可以在每個封裝的開頭使用執行 SQL 工作，以建立這個新的資料列，並記錄開始時間； 接著再於封裝結尾使用另一個執行 SQL 工作，以結束時間、期間與狀態更新資料列。  
   
-    2.  **將稽核資訊加入資料流程**。 您可以使用「稽核」轉換將建立或修改每一個資料列的封裝執行資訊，加入資料流程中的資料列。 「稽核」轉換可提供九項資訊，包括 PackageName 和 ExecutionInstanceGUID。 如需詳細資訊，請參閱[稽核轉換](../data-flow/transformations/audit-transformation.md)。 為了進行稽核，如果您有想要加入每個資料列的自訂資訊，便可以使用「衍生的資料行」轉換將這項資訊加入資料流程中的資料列。 如需詳細資訊，請參閱[衍生的資料行轉換](../data-flow/transformations/derived-column-transformation.md)。  
+    2.  **將稽核資訊加入資料流程**。 您可以使用「稽核」轉換將建立或修改每一個資料列的封裝執行資訊，加入資料流程中的資料列。 「稽核」轉換可提供九項資訊，包括 PackageName 和 ExecutionInstanceGUID。 如需詳細資訊，請參閱[稽核轉換](../data-flow/transformations/audit-transformation.md)。 為了進行稽核，如果您有想要加入每個資料列的自訂資訊，便可以使用「衍生的資料行」轉換將這項資訊加入資料流程中的資料列。 如需詳細資訊，請參閱 [衍生的資料行轉換](../data-flow/transformations/derived-column-transformation.md)。  
   
     3.  **考慮擷取資料列計數資料**。 請考慮另外建立資料表以存放資料列計數資訊，在此資料表中，是以封裝的 ExecutionID 識別封裝執行的每個執行個體。 使用「資料列計數」轉換，在資料流程的關鍵點將資料列計數儲存到一系列變數中。 資料流程結束後，請使用執行 SQL 工作將這一系列的值插入資料表中的資料列，以供稍後進行分析及製作報表。  
   
-     如需此方法的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書中以下內容的＜ETL 稽核與記錄＞一節：[Project REAL：Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
+     如需此方法的詳細資訊，請參閱《 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書》 [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)(專案 REAL：Business Intelligence ETL 設計練習) 中的 "ETL Auditing and Logging" (＜ETL 稽核和記錄＞) 一節。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用偵錯傾印檔案針對封裝執行進行疑難排解  
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 如需相關資訊，請參閱 [產生封裝執行的傾印檔案](generating-dump-files-for-package-execution.md)。  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 如需相關資訊，請參閱 [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md)。  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>疑難排解執行階段驗證的問題  
  有時候在尚未執行封裝中的優先工作之前，您可能無法連接到資料來源，或者無法驗證封裝的某些部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含下列功能，可協助您避免因這些狀況而造成的驗證錯誤：  
@@ -107,7 +107,7 @@ ms.locfileid: "62766234"
 -   **在 64 位元平台上無法使用某些資料提供者**。 特別是，連接到 Excel 或 Access 資料來源所必須的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider 沒有 64 位元版本。  
   
 ## <a name="troubleshoot-errors-without-a-description"></a>疑難排解沒有隨附描述的錯誤  
- 如果您遇到沒有隨附描述的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤，可以經由查閱錯誤的編號找出列在 [Integration Services 錯誤和訊息參考](../integration-services-error-and-message-reference.md)中的錯誤描述。 此清單這次沒有包含疑難排解資訊。  
+ 如果您遇到沒有隨附描述的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤，可以經由查閱錯誤的編號找出列在 [Integration Services 錯誤和訊息參考](../integration-services-error-and-message-reference.md) 中的錯誤描述。 此清單這次沒有包含疑難排解資訊。  
   
 ## <a name="related-tasks"></a>相關工作  
  [在資料流程元件中設定錯誤輸出](../configure-an-error-output-in-a-data-flow-component.md)  

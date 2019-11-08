@@ -1,5 +1,5 @@
 ---
-title: bcp_control | Microsoft Docs
+title: bcp_control |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbaf0029e5c2f7595591fb635c5eb43cc4b2a157
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707860"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782871"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   針對檔案和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的大量複製，變更各種控制項參數的預設設定。  
   
@@ -49,17 +48,17 @@ RETCODE bcp_control (
  為下列其中一項：  
   
  BCPABORT  
- 停止已經進行的大量複製作業。 從另一個執行緒的 BCPABORT *eOption*呼叫**bcp_control** ，以停止執行大量複製作業。 *IValue*參數會被忽略。  
+ 停止已經進行的大量複製作業。 從另一個執行緒呼叫具有 BCPABORT *eOption*的**bcp_control** ，以停止執行大量複製作業。 *IValue*參數會被忽略。  
   
  BCPBATCH  
  這是每一批次中的資料列數目。 預設值為 0，這表示在擷取資料時，會指出資料表中的所有資料列，或在資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會指出使用者資料檔中的所有資料列。 小於 1 的值會重設 BCPBATCH 為預設值。  
   
  BCPDELAYREADFMT  
- 布林值，如果設定為 true，會導致[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)在執行時讀取。 如果為 false （預設值），bcp_readfmt 會立即讀取格式檔案。 如果 BCPDELAYREADFMT 為 true，而且您呼叫 bcp_columns 或 bcp_setcolfmt，就會發生順序錯誤。  
+ 布林值，如果設定為 true，將會導致[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)在執行時讀取。 如果為 false （預設值），bcp_readfmt 會立即讀取格式檔案。 如果 BCPDELAYREADFMT 為 true，而且您呼叫 bcp_columns 或 bcp_setcolfmt，就會發生順序錯誤。  
   
- 呼叫 `bcp_control(hdbc,` BCPDELAYREADFMT @ no__t-3 和 bcp_writefmt 之後，如果您呼叫 `bcp_control(hdbc,` BCPDELAYREADFMT @ no__t-1，也會發生順序錯誤。  
+ 如果您在呼叫 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` 和 bcp_writefmt 之後呼叫 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)`，也會發生順序錯誤。  
   
- 如需詳細資訊, 請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
+ 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
  BCPFILECP  
  *iValue*包含資料檔案的字碼頁數目。 您可以指定字碼頁的數目，例如 1252 或 850，或以下任一個值：  
@@ -71,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW：檔案中的資料位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的字碼頁。  
   
  BCPFILEFMT  
- 資料檔案格式的版本號碼。 這可以是80（[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]）、90（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]）、100（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]）、110（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）或120（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。 120 是預設值。 這個值在使用舊版伺服器支援的格式匯出和匯入資料時非常實用。 例如，若要將從 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 伺服器的文字資料行取得的資料匯入至 @no__t 2 或更新版本之伺服器中的**Varchar （max）** 資料行，您應該指定80。 同樣地，如果您在從**Varchar （max）** 資料行匯出資料時指定80，則儲存的方式就像是以 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 格式儲存文字資料行，而且可以匯入到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 伺服器的文字資料行。  
+ 資料檔案格式的版本號碼。 這可以是80（[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]）、90（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]）、100（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]）、110（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）或120（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。 120 是預設值。 這個值在使用舊版伺服器支援的格式匯出和匯入資料時非常實用。 例如，若要將從 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 伺服器的文字資料行取得的資料匯入 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本之伺服器中的**Varchar （max）** 資料行，您應該指定80。 同樣地，如果您在從**Varchar （max）** 資料行匯出資料時指定80，則它的儲存方式就像是以 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 格式儲存文字資料行，而且可以匯入 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 伺服器的文字資料行。  
   
  BCPFIRST  
  這是要複製的檔案或資料表的第一個資料列。 預設值為 1，小於 1 的值會將這個選項重設為預設。  
@@ -95,7 +94,7 @@ RETCODE bcp_control (
  *iValue*包含 SQLTCHAR 字元字串指標。 定址的字串會指定處理提示的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量複製或傳回結果集的 Transact-SQL 陳述式。 如果 Transact-SQL 陳述式指定為傳回一個以上的結果集，則第一個結果集之後的所有結果集都會被忽略。 如需大量複製處理提示的詳細資訊，請參閱[Bcp Utility](../../tools/bcp-utility.md)。  
   
  BCPKEEPIDENTITY  
- 當*iValue*為 TRUE 時，會指定大量複製函數插入為以 identity 條件約束定義之 @no__t 1 資料行提供的資料值。 輸入檔案必須提供識別資料行的值。 如果沒有設定，就會為插入的資料列產生新的識別值。 檔案中屬於識別欄位的所有資料都會被忽略。  
+ 當*iValue*為 TRUE 時，會指定大量複製函數插入針對以 identity 條件約束定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行所提供的資料值。 輸入檔案必須提供識別資料行的值。 如果沒有設定，就會為插入的資料列產生新的識別值。 檔案中屬於識別欄位的所有資料都會被忽略。  
   
  BCPKEEPNULLS  
  指定檔案中的空資料值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中是否會轉換為 NULL 值。 當*iValue*為 TRUE 時，空值會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中轉換成 Null。 預設是將空的值轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中資料行的預設值 (如果有預設值的話)。  
@@ -116,7 +115,7 @@ RETCODE bcp_control (
  BCPODBC  
  當為 TRUE 時，指定以字元格式儲存的**datetime**和**Smalldatetime**值將會使用 ODBC 時間戳記 escape 序列前置詞和後置詞。 BCPODBC.BCP 選項僅適用于 DB_OUT。  
   
- 若為 FALSE，則會將代表1997年1月1日的**日期時間**值轉換成字元字串：1997-01-01 00：00：00.000。 當為 TRUE 時，相同的**datetime**值會表示為： {ts ' 1997-01-01 00：00： 00.000 '}。  
+ 若為 FALSE，則會將代表1997年1月1日的**datetime**值轉換成字元字串： 1997-01-01 00：00：00.000。 當為 TRUE 時，相同的**datetime**值會表示為： {ts ' 1997-01-01 00：00： 00.000 '}。  
   
  BCPROWCOUNT  
  傳回受到目前 (或最近) BCP 作業影響的資料列數目。  
