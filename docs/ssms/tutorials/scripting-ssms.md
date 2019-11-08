@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d4bf028163905763ae87f04e03c0a95ddf4abcaf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263357"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988410"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中撰寫物件指令碼
 
@@ -209,7 +209,7 @@ ms.locfileid: "68263357"
 
 4. 展開您的 [工作階段]  節點。
 
-5. 以滑鼠右鍵按一下您想要的延伸工作階段 > [Script Session As] \(編寫工作階段的指令碼為\)   > [New Query Editor Window] \(新增查詢編輯器視窗\)  ：
+5. 以滑鼠右鍵按一下所需的擴充工作階段 > [編寫工作階段的指令碼為]   > [CREATE 至]   > [新增查詢編輯器視窗]  ：
 
     ![擴充新增查詢編輯器視窗工作階段](media/scripting-ssms/scriptxevents.png)
 

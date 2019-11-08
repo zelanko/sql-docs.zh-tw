@@ -5,16 +5,16 @@ description: 了解如何在 Spark 中使用 MSSQL Spark 連接器讀取和寫�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653307"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531607"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何使用 MSSQL Spark 連接器從 Spark 讀取和寫入 SQL Server
 
@@ -35,21 +35,21 @@ ms.locfileid: "69653307"
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 連接器介面
 
-SQL Server 2019 Preview 為巨量資料叢集提供 **MSSQL Spark 連接器**，使用 SQL Server 大量寫入 API 來進行 Spark 對 SQL 的寫入。 MSSQL Spark 連接器是以 Spark 資料來源 API 為基礎，並提供熟悉的 Spark JDBC 連接器介面。 如需介面參數，請參閱 [Apache Spark 文件](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 MSSQL Spark 連接器是依名稱 **com.microsoft.sqlserver.jdbc.spark** 參考。
+SQL Server 2019 為巨量資料叢集提供 **MSSQL Spark 連接器**，使用 SQL Server 大量寫入 API 來進行 Spark 對 SQL 的寫入。 MSSQL Spark 連接器是以 Spark 資料來源 API 為基礎，並提供熟悉的 Spark JDBC 連接器介面。 如需介面參數，請參閱 [Apache Spark 文件](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)。 MSSQL Spark 連接器是依名稱 **com.microsoft.sqlserver.jdbc.spark** 參考。
 
 下表描述已變更或新增的介面參數：
 
-| 屬性名稱 | 選擇性 | 描述 |
+| 屬性名稱 | 選擇性 | Description |
 |---|---|---|
 | **isolationLevel** | 是 | 這會描述連線的隔離等級。 MSSQL Spark 連接器的預設值為 **READ_COMMITTED** |
 
 連接器使用 SQL Server 大量寫入 API。 使用者可以以選擇性參數傳遞任何大量寫入參數，再由連接器依現狀將其傳遞至基礎 API。 如需大量寫入作業的詳細資訊，請參閱 [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server 巨量資料叢集](deploy-get-started.md)。
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders)。
+- [Azure Data Studio](https://aka.ms/getazuredatastudio)。
 
 ## <a name="create-the-target-database"></a>建立目標資料庫
 
@@ -68,9 +68,9 @@ SQL Server 2019 Preview 為巨量資料叢集提供 **MSSQL Spark 連接器**，
 
 1. 啟動 Azure Data Studio，然後[連線到巨量資料叢集](connect-to-big-data-cluster.md)。
 
-1. 以滑鼠右鍵按一下巨量資料叢集中的 HDFS 資料夾，然後選取 [新增目錄]。 將目錄命名為 **spark_data**。
+1. 以滑鼠右鍵按一下巨量資料叢集中的 HDFS 資料夾，然後選取 [新增目錄]  。 將目錄命名為 **spark_data**。
 
-1. 以滑鼠右鍵按一下 [spark_data] 目錄，然後選取 [上傳檔案]。 上傳 **AdultCensusIncome.csv** 檔案。
+1. 以滑鼠右鍵按一下 [spark_data]  目錄，然後選取 [上傳檔案]  。 上傳 **AdultCensusIncome.csv** 檔案。
 
    ![AdultCensusIncome CSV 檔案](./media/spark-mssql-connector/spark_data.png)
 
@@ -90,4 +90,4 @@ SQL Server 2019 Preview 為巨量資料叢集提供 **MSSQL Spark 連接器**，
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 big data 叢集的詳細資訊, 請參閱[如何[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在 Kubernetes 上部署](deployment-guidance.md)
+如需巨量資料叢集的詳細資訊，請參閱[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)
