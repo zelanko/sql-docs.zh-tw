@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將資料列插入至 Geography 資料行 (ODBC) |Microsoft Docs
+title: 如何：將資料列插入 Geography 資料行（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,27 +11,26 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1941580667de39b4370df531aa4e82a1b50fdbfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898468"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781294"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>HOW TO：將資料列插入 Geography 資料行 (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：將資料列插入至 Geography 資料行 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  此範例會使用 2 個不同的繫結 (SQLCCHAR 和 SQLCBINARY)，從 WellKnownBinary (WKB) 在具有地理資料行的資料表中插入兩個資料列， 然後再從該資料表選取一個資料列，並使用:: stastext （) 來顯示它。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，而且應用程式列印至主控台：點 (56.4595-2.9842)。  
+  此範例會使用 2 個不同的繫結 (SQLCCHAR 和 SQLCBINARY)，從 WellKnownBinary (WKB) 在具有地理資料行的資料表中插入兩個資料列， 然後再從該資料表選取一個資料列，並使用 ::STAsText() 加以顯示。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，而且該應用程式會列印至主控台：POINT(56.4595 -2.9842)。  
   
  此範例不需要 ODBC 資料來源，但依預設，範例會在 SQL Server 的本機執行個體上執行。  
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需有關空間儲存體的詳細資訊，請參閱 <<c0> [ 空間資料&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。</c0>  
+ 如需空間儲存體的詳細資訊，請參閱[ &#40;空間&#41;資料 SQL Server](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ## <a name="example"></a>範例  
- 第一個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  
+ 第一個（[!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會建立此範例所使用的資料表。  
   
  使用 odbc32.lib 和 user32.lib 編譯第二個 (C++) 程式碼清單。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "67898468"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第三個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料表。  
+ 第三個（[!INCLUDE[tsql](../../includes/tsql-md.md)]）程式代碼清單會刪除此範例所使用的資料表。  
   
 ```sql
 use tempdb  
