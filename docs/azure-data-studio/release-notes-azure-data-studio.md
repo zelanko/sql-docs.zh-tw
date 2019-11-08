@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/11/2019
-ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.date: 11/04/2019
+ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313618"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532534"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版本！](download.md)**
+
+## <a name="november-2019"></a>2019 年 11 月
+
+2019 年 11 月 4 日 &nbsp; / &nbsp; 版本：1.13.0 
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 新的 SQL Server 2019 支援 | &bull; &nbsp; 使用 BDC 部署精靈部署 SQL Server 2019 巨量資料叢集 <br/>&bull; &nbsp; 使用控制器儀表板管理叢集健康情況 <br/>&bull; &nbsp; 使用安全性 ACL 對話方塊管理 HDFS 存取控制清單 <br/> &bull; &nbsp; 使用 HDFS 分層對話方塊新增掛接 <br/> &bull; &nbsp; 使用內建的 Jupyter Book (SQL Server 2019 指南) 進行疑難排解 <br/> &bull; &nbsp; SQL vNext 延伸模組重新命名為資料虛擬化延伸模組 <br/> &bull; &nbsp; 外部資料表精靈中新增 Teradata 和 Mongo 的支援|
+| 新增 Notebook 功能 | &bull; &nbsp; 推出 PowerShell Notebook &bull; &nbsp; 推出可摺疊的程式碼資料格 <br/>&bull; &nbsp; Notebook 中的效能改進 <br/> &bull; &nbsp; 在[此處](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) \(英文\) 檢視完整的改進清單 |
+| 推出 Jupyter Book  | Jupyter Books 是整理成目錄的 Notebook 和 Markdown 檔案集合。 |
+| 新增 SQL Server 部署精靈  | 現在支援部署： <br/> &bull; &nbsp; Windows 上的 SQL Server 2019 <br/> &bull; &nbsp; Windows 上的 SQL Server 2017 <br/> &bull; &nbsp; Docker 上的 SQL Server 2019 <br/> &bull; &nbsp; Docker 上的 SQL Server 2017 |
+| 宣佈正式推出「結構描述比較」延伸模組| &bull; &nbsp; SQLCMD 模式 <br/> &bull; &nbsp; 當地語系化支援 <br/> &bull; &nbsp; 協助工具修正 <br/> &bull; &nbsp; 安全性錯誤 (Bug)  |
+| 宣佈 SQL Server Dacpac 延伸模組正式推出| <br/> &bull; &nbsp; 當地語系化支援 <br/> &bull; &nbsp; 協助工具修正 <br/> &bull; &nbsp; 安全性錯誤 (Bug) |
+| 宣佈 Visual Studio IntelliCode 延伸模組 | Visual Studio IntelliCode 現在支援 SQL，可提供保留關鍵字更聰明的建議。 |
+| 已解決的 Bug 和問題 | 如需完整的修正清單，請參閱 [GitHub 上的 Bug 和問題](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed) \(英文\)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix-2"></a>2019 年 10 月 (Hotfix 2)
 
@@ -228,7 +246,7 @@ ms.locfileid: "72313618"
 | 已在 Profiler 延伸模組中新增篩選擴充事件支援。 | &nbsp; |
 | 已新增「另存檔案為 XML」功能，可將 T-SQL 結果儲存為 XML。 | &nbsp; |
 | 已新增資料層應用程式精靈改進。 | &bull; &nbsp; 已新增 [產生指令碼] 按鈕<br/>&bull; &nbsp; 已新增檢視來提供部署期間可能遺失資料的警告。 |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱 [SQL Server 2019 Preview 延伸模組](sql-server-2019-extension.md?view=sql-server-ver15)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md?view=sql-server-ver15)。 |
 | 預設已針對長時間執行的查詢啟用結果串流。 | &nbsp; |
 | 已解決的 Bug 和問題。 | 請參閱 [GitHub 上的 Bug 和問題](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1) \(英文\)。 |
 | &nbsp; | &nbsp; |
@@ -256,7 +274,7 @@ ms.locfileid: "72313618"
 | 已新增 Azure Active Directory 驗證支援。 | &nbsp; |
 | 宣布 Idera SQL DM 效能深入解析 (預覽)。 | &nbsp; |
 | SQL Server 匯入延伸模組中的資料層應用程式精靈支援。 | &nbsp; |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱 [SQL Server 2019 Preview 延伸模組](sql-server-2019-extension.md?view=sql-server-ver15)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md?view=sql-server-ver15)。 |
 | SQL Server Profiler 改進。 | &nbsp; |
 | 大型查詢的結果串流 (預覽)。 | &nbsp; |
 | 社群延伸模組：sp_executesql 至 sql 和「新增資料庫」。 | &nbsp; |
@@ -271,7 +289,7 @@ ms.locfileid: "72313618"
 
 | 變更 | 詳細資料 |
 | :----- | :------ |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱 [SQL Server 2019 Preview 延伸模組](sql-server-2019-extension.md?view=sql-server-ver15)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md?view=sql-server-ver15)。 |
 | 引進「貼上計劃」延伸模組。 | &nbsp; |
 | 引進「高彩」查詢延伸模組，包括 SSMS 編輯器佈景主題。 | &nbsp; |
 | SQL Server Agent、Profiler 和「匯入」延伸模組中的修正。 | &nbsp; |
@@ -301,7 +319,7 @@ ms.locfileid: "72313618"
 | 引進 Azure 資源總管來瀏覽 Azure SQL Database。 | &nbsp; |
 | 改進物件總管和查詢編輯器的連線穩定性。 | &nbsp; |
 | SQL Agent 延伸模組改進。 | &nbsp; |
-| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱 [SQL Server 2019 Preview 延伸模組](sql-server-2019-extension.md?view=sql-server-ver15)。 |
+| 更新至 SQL Server 2019 Preview 延伸模組。 | 請參閱[資料虛擬化延伸模組](data-virtualization-extension.md?view=sql-server-ver15)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Bug 修正，2018 年 10 月

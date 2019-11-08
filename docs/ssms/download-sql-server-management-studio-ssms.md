@@ -22,13 +22,13 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.custom: ''
-ms.date: 10/03/2019
-ms.openlocfilehash: a51b0a3da9fda396b23f6ddcf9121fe7a30ec202
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.date: 11/04/2019
+ms.openlocfilehash: 7597b0ef624958010981844969889b1c589c4883
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542223"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594320"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -42,13 +42,13 @@ SSMS 是免費的！
 
 ## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[下載 SSMS](https://aka.ms/ssmsfullsetup)
 
-SSMS 18.3.1 是 SSMS 最新的公開推出 (GA) 版本。 若您已安裝 SSMS 18 的先前 GA 版本，安裝 SSMS 18.3.1 會將它升級到 18.3.1 若您已安裝舊的 SSMS 18.x 預覽  版本，安裝 SSMS 18.3.1 之前必須先將它解除安裝。
+SSMS 18.4 是 SSMS 最新的正式運作 (GA) 版本。 若先前已安裝 SSMS 18 的 GA 版本，則安裝 SSMS 18.4 會將其升級至 18.4。 若您已安裝舊的 SSMS 18.x「預覽」  版本，則您必須在安裝 SSMS 18.4 前先將其解除安裝。
 
 **版本資訊**
 
-- 版本號碼：18.3.1  
-- 組建編號：15.0.18183.0  
-- 發行日期：2019 年 10 月 2 日  
+- 版本號碼：18.4  
+- 組建編號：15.0.18206.0  
+- 發行日期：2019 年 11 月 4 日  
 
 若您有意見或建議，或是要回報問題，則連絡 SSMS 小組的最佳方式是透過 [UserVoice](https://aka.ms/sqlfeedback)。
 
@@ -57,37 +57,45 @@ SSMS 18.x 安裝不會升級或取代 SSMS 17.x 版或更早版本。 SSMS 18.x 
 如果電腦中包含並存安裝的 SSMS，請確認已針對您的特定需求啟動正確的版本。 最新版本會標記為 **Microsoft SQL Server Management Studio 18**
 
 > [!Note]
-> 如果您在非英文語言版本存取此頁面，且想要查看最新內容，請參閱本頁面的[英文版](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)。 您可以選取[可用的語言](#available-languages-ssms-1831)，從英文版網站下載不同語言版本。
+> 如果您在非英文語言版本存取此頁面，且想要查看最新內容，請參閱[本頁面的英文 (美國) 版](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。 您可以選取[可用的語言](#available-languages)，從英文 (美國) 版網站下載不同語言版本。
 
-## <a name="available-languages-ssms-1831"></a>可用語言 (SSMS 18.3.1)
+## <a name="available-languages"></a>可用的語言
 
 此版 SSMS 提供下列語言版本：
 
-SQL Server Management Studio 18.3.1：  
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40a)
+SQL Server Management Studio 18.4：  
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模組為透過 PowerShell 資源庫個別安裝的模組。 如需詳細資訊，請參閱[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)。
 
-## <a name="new-in-this-release-ssms-1831"></a>此版本 (SSMS 18.3.1) 中的新功能
+## <a name="new-in-this-release-ssms-184"></a>此版本 (SSMS 18.4) 中的新功能
 
 | 新項目 | 詳細資料 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 資料分類 | 將資料分類資訊新增到資料行屬性 UI (SSMS UI 中不會公開 [資訊類型]  、[資訊類型識別碼]  、[敏感度標籤]  和 [敏感度標籤識別碼]  )。 |
-| IntelliSense/編輯器 | 更新最近新增至 SQL Server 2019 功能 (例如，"ALTER SERVER CONFIGURATION") 的支援。 |
-| Integration Services | 新增新的選取功能表項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，其可在 ADF 管線中，將 Azure-SSIS Integration Runtime 上的 Integration Services (SSIS) 套件執行叫用為執行 SSIS 套件活動。 |
-| SMO/指令碼 | 新增 Azure SQL DW 唯一條件約束支援指令碼的支援。 |
-| SMO/指令碼 | 資料分類 - 新增 SQL 版本 10 (SQL 2008) 及更高版本的支援。  - 新增 SQL 版本 15 (SQL 2019) 及更高版本，以及 Azure SQL DB 的新敏感性屬性 'rank'。 |
+| 資料分類 | 已新增資料分類的自訂資訊保護原則支援。 |
+| 查詢存放區 | 已新增對話方塊屬性中的「每個查詢的計劃上限」  值。 |
+| 查詢存放區 | 已新增新自訂擷取原則的支援。 |
+| SMO/指令碼 | 支援 SQL DW 中具體化檢視的指令碼。 |
+| SMO/指令碼 | 已新增 *SQL 隨需*的支援。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 50 個評量規則 (請參閱 GitHub 上的詳細資料)。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增基底數學運算式和規則條件的比較。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 RegisteredServer 物件的支援。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 JSON 格式儲存規則的方式，並已更新套用覆寫/自訂的機制。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新支援 Linux 上 SQL 的規則。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新規則集 JSON 格式，並已新增結構描述版本。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 Cmdlet 輸出以改善建議的可讀性。 |
+| XEvent 分析工具 | 已將 *error_reported* 事件新增至 XEvent Profiler 工作階段。 |
 
 如需此版本中最新功能的詳細資料，請參閱 [SSMS 版本資訊](release-notes-ssms.md)。
 
-## <a name="supported-sql-offerings-ssms-1831"></a>支援的 SQL 供應項目 (SSMS 18.3.1)
+## <a name="supported-sql-offerings-ssms-184"></a>支援的 SQL 供應項目 (SSMS 18.4)
 
 - 此版本的 SSMS 適用於所有[支援的 SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，並提供最高層級的支援以使用 Azure SQL Database 和 Azure SQL 資料倉儲中最新雲端功能。
 - 此外，SSMS 18.x 可以與 SSMS 17.x、SSMS 16.x 或 SQL Server 2014 SSMS 及更早的版本並存安裝。
 - SQL Server Integration Services (SSIS) - SSMS 17.x 或更新版本不支援連線至舊版 SQL Server Integration Services 服務。 若要連線至舊版 Integration Services 的舊版本，請使用與 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 連線至舊版 SQL Server 2016 Integration Services 服務。 SSMS 17.x 和 SSMS 16.x 可以並存安裝在相同電腦上。 自 SQL Server 2012 發行之後，建議使用 SSIS Catalog 資料庫 SSISDB 來儲存、管理、執行和監視 Integration Services 套件。 如需詳細資訊，請參閱 [SSIS 目錄](../integration-services/catalog/ssis-catalog.md)。
 
-## <a name="supported-operating-systems-ssms-1831"></a>支援的作業系統 (SSMS 18.3.1)
+## <a name="supported-operating-systems-ssms-184"></a>支援的作業系統 (SSMS 18.4)
 
 搭配最新推出的服務套件使用時，這一版 SSMS 支援下列 64 位元平台：
 
@@ -104,7 +112,7 @@ SQL Server Management Studio 18.3.1：
 > [!NOTE]
 > SSMS 僅能在 Windows 上執行。 若您需要能在 Windows 以外平台上執行的工具，請查看 Azure Data Studio。 Azure Data Studio 是一個新的跨平台工具，可在 macOS、Linux 以及 Windows 上執行。 如需詳細資料，請參閱 [Azure Data Studio](../azure-data-studio/what-is.md)。
 
-## <a name="release-notes-ssms-1831"></a>版本資訊 (SSMS 18.3.1)
+## <a name="release-notes-ssms-184"></a>版本資訊 (SSMS 18.4)
 
 此版本有一些[已知問題](release-notes-ssms.md#known-issues-1831)。
 

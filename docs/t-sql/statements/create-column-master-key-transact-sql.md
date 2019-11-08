@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061059"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593899"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-在資料庫中建立資料行主要金鑰中繼資料物件。 代表金鑰的資料行主要金鑰中繼資料項目儲存在外部金鑰存放區中。 當您使用 [Always Encrypted &#40;資料庫引擎&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 功能時，此金鑰可保護 (加密) 資料行加密金鑰。 有多個資料行主要金鑰允許定期進行金鑰輪替，用來加強安全性。 請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [物件總管] 或 PowerShell 在金鑰存放區中建立資料行主要金鑰，並在資料庫中建立其相關的中繼資料物件。 如需詳細資訊，請參閱 [Always Encrypted 的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
+在資料庫中建立資料行主要金鑰中繼資料物件。 代表金鑰的資料行主要金鑰中繼資料項目儲存在外部金鑰存放區中。 當您使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 時，此金鑰可保護 (加密) 資料行加密金鑰。 有多個資料行主要金鑰允許定期進行金鑰輪替，用來加強安全性。 請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [物件總管] 或 PowerShell 在金鑰存放區中建立資料行主要金鑰，並在資料庫中建立其相關的中繼資料物件。 如需詳細資訊，請參閱 [Always Encrypted 的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -46,7 +46,7 @@ ms.locfileid: "68061059"
 
 ## <a name="syntax"></a>語法  
 
-```  
+``` sql 
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -72,9 +72,7 @@ CREATE COLUMN MASTER KEY key_name
   
 啟用 Always Encrypted 的用戶端驅動程式程式庫包含常用金鑰存放區的金鑰存放區提供者。   
   
-可用提供者集合取決於用戶端驅動程式的類型和版本。 針對特定驅動程式，請參閱 Always Encrypted 文件：
-
-[搭配使用 Always Encrypted 與 .NET Framework Provider for SQL Server 開發應用程式](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+可用提供者集合取決於用戶端驅動程式的類型和版本。 針對特定驅動程式，請參閱 Always Encrypted 文件：[使用 Always Encrypted 開發應用程式](../../relational-databases/security/encryption/always-encrypted-client-development.md)。
 
 
 下表顯示系統提供者的名稱：  
@@ -84,7 +82,8 @@ CREATE COLUMN MASTER KEY key_name
     |'MSSQL_CERTIFICATE_STORE'|Windows 憑證存放區| 
     |'MSSQL_CSP_PROVIDER'|支援 Microsoft CryptoAPI 的存放區，例如硬體安全性模組 (HSM)。|
     |'MSSQL_CNG_STORE'|支援新一代密碼編譯 API 的存放區，例如硬體安全性模組 (HSM)。|  
-    |'Azure_Key_Vault'|請參閱[開始使用 Azure Key Valut](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'AZURE_KEY_VAULT'|請參閱[開始使用 Azure Key Valut](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'MSSQL_JAVA_KEYSTORE'| Java 金鑰存放區。}
   
 
 在啟用 Always Encrypted 的用戶端驅動程式中，您可以設定自訂金鑰存放區提供者，用來儲存沒有內建金鑰存放區提供者的資料行主要金鑰。 自訂金鑰存放區提供者的名稱不能以 'MSSQL_' 為開頭，這是為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 金鑰存放區提供者保留的前置詞。 
@@ -172,6 +171,7 @@ ENCLAVE_COMPUTATIONS
 
 請在資料庫中建立資料行加密金鑰中繼資料項目之前，以及可在使用 Always Encrypted 為資料庫中任何資料行進行加密之前，建立資料行主要金鑰中繼資料項目。 中繼資料中的資料行主要金鑰項目不包含實際資料行主要金鑰。 資料行主要金鑰必須儲存在外部資料行金鑰存放區 (SQL Server 之外)。 中繼資料中的金鑰存放區提供者名稱和資料行主要金鑰路徑，對用戶端應用程式而言都必須有效。 用戶端應用程式必須使用資料行主要金鑰來解密資料行加密金鑰。 資料行加密金鑰會使用資料行主要金鑰進行加密。 用戶端應用程式也需要查詢加密資料行。
 
+建議您使用 SQL Server Management Studio (SSMS) 或 PowerShell 之類的工具來管理資料行主要金鑰。 這類工具會產生簽章 (如果您使用具有安全記憶體保護區的 Always Encrypted)，並自動發出 `CREATE COLUMN MASTER KEY` 陳述式來建立資料行加密金鑰的中繼資料物件。 請參閱[使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 佈建 Always Encrypted 金鑰](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)。 
 
   
 ## <a name="permissions"></a>權限  
@@ -182,7 +182,7 @@ ENCLAVE_COMPUTATIONS
 ### <a name="a-creating-a-column-master-key"></a>A. 建立資料行主要金鑰  
 下列範例會為資料行主要金鑰建立資料行主要金鑰中繼資料項目。 對於使用 MSSQL_CERTIFICATE_STORE 提供者來存取資料行主要金鑰的用戶端應用程式，資料行主要金鑰會儲存在憑證存放區中：  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -192,7 +192,7 @@ WITH (
   
 請為資料行主要金鑰建立資料行主要金鑰中繼資料項目。 使用 MSSQL_CNG_STORE 提供者的用戶端應用程式，會存取資料行主要金鑰：  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +202,7 @@ WITH (
   
 請為資料行主要金鑰建立資料行主要金鑰中繼資料項目。 對於使用 AZURE_KEY_VAULT 提供者來存取資料行主要金鑰的用戶端應用程式，資料行主要金鑰會儲存在 Azure Key Vault 中。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +212,7 @@ WITH (
   
 請為資料行主要金鑰建立資料行主要金鑰中繼資料項目。 資料行主要金鑰會儲存在自訂的資料行主要金鑰存放區中：  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +222,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. 建立已啟用記憶體保護區的資料行主要金鑰  
 下列範例會為啟用記憶體保護區的資料行主要金鑰來建立資料行主要金鑰中繼資料項目。 對於使用 MSSQL_CERTIFICATE_STORE 提供者來存取資料行主要金鑰的用戶端應用程式，啟用記憶體保護區的資料行主要金鑰會儲存在憑證存放區中：  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +233,7 @@ WITH (
   
 請為啟用記憶體保護區的資料行主要金鑰建立資料行主要金鑰中繼資料項目。 對於使用 AZURE_KEY_VAULT 提供者來存取資料行主要金鑰的用戶端應用程式，啟用記憶體保護區的資料行主要金鑰會儲存在 Azure Key Vault 中。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -247,6 +247,8 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [永遠加密 &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [永遠加密的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [永遠加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+* [永遠加密的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+* [針對具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

@@ -1,7 +1,7 @@
 ---
 title: 新功能
-description: SQL Server 2016 R Services、R Server SQL Server Machine Learning 服務的每個版本都有新的功能公告。
-ms.date: 08/21/2019
+description: 適用於 SQL Server 2016 R Services、R Server、SQL Server 機器學習服務之每個版本的新功能公告。
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -9,124 +9,116 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f582088359c2878f5dfd84d4b353b1f9d8c369e5
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 16c70e23df018a3bf403280fd6deb48b880c31ce
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652295"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532566"
 ---
-# <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的新功能
+# <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的新功能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-機器學習功能會新增至每個版本中的 SQL Server, 因為我們會繼續擴充、擴充和加深資料平臺、先進分析和資料科學之間的整合。 
+在我們繼續擴充、延伸並加深資料平台、進階分析及資料科學之間的整合時，便會將機器學習功能新增至每個版本的 SQL Server 中。 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-## <a name="new-in-sql-server-2019-preview"></a>SQL Server 2019 preview 的新功能
+## <a name="new-in-sql-server-2019"></a>SQL Server 2019 的新功能
 
-此版本會在 SQL Server 中新增 R 和 Python 機器學習作業的最上層要求功能。 如需此版本中所有功能的詳細資訊, 請參閱[SQL Server 2019 中的新](../sql-server/what-s-new-in-sql-server-ver15.md)功能和[SQL Server 2019 的版本](../sql-server/sql-server-ver15-release-notes.md)資訊。
+此版本會在 SQL Server 中新增適用於 Python 和 R 機器學習作業的熱門要求功能。 如需此版本中所有功能的詳細資訊，請參閱 [SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL Server 2019 的版本資訊](../sql-server/sql-server-ver15-release-notes.md)。
 
 > [!NOTE]
-> 如需 SQL Server 2019 中的 JAVA 新功能檔, 請參閱[SQL Server 語言擴充功能有哪些新功能？](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
+> 如需 SQL Server 2019 中關於 Java 的新功能文件，請參閱 [SQL Server 語言擴充功能中有哪些新功能？](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new) \(英文\)
 
-| 版本 | 功能更新 |
-|---------|----------------|
-| RC 1 | Windows 和 Linux 現在支援[從 Python 或 R 腳本對 SQL Server 的回送連接](connect/loopback-connection.md)。 |
-| CTP 3.2 | 無變更。 |
-| CTP 3.1 | 無變更。 |
-| CTP 3.0 | 無變更。 |
-| CTP 2.5 | 無變更。 |
-| CTP 2.4 | 適用于 R 和 Python 的[建立外部程式庫 (transact-sql)](../t-sql/statements/create-external-library-transact-sql.md)的 Linux 支援。 |
-| CTP 2.3 | 在 Windows 上, 您可以使用[CREATE EXTERNAL library (transact-sql)](../t-sql/statements/create-external-library-transact-sql.md)語句, 在外部程式庫中存取 Python 程式碼。 |
-| CTP 2.2 | 無變更。 |
-| CTP 2.1 | 無變更。 |
-| CTP 2.0 | 適用于 R 和 Python 機器學習的 Linux 平臺支援。 開始[在 Linux 上安裝 SQL Server Machine Learning 服務](../linux/sql-server-linux-setup-machine-learning.md)。 |
-|  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)引進兩個新的參數, 可讓您輕鬆地從分割的資料產生多個模型。 在本教學課程中深入瞭解如何在[R 中建立以資料分割為基礎的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
-|   | Windows 和 Linux 現在都支援容錯移轉叢集支援, 假設所有節點上都已啟動 SQL Server Launchpad 服務。 如需詳細資訊, 請參閱[SQL Server 容錯移轉叢集安裝](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
+以下是 SQL Server 機器學習服務的新功能：
 
+- [從 Python 或 R 指令碼針對 SQL Server 進行回送連線](connect/loopback-connection.md)現已同時支援 Windows 和 Linux。 
+- 在 Windows 和 Linux 上，針對 R 和 Python 的 [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) 支援。
+- 針對 R 和 Python 機器學習的 Linux 平台支援。 透過[在 Linux 上安裝 SQL Server 機器學習服務](../linux/sql-server-linux-setup-machine-learning.md)來開始使用。
+- [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) \(部分機器翻譯\) 引進兩個新的參數，可讓您從分割的資料輕鬆產生多個模型。 若要深入了解，請參閱此教學課程：[在 R 中建立資料分割型模型](tutorials/r-tutorial-create-models-per-partition.md)。
+- Windows 和 Linux 現已支援容錯移轉叢集支援，前提是已在所有節點上啟動 SQL Server Launchpad 服務。 如需詳細資訊，請參閱 [SQL Server 容錯移轉叢集安裝](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-## <a name="new-in-sql-server-2017"></a>SQL Server 2017 中的新功能
+## <a name="new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 
-此版本新增[Python 支援和領先業界的機器學習服務演算法](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)。 已重新命名以反映新的範圍, SQL Server 2017 標示[SQL Server Machine Learning 服務 (資料庫內)](what-is-sql-server-machine-learning.md)的引進, 同時提供 Python 和 R 的語言支援。 
+此版本新增 [Python 支援和領先業界的機器學習演算法](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) \(英文\)。 SQL Server 2017 引進為了反映新範圍而重新命名的 [SQL Server 機器學習服務 (資料庫內)](what-is-sql-server-machine-learning.md)，並針對 Python 和 R 提供語言支援。 
 
-如需全部功能公告, 請參閱[SQL Server 2017 中的新](../sql-server/what-s-new-in-sql-server-2017.md)功能。
+如需完整的功能公告，請參閱 [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)。
 
 ### <a name="r-enhancements"></a>R 增強功能
 
-SQL Server Machine Learning 服務的 R 元件是下一代的 SQL Server 2016 R 服務, 其中包含基底 R、RevoScaler 和其他封裝的更新版本。
+SQL Server 機器學習服務的 R 元件是新一代的 SQL Server 2016 R Services，並具有更新版本的基底 R、RevoScaler 及其他套件。
 
-R 的新功能包括[**套件管理**](r/install-additional-r-packages-on-sql-server.md), 並具有下列重點: 
+R 的新功能包括[**套件管理**](r/install-additional-r-packages-on-sql-server.md)，並具有下列重點： 
 
-+ 資料庫角色可協助 Dba 管理封裝, 以及指派套件安裝的許可權。
-+ [建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)可協助 dba 以熟悉的 t-sql 語言來管理套件。
-+ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)函數可協助安裝、移除或列出使用者所擁有的套件。 如需詳細資訊, 請參閱[如何使用 RevoScaleR 函數在 SQL Server 上尋找或安裝 R 套件](r/use-revoscaler-to-manage-r-packages.md)。
++ 資料庫角色可協助 DBA 針對套件安裝管理套件及指派權限。
++ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 能協助 DBA 以熟悉的 T-SQL 語言來管理套件。
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) 函數可協助安裝、移除或列出使用者所擁有的套件。 如需詳細資訊，請參閱[如何使用 RevoScaleR 函數在 SQL Server 上尋找或安裝 R 套件](r/use-revoscaler-to-manage-r-packages.md)。
 
 ### <a name="r-libraries"></a>R 程式庫
 
-| 套件 | 描述 |
+| 封裝 | Description |
 |---------|-------------|
-| [**MicrosoftML**](r/ref-r-microsoftml.md) | 在此版本中, MicrosoftML 包含在預設的 R 安裝中, 可排除先前 SQL Server 2016 R 服務中所需的升級步驟。 MicrosoftML 提供最先進的機器學習演算法和資料轉換, 可以在遠端計算內容中進行調整或執行。 演算法包括可自訂的深度類神經網路、快速決策樹和決策樹系、線性回歸和羅吉斯回歸。  |
+| [**MicrosoftML**](r/ref-r-microsoftml.md) | 在此版本中，MicrosoftML 會包含在預設的 R 安裝中，讓使用者無須進行先前在 SQL Server 2016 R Services中所需的升級步驟。 MicrosoftML 能提供最先進的機器學習演算法及資料轉換，可在遠端計算內容中調整或執行。 演算法包括可自訂的深度神經網路、快速決策樹及決策樹系、線性迴歸，以及羅吉斯迴歸。  |
 
-### <a name="python-integration-for-in-database-analytics"></a>資料庫內分析的 Python 整合
+### <a name="python-integration-for-in-database-analytics"></a>適用於資料庫內分析的 Python 整合
 
-Python 是一種語言, 為各種機器學習工作提供絕佳的彈性和強大功能。 適用于 Python 的開放原始碼程式庫包含數個可自訂類神經網路的平臺, 以及適用于自然語言處理的熱門程式庫。 
+Python 語言能針對各種不同的機器學習工作提供絕佳的彈性和功能。 適用於 Python 的開放原始碼程式庫包括適用於可自訂類神經網路的數個平台，以及適用於自然語言處理的熱門程式庫。 
 
-由於 Python 已與資料庫引擎整合, 因此您可以保持接近資料的分析, 並消除與資料移動相關聯的成本和安全性風險。 您可以使用 Visual Studio 之類的工具, 部署以 Python 為基礎的機器學習解決方案。 您的生產應用程式可以使用 SQL Server 資料存取方法, 從 Python 3.5 執行時間取得預測、模型或視覺效果。
+因為 Python 是與資料庫引擎整合，所以您可以在接近資料的情況下進行分析，並免去和資料移動相關的成本與安全性風險。 您可以使用如 Visual Studio 的工具來部署以 Python 為基礎的機器學習解決方案。 您的生產環境應用程式可以使用 SQL Server 資料存取方法，從 Python 3.5 執行階段取得預測、模型或視覺效果。
 
-T-sql 和 Python 整合是透過[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系統預存程式來支援。 您可以使用這個預存程式來呼叫任何 Python 程式碼。 程式碼會在安全的雙重架構中執行, 可讓您使用簡單的預存程式, 從應用程式呼叫 Python 模型和腳本的企業級部署。 將 SQL 的資料串流處理至 Python 進程和 MPI 通道平行化, 即可達到額外的效能提升。
+T-SQL 和 Python 整合可透過 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) \(部分機器翻譯\) 系統預存程序來支援。 您可以使用此預存程序來呼叫任何 Python 程式碼。 程式碼會在安全的雙重架構中執行，這可讓您以企業級的方式部署 Python 模型和指令碼，並可透過簡單的預存程序從應用程式中呼叫它們。 透過將資料從 SQL 串流到 Python 處理序及 MPI 通道平行處理，便能達成額外的效能提升。
 
-您可以使用 T-sql [PREDICT](../t-sql/queries/predict-transact-sql.md)函數, 在先前以必要的二進位格式儲存的預先定型模型上執行[原生評分](sql-native-scoring.md)。
+您可以使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 函數，對先前以必要的二進位格式儲存的預先定型模型執行[原生評分](sql-native-scoring.md)。
 
 ### <a name="python-libraries"></a>Python 程式庫
 
-| 套件 | 描述 |
+| 封裝 | Description |
 |---------|-------------|
-|[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-等同于 RevoScaleR。 您可以建立線性和羅吉斯回歸、決策樹、推進式樹狀結構和隨機樹系的 Python 模型、所有可並行, 而且能夠在遠端計算內容中執行。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以在遠端 SQL Server 上執行 Python 程式碼, 以流覽資料或建立模型, 而不需要移動資料。 |
-|[**microsoftml**](python/ref-py-microsoftml.md) |Python-等同于 MicrosoftML R 套件。 |
+|[**revoscalepy**](python/ref-py-revoscalepy.md)| 相對於 RevoScaleR 的 Python 對等項目。 您可以針對線性及羅吉斯迴歸、決策樹、增強樹，以及隨機樹建立 Python 模型；它們全都可以平行化，也能在遠端計算內容中執行。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以在遠端 SQL Server 上執行 Python 程式碼，以在不移動資料的情況下探索資料或建置模型。 |
+|[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 套件的 Python 對等項目。 |
 
 ### <a name="pre-trained-models"></a>預先定型的模型
 
-[**預先定型的模型**](install/sql-pretrained-models-install.md)適用于 Python 和 R。請使用這些模型進行影像辨識和正負面的情感分析, 以在您自己的資料上產生預測。 
+[**預先定型模型**](install/sql-pretrained-models-install.md)可供 Python 和 R 使用。使用這些模型來進行影像辨識和正負面情感分析，以根據您自己的資料產生預測。 
 
-### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>獨立伺服器做為 SQL Server 安裝程式中的共用功能
+### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>在 SQL Server 安裝程式中將獨立伺服器作為共用功能
 
-此版本也新增了[SQL Server Machine Learning Server (獨立式)](r/r-server-standalone.md), 這是完全獨立的資料科學伺服器, 可支援 R 和 Python 中的統計和預測性分析。 如同 R Services, 此伺服器是下一版的 SQL Server 2016 R Server (獨立式)。 使用獨立伺服器, 您可以散發和調整 R 或 Python 解決方案, 而不需要 SQL Server 的相依性。
+此版本也新增 [SQL Server 機器學習伺服器 (獨立式)](r/r-server-standalone.md)，此為完全獨立的資料科學伺服器，支援以 R 和 Python 進行統計和預測性分析。 和 R Services相同，此伺服器是下一版的 SQL Server 2016 R Server (獨立式)。 在使用獨立伺服器的情況下，您可以在不相依於 SQL Server 的情況下散發及調整 R 或 Python 解決方案。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
-## <a name="new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
+## <a name="new-in-sql-server-2016"></a>SQL Server 2016 的新功能
 
-此版本引進了機器學習功能, 可透過**SQL Server 2016 R 服務**SQL Server, 這是一個資料庫內的分析引擎, 用於處理資料庫引擎實例內常駐資料的 R 腳本。
+此版本透過 **SQL Server 2016 R Services** 將機器學習功能引進 SQL Server；此資料庫內分析引擎能在資料庫引擎執行個體內的常駐資料上處理 R 指令碼。
 
-此外, **SQL Server 2016 r server (獨立式)** 已發行為在 Windows 伺服器上安裝 R server 的方法。 一開始, SQL Server 安裝程式會提供安裝適用于 Windows R 伺服器的唯一方式。 在較新的版本中, 需要 Windows 上 R 伺服器的開發人員和資料科學家可以使用另一個獨立安裝程式來達到相同的目標。 SQL Server 中的獨立伺服器在功能上等同于獨立伺服器產品, 也就是[適用于 Windows 的 Microsoft R server](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
+此外，發佈 **SQL Server 2016 R Server (獨立式)** 的目的是要提供在 Windows 伺服器上安裝 R Server 的方式。 一開始，SQL Server 安裝程式是在 Windows 上安裝 R Server 的唯一方式。 在後續版本中，想要在 Windows 上取得 R Server 的開發人員和資料科學家則可以使用另一個獨立安裝程式來達成相同的目標。 SQL Server 中的獨立伺服器，與獨立伺服器產品 [Microsoft R Server for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) \(英文\) 在功能上是一模一樣的。
 
-如需全部功能公告, 請參閱[SQL Server 2016 中的新](../sql-server/what-s-new-in-sql-server-2016.md)功能。
+如需完整的功能公告，請參閱 [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)。
 
 | 版本 |功能更新 |
 |---------|----------------|
-| CU 新增 | [**即時計分**](real-time-scoring.md)依賴原生C++程式庫來讀取以優化二進位格式儲存的模型, 然後產生預測, 而不需要呼叫 R 執行時間。 這可讓評分作業的速度更快。 使用即時評分, 您可以執行預存程式, 或從 R 程式碼執行即時評分。 如果實例升級至最新版本的[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)], 則 SQL Server 2016 也可以使用即時評分。 |
-| 最初發行 | [**資料庫內分析的 R 整合**](r/sql-server-r-services.md)。 <br/><br/> 用來在 T-sql 中呼叫 R 函數的 r 封裝, 反之亦然。 RevoScaleR 函式會將資料區塊化成元件部分、協調和管理分散式處理, 以及匯總結果, 以提供大規模的 R 分析。 在 SQL Server 2016 R Services (資料庫內) 中, RevoScaleR 引擎會與資料庫引擎實例整合, 同時在相同的處理內容中看待資料和分析。 <br/><br/>T-sql 和 R 透過[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)整合。 您可以使用這個預存程式來呼叫任何 R 程式碼。 這個安全的基礎結構可讓您使用簡單的預存程式, 從應用程式呼叫 Rn 模型和腳本的企業級部署。 將 SQL 的資料串流處理至 R 進程和 MPI 通道平行化, 即可達到額外的效能提升。 <br/><br/>您可以使用 T-sql [PREDICT](../t-sql/queries/predict-transact-sql.md)函數, 在先前以必要的二進位格式儲存的預先定型模型上執行[原生評分](sql-native-scoring.md)。|
+| CU 新增項目 | [**即時評分**](real-time-scoring.md)會仰賴原生 C++ 程式庫來讀取以最佳化二進位格式儲存的模型，然後在不需要呼叫 R 執行階段的情況下產生預測。 這可讓評分作業變得更加快速。 透過使用即時評分，您可以從 R 程式碼執行預存程序或執行即時評分。 即時評分也可供 SQL Server 2016 使用，前提是執行個體必須已升級到最新版本的 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。 |
+| 最初發行 | [**適用於資料庫內分析的 R 整合**](r/sql-server-r-services.md)。 <br/><br/> 用來以 T-SQL 呼叫 R 函數 (反之亦然) 的 R 套件。 RevoScaleR 函數能透過將資料區塊化成元件部分、協調及管理分散式處理，以及將結果彙總，來提供大規模的 R 分析。 在 SQL Server 2016 R Services (資料庫內) 中，RevoScaleR 引擎會與資料庫引擎執行個體整合，並在相同的處理內容中將資料和分析整合在一起。 <br/><br/>T-SQL 和 R 是透過 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) \(部分機器翻譯\) 進行整合。 您可以使用此預存程序來呼叫任何 R 程式碼。 這個安全的基礎結構可讓您以企業級的方式部署 R 模型和指令碼，並可透過簡單的預存程序從應用程式中呼叫它們。 透過將資料從 SQL 串流到 R 處理序及 MPI 通道平行處理，便能達成額外的效能提升。 <br/><br/>您可以使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 函數，對先前以必要的二進位格式儲存的預先定型模型執行[原生評分](sql-native-scoring.md)。|
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="linux-support"></a>Linux 支援
 
-當您使用 database engine 實例安裝機器學習套件時, SQL Server 2019 新增 R 和 Python 的 Linux 支援。 如需詳細資訊, 請參閱[在 Linux 上安裝 SQL Server Machine Learning 服務](../linux/sql-server-linux-setup-machine-learning.md)。
+SQL Server 2019 會在您安裝具有資料庫引擎執行個體的機器學習套件時，新增適用於 R 和 Python 的 Linux 支援。 如需詳細資訊，請參閱[在 Linux 上安裝 SQL Server 機器學習服務](../linux/sql-server-linux-setup-machine-learning.md)。
 
-在 Linux 上, SQL Server 2017 不會有 R 或 Python 整合, 但您可以在 Linux 上使用[原生計分](sql-native-scoring.md), 因為這種功能可透過 t-sql [PREDICT](../t-sql/queries/predict-transact-sql.md)取得, 它是在 linux 上執行。 原生評分可從預先定型模型進行高效能的計分, 而不需要呼叫或甚至要求 R 執行時間。
+在 Linux 上，SQL Server 2017 不會有 R 或 Python 整合，但您可以在 Linux 上使用[原生評分](sql-native-scoring.md)，因為該功能是透過 (可在 Linux 上執行的) T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) 提供。 原生評分可從預先定型的模型中進行高效能的評分，而不需要呼叫甚至要求 R 執行階段。
 ::: moniker-end
 
 <a name="azure-sql-database-roadmap"></a>
 
-## <a name="machine-learning-services-in-azure-sql-database"></a>Azure SQL Database 中的 Machine Learning 服務
+## <a name="machine-learning-services-in-azure-sql-database"></a>Azure SQL Database 中的機器學習服務
 
-Azure SQL Database 中的 Machine Learning 服務處於公開預覽狀態。 如需詳細資訊, 請參閱[Azure SQL Database Machine Learning Services (預覽)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)。
+Azure SQL Database 中的機器學習服務目前處於公開預覽狀態。 如需詳細資訊，請參閱 [Azure SQL Database 機器學習服務 (預覽)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) \(部分機器翻譯\)。
 
 ## <a name="next-steps"></a>後續步驟
 
-+ [安裝 SQL Server Machine Learning 服務 (資料庫內)](install/sql-machine-learning-services-windows-install.md)
-+ [機器學習服務教學課程和範例](tutorials/machine-learning-services-tutorials.md)
++ [安裝 SQL Server 機器學習服務 (資料庫內)](install/sql-machine-learning-services-windows-install.md)
++ [機器學習教學課程和範例](tutorials/machine-learning-services-tutorials.md)

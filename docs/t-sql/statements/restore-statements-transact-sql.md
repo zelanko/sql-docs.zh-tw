@@ -1,7 +1,7 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916170"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73530946"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 
@@ -63,7 +63,7 @@ ms.locfileid: "72916170"
 
 ||||
 |-|-|-|
-|**\*_ SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -320,7 +320,7 @@ RESTORE LOG 可以包括一份檔案清單，讓您在向前復原期間建立�
 
 - RECOVERY (預設) 表示在完成目前備份的向前復原之後應該執行復原。
 
-  復原資料庫時，會要求要還原的整組資料 (「向前復原集」) 與資料庫一致。 如果向前復原集尚未向前復原到足以與資料庫一致的範圍，且指定了 RECOVERY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會發出錯誤。 如需復原流程的詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
+  復原資料庫時，會要求要還原的整組資料 (「向前復原集」  ) 與資料庫一致。 如果向前復原集尚未向前復原到足以與資料庫一致的範圍，且指定了 RECOVERY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會發出錯誤。 如需復原流程的詳細資訊，請參閱[還原和復原概觀 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)。
 
 ## <a name="compatibility-support"></a>相容性支援
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 無法還原使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來建立的 **master** **model** 及 **msdb** 備份。
@@ -345,7 +345,7 @@ RESTORE 可以在發生錯誤之後，重新啟動。 另外，您也可以指�
 
 損毀的 **master**資料庫必須利用特殊程序來還原。 如需詳細資訊，請參閱[系統資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。
 
-還原資料庫會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+還原資料庫時，系統會清除所要還原資料庫的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 
 
 若要還原可用性資料庫，請先將資料庫還原至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後再將資料庫新增至可用性群組。
 
@@ -374,6 +374,10 @@ RESTORE 可以在發生錯誤之後，重新啟動。 另外，您也可以指�
 > [!NOTE]
 > 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 匯入的全文檢索目錄仍然會視為資料庫檔案。 對於這些檔案而言，備份全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序會維持適用狀態，不過不再需要於備份作業期間暫停和繼續。 如需詳細資訊，請參閱[備份並還原全文檢索目錄](https://go.microsoft.com/fwlink/?LinkId=107381)。
 
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ## <a name="metadata"></a>中繼資料
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含備份與還原記錄資料表，以便用來為每個伺服器執行個體進行追蹤備份和還原活動。 當執行還原時，也會修改備份記錄資料表。 如需這些資料表的資訊，請參閱[備份記錄與標頭資訊](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)。
@@ -401,7 +405,7 @@ REPLACE 選項會覆寫還原通常會執行的數項重要安全檢查。 會�
 您可以還原受影響之檔案的整個內容來中止和重新開始還原順序。
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>將資料庫還原為資料庫快照集
-「還原資料庫作業」(使用 DATABASE_SNAPSHOT 選項來指定) 會藉由將整個來源資料庫還原至資料庫快照集的時間，也就是使用在所指定資料庫快照集中維護的時間點資料來覆寫來源資料庫，讓整個來源資料庫回到過去的時間。 目前能存在的快照集只限於您要還原的目標快照集。 之後，還原作業會重建記錄 (因此，無法稍後再將所還原資料庫向前復原到發生使用者錯誤的該時間點)。
+「還原資料庫作業」  (使用 DATABASE_SNAPSHOT 選項來指定) 會藉由將整個來源資料庫還原至資料庫快照集的時間，也就是使用在所指定資料庫快照集中維護的時間點資料來覆寫來源資料庫，讓整個來源資料庫回到過去的時間。 目前能存在的快照集只限於您要還原的目標快照集。 之後，還原作業會重建記錄 (因此，無法稍後再將所還原資料庫向前復原到發生使用者錯誤的該時間點)。
 
 您只會失去建立快照集之後的資料庫更新資料。 還原資料庫的中繼資料與建立快照集時的中繼資料相同。 不過，還原為快照集會卸除所有全文檢索目錄。
 

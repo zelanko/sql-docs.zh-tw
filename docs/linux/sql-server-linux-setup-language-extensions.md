@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653525"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531225"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安裝 SQL Server 2019 語言擴充功能 (Java)
 
@@ -29,9 +29,11 @@ Java 擴充功能的套件位置在 SQL Server Linux 來源存放庫中。 如�
 
 Linux 容器上也支援語言擴充功能。 我們沒有提供含語言擴充功能的預先建立容器，但您可以使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) \(英文\)，從 SQL Server 容器建立一個。
 
-## <a name="uninstall-previous-ctp-version"></a>將先前的 CTP 版本解除安裝
+根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組和[機器學習服務](../advanced-analytics/index.yml)。 如果您使用的是巨量資料叢集，就不需要遵循本文中的步驟。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
 
-套件清單已經隨最近數個 CTP 版本變更，套件數量也因此減少。 我們建議您在安裝 RC 1 之前，先將 CTP 版本解除安裝以移除所有先前的套件。 不支援多個版本的並存安裝。
+## <a name="uninstall-preview-version"></a>解除安裝預覽版本
+
+如果您已安裝預覽版本 (Community Technical Preview (CTP) 或候選版 (RC))，建議您先解除安裝此版本以移除所有先前的套件，然後安裝 SQL Server 2019。 系統不支援多個版本的並存安裝，且最後幾個預覽 (CTP/RC) 版本中的套件清單已有所變更。
 
 ### <a name="1-confirm-package-installation"></a>1.確認套件安裝
 
@@ -41,7 +43,7 @@ Linux 容器上也支援語言擴充功能。 我們沒有提供含語言擴充�
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-packages"></a>2.將先前的 CTP 套件解除安裝
+### <a name="2-uninstall-previous-ctprc-packages"></a>2.解除安裝先前的 CTP/RC 套件
 
 在最低套件層級解除安裝。 相依於低層級套件的任何上游套件都會自動解除安裝。
 
@@ -55,7 +57,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-install-release-candidate-1-rc-1"></a>3.安裝候選版 1 (RC 1)
+### <a name="3-install-sql-server-2019"></a>3.安裝 SQL Server 2019
 
 使用此文章中適用於您作業系統的指示，在最高套件層級安裝。
 
@@ -67,7 +69,7 @@ ls /opt/microsoft/mssql/bin
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 + Linux 版本必須[受 SQL Server 支援](sql-server-linux-release-notes-2019.md#supported-platforms)，但不包含 Docker 引擎。 支援的版本包含：
 
@@ -83,7 +85,7 @@ ls /opt/microsoft/mssql/bin
 
 在連線到網際網路的裝置上，系統會使用每個作業系統的套件安裝程式，獨立地下載及安裝套件。 下表描述所有可用套件。
 
-| 封裝名稱 | 適用於 | 描述 |
+| 封裝名稱 | 適用於 | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | 所有語言 | 用於 Java 語言擴充的 Extensibility Framework |
 |mssql-server-extensibility-java | Java | 用於 Java 語言擴充且包含支援之 Java 執行階段的 Extensibility Framework |
@@ -286,18 +288,15 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-the-rc-1-release"></a>RC 1 版本中的限制
-
-Linux 上的語言擴充功能和 Java 擴充性仍在開發中。 預覽版本中尚未啟用下列功能。
+## <a name="limitations"></a>限制
 
 + 目前在 Linux 上無法使用隱含驗證，這表示您無法從進行中的 Java 連線回到伺服器，以存取資料或其他資源。
-
 
 ### <a name="resource-governance"></a>資源管理
 
 針對外部資源集區的[資源管理](../t-sql/statements/create-external-resource-pool-transact-sql.md)，Linux 與 Windows 之間有同位，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的統計資料在 Linux 上目前有不同單位。 
  
-| 資料行名稱   | 描述 | Linux 上的值 | 
+| 資料行名稱   | Description | Linux 上的值 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | 用於資源集區的記憶體數量上限。 | 在 Linux 上，此統計資料是來自 CGroups 記憶體子系統，其中的值為 memory.max_usage_in_bytes |
 |write_io_count | 重設 Resource Governor 統計資料之後發出的寫入 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中寫入資料列上的值為 blkio.throttle.io_serviced | 

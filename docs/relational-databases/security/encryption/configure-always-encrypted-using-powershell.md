@@ -1,32 +1,34 @@
 ---
 title: 使用 PowerShell 設定 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ad4a50d8aeca225ae0d00574a62cc428593ebb2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903011"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594419"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell 模組提供 Cmdlet 讓您在 Azure SQL Database 與 SQL Server 2016 中設定 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 。
+SqlServer PowerShell 模組提供 Cmdlet 讓您在 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中設定 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
 
-因為 SqlServer 模組中的永遠加密 Cmdlet 會處理金鑰或敏感性資料，所以請務必在安全的電腦上執行 Cmdlet。 管理永遠加密時，請從與裝載您的 SQL Server 執行個體不同的電腦上執行 Cmdlet。
+## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>使用 PowerShell 設定 Always Encrypted 時的安全性考量
 
 因為永遠加密的主要目標是為了確保已加密的敏感性資料安全無虞，即使資料庫系統遭到入侵亦然，所以在 SQL Server 電腦上執行處理金鑰或敏感性資料的 PowerShell 指令碼，可能會降低或損害此功能的優勢。 如需其他安全性相關建議，請參閱 [金鑰管理的安全性考量](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
-[此頁面底部](#aecmdletreference)的連結。
+無論是否有角色隔離，您都可以使用 PowerShell 來管理 Always Encrypted 金鑰來控制能夠存取金鑰存放區中實際加密金鑰以及能夠存取資料庫的人員。
+
+ 如需其他建議，請參閱 [金鑰管理的安全性考量](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -50,14 +52,43 @@ Import-Module "SqlServer"
 ## <a name="connectingtodatabase"></a> 連接到資料庫
 
 某些永遠加密 Cmdlet 會處理資料庫中的資料或中繼資料，因此要求您必須先連接到資料庫。 使用 SqlServer 模組設定永遠加密時，有兩種建議的方法可連接到資料庫： 
-1. 使用 SQL Server PowerShell 連接。
-2. 使用 SQL Server 管理物件 (SMO) 連接。
+1. 使用 **Get-SqlDatabase** Cmdlet 進行連線。
+2. 使用 SQL Server PowerShell 提供者進行連線。
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+### <a name="using-get-sqldatabase"></a>使用 Get-SqlDatabase
+**Get-SqlDatabase** Cmdlet 可讓您連線至 SQL Server 或 Azure SQL Database 中的資料庫。 會傳回資料庫物件，然後使用連線至資料庫之 Cmdlet 的 **InputObject** 參數來傳遞。 
 
 ### <a name="using-sql-server-powershell"></a>使用 SQL Server PowerShell
 
-此方法只適用於 SQL Server (Azure SQL Database 不支援)。
+```
+# Import the SqlServer module
+Import-Module "SqlServer"  
 
-透過 SQL Server PowerShell，您可以使用 Windows PowerShell 別名來巡覽路徑，這與於一般用來巡覽檔案系統路徑的命令類似。 一旦您巡覽至目標執行個體和資料庫後，後續的 Cmdlet 就會以該資料庫為目標，如下列範例所示：
+# Connect to your database
+# Set the valid server name, database name and authentication keywords in the connection string
+$serverName = "<Azure SQL server name>.database.windows.net"
+$databaseName = "<database name>"
+$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# List column master keys for the specified database.
+Get-SqlColumnMasterKey -InputObject $database
+```
+
+或者，您可以使用管道：
+
+
+```
+$database | Get-SqlColumnMasterKey
+```
+
+### <a name="using-sql-server-powershell-provider"></a>使用 SQL Server PowerShell 提供者
+[SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)會公開類似於檔案系統路徑之路徑中的 SQL Server 物件階層。 透過 SQL Server PowerShell，您可以使用 Windows PowerShell 別名來巡覽路徑，這與於一般用來巡覽檔案系統路徑的命令類似。 一旦您瀏覽至目標執行個體和資料庫後，後續的 Cmdlet 就會以該資料庫為目標，如下列範例所示。 
+
+> [!NOTE]
+> 此連線至資料庫的方法只適用於 SQL Server (Azure SQL Database 不支援)。
 
 ```
 # Import the SqlServer module.
@@ -79,43 +110,11 @@ Import-Module "SqlServer"
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```
  
-### <a name="using-smo"></a>使用 SMO
-
-此方法適用於 Azure SQL Database 和 SQL Server。
-透過 SMO，您可以建立 [資料庫類別](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.aspx)的物件，然後使用連接到資料庫之 Cmdlet 的 **InputObject** 參數來傳遞物件。
-
-
-```
-# Import the SqlServer module
-Import-Module "SqlServer"  
-
-# Connect to your database (Azure SQL database).
-$serverName = "<Azure SQL server name>.database.windows.net"
-$databaseName = "<database name>"
-$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName] 
-
-# List column master keys for the specified database.
-Get-SqlColumnMasterKey -InputObject $database
-```
-
-
-或者，您可以使用管道：
-
-
-```
-$database | Get-SqlColumnMasterKey
-```
-
 ## <a name="always-encrypted-tasks-using-powershell"></a>使用 PowerShell 的永遠加密工作
 
-- [使用 PowerShell 設定永遠加密金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
+- [使用 Provision 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-powershell.md)
 - [使用 PowerShell 更換永遠加密金鑰](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [使用 PowerShell 設定資料行加密](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
+- [使用 PowerShell 利用 Always Encrypted 加密、重新加密或解密資料行](configure-column-encryption-using-powershell.md)
 
 
 ##  <a name="aecmdletreference"></a> 永遠加密 Cmdlet 參考
@@ -145,11 +144,9 @@ $database | Get-SqlColumnMasterKey
 
 
 
-## <a name="additional-resources"></a>其他資源
+## <a name="see-also"></a>另請參閱
 
-- [Always Encrypted (資料庫引擎)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [永遠加密的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [搭配 .NET Framework Data Provider for SQL Server 使用永遠加密](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted 的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [使用 SQL Server Management Studio 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-
+- [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)

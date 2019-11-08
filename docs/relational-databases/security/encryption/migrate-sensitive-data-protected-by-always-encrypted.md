@@ -1,5 +1,5 @@
 ---
-title: 移轉透過 Always Encrypted 保護的機密資料 | Microsoft Docs
+title: 使用 Always Encrypted 將大量的加密資料載入資料行 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2015
 ms.prod: sql
@@ -10,28 +10,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff72a94df79c6f8fe7b8bb37caeb57587e44b034
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111667"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594160"
 ---
-# <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>移轉透過永遠加密保護的機密資料
+# <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>使用 Always Encrypted 將大量的加密資料載入資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-若要在大量複製作業期間載入加密的資料而不需在伺服器上執行中繼資料檢查，請使用 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 選項來建立使用者。 此選項適用於比 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 還舊之 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 版本的舊版工具 (例如 bcp.exe)，或者利用無法使用「永遠加密」的協力廠商擷取-轉換-載入 (ETL) 工作流程來使用。 這可讓使用者將加密的資料從某一組資料表 (包含加密的資料行) 安全地移至另一組具有加密資料行 (位於相同或不同的資料庫) 的資料表。  
+若要在大量複製作業期間載入加密的資料而不需在伺服器上執行中繼資料檢查，請使用 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 選項來建立使用者。 此選項適用於無法使用 Always Encrypted 的舊版工具或第三方的擷取 - 轉換 - 載入 (ETL) 工作流程。 這可讓使用者將加密的資料從某一組資料表 (包含加密的資料行) 安全地移至另一組具有加密資料行 (位於相同或不同的資料庫) 的資料表。  
 
- ## <a name="the-allowencryptedvaluemodifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 選項  
+ ## <a name="the-allow_encrypted_value_modifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 選項  
  [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) 和 [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) 都具有 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 選項。 設為 ON (預設值為 OFF) 時，此選項會在大量複製作業中抑制伺服器上的密碼編譯中繼資料檢查，讓使用者不需解密資料，就能在資料表或資料庫之間大量複製加密的資料。  
   
 ## <a name="data-migration-scenarios"></a>資料移轉案例  
 下表顯示適用於數種移轉案例的建議設定。  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "永遠加密 - 移轉")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>大量載入加密資料  
 請使用下列程序來載入加密的資料。  
@@ -42,7 +42,7 @@ ms.locfileid: "68111667"
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
    ```  
 
-2.  執行以該使用者身分連接的大量複製應用程式或工具 (如果您的應用程式使用已啟用「永遠加密」的用戶端驅動程式，請確定資料來源的連接字串未包含 **column encryption setting=enabled** ，以確保從加密資料行擷取的資料仍會維持加密。 如需詳細資訊，請參閱 [永遠加密 &#40;用戶端開發&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md))。  
+2.  執行以該使用者身分連接的大量複製應用程式或工具 (如果您的應用程式使用已啟用「永遠加密」的用戶端驅動程式，請確定資料來源的連接字串未包含 **column encryption setting=enabled** ，以確保從加密資料行擷取的資料仍會維持加密。 如需詳細資訊，請參閱[使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md))。  
   
 3.  將 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 選項設回 OFF。 例如：  
 
@@ -69,11 +69,15 @@ ms.locfileid: "68111667"
  
 針對短時間執行且需要移動加密資料 (而不將其解密) 的大量複製應用程式或工具，在執行應用程式之前，即時將選項設為 ON，並在執行作業之後立即將它設回 OFF。  
  
-不要使用此選項來開發新的應用程式。 請改用用戶端驅動程式 (例如 ADO 4.6.1)，提供 API 來抑制單一工作階段的密碼編譯中繼資料檢查。  
+不要使用此選項來開發新的應用程式。 請改用可提供 API 隱藏單一工作階段之密碼編譯中繼資料檢查的用戶端驅動程式，例如適用於 SQL Server 之 .NET Framework Data Provider 中的 [AllowEncryptedValueModifications] 選項。請參閱 [使用 SqlBulkCopy 複製加密的資料](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy)。 
+
+## <a name="next-steps"></a>Next Steps
+- [使用 Always Encrypted 與 SQL Server Management Studio 查詢資料行](always-encrypted-query-columns-ssms.md)
+- [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>另請參閱  
-[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
-[ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
-[永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[永遠加密精靈](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-[永遠加密 &#40;用戶端開發&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [使用 Always Encrypted 與 SQL Server [匯入及匯出精靈]，將資料移轉進或移轉出資料行](always-encrypted-migrate-using-import-export-wizard.md)
+- [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
+- [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
+

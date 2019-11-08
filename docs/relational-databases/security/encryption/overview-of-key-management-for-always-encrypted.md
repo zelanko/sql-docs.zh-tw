@@ -1,28 +1,28 @@
 ---
-title: 永遠加密的金鑰管理概觀 | Microsoft Docs
+title: Always Encrypted 的金鑰管理概觀 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872c752355c12074ed90b525940fa3889726e662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111645"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594102"
 ---
-# <a name="overview-of-key-management-for-always-encrypted"></a>永遠加密的金鑰管理概觀
+# <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 的金鑰管理概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-[永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)使用兩種密碼編譯金鑰類型來保護您的資料 - 一種金鑰用來加密您的資料，而另一種金鑰則用來對加密資料的金鑰進行加密。 資料行加密金鑰會加密您的資料，而資料行主要金鑰則會加密資料行加密金鑰。 本文提供詳細概觀來說明如何管理這些加密金鑰。
+[永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 使用兩種密碼編譯金鑰類型來保護您的資料 - 一種金鑰用來加密您的資料，而另一種金鑰則用來對加密資料的金鑰進行加密。 資料行加密金鑰會加密您的資料，而資料行主要金鑰則會加密資料行加密金鑰。 本文提供詳細概觀來說明如何管理這些加密金鑰。  
 
 當討論到永遠加密金鑰和金鑰管理時，請務必了解實際的密碼編譯金鑰與「描述」  金鑰的中繼資料物件之間的差異。 我們使用**資料行加密金鑰**和**資料行主要金鑰**等詞彙來表示實際的密碼編譯金鑰，並使用**資料行加密金鑰中繼資料**和**資料行主要金鑰中繼資料**來表示資料庫中的永遠加密金鑰「描述」  。
 
@@ -33,7 +33,7 @@ ms.locfileid: "68111645"
 
 請務必注意，資料庫系統中的金鑰中繼資料不包含純文字資料行主要金鑰或純文字資料行加密金鑰。 資料庫只會包含資料行主要金鑰類型和位置的相關資訊，以及資料行加密金鑰的加密值。 這表示永遠不會向資料庫系統公開純文字金鑰，如此可確保使用永遠加密保護的資料安全無虞，即使資料庫系統遭到入侵亦然。 若要確保資料庫系統無法存取純文字金鑰，請務必在與裝載您的資料庫不同的電腦上執行金鑰管理工具 - 如需詳細資訊，請參閱下面的 [金鑰管理的安全性考量](#security-considerations-for-key-management) 一節。
 
-因為資料庫只會包含加密資料 (在受永遠加密保護的資料行中)，而且無法存取純文字金鑰，所以無法解密資料。 這表示查詢永遠加密的資料行只會傳回加密值，因此需要加密或解密受保護資料的用戶端應用程式必須能夠存取資料行主要金鑰，以及相關的資料行加密金鑰。 如需詳細資訊，請參閱 [永遠加密 (用戶端開發)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)。
+因為資料庫只會包含加密資料 (在受永遠加密保護的資料行中)，而且無法存取純文字金鑰，所以無法解密資料。 這表示查詢永遠加密的資料行只會傳回加密值，因此需要加密或解密受保護資料的用戶端應用程式必須能夠存取資料行主要金鑰，以及相關的資料行加密金鑰。 如需詳細資訊，請參閱[使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)。
 
 
 
@@ -70,15 +70,12 @@ ms.locfileid: "68111645"
 永遠加密金鑰可透過 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) 和 [PowerShell](../../scripting/sql-server-powershell.md)進行管理：
 
 - **SQL Server Management Studio (SSMS)** - 提供結合與金鑰存放區存取和資料庫存取相關之工作的對話方塊和精靈，因此 SSMS 雖然不支援角色隔離，但可讓您輕鬆地設定金鑰。 如需使用 SSMS 管理金鑰的詳細資訊，請參閱：
-    - [佈建資料行主要金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
-    - [佈建資料行加密金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
-    - [輪替資料行主要金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
-    - [輪替資料行加密金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
-
+    - [使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)
+    - [使用 SQL Server Management Studio 輪替 Always Encrypted 金鑰](rotate-always-encrypted-keys-using-ssms.md)
 
 - **SQL Server PowerShell** - 包含以使用和不使用角色隔離來管理 Always Encrypted 金鑰的 Cmdlet。 如需詳細資訊，請參閱：
-    - [使用 PowerShell 設定永遠加密金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-    - [使用 PowerShell 更換永遠加密金鑰](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+    - [使用 PowerShell 設定 Always Encrypted 金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
+    - [使用 PowerShell 輪替 Always Encrypted 金鑰](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
 ## <a name="security-considerations-for-key-management"></a>金鑰管理的安全性考量
@@ -96,16 +93,13 @@ ms.locfileid: "68111645"
 - 為了確保您的金鑰管理程序不會不小心洩露資料行主要金鑰或資料行加密金鑰，請務必識別潛在敵人和安全性威脅，再定義及實作金鑰管理程序。 例如，如果您的目標是為了確保 DBA 無法存取敏感性資料，則不能由 DBA 負責產生金鑰。 不過，DBA「可以」  管理資料庫中的金鑰中繼資料，因為中繼資料不包含純文字金鑰。
 
 ## <a name="next-steps"></a>Next Steps
+- [使用 Always Encrypted 精靈設定資料行加密](always-encrypted-wizard.md)
+- [建立及儲存 Always Encrypted 的資料行主要金鑰](create-and-store-column-master-keys-always-encrypted.md)
+- [使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)
+- [使用 PowerShell 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-powershell.md)
 
-- [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [使用 PowerShell 設定永遠加密金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [使用 PowerShell 輪替永遠加密金鑰](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [使用 SQL Server Management Studio 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-## <a name="additional-resources"></a>其他資源
-
-- [一律加密 (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+## <a name="see-also"></a>另請參閱
+- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [永遠加密精靈教學課程 (Azure 金鑰保存庫)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [永遠加密精靈教學課程 (Windows 憑證存放區)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

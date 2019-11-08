@@ -1,7 +1,7 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: cbfc9ffa9ba188506e887201ca17ef630f1d04ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065943"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594396"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  改變資料庫中資料行的加密金鑰，新增或卸除加密的值。 CEK 最多可有兩個值，以便對應資料行主要金鑰能夠輪替。 當使用 [Always Encrypted &#40;資料庫引擎&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 功能加密資料行時，便會使用 CEK。 在新增 CEK 值之前，您必須使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 來定義用來加密值的資料行主要金鑰。  
+  改變資料庫中資料行的加密金鑰，新增或卸除加密的值。 資料行加密金鑰最多可有兩個值，以便對應資料行主要金鑰能夠輪替。 使用 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[使用安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 來加密資料行時，會使用資料行加密金鑰。 在新增資料行加密金鑰值之前，您必須使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 陳述式來定義用來加密值的資料行主要金鑰。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY key_name   
     [ ADD | DROP ] VALUE   
     (  
@@ -62,13 +62,16 @@ ALTER COLUMN ENCRYPTION KEY key_name
 >  絕對不要在此陳述式中傳遞純文字的 CEK 值。 這麼做會影響此功能的優。  
   
 ## <a name="remarks"></a>Remarks  
- 一般來說，資料行加密金鑰建立時只會使用一個加密值。 當資料行主要金鑰必須輪替時 (目前資料行主要金鑰必須換成新的資料行主要金鑰)，您可以新增資料行加密金鑰值，並以新的資料行主要金鑰來加密。 此工作流程一方面可讓您確保用戶端應用程式能夠存取由資料行加密金鑰加密的資料，一方面也可確保用戶端應用程式能夠使用新的資料行主要金鑰。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其可使用以舊資料行主要金鑰加密的資料行加密金鑰值來存取敏感性資料。 Always Encrypted 支援的加密演算法需要使用 256 位元純文字值。 您應該使用金鑰存放區提供者來產生加密的值；金鑰存放區提供者可封裝保存資料行主要金鑰的金鑰存放區。  
+一般來說，資料行加密金鑰建立時只會使用一個加密值。 當資料行主要金鑰必須輪替時 (目前資料行主要金鑰必須換成新的資料行主要金鑰)，您可以新增資料行加密金鑰值，並以新的資料行主要金鑰來加密。 此工作流程一方面可讓您確保用戶端應用程式能夠存取由資料行加密金鑰加密的資料，一方面也可確保用戶端應用程式能夠使用新的資料行主要金鑰。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其可使用以舊資料行主要金鑰加密的資料行加密金鑰值來存取敏感性資料。 Always Encrypted 支援的加密演算法需要使用 256 位元純文字值。 
+ 
+建議您使用 SQL Server Management Studio (SSMS) 或 PowerShell 之類的工具來輪替資料行主要金鑰。 請參閱[使用 SQL Server Management Studio 輪替 Always Encrypted 金鑰](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 輪替 Always Encrypted 金鑰](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)。
+
+您應該使用金鑰存放區提供者來產生加密的值；金鑰存放區提供者可封裝保存資料行主要金鑰的金鑰存放區。  
 
  資料行主要金鑰的輪替原因如下：
 - 合規性規定可能會要求金鑰必須定期輪替。
 - 資料行主要金鑰遭到入侵，基於安全考量必須輪替。
-- 允許或禁止與伺服器端記憶體保護區一起共用資料行加密金鑰。 例如您目前的資料行主要金鑰若不支援記憶體保護區運算 (未使用 ENCLAVE_COMPUTATIONS 屬性加以定義)，而您想要對受到資料行加密金鑰保護的資料行，執行記憶體保護區運算，您必須使用設有 ENCLAVE_COMPUTATIONS 屬性的新金鑰，取代資料行主要金鑰。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
-
+- 允許或禁止與伺服器端記憶體保護區一起共用資料行加密金鑰。 例如您目前的資料行主要金鑰若不支援記憶體保護區運算 (未使用 ENCLAVE_COMPUTATIONS 屬性加以定義)，而您想要對受到資料行加密金鑰保護的資料行，執行記憶體保護區運算，您必須使用設有 ENCLAVE_COMPUTATIONS 屬性的新金鑰，取代資料行主要金鑰。 [Always Encrypted 的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)和[針對具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)。
 
 使用 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 來檢視資料行加密金鑰的相關資訊。  
   
@@ -80,7 +83,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 ### <a name="a-adding-a-column-encryption-key-value"></a>A. 新增資料行加密金鑰值  
  下列範例會改變稱為 `MyCEK` 的資料行加密金鑰。  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 ADD VALUE  
 (  
@@ -95,7 +98,7 @@ GO
 ### <a name="b-dropping-a-column-encryption-key-value"></a>B. 卸除資料行加密金鑰值  
  下列範例會藉由卸除值來改變稱為 `MyCEK` 的資料行加密金鑰。  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 DROP VALUE  
 (  
@@ -112,5 +115,8 @@ GO
  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted 的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [針對具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

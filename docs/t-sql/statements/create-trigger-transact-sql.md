@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190372"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168757"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -206,9 +206,7 @@ SCHEMABINDING
 如果觸發程序是在經記憶體最佳化的資料表上，則這個選項為必要，且其不支援傳統資料表上的觸發程序。  
   
 FOR | AFTER  
-AFTER 指定只在觸發 SQL 陳述式指定的所有作業都成功啟動時，才引發 DML 觸發程序。 所有參考的串聯動作和條件約束檢查也都必須成功之後，才會引發這個觸發程序。  
-  
-當指定的關鍵字只有 FOR 時，預設值便是 AFTER。  
+FOR 或 AFTER 指定只在觸發 SQL 陳述式指定的所有作業都成功啟動時，才引發 DML 觸發程序。 所有參考的串聯動作和條件約束檢查也都必須成功之後，才會引發這個觸發程序。  
   
 您不能在檢視表上定義 AFTER 觸發程序。  
   

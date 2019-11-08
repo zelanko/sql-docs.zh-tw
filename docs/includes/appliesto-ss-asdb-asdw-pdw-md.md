@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 31c36c999f5f84d5fccaf2adb8c0e1422ce8df00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3c362a7e95e5fac62d75a38b147d6a77743b4a1
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68212770"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532892"
 ---
-<Token>**適用於：** ![是](media/yes.png)SQL Server ![是](media/yes.png)Azure SQL Database ![是](media/yes.png)Azure SQL 資料倉儲 ![是](media/yes.png)平行處理資料倉儲 </Token>
+<Token>**適用於：** ![是](media/yes.png)SQL Server ![是](media/yes.png)Azure SQL Database ![是](media/yes.png)Azure Synapse Analytics (SQL DW) ![是](media/yes.png)平行處理資料倉儲 </Token>
 

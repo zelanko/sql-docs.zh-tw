@@ -1,27 +1,25 @@
 ---
 title: SQL Server dacpac 延伸模組
 titleSuffix: Azure Data Studio
-description: 安裝和使用適用於 Azure Data Studio 的 SQL Server dacpac 延伸模組 (預覽)
+description: 安裝和使用適用於 Azure Data Studio 的 SQL Server dacpac 延伸模組
 ms.custom: seodec18
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783341"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532423"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 延伸模組 (預覽)
+# <a name="sql-server-dacpac-extension"></a>SQL Server dacpac 延伸模組
 
-[資料層應用程式精靈]  提供部署和解壓縮 .dacpac 檔案，以及匯入和匯出 .bacpac 檔案的易於使用體驗。
-
-此體驗目前為初始預覽狀態。 請在[這裡](https://github.com/microsoft/azuredatastudio/issues)回報問題和功能要求。
+[資料層應用程式精靈]    提供部署和解壓縮 .dacpac 檔案，以及匯入和匯出 .bacpac 檔案的易於使用體驗。
 
 
 ## <a name="features"></a>功能
@@ -45,14 +43,14 @@ ms.locfileid: "72783341"
 
     ![延伸模組管理員圖示](media/extensions/extension-manager-icon.png)
 
-2. 搜尋 **SQL Server dacpac** 延伸模組並加以選取，以檢視其詳細資料。 按一下 [安裝] 以新增延伸模組。
+2. 搜尋 **SQL Server dacpac** 延伸模組並加以選取，以檢視其詳細資料。 按一下 [安裝]  以新增延伸模組。
 
 3. 安裝之後，請**重新載入**以在 Azure Data Studio 中啟用延伸模組 (只有在第一次安裝延伸模組時才需要)。
 
 
 ## <a name="launch-the-data-tier-application-wizard"></a>啟動資料層應用程式精靈
 
-若要啟動精靈，請在 [物件總管] 中以滑鼠右鍵按一下資料庫資料夾，或以滑鼠右鍵按一下特定資料庫。 然後，請按一下 [資料層應用程式精靈]。
+若要啟動精靈，請在 [物件總管] 中以滑鼠右鍵按一下資料庫資料夾，或以滑鼠右鍵按一下特定資料庫。 然後，請按一下 [資料層應用程式精靈]  。
 
 ![dacpac 延伸模組啟動功能表](media/extensions/sql-server-dacpac-extension/dacpac-extension-launch.png)
 
@@ -60,3 +58,4 @@ ms.locfileid: "72783341"
 ## <a name="next-steps"></a>後續步驟
 
 若要深入了解 dacpac，[請參閱我們的文件。](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+請在[這裡](https://github.com/microsoft/azuredatastudio/issues)回報問題和功能要求。

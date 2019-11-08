@@ -5,34 +5,34 @@ description: 本文說明如何使用 Azure Data Studio、Notebook 和 azdata �
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 028864712658e35913fa04fb1a85e4ca960ad573
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653277"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531596"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何檢視巨量資料叢集的狀態
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何檢視巨量資料叢集的狀態 
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文描述如何存取服務端點，並檢視 SQL Server 巨量資料叢集 (預覽) 的狀態。 您可以同時使用 Azure Data Studio 和 **azdata**，本文同時涵蓋這兩種技術。
+本文描述如何存取服務端點，並檢視 SQL Server 巨量資料叢集元件的狀態。 您可以同時使用 Azure Data Studio 和 **azdata**，本文同時涵蓋這兩種技術。
 
 ## <a id="datastudio"></a> 使用 Azure Data Studio
 
-下載 [Azure Data Studio](https://aka.ms/azdata-insiders) 的最新**測試人員組建**之後，您可以使用 SQL Server 巨量資料叢集儀表板來檢視服務端點和巨量資料叢集的狀態。 請注意，以下部分功能僅適用於 Azure Data Studio 的測試人員組建。
+下載 [Azure Data Studio](https://aka.ms/getazuredatastudio) 的最新**測試人員組建**之後，您可以使用 SQL Server 巨量資料叢集儀表板來檢視服務端點和巨量資料叢集的狀態。 以下部分功能僅先在 Azure Data Studio 的測試人員組建中提供。
 
 1. 首先，在 Azure Data Studio 中建立與您巨量資料叢集的連線。 如需詳細資訊，請參閱[使用 Azure Data Studio 連線至 SQL Server 巨量資料叢集](connect-to-big-data-cluster.md)。
 
-1. 以滑鼠右鍵按一下巨量資料叢集端點，然後按一下 [管理]。
+1. 以滑鼠右鍵按一下巨量資料叢集端點，然後按一下 [管理]  。
 
    ![以滑鼠右鍵按一下 [管理]](media/view-cluster-status/right-click-manage.png)
 
-1. 選取 [SQL Server 巨量資料叢集] 索引標籤以存取巨量資料叢集儀表板。
+1. 選取 [SQL Server 巨量資料叢集]  索引標籤以存取巨量資料叢集儀表板。
 
    ![巨量資料叢集儀表板](media/view-cluster-status/bdc-dashboard.png)
 
@@ -41,13 +41,6 @@ ms.locfileid: "69653277"
 能夠輕鬆存取巨量資料叢集中的各種服務十分重要。 巨量資料叢集儀表板提供服務端點資料表，可讓您查看並複製服務端點。
 
 ![服務端點](media/view-cluster-status/service-endpoints.png)
-
-前幾個資料列會公開下列服務：
-
-- 應用程式 Proxy
-- 叢集管理服務
-- HDFS 和 Spark
-- 管理 Proxy
 
 當您需要端點以連線至這些服務時，這些服務會列出可複製及貼上的端點。 例如，您可以按一下端點右側的複製圖示，然後將其貼入要求該端點的文字視窗中。 若要執行[叢集狀態筆記本](#notebook)，叢集管理服務端點是必要的。
 
@@ -60,11 +53,11 @@ ms.locfileid: "69653277"
 - Spark 作業監視
 - Spark 資源管理
 
-您可以直接按一下這些連結。 在您連線至服務之前，系統會要求您提供使用者名稱和密碼兩次。
+您可以直接按一下這些連結。 存取下列儀表板時，您必須進行驗證。 針對計量和記錄儀表板，請提供您在部署時使用 **AZDATA_USERNAME** 和 **AZDATA_PASSWORD** 環境變數所設定的控制器系統管理員認證。 Spark 儀表板會使用閘道 (Knox) 認證：可為叢集中與 AD 整合的 AD 身分識別，或 **root** 使用者與 **AZDATA_PASSWORD** (若您的叢集使用基本驗證)。 
 
 ### <a id="notebook"></a> 叢集狀態筆記本
 
-1. 您也可以藉由啟動 [叢集狀態] 筆記本來檢視巨量資料叢集的叢集狀態。 若要啟動筆記本，請按一下 [叢集狀態] 工作。
+1. 您也可以藉由啟動 [叢集狀態] 筆記本來檢視巨量資料叢集的叢集狀態。 若要啟動筆記本，請按一下 [叢集狀態]  工作。
 
     ![啟動](media/view-cluster-status/cluster-status-launch.png)
 
@@ -77,14 +70,14 @@ ms.locfileid: "69653277"
 
     預設的巨量資料叢集名稱是 **mssql-cluster** (除非您在部署期間自訂名稱)。 您可以從 [服務端點] 資料表中的 [巨量資料叢集] 儀表板找到控制器端點。 端點會列為**叢集管理服務**。 如果您沒有認證資訊，請洽詢為您部署叢集的系統管理員。
 
-3. 按一下頂端工具列上的 [執行資料格]。
+3. 按一下頂端工具列上的 [執行資料格]  。
 
 4. 遵循提示輸入您的認證。 在您為巨量資料叢集名稱、控制器使用者名稱和控制器密碼鍵入每個認證後，請按下 Enter。
 
     > [!Note]
     > 如果您沒有設定巨量資料的設定檔，系統會要求您提供控制器端點。 請鍵入或貼上控制器端點，然後按 Enter 鍵以繼續。
 
-5. 如果您成功連線，筆記本其餘部分會顯示巨量資料叢集每個元件的輸出。 當您想要重新執行特定程式碼資料格時，請將滑鼠停留在程式碼資料格上，然後按一下 [執行] 圖示。
+5. 如果您成功連線，筆記本其餘部分會顯示巨量資料叢集每個元件的輸出。 當您想要重新執行特定程式碼儲存格時，請將滑鼠停留在程式碼儲存格上，然後按一下**執行**圖示。
 
 ## <a name="use-azdata"></a>使用 azdata
 
@@ -92,26 +85,20 @@ ms.locfileid: "69653277"
 
 ### <a name="service-endpoints"></a>服務端點
 
-您可以使用下列步驟來取得巨量資料叢集的外部端點 IP 位址。
-
-1. 查看下列 **kubectl** 命令的外部 IP 輸出，以尋找控制器端點的 IP 位址：
-
-   ```bash
-   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
-   ```
-
-   > [!TIP]
-   > 如果您未在部署期間變更預設名稱，則在上一個命令中使用 `-n mssql-cluster`。 **mssql-cluster** 是巨量資料叢集的預設名稱。
-
 1. 使用 [azdata login](reference-azdata.md) 來登入巨量資料叢集。 將 **--controller-endpoint** 參數設定為控制器端點的外部 IP 位址。
 
    ```bash
-   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
    ```
 
-   指定您在部署期間為控制器所設定的使用者名稱和密碼 (CONTROLLER_USERNAME 和 CONTROLLER_PASSWORD)。
+   指定您在部署期間為控制器所設定的使用者名稱和密碼 (AZDATA_USERNAME 和 AZDATA_PASSWORD)。 
+   若為 AD 驗證，命令為：
 
-1. 執行 [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) 來取得一份清單，其中包含每個端點的描述及其對應 IP 位址和連接埠值。 
+  ```bash
+   azdata login --endpoint https://<control_domain_name>:30080 --auth ad
+   ```
+
+1. 請執行 [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) 以取得一份清單，其中包含每個端點的描述及其對應 IP 位址和連接埠值。 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -137,10 +124,10 @@ ms.locfileid: "69653277"
 
 ### <a name="view-cluster-status"></a>檢視叢集狀態
 
-您可以使用 [azdata bdc status show](reference-azdata-bdc-status.md) 命令來檢視叢集的狀態。
+您可以使用 [`azdata bdc status show`](reference-azdata-bdc-status.md) 命令來檢視叢集的狀態。
 
 ```bash
-azdata bdc status show -o table
+azdata bdc status show
 ```
 
 > [!TIP]
@@ -149,60 +136,177 @@ azdata bdc status show -o table
 下列顯示此命令的範例輸出：
 
 ```output
-Kind     Name           State
--------  -------------  -------
-BDC      mssql-cluster  Ready
-Control  default        Ready
-Master   default        Ready
-Compute  default        Ready
-Data     default        Ready
-Storage  default        Ready
+ Bdc: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Services: ready                                                                                                                                                                                                     Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Servicename    State    Healthstatus    Details
+
+ spark          ready    healthy         -
+ sql            ready    healthy         -
+ hdfs           ready    healthy         -
+ control        ready    healthy         -
+ gateway        ready    healthy         -
+ app            ready    healthy         -
+
+
+ Spark Services: ready                                                                                                                                                                                               Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Sql Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Hdfs Services: ready                                                                                                                                                                                                Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ nmnode-0        ready    healthy         StatefulSet nmnode-0 is healthy
+ zookeeper       ready    healthy         StatefulSet zookeeper is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+
+
+ Control Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ controldb       ready    healthy         StatefulSet controldb is healthy
+ control         ready    healthy         ReplicaSet control is healthy
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+ controlwd       ready    healthy         ReplicaSet controlwd is healthy
+
+
+ Gateway Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ gateway         ready    healthy         StatefulSet gateway is healthy
+
+
+ App Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-### <a name="view-pool-status"></a>檢視集區狀態
+### <a name="view-specific-resource-status"></a>檢視特定資源狀態
 
-您可以使用 [azdata bdc pool status show](reference-azdata-bdc-pool-status.md) 命令來檢視叢集內的集區狀態。 若要使用此命令，請使用 `--kind` 參數指定集區的類型。 集區類型如下：
+您可以使用 [azdata bdc status show](reference-azdata-bdc-status.md) 命令來檢視叢集內特定資源的狀態。 當您使用此命令時，可以使用 `--resource` 參數進行篩選。 `--resource` 參數的幾個輸入範例包括：
 
-- 計算
-- data
 - master
-- Spark
-- 儲存
+- 控制
+- compute-0
+- storage-0
+- gateway
 
-例如，下列命令會顯示儲存集區的集區狀態：
+例如，下列命令會顯示儲存集區的狀態：
 
 ```bash
-azdata bdc pool status show --kind storage
+azdata bdc status show --all --resource storage-0
 ```
 
-您應該會看到類似下列輸出的文字：
+若要查看正在執行特定服務的所有元件狀態，您必須使用對應的命令群組 `azdata bdc <serviceName> status show`。 例如：
+
+- azdata bdc sql status show --all
+- azdata bdc hdfs status show --all
+- azdata bdc spark status show --all
+
+以下是範例輸出：
 
 ```output
-[
-  {
-    "kind": "Pod",
-    "logsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-0/logs/ui",
-    "name": "storage-0-0",
-    "nodeMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-0/nodemetrics/ui",
-    "sqlMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-0/sqlmetrics/ui",
-    "state": "Running"
-  },
-  {
-    "kind": "Pod",
-    "logsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-1/logs/ui",
-    "name": "storage-0-1",
-    "nodeMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-1/nodemetrics/ui",
-    "sqlMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-1/sqlmetrics/ui",
-    "state": "Running"
-  }
-]
+  Storage-0: ready                                                                                                                                                                                                    Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Instances: running                                                                                                                                                                                                  Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Instancename    State    Healthstatus    Details
+
+ storage-0-0     running  healthy         Pod storage-0-0 is healthy
+ storage-0-1     running  healthy         Pod storage-0-1 is healthy
+
+
+ Dashboards
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Name            Url
+
+ nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/nodemetrics/ui
+ sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/sqlmetrics/ui
+ logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/logs/ui
+ ```
+
+> [!TIP]
+> 執行 status 命令與 `--all` 參數以取得其他健全狀況詳細資料，包括對應至特定執行個體的計量和記錄儀表板連結。 以下是使用 `--all` 參數時的範例輸出：
+
+```output
+ Spark: ready                                                                                                                                                                                                        Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Sparkhead Resources: running                                                                                                                                                                                        Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Instancename    State    Healthstatus    Details
+
+ sparkhead-0     running  healthy         Pod sparkhead-0 is healthy
+ sparkhead-1     running  healthy         Pod sparkhead-1 is healthy
+
+
+      Dashboards
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      Name            Url
+
+      nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/nodemetrics/ui
+      sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/sqlmetrics/ui
+      logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/logs/ui
+
+
+ Storage-0 Resources: running                                                                                                                                                                                        Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Instancename    State    Healthstatus    Details
+
+ storage-0-0     running  healthy         Pod storage-0-0 is healthy
+ storage-0-1     running  healthy         Pod storage-0-1 is healthy
+
+
+      Dashboards
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      Name            Url
+
+      nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/nodemetrics/ui
+      sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/sqlmetrics/ui
+      logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/logs/ui
 ```
 
-`logsUrl` 值會連結至具有記錄資訊的 Kibana 儀表板：
+`logsUrl` 值會連結至 Kibana 儀表板：
 
 ![Kibana 儀表板](./media/view-cluster-status/kibana-dashboard.png)
 
-`nodeMetricsUrl` 和 `sqlMetricsUrl` 值會連結至 Grafana 儀表板以監視節點健康狀態和 SQL 計量：
+> [!NOTE]
+> (舊版) Microsoft Edge 瀏覽器 iOS 與 Kibana 不相容，您必須使用以 Chromium 為基礎的瀏覽器，儀表板才能正常顯示。 當您使用不支援的瀏覽器載入儀表板時，會看到空白頁面。 如需 Kibana 支援的瀏覽器，請參閱這裡。
+
+`nodeMetricsUrl` 和 `sqlMetricsUrl` 值會連結至 Grafana 儀表板，以監視 Kubernetes 節點計量和巨量資料叢集服務計量：
 
 ![Grafana 儀表板](./media/view-cluster-status/grafana-dashboard.png)
 
@@ -210,8 +314,8 @@ azdata bdc pool status show --kind storage
 
 ### <a name="view-controller-status"></a>檢視控制器狀態
 
-您可以使用 [azdata bdc status show](reference-azdata-bdc-control-status.md) 命令來檢視叢集的狀態。 該命令提供與巨量資料叢集控制器節點相關之監視儀表板的類似連結。
+您可以使用 [`azdata bdc control status show`](reference-azdata-bdc-control-status.md) 命令來檢視控制器狀態。 該命令可提供監視儀表板的類似連結，這些監視儀表板與巨量資料叢集的控制器元件相關。
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關 big data 叢集的詳細資訊, 請參閱[什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)。
+如需巨量資料叢集的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md)。

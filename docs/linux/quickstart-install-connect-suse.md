@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: 本快速入門說明如何在 SUSE Linux Enterprise Server 上安裝 SQL Server 2017 或 SQL Server 2019，然後使用 sqlcmd 建立及查詢資料庫。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/16/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: b878e76546642ee9b9792ece31029c0640eb8864
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910488"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594539"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入門：在 SUSE Linux Enterprise Server 上安裝 SQL Server 並建立資料庫
 
@@ -23,13 +23,16 @@ ms.locfileid: "67910488"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入門中，您會在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安裝 SQL Server 2017 或 SQL Server 2019 Preview。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
+在本快速入門中，您會在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安裝 SQL Server 2017 或 SQL Server 2019。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本快速入門中，您會在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安裝 SQL Server 2019 Preview。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
+在本快速入門中，您會在 SUSE Linux Enterprise Server (SLES) v12 上安裝 SQL Server 2019。 然後與 **sqlcmd** 連線，建立您的第一個資料庫並執行查詢。
+
+> [!IMPORTANT]
+> SUSE Linux Server v12 SP2、SP3 或 SP4 上皆支援 SQL Server 2019。
 
 ::: moniker-end
 
@@ -38,11 +41,23 @@ ms.locfileid: "67910488"
 
 ## <a name="prerequisites"></a>Prerequisites
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 您的 SLES v12 SP2 機器必須**至少有 2 GB** 的記憶體。 檔案系統必須是 **XFS** 或 **EXT4**。 不支援其他檔案系統 (例如 **BTRFS**)。
 
-若要在您自己的機器上安裝 SUSE Linux Enterprise Server，請前往 [https://www.suse.com/products/server](https://www.suse.com/products/server)。 您也可以在 Azure 中建立 SLES 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並於呼叫 `az vm create` 時使用 `--image SLES`。
+::: moniker-end
 
-如果您先前已安裝 SQL Server 2017 的 CTP 或 RC 版本，您必須先移除舊的存放庫，再依照這些步驟進行。 如需詳細資訊，請參閱[為 SQL Server 2017 和 2019 設定 Linux 存放庫](sql-server-linux-change-repo.md)。
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+您的 SLES v12 SP2、SP3 或 SP4 機器必須**至少有 2 GB** 的記憶體。 檔案系統必須是 **XFS** 或 **EXT4**。 不支援其他檔案系統 (例如 **BTRFS**)。
+
+::: moniker-end
+
+若要在您自己的機器上安裝 SUSE Linux Enterprise Server，請前往 [https://www.suse.com/products/server](https://www.suse.com/products/server)。 您也可以在 Azure 中建立 SLES 虛擬機器。 請參閱[使用 Azure CLI 建立和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並於呼叫 `az vm create`時使用 `--image SLES`。
+
+如果您先前已安裝 SQL Server 的 CTP 或 RC 版本，您必須先移除舊的存放庫，然後遵循這些步驟進行。 如需詳細資訊，請參閱[為 SQL Server 2017 和 2019 設定 Linux 存放庫](sql-server-linux-change-repo.md)。
 
 > [!NOTE]
 > 目前尚未支援在 Windows 10 上使用[適用於 Linux 的 Windows 子系統](https://msdn.microsoft.com/commandline/wsl/about)作為安裝目標。
@@ -63,10 +78,10 @@ ms.locfileid: "67910488"
    ```
 
    > [!TIP]
-   > 如果您想要試用 SQL Server 2019，您必須改為註冊 **Preview (2019)** 存放庫。 請使用下列命令安裝 SQL Server 2019：
+   > 如果您想要安裝 SQL Server 2019，則必須改為註冊 SQL Server 2019 存放庫。 請使用下列命令安裝 SQL Server 2019：
    >
    > ```bash
-   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    > ```
 
 2. 重新整理您的存放庫。
@@ -115,10 +130,10 @@ ms.locfileid: "67910488"
 
 若要在 SLES 上設定 SQL Server，請從終端執行下列命令，安裝 **mssql-server** 套件：
 
-1. 下載 Microsoft SQL Server 2019 Preview SLES 存放庫組態檔：
+1. 下載 Microsoft SQL Server 2019 SLES 存放庫設定檔：
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
    ```
 
 2. 重新整理您的存放庫。
@@ -154,7 +169,7 @@ ms.locfileid: "67910488"
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-此時，SQL Server 2019 Preview 正在您的 SLES 機器上執行並可立即使用！
+此時，SQL Server 2019 正在 SLES 機器上執行並可立即使用！
 
 ::: moniker-end
 

@@ -4,29 +4,29 @@ description: 本文提供在 Linux 上設定 PMEM 的逐步解說。
 author: briancarrig
 ms.author: brcarrig
 ms.reviewer: vanto
-ms.date: 11/06/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f9a5d8c6b2db65bd237f0a3a267638a8cc16b68
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923834"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531295"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文描述如何設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)。 Linux 上的 PMEM 支援，是在 SQL Server 2019 預覽中引進。
+本文描述如何設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)。 SQL Server 2019 已引進 Linux 上的 PMEM 支援。
 
 ## <a name="overview"></a>概觀
 
 SQL Server 2016 引進了非揮發性 DIMM 的支援，以及稱為 [Tail of the Log Caching on NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/) (NVDIMM 上的記錄檔快取結尾) 的最佳化。 這些最佳化會減少將記錄緩衝區強化為永續性儲存體所需的作業數目。 這可以利用 Windows Server 直接存取 DAX 模式中的持續性記憶體裝置。
 
-SQL Server 2019 預覽版將持續性記憶體 (PMEM) 裝置的支援擴充至 Linux，提供放置在 PMEM 上資料及交易記錄檔的完整啟蒙。 啟蒙是指使用有效率的使用者空間 `memcpy()` 作業，來存取存放裝置的方法。 SQL Server 利用 Linux 上的 DAX 支援 (而不是逐步執行檔案系統和儲存體堆疊) 直接將資料放入裝置，可降低延遲。
+SQL Server 2019 將持續性記憶體 (PMEM) 裝置的支援擴充至 Linux，徹底強化放置在 PMEM 上的資料及交易記錄檔。 啟蒙是指使用有效率的使用者空間 `memcpy()` 作業，來存取存放裝置的方法。 SQL Server 利用 Linux 上的 DAX 支援 (而不是逐步執行檔案系統和儲存體堆疊) 直接將資料放入裝置，可降低延遲。
 
 ## <a name="enable-enlightenment-of-database-files"></a>啟用資料庫檔案的啟蒙
 若要在 Linux 上 SQL Server 中啟用資料庫檔案的啟蒙，請遵循下列步驟：

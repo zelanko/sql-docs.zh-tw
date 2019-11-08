@@ -1,24 +1,24 @@
 ---
-title: 建立及儲存資料行主要金鑰 (永遠加密) | Microsoft Docs
+title: 建立及儲存 Always Encrypted 的資料行主要金鑰 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/01/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902957"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594430"
 ---
-# <a name="create-and-store-column-master-keys-always-encrypted"></a>建立及儲存資料行主要金鑰 (永遠加密)
+# <a name="create-and-store-column-master-keys-for-always-encrypted"></a>建立及儲存 Always Encrypted 的資料行主要金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 「資料行主要金鑰」  是用來在永遠加密中，加密資料行加密金鑰的金鑰保護型金鑰。 資料行主要金鑰必須儲存在受信任的金鑰存放區，且需要加密或解密資料的應用程式、設定永遠加密和管理永遠加密金鑰的工具必須能存取該金鑰。
@@ -27,7 +27,7 @@ ms.locfileid: "72902957"
 
 ## <a name="selecting-a-key-store-for-your-column-master-key"></a>選取資料行主要金鑰的金鑰存放區
 
-永遠加密支援以多個金鑰存放區來儲存永遠加密的資料行主要金鑰。 支援的金鑰存放區會依您使用的驅動程式和版本而有所不同。
+永遠加密支援以多個金鑰存放區來儲存永遠加密的資料行主要金鑰。 支援的金鑰存放區，會依您使用的驅動程式和版本而有所不同。
 
 有兩種高階金鑰存放區可以考慮 - 本機金鑰存放區  ，和集中式金鑰存放區  。
 
@@ -35,28 +35,20 @@ ms.locfileid: "72902957"
 
 * **本機金鑰存放區** - 僅能供包含本機金鑰存放區之電腦上的應用程式使用。 換句話說，您需要將金鑰存放區和金鑰複寫到每一部執行應用程式的電腦上。 本機金鑰存放區的其中一個範例是 Windows 憑證存放區。 使用本機金鑰存放區時，您需要確定金鑰存放區存在於每部裝載您應用程式的電腦上，且電腦包含您應用程式存取使用永遠加密保護之資料所需的資料行主要金鑰。 當您第一次提供資料行主要金鑰時，或是當您變更 (輪替) 金鑰時，必須先確認金鑰已部署至裝載您應用程式的所有電腦。
 
-* **集中式金鑰存放區** - 服務多部電腦上的應用程式。 集中式金鑰存放區的其中一個範例是 [Azure 金鑰保存庫](https://azure.microsoft.com/services/key-vault/)。 集中式金鑰存放區通常能簡化金鑰管理，因為您不需要在多部電腦上維護多份的資料行主要金鑰。 您需要確保您的應用程式已設定為連接至集中式金鑰存放區。
+* **集中式金鑰存放區** - 服務多部電腦上的應用程式。 集中式金鑰存放區的其中一個範例是 [Azure 金鑰保存庫](https://azure.microsoft.com/services/key-vault/)。 集中式金鑰存放區通常能簡化金鑰管理，因為您不需要在多部電腦上維護多份的資料行主要金鑰。 請確保您的應用程式已設定為連線至集中式金鑰存放區。
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>已啟用永遠加密的用戶端驅動程式中支援哪些金鑰存放區？
 
-已啟用永遠加密的用戶端驅動程式，是已具有將永遠加密納入用戶端應用程式之內建支援的 SQL Server 用戶端驅動程式。 已啟用永遠加密的驅動程式包含受歡迎之金鑰存放區的幾個內建提供者。 請注意，有些驅動程式也可讓您實作並註冊自訂的資料行主要金鑰存放區提供者，以便您可以使用任何金鑰存放區，即使它沒有內建提供者。 在內建提供者與自訂提供者之間做決定時，請考慮使用內建提供者通常表示您的應用程式有較少的變更 (在某些情況下，只需要變更資料庫的連接字串)。
+已啟用永遠加密的用戶端驅動程式，是已具有將永遠加密納入用戶端應用程式之內建支援的 SQL Server 用戶端驅動程式。 已啟用永遠加密的驅動程式包含受歡迎之金鑰存放區的幾個內建提供者。 有些驅動程式也可讓您實作並註冊自訂的資料行主要金鑰存放區提供者，以便您可以使用任何金鑰存放區，即使其沒有內建提供者。 在內建提供者與自訂提供者之間做決定時，請考慮使用內建提供者通常表示您的應用程式有較少的變更 (在某些情況下，只需要變更資料庫的連接字串)。
 
-可用的內建提供者取決於選取的驅動程式、驅動程式版本和作業系統。  請查閱您特定驅動程式的永遠加密文件，以判斷目前支援哪些金鑰存放區，以及驅動程式是否支援自訂金鑰存放區提供者。
+可用的內建提供者取決於選取的驅動程式、驅動程式版本和作業系統。  請查閱您特定驅動程式的 Always Encrypted 文件，以判斷目前支援哪些金鑰存放區，以及驅動程式是否支援自訂金鑰存放區提供者 - [使用 Always Encrypted 開發應用程式](always-encrypted-client-development.md)。
 
-- [搭配 .NET Framework Data Provider for SQL Server 使用永遠加密來開發應用程式](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### <a name="supported-tools"></a>支援的工具
-
-您可以使用 [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) 和 [SqlServer PowerShell 模組](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 來設定永遠加密和管理永遠加密金鑰。 如需這些工具支援的金鑰存放區清單，請參閱︰
-
-- [使用 SQL Server Management Studio 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [使用 PowerShell 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+### <a name="which-key-stores-are-supported-in-sql-tools"></a>SQL 工具支援哪些金鑰存放區？
+SQL Server Management Studio 和 SQL Server PowerShell 模組僅支援儲存在 Azure Key Vault、Windows 憑證存放區和金鑰存放區 (提供新一代密碼編譯 (CNG) API 或密碼編譯 API (CAPI)) 中的資料行主要金鑰。 
 
 ## <a name="creating-column-master-keys-in-windows-certificate-store"></a>在 Windows 憑證存放區中建立資料行主要金鑰    
 
-資料行主要金鑰可以是儲存在 Windows 憑證存放區中的憑證。 請注意，已啟用永遠加密的驅動程式不會驗證到期日或憑證授權單位鏈結。 憑證只當作金鑰組使用，其中包含公開和私密金鑰。
+資料行主要金鑰可以是儲存在 Windows 憑證存放區中的憑證。 已啟用 Always Encrypted 的驅動程式不會驗證到期日或憑證授權單位鏈結。 憑證只當作金鑰組使用，其中包含公開和私密金鑰。
 
 若要成為有效的資料行主要金鑰，憑證必須︰
 * 是 X.509 憑證。
@@ -82,7 +74,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 建立自我簽署的憑證
 
-如需詳細資訊，請參閱 [使用 SQL Server Management Studio 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)。
+如需詳細資料，請參閱[使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)。
 如需使用 SSMS，並將永遠加密金鑰儲存在 Windows 憑證存放區中的逐步教學課程，請參閱 [永遠加密精靈教學課程 (Windows 憑證存放區)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)。
 
 
@@ -113,7 +105,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 Azure 金鑰保存庫可協助保護密碼編譯金鑰和密碼，並且是存放永遠加密資料行主要金鑰的方便選項，尤其是當應用程式裝載在 Azure 時。 若要在 [Azure 金鑰保存庫](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)建立金鑰，您需要 [Azure 訂用帳戶](https://azure.microsoft.com/free/) 和 Azure 金鑰保存庫。
 
-#### <a name="using-powershell"></a>使用 PowerShell
+### <a name="using-powershell"></a>使用 PowerShell
 
 下列範例會建立新的 Azure 金鑰保存庫和金鑰，並將權限授與所需的使用者。
 
@@ -132,8 +124,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+### <a name="using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS)
 
+如需如何使用 SSMS 在 Azure Key Vault 中建立資料行主要金鑰的詳細資料，請參閱[使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)。
 如需使用 SSMS，並將永遠加密金鑰儲存在 Azure 金鑰保存庫中的逐步教學課程，請參閱 [永遠加密精靈教學課程 (Azure 金鑰保存庫)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault)。
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>讓 Azure 金鑰保存庫金鑰可供應用程式和使用者使用
@@ -195,8 +188,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio
 
-請參閱 [Provisioning Column Master using SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2)(使用 SQL Server Management Studio (SSMS) 佈建資料行主要金鑰)。
-
+請參閱[使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)。
 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>讓 CNG 金鑰可供應用程式和使用者使用
 
@@ -206,7 +198,10 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 永遠加密的資料行主要金鑰可以儲存在實作密碼編譯 API (CAPI) 的金鑰存放區中。 一般而言，這類型的存放區是硬體安全性模組 (HSM)，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。 HSM 傳統上為插入卡或直接連接到電腦 (本機 HSM) 或網路伺服器的外部裝置形式。
 
-若要讓 HSM 可供指定電腦上的應用程式使用，實作 CAPI 的密碼編譯服務提供者 (CSP)，必須安裝及設定在電腦上。 永遠加密用戶端驅動程式 (驅動程式內的資料行主要金鑰存放區提供者)，使用 CSP 來加密和解密資料行加密金鑰 (使用金鑰存放區中儲存的資料行主要金鑰所保護)。 注意:CAPI 是已被取代的舊版 API。 如果 KSP 可用於您的 HSM，您應該使用它，而不要使用 CSP/CAPI。
+若要讓 HSM 可供指定電腦上的應用程式使用，實作 CAPI 的密碼編譯服務提供者 (CSP)，必須安裝及設定在電腦上。 永遠加密用戶端驅動程式 (驅動程式內的資料行主要金鑰存放區提供者)，使用 CSP 來加密和解密資料行加密金鑰 (使用金鑰存放區中儲存的資料行主要金鑰所保護)。 
+
+> [!NOTE]
+> CAPI 是已被取代的舊版 API。 如果 KSP 可用於您的 HSM，您應該使用它，而不要使用 CSP/CAPI。
 
 CSP 必須支援 RSA 演算法才能搭配永遠加密。
 
@@ -220,25 +215,15 @@ Windows 包含下列以軟體為基礎 (不受 HSM 支援 HSM) 的 CSP，它們�
 請參閱您的 HSM 文件。
 
 #### <a name="using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS)
-請參閱＜使用 SQL Server Management Studio 設定永遠加密＞的＜佈建資料行主要金鑰＞一節。
+請參閱[使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)。
 
- 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>讓 CNG 金鑰可供應用程式和使用者使用
-請參閱您的 HSM 和 CSP 文件，以了解如何在電腦上設定 CSP，以及如何將應用程式和使用者的存取權授與 HSM。
- 
+請參閱 HSM 和 CSP 文件，以了解如何在電腦上設定 CSP，以及如何將應用程式和使用者的存取權授與 HSM。
  
 ## <a name="next-steps"></a>Next Steps  
+- [使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-ssms.md)
+- [使用 Provision 佈建 Always Encrypted 金鑰](configure-always-encrypted-keys-using-powershell.md)
   
-- [使用 PowerShell 設定永遠加密金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [使用 PowerShell 輪替永遠加密金鑰](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [使用 SQL Server Management Studio 設定永遠加密](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-  
-## <a name="additional-resources"></a>其他資源  
-
-- [永遠加密的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted (資料庫引擎)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [搭配 .NET Framework Data Provider for SQL Server 使用永遠加密來開發應用程式](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [永遠加密部落格](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
-
+## <a name="see-also"></a>另請參閱 
+- [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted 的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

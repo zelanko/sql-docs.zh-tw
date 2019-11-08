@@ -1,7 +1,7 @@
 ---
 title: ALTER USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d49b2489cc17388029a9e44cce415b4040fc035f
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: 66b96ee7f4c7cbd17133149a138a60296c5cb24d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049763"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593680"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -523,6 +523,9 @@ ALTER USER userName
 ### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>將 SQL 內部部署中 Windows 使用者移轉到受控執行個體的備註
 
 這些備註適用於透過已使用 Azure AD 同盟及同步的 Windows 使用者進行驗證。
+
+> [!NOTE]
+> 受控執行個體功能的 Azure AD 系統管理員已在建立後變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 系統管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 - 在用於移轉用途的 ALTER USER 語法所有版本中，根據預設，對應至 Azure AD 的 Windows 使用者或群組驗證是透過圖形 API 執行。
 - 已建立別名 (使用與原始 Windows 帳戶不同的名稱) 的內部部署使用者會保留其別名。

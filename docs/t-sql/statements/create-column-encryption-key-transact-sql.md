@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,25 +26,25 @@ helpviewer_keywords:
 - column encryption key
 - CREATE COLUMN ENCRYPTION KEY statement
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064576"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593909"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-使用一組初始值來建立資料行加密金鑰 (CEK)，並以指定的資料行主要金鑰 (CMK) 加密。 這項加密是中繼資料作業。 CEK 最多可以使用兩個值來進行 CMK 輪替。 您必須先建立 CEK 之後，才能使用 [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 功能來加密資料庫中的任何資料行。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立 CEK。 建立 CEK 之前，您必須使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 陳述式定義 CMK。  
+針對 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 或[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 建立資料行加密金鑰中繼資料物件。 資料行加密金鑰中繼資料物件包含一或兩個資料行加密金鑰的加密值，該資料行加密金鑰用來加密資料行中的資料。 每個值都是使用資料行主要金鑰進行加密。 
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY key_name   
 WITH VALUES  
   (  
@@ -64,25 +64,28 @@ WITH VALUES
 _key\_name_  
 為資料行加密金鑰在資料庫中的識別名稱。  
   
-_column\_master\_key\_name_ 指定用來加密 CEK 的自訂 CMK 名稱。  
+_column\_master\_key\_name_ 指定用來加密資料行加密金鑰的自訂 CMK 名稱。  
   
 _algorithm\_name_  
 用來將資料行加密金鑰值加密的演算法名稱。 系統提供者的演算法必須是 **RSA_OAEP**。  
   
 _varbinary\_literal_  
-加密的 CEK 值 BLOB。  
+加密的資料行加密金鑰值 BLOB。  
   
 > [!WARNING]  
->  絕對不要將純文字 CEK 值傳入這個陳述式。 這麼做會影響此功能的優。  
+>  絕對不要在此陳述式中傳遞純文字的資料行加密金鑰值。 這麼做會影響此功能的優。  
   
 ## <a name="remarks"></a>Remarks  
-CREATE COLUMN ENCRYPTION KEY 陳述式必須包含至少一個 VALUES 子句 (最多 2 個)。 如果只提供一個，您可以使用 ALTER COLUMN ENCRYPTION KEY 陳述式，稍後再新增第二個值。 您也可以使用 ALTER COLUMN ENCRYPTION KEY 陳述式來移除 VALUES 子句。  
+`CREATE COLUMN ENCRYPTION KEY` 陳述式必須包含至少一或兩個值。 如您可以使用 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md)，稍後再新增第二個值。 您也可以使用 `ALTER COLUMN ENCRYPTION KEY` 陳述式來移除值。  
   
-一般來說，CEK 建立時只會使用一個加密值。 有時候，您需要輪替 CMK。 請用新的 CMK 取代目前的 CMK。 需要輪替金鑰時，請新增資料行加密金鑰的新值，並使用新的 CMK 加密。 這項輪替可讓您確保用戶端應用程式能夠存取由 CEK 加密的資料，同時也確保用戶端應用程式能夠使用新的 CMK。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其可使用以舊 CMK 加密的 CEK 值來存取敏感性資料。  
+一般來說，資料行加密金鑰建立時只會使用一個加密值。 有時候，您需要輪替資料行主要金鑰，以新的資料行主要金鑰來取代目前的資料行主要金鑰。 需要輪替金鑰時，請新增資料行加密金鑰的新值，並使用新的 CMK 加密。 此輪替一方面可讓您確保用戶端應用程式能夠存取由資料行加密金鑰加密的資料，一方面也可確保用戶端應用程式能夠使用新的資料行主要金鑰。 如果用戶端應用程式中的驅動程式已啟用 Always Encrypted，但沒有新的主要金鑰存取權，其將使用以舊資料行主要金鑰加密的資料行加密金鑰值來存取敏感性資料。  
+
   
 Always Encrypted 支援的加密演算法需要使用 256 位元純文字值。  
   
-您應該使用金鑰存放區提供者來產生加密值；金鑰存放區提供者可封裝保存 CMK 的金鑰存放區。 如需詳細資訊，請參閱 [Always Encrypted &#40;用戶端開發&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)。  
+建議您使用 SQL Server Management Studio (SSMS) 或 PowerShell 之類的工具來管理資料行加密金鑰。 這類工具會產生加密值，並自動發出 `CREATE COLUMN ENCRYPTION KEY` 陳述式來建立資料行加密金鑰中繼資料物件。 請參閱[使用 SQL Server Management Studio 佈建 Always Encrypted 金鑰](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md)和[使用 PowerShell 佈建 Always Encrypted 金鑰](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)。 
+
+您也可以使用金鑰存放區提供者 (封裝保存資料行主要金鑰的金鑰存放區)，以程式設計方式產生資料行加密金鑰值。 如需詳細資訊，請參閱[使用 Always Encrypted 開發應用程式](../../relational-databases/security/encryption/always-encrypted-client-development.md)。
   
 使用 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 來檢視資料行加密金鑰的相關資訊。  
   
@@ -129,9 +132,12 @@ GO
 [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
 [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
-[永遠加密 &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+[Always Encrypted 的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+[為具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

@@ -1,7 +1,7 @@
 ---
 title: 教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7012ae6863394e6895a192f9ec7df3d8ceea3ee0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909682"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592339"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 本教學課程將教導您如何開始使用[具有安全記憶體保護區的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它會顯示：
 - 如何建立基本環境來測試和評估具有安全記憶體保護區的 Always Encrypted。
@@ -36,19 +36,16 @@ ms.locfileid: "72909682"
 ### <a name="sql-server-computer-requirements"></a>SQL Server 電腦需求
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 或更新版本。
-- Windows 10 企業版 1809 版或 Windows Server 2019 Datacenter。
-- 如果您的 SQL Server 電腦是實體機器，它必須符合 [HYPER-V 硬體需求](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) \(部分機器翻譯\)：
-   - 使用第二層位址轉譯 (SLAT) 的 64 位元處理器
-   - 對 VM 監視器模式擴充功能的 CPU 支援 (Intel CPU 上的 VT-c)
-   - 已啟用虛擬化支援 (Intel VT-x 或 AMD-V)
-- 如果您的 SQL Server 電腦是虛擬機器，則必須將該 VM 設定為支援虛擬化形式安全性。
-   - 在 Hyper-V 2016 或更新版本上，請使用第 1 代 VM，同時在 VM 處理器上[啟用巢狀虛擬化延伸模組](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)，或使用第 2 代 VM。 如需 VM 各世代的詳細資訊，請參閱[我應該在 Hyper-V 中建立第 1 代或第 2 代虛擬機器嗎？](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)。 
-   - 請確定您在 Azure 中所執行的 VM 大小，支援下列其中之一：
-      - 巢狀虛擬化，例如 Dv3 與 Ev3 系列 VM。 請參閱[建立可使用巢狀功能的 Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
-      - 第 2 代 VM，例如: Dsv3 或 Esv3 系列 VM。 請參閱 [Azure上第 2 代 VM 的支援](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2)。
-   - 在 VMWare vSphere 6.7 或更新版本上，針對 VM 啟用虛擬化型安全性支援，如 [VMware 文件](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) \(英文\) 所述。
-   - 其他 Hypervisor 和公用雲端可能支援在 VM 中使用具有安全記憶體保護區的 Always Encrypted，前提是已對 VM 公開虛擬化擴充 (又稱巢狀虛擬化)。 如需相容性和設定指示，請參閱您的虛擬化解決方案文件。
-- [SQL Server Management Studio (SSMS) 18.0 或更新版本](../../ssms/download-sql-server-management-studio-ssms.md)。
+- Windows 10 企業版 1809 版或更新版本；或 Windows Server 2019 Datacenter Edition。 其他版本的 Windows 10 和 Windows Server 不支援使用 HGS 進行證明。
+- 虛擬化技術的 CPU 支援：
+  - 搭載「延伸分頁表」的 Intel VT-x。
+  - 搭載「快速虛擬化索引處理」的 AMD-V。
+  - 如果您是在 VM 中執行 [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]，則 Hypervisor 和實體 CPU 必須提供巢狀虛擬化功能。 
+    - 在 Hyper-V 2016 或更新版本上，[於 VM 處理器上啟用巢狀虛擬化延伸模組](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
+    - 在 Azure 中，選取支援巢狀虛擬化的 VM 大小。 這包括所有 v3 系列 VM，例如 Dv3 和 Ev3。 請參閱[建立可使用巢狀功能的 Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
+    - 在 VMWare vSphere 6.7 或更新版本上，針對 VM 啟用虛擬化型安全性支援，如 [VMware 文件](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) \(英文\) 所述。
+    - 其他 Hypervisor 和公用雲端可能還支援巢狀虛擬化功能，該功能可啟用具有 VBS 記憶體保護區的 Always Encrypted。 如需相容性和設定指示，請參閱虛擬化解決方案文件。
+- [SQL Server Management Studio (SSMS) 18.3 或更新版本](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 或者，您也可以在另一部電腦上安裝 SSMS。
 
@@ -158,7 +155,7 @@ ms.locfileid: "72909682"
 
 UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複步驟 5 和 6，以解決此錯誤。
 
-如果所有其他方式均失敗，請執行 Clear-HgsClientHostKey，並重複步驟 4-7。
+如果所有其他方式均失敗，請執行 Remove-HgsClientHostKey，並重複步驟 4-7。
 
 ## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>步驟 3：在 SQL Server 啟用具有安全記憶體保護區的 Always Encrypted
 
@@ -343,10 +340,12 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 3. 在未啟用 Always Encrypted 的 SSMS 執行個體中再次嘗試相同查詢，並留意發生的失敗。
 
 ## <a name="next-steps"></a>Next Steps
-移至[教學課程：使用隨機加密在已啟用記憶體保護區的資料行中建立及使用索引](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)，這是本教學課程接續的內容。
+完成本教學課程之後，您可以移至下列其中一個教學課程：
+- [教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET Framework 應用程式](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [教學課程：使用隨機化加密在已啟用記憶體保護區的資料行上建立及使用索引](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-如需具有安全記憶體保護區的 Always Encrypted 其他使用案例資訊，請參閱[設定具有安全記憶體保護區的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)。 例如：
-
-- [設定 TPM 證明。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [ HGS 執行個體的 HTTPS。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- 開發可針對加密資料行發出豐富查詢的應用程式。
+## <a name="see-also"></a>另請參閱
+- [設定 Always Encrypted 伺服器設定選項的記憶體保護區類型](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+- [佈建已啟用記憶體保護區的金鑰](encryption/always-encrypted-enclaves-provision-keys.md)
+- [使用 Transact-SQL 就地設定資料行加密](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
+- [使用具有安全記憶體保護區的 Always Encrypted 查詢資料行](encryption/always-encrypted-enclaves-query-columns.md)

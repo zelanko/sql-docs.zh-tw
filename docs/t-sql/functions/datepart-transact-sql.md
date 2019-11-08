@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278189"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988433"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,19 +119,15 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>Week 和 weekday datepart 引數
 針對 **week** (**wk**、**ww**) 或 **weekday** (**dw**) *datepart*，`DATEPART` 傳回值會取決於 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) 所設定的值。
   
-任何一年的 1 月 1 日皆定義 **week**_datepart_ 的起始數字。 例如：
+任何一年的 1 月 1 日皆會定義 **week** _datepart_ 的起始數字。 例如：
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
 其中 *xxxx* 是任何一年。
   
-此表格顯示下列日期之 **week** 和 **weekday** *datepart* 的傳回值：
+這個表格會針對每個 SET DATEFIRST 引數，顯示 '2007-04-21' 的 **week** 和 **weekday** *datepart* 傳回值。 2007 年 1 月 1 日是星期一。 2007 年 4 月 21 日是星期六。 針對美國英文，
 
-'2007-04-21 '
-
-(針對每個 SET DATEFIRST 引數)。 2007 年 1 月 1 日是星期一。 2007 年 4 月 21 日是星期六。 針對美國英文，
-
-SET DATEFIRST 7 -- ( Sunday )
+`SET DATEFIRST 7 -- ( Sunday )`
 
 可作為預設值。 設定 DATEFIRST 之後，請使用針對 datepart 資料表值建議的這個 SQL 陳述式：
 

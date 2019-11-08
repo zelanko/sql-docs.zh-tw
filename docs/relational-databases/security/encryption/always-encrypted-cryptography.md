@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted 密碼編譯 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70a18e569b43066bd64fe56593c47980a6894b09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043294"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594408"
 ---
-# <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
+# <a name="always-encrypted-cryptography"></a>Always Encrypted 密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本文件描述加密演算法和機制，以衍生在 [和](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 永遠加密 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]功能中使用的密碼編譯內容。  
@@ -27,7 +27,7 @@ ms.locfileid: "68043294"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>金鑰、金鑰存放區及金鑰加密演算法
  Always Encrypted 使用兩種金鑰類型：資料行主要金鑰和資料行加密金鑰。  
   
- 資料行主要金鑰 (CMK) 是加密金鑰的金鑰 (也就是用來加密其它金鑰的金鑰)，其一律會由用戶端控制，並儲存於外部金鑰存放區中。 已啟用「永遠加密」的用戶端驅動程式會透過 CMK 存放區提供者來與金鑰存放區互動，其可以是驅動程式庫 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/系統提供者) 的一部分或用戶端應用程式 (自訂提供者) 的一部分。 用戶端驅動程式庫目前包括適用於 [Windows 憑證存放區](/windows/desktop/SecCrypto/using-certificate-stores) 的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 金鑰存放區提供者和硬體安全性模組 (HSM)  (如需目前的提供者清單，請參閱 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md))。應用程式開發人員可以針對任意存放區提供自訂提供者。  
+ 資料行主要金鑰 (CMK) 是加密金鑰的金鑰 (也就是用來加密其他金鑰的金鑰)，其一律會由用戶端控制，並儲存於外部金鑰存放區中。 已啟用「永遠加密」的用戶端驅動程式會透過 CMK 存放區提供者來與金鑰存放區互動，其可以是驅動程式庫 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/系統提供者) 的一部分或用戶端應用程式 (自訂提供者) 的一部分。 用戶端驅動程式庫目前包括適用於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 憑證存放區 [的](/windows/desktop/SecCrypto/using-certificate-stores) 金鑰存放區提供者和硬體安全性模組 (HSM) 如需目前的提供者清單，請參閱 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)。 應用程式開發人員可以針對任意存放區提供自訂提供者。  
   
  資料行加密金鑰 (CEK) 是受到 CMK 保護的內容加密金鑰 (例如：用來保護資料的金鑰)。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68043294"
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- 若有具確定性的加密，便不會隨機產生 IV，而是會使用以下演算法從純文字的值衍生：  
+ 若有具確定性的加密，便不會隨機產生 IV，而是會使用下列演算法從純文字的值衍生：  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -67,12 +67,12 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- 執行 HMAC 值截斷以使其可以容納在 IV 所需要的 1 個資料區塊中。
+ 執行 HMAC 值截斷以使其可以容納在 IV 所需要的一個資料區塊中。
 因此，具決定性加密一律會針對指定的純文字值產生相同加密文字，這樣就能藉由比較兩個純文字值的對應加密文字值，來推斷其是否相等。 這個有限度的資料洩漏，讓資料庫系統能夠支援已加密資料行值上的相等比較。  
   
  相較於替代項目，具決定性加密在隱藏模式中更具效率，例如使用預先定義的 IV 值。  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>步驟 2:計算 AES_256_CBC 加密文字  
+### <a name="step-2-computing-aes_256_cbc-ciphertext"></a>步驟 2:計算 AES_256_CBC 加密文字  
  計算 IV 之後，即會產生 **AES_256_CBC** 加密文字︰  
   
 ```  
@@ -175,10 +175,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/A (不支援)|  
   
 ## <a name="net-reference"></a>.NET 參考  
- 如需本文件所討論的演算法詳細資訊，請參閱 **.NET 參考** 中的 **SqlAeadAes256CbcHmac256Algorithm.cs** 和 [SqlColumnEncryptionCertificateStoreProvider.cs](https://referencesource.microsoft.com/)檔案。  
+ 如需本文件所討論的演算法詳細資料，請參閱 [.NET 參考](https://referencesource.microsoft.com/)中的 **SqlAeadAes256CbcHmac256Algorithm.cs**、**SqlColumnEncryptionCertificateStoreProvider.cs** 和 **SqlColumnEncryptionCertificateStoreProvider.cs** 檔案。  
   
 ## <a name="see-also"></a>另請參閱  
- [永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [永遠加密 &#40;用戶端開發&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [使用 Always Encrypted 開發應用程式](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

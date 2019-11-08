@@ -3,17 +3,17 @@ title: 在 Docker 中還原 SQL Server 資料庫
 description: 本教學課程說明如何在新的 Linux Docker 容器中還原 SQL Server 資料庫備份。
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/02/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0a91e3fd121cf5e49aca3bbe079d41416aca805a
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476204"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531191"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中還原 SQL Server 資料庫
 
@@ -28,7 +28,7 @@ ms.locfileid: "68476204"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-本教學課程示範如何將 SQL Server 備份檔案移動及還原至在 Docker 上執行的 SQL Server 2019 預覽版 Linux 容器映像中。
+本教學課程說明如何將 SQL Server 備份檔案移動及還原至執行於 Docker 上的 SQL Server 2019 Linux 容器映像中。
 
 ::: moniker-end
 
@@ -39,7 +39,7 @@ ms.locfileid: "68476204"
 > * 執行 Transact-SQL 陳述式以檢視及修改資料庫。
 > * 備份已修改的資料庫。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 * 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
 * 至少 2 GB 的磁碟空間
@@ -112,14 +112,14 @@ ms.locfileid: "68476204"
 
 1. 在 Linux/Mac 上開啟 Bash 終端機，或在 Windows 上開啟已提高權限的 PowerShell 工作階段。
 
-1. 從 Docker Hub 提取 SQL Server 2019 預覽版 Linux 容器映像。
+1. 從 Docker Hub 提取 SQL Server 2019 Linux 容器映像。
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
    > [!TIP]
@@ -131,17 +131,17 @@ ms.locfileid: "68476204"
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
-   此命令會建立具有 Developer 版本 (預設值) 的 SQL Server 2019 預覽版容器。 SQL Server 連接埠 **1433** 在主機上會公開為連接埠 **1401**。 選擇性的 `-v sql1data:/var/opt/mssql` 參數會建立名為 **sql1ddata** 的資料磁碟區容器。 這會用來保存 SQL Server 所建立的資料。
+   此命令會建立 Developer 版本 (預設值) 的 SQL Server 2019 容器。 SQL Server 連接埠 **1433** 在主機上會公開為連接埠 **1401**。 選擇性的 `-v sql1data:/var/opt/mssql` 參數會建立名為 **sql1ddata** 的資料磁碟區容器。 這會用來保存 SQL Server 所建立的資料。
 
 1. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 
@@ -492,13 +492,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
     ```
 
 1. Wide World Importers 資料庫現在已位於新的容器中。 執行查詢以確認您先前進行的變更。
@@ -531,7 +531,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本教學課程中，您已了解如何在 Windows 上備份資料庫，然後將其移至執行 SQL Server 2019 預覽版的 Linux 伺服器。 您已了解如何：
+在本教學課程中，您已了解如何在 Windows 上備份資料庫，然後將其移至執行 SQL Server 2019 的 Linux 伺服器。 您已了解如何：
 
 ::: moniker-end
 

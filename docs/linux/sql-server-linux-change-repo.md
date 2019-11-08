@@ -3,17 +3,17 @@ title: 為 SQL Server 2017 和 2019 設定 Linux 存放庫
 description: 檢查並設定 Linux 上 SQL Server 2019 和 SQL Server 2017 的來源存放庫。 來源存放庫會影響安裝和升級期間所套用的 SQL Server 版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/11/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967527"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531334"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定用於安裝和升級 Linux 上 SQL Server 的存放庫
 
@@ -32,24 +32,25 @@ ms.locfileid: "67967527"
 ::: zone-end
 
 > [!TIP]
-> SQL Server 2019 Preview 現已推出！ 若要試用，請利用本文設定新的 **mssql-server-preview** 存放庫。 然後利用[安裝指南](sql-server-linux-setup.md)中的指示進行安裝。
+> SQL Server 2019 現已可供使用！ 若要試用，請使用本文來設定新的 **mssql-server-2019** 存放庫。 然後利用[安裝指南](sql-server-linux-setup.md)中的指示進行安裝。
 
 ## <a id="repositories"></a> 存放庫
 
-當您在 Linux 上安裝 SQL Server 時，您必須設定 Microsoft 存放庫。 此存放庫可用來取得資料庫引擎套件、**mssql-server** 及相關的 SQL Server 套件。 目前有三個主要存放庫：
+當您在 Linux 上安裝 SQL Server 時，您必須設定 Microsoft 存放庫。 此存放庫可用來取得資料庫引擎套件、**mssql-server** 及相關的 SQL Server 套件。 目前有五個主要存放庫：
 
 | Repository | [屬性] | Description |
 |---|---|---|
-| **Preview (2017)** | **mssql-server** | SQL Server 2017 CTP 和 RC 存放庫 (已中止)。 |
-| **Preview (2019)** | **mssql-server-preview** | SQL Server 2019 Preview 和 RC 存放庫。 |
-| **CU** | **mssql-server-2017** | SQL Server 2017 累積更新 (CU) 存放庫。 |
-| **GDR** | **mssql-server-2017-gdr** | 僅限重大更新的 SQL Server 2017 GDR 存放庫。 |
+| **2019** | **mssql-server-2019** | SQL Server 2019 累積更新 (CU) 存放庫。 |
+| **2019 GDR** | **mssql-server-2019-gdr** | 僅限重大更新的 SQL Server 2019 GDR 存放庫。 |
+| **2019 Preview** | **mssql-server-preview** | SQL Server 2019 Preview 和 RC 存放庫。 |
+| **2017** | **mssql-server-2017** | SQL Server 2017 累積更新 (CU) 存放庫。 |
+| **2017 GDR** | **mssql-server-2017-gdr** | 僅限重大更新的 SQL Server 2017 GDR 存放庫。 |
 
 ## <a id="cuversusgdr"></a> 累積更新與 GDR 的比較
 
 請務必注意，每個發行版本都有兩種主要的存放庫類型：
 
-- **累積更新 (CU)** ：累積更新 (CU) 存放庫包含基底 SQL Server 版本套件，並包含該版本之後的全部錯誤 (bug) 修正或改進。 累積更新專屬於某個發行版本，例如 SQL Server 2017。 它們會定期發行。
+- **累積更新 (CU)** ：累積更新 (CU) 存放庫包含基底 SQL Server 版本套件，並包含該版本之後的全部錯誤 (bug) 修正或改進。 累積更新特定於某個發行版本，例如 SQL Server 2019。 它們會定期發行。
 
 - **GDR**：GDR 存放庫包含基底 SQL Server 版本套件，並只包含該版本之後的重大修正和安全性更新。 這些更新也會新增至下一個 CU 版本。
 
@@ -144,10 +145,11 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 | Repository | 要移除的命令 |
 |---|---|
-| **Preview (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
 | **Preview (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
-| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+| **2019 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019'` |
+| **2019 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019-gdr'`|
+| **2017 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **2017 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
 
 ::: zone-end
 
@@ -157,10 +159,11 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 | Repository | 要移除的命令 |
 |---|---|
-| **Preview (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 | **Preview (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
-| **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+| **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 ::: zone-end
 
@@ -170,11 +173,12 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-rhel"
 設定要用於 SQL Server 安裝和升級的新存放庫。 使用下列其中一個命令，設定您所選擇的存放庫。
 
-| Repository | Version | 命令 |
+| Repository | 版本 | 命令 |
 |---|---|---|
-| **Preview (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -182,11 +186,12 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-sles"
 設定要用於 SQL Server 安裝和升級的新存放庫。 使用下列其中一個命令，設定您所選擇的存放庫。
 
-| Repository | Version | 命令 |
+| Repository | 版本 | 命令 |
 |---|---|---|
-| **Preview (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+| **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
+| **2017 CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **2017 GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -202,11 +207,12 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 2. 使用下列其中一個命令，設定您所選擇的存放庫。
 
-   | Repository | Version | 命令 |
+   | Repository | 版本 | 命令 |
    |---|---|---|
-   | **Preview (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
-   | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
+   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
+   | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 3. 執行 **apt-get update**。
 

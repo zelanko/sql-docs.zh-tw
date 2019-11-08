@@ -3,16 +3,16 @@ title: 如何在 Docker 上搭配 SQL Server 使用分散式交易
 description: 本文說明如何針對 Docker 上 SQL Server 容器中的分散式交易使用 Microsoft Distributed Transaction Coordinator (MSDTC)。
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e4d9d52541b6f9c9ca87bcbe4dc1db3c4448725c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1e30b6d2426cfca4e776ca738e2dc7000fe936ab
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770838"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531307"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何在 Docker 上搭配 SQL Server 使用分散式交易
 
@@ -56,14 +56,14 @@ docker run `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-下列範例示範如何使用這些環境變數來提取並執行針對 MSDTC 所設定的單一 SQL Server 2019 預覽容器。 這可讓其與任何主機上的任何應用程式通訊。
+下列範例示範如何使用這些環境變數來提取並執行針對 MSDTC 所設定的單一 SQL Server 2019 容器。 這可讓其與任何主機上的任何應用程式通訊。
 
 ```bash
 docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
@@ -71,7 +71,7 @@ docker run `
    -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
    -p 51433:1433 -p 135:135 -p 51000:51000  `
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -107,9 +107,14 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing-on-the-host"></a>設定主機上的連接埠路由
 
-在上述範例中，因為單一 Docker 容器會將 RPC 連接埠 135 對應至主機上的連接埠 135，所以搭配主機的分散式交易現在應該可以使用，不需要進一步設定。 請注意，您可以直接在容器中使用連接埠 135，因為 SQL Server 會在容器中以較高的權限執行。 針對容器外的 SQL Server，您必須使用不同的暫時連接埠，然後將連接埠 135 的流量路由傳送至該連接埠。
+在上述範例中，因為單一 Docker 容器會將 RPC 連接埠 135 對應至主機上的連接埠 135，所以搭配主機的分散式交易現在應該可以使用，不需要進一步設定。 請注意，您可以直接在以 root 身分執行的容器中使用連接埠 135，因為 SQL Server 會在這些容器中以較高的權限執行。 若是容器外的 SQL Server 或非根容器，您必須使用不同的暫時連接埠 (例如 13500)，然後將連接埠 135 的流量路由傳送至該連接埠。 您也必須將容器內的連接埠路由規則從容器連接埠 135 設定為暫時連接埠。
 
-不過，如果您決定將容器的連接埠 135 對應至主機上不同連接埠 (例如 13500)，則您必須設定主機上的連接埠路由。 這可讓 Docker 容器與主機和其他外部伺服器參與分散式交易。 如需詳細資訊，請參閱[設定連接埠路由](sql-server-linux-configure-msdtc.md#configure-port-routing)。
+此外，如果您決定將容器的連接埠 135 對應至主機上不同連接埠 (例如 13500)，則您必須在主機上設定連接埠路由。 這可讓 Docker 容器與主機和其他外部伺服器參與分散式交易。
+
+如需連接埠路由的詳細資訊，請參閱[設定連接埠路由](sql-server-linux-configure-msdtc.md#configure-port-routing)。
+
+> [!NOTE]
+> 根據預設，SQL Server 2017 會在根容器中執行，而 SQL Server 2019 容器則是以非根使用者的身分執行。
 
 ## <a name="next-steps"></a>後續步驟
 

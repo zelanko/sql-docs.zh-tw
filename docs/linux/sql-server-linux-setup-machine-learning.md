@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 09/23/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3d2fb6c05a078e222a68e8de8998d4edff3c1a8
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271969"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531253"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安裝 SQL Server 機器學習服務 (Python 和 R)
 
@@ -35,9 +35,11 @@ Python 和 R 延伸模組的套件位置位於 SQL Server Linux 來源存放庫�
 
 Linux 容器上也支援機器學習服務。 我們沒有提供含機器學習服務的預先建立容器，但您可以使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) \(英文\)，從 SQL Server 容器建立一個。
 
-## <a name="uninstall-previous-ctp"></a>將先前的 CTP 解除安裝
+根據預設，機器學習服務會安裝在 SQL Server 巨量資料叢集上，因此您不必遵循此案例中的步驟。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
 
-套件清單已經隨最近數個 CTP 版本變更，套件數量也因此減少。 我們建議您先將 CTP 2.x 解除安裝，以在安裝 CTP 3.2 之前移除所有先前的套件。 不支援多個版本的並存安裝。
+## <a name="uninstall-preview-release"></a>解除安裝預覽版本
+
+如果您已安裝預覽版本 (Community Technical Preview (CTP) 或候選版)，建議您先解除安裝此版本以移除所有先前的套件，然後安裝 SQL Server 2019。 系統不支援多個版本的並存安裝，且最後幾個預覽 (CTP/RC) 版本中的套件清單已有所變更。
 
 ### <a name="1-confirm-package-installation"></a>1.確認套件安裝
 
@@ -47,7 +49,7 @@ Linux 容器上也支援機器學習服務。 我們沒有提供含機器學習�
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.將先前的 CTP 2.x 套件解除安裝
+### <a name="2-uninstall-ctprc-packages"></a>2.解除安裝 CTP/RC 套件
 
 在最低套件層級解除安裝。 相依於低層級套件的任何上游套件都會自動解除安裝。
 
@@ -63,14 +65,14 @@ ls /opt/microsoft/mssql/bin
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> 取決於您先前安裝的 CTP 版本，Microsoft R Open 3.4.4 是由兩個或三個套件組成。 (在 CTP 2.2 中，foreachiterators 套件已合併至主要 mro 套件)。如果移除 microsoft-r-open-mro-3.4.4 之後任何這些套件仍存在，您應該個別將它們移除。
+> 視您先前安裝的 CTP 版本而定，Microsoft R Open 3.4.4 包含兩個套件 (在 CTP 2.2 中，foreachiterators 套件已合併至主要 mro 套件)。如果移除 microsoft-r-open-mro-3.4.4 之後任何這些套件仍存在，您應該個別將它們移除。
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-32-install"></a>3.繼續進行 CTP 3.2 安裝
+### <a name="3-proceed-with-install"></a>3.繼續安裝
 
 使用此文章中適用於您作業系統的指示，在最高套件層級安裝。
 
@@ -178,8 +180,6 @@ zypper update
 | [microsoft-r-open*](#mro) | R | R 的開放原始碼散發，由三個套件組成。 |
 |mssql-mlservices-mlm-r  | R | *完整安裝*。 提供 RevoScaleR，MicrosoftML、sqlRUtils、olapR、適用於影像特徵化和文字情感分析的預先定型的模型。| 
 |mssql-mlservices-packages-r  | R | 「最小安裝」  。 提供 RevoScaleR、sqlRUtils、MicrosoftML、olapR。 <br/>排除預先定型的模型。 | 
-|mssql-mlservices-mml-py  | 僅限 CTP 2.0-2.1 | 已在 CTP 2.2 中淘汰，因為 Python 套件彙總至 mssql-mslservices-python。 提供 revoscalepy。 排除預先定型的模型和 microsoftml。| 
-|mssql-mlservices-mml-r  | 僅限 CTP 2.0-2.1 | 已在 CTP 2.2 中淘汰，因為 R 套件彙總至 mssql-mslservices-python。 提供 RevoScaleR、sqlRUtils、olapR。 排除預先定型的模型和 MicrosoftML。  |
 
 <a name="RHEL"></a>
 
@@ -420,7 +420,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 #### <a name="download-site"></a>下載網站
 
-您可以從 [https://packages.microsoft.com/](https://packages.microsoft.com/) 下載套件。 所有適用於 R 和 Python 的 mlservices 套件都與資料庫引擎套件共存。 mlservices 套件的基本版本是 9.4.5 (針對 CTP 2.0) 9.4.6 (針對 CTP 2.1 和更新版本)。 您應該記得，microsoft-r-open 套件在[其他存放庫](#mro)中。
+您可以從 [https://packages.microsoft.com/](https://packages.microsoft.com/) 下載套件。 所有適用於 R 和 Python 的 mlservices 套件都與資料庫引擎套件共存。 mlservices 套件的基底版本是 9.4.6。 您應該記得，microsoft-r-open 套件在[其他存放庫](#mro)中。
 
 #### <a name="rhel7-paths"></a>RHEL/7 路徑
 
@@ -515,24 +515,87 @@ mssql-mlservices-mlm-py-9.4.7.64
    @script = N'import httpie' 
    ```
 
-## <a name="limitations-in-ctp-releases"></a>CTP 版本中的限制
+## <a name="run-in-a-container"></a>在容器中執行
 
-Linux 上的 R 和 Python 整合仍在開發中。 預覽版本中尚未啟用下列功能。
+請遵循下列步驟，在 Docker 容器中建置並執行 SQL Server 機器學習服務。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](sql-server-linux-configure-docker.md)。
 
-+ 目前在 Linux 上的機器學習服務中無法使用隱含驗證，這表示您無法從進行中的 R 或 Python 指令碼連線回到伺服器，以存取資料或其他資源。 
+### <a name="prerequisites"></a>Prerequisites
 
-### <a name="resource-governance"></a>資源管理
+- Git 命令列介面。
+- 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
+- 至少 2 GB 的磁碟空間。
+- 至少 2 GB 的 RAM。
+- [Linux 上的 SQL Server 系統需求](sql-server-linux-setup.md#system)。
 
-針對外部資源集區的[資源管理](../t-sql/statements/create-external-resource-pool-transact-sql.md)，Linux 與 Windows 之間有同位，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的統計資料在 Linux 上目前有不同單位。 在即將推出的 CTP 中，單位將會保持一致。
- 
-| 資料行名稱   | Description | Linux 上的值 | 
-|---------------|--------------|---------------|
-|peak_memory_kb | 用於資源集區的記憶體數量上限。 | 在 Linux 上，此統計資料是來自 CGroups 記憶體子系統，其中的值為 memory.max_usage_in_bytes |
-|write_io_count | 重設 Resource Governor 統計資料之後發出的寫入 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中寫入資料列上的值為 blkio.throttle.io_serviced | 
-|read_io_count | 重設 Resource Governor 統計資料之後發出的讀取 IO 總數。 | 在 Linux 上，此統計資料來自 CGroups blkio 子系統，其中讀取資料列上的值為 blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | 重設 Resource Governor 統計資料之後的累計 CPU 使用者核心時間 (以毫秒為單位)。 | 在 Linux 上，此統計資料來自 CGroups cpuacct 子系統，其中使用者資料列上的值為 cpuacct.stat |  
-|total_cpu_user_ms | 重設 Resource Governor 統計資料之後的累計 CPU 使用者時間 (以毫秒為單位)。| 在 Linux 上，此統計資料來自 CGroups cpuacct 子系統，其中系統資料列值上的值為 cpuacct.stat | 
-|active_processes_count | 在要求當時正在執行的外部處理序數目。| 在 Linux 上，此統計資料是來自 CGroups pids 記憶體子系統，其中的值為 pids.current | 
+### <a name="clone-the-mssql-docker-repository"></a>複製 mssql-docker 存放庫
+
+1. 開啟 Linux 或 Mac 上的 Bash 終端機或 Windows 上的 WSL 終端機。
+
+1. 建立本機目錄，以保存 mssql-docker 存放庫的本機複本。
+
+1. 執行 git clone 命令以複製 mssql-docker 存放庫：
+
+    ```bash
+    git clone https://github.com/microsoft/mssql-docker mssql-docker
+    ```
+
+### <a name="build-a-sql-server-linux-container-image-with-machine-learning-services"></a>建置具有機器學習服務的 SQL Server Linux 容器映像
+
+1. 將目錄變更為 mssql-mlservices 目錄：
+
+    ```bash
+    cd mssql-docker/linux/preview/examples/mssql-mlservices
+    ```
+
+1. 執行 build.sh 指令碼：
+
+   ```bash
+   ./build.sh
+   ```
+
+   > [!NOTE]
+   > 若要建置 Docker 映像，您必須安裝大小為數 GB 的套件。 視網路頻寬而定，指令碼最多可能需要 20 分鐘才能完成執行。
+
+### <a name="run-the-sql-server-linux-container-image-with-machine-learning-services"></a>執行具有機器學習服務的 SQL Server Linux 容器映像
+
+1. 執行容器之前，請先設定您的環境變數。 將 PATH_TO_MSSQL 環境變數設定為主機目錄：
+
+   ```bash
+    export MSSQL_PID='Developer'
+    export ACCEPT_EULA='Y'
+    export ACCEPT_EULA_ML='Y'
+    export PATH_TO_MSSQL='/home/mssql/'
+   ```
+
+1. 執行 run.sh 指令碼：
+
+   ```bash
+   ./run.sh
+   ```
+
+   此命令會使用 Developer 版本 (預設值) 建立具有機器學習服務的 SQL Server 容器。 SQL Server 連接埠 **1433** 在主機上會公開為連接埠 **1401**。
+
+   > [!NOTE]
+   > 在容器中執行生產 SQL Server 版本的程序將有些微差異。 如需詳細資訊，請參閱[在 Docker 上設定 SQL Server 容器映像](sql-server-linux-configure-docker.md)。 如果您使用相同的容器名稱和連接埠，本逐步解說的其餘部分仍然可與生產容器搭配運作。
+
+1. 若要檢視 Docker 容器，請執行 `docker ps` 命令：
+
+   ```bash
+   sudo docker ps -a
+   ```
+
+1. 若 **STATUS** 欄位顯示的狀態含 **Up**，表示 SQL Server 正在容器中執行且接聽於 **PORTS** 欄位中指定的連接埠。 若 SQL Server 容器的 **STATUS** 欄位顯示 **Exited**，請參閱[設定指南的＜疑難排解＞一節](sql-server-linux-configure-docker.md#troubleshooting)。
+
+   ```bash
+   $ sudo docker ps -a
+   ```
+
+    輸出： 
+    
+    ```
+    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour     0.0.0.0:1401->1433/tcp   sql1
+    ```
 
 ## <a name="next-steps"></a>後續步驟
 

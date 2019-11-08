@@ -1,42 +1,42 @@
 ---
 title: 使用 azdata 部署應用程式
 titleSuffix: SQL Server big data clusters
-description: 在上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]將 Python 或 R 腳本部署為應用程式。
+description: 在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上將 Python 或 R 指令碼部署為應用程式。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 93c94b8ca5688bd5c67369849094e20d1dae697e
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
-ms.translationtype: MT
+ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929727"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532516"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>如何在上部署應用程式[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>如何：在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署應用程式
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何將 R 和 Python 腳本部署和管理為 SQL Server 2019 big data 叢集內的應用程式。
+本文描述如何將 R 和 Python 指令碼，作為 SQL Server 2019 巨量資料叢集內的應用程式來部署和管理。
 
 ## <a name="whats-new-and-improved"></a>新功能和改善的項目
 
 - 用來管理叢集和應用程式的單一命令列公用程式。
 - 簡化的應用程式部署，同時透過規格檔案提供更細微的控制。
-- 支援裝載其他應用程式類型-SSIS 和 MLeap （CTP 2.3 中的新功能）。
-- [Visual Studio Code 延伸](app-deployment-extension.md)模組來管理應用程式部署。
+- 支援裝載其他應用程式類型：SSIS 和 MLeap (CTP 2.3 中的新功能)。
+- 管理應用程式部署的 [Visual Studio Code 延伸模組](app-deployment-extension.md)。
 
-使用 `azdata` 命令列公用程式來部署和管理應用程式。 本文提供從命令列部署應用程式的範例。 若要瞭解如何在 Visual Studio Code 中使用此功能，請參閱[Visual Studio Code 延伸](app-deployment-extension.md)模組。
+使用 `azdata` 命令列公用程式來部署和管理應用程式。 本文提供從命令列部署應用程式的範例。 若要了解如何在 Visual Studio Code 中使用此功能，請參閱 [Visual Studio Code 延伸模組](app-deployment-extension.md)。
 
 支援下列類型的應用程式：
-- R 和 Python 應用程式（功能、模型和應用程式）
+- R 和 Python 應用程式 (函式、模型和應用程式)
 - MLeap 服務
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server 2019 巨量資料叢集](deployment-guidance.md)
 - [azdata 命令列公用程式](deploy-install-azdata.md)
@@ -45,7 +45,7 @@ ms.locfileid: "70929727"
 
 在 SQL Server 2019 (預覽) 中，您可以建立、刪除、描述、初始化、執行列出及更新您的應用程式。 下表描述您可以搭配 **azdata** 使用的應用程式部署命令。
 
-|命令 |描述 |
+|命令 |Description |
 |:---|:---|
 |`azdata login` | 登入 SQL Server 巨量資料叢集 |
 |`azdata app create` | 建立應用程式。 |
@@ -81,9 +81,9 @@ azdata login --controller-endpoint https://<ip-address-of-controller-svc-externa
 kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
-## <a name="kubeadm-or-minikube"></a>Kubeadm 或 Minikube
+## <a name="kubernetes-clusters-created-with-kubeadm"></a>使用 kubeadm 建立的 Kubernetes 叢集
 
-如果您使用 Kubeadm 或 Minikube，請執行下列命令以取得要登入叢集的 IP 位址
+執行下列命令以取得要登入叢集的 IP 位址
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -105,11 +105,11 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-這會假設您已將應用程式儲存在 `addpy` 資料夾中。 此資料夾也應該包含應用程式的規格檔案，稱為 `spec.yaml`。 如需檔案的詳細資訊`spec.yaml` ，請參閱[應用程式部署頁面](concept-application-deployment.md)。
+這會假設您已將應用程式儲存在 `addpy` 資料夾中。 此資料夾也應該包含應用程式的規格檔案，稱為 `spec.yaml`。 如需 `spec.yaml` 檔案的詳細資訊，請參閱[應用程式部署頁面](concept-application-deployment.md)。
 
 若要部署此應用程式範例應用程式請在稱為 `addpy` 的目錄中建立下列檔案：
 
-- `add.py`. 將下列 Python 程式碼複製到此檔案中：
+- 第 1 課：建立 Windows Azure 儲存體物件`add.py`。 將下列 Python 程式碼複製到此檔案中：
    ```py
    #add.py
   def add(x, y):
@@ -117,7 +117,7 @@ azdata app create --spec ./addpy
     return result
   result=add(x,y)
    ```
-- `spec.yaml`. 將下列程式碼複製到此檔案中：
+- 第 1 課：建立 Windows Azure 儲存體物件`spec.yaml`。 將下列程式碼複製到此檔案中：
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -241,7 +241,7 @@ init 命令會提供基本架構，其中包含部署應用程式所需的相關
 azdata app init --name hello --version v1 --template python
 ```
 
-這會建立稱為 hello 的資料夾。  您可以使用 `cd` 進入目錄並檢查資料夾中產生的檔案。 yaml 會定義應用程式，例如名稱、版本和原始程式碼。 您可以編輯規格來變更名稱、版本、輸入和輸出。
+這會建立稱為 hello 的資料夾。  您可以使用 `cd` 進入目錄並檢查資料夾中產生的檔案。 spec.yaml 會定義應用程式 (例如名稱、版本和原始程式碼)。 您可以編輯規格來變更名稱、版本、輸入和輸出。
 
 以下是 init 命令 (您會在資料夾中看到) 的範例輸出
 
@@ -293,6 +293,6 @@ azdata app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>後續步驟
 
-探索如何在您的應用程式[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]中將部署的應用程式與大型資料叢集上的[應用程式](big-data-cluster-consume-apps.md)整合，以取得詳細資訊。 您也可以在[應用程式部署範例](https://aka.ms/sql-app-deploy)中查看其他範例。
+若要探索如何在自己的應用程式中整合部署在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上的應用程式，請參閱[取用巨量資料叢集上的應用程式](big-data-cluster-consume-apps.md)以取得詳細資訊。 您也可以在[應用程式部署範例](https://aka.ms/sql-app-deploy)中查看其他範例。
 
-如需有關[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的詳細資訊，請參閱[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]什麼是？](big-data-cluster-overview.md)。
+如需 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。

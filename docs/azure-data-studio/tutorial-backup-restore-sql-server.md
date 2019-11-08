@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 77679106577cd8f8374f932d8ddd22644beb63d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 11/04/2019
+ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959105"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532438"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 備份及還原資料庫
 
@@ -31,11 +31,11 @@ ms.locfileid: "67959105"
 
 本教學課程需要 SQL Server *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列任一項快速入門：
 
-- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 SQL Server](quickstart-sql-server.md)
+* [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連線及查詢 SQL Server](quickstart-sql-server.md)
 
 本教學課程需要連線到 SQL Server 資料庫。 Azure SQL Database 具有自動備份，因此 Azure Data Studio 不會執行 Azure SQL Database 備份及還原。 如需詳細資訊，請參閱 [Learn about automatic SQL Database backups](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups) (了解自動 SQL Database 備份)。
 
-## <a name="backup-a-database"></a>備份資料庫
+## <a name="back-up-a-database"></a>備份資料庫
 
 1. 開啟 TutorialDB 資料庫儀表板 (開啟 [伺服器]  提要欄位 (**CTRL+G**)，展開 [資料庫]  ，以滑鼠右鍵按一下 [TutorialDB]  ，然後選取 [管理]  )。
 
@@ -50,41 +50,30 @@ ms.locfileid: "67959105"
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>檢視備份狀態和檢視備份指令碼
 
-1. 按一下「動作列」  上的時鐘圖示或按 **CTRL+T**，開啟 [工作歷程]  提要欄位。
+1. [工作歷程記錄]  窗格隨即出現，或按 **CTRL+T**。
 
    ![工作歷程](./media/tutorial-backup-restore-sql-server/task-history.png)
 
 2. 若要在編輯器中檢視備份指令碼，請以滑鼠右鍵按一下 [Backup Database succeeded] \(已成功備份資料庫\)  ，然後選取 [指令碼]  。
 
-   ![備份指令碼](./media/tutorial-backup-restore-sql-server/task-script.png) 
+   ![備份指令碼](./media/tutorial-backup-restore-sql-server/task-script.png)
 
 ## <a name="restore-a-database-from-a-backup-file"></a>從備份檔案還原資料庫
 
-
-1. 開啟 [伺服器]  提要欄位 (**CTRL+G**)，以滑鼠右鍵按一下您的伺服器，然後選取 [管理]  。 
+1. 開啟 [伺服器]  提要欄位 (**CTRL+G**)，以滑鼠右鍵按一下您的伺服器，然後選取 [管理]  。
 
 2. 開啟 [還原資料庫]  對話方塊 (按一下 [工作]  小工具中的 [還原]  )。
 
-2. 在 [還原來源]  欄位中選取 [備份檔案]  。 
+   ![還原工作](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
-3. 按一下 [備份檔案路徑]  欄位中的省略符號 (...)，然後選取 *TutorialDB* 的最新備份檔案。
+3. 在 [還原來源]  欄位中選取 [備份檔案]  。
 
-3. 在 [目的地]  區段的 [目標資料庫]  欄位中鍵入 **TutorialDB_Restored**，將備份檔案還原到新的資料庫。
+4. 按一下 [備份檔案路徑]  欄位中的省略符號 (...)，然後選取 *TutorialDB* 的最新備份檔案。
+
+5. 在 [目的地]  區段的 [目標資料庫]  欄位中鍵入 **TutorialDB_Restored**，將備份檔案還原到新的資料庫。 然後選取 [還原]  。
 
    ![還原](./media/tutorial-backup-restore-sql-server/restore.png)
 
-4. 按一下 [還原] 
-
-5. 若要檢視還原作業的狀態，請按 **CTRL+T** 開啟 [工作歷程]  提要欄位。
+6. 若要檢視還原作業的狀態，請按 **CTRL+T** 開啟 [工作歷程記錄]  。
 
    ![還原](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
-
-
-在本教學課程中，您已了解如何：
-> [!div class="checklist"]
-> * 備份資料庫 
-> * 檢視備份狀態
-> * 產生用來執行備份的指令碼
-> * 還原資料庫
-> * 檢視還原工作的狀態
-
