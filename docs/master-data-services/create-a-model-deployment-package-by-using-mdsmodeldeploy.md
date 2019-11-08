@@ -1,6 +1,6 @@
 ---
-title: 使用 MDSModelDeploy 建立模型部署套件 | Microsoft Docs
-ms.custom: ''
+title: 建立模型部署套件（MDSModelDeploy）
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b080e704abb4a187ad975f6b1b7b94334648f92b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906660"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728499"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
 
@@ -58,11 +58,11 @@ ms.locfileid: "67906660"
   
  模型必須存在，才能建立其封裝。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
   
- 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+ 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>若要使用 MDSModelDeploy 建立模型部署封裝  
   
-1.  開啟 [系統管理員：命令提示字元]。  
+1.  開啟系統管理員：命令提示字元。  
   
 2.  導覽至 MDSModelDeploy.exe 的位置。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "67906660"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [使用 MDSModelDeploy 部署模型部署套件](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
+-   [使用 MDSModelDeploy 部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [模型部署選項 &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   

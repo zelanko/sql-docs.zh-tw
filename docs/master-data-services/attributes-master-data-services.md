@@ -1,5 +1,5 @@
 ---
-title: 屬性 (Master Data Services) | Microsoft Docs
+title: 屬性
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4634ae8941b9acd0667b69974b3192109b81fff2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047586"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728747"
 ---
 # <a name="attributes-master-data-services"></a>屬性 (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "68047586"
   
  ![以資料表表示的 Master Data Services 實體](../master-data-services/media/mds-conc-entity-table.gif "以資料表表示的 Master Data Services 實體")  
   
- 當您建立包含多個屬性的實體時，您可以將屬性組織成屬性群組。 如需詳細資訊，請參閱 [屬性群組 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)。  
+ 當您建立包含多個屬性的實體時，您可以將屬性組織成屬性群組。 如需詳細資訊，請參閱[屬性群組 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)。  
   
 ## <a name="required-attributes"></a>必要的屬性  
  當您建立實體時，會自動建立 Name 和 Code 屬性。 Code 需要一個值，而且在實體中必須是唯一的。 您不能移除 Name 和 Code 屬性。  
@@ -45,7 +45,7 @@ ms.locfileid: "68047586"
   
 -   自由格式的屬性，允許以自由格式輸入文字、數字、日期或連結。  
   
--   由實體擴展的網域屬性。 如需詳細資訊，請參閱 [網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)。  
+-   由實體擴展的網域屬性。 如需詳細資訊，請參閱[網域屬性 &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)。  
   
 -   檔案屬性，用來儲存檔案、文件或影像。 檔案屬性透過要求檔案有特定副檔名，有助於資料一致性。 檔案屬性無法保證能防止惡意使用者上傳不同類型的檔案。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68047586"
 -   如果牽涉到浮點數，值可能無法 *「往返」* (Roundtrip)。 如果運算將原始浮點數轉換成另一個形式，反運算將轉換的形式轉換回浮點數，而最終浮點數等於原始浮點數，值稱為往返。 往返可能因為轉換中遺漏或變更一個或多個最低有效位數而失敗。  
   
 ## <a name="attribute-examples"></a>屬性範例  
- 在下列範例中，實體具有屬性：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
+ 在下列範例中，實體有屬性：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
   
  ![自行車產品實體資料表](../master-data-services/media/mds-conc-entity-table-w-data.gif "自行車產品實體資料表")  
   
