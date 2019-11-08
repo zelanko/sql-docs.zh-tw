@@ -1,5 +1,5 @@
 ---
-title: sys.databases _materialized_view_mappings (Transact-sql) |Microsoft Docs
+title: sys.databases pdw_materialized_view_mappings （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -12,25 +12,25 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: d548291653b589d973c9c21813690a61a0fdb7ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811499"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729823"
 ---
-# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys.databases _materialized_view_mappings (Transact-sql) (預覽)
+# <a name="syspdw_materialized_view_mappings-transact-sql"></a>sys.databases pdw_materialized_view_mappings （Transact-sql）  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-透過 object_id, 將具體化視圖系結至內建物件名稱。
+藉由 object_id，將具體化視圖系結至內建物件名稱。
 
-資料行 physical_name 和 object_id 會形成此目錄檢視的索引鍵。
+Physical_name 的資料行和 object_id 會形成此目錄檢視的索引鍵。
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36)**|具體化視圖的機構名稱。|  
-|object_id  |**int**|具體化視圖的物件識別碼。 請參閱[sys.databases (transact-sql)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
+|physical_name |**Nvarchar （36）**|具體化視圖的機構名稱。|  
+|object_id  |**int**|具體化視圖的物件識別碼。 請參閱[sys.databases （transact-sql）](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
 
 ## <a name="permissions"></a>Permissions
 
@@ -38,6 +38,7 @@ ms.locfileid: "68811499"
   
 ## <a name="see-also"></a>另請參閱
 
+[使用具體化 View  進行效能微調](/azure/sql-data-warehouse/performance-tuning-materialized-views)  
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

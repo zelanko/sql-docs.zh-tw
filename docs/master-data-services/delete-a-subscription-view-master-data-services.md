@@ -1,5 +1,5 @@
 ---
-title: 刪除訂閱檢視 (Master Data Services) | Microsoft Docs
+title: 刪除訂閱檢視
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e37b2b4f4f6dc101f553fe4a399e428d1580b42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094360"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729384"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>刪除訂閱檢視 (Master Data Services)
 
@@ -26,12 +26,12 @@ ms.locfileid: "68094360"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除不再需要的訂閱檢視。 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中刪除訂閱檢視會從 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中移除該檢視。 您也可以編輯訂閱檢視。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[整合管理]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ### <a name="to-delete-a-subscription-view"></a>若要刪除訂閱檢視  
   

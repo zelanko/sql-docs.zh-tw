@@ -1,5 +1,5 @@
 ---
-title: 自訂工作流程 XML 描述 (Master Data Services) | Microsoft Docs
+title: 自訂工作流程 XML 描述
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd291d1615920c3b576386b3f026a4b4d7f29dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5beeb5115c3a68ab34313ea9125c65a4f4e185
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901667"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729311"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>建立自訂工作流程 - XML 描述
 
@@ -65,12 +65,12 @@ ms.locfileid: "67901667"
   
  下表描述此 XML 中包含的某些標記：  
   
-|標記|描述|  
+|標記|說明|  
 |---------|-----------------|  
-|\<Type>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程類型]  文字方塊中輸入的文字，用以識別要載入的自訂工作流程組件。|  
-|\<SendData>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，由 [訊息中包含成員資料]  核取方塊所控制的布林值。 值為 1 時，表示傳送 \<MemberData> 區段，否則，不傳送 \<MemberData> 區段。|  
-|<Server_URL>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程網站]  文字方塊中輸入的文字。|  
-|<Action_ID>|您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 之 [工作流程名稱]  文字方塊中輸入的文字。|  
+|\<Type>|您在  **之 [工作流程類型]** [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 文字方塊中輸入的文字，用以識別要載入的自訂工作流程組件。|  
+|\<SendData>|在  **中，由 [訊息中包含成員資料]** [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 核取方塊所控制的布林值。 值為 1 時，表示傳送 \<MemberData> 區段，否則，不傳送 \<MemberData> 區段。|  
+|<Server_URL>|您在  **之 [工作流程網站]** [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 文字方塊中輸入的文字。|  
+|<Action_ID>|您在  **之 [工作流程名稱]** [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 文字方塊中輸入的文字。|  
 |\<MemberData>|包含觸發工作流程動作之成員的資料。 只有在 \<SendData> 的值為 1 時，才包含這個標記。|  
 |\<Enter*xxx*>|這組標記包含有關建立成員的中繼資料，例如建立成員的時間以及建立成員者。|  
 |\<LastChg*xxx*>|這組標記包含有關上次對成員所進行之變更的中繼資料，例如進行變更的時間以及進行變更者。|  

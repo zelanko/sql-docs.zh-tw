@@ -1,5 +1,5 @@
 ---
-title: SqlServiceAdvancedProperty 類別 |Microsoft Docs
+title: SqlServiceAdvancedProperty 類別
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3287220cb14702d118a1e010923898190d4f424
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58fb650f9750e81b5e86b86cb5f630a843173930
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105066"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658994"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)代表服務所參考的進階的屬性[SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)物件。  
+  [SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)代表[SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)物件所參考之服務的 advanced 屬性。  
   
- [AdvancedProperties 屬性 （SqlService 類別）](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md)參考的陣列[SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)物件。  
+ [AdvancedProperties 屬性（SqlService 類別）](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md)會參考[SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)物件的陣列。  
   
- [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)類別代表對於服務特有的屬性。 這些屬性不在清單中的相關聯的屬性[SqlService 類別](https://technet.microsoft.com/library/ms186497.aspx)類別。 [SqlServiceAdvancedProperty 類別](https://technet.microsoft.com/library/ms182447.aspx)類別允許字串、 數值或布林值屬性的表示法。 您可以使用這個類別來檢視指定之服務的唯一屬性。  
+ [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)類別代表服務特有的屬性。 這些屬性不在與[SqlService 類別](https://technet.microsoft.com/library/ms186497.aspx)類別相關聯的屬性清單中。 [SqlServiceAdvancedProperty 類別](https://technet.microsoft.com/library/ms182447.aspx)允許字串、數值或布林屬性的標記法。 您可以使用這個類別來檢視指定之服務的唯一屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [開始、 停止和暫停服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動、停止和暫停服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 變更追蹤 (Master Data Services) | Microsoft Docs
+title: 變更追蹤
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8ba29c99c7744793b3c2829f45cf1303a1c0e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6519ea515b6552805aa5b97e38579082ddcfe15c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052066"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729661"
 ---
 # <a name="change-tracking-master-data-services"></a>變更追蹤 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以使用變更追蹤群組在屬性值變更時採取動作。 當您不知道新值，但想要知道是否發生任何變更時，請使用變更追蹤。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以使用變更追蹤群組在屬性值變更時採取動作。 當您不知道新值，但想要知道是否發生任何變更時，請使用變更追蹤。  
   
 ## <a name="configuring-change-tracking"></a>設定變更追蹤  
  若要設定變更追蹤，您要將屬性加入至變更追蹤群組。 此群組可以包含一個或多個屬性。 接著，您要建立商務規則來定義群組中的任何屬性變更時所要採取的動作。  

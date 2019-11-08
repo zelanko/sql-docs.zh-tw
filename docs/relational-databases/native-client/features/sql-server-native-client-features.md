@@ -15,16 +15,15 @@ ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fa6401d0935e90bca1eb725ffa34c3bdaeee580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8821a8c0c0ef095d46682e0e1ad07e1cd74be16b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067265"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761319"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   除了公開 Windows (先前稱為 Microsoft) Data Access Components (WDAC) 的功能之外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 也會實作其他許多功能來公開 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "68067265"
  討論自從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client 起的行為變更。  
   
  [使用資料庫鏡像](../../../relational-databases/native-client/features/using-database-mirroring.md)  
- 討論如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端支援使用鏡像資料庫，也就是能夠保留的複本或鏡像的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]待命伺服器上的資料庫。  
+ 討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援鏡像資料庫的使用，這是在待命伺服器上保留 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫複本或鏡像的功能。  
   
  [執行非同步作業](../../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援非同步作業，這是立即傳回而不在呼叫執行緒上封鎖的功能。  
@@ -45,7 +44,7 @@ ms.locfileid: "68067265"
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援 XML 資料類型，這是以 XML 為基礎的資料類型，可以當做資料行類型、變數類型、參數類型或函數傳回類型使用。  
   
  [使用使用者定義型別](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- 討論如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端支援使用者定義型別 (UDT)，以擴充 SQL 類型系統，可讓您將物件和自訂資料結構中的儲存[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。  
+ 討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援使用者定義型別（UDT），它可讓您將物件和自訂資料結構儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中，藉此擴充 SQL 類型系統。  
   
  [使用大型實值型別](../../../relational-databases/native-client/features/using-large-value-types.md)  
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援大數值資料類型，也就是大型物件資料類型 (LOB)。  
@@ -60,7 +59,7 @@ ms.locfileid: "68067265"
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援在資料列集修改時使用取用者通知。  
   
  [執行大量複製作業](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
- 討論如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端支援大量複製作業，允許的大量資料傳輸，來回[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表或檢視表。  
+ 討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援大量複製作業，以允許從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料表或視圖傳送大量資料。  
   
  [使用加密而不需驗證](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  討論如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 加密傳送到伺服器的資料，而不驗證憑證。  
@@ -72,7 +71,7 @@ ms.locfileid: "68067265"
  討論大型 Common Language Runtime (CLR) 使用者定義型別 (UDT) 的支援。  
   
  [FILESTREAM 支援](../../../relational-databases/native-client/features/filestream-support.md)  
- 討論[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]增強型 FILESTREAM 功能的原生用戶端支援。  
+ 討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 增強型 FILESTREAM 功能的 Native Client 支援。  
   
  [用戶端連線中的服務主要名稱 &#40;SPN&#41; 支援](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  討論如何擴充服務主要名稱 (SPN) 的支援以便跨所有通訊協定進行相互驗證。  
@@ -87,7 +86,7 @@ ms.locfileid: "68067265"
  討論在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 內所做的中繼資料探索改進。  
   
  [SQL Server Native Client 11.0 中的 UTF-16 支援](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
- 討論 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中導入的行為變更。 如果繫結資料行結果或輸出參數時，會提供固定長度的緩衝區，而且**wchar**字元結束的字元是 surrogate 字組的高 surrogate 字碼指標之前，而且如果寫入緩衝區的下一步**wchar**字元是低 surrogate 字碼指標，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端不會新增至緩衝區的高 surrogate 字碼指標。  
+ 討論 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中導入的行為變更。 如果您在系結資料行結果或輸出參數時提供固定長度的緩衝區，而且在終止字元之前寫入緩衝區的**wchar**字元是代理組的高代理程式碼點，則為，如果下一個**wchar** ，則為。字元是低代理程式碼點，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不會將高代理程式碼點加入緩衝區。  
   
  [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  討論如何設定應用程式以利用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中新增的高可用性災害復原功能。  

@@ -1,5 +1,5 @@
 ---
-title: SQLGetCursorName | Microsoft Docs
+title: SQLGetCursorName |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +14,17 @@ ms.assetid: 3a427a23-28ef-49aa-b9ec-6cab0914bdf3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0082245875f2f4dbf749876ede17dd0dc954737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81fcdac796dcaf185ee2929c5d981a1f88edb26d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910829"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786546"
 ---
 # <a name="sqlgetcursorname"></a>SQLGetCursorName
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  如果應用程式未指定資料指標名稱， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會產生一個在資料指標產生時為應用程式。 應用程式可以使用**SQLGetCursorName**擷取的驅動程式定義的資料指標名稱定位的 UPDATE 和 DELETE 陳述式。 應用程式不需要呼叫**SQLSetCursorName**利用位於資料操作陳述式。  
+  如果應用程式未指定資料指標名稱，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會在資料指標產生時為應用程式產生一個。 應用程式可以使用**SQLGetCursorName**來抓取用於定位 UPDATE 和 DELETE 子句的驅動程式定義資料指標名稱。 應用程式不需要呼叫**SQLSetCursorName** ，即可利用定位的資料動作陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLGetCursorName 函數](https://go.microsoft.com/fwlink/?LinkId=59349)   

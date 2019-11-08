@@ -1,5 +1,5 @@
 ---
-title: 使用陳述式參數 |Microsoft Docs
+title: Using 語句參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1168c81d8eeb6a25b84f473858bc924f529a572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058668"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779546"
 ---
 # <a name="using-statement-parameters"></a>使用陳述式參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   參數是 SQL 陳述式內的變數，可讓 ODBC 應用程式進行以下作業：  
   
@@ -36,9 +35,9 @@ ms.locfileid: "68058668"
   
 -   增強建構查詢準則時的使用者互動。  
   
--   管理**文字**， **ntext**，並**映像**資料和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特有的 C 資料類型。  
+-   管理**text**、 **Ntext**和**image**資料，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定的 C 資料類型。  
   
- 比方說，**組件**資料表包含名為的資料行**PartID**，**描述**，以及**價格**。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
+ 例如， **part**資料表具有名為**PartID**、 **Description**和**Price**的資料行。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

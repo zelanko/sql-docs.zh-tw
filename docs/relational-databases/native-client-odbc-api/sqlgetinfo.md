@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo | Microsoft Docs
+title: SQLGetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,28 +14,27 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3703def58bf36d7aaf6fca839658c5fad096254
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d44abf68ac843eecf51f6a4595adb1baab18a0c8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131441"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786322"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  下表顯示所傳回的值**SQLGetInfo**。 這些值可能會根據連接之伺服器的版本號碼而有所不同。  
+  資料表會顯示**SQLGetInfo**所傳回的值。 這些值可能會根據連接之伺服器的版本號碼而有所不同。  
   
- **SQLGetInfo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端與不同**SQLGetInfo**在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 驅動程式 (SQLSRV32。DLL) 時**SQLGetInfo**使用 SQL_KEYWORDS 和 0 緩衝區長度呼叫。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式會傳回 SQL_SUCCESS，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式則會傳回 SQL_SUCCESS_WITH_INFO。  不過，當使用小於輸出關鍵字字串，非零緩衝區長度呼叫**SQLGetInfo**在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端會傳回 SQL_SUCCESS_WITH_INFO 和 SQLState 01004。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的**SQLGetInfo**不同于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式（SQLSRV32 中的**SQLGetInfo** 。DLL）時，使用 SQL_KEYWORDS 和0緩衝區長度來呼叫**SQLGetInfo** 。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式會傳回 SQL_SUCCESS，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式則會傳回 SQL_SUCCESS_WITH_INFO。  不過，使用小於輸出關鍵字字串的非零緩衝區長度呼叫時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的**SQLGetInfo**會傳回 SQL_SUCCESS_WITH_INFO 和01004的 SQLState。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|連接的數目受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的限制。 驅動程式會傳回 0，這個**SQLGetInfo**要求。|  
-|SQL_ACTIVE_ENVIRONMENTS|環境的數目未受到此驅動程式的限制。 驅動程式會傳回 0，這個**SQLGetInfo**要求。|  
-|SQL_ACTIVE_STATEMENTS|驅動程式會傳回 1，這**SQLGetInfo**要求。 可供應用程式使用的陳述式控制代碼數目並未受到此驅動程式的限制，但是陳述式控制代碼上的預設執行將會封鎖任何其他控制代碼上的執行。|  
+|SQL_ACTIVE_CONNECTIONS|連接的數目受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的限制。 此**SQLGetInfo**要求的驅動程式會傳回0。|  
+|SQL_ACTIVE_ENVIRONMENTS|環境的數目未受到此驅動程式的限制。 此**SQLGetInfo**要求的驅動程式會傳回0。|  
+|SQL_ACTIVE_STATEMENTS|此**SQLGetInfo**要求的驅動程式會傳回1。 可供應用程式使用的陳述式控制代碼數目並未受到此驅動程式的限制，但是陳述式控制代碼上的預設執行將會封鎖任何其他控制代碼上的執行。|  
 |SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
@@ -52,13 +51,13 @@ ms.locfileid: "68131441"
 |SQL_COLLATION_SEQ|目前針對連接和伺服器指派的定序序列。|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|不支援 ODBC SQL_BIGINT 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** 資料型別當做 ODBC 類型 SQL_DECIMAL。 請參閱底下的 SQL_CONVERT_DECIMAL。|  
+|SQL_CONVERT_BIGINT|不支援 ODBC SQL_BIGINT 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal （19，0）** 資料類型做為 ODBC 類型 SQL_DECIMAL。 請參閱底下的 SQL_CONVERT_DECIMAL。|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|不支援 ODBC SQL_TYPE_DATE 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**資料型別當做 ODBC 類型 SQL_TYPE_TIMESTAMP。 請參閱底下的 SQL_CONVERT_TIMESTAMP。|  
+|SQL_CONVERT_DATE|不支援 ODBC SQL_TYPE_DATE 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**資料類型做為 ODBC 類型 SQL_TYPE_TIMESTAMP。 請參閱底下的 SQL_CONVERT_TIMESTAMP。|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DOUBLE|不支援 ODBC SQL_DOUBLE 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援當做 SQL_FLOAT 的 ODBC SQL_DOUBLE 資料類型。 請參閱底下的 SQL_CONVERT_FLOAT。|  
+|SQL_CONVERT_DOUBLE|不支援 ODBC SQL_DOUBLE 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援 ODBC SQL_DOUBLE 資料類型作為 SQL_FLOAT。 請參閱底下的 SQL_CONVERT_FLOAT。|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT SQL_FN_CVT_CAST|  
 |SQL_CONVERT_INTEGER|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -69,7 +68,7 @@ ms.locfileid: "68131441"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|不支援 ODBC SQL_TYPE_TIME 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**資料型別當做 ODBC 類型 SQL_TYPE_TIMESTAMP。 請參閱底下的 SQL_CONVERT_TIMESTAMP。|  
+|SQL_CONVERT_TIME|不支援 ODBC SQL_TYPE_TIME 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**datetime**資料類型做為 ODBC 類型 SQL_TYPE_TIMESTAMP。 請參閱底下的 SQL_CONVERT_TIMESTAMP。|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -89,7 +88,7 @@ ms.locfileid: "68131441"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_SENSITIVE|  
-|SQL_DATA_SOURCE_NAME|目前的資料來源名稱。 設定所指向的值*StringLengthPtr*設為 0，如果連接未指定資料來源名稱。|  
+|SQL_DATA_SOURCE_NAME|目前的資料來源名稱。 如果連接未指定資料來源名稱，則將*StringLengthPtr*所指向的值設定為0。|  
 |SQL_DATA_SOURCE_READ_ONLY|取決於連接屬性 SQL_ATTR_ACCESS_MODE 的設定。|  
 |SQL_DATABASE_NAME|連接的目前資料庫。|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
@@ -120,7 +119,7 @@ ms.locfileid: "68131441"
 |SQL_IDENTIFIER_QUOTE_CHAR|" (雙引號字元)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|驅動程式不支援的要求。|  
-|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特有的屬性。 由連接使用中的網路程式庫名稱。<br /><br /> 根據預設，會傳回 DBNETLIB。  在此情況下，DBNETLIB 是指網路程式庫，與 dbnetlib.dll 無關。|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式特有的屬性。 由連接使用中的網路程式庫名稱。<br /><br /> 根據預設，會傳回 DBNETLIB。  在此情況下，DBNETLIB 指的是網路程式庫，而且與 DBNETLIB 無關。|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  

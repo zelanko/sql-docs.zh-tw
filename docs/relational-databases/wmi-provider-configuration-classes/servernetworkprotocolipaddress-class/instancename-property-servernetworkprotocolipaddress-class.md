@@ -1,6 +1,6 @@
 ---
-title: InstanceName 屬性 （ServerNetworkProtocolIPAddress 類別） |Microsoft Docs
-ms.custom: ''
+title: InstanceName 屬性（ServerNetworkProtocolIPAddress）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9c169f8077664a7579a767cbb1a48eab6368638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 414ff1ab9c5b9ba717af4010520dadcacc50fdd8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911946"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660652"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName 屬性 (ServerNetworkProtocolIPAddress 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  取得執行個體名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝所在的伺服器網路通訊協定。  
+  取得安裝伺服器網路通訊協定之 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 實例的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +37,7 @@ object.InstanceName [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ServerNetworkProtocolIPAdress 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)物件。  
+ [ServerNetworkProtocolIPAdress 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體名稱的字串值。  

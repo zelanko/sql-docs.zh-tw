@@ -1,6 +1,6 @@
 ---
-title: ConnectionString 屬性 （SqlServerAlias 類別） |Microsoft Docs
-ms.custom: ''
+title: ConnectionString 屬性（SqlServerAlias）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7013087215aaca0721fc0fefd3f66f15c20035ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 435bb6ab0585b7f453fe035fa99be913dffbf769
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052443"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659007"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString 屬性 (SqlServerAlias 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ object.ConnectionString [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- A [SqlServerAlias 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)物件，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]別名。  
+ 代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 別名的[SqlServerAlias 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  一個字串，可指定用來為伺服器連接別名建立連接的連接字串。  

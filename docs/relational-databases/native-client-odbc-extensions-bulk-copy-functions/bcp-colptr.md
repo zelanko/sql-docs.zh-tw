@@ -18,16 +18,15 @@ ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dcc08890a230155c4ffefc3cf4a20dd72dd746f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0bb4e1011448ef4ea98179c3de49c43e66b811e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707759"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783009"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   將目前副本的程式變數資料位址設定成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -48,20 +47,20 @@ RETCODE bcp_colptr (
  *pData*  
  這是要複製之資料的指標。 如果系結的資料類型是大數數值型別（例如 SQLTEXT 或 SQLIMAGE），則*pData*可以是 Null。 Null *pData*表示 long 資料值將使用[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)以區區塊轉送至 SQL Server。  
   
- 如果*pData*設定為 Null，且對應至系結欄位的資料行不是大數數值型別，則**bcp_colptr**會失敗。  
+ 如果*pData*設定為 Null，且對應至系結欄位的資料行不是大數數值型別， **bcp_colptr**會失敗。  
   
  如需有關大數數值型別的詳細資訊，請參閱[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) **。**  
   
- *idxServerCol*  
+ *並將 idxservercol*  
  這是資料庫資料表中要將資料複製到其中之資料行的序數位置。 資料表中的第一個資料行是資料行 1。 資料行的序數位置是由[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)所報告。  
   
 ## <a name="returns"></a>傳回值  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- **Bcp_colptr**函數可讓您在使用[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)將資料複製到 SQL Server 時，變更特定資料行的來源資料位址。  
+ 當您將資料複製到具有[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)的 SQL Server 時， **bcp_colptr**函數可讓您變更特定資料行的來源資料位址。  
   
- 一開始，使用者資料的指標是由呼叫**bcp_bind**所設定。 如果程式變數資料位址在對**bcp_sendrow**的呼叫之間有所變更，您可以呼叫**bcp_colptr**來重設資料的指標。 下一次呼叫**bcp_sendrow**時，會將呼叫所定址的資料傳送至**bcp_colptr**。  
+ 一開始，使用者資料的指標是由**bcp_bind**的呼叫所設定。 如果程式變數資料位址在**bcp_sendrow**的呼叫之間變更，您可以呼叫**bcp_colptr** ，將指標重設為數據。 下一次呼叫**bcp_sendrow**會將呼叫所定址的資料傳送給**bcp_colptr**。  
   
  您想要修改其資料位址之資料表中的每個資料行都必須有個別的**bcp_colptr**呼叫。  
   

@@ -10,27 +10,26 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e11bc1094f7bab993eb67542c16360e874db87f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48a335f4cf3dc3990cbcf6bbf68e82ce76a9e54f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031786"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759349"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-SNAC 或 SQL Server Native Client，指的是，已用交換來參考適用於 SQL Server 的 ODBC 和 OLE DB 驅動程式。
+SNAC （或 SQL Server Native Client）是一種詞彙，可交換用來參考 ODBC 和 OLE DB 驅動程式以進行 SQL Server。
 
 > [!IMPORTANT] 
-> SQL Server Native Client (SQLNCLI) 會保持已被取代，並不建議用於新的開發工作。 相反地，使用 新[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 這會更新為最新的伺服器功能。
+> SQL Server Native Client （SQLNCLI）仍會被取代，不建議將它用於新的開發工作。 請改為使用新的 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其會進行更新且具備最新的伺服器功能。
 
 > [!NOTE]
-> 如需詳細資訊及下載的 SNAC 或 ODBC 驅動程式，請參閱[SNAC 生命週期所述的部落格文章](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)。
-> 如需有關 ODBC Driver for SQL Server，請參閱[Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。  
+> 如需詳細資訊及下載 SNAC 或 ODBC 驅動程式，請參閱[SNAC 生命週期說明的 blog 文章](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)。
+> 如需 ODBC Driver for SQL Server 的詳細資訊，請參閱[Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。  
 
- 有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 功能隨附[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，SQL Server native Client 的最後一個可用版本：
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]（SQL Server native Client 的最後一個可用版本）所發行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 功能的資訊：
 
 -   [SQL Server Native Client 支援 LocalDB](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
@@ -42,21 +41,21 @@ SNAC 或 SQL Server Native Client，指的是，已用交換來參考適用於 S
 
 -   [存取擴充事件記錄檔中的診斷資訊](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
 
-中的 ODBC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端支援新增至 Windows 7 SDK 中的標準 ODBC 的三個功能：  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支援在 Windows 7 SDK 中新增至標準 ODBC 的三項功能：  
 
--   連接相關作業的非同步執行。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](https://go.microsoft.com/fwlink/?LinkID=191493)。  
+-   連接相關作業的非同步執行。 如需詳細資訊，請參閱[非同步執行](https://go.microsoft.com/fwlink/?LinkID=191493)。  
 
--   C 資料類型擴充性。 如需詳細資訊，請參閱 < [ODBC 中的 C 資料類型](https://go.microsoft.com/fwlink/?LinkID=191495)。  
+-   C 資料類型擴充性。 如需詳細資訊，請參閱[ODBC 中的 C 資料類型](https://go.microsoft.com/fwlink/?LinkID=191495)。  
 
-     若要支援這項功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，可以傳回 SQLGetDescField **SQL_C_SS_TIME2** (如**時間**類型) 或**SQL_C_SS_TIMESTAMPOFFSET** （適用於**datetimeoffset**) 而非**SQL_C_BINARY**，如果您的應用程式使用 ODBC 3.8 的話。 如需詳細資訊，請參閱 <<c0> [ 資料類型對 ODBC 日期和時間改善支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
+     為了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中支援這項功能，如果您的應用程式，SQLGetDescField 可以傳回**SQL_C_SS_TIME2** （適用于**時間**類型）或**SQL_C_SS_TIMESTAMPOFFSET** （適用于**datetimeoffset**），而不是**SQL_C_BINARY**使用 ODBC 3.8。 如需詳細資訊，請參閱[資料類型對 ODBC 日期和時間改善的支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
 
--   呼叫**SQLGetData**使用小型緩衝區多次，以便擷取大型參數值。 如需詳細資訊，請參閱 <<c0> [ 使用 SQLGetData 擷取輸出參數](https://go.microsoft.com/fwlink/?LinkID=191494)。  
+-   多次呼叫具有小型緩衝區的**SQLGetData** ，以取出大型參數值。 如需詳細資訊，請參閱[使用 SQLGetData 抓取輸出參數](https://go.microsoft.com/fwlink/?LinkID=191494)。  
 
  下列主題描述的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 行為變更。  
 
--   當呼叫**icommandwithparameters:: Setparameterinfo**，值傳遞給*pwszName*參數必須是有效的識別項。 如需詳細資訊，請參閱 < [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)。  
+-   呼叫**ICommandWithParameters：： SetParameterInfo**時，傳遞至*pwszName*參數的值必須是有效的識別碼。 如需詳細資訊，請參閱[ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)。  
 
--   **SQLDescribeParam**會一致地傳回 ODBC 規格相符的值。 如需詳細資訊，請參閱 < [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)。  
+-   **SQLDescribeParam**會一致地傳回符合 ODBC 規格的值。 如需詳細資訊，請參閱[SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)。  
 
 -   [ODBC 驅動程式在處理字元轉換上的行為變更](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 

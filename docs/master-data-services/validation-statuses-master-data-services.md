@@ -1,5 +1,5 @@
 ---
-title: 驗證狀態 (Master Data Services) | Microsoft Docs
+title: 驗證狀態
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 27a205b5cf6775ea8d7486cbc6c3776fc5c9e825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017380"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728864"
 ---
 # <a name="validation-statuses-master-data-services"></a>驗證狀態 (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68017380"
 
   在 **[版本管理]** 功能區域的 **[驗證版本]** 頁面上，可能會出現下列狀態。  
   
-|[狀態]|描述|  
+|狀態|說明|  
 |------------|-----------------|  
 |等候驗證|正在等候驗證的所有新建成員。|  
 |等候重新驗證|正在等候重新驗證的現有成員。|  

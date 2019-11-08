@@ -1,5 +1,5 @@
 ---
-title: 建立主資料管理員 Web 服務 Proxy 類別 | Microsoft Docs
+title: 建立主資料管理員 Web 服務 Proxy 類別
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 062a3bc03c85a4dc0d4fe5c6cca08b30429cd284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1096da19a45e15ab2216cea2f4a4a38ecb05233e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006328"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729314"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>建立主資料管理員 Web 服務 Proxy 類別
 
@@ -28,7 +28,7 @@ ms.locfileid: "68006328"
   
 1.  在文字編輯器中開啟 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config 檔案。 這個檔案位於 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安裝路徑的 WebApplication 資料夾。  
   
-2.  在 **\<serviceBehaviors>** 底下，尋找 **mdsWsHttpBehavior** 區段。 針對 **\<serviceMetadata>** 項目，將 **httpGetEnabled** 設定為 **true**。  
+2.  在serviceBehaviors> **底下，尋找 \<mdsWsHttpBehavior** 區段。 針對 **\<serviceMetadata>** 項目，將 **httpGetEnabled** 設定為 **true**。  
   
     > [!NOTE]  
     >  如果您想要透過安全通訊端層 (SSL) 啟用 Web 服務，請在 web.config 檔案的 **mdsWsHttpBehavior** 區段中，將 **httpsGetEnabled** 設定為 **true**。 您也需要變更 **mdsWsHTTPBinding** 使其設定成 SSL，與此同時也請註解非 SSL 的區段。  
@@ -39,7 +39,7 @@ ms.locfileid: "68006328"
     「您已建立服務」的頁面。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>使用 Visual Studio 建立 Proxy 類別  
- 如果您已安裝 Visual Studio 2010，產生 Proxy 類別最簡單的方式，就是將 [服務參考]  新增至您的專案。 服務參考的位址就是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，並附加 /service/service.svc。 例如： `https://yourserver/MDS/service/service.svc`＞。 如需詳細資訊，請參閱[如何：新增、 更新或移除服務參考](https://go.microsoft.com/fwlink/?LinkId=221167)。  
+ 如果您已安裝 Visual Studio 2010，產生 Proxy 類別最簡單的方式，就是將 [服務參考] 新增至您的專案。 服務參考的位址就是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，並附加 /service/service.svc。 例如： `https://yourserver/MDS/service/service.svc`。 如需詳細資訊，請參閱[如何：新增、更新或移除服務參考](https://go.microsoft.com/fwlink/?LinkId=221167)。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>使用 Svcutil.exe 建立 Proxy 類別  
  您必須已經安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK，電腦上才會有 Svcutil.exe。 如果您使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，您須使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令提示字元執行此命令。 如需詳細資訊，請參閱 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 和[從服務中繼資料產生 WCF 用戶端](https://go.microsoft.com/fwlink/?LinkId=164821)。  

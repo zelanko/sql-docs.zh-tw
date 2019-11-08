@@ -1,5 +1,5 @@
 ---
-title: 刪除成員或集合 (Master Data Services) | Microsoft Docs
+title: 刪除成員或集合
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cb72f41278f356704b7abedba8e9e60cb00b8e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 789b372660e7df5282c700f57654162288dabb78
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094376"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729373"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>刪除成員或集合 (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68094376"
 > [!NOTE]  
 >  如果某個成員是當做另一個成員的網域屬性值使用，您就無法刪除該成員。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -43,7 +43,7 @@ ms.locfileid: "68094376"
   
 ### <a name="to-delete-a-member-or-collection"></a>若要刪除成員或集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 **[模型]** 清單中的模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型] 清單中的模型。  
   
 2.  從 **[版本]** 清單中選取版本。  
   
@@ -51,15 +51,15 @@ ms.locfileid: "68094376"
   
 4.  若要刪除：  
   
-    -   分葉成員，請從功能表列指向 [實體]  ，然後按一下包含該成員的實體名稱。  
+    -   分葉成員，請從功能表列指向 [實體]，然後按一下包含該成員的實體名稱。  
   
-    -   合併成員，請從功能表列指向 [階層]  ，然後按一下包含該成員的階層名稱。 然後按一下階層中包含此成員的節點。  
+    -   合併成員，請從功能表列指向 [階層]，然後按一下包含該成員的階層名稱。 然後按一下階層中包含此成員的節點。  
   
-    -   集合，請從功能表列指向 [集合]  ，然後按一下包含該集合的實體名稱。  
+    -   集合，請從功能表列指向 [集合]，然後按一下包含該集合的實體名稱。  
   
 5.  在方格中，按一下要刪除之成員或集合的資料列。  
   
-6.  按一下 [刪除成員]  、[刪除]  或 [刪除集合]  。  
+6.  按一下 [刪除成員]、[刪除] 或 [刪除集合]。  
   
 7.  實體系統管理員也會在實體版本中看到清除 (永久刪除) 所有虛刪除成員的功能表選項。  
   

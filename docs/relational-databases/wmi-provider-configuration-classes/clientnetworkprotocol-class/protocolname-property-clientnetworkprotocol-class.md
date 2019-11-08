@@ -1,6 +1,6 @@
 ---
-title: ProtocolName 屬性 （ClientNetworkProtocol 類別） |Microsoft Docs
-ms.custom: ''
+title: ProtocolName 屬性（ClientNetworkProtocol）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 753a3ddfe1e7d808380464ef5010bbe5a18ac18c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: beb51ea7270fdbeb96dc858c2ef4e65c386726ff
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040887"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660236"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>ProtocolName 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  取得所指定之目前網路通訊協定的名稱[Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)。  
+  取得[設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)所指定的目前網路通訊協定名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,10 +37,10 @@ object.ProtocolName [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件，表示所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ 代表 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 指定目前的用戶端名稱的字串值的網路通訊協定參考[SetOrderValue 方法 （ClientNetworkProtocol 類別）](https://technet.microsoft.com/library/ms179295.aspx)。  
+ 字串值，指定[SetOrderValue 方法（ClientNetworkProtocol 類別）](https://technet.microsoft.com/library/ms179295.aspx)所參考之目前用戶端網路通訊協定的名稱。  
   
 ## <a name="remarks"></a>備註  
   

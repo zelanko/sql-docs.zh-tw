@@ -1,6 +1,6 @@
 ---
-title: 使用精靈建立模型部署套件 | Microsoft Docs
-ms.custom: ''
+title: 使用 Wizard 建立模型部署套件
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac16ab79970e642a2e13000babb9bc9ba8679442
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5771fb5db586726d19d965ca18aa27f3dab16bd8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947619"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729598"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用精靈建立模型部署封裝
 
@@ -27,12 +27,12 @@ ms.locfileid: "67947619"
 
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署精靈僅建立模型物件的封裝。 如果您需要在套件中包含資料，請參閱 [使用 MDSModelDeploy 建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
--   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您必須擁有存取 [系統管理]  功能區域的權限。  
+-   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您必須擁有存取 [系統管理] 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 -   模型必須存在，才能建立其封裝。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)。  
   
@@ -40,15 +40,15 @@ ms.locfileid: "67947619"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  在 [模型檢視]  頁面上，從功能表列指向 [系統]  ，然後按一下 [部署]  。  
+2.  在 [模型檢視] 頁面上，從功能表列指向 [系統]，然後按一下 [部署]。  
   
-3.  按一下 [模型部署精靈]  上的 [建立]  。  
+3.  按一下 [模型部署精靈] 上的 [建立]。  
   
-4.  在 [建立封裝]  頁面上，選取 [模型]  清單中的模型。  
+4.  在 [建立封裝] 頁面上，選取 [模型] 清單中的模型。  
   
-5.  按一下 [下一步]  。  
+5.  按一下 **[下一步]** 。  
   
-6.  按一下 [下載]  。  
+6.  按一下 [下載]。  
   
 7.  儲存檔案。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67947619"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [使用精靈部署模型部署套件](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
+-   [使用精靈部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  

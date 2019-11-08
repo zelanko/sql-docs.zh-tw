@@ -1,6 +1,6 @@
 ---
-title: InstanceName 屬性 （CInstance 類別） |Microsoft Docs
-ms.custom: ''
+title: InstanceName 屬性（CInstance）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db02313d2e22b9cb7232349362c857f58867bdbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf88421f5f7d54beab0dcc69ac37858817d43bd1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044447"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659628"
 ---
 # <a name="cinstance-class---instancename-property"></a>CInstance 類別 - InstanceName 屬性
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

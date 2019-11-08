@@ -17,12 +17,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 537537ef2f3dd07a27ffcb4d092be2f8719f6ee1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0b01e47f81f153b73c8a57d23c9a75fc8b57ef66
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907378"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761075"
 ---
 # <a name="create-a-distributed-transaction"></a>建立分散式交易
 
@@ -33,7 +33,6 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 /includes/snac-deprecated.md
 -->
 
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
 您可以用不同的方式為不同的 Microsoft SQL 系統建立分散式交易。
 
@@ -52,7 +51,7 @@ MSDTC 是針對內部部署 Microsoft SQL Server 進行安裝，但不適用於 
 3. 應用程式會更新電腦 B 上 SQL Server Y 上的某些資料。
     - 如果 SQL Server Y 上的更新失敗，則兩個 SQL Server 實例上所有未認可的更新都會復原。
 
-4. 最後，應用程式會藉由呼叫[SQLEndTran _（1）_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)，並使用 SQL_COMMIT 或 SQL_ROLLBACK 選項來結束交易。
+4. 最後，應用程式會藉由使用 SQL_COMMIT 或 SQL_ROLLBACK 選項來呼叫[SQLEndTran _（1）_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)來結束交易。
 
 _（1）_ MSDTC 不需要 ODBC 就可以叫用。 在這種情況下，MSDTC 會變成交易管理員，而應用程式不會再使用**SQLEndTran**。
 

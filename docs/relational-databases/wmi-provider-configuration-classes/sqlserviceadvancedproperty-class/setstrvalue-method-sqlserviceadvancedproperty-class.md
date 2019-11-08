@@ -1,6 +1,6 @@
 ---
-title: SetStrValue 方法 （SqlServiceAdvancedProperty 類別） |Microsoft Docs
-ms.custom: ''
+title: SetStrValue 方法（SqlServiceAdvancedProperty）
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a58248999ae44ef71d454bef5e0fbdc9802494c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02e0e825b52263acb819c4fedaa73efc6944741b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139506"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659507"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 方法 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ object.SetStrValue(StrValue)
   
 #### <a name="parameters"></a>參數  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
 |*StrValue*|指定進階屬性值的字串值。|  
   
@@ -52,6 +52,6 @@ object.SetStrValue(StrValue)
  屬性值類型必須是 *string* ，才能將屬性設定為字串值。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動和停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 資料指標並行 (ODBC) |Microsoft Docs
+title: 資料指標並行（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9b310d062ec9c9acdbfce328abc5533bfb69178
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3ea2db629f1a1621e23257a35be52a2f58a6ea2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059538"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784228"
 ---
 # <a name="cursor-concurrency-odbc"></a>資料指標並行 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  資料指標作業跟資料指標類型一樣，會受到應用程式設定之並行選項的影響。 並行選項會設定使用的 SQL_ATTR_CONCURRENCY 選項[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 並行類型為：  
+  資料指標作業跟資料指標類型一樣，會受到應用程式設定之並行選項的影響。 並行選項是使用[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)的 SQL_ATTR_CONCURRENCY 選項來設定。 並行類型為：  
   
 -   唯讀 (SQL_CONCUR_READONLY)  
   

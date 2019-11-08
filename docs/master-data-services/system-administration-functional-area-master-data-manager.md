@@ -1,5 +1,5 @@
 ---
-title: 系統管理功能區域 (主資料管理員) | Microsoft Docs
+title: 系統管理功能區域
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 340d4736754ab4e2ffd23043d8178d7ce4fdbe0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e128ba2b53383c83bc58ba66526e9768355e140b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102613"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727869"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系統管理功能區域 (主資料管理員)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68102613"
 
   在 [系統管理] 功能區域中，管理員可以建立模型及其所有物件， 也可以建立商務規則，並建立及部署模型封裝。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
-## <a name="model"></a>[模型]  
+## <a name="model"></a>模型  
  [模型 &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
  [建立模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "68102613"
   
  [部署模型 &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
- [使用精靈部署模型部署套件](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
+ [使用精靈部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
  [使用精靈建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   

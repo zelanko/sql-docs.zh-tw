@@ -16,12 +16,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce60db3b720b046c44d7507d3164c2f2e6c9173f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091259"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632731"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用 Upgrade Advisor 來準備升級
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor 可以協助您完成升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的相關準備工作。 Upgrade Advisor 會分析已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版元件，然後產生報告，以指出在您升級之前或之後要修正的問題。  
@@ -64,22 +64,22 @@ ms.locfileid: "66091259"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1 及 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
   
--   Windows Installer 從版本 4.5 開始。 您可以安裝 Windows Installer 從[Windows Installer 網站](https://go.microsoft.com/fwlink/?LinkId=49112)。  
+-   Windows Installer 從版本 4.5 開始。 您可以從[Windows Installer 的網站](https://www.microsoft.com/download/details.aspx?id=8483)安裝 Windows Installer。  
   
--   Microsoft .NET Framework 4。 .NET framework 4 是位於[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]產品媒體，以及從[.NET Framework 4 下載頁面](https://go.microsoft.com/fwlink/?LinkId=209895)。  
+-   Microsoft .NET Framework 4。 .NET Framework 4 適用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 產品媒體，以及從[.NET Framework 4 下載頁面](https://go.microsoft.com/fwlink/?LinkId=209895)。  
   
     -   若要從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 媒體安裝 .NET Framework 4，請找出光碟機的根目錄。 然後，在 \redist 資料夾上按兩下滑鼠按鈕後於 DotNetFrameworks 資料夾上再按兩下滑鼠按鈕，然後執行 dotNetFx40_Full_x86_x64.exe (32 位元作業系統或 64 位元作業系統)。  
   
  若要從網路安裝 Upgrade Advisor，請在下載網頁上按一下 [下載] 按鈕。 接著您可立即執行安裝，或是儲存 SQLUA.msi 檔，並於稍後再執行。 如果要從產品光碟安裝，請直接從產品光碟執行 SQLUA.msi。  
   
- 安裝 Upgrade Advisor 之後，您可以開啟從**啟動**功能表：  
+ 安裝 Upgrade Advisor 之後，您可以從 [**開始**] 功能表開啟它：  
   
--   按一下 **開始**，指向**所有程式**，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後按一下 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**。  
+-   按一下 [**開始**]，指向 [**所有程式**]，指向 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [ **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**]。  
   
  如需詳細資訊，請參閱 Upgrade Advisor 下載以及 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本資訊中的 Upgrade Advisor 文件。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用多個版本和 SQL Server 執行個體](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ 使用[SQL Server 的多個版本和實例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [回溯相容性](../../../2014/getting-started/backward-compatibility.md)  
   

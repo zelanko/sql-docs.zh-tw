@@ -1,6 +1,6 @@
 ---
-title: PropertyStrVal 屬性 （ServerNetworkProtocolProperty 類別） |Microsoft Docs
-ms.custom: ''
+title: PropertyStrVal 屬性（ServerNetworkProtocolProperty）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 apiname:
-- PropertyStrVal Property (ServerNetworkProtocolProperty Class)
+- PropertyStrVal Property (ServerNetworkProtocolProperty
 apilocation:
 - sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dfc4a84d9fdcb4fc7dd5749a6163efa3c0af9a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 907f264e49def46982535ba41c51f9900884a4d5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097561"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659349"
 ---
 # <a name="propertystrval-property-servernetworkprotocolproperty-class"></a>PropertyStrVal 屬性 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

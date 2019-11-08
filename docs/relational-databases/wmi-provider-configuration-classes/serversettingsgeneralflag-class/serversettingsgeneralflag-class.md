@@ -1,5 +1,5 @@
 ---
-title: ServerSettingsGeneralFlag 類別 |Microsoft Docs
+title: ServerSettingsGeneralFlag 類別
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1276e1411757dfc31d9fb874a8a78472591a0bbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dcc69f5dedb481f8e86d229740e39a7843c87765
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052706"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659767"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [ServerSettingsGeneralFlag 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md)代表的執行個體上的一般旗標設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  [ServerSettingsGeneralFlag 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md)代表 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例上的一般旗標設定。  
   
  此類別可用來進行以下作業：  
   

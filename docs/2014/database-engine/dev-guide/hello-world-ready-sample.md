@@ -10,17 +10,17 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781169"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637651"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 範例
   Hello World Ready 範例示範涉及建立、部署及測試以簡單全球化整備 Common Language Runtime (CLR) 整合為基礎之預存程序的基本作業。 全球化整備元件可以輕鬆地當地語系化成全世界不同市場的不同語言，而不變更元件的原始程式碼。 此範例還示範如何透過輸出參數，以及透過由預存程序動態建構及傳回至用戶端的記錄來傳回資料。此範例與 Hello World 範例幾乎相同，但它可更容易、更安全地當地語系化此應用程式。 若要變更當地語系化文字，需要依照以下進行：  
   
-1.  變更 XML 檔案 (。`resx` 在 [資源] 目錄中的特定文化特性的檔案）  
+1.  變更 XML 檔案（.`resx` 檔案）（適用于 resources 目錄中的特定文化特性）  
   
 2.  使用 `resgen` 建立文化資源檔  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62781169"
   
  CLR 預存程序本身的原始程式碼和組件不會變更。 系統會提供 `build.cmd` 指令碼，其示範如何編譯及連結資源組件。雖然應用程式的原始程式碼會根據目前正在執行的組件建立資源管理員，但是您不一定要在包含預存程序的 DLL 中內嵌文化特性中性的資源。 `System.Resources.NeutralResourcesLanguage attribute` 允許文化特性中性的資源存在於附屬 DLL 中。 為此最好使用個別的 DLL，如此一來，當需要加入或變更當地語系化文字時，就無須變更包含 CLR 預存程序的主要 DLL。 這對 CLR 使用者定義型別特別有用，這些型別可能含有資料行及其他相依性，而使得型別難以卸除及重新加入。通常，附屬 DLL 版本必須與主組件版本相同。 不過，您也可以使用 `SatelliteContractVersion` 屬性來允許主組件更新，而不更新附屬組件。 如需詳細資訊，請參閱 Microsoft .NET 文件集中的 `ResourceManager` 類別。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  此範例僅適用於 SQL Server 2005 和更新版本。  
   
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](https://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express  
   
 -   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62781169"
   
 4.  在 c:\MySample 中，建立 `messages.resx` 檔案並將範例程式碼複製到此檔案中。  
   
-5.  在 c:\MySample，建立檔案`messages.de.resx`存檔以`messages.resx`做為`messages.de.resx`之後變更的行  
+5.  在 c:\MySample 中，藉由在變更行之後將檔案 `messages.resx` 儲存為 `messages.de.resx` 來建立檔案 `messages.de.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62781169"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  在 c:\MySample，建立檔案`messages.es.resx`存檔以`messages.resx`做為`messages.es.resx`之後變更的行  
+6.  在 c:\MySample 中，藉由在變更行之後將檔案 `messages.resx` 儲存為 `messages.es.resx` 來建立檔案 `messages.es.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62781169"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  在 c:\MySample，建立檔案`messages.fr.resx`存檔以`messages.resx`做為`messages.fr.resx`之後變更的行  
+7.  在 c:\MySample 中，藉由在變更行之後將檔案 `messages.resx` 儲存為 `messages.fr.resx` 來建立檔案 `messages.fr.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62781169"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  在 c:\MySample，建立檔案`messages.fr-FR.resx`存檔以`messages.resx`做為`messages.fr-FR.resx`之後變更的行  
+8.  在 c:\MySample 中，藉由在變更行之後將檔案 `messages.resx` 儲存為 `messages.fr-FR.resx` 來建立檔案 `messages.fr-FR.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62781169"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. 在 c:\MySample，建立檔案`messages.it.resx`存檔以`messages.resx`做為`messages.it.resx`之後變更的行  
+9. 在 c:\MySample 中，藉由在變更行之後將檔案 `messages.resx` 儲存為 `messages.it.resx` 來建立檔案 `messages.it.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62781169"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. 在 c:\MySample，建立檔案`messages.ja.resx`存檔以`messages.resx`做為`messages.ja.resx`之後變更的行  
+10. 在 c:\MySample 中，藉由在變更行之後將檔案 `messages.resx` 儲存為 `messages.ja.resx` 來建立檔案 `messages.ja.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62781169"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. 複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存為`test.sql`範例目錄中。  
+16. 將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存為範例目錄中的 `test.sql`。  
   
 17. 使用下列命令來執行測試指令碼  
   

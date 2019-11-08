@@ -1,5 +1,5 @@
 ---
-title: 建立模型管理員 (Master Data Services) | Microsoft Docs
+title: 建立模型管理員
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a98aa3752259fe93fff7086c7918a31532a7d7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba53fbbbb86f40a5b93c748fcd31bf5e8d7f823d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906689"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729565"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>建立模型管理員 (Master Data Services)
 
@@ -31,9 +31,9 @@ ms.locfileid: "67906689"
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
--   您必須擁有存取 [使用者及群組的權限]  功能區域的權限。  
+-   您必須擁有存取 [使用者及群組的權限] 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ### <a name="to-create-a-model-administrator"></a>若要建立模型管理員  
   
@@ -51,11 +51,11 @@ ms.locfileid: "67906689"
   
 7.  按一下您要授與權限的模型。  
   
-8.  選取功能表上的 [管理員]  。  
+8.  選取功能表上的 [管理員]。  
   
 9. 針對您希望群組或使用者成為其管理員的每個模型，完成步驟 7 和 8。  
   
-10. 按一下 [儲存]  。  
+10. 按一下 **[儲存]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   

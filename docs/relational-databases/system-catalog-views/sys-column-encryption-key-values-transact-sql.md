@@ -1,7 +1,7 @@
 ---
-title: sys.column_encryption_key_values (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases column_encryption_key_values （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,30 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_encryption_key_values catalog view
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c4a9f214ca9a947e8f488dd347f69b487b963e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c5dc4f2dc42452560162d214844e2264cd0e5e9
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140123"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593809"
 ---
-# <a name="syscolumnencryptionkeyvalues-transact-sql"></a>sys.column_encryption_key_values & Amp;#40;transact-SQL&AMP;#41;
+# <a name="syscolumn_encryption_key_values-transact-sql"></a>sys.databases column_encryption_key_values （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回加密值資訊的資料行加密金鑰 (Cek) 以建立[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)或[ALTER COLUMN ENCRYPTION KEY &#40;-&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)陳述式。 每個資料列代表資料行主要金鑰 (CMK) 加密的 CEK 的值。  
+  針對使用[CREATE column encryption key](../../t-sql/statements/create-column-encryption-key-transact-sql.md)或[ALTER column encryption key &#40;transact-sql&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)語句所建立的資料行加密金鑰（cek），傳回其加密值的相關資訊。 每個資料列都代表 CEK 的值，並使用資料行主要金鑰（CMK）進行加密。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
-|**column_encryption_key_id**|**int**|在資料庫中 CEK 的識別碼。|  
-|**column_master_key_id**|**int**|用來加密的 CEK 值的資料行主要金鑰的識別碼。|  
-|**encrypted_value**|**varbinary(8000)**|以指定在 column_master_key_id CMK 加密的 CEK 值。|  
-|**encryption_algorithm_name**|**sysname**|用來加密的 CEK 值演算法的名稱。<br /><br /> 用來加密值之加密演算法的名稱。 必須是系統提供者的演算法**RSA_OAEP**。|  
+|**column_encryption_key_id**|**int**|資料庫中 CEK 的識別碼。|  
+|**column_master_key_id**|**int**|用來加密 CEK 值的資料行主要金鑰識別碼。|  
+|**encrypted_value**|**varbinary(8000)**|使用 column_master_key_id 中指定的 CMK 加密的 CEK 值。|  
+|**encryption_algorithm_name**|**sysname**|用來加密 CEK 值的演算法名稱。<br /><br /> 用來加密值之加密演算法的名稱。 系統提供者的演算法必須**RSA_OAEP**。|  
   
 ## <a name="permissions"></a>Permissions  
- 需要**VIEW ANY COLUMN ENCRYPTION KEY**權限。  
+ 需要**VIEW ANY COLUMN ENCRYPTION KEY**許可權。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -53,6 +53,10 @@ ms.locfileid: "68140123"
  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [永遠加密 &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [使用 secure 記憶體保護區  的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)  
+ [Always Encrypted  的金鑰管理總覽](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+ [使用安全記憶體保護區管理 Always Encrypted 的金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+
   
   

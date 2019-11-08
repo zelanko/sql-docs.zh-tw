@@ -1,6 +1,6 @@
 ---
-title: PropertyName 屬性 （ClientNetworkProtocolProperty 類別） |Microsoft Docs
-ms.custom: ''
+title: PropertyName 屬性（ClientNetworkProtocolProperty）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9cd5b84b9ee69a32edad2f9a5c87f77195fc56c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 60ecd0972659f69461b6f94b7e3f24c99bcf8cec
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040718"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658902"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName 屬性 (ClientNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  取得所參考之目前屬性的名稱[PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md)屬性值。  
+  取得[PropertyIdx 屬性（ClientNetworkProtocolProperty 類別）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md)屬性值所參考之目前屬性的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +37,7 @@ object.PropertyName [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ClientNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)物件，表示所使用之網路通訊協定屬性[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ [ClientNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)物件，代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端所使用之網路通訊協定的屬性。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定目前屬性名稱的字串值。  

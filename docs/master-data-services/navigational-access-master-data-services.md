@@ -1,5 +1,5 @@
 ---
-title: 導覽存取權 (Master Data Services) | Microsoft Docs
+title: 導覽存取權
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1b6ba978887aed556b7a53e613c9f79e36875b61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c167d33c29a78100e5a0f1bfcd987dc50368cdc4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928119"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729005"
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
 

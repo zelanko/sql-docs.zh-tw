@@ -1,6 +1,6 @@
 ---
-title: GetCurrentCertificate 方法 （ServerSettings 類別） |Microsoft Docs
-ms.custom: ''
+title: GetCurrentCertificate 方法（ServerSettings）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f55a54ac0e92fbe12842a2574336e0555b497072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e5d3ad1a0caf0eb2fd835d04ed80e0a2a044983
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052923"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659324"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate 方法 (ServerSettings 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,16 +37,16 @@ object.GetCurrentCertificate(SHA)
   
 ## <a name="parts"></a>組件  
  *object*  
- A **ServerSettings**物件，表示伺服器執行個體上設定的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例上之伺服器設定的**ServerSettings**物件。  
   
 #### <a name="parameters"></a>參數  
   
-|參數|描述|  
+|參數|說明|  
 |---------------|-----------------|  
 |*SHA*|在方法完成之後指定目前安全性憑證的字串物件值 (輸出參數)。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- A **uint32**值，也就是 0，如果已成功修改此服務，不支援要求，則為 1，而其他數值則表示錯誤。  
+ **Uint32**值，如果已成功修改服務，則為0，如果不支援要求則為1，以及其他指示錯誤的任何數位。  
   
 ## <a name="remarks"></a>備註  
   

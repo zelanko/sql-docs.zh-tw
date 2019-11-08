@@ -23,14 +23,14 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828044"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637826"
 ---
-# <a name="data-flow-performance-features"></a>資料流程效能的功能
+# <a name="data-flow-performance-features"></a>Data Flow Performance Features
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
   
 ## <a name="configuring-the-data-flow"></a>設定資料流程  
@@ -125,7 +125,7 @@ ms.locfileid: "62828044"
  使用本節中的建議來改善「彙總」、「模糊查閱」、「模糊群組」、「查閱」、「合併聯結」與「緩時變維度」轉換的效能。  
   
 #### <a name="aggregate-transformation"></a>彙總轉換  
- 「彙總」轉換包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 屬性。 這些屬性會提升效能，其方式是讓轉換針對轉換所快取的資料來預先配置所需的記憶體數量。 如果您知道預期要從群組的精確或大約數目**分組**作業時，設定`Keys`和`KeysScale`屬性，分別。 如果您知道預期要從的相異值的精確或大約數目**相異計數**作業時，設定`CountDistinctKeys`和`CountDistinctScale`屬性，分別。  
+ 「彙總」轉換包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 屬性。 這些屬性會提升效能，其方式是讓轉換針對轉換所快取的資料來預先配置所需的記憶體數量。 如果您知道預期要從 [**群組依據**] 作業產生的精確或大約群組數，請分別設定 [`Keys`] 和 [`KeysScale`] 屬性。 如果您知道預期要從 [**相異計數**] 作業產生的精確或大約相異值數目，請分別設定 [`CountDistinctKeys`] 和 [`CountDistinctScale` 屬性]。  
   
  如果必須在資料流程中建立多個彙總，您應考慮使用一個「彙總」轉換來建立多個彙總，而不是建立多個轉換。 當一個彙總就是其他彙總的子集時，這個方法能夠改善效能，因為轉換可以最佳化內部儲存體，並且只會掃描一次傳入的資料。 例如，如果彙總使用 GROUP BY 子句和 AVG 彙總，則將它們組合成一個轉換可以改進效能。 不過，在一個「彙總」轉換內執行多個彙總會序列化彙總作業，因此，當多個彙總必須個別計算時，可能不會改善效能。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62828044"
 #### <a name="lookup-transformation"></a>查閱轉換  
  輸入僅查閱所需資料行的 SELECT 陳述式可以將記憶體中的參考資料大小最小化。 這個選項的效能比選取會傳回大量不必要資料的整個資料表或檢視表更好。  
   
-#### <a name="merge-join-transformation"></a>Merge Join Transformation  
+#### <a name="merge-join-transformation"></a>合併聯結轉換  
  您再也不必設定 `MaxBuffersPerInput` 屬性的值，因為 Microsoft 已做出變更，降低合併聯結轉換會耗用過多記憶體的風險。 這個問題有時候會發生在合併聯結的多個輸入以不平均的速率產生資料時。  
   
 #### <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換  
@@ -143,7 +143,7 @@ ms.locfileid: "62828044"
   
  「緩時變維度」轉換中最緩慢的元件通常是一次針對一個單一資料列執行 UPDATE 的「OLE DB 命令」轉換。 因此，改善「緩時變維度」轉換效能最有效的方式就是取代「OLE DB 命令」轉換。 您可以將這些轉換取代為將要更新的所有資料列儲存到臨時資料表的目的地元件。 然後，您可以同時加入針對所有資料列執行以單一資料列集為基礎之 Transact-SQL UPDATE 的「執行 SQL」工作。  
   
- 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需取得此方式的討論與範例，請參閱[專案 REAL：Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
+ 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需此方式的討論和範例，請參閱＜ [專案 REAL：Business Intelligence ETL 設計練習](https://www.microsoft.com/download/details.aspx?id=14582)＞(英文) 白皮書中的「唯一的維度狀況」一節。  
   
 ### <a name="destinations"></a>目的地  
  為達成較佳的目的地效能，請考慮使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地並測試目的地的效能。  
@@ -166,9 +166,9 @@ ms.locfileid: "62828044"
 ## <a name="related-content"></a>相關內容  
  **文件和部落格文章**  
   
--   technet.microsoft.com 上的技術文章 [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899) (英文)  
+-   technet.microsoft.com 上的技術文件： [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com 上的技術文章 [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900) (英文)  
+-   technet.microsoft.com 上的技術文件： [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
 -   sqlcat.com 上的技術文件： [將同步轉換分割為多個工作來增加管線的輸送量](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   

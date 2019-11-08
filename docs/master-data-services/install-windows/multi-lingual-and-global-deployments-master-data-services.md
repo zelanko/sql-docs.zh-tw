@@ -1,5 +1,5 @@
 ---
-title: 多語言及全域部署 (Master Data Services) | Microsoft Docs
+title: 多語言和全域部署
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30635148aa0110a4110398ecc8334e56a3634ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79a18eca1f222a4b128847a9367c46cfbe4cf891
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944920"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728105"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>多語言及全域部署 (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "67944920"
 ## <a name="how-languages-are-used"></a>如何使用語言  
  下表描述 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 元件和工具的語言支援。  
   
-|元件或工具|描述|  
+|元件或工具|說明|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安裝程式|當您希望 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式所提供及支援的語言與安裝程式語言不同時，請選取英文安裝程式。 如需詳細資訊，請參閱底下的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 描述。|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|安裝程式語言會決定 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 語言。 例如，如果您選擇德文當做安裝程式語言，該電腦上就會提供德文的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。|  

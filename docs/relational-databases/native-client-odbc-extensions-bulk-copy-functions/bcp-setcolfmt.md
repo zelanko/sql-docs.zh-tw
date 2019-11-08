@@ -18,22 +18,21 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9615e455bee033af9f071bbb4a13ef3d98c81bf4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7e2942f60e1bb41edfcd2d474619867d35806660
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707516"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782333"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **Bcp_setcolfmt**函數會取代[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 在指定資料行定序時，必須使用**bcp_setcolfmt**函數。 [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)可以用來指定一個以上的資料行格式。  
+  **Bcp_setcolfmt**函式會取代[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 在指定資料行定序時，必須使用**bcp_setcolfmt**函數。 [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)可以用來指定一個以上的資料行格式。  
   
  此函數會提供彈性的方法來指定大量複製作業中的資料行格式。 它會用來設定個別的資料行格式屬性。 **Bcp_setcolfmt**的每個呼叫都會設定一個資料行格式屬性。  
   
- **Bcp_setcolfmt**函數會指定使用者檔案中資料的來源或目標格式。 當做來源格式使用時， **bcp_setcolfmt**會將當做大量複製中資料來源的現有資料檔案格式指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料表。 當做目標格式使用時，會使用以**bcp_setcolfmt**指定的資料行格式建立資料檔案。  
+ **Bcp_setcolfmt**函數會指定使用者檔案中資料的來源或目標格式。 當做來源格式使用時， **bcp_setcolfmt**會將用來做為大量複製中資料來源的現有資料檔格式指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料表。 當做目標格式使用時，會使用以**bcp_setcolfmt**指定的資料行格式建立資料檔案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,9 +56,9 @@ RETCODE bcp_setcolfmt (
  *property*  
  這是其中一個屬性常數。 屬性常數會在這個資料表中定義。  
   
-|屬性|值|描述|  
+|屬性|Value|說明|  
 |--------------|-----------|-----------------|  
-|BCP_FMT_TYPE|BYTE|這是使用者檔案中，此資料行的資料類型。 如果與資料庫資料表中，對應資料行的資料類型不同，大量複製就會轉換資料 (如果可能的話)。<br /><br /> BCP_FMT_TYPE 參數是透過 sqlncli.h 中的 SQL Server 資料類型 Token，而非透過 ODBC C 資料類型列舉值列舉。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。<br /><br /> 若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。<br /><br /> 若要從 SQL Server 大量複製到檔案，當 BCP_FMT_TYPE 為 SQLDECIMAL 或 SQLNUMERIC 時，如果來源資料行不是**小數**或數值，則會使用預設的有效位數和小**數位**數。 否則，如果來源資料行是**小數**或**數值**，則會使用來源資料行的有效位數和小數位數。|  
+|BCP_FMT_TYPE|BYTE|這是使用者檔案中，此資料行的資料類型。 如果與資料庫資料表中，對應資料行的資料類型不同，大量複製就會轉換資料 (如果可能的話)。<br /><br /> BCP_FMT_TYPE 參數是透過 sqlncli.h 中的 SQL Server 資料類型 Token，而非透過 ODBC C 資料類型列舉值列舉。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。<br /><br /> 若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。<br /><br /> 若要從 SQL Server 大量複製到檔案中，當 BCP_FMT_TYPE 為 SQLDECIMAL 或 SQLNUMERIC 時，如果來源資料行不是**十進位**或**數值**，則會使用預設的有效位數和小數位數。 否則，如果來源資料行是**小數**或**數值**，則會使用來源資料行的有效位數和小數位數。|  
 |BCP_FMT_INDICATOR_LEN|INT|這是指標 (前置詞) 的位元組長度。<br /><br /> 這是資料行資料內，長度/null 指標的長度 (以位元組為單位)。 有效的指標長度值為 0 (不使用指標時)、1、2 或 4。<br /><br /> 若要指定預設大量複製指標使用率，將此參數設定為 SQL_VARLEN_DATA。<br /><br /> 這些指標會出現在任何資料正前方的記憶體中，以及所套用之資料正前方的資料檔案中。<br /><br /> 如果使用多種指定資料檔案資料行長度的方式 (例如指標和最大資料行長度，或指標和結束字元順序)，大量複製會選擇導致複製最少量資料的方式。<br /><br /> 大量複製在不透過使用者操作來調整資料格式時所產生的資料檔案，會在資料行資料長度可以改變，或資料行可以當做值接受 NULL 時包含指標。|  
 |BCP_FMT_DATA_LEN|DBINT|這是資料的位元組長度 (資料行長度)<br /><br /> 這是使用者檔案中此資料行之資料的最大長度 (以位元組為單位)，不包括任何長度指標或結束字元的長度。<br /><br /> 將 BCP_FMT_DATA_LEN 設定為 BCP_FMT_DATA 表示資料檔案資料行中的所有值都會 (或應該) 設定為 NULL。<br /><br /> 將 BCP_FMT_DATA_LEN 設定為 SQL_VARLEN_DATA 表示系統應該決定每個資料行中的資料長度。 對於某些資料行，這可能表示長度/null 指標會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複本之資料前產生，或者表示該指標應該會在複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料中出現。<br /><br /> 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元和二進位資料類型，BCP_FMT_DATA_LEN 可能是 SQL_VARLEN_DATA、SQL_NULL_DATA、0 或某個正值。 如果 BCP_FMT_DATA_LEN 為 SQL_VARLEN_DATA，系統會使用長度指標 (如果存在) 或結束字元順序來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果 BCP_FMT_DATA_LEN 為 SQL_VARLEN_DATA，資料類型為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元或二進位類型，而且長度指標和結束字元順序都未指定，系統會傳回錯誤訊息。<br /><br /> 如果 BCP_FMT_DATA_LEN 為 0 或正值，則系統會使用 BCP_FMT_DATA_LEN 當做資料長度的最大值。 不過，如果除了正數的 BCP_FMT_DATA_LEN 之外，也提供長度指標或結束字元順序，系統會使用導致複製最少量資料的方法來決定資料長度。<br /><br /> BCP_FMT_DATA_LEN 值表示資料的位元組計數。 如果字元資料是以 Unicode 寬字元表示，則 BCP_FMT_DATA_LEN 正參數值表示字元數乘以每個字元的大小 (以位元組為單位)。|  
 |BCP_FMT_TERMINATOR|LPCBYTE|用於此資料行之結束字元順序的指標 (ANSI 或 Unicode 中較適合者)。 此參數主要用於字元資料類型，因為其他所有類型都屬固定長度；如果是二進位資料，則需要一個長度指標，才能正確記錄出現的位元組數目。<br /><br /> 為避免結束已擷取的資料，或要指出使用者檔案中的資料未結束，將此參數設定為 NULL。<br /><br /> 如果使用多種指定使用者檔案資料行長度的方式 (例如結束字元和長度指標，或結束字元和資料行長度最大值)，大量複製會選擇導致複製最少量資料的方式。<br /><br /> 大量複製 API 會視需要執行 Unicode 到 MBCS 的字元轉換。 請務必確認結束字元位元組字串與位元組字串長度的設定正確。|  
@@ -76,7 +75,7 @@ RETCODE bcp_setcolfmt (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 此函式會取代**bcp_colfmt**函數。 **Bcp_colfmt**的所有功能都是在**bcp_setcolfmt**函式中提供。 此外，也提供資料行定序的支援。 建議使用以下提供的順序設定下列資料行格式屬性：  
+ 此函式會取代**bcp_colfmt**函數。 **Bcp_setcolfmt**函式中提供了**bcp_colfmt**的所有功能。 此外，也提供資料行定序的支援。 建議使用以下提供的順序設定下列資料行格式屬性：  
   
  BCP_FMT_SERVER_COL  
   
@@ -98,11 +97,11 @@ RETCODE bcp_setcolfmt (
   
 -   選擇性結束位元組順序的長度。  
   
- **Bcp_setcolfmt**的每個呼叫都會指定一個使用者檔案資料行的格式。 例如，若要在五個數據行的使用者資料檔案中變更三個數據行的預設設定，請先呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **（5）** ，然後呼叫**bcp_setcolfmt**五次，其中三個呼叫會設定您的自訂格式。 針對剩餘的兩個呼叫，請將 BCP_FMT_TYPE 設定為0，並分別將 BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN 和*cbValue*設定為0、SQL_VARLEN_DATA 和0。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
+ **Bcp_setcolfmt**的每個呼叫都會指定一個使用者檔案資料行的格式。 例如，若要在五個數據行的使用者資料檔案中變更三個數據行的預設設定，請先呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **（5）** ，然後呼叫**bcp_setcolfmt**五次，其中三個呼叫會設定您的自訂格式。 針對剩餘的兩個呼叫，將 BCP_FMT_TYPE 設定為0，並分別將 BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN 和*cbValue*設定為0、SQL_VARLEN_DATA 和0。 此程序會複製全部五個資料行，其中三個為您自訂的格式，而另兩個為預設格式。  
   
- 呼叫**bcp_setcolfmt**之前，必須先呼叫**bcp_columns**函數。  
+ 呼叫**bcp_setcolfmt**之前，必須先呼叫**bcp_columns**函式。  
   
- 您必須針對使用者檔案中每個資料行的每個屬性呼叫**bcp_setcolfmt**一次。  
+ 您必須針對使用者檔案中每個資料行的每個屬性呼叫一次**bcp_setcolfmt** 。  
   
  您不需要將使用者檔案中的所有資料複製到 SQL Server 資料表。 若要略過資料行，請指定資料行的資料格式，並將 BCP_FMT_SERVER_COL 參數設定為 0。 如果您要略過資料行，則必須指定其類型。  
   

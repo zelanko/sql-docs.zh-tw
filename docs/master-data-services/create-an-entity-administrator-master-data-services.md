@@ -1,5 +1,5 @@
 ---
-title: 建立實體管理員 (Master Data Services) | Microsoft Docs
+title: 建立實體管理員
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34b96a107f00e93ed2dfd0f09451aac4f1f58354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025074"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729541"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>建立實體管理員 (Master Data Services)
 
@@ -29,23 +29,23 @@ ms.locfileid: "68025074"
 ## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
--   您必須擁有存取 [使用者及群組的權限]  功能區域的權限。  
+-   您必須擁有存取 [使用者及群組的權限] 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ## <a name="to-create-an-entity-administrator"></a>建立實體管理員  
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[使用者及群組的權限]** 。  
   
-2.  選取您要編輯之使用者或群組的資料列，然後按一下 [編輯選取的使用者]  。  
+2.  選取您要編輯之使用者或群組的資料列，然後按一下 [編輯選取的使用者]。  
   
-3.  按一下 [模型]  索引標籤，選擇性地從 [模型]  清單中選取模型，然後按一下 [編輯]  。  
+3.  按一下 [模型] 索引標籤，選擇性地從 [模型] 清單中選取模型，然後按一下 [編輯]。  
   
-4.  按一下您要授與權限的實體，然後按一下功能表上的 [管理]  。  
+4.  按一下您要授與權限的實體，然後按一下功能表上的 [管理]。  
   
 5.  針對您希望群組或使用者成為其管理員的每個實體，完成步驟 4。  
   
-6.  按一下 [儲存]  。  
+6.  按一下 **[儲存]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b9c8322507c78458110f47f579ec333c3e5e7a7
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: b998a11acd71175e8868b669d9491822f60d2b33
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142841"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632756"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,9 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 會傳回容錯移轉模式的整數值，而且是**輸出**參數。 *failover_mode_id*是**Tinyint** ，預設值是**0**。 它會傳回**0**以進行立即更新， **1**則會傳回佇列更新。  
   
- [ **\@failover_mode =** ] **'***failover_mode***' 輸出**  
- 傳回在訂閱者端修改資料的模式。 *failover_mode*是**Nvarchar （10）** ，預設值是 Null。 是**輸出**參數。  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` 會傳回在訂閱者端進行資料修改的模式。 *failover_mode*是**Nvarchar （10）** ，預設值是 Null。 是**輸出**參數。  
   
-|[值]|[描述]|  
+|Value|說明|  
 |-----------|-----------------|  
 |**最近**|立即更新：利用兩段式認可通訊協定 (2PC)，將訂閱者端的更新立即傳播到發行者。|  
 |**佇列**|佇列更新：將訂閱者端的更新儲存在佇列中。|  
@@ -60,13 +59,13 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  **sp_helpreplfailovermode**用於快照式複寫或異動複寫中，其訂用帳戶已啟用以佇列更新作為容錯移轉，以便在發生失敗時進行立即更新。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_helpreplfailovermode**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_setreplfailovermode &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: ProtocolDisplayName 屬性 （ClientNetworkProtocol 類別） |Microsoft Docs
-ms.custom: ''
+title: ProtocolDisplayName 屬性（ClientNetworkProtocol）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ffea0e2043e600eea2995b3cd047d97a30a8d7b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6941d2b6ad7417a6193318ab94d90a37d4a77ea
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223368"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660262"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>ProtocolDisplayName 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  取得指定的用戶端網路通訊協定的顯示名稱[Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)。  
+  取得[設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)所指定之用戶端網路通訊協定的顯示名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +37,7 @@ object.ProtocolDisplayName [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件，表示所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ 代表 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端所使用之網路通訊協定的[ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定用戶端網路通訊協定之顯示名稱的字串值。  

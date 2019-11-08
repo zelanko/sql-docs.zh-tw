@@ -1,5 +1,5 @@
 ---
-title: 商務規則延伸模組 (Master Data Services) | Microsoft Docs
+title: 商務規則延伸模組
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047407"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728683"
 ---
 # <a name="business-rules-extension-master-data-services"></a>商務規則延伸模組 (Master Data Services)
 
@@ -65,53 +65,53 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**結構描述**|**Permissions**|  
+|**結構描述**|**權限**|  
 |mdm|SELECT|  
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取系統管理功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
 -   使用者定義指令碼已加入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中。  
   
 ## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>建立商務規則，採用使用者定義指令碼作為條件或動作  
   
-1.  在主資料管理員中，按一下 [系統管理]  。  
+1.  在主資料管理員中，按一下 [系統管理]。  
   
-2.  從功能表列，指向 [管理]  ，然後按一下 [商務規則]  。  
+2.  從功能表列，指向 [管理] ，然後按一下 [商務規則]。  
   
-3.  在 [商務規則]  頁面上，從 [模型]  下拉式清單選取模型。  
+3.  在 [商務規則] 頁面上，從 [模型] 下拉式清單選取模型。  
   
-4.  從 [實體]  下拉式清單中，選取實體。  
+4.  從 [實體] 下拉式清單中，選取實體。  
   
-5.  從 [成員類型]  下拉式清單中，選取要套用商務規則的成員類型。  
+5.  從 [成員類型] 下拉式清單中，選取要套用商務規則的成員類型。  
   
 6.  按一下 **[加入]** 。  
   
 7.  依下列方式來建立使用者定義指令碼作為條件。  
   
-    1.  在 [如果]  區塊下，按一下 [加入]  按鈕。 面板隨即顯示。  
+    1.  在 [如果] 區塊下，按一下 [加入] 按鈕。 面板隨即出現。  
   
-    2.  從 [運算子]  下拉式清單中，選取 [使用者定義的指令碼]  下的使用者定義函數。  
+    2.  從 [運算子] 下拉式清單中，選取 [使用者定義的指令碼] 下的使用者定義函數。  
   
     3.  會顯示使用者定義函數的所有參數。  
   
     4.  將值指派給每個參數  
   
-    5.  按一下 [儲存]  。  
+    5.  按一下 **[儲存]** 。  
   
 8.  依下列方式來採用使用者定義指令碼作為動作。  
   
-    1.  在 [然後]  區塊下，按一下 [加入]  按鈕。 面板隨即顯示。  
+    1.  在 [然後] 區塊下，按一下 [加入] 按鈕。 面板隨即出現。  
   
-    2.  從 [運算子]  下拉式清單中，選取 [使用者定義的指令碼]  下的使用者定義函數。  
+    2.  從 [運算子] 下拉式清單中，選取 [使用者定義的指令碼] 下的使用者定義函數。  
   
-    3.  按一下 [儲存]  。  
+    3.  按一下 **[儲存]** 。  
   
 ## <a name="see-also"></a>另請參閱  
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: SecurityCertificate 類別 |Microsoft Docs
+title: SecurityCertificate 類別
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 202e91d9fee69ddc74edbd352a7d018151f70a14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6bad2dc55c611d45b728de4a23cf60c4b151cc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058558"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660453"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [SecurityCertificate 類別](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)代表安全性憑證。 憑證是數位簽署的聲明，以便將公開金鑰的值繫結的執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，這個表格包含對應的私密金鑰。 憑證是從憑證授權單位發出。  
+  [SecurityCertificate 類別](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)代表安全性憑證。 憑證是數位簽署的語句，它會將公開金鑰的值系結至 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的實例，而此實例會保存對應的私密金鑰。 憑證是從憑證授權單位發出。  
   
- 具有[SecurityCertificate 類別](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)，您可以執行下列工作：  
+ 使用[SecurityCertificate 類別](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)，您可以執行下列工作：  
   
 -   檢視安全性憑證的屬性。  
   

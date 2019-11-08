@@ -1,6 +1,6 @@
 ---
-title: IpAddresses 屬性 （ServerNetworkProtocol 類別） |Microsoft Docs
-ms.custom: ''
+title: IpAddresses 屬性（ServerNetworkProtocol）
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f1962af350c7349b58c2a617f23017a70309d7ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad88dbca2f3e71c6a68398e0f57748b8b517414b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933736"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660353"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ object.IpAddresses [= value]
   
 ## <a name="parts"></a>組件  
  *object*  
- A **ServerNetworkProtocol**物件，表示執行個體所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 代表 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例所使用之網路通訊協定的**ServerNetworkProtocol**物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 陣列[ServerNetworkProtocolIPAdress 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)代表伺服器網路通訊協定支援的 IP 位址的物件。  
+ [ServerNetworkProtocolIPAdress 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)物件的陣列，代表伺服器網路通訊協定所支援的 IP 位址。  
   
 ## <a name="remarks"></a>備註  
   

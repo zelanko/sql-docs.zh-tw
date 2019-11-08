@@ -1,5 +1,5 @@
 ---
-title: 自訂索引 (Master Data Services) | Microsoft Docs
+title: 自訂索引
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88b94a0c476921d501bd4f456fa2d7e9077dee36
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 52ca3533dfb8c53e4bbf1cd9f431a290221f2d5e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810952"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729492"
 ---
 # <a name="custom-index-master-data-services"></a>自訂索引 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  自訂索引會在實體中的一個屬性 (單一索引) 或屬性清單 (複合索引) 上建立非叢集索引。 索引一般會改善查詢程序的效能。 如需 SQL Server 索引的詳細資訊，請參閱 [索引](../relational-databases/indexes/indexes.md)。  
+  自訂索引會在實體中的一個屬性（單一索引）或屬性清單（複合索引）上建立非叢集索引。 索引一般會改善查詢程序的效能。 如需 SQL Server 索引的詳細資訊，請參閱 [索引](../relational-databases/indexes/indexes.md)。  
   
 ## <a name="type-of-indexes"></a>索引類型  
  您可以針對每個實體建立下列類型的多個自訂索引。  
