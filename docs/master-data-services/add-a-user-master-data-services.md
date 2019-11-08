@@ -1,5 +1,5 @@
 ---
-title: 新增使用者 (Master Data Services) | Microsoft Docs
+title: 加入使用者
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc478b6325e89801837828dbd90af1a7b6950665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047938"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729815"
 ---
 # <a name="add-a-user-master-data-services"></a>加入使用者 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68047938"
 
   在 **的** [使用者] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 清單中加入使用者，開始指派 Web 應用程式權限的程序。 在清單中的使用者存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]之前，您必須提供使用者一個或多個功能區域和模型物件的權限。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -41,7 +41,7 @@ ms.locfileid: "68047938"
   
 4.  (選擇性) 按一下 **[檢查名稱]** 。  
   
-5.  按一下 [確定]  。  
+5.  按一下 **[確定]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
   

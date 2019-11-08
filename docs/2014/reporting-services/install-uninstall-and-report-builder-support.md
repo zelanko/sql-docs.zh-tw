@@ -1,5 +1,5 @@
 ---
-title: 安裝、 解除安裝與報表產生器支援 |Microsoft Docs
+title: 安裝、卸載和報表產生器支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d35f6c7d77a43fe35ba78a88824309ffd72a5a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d3f7e5829c19b79ca19783d36885f6bfd3761f7
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454604"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637880"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>安裝、解除安裝和報表產生器支援
   報表產生器是一項報表撰寫工具，可用來建立、更新和共用報表、報表組件和共用資料集。 報表產生器有提供兩個版本：單機版和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]。 單機版是由您或系統管理員安裝在電腦上。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本是隨 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 自動安裝，而且從報表管理員或與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]整合的 SharePoint 網站下載到電腦。  
@@ -27,10 +27,10 @@ ms.locfileid: "66454604"
 > [!NOTE]  
 >  報表產生器無法安裝在 Itanium 型電腦上。 這同樣適用於 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 和單機版本的報表產生器。  
   
- 系統管理員通常會安裝及設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、授與使用 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本報表產生器的權限，以及管理儲存到報表伺服器之報表、報表組件和共用資料集的資料夾和權限。 如需詳細資訊[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]管理，請參閱 < [Reporting Services 報表伺服器&#40;原生模式&#41;](report-server/reporting-services-report-server-native-mode.md)中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][線上叢書 》](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 上。  
+ 系統管理員通常會安裝及設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、授與使用 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本報表產生器的權限，以及管理儲存到報表伺服器之報表、報表組件和共用資料集的資料夾和權限。 如需 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 系統管理的詳細資訊，請參閱 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][線上叢書](https://go.microsoft.com/fwlink/?LinkId=154888)中的[Reporting Services 報表伺服器&#40;原生模式&#41; ](report-server/reporting-services-report-server-native-mode.md) 。  
   
-##  <a name="Installing"></a> 安裝報表產生器  
- 報表產生器有單機版和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本。 您或系統管理員可在電腦上下載及安裝單機版本，而 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本則會隨著 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]一起安裝。 您也可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=186083)下載報表產生器。  
+##  <a name="Installing"></a>安裝報表產生器  
+ 報表產生器有單機版和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本。 您或系統管理員可在電腦上下載及安裝單機版本，而 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本則會隨著 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]一起安裝。 您也可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=53613)下載報表產生器。  
   
 > [!NOTE]  
 >  報表產生器無法安裝在 Itanium 64 型電腦上。 這同樣適用於 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 和單機版本的報表產生器。  
@@ -40,32 +40,32 @@ ms.locfileid: "66454604"
 ### <a name="system-requirements"></a>系統需求  
  報表產生器會要求本機電腦上必須已經安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 3.5 版。 當您安裝報表產生器時，如果 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 沒有安裝在本機電腦上，系統就會提示您進行安裝，然後才能繼續和完成安裝。  
   
- .NET Framework 3.5 是免費的。 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=110520)下載 .NET Framework 3.5。  
+ .NET Framework 3.5 是免費的。 您可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=21)下載 .NET Framework 3.5。  
   
  您可以將報表產生器安裝在任何支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] 3.5 的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Windows 作業系統上。 例如，您可以將報表產生器安裝在 Windows Vista 或 Windows 7 上。  
   
  建議執行報表產生器的電腦應該具有 512 MB 的 RAM。 不過，根據您所執行之報表的複雜度，可能需要更少或更多 RAM。  
   
 ### <a name="installing-the-stand-alone-version-of-report-builder-directly-on-your-computer"></a>直接在電腦上安裝單機版本的報表產生器  
- 您可以從下載網址 ( [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=186083)) 安裝報表產生器，或是由系統管理員將 ReportBuilder3.msi 檔 (報表產生器的 Windows 安裝程式套件) 放在可下載的共用上。  
+ 您可以從下載網址 ( [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=53613)) 安裝報表產生器，或是由系統管理員將 ReportBuilder3.msi 檔 (報表產生器的 Windows 安裝程式套件) 放在可下載的共用上。  
   
  您也可以執行命令列安裝並加入一些選項，例如進行無訊息安裝和寫入安裝的記錄檔。 執行此 .msi 檔之 Windows Installer 的文件集會提供可用選項的相關資訊。  
   
- 如需詳細資訊，請參閱 <<c0> [ 安裝獨立版本的報表產生器&#40;報表產生器&#41;](install-windows/install-report-builder.md)。</c0>  
+ 如需詳細資訊，請參閱[安裝獨立版本的&#40;報表產生器報表產生器&#41;](install-windows/install-report-builder.md)。  
   
  系統管理員也可以使用 Microsoft Systems Manager Server (SMS) 等軟體，將此程式發送至您的電腦。 若要了解如何使用特定軟體來安裝報表產生器，請參閱軟體的文件集。   
   
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>在電腦上安裝報表產生器的 ClickOnce 版本  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本的報表產生器會隨著 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]一起安裝。 這會由 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的原生和 SharePoint 整合安裝進行安裝。  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 是一種 Microsoft 技術，用於部署 Windows 應用程式。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 可讓使用者按一下網頁上的連結，即可安裝及執行 Windows 應用程式，例如報表產生器。 如需有關部署[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]應用程式、 套用[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]應用程式的安全性或執行[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)][網際網路] 區域中的應用程式，請參閱 [ClickOnce 部署的 Windows Forms 應用程式] 中的 < 安全性Windows Forms 概觀 > 或 「 受信任的應用程式部署概觀 > 文章[!INCLUDE[msCoName](../includes/msconame-md.md)]開發人員網路網站，網址[ https://developer.microsoft.com/ ](https://developer.microsoft.com/)。  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 是一種 Microsoft 技術，用於部署 Windows 應用程式。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 可讓使用者按一下網頁上的連結，即可安裝及執行 Windows 應用程式，例如報表產生器。 如需有關部署 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 應用程式、套用 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 的應用程式安全性，或在網際網路區域中執行 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 應用程式的詳細資訊，請參閱 Windows Forms 中的安全性總覽中的「Windows Forms 應用程式的 ClickOnce 部署」。「或「信任的應用程式部署總覽」文章，位於[https://developer.microsoft.com/](https://developer.microsoft.com/)的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network 網站。  
   
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本的報表產生器位於報表伺服器上，當您按一下報表管理員中的 **[報表產生器]** 按鈕，或是在 SharePoint 文件庫中按一下 **[新增文件]** 功能表上的 **[報表產生器報表]** 選項時，就會安裝在您的電腦上。  
   
 > [!NOTE]  
 >  如果 **[新增文件]** 功能表未列出 **[報表產生器報表]** 、 **[報表產生器模型]** 和 **[報表資料來源]** 選項，則必須將其內容類型加入至 SharePoint 文件庫。   
   
- 您可以從報表管理員或 SharePoint 文件庫開啟報表產生器。 如需有關如何開啟報表產生器的詳細資訊，請參閱 <<c0> [ 啟動報表產生器&#40;報表產生器&#41;](report-builder/start-report-builder.md)。</c0>  
+ 您可以從報表管理員或 SharePoint 文件庫開啟報表產生器。 如需開啟報表產生器的詳細資訊，請參閱[ &#40;開始&#41;報表產生器報表產生器](report-builder/start-report-builder.md)。  
   
 ### <a name="report-builder-languages"></a>報表產生器語言  
  除了英文版以外，報表產生器還提供了 21 種語言版本。 當您下載報表產生器的單機版時，請選取想要安裝的語言版本。 您必須針對想要使用的每種語言版本，重複進行下載步驟。  
@@ -100,13 +100,13 @@ ms.locfileid: "66454604"
 |3082|西班牙文 (西班牙)|es-ES|  
   
   
-##  <a name="Uninstalling"></a> 解除安裝報表產生器  
+##  <a name="Uninstalling"></a>卸載報表產生器  
  您可以從控制台或命令列解除安裝單機版本的報表產生器。 這只適用於單機版本的報表產生器。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本的報表產生器不能個別解除安裝， 它必須隨 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]一起安裝和解除安裝。  
   
- 如需詳細資訊，請參閱 <<c0> [ 解除安裝獨立版本的報表產生器&#40;報表產生器&#41;](install-windows/uninstall-report-builder.md)。</c0>  
+ 如需詳細資訊，請參閱[將獨立版本的&#40;報表產生器報表產生器&#41;卸載](install-windows/uninstall-report-builder.md)。  
   
   
-##  <a name="Supporting"></a> 支援報表產生器  
+##  <a name="Supporting"></a>支援報表產生器  
  為支援報表作者，系統管理員必須負責管理報表伺服器上的資料夾、報表以及報表相關項目、授與報表伺服器上資源的權限，以及設定報表伺服器以供存取。  
   
 ### <a name="folders-reports-and-report-related-items"></a>資料夾、報表和報表相關項目  
@@ -126,7 +126,7 @@ ms.locfileid: "66454604"
   
 -   如背景影像和標誌等影像，可用於多份報表並儲存在報表外部以便維護。  
   
- 如需詳細資訊，請參閱 <<c0> [ 報表伺服器內容管理&#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][線上叢書 》](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 上。</c0>  
+ 如需詳細資訊，請參閱 msdn.microsoft.com 上《[線上叢書》](https://go.microsoft.com/fwlink/?LinkId=154888) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的[ &#40;報表伺服器內容管理 SSRS 原生模式&#41; ](report-server/report-server-content-management-ssrs-native-mode.md) 。  
   
 ### <a name="permissions"></a>Permissions  
  系統管理員會授與報表伺服器的權限。 報表產生器使用者需要報表伺服器的權限，才能存取報表伺服器的內容和功能。 例如，您可能想要使用儲存在報表伺服器上的報表組件、更新報表並再儲存到報表伺服器，以及在報表管理員中執行報表。 授與權限的高低會視您的需求和執行的工作而定。 例如，為只需開啟共用報表的使用者授與較低的權限 (相較於需要修改共用報表的使用者)。  
@@ -152,10 +152,10 @@ ms.locfileid: "66454604"
   
  不過，透過額外的設定，您可以將報表伺服器提供給報表產生器的使用者使用。 您可以將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL 加入至信任的網站。 根據預設，Windows Vista、Windows Server 2008 和 Windows 7 上的 Internet Explorer 7.0 或更新版本會在「受保護模式」下執行。 「受保護模式」功能會封鎖瀏覽器要求，使其無法到達相同電腦上執行的高層級處理序。 您可以為報表伺服器應用程式停用受保護模式，只要將這些應用程式加入為信任的網站即可。 您必須具有管理員權限才能進行此變更。  
   
- 如需設定的詳細資訊[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請參閱 < [Reporting Services 組態管理員&#40;del&#41; ](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)msdn.microsoft.com 上。  
+ 如需設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的詳細資訊，請參閱 msdn.microsoft.com 上[Reporting Services 檔](https://go.microsoft.com/fwlink/?linkid=121312)中的[Reporting Services 組態管理員&#40; &#41; del](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) 。  
   
   
-##  <a name="SampleDatabases"></a> SQL Server 範例資料庫  
+##  <a name="SampleDatabases"></a>SQL Server 範例資料庫  
  Adventure Works 系列範例資料庫提供了一些資料，可讓您用來了解報表撰寫和撰寫範例報表。  
   
  資料庫有下列版本：  
@@ -174,11 +174,11 @@ ms.locfileid: "66454604"
 ##  <a name="HowTo"></a> 如何主題  
  本節列出如何安裝和解除安裝報表產生器的程序。  
   
- [安裝單機版本報表產生器的&#40;報表產生器&#41;](install-windows/install-report-builder.md)  
+ [安裝獨立版本的報表產生器&#40;報表產生器&#41;](install-windows/install-report-builder.md)  
   
- [解除安裝單機版本報表產生器的&#40;報表產生器&#41;](install-windows/uninstall-report-builder.md)  
+ [卸載報表產生器&#40;的獨立版本報表產生器&#41;](install-windows/uninstall-report-builder.md)  
   
- [啟動報表產生器&#40;報表產生器&#41;](report-builder/start-report-builder.md)  
+ [開始報表產生器&#40;報表產生器&#41;](report-builder/start-report-builder.md)  
   
   
 ## <a name="see-also"></a>另請參閱  

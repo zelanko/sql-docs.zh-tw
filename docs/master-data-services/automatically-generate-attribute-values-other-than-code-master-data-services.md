@@ -1,6 +1,7 @@
 ---
-title: 自動產生 Code 以外的屬性值 (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: 自動產生屬性值
+titleSuffix: Master Data Services
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 29464dcb18f5b598b83217a85eb80ad2a38d3c7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc4ee9fd4eead46df29538a85013949402b1920e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047565"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728727"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自動產生 Code 以外的屬性值 (Master Data Services)
 
@@ -23,12 +24,12 @@ ms.locfileid: "68047565"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，當您希望每次套用商務規則時，自動將整數指派為值，請自動為實體的屬性自動產生值。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 -   數值屬性必須存在。 如需詳細資訊，請參閱[建立數值屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-numeric-attribute-master-data-services.md)。  
   
@@ -38,35 +39,35 @@ ms.locfileid: "68047565"
   
 2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
   
-3.  在 [商務規則維護]  頁面上，選取 [模型]  清單中的模型。  
+3.  在 [商務規則維護] 頁面上，選取 [模型] 清單中的模型。  
   
-4.  從 [實體]  清單中選取實體。  
+4.  從 [實體] 清單中選取實體。  
   
-5.  從 [成員類型]  清單中，選取要套用商務規則的成員類型。  
+5.  從 [成員類型] 清單中，選取要套用商務規則的成員類型。  
   
-6.  從 [屬性]  清單中，保留預設值 [全部]  。  
+6.  從 [屬性] 清單中，保留預設值 [全部]。  
   
-7.  按一下 [加入商務規則]  。  
+7.  按一下 [加入商務規則]。  
   
-8.  按一下 [編輯選取的商務規則]  。  
+8.  按一下 [編輯選取的商務規則]。  
   
-9. 在 [元件]  窗格中，展開 [動作]  節點。  
+9. 在 [元件] 窗格中，展開 [動作] 節點。  
   
-10. 在 [預設] 節點中，按一下 [預設為產生的值]  ，然後將其拖曳至 [THEN]  窗格的 [動作]  標籤。  
+10. 在 [預設] 節點中，按一下 [預設為產生的值]，然後將其拖曳至 [THEN] 窗格的 [動作] 標籤。  
   
-11. 在 [屬性]  窗格中，按一下擁有您要產生之值的屬性，並將其拖曳至 [編輯動作]  窗格的 [選取屬性]  標籤。  
+11. 在 [屬性] 窗格中，按一下擁有您要產生之值的屬性，並將其拖曳至 [編輯動作] 窗格的 [選取屬性] 標籤。  
   
-12. 在 [開始]  和 [遞增量]  方塊中輸入值。 如果成員已存在，則將根據最大的現有值設定值。 例如，如果最大的現有值為 299，而且您將 [遞增量]  設定為 **1**，則下一個成員的值將設為 300。  
+12. 在 [開始] 和 [遞增量] 方塊中輸入值。 如果成員已存在，則將根據最大的現有值設定值。 例如，如果最大的現有值為 299，而且您將 [遞增量] 設定為 **1**，則下一個成員的值將設為 300。  
   
-13. 在 [編輯動作]  窗格中，按一下 [儲存項目]  。  
+13. 在 [編輯動作] 窗格中，按一下 [儲存項目]。  
   
-14. 按一下 [上一步]  。  
+14. 按一下 [上一步]。  
   
-15. (選擇性) 在 [商務規則維護]  頁面上，針對包含商務規則的資料列，按兩下 [名稱]  、[描述]  或 [通知]  資料行中的資料格，以更新值。  
+15. (選擇性) 在 [商務規則維護] 頁面上，針對包含商務規則的資料列，按兩下 [名稱]、[描述] 或 [通知] 資料行中的資料格，以更新值。  
   
-16. 按一下 [發行商務規則]  。  
+16. 按一下 [發行商務規則]。  
   
-17. 在確認對話方塊中按一下 **[確定]** 。 規則狀態會變更為 [作用中]  。  
+17. 在確認對話方塊中按一下 **[確定]** 。 規則狀態會變更為 [作用中]。  
   
 ## <a name="next-steps"></a>後續步驟  
   

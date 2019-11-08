@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 58ed4735bf44e1afe62fdc3a8ed64385087c03df
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 425639d6e22491028f552bc97990267b2b33e799
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952468"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637817"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Analysis Services SharePoint 模式伺服器的硬體和軟體需求 (SQL Server 2014)
 
@@ -34,9 +34,9 @@ ms.locfileid: "71952468"
 ##  <a name="bkmk_sqllicense"></a>SQL Server 授權  
  如需有關 SQL Server 授權的詳細資訊，請參閱下列主題：  
   
--   [SQL Server 2014 授權資料表](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)（ https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) 。  
+-   [SQL Server 2014 授權資料表](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)（ https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf)。  
   
--   @no__t 0How 購買：SQL Server 授權模型支援 @ no__t-0 （ https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2) 。  
+-   [如何購買： SQL Server 授權模型支援](https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2)（ https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2)。  
   
 ##  <a name="bkmk_ssas__sharepoint_2013"></a>安裝在 SharePoint 2013 上的 Analysis Services  
  如果您將 SharePoint 模式的 Analysis Services 伺服器單獨安裝在某部伺服器上，則最低系統需求是以 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 而非 SharePoint Server 需求為基礎。  
@@ -54,7 +54,7 @@ ms.locfileid: "71952468"
 |---------------|-------------|-----------------|  
 |處理器|64 位元雙核心處理器，3 GHz。|16 個核心|  
 |RAM|8 GB 的 RAM|64 GB 的 RAM|  
-|儲存體|80 GB 的儲存空間|80 GB 或以上|  
+|儲存空間|80 GB 的儲存空間|80 GB 或以上|  
   
  如果您將 SharePoint 模式的 Analysis Services 伺服器安裝在 SharePoint 伺服器陣列的伺服器上，請透過下列連結檢閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SharePoint Server 的最低系統需求：  
   
@@ -70,12 +70,12 @@ ms.locfileid: "71952468"
 |元件|需求|  
 |---------------|-----------------|  
 |SharePoint 版本|SharePoint 2010 Enterprise，並且與 Excel Services、Secure Store Service，以及對 Windows Token Service 的宣告設定在相同的伺服陣列中。<br /><br /> SharePoint 必須使用 SharePoint 安裝程式中的伺服陣列選項安裝 (不支援 SharePoint 的獨立安裝選項)。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 會要求伺服器陣列基礎結構必須支援系統管理和資料存取。 獨立安裝不提供這些服務。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器安裝不支援在 Windows 7 或 Windows Vista 上執行的 Developer Edition。|  
-|Service Pack|需要 SharePoint Server 2010 Service Pack 1 (SP1)。<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 功能需要 SharePoint 2010 Service Pack 1。<br /><br /> 將舊版 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 需要 SharePoint 2010 的 2010 年 8 月份累計更新或更新版本。 2010 年 8 月份累計更新或更新版本應在安裝 SharePoint Service Pack 1 之後安裝。 @No__t-0 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的新安裝不需要累計更新。 如需詳細資訊，請參閱已[發行 SharePoint 的2010年8月累計更新](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)。|  
+|Service Pack|需要 SharePoint Server 2010 Service Pack 1 (SP1)。<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 功能需要 SharePoint 2010 Service Pack 1。<br /><br /> 將舊版 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 需要 SharePoint 2010 的 2010 年 8 月份累計更新或更新版本。 2010 年 8 月份累計更新或更新版本應在安裝 SharePoint Service Pack 1 之後安裝。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的新安裝不需要累計更新。 如需詳細資訊，請參閱已[發行 SharePoint 的2010年8月累計更新](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)。|  
 |SharePoint Web 應用程式|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2010 只支援設定成使用傳統模式驗證的 SharePoint Web 應用程式。 您如要將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 加入至現有的伺服器陣列，請務必將您計劃與之搭配使用的 Web 應用程式設定成使用傳統模式驗證。 如需如何檢查驗證模式的指示，請參閱將[PowerPivot 方案部署到 SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)中的「驗證 Web 應用程式是否使用傳統模式驗證」一節。|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器端資料重新整理所需的資料提供者|伺服器端資料重新整理會重複原本用來匯入資料的相同資料擷取步驟。 這表示，在用戶端工作站上用來匯入資料的資料提供者必須同樣存在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器上。<br /><br /> 此外，您必須有 ADO.NET Data Services 才能在 SharePoint 伺服器上使用資料摘要。 SharePoint 必要條件安裝程式不會自動安裝此軟體。 下列軟體必須手動安裝。<br /><br /> ADO.NET Data Services 3.5 SP1 執行階段元件，用來將 SharePoint 清單當做資料摘要匯出。 下載及安裝符合作業系統的版本：<br /><br /> 針對 Windows Server 2008 R2，請使用適用于[windows 7 和 Windows Server 2008 R2 的 .NET Framework 3.5 SP1 的 ADO.NET 資料服務更新（ https://go.microsoft.com/fwlink/?LinkId=182557)](https://go.microsoft.com/fwlink/?LinkId=182557)。 Windows Server 2008 R2 **SP1**已包含更新的提供者。<br /><br /> 針對 Windows Server 2008，請使用適用于[windows 2000、Windows server 2003、WINDOWS XP、Windows Vista 和 Windows server 2008 的 .NET Framework 3.5 SP1 ADO.NET 資料服務更新（ https://go.microsoft.com/fwlink/?LinkId=158125)](https://www.microsoft.com/download/details.aspx?id=22734)。|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器端資料重新整理所需的資料提供者|伺服器端資料重新整理會重複原本用來匯入資料的相同資料擷取步驟。 這表示，在用戶端工作站上用來匯入資料的資料提供者必須同樣存在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器上。<br /><br /> 此外，您必須有 ADO.NET Data Services 才能在 SharePoint 伺服器上使用資料摘要。 SharePoint 必要條件安裝程式不會自動安裝此軟體。 下列軟體必須手動安裝。<br /><br /> ADO.NET Data Services 3.5 SP1 執行階段元件，用來將 SharePoint 清單當做資料摘要匯出。 下載及安裝符合作業系統的版本：<br /><br /> 針對 Windows Server 2008 R2，請使用適用于[windows 7 和 Windows Server 2008 R2 的 .NET Framework 3.5 SP1 的 ADO.NET 資料服務更新](https://www.microsoft.com/download/details.aspx?id=2343)。 Windows Server 2008 R2 **SP1**已包含更新的提供者。<br /><br /> 針對 Windows Server 2008，請使用適用于[windows 2000、Windows server 2003、WINDOWS XP、Windows Vista 和 Windows server 2008 （ https://go.microsoft.com/fwlink/?LinkId=158125)的 .NET Framework 3.5 SP1 的 ADO.NET 資料服務更新](https://www.microsoft.com/download/details.aspx?id=22734)。|  
   
  [判斷硬體和軟體需求（SharePoint 2010）（ https://go.microsoft.com/fwlink/?LinkId=169734)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
 ## <a name="additional-information"></a>其他資訊  
 
-如需 SharePoint 變更的相關資訊，請參閱[從 sharepoint 2010 變更為 sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) （ https://technet.microsoft.com/library/ff607742(office.15).aspx) 。
+如需 SharePoint 變更的相關資訊，請參閱[從 sharepoint 2010 變更為 sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) （ https://technet.microsoft.com/library/ff607742(office.15).aspx)。
