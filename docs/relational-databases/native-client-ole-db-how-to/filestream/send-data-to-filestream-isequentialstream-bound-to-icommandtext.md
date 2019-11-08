@@ -11,23 +11,22 @@ ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29002e403b028f9f879782241588961a04007b65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 463044bbc0a4b930403ab5ba481bf54ffa05c8ee
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110107"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789919"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>將資料傳送到 FILESTREAM - 繫結至 ICommandText 的 ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   此範例會使用繫結至 ICommandText 參數的 ISequentialStream 介面，將介於 4MB 與 4GB 之間的資料傳送到 Filestream 資料行。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱 < [FILESTREAM 支援&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱[ &#40;OLE DB&#41;的 filestream 支援](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
- 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ 在您編譯和執行此範例之前，請先啟用 FILESTREAM 支援（[啟用和設定 filestream](../../../relational-databases/blob/enable-and-configure-filestream.md)）。  
   
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   

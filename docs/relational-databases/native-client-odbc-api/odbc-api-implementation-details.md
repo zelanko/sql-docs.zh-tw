@@ -1,5 +1,5 @@
 ---
-title: ODBC API Implementation Details&lt |Microsoft Docs
+title: ODBC API 執行詳細資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,22 +16,21 @@ ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 201068f313b7655c33dac31aa622a9be2965df29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb05bdc934fe8f42a4f0f6589d0f75d38ca621fc
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113665"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787865"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 實作詳細資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   開放式資料庫連接 (Open Database Connectivity，ODBC) 是應用程式用來在 ODBC 資料來源中存取資料的 Microsoft Win32 應用程式開發介面。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式參考不會列出所有 ODBC 函數呼叫。 只會討論與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式搭配使用時，具有驅動程式特有參數或行為的函數。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式符合 ODBC 3.51 規格。 如需 ODBC 3.51 的完整參考，下載 Microsoft Data Access Components SDK，從[Data Access 和 Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)，或檢視[ODBC 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45250)線上。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式符合 ODBC 3.51 規格。 如需 ODBC 3.51 的完整參考，請從[資料存取和儲存開發人員中心](https://go.microsoft.com/fwlink?linkid=4173)下載 Microsoft Data ACCESS Components SDK，或參閱《 [odbc](https://go.microsoft.com/fwlink/?LinkId=45250)程式設計人員參考》線上。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -137,6 +136,6 @@ ms.locfileid: "68113665"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;ODBC&#41;參考](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
- [使用 SQL Server Native Client 建置應用程式](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 建立應用程式](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

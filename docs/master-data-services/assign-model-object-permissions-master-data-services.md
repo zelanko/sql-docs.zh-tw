@@ -1,5 +1,5 @@
 ---
-title: 指派模型物件權限 (Master Data Services) | Microsoft Docs
+title: 指派模型物件權限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21b3f21b33922a8967d800bf94db70e82a018e9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6c1dbc6be8ba8ddde53ea1ccdfa97fe7992a4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047602"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728736"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>指派模型物件權限 (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "68047602"
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
 ### <a name="to-assign-model-object-permissions"></a>若要指派模型物件權限  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68047602"
   
 8.  從功能表中，選取 [讀取]、[建立]、[更新] 和 [刪除] 的組合，或是 [拒絕]。  
   
-9. 在最上層模型層級中，如果您需要讓使用者模型成為系統管理員，請選取 [管理]  。  
+9. 在最上層模型層級中，如果您需要讓使用者模型成為系統管理員，請選取 [管理] 。  
   
-10. 按一下 [儲存]  。  
+10. 按一下 **[儲存]** 。  
   
 ## <a name="next-steps"></a>後續步驟  
   

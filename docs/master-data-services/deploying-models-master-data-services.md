@@ -1,5 +1,5 @@
 ---
-title: 部署模型 (Master Data Services) | Microsoft Docs
+title: 部署模型
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3cbd0815109b5242f7f49b791f24cfc348200ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906204"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728286"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
 
@@ -34,9 +34,9 @@ ms.locfileid: "67906204"
   
 -   **MDSModelDeploy 工具**：若要建立與部署模型物件和資料，請使用 MDSModelDeploy.exe 工具。 如果您在安裝 MDS 時選取了預設路徑，此工具會位於 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
   
--   **模型部署精靈**：若只要建立與部署模型結構的套件，請使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中的精靈。 您無法使用此精靈來部署資料。  
+-   **模型部署精靈：** 若只要建立與部署模型結構的套件，請使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中的精靈。 您無法使用此精靈來部署資料。  
   
--   **模型套件編輯器**：若要編輯模型套件，請使用 ModelPackageEditor.exe 以啟動 [模型套件編輯器精靈]。 您可以使用此精靈編輯 MDSModelDeploy 工具或「模型部署」精靈所建立的封裝。 如果您在安裝 MDS 時選取了預設路徑，此工具會位於 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
+-   **模型套件編輯器**：若要編輯模型套件，請使用 ModelPackageEditor.exe 以啟動模型套件編輯器精靈。 您可以使用此精靈編輯 MDSModelDeploy 工具或「模型部署」精靈所建立的封裝。 如果您在安裝 MDS 時選取了預設路徑，此工具會位於 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
   
 > [!IMPORTANT]  
 >  您可以使用 MDSModelDeploy 工具建立新的模型、建立模型的複製，或更新現有的模型及其資料。 如果您使用 MDSModelDeploy 工具來更新現有模型及其資料，而且封裝不包含存在目的地模型中的實體、屬性或成員，MDSModelDeploy 就不會從模型中刪除該實體、屬性或成員。  
@@ -72,10 +72,10 @@ ms.locfileid: "67906204"
 |工作描述|主題|  
 |----------------------|-----------|  
 |使用 MDSModelDeploy 工具建立模型物件與/或資料的新部署封裝。|[使用 MDSModelDeploy 建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|使用精靈僅建立模型物件的新部署封裝。|[使用精靈建立模型部署套件](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
-|使用 MDSModelDeploy 工具部署模型物件與資料的封裝。|[使用 MDSModelDeploy 部署模型部署套件](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|使用精靈僅建立模型物件的新部署封裝。|[使用精靈建立模型部署封裝](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
+|使用 MDSModelDeploy 工具部署模型物件與資料的封裝。|[使用 MDSModelDeploy 部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
 |使用精靈僅部署模型物件的封裝。|[使用精靈部署模型部署封裝](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
-|編輯模型部署封裝以部署選取的模型部分，而非整個模型。|[編輯模型部署封裝](../master-data-services/edit-a-model-deployment-package.md)|  
+|編輯模型部署封裝以部署選取的模型部分，而非整個模型。|[編輯模型部署套件](../master-data-services/edit-a-model-deployment-package.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
