@@ -14,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 905b1ceed2df8afc854ad38ee07d2b21596530f1
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721700"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882257"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定發行和散發。  
@@ -28,10 +28,10 @@ ms.locfileid: "62721700"
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Security"></a> 安全性  
- 如需詳細資訊，請參閱 <<c0> [ 保護的複寫部署](security/view-and-modify-replication-security-settings.md)。  
+ 如需詳細資訊，請參閱[安全複寫部署](security/view-and-modify-replication-security-settings.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 使用「新增發行集精靈」或「設定散發精靈」來設定散發。 設定散發者之後，請檢視並修改 [散發者屬性 - \<散發者]  對話方塊中的屬性。 如果您想設定「散發者」以便 **db_owner** 固定資料庫角色的成員可以建立發行集，或者因為您想設定非「發行者」的遠端「散發者」，則請使用「設定散發精靈」。  
+ 使用「新增發行集精靈」或「設定散發精靈」來設定散發。 設定散發者之後，請檢視並修改 [散發者屬性 - **散發者]\<** 對話方塊中的屬性。 如果您想設定「散發者」以便 **db_owner** 固定資料庫角色的成員可以建立發行集，或者因為您想設定非「發行者」的遠端「散發者」，則請使用「設定散發精靈」。  
   
 #### <a name="to-configure-distribution"></a>若要設定散發  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62721700"
   
 3.  遵循「設定散發精靈」的指示執行下列項目：  
   
-    -   選取「散發者」。 若要使用本機散發者，請選取 ['\<伺服器名稱>' 將扮演本身的散發者; SQL Server 將建立散發資料庫和記錄]  。 若要使用遠端散發者，請選取 **[使用下列伺服器做為散發者]** ，然後選取伺服器。 伺服器必須已設定為散發者，且必須先啟用發行者才能使用散發者。 如需詳細資訊，請參閱[在散發者端啟用遠端發行者 &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。  
+    -   選取「散發者」。 若要使用本機散發者，請選取 ['**伺服器名稱>' 將扮演本身的散發者; SQL Server 將建立散發資料庫和記錄]\<** 。 若要使用遠端散發者，請選取 **[使用下列伺服器做為散發者]** ，然後選取伺服器。 伺服器必須已設定為散發者，且必須先啟用發行者才能使用散發者。 如需詳細資訊，請參閱[在散發者端啟用遠端發行者 &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。  
   
          如果您選取遠端「散發者」，則必須在 **[管理密碼]** 頁面上輸入密碼才能從「發行者」連接到「散發者」。 此密碼必須符合發行者於遠端散發者啟用時所指定的密碼。  
   
@@ -62,27 +62,27 @@ ms.locfileid: "62721700"
   
     -   如果結果集中 **installed** 的值是 **0**，請在 master 資料庫的散發者上執行 [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)。  
   
-    -   如果結果集中 **distribution db installed** 的值是 **0**，請在 master 資料庫的散發者上執行 [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)。 針對 **@database** 。 您可以選擇針對 **@max_distretention** 指定最大交易保留期限，並針對 **@history_retention** 。 如果正在建立新的資料庫，請指定所要的資料庫屬性參數。  
+    -   如果結果集中 **distribution db installed** 的值是 **0**，請在 master 資料庫的散發者上執行 [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)。 指定 **\@資料庫**的散發資料庫名稱。 （選擇性）您可以指定 **\@max_distretention**的最大交易保留期限，以及 **\@history_retention**的記錄保留期限。 如果正在建立新的資料庫，請指定所要的資料庫屬性參數。  
   
-2.  在散發者 (同時也是發行者) 上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)，指定要作為 **@working_directory** 預設快照集資料夾的 UNC 共用。  
+2.  在散發者（也就是發行者）上，[執行&#40;sp_adddistpublisher transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)，並指定將做為 **\@working_directory**之預設快照集資料夾使用的 UNC 共用。  
   
-3.  在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)。 指定針對發行的資料庫 **@dbname** 的複寫類型 **@optname** ，而值為`true`如 **@value** .  
+3.  在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)。 針對 **\@dbname**指定發行的資料庫、 **\@optname**的複寫類型，以及 **\@值**的 [`true`] 值。  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>使用遠端散發者設定發行  
   
 1.  請執行 [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) 來判斷伺服器是否已經設定為散發者。  
   
-    -   如果結果集中 **installed** 的值是 **0**，請在 master 資料庫的散發者上執行 [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)。 針對 **@password** 。 **distributor_admin** 帳戶的這個密碼將會由發行者連接到散發者時使用。  
+    -   如果結果集中 **installed** 的值是 **0**，請在 master 資料庫的散發者上執行 [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)。 指定 **\@密碼**的強式密碼。 **distributor_admin** 帳戶的這個密碼將會由發行者連接到散發者時使用。  
   
-    -   如果結果集中 **distribution db installed** 的值是 **0**，請在 master 資料庫的散發者上執行 [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)。 針對 **@database** 。 您可以選擇針對 **@max_distretention** 指定最大交易保留期限，並針對 **@history_retention** 。 如果正在建立新的資料庫，請指定所要的資料庫屬性參數。  
+    -   如果結果集中 **distribution db installed** 的值是 **0**，請在 master 資料庫的散發者上執行 [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)。 指定 **\@資料庫**的散發資料庫名稱。 （選擇性）您可以指定 **\@max_distretention**的最大交易保留期限，以及 **\@history_retention**的記錄保留期限。 如果正在建立新的資料庫，請指定所要的資料庫屬性參數。  
   
-2.  在散發者上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)，指定要作為 **@working_directory** 預設快照集資料夾的 UNC 共用。 如果散發者會在與發行者連接時使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須針對 **0** @value **@security_mode** 的值，並針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@login** 指定 **@password** 。  
+2.  在散發者上，[執行&#40;sp_adddistpublisher transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)，並指定將用來做為 **\@working_directory**之預設快照集資料夾的 UNC 共用。 如果「散發者」在連接到「發行者」時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，則您也必須為 **\@security_mode**指定**0**的值，並為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登**入和 **\@密碼**指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)]\@登入資訊。  
   
-3.  在 master 資料庫的發行者上，執行 [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)。 針對 **@password** 。 這個密碼將會由發行者連接到散發者時使用。  
+3.  在 master 資料庫的發行者上，執行 [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)。 針對 **\@密碼**，指定步驟1中所使用的增強式密碼。 這個密碼將會由發行者連接到散發者時使用。  
   
-4.  在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)。 針對 **@dbname** 指定發行的資料庫、針對 **@optname** 指定複寫的類型，並針對 **@value** 。  
+4.  在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)。 針對 **\@dbname**指定發行的資料庫、 **\@optname**的複寫類型，以及 **\@值**的 true 值。  
   
-###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
+###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  下列範例會示範如何以程式設計方式設定發行和散發。 在此範例中，會使用指令碼變數來提供設定為發行者和本機散發者的伺服器名稱。 您可以使用複寫預存程序來以程式設計的方式設定複寫發行和散發。  
   
  [!code-sql[HowTo#AddDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  
@@ -168,7 +168,7 @@ ms.locfileid: "62721700"
  [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [[設定散發]](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [設定 AlwaysOn 可用性群組的複寫&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
+ [複寫管理物件概念](concepts/replication-management-objects-concepts.md)   
+ [設定 AlwaysOn 可用性群組&#40;SQL Server 的複寫&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

@@ -1,6 +1,6 @@
 ---
-title: sys.dm_geo_replication_link_status (Azure SQL Database) |Microsoft Docs
-ms.custom: ''
+title: sys. dm_geo_replication_link_status
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
@@ -17,42 +17,43 @@ ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: mashamsft
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8302de76b45ca09e86c87c29ab99c30898168de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e642fada95ddf20e81f9fcb7da8b6267469ef0c9
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900882"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843891"
 ---
-# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
+# <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  包含每個複寫連結中的異地複寫合作關係的主要和次要資料庫之間的資料列。 這包括主要和次要資料庫。 如果給定主要資料庫有一個以上的連續複寫連結，此資料表會包含一個資料列，每個關聯性。 在所有資料庫，包括邏輯主機中建立檢視。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
+  針對異地複寫合作關係中的主要和次要資料庫之間的每個複寫連結，各包含一個資料列。 這包括主要和次要資料庫。 如果指定的主資料庫有一個以上的連續複寫連結，此資料表就會包含每個關聯性的資料列。 此視圖會在所有資料庫中建立，包括邏輯 master。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|複寫連結的唯一識別碼。|  
-|partner_server|**sysname**|包含連結的資料庫的 SQL Database 伺服器的名稱。|  
+|partner_server|**sysname**|包含連結資料庫之 SQL Database 伺服器的名稱。|  
 |partner_database|**sysname**|連結的 SQL Database 伺服器上所連結資料庫的名稱。|  
-|last_replication|**datetimeoffset**|由次要的主要資料庫時鐘為基礎的最後一個交易的認可時間戳記。 只有在主要資料庫上使用此值。|  
-|replication_lag_sec|**int**|時間之間的時差 last_replication 值與該交易的認可，在主要伺服器上，根據主要資料庫的時鐘的時間戳記。  只有在主要資料庫上使用此值。|  
-|replication_state|**tinyint**|此資料庫，其中的異地複寫的狀態:。<br /><br /> 1 = 植入。 異地複寫目標正在植入，但兩個資料庫都尚未同步處理。 植入完成之前，您無法連接到次要資料庫。 從主要中移除次要資料庫，將會取消植入作業。<br /><br /> 2 = 更新。 次要資料庫處於交易一致的狀態，並且與主要資料庫持續同步處理。<br /><br /> 4 = 已暫停。 這表示沒有作用中的連續複製關聯性。 這個狀態通常表示互連可用的頻寬對於主要資料庫上的交易活動層級而言不足。 不過，連續複製關聯性仍保持不變。|  
+|last_replication|**datetimeoffset**|依據主資料庫時鐘，次要的最後一個交易通知的時間戳記。 此值僅適用于主資料庫。|  
+|replication_lag_sec|**int**|根據主資料庫時鐘，在主要複本上，last_replication 值和該交易認可的時間戳記之間的時差（以秒為單位）。  此值僅適用于主資料庫。|  
+|replication_state|**tinyint**|此資料庫的異地複寫狀態，下列其中一個：。<br /><br /> 1 = 植入。 已植入異地複寫目標，但這兩個資料庫尚未同步處理。 在植入完成之前，您無法連接到次要資料庫。 從主要複本移除次要資料庫將會取消植入操作。<br /><br /> 2 = 趕上。 次要資料庫處於交易一致的狀態，而且經常與主資料庫同步處理。<br /><br /> 4 = 已暫止。 這表示沒有作用中的連續複製關聯性。 這個狀態通常表示互連可用的頻寬對於主要資料庫上的交易活動層級而言不足。 不過，連續複製關聯性仍保持不變。|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|角色 (role)|**tinyint**|異地複寫角色，其中一個：<br /><br /> 0 = 主要。 Database_id 指的是 「 異地複寫 」 合作關係中的主要資料庫。<br /><br /> 1 = 次要資料庫。  Database_id 指的是 「 異地複寫 」 合作關係中的主要資料庫。|  
+|角色 (role)|**tinyint**|異地複寫角色，下列其中一個：<br /><br /> 0 = 主要。 Database_id 指的是「異地複寫」合作關係中的主資料庫。<br /><br /> 1 = 次要。  Database_id 指的是「異地複寫」合作關係中的主資料庫。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|次要類型，其中一個：<br /><br /> 0 = 不直接允許連接次要資料庫，而且資料庫不是可讀取權限。<br /><br /> 2 = all 允許次要的 repl; 中的資料庫連接 ication 進行唯讀存取。|  
-|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> All|  
-|last_commit|**datetimeoffset**|認可至資料庫的最後一個交易的時間。 如果擷取主要資料庫上，它會指出主要資料庫的上次認可時間。 如果擷取次要資料庫上，它會指出在次要資料庫上的最後一個認可時間。 如果擷取次要資料庫上的複寫連結的主要已關閉時，它會指出直到哪個時間點的次要資料庫趕上之後。|
+|secondary_allow_connections|**tinyint**|次要類型，下列其中一個：<br /><br /> 0 = 不允許直接連接到次要資料庫，而且資料庫無法供讀取存取。<br /><br /> 2 = 允許所有連接到次要複寫中的資料庫; ication 用於唯讀存取。|  
+|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> 全部|  
+|last_commit|**datetimeoffset**|上次交易認可到資料庫的時間。 如果在主資料庫上抓取，則表示主資料庫上的上次認可時間。 如果在次要資料庫上抓取，它會指出次要資料庫上的上次認可時間。 當複寫連結的主要複本關閉時，如果在次要資料庫上抓取，則會指出次要的哪個點已趕上。|
   
 > [!NOTE]  
->  如果藉由移除次要資料庫 （一節 4.2），該資料庫中的資料列，就會終止複寫關聯性**sys.dm_geo_replication_link_status**檢視就會消失。  
+>  如果藉由移除次要資料庫（第4.2 節）來終止複寫關聯性，則**dm_geo_replication_link_status**視圖中該資料庫的資料列就會消失。  
   
 ## <a name="permissions"></a>Permissions  
- 任何具有 view_database_state 權限的帳戶可以查詢**sys.dm_geo_replication_link_status**。  
+ 任何具有 view_database_state 許可權的帳戶都可以查詢**sys.databases dm_geo_replication_link_status**。  
   
 ## <a name="example"></a>範例  
- 顯示複寫落後和我的次要資料庫的上次複寫時間。  
+ 顯示次要資料庫的複寫延遲和上次複寫時間。  
   
 ```  
 SELECT   
@@ -64,8 +65,8 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+ [ALTER database &#40;Azure SQL Database&#41; ](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [geo_replication_links &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
   
   

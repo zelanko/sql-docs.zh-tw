@@ -1,6 +1,6 @@
 ---
-title: sys.elastic_pool_resource_stats (Azure SQL Database) |Microsoft Docs
-ms.custom: ''
+title: sys.elastic_pool_resource_stats
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -16,56 +16,57 @@ helpviewer_keywords:
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ec3fae7d4e2a649ea05c48d400728e229607d92f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0712785a5af3e8cc3c606a597ba02e0075c88dd9
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079276"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843865"
 ---
-# <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
+# <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys. elastic_pool_resource_stats （Azure SQL Database）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  傳回 SQL Database 伺服器中的所有彈性集區的資源使用量統計資料。 針對每個彈性集區中，有一個資料列的每 15 秒報告視窗 （每分鐘四個資料列）。 這包括 CPU、 IO、 記錄、 儲存體耗用量和並行的要求/工作階段使用量的集區中的所有資料庫。 這項資料會保留 14 天。 
+  傳回 SQL Database 伺服器中所有彈性集區的資源使用量統計資料。 針對每個彈性集區，每15秒報告時間範圍都會有一個資料列（每分鐘四個數據列）。 其中包括 CPU、IO、記錄、儲存體耗用量，以及集區中所有資料庫的並行要求/會話使用率。 此資料會保留14天。 
   
 ||  
 |-|  
-|**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
+|**適用**于： [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
-|**start_time**|**datetime2**|表示 15 秒的報告間隔開始的 UTC 時間。|  
-|**end_time**|**datetime2**|指出報告間隔 15 秒結束的 UTC 時間。|  
-|**elastic_pool_name**|**nvarchar(128)**|彈性資料庫集區名稱。|  
-|**avg_cpu_percent**|**decimal(5,2)**|平均計算使用量限制的集區的百分比。|  
-|**avg_data_io_percent**|**decimal(5,2)**|平均 I/O 使用量百分比限制的集區。|  
-|**avg_log_write_percent**|**decimal(5,2)**|平均寫入資源使用量的集區的限制百分比表示。|  
-|**avg_storage_percent**|**decimal(5,2)**|平均儲存體使用量的集區的儲存體限制的百分比。|  
-|**max_worker_percent**|**decimal(5,2)**|最大並行背景工作角色 （要求） 限制的集區的百分比。|  
-|**max_session_percent**|**decimal(5,2)**|最大並行工作階段百分比限制的集區。|  
-|**elastic_pool_dtu_limit**|**int**|目前最大的彈性集區 DTU 設定此彈性集區在此間隔期間。|  
-|**elastic_pool_storage_limit_mb**|**bigint**|在此間隔期間此彈性集區，以 mb 為單位設定目前最大的彈性集區儲存體限制。|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|彈性集區中的所有資料庫所配置的資料空間的百分比。  這是配置給資料的彈性集區的最大大小的資料空間的比例。  如需詳細資訊，請參閱：[SQL DB 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**start_time**|**datetime2**|表示15秒報告間隔開始的 UTC 時間。|  
+|**end_time**|**datetime2**|指出15秒報告間隔結束的 UTC 時間。|  
+|**elastic_pool_name**|**nvarchar(128)**|彈性資料庫集區的名稱。|  
+|**avg_cpu_percent**|**decimal （5，2）**|集區限制的平均計算使用率（以百分比表示）。|  
+|**avg_data_io_percent**|**decimal （5，2）**|根據集區限制的平均 i/o 使用率（以百分比表示）。|  
+|**avg_log_write_percent**|**decimal （5，2）**|平均寫入資源使用率（以集區限制的百分比表示）。|  
+|**avg_storage_percent**|**decimal （5，2）**|集區儲存體限制的平均儲存體使用率（以百分比表示）。|  
+|**max_worker_percent**|**decimal （5，2）**|以集區限制為依據的最大並行背景工作（要求）百分比。|  
+|**max_session_percent**|**decimal （5，2）**|以集區限制為基礎的並行會話數目上限（以百分比表示）。|  
+|**elastic_pool_dtu_limit**|**int**|此時間間隔期間，此彈性集區目前的最大彈性集區 DTU 設定。|  
+|**elastic_pool_storage_limit_mb**|**bigint**|在此間隔期間，此彈性集區的目前最大彈性集區儲存體限制設定（以 mb 為單位）。|
+|**avg_allocated_storage_percent**|**decimal （5，2）**|彈性集區中所有資料庫所配置的資料空間百分比。  這是配置給彈性集區之資料大小上限的資料空間比例。  如需詳細資訊，請參閱： [SQL DB 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>備註
 
- 這個檢視存在於 master 資料庫的 SQL Database 伺服器。 您必須連接到 master 資料庫來查詢**sys.elastic_pool_resource_stats**。  
+ 此視圖存在於 SQL Database 伺服器的 master 資料庫中。 您必須連接到 master 資料庫，才能查詢**sys.databases elastic_pool_resource_stats**。  
   
 ## <a name="permissions"></a>Permissions
 
- 需要的成員資格**dbmanager**角色。  
+ 需要**dbmanager**角色中的成員資格。  
   
 ## <a name="examples"></a>範例
 
- 下列範例會傳回依據目前的 SQL Database 伺服器中的所有彈性資料庫集區的最新時間排序的資源使用量資料。  
+ 下列範例會針對目前 SQL Database 伺服器中的所有彈性資料庫集區，傳回最近一次所排序的資源使用量資料。  
   
 ```sql
 SELECT * FROM sys.elastic_pool_resource_stats
 ORDER BY end_time DESC;  
 ```
 
- 下列範例會計算指定的集區的平均 DTU 百分比耗用量。  
+ 下列範例會計算給定集區的平均 DTU 百分比耗用量。  
 
 ```sql
 SELECT start_time, end_time,
@@ -78,9 +79,9 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>另請參閱
 
- [使用彈性資料庫抑止爆炸性的成長](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [建立和管理 SQL Database 彈性資料庫集區 （預覽）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
+ [利用彈性資料庫來應對爆炸性成長](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
+ [建立和管理 SQL Database 彈性資料庫集區（預覽）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [resource_stats &#40;Azure SQL Database&#41; ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

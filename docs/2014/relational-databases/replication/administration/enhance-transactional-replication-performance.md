@@ -21,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704764"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882360"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
   除了考慮＜ [增強一般複寫效能](enhance-general-replication-performance.md)＞中所述的一般效能提示之外，還要考慮異動複寫特定的以下幾個其他方面。  
@@ -65,7 +65,7 @@ ms.locfileid: "62704764"
   
      將代理程式設定為連續執行來代替建立頻繁的排程 (例如每分鐘) 可提升複寫效能，因為代理程式不必啟動和停止。 當您將「散發代理程式」設定為連續執行時，變更將以低度延遲傳播到拓撲中連接的其他伺服器。 如需詳細資訊，請參閱：  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[指定同步處理排程](../specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步處理排程](../specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>散發代理程式和記錄讀取器代理程式參數  
   
@@ -76,11 +76,11 @@ ms.locfileid: "62704764"
     > [!WARNING]  
     >  `MaxCmdsInTran` 的設計不是為了要永遠開啟。 其存在的目的是為了解決有人不小心在單一交易中執行大量 DML 作業的狀況 (使得整筆交易在散發資料庫之前延遲命令的散發、鎖定持有等等)。 如果您習慣性地遇到這個狀況，您應該檢閱您的應用程式，並找出減少交易大小的方法。  
   
--   使用 **-SubscriptionStreams** 「 散發代理程式的參數。  
+-   針對散發代理程式，請使用 **-SubscriptionStreams**參數。  
   
      **-SubscriptionStreams** 參數可大幅提升彙總複寫輸送量。 它允許至「訂閱者」的多個連接平行套用批次變更，同時在使用單一執行緒時維護現有的許多交易特性。 如果有一個連接無法執行或認可，則所有連接都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。 在此重試階段完成之前，「訂閱者」端可能會出現暫時的交易不一致性。 成功認可失敗的批次後，「訂閱者」將返回交易一致性的狀態。  
   
-     此代理程式參數的值可以使用 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 的 **@subscriptionstreams** 來指定。  
+     您可以使用[sp_addsubscription &#40; &#41;transact-sql](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的 **\@subscriptionstreams**來指定此代理程式參數的值。  
   
 -   為「記錄讀取器代理程式」增加 **-ReadBatchSize** 參數的值。  
   
@@ -100,6 +100,6 @@ ms.locfileid: "62704764"
   
 -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+-   [複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)  
   
   

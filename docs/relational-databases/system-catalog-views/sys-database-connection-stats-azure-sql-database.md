@@ -1,6 +1,6 @@
 ---
-title: sys.database_connection_stats (Azure SQL Database) |Microsoft Docs
-ms.custom: ''
+title: sys.database_connection_stats
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
@@ -18,30 +18,31 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b241d1f90a24ae69ab180404621a2feda393c01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940230"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844474"
 ---
-# <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
+# <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  包含統計資料[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫**連線**事件，提供資料庫連接成功和失敗的概觀。 如需有關連接性事件的詳細資訊，請參閱中的事件類型[sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+  包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫連接事件的統計資料，**提供資料庫連接**成功和失敗的總覽。 如需連接事件的詳細資訊，請參閱[event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)中的事件種類。  
   
-|統計資料|type|描述|  
+|統計資料|類型|說明|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。|  
-|**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 這個時間永遠是 5 分鐘的倍數。 例如:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 **End_time**一律為剛好 5 分鐘晚於相對應**start_time**相同的資料列中。|  
+|**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />' 2011-09-28 16:05:00 '<br />' 2011-09-28 16:10:00 '|  
+|**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 **End_time**一定會比相同資料列中的對應**start_time**剛好晚5分鐘。|  
 |**success_count**|**int**|成功連接的數目。|  
-|**total_failure_count**|**int**|連接失敗的總數。 這是總和**connection_failure_count**， **terminated_connection_count**，並**throttled_connection_count**，而且不包含死結事件。|  
+|**total_failure_count**|**int**|連接失敗的總數。 這是**connection_failure_count**、 **terminated_connection_count**和**throttled_connection_count**的總和，且不包含鎖死事件。|  
 |**connection_failure_count**|**int**|登入失敗的數目。|  
-|**terminated_connection_count**|**int**|**_僅適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 終止的連接數目。|  
-|**throttled_connection_count**|**int**|**_僅適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 節流的連接數目。|  
+|**terminated_connection_count**|**int**|**_僅適用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 終止的連接數目。|  
+|**throttled_connection_count**|**int**|**_僅適用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 節流的連接數目。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -55,9 +56,9 @@ ms.locfileid: "67940230"
 |------------------------|---------------------|-------------------|------------------------|-------------------------------|------------------------------------|---------------------------------------|--------------------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
-### <a name="interval-starttime-and-endtime"></a>間隔的 start_time 和 end_time
+### <a name="interval-start_time-and-end_time"></a>間隔的 start_time 和 end_time
 
- 在事件發生時，事件是否包含在彙總間隔*上*或_之後_**start_time**並_之前_**end_time**對於該間隔。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
+ 事件發生在**start_time** _之後_，或在該間隔**end_time** _之前_的匯總間隔中 *，都會包含*事件。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
   
 ```  
   
@@ -72,25 +73,25 @@ start_time                    end_time
   
 ### <a name="data-retention"></a>資料保留
 
- 此檢視中的資料會保留最多 30 天內，或可能是根據資料庫數目和每個資料庫產生的唯一事件數目較少。 若要保留這項資訊更長的時間，請將資料複製到另一個資料庫。 在您製作檢視的初始副本之後，檢視中的資料列可能會隨資料累積而更新。 為了讓資料副本保持最新狀態，請定期執行資料列的資料表掃描，查看現有資料列的事件計數是否增加，並且識別新資料列 (您可以使用開始和結束時間識別唯一資料列)，然後用這些變更來更新您的資料副本。  
+ 此視圖中的資料最多會保留30天，或可能較少，視資料庫的數目和每個資料庫所產生的唯一事件數目而定。 若要保留這項資訊更長的時間，請將資料複製到另一個資料庫。 在您製作檢視的初始副本之後，檢視中的資料列可能會隨資料累積而更新。 為了讓資料副本保持最新狀態，請定期執行資料列的資料表掃描，查看現有資料列的事件計數是否增加，並且識別新資料列 (您可以使用開始和結束時間識別唯一資料列)，然後用這些變更來更新您的資料副本。  
   
 ### <a name="errors-not-included"></a>不包括錯誤
 
  這個檢視可能不會包括所有連接和錯誤資訊：  
   
-- 這個檢視不包括所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫可能會發生，只指定事件類型中的錯誤[sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+- 此視圖不包括所有可能發生的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫錯誤，只有在 sys.databases 中的事件種類[event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
-- 如果沒有機器故障[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料中心，少量的資料可能會遺失事件資料表中。  
+- 如果 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料中心內發生機器故障，事件資料表可能會遺失少量的資料。  
   
 - 如果已透過 DoSGuard 封鎖 IP 位址，則來自該 IP 位址的連接嘗試事件就無法收集，也不會出現在這個檢視中。  
   
 ## <a name="permissions"></a>Permissions
 
- 具有存取權限的使用者**主要**資料庫有唯讀存取此檢視。  
+ 具有**master**資料庫存取權限的使用者具有此視圖的唯讀存取權。  
   
 ## <a name="example"></a>範例
 
- 下列範例顯示的查詢**sys.database_connection_stats**傳回 2011 年 9 月 25 日中午 12:00 與 9/28/2011 (UTC) 之間的資料庫連接摘要。 根據預設，查詢結果會依照**start_time** （遞增順序）。  
+ 下列範例顯示**database_connection_stats sys.databases**的查詢，以傳回在9/25/2011 和中午9/28/2011 （UTC）之間發生的資料庫連接摘要。 根據預設，查詢結果會依**start_time**排序（遞增順序）。  
   
 ```sql
 SELECT *  
@@ -100,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>另請參閱
 
- [針對 Azure SQL Database 連線問題進行疑難排解](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
+ [針對 Azure SQL Database 的連接問題進行疑難排解](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

@@ -15,21 +15,21 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865013"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882283"
 ---
-# <a name="delete-a-publication"></a>刪除發行集
+# <a name="delete-a-publication"></a>Delete a Publication
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來刪除 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的發行集。  
   
  **本主題內容**  
   
 -   **若要刪除發行集，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -58,10 +58,10 @@ ms.locfileid: "62865013"
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者上執行 [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) 。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值為`tran`for **@type** 。 (選擇性) 如果無法存取散發者，或是資料庫的狀態有疑問或離線，請針對 **@force** @type **@force** 資料夾中刪除發行集。 (選擇性) 如果未在發行集資料庫上執行 **@dbname** ，請針對 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 為 **\@類型**指定 `tran` 的值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為force **指定 \@1** 值。 (選擇性) 如果未在發行集資料庫上執行 **sp_removedbreplication\@，請為** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
   
         > [!NOTE]  
-        >  針對 **@force** @type **@force** 的值可能會將與複寫有關的發行物件留在資料庫中。  
+        >  為force **指定 \@1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
   
 2.  (選擇性) 如果此資料庫沒有任何其他發行集，請執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)，以便使用快照式或異動複寫來停用目前資料庫的發行集。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "62865013"
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者端執行 [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql)。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值為`merge`for **@type** 。 (選擇性) 如果無法存取散發者，或是資料庫的狀態有疑問或離線，請針對 **@force** @type **@force** 資料夾中刪除發行集。 (選擇性) 如果未在發行集資料庫上執行 **@dbname** ，請針對 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 為 **\@類型**指定 `merge` 的值。 (選擇性) 如果無法存取散發者，或是資料庫的狀態為可疑或離線，請為force **指定 \@1** 值。 (選擇性) 如果未在發行集資料庫上執行 **sp_removedbreplication\@，請為** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
   
         > [!NOTE]  
-        >  針對 **@force** @type **@force** 的值可能會將與複寫有關的發行物件留在資料庫中。  
+        >  為force **指定 \@1** 值時，可能會將與複寫有關的發行物件留在資料庫中。  
   
 2.  (選擇性) 如果此資料庫沒有任何其他發行集，請執行 [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)，以便使用合併式複寫來停用目前資料庫的發行集。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62865013"
   
     2.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 `false`，請確認此資料庫存在。  
   
-    3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 屬性設定為 `false`。  
+    3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 屬性設為 `false`。  
   
     4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62865013"
   
     2.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 `false`，請確認此資料庫存在。  
   
-    3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 屬性設定為 `false`。  
+    3.  將 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 屬性設為 `false`。  
   
     4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法。  
   

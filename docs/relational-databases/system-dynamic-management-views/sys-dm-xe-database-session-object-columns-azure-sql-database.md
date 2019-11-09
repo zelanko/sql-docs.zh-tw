@@ -1,6 +1,7 @@
 ---
-title: sys.dm_xe_database_session_object_columns (Azure SQL Database) |Microsoft Docs
-ms.custom: ''
+title: sys. dm_xe_database_session_object_columns
+titleSuffix: Azure SQL Database
+ms.custom: seo-dt-2019
 ms.date: 06/10/2016
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -10,29 +11,29 @@ ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
 author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0e193f51aef6c01edeb0900956f152dae212434b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36dfed5d0c24082d01248d7e6e8e1e62e1725e0a
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090397"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844424"
 ---
-# <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
+# <a name="sysdm_xe_database_session_object_columns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   顯示繫結至工作階段之物件的組態值。  
   
 ||  
 |-|  
-|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和更新的版本。|  
+|**適用于**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更新版本。|  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|說明|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 具有多對一關係 sys.dm_xe_database_sessions.address。 不可為 Null。|  
+|event_session_address|**Varbinary （8）**|事件工作階段的記憶體位址。 與 sys.databases 具有多對一關聯性。 dm_xe_database_sessions 位址。 不可為 Null。|  
 |column_name|**nvarchar(60)**|組態值的名稱。 不可為 Null。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。 不可為 Null。|  
 |column_value|**nvarchar(2048)**|資料行的設定值。 可為 Null。|  
-|object_type|**nvarchar(60)**|物件的型別。  不是 nullable.object_type 是其中一個：<br /><br /> event<br /><br /> target|  
+|object_type|**nvarchar(60)**|物件的型別。  不可為 null。 object_type 是下列其中一個：<br /><br /> event<br /><br /> 目標|  
 |object_name|**nvarchar(60)**|這個資料行所屬之物件的名稱。 不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
   
@@ -41,10 +42,10 @@ ms.locfileid: "68090397"
   
 ### <a name="relationship-cardinalities"></a>關聯性基數  
   
-|來源|若要|關聯性|  
+|來源|若要|[關聯性]|  
 |----------|--------|------------------|  
-|dm_xe_database_session_object_columns.object_name<br /><br /> dm_xe_database_session_object_columns.object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多對一|  
-|dm_xe_database_session_object_columns.column_name<br /><br /> dm_xe_database_session_object_columns.column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|多對一|  
+|dm_xe_database_session_object_columns。 object_name<br /><br /> dm_xe_database_session_object_columns。 object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|多對一|  
+|dm_xe_database_session_object_columns。 column_name<br /><br /> dm_xe_database_session_object_columns。 column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|多對一|  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)  
