@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142866"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659098"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY：指定備份為「僅複製備份」  ，這不會影響正常的備
 
 預設行為是不壓縮備份。 但是，您可以設定 [backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) 伺服器設定選項來變更此預設值。 如需檢視此選項目前值的資訊，請參閱[檢視或變更伺服器屬性](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)。
 
-如需搭配已啟用[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 之資料庫使用備份壓縮的相關資訊，請參閱[備註](#general-remarks)一節。
-
 COMPRESSION 明確啟用備份壓縮。
 
 NO_COMPRESSION 明確停用備份壓縮。
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > 針對含有單一資料檔案且已啟用[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的資料庫，預設的 `MAXTRANSFERSIZE` 為 65536 (64 KB)。 針對非 TDE 加密的資料庫，使用備份至 DISK 時，預設的 `MAXTRANSFERSIZE` 為 1048576 (1 MB)，而使用 VDI 或 TAPE 時為 65536 (64 KB)。
-> 如需搭配 TDE 加密的資料庫使用備份壓縮的詳細資訊，請參閱[備註](#general-remarks)一節。
 
 **錯誤管理選項**
 

@@ -1,5 +1,5 @@
 ---
-title: 備份已啟用延展功能的資料庫(Stretch Database) | Microsoft Docs
+title: 備份已啟用延展功能的資料庫
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,12 +10,13 @@ helpviewer_keywords:
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9755cb5c732ce1d3b6cd71d1ff9a540f3a4a9639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136296"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843830"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>備份已啟用延展功能的資料庫(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

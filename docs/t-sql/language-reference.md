@@ -15,12 +15,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f28eeedaa731a504390f5c636fe485ec4676f1f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46ce5f22f38b9854be8161aa3d104a60e41886ab
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000280"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844354"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 參考 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68000280"
 - [系統目錄檢視](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [系統相容性檢視](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
 - [系統動態管理檢視](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [系統函數](../relational-databases/system-functions/system-functions-for-transact-sql.md)
+- [系統函數](../relational-databases/system-functions/system-functions-category-transact-sql.md)
 - [系統資訊結構描述檢視](../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [系統預存程序](../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
 - [系統資料表](../relational-databases/system-tables/system-tables-transact-sql.md)

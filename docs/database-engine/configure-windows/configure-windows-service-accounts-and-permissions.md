@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e6215199f10eeec216d1a701755b49b12f576a69
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893158"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660283"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -282,19 +282,19 @@ ms.locfileid: "68893158"
  根據服務組態，在安裝或升級期間服務帳戶或服務 SID 會加入做為服務群組成員。
   
 ###  <a name="Windows"></a> Windows 權限和權利  
- 指派為用來啟動服務的帳戶需要有服務的 **啟動、停止和暫停權限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會自動指派此權限。  請先安裝遠端伺服器管理工具 (RSAT)。 請參閱＜ [適用 Windows 7 的遠端伺服器管理工具](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)＞。
+ 指派為用來啟動服務的帳戶需要有服務的 **啟動、停止和暫停權限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會自動指派此權限。  請先安裝遠端伺服器管理工具 (RSAT)。 請參閱＜ [適用 Windows 7 的遠端伺服器管理工具](https://www.microsoft.com/download/details.aspx?id=7887)＞。
   
  下表顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所使用之個別服務 SID 或本機 Windows 群組需要有的權限。
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式授與的權限|
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\MSSQLSERVER**。 具名執行個體：**NT SERVICE\MSSQL$** InstanceName。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\SQLSERVERAGENT**。 具名執行個體：**NT Service\SQLAGENT$** _InstanceName_ 。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體：**SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**。 具名執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_ 。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_ 。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) - 這只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$** _InstanceName_ 。)|**以服務方式登入** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\SQLSERVERAGENT**。 具名執行個體：**NT Service\SQLAGENT$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體：**SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**。 具名執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) - 這只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體與具名執行個體：**NT SERVICE\MsDtsServer130**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 沒有具名執行個體的個別處理序。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 寫入應用程式事件記錄檔的權限。<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **在驗證之後模擬用戶端** (SeImpersonatePrivilege)|  
-|**全文檢索搜尋：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\MSSQLFDLauncher**。 具名執行個體：**NT Service\ MSSQLFDLauncher$** _InstanceName_ 。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設或具名執行個體：**SQLServer2005SQLBrowserUser** _$ComputerName_ 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的具名執行個體沒有個別處理序)。|**以服務方式登入** (SeServiceLogonRight)|  
+|**全文檢索搜尋：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\MSSQLFDLauncher**。 具名執行個體：**NT Service\ MSSQLFDLauncher$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設或具名執行個體：**SQLServer2005SQLBrowserUser** _$ComputerName_。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的具名執行個體沒有個別處理序)。|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer：**<br /><br /> (所有權利都會授與個別服務 SID。 預設或具名執行個體：**NT Service\SQLWriter**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer 的具名執行個體沒有個別處理序。)|SQLWriter 服務會以 LOCAL SYSTEM 帳戶執行，該帳戶擁有所有必要的權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會檢查或授與此服務的權限。| 
   |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller：**|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client：**|**以服務方式登入** (SeServiceLogonRight)|  
@@ -360,7 +360,7 @@ ms.locfileid: "68893158"
 ||130\shared|讀取、執行|  
 ||130\shared\Errordumps|讀取、寫入|  
 |SQLWriter|N/A (以本機系統執行)||  
-|使用者|Instid\MSSQL\binn|讀取、執行|  
+|User|Instid\MSSQL\binn|讀取、執行|  
 ||Instid\Reporting Services\ReportServer|讀取、執行、列出資料夾內容|  
 ||Instid\Reportingservices\Reportserver\global.asax|讀取|  
 ||Instid\Reporting Services\reportManager|讀取、執行|  
@@ -407,7 +407,7 @@ ms.locfileid: "68893158"
 ||僅限管理員|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<SQL_執行個體名稱>\*|完整控制|  
 ||管理員，系統|\tools\binn\schemas\sqlserver\2004\07\showplan|完整控制|  
 ||使用者|\tools\binn\schemas\sqlserver\2004\07\showplan|讀取、執行|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<報表伺服器 Web 服務帳戶>|\<安裝>  \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<報表伺服器 Web 服務帳戶>|\<安裝>  \Reporting Services\LogFiles|刪除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||報表管理員應用程式集區識別 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帳戶，Everyone|\<安裝>  \Reporting Services\ReportManager、\<安裝>  \Reporting Services\ReportManager\Pages\\\*.\*、\<裝>  \Reporting Services\ReportManager\Styles\\\*.\*、\<安裝>  \Reporting Services\ReportManager\webctrl_client\1_0\\*。\*|讀取|  
 ||報表管理員應用程式集區識別|\<安裝>  \Reporting Services\ReportManager\Pages\\*。\*|讀取|  
 ||\<報表伺服器 Web 服務帳戶>|\<安裝>  \Reporting Services\ReportServer|讀取|  
@@ -415,9 +415,9 @@ ms.locfileid: "68893158"
 ||Everyone|\<安裝>  \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
 ||NETWORK SERVICE|\<安裝>  \Reporting Services\ReportServer\ReportService.asmx|完整|  
 ||Everyone|\<安裝>  \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||報表伺服器 Windows 服務帳戶|*\<安裝*\Reporting Services\ReportServer\RSReportServer.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Everyone|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 列舉子機碼<br /><br /> 通知<br /><br /> 讀取控制|  
-||終端服務使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> 通知<br /><br /> DELETE<br /><br /> 讀取控制|  
+||報表伺服器 Windows 服務帳戶|*\<安裝*\Reporting Services\ReportServer\RSReportServer.config|刪除<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Everyone|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 列舉子機碼<br /><br /> Notify<br /><br /> 讀取控制|  
+||終端服務使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> Notify<br /><br /> DELETE<br /><br /> 讀取控制|  
 ||進階使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> 通知<br /><br /> DELETE<br /><br /> 讀取控制|  
   
  \*這是 WMI 提供者命名空間。  
@@ -639,7 +639,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
 ###  <a name="Localized_service_names"></a> 當地語系化服務名稱  
  下表將顯示 Windows 當地語系化版本所顯示的服務名稱。  
   
-|語言|本機服務的名稱|網路服務的名稱|本機系統的名稱|管理群組的名稱|  
+|Language|本機服務的名稱|網路服務的名稱|本機系統的名稱|管理群組的名稱|  
 |--------------|----------------------------|------------------------------|---------------------------|--------------------------|  
 |英文<br /><br /> 簡體中文<br /><br /> 繁體中文<br /><br /> 韓文<br /><br /> 日文|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
 |德文|NT-AUTORITÄT\LOKALER DIENST|NT-AUTORITÄT\NETZWERKDIENST|NT-AUTORITÄT\SYSTEM|VORDEFINIERT\Administratoren|  

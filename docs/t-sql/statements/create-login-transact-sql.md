@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4cda96435d1b6f3732446295d17b360033e4a17f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594481"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659358"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -438,6 +438,9 @@ SID **=** *sid* 用來重新建立登入。 僅適用於 SQL Server 驗證登入
 - 必須是用於 Azure SQL 受控執行個體之相同目錄中的 Azure AD 成員。
 
 ## <a name="after-creating-a-login"></a>建立登入之後
+
+> [!NOTE]
+> 受控執行個體功能的 Azure AD 系統管理員已在建立後變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 系統管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 建立登入之後，登入就可以連線至 SQL Database 受控執行個體，但只有授與 **public** 角色的權限。 請考慮執行下列其中一些活動。
 

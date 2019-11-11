@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa027f58bd673539dd09f118ea1b9433c42c7990
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000270"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632909"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 課：建立及查詢資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68000270"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 撰寫陳述式並且提交給 [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以採用下列方式：  
   
--   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 這個教學課程會假設您使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是您也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express，這個版本可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=67359)免費下載。  
+-   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 這個教學課程會假設您使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是您也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express，這個版本可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=7593)免費下載。  
   
 -   使用 [sqlcmd 公用程式](../tools/sqlcmd-utility.md)。  
   

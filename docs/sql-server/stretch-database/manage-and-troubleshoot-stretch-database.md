@@ -1,5 +1,5 @@
 ---
-title: 管理 Stretch Database 並對其進行疑難排解 | Microsoft Docs
+title: 管理及疑難排解
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 282d712f1ebb870c236917d49beb50423957b2a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136111"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844613"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>管理 Stretch Database 並對其進行疑難排解
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

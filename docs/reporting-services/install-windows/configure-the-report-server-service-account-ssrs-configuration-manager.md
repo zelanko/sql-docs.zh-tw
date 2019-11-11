@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: de0ea61c93de1464ebde068ef47d85e89b8a1587
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261597"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594089"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68261597"
   
 - 自動更新用來主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的登入權限。 新的帳戶會新增至 **RSExecRole**。  
   
-     舊帳戶的資料庫登入不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的[管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)。  
+     舊帳戶的資料庫登入不會自動移除。 請務必移除不再使用的帳戶。 如需詳細資訊，請參閱[管理報表伺服器&#40;資料庫 SSRS 原&#41;生模式](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)。  
   
      只有在一開始設定報表伺服器資料庫連接使用新的服務帳戶，才能將資料庫權限授與這個服務帳戶。 如果您設定報表伺服器資料庫連接使用網域使用者帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入，則連接資訊將不會受到服務帳戶更新的影響。  
   

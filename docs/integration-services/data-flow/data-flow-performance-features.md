@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 552d4b6094a4cc890124399039ee61ba775ec715
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71293134"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637951"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
 
@@ -151,7 +151,7 @@ ms.locfileid: "71293134"
   
  「緩時變維度」轉換中最緩慢的元件通常是一次針對一個單一資料列執行 UPDATE 的「OLE DB 命令」轉換。 因此，改善「緩時變維度」轉換效能最有效的方式就是取代「OLE DB 命令」轉換。 您可以將這些轉換取代為將要更新的所有資料列儲存到臨時資料表的目的地元件。 然後，您可以同時加入針對所有資料列執行以單一資料列集為基礎之 Transact-SQL UPDATE 的「執行 SQL」工作。  
   
- 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需取得此方式的討論與範例，請參閱[專案 REAL：Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
+ 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需取得此方式的討論與範例，請參閱[專案 REAL：Business Intelligence ETL 設計練習](https://www.microsoft.com/download/details.aspx?id=14582) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
   
 ### <a name="destinations"></a>目的地  
  為達成較佳的目的地效能，請考慮使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地並測試目的地的效能。  

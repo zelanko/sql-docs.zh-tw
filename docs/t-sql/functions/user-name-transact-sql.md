@@ -24,14 +24,14 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e407ab5ac5e69c78d19a1022210ca8da5e470d64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927599"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844341"
 ---
-# <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
+# <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回指定識別碼的資料庫使用者名稱。  
@@ -49,14 +49,14 @@ USER_NAME ( [ id ] )
  關聯至資料庫使用者的識別碼。 *id* 為 **int**。它必須用括號括住。  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar(256)**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
  當省略 *id* 時，會假設為目前內容中的目前使用者。 如果參數包含 NULL 一詞，就會傳回 NULL。 在 EXECUTE AS 陳述式後不指定 *id* 來呼叫 USER_NAME 時，USER_NAME 會傳回模擬使用者的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則 USER_NAME 會傳回 Windows 主體名稱而非群組。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-username"></a>A. 使用 USER_NAME  
+### <a name="a-using-user_name"></a>A. 使用 USER_NAME  
  下列範例會傳回使用者識別碼 `13` 的使用者名稱。  
   
 ```  
@@ -64,7 +64,7 @@ SELECT USER_NAME(13);
 GO  
 ```  
   
-### <a name="b-using-username-without-an-id"></a>B. 使用 USER_NAME 而不指定識別碼  
+### <a name="b-using-user_name-without-an-id"></a>B. 使用 USER_NAME 而不指定識別碼  
  下列範例不指定識別碼來尋找目前使用者的名稱。  
   
 ```  
@@ -81,7 +81,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="c-using-username-in-the-where-clause"></a>C. 在 WHERE 子句中使用 USER_NAME  
+### <a name="c-using-user_name-in-the-where-clause"></a>C. 在 WHERE 子句中使用 USER_NAME  
  下列範例會在 `sysusers` 中尋找資料列，這個資料列名稱等於套用系統函數 `USER_NAME` 至使用者識別碼 `1` 所得的結果。  
   
 ```  
@@ -99,7 +99,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="d-calling-username-during-impersonation-with-execute-as"></a>D. 於使用 EXECUTE AS 進行模擬期間呼叫 USER_NAME  
+### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D. 於使用 EXECUTE AS 進行模擬期間呼叫 USER_NAME  
  下列範例會顯示 `USER_NAME` 在模擬期間的行為方式。  
   
 ```  
@@ -125,7 +125,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username-without-an-id"></a>E. 使用 USER_NAME 而不指定識別碼  
+### <a name="e-using-user_name-without-an-id"></a>E. 使用 USER_NAME 而不指定識別碼  
  下列範例不指定識別碼來尋找目前使用者的名稱。  
   
 ```  
@@ -139,7 +139,7 @@ SELECT USER_NAME();
 User7                              
 ```  
   
-### <a name="f-using-username-in-the-where-clause"></a>F. 在 WHERE 子句中使用 USER_NAME  
+### <a name="f-using-user_name-in-the-where-clause"></a>F. 在 WHERE 子句中使用 USER_NAME  
  下列範例會在 `sysusers` 中尋找資料列，這個資料列名稱等於套用系統函數 `USER_NAME` 至使用者識別碼 `1` 所得的結果。  
   
 ```  
@@ -160,6 +160,6 @@ User7
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   

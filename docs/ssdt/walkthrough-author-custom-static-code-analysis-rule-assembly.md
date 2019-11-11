@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e2f103303a90837a899330952b6f69544b4c496
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140935"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659544"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說
 此逐步解說示範用來建立 SQL Server 程式碼分析規則的步驟。 在此逐步解說中建立的規則是用來避開預存程序、觸發程序和函數中的 WAITFOR DELAY 陳述式。  
@@ -67,7 +67,7 @@ ms.locfileid: "68140935"
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>建立自訂程式碼分析規則支援類別  
 在建立規則本身的類別之前，您將新增訪客類別和屬性類別至專案。 這些類別可能有助於建立額外的自訂規則。  
   
-您必須定義的第一個類別為 WaitForDelayVisitor 類別，衍生自 [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx)。 此類別提供模型中 WAITFOR DELAY 陳述式的存取權。 訪客類別會使用 SQL Server 所提供的 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API。 在此 API 中，Transact\-SQL 程式碼以抽象語法樹 (AST) 表示，而當您想要尋找特定語法物件 (例如 WAITFORDELAY 陳述式) 時，訪客類別可能很有用。 這些物件因為未與特定物件屬性或關係建立關聯，所以可能難以使用物件模型找到，但是使用訪客模式和 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API，就能輕易找到這些物件。  
+您必須定義的第一個類別為 WaitForDelayVisitor 類別，衍生自 [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor)。 此類別提供模型中 WAITFOR DELAY 陳述式的存取權。 訪客類別會使用 SQL Server 所提供的 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API。 在此 API 中，Transact\-SQL 程式碼以抽象語法樹 (AST) 表示，而當您想要尋找特定語法物件 (例如 WAITFORDELAY 陳述式) 時，訪客類別可能很有用。 這些物件因為未與特定物件屬性或關係建立關聯，所以可能難以使用物件模型找到，但是使用訪客模式和 [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API，就能輕易找到這些物件。  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>定義 WaitForDelayVisitor 類別  
   

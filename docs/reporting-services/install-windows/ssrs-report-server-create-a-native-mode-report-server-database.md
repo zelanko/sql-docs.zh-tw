@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652336"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593559"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>建立原生模式報表伺服器資料庫
 
@@ -67,7 +67,7 @@ ms.locfileid: "62652336"
   
 6.  重新啟動服務。  
   
-7.  開啟防火牆軟體，並開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽的通訊埠。 如果是預設執行個體，這對於 TCP/IP 連接通常是通訊埠 1433。 如需詳細資訊，請參閱《 [線上叢書》的](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) 設定用於 Database Engine 存取的 Windows 防火牆 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+7.  開啟防火牆軟體，並開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽的通訊埠。 如果是預設執行個體，這對於 TCP/IP 連接通常是通訊埠 1433。 如需詳細資訊，請參閱 [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
 ### <a name="to-create-a-local-report-server-database"></a>若要建立本機報表伺服器資料庫  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62652336"
   
 7.  檢閱 [摘要] 頁面上的資訊，以確認設定都正確無誤，然後選取 [下一步]  。  
   
-8.  選取 [報表伺服器 URL] 頁面上的 URL 來確認連線。 必須有定義 URL，這項測試才有效。 如果報表伺服器資料庫連線有效，您將會看到報表伺服器資料夾階層。 如需詳細資訊，請參閱《 [線上叢書》的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 驗證 Reporting Services 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+8.  選取 [報表伺服器 URL] 頁面上的 URL 來確認連線。 必須有定義 URL，這項測試才有效。 如果報表伺服器資料庫連線有效，您將會看到報表伺服器資料夾階層。 如需詳細資訊，請參閱 [驗證 Reporting Services 安裝](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)。  
 
 ## <a name="change-database-credentials"></a>變更資料庫認證
 

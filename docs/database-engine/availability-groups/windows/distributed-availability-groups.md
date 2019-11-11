@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ca8d93135a0034300bac4f5f5542350df25e866
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049850"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706226"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "73049850"
 
 ![分散式可用性群組和其資料移動](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
-將 AG 2 的主要複本設為接受插入、更新和刪除的唯一方式，是從 AG 1 手動容錯移轉分散式可用性群組。 在上圖中，因為 AG 1 包含資料庫的可寫入複本，所以發出容錯移轉時會將 AG 2 設為可處理插入、更新和刪除的可用性群組。 如需如何將某個分散式可用性群組容錯移轉至另一個可用性群組的資訊，請參閱[容錯移轉至次要可用性群組]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)。
+將 AG 2 的主要複本設為接受插入、更新和刪除的唯一方式，是從 AG 1 手動容錯移轉分散式可用性群組。 在上圖中，因為 AG 1 包含資料庫的可寫入複本，所以發出容錯移轉時會將 AG 2 設為可處理插入、更新和刪除的可用性群組。 如需如何將某個分散式可用性群組容錯移轉至另一個可用性群組的資訊，請參閱[容錯移轉至次要可用性群組](configure-distributed-availability-groups.md#failover)。
 
 > [!NOTE]
 > SQL Server 2016 中的分散式可用性群組只支援使用 FORCE_FAILOVER_ALLOW_DATA_LOSS 選項從某個可用性群組容錯移轉至另一個可用性群組。

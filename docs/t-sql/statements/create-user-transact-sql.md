@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c3afcf1c27d0b146e2f8762bd073853cc21ce2f
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: 112eb132c40b5b90137ebaf919f6a4ee2916bc95
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049925"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660436"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -139,8 +139,8 @@ CREATE USER user_name
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
 ```
 
-> [!IMPORTANT]
-> SQL Database 受控執行個體的 Azure AD 登入處於**公開預覽**狀態。
+> [!NOTE]
+> 受控執行個體功能的 Azure AD 系統管理員已在建立後變更。 如需詳細資訊，請參閱 [MI 的新 Azure AD 系統管理員功能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)。
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -468,7 +468,7 @@ WITH
 
  若要從 Azure AD 登入來建立 Azure AD 使用者，請使用下列語法。
 
- 使用授與 `sysadmin` 角色的 Azure AD 登入來登入受控執行個體。 下列範例會從登入 bob@contoso.com 來建立 Azure AD 使用者 bob@contoso.com。 此登入是在 [CREATE LOGIN](create-login-transact-sql.md#examples-4) 範例中建立。
+ 使用授與 `sysadmin` 角色的 Azure AD 登入來登入受控執行個體。 下列範例會從登入 bob@contoso.com 來建立 Azure AD 使用者 bob@contoso.com。 此登入是在 [CREATE LOGIN](create-login-transact-sql.md#examples) 範例中建立。
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];

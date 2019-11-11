@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b2f2135c410e4884dbf45595ad022a668b6fd709
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: eab7fa5a123f6370686cae5feaf36d458748ea7a
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532270"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844305"
 ---
 # <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -113,7 +113,7 @@ BDC 網域服務帳戶 (DSA) 必須能在 OU 中建立使用者、群組和電�
 
 - 按一下 [新增] 
 
-    - 按一下 [選取主體]  、插入 **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] DSA**，然後按一下 [確定]
+    - 按一下 [選取主體]  、插入 **[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]DSA**，然後按一下 [確定]
 
     - 將 [類型]  設定為 [允許] 
 
@@ -155,7 +155,7 @@ BDC 網域服務帳戶 (DSA) 必須能在 OU 中建立使用者、群組和電�
 
 ```bash
 export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal account name>
-export DOMAIN_SERVICE_ACCOUNT_USERNAME=<AD principal password>
+export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 ```
 
 ## <a name="provide-security-and-endpoint-parameters"></a>提供安全性和端點參數

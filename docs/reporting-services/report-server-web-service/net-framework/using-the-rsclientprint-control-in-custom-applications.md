@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5304a540e3f1af6930e982ceaff01063a7c0f432
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a2c548860065672147428c6a5b64bf4ac8be4b79
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155726"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593770"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自訂應用程式中使用 RSClientPrint 控制項
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控制項 **RSPrintClient** 提供在 HTML 檢視器中檢視的報表之用戶端列印。 它提供 [列印]  對話方塊，讓使用者能夠起始列印工作、預覽報表、指定要列印的頁面，以及變更邊界。 在用戶端列印作業期間，報表伺服器會在影像 (EMF) 轉譯延伸模組中轉譯報表，然後使用作業系統的列印功能來建立列印工作，並將它傳送到印表機。  
@@ -29,15 +29,14 @@ ms.locfileid: "70155726"
   
 -   使用此控制項即可改善網路架構報表的列印功能。 您可以用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 相容的程式設計語言或指令碼，來指定物件。 此控制項並不是要用於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Form 應用程式。  
   
--   從 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 程式檔案複製 .cab 檔，然後將它加入自訂應用程式的程式碼庫。  
-  
+-   從 [!INCLUDE[ssRSNoVersion](../../../includes/ssrsnoversion-md.md)] 程式檔案複製 .cab 檔，然後將它加入自訂應用程式的程式碼庫。  
+ 
 -   使用 \<OBJECT> 標記即可指定控制項。  
   
 -   在 OBJECT CODEBASE 屬性中，指定 .cab 檔的相對 URL 或完整 URL。  
   
 -   對 .cab 檔指定您自己的應用程式版本資訊，以追蹤在應用程式中使用的版本。  
-  
--   檢閱關於影像 (EMF) 轉譯的線上叢書主題，以了解如何轉譯頁面來進行預覽列印和輸出。  
+    
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 概觀  
  控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能，包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向等選擇。 此控制項已封裝成 CAB 檔。 [列印]  對話方塊中的文字，已當地語系化成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的所有語言。 **RSPrintClient** ActiveX 控制項會使用影像轉譯延伸模組 (EMF) 來列印報表。 其中使用下列 EMF 裝置資訊：StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight 和 PageWidth。 影像轉譯的其他裝置資訊設定則不支援。  

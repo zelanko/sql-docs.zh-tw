@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f3784eb3a95b3da02dce2cdecc8c5db2faeaac8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082815"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638050"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68082815"
   
  您可以從命令提示字元執行 **filtdump.exe** ，並提供單一引數。 此引數是個別檔案的名稱，而該檔案具有已安裝 IFilter 的檔案類型。 此公用程式顯示文件中 IFilter 所找到之所有屬性的清單，還包含其屬性集 GUID、整數識別碼和其他資訊。  
   
- 如需安裝此軟體的相關資訊，請參閱 [Microsoft Windows SDK for Windows 7 和 .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980)。 在您下載並安裝 SDK 之後，請查看下列資料夾中是否有 filtdump.exe 公用程式。  
+ 如需安裝此軟體的相關資訊，請參閱 [Microsoft Windows SDK for Windows 7 和 .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279)。 在您下載並安裝 SDK 之後，請查看下列資料夾中是否有 filtdump.exe 公用程式。  
   
 -   針對 64 位版本，請查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`。  
   

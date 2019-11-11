@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 64637e048277db5ad082b2b6a9ffad4b4b0d3ea7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: abae05ff73ff1da46bda029b32320a9deccfbf51
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892297"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637973"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -284,7 +284,7 @@ ms.locfileid: "68892297"
   
          **-n** 參數會指示 **netstat** 以數值方式顯示使用中 TCP 連線的位址與通訊埠號碼。 **-a** 參數會指示 **netstat** 顯示電腦所接聽之電腦上的 TCP 與 UDP 通訊埠。  
   
--   **PortQry** 公用程式可用於將 TCP/IP 通訊埠的狀態回報為接聽中、未接聽或已篩選。 (若為已篩選狀態，表示通訊埠不一定是接聽中。此狀態會指出公用程式未接收到通訊埠的回應)。**PortQry** 公用程式可從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=28590)下載。  
+-   **PortQry** 公用程式可用於將 TCP/IP 通訊埠的狀態回報為接聽中、未接聽或已篩選。 (若為已篩選狀態，表示通訊埠不一定是接聽中。此狀態會指出公用程式未接收到通訊埠的回應)。**PortQry** 公用程式可從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=17148)下載。  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows Server 系統的服務概觀和網路通訊埠需求 (機器翻譯)](https://support.microsoft.com/kb/832017)   

@@ -1,5 +1,5 @@
 ---
-title: Stretch Database 的限制 | Microsoft Docs
+title: Stretch Database 的限制
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 968425c6ecee0622c8a1e30b3e7a68ad05eccfaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136157"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843788"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database 的限制
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

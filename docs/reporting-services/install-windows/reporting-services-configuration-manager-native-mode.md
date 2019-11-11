@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503632"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593786"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
 
@@ -60,7 +60,7 @@ ms.locfileid: "65503632"
 
 - 進行設定的報表伺服器必須啟用並執行 Windows Management Instrumentation (WMI) 服務。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會使用報表伺服器 WMI 提供者來連接本機與遠端報表伺服器。 如果要設定遠端報表伺服器，該電腦必須允許遠端 WMI 存取。 如需詳細資訊，請參閱 [設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
 
-- 在您可以連接及設定遠端報表伺服器執行個體之前，您必須先啟用要通過 Windows 防火牆傳遞的 Windows Management Instrumentation (WMI) 呼叫。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) 設定報表伺服器來進行遠端管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
+- 在您可以連接及設定遠端報表伺服器執行個體之前，您必須先啟用要通過 Windows 防火牆傳遞的 Windows Management Instrumentation (WMI) 呼叫。 如需詳細資訊，請參閱 [設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。
 
 當您安裝 SQL Server Reporting Services 時，會自動安裝 Reporting Services 組態管理員。
 

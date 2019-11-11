@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1bf17d6635870a171ed1a20a1c659c190077d8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fdb68c0e61d5b48db3a997af0315e7cabf302f6
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513300"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593549"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS 加密金鑰 - 初始化報表伺服器
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，初始化的伺服器是可以在報表伺服器資料庫中加密和解密資料的伺服器。 初始化是報表伺服器作業的需求。 報表伺服器服務第一次啟動時，會進行初始化。 在您將報表伺服器聯結至現有的部署時，或者您在復原處理中手動重新建立金鑰時，也會進行初始化。 如需如何和為什麼使用加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 和[儲存加密的報表伺服器資料 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "62513300"
  唯有安裝識別碼與公開金鑰之間有配對時，報表伺服器才會初始化。 如果配對成功，就會建立允許可回覆加密的對稱金鑰。 如果配對失敗，則會停用報表伺服器，這時系統應會要求您套用備份金鑰，或者刪除加密資料 (如果備份金鑰無法使用或無效)。 如需報表伺服器所使用之加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。  
   
 > [!NOTE]  
->  您也可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者，以程式設計方式將報表伺服器初始化。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md) 存取 Reporting Services WMI 提供者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  您也可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者，以程式設計方式將報表伺服器初始化。 如需詳細資訊，請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)。  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>如何確認報表伺服器初始化  
  若要確認報表伺服器初始化，請在命令視窗中鍵入 **https://\<伺服器名稱>/reportserver**，來 Ping 報表伺服器 Web 服務。 如果發生 **RSReportServerNotActivated** 錯誤，初始化就會失敗。  

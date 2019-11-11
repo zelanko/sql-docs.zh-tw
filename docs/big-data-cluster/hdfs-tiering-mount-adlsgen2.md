@@ -5,16 +5,16 @@ description: 本文說明如何設定 HDFS 階層處理，以便能將外部 Azu
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/01/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c2c2a6510688f8adf74e50ae76a626a00955019d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531901"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632786"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在巨量資料叢集中掛接 ADLS Gen2 以進行 HDFS 階層處理
 
@@ -76,11 +76,8 @@ ms.locfileid: "73531901"
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
     fs.azure.account.oauth2.client.endpoint=[token endpoint],
     fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret],
-    fs.abfs.impl.disable.cache=true
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
-   
-ADLS 驅動程式的預設行為是快取認證。 這表示不正確的認證也會一併快取。若您在第一次嘗試掛接時，輸入了錯誤的認證，就可能會引發問題。 上述認證的最後一部分 (fs.abfs.impl.disable.cache=true) 可停用此快取。
 
 ## <a name="use-access-keys-to-mount"></a>使用存取金鑰來掛接
 
@@ -99,11 +96,8 @@ ADLS 驅動程式的預設行為是快取認證。 這表示不正確的認證�
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>,
-   fs.abfs.impl.disable.cache=true
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
-   
-ADLS 驅動程式的預設行為是快取認證。 這表示不正確的認證也會一併快取。若您在第一次嘗試掛接時，輸入了錯誤的認證，就可能會引發問題。 上述認證的最後一部分 (fs.abfs.impl.disable.cache=true) 可停用此快取。
 
 ## <a id="mount"></a> 掛接遠端 HDFS 儲存體
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2c2dc7aac7ae6eb86b66a6bbb371f11dc6372cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295078"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637946"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
 
@@ -85,7 +85,7 @@ ms.locfileid: "71295078"
   
     3.  **考慮擷取資料列計數資料**。 請考慮另外建立資料表以存放資料列計數資訊，在此資料表中，是以封裝的 ExecutionID 識別封裝執行的每個執行個體。 使用「資料列計數」轉換，在資料流程的關鍵點將資料列計數儲存到一系列變數中。 資料流程結束後，請使用執行 SQL 工作將這一系列的值插入資料表中的資料列，以供稍後進行分析及製作報表。  
   
-     如需此方法的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書中以下內容的＜ETL 稽核與記錄＞一節：[Project REAL：Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
+     如需此方法的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書中以下內容的＜ETL 稽核與記錄＞一節：[Project REAL：Business Intelligence ETL 設計練習](https://www.microsoft.com/download/details.aspx?id=14582) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用偵錯傾印檔案針對封裝執行進行疑難排解  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 如需相關資訊，請參閱 [產生封裝執行的傾印檔案](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  

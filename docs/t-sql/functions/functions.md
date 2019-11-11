@@ -20,12 +20,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940120"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843705"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 資料庫函式是什麼？
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "67940120"
 |[中繼資料函式](metadata-functions-transact-sql.md)|傳回資料庫和資料庫物件的相關資訊。|  
 |[安全性函式](security-functions-transact-sql.md)|傳回使用者和角色的相關資訊。|  
 |[字串函式](string-functions-transact-sql.md)|執行作業來處理字串 (**char** 或 **varchar**) 輸入值，並傳回字串或數值。|  
-|[系統函式](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|執行作業和傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的值、物件和設定的相關資訊。|  
+|[系統函式](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|執行作業和傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的值、物件和設定的相關資訊。|  
 |[系統統計函式](system-statistical-functions-transact-sql.md)|傳回系統的統計資訊。|  
 |[文字和影像函式](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|執行作業來處理文字或影像輸入值或資料行，以及傳回值的相關資訊。|  
   

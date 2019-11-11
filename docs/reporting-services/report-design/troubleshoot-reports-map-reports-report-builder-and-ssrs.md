@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03b34022547d8bd054817a389fa02a0ca03871c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574472"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594490"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
   當您將地圖或地圖圖層加入至報表時、自訂報表中現有的地圖或地圖圖層時、預覽報表中的地圖時，或發行包含地圖的報表時，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中可能會發生與地圖相關的問題。 您可以使用本主題來協助疑難排解這些問題。  
@@ -187,7 +187,7 @@ ms.locfileid: "65574472"
   
 -   地圖投射必須為 **[Mercator]** 。  
   
--   對於本機預覽，您必須擁有網際網路存取權。 對於從報表伺服器執行的報表，必須將報表伺服器設定為支援影像分割背景。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜規劃地圖支援＞。  
+-   對於本機預覽，您必須擁有網際網路存取權。 對於從報表伺服器執行的報表，必須將報表伺服器設定為支援影像分割背景。 如需詳細資訊，請參閱[規劃地圖報表](plan-a-map-report-report-builder-and-ssrs.md)。  
   
  如需新增圖格圖層的詳細資訊，請參閱[新增、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
@@ -206,6 +206,6 @@ ms.locfileid: "65574472"
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [疑難排解報表產生器](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [疑難排解報表產生器](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

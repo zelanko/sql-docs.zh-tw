@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513310"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593539"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密金鑰 - 刪除和重新建立加密金鑰
   刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。 執行這些工作是為了因應報表伺服器所受的特定威脅，或者當您無法存取報表伺服器資料庫時的最後手段。  
@@ -106,7 +106,7 @@ ms.locfileid: "62513310"
   
 1.  針對每個共用資料來源，您必須重新輸入連接字串。  
   
-2.  針對使用預存認證的每個報表與共用資料來源，您必須重新輸入使用者名稱與密碼，然後儲存。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 指定報表資料來源的認證和連接資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+2.  針對使用預存認證的每個報表與共用資料來源，您必須重新輸入使用者名稱與密碼，然後儲存。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 3.  針對每個資料驅動訂閱，開啟每個訂閱，並重新輸入訂閱資料庫的認證。  
   

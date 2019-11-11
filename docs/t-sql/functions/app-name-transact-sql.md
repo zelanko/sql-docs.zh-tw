@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e9ad22c9490c04906dafcccb74d9dd16f9496852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040367"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843435"
 ---
-# <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
+# <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函式會傳回目前工作階段的應用程式名稱 (如果應用程式設定該名稱值)。
@@ -67,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
 [函數](../../t-sql/functions/functions.md)
   
   
