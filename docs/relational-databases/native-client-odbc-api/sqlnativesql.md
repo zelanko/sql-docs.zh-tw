@@ -1,5 +1,5 @@
 ---
-title: SQLNativeSql | Microsoft Docs
+title: SQLNativeSql |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +14,17 @@ ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea38338373b416b6fc3a8275fa60fa62eaf685e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4d2baef508d6273ec6c89cca38961aa22742e69
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131298"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926021"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式符合**SQLNativeSql**不需要造訪伺服器的要求。 此函數可有效率地測試 SQL 陳述式的語法。 語法檢查不會判斷識別項或 SQL 陳述式中運算式的結果是否有效，以及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所傳回的原生 SQL **SQLNativeSql**執行失敗。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會滿足**SQLNativeSql**要求，而不需造訪伺服器。 此函數可有效率地測試 SQL 陳述式的語法。 語法檢查不會判斷 SQL 語句中的識別碼或運算式的結果是否有效，而且**SQLNativeSql**所傳回的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native SQL 都無法執行。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLNativeSql 函數](https://go.microsoft.com/fwlink/?LinkID=59358)   

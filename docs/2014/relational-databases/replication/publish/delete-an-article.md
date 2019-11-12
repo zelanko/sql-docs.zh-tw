@@ -19,12 +19,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960866"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882276"
 ---
 # <a name="delete-an-article"></a>刪除發行項
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中刪除發行項。 如需可以卸除發行項的情況以及發行項是否需要新快照集或重新初始化訂閱的詳細資訊，請參閱[在現有發行集中加入和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  
@@ -35,22 +35,22 @@ ms.locfileid: "62960866"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>從快照式或交易式發行集中刪除發行項  
   
-1.  從 **@publication** 指定的發行集執行 [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) 來刪除 **@article** 指定的發行項。 為 **@force_invalidate_snapshot** 指定 **@force_invalidate_snapshot** ＞。  
+1.  從 **\@publication** 指定的發行集執行 [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) 來刪除 **\@article** 指定的發行項。 為 **\@force_invalidate_snapshot** 指定 **1** 值。  
   
 2.  (選擇性) 若要從資料庫完全移除發行的物件，請在發行集資料庫的發行者上執行 `DROP <objectname>` 命令。  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>從合併式發行集中刪除發行項  
   
-1.  從 **@publication** 指定的發行集執行 [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 來刪除 **@article** 指定的發行項。 必要時，請為 **@force_invalidate_snapshot** 指定 **@force_invalidate_snapshot** 的值，並為 **@force_invalidate_snapshot** 指定 **@force_reinit_subscription** ＞。  
+1.  從 **\@publication** 指定的發行集執行 [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 來刪除 **\@article** 指定的發行項。 必要時，請為 **\@force_invalidate_snapshot** 指定 **1** 值，並為 **\@force_reinit_subscription** 指定 **1** 值。  
   
 2.  (選擇性) 若要從資料庫完全移除發行的物件，請在發行集資料庫的發行者上執行 `DROP <objectname>` 命令。  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
- 下列範例會刪除交易式發行集中的發行項。 由於這項變更會讓現有的快照集失效，所以會針對 **@force_invalidate_snapshot** 參數指定 **@force_invalidate_snapshot** 的值。  
+ 下列範例會刪除交易式發行集中的發行項。 由於這項變更會讓現有的快照集失效，所以請為 **\@force_invalidate_snapshot** 參數指定 **1** 值。  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- 下列範例會刪除合併式發行集中的兩個發行項。 由於這些變更會讓現有的快照集失效，所以會針對 **@force_invalidate_snapshot** 參數指定 **@force_invalidate_snapshot** 的值。  
+ 下列範例會刪除合併式發行集中的兩個發行項。 由於這些變更會讓現有的快照集失效，所以請為 **\@force_invalidate_snapshot** 參數指定 **1** 值。  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
