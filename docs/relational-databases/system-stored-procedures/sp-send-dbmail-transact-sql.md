@@ -63,13 +63,13 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @profile_name = ] 'profile_name'` 是用來傳送訊息之設定檔的名稱。 *Profile_name*的類型是**sysname**，預設值是 Null。 *Profile_name*必須是現有 Database Mail 設定檔的名稱。 未指定*profile_name*時， **sp_send_dbmail**會使用目前使用者的預設私人設定檔。 如果使用者沒有預設的私人設定檔， **sp_send_dbmail**會使用**msdb**資料庫的預設公用設定檔。 如果使用者沒有預設的私人設定檔，而且沒有資料庫的預設公用設定檔，則必須指定 **@no__t 1profile_name** 。  
+`[ @profile_name = ] 'profile_name'` 是用來傳送訊息之設定檔的名稱。 *Profile_name*的類型為**sysname**，預設值為 Null。 *Profile_name*必須是現有 Database Mail 設定檔的名稱。 若未指定*profile_name* ， **sp_send_dbmail**會使用目前使用者的預設私人設定檔。 如果使用者沒有預設的私人設定檔， **sp_send_dbmail**會使用**msdb**資料庫的預設公用設定檔。 如果使用者沒有預設的私人設定檔，而且沒有資料庫的預設公用設定檔，則必須指定 **\@profile_name** 。  
   
-`[ @recipients = ] 'recipients'` 是用來傳送訊息的電子郵件地址清單（以分號分隔）。 收件者清單的類型為**Varchar （max）** 。 雖然這個參數是選擇性的，但至少必須指定其中一個 **@no__t 1recipients**、 **@no__t 3copy_recipients**或 **@no__t 5blind_copy_recipients** ，否則**sp_send_dbmail**會傳回錯誤。  
+`[ @recipients = ] 'recipients'` 是用來傳送訊息的電子郵件地址清單（以分號分隔）。 收件者清單的類型為**Varchar （max）** 。 雖然此參數是選擇性的，但至少必須指定 **\@** 收件者、 **\@copy_recipients**或 **\@blind_copy_recipients**之一，或**sp_send_dbmail**傳回錯誤。  
   
-`[ @copy_recipients = ] 'copy_recipients'` 是用來複製訊息的電子郵件地址清單（以分號分隔）。 複製收件者清單的類型為**Varchar （max）** 。 雖然這個參數是選擇性的，但至少必須指定其中一個 **@no__t 1recipients**、 **@no__t 3copy_recipients**或 **@no__t 5blind_copy_recipients** ，否則**sp_send_dbmail**會傳回錯誤。  
+`[ @copy_recipients = ] 'copy_recipients'` 是用來複製訊息的電子郵件地址清單（以分號分隔）。 複製收件者清單的類型為**Varchar （max）** 。 雖然此參數是選擇性的，但至少必須指定 **\@** 收件者、 **\@copy_recipients**或 **\@blind_copy_recipients**之一，或**sp_send_dbmail**傳回錯誤。  
   
-`[ @blind_copy_recipients = ] 'blind_copy_recipients'` 是以分號分隔的電子郵件地址清單，用來將訊息複製到其中。 [密件副本收件者] 清單的類型為**Varchar （max）** 。 雖然這個參數是選擇性的，但至少必須指定其中一個 **@no__t 1recipients**、 **@no__t 3copy_recipients**或 **@no__t 5blind_copy_recipients** ，否則**sp_send_dbmail**會傳回錯誤。  
+`[ @blind_copy_recipients = ] 'blind_copy_recipients'` 是以分號分隔的電子郵件地址清單，用來將訊息複製到其中。 [密件副本收件者] 清單的類型為**Varchar （max）** 。 雖然此參數是選擇性的，但至少必須指定 **\@** 收件者、 **\@copy_recipients**或 **\@blind_copy_recipients**之一，或**sp_send_dbmail**傳回錯誤。  
   
 `[ @from_address = ] 'from_address'` 是電子郵件訊息的 [寄件者位址] 的值。 這是選擇性參數，用來覆寫郵件設定檔中的設定。 這個參數的類型為**Varchar （MAX）** 。 SMTP 安全性設定會決定是否要接受這些覆寫。 如果沒有指定參數，預設值為 NULL。  
   
@@ -114,79 +114,79 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  > [!IMPORTANT]
  > 因為此參數無法存取本機檔案系統，所以無法在 Azure SQL 受控執行個體中使用。
   
-`[ @query = ] 'query'` 是要執行的查詢。 查詢的結果可以附加成一個檔案，也可以包含在電子郵件訊息的主體中。 查詢的類型為**Nvarchar （max）** ，而且可以包含任何有效的 @no__t 1 語句。 請注意，查詢會在個別的會話中執行，因此查詢不會提供呼叫**sp_send_dbmail**之腳本中的區域變數。  
+`[ @query = ] 'query'` 是要執行的查詢。 查詢的結果可以附加成一個檔案，也可以包含在電子郵件訊息的主體中。 查詢的類型為**Nvarchar （max）** ，而且可以包含任何有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。 請注意，查詢會在個別的會話中執行，因此查詢中無法使用呼叫**sp_send_dbmail**之腳本中的區域變數。  
   
-`[ @execute_query_database = ] 'execute_query_database'` 是預存程式在其中執行查詢的資料庫內容。 參數的類型是**sysname**，預設值是目前的資料庫。 只有在指定 **@no__t 1query**時，此參數才適用。  
+`[ @execute_query_database = ] 'execute_query_database'` 是預存程式在其中執行查詢的資料庫內容。 參數的類型是**sysname**，預設值是目前的資料庫。 只有在指定 **\@查詢**時，此參數才適用。  
   
-`[ @attach_query_result_as_file = ] attach_query_result_as_file` 指定是否以附加檔案的方式傳回查詢的結果集。 *attach_query_result_as_file*的類型為**bit**，預設值是0。  
+`[ @attach_query_result_as_file = ] attach_query_result_as_file` 指定是否以附加檔案的形式傳回查詢的結果集。 *attach_query_result_as_file*的類型為**bit**，預設值是0。  
   
- 當值為0時，查詢結果會包含在電子郵件訊息的本文中， **@no__t 1body**參數的內容之後。 當值是 1 時，會以附加檔案的方式傳回結果。 只有在指定 **@no__t 1query**時，此參數才適用。  
+ 當值為0時，查詢結果會包含在電子郵件訊息的主體中，在 **\@body**參數的內容之後。 當值是 1 時，會以附加檔案的方式傳回結果。 只有在指定 **\@查詢**時，此參數才適用。  
   
-`[ @query_attachment_filename = ] query_attachment_filename` 指定要用於查詢附件之結果集的檔案名。 *query_attachment_filename*的類型為**Nvarchar （255）** ，預設值為 Null。 當*attach_query_result*為0時，會忽略這個參數。 當*attach_query_result*是1，且這個參數是 Null 時，Database Mail 會建立任意檔案名。  
+`[ @query_attachment_filename = ] query_attachment_filename` 指定要用於查詢附件之結果集的檔案名。 *query_attachment_filename*的類型為**Nvarchar （255）** ，預設值為 Null。 當*attach_query_result*為0時，會忽略這個參數。 當*attach_query_result*為1，且此參數為 Null 時，Database Mail 會建立任意檔案名。  
   
-`[ @query_result_header = ] query_result_header` 指定查詢結果是否包含資料行標頭。 Query_result_header 值的類型為**bit**。 當值是 1 時，查詢結果會包含資料行標頭。 當值是 0 時，查詢結果不會包含資料行標頭。 此參數的預設值為**1**。 只有在指定 **@no__t 1query**時，此參數才適用。  
+`[ @query_result_header = ] query_result_header` 指定查詢結果是否包含資料行標頭。 Query_result_header 值的類型為**bit**。 當值是 1 時，查詢結果會包含資料行標頭。 當值是 0 時，查詢結果不會包含資料行標頭。 此參數的預設值為**1**。 只有在指定 **\@查詢**時，此參數才適用。  
  
    >[!NOTE]
-   > 將 @no__t 0query_result_header 設定為0，並將 @no__t 1query_no_truncate 設為1時，可能會發生下列錯誤：
+   > 將 \@query_result_header 設定為0，並將 \@query_no_truncate 設定為1時，可能會發生下列錯誤：
    > <br> 訊息22050，層級16，狀態1，行12：無法初始化 sqlcmd 程式庫，錯誤號碼為-2147024809。
   
-`[ @query_result_width = ] query_result_width` 是用來格式化查詢結果的線條寬度（以字元為單位）。 *Query_result_width*的類型為**int**，預設值是256。 提供的值必須介於 10 和 32767 之間。 只有在指定 **@no__t 1query**時，此參數才適用。  
+`[ @query_result_width = ] query_result_width` 是用來格式化查詢結果的線條寬度（以字元為單位）。 *Query_result_width*的類型為**int**，預設值是256。 提供的值必須介於 10 和 32767 之間。 只有在指定 **\@查詢**時，此參數才適用。  
   
 `[ @query_result_separator = ] 'query_result_separator'` 是在查詢輸出中用來分隔資料行的字元。 分隔符號的類型為**char （1）** 。 預設值是 ' ' (空白)。  
   
 `[ @exclude_query_output = ] exclude_query_output` 指定是否要在電子郵件訊息中傳回查詢執行的輸出。 **exclude_query_output**是 bit，預設值是0。 當這個參數為0時， **sp_send_dbmail**預存程式的執行會列印在主控台上執行查詢的結果所傳回的訊息。 當這個參數是1時， **sp_send_dbmail**預存程式的執行並不會在主控台上列印任何查詢執行訊息。  
   
-`[ @append_query_error = ] append_query_error` 指定從 **\@query**引數中指定的查詢傳回錯誤時，是否傳送電子郵件。 **append_query_error**是**bit**，預設值是0。 當這個參數是 1 時，Database Mail 會傳送電子郵件，且會在電子郵件的主體中包含查詢錯誤訊息。 當此參數為0時，Database Mail 不會傳送電子郵件訊息，而且**sp_send_dbmail**會以傳回碼1結束，表示失敗。  
+`[ @append_query_error = ] append_query_error` 指定在 **\@查詢**引數中指定的查詢傳回錯誤時，是否傳送電子郵件。 **append_query_error**是**bit**，預設值是0。 當這個參數是 1 時，Database Mail 會傳送電子郵件，且會在電子郵件的主體中包含查詢錯誤訊息。 當此參數為0時，Database Mail 不會傳送電子郵件訊息，且**sp_send_dbmail**結束，傳回碼為1，表示失敗。  
   
-`[ @query_no_truncate = ] query_no_truncate` 指定是否使用選項來執行查詢，以避免截斷大型可變長度資料類型（**Varchar （max）** 、 **Nvarchar （max）** 、 **Varbinary （max）** 、 **xml**、 **text**、 **Ntext**、 **image**和使用者定義的資料類型）。 若有設定，查詢結果不包含資料行標頭。 *Query_no_truncate*值的類型為**bit**。 當此值是 0 或未指定時，查詢中的資料行會截斷為 256 個字元。 當此值是 1 時，不會截斷查詢中的資料行。 這個參數的預設值是 0。  
+`[ @query_no_truncate = ] query_no_truncate` 指定是否要使用可避免截斷大型可變長度資料類型（**Varchar （max）** 、 **Nvarchar （max）** 、 **Varbinary （max）** 、 **xml**、 **text**、 **Ntext**、 **image**和使用者定義資料類型）的選項來執行查詢。 若有設定，查詢結果不包含資料行標頭。 *Query_no_truncate*值的類型為**bit**。 當此值是 0 或未指定時，查詢中的資料行會截斷為 256 個字元。 當此值是 1 時，不會截斷查詢中的資料行。 這個參數的預設值是 0。  
   
 > [!NOTE]  
 >  當與大量資料搭配使用時，\@**query_no_truncate**選項會耗用額外的資源，而且可能會降低伺服器效能。  
   
-`[ @query_result_no_padding ] @query_result_no_padding`，類型為 bit。 預設值為 0。 當您將設為1時，不會填補查詢結果，可能會減少檔案大小。如果您將 \@query_result_no_padding 設定為1，並設定 \@query_result_width 參數，則 \@query_result_no_padding 參數會覆寫 \@query_result_width 參數。  
+`[ @query_result_no_padding ] @query_result_no_padding` 類型為 bit。 預設值是 0。 當您將設為1時，不會填補查詢結果，可能會減少檔案大小。如果您將 \@query_result_no_padding 設定為1，並將 \@query_result_width 參數，則 \@query_result_no_padding 參數會覆寫 \@query_result_width 參數。  
   
  在此情況下，不會發生任何錯誤。  
  
   >[!NOTE]
-  > 將 @no__t 0query_result_no_padding 設定為1，並為 @no__t 1query_no_truncate 提供參數時，可能會發生下列錯誤：
-  > <br> 訊息22050，層級16，狀態1，行0：無法執行查詢，因為 @no__t 0query_result_no_append 和 @no__t 1query_no_truncate 選項互斥。 
+  > 將 \@query_result_no_padding 設定為1，並為 \@query_no_truncate 提供參數時，可能會發生下列錯誤：
+  > <br> 訊息22050，層級16，狀態1，行0：無法執行查詢，因為 \@query_result_no_append 和 \@query_no_truncate 選項互斥。 
   
- 如果您將 \@query_result_no_padding 設定為1，並且設定 \@query_no_truncate 參數，則會引發錯誤。  
+ 如果您將 \@query_result_no_padding 設定為1，並將 \@query_no_truncate 參數，則會引發錯誤。  
   
 `[ @mailitem_id = ] mailitem_id [ OUTPUT ]` 選擇性輸出參數會傳回訊息的*mailitem_id* 。 *Mailitem_id*的類型為**int**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 傳回碼為 0 表示成功。 其他任何值都表示失敗。 失敗之語句的錯誤碼會儲存在 \@ @ no__t-1ERROR 變數中。  
+ 傳回碼為 0 表示成功。 其他任何值都表示失敗。 失敗之語句的錯誤碼會儲存在 \@\@錯誤變數中。  
   
 ## <a name="result-sets"></a>結果集  
  成功時，傳回「郵件已列入佇列」訊息。  
   
 ## <a name="remarks"></a>備註  
- 使用之前，必須先使用 Database Mail Configuration Wizard 或**sp_configure**來啟用 Database Mail。  
+ 使用之前，必須先使用 [Database Mail 設定] [] 或 [ **Sp_configure**] 來啟用 Database Mail。  
   
- **sysmail_stop_sp**會停止外部程式所使用的 Service Broker 物件來停止 Database Mail。 當使用**sysmail_stop_sp**停止 Database Mail 時， **sp_send_dbmail**仍會接受郵件。 若要開始 Database Mail，請使用**sysmail_start_sp**。  
+ 藉由停止外部程式所使用的 Service Broker 物件， **sysmail_stop_sp**停止 Database Mail。 當使用**sysmail_stop_sp**停止 Database Mail 時， **sp_send_dbmail**仍接受郵件。 若要開始 Database Mail，請使用**sysmail_start_sp**。  
   
- 當未指定 **@no__t 1profile**時， **sp_send_dbmail**會使用預設設定檔。 如果傳送電子郵件訊息的使用者有預設私人設定檔，Database Mail 會使用這個設定檔。 如果使用者沒有預設的私人設定檔， **sp_send_dbmail**會使用預設的公用設定檔。 如果沒有使用者的預設私人設定檔，而且沒有預設的公用設定檔，則**sp_send_dbmail**會傳回錯誤。  
+ 未指定 **\@設定檔**時， **sp_send_dbmail**會使用預設設定檔。 如果傳送電子郵件訊息的使用者有預設私人設定檔，Database Mail 會使用這個設定檔。 如果使用者沒有預設的私人設定檔， **sp_send_dbmail**會使用預設的公用設定檔。 如果沒有使用者的預設私人設定檔，而且沒有預設的公用設定檔， **sp_send_dbmail**會傳回錯誤。  
   
- **sp_send_dbmail**不支援沒有內容的電子郵件訊息。 若要傳送電子郵件訊息，您必須指定至少一個 **@no__t 1body**、 **@no__t 3query**、 **@no__t 5file_attachments**或 **@no__t 7subject**。 否則， **sp_send_dbmail**會傳回錯誤。  
+ **sp_send_dbmail**不支援沒有內容的電子郵件訊息。 若要傳送電子郵件訊息，您必須指定至少一個 **\@主體**、 **\@查詢**、 **\@file_attachments** 或  **\@** 主旨。 否則， **sp_send_dbmail**會傳回錯誤。  
   
- Database Mail 利用目前使用者的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全性內容來控制檔案的存取。 因此，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行驗證的使用者無法使用 **\@file_attachments**來附加檔案。 Windows 不允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在遠端電腦之間提供認證。 因此，從執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦以外的電腦執行命令時，Database Mail 可能無法從網路共用附加檔案。  
+ Database Mail 利用目前使用者的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 安全性內容來控制檔案的存取。 因此，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication 進行驗證的使用者無法使用 **\@file_attachments**附加檔案。 Windows 不允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在遠端電腦之間提供認證。 因此，從執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦以外的電腦執行命令時，Database Mail 可能無法從網路共用附加檔案。  
   
- 如果同時指定 **@no__t 1query**和 **@no__t 3file_attachments** ，而且找不到檔案，則查詢仍會執行，但不會傳送電子郵件。  
+ 如果同時指定 **\@查詢**和 **\@file_attachments** ，而且找不到檔案，則查詢仍會執行，但不會傳送電子郵件。  
   
  當指定查詢時，結果集會格式化為內嵌文字。 結果中的二進位資料會以十六進位格式傳送。  
   
- **@No__t-1recipients**、 **@no__t 3copy_recipients**和 **@no__t 5blind_copy_recipients**的參數是以分號分隔的電子郵件地址清單。 至少必須提供這些參數的其中一個，否則**sp_send_dbmail**會傳回錯誤。  
+ **\@** 收件者、 **\@copy_recipients**和 **\@blind_copy_recipients**的參數是以分號分隔的電子郵件地址清單。 至少必須提供這些參數的其中一個，否則**sp_send_dbmail**會傳回錯誤。  
   
- 執行沒有交易內容的**sp_send_dbmail**時，Database Mail 會啟動並認可隱含交易。 從現有的交易內執行**sp_send_dbmail**時，Database Mail 會依賴使用者來認可或回復任何變更。 它並不會啟動內部交易。  
+ 在沒有交易內容的情況下執行**sp_send_dbmail**時，Database Mail 會啟動並認可隱含交易。 從現有的交易內執行**sp_send_dbmail**時，Database Mail 會依賴使用者來認可或回復任何變更。 它並不會啟動內部交易。  
   
 ## <a name="permissions"></a>Permissions  
- **Sp_send_dbmail**的執行許可權預設為**Msdb**資料庫中**DatabaseMailUser**資料庫角色的所有成員。 不過，當傳送訊息的使用者沒有使用該要求設定檔的許可權時， **sp_send_dbmail**會傳回錯誤，且不會傳送訊息。  
+ **Sp_send_dbmail**的執行許可權預設為**Msdb**資料庫中**DatabaseMailUser**資料庫角色的所有成員。 不過，當傳送訊息的使用者沒有使用該要求設定檔的許可權時， **sp_send_dbmail**會傳回錯誤，而且不會傳送訊息。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-sending-an-e-mail-message"></a>A. 傳送電子郵件訊息  
- 這個範例會使用電子郵件地址，將電子郵件訊息傳送給您的朋友 `myfriend@Adventure-Works.com`。 訊息的主旨是 `Automated Success Message`。 訊息的主體包含 `'The stored procedure finished successfully'` 這個句子。  
+ 這個範例會使用電子郵件地址 `myfriend@Adventure-Works.com`將電子郵件訊息傳送給您的朋友。 訊息的主旨是 `Automated Success Message`。 訊息的主體包含 `'The stored procedure finished successfully'` 這個句子。  
   
 ```  
 EXEC msdb.dbo.sp_send_dbmail  
@@ -196,8 +196,8 @@ EXEC msdb.dbo.sp_send_dbmail
     @subject = 'Automated Success Message' ;  
 ```  
   
-### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>B. 利用查詢結果傳送電子郵件訊息  
- 這個範例會使用電子郵件地址，將電子郵件訊息傳送給您的朋友 `yourfriend@Adventure-Works.com`。 訊息的主旨是 `Work Order Count`，且會執行查詢來顯示在 2004 年 4 月 30 日之後 `DueDate` 小於兩天的工作訂單數目。 Database Mail 會將結果附加為一個文字檔。  
+### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>b. 利用查詢結果傳送電子郵件訊息  
+ 這個範例會使用電子郵件地址 `yourfriend@Adventure-Works.com`將電子郵件訊息傳送給您的朋友。 訊息的主旨是 `Work Order Count`，且會執行查詢來顯示在 2004 年 4 月 30 日之後 `DueDate` 小於兩天的工作訂單數目。 Database Mail 會將結果附加為一個文字檔。  
   
 ```  
 EXEC msdb.dbo.sp_send_dbmail  
@@ -211,7 +211,7 @@ EXEC msdb.dbo.sp_send_dbmail
 ```  
   
 ### <a name="c-sending-an-html-e-mail-message"></a>C. 傳送 HTML 電子郵件訊息  
- 這個範例會使用電子郵件地址，將電子郵件訊息傳送給您的朋友 `yourfriend@Adventure-Works.com`。 訊息的主旨是 `Work Order List`，且包含一份 HTML 文件，其中顯示在 2004 年 4 月 30 日之後 `DueDate` 小於兩天的工作訂單。 Database Mail 會使用 HTML 格式來傳送訊息。  
+ 這個範例會使用電子郵件地址 `yourfriend@Adventure-Works.com`將電子郵件訊息傳送給您的朋友。 訊息的主旨是 `Work Order List`，且包含一份 HTML 文件，其中顯示在 2004 年 4 月 30 日之後 `DueDate` 小於兩天的工作訂單。 Database Mail 會使用 HTML 格式來傳送訊息。  
   
 ```  
 DECLARE @tableHTML  NVARCHAR(MAX) ;  
@@ -248,7 +248,7 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail 預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
+ [Database Mail 預存&#40;程式 transact-sql&#41; ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
   
   

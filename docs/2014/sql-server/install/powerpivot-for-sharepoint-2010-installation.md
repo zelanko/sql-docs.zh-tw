@@ -25,11 +25,11 @@ ms.locfileid: "71952056"
 >   
 >  -   [SQL Server 服務安裝的總覽](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md)中的「SQL SERVER 2012 SP1」一節。  
   
- Analysis Services 會為含有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 工作簿，提供伺服器端的處理。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務會與 Analysis Services 一起運作，並加入 SharePoint 整合、負載平衡及連接管理。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會藉由將其大規模資料處理功能與 Excel 提供的資料轉譯服務配對，來擴充 Excel Services。  
+ Analysis Services 會為含有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 工作簿，提供伺服器端的處理。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務會與 Analysis Services 一起運作，並加入 SharePoint 整合、負載平衡及連接管理。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 藉由將 Excel 服務的大規模資料處理功能與 Excel 提供的資料轉譯服務配對，來擴充 Excel Services。  
   
  若要安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，請使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝媒體。  
   
- 如需有關先進部署案例的指示，請參閱 @no__t 0Deployment 檢查清單：Reporting Services、Power View 和 PowerPivot for SharePoint @ no__t-0 和 [Deployment 檢查清單：將 PowerPivot 服務器加入至 SharePoint 2010 伺服器陣列 @ no__t-0 以向外延展。  
+ 如需有關先進部署案例的指示，請參閱[部署檢查清單： Reporting Services、Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署檢查清單：將 PowerPivot 服務器新增至 SharePoint 2010 伺服器陣列以向外](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)延展。  
   
 ## <a name="in-this-section"></a>本節內容  
  [安裝 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  

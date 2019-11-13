@@ -72,7 +72,7 @@ ms.locfileid: "71952646"
 |**(6)**|SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 在 **[資料模型設定]** 中設定 Excel Services 應用程式使用此伺服器。|  
 |**(7)**|SharePoint 內容、組態和服務應用程式資料庫。|  
   
- ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback)（ https://connect.microsoft.com/SQLServer/Feedback) 。  
+ ![SharePoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見反應和連絡人資訊](https://connect.microsoft.com/SQLServer/Feedback)（ https://connect.microsoft.com/SQLServer/Feedback)。  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a>PowerPivot for SharePoint 2013 單一伺服器部署  
  單一伺服器部署對於測試很有用，但是不建議用於實際部署。  
@@ -91,9 +91,9 @@ ms.locfileid: "71952646"
 ###  <a name="bkmk_powerpivot_sharepoint2013_2server"></a>PowerPivot for SharePoint 2013 2 伺服器部署  
  在下列雙重伺服器部署中，SQL Server Database Engine 和 SharePoint 模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在與 SharePoint 不同的伺服器上執行。 若為 SharePoint 2013， [!INCLUDE[ssGeminiLongvnext](../../includes/ssgeminilongvnext-md.md)] 安裝程式套件 (**spPowerPivot.msi**) 是安裝在 SharePoint 伺服器上。  
   
- [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 會擴充 SharePoint Server 2013，以加入伺服器端資料重新整理處理、資料提供者、@no__t 1 圖庫，以及具有先進資料模型的 @no__t 2 活頁簿與 Excel 活頁簿的管理支援。  
+ [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 擴充 SharePoint Server 2013，以加入伺服器端資料重新整理處理、資料提供者、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫，以及使用 advanced data 模型的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿與 Excel 活頁簿的管理支援。  
   
- 此安裝程式套件屬於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 功能套件的一部分。 您可以從[microsoft® SQL Server® 2014 PowerPivot®](https://go.microsoft.com/fwlink/?LinkID=296473) （HYPERLINK "®-2" \t "_blank"®-3），從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心下載此功能套件。  
+ 此安裝程式套件屬於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 功能套件的一部分。 您可以從 Microsoft®的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心下載此功能套件[SQL Server® 2014 PowerPivot® For microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) （HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>）。  
   
  ![SSAS PowerPivot 模式2伺服器部署](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot 模式2伺服器部署")  
   
@@ -172,8 +172,8 @@ ms.locfileid: "71952646"
   
  ![5-伺服器拓撲](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-伺服器拓撲")  
   
-## <a name="see-also"></a>請參閱  
- [Reporting Services sharepoint 模式安裝&#40;sharepoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+## <a name="see-also"></a>另請參閱  
+ [Reporting Services sharepoint 模式安裝&#40;sharepoint 2010 和 SharePoint 2013&#41; ](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
  [PowerPivot for SharePoint 2013 安裝](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
  [PowerPivot for SharePoint 2010 安裝](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

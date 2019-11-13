@@ -26,7 +26,7 @@ ms.locfileid: "71952247"
   
  
   
- 如需有關如何在相同伺服器上安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的指示，請參閱 [Deployment 檢查清單：Reporting Services、Power View 和 PowerPivot for SharePoint ](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。  
+ 如需有關如何在相同伺服器上安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的指示，請參閱[部署檢查清單： Reporting Services、Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。  
   
 ## <a name="prerequisites"></a>Prerequisites  
   
@@ -42,7 +42,7 @@ ms.locfileid: "71952247"
   
 6.  必須要有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 執行個體名稱。 在您要安裝 PowerPivot for SharePoint 的電腦上，不能有現存的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。  
   
-7.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體不得為 SQL Server 容錯移轉叢集的一部分。 使用 SharePoint 產品的高可用性功能。 例如，Excel Services 會管理 PowerPivot for SharePoint 伺服器的負載平衡。 如需詳細資訊，請參閱[管理 Excel Services 資料模型設定（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780.aspx) （ https://technet.microsoft.com/library/jj219780.aspx) 。  
+7.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體不得為 SQL Server 容錯移轉叢集的一部分。{2} 使用 SharePoint 產品的高可用性功能。 例如，Excel Services 會管理 PowerPivot for SharePoint 伺服器的負載平衡。 如需詳細資訊，請參閱[管理 Excel Services 資料模型設定（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780.aspx) （ https://technet.microsoft.com/library/jj219780.aspx)。  
   
 8.  如果您要在現存的伺服器陣列上安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，必須要有一個或多個為傳統模式驗證所設定的 SharePoint Web 應用程式。 Web 應用程式必須支援傳統模式驗證，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取才能運作。 如需傳統模式需求的詳細資訊，請參閱[PowerPivot 驗證和授權](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71952247"
   
     -   [在 SharePoint 2010 伺服器陣列中使用 SQL Server BI 功能的指引](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
-##  <a name="InstallSQL"></a> 步驟 1：安裝 PowerPivot for SharePoint  
+##  <a name="InstallSQL"></a>步驟1：安裝 PowerPivot for SharePoint  
  在此步驟中，您要執行 SQL Server 安裝程式來安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 在後續步驟中，您會將伺服器設定為安裝後工作。  
   
 1.  插入安裝媒體或開啟包含 SQL Server 安裝檔的資料夾，然後按兩下 [ **setup.exe**]。  
@@ -115,12 +115,12 @@ ms.locfileid: "71952247"
 > [!TIP]  
 >  如果您需要排除 SQL Server 安裝的問題，請參閱[查看和閱讀 SQL Server 安裝程式記錄](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)檔。  
   
-##  <a name="bkmk_config"></a> 步驟 2：設定伺服器  
+##  <a name="bkmk_config"></a>步驟2：設定伺服器  
   
 > [!IMPORTANT]  
 >  您必須先安裝 SharePoint 2010 SP2，才能設定 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 或是使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫伺服器的 SharePoint 伺服器陣列。 如果您尚未安裝該 Service Pack，請在開始設定伺服器之前先加以安裝。  
   
- 在設定好伺服器之前，安裝作業不會完成。 在此版本中，伺服器設定一律會以安裝後工作的方式執行，並使用下列其中一種方法：[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設定工具、管理中心或 PowerShell。 若要繼續，請選擇下列其中一種方式進行：  
+ 在設定好伺服器之前，安裝作業不會完成。 在此版本中，伺服器設定一律會以安裝後工作加以執行，請使用下列方式之一：[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具、管理中心或 PowerShell。 若要繼續，請選擇下列其中一種方式進行：  
   
 -   [設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 設定工具&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "71952247"
   
  **連接到資料庫引擎實例。** 當您安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，SQL Server 安裝程式會提供您將 Database Engine 執行個體加入安裝中的選項。 如果您要設定新的伺服器陣列，且需要資料庫伺服器來執行伺服器陣列的設定和內容資料庫，您可能會將資料庫引擎實例新增至您的安裝。 如果您已加入 Database Engine，其會安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。 每當您需要指定與此實例的連接時（例如，如果您使用該 wizard 設定伺服器陣列，請在伺服器陣列設定 wizard 中），請記得以此格式輸入資料庫名稱： < `servername` > \Powerpivot。  
   
-##  <a name="bkmk_redist"></a> 步驟 3：在 Excel Services 應用程式伺服器上安裝 Analysis Services OLE DB 提供者  
+##  <a name="bkmk_redist"></a>步驟3：在 Excel Services 應用程式伺服器上安裝 Analysis Services OLE DB 提供者  
  如果您在個別的應用程式伺服器上執行 Excel Calculation Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，則需要額外的安裝步驟。 在執行 Excel Calculation Services 的應用程式伺服器上，安裝 Analysis Services OLE DB 提供者 (MSOLAP) 的適當版本。  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP 包含在 SQL Server 安裝程式中，因此只有在應用程式伺服器不是 PowerPivot 應用程式伺服器時，才需要明確安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP。  
@@ -142,13 +142,13 @@ ms.locfileid: "71952247"
   
  如需安裝提供者的詳細資訊（包括驗證步驟），請參閱[在 SharePoint 伺服器上安裝 Analysis Services OLE DB Provider](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
-##  <a name="bkmk_verify"></a> 步驟 4：確認安裝  
+##  <a name="bkmk_verify"></a>步驟4：驗證安裝  
  在這個最後步驟中，您將驗證 SharePoint 2010 和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 都能完整運作。 如需相關指示，請參閱[Verify a PowerPivot for SharePoint 安裝](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)。  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot for SharePoint 2010 安裝](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Deployment 檢查清單：Reporting Services、Power View 和 PowerPivot for SharePoint ](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)    
- [Deployment 檢查清單：藉由將 PowerPivot 服務器新增至 SharePoint 2010 伺服器陣列 ](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md) 來進行相應放大    
- [Deployment 檢查清單：PowerPivot for SharePoint 2010 ](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md) 的多伺服器安裝  
+ [部署檢查清單： Reporting Services、Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
+ [部署檢查清單：將 PowerPivot 服務器加入至 SharePoint 2010 伺服器陣列，以相應](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)放大   
+ [部署檢查清單： PowerPivot for SharePoint 2010 的多伺服器安裝](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
   
