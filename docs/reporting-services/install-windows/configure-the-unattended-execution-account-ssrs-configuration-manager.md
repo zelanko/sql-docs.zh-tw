@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502938"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593318"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  
   
--   透過網路針對使用資料庫驗證的報表傳送連接要求，或是連接到不需要或不使用驗證的外部報表資料來源。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [指定報表資料來源的認證和連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 。  
-  
+-   透過網路針對使用資料庫驗證的報表傳送連接要求，或是連接到不需要或不使用驗證的外部報表資料來源。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。
+
 -   擷取報表中使用的外部影像檔。 如果想要使用影像檔而該檔案無法透過匿名存取來存取，則您可以設定自動報表處理帳戶，並授與該帳戶存取檔案的權限。  
   
  自動報表處理是指由事件觸發 (不論是排程驅動事件或資料重新整理事件)，而非由使用者要求觸發的任何報表執行處理。 報表伺服器使用自動報表處理帳戶，來登入主控外部資料來源的電腦。 因為報表伺服器服務帳戶的認證絕不會用來連接到其他電腦，所以需要此帳戶。  
@@ -56,8 +56,8 @@ ms.locfileid: "65502938"
   
      **rsconfig -e -u\<網域/使用者名稱> -p\<密碼>**  
   
- **rsconfig -e** 可支援其他引數。 如需語法的詳細資訊以及若要檢視命令範例，請參閱《SQL Server 線上叢書》中的 [rsconfig 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)。  
-  
+ **rsconfig -e** 可支援其他引數。 如需語法的詳細資訊及若要檢視命令範例，請參閱 [rsconfig Utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) (rsconfig 公用程式 &#40;SSRS&#41;)。
+ 
 ### <a name="how-account-information-is-stored"></a>如何儲存帳戶資訊  
  當您設定此帳戶時，下列設定會當做加密的值指定於本機或遠端報表伺服器執行個體上的 RSreportserver.config 檔案中：  
   
@@ -104,6 +104,6 @@ ms.locfileid: "65502938"
  帳戶資訊會隨即從 RSReportServer.config 檔案中移除。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員 (SSRS 原生模式)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services 組態管理員 (SSRS 原生模式)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

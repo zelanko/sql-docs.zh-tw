@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1f021382556c13a20b0a8988b8b5199c21c9de7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63225672"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593855"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>加入和移除向外延展部署的加密金鑰
   您可以設定多部報表伺服器來使用共用報表伺服器資料庫，以便在向外延展部署模型中執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 向外延展部署的成員資格，會依報表伺服器是否在報表伺服器資料庫中儲存加密金鑰而定。 您可以加入和移除特定報表伺服器執行個體的加密金鑰，來控制向外延展部署成員資格。 如果您要從部署中移除節點，您可以依照任何順序來移除它們。 如果您要將節點加入部署中，您必須從已屬於部署的報表伺服器聯結任何新的執行個體。  
@@ -58,7 +58,7 @@ ms.locfileid: "63225672"
     ```  
 4. 重新啟動 Reporting Services Windows 服務。
   
- 雖然這些步驟會從向外延展部署中移除報表伺服器，但是它們不會解除安裝報表伺服器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 在您從向外延展部署中移除報表伺服器之後，如果不再需要該伺服器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，可以解除安裝該伺服器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 如需相關資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》的[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
+ 雖然這些步驟會從向外延展部署中移除報表伺服器，但是它們不會解除安裝報表伺服器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 在您從向外延展部署中移除報表伺服器之後，如果不再需要該伺服器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，可以解除安裝該伺服器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 如需資訊，請參閱[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)
   
 ## <a name="see-also"></a>另請參閱  
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   

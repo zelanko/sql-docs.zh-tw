@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702698"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594370"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68702698"
 
 [永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 ODBC Driver for SQL Server 等啟用了 Always Encrypted 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料來達成此目的。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 「具有安全記憶體保護區的 Always Encrypted」  會延伸此功能以啟用更豐富的敏感性資料功能，同時保持資料的機密性。
 
-如需詳細資訊, 請參閱[Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[使用安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+如需詳細資訊，請參閱[Always Encrypted （資料庫引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[使用安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
 ### <a name="prerequisites"></a>Prerequisites
 
@@ -59,23 +59,23 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>啟用具有安全記憶體保護區的 Always Encrypted
 
-從17.4 版開始, 驅動程式支援安全記憶體保護區 Always Encrypted。 若要在連接到 SQL Server 2019 或更新版本時啟用記憶體保護區, 請將`ColumnEncryption` DSN、連接字串或連接屬性設定為記憶體保護區類型和證明通訊協定的名稱, 以及相關聯的證明資料 (以逗號分隔)。 在17.4 版中, 只支援以[虛擬化為基礎的安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)記憶體保護區類型和[主機守護者服務](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)證明通訊協定 (由`VBS-HGS`表示); 若要使用, 請指定證明伺服器的 URL, 例如:
+從 17.4 版開始，驅動程式支援具有安全記憶體保護區的 Always Encrypted。 若要在連接到 SQL Server 2019 或更新版本時啟用使用記憶體保護區，請將 `ColumnEncryption` DSN、連接字串或連接屬性設定為記憶體保護區類型和證明通訊協定的名稱，以及相關聯的證明資料，並以逗號分隔。 在17.4 版中，只支援以[虛擬化為基礎的安全性](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)記憶體保護區類型和[主機守護者服務](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)證明通訊協定（以 `VBS-HGS`表示）;若要使用它，請指定證明伺服器的 URL，例如：
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
 ```
 
-如果已正確設定伺服器和證明服務, 以及所需資料行的記憶體保護區啟用 Cmk 和 Cek, 您現在應該能夠執行使用記憶體保護區的查詢, 例如就地加密和豐富計算, 以及Always Encrypted 提供的現有功能。 如需詳細資訊, 請參閱[使用 secure 記憶體保護區設定 Always Encrypted](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) 。
+如果已正確設定伺服器和證明服務，以及所需資料行的記憶體保護區啟用 Cmk 和 Cek，您現在應該能夠執行使用記憶體保護區的查詢，例如就地加密和豐富計算，以及Always Encrypted 提供的現有功能。 如需詳細資訊，請參閱[使用 secure 記憶體保護區設定 Always Encrypted](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) 。
 
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>擷取和修改加密資料行中的資料
 
-一旦您在連線上啟用 Always Encrypted 之後, 就可以使用標準 ODBC Api。 ODBC Api 可以抓取或修改加密資料庫資料行中的資料。 下列檔專案可能會有説明:
+一旦您在連線上啟用 Always Encrypted 之後，就可以使用標準 ODBC Api。 ODBC Api 可以抓取或修改加密資料庫資料行中的資料。 下列檔專案可能會有説明：
 
 - [ODBC 範例程式碼](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC 程式設計人員參考](../../odbc/reference/odbc-programmer-s-reference.md)
 
-您的應用程式必須具有必要的資料庫許可權, 而且必須能夠存取資料行主要金鑰。 然後, 驅動程式會將以加密資料行為目標的任何查詢參數加密。 驅動程式也會將從加密資料行抓取的資料解密。 驅動程式會執行所有的加密和解密, 而不會有原始程式碼的協助。 在您的程式中, 就像資料行未加密一樣。
+您的應用程式必須具有必要的資料庫許可權，而且必須能夠存取資料行主要金鑰。 然後，驅動程式會將以加密資料行為目標的任何查詢參數加密。 驅動程式也會將從加密資料行抓取的資料解密。 驅動程式會執行所有的加密和解密，而不會有原始程式碼的協助。 在您的程式中，就像資料行未加密一樣。
 
 如未啟用 Always Encrypted，使用目標加密資料行參數的查詢就會失敗。 只要查詢沒有以加密資料行為目標的參數，就仍然可以從加密資料行擷取資料。 不過，驅動程式不會嘗試進行任何解密，而應用程式則會收到二進位加密資料 (以位元組陣列的形式)。
 
@@ -161,7 +161,7 @@ CREATE TABLE [dbo].[Patients](
 - 程式列印的所有值都是純文字格式，因為驅動程式會以清晰簡明方式來解密從 SSN 和 BirthDate 資料行擷取的資料。
 
 > [!NOTE]
-> 只有在加密具決定性, 或已啟用安全記憶體保護區時, 查詢才能在加密資料行上執行相等比較。 如需詳細資訊，請參閱[選取確定性或隨機化加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
+> 只有在加密具決定性，或已啟用安全記憶體保護區時，查詢才能在加密資料行上執行相等比較。 如需詳細資訊，請參閱[選取確定性或隨機化加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
 ```
 SQLCHAR SSN[12];
@@ -364,7 +364,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ODBC Driver for SQL Server 隨附下列內建的金鑰存放區提供者：
 
-| [屬性] | 描述 | 提供者 (中繼資料) 名稱 |可用性|
+| [屬性] | Description | 提供者 (中繼資料) 名稱 |可用性|
 |:---|:---|:---|:---|
 |Azure 金鑰保存庫 |將 CMK 儲存在 Azure Key Vault 中 | `AZURE_KEY_VAULT` |Windows、macOS、Linux|
 |Windows 憑證存放區|將 CMK 儲存在本機 Windows 金鑰存放區中| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -378,7 +378,7 @@ ODBC Driver for SQL Server 隨附下列內建的金鑰存放區提供者：
 Azure Key Vault (AKV) 是存放和管理 Always Encrypted 資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 中時)。 Linux、macOS 及 Windows 上的 ODBC Driver for SQL Server 包含 Azure Key Vault 的內建資料行主要金鑰存放區提供者。 如需有關設定適用於 Always Encrypted 之 Azure Key Vault 的詳細資訊，請參閱 [Azure Key Vault - 逐步解說](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) \(英文\)、[金鑰保存庫使用者入門](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)及[在 Azure Key Vault 中建立資料行主要金鑰](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)。
 
 > [!NOTE]
-> ODBC 驅動程式不支援 AKV authentication 的 Active Directory 同盟服務。 如果您使用 Azure Active Directory authentication AKV, 而您的 Active Directory 設定包含同盟服務, 則驗證可能會失敗。
+> ODBC 驅動程式不支援 AKV authentication 的 Active Directory 同盟服務。 如果您使用 Azure Active Directory authentication AKV，而您的 Active Directory 設定包含同盟服務，則驗證可能會失敗。
 > 在 Linux 和 macOS 上，針對驅動程式 17.2 版和更新版本，必須要有 `libcurl`，才能使用此提供者，但這不是明確相依性，因為驅動程式的其他作業並不需要它。 如果您遇到有關 `libcurl` 的錯誤，請確定它已安裝。
 
 驅動程式支援使用下列認證類型向 Azure Key Vault 進行驗證：
@@ -436,7 +436,7 @@ ODBC Driver for SQL Server 也支援使用 CEKeystoreProvider 介面來自訂協
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`|[輸入] 連線控制代碼。 必須是有效的連線控制代碼，但提供者若是透過一個連線控制代碼載入的，則從相同處理序中的任何其他提供者都可存取這些提供者。|
 |`Attribute`|[輸入] 要設定的屬性：`SQL_COPT_SS_CEKEYSTOREPROVIDER` 常數。|
@@ -445,7 +445,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 驅動程式會使用平台定義的動態程式庫載入機制 (在 Linux 和 macOS 上是 `dlopen()`，在 Windows 上是 `LoadLibrary()`) 來嘗試載入 ValuePtr 參數所識別的程式庫，然後將該處定義的任何提供者新增至驅動程式已知的提供者清單。 以下是可能發生的錯誤：
 
-| 錯誤 | 描述 |
+| 錯誤 | Description |
 |:--|:--|
 |`CE203`|無法載入動態程式庫。|
 |`CE203`|在程式庫中找不到 "CEKeyStoreProvider" 匯出的符號。|
@@ -456,7 +456,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 > [!NOTE]
 > 應用程式程式設計人員必須確保在透過任何連線傳送需要任何自訂提供者的任何查詢之前，先載入這些提供者。 無法執行這項操作時，會導致發生錯誤：
 
-| 錯誤 | 描述 |
+| 錯誤 | Description |
 |:--|:--|
 |`CE200`|找不到金鑰存放區提供者 %1。 請確定已載入適當的金鑰存放區提供者程式庫。|
 
@@ -471,7 +471,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`|[輸入] 連線控制代碼。 必須是有效的連線控制代碼，但提供者若是透過一個連線控制代碼載入的，則從相同處理序中的任何其他提供者都可存取這些提供者。|
 |`Attribute`|[輸入] 要擷取的屬性：`SQL_COPT_SS_CEKEYSTOREPROVIDER` 常數。|
@@ -498,7 +498,7 @@ char data[];
 } CEKEYSTOREDATA;
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`name`|[輸入] 進行 Set 時，要作為資料傳送對象的提供者名稱。 進行 Get 時會忽略。 以 Null 結尾的寬字元字串。|
 |`dataSize`|[輸入] 接在結構之後的資料陣列大小。|
@@ -511,7 +511,7 @@ char data[];
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`| [輸入] 連線控制代碼。 必須是有效的連線控制代碼，但提供者若是透過一個連線控制代碼載入的，則從相同處理序中的任何其他提供者都可存取這些提供者。|
 |`Attribute`|[輸入] 要設定的屬性：`SQL_COPT_SS_CEKEYSTOREDATA` 常數。|
@@ -531,7 +531,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 引數 | 描述 |
+| 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`|[輸入] 連線控制代碼。 必須是有效的連線控制代碼，但提供者若是透過一個連線控制代碼載入的，則從相同處理序中的任何其他提供者都可存取這些提供者。|
 |`Attribute`|[輸入] 要擷取的屬性：`SQL_COPT_SS_CEKEYSTOREDATA` 常數。|
@@ -573,7 +573,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 下表提供在加密資料行上操作時的動作摘要：
 
-|`ColumnEncryption`|BCP 方向|描述|
+|`ColumnEncryption`|BCP 方向|Description|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (至用戶端)|擷取加密文字。 觀察到的資料類型是 **varbinary(max)** 。|
 |`Enabled`|OUT (至用戶端)|擷取純文字。 驅動程式會將資料行資料解密。|
@@ -590,9 +590,9 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="connection-string-keywords"></a>連接字串關鍵字
 
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|接受的值為 `Enabled`/`Disabled`。<br>`Enabled` -- 啟用連線的 Always Encrypted 功能。<br>`Disabled` -- 停用連線的 Always Encrypted 功能。<br>*類型*、*資料*--(17.4 版和更新版本) 可讓 Always Encrypted 具有安全記憶體保護區和證明通訊協定*類型*, 以及相關聯的證明資料*資料*。 <br><br>預設值為 `Disabled`。|
+|`ColumnEncryption`|接受的值為 `Enabled`/`Disabled`。<br>`Enabled` -- 啟用連線的 Always Encrypted 功能。<br>`Disabled` -- 停用連線的 Always Encrypted 功能。<br>*類型*、*資料*--（17.4 版和更新版本）可讓 Always Encrypted 具有安全記憶體保護區和證明通訊協定*類型*，以及相關聯的證明資料*資料*。 <br><br>預設值為 `Disabled`。|
 |`KeyStoreAuthentication` | 有效的值：`KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 當 `KeyStoreAuthentication` = `KeyVaultPassword` 時，請將此值設定為有效的「Azure Active Directory 使用者主體名稱」。 <br>當 `KeyStoreAuthetication` = `KeyVaultClientSecret` 時，請將此值設定為有效的「Azure Active Directory 應用程式用戶端識別碼」 |
 |`KeyStoreSecret` | 當 `KeyStoreAuthentication` = `KeyVaultPassword` 時，請將此值設定為相對應使用者名稱的密碼。 <br>當 `KeyStoreAuthentication` = `KeyVaultClientSecret` 時，請將此值設定為與有效「Azure Active Directory 應用程式用戶端識別碼」相關聯的「應用程式祕密」 |
@@ -600,9 +600,9 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="connection-attributes"></a>連接屬性
 
-|[屬性]|類型|描述|  
+|[屬性]|類型|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|連線前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 停用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 啟用 Always Encrypted<br> *類型*的指標,*資料*字串--(版本17.4 和更新版本) 啟用安全記憶體保護區|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|連線前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 停用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 啟用 Always Encrypted<br> *類型*的指標，*資料*字串--（版本17.4 和更新版本）啟用安全記憶體保護區|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|連線後|[Set] 嘗試載入 CEKeystoreProvider<br>[Get] 傳回 CEKeystoreProvider 名稱|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|連線後|[Set] 將資料寫入至 CEKeystoreProvider<br>[Get] 從 CEKeystoreProvider 讀取資料|
 |`SQL_COPT_SS_CEKCACHETTL`|連線後|[Set] 設定 CEK 快取 TTL<br>[Get] 取得目前的 CEK 快取 TTL|
@@ -610,19 +610,19 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="statement-attributes"></a>陳述式屬性
 
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- 針對陳述式停用 Always Encrypted <br>`SQL_CE_RESULTSETONLY` (1) -- 僅解密。 將結果集和傳回值解密，但不將參數解密 <br>`SQL_CE_ENABLED` (3) -- 同時針對參數和結果啟用並使用 Always Encrypted|
 
 ### <a name="descriptor-fields"></a>描述項欄位
 
-|IPD 欄位|大小/類型|預設值|描述|
+|IPD 欄位|大小/類型|預設值|Description|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 個位元組)|0|若為 0 (預設)：加密此參數的決定會取決於加密中繼資料的可用性。<br><br>若不為 0：如果有加密中繼資料可供此參數使用，就會加密。 否則，要求會因以下錯誤而失敗：[CE300] [Microsoft][ODBC Driver 13 for SQL Server]已為參數指定了強制加密，但伺服器沒有提供任何加密中繼資料。|
 
 ### <a name="bcp_control-options"></a>bcp_control 選項
 
-|選項名稱|預設值|描述|
+|選項名稱|預設值|Description|
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|若為 TRUE，允許將 varbinary(max) 值插入至加密資料行。 若為 FALSE，除非提供正確的類型和加密中繼資料，否則會防止插入。|
 
@@ -631,4 +631,3 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 - [Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [永遠加密部落格](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

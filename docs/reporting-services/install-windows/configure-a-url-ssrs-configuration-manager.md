@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: afd535a09578ae4e6141a87e486f77a26dd54818
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447346"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594111"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
   使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器]  選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
@@ -31,7 +31,7 @@ ms.locfileid: "62447346"
   
 -   設定進階的 URL 屬性，以定義其他 URL。  
   
- 如需如何儲存和維護 URL 或是互通性問題的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[關於 URL 保留項目和註冊 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) 和[並存安裝 Reporting Services 和 Internet Information Services &#40;SSRS 原生模式&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)。 若要檢閱 Reporting Services 安裝中常用的 URL 範例，請參閱本主題的＜ [URL 範例](#URLExamples) ＞。  
+ 如需如何儲存和維護 URL 或是互通性問題的詳細資訊，請參閱 [About URL Reservations and Registration &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) (關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;) 和 [Install Reporting Services and Internet Information Services Side-by-Side](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) (並存安裝 Reporting Services 和 Internet Information Services &#40;SSRS 原生模式&#41;)。 若要檢閱 Reporting Services 安裝中常用的 URL 範例，請參閱本主題的＜ [URL 範例](#URLExamples) ＞。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  在您建立或修改 URL 之前，請記住以下要點：  
@@ -143,7 +143,7 @@ ms.locfileid: "62447346"
   
  指定註冊憑證的完整電腦名稱。 所指定的名稱必須與註冊的憑證名稱相同。  
   
- 您必須安裝了憑證，才能使用此選項。 您也必須修改 RSReportServer.config 檔案中的 UrlRoot 組態設定，使它指定註冊憑證之電腦的完整名稱。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 在原生模式報表伺服器上設定 SSL 連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 您必須安裝了憑證，才能使用此選項。 您也必須修改 RSReportServer.config 檔案中的 UrlRoot 組態設定，使它指定註冊憑證之電腦的完整名稱。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>設定 URL 的進階屬性  
   
