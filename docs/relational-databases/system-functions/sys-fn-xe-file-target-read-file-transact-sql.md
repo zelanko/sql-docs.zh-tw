@@ -1,5 +1,5 @@
 ---
-title: sys.fn_xe_file_target_read_file & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases fn_xe_file_target_read_file （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059098"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982986"
 ---
-# <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
+# <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   讀取擴充事件非同步檔案目標所建立的檔案。 系統會以 XML 格式針對每個資料列傳回一個事件。  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]接受 XEL 與 XEM 格式產生的追蹤結果。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 擴充事件只支援 XEL 格式的追蹤結果。 我們建議您使用 SQL Server Management Studio 來讀取 XEL 格式的追蹤結果。    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 接受以 .XEL 和 XEM 格式產生的追蹤結果。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 擴充事件僅支援 .XEL 格式的追蹤結果。 我們建議您使用 SQL Server Management Studio 來讀取 XEL 格式的追蹤結果。    
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,38 +48,38 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>引數  
  *path*  
- 要讀取之檔案的路徑。 *路徑*可以包含萬用字元，並將包含檔案的名稱。 *路徑*已**nvarchar(260)** 。 沒有預設值。 在 Azure SQL Database 的內容中，這個值會是 HTTP URL 至 Azure 儲存體中的檔案。
+ 要讀取之檔案的路徑。 *path*可以包含萬用字元，並包含檔案名。 *path*是**Nvarchar （260）** 。 沒有預設值。 在 Azure SQL Database 的內容中，這個值是 Azure 儲存體中檔案的 HTTP URL。
   
  *mdpath*  
- 對應至所指定的檔案中繼資料檔案的路徑*路徑*引數。 *mdpath*已**nvarchar(260)** 。 沒有預設值。 從 SQL Server 2016 開始，這個參數可以指定為 null。
+ 對應至*path*引數所指定之檔案的中繼資料檔案的路徑。 *mdpath*是**Nvarchar （260）** 。 沒有預設值。 從 SQL Server 2016 開始，這個參數可以指定為 null。
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 不需要*mdpath*參數。 但是，維護它是為了保留與舊版 SQL Server 產生之記錄檔之間的相容性。  
   
  *initial_file_name*  
- 要讀取的第一個檔案*路徑*。 *initial_file_name*已**nvarchar(260)** 。 沒有預設值。 如果**null**指定為引數中找到的所有檔案*路徑*讀取。  
+ 要從*path*中讀取的第一個檔案。 *initial_file_name*是**Nvarchar （260）** 。 沒有預設值。 如果將**null**指定為引數，則會讀取在*path*中找到的所有檔案。  
   
 > [!NOTE]  
->  *initial_file_name*並*initial_offset*是成對的引數。 如果您指定任何一個引數的值，就必須指定另一個引數的值。  
+>  *initial_file_name*和*initial_offset*是成對的引數。 如果您指定任何一個引數的值，就必須指定另一個引數的值。  
   
  *initial_offset*  
- 用來指定先前所讀取的上個位移，並略過所有事件直到位移為止 (含)。 從指定的位移之後，開始事件列舉。 *initial_offset*已**bigint**。 如果**null**指定為將會讀取整個檔案的引數。  
+ 用來指定先前所讀取的上個位移，並略過所有事件直到位移為止 (含)。 從指定的位移之後，開始事件列舉。 *initial_offset*是**Bigint**。 如果將**null**指定為引數，則會讀取整個檔案。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
-|module_guid|**uniqueidentifier**|事件模組 GUID。 不可為 Null。|  
-|package_guid|**uniqueidentifier**|事件封裝 GUID。 不可為 Null。|  
+|module_guid|**ssNoversion**|事件模組 GUID。 不可為 Null。|  
+|package_guid|**ssNoversion**|事件封裝 GUID。 不可為 Null。|  
 |object_name|**nvarchar(256)**|事件的名稱。 不可為 Null。|  
 |event_data|**nvarchar(max)**|事件內容 (XML 格式)。 不可為 Null。|  
 |file_name|**nvarchar(260)**|包含此事件之檔案的名稱。 不可為 Null。|  
 |file_offset|**bigint**|包含此事件之檔案中的區塊位移。 不可為 Null。|  
-|timestamp_utc|**datetime2**|**適用於**：[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />日期和時間 （UTC 時區） 的事件。 不可為 Null。|  
+|timestamp_utc|**datetime2**|**適用**于： [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 和更新版本，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />事件的日期和時間（UTC 時區）。 不可為 Null。|  
 
   
-## <a name="remarks"></a>備註  
- 讀取大型結果集藉由執行**sys.fn_xe_file_target_read_file**在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]可能會導致錯誤。 使用**將結果存檔**模式 (**Ctrl + Shift + F**) 將大型結果集匯出至檔案，並改為閱讀另一種工具的檔案。  
+## <a name="remarks"></a>Remarks  
+ 藉由在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中執行**fn_xe_file_target_read_file**來讀取大型結果集，可能會導致錯誤。 使用 [**結果至**檔案模式] （**Ctrl + Shift + F**）將大型結果集匯出至檔案，並改為使用其他工具來讀取檔案。  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  

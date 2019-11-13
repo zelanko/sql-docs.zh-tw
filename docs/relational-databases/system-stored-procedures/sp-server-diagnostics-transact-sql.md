@@ -1,5 +1,5 @@
 ---
-title: sp_server_diagnostics & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_server_diagnostics （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056305"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982111"
 ---
-# <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
+# <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 擷取有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的診斷資料和健全狀況資訊，以偵測潛在的失敗。 此程序會以重複模式執行，並定期傳送結果。 它可以從一般或 DAC 連接來叫用。  
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本）。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,9 +40,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` 表示的預存程序會重複執行以傳送健全狀況資訊的時間間隔。  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` 表示預存程式會重複執行以傳送健全狀況資訊的時間間隔。  
   
- *repeat_interval_in_seconds*已**int**與預設值是 0。 有效的參數值是 0，或等於或大於 5 的任何值。 預存程序必須至少執行 5 秒，才能傳回完整資料。 預存程序以重複模式執行的最小值為 5 秒。  
+ *repeat_interval_in_seconds*是**int** ，預設值是0。 有效的參數值是 0，或等於或大於 5 的任何值。 預存程序必須至少執行 5 秒，才能傳回完整資料。 預存程序以重複模式執行的最小值為 5 秒。  
   
  如果沒有指定這個參數，或指定的值是 0，預存程序就會傳回資料一次並結束。  
   
@@ -54,37 +54,37 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
-**sp_server_diagnostics**傳回下列資訊  
+**sp_server_diagnostics**會傳回下列資訊  
   
-|「資料行」|資料類型|描述|  
+|資料行|[名稱]|描述|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|表示資料列建立的時間戳記。 單一資料列集的每個資料列都有相同的時間戳記。|  
-|**component_type**|**sysname**|指出資料列是否包含資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體層級元件或 Alwayson 可用性群組：<br /><br /> 執行個體<br /><br /> Alwayson: AvailabilityGroup|  
-|**component_name**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性群組的名稱 >*|  
+|**component_type**|**sysname**|指出資料列是否包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例層級元件或 Always On 可用性群組的資訊：<br /><br /> 執行個體<br /><br /> Always On： AvailabilityGroup|  
+|**component_name**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *可用性群組的 \<名稱 >*|  
 |**state**|**int**|指出元件的健全狀態：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0：Unknown<br /><br /> 1： 初始狀態<br /><br /> 2： 警告<br /><br /> 3： 錯誤|  
-|**data**|**varchar (max)**|指定元件的相關資料。|  
+|**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0：未知<br /><br /> 1：清除<br /><br /> 2：警告<br /><br /> 3：錯誤|  
+|**data**|**Varchar （max）**|指定元件的相關資料。|  
   
  以下是五種元件的說明：  
   
--   **系統**:從系統觀點來收集有關單一執行緒存取鎖、 嚴重處理條件、 沒有產量的工作、 分頁錯誤和 CPU 使用量資料。 這項資訊產生整體的健全狀態建議。  
+-   **系統**：從系統觀點來收集旋轉鎖、嚴重處理狀況、未產生的工作、分頁錯誤和 CPU 使用量的資料。 這項資訊產生整體的健全狀態建議。  
   
--   **資源**:從資源觀點來收集有關實體和虛擬記憶體，緩衝集區、 頁面、 快取和其他記憶體物件資料。 這項資訊產生整體的健全狀態建議。  
+-   **資源**：從資源的觀點來收集實體和虛擬記憶體、緩衝集區、頁面、快取和其他記憶體物件的資料。 這項資訊產生整體的健全狀態建議。  
   
--   **query_processing**:背景工作執行緒、 工作、 等候類型、 CPU 密集工作階段及封鎖的工作，從查詢處理觀點來收集資料。 這項資訊產生整體的健全狀態建議。  
+-   **query_processing**：從查詢處理的觀點，收集工作者執行緒、工作、等候類型、耗用大量 CPU 會話和封鎖工作的資料。 這項資訊產生整體的健全狀態建議。  
   
--   **io_subsystem**:在 IO 上收集資料。 除了診斷資料之外，這個元件只產生 IO 子系統的乾淨良好或警告的健全狀態。  
+-   **io_subsystem**：收集 io 上的資料。 除了診斷資料之外，這個元件只產生 IO 子系統的乾淨良好或警告的健全狀態。  
   
--   **事件**:收集資料和預存程序的介面上的錯誤和伺服器，包括有關信號緩衝區例外狀況，有關記憶體 broker、 記憶體、 排程器監視器、 緩衝集區、 單一執行緒存取鎖，超出的信號緩衝區事件詳細資料所記錄的感興趣的事件安全性和連線能力。 事件永遠會顯示狀態 0。  
+-   **事件**：透過預存程式在伺服器記錄的錯誤和事件上收集資料和表面，包括有關信號緩衝區例外狀況的詳細資訊、記憶體代理人的信號緩衝區事件、記憶體不足、排程器監視器、緩衝集區、旋轉器、安全性和連線能力。 事件永遠會顯示狀態 0。  
   
--   **\<可用性群組的名稱 >** :會收集指定的可用性群組的資料 (如果 component_type ="Alwayson 上： AvailabilityGroup")。  
+-   **可用性群組的\<名稱 >** ：收集指定可用性群組的資料（如果 component_type = "Always On： AvailabilityGroup"）。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 從失敗觀點來看，系統、資源和 query_processing 元件將會用於失敗偵測，而 io_subsystem 和事件元件只供診斷之用。  
   
 下表將元件對應到其相關聯的健全狀態。  
   
-|元件|乾淨 (1)|警告 (2)|錯誤 (3)|未知 (0)|  
+|Components|乾淨 (1)|警告 (2)|錯誤 (3)|未知 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |系統|x|x|x||  
 |resource|x|x|x||  
@@ -95,7 +95,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 每個資料列中的 (x) 表示元件的有效健全狀態。 例如，io_subsystem 會顯示為乾淨或警告。 它不會顯示錯誤狀態。  
  
 > [!NOTE]
-> Sp_server_diagnostics 內部程序的執行是以高優先權的先佔式執行緒上實作。
+> 執行 sp_server_diagnostics 內部程式時，會以高優先順序在搶先式執行緒上執行。
   
 ## <a name="permissions"></a>Permissions  
 需要伺服器的 VIEW SERVER STATE 權限。  
@@ -241,6 +241,6 @@ go
 ``` 
   
 ## <a name="see-also"></a>另請參閱  
- [容錯移轉叢集執行個體的容錯移轉原則](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_languages & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.databases fulltext_languages （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa04b9a4b90b470ca3cc6df4a8f5cf62134027c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220499"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981769"
 ---
-# <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
+# <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列顯示的 LCID 和語言的名稱。 當註冊斷詞工具語言、 其他語言的資源-字幹分析器、 非搜尋字 （停用字詞） 和同義字檔案會變成可用於全文檢索索引/查詢作業。 值**名稱**或是**lcid**全文檢索索引與全文檢索查詢中可以指定[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。  
+  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列都會顯示該語言的 LCID 和名稱。 為語言註冊斷詞工具時，其其他語言資源（字幹分析器、非搜尋字（停用字詞）和同義字檔案）就會變成可供全文檢索索引/查詢作業使用。 [**名稱**] 或 [ **lcid** ] 的值可以在全文檢索查詢和全文檢索索引 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句中指定。  
    
-|「資料行」|資料類型|描述|  
+|資料行|[名稱]|描述|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|語言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 地區設定識別碼 (LCID)。|  
-|**name**|**sysname**|不是值中的別名[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)的值相對應**lcid**或是數值 LCID 的字串表示法。|  
+|**name**|**sysname**|這是[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)中對應至**lcid**值的別名值，或是數值 lcid 的字串表示。|  
   
 ## <a name="values-returned-for-default-languages"></a>針對預設語言傳回的值  
  下表顯示預設註冊其斷詞工具之語言的值。  
@@ -58,7 +58,7 @@ ms.locfileid: "68220499"
 |英文|1033|  
 |法文|1036|  
 |德文|1031|  
-|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 希臘文|1032|  
+|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 希臘文|1032|  
 |古吉拉特文|1095|  
 |Hebrew|1037|  
 |Hindi|1081|  
@@ -75,7 +75,7 @@ ms.locfileid: "68220499"
 |馬拉提文|1102|  
 |中性語言|0|  
 |挪威文 (巴克摩)|1044|  
-|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 波蘭文|1045|  
+|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 波蘭文|1045|  
 |葡萄牙文 (巴西)|1046|  
 |葡萄牙文 (葡萄牙)|2070|  
 |旁遮普文|1094|  
@@ -92,22 +92,22 @@ ms.locfileid: "68220499"
 |特拉古文|1098|  
 |泰文|1054|  
 |繁體中文|1028|  
-|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 土耳其文|1055|  
+|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 土耳其文|1055|  
 |烏克蘭文|1058|  
 |烏都文|1056|  
 |越南文|1066|  
   
-## <a name="remarks"></a>備註  
- 若要更新使用全文檢索搜尋註冊之語言清單，請使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'。  
+## <a name="remarks"></a>Remarks  
+ 若要更新使用全文檢索搜尋註冊的語言清單，請使用[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'。  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_fulltext_load_thesaurus_file &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_load_thesaurus_file &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [設定及管理全文檢索搜尋的](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)同義字檔案   
  [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)  
   

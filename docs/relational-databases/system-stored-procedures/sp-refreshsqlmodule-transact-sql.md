@@ -1,5 +1,5 @@
 ---
-title: sp_refreshsqlmodule (TRANSACT-SQL) |Microsoft Docs
+title: sp_refreshsqlmodule （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2018
 ms.prod: sql
@@ -26,14 +26,14 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed393edf79c3502bf3e054e23eb459d490ce998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075798"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982765"
 ---
-# <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
+# <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   針對目前資料庫中指定的非結構描述繫結預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序，更新其中繼資料。 這些物件的基礎物件變更之後，其保存中繼資料也可能會過期，例如參數的資料類型。
@@ -56,27 +56,27 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @name = ] 'module\_name'` 是預存程序、 使用者定義函數、 檢視、 DML 觸發程序、 資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *module_name*不能是 common language runtime (CLR) 預存程序或 CLR 函式。 *module_name*不可進行結構描述繫結。 *module_name*已**nvarchar**，沒有預設值。 *module_name*可以是多重部分識別碼，但只能參考目前資料庫中的物件。  
+`[ @name = ] 'module\_name'` 是預存程式、使用者定義函數、view、DML 觸發程式、資料庫層級 DDL 觸發程式或伺服器層級 DDL 觸發程式的名稱。 *module_name*不可以是 common language RUNTIME （CLR）預存程式或 CLR 函數。 *module_name*不可以是架構系結。 *module_name*是**Nvarchar**，沒有預設值。 *module_name*可以是多部分的識別碼，但只能參考目前資料庫中的物件。  
   
-`[ , @namespace = ] ' \<class> '` 為指定的模組類別。 當*module_name* DDL 觸發程序，\<類別 > 為必要。 *\<類別 >* 已**nvarchar**(20)。 有效輸入包括：  
+`[ , @namespace = ] ' \<class> '` 是指定之模組的類別。 當*module_name*是 DDL 觸發程式時，\<類別 > 是必要的。 *\<類別 >* 是**Nvarchar**（20）。 有效輸入包括：  
   
 |||  
 |-|-|  
 |DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|SERVER_DDL_TRIGGER|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
   
-## <a name="remarks"></a>備註  
- **sp_refreshsqlmodule**變更會影響其定義的物件基礎的模組時，應該執行。 否則，在查詢或叫用模組時，可能會產生非預期的結果。 若要重新整理檢視，您可以使用其中一個**sp_refreshsqlmodule**或是**sp_refreshview**相同的結果。  
+## <a name="remarks"></a>Remarks  
+ 當對受模組影響其定義的物件進行變更時，應該執行**sp_refreshsqlmodule** 。 否則，在查詢或叫用模組時，可能會產生非預期的結果。 若要重新整理視圖，您可以使用**sp_refreshsqlmodule**或**sp_refreshview**的結果相同。  
   
- **sp_refreshsqlmodule**不會影響任何權限、 擴充的屬性或設定與物件相關聯的選項。  
+ **sp_refreshsqlmodule**不會影響與物件相關聯的任何許可權、擴充屬性或 SET 選項。  
   
  若要重新整理伺服器層級 DDL 觸發程序，請從任何資料庫的內容執行此預存程序。  
   
 > [!NOTE]  
->  當您執行時，會卸除與物件相關聯的任何簽章**sp_refreshsqlmodule**。  
+>  當您執行**sp_refreshsqlmodule**時，會卸載與物件相關聯的任何簽章。  
   
 ## <a name="permissions"></a>Permissions  
  需要模組的 ALTER 權限，以及物件所參考之任何 CLR 使用者自訂型別和 XML 結構描述集合的 REFERENCES 權限。 當指定的模組是資料庫層級 DDL 觸發程序時，便需要目前資料庫的 ALTER ANY DATABASE DDL TRIGGER 權限。 當指定的模組是伺服器層級 DDL 觸發程序時，便需要 CONTROL SERVER 權限。  
@@ -143,8 +143,8 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>B. 重新整理資料庫層級 DDL 觸發程序  
- 下列範例會重新整理資料庫層級 DDL 觸發程序。  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>b. 重新整理資料庫層級 DDL 觸發程序  
+ 下列範例會重新整理資料庫層級 DDL 觸發程式。  
   
 ```  
 USE AdventureWorks2012;  
@@ -158,7 +158,7 @@ GO
   
 ||  
 |-|  
-|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。|  
   
 ```  
 USE master;  
@@ -170,6 +170,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [資料庫引擎預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

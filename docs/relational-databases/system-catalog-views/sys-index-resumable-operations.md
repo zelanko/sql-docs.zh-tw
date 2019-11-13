@@ -1,7 +1,7 @@
 ---
-title: index_resumable_operations （Transact-sql） |Microsoft Docs
+title: sys.databases index_resumable_operations （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,20 +19,20 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227202"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980307"
 ---
-# <a name="sysindex_resumable_operations-transact-sql"></a>index_resumable_operations （Transact-sql）
+# <a name="sysindex_resumable_operations-transact-sql"></a>sys.databases index_resumable_operations （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**index_resumable_operations**是一個系統檢視，會監視並檢查目前的執行狀態，以取得可繼續的索引重建。  
-**適用於**：SQL Server 2017 和 Azure SQL Database
+**index_resumable_operations**是系統檢視，會監視並檢查目前的執行狀態，以取得可繼續的索引重建或建立。  
+**適用**于： SQL Server （2017和更新版本）和 Azure SQL Database
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此索引所屬物件的識別碼（不可為 null）。|  
 |**index_id**|**int**|索引的識別碼（不可為 null）。 **index_id**只有在物件內才是唯一的。|
@@ -54,7 +54,7 @@ ms.locfileid: "71227202"
 
 ## <a name="example"></a>範例
 
- 列出處於暫停狀態的所有可繼續的索引重建作業。
+ 列出處於暫停狀態的所有可繼續的索引建立或重建作業。
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
