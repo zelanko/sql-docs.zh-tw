@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500585"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593860"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>設定原生模式報表伺服器向外延展部署
 
@@ -93,9 +93,9 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
   
-3.  設定報表伺服器 Web 服務 URL、入口網站 URL 和報表伺服器資料庫。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[設定報表伺服器 &#40;Reporting Services 原生模式&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)。  
+3.  設定報表伺服器 Web 服務 URL、入口網站 URL 和報表伺服器資料庫。 如需詳細資訊，請參閱[設定報表伺服器 &#40;Reporting Services 原生模式&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)
   
-4.  確認報表伺服器可運作。 如需詳細資訊，請參閱《 [線上叢書》的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 驗證 Reporting Services 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+4.  確認報表伺服器可運作。 如需詳細資訊，請參閱＜ [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)＞  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>若要安裝和設定第二個報表伺服器執行個體  
   
@@ -131,7 +131,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  按一下 [向外延展部署]  ，開啟 [向外延展部署] 頁面。 您應該會看到兩個項目，一個項目適用於連接到報表伺服器資料庫的每一個報表伺服器執行個體。 第一個報表伺服器執行個體應該會加入， 第二部報表伺服器應該是「正在等候加入」。 如果您沒有看到類似於部署的項目，請確認您已連接到已設定及初始化來使用報表伺服器資料庫的第一部報表伺服器。  
   
-     ![[向外延展部署] 頁面的局部螢幕擷取畫面](../../reporting-services/install-windows/media/scaloutscreen.gif "[向外延展部署] 頁面的局部螢幕擷取畫面")  
+     ![[相應放大部署] 頁面的局部螢幕擷取畫面](../../reporting-services/install-windows/media/scaloutscreen.gif "[相應放大部署] 頁面的局部螢幕擷取畫面")  
   
 3.  在 [向外延展部署] 頁面上，選取正等候加入此部署的報表伺服器執行個體，然後選取 [加入伺服器]  。  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c24b7fa919b1a9abead4e6204b8d9eae001d0446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575494"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593769"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理報表伺服器資料庫 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫供內部儲存之用。 根據預設，資料庫是命名為 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 是由主要報表伺服器資料庫所建立，用於儲存暫存資料、工作階段資訊和快取報表。  
@@ -29,7 +29,7 @@ ms.locfileid: "65575494"
   
  為了管理報表伺服器資料庫， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供許多工具。  
   
--   若要備份或還原報表伺服器資料庫、移動報表伺服器資料庫，或復原1表伺服器資料庫，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令或資料庫命令提示字元公用程式。 如需指示，請參閱《SQL Server 線上叢書》中的[將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)。  
+-   若要備份或還原報表伺服器資料庫、移動報表伺服器資料庫，或復原1表伺服器資料庫，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令或資料庫命令提示字元公用程式。 如需指示，請參閱 [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) (將報表伺服器資料庫移至其他電腦 &#40;SSRS 原生模式&#41;)。  
   
 -   若要將現有的資料庫內容複製到其他報表伺服器資料庫，您可以附加報表伺服器資料庫的複本，並將這個複本與不同的報表伺服器執行個體一起使用。 或者，您也可以建立並執行使用 SOAP 呼叫的指令碼，在新的資料庫中重新建立報表伺服器內容。 您可以使用 **rs** 公用程式執行指令碼。  
   

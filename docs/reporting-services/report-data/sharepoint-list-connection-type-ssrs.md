@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30a7e283fe7f4b16903dbf293c3db5c77a2409af
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499978"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593951"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 清單連接類型 (SSRS)
 
@@ -90,7 +90,7 @@ ms.locfileid: "66499978"
   
  不支援從多個清單中選取欄位。 您可為每個清單建立資料集，然後從每個資料集選取欄位。 若清單具有一般欄位，可以使用繫結到某個資料集的 Tablix 資料區中之 Lookup 函數，從未繫結到資料區的其他資料集中擷取值。 如需詳細資訊，請參閱[查閱函數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。  
   
--   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 頁面有唯一名稱和易記名稱之間的關聯性。  
+-   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md) 頁面有唯一名稱和易記名稱之間的關聯性。  
   
 -   **套用的篩選**  ：在資料傳回報表前，限制從 SharePoint 清單傳回的資料。 選取欄位名稱、運算子及值，用來限制在清單中擷取的資料。 這些運算子會隨著您選取之值的資料類型而有所不同。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66499978"
   
 -   **查詢結果**  ：顯示查詢執行時所傳回的範例資料列。 如果 SharePoint 網站上的 SharePoint 清單值經常變更，您在查詢結果窗格中看到的值可能會與您在報表中看到的值不同。  
   
--   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) 頁面有唯一名稱和易記名稱之間的關聯性。  
+-   **選取的欄位**  ：顯示您已經選取的欄位。 在此窗格中，欄位的名稱為 SharePoint 使用者已經指定的易記名稱。 當您關閉查詢設計工具時，您會在 [報表資料] 窗格的資料集欄位集合中看到這些名稱。 [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md) 頁面有唯一名稱和易記名稱之間的關聯性。  
   
 -   **套用的篩選**  ：在資料傳回報表前，限制從 SharePoint 清單傳回的資料。 選取欄位名稱、運算子及值，用來限制在清單中擷取的資料。 這些運算子會隨著您選取之值的資料類型而有所不同。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66499978"
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) (Reporting Services 支援的資料來源 &#40;SSRS&#41;)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
 
 ## <a name="see-also"></a>另請參閱

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3c6df0bccb7af1d99df2bce82f4211de17f1356a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499585"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593383"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>關聯式查詢設計工具使用者介面 (報表產生器)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的報表產生器和報表設計師同時提供圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，用來指定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中針對報表資料集擷取的資料。 使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。 使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
@@ -89,7 +89,7 @@ ms.locfileid: "66499585"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 使用 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
   
- 如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md)。  
+ 如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md)。  
   
  下表列出彙總並提供彙總的簡要說明。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66499585"
 |Max|傳回群組中的最大值。 實作 SQL MAX 彙總。|  
 |StDev|傳回群組中所有值的統計標準差。 實作 SQL STDEV 彙總。|  
 |StDevP|傳回群組指定之運算式中所有值的母體統計標準差。 實作 SQL STDEVP 彙總。|  
-|SUM|傳回群組中所有值的總和。 實作 SQL SUM 彙總。|  
+|Sum|傳回群組中所有值的總和。 實作 SQL SUM 彙總。|  
 |Var|傳回群組中所有值的統計變異數。 實作 SQL VAR 彙總。|  
 |VarP|傳回群組中所有值的母體統計變異數。 實作 SQL VARP 彙總。|  
 |Avg Distinct|傳回唯一平均值。 實作 AVG 彙總和 DISTINCT 關鍵字的組合。|  
@@ -153,7 +153,7 @@ ms.locfileid: "66499585"
   
 -   **左側資料表** ：顯示屬於聯結關聯性一部分之第一份資料表的名稱。  
   
--   **聯結類型** ：顯示在自動產生之查詢中使用的 SQL JOIN 陳述式類型。 根據預設，如果系統偵測到外部索引鍵條件約束，就會使用 INNER JOIN。 其他聯結類型可以是 LEFT JOIN 或 RIGHT JOIN。 如果這些聯結類型都不適用，則 [聯結類型]  資料行會顯示 [不相關]  。 針對不相關的資料表不會建立任何 CROSS JOIN 聯結；您必須透過聯結左側和右側資料表中的資料行，手動建立關聯性。 如需 JOIN 類型的詳細資訊，請參閱 msdn.microsoft.com 上《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?LinkId=141687) 中的＜JOIN 基礎觀念＞。  
+-   **聯結類型** ：顯示在自動產生之查詢中使用的 SQL JOIN 陳述式類型。 根據預設，如果系統偵測到外部索引鍵條件約束，就會使用 INNER JOIN。 其他聯結類型可以是 LEFT JOIN 或 RIGHT JOIN。 如果這些聯結類型都不適用，則 [聯結類型]  資料行會顯示 [不相關]  。 針對不相關的資料表不會建立任何 CROSS JOIN 聯結；您必須透過聯結左側和右側資料表中的資料行，手動建立關聯性。  
   
 -   **右側資料表** ：顯示聯結關聯性中第二份資料表的名稱。  
   

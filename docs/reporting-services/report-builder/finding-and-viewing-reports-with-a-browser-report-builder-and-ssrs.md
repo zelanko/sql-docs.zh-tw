@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 43e2ae683bdd9dd22bdf3aac1e9c6e15cc7fed59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf30cee34e988f552a36fac1f7b9eb9ed14d83ef
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580748"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594000"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用瀏覽器尋找及檢視報表 (報表產生器及 SSRS)
   您可以使用任何支援的網頁瀏覽器，透過報表伺服器的直接連接來檢視報表。 每一個報表在報表伺服器上都有一個 URL 位址。 您可以輸入報表的 Web 位址，在任何 Web 應用程式的瀏覽器視窗中開啟該報表。 該報表會以 HTML 格式開啟，而且其中包含報表工具列，讓您可以在報表中瀏覽頁面或搜尋資料值。 您可以在 URL 上設定參數，以隱藏工具列或選取報表的輸出格式。  
@@ -28,7 +28,7 @@ ms.locfileid: "65580748"
 > [!NOTE]  
 >  如果您要從手持式裝置存取報表，就必須使用瀏覽器來開啟報表。 報表管理員的設計不適用於手持式裝置。  
   
- 如需您可以使用之瀏覽器類型的詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜Reporting Services 所支援的瀏覽器類型＞。  
+ 如需您可以使用之瀏覽器類型的詳細資訊，請參閱[Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,6 +53,6 @@ ms.locfileid: "65580748"
   
  URL 在 Internet Explorer 中的限制上限為 2,083 個字元。 如需詳細資訊，請參閱 [Internet Explorer 的 URL 長度上限](https://support.microsoft.com/kb/208427)。  
   
- 如需如何透過 URL 存取報表的詳細資訊，包括如何建構 URL 的資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜URL 存取＞。  
+ 如需有關如何透過 URL 存取報表的詳細資訊，包括如何建構 URL 的資訊，請參閱 [URL Access](../../reporting-services/url-access-ssrs.md) (URL 存取)。  
   
   

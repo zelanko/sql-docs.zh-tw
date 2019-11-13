@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e2b3e519a55d23b524582bef8bb7a677023e704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581618"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593796"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>圖表 (報表產生器及 SSRS)
 閱讀有關使用圖表資料區域的詳細資訊，以協助您的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表讀者一眼便了解大量的彙總資料。  
@@ -48,7 +48,7 @@ ms.locfileid: "65581618"
 ##  <a name="SimilarMatrix"></a>圖表與矩陣的相似處  
  考慮圖表如何運作的其中一種方法是比較圖表與矩陣。  
   
- ![從工具箱新增選取的新矩陣](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的新矩陣")  
+ ![從工具箱新增選取的矩陣](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的矩陣")  
   
  在概念上，組織是相同的：  
   
@@ -80,7 +80,7 @@ ms.locfileid: "65581618"
 ##  <a name="DatasetConsiderations"></a> 建立圖表前的資料集考量  
  圖表提供資料的摘要檢視。 不過，資料集如果很大，則圖表上的資訊可能會變得不易辨認或無法判讀。 資料點遺失或為 Null、資料類型不適於圖表類型，以及將圖表與資料表結合等進階應用，都可能會影響圖表的可讀性。 您應該在設計圖表之前小心地準備及了解資料，如此就可以快速而有效地設計圖表。  
   
- 報表中的圖表數可依您的需要而定。 圖表會繫結至單一資料集，這與矩陣或資料表等任何其他資料區類似。 如果您想要在同一圖表上顯示多個資料集，可以在 SQL 查詢中使用 JOIN 或 UNION 陳述式建立其他資料集，然後再將資料加入到圖表。 如需有關 JOIN 和 UNION 陳述式的詳細資訊，請參閱《線上叢書》或其他 SQL 參考資訊。  
+ 報表中的圖表數可依您的需要而定。 圖表會繫結至單一資料集，這與矩陣或資料表等任何其他資料區類似。 如果您想要在同一圖表上顯示多個資料集，可以在 SQL 查詢中使用 JOIN 或 UNION 陳述式建立其他資料集，然後再將資料加入到圖表。  
   
  如果詳細資料沒有必要或沒有用處，請考慮在資料集查詢中預先彙總資料。 若要更清楚地顯示每個資料點，請減少資料集中的類別目錄數目。 您可以篩選資料集或將條件加入至查詢，以減少傳回的資料列數目。 
   
@@ -141,6 +141,6 @@ ms.locfileid: "65581618"
  [巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [教學課程：將直條圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [教學課程：將圓形圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [教學課程：將橫條圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [教學課程：將橫條圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

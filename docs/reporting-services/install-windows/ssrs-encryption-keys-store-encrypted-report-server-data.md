@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988427"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593473"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 加密金鑰 - 儲存加密的報表伺服器資料
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會在報表伺服器資料庫和組態檔中儲存加密值。 大部份加密值是用於存取將資料提供給報表之外部資料來源的認證。 本主題將描述哪些值會進行加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所使用的加密功能，以及您應該知道的其他預存機密資料類型。  
@@ -33,7 +33,7 @@ ms.locfileid: "72988427"
   
 -   預存認證 - 可供報表伺服器連接到將資料提供給報表的外部資料來源。  
   
-     這些值是在您設定報表資料來源資訊時所定義的，然後以加密值的形式儲存在報表伺服器資料庫中。 報表伺服器會使用對稱金鑰，將此資料加密與解密。 如需預存認證的詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 指定報表資料來源的認證和連接資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+     這些值是在您設定報表資料來源資訊時所定義的，然後以加密值的形式儲存在報表伺服器資料庫中。 報表伺服器會使用對稱金鑰，將此資料加密與解密。 如需預存認證的詳細資訊，請參閱 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) (指定報表資料來源的認證及連線資訊)。  
   
 -   自動使用者帳戶 - 可供報表伺服器連接到其他電腦，以擷取報表中使用的外部影像檔或外部資料。  
   

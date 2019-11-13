@@ -1,20 +1,20 @@
 ---
-title: 伺服器屬性 (進階頁面) - Reporting Services | Microsoft Docs
+title: 伺服器屬性進階頁面 - Reporting Services | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/15/2019
-ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.date: 11/05/2019
+ms.openlocfilehash: defadad0d3a2545ba3d794d5d9c38c5734d3e9af
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908257"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638020"
 ---
-# <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
+# <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性進階頁面 - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -93,7 +93,7 @@ ms.locfileid: "70908257"
 
 **AccessControlMaxAge** 指定可快取推斷要求結果的秒數。 預設值為 600 (10 分鐘)。
 
-**AllowedResourceExtensionsForUpload (僅限 Power BI 報表伺服器與 Reporting Services 2017 與更新版本)** 設定可上傳到報表伺服器的資源副檔名。 不需要包含內建檔案類型的副檔名，例如 &ast;.rdl 和 &ast;.pbix。 預設為「&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx」。
+**AllowedResourceExtensionsForUpload** (僅限 Power BI 報表伺服器與 Reporting Services 2017 與更新版本) 設定可上傳到報表伺服器的資源副檔名。 不需要包含內建檔案類型的副檔名，例如 &ast;.rdl 和 &ast;.pbix。 預設為「&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx」。
 
 **RestrictedResourceMimeTypeForUpload**不允許使用者使用上傳內容的 mime 類型集合。 已經使用限制 mime 類型儲存的任何資源，只能下載為應用程式/八位串流，而不是由瀏覽器開啟/執行。  根據預設，此清單中沒有受限制的專案，但我們建議組織會將其填入，以提供最安全的體驗。
 

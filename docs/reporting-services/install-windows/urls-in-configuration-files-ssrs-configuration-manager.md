@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69f198696c434f53dfbef328bdbf3b9be832ca11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75da68330bcce06a4ffdaf152bb19811cffe1f99
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65370163"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593930"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>組態檔中的 URL (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將應用程式設定儲存在 RSReportServer.config 檔案中。 在這個檔案中，URL 和 URL 保留項目都有組態設定。 這些組態設定的用途與修改規則大不相同。 如果您習慣修改組態檔來微調部署，本主題將可幫助您了解每一個 URL 設定的使用方式。  
@@ -25,7 +25,7 @@ ms.locfileid: "65370163"
 #### <a name="urls-for-application-access"></a>供應用程式存取的 URL  
  URL 是用來存取報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 若要設定 URL，您必須使用 Reporting Services 組態工具。 此工具會在 HTTP.SYS 中建立每一個應用程式的 URL 保留項目，並將 URL 的項目加入 RSReportServer.config 的 **URLReservations** 區段。  
   
--   若要檢視 **URLReservations** 區段中每個元素的描述，請參閱《 [線上叢書》中的](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) RsReportServer.config 組態檔 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+-   若要檢視 **URLReservations** 區段中每個元素的描述，請參閱 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) (RsReportServer.config 組態檔)。  
   
 -   如果只需 **UrlString** 項目的語法詳細資訊，請參閱 [URL 保留項目語法 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。  
   

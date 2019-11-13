@@ -1466,7 +1466,7 @@
     - name: Oracle Connection Manager
       href: ../integration-services/data-flow/oracle-connection-manager.md
     - name: Oracle 來源
-      ref: ../integration-services/data-flow/oracle-source.md
+      href: ../integration-services/data-flow/oracle-source.md
     - name: Oracle 目的地
       href: ../integration-services/data-flow/oracle-destination.md
     - name: 資料類型支援

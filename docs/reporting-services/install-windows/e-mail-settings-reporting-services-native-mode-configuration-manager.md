@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c371558070ee6ef41afe167e3be2ed4adbd80cc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513600"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593812"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子郵件設定 - Reporting Services 原生模式 (組態管理員)
 Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。
@@ -41,7 +41,7 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
 
 - 如果您只是要指定 SMTP 伺服器和一個擁有傳送電子郵件之權限的使用者帳戶，請使用 Reporting Services 組態管理員。 這些是設定報表伺服器電子郵件傳遞延伸模組時所需的最小設定。
 
-- (選擇性) 請使用文字編輯器在 RSreportserver.config 檔案中指定其他設定。 這個檔案包含報表伺服器電子郵件傳遞的所有組態設定。 如果您要使用本機 SMTP 伺服器，或要設定只能對特定主機進行電子郵件傳遞的限制，則必須在這些檔案中指定其他設定。 如需尋找和修改組態檔的詳細資訊，請參閱《SQL Server 線上叢書》中的 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。
+- (選擇性) 請使用文字編輯器在 RSreportserver.config 檔案中指定其他設定。 這個檔案包含報表伺服器電子郵件傳遞的所有組態設定。 如果您要使用本機 SMTP 伺服器，或要設定只能對特定主機進行電子郵件傳遞的限制，則必須在這些檔案中指定其他設定。 如需尋找和修改組態檔的詳細資訊，請參閱 [Modify a Reporting Services Configuration File (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。
 
 > [!NOTE] 
 > 報表伺服器電子郵件設定是以 CDO 為基礎。 如果您想要取得有關特定設定的詳細資料，可以參考 CDO 產品文件集。
@@ -77,7 +77,7 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
 6. 您也可以在 rsreportserver.config 中調整電子郵件組態的其他欄位。
 
 ## <a name="example-report-server-e-mail-configuration"></a>範例報表伺服器電子郵件組態
-下列範例說明遠端 SMTP 伺服器之 RSreportserver.config 檔案中的設定。 如需設定描述和有效值的相關資訊，請參閱《SQL Server 線上叢書》中的 [Rsreportserver.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 。
+下列範例說明遠端 SMTP 伺服器之 RSreportserver.config 檔案中的設定。 如需設定描述和有效值的相關資訊，請參閱 [Rsreportserver.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) (Rsreportserver.config 組態檔)。
 
 ```
 <RSEmailDPConfiguration>
