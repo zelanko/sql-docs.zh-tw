@@ -10,24 +10,24 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780583"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054851"
 ---
 # <a name="string-utility-functions-sample"></a>字串公用程式函數範例
   這個「字串公用程式」範例包含以 Visual C# 和 Visual Basic 撰寫的資料流資料表值函式，它會將逗號分隔字串分割成具有一個資料行的資料表。 它也包含彙總函式，可將字串資料行轉換為逗號分隔字串。  另外還實作純量函數和資料表值函式，它們提供規則運算式取代和規則運算式搜尋功能。  
   
  若要實作資料流資料表值函式，請建立傳回實作 `IEnumerable` 介面之物件的方法。 此 `IEnumerable` 方法必須透過屬性與填入資料表值函式資料列的另一個方法連結。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](https://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
   
--   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
+-   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://archive.codeplex.com/?p=SqlServerSamples)取得 AdventureWorks 資料庫  
   
 -   .NET Framework SDK 2.0 或更新版本或是 Microsoft Visual Studio 2005 或更新版本。 您可以免費取得 .NET Framework SDK。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62780583"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-    -   複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存為`test.sql`範例目錄中。  
+    -   將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 測試命令腳本複製到檔案中，並將它儲存為範例目錄中的 `test.sql`。  
   
 8.  使用下列命令來執行測試指令碼  
   

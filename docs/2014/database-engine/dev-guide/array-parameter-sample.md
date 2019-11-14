@@ -10,12 +10,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753730"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055909"
 ---
 # <a name="array-parameter-sample"></a>陣列參數範例
   有時，在資料庫中建立、更新或刪除一組資料列非常有用。 您可以使用數種方法實現此目標。 其中之一便是從用戶端將資訊的陣列，傳遞至使用 Common Language Runtime (CLR) 整合使用者自訂資料類型之伺服器上的 CLR 整合預存程序。 此類使用者自訂資料類型的性質將提供給伺服器的資料大小限制在 8000 位元組。 因此，此方法無法滿足大型或複雜的資料。 如果管理的資料較小而且簡單，則相較於呼叫每一個資料列的預存程序，此方法會更有效。 藉由傳遞陣列，對於順序重要的那些應用程式可保留資料的順序。此範例包含下列項目：  
@@ -26,12 +26,12 @@ ms.locfileid: "62753730"
   
 3.  `TestArrayParameter` 主控台應用程式。 這會根據所傳入之命令列參數建立 `ContactTypeNames` 使用者定義資料類型的執行個體，然後叫用 `usp_EnsureContactTypeNames` 預存程序，方法是將使用者定義資料類型的執行個體做為參數進行傳遞。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](https://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
   
--   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
+-   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://archive.codeplex.com/?p=SqlServerSamples)取得 AdventureWorks 資料庫  
   
 -   .NET Framework SDK 2.0 或更新版本或是 Microsoft Visual Studio 2005 或更新版本。 您可以免費取得 .NET Framework SDK。  
   

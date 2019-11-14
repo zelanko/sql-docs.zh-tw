@@ -1,7 +1,6 @@
 ---
-title: 使用 Data Migration Assistant 遷移 SQL Server 登入 |Microsoft Docs
+title: 使用 Data Migration Assistant 遷移 SQL Server 登入
 description: 瞭解如何使用 Data Migration Assistant 遷移 SQL Server 登入
-ms.custom: ''
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 265ab37c47956400baa759b73838c7f2e66cc83e
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783267"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056486"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>使用 Data Migration Assistant 遷移 SQL Server 登入
 
@@ -34,7 +34,7 @@ ms.locfileid: "72783267"
 
 - Data Migration Assistant 目前不支援與獨立安全性憑證（對應至憑證的登入）相關聯的登入、獨立非對稱金鑰（對應至非對稱金鑰的登入），以及對應至認證的登入。
 
-- Data Migration Assistant 不會使用以雙重雜湊標記（\# \#）括住的名稱來移動**sa**登入和伺服器原則，這僅供內部使用。
+- Data Migration Assistant 不會使用以雙重雜湊標記（\#\#）括住的名稱來移動**sa**登入和伺服器原則，這僅供內部使用。
 
 - 根據預設，Data Migration Assistant 會選取要遷移的所有合格登入。 （選擇性）您可以選取要遷移的特定登入。 當 Data Migration Assistant 遷移所有合格的登入時，使用者對應在遷移的資料庫中會保持不變。
 

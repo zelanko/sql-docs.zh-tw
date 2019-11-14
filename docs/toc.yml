@@ -745,8 +745,6 @@
                   href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
                 - name: 容錯移轉與容錯移轉模式
                   href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-                - name: 自動容錯移轉的彈性容錯移轉原則
-                  href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
                 - name: 僅供讀取級別
                   href: database-engine/availability-groups/windows/read-scale-availability-groups.md
                 - name: 讀取/寫入連線重新導向
@@ -4157,14 +4155,16 @@
           href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: 版本資訊
       items:
-        - name: 回溯相容性
-          href: database-engine/sql-server-database-engine-backward-compatibility.md
+        - name: SQL Server 中已中止的功能
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: SQL Server 2019 中已淘汰
+          href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
         - name: SQL Server 2017 中已淘汰
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016 中已淘汰
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: SQL Server 中已中止的功能
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: SQL Server 2019 中的重大變更
+          href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
         - name: SQL Server 2017 中的重大變更
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016 中的重大變更
@@ -4781,7 +4781,7 @@
           items:
             - name: 回溯相容性
               href: relational-databases/replication/replication-backward-compatibility.md
-            - name: 已被取代的功能
+            - name: 即將淘汰的功能
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
             - name: 重大變更
               href: relational-databases/replication/breaking-changes-in-sql-server-replication.md

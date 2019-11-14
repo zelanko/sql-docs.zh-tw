@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpxactsetjob （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048193"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056789"
 ---
-# <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
+# <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   顯示 Oracle 發行者的 Xactset 作業的相關資訊。 這個預存程序執行於任何資料庫中的散發者端。  
@@ -37,40 +37,39 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher** = ] **'***publisher***'**  
- 名稱非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作業所屬的發行者。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是作業所屬的非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者名稱。 *publisher*是**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**jobnumber**|**int**|Oracle 作業編號。|  
-|**lastdate**|**varchar(22)**|上次作業執行的日期。|  
-|**thisdate**|**varchar(22)**|變更的時間|  
-|**nextdate**|**varchar(22)**|下次作業執行的日期。|  
-|**broken**|**varchar(1)**|指出作業是否中斷的旗標。|  
-|**interval**|**varchar(200)**|作業的間隔時間。|  
-|**失敗**|**int**|作業的失敗次數。|  
-|**xactsetjobwhat**|**varchar(200)**|作業所執行的程序名稱。|  
-|**xactsetjob**|**varchar(1)**|作業的狀態，它可以是下列項目之一：<br /><br /> **1** -作業已啟用。<br /><br /> **0** -作業已停用。|  
+|**lastdate**|**Varchar （22）**|上次作業執行的日期。|  
+|**thisdate**|**Varchar （22）**|變更的時間|  
+|**nextdate**|**Varchar （22）**|下次作業執行的日期。|  
+|**分離**|**Varchar （1）**|指出作業是否中斷的旗標。|  
+|**期間**|**Varchar （200）**|作業的間隔時間。|  
+|**故障**|**int**|作業的失敗次數。|  
+|**xactsetjobwhat**|**Varchar （200）**|作業所執行的程序名稱。|  
+|**xactsetjob**|**Varchar （1）**|作業的狀態，它可以是下列項目之一：<br /><br /> **1** -已啟用作業。<br /><br /> **0** -作業已停用。|  
 |**xactsetlonginterval**|**int**|作業的長間隔時間。|  
 |**xactsetlongthreshold**|**int**|作業的長臨界值。|  
 |**xactsetshortinterval**|**int**|作業的短間隔時間。|  
 |**xactsetshortthreshold**|**int**|作業的短臨界值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** （成功） 或**1** （失敗）  
+ **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
- **sp_helpxactsetjob**用於快照式複寫和異動複寫用於 Oracle 發行者。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpxactsetjob**用於 Oracle 發行者的快照式複寫和異動複寫中。  
   
- **sp_helpxactsetjob**一律會傳回在發行者端的 Xactset 作業 (HREPL_XactSetJob) 的目前設定。 如果 Xactset 作業目前在作業佇列中，還會另外從以 Oracle 發行者管理員帳戶建立的 USER_JOB 資料字典檢視，傳回作業屬性。  
+ **sp_helpxactsetjob**一律會傳回「發行者」端 Xactset 作業（HREPL_XactSetJob）的目前設定。 如果 Xactset 作業目前在作業佇列中，還會另外從以 Oracle 發行者管理員帳戶建立的 USER_JOB 資料字典檢視，傳回作業屬性。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_helpxactsetjob**。  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行**sp_helpxactsetjob**。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者的交易集作業 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [sp_publisherproperty &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 處理大型物件使用 CLR |Microsoft Docs
+title: 使用 CLR 處理大型物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7253264398316f2fb8bc0c1f1b4587c0e597beee
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781533"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054832"
 ---
 # <a name="handling-large-objects-using-clr"></a>使用 CLR 處理大型物件
   SQL Server 的 `HandlingLOBUsingCLR` 範例會示範如何使用 Common Language Runtime (CLR) 預存程序，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與伺服器可用的檔案系統之間傳送大型物件 (LOB)。 此範例示範如何在伺服器端程式碼中存取檔案，並從以 CLR 為基礎的預存程序同時叫用動態查詢和預存程序。 它也示範如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來註冊和取消註冊 CLR 方法及組件。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](https://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站[免費取得 ](https://www.microsoft.com/download/details.aspx?id=42299) Express  
   
--   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
+-   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://archive.codeplex.com/?p=SqlServerSamples)取得 AdventureWorks 資料庫  
   
 -   .NET Framework SDK 2.0 或更新版本或是 Microsoft Visual Studio 2005 或更新版本。 您可以免費取得 .NET Framework SDK。  
   
@@ -573,7 +573,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`) 預存程序，藉以測試範例。  
+ 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] （`test.sql`）會藉由執行預存程式來測試範例。  
   
 ```  
 USE AdventureWorks  

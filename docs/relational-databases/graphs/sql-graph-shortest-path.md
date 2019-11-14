@@ -1,5 +1,5 @@
 ---
-title: 最短的路徑 (SQL Graph) |Microsoft Docs
+title: 最短路徑（SQL Graph） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -17,50 +17,50 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
+ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035885"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056405"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH & Amp;&#40;transact-SQL&AMP;&#41;
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  指定搜尋條件圖形，也就是搜尋以遞迴方式或重複。 SHORTEST_PATH 可用在 MATCH 內使用 SELECT 陳述式中圖形節點和邊緣資料表。 
+  指定以遞迴或重複方式搜尋之圖形的搜尋條件。 在 SELECT 語句中，可以在與圖形節點和邊緣資料表相符的 SHORTEST_PATH 中使用。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="shortest-path"></a>最短的路徑
-SHORTEST_PATH 函式可讓您尋找：    
-* 兩個指定的節點/實體之間的最短路徑
-* 單一來源的最短路徑。
-* 最短到多個目標節點從多個來源節點路徑。
+## <a name="shortest-path"></a>最短路徑
+SHORTEST_PATH 函數可讓您尋找：    
+* 兩個指定節點/實體之間的最短路徑
+* 單一來源最短路徑。
+* 從多個來源節點到多個目標節點的最短路徑。
 
-它會使用任意長度的模式，做為輸入，並傳回兩個節點之間的最短的路徑存在。 此函式僅適用於在 MATCH 內。 此函數會傳回任何兩個指定的節點之間只能有一個最短的路徑。 如果有，兩個或多個長度相同的來源和目的地節點，函式傳回只有一個路徑找到第一個周遊期間的任何一對之間的最短路徑。 請注意，使用任意長度的模式，只能指定在 SHORTEST_PATH 函式。 
+它接受任意長度模式做為輸入，並傳回兩個節點之間存在的最短路徑。 此函式只能用在 MATCH 內部。 此函式只會傳回兩個指定節點之間的一個最短路徑。 如果有兩個或多個相同長度的最短路徑在任何一組來源與目的地節點之間存在，此函式只會傳回在遍歷期間第一個找到的路徑。 請注意，任意長度模式只能在 SHORTEST_PATH 函式內指定。 
 
-請參閱[比對 (SQL Graph)](../../t-sql/queries/match-sql-graph.md)語法。 
+如需語法，請參閱[MATCH （SQL Graph）](../../t-sql/queries/match-sql-graph.md) 。 
 
-## <a name="for-path"></a>路徑
-路徑必須使用具有在 FROM 子句中，使用任意長度的模式，將會參與任何節點或邊緣資料表名稱。 路徑會告訴引擎節點或邊緣資料表將會傳回已排序的集合，表示節點或邊緣周遊的路徑中找到的清單。 從這些資料表的屬性不能直接在 SELECT 子句中投射。 專案屬性，這些資料表中的，圖形路徑彙總函式必須使用。  
+## <a name="for-path"></a>針對 PATH
+針對 PATH，必須搭配 FROM 子句中的任何節點或邊緣資料表名稱使用，這將會參與任意長度模式。 針對 [路徑]，告訴引擎節點或邊緣資料表將傳回已排序的集合，代表沿著所遍歷路徑中找到的節點或邊緣的清單。 這些資料表中的屬性無法直接投射在 SELECT 子句中。 若要從這些資料表投影屬性，必須使用圖形路徑彙總函式。  
 
-## <a name="arbitrary-length-pattern"></a>任意長度的模式
-此模式包含節點和邊緣，直到達到所需的節點，或直到此模式中所指定的反覆項目數上限必須重複周遊成立。 執行查詢時，每次執行此模式的結果會在節點與邊緣周遊的路徑從 [開始] 節點以結束節點的已排序的集合。 這是規則運算式樣式語法模式，並支援下列兩個模式數量詞：
+## <a name="arbitrary-length-pattern"></a>任意長度模式
+此模式包含節點和邊緣，必須重複地進行迴圈，直到達到所需的節點，或在符合模式中所指定的反覆運算次數上限為止。 每次執行查詢時，執行此模式的結果會是已排序的節點集合，以及從開始節點到結束節點的路徑所進行的邊緣。 這是正則運算式樣式語法模式，而且支援下列兩種模式數量詞：
 
-* **'+'** :重複模式 1 或多次。 在找到最短路徑後立即終止。
-* **{1,n}** ：重複模式 1 至 'n' 次。 終止只要找到最短。
+* **' + '** ：重複模式1或多次。 在找到最短路徑後立即終止。
+* **{1，n}** ：重複模式1到 ' n ' 次。 一旦找到最短的，就終止。
 
 ## <a name="last_node"></a>LAST_NODE
-LAST_NODE() 函式允許鏈結兩個任意長度的周遊模式。 用於案例其中：    
-* 在查詢中使用多個最短的路徑模式，其中一個模式開始上一個模式的最後一個節點。
-* 在相同的 LAST_NODE()，合併兩個最短的路徑模式。
+LAST_NODE （）函數可允許兩個任意長度的遍歷模式的連結。 它可以用於下列情況：    
+* 查詢中使用一個以上的最短路徑模式，而一個模式從上一個模式的最後一個節點開始。
+* 以相同的 LAST_NODE （）合併兩個最短的路徑模式。
 
-## <a name="graph-path-order"></a>圖形的路徑順序
-圖形的路徑順序參照此輸出路徑中的資料順序。 輸出路徑順序總是開始後面出現的遞迴部分節點/邊緣模式中非遞迴的一部分。 圖形周遊期間最佳化執行的查詢時的順序與列印輸出中的順序無關。 同樣地，在遞迴模式中的箭頭方向也不會影響圖形的路徑順序。 
+## <a name="graph-path-order"></a>圖形路徑順序
+圖形路徑順序指的是輸出路徑中的資料順序。 輸出路徑順序一律會在模式的非遞迴部分啟動，後面接著出現在遞迴部分中的節點/邊緣。 在查詢優化/執行期間，圖表的執行順序與輸出中列印的順序無關。 同樣地，遞迴模式中的箭號方向也不會影響圖形路徑順序。 
 
 ## <a name="graph-path-aggregate-functions"></a>圖形路徑彙總函式
-因為節點和邊緣涉及任意長度模式傳回 （節點和邊緣相隔周遊該路徑中） 的集合，則使用者無法專案直接使用傳統 tablename.attributename 語法的屬性。 查詢它需要所在專案屬性值從中繼節點或邊緣資料表，在周遊，路徑中使用下列圖形路徑彙總函式：STRING_AGG、 LAST_VALUE、 SUM、 AVG、 MIN、 MAX 和 COUNT。 SELECT 子句中使用這些彙總函式的一般語法是：
+由於與任意長度模式相關的節點和邊緣會傳回集合（在該路徑中所進行的節點和邊緣），因此使用者無法直接使用傳統的 attributename 語法來投影屬性。 針對需要從中繼節點或邊緣資料表投影屬性值的查詢，在所進行的路徑中，請使用下列圖形路徑彙總函式： STRING_AGG、LAST_VALUE、SUM、AVG、MIN、MAX 和 COUNT。 在 SELECT 子句中使用這些彙總函式的一般語法為：
 
 ```
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
@@ -80,45 +80,45 @@ LAST_NODE() 函式允許鏈結兩個任意長度的周遊模式。 用於案例�
 ```
 
 ### <a name="string_agg"></a>STRING_AGG
-STRING_AGG 函式採用的運算式和分隔符號，做為輸入，並傳回字串。 使用者可以使用此函式在 SELECT 子句中的專案屬性從中繼節點或邊緣周遊的路徑中。 
+STRING_AGG 函式會採用運算式和分隔符號做為輸入，並傳回字串。 使用者可以在 SELECT 子句中使用此函式，從所遍歷之路徑中的中繼節點或邊緣投影屬性。 
 
 ### <a name="last_value"></a>LAST_VALUE
-從周遊，路徑 LAST_VALUE 彙總函式的最後一個節點的屬性可用的專案。 它是以邊緣資料表別名做為輸入，此函式，只有節點資料表名稱錯誤，或可以使用別名。
+若要從已進行路徑的最後一個節點來投影屬性，可以使用 LAST_VALUE 彙總函式。 提供邊緣資料表別名做為此函式的輸入是錯誤的，只可以使用節點資料表名稱或別名。
 
-**最後一個節點**:最後一個節點是指會周遊，無論在符合述詞中的箭頭方向的路徑中最後一個出現的節點。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`＞。 在此路徑中的最後一個節點會瀏覽的最後一個 P 節點。 
+**最後一個節點**：最後一個節點會參考出現在路徑中的最後一個節點，而不考慮 MATCH 述詞中箭號的方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 在這裡，路徑中的最後一個節點會是最後一次造訪的 P 節點。 
 
-而最後一個節點是在此模式的輸出圖形路徑中的最後一個第 n 個節點： `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+不過，最後一個節點是此模式輸出圖形路徑中的最後 n 個節點： `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
-此函數會傳回周遊的路徑中提供的節點/邊緣屬性值或運算式出現的總和。
+此函式會傳回所提供節點/邊緣屬性值的總和，或出現在所遍歷路徑中的運算式。
 
 ### <a name="count"></a>COUNT
-此函式會傳回路徑中的所需的節點/邊緣屬性的非 null 值的數目。 COUNT 函式支援 '\*' 運算子的節點或邊緣資料表別名。 沒有節點或邊緣資料表別名，使用\*模稜兩可，而且會產生錯誤。
+此函式會傳回路徑中所需節點/邊緣屬性的非 null 值數目。 COUNT 函數支援具有節點或邊緣資料表別名的 '\*' 運算子。 如果沒有節點或邊緣資料表別名，\* 的用法會不明確，而且會導致錯誤。
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
 
 ### <a name="avg"></a>AVG
-傳回提供的節點/邊緣屬性值或運算式出現的平均值中周遊的路徑。
+傳回所提供節點/邊緣屬性值的平均值，或出現在所遍歷路徑中的運算式。
 
 ### <a name="min"></a>MIN
-從提供的節點/邊緣屬性值或運算式出現在周遊的路徑傳回最小值。
+從所提供的節點/邊緣屬性值或在已進行的路徑中出現的運算式，傳回最小值。
 
 ### <a name="max"></a>MAX
-從提供的節點/邊緣屬性值或運算式出現在周遊的路徑傳回的最大值。
+從所提供的節點/邊緣屬性值或在已進行的路徑中出現的運算式，傳回最大值。
 
-## <a name="remarks"></a>備註  
-shortest_path 函式僅適用於在 MATCH 內。     
-LAST_NODE 只有在 shortest_path 內執行。     
-不支援尋找加權的最短路徑、 所有路徑或所有的最短路徑。         
-在某些情況下，不正確的計劃可能會產生較高數目的躍點，會導致較高的查詢執行時間的查詢。 使用雜湊聯結提示可能會幫助。    
+## <a name="remarks"></a>Remarks  
+shortest_path 函式只能用在 MATCH 內部。     
+只有 shortest_path 內才支援 LAST_NODE。     
+若要尋找加權最短路徑，則不支援所有路徑或所有最短路徑。         
+在某些情況下，可能會針對具有較高躍點數目的查詢產生不良的計畫，因而產生較高的查詢執行時間。 使用雜湊聯結提示可能會有説明。    
 
 
 ## <a name="examples"></a>範例 
-在這裡顯示，我們要的範例查詢會使用節點和邊緣資料表建立在[SQL 圖形範例](./sql-graph-sample.md)
+針對此處顯示的範例查詢，我們將使用在[SQL Graph](./sql-graph-sample.md)中建立的節點和邊緣資料表範例
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  尋找 2 人之間最短路徑
- 在下列範例中，我們會發現 Jacob 和 Alice 之間最短路徑。 我們需要從圖形的範例指令碼建立的 FriendOf edge 與 /people/person 節點。 
+### <a name="a--find-shortest-path-between-2-people"></a>A.  尋找2人之間最短的路徑
+ 在下列範例中，我們會找到 Jacob 與 Alice 之間的最短路徑。 我們將需要從 graph 範例腳本建立的 Person 節點和 FriendOf edge。 
 
  ```
 SELECT PersonName, Friends
@@ -137,8 +137,8 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  尋找從給定的節點到所有其他節點的最短路徑圖表中。 
- 下列範例會尋找 Jacob 連接到的所有人在下圖，並從 Jacob 所有人員的最短路徑。 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>b.  尋找從指定節點到圖形中所有其他節點的最短路徑。 
+ 下列範例會尋找 Jacob 在圖形中連接的所有人員，以及從 Jacob 開始到所有這些人員的最短路徑。 
 
  ```
 SELECT
@@ -152,8 +152,8 @@ WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
  ```
 
-### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  計算不同人員移至另一個圖形中周遊的躍點/層級的數目。
- 下列範例會尋找 Jacob 與 Alice 之間最短的路徑，並印出 Jacob 前往 Alice 所花費的躍點數目。 
+### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  計算從某個人員到圖形中另一個人所往返的躍點/層級數目。
+ 下列範例會尋找 Jacob 與 Alice 之間的最短路徑，並列印從 Jacob 到 Alice 所需的躍點數目。 
 
  ```
  SELECT PersonName, Friends, levels
@@ -173,8 +173,8 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
-### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. 尋找指定的人員遠離 1-3 躍點的人員
-下列範例會尋找在圖 1-3 躍點離開他 Jacob 和他已連線到的所有人員之間的最短路徑。 
+### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. 尋找特定人員的1-3 躍點
+下列範例會尋找 Jacob 與他在 graph 1-3 躍點中連線的所有人員之間的最短路徑。 
 
 ```
 SELECT
@@ -188,8 +188,8 @@ WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2){1,3}))
 AND Person1.name = 'Jacob'
 ```
 
-### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. 尋找指定的人員遠離的 2 個躍點的人員
-下列範例會尋找 Jacob 和 2 個的躍點離開他在圖形中的人之間最短的路徑。 
+### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. 從特定人員找出剛好2個躍點的使用者
+下列範例會尋找 Jacob 之間的最短路徑，以及與他在圖形中剛好2個躍點的人。 
 
 ```
 SELECT PersonName, Friends
@@ -209,7 +209,7 @@ WHERE Q.levels = 2
 ```
 
 ## <a name="see-also"></a>另請參閱  
- [比對 (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
+ [MATCH （SQL Graph）](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [SQL Server 2017 的圖表處理](../../relational-databases/graphs/sql-graph-overview.md)     

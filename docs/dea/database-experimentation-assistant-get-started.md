@@ -1,7 +1,6 @@
 ---
-title: SQL Server 升級的資料庫測試助理入門
-description: 開始使用資料庫測試助理
-ms.custom: ''
+title: 開始使用資料庫測試助理
+description: 資料庫測試助理（DEA）是一個/B 測試解決方案，適用于 SQL Server 環境中的變更，例如升級或新的索引。
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,14 +11,15 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 43f8c6bff909716bdd85a798dfd4e5a7431e31af
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381766"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056707"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>開始使用資料庫測試助理
+# <a name="get-started-with-database-experimentation-assistant-sql-server"></a>開始使用資料庫測試助理（SQL Server）
 
 資料庫測試助理（DEA）是一個/B 測試解決方案，適用于 SQL Server 環境中的變更，例如升級或新的索引。 DEA 可協助您評估來源伺服器上的工作負載（在目前的環境中）如何在您的新環境中執行。 DEA 會藉由完成三個步驟，引導您執行 A/B 測試： 
 
@@ -48,7 +48,7 @@ SQL Server A/B 測試的第一個步驟是在來源伺服器上捕捉追蹤。 �
 
 1. 輸入或選取下列資訊：
 
-   - **追蹤名稱**：您正在建立之新追蹤檔案的檔案名。 避免使用變換檔案命名慣例的追蹤名稱，例如，CaptureName \_NNN。
+   - **追蹤名稱**：您正在建立之新追蹤檔案的檔案名。 避免使用變換檔案命名慣例的追蹤名稱，例如，CaptureName\_NNN。
    - **持續時間**：捕捉的持續時間。
    - **SQL Server 實例名稱**：您要從中捕獲追蹤的 SQL Server 實例。
    - **資料庫名稱**：電腦上執行的資料庫名稱，您想要在其中捕獲追蹤的 SQL Server。 如果保留空白，則會從伺服器上的所有資料庫中捕獲追蹤。
@@ -120,7 +120,7 @@ SQL Server A/B 測試的第二個步驟是重新執行已捕獲到目標伺服�
 
 ### <a name="analysis-report"></a>分析報表
 
-在報表的第一頁上，會顯示執行實驗之目標伺服器的版本和組建資訊。 您可以使用臨界值來調整 A/B 測試分析的敏感度或容錯。 根據預設，閾值設定為 5%。 任何大於或等於 5% 的效能改進都會分類為**改良**。 選取下拉式功能表中的 [選項]，以使用不同的效能閾值來評估報表。
+在報表的第一頁上，會顯示執行實驗之目標伺服器的版本和組建資訊。 您可以使用臨界值來調整 A/B 測試分析的敏感度或容錯。 根據預設，閾值設定為5%。 任何大於或等於5% 的效能改進都會分類為**改良**。 選取下拉式功能表中的 [選項]，以使用不同的效能閾值來評估報表。
 
 ![臨界值](https://msdnshared.blob.core.windows.net/media/2017/03/threshold.jpg)
 

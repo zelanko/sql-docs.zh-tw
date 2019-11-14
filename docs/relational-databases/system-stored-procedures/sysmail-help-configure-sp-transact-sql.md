@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304744"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056166"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,26 +39,25 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@parameter_name** = ] **'***parameter_name***'**  
- 要擷取之組態設定的名稱。 當指定時，會在 **@no__t 1parameter_value**輸出參數中傳回 configuration 設定的值。 當未指定 **@no__t 1parameter_name**時，這個預存程式會傳回包含實例中所有 Database Mail 設定值的結果集。  
+`[ @parameter_name = ] 'parameter_name'` 要抓取之設定的名稱。 當指定時，會在 **\@parameter_value** OUTPUT 參數中傳回 configuration 設定的值。 當未指定任何 **\@parameter_name**時，這個預存程式會傳回結果集，其中包含實例中的所有 Database Mail 設定設定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 當未指定 **@no__t 1parameter_name**時，會傳回具有下列資料行的結果集。  
+ 當未指定任何 **\@parameter_name**時，會傳回具有下列資料行的結果集。  
   
 ||||  
 |-|-|-|  
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |**paramname**|**nvarchar(256)**|組態參數的名稱。|  
 |**paramvalue**|**nvarchar(256)**|組態參數值。|  
 |**description**|**nvarchar(256)**|組態參數的描述。|  
   
-## <a name="remarks"></a>備註  
- [預存程式] **sysmail_help_configure_sp**會列出實例目前的 Database Mail 設定。  
+## <a name="remarks"></a>Remarks  
+ 預存程式**sysmail_help_configure_sp**列出實例目前的 Database Mail 設定。  
   
- 當指定了 **@no__t 1parameter_name** ，但沒有為 **@no__t 3parameter_value**提供輸出參數時，這個預存程式不會產生任何輸出。  
+ 當指定了 **\@parameter_name** ，但未提供 **\@parameter_value**的輸出參數時，這個預存程式不會產生任何輸出。  
   
  預存程式**sysmail_help_configure_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱叫用此程式。  
   

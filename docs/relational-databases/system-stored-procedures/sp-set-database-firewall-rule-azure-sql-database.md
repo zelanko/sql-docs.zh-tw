@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2a465e03c3b77b8d05437fa0cfaf3354434ce973
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843847"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055083"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,21 +44,18 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- **[@name** =] [N] '*name*'  
- 用來描述和區分資料庫層級防火牆設定的名稱。 *名稱*為**Nvarchar （128）** ，沒有預設值。 Unicode 識別碼 `N` 對於 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]而言是選擇性的。 
+`[ @name = ] [N]'name'` 用來描述和區分資料庫層級防火牆設定的名稱。 *名稱*為**Nvarchar （128）** ，沒有預設值。 Unicode 識別碼 `N` 對於 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]而言是選擇性的。 
   
- **[@start_ip_address** =]'*start_ip_address*'  
- 資料庫層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最低 IP 位址為 `0.0.0.0`。 *start_ip_address*為**Varchar （50）** ，沒有預設值。  
+`[ @start_ip_address = ] 'start_ip_address'` 資料庫層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最低 IP 位址為 `0.0.0.0`。 *start_ip_address*為**Varchar （50）** ，沒有預設值。  
   
- [ **@end_ip_address** =]'*end_ip_address*'  
- 資料庫層級防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最高 IP 位址為 `255.255.255.255`。 *end_ip_address*為**Varchar （50）** ，沒有預設值。  
+`[ @end_ip_address = ] 'end_ip_address'` 資料庫層級防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最高 IP 位址為 `255.255.255.255`。 *end_ip_address*為**Varchar （50）** ，沒有預設值。  
   
  下表示范 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中支援的引數和選項。  
   
 > [!NOTE]  
 >  當此欄位和*start_ip_address*欄位等於 `0.0.0.0`時，允許 Azure 連線嘗試。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  資料庫的資料庫層級防火牆設定的名稱必須是唯一的。 如果為預存程序提供的資料庫層級防火牆設定名稱已存在資料庫層級防火牆設定資料表中，則會更新開始和結束 IP 位址。 否則，將會建立新的資料庫層級防火牆設定。  
   
  當您新增資料庫層級防火牆設定，其中的開始和結束 IP 位址等於 `0.0.0.0`時，您可以從任何 Azure 資源存取 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器中的資料庫。 提供*name*參數的值，可協助您記住防火牆設定的用途。  

@@ -1,7 +1,8 @@
 ---
-title: 分析彙總的資料移轉小幫手評定報表，使用 Power BI (SQL Server) |Microsoft Docs
-description: 了解如何使用 Power BI 來分析您已匯入，並合併 SQL Server 中的資料移轉評估報告
-ms.custom: ''
+title: 使用 Power BI 分析合併的評估報告
+titleSuffix: Data Migration Assistant
+description: 瞭解如何使用 Power BI 來分析已匯入及合併的資料移轉評量報告 SQL Server
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b97ed315b8266c165a14a7f2b05912a7ae530b1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2385914fc97fa8e118d871ddac6e0cdc9d49247
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054680"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056499"
 ---
-# <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析 Data Migration Assistant 有了 Power BI 所建立的彙總的評估報告
+# <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>使用 Power BI 分析 Data Migration Assistant 所建立的匯總評量報告
 
-本文說明如何建立 Power BI 報告來分析合併的移轉評定。
+本文說明如何建立 Power BI 報表來分析合併的遷移評量。
 
-如需彙總的資料移轉小幫手所建立的移轉評定資訊，請參閱[彙總評估報告](../dma/dma-consolidatereports.md)。
+如需有關合併 Data Migration Assistant 所建立之遷移評量的詳細資訊，請參閱[合併評量報告](../dma/dma-consolidatereports.md)。
 
 ## <a name="sample-power-bi-reports"></a>範例 Power BI 報表
 
-您可以從這個下載的彙總的移轉評定的 Power BI 報表範例[Github 存放庫](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)。
+您可以從這個[GitHub 存放庫](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)下載匯總遷移評量的 Power BI 報表範例。
 
-包含下列報告︰ 
+其中包含下列報告： 
 
-- [儀表板](#dashboard-report)
+- [儀錶](#dashboard-report)
 
-  包含快照集的統計資料和向下鑽研報表。
+  包含快照統計資料和向下切入報表。
 
-- [在內部部署環境更新整備小幫手](#on-premises-upgrade-readiness-report)
+- [內部部署升級準備就緒](#on-premises-upgrade-readiness-report)
 
-  資料來源是 UpgradeSuccessRanking 檢視 DMAReporting 資料庫中。  此報告會顯示您經過評定的資料庫百分比升級成功。
+  資料來源是 DMAReporting 資料庫中的 UpgradeSuccessRanking 視圖。  此報告會顯示已評估資料庫的升級成功百分比。
 
-- [在內部部署功能同位檢查](#on-premises-feature-parity-report)
+- [內部部署功能同位](#on-premises-feature-parity-report)
 
   顯示目標 SQL Server 版本的功能建議。
 
-- [Azure SQL DB 更新整備小幫手](#azure-sql-db-upgrade-readiness-report)
+- [Azure SQL DB 升級準備就緒](#azure-sql-db-upgrade-readiness-report)
 
-  資料來源是 UpgradeSuccessRanking 檢視 DMAReporting 資料庫中。  此報告會顯示適用於 Azure SQL DB 移轉評估的資料庫百分比升級成功。
+  資料來源是 DMAReporting 資料庫中的 UpgradeSuccessRanking 視圖。  此報告會顯示針對 Azure SQL DB 遷移評估之資料庫的升級成功百分比。
 
 - [Azure SQL DB 不支援的功能](#azure-sql-db-unsupported-features-report)
 
-  在您現有的資料庫不支援的 Azure SQL DB (V12) 中顯示功能。
+  顯示 Azure SQL DB （V12）中不支援之現有資料庫的功能。
 
-您可以修改這些報表來使用您的環境，藉由變更 Power BI 中的資料來源。 
+您可以藉由變更 Power BI 中的資料來源，修改這些報表來與您的環境搭配使用。 
 
-1. 選取向下箭號旁**編輯查詢**，然後選取**資料來源設定**。
+1. 選取 [**編輯查詢**] 旁的向下箭號，然後選取 [**資料來源設定**]。
 
    ![編輯查詢 功能表、 資料來源設定](../dma/media/DataSourceSettings.png)
 
-1. 選取**變更來源...** ，然後輸入伺服器和資料庫的值。
+1. 選取 [**變更來源 ...** ]，然後輸入伺服器和資料庫值。
 
-   ![變更來源、 伺服器和資料庫](../dma/media/ChangeSource.png)
+   ![變更來源、伺服器和資料庫](../dma/media/ChangeSource.png)
 
-1. 選取  **確定**，然後選取**關閉**。
+1. 選取 **[確定]** ，然後選取 [**關閉**]。
 
-1. 重新整理您的報表。
+1. 重新整理報表。
 
    ![重新整理 Power BI 報表](../dma/media/RefreshReport.png)
 
@@ -73,73 +74,73 @@ ms.locfileid: "68054680"
 
 ![儀表板報表](../dma/media/DashboardReport.png)
 
-儀表板會顯示所有您評量的詳細資料。 您可以使用左側的交叉分析篩選器，以篩選出的執行個體或資料庫。 您可以向下切入到特定的類別，以查看其中的問題也都必須位於使用橫條圖。
+儀表板會顯示您所有評量的詳細資料。 您可以使用左側的交叉分析篩選器，依實例或資料庫進行篩選。 您可以使用橫條圖向下切入到特定的類別，以查看問題所在的位置。
 
-若要向下切入，選取與橫條圖的右上角的向下箭頭的圓圈。
+若要向下切入，請選取橫條圖右上角有向下箭號的圓圈。
 
-![類別目錄向下鑽研](../dma/media/CategoryDrillDown.png)
+![類別深入分析](../dma/media/CategoryDrillDown.png)
 
-向下鑽研順序設定在下圖所示 (底下**軸**)。 若要變更順序，將資料行拖曳至所需的順序。
+如下圖所示（在 [**軸**] 底下）設定的明細序列。 若要變更順序，請將資料行拖曳至所需的順序。
 
-![視覺效果時，橫條圖的軸](../dma/media/VisualizationsAxis.png)
+![視覺效果，橫條圖軸](../dma/media/VisualizationsAxis.png)
 
-當您第一次來篩選特定的資料庫，然後向下鑽研至特定分類問題時，此檢視會變得更強大。 在下列範例中，HR 資料庫執行個體已選取 **SQL01** 若要檢視的所有物件，使移轉 （重大變更）。
+當您第一次依特定資料庫進行篩選，然後向下切入至特定類別的問題時，此視圖會變得更強大。 在下列範例中，會選取 [實例**azfae-use-vm-sql01** ] 的 HR 資料庫，以查看防止進行遷移的所有物件（重大變更）。
 
 ![HR 資料庫的重大變更](../dma/media/BreakingChanges.png)
 
-### <a name="on-premises-upgrade-readiness-report"></a>在內部部署升級整備報表
+### <a name="on-premises-upgrade-readiness-report"></a>內部部署升級就緒狀態報表
 
-![在內部部署升級整備報表](../dma/media/OnPremisesUpgradeReadinessReport.png)
+![內部部署升級就緒狀態報表](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-此報告會顯示移轉到新版的 SQL Server 的 「 如何準備您的資料庫是快照集。 此報表中的資料來自於 dbo。UpgradeSuccessFactor\_DMAReporting 資料庫中的內部部署檢視。
+此報表會顯示您的資料庫如何準備好要遷移至較新版本的 SQL Server 的快照集。 這份報表中的資料來自 dbo。DMAReporting 資料庫中的 UpgradeSuccessFactor\_內部部署 view。
 
-使用頂端的計分卡和篩選的執行個體和資料庫名稱，您可以看到它可能太移轉資料庫的版本。 比方說，如果您篩選由 AdventureWorks 2012 資料庫時，您可以看到資料庫已準備好移至報表中列出的所有 SQL Server 版本。 這取決於確保沒有任何重大變更，該資料庫和相容性層級。
+依實例和資料庫名稱進行篩選，以及使用頂端的計分卡時，您可以查看資料庫可能遷移的版本。 例如，如果您依 AdventureWorks 2012 資料庫進行篩選，您可以看到資料庫已準備好移至報表中列出的所有 SQL Server 版本。 這是由確保該資料庫和相容性層級沒有任何重大變更所決定。
 
-![升級成功的因素，針對 AdventureWorks 資料庫](../dma/media/UpgradeSuccessFactor.png)
+![AdventureWorks 資料庫的升級成功因素](../dma/media/UpgradeSuccessFactor.png)
 
-### <a name="on-premises-feature-parity-report"></a>在內部部署功能同位檢查報表
+### <a name="on-premises-feature-parity-report"></a>內部部署功能同位報告
 
-![在內部部署功能同位檢查報表](../dma/media/OnPremisesFeatureParityReport.png)
+![內部部署功能同位報告](../dma/media/OnPremisesFeatureParityReport.png)
 
-您可以使用此報告來反白顯示可用的目標 SQL Server 版本中的資料庫的新功能。
+使用此報表來反白顯示目標 SQL Server 版本中可用於資料庫的新功能。
 
-當您在漏斗圖中選取一項功能時，在下方的資料會反白顯示哪些物件會受此功能。 在下列範例中， **Stretch database，以節省儲存空間** 選取功能，且資料表會列出可能會受益於這項功能。
+當您選取漏斗圖中的某項功能時，底部的資料會反白顯示哪些物件會受到該功能影響。 在下列範例中，已選取 [**儲存體節省量**] 功能的 Stretch database，並列出可受益于此功能的資料表。
 
 ![Stretch Database 的功能建議](../dma/media/FeatureRecommend_StretchDatabase.png)
 
-### <a name="azure-sql-db-upgrade-readiness-report"></a>Azure SQL DB 更新整備小幫手報告
+### <a name="azure-sql-db-upgrade-readiness-report"></a>Azure SQL DB 升級就緒報告
 
-![Azure SQL DB 更新整備小幫手報告](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
+![Azure SQL DB 升級就緒報告](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-此報告會顯示移轉至 Azure SQL Database V12 資料庫完備性。 這份報表的資料來自於 dbo。UpgradeSuccessRanking DMAReporting 資料庫中的檢視。
+此報表顯示要遷移至 Azure SQL Database V12 的資料庫準備就緒。 這份報表中的資料來自 dbo。DMAReporting 資料庫中的 UpgradeSuccessRanking view。
 
-### <a name="azure-features-parity-report"></a>Azure 的功能同位檢查報告
+### <a name="azure-features-parity-report"></a>Azure 功能同位報告
 
-![Azure 的功能同位檢查報告](../dma/media/AzureFeaturesParityReport.png)
+![Azure 功能同位報告](../dma/media/AzureFeaturesParityReport.png)
 
-使用此報告來反白顯示*執行個體層級的功能*，不支援的 Azure SQL Database V12。
+請使用這份報表來反白顯示 Azure SQL Database V12 不支援的*實例層級功能*。
 
-當您在漏斗圖中選取一項功能時，在下方的資料會列出的執行個體和資料庫不支援的功能。 在下列範例中，已選取這項功能：**Alwayson 可用性群組組態不支援 Azure SQL Database 中** 。  
+當您選取漏斗圖中的功能時，底部的資料會列出不支援的實例和資料庫功能。 在下列範例中，選取了這項功能： **Azure SQL Database 中不支援 Always On 可用性群組**設定。  
 
-![Alwayson 可用性群組功能](../dma/media/Feature_AlwaysOnAvailability.png)
+![Always on 可用性群組功能](../dma/media/Feature_AlwaysOnAvailability.png)
 
  
-### <a name="azure-sql-db-unsupported-features-report"></a>Azure SQL DB 不支援的功能報告
+### <a name="azure-sql-db-unsupported-features-report"></a>Azure SQL DB 不支援的功能報表
 
-![Azure SQL DB 不支援的功能報告](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
+![Azure SQL DB 不支援的功能報表](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
-此報表會反白顯示哪些功能不支援給定**資料庫**時的目標是 Azure SQL Database (V12)。
+當目標為 Azure SQL Database （V12）時，此報表會反白顯示給定**資料庫**不支援的功能。
 
-藉由篩選漏斗圖中的資料庫名稱與功能值，您可以查看不支援的功能的詳細資料。 詳細資料包括哪些物件會受影響及解決問題的建議。
+藉由依漏斗圖中的資料庫名稱和功能值進行篩選，您可以查看不支援功能的詳細資料。 詳細資料包括受影響的物件，以及解決問題的建議。
 
-例如，篩選由 DTC 資料庫並**無法升級唯讀資料庫**，您可以看到一份受影響的物件。
+例如，無法升級 DTC 資料庫和**唯讀資料庫**的篩選，您可以查看受影響的物件清單。
 
-![唯讀資料庫不能升級問題](../dma/media/ReadOnlyDatabases.png)
+![無法升級唯讀資料庫問題](../dma/media/ReadOnlyDatabases.png)
 
 ## <a name="see-also"></a>另請參閱
 
-[Data Migration Assistant 的概觀](../dma/dma-overview.md)
+[Data Migration Assistant 總覽](../dma/dma-overview.md)
 
-[資料移轉小幫手下載](https://www.microsoft.com/download/details.aspx?id=53595)
+[Data Migration Assistant 下載](https://www.microsoft.com/download/details.aspx?id=53595)
 
 [Power BI 下載](https://powerbi.microsoft.com/)
