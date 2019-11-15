@@ -1,6 +1,6 @@
 ---
-title: 教學課程：在 Python 中部署模型以將客戶分類
-description: 在這四部分教學課程系列的第四部分中，您將使用 SQL Server Machine Learning 服務，在 Python 中部署群集模型。
+title: Python 教學課程：部署叢集模型
+description: 在這個四部分教學課程系列的第四部分中，您將使用 SQL Server Machine Learning 服務，在 Python 中部署群集模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,47 +9,48 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eef8a0f0f11e6d9085a1685145e4c6815979470d
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199360"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727133"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教學課程：在 Python 中部署模型，以 SQL Server Machine Learning 服務將客戶分類
+# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教學課程：使用 SQL Server Machine Learning 服務在 Python 中部署模型以分類客戶
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在這四部分教學課程系列的第四部分中，您將使用 SQL Server Machine Learning 服務，將以 Python 開發的叢集模型部署到 SQL 資料庫。
+在這個四部分教學課程系列的第四部分中，您將使用 SQL Server Machine Learning 服務，將以 Python 開發的群集模型部署到 SQL 資料庫。
 
-為了定期執行叢集化，當新客戶註冊時，您必須能夠從任何應用程式呼叫 Python 腳本。 若要這麼做，您可以將 python 腳本放在資料庫的 SQL 預存程式內，以在 SQL Server 中部署 Python 腳本。 因為您的模型會在 SQL 資料庫中執行，所以可以輕鬆地針對儲存在資料庫中的資料進行定型。
+為了定期執行群集，當新客戶註冊時，您必須能夠從任何應用程式呼叫 Python 指令碼。 若要這麼做，您可以將 Python 指令碼放在資料庫的 SQL 預存程序內，以在 SQL Server 中部署 Python 指令碼。 因為您的模型是在 SQL 資料庫中執行，所以可以輕鬆地針對儲存在資料庫中的資料進行定型。
 
-在本節中，您會將剛才撰寫的 Python 程式碼移至 SQL Server，並透過 SQL Server Machine Learning 服務的協助來部署叢集。
+在本節中，您會將剛才撰寫的 Python 程式碼移至 SQL Server，並透過 SQL Server Machine Learning 服務的協助來部署群集。
 
-在本文中，您將了解如何：
+在本文中，您將學會如何：
 
 > [!div class="checklist"]
-> * 建立會產生模型的預存程式
-> * 在 SQL Server 中執行叢集
-> * 使用叢集資訊
+> * 建立會產生模型的預存程序
+> * 在 SQL Server 中執行群集
+> * 使用群集資訊
 
-在[第一部](python-clustering-model.md)中，您已安裝必要條件並還原範例資料庫。
+在[第一部分](python-clustering-model.md)中，您已安裝必要條件並還原範例資料庫。
 
-在[第二部分](python-clustering-model-prepare-data.md)中，您已瞭解如何準備 SQL 資料庫中的資料，以執行群集。
+在[第二部分](python-clustering-model-prepare-data.md)中，您已了解如何準備 SQL 資料庫中的資料，以執行群集。
 
-在[第三部分](python-clustering-model-build.md)中，您已瞭解如何在 Python 中建立和定型以 K 表示的叢集模型。
+在[第三部分](python-clustering-model-build.md)中，您已了解如何在 Python 中建立和定型 K-Means 群集模型。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-* 本教學課程系列的第四部分假設您已完成[**第一**](python-clustering-model.md)部分的必要條件，並已完成第[**二部分**](python-clustering-model-prepare-data.md)和[**第三部分**](python-clustering-model-build.md)中的步驟。
+* 本教學課程系列的第四部分假設您已滿足[**第一部分**](python-clustering-model.md)的必要條件，並已完成[**第二部分**](python-clustering-model-prepare-data.md)和[**第三部分**](python-clustering-model-build.md)中的步驟。
 
-## <a name="create-a-stored-procedure-that-generates-the-model"></a>建立會產生模型的預存程式
+## <a name="create-a-stored-procedure-that-generates-the-model"></a>建立會產生模型的預存程序
 
-執行下列 T-sql 腳本來建立預存程式。 此程式會重新建立您在本教學課程系列的第一篇和第二部分中所開發的步驟：
+執行下列 T-SQL 指令碼來建立預存程序。 此程序會重新建立您在本教學課程系列的第一部分和第二部分中所開發的步驟：
 
-* 根據購買和退貨記錄來分類客戶
-* 使用 K 意指演算法產生四個客戶的叢集
+* 根據客戶的購買和退貨記錄來分類客戶
+* 使用 K-Means 演算法產生客戶的四個叢集
 
 ```sql
 USE [tpcxbb_1gb]
@@ -124,9 +125,9 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>在 SQL Database 中執行叢集
+## <a name="perform-clustering-in-sql-database"></a>在 SQL Database 中執行群集
 
-現在您已建立預存程式，請執行下列腳本，以使用程式執行叢集操作。
+現在您已建立預存程序，請執行下列指令碼，以使用程序執行群集。
 
 ```sql
 --Create a table to store the predictions in
@@ -153,11 +154,11 @@ EXEC [dbo].[py_generate_customer_return_clusters];
 SELECT * FROM py_customer_clusters;
 ```
 
-## <a name="use-the-clustering-information"></a>使用叢集資訊
+## <a name="use-the-clustering-information"></a>使用群集資訊
 
-由於您已將叢集程式儲存在資料庫中，因此它可以有效率地對儲存在相同資料庫中的客戶資料執行叢集。 您可以在客戶資料更新時執行此程式，並使用更新的叢集資訊。
+由於您已將群集程序儲存在資料庫中，因此它可以有效率地針對儲存在相同資料庫中的客戶資料執行群集。 每當客戶資料更新時，您都可以執行此程序，並使用更新的群集資訊。
 
-假設您想要將促銷電子郵件傳送給叢集0中的客戶，也就是非使用中的群組（您可以在本教學課程的第[三部分](python-clustering-model-build.md#analyze-the-results)中看到這四個叢集的說明）。 下列程式碼會選取叢集0中客戶的電子郵件地址。
+假設您想要將促銷電子郵件傳送給叢集 0 中的客戶，這是一個非使用中的群組 (您可以在本教學課程的[第三部分](python-clustering-model-build.md#analyze-the-results)中了解這四個叢集)。 下列程式碼會選取叢集 0 中客戶的電子郵件地址。
 
 ```sql
 USE [tpcxbb_1gb]
@@ -170,23 +171,23 @@ SELECT customer.[c_email_address], customer.c_customer_sk
   WHERE c.cluster = 0
 ```
 
-您可以變更**c. cluster**值，以傳回其他叢集中客戶的電子郵件地址。
+您可以變更 **c.cluster** 值，以傳回其他叢集中客戶的電子郵件地址。
 
 ## <a name="clean-up-resources"></a>清除資源
 
-當您完成本教學課程時，您可以從 SQL Server 刪除 tpcxbb_1gb 資料庫。
+完成本教學課程後，您可以從 SQL Server 刪除 tpcxbb_1gb 資料庫。
 
 ## <a name="next-steps"></a>後續步驟
 
 在本教學課程系列的第四部分中，您已完成下列步驟：
 
-* 建立會產生模型的預存程式
-* 在 SQL Server 中執行叢集
-* 使用叢集資訊
+* 建立會產生模型的預存程序
+* 在 SQL Server 中執行群集
+* 使用群集資訊
 
-若要深入瞭解如何在 SQL Server Machine Learning 服務中使用 Python，請參閱：
+若要深入了解如何在 SQL Server Machine Learning 服務中使用 Python，請參閱：
 
-* [快速入門：使用 SQL Server Machine Learning 服務來建立及執行簡單的 Python 腳本](quickstart-python-create-script.md)
-* [其他適用于 SQL Server Machine Learning 服務的 Python 教學課程](sql-server-python-tutorials.md)
+* [快速入門：使用 SQL Server 機器學習服務，建立及執行簡單的 Python 指令碼](quickstart-python-create-script.md)
+* [其他 SQL Server Machine Learning 服務的 Python 教學課程](sql-server-python-tutorials.md)
 * [使用 sqlmlutils 安裝 Python 套件](../package-management/install-additional-python-packages-on-sql-server.md)
 

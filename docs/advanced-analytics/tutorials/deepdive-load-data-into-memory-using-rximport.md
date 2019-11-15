@@ -1,32 +1,33 @@
 ---
-title: 使用 RevoScaleR rxImport 將資料載入記憶體中
-description: 有關如何在 SQL Server 上使用 R 語言載入資料的教學課程逐步解說。
+title: 使用 rxImport 載入資料
+description: 如何在 SQL Server 上使用 R 語言載入資料的教學課程逐步解說。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e498e2aff0f6c21d11e4c34439301f36119257f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: ee0a1ddf8ccfdaf9c2b7b4f2ba5724451e7d71b8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714927"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727223"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>使用 rxImport 將資料載入記憶體 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函式](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
 
-[RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)函數可以用來將資料來源中的資料移動到會話記憶體中的資料框架, 或移至磁片上的 XDF 檔案。 如果您未指定檔案作為目的地，系統會將資料放入記憶體作為資料框架。
+您可以使用 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 函式，將資料來源中的資料移至工作階段記憶體中的資料框架，或移至磁碟上的 XDF 檔案。 如果您未指定檔案作為目的地，系統會將資料放入記憶體作為資料框架。
 
-在此步驟中, 您將瞭解如何從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取得資料, 然後使用**rxImport**函數將感興趣的資料放入本機檔案。 這樣一來，您就可以在本機計算內容中重複分析資料，而不必重新查詢資料庫。
+在此步驟中，您會了解如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取得資料，然後使用 **rxImport** 函式將感興趣的資料放入本機檔案。 這樣一來，您就可以在本機計算內容中重複分析資料，而不必重新查詢資料庫。
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>將資料子集從 SQL Server 解壓縮至本機記憶體
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>將資料子集從 SQL Server 擷取到本機記憶體
 
-您已決定只想要更詳細地檢查高風險的人員。 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的來源資料表很大, 因此您只想取得高風險客戶的相關資訊。 然後將該資料載入到本機工作站記憶體中的資料框架。
+您已決定只要更詳細地查看高風險的人員。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的來源資料表很大，因此您只想取得高風險客戶的相關資訊， 然後將該資料載入到本機工作站記憶體中的資料框架。
 
 1. 將計算內容重設為您的本機工作站。
 
@@ -43,15 +44,15 @@ ms.locfileid: "68714927"
         connectionString = sqlConnString)
     ```
 
-3. 呼叫函式[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) , 將資料讀取至本機 R 會話中的資料框架。
+3. 呼叫 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 函式來將資料讀取到本機 R 工作階段中的資料框架。
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    如果作業成功, 您應該會看到如下的狀態訊息:「讀取的資料列:35, 已處理的資料列總數:35, 總區塊時間:0.036 秒」
+    如果作業成功，您應該會看到如下的狀態訊息：「讀取的資料列：35，已處理的資料列總數：35，總區塊時間：0.036 秒」
 
-4. 現在, 高風險觀察會在記憶體內部資料框架中, 您可以使用各種 R 函數來運算元據框架。 例如, 您可以依其風險分數訂購客戶, 並列印會造成最高風險的客戶清單。
+4. 現在高風險觀察是在記憶體內部資料框架中，您可以使用各種 R 函式來操作資料框架。 例如，您可以依客戶的風險分數來排序客戶，並列印具有最高風險的客戶清單。
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -75,7 +76,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 您不僅可以使用 **rxImport** 來移動資料，也在讀取過程中轉換資料。 例如，您可以指定固定寬度資料行的字元數、提供變數的描述、設定因素層級資料行，甚至建立要在匯入後使用的新層級。
 
-**RxImport**函數會在匯入過程中將變數名稱指派給資料行, 但您可以使用*colInfo*參數來表示新的變數名稱, 或使用*colClasses*參數來變更資料類型。
+**rxImport** 函式會在匯入程序中將變數名稱指派給資料行，但您可以使用 colInfo  參數表示新的變數名稱，或使用 colClasses  參數變更資料類型。
 
 藉由在 *transforms* 參數中指定其他運算，您可以對所讀取的每個資料區塊執行基本處理。
 

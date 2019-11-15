@@ -1,5 +1,5 @@
 ---
-title: Python 程式設計語言延伸模組
+title: Python 語言延伸模組
 description: 了解 SQL Server Machine Learning 服務中的 Python 程式碼執行和內建 Python 程式庫。
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b1ada7d78cdacb88356b2148475e07d559f4ecbb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532642"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727682"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 語言延伸模組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

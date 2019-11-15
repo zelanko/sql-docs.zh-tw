@@ -1,26 +1,27 @@
 ---
-title: 建立 R 模型 RevoScaleR 教學課程
-description: 有關如何在 SQL Server 上使用 R 語言建立模型的教學課程逐步解說。
+title: 使用 RevoScaleR 建立 R 模型
+description: 如何在 SQL Server 上使用 R 語言建置模型的教學課程逐步解說。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00c1c1ed13f1257267111c3bdf71277fa41d0bdc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714869"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727268"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>建立 R 模型 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-這一課是[RevoScaleR 教學](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)課程的一部分, 說明如何搭配 SQL Server 使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
+本課程是 [RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分，說明如何將 [RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server 搭配使用。
 
-您已經擴充定型資料。 現在是時候使用回歸模型分析資料。 線性模型是預測性分析世界中很重要的工具。 **RevoScaleR**套件包含可細分工作負載並平行執行的回歸演算法。
+您已經擴充定型資料， 現在是時候使用迴歸模型來分析資料。 線性模型是預測性分析世界中很重要的工具。 **RevoScaleR** 套件包含可細分工作負載並以平行方式執行的迴歸演算法。
 
 > [!div class="checklist"]
 > * 建立線性迴歸模型
@@ -28,17 +29,17 @@ ms.locfileid: "68714869"
 
 ## <a name="create-a-linear-regression-model"></a>建立線性迴歸模型
 
-在此步驟中, 請建立一個簡單的線性模型, 其會使用 as 獨立變數作為*性別*和*creditLine*資料行中的值, 來估計客戶的信用卡餘額。
+在這個步驟中，建立估計客戶信用卡餘額的簡單線性模型，並使用 gender  和 creditLine  資料行中的值作為獨立變數。
   
-若要這麼做, 請使用支援遠端計算內容的[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)函數。
+若要這樣做，使用支援遠端計算內容的 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 函式。
   
-1. 建立 R 變數以儲存完成的模型, 並呼叫**rxLinMod**, 並傳遞適當的公式。
+1. 建立 R 變數以儲存完成的模型，並傳遞適當的公式來呼叫 **rxLinMod**。
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. 若要查看結果的摘要, 請在模型物件上呼叫標準 R **summary**函數。
+2. 若要檢視結果的摘要，請在模型物件上呼叫標準 R **summary** 函式。
   
      ```R
      summary(linModObj)
@@ -74,9 +75,9 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>建立羅吉斯迴歸模型
 
-接下來, 建立羅吉斯回歸模型, 以指出特定客戶是否為詐騙風險。 您將使用**RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)函式, 此函式支援在遠端計算內容中調整羅吉斯回歸模型的功能。
+接下來，建立羅吉斯迴歸模型，指出特定客戶是否有詐騙的風險。 您將使用 **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 函式，此函式支援在遠端計算內容中擬合羅吉斯迴歸模型。
 
-保持計算內容不變。 您也會繼續使用相同的資料來源。
+保持計算內容不變。 您也將繼續使用相同的資料來源。
 
 1. 呼叫 **rxLogit** 函數，並傳遞定義模型所需的公式。
 

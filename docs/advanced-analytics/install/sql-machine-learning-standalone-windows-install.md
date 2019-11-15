@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 安裝程式安裝 R Server 或 Machine Learning Server (獨立式)
+title: 安裝 Machine Learning Server (獨立式)
 description: 使用 RevoScaleR、revoscalepy、MicrosoftML 和其他套件，設定適用於 R 和 Python 開發的非執行個體感知獨立式機器學習伺服器。
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 14b0fc05a570a14c5ed613b438e2672098b67d4b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532658"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727636"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安裝程式安裝 Machine Learning Server (獨立式) 或 R Server (獨立式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1702,7 +1702,7 @@
         - name: 時態表
           href: relational-databases/tables/temporal-tables.md
           items:
-            - name: 管理
+            - name: 建立及管理
               items:
                 - name: 使用者入門
                   href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1730,17 +1730,17 @@
                   href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
                 - name: 中繼資料檢視與函式
                   href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
-        - name: 記憶體最佳化的資料表
-          href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
-          items:
-            - name: 建立
-              href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-            - name: 使用
-              href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-            - name: 監視器
-              href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-            - name: 效能考量
-              href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+            - name: 記憶體最佳化時態表
+              href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+              items:
+                - name: 建立
+                  href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+                - name: 使用
+                  href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+                - name: 監視器
+                  href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+                - name: 效能考量
+                  href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
         - name: 教學課程
           items:
             - name: 使用 hierarchyid 資料類型
