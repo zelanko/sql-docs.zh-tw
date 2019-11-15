@@ -1,6 +1,5 @@
 ---
-title: 從用戶端到伺服器執行的轉換 |Microsoft Docs
-ms.custom: ''
+title: 從用戶端到伺服器執行的轉換
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0ab830283c09780791f2c82cbdda15fe1a28f6e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f6195bc8bbe5dc36cf70337adec8f03eab67ca09
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73773053"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096003"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73773053"
   
  如果未呼叫 ICommandWithParameters：： SetParameterInfo，DBTYPE_DBTIMESTAMP 系結會轉換成**datetime2**。  
   
-|目標 -><br /><br /> 來源|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|目標 -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
 |DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> date|  
@@ -39,19 +39,19 @@ ms.locfileid: "73773053"
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|不適用|不適用|不適用|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|不適用|不適用|1,10|  
-|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|不適用|不適用|1,16|  
-|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不適用|不適用|不適用|  
-|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不適用|不適用|不適用|  
-|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不適用|不適用|不適用|  
+|BYTES|-|-|-|-|-|-|-|N/A|N/A|N/A|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|N/A|N/A|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|N/A|N/A|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/A|N/A|N/A|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/A|N/A|N/A|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/A|N/A|N/A|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
 |-|不支援轉換。 如果在呼叫 IAccessor：： CreateAccessor 時驗證系結，則會在*rgStatus*中傳回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 當存取子驗證延遲時，會設定 DBSTATUS_E_BADACCESSOR。|  
-|不適用|不適用。|  
+|N/A|不適用。|  
 |1|如果提供的資料無效，則會設定 DBSTATUS_E_CANTCONVERTVALUE。 輸入資料會在套用轉換之前進行驗證，因此，即使在後續轉換忽略元件時，該資料仍然必須有效，轉換才會成功。|  
 |2|忽略時間欄位。|  
 |3|小數秒必須為，否則會設定 DBSTATUS_E_DATAOVERFLOW。|  
@@ -65,13 +65,13 @@ ms.locfileid: "73773053"
 |11|根據下表，小數秒的位數 (小數位數) 會從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> 不過，如果來源類型為 DBTIMESTAMP 而且小數秒為零，則不會產生任何小數秒位數或小數點。 此行為可確保使用舊版 OLE DB 提供者所開發之應用程式的回溯相容性。<br /><br /> 資料行大小 ~0 在 OLE DB 中隱含為大小無限制 (除非 DBTIMESTAMP 套用 3 位數規則，否則為 9 位數)。|  
 |12|系統會針對 DBTYPE_DATE 維護 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的轉換語意。 小數秒會截斷到零。|  
 |13|系統會針對 DBTYPE_FILETIME 維護 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的轉換語意。 如果您使用 Windows FileTimeToSystemTime API，小數秒有效位數會限制為 1 毫秒。|  
-|14|系統會針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]smalldatetime**維護** 之前的轉換語意。 秒數會設定為零。|  
-|15|系統會針對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]datetime**維護** 之前的轉換語意。 描述會捨去為第 300 個最接近的秒數。|  
+|14|系統會針對 DBTYPE_DATE 維護 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 維護 **smalldatetime** 之前的轉換語意。 秒數會設定為零。|  
+|15|系統會針對 DBTYPE_DATE 維護 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 維護 **datetime** 之前的轉換語意。 描述會捨去為第 300 個最接近的秒數。|  
 |16|內嵌在 SSVARIANT 用戶端架構中之值 (屬於給定類型) 的轉換行為與未內嵌在 SSVARIANT 用戶端架構時之值和類型的行為相同。|  
   
 ||||  
 |-|-|-|  
-|類型|長度 (以字元為單位)|小數位數|  
+|型別|長度 (以字元為單位)|小數位數|  
 |DBTIME2|8, 10..18|0、1..9|  
 |DBTIMESTAMP|19, 21..29|0、1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0、1..9|  

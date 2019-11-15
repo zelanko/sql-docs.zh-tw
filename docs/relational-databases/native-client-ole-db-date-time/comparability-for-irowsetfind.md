@@ -1,6 +1,5 @@
 ---
-title: 適用于 IRowsetFind 的可比較性 |Microsoft Docs
-ms.custom: ''
+title: IRowsetFind 的相容性
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0d03a6534aab14bb2427586c4e245010b0ac09c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: af874d2a12b6cc33174649b34b1359b1d1df5db9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73774201"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095231"
 ---
 # <a name="comparability-for-irowsetfind"></a>IRowsetFind 的相容性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

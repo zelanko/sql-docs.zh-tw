@@ -1,6 +1,6 @@
 ---
-title: 備份與還原資料庫和交易記錄 |Microsoft Docs
-ms.custom: ''
+title: 備份和還原資料庫與交易記錄
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,24 +20,24 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b721a57d25a1187d924e8cf66b23a2f5c2b4daaa
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 26d6ca64dfbca8bc63a81989d7c3c34a841e4f5a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148544"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095350"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>備份和還原資料庫與交易記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 類別和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 類別都是公用程式類別，可提供工具來完成備份及還原的特定工作。 物件代表所需的特定備份工作, 而不[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]是伺服器實例上的物件。 <xref:Microsoft.SqlServer.Management.Smo.Backup>  
+  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 類別和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 類別都是公用程式類別，可提供工具來完成備份及還原的特定工作。 <xref:Microsoft.SqlServer.Management.Smo.Backup> 物件代表所需的特定備份工作，而不是伺服器實例上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件。  
   
  如果發生資料遺失或損毀，則必須完整或部分地還原備份。 部分還原會使用 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 集合來分割要還原的資料。 如果是進行交易記錄的備份，則可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Restore> 屬性還原至特定的時間點。 也可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 方法來驗證資料。 建議的備份程序是定期執行還原作業並檢查資料庫中的資料，以檢查備份的完整性。  
   
- 就像<xref:Microsoft.SqlServer.Management.Smo.Restore>物件一樣, 不需要使用**Create**方法來建立物件, 因為它不[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代表實例上的任何物件。 <xref:Microsoft.SqlServer.Management.Smo.Backup> <xref:Microsoft.SqlServer.Management.Smo.Restore> 物件是一組用於還原資料庫的屬性和方法。  
+ 就像 <xref:Microsoft.SqlServer.Management.Smo.Backup> 物件一樣，不需要使用**Create**方法來建立 <xref:Microsoft.SqlServer.Management.Smo.Restore> 物件，因為它不代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例上的任何物件。 <xref:Microsoft.SqlServer.Management.Smo.Restore> 物件是一組用於還原資料庫的屬性和方法。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊, 請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[在 Visual Studio&#35; .Net 中建立 Visual C SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>在 Visual Basic 中備份資料庫和交易記錄  
  此程式碼範例示範如何將現有的資料庫備份至檔案，以及如何加以還原。  

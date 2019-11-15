@@ -1,6 +1,5 @@
 ---
-title: 先前 SQL Server 版本的新日期和時間功能（OLE DB） |Microsoft Docs
-ms.custom: ''
+title: 先前 SQL Server 版本 OLE DB 功能的日期和時間
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -10,18 +9,19 @@ ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f12861b4bcd205263c54fae43e0a401b3219f33
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 100a0b6a96c9359e224e406928b03a2aa776511e
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73769376"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095459"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>舊版 SQL Server 的新日期和時間功能 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題描述當使用增強型日期和時間功能的用戶端應用程式與 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本進行通訊時，以及使用早于 @no__t_ 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 版本所編譯的用戶端時，所預期的行為。3_ 會將命令傳送至支援增強型日期和時間功能的伺服器。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+  本主題描述當使用增強型日期和時間功能的用戶端應用程式與 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本進行通訊時，以及使用早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 所編譯的用戶端將命令傳送到支援增強型日期和時間功能的伺服器時的預期行為。  
   
 ## <a name="down-level-client-behavior"></a>下層用戶端行為  
  使用早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 版本的用戶端應用程式，會看到新的日期/時間類型為**Nvarchar**資料行。 資料行內容是常值表示法。 如需詳細資訊，請參閱資料類型支援的「資料格式：字串和常值」一節，[以取得 OLE DB 的日期和時間改善](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。 資料行大小是針對資料行指定之有效位數的最大常值長度。  
@@ -32,19 +32,19 @@ ms.locfileid: "73769376"
   
 |OLE DB 用戶端類型|SQL Server 2005 類型|SQL Server 2008 (或更新版本) 類型|結果轉換 (伺服器到用戶端)|參數轉換 (用戶端到伺服器)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|日期|[確定]|[確定]|  
+|DBTYPE_DBDATE|Datetime|[日期]|確定|確定|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
-|DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
+|DBTYPE_DBTIME||Time(0)|確定|確定|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
-|DBTYPE_DBTIME||Time(7)|失敗-不正確時間常值。|[確定]|  
-|DBTYPE_DBTIMESTAMP|||失敗-不正確時間常值。|[確定]|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （3）|[確定]|[確定]|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （7）|[確定]|[確定]|  
-|DBTYPE_DBDATE|Smalldatetime|日期|[確定]|[確定]|  
+|DBTYPE_DBTIME||Time(7)|失敗-不正確時間常值。|確定|  
+|DBTYPE_DBTIMESTAMP|||失敗-不正確時間常值。|確定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （3）|確定|確定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （7）|確定|確定|  
+|DBTYPE_DBDATE|Smalldatetime|[日期]|確定|確定|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位不是零，IRowsetChange 將會因為字串截斷而失敗。|  
-|DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
+|DBTYPE_DBTIME||Time(0)|確定|確定|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒不是零，IRowsetChange 將會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|[確定]|[確定]|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|確定|確定|  
   
  OK 表示，如果它使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，則應該繼續使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本)。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "73769376"
  如果在連接上有從緩衝區類型到伺服器版本之伺服器類型的支援用戶端轉換，則可以使用所有用戶端緩衝區類型。 在此內容中，*伺服器類型*表示 ICommandWithParameters：： SetParameterInfo 所指定的類型，或如果尚未呼叫 ICommandWithParameters：： SetParameterInfo，則由緩衝區類型所隱含。 也就是說，DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET 可以搭配下層伺服器使用，或者當 DataTypeCompatibility=80 時，如果用戶端成功轉換到支援的伺服器類型，也可以這麼做。 當然，如果伺服器類型不正確，當伺服器無法隱含地轉換到實際的伺服器類型時，仍然可能會回報錯誤。  
   
 ## <a name="ssprop_init_datatypecompatibility-behavior"></a>SSPROP_INIT_DATATYPECOMPATIBILITY 行為  
- 當 SSPROP_INIT_DATATYPECOMPATIBILITY 設定為 SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 時，新的日期/時間類型和相關聯的中繼資料會出現在用戶端，因為它們針對下層用戶端顯示，如[增強日期的大量複製變更中所述。時間類型&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+ 當 SSPROP_INIT_DATATYPECOMPATIBILITY 設定為 SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 時，新的日期/時間類型和相關聯的中繼資料會出現在用戶端，因為它們針對下層用戶端顯示，如針對[增強型日期和時間&#40;類型的大量&#41;複製變更 OLE DB 和 ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中所述。  
   
 ## <a name="comparability-for-irowsetfind"></a>IRowsetFind 的相容性  
  新的日期/時間類型允許使用所有比較運算子，因為它們會顯示為字串類型，而非日期/時間類型。  

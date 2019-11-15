@@ -1,6 +1,6 @@
 ---
-title: 在 Visual Studio .NET C#中建立 Visual SMO 專案 |Microsoft Docs
-ms.custom: ''
+title: 在 Visual Studio .NET 中建立 Visual C# SMO 專案
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3989c49d800a9f485c8562aed4406c57216eed77
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909801"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095970"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>如何：在 Visual Studio .NET 中建立 Visual C# SMO 專案
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "72909801"
   
 1. 啟動 Visual Studio
   
-2. **在 [檔案**] 功能表上，依序按一下 [**新增**] 和 [**專案**]。  [新增專案] 對話方塊隨即出現。   
+2. **在 [檔案**] 功能表上，依序按一下 [**新增**] 和 [**專案**]。  [ **新增專案** ] 對話方塊隨即出現。   
   
 3. 在 [[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]**已安裝**] 窗格中，流覽至 [**範本**\\ **C# Visual**\\**Windows** ]，然後選取 [**主控台應用程式**]。  
   

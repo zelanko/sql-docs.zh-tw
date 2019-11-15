@@ -1,6 +1,5 @@
 ---
-title: 日期和時間與架構資料列集 |Microsoft Docs
-ms.custom: ''
+title: 日期和時間與架構資料列集
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7290c9e7a55e27a829a943157e1b0bea00f42d2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 36ba34985cde2f88606a13a4f07f6afb7af5dc7a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73773510"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095370"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>中繼資料 - 日期和時間以及結構描述資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "73773510"
 |資料行類型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|Clear|0|  
-|time|DBTYPE_DBTIME2|Set|0..7|  
+|time|DBTYPE_DBTIME2|將|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
 |datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
+|datetime2|DBTYPE_DBTIMESTAMP|將|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|將|0..7|  
   
  在 COLUMN_FLAGS 中，DBCOLUMNFLAGS_ISFIXEDLENGTH 對 date/time 類型永遠為 true，而且下列旗標永遠為 false：  
   

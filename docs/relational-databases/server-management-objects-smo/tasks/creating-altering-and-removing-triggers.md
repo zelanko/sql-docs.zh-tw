@@ -1,6 +1,6 @@
 ---
-title: 建立、改變和移除觸發程式 |Microsoft Docs
-ms.custom: ''
+title: 建立、改變和移除觸發程式
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +13,16 @@ ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd2aa0bce55273295cfde3b15d2863d7e35f3d26
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: f4e6b81723b986974003d376b84dc7b53a96fb29
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911259"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094501"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>建立、改變和移除觸發程式
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  在 SMO 中，觸發程序是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件表示。 引發觸發程式時所執行的程式<xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> 代碼是由trigger物件的屬性所設定。[!INCLUDE[tsql](../../../includes/tsql-md.md)] 觸發程序的類型是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件的其他屬性所設定，例如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 屬性。 這是布林值屬性，指定是否要在父資料表上**更新**記錄來引發觸發程式。  
+  在 SMO 中，觸發程序是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件表示。 當引發的觸發程式是由觸發程式物件的 <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> 屬性所設定時，所執行的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式碼。 觸發程序的類型是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件的其他屬性所設定，例如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 屬性。 這是布林值屬性，指定是否要在父資料表上**更新**記錄來引發觸發程式。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件代表傳統的資料操作語言 (DML) 觸發程式。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更新版本也支援資料定義語言 (DDL) 觸發程序。 DDL 觸發程序是由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> 物件和 <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger> 物件表示。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "70911259"
  
   
 ## <a name="creating-altering-and-removing-a-trigger-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除觸發程序  
- 此程式碼範例示範如何在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料庫中名為 `Sales` 的現有資料表上，建立及插入更新觸發程序。 此觸發程序會在資料表更新或新記錄插入時傳送提醒訊息。  
+ 此程式碼範例示範如何在 `Sales` 資料庫中名為 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 的現有資料表上，建立及插入更新觸發程序。 此觸發程序會在資料表更新或新記錄插入時傳送提醒訊息。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -62,7 +62,7 @@ tr.Drop()
 ``` 
   
 ## <a name="creating-altering-and-removing-a-trigger-in-visual-c"></a>在 Visual C# 中建立、改變和移除觸發程序  
- 此程式碼範例示範如何在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料庫中名為 `Sales` 的現有資料表上，建立及插入更新觸發程序。 此觸發程序會在資料表更新或新記錄插入時傳送提醒訊息。  
+ 此程式碼範例示範如何在 `Sales` 資料庫中名為 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 的現有資料表上，建立及插入更新觸發程序。 此觸發程序會在資料表更新或新記錄插入時傳送提醒訊息。  
   
 ```csharp  
 {  
@@ -95,7 +95,7 @@ tr.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-trigger-in-powershell"></a>在 PowerShell 中建立、改變和移除觸發程序  
- 此程式碼範例示範如何在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 資料庫中名為 `Sales` 的現有資料表上，建立及插入更新觸發程序。 此觸發程序會在資料表更新或新記錄插入時傳送提醒訊息。  
+ 此程式碼範例示範如何在 `Sales` 資料庫中名為 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 的現有資料表上，建立及插入更新觸發程序。 此觸發程序會在資料表更新或新記錄插入時傳送提醒訊息。  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and to the  

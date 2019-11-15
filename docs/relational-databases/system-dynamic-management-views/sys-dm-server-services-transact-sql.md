@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 592f39e997574313e9e61e626a90aa3ac5fa310f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982329"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095376"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前執行個體中 SQL Server、全文檢索與 SQL Server Agent 服務的詳細資訊。 使用此動態管理檢視可報告有關這些服務的狀態資訊。  
+  傳回 SQL Server、全文檢索 SQL Server Launchpad 服務（SQL Server 2017 +）的相關資訊，以及目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例中的 SQL Server Agent 服務。 使用此動態管理檢視可報告有關這些服務的狀態資訊。  
   
  
 |資料行名稱|[名稱]|描述|  
