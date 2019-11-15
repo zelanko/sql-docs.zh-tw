@@ -1,27 +1,28 @@
 ---
-title: 在 Linux 上安裝 SQL Server 語言擴充功能 (Java)
-description: 了解如何在 Red Hat、Ubuntu 和 SUSE 上安裝 SQL Server 語言擴充功能 (Java)。
+title: 在 Linux 上安裝 SQL Server 語言延伸模組
+titleSuffix: ''
+description: 了解如何在 Red Hat、Ubuntu 和 SUSE 上安裝 SQL Server 語言延伸模組。
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531225"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660775"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安裝 SQL Server 2019 語言擴充功能 (Java)
+# <a name="install-sql-server-language-extensions-on-linux"></a>在 Linux 上安裝 SQL Server 語言延伸模組
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-語言擴充功能是資料庫引擎的附加元件。 雖然您可以[同時安裝資料庫引擎和語言擴充功能](#install-all)，但最佳做法是先安裝和設定 SQL Server 資料庫引擎，以便在新增更多元件之前解決任何問題。 
+「語言延伸模組」是資料庫引擎的附加元件。 雖然您可以[同時安裝資料庫引擎和語言擴充功能](#install-all)，但最佳做法是先安裝和設定 SQL Server 資料庫引擎，以便在新增更多元件之前解決任何問題。 
 
 請遵循此文章中的步驟來安裝 Java 語言擴充功能。
 
@@ -29,7 +30,7 @@ Java 擴充功能的套件位置在 SQL Server Linux 來源存放庫中。 如�
 
 Linux 容器上也支援語言擴充功能。 我們沒有提供含語言擴充功能的預先建立容器，但您可以使用 [GitHub 上提供的範例範本](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) \(英文\)，從 SQL Server 容器建立一個。
 
-根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組和[機器學習服務](../advanced-analytics/index.yml)。 如果您使用的是巨量資料叢集，就不需要遵循本文中的步驟。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
+根據預設，系統會在 SQL Server 巨量資料叢集上安裝語言延伸模組和[機器學習服務](../advanced-analytics/index.yml)。 如果您使用的是巨量資料叢集，就不需要依照此文章中的步驟進行。 如需詳細資訊，請參閱[在巨量資料叢集上使用機器學習服務 (Python 和 R)](../big-data-cluster/machine-learning-services.md)。
 
 ## <a name="uninstall-preview-version"></a>解除安裝預覽版本
 

@@ -1,6 +1,6 @@
 ---
-title: 教學課程：在 Python 中建立模型以將客戶分類
-description: 在這四部分教學課程系列的第三部分中，您將建立一個代表以 SQL Server Machine Learning 服務在 Python 中執行叢集的 K 表示模型。
+title: Python 教學課程：組建叢集模型
+description: 在這個教學課程系列的第三部分 (總共四個部分) 中，您將使用「SQL Server 機器學習服務」在 Python 中建立一個 K-Means 模型，以執行叢集。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -9,48 +9,49 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8707d14b1e332ae6ecebf83213ed53701343bcd3
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
-ms.translationtype: MT
+ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294403"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727110"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教學課程：在 Python 中建立模型，以 SQL Server Machine Learning 服務將客戶分類
+# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教學課程：使用 SQL Server 機器學習服務在 Python 中建立模型以分類客戶
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在這四段式教學課程系列的第三部分中，您將在 Python 中建立以 K 表示的模型，以執行群集。 在此系列的下一個部分中，您會將此模型部署在具有 SQL Server Machine Learning 服務的 SQL database 中。
+在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用「SQL Server 機器學習服務」在 SQL 資料庫中部署此模型。
 
-在本文中，您將了解如何：
+在本文中，您將學會如何：
 
 > [!div class="checklist"]
-> * 定義 K 表示演算法的群集數目
-> * 執行群集
+> * 為 K-Means 演算法定義叢集數目
+> * 執行叢集
 > * 分析結果
 
-在[第一部](python-clustering-model.md)中，您已安裝必要條件並還原範例資料庫。
+在[第一部分](python-clustering-model.md)，您已安裝必要條件並還原範例資料庫。
 
-在[第二部分](python-clustering-model-prepare-data.md)中，您已瞭解如何準備 SQL 資料庫中的資料，以執行群集。
+在[第二部分](python-clustering-model-prepare-data.md)，您已了解如何準備 SQL 資料庫中的資料，以執行叢集。
 
-在[第四部分](python-clustering-model-deploy.md)中，您將瞭解如何在 SQL 資料庫中建立預存程式，以便根據新的資料在 Python 中執行叢集。
+在[第四部分](python-clustering-model-deploy.md)，您將了解如何在 SQL 資料庫中建立預存程序，以根據新的資料在 Python 中執行叢集。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-* 本教學課程的第三部分假設您已完成[**第一**](python-clustering-model.md)部分的必要條件，並已完成[**第二部分**](python-clustering-model-prepare-data.md)中的步驟。
+* 本教學課程的第三部分假設您已滿足[**第一部分**](python-clustering-model.md)的必要條件，並已完成[**第二部分**](python-clustering-model-prepare-data.md)中的步驟。
 
-## <a name="define-the-number-of-clusters"></a>定義群集的數目
+## <a name="define-the-number-of-clusters"></a>定義叢集數目
 
-若要為您的客戶資料進行叢集化，您將使用**K 意指**群集演算法，這是群組資料最簡單且最知名的方式之一。
-若要深入瞭解 K，請參閱[k-表示叢集演算法的完整指南](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html)。
+若要為您的客戶資料進行叢集化，您將使用 **K-Means** 叢集演算法，這是對資料進行分組的最簡單、最廣為人知的方法之一。
+您可以在 [K-means 叢集演算法的完整指南](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html)中深入了解 K-Means。
 
-此演算法接受兩個輸入：資料本身和預先定義的數位 "*k*"，代表要產生的群集數目。
-輸出為*k*個叢集，其中的輸入資料會分割在叢集之間。
+此演算法接受兩個輸入：資料本身，以及預先定義的數字「*k*」代表要產生的叢集數目。
+輸出為 *k* 個叢集，包含在叢集之間分割的輸入資料。
 
-K 表示的目標是將專案分組到 K 個叢集，讓相同叢集中的所有專案彼此相似，而且與其他群集中的專案不同。
+K-means 的目標是將項目分組為 k 個叢集，讓相同叢集中的所有項目彼此相似，並盡可能與其他叢集中的項目不同。
 
-若要判斷要使用之演算法的叢集數目，請在 [群組數總和] 方塊中使用已解壓縮的叢集數目來繪製。 要使用的適當群集數目是在繪圖的彎曲或「肘形」。
+若要對要使用的演算法判斷其叢集數目，請使用「群組平方和」內的繪圖，並以擷取的叢集數目為依據。 要使用的適當叢集數目是在繪圖的折彎處或「肘線」處。
 
 ```python
 ################################################################################################
@@ -73,13 +74,13 @@ plt.title('Elbow for KMeans clustering')
 plt.show()
 ```
 
-![肘形圖](./media/python-tutorial-elbow-graph.png)
+![肘線圖](./media/python-tutorial-elbow-graph.png)
 
-視圖表而定， *k = 4*看起來就是理想的嘗試值。 該*k*值會將客戶分組成四個叢集。
+根據圖表，*k = 4* 看起來是理想的嘗試值。 *k* 值會將客戶分組成四個叢集。
 
-## <a name="perform-clustering"></a>執行群集
+## <a name="perform-clustering"></a>執行叢集
 
-在下列 Python 腳本中，您將使用 sklearn 封裝中的 Kmeans 函數。
+在以下 Python 指令碼中，您將使用 sklearn 套件中的 KMeans 函數。
 
 ```python
 ################################################################################################
@@ -107,9 +108,9 @@ print(customer_data.groupby(['cluster']).mean())
 
 ## <a name="analyze-the-results"></a>分析結果
 
-現在您已使用 K 來執行叢集，下一個步驟是分析結果，並查看是否可以找到任何可採取動作的資訊。
+現在，您已經使用 K-Means 執行叢集，下一步是分析結果，看看是否可以找到任何可行的資訊。
 
-查看從上一個腳本列印的群集平均值和叢集大小。
+查看從上一個指令碼列印的叢集平均值和叢集大小。
 
 ```results
 Cluster0(n=31675):
@@ -129,20 +130,20 @@ cluster
 3        48516.023845    0.136277    0.078346       0.044497   4.271237
 ```
 
-這四個叢集表示是使用[第一部分](python-clustering-model-prepare-data.md#separate-customers)中定義的變數來提供：
+使用[第一部分](python-clustering-model-prepare-data.md#separate-customers)中定義的變數以提供四種叢集平均值：
 
-* *orderRatio* = 傳回順序比率（部分或完全回傳的訂單總數與訂單總數）
-* *itemsRatio* = 傳回專案比率（傳回的總專案數與購買的專案數）
-* *monetaryRatio* = 退貨數量比率（傳回的總專案金額與購買的金額）
-* *frequency* = 傳回頻率
+* *orderRatio* = 退貨訂單率 (部分退貨或全部退貨的訂單總數與訂單總數比較)
+* *itemsRatio* = 退貨率 (退貨總數與購買項目數目比較)
+* *monetaryRatio* = 退貨金額率 (退貨的貨幣金額總計與購買金額比較)
+* *frequency* = 退貨頻率
 
-使用 K 的資料採礦通常需要進一步分析結果，以及進一步瞭解每個叢集的進一步步驟，但它可以提供一些良好的潛在客戶。
-以下是您可以用來解讀這些結果的幾種方式：
+使用 K-Means 的資料採礦經常需要進一步分析結果，並採取更多步驟，以深入了解每個叢集，但可以提供一些良好的潛在客戶。
+您可以透過以下幾種方式來解譯這些結果：
 
-* 叢集0似乎是非使用中的一組客戶（所有值都是零）。
-* 叢集3似乎是代表傳回行為的群組。
+* 叢集 0 似乎是不太活躍的客戶群組 (所有值皆為零)。
+* 叢集 3 似乎是在退貨行為方面比較明顯的群組。
 
-「叢集0」是一組明顯不活躍的客戶。 也許您可以將行銷工作的目標設為此群組，以觸發購買的相關事宜。 在下一個步驟中，您將查詢資料庫中是否有客戶在叢集0的電子郵件地址，讓您可以傳送行銷電子郵件給他們。
+叢集 0 是顯然不活躍的客戶群組。 也許您可以針對該群組進行行銷活動，以觸發購買興趣。 在下一步驟中，您將為叢集 0 的客戶電子郵件地址查詢資料庫，以便向他們傳送行銷電子郵件。
 
 ## <a name="clean-up-resources"></a>清除資源
 
@@ -152,11 +153,11 @@ cluster
 
 在本教學課程系列的第三部分中，您已完成下列步驟：
 
-* 定義 K 表示演算法的群集數目
-* 執行群集
+* 為 K-Means 演算法定義叢集數目
+* 執行叢集
 * 分析結果
 
 若要部署您已建立的機器學習模型，請遵循本教學課程系列的第四部分：
 
 > [!div class="nextstepaction"]
-> [教學課程：使用 SQL Server Machine Learning 服務在 Python 中部署群集模型](python-clustering-model-deploy.md)
+> [教學課程：使用 SQL Server 機器學習服務在 Python 中部署叢集模型](python-clustering-model-deploy.md)

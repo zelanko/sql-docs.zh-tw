@@ -1,21 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文件
-description: 了解如何使用 Microsoft Azure 雲端服務建置及管理強大的應用程式。 取得文件、範例程式碼、教學課程等等。
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: SQL Server 教育中心
+description: 您可以用來學習 SQL Server 和 Azure SQL Database 的資源摘要。 從快速入門與教學課程到 Microsoft Learn 與 LinkedIn Learning。
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176280"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637928"
 ---
 <div id="main" class="v2">
     <div class="container">

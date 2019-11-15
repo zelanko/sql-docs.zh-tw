@@ -1,22 +1,22 @@
 ---
-title: 什麼是語言延伸模組？
-titleSuffix: SQL Server Language Extensions
-description: 了解 SQL Server 2019 語言延伸模組 (預覽)，其會在 SQL Server 內執行外部指令碼。
+title: 什麼是 SQL Server 語言延伸模組？
+titleSuffix: ''
+description: 語言延伸模組是 SQL Server 的一個功能，用來執行外部程式碼。 在 SQL Server 2019 中，Java 受到支援。 藉由使用擴充性架構，即可在外部程式碼中使用關聯式資料。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15ff0339a487ecebdca23057bfce9053b5efca2e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589022"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658822"
 ---
-# <a name="what-is-sql-server-language-extensions-preview"></a>什麼是 SQL Server 語言延伸模組 (預覽)？
+# <a name="what-is-sql-server-language-extensions"></a>什麼是 SQL Server 語言延伸模組？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 語言延伸模組是 SQL Server 的一個功能，用來執行外部程式碼。 關聯式資料可使用[擴充性架構](concepts/extensibility-framework.md)，用於外部程式碼中。

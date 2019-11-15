@@ -1,7 +1,7 @@
 ---
 title: 查詢 Oracle 中的外部資料
 titleSuffix: SQL Server big data clusters
-description: 本教學課程示範如何從 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 查詢 Oracle 資料。 您會透過 Oracle 中的資料建立外部資料表，然後執行查詢。
+description: 本教學課程示範如何從 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]查詢 Oracle 資料。 您會透過 Oracle 中的資料建立外部資料表，然後執行查詢。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
 ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71708360"
@@ -67,7 +67,7 @@ ms.locfileid: "71708360"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
-1. 按兩下 [伺服器] 視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]。
+1. 按兩下 [伺服器]  視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]  。
 
    ![SQL Server 主要執行個體查詢](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 

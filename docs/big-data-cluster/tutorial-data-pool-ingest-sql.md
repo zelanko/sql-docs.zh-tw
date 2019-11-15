@@ -1,7 +1,7 @@
 ---
 title: 將資料內嵌至 SQL Server 資料集區
 titleSuffix: SQL Server big data clusters
-description: 本教學課程示範如何將資料內嵌至的資料集[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]區。
+description: 本教學課程示範如何將資料內嵌至 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的資料集區。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653316"
@@ -20,7 +20,7 @@ ms.locfileid: "69653316"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程示範如何使用 Transact-sql 將資料載入的[資料集](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]區。 透過[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], 可以內嵌各種來源的資料, 並將其分散到資料集區實例。
+本教學課程示範如何使用 Transact-SQL 將資料載入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的[資料集區](concept-data-pool.md)。 透過 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，即可將各種來源的資料內嵌和分散到不同的資料集區執行個體。
 
 在本教學課程中，您將了解如何：
 
@@ -46,7 +46,7 @@ ms.locfileid: "69653316"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
-1. 按兩下 [伺服器] 視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]。
+1. 按兩下 [伺服器]  視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]  。
 
    ![SQL Server 主要執行個體查詢](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 

@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/23/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -16,19 +16,32 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
-ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e78ab71081c991b5e42726ed4dd594e016f324f0
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: 6fda5419756689df6b9be1fda9a792c14229c1ce
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72260325"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632848"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+## <a name="click-a-product"></a>按一下產品！
+
+在下列資料列中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> |||||
+> |---|---|---|---|
+> |**\* _SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server 和 SQL Database 受控執行個體
 
 建立資源管理員工作負載群組，並將工作負載群組與資源管理員資源集區產生關聯。 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中都可使用 Resource Governor。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。
 
@@ -134,7 +147,7 @@ USING { *pool_name* |  **"default"** }
 EXTERNAL external_pool_name | "default"     
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
 
-工作負載群組可指定外部資源集區。 您可以定義工作負載群組，並與 2 個集區產生關聯：
+工作負載群組可指定外部資源集區。 您可以定義工作負載群組，並與兩個集區產生關聯：
 
 - 一個用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和查詢的資源集區
 - 一個用於外部處理的外部資源集區。 如需詳細資訊，請參閱 [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
@@ -171,3 +184,121 @@ GO
 - [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
 - [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
 - [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[SQL Database<br />受控執行個體](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* SQL 資料<br />倉儲 \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="sql-data-warehouse"></a>SQL 資料倉儲 
+
+CREATE WORKLOAD GROUP (Transact-SQL) (預覽) 會建立工作負載群組。  工作負載群組是一組要求的容器，而且是在系統上設定工作負載管理的基礎。  工作負載群組提供保留資源以進行工作負載隔離、包含資源、定義每個要求的資源，以及遵守執行規則的能力。  一旦陳述式完成，設定就會生效。
+
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
+
+```
+CREATE WORKLOAD GROUP group_name  
+ WITH  
+ (        MIN_PERCENTAGE_RESOURCE = value  
+      ,   CAP_PERCENTAGE_RESOURCE = value 
+      ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value   
+  [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]  
+  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]
+  [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )  
+  [ ; ]
+```
+
+*group_name*</br>
+指定用來識別工作負載群組的名稱。  group_name 是一種 sysname。  它的長度最多可以是 128 個字元，且在執行個體內必須是唯一的。
+
+*MIN_PERCENTAGE_RESOURCE* = 值</br>
+針對該工作負載群組指定一個保證的最小資源配置，該資源不會與其他工作負載群組共用。  值是從 0 到 100 的整數範圍。  所有工作負載群組之間的 min_percentage_resource 總和不能超過 100。  min_percentage_resource 的值不能大於 cap_percentage_resource。  每個服務等級允許最小的有效值。  如需詳細資訊，請參閱有效值<link>。
+
+*CAP_PERCENTAGE_RESOURCE* = 值</br>
+指定工作負載群組中所有要求的資源使用率上限。  允許的值範圍為 1 至 100。  cap_percentage_resource 的值必須大於 min_percentage_resource。  如果 min_percentage_resource 在其他工作負載群組中設定為大於零，則可以減小 cap_percentage_resource 的有效值。
+
+*REQUEST_MIN_RESOURCE_GRANT_PERCENT* = 值</br>
+設定每個要求配置的最小資源量。  值是必要的參數，其十進位範圍介於 0.75 到 100.00 之間。  request_min_resource_grant_percent 的值必須是 0.25 的倍數，必須是 min_percentage_resource 的因數，而且小於 cap_percentage_resource。  每個服務等級允許最小的有效值。  如需詳細資訊，請參閱有效值<link>。
+
+例如：
+
+```sql
+CREATE WORKLOAD GROUP wgSample WITH  
+( MIN_PERCENTAGE_RESOURCE = 26              -- integer value
+ ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
+ ,CAP_PERCENTAGE_RESOURCE = 100 )
+```
+
+請考慮用於資源類別的值，作為 request_min_resource_grant_percent 的指導方針。  下表包含 Gen2 的資源配置。
+
+|資源類別|資源百分比|
+|---|---|
+|Smallrc|3%|
+|Mediumrc|10%|
+|Largerc|22%|
+|Xlargerc|70%|
+|||
+
+*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = 值</br>
+設定每個要求配置的資源數量上限。  值是選擇性參數，預設值等於 request_min_resource_grant_percent。  值必須大於或等於 request_min_resource_grant_percent。  當 equest_max_resource_grant_percent 的值大於 request_min_resource_grant_percent 而且有可用的系統資源時，會將其他資源配置給要求。
+
+*IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
+指定要求在工作負載群組中的相對重要性。  下列任一個為其重要性，其中 NORMAL 為預設值：
+- LOW
+- BELOW_NORMAL
+- NORMAL (預設)
+- ABOVE_NORMAL
+- HIGH  
+
+在工作負載群組中設定的重要性，是工作負載群組中所有要求的預設重要性。  使用者也可以在分類器層級設定重要性，該重要性可以覆寫工作負載群組的重要性設定。  這樣可以區分工作負載群組內要求的重要性，以便更快速地存取非保留的資源。  當跨工作負載群組的 min_percentage_resource 總和小於 100 時，會根據重要性來指派非保留的資源。
+
+*QUERY_EXECUTION_TIMEOUT_SEC* = 值</br>
+指定查詢在取消之前可以執行的最長時間 (以秒為單位)。  值必須是 0 或正整數。  值的預設設定為 0，這代表沒有限制。  在要求佇列中等候的時間不計入查詢執行。
+
+## <a name="remarks"></a>Remarks
+系統會針對回溯相容性自動建立對應至資源類別的工作負載群組。  這些系統定義的工作負載群組無法卸除。  可以建立額外 8 位使用者定義的工作負載群組。
+
+## <a name="effective-values"></a>有效值
+
+min_percentage_resource、cap_percentage_resource、request_min_resource_grant_percent 和 request_max_resource_grant_percent 參數具有在目前服務層級和其他工作負載群組的內容中調整的有效值。
+
+每個服務層級支援的並行與使用資源類定義每個查詢的資源授與時相同，因此，request_min_resource_grant_percent 的支援值取決於執行個體所設定的服務層級。  在最低服務層級 DW100c 中，支援 4 個並行。  設定的工作負載群組的有效 request_min_resource_grant_percent 可以是 25% 或更高。  如需更進一步的詳細資訊，請參閱下表。
+
+|服務等級|並行查詢數目上限|REQUEST_MIN_RESOURCE_GRANT_PERCENT 和 MIN_PERCENTAGE_RESOURCE 支援的最低百分比|
+|---|---|---|
+|DW100c|4|25%|
+|DW200c|8|12.5%|
+|DW300c|12|8%|
+|DW400c|16|6.25%|
+|DW500c|20|5%|
+|DW1000c|32|3%|
+|DW1500c|32|3%|
+|DW2000c|48|2%|
+|DW2500c|48|2%|
+|DW3000c|64|1.5%|
+|DW5000c|64|1.5%|
+|DW6000c|128|0.75%|
+|DW7500c|128|0.75%|
+|DW10000c|128|0.75%|
+|DW15000c|128|0.75%|
+|DW30000c|128|0.75%|
+||||
+
+同樣地，request_min_resource_grant_percent、min_percentage_resource 必須大於或等於有效的 request_min_resource_grant_percent。  min_percentage_resource 設定為小於有效 min_percentage_resource 的工作負載群組，其值在執行階段會調整為零。  發生這種情況時，針對 min_percentage_resource 設定的資源可在所有工作負載群組間共用。  例如，min_percentage_resource 為 10% 且在 DW1000c 上執行的工作負載群組 wgAdHoc，會有 10% 的有效 min_percentage_resource (3.25% 是 DW1000c 所支援的最小值)。  DW100c 的 wgAdhoc 的有效 min_percentage_resource 為 0%。  針對 wgAdhoc 設定的 10% 會在所有工作負載群組之間共用。
+
+cap_percentage_resource也具有有效值。  如果工作負載群組 wgAdhoc 是以 100% cap_percentage_resource 設定，而另一個工作負載群組 wgDashboards 是以 25% min_percentage_resource 建立，則 wgAdhoc 的有效 cap_percentage_resource 會變成 75%。
+
+若要了解工作負載群組的執行階段值，最簡單的方式就是查詢系統檢視 [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest)。
+
+## <a name="permissions"></a>權限
+
+需要 CONTROL DATABASE 權限
+
+## <a name="see-also"></a>另請參閱
+[DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+
+::: moniker-end

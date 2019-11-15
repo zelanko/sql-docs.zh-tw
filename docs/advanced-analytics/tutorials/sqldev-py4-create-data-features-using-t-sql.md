@@ -1,26 +1,27 @@
 ---
-title: 使用 T-sql 函數和 Python 建立資料特徵
-description: 示範如何將計算新增至預存程式以用於 Python 機器學習模型的教學課程。
+title: Python + T-SQL：資料特徵
+description: 此教學課程示範如何將計算新增至預存程序，以便在 Python 機器學習模型中使用。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3eafa7bf06739ba5802ea20caea61fbaaa2474ec
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 94d3160fe372fafb666ed451d207301b86d119d9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715497"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725201"
 ---
-# <a name="create-data-features-using-t-sql"></a>使用 T-sql 建立資料特徵
+# <a name="create-data-features-using-t-sql"></a>使用 T-SQL 建立資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-資料探索之後, 您已從資料收集了一些見解, 並準備好繼續進行*功能工程*。 從原始資料建立功能的這個程式, 可能是 advanced analytics 模型化的重要步驟。
+瀏覽資料之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」  。 從原始資料建立特徵的這個程序，會是建立進階分析模型的重要步驟。
 
-本文屬於[適用于 SQL 開發人員的資料庫內 Python 分析](sqldev-in-database-python-for-sql-developers.md)教學課程的一部分。 
+本文是[適用於 SQL 開發人員的資料庫內 Python 分析](sqldev-in-database-python-for-sql-developers.md)教學課程的一部分。 
 
 在此步驟中，您將了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數，從原始資料建立特徵。 接著您將從預存程序呼叫該函數，以建立包含特徵值的資料表。
 
@@ -30,12 +31,12 @@ ms.locfileid: "68715497"
 
 您將會使用一個自訂 T-SQL 函數 _fnCalculateDistance_，透過 Haversine 公式來計算距離，並使用第二個自訂 T-SQL 函數 _fnEngineerFeatures_，建立包含所有特徵的資料表。
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>使用 fnCalculateDistance 計算行程距離
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>使用 fnCalculateDistance 計算車程距離
 
-1.  在進行本逐步解說的準備工作時，已下載並向 _註冊函數_ fnCalculateDistance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請花幾分鐘的時間來審查程式碼。
+1.  在進行本逐步解說的準備工作時，已下載並向 _註冊函數_ fnCalculateDistance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 請花幾分鐘檢閱此程式碼。
   
-    在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]、[函數] 和 [純量值函式]。
-    以滑鼠右鍵按一下 [fnCalculateDistance]，然後選取 [修改]，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
+    在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]  、[函數]  和 [純量值函式]  。
+    以滑鼠右鍵按一下 [fnCalculateDistance]  ，然後選取 [修改]  ，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
   
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -67,7 +68,7 @@ ms.locfileid: "68715497"
 
 若要將計算值加入可用於定型模型的資料表，您將使用另一個函數 _fnEngineerFeatures_。
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>使用_fnEngineerFeatures_儲存功能
+### <a name="save-the-features-using-_fnengineerfeatures_"></a>使用 _fnEngineerFeatures_ 儲存特徵
 
 1.  請花幾分鐘檢閱自訂 T-SQL 函數 _fnEngineerFeatures_的程式碼，在進行本逐步解說的準備工作時，應該已為您建立此函數。
   
@@ -107,16 +108,16 @@ ms.locfileid: "68715497"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    如您所見，計量表回報的距離不一定會對應到地理距離。 這就是為什麼特徵工程非常重要的原因。
+    如您所見，計量表回報的距離不一定會對應到地理距離。 這就是特徵工程之所以重要的原因。
 
-在下一個步驟中, 您將瞭解如何使用這些資料功能, 利用 Python 來建立和定型機器學習模型。
+在下一個步驟中，您將瞭解如何使用這些資料特徵，透過 Python 建立和定型機器學習服務模型。
 
 ## <a name="next-step"></a>下一步
 
-[使用 T-sql 定型及儲存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[使用 T-SQL 定型及儲存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>上一個步驟
 
-[探索資料並加以視覺化](sqldev-py3-explore-and-visualize-the-data.md)
+[探索及視覺化資料](sqldev-py3-explore-and-visualize-the-data.md)
 
 

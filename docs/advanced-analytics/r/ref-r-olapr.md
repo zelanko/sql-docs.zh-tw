@@ -1,6 +1,6 @@
 ---
-title: olapR R 函數程式庫
-description: 簡介 SQL Server 2016 R Services 中的 olapR 函式程式庫和使用 R SQL Server Machine Learning 服務。
+title: olapR R 函式程式庫
+description: SQL Server 2016 R Services 和 SQL Server 機器學習服務 (使用 R) 中的 olapR 函式程式庫簡介。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68715000"
@@ -18,38 +18,38 @@ ms.locfileid: "68715000"
 # <a name="olapr-r-library-in-sql-server"></a>olapR (SQL Server 中的 R 程式庫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-**olapR**是 R 函數的 Microsoft 程式庫, 用於針對 SQL Server Analysis Services OLAP CUBE 的 MDX 查詢。 函式不支援所有 MDX 作業, 但是您可以在維度上建立配量、骰子、明細、匯總和資料透視的查詢。 
+**olapR** 是 R 函數的 Microsoft 程式庫，用來針對 SQL Server Analysis Services OLAP Cube 進行 MDX 查詢。 函式不支援所有 MDX 作業，但是您可以建置在維度上進行配量、切割、向下讚研、彙總和樞紐的查詢。 
 
-此套件未預先載入 R 會話中。 執行下列命令以載入程式庫。
+此套件未預先載入 R 工作階段中。 請執行下列命令來載入該程式庫。
 
 ```R
 library(olapR)
 ```
 
-您可以使用此程式庫連接到所有支援的 SQL Server 版本上的 Analysis Services OLAP Cube。 目前不支援連接到表格式模型。
+您可以使用此程式庫連線到所有受支援 SQL Server 版本上的 Analysis Services OLAP Cube。 目前不支援連線到表格式模型。
 
 ## <a name="package-version"></a>套件版本
 
-目前的版本在所有僅限 Windows 的產品和提供程式庫的下載中都是1.0.0。
+在所有僅限 Windows 的產品和提供此程式庫的下載項目中，目前版本都是 1.0.0。
 
-## <a name="full-reference-documentation"></a>完整參考檔
+## <a name="full-reference-documentation"></a>完整參考文件
 
-**Olapr**程式庫是散發在多個 Microsoft 產品中, 但不論您是在 SQL Server 或其他產品中取得程式庫, 使用方式都相同。 因為函式相同, 所以[個別 sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)函式的檔集只會發佈到[R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)的一個位置, 以供 Microsoft Machine Learning Server。 若有任何產品特定行為存在, 則函式說明頁面中會注明不一致的情況。
+**olapr** 程式庫散佈在多個 Microsoft 產品中，但不論您是在 SQL Server 還是在另一個產品中取得此程式庫，其使用方式都相同。 由於函式相同，因此[個別 sqlrutils 函式的文件](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)只會發佈至 Microsoft Machine Learning Server [R 參考](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)底下的一個位置。 若有任何產品特定行為存在，函式說明頁面中將會註明不一致之處。
 
 ## <a name="availability-and-location"></a>可用性和位置
 
-下列產品提供此套件, 以及 Azure 上的數個虛擬機器映射。 套件位置也會隨之改變。
+下列產品以及 Azure 上的數個虛擬機器映像提供了此套件。 套件位置會隨之改變。
 
 產品 | Location |
 --------|----------|
-SQL Server Machine Learning 服務 (使用 R 整合) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
+SQL Server 機器學習服務 (內含 R 整合) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
-Microsoft Machine Learning Server (R 伺服器) | C:\Program Files\Microsoft\R_SERVER\library |
+Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
 Microsoft R Client | C:\Program Files\Microsoft\R Client\R_SERVER\library |
 資料科學虛擬機器 (在 Azure 上) | C:\Program Files\Microsoft\R Client\R_SERVER\library |
 SQL Server 虛擬機器 (在 Azure 上) <sup>1</sup> | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
 
-<sup>1</sup>在 SQL Server 中, R 整合是選擇性的。 當您在 VM 設定期間新增 Machine Learning 或 R 功能時, 將會安裝 olapR 程式庫。
+<sup>1</sup> R 整合在 SQL Server 中是選擇性項目。 當您在 VM 設定期間新增機器學習或 R 功能時，就會安裝 olapR 程式庫。
 
 
 ## <a name="see-also"></a>另請參閱

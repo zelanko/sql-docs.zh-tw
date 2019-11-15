@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589988"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240700"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -50,6 +50,7 @@ ms.locfileid: "72589988"
 - 啟用或停用[輕量型查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
 - 啟用或停用新的 `String or binary data would be truncated` 錯誤訊息。
 - 啟用或停用 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中最後一個實際執行計畫的集合。
+- 指定暫停的可繼續索引作業在被 SQL Server 引擎自動中止之前，所暫停的分鐘數。
 
 ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -58,9 +59,9 @@ ms.locfileid: "72589988"
 ```
 ALTER DATABASE SCOPED CONFIGURATION
 {
-     {  [ FOR SECONDARY] SET <set_options>}
+    { [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE  [plan_handle]
+| CLEAR PROCEDURE_CACHE [plan_handle]
 | SET < set_options >
 [;]
 
@@ -88,6 +89,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
+    | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
 }
 ```
 
@@ -105,12 +107,11 @@ FOR SECONDARY
 
 CLEAR PROCEDURE_CACHE [plan_handle]
 
-清除資料庫的程序 (計劃) 快取，並且可在主要端和次要端上執行。  
+清除資料庫的程序 (計劃) 快取，並且可在主要端和次要端上執行。
 
 指定查詢計劃控制代碼來將單一查詢計劃從計畫快取清除。
 
-> [!NOTE]
-> 指定查詢的計畫控制代碼適用於 Azure SQL Database 和 SQL Server 2019 或更高版本。
+**適用於**：指定查詢的計畫控制代碼適用於 Azure SQL Database 和 SQL Server 2019 或更高版本。
 
 MAXDOP **=** {\<值> | PRIMARY } **\<值>**
 
@@ -171,7 +172,7 @@ PRIMARY
 
 只有在資料庫位於主要端上時，此值才會在次要端上有效，並且指定所有次要端上此設定的值將採用針對主要端設定的值。 如果主要端的組態發生變更，次要端上的值將會相應地變更，而無須明確地設定次要端值。 [PRIMARY] 是次要端的預設設定。
 
-IDENTITY_CACHE **=** { **ON** | OFF }      
+IDENTITY_CACHE **=** { **ON** | OFF }
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -180,7 +181,7 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 > [!NOTE]
 > 只能針對 PRIMARY 設定此選項。 如需詳細資訊，請參閱[識別資料行](create-table-transact-sql-identity-property.md)。
 
-INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }   
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -191,7 +192,7 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 >
 > 僅限 SQL Server 2017 (14.x)，選項 INTERLEAVED_EXECUTION_TVF 舊稱為 **DISABLE**_INTERLEAVED_EXECUTION_TVF。
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -200,7 +201,7 @@ BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 > [!NOTE]
 > 針對資料庫相容性層級 130 或更低，這個資料庫範圍設定沒有任何作用。
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}   
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -333,9 +334,9 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-可讓您啟用或停用新的 `String or binary data would be truncated` 錯誤訊息。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 針對此案例引進了更加特定的新錯誤訊息 (2628)：  
+可讓您啟用或停用新的 `String or binary data would be truncated` 錯誤訊息。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 針對此案例引進了更加特定的新錯誤訊息 (2628)：
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -351,11 +352,25 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 可讓您啟用或停用 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中最後一個查詢計劃統計資料 (相當於實際執行計畫) 的集合。
 
+PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
+
+**適用於**：僅 Azure SQL Database 適用
+
+`PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` 選項會決定可繼續索引在被引擎自動中止之前，其暫停的時間 (以分鐘為單位)。
+
+- 預設值設定為 1 天 (1440分鐘)
+- 最小持續時間設定為 1 分鐘
+- 最大持續時間為 71582 分鐘
+- 當設定為 0 時，暫停的作業永遠不會自動中止
+
+此選項目前的值會顯示於 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)。
+
 ## <a name="Permissions"></a> 權限
 
 資料庫上需要 `ALTER ANY DATABASE SCOPE CONFIGURATION`。 可由在資料庫上具有 CONTROL 權限的使用者來授與此權限。
 
 ## <a name="general-remarks"></a>一般備註
+
 雖然您可以設定讓次要資料庫擁有與其主要資料庫不同的範圍組態設定，但所有次要資料庫都會使用相同的組態。 無法為個別次要資料庫設定不同的設定。
 
 執行此陳述式會清除目前資料庫中的程序快取，這意謂著所有查詢都必須重新編譯。
@@ -374,6 +389,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 ## <a name="limitations-and-restrictions"></a>限制事項
 
 ### <a name="maxdop"></a>MAXDOP
+
 細微的設定可以覆寫全域設定，而資源管理員則可以設定所有其他 MAXDOP 設定的限制。 以下是 MAXDOP 設定的邏輯：
 
 - 查詢提示會覆寫 `sp_configure` 和資料庫範圍設定。 如果已針對工作負載群組設定資源群組 MAXDOP：
@@ -411,9 +427,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 系統檢視會提供有關資料庫內範圍組態的資訊。 資料庫範圍組態選項只會出現在 sys.database_scoped_configurations 中，因為它們會覆寫伺服器層級預設設定。 [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 系統檢視只會顯示伺服器層級設定。
 
 ## <a name="examples"></a>範例
+
 下列範例示範如何使用 ALTER DATABASE SCOPED CONFIGURATION
 
 ### <a name="a-grant-permission"></a>A. 授與權限
+
 此範例會將執行 ALTER DATABASE SCOPED CONFIGURATION 所需的權限授與使用者 Joe。
 
 ```sql
@@ -421,6 +439,7 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
 ### <a name="b-set-maxdop"></a>B. 設定 MAXDOP
+
 此範例會在異地複寫案例中，針對主要資料庫設定 MAXDOP = 1，並針對次要資料庫設定 MAXDOP = 4。
 
 ```sql
@@ -435,6 +454,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
 ### <a name="c-set-legacy_cardinality_estimation"></a>C. 設定 LEGACY_CARDINALITY_ESTIMATION
+
 此範例會在異地複寫案例中，將次要資料庫的 LEGACY_CARDINALITY_ESTIMATION 設定為 ON。
 
 ```sql
@@ -448,6 +468,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parameter_sniffing"></a>D. 設定 PARAMETER_SNIFFING
+
 此範例會在異地複寫案例中，將主要資料庫的 PARAMETER_SNIFFING 設定為 OFF。
 
 ```sql
@@ -467,6 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMA
 ```
 
 ### <a name="e-set-query_optimizer_hotfixes"></a>E. 設定 QUERY_OPTIMIZER_HOTFIXES
+
 在異地複寫案例中，將主要資料庫的 QUERY_OPTIMIZER_HOTFIXES 設定為 ON。
 
 ```sql
@@ -474,6 +496,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. 清除程序快取
+
 此範例會清除程序快取 (可能僅適用於主要資料庫)。
 
 ```sql
@@ -481,6 +504,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identity_cache"></a>G. 設定 IDENTITY_CACHE
+
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (功能目前為公開預覽版)
 
 此範例會停用識別快取。
@@ -490,7 +514,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. 設定 OPTIMIZE_FOR_AD_HOC_WORKLOADS
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 此範例會允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。
 
@@ -499,6 +524,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevate_online"></a>I. 設定 ELEVATE_ONLINE
+
 **適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
 
 此範例會將 ELEVATE_ONLINE 設定為 FAIL_UNSUPPORTED。
@@ -508,7 +534,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevate_resumable"></a>J. 設定 ELEVATE_RESUMABLE
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能處於公開預覽階段)
 
 此範例會將 ELEVEATE_RESUMABLE 設定為 WHEN_SUPPORTED。
 
@@ -517,12 +544,24 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. 從計畫快取清除查詢計劃
+
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-此範例會將特定計劃從程序快取清除 
+此範例會將特定計劃從程序快取清除
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
+### <a name="l-set-paused-duration"></a>L. 設定暫停的持續時間
+
+**適用於**：僅 Azure SQL Database 適用
+
+此範例會將可繼續索引的暫停持續時間設定為 60 分鐘。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ```
 
 ## <a name="additional-resources"></a>其他資源

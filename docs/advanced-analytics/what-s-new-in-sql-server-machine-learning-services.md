@@ -1,6 +1,7 @@
 ---
-title: 新功能
-description: 適用於 SQL Server 2016 R Services、R Server、SQL Server 機器學習服務之每個版本的新功能公告。
+title: SQL Server 機器學習服務的新功能
+titleSuffix: ''
+description: 適用於 SQL Server 機器學習服務和 SQL Server 2016 R Services 每個版本的新功能公告。
 ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
@@ -9,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16c70e23df018a3bf403280fd6deb48b880c31ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532566"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707442"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的新功能
 
@@ -25,7 +26,7 @@ ms.locfileid: "73532566"
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>SQL Server 2019 的新功能
 
-此版本會在 SQL Server 中新增適用於 Python 和 R 機器學習作業的熱門要求功能。 如需此版本中所有功能的詳細資訊，請參閱 [SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL Server 2019 的版本資訊](../sql-server/sql-server-ver15-release-notes.md)。
+此版本會在 SQL Server 中新增適用於 Python 和 R 機器學習作業的熱門要求功能。 如需此版本中所有功能的詳細資訊，請參閱 [SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)與 [SQL Server 2019 的版本資訊](../sql-server/sql-server-ver15-release-notes.md)。
 
 > [!NOTE]
 > 如需 SQL Server 2019 中關於 Java 的新功能文件，請參閱 [SQL Server 語言擴充功能中有哪些新功能？](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new) \(英文\)

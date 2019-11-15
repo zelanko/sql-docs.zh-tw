@@ -1,26 +1,26 @@
 ---
 title: SQL Server 語言延伸模組中的擴充性架構
-titleSuffix: SQL Server Language Extensions
-description: SQL Server 資料庫引擎的外部程式碼支援，具備可對關聯式資料執行外部語言的雙重架構。
+titleSuffix: ''
+description: 了解用於「SQL Server 語言延伸模組」的擴充性架構，此架構可讓您在 SQL Server 中執行外部程式碼。 在 SQL Server 2019 中，Java 受到支援。 程式碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cefa617dc6068f07b2cc2b684ce0442d7a438e8
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589082"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658875"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 語言延伸模組中的擴充性架構
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 語言延伸模組具有擴充性架構，可在伺服器上執行 Java 之類的外部程式碼。 程式碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
+了解用於「SQL Server 語言延伸模組」的擴充性架構，此架構可讓您在 SQL Server 中執行外部程式碼。 在 SQL Server 2019 中，Java 受到支援。 程式碼會在語言執行階段環境中執行，作為核心資料庫引擎的延伸模組。
 
 ## <a name="background"></a>背景
 

@@ -7,12 +7,12 @@ ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032206"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240705"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 
@@ -305,6 +305,13 @@ SQL Server 記錄傳送是一種 HA 設定，其中主伺服器的資料庫會�
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    ```
+ - 執行下列命令，以驗證「記錄傳送」容錯移轉是否正常運作
+ 
+    > [!WARNING]
+    > 此命令會讓次要資料庫上線並中斷「記錄傳送」設定。 執行此命令之後，您將必須重新設定「記錄傳送」。
+ 
+    ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 

@@ -1,7 +1,7 @@
 ---
 title: 監視和疑難排解
 titleSuffix: SQL Server big data clusters
-description: 本文提供用於監視和疑難排解的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]實用命令。
+description: 本文提供用來監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]及針對其進行疑難排解的實用命令。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -11,19 +11,19 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70153636"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>監視和疑難排解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]及針對其進行疑難排解
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明數個實用的 Kubernetes 命令, 可讓您用來監視和[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]疑難排解。 它會示範如何檢視位於巨量資料叢集中的 Pod 或其他 Kubernetes 成品的深入詳細資料。 此文章也涵蓋一般工作，例如，將檔案複製到執行其中一項 SQL Server 巨量資料叢集服務的容器，或從其中複製檔案。
+本文說明數個實用的 Kubernetes 命令，可讓您用來監視 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]及針對其進行疑難排解。 它會示範如何檢視位於巨量資料叢集中的 Pod 或其他 Kubernetes 成品的深入詳細資料。 此文章也涵蓋一般工作，例如，將檔案複製到執行其中一項 SQL Server 巨量資料叢集服務的容器，或從其中複製檔案。
 
 > [!TIP]
-> 若要監視 big data 叢集元件的狀態, 您可以使用[**azdata bdc 狀態**](deployment-guidance.md#status)命令或隨附于 Azure Data Studio 的內建[疑難排解筆記本](manage-notebooks.md)。
+> 若要監視巨量資料叢集元件的狀態，您可以使用 [**azdata bdc status**](deployment-guidance.md#status) 命令，或是 Azure Data Studio 隨附的內建[疑難排解筆記本](manage-notebooks.md)。
 
 > [!TIP]
 > 在 Windows (cmd or PS) 或 Linux (bash) 用戶端電腦上執行下列 **kubectl** 命令。 它們需要叢集中先前的驗證，以及要執行的目標叢集內容。 例如，針對先前建立的 AKS 叢集，您可以執行 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` 來下載 Kubernetes 叢集組態檔並設定叢集內容。
@@ -72,7 +72,7 @@ storage-0-1       7/7     Running   0          110m
 ```
 
 > [!NOTE]
-> 在部署期間，[狀態] 為 **ContainerCreating** 的 Pod 仍會上線。 如果部署因任何原因而停止回應，這可能會讓您了解問題所在。 另請查看 [就緒] 資料行。 這會告訴您已在 Pod 中啟動多少容器。 請注意，部署可能需要 30 分鐘或更久的時間，視您的設定和網路而定。 在這段時間內，大部分會花在下載不同元件的容器映像。
+> 在部署期間，[狀態]  為 **ContainerCreating** 的 Pod 仍會上線。 如果部署因任何原因而停止回應，這可能會讓您了解問題所在。 另請查看 [就緒]  資料行。 這會告訴您已在 Pod 中啟動多少容器。 請注意，部署可能需要 30 分鐘或更久的時間，視您的設定和網路而定。 在這段時間內，大部分會花在下載不同元件的容器映像。
 
 ## <a name="get-pod-details"></a>取得 Pod 詳細資料
 
@@ -114,7 +114,7 @@ kubectl get svc -n mssql-cluster
 
 下列服務支援對巨量資料叢集的外部連線：
 
-| 服務 | 描述 |
+| 服務 | Description |
 |---|---|
 | **master-svc-external** | 提供主要執行個體的存取權。<br/>(**EXTERNAL-IP,31433** 和 **SA** 使用者) |
 | **controller-svc-external** | 支援管理叢集的工具和用戶端。 |
@@ -227,4 +227,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關 big data 叢集的詳細資訊, 請參閱[什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)。
+如需巨量資料叢集的詳細資訊，請參閱[什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md)。

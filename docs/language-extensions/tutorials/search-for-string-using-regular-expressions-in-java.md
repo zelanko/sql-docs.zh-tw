@@ -1,29 +1,28 @@
 ---
-title: 教學課程：在 Java 中使用規則運算式 (regex) 搜尋字串
-titleSuffix: SQL Server Language Extensions
-description: 本教學課程示範如何使用 SQL Server 語言延伸模組，並執行使用規則運算式搜尋字串的 Java 程式碼。
+title: 教學課程：Java 中的 Regex 字串搜尋
+description: 本教學課程示範如何使用「SQL Server 語言延伸模組」，以及執行使用規則運算式 (regex) 來搜尋字串的 Java 程式碼。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 746706c1ef1ee8f9ed393ac57497ffb570bef50c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589002"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658795"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>教學課程：在 Java 中使用規則運算式 (regex) 搜尋字串
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本教學課程示範如何使用 [SQL Server 語言延伸模組](../language-extensions-overview.md)，並建立可從 SQL Server 接收兩個資料行 (ID 和 text)，以及一個規則運算式作為輸入參數的 Java 類別。 此類別會將兩個資料行傳回 SQL Server (ID 和 text)。
+本教學課程示範如何使用 [SQL Server 語言延伸模組](../language-extensions-overview.md)來建立一個會從 SQL Server 接收兩個資料行 (ID 和 text) 的 Java 類別，以及一個作為輸入參數的規則運算式。 此類別會將兩個資料行傳回 SQL Server (ID 和 text)。
 
 針對文字資料行中傳送至 Java 類別的指定文字，此程式碼會檢查指定的規則運算式是否已完成，並連同原始識別碼一起傳回該文字。
 
-這個特定的範例會使用可檢查文字是否包含 "Java" 或 "java" 這個字的規則運算式。
+此範例程式碼會使用可檢查文字是否包含 "Java" 或 "java" 一字的規則運算式。
 
 ## <a name="prerequisites"></a>Prerequisites
 

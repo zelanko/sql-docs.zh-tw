@@ -1,34 +1,35 @@
 ---
-title: '第3課: 使用 R 和 T-sql 來定型和儲存模型'
-description: 教學課程示範如何使用 SQL Server 預存程式和 T-sql 函數來定型、序列化和儲存 R 模型。
+title: R + T-SQL 教學課程：定型模型
+description: 教學課程示範如何使用 SQL Server 預存程序和 T-SQL 函式來定型、序列化和儲存 R 模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f23f4c350855b71a3633587bb3c092988fe89fef
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 406f8e1c60c5820f9edaaf7760b7aeed321d2611
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715328"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724453"
 ---
-# <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>第 3 課：使用 T-sql 定型及儲存模型
+# <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>第 3 課：使用 T-SQL 定型及儲存模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文是有關如何在 SQL Server 中使用 R 的 SQL 開發人員教學課程的一部分。
+本文是適用 SQL 開發人員的教學課程的一部分，說明如何在 SQL Server 中使用 R。
 
-在這一課, 您將瞭解如何使用 R 來定型機器學習模型。您將使用您在上一課中建立的資料功能來定型模型, 然後將定型的模型儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表中。 在此情況下, R 封裝已隨一起[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]安裝, 因此可以從 SQL 完成所有作業。
+在本課程中，您將學習如何使用 R 來定型機器學習模型。您將使用在上一課中建立的資料功能來定型模型，然後將定型的模型儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 在此情況下，R 套件已隨 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]安裝，因此可以從 SQL 完成所有作業。
 
-## <a name="create-the-stored-procedure"></a>建立預存程式
+## <a name="create-the-stored-procedure"></a>建立預存程序
 
-從 T-sql 呼叫 R 時, 您會使用系統預存程式[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 不過, 對於您經常重複的進程 (例如重新定型模型), 在另一個預存程式中將 sp_execute_exernal_script 的呼叫封裝起來比較容易。
+從 T-SQL 呼叫 R 時，您會使用系統預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 但是，對於經常重複的程序 (例如重新定型模型)，更輕鬆的方式可能是封裝另一個預存程序中對 sp_execute_exernal_script 的呼叫。
 
-1. 在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中, 開啟新的**查詢**視窗。
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，開啟新的 [查詢]  視窗。
 
-2. 執行下列語句來建立預存程式**RxTrainLogitModel**。 這個預存程式會定義輸入資料, 並使用來自 RevoScaleR 的**rxLogit**來建立羅吉斯回歸模型。
+2. 執行下列陳述式來建立預存程序 **RxTrainLogitModel**。 這個預存程序會定義輸入資料，並使用 RevoScaleR 的 **rxLogit** 來建立羅吉斯迴歸模型。
 
     ```sql
     CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
@@ -59,21 +60,21 @@ ms.locfileid: "68715328"
     GO
     ```
 
-    - 為了確保某些資料會停留在測試模型, 會從計程車資料表隨機選取 70% 的資料, 以供定型之用。
+    - 為了確保會剩下一些資料來測試模型，系統會從計程車資料表隨機選取 70% 的資料，以供定型之用。
 
-    - SELECT 查詢會使用自訂的純量函數 *fnCalculateDistance* 計算上車和下車位置之間的直線距離。 查詢的結果會儲存在預設的 R 輸入變數`InputDataset`中。
+    - SELECT 查詢會使用自訂的純量函數 *fnCalculateDistance* 計算上車和下車位置之間的直線距離。 查詢的結果會儲存在預設的 R 輸入變數 `InputDataset`中。
   
-    - R 腳本會呼叫**rxLogit**函數 (這是隨附[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]的其中一個增強 R 函數) 來建立羅吉斯回歸模型。
+    - R 指令碼會呼叫 **rxLogit** 函數 (其為 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 隨附的其中一個增強 R 函數)，以建立羅吉斯迴歸模型。
   
-        二進位變數 _tipped_ 可做為「標籤」或結果資料行，而模型則是使用下列功能資料行進行調整︰_passenger_count_、_trip_distance_、_trip_time_in_secs_和 _direct_distance_。
+        二進位變數 _tipped_ 可做為「標籤」  或結果資料行，而模型則是使用下列功能資料行進行調整︰_passenger_count_、_trip_distance_、_trip_time_in_secs_和 _direct_distance_。
   
-    - 儲存在 R 變數`logitObj`中的定型模型會序列化並當做輸出參數傳回。
+    - 儲存在 R 變數 `logitObj` 中的定型模型會被序列化並作為輸出參數返回。
 
-## <a name="train-and-deploy-the-r-model-using-the-stored-procedure"></a>使用預存程式來定型和部署 R 模型
+## <a name="train-and-deploy-the-r-model-using-the-stored-procedure"></a>使用預存程序定型和部署 R 模型
 
-因為預存程式已經包含輸入資料的定義, 所以您不需要提供輸入查詢。
+因為預存程序已經包含輸入資料的定義，因此您不需要提供輸入查詢。
 
-1. 若要定型和部署 R 模型, 請呼叫預存程式並將它插入至資料庫資料表_nyc_taxi_models_, 讓您可以將它用於未來的預測:
+1. 若要定型和部署 R 模型，請呼叫預存程序並將它插入資料庫資料表 _nyc_taxi_models_ 中，以針對未來的預測使用：
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -81,15 +82,15 @@ ms.locfileid: "68715328"
     INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
     ```
 
-2. 針對會輸送至 R **stdout**資料流程的訊息, 監看的 [**訊息**] 視窗, 如下列訊息所示: [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 
+2. 觀察 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的 [訊息]  視窗，查看將通過管道傳遞到 R 的 **stdout** 資料流的訊息，例如下列訊息： 
 
-    來自外部腳本的 STDOUT 訊息:讀取的資料列:1193025, 已處理的資料列總數:1193025, 總區塊時間:0.093 秒」
+    STDOUT message(s) from external script:Rows Read:1193025, Total Rows Processed:1193025, Total Chunk Time:0.093 seconds"
 
-    您也可能會看到個別函數的特定訊息, `rxLogit`顯示在模型建立過程中產生的變數和測試計量。
+    您也可能會看到個別 `rxLogit` 函式的特定訊息，其顯示在模型建立過程中產生的變數和測試單位。
 
-3.  當語句完成時, 開啟資料表*nyc_taxi_models*。 處理資料並對模型進行調整可能需要一段時間。
+3.  當陳述式完成時，開啟資料表 *nyc_taxi_models*。 資料處理和模型調整可能需要一些時間。
 
-    您可以看到已經加入一個新的資料列, 其中包含資料行_模型_中的序列化模型, 以及資料行_名稱_中的模型名稱**RxTrainLogit_model** 。
+    您可以看到當中已新增一個新的資料列，其 _model_ 資料行中包含序列化的模型，以及 _name_ 資料行中的模型名稱 **RxTrainLogit_model**。
 
     ```sql
     model                        name
@@ -97,13 +98,13 @@ ms.locfileid: "68715328"
     0x580A00000002000302020....  RxTrainLogit_model
     ```
 
-在下一個步驟中, 您將使用定型的模型來產生預測。
+在下一個步驟中，您將使用定型的模型來產生預測。
 
 ## <a name="next-lesson"></a>下一課
 
-[第 4 課：在預存程式中使用 R 模型來預測潛在結果](../tutorials/sqldev-operationalize-the-model.md)
+[第 4 課：在預存程序中使用 R 模型預測可能的結果](../tutorials/sqldev-operationalize-the-model.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[第 2 課：使用 R 和 T-sql 函數建立資料特徵](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[第 2 課：使用 R 和 T-SQL 函式建立資料特徵](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

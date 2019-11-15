@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653736"
@@ -23,7 +23,7 @@ ms.locfileid: "69653736"
 您可以在 Visual Studio Code 所支援的平台上安裝 Spark & Hive Tools，這包括 Windows、Linux 及 macOS。 您可以在下面找到不同平台的先決條件。
 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成此文章中的步驟，將會需要下列項目：
 
@@ -31,7 +31,7 @@ ms.locfileid: "69653736"
 - [Visual Studio Code](https://code.visualstudio.com/) \(英文\)。
 - [Mono](https://www.mono-project.com/docs/getting-started/install/) \(英文\)。 只有 Linux 和 macOS 才需要 Mono。
 - [針對 Visual Studio Code 設定 PySpark 互動式環境](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment) \(部分機器翻譯\)。
-- 名為**SQLBDCexample**的本機目錄。  本文使用**C:\SQLBDC\SQLBDCexample**。
+- 名為 **SQLBDCexample** 的本機目錄。  本文使用 **C:\SQLBDC\SQLBDCexample**。
 
 ## <a name="install-spark--hive-tools"></a>安裝 Spark & Hive Tools
 
@@ -39,11 +39,11 @@ ms.locfileid: "69653736"
 
 1. 開啟 Visual Studio Code。
 
-2. 從功能表列，瀏覽至 [檢視] > [擴充功能]。
+2. 從功能表列，瀏覽至 [檢視]   > [擴充功能]  。
 
 3. 在搜尋方塊中，輸入 **Spark & Hive**。
 
-4. 從搜尋結果中選取 [Spark & Hive Tools]，然後選取 [安裝]。  
+4. 從搜尋結果中選取 [Spark & Hive Tools]  ，然後選取 [安裝]  。  
 
    ![安裝擴充功能](./media/spark-hive-tools-vscode/extension.png)
 
@@ -53,9 +53,9 @@ ms.locfileid: "69653736"
 
 完成下列步驟來在 Visual Studio Code 中開啟工作資料夾並建立檔案：
 
-1. 從功能表列, 流覽至  > [檔案] [**開啟資料夾 ...** ]C:\SQLBDC\SQLBDCexample, 然後選取 [**選取資料夾**] 按鈕。  >  該資料夾會出現在左側的 [檔案總管] 檢視中。
+1. 從功能表列，瀏覽至 [檔案]   > [開啟資料夾]   > **C:\SQLBDC\SQLBDCexample**，然後選取 [選取資料夾]  按鈕。 該資料夾會出現在左側的 [檔案總管]  檢視中。
 
-2. 從 [ **Explorer** ] 視圖中, 選取資料夾**SQLBDCexample**, 然後在 [工作] 資料夾旁**新增**[檔案] 圖示。
+2. 從 [檔案總管]  檢視，依序選取 [SQLBDCexample]  資料夾，以及位於工作資料夾旁邊的**新增檔案**圖示。
 
    ![新增檔案](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -90,11 +90,11 @@ ms.locfileid: "69653736"
 
 在您可以從 Visual Studio Code 將指令碼提交至叢集之前，您必須連結 SQL Server 巨量資料叢集。
 
-1. 從功能表列，瀏覽至 [檢視] > [命令選擇區]，然後輸入 **Spark / Hive:Link a Cluster**。
+1. 從功能表列，瀏覽至 [檢視]   > [命令選擇區]  ，然後輸入 **Spark / Hive:Link a Cluster**。
 
    ![連結叢集命令](./media/spark-hive-tools-vscode/link-cluster-command.png)
 
-2. 針對已連結的叢集類型選取 [SQL Server 巨量資料]。
+2. 針對已連結的叢集類型選取 [SQL Server 巨量資料]  。
 
 3. 輸入 SQL Server 巨量資料端點。
 
@@ -104,25 +104,25 @@ ms.locfileid: "69653736"
 
 6. 設定叢集的顯示名稱 (選擇性)。
 
-7. 列出叢集，檢閱 [輸出] 檢視以確認。
+7. 列出叢集，檢閱 [輸出]  檢視以確認。
 
 ## <a name="list-clusters"></a>列出叢集
 
-1. 從功能表列，瀏覽至 [檢視] > [命令選擇區]，然後輸入 **Spark / Hive:List Cluster**。
+1. 從功能表列，瀏覽至 [檢視]   > [命令選擇區]  ，然後輸入 **Spark / Hive:List Cluster**。
 
-2. 檢閱 [輸出] 檢視。  該檢視將會顯示已連結的叢集。
+2. 檢閱 [輸出]  檢視。  該檢視將會顯示已連結的叢集。
 
     ![設定預設叢集設定](./media/spark-hive-tools-vscode/list-cluster-result.png)
 
 ## <a name="set-default-cluster"></a>設定預設叢集
 
-1. 重新開啟稍[早](#open-work-folder)建立的資料夾**SQLBDCexample** (如果已關閉)。  
+1. 如果您已經將[先前](#open-work-folder)所建立的 **SQLBDCexampl** 資料夾關閉，請重新開啟該資料夾。  
 
 2. 選取[先前](#open-work-folder)所建立的 **HelloWorld.py** 檔案，它將會在指令碼編輯器中開啟。
 
 3. 如果您尚未連結叢集，請先這麼做。
 
-4. 以滑鼠右鍵按一下腳本編輯器, 然後選取**Spark/Hive:設定 預設**叢集。   
+4. 以滑鼠右鍵按一下指令碼編輯器，然後選取 [Spark / Hive:  設定預設叢集]。   
 
 5. 選取某個叢集作為目前指令檔的預設叢集。 工具會自動更新設定檔 **.VSCode\settings.json**。 
 
@@ -132,17 +132,17 @@ ms.locfileid: "69653736"
 
 您可以遵循下列步驟來提交互動式 PySpark 查詢：
 
-1. 重新開啟稍[早](#open-work-folder)建立的資料夾**SQLBDCexample** (如果已關閉)。  
+1. 如果您已經將[先前](#open-work-folder)所建立的 **SQLBDCexampl** 資料夾關閉，請重新開啟該資料夾。  
 
 2. 選取[先前](#open-work-folder)所建立的 **HelloWorld.py** 檔案，它將會在指令碼編輯器中開啟。
 
 3. 如果您尚未連結叢集，請先這麼做。
 
-4. 選擇所有程式碼, 並以滑鼠右鍵按一下腳本編輯器, **然後選取 [Spark:PySpark Interactive** ] 以提交查詢, 或使用快速鍵**Ctrl + Alt + I**。
+4. 選擇所有程式碼，然後以滑鼠右鍵按一下指令碼編輯器，選取 [Spark:  PySpark 互動式] 來提交查詢，或是使用快速鍵 **Ctrl + Alt + I**。
 
    ![[PySpark 互動式] 內容功能表](./media/spark-hive-tools-vscode/pyspark-interactive-right-click.png)
 
-5. 如果您尚未指定預設叢集，請選取叢集。 幾分鐘後，[Python 互動式] 結果便會出現在新的索引標籤中。此工具也可以讓您使用內容功能表來提交程式碼區塊，而非整個指令檔。 
+5. 如果您尚未指定預設叢集，請選取叢集。 幾分鐘後，[Python 互動式]  結果便會出現在新的索引標籤中。此工具也可以讓您使用內容功能表來提交程式碼區塊，而非整個指令檔。 
 
    ![PySpark 互動式 Python 互動式視窗](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
@@ -152,22 +152,22 @@ ms.locfileid: "69653736"
 
    > [!NOTE] 
    >
-   > 在設定中取消選取 [已啟用 Python 擴充功能] (預設為選取) 時，已提交的 [PySpark 互動式] 結果將會使用舊的視窗。
+   > 在設定中取消選取 [已啟用 Python 擴充功能]  (預設為選取) 時，已提交的 [PySpark 互動式] 結果將會使用舊的視窗。
    >
    > ![PySpark 互動式 Python 擴充功能已停用](./media/spark-hive-tools-vscode/pyspark-interactive-python-extension-disabled.png)
 
 
 ## <a name="submit-pyspark-batch-job"></a>提交 PySpark 批次工作
 
-1. 重新開啟稍[早](#open-work-folder)建立的資料夾**SQLBDCexample** (如果已關閉)。  
+1. 如果您已經將[先前](#open-work-folder)所建立的 **SQLBDCexampl** 資料夾關閉，請重新開啟該資料夾。  
 
 2. 選取[先前](#open-work-folder)所建立的 **HelloWorld.py** 檔案，它將會在指令碼編輯器中開啟。
 
 3. 如果您尚未連結叢集，請先這麼做。
 
-4. 以滑鼠右鍵按一下腳本編輯器, 然後選取 **[Spark:PySpark 批**次], 或使用快速鍵**Ctrl + Alt + H**。 
+4. 以滑鼠右鍵按一下指令碼編輯器，然後選取 [Spark:  PySpark 批次]，或是使用快速鍵 **Ctrl + Alt + H**。 
 
-5. 如果您尚未指定預設叢集，請選取叢集。 在您提交 Python 作業之後，提交記錄便會出現在 Visual Studio Code 的 [輸出] 視窗中。 同時也會顯示 **Spark UI URL** 和 **Yarn UI URL**。 您可以在網頁瀏覽器中開啟該 URL 來追蹤作業狀態。
+5. 如果您尚未指定預設叢集，請選取叢集。 在您提交 Python 作業之後，提交記錄便會出現在 Visual Studio Code 的 [輸出]  視窗中。 同時也會顯示 **Spark UI URL** 和 **Yarn UI URL**。 您可以在網頁瀏覽器中開啟該 URL 來追蹤作業狀態。
 
    ![提交 Python 作業結果](./media/spark-hive-tools-vscode/submit-pythonjob-result.png) 
 
@@ -179,9 +179,9 @@ ms.locfileid: "69653736"
 
 #### <a name="method-1"></a>方法 1
 
-1. 從功能表列，瀏覽至 [檔案] > [喜好設定] > [設定]。  
-2. 在 [搜尋設定] 文字方塊中，輸入 **HDInsight Job Sumission:Livy Conf**。  
-3. 選取 [在 settings.json 中編輯] 以取得相關的搜尋結果。
+1. 從功能表列，瀏覽至 [檔案]   > [喜好設定]   > [設定]  。  
+2. 在 [搜尋設定]  文字方塊中，輸入 **HDInsight Job Sumission:Livy Conf**。  
+3. 選取 [在 settings.json 中編輯]  以取得相關的搜尋結果。
 
 #### <a name="method-2"></a>方法 2
 
@@ -200,7 +200,7 @@ ms.locfileid: "69653736"
 
 **要求本文**
 
-| name | description | type |
+| NAME | description | 型別 |
 | :- | :- | :- |
 | 檔案 | 包含要執行之應用程式的檔案 | 路徑 (必要) |
 | proxyUser | 執行作業時要模擬的使用者 | string |
@@ -210,22 +210,22 @@ ms.locfileid: "69653736"
 | pyFiles | 要用於此工作階段的 Python 檔案 | 字串清單 |
 | files | 要用於此工作階段的檔案 | 字串清單 |
 | driverMemory | 要用於驅動程式程序的記憶體數量 | string |
-| driverCores | 要用於驅動程式程序的核心數目 | ssNoversion |
+| driverCores | 要用於驅動程式程序的核心數目 | INT |
 | executorMemory | 要用於每個執行程式程序的記憶體數量 | string |
-| executorCores | 要用於每個執行程式的核心數目 | ssNoversion |
-| numExecutors | 要針對此工作階段啟動的執行程式數目 | ssNoversion |
+| executorCores | 要用於每個執行程式的核心數目 | INT |
+| numExecutors | 要針對此工作階段啟動的執行程式數目 | INT |
 | archives | 要用於此工作階段的封存 | 字串清單 |
 | queue | 提交至的 YARN 佇列名稱 | string |
-| name | 此工作階段的名稱 | string |
+| NAME | 此工作階段的名稱 | string |
 | conf | Spark 設定屬性 | key=val 的對應 |
 
 #### <a name="response-body"></a>回應本文
 
 建立的批次物件。
 
-| name | description | type |
+| NAME | description | 型別 |
 | :- | :- | :- |
-| id | 工作階段識別碼 | ssNoversion |
+| id | 工作階段識別碼 | INT |
 | appId | 此工作階段的應用程式識別碼 | String |
 | appInfo | 詳細的應用程式資訊 | key=val 的對應 |
 | log | 記錄行 | 字串清單 |
@@ -248,11 +248,11 @@ ms.locfileid: "69653736"
 
 ## <a name="unlink-cluster"></a>將叢集取消連結
 
-1. 從功能表列，瀏覽至 [檢視] > [命令選擇區]，然後輸入 **Spark / Hive:Unlink a Cluster**。  
+1. 從功能表列，瀏覽至 [檢視]   > [命令選擇區]  ，然後輸入 **Spark / Hive:Unlink a Cluster**。  
 
 2. 選取要取消連結的叢集。  
 
-3. 檢閱 [輸出] 檢視以確認。  
+3. 檢閱 [輸出]  檢視以確認。  
 
 ## <a name="next-steps"></a>後續步驟
-如需 SQL Server big data cluster 和相關案例的詳細資訊, [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)請參閱。
+如需 SQL Server 巨量資料叢集和相關案例的詳細資訊，請參閱 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)。

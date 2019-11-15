@@ -1,46 +1,47 @@
 ---
-title: Python 教學課程:定型模型 (線性回歸)
-description: 在本教學課程中, 您將在 SQL Server Machine Learning 服務中使用 Python 和線性回歸, 以預測 ski 租用的數目。 您將以 Python 訓練線性回歸模型。
+title: Python 教學課程：定型模型
+description: 在本教學課程中，您將在 SQL Server 機器學習服務中使用 Python 和線性迴歸來預測滑雪工具租用的數目。 您將使用 Python 來定型線性迴歸模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30f390681dc63d6de9a95e805b6cc8f273b2b8d7
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: e5f83fe37890c997865c44198cbe30bc13cdea4e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242546"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727052"
 ---
-# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教學課程:在 SQL Server Machine Learning 服務中訓練線性回歸模型
+# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教學課程：在 SQL Server 機器學習服務中定型線性迴歸模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在這四部分教學課程系列的第三部分中, 您將以 Python 訓練線性回歸模型。 在此系列的下一個部分中, 您將會在具有 Machine Learning 服務的 SQL Server 資料庫中部署此模型。
+在這個教學課程系列的第三部分 (總共四個部分) 中， 您將使用 Python 來定型線性迴歸模型。 在本系列的下一部分中，您將使用機器學習服務在 SQL Server 資料庫中部署此模型。
 
-在本文中，您將了解如何：
+在本文中，您將學會如何：
 
 > [!div class="checklist"]
-> * 訓練線性回歸模型
-> * 使用線性回歸模型進行預測
+> * 定型線性迴歸模型
+> * 使用線性迴歸模型進行預測
 
-在[第一部](python-ski-rental-linear-regression.md)中, 您已瞭解如何還原範例資料庫。
+在[第一部分](python-ski-rental-linear-regression.md)，您已了解如何還原範例資料庫。
 
-在[第二部分](python-ski-rental-linear-regression-prepare-data.md)中, 您已瞭解如何將資料從 SQL Server 載入 python 資料框架, 並以 python 準備資料。
+在[第二部分](python-ski-rental-linear-regression-prepare-data.md)，您已了解如何將資料從 SQL Server 載入到 Python 資料框架，並以 Python 準備資料。
 
-在[第四部分](python-ski-rental-linear-regression-deploy-model.md)中, 您將瞭解如何將模型儲存至 SQL Server, 然後從您在第二部和第三部分所開發的 Python 腳本中建立預存程式。 預存程式將會在 SQL Server 中執行, 以根據新的資料進行預測。
+在[第四部分](python-ski-rental-linear-regression-deploy-model.md)中，您將了解如何將模型儲存至 SQL Server，然後以您在第二部分和第三部分開發的 Python 指令碼建立預存程序。 預存程序將會在 SQL Server 中執行，以根據新資料進行預測。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-* 本教學課程的第三部分假設您已完成[第一部分](python-ski-rental-linear-regression.md)和其必要條件。
+* 本教學課程的第三部分會假設您已完成[第一部分](python-ski-rental-linear-regression.md)及其必要條件。
 
-## <a name="train-the-model"></a>定型模型
+## <a name="train-the-model"></a>將模型定型
 
-為了進行預測, 您必須找出最能描述資料集內變數之間相依性的函數 (模型)。 這稱為「定型模型」。 訓練資料集會是您在本系列第二部分所建立之 pandas 資料框架**df**的整個資料集子集。
+為了進行預測，您必須找出最能描述資料集內變數之間相依性的函數 (模型)。 這稱為「定型模型」。 定型的資料集會是您在本系列課程第二部分中所建立 pandas 資料框架 **df** 中整個資料集的子集。
 
-您將使用線性回歸演算法來定型模型**lin_model** 。
+您將使用線性迴歸演算法來定型模型 **lin_model**。
 
 ```python
 # Store the variable we'll be predicting on.
@@ -63,7 +64,7 @@ lin_model = LinearRegression()
 lin_model.fit(train[columns], train[target])
 ```
 
-您應該會看到類似下面的結果。
+您應該會看見如下所示的結果。
 
 ```results
 Training set shape: (362, 7)
@@ -72,7 +73,7 @@ Testing set shape: (91, 7)
 
 ## <a name="make-predictions"></a>進行預測
 
-使用 predict 函數來預測使用模型**lin_model**的租用計數。
+使用預測函數以使用 **lin_model** 模型來預測租用次數。
 
 ```python
 # Generate our predictions for the test set.
@@ -97,12 +98,12 @@ Computed error: 3.59831533436e-26
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程系列的第三部分中, 您已完成下列步驟:
+在本教學課程系列的第三部分中，您已完成下列步驟：
 
-* 訓練線性回歸模型
-* 使用線性回歸模型進行預測
+* 定型線性迴歸模型
+* 使用線性迴歸模型進行預測
 
-若要部署您已建立的機器學習模型, 請遵循本教學課程系列的第四部分:
+若要部署您已建立的機器學習模型，請遵循本教學課程系列的第四部分：
 
 > [!div class="nextstepaction"]
-> [Python 教學課程:部署機器學習模型](python-ski-rental-linear-regression-deploy-model.md)
+> [Python 教學課程：部署機器學習模型](python-ski-rental-linear-regression-deploy-model.md)

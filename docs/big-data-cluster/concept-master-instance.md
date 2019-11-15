@@ -1,7 +1,7 @@
 ---
 title: 什麼是主要執行個體？
 titleSuffix: SQL Server big data clusters
-description: 本文描述中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的 SQL Server 主要實例。
+description: 本文說明 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]中的 SQL Server 主要執行個體。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652270"
@@ -20,11 +20,11 @@ ms.locfileid: "69652270"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明 SQL Server 2019 的海量資料叢集中, *SQL Server 主要實例*的角色。 主要實例是在大型資料叢集中執行的 SQL Server 實例, 用來管理連線能力、向外延展查詢、中繼資料和使用者資料庫, 以及機器學習服務。
+本文說明 SQL Server 2019 巨量資料叢集中的「SQL Server 主要執行個體」  角色。 主要執行個體是在巨量資料叢集中執行的 SQL Server 執行個體，可管理連線能力、向外延展查詢、中繼資料與使用者資料庫，以及機器學習服務。
 
 SQL Server 主要執行個體提供下列功能：
 
-## <a name="connectivity"></a>連線能力
+## <a name="connectivity"></a>連接性
 
 SQL Server 主要執行個體為叢集提供可從外部存取的 TDS 端點。 您可以將應用程式或 SQL Server 工具 (例如 Azure Data Studio 或 SQL Server Management Studio) 連線到此端點，就像其他 SQL Server 執行個體一樣。
 
@@ -51,9 +51,9 @@ SQL Server 機器學習服務是資料庫引擎的附加元件功能，可用於
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>巨量資料叢集中的機器學習服務優點
 
-SQL Server 2019 可讓您輕鬆地將巨量資料聯結到維度資料 (通常儲存在企業資料庫中)。 當巨量資料不只是由組織的部分單位掌控，還包含在報表、儀表板和應用程式裡時，將可大幅提升價值。 同時，資料科學家可以繼續使用 Spark/HDFS 生態系統工具，並輕鬆即時地存取 SQL Server 主要執行個體中的資料，以及可「透過」SQL Server 主要執行個體存取之外部資料來源中的資料。
+SQL Server 2019 可讓您輕鬆地將巨量資料聯結到維度資料 (通常儲存在企業資料庫中)。 當巨量資料不只是由組織的部分單位掌控，還包含在報表、儀表板和應用程式裡時，將可大幅提升價值。 同時，資料科學家可以繼續使用 Spark/HDFS 生態系統工具，並輕鬆即時地存取 SQL Server 主要執行個體中的資料，以及可「透過」  SQL Server 主要執行個體存取之外部資料來源中的資料。
 
-在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]中, 您可以使用企業資料 lake 來執行更多工作。 SQL Server 開發人員和分析師可以：
+藉由 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]，您可以使用企業資料湖來執行更多工作。 SQL Server 開發人員和分析師可以：
 
 * 建置從企業資料湖取用資料的應用程式。
 * 透過 Transact-SQL 查詢的所有資料去推論。
@@ -67,7 +67,7 @@ SQL Server 2019 可讓您輕鬆地將巨量資料聯結到維度資料 (通常�
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入瞭解[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], 請參閱下列資源:
+若要深入了解 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，請參閱下列資源：
 
-- [什麼是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
-- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) \(英文\)

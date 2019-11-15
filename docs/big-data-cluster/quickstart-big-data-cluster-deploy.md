@@ -1,7 +1,7 @@
 ---
 title: 使用 Python 指令碼進行部署
-titleSuffix: SQL Server big data clusters
-description: 了解如何使用部署指令碼，在 Azure Kubernetes Service (AKS) 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (預覽)。
+titleSuffix: SQL Server Big Data Clusters
+description: 了解如何使用部署指令碼在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531934"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706352"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>使用 Python 指令碼在 Azure Kubernetes Service (AKS) 上部署 SQL Server 巨量資料叢集
 
@@ -80,8 +80,6 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **叢集名稱** | AKS 叢集和巨量資料叢集的名稱。 您巨量資料叢集的名稱只能由小寫英數字元組成，且不能有空格。 (預設為 **sqlbigdata**)。 |
    | **密碼** | 控制器、HDFS/Spark 閘道和主要執行個體的密碼 (預設為 **MySQLBigData2019**)。 |
    | **使用者名稱** | 控制器使用者的使用者名稱 (預設：**admin**)。 |
-
-SQL Server 2019 巨量資料叢集早期採用者計畫中的參與者需要下列參數：**Docker 使用者名稱**和 **Docker 密碼**。 自 CTP 3.2 開始不再需要它們。
 
    > [!IMPORTANT]
    > 預設的 **Standard_L8s** 機器大小可能無法在每個 Azure 區域中使用。 如果您選擇不同的機器大小，請確定可在叢集中節點之間連結的磁碟總數大於或等於 24。 叢集中的每個持續性磁碟區宣告，都需要連結的磁碟。 目前，巨量資料叢集需要 24 個持續性磁碟區宣告。 例如，[Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) 機器大小支援 32 個連結的磁碟，因此您可以使用此機器大小的單一節點來評估巨量資料叢集。

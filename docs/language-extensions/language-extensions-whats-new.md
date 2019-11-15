@@ -1,22 +1,22 @@
 ---
-title: 語言延伸模組的新功能
-titleSuffix: SQL Server Language Extensions
-description: 了解 SQL Server 2019 語言延伸模組的新功能。
+title: SQL Server 語言延伸模組的新功能
+titleSuffix: ''
+description: 了解 SQL Server 語言延伸模組的新功能。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13a6a0181297fcb05274ba4be726c4e10a445064
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3bcf60c390b06695c4913bd1347045b807c1ae9d
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589012"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658807"
 ---
-# <a name="what-new-in-sql-server-language-extensions"></a>SQL Server 語言延伸模組的新功能
+# <a name="whats-new-in-sql-server-language-extensions"></a>SQL Server 語言延伸模組的新功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 當我們繼續擴充、延伸並加深外部語言與資料平台之間的整合時，會將[語言延伸模組](language-extensions-overview.md)功能新增至每個版本中的 SQL Server。 

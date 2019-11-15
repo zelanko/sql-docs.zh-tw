@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653280"
@@ -20,12 +20,12 @@ ms.locfileid: "69653280"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程說明如何使用腳本, 將範例資料載入中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 文件中的許多其他教學課程都使用此範例資料。
+本教學課程說明如何使用指令碼將範例資料載入至 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 文件中的許多其他教學課程都使用此範例資料。
 
 > [!TIP]
-> 您可以[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]在[sql server 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)GitHub 存放庫中找到的其他範例。 這些範例位於 **sql-server-samples/samples/features/sql-big-data-cluster/** 路徑中。
+> 您可以在 [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 存放庫中找到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的其他範例。 這些範例位於 **sql-server-samples/samples/features/sql-big-data-cluster/** 路徑中。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - [已部署的巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)
@@ -61,7 +61,7 @@ ms.locfileid: "69653280"
 
 1. 啟動程序指令碼需要巨量資料叢集的下列位置參數：
 
-   | 參數 | 描述 |
+   | 參數 | Description |
    |---|---|
    | <CLUSTER_NAMESPACE> | 您為巨量資料叢集提供的名稱。 |
    | <SQL_MASTER_IP> | 主要執行個體的 IP 位址。 |
@@ -97,7 +97,7 @@ ms.locfileid: "69653280"
 
 1. 啟動程序指令碼需要巨量資料叢集的下列位置參數：
 
-   | 參數 | 描述 |
+   | 參數 | Description |
    |---|---|
    | <CLUSTER_NAMESPACE> | 您為巨量資料叢集提供的名稱。 |
    | <SQL_MASTER_IP> | 主要執行個體的 IP 位址。 |

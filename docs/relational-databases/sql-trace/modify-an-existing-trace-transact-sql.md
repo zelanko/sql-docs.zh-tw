@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b381b8a980d1f50802d024ce377a7de0bfbc6e7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909454"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632990"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改現有的追蹤 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "72909454"
   
 2.  若要修改追蹤事件，請執行 **sp_trace_setevent** 並利用參數指定要做的變更。 這些參數依序排列如下：  
 
-    -   **@traceid** (追蹤識別碼)  
+    -   **\@traceid** (追蹤識別碼)  
   
-    -   **@eventid** (事件識別碼)  
+    -   **\@eventid** (事件識別碼)  
   
-    -   **@columnid** (資料行識別碼)  
+    -   **\@columnid** (資料行識別碼)  
   
-    -   **@on** (ON)  
+    -   **\@on** (開啟)  
   
-     在修改 **@on** 參數時，請記住此參數與 **@columnid** 參數的互動：  
+     當您修改 **\@on**參數時，請記住此參數與 **\@columnid** 參數的互動：  
   
     |ON|資料行識別碼|結果|  
     |--------|---------------|------------|  

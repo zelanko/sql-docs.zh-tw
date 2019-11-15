@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0482182c9720054a85dfd21c264e0acde939b5b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974286"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142781"
 ---
 # <a name="best-practices-with-query-store"></a>使用查詢存放區的最佳做法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- [資料排清間隔 (分鐘)]  ：可定義要將所收集執行階段統計資料保存到磁碟的頻率 (以秒為單位)。 預設值為 900 秒，即 15 分鐘。 如果您的工作負載不會產生大量不同的查詢與計劃，或您可以在資料庫關閉之前承受較長的資料保存時間，請考慮使用較高的值。
+ [資料排清間隔 (分鐘)]  ：它定義將所收集執行階段統計資料保存到磁碟的頻率。 在圖形化使用者介面 (GUI) 中是以分鐘表示，但在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中則是以秒表示。 預設值為 900 秒，在圖形化使用者介面即 15 分鐘。 如果您的工作負載不會產生大量不同的查詢與計劃，或您可以在資料庫關閉之前承受較長的資料保存時間，請考慮使用較高的值。
  
 > [!NOTE]
 > 您可以使用追蹤旗標 7745，防止查詢存放區在發生容錯移轉或關機命令時將資料寫入磁碟。 如需詳細資訊，請參閱[＜在任務關鍵性伺服器上使用追蹤旗標來改善災害復原＞](#Recovery)一節。
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- [統計資料收集間隔]  ：可定義所收集執行階段統計資料的資料粒度層級。 預設值是 60 分鐘。 如果您需要更精細的資料粒度或使用較短時間來偵測與解決問題，請考慮使用較低的值。 但請注意，它會直接影響查詢存放區資料的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 為 [統計資料收集間隔]  設定不同的值：  
+ [統計資料收集間隔]  ：定義所收集執行階段統計資料的資料粒度層級 (以分鐘表示)。 預設值是 60 分鐘。 如果您需要更精細的資料粒度或使用較短時間來偵測與解決問題，請考慮使用較低的值。 但請注意，它會直接影響查詢存放區資料的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 為 [統計資料收集間隔]  設定不同的值：  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- [過時查詢臨界值 (天數)]  ：以時間為基礎的清除原則，可控制保存的執行階段統計資料和非使用中查詢的保留期限。 根據預設，查詢存放區設定為保留資料 30 天，但對您的案例來說，可能並不需要這麼久。  
+ [過時查詢臨界值 (天數)]  ：以時間為基礎的清除原則，可控制所保存執行階段統計資料和非作用中查詢的保留期限 (以天表示)。 根據預設，查詢存放區設定為保留資料 30 天，但對您的案例來說，可能並不需要這麼久。  
   
  請避免保留您不打算使用的歷史資料。 這個做法可降低變更為唯讀狀態的機率。 您也可以更輕鬆預測出查詢存放區資料大小及偵測/解決問題的時間。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或下列指令碼來設定以時間為基礎的清除原則：  
   
@@ -180,7 +180,7 @@ SET QUERY_STORE = ON
 ## <a name="start-with-query-performance-troubleshooting"></a>開始針對查詢效能進行疑難排解  
  查詢存放區的疑難排解工作流程很簡單，如下圖所示：  
   
- ![針對查詢效能進行疑難排解](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
+ ![查詢存放區疑難排解](../../relational-databases/performance/media/query-store-troubleshooting.png "query-store-troubleshooting")  
   
  如上節所述，使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 啟用查詢存放區，或執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
@@ -220,7 +220,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   如果查詢執行時有多個計劃，且最後一個計劃明顯比前一個計劃差，則您可以使用計劃強制機制來強制執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試在最佳化工具中強制執行計劃。 如果計劃強制失敗，會引發 XEvent，系統會指示最佳化工具以一般方式最佳化。
   
-       ![查詢存放區強制執行計劃](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
+       ![查詢存放區強制執行計畫](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
        > [!NOTE]
        > 上一個圖形針對特定查詢計劃可能具有不同形狀，每個可能狀態的意義如下：<br />  
@@ -235,7 +235,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 
 -   您可能會推斷查詢遺漏最佳執行所需的索引。 此資訊會顯示於查詢執行計畫內。 建立遺漏的索引，並使用查詢存放區檢查查詢效能。  
   
-       ![查詢存放區顯示計劃](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
+       ![查詢存放區顯示計畫](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")
   
  如果您在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上執行您的工作負載，請註冊 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 索引建議程式以自動接收索引建議。
   

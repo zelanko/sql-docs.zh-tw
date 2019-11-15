@@ -18,12 +18,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a133f41fb429a2cfe910020e1fefb768436888c4
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142793"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632939"
 ---
 # <a name="compatibility-certification"></a>相容性認證
 
@@ -47,24 +47,31 @@ ms.locfileid: "73142793"
 
 -  在與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行為相關的情況下，任何變更都表示需要重新認證應用程式以確保正確。 不過，[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)設定提供與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的回溯相容性，其僅適用於指定的資料庫而非整部伺服器。 保持資料庫相容性層級的一致性，可確保現有應用程式查詢會在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 升級前後繼續顯示相同的行為。 如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行為和相容性層級的詳細資訊，請參閱[使用相容性層級以提供回溯相容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
 
--  在與效能相關的情況下，由於查詢最佳化工具的改善會隨著每個版本引進，所以可能會在不同 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本之間遇到查詢計畫的差異。 如果存在可能會對指定查詢或工作負載造成不利的變更，則升級範圍中的查詢計畫差異通常會成為風險。 反過來說，這項風險也是重新進行憑證的動機，但可能會延遲升級，並造成生命週期和支援方面的挑戰。 
-   將查詢最佳化工具改善管制為新版本預設相容性層級的原因是為了降低升級風險。 相容性憑證包含**查詢計畫圖形保護**：在升級 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 後立即維護資料庫相容性層級的概念，表示用於在新版本中建立查詢計畫的查詢最佳化模型和升級之前一樣，且查詢計畫不應變更。 
+-  在與效能相關的情況下，由於查詢最佳化工具的改善會隨著每個版本引進，所以可能會在不同 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本之間遇到查詢計畫的差異。 當有某些變更可能對指定的查詢或工作負載造成不利的可能性時，升級範圍中的查詢計劃差異通常會成為風險。 反過來說，這項風險也是重新進行憑證的動機，但可能會延遲升級，並造成生命週期和支援方面的挑戰。 
+   之所以將「查詢最佳化工具」改善限制在新版本預設相容性層級 (換句話說，即可供任何新版本使用的最高相容性層級)，是為了降低升級風險。 相容性憑證包含**查詢計劃圖形保護**：在升級 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 後立即將資料庫相容性層級維持原狀的概念，可解釋為在新版本中使用與升級前相同的查詢最佳化模型，且查詢計劃圖形不應變更。 
+   如需詳細資訊，請參閱本文的[為何使用查詢計劃圖形？](#queryplan_shape)一節。
    
-   > [!NOTE]
-   > **查詢計畫圖形**代表組成查詢計畫之各種運算子的視覺表示方式。 這包括例如搜尋、掃描、聯結和排序等運算子，以及它們之間表示資料流程和作業順序的連接。 查詢計畫圖形由查詢最佳化工具所決定。 如需詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)。
+如需有關相容性層級的詳細資訊，請參閱[使用相容性層級以提供回溯相容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
    
-   如需詳細資訊，請參閱[使用相容性層級以提供回溯相容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
-   
-只要應用程式不需要使用僅限較高資料庫相容性層級的增強功能，即為升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 並維護先前資料庫相容性層級的有效方法，不需要重新認證應用程式。 如需詳細資訊，請參閱本文稍後的[相容性層級和資料庫引擎升級](#compatibility-levels-and-database-engine-upgrades)。
+只要應用程式不需要利用僅供較高資料庫相容性層級使用的增強功能，便是一個升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 並維護先前資料庫相容性層級的有效方法，而無須重新認證應用程式。 如需詳細資訊，請參閱本文稍後的[相容性層級和資料庫引擎升級](#compatibility-levels-and-database-engine-upgrades)。
 
-若要進行新的開發工作，或是現有的應用程式需要使用新功能 (例如[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)以及某些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)])，請規劃將資料庫相容性層級升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新層級，並確認您的應用程式適用於該相容性層級。 如需升級資料庫相容性層級的詳細資料，請參閱[升級資料庫相容性層級的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)。
+若要進行新的開發工作，或是現有的應用程式需要使用新功能 (例如[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)以及某些新的 [!INCLUDE[tsql](../../includes/tsql-md.md)])，請規劃將資料庫相容性層級升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新層級，並確認您的應用程式適用於該相容性層級。 如需有關升級資料庫相容性層級的詳細資訊，請參閱[升級資料庫相容性層級的最佳做法](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)。
+   
+### <a name="queryplan_shape"></a> 為何使用查詢計劃圖形？      
+查詢計劃圖形係指組成查詢計劃之各種運算子的視覺表示方式。 這包括搜尋、掃描、聯結和排序等運算子，以及它們之間表示資料流程與必須執行以產生所需結果集之作業順序的連接。 查詢計畫圖形由查詢最佳化工具所決定。
 
+若要在升級期間維持穩定的查詢效能，其中一個基本目標就是確保使用相同的查詢計劃圖形。 達成此目標的做法是，不要在升級後立即變更資料庫相容性層級，即使基礎 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有不同的版本也一樣。 如果查詢執行生態系統中沒有任何其他變更 (例如可用資源方面或基礎資料中之資料散發方面的重大變更)，則查詢效能應該維持不變。 
+
+不過，保留查詢計劃圖形並非唯一在升級後可能影響效能的因素。 如果您將資料庫移至較新的 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 並也進行環境變更，則即使查詢計劃在不同版本間保留相同圖形，也可能引進將對查詢效能有立即影響的因素。 這些環境變更可能包括新 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 具有較多或較少可用的記憶體和 CPU 資源、伺服器或資料庫設定選項變更，或是影響查詢計劃建立方式的資料散發變更。 這就是為什麼必須瞭解維持資料庫相容性層級可防止查詢計劃**圖形**變更，但無法防護影響查詢效能的其他環境層面，其中有些是使用者起始的變更。
+
+如需詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)。
+   
 ## <a name="compatibility-certification-benefits"></a>相容性憑證的優點
 使用相容性方法 (而不是命名版本方法) 的資料庫憑證，有幾個立即優點：
 
 -  **將應用程式憑證從平台分離**。 由於其共用 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]，因此對於只需要執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢的應用程式，不需要維護 Azure 和內部部署的個別憑證流程。
 -  由於可在資料庫平台現代化的期間將應用程式從資料庫平台層升級週期分開，以減少中斷並改善變更管理，因此可以**降低升級風險**。
--  **在不變更程式碼的情況下升級**。 藉由保留與來源系統相同的相容性層級，在不需要變更程式碼的情況下即可升級至新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]，且在應用程式需要利用僅在較高資料庫相容性層級中可用的增強功能之前，不需要立即重新認證。
+-  **在不變更程式碼的情況下升級**。 藉由保留與來源系統相同的相容性層級，在不需變更程式碼的情況下即可升級至新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]，且不需立即重新認證，直到應用程式需要利用僅供較高資料庫相容性層級使用的增強功能時，才需重新認證。
 - 使用不受資料庫相容性層級所管制的增強功能，不需要變更應用程式即可**改善管理能力和擴充性**。 例如，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中這些包含： 
   - 豐富的監視和疑難排解改善，以及新的[系統動態管理檢視](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)、[擴充事件](../../relational-databases/extended-events/extended-events.md)與[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)。 
   - 使用[自動軟體 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa) 改善的擴充性。

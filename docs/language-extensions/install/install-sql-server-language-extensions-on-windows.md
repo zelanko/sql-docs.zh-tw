@@ -1,26 +1,26 @@
 ---
 title: 在 Windows 上安裝 SQL Server 語言延伸模組
-titleSuffix: SQL Server Language Extensions
-description: Windows 中適用於 SQL Server 2019 的語言延伸模組安裝步驟。
+titleSuffix: ''
+description: 了解如何在 Windows 上安裝 SQL Server 語言延伸模組。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc9baf6f5360c82ec27a3c243b840b2d38ed1d56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589062"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658840"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>在 Windows 上安裝 SQL Server 語言延伸模組
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-從 SQL Server 2019 開始，提供了語言延伸模組與 Java 支援。 此文章說明如何透過執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈來安裝語言延伸模組元件。
+了解如何透過執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈，在 SQL Server 上安裝語言延伸模組元件。
 
 > [!NOTE]
 > 此文章適用於在 Windows 上安裝 SQL Server 語言延伸模組。 針對 Linux，請參閱[在 Linux 上安裝 SQL Server 2019 語言延伸模組 (Java)](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)
@@ -61,11 +61,8 @@ ms.locfileid: "73589062"
     
 ## <a name="get-the-installation-media"></a>取得安裝媒體
 
-您可以在 [SQL Server 2019 安裝網站](https://www.microsoft.com/sql-server/sql-server-2019#Install)找到 SQL Server 2019 的預覽版本。
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## <a name="run-setup"></a>執行安裝程式
 
 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。

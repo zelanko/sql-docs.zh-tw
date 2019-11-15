@@ -15,12 +15,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bed5524bbc7326357200841fd0d6a4045566a902
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: a445da2fe9474fe5215edf5aa50d56dc252a812d
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713266"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632726"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "71713266"
 >  雖然加密是維護安全性的寶貴工具，但是不應該將它用於所有的資料或連接。 當您決定是否要實作加密時，請考慮使用者將如何存取資料。 如果使用者透過公用網路存取資料，可能需要資料加密來提高安全性。 但是，如果所有的存取都與安全的內部網路組態有關，則可能不需要加密。 每次使用加密時，都應該包含密碼、金鑰和憑證的維護策略。  
   
 > [!NOTE]  
->  傳輸層安全性 (TSL1.2) 的最新相關資訊位於 [Microsoft SQL Server 的 TLS 1.2 支援](https://support.microsoft.com/kb/3135244)。  
+>  「傳輸層安全性」(TSL1.2) 的最新相關資訊位於 [Microsoft SQL Server 的 TLS 1.2 支援](https://support.microsoft.com/kb/3135244)。  
 
 您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中針對連接、資料和預存程序使用加密。 下列主題包含有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中加密的詳細資訊。  
 

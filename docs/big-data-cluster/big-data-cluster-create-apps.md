@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532516"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706698"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>如何：在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署應用程式
 
@@ -26,7 +26,7 @@ ms.locfileid: "73532516"
 
 - 用來管理叢集和應用程式的單一命令列公用程式。
 - 簡化的應用程式部署，同時透過規格檔案提供更細微的控制。
-- 支援裝載其他應用程式類型：SSIS 和 MLeap (CTP 2.3 中的新功能)。
+- 支援裝載其他應用程式類型：SSIS 和 MLeap。
 - 管理應用程式部署的 [Visual Studio Code 延伸模組](app-deployment-extension.md)。
 
 使用 `azdata` 命令列公用程式來部署和管理應用程式。 本文提供從命令列部署應用程式的範例。 若要了解如何在 Visual Studio Code 中使用此功能，請參閱 [Visual Studio Code 延伸模組](app-deployment-extension.md)。
@@ -43,7 +43,7 @@ ms.locfileid: "73532516"
 
 ## <a name="capabilities"></a>Capabilities
 
-在 SQL Server 2019 (預覽) 中，您可以建立、刪除、描述、初始化、執行列出及更新您的應用程式。 下表描述您可以搭配 **azdata** 使用的應用程式部署命令。
+在 SQL Server 2019 中，您可以建立、刪除、描述、初始化、列出執行及更新您的應用程式。 下表描述您可以搭配 **azdata** 使用的應用程式部署命令。
 
 |命令 |Description |
 |:---|:---|

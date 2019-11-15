@@ -1,7 +1,7 @@
 ---
-title: 建立和執行簡單的 R 腳本
+title: 快速入門：建立 R 指令碼
 titleSuffix: SQL Server Machine Learning Services
-description: 在具有 SQL Server Machine Learning 服務的 SQL Server 實例中，建立並執行簡單的 R 腳本。
+description: 使用 SQL Server 機器學習服務，在 SQL Server 執行個體中建立及執行簡單的 R 指令碼。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,33 +9,34 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e49b01d3c3a4ac743d6614d66cc7864aee946460
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: 5a8e2779e930671faa9fa3ab94a7384ab1bdca83
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006037"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726992"
 ---
-# <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server Machine Learning 服務來建立和執行簡單的 R 腳本
+# <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入門：使用 SQL Server 機器學習服務建立及執行簡單的 R 指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入門中，您將使用[SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)，建立並執行一組簡單的 R 腳本。 您將瞭解如何在預存程式[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)中包裝語式正確的 R 腳本，並在 SQL Server 實例中執行腳本。
+在本快速入門中，您將使用 [SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)來建立和執行一組簡單的 R 指令碼。 您將了解如何將格式正確的 R 指令碼包裝在預存程式 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中，並在 SQL Server 執行個體中執行指令碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-- 本快速入門需要使用已安裝 R 語言的[SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)，來存取 SQL Server 的實例。
+- 本快速入門需使用已安裝 R 語言的 [SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md)來存取 SQL Server 的執行個體。
 
-  您的 SQL Server 實例可以位於 Azure 虛擬機器或內部部署中。 請注意，預設會停用外部腳本功能，因此您可能需要[啟用外部腳本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)，並在開始之前確認**SQL Server Launchpad 服務**正在執行。
+  您的 SQL Server 執行個體可以位於 Azure 虛擬機器或內部部署中。 請注意，外部指令碼功能預設為停用，因此可能需要[啟用外部指令碼](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)，並在開始之前確認 **SQL Server Launchpad 服務**正在執行。
 
-- 您也需要工具來執行包含 R 腳本的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些腳本，只要它可以連接到 SQL Server 實例，並執行 T-SQL 查詢或預存程式即可。 本快速入門使用[SQL Server Management Studio （SSMS）](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+- 您也需要工具來執行包含 R 指令碼的 SQL 查詢。 您可以使用任何資料庫管理或查詢工具來執行這些指令碼，只要該工具可以連線到 SQL Server 執行個體，並執行 T-SQL 查詢或預存程序即可。 本快速入門使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
 
-## <a name="run-a-simple-script"></a>執行簡單的腳本
+## <a name="run-a-simple-script"></a>執行簡單的指令碼
 
-若要執行 R 腳本，您會將它當做引數傳遞至系統預存程式[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
-這個系統預存程式會在 SQL Server 內容中啟動 R 執行時間、將資料傳遞至 R、安全地管理 R 使用者會話，並將任何結果傳回用戶端。
+若要執行 R 指令碼，請將它當做引數傳遞至系統預存程式，[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+此系統預存程序會在 SQL Server 內容中啟動 R 執行階段、將資料傳遞到 R、安全地管理 R 使用者工作階段，並將任何結果傳回用戶端。
 
-在下列步驟中，您將在 SQL Server 實例中執行此範例 R 腳本：
+在下列步驟中，您將在 SQL Server 執行個體中執行此範例 R 指令碼：
 
 ```r
 a <- 1
@@ -45,11 +46,11 @@ d <- a*b
 print(c(c, d))
 ```
 
-1. 開啟**SQL Server Management Studio** ，並連接到您的 SQL Server 實例。
+1. 開啟 **SQL Server Management Studio** 並連線至 SQL Server 執行個體。
 
-1. 將完整的 R 腳本傳遞至 @no__t 0 預存程式。
+1. 將完整的 R 指令碼傳遞至 `sp_execute_external_script` 預存程序。
 
-   腳本會透過 `@script` 引數傳遞。 @No__t-0 引數內的所有專案都必須是有效的 R 程式碼。
+   指令碼會透過 `@script` 引數傳遞。 `@script` 引數內的所有一切都必須是有效的 R 程式碼。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -62,9 +63,9 @@ print(c(c, d))
     '
     ```
 
-1. 會計算正確的結果，且 R `print` 函數會將結果傳回至 [**訊息**] 視窗。
+1. 系統會計算正確的結果，且 R `print` 函數會將結果傳回至 [訊息]  視窗。
 
-   看起來應該會像這樣。
+   其外觀應該如下所示。
 
     **結果**
 
@@ -73,9 +74,9 @@ print(c(c, d))
     0.5 2
     ```
 
-## <a name="run-a-hello-world-script"></a>執行 Hello World 腳本
+## <a name="run-a-hello-world-script"></a>執行 Hello World 指令碼
 
-典型的範例腳本只會輸出字串 "Hello World"。 執行下列命令。
+典型的範例指令碼只會輸出字串 "Hello World"。 執行下列命令。
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'
@@ -85,26 +86,26 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-@No__t-0 預存程式的輸入包括：
+`sp_execute_external_script` 預存程序的輸入包括：
 
 | | |
 |-|-|
-| @language | 定義要呼叫的語言擴充功能，在此案例中為 R |
-| @script | 定義傳遞至 R 執行時間的命令。 您的整個 R 指令碼必須以 Unicode 文字的格式包含在此引數中。 您也可以將文字新增至**Nvarchar**類型的變數，然後呼叫變數 |
-| @input_data_1 | 查詢所傳回的資料，傳遞至 R 執行時間，會將資料傳回 SQL Server 做為資料框架 |
-|WITH RESULT SETS | 子句會定義 SQL Server 的傳回資料表的架構，並加入 "Hello World" 做為資料行名稱，並將**int**用於資料類型 |
+| @language | 定義要呼叫的語言擴充功能，在本例中為 R |
+| @script | 定義要傳遞至 R 執行階段的命令。 您的整個 R 指令碼必須以 Unicode 文字的格式包含在此引數中。 您也可以將文字新增至 **Nvarchar** 類型的變數，並呼叫該變數 |
+| @input_data_1 | 查詢所傳回的資料會傳遞到 R 執行階段，它會以資料框架的格式將資料傳回 SQL Server |
+|使用結果集 | 子句會定義 SQL Server 傳回資料表的結構描述，然後加入 "Hello World" 做為資料行名稱，並將 **int** 用於資料類型 |
 
 此命令會輸出下列文字：
 
-| 世界您好 |
+| Hello World |
 |-------------|
 | 1 |
 
-## <a name="use-inputs-and-outputs"></a>使用輸入和輸出
+## <a name="use-inputs-and-outputs"></a>使用者輸入和輸出
 
-根據預設，`sp_execute_external_script` 會接受單一資料集做為輸入，這通常是您以有效 SQL 查詢的形式提供。 然後，它會傳回單一 R 資料框架作為輸出。
+在預設情況下，`sp_execute_external_script` 會接受單一資料集做為輸入，這通常由您以有效的 SQL 查詢形式提供。 然後，它會傳回單一 R 資料框架做為輸出。
 
-現在，讓我們使用 `sp_execute_external_script` 的預設輸入和輸出變數：**InputDataSet**和**OutputDataSet**。
+現在，讓我們使用 `sp_execute_external_script` 的預設輸入和輸出變數：**InputDataSet** 和 **OutputDataSet**。
 
 1. 建立測試資料的小型資料表。
 
@@ -122,7 +123,7 @@ GO
     GO
     ```
 
-1. 使用 `SELECT` 語句來查詢資料表。
+1. 使用 `SELECT` 陳述式查詢資料表。
   
     ```sql
     SELECT *
@@ -133,7 +134,7 @@ GO
 
     ![RTestData 資料表的內容](./media/select-rtestdata.png)
 
-1. 執行下列 R 腳本。 它會使用 `SELECT` 語句來抓取資料表中的資料，並透過 R 執行時間傳遞，然後傳回資料做為資料框架。 @No__t-0 子句會定義針對 SQL 傳回之資料表的架構，並加入資料行名稱*NewColName*。
+1. 請執行下列 R 指令碼。 它會使用 `SELECT` 陳述式來擷取資料表中的資料、透過 R 執行階段傳遞，然後傳回資料做為資料框架。 `WITH RESULT SETS` 子句會為 SQL 定義傳回資料表的結構描述，新增資料行名稱 *NewColName*。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -144,9 +145,9 @@ GO
 
     **結果**
 
-    ![從資料表傳回資料的 R 腳本輸出](./media/r-output-rtestdata.png)
+    ![從資料表傳回資料的 R 指令碼輸出](./media/r-output-rtestdata.png)
 
-1. 現在讓我們來變更輸入和輸出變數的名稱。 預設的輸入和輸出變數名稱為**InputDataSet**和**OutputDataSet**，此腳本會將名稱變更為**SQL_in**和**SQL_out**：
+1. 現在讓我們變更輸入和輸出變數的名稱。 預設的輸入和輸出變數名稱是 **InputDataSet** 和 **OutputDataSet**，此指令碼會將名稱變更為 **SQL_in** 和 **SQL_out**：
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -157,14 +158,14 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    請注意，R 會區分大小寫。 R 腳本中使用的輸入和輸出變數（**SQL_out**、 **SQL_in**）必須符合以 `@input_data_1_name` 和 `@output_data_1_name` （包括大小寫）定義的名稱。
+    請注意，R 區分大小寫。 R 指令碼 (**SQL_out** **SQL_in**) 中所使用的輸入和輸出變數必須比對以 `@input_data_1_name` 和 `@output_data_1_name` 定義的名稱，包括大小寫。
 
    > [!TIP]
    > 只有一個輸入資料集可以當作參數傳遞，您只能傳回一個資料集。 不過，您可以從 R 程式碼內部呼叫其他資料集，而且除了資料集之外，您還可以傳回其他類型的輸出。 您也可以將 OUTPUT 關鍵字新增至任何參數，讓它傳回結果。
 
-1. 您也可以使用沒有輸入資料的 R 腳本來產生值（`@input_data_1` 會設定為空白）。
+1. 您也可以在無輸入資料的情況下 (`@input_data_1` 設為空白)，只使用 R 指令碼產生值。
 
-   下列腳本會輸出 "hello" 和 "world" 文字。
+   下列指令碼輸出文字 "hello" 和 "world"。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -178,11 +179,11 @@ GO
 
     **結果**
 
-    ![使用 @script 做為輸入的查詢結果](./media/r-data-generated-output.png)
+    ![使用 @script 做為輸入查詢結果](./media/r-data-generated-output.png)
 
 ## <a name="check-r-version"></a>檢查 R 版本
 
-如果您想要查看 SQL Server 實例中所安裝的 R 版本，請執行下列腳本。
+如果您想要查看在 SQL Server 執行個體中所安裝的 R 版本，請執行下列指令碼。
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'
@@ -190,7 +191,7 @@ EXECUTE sp_execute_external_script @language = N'R'
 GO
 ```
 
-R `print` 函數會將版本傳回至 [**訊息**] 視窗。 在下面的範例輸出中，您可以看到，在此情況下，已安裝 R 版本3.4.4。
+R `print` 函數會將版本傳回到 [訊息]  視窗。 在下方的範例輸出中，您可以看到在此案例中安裝的是 R 3.4.4 版。
 
 **結果**
 
@@ -215,9 +216,9 @@ nickname       Someone to Lean On
 
 ## <a name="list-r-packages"></a>列出 R 套件
 
-Microsoft 提供許多與 SQL Server Machine Learning 服務預先安裝的 R 套件。
+Microsoft 提供一些透過 SQL Server 機器學習服務預先安裝的 R 套件。
 
-若要查看已安裝的 R 套件清單（包括版本、相依性、授權和程式庫路徑資訊），請執行下列腳本。
+若要查看已安裝 R 套件的清單 (包括版本、相依性、授權及程式庫路徑資訊)，請執行下列指令碼。
 
 ```SQL
 EXEC sp_execute_external_script @language = N'R'
@@ -232,7 +233,7 @@ WITH result sets((
             ));
 ```
 
-輸出來自于 R 中的 `installed.packages()`，並以結果集的形式傳回。
+輸出來自 R 中的 `installed.packages()`，並以結果集的形式傳回。
 
 **結果**
 
@@ -240,13 +241,13 @@ WITH result sets((
 
 ## <a name="next-steps"></a>後續步驟
 
-若要瞭解如何在 SQL Server Machine Learning 服務中使用 R 時使用資料結構，請遵循此快速入門：
+若要瞭解如何在 SQL Server 機器學習服務中使用 R 來使用資料結構，請遵循本快速入門：
 
 > [!div class="nextstepaction"]
-> [在 SQL Server Machine Learning 服務中使用 R 處理資料類型和物件](quickstart-r-data-types-and-objects.md)
+> [在 SQL Server 機器學習服務中使用 R 處理資料類型和物件](quickstart-r-data-types-and-objects.md)
 
-如需在 SQL Server Machine Learning 服務中使用 R 的詳細資訊，請參閱下列文章：
+如需在 SQL Server 機器學習服務中使用 R 的詳細資訊，請參閱下列文章：
 
-- [使用 SQL Server Machine Learning 服務撰寫 advanced R 函數](quickstart-r-functions.md)
-- [使用 SQL Server Machine Learning 服務在 R 中建立預測模型並為其評分](quickstart-r-train-score-model.md)
-- [什麼是 SQL Server Machine Learning 服務（Python 和 R）？](../what-is-sql-server-machine-learning.md)
+- [使用 SQL Server 機器學習服務撰寫進階 R 函數](quickstart-r-functions.md)
+- [使用 SQL Server 機器學習服務在 R 中建立預測模型並計算其分數](quickstart-r-train-score-model.md)
+- [什麼是 SQL Server 機器學習服務 (Python 和 R)？](../what-is-sql-server-machine-learning.md)

@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 047dc16f8eeebe2547aef453a9a86e08be714ff6
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 4a0c105891577807920404267aa4a9b7c2613b18
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122978"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240681"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
@@ -68,10 +68,10 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|10.5|100|100、90、80|
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|10|100|100、90、80|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90、80|
-|SQL Server 2000|8|80|80|
+|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|8|80|80|
 
 ## <a name="remarks"></a>Remarks
-針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級設定為 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 新資料庫會設定為這個層級，除非 **model** 資料庫具有更低的相容性層級。 針對從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接或還原的資料庫，資料庫會保留其現有的相容性層級 (如果其至少為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體所允許最低層級)。 移動相容性層級低於 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 所允許層級的資料庫時，會自動將資料庫設定為允許的最低相容性層級。 這同樣適用於系統和使用者資料庫。
+針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的版本相關聯。 新資料庫會設定為這個層級，除非 **model** 資料庫具有更低的相容性層級。 針對從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接或還原的資料庫，資料庫會保留其現有的相容性層級 (如果其至少為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體所允許最低層級)。 移動相容性層級低於 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 所允許層級的資料庫時，會自動將資料庫設定為允許的最低相容性層級。 這同樣適用於系統和使用者資料庫。
 
 附加或還原資料庫以及就地升級之後，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 預期會有下列行為：
 
@@ -90,7 +90,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 > 從 **2018 年 1 月**開始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新建資料庫的預設相容性層級是 140。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不會更新現有資料庫的資料庫相容性層級。 這是由客戶自己決定。        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] 強烈建議客戶規劃升級至最新的相容性層級，以利用最新的查詢最佳化改善項目。        
 
-若要針對整個資料庫利用相容性層級 140，但同時又要加入對應至資料庫相容性層級 110 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的[**基數估計**](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特別是其關鍵字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
+若要針對整個資料庫利用相容性層級 120 或更高版本，但同時又要加入對應至資料庫相容性層級 110 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的[**基數估計**](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特別是其關鍵字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 
 如需如何在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上兩個不同相容性層級之間評估您最重要查詢的效能差異詳細資料，請參閱 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/) (在 Azure SQL Database 中使用相容性層級 130 改善的查詢效能)。 請注意，本文是指相容性層級 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用相同的方法升級至 140。
 
@@ -120,10 +120,10 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="compatibility-levels-and-stored-procedures"></a>相容性層級和預存程序
 當執行預存程序時，它會使用定義所在之資料庫的目前相容性層級。 當資料庫的相容性設定改變時，也會同時自動重新編譯它的所有預存程序。
 
-## <a name="using-compatibility-level-for-backward-compatibility"></a>使用相容性層級來提供回溯相容性
+## <a name="backwardCompat"></a> 使用相容性層級來提供回溯相容性
 [資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)設定提供與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 相關之舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的回溯相容性，以及僅針對指定資料庫的查詢最佳化行為，而不是針對整部伺服器。  
 
-從相容性模式 130 開始，任何會影響功能的新查詢計劃只會刻意新增至新的相容性層級。 這種作法是為了將升級期間因新的查詢最佳化行為而可能引發的查詢計劃變更，所導致效能降低而產生的風險降到最低。      
+從相容性模式 130 開始，任何會影響修正和功能的新查詢計劃只會刻意新增至新的相容性層級。 這種作法是為了將升級期間因新的查詢最佳化行為而可能引發的查詢計劃變更，所導致效能降低而產生的風險降到最低。      
 
 從應用程式的觀點來看，請使用較低相容性層級作為更安全的移轉路徑，協助您解決相關相容性層級設定所控制行為的版本差異。 目標仍然應該在某個時間點升級為最新的相容性層級，以透過受控方式繼承一些新功能，例如[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)。 
 
@@ -146,6 +146,58 @@ SELECT name, compatibility_level FROM sys.databases;
 > - 移除的系統物件。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，已移除 `sp_dboption`。 無論相容性層級為何，陳述式 `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` 都會產生錯誤 2812 (找不到預存程序 'sp_dboption')。
 >
 > 如需重大變更的詳細資訊，請參閱 [SQL Server 2017 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)、[SQL Server 2014 中資料庫引擎功能的重大變更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)，以及 [SQL Server 2012 中資料庫引擎功能的重大變更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)。
+
+## <a name="differences-between-compatibility-levels"></a>相容性層級之間的差異
+針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的版本相關聯，如[此表](#supported-dbcompats)所示。 針對新的開發工作，請務必計畫在最新的資料庫相容性層級上認證應用程式。
+
+但是，資料庫相容性層級也會提供與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的回溯相容性，因為從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 附加或還原的資料庫會保留其現有的相容性層級 (如果相同或高於允許的最低相容性層級)。 這會在本文的[使用相容性層級進行回溯相容性](#backwardCompat)一節中討論。
+
+從資料庫相容性層級 130 開始，任何會影響查詢計劃的新修正和功能，只會新增至可用的最新相容性層級，也稱為預設相容性層級。 這種作法是為了將升級期間因新的查詢最佳化行為而可能引發的查詢計劃變更，所導致效能降低而產生的風險降到最低。 
+
+僅新增至新版本 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設相容性層級上，影響計劃的基本變更是：
+
+1.  **針對舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (追蹤旗標 4199) 所發行的查詢最佳化工具修正，會在較新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設相容性層級中自動啟用**。 **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+
+    例如，當 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 發行時，針對舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以及各自的相容性層級 100 到 120) 發行的所有查詢最佳化工具修正，都會變成針對使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 預設相容性層級 (130) 的資料庫自動啟用。 僅 RTM 後查詢最佳化工具修正程式需要明確啟用。
+    
+    > [!NOTE]
+    > 若要啟用查詢最佳化工具修正程式，您可以使用下列方法：    
+    >
+    > - 在伺服器層級，使用[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。
+    > - 在資料庫層級，使用 [ALTER 資料庫範圍設定 (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 [`QUERY_OPTIMIZER_HOTFIXES`] 選項。
+    > - 在查詢層級，使用 `USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'` [查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
+    
+    之後，當 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 發行時，在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 之後所發行的所有查詢最佳化工具修正程式都會針對使用 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 預設相容性層級 (140) 的資料庫自動啟用。 這是包含所有舊版修正的累計行為。 同樣地，僅 RTM 後查詢最佳化工具修正程式需要明確啟用。  
+    
+    下表摘要說明這個行為：
+    
+    |資料庫引擎 (DE) 版本|資料庫相容性層級|TF 4199|來自所有先前資料庫相容性層級的的 QO 變更|RTM 後 DE 版本的 QO 變更|
+    |----------|----------|---|------------|--------|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 至 120<br /><br /><br />130|關閉<br />開啟<br /><br />關閉<br />開啟|**已停用**<br />已啟用<br /><br />**已啟用**<br />已啟用|已停用<br />已啟用<br /><br />已停用<br />已啟用|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 至 120<br /><br /><br />130<br /><br /><br />140|關閉<br />開啟<br /><br />關閉<br />開啟<br /><br />關閉<br />開啟|**已停用**<br />已啟用<br /><br />**已啟用**<br />已啟用<br /><br />**已啟用**<br />已啟用|已停用<br />已啟用<br /><br />已停用<br />已啟用<br /><br />已停用<br />已啟用|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) 和 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 至 120<br /><br /><br />130 至 140<br /><br /><br />150|關閉<br />開啟<br /><br />關閉<br />開啟<br /><br />關閉<br />開啟|**已停用**<br />已啟用<br /><br />**已啟用**<br />已啟用<br /><br />**已啟用**<br />已啟用|已停用<br />已啟用<br /><br />已停用<br />已啟用<br /><br />已停用<br />已啟用|
+    
+    > [!IMPORTANT]
+    > 追蹤旗標 4199 不會保護處理錯誤結果或存取違規錯誤的「查詢最佳化工具」修正。 那些修正不會被視為選擇性。
+ 
+2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上發行的[基數估計工具](../../relational-databases/performance/cardinality-estimation-sql-server.md)的變更，僅在新版本[!INCLUDE[ssDE](../../includes/ssde-md.md)]的預設相容性層級中啟用**，但無法在先前的相容性層級上使用。 
+
+    例如，當 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 發行時，基數估計工具的變更僅適用於使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 預設相容性層級 (130) 的資料庫。 先前的相容性層級會保留 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前可用的基數估計行為。 
+    
+    之後，當 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 發行時，基數估計程序的較新變更僅適用於使用 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 預設相容性層級 (140) 的資料庫。 資料庫相容性層級 130 保留 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 基數估計行為。
+    
+    下表摘要說明這個行為：
+    
+    |資料庫引擎版本|資料庫相容性層級|新版本 CE 變更|
+    |----------|--------|-------------|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|已停用<br />已啟用|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|已停用<br />已啟用|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|已停用<br />已啟用|
+    
+    <sup>1</sup> 也適用於 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+    
+> [!IMPORTANT]
+> 特定相容性層級之間的其他差異，可在本文的後續章節中取得。
 
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>相容性層級 140 和 150 之間的差異
 本節描述相容性層級 150 所導入的新行為。
@@ -190,11 +242,11 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |批次模式與資料列模式會隨資料行存放區索引而改變：<br /><ul><li>在具有資料行存放區索引的資料表上執行的排序會以資料列模式執行 <li>視窗型函式彙總會以資料列模式 (例如 `LAG` 或 `LEAD`) 運作 <li>使用多個不同子句在資料行存放區資料表上進行的查詢會以資料列模式運作 <li>在 MAXDOP 1 之下執行，或以資料列模式執行的序列計畫</li></ul>| 批次模式與資料列模式會隨資料行存放區索引而改變：<br /><ul><li>在具有資料行存放區索引的表格上進行的排序現在會以批次模式運作 <li>視窗型彙總現在會以批次模式 (例如`LAG` 或 `LEAD`) 運作 <li>使用多個不同子句在資料行存放區資料表上進行的查詢會以批次模式運作 <li>在 MAXDOP 1 下執行的查詢，或以批次模式執行序列計畫</li></ul>|
 |統計資料可以自動更新。 | 自動更新統計資料的邏輯在大型資料表上會更積極。 在實務上，這應該會減少客戶已經看到在查詢上發生效能問題的案例，其中的問題在於新插入的資料列會受到頻繁查詢，但統計資料卻尚未更新以包含那些值。 |
 |追蹤 2371 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中預設為「關閉」。 | [追蹤 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中預設為「開啟」。 追蹤旗標 2371 會告知自動統計資料更新程式，在擁有很多資料列的資料表中，以較小但更聰明的資料列子集方式進行取樣。 <br/> <br/> 其中一項改進是在樣本中包含更多最近插入的資料列。 <br/> <br/> 另一項改進是讓查詢在更新統計資料程序執行時執行，而不是封鎖查詢。 |
-|對於層級 120，統計資料會由*單一*執行緒程序進行取樣。|對於層級 130，統計資料則會由*多*執行緒程序進行取樣。 |
+|對於層級 120，統計資料會由單一執行緒程序進行取樣。|對於層級 130，統計資料則會由多執行緒程序 (平行處理序) 進行取樣。 |
 |其限制為 253 個傳入外部索引鍵。| 指定資料表最多可由 10,000 個傳入外部索引鍵或類似參考進行參考。 相關限制，請參閱 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |
 |允許使用已被取代的 MD2、MD4、MD5、SHA 和 SHA1 雜湊演算法。|只允許使用 SHA2_256 和 SHA2_512 雜湊演算法。|
 ||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 包括在某些資料類型轉換和某些不常見作業中的改善。 如需詳細資料，請參閱[處理某些資料類型和不常見作業的 SQL Server 2016 改進 (機器翻譯)](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
-|STRING_SPLIT 函式無法使用。|STRING_SPLIT 函式適用於相容性層級 130 或以上。 如果您的資料庫相容性層級低於 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將找不到且無法執行 STRING_SPLIT 函式。|
+|`STRING_SPLIT` 函式無法使用。|`STRING_SPLIT` 函式適用於相容性層級 130 或以上。 如果您的資料庫相容性層級低於 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將找不到且無法執行 `STRING_SPLIT` 函式。|
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 較早版本中，追蹤旗標 4199 之下的修正程式現在已經預設啟用。 具備相容性模式 130。 追蹤旗標 4199 將仍然適用於在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之後發行的新查詢最佳化工具修正程式。 若要在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中使用較舊的查詢最佳化工具，您必須選取相容性層級 110。 如需有關追蹤旗標 4199 的詳細資訊，請參閱[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。
 
@@ -204,7 +256,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 
 |相容性層級設定為 110 或更低|相容性層級設定為 120|
 |--------------------------------------------------|-----------------------------------------|
-|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括可建立及最佳化查詢計劃之元件的大幅改善。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 因效能發生問題而要將資料庫相容性層級設定為 110 之前，請先參閱 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Database Engine 的新功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) 主題的＜查詢計劃＞一節提供的建議。|
+|使用舊版的查詢最佳化工具。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括可建立及最佳化查詢計劃之元件的大幅改善。 這個新的查詢最佳化工具功能取決於資料庫相容性層級 120 的使用。 新的資料庫應用程式應該使用資料庫相容性層級 120 加以開發，以便充分利用這些改良功能。 從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉的應用程式應該謹慎測試，以確認良好的效能得以持續或改善。 如果效能降低，您可以將資料庫相容性層級設定為 110 或更低的數字，以便使用舊的查詢最佳化工具方法。<br /><br /> 資料庫相容性層級 120 會使用新的基數估計工具，其經過調整適合於新型資料倉儲和 OLTP 工作負載。 因效能發生問題而要將資料庫相容性層級設定為 110 之前，請先參閱 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Database Engine 的新功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主題的＜查詢計劃＞  一節提供的建議。|
 |在低於 120 的相容性層級中，將**日期**值轉換成字串值時，會忽略語言設定。 請注意，此行為只針對**日期**類型。 請參閱下方＜範例＞一節中的範例 B。|將**日期**值轉換成字串值時，不會忽略語言設定。|
 |`EXCEPT` 子句右邊的遞迴參考會建立無限迴圈。 下方＜範例＞一節中的範例 C 會示範此行為。|`EXCEPT` 子句中的遞迴參考會產生符合 ANSI SQL 標準的錯誤。|
 |遞迴通用資料表運算式 (CTE) 允許複寫資料行名稱。|遞迴 CTE 不允許重複的資料行名稱。|
@@ -263,15 +315,15 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |----------------------------------|-----------------------|
 |130|有待決定。|
 |120|無。|
-|110|WITHIN GROUP、TRY_CONVERT、SEMANTICKEYPHRASETABLE、SEMANTICSIMILARITYDETAILSTABLE、SEMANTICSIMILARITYTABLE|
-|100|CUBE、MERGE、ROLLUP|
-|90|EXTERNAL、PIVOT、UNPIVOT、REVERT、TABLESAMPLE|
+|110|`WITHIN GROUP`, `TRY_CONVERT`, `SEMANTICKEYPHRASETABLE`, `SEMANTICSIMILARITYDETAILSTABLE`, `SEMANTICSIMILARITYTABLE`|
+|100|`CUBE`、`MERGE`、`ROLLUP`|
+|90|`EXTERNAL`, `PIVOT`, `UNPIVOT`, `REVERT`, `TABLESAMPLE`|
 
 在給定的相容性層級中，保留關鍵字包含這個層級或這個層級以下所導入的所有關鍵字。 例如，對於層級 110 的應用程式而言，上表所列出的所有關鍵字都會保留下來。 在較低的相容性層級中，層級 100 的關鍵字仍是有效的物件名稱，但對應於這些關鍵字的層級 110 語言功能則無法使用。
 
 導入之後，關鍵字會維持保留狀態。 例如，相容性層級 90 所導入的保留關鍵字 PIVOT，也會保留在層級 100 和 110 和 120 中。
 
-如果應用程式使用的識別碼是其相容性層級的保留關鍵字，應用程式便會失敗。 若要解決這個問題，請用方括號 ( **[]** ) 或引號 ( **""** ) 來括住識別碼；例如，若要將使用識別碼 **EXTERNAL** 的應用程式升級到相容性層級 90，您可將識別碼改成 **[EXTERNAL]** 或 **"EXTERNAL"** 。
+如果應用程式使用的識別碼是其相容性層級的保留關鍵字，應用程式便會失敗。 若要解決這個問題，請用方括號 ( **[]** ) 或引號 ( **""** ) 來括住識別碼；例如，若要將使用識別碼 `EXTERNAL` 的應用程式升級到相容性層級 90，您可將識別碼改成 `[EXTERNAL]` 或 `"EXTERNAL"`。
 
 如需詳細資訊，請參閱[保留關鍵字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)。
 
@@ -283,7 +335,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 
 ### <a name="a-changing-the-compatibility-level"></a>A. 變更相容性層級
 
-下列範例將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的相容性層級變更為 `110,`[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。
+下列範例將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的相容性層級變更為 110，這是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的預設層級。
 
 ```sql
 ALTER DATABASE AdventureWorks2012
@@ -301,7 +353,7 @@ WHERE name = db_name();
 
 ### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>B. 除非低於相容性層級 120，否則忽略 SET LANGUAGE 陳述式
 
-下列查詢會忽略低於相容性層級 120 以外的 SET LANGUAGE 陳述式。
+下列查詢會忽略低於相容性層級 120 以外的 `SET LANGUAGE` 陳述式。
 
 ```sql
 SET DATEFORMAT dmy;
@@ -355,7 +407,6 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ```
 
 ### <a name="e-variable-assignment---top-level-union-operator"></a>E. 變數指派 - 最上層的 UNION 運算子
-
 在包含最上層 UNION 運算子的陳述式中允許使用變數指派，但是會傳回非預期的結果。 例如在下列陳述式中，會將兩個資料表之聯集中的 `@v` 資料行值指派給 `BusinessEntityID` 區域變數。 就定義來說，如果 SELECT 陳述式傳回多個值，就會將最後傳回的值指派給變數。 在此情況下，便會將最後一個值正確地指派給變數，但是也會傳回 SELECT UNION 陳述式的結果集。
 
 ```sql

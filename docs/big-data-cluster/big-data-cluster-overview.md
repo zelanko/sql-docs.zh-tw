@@ -1,7 +1,7 @@
 ---
 title: 什麼是巨量資料叢集？
 titleSuffix: SQL Server Big Data Clusters
-description: 了解在 Kubernetes 上執行的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (預覽)，並提供關聯式和 HDFS 資料的向外延展選項。
+description: 了解在 Kubernetes 上執行的 SQL Server 巨量資料叢集，並為關聯式資料與 HDFS 資料提供向外延展選項。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532514"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706666"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什麼是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -56,7 +56,7 @@ SQL Server 巨量資料叢集包含可調整的 HDFS「存放集區」  。 這�
 
 管理和監視是透過命令列工具、API、入口網站和動態管理檢視的組合來提供。
 
-您可以使用 Azure Data Studio 在巨量資料叢集上執行各種工作。 這是由新的 **SQL Server 2019 延伸模組 (預覽)** 所提供。 此延伸模組提供：
+您可以使用 Azure Data Studio 在巨量資料叢集上執行各種工作。 這是由新的 **SQL Server 2019 延伸模組**所促成。 此延伸模組提供：
 
 - 常見管理工作的內建程式碼片段。
 - 能夠瀏覽 HDFS、上傳檔案、預覽檔案及建立目錄。

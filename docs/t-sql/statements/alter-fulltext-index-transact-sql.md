@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067527"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049964"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ALTER FULLTEXT INDEX ON table_name
  指定全文檢索索引涵蓋的資料表資料行變更 (更新、刪除或插入)，是否會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散佈到全文檢索索引。 透過 WRITETEXT 和 UPDATETEXT 的資料變更並不會反映在全文檢索索引中，變更追蹤並不會收取這些變更。  
   
 > [!NOTE]  
->  如需有關變更追蹤與 WITH NO POPULATION 之間互動的詳細資訊，請參閱本主題後面的＜備註＞一節。  
+>  如需詳細資訊，請參閱[變更追蹤與 NO POPULATION 參數之間的互動](#change-tracking-no-population)。
   
  MANUAL  
  指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」  )。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON table_name
  使用 TYPE COLUMN 和 LANGUAGE 來搭配 ADD 子句，在 *column_name* 上設定這些屬性。 當新增資料行時，您必須重新擴展資料表的全文檢索索引，針對這個資料行的全文檢索查詢才能運作。  
   
 > [!NOTE]  
->  全文檢索索引是要在加入資料行之後擴展還是從全文檢索索引卸除，將取決於是否啟用變更追蹤及是否指定 WITH NO POPULATION 而定。 如需詳細資訊，請參閱此主題稍後的「備註」。  
+>  全文檢索索引是要在加入資料行之後擴展還是從全文檢索索引卸除，將取決於是否啟用變更追蹤及是否指定 WITH NO POPULATION 而定。 如需詳細資訊，請參閱[變更追蹤與 NO POPULATION 參數之間的互動](#change-tracking-no-population)。
   
  TYPE COLUMN *type_column_name*  
  指定用來保存 **varbinary**、**varbinary(max)** 或 **image** 文件之文件類型的資料表資料行名稱 *type_column_name*。 這個資料行 (稱為類型資料行) 包含使用者提供的副檔名 (.doc、.pdf、.xls 等等)。 類型資料行必須屬於下列類型： **char**, **nchar**, **varchar**或 **nvarchar**。  
@@ -138,7 +138,7 @@ ALTER FULLTEXT INDEX ON table_name
  如果既啟用 CHANGE_TRACKING，又指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。 如果啟用 CHANGE_TRACKING，但沒有指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行索引的完整母體擴展。  
   
 > [!NOTE]  
->  如需有關變更追蹤與 WITH NO POPULATION 之間互動的詳細資訊，請參閱本主題後面的＜備註＞一節。  
+>  如需詳細資訊，請參閱[變更追蹤與 NO POPULATION 參數之間的互動](#change-tracking-no-population)。
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -184,7 +184,7 @@ ALTER FULLTEXT INDEX ON table_name
  變更與此索引相關聯的搜尋屬性清單 (如果有的話)。  
   
  OFF  
- 指定沒有任何屬性清單要與全文檢索索引產生關聯。 當您關閉全文檢索索引的搜尋屬性清單 (ALTER FULLTEXT INDEX ...SET SEARCH PROPERTY LIST OFF) 時，便無法在基底資料表上進行屬性搜尋。  
+ 指定沒有任何屬性清單要與全文檢索索引產生關聯。 當您關閉全文檢索索引的搜尋屬性清單SET SEARCH PROPERTY LIST OFF) 時，便無法在基底資料表上進行屬性搜尋。  
   
  根據預設，當您關閉現有的搜尋屬性清單時，會自動重新擴展全文檢索索引。 如果當您在關閉搜尋屬性清單時指定 WITH NO POPULATION，則不會發生自動母體重新擴展。 不過，我們建議您在方便時最終要在這個全文檢索索引執行完整母體擴展。 重新擴展全文檢索索引，會移除每個已卸除之搜尋屬性的屬性特定中繼資料，讓全文檢索索引變得更小、更有效率。  
   
@@ -194,7 +194,7 @@ ALTER FULLTEXT INDEX ON table_name
  若要將搜尋屬性清單加入至全文檢索索引，需要重新擴展索引，以檢索已註冊用於相關聯搜尋屬性清單的搜尋屬性。 如果您在加入搜尋屬性清單時指定 WITH NO POPULATION，則必須適時在索引上執行母體擴展。  
   
 > [!IMPORTANT]  
->  如果全文檢索索引先前與不同的搜尋相關聯，索引必須重建屬性清單，以便讓索引處於一致狀態。 系統會立即截斷並清空索引，直到完整母體擴展執行為止。 如需有關何時變更搜尋屬性清單會導致重建的詳細資訊，請參閱本主題稍後的＜備註＞。  
+>  如果全文檢索索引先前與不同的搜尋相關聯，索引必須重建屬性清單，以便讓索引處於一致狀態。 系統會立即截斷並清空索引，直到完整母體擴展執行為止。 如需詳細資訊，請參閱[變更搜尋屬性清單導致重建索引](#change-search-property-rebuild-index)。 
   
 > [!NOTE]  
 >  您可以將特定的搜尋屬性清單與相同資料庫中的多個全文檢索索引相關聯。  
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  如需搜尋屬性清單的詳細資訊，請參閱[使用搜尋屬性清單搜尋文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>變更追蹤與 NO POPULATION 參數之間的互動  
+## <a name="change-tracking-no-population"></a> 變更追蹤與 NO POPULATION 參數之間的互動  
  全文檢索索引是否會擴展，將取決於是否啟用變更追蹤及是否在 ALTER FULLTEXT INDEX 陳述式中指定 WITH NO POPULATION 而定。 下表摘要列出其互動的結果。  
   
 |變更追蹤|WITH NO POPULATION|結果|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  如需填入全文檢索索引的詳細資訊，請參閱[填入全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。  
   
-## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a>變更搜尋屬性清單導致重建索引  
+## <a name="change-search-property-rebuild-index"></a> 變更搜尋屬性清單導致重建索引  
  第一次全文檢索索引與搜尋屬性清單相關聯時，索引必須重新擴展，以檢索屬性特定的搜尋詞彙。 現有的索引資料不會被截斷。  
   
  但是，如果您將全文檢索索引與不同的屬性清單產生關聯，則會重建索引。 重建會立即截斷全文檢索索引，移除所有現有的資料，而且必須重新擴展索引。 當母體擴展進行時，基底資料表上的全文檢索查詢只會在已由母體擴展編製索引的資料表資料列上進行搜尋。 重新擴展的索引資料會包含新加入搜尋屬性清單已註冊之屬性的中繼資料。  

@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909753"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033001"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連線到資料庫引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "72909753"
 既然您以管理員身分連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您的首要工作之一就是授權其他使用者連接。 您可以建立登入，並授權該登入以使用者身分存取資料庫，來達成此目的。 登入可以是使用 Windows 認證的 Windows 驗證登入，或是 SQL Server 驗證登入，這種登入會將驗證資訊儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，而且與 Windows 認證無關。 可能的話，請盡量使用 Windows 驗證。
 
 > [!TIP]
-> 大部分的組織都有網域使用者，並使用 Windows 驗證。 您可以在電腦上建立其他本機使用者來自行進行實驗。 將透過您的電腦驗證本機使用者，因此網域是電腦名稱。 例如，如果您的電腦命名為 `MyComputer` ，並且建立名為 `Test`的使用者，則使用者的 Windows 描述是 `Mycomputer\Test`。  
+> 大部分的組織都有網域使用者，並使用 Windows 驗證。 您可以在電腦上建立其他本機使用者來自行進行實驗。 將透過您的電腦驗證本機使用者，因此網域是電腦名稱。 例如，如果您的電腦命名為 `MyComputer`，且您建立名為 `Test` 的使用者，則使用者的 Windows 描述是 `Mycomputer\Test`。  
 
 ##### <a name="create-a-windows-authentication-login"></a>建立 Windows 驗證登入 
 

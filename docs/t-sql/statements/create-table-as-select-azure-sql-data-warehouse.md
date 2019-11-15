@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961801"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660786"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -137,6 +137,8 @@ CTAS 需要 *select_criteria* 中所參考任何物件的 `SELECT` 權限。
 
 ## <a name="limitations-and-restrictions"></a>限制事項  
 Azure SQL 資料倉儲目前尚不支援自動建立或自動更新統計資料。  若要讓查詢有最佳效能，請務必在執行 CTAS 之後，以及當資料發生重大變更之後，針對所有資料表的所有資料行來建立統計資料。 如需詳細資訊，請參閱 [CREATE STATISTICS (TRANSACT-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。
+
+排序的叢集資料行存放區索引可以建立在 Azure SQL 資料倉儲支援的任何資料類型的資料行上，但不包括字串資料行。  
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) 對 CTAS 沒有作用。 若要達到類似的行為，請使用 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)。  
  

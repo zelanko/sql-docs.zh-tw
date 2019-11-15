@@ -1,7 +1,7 @@
 ---
 title: 設定 Azure Kubernetes Service
 titleSuffix: SQL Server big data clusters
-description: 瞭解如何設定部署的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Kubernetes Service （AKS）。
+description: 了解如何針對 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署設定 Azure Kubernetes Service (AKS)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
 ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 09/16/2019
 ms.locfileid: "71016893"
@@ -20,7 +20,7 @@ ms.locfileid: "71016893"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何設定部署的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Kubernetes Service （AKS）。
+本文說明如何針對 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署設定 Azure Kubernetes Service (AKS)。
 
 AKS 可讓使用者輕鬆地建立、設定及管理已預先設定 Kubernetes 叢集的虛擬機器叢集，以執行容器化的應用程式。 這可讓您使用自己現有的技能，或是運用大量且不斷成長的社群專業知識，來在 Microsoft Azure 上部署及管理容器型應用程式。
 
@@ -29,7 +29,7 @@ AKS 可讓使用者輕鬆地建立、設定及管理已預先設定 Kubernetes �
 > [!TIP]
 > 您也可以透過單一步驟編寫部署 AKS 和巨量資料叢集的指令碼。 如需詳細資訊，請參閱如何在 [Python 指令碼](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [筆記本](deploy-notebooks.md)中執行此動作。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - [部署 SQL Server 2019 巨量資料工具](deploy-big-data-tools.md)：
    - **Kubectl**
@@ -37,11 +37,11 @@ AKS 可讓使用者輕鬆地建立、設定及管理已預先設定 Kubernetes �
    - **SQL Server 2019 延伸模組**
    - **Azure CLI**
 
-- Kubernetes 伺服器的最低1.13 版本。 針對 AKS，您必須使用 `--kubernetes-version` 參數來指定與預設版本不同的版本。
+- 1\.13 版或更新版本的 Kubernetes 伺服器。 針對 AKS，您必須使用 `--kubernetes-version` 參數來指定與預設版本不同的版本。
 
 - 為確保在 AKS 上驗證基本案例時，部署成功且獲得最佳體驗，您可以使用單一節點或多節點 AKS 叢集，並提供下列資源：
    - 8 個 vCPU (跨所有節點)
-   - 每個 VM 64 GB 的記憶體
+   - 64 GB 的記憶體 (每個 VM)
    - 24 個或更多的已連接磁碟 (跨所有節點)
 
    > [!TIP]
@@ -165,4 +165,4 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
 
 此文章中的步驟已在 AKS 中設定 Kubernetes 叢集。 下一步是在 AKS Kubernetes 叢集上部署 SQL Server 2019 巨量資料叢集。 如需如何部署巨量資料叢集的詳細資訊，請參閱下列文章：
 
-[如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署](deployment-guidance.md)
+[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)

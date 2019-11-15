@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: SQL Server Machine Learning Services （Python 和 R）檔
-summary: 瞭解如何使用 SQL Server Machine Learning 服務來執行關聯式資料的 Python 和 R 腳本。 教學課程、程式碼範例、安裝指南和其他檔會為您示範作法。
+title: SQL Server 機器學習服務 (Python 和 R) 文件
+summary: 了解如何使用 SQL Server 機器學習服務在關聯式資料上執行 Python 和 R 指令碼。 教學課程、程式碼範例、安裝指南和其他文件都會為您示範作法。
 metadata:
-  title: SQL Server Machine Learning Services （Python、R）檔-教學課程、快速入門和安裝指南
-  description: 瞭解如何使用 SQL Server Machine Learning 服務來執行關聯式資料的 Python 和 R 腳本。 教學課程、程式碼範例、安裝指南和其他檔會為您示範作法。
+  title: SQL Server 機器學習服務 (Python、R) 文件 - 教學課程、快速入門和安裝指南
+  description: 了解如何使用 SQL Server 機器學習服務在關聯式資料上執行 Python 和 R 指令碼。 教學課程、程式碼範例、安裝指南和其他文件都會為您示範作法。
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
@@ -12,30 +12,30 @@ metadata:
   ms.date: 09/12/2019
   ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
   ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: zh-TW
   ms.lasthandoff: 09/23/2019
   ms.locfileid: "71199397"
 landingContent:
-- title: 關於 Machine Learning 服務
+- title: 關於機器學習服務
   linkLists:
   - linkListType: overview
     links:
-    - text: 什麼是 SQL Server Machine Learning 服務（Python 和 R）？
+    - text: 什麼是 SQL Server 機器學習服務 (Python 和 R)？
       url: what-is-sql-server-machine-learning.md
   - linkListType: whats-new
     links:
-    - text: Machine Learning 服務有哪些新功能？
+    - text: 機器學習服務的新功能
       url: what-s-new-in-sql-server-machine-learning-services.md
   - linkListType: video
     links:
-    - text: 如何使用 Machine Learning 服務在 SQL Server 中執行 R/Python
+    - text: 如何使用機器學習服務在 SQL Server 中執行 R/Python
       url: https://www.youtube.com/watch?v=ACejZ9optCQ
 - title: 開始使用 Python
   linkLists:
   - linkListType: quickstart
     links:
-    - text: 在 SQL Server 上執行 "Hello world" Python 腳本
+    - text: 在 SQL Server 上執行 "Hello world" Python 指令碼
       url: tutorials/quickstart-python-create-script.md
     - text: 處理輸入和輸出
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
@@ -45,15 +45,15 @@ landingContent:
       url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: 使用線性回歸來預測 ski 出租
+    - text: 使用線性迴歸來預測雪橇租賃
       url: tutorials/python-ski-rental-linear-regression.md
-    - text: 使用 k--表示叢集分類客戶
+    - text: 使用 K-means 叢集將客戶分類
       url: tutorials/python-clustering-model.md
 - title: 開始使用 R
   linkLists:
   - linkListType: quickstart
     links:
-    - text: 在 SQL Server 上執行 "Hello world" R 腳本
+    - text: 在 SQL Server 上執行 "Hello world" R 指令碼
       url: tutorials/quickstart-r-create-script.md
     - text: 處理輸入和輸出
       url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
@@ -65,15 +65,15 @@ landingContent:
     links:
     - text: 在 T-SQL 中使用 R
       url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: 在 R 工具中使用 Machine Learning 服務
+    - text: 在 R 工具中使用機器學習服務
       url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: 安裝 Machine Learning 服務
+- title: 安裝機器學習服務
   linkLists:
   - linkListType: get-started
     links:
-    - text: 在 Windows 上安裝 Machine Learning 服務
+    - text: 在 Windows 上安裝機器學習服務
       url: install/sql-machine-learning-services-windows-install.md
-    - text: 在 Linux 上安裝 Machine Learning 服務
+    - text: 在 Linux 上安裝機器學習服務
       url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
   - linkListType: how-to-guide
     links:
