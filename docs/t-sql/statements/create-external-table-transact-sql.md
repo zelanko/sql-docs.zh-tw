@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882388"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74057658"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "73882388"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\*_ SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 資料<br />倉儲](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -113,7 +113,7 @@ DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外�
 
 FILE_FORMAT = *external_file_format_name* 指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」  記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
+拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
 
 當您不指定或變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。 當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 查詢將會傳回 (部分) 結果，直到超過拒絕閾值為止。 接著它便會失敗並顯示適當的錯誤訊息。
 
@@ -580,7 +580,8 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>概觀：Azure SQL Database
 
-在 Azure SQL Database 中，建立[彈性查詢 (預覽階段)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) 的外部資料表。
+在 Azure SQL Database 中，建立[彈性查詢 (預覽階段)](/azure/sql-database/sql-database-elastic-query-overview/) 的外部資料表。
+
 
 另請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
@@ -755,7 +756,7 @@ column_name <data_type>
     | REJECT_TYPE = value | percentage,  
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
-    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
+    | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
 ```  
@@ -785,7 +786,7 @@ DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外�
 
 FILE_FORMAT = *external_file_format_name* 指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」  記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
+拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
 
 當您不指定或變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。 當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 查詢將會傳回 (部分) 結果，直到超過拒絕閾值為止。 接著它便會失敗並顯示適當的錯誤訊息。
 
@@ -825,7 +826,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentag
 REJECTED_ROW_LOCATION = *Directory Location*
 
 指定外部資料來源中，已拒絕資料列和相應錯誤檔案應寫入的目錄。
-若指定的路徑不存在，PolyBase 會為您建立一個目錄。 會建立名稱為 "_rejectedrows" 的子目錄。"_ " 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料中寫入了兩種類型的檔案，分別是 _reason 檔案與資料檔案。
+若指定的路徑不存在，PolyBase 會為您建立一個目錄。 會建立名稱為 "_rejectedrows" 的子目錄。"_" 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料中寫入了兩種類型的檔案，分別是 _reason 檔案與資料檔案。
 
 原因檔案與資料檔案均具有與 CTAS 陳述式相關的 queryID。 因為資料與原因檔案在不同的檔案中，所以對應的檔案會具有相符尾碼。
 
@@ -1010,7 +1011,7 @@ DATA_SOURCE = *external_data_source_name* 指定包含外部資料位置的外�
 
 FILE_FORMAT = *external_file_format_name* 指定儲存外部資料檔案類型和壓縮方法的外部檔案格式物件名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)。
 
-拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」  記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
+拒絕選項：您可以指定拒絕參數，決定 PolyBase 處理從外部資料來源所擷取「已變更」記錄的方式。 若資料記錄的實際資料類型或資料行數目，與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。
 
 當您不指定或變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。 當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 查詢將會傳回 (部分) 結果，直到超過拒絕閾值為止。 接著它便會失敗並顯示適當的錯誤訊息。
 

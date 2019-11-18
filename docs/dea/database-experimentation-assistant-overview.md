@@ -2,7 +2,7 @@
 title: 資料庫測試助理的總覽
 description: 資料庫測試助理總覽
 ms.custom: seo-lt-2019
-ms.date: 11/05/2019
+ms.date: 11/16/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 7180656f8a4779c43f4c691f583aaaf5fcbf86d0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056577"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127364"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>資料庫測試助理總覽
 
@@ -53,53 +53,59 @@ DEA 分析計量包括：
 
 在必要條件環境架構中，我們建議您將 DEA 安裝*在與 Distributed Replay 控制器相同的電腦上*。 這種作法可避免跨電腦的呼叫，並簡化設定。
 
-### <a name="required-configuration-for-workload-comparison-by-using-dea"></a>使用 DEA 進行工作負載比較所需的設定
+### <a name="required-configuration-for-workload-comparison-using-dea"></a>使用 DEA 進行工作負載比較所需的設定
 
 DEA 會使用 Windows 驗證連接到資料庫伺服器。 請確定執行 DEA 的使用者可以使用 Windows 驗證連接到資料庫伺服器（來源、目標和分析）。
 
-**捕捉設定需求**：
+**捕捉設定需求**
+
+若要捕獲追蹤，必須執行下列動作：
 
 - 執行 DEA 的使用者可以使用 Windows 驗證連接到源資料庫伺服器。
 - 執行 DEA 的使用者在源資料庫伺服器上具有 sysadmin 許可權。
 - 執行源資料庫伺服器的服務帳戶具有追蹤資料夾路徑的寫入權限。
 
-如需詳細資訊，請參閱[CAPTURE 常見問題](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
+如需詳細資訊，請參閱[關於追蹤捕獲的常見問題](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
 
-重新執行設定**需求**： 
+**重新執行設定需求**
+
+重新執行追蹤需要：
 
 - 執行 DEA 的使用者可以使用 Windows 驗證連接到目標資料庫伺服器。
 - 執行 DEA 的使用者具有目標資料庫伺服器上的系統管理員（sysadmin）許可權。
 - 執行目標資料庫伺服器的服務帳戶具有追蹤資料夾路徑的寫入權限。
 - 執行 Distributed Replay 用戶端的服務帳戶，可以使用 Windows 驗證連接到目標資料庫伺服器。
-- DEA 會使用 COM 介面與 Distributed Replay 控制器通訊。 請確定已針對 Distributed Replay 控制器上的連入要求開啟 TCP 通訊埠。
+- TCP 埠會針對 Distributed Replay 控制器上的連入要求而開啟。 DEA 會使用 COM 介面與 Distributed Replay 控制器通訊。
 
-如需詳細資訊，請參閱重新執行[常見問題](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
+如需詳細資訊，請參閱[關於追蹤](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)重新執行的常見問題
 
-**分析設定需求**：
+**分析設定需求**
+
+執行分析需要：
 
 - 執行 DEA 的使用者可以使用 Windows 驗證連接到分析資料庫伺服器。
 - 執行 DEA 的使用者在源資料庫伺服器上具有 sysadmin 許可權。
 
-如需詳細資訊，請參閱[分析常見問題](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
+如需詳細資訊，請參閱[分析報告](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)的常見問題
 
 ## <a name="set-up-telemetry"></a>設定遙測
 
-DEA 具有已啟用網際網路的功能，可將遙測資訊傳送至 Microsoft。 Microsoft 會收集遙測資料，以增強產品體驗。 遙測是選擇性的。 所收集的資訊也會儲存在您的電腦上進行本機審核。 您一律可以查看所收集的內容。 來自 DEA 的所有記錄檔會儲存在% temp%\\DEA 資料夾中。
+DEA 具有已啟用網際網路的功能，可將遙測資訊傳送給 Microsoft，以用於增強產品體驗。 收集的資訊也會儲存在您的電腦上進行本機審核，因此您一律可以查看所收集的內容。 所有 DEA 記錄檔都儲存在% temp%\\DEA 資料夾中。
 
-您可以決定要收集的事件。 您也可以決定是否要將收集的事件傳送給 Microsoft。 有四種類型的事件：
+可以在四種類型的事件上收集遙測資料：
 
 - **TraceEvent**：應用程式的使用事件（例如，「已觸發停止捕獲」）。
 - **Exception**：應用程式使用期間擲回例外狀況。
 - **DiagnosticEvent**：事件記錄檔，可在發生問題時協助診斷（*未*傳送至 Microsoft）。
 - **FeedbackEvent**：透過應用程式提交的使用者意見反應。
 
-這些步驟會示範如何選擇要收集哪些事件，以及是否要將事件傳送給 Microsoft：
+收集和傳送遙測資料是選擇性的。 若要指定要收集哪些事件，以及是否要將收集的事件傳送至 Microsoft，請使用下列步驟：
 
 1. 移至安裝 DEA 的位置（例如 C：\\Program Files （x86）\\Microsoft Corporation\\資料庫測試助理）。
-2. 開啟兩個 .config 檔案： DEA （適用于應用程式）和 DEACmd （適用于 CLI）。
-3. 若要停止收集事件種類，請將*事件*的值（例如， **TraceEvent**）設定為**false**。 若要再次開始收集事件，請將值設定為**true**。
-4. 若要停止儲存事件的本機複本，請將**TraceLoggerEnabled**的值設定為**false**。 若要再次開始儲存本機複本，請將值設定為**true**。
-5. 若要停止將事件傳送至 Microsoft，請將**AppInsightsLoggerEnabled**的值設定為**false**。 若要再次開始將事件傳送至 Microsoft，請將值設定為**true**。
+2. 開啟並修改兩個 .config 檔案**DEA** （適用于應用程式）和**DEACmd** （適用于 CLI），如下所示：
+    - 若要停止收集事件種類，請將*事件*的值（例如， **TraceEvent**）設定為**false**。 若要再次開始收集事件，請將值設定為**true**。
+    - 若要停止儲存事件的本機複本，請將**TraceLoggerEnabled**的值設定為**false**。 若要再次開始儲存本機複本，請將值設定為**true**。
+    - 若要停止將事件傳送至 Microsoft，請將**AppInsightsLoggerEnabled**的值設定為**false**。 若要再次開始將事件傳送至 Microsoft，請將值設定為**true**。
 
 DEA 受[Microsoft 隱私權聲明](https://aka.ms/dea-privacy)所規範。
 
