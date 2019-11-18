@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bf26f336c2cbc90e3465fc20c21ebc548e947cf
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123189"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843427"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,9 +144,9 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 |值|輸出|  
 |---|---|
-|**0** (預設)|小數點左側並不會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例4235.98。|  
-|**1**|小數點左側會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例3,510.92。|  
-|**2**|小數點左側並不會每隔三位數加一個逗號，小數點右側則會有四位數<br /><br />範例4235.9819。|  
+|**0** (預設)|小數點左側並不會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例：4235.98。|  
+|**1**|小數點左側會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例：3,510.92。|  
+|**2**|小數點左側並不會每隔三位數加一個逗號，小數點右側則會有四位數<br /><br />範例：4235.9819。|  
 |**126**|轉換成 char(n) 或 varchar(n) 時，相當於樣式 2|  
   
 ## <a name="xml-styles"></a>xml 樣式
@@ -173,7 +173,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 > [!TIP]  
 > 可在 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35834)將此圖表下載為 PDF 檔案。  
   
-![資料類型轉換表](../../t-sql/data-types/media/lrdatahd.png "資料類型轉換表")
+![資料類型轉換資料表](../../t-sql/data-types/media/lrdatahd.png "資料類型轉換資料表")
   
 上圖說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中允許的所有明確和隱含轉換，但是轉換的結果資料類型取決於正在執行的作業：
 
@@ -271,15 +271,15 @@ Gail        Erickson      Ms.    *
   
 |來源|若要|行為|  
 |---|---|---|
-|**numeric**|**numeric**|捨入|  
+|**numeric**|**numeric**|Round|  
 |**numeric**|**int**|截斷|  
-|**numeric**|**money**|捨入|  
-|**money**|**int**|捨入|  
-|**money**|**numeric**|捨入|  
+|**numeric**|**money**|Round|  
+|**money**|**int**|Round|  
+|**money**|**numeric**|Round|  
 |**float**|**int**|截斷|  
-|**float**|**numeric**|捨入<br /><br /> 如果您將使用科學記號標記法的 **float** 值轉換成 **decimal** 或 **numeric**，就會限制為只有 17 個有效位數的值。 有效位數超過 17 的任何值都會捨入為零。|  
-|**float**|**datetime**|捨入|  
-|**datetime**|**int**|捨入|  
+|**float**|**numeric**|Round<br /><br /> 如果您將使用科學記號標記法的 **float** 值轉換成 **decimal** 或 **numeric**，就會限制為只有 17 個有效位數的值。 有效位數超過 17 的任何值都會捨入為零。|  
+|**float**|**datetime**|Round|  
+|**datetime**|**int**|Round|  
   
 例如，10.6496 和-10.6496 這兩個值可能會被截斷，或在轉換成 **int** 或 **numeric** 類型期間被捨入：
   
@@ -854,7 +854,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)      
 [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)     
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)      
-[系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)      
+[系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)      
 [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)      
 [撰寫國際通用的 Transact-SQL 陳述式](../../relational-databases/collations/write-international-transact-sql-statements.md)       
   

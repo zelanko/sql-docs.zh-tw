@@ -1,7 +1,7 @@
 ---
 title: 執行範例筆記本 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 本教學課程會說明如何在上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]載入執行範例 Spark 筆記本。
+description: 本教學課程說明如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上載入和執行範例 Spark 筆記本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 18e182a251e0f93127ffc376648a29c3e2d9cd02
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 4acb5c2306064da29d3537fc881dbfc3d312ad2f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653261"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844236"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教學課程：在 SQL Server 巨量資料叢集上執行範例筆記本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程示範如何在的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Azure Data Studio 中載入和執行筆記本。 這可讓資料科學家和資料工程師對叢集執行 Python、R 或 Scala 程式碼。
+本教學課程示範如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上，將筆記本載入 Azure Data Studio 並在其中執行。 這可讓資料科學家和資料工程師對叢集執行 Python、R 或 Scala 程式碼。
 
 > [!TIP]
 > 如果您想要的話，也可以下載並執行用於本教學課程中命令的指令碼。 如需指示，請參閱 GitHub 上的 [Spark 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)。
@@ -53,11 +53,11 @@ ms.locfileid: "69653261"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的主要執行個體。 如需詳細資訊，請參閱[連線到巨量資料叢集](connect-to-big-data-cluster.md)。
 
-1. 按兩下 [伺服器] 視窗中的 HDFS/Spark 閘道連線。 然後選取 [開啟筆記本]。
+1. 按兩下 [伺服器]  視窗中的 HDFS/Spark 閘道連線。 然後選取 [開啟筆記本]  。
 
    ![開啟筆記本](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
 
-1. 等候 [核心] 和目標內容 ([附加至]) 填入。 將 [核心] 設定為 [PySpark3]，並將 [附加至] 設定為巨量資料叢集端點的 IP 位址。
+1. 等候 [核心]  和目標內容 ([附加至]  ) 填入。 將 [核心]  設定為 [PySpark3]  ，並將 [附加至]  設定為巨量資料叢集端點的 IP 位址。
 
    ![設定 [核心] 和 [附加至]](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
 
@@ -67,9 +67,9 @@ ms.locfileid: "69653261"
 
 ![執行筆記本資料格](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-連續執行範例筆記本中的每個資料格。 如需搭配使用筆記本[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的詳細資訊, 請參閱下列資源:
+連續執行範例筆記本中的每個資料格。 如需搭配 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 使用筆記本的相關資訊，請參閱下列資源：
 
-- [如何在 SQL Server 2019 Preview 中使用筆記本](notebooks-guidance.md)
+- [如何在 SQL Server 中使用筆記本](notebooks-guidance.md)
 - [如何管理 Azure Data Studio 中的 Notebook](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>後續步驟

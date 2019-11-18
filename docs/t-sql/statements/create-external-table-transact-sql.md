@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227143"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882388"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -140,7 +140,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentag
 > [!NOTE]
 > 由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value*。
 
-範例
+範例：
 
 此範例說明三個 REJECT 選項彼此如何互動。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30 且 REJECT_SAMPLE_VALUE = 100，就可能發生下列案例：
 
@@ -580,9 +580,7 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>概觀：Azure SQL Database
 
-在 Azure SQL Database 中，建立[彈性查詢](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)的外部資料表以與 Azure SQL Database 搭配使用。
-
-使用外部資料表來建立外部資料表，以搭配彈性查詢使用。
+在 Azure SQL Database 中，建立[彈性查詢 (預覽階段)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) 的外部資料表。
 
 另請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
 
@@ -661,7 +659,7 @@ DISTRIBUTION：選擇性。 只有類型為 SHARD_MAP_MANAGER 的資料庫才需
 
 ## <a name="limitations-and-restrictions"></a>限制事項
 
-由於外部資料表的資料位於另一個 SQL Database 中，因此可以隨時變更或移除。 因此，針對外部資料表的查詢結果並不保證具有確定性。 相同的查詢在每次針對外部資料表執行時，都有可能傳回不同的結果。 同樣地，在移動或移除外部資料的情況下，查詢也有可能會失敗。
+透過外部資料表存取資料並不會遵守 SQL Server 內的隔離語義。 也就是說，查詢外部不會強加任何鎖定或快照集隔離，因此，如果外部資料來源中的資料變更，則資料傳回可能會變更。  相同的查詢在每次針對外部資料表執行時，都有可能傳回不同的結果。 同樣地，在移動或移除外部資料的情況下，查詢也有可能會失敗。
 
 您可以建立多個參考不同外部資料來源的外部資料表。
 
@@ -674,6 +672,24 @@ DISTRIBUTION：選擇性。 只有類型為 SHARD_MAP_MANAGER 的資料庫才需
 
 - 外部資料表資料行上的 DEFAULT 限制式
 - 刪除、插入及更新的資料操作語言 (DML) 作業
+
+只有在查詢中定義的常值述詞可以向下推送到外部資料來源。 這不同於連結的伺服器，而且可以使用存取查詢執行期間決定的述詞，也就是在查詢計劃中搭配巢狀迴圈使用時。 這通常會導致整個外部資料表複製到本機，然後加入。    
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+                         WHERE CustomerName = 'MyCompany')
+```
+
+使用外部資料表可防止在查詢計劃中使用平行處理原則。
+
+外部資料表會實作為遠端查詢，因此，所傳回的估計資料列數目通常是 1000，根據篩選外部資料表所使用的述詞類型，還有其他規則。 它們是以規則為基礎的估計值，而不是根據外部資料表中的實際資料進行評估。 最佳化工具不會存取遠端資料源來取得更精確的估計值。
 
 ## <a name="locking"></a>鎖定
 
@@ -796,7 +812,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentag
 > [!NOTE]
 > 由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value*。
 
-範例
+範例：
 
 此範例說明三個 REJECT 選項彼此如何互動。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30 且 REJECT_SAMPLE_VALUE = 100，就可能發生下列案例：
 
@@ -1021,7 +1037,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 在您指定 REJECT_TYPE = percentag
 > [!NOTE]
 > 由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value*。
 
-範例
+範例：
 
 此範例說明三個 REJECT 選項彼此如何互動。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30 且 REJECT_SAMPLE_VALUE = 100，就可能發生下列案例：
 

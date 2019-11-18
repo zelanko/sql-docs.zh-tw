@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a24d5e25bfbeb7aed32257b22dd3dac5d1c53f7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593880"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844560"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -153,6 +153,7 @@ ms.locfileid: "73593880"
 |:---|:---|
 |具有安全記憶體保護區的 Always Encrypted|透過在伺服器端安全記憶體保護區中啟用純文字資料上的計算，在具備就地加密和豐富計算的 Always Encrypted 上進行擴充。 就地加密可改善密碼編譯作業 (加密資料行、輪換資料行、加密金鑰等) 的效能和可靠性，因為就地加密會避免將資料移出資料庫。<br><br> 支援豐富計算 (模式比對和比較作業) 可讓更多的範例適用 Always Encypted，以及要求敏感資料保護，但同時也需要在 Transact-SQL 查詢中擁有更豐富功能的應用程式。 請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。|
 |SQL Server 組態管理員中的憑證管理|請參閱[憑證管理 (SQL Server 組態管理員)](../database-engine/configure-windows/manage-certificates.md)。|
+|資料探索與分類|資料探索與分類提供原生內建於 SQL Server 的進階功能，可用於分類、標記與保護資料庫中的敏感性資料。 分類最敏感的資料 (商務、財務、醫療、PII 等等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：<ul><li>協助符合資料隱私權標準和法規合規性需求</li><li>各種安全性情節，例如監視 (稽核)，以及警示敏感性資料的異常存取</li><li>更輕鬆地識別敏感性資料在企業中的位置，讓系統管理員可以採取正確的步驟來保護資料庫</li></ul>也已經增強[稽核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)，在稱為 `data_sensitivity_information` 的稽核記錄中包含新欄位，其中記錄查詢所傳回的實際資料敏感度分類 (標籤)。 如需詳細資料和範例，請參閱[新增敏感度分類](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>高可用性
@@ -226,14 +227,6 @@ ms.locfileid: "73593880"
 |Windows Server 容錯移轉叢集| 您可以在 Windows Server 容錯移轉叢集上設定機器學習服務的高可用性。|
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| 新功能或更新 | 詳細資料 |
-|:---|:---|
-|支援 Azure SQL Database 受控執行個體資料庫| 在受控執行個體上裝載 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]。 請參閱 [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] 安裝和設定](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)。|
-|新增 HTML 控制項| HTML 控制項取代所有先前的 Silverlight 元件。 已移除 Silverlight 相依性。|
-| &nbsp; | &nbsp; |
-
 ## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services
 
 此版本引進效能、資源治理與用戶端支援的新功能和改善。
@@ -246,6 +239,23 @@ ms.locfileid: "73593880"
 |資源管理的屬性設定| 此版本包含新的記憶體設定：適用於資源治理的 Memory\QueryMemoryLimit、DbpropMsmdRequestMemoryLimit 和 OLAP\Query\RowsetSerializationLimit。 若要深入了解，請參閱[記憶體設定](/analysis-services/server-properties/memory-properties)。|
 |Power BI 快取重新整理的治理設定 | 此版本引進 ClientCacheRefreshPolicy 屬性，該屬性可覆寫快取儀表板磚資料和報表資料，以供 Power BI 服務初始載入 Live Connect 報表。 若要深入了解，請參閱[一般屬性](/analysis-services/server-properties/general-properties)。 |
 | 線上附加  | 線上附加可用於同步處理內部部署查詢擴充環境中的唯讀複本。 若要深入了解，請參閱[線上附加](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach)。 |
+| &nbsp; | &nbsp; |
+
+## <a name="sql-server-integration-services"></a>SQL Server Integration Services
+
+此版本引進了新功能，可改善檔案作業。
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---|
+|彈性檔案工作 |在本機檔案系統、Azure Blob 儲存體和 Azure Data Lake Storage Gen2 上執行檔案作業。 請參閱[彈性檔案工作](../integration-services/control-flow/flexible-file-task.md)。|
+|彈性檔案來源和目的地 |讀取和寫入 Azure Blob 儲存體的資料，以及 Azure Data Lake Storage Gen2。 請參閱[彈性檔案來源](../integration-services/data-flow/flexible-file-source.md)和[彈性檔案目的地](../integration-services/data-flow/flexible-file-destination.md)。 |
+
+## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| 新功能或更新 | 詳細資料 |
+|:---|:---|
+|支援 Azure SQL Database 受控執行個體資料庫| 在受控執行個體上裝載 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]。 請參閱 [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] 安裝和設定](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)。|
+|新增 HTML 控制項| HTML 控制項取代所有先前的 Silverlight 元件。 已移除 Silverlight 相依性。|
 | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-reporting-services"></a>SQL Server Reporting Services

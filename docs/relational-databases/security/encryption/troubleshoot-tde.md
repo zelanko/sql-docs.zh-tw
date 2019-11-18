@@ -10,15 +10,15 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/06/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903616"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727772"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>在 Azure Key Vault 中使用客戶受控金鑰進行透明資料加密的常見錯誤
 
@@ -26,14 +26,13 @@ ms.locfileid: "69903616"
 此文章說明如何找出並解決造成資料庫 (設定為使用 [Azure Key Vault 中的透明資料加密 (TDE) 搭配客戶管理金鑰](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql)) 變得無法存取的 Azure Key Vault 金鑰存取問題。
 
 ## <a name="introduction"></a>簡介
-當 TDE 是設定為在 Azure Key Vault 使用客戶管理金鑰時，資料庫必須持續存取 TDE 保護裝置才能保持在線上。  如果邏輯 SQL server 無法存取 Azure Key Vault 中的客戶管理 TDE 保護裝置，資料庫將會拒絕所有連線，並在 Azure 入口網站中顯示為無法存取。
+當 TDE 設定為在 Azure Key Vault 中使用客戶管理金鑰時，資料庫必須持續存取此 TDE 保護裝置才能保持在線上。  如果邏輯 SQL Server 無法存取 Azure Key Vault 中的客戶管理 TDE 保護裝置，資料庫將會開始拒絕所有連線，而不會出現相應的錯誤訊息，並在 Azure 入口網站中將其狀態變更為*無法存取*。
 
-在前 48 小時，如果基礎 Azure Key vault 金鑰存取問題已解決，資料庫將會自動修復並自動上線。  這表示在所有間歇性和暫時性網路中斷的情況下，使用者不需要採取動作，資料庫就會自動上線。  在大部分情況下，使用者必須採取動作，才能解決基礎金鑰保存庫的金鑰存取問題。 
+在前 8 小時，如果基礎 Azure Key vault 金鑰存取問題已解決，資料庫將會自動修復並自動上線。 這表示在所有間歇性和暫時性網路中斷的情況下，使用者不需要採取動作，資料庫就會自動上線。 在大部分情況下，使用者必須採取動作，才能解決基礎金鑰保存庫的金鑰存取問題。 
 
-如果無法存取的資料庫已經不再需要，可以立即將它刪除，以停止產生成本。  除非已還原對 Azure Key Vault 金鑰的存取權，且資料庫已重新上線，否則不允許資料庫上的所有其他動作。   當使用客戶管理金鑰加密的資料庫無法存取時，也不支援將伺服器上的 TDE 選項從「客戶管理」變更為「服務管理」金鑰。 當 TDE 保護裝置遭撤銷時，這是保護資料免於未經授權存取的必要動作。 
+如果無法存取的資料庫已經不再需要，可以立即將它刪除，以停止產生成本。 除非已還原對 Azure Key Vault 金鑰的存取權，且資料庫已重新上線，否則不允許資料庫上的其他所有動作。 當使用客戶管理金鑰加密的資料庫無法存取時，也無法將伺服器上的 TDE 選項從「客戶管理」變更為「服務管理」金鑰。 當 TDE 保護裝置遭撤銷時，這是保護資料免於未經授權存取的必要動作。 
 
-當資料庫無法存取超過 48 小時之後，就不會再自動修復。  如果已經還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證存取權，才能讓資料庫重新上線。  資料庫變得無法存取 48 小時之後，要讓它重新上線可能需要花很多時間，取決於資料庫大小，且目前需要支援票證。 一旦資料庫重新上線，先前設定的設定，例如，異地連結 (如果已設定異地 DR)、PITR 歷程記錄和標籤將會遺失。  因此，我們建議使用[動作群組](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 來實作通知系統，以在 48 小時內解決基礎金鑰保存庫問題。 
-
+在資料庫無法存取超過 8 小時之後，就不會再自動修復。 如果已經在該期間之後還原對必要 Azure Key Vault 金鑰的存取權，您必須手動重新驗證存取權，才能讓資料庫重新上線。 在此情況下，讓資料庫重新上線可能需要花很多時間 (取決於資料庫大小)，且目前需要支援票證。 一旦資料庫重新上線，先前設定的設定，例如，異地連結 (如果已設定異地 DR)、PITR 歷程記錄和標籤將會遺失。 因此，建議使用[動作群組](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) \(部分機器翻譯\) 實作通知系統，以便盡快察覺並解決基礎金鑰保存庫的金鑰存取問題。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>導致資料庫變得無法存取的常見錯誤
 
@@ -176,13 +175,13 @@ EventName：MakeDatabaseInaccessible
 
  
 
-**當 48 小時的自我修復等候時間開始時的事件** 
+**當 8 小時的自我修復等候時間開始時的事件** 
 
 EventName：MakeDatabaseInaccessible 
 
 狀態：InProgress 
 
-描述：資料庫正在等候使用者於 48 小時內重新建立 Azure 金鑰保存庫金鑰的存取權。   
+描述：資料庫正在等候使用者於 8 小時內重新建立 Azure 金鑰保存庫金鑰的存取權。   
 
  
 
@@ -196,7 +195,7 @@ EventName：MakeDatabaseAccessible
 
  
 
-**當問題未在 48 小時內解決，且必須以手動方式驗證 Azure Key Vault 金鑰存取權時的事件** 
+**當問題未在 8 小時內解決，且必須以手動方式驗證 Azure Key Vault 金鑰存取權時的事件** 
 
 EventName：MakeDatabaseInaccessible 
 

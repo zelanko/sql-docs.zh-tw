@@ -1,6 +1,6 @@
 ---
 title: Microsoft SQL 資料庫中的純量 UDF 內嵌 | Microsoft Docs
-description: 純量 UDF 內嵌功能可針對在 SQL Server (2018 和更新版本) 及 Azure SQL Database 中叫用純量 UDF 的查詢改善其效能。
+description: 純量 UDF 內嵌功能可針對在 SQL Server (從 SQL Server 2019 開始) 及 Azure SQL Database 中叫用純量 UDF 的查詢改善其效能。
 ms.custom: ''
 ms.date: 09/13/2019
 ms.prod: sql
@@ -15,41 +15,40 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909316"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882421"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介紹純量 UDF 內嵌，這是智慧型查詢處理功能套件下的一項功能。 此功能可針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 開始) 及 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中叫用 UDF 的查詢改善其效能。
+本文介紹純量 UDF 內嵌，這是[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一項功能。 此功能可針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 開始) 及 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中叫用 UDF 的查詢改善其效能。
 
-## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 純量使用者自訂函式
-
-以 Transact-SQL 實作並傳回單一資料值的使用者定義函式，就是所謂的 T-SQL 純量使用者定義函式。 T-SQL UDF 是一種在 SQL 查詢之間達成程式碼重複使用和模組化的優雅方式。 某些計算 (例如複雜的商務規則) 更容易以命令式 UDF 格式表達。 UDF 有助於建置複雜的邏輯，而不需要撰寫複雜 SQL 查詢的專業知識。
+## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 純量使用者定義函式
+以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 實作並傳回單一資料值的使用者定義函式 (UDF)，就是所謂的 T-SQL 純量使用者定義函式。 T-SQL UDF 是一種在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢之間達成程式碼重複使用和模組化的優雅方式。 某些計算 (例如複雜的商務規則) 更容易以命令式 UDF 格式表達。 UDF 有助於建置複雜的邏輯，而不需要撰寫複雜 SQL 查詢的專業知識。
 
 ## <a name="performance-of-scalar-udfs"></a>純量 UDF 的效能
+純量 UDF 最終效能不佳通常是下列原因所致：
 
-純量 UDF 最終效能不佳通常是下列原因所致。
+- **反覆叫用：** UDF 會以反覆方式叫用，每個合格的元組一次。 這會因函式叫用而產生重複內容切換的額外成本。 特別是，在其定義中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢的 UDF 會受到嚴重影響。
 
-- **反覆叫用：** UDF 會以反覆方式叫用，每個合格的元組一次。 這會因函式叫用而產生重複內容切換的額外成本。 特別是，在其定義中執行 SQL 查詢的 UDF 會受到嚴重影響。
 - **缺少成本估算：** 在最佳化期間，只會估算關係運算子的成本，而不會估算純量運算子的成本。 在引進純量 UDF 之前，其他純量運算子通常很便宜，而不需要進行成本估算。 為純量運算子新增少量 CPU 成本便已足夠。 但還是有一些實際成本很高，卻仍然未充分表示的情況。
+
 - **解譯執行：** UDF 會評估為陳述式批次，逐一執行陳述式。 系統會編譯每個陳述式本身，並快取已編譯的計劃。 雖然此快取策略可因避免重新編譯而節省一些時間，但每個陳述式都會單獨執行。 不會執行跨陳述式的最佳化。
-- **序列執行：** SQL Server 不允許在叫用 UDF 的查詢中使用內部查詢平行處理原則。 
+
+- **序列執行：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許在叫用 UDF 的查詢中使用內部查詢平行處理原則。 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>自動內嵌純量 UDF
-
-純量 UDF 內嵌功能其目標是改善叫用 T-SQL 純量 UDF 的查詢效能，其中的 UDF 執行是主要瓶頸。
+純量 UDF 內嵌功能的目標是改善叫用 T-SQL 純量 UDF 的查詢效能，其中的 UDF 執行是主要瓶頸。
 
 使用這項新功能，純量 UDF 會自動轉換成純量運算式或純量子查詢，以在呼叫查詢中替代 UDF 運算子。 接著，系統就會將這些運算式和子查詢最佳化。 因此，查詢計劃不再具有使用者定義函式運算子，但在計劃中將觀察到其效果，例如檢視或內嵌 TVF。
 
 ### <a name="example-1---single-statement-scalar-udf"></a>範例 1 - 單一陳述式純量 UDF
-
-請考慮下列查詢
+請考慮下列查詢。
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT)) 
@@ -67,7 +66,6 @@ RETURNS DECIMAL (12,2) AS
 BEGIN
   RETURN @price * (1 - @discount);
 END
-
 ```
 
 現在，您可以修改查詢來叫用此 UDF。
@@ -89,8 +87,7 @@ GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 這些數字是根據 10-GB CCI 資料庫 (使用 TPC-H 結構描述)，其在具有雙處理器 (12 個核心)、96 GB RAM 且 SSD 支援的機器上執行。 這些數字包含冷程序快取和緩衝集區的編譯及執行時間。 使用了預設設定，但未建立任何其他的索引。
 
 ### <a name="example-2---multi-statement-scalar-udf"></a>範例 2 - 多重陳述式純量 UDF
-
-使用多個 T-SQL 陳述式 (例如變數指派和條件式分支) 實作的純量 UDF 也可以進行內嵌。 請考慮下列純量 UDF，其可根據客戶索引鍵來判斷該客戶的服務類別。 它會先使用 SQL 查詢計算客戶所下全部訂單的總價，以到達類別。 然後，使用 `IF-ELSE` 邏輯根據總價決定類別。
+使用多個 T-SQL 陳述式 (例如變數指派和條件式分支) 實作的純量 UDF 也可以進行內嵌。 請考慮下列純量 UDF，其可根據客戶索引鍵來判斷該客戶的服務類別。 它會先使用 SQL 查詢計算客戶所下全部訂單的總價，以到達類別。 然後，使用 `IF (...) ELSE` 邏輯根據總價決定類別。
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.customer_category(@ckey INT) 
@@ -110,7 +107,6 @@ BEGIN
 
   RETURN @category;
 END
-
 ```
 
 現在，請考慮叫用此 UDF 的查詢。
@@ -119,11 +115,11 @@ END
 SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 ```
 
-SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計劃如下：
+[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (相容性層級 140 及更早版本) 中此查詢的執行計劃如下：
 
 ![不使用內嵌的查詢計劃](./media/query-plan-without-udf-inlining.png)
 
-如計劃所示，SQL Server 在此採用一個簡單的策略：針對 `CUSTOMER` 資料表中的每個元組，叫用 UDF 並輸出結果。 此策略過於簡易且效率不彰。 透過內嵌，這類 UDF 可轉換成相等的純量子查詢，這些子查詢會在呼叫查詢中替代 UDF。
+如計劃所示，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在此採用一個簡單的策略：針對 `CUSTOMER` 資料表中的每個元組，叫用 UDF 並輸出結果。 此策略過於簡易且效率不彰。 透過內嵌，這類 UDF 可轉換成相等的純量子查詢，這些子查詢會在呼叫查詢中替代 UDF。
 
 針對相同查詢，內嵌 UDF 的計劃如下所示。
 
@@ -131,14 +127,13 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 
 如先前所述，查詢計劃不再具有使用者定義函式運算子，但目前在計劃中可觀察到其效果，例如檢視或內嵌 TVF。 以下是上述計劃的一些重要觀察結果：
 
-1. SQL Server 已推斷 `CUSTOMER` 與 `ORDERS` 之間的隱含聯結，並透過聯結運算子使其變成明確聯結。
-2. SQL Server 還會推斷隱含的 `GROUP BY O_CUSTKEY on ORDERS`，並使用 IndexSpool + StreamAggregate 來進行實作。
-3. SQL Server 現在正在所有的運算子之間使用平行處理原則。
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已推斷 `CUSTOMER` 與 `ORDERS` 之間的隱含聯結，並透過聯結運算子使其變成明確聯結。
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還會推斷隱含的 `GROUP BY O_CUSTKEY on ORDERS`，並使用 IndexSpool + StreamAggregate 來進行實作。
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現在正在所有的運算子之間使用平行處理原則。
 
 視 UDF 的邏輯複雜度而定，產生的查詢計劃也可能會變得更大且更複雜。 如我們所見，UDF 內的作業現在不再是黑盒子，因此查詢最佳化工具能夠估算這些作業的成本，並將其最佳化。 此外，因為計劃中不再有 UDF，所以反覆執行 UDF 叫用會取代為完全避免函式呼叫額外負荷的計劃。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>可內嵌的純量 UDF 需求
-
 如果符合下列所有條件，則可以內嵌純量 T-SQL UDF：
 
 - UDF 使用下列建構函式撰寫：
@@ -167,22 +162,33 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 <sup>3</sup> 其結果取決於目前系統時間的內建函式具有時間相依性。 可能會更新某個內部全域狀態之內建函式為具有副作用的函式範例。 這類函式會在每次呼叫時，根據內部狀態傳回不同的結果。
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>檢查是否可以內嵌 UDF
+針對每個 T-SQL 純量 UDF，[sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) 目錄檢視包含一個稱為 `is_inlineable` 的屬性，其表示是否可內嵌 UDF。 
 
-針對每個 T-SQL 純量 UDF，[sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) 目錄檢視包含一個稱為 `is_inlineable` 的屬性，其表示是否可內嵌 UDF。 值 1 表示可內嵌，而 0 表示不可以。 對於所有內嵌 TVF，此屬性的值均為 1。 對於其他所有模組，值會是 0。
+> [!NOTE]
+> `is_inlineable` 屬性衍生自 UDF 定義內找到的建構。 它不會在編譯時間檢查 UDF 是否可實際內嵌。 如需詳細資訊，請參閱下面的內嵌條件。
 
->[!NOTE]
->如果純量 UDF 可內嵌，並不表示它一律都會內嵌。 SQL Server 將決定 (在每個查詢上，根據每個 UDF) 是否要內嵌 UDF。 比方說，如果 UDF 定義達到數千行程式碼時，SQL Server 可能會選擇不要加以內嵌。 另一個範例是 `GROUP BY` 子句中不會內嵌的 UDF。 這項決定會在編譯參考純量 UDF 的查詢時進行。
+值 1 表示可內嵌，而 0 表示不可以。 對於所有內嵌 TVF，此屬性的值均為 1。 對於其他所有模組，值會是 0。
+
+如果純量 UDF 可內嵌，並不表示它一律都會內嵌。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將決定 (在每個查詢上，根據每個 UDF) 是否要內嵌 UDF。 在 UDF 可能無法內嵌時的一些範例包括：
+
+-  如果 UDF 定義達到數千行程式碼，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會選擇不要加以內嵌。 
+-  系統將不會內嵌 `GROUP BY` 子句中的 UDF 引動過程。 這項決定會在編譯參考純量 UDF 的查詢時進行。
+-  如果 UDF 是以憑證簽署。 因為可以在建立 UDF 之後加入並置放簽章，所以在編譯參考純量 UDF 的查詢時，會決定是否要內嵌。 例如，系統函式通常會以憑證簽署。 您可以使用 [sys. crypt_properties](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md) 尋找已簽署的物件。 
+
+   ```sql
+   SELECT * 
+   FROM sys.crypt_properties AS cp
+   INNER JOIN sys.objects AS o ON cp.major_id = o.object_id;
+   ```
 
 ### <a name="checking-whether-inlining-has-happened-or-not"></a>檢查是否已進行內嵌
-
-如果符合所有先決條件，且 SQL Server 決定執行內嵌，則它會將 UDF 轉換成關聯運算式。 您可以從查詢計劃輕鬆地看出是否已進行內嵌：
+如果符合所有先決條件，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 決定執行內嵌，則它會將 UDF 轉換成關聯運算式。 您可以從查詢計劃輕鬆地看出是否已進行內嵌：
 
 - 針對已成功內嵌的 UDF，計劃 XML不會有 `<UserDefinedFunction>` XML 節點。 
 - 會發出特定 XEvent。
 
 ## <a name="enabling-scalar-udf-inlining"></a>啟用純量 UDF 內嵌
-
-您可以啟用資料庫的相容性層級 150，讓工作負載自動符合純量 UDF 內嵌的資格。 您可以使用 Transact-SQL 設定此項目。例如：  
+您可以啟用資料庫的相容性層級 150，讓工作負載自動符合純量 UDF 內嵌的資格。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定此項目。 例如：  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -191,7 +197,6 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 除此之外，不需要對 UDF 或查詢進行任何其他變更，就能夠利用這項功能。
 
 ## <a name="disabling-scalar-udf-inlining-without-changing-the-compatibility-level"></a>停用純量 UDF 內嵌而不變更相容性層級
-
 您可以在資料庫、陳述式或 UDF 的範圍停用純量 UDF 內嵌，同時仍將資料庫相容性層級維持在 150 以上。 若要在資料庫範圍停用純量 UDF 內嵌，請在適用資料庫的內容中執行下列陳述式： 
 
 ```sql
@@ -227,7 +232,7 @@ WITH INLINE = OFF
 AS
 BEGIN
     RETURN @price * (1 - @discount);
-END
+END;
 ```
 
 一旦執行上述陳述式，絕對不會將此 UDF 內嵌至叫用它的任何查詢中。 若要重新啟用內嵌此 UDF 的功能，請執行下列陳述式：
@@ -242,11 +247,10 @@ BEGIN
 END
 ```
 
->[!NOTE]
->`INLINE` 子句非為強制性。 如果未指定 `INLINE` 子句，它會根據是否可以內嵌 UDF 自動設為 `ON`/`OFF`。 如果指定了 `INLINE=ON`，但發現 UDF 不適合進行內嵌，則會擲回錯誤。
+> [!NOTE]
+> `INLINE` 子句非為強制性。 如果未指定 `INLINE` 子句，它會根據是否可以內嵌 UDF 自動設為 `ON`/`OFF`。 如果指定了 `INLINE = ON`，但發現 UDF 不適合進行內嵌，則會擲回錯誤。
 
 ## <a name="important-notes"></a>重要事項
-
 如本文所述，純量 UDF 內嵌會將具有純量 UDF 的查詢轉換成具有對等純量子查詢的查詢。 由於此轉換之故，使用者可能會注意到下列案例中的一些行為差異：
 
 1. 內嵌會導致相同的查詢文字產生不同查詢雜湊。
@@ -257,13 +261,8 @@ END
 1. 如果 UDF 參考內建函式 (例如 `SCOPE_IDENTITY()`)，則內建函式所傳回的值會隨著內嵌而變更。 此行為變更是因為內嵌變更了陳述式在 UDF 內的範圍。
 
 ## <a name="see-also"></a>另請參閱
-
-[SQL Server Database Engine 和 Azure SQL Database 的效能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
-
-[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)
-
-[執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
-
-[聯結](../../relational-databases/performance/joins.md)
-
-[示範彈性查詢處理](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)
+[SQL Server 資料庫引擎和 Azure SQL Database 的效能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)     
+[執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
+[聯結](../../relational-databases/performance/joins.md)     
+[示範智慧查詢處理](https://aka.ms/IQPDemos) \(英文\)      

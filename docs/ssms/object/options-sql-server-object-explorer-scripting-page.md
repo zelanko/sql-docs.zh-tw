@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ccd2812261b4d71fb7553f3f1ab40216cc89016
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264064"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844534"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>選項 (SQL Server 物件總管 - 指令碼頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,10 @@ ms.locfileid: "68264064"
 即使選項設定相同，編輯  與 修改  命令所產生的結果，可能會與 編寫 <object>  命令所產生的結果不同。 [編輯]  與 [修改]  命令的設計讓您可以在查詢編輯器工作階段期間，修改目前資料庫中的物件。 [編寫 <object> 指令碼為]  命令的設計則在讓您產生指令碼，供日後建立物件之用。  
   
 ## <a name="options"></a>選項。  
-在每個選項右方的清單中選取可用的設定，即可指定指令碼選項。  
+在每個選項右方的清單中選取可用的設定，即可指定指令碼選項。
+
+> [!NOTE]
+> 列出的預設設定僅適用於 [編寫整個資料庫和所有資料庫物件的指令碼]  選項，而且在使用 [選取特定資料庫物件]  選項時可能會有所不同。
   
 ### <a name="general-scripting-options"></a>一般指令碼選項  
 **分隔個別陳述式**  

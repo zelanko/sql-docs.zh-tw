@@ -9,22 +9,22 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958286"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844267"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的筆記本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文說明如何使用 SQL Server 2019 Preview，在 Azure Data Studio 中開啟和儲存筆記本檔案。 它也示範如何變更您的 SQL Server 巨量資料叢集連線。
+本文說明如何使用 SQL Server，在 Azure Data Studio 中開啟和儲存筆記本檔案。 它也示範如何變更您的 SQL Server 巨量資料叢集連線。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-本文假設您已擁有要在 Azure Data Studio 中使用的筆記本。 如果您想要建立筆記本，請參閱[如何在 SQL Server 2019 Preview 中使用筆記本](notebooks-guidance.md)。 若要在 Azure Data Studio 中使用筆記本，您必須符合下列必要條件：
+本文假設您已擁有要在 Azure Data Studio 中使用的筆記本。 如果您想要建立筆記本，請參閱[如何在 SQL Server 中使用筆記本](notebooks-guidance.md)。 若要在 Azure Data Studio 中使用筆記本，您必須符合下列必要條件：
 
 - [部署巨量資料叢集](quickstart-big-data-cluster-deploy.md)。
 - [SQL Server 2019 巨量資料工具](deploy-big-data-tools.md)：
@@ -80,4 +80,4 @@ ms.locfileid: "67958286"
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 Azure Data Studio 中筆記本的詳細資訊，請參閱[如何在 SQL Server 2019 Preview 中使用筆記本](notebooks-guidance.md)。
+如需 Azure Data Studio 中筆記本的詳細資訊，請參閱[如何在 SQL Server 2019 中使用筆記本](notebooks-guidance.md)。

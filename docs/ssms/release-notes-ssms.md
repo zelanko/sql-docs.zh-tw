@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 9d6e0484e5c3bdda9b46b381d574f84dd216c4f2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: cdcc955050ebab5702d22fef60628876bd367757
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593692"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801147"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
 
@@ -63,7 +63,7 @@ SSMS 18.4 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 SS
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 50 個評定規則 (請參閱 GitHub 上的詳細資料)。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增基底數學運算式和規則條件的比較。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 RegisteredServer 物件的支援。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 JSON 格式儲存規則的方式，也更新了套用覆寫/自訂的機制。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 JSON 格式儲存規則的方式，並已更新套用覆寫/自訂的機制。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新支援 Linux 上 SQL 的規則。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新規則集 JSON 格式，並已新增結構描述版本。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 Cmdlet 輸出以改善建議的可讀性。 |
@@ -346,7 +346,7 @@ SSMS 18.3.1 是 SSMS 最新的正式運作 (GA) 版本。 如果您需要舊版 
 |Azure SQL 受控執行個體|新增「AAD 登入」作為 SMO 及 SSMS 中連線到 Azure SQL 受控執行個體時的新登入類型。|
 |Always On|重新雜湊 SSMS Always On 儀表板中的 RTO (預估復原時間) 和 RPO (估計的資料遺失)。 請參閱 [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md) 上的更新文件。|
 |Always Encrypted| [連線至伺服器] 對話方塊之新 [Always Encrypted] 索引標籤中的 [啟用 Always Encrypted] 核取方塊現在提供簡單的方法來啟用/停用資料庫連線的 Always Encrypted。|
-|具有安全記憶體保護區的 Always Encrypted| 在 SQL Server 2019 Preview 中，已完成數個增強功能來支援具有安全記憶體保護區的 Always Encrypted：[連線至伺服器] 對話方塊中用於指定記憶體保護區證明 URL 的文字欄位 (新的 [Always Encrypted] 索引標籤)。  [新增資料行主要金鑰] 對話方塊中用來控制新資料行主要金鑰是否允許記憶體保護區計算的新核取方塊。  其他 Always Encrypted 金鑰管理對話方塊現在會公開哪些資料行主要金鑰允許記憶體保護區計算的資訊。|
+|具有安全記憶體保護區的 Always Encrypted| 在 SQL Server 2019 中，已完成數個增強功能來支援具有安全記憶體保護區的 Always Encrypted：[連線至伺服器] 對話方塊中用於指定記憶體保護區證明 URL 的文字欄位 (新的 [Always Encrypted] 索引標籤)。  [新增資料行主要金鑰] 對話方塊中用來控制新資料行主要金鑰是否允許記憶體保護區計算的新核取方塊。  其他 Always Encrypted 金鑰管理對話方塊現在會公開哪些資料行主要金鑰允許記憶體保護區計算的資訊。|
 |稽核檔案|將驗證方法從儲存體帳戶金鑰驗證變更為 Azure AD 驗證。|
 |資料分類| 重新組織資料分類工作功能表：新增資料庫工作功能表的子功能表，並新增選項讓您從功能表開啟報表，而不需要先開啟分類資料視窗。|
 |資料分類|在 SMO 中新增 [資料分類] 功能。 資料行物件公開了新的屬性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId，及 IsClassified (唯讀)。 如需詳細資訊，請參閱 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|

@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961794"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729871"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 
@@ -162,11 +162,15 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
  請參閱＜範例＞一節中的[建立資料分割資料表](#PartitionedTable)。
 
-### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>已排序的叢集資料行存放區索引選項 (針對 Azure SQL 資料倉儲為預覽)
+### <a name="ordered-clustered-columnstore-index-option"></a>已排序的叢集資料行存放區索引選項 
 
-叢集資料行存放區索引 (CCI) 是在 Azure SQL 資料倉儲中建立資料表的預設值。  CCI 中的資料在壓縮成資料行存放區區段之前，不會進行排序。  建立具有順序的 CCI 時，資料會先進行排序，再新增至索引區段，且可改善查詢效能。 瀏覽[使用已排序叢集資料行存放區索引的效能微調](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci)以取得詳細資料。  
+叢集資料行存放區索引 (CCI) 是在 Azure SQL 資料倉儲中建立資料表的預設值。  CCI 中的資料在壓縮成資料行存放區區段之前，不會進行排序。  建立具有順序的 CCI 時，資料會先進行排序，再新增至索引區段，且可改善查詢效能。 如需詳細資訊，請參閱[使用已排序叢集資料行存放區索引進行效能調整](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)。  
 
-使用者可以查詢 sys.index_columns 中的 column_store_order_ordinal 資料行，以取得資料表排序所在的資料行，以及排序中的順序。  
+已排序的 CCI 可以建立在 Azure SQL 資料倉儲支援的任何資料類型的資料行上，但不包括字串資料行。  
+
+使用者可以查詢 **sys.index_columns** 中的 **column_store_order_ordinal** 資料行，以取得資料表排序所在的資料行，以及排序中的順序。  
+
+瀏覽[使用已排序叢集資料行存放區索引的效能微調](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)以取得詳細資料。   
 
 ### <a name="DataTypes"></a> 資料類型
 

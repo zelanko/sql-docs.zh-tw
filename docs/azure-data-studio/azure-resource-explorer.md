@@ -5,28 +5,27 @@ description: 了解如何透過 Azure 資源總管，探索和管理 Azure SQL S
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 09/24/2018
+ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959710"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801140"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>使用 Azure 資源總管探索和管理 Azure SQL 資源
 
 在本文件中，您將了解如何透過 [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] 中的 Azure 資源總管，探索和管理 Azure SQL Server、Azure SQL Database 和 Azure SQL 受控執行個體資源。
 
 >[!NOTE]
->從 10 月開始，SQL Server 2019 Preview 將支援 Azure 資源總管。 之後，您可以透過[延伸模組管理員](extensions.md)，或透過 [檔案]   > [Install Package from VSIX Package] \(從 VSIX 套件安裝套件\)  ，安裝預覽版的延伸模組。
-
+>SQL Server 2019 支援 Azure 資源總管。 之後，您可以透過[延伸模組管理員](extensions.md)，或透過 [檔案]   > [Install Package from VSIX Package] \(從 VSIX 套件安裝套件\)  ，安裝延伸模組。
 
 ## <a name="connect-to-azure"></a>連線到 Azure
 
-安裝 SQL 預覽版的外掛程式之後，Azure 圖示會出現在左側功能表列中。 按一下圖示即可開啟 Azure 資源總管。 如果您看不到 Azure 圖示，請以滑鼠右鍵按一下左側功能表列，然後選取 [Azure 資源總管]  。
+安裝 SQL 外掛程式之後，Azure 圖示會出現在左側功能表列中。 按一下圖示即可開啟 Azure 資源總管。 如果您看不到 Azure 圖示，請以滑鼠右鍵按一下左側功能表列，然後選取 [Azure 資源總管]  。
 
 ### <a name="add-an-azure-account"></a>新增 Azure 帳戶
 
@@ -87,7 +86,7 @@ Azure 資源總管目前支援 Azure SQL Server、Azure SQL Database 和 Azure S
 
 ## <a name="connect-to-azure-sql-resources"></a>連線到 Azure SQL 資源
 
-Azure 資源總管提供快速存取，協助您連線到 SQL Server 和資料庫，進行查詢和管理。 
+Azure 資源總管提供快速存取，協助您連線到 SQL Server 和資料庫，進行查詢和管理。
 
 1. 從樹狀檢視探索您想要連線的 SQL 資源。
 2. 以滑鼠右鍵按一下資源並選取 [連線]  ，您也可以在資源右側找到 [連線] 按鈕。

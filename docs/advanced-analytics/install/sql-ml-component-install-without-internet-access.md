@@ -1,19 +1,20 @@
 ---
-title: 在沒有網際網路存取的情況下安裝 R 語言和 Python 元件
-description: 在位於網路防火牆後方的獨立 SQL Server 執行個體上，進行離線或中斷連線的機器學習 R 和 Python 設定。
+title: 在沒有網際網路存取的情況下安裝
+description: 在隔離在網路防火牆後方的電腦上安裝 SQL Server 機器學習 R 與 Python。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd1db578d6f1b4900f559c51521d807d7e1ec271
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594355"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064133"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>在沒有網際網路存取的電腦上安裝 SQL Server 機器學習 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +55,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 1. 在具有網際網路連線的電腦上，下載 [SQL Server 2019 安裝程式](https://www.microsoft.com/sql-server/sql-server-downloads)。 
 
-2. 按兩下安裝程式並選擇 [下載媒體]  安裝類型。 使用此選項時，安裝程式會建立包含安裝媒體的本機 .iso (或 .cab) 檔案。
+2. 按兩下安裝程式並選擇 [下載媒體] 安裝類型。 使用此選項時，安裝程式會建立包含安裝媒體的本機 .iso (或 .cab) 檔案。
 
    ![選擇下載媒體安裝類型](media/2019offline-download-tile.png "下載媒體")
 
@@ -83,7 +84,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 1. 在具有網際網路連線的電腦上，下載 [SQL Server 2017 安裝程式](https://www.microsoft.com/sql-server/sql-server-downloads)。 
 
-2. 按兩下安裝程式並選擇 [下載媒體]  安裝類型。 使用此選項時，安裝程式會建立包含安裝媒體的本機 .iso (或 .cab) 檔案。
+2. 按兩下安裝程式並選擇 [下載媒體] 安裝類型。 使用此選項時，安裝程式會建立包含安裝媒體的本機 .iso (或 .cab) 檔案。
 
    ![選擇下載媒體安裝類型](media/offline-download-tile.png "下載媒體")
 
@@ -109,7 +110,7 @@ SQL Server 2016 資料庫內分析僅限於 R，並只有兩個 CAB 檔案，個
 
 您可以安裝 SQL Server 2016 RTM、SP 1 或 SP 2 作為目標電腦上的第一個安裝。 這些版本都可以接受累積更新。
 
-取得包含安裝媒體之.iso 檔案的其中一個方法是透過 [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)。 登入，然後使用 [下載]  連結來尋找您想要安裝的 SQL Server 2016 版本。 下載的格式為 .iso 檔案，您可以將它複製到目標電腦以進行離線安裝。
+取得包含安裝媒體之.iso 檔案的其中一個方法是透過 [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)。 登入，然後使用 [下載] 連結來尋找您想要安裝的 SQL Server 2016 版本。 下載的格式為 .iso 檔案，您可以將它複製到目標電腦以進行離線安裝。
 
 ::: moniker-end
 
@@ -121,15 +122,15 @@ Python CAB 檔案需要使用 %TEMP% 資料夾。 針對 R，您可以使用 %TE
 
 ## <a name="run-setup"></a>執行安裝程式
 
-當您在與網際網路中斷連線的電腦上執行 SQL Server 安裝程式時，安裝程式會在精靈中新增 [離線安裝]  頁面，讓您可以指定在上一個步驟中複製 CAB 檔案的位置。
+當您在與網際網路中斷連線的電腦上執行 SQL Server 安裝程式時，安裝程式會在精靈中新增 [離線安裝] 頁面，讓您可以指定在上一個步驟中複製 CAB 檔案的位置。
 
 1. 若要開始安裝，請按兩下 .iso 或 .cab 檔案以存取安裝媒體。 您應該會看見 **setup.exe** 檔案。
 
 2. 以滑鼠右鍵按一下 **setup.exe**，然後以系統管理員身分執行。
 
-3. 當設定精靈顯示開放原始碼 R 或 Python 元件的授權頁面時，請按一下 [接受]  。 接受授權條款可讓您繼續進行下一個步驟。
+3. 當設定精靈顯示開放原始碼 R 或 Python 元件的授權頁面時，請按一下 [接受]。 接受授權條款可讓您繼續進行下一個步驟。
 
-4. 當您進入 [離線安裝]  頁面時，在 [安裝路徑]  中，指定包含您先前所複製 CAB 檔案的資料夾。
+4. 當您進入 [離線安裝] 頁面時，在 [安裝路徑] 中，指定包含您先前所複製 CAB 檔案的資料夾。
 
 5. 繼續遵循螢幕上的提示來完成安裝。
 
@@ -144,7 +145,7 @@ Python CAB 檔案需要使用 %TEMP% 資料夾。 針對 R，您可以使用 %TE
 
 2. 在連線到網際網路的裝置上，移至您 SQL Server 版本的累積更新清單：
 
-   + SQL Server 2019 更新 (尚未提供適用於 2019 的更新) 
+   + SQL Server 2019 更新 (尚未提供適用於 2019 的更新)
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -179,7 +180,7 @@ Python CAB 檔案需要使用 %TEMP% 資料夾。 針對 R，您可以使用 %TE
 
 僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出[會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
 
-1. 在 [控制台] 中，按一下 [系統及安全性]   > [系統]   > [進階系統設定]   > [環境變數]  。
+1. 在 [控制台] 中，按一下 [系統及安全性] > [系統] > [進階系統設定] > [環境變數]。
 
 2. 建立新的使用者或系統變數。 
 

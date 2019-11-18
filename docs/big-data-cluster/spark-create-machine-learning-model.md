@@ -1,7 +1,7 @@
 ---
-title: 使用 MLeap 建立和匯出 Spark 機器學習模型
+title: 建立及匯出使用 MLeap 的 Spark 機器學習模型
 titleSuffix: SQL Server big data clusters
-description: 使用 PySpark 來定型和建立使用 Spark on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (預覽) 的機器學習模型。 使用 MLeap 匯出, 然後在 SQL Server 中使用 JAVA 為模型評分。
+description: 使用 PySpark 搭配 SQL Server 巨量資料叢集上的 Spark 來定型和建立機器學習模型。 使用 MLeap 匯出，然後在 SQL Server 中使用 JAVA 為模型評分。
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
@@ -9,41 +9,41 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bba570a4ac68cf5a4d1405d4152669ed9ed211a0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: bc9191ad90b05e9f48facab0cc4003bbf5adce11
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653417"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844233"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>在上建立、匯出及評分 Spark 機器學習模型[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上建立、匯出及評分 Spark 機器學習模型
 
-下列範例示範如何使用[SPARK ML](https://spark.apache.org/docs/latest/ml-guide.html)建立模型、將模型匯出至[MLeap](http://mleap-docs.combust.ml/), 以及使用[JAVA 語言延伸](../language-extensions/language-extensions-overview.md)模組將模型評分 SQL Server。 這會在 SQL Server 2019 big data 叢集的內容中完成。
+以下範例示範如何使用 [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html)建立模型、將模型匯出至 [MLeap](http://mleap-docs.combust.ml/)，以及在 SQL Server 中使用其 [Java 語言延伸模組](../language-extensions/language-extensions-overview.md)為模型評分。 此作業會在 SQL Server 2019 巨量資料叢集的內容中完成。
 
-下圖說明此範例中所執行的工作:
+下圖說明此範例中所執行的工作：
 
-![使用 spark 訓練分數匯出](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
+![使用 Spark 定型分數匯出](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-這個範例的所有檔案都位於[https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml)。
+這個範例的所有檔案都位於 [https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml) \(英文\)。
 
-若要執行範例, 您也必須具備下列必要條件:
+若要執行範例，您也必須具備下列必要條件：
 
-- [SQL Server big data](deploy-get-started.md)叢集
+- [SQL Server 巨量資料叢集](deploy-get-started.md)
 
 - [巨量資料工具](deploy-big-data-tools.md)
    - **kubectl**
    - **curl**
    - **Azure Data Studio**
 
-## <a name="model-training-with-spark-ml"></a>使用 Spark ML 進行模型定型
+## <a name="model-training-with-spark-ml"></a>使用 Spark ML 將模型定型
 
-在此範例中, 人口普查資料 (**AdultCensusIncome .csv**) 是用來建立 Spark ML 管線模型。
+此範例會使用普查資料 (**AdultCensusIncome.csv**) 來建立 Spark ML 管線模型。
 
-1. 使用[mleap_sql_test/setup. sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/setup.sh)檔案從網際網路下載資料集, 並將它放在您的 SQL Server big data cluster 中的 HDFS。 這可讓 Spark 存取它。
+1. 使用 [mleap_sql_test/setup.sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/setup.sh) 檔案從網際網路下載資料集，然後放在您 SQL Server 巨量資料叢集的 HDFS 中。 這可讓 Spark 能夠存取資料集。
 
-1. 然後下載範例筆記本[train_score_export_ml_models_with_spark. ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb)。 從 PowerShell 或 bash 命令列, 執行下列命令以下載筆記本:
+1. 然後請下載範例筆記本 [train_score_export_ml_models_with_spark.ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb)。 從 PowerShell 或 Bash 命令列，執行下列命令來下載筆記本：
 
    ```PowerShell
    curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb"
@@ -51,21 +51,21 @@ ms.locfileid: "69653417"
 
    此筆記本包含具有此範例區段之必要命令的儲存格。
 
-1. 在 Azure Data Studio 中開啟筆記本, 然後執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何在 SQL Server 2019 Preview 中使用筆記本](notebooks-guidance.md)。
+1. 在 Azure Data Studio 中開啟筆記本，並執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何在 SQL Server 中使用筆記本](notebooks-guidance.md)。
 
-資料會先讀入 Spark 並分割成定型和測試資料集。 然後, 程式碼會使用定型資料來訓練管線模型。 最後, 它會將模型匯出至 MLeap 組合。
+資料會先讀入 Spark 並分割成定型和測試資料集。 然後程式碼會使用定型資料將管線模型定型。 最後，它會將模型匯出至 MLeap 組合。
 
 > [!TIP]
-> 您也可以在[mleap_sql_test/mleap_pyspark. .py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_pyspark.py)檔案中的筆記本外, 檢查或執行與這些步驟相關聯的 Python 程式碼。
+> 您也可以在 [mleap_sql_test/mleap_pyspark.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_pyspark.py) 檔案中，查看或執行與這些步驟有關的 Python 程式碼。
 
-## <a name="model-scoring-with-sql-server"></a>使用 SQL Server 的模型計分
+## <a name="model-scoring-with-sql-server"></a>使用 SQL Server 進行模型評分
 
-既然 Spark ML 管線模型是通用的序列化[MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html)組合格式, 您可以在 JAVA 中為模型評分, 而不會有 Spark。 
+現在 Spark ML 管線模型已經是通用序列化 [MLeap 組合](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) 格式，因此您可以在沒有 Spark 的情況下使用 JAVA 為模型評分。 
 
-這個範例會在 SQL Server 中使用[JAVA 語言延伸](../language-extensions/language-extensions-overview.md)模組。 若要對 SQL Server 中的模型進行評分, 您必須先建立 JAVA 應用程式, 將模型載入 JAVA 並對其進行評分。 您可以在[mssql-mleap-app 資料夾](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app)中找到此 JAVA 應用程式的範例程式碼。
+此範例使用 SQL Server 中的 [JAVA 語言延伸模組](../language-extensions/language-extensions-overview.md)。 若要為 SQL Server 中的模型評分，您需要先建置可將模型載入到 JAVA 並加以評分的 JAVA 應用程式。 您可以在 [mssql-mleap-app folder](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app) 中找到此 JAVA 應用程式的範例程式碼。
 
-建立範例之後, 您可以使用 Transact-sql 呼叫 JAVA 應用程式, 並以資料庫資料表對模型進行評分。 這可以在三個[mleap_sql_test/mleap_sql_tests. .py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_sql_tests.py)原始檔中看到。
+建置範例之後，您可以使用 Transact-SQL 呼叫 JAVA 應用程式，並搭配資料庫資料表為模型評分。 您可以在 [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_sql_tests.py) 來源檔案中看到此情況。
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 big data 叢集的詳細資訊, 請參閱[如何[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在 Kubernetes 上部署](deployment-guidance.md)
+如需巨量資料叢集的詳細資訊，請參閱[如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)

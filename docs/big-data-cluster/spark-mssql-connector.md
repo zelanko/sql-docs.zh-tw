@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531607"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844221"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何使用 MSSQL Spark 連接器從 Spark 讀取和寫入 SQL Server
 
@@ -76,7 +76,7 @@ SQL Server 2019 為巨量資料叢集提供 **MSSQL Spark 連接器**，使用 S
 
 ## <a name="run-the-sample-notebook"></a>執行範例筆記本
 
-若要示範如何以 MSSQL Spark 連接器運用此資料，您可以下載範例筆記本，並於 Azure Data Studio 中開啟，然後執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何在 SQL Server 2019 Preview 中使用筆記本](notebooks-guidance.md)。
+若要示範如何以 MSSQL Spark 連接器運用此資料，您可以下載範例筆記本，並於 Azure Data Studio 中開啟，然後執行每個程式碼區塊。 如需使用筆記本的詳細資訊，請參閱[如何在 SQL Server 中使用筆記本](notebooks-guidance.md)。
 
 1. 從 PowerShell 或 Bash 命令列，執行下列命令，下載 **mssql_spark_connector.ipynb** 範例筆記本：
 

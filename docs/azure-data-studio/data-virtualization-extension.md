@@ -2,20 +2,20 @@
 title: 資料虛擬化延伸模組
 titleSuffix: Azure Data Studio
 description: 適用於 Azure Data Studio 的資料虛擬化延伸模組
-ms.custom: seodec18
-ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
-ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532551"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801125"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>適用於 Azure Data Studio 的資料虛擬化延伸模組
 
@@ -70,13 +70,13 @@ ms.locfileid: "73532551"
 
 ## <a name="release-notes-v0102"></a>版本資訊 (v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 支援
-已更新對 SQL Server 2019 的支援。 連線到 SQL Server 巨量資料叢集執行個體之後，總管樹狀目錄中會出現新的「資料服務」  資料夾。 此資料夾含有下列各項動作的啟動點：針對連線開啟新的筆記本、提交 Spark 作業，以及使用 HDFS。 針對某些動作 (例如透過 HDFS 檔案/資料夾「建立外部資料」  )，您必須安裝 _SQL Server 2019 Preview_ 延伸模組。
+已更新對 SQL Server 2019 的支援。 連線到 SQL Server 巨量資料叢集執行個體之後，總管樹狀目錄中會出現新的「資料服務」  資料夾。 此資料夾含有下列各項動作的啟動點：針對連線開啟新的筆記本、提交 Spark 作業，以及使用 HDFS。 針對某些動作 (例如透過 HDFS 檔案/資料夾_建立外部資料_)，您必須安裝 _SQL Server 2019_ 延伸模組。
 
 ### <a name="notebook-support"></a>Notebook 支援
 我們已在此版本中對 Notebook 使用者介面進行重大更新。 我們的重點在於能夠輕鬆閱讀與您共用的 Notebook。 這表示會移除資料格周圍的所有外框方塊，但保留已選取或滑鼠游標暫留的資料格外框；新增在不需選取資料格的情況下，對簡單資料格層級動作的滑鼠游標暫留支援；以及藉由新增執行計數、動畫的「停止執行」  按鈕和其他項目來釐清執行狀態。 我們也針對「新增筆記本」  (`Ctrl+Shift+N`)、「執行資料格」  (`F5`)、「新增程式碼資料格」  (`Ctrl+Shift+C`)、「新增文字資料格」  (`Ctrl+Shift+T`) 新增了鍵盤快速鍵。 繼續進行，我們的目標將是讓所有重要動作都可透過快速鍵啟動，好讓我們能夠知道您遺漏了什麼！
 
 其他改進和修正包括：
-* 現在，_SQL Server 2019 Preview_ 延伸模組會提示使用者挑選適用於 Python 相依性的安裝目錄。 它也不再於 `.vsix file` 中包含 Python，因而可縮減整個延伸模組的大小。 Python 相依性支援 Spark 和 Python3 核心。
+* 現在，_SQL Server 2019_ 延伸模組會提示使用者挑選適用於 Python 相依性的安裝目錄。 它也不再於 `.vsix file` 中包含 Python，因而可縮減整個延伸模組的大小。 Python 相依性支援 Spark 和 Python3 核心。
 * 已新增從命令列啟動新筆記本的支援。 使用 `--command=notebook.command.new --server=myservername` 引數來啟動，應該會開啟新的筆記本並連線到此伺服器。
 * 對於資料格內具有大型程式碼長度之筆記本的效能修正。 如果程式碼儲存格超過 250 行，則會新增捲軸。
 * 已改進 .ipynb 檔案支援。 現在支援版本 3 或更高版本。 請注意，儲存檔案將更新為版本 4 或更高版本。

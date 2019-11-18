@@ -23,39 +23,44 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - data classification
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+- rank
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712351"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882402"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-將有關敏感度分類的中繼資料新增至一或多個資料庫資料行。 分類可包含敏感度標籤和資訊類型。  
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+
+將有關敏感度分類的中繼資料新增至一或多個資料庫資料行。 分類可包含敏感度標籤和資訊類型。
+
+若是 SQL Server，這是在 SQL Server 2019 中導入的。
 
 將資料庫環境中的機密資料分類，可協助達到擴充可見度和更佳的防護。 [開始使用 SQL 資訊保護](https://aka.ms/sqlip)中可以找到其他資訊
 
 ## <a name="syntax"></a>語法  
 
-```sql
+```
 ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
-    WITH ( <sensitivity_label_option> [, ...n ] )     
+    WITH ( <sensitivity_option> [, ...n ] )     
 
 <object_name> ::=
 {
     [schema_name.]table_name.column_name
 }
 
-<sensitivity_label_option> ::=  
+<sensitivity_option> ::=  
 {   
     LABEL = string |
     LABEL_ID = guidOrString |
     INFORMATION_TYPE = string |
-    INFORMATION_TYPE_ID = guidOrString  
+    INFORMATION_TYPE_ID = guidOrString | 
+    RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
 ```  
 
@@ -83,6 +88,10 @@ ADD SENSITIVITY CLASSIFICATION TO
 *INFORMATION_TYPE_ID*
 
 是與資訊類型相關聯的識別碼。 集中式資訊保護平台常用此來唯一識別系統中的資訊類型。
+
+*RANK*
+
+這是以定義敏感度等級的一組預先定義值為基礎的識別碼。 由其他服務 (例如進階威脅防護) 用於根據其等級偵測異常。
 
 
 ## <a name="remarks"></a>Remarks  

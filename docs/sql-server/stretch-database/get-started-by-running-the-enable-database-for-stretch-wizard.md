@@ -1,5 +1,5 @@
 ---
-title: 開始執行啟用資料庫的延展功能精靈 | Microsoft Docs
+title: 開始執行啟用資料庫的延展功能精靈
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -20,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b4239a8f6aefc9160171c1a700aa37733a66de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136134"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843796"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "68136134"
   
  ![Stretch Database 精靈的 [選取資料表] 頁面](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 精靈的 [選取資料表] 頁面")  
   
-|「資料行」|Description|  
+|資料行|Description|  
 |------------|-----------------|  
 |(沒有標題)|檢查此資料行的核取方塊，以啟用針對 Stretch 選取的資料表。|  
 |**名稱**|指定資料庫中資料表的名稱。|  
@@ -76,7 +77,7 @@ ms.locfileid: "68136134"
   
 1.  在 [選取要延展的資料表]  清單中，按一下資料表之資料列中的 [整份資料表]  。 [選取要延展的資料列]  對話方塊隨即開啟。  
   
-     ![定義日期型篩選述詞](../../sql-server/stretch-database/media/stretch-wizard-2a.png "定義日期型篩選述詞")  
+     ![定義以日期為基礎的篩選述詞](../../sql-server/stretch-database/media/stretch-wizard-2a.png "定義以日期為基礎的篩選述詞")  
   
 2.  在 [選取要延展的資料列]  對話方塊中，選取 [選擇資料列]  。  
   
@@ -160,7 +161,7 @@ ms.locfileid: "68136134"
   
  您在此頁面提供的一或多個 IP 位址會告訴 Azure 伺服器，允許 SQL Server 初始的傳入資料、查詢作業通過 Azure 防火牆。 精靈不會在 SQL Server 的防火牆設定中變更任何項目。  
   
- ![Stretch Database 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")  
+ ![ 精靈的 [選取 IP 位址] 頁面](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 精靈的 [選取 IP 位址] 頁面")  
   
 ##  <a name="Summary"></a> 摘要  
  檢閱您輸入的值、在精靈中選取的選項，以及在 Azure 上估計的成本。 然後選取 [完成]  以啟用 Stretch。  

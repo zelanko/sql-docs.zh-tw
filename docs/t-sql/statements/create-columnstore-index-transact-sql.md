@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab49b1f0323e8582f573db1d611b7114cba6dcaf
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589759"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729924"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -106,7 +106,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
-    [ORDER (column [,...n] ) ] -- in preview
+    [ORDER (column [,...n] ) ]  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
 
@@ -296,7 +296,9 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
  需要資料表的 ALTER 權限。  
   
 ##  <a name="GenRemarks"></a> 一般備註  
- 資料行存放區索引可以在暫存資料表上建立。 當資料表卸除或工作階段結束時，也會卸除索引。  
+資料行存放區索引可以在暫存資料表上建立。 當資料表卸除或工作階段結束時，也會卸除索引。  
+
+已排序的叢集資料行存放區索引可以建立在 Azure SQL 資料倉儲支援的任何資料類型的資料行上，但不包括字串資料行。  
  
 ## <a name="filtered-indexes"></a>篩選的索引  
 已篩選的索引是最佳化的非叢集索引，適用於從資料表選取小型資料列百分比的查詢使用。 它會使用篩選述詞，針對資料表中的部分資料建立索引。 設計良好的已篩選索引可以提升查詢效能、降低儲存成本，並減少維護成本。  

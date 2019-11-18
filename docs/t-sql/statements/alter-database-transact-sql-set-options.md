@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: c9f7578623c7ba86003e8e8d7c611fb4e82a9502
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890470"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729905"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -3049,16 +3049,20 @@ WHERE name = <'Your_Database_Name'>
 
 ```sql
 
-SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests 
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
+> [!IMPORTANT]
+> 建立結果集快取以及從快取擷取資料的作業會在資料倉儲執行個體的控制節點上進行。 當結果集快取開啟時，執行傳回大型結果集的查詢 (例如，> 1 百萬個資料列) 可能會導致控制節點上的 CPU 使用率過高，並使執行個體的整體查詢回應變慢。 這些查詢通常會在資料探索或 ETL 作業期間使用。 若要避免對控制節點造成壓力並導致效能問題，使用者應該先關閉資料庫的結果集快取，再執行這些類型的查詢。  
+
+如需有關使用結果集快取進行效能調整的詳細資訊，請參閱[效能調整指引](/azure/sql-data-warehouse/performance-tuning-result-set-caching)。
+
 ### <a name="permissions"></a>權限
 若要設定 RESULT_SET_CACHING 選項，使用者需要伺服器層級主體登入 (由佈建程序所建立) 或為 `dbmanager` 資料庫角色的成員。  
 
-
 **<snapshot_option> ::=**         
-**適用於**：Azure SQL 資料倉儲 (預覽)
+**適用於**：Azure SQL 資料倉儲 
 
 控制資料庫的交易隔離等級。
 
@@ -3115,7 +3119,6 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>另請參閱
 
-- [使用結果集快取微調效能](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

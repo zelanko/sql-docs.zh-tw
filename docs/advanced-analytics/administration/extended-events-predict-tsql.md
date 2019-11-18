@@ -1,39 +1,40 @@
 ---
-title: 監視使用擴充事件來預測 T-sql
-description: 瞭解如何使用擴充事件來監視和疑難排解 SQL Server Machine Learning 服務中的 SQL 語句。
+title: 使用擴充事件監視 T-SQL
+description: 了解如何使用擴充事件來監視 SQL Server 機器學習服務中的 PREDICT T-SQL 陳述式及針對其進行疑難排解。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 958ac3e24a9deec231e7fd4d5da14477d693f4de
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MT
+ms.openlocfilehash: 9e891ee16ce664e12f12b16c9deda957d0fa2263
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714302"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727732"
 ---
-# <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>使用 SQL Server Machine Learning 服務中的擴充事件來監視預測 T-sql 語句
+# <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務中的擴充事件來監視預測 PREDICT T-SQL 陳述式
 
-瞭解如何使用擴充事件來監視[和疑難排解 SQL Server](../../t-sql/queries/predict-transact-sql.md) Machine Learning 服務中的 SQL 語句。
+了解如何使用擴充事件來監視 SQL Server 機器學習服務中的 [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL 陳述式及針對其進行疑難排解。
 
-## <a name="table-of-extended-events"></a>擴充事件的資料表
+## <a name="table-of-extended-events"></a>擴充事件表
 
-下列擴充事件適用于所有支援[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) t-sql 語句的 SQL Server 版本。 
+下列擴充事件在支援 [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL 陳述式的所有 SQL Server 版本上都可用。 
 
-|name |object_type|description| 
+|NAME |object_type|description| 
 |----|----|----|
-|predict_function_completed |event  |內建執行時間細目|
-|predict_model_cache_hit |event|從 PREDICT 函數模型快取中抓取模型時發生。 使用此事件以及其他 predict_model_cache_ * 事件，針對 PREDICT 函數模型快取所造成的問題進行疑難排解。|
-|predict_model_cache_insert |event  |   當模型插入預測函數模型快取中時發生。 使用此事件以及其他 predict_model_cache_ * 事件，針對 PREDICT 函數模型快取所造成的問題進行疑難排解。    |
-|predict_model_cache_miss   |event|在 PREDICT 函數模型快取中找不到模型時發生。 經常發生此事件可能表示 SQL Server 需要更多記憶體。 使用此事件以及其他 predict_model_cache_ * 事件，針對 PREDICT 函數模型快取所造成的問題進行疑難排解。|
-|predict_model_cache_remove |event| 從模型快取中移除模型以進行 PREDICT 函數時發生。 使用此事件以及其他 predict_model_cache_ * 事件，針對 PREDICT 函數模型快取所造成的問題進行疑難排解。|
+|predict_function_completed |event  |內建執行時間明細|
+|predict_model_cache_hit |event|從 PREDICT 函式模型快取中擷取模型時發生。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。|
+|predict_model_cache_insert |event  |   當模型 插入到 PREDICT 函式模型快取時發生。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。    |
+|predict_model_cache_miss   |event|在 PREDICT 函式模型快取中找不到模型時發生。 經常發生此事件可能表示 SQL Server 需要更多記憶體。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。|
+|predict_model_cache_remove |event| 從 PREDICT 函式的模型快取移除模型時發生。 請搭配其他 predict_model_cache_* 事件使用此事件，以針對 PREDICT 函式模型快取所造成的問題進行疑難排解。|
 
 ## <a name="query-for-related-events"></a>查詢相關事件
 
-若要查看針對這些事件傳回的所有資料行清單, 請在 SQL Server Management Studio 中執行下列查詢:
+若要查看針對這些事件傳回的所有資料行清單，請在 SQL Server Management Studio 中執行下列查詢：
 
 ```sql
 SELECT * 
@@ -43,23 +44,23 @@ WHERE object_name LIKE `predict%'
 
 ## <a name="examples"></a>範例
 
-若要使用 PREDICT 來捕捉評分會話效能的相關資訊:
+使用 PREDICT 來擷取評分工作階段效能的相關資訊：
 
-1. 使用 Management Studio 或其他支援的[工具](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)來建立新的擴充事件會話。
-2. 將事件`predict_function_completed`和`predict_model_cache_hit`新增至會話。
-3. 啟動擴充的事件會話。
+1. 使用 Management Studio 或其他支援的[工具](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)來建立新的擴充事件工作階段。
+2. 將事件 `predict_function_completed` 與 `predict_model_cache_hit` 新增到工作階段。
+3. 啟動擴充事件工作階段。
 4. 執行使用 PREDICT 的查詢。
 
-在結果中, 檢查下列資料行:
+在結果中，檢閱這些資料行：
 
-+ 的值`predict_function_completed`會顯示查詢載入模型和計分所花費的時間。
-+ 的布林值`predict_model_cache_hit`表示查詢是否使用快取模型。 
++ `predict_function_completed` 的值會顯示查詢載入模型及評分所花的時間。
++ `predict_model_cache_hit` 的布林值會指出查詢是否使用快取模型。 
 
 ### <a name="native-scoring-model-cache"></a>原生評分模型快取
 
-除了預測的特定事件以外, 您還可以使用下列查詢來取得有關快取模型和快取使用量的詳細資訊:
+除了 PREDICT 的特定事件之外，您還可以使用下列查詢來取得有關快取模型與快取使用狀況的詳細資訊：
 
-查看原生評分模型快取:
+檢視原生評分模型快取：
 
 ```sql
 SELECT *
@@ -67,7 +68,7 @@ FROM sys.dm_os_memory_clerks
 WHERE type = 'CACHESTORE_NATIVESCORING';
 ```
 
-查看模型快取中的物件:
+檢視模型快取中的物件：
 
 ```sql
 SELECT *
@@ -77,9 +78,9 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 
 ## <a name="next-steps"></a>後續步驟
 
-如需擴充事件（有時稱為 XEvents）以及如何在會話中追蹤事件的詳細資訊，請參閱下列文章：
+如需擴充事件 (有時稱為 XEvents) 以及如何在工作階段中追蹤事件的詳細資訊，請參閱下列文章：
 
-+ [使用 SQL Server Machine Learning Services 中的擴充事件來監視 Python 和 R 腳本](extended-events.md)
-+ [擴充事件概念和架構](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [在 SSMS 中設定事件捕獲](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [管理物件總管中的事件會話](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [使用 SQL Server 機器學習服務中的擴充事件來監視 Python 與 R 指令碼](extended-events.md)
++ [擴充事件概念與架構](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
++ [在 SSMS 中設定事件擷取](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
++ [在物件總管中管理事件工作階段](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)

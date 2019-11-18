@@ -1,5 +1,5 @@
 ---
-title: 監視及針對資料移轉進行疑難排解 (Stretch Database) | Microsoft Docs
+title: 監視及疑難排解資料移轉
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,12 +10,13 @@ helpviewer_keywords:
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6130bd88e93a33c5bcb295e73b752ae1b749ff77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136081"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843783"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>監視和疑難排解資料移轉 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +29,9 @@ ms.locfileid: "68136081"
   
 -   監視器的上半部會顯示啟用延展的 SQL Server 資料庫與遠端 Azure 資料庫的一般資訊。  
   
--   監視器的下半部會顯示資料庫中每個已啟用延展的資料表資料移轉狀態。  
+-   監視的下半部會顯示資料庫中每個已啟用延展的資料表資料移轉狀態。  
   
- ![Stretch Database 監視器](../../sql-server/stretch-database/media/stretch-monitor.PNG "Stretch Database 監視器")  
+ ![Stretch Database 監視](../../sql-server/stretch-database/media/stretch-monitor.PNG "Stretch Database 監視")  
   
 ##  <a name="Migration"></a> 在動態管理檢視中檢查資料移轉狀態  
  開啟動態管理檢視 **sys.dm_db_rda_migration_status** 查看已移轉的批次和資料列數目。 如需詳細資訊，請參閱 [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
