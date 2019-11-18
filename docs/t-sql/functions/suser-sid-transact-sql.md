@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843592"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981739"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>引數  
  **'** *login* **'**  
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
  這是使用者的登入名稱。 *login* 為 **sysname**。 選擇性的 *login* 可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組。 若沒有指定 *login*，則會傳回目前安全性內容的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
  *Param2*  
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
  指定是否要驗證登入名稱。 *Param2* 的類型為 **int** 且為選擇性。 當 *Param2* 為 0 時，不會驗證登入名稱。 當 *Param2* 未指定為 0 時，會驗證 Window 登入名稱與儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的登入名稱完全相同。  
   
@@ -80,7 +80,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>B. 搭配特定登入使用 SUSER_SID  
  下列範例會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 登入的安全性識別碼。  
   
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -90,7 +90,7 @@ GO
 ### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. 搭配使用 SUSER_SID 與 Windows 使用者名稱  
  下列範例會傳回 Windows 使用者 `London\Workstation1` 的安全性識別碼。  
   
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -118,7 +118,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. 比較 Windows 登入名稱與 SQL Server 中所儲存的登入名稱  
  下列範例示範如何使用 *Param2* 從 Windows 取得 SID，並使用該 SID 作為 `SUSER_SNAME` 函式的輸入。 此範例以 Windows 中的儲存格式 (`TestComputer\User`) 提供登入，並以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的儲存格式 (`TESTCOMPUTER\User`) 傳回登入。  
   
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

@@ -1,6 +1,5 @@
 ---
-title: 使用內建函式，驗證、查詢以及變更 JSON 資料 (SQL Server) | Microsoft 文件
-ms.custom: ''
+title: 使用內建函數，驗證、查詢以及變更 JSON 資料
 ms.date: 07/17/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 337a1b694023bfba9376c461255979d944330c5f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70908326"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096070"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用內建函數，驗證、查詢以及變更 JSON 資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927216"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982027"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ALTER RESOURCE GOVERNOR
  針對所有工作負載群組與資源集區重設統計資料。 如需詳細資訊，請參閱 [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 和 [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
- **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。  
   
  設定每一個磁碟區已排入佇列的最大 I/O 作業量。 這些 I/O 作業可以是任何規模的讀取或寫入。  MAX_OUTSTANDING_IO_PER_VOLUME 的最大值為 100。 其值並非百分比。 這項設定是設計來針對磁碟區的 IO 特性調整 IO 資源管理。 建議您試驗不同的值，並考慮使用 IOMeter、[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) 或 SQLIO (已淘汰) 等校正工具識別儲存體子系統的最大值。 此設定提供系統層級安全性檢查，即使其他集區的 MAX_IOPS_PER_VOLUME 設為無限制，仍可讓 SQL Server 達到資源集區的 IOPS 下限。 如需有關 MAX_IOPS_PER_VOLUME 的詳細資訊，請參閱 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)。  
   
@@ -178,7 +178,7 @@ GO
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
-### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>E. 設定 MAX_OUTSTANDING_IO_PER_VOLUME 選項  
+### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. 設定 MAX_OUTSTANDING_IO_PER_VOLUME 選項  
  下列範例會將 MAX_OUTSTANDING_IO_PER_VOLUME 選項設為 20。  
   
 ```  

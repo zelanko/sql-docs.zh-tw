@@ -26,14 +26,14 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74ecfa682fb8b3942b1931c07273cdfa93831c6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117614"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981779"
 ---
-# <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
+# <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回與安全性識別碼 (SID) 相關聯的登入名稱。  
@@ -48,7 +48,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="arguments"></a>引數  
  *server_user_sid*  
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
  這是選擇性的登入安全性識別碼。 *server_user_sid* 為 **varbinary(85)** 。 *server_user_sid* 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組的安全性識別碼。 如果未指定 *server_user_sid*，就會傳回目前使用者的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
@@ -67,7 +67,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-susersname"></a>A. 使用 SUSER_SNAME  
+### <a name="a-using-suser_sname"></a>A. 使用 SUSER_SNAME  
  下列範例會傳回目前安全性內容的登入名稱。  
   
 ```  
@@ -75,17 +75,17 @@ SELECT SUSER_SNAME();
 GO  
 ```  
   
-### <a name="b-using-susersname-with-a-windows-user-security-id"></a>B. 搭配 Windows 使用者安全性識別碼使用 SUSER_SNAME  
+### <a name="b-using-suser_sname-with-a-windows-user-security-id"></a>B. 搭配 Windows 使用者安全性識別碼使用 SUSER_SNAME  
  下列範例會傳回與 Windows 安全性識別碼相關聯的登入名稱。  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
   
-### <a name="c-using-susersname-as-a-default-constraint"></a>C. 使用 SUSER_SNAME 做為 DEFAULT 條件約束  
+### <a name="c-using-suser_sname-as-a-default-constraint"></a>C. 使用 SUSER_SNAME 做為 DEFAULT 條件約束  
  下列範例會利用 `SUSER_SNAME` 來做為 `DEFAULT` 陳述式中的 `CREATE TABLE` 條件約束。  
   
 ```  
@@ -102,10 +102,10 @@ INSERT sname_example DEFAULT VALUES;
 GO  
 ```  
   
-### <a name="d-calling-susersname-in-combination-with-execute-as"></a>D. 結合 EXECUTE AS 呼叫 SUSER_SNAME  
+### <a name="d-calling-suser_sname-in-combination-with-execute-as"></a>D. 結合 EXECUTE AS 呼叫 SUSER_SNAME  
  當從模擬內容中呼叫 SUSER_SNAME 時，這個範例會顯示 SUSER_SNAME 的行為。  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
 ```  
 SELECT SUSER_SNAME();  
@@ -129,7 +129,7 @@ sa
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-susersname"></a>E. 使用 SUSER_SNAME  
+### <a name="e-using-suser_sname"></a>E. 使用 SUSER_SNAME  
  下列範例會傳回安全性識別碼值為 `0x01` 的登入名稱。  
   
 ```  

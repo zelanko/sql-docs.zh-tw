@@ -22,12 +22,12 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117137"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982996"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ CREATE SERVER AUDIT audit_name
  除了目前的檔案以外，指定要保留在檔案系統中的檔案數目上限。 *MAX_ROLLOVER_FILES* 值必須是整數或 UNLIMITED。 預設值為 UNLIMITED。 每當稽核重新啟動 (當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體重新啟動或者稽核先關閉然後再次開啟時，就可能會發生此情況) 或者由於達到 MAXSIZE 而需要新的檔案時，系統就會評估此參數。 評估 *MAX_ROLLOVER_FILES* 時，如果檔案的數目超過 *MAX_ROLLOVER_FILES* 設定，系統就會刪除最舊的檔案。 因此，如果 *MAX_ROLLOVER_FILES* 的設定為 0，每次評估 *MAX_ROLLOVER_FILES* 設定時，系統都會建立新的檔案。 評估 *MAX_ROLLOVER_FILES* 設定時，系統只會自動刪除一個檔案，所以當您降低 *MAX_ROLLOVER_FILES* 的值時，除非手動刪除舊的檔案，否則檔案的數目將不會縮減。 可以指定的檔案數量上限為 2,147,483,647。  
   
  MAX_FILES =*integer*  
- **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  指定可建立的最大稽核檔案數目。 達到此限制時，不會換用第一個檔案。 達到 MAX_FILES 限制時，導致系統產生其他稽核事件的任何動作都會失敗並發生錯誤。  
   
@@ -110,18 +110,18 @@ SHUTDOWN
   
  FAIL_OPERATION  
  如果資料庫動作導致稽核的事件，這些動作就會失敗。 雖然不會導致稽核事件的動作可繼續進行，不過也無法發生稽核的事件。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 當維持完整稽核比 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的完整存取權更重要時，請使用此選項。  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
 
  AUDIT_GUID =*uniqueidentifier*  
  若要支援類似資料庫鏡像等案例，稽核需要一個特定的 GUID，而且此 GUID 要符合鏡像資料庫中找到的 GUID。 當建立稽核之後，就無法再修改 GUID。  
   
  predicate_expression  
- **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  指定用來判斷是否應該處理事件的述詞運算式。 述詞運算式限制為 3000 個字元，這會限制字串引數。  
   
  event_field_name  
- **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  這是識別述詞來源之事件欄位的名稱。 稽核欄位會在 [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 中說明。 除了 `file_name`、`audit_file_offset` 和 `event_time` 以外的所有欄位都可進行稽核。  
 
@@ -136,12 +136,12 @@ SHUTDOWN
 
 
  number  
- **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  這是包含 **decimal** 的任何數值類型。 限制為缺少可用的實體記憶體，或是數字太大而不能表示為 64 位元整數。  
   
  ' string '  
- **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  ANSI 或 Unicode 字串 (依述詞比較的需求而定)。 不會針對述詞比較函數執行隱含字串類型轉換。 傳遞錯誤的類型會產生錯誤。  
   

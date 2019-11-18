@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac5c9ff7d2fbb5d32b559e6225dba4e7bbb7a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948330"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981699"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  指定指定之資料行的值應該以遞增或遞減順序排序。 ASC 是預設排序次序。 Null 值會當做最低的可能值來處理。  
   
  ROWS | RANGE  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
  指定資料分割內的起始點和結束點，以進一步限制資料分割中的資料列。 這可以藉由指定與目前資料列有關的資料列範圍 (透過邏輯關聯或實體關聯) 來完成。 可以使用 ROWS 子句來達成實體關聯。  
   
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS 或 RANGE 要求必須指定 ORDER BY 子句。 如果 ORDER BY 包含多個順序運算式，則 CURRENT ROW FOR RANGE 會在判斷目前資料列時，考量 ORDER BY 清單中的所有資料列。  
   
  UNBOUNDED PRECEDING  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  指定視窗從資料分割的第一個資料列開始。 只能將 UNBOUNDED PRECEDING 指定為視窗起點。  
   
@@ -145,17 +145,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  與 \<指定不帶正負號的值> 一起指定，可指出要置於目前資料列前面的資料列或值的數目。 RANGE 不允許這項指定。  
   
  CURRENT ROW  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
  指定在與 ROWS 一起使用時，視窗在目前的資料列開始或結束，或者在與 RANGE 一起使用時則為目前值。 CURRENT ROW 可以指定為開始點和結束點。  
   
  BETWEEN \<繫結的視窗框架 > AND \<繫結的視窗框架 >  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
  與 ROWS 或 RANGE 一起使用，以指定視窗的下 (開始) 邊界點和上 (結束) 邊界點。 \<繫結的視窗框架> 會定義界限開始點，而 \<繫結的視窗框架> 則定義界限結束點。 上限不能小於下限。  
   
  UNBOUNDED FOLLOWING  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
  指定視窗在資料分割的最後一個資料列結束。 只能將 UNBOUNDED FOLLOWING 指定為視窗結束點。 例如，RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING 會定義一個視窗，此視窗從資料分割的目前資料列開始，並結束於資料分割的最後一個資料列。  
   
@@ -163,7 +163,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  與 \<指定不帶正負號的值> 一起指定，可指出要置於目前資料列後面的資料列或值的數目。 將 \<指定不帶正負號的值> FOLLOWING 指定為視窗開始點時，結束點必須是 \<指定不帶正負號的值> FOLLOWING。 例如，ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING 會定義一個視窗，此視窗從目前資料列後面的第二個資料列開始，並結束於目前資料列後面的第十個資料列。 RANGE 不允許這項指定。  
   
  不帶正負號的整數常值  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  一個正整數常值 (包括 0)，可指定要置於目前資料列或值前面或後面的資料列或值的數目。 這項指定只對 ROWS 有效。  
   
@@ -188,7 +188,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. 搭配 ROW_NUMBER 函數來使用 OVER 子句  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. 搭配 ROW_NUMBER 函數來使用 OVER 子句  
  下列範例示範如何搭配 ROW_NUMBER 函數使用 OVER 子句，以針對資料分割內的每一個資料列顯示資料列號碼。 OVER 子句中指定的 ORDER BY 子句會依照 `SalesYTD` 資料行來排序每一個資料分割中的資料列。 SELECT 陳述式中的 ORDER BY 子句會決定傳回整個查詢結果集的順序。  
   
 ```sql  
@@ -390,7 +390,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>D. 指定 ROWS 子句  
   
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
   
  下列範例會使用 ROWS 子句來定義一個視窗，其上的資料列會計算為目前資料列與隨後的 *N* 個資料列 (在此範例中為 1 個資料列)。  
   
@@ -455,7 +455,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. 搭配 ROW_NUMBER 函數來使用 OVER 子句  
+### <a name="e-using-the-over-clause-with-the-row_number-function"></a>E. 搭配 ROW_NUMBER 函數來使用 OVER 子句  
  下列範例會根據指派給業務代表的銷售配額，傳回業務代表的 ROW_NUMBER。  
   
 ```sql  

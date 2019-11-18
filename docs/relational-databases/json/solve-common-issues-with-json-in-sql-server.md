@@ -1,6 +1,5 @@
 ---
-title: 解決 SQL Server 中的 JSON 常見問題 | Microsoft 文件
-ms.custom: ''
+title: 解決 SQL Server 中的 JSON 常見問題
 ms.date: 07/07/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,13 +10,14 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 268ec12e297d6c8a3e5dd869d0d143877a81e505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131464"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096107"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解決 SQL Server 中的 JSON 常見問題
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FOR JSON PATH
   
  JSON_QUERY 若無選用的第二參數，則僅會傳回第一個引數做為結果。 由於 JSON_QUERY 永遠會傳回有效的 JSON，因此 FOR JSON 知道此結果無須逸出。
 
-### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>使用 WITHOUT_ARRAY_WRAPPER 子句產生的 JSON，會在 FOR JSON 輸出中逸出  
+### <a name="json-generated-with-the-without_array_wrapper-clause-is-escaped-in-for-json-output"></a>使用 WITHOUT_ARRAY_WRAPPER 子句產生的 JSON，會在 FOR JSON 輸出中逸出  
  **問：** 我嘗試使用 FOR JSON 和 WITHOUT_ARRAY_WRAPPER 選項，格式化資料行運算式。  
   
 ```sql  
@@ -110,7 +110,7 @@ FROM OPENJSON(@json)
         arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>使用 OPENJSON 傳回長文字值，而不要用 JSON_VALUE
+### <a name="return-long-text-value-with-openjson-instead-of-json_value"></a>使用 OPENJSON 傳回長文字值，而不要用 JSON_VALUE
  **問：** 在包含長文字的 JSON 文字當中具有描述索引鍵。 `JSON_VALUE(@json, '$.description')` 傳回 NULL 而非值。  
   
  **答：** JSON_VALUE 設計為傳回小純量值。 函數通常會傳回 NULL 而非溢位錯誤。 若您想要傳回整數值，請使用支援 NVARCHAR(MAX) 值的 OPENJSON，如下列範例所示。  
@@ -119,7 +119,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>使用 OPENJSON 處理重複的索引鍵，而不要用 JSON_VALUE
+### <a name="handle-duplicate-keys-with-openjson-instead-of-json_value"></a>使用 OPENJSON 處理重複的索引鍵，而不要用 JSON_VALUE
  **問：** 在 JSON 文字中具有重複的索引鍵。 JSON_VALUE 僅傳回在路徑上找到的第一個索引鍵。 如何傳回所有具相同名稱的索引鍵？  
   
  **答：** 內建 JSON 純量函數僅會傳回第一次出現的參考物件。 若您需要多個索引鍵，請使用 OPENJSON 資料表值函式，如下列範例所示。  

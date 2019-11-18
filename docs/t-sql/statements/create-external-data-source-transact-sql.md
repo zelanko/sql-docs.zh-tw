@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 427aa6c21f108f9c488e8209e311d242d0a785df
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70274734"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981880"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -222,6 +222,8 @@ WITH
 (    LOCATION   = 'oracle://145.145.145.145:1521'
 ,    CREDENTIAL = OracleProxyAccount
 ,    PUSHDOWN   = ON
+,    TYPE=BLOB_STORAGE
+)
 ;
 ```
 

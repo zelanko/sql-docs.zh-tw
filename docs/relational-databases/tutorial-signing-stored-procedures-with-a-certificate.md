@@ -1,6 +1,6 @@
 ---
-title: 教學課程：使用憑證簽署預存程序 | Microsoft Docs
-ms.custom: ''
+title: 教學課程：使用憑證簽署預存程序
+ms.custom: seo-dt-2019
 ms.date: 08/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 225f827de70f4946cabca3e06e7a7be364094479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6d95dc22b557b24cb2ab3a5b4515a0adfa8c605
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138377"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095669"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教學課程：使用憑證簽署預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

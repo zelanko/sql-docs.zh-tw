@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149976"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962368"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
@@ -134,7 +134,7 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
   
 1. 使用 [伺服器組態 - 定序]  頁面，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。    
 
-   預設安裝設定會由作業系統 (OS) 的地區設定決定。 您可以在安裝期間變更伺服器層級的定序，也可以在安裝之前變更 OS 地區設定。 預設定序會設定為與每個特定地區設定建立關聯的最舊可用版本。 這樣做是為了與舊版相容。 因此，此定序不一定是建議的定序。 若要利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，請變更預設安裝設定以使用 Windows 定序。 例如，針對 OS 地區設定 [英文 (美國)]  (字碼頁 1252)，安裝期間的預設定序是 **SQL_Latin1_General_CP1_CI_AS**，且可以變更為與其最接近的 Windows 定序對應項目 **Latin1_General_100_CI_AS_SC**。
+   預設安裝設定會由作業系統 (OS) 的地區設定決定。 您可以在安裝期間變更伺服器層級的定序，也可以在安裝之前變更 OS 地區設定。 預設定序會設定為與每個特定地區設定建立關聯的最舊可用版本。 這樣做是為了與舊版相容。 因此，此定序不一定是建議的定序。 若要完全利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能，請變更預設安裝設定以使用 Windows 定序。 例如，針對 OS 地區設定 [英文 (美國)]  (字碼頁 1252)，安裝期間的預設定序是 **SQL_Latin1_General_CP1_CI_AS**，且可以變更為與其最接近的 Windows 定序對應項目 **Latin1_General_100_CI_AS_SC**。
 
    如需詳細資訊，請參閱[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
@@ -317,12 +317,6 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
      如需詳細資訊，請參閱 [[資料庫引擎設定 - 資料目錄] 頁面](../../sql-server/install/instance-configuration.md#datadir)。
 
      使用 [資料庫引擎設定 - TempDB]  頁面來設定 **tempdb** 的檔案大小、檔案數目、非預設安裝目錄和檔案成長設定。 如需詳細資訊，請參閱 [[資料庫引擎設定 - TempDB] 頁面](../../sql-server/install/instance-configuration.md#tempdb)。
-< < < < < < < HEAD
-  
-     使用 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - MaxDOP]  頁面指定平行處理原則的最大程度。 此設定會決定單一陳述式在執行期間可以使用的處理器數目。 安裝期間會自動計算出建議的值。 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 如需詳細資訊，請參閱[資料庫引擎組態 - MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) 頁面。 
-
-     使用 [資料庫引擎組態 - 記憶體]  頁面來指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在啟動後將使用的**最小伺服器記憶體**與**最大伺服器記憶體**值。 您可以使用預設值、使用計算出的建議值，或在選擇 [建議]  選項之後手動指定您自己的值。 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
-=======
 
      使用 [[!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - MaxDOP]  頁面指定平行處理原則的最大程度。 此設定會決定單一陳述式在執行期間可以使用的處理器數目。 安裝期間會自動計算出建議的值。 
      
@@ -337,9 +331,8 @@ Microsoft 發現 Microsoft Visual C++ 2013 執行階段二進位檔的問題，S
     > 此頁面僅適用於從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始的安裝程式。 
     
     如需詳細資訊，請參閱[資料庫引擎組態 - 記憶體頁面](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
->>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
 
-     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+     使用 [資料庫引擎設定 - FILESTREAM]  頁面針對您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟用 FILESTREAM。 如需詳細資訊，請參閱 [[資料庫引擎設定 - FILESTREAM] 頁面](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)。  
   
 1. 使用 [Analysis Services 設定 - 帳戶佈建]  頁面指定伺服器模式以及擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員權限的使用者或帳戶。 伺服器模式會決定伺服器上使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選取預設的伺服器模式選項 [多維度和資料採礦]  。
 

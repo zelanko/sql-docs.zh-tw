@@ -1,6 +1,5 @@
 ---
-title: FOR JSON 如何逸出特殊字元和控制字元 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: FOR JSON 如何逸出特殊字元和控制字元
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,13 +10,14 @@ helpviewer_keywords:
 ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 508a50443e039fa77f1190c5a00b6ffdbf93379a
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 5654a27a5457fe1d89fe76241c576f831dc9bf55
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70910812"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095789"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON 如何逸出特殊字元和控制字元 (SQL Server)
 

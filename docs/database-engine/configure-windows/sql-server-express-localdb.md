@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1a50b7834f8efb7165b8ae53d11add9504d0fc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026045"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926042"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ LocalDB 安裝會複製啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenovers
 
 ## <a name="try-it-out"></a>現在就試試看！ 
 
-- 若要下載並安裝 SQL Server Express LocalDB，請移至 **[SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-downloads)** 。 LocalDB 是您在安裝期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請選擇 **Express Advanced** 或 LocalDB 套件。 在 Visual Studio 安裝程式  中，您可以安裝 SQL Server Express LocalDB 作為 **.NET 桌面開發**工作負載的一部分，或是作為個別的元件。
+- 若要下載並安裝 SQL Server Express LocalDB，請移至 **[SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-editions-express)** 。 LocalDB 是您在安裝期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請選擇 **Express Advanced** 或 LocalDB 套件。 在 Visual Studio 安裝程式  中，您可以安裝 SQL Server Express LocalDB 作為 **.NET 桌面開發**工作負載的一部分，或是作為個別的元件。
 
  >[!TIP]
  > 您也可以安裝 LocalDB 作為 Visual Studio 的一部分。 在 Visual Studio 安裝期間，選取 [.NET 桌面開發]  工作負載，它包含了 SQL Server Express LocalDB。
@@ -113,7 +113,7 @@ REM Gather information about the instance of LocalDB
 |||
 |-|-|
 |[屬性]|`LocalDBApp1`|
-|Version|\<目前版本>|
+|版本|\<目前版本>|
 |共用名稱|""|
 |[擁有者]|"\<您的 Windows 使用者>"|
 |自動建立|否|

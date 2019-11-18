@@ -19,12 +19,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eef3752a362dcc6709d7c7461cd35fdc5c1892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29008af0f2584322b180a82b20268c452c603baa
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077783"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982926"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -55,7 +55,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  輸出符合演算法標準：適用於 MD2、MD4 和 MD5 的 128 位元 (16 位元組)；適用於 SHA 和 SHA1 的 160 位元 (20 位元組)；適用於 SHA2_256 的 256 位元 (32 位元組)，以及適用於 SHA2_512 的 512 位元 (64 位元組)。  
   
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
  針對 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更早版本，允許的輸入值限制為 8000 個位元組。  
   

@@ -1,30 +1,36 @@
 ---
-title: 監看式視窗 | Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
+title: 監看式視窗
+titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.reviewer: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd797dce2f05e6636f5037ae1f70939acbcbcadb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f8870849ef3cb83262284eab524b741c25a0a7ae
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253291"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119223"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 偵錯工具 - 監看式視窗
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **[監看式]** 視窗會顯示有關您已選取之運算式的資訊。 最多可以有四個監看式視窗：[監看式 1]  、[監看式 2]、[監看式 3]  和 [監看式 4]  。 運算式會在 **[呼叫堆疊]** 視窗內選取的目前呼叫堆疊框架範圍內評估。 您必須在偵錯模式下，才能監看變數和運算式。  
-  
-## <a name="task-list"></a>工作清單  
- **存取監看式視窗**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+**[監看式]** 視窗會顯示有關您已選取之運算式的資訊。 最多可以有四個監看式視窗：[監看式 1]  、[監看式 2]、[監看式 3]  和 [監看式 4]  。 運算式會在 **[呼叫堆疊]** 視窗內選取的目前呼叫堆疊框架範圍內評估。 您必須在偵錯模式下，才能監看變數和運算式。  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>工作清單
+
+**存取監看式視窗**  
   
 -   在 **[偵錯]** 功能表上，按一下 **[視窗]** ，再按一下 **[監看式]** ，然後按一下 **Watch 1**、 **Watch 2、Watch 3**或 **Watch 4**。  
   

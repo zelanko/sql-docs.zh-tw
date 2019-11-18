@@ -1,6 +1,6 @@
 ---
-title: 執行 SQL Server Agent 作業工作 | Microsoft Docs
-ms.custom: ''
+title: 執行 SQL Server Agent 作業工作
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 361a7cf30b000c2b28259eefd134b7a17a15957d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 081cfc1b5808ca38fb536197cfa44d60f2203b99
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294171"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056565"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>執行 SQL Server Agent 作業工作
 

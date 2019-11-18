@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742976"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983027"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|這是字串備份類型，它有下列幾種：<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|在媒體中，用來識別備份組的唯一識別碼。|  
 |**CompressedBackupSize**|**bigint**|備份組的位元組計數。 就未壓縮的備份而言，這個值會與 **BackupSize** 相同。<br /><br /> 若要計算壓縮比，請使用 **CompressedBackupSize** 和 **BackupSize**。<br /><br /> 在 **msdb** 升級期間，這個值會設定為符合 **BackupSize** 資料行的值。|  
-|**containment**|**tinyint** not NULL|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示資料庫的內含項目狀態。<br /><br /> 0 = 資料庫內含項目已關閉<br /><br /> 1 = 資料庫內含項目是部分|  
+|**containment**|**tinyint** not NULL|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 指示資料庫的內含項目狀態。<br /><br /> 0 = 資料庫內含項目已關閉<br /><br /> 1 = 資料庫內含項目是部分|  
 |**KeyAlgorithm**|**nvarchar(32)**|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至目前的版本)。<br /><br /> 用於加密備份的加密演算法。 NO_Encryption 表示備份未加密。 無法判斷正確的值時，該值應該是 NULL。|  
 |**EncryptorThumbprint**|**varbinary(20)**|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至目前的版本)。<br /><br /> 加密程式指模，可用來尋找資料庫中的憑證或非對稱金鑰。 備份未加密時，這個值會是 NULL。|  
 |**EncryptorType**|**nvarchar(32)**|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至目前的版本)。<br /><br /> 使用的加密程式類型：憑證或非對稱金鑰。 備份未加密時，這個值會是 NULL。|  

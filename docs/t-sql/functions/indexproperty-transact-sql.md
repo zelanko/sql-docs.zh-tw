@@ -20,12 +20,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a2731f569ecf602c4aaa21e233ec671596e16ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024285"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982941"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,14 +61,14 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|ALTER DATABASE 的 AUTO_CREATE_STATISTICS 選項所產生的統計資料。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsClustered**|索引已建立叢集。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsDisabled**|索引已停用。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 輸入無效。|  
-|**IsFulltextKey**|索引是資料表的全文檢索和語意索引鍵。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。<br /><br /> NULL = 輸入無效。|  
+|**IsFulltextKey**|索引是資料表的全文檢索和語意索引鍵。|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。<br /><br /> NULL = 輸入無效。|  
 |**IsHypothetical**|索引是假設的，無法直接當作資料存取路徑來使用。 假設的索引用來存放資料行層級的統計資料，由 Database Engine Tuning Advisor 來維護和使用。|1 = True<br /><br /> 0 = False 或 XML 索引<br /><br /> NULL = 輸入無效。|  
-|**IsPadIndex**|索引指定每個內部節點保留開啟狀態的空間。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。|  
-|**IsPageLockDisallowed**|ALTER INDEX 的 ALLOW_PAGE_LOCKS 選項所設定的頁面鎖定值。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允許頁面鎖定。<br /><br /> 0 = 允許頁面鎖定。<br /><br /> NULL = 輸入無效。|  
-|**IsRowLockDisallowed**|ALTER INDEX 的 ALLOW_ROW_LOCKS 選項所設定的資料列鎖定值。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允許資料列鎖定。<br /><br /> 0 = 允許資料列鎖定。<br /><br /> NULL = 輸入無效。|  
+|**IsPadIndex**|索引指定每個內部節點保留開啟狀態的空間。|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsPageLockDisallowed**|ALTER INDEX 的 ALLOW_PAGE_LOCKS 選項所設定的頁面鎖定值。|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 1 = 不允許頁面鎖定。<br /><br /> 0 = 允許頁面鎖定。<br /><br /> NULL = 輸入無效。|  
+|**IsRowLockDisallowed**|ALTER INDEX 的 ALLOW_ROW_LOCKS 選項所設定的資料列鎖定值。|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。<br /><br /> 1 = 不允許資料列鎖定。<br /><br /> 0 = 允許資料列鎖定。<br /><br /> NULL = 輸入無效。|  
 |**IsStatistics**|*index_or_statistics_name* 為 CREATE STATISTICS 陳述式或 ALTER DATABASE 之 AUTO_CREATE_STATISTICS 選項建立的統計資料。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsUnique**|索引是唯一的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
-|**IsColumnstore**|索引是 xVelocity 記憶體最佳化的資料行存放區索引。|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsColumnstore**|索引是 xVelocity 記憶體最佳化的資料行存放區索引。|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|索引已啟用最後一頁插入的最佳化。|**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本。 <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>傳回類型  

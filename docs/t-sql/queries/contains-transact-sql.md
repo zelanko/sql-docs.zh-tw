@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f088f9340c0441b15eea7382ff49b1b87181479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902120"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982827"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ CONTAINS (
  指定查詢將會在 FROM 子句所指定的資料表中，針對指定的搜尋條件搜尋所有的全文檢索索引資料行。 CONTAINS 子句中的資料行必須來自包含全文檢索索引的單一資料表。 除非已指定 *language_term*，否則資料表之所有資料行的語言都必須相同。  
   
  PROPERTY ( *column_name* , '*property_name*')  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
  指定要在其上搜尋指定之搜尋條件的文件屬性。  
   
@@ -246,7 +246,7 @@ WHERE CONTAINS(Description, @SearchWord);
  如需有關一般相近詞彙的詳細資訊，請參閱[使用 NEAR 搜尋接近另一個單字的字詞](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。  
   
  \<custom_proximity_term>  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
   
  指定單字或片語比對，並選擇性地指定搜尋詞彙之間所允許的最大距離。 您也可以指定搜尋詞彙必須依指定的正確順序 (\<match_order>) 尋找。  
   
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. 搭配 \<simple_term> 使用 CONTAINS  
+### <a name="a-using-contains-with-simple_term"></a>A. 搭配 \<simple_term> 使用 CONTAINS  
  下列範例會尋找所有價格是 `$80.99` ，且含有 `Mountain`這個單字的產品。  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. 搭配 \<simple_term> 使用 CONTAINS 和片語  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. 搭配 \<simple_term> 使用 CONTAINS 和片語  
  下列範例會傳回含有 `Mountain` 或 `Road` 片語的所有產品。  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. 搭配 \<prefix_term> 使用 CONTAINS  
+### <a name="c-using-contains-with-prefix_term"></a>C. 搭配 \<prefix_term> 使用 CONTAINS  
  下列範例會傳回所有至少有一個字的開頭是 `Name` 資料行中之前置詞鏈結的產品名稱。  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. 搭配 \<prefix_term> 使用 CONTAINS 和 OR  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. 搭配 \<prefix_term> 使用 CONTAINS 和 OR  
  下列範例會傳回所有包含前置詞為 `chain` 或 `full` 的字串之類別目錄描述。  
   
 ```sql  
@@ -420,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. 搭配 \<proximity_term> 使用 CONTAINS  
+### <a name="e-using-contains-with-proximity_term"></a>E. 搭配 \<proximity_term> 使用 CONTAINS  
   
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
  下列範例會在 `Production.ProductReview` 資料表中，於 "`control`" 單字的 10 個詞彙內搜尋包含單字 `bike`，且依據指定順序 (也就是 "`bike`" 需位於 "`control`" 之前) 的所有註解。  
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. 搭配 \<generation_term> 使用 CONTAINS  
+### <a name="f-using-contains-with-generation_term"></a>F. 搭配 \<generation_term> 使用 CONTAINS  
  下列範例會搜尋所有含 `ride` 一字下列各種形式的產品：riding、ridden 等等。  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. 搭配 \<weighted_term> 使用 CONTAINS  
+### <a name="g-using-contains-with-weighted_term"></a>G. 搭配 \<weighted_term> 使用 CONTAINS  
  下列範例會搜尋所有包含 `performance`、`comfortable` 或 `smooth` 等字的產品名稱，且每個字都各有不同的加權。  
   
 ```sql  
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. 在文件屬性上進行查詢  
   
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。 
   
  下列查詢會在 `Title` 資料表之 `Document` 資料行的 `Production.Document` 索引屬性上進行搜尋。 此查詢只會傳回其 `Title` 屬性包含 `Maintenance` 或 `Repair` 字串的文件。  
   

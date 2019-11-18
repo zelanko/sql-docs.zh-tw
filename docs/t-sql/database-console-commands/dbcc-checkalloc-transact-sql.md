@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102129"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056347"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ DBCC CHECKALLOC
  TABLOCK  
  使 DBCC 命令取得獨佔資料庫鎖定。
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  顯示當指定了所有其他指定的選項時，執行 DBCC CHECKALLOC 所需要的 tempdb 估計空間量。
   
 ## <a name="remarks"></a>Remarks  

@@ -1,6 +1,5 @@
 ---
-title: JSON 路徑運算式 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: JSON 路徑運算式
 ms.date: 01/23/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bca9bcff4a622964d6f6e05fb46b458a1cd78ddf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909919"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095737"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路徑運算式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

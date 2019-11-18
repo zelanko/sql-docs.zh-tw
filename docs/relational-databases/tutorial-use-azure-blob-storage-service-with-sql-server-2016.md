@@ -1,6 +1,6 @@
 ---
-title: 教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 | Microsoft Docs
-ms.custom: ''
+title: 教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
+ms.custom: seo-dt-2019
 ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ea8d28fafe8b4812b3e2cfd55c03640e46cd7ab2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906972"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095697"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 

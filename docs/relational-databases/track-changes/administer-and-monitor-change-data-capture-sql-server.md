@@ -1,5 +1,5 @@
 ---
-title: 管理和監視異動資料擷取 (SQL Server) | Microsoft Docs
+title: 管理和監視異動資料擷取
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f16d6cd8cbc27e675da9f8153555dcaf9c99749f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909932"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095320"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
 

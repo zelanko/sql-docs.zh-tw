@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3019dc90789ccf8cf43b07a15d5ff0ccc7fb50a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095117"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926027"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68095117"
 |**session_id**|事件發生所在之工作階段的識別碼。|**int**|是|  
 |**server_principal_id**|動作執行所在之登入環境的識別碼。|**int**|是|  
 |**database_principal_id**|動作執行所在之資料庫使用者環境的識別碼。|**int**|否|  
-|**object_ id**|稽核發生所在之實體的主要識別碼。 此識別碼可以是：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|**int**|否|  
+|**object_id**|稽核發生所在之實體的主要識別碼。 此識別碼可以是：<br /><br /> 伺服器物件<br /><br /> 資料庫<br /><br /> 資料庫物件<br /><br /> 結構描述物件|**int**|否|  
 |**target_server_principal_id**|套用可稽核之動作的伺服器主體。|**int**|是|  
 |**target_database_principal_id**|套用可稽核之動作的資料庫主體。|**int**|否|  
 |**class_type**|稽核發生所在之可稽核的實體類型。|**varchar(2)**|是|  
