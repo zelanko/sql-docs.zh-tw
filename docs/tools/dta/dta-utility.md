@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809717"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981808"
 ---
 # <a name="dta-utility"></a>dta 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 [Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。
  ||  
 |-|  
-|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
 
   
  **-fk** _keep_existing_option_  
@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
  指定使用查詢存放區做為工作負載。 系統會分析來自查詢存放區明確選取之資料庫的前1000個事件。 您可以利用 **-n** 選項變更此值。  如需詳細資訊，請參閱[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查詢存放區的工作負載微調資料庫](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
-|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
      
   
  **-if** _workload_file_  
@@ -266,14 +266,14 @@ dta -n number_of_events -A 0
  在這個情況下，指定無限微調時間 (`-A 0`) 非常重要。 否則，Database Engine Tuning Advisor 會預設 8 小時的微調時間。
  
  **-I** _time_window_in_hours_   
-   指定查詢必須執行的時間範圍 (以小時為單位), 以供 DTA 在使用 **-iq**選項 (查詢存放區的工作負載) 時進行調整。 
+   指定查詢必須執行的時間範圍（以小時為單位），以供 DTA 在使用 **-iq**選項（查詢存放區的工作負載）時進行調整。 
 ```  
 dta -iq -I 48  
 ```  
-在此情況下, DTA 會使用查詢存放區做為工作負載的來源, 而且只會考慮過去48小時內執行的查詢。  
+在此情況下，DTA 會使用查詢存放區做為工作負載的來源，而且只會考慮過去48小時內執行的查詢。  
   ||  
 |-|  
-|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本。|  
 
 
   
