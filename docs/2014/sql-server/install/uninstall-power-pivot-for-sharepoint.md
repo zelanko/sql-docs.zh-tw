@@ -38,7 +38,7 @@ ms.locfileid: "72798127"
   
 -   [步驟 6：解除安裝後的檢查清單](#bkmk_post)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a> 必要條件  
   
 -   您必須是 SharePoint 伺服器陣列管理員或服務應用程式管理員，才能解除安裝伺服器陣列中的功能和方案。  
   
@@ -120,7 +120,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
     stsadm -o enumdeployments  
     ```  
   
-3.  檢閱現有部署的下列資訊： **[類型]** 是 [撤銷] 或 [部署]、 **[檔案]** 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+3.  檢閱現有部署中的下列資訊： **[類型]** 是 [撤銷] 或 [部署]、 **[檔案]** 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
 4.  針對與 PowerPivot 方案相關的部署或若是方案撤銷，複製**JobId**的 GUID 值，然後將它貼入下列命令（使用 Shell 的 [編輯] 功能表上的 [標記]、[複製] 和 [貼上] 命令來複製 GUID）：  
   
@@ -139,7 +139,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
 1.  從程式清單中選取 [Microsoft SQL Server 2014 (64 位元)]。  
   
-2.  按一下 [解除安裝/變更]。  
+2.  按一下 **[解除安裝/變更]** 。  
   
 3.  按一下 **[移除]** 。 隨即啟動 SQL Server 安裝程式。  
   
@@ -181,12 +181,12 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
      相反地，由 PowerPivot 系統服務自動產生的各種目標應用程式將會在解除安裝 PowerPivot 時自動刪除。  
   
-4.  在 [控制台] 中，按一下 **[程式]** ，然後按一下 **[解除安裝程式]** 解除安裝所有不再使用的 Analysis Services 用戶端程式庫。 當您解除安裝 PowerPivot for SharePoint 時，不會移除 Analysis Services ADOMD.NET 及 Microsoft SQL Server Analysis Management Objects。 由於其他使用 Analysis Services 資料的程式庫仍可能需要使用這些程式庫，因此 SQL Server 安裝程式不會自動解除安裝這些程式庫。 如果您不再需要這些用戶端程式庫，必須手動解除安裝它們。  
+4.  在 [控制台] 中，按一下 **[程式]** ，然後按一下 **[解除安裝程式]** 。解除安裝所有不再使用的 Analysis Services 用戶端程式庫。 當您解除安裝 PowerPivot for SharePoint 時，不會移除 Analysis Services ADOMD.NET 及 Microsoft SQL Server Analysis Management Objects。 由於其他使用 Analysis Services 資料的程式庫仍可能需要使用這些程式庫，因此 SQL Server 安裝程式不會自動解除安裝這些程式庫。 如果您不再需要這些用戶端程式庫，必須手動解除安裝它們。  
   
      除非疑難排解或安裝指示要求您解除安裝 SQL Server Reporting Services SharePoint 2010 增益集，否則請勿任意解除安裝。 Access Services 需要使用 Reporting Services 增益集。 此增益集由 SharePoint 產品準備工具所安裝，應繼續保留在系統上，以支援 SharePoint 所需要的功能。  
   
      請勿解除安裝 Analysis Services OLE DB 提供者。 由 SharePoint 所安裝的 OLE DB 提供者，是連接至 Analysis Services 資料庫之 Excel 活頁簿的必要條件。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 所安裝的版本較新，並具備回溯相容性，因此應保留在系統上，以避免日後發生資料連接問題。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安裝或卸載 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41; ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [PowerPivot 設定工具](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
