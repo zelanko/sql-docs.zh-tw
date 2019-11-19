@@ -23,24 +23,24 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b95dec6d4d867e54c3ccf0d1108a7f6b1cfa8f3c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 5a49d68b486a6bb812ea91d518145e1f639ef991
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73757469"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164927"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.databases sensitivity_classifications （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 針對資料庫中的每個分類專案，各傳回一個資料列。
 
-|資料行名稱|資料類型|說明|
+|資料行名稱|[名稱]|描述|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|識別分類所在專案的類別|  
-|**class_desc**|**Varchar （16）**|分類所在專案的類別描述|  
-|**major_id**|**int**|分類所在專案的識別碼。<br><br>如果 class 是 0，則 major_id 一律為 0。<br>如果 class 是 1、2 或 7，則 major_id 就是 object_id。|  
-|**minor_id**|**int**|分類所在專案的次要識別碼，會根據其類別加以解讀。<br><br>如果 class = 1，minor_id 是 column_id （如果是 column），否則為0（如果是 object）。<br>如果 class = 2，minor_id 就是 parameter_id。<br>如果 class = 7，minor_id 是 index_id。 |  
+|**class**|**int**|識別分類所在專案的類別。 一定會有值1（表示資料行）|  
+|**class_desc**|**Varchar （16）**|分類所在專案的類別描述。 一定會有值*OBJECT_OR_COLUMN*|  
+|**major_id**|**int**|表示包含分類資料行之資料表的識別碼，其對應于 sys.databases all_objects。 object_id|  
+|**minor_id**|**int**|代表分類所在之資料行的識別碼，其對應于 sys.databases. all_columns。 column_id|   
 |**label**|**sysname**|指派給敏感度分類的標籤（人類可讀取）|  
 |**label_id**|**sysname**|與標籤相關聯的識別碼，可供資訊保護系統（例如 Azure 資訊保護（AIP））使用|  
 |**information_type**|**sysname**|指派給敏感度分類的資訊類型（人類可讀取）|  
@@ -49,15 +49,11 @@ ms.locfileid: "73757469"
 |**rank_desc**|**sysname**|順位的文字表示：  <br><br>NONE、LOW、MEDIUM、HIGH、CRITICAL|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 
 - 這個視圖可讓您看到資料庫的分類狀態。 它可以用來管理資料庫分類，以及產生報表。
-- 目前僅支援資料庫資料行的分類。 隨後
-    - **類別**-一律會有值1（表示資料行）
-    - **class_desc** -一律會有值*OBJECT_OR_COLUMN*
-    - **major_id** -代表包含已分類資料行之資料表的識別碼，其對應于 sys.databases all_objects。 object_id
-    - **minor_id** -代表分類所在之資料行的識別碼，其對應于 sys.databases all_columns。 column_id
-
+- 目前僅支援資料庫資料行的分類。
+ 
 ## <a name="examples"></a>範例
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 列出所有分類的資料行及其對應的分類

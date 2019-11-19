@@ -1,6 +1,7 @@
 ---
-title: SQL Server Express LocalDB 錯誤訊息參考 |Microsoft Docs
-ms.custom: ''
+title: LocalDB 錯誤訊息參考
+titleSuffix: SQL Server Express
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f59e898dcb8c51155bebb53352265eb95ebebd4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d7d49233c072a8f23b386b626ee4f30669aaec5
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126955"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165963"
 ---
 # <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB 參考 - 錯誤訊息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

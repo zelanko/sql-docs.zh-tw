@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_query_optimizer_memory_gateways (TRANSACT-SQL) |Microsoft Docs
-description: 傳回目前用來進行節流處理並行的查詢最佳化資源信號的狀態
-ms.custom: ''
+title: sys.databases dm_exec_query_optimizer_memory_gateways （Transact-sql）
+description: 傳回用來節流並行查詢優化的資源信號目前狀態
+ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,45 +20,45 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf134f630e4112f0cef87b7138b92fc83959e230
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097667"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165006"
 ---
-# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.databases dm_exec_query_optimizer_memory_gateways （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-傳回目前用來進行節流處理並行的查詢最佳化資源信號的狀態。
+傳回用來節流並行查詢優化的資源信號目前狀態。
 
-|「資料行」|type|描述|  
+|資料行|型別|描述|  
 |----------|---------------|-----------------|  
-|**pool_id**|**int**|資源集區識別碼在資源管理員|  
-|**name**|**sysname**|編譯閘道名稱 （小型閘道中閘道的大型閘道）|
-|**max_count**|**int**|並行編譯的設定的計數上限|
-|**active_count**|**int**|編譯會在此閘道目前作用中的計數|
-|**waiter_count**|**int**|在此閘道的等候者數目|
-|**threshold_factor**|**bigint**|定義查詢最佳化所使用的最大的記憶體部分閾值因數。  小型閘道，threshold_factor 表示最大的最佳化工具記憶體使用量，以位元組為單位的一項查詢需要能夠存取在小型閘道之前。  中型和大型閘道 threshold_factor 會顯示此閘道可用的總伺服器記憶體的部分。 計算記憶體使用量閾值，對閘道時，它做為除數。|
-|**threshold**|**bigint**|下一個臨界值以位元組為單位的記憶體。  查詢，才能存取此閘道如果它的記憶體耗用量已達到此臨界值。  "-1"如果查詢不需要存取此閘道。|
-|**is_active**|**bit**|是否將目前的閘道或不需要查詢。|
+|**pool_id**|**int**|Resource Governor 下的資源集區識別碼|  
+|**name**|**sysname**|編譯閘道名稱（小型閘道、中型閘道、大型閘道）|
+|**max_count**|**int**|最大設定的並行編譯計數|
+|**active_count**|**int**|此閘道目前的使用中編譯計數|
+|**waiter_count**|**int**|此閘道中的等候者數目|
+|**threshold_factor**|**bigint**|此臨界值因數會定義查詢優化所使用的最大記憶體部分。  針對小型閘道，threshold_factor 會在需要取得小型閘道的存取權之前，指出一個查詢的最大優化工具記憶體使用量（以位元組為單位）。  對於中型和大型閘道，threshold_factor 會顯示此閘道可用的總伺服器記憶體的部分。 計算閘道的記憶體使用量臨界值時，會使用它做為除數。|
+|**閾值**|**bigint**|下一個閾值記憶體（以位元組為單位）。  如果此閘道的記憶體耗用量達到此閾值，則需要此查詢才能取得此閘道的存取權。  如果不需要查詢即可取得此閘道的存取權，則為 "-1"。|
+|**is_active**|**bit**|查詢是否需要傳遞目前的閘道。|
 
 
 ## <a name="permissions"></a>Permissions  
-SQL Server 需要伺服器的 VIEW SERVER STATE 權限。
+SQL Server 需要伺服器的 VIEW SERVER STATE 許可權。
 
-Azure SQL Database 需要資料庫的 VIEW DATABASE STATE 權限。
+Azure SQL Database 需要資料庫的 VIEW DATABASE STATE 許可權。
 
 
-## <a name="remarks"></a>備註  
-SQL Server 會使用階層式的閘道方法，節流允許並行的編譯數目。  使用三個閘道，包括小型、 中型和大型。 閘道器有助於防止的較大編譯記憶體需要取用者的整體記憶體資源耗盡。
+## <a name="remarks"></a>Remarks  
+SQL Server 使用分層閘道方法來節流允許的並行編譯數目。  系統會使用三個閘道，包括 small、medium 和 big。 閘道可透過較大的編譯記憶體，協助防止耗盡整體記憶體資源-需要取用者。
 
-等候閘道會導致延遲編譯。 除了編譯的延遲，節流的要求會有相關聯的 RESOURCE_SEMAPHORE_QUERY_COMPILE 等候類型累積。 RESOURCE_SEMAPHORE_QUERY_COMPILE 等候類型可能表示您的查詢會使用大量記憶體進行編譯和已用盡記憶體，或或者沒有足夠的記憶體可用的整體來說，不過可以使用的單位，在特定閘道已達上限。 輸出**sys.dm_exec_query_optimizer_memory_gateways**可用來疑難排解的案例在存在記憶體不足，無法編譯查詢執行計畫。  
+等待閘道產生延遲的編譯。 除了編譯中的延遲，節流的要求也會有相關聯的 RESOURCE_SEMAPHORE_QUERY_COMPILE 等候類型累積。 RESOURCE_SEMAPHORE_QUERY_COMPILE 等候類型可能表示查詢正在使用大量的記憶體進行編譯，而且記憶體已用盡，或有足夠的記憶體可供整體使用，但是特定的可用單位閘道已耗盡。 當記憶體不足以編譯查詢執行計畫時，可以使用**dm_exec_query_optimizer_memory_gateways**的輸出進行疑難排解。  
 
 ## <a name="examples"></a>範例  
 
-### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. 檢視資源信號的統計資料  
-此 SQL Server 執行個體的目前的最佳化工具記憶體閘道統計有哪些？
+### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. 查看資源信號的統計資料  
+這個 SQL Server 的實例目前的優化工具記憶體閘道統計資料為何？
 
 ```  
 SELECT [pool_id], [name], [max_count], [active_count],
@@ -72,4 +72,4 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
  [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [如何使用 DBCC MEMORYSTATUS 命令來監視 SQL Server 2005 上的記憶體使用量](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-[大型查詢編譯等候 SQL Server 2014 中 RESOURCE_SEMAPHORE_QUERY_COMPILE](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+[大型查詢編譯在 SQL Server 2014 中等待 RESOURCE_SEMAPHORE_QUERY_COMPILE](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

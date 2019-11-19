@@ -1,7 +1,7 @@
 ---
-title: _user_db_resource_governance (Transact-sql) |Microsoft Docs
+title: sys.databases dm_user_db_resource_governance （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 11/17/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: sql-database
@@ -20,100 +20,108 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ea07ba28efc4ac50fdeef04bb1b3643c359ead28
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176252"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165916"
 ---
-# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.databases _user_db_resource_governance (Transact-sql)
+# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.databases dm_user_db_resource_governance （Transact-sql）
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-傳回 Azure SQL Database 資料庫的資源管理設定和容量設定。  
+傳回目前資料庫或彈性集區中資源管理機制所使用的實際設定和容量設定。
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
-|**database_id**|ssNoversion|資料庫的識別碼, 在 Azure SQL Database 伺服器內是唯一的。|
-|**logical_database_guid**|UNIQUEIDENTIFIER|使用者資料庫的邏輯 guid, 並持續在使用者資料庫的存留期間內。  將資料庫重新命名或設定為不同的 SLO 不會變更 GUID。 |
-|**physical_database_guid**|UNIQUEIDENTIFIER|使用者資料庫的實體 guid, 它會持續在使用者資料庫的實體實例存留期間。 將設定為不同的 SLO 會使此資料行變更。|
-|**server_name**|NVARCHAR|邏輯伺服器名稱。|
-|**database_name**|NVARCHAR|邏輯資料庫名稱。|
-|**slo_name**|NVARCHAR|服務等級目標和硬體世代。|
-|**dtu_limit**|ssNoversion|資料庫的 DTU 限制 (vCore 為 Null)。|
-|**cpu_limit**|ssNoversion|資料庫的 vCore 限制 (DTU 資料庫為 Null)。|
-|**min_cpu**|TINYINT|使用者工作負載可使用的最小 CPU 百分比。|
-|**max_cpu**|TINYINT|使用者工作負載可使用的最大 CPU 百分比。|
-|**cap_cpu**|TINYINT|使用者工作負載群組的 CPU 百分比上限。|
-|**min_cores**|SMALLINT|SQL 所使用的 Cpu 數目。|
-|**max_dop**|SMALLINT|使用者工作負載所使用的平行處理原則最大程度。|
-|**min_memory**|ssNoversion|使用者工作負載可使用的最小記憶體百分比。|
-|**max_memory**|ssNoversion|使用者工作負載可使用的最大記憶體百分比。|
-|**max_sessions**|ssNoversion|使用者群組的會話限制。|
-|**max_memory_grant**|ssNoversion|使用者工作負載中每個查詢的最大記憶體授與 (以百分比為單位)。|
-|**max_db_memory**|ssNoversion|使用者資料庫工作負載的最大緩衝集區記憶體上限|
-|**govern_background_io**|bit|指出是否要對使用者群組收取背景寫入費用。|
-|**min_db_max_size_in_mb**|Bigint|最小資料庫檔案大小 (以 MB 為單位)。|
-|**max_db_max_size_in_mb**|Bigint|最大資料庫檔案數 (以 MB 為單位)。|
-|**default_db_max_size_in_mb**|Bigint|預設的資料庫檔案大小上限 (以 MB 為單位)。|
-|**db_file_growth_in_mb**|Bigint|Azure 資料庫檔案的預設成長 (以 MB 為單位)。|
-|**initial_db_file_size_in_mb**|Bigint|預設的資料庫檔案大小 (以 MB 為單位)。|
-|**log_size_in_mb**|Bigint|預設記錄檔大小 (以 MB 為單位)。|
-|**instance_cap_cpu**|ssNoversion|實例層級的 CPU 限定。|
-|**instance_max_log_rate**|Bigint|實例層級的記錄產生速率上限 (以每秒位元組數為單位)。|
-|**instance_max_worker_threads**|ssNoversion|實例層級的背景工作執行緒限制。|
-|**replica_type**|ssNoversion|複本類型, 其中0是主要, 1 是次要。|
-|**max_transaction_size**|Bigint|任何交易所使用的記錄空間上限 (以 KB 為單位)。|
-|**checkpoint_rate_mbps**|ssNoversion|檢查點頻寬 (以 Mbps 為單位)。|
-|**checkpoint_rate_io**|ssNoversion|每秒 io 的檢查點 IO 速率。|
-|**last_updated_date_utc**|datetime|上次變更或重新設定的日期和時間。|
-|**primary_group_id**|ssNoversion|主要使用者工作負載群組識別碼。|
-|**primary_group_max_workers**|ssNoversion|主要使用者工作負載群組層級的背景工作限制。|
-|**primary_min_log_rate**|Bigint|主要使用者工作負載群組層級的最小記錄速率 (每秒位元組數)。|
-|**primary_max_log_rate**|Bigint|主要使用者工作負載群組層級的最大記錄速率 (每秒位元組數)。|
-|**primary_group_min_io**|ssNoversion|主要使用者工作負載群組層級的 IO 下限。|
-|**primary_group_max_io**|ssNoversion|主要使用者工作負載群組層級的 IO 上限。|
-|**primary_group_min_cpu**|float|主要使用者工作負載群組層級的最小 CPU 百分比限制。|
-|**primary_group_max_cpu**|float|主要使用者工作負載群組層級的最大 CPU 百分比限制。|
-|**primary_log_commit_fee**|ssNoversion|主要使用者工作負載群組層級的記錄速率治理認可費用。|
-|**primary_pool_max_workers**|ssNoversion|主要使用者集區層級的背景工作限制。
-|**pool_max_io**|ssNoversion|主要使用者集區層級的最大 IO 限制。|
-|**govern_db_memory_in_resource_pool**|bit|指出緩衝集區的大小上限是否受資源集區層級控制。 通常會針對彈性集區中的資料庫設定。|
-|**volume_local_iops**|ssNoversion|本機磁片區的每秒 Io 上限 (例如 C:、D:)。|
-|**volume_managed_xstore_iops**|ssNoversion|遠端儲存體帳戶的每秒 Io 數上限。|
-|**volume_external_xstore_iops**|ssNoversion|Azure SQL DB 備份和遙測所使用之遠端儲存體帳戶的每秒 Io 數上限。|
-|**volume_type_local_iops**|ssNoversion|所有本機磁片區的每秒 Io 上限。|
-|**volume_type_managed_xstore_iops**|ssNoversion|實例所使用之所有遠端儲存體帳戶的每秒 Io 數上限。|
-|**volume_type_external_xstore_iops**|ssNoversion|Azure SQL DB 備份和實例的遙測所使用的所有遠端儲存體帳戶的每秒 Io 上限。|
-|**volume_pfs_iops**|ssNoversion|Premium 檔案儲存體的 Io 每秒上限。|
-|**volume_type_pfs_iops**|ssNoversion|實例所使用之所有 premium 檔案儲存體的每秒 Io 上限。|
+|**database_id**|整數|資料庫的識別碼，在 Azure SQL Database 伺服器內是唯一的。|
+|**logical_database_guid**|uniqueidentifier|使用者資料庫的邏輯 GUID，會在使用者資料庫的存留期間持續。  重新命名資料庫或變更其服務等級目標不會變更此值。|
+|**physical_database_guid**|uniqueidentifier|使用者資料庫的實體 GUID，它會持續在使用者資料庫的實體實例存留期間。 變更資料庫服務等級目標會導致此值變更。|
+|**server_name**|nvarchar|邏輯伺服器名稱。|
+|**database_name**|nvarchar|邏輯資料庫名稱。|
+|**slo_name**|nvarchar|服務等級目標，包括硬體世代。|
+|**dtu_limit**|整數|資料庫的 DTU 限制（vCore 為 Null）。|
+|**cpu_limit**|整數|資料庫的 vCore 限制（DTU 資料庫為 Null）。|
+|**min_cpu**|tinyint|使用者工作負載資源集區的 MIN_CPU_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**max_cpu**|tinyint|使用者工作負載資源集區的 MAX_CPU_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**cap_cpu**|tinyint|使用者工作負載資源集區的 CAP_CPU_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**min_cores**|SMALLINT|僅供內部使用。|
+|**max_dop**|SMALLINT|使用者工作負載群組的 MAX_DOP 值。 請參閱[建立工作負載群組](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
+|**min_memory**|整數|使用者工作負載資源集區的 MIN_MEMORY_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**max_memory**|整數|使用者工作負載資源集區的 MAX_MEMORY_PERCENT 值。 請參閱[資源集區概念](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts)。|
+|**max_sessions**|整數|使用者工作負載群組中允許的會話數目上限。|
+|**max_memory_grant**|整數|使用者工作負載群組的 REQUEST_MAX_MEMORY_GRANT_PERCENT 值。 請參閱[建立工作負載群組](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)。|
+|**max_db_memory**|整數|僅供內部使用。|
+|**govern_background_io**|bit|僅供內部使用。|
+|**min_db_max_size_in_mb**|bigint|資料檔案的最小 max_size 值（以 MB 為單位）。 請參閱[sys.databases database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
+|**max_db_max_size_in_mb**|bigint|資料檔案的最大 max_size 值（以 MB 為單位）。 請參閱[sys.databases database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
+|**default_db_max_size_in_mb**|bigint|資料檔案的預設 max_size 值（以 MB 為單位）。 請參閱[sys.databases database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
+|**db_file_growth_in_mb**|bigint|資料檔案的預設成長增量（以 MB 為單位）。 請參閱[sys.databases database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
+|**initial_db_file_size_in_mb**|bigint|新資料檔案的預設大小（以 MB 為單位）。 請參閱[sys.databases database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
+|**log_size_in_mb**|bigint|新記錄檔的預設大小（以 MB 為單位）。 請參閱[sys.databases database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
+|**instance_cap_cpu**|整數|僅供內部使用。|
+|**instance_max_log_rate**|bigint|SQL Server 實例的記錄產生速率限制（以每秒位元組數為單位）。 適用于實例所產生的所有記錄檔，包括 `tempdb` 和其他系統資料庫。 在彈性集區中，會套用至集區中所有資料庫所產生的記錄檔。|
+|**instance_max_worker_threads**|整數|SQL Server 實例的背景工作執行緒限制。|
+|**replica_type**|整數|複本類型，其中0是主要，1是次要。|
+|**max_transaction_size**|bigint|任何交易所使用的記錄空間上限（以 KB 為單位）。|
+|**checkpoint_rate_mbps**|整數|僅供內部使用。|
+|**checkpoint_rate_io**|整數|僅供內部使用。|
+|**last_updated_date_utc**|datetime|上次變更或重新設定的日期和時間（UTC）。|
+|**primary_group_id**|整數|主要複本和次要複本上的使用者工作負載的工作負載群組識別碼。|
+|**primary_group_max_workers**|整數|使用者工作負載群組的背景工作執行緒限制。|
+|**primary_min_log_rate**|bigint|使用者工作負載群組層級的最低記錄速率（以每秒位元組為單位）。 資源管理不會嘗試減少低於此值的記錄速率。|
+|**primary_max_log_rate**|bigint|使用者工作負載群組層級的最大記錄速率（以每秒位元組為單位）。 資源管理不允許高於此值的記錄速率。|
+|**primary_group_min_io**|整數|使用者工作負載群組的最小 IOPS。 資源管理不會嘗試減少低於此值的 IOPS。|
+|**primary_group_max_io**|整數|使用者工作負載群組的最大 IOPS。 資源管理將不允許高於此值的 IOPS。|
+|**primary_group_min_cpu**|Float|使用者工作負載群組層級的最小 CPU 百分比。 資源管理不會嘗試減少低於此值的 CPU 使用率。|
+|**primary_group_max_cpu**|Float|使用者工作負載群組層級的最大 CPU 百分比。 資源管理不允許高於此值的 CPU 使用率。|
+|**primary_log_commit_fee**|整數|使用者工作負載群組的記錄速率治理認可費用（以位元組為單位）。 認可費用會根據固定值，將每個記錄 IO 的大小增加為僅限記錄檔速率帳戶處理的目的。 實際的記錄 IO 到儲存體不會增加。|
+|**primary_pool_max_workers**|整數|使用者工作負載資源集區的背景工作執行緒限制。|
+|**pool_max_io**|整數|使用者工作負載資源集區的最大 IOPS 限制。|
+|**govern_db_memory_in_resource_pool**|bit|僅供內部使用。|
+|**volume_local_iops**|整數|僅供內部使用。|
+|**volume_managed_xstore_iops**|整數|僅供內部使用。|
+|**volume_external_xstore_iops**|整數|僅供內部使用。|
+|**volume_type_local_iops**|整數|僅供內部使用。|
+|**volume_type_managed_xstore_iops**|整數|僅供內部使用。|
+|**volume_type_external_xstore_iops**|整數|僅供內部使用。|
+|**volume_pfs_iops**|整數|僅供內部使用。|
+|**volume_type_pfs_iops**|整數|僅供內部使用。|
 |||
 
 ## <a name="permissions"></a>Permissions
 
 此檢視需要 VIEW DATABASE STATE 權限。
 
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 
-使用者可以存取此動態管理檢視, 以進行資源管理設定和 Azure SQL Database 資料庫的容量設定。 
+如需 Azure SQL Database 中資源管理的說明，請參閱[SQL Database 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)。
 
 > [!IMPORTANT]
-> 此 DMV 所呈現的大部分資料都是供內部使用, 而且可能隨時變更。
+> 這個 DMV 所傳回的大部分資料都是供內部使用，而且隨時可能變更。
 
 ## <a name="examples"></a>範例
 
-下列範例會針對單一或集區資料庫, 傳回資料庫伺服器內資料庫名稱所排序的實例最大記錄速率資料。
+下列查詢（在使用者資料庫的內容中執行）會傳回使用者工作負載群組和資源集區層級的最大記錄速率和最大 IOPS。 若為單一資料庫，則會傳回一個資料列。 對於彈性集區中的資料庫，會針對集區中的每個資料庫傳回一個資料列。
 
 ```
 SELECT database_name,
-       primary_max_log_rate
+       primary_group_id,
+       primary_max_log_rate,
+       primary_group_max_io,
+       pool_max_io
 FROM sys.dm_user_db_resource_governance
-ORDER BY database_name DESC;  
+ORDER BY database_name;  
 ```
 
 ## <a name="see-also"></a>另請參閱
 
+- [資源管理員](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
+- [sys.databases dm_resource_governor_resource_pools （Transact-sql）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
+- [sys.databases dm_resource_governor_workload_groups （Transact-sql）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
+- [sys.databases dm_resource_governor_resource_pools_history_ex （Transact-sql）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
+- [sys. dm_resource_governor_workload_groups_history_ex （Azure SQL Database）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
 - [交易記錄速率治理](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [單一資料庫 DTU 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [單一資料庫 vCore 資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

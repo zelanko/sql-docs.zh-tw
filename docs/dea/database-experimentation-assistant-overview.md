@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127364"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165548"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>資料庫測試助理總覽
 
@@ -83,7 +83,7 @@ DEA 會使用 Windows 驗證連接到資料庫伺服器。 請確定執行 DEA �
 
 執行分析需要：
 
-- 執行 DEA 的使用者可以使用 Windows 驗證連接到分析資料庫伺服器。
+- 執行 DEA 的使用者可以使用 Windows 驗證連接到 analysis database 伺服器。
 - 執行 DEA 的使用者在源資料庫伺服器上具有 sysadmin 許可權。
 
 如需詳細資訊，請參閱[分析報告](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)的常見問題
@@ -102,13 +102,13 @@ DEA 具有已啟用網際網路的功能，可將遙測資訊傳送給 Microsoft
 收集和傳送遙測資料是選擇性的。 若要指定要收集哪些事件，以及是否要將收集的事件傳送至 Microsoft，請使用下列步驟：
 
 1. 移至安裝 DEA 的位置（例如 C：\\Program Files （x86）\\Microsoft Corporation\\資料庫測試助理）。
-2. 開啟並修改兩個 .config 檔案**DEA** （適用于應用程式）和**DEACmd** （適用于 CLI），如下所示：
+2. 開啟並修改 .config 檔案**DEA** （適用于應用程式）和**DEACmd** （適用于 CLI），以適當地處理您的案例：
     - 若要停止收集事件種類，請將*事件*的值（例如， **TraceEvent**）設定為**false**。 若要再次開始收集事件，請將值設定為**true**。
     - 若要停止儲存事件的本機複本，請將**TraceLoggerEnabled**的值設定為**false**。 若要再次開始儲存本機複本，請將值設定為**true**。
     - 若要停止將事件傳送至 Microsoft，請將**AppInsightsLoggerEnabled**的值設定為**false**。 若要再次開始將事件傳送至 Microsoft，請將值設定為**true**。
 
 DEA 受[Microsoft 隱私權聲明](https://aka.ms/dea-privacy)所規範。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="see-also"></a>另請參閱
 
-[[開始](database-experimentation-assistant-get-started.md)使用] 會引導您完成捕獲、重新執行和分析追蹤所需的步驟。
+[工作負載比較](database-experimentation-assistant-get-started.md)程式的總覽，其中說明在兩個環境中比較工作負載所牽涉的程式。
