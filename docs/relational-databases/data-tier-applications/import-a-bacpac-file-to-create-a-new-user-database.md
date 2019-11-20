@@ -1,6 +1,6 @@
 ---
-title: 匯入 BACPAC 檔案以建立新的使用者資料庫 | Microsoft Docs
-ms.custom: ''
+title: 匯入 BACPAC 檔案以建立新的使用者資料庫
+ms.custom: seo-dt-2019
 ms.date: 01/31/2017
 ms.prod: sql
 ms.technology: ''
@@ -25,16 +25,16 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88f53ba0372b56fce72a23fe33790c822729d8d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908484"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094568"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資料的複本，或將該檔案匯入 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
+  匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資料的複本，或將該檔案匯入 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中所部署資料庫的內部部署複本)。  
   
 ## <a name="before-you-begin"></a>開始之前  
  匯入程序會使用兩個階段來建立新的 DAC。  
@@ -66,7 +66,7 @@ ms.locfileid: "72908484"
 ## <a name="using-the-import-data-tier-application-wizard"></a>使用匯入資料層應用程式精靈  
  **若要啟動此精靈，請使用下列步驟：**  
   
-1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中)。  
+1.  連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中)。  
   
 2.  在 **[物件總管]** 的 **[資料庫]** 上按一下滑鼠右鍵，然後選取 **[匯入資料層應用程式]** 功能表項目啟動精靈。  
   
