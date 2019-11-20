@@ -29,7 +29,7 @@ ms.locfileid: "72289281"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **標準**  
- 引進的版本： ODBC 1.0 標準合規性： ISO 92  
+ 引進的版本：ODBC 1.0 標準合規性：ISO 92  
   
  **摘要**  
  **SQLBindCol**會將應用程式資料緩衝區系結至結果集內的資料行。  
@@ -52,31 +52,31 @@ SQLRETURN SQLBindCol(
  源語句控制碼。  
   
  *ColumnNumber*  
- 源要系結的結果集資料行數目。 資料行是以遞增的資料行順序編號，從0開始，其中資料行0是書簽資料行。 如果未使用書簽（也就是，SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_OFF，則資料行編號會從1開始。  
+ 源要系結的結果集資料行數目。 資料行是以遞增的資料行順序編號，從0開始，其中資料行0是書簽資料行。 如果未使用書簽（也就是，SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_OFF），則資料行編號會從1開始。  
   
- *目標*  
- 源\**TargetValuePtr*緩衝區之 C 資料類型的識別碼。 當它從資料來源使用**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**來抓取資料時，驅動程式會將資料轉換成此類型。當它使用**SQLBulkOperations**或**SQLSetPos**將資料傳送到資料來源時，驅動程式會轉換此類型的資料。 如需有效 C 資料類型和類型識別碼的清單，請參閱附錄 D：資料類型中的[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)一節。  
+ *TargetType*  
+ 源@No__t-0*TargetValuePtr*緩衝區的 C 資料類型識別碼。 當它從資料來源使用**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**來抓取資料時，驅動程式會將資料轉換成此類型。當它使用**SQLBulkOperations**或**SQLSetPos**將資料傳送到資料來源時，驅動程式會轉換此類型的資料。 如需有效 C 資料類型和類型識別碼的清單，請參閱附錄 D：中的[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)一節。資料類型。  
   
- 如果*TargetType*引數是 interval 資料類型，則會使用預設的間隔前置精確度（2）和預設間隔秒數精確度（6），分別在 ARD 的 [SQL_DESC_DATETIME_INTERVAL_PRECISION] 和 [SQL_DESC_PRECISION] 欄位中設定，用於資料。 如果 SQL_C_NUMERIC *TargetType*引數，則會將預設的有效位數（驅動程式定義）和預設小數位數（0）（如 [SQL_DESC_PRECISION] 和 [SQL_DESC_SCALE] 欄位中所設定）用於資料。 如果任何預設的有效位數或小數位數不適當，應用程式應該藉由呼叫**SQLSetDescField**或**SQLSetDescRec**來明確設定適當的描述項欄位。  
+ 如果*TargetType*引數是 interval 資料類型，則為預設的間隔前置精確度（2）和預設間隔秒數精確度（6），分別在 ARD 的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 欄位中設定。會用於資料。 如果*TargetType*引數是 SQL_C_NUMERIC，則會針對資料使用預設的有效位數（驅動程式定義）和預設小數位數（0）（如 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 欄位中所設定）。 如果任何預設的有效位數或小數位數不適當，應用程式應該藉由呼叫**SQLSetDescField**或**SQLSetDescRec**來明確設定適當的描述項欄位。  
   
  您也可以指定擴充 C 資料類型。 如需詳細資訊，請參閱[ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
  *TargetValuePtr*  
- [延遲的輸入/輸出]要系結至資料行之資料緩衝區的指標。 **SQLFetch**和**SQLFetchScroll**會傳回此緩衝區中的資料。 *當 SQL_FETCH_BY_BOOKMARK 作業時，* **SQLBulkOperations**會傳回此緩衝區中的資料。當 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK 作業*時，它*會從這個緩衝區抓取資料。 *當 SQL_REFRESH 作業時，* **SQLSetPos**會傳回此緩衝區中的資料。*當 SQL_UPDATE 作業時，它*會從這個緩衝區中抓取資料。  
+ [延遲的輸入/輸出]要系結至資料行之資料緩衝區的指標。 **SQLFetch**和**SQLFetchScroll**會傳回此緩衝區中的資料。 當*Operation*為 SQL_FETCH_BY_BOOKMARK 時， **SQLBulkOperations**會傳回此緩衝區中的資料;當*Operation*為 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK 時，它會從這個緩衝區抓取資料。 當*Operation*為 SQL_REFRESH 時， **SQLSetPos**會傳回此緩衝區中的資料;SQL_UPDATE*作業時，它會從*這個緩衝區中抓取資料。  
   
- 如果*TargetValuePtr*是 null 指標，驅動程式會將資料行的資料緩衝區解除系結。 應用程式可以使用 SQL_UNBIND 選項來呼叫**SQLFreeStmt** ，以將所有資料行解除系結。 如果對**SQLBindCol**的呼叫中的*TargetValuePtr*引數是 null 指標，但是*StrLen_or_IndPtr*引數是有效的值，則應用程式可以解除系結資料行的資料緩衝區，但仍具有系結至該資料行的長度/指標緩衝區。  
+ 如果*TargetValuePtr*是 null 指標，驅動程式會將資料行的資料緩衝區解除系結。 應用程式可以使用 SQL_UNBIND 選項呼叫**SQLFreeStmt** ，將所有資料行解除系結。 如果**SQLBindCol**呼叫中的*TargetValuePtr*引數為 Null 指標，但*StrLen_or_IndPtr*引數是有效的，則應用程式可以解除系結資料行的資料緩衝區，但仍具有系結至該資料行的長度/指標緩衝區。value.  
   
  *BufferLength*  
- 源\**TargetValuePtr*緩衝區的長度（以位元組為單位）。  
+ 源@No__t-0*TargetValuePtr*緩衝區的長度（以位元組為單位）。  
   
- 驅動程式會使用*BufferLength* ，在傳回可變長度的資料（例如字元或二進位資料）時，避免寫入超過 \**TargetValuePtr*緩衝區的結尾。 請注意，驅動程式會在將字元資料傳回到 \**TargetValuePtr*時，計算 null 終止字元。 \* *TargetValuePtr*因此必須包含空格的 null 終止的字元或驅動程式將會截斷資料。  
+ 驅動程式會使用*BufferLength*來避免在傳回可變長度的資料（例如字元或二進位資料）時，寫入超過 @no__t 1*TargetValuePtr*緩衝區的結尾。 請注意，驅動程式會在將字元資料傳回給 \**TargetValuePtr*時，計算 null 終止字元。 \* *TargetValuePtr*因此必須包含空格的 null 終止的字元或驅動程式將會截斷資料。  
   
  當驅動程式傳回固定長度的資料（例如整數或日期結構）時，驅動程式會忽略*BufferLength* ，並假設緩衝區夠大，足以容納資料。 因此，應用程式必須為固定長度的資料配置夠大的緩衝區，否則驅動程式將會寫入超過緩衝區的結尾。  
   
  當*BufferLength*小於0時， **SQLBINDCOL**會傳回 SQLSTATE HY090 （不正確字串或緩衝區長度），但當*BufferLength*為0時則不會傳回。 不過，如果*TargetType*指定了字元類型，應用程式就不應該將*BufferLength*設定為0，因為符合 ISO CLI 的驅動程式會在該情況下傳回 SQLSTATE HY090 （不正確字串或緩衝區長度）。  
   
  *StrLen_or_IndPtr*  
- [延遲的輸入/輸出]要系結至資料行之長度/指標緩衝區的指標。 **SQLFetch**和**SQLFetchScroll**會傳回這個緩衝區中的值。 當 SQL_ADD、SQL_UPDATE_BY_BOOKMARK 或 SQL_DELETE_BY_BOOKMARK*作業時，* **SQLBulkOperations**會從這個緩衝區中抓取值。 *當 SQL_FETCH_BY_BOOKMARK 作業時，* **SQLBulkOperations**會傳回這個緩衝區中的值。 *當 SQL_REFRESH 作業時，* **SQLSetPos**會傳回這個緩衝區中的值;*當 SQL_UPDATE 作業時，它*會從這個緩衝區中抓取值。  
+ [延遲的輸入/輸出]要系結至資料行之長度/指標緩衝區的指標。 **SQLFetch**和**SQLFetchScroll**會傳回這個緩衝區中的值。 當*Operation*為 SQL_ADD、SQL_UPDATE_BY_BOOKMARK 或 SQL_DELETE_BY_BOOKMARK 時， **SQLBulkOperations**會從這個緩衝區中抓取值。 當作業為 SQL_FETCH_BY_BOOKMARK*時，* **SQLBulkOperations**會傳回這個緩衝區中的值。 當*Operation*為 SQL_REFRESH 時， **SQLSetPos**會傳回此緩衝區中的值;當 SQL_UPDATE 作業時，*它會從*這個緩衝區中抓取值。  
   
  **SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**和**SQLSetPos**可以傳回長度/指標緩衝區中的下列值：  
   
@@ -84,7 +84,7 @@ SQLRETURN SQLBindCol(
   
 -   SQL_NO_TOTAL  
   
--   SQL_Null_DATA  
+-   SQL_NULL_DATA  
   
  應用程式可以將下列值放在長度/指標緩衝區中，以與**SQLBulkOperations**或**SQLSetPos**搭配使用：  
   
@@ -92,7 +92,7 @@ SQLRETURN SQLBindCol(
   
 -   SQL_NTS  
   
--   SQL_Null_DATA  
+-   SQL_NULL_DATA  
   
 -   SQL_DATA_AT_EXEC  
   
@@ -104,7 +104,7 @@ SQLRETURN SQLBindCol(
   
  如需詳細資訊，請參閱[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)函式、 [SQLFetch 函數](../../../odbc/reference/syntax/sqlfetch-function.md)、 [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)函式和[使用長度/指標值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
- 如果*StrLen_or_IndPtr*是 null 指標，則不會使用長度或指示器值。 這是在提取資料且資料為 Null 時的錯誤。  
+ 如果*StrLen_or_IndPtr*為 null 指標，則不會使用長度或指示器值。 這是在提取資料且資料為 Null 時的錯誤。  
   
  如果您的應用程式將在64位作業系統上執行，請參閱[ODBC 64 位資訊](../../../odbc/reference/odbc-64-bit-information.md)。  
   
@@ -112,22 +112,22 @@ SQLRETURN SQLBindCol(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLBindCol**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉由呼叫具有 SQL_HANDLE_STMT *HandleType*和*StatementHandle* *控制碼*的**SQLGetDiagRec**來取得相關聯的 SQLSTATE 值。 下表列出通常由**SQLBindCol**所傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
+ 當**SQLBindCol**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 時，可以藉**由呼叫 SQLGetDiagRec HandleType handletype 來**和*StatementHandle* *的* *控制碼*來取得相關聯的 SQLSTATE 值。 下表列出通常由**SQLBindCol**所傳回的 SQLSTATE 值，並在此函式的內容中說明每一個值;「（DM）」標記法優先于驅動程式管理員所傳回之 SQLSTATEs 的描述。 除非另有說明，否則，與每個 SQLSTATE 值相關聯的傳回碼都是 SQL_ERROR。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|Error|說明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驅動程式特定的參考用訊息。 （函數會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|07006|限制的資料類型屬性違規|（DM） *ColumnNumber*引數為0，且*TargetType*引數不 SQL_C_BOOKMARK 或 SQL_C_VARBOOKMARK。|  
+|07006|限制的資料類型屬性違規|（DM） *ColumnNumber*引數為0，而*TargetType*引數不是 SQL_C_BOOKMARK 或 SQL_C_VARBOOKMARK。|  
 |07009|不正確描述項索引|為引數*ColumnNumber*指定的值超過結果集內的最大資料行數目。|  
-|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 **MessageText**緩衝區中的 *SQLGetDiagRec\*所傳回的錯誤訊息描述錯誤及其原因。|  
+|HY000|一般錯誤|發生錯誤，但沒有任何特定 SQLSTATE，且未定義任何執行特定的 SQLSTATE。 *\*MessageText* 緩衝區中的 **SQLGetDiagRec** 所傳回的錯誤訊息描述錯誤及其原因。|  
 |HY001|記憶體配置錯誤|驅動程式無法配置支援執行或完成函數所需的記憶體。|  
-|HY003 以及|不正確應用程式緩衝區類型|引數*TargetType*不是有效的資料類型，也不 SQL_C_DEFAULT。|  
-|HY010|函數順序錯誤|（DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLBindCol**時，這個非同步函數仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，並 SQL_PARAM_DATA_AVAILABLE 傳回。 在抓取所有資料流程參數的資料之前，會呼叫這個函式。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式，且在呼叫此函式時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。|  
+|HY003|不正確應用程式緩衝區類型|引數*TargetType*不是有效的資料類型，也不是 SQL_C_DEFAULT。|  
+|HY010|函數順序錯誤|（DM）已針對與*StatementHandle*相關聯的連接控制碼呼叫以非同步方式執行的函式。 呼叫**SQLBindCol**時，這個非同步函數仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，並傳回 SQL_PARAM_DATA_AVAILABLE。 在抓取所有資料流程參數的資料之前，會呼叫這個函式。<br /><br /> （DM）已針對*StatementHandle*呼叫非同步執行的函式，且在呼叫此函式時仍在執行中。<br /><br /> （DM）已針對*StatementHandle*呼叫**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos** ，並傳回 SQL_NEED_DATA。 在傳送資料給所有資料執行中參數或資料行之前，已呼叫此函數。|  
 |HY013|記憶體管理錯誤|無法處理函數呼叫，因為無法存取基礎記憶體物件，可能是因為記憶體不足的狀況。|  
 |HY090|不正確字串或緩衝區長度|（DM）為引數*BufferLength*指定的值小於0。<br /><br /> （DM）驅動程式是 ODBC 2。*x*驅動程式， *ColumnNumber*引數設定為0，且為引數*BufferLength*指定的值不等於4。|  
 |HY117|連接因未知的交易狀態而暫停。 僅允許中斷連線和唯讀功能。|（DM）如需暫停狀態的詳細資訊，請參閱[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)函式。|  
-|HYC00|未執行的選擇性功能|驅動程式或資料來源不支援*TargetType*引數與對應資料行之驅動程式特定 SQL 資料類型的組合所指定的轉換。<br /><br /> 引數*ColumnNumber*為0，且驅動程式不支援書簽。<br /><br /> 此驅動程式僅支援 ODBC 2。*x*和引數*TargetType*為下列其中一項：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 以及附錄 D：資料類型中[c 資料類型](../../../odbc/reference/appendixes/c-data-types.md)所列的任何間隔 c 資料類型。<br /><br /> 驅動程式只支援3.50 之前的 ODBC 版本，而引數*TargetType*已 SQL_C_GUID。|  
-|HYT01|連接逾時已過期|在資料來源回應要求之前，連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**設定，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|HYC00|未執行的選擇性功能|驅動程式或資料來源不支援*TargetType*引數與對應資料行之驅動程式特定 SQL 資料類型的組合所指定的轉換。<br /><br /> 引數*ColumnNumber*為0，且驅動程式不支援書簽。<br /><br /> 此驅動程式僅支援 ODBC 2。*x*和引數*TargetType*為下列其中一項：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 以及附錄 D：中[c 資料類型](../../../odbc/reference/appendixes/c-data-types.md)所列的任何間隔 c 資料類型資料類型。<br /><br /> 驅動程式只支援3.50 之前的 ODBC 版本，並 SQL_C_GUID 引數*TargetType* 。|  
+|HYT01|連接逾時已過期|在資料來源回應要求之前，連接逾時時間已過期。 連接逾時時間是透過**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT 來設定。|  
 |IM001|驅動程式不支援此功能|（DM）與*StatementHandle*相關聯的驅動程式不支援此功能。|  
   
 ## <a name="comments"></a>註解  
@@ -149,9 +149,9 @@ SQLRETURN SQLBindCol(
  系結會持續有效，直到被新的系結取代、資料行未系結或語句釋放為止。  
   
 ## <a name="unbinding-columns"></a>解除系結資料行  
- 若要解除系結單一資料行，應用程式會呼叫**SQLBindCol** ，並將*ColumnNumber*設定為該資料行的數目，並將*TargetValuePtr*設定為 null 指標。 如果*ColumnNumber*參考未系結的資料行，則**SQLBindCol**仍會傳回 SQL_SUCCESS。  
+ 若要解除系結單一資料行，應用程式會呼叫**SQLBindCol** ，並將*ColumnNumber*設定為該資料行的數目，並將*TargetValuePtr*設定為 null 指標。 如果*ColumnNumber*參考未系結的資料行， **SQLBindCol**仍會傳回 SQL_SUCCESS。  
   
- 若要將所有資料行解除系結，應用程式會呼叫**SQLFreeStmt** ，並將*fOption*設定為 SQL_UNBIND。 您也可以將 ARD 的 SQL_DESC_COUNT 欄位設定為零來完成這項作業。  
+ 若要將所有資料行解除系結，應用程式會呼叫**SQLFreeStmt** ，並將*FOPTION*設定為 SQL_UNBIND。 您也可以將 ARD 的 SQL_DESC_COUNT 欄位設定為零來完成這項作業。  
   
 ## <a name="rebinding-columns"></a>重新系結資料行  
  應用程式可以執行兩項作業之一來變更系結：  
@@ -232,7 +232,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>緩衝區位址  
  *緩衝區位址*是資料或長度/指標緩衝區的實際位址。 驅動程式會在寫入緩衝區（例如提取時間）之前，先計算緩衝區位址。 其計算方式為下列公式，其使用*TargetValuePtr*和*StrLen_or_IndPtr*引數中指定的位址、系結位移和資料列編號：  
   
- 系結*位址* + 系結*位移*+ （（資料*列數*-1） x*元素大小*）  
+ 系結*位址* +  系結*位移*+ （（資料*列數*-1） x*元素大小*）  
   
  公式的變數定義如下表中所述。  
   
@@ -254,11 +254,11 @@ SQLRETURN SQLBindCol(
   
 1.  呼叫**SQLGetStmtAttr**以取得 ARD 控制碼。  
   
-2.  呼叫**SQLGetDescField**以取得此描述項的 SQL_DESC_COUNT 欄位，如果*ColumnNumber*引數中的值超過 SQL_DESC_COUNT 的值，則會呼叫**SQLSetDescField** ，將 SQL_DESC_COUNT 的值增加至*ColumnNumber*。  
+2.  呼叫**SQLGetDescField**以取得此描述項的 SQL_DESC_COUNT 欄位，如果*ColumnNumber*引數中的值超過 SQL_DESC_COUNT 的值，則會呼叫**SQLSetDescField** ，以將 SQL_DESC_COUNT 的值增加到*ColumnNumber*。  
   
 3.  多次呼叫**SQLSetDescField** ，以將值指派給 ARD 的下欄欄位：  
   
-    -   將 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 設定為*TargetType*的值，不同之處在于如果*targettype*是 datetime 或 interval 子類型的其中一個精簡識別碼，它會分別將 SQL_DESC_TYPE 設定為 SQL_DATETIME 或 SQL_INTERVAL。將 SQL_DESC_CONCISE_TYPE 設定為簡潔的識別碼;和會將 SQL_DESC_DATETIME_INTERVAL_CODE 設定為對應的 DATETIME 或 INTERVAL 子代碼。  
+    -   將 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 設定為*TargetType*的值，不同之處在于如果*TargetType*是 datetime 或 interval 子類型的其中一個精簡識別碼，它會分別將 SQL_DESC_TYPE 設定為 SQL_DATETIME 或 SQL_INTERVAL。將 SQL_DESC_CONCISE_TYPE 設定為簡潔識別碼;和會將 SQL_DESC_DATETIME_INTERVAL_CODE 設定為對應的 DATETIME 或 INTERVAL 子代碼。  
   
     -   設定一或多個 SQL_DESC_LENGTH、SQL_DESC_PRECISION、SQL_DESC_SCALE 和 SQL_DESC_DATETIME_INTERVAL_PRECISION，適用于*TargetType*。  
   
@@ -270,15 +270,15 @@ SQLRETURN SQLBindCol(
   
     -   將 SQL_DESC_OCTET_LENGTH_PTR 欄位設定為*StrLen_or_Ind*的值。 （請參閱下列段落）。  
   
- *StrLen_or_Ind*引數所參考的變數會用於指標和長度資訊。 如果提取遇到資料行的 null 值，它會將 SQL_Null_DATA 儲存在此變數中。否則，它會將資料長度儲存在此變數中。 傳遞 null 指標做為*StrLen_or_Ind*會讓提取作業不會傳回資料長度，但如果遇到 null 值，而且沒有任何方法可以傳回 SQL_Null_DATA，就會讓 fetch 失敗。  
+ *StrLen_or_Ind*引數所參考的變數會用於指標和長度資訊。 如果提取遇到資料行的 null 值，它會將 SQL_Null_DATA 儲存在此變數中。否則，它會將資料長度儲存在此變數中。 傳遞 null 指標做為*StrLen_or_Ind*會讓提取作業不會傳回資料長度，但如果遇到 null 值且沒有任何方法可傳回 SQL_Null_DATA，則會使提取失敗。  
   
- 如果**SQLBindCol**的呼叫失敗，則會在 ARD 中設定的描述項欄位內容未定義，而且 ARD 的 [SQL_DESC_COUNT] 欄位的值不會變更。  
+ 如果**SQLBindCol**的呼叫失敗，則會在 ARD 中設定的描述項欄位內容未定義，而且 ARD 的 SQL_DESC_COUNT 欄位值不會變更。  
   
 ## <a name="implicit-resetting-of-count-field"></a>[計數] 欄位的隱含重設  
- 只有當這會增加 SQL_DESC_COUNT 的值時， **SQLBindCol**才會將 SQL_DESC_COUNT 設定為*ColumnNumber*引數的值。 如果*TargetValuePtr*引數中的值是 null 指標，且*ColumnNumber*引數中的值等於 SQL_DESC_COUNT （也就是將最大的系結資料行解除系結時），則 SQL_DESC_COUNT 會設定為最高剩餘系結資料行的數目。  
+ 只有當這會增加 SQL_DESC_COUNT 的值時， **SQLBindCol**才會將 SQL_DESC_COUNT 設定為*ColumnNumber*引數的值。 如果*TargetValuePtr*引數中的值是 null 指標，且*ColumnNumber*引數中的值等於 SQL_DESC_COUNT （也就是在解除系結最大的系結資料行時），則 SQL_DESC_COUNT 會設為最高值的數位剩餘的系結資料行。  
   
 ## <a name="cautions-regarding-sql_default"></a>關於 SQL_DEFAULT 的注意事項  
- 若要成功地抓取資料行資料，應用程式必須正確地判斷應用程式緩衝區中資料的長度和開始點。 當應用程式指定明確的*TargetType*時，可以輕鬆地偵測應用程式誤解。 不過，當應用程式指定 SQL_DEFAULT 的*TargetType*時，可以從應用程式所使用的資料行（從變更到中繼資料，或將程式碼套用至不同的資料行），將**SQLBindCol**套用至不同資料類型的資料行。 在此情況下，應用程式可能不一定會決定已提取之資料行資料的開始或長度。 這可能會導致未報告的資料錯誤或記憶體違規。  
+ 若要成功地抓取資料行資料，應用程式必須正確地判斷應用程式緩衝區中資料的長度和開始點。 當應用程式指定明確的*TargetType*時，可以輕鬆地偵測應用程式誤解。 不過，當應用程式指定 SQL_DEFAULT 的*TargetType*時， **SQLBindCol**可以從應用程式所使用的資料行（從變更到中繼資料，或將程式碼套用至不同的）套用至不同的資料類型。排. 在此情況下，應用程式可能不一定會決定已提取之資料行資料的開始或長度。 這可能會導致未報告的資料錯誤或記憶體違規。  
   
 ## <a name="code-example"></a>程式碼範例  
  在下列範例中，應用程式會在 Customers 資料表上執行**SELECT**語句，以傳回客戶識別碼、名稱和電話號碼的結果集（依名稱排序）。 然後它會呼叫**SQLBindCol** ，以將資料行系結至本機緩衝區。 最後，應用程式會使用**SQLFetch**提取每個資料列，並列印每個客戶的名稱、識別碼和電話號碼。  
