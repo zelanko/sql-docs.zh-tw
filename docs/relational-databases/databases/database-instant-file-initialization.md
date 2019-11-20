@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909073"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982454"
 ---
 # <a name="database-file-initialization"></a>資料庫檔案初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "72909073"
 > 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此權限可在安裝期間進行安裝時授與給服務帳戶。 如果使用[命令提示字元安裝](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)，請新增 /SQLSVCINSTANTFILEINIT 引數，或在[安裝精靈](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中核取 [對 SQL Server Database Engine 服務授與「執行磁碟區維護工作」權限] 方塊  。
 
 > [!NOTE]
-> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 開始，以及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV 中的資料行 *instant_file_initialization_enabled* 可用來識別是否已啟用檔案立即初始化。
+> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更新版本開始，[sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV 中的資料行 *instant_file_initialization_enabled* 可用來識別是否已啟用立即檔案初始化。
 
 ## <a name="remarks"></a>Remarks
 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶被授與 *SE_MANAGE_VOLUME_NAME*，類似如下的告知性訊息會在啟動時記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔： 
@@ -78,7 +78,7 @@ ms.locfileid: "72909073"
 
 `Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 開始、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本開始)
 
 ## <a name="security-considerations"></a>安全性考量  
 在使用檔案立即初始化 (IFI) 時，由於刪除的磁碟內容只有在新資料寫入檔案時才會被覆寫；因此，直到其他資料寫入資料檔特定區域之前，未經授權的主體可能得以存取刪除的內容。 當資料庫檔案附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之際，檔案上的判別存取控制清單 (DACL) 可降低此一資訊洩漏風險。 此 DACL 只允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶和本機系統管理員存取檔案。 但是，當檔案卸離後，沒有 *SE_MANAGE_VOLUME_NAME* 的使用者或服務便能存取該檔案。 在備份資料庫時，也會有類似的需要考量之處：如果備份檔案未使用適當的 DACL 保護，未經授權的使用者或服務便可存取刪除的內容。  

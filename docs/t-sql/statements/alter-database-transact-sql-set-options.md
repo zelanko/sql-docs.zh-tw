@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0959a1a81ad0c373e67d2b2549f8792703261078
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729905"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982750"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -296,7 +296,7 @@ SET
 要修改之資料庫的名稱。
 
 CURRENT        
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
 
 會在目前資料庫中執行動作。 所有選項在所有內容中不支援 `CURRENT`。 如果 `CURRENT` 失敗，請提供資料庫名稱。
 
@@ -344,7 +344,7 @@ OFF
 如需詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)中的＜使用資料庫範圍統計資料選項＞一節。
 
 INCREMENTAL = ON | **OFF**        
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 將 AUTO_CREATE_STATISTICS 設定為 ON，並將 INCREMENTAL 設定為 ON。 此設定會在每次支援累加統計資料時，以累加方式自動建立統計資料。 預設值是 OFF。 如需詳細資訊，請參閱 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)。
 
@@ -445,7 +445,7 @@ OFF
 停用資料庫的變更追蹤。 在您停用資料庫的變更追蹤之前，請先在所有資料表上停用變更追蹤。
 
 **\<containment_option> ::=**         
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
 
 控制資料庫內含項目選項。
 
@@ -599,7 +599,7 @@ MULTI_USER
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `user_access` 資料行來判斷這個選項的狀態。 您也可以檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `UserAccess` 屬性來判斷狀態。
 
 **\<delayed_durability_option> ::=**         
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)
 
 控制交易是否認可完全持久或延遲的持久。
 
@@ -649,7 +649,7 @@ OFF
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_trustworthy_on` 資料行來判斷這個選項的狀態。
 
 DEFAULT_FULLTEXT_LANGUAGE        
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
 
 指定全文檢索索引資料行的預設語言值。
 
@@ -657,27 +657,27 @@ DEFAULT_FULLTEXT_LANGUAGE
 > 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 DEFAULT_LANGUAGE        
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
 
 指定所有新建立之登入的預設語言。 語言可藉由提供地區設定識別碼 (LCID)、語言名稱或語言別名來指定。 如需可接受語言名稱和別名的清單，請參閱 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 NESTED_TRIGGERS        
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
 
 指定 AFTER 觸發程序是否可以重疊顯示；亦即，執行起始另一個觸發程序的動作，後者再起始另一個觸發程序等。 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 TRANSFORM_NOISE_WORDS        
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
 
 如果非搜尋字或停用字詞造成全文檢索查詢的布林運算失敗，用來隱藏錯誤訊息。 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 TWO_DIGIT_YEAR_CUTOFF        
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
 
 從 1753 到 9999 中指定一個整數來表示截止年份，以便將兩位數年份解譯為四位數年份。 只有當 CONTAINMENT 已經設為 PARTIAL 時，才允許這個選項。 如果 CONTAINMENT 設定為 NONE，便會發生錯誤。
 
 **\<FILESTREAM_option> ::=**         
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
 
 控制 FileTable 的設定。
 
@@ -700,7 +700,7 @@ Windows 相容的目錄名稱。 此名稱在 [!INCLUDE[ssNoVersion](../../inclu
 請參閱 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)。
 
 **\<mixed_page_allocation_option> ::=**         
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
 
 控制資料庫是否可以針對資料表或索引的前八個頁面使用混合範圍來建立初始頁面。
 
@@ -727,7 +727,7 @@ FORCED
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_parameterization_forced column` 來判斷此選項的目前設定。
 
 <a name="query-store"></a> **\<query_store_options> ::=**         
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
 
 ON | **OFF** | CLEAR [ ALL ]        
 控制是否在此資料庫中啟用查詢存放區，且控制查詢存放區內容的移除。 如需詳細資訊，請參閱[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md)。
@@ -889,7 +889,7 @@ TORN_PAGE_DETECTION
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 `page_verify_option` 資料行，或檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式的 `IsTornPageDetectionEnabled` 屬性，以判斷這個選項的目前設定。
 
 **\<remote_data_archive_option> ::=**         
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
 
 為資料庫啟用或停用 Stretch Database。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。
 
@@ -995,7 +995,7 @@ master、tempdb 或 msdb 系統資料庫的 READ_COMMITTED_SNAPSHOT 不能設為
 > 使用 **DURABILITY = SCHEMA_ONLY**, 和 **READ_COMMITTED_SNAPSHOT** 建立的資料表，在使用 **ALTER DATABASE** 進行變更時， 資料表中的資料會遺失。
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }        
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)
 
 ON        
 當交易隔離等級設定為 SNAPSHOT 以下的任何隔離等級時，記憶體最佳化資料表上所有解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業都會在 SNAPSHOT 隔離下執行。 SNAPSHOT 以下的隔離等級範例包括 READ COMMITTED 或 READ UNCOMMITTED。 不論是在工作階段層級明確設定交易隔離等級，或隱含使用預設值，都會執行這些作業。
@@ -1150,7 +1150,7 @@ OFF
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中 `is_recursive_triggers_on` 資料行或 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函式 `IsRecursiveTriggersEnabled` 屬性來判斷這個選項的狀態。
 
 **\<target_recovery_time_option> ::=**         
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)
 
 為每個資料庫指定間接檢查點的頻率。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，新資料庫的預設值為 **1 分鐘**，這表示資料庫將會使用間接檢查點。 舊版的預設值為 0，這表示資料庫將使用自動檢查點，其頻率取決於伺服器執行個體的復原間隔設定。 對於大多數的系統，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 1 分鐘。
 
@@ -1317,7 +1317,7 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="e-enabling-the-query-store"></a>E. 啟用查詢存放區
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
 
 下列範例會啟用查詢存放區並設定其參數。
 
@@ -3021,7 +3021,7 @@ OFF
 > 針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，您必須從使用者資料庫中執行 `ALTER DATABASE SET QUERY_STORE`。 不支援從另一個資料倉儲執行個體執行陳述式。
 
 **<result_set_caching_option> ::=**         
-**適用於**：Azure SQL 資料倉儲 (預覽)
+**適用於**：Azure SQL 資料倉儲  
 
 控制是否要在資料庫中快取查詢結果。
 

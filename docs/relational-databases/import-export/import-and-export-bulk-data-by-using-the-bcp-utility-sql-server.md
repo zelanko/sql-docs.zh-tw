@@ -1,5 +1,5 @@
 ---
-title: 使用 bcp 公用程式匯入及匯出大量資料 (SQL Server) | Microsoft Docs
+title: 使用 bcp 匯入和匯出大量資料
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: data-movement
@@ -13,21 +13,21 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/28/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0a1a510e717ebb962f39c3b0bb1a342ef52751d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 521ef35d9d06244c36395e96ab681a21abffe6ea
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708001"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055989"
 ---
-# <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 公用程式匯入及匯出大量資料 (SQL Server)
+# <a name="import-and-export-bulk-data-using-bcp-sql-server"></a>使用 bcp 匯入和匯出大量資料 (SQL Server)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-本主題提供有關使用 [bcp 公用程式](../../tools/bcp-utility.md)，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫任何執行 SELECT 陳述式的位置 (包括資料分割檢視) 匯出資料的概觀。  
+本主題提供有關使用 [bcp 公用程式](../../tools/bcp-utility.md) ，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫任何執行 SELECT 陳述式的位置 (包括資料分割檢視) 匯出資料的概觀。  
   
  bcp 公用程式 (Bcp.exe) 是使用大量複製程式 (BCP) API 的命令列工具。 bcp 公用程式可執行以下工作：  
   

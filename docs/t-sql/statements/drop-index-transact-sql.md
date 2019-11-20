@@ -32,12 +32,12 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba3db3dae69f7b8353fd4f6a00e333b0e28be7f9
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155424"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982168"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -129,12 +129,12 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  當 database_name 是目前的資料庫或 database_name 是 tempdb，而且 object_name 開頭為 # 時，Azure SQL Database 支援三部分名稱格式 database_name.[schema_name].object_name。  
   
  \<drop_clustered_index_option>  
- **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  控制叢集索引選項。 這些選項無法搭配其他索引類型使用。  
   
  MAXDOP = *max_degree_of_parallelism*  
- **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (僅限 P2 和 P3 效能層級)。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (僅限效能等級 P2 和 P3)。  
   
  在索引作業期間，覆寫 **max degree of parallelism** 設定選項。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
@@ -158,7 +158,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ONLINE = ON | **OFF**  
- **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。  
   
@@ -174,21 +174,21 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 支援以 "default" 為檔案群組名稱。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 支援以 "default" 為檔案群組名稱。  
   
  指定目前在叢集索引分葉層級之資料列所要移往的位置。 資料會以堆積的形式移至新位置。 您可以指定資料分割配置或檔案群組來作為新位置，但是這個資料分割配置或檔案群組必須已經存在。 MOVE TO 對於索引檢視表或非叢集索引無效。 如果未指定資料分割結構描述或檔案群組，結果資料表會放在定義給叢集索引的相同資料分割結構描述或檔案群組中。  
   
  如果利用 MOVE TO 卸除叢集索引，便會重建基底資料表的任何非叢集索引，不過，它們會保留在原始檔案群組或資料分割結構描述中。 如果將基底資料表移到不同的檔案群組或資料分割結構描述中，則不會移動非叢集索引來符合基底資料表 (堆積) 的新位置。 因此，即使非叢集索引先前與叢集索引對齊，它們也可能不再與堆積對齊。 如需資料分割索引對齊的詳細資訊，請參閱[資料分割資料表與索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
  _partition_scheme_name_ **(** _column_name_ **)**  
- **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定一個資料分割結構描述來做為結果資料表的位置。 您必須已執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 來建立資料分割結構描述。 如果未指定位置，且資料表已進行資料分割，便會將資料表併入與現有叢集索引相同的資料分割配置中。  
   
  配置中的資料行名稱不限定為索引定義中的資料行。 您可以指定基底資料表中的任何資料行。  
   
  *filegroup_name*  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定一個檔案群組來做為結果資料表的位置。 如果未指定位置，且資料表未進行資料分割，便會將結果資料表包括在叢集索引的相同檔案群組中。 此檔案群組必須已存在。  
   
@@ -199,7 +199,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 MOVE TO **"** default **"** 或 MOVE TO **[** default **]** 。 如果指定了 **"** default **"** ，則目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"** }  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定目前在叢集索引分葉層級之 FILESTREAM 資料表所要移往的位置。 資料會以堆積的形式移至新位置。 您可以指定資料分割配置或檔案群組來作為新位置，但是這個資料分割配置或檔案群組必須已經存在。 FILESTREAM ON 對於索引檢視表或非叢集索引是無效的。 如果未指定資料分割配置，資料將會放在針對叢集索引所定義的相同資料分割配置中。  
   
@@ -290,7 +290,7 @@ GO
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>C. 在線上卸除叢集索引或設定 MAXDOP 選項  
  下列範例將 `ONLINE` 選項設為 `ON`，將 `MAXDOP` 設為 `8` 來刪除叢集索引。 由於未指定 MOVE TO 選項，因此產生的資料表會當做索引儲存在相同的檔案群組中。 這個範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -301,7 +301,7 @@ GO
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D. 在線上卸除叢集索引或將資料表移到新的檔案群組  
  下列範例會在線上刪除叢集索引，並利用 `NewGroup` 子句，將產生的資料表 (堆積) 移到 `MOVE TO` 檔案群組。 它會查詢 `sys.indexes`、 `sys.tables`和 `sys.filegroups` 目錄檢視來確認在移動之前和之後，索引和資料表在檔案群組中的位置。 (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以使用 DROP INDEX IF EXISTS 語法。)  
   
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
@@ -374,7 +374,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
 ### <a name="g-dropping-a-clustered-index-on-a-filestream-table"></a>G. 卸除 FILESTREAM 資料表上的叢集索引  
  下列範例會在線上刪除叢集索引，並將結果資料表 (堆積) 和 FILESTREAM 資料移到 `MyPartitionScheme` 資料分割配置，其方式是同時使用 `MOVE TO` 子句和 `FILESTREAM ON` 子句。  
   
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```  
 DROP INDEX PK_MyClusteredIndex   

@@ -21,14 +21,14 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb3802578b7eb500d6b5fd64725a1a03f86fb9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232148"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982071"
 ---
-# <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
+# <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 指定新增至資料表之資料行的屬性。  
@@ -119,7 +119,7 @@ DOCUMENT
  指定 *column_name* 中 **xml** 資料類型的每個執行個體都只能由一個最上層項目組成。 CONTENT 只適用於 **xml** 資料類型，而且只有在同時指定 *xml_schema_collection* 時，才能指定。  
   
  *xml_schema_collection*  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  只適用於 **xml** 資料類型，以便將 XML 結構描述集合與類型產生關聯。 在結構描述中鍵入 **xml** 資料行之前，必須先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)，在資料庫中建立結構描述。  
   
@@ -178,12 +178,12 @@ IDENTITY
  這是加入先前載入的資料列之識別值的累加值。  
   
 NOT FOR REPLICATION  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  可以指定給 IDENTITY 屬性。 如果 IDENTITY 屬性指定了這個子句，當複寫代理程式執行插入作業時，值不會在識別欄位中累加。  
   
 ROWGUIDCOL  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定資料行是一個資料列全域唯一識別碼資料行。 ROWGUIDCOL 只能指派給 **uniqueidentifier** 資料行，且每個資料表只能有一個 **uniqueidentifier** 能指定為 ROWGUIDCOL 資料行。 ROWGUIDCOL 不能指派給使用者自訂資料類型的資料行。  
   
@@ -213,14 +213,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  資料行必須為合格的資料類型。  
   
 ALGORITHM  
-**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
 必須為 **'AEAD_AES_256_CBC_HMAC_SHA_256'** 。  
   
  如需詳細資訊 (包括功能條件約束)，請參閱 [Always Encrypted &#40;資料庫引擎&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定動態資料遮罩。 *mask_function* 是遮罩函式的名稱並具備適當的參數。 下列是可以使用的函式：  
   

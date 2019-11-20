@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882421"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926043"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介紹純量 UDF 內嵌，這是[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一項功能。 此功能可針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 開始) 及 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中叫用 UDF 的查詢改善其效能。
+本文介紹純量 UDF 內嵌，這是[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能套件下的一項功能。 此功能可針對在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 開始) 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中叫用 UDF 的查詢改善其效能。
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>T-SQL 純量使用者定義函式
 以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 實作並傳回單一資料值的使用者定義函式 (UDF)，就是所謂的 T-SQL 純量使用者定義函式。 T-SQL UDF 是一種在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢之間達成程式碼重複使用和模組化的優雅方式。 某些計算 (例如複雜的商務規則) 更容易以命令式 UDF 格式表達。 UDF 有助於建置複雜的邏輯，而不需要撰寫複雜 SQL 查詢的專業知識。
@@ -134,7 +134,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 視 UDF 的邏輯複雜度而定，產生的查詢計劃也可能會變得更大且更複雜。 如我們所見，UDF 內的作業現在不再是黑盒子，因此查詢最佳化工具能夠估算這些作業的成本，並將其最佳化。 此外，因為計劃中不再有 UDF，所以反覆執行 UDF 叫用會取代為完全避免函式呼叫額外負荷的計劃。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>可內嵌的純量 UDF 需求
-如果符合下列所有條件，則可以內嵌純量 T-SQL UDF：
+<a name="requirements"></a> 如果符合下列所有條件，則可以內嵌純量 T-SQL UDF：
 
 - UDF 使用下列建構函式撰寫：
     - `DECLARE`、`SET`：變數宣告和指派。
@@ -165,7 +165,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 針對每個 T-SQL 純量 UDF，[sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) 目錄檢視包含一個稱為 `is_inlineable` 的屬性，其表示是否可內嵌 UDF。 
 
 > [!NOTE]
-> `is_inlineable` 屬性衍生自 UDF 定義內找到的建構。 它不會在編譯時間檢查 UDF 是否可實際內嵌。 如需詳細資訊，請參閱下面的內嵌條件。
+> `is_inlineable` 屬性衍生自 UDF 定義內找到的建構。 它不會在編譯時間檢查 UDF 是否可實際內嵌。 如需詳細資訊，請參閱[內嵌條件](#requirements)。
 
 值 1 表示可內嵌，而 0 表示不可以。 對於所有內嵌 TVF，此屬性的值均為 1。 對於其他所有模組，值會是 0。
 
@@ -258,7 +258,7 @@ END
 1. 查詢層級的聯結提示可能不再有效，因為內嵌可能會引進新的聯結。 必須改為使用本機聯結提示。
 1. 參考內嵌純量 UDF 的檢視無法編製索引。 如果您需要在這類檢視上建立索引，請停用所參考 UDF 的內嵌功能。
 1. [動態資料遮罩](../security/dynamic-data-masking.md)與內嵌 UDF 的行為可能有一些差異。 在某些情況下 (視 UDF 中的邏輯而定)，對於遮罩輸出資料行，內嵌可能更為保守。 在 UDF 中所參考資料行不是輸出資料行的情況下，它們不會被遮罩。 
-1. 如果 UDF 參考內建函式 (例如 `SCOPE_IDENTITY()`)，則內建函式所傳回的值會隨著內嵌而變更。 此行為變更是因為內嵌變更了陳述式在 UDF 內的範圍。
+1. 如果 UDF 參考內建函式 (例如 `SCOPE_IDENTITY()`、`@@ROWCOUNT` 或 `@@ERROR`)，則內建函式所傳回的值會隨著內嵌而變更。 此行為變更是因為內嵌變更了陳述式在 UDF 內的範圍。
 
 ## <a name="see-also"></a>另請參閱
 [SQL Server 資料庫引擎和 Azure SQL Database 的效能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

@@ -1,6 +1,5 @@
 ---
-title: 大量匯入資料時保留識別值 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 大量匯入資料時保留識別值
 ms.date: 09/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,12 +14,13 @@ ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60ca98e5e0e00239293de34f90f015028464d1bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896685"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055965"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>大量匯入資料時保留識別值 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67896685"
 
 |命令|Keep-identity 限定詞|限定詞類型|  
 |-------------|------------------------------|--------------------|  
-|bcp|-E|參數|  
+|bcp|-E|Switch|  
 |BULK INSERT|KEEPIDENTITY|引數|  
 |INSERT ...SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|資料表提示|  
    

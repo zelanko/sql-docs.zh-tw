@@ -1,6 +1,5 @@
 ---
-title: 使用格式檔案略過資料欄位 (SQL Server) | Microsoft 文件
-ms.custom: ''
+title: 使用格式檔案跳過資料欄位
 ms.date: 09/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,14 +13,15 @@ ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ff08fc0f946633b13fa9b029d844390702681be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025035"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056324"
 ---
-# <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式檔案略過資料欄位 (SQL Server)
+# <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式檔案跳過資料欄位 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 資料檔所包含的欄位，可以比資料表中的資料行數多。 此主題描述如何將資料表資料行對應到相對的資料欄位並忽略多餘欄位，藉以修改非 XML 格式檔案與 XML 格式檔案，讓資料檔能容納更多欄位。  如需其他資訊，請參閱 [建立格式檔案 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。
 

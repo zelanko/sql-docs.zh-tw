@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532053"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127380"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -68,6 +68,12 @@ kubectl config view
 > 如果您要在使用 `kubeadm` 所啟動的多節點 Kuberntes 叢集上部署，則在開始進行巨量資料叢集部署之前，請確定部署的所有目標 Kubernetes 節點上時鐘已同步。 巨量資料叢集針對仰賴正確時間的各項服務具有內建健全狀況屬性，而時鐘誤差可能會導致狀態不正確。
 
 設定 Kubernetes 叢集之後，您可以繼續部署新的 SQL Server 巨量資料叢集。 如果您從前一個版本升級，請參閱[如何升級 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md)。
+
+## <a name="ensure-you-have-storage-configured"></a>確定已設定儲存體
+
+讓大多數的巨量資料叢集部署擁有永續性儲存體。 此時，您需要先確定已為如何在 Kubernetes 叢集上提供永續性儲存體進行規劃，才能部署 BDC。
+
+若您在 AKS 中進行部署，則不需要任何儲存體設定。 AKS 提供具備動態佈建的內建儲存類別。 您可以在部署設定檔中自訂儲存類別 (`default` 或 `managed-premium`)。 內建設定檔會使用 `default` 儲存類別。 若正在以使用 `kubeadm` 所部署的 Kubernetes 叢集上進行部署，則您將需要確定針對所需規模的叢集具備了足夠儲存體，且該儲存體已經設定且可供使用。 若要自訂儲存體的使用方式，建議在繼續前先執行此操作。 請參閱[在 Kubernetes 上使用 SQL Server 巨量資料叢集的資料持續性](concept-data-persistence.md)。
 
 ## <a id="deploy"></a> 部署概觀
 
@@ -426,4 +432,4 @@ Sql: ready                                                                      
 
 - [針對巨量資料叢集設定部署設定](deployment-custom-configuration.md)
 - [執行 SQL Server 巨量資料叢集的離線部署](deploy-offline.md)
-- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) (工作坊：SQL Server 巨量資料叢集 - 架構)
+- [工作坊：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) \(英文\)

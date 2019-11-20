@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5bda485ba8cec4d3302a4998f60048aa9a43ef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100976"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981944"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -67,7 +67,7 @@ AS select_statement
 >  在檢視的資料行中，資料行名稱的權限適用於整個 CREATE VIEW 或 ALTER VIEW 陳述式，不論基礎資料來源為何都是如此。 例如，如果是在 CREATE VIEW 陳述式中授與 **SalesOrderID** 資料行的權限，ALTER VIEW 陳述式可以重新命名 **SalesOrderID** 資料行 (例如，將它改成 **OrderRef**)，同時保有使用 **SalesOrderID** 之檢視的相關權限。  
   
  ENCRYPTION  
- **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  加密 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 中包含 ALTER VIEW 陳述式文字的項目。 WITH ENCRYPTION 可防止在 SQL Server 複寫中發行檢視。  
   

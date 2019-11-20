@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798405"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982558"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -131,11 +131,11 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 和 [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) 會針對選取的統計資料公開保存的取樣百分比值。
  
- **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 開始) 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 開始)。  
+ **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 開始) 及更新版本 (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 開始)。  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 強制重新計算包含 ON PARTITIONS 子句所指定之資料分割的分葉層級統計資料，然後合併來建置全域統計資料。 由於無法將使用不同取樣率建立的分割區區統計資料合併在一起，因此需要 WITH RESAMPLE。  
   
-**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本
   
  ALL | COLUMNS | INDEX  
  更新所有現有的統計資料、針對一或多個資料行所建立的統計資料，或是針對索引所建立的統計資料。 如果沒有指定任何選項，UPDATE STATISTICS 陳述式就會更新資料表或索引檢視表的所有統計資料。  
@@ -163,7 +163,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 -   在內部資料表上建立的統計資料。  
 -   使用空間索引或 XML 索引建立的統計資料。  
   
-**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本
 
 MAXDOP = *max_degree_of_parallelism*  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始)。  

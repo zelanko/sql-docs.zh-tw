@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909502"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095707"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,13 +195,13 @@ ms.locfileid: "72909502"
  檢視或更新帳戶的描述。 描述是選擇性的。  
   
  **電子郵件地址**  
- 檢視或更新帳戶之電子郵件地址的名稱。 這是電子郵件傳送來自的電子郵件地址。 例如，Microsoft SQL Server Agent 的帳戶可能會從 **SqlAgent@Adventure-Works.com** 之電腦上的使用者。  
+ 檢視或更新帳戶之電子郵件地址的名稱。 這是電子郵件傳送來自的電子郵件地址。 例如，Microsoft SQL Server Agent 的帳戶可能會從 **SqlAgent\@Adventure-Works.com** 位址傳送電子郵件。  
   
  **顯示名稱**  
  檢視或更新名稱，以顯示在由這個帳戶傳送的電子郵件訊息上。 顯示名稱是選擇性的。 這是顯示於由這個帳戶傳送之訊息上的名稱。 例如，SQL Server Agent 的帳戶在電子郵件訊息上顯示的名稱可能會是 **SQL Server Agent Automated Mailer** 。  
   
  **回覆電子郵件**  
- 檢視或更新電子郵件地址，這將用於回覆給由這個帳戶傳送的電子郵件訊息。 回覆電子郵件是選擇性的。 例如，回覆給 SQL Server Agent 帳戶的郵件，可能會傳送給資料庫管理員 **danw@Adventure-Works.com** 之電腦上的使用者。  
+ 檢視或更新電子郵件地址，這將用於回覆給由這個帳戶傳送的電子郵件訊息。 回覆電子郵件是選擇性的。 例如，回覆給 SQL Server Agent 帳戶的郵件，可能會傳送給資料庫管理員 **danw\@Adventure-Works.com**。  
   
  **伺服器名稱**  
  檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 一般而言，此格式類似於 **smtp.<貴公司>.com**。 如需相關說明，請洽詢您的郵件管理員。  

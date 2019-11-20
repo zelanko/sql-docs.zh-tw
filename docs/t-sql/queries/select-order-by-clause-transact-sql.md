@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419637"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981715"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  指定要略過的資料列數目，然後才開始從查詢運算式傳回資料列。 值可以是大於或等於零的整數常數或運算式。  
   
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  *offset_row_count_expression* 可以是變數、參數或常數純量子查詢。 在使用子查詢時，它無法參考定義在外部查詢範圍中的任何資料行。 也就是，它不能與外部查詢相互關聯。  
   
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  指定要在已處理 OFFSET 子句之後傳回的資料列數目。 值可以是大於或等於一的整數常數或運算式。  
   
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  *fetch_row_count_expression* 可以是變數、參數或常數純量子查詢。 在使用子查詢時，它無法參考定義在外部查詢範圍中的任何資料行。 也就是，它不能與外部查詢相互關聯。  
   
@@ -364,7 +364,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> 限制傳回的資料列數目  
  下列範例使用 OFFSET 和 FETCH 來限制查詢所傳回的資料列數目。  
   
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. 為 OFFSET 和 FETCH 值指定整數常數  
  下列範例會指定整數常數做為 OFFSET 和 FETCH 子句的值。 第一個查詢傳回依資料行 `DepartmentID` 排序的所有資料列。 比較這個查詢所傳回的結果與後面兩個查詢的結果。 下一個查詢使用子句 `OFFSET 5 ROWS` 略過前 5 個資料列，並傳回所有其餘的資料列。 最後查詢使用子句 `OFFSET 0 ROWS` 從第一個資料列開始，然後再使用 `FETCH NEXT 10 ROWS ONLY`，將傳回的資料列限制在已排序結果集內的 10 個資料列。  

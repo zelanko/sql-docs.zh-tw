@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298541"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096124"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 連接管理員
 
@@ -40,9 +40,9 @@ ms.locfileid: "71298541"
   
     3.  選取用於存取 WebHCat 服務的 [驗證]  方法。 可用的值為：[基本]  和 [Kerberos]  。  
   
-         ![使用基本驗證的 Hadoop 連線管理員編輯器螢幕擷取畫面](../../integration-services/connection-manager/media/hadoop-cm-basic.png "使用基本驗證的 Hadoop 連線管理員編輯器")  
+         ![搭配基本驗證的 Hadoop Connection Manager Editor 螢幕擷取畫面](../../integration-services/connection-manager/media/hadoop-cm-basic.png "搭配基本驗證的 Hadoop Connection Manager Editor 螢幕擷取畫面")  
   
-         ![使用 Kerberos 驗證的 Hadoop 連線管理員編輯器螢幕擷取畫面](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "使用 Kerberos 驗證的 Hadoop 連線管理員編輯器")  
+         ![搭配 Kerberos 驗證的 Hadoop Connection Manager Editor 螢幕擷取畫面](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "搭配 Kerberos 驗證的 Hadoop Connection Manager Editor 螢幕擷取畫面")  
   
     4.  對於 [WebHCat 使用者]  ，輸入已授權可存取 WebHCat 的 [使用者]  。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "71298541"
 
     設定之後，請重新啟動 KDC 服務。
 
-2.  在 KDC 伺服器上準備名稱為 **krbtgt/REALM.COM@AD.COM** 的主體。 使用下列命令：
+2.  在 KDC 伺服器上準備名為 **krbtgt/REALM.COM\@AD.COM** 的主體。 使用下列命令：
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -167,7 +167,7 @@ ms.locfileid: "71298541"
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  建立 Windows 網域對 Kerberos 領域的信任關係。 在下列範例中，`[password]` 是主體 **krbtgt/REALM.COM@AD.COM** 的密碼。
+2.  建立 Windows 網域對 Kerberos 領域的信任關係。 在下列範例中，`[password]` 是主體 **krbtgt/REALM.COM\@AD.COM**的密碼。
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 

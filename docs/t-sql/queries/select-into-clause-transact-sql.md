@@ -29,12 +29,12 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac9ba9a291b88b8fc1091ff72e3a7af782b1e618
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948416"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981721"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ SELECT...INTO 會在預設的檔案群組中建立新的資料表，然後將查
  *filegroup*    
  指定將作為新資料表建立位置的檔案群組名稱。 指定的檔案群組應該存在於資料庫上，否則 SQL Server 引擎會擲回錯誤。   
  
- **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更新版本。
   
 ## <a name="data-types"></a>資料型別  
  FILESTREAM 屬性不會傳送至新的資料表。 FILESTREAM BLOB 會以 **varbinary(max)** BLOB 的形式被複製並儲存在新資料表中。 在沒有 FILESTREAM 屬性的情況下，**varbinary(max)** 資料類型會有 2 GB 的限制。 如果 FILESTREAM BLOB 超過這個值，系統就會引發錯誤 7119 並且停止此陳述式。  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. 指定遠端資料來源的資料行，藉以建立資料表  
  下列範例將示範三種根據遠端資料來源在本機伺服器上建立新資料表的方法。 此範例一開始會建立遠端資料來源的連結。 然後，連結的伺服器名稱 `MyLinkServer,` 會指定於第一個 SELECT...INTO 陳述式的 FROM 子句和第二個 SELECT...INTO 陳述式的 OPENQUERY 函數中。 最後，第三個 SELECT...INTO 陳述式會使用 OPENDATASOURCE 函數，以便直接指定遠端資料來源，而非使用連結的伺服器名稱。  
   
- **適用於：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```sql
 USE master;  
@@ -231,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 將新資料表建立成另一個資料表的複本並載入至指定的檔案群組中
 下列範例示範如何將新資料表建立成另一個資料表的複本，然後載入至與使用者預設檔案群組不同的指定檔案群組中。
 
- **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 及更新版本。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

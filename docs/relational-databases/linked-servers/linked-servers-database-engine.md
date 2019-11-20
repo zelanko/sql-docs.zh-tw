@@ -1,6 +1,5 @@
 ---
-title: 連結的伺服器 (Database Engine) | Microsoft Docs
-ms.custom: ''
+title: 連結的伺服器
 ms.date: 05/29/2019
 ms.prod: sql
 ms.technology: ''
@@ -19,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a7dc1d67e45bb8d67cebff9deb3a694b09038154
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073659"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094771"
 ---
 # <a name="linked-servers-database-engine"></a>連結的伺服器 (Database Engine)
 

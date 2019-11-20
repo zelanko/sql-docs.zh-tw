@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67aa3078746108b0a337d5bb4ef4eb28f40f8dc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902027"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981976"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -199,7 +199,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  指定資料列集函數之一 (如 OPENROWSET)，利用該函數來傳回可使用的物件，而不是傳回資料表參考。 如需有關資料列集函數清單的詳細資訊，請參閱[資料列集函數 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)。  
@@ -208,7 +208,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  這是一個用以取代結果集中之資料行名稱的選擇性別名。 資料行別名只能用在搭配 BULK 選項使用 OPENROWSET 函數的 SELECT 陳述式中。 當您使用 *bulk_column_alias* 時，請依照與檔案中資料行相同的順序，指定每個資料表資料行的別名。  
@@ -221,7 +221,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  透過 XML 文件提供資料列集的檢視。 如需詳細資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。  
@@ -236,7 +236,7 @@ FROM { <table_source> [ ,...n ] }
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  指定從所指定的時態表及其連結的系統版本設定記錄資料表，傳回特定版本的資料  
@@ -381,27 +381,27 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  傳回含有每個資料列單一記錄的資料表，內含的值在過去的指定時間點為實際 (目前)。 就內部而言，會在時態表及其記錄資料表之間執行聯集運算，然後篩選結果，以根據 *\<date_time>* 參數所指定的時間點，傳回當時有效之資料列中的值。 如果 *system_start_time_column_name* 值小於或等於 *\<date_time>* 參數值，且 *system_end_time_column_name* 值大於 *\<date_time>* 參數值，資料列的值即視為有效。   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
   
  傳回一個資料表，其中含有在指定時間範圍內處於作用中之所有記錄版本的值，不論它們是在 FROM 引數的 *\<start_date_time>* 參數值之前即開始處於作用中，還是在 TO 引數的 *\<end_date_time>* 參數值之後停止處於作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 這包含正好在 FROM 端點所定義範圍下限變成作用中的資料列，但不包含正好在 TO 端點所定義範圍上限變成作用中的資料列。  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  與上面的 **FROM \<start_date_time> TO \<end_date_time>** 描述相同，唯一差別在於它包含在 \<end_date_time> 端點所定義的範圍上限變成作用中的資料列。  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  傳回資料表，其中內含所有記錄版本的值，該值在 CONTAINED IN 引數兩個日期時間值所定義的指定時間範圍內為開啟及關閉。 包含恰好在範圍下限變為作用中的資料列，或是恰好在範圍上限就不在作用中的資料列。  
@@ -630,9 +630,9 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. Using FOR SYSTEM_TIME  
+### <a name="m-using-for-system_time"></a>M. Using FOR SYSTEM_TIME  
   
-**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  下列範例會使用 FOR SYSTEM_TIME AS OF date_time_literal_or_variable 引數來傳回截至 2014 年 1 月 1 日為止實際 (目前) 的資料表資料列。  
   

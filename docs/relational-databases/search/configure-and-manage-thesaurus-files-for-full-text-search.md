@@ -1,5 +1,5 @@
 ---
-title: 設定及管理全文檢索搜尋的同義字檔案 | Microsoft Docs
+title: 設定及管理全文檢索搜尋的同義字檔案
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,12 +13,13 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: cb88891354154ff987cedc31a56f56e4bf953532
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903884"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056206"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

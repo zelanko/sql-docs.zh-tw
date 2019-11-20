@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713193"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982285"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ KEEP PLAN
 強制查詢最佳化工具放寬查詢的估計重新編譯臨界值。 所預估重新編譯臨界值是資料表因執行下列其中一個陳述式而變更預估數目的索引資料行時，即會啟動查詢的自動重新編譯：
 
 * UPDATE
-* Delete
+* 刪除
 * MERGE
 * Insert
 
@@ -183,7 +183,7 @@ KEEPFIXED PLAN
 強制查詢最佳化工具不因統計資料中的變更而重新編譯查詢。 指定 KEEPFIXED PLAN 可確保只有在基礎資料表的結構描述有了改變，或針對這些資料表執行 **sp_recompile** 時，才重新編譯查詢。  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起，到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本開始。  
   
 防止查詢使用非叢集之記憶體最佳化的資料行存放區索引。 如果查詢同時包含禁止使用資料行存放區索引的查詢提示，以及使用資料行索引的索引提示，將會因為兩提示相互衝突而傳回錯誤。  
   

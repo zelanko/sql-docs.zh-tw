@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
-ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182645"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119203"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：使用 Spark 作業將資料內嵌至 SQL Server 資料集區
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教學課程示範如何使用 Spark 作業，將資料載入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的[資料集](concept-data-pool.md)區。 
+本教學課程示範如何使用 Spark 作業將資料載入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 的[資料集區](concept-data-pool.md)。 
 
 在本教學課程中，您將了解如何：
 
@@ -32,7 +32,7 @@ ms.locfileid: "73182645"
 > [!TIP]
 > 如果您想要的話，也可以下載並執行用於本教學課程中命令的指令碼。 如需指示，請參閱 GitHub 上的[資料集區範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)。
 
-## <a id="prereqs"></a> Prerequisites
+## <a id="prereqs"></a> 必要條件
 
 - [巨量資料工具](deploy-big-data-tools.md)
    - **kubectl**
@@ -46,7 +46,7 @@ ms.locfileid: "73182645"
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱[連線到 SQL Server 主要執行個體](connect-to-big-data-cluster.md#master)。
 
-1. 按兩下 [伺服器] 視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]。
+1. 按兩下 [伺服器]  視窗中的連線，顯示 SQL Server 主要執行個體的伺服器儀表板。 選取 [新增查詢]  。
 
    ![SQL Server 主要執行個體查詢](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
@@ -79,13 +79,13 @@ ms.locfileid: "73182645"
 
 ## <a name="start-a-spark-streaming-job"></a>啟動 Spark 串流作業
 
-下一個步驟是建立 Spark 串流作業，將來自存放集區 (HDFS) 的 Web 點選流資料載入您在資料集區中建立的外部資料表。 此資料已新增至[將範例資料載入您的 big data](tutorial-load-sample-data.md)叢集中的/clickstream_data。
+下一個步驟是建立 Spark 串流作業，將來自存放集區 (HDFS) 的 Web 點選流資料載入您在資料集區中建立的外部資料表。 這項資料已在[將範例資料載入您的巨量資料叢集](tutorial-load-sample-data.md)中新增至 /clickstream_data。
 
 1. 在 Azure Data Studio 中，連線到巨量資料叢集的主要執行個體。 如需詳細資訊，請參閱[連線到巨量資料叢集](connect-to-big-data-cluster.md)。
 
-2. 建立新的筆記本並選取 Spark |Scala 做為您的核心。
+2. 建立新的筆記本並選取 Spark | Scala 作為您的核心。
 
-3. 執行 Spark 內嵌作業
+3. 執行 Spark 擷取作業
    1. 設定 Spark-SQL 連接器參數
       ```
       import org.apache.spark.sql.types._
@@ -99,8 +99,9 @@ ms.locfileid: "73182645"
       val datapool_table = "web_clickstreams_spark_results"
       val datasource_name = "SqlDataPool"
       val schema = StructType(Seq(
-      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
-      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      StructField("wcs_click_date_sk",LongType,true), StructField("wcs_click_time_sk",LongType,true), 
+      StructField("wcs_sales_sk",LongType,true), StructField("wcs_item_sk",LongType,true),
+      StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
       val hostname = "master-0.master-svc"
@@ -108,7 +109,7 @@ ms.locfileid: "73182645"
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```
    2. 定義並執行 Spark 作業
-      * 每個作業都有兩個部分： readStream 和 Writestream.format。 在下面，我們會使用上述定義的架構來建立資料框架，然後寫入資料集區中的外部資料表。
+      * 每個作業都有兩個部分：readStream 和 writeStream。 以下我們會使用以上定義的結構描述來建立資料框架，然後寫入資料集區中的外部資料表。
       ```
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
       
@@ -131,7 +132,7 @@ ms.locfileid: "73182645"
 
 下列步驟顯示 Spark 串流作業已將來自 HDFS 的資料載入資料集區。
 
-1. 查詢內嵌資料之前，請查看 Spark 執行狀態，包括 Yarn 應用程式識別碼、Spark UI 和驅動程式記錄檔。
+1. 在查詢內嵌資料前，請查看 Spark 執行狀態 (包括 Yarn 應用程式識別碼、Spark UI 和驅動程式記錄)。
 
    ![Spark 執行詳細資料](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
@@ -145,7 +146,7 @@ ms.locfileid: "73182645"
    SELECT count(*) FROM [web_clickstreams_spark_results];
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
-1. 您也可以在 Spark 中查詢資料。 例如，下列程式碼會列印資料表中的記錄數目：
+1. 您也可以在 Spark 中查詢資料。 例如，以下程式碼會印出資料表中的記錄數：
    ```
    def df_read(dbtable: String,
                 url: String,
@@ -171,7 +172,7 @@ ms.locfileid: "73182645"
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
 ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 了解如何在 Azure Data Studio 中執行範例筆記本：
 > [!div class="nextstepaction"]

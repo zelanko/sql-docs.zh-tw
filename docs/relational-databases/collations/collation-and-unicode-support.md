@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680786"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982815"
 ---
 # <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
 要對支援全球用戶需要的所有字元，選取字元資料類型的字碼頁則相當困難。 在國際資料庫中管理字元資料最簡單的方式，就是一律使用支援 Unicode 的資料類型。 
 
 ### <a name="unicode-data-types"></a>Unicode 資料類型
-如果您將可反映多種語言的字元資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，請使用 Unicode 資料類型 (**nchar**、**nvarchar** 和 **ntext**)，不要使用非 Unicode 資料類型 (**char**、**varchar** 和 **text**)。 
+如果您將可反映多種語言的字元資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本)，則請使用 Unicode 資料類型 (**nchar**、**nvarchar** 和 **ntext**)，而非 Unicode 資料類型 (**char**、**varchar** 和 **text**)。 
 
 > [!NOTE]
 > 針對 Unicode 資料類型，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以使用 UCS-2 表示最多 65,535 個字元，或是在使用增補字元的情況下，使用完整的 Unicode 範圍 (1,114,111 個字元)。 如需啟用增補字元的詳細資訊，請參閱[增補字元](#Supplementary_Characters)。
@@ -473,7 +473,7 @@ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主�
 > [!TIP]
 > 此外，您也可以嘗試針對伺服器上的資料使用不同的定序。 您可以選擇將對應至用戶端字碼頁的定序。    
 >
-> 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 中所提供 UTF-16 定序來改善部分 Unicode 字元的搜尋和排序 (僅限 Windows 定序)，您可以選取其中一個增補字元 (\_SC) 定序或其中一個版本 140 定序。    
+> 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本) 中所提供 UTF-16 定序來改善部分 Unicode 字元的搜尋和排序 (僅限 Windows 定序)，您可以選取其中一個增補字元 (\_SC) 定序或其中一個版本 140 定序。    
  
 若要使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中提供的 UTF-8 定序，以及改善一些 Unicode 字元的排序和搜尋 (僅限 Windows 定序)，您必須選取啟用 UTF-8 編碼的定序 (\_UTF8)。
  

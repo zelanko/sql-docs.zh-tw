@@ -1,19 +1,19 @@
 ---
-title: SQL Server 高可用性和災害復原夥伴 | Microsoft Docs
+title: SQL Server 高可用性和災害復原夥伴
 description: 具有 Server 監視解決方案的協力廠商夥伴清單。
 services: sql-server
 ms.topic: conceptual
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 10b44f803da7b02ba95f8d6739a5bab9b85eba50
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: e13efcf874b9f0d59cdc103626c1604b58757af8
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68132834"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095552"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 高可用性和災害復原夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

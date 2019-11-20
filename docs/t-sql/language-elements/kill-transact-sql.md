@@ -34,12 +34,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e1a4d6a9d55caa910a0a7de5349dd06dd60269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122282"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981928"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本
   
 識別分散式交易的工作單位識別碼 (UOW)。 _UOW_ 是可以從 sys.dm_tran_locks 動態管理檢視的 request_owner_guid 資料行取得的 GUID。 您也可以從錯誤記錄檔或透過 MS DTC 監視器來取得 _UOW_。 如需有關監視分散式交易的詳細資訊，請參閱 MS DTC 文件集。  
   

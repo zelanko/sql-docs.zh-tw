@@ -1,5 +1,5 @@
 ---
-title: 將搜尋所使用的斷詞工具還原為舊版 | Microsoft 文件
+title: 將搜尋所使用的文字分隔還原為舊版
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -10,14 +10,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf635c951c4705fcb726d4122414740b5293cc47
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903804"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055189"
 ---
-# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>將搜索所使用的斷詞工具還原為舊版
+# <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>將搜尋所使用的文字分隔還原為舊版 (SQL Server 搜尋)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 對於全文檢索搜尋支援的所有語言 (韓文除外)，都會安裝並啟用特定版本的斷詞工具和字幹分析器。 本文描述如何從這些元件的這個版本切換成舊版，或從舊版切換回新版。  
   

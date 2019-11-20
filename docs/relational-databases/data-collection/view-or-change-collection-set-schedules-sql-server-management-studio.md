@@ -1,6 +1,6 @@
 ---
-title: 檢視或變更收集組排程 (SQL Server Management Studio) | Microsoft 文件
-ms.custom: ''
+title: 檢視或變更收集組排程
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c5aa31c50a4589c3ba5087333522955f8bd9110
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999912"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055324"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>檢視或變更收集組排程 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

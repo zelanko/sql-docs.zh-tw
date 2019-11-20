@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80723d2288ce628d4c39d174eefc3bf868314886
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122319"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981949"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ Execute a character string
  已在另一個資料庫建立的模組，如果執行它的使用者擁有它，或者具有適當的權限可以在該資料庫執行它，就可以執行這個模組。 如果執行某個模組的使用者，具有適當的權限可以使用該伺服器 (遠端存取)，以及在該資料庫中執行該模組，就可以在另一個執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器上執行該模組。 如果指定了伺服器名稱，但沒有指定資料庫名稱，則 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會在該使用者的預設資料庫中尋找該模組。  
   
  ;*number*  
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
  這是用來將同名程序分組的選擇性整數。 這個參數不用於擴充預存程序。  
   
@@ -267,11 +267,11 @@ Execute a character string
  指定執行陳述式的內容。  
   
  登入  
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
  指定您要模擬的內容是登入。 模擬範圍是伺服器。  
   
- 使用者  
+ USER  
  指定您要模擬的內容是目前資料庫中的使用者。 模擬範圍僅限於目前資料庫。 通往資料庫使用者的內容切換不會繼承該使用者的伺服器層級權限。  
   
 > [!IMPORTANT]  
@@ -291,7 +291,7 @@ Execute a character string
  指出為其在 EXEC('...', \<arg-list>) AT \<linkedsrv> 陳述式所使用之通過命令的 \<arg-list> 中提供值的參數。  
   
  AT *linked_server_name*  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
  指定 *command_string* 對 *linked_server_name* 執行，並將結果 (若有) 傳回用戶端。 *linked_server_name* 必須參考本機伺服器中現有的連結伺服器定義。 連結伺服器是利用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 所定義。  
   
@@ -301,11 +301,11 @@ Execute a character string
 |詞彙|定義|  
 |----------|----------------|  
 |RECOMPILE|在執行模組之後，強制編譯、使用和捨棄新計畫。 如果該模組有現有的查詢計畫，這個計畫便會保留在快取中。<br /><br /> 如果您所提供的參數不合規則，或者如果資料已經大幅變更，請使用這個選項。 這個選項不適用於擴充預存程序。 我們建議您少用這個選項，因為它的成本很高。<br /><br /> **注意：** 呼叫使用 OPENDATASOURCE 語法的預存程序時，您無法使用 WITH RECOMPILE。 指定物件名稱四部分時，會忽略 WITH RECOMPILE 選項。<br /><br /> **注意：** RECOMPILE 不支援搭配原生編譯的純量使用者定義函式。 如果您需要重新編譯，請使用 [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)。|  
-|**RESULT SETS UNDEFINED**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 這個選項不保證會傳回何種結果 (如果有的話)，也不提供定義。 如果傳回任何結果或未傳回結果，陳述式會正確無誤地執行。 如果未提供 result_sets_option，RESULT SETS UNDEFINED 是預設行為。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
-|RESULT SETS NONE|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證 Execute 陳述式不會傳回任何結果。 如果傳回任何結果，會中止批次。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
-|*\<result_sets_definition>*|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證結果會依 result_sets_definition 中所指定傳回。 針對傳回多個結果集的陳述式，請提供多個 *result_sets_definition* 區段。 將每個 *result_sets_definition* 括在括號中，並以逗號分隔。 如需詳細資訊，請參閱本主題稍後的 \<result_sets_definition>。<br /><br /> 此選項對於原生編譯的純量使用者定義函數一律會產生錯誤，因為函數永遠不會傳回結果集。|
+|**RESULT SETS UNDEFINED**|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 這個選項不保證會傳回何種結果 (如果有的話)，也不提供定義。 如果傳回任何結果或未傳回結果，陳述式會正確無誤地執行。 如果未提供 result_sets_option，RESULT SETS UNDEFINED 是預設行為。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
+|RESULT SETS NONE|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證 Execute 陳述式不會傳回任何結果。 如果傳回任何結果，會中止批次。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
+|*\<result_sets_definition>*|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證結果會依 result_sets_definition 中所指定傳回。 針對傳回多個結果集的陳述式，請提供多個 *result_sets_definition* 區段。 將每個 *result_sets_definition* 括在括號中，並以逗號分隔。 如需詳細資訊，請參閱本主題稍後的 \<result_sets_definition>。<br /><br /> 此選項對於原生編譯的純量使用者定義函數一律會產生錯誤，因為函數永遠不會傳回結果集。|
   
-\<result_sets_definition >**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition >**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  描述執行的陳述式所傳回的結果集。 result_sets_definition 子句有下列的意義  
   
@@ -426,7 +426,7 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-### <a name="c-using-execute-tsqlstring-with-a-variable"></a>C. 使用 EXECUTE 'tsql_string' 與變數  
+### <a name="c-using-execute-tsql_string-with-a-variable"></a>C. 使用 EXECUTE 'tsql_string' 與變數  
  下列範例會示範 `EXECUTE` 如何處理含有變數的動態建立字串。 這個範例會建立 `tables_cursor` 資料指標來保存一份 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中所有使用者定義資料表的清單，然後再利用這份清單在資料表上重建所有的索引。  
   
 ```  
@@ -455,7 +455,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. 使用 EXECUTE 與遠端預存程序  
  下列範例會在遠端伺服器 `uspGetEmployeeManagers` 中執行 `SQLSERVER1` 預存程序，並且儲存傳回狀態，指出 `@retstat` 是成功還是失敗。  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
 ```  
 DECLARE @retstat int;  
@@ -511,10 +511,10 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 ```  
   
-### <a name="g-using-execute-with-at-linkedservername"></a>G. 使用 EXECUTE 與 AT linked_server_name  
+### <a name="g-using-execute-with-at-linked_server_name"></a>G. 使用 EXECUTE 與 AT linked_server_name  
  下列範例會傳遞一個命令字串到遠端伺服器。 它會建立一個連結伺服器 `SeattleSales`，指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一個執行個體，然後針對該連結伺服器執行 DDL 陳述式 (`CREATE TABLE`)。  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -546,7 +546,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. 使用 EXECUTE 查詢連結伺服器上的 Oracle 資料庫  
  下列範例會執行遠端 Oracle 伺服器上的幾個 `SELECT` 陳述式。 這個範例一開始就加入 Oracle 伺服器當做連結伺服器，並且建立連結伺服器登入。  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
 ```  
 -- Setup the linked server.  
@@ -586,10 +586,10 @@ AS USER = 'User1';
 GO  
 ```  
   
-### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. 使用 EXECUTE 與 AT linked_server_name  
+### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>L. 使用 EXECUTE 與 AT linked_server_name  
  下列範例會使用問號 (`?`) 預留位置代表參數，將命令字串傳遞至遠端伺服器。 它會建立一個連結伺服器 `SeattleSales`，指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一個執行個體，然後對該連結伺服器執行 `SELECT` 陳述式。 `SELECT` 陳述式會使用問號當做 `ProductID` 參數 (`952`) 的預留位置，而這會在陳述式之後提供。  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
 ```  
 -- Setup the linked server.  
@@ -605,7 +605,7 @@ GO
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>M. 使用 EXECUTE 重新定義單一結果集  
  先前某些範例執行 `EXEC dbo.uspGetEmployeeManagers 6;`，傳回 7 個資料行。 下列範例示範如何使用 `WITH RESULT SET` 語法來變更傳回結果集的名稱和資料類型。  
   
-**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -625,7 +625,7 @@ WITH RESULT SETS
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>N. 使用 EXECUTE 重新定義兩個結果集  
  當執行一個會傳回多個結果集的陳述式時，請定義每個預期的結果集。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中的下列範例會建立一個可傳回兩個結果集的程序。 然後使用 **WITH RESULT SETS** 子句，並指定兩個結果集定義，執行此程序。  
   
-**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  

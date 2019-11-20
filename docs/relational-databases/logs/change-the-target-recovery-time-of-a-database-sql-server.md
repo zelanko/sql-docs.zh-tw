@@ -1,6 +1,6 @@
 ---
-title: 變更資料庫的目標復原時間 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 變更資料庫的目標復原時間
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2a8e28d1dd10e55a3726198a6061e44c24bc898b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 24a87adf77ea4217cb27b20d2452fcbd5ba26135
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909574"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056249"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>變更資料庫的目標復原時間 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

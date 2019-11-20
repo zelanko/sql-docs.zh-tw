@@ -1,5 +1,5 @@
 ---
-title: 尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼 | Microsoft Docs
+title: 尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,12 +13,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638050"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056523"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fc26cc0862c7dfb02276738d9424b860d98644e7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882420"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055138"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (預覽)
 
@@ -131,7 +131,7 @@ WITH
 使用 AAD 或公用儲存體帳戶進行驗證時，不需要指定 CREDENTIAL。 
 
 - 使用共用存取簽章 (SAS) 進行驗證*IDENTITY：值為「共用存取簽章」的常數*
-  *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview#what-is-a-shared-access-signature)*會提供您儲存體帳戶中資源的委派存取權。*
+  *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*會提供您儲存體帳戶中資源的委派存取權。*
   所需最小權限：READ 和 LIST
 
 - 使用[*服務主體*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)進行驗證
@@ -164,7 +164,7 @@ WITH
   
 - 使用共用存取簽章 (SAS) 進行驗證
   - *IDENTITY：值為「共用存取簽章」的常數*
-  - *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature)*會提供您儲存體帳戶中資源的委派存取權。*
+  - *SECRET：* [*共用存取簽章*](/azure/storage/common/storage-sas-overview)*會提供您儲存體帳戶中資源的委派存取權。*
   - 所需最小權限：READ、LIST、WRITE、CREATE、DELETE
   
 - 使用[*服務主體*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)進行驗證
@@ -277,7 +277,7 @@ COPY 命令的預設值為：
 - ROWTERMINATOR = ‘\n'
 
 > [!IMPORTANT]
-> COPY 在內部會將 ‘\n’ 視為 ‘\r\n’。 如需詳細資訊，請參閱 [ROWTERMINATOR]() 一節。
+> COPY 在內部會將 ‘\n’ 視為 ‘\r\n’。 如需詳細資訊，請參閱 ROWTERMINATOR 一節。
 
 - FIRSTROW = 1
 
@@ -360,4 +360,4 @@ WITH (
 
 ## <a name="see-also"></a>另請參閱  
 
- [使用 SQL 資料倉儲載入概觀](/azure/sql-data-warehouse/design-elt-data-loading>) 
+ [使用 SQL 資料倉儲載入概觀](/azure/sql-data-warehouse/design-elt-data-loading)

@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659098"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982853"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -244,9 +244,9 @@ TO \<backup_device> [ **,** ...*n* ] 指出隨附的[備份裝置](../../relatio
 > [!NOTE]
 > NUL 磁碟裝置將捨棄傳送給它的所有資訊，而且只應用於測試。 這不適用於生產環境。
 > [!IMPORTANT]
-> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，當您備份至 URL 時，可以只備份到單一裝置。 為了在備份到 URL 時能夠備份到多部裝置，您必須使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，而且必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) \(英文\)。
+> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，當您備份至 URL 時，可以只備份到單一裝置。 為了在備份到 URL 時能夠備份到多部裝置，您必須使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本，且必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) \(英文\)。
 
-**URL 適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
+**URL 適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更新版本)。
 
 在 BACKUP 陳述式內指定磁碟裝置之前，該裝置不需要存在。 如果實體裝置存在，且 BACKUP 陳述式並未指定 INIT 選項，就會將備份附加至裝置中。
 
@@ -279,10 +279,10 @@ MIRROR TO \<backup_device> [ **,** ...*n* ] 指定一組最多三個的次要備
 
 指定要搭配備份作業使用的選項。
 
-CREDENTIAL **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
+CREDENTIAL **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更新版本)。
 只有當建立備份到 Microsoft Azure Blob 儲存體服務時才使用。
 
-FILE_SNAPSHOT **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
+FILE_SNAPSHOT **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
 
 使用 Azure Blob 儲存體服務來儲存所有 SQL Server 資料庫檔案時，用來建立資料庫檔案的 Azure 快照集。 如需詳細資訊，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照集備份會以一致的狀態建立資料庫檔案 (資料和記錄檔) 的 Azure 快照集。 一組一致的 Azure 快照集會組成一個備份，並記錄於備份檔案中。 `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` 和 `BACKUP LOG TO URL WITH FILE_SNAPSHOT` 之間的唯一差異是，後者也會截斷交易記錄，但前者不會。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照集備份，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立備份鏈結所需的初始完整備份之後，只需使用單一交易記錄備份就能將資料庫還原至交易記錄備份的時間點。 此外，只需要兩個交易記錄備份，就能將資料庫還原至這兩個交易記錄備份時間之間的時間點。
 

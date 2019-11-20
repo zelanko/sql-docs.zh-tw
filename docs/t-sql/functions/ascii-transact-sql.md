@@ -1,7 +1,7 @@
 ---
 title: ASCII (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a629e38a978d435cb1c3fa4b023e3b489c33a497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019763"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119184"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +51,11 @@ ASCII ( character_expression )
 ## <a name="remarks"></a>Remarks
 ASCII 代表「美國訊息交換標準代碼」(**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange)。 它是現代電腦的字元編碼標準。 如需 ASCII 字元清單，請參閱 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的＜可列印字元＞  (Printable characters) 一節。
 
-## <a name="examples"></a>範例  
-這個範例假設使用 ASCII 字元集，並傳回 6 個字元的 `ASCII` 值。
+ASCII 是一組 7 位元的字元集。 擴充 ASCII 或高 ASCII 是一組 8 位元的字元集，其不會由 `ASCII` 函式進行處理。 
+
+## <a name="examples"></a>範例 
+
+### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>A. 這個範例假設使用 ASCII 字元集，並傳回 6 個字元的 `ASCII` 值。
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -62,18 +65,57 @@ ASCII(1) AS [1], ASCII(2) AS [2];
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 A           B           a           b           1           2  
 ----------- ----------- ----------- ----------- ----------- -----------  
 65          66          97          98          49          50  
 ```  
   
+### <a name="b-this-examples-shows-how-a-7-bit-ascii-value-is-returned-correctly-but-an-8-bit-extended-ascii-value-is-not-handled"></a>B. 此範例會示範如何正確傳回 7 位元 ASCII 值，但並未處理 8 位元的擴充 ASCII 值。
+
+```sql
+SELECT ASCII('P') AS [ASCII], ASCII('æ') AS [Extended_ASCII];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+ASCII       Extended_ASCII
+----------- --------------
+80          195
+```
+
+若要驗證上述結果是否對應到正確的字元字碼元素，請搭配 `CHAR` 或 `NCHAR` 函式來使用輸出值：
+
+```sql
+SELECT NCHAR(80) AS [CHARACTER], NCHAR(195) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+CHARACTER CHARACTER
+--------- ---------
+P         Ã
+```
+
+請注意先前結果中，字碼元素 195 的字元是 **Ã**，而非 **æ**。 這是因為 `ASCII` 函式能夠讀取前 7 個位元資料流，但無法讀取額外的位元。 您可以使用 `UNICODE` 函式來找到 `æ` 字元的正確字碼元素，該函式可以傳回正確的字元字碼元素：
+
+```sql
+SELECT UNICODE('æ') AS [Extended_ASCII], NCHAR(230) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+Extended_ASCII CHARACTER
+-------------- ---------
+230            æ
+```
+
 ## <a name="see-also"></a>另請參閱
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
-  
-
-

@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843741"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097856"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 
@@ -40,7 +40,9 @@ SQL Server Management Studio (SSMS) 是整合式環境，可用於管理任何 S
 
 SSMS 是免費的！
 
-## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[下載 SSMS](https://aka.ms/ssmsfullsetup)
+## <a name="download-ssms"></a>下載 SSMS
+
+**[![下載](media/download-icon.png) 下載 SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.4 是 SSMS 最新的正式運作 (GA) 版本。 若先前已安裝 SSMS 18 的 GA 版本，則安裝 SSMS 18.4 會將其升級至 18.4。 若您已安裝舊的 SSMS 18.x「預覽」  版本，則您必須在安裝 SSMS 18.4 前先將其解除安裝。
 
@@ -81,7 +83,7 @@ SQL Server Management Studio 18.4：
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 50 個評定規則 (請參閱 GitHub 上的詳細資料)。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增基底數學運算式和規則條件的比較。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已新增 RegisteredServer 物件的支援。 |
-| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 JSON 格式儲存規則的方式，並已更新套用覆寫/自訂的機制。 |
+| SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 升級了以 JSON 格式來儲存規則的方式，也升級了套用覆寫/自訂的機制。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新支援 Linux 上 SQL 的規則。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新規則集 JSON 格式，並已新增結構描述版本。 |
 | SMO/指令碼 | [SQL 評定 API](../sql-assessment-api/sql-assessment-api-overview.md) - 已更新 Cmdlet 輸出以改善建議的可讀性。 |

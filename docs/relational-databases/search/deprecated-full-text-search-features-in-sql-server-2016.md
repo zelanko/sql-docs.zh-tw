@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2016 中已被取代的全文檢索搜尋功能 | Microsoft Docs
-ms.custom: ''
+title: SQL Server 2016 中已淘汰的全文檢索搜尋功能
+ms.custom: seo-lt-2019
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -15,14 +15,14 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea901179d5011744f1b44609ccb9c19c27c514e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: daf20c621f00529313498c4802cd1d7dfce0fd8b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082907"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056218"
 ---
-# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 中已被取代的全文檢索搜尋功能
+# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 中已淘汰的全文檢索搜尋功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主題描述 SQL Server 中仍然可用之已被取代的全文檢索搜尋功能。 這些功能將在未來版本中移除。 請勿在新的應用程式中使用已被取代的功能。  
   

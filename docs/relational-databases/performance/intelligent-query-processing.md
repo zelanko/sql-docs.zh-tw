@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的智慧查詢處理 | Microsoft Docs
 description: 可改善 SQL Server 和 Azure SQL Database 查詢效能的智慧查詢處理功能。
 ms.custom: ''
-ms.date: 07/22/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be17617a400f760d0c5cd5eaa98124d066f19a4c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: f18367446b3d36e4e95373f1789509e08082a403
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713220"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962424"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
@@ -38,13 +38,13 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | **IQP 功能** | **Azure SQL Database 支援** | **SQL Server 支援** |**說明** |
 | --- | --- | --- |--- |
 | [自適性聯結 (批次模式)](#batch-mode-adaptive-joins) | 是，屬於相容性層級 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始屬於相容性層級 140|自適性聯結會在執行階段，依據實際輸入列而機動選取聯結類型。|
-| [近似的相異計數](#approximate-query-processing) | 是，公開預覽| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 開始|為巨量資料案例提供約略的 COUNT DISTINCT，享有高效能及低磁碟使用量的好處。 |
-| [資料列存放區上的批次模式](#batch-mode-on-rowstore) | 是，屬於相容性層級 150，公開預覽| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 開始屬於相容性層級 150，公開預覽|為耗用大量 CPU 的關聯式 DW 工作負載提供批次模式，而且不需要資料行存放區索引。  | 
+| [近似的相異計數](#approximate-query-processing) | 是| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始|為巨量資料案例提供約略的 COUNT DISTINCT，享有高效能及低磁碟使用量的好處。 |
+| [資料列存放區上的批次模式](#batch-mode-on-rowstore) | 是，屬於相容性層級 150| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始屬於相容性層級 150|為耗用大量 CPU 的關聯式 DW 工作負載提供批次模式，而且不需要資料行存放區索引。  | 
 | [交錯執行](#interleaved-execution-for-mstvfs) | 是，屬於相容性層級 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始屬於相容性層級 140|使用在第一次編譯時遇到的多重陳述式資料表值函式實際基數，而不是定點猜測。|
 | [記憶體授與意見反應 (批次模式)](#batch-mode-memory-grant-feedback) | 是，屬於相容性層級 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始屬於相容性層級 140|若批次模式查詢有作業會溢出到磁碟，請新增記憶體以防執行中斷。 若查詢耗用了 > 50% 配置給它的記憶體，請縮減記憶體授與端，以防執行中斷。|
-| [記憶體授與意見反應 (資料列模式)](#row-mode-memory-grant-feedback) | 是，屬於相容性層級 150，公開預覽| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 開始屬於相容性層級 150，公開預覽|若資料列模式查詢有作業會溢出到磁碟，請新增記憶體以防執行中斷。 若查詢耗用了 > 50% 配置給它的記憶體，請縮減記憶體授與端，以防執行中斷。|
-| [純量 UDF 內嵌](#scalar-udf-inlining) | 否 | 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 開始屬於相容性層級 150，公開預覽|純量 UDF 會被轉換成「內嵌」在呼叫查詢中的對等關聯運算式，而這通常可讓效能大幅提升。|
-| [資料表變數延後編譯](#table-variable-deferred-compilation) | 是，屬於相容性層級 150，公開預覽| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 開始屬於相容性層級 150，公開預覽|使用在第一次編譯時遇到的資料表值函式實際基數，而不是定點猜測。|
+| [記憶體授與意見反應 (資料列模式)](#row-mode-memory-grant-feedback) | 是，屬於相容性層級 150| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始屬於相容性層級 150|若資料列模式查詢有作業會溢出到磁碟，請新增記憶體以防執行中斷。 若查詢耗用了 > 50% 配置給它的記憶體，請縮減記憶體授與端，以防執行中斷。|
+| [純量 UDF 內嵌](#scalar-udf-inlining) | 否 | 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始屬於相容性層級 150|純量 UDF 會被轉換成「內嵌」在呼叫查詢中的對等關聯運算式，而這通常可讓效能大幅提升。|
+| [資料表變數延後編譯](#table-variable-deferred-compilation) | 是，屬於相容性層級 150| 是，從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始屬於相容性層級 150|使用在第一次編譯時遇到的資料表值函式實際基數，而不是定點猜測。|
 
 ## <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
 批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**，方法是使用單一快取計畫。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
@@ -123,14 +123,11 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 ## <a name="row-mode-memory-grant-feedback"></a>資料列模式記憶體授與意見反應
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (公開預覽)
-
-> [!NOTE]
-> 資料列模式記憶體授與回應是公開預覽版功能。  
+**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 調整批次和資料列模式運算子的記憶體授與大小，藉此在批次模式記憶體授與意見反應功能上展開資料列模式記憶體授與意見反應。  
 
-若要在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中啟用資料列模式記憶體授與意見反應的公開預覽功能，請在執行查詢時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
+若要在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中啟用資料列模式記憶體授與意見反應，請在執行查詢時，針對您所連線的資料庫啟用資料庫相容性層級 150。
 
 透過 **memory_grant_updated_by_feedback** XEvent 將可以看到資料列模式記憶體授與意見反應活動。 
 
@@ -145,9 +142,6 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 | 否：意見反應已停用 | 如果記憶體授與意見反應持續遭到觸發，而且在記憶體增加和減少記憶體的作業之間波動，我們將會停用陳述式的記憶體授與意見反應。 |
 | 是：調整 | 已套用記憶體授與意見反應，而且可能會針對下一次執行進一步調整。 |
 | 是：穩定 | 已套用記憶體授與意見反應，而且授與的記憶體現已穩定，表示針對上次執行授與的記憶體就是針對目前執行授與的記憶體。 |
-
-> [!NOTE]
-> 在 17.9 版與更新版本中，公開預覽版資料列模式記憶體授與意見反應計劃屬性在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖形化查詢執行計劃中是可見的。 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>停用資料列模式記憶體授與意見反應，而不變更相容性層級
 您可以在資料庫或陳述式的範圍中停用資料列模式記憶體授與意見反應，同時仍將資料庫相容性層級維持在 150 以上。 若要針對源自資料庫的所有查詢執行停用資料列模式記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
@@ -280,19 +274,19 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 ## <a name="table-variable-deferred-compilation"></a>資料表變數延後編譯
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (公開預覽)
+**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 資料表變數延後編譯可針對參考資料表變數的查詢，提升計畫品質和整體效能。 在最佳化和初始編譯期間，此功能會根據實際資料表變數的資料列計數，傳播基數估計值。 這項精確的資料列計數資訊會最佳化下游計畫作業。
 
-資料表變數延後編譯會延後編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 此延後編譯行為與暫存資料表相同。 這項變更會導致使用實際基數，不使用原始的單一資料列猜測。 
+資料表變數延後編譯會延後編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 此延後編譯行為與暫存資料表相同。 這項變更會導致使用實際基數，而不使用原始的單一資料列猜測。 
 
-您可在 Azure SQL Database 中公開預覽資料表變數延後編譯。 若要這樣做，請啟用執行查詢時所連線資料庫的相容性層級 150。
+您可在 Azure SQL Database 中啟用資料表變數延後編譯。 若要這樣做，請啟用執行查詢時所連線資料庫的相容性層級 150。
 
 如需詳細資訊，請參閱[資料表變數延遲編譯](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 
 ## <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (公開預覽)
+**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
 
 純量 UDF 內嵌會自動將[純量 UDF](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) 轉換成關聯運算式。 將它們內嵌在呼叫的 SQL 查詢中。 此轉換可改善利用純量 UDF 的工作負載效能。 純量 UDF 內嵌有益於 UDF 內的成本型最佳化作業。 其結果會是有效率、集合導向的平行處理，而不是效率不彰、反覆執行的序列執行計畫。 根據預設，資料庫相容性層級 150 會啟用此功能。
 
@@ -300,7 +294,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 ## <a name="approximate-query-processing"></a>近似查詢處理
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (公開預覽)
+**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 近似查詢處理是新的功能系列。 它會在回應性比絕對精確度更重要的大型資料集間執行彙總作業。 例如，在 10 億筆資料列中計算 **COUNT(DISTINCT())** ，以顯示在儀表板上。 在此情況下，絕對精確度不重要，但回應性非常重要。 新的 **APPROX_COUNT_DISTINCT** 彙總函式會傳回群組中唯一非 Null 值的近似數目。
 
@@ -308,7 +302,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 ## <a name="batch-mode-on-rowstore"></a>資料列存放區上的批次模式 
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (公開預覽) 
+**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 資料列存放區上的批次模式可針對分析工作負載啟用批次模式執行功能，而不需要資料行存放區索引。  這項功能支援用於磁碟上堆積和 B 型樹狀結構索引的批次模式執行和點陣圖篩選。 資料列存放區上的批次模式可支援所有現有具備批次模式功能的運算子。
 

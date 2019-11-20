@@ -1,6 +1,6 @@
 ---
-title: 使用卸離與附加移動資料庫 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 使用中斷連結與連結來移動資料庫 (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 54e2ce24f4fd0b0d94344029cd2f56e378e579dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 517814aa9878206fa46c4ce8ea775cda18265ede
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067350"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095257"
 ---
-# <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加移動資料庫 (Transact-SQL)
+# <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用中斷連結與連結來移動資料庫 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何將卸離的資料庫移動到另一個位置，再重新附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中相同或不同的伺服器執行個體。 不過，建議您使用 ALTER DATABASE 計畫的重新放置程序來移動資料庫，而不要使用卸離和附加。 如需詳細資訊，請參閱 [移動使用者資料庫](../../relational-databases/databases/move-user-databases.md)。  
   

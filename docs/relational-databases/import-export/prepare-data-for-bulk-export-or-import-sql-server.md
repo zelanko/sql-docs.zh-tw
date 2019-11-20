@@ -1,6 +1,5 @@
 ---
-title: 準備大量匯出或匯入的資料 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 準備資料以進行大量匯出或匯入
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,14 +16,15 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29b85b0832e0ef1ec150e63a2cdafba65e5ad238
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063175"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056407"
 ---
-# <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>準備大量匯出或匯入的資料 (SQL Server)
+# <a name="prepare-data-for-bulk-export-or-import"></a>準備資料以進行大量匯出或匯入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   本節討論關於大量匯出作業之規劃與大量匯入作業之需求的考量。  

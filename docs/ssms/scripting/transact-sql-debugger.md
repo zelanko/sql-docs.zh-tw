@@ -1,29 +1,31 @@
 ---
-title: Transact-SQL 偵錯工具 | Microsoft 文件
+title: Transact-SQL 偵錯工具
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
+ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
-ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56f44c53591472279f23b8c3d9d68f67ec30fb6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637999"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097931"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 偵錯工具
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可協助您透過調查 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的執行階段行為，找出程式碼中的錯誤。 在您將 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗設定成偵錯模式之後，就可以在特定的程式碼行上暫停執行作業，然後檢查這些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所使用或傳回的資訊和資料。
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="stepping-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
 

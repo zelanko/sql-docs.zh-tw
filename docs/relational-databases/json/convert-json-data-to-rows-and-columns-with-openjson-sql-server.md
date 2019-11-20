@@ -1,6 +1,5 @@
 ---
-title: 使用 OPENJSON 剖析及轉換 JSON 資料 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 使用 OPENJSON 剖析及轉換 JSON 資料
 ms.date: 07/18/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -13,13 +12,14 @@ helpviewer_keywords:
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e09a24d4f75c0b559a247176a7d57516cf75e43e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: feac4a3e00164837373f9b3024c322dbf7c49818
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909444"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095829"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>使用 OPENJSON 剖析及轉換 JSON 資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -116,7 +116,7 @@ WITH (
   
 **結果**
   
-|Number|date|客戶|Quantity|  
+|Number|Date|客戶|Quantity|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  

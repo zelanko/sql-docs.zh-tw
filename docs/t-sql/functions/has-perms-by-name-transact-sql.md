@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019730"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982945"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   評估安全性實體上目前使用者的有效權限。 相關的函式為 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)。  
@@ -60,7 +60,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  **sysname** 類型的選擇性純量運算式，表示用來測試權限之安全性實體的子實體名稱。 預設值是 NULL。  
   
 > [!NOTE]  
->  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全性實體不能使用格式為 **'[** _sub name_ **]'** 的括弧。 請改為使用 **'** _sub name_ **'** 。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更新版本中，子安全性實體不能使用格式為 **'[** _sub name_ **]'** 的括弧。 請改為使用 **'** _sub name_ **'** 。  
   
  *sub-securable_class*  
  **nvarchar(60)** 類型的選擇性純量運算式，表示測試權限的安全性實體之子實體的類別。 預設值是 NULL。  
@@ -105,7 +105,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. 我有伺服器層級 VIEW SERVER STATE 權限嗎？  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -113,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. 我可以模擬 (IMPERSONATE) 伺服器主體 Ps 嗎？  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

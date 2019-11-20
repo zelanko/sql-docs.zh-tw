@@ -1,6 +1,5 @@
 ---
-title: 大量匯入期間保留 Null 或使用預設值 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 在大量匯入期間保留 Null 或預設值
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,14 +20,15 @@ ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c32b4ce4d706986829fa63f1bff96a3e78356672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896673"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055962"
 ---
-# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>大量匯入期間保留 Null 或使用預設值 (SQL Server)
+# <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>在大量匯入期間保留 Null 或預設值 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 根據預設，當資料匯入資料表時， [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式會查看資料表中的資料行是否已定義預設值。  例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。  [bcp](../../tools/bcp-utility.md) 命令和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 陳述式都可讓您指定保留 Null 值。
@@ -44,7 +44,7 @@ ms.locfileid: "67896673"
   
 |命令|Qualifier|限定詞類型|  
 |-------------|---------------|--------------------|  
-|bcp|-k|參數|  
+|bcp|-k|Switch|  
 |BULK INSERT|KEEPNULLS\*|引數|  
 |INSERT ...SELECT * FROM OPENROWSET(BULK...)|不適用|不適用|  
   

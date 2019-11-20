@@ -5,16 +5,16 @@ description: 了解如何升級 Active Directory 網域中的 SQL Server 巨量�
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eab7fa5a123f6370686cae5feaf36d458748ea7a
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844305"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127447"
 ---
 # <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>以 Active Directory 模式部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -107,7 +107,7 @@ BDC 網域服務帳戶 (DSA) 必須能在 OU 中建立使用者、群組和電�
        - **建立群組物件**
        - **刪除群組物件**
        - **建立使用者物件**
-       - **建立使用者物件**
+       - **刪除使用者物件**
 
     - 按一下 **[確定]** 。
 
@@ -197,8 +197,8 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouD
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dnsIpAddresses=[\"10.100.10.100\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadmins\"]"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusers1\,bdcusers2\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
 ```
 
 除了上述資訊之外，您還需要為不同叢集端點提供 DNS 名稱。 在部署時，系統會自動在您的 DNS 伺服器中建立使用所提供 DNS 名稱的 DNS 項目。 當您連線到不同叢集端點時，將會使用這些名稱。 例如，如果 SQL 主要執行個體的 DNS 名稱是 `mastersql`，您將會使用 `mastersql.contoso.local,31433` 來從工具連線到主要執行個體。

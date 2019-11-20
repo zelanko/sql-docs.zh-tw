@@ -1,6 +1,5 @@
 ---
-title: 匯入和匯出 SQL Server 和 Azure SQL Database 的資料 | Microsoft Docs
-ms.custom: ''
+title: 匯入和匯出 SQL Server 和 Azure SQL Database 的資料
 ms.date: 10/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -10,12 +9,13 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f28d7905d8c5c7e37b95602aa3ee45cba4b9885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c131954cce8e65cd7f309b59f3780bbd214cb228
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063196"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055935"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

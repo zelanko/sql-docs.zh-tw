@@ -1,6 +1,5 @@
 ---
-title: 使用 BCP 指定相容性的資料格式 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 使用 bcp 指定相容性資料格式
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,14 +16,15 @@ ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5e56c9013afbfce762f35edb41d0b411c426028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062543"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055929"
 ---
-# <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>使用 bcp 指定相容性的資料格式 (SQL Server)
+# <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>在使用 bcp 時指定相容性資料格式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   此主題描述資料格式屬性、欄位特定提示，以及以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** 命令的非 XML 格式檔案來儲存逐欄位資料。 大量匯出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料以大量匯入至另一個程式 (例如另一個資料庫程式) 時，了解這些資訊十分有用。 在來源資料表中的預設資料格式 (原生、字元或 Unicode) 可能和另一個程式所預期的資料配置不相容。如果匯出資料時發生了不相容的狀況，您就必須描述資料配置的方式。  
   

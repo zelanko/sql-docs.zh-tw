@@ -1,5 +1,5 @@
 ---
-title: 設定及管理全文檢索搜尋的停用字詞與停用字詞表 | Microsoft Docs
+title: 設定及管理全文檢索搜尋的停用字詞與停用字詞表
 ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -17,12 +17,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c474a387002070534fe228b67e4ef1152fdbd64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 872f5207f673c5047475220b1da01a41678c1c6d
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093316"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056143"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

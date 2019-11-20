@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000824"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982761"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ OR ALTER
  程序或全域暫存程序的完整名稱 (包括 ##) 不能超過 128 個字元。 本機暫存程序的完整名稱 (包括 #) 不能超過 116 個字元。  
   
  **;** *number*  
- **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  用來將同名程序分組的選擇性整數。 您可以利用一個 DROP PROCEDURE 陳述式一併卸除這些分組的程序。  
   
@@ -216,7 +216,7 @@ RECOMPILE
  若要指示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 捨棄程序內個別查詢的查詢計劃，請使用查詢定義中的 RECOMPILE 查詢提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ENCRYPTION  
- **適用於**：SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 CREATE PROCEDURE 陳述式的原始文字轉換為模糊化格式。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，無法直接從任何目錄檢視中看見混亂格式的輸出。 對系統資料表或資料庫檔案沒有存取權的使用者無法擷取模糊化的文字。 不過，如果是特殊權限使用者 (可以透過 [DAC 通訊埠](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)存取系統資料表，或直接存取資料庫檔案)，則可使用該文字。 另外，可將偵錯工具附加至伺服器處理序的使用者，還可以在執行階段從記憶體擷取解密程序。 如需如何存取系統中繼資料的詳細資訊，請參閱[中繼資料可見性組態](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -232,7 +232,7 @@ EXECUTE AS *子句*
  如需詳細資訊，請參閱 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
 FOR REPLICATION  
- **適用於**：SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定針對複寫建立的程序。 因此無法針對訂閱者執行該程序。 利用 FOR REPLICATION 選項建立的程序會當做程序篩選來使用，而且只有在複寫期間才會執行它。 如果指定了 FOR REPLICATION，就不能宣告參數。 無法為 CLR 程序指定 FOR REPLICATION。 使用 FOR REPLICATION 建立的程序，會忽略 RECOMPILE 選項。  
   
@@ -242,7 +242,7 @@ FOR REPLICATION
  包含程序主體的一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 您可以使用選用的 BEGIN 和 END 關鍵字來括住陳述式。 如需詳細資訊，請參閱以下的＜最佳作法＞、＜一般備註＞以及＜限制事項＞這幾節。  
   
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
- **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定 CLR 程序所要參考之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件的方法。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別具有命名空間限定的名稱，且該名稱使用句號 ( **.** ) 來分隔命名空間的各個部分，您就必須使用方括弧 ( **[]** ) 或引號 ( **""** ) 來分隔類別名稱。 指定的方法必須是類別的靜態方法。  
   
@@ -252,7 +252,7 @@ EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 >  自主資料庫不支援 CLR 程序。  
   
 ATOMIC WITH  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  表示不可部分完成的預存程序執行。 變更會全部認可或透過擲回例外狀況全部回復。 原生編譯預存程序需要 ATOMIC WITH 區塊。  
   
@@ -277,22 +277,22 @@ BEGIN、ROLLBACK 和 COMMIT 作業無法使用於不可部分完成區塊內。
  判斷參數中是否允許 Null 值。 預設值是 NULL。  
   
 NATIVE_COMPILATION  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  表示程序是原生編譯的。 NATIVE_COMPILATION、SCHEMABINDING 和 EXECUTE AS 可以依照任何順序來指定。 如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
 SCHEMABINDING  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  確定程序所參考的資料表無法卸除或改變。 原生編譯預存程序需要 SCHEMABINDING。 (如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。)SCHEMABINDING 限制和使用者定義函式的相關限制相同。 如需詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 中的＜SCHEMABINDING＞一節。  
   
 LANGUAGE = [N] 'language'  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  相當於 [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) 工作階段選項。 需要 LANGUAGE = [N] 'language'。  
   
 TRANSACTION ISOLATION LEVEL  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  原生編譯預存程序所需的。 指定預存程序的交易隔離等級。 選項如下：  
   
@@ -311,21 +311,21 @@ SNAPSHOT
  指定交易中任何陳述式所讀取的資料都是交易一致性版本，這些資料從交易開始時就已存在。  
   
 DATEFIRST = *number*  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  將每週的第一天指定為 1 到 7 的數字。 DATEFIRST 是選擇性的。 如果未指定，則會從指定的語言來推斷設定。  
   
  如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)。  
   
 DATEFORMAT = *format*  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定解譯 date、smalldatetime、datetime、datetime2 和 datetimeoffset 字元字串之月份、日期與年份日期部分的順序。 DATEFORMAT 是選擇性的。 如果未指定，則會從指定的語言來推斷設定。  
   
  如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)。  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久、預設值或延遲的持久。  
   
@@ -440,7 +440,7 @@ GO
 ## <a name="metadata"></a>中繼資料  
  下表列出可用於傳回預存程序之詳細資訊的目錄檢視和動態管理檢視。  
   
-|檢視|描述|  
+|檢視|Description|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|傳回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序的定義。 您無法使用 **sys.sql_modules** 目錄檢視來檢視以 ENCRYPTION 選項建立的程序文字。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|傳回 CLR 程序的詳細資訊。|  
@@ -457,7 +457,7 @@ GO
   
  \* 這些計數器可供各種類別目錄的快取物件使用，包括隨選 [!INCLUDE[tsql](../../includes/tsql-md.md)]、已備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、程序、觸發程序等等。 如需詳細資訊，請參閱 [SQL Server 的 Plan Cache 物件](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>權限  
  需要資料庫的 **CREATE PROCEDURE** 權限，以及要在其中建立程序之結構描述的 **ALTER** 權限，或者需要 **db_ddladmin** 固定資料庫角色的成員資格。  
@@ -542,7 +542,7 @@ GO
 #### <a name="c-creating-a-clr-stored-procedure"></a>C. 建立 CLR 預存程序  
  下列範例會建立 `GetPhotoFromDB` 程序，以參考 `HandlingLOBUsingCLR` 組件中 `LargeObjectBinary` 類別的 `GetPhotoFromDB` 方法。 建立程序之前，會先在本機資料庫中註冊 `HandlingLOBUsingCLR` 組件。  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (如果使用從 *assembly_bits* 建立的組件)。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (若使用從 *assembly_bits* 建立的組件)。  
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -871,7 +871,7 @@ DROP PROCEDURE Production.uspDeleteWorkOrder;
 #### <a name="k-using-the-with-encryption-option"></a>K. 使用 WITH ENCRYPTION 選項  
  下列範例會建立 `HumanResources.uspEncryptThis` 程序。  
   
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、SQL Database。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、SQL Database。  
   
 ```sql  
 CREATE PROCEDURE HumanResources.uspEncryptThis  

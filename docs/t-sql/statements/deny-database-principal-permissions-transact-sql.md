@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d781778f46617a8961506fb022854835717ea0bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fddca390aa40d36b126cf113c6b8f56bd42f1131
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114886"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982518"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DENY permission [ ,...n ]
  指定拒絕其權限之角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
  APPLICATION ROLE ::*application_role*  
- **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定拒絕其權限之應用程式角色的類別和名稱。 範圍限定詞 ( **::** ) 是必要項。  
   
@@ -93,7 +93,7 @@ DENY permission [ ,...n ]
  指定資料庫角色。  
   
  *Application_role*  
- **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定應用程式角色。  
   
@@ -172,7 +172,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. 對應用程式角色拒絕使用者的 IMPERSONATE 權限  
  下列範例會對 `IMPERSONATE` 應用程式角色 `HamithaL`，拒絕使用者 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的 `AccountsPayable17` 權限。  
   
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```  
 USE AdventureWorks2012;  

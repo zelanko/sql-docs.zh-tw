@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809827"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982722"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ column_name <data_type>
  指定類型可否保留 Null 值。 若未指定，NULL 是預設值。  
   
  *assembly_name*  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定在通用語言執行平台中參考使用者定義型別實作的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組件。 *assembly_name* 必須符合目前資料庫中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有組件。  
   
@@ -205,7 +205,7 @@ column_name <data_type>
 >  自主資料庫無法使用 EXTERNAL_NAME。  
   
  **[.** *class_name*  **]**  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定組件內實作使用者自訂類型的類別。 *class_name* 必須是有效的識別碼，且必須以類別的形式存在於可以顯示的組件中。 不論資料庫定序為何，*class_name* 都要區分大小寫，且必須完全符合相對應組件中的類別名稱。 如果用來撰寫類別的程式設計語言使用命名空間概念 (如 C#)，類別名稱可以是一個以方括弧 ( **[ ]** ) 括住之符合命名空間資格的名稱。 如果未指定 *class_name*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會假設它和 *type_name* 一樣。  
   
@@ -229,7 +229,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 指定要在資料表上建立索引。 這可以是叢集的索引或非叢集索引。 索引將包含列示的資料行，並會以遞增或遞減順序來排序資料。
   
@@ -237,17 +237,17 @@ column_name <data_type>
  您必須指定資料行和資料表索引，做為 CREATE TABLE 陳述式的一部分。 記憶體最佳化資料表不支援 CREATE INDEX 和 DROP INDEX。  
   
  MEMORY_OPTIMIZED  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指出資料表類型是否為記憶體最佳化。 此選項預設關閉；資料表 (類型) 不是記憶體最佳化的資料表 (類型)。 記憶體最佳化的資料表類型是記憶體最佳化的使用者資料表，其結構描述保存在磁碟上，類似於其他使用者資料表。  
   
  BUCKET_COUNT  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指出應該在雜湊索引中建立的貯體數目。 雜湊索引中 BUCKET_COUNT 的最大值是 1,073,741,824。 如需貯體計數的詳細資訊，請參閱[經記憶體最佳化之資料表上的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。 *bucket_count* 為必要的引數。  
   
  HASH  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  表示已建立雜湊索引。 只有記憶體最佳化的資料表才支援雜湊索引。  
   
@@ -297,7 +297,7 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>B. 建立使用者自訂類型  
  下列範例建立 `Utf8String` 類型，它參考 `utf8string` 組件中的 `utf8string` 類別。 建立該類型之前，必須先在本機資料庫中註冊 `utf8string` 組件。 以有效的描述取代 CREATE ASSEMBLY 陳述式的二進位部分。  
   
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 ```  
 CREATE ASSEMBLY utf8string  

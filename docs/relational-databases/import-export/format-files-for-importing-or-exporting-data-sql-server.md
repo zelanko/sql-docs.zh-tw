@@ -1,6 +1,5 @@
 ---
-title: 匯入或匯出資料的格式檔案 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 格式化匯入和匯出資料的檔案
 ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,14 +14,15 @@ ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13d20bfe453843fa8809cfc02c5bd34876dbd497
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680699"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055974"
 ---
-# <a name="format-files-for-importing-or-exporting-data-sql-server"></a>匯入或匯出資料的格式檔案 (SQL Server)
+# <a name="format-files-to-import-or-export-data-sql-server"></a>格式化匯入和匯出資料的檔案 (SQL Server)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 當您將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，或從資料表大量匯出資料時，可以使用「格式檔案」  來儲存大量匯出或大量匯入資料所需的所有格式資訊。 這包含相對於該資料表之資料檔中各欄位的格式資訊。

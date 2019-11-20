@@ -21,12 +21,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a823ffd693e770f97811124d77f39763680fb658
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999265"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982962"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和時間資料類型與函數 (Transact-SQL)
 
@@ -124,10 +124,10 @@ ms.locfileid: "67999265"
 |函數|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|傳回 SET DATEFIRST 之工作階段的目前值。|**tinyint**|不具決定性|  
-|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; * *@***number_var* }|將一週的第一天設為 1-7 其中一個數字。|不適用|不適用|  
+|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **\@** _number_var_ }|將一週的第一天設為 1-7 其中一個數字。|不適用|不適用|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@** _format_var_ }|設定輸入 **datetime** 或 **smalldatetime** 資料時，日期部分 (月/日/年) 的順序。|不適用|不適用|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|傳回目前使用中的語言名稱。 @@LANGUAGE 不是日期或時間函式。 不過，語言設定可能會影響日期函數的輸出。|不適用|不適用|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _language_ **'** &#124; * *@***language_var* }|設定工作階段和系統訊息的語言環境。 SET LANGUAGE 不是日期或時間函數。 不過，語言設定會影響日期函數的輸出。|不適用|不適用|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _language_ **'** &#124; **\@** _language_var_ }|設定工作階段和系統訊息的語言環境。 SET LANGUAGE 不是日期或時間函數。 不過，語言設定會影響日期函數的輸出。|不適用|不適用|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'** _language_ **'** ]|傳回所有支援語言之日期格式的詳細資訊。 **sp_helplanguage** 不是日期或時間預存程序。 不過，語言設定會影響日期函數的輸出。|不適用|不適用|  
   
 ###  <a name="ValidateDateandTimeValues"></a> 驗證日期和時間值的函式

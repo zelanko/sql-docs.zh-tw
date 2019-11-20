@@ -1,6 +1,6 @@
 ---
-title: 寫滿交易記錄疑難排解 (SQL Server 錯誤 9002) | Microsoft 文件
-ms.custom: ''
+title: 針對寫滿交易記錄錯誤 9002 進行疑難排解
+ms.custom: seo-lt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc956cf14419a1d65ed0ebc39928b39c6c7b63fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083929"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056068"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,19 +13,28 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2cb41bdf37c1f748178f98a56b7f8df857a377e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d357aa88aecaac21a7dd8ab5548de1410bff5f7
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092978"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119446"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遠端 BLOB 存放區 (RBS) 是選用的附加元件，可讓資料庫管理員在商品儲存方案中儲存二進位大型物件，而不是直接儲存在主要資料庫伺服器上。  
   
- RBS 包含在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝媒體中，但不會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式安裝。  
+ RBS 包含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體中，但不會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式安裝。 在安裝媒體上搜尋 RBS.msi，找出安裝檔。
+
+ 若沒有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體，您可以在下列其中一個位置下載 RBS：
+
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 | RBS 下載位置 |
+|:---|:---|
+| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676) |
+| [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
+| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] RBS 下載頁面](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| &nbsp; | &nbsp; |
   
  
   

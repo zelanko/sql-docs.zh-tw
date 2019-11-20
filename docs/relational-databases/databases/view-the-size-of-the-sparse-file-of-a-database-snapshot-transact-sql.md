@@ -1,10 +1,10 @@
 ---
-title: 檢視資料庫快照集的疏鬆檔案大小 (Transact-SQL) | Microsoft 文件
+title: 檢視資料庫快照集的疏鬆檔案大小 (T-SQL)
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e2e66a523fbc82d163c24b52f8c2289cdd38fd6f
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 71881edf1c98b0588a731964cf6f23dcffe6aa82
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816725"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055203"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>檢視資料庫快照集的疏鬆檔案大小 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

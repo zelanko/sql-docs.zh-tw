@@ -42,12 +42,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2a4e5ed82200e0bc647981f730765ced973962ba
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809794"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982841"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項
 
@@ -55,7 +55,7 @@ ms.locfileid: "68809794"
 
 如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
-## <a name="click-a-product"></a>按一下產品！
+## <a name="click-a-product"></a>按一下產品
 
 在下一行中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
 
@@ -67,8 +67,6 @@ ms.locfileid: "68809794"
 |||
 
 &nbsp;
-
-# <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>語法
 
@@ -139,7 +137,7 @@ REMOVE FILE *logical_file_name* 從 [!INCLUDE[ssNoVersion](../../includes/ssnove
 *logical_file_name* 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。
 
 > [!WARNING]
-> 移除具有與其建立關聯之 `FILE_SNAPSHOT` 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免使備份參考資料庫檔案不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
+> 移除具有與其建立關聯之 `FILE_SNAPSHOT` 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免使備份參考資料庫檔案不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。
 
 MODIFY FILE 指定應該修改的檔案。 每次只能變更一個 \<filespec> 屬性。 您必須在 \<filespec> 中指定 NAME，以識別要修改的檔案。 如果指定了 SIZE，新的大小必須大於目前檔案大小。
 
@@ -240,7 +238,7 @@ FILEGROWTH *growth_increment* 指定檔案的自動成長遞增。 檔案的 FIL
 
 如果未指定 FILEGROWTH，預設值為：
 
-|Version|預設值|
+|版本|預設值|
 |-------------|--------------------|
 |從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始|資料 64 MB。 記錄檔 64 MB。|
 |從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始|資料 1 MB。 記錄檔 10%。|
@@ -269,7 +267,7 @@ CONTAINS FILESTREAM 指定檔案群組會將 FILESTREAM 二進位大型物件 (B
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)
 
 指定檔案群組將記憶體最佳化的資料儲存在檔案系統中。 如需詳細資訊，請參閱[記憶體內部 OLTP - 記憶體內部最佳化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每個資料庫只允許一個 `MEMORY_OPTIMIZED_DATA` 檔案群組。 若要建立記憶體最佳化的資料表，檔案群組不能空白。 至少必須有一個檔案。 *filegroup_name* 參考至路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。
 
@@ -286,13 +284,13 @@ DEFAULT 將預設的資料庫檔案群組變更為 *filegroup_name*。 資料庫
 
 NAME = *new_filegroup_name* 將檔案群組名稱變更為 *new_filegroup_name*。
 
-AUTOGROW_SINGLE_FILE **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+AUTOGROW_SINGLE_FILE **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
 
 當檔案群組中的某個檔案達到自動成長閾值時，只有該檔案會成長。 這是預設值。
 
 AUTOGROW_ALL_FILES
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)
 
 當檔案群組中的某個檔案達到自動成長閾值時，檔案群組中的所有檔案都會成長。
 

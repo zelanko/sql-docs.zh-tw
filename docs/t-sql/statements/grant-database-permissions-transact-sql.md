@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4be7c1494f6f63a87591038265c6b0e63edc83b7
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344816"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982218"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 資料庫權限 (Transact-SQL)
 
@@ -74,27 +74,27 @@ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從�
 *Database_role* 指定資料庫角色。
 
 *Application_role*
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 指定應用程式角色。
 
 *Database_user_mapped_to_Windows_User*
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本
 
 指定對應至 Windows 使用者的資料庫使用者。
 
 *Database_user_mapped_to_Windows_Group*
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本
 
 指定對應至 Windows 群組的資料庫使用者。
 
 *Database_user_mapped_to_certificate*
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本
 
 指定對應至憑證的資料庫使用者。
 
 *Database_user_mapped_to_asymmetric_key*
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本
 
 指定對應至非對稱金鑰的資料庫使用者。
 
@@ -122,7 +122,7 @@ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從�
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br />**適用於**： [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
@@ -171,7 +171,7 @@ AS \<database_principal> 指定主體，以讓執行這項查詢的主體可從�
 |CREATE TYPE|ALTER|CONTROL SERVER|
 |CREATE VIEW|ALTER|CONTROL SERVER|
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
-|Delete|CONTROL|CONTROL SERVER|
+|刪除|CONTROL|CONTROL SERVER|
 |執行 CREATE 陳述式之前，請先執行|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。|CONTROL|CONTROL SERVER|
 |EXECUTE EXTERNAL SCRIPT <br /> **適用於**： [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)]。|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
@@ -226,7 +226,7 @@ GO
 
  下列範例會將 `SHOWPLAN` 資料庫的 `AdventureWorks2012` 權限授與應用程式角色 `AuditMonitor`。
 
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 ```sql
 USE AdventureWorks2012;

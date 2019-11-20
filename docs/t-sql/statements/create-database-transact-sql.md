@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a668b876e97f70ff0324f53689f0d5dfae8f225
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b1e761aded3b34942f5a49aa2b4c085fe1bd4225
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536274"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983222"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -172,7 +172,7 @@ CREATE DATABASE database_snapshot_name
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
 指定資料庫的內含項目狀態。 NONE = 非自主資料庫 PARTIAL = 部分自主資料庫
 
@@ -202,7 +202,7 @@ COLLATE *collation_name*
 WITH \<選項>      
 **\<filestream_options>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
 
 指定資料庫層級的非交易式 FILESTREAM 存取層級。
 
@@ -213,7 +213,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用於**：[!INCLUDE
 |FULL|已啟用 FILESTREAM FileTables 的完整非交易式存取。|
 
 DIRECTORY_NAME = \<目錄名稱>     
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
 Windows 相容的目錄名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有 Database_Directory 名稱之間，此名稱必須是唯一的。 不論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序設定為何，唯一性比較不區分大小寫。 在此資料庫中建立 FileTable 之前，應該先設定這個選項。
 
@@ -221,25 +221,25 @@ Windows 相容的目錄名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<語言名稱> | \<語言別名>**
 
-  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
   如需此選項的完整描述，請參閱[設定 default full-text language 伺服器設定選項](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)。
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<語言名稱> | \<語言別名>**
 
-  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
   如需此選項的完整描述，請參閱[設定 default language 伺服器設定選項](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)。
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
   如需此選項的完整描述，請參閱[設定 nested triggers 伺服器設定選項](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)。
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
 
   如需此選項的完整描述，請參閱 [transform noise words 伺服器設定選項](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)。
 
@@ -428,7 +428,7 @@ CONTAINS FILESTREAM
 
 CONTAINS MEMORY_OPTIMIZED_DATA     
 
-**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本
 
 指定檔案群組將記憶體最佳化的資料儲存在檔案系統中。 如需詳細資訊，請參閱[記憶體內部 OLTP - 記憶體內部最佳化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每個資料庫只允許一個 MEMORY_OPTIMIZED_DATA 檔案群組。 如需可建立檔案群組來儲存記憶體最佳化資料的程式碼範例，請參閱[建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。
 

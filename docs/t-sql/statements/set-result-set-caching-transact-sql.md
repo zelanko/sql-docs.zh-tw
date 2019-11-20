@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d2368cfe612831685da141f99069676ebf33cbb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: aea7470bd5b4d046dd5346e633fb5302ea8e7b9c
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729833"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962358"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -27,7 +27,7 @@ ms.locfileid: "73729833"
 
 控制目前用戶端工作階段的結果集快取行為。  
 
-適用於 Azure SQL 資料倉儲 (預覽)
+適用於 Azure SQL 資料倉儲  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

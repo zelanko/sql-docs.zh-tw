@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 87f0e82d0e12656bb7a06be1951874b656dbf4b0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 4671bc07dd21a769746257339ea7903e3dda4701
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532394"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74063969"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上使用 SQL Server 2019 巨量資料叢集的資料持續性
 
@@ -87,8 +87,10 @@ AKS 隨附[兩個內建的儲存類別](/azure/aks/azure-disks-dynamic-pv/) `def
 
 使用 `kubeadm` 部署的 Kubernetes 叢集沒有內建的儲存類別。 您必須使用本機儲存體或偏好的佈建程式 (例如 [Rook](https://github.com/rook/rook)) 建立自己的儲存類別和永久性磁碟區。 在此情況下，您會將 `className` 設定為您所設定的儲存類別。 
 
-> [!NOTE]
->  在適用於 kubeadm (`kubeadm-dev-test` 或 `kubeadm-prod`) 的內建部署設定檔中，不會為資料和記錄儲存體指定任何儲存類別名稱。 部署之前，您必須自訂組態檔並設定 className 的值，否則預先部署驗證將會失敗。 部署也具有驗證步驟，可檢查儲存類別是否存在，但不會針對必要的永久性磁碟區。 您必須確保根據叢集的規模建立足夠的磁碟區。 針對預設的最小叢集大小 (預設規模，沒有高可用性)，您至少必須建立 24 個永續性磁碟區。 [以下](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)是如何使用本機佈建程式建立永久性磁碟區的範例。
+> [!IMPORTANT]
+>  在適用於 kubeadm (`kubeadm-dev-test` 或 `kubeadm-prod`) 的內建部署設定檔中，不會為資料和記錄儲存體指定任何儲存類別名稱。 部署之前，您必須自訂設定檔並設定 `className` 的值，否則預先部署驗證將會失敗。 部署也具有驗證步驟，可檢查儲存類別是否存在，但不會針對必要的永久性磁碟區。 您必須確保根據叢集的規模建立足夠的磁碟區。 針對預設的最小叢集大小 (預設規模，沒有高可用性)，您至少必須建立 24 個永續性磁碟區。
+>
+>[建立 Kubernetes 叢集](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)提供如何使用本機佈建程式來建立永續性磁碟區的範例。 此範例會介紹 Kubernetes 儲存體。
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>自訂每個集區的儲存體組態

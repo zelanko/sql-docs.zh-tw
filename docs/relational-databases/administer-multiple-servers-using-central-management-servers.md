@@ -1,5 +1,5 @@
 ---
-title: 使用中央管理伺服器管理多部伺服器 | Microsoft Docs
+title: 使用中央管理伺服器管理多部伺服器
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 967f2f582b3d0bc5b5a7b6277b97f6557e19e7cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a2e2da55bd04ba29cf1c6ef81757488f8d50fd24
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934568"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055622"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>使用中央管理伺服器管理多部伺服器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -25,12 +25,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898099"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982195"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -62,7 +62,7 @@ DROP DATABASE database_name [;]
 *database_name* 指定要移除的資料庫名稱。 若要顯示資料庫清單，請使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視。
 
 *database_snapshot_name*
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 這是要移除的資料庫快照集名稱。
 
@@ -146,7 +146,7 @@ DROP DATABASE Sales;
 
 ### <a name="b-dropping-multiple-databases"></a>B. 卸除多個資料庫
 
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 下列範例會移除每一個列出的資料庫。
 
@@ -156,7 +156,7 @@ DROP DATABASE Sales, NewSales;
 
 ### <a name="c-dropping-a-database-snapshot"></a>C. 卸除資料庫快照集
 
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 下列範例會移除名為 `sales_snapshot0600` 的資料庫快照集，而不會影響來源資料庫。
 

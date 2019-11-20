@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 21737a329fdd6bf68f1bf7df5f4df4511b26cfd9
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688319"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127486"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 服務 - 設定 SQL Server 錯誤記錄檔
 
@@ -38,7 +38,7 @@ ms.locfileid: "71688319"
   
       **錯誤記錄檔的最大數目**
 
-      指定回收之前建立之錯誤記錄檔的最大數目。 預設值為 6，這是回收錯誤記錄檔之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留的現有一個備份記錄檔與五個先前備份記錄檔。
+      指定回收前建立的封存錯誤記錄檔數量上限。 預設為 6，不包括目前的記錄檔。 這個值會決定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在回收記錄檔前所保留的先前備份記錄數量。
 
     B. 記錄檔大小
 

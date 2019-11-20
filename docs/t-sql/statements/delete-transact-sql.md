@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0296995906f7f359a065d7ae4f61877a89a409b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948052"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983244"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -104,7 +104,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  在 FROM *table_source* 子句中指定的別名，代表要刪除資料列的資料表或檢視。  
   
  *server_name*  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  資料表或檢視所在的伺服器名稱 (使用連結的伺服器名稱或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函式當作伺服器名稱)。 若指定 *server_name*，則 *database_name* 和 *schema_name* 都為必要項目。  
   
@@ -122,7 +122,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *table_or_view_name* 所參考的檢視必須能夠更新，而且必須只參考該檢視定義之 FROM 子句中的單一基底資料表。 如需可更新檢視的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
  *rowset_function_limited*  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  依提供者功能而定，會是 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函式。  
   
@@ -220,7 +220,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 |類別目錄|代表性語法元素|  
 |--------------|------------------------------|  
-|[基本語法](#BasicSyntax)|Delete|  
+|[基本語法](#BasicSyntax)|刪除|  
 |[限制刪除的資料列](#LimitRows)|WHERE • FROM • 資料指標 •|  
 |[從遠端資料表刪除資料列](#RemoteTables)|連結的伺服器 • OPENQUERY 資料列集函數 • OPENDATASOURCE 資料列集函數|  
 |[擷取 DELETE 陳述式的結果](#CaptureResults)|OUTPUT 子句|  
@@ -248,7 +248,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- 下列範例會顯示更加複雜的 WHERE 子句。 WHERE 子句會定義為了判斷要刪除之資料列而必須符合的兩個條件。 `StandardCost` 資料行中的值必須介於 `12.00` 與 `14.00` 之間，而且 `SellEndDate` 資料行中的值必須為 Null。 這個範例也會印出來自 **@@ROWCOUNT** 函式的值，以傳回已刪除資料列的數目。  
+ 下列範例會顯示更加複雜的 WHERE 子句。 WHERE 子句會定義為了判斷要刪除之資料列而必須符合的兩個條件。 `StandardCost` 資料行中的值必須介於 `12.00` 與 `14.00` 之間，而且 `SellEndDate` 資料行中的值必須為 Null。 這個範例也會印出來自 **\@\@ROWCOUNT** 函式的值，以傳回已刪除資料列的數目。  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -337,7 +337,7 @@ GO
 ###  <a name="RemoteTables"></a> 從遠端資料表刪除資料列  
  本節的範例會顯示如何使用 [連結的伺服器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[資料列集函式](../../t-sql/functions/rowset-functions-transact-sql.md)來參考遠端資料表，以便刪除遠端資料表的資料列。 遠端資料表存在於 SQL Server 的不同伺服器或執行個體上。  
   
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 使用連結的伺服器刪除遠端資料表的資料  
  下列範例會刪除遠端資料表的資料列。 此範例一開始會使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 建立遠端資料來源的連結。 接下來，會將連結的伺服器名稱 `MyLinkServer` 指定為 *server.catalog.schema.object* 格式之四部分物件名稱的一部分。  
@@ -402,7 +402,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. 在 DELETE 陳述式中，搭配 <from_table_name> 來使用 OUTPUT  
+#### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. 在 DELETE 陳述式中，搭配 <from_table_name> 來使用 OUTPUT  
  以下範例根據 `DELETE` 陳述式的 `FROM` 子句所定義的搜尋準則來刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `ProductProductPhoto` 資料表中的資料列。 `OUTPUT` 子句會傳回所刪除的資料表的 `DELETED.ProductID`、 `DELETED.ProductPhotoID`資料行及 `Product` 資料表中的資料行。 `FROM` 子句藉此來指定要刪除的資料列。  
   
 ```sql

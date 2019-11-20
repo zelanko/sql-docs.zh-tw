@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670474"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983041"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68670474"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將不斷嘗試以便讓 DAC 順利連接，但是在極端的情況下可能無法成功。  
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ## <a name="connecting-with-dac"></a>連接 DAC  
  依預設，只能從執行於伺服器上的用戶端進行連接。 除非使用 sp_configure 預存程序搭配 [remote admin connections 選項](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)來設定網路連接，否則不允許進行網路連接。  

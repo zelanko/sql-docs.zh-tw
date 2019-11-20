@@ -1,24 +1,24 @@
 ---
-title: 資料庫引擎事件和錯誤 | Microsoft 文件
+title: 資料庫引擎事件和錯誤
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127364"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119438"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 
-該資料表包含錯誤訊息編號和描述 (來自 sys.messages 目錄檢視的錯誤訊息文字)。
+該資料表包含錯誤訊息編號和描述 (來自 sys.messages 目錄檢視的錯誤訊息文字)。 適用時，錯誤數字會是前往詳細資訊的連結。
 
 ## <a name="errors--2-to-999"></a>錯誤 -2 到 999
 

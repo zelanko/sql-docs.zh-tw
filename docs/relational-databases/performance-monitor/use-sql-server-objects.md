@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 468d9aabd58c8fcdca8403b1177eea92ced9212d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044835"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982180"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,14 +99,14 @@ ms.locfileid: "68044835"
 |[SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求及存取可用頁面的頻率相關資訊。|  
 |[SQLServer:Catalog Metadata](../../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md)|這會定義 SQL Server 的目錄中繼資料管理員物件。| 
 |[SQLServer:CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|提供有關 Common Language Runtime (CLR) 的資訊。|  
-|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 提供資料行存放區索引之資料列群組和區段的相關資訊。|  
+|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。<br /><br /> 提供資料行存放區索引之資料列群組和區段的相關資訊。|  
 |[SQLServer:Cursor Manager by Type](../../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md)|提供關於資料指標的資訊。|  
 |[SQLServer:Cursor Manager Total](../../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md)|提供關於資料指標的資訊。|  
 |[SQLServer:Database Mirroring](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)|提供資料庫鏡像的相關資訊。|  
 |[SQLServer:Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的相關資訊，例如可用的記錄空間量，或資料庫中的使用中交易數目。 本物件中含有多項執行個體。|  
 |[SQL Server:Deprecated Features](../../relational-databases/performance-monitor/sql-server-deprecated-features-object.md)|此值會計算使用之已被取代功能的次數。|  
 |[SQLServer:Exec Statistics](../../relational-databases/performance-monitor/sql-server-execstatistics-object.md)|提供執行統計資料的相關資訊。|  
-|[SQL Server：外部指令碼](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 提供外部指令碼執行的相關資訊。|  
+|[SQL Server：外部指令碼](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。<br /><br /> 提供外部指令碼執行的相關資訊。|  
 |[SQLServer:FileTable](../../relational-databases/performance-monitor/sql-server-filetable-object.md)|與 FileTable 和非交易式存取相關聯的統計資料。|  
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|提供一般伺服器範圍活動的相關資訊，例如目前連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的使用者數目。|  
 |[SQL Server:HADR 可用性複本](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性複本的相關資訊。|  

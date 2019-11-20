@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/17/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,22 +14,19 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de42757543ebc09a63de250178cc1c2e00aa8a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019796"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962346"
 ---
-# <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
+# <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
 
 此函式會傳回群組中非 Null 的唯一值的近似數目。 
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-
-> [!NOTE]
-> APPROX_COUNT_DISTINCT 是公開預覽功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,11 +55,11 @@ APPROX_COUNT_DISTINCT ( expression )
 `APPROX_COUNT_DISTINCT` 所需的記憶體比徹底的 COUNT DISTINCT 作業更少。  因為磁碟使用量較小，所以相較於精確的 COUNT DISTINCT 作業，`APPROX_COUNT_DISTINCT` 較不會將記憶體溢出到磁碟。 若要深入了解用於達成此目的的演算法，請參閱 [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog) \(英文\)。
 
 > [!NOTE]
-> 對於定序區分大小寫的字串，公開預覽版的 APPROX_COUNT_DISTINCT 是使用二進位比對，且提供的結果是採用 BIN 定序而不是 BIN2。 
+> 針對定序區分大小寫的字串，APPROX_COUNT_DISTINCT 是使用二進位比對，且提供的結果是採用 BIN 定序而不是 BIN2。 
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-approxcountdistinct"></a>A. 使用 APPROX_COUNT_DISTINCT 
+### <a name="a-using-approx_count_distinct"></a>A. 使用 APPROX_COUNT_DISTINCT 
 此範例會從 orders 資料表傳回不同順序索引鍵的近似數目。
   
 ```sql
@@ -78,7 +75,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approxcountdistinct-with-group-by"></a>B. 搭配使用 APPROX_COUNT_DISTINCT 和 GROUP BY 
+### <a name="b-using-approx_count_distinct-with-group-by"></a>B. 搭配使用 APPROX_COUNT_DISTINCT 和 GROUP BY 
 此範例會從 orders 資料表根據順序狀態傳回不同順序索引鍵的近似數目。 
   
 ```sql

@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907082"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982811"
 ---
 # <a name="statistics"></a>統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ ORDER BY s.name;
 * 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始並 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 之下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。 這是以 1000 乘以目前資料表基數的平方根來計算。 例如，如果您的資料表包含 2 百萬個資料列，則計算結果是 sqrt (1000 * 2000000) = 44721.359。 透過這項變更，大型資料表上的統計資料會經常更新。 不過，如果資料庫的相容性層級低於 130，便會套用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 臨界值。 ?
 
 > [!IMPORTANT]
-> 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 低於 130 之下，從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。
+> 從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)低於 130 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低的動態統計資料更新閾值。此閾值會根據資料表中的資料列數目來進行調整。
   
 在編譯查詢及執行快取查詢計劃之前，查詢最佳化工具會檢查是否有過期的統計資料。 在編譯查詢之前，查詢最佳化工具會使用查詢述詞中的資料行、資料表和索引檢視表來判斷哪些統計資料可能已過期。 在執行快取查詢計劃之前， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會確認查詢計劃是否參考最新的統計資料。  
   
@@ -153,7 +153,7 @@ AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物
 * 在內部資料表上建立的統計資料。  
 * 使用空間索引或 XML 索引建立的統計資料。  
   
-**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。 
   
 ## <a name="CreateStatistics"></a> 何時建立統計資料  
  查詢最佳化工具已經用下列方式建立統計資料：  

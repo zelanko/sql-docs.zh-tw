@@ -1,6 +1,5 @@
 ---
-title: 使用 SQL Server 中的 JSON | Microsoft Docs
-ms.custom: ''
+title: 使用 JSON 資料
 ms.date: 05/14/2019
 ms.prod: sql
 ms.reviewer: genemi
@@ -12,13 +11,14 @@ helpviewer_keywords:
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc0abe6cb47bff38fd7f8fa63852d6042b9ee9c1
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: b74463acd2c202dd0b14167b40a715308f16e787
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928460"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095768"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 

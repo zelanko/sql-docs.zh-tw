@@ -1,7 +1,7 @@
 ---
 title: 線上索引作業的指導方針 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909795"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981791"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 
@@ -93,7 +93,7 @@ ms.locfileid: "67909795"
 ## <a name="resumable-index-considerations"></a>可繼續索引考量因素
 
 > [!NOTE]
-> 可繼續索引選項會套用至 SQL Server (自 SQL Server 2017 開始) (僅限索引重建) 及 SQL Database (建立索引及索引重建)。 請參閱 [Create Index](../../t-sql/statements/create-index-transact-sql.md) (目前處於 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 的公開預覽階段) 及 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)。
+> 建立索引和索引重建的可繼續索引選項適用於 SQL Server (索引重建從 SQL Server 2017 開始，且 SQL Server 2019 也支援建立索引) 和 SQL Database。 請參閱 [Create Index](../../t-sql/statements/create-index-transact-sql.md) 及 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)。
 
 當您執行可繼續的線上索引建立或重建時，將適用下列指導方針：
 

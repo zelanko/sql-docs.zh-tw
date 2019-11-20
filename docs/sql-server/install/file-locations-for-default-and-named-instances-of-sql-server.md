@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3ed7b8afd15e4c78eb10476504d21db8c42caffb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 033090c5650455b16e846200e8b8caf8a3940b48
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028883"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055196"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 的預設和具名執行個體的檔案位置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,14 +35,15 @@ ms.locfileid: "69028883"
 >  請勿刪除下列任何一個目錄或是其內容：Binn、Data、Ftdata、HTML 或 1033。 必要時，您可以刪除其他目錄。不過，如果您沒有解除安裝後再重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的話，可能會無法擷取任何遺失的功能或資料。 請勿刪除或修改 HTML 目錄中的任何 .htm 檔。 這些檔案是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具得以正常運作所不可或缺的要素。  
   
 ## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- 在單一電腦上，所有執行個體所使用的通用檔案會安裝在資料夾 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 \<磁碟機  > 是安裝元件的磁碟機代號。 預設通常為磁碟機 C。\<*nnn*> 代表版本。 下表識別了路徑的版本。 
+ 在單一電腦上，所有執行個體所使用的通用檔案會安裝在資料夾 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 \<磁碟機  > 是安裝元件的磁碟機代號。 預設通常是磁碟機 C。_nnn_ 會識別版本。 下表識別了路徑的版本。 \{nn} 是在執行個體識別碼及登錄路徑中使用的版本值。 
 
-|\<*nnn*>|Version
-|-----|-----
-|140|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]
-|130|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]
-|120|SQL Server 2014
-|110|[!INCLUDE[sssql11](../../includes/sssql11-md.md)] 
+|版本|\*nnn*|{nn}|
+|-----|-----|--------|
+|[!INCLUDE[ssqlv15](../../includes/sssqlv15-md.md)]| 150| 15| 
+|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]| 140| 14| 
+|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]| 130| 13 | 
+|[!INCLUDE[ssqlv12](../../includes/sssql14-md.md)]  | 120|12 | 
+|[!INCLUDE[sssql11](../../includes/sssql11-md.md)] | 110|11 | 
   
 ## <a name="file-locations-and-registry-mapping"></a>檔案位置和登錄對應  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間，系統會為每一個伺服器元件產生一個執行個體識別碼。 這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的伺服器元件是 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
@@ -57,24 +58,22 @@ ms.locfileid: "69028883"
   
  此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的預設執行個體識別碼範例如下：  
   
--   MSSQL14.MSSQLSERVER 代表 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的預設執行個體。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 預設執行個體的 MSSQL\{nn}.MSSQLSERVER。  
   
--   MSAS14.MSSQLSERVER 代表 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 的預設執行個體。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 預設執行個體的 MSAS\{nn}.MSSQLSERVER。  
   
--   MSSQL14.MyInstance 代表名為 "MyInstance" 之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的具名執行個體。  
+-   名為 "MyInstance" [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 具名執行個體的 MSSQL\{nn}.MyInstance。  
   
-    >[!NOTE]
-    >執行個體識別碼路徑中的二位數字會識別版本號碼。 在上述範例中，版本號碼 14 為 [!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]。 
 
  包含 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 而且已安裝到預設目錄之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]具名執行個體 "MyInstance" 的目錄結構將會如下所示：  
   
--   C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstance\  
+-   C:\Program Files\Microsoft SQL Server\MSSQL\{nn}.MyInstance\  
   
--   C:\Program Files\Microsoft SQL Server\MSAS14.MyInstance\  
+-   C:\Program Files\Microsoft SQL Server\MSAS\{nn}.MyInstance\  
   
  您可以為執行個體識別碼指定任何值，但是請避免特殊字元和保留關鍵字。  
   
- 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定非預設的執行個體識別碼。 如果使用者選擇變更預設安裝目錄，則可以改用 \<自訂路徑>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而不使用 \<Program Files>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請注意，不支援以底線 (_) 為開頭或是包含數字符號 (#) 或貨幣符號 ($) 的執行個體識別碼。  
+ 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定非預設的執行個體識別碼。 如果使用者選擇變更預設安裝目錄，則可以改用 \<自訂路徑>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而不使用 \\{Program Files}\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請注意，不支援以底線 (_) 為開頭或是包含數字符號 (#) 或貨幣符號 ($) 的執行個體識別碼。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和用戶端元件都不會感知執行個體，因此，也不會被指派執行個體識別碼。 根據預設，系統會將非執行個體感知的元件安裝到單一目錄： [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]。 變更某個共用元件的安裝路徑也會變更其他共用元件的安裝路徑。 後續安裝會將非執行個體感知的元件安裝到與原始安裝相同的目錄。  
@@ -83,19 +82,19 @@ ms.locfileid: "69028883"
   
  執行個體感知元件的登錄區會建立在 HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instance_ID*> 之下。 例如，  
   
--   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MyInstance  
+-   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.MyInstance  
   
--   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.MyInstance  
+-   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.MyInstance  
   
--   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.MyInstance  
+-   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.MyInstance  
   
  登錄也會維護執行個體識別碼到執行個體名稱的對應。 執行個體識別碼到執行個體名稱的對應維護如下：  
   
--   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\SQL] "InstanceName"="MSSQL14"  
+-   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\SQL] "\<InstanceName>"="MSSQL\{nn}"  
   
--   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\OLAP] "InstanceName"="MSAS14"  
+-   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\OLAP] "\<InstanceName>"="MSAS\{nn}"  
   
--   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\RS] "InstanceName"="MSRS14"  
+-   [HKEY_LOCAL_MACHINE\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Instance Names\RS] "\<InstanceName>"="MSRS\{nn}"  
   
 ## <a name="specifying-file-paths"></a>指定檔案路徑  
  在安裝期間，您可以變更下列功能的安裝路徑：  
@@ -104,15 +103,15 @@ ms.locfileid: "69028883"
   
 |元件|預設路徑|可設定或固定路徑|  
 |---------------|------------------|--------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 伺服器元件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<執行個體識別碼>\ |可設定|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 資料檔|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<執行個體識別碼>\ |可設定|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.\<執行個體識別碼>\ |可設定|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.\<執行個體識別碼>\ |可設定|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<執行個體識別碼>\Reporting Services\ReportServer\Bin\ |可設定|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表管理員|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<執行個體識別碼>\Reporting Services\ReportManager\ |固定路徑|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<安裝目錄>\140\DTS\\ <sup>1</sup> |可設定 |  
-|用戶端元件 (bcp.exe 和 sqlcmd.exe 除外)|\<安裝目錄>\140\Tools\\ <sup>1</sup> |可設定 |  
-|用戶端元件 (bcp.exe 和 sqlcmd.exe)|\<安裝目錄>\Client SDK\ODBC\110\Tools\Binn|固定路徑|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 伺服器元件|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<>\ |可設定|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 資料檔|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<>\ |可設定|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<>\ |可設定|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS\{nn}.\<>\ |可設定|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<執行個體識別碼>\Reporting Services\ReportServer\Bin\ |可設定|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表管理員|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS\{nn}.\<執行個體識別碼>\Reporting Services\ReportManager\ |固定路徑|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<安裝目錄>\nnn\DTS\\ <sup>1</sup> |可設定 |  
+|用戶端元件 (bcp.exe 和 sqlcmd.exe 除外)|\<安裝目錄>\nnn\Tools\\ <sup>1</sup> |可設定 |  
+|用戶端元件 (bcp.exe 和 sqlcmd.exe)|\<安裝目錄>\Client SDK\ODBC\nnn\Tools\Binn|固定路徑|  
 |複寫和伺服器端 COM 物件|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |固定路徑|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料轉換執行階段引擎的元件 DLL、資料轉換管線引擎和 **dtexec** 命令提示字元公用程式|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|固定路徑|  
 |對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|固定路徑|  
@@ -134,12 +133,12 @@ ms.locfileid: "69028883"
   
  當您在安裝期間指定伺服器元件或資料檔案的安裝路徑時，除了程式和資料檔案的指定位置之外，安裝程式還會使用執行個體識別碼。 安裝程式不會使用工具和其他共用檔案的執行個體識別碼。 安裝程式也不會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程式和資料檔案的任何執行個體識別碼，但是它會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 儲存機制的執行個體識別碼。  
   
- 如果您設定了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能的安裝路徑， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會使用該路徑做為該安裝作業之所有執行個體特定資料夾的根目錄，包括 SQL 資料檔案在內。 在此情況下，如果您將根目錄設定為 "C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<執行個體名稱>\MSSQL\\"，系統就會在該路徑的結尾新增執行個體的專屬目錄。  
+ 如果您設定了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能的安裝路徑， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會使用該路徑做為該安裝作業之所有執行個體特定資料夾的根目錄，包括 SQL 資料檔案在內。 在此情況下，如果將根目錄設定為 "C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<執行個體名稱>\MSSQL\\"，系統就會在該路徑的結尾新增執行個體特定目錄。  
   
  選擇在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈 (安裝程式 UI 模式) 中使用 USESYSDB 升級功能的客戶，很容易讓自己進入這樣的情況：產品會安裝到遞迴的資料夾結構。 例如，\<*SQLProgramFiles*>\MSSQL14\MSSQL\MSSQL10_50\MSSQL\Data\\。 若要改用 USESYSDB 功能，請設定 SQL 資料檔案功能 (而非 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能) 的安裝路徑。  
   
 > [!NOTE]
->  您應該可以在 Data 子目錄中找到資料檔案。 例如，如果是在 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceName>\MSSQL\Data 底下找到資料檔案，請在升級時指定 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<執行個體名稱>\ 以指定系統資料庫的資料目錄根路徑。  
+>  您應該可以在 Data 子目錄中找到資料檔案。 例如，如果是在 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<執行個體名稱>\MSSQL\Data 底下找到資料檔案，則請在升級時指定 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<執行個體名稱>\ 以指定系統資料庫的資料目錄根路徑。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 組態 - 資料目錄](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   

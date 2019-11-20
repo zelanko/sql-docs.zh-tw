@@ -1,6 +1,5 @@
 ---
-title: 將 JSON 文件匯入 SQL Server | Microsoft Docs
-ms.custom: ''
+title: 匯入 JSON 文件
 ms.date: 10/28/2019
 ms.prod: sql
 ms.reviewer: genemi
@@ -9,13 +8,14 @@ ms.topic: conceptual
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a69047ca62f60cf071ac44e87bd741feea9b88
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: de1dc6567603b0b16324aa798527a0b79282fa83
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049885"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095747"
 ---
 # <a name="import-json-documents-into-sql-server"></a>將 JSON 文件匯入 SQL Server
 

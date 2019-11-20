@@ -1,5 +1,5 @@
 ---
-title: 使用 BULK INSERT 或 OPENROWSET (BULK...) 匯入大量資料 (SQL Server) | Microsoft Docs
+title: 使用 BULK INSERT 或 OPENROWSET(BULK...) 將資料匯入 SQL Server
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,17 +20,17 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
 manager: jroth
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30eb6969c480cb4e3c326da01c3cb0cc2f96c682
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: deaaa783f465c5cfecb940df4b9dd56e10590bc5
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708269"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056387"
 ---
-# <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料 (SQL Server)
+# <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 將資料匯入 SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 

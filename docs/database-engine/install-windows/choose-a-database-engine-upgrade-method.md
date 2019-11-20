@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149985"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056747"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "71149985"
   
 -   若要下載 [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)** 。  
   
--   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** 加速已安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition 的虛擬機器。  
+-   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** 加速已安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition 的虛擬機器。  
   
 > [!NOTE]  
 >  您也可以考慮在升級計畫中升級 Azure SQL Database，或將您的 SQL Server 環境虛擬化。 本文未涵蓋這些文章，如有需要請參閱以下連結：
@@ -95,11 +95,11 @@ ms.locfileid: "71149985"
   
 -   **連結的存放裝置環境：** 如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境使用連結的存放裝置，下圖及圖內的連結會引導您完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之新安裝升級所需的步驟。  
   
-     ![附加儲存體使用備份和還原的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "附加儲存體使用備份和還原的新安裝升級方法")  
+     ![使用連結的儲存裝置備份及還原的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "使用連接儲存裝置備份及還原的新安裝升級方法")  
   
 -   **SAN 存放裝置環境：** 如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境使用 SAN 存放裝置，下圖及圖內的連結會引導您完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之新安裝升級所需的步驟。  
   
-     ![SAN 儲存體使用卸離和附加的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 儲存體使用卸離和附加的新安裝升級方法")  
+     ![使用 SAN 存放裝置中斷連結和連結的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "使用 SAN 存放裝置中斷連結和連結的新安裝升級方法")  
   
 ## <a name="rolling-upgrade"></a>輪流升級  
  當 SQL Server 解決方案環境涉及必須以特定順序升級的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便需要輪流升級，盡可能增加執行時間、減少風險並保留功能。 輪流升級基本上是有特定順序的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體升級，會在現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體執行就地升級，或執行新安裝升級來加速升級專案中硬體和/或作業系統的升級。 在許多案例中，您都需要使用輪流升級方法。 下列文章記載這些案例：  

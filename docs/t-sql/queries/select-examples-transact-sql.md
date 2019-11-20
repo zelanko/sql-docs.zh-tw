@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5af6e4703e4e7a776eca47ea43bb41f96105b341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017616"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119211"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 範例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,14 @@ ms.locfileid: "68017616"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>E. 使用相互關聯的子查詢  
+## <a name="e-using-correlated-subqueries"></a>E. 使用相互關聯的子查詢
+這是一項相依於外部查詢來取得其值的相互關聯子查詢。 這項查詢可以重複執行，針對外部查詢可選取的每個資料列各執行一次。
+
  下列範例會顯示語意相等的查詢，且說明使用 `EXISTS` 關鍵字和 `IN` 關鍵字之間的差異。 兩者都是有效子查詢，擷取產品模型是長袖標誌緊身內衣之各項產品名稱的單一執行個體的，`ProductModelID` 和 `Product` 資料表的 `ProductModel` 號碼相符。  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- 下列範例在相關或重複的子查詢中使用 `IN`。 這是一項相依於外部查詢來取得其值的查詢。 這項查詢會重複執行，外部查詢可能選取的每個資料列各執行一次。 這個查詢會擷取 `SalesPerson` 資料表中的獎金是 `5000.00`，且 `Employee` 和 `SalesPerson` 資料表中的員工識別碼相符的每一位員工的姓名執行個體。  
+ 下一個範例會使用 `IN` 來擷取 `SalesPerson` 資料表中獎金是 `5000.00`，且 `Employee` 和 `SalesPerson` 資料表中員工識別碼相符的每一位員工姓名執行個體。  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

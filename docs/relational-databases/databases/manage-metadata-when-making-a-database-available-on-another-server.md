@@ -1,6 +1,6 @@
 ---
-title: 管理在另一部伺服器上提供資料庫時所需的中繼資料 | Microsoft Docs
-ms.custom: ''
+title: 管理在另一部伺服器上提供資料庫時所需的中繼資料
+ms.custom: seo-dt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d61d42a5b684032898a0eabc3dbc4a1b350653d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940720"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119452"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -248,8 +248,6 @@ ms.locfileid: "67940720"
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **若要建立作業**  
-  
--   [建立作業](../../ssms/agent/create-a-job.md)  
   
 -   [建立作業](../../ssms/agent/create-a-job.md)  
   

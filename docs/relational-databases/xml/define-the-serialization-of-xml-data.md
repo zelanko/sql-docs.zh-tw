@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b77c2d78818656c3cbb59619ce99bed8cb0bcd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4fd38ab48946269363e674dfcca6e4d05b9af49
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984774"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127357"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定義 XML 資料的序列化
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 <Δ/>  
 ```  
   
- 如果 SQL 目標類型是 VARCHAR 或 NCHAR，其結果會以對應於資料庫定序字碼頁的編碼序列化，但沒有位元組順序標示或 XML 宣告。 如果目標類型太小，或值無法對應至目標定序字碼頁，則會引發錯誤。  
+ 如果 SQL 目標類型是 VARCHAR 或 CHAR，其結果會以對應於資料庫定序字碼頁的編碼序列化，但沒有位元組順序標示或 XML 宣告。 如果目標類型太小，或值無法對應至目標定序字碼頁，則會引發錯誤。  
   
  例如：  
   

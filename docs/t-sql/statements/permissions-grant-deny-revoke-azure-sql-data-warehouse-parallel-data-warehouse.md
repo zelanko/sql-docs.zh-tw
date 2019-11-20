@@ -13,12 +13,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129371"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095581"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限:GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -224,7 +224,7 @@ REVOKE
   
 -   ALTER  
   
--   Delete  
+-   刪除  
   
 -   執行 CREATE 陳述式之前，請先執行  
   
@@ -243,7 +243,7 @@ REVOKE
   
  ![APS 安全性權限海報](../../t-sql/statements/media/aps-security-perms-poster.png "APS 安全性權限海報")  
   
- 若要下載這張海報的完整大小版本，請參閱 APS Yammer 網站之檔案區段中的 [SQL Server PDW 權限](https://go.microsoft.com/fwlink/?LinkId=244249) (或透過電子郵件向 **apsdoc@microsoft.com** 索取)。  
+ 若要下載這張海報的完整大小版本，請參閱 APS Yammer 網站檔案區段中的 [SQL Server PDW 權限](https://go.microsoft.com/fwlink/?LinkId=244249) (或透過電子郵件向 **apsdoc\@microsoft.com** 索取)。  
   
 ## <a name="default-permissions"></a>預設權限  
  下列清單說明預設權限：  

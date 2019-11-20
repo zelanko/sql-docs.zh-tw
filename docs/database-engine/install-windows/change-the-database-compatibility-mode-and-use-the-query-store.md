@@ -14,18 +14,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e84d60b0d5390712639314d93ecfbe42852f5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034510"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982129"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>變更資料庫相容性層級並使用查詢存放區
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，某些變更只在[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)變更後才啟用。 有數種原因可以完成這項作業：  
+在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本中，某些變更只在[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)變更後才會啟用。 有數種原因可以完成這項作業：  
   
 - 因為升級是單向作業 (不可能降級檔案格式)，所以可以將啟用新功能區隔到資料庫內的個別作業。 設定可還原為先前的資料庫相容性層級。  新的模型可減少必須在中斷期間發生的事項數目。  
   

@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff0c616342af9f00be56fbed3ecfb3d09dedb9ef
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3627e62bafefaa33eee4b238e1e33cd1ea127137
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532841"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982151"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -127,7 +127,7 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > 自主資料庫無法使用這個選項。
 
-CURRENT **適用於**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+CURRENT **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。
 
 指定應該改變正在使用中的目前資料庫。
 
@@ -143,7 +143,7 @@ COLLATE *collation_name* 指定資料庫的定序。 *collation_name* 可以是 
 如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE](~/t-sql/statements/collations.md)。
 
 **\<delayed_durability_option> ::=** 
-**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。
 
 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md)及[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。
 
@@ -235,7 +235,7 @@ GO
 
 下列範例會使用 `testdb`S 定序來建立名為 `SQL_Latin1_General_CP1_CI_A` 的資料庫，然後將 `testdb` 資料庫的定序變更為 `COLLATE French_CI_AI`。
 
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 USE master;

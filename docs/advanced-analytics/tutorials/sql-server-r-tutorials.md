@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94572fb70e511cb99fc19deb77a86b4efb69673a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 7c71ebfbda37e66050f868fa7676d0247e84840e
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725926"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119224"
 ---
 # <a name="sql-server-r-language-tutorials"></a>SQL Server R 語言教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73725926"
 | [快速入門：建立及執行簡易的 R 指令碼](quickstart-r-create-script.md) | 在多項快速入門中，首先說明使用 T-SQL 查詢編輯器 (例如 SQL Server Management Studio) 呼叫 R 函數的基本語法。 |
 | [教學課程：了解適用於資料科學家的資料庫內 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 本教學課程為剛接觸 SQL Server 的 R 開發人員說明如何在 SQL Server 中執行常見的資料科學工作。 載入資料並將其視覺化、將模型定型並儲存至 SQL Server，並使用模型進行預測性分析。 |
 | [教學課程：了解適用於 SQL 開發人員的資料庫內 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md) | 僅使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 工具來建置和部署完整的 R 解決方案。 著重於將解決方案移至生產環境。 您將了解如何將 R 程式碼包裝在預存程序中、將 R 模型儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，以及對 R 模型進行參數化呼叫來進行預測。 |
-| [教學課程：RevoScalepR 深入探討](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | 了解如何使用 RevoScaleR 套件中的函數。 在 R 與 SQL Server 之間移動資料，並切換計算內容以符合特定的工作。 建立模型和繪圖，並在您的開發環境和資料庫伺服器之間移動兩者。 |
+| [教學課程：RevoScaleR 深入探討](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | 了解如何使用 RevoScaleR 套件中的函數。 在 R 與 SQL Server 之間移動資料，並切換計算內容以符合特定的工作。 建立模型和繪圖，並在您的開發環境和資料庫伺服器之間移動兩者。 |
 
 <a name ="bkmk_samples"></a>
 

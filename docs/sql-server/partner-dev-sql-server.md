@@ -1,20 +1,20 @@
 ---
-title: 開發 SQL Server 夥伴 | Microsoft Docs
+title: SQL Server 開發夥伴
 description: 具有 Server 開發解決方案的協力廠商夥伴清單。
 ms.topic: conceptual
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c1f3a1e85fa9d6b8e762a5d3fa68e65b098f9cdd
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: c865464022ba18e03be5baa5b66b4b4a87ce2799
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68132871"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095856"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開發夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68132871"
 | Partner | Description | 連結 |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL 是智慧型 SQL 整合式開發環境，讓資料庫開發人員和資料庫管理員可在所有主要的資料庫平台上 (包括來自單一介面的 SQL Server) 建立高效能的 SQL 程式碼。<br><br>[系統需求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[網站][idera_website]<br>[Twitter][idera_twitter]<br>[影片][idera_youtube] |
-|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. 讓開發人員社群藉由適當的工具組，得以彈性地選擇程式設計語言、架構和服務。 開發人員可以使用 Click2Cloud 的工具組，以建立「Linux 上的 SQL」容器，並將它附加至應用程式，同時仍可啟用安全的多租用戶架構。 容器可以獨立部署於任何雲端容器平台上。|[Marketplace][click2cloud_marketplace]<br>[網站][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[影片][click2cloud_youtube] |
+|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. 讓開發人員社群藉由適當的工具組，得以彈性地選擇程式設計語言、架構和服務。 開發人員可以使用 Click2Cloud 的工具組，以建立「Linux 上的 SQL」容器，並將它附加至應用程式，同時仍可啟用安全的多租用戶架構。 容器可以獨立部署於任何雲端容器平台上。|[Marketplace][click2cloud_marketplace] \(英文\)<br>[網站][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[影片][click2cloud_youtube] |
 
 ## <a name="next-steps"></a>後續步驟
 若要深入了解我們的其他合作夥伴，請參閱[高可用性和災害復原夥伴][hadr_partners]、[管理夥伴][management_partners]與[監視夥伴][monitor_partners]。

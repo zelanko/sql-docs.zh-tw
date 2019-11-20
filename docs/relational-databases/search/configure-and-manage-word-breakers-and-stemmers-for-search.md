@@ -1,5 +1,5 @@
 ---
-title: 設定及管理搜尋的斷詞工具與字幹分析器 | Microsoft Docs
+title: 設定及管理搜尋的文字分隔與詞幹分析器
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -20,14 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388342"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056265"
 ---
-# <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>設定及管理搜尋的斷詞工具與字幹分析器
+# <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>設定及管理搜尋的文字分隔與詞幹分析器 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 斷詞工具及字幹分析器，會在所有全文檢索索引資料上執行語文分析。 語言分析會執行下列兩項作業：
 
@@ -92,7 +93,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 ##  <a name="tshoot"></a> 疑難排解斷詞逾時錯誤  
  斷詞逾時錯誤可能會在各種情況中發生。 如需這些情況以及如何回應每種情況的資訊，請參閱 [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)。
 
-### <a name="info-about-the-mssqlserver30053-error"></a>MSSQLSERVER_30053 錯誤的相關資訊
+### <a name="info-about-the-mssqlserver_30053-error"></a>MSSQLSERVER_30053 錯誤的相關資訊
   
 |屬性|ReplTest1|
 |-|-|

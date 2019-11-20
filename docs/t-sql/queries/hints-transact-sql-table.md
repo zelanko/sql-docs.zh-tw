@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901968"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981767"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -221,7 +221,7 @@ FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] *
 > [!CAUTION]  
 > 使用參數指定 FORCESEEK，會限制最佳化工具所能使用的計畫數目，其限制幅度將大於指定 FORCESEEK 而不指定參數時的限制。 這可能會導致在許多狀況下發生 `Plan cannot be generated` 錯誤。 在後續版本中，將會從內部修改查詢最佳化工具，以擴大可使用的計畫範圍。  
   
-FORCESCAN **適用於**：[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+FORCESCAN **適用於**：[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 及更新版本。
 指定查詢最佳化工具只使用索引掃描作業做為參考資料表或檢視表的存取路徑。 當最佳化工具低估受影響的資料列數，而這些查詢又選擇使用搜尋作業，而不使用掃描作業時，即可使用 FORCESCAN 提示。 發生此狀況時，將只會授與作業少量的記憶體，導致查詢效能受到影響。  
   
 您可以使用或不使用 INDEX 提示指定 FORCESCAN。 當與索引提示 (`INDEX = index_name, FORCESCAN`) 並用時，查詢最佳化工具只會利用指定的索引的掃描存取路徑存取參考資料表。 您可以指定 FORCESCAN 與索引提示 INDEX(0)，對基底資料表強制執行資料表掃描作業。  
@@ -317,7 +317,7 @@ SERIALIZABLE
 這相當於 HOLDLOCK。 使共用鎖定更具限制性的方法是將共用鎖定持續保留到交易完成為止，而不是在不再需要所要求的資料表或資料頁面時，便立即釋放共用鎖定 (不論交易是否完成)。 利用與在 SERIALIZABLE 隔離等級執行之交易相同的語意來執行掃描。 如需隔離等級的詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 SNAPSHOT  
-**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+**適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本。 
   
 記憶體最佳化的資料表是在 SNAPSHOT 隔離下存取。 SNAPSHOT 只能用於記憶體最佳化的資料表 (不可用於磁碟基礎的資料表)。 如需詳細資訊，請參閱[記憶體最佳化的資料表簡介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。  
 指定要用於鑲嵌幾何或地理物件的資料格數上限。 *number* 是介於 1 和 8192 之間的值。  
   
 此選項允許藉由調整主要和次要篩選執行時間之間的取捨，微調查詢執行時間。 較大的數字會降低次要篩選執行時間，但增加主要篩選執行時間，較小的數字會減少主要篩選執行時間，但增加次要篩選器執行時間。 對於較密集的空間資料，較高的數字應該會藉由使用主要篩選提供更好的近似值，並減少次要篩選執行時間，產生更快速的執行時間。 對於較疏鬆的資料，較低的數目會減少主要篩選執行時間。  

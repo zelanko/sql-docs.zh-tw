@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35fc3fb65347a7e7459df18495294a2491e270b4
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 2eeec689116946d99b348cadf0b41bca829848b1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660809"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982097"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -372,7 +372,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 下列範例會將登入 `Mary5` 對應到 EKM 認證 `EKMProvider1`。
 
 
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN Mary5
@@ -402,7 +402,7 @@ GO
 
 下列範例會將 `TestUser` 登入密碼變更為已雜湊的值。
 
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -615,7 +615,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 下列範例會將登入 `Mary5` 對應到 EKM 認證 `EKMProvider1`。
 
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 Azure SQL Database 受控執行個體。
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本，以及 Azure SQL Database 受控執行個體。
 
 ```sql
 ALTER LOGIN Mary5
@@ -645,7 +645,7 @@ GO
 
 下列範例會將 `TestUser` 登入密碼變更為已雜湊的值。
 
-**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 Azure SQL Database 受控執行個體。
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本，以及 Azure SQL Database 受控執行個體。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -778,7 +778,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 下列範例會將登入 `Mary5` 對應到 EKM 認證 `EKMProvider1`。
 
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN Mary5
@@ -808,7 +808,7 @@ GO
 
 下列範例會將 `TestUser` 登入密碼變更為已雜湊的值。
 
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -967,7 +967,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 下列範例會將登入 `Mary5` 對應到 EKM 認證 `EKMProvider1`。
 
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN Mary5
@@ -997,7 +997,7 @@ GO
 
 下列範例會將 `TestUser` 登入密碼變更為已雜湊的值。
 
-**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。
 
 ```sql
 ALTER LOGIN TestUser WITH

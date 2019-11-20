@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809897"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982415"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ REPAIR_FAST
  維護這個語法的目的，只是為了與舊版相容。 不會執行任何修復動作。  
     
 REPAIR_REBUILD  
- 執行不可能造成資料遺失的修復， 這可包括快速修復 (例如，修復非叢集索引中遺失的資料列) 以及更耗時的修復 (例如，重建索引)。  
+ 執行不可能造成資料遺失的修復， 這可包含快速修復 (例如，修復非叢集索引中遺失的資料列) 以及更耗時的修復 (例如，重建索引)。  
  此引數不會修復涉及 FILESTREAM 資料的錯誤。  
     
 > [!IMPORTANT] 
@@ -161,7 +161,7 @@ DATA_PURITY
  這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 如需手動更正這些錯誤的相關資訊，請參閱知識庫文章 923247：[針對 SQL Server 2005 和更新版本中的 DBCC 錯誤 2570 進行疑難排解](https://support.microsoft.com/kb/923247)。  
     
  MAXDOP  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 及更新版本)。  
     
  覆寫陳述式之 **sp_configure** 的 **max degree of parallelism** 設定選項。 MAXDOP 可能會超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用 Resource Governor 所設定的值，[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 就會使用 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所描述的 Resource Governor MAXDOP 值。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  

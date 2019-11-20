@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141228"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982455"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ LOADHISTORY
   
  指定還原作業將資訊載入 **msdb** 記錄資料表中。 LOADHISTORY 選項會針對所驗證的單一備份組，將媒體集所儲存之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的相關資訊載入 **msdb** 資料庫的備份和還原記錄資料表中。 如需記錄資料表的詳細資訊，請參閱[系統資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)。  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  RESTORE DATABASE 和 RESTORE LOG 陳述式中支援一般的所有 WITH 選項。 其中的某些選項也受到一或多個輔助陳述式所支援，如下所示。  
   
 ##### <a name="restore-operation-options"></a>還原作業選項  
@@ -247,7 +247,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
 CREDENTIAL  
  **支援者：** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 及更新版本
   
  只有在從 Microsoft Azure Blob 儲存體服務還原備份時使用。  
   
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **支援者：** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本
   
  Windows 相容的目錄名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有資料庫層級 FILESTREAM 目錄名稱之間，此名稱必須是唯一的。 不論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序設定為何，唯一性比較不區分大小寫。  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  指定在 RESTORE 作業之後，磁帶仍會在磁帶機上保持載入。  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  只有在建立備份時複寫了資料庫，這個選項才會相關。  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
 -   必須重新命名暖待命伺服器，使用與主要伺服器相同的名稱。  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  只有在建立備份時，資料庫啟用了異動資料擷取，這個選項才會相關。  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
  如需如何搭配資料庫鏡像使用異動資料擷取的詳細資訊，請參閱[異動資料擷取和其他 SQL Server 功能](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)。  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
  開啟或關閉 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 訊息傳遞，或設定新的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別碼。 只有在建立備份時，資料庫啟用 (啟動) 了 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，這個選項才會相關。  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NEW_BROKER  
  指定資料庫應該被指派新的 Service Broker 識別碼。 由於資料庫會被視為新的 Service Broker，因此系統會立即移除資料庫中所有現有的交談，而不會產生結束對話訊息。 您必須使用新的識別碼來重新建立參考舊 Service Broker 識別碼的任何路由。  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
  **支援者：** [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md)，且只適用於完整或大量記錄復原模式。  
   
  您可以在 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目標復原點，藉以將資料庫還原至特定時間點或交易。 指定的時間或交易一律是從記錄備份中還原。 在還原順序的每個 RESTORE LOG 陳述式中，您必須在相同的 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目標時間或交易。  

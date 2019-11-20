@@ -1,5 +1,5 @@
 ---
-title: 使用搜索屬性清單搜索文件屬性 | Microsoft Docs
+title: 使用搜尋屬性清單搜尋文件屬性
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -18,12 +18,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f105b175cf2a9673fff0626fba726d6b7f68b50e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912980"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056104"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "67912980"
   
  下圖顯示指定 Title 和 Keywords 這兩個屬性之搜尋屬性清單的邏輯檢視。 [關鍵字] 的屬性清單名稱為 [標籤]。 這些屬性屬於相同的屬性集，其 GUID 為 F29F85E0-4FF9-1068-AB91-08002B27B3D9。 Title 和 Tags (Keywords) 的屬性整數識別碼分別為 2 和 5。 全文檢索引擎會將每個屬性任意對應至搜尋屬性清單獨有的內部屬性識別碼。 Title 屬性的內部屬性識別碼為 1，而 Tags 屬性的內部屬性識別碼為 2。  
   
- ![搜尋屬性清單至內部資料表的對應](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "搜尋屬性清單至內部資料表的對應")  
+ ![將搜尋屬性清單對應至內部資料表](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "將搜尋屬性清單對應至內部資料表")  
   
  內部屬性識別碼可能會與屬性的屬性整數識別碼不同。 如果給定屬性已在多個搜尋屬性清單中註冊，可能會為每個搜尋屬性清單指定不同的內部屬性識別碼。 例如，內部屬性識別碼在某個搜尋屬性清單中可能是 4、在另一個清單中可能是 1、在另一個清單中可能是 3，依此類推。 反之，屬性整數識別碼是屬性內建的，而且不論該屬性用於何處，它都會維持相同。  
   
