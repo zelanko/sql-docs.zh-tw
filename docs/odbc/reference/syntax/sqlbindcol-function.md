@@ -55,7 +55,7 @@ SQLRETURN SQLBindCol(
  源要系結的結果集資料行數目。 資料行是以遞增的資料行順序編號，從0開始，其中資料行0是書簽資料行。 如果未使用書簽（也就是，SQL_ATTR_USE_BOOKMARKS 語句屬性設定為 SQL_UB_OFF），則資料行編號會從1開始。  
   
  *TargetType*  
- 源@No__t-0*TargetValuePtr*緩衝區的 C 資料類型識別碼。 當它從資料來源使用**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**來抓取資料時，驅動程式會將資料轉換成此類型。當它使用**SQLBulkOperations**或**SQLSetPos**將資料傳送到資料來源時，驅動程式會轉換此類型的資料。 如需有效 C 資料類型和類型識別碼的清單，請參閱附錄 D：中的[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)一節。資料類型。  
+ 源 *TargetValuePtr* 緩衝區的 C 資料類型識別碼。 當它從資料來源使用**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**來抓取資料時，驅動程式會將資料轉換成此類型。當它使用**SQLBulkOperations**或**SQLSetPos**將資料傳送到資料來源時，驅動程式會轉換此類型的資料。 如需有效 C 資料類型和類型識別碼的清單，請參閱附錄 D：中的[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)一節。資料類型。  
   
  如果*TargetType*引數是 interval 資料類型，則為預設的間隔前置精確度（2）和預設間隔秒數精確度（6），分別在 ARD 的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 欄位中設定。會用於資料。 如果*TargetType*引數是 SQL_C_NUMERIC，則會針對資料使用預設的有效位數（驅動程式定義）和預設小數位數（0）（如 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 欄位中所設定）。 如果任何預設的有效位數或小數位數不適當，應用程式應該藉由呼叫**SQLSetDescField**或**SQLSetDescRec**來明確設定適當的描述項欄位。  
   
@@ -67,9 +67,9 @@ SQLRETURN SQLBindCol(
  如果*TargetValuePtr*是 null 指標，驅動程式會將資料行的資料緩衝區解除系結。 應用程式可以使用 SQL_UNBIND 選項呼叫**SQLFreeStmt** ，將所有資料行解除系結。 如果**SQLBindCol**呼叫中的*TargetValuePtr*引數為 Null 指標，但*StrLen_or_IndPtr*引數是有效的，則應用程式可以解除系結資料行的資料緩衝區，但仍具有系結至該資料行的長度/指標緩衝區。value.  
   
  *BufferLength*  
- 源@No__t-0*TargetValuePtr*緩衝區的長度（以位元組為單位）。  
+ 源 *TargetValuePtr* 緩衝區的長度（以位元組為單位）。  
   
- 驅動程式會使用*BufferLength*來避免在傳回可變長度的資料（例如字元或二進位資料）時，寫入超過 @no__t 1*TargetValuePtr*緩衝區的結尾。 請注意，驅動程式會在將字元資料傳回給 \**TargetValuePtr*時，計算 null 終止字元。 \* *TargetValuePtr*因此必須包含空格的 null 終止的字元或驅動程式將會截斷資料。  
+ 驅動程式會使用 *BufferLength* 來避免在傳回可變長度的資料（例如字元或二進位資料）時，寫入超過 *TargetValuePtr* 緩衝區的結尾。 請注意，驅動程式會在將字元資料傳回給 \**TargetValuePtr*時，計算 null 終止字元。 \* *TargetValuePtr*因此必須包含空格的 null 終止的字元或驅動程式將會截斷資料。  
   
  當驅動程式傳回固定長度的資料（例如整數或日期結構）時，驅動程式會忽略*BufferLength* ，並假設緩衝區夠大，足以容納資料。 因此，應用程式必須為固定長度的資料配置夠大的緩衝區，否則驅動程式將會寫入超過緩衝區的結尾。  
   
