@@ -5808,7 +5808,7 @@
     - name: 資料庫測試助理 (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: 開始使用
+        - name: 工作負載比較概觀
           href: dea/database-experimentation-assistant-get-started.md
         - name: 擷取追蹤
           href: dea/database-experimentation-assistant-capture-trace.md
