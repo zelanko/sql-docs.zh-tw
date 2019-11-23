@@ -20,9 +20,9 @@ ms.locfileid: "72797760"
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>指定 SQL Server PowerShell 提供者中的執行個體
   針對 SQL Server PowerShell 提供者指定的路徑必須識別 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的執行個體及其執行所在的電腦。 用來指定電腦和執行個體的語法必須符合 SQL Server 識別碼和 Windows PowerShell 路徑的規則。  
   
-1.  **開始之前：**  [限制事項](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **若要指定執行個體：**  [範例](#Examples)  
+2.  **To specify an instance:**  [Examples](#Examples)  
   
 ## <a name="before-you-begin"></a>開始之前  
  SQL Server 提供者路徑中接在 SQLSERVER:\SQL 後面的第一個節點是執行 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體的電腦名稱。例如：  
@@ -75,7 +75,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [PowerShell 中的 SQL Server 識別碼](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

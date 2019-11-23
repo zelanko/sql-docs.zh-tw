@@ -20,9 +20,9 @@ ms.locfileid: "72797766"
 # <a name="encode-and-decode-sql-server-identifiers"></a>編碼及解碼 SQL Server 識別碼
   SQL Server 分隔識別碼有時會包含 Windows PowerShell 路徑中不支援的字元。 編碼這些字元的十六進位值，就可以指定這些字元。  
   
-1.  **開始之前：**  [限制事項](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **處理特殊字元：**  [編碼識別碼](#EncodeIdent)、 [解碼識別碼](#DecodeIdent)  
+2.  **To process special characters:**  [Encoding an Identifier](#EncodeIdent), [Decoding an Identifier](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>開始之前  
  Windows PowerShell 路徑名稱中不支援的字元可以表示或編碼為 "%" 字元，後面緊接著代表此字元之位元模式的十六進位值，就像是 " **%** xx"。 編碼一定可以用來處理 Windows PowerShell 路徑中不支援的字元。  
@@ -34,7 +34,7 @@ ms.locfileid: "72797766"
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**字元**|\ |/|所解碼的字元：|%|\<|>|*|?|[|]|&#124;|  
+|**字元**|\ |/|：|%|\<|>|*|?|[|]|&#124;|  
 |**十六進位編碼**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> 編碼識別碼  
@@ -71,7 +71,7 @@ Set-Location (Encode-SqlName "Table:Test")
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [PowerShell 中的 SQL Server 識別碼](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

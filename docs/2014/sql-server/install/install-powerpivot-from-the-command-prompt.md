@@ -102,6 +102,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 11. 設定伺服器。 您至少必須要部署方案、建立服務應用程式，並針對每一個網站集合啟用此功能。 如需詳細資訊，請參閱[設定或修復&#40;PowerPivot for SharePoint 2010 PowerPivot&#41;設定工具](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)或[管理中心的 powerpivot 伺服器管理和](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 PowerPivot 服務帳戶](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [PowerPivot for SharePoint 2010 安裝](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

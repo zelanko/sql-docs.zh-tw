@@ -54,15 +54,15 @@ sp_setapprole [ @rolename = ] 'role',
 > [!IMPORTANT]  
 > ODBC **encrypt**函數不提供加密。 您不應該依賴這個函數來保護透過網路傳輸的密碼。 若要透過網路傳輸這項資訊，請使用 SSL 或 IPSec。
   
- **@encrypt = ' 無 '**  
+ **@encrypt = ' none '**  
  指定不使用模糊化。 密碼會以純文字格式傳遞至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這是預設值。  
   
- **@encrypt= 'odbc'**  
- 指定在將密碼傳送至 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 之前，ODBC 會使用 ODBC **encrypt**函數來模糊處理密碼。 只有在使用 ODBC 用戶端或 SQL Server 的 OLE DB Provider 時才可以作這項指定。  
+ **@encrypt= ' odbc '**  
+ 指定在將密碼傳送至 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]之前，ODBC 會使用 ODBC **encrypt**函數來模糊化密碼。 只有在使用 ODBC 用戶端或 SQL Server 的 OLE DB Provider 時才可以作這項指定。  
   
 `[ @fCreateCookie = ] true | false` 指定是否要建立 cookie。 **true**會隱含地轉換成1。 **false**會隱含地轉換為0。  
   
-`[ @cookie = ] @cookie OUTPUT` 指定要包含 cookie 的輸出參數。 只有當 **@no__t 1fCreateCookie**的值為**true**時，才會產生 cookie。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` 指定要包含 cookie 的輸出參數。 只有當 **\@當 fcreatecookie**的值為**true**時，才會產生 cookie。 **varbinary(8000)**  
   
 > [!NOTE]  
 > **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)** 。 應用程式應該繼續保留**Varbinary （8000）** ，讓應用程式在未來版本中的 cookie 傳回大小增加時，繼續正常運作。
@@ -71,15 +71,15 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (成功) 和 1 (失敗)  
   
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 
- 使用**sp_setapprole**啟動應用程式角色之後，角色會保持作用中狀態，直到使用者中斷伺服器的連線或執行**sp_unsetapprole**。 **sp_setapprole**只能由 direct [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句執行。 **sp_setapprole**無法在另一個預存程式中或在使用者定義的交易內執行。  
+ 使用**sp_setapprole**啟動應用程式角色之後，角色會保持作用中狀態，直到使用者中斷伺服器連線或執行**sp_unsetapprole**為止。 **sp_setapprole**只能由直接 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句執行。 **sp_setapprole**無法在另一個預存程式或使用者自訂交易內執行。  
   
  如需應用程式角色的總覽，請參閱[應用程式角色](../../relational-databases/security/authentication-access/application-roles.md)。  
   
 > [!IMPORTANT]  
 > 若要在透過網路傳輸時保護應用程式角色密碼，在啟用應用程式角色時，您應該一律使用加密的連接。
-> **SqlClient**不支援 @no__t 0 ODBC **encrypt**選項。 如果必須保存認證，請利用 crypto API 函數來加密認證。 參數*密碼*會儲存為單向雜湊。 為了保留與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相容性， **sp_addapprole**不會強制執行密碼複雜性原則。 若要強制執行密碼複雜性原則，請使用 [[建立應用程式角色](../../t-sql/statements/create-application-role-transact-sql.md)]。  
+> **SqlClient**不支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **encrypt**選項。 如果必須保存認證，請利用 crypto API 函數來加密認證。 參數*密碼*會儲存為單向雜湊。 為了保留與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的相容性， **sp_addapprole**不會強制執行密碼複雜性原則。 若要強制執行密碼複雜性原則，請使用 [[建立應用程式角色](../../t-sql/statements/create-application-role-transact-sql.md)]。  
   
 ## <a name="permissions"></a>Permissions
 
@@ -96,7 +96,7 @@ EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';
 GO
 ```
 
-### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>B. 啟動內含 Cookie 的應用程式角色，再還原成原始內容
+### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>b. 啟動內含 Cookie 的應用程式角色，再還原成原始內容
 
  下列範例會啟動含有密碼 `Sales11` 的 `fdsd896#gfdbfdkjgh700mM` 應用程式角色，然後建立 Cookie。 這個範例會傳回目前使用者的名稱，然後執行 `sp_unsetapprole` 來還原為原始內容。  
 
@@ -118,4 +118,4 @@ GO
 
 ## <a name="see-also"></a>另請參閱
 
- [系統預存&#40;程式 transact-sql&#41; ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [安全性預存程式&#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [建立應用程式角色&#40;transact-sql&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) [DROP application role &#40;Transact-sql&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [sp_unsetapprole &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)
+ [系統預存&#40; &#41;程式 transact-sql](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [安全性預存程式&#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [建立應用程式角色&#40;transact-sql&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) [DROP application role &#40;transact-sql&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [sp_unsetapprole transact-sql&#41; &#40; ](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)

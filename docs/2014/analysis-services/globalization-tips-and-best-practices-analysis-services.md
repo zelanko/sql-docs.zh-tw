@@ -68,9 +68,9 @@ ms.locfileid: "70874411"
   
      在中國和新加坡，Microsoft 支援通常會以簡體中文顯示，並以拼音做為慣用的排序次序。 建議的定序為 Chinese_PRC (適用於 SQL Server 2000)、Chinese_PRC_90 (適用於 SQL Server 2005) 或 Chinese_Simplified_Pinyin_100 (適用於 SQL Server 2008 及更新版本)。  
   
-     在臺灣，使用建議的排序次序，會比較常見的情況是根據筆劃計數：Chinese_Taiwan_Stroke （適用于 SQL Server 2000）、Chinese_Taiwan_Stroke_90 （適用于 SQL Server 2005）或 Chinese_Traditional_Stroke_Count_100 （適用于 SQL Server 2008 和更新版本）。  
+     在台灣，則較常看到繁體中文，且建議的排序次序是依據筆劃數：Chinese_Taiwan_Stroke (適用於 SQL Server 2000)、Chinese_Taiwan_Stroke_90 (適用於 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 (適用於 SQL Server 2008 及更新版本)。  
   
-     其他區域（例如香港和澳門特別行政區）也會使用繁體中文。 在香港特別行政區，還很常會看到 Chinese_Hong_Kong_Stroke_90 (在 SQL Server 2005 上) 的定序。 以澳門特別行政區，Chinese_Traditional_Stroke_Count_100 （在 SQL Server 2008 和更新版本上）會相當頻繁地使用。  
+     其他區域（例如香港和澳門特別行政區）也會使用繁體中文。 在香港特別行政區，還很常會看到 Chinese_Hong_Kong_Stroke_90 (在 SQL Server 2005 上) 的定序。 以澳門特別行政區，Chinese_Traditional_Stroke_Count_100 （在 SQL Server 2008 和更新版本上）相當頻繁地使用。  
   
 -   日文的最常用定序是 Japanese_CI_AS。 Japanese_XJIS_100 可用於支援 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)的安裝。 在資料移轉專案中通常會看到 Japanese_BIN2，其資料源自於非 Windows 平台，或源自於 SQL Server 關聯式資料庫引擎以外的資料來源。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "70874411"
   
 |字集|區分大小寫|  
 |---------------------|----------------------|  
-|**基本拉丁字母**|以拉丁文字 (26 個英文大小寫字母的任何幾個字母) 表示的物件識別碼會視為區分大小寫，而不論定序為何。 例如，下列物件識別碼會視為相同：54321**abcdef**、54321**Abcdef**、54321**abcdef**。 Analysis Services 會在內部將字串中的字元視為全部大寫，然後執行與語言無關的簡單全半形比較。<br /><br /> 請注意，只有 26 個字元會受到影響。 如果是西歐語言，但使用斯堪地那維亞字元，其他字元不會使用大寫。|  
+|**基本拉丁字母**|以拉丁文字 (26 個英文大小寫字母的任何幾個字母) 表示的物件識別碼會視為區分大小寫，而不論定序為何。 例如，下列物件識別碼會視為相同：54321**abcdef**、54321**ABCDEF**、54321**AbCdEf**。 Analysis Services 會在內部將字串中的字元視為全部大寫，然後執行與語言無關的簡單全半形比較。<br /><br /> 請注意，只有 26 個字元會受到影響。 如果是西歐語言，但使用斯堪地那維亞字元，其他字元不會使用大寫。|  
 |**斯拉夫文、希臘文、科普特文、亞美尼亞文**|非拉丁文複合字集的物件識別碼 (例如斯拉夫文) 則一律會區分大小寫。 例如，Измерение 和 измерение 的唯一差異是第一個字母的大小寫，即便如此，這兩個字仍會視為兩個相異值。|  
   
  **物件識別碼的區分大小寫含意**  
@@ -106,7 +106,7 @@ ms.locfileid: "70874411"
   
      您應該會看到 Adventure Works 範例資料庫中的法文翻譯。  
   
-     ![使用法文翻譯的 Excel 樞紐分析表](media/ssas-localetest-excel.png "使用法文翻譯的 Excel 樞紐分析表")  
+     具有法文翻譯的![Excel 資料透視]表與法文(media/ssas-localetest-excel.png "翻譯的 Excel 樞紐分析表")  
   
  接著，您可以使用 SQL Server Profiler 來確認地區設定。 按一下 `Session Initialize` 事件，然後查看下方文字區域中的屬性清單，尋找 `<localeidentifier>1036</localeidentifier>`。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "70874411"
   
 -   對 Adventure Works 資料庫執行 MDX 查詢。 查詢結果應該是法文翻譯。  
   
-     ![SSMS 中的 MDX 查詢與法文翻譯](media/ssas-localetest-ssms.png "SSMS 中的 MDX 查詢與法文翻譯")  
+     Ssms 中具有法文![翻譯的 mdx 查詢]在(media/ssas-localetest-ssms.png "Ssms 中具有法文翻譯的 mdx 查詢")  
   
 ##  <a name="bkmk_mdx"></a> 在包含翻譯的方案中撰寫 MDX 查詢  
  翻譯會提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件名稱的顯示資訊，但不會翻譯相同物件的識別碼。 可能的話，請使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件的識別碼和索引鍵，而不要使用翻譯的標題和名稱。 例如，針對多維度運算式 (MDX) 陳述式和指令碼，請使用成員索引鍵而不要使用成員名稱，以確保多種語言的可攜性。  
@@ -139,13 +139,13 @@ ms.locfileid: "70874411"
   
 3.  **針對通用的日期和時間資訊使用 ISO 日期格式**  
   
-     一個[Analysis Services 專家](http://geekswithblogs.net/darrengosbell/Default.aspx)有這項建議：「對於我傳入 SQL 或 MDX 查詢的任何日期字串，我一律會使用 ISO 日期格式 yyyy-mm-dd，因為它是明確的，無論用戶端或伺服器的地區設定為何都有效。 我同意當剖析模稜兩可的日期格式時，伺服器應該遵循其地區設定，但我也認為如果您已有一個不開放轉譯的選項時，何不選擇這個選項。」  
+     某位 [Analysis Services 專家](http://geekswithblogs.net/darrengosbell/Default.aspx) 有這項建議：「針對要傳入 SQL 或 MDX 查詢的任何日期字串，我一律會使用 ISO 日期格式 yyyy-mm-dd，這樣做不僅可避免模擬兩可，且不論用戶端或伺服器的地區設定為何都有效。 我同意當剖析模稜兩可的日期格式時，伺服器應該遵循其地區設定，但我也認為如果您已有一個不開放轉譯的選項時，何不選擇這個選項。」  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   
      下列取自論壇文章的 MDX 查詢說明如何使用 [格式]，來傳回特定格式的日期，而不論基礎地區設定為何。  
   
-     請參閱 [SSAS 2012 generates invalid dates (forum post on Network Steve](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) (SSAS 2012 產生無效的日期 (Network Steve 上的論壇文章) 的原始文章。  
+     請參閱 [SSAS 2012 產生無效的日期 (Network Steve 上的論壇文章)](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2) 的原始文章。  
   
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
@@ -160,7 +160,7 @@ ms.locfileid: "70874411"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services Multiidimensional 的全球化案例](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Analysis Services Multiidimensional  的全球化案例](globalization-scenarios-for-analysis-services-multiidimensional.md)  
  [撰寫國際通用的 Transact-SQL 陳述式](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

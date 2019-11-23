@@ -102,7 +102,7 @@ ms.locfileid: "72798078"
 > [!NOTE]  
 >  如果連接已加密，將會使用加密的連接。 如果連接未加密， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會使用加密的連接重新連接。  
   
- 若要繼續，請按一下 [連線...]。  
+ 若要繼續，請按一下 **[連接...]** 。  
   
 ##  <a name="Proxy_configuration"></a> 公用程式收集組帳戶  
  指定要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 Windows 網域帳戶。 此帳戶會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶來使用。 另外，您也可以使用現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶。 若要通過驗證需求，請使用下列方針來指定帳戶。  
@@ -169,7 +169,7 @@ ms.locfileid: "72798078"
 >   
 >  執行 Transact-SQL 陳述式或批次時發生例外狀況。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  其他資訊: 無法獲得關於 Windows NT 群組/使用者 '\<域名稱\帳戶名稱>' 的資訊，錯誤碼 0x5。 (Microsoft SQL Server，錯誤：15404)  
+>  其他資訊: 無法獲得關於 Windows NT 群組/使用者 '\<域名稱\帳戶名稱>' 的資訊，錯誤碼 0x5。 (Microsoft SQL Server 錯誤：15404)  
 >   
 >  如需對這個失敗進行疑難排解的詳細資訊，請參閱 [疑難排解 SQL Server 公用程式](../../database-engine/troubleshoot-the-sql-server-utility.md)。  
   
@@ -178,9 +178,9 @@ ms.locfileid: "72798078"
   
  完成 [註冊執行個體] 精靈之後，請在 SSMS 的**公用程式總管**瀏覽窗格中，按一下 [受管理的執行個體] 節點。 註冊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會顯示在 [公用程式總管內容] 窗格中的清單檢視內。  
   
- 資料收集程序會立即開始，但是最多需要 30 分鐘的時間，資料才會第一次出現在 [公用程式總管] 內容窗格的儀表板和視點內。 資料收集會持續每隔 15 分鐘進行一次。 若要重新整理資料，請以滑鼠右鍵按一下公用程式總管瀏覽窗格中的 [受管理的執行個體] 節點，然後選取 [重新整理]，或是以滑鼠右鍵按一下清單檢視中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 [重新整理]。  
+ 資料收集程序會立即開始，但是最多需要 30 分鐘的時間，資料才會第一次出現在 [公用程式總管] 內容窗格的儀表板和視點內。 資料收集會持續每隔 15 分鐘進行一次。 若要重新整理資料，請以滑鼠右鍵按一下公用程式總管瀏覽窗格中的 [受管理的執行個體] 節點，然後選取 [重新整理]，或是以滑鼠右鍵按一下清單檢視中的  **執行個體名稱，然後選取 [重新整理]。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- 若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除受管理的執行個體，請在**公用程式總管**瀏覽窗格中選取 [受管理的執行個體] 來填入受管理執行個體的清單檢視，然後以滑鼠右鍵按一下 [公用程式總管內容] 清單檢視中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，再選取 [將執行個體設為未受管理]。  
+ 若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除受管理的執行個體，請在**公用程式總管**瀏覽窗格中選取 [受管理的執行個體] 來填入受管理執行個體的清單檢視，然後以滑鼠右鍵按一下 [公用程式總管內容][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**清單檢視中的** 執行個體名稱，再選取 [將執行個體設為未受管理]。  
   
 ##  <a name="PowerShell_enroll"></a> 使用 PowerShell 註冊 SQL Server 的執行個體  
  使用下列範例，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體註冊到現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式：  
@@ -194,7 +194,7 @@ $InstanceConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.Sq
 $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)   
  [監視 SQL Server 公用程式中的 SQL Server 執行個體](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [疑難排解 SQL Server 公用程式](../../database-engine/troubleshoot-the-sql-server-utility.md)  

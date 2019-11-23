@@ -76,7 +76,7 @@ RECONFIGURE
   
  **Config_value**和**run_value**的值不會自動相等。 使用**sp_configure**更新設定之後，系統管理員必須使用 [重新設定] 或 [以覆寫重新設定] 來更新執行中的設定值。 如需詳細資訊，請參閱＜備註＞一節。  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|組態選項的名稱。|  
 |**minimum**|**int**|組態選項的最小值。|  
@@ -84,7 +84,7 @@ RECONFIGURE
 |**config_value**|**int**|設定選項使用**sp_configure**的值（在**sys.databases**中為值）。 如需這些選項的詳細資訊，請參閱[伺服器&#40;設定&#41;選項 SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.databases &#40; &#41;transact-sql](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
 |**run_value**|**int**|目前正在執行設定選項的值（sys.databases 中的值**value_in_use**）。<br /><br /> 如需詳細資訊，請參閱[Sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  使用**sp_configure**來顯示或變更伺服器層級的設定。 若要變更資料庫層級的設定，請使用 ALTER DATABASE。 若要變更只影響目前使用者工作階段的設定，請使用 SET 陳述式。  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -138,7 +138,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>B. 變更組態選項  
+### <a name="b-changing-a-configuration-option"></a>b. 變更組態選項  
  下列範例將系統 `recovery interval` 設為 `3` 分鐘。  
   
 ```sql  

@@ -19,7 +19,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797684"
 ---
-# <a name="create-an-availability-group-transact-sql"></a>建立可用性群組 (Transact-SQL)
+# <a name="create-an-availability-group-transact-sql"></a>Create an Availability Group (Transact-SQL)
   此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立和設定已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」* (Availability Replica))。  
   
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.locfileid: "72797684"
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- 需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
+ 需要 **sysadmin** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ###  <a name="SummaryTsqlStatements"></a> 工作和對應 Transact-SQL 陳述式的摘要  
  下表列出與建立和設定可用性群組有關的基本工作，並指出哪些 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式要用於這些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
@@ -62,11 +62,11 @@ ms.locfileid: "72797684"
   
 2.  使用 [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式建立可用性群組。  
   
-3.  將新的次要複本加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell，將次要複本加入現有的 AlwaysOn 可用性群組中。  
+3.  將新的次要複本加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
   
 4.  如果是可用性群組中的每個資料庫，請使用 RESTORE WITH NORECOVERY 還原主要資料庫的最近備份來建立次要資料庫。 如需詳細資訊，請參閱 [範例︰設定使用 Windows 驗證的可用性群組 (TRANSACT-SQL)](create-an-availability-group-transact-sql.md)，從還原資料庫備份的步驟開始。  
   
-5.  將每一個新的次要資料庫加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell，將次要複本加入現有的 AlwaysOn 可用性群組中。  
+5.  將每一個新的次要資料庫加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
   
 ##  <a name="ExampleConfigAGWinAuth"></a> 範例：設定使用 Windows 驗證的可用性群組  
  這個範例會建立範例 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 組態程序，此程序會使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 來設定使用 Windows 驗證的資料庫鏡像端點，並建立及設定可用性群組以及其次要資料庫。  
@@ -285,7 +285,7 @@ ms.locfileid: "72797684"
 ###  <a name="CompleteCodeExample"></a> 範例組態程序的完整程式碼範例  
  下列範例會合併範例組態程序之所有步驟的程式碼範例。 下表摘要說明此程式碼範例中所使用的預留位置值。 如需有關此程式碼範例中步驟的詳細資訊，請參閱本主題稍早的 [使用範例組態程序的必要條件](#PrerequisitesForExample) 和 [範例組態程序](#SampleProcedure)。  
   
-|預留位置|[描述]|  
+|預留位置|描述|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|虛構的備份共用。|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|MyDb1 的備份檔案。|  
@@ -448,7 +448,7 @@ GO
   
 -   [設定彈性容錯移轉原則以控制自動容錯移轉的條件（AlwaysOn 可用性群組）](configure-flexible-automatic-failover-policy.md)  
   
--   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [設定可用性複本的備份 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -488,7 +488,7 @@ GO
   
 -   [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **針對 AlwaysOn 可用性群組設定進行疑難排解**  
   
@@ -520,8 +520,8 @@ GO
   
      [SQL Server 客戶諮詢團隊白皮書](http://sqlcat.com/)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
- [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性群組&#40;的必要條件、限制和建議 SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

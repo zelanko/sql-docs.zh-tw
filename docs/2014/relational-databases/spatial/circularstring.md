@@ -21,7 +21,7 @@ ms.locfileid: "72688711"
   `CircularString` 是零個或多個連續圓弧線段的集合。 圓弧線段是指由二維平面中三個點所定義的弧形線段。第一個點不得與第三個點相同。 如果圓弧線段的三個點都是共線，此圓弧線段就會被視為直線線段。  
   
 > [!IMPORTANT]  
->  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引進的新空間功能（包括 `CircularString` 子類型）的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進的新空間功能（包括 `CircularString` 子類型）的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ## <a name="circularstring-instances"></a>CircularString 執行個體  
  下圖顯示有效的 `CircularString` 執行個體：  
@@ -157,7 +157,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [空間資料類型概觀](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
  [MakeValid &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   
@@ -171,7 +171,7 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
  [STNumPoints &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)   
  [STIsRing &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)   
  [STIsClosed &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
- [STPointOnSurface &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+ [STPointOnSurface &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [LineString](linestring.md)  
   
   

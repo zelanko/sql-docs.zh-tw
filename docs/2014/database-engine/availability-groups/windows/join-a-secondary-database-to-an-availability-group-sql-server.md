@@ -32,11 +32,11 @@ ms.locfileid: "72797669"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來準備次要資料庫：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "72797669"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載次要複本的伺服器執行個體。  
   
--   次要複本必須已經加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell，將次要複本加入現有的 AlwaysOn 可用性群組中。  
+-   次要複本必須已經加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。  
   
--   最近必須已經準備次要資料庫。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中建立和設定 AlwaysOn 可用性群組。  
+-   最近必須已經準備次要資料庫。 如需詳細資訊，請參閱[針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
 ###  <a name="Security"></a> Security  
   
@@ -84,14 +84,14 @@ ms.locfileid: "72797669"
   
      *database_name* 是要聯結的資料庫名稱，而 *group_name* 是可用性群組的名稱。  
   
-     下列範例會將次要資料庫 `Db1`聯結至 `MyAG` 可用性群組的本機次要複本。  
+     下列範例會將次要資料庫 `Db1` 聯結至 `MyAG` 可用性群組的本機次要複本。  
   
     ```sql
     ALTER DATABASE Db1 SET HADR AVAILABILITY GROUP = MyAG;  
     ```  
   
     > [!NOTE]  
-    >  若要查看內容中使用的這個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，請參閱 [建立可用性群組和 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)。  
+    >  若要查看內容中使用的這個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，請參閱[建立可用性群組和 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要將次要資料庫聯結至可用性群組**  
@@ -107,7 +107,7 @@ ms.locfileid: "72797669"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -119,7 +119,7 @@ ms.locfileid: "72797669"
   
 -   [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [&#40;SQL Server&#41;刪除 AlwaysOn 可用性群組設定的疑難排解](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

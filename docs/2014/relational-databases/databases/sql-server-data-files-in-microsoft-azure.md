@@ -78,7 +78,7 @@ ON
 > [!IMPORTANT]
 > 如果有任何作用中參考指向容器中的資料檔案，則嘗試刪除相對應的 SQL Server 認證會失敗。  
   
-### <a name="security"></a>安全性  
+### <a name="security"></a>Security  
  以下是將 SQL Server 資料檔案儲存在 Azure 儲存體中的安全性考量和需求。  
   
 -   建立 Azure Blob 儲存體服務的容器時，建議您將存取設為私用。 當您將存取設為私用時，只有 Azure 帳戶擁有者才能讀取容器和 Blob 資料。  
@@ -175,5 +175,5 @@ ON
   
     4.  將資料庫設為上線。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [教學課程： Azure 儲存體服務中 SQL Server 資料檔案](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

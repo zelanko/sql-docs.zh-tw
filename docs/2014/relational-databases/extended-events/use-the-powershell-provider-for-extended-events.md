@@ -33,18 +33,18 @@ ms.locfileid: "72782911"
     > [!NOTE]  
     >  您可以從 [擴充事件] 底下的任何節點啟動 PowerShell。 例如，您可以用滑鼠右鍵按一下 [工作階段]，然後按一下 [啟動 PowerShell]。 這樣就會在下一個層級 (Sessions 資料夾) 啟動 PowerShell。  
   
- 您可以瀏覽 XEvent 資料夾樹狀目錄來檢視現有的擴充事件工作階段及其相關聯的事件、目標和述詞。 例如，從 PS SQLSERVER： \ XEvent \\*ServerName* \\*InstanceName*> 路徑，如果您輸入 `cd sessions`，請按 enter，輸入 `dir`，然後按 enter 鍵，即可看到儲存在該實例上的會話清單。 您也可以檢視工作階段是否正在執行 (如果有，執行的時間長度)，以及工作階段是否設定為在執行個體啟動時啟動。  
+ 您可以瀏覽 XEvent 資料夾樹狀目錄來檢視現有的擴充事件工作階段及其相關聯的事件、目標和述詞。 例如，從 PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*> 路徑，如果您輸入 `cd sessions`，請按 enter，輸入 `dir`，然後按 enter 鍵，即可看到儲存在該實例上的會話清單。 您也可以檢視工作階段是否正在執行 (如果有，執行的時間長度)，以及工作階段是否設定為在執行個體啟動時啟動。  
   
- 若要檢視與工作階段相關聯的事件、其述詞和目標，您可以將目錄變更為工作階段名稱，然後檢視 events 或 targets 資料夾。 例如，若要查看與預設系統健全狀況會話相關聯的事件及其述詞，請從 PS SQLSERVER： \ XEvent \\*ServerName* \\*InstanceName*\Sessions > 路徑，輸入 `cd system_health\events,` 按 enter 鍵，然後輸入 `dir`，然後按 ENTER。  
+ 若要檢視與工作階段相關聯的事件、其述詞和目標，您可以將目錄變更為工作階段名稱，然後檢視 events 或 targets 資料夾。 例如，若要查看與預設系統健全狀況會話相關聯的事件及其述詞，請從 PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*\Sessions > 路徑，輸入 `cd system_health\events,` 按 enter，輸入 `dir`，然後按 enter 鍵。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者是一項功能強大的工具，可讓您用來建立、改變和管理擴充事件工作階段。 下列章節將提供使用 PowerShell 指令碼搭配擴充事件的一些基本範例。  
   
 ## <a name="examples"></a>範例  
  在下列範例中，請注意：  
   
--   腳本必須從 PS SQLSERVER： \\ > 提示字元中執行（可在命令提示字元中輸入 `sqlps`）。  
+-   腳本必須從 PS SQLSERVER：\\> 提示字元中執行（可在命令提示字元中輸入 `sqlps`）。  
   
--   這些指令碼會使用預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+-   這些指令碼會使用預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
 -   您必須使用 .ps1 副檔名來儲存這些指令碼。  
   
@@ -106,10 +106,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  若要建立、更改或卸除擴充事件工作階段，您必須擁有 ALTER ANY EVENT SESSION 權限。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
  [使用 system_health 工作階段](use-the-ssms-xe-profiler.md)   
  [擴充事件工具](extended-events-tools.md)  

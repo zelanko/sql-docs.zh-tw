@@ -47,7 +47,7 @@ sp_help_fulltext_system_components
   
 `[ @component_type = ] component_type` 指定元件的類型。 *component_type*可以是下列其中一項：  
   
--   **wordbreaker**  
+-   **系統**  
   
 -   **filter**  
   
@@ -65,18 +65,18 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>結果集  
  傳回系統元件的下列結果集。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|這是元件的類型， 它有下列幾種：<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|元件的名稱。|  
-|**clsid**|**uniqueidentifier**|元件的類別識別碼。|  
+|**clsid**|**ssNoversion**|元件的類別識別碼。|  
 |**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> Null = 呼叫端不是**serveradmin**固定伺服器角色的成員。|  
 |**version**|**nvarchar(30)**|元件的版本。|  
-|**manufacturer**|**sysname**|元件的製造商名稱。|  
+|**負責**|**sysname**|元件的製造商名稱。|  
   
  只有在有一或多個使用*component_type*的全文檢索目錄存在時，才會傳回下列結果集。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|資料庫的識別碼。|  
 |**ftcatid**|**int**|全文檢索目錄的識別碼。|  
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Permissions  
  需要**public**角色中的成員資格;不過，使用者只能看到他們具有 VIEW DEFINITION 許可權之全文檢索目錄的相關資訊。 只有**serveradmin**固定伺服器角色的成員，才能夠看到**fullpath**資料行中的值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當準備升級時，這個方法尤其重要。 請在特定資料庫內執行這個預存程序，並利用輸出來判斷升級是否會影響到特定的目錄。  
   
 ## <a name="examples"></a>範例  
@@ -97,7 +97,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>B. 列出斷詞工具  
+### <a name="b-listing-word-breakers"></a>b. 列出斷詞工具  
  下列範例會列出服務執行個體上所註冊的所有斷詞工具。  
   
 ```  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. 判斷特定的斷詞工具是否已註冊  
- 下列範例會列出土耳其文 (LCID = 1055) 的斷詞工具 (如果它已經安裝在系統上，並在服務執行個體上註冊)。 這個範例會指定參數名稱、 **@no__t 1component_type**和 **@no__t 3param**。  
+ 下列範例會列出土耳其文 (LCID = 1055) 的斷詞工具 (如果它已經安裝在系統上，並在服務執行個體上註冊)。 這個範例會指定參數名稱、 **\@component_type**和 **\@參數**。  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -126,7 +126,7 @@ GO
  根據預設，不會安裝這個篩選，所以結果集是空的。  
   
 ### <a name="e-listing-a-specific-dll-file"></a>E. 列出特定的 .dll 檔案  
- `nlhtml.dll`下列範例會列出特定的 .dll 檔 ，預設情況下會安裝這個檔案。  
+ `nlhtml.dll`下列範例會列出特定的 .dll 檔 {2}，預設情況下會安裝這個檔案。{3}  
   
 ```  
 EXEC sp_help_fulltext_system_components 'fullpath',   
@@ -136,7 +136,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [查看或變更已註冊的篩選與斷詞](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)工具    
+ [查看或變更已註冊的篩選與斷詞](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)工具   
  [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [全文檢索搜尋和語義搜尋預存程式&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  

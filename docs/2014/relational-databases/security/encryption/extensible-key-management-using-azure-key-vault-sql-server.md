@@ -43,9 +43,9 @@ ms.locfileid: "72798061"
 -   [範例 C：使用 Key Vault 中的非對稱金鑰進行資料行層級加密](#ExampleC)  
   
 ##  <a name="Uses"></a>EKM 的使用  
- 組織可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密來保護機密資料。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密包括[透明資料加密&#40;TDE&#41;](transparent-data-encryption.md)、資料[行層級加密](/sql/t-sql/functions/cryptographic-functions-transact-sql)（CLE）和[備份加密](../../backup-restore/backup-encryption.md)。 在上述所有情況下，資料會使用對稱資料加密金鑰來加密。 對稱資料加密金鑰會以儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的金鑰階層加密，受到更進一步的保護。 或者，EKM 提供者架構可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外部密碼編譯提供者中的非對稱金鑰，來保護資料加密金鑰。 使用 EKM 提供者架構會多增加一層安全性，讓組織得以分開管理金鑰和資料。  
+ 組織可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密來保護機密資料。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密包括[透明資料加密&#40;TDE&#41;](transparent-data-encryption.md)、資料[行層級加密](/sql/t-sql/functions/cryptographic-functions-transact-sql)（CLE）和[備份加密](../../backup-restore/backup-encryption.md)。 在上述所有情況下，資料會使用對稱資料加密金鑰來加密。 對稱資料加密金鑰會以儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的金鑰階層加密，受到更進一步的保護。 或者，EKM 提供者架構可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外部密碼編譯提供者中的非對稱金鑰，來保護資料加密金鑰。 使用 EKM 提供者架構會多增加一層安全性，讓組織得以分開管理金鑰和資料。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault 可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 運用可擴充、高效能和高可用性的金鑰保存庫服務，做為加密金鑰保護的 EKM 提供者。 金鑰保存庫服務可以與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 虛擬機器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安裝和內部部署伺服器搭配使用。 金鑰保存庫服務也提供選項，以使用受到緊密控制和監視的硬體安全性模組 (HSM)，對非對稱加密金鑰提供更高等級的保護。 如需金鑰保存庫的詳細資訊，請參閱 [Azure 金鑰保存庫](https://go.microsoft.com/fwlink/?LinkId=521401)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault 可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 運用可擴充、高效能和高可用性的金鑰保存庫服務，做為加密金鑰保護的 EKM 提供者。 金鑰保存庫服務可以與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 虛擬機器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安裝和內部部署伺服器搭配使用。 金鑰保存庫服務也提供選項，以使用受到緊密控制和監視的硬體安全性模組 (HSM)，對非對稱加密金鑰提供更高等級的保護。 如需金鑰保存庫的詳細資訊，請參閱 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)。  
   
  下列影像摘要說明使用金鑰保存庫的 EKM 處理流程。 影像中的程序步驟數字並非用以比對遵循影像的安裝步驟數字。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72798061"
     > [!IMPORTANT]  
     >  使用者必須至少具有這個金鑰保存庫的 **wrapKey** 和 **unwrapKey** 作業。  
   
-     如需授與保存庫權限的詳細資訊，請參閱 **開始使用 Azure Key Vault**[中的授權應用程式使用金鑰或密碼](https://go.microsoft.com/fwlink/?LinkId=521402)一節。  
+     如需授與保存庫權限的詳細資訊，請參閱 **開始使用 Azure Key Vault** 中的 [授權應用程式使用金鑰或密碼](https://go.microsoft.com/fwlink/?LinkId=521402)一節。  
   
      Azure Key Vault 文件的連結  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72798061"
   
     -   [開始使用 Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   PowerShell [Azure 金鑰保存庫 Cmdlet](https://docs.microsoft.com/powershell/module/azurerm.keyvault) 參考  
+    -   PowerShell [Azure Key Vault Cmdlet](https://docs.microsoft.com/powershell/module/azurerm.keyvault) 參考  
   
 ##  <a name="Step2"></a>步驟2：安裝 SQL Server 連接器  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector 是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的系統管理員所下載及安裝。 您可以從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft 下載中心 [下載](https://go.microsoft.com/fwlink/p/?LinkId=521700)Connector。  搜尋 **SQL Server Connector for Microsoft Azure Key Vault**，檢閱詳細資料、系統需求和安裝指示，然後選擇下載連接器並使用 [執行]開始安裝。 檢閱授權，然後接受授權並繼續。  
@@ -341,7 +341,7 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   

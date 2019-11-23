@@ -127,6 +127,6 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
      此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: 使用量資料並未以預期的頻率更新]** 。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定磁碟空間使用量&#40;PowerPivot for SharePoint&#41; ](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [PowerPivot 管理儀表板和使用量資料](power-pivot-management-dashboard-and-usage-data.md)  

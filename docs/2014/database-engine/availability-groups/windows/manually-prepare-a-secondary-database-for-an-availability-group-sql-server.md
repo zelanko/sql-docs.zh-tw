@@ -37,11 +37,11 @@ ms.locfileid: "72797647"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來準備次要資料庫：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72797647"
   
 -   [相關備份和還原工作](#RelatedTasks)  
   
--   **後續操作**：[準備次要資料庫之後](#FollowUp)  
+-   **後續操作** [準備次要資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72797647"
   
 ###  <a name="Recommendations"></a> 建議  
   
--   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的獨立執行個體上，我們建議，給定次要資料庫的檔案路徑 (包括磁碟機代號) 盡可能與對應主要資料庫的路徑完全相同。 這是因為，如果您在建立次要資料庫時移動資料庫檔案，之後在次要資料庫上加入檔案的作業可能會失敗，而且導致次要資料庫暫停。  
+-   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的獨立執行個體上，我們建議，給定次要資料庫的檔案路徑 (包括磁碟機代號) 盡可能與對應主要資料庫的路徑完全相同。 這是因為，如果您在建立次要資料庫時移動資料庫檔案，之後在次要資料庫上加入檔案的作業可能會失敗，而且導致次要資料庫暫停。  
   
 -   準備次要資料庫之前，我們強烈建議您針對可用性群組中的資料庫暫停排程的記錄備份，直到次要複本的初始化完成為止。  
   
@@ -77,14 +77,14 @@ ms.locfileid: "72797647"
  備份資料庫時， [TRUSTWORTHY 資料庫屬性](../../../relational-databases/security/trustworthy-database-property.md) 將設為 OFF。 因此，新還原資料庫上的 TRUSTWORTHY 一律為 OFF。  
   
 ####  <a name="Permissions"></a> Permissions  
- BACKUP DATABASE 和 BACKUP LOG 權限預設為 **系統管理員** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。  
+ BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。  
   
- 當還原的資料庫不存在伺服器執行個體上時，RESTORE 陳述式就需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)備份。  
+ 當還原的資料庫不存在伺服器執行個體上時，RESTORE 陳述式就需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!NOTE]  
->  如果主控主要複本的伺服器執行個體和主控次要複本的每個執行個體之間的備份和還原檔案路徑相同，則您應該可以使用[新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md)、[將複本加入至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或[將資料庫加入至可用性群組精靈](availability-group-add-database-to-group-wizard.md)建立次要資料庫。  
+>  如果主控主要複本的伺服器執行個體和主控次要複本的每個執行個體之間的備份和還原檔案路徑相同，則您應該可以使用 [新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md)、 [將複本加入至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或 [將資料庫加入至可用性群組精靈](availability-group-add-database-to-group-wizard.md)建立次要資料庫。  
   
  **若要準備次要資料庫**  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72797647"
 4.  若要完成次要資料庫的組態設定，您必須將次要資料庫聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 > [!NOTE]  
->  如需如何執行這些備份和還原作業的相關資訊，請參閱本節稍後的[相關備份和還原工作](#RelatedTasks)。  
+>  如需如何執行這些備份和還原作業的相關資訊，請參閱本節稍後的 [相關備份和還原工作](#RelatedTasks)。  
   
 ###  <a name="RelatedTasks"></a> 相關備份和還原工作  
  **若要建立資料庫備份**  
@@ -128,7 +128,7 @@ ms.locfileid: "72797647"
  **若要準備次要資料庫**  
   
 > [!NOTE]  
->  如需這個程序的範例，請參閱本主題前面的 [範例 (Transact-SQL)](#ExampleTsql)。  
+>  如需這個程序的範例，請參閱本主題前面的[範例 (Transact-SQL)](#ExampleTsql)。  
   
 1.  除非您擁有主要資料庫的最新完整備份，否則請連接到裝載主要複本的伺服器執行個體，並且建立完整資料庫備份。 最佳作法是將這個備份和任何後續記錄備份放置於建議的網路共用。  
   
@@ -144,10 +144,10 @@ ms.locfileid: "72797647"
 4.  若要完成次要資料庫的組態設定，您必須將次要資料庫聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 > [!NOTE]  
->  如需如何執行這些備份和還原作業的相關資訊，請參閱本主題稍後的 [相關備份和還原工作](#RelatedTasks)。  
+>  如需如何執行這些備份和還原作業的相關資訊，請參閱本主題稍後的[相關備份和還原工作](#RelatedTasks)。  
   
 ###  <a name="ExampleTsql"></a> Transact-SQL 範例  
- 下列範例會準備次要資料庫。 此範例使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 範例資料庫，依預設採用簡單復原模式。  
+ 下列範例會準備次要資料庫。 這個範例會使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 範例資料庫，依預設採用簡單復原模式。  
   
 1.  若要使用 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫，請將它修改為使用完整復原模式：  
   
@@ -229,7 +229,7 @@ ms.locfileid: "72797647"
   
 7.  如果資料庫聯結次要複本之前執行了任何額外的記錄備份，您也必須使用 RESTORE WITH NORECOVERY，依序將這些記錄備份全部還原至裝載次要複本的伺服器執行個體。  
   
-     例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會從 *E:\MyDB1_log.bak* 還原兩個額外的記錄：  
+     例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會從 *E:\MyDB1_log.bak*還原兩個額外的記錄：  
   
     ```sql
     RESTORE LOG MyDB1   
@@ -254,7 +254,7 @@ ms.locfileid: "72797647"
 4.  若要還原每個主要資料庫的資料庫和記錄備份，請使用 `restore-SqlDatabase` 指令程式，並指定 `NoRecovery` 還原參數。 如果在裝載主要複本的電腦和裝載目標次要複本的電腦之間有檔案路徑差異，也要使用 `RelocateFile` 還原參數。  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
 5.  若要完成次要資料庫的組態設定，您必須將它聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
@@ -277,10 +277,10 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
 ```  
   
 ##  <a name="FollowUp"></a> 後續操作：準備次要資料庫之後  
- 若要完成次要資料庫的組態設定，您必須將新還原的資料庫聯結至可用性群組。 如需詳細資訊，請參閱 [將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
+ 若要完成次要資料庫的組態設定，您必須將新還原的資料庫聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE 引數 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   

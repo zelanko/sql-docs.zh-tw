@@ -61,7 +61,7 @@ ms.locfileid: "72798094"
   
  在這一版中，所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體都必須滿足以下需求：  
   
--   我們建議如果使用不區分大小寫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體來主控 UCP，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體也應該不區分大小寫。  
+-   我們建議如果使用不區分大小寫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體來主控 UCP，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的受管理的執行個體也應該不區分大小寫。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式監視不支援 FILESTREAM 資料。  
   
@@ -143,7 +143,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  如果連接已加密，將會使用加密的連接。 如果連接未加密， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會使用加密的連接重新連接。  
   
- 若要繼續，請按一下 [連線...]。  
+ 若要繼續，請按一下 **[連接...]** 。  
   
 ##  <a name="Agent_configuration"></a> 公用程式收集組帳戶  
  指定要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 Windows 網域帳戶。 此帳戶會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶來使用。 另外，您也可以使用現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶。 若要通過驗證需求，請使用下列方針來指定帳戶。  
@@ -169,7 +169,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |必須停止指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的收集組。|在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立 UCP 時，請停止已經存在的收集組。 如果資料收集器已停用，請啟用它，並停止任何執行中的收集組，然後針對建立 UCP 作業重新執行驗證規則。<br /><br /> 若要啟用資料收集器：<br /><br /> 在 [物件總管] 中，展開 **[管理]** 節點。<br /><br /> 以滑鼠右鍵按一下 **[資料收集]** ，然後按一下 **[啟用資料收集]** 。<br /><br /> 若要停止收集組：<br /><br /> 在 [物件總管] 中，依序展開 [管理] 節點、 **[資料收集]** 和 **[系統資料收集組]** 。<br /><br /> 以滑鼠右鍵按一下您要停止的收集組，然後按一下 [停止資料收集組]。<br /><br /> 訊息方塊會顯示此動作的結果，而此收集組圖示上的紅色圓圈會指示此收集組已經停止。|  
 |必須在指定的執行個體上啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 如果指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，那麼必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為手動啟動。 否則，必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。|啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 如果指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，那麼請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為手動啟動。 否則，請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。|  
 |WMI 必須正確設定。|若要針對 WMI 組態進行疑難排解，請參閱 [疑難排解 SQL Server 公用程式](../../database-engine/troubleshoot-the-sql-server-utility.md)。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶不得為內建帳戶，例如 Network Service。|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶為內建帳戶 (如 Network Service)，請將此帳戶重新指派給具有系統管理員權限的 Windows 網域帳戶。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶不得為內建帳戶，例如 Network Service。|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶為內建帳戶 (如 Network Service)，請將此帳戶重新指派給具有系統管理員 (sysadmin) 權限的 Windows 網域帳戶。|  
 |如果您選取 Proxy 帳戶選項， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶必須是有效的 Windows 網域帳戶。|指定有效的 Windows 網域帳戶。 若要確保此帳戶是有效的，請使用 Windows 網域帳戶登入指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
 |如果您選取服務帳戶選項， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶不得為內建帳戶，例如 Network Service。|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶為內建帳戶 (如 Network Service)，請將此帳戶重新指派給 Windows 網域帳戶。|  
 |如果您選取服務帳戶選項， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶必須是有效的 Windows 網域帳戶。|指定有效的 Windows 網域帳戶。 若要確保此帳戶是有效的，請使用 Windows 網域帳戶登入指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
@@ -214,7 +214,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要顯示儀表板，請從 SSMS 功能表按一下 **[檢視]** ，然後選取 **[公用程式總管內容]** 。 若要重新整理資料，請以滑鼠右鍵按一下 [公用程式總管] 窗格中的公用程式名稱，然後選取 **[重新整理]** 。  
   
- 如需如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中註冊其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的詳細資訊，請參閱[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)。 若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除當做受管理執行個體的 UCP，請在 [公用程式總管] 窗格中選取 [受管理的執行個體] 來填入受管理執行個體的清單檢視，然後以滑鼠右鍵按一下 [公用程式總管內容] 清單檢視中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，再選取 [將執行個體設為未受管理]。  
+ 如需如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中註冊其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的詳細資訊，請參閱[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)。 若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除當做 受管理的執行個體的 UCP，請在 **[公用程式總管]** 窗格中選取 **[受管理的執行個體]** 來填入受管理的執行個體的清單檢視，然後以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [公用程式總管內容] **清單檢視中的** 執行個體名稱，再選取 **[將執行個體設為未受管理]** 。  
   
 ##  <a name="PowerShell_create_UCP"></a> 使用 PowerShell 建立新的公用程式控制點  
  使用下列範例建立新的公用程式控制點：  
@@ -225,6 +225,6 @@ $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.Sq
 $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)   
  [疑難排解 SQL Server 公用程式](../../database-engine/troubleshoot-the-sql-server-utility.md)  

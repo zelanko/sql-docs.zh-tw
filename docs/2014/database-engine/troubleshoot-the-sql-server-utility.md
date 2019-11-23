@@ -25,7 +25,7 @@ ms.locfileid: "72797775"
   
  執行 Transact-SQL 陳述式或批次時發生例外狀況。 (Microsoft.SqlServer.ConnectionInfo)  
   
- 其他資訊: 無法獲得關於 Windows NT 群組/使用者 '\<域名稱\帳戶名稱>' 的資訊，錯誤碼 0x5。 (Microsoft SQL Server，錯誤：15404)  
+ 其他資訊: 無法獲得關於 Windows NT 群組/使用者 '\<域名稱\帳戶名稱>' 的資訊，錯誤碼 0x5。 (Microsoft SQL Server 錯誤：15404)  
   
  這個問題可能會在下列範例狀況中發生：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "72797775"
   
 5.  驗證會成功，但是註冊會失敗。  
   
- 此問題的因應措施是使用上述範例，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的實例，以使用 "sa" 註冊到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式，並從 "Domain_1" 提供 proxy 帳戶。  
+ 此問題的因應措施是使用上述範例，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的實例，以使用 "sa" 註冊到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式，並從「Domain_1」提供 proxy 帳戶。  
   
 ## <a name="failed-wmi-validation"></a>WMI 驗證失敗  
  如果沒有在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上正確設定 WMI，那麼 [建立 UCP] 與 [註冊受管理的執行個體] 作業會顯示警告，但是並不會封鎖作業。 此外，如果您變更 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 帳戶組態而讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 不具備存取必要 WMI 類別的權限，那麼在受影響之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體上進行的資料收集，會無法上傳到 UCP。 如此會造成 UCP 中顯示灰色圖示。  
@@ -114,7 +114,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  在 SSMS 的 **[物件總管]** 中，展開 **[安全性]** 節點，然後展開 **[認證]** 節點。  
   
-    2.  以滑鼠右鍵按一下 [ **UtilityAgentProxyCredential_\<GUID] >** 然後選取 [**屬性**]。  
+    2.  以滑鼠右鍵按一下**UtilityAgentProxyCredential_\<GUID >** 然後選取 **屬性**。  
   
     3.  在 [認證屬性] 對話方塊上，視需要更新**UtilityAgentProxyCredential_\<GUID >** 認證的認證。  
   
@@ -158,12 +158,12 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  以滑鼠右鍵按一下 **[效能監視器使用者]** ，然後選取 **[加入群組]** 。  
   
-    3.  按一下 **[加入]** 。  
+    3.  按一下 **[新增]** 。  
   
     4.  輸入用來執行 SQL Server Agent 服務的帳戶，然後按一下 **[確定]** 。  
   
     5.  如果將使用者加入至這個群組之前，已經使用 UCP 註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請重新啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 服務。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [疑難排解 SQL Server 資源健全情況 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

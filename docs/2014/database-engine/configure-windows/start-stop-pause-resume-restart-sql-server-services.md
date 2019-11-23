@@ -47,8 +47,8 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797950"
 ---
-# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務
-  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、命令提示字元中的**net**命令，啟動、停止、暫停、繼續或重新開機 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務，[!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell。  
+# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service
+  本主題說明如何使用命令提示字元、Configuration Manager 或 PowerShell 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、 **net**命令，啟動、停止、暫停、繼續或重新開機 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。  
   
 -   **開始之前：**  
   
@@ -56,13 +56,13 @@ ms.locfileid: "72797950"
   
     -   [其他資訊](#MoreInformation)  
   
-    -   [Security](#Security)  
+    -   [安全性](#Security)  
   
 -   **使用指示：**  
   
     -   [SQL Server 組態管理員](#SSCMProcedure)  
   
-    -   [Transact-SQL](#SSMSProcedure)  
+    -   [SQL Server Management Studio](#SSMSProcedure)  
   
     -   [命令提示字元視窗中的 net 命令](#CommandPrompt)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "72797950"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件是當做 Windows 服務執行的可執行程式。 當做 Windows 服務執行的程式可以繼續操作，而不會在電腦螢幕上顯示任何活動。  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務**  
- 當做 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的可執行處理序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以是預設執行個體 (每部電腦只限一個執行個體)，或者可以是許多具名 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的其中一個。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來判斷哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體會安裝在電腦上。 預設執行個體 (如果安裝的話) 會列為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** 。 具名執行個體 (如果安裝的話) 會列為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<執行個體名稱>)** 。 依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** 。  
+ 當做 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的可執行處理序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以是預設執行個體 (每部電腦只限一個執行個體)，或者可以是許多具名 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的其中一個。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來判斷哪些 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體會安裝在電腦上。 預設執行個體 (如果安裝的話) 會列為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** 。 具名執行個體 (如果安裝的話) 會列為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<執行個體名稱>)** 。 依預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝為 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** 。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務**  
  一種 Windows 服務，它會執行排程的管理工作 (稱為作業和警示)。 如需詳細資訊，請參閱 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本所支援的功能清單，請參閱[SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -123,7 +123,7 @@ ms.locfileid: "72797950"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>若要啟動、停止、暫停、繼續或重新啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  指向 [開始] 功能表上的 [所有程式]，然後依序指向 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]，再按一下 [SQL Server 組態管理員]。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
 2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
@@ -138,13 +138,13 @@ ms.locfileid: "72797950"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-includessnoversionincludesssnoversion-mdmd-browser-or-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>若要啟動、停止、暫停、繼續或重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 或是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的執行個體  
   
-1.  指向 [開始] 功能表上的 [所有程式]，然後依序指向 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 [組態工具]，再按一下 [SQL Server 組態管理員]。  
+1.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
 2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
 3.  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員] 中，按一下左窗格中的 **[SQL Server 服務]** 。  
   
-4.  在結果窗格中，以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器] 或具名執行個體的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (MSSQLServer)] 或 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (<執行個體名稱>)]，然後按一下 [啟動]、[停止]、[暫停]、[繼續] 或 [重新啟動]。  
+4.  在結果窗格中，以滑鼠右鍵按一下 [ **瀏覽器][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 或具名執行個體的 [ **Agent (MSSQLServer)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 或 [ **Agent (<執行個體名稱>)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，然後按一下 [啟動]、[停止]、[暫停]、[繼續] 或 [重新啟動]。  
   
 5.  按一下 **[確定]** ，即可關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "72797950"
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>若要啟動、停止或重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的執行個體  
   
-1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，並以滑鼠右鍵按一下 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent]，然後按一下 [啟動]、[停止] 或 [重新啟動]。  
+1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，並以滑鼠右鍵按一下 [ **Agent][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** ，然後按一下 [啟動]、[停止] 或 [重新啟動]。  
   
 2.  如果出現 **[使用者帳戶控制]** 對話方塊，請按一下 **[是]** 。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "72797950"
   
 ###  <a name="dbNamed"></a> 若要啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 \<執行個體名稱>。  
+-   從命令提示字元，輸入下列其中一個命令。 以您要管理之執行個體的名稱取代 *執行個體名稱>\<* 。  
   
      **net start "SQL Server (** *instancename* **)"**  
   
@@ -245,10 +245,10 @@ ms.locfileid: "72797950"
   
     -   若要暫停服務，請以 **net pause** 取代 **net start**。  
   
-    -   若要停止服務，請以 **net stop** 取代 **net start**。  
+    -   若要停止服務，請以 **net start** 取代 **net stop**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 可以使用 `SHUTDOWN` 陳述式來停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ 可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 陳述式來停止 `SHUTDOWN`。  
   
 #### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>若要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 停止 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
@@ -258,7 +258,7 @@ ms.locfileid: "72797950"
     SHUTDOWN;   
     ```  
   
--   若要立即停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，請執行下列陳述式。  
+-   若要立即停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，請執行下列陳述式。  
   
     ```sql  
     SHUTDOWN WITH NOWAIT;   
@@ -337,6 +337,6 @@ ms.locfileid: "72797950"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以最低組態啟動 SQL Server](start-sql-server-with-minimal-configuration.md)   
  [SQL Server 2014 各版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

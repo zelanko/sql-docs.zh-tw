@@ -66,7 +66,7 @@ ms.locfileid: "72811597"
 ### <a name="unbalanced-hierarchies"></a>不對稱的階層  
  在不對稱的階層中，階層的分支下降至不同的層級。 父子式階層即為不對稱的階層。 例如，[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 範例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的組織維度會包含每位員工的成員。 CEO 是階層中的頂部成員，而部門經理和執行秘書則是直接在 CEO 底下。 部門經理有從屬成員，但是執行秘書沒有。  
   
- 一般使用者可能根本無法區分不對稱的和不完全的階層。 然而，您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用不同的技術和屬性，以支援這兩種類型的階層。 如需詳細[資訊，請參閱不](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)完全階層和[父子式階層中的屬性](../multidimensional-models/parent-child-dimension-attributes.md)。  
+ 一般使用者可能根本無法區分不對稱的和不完全的階層。 然而，您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用不同的技術和屬性，以支援這兩種類型的階層。 如需詳細資訊，請參閱[不完全階層](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)和[父子式階層中的屬性](../multidimensional-models/parent-child-dimension-attributes.md)。  
   
 ### <a name="ragged-hierarchies"></a>不完全階層  
  在不完全的階層中，至少一個成員的邏輯父成員不在成員的上一層級內。 這樣將會使階層的分支下降至不同的層級。 例如，在定義了大陸、國家 (地區) 和縣 (市) 層級的地理位置維度中，依照該順序，Europe 成員會在階層的最上層顯示、France 成員在中間層顯示，而 Paris 成員則在最下層顯示。 France 比 Europe 更為具體，而 Paris 又比 France 更為具體。 對於這個一般階層，會進行下列變更：  
@@ -90,9 +90,9 @@ ms.locfileid: "72811597"
   
  各階層分支中的父子式階層深度會不同。 換句話說，會將父子式階層視為不對稱的階層。  
   
- 使用者自訂階層中的層級數目會決定使用者可看到的層級數目，而父子式階層則與使用者自訂階層不同，是由屬性階層的單一層級所定義，而這個單一層級中的值會產生使用者可看到的多個層級。 顯示之層級的數目，會視儲存成員索引鍵和父索引鍵之維度資料表資料行的內容而定。 維度資料表中的資料變更時，層級的數目可能會變更。 如需詳細資訊，[請參閱父子式階層](../multidimensional-models/parent-child-dimension.md)和[父子式階層中的屬性](../multidimensional-models/parent-child-dimension-attributes.md)。  
+ 使用者自訂階層中的層級數目會決定使用者可看到的層級數目，而父子式階層則與使用者自訂階層不同，是由屬性階層的單一層級所定義，而這個單一層級中的值會產生使用者可看到的多個層級。 顯示之層級的數目，會視儲存成員索引鍵和父索引鍵之維度資料表資料行的內容而定。 維度資料表中的資料變更時，層級的數目可能會變更。 如需詳細資訊，請參閱[父子式階層](../multidimensional-models/parent-child-dimension.md)和[父子式階層中的屬性](../multidimensional-models/parent-child-dimension-attributes.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立使用者定義階層](../multidimensional-models/user-defined-hierarchies-create.md)   
  [使用者階層屬性](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [維度屬性 (Attribute) 屬性 (Property) 參考](../multidimensional-models/dimension-attribute-properties-reference.md)  

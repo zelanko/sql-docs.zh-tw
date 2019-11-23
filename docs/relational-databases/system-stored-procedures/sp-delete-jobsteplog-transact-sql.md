@@ -45,28 +45,28 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="arguments"></a>引數  
 `[ @job_id = ] 'job_id'` 包含要移除之作業步驟記錄之作業的作業識別碼。 *job_id*是**int**，預設值是 Null。  
   
-`[ @job_name = ] 'job_name'`，這是作業的名稱。 *job_name*是**sysname**，預設值是 Null。  
+`[ @job_name = ] 'job_name'` 作業的名稱。 *job_name*是**sysname**，預設值是 Null。  
   
 > **注意：** 必須指定*job_id*或*job_name* ，但不能同時指定兩者。  
   
-`[ @step_id = ] step_id` 作業中要刪除作業步驟記錄之步驟的識別碼。 如果未包含，則會刪除作業中的所有作業步驟記錄檔，除非指定了 **@no__t 1older_than**或 **@no__t 3larger_than** 。 *step_id*是**int**，預設值是 Null。  
+`[ @step_id = ] step_id` 作業中要刪除作業步驟記錄之步驟的識別碼。 如果未包含，則會刪除作業中的所有作業步驟記錄，除非指定 **\@older_than**或 **\@larger_than** 。 *step_id*是**int**，預設值是 Null。  
   
 `[ @step_name = ] 'step_name'` 作業中要刪除作業步驟記錄之步驟的名稱。 *step_name*是**sysname**，預設值是 Null。  
   
 > **注意：** 可以指定*step_id*或*step_name* ，但不能同時指定兩者。  
   
-`[ @older_than = ] 'date'` 您要保留的最舊作業步驟記錄的日期和時間。 在這個日期和時間之前的所有作業步驟記錄都會被移除。 *date*是**datetime**，預設值是 Null。 可以同時指定 **@no__t 1older_than**和 **@no__t 3larger_than** 。  
+`[ @older_than = ] 'date'` 您想要保留的最舊作業步驟記錄的日期和時間。 在這個日期和時間之前的所有作業步驟記錄都會被移除。 *date*是**datetime**，預設值是 Null。 您可以同時指定 **\@older_than**和 **\@larger_than** 。  
   
-`[ @larger_than = ] 'size_in_bytes'`，這是您想要保留的最大作業步驟記錄檔的大小（以位元組為單位）。 所有超出這個大小的作業步驟記錄都會被移除。 可以同時指定 **@no__t 1larger_than**和 **@no__t 3older_than** 。  
+`[ @larger_than = ] 'size_in_bytes'` 您想要保留的最大作業步驟記錄大小（以位元組為單位）。 所有超出這個大小的作業步驟記錄都會被移除。 您可以同時指定 **\@larger_than**和 **\@older_than** 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- None  
+ 無  
   
-## <a name="remarks"></a>備註  
- **sp_delete_jobsteplog**在**msdb**資料庫中。  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_jobsteplog**是在**msdb**資料庫中。  
   
  如果未指定 **\@job_id**或 **\@job_name**以外的任何引數，則會刪除指定之作業的所有作業步驟記錄。  
   
@@ -97,7 +97,7 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>B. 移除特定作業步驟的作業步驟記錄  
+### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>b. 移除特定作業步驟的作業步驟記錄  
  下列範例會移除 `Weekly Sales Data Backup` 作業中第 2 步驟的作業步驟記錄。  
   
 ```  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [sp_help_jobsteplog &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
  [SQL Server Agent 預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

@@ -98,7 +98,7 @@ ms.locfileid: "72797695"
 ##  <a name="step2"></a>2. 設定 AlwaysOn 可用性群組  
  在預期的主要複本上，建立具有已發行 (或即將發行) 資料庫做為成員資料庫的可用性群組。 如果使用可用性群組精靈，您就可以允許精靈一開始同步處理次要複本資料庫，也可以使用備份和還原來手動執行初始化。  
   
- 針對可用性群組建立複寫代理程式將用來連接到目前主要複本的 DNS 接聽程式。 指定的接聽程式名稱將當做原始發行者/已發行資料庫配對的重新導向目標使用。 例如，如果您要使用 DDL 來設定可用性群組，可以使用下列程式碼範例，針對名為 `MyAG` 的現有可用性群組指定可用性群組接聽程式：  
+ 針對可用性群組建立複寫代理程式將用來連接到目前主要複本的 DNS 接聽程式。 指定的接聽程式名稱將當做原始發行者/已發行資料庫配對的重新導向目標使用。 例如，如果您要使用 DDL 來設定可用性群組，可以使用下列程式碼範例，針對名為 `MyAG`的現有可用性群組指定可用性群組接聽程式：  
   
 ```sql
 ALTER AVAILABILITY GROUP 'MyAG'   
@@ -179,7 +179,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  訊息 21899，層級 11，狀態 1，程序 `sp_hadr_verify_subscribers_at_publisher`，行 109  
 >   
->  在重新導向的發行者 'MyReplicaHostName' 上用以判斷原始發行者 'MyOriginalPublisher' 的訂閱者是否有 sysserver 項目之查詢失敗，發生錯誤 '976'，錯誤訊息為「錯誤 976，層級 14，狀態 1，訊息: 目標資料庫 'MyPublishedDB' 正參與可用性群組，目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜`ALTER AVAILABILITY GROUP` 陳述式＞」。  
+>  在重新導向的發行者 'MyReplicaHostName' 上用以判斷原始發行者 'MyOriginalPublisher' 的訂閱者是否有 sysserver 項目之查詢失敗，發生錯誤 '976'，錯誤訊息為「錯誤 976，層級 14，狀態 1，訊息: 目標資料庫 'MyPublishedDB' 正參與可用性群組，目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱《`ALTER AVAILABILITY GROUP` 線上叢書》中的＜[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式＞」。  
 >   
 >  複本主機 'MyReplicaHostName' 發生了一個或多個發行者驗證錯誤。  
   
@@ -207,7 +207,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [建立可用性群組 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
   
--   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [建立 AlwaysOn 可用性群組&#40;SQL Server PowerShell 的資料庫鏡像端點&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
@@ -219,8 +219,8 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ &#40;AlwaysOn 可用性群組 SQL Server&#41;的必要條件、限制和建議](prereqs-restrictions-recommendations-always-on-availability.md)   
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [AlwaysOn 可用性群組：互通性（SQL Server）](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)  

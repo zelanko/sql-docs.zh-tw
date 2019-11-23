@@ -21,10 +21,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798067"
 ---
-# <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database 的透明資料加密
+# <a name="transparent-data-encryption-with-azure-sql-database"></a>Transparent Data Encryption with Azure SQL Database
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 透明資料加密 (預覽版) 可即時執行資料庫、相關聯備份及交易檔的即時加密與解密，完全無須變更應用程式，就能協助防範惡意活動所帶來的威脅。  
   
- TDE 會使用稱為資料庫加密金鑰的對稱金鑰，將整個資料庫的儲存體加密。 在 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 中，資料庫加密金鑰由內建的伺服器憑證保護。 每部 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 伺服器各有其專用的內建伺服器憑證。 若資料庫具有 GeoDR 關聯性，則由每部伺服器上不同的金鑰保護。 如有 2 個資料庫同時連線到同一部伺服器，則這兩個資料庫會共用同一個內建憑證。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 會每隔 90 天自動輪換這些憑證。 如需 TDE 的一般說明，請參閱 [透明資料加密 &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)。  
+ TDE 會使用稱為資料庫加密金鑰的對稱金鑰，將整個資料庫的儲存體加密。 在 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 中，資料庫加密金鑰由內建的伺服器憑證保護。 每部 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 伺服器各有其專用的內建伺服器憑證。 若資料庫具有 GeoDR 關聯性，則由每部伺服器上不同的金鑰保護。 如有 2 個資料庫同時連線到同一部伺服器，則這兩個資料庫會共用同一個內建憑證。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 會每隔 90 天自動輪換這些憑證。 如需 TDE 的一般說明，請參閱[透明資料加密 &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 不支援 Azure 金鑰保存庫與 TDE 整合。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用金鑰保存庫中的非對稱金鑰。 如需詳細資訊，請參閱＜ [Example A: Transparent Data Encryption by Using an Asymmetric Key from the Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)＞。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "72798067"
   
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")  
   
-     您也可以使用查詢工具 (例如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] )，以具有 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] VIEW DATABASE STATE **權限的資料庫使用者身分，連接到** 監視加密進度。 查詢[_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的 [`encryption_state`] 資料行。  
+     您也可以使用查詢工具 (例如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] )，以具有 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] VIEW DATABASE STATE **權限的資料庫使用者身分，連接到** 監視加密進度。 查詢[sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的 `encryption_state` 資料行。  
   
 ##  <a name="Encrypt"></a> 使用 TRANSACT-SQL 啟用 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 的 TDE  
  下列步驟中假設您已經註冊預覽版。  
@@ -90,7 +90,7 @@ ms.locfileid: "72798067"
     GO  
     ```  
   
-3.  若要監視 [!INCLUDE[ssSDS](../includes/sssds-md.md)]上的加密進度，具有**VIEW DATABASE STATE**許可權的資料庫使用者可以查詢[sys.databases _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的 `encryption_state` 資料行。  
+3.  若要監視 [!INCLUDE[ssSDS](../includes/sssds-md.md)]上的加密進度，具有**VIEW DATABASE STATE**許可權的資料庫使用者可以查詢[sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) VIEW 的 `encryption_state` 資料行。  
   
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>使用 PowerShell 啟用 SQL Database 的 TDE  
  您可以使用 Azure PowerShell，執行下列命令開啟/關閉 TDE。 您必須將您的帳戶連接到 PS 視窗，才能執行此命令。 下列步驟中假設您已經註冊預覽版。 如需 PowerShell 的其他相關資訊，請參閱 [如何安裝及設定 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
@@ -128,7 +128,7 @@ ms.locfileid: "72798067"
   
 6.  在 [透明資料加密預覽] 刀鋒視窗中，將 [資料加密] 按鈕移至 [關閉]，然後按一下 [儲存] (位於頁面頂端)，以套用此設定。 [加密狀態] 會顯示透明資料解密的概略進度。  
   
-     您也可以使用查詢工具 (例如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] )，以具有 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] VIEW DATABASE STATE **權限的資料庫使用者身分，連接到** 監視解密進度。 查詢[_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的 [`encryption_state`] 資料行。  
+     您也可以使用查詢工具 (例如 [!INCLUDE[ssSDS](../includes/sssds-md.md)] )，以具有 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] VIEW DATABASE STATE **權限的資料庫使用者身分，連接到** 監視解密進度。 查詢[sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的 `encryption_state` 資料行。  
   
 #### <a name="to-disable-tde-by-using-transact-sql"></a>使用 TRANSACT-SQL 停用 TDE  
   
@@ -142,7 +142,7 @@ ms.locfileid: "72798067"
     GO  
     ```  
   
-3.  若要監視 [!INCLUDE[ssSDS](../includes/sssds-md.md)]上的加密進度，具有**VIEW DATABASE STATE**許可權的資料庫使用者可以查詢[sys.databases _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)視圖的 `encryption_state` 資料行。  
+3.  若要監視 [!INCLUDE[ssSDS](../includes/sssds-md.md)]上的加密進度，具有**VIEW DATABASE STATE**許可權的資料庫使用者可以查詢[sys.databases dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) VIEW 的 `encryption_state` 資料行。  
   
 ##  <a name="Working"></a>在 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 上使用受 TDE 保護的資料庫  
  您無須解密資料庫，即可在 Azure 執行作業。 目標會自動繼承來源資料庫或主要資料庫的 TDE 設定。 這包括下列作業：  
@@ -163,7 +163,7 @@ ms.locfileid: "72798067"
 ## <a name="related-sql-server-topic"></a>相關的 SQL Server 主題  
  [使用 EKM 啟用 TDE](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [透明資料加密 &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   

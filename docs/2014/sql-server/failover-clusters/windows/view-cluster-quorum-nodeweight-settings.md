@@ -23,13 +23,13 @@ ms.locfileid: "72783356"
 # <a name="view-cluster-quorum-nodeweight-settings"></a>檢視叢集仲裁 NodeWeight 設定
   本主題說明如何檢視 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個成員節點的 NodeWeight 設定。 在仲裁投票期間，使用 NodeWeight 設定來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的災害復原和多重子網路案例。  
   
--   **開始之前：**  [必要條件](#Prerequisites)、 [安全性](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **To view quorum NodeWeight settings using:** [Using Transact-SQL](#TsqlProcedure), [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
+-   **使用下列工具檢視仲裁 NodeWeight 設定︰** [使用 TRANSACT-SQL](#TsqlProcedure)、 [使用 Powershell](#PowerShellProcedure)、 [使用 Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 必要條件  
  只有 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 或更新版本才支援這項功能。  
   
 > [!IMPORTANT]  
@@ -51,7 +51,7 @@ ms.locfileid: "72783356"
   
 2.  查詢 [sys].[dm_hadr_cluster_members] 檢視表。  
   
-### <a name="example-transact-sql"></a>範例 &#40;Transact-SQL&#41;  
+### <a name="example-transact-sql"></a>範例 (Transact-SQL)  
  下列範例會查詢系統檢視表，以便針對該執行個體叢集中的所有節點傳回值。  
   
 ```sql  
@@ -101,7 +101,7 @@ $nodes | Format-Table -Property NodeName, State, NodeWeight
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [設定叢集仲裁 NodeWeight 設定](configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)   

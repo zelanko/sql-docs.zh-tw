@@ -38,8 +38,8 @@ ms.locfileid: "72783165"
   
 
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
- **[權限]**  
+##  <a name="bkmk_prereq"></a> 必要條件  
+ **權限**  
   
 -   您必須是伺服器陣列管理員，才能升級 PowerPivot for SharePoint 安裝。 您必須是本機系統管理員，才能執行 SQL Server 安裝程式。  
   
@@ -82,11 +82,11 @@ ms.locfileid: "72783165"
   
          ![兩個 powerpivot 組態工具](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "兩個 powerpivot 組態工具")  
   
-         執行  
+         或  
   
          在 **[開始]** 功能表上，指向 **[所有程式]** ，然後依序按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[PowerPivot for SharePoint 2013 組態工具]** 。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
   
-    2.  啟動時，組態工具會檢查 PowerPivot 伺服器陣列方案以及 PowerPivot Web 應用程式方案的狀態。 如果偵測到這些方案的舊版本，您會看到「偵測**到較新版本的 PowerPivot 方案檔。請選取升級選項以升級您的伺服器**陣列」。 按一下 [確定] 以關閉系統驗證訊息。  
+    2.  啟動時，組態工具會檢查 PowerPivot 伺服器陣列方案以及 PowerPivot Web 應用程式方案的狀態。 如果偵測到這些方案的舊版本，您會看到「偵測**到較新版本的 PowerPivot 方案檔。請選取升級選項以升級您的伺服器**陣列」。 按一下 **[確定]** 以關閉系統驗證訊息。  
   
     3.  按一下 **[升級功能、服務、應用程式和方案]** ，然後按一下 **[確定]** 。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72783165"
   
     5.  或者，在 **[指令碼]** 或 **[輸出]** 索引標籤中檢閱詳細資訊。  
   
-         [輸出] 索引標籤是此工具即將執行之動作的摘要。 此資訊會儲存在記錄檔中： `C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\SPAddinConfiguration\Log`。  
+         [輸出] 索引標籤是此工具即將執行之動作的摘要。 此資訊會儲存在 `C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\SPAddinConfiguration\Log`的記錄檔中：  
   
          [指令碼] 索引標籤會顯示 PowerShell 指令程式，或參考此工具將執行的 PowerShell 指令碼檔案。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "72783165"
   
     6.  或者，在 **[輸出]** 索引標籤或 **[指令碼]** 索引標籤中檢閱詳細資訊。  
   
-         [輸出] 索引標籤是此工具即將執行之動作的摘要。 此資訊會儲存在記錄檔中： `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Log`。  
+         [輸出] 索引標籤是此工具即將執行之動作的摘要。 此資訊會儲存在 `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Log`的記錄檔中：  
   
          [指令碼] 索引標籤會顯示 PowerShell 指令程式，或參考此工具將執行的 PowerShell 指令碼檔案。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "72783165"
         stsadm -o enumdeployments  
         ```  
   
-    2.  檢閱現有部署的下列資訊： **[類型]** 是 [撤銷] 或 [部署]、 **[檔案]** 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+    2.  檢閱現有部署中的下列資訊： **[類型]** 是 [撤銷] 或 [部署]、 **[檔案]** 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
     3.  針對與 PowerPivot 方案相關的部署或若是方案撤銷，複製**JobId**的 GUID 值，然後將它貼入下列命令（使用 Shell 的 [編輯] 功能表上的 [標記]、[複製] 和 [貼上] 命令來複製 GUID）：  
   
@@ -237,7 +237,7 @@ ms.locfileid: "72783165"
 Get-PowerPivotSystemService  
 ```  
   
- 驗證 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 為12.0 版。\<major 組建 >。\<minor 組建 >  
+ 驗證 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 為12.0 版。\<主要組建 >。\<次要組建 >  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>驗證 Analysis Services Windows 服務的版本  
  如果您只有升級 SharePoint 2010 伺服陣列中的部分 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器，則未升級之伺服器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體將會比預期在伺服器陣列中的版本還舊。 您必須將所有的伺服器升級至相同版本，才可以加以使用。 使用下列其中一種方法來驗證每部電腦上的 SQL Server Analysis Services （PowerPivot） Windows 服務版本。  
@@ -250,7 +250,7 @@ Get-PowerPivotSystemService
   
 3.  按一下 **[詳細資料]** 。  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 檔案版本應為12.00。\<major 組建 >。\<minor 組建 >。  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 檔案版本應為12.00。\<主要組建 >。\<次要組建 >。  
   
 5.  驗證這個編號與 PowerPivot 方案和系統服務版本相同。  
   
@@ -289,7 +289,7 @@ Get-PowerPivotSystemService
   
 3.  按一下 **[信任的資料提供者]** 。 您應該會看到 MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0)。 如果您已升級 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝，也會看到舊版的 MSOLAP.4。  
   
-4.  如需詳細資訊，請參閱＜ [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services)＞。  
+4.  如需詳細資訊，請參閱 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services)。  
   
  MSOLAP.4 會描述為 Microsoft OLE DB Provider for OLAP Services 10.0。 這個版本可能是與 Excel Services 一併安裝的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 預設版本，或者是 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本。 SharePoint 安裝的預設版本不支援 PowerPivot 資料存取。 您必須擁有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本或更新的版本，才能連接 SharePoint 上的 PowerPivot 活頁簿。 若要確認您擁有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本，請使用上一節中說明如何檢視檔案屬性以確認版本的指示。  
   
@@ -300,7 +300,7 @@ Get-PowerPivotSystemService
   
 2.  依組件名稱排序，並搜尋 **Microsoft.Analysis Services.Adomd.Client**。  
   
-3.  確認您的版本為12.0。\<build 數目 >。  
+3.  確認您的版本為12.0。\<組建編號 >。  
   
 
 ##  <a name="geminifarm"></a>升級 SharePoint 伺服器陣列中的多部 PowerPivot for SharePoint 伺服器  
@@ -349,6 +349,6 @@ Get-PowerPivotSystemService
   
  如需引導您完成所有安裝後設定工作的逐步指示，請參閱[初始設定&#40;PowerPivot for SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)。  
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 版本所支援的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [PowerPivot for SharePoint 2010 安裝](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

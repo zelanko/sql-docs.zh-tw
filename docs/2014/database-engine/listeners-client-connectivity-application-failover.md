@@ -39,7 +39,7 @@ ms.locfileid: "72797835"
   
  如果一或多個[可讀取的次要複本](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)設定為唯讀路由，主要複本的讀取意圖用戶端連接會重新導向至可讀取的次要複本。 此外，如果主要複本在某個 SQL Server 執行個體上離線，而且在另一個 SQL Server 執行個體上新的主要複本變為上線，可用性群組接聽程式會將用戶端連接到新的主要複本。  
   
- 如需可用性群組接聽程式的詳細資訊，請參閱 [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
+ 如需可用性群組接聽程式的詳細資訊，請參閱[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
  
   
@@ -144,7 +144,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  當使用資料庫鏡像連接字串時，用戶端可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 用戶端提供的連接字串至少必須提供一個伺服器執行個體名稱，也就是 *「初始夥伴名稱」* ，以識別一開始裝載您打算連接之可用性複本的伺服器執行個體。 此連接字串也可以選擇性地提供另一個伺服器執行個體的名稱，也就是 *「容錯移轉夥伴名稱」* (Failover Partner Name)，以識別一開始將次要複本裝載為容錯移轉夥伴名稱的伺服器執行個體。  
   
- 如需資料庫鏡像連接字串的詳細資訊，請參閱 [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
+ 如需資料庫鏡像連接字串的詳細資訊，請參閱[將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 ##  <a name="CCBehaviorOnFailover"></a> 容錯移轉時用戶端連接的行為  
  當可用性群組發生容錯移轉時，對可用性群組的現有持續連線會終止，而且用戶端必須建立新連接，才能繼續使用相同的主要資料庫或唯讀次要資料庫。  在伺服器端發生容錯移轉時，對可用性群組的連接可能會失敗，而強制用戶端連接重試連接，直到主要資料庫恢復上線為止。  
@@ -188,7 +188,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- 如需有關為 SQL Server 手動註冊 SPN 的詳細資訊，請參閱＜ [註冊 Kerberos 連接的服務主體名稱](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)＞。  
+ 如需有關為 SQL Server 手動註冊 SPN 的詳細資訊，請參閱＜ [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)＞。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -212,8 +212,8 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [SQL Server AlwaysOn 小組 Blog：官方 SQL Server AlwaysOn 小組的 Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
  [AlwaysOn 用戶端&#40;連線性 SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  作用中[次要資料庫：可&#40;讀取&#41;的次要複本 AlwaysOn 可用性群組](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

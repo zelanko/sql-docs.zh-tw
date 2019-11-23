@@ -22,7 +22,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798013"
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
-  「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
+  *「只複製備份」* (Copy-only backup) 是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
   
  只複製備份的類型如下所示：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72798013"
  只複製備份會記錄在 **backupset** 資料表的 [is_copy_only](/sql/relational-databases/system-tables/backupset-transact-sql) 資料行中。  
   
 ## <a name="to-create-a-copy-only-backup"></a>若要建立只複製備份  
- 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 建立只複製備份。  
+ 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 建立只複製備份。  
   
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -52,14 +52,14 @@ ms.locfileid: "72798013"
   
 -   用於只複製完整備份：  
   
-     備份資料庫*database_name*到 \<backup_device *>* 。WITH COPY_ONLY 。  
+     備份資料庫*database_name*至 \<backup_device *>* 。使用 COPY_ONLY 。  
   
     > [!NOTE]  
     >  指定 DIFFERENTIAL 選項時，COPY_ONLY 沒有任何作用。  
   
 -   用於只複製記錄備份：  
   
-     BACKUP LOG *database_name* TO *\<* backup_device *>* 。WITH COPY_ONLY 。  
+     備份記錄*database_name*至 *\<* backup_device *>* 。使用 COPY_ONLY 。  
   
 ###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72798013"
   
 -   [SQL Server PowerShell 提供者](../../powershell/sql-server-powershell-provider.md)  
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [復原模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [使用備份與還原複製資料庫](../databases/copy-databases-with-backup-and-restore.md)   

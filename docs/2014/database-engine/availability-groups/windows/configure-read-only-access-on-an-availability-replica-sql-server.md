@@ -40,9 +40,9 @@ ms.locfileid: "72797743"
   
 ####  <a name="Permissions"></a> Permissions  
   
-|工作|[權限]|  
+|工作|Permissions|  
 |----------|-----------------|  
-|若要在建立可用性群組時設定複本|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
+|若要在建立可用性群組時設定複本|需要 **sysadmin** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改可用性複本|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
   
   
@@ -83,7 +83,7 @@ ms.locfileid: "72797743"
  **若要設定可用性複本的存取**  
   
 > [!NOTE]  
->  如需這個程序的範例，請參閱本節稍後的 [範例 &#40;Transact-SQL&#41;](#TsqlExample)。  
+>  如需這個程序的範例，請參閱本節稍後的 [範例 (Transact-SQL)](#TsqlExample)。  
   
 1.  連接到裝載主要複本的伺服器執行個體。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "72797743"
      其中  
   
      READ_WRITE  
-     不允許 Application Intent 連接屬性設為 **ReadOnly** 的連接。  當 Application Intent 屬性設為 **ReadWrite** 或是未設定 Application Intent 連接屬性時，便會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
+     不允許 [應用程式的意圖] 連接屬性設為 [唯讀] 的連接。  當 Application Intent 屬性設為 **ReadWrite** 或是未設定 Application Intent 連接屬性時，便會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
      ALL  
      主要複本的資料庫允許所有連接。 這是預設值。  
@@ -163,7 +163,7 @@ GO
          主要複本的資料庫允許所有連接。 這是預設值。  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
 若要設定及使用 SQL Server PowerShell 提供者，請參閱[SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)。
   
@@ -188,8 +188,8 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
     ||必要條件|連結|  
     |-|------------------|----------|  
-    |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "checkbox")|確定可用性群組擁有接聽程式。|[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "checkbox")|設定可用性群組的唯讀路由。|[設定可用性群組的唯讀路由 &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|確定可用性群組擁有接聽程式。|[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|設定可用性群組的唯讀路由。|[設定可用性群組的唯讀路由 &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **容錯移轉之後可能會影響觸發程序和作業的因素**  
   
@@ -232,7 +232,7 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
 -   [AlwaysOn：可讀取的次要和資料延遲](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [作用中次要資料庫：可&#40;讀取的次要複本 AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
- [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  

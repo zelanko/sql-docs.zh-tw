@@ -37,16 +37,16 @@ ms.locfileid: "72783000"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 必要條件  
  您必須連接到裝載主要複本的伺服器執行個體。  
   
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
   
-|工作|[權限]|  
+|工作|Permissions|  
 |----------|-----------------|  
-|若要在建立可用性群組時設定次要複本的備份|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
+|若要在建立可用性群組時設定次要複本的備份|需要 **sysadmin** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改可用性群組或可用性複本|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -97,7 +97,7 @@ ms.locfileid: "72783000"
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [使用 [將複本加入可用性群組中精靈] &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用將複本加入至可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [使用新增可用性群組對話方塊 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
@@ -148,7 +148,7 @@ ms.locfileid: "72783000"
     > [!IMPORTANT]  
     >  不會強制執行 `AutomatedBackupPreference`。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱本主題稍後的＜ [後續操作：設定次要複本的備份之後](#FollowUp) ＞。  
   
-     例如，下列命令會將可用性群組 `MyAg` 的 `AutomatedBackupPreference` 屬性設定為 `SecondaryOnly`。 這個可用性群組中資料庫的自動備份永遠不會在主要複本上進行，但是會重新導向至備份優先權設定最高的次要複本。  
+     例如，下列命令會將可用性群組 `AutomatedBackupPreference` 的 `MyAg` 屬性設定為 `SecondaryOnly`。 這個可用性群組中資料庫的自動備份永遠不會在主要複本上進行，但是會重新導向至備份優先權設定最高的次要複本。  
   
     ```powershell
     Set-SqlAvailabilityGroup -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `  
@@ -156,7 +156,7 @@ ms.locfileid: "72783000"
     ```  
   
 > [!NOTE]  
->  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
 若要設定及使用 SQL Server PowerShell 提供者，請參閱[SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)並[取得說明 SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。
   
@@ -181,7 +181,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="ForInfoAboutBuPref"></a> 若要取得有關備份喜好設定的資訊  
  下列檢視表可用於取得次要備份的相關資訊。  
   
-|[檢視]|[資訊]|相關資料行|  
+|[檢視]|資訊|相關資料行|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|目前的複本是否為慣用的備份複本？|不適用。|  
 |[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|自動備份喜好設定|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
@@ -194,6 +194,6 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [SQL Server AlwaysOn 小組 Blog：官方 SQL Server AlwaysOn 小組的 Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [作用中次要資料庫：次要複本上的備份（AlwaysOn 可用性群組）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 

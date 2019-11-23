@@ -41,9 +41,9 @@ ms.locfileid: "72688910"
   
     -   複製的方向：DB_IN 從檔案到資料表或檢視表。  
   
-5.  呼叫[bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)來讀取描述大量複製作業所要使用之資料檔案的格式檔案。  
+5.  呼叫[bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)以讀取描述大量複製作業所要使用之資料檔案的格式檔案。  
   
-6.  呼叫[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)來執行大量複製作業。  
+6.  呼叫[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以執行大量複製作業。  
   
 ## <a name="example"></a>範例  
  IA64 不支援此範例。  
@@ -183,8 +183,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [使用 SQL Server odbc 驅動程式的大量複製 how to 主題&#40;ODBC&#41; ](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
+## <a name="see-also"></a>另請參閱  
+ [使用 SQL Server odbc 驅動程式的大量複製 how to 主題&#40;ODBC&#41; ](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [使用資料檔案與格式檔案](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

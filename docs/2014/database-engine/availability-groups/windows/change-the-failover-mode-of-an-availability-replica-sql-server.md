@@ -112,11 +112,11 @@ ms.locfileid: "72783023"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
 若要設定及使用 SQL Server PowerShell 提供者，請參閱[SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)。
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組&#40;SQL Server 總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
- [可用性模式&#40;AlwaysOn 可用性群組&#41; ](availability-modes-always-on-availability-groups.md)    
+ [可用性模式&#40;AlwaysOn 可用性群組&#41; ](availability-modes-always-on-availability-groups.md)   
  [容錯移轉和故障&#40;轉移模式 AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md) 

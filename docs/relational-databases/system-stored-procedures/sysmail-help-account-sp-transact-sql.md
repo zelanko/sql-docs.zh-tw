@@ -51,7 +51,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
 ||||  
 |-|-|-|  
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |**account_id**|**int**|帳戶的識別碼。|  
 |**name**|**sysname**|帳戶的名稱。|  
 |**description**|**nvarchar(256)**|帳戶的描述。|  
@@ -62,10 +62,10 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**servername**|**sysname**|帳戶的電子郵件伺服器名稱。|  
 |**port**|**int**|電子郵件伺服器所用的通訊埠編號。|  
 |**username**|**nvarchar(128)**|如果電子郵件伺服器使用驗證的話，用來登入電子郵件伺服器的使用者名稱。 當**username**為 Null 時，Database Mail 不會對此帳戶使用驗證。|  
-|**use_default_credentials**|**bit**|指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials**是 bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證。 當此參數為0時，Database Mail 會使用 **\@username**和 **@no__t 3PASSWORD** ，在 SMTP 伺服器上進行驗證。 如果 **\@username**和 **@no__t 3password**是 Null，則 Database Mail 會使用匿名驗證。 在指定此參數之前，請洽詢 SMTP 管理員。|  
+|**use_default_credentials**|**bit**|指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials**是 bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證。 當此參數為0時，Database Mail 會使用 **\@使用者名稱**和 **\@密碼**在 SMTP 伺服器上進行驗證。 如果 **\@使用者名稱**和 **\@密碼**為 Null，則 Database Mail 會使用匿名驗證。 在指定此參數之前，請洽詢 SMTP 管理員。|  
 |**enable_ssl**|**bit**|指定 Database Mail 是否使用安全通訊端層 (SSL) 加密通訊。 如果 SMTP 伺服器上需要 SSL，則使用此選項。 **enable_ssl**是 bit，沒有預設值。 1 表示 Database Mail 會使用 SSL 加密通訊。 0 表示 Database Mail 傳送郵件時不使用 SSL 加密。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  未提供*account_id*或*account_name*時， **sysmail_help_account**會列出 Microsoft SQL Server 實例中所有 Database Mail 帳戶的資訊。  
   
  預存程式**sysmail_help_account_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
@@ -74,7 +74,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
  此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
- **A.列出所有帳戶的資訊 @ no__t-0  
+ **答：列出所有帳戶的資訊**  
   
  下列範例會顯示如何列出執行個體中之所有帳戶的帳戶資訊。  
   
@@ -91,7 +91,7 @@ account_id  name                         description                            
 149         Audit Account                Account for audit e-mail.               audit@Adventure-Works.com Automated Mailer (Audit)         NULL            SMTP       smtp.Adventure-Works.com  25          NULL 0                          0        
 ```  
   
- **B.列出特定帳戶的資訊 @ no__t-0  
+ **B. 列出特定帳戶的資訊**  
   
  下列範例會顯示如何列出名稱為 `AdventureWorks Administrator` 之帳戶的帳戶資訊。  
   

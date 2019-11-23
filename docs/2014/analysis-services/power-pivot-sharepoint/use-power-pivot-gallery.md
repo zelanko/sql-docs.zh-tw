@@ -21,7 +21,7 @@ ms.locfileid: "70874481"
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊用途的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
   
 > [!NOTE]  
->  根據您伺服器設定的方式，可能會在特定文件的預覽區域中看到警告或錯誤訊息。 如果 Excel 活頁簿設定為每次開啟時都自動重新整理其資料，可能會出現訊息。 如果設定 Excel Services 來顯示資料重新整理時警告的錯誤訊息，資料重新整理警告訊息將會以預覽影像的形式出現。 伺服陣列或服務管理員可以修改組態設定，讓實際工作表的預覽可以顯示出來。 如需相關資訊，請參閱 [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+>  根據您伺服器設定的方式，可能會在特定文件的預覽區域中看到警告或錯誤訊息。 如果 Excel 活頁簿設定為每次開啟時都自動重新整理其資料，可能會出現訊息。 如果設定 Excel Services 來顯示資料重新整理時警告的錯誤訊息，資料重新整理警告訊息將會以預覽影像的形式出現。 伺服陣列或服務管理員可以修改組態設定，讓實際工作表的預覽可以顯示出來。 如需相關資訊，請參閱 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="bkmk_top"></a> 本主題內容  
   
@@ -49,7 +49,7 @@ ms.locfileid: "70874481"
 >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。   
 > 若要在 Microsoft Edge 中查看**文件庫內容**，請按一下 Power Pivot 圖庫中的 [程式庫] 索引標籤，然後將 [文件庫] 視圖變更為 [**所有檔**]。    
 > 若要變更預設檢視，請按一下 [程式庫] 索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
->  如需有關 Microsoft Edge 支援之功能的詳細資訊，請參閱[Windows blog，這是過去的一環，第2篇：對 ActiveX、VBScript 說再見 .。。](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  如需有關 Microsoft Edge 支援之功能的詳細資訊，請參閱 Windows blog，[一開始休息，第2篇：說再見到 ActiveX，VBScript ...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  如需必要條件的完整清單，請參閱[建立和自訂 PowerPivot 圖庫](create-and-customize-power-pivot-gallery.md)。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "70874481"
   
 1.  儲存檔案。  
   
-2.  1.  **Excel 2010：** 在 檔案 功能表中，按一下 **儲存 & 傳送**。  
+2.  1.  **Excel 2010：** 在 [檔案] 功能表中，按一下 [儲存和傳送]。  
   
     2.  按一下 **[儲存至 SharePoint]** 。  
   
     3.  如果您要使用 [Excel Services 選項] 來選取要發行的個別工作表或參數，請按一下 **[發行選項]** 。 例如，[Excel Services 選項] 中的 [參數] 索引標籤可讓您選擇哪些交叉分析篩選器要出現在發行的活頁簿中。  
   
-    1.  **Excel 2013：** 在 [檔案] 功能表中，按一下 [**儲存**]。  
+    1.  **Excel 2013**  ：在 [檔案] 功能表中，按一下 **[儲存]** 。  
   
     2.  如果您要使用 [Excel Services 選項] 來選取要發行的個別工作表或參數，請按一下 **[瀏覽器檢視選項]** 。 例如，[Excel Services 選項] 中的 [參數] 索引標籤可讓您選擇哪些交叉分析篩選器要出現在發行的活頁簿中。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "70874481"
   
 3.  按一下右邊的向下箭號，然後選取 **[編輯屬性]** 。  
   
-4.  按一下 [儲存]。 儲存文件會強制快照服務重新產生預覽影像。  
+4.  按一下 **[儲存]** 。 儲存文件會強制快照服務重新產生預覽影像。  
   
 ##  <a name="bkmk_known_issues"></a> 已知問題  
   
@@ -161,7 +161,7 @@ ms.locfileid: "70874481"
  **[PowerPivot 圖庫文件]** 內容類型不會自動加入至文件庫。除非您手動啟用不支援的內容類型，否則不會發生這個問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [在 [管理中心] 中建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [刪除 PowerPivot 圖庫](delete-power-pivot-gallery.md)   
  [建立和自訂 PowerPivot 圖庫](create-and-customize-power-pivot-gallery.md)   
  [排程資料重新整理&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  

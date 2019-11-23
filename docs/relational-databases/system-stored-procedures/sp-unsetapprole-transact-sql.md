@@ -48,8 +48,8 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 和 1 (失敗)  
   
-## <a name="remarks"></a>備註  
- 使用**sp_setapprole**啟動應用程式角色之後，角色會保持作用中狀態，直到使用者中斷伺服器的連線或執行**sp_unsetapprole**。  
+## <a name="remarks"></a>Remarks  
+ 使用**sp_setapprole**啟動應用程式角色之後，角色會保持作用中狀態，直到使用者中斷伺服器連線或執行**sp_unsetapprole**為止。  
   
  如需應用程式角色的總覽，請參閱[應用程式角色](../../relational-databases/security/authentication-access/application-roles.md)。  
   

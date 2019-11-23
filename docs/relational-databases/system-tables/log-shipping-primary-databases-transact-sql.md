@@ -29,25 +29,25 @@ ms.locfileid: "72304982"
 
   將主要資料庫的一項記錄儲存在記錄傳送組態中。 此資料表會儲存在**msdb**資料庫中。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
-|**primary_id**|**uniqueidentifier**|記錄傳送組態之主要資料庫的識別碼。|  
+|**primary_id**|**ssNoversion**|記錄傳送組態之主要資料庫的識別碼。|  
 |**primary_database**|**sysname**|記錄傳送組態中之主要資料庫的名稱。|  
-|**backup_directory**|**nvarchar(500)**|用於儲存主要伺服器之交易記錄備份檔的目錄。|  
-|**backup_share**|**nvarchar(500)**|備份目錄的網路或 UNC 路徑。|  
+|**backup_directory**|**Nvarchar （500）**|用於儲存主要伺服器之交易記錄備份檔的目錄。|  
+|**backup_share**|**Nvarchar （500）**|備份目錄的網路或 UNC 路徑。|  
 |**backup_retention_period**|**int**|在刪除記錄備份檔之前，將它保留在備份目錄中的時間長度 (以分鐘為單位)。|  
-|**backup_job_id**|**uniqueidentifier**|與主伺服器上的備份作業相關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @no__t 1 代理程式作業識別碼。|  
-|**monitor_server**|**sysname**|在記錄傳送設定中，用來做為監視伺服器之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的實例名稱 @no__t 1。|  
+|**backup_job_id**|**ssNoversion**|與主伺服器上的備份作業相關聯的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業識別碼。|  
+|**monitor_server**|**sysname**|在記錄傳送設定中用來做為監視伺服器之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 實例的名稱。|  
 |**monitor_server_security_mode**|**bit**|用於連接到監視伺服器的安全性模式。<br /><br /> 1 = Windows 驗證。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
-|**last_backup_file**|**nvarchar(500)**|最近之交易記錄備份的絕對路徑。|  
+|**last_backup_file**|**Nvarchar （500）**|最近之交易記錄備份的絕對路徑。|  
 |**last_backup_date**|**datetime**|最後一項記錄備份作業的日期和時間。|  
-|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database**和**sp_help_log_shipping_secondary_primary**使用此資料行控制 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中監視設定的顯示。<br /><br /> 0 = 叫用這兩個預存程式之一時，使用者並未指定 **@no__t 1monitor_server**參數的明確值。<br /><br /> 1 = 使用者已指定明確值。|  
+|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database**和**sp_help_log_shipping_secondary_primary**使用此資料行控制 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中監視設定的顯示。<br /><br /> 0 = 叫用這兩個預存程式之一時，使用者未指定 **\@monitor_server**參數的明確值。<br /><br /> 1 = 使用者已指定明確值。|  
 |**backup_compression**|**tinyint**|指出記錄傳送組態是否會覆寫伺服器層級的備份壓縮行為。<br /><br /> 0 = 已停用。 不論伺服器設定的備份壓縮設定為何，永遠都不會壓縮記錄備份。<br /><br /> 1 = 已啟用。 不論伺服器設定的備份壓縮設定為何，永遠都會壓縮記錄備份。<br /><br /> 2 = 針對 View 使用伺服器設定，[或設定備份壓縮預設伺服器設定選項](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)伺服器-configuration 選項。 這是預設值。<br /><br /> 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 才支援備份壓縮。|  
   
 ## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
- [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [sp_add_log_shipping_primary_database &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
+ [sp_delete_log_shipping_primary_database &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
  [系統資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   

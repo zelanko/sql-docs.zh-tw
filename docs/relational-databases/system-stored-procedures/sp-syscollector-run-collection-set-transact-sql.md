@@ -48,15 +48,15 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="arguments"></a>引數  
 `[ @collection_set_id = ] collection_set_id` 是收集組的唯一本機識別碼。 *collection_set_id*是**int** ，而且如果*name*為 Null，則必須有值。  
   
-`[ @name = ] 'name'` 是收集組的名稱。 *名稱*是**sysname** ，而且如果*collection_set_id*是 Null，則必須有值。  
+`[ @name = ] 'name'` 是收集組的名稱。 *name*是**sysname** ，如果*collection_set_id*是 Null，則必須有值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
- *Collection_set_id*或*name*都必須有值，兩者都不能是 Null。  
+## <a name="remarks"></a>Remarks  
+ *Collection_set_id*或*名稱*都必須有值，兩者都不能是 Null。  
   
- 這個程式會針對指定的收集組啟動收集和上傳作業，而且如果收集組將其 **@no__t 1collection_mode**設定為非快取（1），就會立即啟動收集代理程式作業。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ 這個程式會針對指定的收集組啟動收集和上傳作業，而且如果收集組的 **\@collection_mode**設定為非快取（1），就會立即啟動收集代理程式作業。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
  sp_sycollector_run_collection_set 也可以用來執行沒有排程的收集組。  
   
@@ -74,6 +74,6 @@ EXEC sp_syscollector_run_collection_set @collection_set_id = 1;
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
+ [資料收集](../../relational-databases/data-collection/data-collection.md)  
   
   

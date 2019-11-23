@@ -55,7 +55,7 @@ ms.locfileid: "72797975"
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 升級只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本中執行。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 必要條件  
  您必須在開始升級之前，進行完整資料庫備份。 如果升級時發生錯誤而無法回復其所有變更，您可能需要還原備份。  
   
  開始升級之前，有幾個您在驗證 DAC 封裝以及升級動作時應該採取的動作。 如需有關如何執行這些檢查的詳細資訊，請參閱＜ [Validate a DAC Package](validate-a-dac-package.md)＞。  
@@ -284,6 +284,6 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料層應用程式](data-tier-applications.md)   
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  

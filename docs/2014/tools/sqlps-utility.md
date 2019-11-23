@@ -66,7 +66,7 @@ ms.locfileid: "72798142"
  **-Command-** 指定 `sqlps` 公用程式從標準輸入讀取輸入。  
   
  *script_block* [ **-args**_argument_array_ ]  
- 指定要執行的 PowerShell 命令區塊，此區塊必須以大括號括住：{}。 只有在從**PowerShell**或另一個 `sqlps` 公用程式會話呼叫 `sqlps` 公用程式時，才能指定*Script_block* 。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block*中 PowerShell 命令的引數。  
+ 指定要執行的 PowerShell 命令區塊，此區塊必須以大括號括住：{}。 只有在從**PowerShell**或其他 `sqlps` 公用程式會話呼叫 `sqlps` 公用程式時，才可以指定*Script_block* 。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block*中 PowerShell 命令的引數。  
   
  *string* [ *command_parameters* ]  
  指定包含要執行之 PowerShell 命令的字串。 請使用 **"& { *`command`* }"** 格式。 引號表示字串，而叫用運算子（&）會導致 `sqlps` 公用程式執行此命令。  
@@ -97,7 +97,7 @@ ms.locfileid: "72798142"
   
  根據預設，`sqlps` 公用程式會執行，並將腳本執行原則設定為 [**受限制**]。 如此即不會執行任何 PowerShell 指令碼。 您可以使用 **Set-ExecutionPolicy** Cmdlet 來允許執行已簽署的指令碼或任何指令碼。 建議您只執行來自信任來源的指令碼，並且利用適當的 NTFS 權限來保護所有輸入和輸出檔案。 如需有關啟用 PowerShell 指令碼的詳細資訊，請參閱 [執行 Windows PowerShell 指令碼](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/)。  
   
- [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的 `sqlps` 公用程式版本實作為 Windows PowerShell 1.0 迷你 shell。 迷你 Shell 有一些限制，例如不允許使用者載入迷你 Shell 所載入之嵌入式管理單元以外的嵌入式管理單元。 這些限制不適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本的公用程式，這些版本已經變更為使用 `sqlps` 模組。  
+ `sqlps` 和 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 公用程式版本實作為 Windows PowerShell 1.0 迷你 shell。 迷你 Shell 有一些限制，例如不允許使用者載入迷你 Shell 所載入之嵌入式管理單元以外的嵌入式管理單元。 這些限制不適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本的公用程式，這些版本已經變更為使用 `sqlps` 模組。  
   
 ## <a name="examples"></a>範例  
 
@@ -119,6 +119,6 @@ sqlps -Command "&{.\MyFolder.MyScript.ps1}"
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟用或停用伺服器網路通訊協定](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  

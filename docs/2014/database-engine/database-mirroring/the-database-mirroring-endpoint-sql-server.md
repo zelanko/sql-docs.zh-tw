@@ -84,7 +84,7 @@ ms.locfileid: "72797899"
   
 -   [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)  
   
--   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
@@ -93,8 +93,8 @@ ms.locfileid: "72797899"
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫鏡像和 AlwaysOn 可用性群組&#40;的傳輸安全性 SQL Server&#41; ](transport-security-database-mirroring-always-on-availability.md)   
  [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [_hadr_availability_replica_states &#40;transact-sql&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys.databases _db_mirroring_connections &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [dm_hadr_availability_replica_states &#40;transact-sql&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys. dm_db_mirroring_connections &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

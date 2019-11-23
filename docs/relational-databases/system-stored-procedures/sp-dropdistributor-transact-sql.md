@@ -38,13 +38,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @no_checks = ] no_checks` 表示在卸載散發者之前，是否要檢查相依物件。 *no_checks*是**bit**，預設值是0。  
+`[ @no_checks = ] no_checks` 指出在卸載散發者之前，是否要檢查相依物件。 *no_checks*是**bit**，預設值是0。  
   
- 如果是**0**， **sp_dropdistributor**會檢查並確定除了散發者以外的所有發行和散發物件都已卸載。  
+ 如果是**0**， **sp_dropdistributor**會進行檢查，以確定除了散發者以外的所有發行和散發物件都已卸載。  
   
  如果是**1**， **sp_dropdistributor**會在卸載散發者之前，先卸載所有發行和散發物件。  
   
-`[ @ignore_distributor = ] ignore_distributor` 表示是否在未連接到散發者的情況下執行此預存程式。 *ignore_distributor*是**bit**，預設值是**0**。  
+`[ @ignore_distributor = ] ignore_distributor` 指出是否在未連接到散發者的情況下執行此預存程式。 *ignore_distributor*是**bit**，預設值是**0**。  
   
  如果是**0**， **sp_dropdistributor**會連接到散發者，並移除所有複寫物件。 如果**sp_dropdistributor**無法連接到散發者，則預存程式會失敗。  
   
@@ -53,12 +53,12 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistributor**用於所有類型的複寫中。  
   
  如果伺服器上有其他發行者或散發物件存在，除非 **\@no_checks**設定為**1**，否則**sp_dropdistributor**會失敗。  
   
- 您必須執行**sp_dropdistributiondb**來卸載散發資料庫之後，才能執行這個預存程式。  
+ 這個預存程式必須在卸載散發資料庫之後，藉由執行**sp_dropdistributiondb**來執行。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
@@ -68,8 +68,8 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 ## <a name="see-also"></a>另請參閱  
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_adddistributor &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

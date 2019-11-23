@@ -60,7 +60,7 @@ ms.locfileid: "72278212"
   
 2.  卸除登入。  
   
-3.  使用**sp_addlogin**系統程式來建立新的登入。 針對每個對應的登入，在 **\@sid**參數中指定步驟1中傳回的 SID。  
+3.  使用**sp_addlogin**系統程式來建立新的登入。 針對每個對應的登入，在 **\@SID**參數中指定步驟1中傳回的 sid。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

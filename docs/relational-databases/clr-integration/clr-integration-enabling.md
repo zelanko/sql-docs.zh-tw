@@ -21,7 +21,7 @@ ms.locfileid: "71680853"
 ---
 # <a name="clr-integration---enabling"></a>CLR 整合 - 啟用
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  預設會停用 Common Language Runtime (CLR) 整合功能，且為了使用 CLR 整合所實作的物件，必須啟用這個功能。 若要啟用 CLR 整合，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用**sp_configure**預存程式的**CLR enabled**選項：  
+  預設會停用 Common Language Runtime (CLR) 整合功能，且為了使用 CLR 整合所實作的物件，必須啟用這個功能。 若要啟用 CLR 整合，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用**sp_configure**預存程式的**CLR enabled**選項：  
   
 ```sql  
 EXEC sp_configure 'clr enabled', 1;  
@@ -29,7 +29,7 @@ RECONFIGURE;
 GO  
 ```  
   
- 您可以將**clr enabled**選項設定為0，以停用 clr 整合。 當您停用 CLR 整合時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會停止執行所有使用者定義的 CLR 常式，並卸載所有應用程式域。 依賴 CLR 的功能（例如**hierarchyid**資料類型、@no__t 1 函數、複寫和以原則為基礎的管理）不會受到這項設定的影響，而且將會繼續運作。
+ 您可以將**clr enabled**選項設定為0，以停用 clr 整合。 當您停用 CLR 整合時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會停止執行所有使用者定義的 CLR 常式，並卸載所有應用程式域。 依賴 CLR 的功能（例如**hierarchyid**資料類型、`FORMAT` 函數、複寫和以原則為基礎的管理）不會受到這項設定的影響，而且將會繼續運作。
   
 > [!NOTE]  
 >  若要啟用 CLR 整合，您必須擁有 ALTER SETTINGS 伺服器層級許可權，這會由**sysadmin**和**serveradmin**固定伺服器角色的成員隱含持有。  

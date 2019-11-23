@@ -37,7 +37,7 @@ ms.locfileid: "72797748"
   
 -   如果可用性群組超過其 WSFC 失敗臨界值，WSFC 叢集將不會嘗試進行可用性群組的自動容錯移轉。 此外，可用性群組的 WSFC 資源群組會維持失敗狀態，直到叢集管理員手動讓失敗的資源群組上線，或者資料庫管理員執行可用性群組的手動容錯移轉為止。 *「WSFC 失敗臨界值」* (WSFC Failure Threshold) 定義為可用性群組在給定的時間週期內支援的失敗次數上限。 預設的時間週期為六小時，而且在這段時間內失敗次數上限的預設值為 *n*-1，其中 *n* 是 WSFC 節點的數目。 若要變更給定可用性群組得失敗臨界值，請使用 WSFC 容錯移轉管理員主控台。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "72797748"
   
 ####  <a name="Permissions"></a> Permissions  
   
-|工作|[權限]|  
+|工作|Permissions|  
 |----------|-----------------|  
-|若要設定新可用性群組的彈性容錯移轉原則|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
+|若要設定新可用性群組的彈性容錯移轉原則|需要 **sysadmin** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改現有可用性群組的原則|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -67,9 +67,9 @@ ms.locfileid: "72797748"
   
          這些整數值與失敗狀況層級的關聯性如下所示：  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|level|起始自動容錯移轉的狀況|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|Hierarchy|起始自動容錯移轉的狀況|  
         |------------------------------|-----------|-------------------------------------------|  
-        |@shouldalert|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
+        |1|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
         |2|二|伺服器沒有回應時。 滿足任何狀況的較低值，而且 SQL Server 服務連接到叢集且超過健全狀況檢查逾時臨界值，或者目前主要複本處於失敗狀態。|  
         |3|三|發生嚴重伺服器錯誤時。 滿足任何狀況的較低值，或者發生內部嚴重伺服器錯誤。<br /><br /> 這是預設層級。|  
         |4|四|發生一般伺服器錯誤時。 滿足任何狀況的較低值，或者發生一般伺服器錯誤。|  
@@ -95,7 +95,7 @@ ms.locfileid: "72797748"
   
     -   若要設定容錯移轉狀況層級，請使用 `FailureConditionLevel`*level*參數，其中*level*是下列其中一個值：  
   
-        |[值]|level|起始自動容錯移轉的狀況|  
+        |ReplTest1|Hierarchy|起始自動容錯移轉的狀況|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
         |`OnServerUnresponsive`|二|伺服器沒有回應時。 滿足任何狀況的較低值，而且 SQL Server 服務連接到叢集且超過健全狀況檢查逾時臨界值，或者目前主要複本處於失敗狀態。|  
@@ -105,7 +105,7 @@ ms.locfileid: "72797748"
   
          如需容錯移轉條件層級的詳細資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)。  
   
-         例如，下列命令會將現有可用性群組 `AG1`的失敗狀況層級變更為層級一。  
+         例如，下列命令會將現有可用性群組 `AG1` 的失敗狀況層級變更為層級一。  
   
         ```powershell
         Set-SqlAvailabilityGroup `
@@ -124,7 +124,7 @@ ms.locfileid: "72797748"
         ```  
   
 > [!NOTE]  
->  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -132,9 +132,9 @@ ms.locfileid: "72797748"
   
 -   [取得 SQL Server PowerShell 說明](../../../powershell/sql-server-powershell.md)  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
- [可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)    
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)   
  [容錯移轉和故障&#40;轉移&#41;模式 AlwaysOn 可用性群組](failover-and-failover-modes-always-on-availability-groups.md)   
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [容錯移轉叢集執行個體的容錯移轉原則](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   

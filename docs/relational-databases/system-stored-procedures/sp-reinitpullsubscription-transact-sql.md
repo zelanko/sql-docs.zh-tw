@@ -48,16 +48,16 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sp_reinitpullsubscription**用於異動複寫中。  
   
  對等異動複寫不支援**sp_reinitpullsubscription** 。  
   
- **sp_reinitpullsubscription**可以在下一次執行散發代理程式時，從訂閱者端呼叫來重新初始化訂閱。  
+ 在下一次執行散發代理程式期間，可以從訂閱者端呼叫**sp_reinitpullsubscription**來重新初始化訂閱。  
   
- 無法從訂閱者重新初始化針對 **@no__t 2immediate_sync**的值為**false**所建立之發行集的訂閱。  
+ 無法從訂閱者重新初始化針對 **\@immediate_sync**的值為**false**所建立之發行集的訂閱。  
   
- 您可以藉由在訂閱者端執行**sp_reinitpullsubscription**或在發行者端的**sp_reinitsubscription** ，重新初始化提取訂閱。  
+ 您可以藉由在「訂閱者」端執行**sp_reinitpullsubscription**或在「發行者」端**sp_reinitsubscription**來重新初始化提取訂閱。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  

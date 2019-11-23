@@ -20,7 +20,7 @@ ms.locfileid: "72797804"
 # <a name="manage-authentication-in-database-engine-powershell"></a>管理 Database Engine PowerShell 中的驗證
   依預設，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體時， [!INCLUDE[ssDE](../includes/ssde-md.md)]PowerShell 元件會使用 Windows 驗證。 藉由定義 PowerShell 虛擬磁碟機，或指定 `-Username` 的 `-Password` 和 `Invoke-Sqlcmd` 參數，即可使用 SQL Server 驗證。  
   
-1.  **Before you begin:**  [Permissions](#Permissions)  
+1.  **開始之前：**  [Permissions](#Permissions)  
   
 2.  **使用下列項目，設定驗證：** [虛擬磁碟機](#SQLAuthVirtDrv)、[Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
@@ -82,7 +82,7 @@ $pwd = Read-Host -AsSecureString -Prompt "Password"
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](sql-server-powershell.md)   
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
- [Invoke-Sqlcmd Cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)  
+ [Invoke-Sqlcmd 指令程式](../database-engine/invoke-sqlcmd-cmdlet.md)  

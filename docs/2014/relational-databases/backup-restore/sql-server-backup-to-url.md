@@ -41,7 +41,7 @@ ms.locfileid: "72797995"
   
 -   [使用 SQL Server Management Studio 從 Azure 儲存體還原](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a> 安全性  
+###  <a name="security"></a> Security  
  以下是備份至 Azure Blob 儲存體服務或從中還原時的安全性考慮和需求。  
   
 -   建立 Azure Blob 儲存體服務的容器時，建議您將存取權設定為 [**私**用]。 將存取權設定為 [私用] 可限制只有能夠提供必要資訊向 Azure 帳戶驗證的使用者或帳戶，才有存取權。  
@@ -49,7 +49,7 @@ ms.locfileid: "72797995"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要將 Azure 帳戶名稱和存取金鑰驗證儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證中。 此資訊會在執行備份或還原作業時，用來向 Azure 帳戶進行驗證。  
   
--   用來發出 BACKUP 或 RESTORE 命令的使用者帳戶應該位於擁有 **改變任何認證** 權限的 **db_backup 運算子** 資料庫角色中。  
+-   用來發出 BACKUP 或 RESTORE 命令的使用者帳戶應該位於擁有**改變任何認證**權限的 **db_backup 運算子**資料庫角色中。  
   
 ###  <a name="intorkeyconcepts"></a> 重要元件和概念簡介  
  下列兩節將介紹 Azure Blob 儲存體服務，以及備份至 Azure Blob 儲存體服務或從中還原時所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。 請務必瞭解這些元件，以及它們之間的互動，以執行 Azure Blob 儲存體服務的備份或還原。  
@@ -59,13 +59,13 @@ ms.locfileid: "72797995"
  ![將儲存體帳戶對應至 sql 認證](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "將儲存體帳戶對應至 sql 認證")  
   
 ###  <a name="Blob"></a>Azure Blob 儲存體服務  
- **儲存體帳戶：** 儲存體帳戶是所有儲存體服務的起點。 若要存取 Azure Blob 儲存體服務，請先建立 Azure 儲存體帳戶。 必須要有**儲存體帳戶名稱**及其**存取金鑰**屬性，才能向 Azure Blob 儲存體服務及其元件進行驗證。  
+ **儲存體帳戶** ：儲存體帳戶是所有儲存體服務的起點。 若要存取 Azure Blob 儲存體服務，請先建立 Azure 儲存體帳戶。 必須要有**儲存體帳戶名稱**及其**存取金鑰**屬性，才能向 Azure Blob 儲存體服務及其元件進行驗證。  
   
- **容器：** 容器提供一組 Blob 的群組，而且可以儲存不限數目的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Azure Blob 服務，您至少必須建立根容器。  
+ **容器** ：容器會提供一組 Blob 的群組，而且可以儲存不限數目的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Azure Blob 服務，您至少必須建立根容器。  
   
- **Blob：** 任何類型和大小的檔案。 有兩種類型的 blob 可儲存在 Azure Blob 儲存體服務中：區塊和分頁 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份會使用分頁 Blob 做為 Blob 類型。 您可以使用下列 URL 格式來定址 blob： HTTPs://\<儲存體帳戶 >. net/\<容器 >/\<blob >  
+ **Blob** ：任何類型和大小的檔案。 有兩種類型的 blob 可儲存在 Azure Blob 儲存體服務中：區塊和分頁 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份會使用分頁 Blob 做為 Blob 類型。{2} 您可以使用下列 URL 格式來定址 blob： HTTPs://\<儲存體帳戶 >. net/\<容器 >/\<blob >  
   
- ![Azure Blob 儲存體](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob 儲存體")  
+ ![Azure Blob 儲存體](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure BLOB 儲存")  
   
  如需有關 Azure Blob 儲存體服務的詳細資訊，請參閱[如何使用 Azure Blob 儲存體服務](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "72797995"
   
  以下是 URL 值範例： HTTP [s]：//ACCOUNTNAME.Blob.core.windows.net/\<CONTAINER >/\<FILENAME .bak >。 HTTPS 不是必要項目，但是建議使用。  
   
- **認證：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原程式會使用認證來向 Azure Blob 儲存體服務進行驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何查看、複製或重新產生儲存體帳戶**存取金鑰**的詳細資訊，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+ **認證** ： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原程式會使用認證來向 Azure Blob 儲存體服務進行驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何查看、複製或重新產生儲存體帳戶**存取金鑰**的詳細資訊，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
  如需有關如何建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證的逐步指示，請參閱本主題稍後的＜ [建立認證](#credential) ＞範例。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "72797995"
   
 -   不支援指定備份組選項 - `RETAINDAYS` 和 `EXPIREDATE`。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL - 'https://.blob.core.windows.net//.bak '，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL - 'https://.blob.core.windows.net//.bak'，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
   
 ###  <a name="Support"></a> 支援 Backup/Restore 陳述式  
   
@@ -139,7 +139,7 @@ ms.locfileid: "72797995"
   
 |||||  
 |-|-|-|-|  
-|引數|支援|例外狀況|註解|  
+|引數|支援|Exception|註解|  
 |DATABASE|&#x2713;|||  
 |LOG|&#x2713;|||  
 ||  
@@ -150,8 +150,8 @@ ms.locfileid: "72797995"
 |DIFFERENTIAL|&#x2713;|||  
 |COPY_ONLY|&#x2713;|||  
 |COMPRESSION&#124;NO_COMPRESSION|&#x2713;|||  
-|DESCRIPTION|&#x2713;|||  
-|名稱|&#x2713;|||  
+|說明|&#x2713;|||  
+|NAME|&#x2713;|||  
 |EXPIREDATE &#124; RETAINDAYS|&#x2713;|||  
 |NOINIT &#124; INIT|&#x2713;||如果使用這個選項，則會被忽略。<br /><br /> 您無法附加至 Blob。 若要覆寫備份，請使用 FORMAT 引數。|  
 |NOSKIP &#124; SKIP|&#x2713;|||  
@@ -219,7 +219,7 @@ ms.locfileid: "72797995"
   
     1.  **檔案名稱：** 備份檔案的名稱。  
   
-    2.  **SQL 認證：** 您可以指定現有的 SQL Server 認證，或按一下 [SQL 認證] 方塊旁的 [**建立**] 來建立新的認證。  
+    2.  **SQL 認證：** 您可以指定現有的 SQL Server 認證，或按一下 SQL 認證方塊旁的 **[建立]** ，建立新的認證。  
   
         > [!IMPORTANT]  
         >  在您按一下 **[建立]** 時開啟的對話方塊需要管理憑證或訂閱的發行設定檔。 SQL Server 目前支援發行設定檔 2.0 版。 若要下載發行設定檔的支援版本，請參閱＜ [下載發行設定檔 2.0](https://go.microsoft.com/fwlink/?LinkId=396421)＞。  
@@ -228,7 +228,7 @@ ms.locfileid: "72797995"
   
     3.  **Azure 儲存體容器：** 用來儲存備份檔案的 Azure 儲存體容器名稱。  
   
-    4.  **URL 前置詞：** 這會使用先前步驟中所述的欄位中所指定的資訊，自動建立。 如果您手動編輯此值，請確定其與您先前提供的其他資訊相符。 例如，如果您修改了儲存體 URL，請確定 SQL 認證已設定為對相同的儲存體帳戶進行驗證。  
+    4.  **URL 前置詞：** 這會利用上述步驟中說明欄位內所指定的資訊，自動建立。 如果您手動編輯此值，請確定其與您先前提供的其他資訊相符。 例如，如果您修改了儲存體 URL，請確定 SQL 認證已設定為對相同的儲存體帳戶進行驗證。  
   
  當您選取 URL 做為目的地時， **[媒體選項]** 頁面中的某些選項會停用。  下列主題包含有關備份資料庫對話方塊的詳細資訊：  
   
@@ -241,7 +241,7 @@ ms.locfileid: "72797995"
  [建立認證 - 向 Azure 儲存體驗證](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 使用 [維護計畫精靈] 將 SQL Server 備份至 URL  
- 與先前所述的備份工作類似，SQL Server Management Studio 中的維護計畫 Wizard 已增強為包含**URL**做為其中一個目的地選項，以及備份至 Azure 儲存體（例如 SQL）所需的其他支持對象。證書. 如需詳細資訊，請參閱＜ **Using Maintenance Plan Wizard** ＞中的＜ [定義備份工作](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)＞一節。  
+ 與先前所述的備份工作類似，SQL Server Management Studio 中的維護計畫 Wizard 已增強為包含**URL**作為其中一個目的地選項，以及備份至 Azure 儲存體（例如 SQL 認證）所需的其他支持對象。 如需詳細資訊，請參閱＜ **Using Maintenance Plan Wizard** ＞中的＜ [定義備份工作](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)＞一節。  
   
 ##  <a name="RestoreSSMS"></a>使用 SQL Server Management Studio 從 Azure 儲存體還原  
  如果您要還原資料庫，會內含 **[URL]** 做為還原裝置的來源。 下列步驟說明還原工作中的變更，以允許從 Azure 儲存體進行還原：  
@@ -800,6 +800,6 @@ ms.locfileid: "72797995"
    ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 備份至 URL 的最佳作法和疑難排解](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+ [SQL Server 備份至 URL 的最佳做法和疑難排解](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [系統資料庫的備份與還原 &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [教學課程：SQL Server 備份及還原至 Azure Blob 儲存體服務](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [教學課程： SQL Server 備份和還原至 Azure Blob 儲存體服務](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  

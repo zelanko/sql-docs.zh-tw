@@ -106,7 +106,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 4.  在 [**部署至？** ] 中，選取您要加入 PowerPivot 功能支援的 SharePoint web 應用程式。  
   
-5.  按一下 **[確定]** 。  
+5.  按一下 [確定]。  
   
 6.  針對其他也支援 PowerPivot 資料存取的 SharePoint Web 應用程式重複以上步驟。  
   
@@ -142,12 +142,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  此 Web 應用程式方案一開始會部署到管理中心，隨後會將後續方案部署到支援 PowerPivot 資料要求的其他任何 Web 應用程式。 若要將 Web 應用程式方案部署到管理中心，您必須使用 PowerPivot 組態工具或 PowerShell 指令程式。 如果是所有其他 Web 應用程式，您可以使用管理中心或 PowerShell 來手動部署 Web 應用程式方案。  
   
-|方案|[描述]|  
+|方案|描述|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|將 Microsoft.AnalysisServices.SharePoint.Integration.dll 加入至全域組件。<br /><br /> 將 Microsoft.AnalysisServices.ChannelTransport.dll 加入至全域組件。<br /><br /> 安裝功能和資源檔，並註冊內容類型。<br /><br /> 加入 PowerPivot 圖庫和資料摘要庫的文件庫範本。<br /><br /> 為服務應用程式組態、PowerPivot 管理儀表板、資料重新整理及 PowerPivot 圖庫加入應用程式頁面。|  
 |[powerpivotwebapp.wsp]|將 Microsoft.AnalysisServices.SharePoint.Integration.dll 資源檔加入至 Web 前端的 Web Server Extensions 資料夾。<br /><br /> 將 PowerPivot Web 服務加入至 Web 前端。<br /><br /> 加入 PowerPivot 圖庫產生的縮圖影像。|  
   
-## <a name="see-also"></a>請參閱  
- [升級 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)    
- [管理中心內的 PowerPivot 服務器管理和](power-pivot-server-administration-and-configuration-in-central-administration.md)設定    
+## <a name="see-also"></a>另請參閱  
+ [升級 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
+ [管理中心內的 PowerPivot 服務器管理和](power-pivot-server-administration-and-configuration-in-central-administration.md)設定   
  [使用 Windows PowerShell 的 PowerPivot 設定](power-pivot-configuration-using-windows-powershell.md)  

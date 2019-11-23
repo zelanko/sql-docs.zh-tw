@@ -74,12 +74,12 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **若要檢視有關資料庫鏡像端點的資訊**  
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立可用性群組 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)   
  [AlwaysOn 可用性群組&#40;SQL Server 總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)  
