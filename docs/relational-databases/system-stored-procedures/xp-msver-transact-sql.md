@@ -42,7 +42,7 @@ xp_msver [ optname ]
  *optname*  
  這是選項的名稱，它可以是下列值之一。  
   
-|選項/資料行名稱|說明|  
+|選項/資料行名稱|描述|  
 |-------------------------|-----------------|  
 |**ProductName**|產品名稱;例如，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**ProductVersion**|產品版本。|  
@@ -72,7 +72,7 @@ xp_msver [ optname ]
  **xp_msver**，不含任何參數，會傳回四個數據行的結果集，其中會列出所有選項值。 **xp_msver**，針對任何參數，會傳回具有該選項值的四個數據行結果集。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。  
+ 需要 **public** 角色中的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   

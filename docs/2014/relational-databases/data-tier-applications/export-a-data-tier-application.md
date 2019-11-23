@@ -32,7 +32,7 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175980"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
-  匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的另一個執行個體或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC、建立邏輯備份或建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中所部署資料庫的內部部署複本。  
+  匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的另一個執行個體或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC、建立邏輯備份或建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中所部署資料庫的內部部署複本。  
   
 ## <a name="before-you-begin"></a>開始之前  
  匯出程序會使用兩個階段來建立 DAC 匯出檔。  
@@ -49,8 +49,8 @@ ms.locfileid: "70175980"
   
  如果 DAC 或包含的使用者中不支援資料庫的物件，則無法匯出資料庫。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)＞。  
   
-###  <a name="Permissions"></a> 權限  
- 您至少需具備 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限，才能匯出 DAC。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員固定伺服器角色的成員或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。  
+###  <a name="Permissions"></a> Permissions  
+ 您至少需具備 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限，才能匯出 DAC。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員 (sysadmin) 固定伺服器角色的成員，或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。  
   
 ##  <a name="UsingDeployDACWizard"></a> 使用匯出資料層應用程式精靈  
  **若要使用精靈匯出 DAC**  
@@ -80,9 +80,9 @@ ms.locfileid: "70175980"
 ##  <a name="Introduction"></a> 簡介頁面  
  此頁面描述匯出資料層應用程式精靈的步驟。  
   
- **選項**  
+ **選項。**  
   
- **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
+ **不要再顯示此頁面。** - 按一下此核取方塊可不再顯示 [簡介] 頁面。  
   
  **下一步** - 繼續進行 [Select DAC Package (選取 DAC 封裝)] 頁面。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "70175980"
   
 -   **儲存至本機磁碟** - 在本機電腦的目錄中建立 BACPAC 檔案。 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
   
--   **儲存至 azure** -在 azure 容器中建立 BACPAC 檔案。 您必須連接到 Azure 容器, 才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 請注意，暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
+-   **儲存至 Azure** - 在 Azure 容器中建立 BACPAC 檔案。 您必須連線到 Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 請注意，暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
  若要指定要匯出的資料表子集，請使用 [進階] 選項。  
   

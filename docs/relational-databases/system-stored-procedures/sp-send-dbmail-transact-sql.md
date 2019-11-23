@@ -161,7 +161,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ## <a name="result-sets"></a>結果集  
  成功時，傳回「郵件已列入佇列」訊息。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  使用之前，必須先使用 [Database Mail 設定] [] 或 [ **Sp_configure**] 來啟用 Database Mail。  
   
  藉由停止外部程式所使用的 Service Broker 物件， **sysmail_stop_sp**停止 Database Mail。 當使用**sysmail_stop_sp**停止 Database Mail 時， **sp_send_dbmail**仍接受郵件。 若要開始 Database Mail，請使用**sysmail_start_sp**。  

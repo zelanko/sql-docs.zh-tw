@@ -156,7 +156,7 @@ Set oServer = nothing
   
 -   識別要執行作業步驟的資料庫 OLAP 伺服器。  
   
--   輸入要執行的陳述式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**Execute** 方法的陳述式必須是 XML。 陳述式可能不含完整的 SOAP Envelope 或 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** 方法。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
+-   輸入要執行的陳述式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** 方法的陳述式必須是 XML。 陳述式可能不含完整的 SOAP Envelope 或 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** 方法。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
   
 ### <a name="analysis-services-query-job-steps"></a>SQL Server Analysis Services 查詢作業步驟  
  當您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 查詢作業步驟時，必須：  
@@ -192,24 +192,24 @@ Set oServer = nothing
   
  請注意，如果您將套件部署至 SSIS 目錄並將 [SSIS 目錄] 指定為套件來源，此組態資訊的大部分會從套件中自動取得。 在 [組態] 索引標籤下，您可以指定環境、參數值、連接管理員值、屬性覆寫、以及套件是否會在 32 位元執行階段環境中執行。  
   
- 如需建立用於執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件之作業步驟的詳細資訊，請參閱[套件的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
+ 如需建立用於執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件之作業步驟的詳細資訊，請參閱 [套件的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |||  
 |-|-|  
-|**說明**|**主題**|  
+|**描述**|**主題**|  
 |描述如何建立包含可執行程式的作業步驟。|[建立 CmdExec 作業步驟](create-a-cmdexec-job-step.md)|  
 |描述如何重設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 權限。|[設定使用者可建立及管理 SQL Server Agent 作業](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|描述如何建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟。|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|描述如何定義 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Transact-SQL 作業步驟的選項。|[定義 Transact-SQL 作業步驟選項](define-transact-sql-job-step-options.md)|  
-|描述如何建立 ActiveX 指令碼作業步驟。|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|描述如何建立及定義執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 命令與查詢的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。|[建立 Analysis Services 作業步驟](create-an-analysis-services-job-step.md)|  
-|描述作業執行期間發生錯誤時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該採取的動作。|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
+|描述如何建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟。|[建立 Transact-SQL 作業步驟](create-a-transact-sql-job-step.md)|  
+|描述如何定義 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Transact-SQL 作業步驟的選項。|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|描述如何建立 ActiveX 指令碼作業步驟。|[建立 ActiveX Script 指令碼作業步驟](create-an-activex-script-job-step.md)|  
+|描述如何建立及定義執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services 命令與查詢的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|描述作業執行期間發生錯誤時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該採取的動作。|[設定作業步驟成功或失敗的流程](set-job-step-success-or-failure-flow.md)|  
 |描述如何檢視 [作業步驟屬性] 對話方塊中的作業步驟詳細資料。|[檢視作業步驟資訊](view-job-step-information.md)|  
-|描述如何刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟記錄。|[刪除作業步驟記錄](delete-a-job-step-log.md)|  
+|描述如何刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟記錄。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sysjobstepslogs &#40;transact-sql&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [建立作業](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

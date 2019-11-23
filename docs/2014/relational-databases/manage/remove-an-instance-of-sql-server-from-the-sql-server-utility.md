@@ -57,7 +57,7 @@ $ManagedInstance = $Utility.ManagedInstances[$ServerInstanceName];
 $ManagedInstance.Remove($InstanceConnection);  
 ```  
   
-請務必參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例名稱，完全如同儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的名稱。 在區分大小寫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，您必須使用 @@SERVERNAME 傳回的相同大小寫來指定執行個體名稱。 
+請務必參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例名稱，完全如同儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的名稱。 在區分大小寫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，您必須使用 @@SERVERNAME 傳回的相同大小寫來指定執行個體名稱。 
 
 若要取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Managed 執行個體的執行個體名稱，請在 Managed 執行個體上執行這個查詢：  
   
@@ -67,6 +67,6 @@ select @@SERVERNAME AS instance_name
   
  此時會從 UCP 中完全移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Managed 執行個體。 下次當您重新整理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的資料時，它就會從清單檢視中消失。 這個狀態表示使用者順利完成在 SSMS 使用者介面中移除 Managed 執行個體的作業。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用公用程式總管來管理 SQL Server 公用程式](use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [疑難排解 SQL Server 公用程式](../../database-engine/troubleshoot-the-sql-server-utility.md)  

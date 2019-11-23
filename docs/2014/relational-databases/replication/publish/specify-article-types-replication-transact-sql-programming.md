@@ -46,7 +46,7 @@ ms.locfileid: "73882121"
   
 2.  如果是 **logbased manualboth** 和 **logbased manualfilter** 發行項，請執行 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 來產生用於水平篩選之發行項的篩選預存程序。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
-3.  如果是 **logbased manualboth**、 **logbased manualview**和 **logbased manualfilter** 發行項，請執行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 來產生用於定義垂直篩選之發行項的檢視。 如需詳細資訊，請參閱 [定義及修改資料行篩選](define-and-modify-a-column-filter.md)。  
+3.  如果是 **logbased manualboth**、 **logbased manualview**和 **logbased manualfilter** 發行項，請執行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 來產生用於定義垂直篩選之發行項的檢視。 如需詳細資訊，請參閱 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>在交易式或快照式發行集中發行檢視或索引檢視發行項  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73882121"
   
 2.  如果是 **logbased manualboth** 和 **logbased manualfilter** 發行項，請執行 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 來產生用於水平篩選之發行項的篩選預存程序。 如需詳細資訊，請參閱 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
-3.  如果是 **logbased manualboth**、 **logbased manualview**和 **logbased manualfilter** 發行項，請執行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 來產生用於定義垂直篩選之發行項的檢視。 如需詳細資訊，請參閱 [定義及修改資料行篩選](define-and-modify-a-column-filter.md)。  
+3.  如果是 **logbased manualboth**、 **logbased manualview**和 **logbased manualfilter** 發行項，請執行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 來產生用於定義垂直篩選之發行項的檢視。 如需詳細資訊，請參閱 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>在交易式或快照式發行集中發行預存程序、預存程序執行或使用者定義函數發行項  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882121"
      這樣會為發行集定義新的發行項。 如需詳細資訊，請參閱 [Define an Article](define-an-article.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [複寫系統預存程序概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [發行資料和資料庫物件](publish-data-and-database-objects.md)  
   
   

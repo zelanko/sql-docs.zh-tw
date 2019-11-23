@@ -23,7 +23,7 @@ ms.locfileid: "73729191"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，若要以最簡單的方式來設定安全性，可將模型物件權限指派給群組 (使用者為其中的成員)。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，若要以最簡單的方式來設定安全性，可將模型物件權限指派給群組 (使用者為其中的成員)。  
   
  在下列情況中，安全性會變得較複雜：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73729191"
   
 -   位於較高層級的任何物件會獲得推斷讀取權限。 如需推斷讀取權限的詳細資訊，請參閱 [導覽存取權 &#40;Master Data Services&#41;](../master-data-services/navigational-access-master-data-services.md)。  
   
- 在此範例中， **讀取** 權限會指派給實體，而且其屬性 (位於模型結構中較低層級) 會繼承該權限。 模型會提供推斷讀取權限給此實體及其屬性。 模型中的其他實體沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此實體。  
+ 在此範例中，**讀取**權限會指派給實體，而且其屬性 (位於模型結構中較低層級) 會繼承該權限。 模型會提供推斷讀取權限給此實體及其屬性。 模型中的其他實體沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此實體。  
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -76,7 +76,7 @@ ms.locfileid: "73729191"
   
  ![mds_conc_security_group_overlap](../master-data-services/media/mds-conc-security-group-overlap.gif "mds_conc_security_group_overlap")  
   
- 在此情況下，您必須先解析重疊的使用者和群組權限，然後才能比較模型物件與階層成員權限。 如需詳細資訊，請參閱 [重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
+ 在此情況下，您必須先解析重疊的使用者和群組權限，然後才能比較模型物件與階層成員權限。 如需詳細資訊，請參閱[重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   

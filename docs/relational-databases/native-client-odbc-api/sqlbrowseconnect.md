@@ -28,14 +28,14 @@ ms.locfileid: "73787669"
   
 ## <a name="level-1"></a>層級 1  
   
-|關鍵字|傳回清單？|選擇性？|說明|  
+|關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|不適用|否|**SQLDataSources**所傳回之資料來源的名稱。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
-|DRIVER|不適用|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式名稱為 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
+|DSN|N/A|否|**SQLDataSources**所傳回之資料來源的名稱。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
+|DRIVER|N/A|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式名稱為 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
   
 ## <a name="level-2"></a>層級 2  
   
-|關鍵字|傳回清單？|選擇性？|說明|  
+|關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|是|否|事件來源所在之網路上的伺服器名稱。 可以輸入 "(local)" 這個詞彙做為伺服器，在這種情況下可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機複本，即使這是非網路的版本。|  
 |UID|否|是|使用者登入識別碼。|  
@@ -45,7 +45,7 @@ ms.locfileid: "73787669"
   
 ## <a name="level-3"></a>層級 3  
   
-|關鍵字|傳回清單？|選擇性？|說明|  
+|關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。|  
 |LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的國家語言。|  
@@ -54,7 +54,7 @@ ms.locfileid: "73787669"
   
  下列屬性是藉由呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)來設定，可判斷**SQLBrowseConnect**所傳回的結果集。  
   
-|Attribute|說明|  
+|Attribute|描述|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果設定為 SQL_MORE_INFO_YES， **SQLBrowseConnect**會傳回伺服器屬性的擴充字串。<br /><br /> 以下是**SQLBrowseConnect**所傳回之擴充字串的範例：<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 在這個字串中，分號是用來區隔伺服器相關資訊的不同部分， 逗號則是用來區隔不同的伺服器執行個體。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定伺服器名稱， **SQLBrowseConnect**會傳回指定之伺服器的資訊。 如果 SQL_COPT_SS_BROWSE_SERVER 設定為 Null， **SQLBrowseConnect**會傳回網域中所有伺服器的資訊。<br /><br /> <br /><br /> 請注意，由於網路問題， **SQLBrowseConnect**可能不會收到所有伺服器的及時回應。 因此，每個要求所傳回的伺服器清單可能各不相同。|  

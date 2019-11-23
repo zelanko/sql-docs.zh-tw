@@ -34,11 +34,11 @@ ms.locfileid: "73532794"
 
   傳回 PolyBase 計算節點上發生的錯誤。  
   
-|資料行名稱|資料類型|說明|範圍|  
+|Column Name|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|與錯誤相關聯的唯一數值識別碼。|在系統中的所有查詢錯誤中都是唯一的|  
 |來源|`nvarchar(255)`|來源執行緒或進程描述||  
-|型別|`nvarchar(255)`|錯誤的類型。||  
+|類型|`nvarchar(255)`|錯誤的類型。||  
 |create_time|`datetime`|發生錯誤的時間||  
 |compute_node_id|`int`|特定計算節點的識別碼|請參閱 sys.databases 的 compute_node_id [dm_exec_compute_nodes &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|PolyBase 查詢的識別碼（如果有的話）。||  

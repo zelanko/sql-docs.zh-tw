@@ -33,7 +33,7 @@ ms.lasthandoff: 08/29/2019
 ms.locfileid: "70155050"
 ---
 # <a name="backup-devices-sql-server"></a>備份裝置 (SQL Server)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 ( *「備份」* (Backup)) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
   
  **本主題內容：**  
   
@@ -61,12 +61,12 @@ ms.locfileid: "70155050"
  實體備份裝置  
  磁帶機或作業系統所提供的磁碟檔案。 備份可以寫入 1 到 64 部備份裝置。 如果備份需要多部備份裝置，這些裝置都必須對應至單一裝置類型 (磁碟或磁帶)。  
   
- 除了磁片或磁帶之外, SQL Server 備份也可以寫入至 Azure Blob 儲存體服務。  
+ 除了磁碟或磁帶之外，SQL Server 備份也可以寫入 Azure Blob 儲存體服務。  
   
 ##  <a name="DiskBackups"></a>使用磁片備份裝置  
  **本節內容：**  
   
--   [使用機構名稱來指定備份檔案 (Transact-sql)](#BackupFileUsingPhysicalName)  
+-   [使用機構名稱來指定備份檔案（Transact-sql）](#BackupFileUsingPhysicalName)  
   
 -   [指定磁片備份檔案的路徑](#BackupFileDiskPath)  
   
@@ -81,14 +81,14 @@ ms.locfileid: "70155050"
 > [!IMPORTANT]  
 >  我們建議備份磁碟應該與資料庫資料和記錄磁碟使用不同的磁碟。 為了確保您可以在資料或記錄磁碟故障時存取備份，這樣做有其必要。  
   
-###  <a name="BackupFileUsingPhysicalName"></a>使用機構名稱來指定備份檔案 (Transact-sql)  
+###  <a name="BackupFileUsingPhysicalName"></a>使用機構名稱來指定備份檔案（Transact-sql）  
  使用實體裝置名稱來指定備份檔案的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 語法為：  
   
  BACKUP DATABASE *database_name*  
   
  TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- 例如:  
+ 例如：  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -102,7 +102,7 @@ GO
   
  FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- 例如，套用至物件的  
+ 例如，  
   
 ```  
 RESTORE DATABASE AdventureWorks2012   
@@ -110,7 +110,7 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
 ###  <a name="BackupFileDiskPath"></a>指定磁片備份檔案的路徑  
- 指定備份檔案時，您應該輸入完整路徑及檔案名稱。 當您要備份至檔案時，如果僅指定檔案名稱或相對路徑，便會將備份檔案放在預設的備份目錄中。 預設的備份目錄為 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup，其中 *n* 是伺服器執行個體的編號。 因此，針對預設伺服器執行個體，預設備份目錄是：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
+ 指定備份檔案時，您應該輸入完整路徑及檔案名稱。 當您要備份至檔案時，如果僅指定檔案名稱或相對路徑，便會將備份檔案放在預設的備份目錄中。 預設的備份目錄為 C:\Program Files\Microsoft SQL Server\MSSQL. *&lt;n&gt;* \MSSQL\Backup，其中 *&lt;n&gt;* 是伺服器執行個體的編號。 因此，對預設的伺服器執行個體而言，其預設備份目錄為：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup。  
   
  若要避免模稜兩可的情形 (特別是在指令碼中)，建議您在每個 DISK 子句中明確指定備份目錄的路徑。 不過，當您使用「查詢編輯器」時，這就不是那麼重要。 在這種情況下，如果您確定備份檔案是在預設的備份目錄中，即可省略 DISK 子句中的路徑。 例如，下列 `BACKUP` 陳述式會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫備份到預設備份目錄。  
   
@@ -138,7 +138,7 @@ GO
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>指定通用命名慣例 (UNC) 名稱  
  若要在備份或還原命令中指定網路共用，您應該要使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\** <系統名稱> **\\** <共用名稱> **\\** <路徑> **\\** <檔案名稱>。  
   
- 例如:  
+ 例如：  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -153,9 +153,9 @@ GO
   
  **本節內容：**  
   
--   [使用機構名稱來指定備份磁帶 (Transact-sql)](#BackupTapeUsingPhysicalName)  
+-   [使用機構名稱來指定備份磁帶（Transact-sql）](#BackupTapeUsingPhysicalName)  
   
--   [磁帶特定的 BACKUP 和 RESTORE 選項 (Transact-sql)](#TapeOptions)  
+-   [磁帶特定的 BACKUP 和 RESTORE 選項（Transact-sql）](#TapeOptions)  
   
 -   [管理開啟的磁帶](#OpenTapes)  
   
@@ -169,14 +169,14 @@ GO
   
 -   如果在備份作業進行時磁帶備份裝置填滿，但還必須寫入更多資料的話， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提示換新磁帶，並於載入新磁帶後繼續進行備份作業。  
   
-###  <a name="BackupTapeUsingPhysicalName"></a>使用機構名稱來指定備份磁帶 (Transact-sql)  
+###  <a name="BackupTapeUsingPhysicalName"></a>使用機構名稱來指定備份磁帶（Transact-sql）  
  使用磁帶機之實體裝置名稱來指定備份磁帶的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 語法為：  
   
  BACKUP { DATABASE | LOG } *database_name*  
   
  TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- 例如:  
+ 例如：  
   
 ```  
 BACKUP LOG AdventureWorks2012   
@@ -188,9 +188,9 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **'** _實體備份裝置名稱_ **'**  |  **@** _實體備份裝置名稱_var_ }  
   
-###  <a name="TapeOptions"></a>磁帶特定的 BACKUP 和 RESTORE 選項 (Transact-sql)  
+###  <a name="TapeOptions"></a>磁帶特定的 BACKUP 和 RESTORE 選項（Transact-sql）  
  為了方便磁帶管理作業，BACKUP 陳述式提供了下列磁帶專用的選項：  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -207,10 +207,10 @@ GO
 ###  <a name="OpenTapes"></a>管理開啟的磁帶  
  若要檢視開啟的磁帶裝置清單以及掛載要求的狀態，請查詢 [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) 動態管理檢視。 這個檢視顯示所有開啟的磁帶。 這包括正在等待下一個 BACKUP 或 RESTORE 作業而暫時閒置的使用中磁帶。  
   
- 如果磁帶不慎保持在開啟狀態，釋放磁帶最快速的方式就是使用下列命令：RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_。 如需詳細資訊，請參閱 [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
+ 如果磁帶不慎保持在開啟狀態，釋放磁帶最快速的方式為使用下列命令：RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_。 如需詳細資訊，請參閱 [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
   
 ## <a name="using-the-azure-blob-storage-service"></a>使用 Azure Blob 儲存體服務  
- SQL Server 備份可以寫入 Azure Blob 儲存體服務。  如需有關如何使用 Azure Blob 儲存體服務進行備份的詳細資訊, 請參閱[使用 Azure Blob 儲存體服務 SQL Server 備份和還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ SQL Server 備份可以寫入 Azure Blob 儲存體服務。  如需有關如何使用 Azure Blob 儲存體服務進行備份的詳細資訊，請參閱[使用 Azure Blob 儲存體服務 SQL Server 備份和還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 ##  <a name="LogicalBackupDevice"></a>使用邏輯備份裝置  
  *「邏輯備份裝置」* (Logical backup device) 是選擇性的使用者自訂名稱，而且它會指向特定的實體備份裝置 (磁碟檔案或磁帶機)。 邏輯備份裝置可讓您在參考對應的實體備份裝置時，使用間接取值。  
@@ -245,7 +245,7 @@ GO
 >  只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更新版本才支援鏡像備份媒體集。  
   
 ##  <a name="Archiving"></a>封存 SQL Server 備份  
- 建議您使用檔案系統備份公用程式來封存磁碟備份，並將封存保存在異地。 使用磁碟的優點是，您可以使用網路將封存的備份寫入異地磁碟。 Azure Blob 儲存體服務可用來做為異地封存選項。  您可以上傳磁片備份, 或直接將備份寫入 Azure Blob 儲存體服務。  
+ 建議您使用檔案系統備份公用程式來封存磁碟備份，並將封存保存在異地。 使用磁碟的優點是，您可以使用網路將封存的備份寫入異地磁碟。 Azure Blob 儲存體服務可作為異地封存選項。  您可以上傳磁碟備份，或是直接將備份寫入 Azure Blob 儲存體服務中。  
   
  另一種常見的封存方法是將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入本機備份磁碟、將備份封存至磁帶，然後將磁帶存放在異地。  
   
@@ -276,7 +276,7 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)  
   
--   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
+-   [還原 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
  **檢視有關備份裝置的資訊**  
   

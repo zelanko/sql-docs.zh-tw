@@ -55,10 +55,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-verboselevel** _level_  
  指定要加入記錄傳送記錄的訊息層級。 *level* 是下列其中一個整數：  
   
-|level|[描述]|  
+|Hierarchy|描述|  
 |-----------|-----------------|  
 |0|輸出不追蹤和偵錯的訊息。|  
-|@shouldalert|輸出錯誤處理訊息。|  
+|1|輸出錯誤處理訊息。|  
 |2|輸出警告和錯誤處理訊息。|  
 |**3**|輸出參考用訊息、警告和錯誤處理訊息。 這是預設值。|  
 |4|輸出所有偵錯和追蹤訊息。|  
@@ -76,19 +76,19 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  **Sqllogship**應用程式（sqllogship）安裝在 X:\PROGRAM Files\Microsoft SQL Server\120\Tools\Binn 目錄中。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  **sqllogship** 使用「Windows 驗證」。 執行命令的「Windows 驗證」帳戶必須擁有 Windows 目錄存取權和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。 需求取決於 **sqllogship** 命令是指定 **-backup**、 **-copy**或 **-restore** 選項。  
   
-|選項|目錄存取|[權限]|  
+|選項|目錄存取|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|需要讀取/寫入權限才能備份目錄。|需要與 BACKUP 陳述式相同的權限。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。|  
 |**-copy**|需要讀取權限才能備份目錄，以及需要寫入權限才能複製目錄。|需要與 [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) 預存程序相同的權限。|  
-|**-restore**|需要讀取/寫入權限才能複製目錄。|需要與 RESTORE 陳述式相同的權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)備份。|  
+|**-restore**|需要讀取/寫入權限才能複製目錄。|需要與 RESTORE 陳述式相同的權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
   
 > [!NOTE]  
->  若要找出備份和複製目錄的路徑，您可以執行 **sp_help_log_shipping_secondary_database** 預存程序或檢視 **msdb** 中的 **log_shipping_secondary**資料表。 備份目錄和目的地目錄的路徑分別位於 **backup_source_directory** 和 **backup_destination_directory** 資料行中。  
+>  若要找出備份和複製目錄的路徑，您可以執行 **sp_help_log_shipping_secondary_database** 預存程序或檢視 **msdb** 中的 **log_shipping_secondary** 資料表。 備份目錄和目的地目錄的路徑分別位於 **backup_source_directory** 和 **backup_destination_directory** 資料行中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql)   
  [log_shipping_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql)   

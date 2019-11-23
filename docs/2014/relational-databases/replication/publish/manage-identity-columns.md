@@ -56,7 +56,7 @@ ms.locfileid: "73882297"
   
 5.  如果在步驟 4 中選取了 **[自動]** 或 **[True]** ，請在下表中輸入選項的值。 如需如何使用這些設定的詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)中的＜指派識別範圍＞一節。  
   
-    |選項|Value|說明|  
+    |選項|ReplTest1|描述|  
     |------------|-----------|-----------------|  
     |**發行者範圍大小**|範圍大小的整數值 (例如 20000)。|請參閱[複寫識別欄位](replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  
     |**訂閱者範圍大小**|範圍大小的整數值 (例如 10000)。|請參閱[複寫識別欄位](replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  
@@ -137,8 +137,8 @@ ms.locfileid: "73882297"
     -   若要停用自動識別範圍管理，請在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 為property **指定 \@identityrangemanagementoption** 值，並為value**指定**manual **或 \@none** 值。  
   
 ## <a name="see-also"></a>另請參閱  
- [點對點異動複寫](../transactional/peer-to-peer-transactional-replication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   
+ [複寫系統預存程序概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [複寫識別欄位](replicate-identity-columns.md)  
   
   

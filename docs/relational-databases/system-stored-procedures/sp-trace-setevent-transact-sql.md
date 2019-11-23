@@ -45,7 +45,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @traceid = ] trace_id` 是要修改之追蹤的識別碼。 *trace_id*是**int**，沒有預設值。 使用者會採用這個*trace_id*值來識別、修改和控制追蹤。  
+`[ @traceid = ] trace_id` 是要修改之追蹤的識別碼。 *trace_id*是**int**，沒有預設值。 使用者會利用這個*trace_id*值來識別、修改和控制追蹤。  
   
 `[ @eventid = ] event_id` 是要開啟的事件識別碼。 *event_id*是**int**，沒有預設值。  
   
@@ -71,17 +71,17 @@ sp_trace_setevent [ @traceid = ] trace_id
 |24|Lock:Acquired|指出已取得資源 (如資料頁) 的鎖定。|  
 |25|Lock:Deadlock|指出兩項同時發生的交易因試圖取得另一方交易所擁有之資源的不相容鎖定，彼此成為死結。|  
 |26|Lock:Cancel|指出已取消資源鎖定之取得 (例如，由於死結之故)。|  
-|27|Lock:Timeout|指出對於所需資源 (如頁面) 的鎖定要求，因其他交易持有資源的封鎖鎖定而逾時。 超時時間是由 @ @LOCK_TIMEOUT 函數所決定，而且可以使用 SET LOCK_TIMEOUT 語句來設定。|  
+|27|Lock:Timeout|指出對於所需資源 (如頁面) 的鎖定要求，因其他交易持有資源的封鎖鎖定而逾時。 超時時間是由 @@LOCK_TIMEOUT 函數決定，而且可以使用 SET LOCK_TIMEOUT 語句來設定。|  
 |28|Degree of Parallelism Event (7.0 Insert)|發生在執行 SELECT、INSERT 或 UPDATE 陳述式之前。|  
 |29-31|已保留|改用事件 28。|  
 |32|已保留|已保留|  
-|33|例外狀況|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生例外狀況。|  
+|33|Exception|指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生例外狀況。|  
 |34|SP:CacheMiss|指出在程序快取中找不到預存程序。|  
 |35|SP:CacheInsert|指出項目已插入程序快取中。|  
 |36|SP:CacheRemove|指出已從程序快取中移除項目。|  
 |37|SP:Recompile|指出已重新編譯預存程序。|  
 |38|SP:CacheHit|指出在程序快取中找到預存程序。|  
-|39|即將淘汰|即將淘汰|  
+|39|已被取代|已被取代|  
 |40|SQL:StmtStarting|發生在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式已啟動之時。|  
 |41|SQL:StmtCompleted|發生在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式已完成之時。|  
 |42|SP:Starting|指出已啟動預存程序。|  
@@ -132,13 +132,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |101|已保留||  
 |102|Audit Database Scope GDR|發生在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何使用者對僅限資料庫的動作 (例如授與資料庫的權限) 發出陳述式權限的 GRANT、DENY、REVOKE 之時。|  
 |103|Audit Object GDR Event|發生在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何使用者發出物件權限的 GRANT、DENY、REVOKE 之時。|  
-|104|Audit AddLogin Event|在新增或移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入時發生。適用于**sp_addlogin**和**sp_droplogin**。|  
-|105|Audit Login GDR Event|當加入或移除 Windows 登入許可權時發生。適用于**sp_grantlogin**、 **sp_revokelogin**和**sp_denylogin**。|  
+|104|Audit AddLogin Event|當加入或移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入時發生：適用于**sp_addlogin**和**sp_droplogin**。|  
+|105|Audit Login GDR Event|當加入或移除 Windows 登入許可權時發生。針對**sp_grantlogin**、 **sp_revokelogin**和**sp_denylogin**。|  
 |106|Audit Login Change Property Event|發生于修改登入的屬性（但密碼除外）時。適用于**sp_defaultdb**和**sp_defaultlanguage**。|  
 |107|Audit Login Change Password Event|發生在變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入密碼之時。<br /><br /> 並未記錄密碼。|  
 |108|Audit Add Login to Server Role Event|從固定伺服器角色中加入或移除登入時發生。適用于**sp_addsrvrolemember**和**sp_dropsrvrolemember**。|  
 |109|Audit Add DB User Event|當以資料庫使用者身分（Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）將登入加入或移除至資料庫時發生。適用于**sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**和**sp_dropuser**。|  
-|110|Audit Add Member to DB Role Event|將登入當做資料庫使用者（固定或使用者自訂）加入或移除至資料庫時發生。適用于**sp_addrolemember**、 **sp_droprolemember**和**sp_changegroup**。|  
+|110|Audit Add Member to DB Role Event|將登入當做資料庫使用者（固定或使用者自訂）加入或移除至資料庫時發生。針對**sp_addrolemember**、 **sp_droprolemember**和**sp_changegroup**。|  
 |111|Audit Add Role Event|當以資料庫使用者身分加入或移除資料庫的登入時發生。適用于**sp_addrole**和**sp_droprole**。|  
 |112|Audit App Role Change Password Event|發生在變更應用程式角色的密碼之時。|  
 |113|Audit Statement Permission Event|發生在使用陳述式權限 (如 CREATE TABLE) 之時。|  
@@ -205,18 +205,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|發生在建立、改變或卸除伺服器主體之時。|  
 |178|Audit Database Operation Event|發生在執行資料庫作業 (如檢查點或訂閱查詢通知) 之時。|  
 |180|Audit Database Object Access Event|發生在存取資料庫物件 (如結構描述) 之時。|  
-|181|TM：開始事務開始|發生在 BEGIN TRANSACTION 要求啟動之時。|  
-|182|TM：開始交易已完成|發生在 BEGIN TRANSACTION 要求完成之時。|  
-|183|TM：升級事務開始|發生在 PROMOTE TRANSACTION 要求啟動之時。|  
-|184|TM：升級交易已完成|發生在 PROMOTE TRANSACTION 要求完成之時。|  
-|185|TM：認可交易開始|發生在 COMMIT TRANSACTION 要求啟動之時。|  
-|186|TM：認可交易已完成|發生在 COMMIT TRANSACTION 要求完成之時。|  
-|187|TM：復原事務開始|發生在 ROLLBACK TRANSACTION 要求啟動之時。|  
-|188|TM：已完成復原事務|發生在 ROLLBACK TRANSACTION 要求完成之時。|  
+|181|TM: Begin Tran starting|發生在 BEGIN TRANSACTION 要求啟動之時。|  
+|182|TM: Begin Tran completed|發生在 BEGIN TRANSACTION 要求完成之時。|  
+|183|TM: Promote Tran starting|發生在 PROMOTE TRANSACTION 要求啟動之時。|  
+|184|TM: Promote Tran completed|發生在 PROMOTE TRANSACTION 要求完成之時。|  
+|185|TM: Commit Tran starting|發生在 COMMIT TRANSACTION 要求啟動之時。|  
+|186|TM: Commit Tran completed|發生在 COMMIT TRANSACTION 要求完成之時。|  
+|187|TM: Rollback Tran starting|發生在 ROLLBACK TRANSACTION 要求啟動之時。|  
+|188|TM: Rollback Tran completed|發生在 ROLLBACK TRANSACTION 要求完成之時。|  
 |189|Lock： Timeout （timeout > 0）|發生在資源 (如頁面) 鎖定要求逾時之時。|  
-|190|進度報表：線上索引作業|在建置處理序執行時，報告線上索引建置作業的進度。|  
-|191|TM：儲存事務開始|發生在 SAVE TRANSACTION 要求啟動之時。|  
-|192|TM：儲存交易已完成|發生在 SAVE TRANSACTION 要求完成之時。|  
+|190|Progress Report: Online Index Operation|在建置處理序執行時，報告線上索引建置作業的進度。|  
+|191|TM: Save Tran starting|發生在 SAVE TRANSACTION 要求啟動之時。|  
+|192|TM: Save Tran completed|發生在 SAVE TRANSACTION 要求完成之時。|  
 |193|Background Job Error|發生在背景作業異常結束之時。|  
 |194|OLEDB Provider Information|發生在執行分散式查詢及收集提供者連接的對應資訊之時。|  
 |195|Mount Tape|發生在收到磁帶掛載要求之時。|  
@@ -260,17 +260,17 @@ sp_trace_setevent [ @traceid = ] trace_id
 |16|**Reads**|伺服器代表事件執行的邏輯磁碟讀取數。 **Lock：已釋放**事件不會填入此資料行。|  
 |17|**Writes**|伺服器代表事件執行的實體磁碟寫入數。|  
 |18|**CPU**|事件所用的 CPU 時間 (以毫秒為單位)。|  
-|19|**Permissions**|代表權限的點陣圖；供安全性稽核使用。|  
+|19|**權限**|代表權限的點陣圖；供安全性稽核使用。|  
 |20|**Severity**|例外狀況的嚴重性層級。|  
 |21|**EventSubClass**|事件子類別的類型。 所有事件類別的這個資料行都不會擴展。|  
-|22|**Exchange Spill**|系統指派給物件的識別碼。|  
+|22|**ObjectID**|系統指派給物件的識別碼。|  
 |23|**成功**|嘗試使用權限成功；用來進行稽核。<br /><br /> **1** = 成功**0** = 失敗|  
 |24|**IndexID**|事件所影響之物件的索引識別碼。 若要確定物件的索引識別碼，請使用 **sysindexes** 系統資料表的 **indid** 資料行。|  
 |25|**IntegerData**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
-|26|**ServerName**|正在追蹤之實例的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，即*servername*或*servername\instancename*。|  
+|26|**ServerName**|正在追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的名稱，也就是*servername*或*servername\instancename*。|  
 |27|**EventClass**|正在記錄之事件類別的類型。|  
 |28|**ObjectType**|物件類型，例如資料表、函數或預存程序。|  
-|29|**NestLevel**|這個預存程序正在執行的巢狀層級。 請參閱[@ @no__t- &#40;1 transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
+|29|**NestLevel**|這個預存程序正在執行的巢狀層級。 請參閱[@ &#40;@NESTLEVEL transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
 |30|**狀態**|發生錯誤時的伺服器狀態。|  
 |31|**錯誤**|錯誤號碼。|  
 |32|**模式**|取得的鎖定之鎖定模式。 **Lock：已釋放**事件不會填入此資料行。|  
@@ -298,7 +298,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|這是一個 GUID 值，會隨著追蹤所擷取的事件類別而不同。|  
 |55|**IntegerData2**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
 |56|**ObjectID2**|相關物件或實體的識別碼 (如果可以取得的話)。|  
-|57|**型別**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
+|57|**類型**|這是一個整數值，會隨著追蹤所擷取的事件類別而不同。|  
 |58|**OwnerID**|擁有鎖定的物件類型。 只適用於鎖定事件。|  
 |59|**ParentName**|物件所在結構描述的名稱。|  
 |60|**IsSystem**|指出事件是發生在系統處理序或使用者處理序。<br /><br /> **1** = 系統<br /><br /> **0** = 使用者。|  
@@ -307,14 +307,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 **sys.dm_exec_sql_text()** ，以擷取相關聯的 SQL 文字。|  
 |64|**SessionLoginName**|引發工作階段的使用者登入名稱。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **連接到** ，卻以 **Login2**執行陳述式，則 **SessionLoginName** 會顯示 **Login1**，而 **LoginName** 會顯示 **Login2**。 此資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|  
   
- **[@on =]** *開啟*  
+ **[@on=]** *開啟*  
  指定開啟 ON (1) 或關閉 OFF (0) 事件。 *on*是**bit**，沒有預設值。  
   
- 如果*on*設定為**1**，且*column_id*為 Null，則事件會設定為 on，並清除所有資料行。 如果*column_id*不是 null，則該事件的資料行會設定為 ON。  
+ 如果*on*設為**1**，且*column_id*為 Null，則事件會設定為 on，並清除所有資料行。 如果*column_id*不是 null，則該事件的資料行會設定為 ON。  
   
  如果*on*設為**0**，且*column_id*為 Null，則會關閉事件並清除所有資料行。 如果*column_id*不是 null，則會關閉資料行。  
   
- 下表說明 **\@on**與 **@no__t 3columnid**之間的互動。  
+ 下表說明 **\@** 和 **\@columnid**之間的互動。  
   
 |@on|@columnid|結果|  
 |---------|---------------|------------|  
@@ -338,8 +338,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
 |16|函數對於這項追蹤無效。|  
   
-## <a name="remarks"></a>備註  
- **sp_trace_setevent**會執行舊版中提供的擴充預存程式所執行的許多動作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請使用**sp_trace_setevent** ，而不是下列內容：  
+## <a name="remarks"></a>Remarks  
+ **sp_trace_setevent**會執行先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中提供的擴充預存程式所執行的許多動作。 使用**sp_trace_setevent** ，而非下列：  
   
 -   **xp_trace_addnewqueue**  
   
@@ -347,7 +347,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 使用者必須針對每個事件新增的每個資料行，執行**sp_trace_setevent** 。 在每次執行期間，如果 **\@on**設定為**1**， **sp_trace_setevent**會將指定的事件加入至追蹤的事件清單。 如果 **@no__t 1on**設定為**0**， **sp_trace_setevent**會從清單中移除指定的事件。  
+ 使用者必須針對每個事件新增的每個資料行執行**sp_trace_setevent** 。 在每次執行期間，如果 **\@on**設定為**1**， **sp_trace_setevent**就會將指定的事件加入至追蹤的事件清單。 如果 **\@on**設定為**0**， **sp_trace_setevent**就會從清單中移除指定的事件。  
   
  所有 SQL 追蹤預存程式的參數（**sp_trace_xx**）都是嚴格類型。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
@@ -357,9 +357,9 @@ sp_trace_setevent [ @traceid = ] trace_id
  使用者必須有 ALTER TRACE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [fn_trace_geteventinfo &#40;transact-sql&#41; ](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   

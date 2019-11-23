@@ -25,7 +25,7 @@ ms.locfileid: "70155081"
  如需基本備份概念的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼] 按鈕，然後選取指令碼的目的地，以產生相對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]指定備份工作時，可以按一下 [!INCLUDE[tsql](../../includes/tsql-md.md)][[指令碼]](/sql/t-sql/statements/backup-transact-sql) 按鈕，然後選取指令碼的目的地，以產生對應的 **BACKUP** 指令碼。  
   
  **若要使用 SQL Server Management Studio 建立備份**  
   
@@ -42,10 +42,10 @@ ms.locfileid: "70155081"
   
 ## <a name="options"></a>選項。  
   
-### <a name="source"></a>來源  
+### <a name="source"></a>Source  
  **[來源]** 面板的選項會識別資料庫，並指定備份作業的備份類型和元件。  
   
- **[資料庫備份]**  
+ **[資料庫]**  
  選取要備份的資料庫。  
   
  **復原模式**  
@@ -56,15 +56,15 @@ ms.locfileid: "70155081"
   
 |備份類型|可使用於|限制|  
 |-----------------|-------------------|------------------|  
-|完整|資料庫、檔案及檔案群組|在 **master** 資料庫上，只能使用完整備份。<br /><br /> 在簡單復原模式之下，檔案和檔案群組備份只可用於唯讀檔案群組。|  
+|Full|資料庫、檔案及檔案群組|在 **master** 資料庫上，只能使用完整備份。<br /><br /> 在簡單復原模式之下，檔案和檔案群組備份只可用於唯讀檔案群組。|  
 |差異|資料庫、檔案及檔案群組|在簡單復原模式之下，檔案和檔案群組備份只可用於唯讀檔案群組。|  
 |交易記錄|交易記錄|交易記錄備份無法使用於簡單復原模式。|  
   
  **只複製備份**  
- 選取此選項，即可建立只複製備份。 「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
+ 選取此選項，即可建立只複製備份。 *「只複製備份」* (Copy-only backup) 是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)。  
   
 > [!NOTE]  
->  選取 **[差異]** 選項時，您無法建立「只複製」備份。  
+>  選取 [差異] 選項時，您無法建立只複製備份。  
   
  **備份元件**  
  選取要備份的資料庫元件。 如果 **[備份類型]** 清單中已選取 **[交易記錄]** ，則不會啟動此選項。  
@@ -73,7 +73,7 @@ ms.locfileid: "70155081"
   
 |||  
 |-|-|  
-|**[資料庫備份]**|指定備份整個資料庫。|  
+|**[資料庫]**|指定備份整個資料庫。|  
 |**檔案與檔案群組**|指定備份指定的檔案和 (或) 檔案群組。<br /><br /> 選取這個選項會開啟 **[選取檔案與檔案群組]** 對話方塊。 在選取了要備份的檔案群組或檔案，並按一下 **[確定]** 之後，選取項目就會出現在 **[檔案群組與檔案]** 方塊中。|  
   
 ### <a name="destination"></a>目的地  
@@ -93,8 +93,8 @@ ms.locfileid: "70155081"
   
  所顯示的下一組選項取決於選取的目的地類型。 如果選取 [磁碟] 或 [磁帶]，則會顯示下列選項。  
   
- **[加入]**  
- 將檔案或裝置加入至 **[備份至]** 清單。 您在本機磁碟或遠端磁碟上，最多可以同時備份到 64 個裝置。 若要指定遠端磁碟上的檔案，請使用完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)。  
+ **加入**  
+ 將檔案或裝置加入至 **[備份至]** 清單。 您在本機磁碟或遠端磁碟上，最多可以同時備份到 64 個裝置。 若要指定遠端磁碟上的檔案，請使用完整的通用命名慣例 (UNC) 名稱。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)之執行個體的電腦上時，此選項才可以使用。  
   
  **移除**  
  從 **[備份至]** 清單中，移除一個或多個目前選取的裝置。  
@@ -111,7 +111,7 @@ ms.locfileid: "70155081"
  選取用來驗證 Azure 儲存體的 SQL 認證。 如果沒有現有可用的 SQL 認證，請按一下 **[建立]** 按鈕建立新的 SQL 認證。  
   
 > [!IMPORTANT]  
->  在您按一下 **[建立]** 時開啟的對話方塊需要管理憑證或訂閱的發行設定檔。 如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 請參閱中的範例程式碼,[以建立認證](../security/authentication-access/create-a-credential.md#Credential)主題, 以使用 transact-sql 來建立認證。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]** 、選取 **[新增]** ，然後選取 **[認證]** 。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
+>  在您按一下 **[建立]** 時開啟的對話方塊需要管理憑證或訂閱的發行設定檔。 如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 請參閱中的範例程式碼，[以建立認證](../security/authentication-access/create-a-credential.md#Credential)主題，以使用 transact-sql 來建立認證。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]** 、選取 **[新增]** ，然後選取 **[認證]** 。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
   
  **Azure 儲存體容器**  
  指定 Azure 儲存體容器的名稱  

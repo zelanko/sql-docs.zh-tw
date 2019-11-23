@@ -44,10 +44,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  針對任何其他資料類型或**Varbinary （max）** columnthat 的資料行要求路徑名稱時，不會有 FILESTREAM 儲存屬性會造成查詢編譯時期錯誤。  
   
- *\@option*  
- 定義路徑的伺服器元件如何格式化的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *@no__t 1option*可以是下列其中一個值。 預設值為 0。  
+ *\@選項*  
+ 定義路徑的伺服器元件如何格式化的整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *\@選項*可以是下列其中一個值。 預設值是 0。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0|傳回轉換成 BIOS 格式的伺服器名稱，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|在不轉換的情況下傳回伺服器名稱，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  當資料庫屬於 Always On 可用性群組時， *use_replica_computer_name*的值會對**PathName**函數的輸出產生下列影響：  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |未指定。|此函數會傳回路徑中的虛擬網路名稱 (VNN)。|  
 |0|此函數會傳回路徑中的虛擬網路名稱 (VNN)。|  
@@ -72,7 +72,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>傳回值  
  傳回的值是 BLOB 的完整邏輯路徑或 NETBIOS 路徑。 PathName 不會傳回 IP 位址。 尚未建立 FILESTREAM BLOB 時，便會傳回 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  必須可以在呼叫 PathName 的任何查詢中看到 ROWGUID 資料行。  
   
  只能使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建立 FILESTREAM BLOB。  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. 顯示資料表中的 FILESTREAM BLOB 路徑  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>b. 顯示資料表中的 FILESTREAM BLOB 路徑  
  下列範例會建立及顯示三個 FILESTREAM BLOB 的路徑。  
   
 ```sql  
@@ -149,7 +149,7 @@ DROP DATABASE PathNameDB;
   
 ## <a name="see-also"></a>另請參閱  
  [二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;transact-sql&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;transact-sql&#41; ](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [使用 OpenSqlFilestream 存取 FILESTREAM 資料](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

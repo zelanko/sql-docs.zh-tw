@@ -31,7 +31,7 @@ ms.locfileid: "73844401"
   
 ||  
 |-|  
-|**適用於**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>Permissions  
  主要資料庫中的任何使用者都可以呼叫這個系統預存程序。 登入必須是同時位於主要和作用中次要資料庫的使用者。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在**sp_wait_for_database_copy_sync**呼叫之前認可的所有交易都會傳送至作用中次要資料庫。  
   
 ## <a name="examples"></a>範例  

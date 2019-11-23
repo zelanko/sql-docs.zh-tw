@@ -39,7 +39,7 @@ ms.locfileid: "72782646"
 
 如需語法和範例的詳細資訊，請參閱[Analysis Services PowerShell 參考](/sql/analysis-services/powershell/analysis-services-powershell-reference)。
 
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> 必要條件  
  您必須安裝 Windows PowerShell 2.0。 此元件預設安裝在較新版的 Windows 作業系統上。 如需詳細資訊，請參閱[安裝 Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
@@ -61,7 +61,7 @@ ms.locfileid: "72782646"
 |表格式執行個體與資料庫|支援本機和遠端管理。<br /><br /> 如需詳細資訊，請參閱8月2011的 blog，瞭解如何[使用 PowerShell 管理表格式模型](https://go.microsoft.com/fwlink/?linkID=227685)。|  
 |PowerPivot for SharePoint 執行個體與資料庫|有限支援。 您可以使用 HTTP 連接和 SQLAS 提供者來檢視執行個體與資料庫資訊。<br /><br /> 但是，不支援使用指令程式。 您不得使用 Analysis Services PowerShell 備份與還原記憶體中 InMemory PowerPivot 資料庫，也不得加入或移除角色、處理資料，或執行任意的 XMLA 指令碼。<br /><br /> 基於組態目的，PowerPivot for SharePoint 具有個別提供的內建 PowerShell 支援。 如需詳細資訊，請參閱[PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。|  
 |本機 Cube 的原生連接<br /><br /> "Data Source = c:\backup\test.cub"|不支援。|  
-|SharePoint 中 BI 語意模型 (.bism) 連接檔案的 HTTP 連接<br /><br /> 「資料來源 =http://server/shared_docs/name.bism 」|不支援。|  
+|SharePoint 中 BI 語意模型 (.bism) 連接檔案的 HTTP 連接<br /><br /> 「資料來源 =http://server/shared_docs/name.bism」|不支援。|  
 |PowerPivot 資料庫的內嵌連接<br /><br /> "Data Source = $Embedded $"|不支援。|  
 |Analysis Services 預存程序中的本機伺服器內容<br /><br /> "Data Source = *"|不支援。|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "72782646"
   
  -Credential 參數會接受可指定使用者名稱和密碼的 PSCredential 物件。 在 Analysis Services PowerShell 中，-Credential 參數適用于向 Analysis Services 發出連線要求的 Cmdlet，而不是在現有連接的內容中執行的 Cmdlet。 提出連接連接要求的指令程式包括 Invoke-ASCmd、Backup-ASDatabase 和 Restore-ASDatabase。 在這些 Cmdlet 中，可以使用-Credential 參數，假設符合下列準則：  
   
-1.  伺服器會設定成 HTTP 存取，也就是說，IIS 會處理連接、讀取使用者名稱和密碼，並在連接到 Analysis Services 時模擬該使用者識別。 如需詳細資訊，請參閱 [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)(Microsoft BI 驗證及識別委派)。  
+1.  伺服器會設定成 HTTP 存取，也就是說，IIS 會處理連接、讀取使用者名稱和密碼，並在連接到 Analysis Services 時模擬該使用者識別。 如需詳細資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
 2.  針對 Analysis Services HTTP 存取建立的 IIS 虛擬目錄會設定成基本驗證。  
   
@@ -201,7 +201,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  如果您使用本主題中的指示來設定伺服器以進行 HTTP 存取，HTTP 連接會很有用：在[Internet Information Services &#40;IIS&#41; 8.0 上設定 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- 假設 http://localhost/olap/msmdpump.dll 的伺服器 URL，連接看起來可能如下所示：  
+ 假設 http://localhost/olap/msmdpump.dll的伺服器 URL，連接看起來可能如下所示：  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -273,7 +273,7 @@ Restart-Service mssqlserverolapservice
     Get-PSDrive  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安裝 SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
  [使用 PowerShell 管理表格式模型（blog）](https://go.microsoft.com/fwlink/?linkID=227685)   
  [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  

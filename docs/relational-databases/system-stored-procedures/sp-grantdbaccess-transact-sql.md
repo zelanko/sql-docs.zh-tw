@@ -31,7 +31,7 @@ ms.locfileid: "72304861"
   將資料庫使用者加入目前資料庫中。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]，請改用[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) 。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改用[CREATE USER](../../t-sql/statements/create-user-transact-sql.md) 。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,17 +43,17 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @loginame = ] 'login_ '` 是要對應至新資料庫使用者的 Windows 群組、Windows 登入或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 Windows 群組和 Windows 登入的名稱必須以格式為*domain*\\*login*的 windows 功能變數名稱限定;例如， **LONDON\Joeb**。 登入不能已對應至資料庫中的使用者。 *登*入是**sysname**，沒有預設值。  
+`[ @loginame = ] 'login_ '` 是要對應至新資料庫使用者的 Windows 群組、Windows 登入或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 Windows 群組和 Windows 登入的名稱必須以*domain*\\*Login*格式的 windows 功能變數名稱加以限定。例如， **LONDON\Joeb**。 登入不能已對應至資料庫中的使用者。 *登*入是**sysname**，沒有預設值。  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 是新資料庫使用者的名稱。 *name_in_db*是輸出變數，其資料類型為**sysname**，預設值為 Null。 如果未指定，則會使用*登*入。 如果指定為具有 Null 值的輸出變數， **@no__t 1name_in_db**會設定為*login*。 *name_in_db*不能已存在於目前的資料庫中。  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` 是新資料庫使用者的名稱。 *name_in_db*是輸出變數，其資料類型為**sysname**，預設值為 Null。 如果未指定，則會使用*登*入。 如果指定為具有 Null 值的輸出變數， **\@name_in_db**會設定為*login*。 *name_in_db*不能已存在於目前的資料庫中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sp_grantdbaccess**會呼叫 CREATE USER，以支援其他選項。 如需建立資料庫使用者的詳細資訊，請參閱[ &#40;CREATE USER&#41;transact-sql](../../t-sql/statements/create-user-transact-sql.md)。 若要從資料庫中移除資料庫使用者，請使用[DROP user](../../t-sql/statements/drop-user-transact-sql.md)。  
   
- **sp_grantdbaccess**無法在使用者自訂交易內執行。  
+ **sp_grantdbaccess**不能在使用者自訂交易內執行。  
   
 ## <a name="permissions"></a>Permissions  
  需要**db_owner**固定資料庫角色或**db_accessadmin**固定資料庫角色中的成員資格。  

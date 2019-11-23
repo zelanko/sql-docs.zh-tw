@@ -36,7 +36,7 @@ class SQLErrorLogFile
 };  
 ```  
   
-## <a name="properties"></a>屬性  
+## <a name="properties"></a>[屬性]  
  SQLErrorLogFile 類別會定義下列屬性。  
   
 |||  
@@ -45,9 +45,9 @@ class SQLErrorLogFile
 |InstanceName|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 記錄檔所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |LastModified|資料類型： **datetime**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 上次修改記錄檔的日期。|  
 |LogFileSize|資料類型： **uint32**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 記錄檔的大小 (以位元組為單位)。|  
-|名稱|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 記錄檔的名稱。|  
+|[名稱]|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 記錄檔的名稱。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
@@ -82,7 +82,7 @@ Next
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  若要透過 WMI 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔，您必須在本機和遠端電腦上具有下列許可權：  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間的讀取權限。 根據預設，每個人都可從啟用帳戶權限取得讀取權限。  

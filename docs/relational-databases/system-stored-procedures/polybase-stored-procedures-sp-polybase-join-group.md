@@ -44,7 +44,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  裝載 PolyBase 向外延展群組之 SQL Server 前端節點的電腦名稱稱。 *\@head_node_address*是 Nvarchar （255）。  
   
  *\@dms_control_channel_port* = dms_control_channel_port  
- 前端節點 PolyBase 資料移動服務的控制通道執行所在的埠。 *@no__t 1dms_control_channel_port*是不帶正負號的 __int16。 預設值為**16450**。  
+ 前端節點 PolyBase 資料移動服務的控制通道執行所在的埠。 *\@dms_control_channel_port*是不帶正負號的 __int16。 預設值為**16450**。  
   
  *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
  在 PolyBase 向外延展群組中，SQL Server 實例的前端節點名稱。 *\@head_node_sql_server_instance_name*是 Nvarchar （16）。  
@@ -55,8 +55,8 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 權限。  
   
-## <a name="remarks"></a>備註  
- 執行預存程式之後，請關閉 PolyBase 引擎，然後重新開機電腦上的 PolyBase 資料移動服務。 若要確認在前端節點上執行下列 DMV： **sys.databases _exec_compute_nodes**。  
+## <a name="remarks"></a>Remarks  
+ 執行預存程式之後，請關閉 PolyBase 引擎，然後重新開機電腦上的 PolyBase 資料移動服務。 若要確認在前端節點上執行下列 DMV： **sys. dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>範例  
  此範例會將目前的電腦當做計算節點加入至 PolyBase 群組。  前端節點的名稱是**HST01** ，而前端節點上 SQL Server 實例的名稱是**MSSQLSERVER**。  

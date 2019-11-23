@@ -50,7 +50,7 @@ ms.locfileid: "73787774"
  如需資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>SQLBindParameter 對增強型日期和時間功能的支援  
- 日期/時間類型的參數值會依照[從 C 轉換成 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)中所述的方式進行轉換。 請注意， **time**和**datetimeoffset**類型的參數必須將*ValueType*指定為**SQL_C_DEFAULT**或**SQL_C_BINARY** （如果其對應的結構）（**SQL_SS_TIME2_STRUCT**和**SQL_SS_** 會使用 TIMESTAMPOFFSET_STRUCT）。  
+ 日期/時間類型的參數值會依照[從 C 轉換成 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)中所述的方式進行轉換。 請注意， **time**和**datetimeoffset**類型的參數必須*將 ValueType*指定為**SQL_C_DEFAULT**或**SQL_C_BINARY** （如果使用其對應的結構（**SQL_SS_TIME2_STRUCT**和**SQL_SS_TIMESTAMPOFFSET_STRUCT**）。  
   
  如需詳細資訊，請參閱[日期和&#40;時間&#41;改善 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

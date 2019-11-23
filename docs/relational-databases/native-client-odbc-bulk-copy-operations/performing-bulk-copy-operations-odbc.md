@@ -49,7 +49,7 @@ ms.locfileid: "73785040"
   
  如需使用最低限度記錄的詳細資訊，請參閱[大量匯入的最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本中使用 bcp.exe 時，如果在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前沒有錯誤，則可能會看到錯誤。 這是因為在更新版本中，bcp.exe 不再執行隱含資料類型轉換。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前，如果目標資料表有 money 資料類型，則 bcp.exe 會將數值資料轉換為 money 資料類型。 不過，在這種情況下，bcp.exe 只會截斷額外的欄位。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，當檔案和目標資料表之間的資料類型不符時，如果有任何資料必須截斷才能容納到目標資料表，bcp.exe 將會引發錯誤。 若要解決此錯誤，請修正資料以符合目標資料類型。 或者，使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前版本的 bcp.exe。  
   
 ## <a name="in-this-section"></a>本節內容  

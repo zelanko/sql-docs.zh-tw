@@ -1,5 +1,5 @@
 ---
-title: _os_enumerate_fixed_drives （Transact-sql） |Microsoft Docs
+title: sys.databases dm_os_enumerate_fixed_drives （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71342513"
 ---
-# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys.databases _os_enumerate_fixed_drives （Transact-sql）
+# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys.databases dm_os_enumerate_fixed_drives （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -31,7 +31,7 @@ SQL Server 2019 中引進。
 
 列舉掛接到磁碟機號的磁片區，例如 `C:\`。
 
-|資料行名稱|資料類型|描述|
+|資料行名稱|[名稱]|描述|
 |-----------------|---------------|-----------------|  
 |`fixed_drive_path`|`nvarchar(512)`|磁片區的路徑，例如 `C:\`。|  
 |`drive_type`|`int`|磁片磁碟機類型的程式碼。 請參閱[`GetDriveTypeW` 函數](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew)。|

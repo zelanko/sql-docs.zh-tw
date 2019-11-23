@@ -34,7 +34,7 @@ ms.locfileid: "70176031"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原元件提供基本的防護措施，可保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所儲存的重要資料。 若要將重大資料遺失的風險降到最低，則需要定期備份資料庫，以保留對資料的修改。 計畫完善的備份和還原策略，可協助保護資料庫免於因各種失敗造成損毀而遺失資料。 藉由還原備份組再復原資料庫，以測試您的策略，讓您準備好有效因應損毀情況。  
   
- 除了用來儲存備份的本機儲存體之外, SQL Server 也支援備份至 Azure Blob 儲存體服務並從中還原。 如需詳細資訊, 請參閱[使用 Azure Blob 儲存體服務 SQL Server 備份和還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 除了儲存備份的本機儲存體之外，SQL Server 也支援備份至與還原自 Azure Blob 儲存體服務。 如需詳細資訊，請參閱[使用 Azure Blob 儲存體服務 SQL Server 備份和還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "70176031"
   
     -   硬體故障 (例如，磁碟機損壞或伺服器永久損毀)。  
   
-    -   天然災害。 藉由使用 SQL Server 備份至 Azure Blob 儲存體服務, 您可以在與內部部署位置不同的區域中建立離站備份, 以在發生嚴重嚴重損壞影響內部部署位置的情況下使用。  
+    -   天然災害。 藉由對 Azure Blob 儲存體服務使用 SQL Server 備份，就可以在與內部部署位置不同的區域建立異地備份，以便在發生影響內部部署位置的天然災害事件時使用。  
   
 -   此外，資料庫備份對於例行管理很有用，例如，將資料庫從一部伺服器複製到另一部伺服器、設定 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或資料庫鏡像，以及封存。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70176031"
  失敗後可用來還原和復原資料的資料複本。 資料庫備份也可用來將資料庫的複本還原到新位置。  
   
  備份裝置  
- 寫入 SQL Server 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入至 Azure Blob 儲存體服務, 而且會使用**URL**格式來指定備份檔案的目的地和名稱。 如需詳細資訊, 請參閱[使用 Azure Blob 儲存體服務 SQL Server 備份和還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 寫入 SQL Server 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入 Azure Blob 儲存體服務，而且會使用 **URL** 格式來指定備份檔案的目的地和名稱。 如需詳細資訊，請參閱[使用 Azure Blob 儲存體服務 SQL Server 備份和還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  備份媒體  
  已寫入一個或多個備份的一個或多個磁帶或磁碟檔案。  

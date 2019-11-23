@@ -23,12 +23,12 @@ ms.locfileid: "73728805"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  如果您想要比較複雜的規則，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中將多個 **AND** 或 **OR** 條件新增至商務規則。  
+  如果您想要比較複雜的規則，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中將多個 **AND** 或 **OR** 條件新增至商務規則。  
   
 > [!NOTE]  
 >  如果您建立使用 **OR** 運算子的商務規則，請考慮為每個可獨立評估的條件陳述式建立不同的規則。 然後您可以視需要排除規則，提供更多彈性和輕鬆疑難排解。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -41,7 +41,7 @@ ms.locfileid: "73728805"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
+2.  從功能表列，指向 [管理]，然後按一下 [商務規則]。  
   
 3.  在 [商務規則] 頁面上，從 [模型] 下拉式清單選取模型。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73728805"
   
 8.  在 [If] 區塊下，從左側的邏輯運算子下拉式清單中選取 [AND/OR/ NOT]。  
   
-9. 按一下 **[加入]** 。 面板隨即出現。  
+9. 按一下 **[新增]** 。 面板隨即顯示。  
   
 10. 從 [屬性] 下拉式清單中選取屬性。  
   

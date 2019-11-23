@@ -149,7 +149,7 @@ ms.locfileid: "73637520"
  *SCORE_METHOD*  
  決定用來計算分岔準則的方法。 下列是可以使用的選項：  
   
-|ID|名稱|  
+|ID|[名稱]|  
 |--------|----------|  
 |1|熵|  
 |3|使用 K2 優先的貝氏|  
@@ -162,7 +162,7 @@ ms.locfileid: "73637520"
  *SPLIT_METHOD*  
  決定用來分岔節點的方法。 下列是可以使用的選項：  
   
-|ID|名稱|  
+|ID|[名稱]|  
 |--------|----------|  
 |1|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
 |2|**Complete:** 表示樹狀結構可以建立與屬性值一樣多的分岔。|  
@@ -173,7 +173,7 @@ ms.locfileid: "73637520"
 ### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
   
-|模型旗標|說明|  
+|模型旗標|描述|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|表示資料行將被視為擁有兩個可能狀態：`Missing` 和 `Existing`。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
@@ -202,7 +202,7 @@ ms.locfileid: "73637520"
 >  系統支援 Cyclical 和 Ordered 內容類型，但是演算法將它們視為離散值，因此不會執行特殊處理。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)   
+ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
  [決策樹模型查詢範例](decision-trees-model-query-examples.md)   
  [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   

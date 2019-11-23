@@ -29,7 +29,7 @@ ms.locfileid: "72909689"
 
   設定主要資訊、加入本機和遠端監視器連結，以及在次要伺服器上建立所指定主要資料庫的複製和還原作業。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -91,7 +91,7 @@ sp_add_log_shipping_secondary_primary
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- None  
+ 無  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_secondary_primary**必須從次要伺服器的**master**資料庫中執行。 這個預存程序會執行下列動作：  
@@ -110,11 +110,11 @@ sp_add_log_shipping_secondary_primary
   
     5.  將**log_shipping_secondary**專案中的還原作業識別碼設定為還原作業的作業識別碼。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
- 這個範例說明如何使用**sp_add_log_shipping_secondary_primary**預存程式來設定次要伺服器上 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 主資料庫的資訊。  
+ 這個範例說明如何使用**sp_add_log_shipping_secondary_primary**預存程式來設定次要伺服器上主資料庫 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的資訊。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -133,7 +133,7 @@ EXEC master.dbo.sp_add_log_shipping_secondary_primary
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

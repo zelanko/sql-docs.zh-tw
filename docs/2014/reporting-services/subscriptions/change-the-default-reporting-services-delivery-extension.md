@@ -22,7 +22,7 @@ ms.locfileid: "72783246"
 # <a name="change-the-default-reporting-services-delivery-extension"></a>變更預設 Reporting Services 傳遞延伸模組
   您可以修改 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態設定，以變更訂閱定義頁面的 **[傳遞者]** 清單中所顯示的預設傳遞延伸模組。 例如，您可以修改組態，使得在使用者建立新的訂閱時依預設會選取檔案共用傳遞，而不是電子郵件傳遞。 您也可以變更傳遞延伸模組在使用者介面中列出的順序。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 原生模式 | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包含電子郵件和 Windows 檔案共用傳遞延伸模組。 如果您部署了自訂或協力廠商延伸模組來支援自訂傳遞，那麼報表伺服器可能會有其他的傳遞延伸模組。 傳遞延伸模組是否可用取決於該模組是否部署於報表伺服器。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "72783246"
     Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Rsreportserver.config 設定檔](../report-server/rsreportserver-config-configuration-file.md)   
  [Rsreportserver.config 設定檔](../report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 中的檔案共用傳遞](file-share-delivery-in-reporting-services.md)   

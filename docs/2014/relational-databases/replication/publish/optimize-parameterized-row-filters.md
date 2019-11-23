@@ -41,7 +41,7 @@ ms.locfileid: "73882142"
   
 ###  <a name="Recommendations"></a> 建議  
   
--   在使用參數化篩選器時，您可以在建立發行集時，藉由指定 [使用資料分割群組] 選項或 [保留資料分割變更] 選項來控制合併式複寫要如何處理篩選。 這兩個選項都可以透過在發行集資料庫中儲存其他中繼資料，以提升具有篩選發行項之發行集的同步處理效能。 您可以在建立發行項時，藉由設定 [資料分割選項] 來控制要如何在訂閱者之間共用資料。 如需有關這些需求的詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
+-   在使用參數化篩選器時，您可以在建立發行集時，藉由指定 [使用資料分割群組] 選項或 [保留資料分割變更] 選項來控制合併式複寫要如何處理篩選。 這兩個選項都可以透過在發行集資料庫中儲存其他中繼資料，以提升具有篩選發行項之發行集的同步處理效能。 您可以在建立發行項時，藉由設定 [資料分割選項] 來控制要如何在訂閱者之間共用資料。 如需有關這些需求的詳細資訊，請參閱＜ [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
      對於 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact 訂閱者，必須將 keep_partition_changes 設為 true，才能確保正確傳播刪除。 設為 false 時，訂閱者所擁有的資料列可能比預期多。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73882142"
   
     -   **這個資料表中的一個資料列只會提供給一個訂閱**  
   
-     若您選取 **[這個資料表中的一個資料列只會提供給一個訂閱]** ，合併式複寫可藉由儲存和處理較少中繼資料來將效能最佳化。 不過您必須確定資料分割方式不會將資料列複寫至多個訂閱者。 如需進一步資訊，請參閱主題＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞中的「設定資料分割選項」。  
+     若您選取 **[這個資料表中的一個資料列只會提供給一個訂閱]** ，合併式複寫可藉由儲存和處理較少中繼資料來將效能最佳化。 不過您必須確定資料分割方式不會將資料列複寫至多個訂閱者。 如需進一步資訊，請參閱主題＜ [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)＞中的「設定資料分割選項」。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73882142"
   
     -   **不重疊，共用於訂閱之間**  
   
-     如需這些選項及其如何與 **[加入篩選]** 和 **[編輯篩選]** 對話方塊中可用之選項相關聯的詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞的「設定資料分割選項」一節。  
+     如需這些選項及其如何與 **[加入篩選]** 和 **[編輯篩選]** 對話方塊中可用之選項相關聯的詳細資訊，請參閱＜ [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)＞的「設定資料分割選項」一節。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

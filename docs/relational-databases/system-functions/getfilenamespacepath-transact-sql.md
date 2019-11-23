@@ -43,17 +43,17 @@ ms.locfileid: "72278329"
  資料*行名稱*值必須是有效的資料行名稱。 它不可以是運算式，或是從其他資料類型之資料行轉換或轉型的值。  
   
  *is_full_path*  
- 指定傳回相對路徑或絕對路徑的整數運算式。 *is_full_path*可以有下列其中一個值：  
+ 指定傳回相對路徑或絕對路徑的整數運算式。 *is_full_path*可以具有下列其中一個值：  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0**|傳回資料庫層級目錄內的相對路徑。<br /><br /> 這是預設值。|  
 |**1**|傳回以 `\\computer_name` 開始的完整 UNC 路徑。|  
   
- *\@option*  
- 定義路徑之伺服器元件格式化方式的整數運算式。 *@no__t 1option*可以有下列其中一個值：  
+ *\@選項*  
+ 定義路徑之伺服器元件格式化方式的整數運算式。 *\@選項*可以有下列其中一個值：  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0**|傳回轉換成 NetBIOS 格式的伺服器名稱，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 這是預設值。|  
 |**1**|在不轉換的情況下傳回伺服器名稱，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -86,7 +86,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>範例  
  下列範例示範如何呼叫**GetFileNamespacePath**函數，以取得 FileTable 中檔案或目錄的 UNC 路徑。  
@@ -102,6 +102,6 @@ WHERE Name = N'document.docx';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FileTable 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [使用 FileTables 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

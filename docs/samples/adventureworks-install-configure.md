@@ -11,7 +11,7 @@ ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 0d9f6842ebe5e7d6ee923eef17f491f0cb7ef6ec
 ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "74056746"

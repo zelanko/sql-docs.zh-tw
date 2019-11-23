@@ -24,11 +24,11 @@ ms.locfileid: "73729515"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  當您需要成員可存在於任何層級的不完全階層時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立明確階層。 明確階層包含來自單一實體的成員。  
+  當您需要成員可存在於任何層級的不完全階層時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立明確階層。 明確階層包含來自單一實體的成員。  
   
  建立明確階層之後，您可以在總管 功能區域的這個階層中加入成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -58,10 +58,10 @@ ms.locfileid: "73729515"
 ## <a name="grid-columns"></a>方格資料行  
  對於您建立的每個明確階層，會將含有七個資料行的資料列新增到方格。 下列是資料行的描述。  
   
-|名稱|說明|  
+|[名稱]|描述|  
 |----------|-----------------|  
 |狀態|實體狀態。 當您按一下 [儲存] 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "I正在更新狀態的 con」)<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "I錯誤狀態的 con」)<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "I「確定」狀態的 con)|  
-|名稱|明確階層名稱。|  
+|[名稱]|明確階層名稱。|  
 |強制性|指定明確階層是否為強制性。|  
 |建立者|建立明確階層之使用者的使用者名稱。|  
 |建立於|建立明確階層的日期和時間。|  

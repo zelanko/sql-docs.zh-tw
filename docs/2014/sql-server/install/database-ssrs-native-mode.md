@@ -46,8 +46,8 @@ ms.locfileid: "71952313"
  **認證類型**  
  指定報表伺服器用來連接到報表伺服器資料庫的認證。 您可以指定的認證類型包括服務帳戶、Windows 網域使用者、Windows 本機使用者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入。 如需選取認證的詳細資訊，請參閱[設定報表伺服器資料庫&#40;連接 SSRS&#41;Configuration Manager](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
- **使用者名稱**  
- 如果您是使用 Windows 認證，請指定網域使用者帳戶；如果您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，請指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您使用 Windows 認證，請以下列格式指定： *@no__t 1domain > \\ < 帳戶 @ no__t-3*。  
+ **[使用者名稱]**  
+ 如果您是使用 Windows 認證，請指定網域使用者帳戶；如果您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，請指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您使用 Windows 認證，請以下列格式指定： *\<網域 >\\< 帳戶\>* 。  
   
  **密碼**  
  指定帳戶的密碼。  

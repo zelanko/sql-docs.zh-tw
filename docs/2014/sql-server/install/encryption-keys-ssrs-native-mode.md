@@ -60,7 +60,7 @@ ms.locfileid: "71952176"
   
  請注意，如果您有許多資料來源和訂閱，重新產生對稱金鑰可能是一個長時間執行的處理序。  
   
- **刪除**  
+ **Delete**  
  刪除對稱金鑰和所有加密的內容，其中包含連接字串和預存認證。 如果您無法還原對稱金鑰，就應只刪除該金鑰。  
   
  刪除對稱金鑰之後，您必須重新輸入遺漏的連接字串和報表中的預存認證，以及不再具有這些值的共用資料來源。 您也必須更新使用儲存加密資料之傳遞延伸模組的所有訂閱。 其中包含檔案共用傳遞延伸模組，以及使用加密值的任何協力廠商傳遞延伸模組。  
@@ -71,7 +71,7 @@ ms.locfileid: "71952176"
  [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生&#41;模式](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [刪除和重新建立加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

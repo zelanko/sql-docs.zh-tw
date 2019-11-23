@@ -25,7 +25,7 @@ ms.locfileid: "72797808"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作提供者指令程式的子集，如下表所示。  
   
-|指令程式|標準的別名|cmd 別名|UNIX Shell 別名|[描述]|  
+|指令程式|標準的別名|cmd 別名|UNIX Shell 別名|描述|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|取得目前的節點。|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|變更目前的節點。|  
@@ -130,7 +130,7 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
  [使用 SQL Server PowerShell 路徑](work-with-sql-server-powershell-paths.md)   
  [將 URN 轉換成 SQL Server 提供者路徑](../database-engine/convert-urns-to-sql-server-provider-paths.md)   

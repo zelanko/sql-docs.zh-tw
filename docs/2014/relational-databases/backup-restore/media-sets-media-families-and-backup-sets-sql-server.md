@@ -31,10 +31,10 @@ ms.lasthandoff: 08/29/2019
 ms.locfileid: "70154794"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
-  本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的基本備份媒體詞彙，適合供初次使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者閱讀。 此主題描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於備份媒體的格式、備份媒體與備份裝置之間的對應、備份在備份媒體上的組織，以及媒體集和媒體家族的數個考量。 此主題也描述第一次使用備份媒體，或將舊媒體集取代為新媒體集之前初始化或格式化備份媒體的步驟、如何覆寫媒體集中舊備份組的步驟，以及如何將新備份組附加至媒體集的步驟。  
+  本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的基本備份媒體詞彙，適合供初次使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用者閱讀。 此主題描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於備份媒體的格式、備份媒體與備份裝置之間的對應、備份在備份媒體上的組織，以及媒體集和媒體家族的數個考量。 此主題也描述第一次使用備份媒體，或將舊媒體集取代為新媒體集之前初始化或格式化備份媒體的步驟、如何覆寫媒體集中舊備份組的步驟，以及如何將新備份組附加至媒體集的步驟。  
   
 > [!NOTE]  
->  如需 SQL Server 備份至 Azure Blob 儲存體服務的詳細資訊, 請參閱[SQL Server 使用 Azure Blob 儲存體服務的備份與還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+>  如需 SQL Server 備份至 Azure Blob 儲存體服務的詳細資訊，請參閱[SQL Server 使用 Azure Blob 儲存體服務的備份與還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
   
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
@@ -54,9 +54,9 @@ ms.locfileid: "70154794"
  媒體集是在備份作業格式化備份媒體期間，於備份媒體上建立。 如需詳細資訊，請參閱本主題稍後的 [建立新媒體集](#CreatingMediaSet)。 完成格式化後，每個檔案或磁帶會包含媒體集的媒體標頭，且備妥要接收備份內容。 有了適當的標頭，備份作業就可以在指定供作業使用的所有備份裝置上，繼續將指定的資料備份至備份媒體。  
   
 > [!NOTE]  
->  媒體集可以鏡像，避免損毀媒體磁碟區 (磁帶或磁碟檔案)。 如需詳細資訊，請參閱本主題稍後的 [鏡像備份媒體集 &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)的使用者閱讀。  
+>  媒體集可以鏡像，避免損毀媒體磁碟區 (磁帶或磁碟檔案)。 如需詳細資訊，請參閱[鏡像備份媒體集 &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)。  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]或更新版本可以讀取壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] 或更新版本可以讀取壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
   
   
 ### <a name="media-families"></a>媒體家族  
@@ -89,7 +89,7 @@ ms.locfileid: "70154794"
 -   媒體描述是否包含 MTF 媒體標籤或媒體描述。  
   
     > [!NOTE]  
-    >  用於備份或還原作業的所有媒體都使用名[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]為的標準備份格式, 保留由另一個應用程式所寫入的任何 mtf 媒體標籤, 但是不會寫入 mtf 媒體標籤。  
+    >  用於備份或還原作業的所有媒體都使用稱為的標準備份格式，[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] 保留由另一個應用程式所寫入的任何 MTF 媒體標籤，但是不會寫入 MTF 媒體標籤。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format 媒體標籤或媒體描述 (自由形式文字)。  
   
@@ -210,7 +210,7 @@ GO
  Microsoft Windows 備份和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份可以共用相同的媒體，但是無法相互操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份無法備份 Windows 資料。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]或更新版本可以讀取壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] 或更新版本可以讀取壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
   
   
 ####  <a name="Overwriting"></a>覆寫備份組  
@@ -225,7 +225,7 @@ GO
   
 -   媒體上的現有備份尚未到期 (若指定了 SKIP，則不會檢查到期日)。  
   
-     到期日會指定備份過期的日期，之後就可以被別的備份覆寫。 建立備份時，可以指定到期日。 依預設，到期日是由 **sp_configure** 所設定的 **media retention**選項來決定。 如需詳細資訊，請參閱本主題稍後的 [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)的使用者閱讀。  
+     到期日會指定備份過期的日期，之後就可以被別的備份覆寫。 建立備份時，可以指定到期日。 到期日預設會透過使用 **sp_configure** 所設定的 **media retention**選項來判斷。 如需詳細資訊，請參閱本主題稍後的 [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)的使用者閱讀。  
   
 -   媒體名稱 (如果提供的話) 不符合備份媒體的名稱。  
   
@@ -303,7 +303,7 @@ GO
   
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 資料庫的備份與還原](back-up-and-restore-of-sql-server-databases.md)   
+ [SQL Server 資料庫的備份和還原](back-up-and-restore-of-sql-server-databases.md)   
  [備份和還原期間可能發生的媒體錯誤 &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [備份記錄與標頭資訊 &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
  [鏡像備份媒體集 &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   

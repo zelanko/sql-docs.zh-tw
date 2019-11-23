@@ -24,7 +24,7 @@ ms.locfileid: "73728727"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，當您希望每次套用商務規則時，自動將整數指派為值，請自動為實體的屬性自動產生值。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -37,7 +37,7 @@ ms.locfileid: "73728727"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
+2.  從功能表列，指向 [管理]，然後按一下 [商務規則]。  
   
 3.  在 [商務規則維護] 頁面上，選取 [模型] 清單中的模型。  
   

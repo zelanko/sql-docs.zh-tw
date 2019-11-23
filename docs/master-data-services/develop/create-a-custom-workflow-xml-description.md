@@ -65,7 +65,7 @@ ms.locfileid: "73729311"
   
  下表描述此 XML 中包含的某些標記：  
   
-|標記|說明|  
+|標記|描述|  
 |---------|-----------------|  
 |\<Type>|您在  **之 [工作流程類型]** [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 文字方塊中輸入的文字，用以識別要載入的自訂工作流程組件。|  
 |\<SendData>|在  **中，由 [訊息中包含成員資料]** [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 核取方塊所控制的布林值。 值為 1 時，表示傳送 \<MemberData> 區段，否則，不傳送 \<MemberData> 區段。|  

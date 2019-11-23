@@ -36,7 +36,7 @@ ms.locfileid: "73761546"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援**ITransactionLocal：： StartTransaction**參數，如下所示。  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*isoLevel*[in]|與此交易搭配使用的隔離等級。 在本機交易中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援下列各項：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意：從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，不論是否啟用資料庫的版本控制，ISOLATIONLEVEL_SNAPSHOT 都適用於 *isoLevel* 引數。 不過，如果使用者嘗試執行執行陳述式，而未啟用版本控制且/或資料庫不是唯讀的，則會發生錯誤。 此外，如果在連接到早於 *的* 版本時，將 ISOLATIONLEVEL_SNAPSHOT 指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]isoLevel[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，則會發生 XACT_E_ISOLATIONLEVEL 錯誤。|  
 |*isoFlags*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會針對零以外的任何值傳回錯誤。|  
@@ -45,7 +45,7 @@ ms.locfileid: "73761546"
   
  若是本機交易，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會依照下列方式來執行**ITransaction：： Abort**參數。  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*pboidReason*[in]|如果設定，則略過。 可以安全地成為 NULL。|  
 |*fRetaining*[in]|當為 TRUE 時，就會針對工作階段隱含地開始新的交易。 此交易必須由取用者認可或結束。 若為 FALSE，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會還原為會話的自動認可模式。|  
@@ -53,7 +53,7 @@ ms.locfileid: "73761546"
   
  若是本機交易，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會依照下列方式來執行**ITransaction：： Commit**參數。  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |*fRetaining*[in]|當為 TRUE 時，就會針對工作階段隱含地開始新的交易。 此交易必須由取用者認可或結束。 若為 FALSE，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會還原為會話的自動認可模式。|  
 |*grfTC*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不支援非同步和第一階段傳回。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會針對 XACTTC_SYNC 以外的任何值傳回 XACT_E_NOTSUPPORTED。|  

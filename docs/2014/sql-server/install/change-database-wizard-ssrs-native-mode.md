@@ -36,13 +36,13 @@ ms.locfileid: "71952657"
  選取您要執行的工作。 您可以在原生或 SharePoint 整合模式中建立新的資料庫。 或者，您可以選取要搭配目前報表伺服器執行個體使用的現有報表伺服器資料庫。  
   
  **資料庫伺服器**  
- 指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體名稱。 也可以在本機或遠端電腦上使用預設或具名的執行個體。 如果您要連接到已命名的實例，請以下列格式輸入伺服器名稱： \<*伺服器*> @ no__t-3 @ no__t-4*實例*>。  
+ 指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體名稱。 也可以在本機或遠端電腦上使用預設或具名的執行個體。 如果您要連接到已命名的實例，請以下列格式輸入伺服器名稱： \<*server*>\\<*實例*>。  
   
  若要連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，您必須使用有權登入伺服器及更新資料庫資訊的認證。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會使用目前的 Windows 認證，但是如果您沒有登入或資料庫權限，您就必須指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入。 您不能指定不同的 Windows 認證。 如果您想要以不同的 Windows 使用者身分連接，請以該使用者身分登入，然後啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。  
   
  連接到遠端執行個體時，需要先啟用該執行個體進行遠端連接。 某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 依預設並不會啟用遠端連接。 若要確認是否允許遠端連接，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員並確認 TCP/IP 和具名管道通訊協定是否已啟用。 如果遠端執行個體也是具名執行個體，請確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務已啟用，而且在目標伺服器上執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 提供了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員的具名執行個體所要使用的通訊埠編號。  
   
- **[資料庫備份]**  
+ **[資料庫]**  
  指定儲存伺服器資料之報表伺服器資料庫的名稱。 您可以指定現有的資料庫或建立新的資料庫。  
   
  當您在 [動作] 頁面上選取 **[建立新的資料庫]** 時，精靈中會出現用來建立新資料庫的屬性。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會建立依名稱繫結的兩個資料庫：包含靜態資料的資料庫以及儲存工作階段和工作資料的暫存資料庫。 如需詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表伺服器資料庫&#40;SSRS 原生模式&#41; ](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) 。  
@@ -62,7 +62,7 @@ ms.locfileid: "71952657"
  如果您選取不同的報表伺服器資料庫，目前資料庫的模式會顯示在畫面上，好讓您知道目前資料庫的使用方式。  
   
  **認證**  
- 指定用來將報表伺服器連接到報表伺服器資料庫的帳戶。 有效的值包括報表伺服器 Web 服務的服務帳戶、用來主控報表伺服器之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上定義的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 資料庫登入，或是 Windows 帳戶。 如果您使用 Windows 帳戶，如果報表伺服器和資料庫位於相同的電腦上，或網域使用者帳戶（\<domain > \\，您可以指定本機帳戶（ *@no__t 1computername > \\ < username @ no__t-3*） *<username @ no__t-7）（* 如果它們位於相同網域的不同電腦上）。  
+ 指定用來將報表伺服器連接到報表伺服器資料庫的帳戶。 有效的值包括報表伺服器 Web 服務的服務帳戶、用來主控報表伺服器之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上定義的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 資料庫登入，或是 Windows 帳戶。 如果您使用的是 Windows 帳戶，如果報表伺服器和資料庫位於相同的電腦上，您可以指定本機帳戶（ *\<computername >\\< username\>* ），如果在相同網域中的不同電腦上，則可指定網域使用者帳戶（ *\<網域 >\\< 使用者名稱\>* ）。  
   
  報表伺服器將會建立資料庫登入，並為您指定的帳戶指派資料庫權限。  
   

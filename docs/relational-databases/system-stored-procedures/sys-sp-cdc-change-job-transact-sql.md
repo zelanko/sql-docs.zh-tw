@@ -47,9 +47,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @job_type = ] 'job_type'` 類型的要修改的作業。 *job_type*是**Nvarchar （20）** ，預設值是 ' capture '。 有效的輸入是 'capture' 和 'cleanup'。  
+`[ @job_type = ] 'job_type'` 要修改的作業類型。 *job_type*是**Nvarchar （20）** ，預設值是 ' capture '。 有效的輸入是 'capture' 和 'cleanup'。  
   
-`[ @maxtrans ] = max_trans_` 在每個掃描迴圈中要處理的最大交易數目。 *max_trans*是**int** ，預設值是 Null，表示沒有此參數的變更。 如果已指定，該值必須是正整數。  
+`[ @maxtrans ] = max_trans_` 每個掃描迴圈中要處理的最大交易數目。 *max_trans*是**int** ，預設值是 Null，表示沒有此參數的變更。 如果已指定，該值必須是正整數。  
   
  *max_trans*只對 capture 作業有效。  
   
@@ -57,7 +57,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *max_scan*只對 capture 作業有效。  
   
-`[ @continuous ] = continuous_` 表示 capture 作業是連續執行（1），還是只執行一次（0）。 「*連續*」是**bit** ，預設值是 Null，表示沒有此參數的變更。  
+`[ @continuous ] = continuous_` 指出 capture 作業是連續執行（1），還是只執行一次（0）。 「*連續*」是**bit** ，預設值是 Null，表示沒有此參數的變更。  
   
  當*連續*= 1 時， [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)作業會掃描記錄，並處理最多（*max_trans* \* *max_scans*）的交易。 然後，它會先等候*polling_interval*中指定的秒數，再開始下一次的記錄檔掃描。  
   
@@ -73,7 +73,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *polling_interval*只有在*連續*設定為1時，才會對 capture 作業有效。  
   
-`[ @retention ] = retention_` 分鐘數，變更的資料列會保留在變更資料表中。 *保留*是**Bigint** ，預設值是 Null，表示沒有此參數的變更。 最大值為 52494800 (100 年)。 如果已指定，該值必須是正整數。  
+變更資料列要保留在變更資料表中的 `[ @retention ] = retention_` 分鐘數。 *保留*是**Bigint** ，預設值是 Null，表示沒有此參數的變更。 最大值為 52494800 (100 年)。 如果已指定，該值必須是正整數。  
   
  *保留*僅適用于清除作業。  
   

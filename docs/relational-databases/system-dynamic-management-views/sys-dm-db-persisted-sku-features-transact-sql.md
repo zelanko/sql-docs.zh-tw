@@ -31,7 +31,7 @@ ms.locfileid: "73981830"
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的某些功能會變更 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將資訊儲存在資料庫檔案中的方式， 這些功能受限為特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 包含這些功能的資料庫無法移至不支援它們的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 使用 [dm_db_persisted_sku_features 動態管理] 視圖，列出目前資料庫中已啟用的版本特定功能。
   
-**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本）。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)。
   
 |資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "73981830"
   
 -   **ColumnStoreIndex**：表示至少有一個資料表具有資料行存放區索引。 若要讓資料庫移到不支援這項功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，請使用[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)語句來移除資料行存放區索引。 如需詳細資訊，請參閱資料行存放區[索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
   
-    **適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本）。  
+    **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)。  
   
 -   **壓縮**：表示至少有一個資料表或索引使用資料壓縮或 vardecimal 儲存格式。 若要讓資料庫移到不支援這項功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，請使用[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)語句來移除資料壓縮。 若要移除 Vardecimal 儲存格式，請使用 sp_tableoption 陳述式。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73981830"
   
 -   **InMemoryOLTP**：表示資料庫使用記憶體內部 OLTP。 資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組。 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-  **適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本）。 
+  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本)。 
   
 -   **性別.** 指出資料庫包含分割區資料表、分割區索引、分割區配置或分割區函數。 若要讓資料庫移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本，而不是 Enterprise 或 Developer，修改位於單一分割區上的資料表是不夠的， 您必須移除分割區資料表。 如果此資料表包含資料，請使用 SWITCH PARTITION 將每一個分割區轉換成非分割區資料表， 然後刪除分割區資料表、分割區配置和分割區函數。  
   

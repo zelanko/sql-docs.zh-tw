@@ -47,7 +47,7 @@ ms.locfileid: "71952358"
   
 -   **[127.0.0.1]** 是用來存取 localhost， 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
   
--   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<header >：*nnnn： nnnn： nnnn： nnnn*  
+-   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 位址，則 IP 位址會是 8 4 位元組欄位的128位值，如下格式所示： \<標頭 >：*nnnn： nnnn： nnnn： nnnn*  
   
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "71952358"
  指定報表伺服器用來監視 HTTP 要求的通訊埠，看看是否有包含報表伺服器虛擬目錄名稱的 URL。  
   
  **SSL 憑證**  
- 將憑證繫結至您所指定的 IP 位址。 您必須在電腦上安裝及設定此憑證。 Reporting Services 不提供用來管理憑證的功能。 此憑證必須發行到解析為 IP 位址的主機名稱或電腦名稱。 例如，若要使用的憑證是發給 http://salesreports ，您所指定的 IP 位址必須解析為名為"salesreports"的伺服器。  
+ 將憑證繫結至您所指定的 IP 位址。 您必須在電腦上安裝及設定此憑證。 Reporting Services 不提供用來管理憑證的功能。 此憑證必須發行到解析為 IP 位址的主機名稱或電腦名稱。 例如，若要使用發行給 http://salesreports的憑證，您指定的 IP 位址必須解析為名為 "salesreports" 的伺服器。  
   
  如果您要使用憑證，也必須修改 RSReportServer.config 檔案中的 `UrlRoot` 組態設定，使它指定註冊憑證之電腦的完整名稱。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 在原生模式報表伺服器上設定 SSL 連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

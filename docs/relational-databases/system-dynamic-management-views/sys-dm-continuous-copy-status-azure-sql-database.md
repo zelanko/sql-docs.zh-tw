@@ -35,9 +35,9 @@ ms.locfileid: "73844496"
 如果您使用 SQL Database V12，您應該使用[sys.databases dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) （因為*dm_continuous_copy_status sys.databases*僅適用于 V11）。
 
   
-|資料行名稱|資料類型|說明|  
+|Column Name|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**copy_guid**|**uniqueidentifier**|複本資料庫的唯一識別碼。|  
+|**copy_guid**|**ssNoversion**|複本資料庫的唯一識別碼。|  
 |**partner_server**|**sysname**|連結的 SQL Database 伺服器的名稱。|  
 |**partner_database**|**sysname**|連結的 SQL Database 伺服器上所連結資料庫的名稱。|  
 |**last_replication**|**datetimeoffset**|最後套用之複寫交易的時間戳記。|  
@@ -51,7 +51,7 @@ ms.locfileid: "73844496"
 ## <a name="permissions"></a>Permissions  
  若要取得資料，需要**db_owner**資料庫角色中的成員資格。 Dbo 使用者、 **dbmanager**資料庫角色的成員，以及 sa 登入也可以同時查詢此視圖。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  系統會在**resource**資料庫中建立**dm_continuous_copy_status**視圖，並顯示在所有資料庫中，包括邏輯 master。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
  如果資料庫上的連續複製關聯性已終止，則**dm_continuous_copy_status**視圖中該資料庫的資料列就會消失。  

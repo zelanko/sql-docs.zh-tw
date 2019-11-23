@@ -50,9 +50,9 @@ ms.locfileid: "73785521"
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  SQL_SOPT_SS_CURSOR 屬性會指定驅動程式是否會在資料指標上使用驅動程式專屬的效能選項。 設定這些選項時，不允許[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 。 預設值為 SQL_CO_OFF。 *Valueptr 是*值的類型是 SQLLEN。  
   
-|*Valueptr 是*值|說明|  
+|*Valueptr 是*值|描述|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|預設值。 停用快速順向、唯讀資料指標和自動擷取，可讓您在順向、唯讀資料指標上**SQLGetData** 。 當 SQL_SOPT_SS_CURSOR_OPTIONS 設定為 SQL_CO_OFF 時，資料指標類型將不會變更。 也就是說，快速順向資料指標仍是快速順向資料指標。 若要變更資料指標類型，應用程式現在必須使用**SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE 設定不同的資料指標類型。|  
+|SQL_CO_OFF|預設值： 停用快速順向、唯讀資料指標和自動擷取，可讓您在順向、唯讀資料指標上**SQLGetData** 。 當 SQL_SOPT_SS_CURSOR_OPTIONS 設定為 SQL_CO_OFF 時，資料指標類型將不會變更。 也就是說，快速順向資料指標仍是快速順向資料指標。 若要變更資料指標類型，應用程式現在必須使用**SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE 設定不同的資料指標類型。|  
 |SQL_CO_FFO|啟用快速順向、唯讀資料指標，在順向、唯讀資料指標上停用**SQLGetData** 。|  
 |SQL_CO_AF|在任何資料指標類型上啟用自動擷取選項。 當針對語句控制碼設定此選項時， **SQLExecute**或**SQLExecDirect**會產生隱含的**SQLFetchScroll** （SQL_FIRST）。 資料指標會開啟，而且第一個批次的資料列會在伺服器的單一往返中傳回。|  
 |SQL_CO_FFO_AF|使用自動擷取選項啟用快速順向資料指標。 這在同時指定 SQL_CO_AF 和 SQL_CO_FFO 時相同。|  
@@ -64,9 +64,9 @@ ms.locfileid: "73785521"
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 屬性會決定是否要立即準備或延後語句，直到執行**SQLExecute**、 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)或[SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)為止。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和先前版本中，會忽略此屬性 (沒有延遲準備)。 *Valueptr 是*值的類型是 SQLLEN。  
   
-|*Valueptr 是*值|說明|  
+|*Valueptr 是*值|描述|  
 |----------------------|-----------------|  
-|SQL_DP_ON|預設值。 呼叫[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)之後，語句準備會延遲到呼叫**SQLExecute**或執行中繼屬性作業（**SQLDescribeCol**或**SQLDescribeParam**）為止。|  
+|SQL_DP_ON|預設值： 呼叫[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)之後，語句準備會延遲到呼叫**SQLExecute**或執行中繼屬性作業（**SQLDescribeCol**或**SQLDescribeParam**）為止。|  
 |SQL_DP_OFF|一旦執行**SQLPrepare** ，就會準備語句。|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -74,9 +74,9 @@ ms.locfileid: "73785521"
   
  *Valueptr 是*值的類型是 SQLLEN。  
   
-|*Valueptr 是*值|說明|  
+|*Valueptr 是*值|描述|  
 |----------------------|-----------------|  
-|SQL_RE_OFF|預設值。 此驅動程式不會使用用戶端地區設定，將日期、時間和貨幣資料轉換成字元字串資料。|  
+|SQL_RE_OFF|預設值： 此驅動程式不會使用用戶端地區設定，將日期、時間和貨幣資料轉換成字元字串資料。|  
 |SQL_RE_ON|將日期、時間和貨幣資料轉換成字元字串資料時，此驅動程式會使用用戶端地區設定。|  
   
  地區轉換設定適用於貨幣、數值、日期和時間資料類型。 此轉換設定只有在貨幣、數值、日期或時間值轉換為字元字串時，才會套用到輸出轉換。  
@@ -89,17 +89,17 @@ ms.locfileid: "73785521"
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  SQL_SOPT_SS_TEXTPTR_LOGGING 屬性會在包含**文字**或**影像**資料的資料行上，切換作業的記錄。 *Valueptr 是*值的類型是 SQLLEN。  
   
-|*Valueptr 是*值|說明|  
+|*Valueptr 是*值|描述|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|停用在**文字**和**影像**資料上執行之作業的記錄。|  
-|SQL_TL_ON|預設值。 啟用在**文字**和**影像**資料上執行之作業的記錄。|  
+|SQL_TL_ON|預設值： 啟用在**文字**和**影像**資料上執行之作業的記錄。|  
   
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  SQL_SOPT_SS_HIDDEN_COLUMNS 屬性會在結果集中公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 陳述式內隱藏的資料行。 此驅動程式預設不會公開這些資料行。 *Valueptr 是*值的類型是 SQLLEN。  
   
-|*Valueptr 是*值|說明|  
+|*Valueptr 是*值|描述|  
 |----------------------|-----------------|  
-|SQL_HC_OFF|預設值。 FOR BROWSE 資料行會從結果集隱藏起來。|  
+|SQL_HC_OFF|預設值： FOR BROWSE 資料行會從結果集隱藏起來。|  
 |SQL_HC_ON|公開 FOR BROWSE 資料行。|  
   
 ### <a name="sql_sopt_ss_querynotification_msgtext"></a>SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
@@ -131,9 +131,9 @@ ms.locfileid: "73785521"
   
  SQL_SOPT_SS_NAME_SCOPE 的類型是 SQLULEN。  
   
-|*Valueptr 是*值|說明|  
+|*Valueptr 是*值|描述|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|預設值。<br /><br /> 使用資料表值參數時，指出應該傳回實際資料表的中繼資料。<br /><br /> 使用「稀疏資料行」功能時，SQLColumns 只會傳回不是 sparse **column_set**成員的資料行。|  
+|SQL_SS_NAME_SCOPE_TABLE|預設值：<br /><br /> 使用資料表值參數時，指出應該傳回實際資料表的中繼資料。<br /><br /> 使用「稀疏資料行」功能時，SQLColumns 只會傳回不是 sparse **column_set**成員的資料行。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|表示應用程式需要資料表類型 (而非實際資料表) 的中繼資料 (目錄函數應該傳回資料表類型的中繼資料)。 然後，應用程式會傳遞資料表值參數的 TYPE_NAME 做為*TableName*參數。|  
 |SQL_SS_NAME_SCOPE_EXTENDED|使用 [稀疏資料行] 功能時，不論**column_set**成員資格為何，SQLColumns 都會傳回所有資料行。|  
 |SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|使用「稀疏資料行」功能時，SQLColumns 只會傳回屬於 sparse **column_set**成員的資料行。|  

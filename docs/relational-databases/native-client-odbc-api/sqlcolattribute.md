@@ -29,7 +29,7 @@ ms.locfileid: "73787428"
 > [!NOTE]  
 >  ODBC 資料行識別碼屬性並非在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結果集上都有提供。  
   
-|欄位識別碼|說明|  
+|欄位識別碼|描述|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|可用於擷取自產生伺服器資料指標之陳述式的結果集，或包含 FOR BROWSE 子句之已執行 SELECT 陳述式。|  
 |SQL_DESC_BASE_COLUMN_NAME|可用於擷取自產生伺服器資料指標之陳述式的結果集，或包含 FOR BROWSE 子句之已執行 SELECT 陳述式。|  
@@ -78,7 +78,7 @@ ms.locfileid: "73787428"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引進驅動程式專屬的描述項欄位來提供其他資訊，分別代表 XML 架構集合名稱、架構名稱和目錄名稱。 如果這些屬性包含非英數字元，則它們不需要引號或逸出字元。 下表列出這些新的描述項欄位：  
   
-|資料行名稱|類型|說明|  
+|資料行名稱|型別|描述|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|定義 XML 結構描述集合名稱所在目錄的名稱。 如果找不到目錄名稱，則此變數包含空字串。<br /><br /> 此資訊會從 IRD 的 SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME 記錄欄位傳回，該欄位為唯讀欄位。|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|定義 XML 結構描述集合名稱所在結構描述的名稱。 如果找不到結構描述名稱，則此變數包含空字串。<br /><br /> 此資訊會從 IRD 的 SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME 記錄欄位傳回，該欄位為唯讀欄位。|  
@@ -86,7 +86,7 @@ ms.locfileid: "73787428"
   
  同時，[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 推出新的驅動程式專屬描述項欄位，針對結果集的使用者定義型別 (UDT) 資料行或預存程序或參數化查詢的 UDT 參數，提供額外的資訊。 如果這些屬性包含非英數字元，則它們不需要引號或逸出字元。 下表列出這些新的描述項欄位：  
   
-|資料行名稱|類型|說明|  
+|Column Name|型別|描述|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|包含 UDT 之目錄的名稱。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|包含 UDT 之結構描述的名稱。|  

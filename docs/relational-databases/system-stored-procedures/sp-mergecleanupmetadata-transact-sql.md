@@ -25,9 +25,9 @@ ms.locfileid: "72907329"
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  應該僅用於包含執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 之前版本 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 之伺服器的複寫拓撲。**sp_mergecleanupmetadata**可讓管理員清除**MSmerge_genhistory**、 **MSmerge_contents**和**MSmerge_tombstone**系統資料表中的中繼資料。 這個預存程序執行於發行集資料庫的發行者端。  
+  應該僅用於包含執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 之前版本 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 之伺服器的複寫拓撲。**sp_mergecleanupmetadata**可讓系統管理員清除**MSmerge_genhistory**、 **MSmerge_contents**和**MSmerge_tombstone**系統資料表中的中繼資料。 這個預存程序執行於發行集資料庫的發行者端。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,14 +49,14 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  **sp_mergecleanupmetadata**只能用在包含 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 之前執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之伺服器的複寫拓撲中。 只包含 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 或更新版本的拓撲，應該使用以自動保留為基礎的中繼資料清除功能。 當執行這個預存程序時，請注意，執行這個預存程序的電腦之記錄檔必然會成長，且可能會大幅成長。  
   
 > [!CAUTION]
->  在執行**sp_mergecleanupmetadata**之後，根據預設，在**MSmerge_genhistory**、 **MSmerge_contents**和**MSmerge_tombstone**中儲存中繼資料之發行集訂閱者的所有訂閱都會標示為重新初始化，訂閱者端的任何暫止變更都會遺失，而目前的快照集會標示為過時。  
+>  執行**sp_mergecleanupmetadata**之後，根據預設，在發行集的訂閱者上，所有具有儲存于**MSmerge_genhistory**、 **MSmerge_contents**和**MSmerge_tombstone**之中繼資料的訂閱都會標示為重新初始化，訂閱者端的任何暫止變更都會遺失，而目前的快照集會被標示為過時。  
 > 
 > [!NOTE]
->  如果資料庫上有多個發行集，而且其中任何一個發行集都使用無限的發佈保留期限（ **\@保留**=**0**），則執行**sp_mergecleanupmetadata**不會清除合併資料庫的複寫變更追蹤中繼資料。 因此，在使用無限期的發行期限時，一定要特別小心。  
+>  如果資料庫上有多個發行集，而且其中任何一個發行集都使用無限的發行集保留期限（ **\@保留**=**0**），則執行**sp_mergecleanupmetadata**並不會清除資料庫的合併式複寫變更追蹤中繼資料。 因此，在使用無限期的發行期限時，一定要特別小心。  
   
- 執行此預存程式時，您可以將 **\@reinitialize_subscriber**參數設為**TRUE** （預設值）或**FALSE**，以選擇是否要重新初始化訂閱者。 如果**sp_mergecleanupmetadata**是在 **\@reinitialize_subscriber**參數設為**TRUE**的情況下執行，即使在沒有初始快照集的情況下建立訂閱，也會在訂閱者端重新套用快照集（例如，如果快照集資料和架構已手動套用，或已存在於訂閱者端）。 將參數設定為**FALSE**應謹慎使用，因為如果發行集不是重新初始化，您必須確定「發行者」和「訂閱者」端的資料已同步處理。  
+ 執行此預存程式時，您可以將 **\@reinitialize_subscriber**參數設定為**TRUE** （預設值）或**FALSE**，以選擇是否要重新初始化訂閱者。 如果**sp_mergecleanupmetadata**是以 **\@reinitialize_subscriber**參數設為**TRUE**來執行，則即使訂閱是在沒有初始快照集的情況下建立的，也會在訂閱者端重新套用快照集（例如，如果快照集資料和架構已手動套用，或已存在於訂閱者端）。 將參數設定為**FALSE**應謹慎使用，因為如果發行集不是重新初始化，您必須確定「發行者」和「訂閱者」端的資料已同步處理。  
   
- 無論 **\@reinitialize_subscriber**的值為何，如果有正在進行的合併程式嘗試將變更上傳至發行者或重新發行的訂閱者（儲存時）， **sp_mergecleanupmetadata**就會失敗程式已叫用。  
+ 無論 **\@reinitialize_subscriber**的值為何，如果在叫用預存程式時，正在嘗試將變更上傳至發行者或重新發行訂閱者，則**sp_mergecleanupmetadata**會失敗。  
   
  **使用 \@reinitialize_subscriber = TRUE 來執行 sp_mergecleanupmetadata：**  
   
@@ -110,12 +110,12 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'active'  
     ```  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_mergecleanupmetadata**。  
   
  若要使用這個預存程序，發行者必須執行 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 訂閱者必須執行 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 Service Pack 2。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MSmerge_genhistory &#40;transact-sql&#41; ](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
  [MSmerge_contents &#40;transact-sql&#41; ](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
  [MSmerge_tombstone &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  

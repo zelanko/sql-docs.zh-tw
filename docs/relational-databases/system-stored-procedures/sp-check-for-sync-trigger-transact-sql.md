@@ -39,13 +39,13 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@tabid =** ] '*tabid*'  
+ [ **@tabid =** ]'*tabid*'  
  這是要檢查立即更新觸發程序之資料表的物件識別碼。 *tabid*是**int** ，沒有預設值。  
   
- [ **@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
+ [ **@trigger_op =** ]'*trigger_output_parameters*' 輸出  
  指定輸出參數是否要傳回呼叫它之觸發程序的類型。 *trigger_output_parameters*是**char （10）** ，而且可以是下列其中一個值。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**接**|INSERT 觸發程序|  
 |**Upd**|UPDATE 觸發程序|  
@@ -55,12 +55,12 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher` 指定執行預存程式的位置。 *fonpublisher*是**bit**，預設值是0。 如果為 0，則是在訂閱者端執行，如果為 1，則是在發行者端執行。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 0 表示並非在立即更新觸發程序的內容中呼叫預存程序。 1表示在立即更新觸發程式的內容中呼叫它，而且是在 *@no__t 1trigger_op*中傳回的觸發程式類型。  
+ 0 表示並非在立即更新觸發程序的內容中呼叫預存程序。 1表示在立即更新觸發程式的內容中呼叫它，而且是在 *\@trigger_op*中傳回的觸發程式類型。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sp_check_for_sync_trigger**用於快照式複寫和異動複寫中。  
   
- **sp_check_for_sync_trigger**是用來在複寫和使用者定義的觸發程式之間進行協調。 這個預存程序會判斷它是否在複寫觸發程序內容之內受到呼叫。 例如，您可以在使用者定義觸發程式的主體中呼叫**sp_check_for_sync_trigger**程式。 如果**sp_check_for_sync_trigger**傳回**0**，使用者定義的觸發程式會繼續處理。 如果**sp_check_for_sync_trigger**傳回**1**，使用者定義的觸發程式就會結束。 這可以確定當複寫觸發程序更新資料表時，不會引發使用者自訂觸發程序。  
+ **sp_check_for_sync_trigger**可用來協調複寫和使用者定義的觸發程式。 這個預存程序會判斷它是否在複寫觸發程序內容之內受到呼叫。 例如，您可以在使用者定義觸發程式的主體中呼叫程式**sp_check_for_sync_trigger** 。 如果**sp_check_for_sync_trigger**傳回**0**，則使用者定義的觸發程式會繼續處理。 如果**sp_check_for_sync_trigger**傳回**1**，使用者定義的觸發程式就會結束。 這可以確定當複寫觸發程序更新資料表時，不會引發使用者自訂觸發程序。  
   
 ## <a name="example"></a>範例  
  下列範例會顯示可用於訂閱者資料表之觸發程序中的程式碼。  
@@ -86,9 +86,9 @@ RETURN
 ```  
   
 ## <a name="permissions"></a>Permissions  
- **sp_check_for_sync_trigger**預存程式可由任何具有[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)系統檢視中 SELECT 許可權的使用者執行。  
+ 在[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)系統檢視中具有 SELECT 許可權的任何使用者，都可以執行**sp_check_for_sync_trigger**預存程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [可更新訂閱 - 異動複寫](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

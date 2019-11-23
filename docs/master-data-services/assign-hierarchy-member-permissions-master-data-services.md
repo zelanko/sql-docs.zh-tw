@@ -28,7 +28,7 @@ ms.locfileid: "73729781"
   
  階層成員權限為選擇性。 它們為必要的模型物件權限提供更細微的控制。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  

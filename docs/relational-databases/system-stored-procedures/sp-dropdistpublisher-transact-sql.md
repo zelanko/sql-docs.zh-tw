@@ -45,9 +45,9 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
  如果為**0**，則複寫會確認遠端發行者是否已將本機伺服器卸載為散發者。 如果發行者在本機，複寫會確認本機伺服器中沒有其餘發行集或散發物件。  
   
- 如果是**1**，即使無法連線到遠端發行者，也會卸載與散發發行者相關聯的所有複寫物件。 這麼做之後，遠端發行者就必須使用[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)來卸載複寫， **\@ignore_distributor** = **1**。  
+ 如果是**1**，即使無法連線到遠端發行者，也會卸載與散發發行者相關聯的所有複寫物件。 這麼做之後，遠端發行者必須使用 **\@ignore_distributor** = **1**的[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)來卸載複寫。  
   
-`[ @ignore_distributor = ] ignore_distributor` 指定當移除發行者時，散發物件是否留在散發者上。 *ignore_distributor*是**bit** ，它可以是下列其中一個值：  
+`[ @ignore_distributor = ] ignore_distributor` 指定當移除發行者時，散發物件是否保留在「散發者」端。 *ignore_distributor*是**bit** ，而且可以是下列其中一個值：  
   
  **1** = 屬於發行者的散發物件會保留在散發*者*端。  
   
@@ -56,10 +56,10 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistpublisher**用於所有類型的複寫中。  
   
- 卸載「Oracle 發行者」時，如果無法捨棄「發行者**sp_dropdistpublisher** ，則會傳回錯誤，並移除「發行者」的「散發者」物件。  
+ 卸載「Oracle 發行者」時，如果無法捨棄「發行者」 **sp_dropdistpublisher**會傳回錯誤，並移除「發行者」的「散發者」物件。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
@@ -69,7 +69,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>另請參閱  
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -26,19 +26,19 @@ ms.locfileid: "73729546"
   使用 [建立 Database Mail 設定檔和帳戶] 對話方塊，即可建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Mail 設定檔和 Database Mail 帳戶。 當商務規則驗證失敗時，將會使用這個設定檔來透過電子郵件通知使用者和群組。  
   
 ## <a name="database-mail-profile-and-account"></a>Database Mail 設定檔和帳戶  
- 「Database Mail 設定檔」是 Database Mail 帳戶的集合。 「Database Mail 帳戶」包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用來傳送電子郵件給 SMTP 伺服器的資訊。 當您在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中建立設定檔和帳戶時，此帳戶會自動加入到設定檔，而且將會使用該帳戶資訊來傳送電子郵件。  
+ 「Database Mail 設定檔」是 Database Mail 帳戶的集合。 「Database Mail 帳戶」包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用來傳送電子郵件給 SMTP 伺服器的資訊。 當您在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中建立設定檔和帳戶時，此帳戶會自動加入到設定檔，而且將會使用該帳戶資訊來傳送電子郵件。  
   
 > [!NOTE]  
 >  您無法使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 來更新現有的 Database Mail 設定檔或帳戶，也無法為設定檔設定一個以上的帳戶。 若要使用 Database Mail 來執行更進階的工作，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 指令碼。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [Database Mail 組態物件](../relational-databases/database-mail/database-mail-configuration-objects.md) 一節。  
   
-|控制項名稱|說明|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**設定檔名稱**|輸入新 Database Mail 設定檔的名稱。 這個名稱在已設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Mail 設定檔中必須是唯一的。<br /><br /> 當您建立這個設定檔之後，就可以在  **的 [資料庫]** [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 頁面上使用及選取此設定檔。|  
 |**帳戶名稱**|輸入要與這個設定檔產生關聯的新 Database Mail 帳戶名稱。 這個名稱在已設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Mail 帳戶中必須是唯一的。 這個帳戶並不對應至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帳戶或 Windows 使用者帳戶。|  
   
 ## <a name="outgoing-smtp-mail-server"></a>外寄 (SMTP) 郵件伺服器  
   
-|控制項名稱|說明|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**電子郵件地址**|輸入帳戶之電子郵件地址的名稱。 這是寄出電子郵件的電子郵件地址，而且必須使用以下格式： *email_name*@*domain_name*。 範例電子郵件地址為 sales@contoso.com。|  
 |**顯示名稱**|選擇性設定。 輸入要在這個帳戶所送出的電子郵件訊息上顯示的名稱。 範例顯示名稱為 Contoso 業務小組。|  
@@ -50,11 +50,11 @@ ms.locfileid: "73729546"
 ## <a name="smtp-authentication"></a>SMTP 驗證  
  Database Mail 可以使用 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的認證、使用您提供的其他認證或以匿名方式傳送。 最佳作法如下：如果電子郵件伺服器需要驗證，請建立要用於 Database Mail 的特定使用者帳戶。 這個使用者帳戶應該具有最小權限，而且不應該為任何其他目的使用。  
   
-|控制項名稱|說明|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**使用 Database Engine 服務認證的 Windows 驗證**|指定 Database Mail 應該使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 服務帳戶的認證在 SMTP 伺服器上驗證。|  
 |**基本驗證**|指定 Database Mail 應該使用特定的使用者名稱和密碼在 SMTP 伺服器上驗證。 此資訊僅用於電子郵件伺服器的驗證，而且帳戶不需要對應到執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之電腦上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用者。|  
-|**使用者名稱**|輸入 Database Mail 用來登入 SMTP 伺服器之使用者帳戶的名稱。 如果 SMTP 伺服器需要基本驗證，則使用者名稱是必要的。|  
+|**[使用者名稱]**|輸入 Database Mail 用來登入 SMTP 伺服器之使用者帳戶的名稱。 如果 SMTP 伺服器需要基本驗證，則使用者名稱是必要的。|  
 |**密碼**|輸入 Database Mail 用來登入 SMTP 伺服器的密碼。 如果 SMTP 伺服器需要基本驗證，則需要密碼。|  
 |**確認密碼**|再次輸入密碼，以便確認密碼。|  
 |**匿名驗證**|指定 SMTP 伺服器不需要驗證。 Database Mail 將不會使用任何認證來進行 SMTP 伺服器驗證。|  

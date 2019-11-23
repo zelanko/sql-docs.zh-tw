@@ -42,7 +42,7 @@ ms.locfileid: "71952156"
   
 3.  按一下 **[版本]** 。  
   
-4.  確認版本包含 12.00. @no__t 0build 號碼 >，且描述為 Microsoft.analysisservice.adomdclient. Microsoft.analysisservices.adomdclient。  
+4.  確認版本包含12.00。\<組建編號 >，且描述為 Microsoft.analysisservice.adomdclient. Microsoft.analysisservices.adomdclient。  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 管理儀表板和使用量資料](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  

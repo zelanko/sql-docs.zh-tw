@@ -35,7 +35,7 @@ ms.locfileid: "73789608"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  呼叫 [BCPDone](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 方法之後，您就無法針對 **IBCPSession** 介面呼叫任何其他作業。 唯一的可能性是呼叫 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法來起始新的大量複製作業。 這就類似於呼叫 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>傳回碼值  

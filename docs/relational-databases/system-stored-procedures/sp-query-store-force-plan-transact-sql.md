@@ -33,7 +33,7 @@ ms.locfileid: "71207719"
 
   針對特定查詢啟用強制特定計劃。  
   
- 針對特定查詢強制執行計畫時，每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遇到查詢時，它會嘗試在查詢最佳化工具中強制計畫。 如果計畫強制失敗，則會引發擴充事件，並指示查詢最佳化工具以正常方式進行優化。  
+ 針對特定查詢強制執行計畫時，每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遇到查詢時，它會嘗試在查詢最佳化工具中強制計畫。 如果計畫強制失敗，則會引發擴充事件，並指示查詢最佳化工具以正常方式進行優化。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,14 +44,14 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @query_id = ] query_id`這是查詢的識別碼。 *query_id*是**Bigint**，沒有預設值。  
+`[ @query_id = ] query_id` 是查詢的識別碼。 *query_id*是**Bigint**，沒有預設值。  
   
-`[ @plan_id = ] plan_id`這是要強制執行之查詢計劃的識別碼。 *plan_id*是**Bigint**，沒有預設值。  
+`[ @plan_id = ] plan_id` 是要強制執行之查詢計劃的識別碼。 *plan_id*是**Bigint**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Permissions  
  需要資料庫的**ALTER**許可權。
@@ -76,12 +76,12 @@ EXEC sp_query_store_force_plan 3, 3;
   
 ## <a name="see-also"></a>另請參閱  
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_remove_query &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [使用查詢存放區  監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       
+ [sp_query_store_flush_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       
  [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
   
   

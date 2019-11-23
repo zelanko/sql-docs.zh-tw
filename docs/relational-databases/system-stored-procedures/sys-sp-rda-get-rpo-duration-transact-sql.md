@@ -1,5 +1,5 @@
 ---
-title: sp_rda_get_rpo_duration （Transact-sql） |Microsoft Docs
+title: sys.databases sp_rda_get_rpo_duration （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/10/2019
 ms.locfileid: "72252066"
 ---
-# <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys.sp_rda_get_rpo_duration (Transact-SQL)
+# <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys.databases sp_rda_get_rpo_duration （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   取得已遷移資料的時數，SQL Server 保留在臨時表中，以協助確保遠端 Azure 資料庫的完整還原（如果需要還原時間點）。 
@@ -47,11 +47,11 @@ sp_rda_get_rpo_duration @durationinhours output
 ## <a name="permissions"></a>Permissions    
  需要 db_owner 許可權。    
     
-## <a name="remarks"></a>備註    
- 執行[sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)來變更此值。    
+## <a name="remarks"></a>Remarks    
+ 藉由執行[sys.databases sp_rda_set_rpo_duration &#40;的 transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)來變更值。    
     
 ## <a name="see-also"></a>另請參閱    
- [sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+ [sp_rda_set_rpo_duration &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
  [還原已啟用 Stretch 的資料庫（Stretch Database）](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     

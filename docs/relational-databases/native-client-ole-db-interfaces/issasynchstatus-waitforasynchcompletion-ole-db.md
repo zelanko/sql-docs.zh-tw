@@ -56,7 +56,7 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  除了以上列出的傳回碼值，**ISSAsynchStatus::WaitForAsynchCompletion** 方法也支援透過核心 OLEDB **ICommand::Execute** 和 **IDBInitialize::Initialize** 方法所傳回的傳回碼值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在逾時值 (以毫秒為單位) 已過，或暫止的作業完成前，**ISSAsynchStatus::WaitForAsynchCompletion** 方法將不會傳回。 **Command**物件具有**CommandTimeout**屬性，可控制查詢將在超時前執行的秒數。如果搭配**ISSAsynchStatus：： WaitForAsynchCompletion**方法使用，將會忽略**CommandTimeout**屬性。  
   
  非同步作業會忽略逾時屬性。 **ISSAsynchStatus::WaitForAsynchCompletion** 的逾時參數會指定將控制項傳回給呼叫端前經過的時間上限。 如果這個逾時過期，會傳回 DB_S_ASYNCHRONOUS。 逾時絕不會取消非同步作業。 如果應用程式需要取消沒有在逾時期間內完成的非同步作業，它必須等到逾時，然後明確地取消此作業 (如果有傳回 DB_S_ASYNCHRONOUS)。  
@@ -68,7 +68,7 @@ HRESULT WaitForAsynchCompletion(
   
  如果作業在逾時過期前完成，傳回的 HRESULT 將會是此作業所傳回的 HRESULT (已經傳回的 HRESULT 已經讓此作業以同步方式執行)。  
   
- 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) 介面的提供者必須利用 VARIANT_TRUE 的值實作此屬性。  
+ 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) 介面的提供者必須使用 VARIANT_TRUE 的值實作此屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行非同步作業](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   

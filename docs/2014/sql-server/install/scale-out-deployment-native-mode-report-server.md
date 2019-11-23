@@ -46,7 +46,7 @@ ms.locfileid: "71952423"
  **伺服器模式**  
  顯示伺服器模式和資料庫。 伺服器模式為原生模式或 SharePoint 整合模式。 這兩種模式都支援向外延展部署。  
   
- **Server**  
+ **[伺服器]**  
  顯示報表伺服器名稱。 在大多數情況下，這就是安裝報表伺服器的電腦名稱。  
   
  **執行個體**  
@@ -76,7 +76,7 @@ ms.locfileid: "71952423"
  如果您不再需要加密資料，或者如果您沒有金鑰的備份副本，則必須刪除加密資料。 如需詳細資訊，請參閱[加密金鑰&#40;SSRS&#41;原生模式](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   

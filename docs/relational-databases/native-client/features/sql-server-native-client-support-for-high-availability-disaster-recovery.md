@@ -92,7 +92,7 @@ ms.locfileid: "73788030"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 應用程式可以使用三個函數的其中一個進行連接：  
   
-|函數|說明|  
+|函數|描述|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** 傳回的伺服器清單不包括 VNN。 您只會看到伺服器清單，無從得知伺服器是否為獨立伺服器或是 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體的主要或次要伺服器。 如果您連接到伺服器而且發生失敗狀況，可能是因為您已經連接到伺服器，而且 **ApplicationIntent** 設定與伺服器組態不相容。<br /><br /> 因為 **SQLBrowseConnect** 無法辨識 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體的伺服器，所以 **SQLBrowseConnect** 會忽略 **MultiSubnetFailover** 連接字串關鍵字。|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** 可透過資料來源名稱 (DSN) 或連接屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover** 。|  

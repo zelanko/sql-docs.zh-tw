@@ -29,7 +29,7 @@ ms.locfileid: "73728909"
 ## <a name="upgrade-review"></a>升級檢閱  
  檢閱此頁面上指定的資訊。 如果該資訊正確，按一下 [下一步] 升級指定的資料庫。  
   
-|控制項名稱|說明|  
+|控制項名稱|描述|  
 |------------------|-----------------|  
 |**SQL Server 執行個體**|目前所選取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的名稱。|  
 |**Master Data Services 資料庫**|目前所選取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的名稱。|  

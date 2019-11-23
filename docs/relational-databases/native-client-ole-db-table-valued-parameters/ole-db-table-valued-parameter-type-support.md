@@ -59,7 +59,7 @@ CoType RowsetTVP
 ## <a name="methods"></a>方法  
  如需有關支援資料表值參數之 OLE DB 方法的詳細資訊，請參閱[OLE DB 資料表值參數&#40;類型&#41;支援方法](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)。  
   
-## <a name="properties"></a>屬性  
+## <a name="properties"></a>[屬性]  
  如需 OLE DB 支援資料表值參數之屬性的詳細資訊，請參閱[OLE DB 資料表值參數類型&#40;支援&#41;屬性](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -28,7 +28,7 @@ ms.locfileid: "73787112"
   
  從開始，資料庫引擎的改良功能 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可讓 SQLDescribeParam 取得更精確的預期結果描述。 這些更精確的結果可能與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中 SQLDescribeParam 所傳回的值不同。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
- 此外，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中的新功能， *ParameterSizePtr*現在會傳回一個值，以與[ODBC 規格](https://go.microsoft.com/fwlink/?LinkId=207044)中所定義之對應參數標記的資料行或運算式大小（以字元為單位）的定義對齊。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中， *ParameterSizePtr*可以是類型的對應**SQL_DESC_OCTET_LENGTH**值，或為類型提供給 SQLBindParameter 的不相關資料行大小值，其值為應該忽略（例如**SQL_INTEGER**）。  
+ 此外，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中的新功能， *ParameterSizePtr*現在會傳回一個值，以與[ODBC 規格](https://go.microsoft.com/fwlink/?LinkId=207044)中所定義之對應參數標記的資料行或運算式大小（以字元為單位）的定義對齊。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中， *ParameterSizePtr*可以是類型**SQL_DESC_OCTET_LENGTH**的對應值，或是針對類型提供給 SQLBindParameter 的不相關資料行大小值，應該忽略的值（例如**SQL_INTEGER**）。  
   
  在下列情況下，驅動程式不支援呼叫 SQLDescribeParam：  
   

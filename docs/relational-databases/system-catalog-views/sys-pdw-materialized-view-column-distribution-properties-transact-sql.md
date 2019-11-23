@@ -14,7 +14,7 @@ ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 508d34ec59252407b79bb9863d82a46c6ce8627f
 ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73729861"
@@ -25,7 +25,7 @@ ms.locfileid: "73729861"
 
 在具體化視圖中顯示資料行的散發資訊。  
   
-|資料行名稱|資料類型|說明|  
+|Column Name|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|資料行所屬物件的識別碼。 |  
 |column_id|**int**|資料行的識別碼。|  
@@ -37,7 +37,7 @@ ms.locfileid: "73729861"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用具體化 View  進行效能微調](/azure/sql-data-warehouse/performance-tuning-materialized-views)  
+[使用具體化檢視進行效能調整](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

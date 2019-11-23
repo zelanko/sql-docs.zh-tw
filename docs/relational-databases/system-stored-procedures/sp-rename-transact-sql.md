@@ -67,7 +67,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|使用者定義資料庫。 當重新命名資料庫時，需要這個物件類型。|  
 |INDEX|使用者自訂索引。 重新命名具有統計資料的索引時，也會自動重新命名統計資料。|  
 |OBJECT|在[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中追蹤之類型的專案。 例如，您可以利用 OBJECT 來重新命名物件，其中包括條件約束 (CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY)、使用者資料表和規則。|  
-|STATISTICS|**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用者明確建立的統計資料，或使用索引隱含建立的統計資料。 重新命名索引的統計資料時，也會自動重新命名索引。|  
+|STATISTICS|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用者明確建立的統計資料，或使用索引隱含建立的統計資料。 重新命名索引的統計資料時，也會自動重新命名索引。|  
 |USERDATATYPE|藉由執行[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)或[Sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)加入的[CLR 使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。|  
   
 ## <a name="return-code-values"></a>傳回碼值  

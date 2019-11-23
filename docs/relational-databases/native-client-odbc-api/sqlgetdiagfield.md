@@ -26,7 +26,7 @@ ms.locfileid: "73786479"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會為**SQLGetDiagField**指定下列額外的診斷欄位。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
   
-|診斷記錄欄位|說明|  
+|診斷記錄欄位|描述|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|報告產生錯誤的預存程序的行號。 SQL_DIAG_SS_LINE 的值只有在 SQL_DIAG_SS_PROCNAME 傳回值時才有意義。 值會以不帶正負號的 16 位元整數傳回。|  
 |SQL_DIAG_SS_MSGSTATE|錯誤訊息的狀態。 如需錯誤訊息狀態的詳細資訊，請參閱[RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)。 值會以帶正負號的 32 位元整數傳回。|  

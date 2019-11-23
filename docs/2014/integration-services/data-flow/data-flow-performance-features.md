@@ -138,7 +138,7 @@ ms.locfileid: "73637826"
 #### <a name="merge-join-transformation"></a>合併聯結轉換  
  您再也不必設定 `MaxBuffersPerInput` 屬性的值，因為 Microsoft 已做出變更，降低合併聯結轉換會耗用過多記憶體的風險。 這個問題有時候會發生在合併聯結的多個輸入以不平均的速率產生資料時。  
   
-#### <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換  
+#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
  「緩時變維度精靈」和「緩時變維度精靈」轉換都是符合多數使用者需求的一般用途工具。 不過，精靈所產生的資料流程不會針對效能進行最佳化。  
   
  「緩時變維度」轉換中最緩慢的元件通常是一次針對一個單一資料列執行 UPDATE 的「OLE DB 命令」轉換。 因此，改善「緩時變維度」轉換效能最有效的方式就是取代「OLE DB 命令」轉換。 您可以將這些轉換取代為將要更新的所有資料列儲存到臨時資料表的目的地元件。 然後，您可以同時加入針對所有資料列執行以單一資料列集為基礎之 Transact-SQL UPDATE 的「執行 SQL」工作。  

@@ -38,7 +38,7 @@ ms.locfileid: "70154477"
   
  您僅能開啟您鎖定的知識庫並進行編輯。 若是如此，知識庫將會以關閉時所處的狀態開啟，並將該狀態顯示在括弧中。 如果某個知識庫遭到鎖定，而且不是您鎖定的，則僅能以唯讀模式開啟該知識庫。  
   
-### <a name="data-quality-projects"></a>資料品質專案  
+### <a name="data-quality-projects"></a>Data Quality Projects  
  資料品質專案是 DQS 透過電腦輔助的資料更正和互動式資料清理，執行資料清理或資料比對的程序。  
   
  **新增資料品質專案**  
@@ -56,8 +56,8 @@ ms.locfileid: "70154477"
  **活動監控**  
  顯示與連接之 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]相關的所有目前和歷程記錄活動的狀態檢視。 監視的活動類型包含知識管理、資料品質專案和以 SSIS 為基礎的資料更正。  
   
- **Configuration**  
- 顯示參考資料服務帳戶的設定屬性 (透過 Azure Marketplace 並直接參考資料服務)、一般設定 (互動式清理、比對和程式碼剖析) 和記錄嚴重性設定。  
+ **組態**  
+ 顯示參考資料服務帳戶的設定屬性（透過 Azure Marketplace 並直接參考資料服務）、一般設定（互動式清理、比對和程式碼剖析）和記錄嚴重性設定。  
   
 ## <a name="see-also"></a>另請參閱  
  [DQS 知識庫與定義域](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   

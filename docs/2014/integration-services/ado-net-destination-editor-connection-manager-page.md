@@ -1,5 +1,5 @@
 ---
-title: ADO NET 目的地編輯器 (連線管理員頁面) |Microsoft Docs
+title: ADO NET 目的地編輯器（連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -33,7 +33,7 @@ ms.locfileid: "70154026"
 3.  在 [ADO NET 目的地編輯器] 中，按一下 [連線管理員]。  
   
 ## <a name="static-options"></a>靜態選項  
- **[ODBC 目的地編輯器]**  
+ **連線管理員**  
  從清單中選取現有的連線管理員，或按一下 [新增] 來建立新的連線。  
   
  **新增**  
@@ -61,12 +61,12 @@ ms.locfileid: "70154026"
  如果您選取 [盡可能使用大量插入]，並將 [錯誤] 選項設定為 [重新導向資料列]，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](data-flow/error-handling-in-data.md)。 如需 [錯誤] 選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)。  
   
 > [!NOTE]  
->  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 Sybase 來源資料表包含識別欄位，您就必須使用「執行 SQL」工作，在 ADO NET 目的地前後執行 SET IDENTITY_INSERT 陳述式。 識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可讓明確值插入識別欄位中。 若要在相同的資料庫連接上執行 CREATE TABLE 和 SET IDENTITY 陳述式，請將 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連接管理員的 `RetainSameConnection` 屬性設定為 `True`。 此外，您可以針對「執行 SQL」工作和 ADO NET 目的地使用相同的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員。  
+>  如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 Sybase 來源資料表包含識別欄位，您就必須使用「執行 SQL」工作，在 ADO NET 目的地前後執行 SET IDENTITY_INSERT 陳述式。 識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可讓明確值插入識別欄位中。 若要在相同的資料庫連接上執行 CREATE TABLE 和 SET IDENTITY 陳述式，請將 `RetainSameConnection` 連接管理員的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 屬性設定為 `True`。 此外，您可以針對「執行 SQL」工作和 ADO NET 目的地使用相同的 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員。  
 >   
 >  如需詳細資訊，請參閱 [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) 和 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。  
   
 ## <a name="external-resources"></a>外部資源  
- Sqlcat.com 上的技術文章:[將資料載入至快速 Azure SQL Database](https://go.microsoft.com/fwlink/?LinkId=244333)  
+ sqlcat.com 上的技術文件：[快速將資料載入 Azure SQL Database 的方式](https://go.microsoft.com/fwlink/?LinkId=244333) \(英文\)  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO NET 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   

@@ -22,7 +22,7 @@ ms.locfileid: "73637676"
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 作業系統的 Server Core 安裝選項提供執行特定伺服器角色的基本環境， 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]上執行之 Server Core 的詳細資訊，請參閱[適用于 Windows server 2008 R2 的 Server core](https://go.microsoft.com/fwlink/?LinkId=202439) （ https://go.microsoft.com/fwlink/?LinkId=202439)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 上實作之 Server Core 的詳細資訊，請參閱 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 |需求|安裝方式|  
 |-----------------|--------------------|  
@@ -32,7 +32,7 @@ ms.locfileid: "73637676"
 |Windows Installer 4.5|隨附於 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 的 Server Core 安裝。|  
 |Windows PowerShell 2.0|隨附於 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 的 Server Core 安裝。|  
   
-##  <a name="BK_SupportedFeatures"></a> 支援的功能  
+##  <a name="BK_SupportedFeatures"></a> Supported Features  
  您可以使用下表來尋找 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 中支援的功能。  
   
 |功能|支援|  
@@ -82,7 +82,7 @@ ms.locfileid: "73637676"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支援在 Server Core 作業系統上使用 [安裝精靈] 進行安裝。 在 Server Core 上安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
 > [!IMPORTANT]  
->  在執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Server Core SP1 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core 的電腦上，無法將 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 與舊版 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 並行安裝。  
+>  在執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Server Core SP1 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core 的電腦上，無法將 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 與舊版 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 並行安裝。  
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "73637676"
   
 ### <a name="feature-parameters"></a>功能參數  
   
-|功能參數|說明|  
+|功能參數|描述|  
 |-----------------------|-----------------|  
 |SQLENGINE|只安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |REPLICATION|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時一併安裝複寫元件。|  
@@ -106,12 +106,12 @@ ms.locfileid: "73637676"
   
  請參閱下列功能參數用法的範例：  
   
-|參數和值|說明|  
+|參數和值|描述|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|只安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |/FEATURES=SQLEngine,FullText|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文檢索。|  
 |/FEATURES=SQLEngine,Conn|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和連接元件。|  
-|/FEATURES=SQLEngine,AS,IS,Conn|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]及連接元件。|  
+|/FEATURES=SQLEngine,AS,IS,Conn|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 及連接元件。|  
   
 ### <a name="installation-options"></a>安裝選項  
  在 Server Core 作業系統上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時，安裝程式支援下列安裝選項：  
@@ -286,7 +286,7 @@ ms.locfileid: "73637676"
  `net start SQLBROWSER`  
   
 ### <a name="create-exceptions-in-windows-firewall"></a>在 Windows 防火牆中建立例外狀況  
- 若要在 Windows 防火牆中建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取的例外狀況，請遵循 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)中指定的步驟。  
+ 若要在 Windows 防火牆中建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取的例外狀況，請遵循[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)中指定的步驟。  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上啟用 TCP/IP  
  您可以針對 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，透過 Windows PowerShell 啟用 TCP/IP 通訊協定。 請遵循下列步驟：  
@@ -311,9 +311,9 @@ $Tcp
 ```  
   
 ## <a name="uninstallation"></a>解除安裝  
- 在登入執行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的電腦之後，即可透過系統管理員命令提示字元使用有限的桌面環境。 您可以使用此命令提示字元啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的解除安裝。 若要解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的執行個體，請在使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式中，從命令提示字元啟動解除安裝。 /QS 參數透過 UI 顯示進度，但是不接受任何輸入。 /Q 會在不含任何使用者介面的無訊息模式中執行。  
+ 在登入執行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 的電腦之後，即可透過系統管理員命令提示字元使用有限的桌面環境。 您可以使用此命令提示字元啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的解除安裝。 若要解除安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體，請在使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式中，從命令提示字元啟動解除安裝。 /QS 參數透過 UI 顯示進度，但是不接受任何輸入。 /Q 會在不含任何使用者介面的無訊息模式中執行。  
   
- 解除安裝現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體：  
+ 解除安裝現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體：  
   
 ```cmd
 setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERVER  

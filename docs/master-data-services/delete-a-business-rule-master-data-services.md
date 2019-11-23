@@ -29,7 +29,7 @@ ms.locfileid: "73729402"
 > [!NOTE]  
 >  您可以避免資料使用商務規則來加以驗證，其方式是排除該商務規則，而不是將它刪除。 如需詳細資訊，請參閱[排除商務規則 &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -40,7 +40,7 @@ ms.locfileid: "73729402"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
+2.  從功能表列，指向 [管理]，然後按一下 [商務規則]。  
   
 3.  在 [商務規則] 頁面上，從 [模型] 下拉式清單選取模型。  
   

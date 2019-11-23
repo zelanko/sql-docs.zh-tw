@@ -29,7 +29,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175990"
 ---
-# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
+# <a name="backup-overview-sql-server"></a>備份概觀 (SQL Server)
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份元件。 備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫對於保護資料非常重要。 此討論涵蓋備份類型和備份限制。 本主題同時介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份裝置和備份媒體。  
   
  **本主題內容：**  
@@ -86,7 +86,7 @@ ms.locfileid: "70175990"
  **備份媒體詞匯和定義**  
   
  [備份裝置](backup-devices-sql-server.md)  
- 寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入至 Azure Blob 儲存體服務, 而且會使用**URL**格式來指定備份檔案的目的地和名稱。 如需詳細資訊, 請參閱[使用 Azure Blob 儲存體服務 SQL Server 備份和還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 寫入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入 Azure Blob 儲存體服務，而且會使用 **URL** 格式來指定備份檔案的目的地和名稱。 如需詳細資訊，請參閱[使用 Azure Blob 儲存體服務 SQL Server 備份和還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  [備份媒體](media-sets-media-families-and-backup-sets-sql-server.md)  
  已寫入一個或多個備份的一個或多個磁帶或磁碟檔案。  
@@ -133,7 +133,7 @@ ms.locfileid: "70175990"
   
 -   如果在備份作業進行當中試圖建立或刪除資料庫檔案，建立或刪除作業會失敗。  
   
- 如果備份作業與檔案管理或壓縮作業重疊，便會發生衝突。 不論哪一個衝突的作業先開始，第二項作業都會等候第一項作業設定的鎖定逾時(逾時期間由工作階段逾時設定控制)。如果在逾時期間解除鎖定，第二項作業就會繼續下去。 如果鎖定逾時，第二項作業就會失敗。  
+ 如果備份作業與檔案管理或壓縮作業重疊，便會發生衝突。 不論哪一個衝突的作業先開始，第二個作業都會等待第一個作業所設定的鎖定超時。（超時時間是由會話超時設定所控制）。如果在超時期間釋放鎖定，則會繼續進行第二個作業。 如果鎖定逾時，第二項作業就會失敗。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **使用備份裝置和備份媒體**  
@@ -156,7 +156,7 @@ ms.locfileid: "70175990"
   
 -   [從裝置還原備份 &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [教學課程：SQL Server 備份和還原至 Azure Blob 儲存體服務](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教學課程： SQL Server 備份和還原至 Azure Blob 儲存體服務](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **若要建立備份**  
   
@@ -179,10 +179,10 @@ ms.locfileid: "70175990"
   
 -   [使用資源管理員進行備份壓縮，以限制 CPU 使用率 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [教學課程：SQL Server 備份和還原至 Azure Blob 儲存體服務](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教學課程： SQL Server 備份和還原至 Azure Blob 儲存體服務](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 資料庫的備份與還原](back-up-and-restore-of-sql-server-databases.md)   
+ [SQL Server 資料庫的備份和還原](back-up-and-restore-of-sql-server-databases.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [維護計畫](../maintenance-plans/maintenance-plans.md)   
  [交易記錄 &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

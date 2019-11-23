@@ -36,14 +36,14 @@ ms.locfileid: "73532936"
   
  此視圖會顯示最後一個1000要求和作用中要求的資料;使用中要求的資料一律會出現在此視圖中。  
   
-|資料行名稱|資料類型|說明|範圍|  
+|Column Name|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|查詢此 DMS 背景工作角色所屬的部分。 request_id、step_index 和 dms_step_index 會形成此視圖的索引鍵。||  
 |step_index|`int`|此 DMS 背景工作角色所屬的查詢步驟。|請參閱 sys.databases 中的步驟索引[dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
 |dms_step_index|`int`|此背景工作正在執行之 DMS 計畫中的步驟。|請參閱[sys.databases dm_exec_dms_workers （transact-sql）](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|正在執行背景工作的節點。|請參閱[sys.databases dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|`int`|||  
-|型別|`nvarcha(32)`|||  
+|類型|`nvarcha(32)`|||  
 |status|`nvarchar(32)`|此步驟的狀態|「擱置」、「執行中」、「完成」、「失敗」、「UndoFailed」、「PendingCancel」、「已取消」、「已復原」、「已中止」|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  

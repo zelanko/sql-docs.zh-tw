@@ -48,7 +48,7 @@ ms.locfileid: "73982707"
 |**authentication_type_desc**|**nvarchar(60)**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 驗證類型的描述。 以下是可能的值及其描述。<br /><br /> 無：無驗證<br />實例：實例驗證<br />資料庫：資料庫驗證<br />WINDOWS： Windows 驗證|  
 |**default_language_name**|**sysname**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 表示此主體的預設語言。|  
 |**default_language_lcid**|**int**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本。<br /><br /> 表示此主體的預設 LCID。|  
-|**allow_encrypted_value_modifications**|**bit**|**適用于**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 和更新版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這可讓使用者在不解密資料的情況下，使用 Always Encrypted 在資料表或資料庫之間大量複製已加密的資料。 預設值為 OFF。 |      
+|**allow_encrypted_value_modifications**|**bit**|**適用於**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這可讓使用者在不解密資料的情況下，使用 Always Encrypted 在資料表或資料庫之間大量複製已加密的資料。 預設值為 OFF。 |      
   
 ## <a name="remarks"></a>Remarks  
  *PasswordLastSetTime*屬性可用於 SQL Server 的所有支援設定，但只有當 SQL Server 在 Windows Server 2003 或更新版本上執行，而且 CHECK_POLICY 和 CHECK_EXPIRATION 都已啟用時，才可以使用其他屬性。 如需詳細資訊，請參閱[密碼原則](../../relational-databases/security/password-policy.md)。  

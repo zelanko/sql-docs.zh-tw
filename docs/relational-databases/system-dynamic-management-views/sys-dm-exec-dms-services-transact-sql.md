@@ -34,7 +34,7 @@ ms.locfileid: "73532928"
 
   保留在 PolyBase 計算節點上執行之所有 DMS 服務的相關資訊。 它會針對每個服務實例列出一個資料列。  
   
-|資料行名稱|資料類型|說明|範圍|  
+|Column Name|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|`int`|與 DMS 核心相關聯的唯一數值識別碼。 此視圖的索引鍵。|唯一識別碼。|  
 |compute_node_id|`int`|此 DMS 服務執行所在節點的識別碼|請參閱 sys.databases 中的*compute_node_id* [dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  

@@ -50,7 +50,7 @@ ms.locfileid: "71708215"
 
  如需 **bcp** 範例，請參閱：  
   
--   [bcp 公用程式](../../tools/bcp-utility.md)  
+-   [bcp Utility](../../tools/bcp-utility.md)  
   
 -   [建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -74,8 +74,11 @@ ms.locfileid: "71708215"
 
 ## <a name="see-also"></a>另請參閱
 
-[插入&#40;transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql)
-[SELECT 子句&#40;transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql)
+[插入&#40;transact-sql&#41; ](/sql/t-sql/statements/insert-transact-sql)
+[SELECT 子句&#40;transact-sql&#41; ](/sql/t-sql/queries/select-clause-transact-sql)
 [bcp 公用程式](../../tools/bcp-utility.md)   
-[準備大量匯入&#40;資料&#41;SQL Server](prepare-to-bulk-import-data-sql-server.md)@no__t-[3 &#40;BULK INSERT&#41;transact-sql](/sql/t-sql/statements/bulk-insert-transact-sql)
-[大量匯入和匯出資料&#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)1[OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[建立格式檔案&#40;SQL Server&#41; ](create-a-format-file-sql-server.md)
+[準備大量匯入&#40;資料&#41; SQL Server](prepare-to-bulk-import-data-sql-server.md)
+[ &#40;BULK INSERT transact-sql&#41; ](/sql/t-sql/statements/bulk-insert-transact-sql)
+[大量匯入和匯出資料&#40;SQL Server&#41; ](bulk-import-and-export-of-data-sql-server.md)
+[OPENROWSET &#40;transact-sql&#41; ](/sql/t-sql/functions/openrowset-transact-sql)
+[建立格式檔案&#40;SQL Server&#41; ](create-a-format-file-sql-server.md)

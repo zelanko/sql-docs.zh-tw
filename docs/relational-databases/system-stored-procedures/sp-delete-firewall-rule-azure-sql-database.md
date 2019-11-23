@@ -45,7 +45,7 @@ sp_delete_firewall_rule [@name =] 'name'
  [@name =]'*name*'  
  要移除的伺服器層級防火牆設定的名稱。 *名稱*是**Nvarchar （128）** ，沒有預設值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  

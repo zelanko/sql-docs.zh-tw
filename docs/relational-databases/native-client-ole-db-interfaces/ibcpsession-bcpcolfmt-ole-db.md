@@ -42,7 +42,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **BCPColFmt** 方法是用來建立 BCP 資料檔欄位與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行之間的繫結。 它會使用資料行的長度、類型、結束字元和前置長度當做參數，並為個別欄位設定每一個屬性。  
   
  如果使用者選擇互動模式，就會呼叫這個方法兩次；一次是根據預設值設定資料行格式 (預設值是根據伺服器資料行的類型)，另一次是根據互動模式期間選擇之用戶端的資料行類型，針對每一個資料行設定格式。  

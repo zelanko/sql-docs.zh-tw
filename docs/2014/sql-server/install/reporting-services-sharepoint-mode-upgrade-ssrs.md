@@ -26,7 +26,7 @@ ms.locfileid: "71952436"
 ## <a name="options"></a>選項。  
  唯有在選取了 **[繼續升級]** 核取方塊之後， **[下一步]** 按鈕才可以使用。 如果未選取此核取方塊，則無法繼續升級。  
   
- 如需詳細資訊，請參閱[升級和遷移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) （ https://go.microsoft.com/fwlink/?LinkID=245628) 。  
+ 如需詳細資訊，請參閱[升級和遷移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) （ https://go.microsoft.com/fwlink/?LinkID=245628)。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視與讀取 SQL Server 安裝程式記錄檔](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   

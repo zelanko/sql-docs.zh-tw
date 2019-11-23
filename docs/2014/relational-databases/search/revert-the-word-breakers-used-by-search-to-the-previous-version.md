@@ -152,7 +152,7 @@ ms.locfileid: "70874718"
     > [!WARNING]  
     >  此變更影響在目前版本和舊版中都使用 NaturalLanguage6.dll 的所有語言。  
   
-5.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+5.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
   
 6.  使用下列步驟，針對選定語言的舊版斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -164,7 +164,7 @@ ms.locfileid: "70874718"
   
     4.  如果選取的語言使用字幹分析器，則將該機碼值的 (預設值) 資料更新為表格中舊版字幹分析器的檔案名稱。  
   
-7.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< t\>\MSSearch\Language\\< >\mssearch\language 碼 >** 。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
+7.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\\<language_key>** 。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
   
 8.  將 **WBreakerClass** 機碼值更新為表格中目前斷詞工具的值。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "70874718"
     > [!WARNING]  
     >  此變更影響在目前版本和舊版中都使用 NaturalLanguage6.dll 的所有語言。  
   
-3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
   
 4.  如果下列機碼不存在，請使用下列步驟，針對選定語言的目前斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -193,7 +193,7 @@ ms.locfileid: "70874718"
   
     4.  如果選取的語言使用字幹分析器，則將該機碼值的 (預設值) 資料更新為表格中目前字幹分析器的檔案名稱。  
   
-5.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< t\>\MSSearch\Language\\< >\mssearch\language 碼 >** 。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
+5.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\\<language_key>** 。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
   
 6.  將 **WBreakerClass** 機碼值更新為表格中舊版斷詞工具的值。  
   
@@ -212,8 +212,8 @@ ms.locfileid: "70874718"
 |---------------|------------------|-------------|  
 |舊版 CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|目前 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
-|目前檔案名稱|MSWB7.dll|None|  
+|目前 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|無|  
+|目前檔案名稱|MSWB7.dll|無|  
   
  **德文 (deu)，LCID 1031**  
   
@@ -230,8 +230,8 @@ ms.locfileid: "70874718"
 |---------------|------------------|-------------|  
 |舊版 CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|目前 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
-|目前檔案名稱|MsWb70011.dll|None|  
+|目前 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|無|  
+|目前檔案名稱|MsWb70011.dll|無|  
   
  **荷蘭文 (nld)，LCID 1043**  
   
@@ -273,7 +273,7 @@ ms.locfileid: "70874718"
   
 1.  不要從 Binn 資料夾中移除目前元件版本的檔案。  
   
-2.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+2.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
   
 3.  使用下列步驟，針對選定語言的舊版斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -285,7 +285,7 @@ ms.locfileid: "70874718"
   
     4.  如果選取的語言使用字幹分析器，則將該機碼值的 (預設值) 資料更新為表格中舊版字幹分析器的檔案名稱。  
   
-4.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< t\>\MSSearch\Language\\< >\mssearch\language 碼 >** 。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
+4.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\\<language_key>** 。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
   
 5.  將 **WBreakerClass** 機碼值更新為表格中目前斷詞工具的值。  
   
@@ -297,7 +297,7 @@ ms.locfileid: "70874718"
   
 1.  不要從 Binn 資料夾中移除舊版元件的檔案。  
   
-2.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
+2.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
   
 3.  如果下列機碼不存在，請使用下列步驟，針對選定語言的目前斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -309,7 +309,7 @@ ms.locfileid: "70874718"
   
     4.  如果選取的語言使用字幹分析器，則將該機碼值的 (預設值) 資料更新為表格中目前字幹分析器的檔案名稱。  
   
-4.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< t\>\MSSearch\Language\\< >\mssearch\language 碼 >** 。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
+4.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\\<language_key>** 。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
   
 5.  將 **WBreakerClass** 機碼值更新為表格中舊版斷詞工具的值。  
   
@@ -346,8 +346,8 @@ ms.locfileid: "70874718"
 |---------------|------------------|-------------|  
 |舊版 CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |舊版檔案名稱|Thawbrkr.dll|Thawbrkr.dll|  
-|目前 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
-|目前檔案名稱|MsWb7001e.dll|None|  
+|目前 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|無|  
+|目前檔案名稱|MsWb7001e.dll|無|  
   
  **繁體中文 (zh-hk)，LCID 3076**  
   

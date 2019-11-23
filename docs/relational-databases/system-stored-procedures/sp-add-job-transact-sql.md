@@ -29,7 +29,7 @@ ms.locfileid: "72381905"
 
   加入 SQL 代理程式服務所執行的新作業。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
  > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
@@ -69,33 +69,33 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id` 與語言無關的機制來指定作業類別目錄。 *category_id*是**int**，預設值是 Null。  
   
-`[ @owner_login_name = ] 'login'` 擁有該作業的登入名稱。 *login*是**sysname**，預設值是 Null，它會被視為目前的登入名稱。 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才可以設定或變更 **\@owner_login_name**的值。 如果不是**系統管理員（sysadmin** ）角色成員的使用者設定或變更 **\@owner_login_name**的值，則此預存程式的執行會失敗，並傳回錯誤。  
+`[ @owner_login_name = ] 'login'` 擁有該作業的登入名稱。 *login*是**sysname**，預設值是 Null，它會被視為目前的登入名稱。 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才可以設定或變更 **\@owner_login_name**的值。 如果不是**系統管理員（sysadmin** ）角色成員的使用者設定或變更 **\@owner_login_name**的值，則執行此預存程式會失敗，並傳回錯誤。  
   
 `[ @notify_level_eventlog = ] eventlog_level` 值，指出何時要將專案放在 Microsoft Windows 應用程式記錄檔中，以進行此作業。 *eventlog_level*是**int**，而且可以是下列其中一個值。  
   
-|[值]|[描述]|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0**|永不|  
 |**1**|成功時|  
 |**2** (預設值)|失敗時|  
 |**3**|永遠|  
   
-`[ @notify_level_email = ] email_level` 值，指出在此作業完成時傳送電子郵件的時間。 *email_level*是**int**，預設值是**0**，表示 never。 *email_level*會使用與*eventlog_level*相同的值。  
+`[ @notify_level_email = ] email_level` 值，指出在此作業完成時傳送電子郵件的時間。 *email_level*是**int**，預設值是**0**，表示 never。 *email_level*使用與*eventlog_level*相同的值。  
   
-`[ @notify_level_netsend = ] netsend_level` 值，指出在此作業完成時，何時傳送網路訊息。 *netsend_level*是**int**，預設值是**0**，表示 never。 *netsend_level*會使用與*eventlog_level*相同的值。  
+`[ @notify_level_netsend = ] netsend_level` 值，指出在此作業完成時，何時傳送網路訊息。 *netsend_level*是**int**，預設值是**0**，表示 never。 *netsend_level*使用與*eventlog_level*相同的值。  
   
-`[ @notify_level_page = ] page_level` 值，指出在此作業完成時傳送頁面的時間。 *page_level*是**int**，預設值是**0**，表示 never。 *page_level*會使用與*eventlog_level*相同的值。  
+`[ @notify_level_page = ] page_level` 值，指出在此作業完成時傳送頁面的時間。 *page_level*是**int**，預設值是**0**，表示 never。 *page_level*使用與*eventlog_level*相同的值。  
   
-`[ @notify_email_operator_name = ] 'email_name'` 當達到*email_level*時，要傳送電子郵件的人員的電子郵件名稱。 *email_name*是**sysname**，預設值是 Null。  
+`[ @notify_email_operator_name = ] 'email_name'` 當到達*email_level*時，要傳送電子郵件的人員的電子郵件名稱。 *email_name*是**sysname**，預設值是 Null。  
   
 `[ @notify_netsend_operator_name = ] 'netsend_name'` 完成此作業時，網路訊息所要送往的操作員名稱。 *netsend_name*是**sysname**，預設值是 Null。  
   
 `[ @notify_page_operator_name = ] 'page_name'` 完成這項工作時要分頁的人員名稱。 *page_name*是**sysname**，預設值是 Null。  
   
-`[ @delete_level = ] delete_level` 值，指出刪除作業的時間。 *delete_value*是**int**，預設值是0，這表示永遠不會。 *delete_level*會使用與*eventlog_level*相同的值。  
+`[ @delete_level = ] delete_level` 值，指出刪除作業的時間。 *delete_value*是**int**，預設值是0，這表示永遠不會。 *delete_level*使用與*eventlog_level*相同的值。  
   
 > [!NOTE]  
->  當*delete_level*為**3**時，此作業只會執行一次，不論針對作業定義的任何排程為何。 此外，如果作業刪除作業本身，也會同時刪除作業的所有記錄。  
+>  當*delete_level*為**3**時，此作業只會執行一次，而不論為作業定義的任何排程。 此外，如果作業刪除作業本身，也會同時刪除作業的所有記錄。  
   
 `[ @job_id = ] _job_idOUTPUT` 已成功建立時指派給作業的作業識別碼。 *job_id*是**uniqueidentifier**類型的輸出變數，預設值是 Null。  
   
@@ -103,18 +103,18 @@ sp_add_job [ @job_name = ] 'job_name'
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- None  
+ 無  
   
 ## <a name="remarks"></a>Remarks  
  **\@originating_server**存在於**sp_add_job 中，** 但未列在 [引數] 之下。 **\@originating_server**保留供內部使用。  
   
- 在執行**sp_add_job**以新增作業之後， **sp_add_jobstep**可以用來新增執行作業活動的步驟。 **sp_add_jobschedule**可以用來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務用來執行作業的排程。 使用**sp_add_jobserver**來設定工作執行所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例，然後**sp_delete_jobserver**以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例移除作業。  
+ 執行**sp_add_job**以加入作業之後， **sp_add_jobstep**可以用來新增執行作業活動的步驟。 **sp_add_jobschedule**可用來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式服務用來執行作業的排程。 使用**sp_add_jobserver**設定作業執行所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例，並**sp_delete_jobserver**從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例中移除作業。  
   
- 如果作業將在多伺服器環境中的一或多個目標伺服器上執行，請使用**sp_apply_job_to_targets**來設定作業的目標伺服器或目標伺服器群組。 若要從目標伺服器或目標伺服器群組中移除作業，請使用**sp_remove_job_from_targets**。  
+ 如果作業將在多伺服器環境中的一或多個目標伺服器上執行，請使用**sp_apply_job_to_targets**來設定作業的目標伺服器或目標伺服器群組。 若要移除目標伺服器或目標伺服器群組中的作業，請使用**sp_remove_job_from_targets**。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  若要執行這個預存程式，使用者必須是**系統管理員（sysadmin** ）固定伺服器角色的成員，或被授與位於**msdb**資料庫中的下列其中一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色：  
   
 -   **SQLAgentUserRole**  
@@ -125,7 +125,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  如需與每個固定資料庫角色相關聯之特定許可權的詳細資訊，請參閱[SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才可以設定或變更 **\@owner_login_name**的值。 如果不是**系統管理員（sysadmin** ）角色成員的使用者設定或變更 **\@owner_login_name**的值，則此預存程式的執行會失敗，並傳回錯誤。  
+ 只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才可以設定或變更 **\@owner_login_name**的值。 如果不是**系統管理員（sysadmin** ）角色成員的使用者設定或變更 **\@owner_login_name**的值，則執行此預存程式會失敗，並傳回錯誤。  
   
 ## <a name="examples"></a>範例  
   
@@ -167,17 +167,17 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_add_schedule &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)    
- [sp_add_jobstep &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)    
- [sp_add_jobserver &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)    
- [sp_apply_job_to_targets &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)    
- [sp_delete_job &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)    
- [sp_delete_jobserver &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)    
- [sp_remove_job_from_targets &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)    
- [sp_help_job &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)    
- [sp_help_jobstep &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)    
- [sp_update_job &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)    
+## <a name="see-also"></a>另請參閱  
+ [sp_add_schedule &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobstep &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_add_jobserver &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_job &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_help_job &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_job &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

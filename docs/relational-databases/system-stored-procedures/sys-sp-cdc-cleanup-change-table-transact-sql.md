@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_cleanup_change_table （Transact-sql） |Microsoft Docs
+title: sys.databases sp_cdc_cleanup_change_table （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -32,7 +32,7 @@ ms.locfileid: "72909324"
 
   根據指定的*low_water_mark*值，從目前資料庫的變更資料表中移除資料列。 這個預存程序會提供給想要直接管理變更資料表清除程序的使用者。 不過，請謹慎使用，因為此程序會影響變更資料表中資料的所有取用者。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +53,7 @@ sys.sp_cdc_cleanup_change_table
  [@low_water_mark =]*low_water_mark*  
  這是一個記錄序號（LSN），用來當做*capture 實例*的新下限標準。 *low_water_mark*是**binary （10）** ，沒有預設值。  
   
- 如果此值為非 null，它就必須顯示為[cdc _time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表中目前專案的 start_lsn 值。 如果 cdc.lsn_time_mapping 中的其他項目與新下限標準所識別的項目共用相同的認可時間，系統就會選擇與該項目群組相關聯的最小 LSN 做為下限標準。  
+ 如果此值為非 null，它就必須顯示為[cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表中目前專案的 start_lsn 值。 如果 cdc.lsn_time_mapping 中的其他項目與新下限標準所識別的項目共用相同的認可時間，系統就會選擇與該項目群組相關聯的最小 LSN 做為下限標準。  
   
  如果將此值明確設定為 Null，則會使用*capture 實例*目前的*下限*標準來定義清除作業的上限。  
   
@@ -64,12 +64,12 @@ sys.sp_cdc_cleanup_change_table
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- None  
+ 無  
   
 ## <a name="remarks"></a>Remarks  
  sys.sp_cdc_cleanup_change_table 會執行下列作業：  
   
-1.  如果 @low_water_mark 參數不是 Null，它會將*capture 實例*的 start_lsn 值設定為新的*下限*標準。  
+1.  如果 @low_water_mark 參數不是 Null，它會將*capture 實例*start_lsn 的值設定為新的*下限*標準。  
   
     > [!NOTE]  
     >  新下限標準可能不是預存程序呼叫中指定的下限標準。 如果 cdc.lsn_time_mapping 資料表中的其他項目共用相同的認可時間，系統就會選取在項目群組中表示的最小 start_lsn 做為已調整的下限標準。 如果 @low_water_mark 參數為 Null，或目前的下限標準大於新的 lowwatermark，則會將 capture 實例的 start_lsn 值保持不變。  
@@ -80,16 +80,16 @@ sys.sp_cdc_cleanup_change_table
   
 -   清除代理程式作業回報刪除失敗。  
   
-     管理員可以明確執行這個預存程序來重試失敗的作業。 若要針對指定的 capture 實例重試清除，請執行 sp_cdc_cleanup_change_table，並為 @low_water_mark 參數指定 Null。  
+     管理員可以明確執行這個預存程序來重試失敗的作業。 若要針對指定的 capture 實例重試清除，請執行 sys. sp_cdc_cleanup_change_table，並為 @low_water_mark 參數指定 Null。  
   
 -   清除代理程式作業所使用的簡單保留性原則不足。  
   
      因為這個預存程序會針對單一擷取執行個體執行清除作業，所以它可用來建立自訂清除策略，以便為個別擷取執行個體修改清除規則。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要 db_owner 固定資料庫角色中的成員資格。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  

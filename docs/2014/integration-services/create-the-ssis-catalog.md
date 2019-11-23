@@ -24,7 +24,7 @@ ms.locfileid: "72798024"
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中建立 SSISDB 目錄  
   
-1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
 2.  連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine。  
   
@@ -69,6 +69,6 @@ ms.locfileid: "72798024"
   
      如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](https://go.microsoft.com/fwlink/?LinkId=254267)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SSIS 目錄](catalog/ssis-catalog.md)   
  [備份、還原和移動 SSIS 目錄](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  

@@ -50,13 +50,13 @@ ms.locfileid: "73983305"
 |is_tracked_by_cdc|**bit**|1 = 資料表已啟用異動資料擷取。 如需詳細資訊，請參閱[sys.databases &#40;。 sp_cdc_enable_table transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。|  
 |lock_escalation|**tinyint**|資料表之 LOCK_ESCALATION 選項的值：<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
 |lock_escalation_desc|**nvarchar(60)**|資料表之 lock_escalation 選項的文字描述。 可能的值為：TABLE、AUTO 和 DISABLE。|  
-|is_filetable|**bit**|**適用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更新版本，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = 資料表是 FileTable。<br /><br /> 如需有關 FileTable 的詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。|  
-|持久性|**tinyint**|**適用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 以下是可能的值：<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 預設值為 0 值。|  
-|durability_desc|**nvarchar(60)**|**適用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 以下是可能的值：<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> SCHEMA_AND_DATA 的值表示資料表是持久、記憶體中的資料表。 SCHEMA_AND_DATA 是記憶體最佳化資料表的預設值。 SCHEMA_ONLY 值表示，在具有記憶體最佳化物件的資料庫重新啟動時，資料表資料不會保存。|  
-|is_memory_optimized|**bit**|**適用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新版本，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 以下是可能的值：<br /><br /> 0 = 不是記憶體最佳化的。<br /><br /> 1 = 是記憶體最佳化的。<br /><br /> 預設值是 0 值。<br /><br /> 記憶體最佳化的資料表是記憶體中的使用者資料表，其結構描述保存在磁碟上，類似於其他使用者資料表。 記憶體最佳化的資料表可以從原生編譯預存程序存取。|  
-|temporal_type|**tinyint**|**適用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 代表資料表類型的數值：<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar(60)**|**適用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 資料表類型的文字描述：<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|history_table_id|**int**|**適用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 當（2，4）中的 temporal_type 傳回維護歷程記錄資料之資料表的 object_id 時，則為，否則會傳回 Null。|  
+|is_filetable|**bit**|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = 資料表是 FileTable。<br /><br /> 如需有關 FileTable 的詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。|  
+|持久性|**tinyint**|**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 以下是可能的值：<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 預設值為 0 值。|  
+|durability_desc|**nvarchar(60)**|**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 以下是可能的值：<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> SCHEMA_AND_DATA 的值表示資料表是持久、記憶體中的資料表。 SCHEMA_AND_DATA 是記憶體最佳化資料表的預設值。 SCHEMA_ONLY 值表示，在具有記憶體最佳化物件的資料庫重新啟動時，資料表資料不會保存。|  
+|is_memory_optimized|**bit**|**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更新版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 以下是可能的值：<br /><br /> 0 = 不是記憶體最佳化的。<br /><br /> 1 = 是記憶體最佳化的。<br /><br /> 預設值是 0 值。<br /><br /> 記憶體最佳化的資料表是記憶體中的使用者資料表，其結構描述保存在磁碟上，類似於其他使用者資料表。 記憶體最佳化的資料表可以從原生編譯預存程序存取。|  
+|temporal_type|**tinyint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 代表資料表類型的數值：<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 資料表類型的文字描述：<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|history_table_id|**int**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 當（2，4）中的 temporal_type 傳回維護歷程記錄資料之資料表的 object_id 時，則為，否則會傳回 Null。|  
 |is_remote_data_archive_enabled|**bit**|**適用于**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 指出資料表是否已啟用 Stretch。<br /><br /> 0 = 資料表未啟用 Stretch。<br /><br /> 1 = 資料表已啟用 Stretch。<br /><br /> 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
 |is_external|**bit**|**適用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本、[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]和 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]。<br /><br /> 表示資料表是外部資料表。<br /><br /> 0 = 資料表不是外部資料表。<br /><br /> 1 = 資料表是外部資料表。| 
 |history_retention_period|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>數值，表示時態歷程記錄保留期間的持續時間，以 history_retention_period_unit 指定的單位。 |  
@@ -83,7 +83,7 @@ GO
   
 下列範例會顯示如何公開相關的時態性資料。  
    
-**適用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。
   
 ```  
 SELECT T1.object_id, T1.name as TemporalTableName, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,  

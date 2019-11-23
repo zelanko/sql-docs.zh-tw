@@ -34,7 +34,7 @@ ms.locfileid: "73786291"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 屬性工作表示 NOCOUNT 選項的目前設定，其控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在呼叫[SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)時，是否報告受語句影響的資料列數目。 *Valueptr 是*值的類型是 SQLLEN。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT 為 OFF。 SQLRowCount 會傳回受影響的資料列數目。|  
 |SQL_NC_ON|NOCOUNT 為 ON。 SQLRowCount 不會傳回受影響的資料列數目，且傳回的值為0。|  

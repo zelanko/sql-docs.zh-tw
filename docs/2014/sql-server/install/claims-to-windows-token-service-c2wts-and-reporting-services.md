@@ -37,10 +37,10 @@ ms.locfileid: "71952276"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 > [!NOTE]  
->  注意：某些設定步驟可能會變更，或在某些伺服器陣列拓撲中可能無法使用。 例如單一伺服器安裝並不支援 Windows Identity Foundation c2WTS 服務，因此即無法在此伺服器陣列組態使用對 Windows Token 委派的宣告。  
+>  注意：在某些伺服器陣列拓撲中，部分組態步驟可能會有所變更或無法使用。 例如單一伺服器安裝並不支援 Windows Identity Foundation c2WTS 服務，因此即無法在此伺服器陣列組態使用對 Windows Token 委派的宣告。  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>設定 c2WTS 所需的基本步驟  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71952276"
   
     2.  將 [啟動類型] 變更為 [**自動**]，然後啟動服務。  
   
-4.  啟動 SharePoint 對 Windows Token 服務的宣告：從 [管理伺服器上的服務] 上的 SharePoint 管理中心啟動對 Windows Token 服務的宣告。 您應在要執行動作的伺服器上啟動該服務。 例如您有一部 WFE 伺服器及另一部執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務的應用程式伺服器，就只需在應用程式伺服器上啟動 c2WTS。 WFE 並不需要 c2WTS。  
+4.  啟動 SharePoint 的「對 Windows Token 服務的宣告」：在 [**管理伺服器上的服務**] 頁面上，透過 SharePoint 管理中心啟動對 Windows token 服務的宣告。 您應在要執行動作的伺服器上啟動該服務。 例如您有一部 WFE 伺服器及另一部執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務的應用程式伺服器，就只需在應用程式伺服器上啟動 c2WTS。 WFE 並不需要 c2WTS。  
   
 ## <a name="see-also"></a>另請參閱  
  [對 Windows Token 服務的宣告（c2WTS）總覽（ https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   

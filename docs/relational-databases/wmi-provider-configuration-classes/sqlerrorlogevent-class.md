@@ -38,7 +38,7 @@ class SQLErrorLogEvent
 };  
 ```  
   
-## <a name="properties"></a>屬性  
+## <a name="properties"></a>[屬性]  
  SQLErrorLogEvent 類別會定義下列屬性。  
   
 |||  
@@ -49,7 +49,7 @@ class SQLErrorLogEvent
 |訊息|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 事件訊息。|  
 |ProcessInfo|資料類型：**字串**<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 事件之來源伺服器處理序識別碼 (SPID) 的相關資訊。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
@@ -85,7 +85,7 @@ Next
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  若要透過 WMI 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔，您必須在本機和遠端電腦上具有下列許可權：  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間的讀取權限。 根據預設，每個人都可從啟用帳戶權限取得讀取權限。  

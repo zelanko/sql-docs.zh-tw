@@ -24,7 +24,7 @@ ms.locfileid: "73785750"
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  當您使用 SQLPutData 來傳送超過65535個位元組的資料（適用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 4.21 a）或 400 KB 的資料（適用于 SQL Server 6.0 版和更新版本）（適用于 SQL_LONGVARCHAR （**text**）、SQL_WLONGVARCHAR （**Ntext**）或 SQL_）時，適用下列限制LONGVARBINARY （**影像**）資料行：  
+  當您使用 SQLPutData 來傳送超過65535個位元組的資料（適用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 4.21 a）或 400 KB 的資料（適用于 SQL Server 6.0 版和更新版本）（適用于 SQL_LONGVARCHAR （**text**）、SQL_WLONGVARCHAR （**Ntext**）或 SQL_LONGVARBINARY （**image**）資料行）時，適用下列限制：  
   
 -   參考的參數可以是 INSERT 語句中的*insert_value* 。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785750"
 ## <a name="diagnostics"></a>診斷  
  有一個適用于 SQLPutData 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特定 SQLSTATE：  
   
-|SQLSTATE|錯誤|說明|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |22026|字串資料，長度不符|如果應用程式已指定要傳送的資料長度（以位元組為單位），例如，使用 SQL_LEN_DATA_AT_EXEC （*n*），其中*n*大於0，則應用程式透過 SQLPutData 所提供的位元組總數必須符合指定的長度。|  
   

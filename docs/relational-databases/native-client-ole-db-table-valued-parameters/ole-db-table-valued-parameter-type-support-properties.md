@@ -25,12 +25,12 @@ ms.locfileid: "73788624"
 
   本主題提供與資料表值參數資料列集物件相關聯之 OLE DB 屬性和屬性集的相關資訊。  
   
-## <a name="properties"></a>屬性  
+## <a name="properties"></a>[屬性]  
  以下為透過 IRowsetInfo::GetProperties 方法，在資料表值參數資料列集物件上公開的屬性清單。 請注意，所有資料表值參數資料列集屬性都是唯讀的。 因此，嘗試透過 IOpenRowset：： OpenRowset 或 ITableDefinitionWithConstraints：： CreateTableWithConstraints 方法將任何屬性設定為非預設值，將會導致錯誤，而且不會建立任何物件。  
   
  沒有在資料表值參數資料列集物件中實作的屬性不會列在此處。 如需屬性的完整清單，請參閱 OLE DB 文件集中的＜Windows Data Access Components＞。  
   
-|屬性識別碼|Value|  
+|屬性識別碼|ReplTest1|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  

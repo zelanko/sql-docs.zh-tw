@@ -22,7 +22,7 @@ ms.locfileid: "72782724"
   
 1.  [開始之前](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  **處理路徑節點：**  [列出方法與屬性](#ListPropMeth)、 [使用方法與屬性](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  當您導覽至 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供者路徑中的節點之後，可以執行兩種動作：  
@@ -93,7 +93,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
  [導覽 SQL Server PowerShell 路徑](navigate-sql-server-powershell-paths.md)   
  [將 URN 轉換成 SQL Server 提供者路徑](../database-engine/convert-urns-to-sql-server-provider-paths.md)   

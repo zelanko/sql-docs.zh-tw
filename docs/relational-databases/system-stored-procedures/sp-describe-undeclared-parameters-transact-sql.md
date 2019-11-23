@@ -30,7 +30,7 @@ ms.locfileid: "72908332"
 
   傳回結果集，其中包含有關 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中未宣告之參數的中繼資料。 會考慮 **\@tsql**批次中使用的每個參數，但不會在 **\@params**中宣告。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 如果 **\@tsql**輸入批次沒有參數（在 **\@params**中宣告），則此程式會傳回空的結果集。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,28 +42,28 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ \@tsql = ] 'Transact-SQL\_batch'` 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。 *SQL_batch*可以是**Nvarchar （** _n_ **）** 或**Nvarchar （max）** 。  
+`[ \@tsql = ] 'Transact-SQL\_batch'` 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。 *交易 SQL_batch*可以是**Nvarchar （** _n_ **）** 或**Nvarchar （max）** 。  
   
-`[ \@params = ] N'parameters'` \@params 提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次參數的宣告字串，類似于 sp_executesql 的運作方式。 *參數*可以是**Nvarchar （** _n_ **）** 或**Nvarchar （max）** 。  
+`[ \@params = ] N'parameters'` \@params 會提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次參數的宣告字串，類似于 sp_executesql 的運作方式。 *參數*可以是**Nvarchar （** _n_ **）** 或**Nvarchar （max）** 。  
   
- 這是一個字串，其中包含已內嵌在*SQL_batch*中之所有參數的定義。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 n 是指出其他參數定義的預留位置。 如果語句中的 Transact-sql 語句或批次不包含參數，則不需要 \@params。 這個參數的預設值是 NULL。  
+ 這是一個字串，其中包含已內嵌在*交易 SQL_batch*中的所有參數的定義。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 n 是指出其他參數定義的預留位置。 如果語句中的 Transact-sql 語句或批次不包含參數，則不需要 \@params。 這個參數的預設值是 NULL。  
   
  資料類型  
  參數的資料類型。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 在成功時， **sp_describe_undeclared_parameters**一律會傳回零的傳回狀態。 如果程式擲回錯誤，並將程式稱為 RPC，則傳回狀態會填入 _exec_describe_first_result_set 的 error_type 資料行中所述的錯誤類型。 如果程序是從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所呼叫，即使發生錯誤，傳回值也永遠是零。  
+ **sp_describe_undeclared_parameters**一律會在成功時傳回傳回狀態0。 如果程式擲回錯誤，並將程式稱為 RPC，則傳回狀態會填入 dm_exec_describe_first_result_set 的 error_type 資料行中所述的錯誤類型。 如果程序是從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所呼叫，即使發生錯誤，傳回值也永遠是零。  
   
 ## <a name="result-sets"></a>結果集  
  **sp_describe_undeclared_parameters**會傳回下列結果集。  
   
-|資料行名稱|[名稱]|[描述]|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT Null**|包含結果集中的參數序數位置。 第一個參數的位置將會指定為 1。|  
 |**name**|**sysname 不是 Null**|包含參數的名稱。|  
-|**suggested_system_type_id**|**int NOT Null**|包含在 sys.databases 中指定之參數資料類型的**system_type_id** 。<br /><br /> 針對 CLR 類型，即使**system_type_name**資料行將傳回 Null，這個資料行會傳回值240。|  
+|**suggested_system_type_id**|**int NOT Null**|包含在 sys.databases 中指定之參數資料類型的**system_type_id** 。<br /><br /> 針對 CLR 類型，即使**system_type_name**資料行會傳回 Null，這個資料行會傳回值240。|  
 |**suggested_system_type_name**|**Nvarchar （256） Null**|包含資料類型名稱。 包含指定給參數之資料類型的引數 (例如長度、有效位數、小數位數)。 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。 如果它是 CLR 使用者定義資料類型，這個資料行就會傳回 NULL。 如果無法推算參數的類型，則傳回 NULL。|  
-|**suggested_max_length**|**Smallint NOT Null**|請參閱 sys.databases。 適用于**max_length**資料行描述。|  
+|**suggested_max_length**|**Smallint NOT Null**|請參閱 sys.databases。 **max_length**資料行描述。|  
 |**suggested_precision**|**Tinyint NOT Null**|請參閱 sys.databases。 以查看 precision 資料行的說明。|  
 |**suggested_scale**|**Tinyint NOT Null**|請參閱 sys.databases。 以查看 scale 資料行的說明。|  
 |**suggested_user_type_id**|**int Null**|針對 CLR 和別名類型，會如同 sys.types 中所指定，包含資料行資料類型的 user_type_id。 否則，便為 NULL。|  
@@ -71,7 +71,7 @@ sp_describe_undeclared_parameters
 |**suggested_user_type_schema**|**sysname Null**|針對 CLR 和別名類型，會包含定義類型之結構描述的名稱。 否則，便為 NULL。|  
 |**suggested_user_type_name**|**sysname Null**|針對 CLR 和別名類型，會包含類型的名稱。 否則，便為 NULL。|  
 |**suggested_assembly_qualified_type_name**|**Nvarchar （4000） Null**|針對 CLR 類型，會傳回定義類型之組件與類別的名稱。 否則，便為 NULL。|  
-|**suggested_xml_collection_id**|**int Null**|包含參數資料類型的 xml_collection_id，如 sys.databases 中所指定。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
+|**suggested_xml_collection_id**|**int Null**|包含在 sys.databases 中指定之參數的資料類型 xml_collection_id。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
 |**suggested_xml_collection_database**|**sysname Null**|包含定義與這個類型相關聯之 XML 結構描述集合的資料庫。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
 |**suggested_xml_collection_schema**|**sysname Null**|包含定義與這個類型相關聯之 XML 結構描述集合的結構描述。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
 |**suggested_xml_collection_name**|**sysname Null**|包含與這個類型相關聯之 XML 結構描述集合的名稱。 如果傳回的類型沒有與 XML 結構描述集合相關聯，這個資料行將傳回 NULL。|  
@@ -85,13 +85,13 @@ sp_describe_undeclared_parameters
 |**suggested_tds_length**|**int NOT Null**|供內部使用。|  
   
 ## <a name="remarks"></a>Remarks  
- **sp_describe_undeclared_parameters**一律會傳回零的傳回狀態。  
+ **sp_describe_undeclared_parameters**一律會傳回傳回的狀態為零。  
   
  最常見的用法是在應用程式中提供可能包含參數且必須以特定方式處理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 其中一個範例是使用者介面（例如 ODBCTest 或 RowsetViewer），使用者可在其中提供具有 ODBC 參數語法的查詢。 應用程式必須動態探索參數數目，並提示使用者提供每個參數值。  
   
  另一個例子是，當沒有使用者輸入的情況下，應用程式必須在參數上執行迴圈，並從其他位置 (例如資料表) 為它們取得資料。 在這種情況下，應用程式不必一次傳遞所有參數資訊。 相反地，應用程式可以從提供者取得所有參數資訊，並自行從資料表取得資料。 使用**sp_describe_undeclared_parameters**的程式碼較為通用，如果資料結構之後變更，則較不可能需要修改。  
   
- **sp_describe_undeclared_parameters**會在下列任何情況下傳回錯誤。  
+ **sp_describe_undeclared_parameters**在下列任何情況下都會傳回錯誤。  
   
 -   如果輸入 \@tsql 不是有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次。 有效性是藉由剖析和分析 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次來判斷。 判斷 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次是否有效時，批次在查詢優化期間或執行期間所造成的任何錯誤都不會列入考慮。  
   
@@ -158,7 +158,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  例如，請考量 `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` 查詢。 然後，E （\@p1） = \@p1，E （\@p2） = \@p2 + c1，TT （\@p1）是宣告的傳回資料類型 dbo.tbl，TT （\@p2）是 dbo.tbl 的宣告參數資料類型。  
   
- 如果 \@p 並未包含在步驟2開頭所列的任何運算式中，則類型推算演算法會判斷 E （\@p）是包含 \@p 的最大純量運算式，而類型推算演算法不會計算目標資料針對 E （\@p）輸入 TT （\@p）。 例如，如果查詢是 SELECT `@p + 2` 則 E （\@p） = \@p + 2，而且沒有 TT （\@p）。  
+ 如果 \@p 並未包含在步驟2開頭所列的任何運算式中，則類型推算演算法會判斷 E （\@p）是包含 \@p 的最大純量運算式，而類型推算演算法不會計算 E （\@p）的目標資料類型 TT （\@p）。 例如，如果查詢是 SELECT `@p + 2` 則 E （\@p） = \@p + 2，而且沒有 TT （\@p）。  
   
  **步驟3**  
   
@@ -248,7 +248,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  最後一個範例是，假設查詢 `SELECT NULL + @p`，就會為 \@p 選擇**int** ，因為它會導致類型（c）轉換。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要執行 \@tsql 引數的許可權。  
   
 ## <a name="examples"></a>範例  
@@ -273,7 +273,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [_exec_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.databases _exec_describe_first_result_set_for_object &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [dm_exec_describe_first_result_set &#40;transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys. dm_exec_describe_first_result_set_for_object &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

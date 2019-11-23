@@ -54,7 +54,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 `[ @value = ] 'value'` 是要啟用或停用給定的複寫資料庫選項。 *值*為**sysname**，而且可以是**true**或**false**。 當此值為**false**且*optname*為**merge publish**時，也會卸載合併發行資料庫的訂閱。  
   
-`[ @ignore_distributor = ] ignore_distributor` 表示是否在未連接到散發者的情況下執行此預存程式。 *ignore_distributor*是**bit**，預設值是**0**，表示散發者應該連接到發行資料庫的新狀態並加以更新。 只有在無法存取散發者，且**sp_replicationdboption**用來停用發行時，才應該指定值**1** 。  
+`[ @ignore_distributor = ] ignore_distributor` 指出是否在未連接到散發者的情況下執行此預存程式。 *ignore_distributor*是**bit**，預設值是**0**，表示散發者應該連接到發行資料庫的新狀態並加以更新。 只有在無法存取散發者，且**sp_replicationdboption**用來停用發行時，才應該指定值**1** 。  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

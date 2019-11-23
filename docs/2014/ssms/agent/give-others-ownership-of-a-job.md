@@ -21,14 +21,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798226"
 ---
-# <a name="give-others-ownership-of-a-job"></a>將作業擁有權授與其他人
+# <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   此主題描述如何將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的擁有權重新指派給其他使用者。  
   
 -   **開始之前：** [限制事項](#Restrictions)、[安全性](#Security)  
   
 -   **若要使用下列項目賦予作業擁有權給其他人：**  
   
-     [Transact-SQL](#SSMSProc2)  
+     [SQL Server Management Studio](#SSMSProc2)  
   
      [Transact-SQL](#TsqlProc2)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72798226"
 >  如果將作業擁有權變更給非 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，而且作業正在執行要求 Proxy 帳戶的作業步驟 (例如， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件執行)，請確定使用者擁有該 Proxy 帳戶的存取權，否則作業將會失敗。  
   
 ####  <a name="Permissions"></a> Permissions  
- 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
+ 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMSProc2"></a> 使用 SQL Server Management Studio  
  **若要賦予作業擁有權給其他人**  
@@ -87,8 +87,8 @@ ms.locfileid: "72798226"
 
 ### <a name="to-give-others-ownership-of-a-job"></a>若要賦予作業擁有權給其他人
   
-1.  使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell 呼叫 `Job` 類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
+1.  使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell 呼叫 `Job` 類別。 如需範例程式碼，請參閱＜ [Scheduling Automatic Administrative Tasks in SQL Server Agent](sql-server-agent.md)＞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [實作作業](implement-jobs.md)   
  [建立作業](create-jobs.md)  

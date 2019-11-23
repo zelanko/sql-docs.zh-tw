@@ -25,7 +25,7 @@ ms.locfileid: "73785701"
 
   SQLSetDescField 可以用來設定資料表值參數和資料表值參數資料行的描述項欄位。 如需可用欄位的詳細資訊，請參閱資料表值參數組成資料[行的](../../relational-databases/native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)[資料表值參數描述項欄位](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md)和描述項欄位。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  只有當描述項標頭欄位 SQL_SOPT_SS_PARAM_FOCUS 設定為將 SQL_DESC_TYPE 設定為 SQL_SS_TABLE 之記錄的序數時，才可使用資料表值參數資料行。 如需 SQL_SOPT_SS_PARAM_FOCUS 的詳細資訊，請參閱[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
  如果嘗試將 SQL_SOPT_SS_PARAM_FOCUS 設定為不是資料表值參數之參數的序數，則 SQLSetStmtAttr 會傳回 SQL_ERROR，而且會使用 SQLSTATE = HY024 和訊息「不正確屬性值」來建立診斷記錄。 當傳回 SQL_ERROR 時，SQL_SOPT_SS_PARAM_FOCUS 不會變更。  

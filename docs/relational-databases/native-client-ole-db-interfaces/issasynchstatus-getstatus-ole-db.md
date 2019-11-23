@@ -108,7 +108,7 @@ HRESULT GetStatus(
  E_FAIL  
  發生了提供者特定的錯誤。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **ISSAsynchStatus::GetStatus** 方法的行為與 **IDBAsynchStatus::GetStatus** 方法完全相同，不同的是如果中止資料來源物件的初始化，便會傳回 E_UNEXPECTED，而不是 DB_E_CANCELED (雖然 [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 會傳回 DB_E_CANCELED)。 這是因為資料來源物件在中止後不會保留在一般的廢止狀態，如此可以讓系統嘗試進一步的初始化作業。  
   
  如果資料列集是非同步地初始化或擴展，則必須支援此方法。  

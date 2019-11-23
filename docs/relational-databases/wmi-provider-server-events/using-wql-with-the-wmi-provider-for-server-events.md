@@ -83,7 +83,7 @@ WHERE where_condition
   
  只有 `=` 運算元可以搭配**DatabaseName**、 **SchemaName**和**ObjectName**使用。 其他運算式無法搭配這些事件屬性使用。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  「伺服器事件的 WMI 提供者」語法的*where_condition*會決定下列各項：  
   
 -   提供者嘗試從中取得指定*event_type*的範圍：伺服器層級、資料庫層級或物件層級（目前唯一支援的物件是佇列）。 這個範圍最終會判斷在目標資料庫中所建立之事件通知的類型。 這個程序稱為事件通知註冊。  
@@ -123,7 +123,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>B. 查詢資料庫範圍的事件  
+### <a name="b-querying-for-events-at-the-database-scope"></a>b. 查詢資料庫範圍的事件  
  下列 WQL 查詢會針對任何發生於 `AdventureWorks` 資料庫且存在於 `DDL_DATABASE_LEVEL_EVENTS` 事件群組下方的事件，擷取特定的事件屬性。  
   
 ```  

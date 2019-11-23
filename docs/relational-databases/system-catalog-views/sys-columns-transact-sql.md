@@ -73,15 +73,15 @@ ms.locfileid: "73981959"
 |rule_object_id|**int**|獨立規則的識別碼，這個規則是利用 sys.sp_bindrule 與資料行繫結。<br /><br /> 0 = 沒有獨立規則。 如需資料行層級的檢查條件約束，請參閱[ &#40;sys.databases&#41;check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)。|  
 |is_sparse|**bit**|1 = 資料行是疏鬆資料行。 如需詳細資訊，請參閱 [使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。|  
 |is_column_set|**bit**|1 = 資料行是資料行集。 如需詳細資訊，請參閱 [使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。|  
-|generated_always_type|**tinyint**|**適用于**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 識別產生資料行值的時間（系統資料表中的資料行一定會是0）：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 如需詳細資訊，請參閱[時態&#40;表&#41;關係資料庫](../../relational-databases/tables/temporal-tables.md)。|  
-|generated_always_type_desc|**nvarchar(60)**|**適用于**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> `generated_always_type`值的文字描述（一律 NOT_APPLICABLE 系統資料表中的資料行） <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
-|encryption_type|**int**|**適用于**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密類型：<br /><br /> 1 = 決定性加密<br /><br /> 2 = 隨機化加密|  
-|encryption_type_desc|**Nvarchar （64）**|**適用于**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密類型描述：<br /><br /> 隨機<br /><br /> DETERMINISTIC|  
-|encryption_algorithm_name|**sysname**|**適用于**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密演算法的名稱。<br /><br /> 僅支援 AEAD_AES_256_CBC_HMAC_SHA_512。|  
-|column_encryption_key_id|**int**|**適用于**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> CEK 的識別碼。|  
-|column_encryption_key_database_name|**sysname**|**適用于**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]。<br /><br /> 資料行加密金鑰所在的資料庫名稱（如果與資料行的資料庫不同）。 如果索引鍵存在於與資料行相同的資料庫中，則為 Null。|  
-|is_hidden|**bit**|**適用于**： [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 和更新版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指出資料行是否為隱藏：<br /><br /> 0 = 一般、不隱藏、可見的資料行<br /><br /> 1 = 隱藏的資料行|  
-|is_masked|**bit**|**適用于**： [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 和更新版本，[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指出資料行是否以動態資料遮罩遮罩：<br /><br /> 0 = 一般，非遮罩資料行<br /><br /> 1 = 資料行已遮罩|  
+|generated_always_type|**tinyint**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 識別產生資料行值的時間（系統資料表中的資料行一定會是0）：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 如需詳細資訊，請參閱[時態&#40;表&#41;關係資料庫](../../relational-databases/tables/temporal-tables.md)。|  
+|generated_always_type_desc|**nvarchar(60)**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> `generated_always_type`值的文字描述（一律 NOT_APPLICABLE 系統資料表中的資料行） <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|encryption_type|**int**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密類型：<br /><br /> 1 = 決定性加密<br /><br /> 2 = 隨機化加密|  
+|encryption_type_desc|**Nvarchar （64）**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密類型描述：<br /><br /> 隨機<br /><br /> DETERMINISTIC|  
+|encryption_algorithm_name|**sysname**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密演算法的名稱。<br /><br /> 僅支援 AEAD_AES_256_CBC_HMAC_SHA_512。|  
+|column_encryption_key_id|**int**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> CEK 的識別碼。|  
+|column_encryption_key_database_name|**sysname**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本、[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]。<br /><br /> 資料行加密金鑰所在的資料庫名稱（如果與資料行的資料庫不同）。 如果索引鍵存在於與資料行相同的資料庫中，則為 Null。|  
+|is_hidden|**bit**|**適用於**：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指出資料行是否為隱藏：<br /><br /> 0 = 一般、不隱藏、可見的資料行<br /><br /> 1 = 隱藏的資料行|  
+|is_masked|**bit**|**適用於**：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 及更新版本、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指出資料行是否以動態資料遮罩遮罩：<br /><br /> 0 = 一般，非遮罩資料行<br /><br /> 1 = 資料行已遮罩|  
 
 
  

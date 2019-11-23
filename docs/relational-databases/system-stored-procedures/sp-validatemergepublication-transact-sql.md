@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **\@publication =** ] **「***發行***** 集」  
+ [ **\@發行集 =** ] **「***發行***** 集」  
  這是發行集的名稱。 *發行*集是**sysname**，沒有預設值。  
   
 `[ @level = ] level` 是要執行的驗證類型。 *層級*是**Tinyint**，沒有預設值。 層級可以是下列值之一。  
@@ -46,13 +46,13 @@ sp_validatemergepublication [@publication=] 'publication'
 |層級值|描述|  
 |-----------------|-----------------|  
 |**1**|僅驗證資料列計數。|  
-|**2**|資料列計數及總和檢查碼驗證。 若為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Subscribers，這會自動設為**3**。|  
+|**2**|資料列計數及總和檢查碼驗證。 針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]訂閱者，這會自動設為**3**。|  
 |**3**|這是建議值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergepublication**用於合併式複寫中。  
   
 ## <a name="permissions"></a>Permissions  
@@ -60,7 +60,7 @@ sp_validatemergepublication [@publication=] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [驗證](../../relational-databases/replication/validate-data-at-the-subscriber.md)複寫的資料    
+ [驗證](../../relational-databases/replication/validate-data-at-the-subscriber.md)複寫的資料   
  [sp_validatemergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

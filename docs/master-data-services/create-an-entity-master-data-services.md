@@ -26,7 +26,7 @@ ms.locfileid: "73728460"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立實體以包含成員及其屬性。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -69,11 +69,11 @@ ms.locfileid: "73728460"
 ## <a name="grid-columns"></a>方格資料行  
  對於每個建立的實體，會將含有十三個資料行的資料列加入格線。 以下是資料行。  
   
-|名稱|說明|  
+|[名稱]|描述|  
 |----------|-----------------|  
 |狀態|實體狀態。 當您按一下 [儲存] 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![更新狀態的圖示](../master-data-services/media/mds-statusicon-updating.png "I正在更新狀態的 con」)<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "I錯誤狀態的 con」)<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![[確定] 狀態的圖示](../master-data-services/media/mds-statusicon-ok.png "I「確定」狀態的 con)|  
-|名稱|實體名稱。|  
-|說明|實體描述。|  
+|[名稱]|實體名稱。|  
+|描述|實體描述。|  
 |暫存資料表|此資料表的前置名稱用於儲存資料。|  
 |交易記錄類型|實體的交易記錄類型。|  
 |自動建立代碼|指定是否啟用自動建立程式碼。|  

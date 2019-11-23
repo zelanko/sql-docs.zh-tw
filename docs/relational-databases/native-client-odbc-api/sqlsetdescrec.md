@@ -32,7 +32,7 @@ ms.locfileid: "73785741"
   
 |參數|非資料表值參數類型的相關屬性，包括資料表值參數資料行|資料表值參數的相關屬性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*型別*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|*類型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*類型*|忽略|如果是 SQL_DATETIME 或 SQL_INTERVAL 類型的記錄，請將這個設定為 SQL_DESC_DATETIME_INTERVAL_CODE。|  
 |*長度*|SQL_DESC_OCTET_LENGTH|資料表值參數類型名稱的長度。 如果此類型名稱以 null 結尾，這項設定可以是 SQL_NTS；如果不需要資料表值參數類型名稱則為零。|  
 |*有效位數*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
@@ -46,7 +46,7 @@ ms.locfileid: "73785741"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLSetDescRec 支援  
  日期/時間類型所允許的值如下：  
   
-||*型別*|*類型*|*長度*|*有效位數*|*小數位數*|  
+||*類型*|*類型*|*長度*|*有效位數*|*小數位數*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  

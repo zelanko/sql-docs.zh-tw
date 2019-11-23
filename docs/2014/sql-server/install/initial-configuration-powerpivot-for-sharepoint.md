@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: ba58e81cb802f3debe1c481443751de1947c595e
 ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798124"

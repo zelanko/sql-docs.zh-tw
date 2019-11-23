@@ -30,13 +30,13 @@ ms.locfileid: "72305268"
   將資料庫附加至伺服器。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]，建議您改用 CREATE DATABASE *database_name* FOR ATTACH。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 建議您改用 CREATE DATABASE *database_name*來進行附加。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 > [!NOTE]  
->  若要在有一或多個記錄檔有新位置時重建多個記錄檔，請使用 CREATE DATABASE *database_name* FOR ATTACH_REBUILD_LOG。  
+>  若要在有一或多個記錄檔有新位置時重建多個記錄檔，請使用 CREATE DATABASE *database_name*進行 ATTACH_REBUILD_LOG。  
   
 > [!IMPORTANT]  
->  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
+>  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引數  
 `[ @dbname = ] 'dbnam_ '` 是要附加至伺服器的資料庫名稱。 名稱必須是唯一的。 *dbname*是**sysname**，預設值是 Null。  
   
-`[ @filename1 = ] 'filename_n'` 是資料庫檔案的機構名稱，包括路徑。 *filename_n*是**Nvarchar （260）** ，預設值是 Null。 您最多可以指定 16 個檔案名稱。 參數名稱的開頭為 **\@filename1** ，而遞增為 **@no__t 3filename16**。 檔案名稱清單至少必須包括主要檔案。 主要檔案包含指向資料庫中其他檔案的系統資料表。 這份清單也必須包括資料庫卸離之後所移動的任何檔案。  
+`[ @filename1 = ] 'filename_n'` 是資料庫檔案的機構名稱，包括路徑。 *filename_n*是**Nvarchar （260）** ，預設值是 Null。 您最多可以指定 16 個檔案名稱。 參數名稱的開頭為 **\@filename1** ，而遞增至 **\@filename16**。 檔案名稱清單至少必須包括主要檔案。 主要檔案包含指向資料庫中其他檔案的系統資料表。 這份清單也必須包括資料庫卸離之後所移動的任何檔案。  
   
 > [!NOTE]  
 >  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
@@ -60,10 +60,10 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- None  
+ 無  
   
-## <a name="remarks"></a>備註  
- **Sp_attach_db**預存程式只能在先前從資料庫伺服器卸離的資料庫上執行，方法是使用明確的**sp_detach_db**作業或複製的資料庫。 如果您必須指定16個以上的檔案，請針對 [附加] 或 [建立資料庫*database_name* FOR_ATTACH_REBUILD_LOG] 使用 [建立資料庫*database_name* ]。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ **Sp_attach_db**預存程式只能在先前使用明確**sp_detach_db**作業或複製的資料庫卸離資料庫伺服器的資料庫上執行。 如果您必須指定16個以上的檔案，請針對 [附加] 或 [建立資料庫] *database_name* FOR_ATTACH_REBUILD_LOG 使用 [建立資料庫] *database_name* 。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
  任何未指定的檔案都假設為在前次的已知位置中。 若要在不同位置使用檔案，您必須指定新位置。  
   
@@ -97,7 +97,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   

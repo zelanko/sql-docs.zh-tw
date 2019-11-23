@@ -28,11 +28,11 @@ ms.locfileid: "72782903"
   
      [必要條件和限制](#Prerequisites)  
   
-     [[權限]](#Permissions)  
+     [權限](#Permissions)  
   
 -   **若要使用下列項目，將資料庫加入至可用性群組：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72782903"
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
   
-     其中 *group_name* 是可用性群組的名稱，而 *database_name* 是要加入群組中之資料庫的名稱。  
+     其中 *group_name* 是可用性群組的名稱，而 *database_name* 是要加入至群組之資料庫的名稱。  
   
      下列範例會將 *MyDb3* 資料庫加入 *MyAG* 可用性群組中。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72782903"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
 3.  將資料庫加入至可用性群組之後，您需要在裝載次要複本的每個伺服器執行個體上設定對應的次要資料庫。 如需詳細資訊，請參閱[於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
@@ -136,8 +136,8 @@ Add-SqlAvailabilityDatabase -Path $MyAgPrimaryPath -Database "MyDatabase"
 Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [使用 AlwaysOn 儀表板&#40;SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)    
+ [使用 AlwaysOn 儀表板&#40;SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  

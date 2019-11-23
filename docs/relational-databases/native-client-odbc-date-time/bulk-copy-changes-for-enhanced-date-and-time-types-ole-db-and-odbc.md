@@ -32,8 +32,8 @@ ms.locfileid: "73784073"
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|日期|SQLDATE|de|  
-|Time|SQLTIME|te|  
+|[日期]|SQLDATE|de|  
+|time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -92,12 +92,12 @@ ms.locfileid: "73784073"
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h 中的 BCP 類型  
  下列類型是在 sqlncli.h 中定義的，可與 ODBC 的 BCP API 延伸模組搭配使用。 這些類型會以 OLE DB 中 IBCPSession：： BCPColFmt 的*eUserDataType*參數傳遞。  
   
-|檔案儲存類型|主檔案資料類型|輸入 sqlncli 以搭配 IBCPSession：： BCPColFmt 使用|Value|  
+|檔案儲存類型|主檔案資料類型|輸入 sqlncli 以搭配 IBCPSession：： BCPColFmt 使用|ReplTest1|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|日期|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|[日期]|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -106,18 +106,18 @@ ms.locfileid: "73784073"
   
  **OLE DB 注意**：下列轉換是由 IBCPSession 所執行。 IRowsetFastLoad 使用[從用戶端到伺服器執行的轉換](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)中所定義的 OLE DB 轉換。 請注意，datetime 值會捨入為一秒的 1/300，而 smalldatetime 值在執行以下所描述的用戶端轉換之後，會將其秒數設定為零。 Datetime 捨入會透過小時和分鐘 (但非日期) 傳播。  
   
-|目標 --><br /><br /> 來源|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|目標 --><br /><br /> From|date|time|smalldatetime|datetime|datetime2|datetimeoffset|CHAR|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|日期|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Time|不適用|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|[日期]|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|不適用|不適用|  
-|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|不適用|不適用|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|不適用|不適用|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|不適用|不適用|  
+|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  
+|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|N/A|N/A|  
+|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|N/A|N/A|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|N/A|N/A|  
   
 #### <a name="key-to-symbols"></a>符號的索引鍵  
   
@@ -136,7 +136,7 @@ ms.locfileid: "73784073"
 |10|如果在從用戶端轉換為伺服器時發生資料遺失的截斷，就會發佈錯誤 (OLE DB)，或產生包含 SQLSTATE 22008 以及「日期時間欄位溢位」訊息的 ODBC 診斷記錄。 如果此值落在伺服器使用之 UTC 範圍所代表的範圍外，也可能發生這個錯誤。 如果在從伺服器轉換為用戶端時發生秒或小數秒的截斷，只會有一個警告。|  
 |11|如果截斷時發生資料損失，則會產生診斷記錄。<br /><br /> 在伺服器轉換為用戶端時，這是一個警告 (ODBC SQLSTATE S1000)。<br /><br /> 在用戶端轉換為伺服器時，這是一個錯誤 (ODBC SQLSTATE 22001)。|  
 |12|秒數會設定為零，而小數秒會遭到捨棄。 不可能發生截斷錯誤。|  
-|不適用|系統會維持現有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和舊有的行為。|  
+|N/A|系統會維持現有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和舊有的行為。|  
   
 ## <a name="see-also"></a>另請參閱  
  [日期和時間改善&#40;ODBC&#41; ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   

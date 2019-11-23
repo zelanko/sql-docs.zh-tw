@@ -48,7 +48,7 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 `[ @level = ] 'level'` 是要執行的驗證類型。 *層級*是**Tinyint**，沒有預設值。 層級可以是下列值之一。  
   
-|層級值|說明|  
+|層級值|描述|  
 |-----------------|-----------------|  
 |**1**|僅驗證資料列計數。|  
 |**2**|資料列計數及總和檢查碼驗證。|  
@@ -57,7 +57,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergesubscription**用於合併式複寫中。  
   
 ## <a name="permissions"></a>Permissions  

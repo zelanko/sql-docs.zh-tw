@@ -32,7 +32,7 @@ ms.locfileid: "72782981"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **如何：**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "72782981"
   
 ##  <a name="IsEnabled"></a>判斷是否已啟用 AlwaysOn 可用性群組  
   
--   [Transact-SQL](#SSMS1Procedure)  
+-   [SQL Server Management Studio](#SSMS1Procedure)  
   
 -   [Transact-SQL](#Tsql1Procedure)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72782981"
 ###  <a name="PowerShell1Procedure"></a> 使用 PowerShell  
  **判斷是否已啟用 AlwaysOn 可用性群組**  
   
-1.  將預設值（`cd`）設定為伺服器實例（例如 `\SQL\NODE1\DEFAULT`），您要在其上判斷是否已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
+1.  將預設值（`cd`）設定為您要判斷 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 是否已啟用的伺服器實例（例如 `\SQL\NODE1\DEFAULT`）。  
   
 2.  輸入下列 PowerShell `Get-Item` 命令：  
   
@@ -111,7 +111,7 @@ ms.locfileid: "72782981"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -131,7 +131,7 @@ ms.locfileid: "72782981"
   
 2.  指向 [開始] 功能表上的 [所有程式]，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 [組態工具]，再按一下 [SQL Server 組態管理員]。  
   
-3.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server 服務**]，以滑鼠右鍵按一下 SQL Server （ **< *`instance name`* >）** ，其中 **< *`instance name`* 0**是您要為其建立的本機伺服器實例名稱。想要啟用 AlwaysOn 可用性群組，然後按一下 [**屬性]。**  
+3.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server 服務**]，以滑鼠右鍵按一下 SQL Server （ **< *`instance name`* >）** ，其中 **< *`instance name`* >** 是您要啟用 AlwaysOn 可用性群組的本機伺服器實例名稱，然後按一下 [**屬性]。**  
   
 4.  選取 **[AlwaysOn 高可用性]** 索引標籤。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "72782981"
   
 2.  使用 `Enable-SqlAlwaysOn` 指令程式，啟用 AlwaysOn 可用性群組。  
   
-     若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+     若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
     > [!NOTE]  
     >  如需如何控制 `Enable-SqlAlwaysOn` Cmdlet 是否重新開機 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的相關資訊，請參閱本主題稍後的「 [Cmdlet 何時重新開機 SQL Server 服務？](#WhenCmdletRestartsSQL)」。  
@@ -158,7 +158,7 @@ ms.locfileid: "72782981"
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
 ####  <a name="ExmplEnable-SqlHadrServic"></a> 範例：Enable-SqlAlwaysOn  
- 下列 PowerShell 命令會在 SQL Server 執行個體 (電腦\\執行個體) 上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
+ 下列 PowerShell 命令會在 SQL Server 執行個體 (電腦[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]執行個體\\ *) 上啟用* 。  
   
 ```powershell
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
@@ -195,7 +195,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  指向 **[開始]** 功能表上的 **[所有程式]** ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 **[組態工具]** ，再按一下 **[SQL Server 組態管理員]** 。  
   
-3.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server 服務**]，以滑鼠右鍵按一下 SQL Server （ **< *`instance name`* >）** ，其中 **< *`instance name`* 0**是您要為其建立的本機伺服器實例名稱。想要停用 AlwaysOn 可用性群組，然後按一下 [**屬性**]。  
+3.  在**SQL Server 組態管理員**中，按一下 [ **SQL Server 服務**]，以滑鼠右鍵按一下 SQL Server （ **< *`instance name`* >）** ，其中 **< *`instance name`* >** 是您要停用 AlwaysOn 可用性群組的本機伺服器實例名稱，然後按一下 [**屬性**]。  
   
 4.  在 [AlwaysOn 高可用性]索引標籤上，取消選取 [啟用 AlwaysOn 可用性群組] 核取方塊，然後按一下 [確定]。  
   
@@ -219,7 +219,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
     > [!IMPORTANT]  
     >  如需如何控制 `Disable-SqlAlwaysOn` Cmdlet 是否重新開機 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的相關資訊，請參閱本主題稍後的「 [Cmdlet 何時重新開機 SQL Server 服務？](#WhenCmdletRestartsSQL)」。  
   
-     若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+     若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -256,6 +256,6 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 |是|否|服務不會重新啟動。|  
 |是|是|服務不會重新啟動。|  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  

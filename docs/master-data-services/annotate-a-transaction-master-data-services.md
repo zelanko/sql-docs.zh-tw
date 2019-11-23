@@ -28,7 +28,7 @@ ms.locfileid: "73728786"
 > [!NOTE]  
 >  您無法刪除註解。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   若要為所建立的交易加上註解，您必須擁有存取 [總管] 功能區域的權限，而且至少必須擁有您要加上註解之模型物件的**更新**權限。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73728786"
   
 ### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>若要在版本管理中為交易加上註解 (僅限系統管理員)  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，按一下 [版本管理]。  
+1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]首頁上，按一下 [版本管理]。  
   
 2.  在功能表列上，按一下 [交易]。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73728786"
   
 4.  在 [交易註解] 窗格的 [註解] 方塊中，輸入您的註解。  
   
-5.  按一下 **[確定]** 。  
+5.  按一下 [確定]。  
   
 ## <a name="see-also"></a>另請參閱  
  [註解 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   

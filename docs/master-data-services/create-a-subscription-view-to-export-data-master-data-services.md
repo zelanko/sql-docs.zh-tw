@@ -26,7 +26,7 @@ ms.locfileid: "73728476"
 
   建立訂閱檢視，以將 Master Data Services 資料匯出至訂閱系統。 您正要建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中資料的檢視。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[整合管理]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "73728476"
   
 5.  從 **[模型]** 清單中選取模型。  
   
-6.  選取 [Include soft-deleted members]\ (包含虛刪除成員)以包含檢視中的虛刪除成員。  
+6.  選取 [Include soft-deleted members] (包含虛刪除成員)以包含檢視中的虛刪除成員。  
   
 7.  在 [版本選項] 中選取 [版本] 或 [版本旗標]，然後從對應的清單中選取。  
   
@@ -65,17 +65,17 @@ ms.locfileid: "73728476"
 ## <a name="view-information"></a>檢視資訊  
  對於每個建立的檢視，會將含十個資料行的資料列加入方格中。 下表描述該資料行。  
   
-|資料行|說明|  
+|資料行|描述|  
 |------------|-----------------|  
 |狀態|檢視狀態。<br /><br /> 當您按一下 [**儲存**] 時，會顯示 [![正在更新狀態](../master-data-services/media/mds-statusicon-updating.png "I正在更新狀態的 con」)影像] 圖示，表示正在更新此視圖。<br /><br /> 如果建立或編輯檢視時發生錯誤，則會顯示 [![錯誤狀態](../master-data-services/media/mds-statusicon-error.png "I錯誤狀態的 con」)影像] 圖示。<br /><br /> 否則，狀態為 [確定]，並顯示 [![確定狀態影像] 圖示](../master-data-services/media/mds-statusicon-ok.png "I「確定」狀態的 con)。|  
-|名稱|訂閱檢視名稱。|  
+|[名稱]|訂閱檢視名稱。|  
 |模型|模型名稱。|  
 |版本|版本名稱。|  
 |版本旗標|版本旗標名稱。|  
 |衍生階層|衍生階層名稱。|  
 |實體|實體名稱。|  
 |格式|指定檢視中資料的類型。|  
-|Level|指定檢視中的層級數目 (僅用於明確層級或衍生層級檢視格式)。|  
+|Hierarchy|指定檢視中的層級數目 (僅用於明確層級或衍生層級檢視格式)。|  
 |包含刪除成員|表示檢視中是否包含虛刪除成員。|  
   
  當您按一下檢視時，會顯示下列資訊。  

@@ -29,9 +29,9 @@ ms.locfileid: "72782673"
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **使用下列項目，升級 DAC**  [檢視 DAC 內容](#ViewDACContents)、 [檢視資料庫變更](#ViewDBChanges)、 [檢視升級動作](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
+2.  **使用下列項目，升級 DAC**  [檢視 DAC 內容](#ViewDACContents)、 [檢視資料庫變更](#ViewDBChanges)、 [檢視升級動作](#ViewUpgradeActions)、 [比較 DAC](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> 必要條件  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 使用來源不明或來源不受信任的 DAC 之前，請先將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的隔離測試執行個體，並在資料庫上執行 [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)，然後檢查資料庫中的程式碼，例如預存程序或其他使用者定義的程式碼。  
   
 ##  <a name="ViewDACContents"></a> 檢視 DAC 內容  
@@ -168,7 +168,7 @@ $fileStream.Close()
   
  您也可以將 DAC 解除封裝至不同的資料夾。 然後您可以使用差異工具 (如 WinDiff 公用程式) 來分析差異。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料層應用程式](data-tier-applications.md)   
  [部署資料層應用程式](deploy-a-data-tier-application.md)   
  [升級資料層應用程式](upgrade-a-data-tier-application.md)  

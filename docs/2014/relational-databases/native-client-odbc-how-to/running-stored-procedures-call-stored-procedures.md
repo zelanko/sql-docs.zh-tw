@@ -39,11 +39,11 @@ ms.locfileid: "72688669"
 > [!NOTE]  
 >  如果應用程式使用 Transact-SQL EXECUTE 語法 (相對於 ODBC CALL 逸出序列) 來提交程序，則 SQL Server ODBC 驅動程式會將程序呼叫當做 SQL 陳述式 (而不是 RPC) 傳遞到 SQL Server。 此外，如果使用 Transact-SQL EXECUTE 陳述式，則不會傳回輸出參數。  
   
-## <a name="see-also"></a>請參閱  
- 執行[預存程式的使用說明主題&#40;ODBC&#41; ](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)    
+## <a name="see-also"></a>另請參閱  
+ 執行[預存程式的使用說明主題&#40;ODBC&#41; ](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [批次處理預存程序呼叫](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  執行[預存程式](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [呼叫預存](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)程式    
+ [呼叫預存](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)程式   
  [程序](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

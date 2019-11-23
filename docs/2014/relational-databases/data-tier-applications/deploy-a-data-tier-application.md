@@ -40,7 +40,7 @@ ms.locfileid: "72783065"
  可以將相同的 DAC 封裝部署到單一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體多次，但是一次只能執行一個部署。 針對每個部署指定的 DAC 執行個體名稱在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中必須是唯一的。  
   
 ###  <a name="SQLUtility"></a>SQL Server 公用程式  
- 若您將 DAC 部署至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[公用程式總管]** 的 [部署的資料層應用程式] 節點中，並在 [部署的資料層應用程式] 詳細資料頁面中報告。  
+ 若您將 DAC 部署至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在 [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在 詳細資料頁面中報告。  
   
 ###  <a name="DBOptSettings"></a> 資料庫選項和設定  
  根據預設，部署期間建立的資料庫將會擁有 CREATE DATABASE 陳述式中的所有預設值，但是以下項目除外：  
@@ -54,7 +54,7 @@ ms.locfileid: "72783065"
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 可部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 或更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體。 如果您使用更新版本建立 DAC，則 DAC 可能會包含 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]不支援的物件。 您無法將這些 DAC 部署至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]執行個體。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 必要條件  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類封裝可能包含惡意程式碼，因此可能會執行非預期的 Transact-SQL 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的封裝之前，請解除封裝 DAC 並檢查程式碼，例如預存程序或其他使用者定義程式碼。 如需有關如何執行這些檢查的詳細資訊，請參閱＜ [Validate a DAC Package](validate-a-dac-package.md)＞。  
   
 ###  <a name="Security"></a> Security  
@@ -148,7 +148,7 @@ ms.locfileid: "72783065"
   
  資料庫名稱也會當做 DAC 執行個體的名稱使用。 執行個體名稱會顯示在**物件總管**中 [資料層應用程式] 節點或是**公用程式總管**中 [部署的資料層應用程式] 節點底下的 DAC 節點上。  
   
- 下列選項不適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，也不會在部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 時顯示。  
+ 下列選項不適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，也不會在部署至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]時顯示。  
   
  **使用預設資料庫位置** - 選取此選項，可在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的預設位置中建立資料庫資料檔和記錄檔。 檔案名稱將會使用資料庫名稱來建置。  
   
@@ -231,7 +231,7 @@ $dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料層應用程式](data-tier-applications.md)   
  [從資料庫中擷取 DAC](extract-a-dac-from-a-database.md)   
  [資料庫識別碼](../databases/database-identifiers.md)  

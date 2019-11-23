@@ -33,7 +33,7 @@ ms.locfileid: "73983174"
 
   傳回這個資料庫的查詢存放區選項。  
   
-**適用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
   
 |資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  

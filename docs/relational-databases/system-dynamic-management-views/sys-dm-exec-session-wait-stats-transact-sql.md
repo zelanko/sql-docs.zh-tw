@@ -28,7 +28,7 @@ ms.locfileid: "73982614"
 
   傳回針對每個會話執行之執行緒所遇到之所有等候的相關資訊。 您可以使用此視圖來診斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會話的效能問題，以及特定查詢和批次。  此視圖會傳回與針對[ &#40; &#41; dm_os_wait_stats sys.databases](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)所匯總的相同資訊，但也會提供**session_id**的數位。  
   
-**適用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本）。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本)。  
   
 |資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  

@@ -23,18 +23,18 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72783223"
 ---
-# <a name="defect-a-target-server-from-a-master-server"></a>使目標伺服器脫離主要伺服器
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中從主伺服器脫離目標伺服器。 請從目標伺服器執行這個程序。  
+# <a name="defect-a-target-server-from-a-master-server"></a>Defect a Target Server from a Master Server
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中從主伺服器脫離目標伺服器。 請從目標伺服器執行這個程序。  
   
  **本主題內容**  
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法脫離目標伺服器：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "72783223"
   
 2.  在標準列中，按一下 **[新增查詢]** 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]** 。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行]。  
   
 ```sql
 sp_msx_defect ;  
@@ -76,7 +76,7 @@ sp_msx_defect ;
 ##  <a name="PowerShellProcedure"></a>使用 SQL Server 管理物件（SMO）  
  請使用 `MsxDefect Method`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立多伺服器環境](create-a-multiserver-environment.md)   
  [將整個企業的管理自動化](automated-administration-across-an-enterprise.md)   
- [從主要伺服器脫離多個目標伺服器](defect-multiple-target-servers-from-a-master-server.md)  
+ [使多個目標伺服器脫離主要伺服器](defect-multiple-target-servers-from-a-master-server.md)  

@@ -35,7 +35,7 @@ ms.locfileid: "73787788"
  對於大數值資料類型，如果使用者提供的緩衝區不夠大，無法保存資料行的整個值，則會傳回**SQL_SUCCESS_WITH_INFO** ，並將 "string data;右側截斷」警告。 **StrLen_or_IndPtr**引數會包含儲存在緩衝區中的字元/位元組數目。  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>SQLBindCol 對於增強型日期和時間功能的支援  
- 日期/時間類型的結果資料行值會轉換，如[從 SQL 轉換為 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)中所述。請注意，若要取出 time 和 datetimeoffset 資料行做為其對應的結構（**SQL_SS_TIME2_STRUCT**和**SQL_SS_TIMESTAMPOFFSET_STRUCT**）， *TargetType*必須指定為**SQL_C_DEFAULT**或**SQL_C_BINARY**.  
+ 日期/時間類型的結果資料行值會轉換，如[從 SQL 轉換為 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)中所述。請注意，若要取出 time 和 datetimeoffset 資料行做為其對應的結構（**SQL_SS_TIME2_STRUCT**和**SQL_SS_TIMESTAMPOFFSET_STRUCT**）， *TargetType*必須指定為**SQL_C_DEFAULT**或**SQL_C_BINARY**。  
   
  如需詳細資訊，請參閱[日期和&#40;時間&#41;改善 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

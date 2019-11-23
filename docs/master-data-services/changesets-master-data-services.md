@@ -31,9 +31,9 @@ ms.locfileid: "73728626"
   
     1.  您建立變更集。 變更集處於 [開啟] 狀態。 請參閱[建立變更集 &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)。  
   
-    2.  您套用變更集，並將某些變更新增至變更集。 請參閱 [套用及更新變更集 &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  您套用變更集，並將某些變更新增至變更集。 請參閱[套用及更新變更集 &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)。  
   
-    3.  您將變更集提交給實體管理員核准。 變更集處於 [暫止] 狀態。 請參閱 [認可或提交變更集 &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+    3.  您將變更集提交給實體管理員核准。 變更集處於 [暫止] 狀態。 請參閱[認可或提交變更集 &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)。  
   
     4.  實體管理員取得變更集正在等待核准的電子郵件通知。 如果實體管理員核准變更集，變更集就會處於 [已核准] 狀態。 請參閱[核准或拒絕變更集 &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "73728626"
   
     1.  您建立變更集。 變更集處於 [開啟] 狀態。 請參閱[建立變更集 &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)。  
   
-    2.  您套用變更集，並將某些變更新增至變更集。 請參閱 [套用及更新變更集 &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  您套用變更集，並將某些變更新增至變更集。 請參閱[套用及更新變更集 &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)。  
   
-    3.  待一切就緒，您即可認可變更集。 請參閱 [認可或提交變更集 &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+    3.  待一切就緒，您即可認可變更集。 請參閱[認可或提交變更集 &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立變更集 &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   

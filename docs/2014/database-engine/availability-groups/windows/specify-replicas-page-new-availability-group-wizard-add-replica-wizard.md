@@ -21,40 +21,40 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70176042"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：新增複本精靈)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：加入複本精靈)
   此主題描述 **[指定複本]** 頁面的選項。 此頁面適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 和 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用 **[指定複本]** 頁面指定與設定要加入可用性群組的一個或多個可用性複本。 此頁面包含四個索引標籤，其說明如下表所示。 按一下表格中的索引標籤名稱即可前往對應的章節，如本主題稍後所示。  
   
 |索引標籤|簡短描述|  
 |---------|-----------------------|  
-|[複本](#ReplicasTab)|使用此索引標籤可指定將裝載或目前裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 請注意，您目前所連接的伺服器執行個體必須裝載主要複本。<br /><br /> 提示：在 **[複本]** 索引標籤上完成指定所有複本，然後啟動其他索引標籤。|  
+|[複本](#ReplicasTab)|使用此索引標籤可指定將裝載或目前裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 請注意，您目前所連接的伺服器執行個體必須裝載主要複本。<br /><br /> 提示：在 [複本] 索引標籤上完成指定所有複本，然後啟動其他索引標籤。|  
 |[端點](#EndpointsTab)|使用此索引標籤可驗證任何現有的資料庫鏡像端點，此外，如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，則可自動建立該端點。|  
 |[備份喜好設定](#BackupPreferencesTab)|使用此索引標籤可指定整個可用性群組的備份喜好設定，以及個別可用性複本的備份優先權。|  
-|[接聽程式](#Listener)|使用此索引標籤 (如果有的話) 建立可用性群組接聽程式。 預設不會建立接聽程式。<br /><br /> 注意：此索引標籤只有在您執行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]時才可以使用。|  
+|[接聽程式](#Listener)|使用此索引標籤 (如果有的話) 建立可用性群組接聽程式。 預設不會建立接聽程式。<br /><br /> 此索引標籤只有在您執行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]時才可以使用。|  
   
 ##  <a name="ReplicasTab"></a> 複本索引標籤  
  **伺服器執行個體**  
  顯示將裝載可用性複本的伺服器執行個體名稱。  
   
- 如果 **[可用性複本]** 方格沒有列出您用來裝載次要複本的伺服器執行個體，按一下 **[加入複本]** 按鈕。 如果您要在混合式 IT 環境中設定可用性群組 (請參閱[Azure 虛擬機器中 SQL Server 的高可用性和嚴重損壞修復](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), 您可以按一下 [**新增 Azure 複本**] 按鈕, 以建立具有次要的虛擬機器Azure 中的複本。  
+ 如果 **[可用性複本]** 方格沒有列出您用來裝載次要複本的伺服器執行個體，按一下 **[加入複本]** 按鈕。 如果您在混合式 IT 環境設定可用性群組 (請參閱 [SQL Server 在 Azure 虛擬機器中的高可用性和災害復原](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx))，您可以按一下 [加入 Azure 複本] 按鈕，以在 Azure 中建立包含次要複本的虛擬機器。  
   
  **初始角色**  
- 指出新複本一開始執行的角色：[主要] 或 [次要]。  
+ 指出新的複本一開始執行的角色：[主要] 或 [次要]。  
   
- **自動容錯移轉 (最多2個)**  
+ **自動容錯移轉（最多2個）**  
  只有在您希望此可用性複本成為自動容錯移轉夥伴時，才選取這個核取方塊。 若要設定自動容錯移轉，您必須為初始主要複本和一個次要複本選擇這個選項。 這兩個複本都會使用同步認可可用性模式。 只有兩個複本可以支援自動容錯移轉。  
   
- 如需同步認可哥用性模式的相關資訊, 請參閱[可用性模式 (AlwaysOn 可用性群組)](availability-modes-always-on-availability-groups.md)。 如需自動容錯移轉的相關資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)。  
+ 如需同步認可哥用性模式的相關資訊，請參閱[可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。 如需自動容錯移轉的相關資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)。  
   
  **同步認可 (最多 3 個)**  
  如果您為複本選取 [自動容錯移轉 (最多 2 個)]，也會選取 [同步認可 (最多 3 個)]。 如果核取方塊是空的，只有在您希望此複本僅搭配已規劃的手動容錯移轉使用同步認可模式時，才選取該核取方塊。 只有三個複本可以使用同步認可模式。  
   
- 如果您希望此複本使用非同步認可可用性模式，將此核取方塊留空。 此複本僅支援強制手動容錯移轉 (資料可能會遺失)。 如需非同步認可哥用性模式的詳細資訊, 請參閱[可用性模式 (AlwaysOn 可用性群組)](availability-modes-always-on-availability-groups.md)。 如需已規劃手動容錯移轉和強制手動容錯移轉的相關資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)。  
+ 如果您希望此複本使用非同步認可可用性模式，將此核取方塊留空。 此複本僅支援強制手動容錯移轉 (資料可能會遺失)。 如需非同步認可哥用性模式的詳細資訊，請參閱[可用性模式（AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。 如需已規劃手動容錯移轉和強制手動容錯移轉的相關資訊，請參閱[容錯移轉及容錯移轉模式 &#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)。  
   
  **可讀取的次要角色**  
  從 [可讀取次要] 下拉清單中選取一個值，如下所示：  
   
  **否**  
- 不允許直接連接這個複本的次要資料庫。 無法讀取這些資料庫。 這是預設設定。  
+ 不允許直接連接這個複本的次要資料庫。 無法讀取這些資料庫。 這是預設值。  
   
  **僅限讀取意圖**  
  只允許與這個複本的次要資料庫進行直接唯讀連接。 可以讀取所有次要資料庫。  
@@ -66,7 +66,7 @@ ms.locfileid: "70176042"
  按一下可將次要複本加入至可用性群組。  
   
  **加入 Azure 複本**  
- 按一下以建立在可用性群組中執行次要複本的 Azure 虛擬機器。 此選項只適用於混合式 IT 中包含內部部署複本的可用性群組。 如需詳細資訊, 請參閱[Azure 虛擬機器中 SQL Server 的高可用性和嚴重損壞修復](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
+ 按一下以建立在可用性群組中執行次要複本的 Azure 虛擬機器。 此選項只適用於混合式 IT 中包含內部部署複本的可用性群組。 如需詳細資訊，請參閱 [SQL Server 在 Azure 虛擬機器中的高可用性和災害復原](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
   
  **移除複本**  
  按一下可從可用性群組中移除選取的次要複本。  
@@ -98,7 +98,7 @@ ms.locfileid: "70176042"
   
 -   如果每個伺服器執行個體都在網域服務帳戶之下執行，也就是說，如果 **[SQL Server 服務帳戶]** 欄會顯示每一個伺服器執行個體的網域服務帳戶，請按 **[下一步]** 。  
   
--   如果有任何伺服器執行個體在非網域服務帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 在此情況下，按 **[下一步]** 將會出現警告對話方塊；您應該按一下 **[否]** ，這會讓您回到 **[端點]** 索引標籤。當您在 **[指定複本]** 頁面上離開精靈時，請針對 **[SQL Server 服務帳戶]** 欄顯示非網域服務帳戶的每一個伺服器執行個體進行下列其中一項變更：  
+-   如果有任何伺服器執行個體在非網域服務帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 在此情況下，按一下 **[下一步**] 會顯示警告對話方塊。您應該按一下 [**否**]，這會將您返回 [**端點**] 索引標籤。在 [**指定複本**] 頁面上離開嚮導時，針對 [ **SQL Server 服務帳戶**] 資料行顯示非網域服務帳戶的每個伺服器實例進行下列其中一項變更：  
   
     -   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶變更為網域帳戶。 如需詳細資訊，請參閱[變更 SQL Server 的服務啟動帳戶 &#40;SQL Server 組態管理員&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md)。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "70176042"
  指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
 > [!IMPORTANT]  
->  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 (AlwaysOn 可用性群組](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md))。  
+>  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱使用中[次要資料庫：次要複本上的備份（AlwaysOn 可用性群組）](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ### <a name="replica-backup-priorities-grid"></a>複本備份優先權方格  
  使用 **[複本備份優先權]** 方格指定可用性群組每個複本的備份優先權。 此方格包含下列資料行：  
@@ -140,7 +140,7 @@ ms.locfileid: "70176042"
  指定[可用性群組接聽程式](../../listeners-client-connectivity-application-failover.md)的喜好設定，此接聽程式將會提供用戶端連接點，如下列的其中一項：  
   
  **現在不要建立可用性群組接聽程式。**  
- 選擇略過此步驟。 您稍後可以建立一個接聽程式。 如需詳細資訊，請參閱＜ [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)。  
+ 選擇略過此步驟。 您稍後可以建立一個接聽程式。 如需詳細資訊，請參閱[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)。  
   
  **建立可用性群組接聽程式。**  
  指定此可用性群組的接聽程式喜好設定，如下所示：  
@@ -151,7 +151,7 @@ ms.locfileid: "70176042"
 > [!IMPORTANT]  
 >  如果您在 [接聽程式] 索引標籤上輸入無效的 DNS 接聽程式名稱 (或通訊埠編號)，[指定複本] 頁面上的 [下一步] 按鈕便會停用。  
   
- **[通訊埠]**  
+ **通訊埠**  
  指定此接聽程式所使用的 TPC 通訊埠。  
   
 > [!NOTE]  
@@ -171,7 +171,7 @@ ms.locfileid: "70176042"
  [IP 位址] 資料行  
  顯示您針對給定子網路指定的 IPv4 或 IPv6 位址。  
   
- **[加入]**  
+ **加入**  
  按一下可將子網路加入至此接聽程式。 這會開啟 **[加入 IP 位址]** 對話方塊。 如需詳細資訊，請參閱[加入 IP 位址對話方塊 &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md) 說明主題。  
   
  **移除**  
@@ -185,7 +185,7 @@ ms.locfileid: "70176042"
   
  選取 **[DHCP]** 時，會顯示 **[子網路]** 欄位。  
   
- **子網路**  
+ **[子網路]**  
  如果您選取 [DHCP] 作為網路模式，請使用 [子網路] 下拉清單選取裝載可用性群組之可用性複本的子網路位址。  
   
 > [!IMPORTANT]
@@ -209,7 +209,7 @@ ms.locfileid: "70176042"
 -   [建立 AlwaysOn 可用性群組&#40;SQL Server PowerShell 的資料庫鏡像端點&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組&#40;SQL Server 總覽&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [AlwaysOn 可用性群組&#40;的必要條件、限制和建議 SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   

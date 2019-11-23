@@ -76,7 +76,7 @@ ms.locfileid: "71952247"
   
 8.  在 **[安裝程式角色]** 頁面上，選取 **[SQL Server PowerPivot for SharePoint]** 。  
   
-9. 您可選擇性地在安裝中加入一項 Database Engine 的執行個體。 如果您要設定新的伺服器陣列，且需要資料庫伺服器來執行伺服器陣列的設定和內容資料庫，您可能會這麼做。 若您加入 Database Engine，將會安裝為 PowerPivot 具名執行個體。 每當您需要指定與此實例的連接時（例如，如果您使用該嚮導來設定伺服器陣列，請在伺服器陣列設定 wizard 中），以下列格式輸入資料庫名稱： < `servername` > \Powerpivot。  
+9. 您可選擇性地在安裝中加入一項 Database Engine 的執行個體。 如果您要設定新的伺服器陣列，且需要資料庫伺服器來執行伺服器陣列的設定和內容資料庫，您可能會這麼做。 若您加入 Database Engine，將會安裝為 PowerPivot 具名執行個體。 每當您需要指定與此實例的連接時（例如，如果您使用該嚮導來設定伺服器陣列，請在伺服器陣列設定 wizard 中），以下列格式輸入資料庫名稱： <`servername`> \Powerpivot。  
   
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")  
   
@@ -128,7 +128,7 @@ ms.locfileid: "71952247"
   
 -   [使用 Windows PowerShell 的 PowerPivot 設定](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
- **連接到資料庫引擎實例。** 當您安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，SQL Server 安裝程式會提供您將 Database Engine 執行個體加入安裝中的選項。 如果您要設定新的伺服器陣列，且需要資料庫伺服器來執行伺服器陣列的設定和內容資料庫，您可能會將資料庫引擎實例新增至您的安裝。 如果您已加入 Database Engine，其會安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。 每當您需要指定與此實例的連接時（例如，如果您使用該 wizard 設定伺服器陣列，請在伺服器陣列設定 wizard 中），請記得以此格式輸入資料庫名稱： < `servername` > \Powerpivot。  
+ **連接到資料庫引擎實例。** 當您安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，SQL Server 安裝程式會提供您將 Database Engine 執行個體加入安裝中的選項。 如果您要設定新的伺服器陣列，且需要資料庫伺服器來執行伺服器陣列的設定和內容資料庫，您可能會將資料庫引擎實例新增至您的安裝。 如果您已加入 Database Engine，其會安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體。 每當您需要指定與此實例的連接時（例如，如果您使用該 wizard 設定伺服器陣列，請在伺服器陣列設定 wizard 中），請記得以此格式輸入資料庫名稱： <`servername`> \Powerpivot。  
   
 ##  <a name="bkmk_redist"></a>步驟3：在 Excel Services 應用程式伺服器上安裝 Analysis Services OLE DB 提供者  
  如果您在個別的應用程式伺服器上執行 Excel Calculation Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，則需要額外的安裝步驟。 在執行 Excel Calculation Services 的應用程式伺服器上，安裝 Analysis Services OLE DB 提供者 (MSOLAP) 的適當版本。  

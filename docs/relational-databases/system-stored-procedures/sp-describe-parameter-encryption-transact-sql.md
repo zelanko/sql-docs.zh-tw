@@ -60,12 +60,12 @@ sp_describe_parameter_encryption
   
  第一個結果集的每個資料列都會描述一對索引鍵;加密資料行加密金鑰及其對應的資料行主要金鑰。  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|結果集中的資料列識別碼。|  
 |**database_id**|**int**|資料庫識別碼。|  
 |**column_encryption_key_id**|**int**|資料行加密金鑰識別碼。注意：此識別碼代表 sys.databases 中的資料列[column_encryption_keys &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)目錄檢視。|  
-|**column_encryption_key_version**|**int**|保留供日後使用。 目前，一律包含1。|  
+|**column_encryption_key_version**|**int**|保留供未來使用。 目前，一律包含1。|  
 |**column_encryption_key_metadata_version**|**binary （8）**|表示資料行加密金鑰之建立時間的時間戳記。|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|資料行加密金鑰的加密值。|  
 |**column_master_key_store_provider_name**|**sysname**|包含資料行主要金鑰之金鑰存放區的提供者名稱，這是用來產生資料行加密金鑰的加密值。|  
@@ -74,7 +74,7 @@ sp_describe_parameter_encryption
   
  第二個結果集的每一列都包含一個參數的加密中繼資料。  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|結果集中資料列的識別碼。|  
 |**parameter_name**|**sysname**|*\@params*引數中指定的其中一個參數的名稱。|  
@@ -83,7 +83,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|第一個結果集中的資料列程式碼。 參考的資料列描述針對資料行所設定的資料行加密金鑰，參數會對應至。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|類型正規化演算法的版本號碼。|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  支援 Always Encrypted 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端驅動程式會自動呼叫**sp_describe_parameter_encryption**來取得應用程式所發出之參數化查詢的加密中繼資料。 接著，驅動程式會使用加密中繼資料來加密對應至受 Always Encrypted 保護之資料庫資料行的參數值，並以加密的取代應用程式所提交的純文字參數值參數值，然後再將查詢傳送至資料庫引擎。  
   
 ## <a name="permissions"></a>Permissions  

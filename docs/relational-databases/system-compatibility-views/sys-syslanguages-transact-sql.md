@@ -33,12 +33,12 @@ ms.locfileid: "70874876"
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的每種語言，各包含一個資料列。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|唯一語言識別碼。|  
 |dateformat|**nchar(3)**|日期的順序，例如 DMY。|  
-|datefirst|**tinyint**|一周的第一天：1代表星期一，2代表星期二，依此類推到7（星期日）。|  
-|upgrade|**int**|保留供系統使用。|  
+|datefirst|**tinyint**|每週第一天：1 代表星期一，2 代表星期二，依此類推，7 則代表星期日。|  
+|升級|**int**|保留供系統使用。|  
 |name|**sysname**|官方語言名稱，例如 Fran&#xE7;ais。|  
 |alias|**sysname**|替代語言名稱，例如 French。|  
 |months|**nvarchar(372)**|以逗號分隔的清單，依一月至十二月的順序列出完整長度的月份名稱，每個名稱最多可有 20 個字元。|  
@@ -86,7 +86,7 @@ ms.locfileid: "70874876"
 |泰文|1054|1054|  
   
 ## <a name="see-also"></a>另請參閱  
- [相容性檢視&#40;Transact SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [相容性&#40;視圖 transact-sql&#41; ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [將系統資料表對應至 System &#40;Views transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

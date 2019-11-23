@@ -156,7 +156,7 @@ ms.locfileid: "73882283"
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
 ## <a name="see-also"></a>另請參閱  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [複寫系統預存程序概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [發行資料和資料庫物件](publish-data-and-database-objects.md)  
   
   

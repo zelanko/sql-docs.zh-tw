@@ -50,11 +50,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permissions  
  必須為使用者指派 PUBLIC 角色才能存取此程序。 需要在伺服器和物件上具有 READ ACCESS 權限。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  包含 NULL 值的屬性不會包含在傳回集合中。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `sp_help_spatial_geometry_index`，針對 **\@qs**中指定的查詢範例，調查資料表**geometry_col**上所定義的空間索引**SIndx_SpatialTable_geometry_col2** 。 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用 `sp_help_spatial_geometry_index` 來調查 **\@qs**中指定查詢範例在資料表**geometry_col**上定義的空間索引**SIndx_SpatialTable_geometry_col2** 。 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geometry  

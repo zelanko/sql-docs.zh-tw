@@ -21,7 +21,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882367"
 ---
-# <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
+# <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Create a Snapshot for a Merge Publication with Parameterized Filters
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用參數化篩選建立合併式發行集的快照集。  
   
   
@@ -281,7 +281,7 @@ PAUSE
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，可提供執行快照集代理程式作業所使用之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的認證。  
   
         > [!NOTE]  
-        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，建議您設定 `sysadmin`。 如需詳細資訊，請參閱 [Replication Agent Security Model](security/replication-agent-security-model.md)。  
+        >  當發行集是由 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 固定伺服器角色的成員所建立時，建議您設定 `sysadmin`。 如需相關資訊，請參閱 [Replication Agent Security Model](security/replication-agent-security-model.md)。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 方法來建立發行集。  
   
@@ -306,7 +306,7 @@ PAUSE
   
 3.  如果 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 的值是 `false`，請呼叫 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 來針對這個發行集建立快照集代理程式作業。  
   
-4.  呼叫步驟 1 中建立之 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 物件的 <xref:Microsoft.SqlServer.Replication.MergePublication> 方法。 這個方法會啟動可產生初始快照集的代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [建立和套用初始快照集](create-and-apply-the-initial-snapshot.md)＞。  
+4.  呼叫步驟 1 中建立之 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 物件的 <xref:Microsoft.SqlServer.Replication.MergePublication> 方法。 這個方法會啟動可產生初始快照集的代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)＞。  
   
 5.  檢查是否有為 `true` 屬性設定 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 的值，以判斷初始快照集何時可準備好供人使用。  
   
@@ -393,8 +393,8 @@ PAUSE
   
 ## <a name="see-also"></a>另請參閱  
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [複寫系統預存程序概念](concepts/replication-system-stored-procedures-concepts.md)   
  [含參數化篩選之合併式發行集的快照集](snapshots-for-merge-publications-with-parameterized-filters.md)   
- [複寫安全性最佳作法](security/replication-security-best-practices.md)  
+ [複寫安全性最佳做法](security/replication-security-best-practices.md)  
   
   

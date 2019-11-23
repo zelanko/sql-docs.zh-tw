@@ -36,18 +36,18 @@ ms.locfileid: "73532946"
   
  查詢 dm_exec_external_work sys.databases，以識別要與外部資料源（例如 Hadoop 或外部 SQL Server）進行通訊的工作。  
   
-|資料行名稱|資料類型|說明|範圍|  
+|Column Name|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|相關聯的 PolyBase 查詢的唯一識別碼。|請參閱 sys.databases 中的*request_ID* [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
 |step_index|`int`|此工作者正在執行的要求。|請參閱 sys.databases 中的*step_index* [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
 |dms_step_index|`int`|此工作者正在執行之 DMS 計畫中的步驟。|請參閱[sys.databases dm_exec_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
 |compute_node_id|`int`|正在執行背景工作的節點。|請參閱[sys.databases dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|型別|`nvarchar(60)`|外部工作的類型。|「檔案分割」|  
+|類型|`nvarchar(60)`|外部工作的類型。|「檔案分割」|  
 |work_id|`int`|實際分割的識別碼。|大於或等於0。|  
 |input_name|`nvarchar(4000)`|要讀取的輸入名稱|使用 Hadoop 時的檔案名。|  
 |read_location|`bigint`|位移或讀取位置。|要讀取之檔案的位移。|  
 |bytes_processed|`bigint`|此背景工作所處理的位元組總數。|大於或等於0。|  
-|長度|`bigint`|Hadoop 時的分割或 HDFS 區塊長度|使用者可定義。 預設值為 Ed-64m|  
+|length|`bigint`|Hadoop 時的分割或 HDFS 區塊長度|使用者可定義。 預設值為 Ed-64m|  
 |status|`nvarchar(32)`|背景工作角色的狀態|擱置中、處理中、完成、失敗、已中止|  
 |start_time|`datetime`|工作開始||  
 |end_time|`datetime`|工作結束||  

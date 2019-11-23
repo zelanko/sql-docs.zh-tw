@@ -35,7 +35,7 @@ ms.locfileid: "73983180"
 |資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|資料庫內的檔案識別碼。|  
-|**file_guid**|**ssNoversion**|檔案的 GUID。<br /><br /> Null = 資料庫已從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （適用于 SQL Server 2005 和更早版本）升級。|  
+|**file_guid**|**ssNoversion**|檔案的 GUID。<br /><br /> Null = 資料庫從舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級（適用于 SQL Server 2005 和更早版本）。|  
 |**型別**|**tinyint**|檔案類型：<br/><br /> 0 = 資料列<br /><br/> 1 = 記錄<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索|  
 |**type_desc**|**nvarchar(60)**|檔案類型的描述：<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|此值可能是 0 或大於 0。 值為 0 代表資料庫記錄檔，而大於 0 的值則代表儲存這個資料檔之檔案群組的識別碼。|  

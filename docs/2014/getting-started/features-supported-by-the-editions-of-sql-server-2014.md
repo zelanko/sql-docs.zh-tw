@@ -22,9 +22,9 @@ ms.locfileid: "70176122"
 
   本主題提供不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本所支援功能的詳細資料。 
 
- > **注意:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]適用于180天試用期間的評估版。 如需詳細資訊, 請[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]參閱[試用軟體網站](https://go.microsoft.com/fwlink/?LinkId=190955)。  
+ > **注意：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在評估版中適用于180天的試用期間。 如需詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][試用版軟體網站](https://go.microsoft.com/fwlink/?LinkId=190955)。  
 > 
-> **注意：** 如需評估和開發人員版本所支援的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能, 請參閱企業功能集。  
+> **注意：** 如需評估和開發人員版本所支援的功能，請參閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 功能集。  
   
  若要導覽至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術的資料表，請按一下其連結：  
   
@@ -56,9 +56,9 @@ ms.locfileid: "70176122"
   
  [資料倉儲](#Data_warehouse)  
   
- [Analysis Services (英文)](#SSAS)  
+ [Analysis Services](#SSAS)  
   
- [BI 語義模型 (多維度)](#BISemModel_multi)  
+ [BI 語義模型（多維度）](#BISemModel_multi)  
   
  [BI 語意模型 (表格式)](#BISemModel_tabular)  
   
@@ -78,28 +78,28 @@ ms.locfileid: "70176122"
   
 ##  <a name="CrossBoxScale"></a> 跨機箱延展限制  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|單一實例所使用的計算容量上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫引擎)<sup>1</sup>|作業系統最大值|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
-|單一實例所使用的計算容量上限 (Analysis Services、Reporting Services) <sup>1</sup>|作業系統最大值|作業系統最大值|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
+|單一實例所使用的計算容量上限（[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫引擎）<sup>1</sup>|作業系統最大值|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
+|單一實例所使用的計算容量上限（Analysis Services、Reporting Services） <sup>1</sup>|作業系統最大值|作業系統最大值|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 |使用的記憶體上限 ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine 的每個執行個體)|作業系統最大值|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
 |使用的記憶體上限 ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的每個執行個體)|作業系統最大值|作業系統最大值|64 GB|N/A|N/A|N/A|N/A|  
 |使用的記憶體上限 ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的每個執行個體)|作業系統最大值|作業系統最大值|64 GB|64 GB|4 GB|N/A|N/A|  
 |關聯式資料庫大小上限|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> Enterprise Edition (含伺服器 + 用戶端存取許可證 (CAL)) 型授權 (不適用於新合約) 僅限每個[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]實例最多20個核心。 核心伺服器授權模式之下沒有任何限制。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+ <sup>1</sup> Enterprise Edition （含伺服器 + 用戶端存取許可證（CAL））型授權（不適用於新合約）僅限於每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 實例最多20個核心。 核心伺服器授權模式之下沒有任何限制。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
 ##  <a name="High_availability"></a> 高可用性  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Server Core 支援<sup>1</sup>|是|是|是|是|是|是|是|  
 |記錄傳送|是|是|是|是||||  
 |資料庫鏡像|是|是 (僅限 Safety Full)|是 (僅限 Safety Full)|僅限見證|僅限見證|僅限見證|僅限見證|  
 |備份壓縮|是|是|是|||||  
 |資料庫快照集|是|||||||  
-|AlwaysOn 容錯移轉叢集執行個體|是 (節點支援:作業系統最大值|是 (節點支援:2)|是 (節點支援:2)|||||  
-|AlwaysOn Availability Groups|是 (最多 8 個次要複本，包括 2 個同步次要複本)|||||||  
+|AlwaysOn 容錯移轉叢集執行個體|是 (節點支援：作業系統最大值)|是 (節點支援：2)|是 (節點支援：2)|||||  
+|AlwaysOn 可用性群組|是 (最多 8 個次要複本，包括 2 個同步次要複本)|||||||  
 |連接導向器|是|||||||  
 |線上頁面和檔案還原|是|||||||  
 |線上檢索索引|是|||||||  
@@ -111,13 +111,13 @@ ms.locfileid: "70176122"
 |加密的備份|是|是|是|||||  
 |智慧型備份|是|是|是|否||||  
   
- <sup>1</sup>如需有關在 server [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] core 上安裝的詳細資訊, 請參閱[在 server core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+ <sup>1</sup>如需有關在 Server Core 上安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的詳細資訊，請參閱[在 Server core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)。  
   
- <sup>2</sup>這項功能僅適用于64位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ <sup>2</sup>這項功能僅適用于64位 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ##  <a name="Scalability"></a>擴充性和效能  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |多個執行個體支援|50|50|50|50|50|50|50|  
 |資料表和索引分割區|是|||||||  
@@ -131,11 +131,11 @@ ms.locfileid: "70176122"
 |記憶體內部 OLTP <sup>1</sup>|是|||||||  
 |延遲持久性|是|是|是|是|是|是|是|  
   
- <sup>1</sup>此功能僅適用于64位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ <sup>1</sup>此功能僅適用于64位 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
-##  <a name="Enterprise_security"></a> 安全性  
+##  <a name="Enterprise_security"></a> Security  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |基本稽核|是|是|是|是|是|是|是|  
 |細部稽核|是|||||||  
@@ -145,9 +145,9 @@ ms.locfileid: "70176122"
 |自主資料庫|是|是|是|是|是|是|是|  
 |備份的加密|是|是|是|||||  
   
-##  <a name="Replication"></a> Replication  
+##  <a name="Replication"></a> 複寫  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 變更追蹤|是|是|是|是|是|是|是|  
 |合併式複寫|是|是|是|是 (僅限訂閱者)|是 (僅限訂閱者)|是 (僅限訂閱者)|是 (僅限訂閱者)|  
@@ -157,9 +157,9 @@ ms.locfileid: "70176122"
 |Oracle 發行|是|||||||  
 |點對點異動複寫|是|||||||  
   
-##  <a name="Mgmt_Tools"></a> Management Tools  
+##  <a name="Mgmt_Tools"></a> 管理工具  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |SQL 管理物件 (SMO)|是|是|是|是|是|是|是|  
 |SQL 組態管理員|是|是|是|是|是|是|是|  
@@ -172,16 +172,16 @@ ms.locfileid: "70176122"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|是|是|是|是||||  
 |Microsoft System Center Operations Manager 管理組件|是|是|是|是||||  
 |Database Tuning Advisor (DTA)|是|是|是 <sup>3</sup>|是 <sup>3</sup>||||  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]將資料庫部署至 Azure VM Wizard|是|是|是|是|是|是|是|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Azure 中的資料檔案|是|是|是|是|是|是|是|  
+|將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫部署至 Azure VM Wizard|是|是|是|是|是|是|是|  
+|在 Azure 中 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料檔案|是|是|是|是|是|是|是|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、with Tools和[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 可以使用 Standard 和 Enterprise 版本進行分析。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web、[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]、[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools 和 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] With Advanced Services 可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition 進行分析。  
   
  <sup>3</sup>僅針對 Standard edition 功能啟用微調。  
   
 ##  <a name="RDBMS_mgmt"></a> RDBMS Manageability  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |使用者執行個體|||||是|是|是|  
 |LocalDB|||||是|是||  
@@ -204,13 +204,13 @@ ms.locfileid: "70176122"
 |自主資料庫|是|是|是|是|是|是|是|  
 |緩衝集區延伸模組<sup>2</sup>|是|是|是|||||  
   
- <sup>1</sup> 如需詳細資訊，請參閱 [使用 SysPrep 安裝 SQL Server 的考量](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
+ <sup>1</sup> 如需詳細資訊，請參閱[使用 SysPrep 安裝 SQL Server 的考量](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
   
- <sup>2</sup>這項功能僅適用于64位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ <sup>2</sup>這項功能僅適用于64位 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ##  <a name="Dev_tools"></a> Development Tools  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio 整合|是|是|是|是|是|是|是|  
 |Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] 和 MDX)|是|是|是|是|是|是|是|  
@@ -221,9 +221,9 @@ ms.locfileid: "70176122"
   
  <sup>1</sup>這項功能不適用於64位版本的 Standard edition。  
   
-##  <a name="Programmability"></a> Programmability  
+##  <a name="Programmability"></a> 可程式性  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Common Language Runtime (CLR) 整合|是|是|是|是|是|是|是|  
 |原生 XML 支援|是|是|是|是|是|是|是|  
@@ -240,7 +240,7 @@ ms.locfileid: "70176122"
   
 ##  <a name="SSIS"></a> Integration Services  
   
-|功能|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈|是|是|是|是|是|是|是|  
 |內建的資料來源連接器|是|是|是|是|是|是|是|  
@@ -252,7 +252,7 @@ ms.locfileid: "70176122"
   
 ###  <a name="SSIS_AA"></a> Integration Services - 進階配接器  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |高效能 Oracle 目的地|是|||||||  
 |高效能 Teradata 目的地|是|||||||  
@@ -265,7 +265,7 @@ ms.locfileid: "70176122"
   
 ###  <a name="SSIS_AT"></a> Integration Services - 進階轉換  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |持續的 (高效能) 查閱|是|||||||  
 |資料採礦查詢轉換|是|||||||  
@@ -277,14 +277,14 @@ ms.locfileid: "70176122"
 > [!NOTE]  
 >  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 只能在 64 位元版本的 Business Intelligence 和 Enterprise 上使用。  
   
-|功能|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫|是|是||||||  
 |[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式|是|是||||||  
   
 ##  <a name="Data_warehouse"></a> Data Warehouse  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |建立不含資料庫的 Cube|是|是|是|||||  
 |自動產生暫存和資料倉儲結構描述|是|是|是|||||  
@@ -297,7 +297,7 @@ ms.locfileid: "70176122"
   
 ##  <a name="SSAS"></a> Analysis Services  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |可擴充共用資料庫 (附加/卸離唯讀資料庫)|是|是||||||  
 |備份/還原、附加/卸離資料庫|是|是|是|||||  
@@ -305,14 +305,14 @@ ms.locfileid: "70176122"
 |高可用性|是|是|是|||||  
 |可程式性 (AMO、ADOMD.Net、OLEDB、XML/A、ASSL)|是|是|是|||||  
   
-###  <a name="BISemModel_multi"></a>BI 語義模型 (多維度)  
+###  <a name="BISemModel_multi"></a>BI 語義模型（多維度）  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |局部加總量值|是|是|否<sup>1</sup>|||||  
 |階層|是|是|是|||||  
 |KPI|是|是|是|||||  
-|檢視方塊|是|是||||||  
+|[檢視方塊]|是|是||||||  
 |動作|是|是|是|||||  
 |帳戶智慧|是|是|是|||||  
 |時間智慧|是|是|是|||||  
@@ -320,7 +320,7 @@ ms.locfileid: "70176122"
 |回寫 Cube|是|是|是|||||  
 |回寫維度|是|是||||||  
 |回寫資料格|是|是|是|||||  
-|鑽研|是|是|是|||||  
+|「鑽研」|是|是|是|||||  
 |進階階層類型 (父子式、不完全階層)|是|是|是|||||  
 |進階維度 (參考維度、多對多維度)|是|是|是|||||  
 |連結量值和維度|是|是||||||  
@@ -340,15 +340,15 @@ ms.locfileid: "70176122"
 |直接回寫|是|是||||||  
 |量值運算式|是|是||||||  
   
- <sup>1</sup>LastChild 局部加總量值在 standard edition 中有受到支援, 但是其他局部加總量值 (例如 None、FirstChild、FirstNonEmpty、LastNonEmpty、AverageOfChildren 和 ByAccount) 則不是。 所有的版本都支援加總量值 (例如 Sum、Count、Min、Max) 和非加總量值 (DistinctCount)。  
+ <sup>1</sup>LastChild 局部加總量值在 standard edition 中有受到支援，但是其他局部加總量值（例如 None、FirstChild、FirstNonEmpty、LastNonEmpty、AverageOfChildren 和 ByAccount）則不是。 所有的版本都支援加總量值 (例如 Sum、Count、Min、Max) 和非加總量值 (DistinctCount)。  
   
 ###  <a name="BISemModel_tabular"></a> BI Semantic Model (Tabular)  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |階層|是|是||||||  
 |KPI|是|是||||||  
-|檢視方塊|是|是||||||  
+|[檢視方塊]|是|是||||||  
 |翻譯|是|是||||||  
 |DAX 計算、DAX 查詢、MDX 查詢|是|是||||||  
 |資料列層級安全性|是|是||||||  
@@ -357,7 +357,7 @@ ms.locfileid: "70176122"
   
 ###  <a name="PowerPivot"></a>PowerPivot for SharePoint  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |以共用服務架構為基礎的 SharePoint 伺服器陣列整合|是|是||||||  
 |使用方式報表|是|是||||||  
@@ -366,21 +366,21 @@ ms.locfileid: "70176122"
 |PowerPivot 資料重新整理|是|是||||||  
 |PowerPivot 資料摘要|是|是||||||  
   
-###  <a name="DataMining"></a> 資料採礦  
+###  <a name="DataMining"></a> Data Mining  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |標準演算法|是|是|是|||||  
 |資料採礦工具 (精靈、編輯器、查詢產生器)|是|是|是|||||  
 |交叉驗證|是|是||||||  
 |已篩選之採礦結構資料子集的模型|是|是||||||  
-|時間序列:ARTXP 和 ARIMA 方法之間的自訂混合|是|是||||||  
-|時間序列:使用新資料進行預測|是|是||||||  
+|時間序列：ARTXP 和 ARIMA 方法之間的自訂混合|是|是||||||  
+|時間序列：以新的資料預測|是|是||||||  
 |無限制的並行 DM 查詢|是|是||||||  
 |適用于資料採礦演算法的 Advanced Configuration & 微調選項|是|是||||||  
 |支援外掛程式演算法|是|是||||||  
 |平行模型處理|是|是||||||  
-|時間序列:跨系列預測|是|是||||||  
+|時間序列：跨序列預測|是|是||||||  
 |無限制的關聯規則屬性|是|是||||||  
 |順序預測|是|是||||||  
 |貝氏機率、類神經網路和羅吉斯迴歸的多個預測目標|是|是||||||  
@@ -389,7 +389,7 @@ ms.locfileid: "70176122"
   
 ###  <a name="Reporting_features"></a>Reporting Services 功能  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |支援的目錄 DB [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|Standard 或更高版本|Standard 或更高版本|Standard 或更高版本|Web|Express|||  
 |支援的資料來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所有版本|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所有版本|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所有版本|Web|Express|||  
@@ -417,9 +417,9 @@ ms.locfileid: "70176122"
 |警示<sup>2</sup>|是|是||||||  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|是|是||||||  
   
- <sup>1</sup>如需有關中[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]支援之資料來源的詳細資訊, 請參閱[Reporting Services &#40;SSRS&#41;支援的資料來源](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ <sup>1</sup>如需 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]中支援之資料來源的詳細資訊，請參閱[Reporting Services &#40;SSRS&#41;支援的資料來源](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
- <sup>2</sup>需要[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式的。 如需詳細資訊, 請參閱[Reporting Services Sharepoint &#40;模式安裝 SharePoint 2010 和&#41;SharePoint 2013](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
+ <sup>2</sup>需要 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 如需詳細資訊，請參閱[Reporting Services Sharepoint &#40;模式安裝 SharePoint 2010 和&#41;SharePoint 2013](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
 ### <a name="report-server-database-server-edition-requirements"></a>報表伺服器資料庫伺服器版本需求  
  建立報表伺服器資料庫時，並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都可以用來主控資料庫。 下表顯示哪些 [!INCLUDE[ssDE](../includes/ssde-md.md)] 版本可用於特定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]版本。  
@@ -428,15 +428,15 @@ ms.locfileid: "70176122"
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Standard、Business Intelligence Enterprise 版 (本機或遠端)|  
 |Business Intelligence|Standard、Business Intelligence Enterprise 版 (本機或遠端)|  
-|標準|Standard、Enterprise Edition (本機或遠端)|  
+|Standard|Standard、Enterprise Edition (本機或遠端)|  
 |Web|Web Edition (僅限本機)|  
 |Express with Advanced Services|Express with Advanced Services (僅限本機)。|  
 |Evaluation|Evaluation|  
   
-##  <a name="BIClients"></a> 商業智慧用戶端  
+##  <a name="BIClients"></a> Business Intelligence Clients  
  您可以透過 Microsoft 下載中心取得下列軟體用戶端應用程式，這些應用程式是提供來協助您建立可在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上執行的商業智慧文件。 當您在伺服器環境中裝載這些文件時，請使用支援該文件類型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 下表將識別哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含裝載在這些用戶端應用程式中建立之文件所需的伺服器功能。  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|是|是|是|||||  
 |適用於 Excel 及 Visio 2010 的資料採礦增益集|是|是|是|||||  
@@ -444,12 +444,12 @@ ms.locfileid: "70176122"
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|是|是||||||  
   
 > [!NOTE]
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]是 Excel 增益集, 不依賴[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不過，若要在 SharePoint 中共用 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 活頁簿並進行共同作業，則需要使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ，而且這項功能是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 和 Business Intelligence Edition 的一部分。  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 是 Excel 增益集，而且不相依于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不過，若要在 SharePoint 中共用 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 活頁簿並進行共同作業，則需要使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ，而且這項功能是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 和 Business Intelligence Edition 的一部分。  
 > 2.  上表識別啟用這些用戶端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。不過，這些功能可以存取任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本上裝載的資料。  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |空間索引|是|是|是|是|是|是|是|  
 |平面與 Geodetic 資料類型|是|是|是|是|是|是|是|  
@@ -458,22 +458,22 @@ ms.locfileid: "70176122"
   
 ##  <a name="Add_DBServices"></a> Additional Database Services  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|是|是|是|是|是|是|是|  
 |Database Mail|是|是|是|是||||  
   
 ##  <a name="Other_Components"></a> 其他元件  
   
-|功能名稱|Enterprise|Business Intelligence|標準|Web|Express with Advanced Services|Express with Tools|Express|  
+|功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Data Quality Services|是|是||||||  
 |StreamInsight|StreamInsight Premium 版|StreamInsight Standard 版|StreamInsight Standard 版|StreamInsight Standard 版||||  
 |StreamInsight HA|StreamInsight Premium 版|||||||  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 的產品規格](../../2014/getting-started/sql-server-2014-product-specifications.md)   
- [SQL Server 2014 的安裝](../database-engine/install-windows/installation-for-sql-server.md)   
+ [SQL Server 2014  的產品規格](../../2014/getting-started/sql-server-2014-product-specifications.md)  
+ [SQL Server 2014  的安裝](../database-engine/install-windows/installation-for-sql-server.md)  
  [SQL Server 2014 快速入門安裝](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

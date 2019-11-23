@@ -25,7 +25,7 @@ ms.locfileid: "71952399"
 ## <a name="see-also"></a>另請參閱  
  [捨棄 SQL Server 2014 安裝](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
  [安裝 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
- [解除安裝現有的 SQL Server 執行個體 &#40;Setup&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
+ [解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [PowerPivot for SharePoint 2010 安裝](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

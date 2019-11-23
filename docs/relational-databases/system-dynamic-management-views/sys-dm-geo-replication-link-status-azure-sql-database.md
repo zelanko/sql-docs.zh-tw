@@ -31,9 +31,9 @@ ms.locfileid: "73843891"
 
   針對異地複寫合作關係中的主要和次要資料庫之間的每個複寫連結，各包含一個資料列。 這包括主要和次要資料庫。 如果指定的主資料庫有一個以上的連續複寫連結，此資料表就會包含每個關聯性的資料列。 此視圖會在所有資料庫中建立，包括邏輯 master。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
-|link_guid|**uniqueidentifier**|複寫連結的唯一識別碼。|  
+|link_guid|**ssNoversion**|複寫連結的唯一識別碼。|  
 |partner_server|**sysname**|包含連結資料庫之 SQL Database 伺服器的名稱。|  
 |partner_database|**sysname**|連結的 SQL Database 伺服器上所連結資料庫的名稱。|  
 |last_replication|**datetimeoffset**|依據主資料庫時鐘，次要的最後一個交易通知的時間戳記。 此值僅適用于主資料庫。|  
@@ -43,7 +43,7 @@ ms.locfileid: "73843891"
 |角色 (role)|**tinyint**|異地複寫角色，下列其中一個：<br /><br /> 0 = 主要。 Database_id 指的是「異地複寫」合作關係中的主資料庫。<br /><br /> 1 = 次要。  Database_id 指的是「異地複寫」合作關係中的主資料庫。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|次要類型，下列其中一個：<br /><br /> 0 = 不允許直接連接到次要資料庫，而且資料庫無法供讀取存取。<br /><br /> 2 = 允許所有連接到次要複寫中的資料庫; ication 用於唯讀存取。|  
-|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> 全部|  
+|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> [全部]|  
 |last_commit|**datetimeoffset**|上次交易認可到資料庫的時間。 如果在主資料庫上抓取，則表示主資料庫上的上次認可時間。 如果在次要資料庫上抓取，它會指出次要資料庫上的上次認可時間。 當複寫連結的主要複本關閉時，如果在次要資料庫上抓取，則會指出次要的哪個點已趕上。|
   
 > [!NOTE]  

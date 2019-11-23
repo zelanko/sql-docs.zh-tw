@@ -67,17 +67,17 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   應用程式設定檔  
   
--   Connection  
+-   [連接]  
   
 -   Network  
   
--   Time  
+-   time  
   
  在下表中，SQLPERF 資料結構內的欄位描述也會套用到效能記錄檔中記錄的統計資料。  
   
 ### <a name="application-profile-statistics"></a>應用程式設定檔統計資料  
   
-|SQLPERF 欄位|說明|  
+|SQLPERF 欄位|描述|  
 |-------------------|-----------------|  
 |TimerResolution|伺服器時間的最小解析 (以毫秒為單位)。 這通常會報告為 0 (零)，而且只有在報告的數字很大時，才考慮使用。 如果伺服器時間的最小解析大於某些以計時器為基礎之統計資料的可能間隔，這些統計資料可能會擴大。|  
 |SQLidu|SQL_PERF_START 之後的 INSERT、DELETE 或 UPDATE 陳述式數目。|  
@@ -115,7 +115,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>時間統計資料  
   
-|SQLPERF 欄位|說明|  
+|SQLPERF 欄位|描述|  
 |-------------------|-----------------|  
 |msExecutionTime|驅動程式在 SQL_PERF_START 之後，花在處理上的累計時間，包括花在等待伺服器回覆的時間。|  
 |msNetworkServerTime|驅動程式花在等待伺服器回覆的累計時間。|  

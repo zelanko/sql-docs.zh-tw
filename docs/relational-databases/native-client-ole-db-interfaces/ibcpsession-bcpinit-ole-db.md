@@ -39,7 +39,7 @@ HRESULT BCPInit(
       int eDirection);  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **BCPInit** 方法應該在任何其他的大量複製方法之前呼叫。 **BCPInit** 方法會針對工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間資料的大量複製，執行必要的初始化。  
   
  **BCPInit** 方法會檢查資料庫來源或目標資料表的結構，而不會檢查資料檔案的結構。 此方法會根據資料庫資料表、檢視或 SELECT 結果集中的每個資料行，指定資料檔的資料格式值。 這個指定包括每個資料行的資料類型、資料中是否有長度或 null 指標和結束字元位元組字串，以及固定長度資料類型的寬度。 **BCPInit** 方法會設定這些值，如下所示：  

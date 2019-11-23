@@ -31,7 +31,7 @@ ms.locfileid: "71952028"
  如果您所還原的無效金鑰與之前用來加密資料的金鑰不同，這樣就無法針對目前儲存於報表伺服器資料庫內的資料進行解密。 如果您還原無效的金鑰，您應該立即還原正確金鑰的備份副本 (如果可用的話)。 如果您沒有之前用來加密資料之金鑰的備份副本，則必須刪除所有加密的資料。 按一下 **加密金鑰** 頁面上的 [[刪除]](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) 按鈕，以執行這個步驟。 當您刪除加密的內容之後，您必須手動更新所有訂閱，並重新指定報表伺服器上針對報表和資料驅動訂閱所定義的所有預存認證。  
   
 ## <a name="restore-encryption-key-dialog"></a>[還原加密金鑰] 對話方塊  
- 如需有關何處尋找 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 的詳細資訊，請參閱[ &#40;Reporting Services 組態管理員&#41;原生模式](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 如需在何處尋找 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 的詳細資訊，請參閱[ &#40;Reporting Services 組態管理員&#41;原生模式](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
  若要開啟 [還原加密金鑰] 對話方塊，請按一下 **組態管理員導覽窗格內的** [加密金鑰] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後按一下 **[還原]** 。 當您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員內的 [服務帳戶] 頁面來更新服務帳戶時，這個對話方塊也會出現。 如需詳細資訊  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71952028"
  [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生&#41;模式](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [刪除和重新建立加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [加密金鑰&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   

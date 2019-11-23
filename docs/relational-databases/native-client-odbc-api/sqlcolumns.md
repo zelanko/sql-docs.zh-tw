@@ -37,7 +37,7 @@ ms.locfileid: "73787410"
   
  下表列出結果集傳回的資料行：  
   
-|資料行名稱|說明|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |DATA_TYPE|傳回**VARCHAR （max）** 資料類型的 SQL_VARCHAR、SQL_VARBINARY 或 SQL_WVARCHAR。|  
 |TYPE_NAME|針對**Varchar （max）** 、 **Varbinary （max）** 和**Nvarchar （max）** 資料類型，傳回 "Varchar"、"Varbinary" 或 "Nvarchar"。|  
@@ -61,7 +61,7 @@ ms.locfileid: "73787410"
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns 和資料表值參數  
  SQLColumns 所傳回的結果集會根據 SQL_SOPT_SS_NAME_SCOPE 的設定而定。 如需詳細資訊，請參閱[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 系統已針對資料表值參數加入下列資料行：  
   
-|資料行名稱|資料類型|目錄|  
+|資料行名稱|[名稱]|目錄|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|對於 TABLE_TYPE 中的資料行，如果資料行為計算資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
 |SS_IS_IDENTITY|Smallint|如果資料行是識別資料行，則為 SQL_TRUE，否則為 SQL_FALSE。|  
@@ -79,7 +79,7 @@ ms.locfileid: "73787410"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>疏鬆資料行的 SQLColumns 支援  
  SQLColumns 的結果集已加入兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的資料行：  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|如果資料行為疏鬆資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
 |SS_IS_COLUMN_SET|**Smallint**|如果資料行是**column_set**資料行，則會 SQL_TRUE。否則，SQL_FALSE。|  

@@ -29,16 +29,16 @@ ms.locfileid: "72251311"
 > 2.  以滑鼠右鍵按一下封裝，然後按一下 [執行]。  
 > 3.  請視需要在 **[進階]** 索引標籤中設定參數值、連接管理員屬性和選項，例如記錄層次。  
 > 
->      如需有關記錄層級的詳細資訊，請參閱＜ [在 SSIS 伺服器上啟用封裝執行的記錄功能](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)＞。  
-> 4.  在按一下 **[確定]** 執行封裝之前，請按一下 **[指令碼]** 。 Transact-SQL 會出現在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [查詢編輯器] 視窗中。  
+>      如需有關記錄層級的詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)＞。  
+> 4.  在按一下 **[確定]** 執行封裝之前，請按一下 **[指令碼]** 。 Transact-SQL 會出現在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 [查詢編輯器] 視窗中。  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>若要使用預存程序部署及執行封裝  
   
 1.  呼叫 [catalog.deploy_project &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) 將包含封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。  
   
-     若要取出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署檔案的二進位內容，請針對 *\@project_stream*參數，使用含有 OPENROWSET 函數和 BULK 資料列集提供者的 SELECT 語句。 BULK 資料列集提供者可讓您從檔案讀取資料。 BULK 資料列集提供者的 SINGLE_BLOB 引數會傳回資料檔的內容當做類型為 varbinary(max) 的單一資料列、單一資料行資料列集。 如需詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
+     若要取得 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署檔案的二進位內容，請針對 *\@project_stream*參數，搭配 OPENROWSET 函數和 BULK 資料列集提供者使用 SELECT 語句。 BULK 資料列集提供者可讓您從檔案讀取資料。 BULK 資料列集提供者的 SINGLE_BLOB 引數會傳回資料檔的內容當做類型為 varbinary(max) 的單一資料列、單一資料行資料列集。 如需詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   
-     在下列範例中，SSISPackages_ProjectDeployment 專案會部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上的 [SSIS 封裝] 資料夾。 二進位資料會從專案檔（SSISPackage_ProjectDeployment. .ispac）讀取，並儲存在 Varbinary （max）類型的 *\@ProjectBinary*參數中。 *@No__t 1ProjectBinary*參數值會指派給 *\@project_stream*參數。  
+     在下列範例中，SSISPackages_ProjectDeployment 專案會部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上的 [SSIS 封裝] 資料夾。 二進位資料會從專案檔（SSISPackage_ProjectDeployment. .ispac）讀取，並儲存在 Varbinary （max）類型的 *\@ProjectBinary*參數中。 *\@ProjectBinary* 參數值會指派給 *\@project_stream* 參數。  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -125,6 +125,6 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ## <a name="see-also"></a>另請參閱  
  [將專案部署至 Integration Services 伺服器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [在 SQL Server Data Tools 中執行封裝](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
- [使用 SQL Server Management Studio 在 SSIS 伺服器上執行封裝](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
+ [使用 SQL Server Management Studio 在 SSIS 伺服器上執行套件](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
   

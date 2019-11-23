@@ -38,11 +38,11 @@ ms.locfileid: "73637899"
 ##  <a name="wellknown"></a> 尋找廣泛使用之已知 Microsoft 屬性的詳細資訊  
  Microsoft 定義了數百個文件屬性可用於許多內容，但是每一種檔案格式只會使用其中一小部分可用屬性。 常用的 Windows 屬性包括少數泛型屬性。 下表將顯示已知泛型屬性的部分範例。 下表顯示了已知名稱、Windows 正式名稱 (根據 Microsoft 發行的屬性描述)、屬性集 GUID、屬性整數識別碼和簡短說明。  
   
-|已知名稱|Windows 正式名稱|屬性集 GUID|整數識別碼|說明|  
+|已知名稱|Windows 正式名稱|屬性集 GUID|整數識別碼|描述|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|給定項目的一位或多位作者。|  
 |Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|指派給項目的關鍵字集合 (也稱為標記)。|  
-|類型|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|以正式類型為基礎的認知檔案類型。|  
+|型別|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|以正式類型為基礎的認知檔案類型。|  
 |Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|項目的標題。 例如文件的標題、郵件的主旨、相片的標題或音樂曲目的名稱。|  
   
  為了鼓勵檔案格式的一致性，Microsoft 已經針對許多文件類別識別了常用且高優先順序的文件屬性子集。 這些類別包括通訊、連絡人、文件、音樂檔案、圖片和視訊。 如需每個類別目錄前幾項排名屬性的詳細資訊，請參閱 Windows Search 文件集中的 [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) (自訂檔案格式的系統定義屬性)。  

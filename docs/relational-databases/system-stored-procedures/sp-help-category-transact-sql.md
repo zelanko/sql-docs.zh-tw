@@ -42,23 +42,23 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @class = ] 'class'` 類別，這是要求的資訊。 *class*為**Varchar （8）** ，預設值為**JOB**。 *類別*可以是下列其中一個值。  
+`[ @class = ] 'class'` 要要求之資訊的類別。 *class*為**Varchar （8）** ，預設值為**JOB**。 *類別*可以是下列其中一個值。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
-|**JOB**|提供作業類別目錄的相關資訊。|  
+|**任務**|提供作業類別目錄的相關資訊。|  
 |**消息**|提供警示類別目錄的相關資訊。|  
 |**操作**|提供操作員類別目錄的相關資訊。|  
   
-`[ @type = ] 'type'` 會要求其資訊的類別目錄類型。 *type*是**Varchar （12）** ，預設值是 Null，它可以是下列值之一。  
+`[ @type = ] 'type'` 要求的資訊所屬的類別目錄類型。 *type*是**Varchar （12）** ，預設值是 Null，它可以是下列值之一。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**LOCAL**|本機作業類別目錄。|  
-|**MULTI -SERVER**|多伺服器作業類別目錄。|  
+|**多伺服器**|多伺服器作業類別目錄。|  
 |**NONE**|**作業**以外類別的分類。|  
   
-`[ @name = ] 'name'`，這是要求的資訊所屬的類別目錄名稱。 *name*是**sysname**，預設值是 Null。  
+`[ @name = ] 'name'` 所要求之資訊所屬的類別目錄名稱。 *name*是**sysname**，預設值是 Null。  
   
 `[ @suffix = ] suffix` 指定結果集中的**category_type**資料行是否為識別碼或名稱。 *尾碼*是**bit**，預設值是**0**。 **1**會將**category_type**顯示為名稱， **0**則會顯示為識別碼。  
   
@@ -66,23 +66,23 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 當 **@no__t 1suffix**為**0**時， **sp_help_category**會傳回下列結果集：  
+ 當 **\@尾碼**為**0**時， **sp_help_category**會傳回下列結果集：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|類別目錄識別碼|  
 |**category_type**|**tinyint**|類別目錄類型：<br /><br /> **1** = 本機<br /><br /> **2** = 多伺服器<br /><br /> **3** = 無|  
 |**name**|**sysname**|類別目錄名稱|  
   
- 當 **@no__t 1suffix**是**1**時， **sp_help_category**會傳回下列結果集：  
+ 當 **\@尾碼**為**1**時， **sp_help_category**會傳回下列結果集：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|類別目錄識別碼|  
 |**category_type**|**sysname**|類別目錄的類型。 其中一個**本機**、**多伺服器**或**無**|  
 |**name**|**sysname**|類別目錄名稱|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sp_help_category**必須從**msdb**資料庫中執行。  
   
  如果未指定任何參數，結果集會提供所有作業類別目錄的相關資訊。  
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>B. 傳回警示資訊  
+### <a name="b-returning-alert-information"></a>b. 傳回警示資訊  
  下列範例會傳回「複寫警示」類別目錄的相關資訊。  
   
 ```  
@@ -126,9 +126,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

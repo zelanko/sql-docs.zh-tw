@@ -36,7 +36,7 @@ ms.locfileid: "73775504"
   
 -   ICommand::Execute  
   
- 如果 DBPROP_ACCESSORDER 屬性（在資料列集屬性群組中）設定為其中一個值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS，取用者應該只在**GetNextRows**方法的呼叫中提取單一資料列因為 BLOB 資料不會進行緩衝處理。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以在 **GetNextRows** 中提取資料的多個資料列。  
+ 如果 DBPROP_ACCESSORDER 屬性（在資料列集屬性群組中）設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 的其中一個值，取用者應該只在呼叫**GetNextRows**方法時提取單一資料列，因為 BLOB 資料不會經過緩衝處理。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以在 **GetNextRows** 中提取資料的多個資料列。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 抓取大量資料，直到取用者要求這麼做為止。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
   

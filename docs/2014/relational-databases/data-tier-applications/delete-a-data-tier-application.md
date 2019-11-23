@@ -30,9 +30,9 @@ ms.locfileid: "72782740"
 # <a name="delete-a-data-tier-application"></a>刪除資料層應用程式
   您可以使用 [刪除資料層應用程式精靈] 或 Windows PowerShell 指令碼來刪除資料層應用程式。 您可以指定是否要保留、卸離或卸除相關聯的資料庫。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **使用下列項目，升級 DAC**  [註冊資料層應用程式精靈](#UsingDeleteDACWizard)、 [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
  當您刪除資料層應用程式 (DAC) 執行個體時，可以選擇三個選項中的一個，指定要使用與資料層應用程式相關聯之資料庫執行的動作。 所有的三個選項都會刪除 DAC 定義中繼資料。 這些選項的差異在於它們使用與資料層應用程式相關聯之資料庫執行的動作。 精靈不會刪除與 DAC 或資料庫相關聯的任何執行個體層級物件，例如登入。  
@@ -65,7 +65,7 @@ ms.locfileid: "72782740"
   
 2.  展開 **[管理]** 節點。  
   
-3.  展開 **資料層應用程式** 節點。  
+3.  展開 [資料層應用程式] 節點。  
   
 4.  以滑鼠右鍵按一下要刪除的 DAC，然後選取 [刪除資料層應用程式…]  
   
@@ -84,7 +84,7 @@ ms.locfileid: "72782740"
   
  **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示此頁面。  
   
- **下一步 >** - 繼續進行 [選擇方法] 頁面。  
+ [下一步 >] - 繼續進行至 [選擇方法] 頁面。  
   
  **取消** - 結束精靈，不刪除資料層應用程式或資料庫。  
   
@@ -218,10 +218,10 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料層應用程式](data-tier-applications.md)   
  [資料層應用程式](data-tier-applications.md)   
  [部署資料層應用程式](deploy-a-data-tier-application.md)   
  [將資料庫註冊為 DAC](register-a-database-as-a-dac.md)   
  [SQL Server 資料庫的備份和還原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [資料庫卸離和附加 &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
+ [資料庫卸離與附加 &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

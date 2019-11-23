@@ -1,5 +1,5 @@
 ---
-title: server_event_sessions （Transact-sql） |Microsoft Docs
+title: sys.databases server_event_sessions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -32,7 +32,7 @@ ms.locfileid: "72313713"
 
   列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所存在的所有事件工作階段定義。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的唯一識別碼。 不可為 Null。|  
 |name|**sysname**|用來識別事件工作階段的使用者定義名稱。 名稱是唯一的。 不可為 Null。|  
@@ -41,10 +41,10 @@ ms.locfileid: "72313713"
 |max_dispatch_latency|**int**|指定事件在對工作階段目標提供服務之前，將於記憶體內緩衝處理的時間量 (以毫秒為單位)。 有效值為0到2147483648，以及0。 值為0表示分派延遲為無限。 可為 Null。|  
 |max_memory|**int**|為了事件緩衝處理而配置給工作階段的記憶體數量。 預設值是 4 MB。 可為 Null。|  
 |max_event_size|**int**|保留給不適合事件工作階段緩衝區之事件的記憶體數量。 如果 max_event_size 超出計算而來的緩衝區大小，會將 max_event_size 的兩個額外緩衝區配置給事件工作階段。 可為 Null。|  
-|memory_partition_mode|**nchar(1)**|在記憶體中建立事件緩衝區的位置。 預設的分割模式為 G。不可設為 Null。 memory_partition_mode 是下列其中一項：<br /><br /> G - NONE<br /><br /> C - PER_CPU<br /><br /> N - PER_NODE|  
+|memory_partition_mode|**nchar(1)**|在記憶體中建立事件緩衝區的位置。 預設的分割模式為 G。不可設為 Null。 memory_partition_mode 是下列其中一個：<br /><br /> G - NONE<br /><br /> C - PER_CPU<br /><br /> N - PER_NODE|  
 |memory_partition_mode_desc|**sysname**|預設值是 NONE。 不可為 Null。 為下列其中一項：<br /><br /> NONE。 SQL Server 執行個體內會建立單一組緩衝區。<br /><br /> PER_CPU。 為每個 CPU 建立一組緩衝區。<br /><br /> PER_NODE。 會針對每一個非統一記憶體存取 (NUMA) 節點建立一組緩衝區。|  
 |track_causality|**bit**|啟用或停用因果追蹤。 如果設定為 1 (ON)，會啟用追蹤，而且不同伺服器連接上的相關事件會彼此相互關聯。 預設值是 0 (OFF)。 不可為 Null。|  
-|startup_state|**bit**|可決定當伺服器啟動時，是否要自動啟動工作階段的值。 預設值為 0。 不可為 Null。 是下列其中一項：<br /><br /> 0 (OFF)。 當伺服器啟動時，此工作階段不會啟動。<br /><br /> 1 (ON)。 當伺服器啟動時，會啟動此事件工作階段。|  
+|startup_state|**bit**|可決定當伺服器啟動時，是否要自動啟動工作階段的值。 預設值是 0。 不可為 Null。 是下列其中一項：<br /><br /> 0 (OFF)。 當伺服器啟動時，此工作階段不會啟動。<br /><br /> 1 (ON)。 當伺服器啟動時，會啟動此事件工作階段。|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  

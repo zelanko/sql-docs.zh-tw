@@ -27,7 +27,7 @@ ms.locfileid: "73882257"
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如需詳細資訊，請參閱[安全複寫部署](security/view-and-modify-replication-security-settings.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -166,8 +166,8 @@ ms.locfileid: "73882257"
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [[設定散發]](configure-distribution.md)   
+ [複寫系統預存程序概念](concepts/replication-system-stored-procedures-concepts.md)   
+ [設定散發](configure-distribution.md)   
  [複寫管理物件概念](concepts/replication-management-objects-concepts.md)   
  [設定 AlwaysOn 可用性群組&#40;SQL Server 的複寫&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   

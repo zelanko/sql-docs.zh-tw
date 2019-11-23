@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_account_sp (Transact-sql) |Microsoft Docs
+title: sysmail_delete_account_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -39,23 +39,23 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @account_id = ] account_id`要刪除之帳戶的識別碼。 *account_id*是**int**, 沒有預設值。 必須指定*account_id*或*account_name* 。  
+`[ @account_id = ] account_id` 要刪除之帳戶的 ID 編號。 *account_id*是**int**，沒有預設值。 必須指定*account_id*或*account_name* 。  
   
-`[ @account_name = ] 'account_name'`要刪除的帳戶名稱。 *account_name*是**sysname**, 沒有預設值。 必須指定*account_id*或*account_name* 。  
+`[ @account_name = ] 'account_name'` 要刪除的帳戶名稱。 *account_name*是**sysname**，沒有預設值。 必須指定*account_id*或*account_name* 。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **0** (成功) 或**1** (失敗)  
+ **0** （成功）或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- None  
+ 無  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  不論是否有設定檔正在使用指定的帳戶，這個程序皆會予以刪除。 未包含任何帳戶的設定檔，無法順利傳送電子郵件。  
   
- 預存程式**sysmail_delete_account_sp**在**msdb**資料庫中, 而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**, 就必須以三部分的名稱來執行此程式。  
+ 預存程式**sysmail_delete_account_sp**在**msdb**資料庫中，而且是由**dbo**架構所擁有。 如果目前的資料庫不是**msdb**，就必須以三部分的名稱來執行此程式。  
   
 ## <a name="permissions"></a>Permissions  
- 此程式的執行許可權預設為**系統管理員 (sysadmin** ) 固定伺服器角色的成員。  
+ 此程式的執行許可權預設為**系統管理員（sysadmin** ）固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示刪除名稱為 `AdventureWorks Administrator` 的 Database Mail 帳戶。  
@@ -69,12 +69,12 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail 設定物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
- [sysmail_delete_profile_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
- [sysmail_delete_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
- [sysmail_help_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)   
- [sysmail_help_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profile-sp-transact-sql.md)   
- [sysmail_help_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profileaccount-sp-transact-sql.md)   
- [sysmail_update_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)  
+ [sysmail_add_account_sp &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
+ [sysmail_delete_profile_sp &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
+ [sysmail_delete_profileaccount_sp &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
+ [sysmail_help_account_sp &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)   
+ [sysmail_help_profile_sp &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sysmail-help-profile-sp-transact-sql.md)   
+ [sysmail_help_profileaccount_sp &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sysmail-help-profileaccount-sp-transact-sql.md)   
+ [sysmail_update_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)  
   
   

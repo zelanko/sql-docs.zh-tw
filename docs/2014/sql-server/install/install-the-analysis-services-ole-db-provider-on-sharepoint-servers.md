@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
 ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952528"
@@ -101,7 +101,7 @@ ms.locfileid: "71952528"
   
 3.  按一下 **[詳細資料]** 。  
   
-4.  檢視檔案版本資訊。 版本應包含 11.00. @no__t 0buildnumber >。  
+4.  檢視檔案版本資訊。 版本應包含11.00。\<buildnumber >。  
   
 5.  在 Windows\assembly 資料夾中，確認已列出 Microsoft.AnalysisServices.Xmla.dll 版本 11.0.0.0。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71952528"
 ##  <a name="bkmk_kj"></a>安裝 SQL Server 2008 R2 OLE DB 提供者以裝載舊版活頁簿  
  請依照下列指示安裝 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 MSOLAP.4 提供者，並且登錄 Microsoft.AnalysisServices.ChannelTransport.dll 檔。 ChannelTransport 是 Analysis Services OLE DB 提供者的子元件。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的提供者會在使用 ChannelTransport 建立連接時讀取登錄。 登錄此檔案是一個後續安裝步驟，只需要針對 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 伺服器上 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 提供者處理的連接執行。  
   
-#### <a name="step-1-download-and-install-the-client-library"></a>步驟 1:下載和安裝用戶端文件庫  
+#### <a name="step-1-download-and-install-the-client-library"></a>步驟 1：下載和安裝用戶端文件庫  
   
 1.  在 [SQL Server 2008 R2 功能套件頁面](https://go.microsoft.com/fwlink/?LinkId=159570)上，尋找 Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2。  
   
@@ -135,9 +135,9 @@ ms.locfileid: "71952528"
   
 4.  如果您的伺服器陣列中有其他只執行 Excel Services 的伺服器，但同一部伺服器上沒有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ，請重複上述步驟，在 Excel Services 電腦上安裝 2008 R2 版的提供者。  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>步驟 2:註冊 Microsoft.analysisservices. ChannelTransport .dll 檔案  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>步驟 2：登錄 Microsoft.AnalysisServices.ChannelTransport.dll 檔  
   
-1.  使用 regasm.exe 公用程式登錄檔案。 如果您之前未執行 regasm，請將其父資料夾 C:\Windows\Microsoft.NET\Framework64\v4.0.30319 @ no__t-0 新增至系統路徑變數。  
+1.  使用 regasm.exe 公用程式登錄檔案。 如果您之前未執行 regasm，請將其父資料夾 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\新增至系統路徑變數。  
   
 2.  使用管理員權限來開啟命令提示字元。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "71952528"
   
      移至 `C:\Program files\Microsoft Analysis Services\AS OLEDB\10` 以滑鼠右鍵按一下 **msolap100.dll** ，然後選取 **[屬性]** 。 按一下 **[詳細資料]** 。  
   
-     檢視檔案版本資訊。 版本應包含 10.50. @no__t 0buildnumber >。  
+     檢視檔案版本資訊。 版本應包含10.50。\<buildnumber >。  
   
   
 ## <a name="see-also"></a>另請參閱  

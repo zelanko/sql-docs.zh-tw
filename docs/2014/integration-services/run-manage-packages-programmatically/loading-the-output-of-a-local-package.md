@@ -24,24 +24,24 @@ ms.lasthandoff: 10/28/2019
 ms.locfileid: "72988216"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
-  使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 將輸出儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，或使用 **System.IO** 命名空間，將輸出儲存到一般檔案目的地時，用戶端應用程式可以讀取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的輸出。 但用戶端應用程式也可直接從記憶體讀取封裝的輸出，而無須在程序中間執行保存資料的步驟。 此解決方案的關鍵在於 `Microsoft.SqlServer.Dts.DtsClient` 命名空間，其中包含來自**system.web**命名空間之 `IDbConnection`、`IDbCommand`和**IDbDataParameter**介面的特殊實機。 預設會在 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** 中安裝 Microsoft.SqlServer.Dts.DtsClient.dll 組件。  
+  使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 將輸出儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，或使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]System.IO**命名空間，將輸出儲存到一般檔案目的地時，用戶端應用程式可以讀取** 套件的輸出。 但用戶端應用程式也可直接從記憶體讀取封裝的輸出，而無須在程序中間執行保存資料的步驟。 此解決方案的關鍵在於 `Microsoft.SqlServer.Dts.DtsClient` 命名空間，其中包含來自**system.web**命名空間之 `IDbConnection`、`IDbCommand`和**IDbDataParameter**介面的特殊實機。 預設會在 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** 中安裝 Microsoft.SqlServer.Dts.DtsClient.dll 組件。  
   
 > [!NOTE]  
 >  本主題所述之程序需要將資料流程工作與任何父物件的 DelayValidation 屬性，設定成其預設值 **False**。  
   
-## <a name="description"></a>[描述]  
+## <a name="description"></a>描述  
  這個程序示範如何以 Managed 程式碼開發用戶端應用程式，這個程式碼使用 DataReader 目的地直接從記憶體載入封裝的輸出。 這裡所摘要的步驟將在接下來的程式碼範例中示範。  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>將資料封裝輸出載入用戶端應用程式  
   
 1.  在封裝中，設定 DataReader 目的地以接收您要讀到用戶端應用程式中的輸出。 給 DataReader 目的地一個描述性名稱，因為您稍後將在用戶端應用程式中使用這個名稱。 記下 DataReader 目的地的名稱。  
   
-2.  在開發專案中，藉由尋找**DtsClient**的元件來設定 `Microsoft.SqlServer.Dts.DtsClient` 命名空間的參考。 此組件預設安裝在 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** 中。 使用C#`Using`或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Imports`語句，將命名空間匯入您的程式碼中。  
+2.  在開發專案中，藉由尋找**DtsClient**的元件來設定 `Microsoft.SqlServer.Dts.DtsClient` 命名空間的參考。 此組件預設安裝在 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** 中。 使用C# `Using` 或 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` 語句，將命名空間匯入您的程式碼中。  
   
-3.  在您的程式碼中，使用包含**dtexec**執行封裝所需之命令列參數的連接字串，建立類型 `DtsClient.DtsConnection` 的物件。 如需詳細資訊，請參閱＜ [dtexec Utility](../packages/dtexec-utility.md)＞。 然後使用此連接字串開啟連接。 您也可以使用 **dtexecui** 公用程式，以視覺化方式建立所需的連接字串。  
+3.  在您的程式碼中，使用包含**dtexec**執行封裝所需之命令列參數的連接字串，建立類型 `DtsClient.DtsConnection` 的物件。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。 然後使用此連接字串開啟連接。 您也可以使用 **dtexecui** 公用程式，以視覺化方式建立所需的連接字串。  
   
     > [!NOTE]  
-    >  範例程式碼透過使用 `/FILE <path and filename>` 語法示範從檔案系統載入封裝。 不過，您也可以使用 `/SQL <package name>` 語法從 MSDB 資料庫載入封裝，或是使用 `/DTS \<folder name>\<package name>` 語法從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝存放區載入。  
+    >  範例程式碼透過使用 `/FILE <path and filename>` 語法示範從檔案系統載入封裝。 不過，您也可以使用 `/SQL <package name>` 語法從 MSDB 資料庫載入封裝，或是使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 語法從 `/DTS \<folder name>\<package name>` 封裝存放區載入。  
   
 4.  建立類型為 `DtsClient.DtsCommand` 的物件，以使用先前建立的 `DtsConnection` 並將其 `CommandText` 屬性設定為封裝中的 DataReader 目的地名稱。 然後呼叫命令物件的 `ExecuteReader` 方法，將封裝結果載入新的 DataReader。  
   
@@ -295,7 +295,7 @@ namespace DtsClientWParamCS
   
 ![Integration Services 圖示（小型）](../media/dts-16.gif "Integration Services 圖示（小）")**與 Integration Services 保持最**新狀態<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [流覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解本機與遠端執行之間的差異](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [以程式設計方式載入和執行本機套件](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [以程式設計方式載入和執行遠端套件](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  

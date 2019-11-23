@@ -70,12 +70,12 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取系統管理功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   您必須是模型管理員。 如需詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   使用者定義指令碼已加入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中。  
   
@@ -91,11 +91,11 @@ CREATE PROCEDURE [usr].[YourAction]
   
 5.  從 [成員類型] 下拉式清單中，選取要套用商務規則的成員類型。  
   
-6.  按一下 **[加入]** 。  
+6.  按一下 **[新增]** 。  
   
 7.  依下列方式來建立使用者定義指令碼作為條件。  
   
-    1.  在 [如果] 區塊下，按一下 [加入] 按鈕。 面板隨即出現。  
+    1.  在 [如果] 區塊下，按一下 [加入] 按鈕。 面板隨即顯示。  
   
     2.  從 [運算子] 下拉式清單中，選取 [使用者定義的指令碼] 下的使用者定義函數。  
   
@@ -107,7 +107,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 8.  依下列方式來採用使用者定義指令碼作為動作。  
   
-    1.  在 [然後] 區塊下，按一下 [加入] 按鈕。 面板隨即出現。  
+    1.  在 [然後] 區塊下，按一下 [加入] 按鈕。 面板隨即顯示。  
   
     2.  從 [運算子] 下拉式清單中，選取 [使用者定義的指令碼] 下的使用者定義函數。  
   

@@ -40,7 +40,7 @@ ms.locfileid: "71952683"
 -   **報表伺服器警示資料庫：** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>解除安裝適用於 SharePoint 產品的增益集  
- 當您從電腦解除安裝增益集時，可以選擇只從伺服器陣列解除安裝檔案，或是一併移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 如需卸載適用于 SharePoint 產品之 @no__t 0 增益集的詳細資訊，請參閱[安裝或卸載適用&#40;于 sharepoint SharePoint 2010 和 sharepoint 2013&#41;的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
+ 當您從電腦解除安裝增益集時，可以選擇只從伺服器陣列解除安裝檔案，或是一併移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 如需卸載適用于 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的詳細資訊，請參閱[安裝或卸載適用于&#40;sharepoint SharePoint 2010 和 sharepoint 2013&#41;的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
   
 ## <a name="uninstall-native-mode"></a>解除安裝原生模式  
  當您解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式時，安裝之後所 **建立** 或 **修改** 的任何內容都會保持原狀。 例如，資料庫檔案、記錄檔、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔和內容項目 (如報表和資料來源檔案)。  
@@ -62,8 +62,8 @@ ms.locfileid: "71952683"
 5.  完成精靈。  
   
 ## <a name="see-also"></a>另請參閱  
- [解除安裝現有的 SQL Server 執行個體 &#40;Setup&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
- [安裝或卸載 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
+ [解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
+ [安裝或卸載 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41; ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [安裝或卸載適用于 SharePoint &#40;sharepoint 2010 和 sharepoint 2013 的 Reporting Services 增益集&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

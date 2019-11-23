@@ -31,7 +31,7 @@ ms.locfileid: "72798354"
   
 
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> 必要條件  
   
 -   > [!IMPORTANT]  
     >  設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式時，不再需要或支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 您可以使用 SharePoint 管理中心，在 SharePoint 模式下設定報表伺服器。 如需詳細資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)。  
@@ -76,11 +76,11 @@ ms.locfileid: "72798354"
   
 6.  在 [**產品金鑰**] 頁面上，輸入您的金鑰或接受「企業評估版」的預設值。  
   
-     按一下 **[下一步]** 。  
+     按 [下一步]。  
   
 7.  檢閱並接受授權條款。 Microsoft 感謝您同意傳送功能使用資料，協助改進產品功能及支援。  
   
-     按一下 **[下一步]** 。  
+     按 [下一步]。  
   
 8.  在 [**安裝程式角色**] 頁面上，選取 [ **SQL Server 功能安裝**]。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "72798354"
   
     -   如果您尚未有 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體，您也可以針對完整的環境選取 **[Database Engine Services]** 和 **[管理工具 - 完整]** 。  
   
-     按一下 **[下一步]** 。  
+     按 [下一步]。  
   
      ![適用于 SharePoint 模式的 SSRS 功能選取](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "適用于 SharePoint 模式的 SSRS 功能選取")  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72798354"
   
 13. 在 [**伺服器**設定] 頁面上，輸入適當的認證。 如果您想要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示或訂閱功能，則必須將 SQL Server Agent 的 **[啟動類型]** 變更為 **[自動]** 。  
   
-     按一下 **[下一步]** 。  
+     按 [下一步]。  
   
 14. 如果您選取了 Database Engine 服務，就會看到 **[資料庫引擎組態]** 頁面。請將適當的帳戶加入至 SQL 管理員清單，然後按 **[下一步]** 。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "72798354"
   
 16. 按一下 **[錯誤報告]** 頁面上的核取方塊傳送錯誤報告，協助 Microsoft 改進 SQL Server 功能與服務。  
   
-     按一下 **[下一步]** 。  
+     按 [下一步]。  
   
 17. 檢閱任何警告，然後在 **[安裝組態規則]** 頁面上按 **[下一步]** 。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "72798354"
   
 9. 在 **[Web 應用程式關聯]** 區段中，選取要佈建以供目前 Reporting Services 服務應用程式存取的 Web 應用程式。 您可以建立一個 Reporting Services 服務應用程式與一個 Web 應用程式的關聯。 如果目前所有的 Web 應用程式已有相關聯的 Reporting Services 服務應用程式，則會顯示警告訊息。  
   
-10. 按一下 **[確定]** 。  
+10. 按一下 [確定]。  
   
 11. 服務應用程式的建立程序會需要數分鐘才能完成。 完成後，您會看到確認訊息及 **[提供訂閱和警示]** 頁面的連結。 如果您想使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱和警示功能，請完成佈建步驟。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂閱及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "72798354"
 ##  <a name="bkmk_additional_config"></a> 其他組態  
  本節描述多數 SharePoint 部署中重要的其他組態步驟。  
   
-###  <a name="bkmk_provision_agent"></a> 提供訂閱和警示  
+###  <a name="bkmk_provision_agent"></a> [提供訂閱和警示]  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱和資料警示可能需要 SQL Server Agent 權限組態。 如果您看到錯誤訊息，指出需要 SQL Server Agent，且您已確認 SQL Server Agent 正在執行，則請更新權限。 您可以在成功建立服務應用程式頁面上，按一下 **[提供訂閱和警示]** 連結，以移至其他頁面並提供 SQL Server Agent。 如果您的部署跨電腦界限 (例如 SQL Server 資料庫執行個體位於其他電腦上)，則需要提供步驟。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂閱及警示](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
 
@@ -243,9 +243,9 @@ ms.locfileid: "72798354"
 
   
 ### <a name="activate-the-file-sync-feature"></a>啟用檔案同步處理功能  
- 如果使用者經常直接上傳已發行的報表項目至 SharePoint 文件庫，報表伺服器檔案同步處理功能會很有協助。 檔案同步處理功能會更頻繁地同步處理報表伺服器目錄與文件庫中的項目。 如需詳細資訊，請參閱 [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
+ 如果使用者經常直接上傳已發行的報表項目至 SharePoint 文件庫，報表伺服器檔案同步處理功能會很有協助。 檔案同步處理功能會更頻繁地同步處理報表伺服器目錄與文件庫中的項目。 如需詳細資訊，請參閱 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)  版本支援的功能  
+ [SQL Server 2012 版本所支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services SharePoint 服務和服務應用程式](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  

@@ -98,7 +98,7 @@ ms.locfileid: "73882171"
 3.  (選擇性) 在發行者上，執行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 為property **指定 \@retention_period_unit**，並為 **\@value** 指定新的訂閱逾期期限單位。  
   
 ## <a name="see-also"></a>另請參閱  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [複寫系統預存程序概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
   
   

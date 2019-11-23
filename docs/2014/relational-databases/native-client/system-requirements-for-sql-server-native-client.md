@@ -64,14 +64,14 @@ ms.locfileid: "73637790"
   
  IDBInfo：： GetKeywords 一律會傳回對應至連接上伺服器版本的關鍵字清單，而且不會受到 `DataTypeCompatibility`的影響。  
   
-|資料類型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC 和<br /><br /> DataTypeCompatibility=80 的 SQL Server Native Client OLE DB 應用程式|  
+|[名稱]|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC 和<br /><br /> DataTypeCompatibility=80 的 SQL Server Native Client OLE DB 應用程式|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|影像|  
+|varbinary(max)|varbinary|varbinary|映像|  
 |varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |XML|XML|XML|Ntext|  
-|CLR UDT （> 8 Kb）|udt|varbinary|影像|  
+|CLR UDT （> 8 Kb）|udt|varbinary|映像|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

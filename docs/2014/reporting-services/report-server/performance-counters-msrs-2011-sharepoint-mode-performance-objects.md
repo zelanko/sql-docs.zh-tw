@@ -47,7 +47,7 @@ ms.locfileid: "72782837"
   
  下表將列出 `MSRS 2014 Web Service SharePoint Mode` 效能物件所包含的計數器。  
   
-|計數器|[描述]|  
+|計數器|描述|  
 |-------------|-----------------|  
 |`Active Sessions`|使用中的工作階段數目。 此計數器提供從報表執行產生之所有瀏覽器工作階段的累積計數，不管這些工作階段是否仍然使用中。<br /><br /> 隨著工作階段記錄移除，此計數器會遞減。 根據預設，工作階段會在沒有活動的十分鐘後移除。|  
 |`Cache Hits/Sec`|快取報表每秒的要求數目。 這些要求是針對重新轉譯的報表，而不是針對直接從快取處理的報表 (請參閱本主題後面的 `Total Cache Hits`)。|  
@@ -55,7 +55,7 @@ ms.locfileid: "72782837"
 |`Cache Misses/Sec`|每秒無法從快取傳回報表的要求數目。 使用此計數器以了解用於快取 (磁碟或記憶體) 的資源是否足夠。|  
 |`Cache Misses/Sec (Semantic Models)`|每秒無法從快取傳回模型的要求數目。 使用此計數器以了解用於快取 (磁碟或記憶體) 的資源是否足夠。|  
 |`First Session Requests/Sec`|每秒從報表伺服器快取啟動的新使用者工作階段數目。|  
-|`Memory Cache Hits/Sec`|每秒從記憶體快取中擷取報表的次數。 *「記憶體中的快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|  
+|`Memory Cache Hits/Sec`|每秒從記憶體快取中擷取報表的次數。 *「記憶體內部快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體中快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|  
 |`Memory Cache Misses/Sec`|每秒無法從記憶體中快取擷取報表的次數。|  
 |`Next Session Requests/Sec`|在現有的工作階段中開啟之報表 (例如，從工作階段快照集轉譯的報表) 的每秒要求數目。|  
 |`Report Requests`|目前使用中和報表伺服器所處理的報表數目。|  
@@ -65,7 +65,7 @@ ms.locfileid: "72782837"
 |`Total Cache Hits (Semantic Models)`|服務啟動之後，來自快取之模型要求的總數。 每當 ASP.NET 停止報表伺服器 Web 服務時，此計數器就會重設。|  
 |`Total Cache Misses`|服務啟動之後，無法從快取傳回報表的總次數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。 您可以使用此計數器來判斷磁碟空間與記憶體是否足夠。|  
 |`Total Cache Misses (Semantic Models)`|服務啟動之後，無法從快取傳回模型的總次數。 每當 ASP.NET 停止報表伺服器 Web 服務時，此計數器就會重設。 您可以使用此計數器來判斷磁碟空間與記憶體是否足夠。|  
-|`Total Memory Cache Hits`|服務啟動之後，從記憶體中快取傳回之快取報表的總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。 *「記憶體中的快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|  
+|`Total Memory Cache Hits`|服務啟動之後，從記憶體中快取傳回之快取報表的總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。 *「記憶體內部快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體中快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|  
 |`Total Memory Cache Misses`|啟動服務之後，針對記憶體中快取的遺漏總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。|  
 |`Total Processing Failures`|報表伺服器 Web 服務要求處理中的錯誤數。|  
 |`Total Rejected Threads`|拒絕非同步處理之執行緒，以及後續在同一執行緒中當成同步處理之執行緒的總數。 每一個資料來源在一個執行緒上處理。 如果執行緒的數量超出容量，就會拒絕執行緒的非同步處理，然後以序列方式處理。|  
@@ -77,7 +77,7 @@ ms.locfileid: "72782837"
   
  下表將列出 `MSRS 2014 Windows Service SharePoint mode` 效能物件所包含的計數器。  
   
-|計數器|[描述]|  
+|計數器|描述|  
 |-------------|-----------------|  
 |`Active Sessions`|儲存在報表伺服器資料庫中之使用中工作階段的數目。 此計數器提供從報表訂閱產生之所有可使用瀏覽器工作階段的累積計數，不管這些工作階段是否仍然使用中。|  
 |`Alerting: event queue length`||  
@@ -96,7 +96,7 @@ ms.locfileid: "72782837"
 |`Delivers/Sec`|每秒來自任何傳遞延伸模組的報表傳遞數目。|  
 |`Events/Sec`|每秒處理的事件數目。 監視的事件包括 `SnapshotUpdated` 和 `TimedSubscription`。|  
 |`First Session Requests/Sec`|每秒建立的新報表執行工作階段數目。|  
-|`Memory Cache Hits/Sec`|每秒從記憶體快取中擷取報表的次數。 *「記憶體中的快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體內部快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|  
+|`Memory Cache Hits/Sec`|每秒從記憶體快取中擷取報表的次數。 *「記憶體內部快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體中快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|  
 |`Memory Cache Misses/Sec`|每秒無法從記憶體中快取擷取報表的次數。|  
 |`Next Session Requests/Sec`|在現有的工作階段中開啟之報表 (例如，從工作階段快照集轉譯的報表) 的每秒要求數目。|  
 |`Report Requests`|目前使用中和報表伺服器所處理的報表數目。 使用此計數器以評估快取策略。 要求的數目可能比產生的報表多很多。|  
@@ -139,6 +139,6 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
 (Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視報表伺服器效能](monitoring-report-server-performance.md)   
  [MSRS 2014 Web 服務和 MSRS 2014 Windows Service 效能物件&#40;原生模式的效能計數器&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

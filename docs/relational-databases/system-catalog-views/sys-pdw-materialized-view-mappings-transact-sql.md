@@ -27,7 +27,7 @@ ms.locfileid: "73729823"
 
 Physical_name 的資料行和 object_id 會形成此目錄檢視的索引鍵。
   
-|資料行名稱|資料類型|說明|  
+|Column Name|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |physical_name |**Nvarchar （36）**|具體化視圖的機構名稱。|  
 |object_id  |**int**|具體化視圖的物件識別碼。 請參閱[sys.databases （transact-sql）](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
@@ -38,7 +38,7 @@ Physical_name 的資料行和 object_id 會形成此目錄檢視的索引鍵。
   
 ## <a name="see-also"></a>另請參閱
 
-[使用具體化 View  進行效能微調](/azure/sql-data-warehouse/performance-tuning-materialized-views)  
+[使用具體化檢視進行效能調整](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

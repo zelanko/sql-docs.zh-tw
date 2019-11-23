@@ -31,7 +31,7 @@ ms.locfileid: "69493859"
 > [!NOTE]  
 >  另外，事實維度在每次更新到事實關聯性參考的量值群組之後必須累加更新。  
   
- 如需詳細資訊，請參閱[維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定義事實關聯性及事實關聯性屬性](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)。  
+ 如需詳細資訊，請參閱 [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和 [定義事實關聯性及事實關聯性屬性](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)。  
   
  在本主題的工作中，您會依據 [FactInternetSales] 事實資料表中的 [CustomerPONumber] 資料行來加入新的 Cube 維度。 接著會將這個新的 Cube 維度和 [網際網路銷售] 量值群組之間的關聯性定義為事實關聯性。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "69493859"
   
 3.  在 [選取建立方法] 頁面上，確認已選取 [使用現有的資料表] 選項，然後按一下 [下一步]。  
   
-4.  在 [指定來源資訊] 頁面上，確認已選取 [Adventure Works DW 2012] 資料來源檢視。  
+4.  在 [指定來源資訊] 頁面上，確認已選取 **Adventure Works DW 2012** 資料來源檢視。  
   
 5.  在 [主資料表] 清單中，選取 [InternetSales]。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "69493859"
   
 14. 在 [**網際網路銷售訂單詳細資料**] 維度之 [維度設計師] 的 [**屬性**] 窗格中，選取 [**銷售訂單號碼**]，然後將屬性視窗中的 [**名稱**] 屬性變更為 `Item Description.`  
   
-15. 在 [ **NameColumn** ] 屬性資料格中，按一下瀏覽按鈕 **（...）** 。從 [名稱資料行] 對話方塊的 [來源資料表] 清單中，選取 [Product]、針對 [來源資料行] 選取 [EnglishProductName]，然後按一下 [確定]。  
+15. 在 [ **NameColumn** ] 屬性資料格中，按一下瀏覽按鈕 **（...）** 。在 [**名稱資料行**] 對話方塊中，從 [**來源資料表**] 清單中選取 [**產品**]，針對 [**來源**] 資料行選取 [ **product.englishproductname** ]，然後按一下 **[確定]** 。  
   
 16. 將 [SalesOrderNumber] 資料行從 [資料來源檢視] 窗格中的 [InternetSales] 資料表拖曳到 [屬性] 窗格，以這個方式將 [銷售訂單號碼] 屬性加入維度。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69493859"
   
 1.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]，將所做的變更部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體及處理資料庫。  
   
-2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器] 索引標籤，然後按一下 [重新連接] 按鈕。  
+2.  順利完成部署之後，針對  **教學課程 Cube，按一下 [Cube 設計師] 的 [瀏覽器]** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接] 按鈕。  
   
 3.  從 [資料] 窗格中清除所有量值和階層，然後將 [網際網路銷售 - 銷售量] 量值加入 [資料] 窗格的資料區域。  
   

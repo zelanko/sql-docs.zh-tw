@@ -27,7 +27,7 @@ ms.locfileid: "69493871"
 > [!NOTE]  
 >  為了支援多對多維度關聯性，必須在所有相關資料表之間的資料來源視圖中定義主鍵-外鍵關聯性。 否則，當您在 [Cube 設計師] 的 [維度使用方式] 索引標籤中建立關聯性時，將無法選取正確的中繼量值群組。  
   
- 如需詳細資訊，請參閱[維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定義多對多關聯性及多對多關聯性屬性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
+ 如需詳細資訊，請參閱 [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和 [定義多對多關聯性及多對多關聯性屬性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
  在這個主題的工作中，您會定義 [銷售原因] 維度和 [銷售原因] 量值群組，而且會在 [銷售原因] 維度和 [網際網路銷售] 量值群組之間透過 [銷售原因] 量值群組來定義多對多關聯性。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69493871"
   
 8.  在 [資料表] 窗格中，展開 [InternetSalesReason (dbo.FactInternetSalesReason)]，並按一下 [SalesOrderNumber]，然後在 [屬性] 視窗中檢閱這個資料行的 [DataType] 屬性。  
   
-     請注意， **SalesOrderNumber** 資料行的資料類型是字串資料類型。  
+     請注意，**SalesOrderNumber** 資料行的資料類型是字串資料類型。  
   
 9. 檢查 `InternetSalesReason` 資料表中其他資料行的資料類型。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "69493871"
   
 1.  請針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師]，然後按一下 [Cube 結構] 索引標籤。  
   
-2.  以滑鼠右鍵按一下 [量值] 窗格中的任何位置，然後按一下 [新增量值群組]。 如需詳細資訊，請參閱[在多維度模型中建立量值和量值群組](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
+2.  以滑鼠右鍵按一下 [量值] 窗格中的任何位置，然後按一下 [新增量值群組]。 如需詳細資訊，請參閱 [在多維度模型中建立量值和量值群組](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
   
 3.  在 [**新增量值群組**] 對話方塊中，選取 [**從資料來源視圖選取資料表**] 清單中的 [`InternetSalesReason`]，然後按一下 **[確定]** 。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "69493871"
   
 5.  選取 [網際網路銷售原因計數]，並在 [屬性] 視窗中檢閱這個量值的屬性。  
   
-     請注意，這個量值的 [AggregateFunction] 屬性是定義為 [計數] 而不是 [總和]。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 選擇 [**計數**] 是因為基礎資料類型是字串資料類型。 基礎事實資料表中的其他兩個資料行並未選取做為量值，因為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到它們是數值索引鍵而不是實際量值。 如需詳細資訊，請參閱[定義局部加總行為](multidimensional-models/define-semiadditive-behavior.md)。  
+     請注意，這個量值的 [AggregateFunction] 屬性是定義為 [計數] 而不是 [總和]。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 選擇 [**計數**] 是因為基礎資料類型是字串資料類型。 基礎事實資料表中的其他兩個資料行並未選取做為量值，因為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到它們是數值索引鍵而不是實際量值。 如需詳細資訊，請參閱 [定義局部加總行為](multidimensional-models/define-semiadditive-behavior.md)。  
   
 6.  在 [屬性] 視窗中，將 [網際網路銷售原因計數] 量值的 [可見] 屬性變更為 **False**。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "69493871"
   
 7.  在 [名稱資料行] 清單中，選取 [SalesReasonName]。  
   
-8.  按一下 **[下一步]** 。  
+8.  按 [下一步]。  
   
 9. 在 [選取維度屬性] 頁面上，系統會自動選取 [銷售原因索引鍵] 屬性，因為它是索引鍵屬性。 選取 [**銷售原因類型**] 屬性旁的核取方塊，將其名稱變更為 `Sales Reason Type`，然後按 **[下一步]** 。  
   
@@ -145,15 +145,15 @@ ms.locfileid: "69493871"
   
      ![[定義關聯性] 對話方塊](../../2014/tutorials/media/l5-many-to-many-3.gif "定義關聯性對話方塊")  
   
-5.  按一下 **[確定]** 。  
+5.  按一下 [確定]。  
   
      請注意代表 [銷售原因] 維度和 [網際網路銷售] 量值群組之間關聯性的多對多圖示。  
   
 ## <a name="browsing-the-cube-and-the-many-to-many-dimension"></a>瀏覽 Cube 與多對多維度  
   
-1.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+1.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
   
-2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [瀏覽器] 索引標籤，然後按一下 [重新連接]。  
+2.  順利完成部署之後，針對  **教學課程 Cube，切換到 [Cube 設計師] 的 [瀏覽器]** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 索引標籤，然後按一下 [重新連接]。  
   
 3.  將 [網際網路銷售 - 銷售量] 量值新增至 [資料] 窗格的資料區域。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "69493871"
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [在量值群組內定義維度資料粒度](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定義多對多關聯性及多對多關聯性屬性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  

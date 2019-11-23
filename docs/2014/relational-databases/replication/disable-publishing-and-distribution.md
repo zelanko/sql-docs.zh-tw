@@ -133,6 +133,6 @@ ms.locfileid: "73882378"
   
 ## <a name="see-also"></a>另請參閱  
  [複寫管理物件概念](concepts/replication-management-objects-concepts.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
+ [複寫系統預存程序概念](concepts/replication-system-stored-procedures-concepts.md)  
   
   

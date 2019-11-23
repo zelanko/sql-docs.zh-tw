@@ -89,9 +89,9 @@ ms.locfileid: "72796425"
 ##  <a name="bkmk_3ways_to_install"></a> 安裝方法概觀  
  您可以使用下列兩種方法的其中一種，安裝適用於 SharePoint 產品的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集：  
   
--   **安裝程式：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "下")[新增 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]，此增益集可以由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈安裝。 在精靈的 [功能選擇] 頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]。  
+-   **安裝程式：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")[新增 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]，此增益集可以由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈安裝。 在精靈的 [功能選擇] 頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]。  
   
--   **Rssharepoint.msi .msi：** 此增益集可以直接從安裝媒體安裝，或下載並安裝。 rsSharepoint.msi 同時支援圖形化使用者介面和命令列安裝。 您必須以系統管理員權限執行 .msi，方式是先開啟提高權限的命令提示字元，然後從命令列執行 rsSharepoint.msi。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **rsSharepoint.msi** ：該增益集可以直接從安裝媒體安裝，或下載後安裝。 rsSharepoint.msi 同時支援圖形化使用者介面和命令列安裝。 您必須以系統管理員權限執行 .msi，方式是先開啟提高權限的命令提示字元，然後從命令列執行 rsSharepoint.msi。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
     > [!NOTE]  
     >  如果您使用 **/q** 參數進行無訊息命令列安裝，將不會顯示使用者授權合約。 不論安裝方式為何，使用此軟體皆受到授權合約的限制，同時您有責任遵從授權合約的規定。  
@@ -111,7 +111,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\14\`  
   
-     中的多個  
+     或  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\`  
   
@@ -280,12 +280,12 @@ Rssharepoint.msi /?
   
 2.  這些輸出看起來類似於下列文字：  
   
-     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`。  
+     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`的 COLLATE 子句。  
   
 ##  <a name="bkmk_upgrade"></a> 升級  
  如果您已擁有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的現有安裝，則可以升級至目前版本。 增益集的安裝程式會偵測現有的版本，並提示您確認升級作業。 這些訊息類似於下列文字：  
   
- **在您的系統上已偵測到較低版本的此產品。請問您想要升級現有的安裝嗎？**  
+ **在您的系統上偵測到較低版本的此產品。您要升級現有的安裝嗎？**  
   
  如果確認，將會移除舊版增益集並安裝新版本。  
   
@@ -294,7 +294,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  下表摘要列出 rscustomaction.exe 參數：  
   
-|參數|Description|  
+|參數|描述|  
 |------------|-----------------|  
 |i|安裝自訂動作。 此作業會在 SharePoint 中註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件。 此作業會重新啟動 W3SVCservice。|  
 |r|Repair|  

@@ -27,7 +27,7 @@ ms.locfileid: "72381706"
 
   將指定發行集的快照集資料夾複製到 **\@destination_folder**中列出的資料夾。 這個預存程序執行於發行集資料庫的發行者端。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,10 +47,10 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ## <a name="remarks"></a>Remarks  
  **sp_copymergesnapshot**用於合併式複寫中。 執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版和更早版本的訂閱者無法使用替代快照集位置。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_copymergesnapshot**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [替代快照集資料夾位置](../../relational-databases/replication/snapshot-options.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

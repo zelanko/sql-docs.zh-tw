@@ -1,5 +1,5 @@
 ---
-title: sys.databases _operation_status （Azure SQL Database） |Microsoft Docs
+title: sys. dm_operation_status （Azure SQL Database） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -32,14 +32,14 @@ ms.locfileid: "70911208"
 
   傳回 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 伺服器中的資料庫上所執行之作業的相關資訊。  
   
-|資料行名稱|資料類型|描述|  
+|Column Name|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|session_activity_id|**uniqueidentifier**|作業的識別碼。 非 Null。|  
+|session_activity_id|**ssNoversion**|作業的識別碼。 非 Null。|  
 |resource_type|**int**|表示執行作業所在資源的類型。 非 Null。 在目前的版本中，這個檢視只會追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上所執行的作業，對應的整數值為 0。|  
 |resource_type_desc|**nvarchar(2048)**|執行作業所在的資源類型描述。 在目前的版本中，這個檢視只會追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上所執行的作業。|  
 |major_resource_id|**sql_variant**|執行作業所在的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的名稱。 非 Null。|  
 |minor_resource_id|**sql_variant**|僅供內部使用。 非 Null。|  
-|operation|**nvarchar(60)**|在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上執行的運算，例如 CREATE 或 ALTER。|  
+|operation (作業)|**nvarchar(60)**|在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上執行的運算，例如 CREATE 或 ALTER。|  
 |state|**tinyint**|作業的狀態。<br /><br /> 0 = 暫止<br />1 = 進行中<br />2 = 已完成<br />3 = 失敗<br />4 = 已取消|  
 |state_desc|**nvarchar(120)**|PENDING = 作業正在等候可用的資源或配額。<br /><br /> IN_PROGRESS = 作業已開始且正在進行。<br /><br /> COMPLETED = 作業已成功完成。<br /><br /> FAILED = 作業失敗。 如需詳細資訊，請參閱**error_desc**資料行。<br /><br /> CANCELLED = 使用者要求停止作業。|  
 |percent_complete|**int**|已完成作業的百分比。 值不是連續的，而且有效的值如下所示。 Not Null。<br/><br/>0 = 作業未啟動<br/>50 = 作業進行中<br/>100 = 作業完成|  
@@ -53,8 +53,8 @@ ms.locfileid: "70911208"
 ## <a name="permissions"></a>Permissions  
  此視圖僅適用于**master**資料庫中的伺服器層級主體登入。  
   
-## <a name="remarks"></a>備註  
- 若要使用此視圖，您必須連接到**master**資料庫。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用伺服器`sys.dm_operation_status`的**master**資料庫中的 view 來追蹤在上執行[!INCLUDE[ssSDS](../../includes/sssds-md.md)]之下列作業的狀態：  
+## <a name="remarks"></a>Remarks  
+ 若要使用此視圖，您必須連接到**master**資料庫。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器的**master**資料庫中的 [`sys.dm_operation_status`] 視圖，追蹤在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上執行之下列作業的狀態：  
   
 -   建立資料庫  
   
@@ -84,9 +84,9 @@ SELECT * FROM sys.dm_operation_status
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [異地複寫動態管理的查看和功能&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys.databases _replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [異地複寫動態管理檢視和功能&#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [dm_geo_replication_link_status &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [geo_replication_links &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

@@ -39,7 +39,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="arguments"></a>引數  
 `[ @agent_type = ] 'agent_type'` 是代理程式的類型。 *agent_type*為**int**，沒有預設值，而且可以是下列其中一個值。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**1**|快照集代理程式。|  
 |**2**|記錄讀取器代理程式。|  
@@ -54,7 +54,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **sp_update_agent_profile**用於所有類型的複寫中。  
   
 ## <a name="permissions"></a>Permissions  

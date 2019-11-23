@@ -24,12 +24,12 @@ ms.locfileid: "73728372"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除您不再需要的衍生階層。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，刪除您不再需要的衍生階層。  
   
 > [!NOTE]  
 >  刪除衍生階層對於此階層所依據的屬性關聯性沒有影響。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

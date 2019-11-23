@@ -32,7 +32,7 @@ ms.locfileid: "73593809"
 
   針對使用[CREATE column encryption key](../../t-sql/statements/create-column-encryption-key-transact-sql.md)或[ALTER column encryption key &#40;transact-sql&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)語句所建立的資料行加密金鑰（cek），傳回其加密值的相關資訊。 每個資料列都代表 CEK 的值，並使用資料行主要金鑰（CMK）進行加密。  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_id**|**int**|資料庫中 CEK 的識別碼。|  
 |**column_master_key_id**|**int**|用來加密 CEK 值的資料行主要金鑰識別碼。|  
@@ -54,9 +54,9 @@ ms.locfileid: "73593809"
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [使用 secure 記憶體保護區  的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)  
- [Always Encrypted  的金鑰管理總覽](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
- [使用安全記憶體保護區管理 Always Encrypted 的金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Always Encrypted 的金鑰管理概觀](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [針對具有安全記憶體保護區的 Always Encrypted 管理金鑰](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
 
   
   

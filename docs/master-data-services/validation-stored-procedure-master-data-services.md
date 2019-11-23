@@ -54,7 +54,7 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
 ## <a name="parameters"></a>參數  
  此處理序的參數如下：  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |UserID|使用者識別碼。|  
 |Model_ID|模型識別碼。|  

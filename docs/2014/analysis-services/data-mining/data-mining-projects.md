@@ -104,7 +104,7 @@ ms.locfileid: "73705299"
 > [!WARNING]  
 >  如果您要篩選資料，您可以在資料來源檢視中進行，但是也可以在採礦模型層級建立資料的篩選。 因為篩選定義儲存在採礦模型中，所以使用模型篩選器會更容易判斷之前用來定型模型的資料。 此外，您也可以使用不同的篩選準則建立多個相關模型。 如需詳細資訊，請參閱[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)。  
   
- 請注意，您建立的資料來源檢視可以包含未直接用於分析的其他資料。 例如，您可能會將用於測試、預測或鑽研的資料加入至資料來源檢視。 如需這些用途的詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md) 和 [鑽研](drillthrough-queries-data-mining.md)。  
+ 請注意，您建立的資料來源檢視可以包含未直接用於分析的其他資料。 例如，您可能會將用於測試、預測或鑽研的資料加入至資料來源檢視。 如需這些用途的詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md) 和[鑽研](drillthrough-queries-data-mining.md)。  
   
 
   
@@ -132,12 +132,12 @@ ms.locfileid: "73705299"
   
   
   
-###  <a name="bkmk_Models"></a> Mining Models  
+###  <a name="bkmk_Models"></a> 採礦模型  
  採礦模型會定義演算法或您將在資料上使用的分析方法。 您可以將一個或多個採礦模型加入至每個採礦結構。  
   
  根據您的需求而定，您可以將許多模型結合成單一專案，或是針對每個類型的模型或分析工作建立個別的專案。  
   
- 在您建立結構和模型之後，您可以透過產生資料之數學模型的演算法，執行資料來源檢視中的資料來「處理」每個模型。 此程序也就是所謂的「定型模型」。 如需詳細資訊，請參閱[處理需求和考量 &#40;資料採礦&#41;](processing-requirements-and-considerations-data-mining.md)。  
+ 在您建立結構和模型之後，您可以透過產生資料之數學模型的演算法，執行資料來源檢視中的資料來「處理」每個模型。 此程序也就是所謂的「定型模型」。 如需詳細資訊，請參閱 [Processing Requirements and Considerations &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md) (處理需求和考量 (資料採礦))。  
   
  模型經過處理之後，您可以使用視覺的方式瀏覽採礦模型，並據此建立預測查詢。 如果已經快取定型程序中的資料，您可以使用「鑽研」查詢，傳回有關在模型中使用之案例的詳細資訊。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "73705299"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦設計師](data-mining-designer.md)   
- [使用 SQL Server 資料工具 &#40;SSDT&#41; 建立多維度模型](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [使用 SQL Server 資料工具建立多維度模型 &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [工作空間資料庫 &#40;SSAS 表格式&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

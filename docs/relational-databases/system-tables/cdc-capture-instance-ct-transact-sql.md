@@ -27,21 +27,21 @@ ms.locfileid: "72908400"
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  這是在來源資料表啟用異動資料擷取時所建立的變更資料表。 此資料表會針對在來源資料表上執行的每個插入和刪除作業傳回一個資料列，而且會針對在來源資料表上執行的每個更新作業傳回兩個資料列。 如果在啟用來源資料表時沒有指定變更資料表的名稱，就會衍生此名稱。 名稱的格式為 cdc。*capture_instance*_CT，其中*capture_instance*是來源資料表的架構名稱，而來源資料表名稱的格式為*schema_table*。 例如，如果已針對變更資料捕獲啟用**AdventureWorks**範例資料庫中的資料表**Person** ，則衍生的變更資料表名稱會是**cdc。Person_Address_CT**。  
+  這是在來源資料表啟用異動資料擷取時所建立的變更資料表。 此資料表會針對在來源資料表上執行的每個插入和刪除作業傳回一個資料列，而且會針對在來源資料表上執行的每個更新作業傳回兩個資料列。 如果在啟用來源資料表時沒有指定變更資料表的名稱，就會衍生此名稱。 名稱的格式為 cdc。*capture_instance*_CT，其中*capture_instance*是來源資料表的架構名稱，以及格式*schema_table*的來源資料表名稱。 例如，如果已針對變更資料捕獲啟用**AdventureWorks**範例資料庫中的資料表**Person** ，則衍生的變更資料表名稱會是**cdc。Person_Address_CT**。  
   
- 我們建議您不要**直接查詢系統資料表**。 相反地，請執行[fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)和[fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)函數。  
+ 我們建議您不要**直接查詢系統資料表**。 相反地，請執行[cdc. fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)和[cdc. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) < capture_instance 函數。  
   
 
   
-|資料行名稱|[名稱]|[描述]|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|與變更之認可交易相關聯的記錄序號 (LSN)。<br /><br /> 在相同交易中認可的所有變更都會共用相同的認可 LSN。 例如，如果來源資料表上的刪除作業會移除兩個數據列，則變更資料表會包含兩個數據列，每個資料列都有相同的 **__ $ start_lsn**值。|  
 |**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，這個資料行一律是 NULL。|  
 |**__$seqval**|**binary(10)**|用來排序交易內資料列變更的序列值。|  
-|**__$operation**|**整數**|識別與變更相關聯的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (舊的值)<br /><br /> 執行更新陳述式之前，資料行資料具有資料列值。<br /><br /> 4 = 更新 (新的值)<br /><br /> 執行更新陳述式之後，資料行資料具有資料列值。|  
+|**__$operation**|**int**|識別與變更相關聯的資料操作語言 (DML) 作業。 可以是下列其中一項：<br /><br /> 1 = 刪除<br /><br /> 2 = 插入<br /><br /> 3 = 更新 (舊的值)<br /><br /> 執行更新陳述式之前，資料行資料具有資料列值。<br /><br /> 4 = 更新 (新的值)<br /><br /> 執行更新陳述式之後，資料行資料具有資料列值。|  
 |**__$update_mask**|**varbinary(128)**|位元遮罩，可根據變更資料表的資料行序數識別這些變更的資料行。|  
 |*\<擷取的來源資料表資料行>*|變化|變更資料表中的其餘資料行都是建立擷取執行個體時，在來源資料表中識別成擷取資料行的資料行。 如果擷取的資料行清單中沒有指定任何資料行，這個資料表就會包含來源資料表中的所有資料行。|  
-|**__ $ command_id** |**整數** |追蹤交易內的作業順序。 |  
+|**__ $ command_id** |**int** |追蹤交易內的作業順序。 |  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -62,9 +62,9 @@ ms.locfileid: "72908400"
  根據預設，在單一 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 陳述式中可加入至擷取資料行的大小上限為 65,536 個位元組或 64 KB。 若要增加此大小以支援更大的 LOB 資料，請使用[設定最大文字複寫大小伺服器設定選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)，以指定較大的大小上限。 如需詳細資訊，請參閱 [設定 max text repl size 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
   
 ## <a name="data-definition-language-modifications"></a>資料定義語言修改  
- 對來源資料表的 DDL 修改（例如，加入或卸載資料行）會記錄在[cdc _history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)資料表中。 這些變更不會套用至變更資料表。 也就是說，變更資料表的定義會維持不變。 將資料列插入變更資料表時，擷取處理序會忽略沒有顯示在與來源資料表相關聯之擷取資料行清單中的這些資料行。 如果某個資料行顯示在擷取資料行清單中，但是該資料行已不存在來源資料表中，系統就會指派 Null 值給此資料行。  
+ 對來源資料表的 DDL 修改（例如，加入或卸載資料行）會記錄在[cdc. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)資料表中。 這些變更不會套用至變更資料表。 也就是說，變更資料表的定義會維持不變。 將資料列插入變更資料表時，擷取處理序會忽略沒有顯示在與來源資料表相關聯之擷取資料行清單中的這些資料行。 如果某個資料行顯示在擷取資料行清單中，但是該資料行已不存在來源資料表中，系統就會指派 Null 值給此資料行。  
   
- 變更來源資料表中資料行的資料類型也會記錄在[cdc _history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)資料表中。 不過，這項變更不會更改變更資料表的定義。 當擷取處理序遇到對來源資料表所做 DDL 變更的記錄檔記錄時，變更資料表中擷取資料行的資料類型就會遭修改。  
+ 在來源資料表中變更資料行的資料類型也會記錄在[ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)資料表中。 不過，這項變更不會更改變更資料表的定義。 當擷取處理序遇到對來源資料表所做 DDL 變更的記錄檔記錄時，變更資料表中擷取資料行的資料類型就會遭修改。  
   
  如果您必須以減少資料類型大小的方式來修改來源資料表中擷取資料行的資料類型，請使用下列程序來確保變更資料表中的對等資料行可成功進行修改。  
   
@@ -77,12 +77,12 @@ ms.locfileid: "72908400"
 ## <a name="data-manipulation-language-modifications"></a>資料操作語言修改  
  在啟用異動資料擷取的來源資料表上執行插入、更新和刪除作業時，這些 DML 作業的記錄就會顯示在資料庫交易記錄中。 「變更資料捕獲」程式會從交易記錄中抓取這些變更的相關資訊，並將一或兩個數據列加入至變更資料表以記錄變更。 雖然變更資料表項目的認可通常必須針對一組變更而非單一項目執行，不過將項目加入至變更資料表的順序會與來源資料表認可這些項目的順序相同。  
   
- 在變更資料表專案中， **__ $ start_lsn**資料行是用來記錄與來源資料表的變更相關聯的認可 lsn，而 **__ $ seqval 資料行**則是用來排序其交易中的變更。 這些中繼資料資料行可一起用來確保來源變更的認可順序會保留下來。 由於擷取處理序會從交易記錄中取得其變更資訊，因此請務必注意，變更資料表項目不會以同步方式隨著其對應的來源資料表變更顯示。 不過，當擷取處理序已經處理來自交易記錄的相關變更項目之後，對應的變更會以非同步方式顯示。  
+ 在變更資料表專案中， **__ $ start_lsn**資料行是用來記錄與來源資料表的變更相關聯的認可 lsn，而 **__ $ seqval 資料行**則是用來排序其交易內的變更。 這些中繼資料資料行可一起用來確保來源變更的認可順序會保留下來。 由於擷取處理序會從交易記錄中取得其變更資訊，因此請務必注意，變更資料表項目不會以同步方式隨著其對應的來源資料表變更顯示。 不過，當擷取處理序已經處理來自交易記錄的相關變更項目之後，對應的變更會以非同步方式顯示。  
   
  若為插入和刪除作業，就會設定更新遮罩中的所有位元。 若為更新作業，就會同時修改更新舊值與更新新值資料列中的更新遮罩，以便反映在更新期間變更的資料行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_cdc_enable_table &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sp_cdc_get_ddl_history &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys. sp_cdc_get_ddl_history &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

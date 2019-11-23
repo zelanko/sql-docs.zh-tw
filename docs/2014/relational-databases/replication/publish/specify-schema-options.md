@@ -22,7 +22,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882170"
 ---
-# <a name="specify-schema-options"></a>指定結構描述選項
+# <a name="specify-schema-options"></a>Specify Schema Options
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定結構描述選項。 當您發行資料表或檢視表時，您可以控制針對發行之物件複寫的物件建立選項。 您可以在建立發行項時設定這些選項，而且也可以在之後變更這些選項。 如果您不明確針對發行項指定這些選項，將會定義一組預設選項。  
   
 > [!NOTE]  
@@ -53,7 +53,7 @@ ms.locfileid: "73882170"
 -   如需架構選項的完整清單，請參閱[ &#40;sp_addarticle transact-sql&#41; ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)和[sp_addmergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)的 **\@schema_option**參數。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在 [發行項屬性 - **發行項>]** **對話方塊的 [屬性]\<** 索引標籤上指定結構描述選項，例如是否將條件約束與觸發程序複製至訂閱者。 [新增發行集精靈] 與 [發行集屬性 - **發行集>]\<** 對話方塊中都有提供此索引標籤。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。  
+ 在 [發行項屬性 - **發行項>]** **對話方塊的 [屬性]\<** 索引標籤上指定結構描述選項，例如是否將條件約束與觸發程序複製至訂閱者。 [新增發行集精靈] 與 [發行集屬性 - **發行集>]\<** 對話方塊中都有提供此索引標籤。 如需使用精靈和存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視和修改發行集屬性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-schema-options"></a>若要指定結構描述選項  
   

@@ -29,7 +29,7 @@ ms.locfileid: "72304784"
 
   **Syssubscriptions** view 會公開訂用帳戶資訊。 這份檢視儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|訂閱之發行項的唯一識別碼。|  
 |**srvid**|**smallint**|訂閱者的伺服器識別碼。|  
@@ -43,12 +43,12 @@ ms.locfileid: "72304784"
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 唯讀。<br /><br /> **1** = 立即更新。|  
 |**loopback_detection**|**bit**|適用於雙向異動複寫拓撲中的訂閱。 回送偵測會判斷散發代理程式是否將起源於訂閱者端的交易傳回給訂閱者：<br /><br /> **0** = 傳回。<br /><br /> **1** = 不傳回。|  
 |**queued_reinit**|**bit**|指定發行項是否標示初始化或重新初始化。 值為**1**時，表示訂閱的發行項已標示為要初始化或重新初始化。|  
-|**nosync_type**|**tinyint**|訂閱初始化的類型：<br /><br /> **0** = 自動（快照集）<br /><br /> **1** = 僅複寫支援<br /><br /> **2** = 使用備份進行初始化<br /><br /> **3** = 從記錄序號初始化（LSN）<br /><br /> 如需詳細資訊，請參閱[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)的 **@no__t 1sync_type**參數。<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**nosync_type**|**tinyint**|訂閱初始化的類型：<br /><br /> **0** = 自動（快照集）<br /><br /> **1** = 僅複寫支援<br /><br /> **2** = 使用備份進行初始化<br /><br /> **3** = 從記錄序號初始化（LSN）<br /><br /> 如需詳細資訊，請參閱[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)的 **\@sync_type**參數。<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**srvname**|**sysname**|訂閱者的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
- 複寫[資料表&#40;transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replication Views &#40;transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ 複寫[資料表&#40;transact-sql&#41; ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replication Views &#40;transact-sql&#41; ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   
   

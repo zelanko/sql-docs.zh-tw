@@ -29,7 +29,7 @@ ms.locfileid: "72909872"
 
   這個預存程序會移除主要資料庫的記錄傳送，其中包括備份作業及本機和遠端記錄。 只有在您使用**sp_delete_log_shipping_primary_secondary**移除次要資料庫之後，才使用這個預存程式。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,15 +57,15 @@ sp_delete_log_shipping_primary_database
   
 3.  移除**log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**中的對應專案。  
   
-4.  如果監視伺服器與主伺服器不同，則會在監視伺服器上移除**log_shipping_monitor_primary**中的監視記錄。  
+4.  如果監視伺服器與主伺服器不同，則會在監視伺服器上的**log_shipping_monitor_primary**中移除監視記錄。  
   
-5.  在監視伺服器上移除**log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**中的對應專案。  
+5.  移除監視伺服器上**log_shipping_monitor_history_detail**和**log_shipping_monitor_error_detail**中的對應專案。  
   
-6.  移除此主資料庫之**log_shipping_primary_databases**中的專案。  
+6.  移除此主資料庫**log_shipping_primary_databases**中的專案。  
   
 7.  在監視伺服器上呼叫**sp_delete_log_shipping_alert_job** 。  
 
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  只有**系統管理員（sysadmin** ）固定伺服器角色的成員，才能夠執行此程式。  
   
 ## <a name="examples"></a>範例  
@@ -76,7 +76,7 @@ EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureW
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

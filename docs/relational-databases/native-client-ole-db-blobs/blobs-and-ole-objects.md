@@ -45,7 +45,7 @@ ms.locfileid: "73790636"
   
 -   繫結為 DBTYPE_IUNKNOWN 並使用資料流。  
   
- 如果繫結至 DBTYPE_IUNKNOWN，就會使用 ISequentialStream 資料流功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援將輸出參數系結為大數值資料類型的 DBTYPE_IUNKNOWN，以加速預存程式傳回這些資料類型做為傳回值的情況，這會以 DBTYPE_IUNKNOWN 的形式公開給台.  
+ 如果繫結至 DBTYPE_IUNKNOWN，就會使用 ISequentialStream 資料流功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援將輸出參數系結為大數值資料類型的 DBTYPE_IUNKNOWN，以加速預存程式傳回這些資料類型做為傳回值（將公開為用戶端的 DBTYPE_IUNKNOWN）的案例。  
   
 ## <a name="storage-object-limitations"></a>儲存物件的限制  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73790636"
   
 -   當建立參考儲存物件的資料列存取子時，由取用者所實儲存物件所呈現的資料長度，必須由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者知道。 取用者必須在建立存取子所使用的 DBBINDING 結構中繫結長度指標。  
   
--   如果資料列包含一個以上的大數值，但未 DBPROPVAL_AO_RANDOM DBPROP_ACCESSORDER，取用者必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料指標支援的資料列集，以在正在抓取其他資料列值。 如果 DBPROP_ACCESSORDER 是 DBPROPVAL_AO_RANDOM，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會將所有 xml 資料類型快取為二進位大型物件（Blob），以便依任何順序存取。  
+-   如果資料列包含一個以上的單一大型資料值，但未 DBPROPVAL_AO_RANDOM DBPROP_ACCESSORDER，取用者就必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者資料指標支援的資料列集，以在抓取其他資料列值之前，先抓取資料列資料或處理所有大型資料值。 如果 DBPROP_ACCESSORDER 是 DBPROPVAL_AO_RANDOM，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會將所有 xml 資料類型快取為二進位大型物件（Blob），以便依任何順序存取。  
   
 ## <a name="in-this-section"></a>本節內容  
   

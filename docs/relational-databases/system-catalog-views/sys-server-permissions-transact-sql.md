@@ -1,5 +1,5 @@
 ---
-title: server_permissions （Transact-sql） |Microsoft Docs
+title: sys.databases server_permissions （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -32,15 +32,15 @@ ms.locfileid: "71163936"
 
   針對每個伺服器層級權限，各傳回一個資料列。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|識別權限所在項目的類別。<br /><br /> 100 = 伺服器<br /><br /> 101 = 伺服器-主體<br /><br /> 105 = 端點|  
-|**class_desc**|**nvarchar(60)**|權限所在類別的描述。 下列其中一個值：<br /><br /> **伺服器**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar(60)**|權限所在類別的描述。 為下列其中一個值：<br /><br /> **伺服器**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|權限所在安全性實體的識別碼，它是根據類別加以解譯。 對大部份的項目來說，這只是套用至類別代表的識別碼。 下面是非標準的解譯：<br /><br /> 100 = 一律為0|  
 |**minor_id**|**int**|權限所在項目的次要識別碼，它是根據類別加以解譯。|  
 |**grantee_principal_id**|**int**|獲授與權限的伺服器主體識別碼。|  
 |**grantor_principal_id**|**int**|這些權限之同意授權者的伺服器主體識別碼。|  
-|**type**|**char(4)**|伺服器權限類型。 如需權限類型的清單，請參閱下表。|  
+|**型別**|**char （4）**|伺服器權限類型。 如需權限類型的清單，請參閱下表。|  
 |**permission_name**|**nvarchar(128)**|權限名稱。|  
 |**state**|**char(1)**|權限狀態：<br /><br /> D = 拒絕<br /><br /> R = 撤銷<br /><br /> G = 授與<br /><br /> W = 以授與選項授與|  
 |**state_desc**|**nvarchar(60)**|權限狀態的描述：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
@@ -77,7 +77,7 @@ ms.locfileid: "71163936"
 |CRSR|CREATE SERVER ROLE|SERVER|  
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|
 |IAL|IMPERSONATE ANY LOGIN|SERVER|  
-|IM|IMPERSONATE|登入|  
+|IM|IMPERSONATE|LOGIN|  
 |SHDN|SHUTDOWN|SERVER|
 |SUS|SELECT ALL USER SECURABLES|SERVER|
 |TO|TAKE OWNERSHIP|ENDPOINT|  

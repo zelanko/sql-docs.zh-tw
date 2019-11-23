@@ -31,7 +31,7 @@ ms.locfileid: "71682133"
   傳回要求之物件目前的大小，並針對要求的壓縮狀態預估物件大小。 可以針對整個資料表或部分資料表評估壓縮， 這包括堆積、叢集索引、非叢集索引、資料行存放區索引、索引視圖，以及資料表和索引資料分割。 您可以使用資料列、頁面、資料行存放區或資料行存放區封存壓縮來壓縮物件。 如果資料表、索引或資料分割已經壓縮，您可以使用此程序來估計已重新壓縮之資料表、索引或資料分割的大小。  
   
 > [!NOTE]
-> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @ no__t-2 的每個版本中都無法使用壓縮和**sp_estimate_data_compression_savings** 。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每個版本都無法使用壓縮和**sp_estimate_data_compression_savings** 。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  若要預估使用要求壓縮設定之物件的大小，此預存程序會取樣來源物件，並將此資料載入 tempdb 內所建立的同等資料表和索引中。 然後會將 tempdb 內所建立的資料表或索引壓縮成要求的設定，並計算預估的壓縮節省程度。  
   
@@ -55,22 +55,22 @@ sp_estimate_data_compression_savings
 ```  
   
 ## <a name="arguments"></a>引數  
- [@schema_name =]'*schema_name*'  
- 這是包含資料表或索引檢視表的資料庫結構描述名稱。 *schema_name*為**sysname**。 如果*schema_name*為 Null，則會使用目前使用者的預設架構。  
+ [@schema_name=]'*schema_name*'  
+ 這是包含資料表或索引檢視表的資料庫結構描述名稱。 *schema_name*是**sysname**。 如果*schema_name*為 Null，則會使用目前使用者的預設架構。  
   
- [@object_name =]'*object_name*'  
+ [@object_name=]'*object_name*'  
  這是索引所在的資料表或索引檢視表名稱。 *object_name* 是 **sysname**.  
   
- [@index_id =]*index_id*  
- 這是索引的識別碼。 *index_id*是**int**，而且可以是下列其中一個值：索引的識別碼、Null 或0（如果*object_id*是堆積）。 若要傳回基底資料表或檢視表的所有索引相關資訊，請指定 NULL。 如果您指定 Null，也必須為*partition_number*指定 null。  
+ [@index_id=]*index_id*  
+ 這是索引的識別碼。 *index_id*是**int**，而且可以是下列其中一個值：索引的識別碼、Null 或0（如果*object_id*是堆積）。 若要傳回基底資料表或檢視表的所有索引相關資訊，請指定 NULL。 如果您指定 Null，則也必須為*partition_number*指定 null。  
   
- [@partition_number =]*partition_number*  
+ [@partition_number=]*partition_number*  
  這是物件的分割區編號。 *partition_number*是**int**，而且可以是下列其中一個值：索引或堆積的資料分割編號、Null 或1（代表非資料分割索引或堆積）。  
   
  若要指定分割區，您也可以指定[$partition](../../t-sql/functions/partition-transact-sql.md)函數。 若要傳回主控物件之所有資料分割的相關資訊，請指定 NULL。  
   
- [@data_compression =]'*data_compression*'  
- 這是要評估的壓縮類型。 *data_compression*可以是下列其中一個值：無、資料列、頁面、資料行存放區或 COLUMNSTORE_ARCHIVE。  
+ [@data_compression=]'*data_compression*'  
+ 這是要評估的壓縮類型。 *data_compression*可以是下列其中一個值： NONE、ROW、PAGE、資料行存放區或 COLUMNSTORE_ARCHIVE。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -78,7 +78,7 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>結果集  
  系統會傳回下列結果集，以提供目前和估計之資料表、索引或資料分割的大小。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|資料表或索引檢視表的名稱。|  
 |schema_name|**sysname**|資料表或索引檢視表的結構描述。|  
@@ -89,8 +89,8 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|包含目前壓縮設定之樣本的大小。 其中包含所有片段。|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|使用要求之壓縮設定所建立的樣本大小，以及適用的現有填滿因數 (沒有片段)。|  
   
-## <a name="remarks"></a>備註  
- 使用 `sp_estimate_data_compression_savings` 來估計當您啟用資料列、頁面、資料行存放區或資料行存放區封存壓縮的資料表或資料分割時，可能會發生的節約。 例如，如果資料列的平均大小可縮減 40%，您就可能會將物件的大小縮減 40%。 您可能無法節省空間，因為這是根據填滿因數和資料列的大小而定。 例如，如果您有一個長度為8000個位元組的資料列，而您將其大小縮減為 40%，則您仍然只能在資料頁面上容納一個資料列。 無法節省任何空間。  
+## <a name="remarks"></a>Remarks  
+ 使用 `sp_estimate_data_compression_savings` 來估計當您啟用資料列、頁面、資料行存放區或資料行存放區封存壓縮的資料表或資料分割時，可能會發生的節約。 例如，如果資料列的平均大小可縮減 40%，您就可能會將物件的大小縮減 40%。 您可能無法節省空間，因為這是根據填滿因數和資料列的大小而定。 例如，如果您有一個長度為8000個位元組的資料列，而您將其大小縮減為40%，則您仍然只能在資料頁面上容納一個資料列。 無法節省任何空間。  
   
  如果執行 `sp_estimate_data_compression_savings` 的結果指示資料表將會成長，就表示資料表中的許多資料列都使用資料類型的幾乎完整有效位數，而且壓縮格式所需的小型負擔增加會比壓縮的空間節省更大。 在這種罕見情況下，請勿啟用壓縮。  
   
@@ -106,13 +106,13 @@ sp_estimate_data_compression_savings
  必須具備資料表的`SELECT`權限。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 在 SQL Server 2019 之前，此程式不會套用至資料行存放區索引，因此不接受資料壓縮參數資料行存放區和 COLUMNSTORE_ARCHIVE。  從 SQL Server 2019 開始，資料行存放區索引可以用來做為估計的來源物件，以及做為要求的壓縮類型。
+ 在 SQL Server 2019 之前，這個程式不會套用至資料行存放區索引，因此不接受資料壓縮參數資料行存放區和 COLUMNSTORE_ARCHIVE。  從 SQL Server 2019 開始，資料行存放區索引可以用來做為估計的來源物件，以及做為要求的壓縮類型。
 
  > [!IMPORTANT]
- > 當[記憶體優化的 TempDB 中繼資料](../databases/tempdb-database.md#memory-optimized-tempdb-metadata)在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中啟用時，不支援在臨時表上建立資料行存放區索引。 基於這項限制，當已啟用記憶體優化的 TempDB 中繼資料時，資料行存放區和 COLUMNSTORE_ARCHIVE 資料壓縮參數不支援 sp_estimate_data_compression_savings。
+ > 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]中啟用[記憶體優化 TempDB 中繼資料](../databases/tempdb-database.md#memory-optimized-tempdb-metadata)時，不支援在臨時表上建立資料行存放區索引。 基於這項限制，當已啟用記憶體優化的 TempDB 中繼資料時，資料行存放區和 COLUMNSTORE_ARCHIVE 資料壓縮參數不支援 sp_estimate_data_compression_savings。
 
 ## <a name="considerations-for-columnstore-indexes"></a>資料行存放區索引的考慮
- 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，`sp_estimate_compression_savings` 支援同時評估資料行存放區和資料行存放區封存壓縮。 不同于頁面和資料列壓縮，對物件套用資料行存放區壓縮時，需要建立新的資料行存放區索引。 因此，在使用此程式的資料行存放區和 COLUMNSTORE_ARCHIVE 選項時，提供給程式的來源物件類型會決定用於壓縮大小估計的資料行存放區索引類型。 下表說明當 @data_compression 參數設定為 [資料行存放區] 或 [COLUMNSTORE_ARCHIVE] 時，用來估計每個來源物件類型之壓縮節省量的參考物件。
+ 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]開始，`sp_estimate_compression_savings` 支援同時評估資料行存放區和資料行存放區封存壓縮。 不同于頁面和資料列壓縮，對物件套用資料行存放區壓縮時，需要建立新的資料行存放區索引。 因此，在使用此程式的資料行存放區和 COLUMNSTORE_ARCHIVE 選項時，提供給程式的來源物件類型會決定用於壓縮大小估計的資料行存放區索引類型。 下表說明當 @data_compression 參數設定為 [資料行存放區] 或 [COLUMNSTORE_ARCHIVE] 時，用來估計每個來源物件類型之壓縮節省量的參考物件。
 
  |來源物件|參考物件|
  |-----------------|---------------|
@@ -125,7 +125,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > 當您從 rowstore 來源物件（叢集索引、非叢集索引或堆積）評估資料行存放區壓縮時，如果來源物件中的任何資料行具有資料行存放區索引不支援的資料類型，sp_estimate_compression_savings將會失敗並產生錯誤。
 
- 同樣地，當 `@data_compression` 參數設定為 `NONE`、`ROW` 或 `PAGE`，而來源物件是資料行存放區索引時，下表會列出所使用的參考物件。
+ 同樣地，當 [`@data_compression`] 參數設定為 [`NONE`]、[`ROW`] 或 [`PAGE`]，而來源物件是 [資料行存放區索引] 時，下表會列出所使用的參考物件。
 
  |來源物件|參考物件|
  |-----------------|---------------|
@@ -149,7 +149,7 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [資料庫引擎預存&#40;程式 transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [資料庫引擎預存&#40;程式 transact-sql&#41; ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Unicode 壓縮實作](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

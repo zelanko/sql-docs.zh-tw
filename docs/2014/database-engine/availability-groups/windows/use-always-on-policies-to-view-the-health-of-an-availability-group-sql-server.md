@@ -88,7 +88,7 @@ ms.locfileid: "72782853"
   
      這些指令程式接受下列選項：  
   
-    |選項|[描述]|  
+    |選項|描述|  
     |------------|-----------------|  
     |`AllowUserPolicies`|執行 AlwaysOn 原則類別目錄中的使用者原則。|  
     |`InputObject`|表示可用性群組、可用性複本或可用性資料庫狀態的物件集合 (依據使用的指令程式而定)。 指令程式會計算指定之物件的健全狀況。|  
@@ -103,7 +103,7 @@ ms.locfileid: "72782853"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -122,8 +122,8 @@ ms.locfileid: "72782853"
   
 -   [第 4 部：與 SQL Server Agent 整合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [可用性群組的管理 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組（SQL Server）操作問題的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md) 

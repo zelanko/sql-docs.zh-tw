@@ -26,20 +26,20 @@ ms.locfileid: "71342044"
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server 作業系統相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-本節記載與 @no__t 0 作業系統（SQLOS）相關聯的動態管理檢視（DMV）。 SQLOS 負責管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的作業系統資源。
+本節記載與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統（SQLOS）相關聯的動態管理檢視（DMV）。 SQLOS 負責管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定的作業系統資源。
 
-SQLOS Dmv 會列在目錄中。 這些和都會命名為 `sys.dm_os_<description>`。
+SQLOS Dmv 會列在目錄中。 其中大部分和都會命名為 `sys.dm_os_<description>`。
 
- 下列 @no__t 0 作業系統相關的動態管理檢視會 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。  
+ 系統會 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業系統相關的動態管理檢視。  
   
 |||  
 |-|-|  
-|**sys.dm_os_function_symbolic_name**|**sys.dm_os_ring_buffers**|  
-|**sys.dm_os_memory_allocations**|**sys.dm_os_sublatches**|  
-|**sys.dm_os_worker_local_storage**||  
+|**sys. dm_os_function_symbolic_name**|**sys. dm_os_ring_buffers**|  
+|**sys. dm_os_memory_allocations**|**sys. dm_os_sublatches**|  
+|**sys. dm_os_worker_local_storage**||  
   
 ## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+ [動態管理檢視和函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
 

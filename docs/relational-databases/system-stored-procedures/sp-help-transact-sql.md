@@ -31,7 +31,7 @@ ms.locfileid: "72909089"
   報告資料庫物件（ **sysobjects**相容性檢視中所列的任何物件）、使用者定義資料類型或資料類型的相關資訊。  
   
  
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,23 +50,23 @@ sp_help [ [ @objname = ] 'name' ]
 ## <a name="result-sets"></a>結果集  
  傳回的結果集會根據*名稱*是否已指定、指定時間，以及它是哪個資料庫物件而定。  
   
-1.  如果執行**sp_help**時不含任何引數，則會傳回目前資料庫中所有類型之物件的摘要資訊。  
+1.  如果執行**sp_help**不含任何引數，則會傳回目前資料庫中所有類型之物件的摘要資訊。  
   
-    |資料行名稱|[名稱]|[描述]|  
+    |資料行名稱|[名稱]|描述|  
     |-----------------|---------------|-----------------|  
-    |**[名稱]**|**nvarchar(** 128 **)**|物件名稱|  
-    |**[擁有者]**|**nvarchar(** 128 **)**|物件擁有者 (這是擁有物件的資料庫主體， 預設為包含物件之結構描述的擁有者)。|  
+    |**名稱**|**nvarchar(** 128 **)**|物件名稱|  
+    |**擁有者**|**nvarchar(** 128 **)**|物件擁有者 (這是擁有物件的資料庫主體， 預設為包含物件之結構描述的擁有者)。|  
     |**Object_type**|**Nvarchar （** 31 **）**|物件類型|  
   
 2.  如果*name*是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型或使用者自訂資料類型， **sp_help**會傳回這個結果集。  
   
-    |資料行名稱|[名稱]|[描述]|  
+    |資料行名稱|[名稱]|描述|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar(** 128 **)**|資料類型名稱。|  
     |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型名稱。|  
     |**長度**|**smallint**|資料類型的實際長度 (以位元組為單位)。|  
-    |**Prec**|**整數**|有效位數 (總位數)。|  
-    |**小數位數**|**整數**|小數點右側的位數。|  
+    |**Prec**|**int**|有效位數 (總位數)。|  
+    |**小數位數**|**int**|小數點右側的位數。|  
     |**可為 Null**|**Varchar （** 35 **）**|指出是否允許 NULL 值：[是] 或 [否]。|  
     |**Default_name**|**nvarchar(** 128 **)**|與這個類型繫結的預設值名稱。<br /><br /> NULL = 未繫結預設值。|  
     |**Rule_name**|**nvarchar(** 128 **)**|與這個類型繫結的規則名稱。<br /><br /> NULL = 未繫結預設值。|  
@@ -74,11 +74,11 @@ sp_help [ [ @objname = ] 'name' ]
   
 3.  如果*name*是資料類型以外的任何資料庫物件， **sp_help**會根據指定的物件類型，傳回此結果集和其他結果集。  
 
-    |資料行名稱|[名稱]|[描述]|  
+    |資料行名稱|[名稱]|描述|  
     |-----------------|---------------|-----------------|  
-    |**[名稱]**|**nvarchar(** 128 **)**|資料表名稱|  
-    |**[擁有者]**|**nvarchar(** 128 **)**|資料表擁有者|  
-    |**型別**|**Nvarchar （** 31 **）**|資料表類型|  
+    |**名稱**|**nvarchar(** 128 **)**|資料表名稱|  
+    |**擁有者**|**nvarchar(** 128 **)**|資料表擁有者|  
+    |**類型**|**Nvarchar （** 31 **）**|資料表類型|  
     |**Created_datetime**|**datetime**|資料表的建立日期|  
   
      視指定的資料庫物件而定， **sp_help**會傳回額外的結果集。  
@@ -87,12 +87,12 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   在資料行物件上傳回的其他結果集：  
   
-        |資料行名稱|[名稱]|[描述]|  
+        |資料行名稱|[名稱]|描述|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|資料行名稱。|  
-        |**型別**|**nvarchar(** 128 **)**|資料行資料類型。|  
+        |**類型**|**nvarchar(** 128 **)**|資料行資料類型。|  
         |**過**|**Varchar （** 35 **）**|指出是否計算資料行中的值：[是] 或 [否]。|  
-        |**長度**|**整數**|資料行長度 (以位元組為單位)。<br /><br /> 注意：如果資料類型是大數數值型別（**Varchar （max）** 、 **Nvarchar （max）** 、 **Varbinary （max）** 或**xml**），此值會顯示為-1。|  
+        |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意：如果資料類型是大數數值型別（**Varchar （max）** 、 **Nvarchar （max）** 、 **Varbinary （max）** 或**xml**），此值會顯示為-1。|  
         |**Prec**|**char （** 5 **）**|資料行有效位數。|  
         |**小數位數**|**char （** 5 **）**|資料行小數位數。|  
         |**可為 Null**|**Varchar （** 35 **）**|指出資料行是否允許 NULL 值：[是] 或 [否]。|  
@@ -102,28 +102,28 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   在識別欄位上傳回的其他結果集：  
   
-        |資料行名稱|[名稱]|[描述]|  
+        |資料行名稱|[名稱]|描述|  
         |-----------------|---------------|-----------------|  
         |**識別**|**nvarchar(** 128 **)**|資料類型宣告為識別的資料行名稱。|  
         |**種子**|**numeric**|識別欄位的起始值。|  
         |**[遞增]**|**numeric**|這個資料行的值所用的遞增。|  
-        |**不可複寫**|**整數**|當複寫登入（例如**sqlrepl**）將資料插入資料表時，不會強制執行 IDENTITY 屬性：<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**不可複寫**|**int**|當複寫登入（例如**sqlrepl**）將資料插入資料表時，不會強制執行 IDENTITY 屬性：<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   在資料行上傳回的其他結果集：  
   
-        |資料行名稱|[名稱]|[描述]|  
+        |資料行名稱|[名稱]|描述|  
         |-----------------|---------------|-----------------|  
         |**RowGuidCol**|**sysname**|全域唯一識別碼資料行的名稱。|  
   
     -   在檔案群組上傳回的其他結果集：  
   
-        |資料行名稱|[名稱]|[描述]|  
+        |資料行名稱|[名稱]|描述|  
         |-----------------|---------------|-----------------|  
         |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|資料所在的檔案群組：「主要」、「次要」或「交易記錄」。|  
   
     -   在索引上傳回的其他結果集：  
   
-        |資料行名稱|[名稱]|[描述]|  
+        |資料行名稱|[名稱]|描述|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|索引名稱。|  
         |**Index_description**|**Varchar （** 210 **）**|索引的描述。|  
@@ -131,9 +131,9 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   在條件約束上傳回的其他結果集：  
   
-        |資料行名稱|[名稱]|[描述]|  
+        |資料行名稱|[名稱]|描述|  
         |-----------------|---------------|-----------------|  
-        |**類型**|**Nvarchar （** 146 **）**|條件約束的類型。|  
+        |**constraint_type**|**Nvarchar （** 146 **）**|條件約束的類型。|  
         |**constraint_name**|**nvarchar(** 128 **)**|條件約束的名稱。|  
         |**delete_action**|**Nvarchar （** 9 **）**|指出 DELETE 動作是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
         |**update_action**|**Nvarchar （** 9 **）**|指出 UPDATE 動作是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
@@ -143,30 +143,30 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   在進行參考的物件上傳回的其他結果集：  
   
-        |資料行名稱|[名稱]|[描述]|  
+        |資料行名稱|[名稱]|描述|  
         |-----------------|---------------|-----------------|  
         |**資料表的參考者為**|**Nvarchar （** 516 **）**|識別參考資料表的其他資料庫物件。|  
   
     -   在預存程序、函數或擴充預存程序上傳回的其他結果集。  
   
-        |資料行名稱|[名稱]|[描述]|  
+        |資料行名稱|[名稱]|描述|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar(** 128 **)**|預存程序參數名稱。|  
-        |**型別**|**nvarchar(** 128 **)**|預存程序參數的資料類型。|  
+        |**類型**|**nvarchar(** 128 **)**|預存程序參數的資料類型。|  
         |**長度**|**smallint**|最大的實體儲存體長度 (以位元組為單位)。|  
-        |**Prec**|**整數**|有效位數或總位數。|  
-        |**小數位數**|**整數**|小數點右側的位數。|  
+        |**Prec**|**int**|有效位數或總位數。|  
+        |**小數位數**|**int**|小數點右側的位數。|  
         |**Param_order**|**smallint**|參數的順序。|  
   
 ## <a name="remarks"></a>Remarks  
  **Sp_help**程式只會在目前資料庫中尋找物件。  
   
- 未指定*name*時， **sp_help**會列出目前資料庫中所有物件的物件名稱、擁有者和物件類型。 **sp_helptrigger**提供觸發程式的相關資訊。  
+ 如果未指定*name* ， **sp_help**會列出目前資料庫中所有物件的物件名稱、擁有者和物件類型。 **sp_helptrigger**提供觸發程式的相關資訊。  
   
  **sp_help**只會公開能排序的索引資料行;因此，它不會公開 XML 索引或空間索引的相關資訊。  
   
-## <a name="permissions"></a>[權限]  
- 需要 **public** 角色的成員資格。 使用者在*objname*上必須至少有一個許可權。 若要檢視資料行條件約束索引鍵、預設值或規則，您必須具有此資料表的 VIEW DEFINITION 權限。  
+## <a name="permissions"></a>Permissions  
+ 需要 **public** 角色中的成員資格。 使用者在*objname*上必須至少有一個許可權。 若要檢視資料行條件約束索引鍵、預設值或規則，您必須具有此資料表的 VIEW DEFINITION 權限。  
   
 ## <a name="examples"></a>範例  
   
@@ -190,7 +190,7 @@ EXEC sp_help 'Person.Person';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料庫引擎預存&#40;程式 transact-sql&#41; ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpindex &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   

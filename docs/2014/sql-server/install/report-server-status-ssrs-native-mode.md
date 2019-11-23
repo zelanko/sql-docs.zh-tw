@@ -27,13 +27,13 @@ ms.locfileid: "71952463"
  若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到報表伺服器執行個體。 如需詳細資訊，[請&#40;參閱&#41;Reporting Services 組態管理員 del](reporting-services-configuration-manager-native-mode.md)。  
   
 > [!TIP]  
->  @ No__t-0 Configuration Manager （Rsconfigtool.exe）是以 "highestAvailable" 的許可權層級來安裝。 這是依據設計的行為。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員需要與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 進行通訊。 某些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通訊需要更高層級或系統管理權限。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager （Rsconfigtool.exe）是以 "highestAvailable" 的許可權層級來安裝。 這是依據設計的行為。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員需要與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 進行通訊。 某些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通訊需要更高層級或系統管理權限。  
   
- 如果您連接至報表伺服器，而且所有頁面連結都呈現灰色，請確認報表伺服器服務是否已啟動。 **報表服務狀態：** 應為「已啟動」。 您也可以使用 [系統管理工具] 中的 [服務] 主控台應用程式來檢查服務狀態。  
+ 如果您連接至報表伺服器，而且所有頁面連結都呈現灰色，請確認報表伺服器服務是否已啟動。 **報表服務狀態：** 應該是「已啟動」。 您也可以使用 [系統管理工具] 中的 [服務] 主控台應用程式來檢查服務狀態。  
   
 ## <a name="options"></a>選項。  
  **SQL Server 實例**  
- 顯示目前所連接報表伺服器執行個體的相關資訊。 報表伺服器執行個體名稱是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體為基礎。 預設執行個體為 MSSQLSERVER。 具名執行個體將會是您在安裝期間所指定的值。 如需實例的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的使用[多個版本和 SQL Server 的實例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)。  
+ 顯示目前所連接報表伺服器執行個體的相關資訊。 報表伺服器執行個體名稱是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體為基礎。 預設執行個體為 MSSQLSERVER。 具名執行個體將會是您在安裝期間所指定的值。 如需實例的詳細資訊，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的使用[多個版本和 SQL Server 的實例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)。  
   
 > [!NOTE]  
 >  在 SQL Server Express with Advanced Services 中，預設執行個體為 SQLExpress。  
@@ -47,9 +47,9 @@ ms.locfileid: "71952463"
   
 -   MSRS12.MSSQLSERVER  
   
- 如果您安裝已安裝之元件的第二個實例（例如 [!INCLUDE[ssDE](../../includes/ssde-md.md)]），而您將實例命名為 Contoso，則**實例識別碼**為 mssql12.contoso。Contoso.  
+ 如果您安裝了已安裝之元件的第二個實例（例如 [!INCLUDE[ssDE](../../includes/ssde-md.md)]），而您將實例命名為 Contoso，則**實例識別碼**會是 mssql12.contoso。Contoso.  
   
- **版本(Edition)**  
+ **版本**  
  顯示版本資訊。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
   
  **產品版本**  
@@ -72,7 +72,7 @@ ms.locfileid: "71952463"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生&#41;模式](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Reporting Services 組態管理員&#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Reporting Services 組態管理員&#40;del&#41; ](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [初始化報表伺服器 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

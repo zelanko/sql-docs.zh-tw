@@ -1,5 +1,5 @@
 ---
-title: 建立資料來源 (SSAS 多維度) |Microsoft Docs
+title: 建立資料來源（SSAS 多維度） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -54,7 +54,7 @@ ms.locfileid: "70175912"
  使用 Windows 驗證的連接會在資料來源設計師的 [模擬資訊] 索引標籤中指定。 使用這個索引標籤即可選擇模擬選項，以指定連接至外部資料來源時，執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的帳戶。 並非所有選項都可以在所有案例中使用。 如需這些選項及何時使用這些選項的詳細資訊，請參閱[設定模擬選項 &#40;SSAS - 多維度&#41;](set-impersonation-options-ssas-multidimensional.md)。  
   
 ### <a name="database-authentication"></a>資料庫驗證  
- 若不使用 Windows 驗證，您也可以指定連接使用資料庫管理系統所提供的驗證服務。 在某些情況下，需要使用資料庫驗證。 呼叫使用資料庫驗證的案例包括使用 SQL Server 驗證連接到 Azure SQL Database, 或存取在不同作業系統或不信任的網域中執行的關聯式資料來源。  
+ 若不使用 Windows 驗證，您也可以指定連接使用資料庫管理系統所提供的驗證服務。 在某些情況下，需要使用資料庫驗證。 呼叫使用資料庫驗證的案例包括使用 SQL Server 驗證連接到 Azure SQL Database，或存取在不同作業系統或不信任的網域中執行的關聯式資料來源。  
   
  對於使用資料庫驗證的資料來源，會在連接字串中指定資料庫登入的使用者名稱和密碼。 若在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模型中設定資料來源連接，當您於 [連接管理員] 中輸入使用者名稱和密碼時，即會將認證新增至連接字串。 記得指定具有資料讀取權限的使用者識別。  
   
@@ -76,19 +76,19 @@ ms.locfileid: "70175912"
   
 3.  在 [選取如何定義連接] 頁面上，選擇 [依據現有的或新的連接建立資料來源]，然後按一下 [新增] 開啟 [連線管理員]。  
   
-     新的連接是在連接管理員中建立。 在連接管理員中選取提供者，然後指定該提供者用來連接基礎資料的連接字串屬性。 所需的確切資訊需視所選的提供者而定，但是這類資訊通常包括伺服器或服務執行個體、用來登入此伺服器或服務執行個體的資訊、資料庫或檔案名稱，以及其他提供者特有的設定。 在此程式的其餘部分, 我們會假設有一個 SQL Server 的資料庫連接。  
+     新的連接是在連接管理員中建立。 在連接管理員中選取提供者，然後指定該提供者用來連接基礎資料的連接字串屬性。 所需的確切資訊需視所選的提供者而定，但是這類資訊通常包括伺服器或服務執行個體、用來登入此伺服器或服務執行個體的資訊、資料庫或檔案名稱，以及其他提供者特有的設定。 在此程式的其餘部分，我們會假設有一個 SQL Server 的資料庫連接。  
   
 4.  選取連接所用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 或原生 OLE DB 提供者。  
   
      新連接的預設提供者為原生 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者。 此提供者是用來連接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體。 若要連接到 SQL Server 關聯式資料庫，使用原生 OLE DB\SQL Server Native Client 11.0 通常會比使用其他提供者更快。  
   
-     您可以選擇不同的提供者來存取其他資料來源。 如需所支援[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的提供者和關係資料庫清單, 請參閱支援[ &#40;的 SSAS 多&#41;維度資料來源](supported-data-sources-ssas-multidimensional.md)。  
+     您可以選擇不同的提供者來存取其他資料來源。 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援的提供者和關係資料庫清單，請參閱[支援&#40;的 SSAS 多維度&#41;資料來源](supported-data-sources-ssas-multidimensional.md)。  
   
 5.  輸入選定提供者所要求的資訊，以連接到基礎資料來源。 如果已選取**原生 OLE DB\SQL Server Native Client**提供者，請輸入下列資訊：  
   
-    1.  [伺服器名稱] 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝為已命名的實例, 您必須包含實例名稱 (例如, \<computername >\\< instancename\>)。  
+    1.  [伺服器名稱] 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝為已命名的實例，您必須包含實例名稱（例如，\<computername >\\< instancename\>）。  
   
-    2.  [登入伺服器] 會指定驗證連接的方式。 [使用 Windows 驗證] 會使用 Windows 驗證。 **使用 SQL Server 驗證**會指定 Azure SQL 資料庫的資料庫使用者登入, 或支援混合模式驗證的 SQL Server 實例。  
+    2.  [登入伺服器] 會指定驗證連接的方式。 [使用 Windows 驗證] 會使用 Windows 驗證。 **使用 SQL Server 驗證**會指定 Azure SQL 資料庫的資料庫使用者登入，或支援混合模式驗證的 SQL Server 實例。  
   
         > [!IMPORTANT]  
         >  [連線管理員] 會針對使用 SQL Server 驗證的連接加入 [儲存我的密碼] 核取方塊。 雖然系統一定會顯示此核取方塊，但是不一定會使用它。  
@@ -105,11 +105,11 @@ ms.locfileid: "70175912"
   
          新的連接即會出現在「資料來源精靈」之 [選取如何定義連接] 頁面的 [資料連接] 窗格中。  
   
-6.  按一下 [下一步]。  
+6.  按 [下一步]。  
   
 7.  在 [模擬資訊] 中，指定 Analysis Services 連接外部資料來源時使用的 Windows 認證或使用者識別。 如果您針對連接使用資料庫驗證，則會忽略這些設定。  
   
-     根據您使用資料來源的方式而定，選擇模擬選項的指導方針會有所不同。 如果是處理工作，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務在連接到資料來源時，必須在其服務帳戶或指定之使用者帳戶的安全性內容中執行。  
+     根據您使用資料來源的方式而定，選擇模擬選項的指導方針會有所不同。 如果是處理工作， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務在連接到資料來源時，必須在其服務帳戶或指定之使用者帳戶的安全性內容中執行。  
   
     -   [使用特定的 Windows 使用者名稱和密碼] 會指定一組唯一的最低權限認證。  
   
@@ -117,9 +117,9 @@ ms.locfileid: "70175912"
   
      您指定的帳戶必須擁有資料來源的讀取權限。  
   
-8.  按一下 [下一步]。  在 [正在完成精靈] 中，輸入資料來源名稱或使用預設名稱。 預設名稱是連接中所指定資料庫的名稱。 [預覽] 窗格會顯示這個新資料來源的連接字串。  
+8.  按 [下一步]。  在 [正在完成精靈] 中，輸入資料來源名稱或使用預設名稱。 預設名稱是連接中所指定資料庫的名稱。 [預覽] 窗格會顯示這個新資料來源的連接字串。  
   
-9. 按一下 [ **完成**]。  方案總管中的 [資料來源] 資料夾會顯示新的資料來源。  
+9. 按一下 **[完成]** 。  方案總管中的 [資料來源] 資料夾會顯示新的資料來源。  
   
 ##  <a name="bkmk_connection"></a> 使用現有的連接建立資料來源  
  當您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中工作時，您的資料來源可以根據方案中的現有資料來源，也可以根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 [資料來源精靈] 提供幾個選項用於建立資料來源物件，包括使用相同專案中的現有連接。  
@@ -172,7 +172,7 @@ ms.locfileid: "70175912"
 5.  尋找並選取您加入的資料表。 以滑鼠右鍵按一下資料表，然後選取 [新增關聯性]。 選擇包含相符資料的來源和目的地資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源支援&#40;SSAS 多維度&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [ &#40;支援 SSAS 多維度&#41;  的資料來源](supported-data-sources-ssas-multidimensional.md)  
  [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)  
   
   

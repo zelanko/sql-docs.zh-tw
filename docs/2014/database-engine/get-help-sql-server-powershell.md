@@ -122,6 +122,6 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell 提供者](../powershell/sql-server-powershell-provider.md)   
- [使用資料庫引擎 Cmdlet](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [使用 Database Engine Cmdlet](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

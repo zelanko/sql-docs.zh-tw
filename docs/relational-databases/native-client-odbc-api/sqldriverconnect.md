@@ -42,7 +42,7 @@ ms.locfileid: "73787101"
   
  如果*DriverCompletion*參數值為 SQL_DRIVER_NOPROMPT 或 SQL_DRIVER_COMPLETE_REQUIRED，而語言或資料庫來自連接字串，且其中一個無效，則**SQLDriverConnect**會傳回 SQL_ERROR。  
   
- 如果*DriverCompletion*參數值 SQL_DRIVER_NOPROMPT 或 SQL_DRIVER_COMPLETE_REQUIRED，而語言或資料庫來自 ODBC 資料來源定義，而且其中一個無效，則**SQLDriverConnect**會使用預設語言或指定之使用者識別碼的資料庫，並傳回 SQL_SUCCESS_WITH_INFO。  
+ 如果*DriverCompletion*參數值 SQL_DRIVER_NOPROMPT 或 SQL_DRIVER_COMPLETE_REQUIRED，而語言或資料庫來自 ODBC 資料來源定義，而且其中一個無效，則**SQLDriverConnect**會針對指定的使用者識別碼使用預設的語言或資料庫，並傳回 SQL_SUCCESS_WITH_INFO。  
   
  如果*DriverCompletion*參數值 SQL_DRIVER_COMPLETE 或 SQL_DRIVER_PROMPT，而且如果語言或資料庫無效， **SQLDriverConnect**會重新引發對話方塊。  
   

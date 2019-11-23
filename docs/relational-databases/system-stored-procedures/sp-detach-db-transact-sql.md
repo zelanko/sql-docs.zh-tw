@@ -47,22 +47,22 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="arguments"></a>引數  
 `[ @dbname = ] 'database_name'` 是要卸離的資料庫名稱。 *database_name*是**sysname**值，預設值是 Null。  
   
-`[ @skipchecks = ] 'skipchecks'` 指定是否略過或執行更新統計資料。 *skipchecks*是**Nvarchar （10）** 值，預設值是 Null。 若要略過 UPDATE STATISTICS，請指定**true**。 若要明確執行 UPDATE STATISTICS，請指定**false**。  
+`[ @skipchecks = ] 'skipchecks'` 指定是否要略過或執行更新統計資料。 *skipchecks*是**Nvarchar （10）** 值，預設值是 Null。 若要略過 UPDATE STATISTICS，請指定**true**。 若要明確執行 UPDATE STATISTICS，請指定**false**。  
   
  根據預設，系統會執行 UPDATE STATISTICS 來更新資料表和索引之資料的相關資訊。 對於要移至唯讀媒體的資料庫而言，執行 UPDATE STATISTICS 很有用。  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定與要卸離之資料庫相關聯的全文檢索索引檔案，在資料庫卸離作業期間將不會卸載。 *KeepFulltextIndexFile*是**Nvarchar （10）** 值，預設值是**true**。 如果*KeepFulltextIndexFile*為**false**，則會卸載與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料，除非資料庫是唯讀的。 如果為 Null 或**true**，則會保留全文檢索相關的中繼資料。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定在資料庫卸離作業期間，將不會卸載與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*是**Nvarchar （10）** 值，預設值是**true**。 如果*KeepFulltextIndexFile*為**false**，則會卸載與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料，除非資料庫是唯讀的。 如果為 Null 或**true**，則會保留全文檢索相關的中繼資料。  
   
 > [!IMPORTANT]
->  在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將會移除 **@no__t 1keepfulltextindexfile**參數。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中將會移除 **\@keepfulltextindexfile**參數。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- None  
+ 無  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  卸離資料庫時，就會卸除其所有中繼資料。 如果資料庫是任何登入帳戶的預設資料庫， **master**就會成為其預設資料庫。  
   
 > [!NOTE]  
@@ -82,14 +82,14 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   資料庫有資料庫快照集存在。  
   
-     在卸離資料庫之前，您必須先卸除它的所有快照集。 如需詳細資訊，請參閱 [卸除資料庫快照集 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)執行個體。  
+     在卸離資料庫之前，您必須先卸除它的所有快照集。 如需詳細資訊，請參閱 [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     >  無法卸離或附加資料庫快照集。  
   
 -   資料庫正在進行鏡像。  
   
-     在資料庫鏡像工作階段結束之前，您無法卸離資料庫。 如需詳細資訊，請參閱 [移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)＞。  
+     在資料庫鏡像工作階段結束之前，您無法卸離資料庫。 如需詳細資訊，請參閱[移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)。  
   
 -   資料庫受質疑。  
   
@@ -112,16 +112,16 @@ GO
 ```  
   
 > [!NOTE]  
->  若要立即或在指定的秒數內，從資料庫強制目前的使用者，請同時使用 ROLLBACK 選項：ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+>  若要立即或在指定的秒數內，從資料庫強制目前的使用者，請同時使用 ROLLBACK 選項： ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 ## <a name="reattaching-a-database"></a>重新附加資料庫  
  卸離的檔案會保留下來，您可以利用 CREATE DATABASE 來重新附加它 (使用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 選項)。 您可以將這些檔案移到另一部伺服器，將它附加在那裡。  
   
 ## <a name="permissions"></a>Permissions  
- 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或資料庫**db_owner**角色中的成員資格。  
+ 需要**系統管理員（sysadmin** ）固定伺服器角色中的成員資格，或資料庫之**db_owner**角色的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會將 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫與設定為 true 的*skipchecks*卸離。  
+ 下列範例會將 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的資料庫卸離，並將*skipchecks*設為 true。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -136,7 +136,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [卸離資料庫](../../relational-databases/databases/detach-a-database.md)  
   

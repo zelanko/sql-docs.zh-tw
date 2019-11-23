@@ -49,21 +49,21 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode = ] 'failover_mode'` 是訂用帳戶的容錯移轉模式。 *failover_mode*是**Nvarchar （10）** ，而且可以是下列其中一個值。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**立即**或**同步**|在訂閱者端進行的資料修改，在修改時會大量複製到發行者。|  
-|**佇列**|資料修改會儲存在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佇列中。|  
+|**佇列**|資料修改會儲存在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的佇列中。|  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing 已被取代，不再受到支援。  
   
-`[ @override = ] override` 僅供內部使用。  
+僅 `[ @override = ] override` 內部使用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
   
-## <a name="remarks"></a>備註  
- **sp_setreplfailovermode**用於快照式複寫或異動複寫中，已啟用訂閱的佇列更新，包括容錯移轉到立即更新，或以容錯移轉至佇列更新進行立即更新。  
+## <a name="remarks"></a>Remarks  
+ **sp_setreplfailovermode**用於已啟用訂閱的快照式複寫或異動複寫中（適用于有容錯移轉到立即更新的佇列更新），或以容錯移轉至佇列更新的立即更新。  
   
 ## <a name="permissions"></a>Permissions  
  只有**系統管理員（sysadmin** ）固定伺服器角色或**db_owner**固定資料庫角色的成員，才能夠執行**sp_setreplfailovermode**。  

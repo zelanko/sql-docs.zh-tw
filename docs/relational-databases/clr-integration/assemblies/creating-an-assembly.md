@@ -70,15 +70,15 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
  當元件中的程式碼以**SAFE**許可權集合執行時，它只能透過同進程 managed 提供者在伺服器內執行計算和資料存取。  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>建立 EXTERNAL_ACCESS 和 UNSAFE 組件  
- **EXTERNAL_ACCESS**會解決程式碼需要存取伺服器外部資源的情況，例如檔案、網路、登錄和環境變數。 每當伺服器存取外部資源時，它會模擬呼叫 Managed 程式碼之使用者的安全性內容。  
+ **EXTERNAL_ACCESS**解決程式碼需要存取伺服器外部資源的情況，例如檔案、網路、登錄和環境變數。 每當伺服器存取外部資源時，它會模擬呼叫 Managed 程式碼之使用者的安全性內容。  
   
  **UNSAFE**程式碼許可權適用于元件不是可驗證的安全或需要額外存取受限制資源（例如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] WIN32 API）的情況。  
   
  若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中建立**EXTERNAL_ACCESS**或**UNSAFE**元件，必須符合下列兩個條件之一：  
   
-1.  組件是用強式名稱簽署，或用包含憑證的 Authenticode 簽署。 這個強式名稱（或憑證）是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內建立為非對稱金鑰（或憑證），並具有對應的登入，具有**外部存取元件**許可權（適用于外部存取元件）或**UNSAFE 元件**許可權（適用于unsafe 元件）。  
+1.  組件是用強式名稱簽署，或用包含憑證的 Authenticode 簽署。 這個強式名稱（或憑證）是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內建立為非對稱金鑰（或憑證），而且具有對應的登入，具有**外部存取元件**許可權（適用于外部存取元件）或**unsafe 元件**許可權（適用于 UNSAFE 元件）。  
   
-2.  資料庫擁有者（DBO）具有**外部存取元件**（適用于**外部存取**元件）或**Unsafe 元件**（適用于**unsafe**元件）許可權，而且資料庫的 [可信任的[資料庫] 屬性](../../../relational-databases/security/trustworthy-database-property.md)設定為**在上**。  
+2.  資料庫擁有者（DBO）具有**外部存取元件**（適用**于外部存取**元件）或**Unsafe 元件**（適用于**unsafe**元件）許可權，而且資料庫的 [可信任的[資料庫] 屬性](../../../relational-databases/security/trustworthy-database-property.md)設為 [**開啟**]。  
 
  以上列出的兩個條件也會在組件載入時間 (包括執行) 進行檢查。 若要載入組件，至少必須符合其中一個條件。  
   
@@ -129,7 +129,7 @@ WITH PERMISSION_SET = UNSAFE;
   
  如需每個設定之許可權的詳細資訊，請參閱[CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理 CLR 整合元件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [改變元件](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  卸載[元件](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   

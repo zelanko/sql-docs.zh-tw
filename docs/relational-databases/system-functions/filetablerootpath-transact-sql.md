@@ -40,10 +40,10 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  FileTable 的名稱。 *FileTable_name*的類型為**Nvarchar**。 這是選擇性參數。 預設值為目前的資料庫。 指定*schema_name*也是選擇性的。 您可以為*FileTable_name*傳遞 Null 以使用預設參數值  
   
- *\@option*  
- 定義路徑之伺服器元件格式化方式的整數運算式。 *@no__t 1option*可以有下列其中一個值：  
+ *\@選項*  
+ 定義路徑之伺服器元件格式化方式的整數運算式。 *\@選項*可以有下列其中一個值：  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0**|傳回轉換成 NetBIOS 格式的伺服器名稱，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 這是預設值。|  
 |**1**|在不轉換的情況下傳回伺服器名稱，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -80,7 +80,7 @@ FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
  **FileTableRootPath**函數需要：  
@@ -105,6 +105,6 @@ SELECT FileTableRootPath(N'MyFileTable');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FileTable 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [使用 FileTables 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

@@ -26,7 +26,7 @@ ms.locfileid: "73728519"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要建立分頁成員和合併成員的一般清單時，請建立集合。 集合不必包含實體的所有成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "73728519"
   
 8.  或者，在 **[描述]** 方塊中，輸入集合的描述。  
   
-9. 按一下 **[確定]** 。  
+9. 按一下 [確定]。  
   
 ## <a name="next-steps"></a>後續步驟  
   

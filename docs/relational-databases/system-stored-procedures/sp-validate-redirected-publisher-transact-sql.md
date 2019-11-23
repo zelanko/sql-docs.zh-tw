@@ -40,11 +40,11 @@ ms.locfileid: "72252057"
 ```  
   
 ## <a name="arguments"></a>引數  
-`[ @original_publisher = ] 'original_publisher'`：原先發行資料庫 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的實例名稱。 *original_publisher*是**sysname**，沒有預設值。  
+`[ @original_publisher = ] 'original_publisher'` 原先發行資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例的名稱。 *original_publisher*是**sysname**，沒有預設值。  
   
-`[ @publisher_db = ] 'publisher_db'` 已發行的資料庫名稱。 *publisher_db*是**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 所發行的資料庫名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` 當針對發行者/資料庫配對呼叫**sp_redirect_publisher**時，所指定的重新導向目標。 *redirected_publisher*是**sysname**，沒有預設值。  
+`[ @redirected_publisher = ] 'redirected_publisher'` 針對發行者/資料庫配對呼叫**sp_redirect_publisher**時所指定的重新導向目標。 *redirected_publisher*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功）或**1** （失敗）  
@@ -52,7 +52,7 @@ ms.locfileid: "72252057"
 ## <a name="result-sets"></a>結果集  
  無。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果發行者和發行資料庫沒有專案存在， **sp_validate_redirected_publisher**會在輸出參數 *\@redirected_publisher*中傳回 null。 如果有項目存在，則成功和失敗案例的輸出參數中都會傳回此項目。  
   
  如果驗證成功， **sp_validate_redirected_publisher**會傳回成功指示。  
@@ -64,8 +64,8 @@ ms.locfileid: "72252057"
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_get_redirected_publisher &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

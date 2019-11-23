@@ -34,7 +34,7 @@ ms.locfileid: "73786720"
 > [!NOTE]  
 >  標準 ODBC 連接屬性 SQL_ATTR_CONNECTION_DEAD 會傳回最新的連接狀態。 這可能不是目前的連接狀態。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|已經遺失與伺服器的連接。|  
 |SQL_CD_FALSE|連接已開啟，而且可用來處理陳述式。|  
@@ -50,7 +50,7 @@ ms.locfileid: "73786720"
   
  如需詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_ERROR|連接失敗。|  
 |SQL_SUCCESS|此連接已成功。 輸出緩衝區中將可以找到用戶端連接識別碼。|  
@@ -58,7 +58,7 @@ ms.locfileid: "73786720"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 屬性會傳回 SQLPERF 結構的指標，其中包含目前的驅動程式效能統計資料。 如果未啟用效能記錄， **SQLGetConnectAttr**會傳回 Null。 此驅動程式不會動態更新 SQLPERF 結構中的統計資料。 每次需要重新整理效能統計資料時，呼叫**SQLGetConnectAttr** 。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |NULL|未啟用效能記錄。|  
 |任何其他值|SQLPERF 結構的指標。|  
@@ -69,7 +69,7 @@ ms.locfileid: "73786720"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 屬性會擷取使用者-資料指標。 使用者資料會儲存在用戶端擁有的記憶體中，而且針對每個連接記錄下來。 如果尚未設定使用者-資料指標，便會傳回 SQL_UD_NOTSET (一種 NULL 指標)。  
   
-|Value|說明|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|不會設定任何使用者-資料指標。|  
 |任何其他值|使用者資料的指標。|  

@@ -90,11 +90,11 @@ ms.locfileid: "69493783"
   
 ## <a name="browsing-the-cube-by-using-translations"></a>利用翻譯來瀏覽 Cube  
   
-1.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
+1.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
   
 2.  順利完成部署之後，切換到 [瀏覽器] 索引標籤，然後按一下 [重新連接]。  
   
-3.  從 [資料] 窗格中移除所有階層和量值，然後在 [檢視方塊] 清單中選取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程。  
+3.  從 [資料] 窗格中移除所有階層和量值，然後在 [檢視方塊][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**清單中選取** 教學課程。  
   
 4.  在 [中繼資料] 窗格中，展開 [量值]，然後再展開 [網際網路銷售]。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "69493783"
   
 5.  在工具列上，選取 [語言] 清單中的 [西班牙文 (西班牙)]。  
   
-     請注意，[中繼資料] 窗格中的項目會重新擴展。 [中繼資料] 窗格中的項目重新擴展之後，請注意，[網際網路銷售 - 銷售量] 量值就不會出現在 [網際網路銷售] 顯示資料夾中了， 相反地，它會以西班牙文的形式出現在名為 `Ventas del lnternet` 的新顯示資料夾中，如下圖所示。  
+     請注意，[中繼資料] 窗格中的項目會重新擴展。 [中繼資料] 窗格中的項目重新擴展之後，請注意，[網際網路銷售 - 銷售量] 量值就不會出現在 [網際網路銷售] 顯示資料夾中了， 相反地，它會以西班牙文的形式出現在名為 `Ventas del lnternet`的新顯示資料夾中，如下圖所示。  
   
      ![重新擴展元資料窗格](../../2014/tutorials/media/l9-translations-6.gif "重新擴展元資料窗格")  
   
@@ -123,7 +123,7 @@ ms.locfileid: "69493783"
      請注意，現在月份會以法文顯示，與量值名稱一樣。  
   
 ## <a name="next-lesson"></a>下一課  
- [Lesson 10：定義系統管理角色 ](lesson-10-defining-administrative-roles.md)  
+ [第 10 課：定義管理角色](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [維度翻譯](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

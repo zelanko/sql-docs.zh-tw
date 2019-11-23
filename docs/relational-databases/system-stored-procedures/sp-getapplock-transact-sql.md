@@ -31,7 +31,7 @@ ms.locfileid: "72717254"
 
   設定應用程式資源的鎖定。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [transact-sql 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [@Resource =]'*resource_name*'  
+ [@Resource=]'*resource_name*'  
  這是一個字串，指定用來識別鎖定資源的名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*是**Nvarchar （255）** ，沒有預設值。 如果資源字串的長度超過**Nvarchar （255）** ，則會截斷成**Nvarchar （255）** 。  
   
  *resource_name*是以二進位來比較，因此不論目前資料庫的定序設定為何，都會區分大小寫。  
@@ -54,25 +54,25 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 > [!NOTE]  
 >  取得應用程式鎖定之後，只會擷取純文字中的前 32 個字元，其餘部分會予以雜湊。  
   
- [@LockMode =]'*lock_mode*'  
+ [@LockMode=]'*lock_mode*'  
  這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)** 。 此值可以是下列任何一項： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 如需詳細資訊，請參閱[鎖定模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
   
- [@LockOwner =]'*lock_owner*'  
- 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)** 。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 當*lock_owner*值為**Transaction**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
+ [@LockOwner=]'*lock_owner*'  
+ 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)** 。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 當*lock_owner*值為**交易**時，根據預設或明確地指定，sp_getapplock 必須從交易內執行。  
   
- [@LockTimeout =]'*value*'  
- 這是鎖定逾時值 (以毫秒為單位)。 預設值與 @ @LOCK_TIMEOUT 所傳回的值相同。 若要指出鎖定要求應傳回-1 的傳回碼，而不是在無法立即授與要求時等待鎖定，請指定0。  
+ [@LockTimeout=]'*value*'  
+ 這是鎖定逾時值 (以毫秒為單位)。 預設值與 @@LOCK_TIMEOUT所傳回的值相同。 若要指出鎖定要求應傳回-1 的傳回碼，而不是在無法立即授與要求時等待鎖定，請指定0。  
   
- [@DbPrincipal =]'*database_principal*'  
+ [@DbPrincipal=]'*database_principal*'  
  這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函數的呼叫端必須是*database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能成功呼叫函式。 預設值是 public。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- \> = 0 （成功），或 < 0 （失敗）  
+ \>= 0 （成功），或 < 0 （失敗）  
   
-|[值]|結果|  
+|ReplTest1|結果|  
 |-----------|------------|  
 |0|同步授與鎖定成功。|  
-|@shouldalert|在等待其他不相容的鎖定釋出之後，授與鎖定成功。|  
+|1|在等待其他不相容的鎖定釋出之後，授與鎖定成功。|  
 |-1|鎖定要求逾時。|  
 |-2|已取消鎖定要求。|  
 |-3|已將鎖定要求選為死結犧牲者。|  
@@ -136,7 +136,7 @@ GO
   
  請利用 sys.dm_tran_locks 動態管理檢視或 sp_lock 系統預存程序來檢查鎖定資訊，或利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視鎖定。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要 public 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
@@ -163,9 +163,9 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [APPLOCK_MODE &#40;transact-sql&#41; ](../../t-sql/functions/applock-mode-transact-sql.md)    
- [APPLOCK_TEST &#40;transact-sql&#41; ](../../t-sql/functions/applock-test-transact-sql.md)    
+## <a name="see-also"></a>另請參閱  
+ [APPLOCK_MODE &#40;transact-sql&#41; ](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;transact-sql&#41; ](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

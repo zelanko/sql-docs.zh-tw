@@ -25,7 +25,7 @@ ms.locfileid: "73728926"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，系統管理員可以在需要復原動作時，反轉交易。 交易的範例包括屬性值變更、階層移動或成員刪除。 本主題只適用於交易記錄類型為「屬性」之實體的交易。 請前往實體總管頁面，以檢視交易記錄類型為「成員」之實體的交易記錄。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "73728926"
   
 ### <a name="to-reverse-a-transaction"></a>若要反轉交易  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，按一下 [版本管理]。  
+1.  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]首頁上，按一下 [版本管理]。  
   
 2.  在功能表列上，按一下 [交易]。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "73728926"
 ## <a name="see-also"></a>另請參閱  
  [交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
  [重新啟用成員或集合 &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
- [復原成員修訂歷程記錄](../master-data-services/rollback-member-revision-history-master-data-services.md)
+ [回復成員修訂歷程記錄](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

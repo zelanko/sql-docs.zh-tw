@@ -21,7 +21,7 @@ ms.locfileid: "73728063"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  本文說明如何在 Windows Server 2012 R2 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 、設定 MDS 資料庫與網站，以及部署範例模型和資料。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 可讓您的組織管理受信任的資料版本。   
+  本文說明如何在 Windows Server 2012 R2 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]、設定 MDS 資料庫與網站，以及部署範例模型和資料。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 可讓您的組織管理受信任的資料版本。   
   
 > [!NOTE] 
 > 當您使用現在支援 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 的 Developer 版本時，可以在 Windows 10 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。 
@@ -34,7 +34,7 @@ ms.locfileid: "73728063"
 如需協助您了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]之影片和其他訓練資源的連結，請參閱 [了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
   
 > **下載**  
-> -   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 。  
+> -   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[評估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 。  
 > -   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 來啟動已安裝 SQL Server 的虛擬機器。  
 > 
 > **無法建立 MDS 網站？**
@@ -131,7 +131,7 @@ ms.locfileid: "73728063"
 
     >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 新增 SQL Server 受控執行個體的支援。 將**SQL Server 實例**的值設定為 Azure SQL Database 受控實例的主機。 例如， `xxxxxx.xxxxxx.database.windows.net`。
 
-4. 選取**驗證類型**，然後按一下 [**測試連接**]，確認您可以使用所選驗證類型的認證連接到資料庫。 按一下 **[下一步]** 。
+4. 選取**驗證類型**，然後按一下 [**測試連接**]，確認您可以使用所選驗證類型的認證連接到資料庫。 按 [下一步]。
 
     >若要 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]，若要連接到 Azure SQL Database 受控實例，請使用下列其中一種驗證類型：
     >
@@ -145,7 +145,7 @@ ms.locfileid: "73728063"
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在 [資料庫名稱] 欄位中輸入名稱。 (選擇性) 若要選取 Windows 定序，請清除 [SQL Server 預設定序] 核取方塊，然後按一下一或多個可用選項 (例如 [區分大小寫])。 按一下 **[下一步]** 。
+4.  在 [資料庫名稱] 欄位中輸入名稱。 (選擇性) 若要選取 Windows 定序，請清除 [SQL Server 預設定序] 核取方塊，然後按一下一或多個可用選項 (例如 [區分大小寫])。 按 [下一步]。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -210,10 +210,10 @@ ms.locfileid: "73728063"
   
      For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
- 您也可以使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]指定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之相關聯 Web 應用程式與服務的其他設定。 例如，您可以指定載入資料的頻率，或傳送驗證電子郵件的頻率。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
+ 您也可以使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 指定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之相關聯 Web 應用程式與服務的其他設定。 例如，您可以指定載入資料的頻率，或傳送驗證電子郵件的頻率。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
 ##  <a name="deploySample"></a> 部署範例模型和資料  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]包含下列三個範例模型套件。   這些範例模型都含有資料。 **範例模型套件的預設位置是 %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages。**
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含下列三個範例模型套件。   這些範例模型都含有資料。 **範例模型套件的預設位置是 %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages。**
   
 -   chartofaccounts_en.pkg  
   

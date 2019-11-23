@@ -55,14 +55,14 @@ ms.locfileid: "70175937"
 ## <a name="limitations-and-restrictions"></a>限制事項  
  DAC 可匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 或更新版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體。 如果您從更新版本匯出 DAC，則 DAC 可能會包含 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]不支援的物件。 您無法將這些 DAC 部署至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]執行個體。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  建議您不要匯入來源不明或來源不受信任的 DAC 匯出檔案。 這類檔案可能包含惡意程式碼，因此可能會執行非預期的 Transact-SQL 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的匯出檔案之前，請解除封裝 DAC 並檢查程式碼，例如預存程序和其他使用者定義的程式碼。 如需有關如何執行這些檢查的詳細資訊，請參閱＜ [Validate a DAC Package](validate-a-dac-package.md)＞。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC 匯出檔案中，而且沒有密碼。 當您匯入檔案之後，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
 ## <a name="permissions"></a>Permissions  
- 只有 **系統管理員 (sysadmin)** 或 **serveradmin** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色且擁有 ALTER ANY LOGIN 權限的登入，才能匯入 DAC。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
+ 只有 **系統管理員 (sysadmin)** 或 **serveradmin** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色且擁有 ALTER ANY LOGIN 權限的登入，才能匯入 DAC。 名為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的內建** 系統管理員帳戶也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>使用匯入資料層應用程式精靈  
  **若要啟動此精靈，請使用下列步驟：**  
@@ -88,9 +88,9 @@ ms.locfileid: "70175937"
 ###  <a name="Introduction"></a> 簡介頁面  
  此頁面描述的是資料層應用程式匯入精靈的步驟。  
   
- **選項**  
+ **選項。**  
   
--   **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
+-   **不要再顯示此頁面。** - 按一下此核取方塊可不再顯示 [簡介] 頁面。  
   
 -   **下一步** - 繼續進行 [匯入設定] 頁面。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70175937"
   
 -   **從本機磁碟匯入** - 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
   
--   **從 azure 匯入**-從 azure 容器匯入 BACPAC 檔案。 您必須連接到 Azure 容器, 才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
+-   **從 azure 匯入**-從 azure 容器匯入 BACPAC 檔案。 您必須連線到 Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
      瀏覽 Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 請注意，您可以依照 **[名稱]** 、 **[大小]** 或 **[修改日期]** 排序資料行。  
   
@@ -120,18 +120,18 @@ ms.locfileid: "70175937"
   
  若要繼續進行，請按 **[下一步]** 。  
   
- **針對 SQL Database:**  
+ **針對 SQL Database：**  
   
 -   **新資料庫名稱** - 針對匯入的資料庫提供名稱。  
   
--   版本-指定[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business 或[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web。 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 如需有關 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的詳細資訊，請參閱這個 [SQL 資料庫](http://www.windowsazure.com/home/tour/database/) 網站。  
+-   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]的版本**-指定 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web。 如需有關 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的詳細資訊，請參閱這個 [SQL 資料庫](http://www.windowsazure.com/home/tour/database/) 網站。  
   
--   **最大資料庫大小 (GB)** -使用下拉式功能表來指定資料庫的大小上限。  
+-   **最大資料庫大小（GB）** -使用下拉式功能表來指定資料庫的大小上限。  
   
  若要繼續進行，請按 **[下一步]** 。  
   
 ### <a name="validation-page"></a>驗證頁面  
- 您可以使用此頁面檢閱造成此作業無法執行的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 **[重新執行驗證]** 確定驗證成功。  
+ 您可以使用此頁面檢閱造成此作業無法執行的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 [重新執行驗證] 確定驗證成功。  
   
  若要繼續進行，請按 **[下一步]** 。  
   

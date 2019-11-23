@@ -34,7 +34,7 @@ ms.locfileid: "73843865"
 |-|  
 |**適用**于： [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12。|  
   
-|資料行名稱|資料類型|說明|  
+|資料行名稱|[名稱]|描述|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|表示15秒報告間隔開始的 UTC 時間。|  
 |**end_time**|**datetime2**|指出15秒報告間隔結束的 UTC 時間。|  
@@ -49,7 +49,7 @@ ms.locfileid: "73843865"
 |**elastic_pool_storage_limit_mb**|**bigint**|在此間隔期間，此彈性集區的目前最大彈性集區儲存體限制設定（以 mb 為單位）。|
 |**avg_allocated_storage_percent**|**decimal （5，2）**|彈性集區中所有資料庫所配置的資料空間百分比。  這是配置給彈性集區之資料大小上限的資料空間比例。  如需詳細資訊，請參閱： [SQL DB 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 
  此視圖存在於 SQL Database 伺服器的 master 資料庫中。 您必須連接到 master 資料庫，才能查詢**sys.databases elastic_pool_resource_stats**。  
   

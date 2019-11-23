@@ -26,7 +26,7 @@ ms.locfileid: "73728448"
 
   當您想要在總管[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**方格的個別索引標籤上顯示屬性時，可以在**  中建立屬性群組。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

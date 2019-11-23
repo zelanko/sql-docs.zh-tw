@@ -27,7 +27,7 @@ ms.locfileid: "72251977"
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  將使用者定義的 audit 事件加入至**USER_DEFINED_AUDIT_GROUP**。 如果未啟用**USER_DEFINED_AUDIT_GROUP** ，則會忽略**sp_audit_write** 。  
+  將使用者定義的 audit 事件加入至**USER_DEFINED_AUDIT_GROUP**。 如果未啟用**USER_DEFINED_AUDIT_GROUP** ， **sp_audit_write**會被忽略。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>引數  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- 使用者定義的參數，並記錄在 audit 記錄檔的**user_defined_event_id**資料行中。 *@no__t 1user_defined_event_id*的類型為**Smallint**。  
+ 使用者定義的參數，並記錄在 audit 記錄檔的**user_defined_event_id**資料行中。 *\@user_defined_event_id*是**Smallint**類型。  
   
  `[ @succeeded = ] succeeded`  
- 由使用者傳遞的參數，指出事件是否成功。 這會顯示在稽核記錄的 succeeded 資料行中。 `@succeeded` 是**bit**。  
+ 由使用者傳遞的參數，指出事件是否成功。 這會顯示在稽核記錄的 succeeded 資料行中。 `@succeeded` 為**位**。  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
  由使用者定義並且記錄在稽核記錄之新 user_defined_event_id 資料行中的文字。 `@user_defined_information` 是**Nvarchar （4000）** 。  
@@ -55,8 +55,8 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  輸入參數錯誤或無法寫入目標稽核記錄都會造成失敗。  
   
-## <a name="remarks"></a>備註  
- 當**USER_DEFINED_AUDIT_GROUP**加入伺服器 audit 規格或資料庫審核規格時， **sp_audit_write**所觸發的事件就會包含在 AUDIT 記錄中。  
+## <a name="remarks"></a>Remarks  
+ 當**USER_DEFINED_AUDIT_GROUP**新增至伺服器 audit 規格或資料庫審核規格時， **sp_audit_write**所觸發的事件就會包含在 AUDIT 記錄中。  
   
 ## <a name="permissions"></a>Permissions  
  需要**public**資料庫角色中的成員資格。  
@@ -72,7 +72,7 @@ EXEC sp_audit_write @user_defined_event_id =  27 ,
             , @user_defined_information = N'Access to a monitored object.' ;  
 ```  
   
-### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>B.  建立不包含資訊文字的使用者定義稽核事件  
+### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>b.  建立不包含資訊文字的使用者定義稽核事件  
  下列範例會建立識別碼為 27、succeeded 值為 0 而且不包含選擇性參考用文字或選擇性參數名稱的稽核事件。  
   
 ```  
