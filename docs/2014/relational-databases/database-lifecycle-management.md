@@ -48,7 +48,7 @@ ms.locfileid: "70154547"
  [Azure 首頁](http://www.windowsazure.com/)   
  [Azure 開發人員中心](http://www.windowsazure.com/develop/overview/)   
  [Azure 管理中心](http://www.windowsazure.com/manage/overview/)   
- [Azure 小組 Blog](http://www.windowsazure.com/community/blog/)   
+ [Azure 團隊部落格](http://www.windowsazure.com/community/blog/)   
  [Azure 支援選項](http://www.windowsazure.com/support/contact/)  
   
   

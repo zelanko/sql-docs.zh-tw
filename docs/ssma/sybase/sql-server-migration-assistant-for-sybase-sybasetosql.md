@@ -19,16 +19,16 @@ ms.locfileid: "72252161"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Sybase 的 SQL Server 移轉小幫手（SybaseToSQL）
 
-適用于 Sybase 調適型伺服器 Enterprise （ASE）的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手（SSMA）是一種工具，可將 ASE 資料庫移轉至 [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-3 2012、[!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-5 2014、[!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-7 2016、[!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-9 2017 on Windows 和 Linux，0 @ no_Windows 和 Linux 上的 _t-11 2019，或 2 Azure SQL Database。 SSMA for Sybase 會將 ASE 資料庫物件轉換成 @no__t 0 的資料庫物件、在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 中建立這些物件，然後將 ASE 中的資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database。
+適用于 Sybase 調適型伺服器 Enterprise （ASE）的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手（SSMA）是一種工具，可將 ASE 資料庫移轉至 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、[!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows 和 Linux 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017、在 Windows 和 linux 上 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019，或 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL Database。 SSMA for Sybase 會將 ASE 資料庫物件轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件、在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 中建立這些物件，然後將 ASE 中的資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database。
   
-本檔將為您介紹 SSMA for Sybase，並提供將 ASE 資料庫移轉至 @no__t 0 或 Azure SQL Database 的逐步指示，以及有關遷移後可能發生之問題的資訊。 若要深入瞭解，請參閱下列文章。  
+本檔將為您介紹 SSMA for Sybase，並提供將 ASE 資料庫移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure SQL Database 的逐步指示，以及有關遷移後可能發生之問題的資訊。 若要深入瞭解，請參閱下列文章。  
   
 ## <a name="contents"></a>目錄  
   
-|Section|描述|
+|章節|描述|
 |-----------|---------------|
 |[SSMA for Sybase &#40;SybaseToSQL 的新功能&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|列出 SSMA 版本的變更。|  
-|[安裝 SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|包含的文章會提供必要條件和指示，以在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例的電腦上安裝 Sybase 用戶端和必要元件的 SSMA。|  
+|[安裝 SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|包含的文章提供必要條件和指示，說明如何在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例的電腦上安裝 Sybase 用戶端和必要元件的 SSMA。|  
 |[SSMA for Sybase &#40;SybaseToSQL 的消費者入門&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)|介紹使用者介面、專案和設定選項。|  
 |[將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL &#40;DB SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)|提供轉換程式的總覽，以及處理常式中每個步驟的詳細資訊。|  
 |[使用者介面參考&#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)|包含適用于 Sybase 對話方塊的 SSMA 檔。|  

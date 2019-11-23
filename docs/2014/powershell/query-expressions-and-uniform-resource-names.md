@@ -63,7 +63,7 @@ ms.locfileid: "72782756"
  例如，您可以指定 Server 來代表 **ServerCollection** 類別，或指定 Database 來代表 **DatabaseCollection** 類別。  
   
  \@*PropertyName*  
- 指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，您可以指定 \@IsAnsiNull 來代表 **Database** 類別屬性 **IsAnsiNull**。  
+ 指定與 *Object* 中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，您可以指定 \@IsAnsiNull 來代表 **Database** 類別屬性 **IsAnsiNull**。  
   
  \@*BooleanPropertyName*=true()  
  列舉指定之布林屬性設定為 TRUE 的所有物件。  
@@ -96,7 +96,7 @@ ms.locfileid: "72782756"
  列舉指定之屬性具有 NULL 值的所有物件。  
   
  not(\<*PropertyExpression*>)  
- 執行 *PropertyExpression* 評估值的否定運算，並且列舉不符合 *PropertyExpression* 中指定之條件的所有物件。 例如，not(contains(\@Name, 'xyz')) 會列舉名稱中沒有 xyz 字串的所有物件。  
+ 執行 *PropertyExpression*評估值的否定運算，並且列舉不符合 *PropertyExpression*中指定之條件的所有物件。 例如，not(contains(\@Name, 'xyz')) 會列舉名稱中沒有 xyz 字串的所有物件。  
   
 ## <a name="remarks"></a>Remarks  
  查詢運算式是列舉 SMO 模型階層中之節點的字串。 每個節點都具有指定準則的篩選運算式，用於決定要列舉位於該節點的哪些物件。 查詢運算式是以 XPath 運算式語言建立模型。 查詢運算式會實作 XPath 所支援之運算式的小型子集，而且也具有在 XPath 中找不到的某些延伸模組。 XPath 運算式是字串，其中指定一組用來列舉 XML 文件之一個或多個標記的準則。 如需有關 XPath 的詳細資訊，請參閱 [W3C XPath Language](http://www.w3.org/TR/xpath20/)(W3C XPath 語言)。  
@@ -156,6 +156,6 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Invoke-PolicyEvaluation 指令程式](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

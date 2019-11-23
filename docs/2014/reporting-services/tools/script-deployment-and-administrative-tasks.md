@@ -69,7 +69,7 @@ ms.locfileid: "72783350"
   
 -   報表伺服器 Script Host 工具 (rs.exe) 可以執行您可能會撰寫的自訂 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 程式碼，以便重新建立現有內容，或是在報表伺服器之間移動現有內容。 當您使用這個方式時，會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫指令碼，並將其另存為 .rss 檔案，然後在目標報表伺服器上使用 rs.exe 來執行此指令碼。 您所撰寫的指令碼可以呼叫報表伺服器 Web 服務的 SOAP 介面。 部署指令碼是使用這種方法所撰寫，因為它可讓您重新建立報表伺服器資料夾命名空間與內容，以及重新建立以角色為基礎的安全性。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版引進了適用於 SharePoint 整合模式的 PowerShell 指令程式。 您可以使用 PowerShell 設定和管理 SharePoint 整合。  如需詳細資訊，請參閱 [Reporting Services SharePoint 模式適用的 PowerShell Cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版引進了適用於 SharePoint 整合模式的 PowerShell 指令程式。 您可以使用 PowerShell 設定和管理 SharePoint 整合。  如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>使用指令碼來移轉報表伺服器內容和資料夾  
  您可以撰寫指令碼來複製另一個報表伺服器執行個體上的報表伺服器環境。 部署指令碼通常是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫，然後使用報表伺服器 Script Host 公用程式處理。  
@@ -120,13 +120,13 @@ Public Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [GenerateDatabaseCreationScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
  [GenerateDatabaseRightsScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
  [GenerateDatabaseUpgradeScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
- [從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)    
+ [從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [安裝 Reporting Services 原生模式報表伺服器](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41; ](../browser-support-for-reporting-services-and-power-view.md)    
+ [規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41; ](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services 工具](reporting-services-tools.md)  

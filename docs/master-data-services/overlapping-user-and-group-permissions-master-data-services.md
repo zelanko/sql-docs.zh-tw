@@ -37,7 +37,7 @@ ms.locfileid: "73727942"
   
 -   存取權限是群組之所有有效權限的聯集。 如果一個群組的物件權限是**建立**，另一個群組是**更新**，則有效權限是**建立**和**更新**。  
   
- 這些規則同時適用於[模型] 和 [階層成員] 索引標籤。 系統會解析每個索引標籤的權限，然後加以結合。 如需詳細資訊，請參閱 [如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)。  
+ 這些規則同時適用於[模型] 和 [階層成員] 索引標籤。 系統會解析每個索引標籤的權限，然後加以結合。 如需詳細資訊，請參閱[如何決定權限 &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)。  
   
 > [!NOTE]  
 >  您可以在使用者介面中，檢視使用者和群組重疊權限的解析。 [模型] 和 [階層成員] 索引標籤都有下拉式清單，您可以從中選取 [有效] 來檢視有效的權限。  

@@ -26,7 +26,7 @@ ms.locfileid: "72797693"
   本主題描述如何使用 *、* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一 [!INCLUDE[tsql](../../../includes/tsql-md.md)]「可用性群組接聽程式」 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Availability Group Listener)。  
   
 > [!IMPORTANT]  
->  若要建立可用性群組的第一個可用性群組接聽程式，強烈建議您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell。 除非必要 (例如建立其他接聽程式)，否則避免在 WSFC 叢集中直接建立接聽程式。  
+>  若要建立可用性群組的第一個可用性群組接聽程式，強烈建議您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell。 除非必要 (例如建立其他接聽程式)，否則避免在 WSFC 叢集中直接建立接聽程式。  
   
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -37,7 +37,7 @@ ms.locfileid: "72797693"
 -   [檢視可用性群組接聽程式屬性 &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
 > [!NOTE]  
->  如果接聽程式已存在，而且您想要建立其他接聽程式，請參閱本主題稍後的[為可用性群組建立其他接聽程式 (選擇性)](#CreateAdditionalListener)。  
+>  如果接聽程式已存在，而且您想要建立其他接聽程式，請參閱本主題稍後的 [為可用性群組建立其他接聽程式 (選擇性)](#CreateAdditionalListener)。  
   
 ###  <a name="Restrictions"></a> 限制事項  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72797693"
 ###  <a name="Recommendations"></a> 建議  
  建議為多重子網路組態使用靜態 IP 位址，但並不是必要的。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 必要條件  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
@@ -65,16 +65,16 @@ ms.locfileid: "72797693"
   
 ###  <a name="WinPermissions"></a> Windows 權限  
   
-|[權限]|連結|  
+|Permissions|連結|  
 |-----------------|----------|  
-|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意：在某些組織中，安全性原則會禁止將「建立電腦物件」權限授與個別使用者帳戶。|*容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [為叢集安裝人員設定帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [預先設置叢集名稱帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。<br /><br /> 提示︰一般而言，不要為接聽程式虛擬網路名稱預先設置電腦帳戶是最簡單的。 如果可以，讓帳戶在您執行「WSFC 高可用性精靈」時自動建立並設定。|*容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [為叢集服務或應用程式預先設置帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)。|  
+|裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意：在某些組織中，安全性原則會禁止將「建立電腦物件」權限授與個別使用者帳戶。|*容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶*中的[為叢集安裝人員設定帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [預先設置叢集名稱帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。<br /><br /> 提示︰一般而言，不要為接聽程式虛擬網路名稱預先設置電腦帳戶是最簡單的。 如果可以，讓帳戶在您執行「WSFC 高可用性精靈」時自動建立並設定。|*容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶*中的[為叢集服務或應用程式預先設置帳戶的步驟](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)。|  
   
 ###  <a name="SqlPermissions"></a> SQL Server 權限  
   
-|工作|[權限]|  
+|工作|Permissions|  
 |----------|-----------------|  
-|建立可用性群組接聽程式|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
+|建立可用性群組接聽程式|需要 **sysadmin** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |修改現有的可用性群組接聽程式|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -90,7 +90,7 @@ ms.locfileid: "72797693"
   
 3.  按一下您要設定其接聽程式的可用性群組，然後選擇下列其中一個替代方式：  
   
-    -   若要建立接聽程式，以滑鼠右鍵按一下 [可用性群組接聽程式] 節點，然後選取 [新增接聽程式] 命令。 這會開啟 **[新增可用性群組接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的 [加入可用性群組接聽程式 (對話方塊)](#AddAgListenerDialog)。  
+    -   若要建立接聽程式，以滑鼠右鍵按一下 [可用性群組接聽程式] 節點，然後選取 [新增接聽程式] 命令。 這會開啟 **[新增可用性群組接聽程式]** 對話方塊。 如需詳細資訊，請參閱本主題稍後的[加入可用性群組接聽程式 (對話方塊)](#AddAgListenerDialog)。  
   
     -   若要變更現有接聽程式的通訊埠編號，展開 [可用性群組接聽程式] 節點、以滑鼠右鍵按一下接聽程式，然後選取 [屬性] 命令。 在 **[通訊埠]** 欄位中輸入新的通訊埠編號，然後按一下 **[確定]** 。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72797693"
   
  如需詳細資訊，請參閱本主題前文中的＜ [可用性群組接聽程式之 DNS 名稱的需求](#DNSnameReqs)＞。  
   
- **[通訊埠]**  
+ **通訊埠**  
  此接聽程式所使用的 TPC 通訊埠。  
   
  **網路模式**  
@@ -125,7 +125,7 @@ ms.locfileid: "72797693"
  **IP 位址**  
  顯示給定子網路的 IP 位址。  對於給定的子網路，IP 位址是 IPv4 位址或 IPv6 位址。  
   
- **[加入]**  
+ **加入**  
  按一下可將靜態 IP 位址加入至選取的子網路或此接聽程式的其他子網路。 這會開啟 **[加入 IP 位址]** 對話方塊。 如需詳細資訊，請參閱[加入 IP 位址對話方塊 &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md) 說明主題。  
   
  **移除**  
@@ -191,7 +191,7 @@ ms.locfileid: "72797693"
     ```  
   
     > [!NOTE]  
-    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視 Cmdlet 的語法，請在 **PowerShell 環境中使用**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cmdlet。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
 若要設定及使用 SQL Server PowerShell 提供者，請參閱[SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)。
   
@@ -200,9 +200,9 @@ ms.locfileid: "72797693"
 ###  <a name="ADQuotas"></a> 由於 Active Directory 配額而無法建立可用性群組接聽程式  
  新可用性群組接聽程式的建立作業可能會在建立時失敗，因為您已達到參與叢集節點電腦帳戶的 Active Directory 配額。  如需詳細資訊，請參閱下列文件：  
   
--   [超連結「 https://support.microsoft.com/kb/307532 」如何在修改電腦物件時疑難排解叢集服務帳戶](https://support.microsoft.com/kb/307532)  
+-   [超連結「 https://support.microsoft.com/kb/307532」如何在修改電腦物件時疑難排解叢集服務帳戶](https://support.microsoft.com/kb/307532)  
   
--   [超連結「 https://technet.microsoft.com/library/cc904295(WS.10).aspx 」 Active Directory 配額](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [超連結「 https://technet.microsoft.com/library/cc904295(WS.10).aspx」 Active Directory 配額](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> 後續操作：建立可用性群組接聽程式之後  
   
@@ -244,7 +244,7 @@ ms.locfileid: "72797693"
   
      [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會將 `RegisterAllProvidersIP` 屬性設定為 1，以便在用戶端連接字串依建議指定 `MultiSubnetFailover = True` 的用戶端容錯移轉之後，縮短重新連接的時間。 請注意，若要利用接聽程式多重子網路功能，用戶端可能需要支援 `MultiSubnetFailover` 關鍵字的資料提供者。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)。  
   
-     如需多重子網路叢集的相關資訊，請參閱 [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)，您只可以為每個可用性群組建立一個接聽程式。  
+     如需多重子網路叢集的相關資訊，請參閱 [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)。  
   
     > [!TIP]  
     >  `RegisterAllProvidersIP = 1`時，如果您在 WSFC 叢集上執行 WSFC 驗證設定精靈，這個精靈會產生下列警告訊息：  
@@ -283,7 +283,7 @@ Start-ClusterResource yourAGResource
   
 -   將接聽程式的 DNS 主機名稱提供給應用程式開發人員，以便在要求與這個可用性群組進行用戶端連接時，用於連接字串中。  
   
--   鼓勵開發人員將用戶端連接字串更新為指定 `MultiSubnetFailover = True`(可能的話)。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)。  
+-   鼓勵開發人員將用戶端連接字串更新為指定 `MultiSubnetFailover = True` (可能的話)。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)。  
   
 ###  <a name="CreateAdditionalListener"></a> 為可用性群組建立其他接聽程式 (選擇性)  
  您透過 SQL Server 建立一個接聽程式之後，可以加入另一個接聽程式，如下所示：  
@@ -310,7 +310,7 @@ Start-ClusterResource yourAGResource
   
          如需有關使用適用容錯移轉叢集的 Windows PowerShell 之詳細資訊，請參閱 [伺服器管理員命令概觀](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)。  
   
-2.  在新的接聽程式上啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接聽。 建立額外的接聽程式之後，連接到裝載主要可用性群組複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，然後使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 修改接聽程式通訊埠。  
+2.  在新的接聽程式上啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接聽。 建立額外的接聽程式之後，連接到裝載主要可用性群組複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，然後使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 修改接聽程式通訊埠。  
   
  如需詳細資訊，請參閱 [How to create multiple listeners for same availability group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx) (如何為相同可用性群組建立多個接聽程式) (SQL Server AlwaysOn 團隊部落格)。  
   
@@ -326,7 +326,7 @@ Start-ClusterResource yourAGResource
   
 -   [SQL Server AlwaysOn 小組 Blog：官方 SQL Server AlwaysOn 小組的 blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
- [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

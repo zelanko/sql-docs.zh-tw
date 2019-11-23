@@ -23,7 +23,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797864"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd 指令程式
-  **Invoke-Sqlcmd** 是一種執行指令碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，該指令碼包含了 **sqlcmd** 公用程式所支援之語言 ([!INCLUDE[tsql](../includes/tsql-md.md)] 及 XQuery) 與命令的陳述式。  
+  **Invoke-Sqlcmd** 是一種執行指令碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，該指令碼包含了 [!INCLUDE[tsql](../includes/tsql-md.md)]sqlcmd **公用程式所支援之語言 (** 及 XQuery) 與命令的陳述式。  
   
 ## <a name="using-invoke-sqlcmd"></a>使用 Invoke-Sqlcmd  
  **Invoke-Sqlcmd** Cmdlet 可讓您在 Windows PowerShell 環境中執行 **sqlcmd** 指令碼檔案。 **sqlcmd** 可以執行的大多數作業，也可利用 **Invoke-Sqlcmd**進行。  
@@ -103,23 +103,23 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  PowerShell 環境不需要所有的 **sqlcmd** 參數。 例如，Windows PowerShell 會從 Cmdlet 格式化所有輸出，所以 **Invoke-Sqlcmd** 中不會實作指定格式化選項的 **sqlcmd**參數。 下表顯示 **Invoke-Sqlcmd** 參數與 **sqlcmd** 選項之間的關聯性：  
   
-|[描述]|sqlcmd 選項|Invoke-Sqlcmd 參數|  
+|描述|sqlcmd 選項|Invoke-Sqlcmd 參數|  
 |-----------------|-------------------|------------------------------|  
 |伺服器和執行個體名稱。|-S|-ServerInstance|  
 |要使用的初始資料庫。|-d|-Database|  
 |執行指定的查詢並結束。|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入識別碼。|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證密碼。|-p|-Password|  
-|變數定義。|-V|-Variable|  
-|查詢逾時間隔。|-T|-QueryTimeout|  
+|變數定義。|-v|-Variable|  
+|查詢逾時間隔。|-t|-QueryTimeout|  
 |發生錯誤時停止執行|-b|-AbortOnError|  
 |專用管理員連接。|-a|-DedicatedAdministratorConnection|  
-|停用互動式命令、啟動指令碼和環境變數。|-X|-DisableCommands|  
-|停用變數替代。|-X|-DisableVariables|  
+|停用互動式命令、啟動指令碼和環境變數。|-x|-DisableCommands|  
+|停用變數替代。|-x|-DisableVariables|  
 |報表的最小嚴重性層級。|-v|-SeverityLevel|  
-|報表的最小錯誤層級。|-M|-ErrorLevel|  
+|報表的最小錯誤層級。|-m|-ErrorLevel|  
 |登入逾時間隔。|-l|-ConnectionTimeout|  
-|主機名稱。|-H|-HostName|  
+|主機名稱。|-h|-HostName|  
 |變更密碼並結束。|-Z|-NewPassword|  
 |含有查詢的輸入檔|-i|-InputFile|  
 |字元輸出的最大長度。|-w|-MaxCharLength|  
@@ -128,25 +128,25 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |顯示錯誤|無參數|-OutputSqlErrors|  
 |輸出訊息至 stderr。|-r|無參數|  
 |使用用戶端的地區設定|-r|無參數|  
-|執行指定的查詢並維持執行中狀態。|-Q|無參數|  
+|執行指定的查詢並維持執行中狀態。|-q|無參數|  
 |用於輸出資料的字碼頁。|-f|無參數|  
 |變更密碼並維持執行中狀態|-Z|無參數|  
-|封包大小|-A|無參數|  
-|資料行分隔符號|-S|無參數|  
+|封包大小|-a|無參數|  
+|資料行分隔符號|-s|無參數|  
 |控制項輸出標頭|-H|無參數|  
 |指定控制字元|-k|無參數|  
-|固定長度的顯示寬度|-y|無參數|  
-|變動長度的顯示寬度|-y|無參數|  
-|回應輸入。|-E|無參數|  
-|啟用引號識別碼|-i|無參數|  
-|移除尾端空白|-w|無參數|  
-|列出執行個體|-l|無參數|  
-|將輸出格式化為 Unicode|-U|無參數|  
-|列印統計資料|-P|無參數|  
+|固定長度的顯示寬度|-Y|無參數|  
+|變動長度的顯示寬度|-Y|無參數|  
+|回應輸入。|-e|無參數|  
+|啟用引號識別碼|-I|無參數|  
+|移除尾端空白|-W|無參數|  
+|列出執行個體|-L|無參數|  
+|將輸出格式化為 Unicode|-u|無參數|  
+|列印統計資料|-p|無參數|  
 |命令結束|-c|無參數|  
-|使用 Windows 驗證進行連接|-E|無參數|  
+|使用 Windows 驗證進行連接|-e|無參數|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 Database Engine Cmdlet](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [sqlcmd Utility](../tools/sqlcmd-utility.md)   
+ [sqlcmd 公用程式](../tools/sqlcmd-utility.md)   
  [使用 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

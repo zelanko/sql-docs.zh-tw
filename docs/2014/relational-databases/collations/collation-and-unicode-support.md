@@ -34,7 +34,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72688729"
 ---
-# <a name="collation-and-unicode-support"></a>Collation and Unicode Support
+# <a name="collation-and-unicode-support"></a>定序與 Unicode 支援
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的定序會提供資料的排序規則、大小寫和區分腔調字屬性。 與字元資料類型 (例如 `char` 和 `varchar`) 搭配使用的定序會指示字碼頁，以及可針對該資料類型表示的對應字元。 不論您是安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新執行個體、還原資料庫備份，還是將伺服器連接至用戶端資料庫，請務必了解您即將使用之資料的地區設定需求、排序次序和區分大小寫與腔調字。 若要列出您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所提供的定序，請參閱 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
   
  當您針對伺服器、資料庫、資料行或運算式選取定序時，就是將某些特性指派給資料，而這些特性會影響資料庫中許多作業的結果。 例如，當您使用 ORDER BY 來建構查詢時，結果集的排序次序可能會相依於套用至資料庫的定序或在查詢運算式層級指定於 COLLATE 子句中的定序。  
@@ -49,7 +49,7 @@ ms.locfileid: "72688729"
   
  與定序相關聯的選項是區分大小寫、區分腔調字、區分假名和區分全半形。 這些選項的指定方式是將它們附加至定序名稱。 例如，此定序 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 區分大小寫、區分腔調字、區分假名和區分全半形。 下表描述與這些選項相關聯的行為。  
   
-|選項|[描述]|  
+|選項|描述|  
 |------------|-----------------|  
 |區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 如果未選取此選項，則定序不區分大小寫。 也就是說，在排序用途上，SQL Server 會將大寫和小寫字母視為相同。 指定 _CI，就可以明確地選取不區分大小寫。|  
 |區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，' a ' 不等於 '&#x1EA5;'。 如果未選取此選項，則定序不區分腔調字。 也就是說，在排序用途上，SQL Server 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地選取不區分腔調字。|  
@@ -59,7 +59,7 @@ ms.locfileid: "72688729"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列定序集：  
   
  Windows 定序  
- Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設定儲存字元資料。 如果是 Windows 定序，非 Unicode 資料的比較是使用與 Unicode 資料相同的演算法來實作。 基本 Windows 定序規則會指定套用字典排序時使用的字母或語言，以及用來儲存非 Unicode 字元資料的字碼頁。 Unicode 和非 Unicode 排序都與特定 Windows 版本中的字串比較相容。 如此可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的各種資料類型取得一致性，同時讓開發人員能夠使用與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相同的規則，在應用程式中排序字串。 如需詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)。  
+ Windows 定序會定義規則，以便依據相關聯的 Windows 系統地區設定儲存字元資料。 如果是 Windows 定序，非 Unicode 資料的比較是使用與 Unicode 資料相同的演算法來實作。 基本 Windows 定序規則會指定套用字典排序時使用的字母或語言，以及用來儲存非 Unicode 字元資料的字碼頁。 Unicode 和非 Unicode 排序都與特定 Windows 版本中的字串比較相容。 如此可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的各種資料類型取得一致性，同時讓開發人員能夠使用與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相同的規則，在應用程式中排序字串。 如需詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)。  
   
  二進位定序  
  二進位定序依據地區設定和資料類型所定義的字碼值順序來排序資料。 它們會區分大小寫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的二進位定序會定義要使用的地區設定和 ANSI 字碼頁。 這會強制使用二進位排序次序。 因為它們相對而言較為簡單，所以二進位定序可提升應用程式效能。 如果是非 Unicode 資料類型，資料比較是依據 ANSI 字碼頁中所定義的字碼元素。 如果是 Unicode 資料類型，資料比較則是依據 Unicode 字碼指標。 如果是 Unicode 資料類型的二進位定序，在資料排序時不會考量地區設定。 例如，Latin_1_General_BIN 和 Japanese_BIN 用於 Unicode 資料時會產生相同的排序結果。  
@@ -70,7 +70,7 @@ ms.locfileid: "72688729"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序 (SQL_*) 會提供與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]舊版之間的排序次序相容性。 非 Unicode 資料的字典排序規則與 Windows 作業系統提供的任何排序常式不相容。 不過，Unicode 資料的排序與 Windows 排序規則的特定版本相容。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序對非 Unicode 和 Unicode 資料使用不同的比較規則，所以您會看到相同資料的比較有不同的結果，這取決於基礎資料類型而定。 如需詳細資訊，請參閱 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)。  
   
 > [!NOTE]
->  當您升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的英文執行個體時，可基於與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現有的執行個體相容而指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序 (SQL_*)。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序是在安裝期間定義，所以當下列條件成立時，請一定要小心指定定序設定：  
+>  當您升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的英文執行個體時，可基於與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現有的執行個體相容而指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序 (SQL_*)。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序是在安裝期間定義，所以當下列條件成立時，請一定要小心指定定序設定：  
 > 
 >  -   應用程式的程式碼視先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序行為而定。  
 > -   您必須儲存反映多國語言的字元資料。  
@@ -135,7 +135,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  下表將提供搭配 Unicode 和非 Unicode 伺服器的各種組合來使用多國語言資料的相關資訊。  
   
-|[伺服器]|用戶端|好處或限制|  
+|Server|用戶端|好處或限制|  
 |------------|------------|-----------------------------|  
 |Unicode|Unicode|由於 Unicode 資料將在整個系統中使用，所以這個狀況可提供最佳效能，並防止所擷取的資料遭到損毀。 這是 ActiveX Data Objects (ADO)、OLE DB 和 ODBC 3.7 版或更新版本的情況。|  
 |Unicode|非 Unicode|在此狀況中，特別是執行新版作業系統的伺服器與執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或在舊版作業系統上執行的用戶端之間存在連接，當您將資料移至用戶端電腦時，可能會有一些限制或錯誤。 伺服器上的 Unicode 資料將嘗試對應至非 Unicode 用戶端上的對應字碼頁，以便轉換資料。|  
@@ -216,7 +216,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  [Unicode Consortium 網站](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自主資料庫定序](../databases/contained-database-collations.md)   
  [選擇建立全文檢索索引時的語言](../search/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  

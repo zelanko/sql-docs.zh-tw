@@ -25,9 +25,9 @@ ms.locfileid: "73728561"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，當您想要通知使用者屬性值變更時，請設定商務規則來傳送通知。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要通知使用者屬性值變更時，請設定商務規則來傳送通知。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 和 [使用者及群組的權限] 功能區域的權限。 如果您沒有 [使用者及群組的權限] 功能區域的權限，就無法檢視傳送通知的目標使用者和群組清單。  
@@ -36,7 +36,7 @@ ms.locfileid: "73728561"
   
 -   使用驗證動作的商務規則必須已經存在。 如需詳細資訊，請參閱[建立及發行商務規則 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
--   接收通知的使用者或群組至少必須針對驗證失敗的屬性擁有 [唯讀] 權限。 遭明確或隱含拒絕此屬性之權限的使用者或群組將會收到電子郵件，但是無法在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中存取此屬性。  
+-   接收通知的使用者或群組至少必須針對驗證失敗的屬性擁有 [唯讀] 權限。 遭明確或隱含拒絕此屬性之權限的使用者或群組將會收到電子郵件，但是無法在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中存取此屬性。  
   
 -   如果將郵件傳送給群組，只有可存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的群組成員會收到電子郵件。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73728561"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]** 。  
   
-2.  從功能表列，指向 **[管理]** ，然後按一下 **[商務規則]** 。  
+2.  從功能表列，指向 [管理]，然後按一下 [商務規則]。  
   
 3.  在 [商務規則] 頁面上，選取 [模型] 清單中的模型。  
   

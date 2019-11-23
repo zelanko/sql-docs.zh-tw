@@ -26,7 +26,7 @@ ms.locfileid: "73728764"
 
   指派功能區域權限，授予使用者或群組 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能區域的存取權。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  

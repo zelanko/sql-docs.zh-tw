@@ -45,11 +45,11 @@ ms.locfileid: "72797958"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目暫停資料庫：**  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "72797958"
 ###  <a name="Restrictions"></a> 限制事項  
  一旦裝載目標資料庫的複本接受 SUSPEND 命令之後，就會將其傳回，但暫停資料庫實際上是以非同步方式進行。  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> 必要條件  
  您必須連接到裝載要暫停之資料庫的伺服器執行個體。 若要暫停主要資料庫和對應的次要資料庫，請連接到裝載主要複本的伺服器執行個體。 若要暫停次要資料庫，同時保留主要資料庫可用狀態，請連接到次要複本。  
   
 ###  <a name="Recommendations"></a> 建議  
@@ -118,7 +118,7 @@ ms.locfileid: "72797958"
     ```  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱＜ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)＞。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   
@@ -137,12 +137,12 @@ ms.locfileid: "72797958"
   
  **若要對寫滿交易記錄進行疑難排解**  
   
--   [為寫滿交易記錄進行疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [為寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
 -   [繼續可用性資料庫 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [繼續可用性資料庫 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
