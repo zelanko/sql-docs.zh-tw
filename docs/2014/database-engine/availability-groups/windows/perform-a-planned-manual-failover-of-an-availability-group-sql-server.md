@@ -53,9 +53,9 @@ ms.locfileid: "72782965"
   
 -   只有在目標次要複本上才支援這個工作。 您必須連接到裝載目標次要複本的伺服器執行個體。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -106,12 +106,12 @@ ms.locfileid: "72782965"
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
--   [取得 SQL Server PowerShell 說明](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> 追蹤：手動容錯移轉可用性群組之後  
+##  <a name="FollowUp"></a> 後續操作：在手動容錯移轉可用性群組之後  
  如果您容錯移轉可用性群組的 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 外部：調整 WSFC 節點的仲裁投票，以反映您的新可用性群組組態。 如需詳細資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
-## <a name="see-also"></a>請參閱  
- [ &#40;AlwaysOn 可用性群組 SQL Server&#41;   總覽](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>另請參閱  
+ [ &#40;AlwaysOn 可用性群組 SQL Server&#41;  總覽](overview-of-always-on-availability-groups-sql-server.md)  
  [容錯移轉和故障&#40;轉移&#41;模式 AlwaysOn 可用性群組](failover-and-failover-modes-always-on-availability-groups.md)   
  [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
