@@ -107,7 +107,7 @@ SSMA 延伸模組套件會將**sysdb**和**ssmatesterdb**資料庫新增至指�
 
 安裝延伸模組套件之後， **sysdb**資料庫中會出現**ssma_oracle 的 _migration_packages**資料表。
 
-每次您將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，SSMA 都會建立 @no__t 1 代理程式作業。 這些作業的名稱為**ssma_oracle data 遷移 package {GUID}** ，而且會顯示在 [作業] 資料夾中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [@no__t 1 代理程式] 節點中。  
+每次您將資料移轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，SSMA 都會建立 @no__t 1 代理程式作業。 這些作業的名稱為**ssma_oracle data 遷移 package {GUID}** ，而且會顯示在 [作業] 資料夾中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式] 節點中。  
   
 ## <a name="see-also"></a>另請參閱
 
