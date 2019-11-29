@@ -78,7 +78,7 @@ SQL Server 巨量資料叢集耗用這些永久性磁碟區的方式是透過使
 
 ## <a name="aks-storage-classes"></a>AKS 儲存體類別
 
-AKS 隨附[兩個內建的儲存類別](/azure/aks/azure-disks-dynamic-pv/) `default` 和 `managed-premium`，以及適用於它們的動態佈建程式。 您可以指定其中一個，或建立您自己的儲存類別，以部署已啟用永續性儲存體的巨量資料叢集。 根據預設，aks `aks-dev-test` 的內建叢集設定檔會隨附永續性儲存體設定，以使用 `default` 儲存類別。
+AKS 隨附[兩個內建的儲存類別](/azure/aks/azure-disks-dynamic-pv/) `default` 和 `managed-premium`，以及其所適用的動態佈建程式。 您可以指定其中一個，或建立您自己的儲存類別，以部署已啟用永續性儲存體的巨量資料叢集。 根據預設，aks `aks-dev-test` 的內建叢集設定檔會隨附永續性儲存體設定，以使用 `default` 儲存類別。
 
 > [!WARNING]
 > 使用內建儲存類別 `default` 和 `managed-premium` 建立的永續性磁碟區具有「刪除」  的回收原則。 因此，當您刪除 SQL Server 巨量資料叢集時，永久性磁碟區宣告也會遭到刪除，然後永久性磁碟區也是。 您可以使用 `azure-disk` 佈建程式搭配 `Retain` 回收原則來建立自訂儲存類別，如[此](/azure/aks/concepts-storage/#storage-classes)文章所示。
@@ -101,7 +101,7 @@ AKS 隨附[兩個內建的儲存類別](/azure/aks/azure-disks-dynamic-pv/) `def
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-這會建立兩個檔案 `bdc.json` 和 `control.json`，您可以藉由手動編輯它們或使用 `azdata bdc config` 命令來自訂。 您可以使用 jsonpath 和 jsonpatch 程式庫的組合，以提供編輯組態檔的方式。
+這會建立兩個檔案 `bdc.json` 和 `control.json`，您可以手動編輯或使用 `azdata bdc config` 命令來自訂這兩個檔案。 您可以使用 jsonpath 和 jsonpatch 程式庫的組合，以提供編輯組態檔的方式。
 
 
 ### <a id="config-samples"></a> 設定儲存類別名稱和/或宣告大小
