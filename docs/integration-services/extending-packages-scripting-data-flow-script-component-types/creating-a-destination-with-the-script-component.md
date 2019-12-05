@@ -105,7 +105,7 @@ ms.locfileid: "71296482"
  下列範例示範 **ScriptMain** 類別中建立目的地元件所需的程式碼。  
   
 > [!NOTE]
->  這些範例使用 **AdventureWorks** 範例資料庫中的 **Person.Address** 資料表，並透過資料流程傳遞其第一個和第四個資料行：**int*AddressID** 和* **nvarchar(30)City** 資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
+>  這些範例使用 **AdventureWorks** 範例資料庫中的 **Person.Address** 資料表，並透過資料流程傳遞其第一個和第四個資料行：**int*AddressID*** 和 **nvarchar(30)City** 資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 目的地範例  
  這個範例會示範一個目的地元件，它使用現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，將資料流程的資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
