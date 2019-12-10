@@ -29,7 +29,7 @@ ms.locfileid: "73784998"
   
  應用程式可以連接到任何數目的資料來源。 應用程式可以使用驅動程式與資料來源的組合、相同的驅動程式與資料來源組合，甚至相同驅動程式與相同資料來源的多個連接。  
   
- 您可以從 MSDN 上的[SQL Server 下載](https://go.microsoft.com/fwlink/?LinkId=62796)] 頁面下載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 範例。  
+ 您可以從 MSDN 上的[SQL Server 下載](https://go.microsoft.com/fwlink/?LinkId=62796) 頁面下載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 範例。  
   
 ## <a name="in-this-section"></a>本節內容  
   
