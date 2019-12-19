@@ -30,20 +30,20 @@ ms.locfileid: "70154832"
 -   [建立差異資料庫備份 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
 > [!IMPORTANT]  
->  您可以定義資料庫維護計畫來建立資料庫備份。 如需詳細資訊，請參閱[維護計劃](../maintenance-plans/maintenance-plans.md)和[使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
+>  您可以定義資料庫維護計畫來建立資料庫備份。 如需詳細資訊，請參閱 [維護計劃](../maintenance-plans/maintenance-plans.md) 和 [使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定備份工作時，您可以按下 [指令碼] 按鈕，然後選取指令碼的目的地，以產生相對應的 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) 指令碼。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]指定備份工作時，可以按一下 [!INCLUDE[tsql](../../includes/tsql-md.md)][[指令碼]](/sql/t-sql/statements/backup-transact-sql) 按鈕，然後選取指令碼的目的地，以產生對應的 **BACKUP** 指令碼。  
   
 ## <a name="options"></a>選項。  
   
 ### <a name="overwrite-media"></a>覆寫媒體  
- [覆寫媒體] 面板的選項會控制備份寫入媒體的方式。 如果您在 [備份資料庫] 對話方塊的 [一般] 頁面上選取 [URL (Azure 儲存體)] 做為備份目的地, 則會停用 [覆寫媒體] 區段下的選項。 您可以使用 `BACKUP TO URL.. WITH FORMAT` Transact-SQL 陳述式覆寫備份。 如需詳細資訊，請參閱 [SQL Server Backup to URL](sql-server-backup-to-url.md)。  
+ [覆寫媒體] 面板的選項會控制備份寫入媒體的方式。 如果在 [備份資料庫] 對話方塊的 [一般] 頁面中選取 URL (Azure 儲存體) 作為備份目的地，系統會停用 [覆寫媒體] 區段下方的選項。 您可以使用 `BACKUP TO URL.. WITH FORMAT` Transact-SQL 陳述式覆寫備份。 如需詳細資訊，請參閱＜ [SQL Server Backup to URL](sql-server-backup-to-url.md)＞。  
   
  只有 [Backup to a new media, and erase all existing backup sets (備份至新的媒體，並清除所有現有的備份組)] 選項支援加密選項。 如果您選取 [Back up to existing media (備份至現有媒體)] 區段下的選項，[備份選項] 頁面上的加密選項會停用。  
   
 > [!NOTE]  
->  如需媒體集的一般資訊，請參閱 [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)之執行個體的電腦上時，此選項才可以使用。  
+>  如需媒體集的一般資訊，請參閱[媒體集、媒體家族與備份組 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)。  
   
  **備份至現有的媒體集**  
  將資料庫備份至現有的媒體集。 選取此選項按鈕來啟動三個選項。  
@@ -86,7 +86,7 @@ ms.locfileid: "70154832"
  即使發生一或多個錯誤，備份作業也會繼續執行。  
   
 ### <a name="transaction-log"></a>交易記錄  
- [交易記錄] 面板的選項控制交易記錄備份的行為。 只有在完整復原模式或大量記錄復原模式之下，這些選項才具有相關性。 只有在 [備份資料庫] 對話方塊的 [[一般](../../integration-services/general-page-of-integration-services-designers-options.md)] 頁面中的 [備份類型] 欄位中，選取 [交易記錄] 後，才會啟動這些選項。  
+ [交易記錄] 面板的選項控制交易記錄備份的行為。 只有在完整復原模式或大量記錄復原模式之下，這些選項才具有相關性。 只有在 [備份資料庫] 對話方塊的 [ **[一般](../../integration-services/general-page-of-integration-services-designers-options.md)** ] 頁面中的 [備份類型] 欄位中，選取 [交易記錄] 後，才會啟動這些選項。  
   
 > [!NOTE]  
 >  如需交易記錄備份的相關資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)。  
@@ -100,7 +100,7 @@ ms.locfileid: "70154832"
  選取此選項相當於在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 陳述式 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH NO_TRUNCATE, NORECOVERY。 如需詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](tail-log-backups-sql-server.md)。  
   
 ### <a name="tape-drive"></a>磁帶機  
- [磁帶機] 面板的選項控制備份作業的磁帶管理。 只有在 [備份資料庫] 對話方塊的 [[一般](../../integration-services/general-page-of-integration-services-designers-options.md)] 頁面中的 [目的地] 面板中，選取 [磁帶] 後，才會啟動這些選項。  
+ [磁帶機] 面板的選項控制備份作業的磁帶管理。 只有在 [備份資料庫] 對話方塊的 [ **[一般](../../integration-services/general-page-of-integration-services-designers-options.md)** ] 頁面中的 [目的地] 面板中，選取 [磁帶] 後，才會啟動這些選項。  
   
 > [!NOTE]  
 >  如需有關如何使用磁帶裝置的資訊，請參閱[備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)。  
