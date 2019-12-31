@@ -1,5 +1,5 @@
 ---
-title: OLE DB 資料表值參數類型支援 (屬性) | Microsoft Docs
+title: OLE DB 資料表值參數類型（屬性）
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cd11bb70a559c4052e04653eff87c9929c5fdc3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788624"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242774"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   本主題提供與資料表值參數資料列集物件相關聯之 OLE DB 屬性和屬性集的相關資訊。  
   
-## <a name="properties"></a>[屬性]  
+## <a name="properties"></a>Properties  
  以下為透過 IRowsetInfo::GetProperties 方法，在資料表值參數資料列集物件上公開的屬性清單。 請注意，所有資料表值參數資料列集屬性都是唯讀的。 因此，嘗試透過 IOpenRowset：： OpenRowset 或 ITableDefinitionWithConstraints：： CreateTableWithConstraints 方法將任何屬性設定為非預設值，將會導致錯誤，而且不會建立任何物件。  
   
  沒有在資料表值參數資料列集物件中實作的屬性不會列在此處。 如需屬性的完整清單，請參閱 OLE DB 文件集中的＜Windows Data Access Components＞。  
   
-|屬性識別碼|ReplTest1|  
+|屬性識別碼|值|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -72,7 +72,8 @@ ms.locfileid: "73788624"
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
 |DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
-  
+|||
+
 ## <a name="property-sets"></a>屬性集  
  下列屬性集支援資料表值參數。  
   
@@ -82,7 +83,8 @@ ms.locfileid: "73788624"
 |屬性識別碼|屬性值|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 類型：VT_BOOL<br /><br /> 描述：設定為 VARIANT_TRUE 時，表示資料行為計算資料行。 VARIANT_FALSE 則表示它不是計算資料行。|  
-  
+|||
+
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
  這些屬性是由取用者讀取，同時在 ISSCommandWithParameters：： GetParameterProperties 的呼叫中探索資料表值參數類型資訊，並在設定資料表值參數的特定屬性時由取用者設定透過 ISSCommandWithParameters：： SetParameterProperties。  
   
@@ -95,7 +97,8 @@ ms.locfileid: "73788624"
 |SSPROP_PARAM_TYPE_CATALOGNAME|R/W：唯讀<br /><br /> 預設值：VT_EMPTY<br /><br /> 類型：VT_BSTR<br /><br /> 描述：取用者會使用這個屬性來取得資料表值參數類型的目錄名稱。<br /><br /> 這個屬性也可以搭配 CLR 使用者定義型別使用。 設定此屬性是錯誤的；使用者定義資料表類型必須與使用這些類型的資料表值參數位於相同的資料庫中。|  
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W：讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 類型： VT_UI2 &#124; VT_ARRAY<br /><br /> 描述：取用者會使用這個屬性來指定要將資料列集中的哪組資料行視為預設值。 系統不會針對這些資料行傳送任何值。 從取用者資料列集物件中提取資料時，提供者不需要使用此類資料行的繫結。<br /><br /> 陣列的每個元素都應該是資料列集物件中的資料行序數。 在命令執行階段，無效的序數將會導致錯誤。|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W：讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 類型： VT_UI2 &#124; VT_ARRAY<br /><br /> 描述：取用者會使用此屬性來提供提示給伺服器，指出資料行資料的排序次序。 提供者不會執行任何驗證，並假設取用者符合所提供的規格。 伺服器會使用這個屬性來執行最佳化。<br /><br /> 每個資料行的資料行順序資訊都會以陣列中的一組元素表示。 配對中的第一個元素是資料行的數目。 配對中的第二個元素將為 1 (遞增的順序) 或 2 (遞減的順序)。|  
-  
+|||
+
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 資料表值參數類型支援](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [使用資料表值參數 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  

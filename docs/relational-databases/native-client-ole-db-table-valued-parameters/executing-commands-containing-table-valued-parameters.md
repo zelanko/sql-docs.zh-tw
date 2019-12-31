@@ -1,5 +1,5 @@
 ---
-title: 執行包含資料表值參數的命令 | Microsoft Docs
+title: 具有資料表值參數的命令
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99b36c3213a2fae81eec80bf7efbf09f3aac6c6e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: a41e0e4993bc9a742f4b116ec2434fd3d8c09b76
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788762"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242745"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>執行包含資料表值參數的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,8 @@ ms.locfileid: "73788762"
 ## <a name="table-valued-parameter-specification"></a>資料表值參數規格  
  取用者可以指定資料表值參數的類型。 此資訊包含資料表值參數類型名稱。 如果資料表值參數的使用者定義資料表類型不在用於連接的目前預設結構描述中，它也包含結構描述名稱。 根據伺服器支援，取用者也可以指定選擇性的中繼資料資訊，例如，資料行的順序，而且可以指定特定資料行的所有資料列都有預設值。  
   
- 若要指定資料表值參數，取用者會呼叫 ISSCommandWithParameter：： SetParameterInfo，並選擇性地呼叫 ISSCommandWithParameters：： SetParameterProperties。 如果是資料表值參數，DBPARAMBINDINFO 結構中的 *pwszDataSourceType* 欄位將會有 DBTYPE_TABLE 的值。 *ulParamSize* 欄位會設定為 ~0，表示長度未知。 資料表值參數的特定屬性，例如架構名稱、類型名稱、資料行順序和預設資料行，可以透過 ISSCommandWithParameters：： SetParameterProperties 來設定。  
+ 若要指定資料表值參數，取用者會呼叫 ISSCommandWithParameter：： SetParameterInfo，並選擇性地呼叫 ISSCommandWithParameters：： SetParameterProperties。 如果是資料表值參數，DBPARAMBINDINFO 結構中的 *pwszDataSourceType* 欄位將會有 DBTYPE_TABLE 的值。 
+  *ulParamSize* 欄位會設定為 ~0，表示長度未知。 資料表值參數的特定屬性，例如架構名稱、類型名稱、資料行順序和預設資料行，可以透過 ISSCommandWithParameters：： SetParameterProperties 來設定。  
   
 ## <a name="table-valued-parameter-binding"></a>資料表值參數繫結  
  資料表值參數可以是任何資料列集物件。 提供者會在執行期間將資料表值參數傳送到伺服器的同時，從此物件讀取。  

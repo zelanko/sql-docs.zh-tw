@@ -1,5 +1,5 @@
 ---
-title: 使用 IRow::Open 和 ISequentialStream 擷取 BLOB 資料 | Microsoft Docs
+title: BLOB，IRow：： Open，ISequentialStream
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5c76342349a0bb1831903c7abe5ab43d52a0580
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f9c887f74e9516702cdd04085483c5b583f10e18
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761720"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242641"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **IRow::Open** 僅支援開啟 DBGUID_STREAM 和 DBGUID_NULL 類型的物件。  
+  **IRow：： Open**僅支援要開啟的 DBGUID_STREAM 和 DBGUID_Null 類型的物件。  
   
  下列函數會使用 **IRow::Open** 和 **ISequentialStream** 來擷取大型資料。  
   
-```  
+```cpp
 void InitializeAndExecuteCommand()  
 {  
     ULONG iidx;  
@@ -82,6 +82,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  大型資料可以使用 **ISequentialStream** 介面來繫結或擷取。 對於繫結的資料行，狀態旗標會藉由設定 DBSTATUS_S_TRUNCATED 指出資料是否遭到截斷。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 IRow 擷取 BLOB 資料](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [使用 IRow 提取 BLOB 資料](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

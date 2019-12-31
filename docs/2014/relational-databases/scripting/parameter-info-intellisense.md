@@ -1,6 +1,6 @@
 ---
-title: 參數資訊 (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: 參數資訊 (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9605062317572bb89e5bd806f2d7babd9d3a09f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b842f35c2852ce6ed607e943199bb322823651b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063920"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242011"
 ---
 # <a name="parameter-info-intellisense"></a>參數資訊 (IntelliSense)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 [參數資訊]  選項會開啟一個參數清單，為您提供函數或預存程序所需之參數數目、名稱和類型的相關資訊。 粗體的參數表示當您輸入函數或預存程序時所需的下一個參數。  
+  IntelliSense [!INCLUDE[msCoName](../../includes/msconame-md.md)]的 [**參數資訊**] 選項會開啟一個參數清單，其中提供函數或預存程式所需之參數數目、名稱和類型的相關資訊。 粗體的參數表示當您輸入函數或預存程序時所需的下一個參數。  
   
  巢狀函數也有參數清單。 如果您將函數當作參數輸入到另一個函數中，參數清單會顯示內部函數的參數。 之後，當內部函數參數清單完成時，參數清單會回復成顯示外部函數參數。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "66063920"
   
 #### <a name="to-manually-start-parameter-info"></a>手動啟動參數資訊  
   
-1.  按一下 [編輯]  功能表，選取 [IntelliSense]  ，然後選取 [參數資訊]  。  
+1.  按一下 [編輯]**** 功能表，選取 [IntelliSense]****，然後選取 [參數資訊]****。  
   
 2.  按下 CTRL+SHIFT+SPACE 鍵盤快速鍵。  
   
  如需詳細資訊，請參閱[設定 IntelliSense &#40;SQL Server Management Studio&#41;](configure-intellisense-sql-server-management-studio.md)。  
   
 > [!NOTE]  
->  [參數資訊]  選項僅適用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器和 XML 查詢編輯器。  
+>  [參數資訊]**** 選項僅適用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器和 XML 查詢編輯器。  
   
   

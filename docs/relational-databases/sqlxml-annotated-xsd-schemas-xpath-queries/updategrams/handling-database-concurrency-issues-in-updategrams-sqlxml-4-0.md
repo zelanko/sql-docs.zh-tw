@@ -1,6 +1,5 @@
 ---
-title: 處理資料庫並行問題，在 Updategram (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: Updategram 中的資料庫並行問題（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,24 +19,25 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb7981be5bcb3885003e0fdd7adc367b28c9690c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb77a6499472d116ad3b30028ce1566b68b81122
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086857"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241285"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>在 Updategram (SQLXML 4.0) 中處理資料庫並行的問題
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  與其他資料庫更新機制一樣，Updategram 必須處理在多使用者環境中的資料並行更新。 Updategram 使用開放式並行控制，該控制使用選取欄位資料的比較為快照集，以確保自從要更新的資料從資料庫讀取後，尚未受到其他使用者應用程式改變。 Updategram 包含在這些快照集的值 **\<之前 >** 在 updategram 的區塊。 在之前更新資料庫，updategram 會檢查中所指定的值 **\<之前 >** 區塊以確保已正確更新資料庫中目前的值。  
+  與其他資料庫更新機制一樣，Updategram 必須處理在多使用者環境中的資料並行更新。 Updategram 使用開放式並行控制，該控制使用選取欄位資料的比較為快照集，以確保自從要更新的資料從資料庫讀取後，尚未受到其他使用者應用程式改變。 Updategram 在 updategram 的 [ ** \<before>** ] 區塊中包含這些快照集值。 在更新資料庫之前，updategram 會先針對資料庫中目前的值，檢查** \<前>** 區塊中指定的值，以確定更新有效。  
   
  開放式並行控制在 Updategram 中提供三種保護等級：低 (無)、中和高。 您可以藉由指定 Updategram，決定需要哪種保護等級。  
   
 ## <a name="lowest-level-of-protection"></a>最低保護等級  
- 這個等級是一種盲目更新 (Blind Update)，在這個等級中，會直接處理更新，而不會參考自從上一次讀取資料庫之後所做的其他更新。 在這種情況下，您可以指定只有主索引鍵資料行中的 **\<之前 >** 封鎖來識別記錄，並指定中的更新的資訊 **\<之後 >** 區塊。  
+ 這個等級是一種盲目更新 (Blind Update)，在這個等級中，會直接處理更新，而不會參考自從上一次讀取資料庫之後所做的其他更新。 在這種情況下，您只需在 [ ** \<before>** ] 區塊中指定主鍵資料行來識別記錄，然後在 [ ** \<after>** ] 區塊中指定更新的資訊。  
   
- 例如，在下列的 Updategram 中的新連絡電話號碼是正確的，無論之前的電話號碼是幾號。 請注意如何 **\<之前 >** 區塊指定只有主索引鍵資料行 (ContactID)。  
+ 例如，在下列的 Updategram 中的新連絡電話號碼是正確的，無論之前的電話號碼是幾號。 請注意** \<before>** 區塊如何只指定主鍵資料行（ContactID）。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -55,9 +55,9 @@ ms.locfileid: "68086857"
 ## <a name="intermediate-level-of-protection"></a>中級保護等級  
  在這個保護等級中，Updategram 會比較使用資料庫資料行中的值所更新的目前值，以確定自從您的交易讀取記錄之後，值沒有受到其他交易改變。  
   
- 您可以藉由指定主索引鍵資料行和資料行中，您要更新取得這個保護等級 **\<之前 >** 區塊。  
+ 您可以在 [ ** \<before>** ] 區塊中指定要更新的主鍵資料行和資料行，以取得此保護層級。  
   
- 例如，這個 Updategram 為 ContactID 為 1 的連絡人，變更了 Person.Contact 資料表 Phone 資料行中的值。 **\<之前 >** 區塊指定 **Phone** 屬性，以確保這個屬性值符合資料庫中的對應資料行中的值，再套用更新的值.  
+ 例如，這個 Updategram 為 ContactID 為 1 的連絡人，變更了 Person.Contact 資料表 Phone 資料行中的值。 Before>區塊會指定**Phone**屬性，以確保此屬性值符合資料庫中對應資料行的值，然後再套用更新的值。 ** \< **  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -77,11 +77,11 @@ ms.locfileid: "68086857"
   
  您可以藉由兩種方法，針對並行更新取得這個保護等級：  
   
--   指定的資料表中的其他資料行 **\<之前 >** 區塊。  
+-   在 [ ** \<before>** ] 區塊中指定資料表中的其他資料行。  
   
-     如果您指定中的其他資料行 **\<之前 >** 區塊中，updategram 會比較針對這些資料行在套用更新之前已在資料庫中的值所指定的值。 如果任何記錄資料行在您的交易讀取記錄之後變更的話，則 Updategram 不會執行更新。  
+     如果您在 [ ** \<before>** ] 區塊中指定其他資料行，則 updategram 會將這些資料行所指定的值與資料庫中的值相比較，然後再套用更新。 如果任何記錄資料行在您的交易讀取記錄之後變更的話，則 Updategram 不會執行更新。  
   
-     比方說，下列 updategram 更新排班表名稱中，但指定額外的資料行 （StartTime、 EndTime） 中 **\<之前 >** 區塊，藉此要求較高的層級的保護，防止並行更新。  
+     例如，下列 updategram 會更新 shift 名稱，但會在** \<之前的>** 區塊中指定額外的資料行（StartTime、EndTime），藉此要求較高的保護層級以進行並行更新。  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -99,15 +99,15 @@ ms.locfileid: "68086857"
     </ROOT>  
     ```  
   
-     這個範例藉由指定之資料錄中的所有資料行值會指定最高層級的保護 **\<之前 >** 區塊。  
+     這個範例會在** \<before>** 區塊中指定記錄的所有資料行值，藉以指定最高層級的保護。  
   
--   在指定時間戳記資料行 （如果有的話） **\<之前 >** 區塊。  
+-   在 [ ** \<before>** ] 區塊中指定時間戳記資料行（如果有的話）。  
   
-     而不是指定中的所有記錄資料行 **\<之前**> 區塊中，您可以只指定時間戳記資料行 （如果資料表有的話） 中的主索引鍵資料行以及 **\<之前>** 區塊。 資料庫會在每一筆記錄更新後，將時間戳記資料行更新為唯一值。 在這個狀況下，Updategram 會比較時間戳記值與資料庫中對應的值。 儲存在資料庫中的時間戳記值是二進位值。 因此，必須指定時間戳記資料行的結構描述**dt:type="bin.hex 」** ， **dt:type="bin.base64"** ，或**sql: datatype ="timestamp"** 。 (您可以指定**xml**資料類型或[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。)  
+     除了在** \<before**> 區塊中指定所有記錄資料行，您可以只指定 timestamp 資料行（如果資料表有一個），以及 [ ** \<before>** ] 區塊中的主鍵資料行。 資料庫會在每一筆記錄更新後，將時間戳記資料行更新為唯一值。 在這個狀況下，Updategram 會比較時間戳記值與資料庫中對應的值。 儲存在資料庫中的時間戳記值是二進位值。 因此，時間戳記資料行必須在架構中指定為**dt： type = "bin. 十六進位"**， **dt： type = "bin. base64"**，或**sql： datatype = "timestamp"**。 （您可以指定**xml**資料類型或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型）。  
   
 #### <a name="to-test-the-updategram"></a>若要測試 Updategram  
   
-1.  建立這個資料表中的**tempdb**資料庫：  
+1.  在**tempdb**資料庫中建立此資料表：  
   
     ```  
     USE tempdb  
@@ -167,7 +167,7 @@ ms.locfileid: "68086857"
   
 5.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  這是相等的 XDR 結構描述：  
   
@@ -189,6 +189,6 @@ ms.locfileid: "68086857"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Updategram 安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全性考慮](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

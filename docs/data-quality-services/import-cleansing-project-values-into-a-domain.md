@@ -1,6 +1,5 @@
 ---
-title: 將清理專案值匯入定義域 | Microsoft Docs
-ms.custom: ''
+title: 將清理專案值匯入定義域中
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 83b8916072aa36b2b823306dabbcebfc0bc9c1d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992016"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241795"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>將清理專案值匯入定義域中
 
@@ -25,28 +24,29 @@ ms.locfileid: "67992016"
 
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以將清理程序期間，於資料品質清理專案或 Integration Services 封裝 (包含 DQS 清理元件) 中所收集的資料品質知識，匯入定義域中。 如此可確保可靠的知識不會遺失，而且會持續改良知識庫。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="BeforeYouBegin"></a>開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="Prerequisites"></a>要求  
   
 -   若要將清理專案值匯入定義域，您必須已經在 Data Quality Client 或 Integration Services 封裝 (包含 DQS 清理元件) 的清理專案中使用該定義域。  
   
 -   您必須已經順利執行完 Data Quality Client 或 Integration Services 封裝 (包含 DQS 清理元件) 中的清理專案。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全級  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a>無權  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能將清理程序期間所收集的資料品質知識匯入定義域中。  
   
-##  <a name="Import"></a> 匯入清理專案值  
+##  <a name="Import"></a>匯入清理專案值  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，於 [定義域管理] 活動中開啟知識庫。  
   
 3.  如果您要將值加入至現有的定義域，請在定義域清單中選取定義域。  
   
-4.  按一下 **[定義域值]** 索引標籤、按一下圖示列中的 **[匯入值]** 圖示，然後按一下 **[匯入專案值]** 。 **[匯入專案值]** 對話方塊隨即顯示，並提供使用定義域進行清理之資料品質專案和 Integration Services 封裝的清單。  
+4.  按一下 **[定義域值]** 索引標籤、按一下圖示列中的 **[匯入值]** 圖示，然後按一下 **[匯入專案值]**。 
+  **[匯入專案值]** 對話方塊隨即顯示，並提供使用定義域進行清理之資料品質專案和 Integration Services 封裝的清單。  
   
     > [!NOTE]  
     >  如果尚未使用定義域或是其連結的任何定義域建立任何專案，或者專案尚未完成，將無法使用 **[匯入專案值]** 選項。  
@@ -59,30 +59,31 @@ ms.locfileid: "67992016"
   
     -   選取 **[加入 [新增] 索引標籤中的值]** ，除了 **[正確]** 和 **[更正]** 索引標籤中的值以外，也匯入 [新增] 索引標籤中的值。  
   
-    -   按一下 [確定 **Deploying Office Solutions**]。  
+    -   按一下 [確定]****。  
   
 6.  當您返回 **[定義域值]** 索引標籤之後，成功匯入值的訊息隨即顯示。 已經匯入所以對定義域而言為新增的值將會顯示在 **[值]** 資料表中。  
   
 7.  取消選取 **[只顯示新值]** ，顯示定義域中的所有值。  
   
-8.  選取 **[正確]** 、 **[錯誤]** 或 **[無效]** ，只顯示所選類型的值。  
+8.  選取 **[正確]**、 **[錯誤]** 或 **[無效]** ，只顯示所選類型的值。  
   
 9. 若要搜尋特定字串，請在 **[尋找]** 文字方塊中輸入此字串。 按一下向上或向下箭號，逐步瀏覽符合搜尋準則的值。 這些值將會以黃色反白顯示。  
   
-10. 按一下 [ **完成**]。  
+10. 按一下 **[完成]**。  
   
     > [!NOTE]  
     >  如需有關使用 **[定義域值]** 索引標籤中之值的詳細資訊，請參閱＜ [Change Domain Values](../data-quality-services/change-domain-values.md)＞。  
   
-##  <a name="FollowUp"></a> 後續操作：將專案值匯入定義域之後  
+##  <a name="FollowUp"></a>後續操作：將專案值匯入定義域之後  
  在您將清理程序期間所收集的資料品質知識匯入定義域之後，您可以針對定義域和值執行其他定義域管理工作。 如需詳細資訊，請參閱[管理定義域](../data-quality-services/managing-a-domain.md)。  
   
-##  <a name="Values"></a> 將會匯入的值  
+##  <a name="Values"></a>將匯入的值  
  以下的值將會從專案匯入定義域中：  
   
 -   只有字串值會匯入定義域。  
   
--   只會匯入 **[清理]** 活動的 **[管理和檢視結果]** 頁面上，位於 **[正確]** 、 **[更正]** 和 **[新增]** 索引標籤中的值。 **[新增]** 索引標籤中的值只有已在 **[匯入專案值]** 對話方塊中選取 **[加入 [新增] 索引標籤中的值]** 核取方塊時才會匯入。  
+-   只會匯入 **[清理]** 活動的 **[管理和檢視結果]** 頁面上，位於 **[正確]** 、 **[更正]** 和 **[新增]** 索引標籤中的值。 
+  **[新增]** 索引標籤中的值只有已在 **[匯入專案值]** 對話方塊中選取 **[加入 [新增] 索引標籤中的值]** 核取方塊時才會匯入。  
   
 -   值將會以正確值或是包含更正的錯誤形式匯入。 只會匯入包含更正值的錯誤值。  
   
@@ -96,10 +97,11 @@ ms.locfileid: "67992016"
   
 -   定義域中以詞彙為主的關聯所產生的更正將會當做正確值 (而不是錯誤) 匯入。  
   
-##  <a name="ValuesNot"></a> 將不會匯入的值  
+##  <a name="ValuesNot"></a>將不會匯入的值  
  以下的值將不會從專案匯入定義域中：  
   
--   **[清理]** 活動的 **[管理和檢視結果]** 頁面上 **[建議]** 和 **[無效]** 索引標籤中的值將不會匯入。  
+-   
+  **[清理]** 活動的 **[管理和檢視結果]** 頁面上 **[建議]** 和 **[無效]** 索引標籤中的值將不會匯入。  
   
 -   如果清理專案中找到的值與定義域中的現有值衝突，則會略過專案中找到的值。 這包括清理值與知識庫值之間的衝突。  
   

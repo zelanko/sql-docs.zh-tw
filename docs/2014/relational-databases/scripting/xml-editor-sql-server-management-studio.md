@@ -1,6 +1,6 @@
 ---
-title: XML 編輯器 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: XML 編輯器
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063195"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242935"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 編輯器 (SQL Server Management Studio)
   提供一組視覺化工具，以搭配 XML 結構描述、ADO.NET 資料集以及 XML 文件使用。 XML 設計工具支援全球資訊網協會 (WC3) 定義的 XML 結構描述定義 (XSD) 語言。 設計師不支援 DTD (文件類型定義) 或其他 XML 結構描述語言，例如 XDR (XML-Data Reduced)。  
@@ -36,10 +36,10 @@ ms.locfileid: "66063195"
   
 |檢視|描述|支援的檔案類型|  
 |----------|-----------------|--------------------------|  
-|**結構描述**|以視覺化的方式建立和修改 XML 結構描述與 ADO.NET 資料集。|.xsd|  
+|**Schema**|以視覺化的方式建立和修改 XML 結構描述與 ADO.NET 資料集。|.xsd|  
 |**資料**|在結構化資料方格中，以視覺化的方式修改 XML 資料檔案。|.xml|  
-|**XML**|用於編輯 XML；來源編輯器提供色彩編碼和 IntelliSense，其中包括自動完成和列出成員。|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
-|**執行程序表**|顯示使用 SET SHOWPLAN_XML ON 選項建立的 xml 查詢計畫。|.showplan|  
+|**STL**|用於編輯 XML；來源編輯器提供色彩編碼和 IntelliSense，其中包括自動完成和列出成員。|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
+|**ShowPlan**|顯示使用 SET SHOWPLAN_XML ON 選項建立的 xml 查詢計畫。|.showplan|  
   
 ## <a name="schema-view"></a>結構描述檢視  
  結構描述檢視提供元素、屬性、類型等等可組成 XML 結構描述和 ADO.NET 資料集的視覺表示法。  
@@ -81,10 +81,11 @@ ms.locfileid: "66063195"
 ## <a name="data-view"></a>資料檢視  
  資料檢視提供資料方格，可以用來修改 .xml 檔案。 只有 XML 檔案中的內容 (但不包含標記和結構) 可以在資料檢視中編輯。  
   
- 資料檢視中有兩個不同的區域：[資料表]  與 [資料]  。 [資料表]  區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
+ 資料檢視中有兩個不同的區域： **[資料表]** 與 **[資料]**。 [資料表]**** 區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 
+  **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
   
 > [!NOTE]  
->  新建立的 XML 檔案中不包含資料，因此無法在資料檢視中顯示。 此外還有部份 XML文件的執行個體，其資料檢視完全無法叫用。 即使 XML 格式正確，如果不是結構化資料卻嘗試切換到資料檢視，便會產生下列訊息：「雖然這份文件格式正確，但其中包含資料檢視無法顯示的結構。」  
+>  新建立的 XML 檔案中不包含資料，因此無法在資料檢視中顯示。 此外還有部份 XML文件的執行個體，其資料檢視完全無法叫用。 即使 XML 格式正確，但如果不是結構化資料卻嘗試切換到資料檢視，則會產生下列訊息：「雖然這份文件格式正確，但其中包含資料檢視無法顯示的結構。」  
   
  在資料檢視中，您可以：  
   
@@ -95,10 +96,11 @@ ms.locfileid: "66063195"
 -   自 XML 文件產生 XML 結構描述  
   
 ## <a name="xml-view"></a>XML 檢視  
- XML 檢視提供編輯器來編輯原始 XML，並提供 IntelliSense 和色彩編碼。 在處理具有相關聯之結構描述的 .xsd 檔案與 .xml 檔案時，可以使用陳述式完成。 型別\<起始標記，就會看到一份在該位置是有效的項目。 鍵入元素名稱並按下空格鍵之後，將會出現該元素所支援的屬性清單。  
+ XML 檢視提供編輯器來編輯原始 XML，並提供 IntelliSense 和色彩編碼。 在處理具有相關聯之結構描述的 .xsd 檔案與 .xml 檔案時，可以使用陳述式完成。 輸入\<以起始標記，您會看到在該位置有效的元素清單。 鍵入元素名稱並按下空格鍵之後，將會出現該元素所支援的屬性清單。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。 在 XML 編輯器中，若要存取選項，請在 **[編輯]** 功能表上，按一下 **[IntelliSense]** 。  
+>  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項。 在 XML 編輯器中，若要存取選項，請在 **[編輯]** 功能表上，按一下 **[IntelliSense]**。  
   
 ## <a name="showplan-view"></a>SHOWPLAN 檢視  
  查詢計畫使用 SET SHOWPLAN_XML ON 選項建立時，就可以將查詢計畫以 XML 格式儲存。 在副檔名為 .showplan 的檔案上按兩下，即可開啟查詢計畫。  

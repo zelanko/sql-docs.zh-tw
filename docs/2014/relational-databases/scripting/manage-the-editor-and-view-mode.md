@@ -1,6 +1,6 @@
 ---
-title: 管理編輯器和檢視模式 | Microsoft Docs
-ms.custom: ''
+title: 管理編輯器和檢視模式
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -20,26 +20,26 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3333b41a4ff1c341f0ae0290f838cd2c76c6254e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063946"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242037"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理編輯器和檢視模式
   編輯器提供了許多用來控制程式碼檢視的方式。  
   
 ## <a name="changing-the-view-mode"></a>變更檢視模式  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有一個稱為 **[索引標籤文件]** 的檢視模式，您可以利用這個模式來同時開啟多個編輯器和多份文件，並利用編輯器頂端的索引標籤來存取它們。 另外，您也可以在多重文件介面 (MDI) 模式中開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 環境，此時會將不含索引標籤的各個視窗聯結起來，您可以並排這些視窗、將它們最小化...等等。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]功能稱為索引標籤**式檔**的視圖模式，可讓您同時開啟多個編輯器和檔，並透過編輯器頂端的索引標籤來存取它們。 另外，您也可以在多重文件介面 (MDI) 模式中開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 環境，此時會將不含索引標籤的各個視窗聯結起來，您可以並排這些視窗、將它們最小化...等等。  
   
 #### <a name="to-switch-between-view-modes"></a>切換檢視模式  
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  按一下 **[環境]** 。 按一下 **[一般]** 。  
+2.  按一下 **[環境]**。 按一下 [一般]****。  
   
-3.  按一下 **[索引標籤文件]** 或 **[MDI 環境]** 。  
+3.  按一下 **[索引標籤文件]** 或 **[MDI 環境]**。  
   
     > [!NOTE]  
     >  您必須重新啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，變更才會生效。  
@@ -64,11 +64,11 @@ ms.locfileid: "66063946"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  按一下 **[文字編輯器]** 。  
+2.  按一下 **[文字編輯器]**。  
   
-3.  開啟適當語言資料夾 (或 [所有語言]  ，這會影響所有語言)。  
+3.  開啟適當語言資料夾 (或 [所有語言]****，這會影響所有語言)。  
   
-4.  選取 **[自動換行]** 。  
+4.  選取 **[自動換行]**。  
   
 ## <a name="enabling-virtual-space-mode"></a>啟用虛擬空間模式  
  在 **[虛擬空間]** 模式中，編輯器的行為會如同各行尾端之後的空間填滿了無數個空格，可讓各行程式碼延伸到超出可見螢幕區的側邊。  
@@ -77,11 +77,11 @@ ms.locfileid: "66063946"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  按一下 **[文字編輯器]** 。  
+2.  按一下 **[文字編輯器]**。  
   
-3.  開啟適當語言資料夾 (或 [所有語言]  ，這會影響所有語言)。  
+3.  開啟適當語言資料夾 (或 [所有語言]****，這會影響所有語言)。  
   
-4.  選取 **[啟用虛擬空間]** 。  
+4.  選取 **[啟用虛擬空間]**。  
   
  當啟用虛擬空間模式時，游標會從行尾折返到下一行的第一個字元，反之亦然。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "66063946"
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]** 。  
   
-2.  按一下 **[文字編輯器]** 。  
+2.  按一下 **[文字編輯器]**。  
   
-3.  按一下 **[所有語言]** 。  
+3.  按一下 **[所有語言]**。  
   
-4.  按一下 **[一般]** 。  
+4.  按一下 [一般]****。  
   
-5.  選取 **[行號]** 。  
+5.  選取 **[行號]**。  
   
  如果只要針對某些程式設計語言指定顯示行號的功能，請在適當資料夾中選取 **[行號]** 。  
   

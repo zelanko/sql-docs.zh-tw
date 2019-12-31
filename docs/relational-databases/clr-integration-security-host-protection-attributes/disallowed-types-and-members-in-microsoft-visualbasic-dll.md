@@ -1,6 +1,7 @@
 ---
-title: 不允許 Microsoft.VisualBasic.dll 中類型和成員 |Microsoft Docs
-ms.custom: ''
+title: 在 Microsoft 中的類型和成員
+description: 列出不允許其主機保護屬性（HPA）值的 Microsoft. mso.dll 元件的成員和類型。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f91e4ee829c502eb00c79cea216f74e8d20fc4a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b717c350bae35606dcf0aae09610c085ccff1767
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028166"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75240162"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll 中不允許的型別和成員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) 程式設計不允許使用型別或成員具有**HostProtectionAttribute** ，指定**System.Security.Permissions.HostProtectionResource**列舉值是**ExternalProcessMgmt**， **ExternalThreading**， **MayLeakOnAbort**， **SecurityInfrastructure**， **SelfAffectingProcessMgmnt**， **SelfAffectingThreading**， **SharedState**，**同步處理**，或**UI**。 下表列出的成員和類型**Microsoft.VisualBasic.dll**主機保護屬性 (HPA) 值不被允許的組件。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通用語言整合（CLR）程式設計不允許使用具有**HostProtectionAttribute**的類型或成員，其指定的**HostProtectionResource**列舉值為**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同步**處理或**UI**。 下表列出不允許其主機保護屬性（HPA）值的**Microsoft. mso.dll**元件的成員和類型。  
   
 > [!NOTE]  
->  此清單是根據支援的組件產生的。 如需詳細資訊，請參閱 <<c0> [ 支援的.NET Framework 程式庫](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
+>  此清單是根據支援的組件產生的。 如需詳細資訊，請參閱[支援的 .NET Framework 程式庫](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
-|**型別或成員**|**HPA 值**|  
+|**類型或成員**|**HPA 值**|  
 |------------------------|------------------------|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeCulture()|ExternalProcessMgmt|  
@@ -64,14 +65,14 @@ ms.locfileid: "68028166"
 |Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|同步處理|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|同步處理|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|同步處理|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|同步處理|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|同步處理|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|同步處理|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|同步處理|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|同步處理|  
 |Microsoft.VisualBasic.Logging.Log|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.ClipboardProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.FileSystemProxy|ExternalProcessMgmt|  
@@ -81,8 +82,8 @@ ms.locfileid: "68028166"
 ## <a name="see-also"></a>另請參閱  
  [主機保護屬性和 CLR 整合程式設計](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Mscorlib.dll 中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [System.dll 中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
- [System.Data.dll 中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
+ [系統中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [System.object 中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
  [System.Core.dll 中不允許的類型和成員](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

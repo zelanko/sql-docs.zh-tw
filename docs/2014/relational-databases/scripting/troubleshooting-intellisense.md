@@ -1,6 +1,6 @@
 ---
-title: 針對 IntelliSense 進行疑難排解 (SQL Server Management Studio) | Microsoft 文件
-ms.custom: ''
+title: 針對 IntelliSense 進行疑難排解
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a642fbe7dbd866baa01fe9db7163292bfda6db30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7088bee1d78efdc6051bf58d174b7ea503362831
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063262"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242975"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>疑難排解 IntelliSense (SQL Server Management Studio)
   在某些情況下，IntelliSense 選項的運作可能會不符合您的預期。  
@@ -51,7 +51,8 @@ ms.locfileid: "66063262"
 ## <a name="database-engine-query-intellisense"></a>Database Engine 查詢 IntelliSense  
  下列問題適用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查詢編輯器：  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的 IntelliSense 功能不支援所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法元素。 參數說明不支援某些物件中的參數，例如擴充預存程序。 如需詳細資訊，請參閱 [IntelliSense 所支援的 Transact-SQL 語法](transact-sql-syntax-supported-by-intellisense.md)。  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的 IntelliSense 功能不支援所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法元素。 參數說明不支援某些物件中的參數，例如擴充預存程序。 如需詳細資訊，請參閱 [IntelliSense 所支援的 Transact-SQL 語法](transact-sql-syntax-supported-by-intellisense.md)。  
   
 -   只有當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或更新版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 執行個體時，才能使用 IntelliSense。 當查詢編輯器連接至舊版 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，則無法使用 IntelliSense。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "66063262"
   
 -   IntelliSense 功能不包含您的編輯器視窗連接到資料庫後，由另一個連接所建立的資料庫物件。 如果 IntelliSense 功能中遺漏物件，例如完成清單，您可以選擇三個機制的其中一個，以重新整理編輯器視窗的快取物件：  
   
-    -   選取 **[編輯]** 功能表，選取 **[IntelliSense]** ，再選取 **[重新整理本機快取]** 。  
+    -   選取 **[編輯]** 功能表，選取 **[IntelliSense]**，再選取 **[重新整理本機快取]**。  
   
     -   使用 CTRL+Shift+R 鍵盤快速鍵。  
   

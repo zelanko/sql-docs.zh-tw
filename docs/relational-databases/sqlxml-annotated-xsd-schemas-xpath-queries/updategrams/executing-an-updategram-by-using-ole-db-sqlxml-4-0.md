@@ -1,6 +1,5 @@
 ---
-title: 藉由使用 OLE DB (SQLXML 4.0) 中執行 Updategram |Microsoft Docs
-ms.custom: ''
+title: 使用 OLE DB 執行 Updategram （SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6aa4562f21b33966df3df17f7b486e3cc2935b52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086876"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241275"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 執行 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本主題提供 usingOLE DB 執行 updategram 的工作範例。  
+  本主題提供 usingOLE DB 的工作範例，以執行 updategram。  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>使用 ICommandStream 來設定 XML 命令  
- OLE DB （2.6 版或更新版本） ICommandStream 介面會將傳遞命令，為資料流物件，而非字串。  
+ OLE DB （版本2.6 或更新版本） ICommandStream 介面會傳遞命令做為資料流程物件，而不是字串。  
   
- 此介面可以讓命令使用 XML 剖析器所了解的任何編碼。 Icommand:: Execute 呼叫時，命令文字會直接讀取從資料流，並就不需要轉換。 因此，執行 XML 命令使用 ICommandStream 介面會更有效率。  
+ 此介面可以讓命令使用 XML 剖析器所了解的任何編碼。 呼叫 ICommand：： Execute 時，會直接從資料流程讀取命令文字，而不需要轉換。 因此，使用 ICommandStream 介面執行 XML 命令會更有效率。  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>使用 ICommandStream 將 XML 設定為命令並且將結果擷取為 XML 文件  
- ICommandStream 介面可用來做為命令，將 XML 文件，並以 XML 文件，可以擷取的結果。  
+ ICommandStream 介面可用來將 XML 檔設定為命令，並將結果當做 XML 檔來抓取。  
   
 #### <a name="executing-templates-with-xpath-queries"></a>執行具有 XPath 查詢的範本  
- 下列 XPath 查詢所組成的 XML 範本會指定為使用 ICommandStream 命令：  
+ 下列包含 XPath 查詢的 XML 範本會指定為使用 ICommandStream 的命令：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -60,19 +60,19 @@ ms.locfileid: "68086876"
 </Schema>  
 ```  
   
- 此查詢會傳回所有的員工元素。 預設的對應 **\<Person.Contact >** 元素會對應至 AdventureWorks 資料庫中的 Person.Contact 資料表。  
+ 此查詢會傳回所有的員工元素。 使用預設對應時， ** \<Person. Contact>** 元素會對應到 AdventureWorks 資料庫中的 person. contact 資料表。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>將 XML 設定為命令並且將結果擷取為 XML 文件  
   
 1.  初始化並建立資料庫連接。  
   
-2.  取得上 ICommand 的 ICommandStream 介面。  
+2.  取得 ICommand 上的 ICommandStream 介面。  
   
 3.  設定必要的命令屬性。 在此範例中，提供者特定的屬性 SSPROP_STREAM_BASEPATH 是設為儲存對應結構描述和範本檔案的目錄。  
   
-4.  您可以使用 ICommandStream::SetCommandStream 來指定命令資料流。 此範例執行的 XML 範本是讀取自檔案。 這項功能在執行大型 XML 範本時相當有用。  
+4.  請使用 ICommandStream：： SetCommandStream 來指定命令資料流程。 此範例執行的 XML 範本是讀取自檔案。 這項功能在執行大型 XML 範本時相當有用。  
   
-5.  執行 XML 命令使用 icommand:: Execute，要求 IID_ISequentialStream 介面識別碼。  
+5.  使用 ICommand：： Execute 執行 XML 命令，並要求 IID_ISequentialStream 介面識別碼。  
   
 6.  處理結果。 在此範例中，讀取自資料流的 XML 會顯示在畫面中。  
   
@@ -515,7 +515,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- 範本包含了 SQL 查詢。 查詢需要其參數的值 (@Title)。 如果沒有傳遞任何參數值，則會使用預設值 ("Mr.")。  
+ 範本包含了 SQL 查詢。 查詢需要其參數的值（@Title）。 如果沒有傳遞任何參數值，則會使用預設值 ("Mr.")。  
   
  將參數值傳遞給範本時，必須同時指定參數名稱和值。  
   
