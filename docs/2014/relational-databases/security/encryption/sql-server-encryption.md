@@ -11,15 +11,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011308"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957092"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
   加密是透過金鑰或密碼的使用讓資料模糊化的程序。 這樣可以讓資料變成毫無用處，而不需要對應的解密金鑰或密碼。 加密並不能解決存取控制問題。 但是，若發生存取控制失靈的情形，加密可限縮資料遺失的風險以增強安全性。 例如，只要資料已加密，即使資料庫主機電腦設定不當而遭駭客取得敏感性資料，失竊的資訊就可能毫無用處。  
@@ -39,35 +39,35 @@ ms.locfileid: "63011308"
  [透明資料加密 &#40;TDE&#41;](transparent-data-encryption.md)  
  有關如何以透明方式加密資料的一般資訊。  
   
- [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
+ [SQL Server 和資料庫加密金鑰 &#40;資料庫引擎&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密金鑰包括用於保護機密資料的公開、私密和對稱金鑰的組合。 本節將說明如何實作及管理加密金鑰。  
   
 ## <a name="related-content"></a>相關內容  
- [保護 SQL Server 的安全](../securing-sql-server.md)  
+ [保護 SQL Server](../securing-sql-server.md)  
  如何有助於維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平台安全及如何處理使用者與安全性物件的概觀。  
   
- [密碼編譯函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
+ [&#40;Transact-sql 的密碼編譯功能&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
  有關如何實作密碼編譯函數的資訊。  
   
- [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
+ [ENCRYPTBYPASSPHRASE &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
  有關如何使用密碼來加密資料的資訊。  
   
- [ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
+ [ENCRYPTBYKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
  有關如何使用對稱金鑰來加密資料的資訊。  
   
- [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
+ [ENCRYPTBYASYMKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
  有關如何使用非對稱金鑰來加密資料的資訊。  
   
- [ENCRYPTBYCERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
+ [ENCRYPTBYCERT &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
  有關如何使用憑證來加密資料的資訊。  
   
 ## <a name="external-resources"></a>外部資源  
- [SQL Server 2005 安全性的 10 個步驟](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
+ [SQL Server 2005 安全性的10個步驟](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
- [備份與還原 Reporting Services 加密金鑰](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [key_encryptions &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
+ [SQL Server 和資料庫加密金鑰 &#40;資料庫引擎&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [備份和還原 Reporting Services 加密金鑰](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

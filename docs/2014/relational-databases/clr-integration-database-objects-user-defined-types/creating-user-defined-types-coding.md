@@ -1,5 +1,5 @@
 ---
-title: 使用者定義型別撰寫程式碼 |Microsoft Docs
+title: 撰寫使用者定義類型的程式碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -31,17 +31,18 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919939"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232243"
 ---
 # <a name="coding-user-defined-types"></a>編碼使用者定義型別
   當您編碼使用者定義型別 (UDT) 定義時，您必須根據您是否將 UDT 實作為類別或結構以及您已選擇的格式和序列化選項來實作各種功能。  
   
- 本章節的範例說明如何將 `Point` UDT 實作為 `struct` (或 Visual Basic 中的 `Structure`)。 `Point` UDT 是由實作為屬性程序的 X 及 Y 座標組成。  
+ 本章節的範例說明如何將 `Point` UDT 實作為 `struct` (或 Visual Basic 中的 `Structure`)。 
+  `Point` UDT 是由實作為屬性程序的 X 及 Y 座標組成。  
   
  定義 UDT 時需要下列命名空間：  
   
@@ -57,7 +58,9 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;  
 ```  
   
- `Microsoft.SqlServer.Server` 命名空間包含 UDT 之各種屬性所需的物件，而 `System.Data.SqlTypes` 命名空間則包含表示組件可用之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料類型的類別。 若要能夠正確運作，您的組件還需要其他的命名空間。 `Point` UDT 也使用 `System.Text` 命名空間來處理字串。  
+ 
+  `Microsoft.SqlServer.Server` 命名空間包含 UDT 之各種屬性所需的物件，而 `System.Data.SqlTypes` 命名空間則包含表示組件可用之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原生資料類型的類別。 若要能夠正確運作，您的組件還需要其他的命名空間。 
+  `Point` UDT 也使用 `System.Text` 命名空間來處理字串。  
   
 > [!NOTE]  
 >  使用 `/clr:pure` 編譯的 Visual C++ 資料庫物件 (例如 UDT) 不支援執行。  
@@ -65,10 +68,14 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>指定屬性  
  屬性會決定如何使用序列化來建構 UDT 的儲存表示，並將 UDT 以傳值方式傳輸到用戶端。  
   
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 是必要項目。 `Serializable` 屬性是選擇性的。 您還可指定 `Microsoft.SqlServer.Server.SqlFacetAttribute`，以提供 UDT 之傳回類型的相關資訊。 如需詳細資訊，請參閱 [CLR 常式的自訂屬性](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)。  
+ 
+  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 為必要項目。 
+  `Serializable` 屬性是選擇性的。 您還可指定 `Microsoft.SqlServer.Server.SqlFacetAttribute`，以提供 UDT 之傳回類型的相關資訊。 如需詳細資訊，請參閱 [CLR 常式的自訂屬性](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)。  
   
 ### <a name="point-udt-attributes"></a>Point UDT 屬性  
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 會將 `Point` UDT 的儲存格式設定為 `Native`。 `IsByteOrdered` 會設為 `true`，可保證 SQL Server 中比較的結果，與在 Managed 程式碼中發生的比較相同。 UDT 會實作 `System.Data.SqlTypes.INullable` 介面，好讓 UDT 可感知 null。  
+ 
+  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 會將 `Point` UDT 的儲存格式設定為 `Native`。 
+  `IsByteOrdered` 會設為 `true`，可保證 SQL Server 中比較的結果，與在 Managed 程式碼中發生的比較相同。 UDT 會實作 `System.Data.SqlTypes.INullable` 介面，好讓 UDT 可感知 null。  
   
  下列程式碼片段顯示 `Point` UDT 的屬性。  
   
@@ -92,7 +99,8 @@ public struct Point : INullable
   
  您必須建立名為 `IsNull` 的屬性，需要此屬性來判斷在 CLR 程式碼內某值是否為 Null。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找到 UDT 的 Null 執行個體時，便會使用正常的 Null 處理方法來保存 UDT。 除非必要，否則伺服器不會浪費時間來序列化或還原序列化 UDT，而且它也不會浪費空間來儲存 Null UDT。 每次從 CLR 引入 UDT 時都會執行 Null 檢查，這表示使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 建構來檢查 Null UDT 的作業一定都可運作。 伺服器也會使用 `IsNull` 屬性，以測試執行個體是否為 Null。 伺服器一旦判定 UDT 為 Null，就可以使用其原生的 Null 處理。  
   
- `get()` 的 `IsNull` 方法在任何情況下都不是特殊案例。 如果 `Point` 變數 `@p` 是 `Null`，則根據預設會將 `@p.IsNull` 評估為 "NULL"，而非 "1"。 這是因為 `SqlMethod(OnNullCall)` 方法的 `IsNull get()` 屬性預設為 false。 因為此物件是 `Null`，所以當要求此屬性時，不會還原序列化此物件、不會呼叫此方法，而且會傳回 "NULL" 的預設值。  
+ 
+  `get()` 的 `IsNull` 方法在任何情況下都不是特殊案例。 如果 `Point` 變數 `@p` 是 `Null`，則根據預設會將 `@p.IsNull` 評估為 "NULL"，而非 "1"。 這是因為 `SqlMethod(OnNullCall)` 方法的 `IsNull get()` 屬性預設為 false。 因為此物件是 `Null`，所以當要求此屬性時，不會還原序列化此物件、不會呼叫此方法，而且會傳回 "NULL" 的預設值。  
   
 ### <a name="example"></a>範例  
  在下列範例中，`is_Null` 變數為私用，而且會針對 UDT 執行個體保留 Null 狀態。 您的程式碼必須維護對 `is_Null` 適當的值。 UDT 也必須有一個名為 `Null` 的靜態屬性，它會傳回 UDT 的 Null 值執行個體。 如果執行個體在資料庫中實際上為 Null，這可讓 UDT 傳回 Null 值。  
@@ -138,7 +146,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>IS NULL 與IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL vs. IsNull  
  假設有一個資料表包含 Points(id int, location Point) 結構描述 (其中 `Point` 為 CLR UDT) 及下列查詢：  
   
 ```  
@@ -155,14 +163,17 @@ FROM Points
 WHERE location.IsNull = 0;  
 ```  
   
- 這兩個查詢都會傳回非 `Null` 位置之點的識別碼。 查詢 1 會使用正常 null 處理，而且不需要還原序列化 UDT。 另一方面，查詢 2 則必須還原序列化每一個非 `Null` 物件及呼叫 CLR，以取得 `IsNull` 屬性的值。 我們可以清楚地看到，使用 `IS NULL` 將會呈現較佳的效能，因此絕對沒有理由要從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼讀取 UDT 的 `IsNull` 屬性。  
+ 這兩個查詢都會傳回非 `Null` 位置之點的識別碼。 查詢 1 會使用正常 null 處理，而且不需要還原序列化 UDT。 另一方面，查詢 2 則必須還原序列化每一個非 `Null` 物件及呼叫 CLR，以取得 `IsNull` 屬性的值。 我們可以清楚地看到，使用 `IS NULL` 將會呈現較佳的效能，因此絕對沒有理由要從 `IsNull` 程式碼讀取 UDT 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 屬性。  
   
  這樣為什麼要使用 `IsNull` 屬性呢？ 首先，需要用它來判斷來自 CLR 程式碼的某個值是否為 `Null`。 第二，伺服器需要一個方法來測試執行個體是否為 `Null`，所以伺服器會使用這個屬性。 當判斷出這個屬性為 `Null` 之後，它就可以使用它的原生 null 處理來加以處理。  
   
 ## <a name="implementing-the-parse-method"></a>實作 Parse 方法  
- `Parse` 及 `ToString` 方法允許與 UDT 的字串表示之間進行來回轉換。 `Parse` 方法允許將字串轉換成 UDT。 它必須宣告為 `static` (或 Visual Basic 中的 `Shared`)，並採用型別 `System.Data.SqlTypes.SqlString` 的參數。  
+ 
+  `Parse` 及 `ToString` 方法允許與 UDT 的字串表示之間進行來回轉換。 
+  `Parse` 方法允許將字串轉換成 UDT。 它必須宣告為 `static` (或 Visual Basic 中的 `Shared`)，並採用型別 `System.Data.SqlTypes.SqlString` 的參數。  
   
- 下列程式碼會實作 `Parse` UDT 的 `Point` 方法，這樣會分隔 X 和 Y 座標。 `Parse` 方法具有 `System.Data.SqlTypes.SqlString` 類型的單一引數，而且假設會以逗號分隔的字串來提供 X 和 Y 值。 將 `Microsoft.SqlServer.Server.SqlMethodAttribute.OnNullCall` 屬性設定為 `false` 會避免從 Point 的 Null 執行個體呼叫 `Parse` 方法。  
+ 下列程式碼會實作 `Parse` UDT 的 `Point` 方法，這樣會分隔 X 和 Y 座標。 
+  `Parse` 方法具有 `System.Data.SqlTypes.SqlString` 類型的單一引數，而且假設會以逗號分隔的字串來提供 X 和 Y 值。 將 `Microsoft.SqlServer.Server.SqlMethodAttribute.OnNullCall` 屬性設定為 `false` 會避免從 Point 的 Null 執行個體呼叫 `Parse` 方法。  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -197,7 +208,9 @@ public static Point Parse(SqlString s)
 ```  
   
 ## <a name="implementing-the-tostring-method"></a>實作 ToString 方法  
- `ToString` 方法會將 `Point` UDT 轉換成字串值。 在此情況下，會針對 `Point` 類型的 Null 執行個體傳回 "NULL" 字串。 `ToString` 方法藉由使用 `Parse` 傳回以逗號分隔並包含 X 及 Y 座標值的 `System.Text.StringBuilder`，以反轉 `System.String` 方法。 因為**InvokeIfReceiverIsNull**預設值為 false，則為 null 的執行個體的核取`Point`並非必要。  
+ 
+  `ToString` 方法會將 `Point` UDT 轉換成字串值。 在此情況下，會針對 `Point` 類型的 Null 執行個體傳回 "NULL" 字串。 
+  `ToString` 方法藉由使用 `Parse` 傳回以逗號分隔並包含 X 及 Y 座標值的 `System.Text.StringBuilder`，以反轉 `System.String` 方法。 因為**InvokeIfReceiverIsNull**預設為 false，所以`Point`不需要檢查的 null 實例。  
   
 ```vb  
 Private _x As Int32  
@@ -236,7 +249,8 @@ public override string ToString()
 ```  
   
 ## <a name="exposing-udt-properties"></a>公開 UDT 屬性  
- `Point` UDT 會公開實作為 `System.Int32` 類型之公用讀寫屬性的 X 及 Y 座標。  
+ 
+  `Point` UDT 會公開實作為 `System.Int32` 類型之公用讀寫屬性的 X 及 Y 座標。  
   
 ```vb  
 Public Property X() As Int32  
@@ -287,9 +301,11 @@ public Int32 Y
 ```  
   
 ## <a name="validating-udt-values"></a>驗證 UDT 值  
- 當使用 UDT 資料時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會自動將二進位值轉換成 UDT 值。 此轉換程序包括檢查適用於此類型之序列化格式的值，並確保可正確地將此值還原序列化。 這可確保，值可以轉換回二進位格式。 如果是依照位元組排序的 UDT，這也可確保產生的二進位值會符合原始二進位值。 如此可防止在資料庫中保留無效的值。 在某些情況下，這個層級的檢查可能不夠。 當要求 UDT 值位於預期的網域或範圍內時，可能需要其他驗證。 例如，實作日期的 UDT 可能會要求日期值是一個正數，而且在某個有效值的範圍內。  
+ 當使用 UDT 資料時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會自動將二進位值轉換成 UDT 值。 此轉換程序包括檢查適用於此類型之序列化格式的值，並確保可正確地將此值還原序列化。 如此可確保此值可以轉換回二進位格式。 如果是依照位元組排序的 UDT，這也可確保產生的二進位值會符合原始二進位值。 如此可防止在資料庫中保留無效的值。 在某些情況下，這個層級的檢查可能不夠。 當要求 UDT 值位於預期的網域或範圍內時，可能需要其他驗證。 例如，實作日期的 UDT 可能會要求日期值是一個正數，而且在某個有效值的範圍內。  
   
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` 的 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 屬性可在將資料指派給 UDT 或轉換成 UDT 時，讓您提供伺服器所執行之驗證方法的名稱。 在執行 bcp 公用程式、BULK INSERT、DBCC CHECKDB、DBCC CHECKFILEGROUP、DBCC CHECKTABLE、分散式查詢及表格式資料流 (TDS) 遠端程序呼叫 (RPC) 作業期間，也會呼叫 `ValidationMethodName`。 `ValidationMethodName` 的預設值是 null，表示沒有驗證方法。  
+ 
+  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` 的 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 屬性可在將資料指派給 UDT 或轉換成 UDT 時，讓您提供伺服器所執行之驗證方法的名稱。 在執行 bcp 公用程式、BULK INSERT、DBCC CHECKDB、DBCC CHECKFILEGROUP、DBCC CHECKTABLE、分散式查詢及表格式資料流 (TDS) 遠端程序呼叫 (RPC) 作業期間，也會呼叫 `ValidationMethodName`。 
+  `ValidationMethodName` 的預設值是 null，表示沒有驗證方法。  
   
 ### <a name="example"></a>範例  
  下列程式碼片段顯示 `Point` 類別的宣告，該類別會指定 `ValidationMethodName` 的 `ValidatePoint`。  
@@ -367,10 +383,10 @@ private bool ValidatePoint()
 ### <a name="validation-method-limitations"></a>驗證方法限制  
  伺服器呼叫此驗證方法的時機是當伺服器執行轉換時，而不是當藉由設定個別屬性插入資料，或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 陳述式插入資料時。  
   
- 您必須明確呼叫驗證方法從屬性 setter 和`Parse`方法，如果您想要在所有情況下執行的驗證方法。 這不是硬性規定，在某些情況下可能也不適當。  
+ 如果您想要在所有情況下執行驗證方法， `Parse`您必須從屬性 setter 和方法明確呼叫驗證方法。 這不是硬性規定，在某些情況下可能也不適當。  
   
 ### <a name="parse-validation-example"></a>Parse 驗證範例  
- 若要確保`ValidatePoint`方法中叫用`Point`類別，您必須呼叫從`Parse`方法和屬性程序，設定 X 和 Y 座標值。 下列程式碼片段示範如何呼叫`ValidatePoint`驗證方法，從`Parse`函式。  
+ 若要確保`ValidatePoint`方法是在`Point`類別中叫用，您必須從`Parse`方法和設定 X 和 Y 座標值的屬性程式呼叫它。 下列程式碼片段顯示如何從`ValidatePoint` `Parse`函式呼叫驗證方法。  
   
 ```vb  
 <SqlMethod(OnNullCall:=False)> _  
@@ -416,7 +432,7 @@ public static Point Parse(SqlString s)
 ```  
   
 ### <a name="property-validation-example"></a>Property 驗證範例  
- 下列程式碼片段示範如何呼叫`ValidatePoint`從設定 X 和 Y 座標屬性程序的驗證方法。  
+ 下列程式碼片段顯示如何從設定 X 和`ValidatePoint` Y 座標的屬性程式呼叫驗證方法。  
   
 ```vb  
 Public Property X() As Int32  
@@ -490,10 +506,10 @@ public Int32 Y
 ```  
   
 ## <a name="coding-udt-methods"></a>編碼 UDT 方法  
- 當編碼 UDT 方法時，請考慮使用的演算法是否可能隨著時間而改變。 如果會的話，您可能會想要考慮針對 UDT 使用的方法建立個別類別。 如果演算法變更，您可在不影響 UDT 的情況下，以新的程式碼重新編譯該類別，並將組件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在許多情況下，您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 陳述式重新載入 UDT，但是這樣做可能會導致現有資料發生問題。 例如， `Currency` UDT 隨附**AdventureWorks**範例資料庫會使用**ConvertCurrency**函數來轉換貨幣值，在個別的類別實作。 轉換演算法在未來有可能以非預期的方式變更，或者可能需要新的功能。 區隔**ConvertCurrency**函式`Currency`UDT 實作規劃未來的變更時，提供更大的彈性。  
+ 當編碼 UDT 方法時，請考慮使用的演算法是否可能隨著時間而改變。 如果會的話，您可能會想要考慮針對 UDT 使用的方法建立個別類別。 如果演算法變更，您可在不影響 UDT 的情況下，以新的程式碼重新編譯該類別，並將組件載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在許多情況下，您可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 陳述式重新載入 UDT，但是這樣做可能會導致現有資料發生問題。 例如，包含在`Currency` **AdventureWorks**範例資料庫中的 UDT 會使用**ConvertCurrency**函數來轉換貨幣值，這會在不同的類別中執行。 轉換演算法在未來有可能以非預期的方式變更，或者可能需要新的功能。 在規劃**** 未來的變更時`Currency` ，將 ConvertCurrency 函數與 UDT 的執行區隔開，可提供更大的彈性。  
   
 ### <a name="example"></a>範例  
- `Point`類別包含三個簡單的方法，來計算距離：**距離**， **DistanceFrom**並**DistanceFromXY**。 每一個方法都會傳回 `double`，計算從 `Point` 到零的距離、從指定點到 `Point` 的距離，以及從指定之 X 及 Y 座標到 `Point` 的距離。 **距離**並**DistanceFrom**每個呼叫**DistanceFromXY**，並示範如何使用不同的引數，每個方法。  
+ `Point`類別包含三個簡單的方法來計算距離：**距離**、 **DistanceFrom**和**DistanceFromXY**。 每一個方法都會傳回 `double`，計算從 `Point` 到零的距離、從指定點到 `Point` 的距離，以及從指定之 X 及 Y 座標到 `Point` 的距離。 **距離**和**DistanceFrom**每個呼叫**DistanceFromXY**，並示範如何針對每個方法使用不同的引數。  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -540,10 +556,12 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 ```  
   
 ### <a name="using-sqlmethod-attributes"></a>使用 SqlMethod 屬性  
- `Microsoft.SqlServer.Server.SqlMethodAttribute` 類別會提供可用來標示方法定義的自訂屬性，以便針對 Null 呼叫行為指定決定性以及指定方法是否為 mutator。 已假設這些屬性 (Property) 的預設值，而且只有在需要非預設值時才會使用自訂屬性 (Attribute)。  
+ 
+  `Microsoft.SqlServer.Server.SqlMethodAttribute` 類別會提供可用來標示方法定義的自訂屬性，以便針對 Null 呼叫行為指定決定性以及指定方法是否為 mutator。 已假設這些屬性 (Property) 的預設值，而且只有在需要非預設值時才會使用自訂屬性 (Attribute)。  
   
 > [!NOTE]  
->  `SqlMethodAttribute` 類別繼承自 `SqlFunctionAttribute` 類別，因此 `SqlMethodAttribute` 會繼承自 `FillRowMethodName` 而 `TableDefinition` 欄位會繼承自 `SqlFunctionAttribute`。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會進行編譯和組件進行部署，但是發生錯誤的相關`IEnumerable`傳回型別就會引發在執行階段，並出現下列訊息：「 方法、 屬性或欄位 '\<名稱 >' 中類別\<類別 >' 的組件中'\<組件 >' 有無效的傳回類型。 」  
+>  
+  `SqlMethodAttribute` 類別繼承自 `SqlFunctionAttribute` 類別，因此 `SqlMethodAttribute` 會繼承自 `FillRowMethodName` 而 `TableDefinition` 欄位會繼承自 `SqlFunctionAttribute`。 這意味著撰寫資料表值方法是可行的，不過情況不是這樣。 方法會`IEnumerable`編譯和元件部署，但傳回型別的相關錯誤會在執行時間引發，並出現下列訊息：「方法、屬性，或元件 '\<\<\<assembly> ' 中類別 ' class> ' 的欄位 ' name> ' 具有不正確傳回型別。」  
   
  下表說明可在 UDT 方法中使用的部分相關 `Microsoft.SqlServer.Server.SqlMethodAttribute` 屬性，並列出其預設值。  
   
@@ -551,19 +569,21 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  指出此函數是否包含對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體中儲存之使用者資料的存取權。 預設值是 `DataAccessKind`.`None`。  
   
  IsDeterministic  
- 指出如果輸入值及資料庫狀態都相同，此函數是否會產生相同的輸出值。 預設值是 `false`。  
+ 指出如果輸入值及資料庫狀態都相同，此函數是否會產生相同的輸出值。 預設值為 `false`。  
   
  IsMutator  
- 指出此方法是否會導致 UDT 執行個體的狀態變更。 預設值是 `false`。  
+ 指出此方法是否會導致 UDT 執行個體的狀態變更。 預設值為 `false`。  
   
  IsPrecise  
- 指出此函數是否包含不精確的計算，如浮點運算。 預設值是 `false`。  
+ 指出此函數是否包含不精確的計算，如浮點運算。 預設值為 `false`。  
   
  OnNullCall  
- 指出當指定 Null 參考輸入引數時，是否呼叫此方法。 預設值是 `true`。  
+ 指出當指定 Null 參考輸入引數時，是否呼叫此方法。 預設值為 `true`。  
   
 ### <a name="example"></a>範例  
- `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` 屬性可讓您將方法標示為允許 UDT 執行個體的狀態變更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 不允許您在一個 UPDATE 陳述式的 SET 子句中，設定兩個 UDT 屬性。 但是，您可以將方法標示為 mutator，這樣會變更兩個成員。  
+ 
+  `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` 屬性可讓您將方法標示為允許 UDT 執行個體的狀態變更。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 不允許您在一個 UPDATE 陳述式的 SET 子句中，設定兩個 UDT 屬性。 但是，您可以將方法標示為 mutator，這樣會變更兩個成員。  
   
 > [!NOTE]  
 >  查詢中不允許使用 Mutator 方法。 它們只能在指派陳述式或資料修改陳述式中呼叫。 如果標示為 mutator 的方法未傳回 `void` (或是 Visual Basic 中的 `Sub`)，CREATE TYPE 會失敗且發生錯誤。  
@@ -574,7 +594,8 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- `Rotate` 方法是以將 `SqlMethod` 設為 `IsMutator` 的 `true` 屬性來裝飾的，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以將方法標示為 Mutator 方法。 該程式碼還將 `OnNullCall` 設為 `false`，如此可向伺服器指出，如果任何輸入參數為 Null 參考，則該方法會傳回 Null 參考 (Visual Basic 中則為 `Nothing`)。  
+ 
+  `Rotate` 方法是以將 `SqlMethod` 設為 `IsMutator` 的 `true` 屬性來裝飾的，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以將方法標示為 Mutator 方法。 該程式碼還將 `OnNullCall` 設為 `false`，如此可向伺服器指出，如果任何輸入參數為 Null 參考，則該方法會傳回 Null 參考 (Visual Basic 中則為 `Nothing`)。  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -600,9 +621,11 @@ public void Rotate(double anglex, double angley, double anglez)
  以使用者定義的格式實作 UDT 時，您必須實作可將 Microsoft.SqlServer.Server.IBinarySerialize 介面實作為處理序列化及還原序列化 UDT 資料的 `Read` 及 `Write` 方法。 您也必須指定 `MaxByteSize` 的 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 屬性。  
   
 ### <a name="the-currency-udt"></a>Currency UDT  
- `Currency` UDT 隨附在 CLR 範例中，這些範例從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始就可以與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 一起安裝。  
+ 
+  `Currency` UDT 隨附在 CLR 範例中，這些範例從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始就可以與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 一起安裝。  
   
- `Currency` UDT 支援在特定文化特性的貨幣系統中處理貨幣金額。 您必須定義兩個欄位：針對 `string` 定義 `CultureInfo` (指定發行貨幣的一方，例如 en-us)，以及針對 `decimal` 定義 `CurrencyValue` (貨幣金額)。  
+ 
+  `Currency` UDT 支援在特定文化特性的貨幣系統中處理貨幣金額。 您必須定義兩個欄位：針對 `string` 定義 `CultureInfo` (指定發行貨幣的一方，例如 en-us)，以及針對 `decimal` 定義 `CurrencyValue` (貨幣金額)。  
   
  雖然伺服器不會用它來執行比較，但是 `Currency` UDT 會實作 `System.IComparable` 介面，而此介面會公開單一方法 `System.IComparable.CompareTo`。 這會在用戶端上使用，此時需要正確地比較或排序文化特性中的貨幣值。  
   
@@ -620,7 +643,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  填補的目的是確保文化特性與貨幣值完全分開，以便在將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼中的一個 UDT 與另一 UDT 進行比較時，會將文化特性位元組與文化特性位元組進行比較，並將貨幣位元組值與貨幣位元組值進行比較。  
   
- 針對完整的程式碼清單`Currency`UDT 中的指示，說明如何安裝 CLR 範例的後續[SQL Server Database Engine 範例](http://msftengprodsamples.codeplex.com/)。  
+ 如需`Currency` UDT 的完整程式代碼清單，請遵循在[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)中安裝 CLR 範例的指示。  
   
 ### <a name="currency-attributes"></a>Currency 屬性  
  使用下列屬性定義 `Currency` UDT。  
@@ -744,9 +767,8 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- 針對完整的程式碼清單`Currency`UDT，請參閱 < [SQL Server Database Engine 範例](http://msftengprodsamples.codeplex.com/)。  
+ 如需`Currency` UDT 的完整程式代碼清單，請參閱[SQL Server 資料庫引擎範例](https://msftengprodsamples.codeplex.com/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立使用者定義型別](creating-user-defined-types.md)  
-  
   

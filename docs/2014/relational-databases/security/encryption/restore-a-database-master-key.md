@@ -9,32 +9,32 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011555"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957152"
 ---
 # <a name="restore-a-database-master-key"></a>還原資料庫主要金鑰
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，還原 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的資料庫主要金鑰。  
   
- **本主題內容**  
+ **本主題中的**  
   
 -   **開始之前：**  
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全級](#Security)  
   
--   [若要使用 Transact-SQL 還原資料庫主要金鑰](#SSMSProcedure)  
+-   [若要使用 Transact-sql 還原資料庫主要金鑰](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="BeforeYouBegin"></a>開始之前  
   
-###  <a name="Restrictions"></a> 限制事項  
+###  <a name="Restrictions"></a>限制事項  
   
 -   當主要金鑰還原時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會解密所有利用目前作用中主要金鑰加密的金鑰，然後利用還原的主要金鑰加密這些金鑰。 這項需要大量資源的作業應該安排在低需求時進行。 如果目前資料庫主要金鑰未開啟或無法開啟，或者，如果利用該金鑰加密的任何金鑰無法解密，還原作業便會失敗。  
   
@@ -44,12 +44,12 @@ ms.locfileid: "63011555"
   
 -   如果目前資料庫中沒有主要金鑰，RESTORE MASTER KEY 會建立主要金鑰。 不會自動利用服務主要金鑰來加密新的主要金鑰。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全級  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a>無權  
  需要資料庫的 CONTROL 權限。  
   
-##  <a name="SSMSProcedure"></a> 搭配 Transact-SQL 使用 SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>搭配 Transact-sql 使用 SQL Server Management Studio  
   
 #### <a name="to-restore-the-database-master-key"></a>若要還原資料庫主要金鑰  
   
@@ -57,9 +57,9 @@ ms.locfileid: "63011555"
   
 2.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-3.  在標準列上，按一下 **[新增查詢]** 。  
+3.  在 [標準]  列上，按一下 [新增查詢] ****。  
   
-4.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]** 。  
+4.  將下列範例複製並貼入查詢視窗中，然後按一下 [**執行**]。  
   
     ```  
     -- Restores the database master key of the AdventureWorks2012 database.  

@@ -15,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829363"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232731"
 ---
 # <a name="xml-task"></a>XML 工作
   XML 工作用於處理 XML 資料。 使用此工作，封裝可以擷取 XML 文件、使用「可延伸樣式表語言轉換」(XSLT) 樣式表和 XPath 運算式將作業套用到文件、合併多個文件，或者驗證、比較更新的文件，並將其儲存至檔案和變數。  
@@ -46,19 +46,19 @@ ms.locfileid: "62829363"
   
  如果來源是變數，則指定的變數會包含 XML 文件的路徑。  
   
- 如果來源是「檔案」連接管理員，則指定的「檔案」連接管理員會提供來源資訊。 「檔案」連接管理員會在 XML 工作以外另行設定，並在 XML 工作中參考。 「檔案」連接管理員的連接字串會指定 XML 檔案的路徑。 如需相關資訊，請參閱 [File Connection Manager](../connection-manager/file-connection-manager.md)。  
+ 如果來源是「檔案」連接管理員，則指定的「檔案」連接管理員會提供來源資訊。 「檔案」連接管理員會在 XML 工作以外另行設定，並在 XML 工作中參考。 「檔案」連接管理員的連接字串會指定 XML 檔案的路徑。 如需詳細資訊，請參閱[File Connection Manager](../connection-manager/file-connection-manager.md)。  
   
  可以設定 XML 工作，以將作業結果儲存到變數或檔案。 如果儲存到檔案，XML 工作則使用「檔案」連接管理員來存取此檔案。 您也可以將差異作業產生的 Diffgram 結果儲存到檔案和變數。  
   
 ## <a name="predefined-xml-operations"></a>預先定義的 XML 作業  
  XML 工作包括一組預先定義的作業，用於處理 XML 文件。 下表描述這些作業。  
   
-|運算|描述|  
+|作業|描述|  
 |---------------|-----------------|  
 |Diff|比較兩份 XML 文件。 差異作業使用來源 XML 文件做為基底文件，將其與第二個 XML 文件相比較，偵測兩者的差異，並將差異寫入 XML Diffgram 文件。 此作業包含用於自訂比較的屬性。|  
-|合併式|合併兩份 XML 文件。 「合併」作業使用來源 XML 文件做為基底文件，將第二個文件的內容加入此基底文件。 此作業可以指定基底文件中的合併位置。|  
-|修補|將差異作業的輸出 (稱為 Diffgram 文件) 套用到 XML 文件，以新建包含 Diffgram 文件內容的父文件。|  
-|Validate|針對「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述來驗證 XML 文件。|  
+|合併|合併兩份 XML 文件。 「合併」作業使用來源 XML 文件做為基底文件，將第二個文件的內容加入此基底文件。 此作業可以指定基底文件中的合併位置。|  
+|修補程式|將差異作業的輸出 (稱為 Diffgram 文件) 套用到 XML 文件，以新建包含 Diffgram 文件內容的父文件。|  
+|驗證|針對「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述來驗證 XML 文件。|  
 |XPath|執行 XPath 查詢和評估。|  
 |XSLT|在 XML 文件上執行 XSL 轉換。|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62829363"
 ### <a name="xpath-operation"></a>XPath 作業  
  可以將 XPath 作業設定為使用不同類型的 XPath 功能。  
   
--   選取 [評估]  選項以實作 XPath 函數，例如 sum()。  
+-   選取 [評估]**** 選項以實作 XPath 函數，例如 sum()。  
   
 -   選取 **[節點清單]** 選項，將選取的節點當做 XML 片段傳回。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62829363"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML 工作上可用的自訂記錄訊息  
  下表描述 XML 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。  
   
-|記錄項目|描述|  
+|記錄檔項目|描述|  
 |---------------|-----------------|  
 |`XMLOperation`|提供有關工作執行之作業的資訊。|  
   
@@ -119,9 +119,9 @@ ms.locfileid: "62829363"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [XML 工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[XML 工作編輯器] &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validate XML with the XML Task](xml-task.md)  
+-   [使用 XML 工作驗證 XML](xml-task.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   
@@ -141,6 +141,5 @@ ms.locfileid: "62829363"
   
 -   agilebi.com 上的部落格文章： [XML 目的地指令碼元件](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
   
--   www.codeplex.com 上的 CodePlex 範例： [處理 XML 資料封裝範例](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
-  
+-   [www.codeplex.com](www.codeplex.com) 上的 CodePlex 範例： [處理 XML 資料封裝範例](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
   

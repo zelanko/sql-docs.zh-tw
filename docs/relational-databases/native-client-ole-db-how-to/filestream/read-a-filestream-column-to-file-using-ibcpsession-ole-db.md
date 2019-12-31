@@ -1,5 +1,5 @@
 ---
-title: 使用 IBCPSession 將 FILESTREAM 資料行讀到檔案中 (OLE DB) | Microsoft
+title: FILESTREAM 到 File、IBCPSession （OLE DB）
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,28 +11,28 @@ ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68c16521b787208a4c4653096e26224695b26dd2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: a94b904d191b2d39adc03c9012c2e4c4469da61a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73767004"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75225853"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>使用 IBCPSession 將 FILESTREAM 資料行讀到檔案中 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   此範例會使用 IBCPSession 介面將 Filestream 資料行讀到檔案中，並寫入格式檔案。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[ &#40;OLE DB&#41;的 filestream 支援](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱[&#40;OLE DB&#41;的 Filestream 支援](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  使用下列其中一個範例來建立此範例讀取的來源資料表：  
   
--   [使用繫結至 ICommandText 參數的 ISequentialStream 將資料傳送到 FILESTREAM 資料行 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [使用系結至 ICommandText 參數 &#40;OLE DB 的 ISequentialStream，將資料傳送到 FILESTREAM 資料行&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [使用 IRowsetFastUpload &#40;OLE DB 將資料傳送到 FILESTREAM 資料行&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  複製第一個程式碼清單並將它貼入名為 ISSHelper.h 的檔案中。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73767004"
   
  執行此範例時，您必須傳遞一個伺服器名稱 (或 server\instance_name) 以及將會建立之格式檔案的名稱。  
   
-```  
+```cpp
 // ISSHelper.h: interface for the CISSHelper class.  
   
 #if !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
@@ -96,7 +96,7 @@ private:
 #endif // !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
 ```  
   
-```  
+```cpp
 // ISSHelper.cpp: implementation of the CISSHelper class.  
   
 #pragma once  
@@ -238,7 +238,7 @@ HRESULT CISSHelper::Write( const void *pv, ULONG cb, ULONG* pcbWritten ) {
 }  
 ```  
   
-```  
+```cpp
 //  IBCPSession.cpp  
 #pragma once  
 #define WIN32_LEAN_AND_MEAN// Exclude rarely-used stuff from Windows headers  

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 610c9d33ecb2423a64ae76708d2f38d1f8fd88a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 12/19/2019
 ms.locfileid: "66065096"
 ---
 # <a name="copy-or-export-target-data"></a>複製或匯出目標資料
@@ -25,11 +25,11 @@ ms.locfileid: "66065096"
   
 ## <a name="to-copy-target-data"></a>若要複製目標資料  
   
--   在目標資料視窗中，選取您要複製的資料列，並以滑鼠右鍵按一下選取範圍，然後選取 **[複製]** 。  
+-   在目標資料視窗中，選取您要複製的資料列，並以滑鼠右鍵按一下選取範圍，然後選取 **[複製]**。  
   
 ## <a name="to-export-target-data-to-a-csv-file"></a>若要將目標資料匯出到 .CSV 檔  
   
-1.  在目標資料視窗中，選取您要匯出的資料列，並以滑鼠右鍵按一下選取範圍，然後選取 **[匯出至 CSV]** 。  
+1.  在目標資料視窗中，選取您要匯出的資料列，並以滑鼠右鍵按一下選取範圍，然後選取 **[匯出至 CSV]**。  
   
 2.  在 **[另存新檔]** 對話方塊中，指定檔案資料夾和名稱。  
   

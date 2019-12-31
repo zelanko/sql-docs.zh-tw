@@ -9,23 +9,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011312"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957122"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和資料庫加密金鑰 (Database Engine)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用加密金鑰來保護儲存於伺服器資料庫中之資料、認證和連接資訊的安全。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩種類型的金鑰： *「對稱」* (Symmetric) 與 *「非對稱」* (Asymmetric)。 對稱金鑰會使用相同的密碼為資料加密與解密。 非對稱金鑰會使用某個密碼來加密資料 (稱為「公開」  金鑰)，並使用另一個密碼來解密資料 (稱為「私密」  金鑰)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會使用加密金鑰來協助保護儲存在伺服器資料庫中的資料、認證和連接資訊。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]有兩種類型的金鑰：*對稱*和*非對稱*。 對稱金鑰會使用相同的密碼為資料加密與解密。 非對稱金鑰會使用某個密碼來加密資料 (稱為「公開」** 金鑰)，並使用另一個密碼來解密資料 (稱為「私密」** 金鑰)。  
   
- 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密金鑰包括用於保護機密資料的公開、私密和對稱金鑰的組合。 當您初次啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體時，會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化期間建立對稱金鑰。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用此金鑰來加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內所儲存的敏感性資料。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存資料庫中之敏感性資料的每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，建立一組公開金鑰和私密金鑰。  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密金鑰包括用於保護機密資料的公開、私密和對稱金鑰的組合。 當您初次啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體時，會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初始化期間建立對稱金鑰。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用此金鑰來加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內所儲存的敏感性資料。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存資料庫中之敏感性資料的每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，建立一組公開金鑰和私密金鑰。  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>SQL Server 和資料庫金鑰的套用  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對於金鑰有兩個主要的應用：針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體產生「服務主要金鑰」  (SMK)，並將「資料庫主要金鑰」  (DMK) 用於資料庫。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]金鑰有兩個主要的應用程式：在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]實例上產生的*服務主要金鑰*（SMK），以及用於資料庫的*資料庫主要金鑰*（DMK）。  
   
  SMK 會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體第一次啟動時自動產生，並用來加密連結伺服器密碼、認證和資料庫主要金鑰。 SMK 的加密方式，是使用透過 Windows Data Protection API (DPAPI) 的本機電腦金鑰。 DPAPI 會使用一個衍生自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶和電腦認證之 Windows 認證的金鑰。 服務主要金鑰只能由建立它時所使用的服務帳戶解密，或是只能由可以存取電腦認證的主體解密。  
   
@@ -80,21 +81,21 @@ ms.locfileid: "63011312"
   
  [在兩部伺服器上建立相同的對稱金鑰](create-identical-symmetric-keys-on-two-servers.md)  
   
- [使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [使用 Azure Key Vault &#40;SQL Server 的可延伸金鑰管理&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
  [使用 EKM 啟用 TDE](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="related-content"></a>相關內容  
- [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
+ [建立主要金鑰 &#40;Transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
- [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
+ [&#40;Transact-sql&#41;更改服務主要金鑰](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
  [還原資料庫主要金鑰](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [備份與還原 Reporting Services 加密金鑰](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [刪除和重新建立加密金鑰 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [加入和移除向外延展部署的加密金鑰 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [備份和還原 Reporting Services 加密金鑰](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [刪除並重新建立 &#40;SSRS Configuration Manager 的加密金鑰&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [新增和移除向外延展部署 &#40;SSRS Configuration Manager 的加密金鑰&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [透明資料加密 &#40;TDE&#41;](transparent-data-encryption.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 了解行程順序和求解順序 (MDX) |Microsoft Docs
+title: 瞭解行程順序和解決順序（MDX） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 39e1c4ae6de01be55bf94f60e06c7979765f1b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074242"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75229434"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>了解行程順序與解決順序 (MDX)
   當 Cube 做為 MDX 指令碼的計算結果時，Cube 會根據所使用的各種計算相關功能來進行多個計算階段。 每個階段都稱為一個計算行程。  
@@ -37,9 +37,10 @@ ms.locfileid: "66074242"
 ## <a name="solve-order"></a>解決順序  
  解決順序決定在運算式發生競爭事件時，計算的優先權。 在單一行程內，解決順序決定兩件事情：  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估維度、成員、導出成員、自訂積存和導出資料格的順序。  
+-   評估維度、成員[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 、匯出成員、自訂匯總和匯出資料格的順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估自訂成員、導出成員、自訂積存和導出資料格的順序。  
+-   
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估自訂成員、導出成員、自訂積存和導出資料格的順序。  
   
  擁有最高解決順序的成員優先。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "66074242"
  強烈建議您在設定解決順序值時只使用正整數。 如果您指定比上表中解決順序值還低的值，計算行程可能會變得無法預測。 例如，導出成員的計算會收到一個低於預設自訂積存公式值 -5119 的解決順序值。 這類低的解決順序值會造成導出成員的計算早於自訂積存公式，所以會產生不正確的結果。  
   
 ### <a name="creating-and-changing-solve-order"></a>建立與變更解決順序  
- 在 [Cube 設計師] 的 [計算窗格]  上，您可以變更計算的順序，來變更導出成員和導出資料格的解決順序。  
+ 在 [Cube 設計師] 的 [計算窗格]**** 上，您可以變更計算的順序，來變更導出成員和導出資料格的解決順序。  
   
  在 MDX 中，您可以使用 `SOLVE_ORDER` 關鍵字來建立或變更導出成員與導出資料格。  
   
@@ -67,9 +68,9 @@ ms.locfileid: "66074242"
  為了方便說明解決順序的可能複雜性，下列 MDX 查詢以兩個查詢開始，而個別查詢沒有解決順序的問題。 當這兩個查詢結合成一個查詢時，就需要解決順序。  
   
 > [!NOTE]  
->  您可以針對 Adventure Works 範例多維度資料庫執行這些 MDX 查詢。 您可以從 codeplex 網站下載 [AdventureWorks Multidimensional Models SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) (AdventureWorks 多維度模型 SQL Server 2012) 範例。  
+>  您可以針對 Adventure Works 範例多維度資料庫執行這些 MDX 查詢。 您可以從 codeplex 網站下載 [AdventureWorks Multidimensional Models SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) (AdventureWorks 多維度模型 SQL Server 2012) 範例。  
   
-### <a name="query-1-differences-in-income-and-expenses"></a>查詢 1-收益和費用差異  
+### <a name="query-1-differences-in-income-and-expenses"></a>查詢 1-收益和費用的差異  
  在第一個 MDX 查詢中，建構一個簡單的 MDX 查詢來計算每年銷售和成本的差異，如以下範例所示：  
   
 ```  
@@ -92,9 +93,9 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**Year Difference**|($20,160.56)|$2,878.06|  
+|**年差異**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2-percentage-of-income-after-expenses"></a>查詢 2-的扣除費用後的收益百分比  
+### <a name="query-2-percentage-of-income-after-expenses"></a>查詢 2-費用後的收入百分比  
  在第二個查詢中，使用以下 MDX 查詢來計算每年扣除費用後的收益百分比：  
   
 ```  
@@ -122,10 +123,11 @@ FROM [Adventure Works]
   
  第一個查詢和第二個查詢之間的結果集差異，在於導出成員的位置差異。 在第一個查詢中，導出成員是 ROWS 座標軸的一部份，而不是第二個查詢中的 COLUMNS 座標軸。 此種位置的差異在下一個查詢 (結合單一 MDX 查詢的兩個導出成員) 中就變得很重要。  
   
-### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>查詢 3 結合年度差異和淨收益的計算  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>查詢 3-結合年份差異和淨收益計算  
  在結合上述兩個範例到單一 MDX 查詢的最終查詢中，求解順序就變得很重要，因為會同時計算資料行和資料列。 若要確定以正確的順序進行計算，請使用 `SOLVE_ORDER` 關鍵字定義計算順序。  
   
- `SOLVE_ORDER` 關鍵字指定 MDX 查詢中導出成員或 `CREATE MEMBER` 命令的解決順序。 和 `SOLVE_ORDER` 關鍵字並用的整數值是相對值，不需要從零開始，也不需要連續。 此數值只是告知 MDX 根據有較高值的成員計算所得出的值來導出成員。 如果導出成員沒有以 `SOLVE_ORDER` 關鍵字定義，該導出成員的預設值為零。  
+ 
+  `SOLVE_ORDER` 關鍵字指定 MDX 查詢中導出成員或 `CREATE MEMBER` 命令的解決順序。 和 `SOLVE_ORDER` 關鍵字並用的整數值是相對值，不需要從零開始，也不需要連續。 此數值只是告知 MDX 根據有較高值的成員計算所得出的值來導出成員。 如果導出成員沒有以 `SOLVE_ORDER` 關鍵字定義，該導出成員的預設值為零。  
   
  例如，如果您結合前兩個範例查詢中使用的計算，兩個導出成員 `Year Difference` 和 `Profit Margin`會在 MDX 查詢範例之結果資料集中的單一資料格中產生交集。 決定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 如何評估此資料格的唯一方式，就是解決順序。 用來建立此資料格的公式會根據兩個導出成員的解決順序，來產生不同的結果。  
   
@@ -149,13 +151,14 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- 在此結合的 MDX 查詢範例中， `Profit Margin` 擁有最高的解決順序，所以當兩個運算式有交集時會優先處理它。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會使用 `Profit Margin` 公式來評估有問題的資料格。 此巢狀計算的結果，如下表所示。  
+ 在此結合的 MDX 查詢範例中， `Profit Margin` 擁有最高的解決順序，所以當兩個運算式有交集時會優先處理它。 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會使用 `Profit Margin` 公式來評估有問題的資料格。 此巢狀計算的結果，如下表所示。  
   
 ||Internet Sales Amount|Internet Total Product Cost|獲利率|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
+|**年差異**|($20,160.56)|$2,878.06|114.28%|  
   
  共用資料格中的結果是以 `Profit Margin`的公式為基礎。 也就是說， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會計算含有 `Year Difference` 資料之共用資料格的結果，產生下列公式 (為了清楚起見，結果為四捨五入)：  
   
@@ -163,7 +166,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- 中的多個  
+ 或  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -195,7 +198,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
+|**年差異**|($20,160.56)|$2,878.06|(0.15%)|  
   
  因為此查詢使用含有 `Year Difference` 資料的 `Profit Margin` 公式，所以共用資料格的公式會類似以下計算：  
   
@@ -215,7 +218,6 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>另請參閱  
  [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
- [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [操作資料 &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
-  
+ [&#40;MDX&#41;的 CREATE MEMBER 語句](/sql/mdx/mdx-data-definition-create-member)   
+ [&#40;MDX&#41;運算元據](mdx-data-manipulation-manipulating-data.md)  
   

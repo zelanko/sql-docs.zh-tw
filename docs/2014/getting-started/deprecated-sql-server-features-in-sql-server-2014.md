@@ -1,5 +1,5 @@
 ---
-title: SQL Server 功能，SQL Server 2014 中的已被取代 |Microsoft Docs
+title: SQL Server 2014 中已淘汰的 SQL Server 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d28d829280e205028a99afd9fec2e019bf567ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089483"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228221"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 SQL Server 功能
   此主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中仍然可用之已被取代的功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -23,16 +23,21 @@ ms.locfileid: "66089483"
 ## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>下一版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的功能  
  下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 「功能名稱」欄會出現在追蹤事件中當做 ObjectName，並在效能計數器和 sys.dm_os_performance_counters 中當做 instance_name。 「功能識別碼」會出現在追蹤事件中當做 ObjectId。  
   
-|Category|已被取代的功能|取代|功能名稱|功能識別碼|  
+|類別|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|資料可程式性|[sys.soap_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Windows Communications Foundation (WCF) 或 ASP.NET|原生 XML Web Service|22|  
-|資料可程式性|[sys.endpoint_webmethods &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) 或 ASP.NET|原生 XML Web Service|23|  
+|資料可程式性|[soap_endpoints &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Windows Communications Foundation (WCF) 或 ASP.NET|原生 XML Web Service|22|  
+|資料可程式性|[endpoint_webmethods &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) 或 ASP.NET|原生 XML Web Service|23|  
   
 ### <a name="slipstream-functionality"></a>匯集功能  
- 產品更新功能取代了之前 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1 中可用的匯集功能。 因此的命令列參數 /*PCUSource*和 /*CUSource*，匯集功能應該不會再使用相關聯。 這些參數仍可繼續運作，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式的未來版本可能會移除這些參數。 /*UpdateSource*參數，結合了 「 匯集參數功能 /*PCUSource*和 /*CUSource*。  
+ [產品更新功能](/previous-versions/sql/sql-server-2012/hh231670(v=sql.110)?redirectedfrom=MSDN)已在 SQL Server 2012 中引進，做為 PCU1 中[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]所提供彙集功能的延伸模組。 在 SQL Server 2014 中，產品更新功能是用於彙集 SQL Server 的建議方法。 因此，不應再使用與原始彙集功能相關聯的命令列參數、/*PCUSource*和/*CUSource*。 這些參數將會繼續作用，但在未來的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝程式版本中可能會移除。 建議使用的參數是/*UpdateSource* ，其結合了原始彙集參數、/*PCUSource*和/*CUSource*的功能。  
   
- 如需有關中可用的匯集功能[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1 中，請參閱 <<c2> [ 匯集 SQL Server 更新](https://go.microsoft.com/fwlink/?LinkId=219945)(https://go.microsoft.com/fwlink/?LinkId=219945) 。  
-  
+ 如需 PCU1 中[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]可用彙集功能的詳細資訊，請參閱彙集[SQL Server 更新](https://go.microsoft.com/fwlink/?LinkId=219945)（。https://go.microsoft.com/fwlink/?LinkId=219945)  
+ 如需如何使用/*UpdateSource*來彙集 SQL Server 組建的詳細資訊，請參閱下列各項：
+ 
+ - [如何使用更新的安裝程式套件修補 SQL Server 2012 安裝程式（使用 UpdateSource 取得智慧型設定）](https://blogs.msdn.microsoft.com/jason_howell/2012/08/28/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup/)
+ 
+ - [SQL Server 2012 安裝程式變得更聰明 .。。](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2012-Setup-just-got-smarter-8230/ba-p/317440)
+ 
 ## <a name="see-also"></a>另請參閱  
  [回溯相容性](../../2014/getting-started/backward-compatibility.md)  
   

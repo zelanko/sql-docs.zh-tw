@@ -1,6 +1,7 @@
 ---
-title: 允許網路存取權的資料庫鏡像端點使用 Windows 驗證 (SQL Server) |Microsoft Docs
-ms.custom: ''
+title: 資料庫鏡像端點的網路存取
+description: 瞭解如何允許 SQL Server 的 windows authenticatino 網路存取資料庫鏡像端點。
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,19 +14,19 @@ ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d561c3939a8f13767faf9195102080cc7b73af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e40a1eead54fe9d00eaf099410260023229796d0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62807482"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228571"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>使用 Windows 驗證允許資料庫鏡像的網路存取 (SQL Server)
   若要將 Windows 驗證用於連接兩個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的資料庫鏡像端點，在下列狀況下，需要手動設定登入帳戶：  
   
 -   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體會以服務的形式在不同的網域帳戶底下執行 (在相同或受信任的網域中)，您就必須在每個遠端伺服器執行個體的 **master** 中建立每個帳戶的登入，而且該登入必須被授與端點的 CONNECT 權限。  
   
--   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體會以網路服務帳戶的身分執行，您就必須在每個遠端伺服器執行個體的 **master** 中建立每個主機電腦帳戶的登入 (*DomainName***\\***ComputerName$* )，而且該登入必須被授與端點的 CONNECT 權限。 這是因為在 Network Service 帳戶底下執行的伺服器執行個體會使用主機電腦的網域帳戶進行驗證。  
+-   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體會以網路服務帳戶的身分執行，您就必須在每個遠端伺服器執行個體的 *master*** 中建立每個主機電腦帳戶的登入 (\\DomainName******ComputerName$** )，而且該登入必須被授與端點的 CONNECT 權限。 這是因為在 Network Service 帳戶底下執行的伺服器執行個體會使用主機電腦的網域帳戶進行驗證。  
   
 > [!NOTE]  
 >  請確定每個伺服器執行個體都有端點存在。 如需詳細資訊，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
@@ -53,9 +54,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性群組 &#40;SQL Server 的總覽&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
- [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [資料庫鏡像端點 &#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

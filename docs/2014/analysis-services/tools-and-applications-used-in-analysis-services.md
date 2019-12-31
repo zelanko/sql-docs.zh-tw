@@ -1,5 +1,5 @@
 ---
-title: 工具和 Analysis Services 中使用的應用程式 |Microsoft Docs
+title: Analysis Services 中使用的工具和應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 169ae399522f8de40b8a50dba0b98ccc4ddc57c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c04742d0e0a84dd35e300bace9107685685ef75b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065865"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228896"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services 中使用的工具和應用程式
   尋找在 Analysis Services 執行個體上建立 Analysis Services 模型和管理關聯資料庫所需的工具與應用程式。  
@@ -33,7 +33,7 @@ ms.locfileid: "66065865"
  如果電腦上已安裝舊版的 SSDT-BI 或 BIDS，較新的版本會與舊版並存安裝。 通常會在單一工作站上執行新版與舊版的設計工具，這樣一來，您就可以修改與特定伺服器版本繫結的專案和方案。  
   
 > [!NOTE]  
->  Visual Studio 2012 和 Visual Studio 2013 版的 SSDT 有幾個下載網站。 大部分都未包括 BI 專案範本。 使用上述連結會讓您得到正確的版本。 您知道您擁有的是正確版本的 SSDT BI，是否您看到商業智慧專案範本資料夾。 此資料夾包含 Analysis Services、Reporting Services 和 Integration Services 適用的專案範本。 依據您安裝 SSDT-BI 的方式，您也可能會看到一個額外的 SQL Server 資料庫專案範本。  
+>  Visual Studio 2012 和 Visual Studio 2013 版的 SSDT 有幾個下載網站。 大部分都未包括 BI 專案範本。 使用上述連結會讓您得到正確的版本。 如果您看到 [商業智慧專案範本] 資料夾，您會知道您擁有正確的 SSDT-BI 版本。 此資料夾包含 Analysis Services、Reporting Services 和 Integration Services 適用的專案範本。 依據您安裝 SSDT-BI 的方式，您也可能會看到一個額外的 SQL Server 資料庫專案範本。  
   
  ![SSDT 中的新專案範本](media/ssdt-biprojects.png "SSDT 中的新專案範本")  
   
@@ -49,6 +49,4 @@ ms.locfileid: "66065865"
  您可以使用 PowerShell 命令來執行許多系統管理工作。 如需詳細資訊，請參閱＜ [Analysis Services PowerShell](analysis-services-powershell.md) ＞。  
   
 ### <a name="community-and-third-party-tools"></a>社群與協力廠商工具  
- 如需社群程式碼範例，請造訪 [Analysis Services codeplex 頁面](http://sqlsrvanalysissrvcs.codeplex.com/) 。 當您在尋找支援 Analysis Services 之協力廠商工具的建議時，[論壇](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) 是相當實用的資源。  
-  
-  
+ 如需社群程式碼範例，請造訪 [Analysis Services codeplex 頁面](https://sqlsrvanalysissrvcs.codeplex.com/) 。 針對支援 Analysis Services 的協力廠商工具尋求建議時，[論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices)會很有説明。  

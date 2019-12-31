@@ -30,12 +30,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1a82d94e1a2dbf3f2155a93c8a3e8c46383dbde
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b0d61f3262d68bcc14abc6b03f83c53ed3a8ba95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154547"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232085"
 ---
 # <a name="database-lifecycle-management"></a>資料庫生命週期管理
   資料庫生命週期管理 (DLM) 是一種管理資料庫和資料資產的原則式方法。 DLM 不是產品而是一套針對資料庫應用程式管理資料庫結構描述、資料和中繼資料的完整方法。 周全且主動的 DLM 方法可讓組織根據適當的效能、保護、可用性和成本層級管理資料資源。  
@@ -45,10 +45,9 @@ ms.locfileid: "70154547"
  若要閱讀完整主題，請參閱 [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)(資料庫生命週期管理 (DLM))。  
   
 ## <a name="see-also"></a>另請參閱  
- [Azure 首頁](http://www.windowsazure.com/)   
- [Azure 開發人員中心](http://www.windowsazure.com/develop/overview/)   
- [Azure 管理中心](http://www.windowsazure.com/manage/overview/)   
- [Azure 團隊部落格](http://www.windowsazure.com/community/blog/)   
- [Azure 支援選項](http://www.windowsazure.com/support/contact/)  
-  
+ [Azure 首頁](https://www.windowsazure.com/)   
+ [Azure 開發人員中心](https://www.windowsazure.com/develop/overview/)   
+ [Azure 管理中心](https://www.windowsazure.com/manage/overview/)   
+ [Azure 小組 Blog](https://www.windowsazure.com/community/blog/)   
+ [Azure 支援選項](https://www.windowsazure.com/support/contact/)  
   

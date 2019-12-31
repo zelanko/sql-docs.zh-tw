@@ -1,5 +1,5 @@
 ---
-title: 實作 OR 運算子，原生編譯的預存程序 |Microsoft Docs
+title: 在原生編譯的預存程式中執行 OR 運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62778909"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228214"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>在原生編譯的預存程序中實作 OR 運算子
   原生編譯預存程序內部的查詢述詞中不支援 OR 運算子。 由於原生編譯預存程序內部的查詢述詞中也不支援 NOT 運算子，所以無法透過單獨使用同等的邏輯運算子來模擬 OR 運算子的效果。 不過，OR 運算子的效果可透過記憶體最佳化資料表變數加以模擬。  
@@ -46,7 +46,7 @@ ms.locfileid: "62778909"
   
 5.  使用記憶體最佳化資料表變數的內容當做查詢的結果。  
   
- 下列範例使用 AdventureWorks2012 資料庫中為 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 更新的資料表。 若要下載此範例中，移至的檔案[AdventureWorks 資料庫-2012、 2008 r2 和 2008年](http://msftdbprodsamples.codeplex.com/releases/view/93587)。 若要套用[!INCLUDE[hek_2](../includes/hek-2-md.md)]程式碼 AdventureWorks2012 的範例，請前往[SQL Server 2014 記憶體中 OLTP 範例](https://msftdbprodsamples.codeplex.com/releases/view/114491)。  
+ 下列範例使用 AdventureWorks2012 資料庫中為 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 更新的資料表。 若要下載此範例的檔，請移至[AdventureWorks 資料庫-2012、2008R2 和 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587)。 若要[!INCLUDE[hek_2](../includes/hek-2-md.md)]將程式碼範例套用至 AdventureWorks2012，請移至[SQL Server 2014 記憶體內部 OLTP 範例](https://msftdbprodsamples.codeplex.com/releases/view/114491)。  
   
  將下列預存程序加入至資料庫。 我們將會轉換這個預存程序來使用原生編譯。  
   
@@ -161,7 +161,7 @@ GO
   
 5.  使用記憶體最佳化資料表變數的內容當做查詢的結果。  
   
- 下列範例使用 AdventureWorks2012 資料庫中為 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 更新的資料表。 若要下載此範例中，移至的檔案[AdventureWorks 資料庫-2012、 2008 r2 和 2008年](http://msftdbprodsamples.codeplex.com/releases/view/93587)。 若要套用[!INCLUDE[hek_2](../includes/hek-2-md.md)]程式碼 AdventureWorks2012 的範例，請前往[SQL Server 2014 記憶體中 OLTP 範例](https://msftdbprodsamples.codeplex.com/releases/view/114491)。  
+ 下列範例使用 AdventureWorks2012 資料庫中為 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 更新的資料表。 若要下載此範例的檔，請移至[AdventureWorks 資料庫-2012、2008R2 和 2008](https://msftdbprodsamples.codeplex.com/releases/view/93587)。 若要[!INCLUDE[hek_2](../includes/hek-2-md.md)]將程式碼範例套用至 AdventureWorks2012，請移至[SQL Server 2014 記憶體內部 OLTP 範例](https://msftdbprodsamples.codeplex.com/releases/view/114491)。  
   
  將下列預存程序加入至資料庫。 我們將會轉換這個預存程序來使用原生編譯。 此範例使用 INNER JOIN 條件。  
   
@@ -246,6 +246,5 @@ GO
  如果您在 WHERE 子句或 JOIN 條件中有多個 OR 運算子，模擬此行為所必須執行的查詢數目可能會以指數方式遞增。 這樣可能會降低查詢效能，也可能會增加記憶體使用量，因為必須使用記憶體最佳化資料表變數。  
   
 ## <a name="see-also"></a>另請參閱  
- [原生編譯預存程序的移轉問題](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-  
+ [原生編譯預存程式的遷移問題](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   

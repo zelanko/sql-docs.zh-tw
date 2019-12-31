@@ -1,5 +1,5 @@
 ---
-title: 使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來擷取資料行 | Microsoft Docs
+title: Fetch、IRow：： GetColumns 和 ISequentialStream
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1592de2a70018f000c845e4008d41a95f35a312
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 1151da2b2763aec188682ba6e5e227a8b560855f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790109"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226085"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "73790109"
   大型資料可以使用 **ISequentialStream** 介面來繫結或擷取。 若為繫結資料行，狀態旗標 DBSTATUS_S_TRUNCATED 會指出資料是否遭到截斷。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)將它們加密。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行  
   
@@ -40,22 +40,22 @@ ms.locfileid: "73790109"
   
     -   **IRow：： Open （）** 可以用來開啟資料列上的**ISequentialStream** 。 指定 DBGUID_STREAM，表示資料行包含二進位資料的資料流 (然後 **ISteam** 或 **ISequentialStream** 就可用來讀取資料行中的資料)。  
   
-    -   如果使用 **IRow::GetColumns()** ，DBCOLUMNACCESS 結構的 **pData** 項目就會設定為指向資料流物件。  
+    -   如果使用 **IRow::GetColumns()**，DBCOLUMNACCESS 結構的 **pData** 項目就會設定為指向資料流物件。  
   
 4.  重複使用**ISequentialStream：： read （）** ，將指定的位元組數目讀入取用者緩衝區中。  
   
 ## <a name="example"></a>範例  
  此範例會示範如何使用 IRow 提取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會說明 IRow::Open() 以及 IRow::GetColumns() 的使用方式。 為了讀取資料行的資料，此範例會使用 ISequentialStream::Read。  
   
- 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server 範例和社群專案](https://go.microsoft.com/fwlink/?LinkID=85384)首頁下載。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料表。  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   
@@ -96,7 +96,7 @@ values
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #define DBINITCONSTANTS  
 #define INITGUID  
@@ -663,7 +663,7 @@ int InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   
@@ -673,6 +673,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 的使用說明主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB how to 主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

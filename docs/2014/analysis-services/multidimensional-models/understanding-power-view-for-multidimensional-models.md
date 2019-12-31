@@ -1,5 +1,5 @@
 ---
-title: 了解多維度模型的 Power View |Microsoft Docs
+title: 瞭解多維度模型的 Power View |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70ccd24e72671255ea0c929b19110794e1c0412a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072673"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75229394"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解適用於多維度模型的 Power View
   本文描述 Microsoft SQL Server 2014 中的「多維度模型的 Power View」功能，並為想要在組織中實作 Power View 的 BI 專業人員和系統管理員提供重要資訊。  
@@ -26,9 +26,9 @@ ms.locfileid: "66072673"
   
  **多維度模型架構的 Power View**  
   
- ![Power View 的多維度模型架構](../media/daxmd-architecture.gif "Power View 的多維度模型架構")  
+ ![多維度模型架構的 Power View](../media/daxmd-architecture.gif "多維度模型架構的 Power View")  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
  **伺服器需求**  
   
 -   SQL Server 2014 Enterprise 或 Business Intelligence 版本與以多維度模式執行的 Analysis Services。  
@@ -37,9 +37,9 @@ ms.locfileid: "66072673"
   
  **用戶端需求**  
   
--   Power View 用戶端功能需要 Microsoft Silverlight 5。 如需詳細資訊，請參閱 <<c0> [ 規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。</c0>  
+-   Power View 用戶端功能需要 Microsoft Silverlight 5。 如需詳細資訊，請參閱[規劃 Reporting Services 和 Power View 瀏覽器支援 &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
   
-## <a name="features"></a>功能  
+## <a name="features"></a>特性  
  **Power View 的原生支援**  
   
  在此版本中，多維度模型透過 SharePoint 模式的 Power View，支援分析和視覺效果。 您的多維度模型不需要特殊組態。 不過，相較於其他用戶端工具，例如 Microsoft Excel 和 Microsoft Performance Point，Power View 顯示多維度模型物件的方式有些不同。 此版本不支援在 Excel 2013 中使用 Power View，進行多維度模型的分析和視覺效果。  
@@ -55,14 +55,14 @@ ms.locfileid: "66072673"
   
 |多維度物件|表格式物件|  
 |-----------------------------|--------------------|  
-|Cube|[模型]|  
+|Cube|模型|  
 |Cube 維度|資料表|  
-|維度屬性(索引鍵、名稱)|「資料行」|  
+|維度屬性(索引鍵、名稱)|欄|  
 |量值群組|資料表|  
-|[量值]|量值|  
+|Measure|Measure|  
 |不含量值群組的量值|在名為量值的資料表中|  
 |量值群組 Cube 維度關聯性|關聯性|  
-|Perspective|Perspective|  
+|檢視方塊|檢視方塊|  
 |KPI|KPI|  
 |使用者/父子式階層|階層|  
 |顯示資料夾|顯示資料夾|  
@@ -76,39 +76,39 @@ ms.locfileid: "66072673"
   
  **Power View 欄位清單中的量值群組**  
   
- ![欄位清單中 Power View](../media/daxmd-powerviewfieldlist.gif "欄位 Power View 中的清單")  
+ ![Power View 中的欄位清單](../media/daxmd-powerviewfieldlist.gif "Power View 中的欄位清單")  
   
  量值群組內的量值顯示為量值。 如果有未與任何量值群組相關聯的導出量值，它們會分組在稱為「量值」的特殊資料表中。  
   
  為簡化複雜的多維度模型，模型作者可以在 Cube 中定義一組量值或 KPI，以便在顯示資料夾中找到。 Power View 可以顯示顯示資料夾和其中的量值和 KPI。  
   
- **量值群組中的量值和 KPI**  
+ **量值群組中的量值和 Kpi**  
   
  ![Power View 欄位清單中的量值群組](../media/daxmd-fieldlist-group.gif "Power View 欄位清單中的量值群組")  
   
 ### <a name="measures-as-variants"></a>量值做為變化  
- 多維度模型中的量值是變化。 這表示，量值不是強型別，可以有不同的資料類型。 比方說，在下圖中，預設 Financial Reporting 資料表中的 Amount 量值為 Currency 資料類型，但也有的"Statistical Accounts"，這是字串資料類型的字串值"NA"。 Power View 會將特定量值辨識為變化，並以不同的視覺效果顯示正確值和格式。  
+ 多維度模型中的量值是變化。 這表示，量值不是強型別，可以有不同的資料類型。 例如，在下圖中，財務報告資料表中的金額量值預設為 Currency 資料類型，但對於「統計帳戶」的子總計（也就是字串資料類型），也有字串值 "NA"。 Power View 會將特定量值辨識為變化，並以不同的視覺效果顯示正確值和格式。  
   
- **量值做為變化**  
+ **量值為 variant**  
   
- ![Power View 中的非彙總階層](../media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
+ ![Power View 中的非匯總階層](../media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
   
 ### <a name="implicit-measures"></a>隱含量值  
- 表格式模型讓使用者能夠建立「隱含」  量值，例如欄位的計數、加總或平均。 對於多維度模型，因為維度屬性資料的儲存方式不同，查詢隱含量值可能很耗時。 因此，Power View 中無法使用隱含量值。  
+ 表格式模型讓使用者能夠建立「隱含」** 量值，例如欄位的計數、加總或平均。 對於多維度模型，因為維度屬性資料的儲存方式不同，查詢隱含量值可能很耗時。 因此，Power View 中無法使用隱含量值。  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>維度、屬性和階層  
- Cube 維度在表格式中繼資料中公開為資料表。 在 Power View 欄位清單中，維度屬性會顯示為顯示資料夾中的資料行。  AttributeHierarchyEnabled 屬性設為 false，將維度屬性例如：在 [客戶] 維度中，或是 AttributeHierarchyVisible 屬性設為 false 的出生日期屬性不會出現在 Power View 欄位清單。 多層級階層或使用者階層，例如 Customer 維度中的 Customer Geography，在 Power View 欄位清單中公開為階層。 維度屬性的隱藏 UnknownMembers 會在 DAX 查詢和 Power View 中公開。  
+ Cube 維度在表格式中繼資料中公開為資料表。 在 Power View 欄位清單中，維度屬性會顯示為顯示資料夾中的資料行。  AttributeHierarchyEnabled 屬性設為 false 的維度屬性，例如 Customer 維度中的 Birth Date 屬性，或是 AttributeHierarchyVisible 屬性設為 false 的維度屬性都不會出現在 Power View 欄位清單中。 多層級階層或使用者階層，例如 Customer 維度中的 Customer Geography，在 Power View 欄位清單中公開為階層。 維度屬性的隱藏 UnknownMembers 會在 DAX 查詢和 Power View 中公開。  
   
- **SQL Server Data Tools (SSDT) 和 Power View 欄位清單中的維度、屬性和階層**  
+ **SQL Server Data Tools （SSDT）和 Power View 欄位清單中的維度、屬性和階層**  
   
- ![在 SSDT 和 Power View 欄位清單中的維度](../media/daxmd-ssdt-dimensions.gif "在 SSDT 和 Power View 欄位清單中的維度")  
+ ![SSDT 和 Power View 欄位清單中的維度](../media/daxmd-ssdt-dimensions.gif "SSDT 和 Power View 欄位清單中的維度")  
   
 ### <a name="dimension-attribute-type"></a>維度屬性類型  
  多維度模型支援維度屬性與特定維度屬性類型產生關聯。 下圖顯示 Geography 維度中的 City、State-Province、Country 和 Postal Code 維度屬性與地理類型相關聯。 這些是在表格式中繼資料中公開。 Power View 會辨識中繼資料，讓使用者可以建立地圖視覺效果。 這是由 Power View 欄位清單中 Geography 資料表的 City、Country、Postal Code 和 State-Province 資料行旁邊的地圖圖示所表示。  
   
  **SSDT 和 Power View 欄位清單中的維度屬性地理類型**  
   
- ![維度屬性地理類型](../media/daxmd-ssdt-attribute-geog-types.gif "維度屬性地理類型")  
+ ![維度屬性地理位置類型](../media/daxmd-ssdt-attribute-geog-types.gif "維度屬性地理位置類型")  
   
 ### <a name="dimension-calculated-members"></a>維度導出成員  
  多維度模型支援含單一真實成員的 All 之子系導出成員。 公開這類型的導出成員時，其他條件約束為：  
@@ -121,11 +121,11 @@ ms.locfileid: "66072673"
   
  使用者階層的導出成員不會在 Power View 中公開，不過使用者仍然可以連接到包含使用者階層導出成員的 Cube。  
   
- 下圖顯示 cube 包含時間智慧導出的成員，在 [日期] 維度的維度屬性"Fiscal Date Calculations"Power View 報表。  
+ 下圖顯示的是 cube 的 Power View 報表，其中包含日期維度中維度屬性「會計日期計算」的時間智慧匯出成員。  
   
- **含導出成員的 Power View 報表**  
+ **具有匯出成員的 Power View 報表**  
   
- ![Power View 中導出成員](../media/daxmd-calcmembersinpowerview.gif "Power View 中導出成員")  
+ ![Power View 中的導出成員](../media/daxmd-calcmembersinpowerview.gif "Power View 中的導出成員")  
   
 ### <a name="default-members"></a>預設成員  
  多維度模型支援維度屬性的預設成員。 Analysis Services 彙總查詢資料時會使用預設成員。 維度屬性的預設成員在表格式中繼資料中公開為對應資料行的預設值或篩選。  
@@ -136,18 +136,18 @@ ms.locfileid: "66072673"
  多維度模型透過角色支援維度和資料格層級安全性。 透過使用 Power View 連接到 Cube 的使用者，會經過驗證並評估是否具備適當權限。 套用維度安全性時，使用者不會看到 Power View 中的個別維度成員，不過如果使用者的資料格層級安全性已定義為限制某些資料格，該使用者就無法透過 Power View 連接到 Cube。 在某些情況下，當該資料的部分是從安全資料計算出來時，使用者可以看到彙總資料。  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>非彙總屬性/階層  
- 在多維度模型中，維度屬性 (Attribute) 的 IsAggregatable 屬性 (Property) 可設定為 false。 這表示，模型作者已經指定用戶端應用程式在查詢資料時不應該跨階層 (屬性或多層級) 彙總資料。 在 Power View 中，此維度屬性是公開為沒有小計的資料行。 在下圖中，您可以看到非彙總階層範例：帳戶。 Accounts 父子式階層的最頂層為非彙總，其他層級為可彙總的。 在 Accounts 階層的矩陣視覺效果 (前兩個層級) 中，您可以看到 Account Level 02 的小計，但是最頂層 Account Level 01 則沒有小計。  
+ 在多維度模型中，維度屬性 (Attribute) 的 IsAggregatable 屬性 (Property) 可設定為 false。 這表示，模型作者已經指定用戶端應用程式在查詢資料時不應該跨階層 (屬性或多層級) 彙總資料。 在 Power View 中，此維度屬性是公開為沒有小計的資料行。 在下圖，您可以看到非彙總階層範例：Accounts。 Accounts 父子式階層的最頂層為非彙總，其他層級為可彙總的。 在 Accounts 階層的矩陣視覺效果 (前兩個層級) 中，您可以看到 Account Level 02 的小計，但是最頂層 Account Level 01 則沒有小計。  
   
- **Power View 中的非彙總階層**  
+ **Power View 中的非匯總階層**  
   
- ![Power View 中的非彙總階層](../media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
+ ![Power View 中的非匯總階層](../media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
   
-## <a name="images"></a>影像  
+## <a name="images"></a>映像  
  Power View 提供呈現影像的能力。 在多維度模型中，提供影像給 Power View 的方法之一是公開包含影像 URL (統一資源定位器) 的資料行。 在此版本中，Analysis Services 支援維度屬性切換為 ImageURL 類型。 然後在表格式中繼資料中，提供此資料類型給 Power View。 Power View 然後會下載 URL 中指定的影像，並在視覺效果中顯示影像。  
   
  **SSDT 中的 ImageURL 維度屬性類型**  
   
- ![維度屬性內容](../media/daxmd-dimattribute-properties.gif "維度屬性的屬性")  
+ ![維度屬性內容](../media/daxmd-dimattribute-properties.gif "維度屬性內容")  
   
 ## <a name="parent-child-hierarchies"></a>父子式階層  
  多維度模型支援父子式階層，父子式階層在表格式中繼資料中公開為階層。 父子式階層的每個層級會公開為隱藏的資料行。 父子式維度的索引鍵屬性不會在表格式中繼資料中公開。  
@@ -157,11 +157,11 @@ ms.locfileid: "66072673"
  ![父子式階層](../media/daxmd-ssdt-hierarchies.gif "父子式階層")  
   
 ## <a name="perspectives-and-translations"></a>檢視方塊和翻譯  
- 檢視方塊是在用戶端工具中只看到某些維度或量值群組的 Cube 檢視。 您可以將檢視方塊名稱指定為 Cube 連接字串屬性的值。 例如，在下列連接字串中，' Direct Sales' 是多維度模型中的檢視方塊：  
+ 檢視方塊是在用戶端工具中只看到某些維度或量值群組的 Cube 檢視。 您可以將檢視方塊名稱指定為 Cube 連接字串屬性的值。 例如，在下列連接字串中，「Direct Sales」是多維度模型中的一個觀點：  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
   
- 模型中，可以指定各種語言的 Cube 中繼資料和資料翻譯。 若要顯示翻譯 （資料和中繼資料），您需要將選擇性"Locale Identifier"屬性新增至如下所示 RSDS 檔案中的連接字串。  
+ 模型中，可以指定各種語言的 Cube 中繼資料和資料翻譯。 若要查看翻譯（資料和中繼資料），您必須將選擇性的 [地區設定識別碼] 屬性加入至 .RSDS 檔案中的連接字串，如下所示。  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Adventure Works'; Locale Identifier=3084`  
   
@@ -170,23 +170,23 @@ ms.locfileid: "66072673"
  如需詳細資訊，請參閱 [建立報表資料來源](create-a-report-data-source.md)。  
   
 ## <a name="power-view-pinned-filters"></a>Power View 固定的篩選  
- Power View 報表可以包含多個檢視。 在此版本中，適用於表格式和多維度模型的「固定篩選」  功能，提供了建立套用到報表中所有檢視之篩選的功能。 下圖顯示檢視篩選的 [固定篩選] 切換按鈕。 根據預設，檢視篩選為取消固定，只套用到該檢視。 固定檢視篩選，會將篩選套用到所有檢視，取消固定篩選則會從其他檢視移除篩選。  
+ Power View 報表可以包含多個檢視。 在此版本中，適用於表格式和多維度模型的「固定篩選」** 功能，提供了建立套用到報表中所有檢視之篩選的功能。 下圖顯示檢視篩選的 [固定篩選] 切換按鈕。 根據預設，檢視篩選為取消固定，只套用到該檢視。 固定檢視篩選，會將篩選套用到所有檢視，取消固定篩選則會從其他檢視移除篩選。  
   
- **固定的篩選**  
+ **釘選的篩選**  
   
- ![釘選篩選](../media/daxmd-pinnedfilterinpowerview.gif "釘選篩選")  
+ ![固定的篩選](../media/daxmd-pinnedfilterinpowerview.gif "固定的篩選")  
   
 ## <a name="unsupported-features"></a>不支援的功能  
- **Excel 2013 中的 power View** -不支援連線至並建立多維度模型報表。 多維度模型的 Power View 只支援以瀏覽器為基礎的 Power View 用戶端。  
+ **Excel 2013 中的 Power View** -不支援連接到多維度模型並建立報表。 多維度模型的 Power View 只支援以瀏覽器為基礎的 Power View 用戶端。  
   
- **動作** - 在 Power View 報表或多維度模型的 DAX 查詢中不支援此功能。  
+ **動作**-在 Power View 報表中，或針對多維度模型的 DAX 查詢中不支援。  
   
- **命名集** - 在 Power View 報表或多維度模型的 DAX 查詢中不支援在多維度模型中使用命名集。  
+ **命名集**-在 Power View 中，或針對多維度模型的 DAX 查詢中不支援多維度模型中的命名集。  
   
 > [!NOTE]  
 >  不支援的動作和命名集不會妨礙使用者使用 Power View 連接到多維度模型以及探索多維度模型。  
   
- **資料格層級安全性**-不支援在 Power View 報表。  
+ 資料**格層級安全性**-在 Power View 報表中不受支援。  
   
 ## <a name="csdlbi-annotations"></a>CSDLBI 註解  
  多維度 Cube 中繼資料是由概念結構定義語言商業智慧註解 (CSDLBI) 公開為實體資料模型 (EDM) 概念模型。  
@@ -217,21 +217,20 @@ ms.locfileid: "66072673"
   
  DISCOVER_CSDL_METADATA 要求具有下列限制：  
   
-|名稱|必要項|描述|  
+|名稱|必要|描述|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|是|目錄\資料庫名稱。|  
 |PERSPECTIVE_NAME|是，如果 Cube 包含一個以上的檢視方塊。 如果只有一個 Cube 或有預設檢視方塊，則為選擇性。|多維度資料庫中的 Cube 名稱或檢視方塊名稱。|  
-|VERSION|是|用戶端要求的 CSDL 版本。 2\.0 版中支援多維度功能和建構。|  
+|VERSION|是|用戶端要求的 CSDL 版本。 2.0 版中支援多維度功能和建構。|  
   
  傳回的 CSDL 輸出文件將模型表示為命名空間，其中包含實體、關聯和屬性。  
   
- 如需詳細的表格式模型 CSDLBI 註解的相關資訊，請參閱[csdl 之 BI 註解的技術參考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)MSDN 上並[ \[MS-CSDLBI\]:概念結構定義檔案格式商業智慧註解](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)。  
+ 如需表格式模型 CSDLBI 註解的詳細資訊，請參閱 MSDN 上的 [Technical Reference for BI Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) (CSDL 的商業智慧註解技術參考) 和 [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)([MS-CSDLBI]：搭配商業智慧註解的概念性結構描述定義檔案格式)。  
   
 ## <a name="client-help-on-officecom"></a>Office.com 上的用戶端說明  
  Office.com 提供下列文章，協助使用者了解多維度模型物件如何出現在 Power View 中，以及如何建立範例報表：  
   
- [了解 Power View 中的多維度模型物件](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [瞭解 Power View 中的多維度模型物件](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
- [使用 Power View 探索 Adventure Works 多維度模型](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
-  
+ [使用 Power View 探索「艾德作品」多維度模型](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   
