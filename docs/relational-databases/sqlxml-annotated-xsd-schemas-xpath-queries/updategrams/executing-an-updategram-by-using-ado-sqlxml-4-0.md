@@ -1,6 +1,5 @@
 ---
-title: 執行 Updategram 使用 ADO (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 使用 ADO 執行 Updategram （SQLXML）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 856d6af1f06db7821d3b5b8e82e9fa4afcd3c4ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9982a7128c8b6d34fefad77045bda59ed4f2f5f7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086880"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252486"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,19 +28,19 @@ ms.locfileid: "68086880"
   
  在此範例應用程式中：  
   
--   **Conn**物件 (**ADODB。連接**) 建立與執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定伺服器電腦上。  
+-   **Conn**物件（**ADODB。連接**）與特定伺服器電腦[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的執行中實例建立連接。  
   
--   **Cmd**物件 (**ADODB.Command**) 建立的連接上執行。  
+-   **Cmd**物件（**ADODB**）會在已建立的連接上執行。  
   
 -   命令用語會設定為 DBGUID_MSSQLXML。  
   
--   Updategram 會複製到命令資料流 (**strmIn**)。  
+-   Updategram 會複製到命令資料流程（**字串分 text.append**）。  
   
--   命令的輸出資料流設定為**StrmOut**物件 (**ADODB。Stream**) 才能接受任何傳回的資料。  
+-   命令的輸出資料流程會設定為**StrmOut**物件（**ADODB。資料流程**）接收任何傳回的資料。  
   
 -   最後，系統會擲行命令 (updategram)。  
   
- 此為範例程式碼：  
+ 以下為範例程式碼：  
   
 ```vb  
 Private Sub Form_Load()  
@@ -184,7 +184,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>傳遞參數  
- 在先前提供的 Visual Basic 應用程式中，系統不會傳遞參數。 在此應用程式中， **ContactID**並**MiddleName**值會傳遞為參數化的輸入到 updategram。  
+ 在先前提供的 Visual Basic 應用程式中，系統不會傳遞參數。 在此應用程式中， **ContactID**和**MiddleName**值會當做參數化輸入傳遞至 updategram。  
   
 ```vb  
 Private Sub Form_Load()  

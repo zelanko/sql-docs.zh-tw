@@ -1,5 +1,5 @@
 ---
-title: 建立資料庫與 Web 應用程式的關聯
+title: 建立資料庫與 web 應用程式的關聯
 ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 257928505c1aa95a61151f47c234469158761e89
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d82bee5e275365b72adb3700cae8c11e6e67c9e7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73728150"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253077"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>建立 Master Data Services 資料庫與 Web 應用程式的關聯
 
@@ -23,9 +23,10 @@ ms.locfileid: "73728150"
 
   將 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯，以指定要用於 Web 作業的資料庫。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
   
--   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 必須安裝在本機電腦上。 如需詳細資訊，請參閱 [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)。  
+-   
+  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 必須安裝在本機電腦上。 如需詳細資訊，請參閱 [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)。  
   
 -   必須存在本機 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式。 如需詳細資訊，請參閱[建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)。  
   
@@ -35,19 +36,19 @@ ms.locfileid: "73728150"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 **[Web 組態]** 。  
+2.  按一下左窗格中的 **[Web 組態]**。  
   
-3.  在 [Web 組態] 頁面的 [Web 應用程式] 底下，從 [網站] 清單中選取包含您的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式之網站。  
+3.  在 [Web 組態]**** 頁面的 [Web 應用程式]**** 底下，從 [網站]**** 清單中選取包含您的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式之網站。  
   
-4.  在 [Web 應用程式] 方塊中，選取主控 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的 Web 應用程式。  
+4.  在 [Web 應用程式]**** 方塊中，選取主控 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的 Web 應用程式。  
   
-5.  在 [將應用程式與資料庫產生關聯] 底下，按一下 [選取]。 [連接到資料庫] 對話方塊隨即開啟。  
+5.  在 [將應用程式與資料庫產生關聯]**** 底下，按一下 [選取]****。 [連接到資料庫]**** 對話方塊隨即開啟。  
   
-6.  為主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 執行個體指定連接資訊，然後按一下 [連接]。  
+6.  為主控 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 執行個體指定連接資訊，然後按一下 [連接]****。  
   
-7.  從 [Master Data Services 資料庫] 清單，選取要與 Web 應用程式產生關聯的資料庫，然後按一下 [確定]。  
+7.  從 [Master Data Services 資料庫]**** 清單，選取要與 Web 應用程式產生關聯的資料庫，然後按一下 [確定]****。  
   
-8.  確認 [將應用程式與資料庫產生關聯] 底下的執行個體和資料庫資訊都正確無誤，然後按一下 [套用]。  
+8.  確認 [將應用程式與資料庫產生關聯]**** 底下的執行個體和資料庫資訊都正確無誤，然後按一下 [套用]****。  
   
 ## <a name="next-steps"></a>後續步驟  
   
@@ -57,6 +58,6 @@ ms.locfileid: "73728150"
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
- [Web 組態頁面 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Web 設定頁面 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

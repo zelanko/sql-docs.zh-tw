@@ -1,6 +1,5 @@
 ---
-title: FOR XML 安全性考量 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: FOR XML 安全性考慮（SQLXML）
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,13 +16,14 @@ helpviewer_keywords:
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 789c3fadeb91833fd4c7099386ab5afb5d646839
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30841ac40a4870f67888debb1696de57c7e3b202
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896658"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252467"
 ---
 # <a name="for-xml-security-considerations-sqlxml-40"></a>FOR XML 安全性考量 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

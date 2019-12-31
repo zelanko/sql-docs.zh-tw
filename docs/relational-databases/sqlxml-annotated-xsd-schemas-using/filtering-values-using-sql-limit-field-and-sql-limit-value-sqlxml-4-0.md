@@ -1,6 +1,5 @@
 ---
-title: 使用 sql： limit-field 和 sql： limit-value 篩選值（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 使用 sql： limit-field 和 sql： limit-value （SQLXML）進行篩選
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906095"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257413"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 篩選值 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "72906095"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. 根據實數資料類型的折扣值限制結果  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. 根據實數資料類型的折扣值限制結果  
  在這個範例中，資料庫包含兩個資料表：  
   
 -   Orders (OrderID)  
@@ -307,9 +307,9 @@ ms.locfileid: "72906095"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [float 和 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [Nchar 和 Nvarchar &#40;transact-sql&#41; ](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [float 和 real &#40;Transact-sql&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [Nchar 和 Nvarchar &#40;Transact-sql&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [在查詢&#40;中使用批註式 XSD 架構 SQLXML 4。0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [在查詢中使用批註式 XSD 架構 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

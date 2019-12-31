@@ -1,6 +1,5 @@
 ---
-title: 在 XPath 查詢中指定布林值述詞（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 在 XPath 查詢中指定布林值述詞（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,17 +17,18 @@ helpviewer_keywords:
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe35725e8dbd6903157866d0512966885c4c2c0b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907723"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252570"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林值述詞 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  下列範例顯示如何在 XPath 查詢中指定布林值述詞。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例&#40;的範例批註式&#41;XSD 架構 SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  下列範例顯示如何在 XPath 查詢中指定布林值述詞。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72907723"
 
      如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
-     結果如下：  
+     結果如下︰  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -90,14 +90,14 @@ ms.locfileid: "72907723"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>b. 指定連續和巢狀述詞  
- 下列查詢顯示使用連續述詞。 此查詢會傳回內容節點的所有 **\<客戶 >** 子專案，此專案的**SalesPersonID**屬性值為277，而**TerritoryID**屬性的值為3：  
+### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定連續和巢狀述詞  
+ 下列查詢顯示使用連續述詞。 此查詢會傳回所有** \<客戶>** 內容節點的子專案，**此屬性的**值為277，而**TerritoryID**屬性的值為3：  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 查詢會傳回符合述詞中所指定條件的 **\<客戶 >** 元素。  
+ 查詢會傳回滿足述詞中所指定條件的** \<客戶>** 元素。  
   
  您可以指定**屬性**軸（@）的快捷方式，而且因為**子**軸是預設值，所以可以從查詢中省略：  
   
@@ -105,7 +105,7 @@ ms.locfileid: "72907723"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回內容節點的所有 **\<客戶 >** 子項目，其中包含至少一個 **\<order >** 元素（具有**SalesPersonID**屬性值為）的 **\<順序 >** 子項目2.  
+ 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回內容節點的所有** \<客戶>** 子專案，其中包含** \<** 至少具有一個** \<order>** 元素（具有**SalesPersonID**屬性值為2）的 order>子項目。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -168,7 +168,7 @@ ms.locfileid: "72907723"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定最上層述詞  
- 下列查詢會傳回 **\<順序 >** 專案子系之內容節點的 **\<Customer >** 子項目節點。 此查詢會測試當做最上層述詞的位置路徑：  
+ 下列查詢會傳回具有** \<Order>** 專案子系之內容節點的** \<Customer>** 子項目節點。 此查詢會測試當做最上層述詞的位置路徑：  
   
 ```  
 /child::Customer[child::Order]  

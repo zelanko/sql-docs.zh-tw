@@ -1,5 +1,5 @@
 ---
-title: 指導方針和限制的 SQLXML 4.0 |Microsoft Docs
+title: SQLXML 4.0 的指導方針和限制
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 411495986ed700a069a7c8124a7d0829102138fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba2e7438a9084d7ad2d4f8edee9564236ecbadd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073369"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257244"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 的指導方針和限制
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,6 +30,6 @@ ms.locfileid: "68073369"
   
      您正在執行使用 SQLXML 4.0 以及與版本無關之 PROGID 的應用程式，而且您決定安裝某個其他軟體程式。 此程式可能會安裝舊版的 SQLXML。 您的應用程式可能會失敗，因為應用程式內與版本無關的 PROGIDS 現在指向舊版的 SQLXML，它不一定擁有您的應用程式所使用的 SQLXML 功能。  
   
--   如果基於任何原因，您不想要使用 SQLXMLOLEDB 提供者，並改為想要使用 SQLOLEDB 提供者用於 SQLXML 功能，設定**SQLXML Version**屬性為"SQLXML.4.0"。  
+-   如果您因為任何原因而不想使用 SQLXMLOLEDB 提供者，而想要使用 SQLXML 提供者的功能，請將**Sqlxml Version**屬性設定為 "sqlxml. 4.0"。  
   
   

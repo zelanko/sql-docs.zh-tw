@@ -1,6 +1,5 @@
 ---
-title: 明確的對應 XSD 元素和屬性對資料表和資料行 |Microsoft Docs
-ms.custom: ''
+title: 自訂資料表/資料行的 XSD 對應（SQLXML）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -28,43 +27,44 @@ ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4edb639a56e195bf57d4b34f8c1d399e1218b72f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067123"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257436"
 ---
-# <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>XSD 項目和屬性對資料表和資料行的明確對應
+# <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>自訂資料表/資料行的 XSD 對應（SQLXML）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用 XSD 結構描述提供關聯式資料庫的 XML 檢視表時，必須將結構描述的元素但屬性對應到資料庫的資料表和資料行。 資料庫資料表/檢視表中的資料列將會對應到 XML 文件中的元素。 資料庫中的資料行值會對應到屬性或元素。  
   
- 針對註解式 XSD 結構描述指定 XPath 查詢時，結構描述中元素和屬性的資料會從所對應的資料表和資料行對應。 若要從資料庫取得單一值，在 XSD 結構描述中指定的對應必須同時擁有關聯和欄位規格。 如果元素/屬性的名稱不是所對應，資料表/檢視表或資料行名稱與同名**sql: relation**並**sql: field**註解用來指定項目之間的對應或XML 文件和資料表 （檢視） 或在資料庫中的資料行中的屬性。  
+ 針對註解式 XSD 結構描述指定 XPath 查詢時，結構描述中元素和屬性的資料會從所對應的資料表和資料行對應。 若要從資料庫取得單一值，在 XSD 結構描述中指定的對應必須同時擁有關聯和欄位規格。 如果元素/屬性的名稱與資料表/視圖或其對應的資料行名稱不相同，則會使用**sql： relation**和**sql：欄位**注釋，來指定 XML 檔中的專案或屬性與資料庫中的資料表（view）或資料行之間的對應。  
   
 ## <a name="sql-relation"></a>sql-relation  
- **Sql: relation**註解加入至資料庫資料表中對應的 XSD 結構描述中的 XML 節點。 資料表 （檢視） 名稱指定的值為**sql: relation**註釋。  
+ 已加入**sql：關聯**注釋，將 XSD 架構中的 XML 節點對應至資料庫資料表。 資料表（view）的名稱會指定為**sql：關聯**注釋的值。  
   
- 當**sql: relation**元素上指定，此註釋的範圍會套用到所有的屬性和子項目，該項目，因此可提供以書面捷徑的複雜型別定義中所述註釋。  
+ 在專案上指定**sql： relation**時，此注釋的範圍會套用至該專案的複雜類型定義中所描述的所有屬性和子專案，因此提供寫入批註的快捷方式。  
   
- **Sql: relation**註解時也很有用的識別項，中的有效值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 XML 中無效。 例如，"Order Details" 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是有效的資料表名稱，但是在 XML 中是無效的。 在此情況下， **sql: relation**註釋可以用來指定對應，例如：  
+ 當中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有效的識別碼在 XML 中無效時， **sql：關聯**注釋也很有用。 例如，"Order Details" 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是有效的資料表名稱，但是在 XML 中是無效的。 在這種情況下，可以使用**sql：關聯**注釋來指定對應，例如：  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
 ```  
   
 ## <a name="sql-field"></a>sql-field  
- **Sql 欄位**註解會將元素或屬性對應至資料庫資料行。 **Sql: field**註釋加入結構描述中的 XML 節點對應至資料庫資料行。 您無法指定**sql: field**空內容元素上。  
+ **Sql 欄位**批註會將元素或屬性對應至資料庫資料行。 加入**sql： field**批註，將架構中的 XML 節點對應至資料庫資料行。 您不能在空的 content 元素上指定**sql： field** 。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 註解  
- 在此範例中，XSD 結構描述所組成 **\<連絡人 >** 複雜類型元素 **\<FName >** 並 **\<LName >** 子項目和**ContactID**屬性。  
+ 在此範例中，XSD 架構是由具有** \<FName>** 和** \<LName>** 子專案和**ContactID**屬性的複雜類型的** \<連絡人>** 元素所組成。  
   
- **Sql: relation**註解 maps **\<連絡人 >** 至 AdventureWorks 資料庫中的 Person.Contact 資料表的項目。 **Sql: field**註解 maps  **\<FName >** FirstName 資料行的項目與 **\<LName >** LastName 的項目資料行。  
+ **Sql：關聯**注釋會將** \<Contact>** 元素對應到 AdventureWorks 資料庫中的 Person. contact 資料表。 [ **Sql：] 欄位**批註會將** \<FName>** 元素對應至 FirstName 資料行，並將** \<LName>** 元素對應至 LastName 資料行。  
   
- 指定任何註釋**ContactID**屬性。 這會導致將屬性預設對應到具有相同名稱的資料行。  
+ 未指定**ContactID**屬性的注釋。 這會導致將屬性預設對應到具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -108,7 +108,7 @@ ms.locfileid: "68067123"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分結果集如下：  
   

@@ -1,6 +1,5 @@
 ---
-title: 在 XPath 查詢中指定算術運算子（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 在 XPath 查詢中使用算術運算子（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907766"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252627"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定算術運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  下列範例示範如何在 XPath 查詢中指定算術運算子。 此範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例&#40;的範例批註式&#41;XSD 架構 SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  下列範例示範如何在 XPath 查詢中指定算術運算子。 此範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例架構的詳細資訊，請參閱[XPath 範例的範例批註式 XSD 架構 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. 指定 * 算術運算子  
- 這個 XPath 查詢會傳回符合所指定述詞 **\<OrderDetail >** 元素：  
+ 這個 XPath 查詢會傳回符合指定之述詞的** \<OrderDetail>** 元素：  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查詢中，`child` 是軸，`OrderDetail` 是節點測試（如果**OrderDetail**是 **\<元素節點 >** ，則為 TRUE，因為 **\<元素 >** 節點是**子**軸的主要節點）。 對於所有 **\<OrderDetail >** 元素節點，會套用述詞中的測試，而且只會傳回滿足條件的節點。  
+ 在查詢中， `child` `OrderDetail`是軸而且是節點測試（如果**OrderDetail**是** \<專案節點>**，則為 TRUE，因為>節點的** \<元素**是**子**軸的主要節點）。 對於所有** \<OrderDetail>** 元素節點，會套用述詞中的測試，而且只會傳回滿足條件的節點。  
   
 > [!NOTE]  
 >  XPath 中的數字為雙精確度浮點數，而且在範例中比較浮點數會造成四捨五入。  

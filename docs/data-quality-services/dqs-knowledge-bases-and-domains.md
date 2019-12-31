@@ -1,6 +1,5 @@
 ---
-title: DQS 知識庫與定義域 | Microsoft Docs
-ms.custom: ''
+title: DQS 知識庫與定義域
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: d0eb69992a6a22a86eae3038a405eb2dd77bcfc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935319"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251644"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
 
@@ -41,7 +40,7 @@ ms.locfileid: "67935319"
   
  ![DQS 中的知識庫及定義域](../data-quality-services/media/dqs-knowledgebasesanddomains.gif "DQS 中的知識庫及定義域")  
   
-##  <a name="How"></a> 如何建立與建置 DQS 知識庫  
+##  <a name="How"></a>如何建立和建立 DQS 知識庫  
  建置 DQS 知識庫包含下列程序與元件：  
   
  **知識探索**  
@@ -56,7 +55,7 @@ ms.locfileid: "67935319"
  **比對原則**  
  一種原則，定義 DQS 如何處理記錄以識別內建至電腦輔助與互動式程序之知識庫中的潛在重複項目與不符合項目。  
   
-##  <a name="Discovery"></a> 知識探索  
+##  <a name="Discovery"></a>知識探索  
  知識庫建立一開始是電腦指引程序。 知識探索活動會分析資料樣本是否符合資料品質準則、尋找資料不一致性和語法錯誤，以及建議資料變更，以建置知識庫。 此分析是以內建至 DQS 中的演算法為基礎。  
   
  資料服務員藉由將知識庫連結至 SQL Server 資料庫資料表或檢視表，其中包含的範例資料類似於知識庫將用來分析的資料，來準備此程序。 資料服務員接著將知識庫定義域對應至要分析之範例資料的每個資料行。 定義域可以是對應至單一欄位的單一定義域，也可以是包含多個單一定義域 (其中每個定義域都會對應到單一欄位中的部分資料) 的複合定義域 (請參閱以下的「複合定義域」)。 當您執行知識探索時，DQS 會將資料品質資訊從範例資料擷取至知識庫中的定義域。 當您已經執行知識探索分析時，將會有一個您可以對其執行資料更正的資料庫。  
@@ -68,9 +67,9 @@ ms.locfileid: "67935319"
 ### <a name="case-insensitivity-in-dqs"></a>DQS 不區分大小寫  
  DQS 中的值不區分大小寫。 也就是說，當 DQS 執行知識探索、定義域管理或比對時，不會以大小寫區分至值。 如果您在值管理中加入只有大小寫不同於其他值的某個值，這兩個值將會被視為相同的值，而非同義字。 如果只有大小寫不同的兩個值在比對程序中進行比較，將會被視為完全相符。  
   
- 不過，您可以控制您在清理結果中匯出之值的大小寫。 您可以透過設定 [設定輸出格式為]  定義域屬性 (請參閱[設定定義域屬性](../data-quality-services/set-domain-properties.md))，並在匯出清理結果時使用 [標準化輸出]  核取方塊 (請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)) 來進行。  
+ 不過，您可以控制您在清理結果中匯出之值的大小寫。 您可以透過設定 [設定輸出格式為]**** 定義域屬性 (請參閱[設定定義域屬性](../data-quality-services/set-domain-properties.md))，並在匯出清理結果時使用 [標準化輸出]**** 核取方塊 (請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)) 來進行。  
   
-##  <a name="Domains"></a> 定義域管理  
+##  <a name="Domains"></a>定義域管理  
  定義域管理可讓資料管理人以互動方式變更及增加電腦輔助的知識探索活動所產生的中繼資料。 您所做的每個變更都可供知識庫定義域使用。 在定義域管理活動中，您可以執行下列操作：  
   
 -   建立新的定義域。 您可以從現有的定義域連結或複製新的定義域。  
@@ -123,7 +122,7 @@ ms.locfileid: "67935319"
  在定義域管理中，您可以針對單一定義域指定以詞彙為基礎的關聯，以便指定對單一值的變更。  
   
 ### <a name="composite-domains"></a>複合定義域  
- 複合定義域是以兩個或多個單一定義域組成的結構，其中每個定義域都包含有關一般資料的知識。 複合是定義域可以處理之資料的範例為名稱欄位中的名字、中間名和姓氏，以及地址欄位中的門牌號碼和街道、城市、省/市、郵遞區號與國家/地區。 當您將某個單一欄位對應到複合定義域時，DQS 會資料從某個欄位剖析到組成複合的多個定義域。  
+ 複合定義域是以兩個或多個單一定義域組成的結構，其中每個定義域都包含有關一般資料的知識。 複合是定義域可以處理之資料的範例為名稱欄位中的名字、中間名和姓氏，以及地址欄位中的門牌號碼和街道、城市、省/市、郵遞區號與國家。 當您將某個單一欄位對應到複合定義域時，DQS 會資料從某個欄位剖析到組成複合的多個定義域。  
   
  單一定義域有時候並不完全表示欄位資料。 在複合定義域中群組兩個或多個定義域可讓您以有效率的方式表示資料。 以下是使用複合定義域的優點：  
   
@@ -139,7 +138,7 @@ ms.locfileid: "67935319"
   
  比對可以在組成複合定義域的單一定義域上執行，但無法在複合定義域本身執行。  
   
-##  <a name="Matching"></a> 資料比對  
+##  <a name="Matching"></a>資料比對  
  除了透過定義域管理對知識庫進行手動變更之外，您還可以將比對知識加入至知識庫。 若要為刪除重複資料程序準備 DQS，您必須建立一個 DQS 將用來計算比對機率的比對原則。 此原則包含一個或多個資料管理人所建立的比對規則，以識別 DQS 比較資料列的方式。 資料管理人會決定應該比較資料列中的哪些資料欄位，以及每個欄位在比較時應該佔多少比重。 資料管理人也將決定要將多高的機率視為相符。 DQS 會將比對規則加入至資料品質專案中用於執行比對活動的知識庫。  
   
  如需有關知識庫與資料比對的詳細資訊，請參閱＜ [資料比對](../data-quality-services/data-matching.md)上維護多個知識庫。  
@@ -149,10 +148,10 @@ ms.locfileid: "67935319"
   
 |||  
 |-|-|  
-|建立知識、開啟知識、將知識加入至知識庫，以及在知識庫上執行探索|[建置知識庫](../data-quality-services/building-a-knowledge-base.md)|  
+|建立知識、開啟知識、將知識加入至知識庫，以及在知識庫上執行探索|[建立知識庫](../data-quality-services/building-a-knowledge-base.md)|  
 |在定義域和知識庫上執行匯入和匯出作業|[匯入和匯出知識](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |建立單一定義域、定義域規則、以詞彙為基礎的關聯，以及變更定義域值|[管理網域](../data-quality-services/managing-a-domain.md)|  
-|建立複合定義域、建立跨定義域規則，以及使用值關聯|[管理複合網域](../data-quality-services/managing-a-composite-domain.md)|  
+|建立複合定義域、建立跨定義域規則，以及使用值關聯|[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)|  
 |使用內建到 DQS 中的預設 DQS 資料知識庫|[使用 DQS 預設知識庫](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   

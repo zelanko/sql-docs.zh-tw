@@ -1,6 +1,5 @@
 ---
-title: 管理複合定義域 | Microsoft Docs
-ms.custom: ''
+title: 管理複合定義域
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: fac57f53242fa7445820aaed5a39694a7277653c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935070"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258448"
 ---
 # <a name="managing-a-composite-domain"></a>管理複合定義域
 
@@ -32,17 +31,17 @@ ms.locfileid: "67935070"
   
 |||  
 |-|-|  
-|針對包含多個未剖析之相關詞彙的資料欄位建立語意表示法|[建立複合網域](../data-quality-services/create-a-composite-domain.md)|  
-|當您將複雜資料對應至複合定義域時，除了針對分隔符號進行剖析之外，您也可以根據知識來剖析資料。 DQS 會先嘗試使用它對於單一定義域的知識，以判斷複雜字串的部分如何屬於單一定義域。|[建立複合網域](../data-quality-services/create-a-composite-domain.md)|  
-|將參考資料服務 (例如處理地址資料的服務) 加入至複合定義域。|[將網域或複合網域附加至參考資料](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|當複合定義域中一個定義域的值影響另一個定義域的值時，請建立跨定義域規則。|[建立跨網域規則](../data-quality-services/create-a-cross-domain-rule.md)|  
-|識別值組合，好讓 DQS 可以報告其頻率。|[使用複合網域中的值關聯](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
+|針對包含多個未剖析之相關詞彙的資料欄位建立語意表示法|[建立複合定義域](../data-quality-services/create-a-composite-domain.md)|  
+|當您將複雜資料對應至複合定義域時，除了針對分隔符號進行剖析之外，您也可以根據知識來剖析資料。 DQS 會先嘗試使用它對於單一定義域的知識，以判斷複雜字串的部分如何屬於單一定義域。|[建立複合定義域](../data-quality-services/create-a-composite-domain.md)|  
+|將參考資料服務 (例如處理地址資料的服務) 加入至複合定義域。|[將定義域或複合定義域附加至參考資料](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|當複合定義域中一個定義域的值影響另一個定義域的值時，請建立跨定義域規則。|[建立跨定義域規則](../data-quality-services/create-a-cross-domain-rule.md)|  
+|識別值組合，好讓 DQS 可以報告其頻率。|[使用複合定義域中的值關聯](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|藉由執行知識探索以及以互動方式管理知識來建立知識庫|[建置知識庫](../data-quality-services/building-a-knowledge-base.md)|  
+|藉由執行知識探索以及以互動方式管理知識來建立知識庫|[建立知識庫](../data-quality-services/building-a-knowledge-base.md)|  
 |將知識匯入知識庫或是從知識庫匯出知識。|[匯入和匯出知識](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |建立單一定義域，並將知識加入至定義域。|[管理網域](../data-quality-services/managing-a-domain.md)|  
   

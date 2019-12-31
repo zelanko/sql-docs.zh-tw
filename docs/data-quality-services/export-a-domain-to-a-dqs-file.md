@@ -1,6 +1,5 @@
 ---
-title: 將定義域匯出為 .dqs 檔案 | Microsoft Docs
-ms.custom: ''
+title: 將定義域匯出成 .dqs 檔案
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: a3722234ec1e82431bbefae355391a614c7e980a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 518b393b296425c1aaf54229a8a843576c6a628a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992074"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251620"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>將定義域匯出成 .dqs 檔案
 
@@ -29,32 +28,32 @@ ms.locfileid: "67992074"
   
  匯出程序所建立的 .dqs 資料檔已經過加密，因此無法檢視內容。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="BeforeYouBegin"></a>開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="Prerequisites"></a>要求  
  若要將定義域匯出到 .dqs 資料檔，您必須已經建立及選取單一定義域或是包含多個單一定義域的複合定義域。 您不需要擁有匯出目標的 .dqs 檔案，系統會為您建立一個檔案。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全級  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a>無權  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能將定義域匯出到 .dqs 資料檔。  
   
-##  <a name="Export"></a> Export a domain to a .dqs file  
+##  <a name="Export"></a>將網域匯出至 dqs 檔案  
  您可以從任何 [定義域管理] 頁面匯出。 您可以從使用者介面的控制項或是 [定義域清單] 窗格之內容功能表的命令中取得匯出命令。  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，於 [定義域管理] 活動中開啟知識庫。  
   
 3.  在 **[定義域管理]** 頁面 (包含任何選取的索引標籤) 中，於 **[定義域]** 清單中選取單一定義域或複合定義域。  
   
-4.  按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出定義域]** 。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單中的定義域，指向 **[匯出]** ，然後按一下 **[匯出定義域]** 。  
+4.  按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出定義域]**。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單中的定義域，指向 **[匯出]**，然後按一下 **[匯出定義域]**。  
   
-5.  在 [匯出到資料檔]  對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留預設名稱、將 [DQS 資料檔 (\*.dqs)]  保留為 [檔案類型]  ，然後按一下 [儲存]  。  
+5.  在 [匯出到資料檔]**** 對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留預設名稱、將 [DQS 資料檔 (**.dqs)]\*** 保留為 [檔案類型]****，然後按一下 [儲存]****。  
   
-6.  在 **[匯出定義域]** 對話方塊中，確認此對話方塊中的狀態行指出已完成匯出。 按一下 [確定]  。  
+6.  在 **[匯出定義域]** 對話方塊中，確認此對話方塊中的狀態行指出已完成匯出。 按一下 [確定]****。  
   
-##  <a name="FollowUp"></a> 後續操作：將定義域匯出到 .dqs 檔案之後  
+##  <a name="FollowUp"></a>後續操作：將定義域匯出至 dqs 檔案之後  
  在您將定義域匯出到 .dqs 檔案之後，您可以將此定義域匯入另一個知識庫中。  
   
   

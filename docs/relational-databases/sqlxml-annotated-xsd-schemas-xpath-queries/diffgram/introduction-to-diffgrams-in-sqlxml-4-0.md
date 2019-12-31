@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 的 Diffgram 簡介 |Microsoft Docs
+title: DiffGrams 的 SQLXML 4.0 簡介
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b232b2a6f6458139236595b2cac29afb54c0099
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3994a9d0bc863367edf5b1844772b94a63f19d4d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073396"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257255"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>DiffGrams 的 SQLXML 4.0 簡介
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,34 +50,34 @@ ms.locfileid: "68073396"
  DiffGram 格式由下列區塊組成：  
   
  **\<DataInstance>**  
- 這個元素的名稱**DataInstance**，用於說明用途，此文件中。 例如，如果從.NET Framework 中，windows 7 中的資料集所產生的 DiffGram**名稱**資料集屬性做為這個項目的名稱。 這個區塊包含變更之後的所有相關資料，可能包括尚未修改的資料。 DiffGram 處理邏輯會忽略此區塊中的項目， **diffgr: haschanges**未指定屬性。  
+ 此元素的名稱**DataInstance**是用於本檔中的說明。 例如，如果從 .NET Framework 中的資料集產生 DiffGram，則會使用資料集的**name**屬性值做為此元素的名稱。 這個區塊包含變更之後的所有相關資料，可能包括尚未修改的資料。 DiffGram 處理邏輯會忽略此區塊中未指定**diffgr： hasChanges**屬性的元素。  
   
- **\<diffgr:before>**  
- 這個選擇性區塊包含必須更新或刪除的原始記錄執行個體 (元素)。 正在修改 （更新或刪除） 的所有資料庫都資料表 diffgram 必須顯示為最上層項目的 **\<之前 >** 區塊。  
+ **\<diffgr：之前>**  
+ 這個選擇性區塊包含必須更新或刪除的原始記錄執行個體 (元素)。 DiffGram 所修改（更新或刪除）的所有資料庫資料表，都必須在 [ ** \<before>** ] 區塊中顯示為最上層的元素。  
   
- **\<diffgr:errors>**  
+ **\<diffgr：錯誤>**  
  DiffGram 處理邏輯會忽略這個選擇性區塊。  
   
 ## <a name="diffgram-annotations"></a>DiffGram 註解  
- DiffGram 命名空間中定義這些附註 **"urn: schemas-microsoft-microsoft-schemas-microsoft-com:-diffgram-01"** :  
+ 這些注釋定義于 DiffGram 命名空間 **"urn：架構-microsoft-com： xml-DiffGram-01"** 中：  
   
- **id**  
- 此屬性用來在項目進行配對 **\<之前 >** 並 **\<DataInstance >** 區塊。  
+ **號**  
+ 這個屬性是用來配對中** \<** 的元素，>和** \<DataInstance>** 組塊。  
   
  **hasChanges**  
- 插入或更新作業，DiffGram 必須指定此屬性具有值**插入**或是**修改**。 如果這個屬性不存在中的對應項目 **\<DataInstance >** 忽略處理邏輯，而且沒有更新會執行。 如需實用範例，請參閱[DiffGram 範例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)。  
+ 若為插入或更新作業，DiffGram 必須使用已**插入**或**已修改**的值來指定此屬性。 如果這個屬性不存在，處理邏輯會忽略** \<DataInstance>** 中的對應元素，而且不會執行任何更新。 如需工作範例，請參閱[&#40;SQLXML 4.0&#41;的 DiffGram 範例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)。  
   
  **parentID**  
- 這個屬性是用來在 DiffGram 的元素之間指定父子式關聯性。 這個屬性只會顯示在\<之前 > 區塊。 SQLXML 會在套用更新時使用此屬性。 此父子式關聯性會用於決定處理 DiffGram 中元素的順序。  
+ 這個屬性是用來在 DiffGram 的元素之間指定父子式關聯性。 這個屬性只會出現在\<[before>] 區塊中。 SQLXML 會在套用更新時使用此屬性。 此父子式關聯性會用於決定處理 DiffGram 中元素的順序。  
   
 ## <a name="understanding-the-diffgram-processing-logic"></a>了解 DiffGram 處理邏輯  
  DiffGram 處理邏輯會使用特定規則來判斷某項作業是插入、更新或刪除作業。 下表將描述這些規則。  
   
-|運算|描述|  
+|作業|描述|  
 |---------------|-----------------|  
-|Insert|中的項目出現時，DiffGram 就代表插入作業 **\<DataInstance >** 區塊但不是在對應 **\<之前 >** 區塊，以及**diffgr: haschanges**指定屬性 (**diffgr: haschanges = 插入**) 項目上。 在此情況下，DiffGram 插入記錄執行個體中指定 **\<DataInstance >** 區塊至資料庫。<br /><br /> 如果**diffgr: haschanges**未指定屬性、 項目會被忽略，處理邏輯，會執行任何插入。 如需實用範例，請參閱[DiffGram 範例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)。|  
-|Update|中的項目時，DiffGram 就代表更新作業\<之前 > 區塊中的對應項目是 **\<DataInstance >** 區塊 （也就是這兩個元素具有**diffgr: id**具有相同值的屬性) 和**diffgr: haschanges**屬性會指定值**修改**中的項目上 **\<DataInstance >** 區塊。<br /><br /> 如果**diffgr: haschanges**中的項目未指定屬性，則 **\<DataInstance >** 區塊，則會傳回錯誤，處理邏輯。 如需實用範例，請參閱[DiffGram 範例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果**diffgr: parentid**中指定 **\<之前 >** 區塊中，項目所指定的父子式關聯性**parentID**中使用決定更新記錄的順序。|  
-|DELETE|中的項目出現時，DiffGram 就代表刪除作業 **\<之前 >** 區塊但不是在對應 **\<DataInstance >** 區塊。 在此情況下，DiffGram 刪除記錄執行個體中指定 **\<之前 >** 從資料庫的區塊。 如需實用範例，請參閱[DiffGram 範例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果**diffgr: parentid**中指定 **\<之前 >** 區塊中，項目所指定的父子式關聯性**parentID**中使用決定刪除記錄的順序。|  
+|插入|當專案出現在** \<DataInstance>** 區塊中，而不是在對應** \<的>** 區塊中，而且在專案上指定了**diffgr： hasChanges**屬性（**diffgr： hasChanges =**）時，DiffGram 就表示插入作業。 在此情況下，DiffGram 會將** \<DataInstance>** 區塊中指定的記錄實例插入資料庫中。<br /><br /> 如果未指定**diffgr： hasChanges**屬性，處理邏輯會忽略元素，而且不會執行任何插入。 如需工作範例，請參閱[&#40;SQLXML 4.0&#41;的 DiffGram 範例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)。|  
+|更新|DiffGram 表示在 [ \<before>] 區塊中有一個專案時，如果** \<DataInstance>** 區塊中有一個對應的元素（也就是說，這兩個專案都有一個具有相同值的**diffgr： id**屬性），而且**diffgr： hasChanges**屬性是以** \<DataInstance>** 區塊中專案上**修改**的值所指定，則為更新作業。<br /><br /> **如果\<DataInstance>** 區塊的元素上未指定**diffgr： hasChanges**屬性，處理邏輯會傳回錯誤。 如需工作範例，請參閱[&#40;SQLXML 4.0&#41;的 DiffGram 範例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果在** \<>區塊之前**指定了**diffgr： parentid** ， **parentid**所指定之元素的父子式關聯性會用於判斷記錄的更新順序。|  
+|刪除|當元素出現在** \<before>** 區塊中，但不在對應** \<的 DataInstance>** 區塊中時，DiffGram 表示刪除作業。 在此情況下，DiffGram 會從資料庫刪除** \<before>** 區塊中指定的記錄實例。 如需工作範例，請參閱[&#40;SQLXML 4.0&#41;的 DiffGram 範例](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果在** \<>區塊之前**指定了**diffgr： parentid** ， **parentid**所指定之元素的父子式關聯性會用於判斷記錄的刪除順序。|  
   
 > [!NOTE]  
 >  參數無法傳遞給 DiffGram。  

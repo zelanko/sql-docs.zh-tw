@@ -1,6 +1,5 @@
 ---
-title: '建立 Valid ID-IDREF-IDREFS 類型屬性-sql: prefix (SQLXML 4.0) |Microsoft Docs'
-ms.custom: ''
+title: 使用 sql： prefix 的有效 ID 屬性（SQLXML）
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,19 +21,20 @@ ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad2b357a826a0c8baf8fa98ae69fce4433135998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89864caade618ad4e42890ae3711f3eee50ce231
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126467"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257457"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 建立 Valid ID、IDREF 和 IDREFS 類型屬性 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   屬性可以指定為識別碼類型屬性。 然後可以使用指定為 IDREF 或 IDREFS 的屬性來參考 ID 類型屬性，啟用文件之間的連結。  
   
- ID、IDREF 和 IDREFS 會對應至 PK/FK (主索引鍵/外部索引鍵) 在資料庫中的關聯性，但是有一些差異。 在 XML 文件中，ID 類型屬性的值必須是相異的。 如果**CustomerID**並**OrderID**屬性會指定為 XML 文件中 ID 型別必須是相異的這些值。 然而在資料庫中，CustomerID 和 OrderID 資料行的值可以相同 (例如，CustomerID = 1 且 OrderID = 1 在資料庫中是有效的)。  
+ ID、IDREF 和 IDREFS 會對應至 PK/FK (主索引鍵/外部索引鍵) 在資料庫中的關聯性，但是有一些差異。 在 XML 文件中，ID 類型屬性的值必須是相異的。 如果在 XML 檔中將**CustomerID**和「**訂單**」屬性指定為 ID 類型，則這些值必須是相異的。 然而在資料庫中，CustomerID 和 OrderID 資料行的值可以相同  (例如，CustomerID = 1 且 OrderID = 1 在資料庫中是有效的)。  
   
  若要讓識別碼、IDREF 和 IDREFS 屬性是有效的：  
   
@@ -42,21 +42,21 @@ ms.locfileid: "68126467"
   
 -   針對每一個 IDREF 和 IDREFS，參考的識別碼值都必須在 XML 文件中。  
   
--   ID、IDREF 和 IDREFS 的值必須是具名 Token (例如，整數值 101 不能是 ID 值)。  
+-   ID、IDREF 和 IDREFS 的值必須是具名 Token  (例如，整數值 101 不能是 ID 值)。  
   
--   ID、 IDREF 和 IDREFS 類型的屬性無法對應至類型的資料行**文字**， **ntext**，或**映像**或任何其他二進位資料類型 (例如**時間戳記**)。  
+-   ID、IDREF 和 IDREFS 類型的屬性無法對應至**text**、 **Ntext**或**image**類型的資料行，或是任何其他二進位資料類型（例如**時間戳記**）。  
   
- 如果 XML 文件包含多個識別碼，請**sql: prefix**以確定值是唯一的註解。  
+ 如果 XML 檔包含多個識別符，請使用**sql： prefix**注釋來確保這些值是唯一的。  
   
- 請注意， **sql: prefix**註釋不能搭配 XSD 固定屬性。  
+ 請注意， **sql： prefix**注釋不能與 XSD fixed 屬性一起使用。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 類型  
- 在下列結構描述中， **\<客戶 >** 元素所組成 **\<順序 >** 子項目。 **\<順序 >** 項目也具有子元素 **\<OrderDetail >** 項目。  
+ 在下列架構中， ** \<Customer>** 元素是由** \<Order>** 子項目所組成。 Order>元素也具有子項目，也就是** \<OrderDetail>** 元素。 ** \< **  
   
- **OrderIDList**屬性 **\<客戶 >** 為 IDREFS 類型屬性，是指**OrderID**屬性 **\<順序 >** 項目。  
+ Customer>的**OrderIDList**屬性是一個 IDREFS 類型屬性，它會參考** \<Order>** **元素的「訂單」屬性。** ** \< **  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -132,7 +132,7 @@ ms.locfileid: "68126467"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下是部份結果：  
   

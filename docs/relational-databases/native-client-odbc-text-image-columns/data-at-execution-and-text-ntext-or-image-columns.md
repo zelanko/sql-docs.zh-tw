@@ -1,5 +1,5 @@
 ---
-title: 資料執行中和 Text、Ntext 或 Image 資料行 |Microsoft Docs
+title: 資料執行中和 Text、Ntext、Image
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ffc786a8891ceffdfc3bc835374c4833ce9dca1
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 6135fb151d2fd0d4d14674597e874dc00260efdd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790483"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254634"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>資料執行中和 Text、ntext 或 Image 資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

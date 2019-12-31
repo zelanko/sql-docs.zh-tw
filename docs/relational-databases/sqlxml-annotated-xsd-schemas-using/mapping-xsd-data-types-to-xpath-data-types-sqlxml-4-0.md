@@ -1,6 +1,5 @@
 ---
-title: 將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 將 XSD 資料類型對應到 XPath 資料類型（SQLXML）
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,28 +18,29 @@ ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7f79a4d756a76dc6b59e76bbbfc28076ba36eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b956bf3a52b9ae14e59af770d279e8be8fec028
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067053"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257380"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  當 XPath 查詢針對 XSD 結構描述執行，而且已在指定 XSD 類型**xsd: type**屬性，XPath 會使用處理查詢時指定的資料類型。  
+  針對 XSD 架構執行 XPath 查詢，並在**xsd： type**屬性中指定 xsd 類型時，xpath 會使用處理查詢時指定的資料類型。  
   
- 節點的 XPath 資料類型衍生自結構描述中的 XSD 資料類型，如下表所示 (EmployeeID 節點用於提供說明)。  
+ 節點的 XPath 資料類型衍生自結構描述中的 XSD 資料類型，如下表所示  (EmployeeID 節點用於提供說明)。  
   
-|XSD 資料類型|XDR 資料類型|對等用法<br /><br /> XPath 資料類型|[SQL Server]<br /><br /> 所使用的轉換|  
+|XSD 資料類型|XDR 資料類型|對等用法<br /><br /> XPath 資料類型|SQL Server<br /><br /> 所使用的轉換|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
-|**Base64Binary**<br /><br /> **HexBinary**|**無**<br /><br /> **bin.base64bin.hex**|**不適用**|None<br /><br /> EmployeeID|  
-|**布林**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
-|**Decimal、 整數、 浮點數、 位元組、 short、 int、 long、 float、 double、 unsignedByte、 unsignedShort、 unsignedInt、 unsignedLong**|**數字、 int、 float、 i1、 i2、 i4、 i8、 r4，r8ui1、 ui2、 ui4、 ui8**|**number**|CONVERT(float(53), EmployeeID)|  
-|**id、 idref、 idrefsentity、 實體、 標記法、 nmtoken、 nmtokens、 DateTime、 string、 AnyURI**|**id、 idref、 idrefsentity、 實體、 列舉、 標記法、 nmtoken、 nmtokens、 char、 dateTime、 dateTime.tz、 字串、 uri、 uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
-|**decimal**|**fixed14.4**|**不適用 （沒有資料類型中沒有相當於 fixed14.4 XDR 資料類型的 XPath。）**|CONVERT(money, EmployeeID)|  
-|**date**|**date**|**string**|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|**time**|**time**<br /><br /> **time.tz**|**string**|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|**Base64Binary**<br /><br /> **HexBinary**|**無**<br /><br /> **base64bin. hex**|**不適用**|無<br /><br /> EmployeeID|  
+|**Boolean**|**true**|**true**|CONVERT(bit, EmployeeID)|  
+|**Decimal、integer、float、byte、short、int、long、float、double、unsignedByte、unsignedShort、unsignedInt、unsignedLong**|**number、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8**|**項數**|CONVERT(float(53), EmployeeID)|  
+|**id、idref、idrefsentity、entities、notation、nmtoken、nmtokens、DateTime、string、AnyURI**|**id、idref、idrefsentity、entities、enumeration、notation、nmtoken、nmtokens、char、dateTime、dateTime.tz、string、uri、uuid**|**字串**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|**十**|**fixed14.4**|**不適用 (在 XPath 中沒有相當於 fixed14.4 XDR 資料類型的資料類型。)**|CONVERT(money, EmployeeID)|  
+|**日期**|**日期**|**字串**|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|**階段**|**階段**<br /><br /> **time.tz**|**字串**|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
   

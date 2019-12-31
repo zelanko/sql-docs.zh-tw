@@ -1,6 +1,5 @@
 ---
-title: 利用 CommandStream 屬性執行範本檔案 |Microsoft Docs
-ms.custom: ''
+title: 使用 CommandStream 屬性執行範本檔案
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6d5dbcbbb1fa7d4a71fb6f808bc7b4facac862c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8741f9f4a094e33aa8da52d6a27d5169e2b09866
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934269"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251473"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>利用 CommandStream 屬性執行範本檔案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  此範例說明如何指定 SQL 或 XPath 查詢所組成的範本檔案，利用 CommandStream 屬性的 SqlXmlCommand 物件。 在此應用程式，FileStreamobject 會針對命令檔案開啟，而檔案資料流指派為執行 CommandStream。  
+  這個範例說明如何使用 SqlXmlCommand 物件的 CommandStream 屬性來指定由 SQL 或 XPath 查詢所組成的範本檔案。 在此應用程式中，會開啟命令檔的 FileStreamobject，並將檔案資料流程指派為執行的 CommandStream。  
   
- 在下列範例中，CommandType 屬性會指定為 SqlXmlCommandType.Template （而非作為 TemplateFile)。  
+ 在下列範例中，CommandType 屬性指定為 SqlXmlCommandType （而不是 TemplateFile）。  
   
  這是 XML 範本範例：  
   
@@ -84,7 +84,7 @@ class Test
   
 1.  將這個範例所提供的 XML 範本 (TemplateFile.xml) 儲存在資料夾中。  
   
-2.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中 (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
+2.  將此範例中提供的 C# 程式碼 (DocSample.cs) 儲存到儲存結構描述的相同資料夾中  (如果您將檔案儲存在不同的資料夾中，您將需要編輯程式碼，然後為對應的結構描述指定適當的目錄路徑)。  
   
 3.  編譯程式碼。 若要在命令提示字元下編譯程式碼，請使用：  
   

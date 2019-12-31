@@ -1,7 +1,7 @@
 ---
-title: 使用 ADO 執行 SQLXML 4.0 查詢 |Microsoft Docs
+title: 使用 ADO 執行 SQLXML 4.0 查詢
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 642e98a743585226d984c378607b83a7ad432d92
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909126"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254145"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 執行 SQLXML 4.0 查詢
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "72909126"
   
     -   尋找 "`@@FILE_NAME@@`"，並以您的範例檔名稱加以取代。  
   
-    -   尋找 "`@@SERVER_NAME@@`"，並以您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱加以取代 (例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在本機執行，則為 "`(local)`")。  
+    -   尋找 "`@@SERVER_NAME@@`"，並以您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱加以取代 (例如，如果 `(local)` 在本機執行，則為 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]")。  
   
     -   尋找 "`@@DATABASE_NAME@@`"，並以資料庫的名稱加以取代 (例如，"`AdventureWorks2012`" 或 "`tempdb`")。  
   
@@ -121,9 +121,9 @@ ms.locfileid: "72909126"
     3.  在目前已安裝的程式清單中，確認 [ **Microsoft SQL Server Native Client** ] 出現在清單中。  
   
         > [!NOTE]  
-        >  如果您需要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，請參閱[安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
+        >  如果您需要安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，請參閱[安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
-2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果需要確認 MDAC 版本資訊，可以使用 MDAC Component Checker 工具，此工具可從 Microsoft 網站 (www.microsoft.com) 免費下載。 如需詳細資訊，請在 Microsoft 網站上搜尋 "MDAC Component Checker"。  
+2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果您需要驗證 MDAC 版本資訊，可以使用 MDAC Component 檢查工具，這是從 Microsoft 網站免費下載提供[http://www.microsoft.com](https://www.microsoft.com)。 如需詳細資訊，請在 Microsoft 網站上搜尋 "MDAC Component Checker"。  
   
 3.  執行指令碼。  
   

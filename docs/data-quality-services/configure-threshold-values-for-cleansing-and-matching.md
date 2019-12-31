@@ -1,6 +1,5 @@
 ---
-title: 設定清理和比對的閾值 | Microsoft Docs
-ms.custom: ''
+title: 設定清理和比對的臨界值
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -14,14 +13,14 @@ helpviewer_keywords:
 - cleansing threshold values
 - matching,threshold value
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 1cf5a91891323083266ac76bb041485bf0104234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d31066ff172b0677e83e7a5dbe68f5d70e7136c8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992319"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255629"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>設定清理和比對的臨界值
 
@@ -29,29 +28,29 @@ ms.locfileid: "67992319"
 
   此主題描述如何設定臨界值，該值將會在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的電腦輔助的清理和比對活動期間使用。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="BeforeYouBegin"></a>開始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全級  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a>無權  
  您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能設定這些臨界值。  
   
-##  <a name="Configure"></a> 設定臨界值  
+##  <a name="Configure"></a>設定臨界值  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[組態]** 。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[組態]**。  
   
-3.  接下來，按一下 **[一般設定]** 索引標籤。此索引標籤可讓您針對清理和比對活動指定臨界值。  
+3.  接下來，按一下 [**一般設定**] 索引標籤。此索引標籤可讓您指定清理和比對活動的臨界值。  
   
 4.  若要針對清理活動指定臨界值，請在 **[互動式清理]** 區域的以下方塊中指定適當的值：  
   
-    -   **建議的最低分數**：DQS 在電腦輔助清理程序期間將用來為某個值建議取代項目的最低分數或信賴等級。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.75 代表 75%。 這個值應該要小於或等於 **[自動更正的最低分數]** 方塊中指定的值。 預設值為 0.7。  
+    -   **建議**的最低分數： DQS 在電腦輔助的清理程式期間將用來建議值取代的最小分數或信賴等級。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.75 代表 75%。 這個值應該要小於或等於 **[自動更正的最低分數]** 方塊中指定的值。 預設值為 0.7。  
   
-    -   **自動更正的最低分數**：DQS 在電腦輔助清理程序期間將用來自動更正某個值的最低分數或信賴等級。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.9 表示 90%。 預設值為 0.8。  
+    -   **自動校正**的最低分數： DQS 在電腦輔助的清理程式期間將用來自動校正值的最低分數或信賴等級。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.9 表示 90%。 預設值為 0.8。  
   
 5.  若要針對比對活動指定臨界值，請在 **[比對]** 區域底下的 **[最低記錄分數]** 方塊中指定值。 這個值表示讓某筆記錄被視為符合另一筆記錄的最低分數。 預設值是 80%。  
   
-6.  按一下 [ **關閉**]。  
+6.  按一下 **關閉**。  
   
   

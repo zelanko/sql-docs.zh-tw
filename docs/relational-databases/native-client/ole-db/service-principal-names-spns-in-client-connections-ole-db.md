@@ -1,5 +1,5 @@
 ---
-title: 用戶端連接中的服務主體名稱 (SPN) (OLE DB) | Microsoft Docs
+title: OLE DB 服務主體名稱連接
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83356cd14155daba742f78fe37ba7c903226e5cf
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 974e5e6c03c32b0457295b749604323e7f1b870e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73759524"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254618"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>用戶端連接中的服務主要名稱 (SPN) (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需用戶端應用程式中 SPN 的詳細資訊，請參閱[用戶端連接中的服務主體名稱 &#40;SPN&#41; 支援](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[整合式&#40;Kerberos&#41;驗證 OLE DB](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
+  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需用戶端應用程式中 SPN 的詳細資訊，請參閱[用戶端連接中的服務主體名稱 &#40;SPN&#41; 支援](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[&#40;OLE DB&#41;的整合式 Kerberos 驗證](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
   
 ## <a name="provider-initialization-string-keywords"></a>提供者初始化字串關鍵字  
  下列提供者初始化字串關鍵字可支援 OLE DB 應用程式內的 SPN。 在下表中，關鍵字欄中的值會用於 IDBInitialize::Initialize 的提供者字串。 當使用 ADO 或 IDataInitialize::GetDataSource 連接時，描述欄中的值會在初始化字串中使用。  
   
-|關鍵字|說明|Value|  
+|關鍵字|描述|值|  
 |-------------|-----------------|-----------|  
 |ServerSPN|伺服器 SPN|伺服器的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
 |FailoverPartnerSPN|容錯移轉夥伴 SPN|容錯移轉夥伴的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
@@ -34,15 +34,15 @@ ms.locfileid: "73759524"
 ## <a name="data-source-initialization-properties"></a>資料來源初始化屬性  
  **DBPROPSET_SQLSERVERDBINIT**屬性集中的下列屬性可讓應用程式指定 spn。  
   
-|名稱|類型|使用方式|  
+|名稱|類型|使用量|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR，讀取/寫入|指定伺服器的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR，讀取/寫入|指定容錯移轉夥伴的 SPN。 預設值為空字串，它可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用提供者產生的預設 SPN。|  
   
-## <a name="data-source-properties"></a>{1}資料來源屬性{2}  
+## <a name="data-source-properties"></a>資料來源屬性  
  **DBPROPSET_SQLSERVERDATASOURCEINFO**屬性集中的下列屬性可讓應用程式探索驗證方法。  
   
-|名稱|類型|使用方式|  
+|名稱|類型|使用量|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR，唯讀|傳回連接所使用的驗證方法。 傳給應用程式的值就是 Windows 傳給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的值。 以下是可能的值： <br />"NTLM"，當使用 NTLM 驗證開啟連接時所傳回。<br />"Kerberos"，當使用 Kerberos 驗證開啟連接時所傳回。<br /><br /> 如果連接已經開啟，而且無法判定驗證方法，就會傳回 VT_EMPTY。<br /><br /> 只有當已經初始化資料來源時，才可讀取這個屬性。 如果您嘗試在已初始化資料來源之前讀取這個屬性，IDataInitialize::GetDataSource 將會適當地傳回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，而且將會針對這個屬性在 DBPROPSET_PROPERTIESINERROR 中設定 DBPROPSTATUS_NOTSUPPORTED。 這個行為會根據 OLE DB 核心規格。|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL，唯讀|如果連接中的伺服器已互相驗證過，則會傳回 VARIANT_TRUE，否則會傳回 VARIANT_FALSE。<br /><br /> 只有當已經初始化資料來源時，才可讀取這個屬性。 如果嘗試在已初始化資料來源之前讀取這個屬性，IDataInitialize::GetDataSource 將會適當地傳回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，而且將會針對這個屬性在 DBPROPSET_PROPERTIESINERROR 中設定 DBPROPSTATUS_NOTSUPPORTED。 這個行為會根據 OLE DB 核心規格。<br /><br /> 如果針對未使用 Windows 驗證的連接來查詢這個屬性，就會傳回 VARIANT_FALSE。|  
@@ -50,7 +50,7 @@ ms.locfileid: "73759524"
 ## <a name="ole-db-api-support-for-spns"></a>OLE DB API 對 SPN 的支援  
  下表描述在用戶端連接中支援 SPN 的 OLE DB 成員函數：  
   
-|成員函數|說明|  
+|成員函數|描述|  
 |---------------------|-----------------|  
 |IDataInitialize::GetDataSource|*pwszInitializationString*可以包含新的關鍵字**ServerSPN**和**FailoverPartnerSPN**。|  
 |IDataInitialize::GetInitializationString|如果 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 有非預設值，將會透過 *ppwszInitString* 將它們當做 **ServerSPN** 和 **FailoverPartnerSPN** 的關鍵字值包含在初始化字串中。 否則，這些關鍵字將不會包含在初始化字串中。|  

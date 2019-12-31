@@ -1,6 +1,5 @@
 ---
-title: 使用 sql：對應從 XML 檔排除架構元素 |Microsoft Docs
-ms.custom: ''
+title: 使用 sql：對應從 XML 檔排除架構元素
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,13 +21,14 @@ ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d466ad57d7644f73d7fdd44df62aac6a0c2a1b0b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905954"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257446"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>使用 sql:mapped 從 XML 文件排除結構描述項目
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "72905954"
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 註解  
- 假設您有來自其他來源的 XSD 結構描述。 這個 XSD 架構是由 **\<Person 所組成。請聯絡**具有**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**屬性的 > 元素。  
+ 假設您有來自其他來源的 XSD 結構描述。 這個 XSD 架構是** \<由 Person. Contact>** 元素所組成，其中包含**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**屬性。  
   
  在將這個 XSD 架構對應到 AdventureWorks 資料庫中的 Contact 資料表時，會在**HomeAddress**屬性上指定**sql：** mapping，因為 employees 資料表不會儲存員工的主位址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
   
- 預設的對應發生於其餘的結構描述。 **\<Person. contact >** 元素會對應到 Person. contact 資料表，而所有屬性都會對應到 Person. contact 資料表中具有相同名稱的資料行。  
+ 預設的對應發生於其餘的結構描述。 Person>元素會對應到 person. contact 資料表，而所有屬性都會對應到 person. contact 資料表中具有相同名稱的資料行。 ** \< **  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -105,7 +105,7 @@ ms.locfileid: "72905954"
   
  請注意，ContactID、FirstName 和 LastName 都存在，但 HomeAddress 不是，因為對應架構為**sql：對應**的屬性指定0。  
   
-## <a name="see-also"></a>請參閱  
- [XSD 元素和屬性對資料表和資料行&#40;的預設對應 SQLXML 4。0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>另請參閱  
+ [XSD 元素和屬性對資料表和資料行的預設對應 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

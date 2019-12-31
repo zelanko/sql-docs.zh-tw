@@ -1,6 +1,5 @@
 ---
-title: 在 .NET Framework 更新之後升級 SQLCLR 組件 | Microsoft Docs
-ms.custom: ''
+title: 在 .NET Framework 更新之後升級 SQLCLR 組件
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,19 +7,20 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: eb7ed3d3c86ff4a6a5ca0d83f33c28c7990e1f88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3ce898b31a3fa964a57492987f70356c18fd2964
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991949"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252795"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>在 .NET Framework 更新之後升級 SQLCLR 組件
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是參考 Microsoft .NET Framework 4 組件的 SQL Common Language Runtime (SQLCR) 常式集合。 如果您在電腦上安裝任何會影響這類參考 .NET Framework 組件的 .NET Framework 更新，則會導致全域組件快取 (GAC) 中組件的模組版本 ID (MVID) 發生變更。 這樣會造成 GAC 中所參考組件的 MVID 與 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中組件的 MVID 不相符。  
   
  如果 .NET Framework 更新需要您重新啟動 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦，會自動升級受影響的 SQLCLR 組件，以修正重新啟動 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦時的 MVID 不相符問題。 不過，若是不需要您重新啟動 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦的 .NET Framework 更新，則會發生錯誤，因為當您嘗試使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 連接至 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]時，會造成組件的 MVID 不相符：  
@@ -31,7 +31,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
  若要修正此問題，則必須升級 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中受影響的 SQLCLR 組件。 您可以透過使用 **upgradedlls** 命令列參數執行 DQSInstaller.exe 檔的方式略過重新建立 DQS 資料庫，而只升級受影響的組件。 這樣可確保您的知識庫、資料品質專案以及 DQS 中的任何其他資料都會保留下來。  
   
-## <a name="prerequisites"></a>先決條件  
+## <a name="prerequisites"></a>必要條件  
   
 -   您必須以 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦上 Administrator 群組成員的身分登入。  
   
@@ -57,6 +57,6 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
+ [安裝 SQL Server 更新之後，升級 DQS 資料庫架構](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
   
   

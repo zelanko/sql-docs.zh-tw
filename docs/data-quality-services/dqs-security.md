@@ -1,6 +1,5 @@
 ---
-title: DQS 安全性 | Microsoft Docs
-ms.custom: ''
+title: DQS 安全性
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,19 +7,20 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c732645c526b2179265a6669055d005e944ee114
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 33d8ecce0aaba4826e20783bbe63aee44f63b4b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992099"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251632"
 ---
 # <a name="dqs-security"></a>DQS 安全性
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 安全性基礎結構是根據 SQL Server 安全性基礎結構。 資料庫管理員會將使用者與 DQS 角色產生關聯，將一組權限授與該使用者。 這樣做會決定使用者可存取的 DQS 資源以及允許使用者執行的功能活動。  
   
 ## <a name="dqs-roles"></a>DQS 角色  
@@ -28,11 +28,14 @@ ms.locfileid: "67992099"
   
  還有兩個其他角色，分別是資訊工作者，以及在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式中工作來直接使用產品的資料監管。 這些角色包括下列各項：  
   
--   **DQS 系統管理員** (dqs_administrator 角色) 可以在產品的範圍內執行任何工作。 管理員可以編輯和執行專案、建立和編輯知識庫、終止活動、停止活動內的程序，也可以變更組態和參考資料服務設定。 但是 DQS 管理員無法安裝伺服器或新增使用者。 這必須由資料庫管理員來執行。  
+-   
+  **DQS 系統管理員** (dqs_administrator 角色) 可以在產品的範圍內執行任何工作。 管理員可以編輯和執行專案、建立和編輯知識庫、終止活動、停止活動內的程序，也可以變更組態和參考資料服務設定。 但是 DQS 管理員無法安裝伺服器或新增使用者。 這必須由資料庫管理員來執行。  
   
--   **DQS KB 編輯者** (dqs_kb_editor 角色) 可以執行管理以外的所有 DQS 活動。 KB 編輯者可以編輯和執行專案以及建立和編輯知識庫。 他們可以看到活動監控資料，但不能終止或停止活動或是履行管理職責。  
+-   
+  **DQS KB 編輯者** (dqs_kb_editor 角色) 可以執行管理以外的所有 DQS 活動。 KB 編輯者可以編輯和執行專案以及建立和編輯知識庫。 他們可以看到活動監控資料，但不能終止或停止活動或是履行管理職責。  
   
--   **DQS KB 操作員** (dqs_kb_operator 角色) 可以編輯和執行專案。 他們不能執行任何種類的知識管理，也不能建立或變更知識庫。 他們可以看到活動監控資料，但不能終止活動或履行管理職責。  
+-   
+  **DQS KB 操作員** (dqs_kb_operator 角色) 可以編輯和執行專案。 他們不能執行任何種類的知識管理，也不能建立或變更知識庫。 他們可以看到活動監控資料，但不能終止活動或履行管理職責。  
   
 ## <a name="user-management"></a>使用者管理  
  資料庫管理員 (DBA) 會建立 DQS 使用者，並在 SQL Server Management Studio 中將這些使用者與 DQS 角色產生關聯。 DBA 會管理其權限，方法是新增 SQL 登入當做 DQS_MAIN 資料庫的使用者，並將每一個使用者與其中一個 DQS 角色產生關聯。 每個角色都會被授與 DQS_MAIN 資料庫上一組預存程序的權限。 這三個 DQS 角色不適用於 DQS_PROJECTS 和 DQS_STAGING_DATA 資料庫。  

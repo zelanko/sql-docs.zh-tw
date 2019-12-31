@@ -1,7 +1,7 @@
 ---
-title: 建立主資料管理員 Web 應用程式
-ms.custom: ''
-ms.date: 03/01/2017
+title: 建立主資料管理員 web 應用程式
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -10,17 +10,18 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 384cf7989f41dce541afcfdd44b2831c79fde31e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0c0bf0cacc1fa1a1d042633531840ba46d1fae2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729455"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253072"
 ---
-# <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 Web 應用程式 (Master Data Services)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 web 應用程式（Master Data Services）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式提供了一個介面，可讓使用者處理主資料並且讓管理員設定及管理 MDS。  
   
  網站中一定要包含 Web 應用程式。 若要建立 Web 應用程式，您必須：  
@@ -49,13 +50,13 @@ ms.locfileid: "73729455"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 **[Web 組態]** 。  
+2.  按一下左窗格中的 **[Web 組態]**。  
   
-3.  在 **[Web 組態]** 頁面上的網站清單中，選取 **[建立新網站]** 。  
+3.  在 **[Web 組態]** 頁面上的網站清單中，選取 **[建立新網站]**。  
   
 4.  在 **[建立網站]** 對話方塊中，指定新網站的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立網站對話方塊 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)。  
   
-5.  按一下 **[確定]** 。  
+5.  按一下 [確定]****。  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>在現有網站上建立主資料管理員 Web 應用程式  
  當您在現有網站上建立 Web 應用程式時，可以選擇 Web 應用程式的虛擬路徑及別名。 此 Web 應用程式會加入至新的應用程式集區。  
@@ -64,15 +65,15 @@ ms.locfileid: "73729455"
   
 1.  開啟 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。  
   
-2.  按一下左窗格中的 **[Web 組態]** 。  
+2.  按一下左窗格中的 **[Web 組態]**。  
   
 3.  在 **[Web 組態]** 頁面的 **[網站]** 清單中，選取建立 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式所在的網站。  
   
-4.  按一下 **[建立應用程式]** 。  
+4.  按一下 **[建立應用程式]**。  
   
 5.  在 **[建立 Web 應用程式]** 對話方塊中，指定新 Web 應用程式的資訊。 如需此對話方塊之使用者介面 (UI) 選項的詳細資訊，請參閱[建立 Web 應用程式對話方塊 &#40;Master Data Services 組態管理員&#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)。  
   
-6.  按一下 **[確定]** 。  
+6.  按一下 [確定]****。  
   
 ## <a name="next-steps"></a>後續步驟  
   

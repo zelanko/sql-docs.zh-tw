@@ -1,6 +1,5 @@
 ---
-title: 註解式結構描述安全性考量 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 批註式架構安全性考慮（SQLXML）
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,23 +19,24 @@ helpviewer_keywords:
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a71852dbd4f25e2055544727fd981718ef524b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 87af92866658e2fa5b4f8648e2a22dbf3d1cb13f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027009"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252504"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>註解式結構描述安全性考量 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   下面是使用註解式結構描述的安全性指導方針：  
   
--   請避免在對應結構描述中使用預設的對應。 預設對應會在產生的 XML 文件中公開資料庫資訊 (資料表和資料行名稱)，因為根據預設，元素名稱會對應到資料表名稱，而屬性名稱則對應到資料行名稱。 因此，看到 XML 文件的任何使用者都可以存取資料庫中的資料表和資料行資訊，因此暴露潛在的安全性風險。 為避免此風險，請在結構描述中指定任意的元素和屬性名稱，並使用註解將其明確地對應到資料表和資料行。 如需使用預設對應，當您建立 XSD 結構描述的詳細資訊，請參閱 <<c0> [ 預設對應的 XSD 項目和屬性對資料表和資料行&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)。</c0>  
+-   請避免在對應結構描述中使用預設的對應。 預設對應會在產生的 XML 文件中公開資料庫資訊 (資料表和資料行名稱)，因為根據預設，元素名稱會對應到資料表名稱，而屬性名稱則對應到資料行名稱。 因此，看到 XML 文件的任何使用者都可以存取資料庫中的資料表和資料行資訊，因此暴露潛在的安全性風險。 為避免此風險，請在結構描述中指定任意的元素和屬性名稱，並使用註解將其明確地對應到資料表和資料行。 如需在建立 XSD 架構時使用預設對應的詳細資訊，請參閱[XSD 專案和屬性對資料表和資料行的預設對應 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)。  
   
 -   使用註解指定的明確對應會公開資料庫資訊 (例如資料表名稱和資料行名稱)。 因此，您可能不會想要公開地提供這些結構描述。  
   
--   某些查詢，例如針對對應結構描述利用遞迴指定 (使用指定**最大深度**註釋設定為較高的值) 可能需要較長的時間執行。 您可以選擇性地指定逾時限制，藉由設定命令逾時屬性 （以秒為單位）。 例如:  
+-   某些查詢（例如，針對對應架構與遞迴所指定的查詢（使用**最大深度**注釋設定為較高的值所指定）可能需要較長的時間來執行。 您可以選擇性地設定 [命令逾時] 屬性（以秒為單位）來指定超時限制。 例如：  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

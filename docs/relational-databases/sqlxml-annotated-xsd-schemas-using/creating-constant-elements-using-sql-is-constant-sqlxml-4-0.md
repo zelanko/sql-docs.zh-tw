@@ -1,6 +1,5 @@
 ---
-title: 使用 sql： is-常數建立常數元素（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 使用 sql： is-常數（SQLXML）來建立常數元素
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cb1223c7c72aa091a3dd15da3beacaf65c4b21b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906049"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257483"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
 
@@ -35,17 +35,17 @@ ms.locfileid: "72906049"
   
 -   將最上層元素加入到 XML 文件中。 XML 需要單一的最上層元素 (根元素) 供文件使用。  
   
--   建立容器元素，例如包裝所有訂單的 **\<訂單 >** 元素。  
+-   建立容器元素，例如包裝所有訂單的** \<訂單>** 元素。  
   
- **Sql： is-常數**注釋可以加入 **\<complexType >** 元素中。  
+ **Sql： is-常數**注釋可以加入** \<complexType>** 元素中。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 來加入容器元素  
- 在這個批註式 XSD 架構中， **\<CustomerOrders >** 會藉由指定**sql： is-常數**屬性（其值為1）定義為常數元素。 因此， **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行。 這個常數元素是由 > 子項目的 **\<順序**所組成。  
+ 在這個批註式 XSD 架構中， ** \<CustomerOrders>** 會藉由指定**sql： is-常數**屬性（其值為1）定義為常數元素。 因此， ** \<CustomerOrders>** 不會對應到任何資料庫資料表或資料行。 這個常數元素是由>子項目的** \<順序**所組成。  
   
- 雖然 **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行，但它仍會顯示在產生的 XML 中，做為包含 **\<順序 >** 子項目的容器元素。  
+ 雖然** \<CustomerOrders>** 不會對應到任何資料庫資料表或資料行，但它仍會顯示在產生的 XML 中，當做包含** \<Order>** 子項目的容器元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

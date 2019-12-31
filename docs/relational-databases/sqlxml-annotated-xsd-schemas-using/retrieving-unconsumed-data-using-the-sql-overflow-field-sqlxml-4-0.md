@@ -1,6 +1,5 @@
 ---
-title: 使用 sql：溢位欄位來抓取未使用的資料（SQLXML 4.0） |Microsoft Docs
-ms.custom: ''
+title: 使用 sql：溢位欄位取得未使用的資料（SQLXML）
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,23 +16,24 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907171"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257400"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>使用 sql:overflow-field 擷取未耗用的資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  當記錄使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函數，從 XML 文件的資料庫中插入，可以將來源 XML 文件中所有未耗用的資料儲存在資料行中。 當您使用批註式架構來抓取資料庫中的資料時，您可以指定**sql：溢位欄位**屬性，以識別資料表中用來儲存溢位資料的資料行。 可以在 **\<元素 >** 上指定**sql：溢位欄位**屬性。  
+  當記錄使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函數，從 XML 文件的資料庫中插入，可以將來源 XML 文件中所有未耗用的資料儲存在資料行中。 當您使用批註式架構來抓取資料庫中的資料時，您可以指定**sql：溢位欄位**屬性，以識別資料表中用來儲存溢位資料的資料行。 可以在** \<元素>** 上指定**sql：溢位欄位**屬性。  
   
  然後以下列方式擷取此資料：  
   
 -   儲存在溢位資料行中的屬性會加入至包含**sql：溢位欄位**注釋的元素中。  
   
--   儲存在資料庫之溢位資料行中的子元素及其下階會當做在結構描述中明確指定之內容之後的子元素加入 (不會保留任何順序)。  
+-   儲存在資料庫之溢位資料行中的子元素及其下階會當做在結構描述中明確指定之內容之後的子元素加入  (不會保留任何順序)。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  

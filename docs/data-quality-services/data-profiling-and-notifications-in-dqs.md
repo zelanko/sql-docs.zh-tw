@@ -1,6 +1,5 @@
 ---
-title: DQS 中的資料分析與通知 | Microsoft Docs
-ms.custom: ''
+title: DQS 中的資料分析與通知
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,19 +7,20 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 6d331065c8e5d44cd2abeed9c85ce55d146006e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935472"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251744"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS 中的資料分析與通知
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料分析程序會分析現有資料來源中的資料，以及顯示有關 DQS 活動資料的統計資料。 此程序為您提供資料品質的自動化度量。 DQS 分析會整合到 DQS 知識管理與資料品質專案中。 它是動態的，而且可以調整。 分析有兩個主要目標：首先是在資料品質程序中引導您並支援您的決策，第二個目標是評估程序的效用。 DQS 分析程序的優點如下：  
   
 -   分析會提供來源資料品質的洞察能力，並幫助您識別資料品質問題。  
@@ -33,7 +33,7 @@ ms.locfileid: "67935472"
   
  分析讓您不僅將 Data Quality Services 用於知識探索、清理和比對，也可以當做分析工具。 您可能會想要建立一個知識庫進行分析，並使用該知識庫執行知識探索，根據分析統計資料判斷此知識庫是否滿足您的探索、清理和比對需求。  
   
-##  <a name="How"></a> 分析的運作方式  
+##  <a name="How"></a>分析的運作方式  
  分析不會衡量知識庫的品質。 而會衡量來源資料的品質。 分析為您提供的統計資料會指示您在知識管理或是來源資料的資料品質專案中所執行之特定作業的效果。 分析一定會在您所執行之特定活動的內容中。 您可以按一下畫面上的分析索引標籤，以顯示分析資料，而不用離開您所執行之活動的階段。 執行此程序時會即時擴展分析資料表，好讓您在執行資料品質工作時加以評估。 您可以在清理或刪除重複作業之後判斷來源資料是否變得比較好以及變好的程度。  
   
  所有分析數字都會參考某個值出現的次數，在許多情況下也會參考總計的百分比，但是唯一性度量例外。 唯一性度量會參考值的絕對數目，不論這些值出現多少次。  
@@ -50,7 +50,7 @@ ms.locfileid: "67935472"
   
  DQS 不會提供 [定義域管理] 活動的分析統計資料。  
   
-##  <a name="Activity"></a> 依據活動分析資料  
+##  <a name="Activity"></a>依據活動分析資料  
  DQS 分析會使用標準資料品質維度來表示資料的品質：完整性 (資料存在的程度) 和精確度 (可將資料用於預定用途的程度)，以及唯一性 (不同值代表不同實體的程度)。 根據預設，NULL 和空白值會被視為遺漏或低於完整性百分比；但是，您也可以將其他值定義為等於 NULL，此時這些值也會被視為遺漏。  
   
  分析為您提供評估程序所需的統計資料，但是您必須解譯這些統計資料。 請按資料行逐一查看這些統計資料，以理解分析要告訴您什麼事。  
@@ -75,15 +75,15 @@ ms.locfileid: "67935472"
   
 -   [執行比對專案](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="Monitoring"></a> 活動監控中的分析資料  
+##  <a name="Monitoring"></a>活動監控中的分析資料  
  知識探索、比對原則、比對和清理活動的分析資訊不但有在 Data Quality Client 活動頁面中提供，活動監控中也有提供。 活動監控為您提供目前和過去活動的概觀。 除了活動的屬性及相關的計算程序之外，您也可以檢視針對某個位置的每一個活動所產生的分析資訊。 您可在活動資料表中選取活動，於底下的資料表中顯示分析結果。 您也可以匯出分析結果。 如需詳細資訊，請參閱 [DQS Administration](../data-quality-services/dqs-administration.md)。  
   
-##  <a name="Notifications"></a> 通知  
+##  <a name="Notifications"></a>提醒  
  除了透過分析來收集及顯示重要統計資料與度量以外，DQS 也會產生通知 (如果啟用的話)，以指示您何時可能會想要根據顯示的分析統計資料來採取動作。 DQS 會使用通知來強調有關資料來源的重要事實，並顯示目前活動相對於其執行目的的效用。 通知所提供的提示與建議會指示情況，並建議您如何改善知識探索、資料清理或資料比對活動。  
   
  DQS 通知是用來引發您可能會感興趣的問題，或是對付潛在問題。 您是否要對通知採取行動取決於該通知是否與您的目的相關。 例如，假設 DQS 在以下情況下發佈通知：資料清理未產生任何更正值或建議值，而完整性與精確度同時為 100%。 此通知指示，該活動可能不需要執行。 但是，不論您是否選擇執行活動，都是您自己的決定。  
   
- 通知是由工具提示中， **[分析]** 索引標籤中的驚嘆號所指示。與通知有關的統計資料會以紅色顯示，以指示該通知的統計理由。  
+ 通知是由工具提示以 [**分析**] 索引標籤中的驚嘆號表示。與通知相關聯的統計資料會以紅色顯示，表示通知的統計理由。  
   
  您可以在 Data Quality Client 首頁之 **[管理]** 區段的 **[一般設定]** 索引標籤中，啟用 (預設值) 或停用通知。 當停用通知時，工具提示並不會顯示，而且統計資料不會以紅色表示。 停用通知並不會顯著改善效能。 如果您停用通知，分析依然可運作。  
   
@@ -101,6 +101,6 @@ ms.locfileid: "67935472"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何啟用或停用 DQS 中的通知。|[啟用或停用 DQS 中的分析通知](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|描述如何啟用或停用 DQS 中的通知。|[在 DQS 中啟用或停用分析通知](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   

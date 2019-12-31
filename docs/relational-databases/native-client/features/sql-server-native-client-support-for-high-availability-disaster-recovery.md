@@ -1,5 +1,5 @@
 ---
-title: 高可用性、嚴重損壞修復的 SQL Server Native Client 支援 |Microsoft Docs
+title: Native Client、高可用性、復原
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cf7313c127be38e72131c604c4880963242ed3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: b2cc984e4e519d9db0c0532ec5b1f917e18b4ec6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788030"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247406"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,8 @@ ms.locfileid: "73788030"
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
  在連接到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時，永遠指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover**會針對 SQL Server 2012 中的所有可用性群組和容錯移轉叢集實例啟用更快速的容錯移轉，並大幅縮短單一和多重子網 Always On 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會積極重試 TCP 連接。  
   
- **MultiSubnetFailover** 連接屬性指示，應用程式正在可用性群組或容錯移轉叢集執行個體中部署，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會透過嘗試連接到所有 IP 位址，嘗試連接到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的資料庫。 為連接指定 **MultiSubnetFailover=Yes** 時，用戶端會重試 TCP 連接，其速度比作業系統的預設 TCP 重新傳輸間隔更快。 這可在容錯移轉 Always On 可用性群組或 Always On 容錯移轉叢集實例之後，加速重新連接，同時適用于單一和多重子網可用性群組和容錯移轉叢集實例。  
+ 
+  **MultiSubnetFailover** 連接屬性指示，應用程式正在可用性群組或容錯移轉叢集執行個體中部署，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會透過嘗試連接到所有 IP 位址，嘗試連接到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的資料庫。 為連接指定 **MultiSubnetFailover=Yes** 時，用戶端會重試 TCP 連接，其速度比作業系統的預設 TCP 重新傳輸間隔更快。 這可在容錯移轉 Always On 可用性群組或 Always On 容錯移轉叢集實例之後，加速重新連接，同時適用于單一和多重子網可用性群組和容錯移轉叢集實例。  
   
  如需連接字串關鍵字的詳細資訊，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -40,23 +41,23 @@ ms.locfileid: "73788030"
   
  請使用下列指導方針，連接到可用性群組或容錯移轉叢集執行個體中的伺服器：  
   
--   如果在連接到單一子網路或多重子網路時使用 **MultiSubnetFailover** 連接屬性，則會提高兩者的效能。  
+-   連接到單一子網或多重子網時，請使用**MultiSubnetFailover**連接屬性;它會改善兩者的效能。  
   
 -   若要連接到可用性群組，在連接字串中指定可用性群組的可用性群組接聽程式做為伺服器。  
   
 -   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   根據驗證的類型，使用 **MultiSubnetFailover** 連接屬性之應用程式的行為不會受到影響：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
+-   使用**MultiSubnetFailover**連接屬性之應用程式的行為不會根據驗證類型而受到影響： [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]驗證、Kerberos 驗證或 Windows 驗證。  
   
 -   您可以增加 **loginTimeout** 的值，以容納容錯移轉時間並減少應用程式連接重試次數。  
   
--   不支援分散式交易。  
+-   不支援分散式工作階段。  
   
  如果唯讀路由不在作用中，在下列狀況下，連接到可用性群組中的次要複本位置將會失敗：  
   
 1.  如果未設定次要複本位置接受連接。  
   
-2.  如果應用程式使用 **ApplicationIntent=ReadWrite**，而且已針對唯讀存取設定次要複本位置。  
+2.  如果應用程式使用**ApplicationIntent = ReadWrite** （如下所述），而且次要複本位置設定為唯讀存取。  
   
  如果設定主要複本拒絕唯讀工作負載，而且連接字串包含 **ApplicationIntent=ReadOnly**，則連接會失敗。  
   
@@ -88,24 +89,28 @@ ms.locfileid: "73788030"
   
  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 ODBC 連接屬性的詳細資訊，請參閱 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)。  
   
- 從  **開始，** ApplicationIntent**和**MultiSubnetFailover[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 關鍵字的功能將會公開在使用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 驅動程式之 DSN 的 ODBC 資料來源管理員中。  
+ 從 ** 開始，** ApplicationIntent** 和 **MultiSubnetFailover[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 關鍵字的功能將會公開在使用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 驅動程式之 DSN 的 ODBC 資料來源管理員中。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 應用程式可以使用三個函數的其中一個進行連接：  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 應用程式可以使用三個函數的其中一個進行連接：  
   
-|函數|描述|  
+|函式|描述|  
 |--------------|-----------------|  
-|[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** 傳回的伺服器清單不包括 VNN。 您只會看到伺服器清單，無從得知伺服器是否為獨立伺服器或是 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體的主要或次要伺服器。 如果您連接到伺服器而且發生失敗狀況，可能是因為您已經連接到伺服器，而且 **ApplicationIntent** 設定與伺服器組態不相容。<br /><br /> 因為 **SQLBrowseConnect** 無法辨識 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體的伺服器，所以 **SQLBrowseConnect** 會忽略 **MultiSubnetFailover** 連接字串關鍵字。|  
-|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** 可透過資料來源名稱 (DSN) 或連接屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover** 。|  
-|[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** 可透過連接字串關鍵字、連接屬性或 DSN 來支援 **ApplicationIntent** 和 **MultiSubnetFailover** 。|  
+|[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|
+  **SQLBrowseConnect** 傳回的伺服器清單不包括 VNN。 您只會看到伺服器清單，無從得知伺服器是否為獨立伺服器或是 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體的主要或次要伺服器。 如果您連接到伺服器而且發生失敗狀況，可能是因為您已經連接到伺服器，而且 **ApplicationIntent** 設定與伺服器組態不相容。<br /><br /> 因為 **SQLBrowseConnect** 無法辨識 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體的伺服器，所以 **SQLBrowseConnect** 會忽略 **MultiSubnetFailover** 連接字串關鍵字。|  
+|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect**透過資料來源名稱（DSN）或連接屬性，同時支援**ApplicationIntent**和**MultiSubnetFailover** 。|  
+|[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect**可透過連接字串關鍵字、連接屬性或 DSN 來支援**ApplicationIntent**和**MultiSubnetFailover** 。|  
   
 ## <a name="ole-db"></a>OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 不支援 **MultiSubnetFailover** 關鍵字。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 不支援 **MultiSubnetFailover** 關鍵字。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 將會支援應用程式意圖。 OLE DB 應用程式與 ODBC 應用程式的應用程式意圖將會有相同的行為 (請參閱上面的內容)。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 將會支援應用程式意圖。 OLE DB 應用程式與 ODBC 應用程式的應用程式意圖將會有相同的行為 (請參閱上面的內容)。  
   
  已加入一個 OLE DB 連接字串關鍵字來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Native Client 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   
--   **Application Intent**  
+-   **應用程式意圖**  
   
  如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中連接字串關鍵字的詳細資訊，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -115,21 +120,22 @@ ms.locfileid: "73788030"
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 應用程式可以使用其中一個方法來指定應用程式意圖：  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 應用程式可以使用其中一個方法來指定應用程式意圖：  
   
- **IDBInitialize::Initialize**  
- **IDBInitialize::Initialize** 會使用之前設定的屬性集合來初始化資料來源及建立資料來源物件。 將應用程式意圖指定為提供者屬性或是擴充屬性字串的一部分。  
+ **IDBInitialize：： Initialize**  
+ **IDBInitialize：： Initialize**會使用先前設定的屬性集來初始化資料來源，並建立資料來源物件。 將應用程式意圖指定為提供者屬性或是擴充屬性字串的一部分。  
   
- **IDataInitialize::GetDataSource**  
- **IDataInitialize::GetDataSource** 會採用可包含 **Application Intent** 關鍵字的輸入連接字串。  
+ **IDataInitialize：： GetDataSource**  
+ **IDataInitialize：： GetDataSource**會採用可包含**應用程式意圖**關鍵字的輸入連接字串。  
   
- **IDBProperties：： GetProperties**  
- **IDBProperties::GetProperties** 會擷取目前在資料來源上設定的屬性值。  您可以透過 DBPROP_INIT_PROVIDERSTRING 屬性和 SSPROP_INIT_APPLICATIONINTENT 屬性擷取 **Application Intent** 值。  
+ **IDBProperties::GetProperties**  
+ **IDBProperties：： GetProperties**會抓取目前在資料來源上設定的屬性值。  您可以透過 DBPROP_INIT_PROVIDERSTRING 屬性和 SSPROP_INIT_APPLICATIONINTENT 屬性擷取 **Application Intent** 值。  
   
- **IDBProperties::SetProperties**  
+ **IDBProperties：： SetProperties**  
  若要設定 **ApplicationIntent** 屬性值，請呼叫 **IDBProperties::SetProperties**，其傳入值為 "**ReadWrite**" 或 "**ReadOnly**" 的 **SSPROP_INIT_APPLICATIONINTENT** 屬性，或是值包含 "**ApplicationIntent=ReadOnly**" 或 "**ApplicationIntent=ReadWrite**" 的 **DBPROP_INIT_PROVIDERSTRING** 屬性。  
   
- 您可以在 [資料連結屬性] 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
+ 您可以在 [資料連結屬性]**** 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
   
  當建立隱含連接時，隱含連接將會使用父連接的應用程式意圖設定。 同樣地，從相同資料來源建立的多個工作階段將會繼承資料來源的應用程式意圖設定。  
   

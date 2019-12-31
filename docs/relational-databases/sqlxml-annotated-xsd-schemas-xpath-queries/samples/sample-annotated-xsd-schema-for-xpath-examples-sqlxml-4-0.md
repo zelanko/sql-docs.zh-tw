@@ -1,6 +1,5 @@
 ---
-title: 範例的註解式 XSD 結構描述 XPath 範例 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: XPath 的批註式 XSD 架構範例（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,23 +13,24 @@ helpviewer_keywords:
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c786414ee9682091f53c2a91e09bcbd5b636ff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 127e98b36465d196bc20cf6888e56b20a93dad59
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119513"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252634"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath 範例的範例註解式 XSD 結構描述 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本章節的範例 XPath 查詢會參考對應結構描述。 此對應結構描述是註解式 XML 結構描述 (XSD) 檔案。 如需有關對應結構描述的詳細資訊，請參閱 <<c0> [ 註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。</c0>  
+  本章節的範例 XPath 查詢會參考對應結構描述。 此對應結構描述是註解式 XML 結構描述 (XSD) 檔案。 如需對應架構的詳細資訊，請參閱[批註式 XSD 架構簡介 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。  
   
  以下是針對註解式 XSD 結構描述執行 XPath 查詢所需的處理：  
   
--   建立包含 XPath 查詢的範本。 在此範本中，您會指定 XPath 查詢執行時所要針對的對應結構描述。 在此案例中，對應結構描述必須儲存在目錄中 (或其子目錄，其中將相對路徑指定的值的其中一個**對應結構描述**範本中的屬性) 的範本檔案相關聯。  
+-   建立包含 XPath 查詢的範本。 在此範本中，您會指定 XPath 查詢執行時所要針對的對應結構描述。 在此情況下，對應架構必須儲存在目錄（或它的其中一個子目錄中，在此情況下，相對路徑會指定為範本中**對應架構**屬性的值），與範本檔案相關聯。  
   
--   建立一個將 SQLXML 延伸模組用於 ADO 來執行查詢的測試應用程式。 如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+-   建立一個將 SQLXML 延伸模組用於 ADO 來執行查詢的測試應用程式。 如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  在本章節的所有範例中，為了加以說明，將會在範本中指定 XPath 查詢，而且會使用 ADO 來執行此範本。 因此，您必須使用下列的對應結構描述檔案 SampleSchema1.xml。 將這個檔案儲存在您存放範本的目錄中。  
   

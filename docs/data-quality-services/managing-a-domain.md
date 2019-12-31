@@ -1,6 +1,5 @@
 ---
-title: 管理定義域 | Microsoft Docs
-ms.custom: ''
+title: 管理定義域
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991919"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258445"
 ---
 # <a name="managing-a-domain"></a>管理定義域
 
@@ -48,10 +47,10 @@ ms.locfileid: "67991919"
 |||  
 |-|-|  
 |針對具有特定資料類型的資料欄位建立語意表示法、指定如何擴展定義域，以及設定定義域輸出的格式|[建立網域](../data-quality-services/create-a-domain.md)|  
-|將定義域連結到另一個定義域，讓它共用相同的設定與值|[建立連結的網域](../data-quality-services/create-a-linked-domain.md)|  
-|將參考資料服務附加至單一或複合定義域|[將網域或複合網域附加至參考資料](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|變更或增加知識庫中的值|[變更網域值](../data-quality-services/change-domain-values.md)|  
-|使用驗證和標準化規則|[建立網域規則](../data-quality-services/create-a-domain-rule.md)|  
+|將定義域連結到另一個定義域，讓它共用相同的設定與值|[建立連結的定義域](../data-quality-services/create-a-linked-domain.md)|  
+|將參考資料服務附加至單一或複合定義域|[將定義域或複合定義域附加至參考資料](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|變更或增加知識庫中的值|[變更定義域值](../data-quality-services/change-domain-values.md)|  
+|使用驗證和標準化規則|[建立定義域規則](../data-quality-services/create-a-domain-rule.md)|  
 |使用關聯來更正屬於定義域值之一部分的詞彙|[建立以詞彙為主的關聯](../data-quality-services/create-term-based-relations.md)|  
 |完成、關閉或取消定義域管理活動|[結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
@@ -59,8 +58,8 @@ ms.locfileid: "67991919"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|藉由執行知識探索以及以互動方式管理知識來建立知識庫|[建置知識庫](../data-quality-services/building-a-knowledge-base.md)|  
+|藉由執行知識探索以及以互動方式管理知識來建立知識庫|[建立知識庫](../data-quality-services/building-a-knowledge-base.md)|  
 |將知識匯入知識庫或是從知識庫匯出知識。|[匯入和匯出知識](../data-quality-services/importing-and-exporting-knowledge.md)|  
-|建立複合定義域，並將知識加入至定義域。|[管理複合網域](../data-quality-services/managing-a-composite-domain.md)|  
+|建立複合定義域，並將知識加入至定義域。|[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)|  
   
   

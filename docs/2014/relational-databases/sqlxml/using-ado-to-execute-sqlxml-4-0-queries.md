@@ -1,7 +1,7 @@
 ---
-title: 使用 ADO 執行 SQLXML 4.0 查詢 |Microsoft Docs
+title: 使用 ADO 執行 SQLXML 4.0 查詢
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -16,12 +16,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012153"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251421"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 執行 SQLXML 4.0 查詢
   在舊版的 SQLXML 中，可使用 SQLXML IIS 虛擬目錄和 SQLXML ISAPI 篩選來支援以 HTTP 為基礎的查詢執行。 在 SQLXML 4.0 中已經移除這些元件，因為自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始引進的原生 XML Web 服務提供了類似且重疊的功能。  
@@ -35,9 +35,9 @@ ms.locfileid: "66012153"
   
 #### <a name="to-create-the-sqlxml-40-query-tester-using-ado-vbscript"></a>使用 ADO (VBScript) 建立 SQLXML 4.0 查詢測試者  
   
-1.  複製以下的程式碼並將其貼入文字檔案。 將檔案儲存為 Sqlxml4test.vbs。  
+1.  複製下列 VBScript 程式碼，並將它貼到文字檔中。 將檔案儲存為 Sqlxml4test.vbs。  
   
-    ```  
+    ```vb
     WScript.Echo "Query process may take a few seconds to complete. Please be patient."  
   
     ' Note that for SQL Server Native Client to be used as the data provider,  
@@ -93,7 +93,7 @@ ms.locfileid: "66012153"
   
     -   尋找 "`@@FILE_NAME@@`"，並以您的範例檔名稱加以取代。  
   
-    -   尋找 "`@@SERVER_NAME@@`"，並以您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱加以取代 (例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在本機執行，則為 "`(local)`")。  
+    -   尋找 "`@@SERVER_NAME@@`"，並以您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱加以取代 (例如，如果 `(local)` 在本機執行，則為 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]")。  
   
     -   尋找 "`@@DATABASE_NAME@@`"，並以資料庫的名稱加以取代 (例如，"`AdventureWorks2012`" 或 "`tempdb`")。  
   
@@ -112,16 +112,16 @@ ms.locfileid: "66012153"
   
 1.  確認已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，如下所示：  
   
-    1.  從**開始**功能表上，指向**設定**，然後按一下**控制台**。  
+    1.  在 [**開始**] 功能表中，指向 [**設定**]，然後按一下 [**控制台**]。  
   
-    2.  在 [控制台] 開啟**新增或移除程式**  
+    2.  在 [控制台] 中，開啟 [**新增或移除程式**]  
   
-    3.  在目前安裝的程式清單中，確認**Microsoft SQL Server Native Client**出現在清單中。  
+    3.  在目前已安裝的程式清單中，確認 [ **Microsoft SQL Server Native Client** ] 出現在清單中。  
   
         > [!NOTE]  
-        >  如果您要安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，請參閱[安裝 SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)。  
+        >  如果您需要安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，請參閱[安裝 SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)。  
   
-2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果需要確認 MDAC 版本資訊，可以使用 MDAC Component Checker 工具，此工具可從 Microsoft 網站 (www.microsoft.com) 免費下載。 如需詳細資訊，請在 Microsoft 網站上搜尋 "MDAC Component Checker"。  
+2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果您需要驗證 MDAC 版本資訊，您可以使用 MDAC Component 檢查工具，這是從 Microsoft 網站免費下載提供[https://www.microsoft.com/](https://www.microsoft.com/)。 如需詳細資訊，請在 Microsoft 網站上搜尋「MDAC 元件檢查程式」。  
   
 3.  執行指令碼。  
   

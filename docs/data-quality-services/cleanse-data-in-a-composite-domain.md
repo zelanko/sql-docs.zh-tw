@@ -1,6 +1,5 @@
 ---
-title: 清理複合定義域中的資料 | Microsoft Docs
-ms.custom: ''
+title: 清理複合定義域中的資料
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 5f771148193eba6fbdbe44f224fc4d30820920f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 6d8bdf65a4225bbb915c5596db641f4635775953
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992416"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255682"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理複合定義域中的資料
 
@@ -23,7 +22,7 @@ ms.locfileid: "67992416"
 
   本主題會提供有關在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中清理複合定義域的資訊。 複合定義域是由兩個或多個單一定義域所組成，而且會對應至由多個相關詞彙所組成的資料欄位。 複合定義域中的個別定義域必須擁有共同知識領域。 如需有關複合定義域的詳細資訊，請參閱＜ [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md)＞。  
   
-##  <a name="Mapping"></a> 將複合定義域對應至來源資料  
+##  <a name="Mapping"></a>將複合定義域對應至來源資料  
  有兩種方式可將來源資料對應至複合定義域：  
   
 -   來源資料是對應至複合定義域的單一欄位 (比方說完整名稱)。  
@@ -36,10 +35,10 @@ ms.locfileid: "67992416"
   
  如需如何將複合定義域對應至來源資料的範例，請參閱[將定義域或複合定義域附加至參考資料](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)。  
   
-##  <a name="CDCorrection"></a> 使用最終跨定義域規則的資料更正  
+##  <a name="CDCorrection"></a>使用最終跨定義域規則的資料更正  
  複合定義域中的跨定義域規則可讓您建立規則，以指示複合定義域內個別定義域之間的關聯性。 當您針對與複合定義域有關的來源資料執行清理活動時，跨定義域規則會列入考量。 除了只讓您知道跨定義域規則是否有效之外，最終 *Then* 跨定義域規則 **[值等於]** 也會在資料清理活動期間更正資料。  
   
- 假設下列範例：有一個複合定義域 Product 具有三個個別定義域：ProductName、CompanyName 和 ProductVersion。 請建立以下最終跨定義域規則：  
+ 假設有以下範例：有一個複合定義域 Product 具有三個個別定義域：ProductName、CompanyName 和 ProductVersion。 請建立以下最終跨定義域規則：  
   
  如果定義域 'CompanyName' 值包含 *Microsoft* 而且定義域 ‘ProductName’ 值等於 *Office* 且 'ProductVersion' 值等於 *2010*，則定義域 'ProductName' 值等於 *Microsoft Office 2010*。  
   
@@ -57,16 +56,16 @@ ms.locfileid: "67992416"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 當您測試最終 *Then* 跨定義域規則 **[值等於]** 時， **[測試複合定義域規則]** 對話方塊會包含新的資料行 **[更正為]** ，此資料行會顯示正確資料。 在清理資料品質專案時，這個最終跨定義域規則會將資料變更為 100% 信賴，且 [原因]  資料行會顯示下列訊息：由規則 '\<跨定義域規則名稱>  ' 更正。 如需有關跨定義域規則的詳細資訊，請參閱＜ [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)＞。  
+ 當您測試最終 *Then* 跨定義域規則 **[值等於]** 時， **[測試複合定義域規則]** 對話方塊會包含新的資料行 **[更正為]**，此資料行會顯示正確資料。 在清理資料品質專案中，這個最終跨定義域規則會將資料變更為100% 的信賴度，而 [**原因**] 資料行會顯示下列訊息： [依規則 '*\<跨定義域規則名稱>*] 更正。 如需有關跨定義域規則的詳細資訊，請參閱＜ [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)＞。  
   
 > [!NOTE]  
 >  最終跨定義域規則將不適用於附加至參考資料服務的複合定義域。  
   
-##  <a name="DataProfiling"></a> 複合定義域的資料分析  
+##  <a name="DataProfiling"></a>複合定義域的資料分析  
  DQS 分析會在清理活動期間提供兩個資料品質維度： *完整性* (資料存在的程度) 和 *精確度* (可將資料用於預定用途的程度)。 分析可能不會針對複合定義域提供可靠的完整性統計資料。 如果您需要完整性統計資料，請使用單一定義域，而非複合定義域。 如果您想要使用複合定義域，您可能會想要使用分析用的單一定義域來建立一個知識庫以判斷完整性，並使用清理活動所用的複合定義域來建立另一個定義域。 例如，分析可能會針對使用複合定義域的位址記錄顯示 95% 完整性，但是其中一個資料行可能會有更高層級的不完整性，例如郵遞區號 (zip) 資料行。 在此範例中，您可能會想要使用單一定義域衡量郵遞區號資料行的完整性。  
   
  分析可能會針對複合定義域提供可靠的精確度統計資料，因為您可以一起衡量多個資料行的精確度。 此資料的值位於複合彙總中，所以您可能會想要使用複合定義域衡量精確度。  
   
- 如需清理活動期間的資料分析詳細資訊，請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中的[分析工具統計資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler)。  
+ 如需清理活動期間的資料分析詳細資訊，請參閱[使用 DQS &#40;內部&#41; 知識清理資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler)中的[分析工具統計資料](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 在.NET 環境中使用 SQLXML 大量載入 |Microsoft Docs
+title: 在 .NET 環境中使用 SQLXML 大量載入
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed725ac58b7224ad157dd7b5d06b3b522395023b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220396"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252445"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework 支援 - 使用大量載入
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本主題說明如何在 .NET 環境中使用 XML 大量載入功能。 如需 XML 大量載入的詳細資訊，請參閱[執行大量載入的 XML 資料&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。  
+  本主題說明如何在 .NET 環境中使用 XML 大量載入功能。 如需 XML 大量載入的詳細資訊，請參閱[執行 Xml 資料的大量載入 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。  
   
  若要從 Managed 環境使用 SQLXML 大量載入 COM 物件，您需要將專案參考加入到此物件中。 這會在大量載入 COM 物件周圍產生 Managed 包裝函數介面。  
   
 > [!NOTE]  
->  Managed XML 大量載入不會使用 Managed 資料流，而且在原生資料流周圍需要使用包裝函數。 SQLXML 大量載入元件將不會在多執行緒環境 ('[MTAThread]' 屬性) 下執行。 如果您嘗試在多執行緒環境中執行大量載入元件時，您會收到 InvalidCastException 例外狀況包含下列的其他資訊：「 介面 SQLXMLBULKLOADLib.ISQLXMLBulkLoad 的 QueryInterface 失敗 」。 因應措施是對包含大量載入物件單一執行緒存取的物件 (例如，藉由使用 **[STAThread]** 屬性，如範例所示)。  
+>  Managed XML 大量載入不會使用 Managed 資料流，而且在原生資料流周圍需要使用包裝函數。 SQLXML 大量載入元件將不會在多執行緒環境 ('[MTAThread]' 屬性) 下執行。 如果您嘗試在多執行緒環境中執行大量載入元件，您會收到 InvalidCastException 例外狀況，其中包含下列其他資訊：「介面 SQLXMLBULKLOADLib. Queryinterface 的 QueryInterface 失敗」。 因應措施是讓包含大量載入物件單一執行緒的物件可供存取（例如，藉由使用範例中所示的 **[STAThread]** 屬性）。  
   
  本主題提供 C# 工作範例應用程式，將 XML 資料大量載入到資料庫中。 若要建立工作範例，按照下列步驟進行：  
   
@@ -113,11 +113,11 @@ ms.locfileid: "68220396"
   
 5.  建立 C# 主控台應用程式。  
   
-6.  從**專案**功能表上，選取**加入參考**。  
+6.  從 [**專案**] 功能表中，選取 [**加入參考**]。  
   
-7.  在  **COM**索引標籤上，選取**Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll)，按一下 **確定**。 您會看到**Interop.SQLXMLBULKLOADLib**專案中建立的組件。  
+7.  在 [ **COM** ] 索引標籤中，選取 [ **Microsoft SQLXML Bulkload 4.0 類型程式庫**（xblkld4.dll）]，然後按一下 **[確定]**。 您會看到在專案中建立的**SQLXMLBULKLOADLib**元件。  
   
-8.  將 Main() 方法取代成下列程式碼。 更新**ConnectionString**屬性和結構描述和資料檔案的檔案路徑。  
+8.  將 Main() 方法取代成下列程式碼。 將**ConnectionString**屬性和檔案路徑更新為架構和資料檔案。  
   
     ```  
     [STAThread]  
@@ -141,7 +141,7 @@ ms.locfileid: "68220396"
 9. 若要將 XML 載入到您所建立的資料表中，建立並執行專案。  
   
     > [!NOTE]  
-    >  大量載入元件 (xblkld4.dll) 的參考也可以使用 tlbimp.exe 工具加入，該工具是 .NET Framework 的一部分。 此工具會針對原生 DLL (xblkld4.dll) 建立 Managed 包裝函數，然後就可以在任何 .NET 專案中使用。 例如:  
+    >  大量載入元件 (xblkld4.dll) 的參考也可以使用 tlbimp.exe 工具加入，該工具是 .NET Framework 的一部分。 此工具會針對原生 DLL (xblkld4.dll) 建立 Managed 包裝函數，然後就可以在任何 .NET 專案中使用。 例如：  
   
     ```  
     c:\>tlbimp xblkld4.dll  
@@ -150,6 +150,6 @@ ms.locfileid: "68220396"
      這會建立您可以在 .NET Framework 專案中使用的 Managed 包裝函數 DLL (SQLXMLBULKLOADLib.dll)。 在 .NET Framework 中，您可以將專案參考加入到新建立的 DLL。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量載入 XML 資料的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [執行 XML 資料的大量載入 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

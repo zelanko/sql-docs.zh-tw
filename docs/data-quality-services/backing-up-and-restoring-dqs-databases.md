@@ -1,6 +1,5 @@
 ---
-title: 備份與還原 DQS 資料庫 | Microsoft Docs
-ms.custom: ''
+title: 備份及還原 DQS 資料庫
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: afee6a476407744d237ebf2c0069d37f7e9c3137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992434"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258854"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
 
@@ -23,9 +22,9 @@ ms.locfileid: "67992434"
 
   此主題描述如何備份及還原 DQS 資料庫。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="BeforeYouBegin"></a>開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="Prerequisites"></a>要求  
   
 -   您必須知道或記得您在 DQS 伺服器安裝期間所提供資料庫主要金鑰的密碼。  
   
@@ -33,15 +32,15 @@ ms.locfileid: "67992434"
   
 -   確定沒有任何使用者登入 DQS 伺服器。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全級  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a>無權  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員，才能執行備份和還原作業。  
   
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能在 DQS 中終止任何執行中的活動或停止任何執行中的處理序。  
   
-##  <a name="BackupRestore"></a> 備份及還原 DQS 資料庫  
+##  <a name="BackupRestore"></a>備份和還原 DQS 資料庫  
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   
@@ -61,9 +60,9 @@ ms.locfileid: "67992434"
   
 9. 還原 DQS_STAGING_DATA 資料庫。  
   
-10. 在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]** 。  
+10. 在 [物件總管] 中，以滑鼠右鍵按一下伺服器，然後按一下 **[新增查詢]**。  
   
-11. 在 [查詢編輯器] 視窗中複製以下 SQL 陳述式，並使用您在 DQS 安裝期間為資料庫主要金鑰提供的密碼來取代 <密碼> *\<* ：  
+11. 在 [查詢編輯器] 視窗中，複製下列 SQL 語句，並將* \<password>* 取代為您在 DQS 安裝期間為資料庫主要金鑰提供的密碼：  
   
     ```  
     USE [DQS_MAIN]  
@@ -73,7 +72,7 @@ ms.locfileid: "67992434"
   
     ```  
   
-12. 按 F5 執行陳述式。 檢查 **[結果]** 窗格，確認陳述式是否皆已成功地執行。  
+12. 按 F5 執行陳述式。 檢查 [**結果**] 窗格，確認語句是否已順利執行。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 DQS 資料庫](../data-quality-services/manage-dqs-databases.md)  
