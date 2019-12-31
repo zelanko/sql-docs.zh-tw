@@ -1,6 +1,6 @@
 ---
-title: 指定中斷點篩選條件 | Microsoft Docs
-ms.custom: ''
+title: 指定中斷點篩選條件
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,34 +12,37 @@ ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c86f31bc79dae5c257f58d59bbfc8039e02f7e4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090123"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243217"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定中斷點篩選條件
   中斷點篩選條件會限制中斷點只能在指定的電腦、作業系統處理序和執行緒上運作。 中斷點篩選條件通常是在偵錯平行應用程式時使用。  
   
-##  <a name="BKMK_ActionConsiderations"></a> 篩選考量  
+##  <a name="BKMK_ActionConsiderations"></a>篩選考慮  
  中斷點篩選條件通常不會搭配 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具使用，因為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼和預存程序不是平行應用程式。  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>若要指定中斷點篩選條件  
   
-1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [篩選]  。  
+1.  在編輯器視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [篩選]****。  
   
-     -或-  
+     - 或者 -  
   
-     在 [中斷點]  視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [篩選]  。  
+     在 [中斷點]**** 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [篩選]****。  
   
-2.  在 [中斷點篩選條件]  對話方塊中，使用 [篩選]  方塊來指定電腦 (依名稱) 或作業系統處理序和執行緒 (依名稱或識別碼)：  
+2.  在 [中斷點篩選條件]**** 對話方塊中，使用 [篩選]**** 方塊來指定電腦 (依名稱) 或作業系統處理序和執行緒 (依名稱或識別碼)：  
   
-    -   `MachineName` 是執行 Database Engine 執行個體的電腦。  
+    -   
+  `MachineName` 是執行 Database Engine 執行個體的電腦。  
   
-    -   `ProcessID` 和 `ProcessName` 是執行 Database Engine 執行個體的作業系統處理序。  
+    -   
+  `ProcessID` 和 `ProcessName` 是執行 Database Engine 執行個體的作業系統處理序。  
   
-    -   `ThreadID` 和 `ThreadName` 是在 Database Engine 執行個體中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、程序或函數的作業系統執行緒。  
+    -   
+  `ThreadID` 和 `ThreadName` 是在 Database Engine 執行個體中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、程序或函數的作業系統執行緒。  
   
 3.  按一下 **[確定]** 實作變更，或按一下 **[取消]** 結束而不套用變更。  
   

@@ -1,19 +1,20 @@
 ---
-title: 設定 PolyBase 存取 Hadoop 中的外部資料 | Microsoft Docs
+title: 存取外部資料： Hadoop-PolyBase
 description: 說明如何在平行處理資料倉儲中設定 PolyBase，以連線至外部 Hadoop。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227129"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245386"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
@@ -48,7 +49,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
 
 2. 使用[設備 Configuration Manager](launch-the-configuration-manager.md)上的 [服務狀態] 頁面重新開機 ap 區域。
   
-## <a id="pushdown"></a> 啟用下推計算  
+## <a id="pushdown"></a>啟用下推計算  
 
 為改善查詢效能，請將計算下推到 Hadoop 叢集︰  
   
@@ -335,12 +336,12 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>在 SSDT 中查看 PolyBase 物件  
 
-在 SQL Server Data Tools 中，外部資料表會顯示在個別的資料夾**外部資料表**中。 外部資料來源和外部檔案格式會在 [外部資源]下方的子資料夾中。  
+在 SQL Server Data Tools 中，外部資料表會顯示在個別的資料夾**外部資料表**中。 外部資料來源和外部檔案格式會在 [外部資源] **** 下方的子資料夾中。  
   
 ![SSDT 中的 PolyBase 物件](media/polybase/external-tables-datasource.png)  
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
 如需 Hadoop 安全性設定，請參閱[設定 hadoop 安全性](polybase-configure-hadoop-security.md)。<br>
-如需有關 PolyBase 的詳細資訊，請參閱 [ 什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
+如需有關 PolyBase 的詳細資訊，請參閱[什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
  

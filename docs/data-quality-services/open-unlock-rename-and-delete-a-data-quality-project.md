@@ -1,6 +1,5 @@
 ---
-title: 開啟、解除鎖定、重新命名和刪除資料品質專案 | Microsoft Docs
-ms.custom: ''
+title: 開啟、解除鎖定、重新命名和刪除資料品質專案
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -15,14 +14,14 @@ helpviewer_keywords:
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 5054e2a14260bf16aafb4042fac39d191b8f5afa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d849ca48b5e4a1cc8d01eebc1649075251da3fd0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935083"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245974"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>開啟、解除鎖定、重新命名和刪除資料品質專案
 
@@ -30,9 +29,9 @@ ms.locfileid: "67935083"
 
   此主題描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理資料品質專案，例如開啟、解除鎖定、重新命名和刪除資料品質專案。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+##  <a name="BeforeYouBegin"></a>開始之前  
   
-###  <a name="LimitationsRestrictions"></a> 限制事項  
+###  <a name="LimitationsRestrictions"></a>限制事項  
   
 -   您無法開啟另一個使用者所建立且已鎖定的專案。  
   
@@ -42,57 +41,61 @@ ms.locfileid: "67935083"
   
 -   您只能解除鎖定由您建立的資料品質專案。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+###  <a name="Prerequisites"></a>要求  
  您至少必須有一個資料品質專案可供管理。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a>安全級  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a>無權  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能管理資料品質專案。  
   
-##  <a name="Open"></a> 開啟資料品質專案  
+##  <a name="Open"></a>開啟資料品質專案  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]** 。 **[開啟專案]** 畫面隨即出現。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]**。 
+  **[開啟專案]** 畫面隨即出現。  
   
      或者，您也可以按一下 **[最近使用的資料品質專案]** 區域底下所列出的資料品質專案，直接將它開啟。  
   
-3.  在 **[開啟專案]** 畫面中，按一下來選取您想要開啟的資料品質專案，然後按 **[下一步]** 。  
+3.  在 **[開啟專案]** 畫面中，按一下來選取您想要開啟的資料品質專案，然後按 **[下一步]**。  
   
 4.  隨即以上次活動關閉時的相同狀態來開啟資料品質專案。 資料品質專案具有以下狀態：  
   
-    -   如果是 [清理]  活動，資料品質專案可以擁有下列狀態：**清理 - 對應**、**清理 - 清理**、**清理 - 管理和檢視結果**和**清理 - 匯出**。  
+    -   如果是 [清理]**** 活動，資料品質專案可以擁有以下狀態：[清理 - 對應]****、[清理 - 清理]****、[清理 - 管理和檢視結果]**** 和 [清理 - 匯出]****。  
   
-    -   如果是 [比對]  活動，資料品質專案可以擁有以下狀態：**比對 - 對應**、**比對 - 比對**、**比對 - 生存**和**比對 - 匯出**。  
+    -   如果是 [比對]**** 活動，資料品質專案可以擁有以下狀態：[比對 - 對應]****、[比對 - 比對]****、[比對 - 生存]**** 和 [比對 - 匯出]****。  
   
-##  <a name="Unlock"></a> 解除鎖定資料品質專案  
+##  <a name="Unlock"></a>解除鎖定資料品質專案  
  當您建立資料品質專案時，它處於已鎖定狀態，以防止其他使用者使用或修改。 如果您希望其他使用者使用您的資料品質專案，在您完成工作之後必須解除鎖定資料品質專案。 鎖定的專案會顯示鎖定符號。  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]** 。 **[開啟專案]** 畫面隨即出現。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]**。 
+  **[開啟專案]** 畫面隨即出現。  
   
 3.  在 **[開啟專案]** 畫面中，以滑鼠右鍵按一下您所建立且已鎖定的資料品質專案，然後按一下快速鍵功能表中的 **[解除鎖定]** 。 專案會顯示綠色核取記號，表示專案已解除鎖定。  
   
-##  <a name="Rename"></a> 重新命名資料品質專案  
+##  <a name="Rename"></a>重新命名資料品質專案  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]** 。 **[開啟專案]** 畫面隨即出現。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]**。 
+  **[開啟專案]** 畫面隨即出現。  
   
 3.  在 **[開啟專案]** 畫面中，以滑鼠右鍵按一下您所建立的資料品質專案，然後按一下快速鍵功能表中的 **[重新命名]** 。  
   
 4.  此資料品質專案名稱就可以在 **[名稱]** 資料行中編輯。 輸入新的名稱，然後按下 Enter。  
   
-##  <a name="Delete"></a> 刪除資料品質專案  
+##  <a name="Delete"></a>刪除資料品質專案  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]** 。 **[開啟專案]** 畫面隨即出現。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，按一下 **[開啟資料品質專案]**。 
+  **[開啟專案]** 畫面隨即出現。  
   
 3.  在 **[開啟專案]** 畫面中，以滑鼠右鍵按一下您所建立且解除鎖定的資料品質專案，然後按一下快速鍵功能表中的 **[刪除]** 。  
   
-4.  隨即出現確認訊息。 按一下 [ **是**]。  
+4.  確認訊息隨即出現。 按一下 [是]****。  
   
   

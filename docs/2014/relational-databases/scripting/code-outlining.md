@@ -1,6 +1,6 @@
 ---
-title: 程式碼大綱 | Microsoft 文件
-ms.custom: ''
+title: 程式碼大綱
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf35412efc66e971332b97ac2a0d77725a1d0cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ec36d2d6f38a1213a91d3c7f7aa1753d519ac5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090624"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244965"
 ---
 # <a name="code-outlining"></a>程式碼大綱
   您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查詢編輯器中的大綱功能，在您編輯查詢時選擇性地隱藏程式碼。 這可讓您更輕易地檢視正在處理的程式碼，尤其是處理大型查詢檔案的情況。  
@@ -32,28 +32,30 @@ ms.locfileid: "66090624"
  MDX 和 DMX 程式碼編輯器會針對每個多行陳述式建立大綱區域。 這是這些編輯器唯一支援的大綱層級。  
   
 ### <a name="analysis-services-xmla-query-editor-regions"></a>Analysis Services XMLA 查詢編輯器區域  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA 查詢編輯器會針對每個多行 XML 屬性產生一個大綱區域。 此編輯器會針對巢狀標記建立大綱區域的巢狀結構。 例如，XMLA 編輯器會針對下列文件建立三個大綱區域。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA 查詢編輯器會針對每個多行 XML 屬性產生一個大綱區域。 此編輯器會針對巢狀標記建立大綱區域的巢狀結構。 例如，XMLA 編輯器會針對下列文件建立三個大綱區域。  
   
  ![顯示大綱的 XML 程式碼](../../database-engine/media/editoutlinexmlfull.gif "顯示大綱的 XML 程式碼")  
   
  當您按一下 \<InnerTag> 行的減號時，只會摺疊 InnerTag，如下圖所示。  
   
- ![隱藏內部節點的 XML 程式碼](../../database-engine/media/editoutlinexmlinnercol.gif "隱藏內部節點的 XML 程式碼")  
+ ![具有內部隱藏節點的 XML 程式嗎](../../database-engine/media/editoutlinexmlinnercol.gif "具有內部隱藏節點的 XML 程式嗎")  
   
  當您將指標移至具有三個句號 (...) 的方塊上方時，已摺疊區域中的程式碼就會顯示在工具提示中，如下圖所示。  
   
- ![所含的工具提示顯示隱藏程式碼的 XML 程式碼](../../database-engine/media/editoutlinexmlmouse.gif "所含的工具提示顯示隱藏程式碼的 XML 程式碼")  
+ ![顯示隱藏程式碼的 XML 程式碼工具提示](../../database-engine/media/editoutlinexmlmouse.gif "顯示隱藏程式碼的 XML 程式碼工具提示")  
   
  當您按一下 \<MiddleTag> 行的減號時，就會同時摺疊 MiddleTag 和 InnerTag，如下圖所示。  
   
- ![隱藏內部和中間標記的 XML 程式碼](../../database-engine/media/editoutlinexmlmiddlecol.gif "隱藏內部和中間標記的 XML 程式碼")  
+ ![具有內部及中間隱藏標記的 XML 程式碼](../../database-engine/media/editoutlinexmlmiddlecol.gif "具有內部及中間隱藏標記的 XML 程式碼")  
   
  當您按一下 \<OuterTag> 行的減號時，就會摺疊這三行，如下圖所示。  
   
- ![顯示隱藏所有三個標記的 XML 程式碼](../../database-engine/media/editoutlinexmloutercol.gif "顯示隱藏所有三個標記的 XML 程式碼")  
+ ![顯示所以三個隱藏標記的 XML 程式碼](../../database-engine/media/editoutlinexmloutercol.gif "顯示所以三個隱藏標記的 XML 程式碼")  
   
 ### <a name="database-engine-query-editor-regions"></a>Database Engine 查詢編輯器區域  
- [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 查詢編輯器會針對下列階層中的每個元素產生大綱區域：  
+ 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 查詢編輯器會針對下列階層中的每個元素產生大綱區域：  
   
 1.  批次。 第一個批次是從檔案開頭到第一個 GO 命令或檔案結尾 (如果沒有 GO 命令的話) 的程式碼。 在第一個 GO 之後，從每個 GO 命令到下一個 GO 命令或檔案結尾還有一個批次。  
   

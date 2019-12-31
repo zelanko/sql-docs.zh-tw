@@ -1,5 +1,5 @@
 ---
-title: 指導方針和限制的 DiffGrams 的 SQLXML |Microsoft Docs
+title: 在 SQLXML 中的 DiffGrams 指導方針和限制
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f19e8d7b5e67311f21b79c6f36572d9b2240d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eae0b81b3c55a4afe611cd8ed6fdbb495b498c61
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073453"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246602"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>在 SQLXML 中的 DiffGrams 指導方針和限制
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   搭配 SQLXML 4.0 使用 DiffGrams 時，請記住以下事項：  
   
--   二進位大型物件 (BLOB) 類型如同**text/ntext**中應不到映像 **\<before>： 之前 >** 區塊時使用 DiffGrams，因為這會將它們包含用於並行存取控制。 這可能會因為 BLOB 類型的比較限制而造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的問題。 比方說，LIKE 關鍵字用於 WHERE 子句中的資料行之間的比較**文字**資料類型; 不過，比較將會失敗如果資料的大小大於 8k 的 BLOB 類型。  
+-   像是**text/Ntext**和 images 之類的** \<** 二進位大型物件（BLOB）類型不應在 diffgr 中使用：在使用 diffgram 時，在中>區塊，因為這會包含它們以在並行控制中使用。 這可能會因為 BLOB 類型的比較限制而造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的問題。 例如，WHERE 子句中會使用 LIKE 關鍵字來比較**text**資料類型的資料行;不過，如果 BLOB 類型的資料大小大於8K，比較將會失敗。  
   
--   中的特殊字元**ntext**資料進行因為 BLOB 類型的比較限制，可能會造成某些搭配 SQLXML 4.0 的問題。 例如，"[Serializable]"中的使用 **\<before>： 之前 >** DiffGram 時用於並行存取檢查的資料行的區塊**ntext**類型將會失敗並下列 SQLOLEDB錯誤描述：  
+-   **Ntext**資料中的特殊字元可能會因為 BLOB 類型的比較限制而造成 SQLXML 4.0 的問題。 例如，在** \<diffgr**中使用 "[Serializable]" 時>：在**DiffGram 類型的**資料行的並行檢查中使用時，會失敗，並出現下列 SQLOLEDB 錯誤描述：  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

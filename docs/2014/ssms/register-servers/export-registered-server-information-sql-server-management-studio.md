@@ -1,6 +1,6 @@
 ---
-title: 匯出已註冊的伺服器資訊 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 匯出已註冊的伺服器資訊
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 2d5dcbaf6f478d3cb637c72ada8bee2bb2a088d2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298105"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244602"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>匯出已註冊的伺服器資訊 (SQL Server Management Studio)
   本主題描述如何儲存並匯出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中已註冊伺服器的資訊，並將資訊散發給其他員工或伺服器。 您可以使用此匯出功能，在多部電腦上顯示一致的使用者介面。  
@@ -35,7 +35,7 @@ ms.locfileid: "63298105"
   
 #### <a name="to-export-registered-server-information"></a>匯出已註冊的伺服器資訊  
   
-1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [匯出]  。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器群組，然後按一下 [匯出]****。  
   
     > [!NOTE]  
     >  您可以匯出個別伺服器、整個已註冊的伺服器樹狀目錄，或已註冊的伺服器樹狀目錄之子集。  
@@ -48,15 +48,15 @@ ms.locfileid: "63298105"
      伺服器群組僅會顯示目前已註冊的伺服器樹狀目錄的伺服器群組。  
   
      **匯出檔案**  
-     在文字方塊中鍵入匯出檔案的名稱，或使用瀏覽按鈕 ( **...** ) 以找出用戶端電腦上的匯出檔案。 如果您選取現有的檔案，則已註冊的伺服器資訊會附加至該檔案。 使用 .regsrvr 副檔名。 如果您要提供已註冊的伺服器資訊給其他使用者或另一部電腦使用，您可以將檔案儲存在網路上。 其他使用者就可以存取檔案，並匯入部分或全部已註冊的伺服器資訊。 如果您選取現有的檔案作為匯出檔案，則伺服器註冊資訊會覆寫該檔案的內容。  
+     在文字方塊中鍵入匯出檔案的名稱，或使用瀏覽按鈕 (**...**) 以找出用戶端電腦上的匯出檔案。 如果您選取現有的檔案，則已註冊的伺服器資訊會附加至該檔案。 使用 .regsrvr 副檔名。 如果您要提供已註冊的伺服器資訊給其他使用者或另一部電腦使用，您可以將檔案儲存在網路上。 其他使用者就可以存取檔案，並匯入部分或全部已註冊的伺服器資訊。 如果您選取現有的檔案作為匯出檔案，則伺服器註冊資訊會覆寫該檔案的內容。  
   
-     **不要在匯出檔案中包含使用者名稱與密碼**  
+     **不要在匯出檔案中包含使用者名稱和密碼**  
      匯出檔案時排除使用者名稱。  
   
     > [!IMPORTANT]  
     >  雖然匯出檔案已加密，但是如果使用者名稱與 SQL Server 驗證密碼均包含在檔案中，則要小心控制該檔案的存取權。 因此，依預設使用者名稱與密碼會排除在匯出檔案之外。  
   
 ## <a name="see-also"></a>另請參閱  
- [已註冊的伺服器資訊匯入&#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [建立新的已註冊的伺服器&#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+ 匯[入已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md) [建立新的已註冊伺服器 &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

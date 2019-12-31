@@ -1,6 +1,6 @@
 ---
-title: 使用 sqlcmd 執行 Transact-SQL 指令碼檔案 | Microsoft Docs
-ms.custom: ''
+title: 使用 sqlcmd 執行 Transact-SQL 指令碼檔案
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,19 +12,20 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0a55800ff1d707ce191d373a7348bf744ce5886
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063670"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243201"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 執行 Transact-SQL 指令碼檔案
-  您可以使用 `sqlcmd` 來執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案是一個文字檔，可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、`sqlcmd` 命令和指令碼變數的組合。  
+  您可以使用 `sqlcmd` 來執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案是一個文字檔，可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、`sqlcmd` 命令和指令碼變數的組合。  
   
  若要使用「記事本」建立簡單的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案，請遵循下列步驟：  
   
-1.  按一下 [開始]  ，依序指向 [所有程式]  和 [附屬應用程式]  ，然後按一下 [記事本]  。  
+1.  按一下 [開始]****，依序指向 [所有程式]**** 和 [附屬應用程式]****，然後按一下 [記事本]****。  
   
 2.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼複製並貼到 [記事本] 中：  
   
@@ -47,7 +48,7 @@ ms.locfileid: "66063670"
   
 ### <a name="to-run-the-script-file"></a>執行指令碼檔案  
   
-1.  開啟 [命令提示字元] 視窗。  
+1.  開啟命令提示字元視窗。  
   
 2.  在 [命令提示字元] 視窗中輸入：`sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
@@ -57,7 +58,7 @@ ms.locfileid: "66063670"
   
 ### <a name="to-save-this-output-to-a-text-file"></a>將這份輸出儲存在文字檔中  
   
-1.  開啟 [命令提示字元] 視窗。  
+1.  開啟命令提示字元視窗。  
   
 2.  在 [命令提示字元] 視窗中輸入：`sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   

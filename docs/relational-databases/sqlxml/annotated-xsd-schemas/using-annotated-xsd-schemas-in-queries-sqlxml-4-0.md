@@ -1,6 +1,5 @@
 ---
-title: 使用註解的查詢 (SQLXML 4.0) 中的 XSD 結構描述 |Microsoft Docs
-ms.custom: ''
+title: 在查詢中使用批註式 XSD 架構（SQLXML）
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,19 +20,20 @@ helpviewer_keywords:
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9229f612c45c2163148b809d8a79de592f06b32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a53e53f27b9b0c9c94519cb55aa136349f6ff7c5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041084"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246995"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查詢中使用註解式 XSD 結構描述 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以針對 XSD 結構描述指定範本中的 XPath 查詢，藉以針對註解式結構描述指定查詢來擷取資料庫中的資料。  
   
- **\<Sql:xpath-查詢 >** 元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 針對所要執行的 XPath 查詢的註解式結構描述由使用**對應結構描述**屬性 **\<sql:xpath-查詢 >** 項目。  
+ **Sql： xpath-query>元素可讓您針對批註式架構所定義的 XML view，指定 xpath 查詢。 \< ** 要對其執行 XPath 查詢的批註式架構，會使用** \<sql： XPath-query>** 專案的**mapping 架構**屬性來識別。  
   
  範本是包含一或多個查詢的有效 XML 文件。 FOR XML 和 XPath 查詢會傳回文件片段。 範本對於文件片段就像是容器一樣；因此，範本會提供一種方式來指定單一的上層元素。  
   
@@ -64,12 +64,12 @@ ms.locfileid: "68041084"
 </sql:xpath-query>  
 ```  
   
- 然後，您可以建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs)，將查詢當做範本檔的一部分執行。 如需詳細資訊，請參閱 < [Annotated XDR Schemas&#40;在 SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+ 然後，您可以建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs)，將查詢當做範本檔的一部分執行。 如需詳細資訊，請參閱[SQLXML 4.0&#41;中 &#40;已被取代的批註式 XDR 架構](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="using-inline-mapping-schemas"></a>使用內嵌的對應結構描述  
  註解式結構描述可以直接包含在範本中，接著就可以針對內嵌的結構描述指定範本中的 XPath 查詢。 範本也可以是一個 Updategram。  
   
- 一個範本可以包含多個內嵌結構描述。 若要使用內嵌結構描述包含在範本中，指定**識別碼**屬性具有唯一值 **\<2&gt;xsd:schema&lt;2} >** 項目，然後再使用 **#idvalue**來參考內嵌結構描述。 **識別碼**屬性是相同的行為**sql: id-prefix** ({urn: schemas-microsoft-microsoft-schemas-microsoft-com:-sql} id) 用於 XDR 結構描述。  
+ 一個範本可以包含多個內嵌結構描述。 若要使用範本中包含的內嵌架構，請在** \<xsd： schema>** 專案上指定具有唯一值的**id**屬性，然後使用 **#idvalue**來參考內嵌架構。 在 XDR 架構中使用的**sql： id** （{urn：架構-microsoft-com： xml-sql} id）的行為與**id**屬性相同。  
   
  例如，下列範本指定兩個內嵌的註解式結構描述：  
   
@@ -116,23 +116,23 @@ ms.locfileid: "68041084"
 </ROOT>  
 ```  
   
- 範本也會指定兩個 XPath 查詢。 每個 **\<xpath 查詢 >** 藉由指定項目的唯一識別的對應結構描述**對應結構描述**屬性。  
+ 範本也會指定兩個 XPath 查詢。 每個** \<xpath 查詢>** 元素會藉由指定**對應架構**屬性來唯一識別對應架構。  
   
- 當您在範本中，指定將內嵌結構描述**sql： 為對應結構描述**也必須在上指定註釋 **\<2&gt;xsd:schema&lt;2} >** 項目。 **Sql： 為對應結構描述**接受布林值 (0 = false,1 = true)。 使用內嵌結構描述**sql： 為對應結構描述 ="1"** 視為內嵌註解式結構描述，而且不會傳回 XML 文件中。  
+ 當您在範本中指定內嵌架構時，也必須在** \<xsd： schema>** 元素上指定**sql： is-對應架構**注釋。 **Sql： is-mapping-架構**會採用布林值（0 = false，1 = true）。 具有**sql： is-對應架構 = "1"** 的內嵌架構會被視為內嵌批註的架構，而且不會在 XML 檔中傳回。  
   
- **Sql： 為對應結構描述**註解屬於範本命名空間**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-sql**。  
+ **Sql： is-mapping-架構**注釋屬於範本命名空間**urn：架構-microsoft-com： xml-sql**。  
   
- 若要測試此範例，將範本 (InlineSchemaTemplate.xml) 儲存在本機目錄中，然後建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 來執行範本。 如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+ 若要測試此範例，將範本 (InlineSchemaTemplate.xml) 儲存在本機目錄中，然後建立及使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 來執行範本。 如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
- 除了指定**對應結構描述**屬性上 **\<sql:xpath-查詢 >** 項目在範本中 （當 XPath 查詢），或在 **\<updg:sync >** 項目在 updategram 中，您可以執行下列動作：  
+ 除了在範本中的** \<sql： xpath-query>** 專案上指定**對應架構**屬性（當有 xpath 查詢時），或在 updategram 中的** \<updg： sync>** 元素上，您可以執行下列動作：  
   
--   指定**對應結構描述**屬性上 **\<根 >** 範本中的項目 （全域宣告）。 此對應結構描述就會變成沒有明確的所有 XPath 和 updategram 節點將都使用的預設結構描述**對應結構描述**註釋。  
+-   在範本的** \<根>** 元素（全域宣告）上指定**對應架構**屬性。 這個對應架構接著會變成預設的架構，而所有沒有明確**對應架構**注釋的 XPath 和 updategram-節點將會使用它。  
   
--   指定**對應結構描述**屬性使用 ADO**命令**物件。  
+-   使用 ADO **Command**物件指定**對應架構**屬性。  
   
- **對應結構描述**屬性上指定 **\<xpath 查詢 >** 或是 **\<updg:sync >** 項目具有最高優先順序;ADO**命令**物件具有最低的優先順序。  
+ **在\<xpath 查詢>** 或** \<updg： sync>** 元素上指定的**對應架構**屬性具有最高優先順序;ADO **Command**物件具有最低的優先順序。  
   
- 請注意，是否您在範本中指定 XPath 查詢，且未指定的 XPath 查詢會根據執行的對應結構描述，XPath 查詢會被視為**dbobject**類型查詢。 例如，假設有以下的範本：  
+ 請注意，如果您在範本中指定 XPath 查詢，且未指定執行 XPath 查詢所依據的對應架構，則會將 XPath 查詢視為**dbobject**類型查詢。 例如，假設有以下的範本：  
   
 ```  
 <sql:xpath-query   
@@ -141,6 +141,6 @@ ms.locfileid: "68041084"
 </sql:xpath-query>  
 ```  
   
- 此範本會指定一個 XPath 查詢，但不會指定對應結構描述。 因此，此查詢會視為**dbobject**類型的查詢，其中 Production.ProductPhoto 是資料表名稱和@ProductPhotoID= '100' 是尋找 ID 值為 100 之產品相片的述詞。 @LargePhoto 是要從中擷取值的資料行。  
+ 此範本會指定一個 XPath 查詢，但不會指定對應結構描述。 因此，此查詢會被視為**dbobject**類型查詢，其中 ProductPhoto 是資料表名稱，而@ProductPhotoID= ' 100 ' 則是找到識別碼值為100之產品相片的述詞。 @LargePhoto這是要從中取得值的資料行。  
   
   

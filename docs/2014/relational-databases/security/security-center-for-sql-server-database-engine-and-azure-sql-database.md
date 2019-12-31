@@ -17,86 +17,87 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 131fb3639f84c1b59796d59bcfff17159da8f063
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028664"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244529"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心
   本頁提供的連結可協助您在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]及 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]中尋找有關於安全性及保護的資訊。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 的功能將持續改進。 如需了解 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的最新資訊，請參閱本主題的最新版本 。  
+>  
+  [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 的功能將持續改進。 如需了解 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的最新資訊，請參閱本主題的最新版本 。  
   
-|Authentication您是誰？|Authorization:您可以做什麼？|加密儲存機密資料|連接安全性:限制和保護|稽核：錄製存取權|  
+|驗證：您的身分|授權：您可以執行的作業|加密：儲存機密資料|連線安全性：限制及保護|稽核：錄製存取權|  
 |----------------------------------|-------------------------------------|-------------------------------------|---------------------------------------------------|--------------------------------|  
-|**由誰驗證？**<br /><br /> [![資訊安全中心對應 Windows 驗證](../../database-engine/media/security-center-map-windows-authenticaion.png "資訊安全中心對應 Windows 驗證")](https://msdn.microsoft.com/library/ms144284.aspx)<br /><br /> <br /><br /> [![資訊安全中心對應 SQL Server 驗證](../../database-engine/media/security-center-map-sql-authenticaion.png "資訊安全中心對應 SQL Server 驗證")](https://msdn.microsoft.com/library/ms144284.aspx)<br /><br /> **驗證位置？**<br /><br /> [![資訊安全中心對應登入和使用者](../../database-engine/media/security-center-map-logins-users.png "資訊安全中心對應登入和使用者")](https://msdn.microsoft.com/library/aa337562.aspx)<br /><br /> <br /><br /> [![資訊安全中心對應自主資料庫使用者](../../database-engine/media/security-center-map-contained-users.png "資訊安全中心對應自主資料庫使用者")](https://msdn.microsoft.com/library/ff929188.aspx)<br /><br /> **使用其他身分識別**<br /><br /> [![資訊安全中心對應認證](../../database-engine/media/security-center-map-credentials.png "資訊安全中心對應認證")](https://msdn.microsoft.com/library/ms161950.aspx)<br /><br /> [![資訊安全中心對應執行身分登](../../database-engine/media/security-center-map-exec-as-login.png "入資訊安全中心對應執行身分登")](https://msdn.microsoft.com/library/ms181362.aspx)入<br /><br /> [![資訊安全中心對應 Execute As User](../../database-engine/media/security-center-map-exec-as-user.png "資訊安全中心對應 Execute As User")](https://msdn.microsoft.com/library/ms181362.aspx)<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")|**授與、撤銷和拒絕權限**<br /><br /> [![資訊安全中心對應安全類別](../../database-engine/media/security-center-map-securable-classes.png "資訊安全中心對應安全類別")](https://msdn.microsoft.com/library/ms190401.aspx)<br /><br /> [![資訊安全中心對應伺服器許可權](../../database-engine/media/security-center-map-srv-perms.png "資訊安全中心對應伺服器許可權")](https://msdn.microsoft.com/library/ms191291.aspx)<br /><br /> [![資訊安全中心對應資料庫許可權](../../database-engine/media/security-center-map-db-perms.png "資訊安全中心對應資料庫許可權")](https://msdn.microsoft.com/library/ms191291.aspx)<br /><br /> **安全性角色**<br /><br /> [![資訊安全中心對應伺服器角色](../../database-engine/media/security-center-map-srv-roles.png "資訊安全中心對應伺服器角色")](https://msdn.microsoft.com/library/ms188659.aspx)<br /><br /> [![資訊安全中心對應資料庫角色](../../database-engine/media/security-center-map-db-roles.png "資訊安全中心對應資料庫角色")](https://msdn.microsoft.com/library/ms189121.aspx)<br /><br /> `Restricting Data Access to Selected Data Elements`<br /><br /> [![資訊安全中心對應視圖和程式](../../database-engine/media/security-center-map-view-procs.png "資訊安全中心對應視圖和程式")](https://msdn.microsoft.com/library/ms175503.aspx)<br /><br /> [![資訊安全中心對應資料列層級安全性](../../database-engine/media/security-center-map-row-level-sec.png "資訊安全中心對應資料列層級安全性")](https://msdn.microsoft.com/library/dn765131.aspx)<br /><br /> [![資訊安全中心對應動態資料遮罩](../../database-engine/media/security-center-map-data-masking.png "資訊安全中心對應動態資料遮罩")](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [![資訊安全中心對應帶正負號的物件](../../database-engine/media/security-center-map-signed-objects.png "資訊安全中心對應帶正負號的物件")](https://msdn.microsoft.com/library/ms181700.aspx)<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")|**加密檔案**<br /><br /> [![資訊安全中心對應 BitLocker](../../database-engine/media/security-center-map-bitlocker.png "資訊安全中心對應 BitLocker")](https://support.microsoft.com/en-us/kb/2855131)<br /><br /> [![資訊安全中心對應 NTFS 加密](../../database-engine/media/security-center-map-ntfs-encryp.png "資訊安全中心對應 NTFS 加密")](https://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [![資訊安全中心對應 TDE](../../database-engine/media/security-center-map-tde.png "資訊安全中心對應 TDE")](https://msdn.microsoft.com/library/bb934049.aspx)<br /><br /> [![資訊安全中心對應備份加密](../../database-engine/media/security-center-map-backup-encryp.png "資訊安全中心對應備份加密")](https://msdn.microsoft.com/library/dn449489.aspx)<br /><br /> **加密的來源**<br /><br /> [![資訊安全中心對應 EKM](../../database-engine/media/security-center-map-ekm.png "資訊安全中心對應 EKM")](https://msdn.microsoft.com/library/bb895340.aspx)<br /><br /> [![資訊安全中心對應 Azure Key Vault](../../database-engine/media/security-center-map-key-vault.png "資訊安全中心對應 Azure Key Vault")](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)<br /><br /> **資料行, 資料 & 金鑰加密**<br /><br /> [![依憑證資訊安全中心對應加密](../../database-engine/media/security-center-map-cert.png "依憑證資訊安全中心對應加密")](https://msdn.microsoft.com/library/ms188061.aspx)<br /><br /> [![資訊安全中心對應以對稱金鑰加密](../../database-engine/media/security-center-map-sym-key.png "資訊安全中心對應以對稱金鑰加密")](https://msdn.microsoft.com/library/ms174361.aspx)<br /><br /> [![資訊安全中心對應以非對稱金鑰加密](../../database-engine/media/security-center-map-asym-key.png "資訊安全中心對應以非對稱金鑰加密")](https://msdn.microsoft.com/library/ms186950.aspx)<br /><br /> [![資訊安全中心對應以複雜密碼加密](../../database-engine/media/security-center-map-passphrase.png "資訊安全中心對應以複雜密碼加密")](https://msdn.microsoft.com/library/ms190357.aspx)|**防火牆保護**<br /><br /> [![資訊安全中心對應 Windows 防火牆](../../database-engine/media/security-center-map-windows-firewall.png "資訊安全中心對應 Windows 防火牆")](https://msdn.microsoft.com/library/ms175043.aspx)<br /><br /> [![資訊安全中心對應服務防火牆](../../database-engine/media/security-center-map-service-firewall.png "資訊安全中心對應服務防火牆")](https://msdn.microsoft.com/library/azure/ee621782.aspx)<br /><br /> [![資訊安全中心對應資料庫防火牆](../../database-engine/media/security-center-map-db-firewall.png "資訊安全中心對應資料庫防火牆")](https://msdn.microsoft.com/library/azure/ee621782.aspx)<br /><br /> **在傳輸過程中的資料加密**<br /><br /> [![資訊安全中心對應強制的 SSL](../../database-engine/media/security-center-map-forced-ssl.png "資訊安全中心對應強制的 SSL")](https://msdn.microsoft.com/library/ms191192.aspx)<br /><br /> [![資訊安全中心對應選用 SSL](../../database-engine/media/security-center-map-opt-ssl.png "資訊安全中心對應選用 SSL")](https://msdn.microsoft.com/library/ms191192.aspx)<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")|**自動化稽核**<br /><br /> [![資訊安全中心對應 SQL Server Audit](../../database-engine/media/security-center-map-sql-audit.png "資訊安全中心對應 SQL Server Audit")](https://msdn.microsoft.com/library/cc280386.aspx)<br /><br /> [![資訊安全中心對應 SQL Database Audit](../../database-engine/media/security-center-map-sqldb-audit.png "資訊安全中心對應 SQL Database Audit")](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> **自訂稽核**<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> [![資訊安全中心對應觸發程式](../../database-engine/media/security-center-map-triggers.png "資訊安全中心對應觸發程式")](https://msdn.microsoft.com/library/ms175941.aspx)<br /><br /> **遵循**<br /><br /> [![SecCtrCompliance](../../database-engine/media/secctrcompliance.png "SecCtrCompliance")](https://azure.microsoft.com/support/trust-center/services/)<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![預留位置](../../database-engine/media/security-center-map-blankplaceholder.png "預留位置")<br /><br /> ![資訊安全中心圖例](../../database-engine/media/security-center-map-legend.png "資訊安全中心圖例")|  
+|**誰驗證？**<br /><br /> [![資訊安全中心對應 Windows 驗證](../../database-engine/media/security-center-map-windows-authenticaion.png "資訊安全中心對應 Windows 驗證")](https://msdn.microsoft.com/library/ms144284.aspx)<br /><br /> <br /><br /> [![資訊安全中心對應 SQL Server 驗證](../../database-engine/media/security-center-map-sql-authenticaion.png "資訊安全中心對應 SQL Server 驗證")](https://msdn.microsoft.com/library/ms144284.aspx)<br /><br /> **驗證的位置？**<br /><br /> [![資訊安全中心對應登入與使用者](../../database-engine/media/security-center-map-logins-users.png "資訊安全中心對應登入與使用者")](https://msdn.microsoft.com/library/aa337562.aspx)<br /><br /> <br /><br /> [![資訊安全中心自主資料庫使用者](../../database-engine/media/security-center-map-contained-users.png "資訊安全中心自主資料庫使用者")](https://msdn.microsoft.com/library/ff929188.aspx)<br /><br /> **使用其他身分識別**<br /><br /> [![資訊安全中心對應認證](../../database-engine/media/security-center-map-credentials.png "資訊安全中心對應認證")](https://msdn.microsoft.com/library/ms161950.aspx)<br /><br /> [![資訊安全中心對應 Execute As Login](../../database-engine/media/security-center-map-exec-as-login.png "資訊安全中心對應 Execute As Login")](https://msdn.microsoft.com/library/ms181362.aspx)<br /><br /> [![資訊安全中心對應 Execute As User](../../database-engine/media/security-center-map-exec-as-user.png "資訊安全中心對應 Execute As User")](https://msdn.microsoft.com/library/ms181362.aspx)<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")|**授與、撤銷和拒絕許可權**<br /><br /> [![資訊安全中心的對應安全性實體類別](../../database-engine/media/security-center-map-securable-classes.png "資訊安全中心的對應安全性實體類別")](https://msdn.microsoft.com/library/ms190401.aspx)<br /><br /> [![資訊安全中心對應伺服器權限](../../database-engine/media/security-center-map-srv-perms.png "資訊安全中心對應伺服器權限")](https://msdn.microsoft.com/library/ms191291.aspx)<br /><br /> [![資訊安全中心對應資料庫權限](../../database-engine/media/security-center-map-db-perms.png "資訊安全中心對應資料庫權限")](https://msdn.microsoft.com/library/ms191291.aspx)<br /><br /> **依角色的安全性**<br /><br /> [![資訊安全中心對應伺服器角色](../../database-engine/media/security-center-map-srv-roles.png "資訊安全中心對應伺服器角色")](https://msdn.microsoft.com/library/ms188659.aspx)<br /><br /> [![資訊安全中心對應資料庫角色](../../database-engine/media/security-center-map-db-roles.png "資訊安全中心對應資料庫角色")](https://msdn.microsoft.com/library/ms189121.aspx)<br /><br /> `Restricting Data Access to Selected Data Elements`<br /><br /> [![資訊安全中心對應檢視表與程序](../../database-engine/media/security-center-map-view-procs.png "資訊安全中心對應檢視表與程序")](https://msdn.microsoft.com/library/ms175503.aspx)<br /><br /> [![資訊安全中心的對應資料列層級安全性](../../database-engine/media/security-center-map-row-level-sec.png "資訊安全中心的對應資料列層級安全性")](https://msdn.microsoft.com/library/dn765131.aspx)<br /><br /> [![資訊安全中心對應動態資料遮罩](../../database-engine/media/security-center-map-data-masking.png "資訊安全中心對應動態資料遮罩")](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [![資訊安全中心對應簽署的物件](../../database-engine/media/security-center-map-signed-objects.png "資訊安全中心對應簽署的物件")](https://msdn.microsoft.com/library/ms181700.aspx)<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")|**加密檔案**<br /><br /> [![資訊安全中心對應 BitLocker](../../database-engine/media/security-center-map-bitlocker.png "資訊安全中心對應 BitLocker")](https://support.microsoft.com/kb/2855131)<br /><br /> [![資訊安全中心對應 NTFS 加密](../../database-engine/media/security-center-map-ntfs-encryp.png "資訊安全中心對應 NTFS 加密")](https://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [![資訊安全中心對應 TDE](../../database-engine/media/security-center-map-tde.png "資訊安全中心對應 TDE")](https://msdn.microsoft.com/library/bb934049.aspx)<br /><br /> [![資訊安全中心對應備份加密](../../database-engine/media/security-center-map-backup-encryp.png "資訊安全中心對應備份加密")](https://msdn.microsoft.com/library/dn449489.aspx)<br /><br /> **加密來源**<br /><br /> [![資訊安全中心對應 EKM](../../database-engine/media/security-center-map-ekm.png "資訊安全中心對應 EKM")](https://msdn.microsoft.com/library/bb895340.aspx)<br /><br /> [![資訊安全中心對應 Azure 金鑰保存庫](../../database-engine/media/security-center-map-key-vault.png "資訊安全中心對應 Azure 金鑰保存庫")](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)<br /><br /> **資料行，資料 & 金鑰加密**<br /><br /> [![依憑證資訊安全中心對應加密](../../database-engine/media/security-center-map-cert.png "依憑證資訊安全中心對應加密")](https://msdn.microsoft.com/library/ms188061.aspx)<br /><br /> [![資訊安全中心對應使用非對稱金鑰加密](../../database-engine/media/security-center-map-sym-key.png "資訊安全中心對應使用非對稱金鑰加密")](https://msdn.microsoft.com/library/ms174361.aspx)<br /><br /> [![非對稱金鑰將資訊安全中心對應加密](../../database-engine/media/security-center-map-asym-key.png "非對稱金鑰將資訊安全中心對應加密")](https://msdn.microsoft.com/library/ms186950.aspx)<br /><br /> [![資訊安全中心對應使用複雜密碼加密](../../database-engine/media/security-center-map-passphrase.png "資訊安全中心對應使用複雜密碼加密")](https://msdn.microsoft.com/library/ms190357.aspx)|**防火牆保護**<br /><br /> [![資訊安全中心對應 Windows 防火牆](../../database-engine/media/security-center-map-windows-firewall.png "資訊安全中心對應 Windows 防火牆")](https://msdn.microsoft.com/library/ms175043.aspx)<br /><br /> [![資訊安全中心對應服務防火牆](../../database-engine/media/security-center-map-service-firewall.png "資訊安全中心對應服務防火牆")](https://msdn.microsoft.com/library/azure/ee621782.aspx)<br /><br /> [![資訊安全中心對應資料庫防火牆](../../database-engine/media/security-center-map-db-firewall.png "資訊安全中心對應資料庫防火牆")](https://msdn.microsoft.com/library/azure/ee621782.aspx)<br /><br /> **加密傳輸中的資料**<br /><br /> [![資訊安全中心對應強制 SSL](../../database-engine/media/security-center-map-forced-ssl.png "資訊安全中心對應強制 SSL")](https://msdn.microsoft.com/library/ms191192.aspx)<br /><br /> [![資訊安全中心對應非必要的 SSL](../../database-engine/media/security-center-map-opt-ssl.png "資訊安全中心對應非必要的 SSL")](https://msdn.microsoft.com/library/ms191192.aspx)<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")|**自動化的審核**<br /><br /> [![資訊安全中心對應 SQL Server Audit](../../database-engine/media/security-center-map-sql-audit.png "資訊安全中心對應 SQL Server Audit")](https://msdn.microsoft.com/library/cc280386.aspx)<br /><br /> [![資訊安全中心對應 SQL Database Audit](../../database-engine/media/security-center-map-sqldb-audit.png "資訊安全中心對應 SQL Database Audit")](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> **自訂審核**<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> [![資訊安全中心對應觸發程序](../../database-engine/media/security-center-map-triggers.png "資訊安全中心對應觸發程序")](https://msdn.microsoft.com/library/ms175941.aspx)<br /><br /> **實現**<br /><br /> [![SecCtrCompliance](../../database-engine/media/secctrcompliance.png "SecCtrCompliance")](https://azure.microsoft.com/support/trust-center/services/)<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![Placeholder](../../database-engine/media/security-center-map-blankplaceholder.png "Placeholder")<br /><br /> ![資訊安全中心圖例](../../database-engine/media/security-center-map-legend.png "資訊安全中心圖例")|  
   
 ## <a name="links-to-specific-related-topics"></a>連結到特定的相關主題  
- ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**驗證:你是誰？**  
- **誰驗證？(Windows 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**驗證：您是誰？**  
+ **誰驗證？（Windows 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）**  
   
 -   [選擇驗證模式](choose-an-authentication-mode.md)  
   
- **在 master 資料庫進行驗證** (登入和資料庫使用者)  
+ **在 master 資料庫進行驗證**（登入和資料庫使用者）  
   
 -   [建立 SQL Server 登入](authentication-access/create-a-login.md)  
   
--   [管理資料庫和 Azure SQL Database 中的登入](https://msdn.microsoft.com/library/ee336235.aspx)  
+-   [管理 Azure SQL Database 中的資料庫和登入](https://msdn.microsoft.com/library/ee336235.aspx)  
   
 -   [建立資料庫使用者](authentication-access/create-a-database-user.md)  
   
- **在使用者資料庫中進行驗證**  
+ **在使用者資料庫進行驗證**  
   
--   [自主的資料庫使用者 - 使資料庫可攜](contained-database-users-making-your-database-portable.md)  
+-   [自主資料庫使用者-使資料庫可攜](contained-database-users-making-your-database-portable.md)  
   
  **使用其他身分識別**  
   
--   [認證 &#40;Database Engine&#41;](authentication-access/credentials-database-engine.md)  
+-   [認證 &#40;資料庫引擎&#41;](authentication-access/credentials-database-engine.md)  
   
--   [以另一個登入的方式執行](/sql/t-sql/statements/execute-as-transact-sql)  
+-   [以另一個登入執行](/sql/t-sql/statements/execute-as-transact-sql)  
   
 -   [以另一個資料庫使用者的身分執行](/sql/t-sql/statements/execute-as-transact-sql)  
   
- ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**加密:儲存秘密資料**  
+ ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**加密：儲存秘密資料**  
  **加密檔案**  
   
--   [BitLocker (磁碟機層級)](https://support.microsoft.com/kb/2855131)  
+-   [BitLocker （磁片磁碟機層級）](https://support.microsoft.com/kb/2855131)  
   
--   [NTFS 加密 (資料夾層級)](https://msdn.microsoft.com/library/dd163562.aspx)  
+-   [NTFS 加密（資料夾層級）](https://msdn.microsoft.com/library/dd163562.aspx)  
   
--   [透明資料加密 (檔案層級)](encryption/transparent-data-encryption.md)  
+-   [透明資料加密（檔案層級）](encryption/transparent-data-encryption.md)  
   
--   [備份加密 (檔案層級)](../backup-restore/backup-encryption.md)  
+-   [備份加密（檔案層級）](../backup-restore/backup-encryption.md)  
   
- **加密的來源**  
+ **加密來源**  
   
 -   [可延伸金鑰管理模組](encryption/extensible-key-management-ekm.md)  
   
--   [儲存在 Azure 金鑰保存庫的金鑰](encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+-   [儲存在 Azure Key Vault 中的金鑰](encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
- **資料行、資料和金鑰加密**  
+ **資料行、 資料和金鑰加密**  
   
--   [加密憑證](/sql/t-sql/functions/encryptbycert-transact-sql)  
+-   [依憑證加密](/sql/t-sql/functions/encryptbycert-transact-sql)  
   
--   [用非對稱金鑰來加密](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
+-   [使用非對稱金鑰加密](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
   
--   [用對稱金鑰來加密](/sql/t-sql/functions/encryptbykey-transact-sql)  
+-   [以對稱金鑰加密](/sql/t-sql/functions/encryptbykey-transact-sql)  
   
--   [用複雜密碼來加密](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
+-   [以複雜密碼加密](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
   
- ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**授權:您可以做什麼？**  
- **授與、撤銷和拒絕權限**  
+ ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**授權：您可以執行什麼動作？**  
+ **授與、撤銷和拒絕許可權**  
   
--   [權限階層 &#40;Database Engine&#41;](permissions-hierarchy-database-engine.md)  
+-   [許可權階層 &#40;資料庫引擎&#41;](permissions-hierarchy-database-engine.md)  
   
--   [Permissions](permissions-database-engine.md)  
+-   [無權](permissions-database-engine.md)  
   
 -   [安全性實體](securables.md)  
   
- **安全性角色**  
+ **依角色的安全性**  
   
 -   [伺服器層級角色](authentication-access/server-level-roles.md)  
   
@@ -110,29 +111,29 @@ ms.locfileid: "69028664"
   
 -   [動態資料遮罩](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
--   [簽署物件](/sql/t-sql/statements/add-signature-transact-sql)  
+-   [簽署的物件](/sql/t-sql/statements/add-signature-transact-sql)  
   
- ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**連接安全性:限制和保護**  
+ ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**連接安全性：限制及保護**  
  **防火牆保護**  
   
--   [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [設定資料庫引擎存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Azure SQL Database 防火牆設定](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
--   [Azure 服務的防火牆設定](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
+-   [Azure 服務防火牆設定](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   
- **在傳輸過程中的資料加密**  
+ **加密傳輸中的資料**  
   
 -   [資料庫引擎的安全通訊端層](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
   
 -   [SQL Database 的安全通訊端層](https://msdn.microsoft.com/library/azure/ff394108.aspx)  
   
- ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**審核:記錄存取**  
- **自動化稽核**  
+ ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**審核：錄製存取**  
+ **自動化的審核**  
   
--   [SQL Server Audit &#40;Database Engine&#41;](auditing/sql-server-audit-database-engine.md)  
+-   [SQL Server Audit &#40;資料庫引擎&#41;](auditing/sql-server-audit-database-engine.md)  
   
--   [SQL 資料庫稽核](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
+-   [SQL Database 稽核](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   
  **自訂的 Audit 執行**  
   
@@ -141,20 +142,20 @@ ms.locfileid: "69028664"
  ![小型檔案資料夾圖示](../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**合規性**  
  **SQL Server**  
   
--   [Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319)  
+-   [通用條件](https://go.microsoft.com/fwlink/?LinkId=616319)  
   
  **SQL Database**  
   
--   [Microsoft Azure Trust Center:Compliance by Feature](https://azure.microsoft.com/support/trust-center/services/) (Microsoft Azure 信任中心：功能符合規範的狀況)  
+-   [Microsoft Azure 信任中心：依功能的相容性](https://azure.microsoft.com/support/trust-center/services/)  
   
 ## <a name="see-also"></a>另請參閱  
- [保護 SQL Server 的安全](securing-sql-server.md)   
- [主體 &#40;Database Engine&#41;](authentication-access/principals-database-engine.md)   
- [SQL Server 憑證與非對稱金鑰](sql-server-certificates-and-asymmetric-keys.md)   
+ [保護 SQL Server](securing-sql-server.md)   
+ [主體 &#40;資料庫引擎&#41;](authentication-access/principals-database-engine.md)   
+ [SQL Server 憑證和非對稱金鑰](sql-server-certificates-and-asymmetric-keys.md)   
  [SQL Server 加密](encryption/sql-server-encryption.md)   
- [介面區組態](surface-area-configuration.md)   
- [增強式密碼](strong-passwords.md)   
- [TRUSTWORTHY 資料庫屬性](trustworthy-database-property.md)   
- [Database Engine 功能及工作](../../database-engine/database-engine-features-and-tasks.md)  
+ [介面區設定](surface-area-configuration.md)   
+ [強式密碼](strong-passwords.md)   
+ [可信任的資料庫屬性](trustworthy-database-property.md)   
+ [資料庫引擎功能和工作](../../database-engine/database-engine-features-and-tasks.md)  
   
   

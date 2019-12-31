@@ -1,7 +1,7 @@
 ---
-title: 舊版 SQL Server 版本的增強型日期和時間類型行為（ODBC） |Microsoft Docs
+title: SQL 版本中的日期時間（ODBC）
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 500771f384d65f1181dc5a34efccafb677ba2183
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 7c25269ccf82749bd3b9260ff1fea6eec48361a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73783740"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243815"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>舊版 SQL Server 的增強型日期/時間類型行為 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,31 +32,33 @@ ms.locfileid: "73783740"
   
  SQLDescribeCol、SQLDescribeParam、SQGetDescField 和 SQLColAttribute 所傳回的語句中繼資料，會傳回與下層類型一致的中繼資料，包括類型名稱。 這類下層類型的範例是**Nvarchar**。  
   
- 當下層用戶端應用程式在架構變更為日期/時間類型的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更新版本）伺服器上執行時，預期的行為如下所示：  
+ 當下層用戶端應用程式針對已建立日期[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] /時間類型的架構變更的（或更新版本）伺服器執行時，預期的行為如下所示：  
   
-|SQL Server 2005 類型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更新版本）類型|ODBC 用戶端類型|結果轉換 (SQL 到 C)|參數轉換 (C 到 SQL)|  
+|SQL Server 2005 類型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 類型|ODBC 用戶端類型|結果轉換 (SQL 到 C)|參數轉換 (C 到 SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|日期|SQL_C_TYPE_DATE|[確定]|確定（1）|  
+|Datetime|日期|SQL_C_TYPE_DATE|OK|確定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|[確定]|確定（1）|  
+||Time(0)|SQL_C_TYPE_TIME|OK|確定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|日期欄位設定為目前的日期。|OK (2)<br /><br /> 忽略日期。 如果小數秒不是零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(7)|SQL_C_TIME|失敗-不正確時間常值。|確定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|失敗-不正確時間常值。|確定（1）|  
-||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|[確定]|確定（1）|  
-||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|[確定]|用戶端轉換會將值捨入為 1/300 秒。|  
-|Smalldatetime|日期|SQL_C_TYPE_DATE|[確定]|[確定]|  
+||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|OK|確定（1）|  
+||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|OK|用戶端轉換會將值捨入為 1/300 秒。|  
+|Smalldatetime|日期|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|[確定]|[確定]|  
+||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|日期欄位設定為目前的日期。|OK (2)<br /><br /> 忽略日期。 如果小數秒不是零，就會失敗。<br /><br /> 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|[確定]|[確定]|  
-  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
+|||||
+
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
 |1|如果它使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，則應繼續使用更新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |2|使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的應用程式可能會因為更新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而失敗。|  
-  
+|||
+
  請注意，只有最常見的結構描述變更已經列入考慮。 以下是最常見的變更：  
   
 -   在符合邏輯之處使用新的類型時，應用程式僅需要一個日期或時間值。 不過，系統會強迫應用程式使用 datetime 或 smalldatetime，因為沒有個別的日期和時間類型。  
@@ -68,10 +70,10 @@ ms.locfileid: "73783740"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>SQLColumns、SQLProcedureColumns 和 SQLSpecialColumns 傳回的資料行中繼資料  
  系統會傳回日期/時間類型的下列資料行值：  
   
-|資料行類型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|資料行類型|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8、10、16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16、20. 32|16|16|38，42. 54|52、56. 68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -79,15 +81,16 @@ ms.locfileid: "73783740"
 |SQL_DATETIME_SUB|NULL|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
-  
+||||||||
+
  SQLSpecialColumns 不會傳回 SQL_DATA_TYPE、SQL_DATETIME_SUB、CHAR_OCTET_LENGTH 或 SS_DATA_TYPE。  
   
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>SQLGetTypeInfo 傳回的資料類型中繼資料  
  系統會傳回日期/時間類型的下列資料行值：  
   
-|資料行類型|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|資料行類型|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -99,7 +102,7 @@ ms.locfileid: "73783740"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
@@ -107,11 +110,10 @@ ms.locfileid: "73783740"
 |NUM_PREC_RADIX|NULL|NULL|NULL|NULL|NULL|NULL|  
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
-  
+||||||||
+
 ## <a name="down-level-server-behavior"></a>下層伺服器行為  
  連接到舊版 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的伺服器執行個體時，嘗試使用新的伺服器類型或相關聯的中繼資料程式碼和描述元欄位都會傳回 SQL_ERROR。 系統將會產生包含 SQLSTATE HY004 和訊息「連接時，伺服器版本的 SQL 資料類型無效」的診斷記錄，或包含 07006 和訊息「限制的資料類型屬性違規」的診斷記錄。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 的日期和&#40;時間改善&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+ [ODBC&#41;&#40;的日期和時間改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

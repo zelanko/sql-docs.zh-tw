@@ -1,6 +1,6 @@
 ---
-title: 使用 sqlcmd 公用程式 | Microsoft Docs
-ms.custom: ''
+title: 使用 sqlcmd 公用程式
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,21 +17,22 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6e25cc54718ab0db547efc6e9b6af857fe01e4e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155360"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243175"
 ---
 # <a name="use-the-sqlcmd-utility"></a>使用 sqlcmd 公用程式
+  
   `sqlcmd` 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 `sqlcmd`，或是要建立透過 `sqlcmd` 執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言，`sqlcmd` 公用程式的使用方式如下：  
   
--   使用者可以像是在命令提示字元中工作一般，以互動的方式輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟 [命令提示字元] 視窗，請按一下 **[開始]** 、按一下 **[所有程式]** 、指向 **[附屬應用程式]** ，然後按一下 **[命令提示字元]** 。 在命令提示字元中，輸入 `sqlcmd`，後面接著您要使用的一串選項。 如需 `sqlcmd`支援之選項的完整清單，請參閱[Sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
+-   使用者可以像是在命令提示字元中工作一般，以互動的方式輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟 [命令提示字元] 視窗，請按一下 **[開始]**、按一下 **[所有程式]**、指向 **[附屬應用程式]**，然後按一下 **[命令提示字元]**。 在命令提示字元中，輸入 `sqlcmd`，後面接著您要使用的一串選項。 如需所支援選項的完整清單`sqlcmd`，請參閱[sqlcmd Utility](../../tools/sqlcmd-utility.md)。  
   
 -   使用者可指定要執行的單一 `sqlcmd` 陳述式，或者將公用程式指向包含要執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字檔，來提交 [!INCLUDE[tsql](../../includes/tsql-md.md)] 工作。 輸出通常會導向文字檔，不過，也可以在命令提示字元上顯示。  
   
--   [查詢編輯器中的](edit-sqlcmd-scripts-with-query-editor.md) SQLCMD 模式 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
+-   查詢編輯器中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的[SQLCMD 模式](edit-sqlcmd-scripts-with-query-editor.md)。  
   
 -   SQL Server 管理物件 (SMO)  
   
@@ -40,16 +41,17 @@ ms.locfileid: "70155360"
 ## <a name="typically-used-sqlcmd-options"></a>一般使用的 sqlcmd 選項  
  以下是最常使用的選項：  
   
--   伺服器選項（ **-S**），識別 `sqlcmd` 連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實例。  
+-   伺服器選項（**-S**），識別[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要`sqlcmd`連接的實例。  
   
--   驗證選項（ **-E**、 **-U**和 **-P**），指定 `sqlcmd` 用來連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]實例的認證。  
+-   驗證選項（**-E**、 **-U**和 **-P**），指定`sqlcmd`用來連接到實例的認證。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     > [!NOTE]  
-    >  **-E** 選項是預設值，不需要予以指定。  
+    >  
+  **-E** 選項是預設值，不需要予以指定。  
   
--   輸入選項（ **-q**、 **-q**和 **-i**），可識別要 `sqlcmd`之輸入的位置。  
+-   輸入選項（**-q**、 **-q**和 **-i**），可識別輸入的位置`sqlcmd`。  
   
--   輸出選項（ **-o**），指定 `sqlcmd` 用來放置其輸出的檔案。  
+-   輸出選項（**-o**），指定要在其中`sqlcmd`放置其輸出的檔案。  
   
 ## <a name="connecting-to-the-sqlcmd-utility"></a>連接到 sqlcmd 公用程式  
  下列是 `sqlcmd` 公用程式的一般用途：  
@@ -61,7 +63,7 @@ ms.locfileid: "70155360"
     ```  
   
     > [!NOTE]  
-    >  在上一個範例中，未指定 **-E** ，因為它是預設值，而且 `sqlcmd` 使用 Windows 驗證連接到預設實例。  
+    >  在上述範例中，未指定 **-E** ，因為它是預設值， `sqlcmd`而且會使用 Windows 驗證連接到預設實例。  
   
 -   使用 Windows 驗證連接到具名執行個體，以互動方式執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
@@ -103,20 +105,22 @@ ms.locfileid: "70155360"
     >  若要查看 `sqlcmd` 公用程式所支援的選項清單，請執行：`sqlcmd -?`。  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>使用 sqlcmd 以互動方式執行 Transact-SQL 陳述式  
- 您可以使用 `sqlcmd` 公用程式，以互動方式在 [命令提示字元] 視窗中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要使用 `sqlcmd`以互動方式執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句，請執行公用程式，而不使用 **-q**、 **-q**、 **-Z**或 **-i**選項來指定任何輸入檔或查詢。 例如：  
+ 您可以使用 `sqlcmd` 公用程式，以互動方式在 [命令提示字元] 視窗中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要使用[!INCLUDE[tsql](../../includes/tsql-md.md)] `sqlcmd`以互動方式執行語句，請執行公用程式，而不使用 **-q**、 **-q**、 **-Z**或 **-i**選項來指定任何輸入檔或查詢。 例如：  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
- 如果在沒有輸入檔或查詢的情況下執行命令，`sqlcmd` 會連接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後顯示新的一行，其中在 `1>` 後面跟著的閃爍底線，即稱為 `sqlcmd` 提示字元。 `1` 表示此處是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的第一行，而 `sqlcmd` 提示字元則是您開始輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的位置。  
+ 如果在沒有輸入檔或查詢的情況下執行命令，`sqlcmd` 會連接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後顯示新的一行，其中在 `1>` 後面跟著的閃爍底線，即稱為 `sqlcmd` 提示字元。 
+  `1` 表示此處是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的第一行，而 `sqlcmd` 提示字元則是您開始輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的位置。  
   
- 在 `sqlcmd` 提示字元中，您可以輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 `sqlcmd` 命令 (例如 `GO` 及 `EXIT`)。 每個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會放在稱為陳述式快取的緩衝區中。 這些陳述式會在您輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令並按 ENTER 後，傳送至 `GO`。 若要結束 `sqlcmd`，請在新行的開頭輸入 `EXIT` 或 `QUIT`。  
+ 在 `sqlcmd` 提示字元中，您可以輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 `sqlcmd` 命令 (例如 `GO` 及 `EXIT`)。 每個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會放在稱為陳述式快取的緩衝區中。 這些陳述式會在您輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令並按 ENTER 後，傳送至 `GO`。 若要`sqlcmd`結束， `EXIT`請`QUIT`在新行的開頭輸入或。  
   
- 若要清除陳述式快取，請輸入 `:RESET`。 輸入 `^C` 會導致 `sqlcmd` 結束。 在發出 `^C` 命令後，也可以使用 `GO` 來停止執行陳述式快取。  
+ 若要清除陳述式快取，請輸入 `:RESET`。 輸入`^C`會`sqlcmd`導致結束。 在發出 `^C` 命令後，也可以使用 `GO` 來停止執行陳述式快取。  
   
- 輸入 **： ED**命令和 `sqlcmd` 提示字元，即可編輯在互動式會話中輸入的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。 此時會開啟編輯器，而在編輯過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式並關閉編輯器之後，修訂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式即顯示於命令視窗。 輸入 `GO` 以執行修訂 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]在互動式會話中輸入的語句，可以藉由輸入 **： ED**命令和`sqlcmd`提示來編輯。 此時會開啟編輯器，而在編輯過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式並關閉編輯器之後，修訂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式即顯示於命令視窗。 輸入`GO`以執行修訂[!INCLUDE[tsql](../../includes/tsql-md.md)]語句。  
   
 ## <a name="quoted-strings"></a>使用引號的字串  
- 系統會直接使用引號括住的字元，而不做額外處理，但是連續輸入兩個引號以將引號插入字串中的情況除外。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將這個字元順序視為一個引號 (不過，翻譯動作是在伺服器內進行)。指令碼變數出現於字串時，並不會展開。  
+ 系統會直接使用引號括住的字元，而不做額外處理，但是連續輸入兩個引號以將引號插入字串中的情況除外。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將這個字元順序視為一個引號 (不過，翻譯動作是在伺服器內進行)。指令碼變數出現於字串時，並不會展開。  
   
  例如：  
   
@@ -131,7 +135,8 @@ ms.locfileid: "70155360"
  `Length: 5" 7'`  
   
 ## <a name="strings-that-span-multiple-lines"></a>跨越多行的字串  
- `sqlcmd` 支援其字串跨越多行的指令碼。 例如，下列 `SELECT` 陳述式雖然跨越多行，但是當您輸入 `GO`後按下 ENTER 鍵時，所執行的只是單一的字串。  
+ 
+  `sqlcmd` 支援其字串跨越多行的指令碼。 例如，下列 `SELECT` 陳述式雖然跨越多行，但是當您輸入 `GO`後按下 ENTER 鍵時，所執行的只是單一的字串。  
   
  `SELECT First line`  
   
@@ -156,7 +161,7 @@ ms.locfileid: "70155360"
   
  `1> _`  
   
- 這表示您已經連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，而且 `sqlcmd` 已經準備好要接受 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與 `sqlcmd` 命令。 在 `1>` 後面的閃爍底線是 `sqlcmd` 提示字元，該字元標示將顯示您輸入之陳述式與命令的位置。 現在，輸入 `USE AdventureWorks2012` 並按 ENTER，然後輸入 `GO` 然後按 ENTER 鍵。 [命令提示字元] 視窗的內容將如下所示：  
+ 這表示您已經連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，而且 `sqlcmd` 已經準備好要接受 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與 `sqlcmd` 命令。 在 `1>` 後面的閃爍底線是 `sqlcmd` 提示字元，該字元標示將顯示您輸入之陳述式與命令的位置。 現在，輸入`USE AdventureWorks2012`並按 enter， `GO`然後輸入，然後按 enter 鍵。 [命令提示字元] 視窗的內容將如下所示：  
   
  `sqlcmd`  
   
@@ -170,7 +175,8 @@ ms.locfileid: "70155360"
   
  `1> _`  
   
- 輸入 `USE AdventureWorks2012` 之後按下 ENTER，會指示 `sqlcmd` 開始新的一行。 輸入 `GO,` 之後按下 ENTER，會指示 `sqlcmd` 將 `USE AdventureWorks2012` 陳述式傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 `sqlcmd` 便接著傳回訊息指出 `USE` 陳述式已順利完成，並且顯示新的 `1>` 提示字元，表示可以再輸入新的陳述式或命令。  
+ 輸入 `USE AdventureWorks2012` 之後按下 ENTER，會指示 `sqlcmd` 開始新的一行。 輸入 `GO,` 之後按下 ENTER，會指示 `sqlcmd` 將 `USE AdventureWorks2012` 陳述式傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。 
+  `sqlcmd` 便接著傳回訊息指出 `USE` 陳述式已順利完成，並且顯示新的 `1>` 提示字元，表示可以再輸入新的陳述式或命令。  
   
  下列範例顯示當您輸入 `SELECT` 陳述式、再輸入 `GO` 執行 `SELECT`，然後輸入 `EXIT` 結束 `sqlcmd`時，[命令提示字元] 視窗中出現的內容：  
   
@@ -207,7 +213,8 @@ ms.locfileid: "70155360"
  在 `3> GO` 這一行後面的那幾行，是 `SELECT` 陳述式的輸出。 產生輸出後， `sqlcmd` 會重設 `sqlcmd` 提示字元，並顯示 `1>`。 在 `EXIT` 行輸入 `1>`之後，[命令提示字元] 視窗會顯示和您初次開啟這個視窗時同樣的一行。 這表示 `sqlcmd` 已經結束其工作階段。 您現在可以輸入另一個 `EXIT` 命令，來關閉 [命令提示字元] 視窗。  
   
 ## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>使用 sqlcmd 執行 Transact-SQL 指令碼檔案  
- 您可以使用 `sqlcmd` 來執行資料庫指令碼檔案。 腳本檔案是文字檔，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語句、`sqlcmd` 命令和腳本變數的混合。 如需如何編寫指令碼變數的詳細資訊，請參閱 [以指令碼變數使用 sqlcmd](sqlcmd-use-with-scripting-variables.md)。 `sqlcmd` 在指令碼檔案中使用陳述式、命令及指令碼變數的方式，與它使用互動方式輸入陳述式及命令的方式類似。 主要的差別在於 `sqlcmd` 會讀取整個輸入檔而不暫停，而不是等待使用者輸入陳述式、命令及指令碼變數。  
+ 您可以使用 `sqlcmd` 來執行資料庫指令碼檔案。 腳本檔案是文字檔，其中包含[!INCLUDE[tsql](../../includes/tsql-md.md)]語句、 `sqlcmd`命令和腳本變數的混合。 如需如何編寫指令碼變數的詳細資訊，請參閱 [以指令碼變數使用 sqlcmd](sqlcmd-use-with-scripting-variables.md)。 
+  `sqlcmd` 在指令碼檔案中使用陳述式、命令及指令碼變數的方式，與它使用互動方式輸入陳述式及命令的方式類似。 主要的差別在於 `sqlcmd` 會讀取整個輸入檔而不暫停，而不是等待使用者輸入陳述式、命令及指令碼變數。  
   
  建立資料庫指令碼檔案有許多不同的方式：  
   
@@ -250,7 +257,7 @@ ms.locfileid: "70155360"
   
  `(3 rows affected)`  
   
-### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>b. 透過專用管理連接使用 sqlcmd  
+### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>B. 透過專用管理連接使用 sqlcmd  
  在下列範例中，使用 `sqlcmd` 透過專用管理員連接 (DAC) 連接到發生封鎖問題的伺服器。  
   
  `C:\>sqlcmd -S ServerName -A`  
@@ -310,7 +317,7 @@ ms.locfileid: "70155360"
   
  `SET NOCOUNT OFF`  
   
- 在 `sqlcmd` 提示字元中，輸入下列命令：  
+ 在 `sqlcmd` 提示中輸入下列內容：  
   
  `C:\sqlcmd`  
   
@@ -335,7 +342,7 @@ ms.locfileid: "70155360"
   
  `BACKUP DATABASE [$(db)] TO DISK='$(bakfile)';`  
   
- 在 `sqlcmd` 提示字元中，輸入下列命令：  
+ 在 `sqlcmd` 提示中輸入下列內容：  
   
  `C:\ >sqlcmd`  
   
@@ -390,7 +397,8 @@ ms.locfileid: "70155360"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. 在 Windows 指令碼檔案中使用 sqlcmd  
- `sqlcmd`命令（例如 `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,`）可以在 .bat 檔案中與 VBScript 一起執行。 在這種情況下，請不要使用互動式選項。 `sqlcmd` 必須安裝在執行 .bat 檔案的電腦上。  
+ 之類`sqlcmd`的命令`sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,`可以在 .Bat 檔案中與 VBScript 一起執行。 在這種情況下，請不要使用互動式選項。 
+  `sqlcmd` 必須安裝在執行 .bat 檔案的電腦上。  
   
  首先，建立下列四個檔案：  
   
@@ -480,13 +488,14 @@ ms.locfileid: "70155360"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. 使用 sqlcmd 設定 Azure SQL Database 的加密  
- `sqlcmd`可以在連接上執行，以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上的資料，以指定加密和憑證信任。 有兩個 ' sqlcmd ' ' 選項可用：  
+ `sqlcmd`可以在上與[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料的連接上執行，以指定加密和憑證信任。 有兩個 ' sqlcmd ' ' 選項可用：  
   
 -   -N 參數是由用戶端用來要求加密的連接。 這個選項相當於 ADO.net 選項 `ENCRYPT = true`。  
   
 -   -C 參數是由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.net 選項 `TRUSTSERVERCERTIFICATE = true`。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服務不支援 SQL Server 執行個體上的所有可用 `SET` 選項。 當對應的 `SET` 選項設定為 `ON` 或 `OFF`時，下列選項會擲回錯誤：  
+ 
+  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服務不支援 SQL Server 執行個體上的所有可用 `SET` 選項。 當對應的 `SET` 選項設定為 `ON` 或 `OFF`時，下列選項會擲回錯誤：  
   
 -   SET ANSI_DEFAULTS  
   
@@ -562,8 +571,8 @@ SQLCMD -E -N -C
   
 ## <a name="see-also"></a>另請參閱  
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
- [以指令碼變數使用 sqlcmd](sqlcmd-use-with-scripting-variables.md)   
- [使用查詢編輯器編輯 SQLCMD 指令碼](edit-sqlcmd-scripts-with-query-editor.md)   
+ [搭配腳本變數使用 sqlcmd](sqlcmd-use-with-scripting-variables.md)   
+ [使用查詢編輯器編輯 SQLCMD 腳本](edit-sqlcmd-scripts-with-query-editor.md)   
  [管理作業步驟](../../ssms/agent/manage-job-steps.md)   
  [建立 CmdExec 作業步驟](../../ssms/agent/create-a-cmdexec-job-step.md)  
   

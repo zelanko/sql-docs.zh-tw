@@ -1,6 +1,5 @@
 ---
-title: 其他註解 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 其他批註（SQLXML）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ helpviewer_keywords:
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a965ee5772ea3c2855a08d838c1d89da343e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066866"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246826"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>註解解譯 - 其他註解
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68066866"
  XML 大量載入不支援此註釋。 例如，您不能在 XML 資料輸入中指定 URL，然後預期 XML 大量載入會從該位置讀取資料，將它儲存在資料庫中。  
   
  **sql:is-mapping-schema**  
- XML 大量載入不支援此註解，也不支援**sql: id-prefix**。  
+ XML 大量載入不支援此注釋，也不支援**sql： id**。  
   
 > [!NOTE]  
 >  XML 大量載入不支援內嵌對應結構描述。  
@@ -52,6 +52,6 @@ ms.locfileid: "68066866"
  XML 大量載入一定會忽略此註解。  
   
 ## <a name="see-also"></a>另請參閱  
- [註解解譯&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的注釋轉譯](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

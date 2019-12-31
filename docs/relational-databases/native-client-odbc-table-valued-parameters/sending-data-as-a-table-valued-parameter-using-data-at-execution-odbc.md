@@ -1,5 +1,5 @@
 ---
-title: 使用資料執行中（ODBC）以資料表值參數的形式傳送資料 |Microsoft Docs
+title: 資料表值參數，資料執行中（ODBC）
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa7998cf156adc94f13f22887a595408144fad8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73775910"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246367"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   這類似于「[全部在記憶體中](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)」程式，但會針對資料表值參數使用「資料執行中」。  
   
- 如需示範資料表值參數的另一個範例，請參閱[使用資料表&#40;值&#41;參數 ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
+ 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
  在此範例中，當呼叫 SQLExecute 或 SQLExecDirect 時，驅動程式會傳回 SQL_NEED_DATA。 然後，應用程式會重複呼叫 SQLParamData，直到驅動程式傳回 SQL_NEED_DATA 以外的值。 驅動程式會傳回*ParameterValuePtr* ，以通知應用程式要求其資料的參數。 在下一次呼叫 SQLParamData 之前，應用程式會呼叫 SQLPutData 來提供參數資料。 對於資料表值參數，SQLPutData 的呼叫會指出它為驅動程式準備的資料列數目（在此範例中，一律為1）。 當資料表值的所有資料列都已傳遞至驅動程式時，會呼叫 SQLPutData，表示有0個數據列可供使用。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73775910"
 ## <a name="prerequisite"></a>必要條件  
  此程序假設已在伺服器上執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -53,7 +53,7 @@ from @Items
   
 1.  宣告 SQL 參數的變數。 在此範例中，資料表值參數的緩衝區不必是陣列；範例會一次傳遞一個資料列。  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
   
     // Variables for SQL parameters:  
@@ -72,7 +72,7 @@ from @Items
   
 2.  繫結參數。 *ColumnSize*是1，表示一次最多會傳遞一個資料列。  
   
-    ```  
+    ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   
@@ -99,7 +99,7 @@ from @Items
   
 3.  繫結資料表值參數的資料行。  
   
-    ```  
+    ```cpp
     // Bind the table-valued parameter columns.  
     // First set focus on param 2  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -117,7 +117,7 @@ from @Items
   
 4.  初始化參數。 此範例會將資料表值參數的大小設定為 SQL_DATA_AT_EXEC，而不是資料列計數。  
   
-    ```  
+    ```cpp
     // Initialze the TVP for row streaming.  
     cbTVP = SQL_DATA_AT_EXEC;  
   
@@ -127,14 +127,14 @@ from @Items
   
 5.  呼叫程序。 SQLExecDirect 會傳回 SQL_NEED_DATA，因為資料表值參數是資料執行中的參數。  
   
-    ```  
+    ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
 6.  提供資料執行中參數資料。 當 SQLParamData 傳回資料表值參數的*ParameterValuePtr*時，應用程式必須為數據表值的下一個資料列或資料列準備資料行。 然後，應用程式會呼叫 SQLPutData，並將*DataPtr*設為可用的資料列數目（在此範例中為1）， *StrLen_or_IndPtr*設定為0。  
   
-    ```  
+    ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
     if (r == SQL_NEED_DATA) {  
         r = SQLParamData(hstmt, &ParamId);  
@@ -186,14 +186,14 @@ from @Items
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  這個範例會示範您可以使用 ODBC TVP，針對每個呼叫 SQLPutData 的資料列串流（一個資料列），類似于您可能會使用 BCP 載入資料庫的方式。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   
  此範例會使用預設資料庫。 在執行此範例之前，請在您將要使用的資料庫中執行以下命令：  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -214,9 +214,9 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>程式碼  
+### <a name="code"></a>代碼  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -374,14 +374,14 @@ EXIT:
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  這個範例會示範您可以使用 ODBC TVP，每次呼叫 SQLPutData 時，使用資料列串流、多個資料列，類似于您可以如何使用 BCP 將資料載入資料庫中。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   
  此範例會使用預設資料庫。 在執行此範例之前，請在您將要使用的資料庫中執行以下命令：  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -402,9 +402,9 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>程式碼  
+### <a name="code"></a>代碼  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  

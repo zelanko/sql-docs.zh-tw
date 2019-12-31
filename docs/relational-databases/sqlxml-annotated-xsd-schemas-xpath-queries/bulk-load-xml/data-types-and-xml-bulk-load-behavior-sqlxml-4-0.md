@@ -1,6 +1,5 @@
 ---
-title: 資料型別和 XML 大量載入行為 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 資料類型與 XML 大量載入行為（SQLXML）
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,32 +13,33 @@ helpviewer_keywords:
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 820d2b083544542d1c1414f978105fe992b0ce36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33619d0d3e1ec5d6684e3dc300317b1cc3666e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915154"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246725"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>資料類型與 XML 大量載入行為 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  指定對應結構描述中的資料類型 (XSD 或 XDR 類型和**sql: datatype**) 通常會遭到忽略，下列情況除外：  
+  通常會忽略對應架構（XSD 或 XDR 類型和**sql： datatype**）中指定的資料類型，但下列情況除外：  
   
  在 XSD 中：  
   
--   如果類型是**dateTime**或是**時間**，您必須指定**sql: datatype**因為 XML 大量載入會執行資料轉換，再將資料傳送給 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   如果類型是**dateTime**或**time**，您必須指定**SQL： Datatype** ，因為 XML 大量載入會先執行資料轉換，然後再將資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]傳送給 Microsoft。  
   
--   當您大量載入的資料行**uniqueidentifier**中輸入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而且 XSD 值是 GUID，其中包含大括號 （{和}），您必須指定**sql: datatype ="uniqueidentifier"** 至值插入資料行之前，請移除大括號。 如果**sql: datatype**未指定，則傳送值以大括弧和插入會失敗。  
+-   當您在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]將大量載入到**uniqueidentifier**類型的資料行，而且 XSD 值是包含大括弧（{和}）的 GUID 時，您必須指定**sql： datatype = "uniqueidentifier"** ，以在將值插入資料行之前移除大括弧。 如果未指定**sql： datatype** ，則會以大括弧傳送值，而插入作業會失敗。  
   
- 如需詳細資訊**sql: datatype**，請參閱[資料類型強制型轉和 sql: datatype 註解&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
+ 如需**sql： datatype**的詳細資訊，請參閱[資料類型強制型轉和 Sql： DATATYPE 注釋 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
   
  在 XDR 中：  
   
--   如果**dt: type**是**datetime**，**時間**， **dateTime.tz**，或**time.tz**，您必須同時指定**dt: type**並**sql: datatype**資料類型，因為它傳送至資料之前，XML 大量載入會執行資料轉換[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   如果**dt： type**是**datetime**、 **time**、 **dateTime.tz**或**time.tz**，您必須同時指定**DT： Type**和**sql： datatype**資料類型，因為 XML 大量載入會先執行資料轉換，然後再將資料傳送[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]至。  
   
--   如果 XML 資料型別的**uuid**， **sql: datatype**必須指定;**dt: type ="uuid"** 也是必要項，除非資料是字串資料。 如果您未指定**dt:uuid**，XML 大量載入會接受字串以大括弧 （並移除它們，如有需要）。  
+-   如果您的 XML 資料類型為**uuid**，則必須指定**sql： datatype** ;**dt： type = "uuid"** 也是必要的，除非資料是字串資料。 如果您未指定**dt： uuid**，XML 大量載入會接受具有大括弧的字串（並在必要時移除它們）。  
   
--   如果 XML 資料**bin.hex、bin.base64**或是**bin.hex**，您必須指定使用的 XML 資料類型**dt: type**。 接著，XML 大量載入會將資料載入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，做為資料的十六進位表示法。  
+-   如果 XML 資料為**bin**或 **. hex**，則您必須指定具有**dt： type**的 xml 資料類型。 接著，XML 大量載入會將資料載入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，做為資料的十六進位表示法。  
   
   

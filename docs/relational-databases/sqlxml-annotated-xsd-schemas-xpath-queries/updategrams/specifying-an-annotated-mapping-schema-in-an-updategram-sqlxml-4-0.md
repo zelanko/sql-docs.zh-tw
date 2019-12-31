@@ -1,6 +1,5 @@
 ---
-title: 指定在 Updategram (SQLXML 4.0) 中的註解式的對應結構描述 |Microsoft Docs
-ms.custom: ''
+title: Updategram 的批註對應架構（SQLXML）
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,35 +19,36 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f75d127b6b8bd723a4d39a5e0610884010e4106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018498"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243571"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 Updategram 中指定註解式對應結構描述 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本主題說明 Updategram 中指定的對應結構描述 (XSD 或 XDR) 要如何用來處理更新。 在 updategram 中，您可以提供要用於資料表和資料行中的對應的元素和屬性在 updategram 中的註解式的對應結構描述的名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定對應結構描述時，此 updategram 中指定的元素和屬性名稱必須對應到對應結構描述內的元素和屬性。  
+  本主題說明 Updategram 中指定的對應結構描述 (XSD 或 XDR) 要如何用來處理更新。 在 updategram 中，您可以提供批註對應架構的名稱，以用於將 updategram 中的元素和屬性對應至中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的資料表和資料行。 在 updategram 中指定對應結構描述時，此 updategram 中指定的元素和屬性名稱必須對應到對應結構描述內的元素和屬性。  
   
- 若要指定對應結構描述，您使用 **對應結構描述** 屬性 **\<同步 >** 項目。 下列範例會示範兩個 updategram：使用簡單對應結構描述的 updategram 以及使用更複雜之結構描述的 updategram。  
+ 若要指定對應架構，您可以使用** \<sync>** 元素的**mapping 架構**屬性。 下列範例會示範兩個 updategram：使用簡單對應結構描述的 updategram 以及使用更複雜之結構描述的 updategram。  
   
 > [!NOTE]  
->  本文件集假設您非常熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的範本和對應結構描述支援。 如需詳細資訊，請參閱 <<c0> [ 註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。</c0> 如需使用 XDR 的舊版應用程式，請參閱 < [Annotated XDR Schemas&#40;在 SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  本文件集假設您非常熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的範本和對應結構描述支援。 如需詳細資訊，請參閱[批註式 XSD 架構簡介 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 如需使用 XDR 的繼承應用程式，請參閱[SQLXML 4.0&#41;中 &#40;已被取代的批註式 XDR 架構](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="dealing-with-data-types"></a>處理資料類型  
- 如果指定了結構描述**映像**，**二進位**，或**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型 (使用**sql: datatype**) 並不是指定 XML 資料類型，此 updategram 會假設 XML 資料類型是**二進位的 base 64**。 如果您的資料**bin.base**類型，您必須明確指定類型 (**dt:type=bin.base**或是**類型 ="xsd: hexbinary"** )。  
+ 如果架構指定**image**、 **binary**或**Varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型（藉由使用**sql： datatype**），而且未指定 xml 資料類型，則 updategram 會假設 xml 資料類型為**二進位基底 64**。 如果您的資料為 [ **bin. 基底**類型]，則必須明確指定類型（**dt： type = bin. base**或**Type = "xsd： hexBinary"**）。  
   
- 如果指定了結構描述**dateTime**，**日期**，或**時間**XSD 資料類型，您也必須指定對應[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所使用的資料型別**sql: datatype ="dateTime"** 。  
+ 如果架構指定**dateTime**、 **date**或**time** XSD 資料類型，您也必須使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sql： datatype = "dateTime"** 來指定對應的資料類型。  
   
- 當處理的參數[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **money**型別，您必須明確指定**sql: datatype ="money"** 對應結構描述中的適當節點上。  
+ 處理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **money**類型的參數時，您必須在對應架構中的適當節點上明確指定**sql： datatype = "money"** 。  
   
 ## <a name="examples"></a>範例  
- 若要建立使用下列範例的實用範例，您必須符合指定的需求[如需執行 SQLXML 範例的需求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合[執行 SQLXML 範例的需求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)中所指定的需求。  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. 使用簡單對應結構描述建立 updategram  
- 下列 XSD 結構描述 (SampleSchema.xml) 是對應的對應結構描述 **\<客戶>** 到 Sales.Customer 資料表的項目：  
+ 下列 XSD 架構（sampleschema.xml）是對應的架構，可將** \<Customer>** 元素對應至 Sales. Customer 資料表：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -66,7 +66,7 @@ ms.locfileid: "68018498"
 </xsd:schema>  
 ```  
   
- 下列 updategram 會將一筆記錄插入 Sales.Customer 資料表，並依賴之前的對應結構描述，適當地將此資料對應至資料表。 請注意，updategram 會使用相同的項目名稱， **\<客戶>** ，如結構描述中定義。 這是強制性的作法，因為 updategram 會指定特定的結構描述。  
+ 下列 updategram 會將一筆記錄插入 Sales.Customer 資料表，並依賴之前的對應結構描述，適當地將此資料對應至資料表。 請注意，updategram 會使用與架構中所定義相同的元素名稱** \<Customer>**。 這是強制性的作法，因為 updategram 會指定特定的結構描述。  
   
 ##### <a name="to-test-the-updategram"></a>若要測試 Updategram  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68018498"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  這是相等的 XDR 結構描述：  
   
@@ -115,9 +115,9 @@ ms.locfileid: "68018498"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用對應結構描述內指定的父子式關聯性插入記錄  
- 結構描述元素可以產生關聯。 **\<Sql: relationship >** 項目會指定結構描述項目之間的父子式關聯性。 這項資訊是用來更新具有主索引鍵與外部索引鍵關聯性的對應資料表。  
+ 結構描述元素可以產生關聯。 Sql： relationship>元素會指定架構元素之間的父子式關聯性。 ** \< ** 這項資訊是用來更新具有主索引鍵與外部索引鍵關聯性的對應資料表。  
   
- 下列對應結構描述 (SampleSchema.xml) 包含兩個元素， **\<順序>** 並 **\<OD>** :  
+ 下列對應架構（sampleschema.xml）是由兩個元素、 ** \<Order>** 和** \<OD>** 所組成：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -156,7 +156,7 @@ ms.locfileid: "68018498"
 </xsd:schema>  
 ```  
   
- 下列 updategram 會使用這個 XSD 結構描述來新增新的訂單詳細資料記錄 ( **\<OD >** 中的項目 **\<之後 >** 區塊) 針對訂單 43860。 **對應結構描述**屬性用來在 updategram 中指定對應結構描述。  
+ 下列 updategram 會使用這個 XSD 架構，為訂單43860加入新的訂單詳細資料記錄（ ** \<after>** 區塊中的** \<OD>** 元素）。 **對應**架構屬性是用來指定 updategram 中的對應架構。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -188,7 +188,7 @@ ms.locfileid: "68018498"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  這是相等的 XDR 結構描述：  
   
@@ -232,13 +232,15 @@ ms.locfileid: "68018498"
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. 使用 XSD 結構描述內指定的父子式關聯性和反向註解來插入記錄  
- 此範例說明如何 updategram 邏輯會使用 XSD 中指定的父子式關聯性來處理更新，以及如何**反向**註解用。 如需詳細資訊**反向**註解，請參閱[sql: relationship 指定 sql: inverse 屬性&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
+ 這個範例說明 updategram 邏輯如何使用 XSD 中指定的父子式關聯性來處理更新，以及如何使用**反向**批註。 如需**反向**注釋的詳細資訊，請參閱[在 sql： relationship 上指定 Sql：反向屬性 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
- 這個範例假設下列資料表位於**tempdb**資料庫：  
+ 這個範例假設下列資料表是在**tempdb**資料庫中：  
   
--   `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 是主索引鍵  
+-   
+  `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 是主索引鍵  
   
--   `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是參考 `CustomerID` 資料表內之 `Cust` 主索引鍵的外部索引鍵。  
+-   
+  `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是參考 `CustomerID` 資料表內之 `Cust` 主索引鍵的外部索引鍵。  
   
  updategram 會使用以下 XSD 結構描述，將記錄插入 Cust 和 Ord 資料表中：  
   
@@ -275,11 +277,11 @@ ms.locfileid: "68018498"
 </xsd:schema>  
 ```  
   
- 在此範例中，XSD 結構描述具有 **\<客戶>** 並 **\<順序>** 項目，而且它會指定兩個項目之間的父子式關聯性。 它會識別 **\<順序>** 父項目並 **\<客戶>** 作為子項目。  
+ 這個範例中的 XSD 架構有** \<Customer>** 和** \<Order>** 元素，而且它會指定兩個元素之間的父子式關聯性。 它會將** \<Order>** 識別為父項目，而** \<Customer>** 做為子專案。  
   
- 此 updategram 處理邏輯會使用有關父子式關聯性的資訊來判斷哪些記錄會插入資料表中。 在此範例中，updategram 邏輯會先嘗試將記錄插入 Ord 資料表 (因為 **\<順序>** 父系)，然後嘗試將記錄插入 Cust 資料表 (因為 **\<客戶>** 是子系)。 但是，由於包含在資料庫資料表結構描述內之主索引鍵/外部索引鍵資訊的緣故，這項插入作業會造成資料庫中的外部索引鍵違規，而使得插入失敗。  
+ 此 updategram 處理邏輯會使用有關父子式關聯性的資訊來判斷哪些記錄會插入資料表中。 在此範例中，updategram 邏輯會先嘗試將記錄插入至 Ord 資料表（因為** \<Order>** 是父系），然後嘗試將記錄插入至「客戶」資料表（因為** \<Customer>** 是子系）。 但是，由於包含在資料庫資料表結構描述內之主索引鍵/外部索引鍵資訊的緣故，這項插入作業會造成資料庫中的外部索引鍵違規，而使得插入失敗。  
   
- 若要指示 updategram 邏輯在更新作業期間反轉父子式關聯性 **反向** 上指定註釋 **\<關聯性 >** 項目。 因此，記錄會先加入到 Cust 資料表，然後再加入到 Ord 資料表，作業就會成功。  
+ 為了指示 updategram 邏輯在更新作業期間反轉父子式關聯性，會在** \<關聯性>** 專案上指定**反向**批註。 因此，記錄會先加入到 Cust 資料表，然後再加入到 Ord 資料表，作業就會成功。  
   
  下列 updategram 會使用指定的 XSD 結構描述，將訂單 (OrderID=2) 插入到 Ord 資料表，並將客戶 (CustomerID='AAAAA') 插入到 Cust 資料表：  
   
@@ -298,7 +300,7 @@ ms.locfileid: "68018498"
   
 ##### <a name="to-test-the-updategram"></a>若要測試 Updategram  
   
-1.  建立這些資料表中的**tempdb**資料庫：  
+1.  在**tempdb**資料庫中建立這些資料表：  
   
     ```  
     USE tempdb  
@@ -322,9 +324,9 @@ ms.locfileid: "68018498"
   
 4.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱[使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Updategram 安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;的 Updategram 安全性考慮](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

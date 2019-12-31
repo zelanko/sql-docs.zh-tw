@@ -1,6 +1,5 @@
 ---
-title: 註解解譯 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 注釋轉譯（SQLXML）
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,35 +15,36 @@ helpviewer_keywords:
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80db781d32c8d48f9df48c27baa1807eef5a9f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dc5842487c0740386d97f3ec187dff144520a74
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054395"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246752"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>註解的解譯 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本章節的主題描述 XML 大量載入要如何解譯 XSD 結構描述中的註解。 這裡所述的行為也適用於 XDR 結構描述中的註解。  
   
 > [!NOTE]  
->  這些主題的資訊只會描述 XML 大量載入在處理時所使用的註解。 SQLXML 4.0 支援之 XSD 結構描述註解的完整清單，請參閱 <<c0> [ 使用的註解 XSD 結構描述中&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)。</c0> 如需支援的註解 XDR 結構描述的清單，請參閱 < [Annotated XDR Schemas&#40;在 SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
+>  這些主題的資訊只會描述 XML 大量載入在處理時所使用的註解。 如需 SQLXML 4.0 支援之 XSD 架構的批註完整清單，請參閱[在 Xsd 架構中使用批註 &#40;sqlxml 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)。 如需 XDR 架構支援的注釋清單，請參閱[SQLXML 4.0&#41;中 &#40;已被取代的批註式 XDR 架構](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [sql: relationship 和關鍵識別碼順序規則&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
- 描述如何**sql: relationship**註釋會在 XML 大量載入內解譯。  
+ [sql：關聯性和索引鍵排序規則 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
+ 描述如何在 XML 大量載入中解讀**sql： relationship**注釋。  
   
- [sql： 對應&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md)  
- 描述如何**sql： 對應**註釋會在 XML 大量載入內解譯。  
+ [sql：對應 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md)  
+ 描述如何在 XML 大量載入中解讀**sql：對應**注釋。  
   
- [sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
- 描述如何**sql: limit-value-欄位**並**sql: limit-value-值**註釋會在 XML 大量載入內解譯。  
+ [sql： limit-field 和 sql： limit-value &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
+ 描述如何在 XML 大量載入中解讀**sql： limit 欄位**和**sql： limit 值**注釋。  
   
- [sql: overflow-field-欄位&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
- 描述如何**sql: overflow-field**註釋會在 XML 大量載入內解譯。  
+ [sql：溢位欄位 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
+ 描述如何在 XML 大量載入中解讀**sql：溢**位注釋。  
   
- [其他註解&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md)  
- 描述如何在 XML 大量載入內解譯下列註解： **sql: id-prefix-前置詞**， **sql: use-cdata-cdata**， **sql: url-encode-編碼**， **sql:為對應結構描述**， **sql: key-fields 來-欄位**。  
+ [&#40;SQLXML 4.0&#41;的其他批註](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md)  
+ 描述如何在 XML 大量載入中解讀下列批註： **sql： id-prefix**、 **sql： use-cdata**、 **sql： url 編碼**、 **sql： is-mapping-架構**、 **sql：索引鍵-欄位**。  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 逐步執行 Transact-SQL 程式碼 | Microsoft Docs
-ms.custom: ''
+title: 逐步執行 Transact-SQL 程式碼
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,14 +15,15 @@ ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e79a92bc1756003341cbb9e0581ade42a2bcee8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090013"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243161"
 ---
 # <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可讓您控制哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式要在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中執行。 您可以在個別的陳述式上暫停偵錯工具，然後在該點檢視程式碼項目的狀態。  
   
 ## <a name="breakpoints"></a>中斷點  
@@ -51,13 +52,13 @@ ms.locfileid: "66090013"
   
 |動作|程序|  
 |------------|---------------|  
-|執行所有陳述式，從目前的陳述式到下一個端點|在 **偵錯**功能表上，按一下**繼續**。<br /><br /> 在 [**偵錯**工具列上，按一下**繼續**] 按鈕。|  
-|逐步執行下一個陳述式或模組|在 **偵錯**功能表上，按一下**逐步執行**。<br /><br /> 在 [**偵錯**工具列上，按一下**逐步執行**] 按鈕。<br /><br /> 按下 F11。|  
-|不進入下一個陳述式或模組|在 **偵錯**功能表上，按一下**不進入函式**。<br /><br /> 在 [**偵錯**工具列上，按一下**不進入函式**] 按鈕。<br /><br /> 按下 F10。|  
-|跳離模組|在 **偵錯**功能表上，按一下**跳離函式**。<br /><br /> 在 [**偵錯**工具列上，按一下**跳離函式**] 按鈕。<br /><br /> 按下 SHIFT+F11。|  
-|執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]  。<br /><br /> 按下 CTRL+F10。|  
+|執行所有陳述式，從目前的陳述式到下一個端點|在 [**調試**] 功能表上，按一下 [**繼續**]。<br /><br /> 在 [**調試**] 工具列上，按一下 [**繼續**] 按鈕。|  
+|逐步執行下一個陳述式或模組|在 [**調試**] 功能表上，按一下 [**逐步**執行]。<br /><br /> 在 [**調試**] 工具列上，按一下 [**逐步**執行] 按鈕。<br /><br /> 按下 F11。|  
+|不進入下一個陳述式或模組|在 [**調試**] 功能表上 **，按一下 [** 不進入]。<br /><br /> 在 [**調試**] 工具列上，按一下 [**跳過**] 按鈕。<br /><br /> 按下 F10。|  
+|跳離模組|在 [**調試**] 功能表上，按一下 [**跳出**]。<br /><br /> 在 [**調試**] 工具列上，按一下 [**跳出**] 按鈕。<br /><br /> 按下 SHIFT+F11。|  
+|執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]****。<br /><br /> 按下 CTRL+F10。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Transact-SQL 偵錯工具資訊](transact-sql-debugger-information.md)  
+ [Transact-sql 偵錯工具資訊](transact-sql-debugger-information.md)  
   
   

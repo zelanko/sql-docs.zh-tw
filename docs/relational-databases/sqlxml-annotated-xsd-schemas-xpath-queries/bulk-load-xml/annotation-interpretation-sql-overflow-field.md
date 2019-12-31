@@ -1,6 +1,5 @@
 ---
-title: 'sql: overflow-field-欄位 (SQLXML 4.0) |Microsoft Docs'
-ms.custom: ''
+title: sql：溢位欄位（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +14,24 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c80f2374b9d7cbbbe00b1b3cfe8202e382bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902225"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246806"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>註解解譯 - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  在結構描述中，您可以將資料行識別為溢位資料行，以便從 XML 文件中接收所有未耗用的資料。 使用結構描述中指定這個資料行**sql: overflow-field-欄位**註釋。 具有多個溢位資料行是可行的。  
+  在結構描述中，您可以將資料行識別為溢位資料行，以便從 XML 文件中接收所有未耗用的資料。 此資料行是使用**sql：溢位欄位**注釋，在架構中指定。 具有多個溢位資料行是可行的。  
   
- 每當有 XML 節點 （元素或屬性） **sql: overflow-field-欄位**進入範圍時所定義的註解、 溢位資料行就會啟動，並接收未耗用的資料。 當此節點離開範圍時，此溢位資料行就不再處於使用中狀態，而且 XML 大量載入會讓之前的溢位欄位 (如果有的話) 變成使用中。  
+ 每當定義了**sql：溢位欄位**注釋的 XML 節點（元素或屬性）進入範圍時，就會啟動溢位資料行並接收未耗用的資料。 當此節點離開範圍時，此溢位資料行就不再處於使用中狀態，而且 XML 大量載入會讓之前的溢位欄位 (如果有的話) 變成使用中。  
   
- 因為它將資料儲存在溢位資料行，XML 大量載入也會儲存的開頭和結尾標記的父項目， **sql: overflow-field-欄位**定義。  
+ 當它將資料儲存在溢位資料行時，XML 大量載入也會儲存父元素的開頭和結束記號，其中定義了**sql：溢位欄位**。  
   
- 例如，下列結構描述會描述 **\<客戶 >** 並 **\<CustOrder >** 項目。 每一個元素都可識別溢位資料行：  
+ 例如，下列架構會描述** \<客戶>** 和** \<CustOrder>** 元素。 每一個元素都可識別溢位資料行：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +75,9 @@ ms.locfileid: "67902225"
 </xsd:schema>  
 ```  
   
- 在結構描述中， **\<客戶 >** 元素會對應到 Cust 資料表和 **\<順序 >** 元素會對應到 CustOrder 資料表。  
+ 在此架構中， ** \<Customer>** 專案會對應到「客戶」資料表，而** \<Order>** 元素則會對應至 CustOrder 資料表。  
   
- 這兩個 **\<客戶 >** 並 **\<順序 >** 項目會識別為溢位資料行。 因此，XML 大量載入會將儲存所有未耗用的子元素和屬性 **\<客戶 >** Cust 資料表的溢位資料行中的項目及所有未耗用的子元素和屬性的 **\<順序 >** CustOrder 資料表的溢位資料行中的項目。  
+ Customer>和** \<Order>** 元素都會識別溢位資料行。 ** \< ** 因此，XML 大量載入會將** \<>Customer**的所有未耗用的子項目和屬性儲存在 CustOrder 資料表的溢** \<位**資料行中，而且 Order>元素的所有未耗用子項目和屬性。  
   
 ### <a name="to-test-a-working-sample"></a>測試工作範例  
   

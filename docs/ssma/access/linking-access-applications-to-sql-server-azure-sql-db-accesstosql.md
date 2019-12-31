@@ -23,32 +23,32 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 3bdd11580e1a7e57b72d2d8fe0ce5f54299555db
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632690"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245921"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>將存取應用程式連結至 SQL Server-Azure SQL DB （AccessToSQL）
-如果您想要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用現有的 Access 應用程式，可以將原始的 Access 資料表連結到遷移的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表。 連結會修改您的 Access 資料庫，讓您的查詢、表單、報表和資料存取頁面使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料庫中的資料，而非 Access 資料庫中的資料。  
+如果您想要搭配使用現有的 Access 應用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式與，可以將原始的 access 資料表連結到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遷移或 SQL Azure 資料表。 連結會修改您的 Access 資料庫，讓您的查詢、表單、報表和資料存取頁面使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫中的資料，而非 Access 資料庫中的資料。  
   
 > [!NOTE]  
-> 您的存取資料表仍可繼續存取，但不會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 更新一起更新。 連結資料表並確認功能之後，您可能會想要刪除存取資料表。  
+> 您的存取資料表仍可繼續存取，但不會隨[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 更新一起更新。 連結資料表並確認功能之後，您可能會想要刪除存取資料表。  
   
 ## <a name="linking-access-and-sql-server-tables"></a>連結存取和 SQL Server 資料表  
-當您將 Access 資料表連結至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表時，Jet 資料庫引擎會儲存連接資訊和資料表中繼資料，但資料會儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中。 雖然實際的資料表和資料位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中，但此連結可讓您的存取應用程式對存取資料表進行操作。  
+當您將 Access 資料表連結到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 sql azure 資料表時，Jet 資料庫引擎會儲存連接資訊和資料表中繼資料，但資料會儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 sql azure 中。 雖然實際的資料表和資料位於或 SQL Azure 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，但此連結可讓您的存取應用程式對存取資料表進行操作。  
   
 > [!NOTE]  
-> 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，您的密碼會以純文字的方式儲存在連結的存取資料表上。 我們建議使用 Windows 驗證。  
+> 如果您使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，您的密碼會以純文字的方式儲存在連結的存取資料表上。 我們建議使用 Windows 驗證。  
   
 **若要連結資料表**  
   
 1.  在 [存取中繼資料 Explorer] 中，選取您想要連結的資料表。  
   
-2.  以滑鼠右鍵按一下 [**資料表]** ，然後選取 [**連結**]。  
+2.  以滑鼠右鍵按一下 [**資料表]**，然後選取 [**連結**]。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手（SSMA） for Access 會備份原始 Access 資料表並建立連結資料表。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移轉小幫手（SSMA） for Access 會備份原始存取資料表，並建立連結資料表。  
   
 連結資料表之後，SSMA 中的資料表會顯示一個小的連結圖示。 在 [存取] 中，資料表會顯示「已連結」圖示，這是一個有箭號的地球。  
   
@@ -56,16 +56,16 @@ ms.locfileid: "73632690"
   
 > [!IMPORTANT]  
 > 若要連結具有 Azure 資料庫的存取資料表，您需要 SQL Server Native Client （SNAC）10.5 版或更新版本。   
-> 您可以從[Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=16978)取得最新版本的 SNAC。  
+> 您可以從[Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)取得最新版本的 SNAC。  
   
 ## <a name="unlinking-access-tables"></a>取消連結 Access 資料表  
-當您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表取消連結存取資料表時，SSMA 會還原原始的 Access 資料表和其資料。  
+當您從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表取消存取資料表的連結時，SSMA 會還原原始的 access 資料表和其資料。  
   
 **若要取消連結資料表**  
   
 1.  在 [存取中繼資料 Explorer] 中，選取您要取消連結的資料表。  
   
-2.  以滑鼠右鍵按一下 [**資料表]** ，然後選取 [**取消連結**]。  
+2.  以滑鼠右鍵按一下 [**資料表]**，然後選取 [**取消連結**]。  
   
 ## <a name="linking-tables-to-a-different-server"></a>將資料表連結至不同的伺服器  
 如果您已將 Access 資料表連結至一個 SQL Server 實例，而您稍後想要變更另一個實例的連結，則必須重新連結資料表。  
@@ -78,32 +78,32 @@ ms.locfileid: "73632690"
   
 3.  按一下 [**重新連線以 SQL Server** ] 按鈕。  
   
-4.  連接到您要連結存取資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 實例。  
+4.  連接到您要連結[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存取資料表的實例或 SQL Azure。  
   
 5.  在 [存取中繼資料 Explorer] 中，選取您想要連結的資料表。  
   
-6.  以滑鼠右鍵按一下 [**資料表]** ，然後選取 [**連結**]。  
+6.  以滑鼠右鍵按一下 [**資料表]**，然後選取 [**連結**]。  
   
 ## <a name="updating-linked-tables"></a>更新連結資料表  
-如果變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表定義，您可以使用本主題前面所示的程式，取消連結 SSMA 中的資料表，然後再將其重新連結。 您也可以使用 [存取] 來更新資料表。  
+如果變更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表定義，您可以使用本主題前面所示的程式，取消連結 SSMA 中的資料表，然後再將其重新連結。 您也可以使用 [存取] 來更新資料表。  
   
 **若要使用存取權更新連結資料表**  
   
 1.  開啟 Access 資料庫。  
   
-2.  在 [**物件**] 清單中，按一下 [**資料表]** 。  
+2.  在 [**物件**] 清單中，按一下 [**資料表]**。  
   
 3.  以滑鼠右鍵按一下連結資料表，然後選取 [**連結資料表管理員**]。  
   
-4.  選取您要更新之每個連結資料表旁的核取方塊，然後按一下 **[確定]** 。  
+4.  選取您要更新之每個連結資料表旁的核取方塊，然後按一下 **[確定]**。  
   
 ## <a name="possible-post-migration-issues"></a>可能的後續遷移問題  
-下列各節列出在您將資料庫從存取權遷移至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 之後，現有存取應用程式可能發生的問題，然後連結資料表以及原因和解決方式。  
+下列各節列出在您將資料庫從存取權遷移至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 之後，現有存取應用程式中可能發生的問題，然後連結資料表以及原因和解決方式。  
   
 ### <a name="slow-performance-with-linked-tables"></a>連結資料表的效能變慢  
 **原因：** 基於下列原因，某些查詢可能會在轉換後緩慢：  
   
--   應用程式相依于不存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中的函式，這會導致 Jet 在本機提取資料表以執行 SELECT 查詢。  
+-   應用程式相依于不存在於或 SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的函式，這會導致 Jet 在本機提取資料表以執行 SELECT 查詢。  
   
 -   Jet 會傳送更新或刪除許多資料列的查詢，做為每個資料列的參數化查詢。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "73632690"
 -   有些查詢需要使用者輸入，但傳遞查詢不支援使用者輸入。 使用者輸入可以由提示輸入參數的 Visual Basic for Applications （VBA）程式碼，或以當做輸入控制項使用的表單來取得。 在這兩種情況下，VBA 程式碼都會以使用者的輸入將查詢提交至伺服器。  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>自動遞增資料行在記錄更新之前不會更新  
-**原因：** 通話記錄集之後，在 Jet 中進行 AddNew，在更新記錄之前，可以使用 [自動遞增] 資料行。 這在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中都是如此。 只有在儲存新記錄之後，才可以使用 [識別資料行] 新值的新值。  
+**原因：** 通話記錄集之後，在 Jet 中進行 AddNew，在更新記錄之前，可以使用 [自動遞增] 資料行。 在或 SQL Azure 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這不是 true。 只有在儲存新記錄之後，才可以使用 [識別資料行] 新值的新值。  
   
 **解決方式：** 請先執行下列 Visual Basic for Applications （VBA）程式碼，然後再存取 [識別] 欄位：  
   
@@ -125,11 +125,11 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>無法使用新的記錄  
-**原因：** 當您使用 VBA 將記錄新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表時，如果資料表的唯一索引欄位具有預設值，而您未將值指派給該欄位，則在您重新開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 中的資料表之前，新的記錄不會出現。 如果您嘗試從新的記錄取得值，您會收到下列錯誤訊息：  
+**原因：** 當您使用 VBA 將記錄加入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表時，如果資料表的唯一索引欄位具有預設值，而且您沒有指派值給該欄位，則在您重新開啟或 SQL Azure 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料表之前，新的記錄不會出現。 如果您嘗試從新的記錄取得值，您會收到下列錯誤訊息：  
   
 `Run-time error '3167' Record is deleted.`  
   
-**解決方式：** 當您使用 VBA 程式碼開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表時，請包含 `dbSeeChanges` 選項，如下列範例所示：  
+**解決方式：** 當您使用 VBA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程式碼開啟或 SQL Azure 資料表時，請包含`dbSeeChanges`選項，如下列範例所示：  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
@@ -141,7 +141,7 @@ Recordset.LastModified
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>您無法使用存取權修改連結資料表架構  
 **原因：** 在遷移資料和連結資料表之後，使用者無法在存取中修改資料表的架構。  
   
-**解決方式：** 使用 [[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]] 修改資料表架構，然後更新 [存取] 中的連結。  
+**解決方式：** 使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]修改資料表架構，然後更新 [存取] 中的連結。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>在遷移資料之後遺失超連結功能  
 **原因：** 在遷移資料之後，資料行中的超連結會失去其功能並變成簡單的**Nvarchar （max）** 資料行。  
@@ -149,7 +149,7 @@ Recordset.LastModified
 **解決方式：** 無.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>存取不支援某些 SQL Server 資料類型  
-**原因：** 如果您稍後更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 資料表以包含存取不支援的資料類型，就無法在存取中開啟資料表。  
+**原因：** 如果您稍後將[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表更新為包含存取不支援的資料類型，就無法在存取中開啟資料表。  
   
 **解決方式：** 您可以定義存取查詢，只傳回具有支援之資料類型的資料列。  
   

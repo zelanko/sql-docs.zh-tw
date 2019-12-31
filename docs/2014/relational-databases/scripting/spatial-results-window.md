@@ -1,6 +1,6 @@
 ---
-title: 空間結果視窗 | Microsoft Docs
-ms.custom: ''
+title: 空間結果視窗
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,20 +10,20 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063803"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243245"
 ---
 # <a name="spatial-results-window"></a>空間結果視窗
-  [空間結果]  視窗會提供檢視空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
+  [**空間結果**] 視窗會提供用來查看空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
   
 > [!NOTE]  
->  只有當您的結果傳回至 [結果]  視窗中的方格時，才能使用 [空間結果]  視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
+>  只有當您的結果傳回至 [結果]**** 視窗中的方格時，才能使用 [空間結果]**** 視窗。 如果您指定要將結果傳回成文字，就無法使用這個視窗。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  **選取空間資料行**  
  在查詢結果的空間資料行中，指定您想要檢視的空間資料行。 一次只能選取一個資料行。  
   
@@ -33,11 +33,11 @@ ms.locfileid: "66063803"
  當查詢只有傳回 Point 執行個體時，就無法使用這個選項。  
   
  **選取投射**  
- 以四種投影方式中的其中一種顯示地理資料：等量矩形 (Equirectangular)、麥卡托 (Mercator)、羅賓森 (Robinson) 或彭納 (Bonne)。  
+ 以四種投射的其中一種來顯示地理位置資料：Equirectangular、Mercator、Robinson 或 Bonne。  
   
  幾何資料無法使用此選項。  
   
- **顯示比例**  
+ **貼近**  
  在指數刻度上調整對應顯示。  
   
  **顯示格線**  
@@ -49,9 +49,9 @@ ms.locfileid: "66063803"
 >  您無法標示 Point 執行個體。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視物件總管中的空間資料](view-spatial-data-in-object-explorer.md)   
+ [查看物件總管中的空間資料](view-spatial-data-in-object-explorer.md)   
  [空間資料 &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [Database Engine 查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [資料庫引擎查詢編輯器 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [查詢和文字編輯器 &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

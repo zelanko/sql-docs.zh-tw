@@ -1,6 +1,6 @@
 ---
-title: 以指令碼變數使用 sqlcmd | Microsoft Docs
-ms.custom: ''
+title: 以指令碼變數使用 sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090054"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243172"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>以指令碼變數使用 sqlcmd
   用於指令碼中的變數稱為指令碼變數。 指令碼變數可讓一個指令碼使用於多個狀況中。 例如，如果您想要針對多個伺服器執行一個指令碼，而不針對每個伺服器修改指令碼，您可以使用指令碼變數來代表伺服器名稱。 只要變更提供給指令碼變數的伺服器名稱，相同的指令碼就可以在不同的伺服器上執行。  
@@ -33,7 +33,8 @@ ms.locfileid: "66090054"
  本主題也包含在 Cmd.exe 命令提示字元中使用 **SET**來定義環境變數的範例。  
   
 ## <a name="setting-scripting-variables-by-using-the-setvar-command"></a>使用 setvar 命令設定指令碼變數  
- **setvar** 命令可用來定義指令碼變數。 使用 **setvar** 命令定義的變數會儲存在內部。 指令碼變數不應與在命令提示字元中使用 **SET**所定義的環境變數產生混淆。 如果指令碼參考非環境變數的變數，或不是使用 **setvar**所定義的變數，則會傳回錯誤訊息並停止執行指令碼。 如需詳細資訊，請參閱 **sqlcmd 公用程式** 中的 [-b](../../tools/sqlcmd-utility.md)選項。  
+ 
+  **setvar** 命令可用來定義指令碼變數。 使用 **setvar** 命令定義的變數會儲存在內部。 指令碼變數不應與在命令提示字元中使用 **SET**所定義的環境變數產生混淆。 如果指令碼參考非環境變數的變數，或不是使用 **setvar**所定義的變數，則會傳回錯誤訊息並停止執行指令碼。 如需詳細資訊，請參閱 **sqlcmd 公用程式** 中的 [-b](../../tools/sqlcmd-utility.md)選項。  
   
 ## <a name="variable-precedence-low-to-high"></a>變數優先順序 (由低至高)  
  如果有多個類型的變數具有相同的名稱，會使用具有最高優先順序的變數。  
@@ -44,12 +45,12 @@ ms.locfileid: "66090054"
   
 3.  在啟動**SET X=Y**之前，於命令提示字元設定命令殼層 ( **SET X=Y**)  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd-v**X = Y  
   
-5.  **:Setvar** X Y  
+5.  **： Setvar**X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台]  中開啟 [系統]  ，然後按一下 [進階]  索引標籤。  
+>  若要檢視環境變數，請在 [控制台] **** 中開啟 [系統] ****，然後按一下 [進階] **** 索引標籤。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隱含設定指令碼變數  
  當您透過含有 **sqlcmd** 相關變數的選項啟動 **sqlcmd** 時，會將 **sqlcmd** 變數隱含設定為使用該選項所指定的值。 在下列範例中， `sqlcmd` 透過 `-l` 選項啟動。 這將會隱含地設定 SQLLOGINTIMEOUT 變數。  
@@ -64,7 +65,8 @@ ms.locfileid: "66090054"
   
  `FROM Person.Person x`  
   
- `WHERE c.`BusinessEntityID `< 5;`  
+ 
+  `WHERE c.`BusinessEntityID `< 5;`  
   
  您可以接著指定要使用 `-v` 選項傳回的資料行名稱：  
   
@@ -79,7 +81,7 @@ ms.locfileid: "66090054"
   
 -   變數名稱不能包含空白字元或引號。  
   
--   變數名稱的格式不能和變數運算式的格式相同，例如 *$(var)* 。  
+-   變數名稱的格式不能和變數運算式的格式相同，例如 *$(var)*。  
   
 -   指令碼變數不區分大小寫。  
   
@@ -102,7 +104,7 @@ ms.locfileid: "66090054"
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 指令碼變數  
  由 **sqlcmd** 定義的變數稱為指令碼變數。 下表列出 **sqlcmd** 指令碼變數。  
   
-|變數|相關的選項|R/W|預設|  
+|變數|相關的選項|R/W|Default|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -111,17 +113,17 @@ ms.locfileid: "66090054"
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (秒)|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = 永遠等候|  
-|SQLCMDHEADERS|-H|R/W|"0"|  
-|SQLCMDCOLSEP|-S|R/W|「 」|  
+|SQLCMDHEADERS|-h|R/W|"0"|  
+|SQLCMDCOLSEP|-s|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|R/W|"0"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
+|SQLCMDERRORLEVEL|-m|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = 無限制|  
 |SQLCMDEDITOR||R/W|"edit.com"|  
 |SQLCMDINI||R|""|  
   
- \* * SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER 會在使用 **:Connect** 時設定。  
+ \*SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER 是在使用 **： Connect**時設定。  
   
  R 表示在程式初始化期間只能設定該值一次。  
   
@@ -187,7 +189,7 @@ ms.locfileid: "66090054"
  `4> GO`  
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 內使用使用者層級環境變數  
- 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%`，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]  中按兩下 [系統]  。 按一下 [進階]  索引標籤，然後按一下 [環境變數]  。  
+ 下列範例在命令提示字元中設定了使用者層級環境變數 `%Temp%` ，並將其傳遞至 `sqlcmd` 輸入檔。 若要取得使用者層級環境變數，請在 [控制台]**** 中按兩下 [系統]****。 按一下 [進階]**** 索引標籤，然後按一下 [環境變數]****。  
   
  下列程式碼是在輸入檔 `c:\testscript.txt`中：  
   
@@ -267,7 +269,8 @@ ms.locfileid: "66090054"
  `>1 < user > is connected to < server > (9.00.2047.00)`  
   
 > [!NOTE]  
->  **-X** 選項會停用啟動指令碼功能。  
+>  
+  **-X** 選項會停用啟動指令碼功能。  
   
 ### <a name="f-variable-expansion"></a>F. 變數展開  
  下列範例顯示如何以 **sqlcmd** 變數的形式來使用資料。  
@@ -342,7 +345,7 @@ ms.locfileid: "66090054"
   
 ## <a name="see-also"></a>另請參閱  
  [使用 sqlcmd 公用程式](sqlcmd-use-the-utility.md)   
- [-b](../../tools/sqlcmd-utility.md)   
- [命令提示字元公用程式參考 &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
+ [命令提示字元公用程式參考 &#40;資料庫引擎&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

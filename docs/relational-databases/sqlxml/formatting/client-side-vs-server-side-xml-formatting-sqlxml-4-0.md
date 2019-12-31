@@ -1,6 +1,5 @@
 ---
-title: 用戶端與伺服器端 XML 格式化 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 用戶端與伺服器端 XML 格式（SQLXML）
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,20 +17,21 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d02eeb0ad64a62343fda53a1907cec2b4bb9e850
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220361"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247005"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>用戶端與伺服器端 XML 格式 (SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>用戶端和伺服器端的 XML 格式化 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主題描述 SQLXML 中用戶端與伺服器端 XML 格式化之間的一般差異。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>用戶端格式中不支援多個資料列集查詢  
- 當您使用用戶端 XML 格式化時，不支援會產生多個資料列集的查詢。 例如，假設您有一個虛擬目錄，您已在其中指定用戶端格式。 請考慮這個範例範本，有兩個 SELECT 陳述式中 **\<sql:query >** 區塊：  
+ 當您使用用戶端 XML 格式化時，不支援會產生多個資料列集的查詢。 例如，假設您有一個虛擬目錄，您已在其中指定用戶端格式。 請考慮這個範例範本，其中在** \<sql： query>** 區塊中有兩個 SELECT 語句：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,21 +42,21 @@ ms.locfileid: "68220361"
 </ROOT>  
 ```  
   
- 您可以在應用程式的程式碼中執行這個範本，而且會傳回錯誤，因為用戶端 XML 格式化不支援多個資料列集的格式。 如果您指定查詢在兩個分隔 **\<sql:query >** 區塊，您會想要的結果。  
+ 您可以在應用程式的程式碼中執行這個範本，而且會傳回錯誤，因為用戶端 XML 格式化不支援多個資料列集的格式。 如果您在兩個不同** \<的 sql：查詢>** 區塊中指定查詢，您會得到所要的結果。  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>時間戳記在用戶端與中。伺服器端格式  
- 在 伺服器端 XML 格式化中，資料庫資料行會**時間戳記**類型會對應到 i8 XDR 類型 （當在查詢中指定 XMLDATA 選項）。  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>時間戳記在用戶端與伺服器端格式中的對應不同  
+ 在伺服器端 XML 格式化中， **timestamp**類型的資料庫資料行會對應到 i8 XDR 類型（在查詢中指定 XMLDATA 選項時）。  
   
- 在用戶端 XML 格式化中，資料庫資料行**時間戳記**類型會對應至其中一個**uri**或**bin.hex、bin.base64** XDR 類型 (取決於是否 binary base64選項會指定在查詢中）。 **Bin.hex、bin.base64** XDR 類型會非常有用，如果您要使用 updategram 和大量載入功能，因為此類型會轉換成[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**時間戳記**型別。 如此一來，插入、更新或刪除作業都會成功。  
+ 在用戶端 XML 格式中， **timestamp**類型的資料庫資料行會對應到**uri**或**bin. base64** XDR 類型（視查詢中是否指定了 binary base64 選項而定）。 如果您使用 updategram 和 bulkload 功能，則**bin. base64** XDR 型別會很有用，因為這個型別會[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]轉換成**timestamp**型別。 如此一來，插入、更新或刪除作業都會成功。  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>伺服器端格式中會使用深入的 VARIANT  
  在伺服器端 XML 格式化中，會使用深入類型的 VARIANT 類型。 如果您使用用戶端 XML 格式化，Variant 會轉換成 Unicode 字串，而且不會使用 VARIANT 的子類型。  
   
-## <a name="nested-mode-vs-auto-mode"></a>NESTED 的模式與AUTO 模式的比較  
+## <a name="nested-mode-vs-auto-mode"></a>NESTED 模式與 AUTO 模式的比較  
  用戶端 FOR XML 的 NESTED 模式類似於伺服器端 FOR XML 的 AUTO 模式，但是以下情況除外：  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>當您在伺服器端上使用 AUTO 模式來查詢檢視表時，檢視表名稱會當做產生之 XML 中的元素名稱傳回。  
- 例如，假設 AdventureWorksdatabase 中的 Person.Contact 資料表上，建立下列檢視：  
+ 例如，假設下列視圖是在 AdventureWorksdatabase 中的 Person. Contact 資料表上建立的：  
   
 ```  
 CREATE VIEW ContactView AS (SELECT ContactID as CID,  
@@ -77,7 +77,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 當您執行此範本時，將會傳回下列 XML （只有部分的結果會顯示）。請注意，項目名稱會根據執行查詢的檢視名稱。  
+ 當您執行此範本時，將會傳回下列 XML  （只會顯示部分結果）。請注意，元素名稱是查詢執行時所依據的視圖名稱。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -87,7 +87,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 當您使用對應的 NESTED 模式指定用戶端 XML 格式化時，基底資料表名稱會當做產生之 XML 中的元素名稱傳回。 例如，下列修改過的範本執行相同的 SELECT 陳述式，但 XML 格式化時，會對用戶端 (亦即**用戶端端 xml**設為範本中，則為 true):  
+ 當您使用對應的 NESTED 模式指定用戶端 XML 格式化時，基底資料表名稱會當做產生之 XML 中的元素名稱傳回。 例如，下列修訂的範本會執行相同的 SELECT 語句，但是 XML 格式會在用戶端上執行（也就是，範本中的**用戶端-xml**會設定為 true）：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -133,7 +133,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- 當您使用用戶端 FOR XML 的 NESTED 模式時，資料表名稱會當做產生之 XML 中的元素名稱傳回 （不使用查詢中指定的資料表別名。）例如，假設有以下的範本：  
+ 當您使用用戶端 FOR XML 的 NESTED 模式時，資料表名稱會當做產生之 XML 中的元素名稱傳回  （不會使用查詢中指定的資料表別名）。例如，請考慮下列範本：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -181,7 +181,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 如果 XML 格式化在伺服器上完成 (**用戶端端 xml ="0"** )，您可以用於傳回 dbobject 查詢在實際的資料表和資料行 （即使您有指定的別名），會傳回名稱的資料行中的別名。 例如，下列範本會執行查詢，而 XML 格式化在伺服器上完成 (**用戶端端 xml**未指定選項和**Run On Client**選項未選取虛擬根目錄）。 此查詢也會指定 AUTO 模式 (而非用戶端 NESTED 模式)。  
+ 如果已在伺服器上完成 XML 格式設定（**用戶端-XML = "0"**），您可以針對傳回 dbobject 查詢的資料行使用別名，其中會傳回實際資料表和資料行名稱（即使您已指定別名）。 例如，下列範本會執行查詢，並在伺服器上完成 XML 格式設定（未指定**用戶端-XML**選項，而且未選取虛擬根目錄的 [**在用戶端上執行**] 選項）。 此查詢也會指定 AUTO 模式 (而非用戶端 NESTED 模式)。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -205,18 +205,18 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
-### <a name="client-side-vs-server-side-xpath"></a>用戶端與伺服器端 XPath  
+### <a name="client-side-vs-server-side-xpath"></a>用戶端和伺服器端的 XPath  
  用戶端 XPath 和伺服器端 XPath 的運作方式相同，但是有下列幾項差異：  
   
 -   當您使用用戶端 XPath 查詢時所套用的資料轉換與使用伺服器端 XPath 查詢時所套用的資料轉換不同。 用戶端 XPath 會使用 CAST，而非 CONVERT 模式 126。  
   
--   當您指定**用戶端端 xml ="0"** (false) 在範本中，您會要求伺服器端 XML 格式化。 因此，您無法指定 FOR XML NESTED，因為伺服器無法辨識 NESTED 選項。 這樣會產生錯誤。 您必須使用伺服器可辨識的 AUTO、RAW 或 EXPLICIT 模式。  
+-   當您在範本中指定**用戶端-xml = "0"** （false）時，您會要求伺服器端 xml 格式。 因此，您無法指定 FOR XML NESTED，因為伺服器無法辨識 NESTED 選項。 這樣會產生錯誤。 您必須使用伺服器可辨識的 AUTO、RAW 或 EXPLICIT 模式。  
   
--   當您指定**用戶端端 xml ="1"** (true) 在範本中，您會要求用戶端 XML 格式化。 在此情況下，您可以指定 FOR XML NESTED。 如果您指定 FOR XML AUTO，XML 格式化，就會發生在伺服器端雖然**用戶端端 xml ="1"** 範本中所指定。  
+-   當您在範本中指定**用戶端-xml = "1"** （true）時，您會要求用戶端 xml 格式。 在此情況下，您可以指定 FOR XML NESTED。 如果您指定 FOR XML AUTO，則 XML 格式會出現在伺服器端，但在範本中指定**用戶端-XML = "1"** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [FOR XML 安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [用戶端 XML 格式化&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [伺服器端 XML 格式化&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+ [FOR XML 安全性考慮 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [用戶端 XML 格式 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [伺服器端 XML 格式 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
   
   

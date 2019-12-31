@@ -1,5 +1,5 @@
 ---
-title: 程式設計範例連結 |Microsoft Docs
+title: 程式設計範例的連結 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63131778"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244521"
 ---
 # <a name="link-to-programming-samples"></a>程式設計範例連結
-  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目錄所提供的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理物件 (SMO) 程式設計範例。 這些範例都可以在[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
+  下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目錄所提供的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理物件 (SMO) 程式設計範例。 [!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .net 都提供這些範例。  
   
- 如需如何安裝範例的詳細資訊，請參閱[AdventureWorks for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330)。  
+ 如需有關如何安裝範例的詳細資訊，請參閱[SQL Server 2012 的 AdventureWorks](https://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
 |標題|描述|  
 |-----------|-----------------|  
@@ -34,7 +34,7 @@ ms.locfileid: "63131778"
 |DatabaseSearch|顯示資料庫中的所有物件。|  
 |DependencyExplorer|實作相依性樹狀目錄和屬性顯示視窗。|  
 |IndexSizes|顯示選取之資料庫的索引名稱和大小。|  
-|LoadRegAssembly|示範如何載入及註冊[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET 組件載入[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用 UtilityConversion 組件。|  
+|LoadRegAssembly|示範如何在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]載入並註冊 .net 元件。 使用 UtilityConversion 組件。|  
 |ManageDatabases|示範如何建立、改變和卸除資料庫， 包括加入新的檔案群組和記錄檔。|  
 |ManageDatabaseUsers|示範如何加入、修改和移除使用者。|  
 |ManageTables|示範如何建立、改變和卸除資料表。|  
@@ -49,5 +49,4 @@ ms.locfileid: "63131778"
 |觸發程序|顯示資料庫觸發程序。|  
 |UtilityConversion|與 `LoadRegAssembly` 搭配使用。 包含與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 搭配使用的 Common Language Runtime (CLR) 示範函數。|  
 |VerifyBackup|驗證備份裝置上的備份，以確定資料可用於還原資料庫。|  
-  
   

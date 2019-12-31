@@ -1,5 +1,5 @@
 ---
-title: 建立 SQL Server Native Client OLE DB 提供者應用程式 |Microsoft Docs
+title: SQL Native Client OLE DB 提供者應用程式
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4b872d8b12ed73079f28a0b0daff15afcc642eb
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 84a920320860512dcc0cdd80619cd7aa671c96a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73789236"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247125"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>建立 SQL Server Native Client OLE DB 提供者應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者應用程式包含下列步驟：  
+  建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端 OLE DB 提供者應用程式牽涉到下列步驟：  
   
 1.  建立與資料來源的連接。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73789236"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [建立資料來源的連接](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
+-   [建立與資料來源的連接](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
   
 -   [執行命令](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
   
