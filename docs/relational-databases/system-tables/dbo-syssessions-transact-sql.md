@@ -1,9 +1,8 @@
 ---
-title: dbo.syssessions (TRANSACT-SQL) |Microsoft Docs
+title: dbo. syssessions （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -19,29 +18,32 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 35b23525dc9762d012948e6eba0b41156b45ac69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 566445a3680dc54382a7e3e66bf77dbcbddca2e8
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056286"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548292"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 時，它都會建立新的工作階段。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 利用工作階段來保留 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務非預期地重新啟動或停止時的作業狀態。 每個資料列**syssessions**資料表包含某一工作階段的資訊。 使用**sysjobactivity**資料表以檢視工作狀態，每個工作階段的結尾。  
+每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 時，它都會建立新的工作階段。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 利用工作階段來保留 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務非預期地重新啟動或停止時的作業狀態。 **Syssessions**資料表的每個資料列都包含一個會話的相關資訊。 使用**sysjobactivity**資料表來查看每個會話結束時的作業狀態。  
   
- 這份資料表儲存在**msdb**資料庫。  
+ 此資料表會儲存在**msdb**資料庫中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 工作階段的識別碼。|  
-|**agent_start_date**|**datetime**|啟動這個工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的日期和時間。|  
+|**session_id**|**int**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 工作階段的識別碼。 這個 session_id 不是會話的 SPID，而是此系統資料表中的識別值。|  
+|**agent_start_date**|**從中**|啟動這個工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的日期和時間。|  
   
 ## <a name="remarks"></a>備註  
- 只有成員的使用者的**sysadmin**固定的伺服器角色可以存取這份資料表。  
+ 只有身為**系統管理員（sysadmin** ）固定伺服器角色成員的使用者，才能夠存取此資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.sysjobactivity &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
+ [sysjobactivity &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
   
   
