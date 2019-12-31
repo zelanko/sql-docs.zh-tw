@@ -1,5 +1,5 @@
 ---
-title: 分析平台系統的文件 | Microsoft Docs
+title: 文件
 description: Microsoft Analytics Platform System (APS) 是專為資料倉儲和巨量資料分析而設計的資料平台，可提供深層資料整合、高速查詢處理、高擴充性儲存體和端對端商業智慧方案的簡易維護。
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 08f70ff74c5743f202867ae2a57adc1c6b9d677d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153363"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401088"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
@@ -23,7 +24,7 @@ Microsoft Analytics Platform System (APS) 是專為資料倉儲和巨量資料�
 
 Analytics Platform System 裝載了 SQL Server 平行資料倉儲 (PDW)，這是一款用來執行大量平行處理 (MPP) 資料倉儲的軟體。
 
-PolyBase 技術結合了關聯式 PDW 資料與多個來源的 Hadoop 資料, 包括 Windows Server 上的 Hortonworks、Linux 上的 Hortonworks、linux 上的 Cloudera, 以及 HDInsight 的 Azure blob 儲存體。 這些進階的資料整合能力，加上深層整合的商業智慧工具，可讓 Analytics Platform System 傳回整合式的分析，藉此讓企業決策者制定出更縝密和更富有洞察力的商業決策。
+PolyBase 技術結合了關聯式 PDW 資料與多個來源的 Hadoop 資料，包括 Windows Server 上的 Hortonworks、Linux 上的 Hortonworks、linux 上的 Cloudera，以及 HDInsight 的 Azure blob 儲存體。 這些進階的資料整合能力，加上深層整合的商業智慧工具，可讓 Analytics Platform System 傳回整合式的分析，藉此讓企業決策者制定出更縝密和更富有洞察力的商業決策。
 
 Analytics Platform System 會以設備形式運送至您的資料中心，其配備專為執行多個工作負載預先安裝與預先設定的硬體和軟體。 當您購買 Analytics Platform System 時，可根據業務需求購買適用於 PDW 的計算節點。
 
@@ -38,16 +39,16 @@ Analytics Platform System 不僅快速、可擴充，並設計有高備援與高
 
 除了實現突破性的查詢效能，PDW 還可輕鬆提供下列優勢：
 
-- 藉由將「縮放單位」新增至現有系統, 將您的資料倉儲從幾 tb 增加到超過 6 pb 的資料。
+- 藉由將「縮放單位」新增至現有系統，將您的資料倉儲從幾 tb 增加到超過 6 pb 的資料。
 
-- 您的資料會因為內建的高冗余和高可用性, 而需要時, 才會受到信任。
+- 您的資料會因為內建的高冗余和高可用性，而需要時，才會受到信任。
 
 - 解決載入和合併資料的現代化資料挑戰。
 
-- 使用 PDW 高度平行化的 PolyBase 技術, 將 Hadoop 資料與關聯式資料整合, 以快速分析。
+- 使用 PDW 高度平行化的 PolyBase 技術，將 Hadoop 資料與關聯式資料整合，以快速分析。
 
 - 您可以使用商業智慧工具，來建立完整的端對端解決方案。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
 如需 PDW 優勢的詳細資訊，請參閱 MSDN 上的 [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/dn520808%28v=msdn.10%29) (下一代資料倉儲和巨量資料解決方案的突破性平台) 白皮書。

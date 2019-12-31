@@ -1,6 +1,6 @@
 ---
-title: 授與 T-SQL 權限-Parallel Data Warehouse |Microsoft Docs
-description: 授與 T-SQL 平行處理資料倉儲的資料庫作業的權限。
+title: 授與 T-sql 許可權
+description: 針對平行處理資料倉儲中的資料庫作業，授與 T-sql 許可權。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,20 +8,21 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 15798edc4d6a9b1f00c8dd489dfed76a39e5f340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960940"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401154"
 ---
-# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>授與 T-SQL 平行處理資料倉儲的權限
-授與 T-SQL 平行處理資料倉儲的資料庫作業的權限。
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>授與平行處理資料倉儲的 T-sql 許可權
+針對平行處理資料倉儲中的資料庫作業，授與 T-sql 許可權。
 
-## <a name="grant-permissions-to-submit-database-queries"></a>提交資料庫查詢的權限授與
-本節說明如何授與權限給資料庫角色和 SQL Server PDW 應用裝置上的查詢資料的使用者。  
+## <a name="grant-permissions-to-submit-database-queries"></a>授與提交資料庫查詢的許可權
+本節說明如何授與許可權給資料庫角色和使用者，以在 SQL Server PDW 設備上查詢資料。  
   
-用來授與權限來查詢資料的陳述式會取決於所需的存取範圍。 下列 SQL 陳述式建立名為 KimAbercrombie，可存取設備，建立名為 KimAbercrombie 中的資料庫使用者的登入**AdventureWorksPDW2012**資料庫，建立名為 PDWQueryData 的資料庫角色，新增使用 KimAbercrombie 至 PDWQueryData 角色，然後顯示選項，來授與查詢權限，根據是否在物件或資料庫層級授與存取權。  
+用來授與查詢資料之許可權的語句取決於所需的存取範圍。 下列 SQL 語句會建立名為 KimAbercrombie 的登入，以存取設備、在**AdventureWorksPDW2012**資料庫中建立名為 KimAbercrombie 的資料庫使用者、建立名為 PDWQueryData 的資料庫角色、將 use KimAbercrombie 新增至 PDWQueryData 角色，然後根據物件或資料庫層級的存取權，顯示授與查詢存取權的選項。  
   
 ```sql  
 USE master;  
@@ -57,12 +58,12 @@ GRANT SELECT ON OBJECT::AdventureWorksPDW2012..DimEmployee TO KimAbercrombie;
 GO  
 ```  
   
-## <a name="grant-permissions-to-use-the-admin-console"></a>若要使用系統管理員主控台的權限授與
-本節說明如何授與權限給登入，使用系統管理主控台。  
+## <a name="grant-permissions-to-use-the-admin-console"></a>授與使用管理主控台的許可權
+本節說明如何將許可權授與登入，以使用管理主控台。  
   
-**使用系統管理主控台**  
+**使用管理主控台**  
   
-若要使用管理主控台登入需要伺服器層級**VIEW SERVER STATE**權限。 下列 SQL 陳述式會授與**VIEW SERVER STATE**登入的權限`KimAbercrombie`以便 Kim 可以使用管理主控台來監視 SQL Server PDW 應用裝置。  
+若要使用管理主控台，登入需要伺服器層級**VIEW SERVER STATE**許可權。 下列 SQL 語句會將**VIEW SERVER STATE**許可權授與登`KimAbercrombie`入，讓 Kim 可以使用管理主控台來監視 SQL Server PDW 設備。  
   
 ```sql  
 USE master;  
@@ -71,18 +72,18 @@ GRANT VIEW SERVER STATE TO KimAbercrombie;
 GO  
 ```  
   
-**終止工作階段**  
+**終止會話**  
   
-若要授與登入終止工作階段的權限，授與**ALTER ANY CONNECTION**權限，如下所示：  
+若要授與登入終止會話的許可權，請授與**ALTER ANY CONNECTION**許可權，如下所示：  
   
 ```sql  
 GRANT ALTER ANY CONNECTION TO KimAbercrombie;  
 ```  
   
-## <a name="grant-permissions-to-load-data"></a>若要載入資料的權限授與
-本節說明如何授與權限給資料庫角色和資料庫使用者，將 SQL Server PDWappliance 的資料載入。  
+## <a name="grant-permissions-to-load-data"></a>授與載入資料的許可權
+本章節描述如何授與資料庫角色和資料庫使用者的許可權，以將資料載入 SQL Server PDWappliance 上。  
   
-下列指令碼所示的權限所需的每一個載入選項。 您可以修改此選項以符合您特定需求。  
+下列腳本會顯示每個載入選項所需的許可權。 您可以修改此，以符合您的特定需求。  
   
 ```sql  
 -- Create server login for the examples that follow.  
@@ -122,17 +123,17 @@ EXEC sp_addrolemember 'db_datareader','BI_ETLUser';
 EXEC sp_addrolemember 'db_datawriter','BI_ETLUser';  
 ```  
   
-## <a name="grant-permissions-to-copy-data-off-the-appliance"></a>授與權限，將資料複製在應用裝置外。
-本節說明如何授與權限的使用者或資料庫角色將在 SQL Server PDW 應用裝置外的資料複製。  
+## <a name="grant-permissions-to-copy-data-off-the-appliance"></a>授與從設備資料複製的許可權
+本節說明如何授與許可權給使用者或資料庫角色，以從 SQL Server PDW 設備複製資料。  
   
-若要將資料移至另一個位置，需要**選取**包含資料的資料表的權限，才能移動。  
+若要將資料移到另一個位置，則需要包含要移動之資料的資料表的**SELECT**許可權。  
   
-如果另一個 SQL Server PDW 資料的目的地，使用者必須具有**CREATE TABLE**目的地的權限並**ALTER SCHEMA**將包含資料表的結構描述權限。  
+如果資料的目的地是另一個 SQL Server PDW，則使用者必須擁有目的地的**CREATE TABLE**許可權，以及將包含資料表之架構的**ALTER SCHEMA**許可權。  
   
-## <a name="grant-permissions-to-manage-databases"></a>授與權限來管理資料庫
-本節說明如何將權限授與資料庫使用者來管理 SQL Server PDW 應用裝置上的資料庫。  
+## <a name="grant-permissions-to-manage-databases"></a>授與管理資料庫的許可權
+本節說明如何將許可權授與資料庫使用者，以管理 SQL Server PDW 設備上的資料庫。  
   
-在某些情況下，某家公司會指派資料庫的管理員。 管理員控制的其他登入擁有資料庫，以及資料和資料庫中的物件的存取權。 若要管理所有物件，角色，並在資料庫中的使用者授與使用者**控制**資料庫的權限。 下列陳述式會授與**控制**權限**AdventureWorksPDW2012**給使用者的資料庫`KimAbercrombie`。  
+在某些情況下，公司會指派資料庫的管理員。 管理員可控制其他登入對資料庫的存取權，以及資料庫中的資料和物件。 若要管理資料庫中的所有物件、角色和使用者，請將資料庫的**CONTROL**許可權授與使用者。 下列語句會將**AdventureWorksPDW2012**資料庫的`KimAbercrombie` **CONTROL**許可權授與使用者。  
   
 ```sql
 USE AdventureWorksPDW2012;  
@@ -140,17 +141,17 @@ GO
 GRANT CONTROL ON DATABASE:: AdventureWorksPDW2012 TO KimAbercrombie;  
 ```  
   
-若要授與其他人來控制應用裝置上的所有資料庫的權限，授與**ALTER ANY DATABASE** master 資料庫中的權限。  
+若要授與其他人控制設備上所有資料庫的許可權，請在 master 資料庫中授與**ALTER ANY database**許可權。  
   
-## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>管理登入、 使用者和資料庫角色的權限授與
-本節說明如何授與權限來管理登入、 資料庫使用者和資料庫角色。  
+## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>授與管理登入、使用者和資料庫角色的許可權
+本節說明如何授與許可權來管理登入、資料庫使用者和資料庫角色。  
   
-### <a name="PermsAdminConsole"></a>若要管理的登入授與權限  
+### <a name="PermsAdminConsole"></a>授與管理登入的許可權  
 **新增或管理登入**  
   
-下列 SQL 陳述式建立名為 KimAbercrombie 可以藉由建立新的登入的登入[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)陳述式並使用修改現有的登入[ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)陳述式。  
+下列 SQL 語句會建立名為 KimAbercrombie 的登入，可以使用[CREATE login](../t-sql/statements/create-login-transact-sql.md)語句來建立新的登入，並使用[alter login](../t-sql/statements/alter-login-transact-sql.md)語句來改變現有的登入。  
   
-**ALTER ANY LOGIN**權限授與建立新的登入和卸除現有的能力。 具有登入之後的登入存在，可以管理登入**ALTER ANY LOGIN**權限或**ALTER**該登入權限。 登入可以變更自己的登入的密碼和預設資料庫。  
+**ALTER ANY LOGIN**許可權會授與建立新登入和捨棄現有的能力。 一旦登入存在，登入就可以透過具有**ALTER ANY login**許可權或該登入之**alter**許可權的登入來管理。 登入可以變更其本身登入的密碼和預設資料庫。  
   
 ```sql 
 CREATE LOGIN KimAbercrombie   
@@ -162,8 +163,8 @@ GO
 GRANT ALTER ANY LOGIN TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permissions-to-manage-login-sessions"></a>授與權限來管理登入工作階段  
-若要能夠在伺服器上檢視所有工作階段，需要**VIEW SERVER STATE**權限。 需要能夠終止工作階段內的其他登入**ALTER ANY CONNECTION**權限。 下列範例會使用`KimAbercrombie`稍早建立的登入。  
+### <a name="grant-permissions-to-manage-login-sessions"></a>授與管理登入會話的許可權  
+若要能夠查看伺服器上的所有會話，需要**VIEW SERVER STATE**許可權。 終止其他登入會話的功能需要**ALTER ANY CONNECTION**許可權。 下列範例會使用稍`KimAbercrombie`早建立的登入。  
   
 ```sql  
 -- Grant permissions to view sessions and queries  
@@ -173,8 +174,8 @@ GRANT VIEW SERVER STATE TO KimAbercrombie;
 GRANT ALTER ANY CONNECTION TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permission-to-manage-database-users"></a>管理資料庫使用者的權限授與  
-建立和卸除資料庫使用者需要**ALTER ANY USER**權限。 管理現有的使用者需要**ALTER ANY USER**權限或**ALTER**對該使用者的權限。 下列範例會使用`KimAbercrombie`稍早建立的登入。  
+### <a name="grant-permission-to-manage-database-users"></a>授與管理資料庫使用者的許可權  
+建立和卸載資料庫使用者需要**ALTER ANY USER**許可權。 若要管理現有的使用者，則需要該使用者的**ALTER ANY USER**許可權或**alter**許可權。 下列範例會使用稍`KimAbercrombie`早建立的登入。  
   
 ```sql  
 -- Create a user  
@@ -186,8 +187,8 @@ CREATE USER KimAbercrombie;
 GRANT ALTER ANY USER TO KimAbercrombie;  
 ```  
   
-### <a name="grant-permisson-to-manage-database-roles"></a>授與管理資料庫角色的權限  
-建立和卸除使用者定義資料庫角色需要**ALTER ANY ROLE**權限。 下列範例會使用`KimAbercrombie`登入和稍早建立的使用。  
+### <a name="grant-permisson-to-manage-database-roles"></a>授與許可權以管理資料庫角色  
+建立和卸載使用者定義的資料庫角色需要**ALTER ANY ROLE**許可權。 下列範例會使用登`KimAbercrombie`入，並使用稍早建立的。  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -196,18 +197,18 @@ GO
 GRANT ALTER ANY ROLE TO KimAbercrombie;  
 ```  
   
-### <a name="login-user-and-role-permission-charts"></a>登入、 使用者和角色的權限圖表  
-下列圖表可能會造成混淆，但它們會示範如何更高等級權限 （例如控制項） 包含更細微的權限可以授與個別 （例如 ALTER)。 最好一律授與最少的人完成其必要工作的權限。 若要這樣做，請授與更特定的權限，而不是最高層級權限。  
+### <a name="login-user-and-role-permission-charts"></a>登入、使用者和角色許可權圖表  
+下列圖表可能會造成混淆，但會顯示較高的杠杆許可權（例如 CONTROL）是否包含可個別授與的更細微許可權（例如 ALTER）。 最佳做法是一律授與最少量的許可權，讓使用者完成必要的工作。 若要這麼做，請授與更明確的許可權，而不是最上層的許可權。  
   
-**登入權限：**  
+**登入許可權：**  
   
 ![APS 安全性登入權限](./media/grant-permissions/APS_security_login_perms.png "APS_security_login_perms")  
   
-**使用者的權限：**  
+**使用者權限：**  
   
 ![APS 安全性使用者權限](./media/grant-permissions/APS_security_user_perms.png "APS_security_user_perms")  
   
-**角色權限：**  
+**角色許可權：**  
   
 ![APS 安全性角色權限](./media/grant-permissions/APS_security_role_perms.png "APS_security_role_perms")  
   
@@ -216,11 +217,11 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
   
 -->
 
-## <a name="grant-permissions-to-monitor-the-appliance"></a>授與權限，來監視設備
-使用 系統管理員主控台 或 SQL Server PDW 系統檢視表，可以監視 SQL Server PDW 應用裝置。 登入需要伺服器層級**VIEW SERVER STATE**監視設備的權限。 登入時，需要**ALTER ANY CONNECTION**終止連線，使用系統管理員主控台的權限或**KILL**命令。 如需使用管理主控台所需的權限資訊，請參閱[授與權限，才能使用系統管理員主控台&#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console)。  
+## <a name="grant-permissions-to-monitor-the-appliance"></a>授與監視設備的許可權
+您可以使用管理主控台或 SQL Server PDW 系統檢視來監視 SQL Server PDW 設備。 登入需要伺服器層級的**VIEW SERVER STATE**許可權，才能監視設備。 登入需要**ALTER ANY CONNECTION**許可權，才能使用管理主控台或**KILL**命令來終止連接。 如需使用管理主控台所需許可權的資訊，請參閱[授與使用管理主控台 &#40;SQL Server PDW&#41;的許可權](#grant-permissions-to-use-the-admin-console)。  
   
-### <a name="PermsAdminConsole"></a>授與權限來使用系統檢視來監視設備  
-下列 SQL 陳述式建立名為登入`monitor_login`，並授與**VIEW SERVER STATE**權限`monitor_login`登入。  
+### <a name="PermsAdminConsole"></a>使用系統檢視授與監視設備的許可權  
+下列 SQL 語句會建立名為`monitor_login`的登入，並將**VIEW SERVER STATE**許可權`monitor_login`授與此登入。  
   
 ```sql  
 USE master;  
@@ -230,8 +231,8 @@ GRANT VIEW SERVER STATE TO monitor_login;
 GO  
 ```  
   
-### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>授與權限來使用系統檢視來監視設備，以及終止連線  
-下列 SQL 陳述式建立名為登入`monitor_and_terminate_login`，並授與**VIEW SERVER STATE**並**ALTER ANY CONNECTION**權限`monitor_and_terminate_login`登入。  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>使用系統檢視來授與監視設備的許可權，並終止連線  
+下列 SQL 語句會建立名`monitor_and_terminate_login`為的登入，並將**VIEW SERVER STATE**和**ALTER ANY CONNECTION**許可權`monitor_and_terminate_login`授與登入。  
   
 ```sql  
 USE master;  
@@ -242,10 +243,10 @@ GRANT ALTER ANY CONNECTION TO monitor_and_terminate_login;
 GO  
 ```  
   
-若要建立系統管理員登入，請參閱[固定伺服器角色](pdw-permissions.md#fixed-server-roles)。  
+若要建立管理員登入，請參閱[固定伺服器角色](pdw-permissions.md#fixed-server-roles)。  
   
 ## <a name="see-also"></a>另請參閱
-[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
+[建立登入](../t-sql/statements/create-login-transact-sql.md)  
 [建立使用者](../t-sql/statements/create-user-transact-sql.md)  
-[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
+[建立角色](../t-sql/statements/create-role-transact-sql.md)  
 [載入](load-overview.md)  

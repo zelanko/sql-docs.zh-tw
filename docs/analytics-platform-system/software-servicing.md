@@ -1,6 +1,6 @@
 ---
-title: 軟體服務-Analytics Platform System |Microsoft Docs
-description: 軟體服務 Analytics Platform System (APS)。
+title: 軟體服務
+description: 分析平臺系統（AP）中的軟體服務。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,35 +8,36 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 97f0ccaed9cded73241f473d81400b30acbe402c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960082"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400308"
 ---
-# <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System 中的軟體維護
-本節摘要說明服務的需求，Analytics Platform System appliance，包括 WSUS 和 Analytics Platform System hotfix 的軟體。  
+# <a name="software-servicing-in-analytics-platform-system"></a>分析平臺系統中的軟體服務
+本節將摘要說明分析平臺系統裝置的軟體服務需求，包括 WSUS 和分析平臺系統修補程式。  
   
 ## <a name="Basics"></a>軟體服務基本概念  
-**WSUS:** Analytics Platform System appliance 必須設定為從 Windows Server Update Services (WSUS) 接收更新。 這些更新包括裝置軟體的重要變更。 設定之後，更新會自動安裝，並不需要實際操作的管理。 一般而言，設定 WSUS 更新期間[設定 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md)在新的應用裝置安裝期間執行的步驟。 如果沒有，則可以稍後再執行此組態步驟。 如需 WSUS 的資訊，請參閱[WSUS 網站指南](https://go.microsoft.com/fwlink/?LinkId=202417)。  
+**WSUS：** 您的分析平臺系統裝置必須設定為從 Windows Server Update Services （WSUS）接收更新。 這些更新包含設備軟體的重要變更。 設定好之後，將會自動安裝許多更新，而不需要實際操作管理。 通常，WSUS 更新會在設定[Windows Server Update Services &#40;wsus&#41; &#40;分析平臺系統](configure-windows-server-update-services-wsus.md)期間進行設定，&#41;步驟會在新設備安裝期間執行。 如果不是，則可以稍後執行此設定步驟。 如需 WSUS 的相關資訊，請參閱[wsus 網站指南](https://go.microsoft.com/fwlink/?LinkId=202417)。  
   
-**Hotfix:** 此外，您可能需要套用 Analytics Platform System hotfix。 A *hotfix*建立特定的客戶，若要解決問題，Analytics Platform System 軟體的軟體更新。 每個 hotfix 是可執行檔安裝客戶特定問題的修正程式。 每個 hotfix 也會包含 Windows、 SQL Server 和 Analytics Platform System 的累積的所有先前發行的軟體更新。 如果您要安裝的 hotfix，Microsoft 支援服務將您提供的 hotfix 和指示。  
+**修補程式：** 此外，您可能需要套用分析平臺系統修補程式。 「*修補程式*」是針對特定客戶所建立的軟體更新，可解決分析平臺系統軟體的問題。 每個修正程式都是可執行檔，它會安裝客戶特有問題的修正程式。 每個修復程式也包含所有先前發行的 Windows、SQL Server 和 Analytics Platform System 軟體更新的累積。 如果您需要安裝一個修補程式，Microsoft 支援服務將提供您有關此修補程式和指示。  
   
-**更新的範圍：** 套用 Analytics Platform System hotfix 或 service pack 必須讓整個應用裝置離線。  
+**更新範圍：** 將修補程式或 Service Pack 套用至分析平臺系統必須讓整個應用裝置離線。  
   
-**SSIS 目的地配接器和用戶端工具：** 套用 hotfix 時，會包括 SSIS 目的地配接器 MSI 的變更，或用戶端工具 MSI，MSI 檔中將會更新**C:\PDWINST\ClientTools**目錄在控制節點上。 Hotfix 不會自動安裝元件，以從更新的 MSI 檔案。 若要更新這些元件，客戶必須解除安裝舊版本的元件，然後從更新的 MSI 檔案安裝新的版本。 解除安裝 hotfix 時，會包括 SSIS 目的地配接器 MSI 的變更，或用戶端工具 MSI，這些元件的 MSI 檔案，就會還原成先前的版本。 若要還原成先前版本的這些元件，必須先解除安裝現有的 （較新的） 版本的元件，客戶，並將其重新安裝較舊的版本，從已還原的 MSI 檔案中。  
+**SSIS 目的地介面卡和用戶端工具：** 套用包含 SSIS 目的地介面卡 MSI 或用戶端工具 MSI 變更的修補程式時，會在控制節點上的**C:\PDWINST\ClientTools**目錄中更新 MSI 檔案。 此修補程式不會自動從更新的 MSI 檔案安裝元件。 若要更新這些元件，客戶必須卸載舊版本的元件，並從更新的 MSI 檔案安裝新版本。 卸載包含 SSIS 目的地介面卡 MSI 或用戶端工具 MSI 變更的修補程式時，這些元件的 MSI 檔案將會還原為先前的版本。 若要將這些元件還原成先前的版本，客戶必須卸載元件的現有（較新版本），並從還原的 MSI 檔案重新安裝較舊的版本。  
   
 ## <a name="software-servicing-topics"></a>軟體服務主題  
-下列主題說明如何管理軟體應用裝置上的服務：  
+下列主題說明如何管理設備上的軟體服務：  
   
--   [下載並套用 Microsoft 更新&#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
+-   [下載並套用 Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
   
--   [解除安裝 Microsoft 更新&#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+-   [將 Microsoft Updates 卸載 &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
   
--   [套用 Analytics Platform System Hotfix &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+-   [將分析平臺系統修補程式套用 &#40;分析平臺系統&#41;](apply-analytics-platform-system-hotfixes.md)  
   
--   [解除安裝 Analytics Platform System Hotfix &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+-   [&#40;分析平臺系統&#41;卸載分析平臺系統修補程式](uninstall-analytics-platform-system-hotfixes.md)  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

@@ -1,5 +1,5 @@
 ---
-title: 主要運算式 (XQuery) |Microsoft Docs
+title: 主要運算式（XQuery） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946386"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200518"
 ---
 # <a name="primary-expressions-xquery"></a>主要運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +36,17 @@ ms.locfileid: "67946386"
   
 |實體參考|表示|  
 |----------------------|----------------|  
-|&lt;|\<|  
-|&gt;|>|  
-|&amp;|&|  
-|&quot;|"|  
-|&apos;|'|  
+|`&lt;`|\<|  
+|`&gt;`|>|  
+|`&amp;`|&|  
+|`&quot;`|"|  
+|`&apos;`|'|  
   
- 字串常也可以包含字元參考、Unicode 字元的 XML 樣式參考，是由十進位或十六進位的字碼指標所識別。 例如，代表歐元符號，字元參考，「 &\#8364;"。  
+ 字串常也可以包含字元參考、Unicode 字元的 XML 樣式參考，是由十進位或十六進位的字碼指標所識別。 例如，歐元符號可以用字元參考 "&\#8364;" 表示。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 XML 1.0 版做為剖析的基礎。  
+>  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 XML 1.0 版做為剖析的基礎。  
   
 ### <a name="examples"></a>範例  
  下列範例說明常值的用途以及實體與字元的參考。  
@@ -64,7 +65,7 @@ GO
 ```  
 DECLARE @var XML  
 SET @var = ''  
-SELECT @var.query(' <SalaryRange>Salary > 50000 and < 100000</SalaryRange>')  
+SELECT @var.query(' <SalaryRange>Salary &gt; 50000 and &lt; 100000</SalaryRange>')  
 GO  
 ```  
   
@@ -93,7 +94,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 內建布林函數**true （)** 並**false （)** ，可用來代表布林值，如下列範例所示。  
+ 內建的布耳函數**true （）** 和**false （）** 可以用來代表布林值，如下列範例所示。  
   
 ```  
 DECLARE @var XML  
@@ -130,7 +131,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- 下列查詢所示，您可以使用 （） 延伸模組函數參考 SQL 變數。  
+ 您可以使用 sql： variable （）延伸函數來參考 SQL 變數，如下列查詢所示。  
   
 ```  
 DECLARE @price money  
@@ -151,12 +152,12 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   不支援模組匯入。  
   
--   不支援外部變數宣告。 此解決方案是使用[（） 函數](../xquery/xquery-extension-functions-sql-variable.md)。  
+-   不支援外部變數宣告。 此解決方案的解決方法是使用[sql： variable （）函數](../xquery/xquery-extension-functions-sql-variable.md)。  
   
 ## <a name="context-item-expressions"></a>內容項目運算式  
- 內容項目是路徑運算式內容中目前所處理的項目。 會在具有文件節點的非 NULL XML 資料類型執行個體中初始化它。 它也可以變更 nodes （） 方法，XPath 運算式的內容或 [] 述詞中。  
+ 內容項目是路徑運算式內容中目前所處理的項目。 會在具有文件節點的非 NULL XML 資料類型執行個體中初始化它。 它也可以在 XPath 運算式或 [] 述詞的內容中，由節點（）方法來變更。  
   
- 內容項目是由包含點 (.) 的運算式所傳回的內容項目。 例如，下列查詢會評估每個項目 <`a`> 屬性是否存在`attr`。 如果該屬性存在，就會傳回元素。 請注意，在述詞中的條件指定了單一句號所指定的內容節點。  
+ 內容項目是由包含點 (.) 的運算式所傳回的內容項目。 例如，下列查詢會評估屬性`a` `attr`是否存在 <> 的每個元素。 如果該屬性存在，就會傳回元素。 請注意，在述詞中的條件指定了單一句號所指定的內容節點。  
   
 ```  
 DECLARE @var XML  
@@ -172,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>函數呼叫  
- 您可以呼叫內建 XQuery 函數和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]variable 和： column （） 函式。 如需實作的函式的清單，請參閱 <<c0> [ 針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)。  
+ 您可以呼叫內建的 XQuery 函數和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql： variable （）和 sql： column （）函數。 如需已實作用的函式清單，請參閱[針對 Xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)。  
   
 #### <a name="implementation-limitations"></a>實作限制  
  以下為實作限制：  
@@ -182,6 +183,5 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
 -   不支援函數匯入。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
-  
-  
+ [&#40;XQuery&#41;的 XML 結構](../xquery/xml-construction-xquery.md)
+ 

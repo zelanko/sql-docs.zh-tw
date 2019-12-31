@@ -2,7 +2,7 @@
 title: 查看 SQL Server 升級的分析報表
 description: 查看資料庫測試助理中的分析報表
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,28 +10,28 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: fddc71bf7cdf7686154b4f9b5612cf671ca64fce
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056666"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317746"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>查看資料庫測試助理中的分析報表
 
-在資料庫測試助理（DEA）中[建立分析報表](database-experimentation-assistant-create-report.md)之後，請完成本文中所述的步驟來查看報表，並取得 A/B 測試所提供的效能深入解析。
+當您使用資料庫測試助理（DEA）[建立分析報表](database-experimentation-assistant-create-report.md)之後，請使用下列步驟來根據您的 A/B 測試來檢查效能深入解析的報表。
 
 ## <a name="select-a-server"></a>選取伺服器
 
 在 [DEA] 中，選取功能表圖示。 在展開的功能表中，選取檢查清單圖示旁的 [**分析報表**]，開啟 [分析報表] 視窗。
 
-在 [**分析報表**] 底下，輸入執行 SQL Server 的電腦名稱稱，該電腦具有分析資料庫。 選取 [連接]。 
+在 [**分析報表**] 底下，輸入執行 SQL Server 具有分析資料庫的電腦名稱稱，然後選取 **[連接]**。
 
 ![連接到現有的報表](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-如果您遺漏任何相依性，[**必要條件**] 頁面會提示您安裝它們的連結。 安裝必要條件，然後選取 [**再試一次**]。
+如果您遺漏任何相依性，[**必要條件**] 頁面會提示您安裝它們的連結。 如有必要，請安裝必要條件，然後選取 [**再試一次**]。
 
 ![必要條件頁面](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
@@ -78,16 +78,13 @@ ms.locfileid: "74056666"
 比較摘要報表具有可擴充的**錯誤資訊**和**查詢計劃資訊**區段。 這些區段會顯示這兩個實例的錯誤和計畫資訊。
 
 選取 [錯誤（紅色）] 圓形圖以顯示這些類型的錯誤：
+
 - **現有的錯誤**：中的錯誤。
 - **新的錯誤**： B 中的錯誤。
 - **已解決的錯誤**：中的錯誤，但不在 B 中。
 
 ![錯誤圖表](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="see-also"></a>另請參閱
 
 - 若要瞭解如何在命令提示字元中產生分析報告，請參閱[在命令提示](database-experimentation-assistant-run-command-prompt.md)字元中執行。
-
-- 如需 DEA 和示範的19分鐘簡介，請觀看下列影片：
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

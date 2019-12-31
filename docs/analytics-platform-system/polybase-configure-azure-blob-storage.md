@@ -1,6 +1,6 @@
 ---
-title: 設定存取 Azure Blob 儲存體中的外部資料的 PolyBase |Microsoft Docs
-description: 說明如何設定連接至外部 Hadoop 的平行處理資料倉儲的 PolyBase。
+title: 使用 PolyBase 存取 Azure Blob 儲存體中的外部資料
+description: 說明如何在平行處理資料倉儲中設定 PolyBase，以連線至外部 Hadoop。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960282"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400719"
 ---
-# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 以存取 Azure Blob 儲存體中的外部資料
+# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 存取 Azure Blob 儲存體中的外部資料
 
-本文說明如何使用 PolyBase 來查詢 Azure Blob 儲存體中的外部資料的 SQL Server 執行個體上。
+本文說明如何在 SQL Server 實例上使用 PolyBase 來查詢 Azure Blob 儲存體中的外部資料。
 
 > [!NOTE]
-> AP 時，目前僅支援標準的一般用途 v1 本地備援 (LRS) Azure Blob 儲存體。
+> AP 目前僅支援標準一般用途 v1 本機多餘的（LRS） Azure Blob 儲存體。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
- - 您的訂用帳戶中的 azure Blob 儲存體。
- - 在 Azure Blob 儲存體中建立容器。
+ - 訂用帳戶中的 Azure Blob 儲存體。
+ - 在 Azure Blob 儲存體中建立的容器。
 
 ### <a name="configure-azure-blob-storage-connectivity"></a>設定 Azure Blob 儲存體連線能力
 
-首先，設定 AP，以使用 Azure Blob 儲存體。
+首先，設定要使用 Azure Blob 儲存體的 AP。
 
-1. 執行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' 設定為 Azure Blob 儲存體提供者使用。 若要尋找提供者的值，請參閱 [PolyBase 連線設定](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
+1. 使用設定為 Azure Blob 儲存體提供者的「hadoop 連線能力」來執行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 。 若要尋找提供者的值，請參閱 [PolyBase 連線設定](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。
 
    ```sql  
    -- Values map to various external data sources.  
@@ -44,13 +45,13 @@ ms.locfileid: "67960282"
    GO
    ```  
 
-2. 重新啟動使用服務狀態 頁面上的 APS 地區[設備 Configuration Manager](launch-the-configuration-manager.md)。
+2. 使用[設備 Configuration Manager](launch-the-configuration-manager.md)上的 [服務狀態] 頁面重新開機 ap 區域。
   
 ## <a name="configure-an-external-table"></a>設定外部資料表
 
-若要查詢您的 Azure Blob 儲存體中的資料，您必須定義在 TRANSACT-SQL 查詢中使用外部資料表。 下列步驟描述如何設定外部資料表。
+若要查詢 Azure Blob 儲存體中的資料，您必須定義要在 Transact-SQL 查詢中使用的外部資料表。 下列步驟描述如何設定外部資料表。
 
-1. 在資料庫上建立主要金鑰。 必須加密的認證密碼。
+1. 在資料庫上建立主要金鑰。 需要加密認證秘密。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -65,7 +66,7 @@ ms.locfileid: "67960282"
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. 使用 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
+1. 建立外部資料源，並[建立外部資料源](../t-sql/statements/create-external-data-source-transact-sql.md)。。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -115,7 +116,7 @@ ms.locfileid: "67960282"
 
 有三個 PolyBase 適用的函數︰  
   
-- 臨機操作查詢外部資料表的詳細資訊。  
+- 針對外部資料表的特定查詢。  
 - 匯入資料。  
 - 匯出資料。  
 
@@ -123,7 +124,7 @@ ms.locfileid: "67960282"
 
 ### <a name="ad-hoc-queries"></a>特定查詢  
 
-下列臨機操作查詢會聯結關聯式資料在 Azure Blob 儲存體。 它會選取磁碟機速度 35 英哩/小時，聯結的結構化的客戶資料儲存在 SQL Server 與 Azure Blob 儲存體中的車輛感應器資料的客戶。  
+下列臨機操作查詢會聯結與 Azure Blob 儲存體中資料的關聯式。 它會選取速度低於 35 mph 的客戶，將儲存在 SQL Server 中的結構化客戶資料，聯結到儲存在 Azure Blob 儲存體中的汽車感應器資料。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -135,7 +136,7 @@ ORDER BY CarSensor_Data.Speed DESC
 
 ### <a name="importing-data"></a>匯入資料  
 
-下列查詢會將外部資料匯 AP。 此範例會將資料快速的驅動程式匯 AP，以執行更多的深入分析。 若要改善效能，它會利用 APS 中的資料行存放區技術。  
+下列查詢會將外部資料匯入至 AP。 這個範例會將快速驅動程式的資料匯入至 AP，以進行更深入的分析。 為了改善效能，它會運用 AP 中的資料行存放區技術。  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -154,7 +155,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>匯出資料  
 
-下列查詢會將資料從 AP 匯出至 Azure Blob 儲存體。 它可以用來保存關聯式資料到 Azure Blob 儲存體，同時仍能夠查詢它。
+下列查詢會將資料從 AP 匯出至 Azure Blob 儲存體。 它可以用來將關聯式資料封存到 Azure Blob 儲存體，同時仍然可以查詢它。
 
 ```sql
 -- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
@@ -170,13 +171,13 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>在 SSDT 中的檢視 PolyBase 物件  
+## <a name="view-polybase-objects-in-ssdt"></a>在 SSDT 中查看 PolyBase 物件  
 
-在 SQL Server Data Tools，外部資料表會顯示在個別的資料夾**外部資料表**。 外部資料來源和外部檔案格式會在 [外部資源]  下方的子資料夾中。  
+在 SQL Server Data Tools 中，外部資料表會顯示在個別的資料夾**外部資料表**中。 外部資料來源和外部檔案格式會在 [外部資源] **** 下方的子資料夾中。  
   
-![在 SSDT 中的 PolyBase 物件](media/polybase/external-tables-datasource.png)  
+![SSDT 中的 PolyBase 物件](media/polybase/external-tables-datasource.png)  
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
-如需有關 PolyBase 的詳細資訊，請參閱 [ 什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
+如需有關 PolyBase 的詳細資訊，請參閱[什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
 

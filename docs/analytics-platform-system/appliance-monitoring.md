@@ -1,6 +1,6 @@
 ---
-title: 設備監視-Analytics Platform System |Microsoft Docs
-description: 此應用裝置的監視指南描述的工具和監視 Analytics Platform System appliance 的工作。
+title: 設備監視
+description: 此設備監視指南說明用來監視分析平臺系統裝置的工具和工作。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,71 +8,72 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb25a5eccd1e77f08cedc74ad8042e0dc573605c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961502"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401418"
 ---
-# <a name="appliance-monitoring-for-analytics-platform-system"></a>設備監視 Analytics Platform System
-此應用裝置的監視指南描述的工具和監視 Analytics Platform System appliance 的工作。  
+# <a name="appliance-monitoring-for-analytics-platform-system"></a>分析平臺系統的設備監視
+此設備監視指南說明用來監視分析平臺系統裝置的工具和工作。  
   
-## <a name="Basics"></a>監視的基本概念和工具  
-和 SQL Server PDW 應用裝置上的，您可以監視資訊的值是廣泛。 例如，以下是典型的監視工作。  
+## <a name="Basics"></a>監視基本概念和工具  
+可以在 SQL Server PDW 設備上監視的值和資訊很廣泛。 例如，下列是一般的監視工作。  
   
--   檢查有任何 SQL Server PDW 所發出的警示。  
+-   檢查 SQL Server PDW 發出的任何警示。  
   
--   監視故障的硬體。  
+-   監視失敗的硬體。  
   
 -   監視網路連線問題。  
   
--   請檢查傳回給使用者，在查詢處理期間的錯誤。  
+-   檢查查詢處理期間傳回給使用者的錯誤。  
   
--   檢視目前使用中工作階段和查詢的數目。  
+-   查看目前使用中會話和查詢的數目。  
   
--   檢查載入、 備份及還原的狀態。  
+-   檢查負載、備份和還原的狀態。  
   
 ### <a name="appliance-monitoring-tools"></a>設備監視工具  
-有多個工具可用來監視設備。  
+有多種工具可用來監視設備。  
   
 管理主控台  
-SQL Server PDW 具有系統管理員主控台。 這是 web 型工具，顯示查詢、 載入、 備份和還原、 鎖定、 工作階段、 警示和應用裝置狀態的相關資訊。 設備; 上執行的系統管理員主控台使用者連線到透過 Internet Explorer 的系統管理員主控台。 如需詳細資訊，請參閱：  
+SQL Server PDW 具有管理主控台。 這是以 web 為基礎的工具，可顯示查詢、載入、備份和還原、鎖定、會話、警示和設備狀態的相關資訊。 管理主控台會在設備上執行;使用者透過 Internet Explorer 連接到管理主控台。 如需詳細資訊，請參閱：  
   
--   [使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+-   [使用管理主控台 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
 ![PDW 管理主控台警示](./media/appliance-monitoring/SQL_Server_PDW_AdminConsol_Queries.png "SQL_Server_PDW_AdminConsol_Queries")  
   
-系統檢視表  
-SQL Server PDW 包含完整的系統檢視，讓您取得設備健全狀況、 狀態和效能的詳細的資訊。 如需監視工作的系統檢視表的清單，請參閱：  
+系統檢視  
+SQL Server PDW 包含完整的系統檢視，可讓您取得有關設備健全狀況、狀態和效能的詳細資訊。 如需監視工作的系統檢視清單，請參閱：  
   
--   [使用系統檢視表來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
+-   [使用系統檢視 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-system-views.md)  
   
-System Center Operations Manager (SCOM)  
-SQL Server PDW 的 Systems Center Operations manager 的豐富整合。 SQL Server PDW 的管理組件可免費下載。 如需使用 System Center 來監視 SQL Server PDW 的詳細資訊，請參閱下列各項：  
+System Center Operations Manager （SCOM）  
+SQL Server PDW 與 Systems Center Operations Manager 有廣泛的整合。 SQL Server PDW 的管理元件可免費下載。 如需使用 System Center 監視 SQL Server PDW 的詳細資訊，請參閱下列各項：  
   
--   [使用 System Center Operations Manager 監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+-   [使用 System Center Operations Manager &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
 自訂解決方案  
-情況下當 System Center 是不與您的資料中心監視工具，您可以監視設備使用第三方監視解決方案。 在 PDW 中，目前不支援外部軟體代理程式的安裝，但大部分監視解決方案支援的 Transact\-SQL 整合，讓系統管理員可以實作直接 Transact\-PDW 的 SQL 查詢應用裝置。  
+在您的資料中心監視工具無法使用 System Center 的情況下，您可以使用協力廠商監視解決方案來監視設備。 PDW 目前不支援安裝外部軟體代理程式，但大部分的監視解決方案都支援 Transact-sql\-整合，因此系統管理員可以對您的 PDW 應用\-裝置執行直接的 transact-SQL 查詢。  
   
-如果您的監視解決方案不支援直接 Transact\-SQL 查詢，或您不需要是監視工具，則您可以使用指令碼來執行監視工作，例如發生警示時傳送電子郵件。  TechNet wiki 中包含已編寫指令碼的監視解決方案範例。  
+如果您的監視解決方案不支援直接 Transact-sql\-查詢，或您沒有監視工具，則可以使用腳本來執行監視工作，例如在發生警示時傳送電子郵件。  TechNet wiki 包含腳本的監視解決方案範例。  
   
--   [適用於 SQL Server PDW 監控範例的 power Shell](https://go.microsoft.com/fwlink/?LinkId=248020)  
+-   [SQL Server PDW 的 Power Shell 監視範例](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
 ## <a name="Tasks"></a>相關監視工作  
   
 |監視工作|描述|  
 |-------------------|---------------|  
-|使用管理主控台來監視設備。|[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
-|使用系統檢視表來監視設備。|[使用系統檢視表來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  
-|使用 System Center 來監視設備|[使用 System Center Operations Manager 監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)|  
-|監視設備的狀態。|[監視設備健全狀況狀態&#40;Analytics Platform System&#41;](monitor-appliance-health-state.md)|  
-|活動訊號監視。|[將遙測意見反應傳送給 Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)|  
-|追蹤設備警示。|[追蹤設備警示&#40;Analytics Platform System&#41;](track-appliance-alerts.md)|  
-|判斷正在使用多少容量。|[檢視容量使用率&#40;Analytics Platform System&#41;](view-capacity-utilization.md)|  
-|決定頻率輪詢應用裝置。|[判斷輪詢頻率&#40;Analytics Platform System&#41;](determine-polling-frequency.md)|  
-|當叢集失敗發生時，判斷哪一個叢集節點失敗。|[判斷哪一個叢集節點失敗， &#40;Analytics Platform System&#41;](determine-which-cluster-node-failed.md)|  
+|使用管理主控台來監視設備。|[使用管理主控台 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
+|使用系統檢視來監視設備。|[使用系統檢視 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-system-views.md)|  
+|使用 System Center 監視設備|[使用 System Center Operations Manager &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)|  
+|監視設備的狀態。|[監視設備健全狀況狀態 &#40;分析平臺系統&#41;](monitor-appliance-health-state.md)|  
+|監視的信號。|[將遙測意見反應傳送給 Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)|  
+|追蹤設備警示。|[&#40;分析平臺系統&#41;追蹤設備警示](track-appliance-alerts.md)|  
+|判斷使用多少容量。|[查看 &#40;分析平臺系統&#41;的容量使用率](view-capacity-utilization.md)|  
+|判斷輪詢設備的頻率。|[判斷 &#40;分析平臺系統&#41;的輪詢頻率](determine-polling-frequency.md)|  
+|發生叢集失敗時，判斷哪個叢集節點失敗。|[判斷哪些叢集節點 &#40;分析平臺系統失敗&#41;](determine-which-cluster-node-failed.md)|  
 
 
 <!-- MISSING LINKS |Monitor loads.|[Monitor Loads &#40;SQL Server PDW&#41;](../sqlpdw/monitor-loads-sql-server-pdw.md)|  -->  
@@ -81,5 +82,5 @@ SQL Server PDW 的 Systems Center Operations manager 的豐富整合。 SQL Serv
   
 ## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[設備管理工作&#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
+[&#40;分析平臺系統&#41;的裝置管理工作](appliance-management-tasks.md)  
   

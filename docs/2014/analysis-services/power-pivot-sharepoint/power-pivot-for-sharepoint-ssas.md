@@ -1,7 +1,7 @@
 ---
-title: PowerPivot for SharePoint (SSAS) |Microsoft Docs
+title: PowerPivot for SharePoint （SSAS） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -10,12 +10,12 @@ ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 486db389b3cca8936a5350da61880637406a1387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071136"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683581"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint 是以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 PowerPivot for SharePoint 提供將 PowerPivot 資料裝載於 SharePoint 伺服器陣列的功能。 PowerPivot 資料是您使用下列其中一個項目建立的分析資料模型：  
@@ -24,12 +24,12 @@ ms.locfileid: "66071136"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 |[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
   
  這些資料的伺服器裝載需要 SharePoint、Excel Services 和 PowerPivot for SharePoint 安裝。 資料載入到 PowerPivot for SharePoint 執行個體上，在此處可透過伺服器為 Excel 2010 活頁簿提供的 PowerPivot 資料重新整理功能或是為 Excel 2013 活頁簿提供的 SharePoint 2013 Excel Services，依排程間隔重新整理資料。  
   
 ## <a name="powerpivot-for-sharepoint-2013"></a>PowerPivot for SharePoint 2013  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 Excel Services 使用包含資料模型和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View 報表的 Excel 活頁簿。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]支援[!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 excel Services 使用包含資料模型和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View 報表的 excel 活頁簿。  
   
  SharePoint 2013 中的 Excel Services 包含資料模型功能，可在瀏覽器中啟用與 PowerPivot 活頁簿的互動。 您不需要將 PowerPivot for SharePoint 2013 增益集部署至伺服器陣列。 您只需要在 SharePoint 模式下安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，並且在 Excel Services **[資料模型]** 設定中註冊伺服器即可。  
   
@@ -53,20 +53,20 @@ ms.locfileid: "66071136"
   
  SharePoint 整合模式的 Analysis Service 伺服器執行個體會完成部署。 它會載入、查詢和卸載資料。 如果活頁簿設定為使用 PowerPivot 資料重新整理，它也會處理資料。  每個執行個體會與相同安裝中的本機 PowerPivot 系統服務緊密結合在一起。  
   
-##  <a name="bkmk_RelatedContent"></a> 本節內容  
- [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+##  <a name="bkmk_RelatedContent"></a>本節內容  
+ [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [使用 Windows PowerShell 的 PowerPivot 設定](power-pivot-configuration-using-windows-powershell.md)  
+ [使用 Windows PowerShell 的 PowerPivot 組態](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot 設定工具](power-pivot-configuration-tools.md)  
+ [PowerPivot 組態工具](power-pivot-configuration-tools.md)  
   
  [PowerPivot 驗證及授權](power-pivot-authentication-and-authorization.md)  
   
- [PowerPivot 健全狀況規則-設定](configure-power-pivot-health-rules.md)  
+ [PowerPivot 健全狀況規則 - 設定](configure-power-pivot-health-rules.md)  
   
  [PowerPivot 管理儀表板和使用量資料](power-pivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot Gallery](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [PowerPivot 圖庫](../../2014-toc/index.yml)  
   
  [PowerPivot 資料存取](power-pivot-data-access.md)  
   
@@ -74,21 +74,21 @@ ms.locfileid: "66071136"
   
  [PowerPivot 資料摘要](power-pivot-data-feeds.md)  
   
- [PowerPivot BI 語意模型連接&#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
+ [PowerPivot BI 語義模型連接 &#40;. bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
- **其他章節內容**  
+ **其他章節**  
   
 ## <a name="additional-topics"></a>其他主題  
  [升級 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
  [PowerPivot for SharePoint 2013 安裝](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
- [Powerpivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+ [PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
- [授權拓撲和成本範例 SQL Server 2014 自助商業智慧](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
+ [SQL Server 2014 自助商業智慧的授權拓撲和成本範例](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 規劃與部署](https://go.microsoft.com/fwlink/?linkID=220972)   
- [Powerpivot for SharePoint 災害復原](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [PowerPivot for SharePoint 災害復原](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

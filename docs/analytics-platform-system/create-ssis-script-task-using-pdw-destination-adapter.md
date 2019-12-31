@@ -1,5 +1,5 @@
 ---
-title: 使用 SSIS PDW 目的地配接器建立指令碼工作 |Microsoft Docs
+title: 使用 SSIS PDW 目的地介面卡建立腳本工作
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 ms.prod: sql
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961061"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401224"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>建立會使用平行處理資料倉儲 SSIS 目的地配接器的指令碼工作
-此 SSIS 封裝的指令碼是使用 SSIS PDW 目的地配接器的程式碼範例。  Integration Services 指令碼工作可讓您執行.Net 應用程式內容中的 SSIS 控制流程可以完成幾乎任何作業。 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>建立使用 SSIS 平行處理資料倉儲目的地介面卡的腳本工作
+此 SSIS 封裝腳本程式碼是使用 SSIS PDW 目的地介面卡的程式碼範例。  Integration Services 腳本工作可讓您執行幾乎任何可在 SSIS 控制流程內容的 .Net 應用程式中完成的作業。 
   
 ## <a name="sample-code"></a>範例程式碼  
   
-1.  在 SSIS 中建立空白的指令碼工作。  
+1.  在 SSIS 中建立空白的腳本工作。  
   
-2.  開啟中的工作**指令碼工作編輯器**，然後按一下**編輯指令碼**。  
+2.  在 [**腳本工作編輯器**] 中開啟工作，然後按一下 [**編輯腳本**]。  
   
-3.  編輯指令碼，使用下面提供的程式碼。 自訂您的環境的指令碼進行下列變更：  
+3.  編輯腳本，以使用下面提供的程式碼。 藉由進行下列變更，為您的環境自訂腳本：  
   
-    -   您必須保留指令碼工作所建立的指令碼的命名空間。 請注意命名空間名稱`namespace ST_<GUID>`並編輯下列指令碼，變更*ST_<GUID>* 原始*GUID*指令碼工作。  
+    -   您必須保留腳本工作所建立之腳本的命名空間。 請注意命名空間`namespace ST_<GUID>`的名稱，並編輯下面的腳本，將*ST_<GUID> *變更為腳本工作的原始*GUID* 。  
   
-    -   四個取代的預留位置值*XXXXXXXX*適用於您環境和預定的動作的值。  
+    -   以適用于您的環境的值和您想要的動作來取代四個預留位置值*xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* 。  
   
     ```c#  
     #region Help:  Introduction to the script task  

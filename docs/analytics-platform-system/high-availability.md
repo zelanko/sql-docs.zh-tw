@@ -1,6 +1,6 @@
 ---
-title: Analytics Platform System 中的高可用性 |Microsoft Docs
-description: 了解 Analytics Platform System (APS) 的高可用性架構的方式。
+title: 高可用性
+description: 瞭解分析平臺系統（AP）如何架構以提供高可用性。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,38 +8,39 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cdf1837bd3b3b1cdf8e189ae591cd6fbff58387a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6246ed25909a2e366d8bbafcd912a4fd923cc84a
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960869"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401107"
 ---
-# <a name="analytics-platform-system-high-availability"></a>Analytics Platform System 的高可用性
-了解 Analytics Platform System (APS) 的高可用性架構的方式。  
+# <a name="analytics-platform-system-high-availability"></a>分析平臺系統高可用性
+瞭解分析平臺系統（AP）如何架構以提供高可用性。  
   
 ## <a name="high-availability-architecture"></a>高可用性架構  
 ![設備架構](media/appliance-architecture.png "設備架構")  
   
-## <a name="network"></a>Network  
-如需網路可用性，AP 設備會有兩個 InfiniBand 網路。 如果其中一個 InfiniBand 網路故障，另一個是仍然可用。 此外，Active Directory 已複寫網域控制站來解析到正確的 InfiniBand 網路的連入要求。  
+## <a name="network"></a>網路  
+針對網路可用性，AP 應用裝置有兩個不適用的網路。 如果其中一個未使用的網路停止運作，另一個則仍然可用。 此外，Active Directory 已複寫網域控制站，以將連入要求解析為正確的未處理網路。  
   
-如需詳細資訊，請參閱 <<c0> [ 設定的 InfiniBand 網路介面卡](configure-infiniband-network-adapters.md)。  
+如需詳細資訊，請參閱設定不確定的[網路介面卡](configure-infiniband-network-adapters.md)。  
   
 ## <a name="storage"></a>儲存體  
-若要保護資料安全，AP 使用 RAID 1 鏡像設定至保留的所有使用者資料的兩份。 當磁碟失敗時，硬體系統重建備用磁碟資料，並設定警示是在磁碟故障。  
+為了保護資料安全，AP 會使用 RAID 1 鏡像來維護兩個使用者資料的複本。 當磁片故障時，硬體系統會將資料重建到備用磁片，並設定發生磁片失敗的警示。  
   
-將可用的資料保持在線上，APS 會使用 Windows 儲存空間 」 與 「 叢集共用磁碟區來管理直接連結存放裝置中的使用者資料磁碟。 沒有每個組織成叢集共用磁碟區計算節點主機透過掛接點，您可以使用哪些資料縮放單位的一個儲存體集區。  
+為了讓資料可在線上使用，AP 會使用 Windows 儲存空間和叢集共用磁片區來管理直接連結儲存體中的使用者資料磁片。 每個資料縮放單位都有一個存放集區，其組織成叢集共用磁片區，可透過掛接點供計算節點主機使用。  
   
-若要確保儲存體集區為線上狀態，資料縮放單位中的每一部主機會有不會容錯移轉 ISCSI 虛擬機器。 此架構很重要的因為主機失敗，資料是否仍然可以存取透過資料縮放單位中的其他主機。  
+為確保存放集區保持上線，資料縮放單位中的每個主機都有一個不會容錯移轉的 ISCSI 虛擬機器。 此架構很重要，因為如果主機失敗，仍然可以透過資料縮放單位中的其他主機來存取資料。  
   
-## <a name="hosts"></a>主控件  
-主應用程式可用性，所有主機都設定至 Windows 容錯移轉叢集。 每個機架有被動主機。 第一個機架，控制 SQL Server Parallel Data Warehouse (PDW) 和設備的網狀架構，可以選擇第二個被動主應用程式。 如果主機失敗，已針對容錯移轉的虛擬機器將會容錯移轉至可用的被動主應用程式。  
+## <a name="hosts"></a>主機  
+對於主機可用性，所有主機都會設定為 Windows 容錯移轉叢集。 每個機架都有被動主機。 （選擇性）第一個機架（控制 SQL Server 平行處理資料倉儲（PDW）和設備網狀架構）可以有第二部被動主機。 如果主機失敗，針對容錯移轉設定的虛擬機器將會容錯移轉到可用的被動主機。  
   
-## <a name="pdw-nodes-and-appliance-fabric"></a>PDW 節點和設備的網狀架構  
-PDW 節點和設備的網狀架構的高可用性 / AP 使用虛擬化。 PDW 與設備的網狀架構元件的每個執行中虛擬機器。  
+## <a name="pdw-nodes-and-appliance-fabric"></a>PDW 節點和設備網狀架構  
+為了讓 PDW 節點和設備網狀架構具有高可用性，AP 會使用虛擬化。 每個 PDW 和設備網狀架構元件都會在虛擬機器中執行。  
   
-每個虛擬機器被指 Windows 容錯移轉叢集中的角色。 當虛擬機器失敗時，叢集會在可用的被動主機上重新啟動它。 使用 System Center Virtual Machine Manager 所部署虛擬機器。 發生容錯移轉，在被動的主機上執行的虛擬機器時，仍能夠存取使用者資料透過 InfiniBand 網路。  
+每部虛擬機器都定義為 Windows 容錯移轉叢集中的角色。 當虛擬機器失敗時，叢集會在可用的被動主機上將它重新開機。 系統會使用 System Center Virtual Machine Manager 來部署虛擬機器。 發生容錯移轉時，在被動主機上執行的虛擬機器仍然可以透過未使用的網路存取其使用者資料。  
   
-控制節點和計算節點的虛擬機器分別設定為單一節點的叢集。 單一節點叢集管理的 InfiniBand 網路做為叢集資源，以確定叢集一律使用作用中的 InfiniBand IP。 單一節點叢集會管理虛擬機器內執行的 PDW 處理程序。 例如，單一節點叢集的 SQL Server 和資料移動服務 (DMS) 做為資源以便它可以啟動它們依正確順序。 控制節點 VM 也會控制在協調流程主控件執行的其他 Vm 啟動順序。  
+「控制節點」和「計算節點」虛擬機器分別設定為單一節點叢集。 單一節點叢集會將無法使用的網路視為叢集資源來管理，以確保叢集一律使用作用中的未通過 IP。 單一節點叢集會管理在虛擬機器內執行的 PDW 進程。 例如，單一節點叢集具有 SQL Server 和資料移動服務（DMS）做為資源，讓它能夠以適當的順序啟動它們。 控制節點 VM 也會控制在協調流程主機上執行的其他 Vm 的啟動順序。  
   

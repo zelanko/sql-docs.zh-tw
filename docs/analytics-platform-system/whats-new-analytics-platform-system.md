@@ -1,5 +1,5 @@
 ---
-title: Analytics Platform System 的新功能-向外延展資料倉儲
+title: 新功能
 description: 請參閱 Microsoft Analytics Platform System 的新功能，這是裝載 MPP SQL Server 平行處理資料倉儲的向外延展內部部署應用裝置。
 author: mzaman1
 manager: craigg
@@ -9,19 +9,20 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9d0ff3861912270091b6a63cbd3fd7b2e8e0e481
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227103"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399424"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System 的新功能，向外延展 MPP 資料倉儲
 請參閱 Microsoft Analytics Platform System （AP）最新設備更新的新功能。 「AP」是一種向外延展內部部署應用裝置，其裝載 MPP SQL Server 平行處理資料倉儲。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.5"></a>
-## <a name="aps-cu75"></a>AP CU 7。5
+## <a name="aps-cu75"></a>APS CU7.5
 發行日期-2019 年9月
 
 ### <a name="alter-external-data-source"></a>改變外部資料源
@@ -120,12 +121,12 @@ from cte;
 發行日期-2018 年7月
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 命令不會耗用平行存取插槽（行為變更）
-AP 支援部分 T-sql [dbcc 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)，例如[dbcc DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)。 先前，這些命令會耗用[並行](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)位置，減少可執行檔使用者負載/查詢數目。 `DBCC`命令現在會在本機佇列中執行，而不會耗用使用者平行存取位置來改善整體查詢執行效能。
+AP 支援部分 T-sql [dbcc 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)，例如[dbcc DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)。 之前，這些命令會耗用[並行位置](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)，減少可執行的使用者載入/查詢數量。 `DBCC`命令現在會在本機佇列中執行，而不會耗用使用者平行存取位置來改善整體查詢執行效能。
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>以目錄物件取代一些中繼資料呼叫
 使用類別目錄物件進行中繼資料呼叫，而不使用 SMO，會在 AP 中顯示效能改進。 從 CU 7.1 開始，其中一些中繼資料呼叫現在預設會使用目錄物件。 如果使用中繼資料查詢的客戶遇到任何問題，[功能切換](appliance-feature-switch.md)就可以關閉此行為。
 
-### <a name="bug-fixes"></a>錯誤修正
+### <a name="bug-fixes"></a>Bug 修正
 我們已使用 AP CU 7.1 升級至 SQL Server 2016 SP2 CU2。 升級會修正下面所述的一些問題。
 
 | 標題 | 描述 |
@@ -172,18 +173,18 @@ AP AU6 會在最新的 SQL Server 2016 版本上執行，並使用預設的資�
 ### <a name="t-sql"></a>T-SQL
 [AP AU6] 支援這些 T-sql 相容性改善。  這些額外的語言元素可讓您更輕鬆地從 SQL Server 和其他資料來源進行遷移。 
 
-- 除了 Windows 定序以外，現在也支援資料[資料行層級 SQL 定序][]定序。
+- 除了 Windows 定序以外，現在也支援資料[行層級的 SQL][]定序。
 - 叢集資料行存放區[索引上的非叢集索引][]可改善在叢集資料行存放區索引中搜尋特定值之查詢的效能。 
-- [SELECT...INTO][] 
+- [選取 .。。登錄][] 
 - [sp_spaceused （）][]會顯示資料表或資料庫中所使用或保留的磁碟空間。
 - [寬型資料表][]支援與 SQL Server 2016 相同。 針對資料列大小，先前的 32 K 限制已不再存在。 
 
 **資料類型**
 
-- [VARCHAR(MAX)][]、 [NVARCHAR(MAX)][]和[VARBINARY(MAX)][]。 這些 LOB 資料類型的大小上限為 2 GB。 若要載入這些物件，請使用[Bcp 公用程式][]。 PolyBase 和 dwloader 目前不支援這些資料類型。 
+- [VARCHAR （max）][]、 [NVARCHAR （Max）][]和[VARBINARY （max）][]。 這些 LOB 資料類型的大小上限為 2 GB。 若要載入這些物件，請使用[Bcp 公用程式][]。 PolyBase 和 dwloader 目前不支援這些資料類型。 
 - [SYSNAME][]
 - [唯一][]
-- [NUMERIC][]和十進位資料類型。
+- [數值][]和十進位資料類型。
 
 **視窗函式**
 
@@ -195,13 +196,13 @@ AP AU6 會在最新的 SQL Server 2016 版本上執行，並使用預設的資�
 
 **安全性功能**
 
-- [CHECKSUM()][]和[BINARY_CHECKSUM()][]
-- [HAS_PERMS_BY_NAME()][]
+- [CHECKSUM （）][]和[BINARY_CHECKSUM （）][]
+- [HAS_PERMS_BY_NAME （）][]
 
 **其他函數**
 
-- [NEWID()][]
-- [RAND()][]
+- [NEWID （）][]
+- [RAND （）][]
 
 ### <a name="polybasehadoop-enhancements"></a>PolyBase/Hadoop 增強功能
 
@@ -241,28 +242,28 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [database compatibility level 130]: ../t-sql/statements/alter-database-transact-sql-compatibility-level.md
 [資料行層級 SQL 定序]: ~/relational-databases/collations/collation-and-unicode-support.md
 
-[索引上的非叢集索引]:/sql/t-sql/statements/create-index-transact-sql
-[VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
-[NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[叢集資料行存放區索引上的非叢集索引]:/sql/t-sql/statements/create-index-transact-sql
+[VARCHAR （MAX）]:/sql/t-sql/data-types/char-and-varchar-transact-sql
+[NVARCHAR （MAX）]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[VARBINARY （MAX）]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
+[選取 .。。登錄]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused （）]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [寬型資料表]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp 公用程式]:/sql/tools/bcp-utility
 [唯一]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
-[列或範圍]:/sql/t-sql/queries/select-over-clause-transact-sql
+[數值]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[資料列或範圍]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
 [CUME_DIST]:/sql/t-sql/functions/cume-dist-transact-sql
 [PERCENT_RANK]:/sql/t-sql/functions/percent-rank-transact-sql
-[CHECKSUM()]:/sql/t-sql/functions/checksum-transact-sql
-[BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
-[HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
-[NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[RAND()]:/sql/t-sql/functions/rand-transact-sql
+[總和檢查碼（）]:/sql/t-sql/functions/checksum-transact-sql
+[BINARY_CHECKSUM （）]:/sql/t-sql/functions/binary-checksum-transact-sql
+[HAS_PERMS_BY_NAME （）]:/sql/t-sql/functions/has-perms-by-name-transact-sql
+[NEWID （）]:/sql/t-sql/functions/newid-transact-sql
+[RAND （）]:/sql/t-sql/functions/rand-transact-sql
 
 
   

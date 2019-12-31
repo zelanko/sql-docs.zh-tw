@@ -1,6 +1,6 @@
 ---
-title: Analytics Platform System 中的使用者工作階段 |Microsoft Docs 」
-description: Analytics Platform System 的平行處理資料倉儲的使用者工作階段。
+title: 使用者工作階段
+description: 分析平臺系統的平行處理資料倉儲中的使用者會話。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,63 +8,64 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 49c8ea2479c0114364958b18ac299794511154d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a0e5b338cc616be214ef39527551ee4a6ffd8f56
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959792"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399403"
 ---
-# <a name="user-sessions-in-analytics-platform-system"></a>Analytics Platform System 中的使用者工作階段
-具有適當的權限的登入可以管理 SQL Server PDW 應用裝置，包括執行這些動作上的所有登入工作的階段：  
+# <a name="user-sessions-in-analytics-platform-system"></a>Analytics Platform System 中的使用者會話
+具有適當許可權的登入可以管理 SQL Server PDW 設備上所有登入的會話，包括執行下列動作：  
   
--   檢視目前的工作階段上的應用裝置，包括作用中和閒置工作階段。  
+-   查看設備上目前的會話，包括作用中和閒置會話。  
   
--   檢視作用中和最近的查詢工作階段。  
+-   查看會話的使用中和最近的查詢。  
   
--   結束使用中工作階段。  
+-   結束使用中的會話。  
   
-可以執行這些動作，使用其中一種[使用管理主控台來監視設備](monitor-the-appliance-by-using-the-admin-console.md)或是[系統檢視表](tsql-system-views.md)透過 SQL 命令，如下所示。  
+您可以使用 [[使用管理主控台來監視設備](monitor-the-appliance-by-using-the-admin-console.md)] 或 [透過 SQL 命令的[系統檢視](tsql-system-views.md)] 來執行這些動作，如下所示。  
   
-若要使用哪一種方法來管理工作階段所需的權限相同，並詳述於[管理的登入、 使用者和資料庫角色授與權限](grant-permissions.md#grant-permissions-to-manage-logins-users-and-database-roles)。  
+使用任一種方法來管理會話所需的許可權都相同，並在[授與管理登入、使用者和資料庫角色的許可權](grant-permissions.md#grant-permissions-to-manage-logins-users-and-database-roles)中說明。  
   
-## <a name="manage-sessions-by-using-the-admin-console"></a>使用管理主控台來管理工作階段  
+## <a name="manage-sessions-by-using-the-admin-console"></a>使用管理主控台管理會話  
   
-### <a name="to-view-current-sessions-by-using-the-admin-console"></a>若要使用管理主控台來檢視目前的工作階段  
+### <a name="to-view-current-sessions-by-using-the-admin-console"></a>使用管理主控台來查看目前的會話  
   
-1.  在上方功能表中，按一下 **工作階段**。  
+1.  在頂端功能表上，按一下 [**會話**]。  
   
-2.  結果清單會顯示所有最近的工作階段。 若要檢視僅 'Active' 或 'Idle' 的工作階段，請按一下**狀態**資料行標頭，依狀態排序結果。  
+2.  產生的清單會顯示所有最近的會話。 若只要查看「作用中」或「閒置」會話，請按一下 [**狀態**] 欄標題，依狀態排序結果。  
   
-### <a name="to-view-active-and-recent-queries-for-a-session-by-using-the-admin-console"></a>若要檢視工作階段的作用中和最近的查詢，使用管理主控台  
+### <a name="to-view-active-and-recent-queries-for-a-session-by-using-the-admin-console"></a>使用管理主控台來查看會話的作用中和最近查詢  
   
-1.  在上方功能表中，按一下 **工作階段**。  
+1.  在頂端功能表上，按一下 [**會話**]。  
   
-2.  在 [結果] 清單中，按一下所需的工作階段的工作階段識別碼。  
+2.  在結果清單中，按一下所需會話的會話識別碼。  
   
-3.  產生的查詢清單會顯示最近的查詢工作階段。 如需有關檢視查詢詳細資料，請參閱[監視使用中查詢](monitoring-active-queries.md)。  
+3.  [產生的查詢] 清單會顯示會話最近的查詢。 如需有關查看查詢詳細資料的資訊，請參閱監視使用中的[查詢](monitoring-active-queries.md)。  
   
-### <a name="to-end-sessions-by-using-the-admin-console"></a>若要使用管理主控台，結束工作階段  
+### <a name="to-end-sessions-by-using-the-admin-console"></a>使用管理主控台來結束會話  
   
-1.  在上方功能表中，按一下 **工作階段**。  
+1.  在頂端功能表上，按一下 [**會話**]。  
   
-2.  尋找要取消工作階段的工作階段識別碼。  
+2.  尋找要取消之會話的會話識別碼。  
   
-3.  按一下紅色**X**左邊的 結束工作階段的工作階段識別碼。 只有工作階段狀態為 'Active' 或 '閒置' 將會有紅色**X**; 僅限這些工作階段可以結束。  
+3.  按一下 [會話識別碼] 左邊的紅色**X**來結束會話。 只有狀態為「作用中」或「閒置」的會話才會有紅色**X**;只有這些會話可以結束。  
   
-## <a name="manage-sessions-by-using-system-views-and-sql-commands"></a>使用系統檢視表和 SQL 命令來管理工作階段  
+## <a name="manage-sessions-by-using-system-views-and-sql-commands"></a>使用系統檢視和 SQL 命令管理會話  
   
-### <a name="to-view-current-sessions-by-using-system-views"></a>若要使用系統檢視表來檢視目前的工作階段  
-使用[sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)來產生一份目前的工作階段。  
+### <a name="to-view-current-sessions-by-using-system-views"></a>使用系統檢視來查看目前的會話  
+使用[dm_pdw_exec_sessions sys.databases](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)來產生目前會話的清單。  
   
-此範例會傳回所有的工作階段狀態為 'Active' 或 'Idle' session_id、 login_name 和狀態。  
+這個範例會針對狀態為「作用中」或「閒置」的所有會話，傳回 session_id、login_name 和狀態。  
   
 ```sql  
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions WHERE status='Active' OR status='Idle';  
 ```  
   
-### <a name="to-view-active-and-recent-queries-for-a-session-by-using-system-views"></a>若要使用系統檢視來檢視作用中和最近的查詢工作階段  
-若要查看工作階段相關聯的作用中和最近完成的查詢，您使用[sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)並[sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)檢視。 此查詢會傳回一份所有作用中或閒置工作階段，再加上與每個工作階段識別碼相關聯的任何作用中或新查詢  
+### <a name="to-view-active-and-recent-queries-for-a-session-by-using-system-views"></a>若要使用系統檢視來查看會話的現用和最近查詢  
+若要查看與會話相關聯的作用中和最近完成的查詢，請使用[dm_pdw_exec_sessions sys.databases](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)和[sys.databases dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) views。 此查詢會傳回所有作用中或閒置會話的清單，以及與每個會話識別碼相關聯的任何作用中或最近的查詢。  
   
 ```sql  
 SELECT es.session_id, es.login_name, es.status AS sessionStatus,   
@@ -76,16 +77,16 @@ WHERE (es.status='Active' OR es.status='Idle') AND
 (er.status!= 'Completed' AND er.status!= 'Failed' AND er.status!= 'Cancelled');  
 ```  
   
-### <a name="to-end-sessions-by-using-sql-commands"></a>若要使用 SQL 命令結束工作階段  
-使用[KILL](../t-sql/language-elements/kill-transact-sql.md)命令來結束目前的工作階段。 您必須處理序終止，可以使用取得的工作階段識別碼[sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)檢視。  
+### <a name="to-end-sessions-by-using-sql-commands"></a>使用 SQL 命令結束會話  
+使用[KILL](../t-sql/language-elements/kill-transact-sql.md)命令來結束目前的會話。 您將需要終止進程的會話識別碼，您可以使用 [ [dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) ] 視圖來取得該程式。  
   
-在此範例中，選取 login_name、 session_id 和狀態值，以尋找登入名稱為基礎的工作階段。  
+在此範例中，選取 [login_name]、[session_id] 和 [狀態值]，以根據登入名稱來尋找會話。  
   
 ```sql  
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions;  
 ```  
   
-'Active' 或 'Idle' 狀態的工作階段可以使用 KILL 命令結束。  
+具有「作用中」或「閒置」狀態的會話可以使用 KILL 命令來結束。  
   
 ```sql  
 KILL 'SID137';  

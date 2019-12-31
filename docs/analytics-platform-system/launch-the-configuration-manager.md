@@ -1,6 +1,6 @@
 ---
-title: 啟動 Configuration Manager-Analytics Platform System |Microsoft Docs
-description: 啟動 Analytics Platform System appliance 的 Configuration Manager 工具的指示。
+title: 啟動 Configuration Manager
+description: 為分析平臺系統裝置啟動 Configuration Manager 工具的指示。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,44 +8,45 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7aef9ada4a93605460cf2759dbe9deeddfc9e0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960720"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401048"
 ---
-# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>啟動 Analytics Platform System 中的 Configuration Manager
-本主題提供指示來啟動**Configuration Manager** for Analytics Platform System appliance。  
+# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>在 Analytics Platform System 中啟動 Configuration Manager
+本主題提供為 Analytics Platform System 設備啟動**Configuration Manager**的指示。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
 ### <a name="prerequisites"></a>必要條件  
-Analytics Platform System**Configuration Manager**設備網域系統管理員，才可以執行。 若要執行這項工具，您需要設備網域系統管理員密碼。 若要建立其他的 APS 系統管理員，請參閱[建立 APS 網域系統管理員&#40;AP&#41;](create-an-aps-domain-administrator-aps.md)。  
+Analytics Platform System**Configuration Manager**只能由設備網域系統管理員執行。 若要執行此工具，您需要設備網域系統管理員的密碼。 若要建立額外的 AP 系統管理員，請參閱[&#40;ap&#41;建立 Ap 網域系統管理員](create-an-aps-domain-administrator-aps.md)。  
   
-## <a name="Accessing"></a>啟動組態管理員工具  
-若要執行 Configuration Manager，請使用遠端桌面連接至 PDW 控制節點 ( **_PDW_region_-CTL01**) 節點，然後登入為_appliance_domain_ **\Administrator**。 啟動時**Configuration Manager**程式中，使用**系統管理員身分執行**選項可確保使用您的系統管理員認證。  
+## <a name="Accessing"></a>啟動 Configuration Manager 工具  
+若要執行 Configuration Manager，請使用 [遠端桌面] 連接至 PDW 控制節點（**_PDW_region_-CTL01**）節點，然後以_appliance_domain_**\Administrator**的身分登入。 啟動**Configuration Manager**程式時，請使用 [以**系統管理員身分執行**] 選項，以確保使用您的系統管理員認證。  
   
 #### <a name="to-launch-from-a-browser-window"></a>若要從瀏覽器視窗啟動  
   
-1.  開啟瀏覽器並瀏覽至目錄`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
+1.  開啟瀏覽器並流覽至目錄`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
-2.  以滑鼠右鍵按一下`dwconfig.exe`，然後按一下 **系統管理員身分執行**。  
+2.  以滑鼠右鍵`dwconfig.exe`按一下，然後按一下 [以**系統管理員身分執行**]。  
   
 #### <a name="to-launch-from-a-command-prompt"></a>若要從命令提示字元啟動  
   
-1.  在桌面上，開啟**開始**功能表上，按一下**程式**，按一下 **附屬應用程式**，以滑鼠右鍵按一下**命令提示字元**，然後按一下**系統管理員身分執行**。  
+1.  在桌面上，開啟 [**開始**] 功能表，依序按一下 [**程式**]、[**附屬**應用]、[**命令提示**字元]，然後按一下 [以**系統管理員身分執行**]。  
   
-2.  在命令提示字元中，輸入下列命令，將目錄變更為： `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`。  
+2.  在命令提示字元中，輸入下列命令以變更目錄： `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`。  
   
-3.  在命令提示字元中，輸入`dwconfig.exe`。  
+3.  在命令提示字元中， `dwconfig.exe`輸入。  
   
-在後**Configuration Manager**會啟動，您會看到列在左窗格中的所有可用的功能。 本節的其餘部分將討論如何執行此工具的每個動作。  
+啟動**Configuration Manager**之後，您將會看到左窗格中列出所有可用的功能。 本節的其餘部分將討論如何執行工具中提供的每個動作。  
   
-若要關閉並結束**Configuration Manager**，按一下**結束**任何畫面右下角。  
+若要關閉並結束**Configuration Manager**，**請按一下任何**畫面右下角的 [結束]。  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>另請參閱  
-[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[使用管理主控台 &#40;分析平臺系統來監視設備&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

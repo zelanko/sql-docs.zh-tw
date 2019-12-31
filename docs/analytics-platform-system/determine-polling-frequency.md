@@ -1,6 +1,6 @@
 ---
-title: 判斷輪詢頻率-Analytics Platform System |Microsoft Docs
-description: 這篇文章說明如何判斷 Analytics Platform System appliance 警示的輪詢頻率。
+title: 判斷輪詢頻率
+description: 本文說明如何判斷分析平臺系統裝置警示的輪詢頻率。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,33 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2d305c766801ce27268e2d3bc873d9c361c034f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961076"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401208"
 ---
 # <a name="determine-polling-frequency"></a>判斷輪詢頻率
-這篇文章說明如何判斷 Analytics Platform System appliance 警示的輪詢頻率。  
+本文說明如何判斷分析平臺系統裝置警示的輪詢頻率。  
   
-## <a name="to-determine-the-polling-frequency"></a>若要判斷輪詢頻率  
-由於 PDW 目前不支援主動通知警示發生時，監視解決方案，就必須持續輪詢設備 Dll。  就內部而言，PDW 輪詢元件在不同的時間間隔：  
+## <a name="to-determine-the-polling-frequency"></a>判斷輪詢頻率  
+由於 PDW 目前不支援警示發生時的主動式通知，因此監視解決方案需要持續輪詢設備 Dll。  就內部而言，PDW 會以不同的間隔輪詢元件：  
   
 -   叢集-60 秒  
   
--   活動訊號-60 秒  
+-   心跳-60 秒  
   
--   所有其他元件-5 分鐘  
+-   所有其他元件-五分鐘  
   
 -   效能計數器-三秒  
   
-一般間隔輪詢是否有警示，也會使用 System Center，這是**每隔 15 分鐘**。  很明顯地，您可以增加或減少經常查詢，但不是建議使用輪詢小於每 6 小時。  
+輪詢警示的常見間隔時間（也就是 System Center 所使用）是**每15分鐘一次**。  很明顯地，您可以查詢更多或較少，但不建議每隔六小時輪詢一次。  
   
-更頻繁地輪詢是可接受的但輪詢太過頻繁可以干擾[sys.dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV。  輪詢太過頻繁變得相當困難的使用者，以診斷查詢效能問題時其快速彙超出檢視。  
+更頻繁的輪詢是可接受的，但是輪詢太頻繁可能會讓[dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV 變得雜亂。  輪詢太頻繁可能會讓使用者難以在其快速地向外流覽時診斷查詢效能問題。  
   
 ## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[設備監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[&#40;分析平臺系統&#41;的設備監視](appliance-monitoring.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL) |Microsoft Docs
-ms.custom: ''
+title: sys.databases pdw_nodes_pdw_physical_databases （Transact-sql）
+ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,28 +12,28 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3dd4551d2dac629912eb4fe799d6a9e58ec1792b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001137"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399911"
 ---
-# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys.databases pdw_nodes_pdw_physical_databases （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  包含每個計算節點上的實體資料庫的資料列。 若要取得資料庫的詳細的資訊的彙總的實體資料庫資訊。 若要結合的資訊，聯結`sys.pdw_nodes_pdw_physical_databases`要`sys.pdw_database_mappings`和`sys.databases`資料表。  
+  針對計算節點上的每個實體資料庫，各包含一個資料列。 匯總實體資料庫資訊，以取得有關資料庫的詳細資訊。 若要合併資訊，請`sys.pdw_nodes_pdw_physical_databases`將聯結`sys.pdw_database_mappings`至`sys.databases`和資料表。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|資料庫的物件識別碼。 請注意，這個值不相同中 database_id [sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)檢視。|  
-|physical_name|**sysname**|殼層/計算節點上之資料庫實體的名稱。 這個值是 physical_name 資料行中的值與相同[sys.pdw_database_mappings &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)檢視。|  
+|database_id|**int**|資料庫的物件識別碼。 請注意，這個值與[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) view 中的 database_id 並不相同。|  
+|physical_name|**sysname**|Shell/計算節點上資料庫的機構名稱。 這個值與 sys.databases 中的 physical_name 資料行中的值[pdw_database_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) view。|  
 |pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-returning"></a>A. 傳回  
- 下列查詢會傳回每個資料庫的識別碼與名稱，在 master 和中對應的資料庫名稱在每個計算節點上。  
+ 下列查詢會傳回 master 中每個資料庫的名稱和識別碼，以及每個計算節點上的對應資料庫名稱。  
   
 ```  
 SELECT D.database_id AS DBID_in_master, D.name AS UserDatabaseName,   
@@ -46,8 +46,8 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>B. 使用 sys.pdw_nodes_pdw_physical_databases 收集詳細的物件資訊  
- 下列查詢會顯示索引的相關資訊，並包含實用資訊的資料庫物件屬於資料庫中的物件。  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. 使用 sys.databases 收集詳細的物件資訊 pdw_nodes_pdw_physical_databases  
+ 下列查詢會顯示有關索引的資訊，並包含有關物件屬於資料庫中物件之資料庫的實用資訊。  
   
 ```  
 SELECT D.name AS UserDatabaseName, D.database_id AS DBIDinMaster,  
@@ -63,8 +63,8 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>C. 使用 sys.pdw_nodes_pdw_physical_databases 來決定的加密狀態  
- 下列查詢會提供 AdventureWorksPDW2012 資料庫加密狀態。  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. 使用 sys. pdw_nodes_pdw_physical_databases 來判斷加密狀態  
+ 下列查詢會提供 AdventureWorksPDW2012 資料庫的加密狀態。  
   
 ```  
 WITH dek_encryption_state AS   
@@ -86,9 +86,9 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲與平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [pdw_database_mappings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

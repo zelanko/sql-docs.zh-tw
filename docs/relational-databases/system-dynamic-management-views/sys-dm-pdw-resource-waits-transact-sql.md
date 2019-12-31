@@ -1,7 +1,7 @@
 ---
-title: sys.dm_pdw_resource_waits (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases dm_pdw_resource_waits （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/26/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,34 +12,54 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 35868774efc7083b835bb6f44b6c71cbffc7ae2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899220"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564746"
 ---
-# <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.databases dm_pdw_resource_waits （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  顯示等候中的所有資源類型的資訊[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+  顯示中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]所有資源類型的等候資訊。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|wait_id|**bigint**|要求的等候清單中的位置。|0 為基底的序數。 這不是唯一在所有等候的項目。|  
-|session_id|**nvarchar(32)**|發生等候狀態的工作階段識別碼。|請參閱中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
-|type|**nvarchar(255)**|此項目所代表的等候類型。|可能的值如下：<br /><br /> 連接<br /><br /> 本機查詢並行<br /><br /> 分散式的查詢並行<br /><br /> DMS 並行存取<br /><br /> 備份的並行存取|  
-|object_type|**nvarchar(255)**|等候受影響的物件型別。|可能的值如下：<br /><br /> **OBJECT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **應用程式**|  
-|object_name|**nvarchar(386)**|指定等候受影響之物件的 GUID 或名稱。|資料表和檢視表會顯示使用三部分名稱。<br /><br /> 索引和統計資料會顯示四部分名稱。<br /><br /> 名稱、 主體及資料庫是字串名稱。|  
-|request_id|**nvarchar(32)**|等候狀態發生所在之要求的識別碼。|Qid 後要求識別碼。<br /><br /> 載入要求的 GUID 識別碼。|  
-|request_time|**datetime**|要求的鎖定或資源的時間。||  
-|acquire_time|**datetime**|取得的鎖定或資源的時間。||  
+|wait_id|**bigint**|要求在等候清單中的位置。|以零為基底的序數。 這在所有等候專案中都不是唯一的。|  
+|session_id|**Nvarchar （32）**|發生等候狀態之會話的識別碼。|請參閱[dm_pdw_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)中的 session_id。|  
+|type|**nvarchar(255)**|此專案所代表的等候類型。|可能的值：<br /><br /> 連線<br /><br /> 區域變數並行查詢<br /><br /> 分散式查詢並行<br /><br /> DMS 並行<br /><br /> 備份並行|  
+|object_type|**nvarchar(255)**|受等候影響的物件類型。|可能的值：<br /><br /> **目標**<br /><br /> **資料**<br /><br /> **筆記本電腦**<br /><br /> **SCHEMA**<br /><br /> **應用程式**|  
+|object_name|**Nvarchar （386）**|受等候影響之指定物件的名稱或 GUID。|資料表和 views 會以三個部分的名稱顯示。<br /><br /> 索引和統計資料會顯示四部分名稱。<br /><br /> 名稱、主體和資料庫都是字串名稱。|  
+|request_id|**Nvarchar （32）**|發生等候狀態之要求的識別碼。|要求的 QID 識別碼。<br /><br /> 載入要求的 GUID 識別碼。|  
+|request_time|**從中**|要求鎖定或資源的時間。||  
+|acquire_time|**從中**|取得鎖定或資源的時間。||  
 |state|**nvarchar(50)**|等候狀態的狀態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|priority|**int**|等候項目的優先順序。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|並行存取插槽數目 (最大值 32) 保留給此要求。|1-為 SmallRC<br /><br /> 3-為 MediumRC<br /><br /> LargeRC 的 7<br /><br /> 22-若為 XLargeRC|  
-|resource_class|**nvarchar(20)**|此要求的資源類別。|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
+|優先順序|**int**|等待專案的優先順序。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|concurrency_slots_used|**int**|內部|請參閱下方的[監視資源等候](#monitor-resource-waits)|  
+|resource_class|**Nvarchar （20）**|內部 |請參閱下方的[監視資源等候](#monitor-resource-waits)|  
   
+## <a name="monitor-resource-waits"></a>監視資源等候 
+隨著[工作負載群組](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)的引進，平行存取插槽已不再適用。  使用下列查詢和資料`resources_requested`行，以瞭解執行要求所需的資源。
+
+```sql
+select rw.wait_id
+      ,rw.session_id
+      ,rw.type
+      ,rw.object_type
+      ,rw.object_name
+      ,rw.request_id
+      ,rw.request_time
+      ,rw.acquire_time
+      ,rw.state
+      ,resources_requested = s.effective_request_min_resource_grant_percent
+      ,r.group_name
+  from sys.dm_workload_management_workload_groups_stats s
+  join sys.dm_pdw_exec_requests r on r.group_name = s.name collate SQL_Latin1_General_CP1_CI_AS
+  join sys.dm_pdw_resource_waits rw on rw.request_id = r.request_id
+```
+
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL 資料倉儲和平行處理資料倉儲動態管理 Views &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

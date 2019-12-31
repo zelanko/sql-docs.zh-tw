@@ -1,6 +1,6 @@
 ---
-title: 套用 Analytics Platform System hotfix |Microsoft Docs
-description: 這篇文章討論如何將 hotfix 套用到 Analytics Platform System 軟體。
+title: 套用 Analytics Platform System Hotfix
+description: 本文討論如何將修補程式套用至分析平臺系統軟體。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,61 +8,62 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d6af4a1eaf1e9891356fae40a3d3bb7f11e41dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961421"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401368"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>套用 Analytics Platform System Hotfix
-這篇文章討論如何將 hotfix 套用到 Analytics Platform System 軟體。  
+本文討論如何將修補程式套用至分析平臺系統軟體。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
 > [!WARNING]  
-> 請勿嘗試套用 Analytics Platform System hotfix，如果您的設備或簽訂任何設備元件已關閉或處於容錯移轉狀態。 在此情況下，連絡支援服務尋求協助。  
+> 如果您的應用裝置或任何設備元件已關閉或處於故障狀態，請勿嘗試套用 Analytics Platform System 的修補程式。 在此情況下，請聯絡支援人員以尋求協助。  
   
 > [!WARNING]  
-> 設備在使用中時，請不要套用 Analytics Platform System hotfix。 套用 hotfix，可能會導致重新啟動的應用裝置節點。 未使用的應用裝置時，應該在維護期間套用 hotfix。  
+> 當設備在使用中時，請勿套用 Analytics Platform System 的「應用程式」。 套用修補程式可能會導致應用裝置節點重新開機。 當設備不在使用中時，應在維護期間套用此修補程式。  
   
-### <a name="prerequisites"></a>先決條件  
-若要執行這些步驟，您必須：  
+### <a name="prerequisites"></a>必要條件  
+若要執行這些步驟，您將需要：  
   
--   具有權限存取管理主控台來監視設備狀態 Analytics Platform System 登入。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
+-   具有許可權可存取管理主控台來監視設備狀態的分析平臺系統登入。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   網狀架構網域系統管理員帳戶連接到的知識 _< 網域名稱 >_ **-HST01**節點。  
+-   瞭解用來連線至 _<domain_name>_ **-HST01**節點的網狀架構網域系統管理員帳戶。  
   
-## <a name="HowToInstallPDW"></a>套用 Analytics Platform System hotfix  
-不同於 Microsoft updates，Analytics Platform System 軟體 hotfix 不會處理透過 WSUS。 它們有不同的工作流程，並會安裝在執行 hotfix 封裝。  
+## <a name="HowToInstallPDW"></a>套用 Analytics Platform System 的修復程式  
+不同于 Microsoft updates，分析平臺系統軟體的修補程式不會透過 WSUS 來處理。 它們有不同的工作流程，並藉由執行修補程式套件來安裝。  
   
-1.  **請確認應用裝置狀態指標。**  
+1.  **確認設備狀態指示器。**  
   
-    1.  開啟系統管理員主控台，然後瀏覽至 [應用裝置狀態] 頁面。 如需詳細資訊，請參閱 <<c0> [ 使用管理主控台來監視設備&#40;Analytics Platform System&#41;</c0>](monitor-the-appliance-by-using-the-admin-console.md)  
+    1.  開啟管理主控台，並流覽至 [設備狀態] 頁面。 如需詳細資訊，請參閱[使用管理主控台監視設備 &#40;分析平臺系統&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
-    2.  在您繼續下一個步驟之前，必須先解決所有紅色或黃色指標。 這幾個例外狀況是：  
+    2.  在您繼續進行下一個步驟之前，必須先解決所有的紅色或黃色指示器。 其中有幾個例外狀況：  
   
-        -   如果發生磁碟失敗，使用 [系統管理員主控台中警示] 頁面來確認每個伺服器或 SAN 陣列內不超過一個磁碟故障。 如果有一個以上的磁碟失敗，每個伺服器或 SAN 陣列內，您可以繼續下一個步驟之前修正磁碟失敗。 請務必連絡 Microsoft 支援服務，以儘速修正磁碟失敗。  
+        -   如果發生磁片失敗，請使用 [管理主控台警示] 頁面，確認每個伺服器或 SAN 陣列內不會有一個以上的磁片失敗。 如果每個伺服器或 SAN 陣列內不會有一個以上的磁片失敗，您可以在修正磁片失敗之前繼續進行下一個步驟。 請務必聯絡 Microsoft 支援服務，儘快修正磁片失敗。  
   
-        -   如果沒有不在 C:\ 磁碟機的非關鍵性 （黃色） 磁碟磁碟區錯誤，您可以繼續下一個步驟之前解決磁碟的磁碟區時發生錯誤。  
+        -   如果有非嚴重（黃色）磁片區錯誤（不在 C：\ 上）磁片磁碟機，您可以繼續進行下一個步驟，再解決磁片區錯誤。  
   
-2.  **安裝 Analytics Platform System hotfix**  
+2.  **安裝 Analytics Platform System 的修補程式**  
   
-    1.  登入 <*appliance_domain*>-HST01 網域系統管理員身分的節點。  
+    1.  以網域系統管理員身分登入 <*appliance_domain*> HST01 節點。  
   
-    2.  使用**系統管理員身分執行**選項來開啟命令提示字元。  
+    2.  使用 [以**系統管理員身分執行**] 選項來開啟命令提示字元。  
   
-    3.  執行下列命令，取代 *<HotfixPackageName>* hotfix 可執行檔封裝，並取代的預留位置項目名稱取代 *< >* 適當的資訊。  
+    3.  執行下列命令，以可*<HotfixPackageName>* 執行檔套件的名稱取代，並以適當的資訊取代其他預留位置專案 *<  >* 。  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  
         ```  
   
-    4.  Hotfix 套件所提供，請遵循的步驟。  
+    4.  請遵循此修補程式套件所提供的步驟。  
   
 ## <a name="see-also"></a>另請參閱  
-[下載並套用 Microsoft 更新&#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
-[解除安裝 Microsoft 更新&#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
-[解除安裝 Analytics Platform System Hotfix &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[軟體服務&#40;Analytics Platform System&#41;](software-servicing.md)  
+[下載並套用 Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
+[將 Microsoft Updates 卸載 &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[&#40;分析平臺系統&#41;卸載分析平臺系統修補程式](uninstall-analytics-platform-system-hotfixes.md)  
+[軟體服務 &#40;分析平臺系統&#41;](software-servicing.md)  
   

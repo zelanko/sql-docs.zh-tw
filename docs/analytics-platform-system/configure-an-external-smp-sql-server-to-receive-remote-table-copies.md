@@ -1,6 +1,6 @@
 ---
-title: 設定 SQL Server 以接收遠端資料表複本-Parallel Data Warehouse |Microsoft Docs
-description: 描述如何設定外部 SMP SQL Server 執行個體從平行處理資料倉儲接收遠端資料表複本。
+title: 設定 SQL Server 以接收遠端資料表複本
+description: 描述如何設定外部 SMP SQL Server 實例，以從平行處理資料倉儲接收遠端資料表複本。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,54 +8,55 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3ad1ee005f5d28e7477fab7c1abe7ed4074e233d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961296"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401319"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>設定外部 SMP SQL Server 以接收遠端資料表複本-平行處理資料倉儲
-描述如何設定外部 SQL Server 執行個體從平行處理資料倉儲接收遠端資料表複本。  
+描述如何設定外部 SQL Server 實例，以從平行處理資料倉儲接收遠端資料表複本。  
 
-本主題說明設定遠端資料表複製的組態步驟的其中一個。 如需所有設定步驟，請參閱[Remote Table copy 複製](remote-table-copy.md)。  
+本主題說明設定遠端資料表複本的其中一個設定步驟。 如需所有設定步驟的清單，請參閱[遠端資料表複本](remote-table-copy.md)。  
   
 ## <a name="before-you-begin"></a>開始之前  
-您可以設定外部的 SQL Server 之前，您必須：  
+在您可以設定外部 SQL Server 之前，您必須：  
   
--   具有 SQL Server 2008 Enterprise Edition 或更新版本已準備好安裝或已安裝的 Windows 系統。 Windows 系統必須已經設定中的指示，根據[設定外部 Windows 系統以接收遠端資料表複本使用 InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)。  
+-   擁有已準備好安裝或已安裝 SQL Server 2008 Enterprise Edition 或更新版本的 Windows 系統。 Windows 系統必須已根據[設定外部 Windows 系統中的指示，設定為使用「不允許」來接收遠端資料表複本](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)。  
   
--   設定 SQL Server 執行個體和 Windows 系統的功能與 Windows 系統管理員帳戶。  
+-   可以設定 SQL Server 實例和 Windows 系統的 Windows 管理員帳戶。  
   
--   SQL Server 登入帳戶 （如果尚未安裝 SQL Server） 來建立登入並授與目的地資料庫的權限的能力。  
+-   SQL Server 登入帳戶（如果已安裝 SQL Server），而且能夠在目的地資料庫上建立登入和授與許可權。  
   
-## <a name="HowToSQLServer"></a>設定外部 SMP SQL 伺服器以接收遠端資料表複本  
-遠端資料表複製功能會將資料表從 SQL Server PDW 應用裝置複製到執行 Windows 系統的外部 SMP SQL Server 資料庫。 設定外部 Windows 系統以接收遠端資料表複本之後, 的下一個步驟是安裝和設定到 Windows 系統上的 SQL Server。  
+## <a name="HowToSQLServer"></a>設定外部 SMP SQL Server 以接收遠端資料表複本  
+遠端資料表複製功能會將資料表從 SQL Server PDW 設備複製到在 Windows 系統上執行的外部 SMP SQL Server 資料庫。 設定外部 Windows 系統以接收遠端資料表複本之後，下一步就是在 Windows 系統上安裝和設定 SQL Server。  
   
 若要設定 SQL Server，請使用下列步驟：  
   
-1.  Windows 系統上安裝 SQL Server 2008 Enterprise Edition 或更新版本。 這被指與 SMP SQL Server。  
+1.  在 Windows 系統上安裝 SQL Server 2008 Enterprise Edition 或更新版本。 這稱為 SMP SQL Server。  
   
-2.  設定 SQL Server 以接受固定的 TCP 連接埠上的 TCP/IP 連接。 此設定預設為停用，必須啟用才能允許連線到 SMP SQL Server 的 SQL Server PDW。  
+2.  設定 SQL Server 以接受固定 TCP 通訊埠上的 TCP/IP 連接。 此設定預設為停用，而且必須啟用以允許 SQL Server PDW 連接到 SMP SQL Server。  
   
-3.  停用 Windows 防火牆，或設定 SMP SQL Server TCP 連接埠，讓它能夠搭配啟用的 Windows 防火牆。  
+3.  請停用 Windows 防火牆或設定 SMP SQL Server TCP 埠，使其可在啟用 Windows 防火牆的情況下使用。  
   
-4.  設定 SQL Server 以允許 SQL Server 驗證模式。 平行處理的資料匯出一律會使用 SQL Server 帳戶進行驗證。  
+4.  設定 SQL Server 以允許 SQL Server 驗證模式。 平行資料匯出一律會使用 SQL Server 帳戶進行驗證。  
   
-5.  決定將用於驗證 SMP SQL Server 上的 SQL Server 帳戶。 授與該帳戶的建立、 卸除，並將資料插入資料表的平行處理資料匯出作業的目的地資料庫中的權限。  
+5.  判斷將用於驗證之 SMP SQL Server 上的 SQL Server 帳戶。 授與該帳戶建立、卸載及插入資料到目的地資料庫中之資料表的許可權，以進行平行資料匯出工作。  
   
-## <a name="BPSQLConfig"></a>遠端資料表複製的 SMP SQL Server 組態的最佳做法  
-設定 SMP SQL Server，以接收遠端資料表複本時，使用下列最佳作法，以改善效能。  
+## <a name="BPSQLConfig"></a>SMP SQL Server 遠端資料表複本設定的最佳做法  
+設定 SMP SQL Server 以接收遠端資料表複本時，請使用下列最佳作法來改善效能。  
   
-1.  SQL Server 產品文件中所述，請遵循最佳做法。 例如，啟用資料加密。 如需有關保護 SQL Server 的詳細資訊，請參閱 <<c0> [ 保護 SQL Server 的](../relational-databases/security/securing-sql-server.md)MSDN 上。  
+1.  遵循 SQL Server 產品檔中所述的最佳作法。 例如，啟用資料加密。 如需保護 SQL Server 的詳細資訊，請參閱 MSDN 上的[保護 SQL Server](../relational-databases/security/securing-sql-server.md) 。  
   
-2.  使用大量記錄或簡單復原模式。  
+2.  使用大容量日誌或簡單復原模式。  
   
-    在平行處理資料期間匯出作業，資料會大量插入至新建立的目的地資料表。 大量插入期間的最大效能，設定目的地資料庫使用大量記錄或簡單復原模式。  
+    在平行處理資料匯出工作期間，資料會大量插入至新建立的目的地資料表。 如需大量插入期間的最大效能，請將目的地資料庫設定為使用大量記錄或簡單復原模式。  
   
-3.  若要回收記錄空間使用 batch_size 選項。  
+3.  使用 [batch_size] 選項來回收記錄檔空間。  
   
-    大量記錄或簡單復原模式使用最低限度記錄大量插入資料，雖然仍會進行一些記錄。 若要避免記錄檔變得太大，使用 SQL Server batch_size 選項以定期回收記錄空間。  
+    雖然大量記錄或簡單復原模式對大量插入的資料使用最低限度記錄，但仍會進行一些記錄。 若要防止記錄檔變得太大，請使用 SQL Server batch_size 選項來定期回收記錄檔空間。  
   
 <!-- MISSING LINKS 
 ## See Also  

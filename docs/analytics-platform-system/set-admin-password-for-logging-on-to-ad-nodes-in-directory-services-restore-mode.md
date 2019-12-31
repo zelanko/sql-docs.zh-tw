@@ -1,6 +1,6 @@
 ---
-title: 設定 Active Directory 密碼-Analytics Platform System |Microsoft Docs
-description: 在 目錄服務還原模式 Analytics Platform System (APS) 中設定 Active Directory 節點管理員登入密碼。
+title: 設定 Active Directory 密碼
+description: 在分析平臺系統（AP）中，以目錄服務還原模式設定 Active Directory 節點的系統管理員登入密碼。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,36 +8,37 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e0b197a044f2f008b886d5f2ff39b603821fd29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960069"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400329"
 ---
-# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>設定系統管理員密碼的登入 AD 節點，在 目錄服務還原模式 (DSRM)-Analytics Platform System
-目錄服務還原模式 (DSRM) 是可修復或復原 Active Directory 網域服務 (AD DS) 的開機模式。 它用來登入設備 AD 節點失敗 AD DS 之後，或需要還原的 AD DS。 DSRM 密碼已經初始化應用裝置設定硬體供應商站台期間，並且應用裝置系統管理員才可變更。 Analytics Platform System 有兩個 AD DS （網域控制站）; **_appliance_domain_-AD01**並 **_appliance_domain_-ad02 移**。 針對每個設備 AD] 節點中，變更 [使用下列步驟將 DSRM 密碼。  
+# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>設定系統管理員密碼，以登入目錄服務還原模式（DSRM）中的 AD 節點-Analytics Platform System
+目錄服務還原模式（DSRM）是用於修復或復原 Active Directory Domain Services （AD DS）的開機模式。 它可用來在 AD DS 失敗或需要還原 AD DS 後，登入應用裝置 AD 節點。 DSRM 的密碼已在硬體廠商網站的設備設定期間初始化，且應由裝置管理員變更。 Analytics Platform System 有兩個 AD DS （網域控制站）;** _appliance_domain_-AD01**和** _appliance_domain_-AD02**。 針對每個應用裝置 AD 節點，使用下列步驟變更 DSRM 密碼。  
   
-## <a name="HowToDSRM"></a>若要重設管理員密碼  
+## <a name="HowToDSRM"></a>若要重設系統管理員密碼  
   
-1.  開啟命令提示字元 視窗，在設備 AD 節點 <strong>_appliance_domain_-AD_xx_</strong>虛擬機器。  
+1.  在應用裝置 AD 節點上開啟 [命令提示字元] 視窗， <strong> _appliance_domain_AD_xx_</strong>虛擬機器]。  
   
 2.  在命令提示字元中，輸入 `ntdsutil`。  
   
-3.  在**ntdsutil**提示中，輸入`set dsrm password`。  
+3.  在**ntdsutil**提示字元中， `set dsrm password`輸入。  
   
-4.  在**重設管理員密碼：** 提示中，輸入`reset password on server null`。  
+4.  在 [**重設系統管理員密碼：** ] `reset password on server null`提示字元中，輸入。  
   
-5.  在提示中，輸入新密碼。  
+5.  在提示字元中，輸入新的密碼。  
   
-6.  針對每個設備 AD 虛擬機器重複步驟 1-5 上方。  
+6.  針對每個應用裝置 AD 虛擬機器重複上述步驟 1-5。  
   
     > [!WARNING]  
-    > Analytics Platform System 不支援在網域系統管理員或本機系統管理員密碼的貨幣符號字元 （$）。 包含貨幣符號的密碼會驗證，並且可使用，但可能會封鎖升級和維護活動。  
+    > Analytics Platform System 不支援網域系統管理員或本機系統管理員密碼中的貨幣符號字元（$）。 包含貨幣符號的密碼將會進行驗證並可供使用，但可封鎖升級和維護活動。  
   
 > [!NOTE]  
-> 如果 Active Directory 網域服務或虛擬機器損毀特定的 AD 虛擬機器中，執行**ReplaceVM**受影響的 ad 虛擬機器是建議的更正動作。 以取得協助的連絡 CSS。  
+> 如果特定 AD 虛擬機器的 Active Directory Domain Services 或虛擬機器損毀，建議的修正動作是針對受影響的 AD 虛擬機器執行**ReplaceVM** 。 請聯繫 CSS 以取得協助。  
   
 ## <a name="see-also"></a>另請參閱  
-[密碼重設&#40;Analytics Platform System&#41;](password-reset.md)  
+[&#40;分析平臺系統&#41;的密碼重設](password-reset.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: 監視設備健全狀況-Analytics Platform System
-description: 如何使用管理主控台中，或直接查詢的平行處理資料倉儲動態管理檢視來監視 Analytics Platform System appliance 的狀態。
+title: 監視設備健全狀況
+description: 如何使用管理主控台或直接查詢平行處理資料倉儲動態管理檢視，來監視分析平臺系統裝置的狀態。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,33 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960619"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400997"
 ---
 # <a name="monitor-appliance-health-state"></a>監視設備健全狀況狀態
-這篇文章說明如何使用管理主控台中，或直接查詢的平行處理資料倉儲動態管理檢視來監視 Analytics Platform System appliance 的狀態。 
+本文說明如何使用管理主控台或直接查詢平行處理資料倉儲動態管理檢視，來監視 Analytics Platform System 設備的狀態。 
   
-## <a name="to-monitor-the-appliance-state"></a>若要監視的應用裝置狀態  
-系統管理員可以使用系統管理員主控台] 或 [SQL Server PDW 動態管理檢視 (Dmv) 來擷取完整的階層架構的節點、 元件和軟體。 下圖提供高層級的了解 SQL Server PDW 監視的元件。  
+## <a name="to-monitor-the-appliance-state"></a>監視設備狀態  
+系統管理員可以使用管理主控台或 SQL Server PDW 動態管理檢視（Dmv）來取得節點、元件和軟體的完整階層。 下圖對 SQL Server PDW 監視的元件提供高階的瞭解。  
   
 ![監視概觀](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
-### <a name="monitor-component-status-by-using-the-admin-console"></a>使用管理主控台的監視元件狀態  
-若要使用管理主控台，以擷取元件狀態：  
+### <a name="monitor-component-status-by-using-the-admin-console"></a>使用管理主控台監視元件狀態  
+若要使用管理主控台抓取元件狀態：  
   
 1.  按一下 [**設備狀態**] 索引標籤。  
   
-2.  在應用裝置狀態 頁面上，按一下特定的節點，以檢視節點詳細資料。  
+2.  在 [設備狀態] 頁面上，按一下特定節點以查看節點詳細資料。  
   
     ![PDW 管理主控台狀態](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
-### <a name="monitor-component-status-by-using-system-views"></a>使用系統檢視表的監視元件狀態  
-若要使用系統檢視表，以擷取元件狀態，請使用[sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md)。 例如，下列查詢會擷取所有元件的狀態。  
+### <a name="monitor-component-status-by-using-system-views"></a>使用系統檢視來監視元件狀態  
+若要使用系統檢視來取出元件狀態，請使用[sys.databases。 dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md)。 例如，下列查詢會抓取所有元件的狀態。  
   
 ```sql  
 SELECT   
@@ -66,13 +67,13 @@ ORDER BY
    p.[property_name];  
 ```  
   
-針對 [狀態] 屬性所傳回的可能值如下：  
+Status 屬性傳回的可能值為：  
   
 -   確定  
   
--   NonCritical  
+-   非  
   
--   嚴重  
+-   重大  
   
 -   Unknown  
   
@@ -84,12 +85,12 @@ ORDER BY
   
 若要查看所有元件的所有屬性，請移除`WHERE  p.property_name = 'Status'`子句。  
   
-**[Update_time]** 欄會顯示最後一次輪詢 SQL Server PDW 健康情況代理程式元件。  
+**[Update_time]** 資料行會顯示 SQL Server PDW 健康情況代理程式上次輪詢元件的時間。  
   
 > [!CAUTION]  
-> 請務必調查問題時有不被輪詢元件，5 分鐘或更久，可能表示有問題軟體的活動訊號警示。  
+> 當元件未輪詢5分鐘或更久時，請務必調查問題;可能會有警示指出軟體信號的問題。  
   
 ## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[設備監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[&#40;分析平臺系統&#41;的設備監視](appliance-monitoring.md)  
   

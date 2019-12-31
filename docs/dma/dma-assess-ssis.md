@@ -14,26 +14,37 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fa97cc647a194257441997032f2248a3ce9e5110
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056638"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687163"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>使用 Data Migration Assistant 執行 SQL Server 整合服務遷移評估
 
+## <a name="prerequisites"></a>必要條件
+
+若要評估 SQL Server 整合服務（SSIS）套件，下列元件必須與 Data Migration Assistant 一起安裝：
+
+- 與要評估的 SSIS 封裝版本相同的 SQL Server 整合服務。
+- Azure Feature Pack 或其他協力廠商元件（如果要評估的 SSIS 封裝具有這些元件）。  
+
+DMA 必須以**系統管理員**存取權執行，才能評估封裝存放區中的 SSIS 套件。
+
+## <a name="performance-assessments"></a>效能評定
+
 下列逐步指示可協助您執行第一次評估，使用 Data Migration Assistant 將 SQL Server 整合服務（SSIS）封裝遷移至 Azure SQL Database 或 Azure SQL Database 受控實例。
 
-## <a name="create-an-assessment"></a>建立評量
+## <a name="create-an-assessment"></a>建立評估
 
 1. 選取 [**新增**] （+）圖示，然後選取 [**評估**] 專案類型作為 [**整合服務**]。
 
 1. 設定來源和目標伺服器類型。
 
-    選取 來源 做為  **SQL Server**，並將 目標伺服器類型 設定為  **Azure SQL Database**  或**Azure SQL Database 受控實例**。
+    選取 [來源] 做為 [ **SQL Server**]，並將 [目標伺服器類型] 設定為 [ **Azure SQL Database** ] 或**Azure SQL Database 受控實例**]。
 
-1. 按一下 **[建立]** 。
+1. 按一下 **[建立]**。
 
     ![建立評量](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
@@ -51,7 +62,7 @@ ms.locfileid: "74056638"
 1. 選取要評估的 SSIS 套件儲存類型，然後選取 [**新增**]。
 ![新增來源](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. 如果需要評估多個資料夾，請選取 [**新增來源**] 以開啟 [連線] 飛出視窗功能表。
-1. 按一下 [**開始評估**]。
+1. 按一下 [開始評估]****。
   ![開始評估](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
 ## <a name="view-results"></a>檢視結果
@@ -60,7 +71,7 @@ ms.locfileid: "74056638"
 
 ![檢視結果](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>接下來的步驟
 
 - [將內部部署 SSIS 工作負載遷移至 ADF 中的 SSIS 總覽](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
 - [將 SQL Server Integration Services 封裝遷移至 Azure SQL Database 受控實例](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)

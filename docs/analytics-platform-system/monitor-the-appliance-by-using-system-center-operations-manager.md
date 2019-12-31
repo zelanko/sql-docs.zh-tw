@@ -1,6 +1,6 @@
 ---
-title: 透過 SCOM-分析平台系統監視 |Microsoft Docs
-description: 使用 System Center Operations Manager (SCOM)，以監視 Analytics Platform System (APS) 設備。
+title: 使用 SCOM 監視
+description: 使用 System Center Operations Manager （SCOM）來監視分析平臺系統（AP）應用裝置。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,59 +8,60 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960543"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400974"
 ---
-# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>監視與 System Center Operations Manager-Analytics Platform System
-使用 System Center Operations Manager (SCOM)，以監視 Analytics Platform System (APS) 設備。
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>使用 System Center Operations Manager 分析平臺系統進行監視
+使用 System Center Operations Manager （SCOM）來監視分析平臺系統（AP）應用裝置。
   
 ## <a name="before-you-begin"></a>開始之前  
   
 ### <a name="prerequisites"></a>必要條件  
   
-1.  System Center Operations Manager 2007 R2、 2012年或 2012 SP1 必須安裝且正在執行。  
+1.  System Center Operations Manager 2007 R2、2012或 2012 SP1 必須已安裝且正在執行。  
   
-2.  必須先安裝 SQL Server 2008 R2 Native Client 或 SQL Server 2012 Native Client。  
+2.  必須安裝 SQL Server 2008 R2 Native Client 或 SQL Server 2012 Native Client。  
   
-3.  若要監視 SQL Server PDW 的管理組件必須安裝、 匯入，並設定。 您可以使用以下文章中的指示來執行這些工作。  
+3.  要監視 SQL Server PDW 的管理元件必須安裝、匯入及設定。 如需執行這些工作的指示，請使用下列文章。  
   
-    -   [安裝 SCOM 管理組件&#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)  
+    -   [&#40;Analytics Platform System 安裝 SCOM 管理元件&#41;](install-the-scom-management-packs.md)  
   
-    -   [匯入適用於 PDW 的 SCOM 管理組件&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md) 
+    -   [匯入適用于 PDW 的 SCOM 管理元件 &#40;分析平臺系統&#41;](import-the-scom-management-pack-for-pdw.md) 
     
-    -   [設定 SCOM 以監視 Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md)
+    -   [設定 SCOM 以監視分析平臺系統 &#40;分析平臺系統&#41;](configure-scom-to-monitor-analytics-platform-system.md)
   
 <!-- MISSING LINKS    -   [Import the SCOM Management Pack for HDInsight &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-hdinsight.md)  -->  
    
   
-## <a name="to-monitor-sql-server-pdw-with-scom"></a>監視 SQL Server PDW 與 SCOM  
-設定 SCOM 管理組件之後, 按一下監視窗格中的 SCOM，然後向下切入至**SQL Server 設備**，然後**Microsoft SQL Server Parallel Data Warehouse**。 Microsoft SQL Server Parallel Data Warehouse，下方有四個選項：警示、 設備，設備圖表和節點。  
+## <a name="to-monitor-sql-server-pdw-with-scom"></a>使用 SCOM 監視 SQL Server PDW  
+設定 SCOM 管理元件之後，請按一下 SCOM 的 [監視中] 窗格，向下切入至**SQL Server 設備**，然後**Microsoft SQL Server 平行處理資料倉儲**]。 在 Microsoft SQL Server 平行處理資料倉儲底下，有四個選擇： [警示]、[設備]、[設備] 圖表和 [節點]。  
   
 ### <a name="alerts"></a>警示  
-警示是您可以在哪裡找到目前的警示管理。  
+警示是您可以在其中找到要管理之目前警示的位置。  
   
 ![警示](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>應用裝置  
-設備是您將在其中找到您的環境中目前已探索和監視 SQL Server PDW 應用裝置。 如果設備未這裡顯示，而且您已建立的 ODBC 連接，則可能會有 PDWWatcher 帳戶發生錯誤。 如果它們會顯示為 「 未受監視 」，可能有 PDWMonitor 帳戶發生錯誤。 因為 SCOM 不會變更，但會定期檢查新的設備，若要監視的耐心等候，定期將查詢傳送到設備的監視。  
+設備可讓您在環境中找到目前已探索和受監視的 SQL Server PDW 設備。 如果設備未顯示在這裡，而您已為其建立 ODBC 連線，則您的 PDWWatcher 帳戶可能發生問題。 如果它們顯示為「未受監視」，您的 PDWMonitor 帳戶可能發生問題。 請耐心等候，因為 SCOM 不會即時進行變更，但會定期檢查是否有新的設備進行監視，並定期將查詢傳送至設備以進行監視。  
   
-![設備](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![用具](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
-### <a name="appliances-diagram"></a>應用裝置圖表  
-應用裝置圖表頁面是設備的您可以在其中取得了解您，樹狀結構檢視的健全狀況：  
+### <a name="appliances-diagram"></a>設備圖  
+[設備關係圖] 頁面可讓您查看設備的健康情況，其中包含樹狀檢視：  
   
 ![應用裝置圖表](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
 ### <a name="nodes"></a>節點  
-最後，[節點] 檢視可讓您查看您的應用裝置，透過每個節點的健全狀況：  
+最後，[節點] 視圖可讓您透過每個節點查看設備的健全狀況：  
   
-![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![子](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[了解管理主控台警示&#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
+[瞭解管理主控台警示 &#40;分析平臺系統&#41;](understanding-admin-console-alerts.md)  
   
