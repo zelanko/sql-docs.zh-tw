@@ -1,5 +1,7 @@
 ---
-title: 在 .NET Framework 更新之後升級 SQLCLR 組件
+title: .NET Framework 更新之後升級 SQLCLR 元件
+description: 瞭解如何在更新 .NET framework 之後，更新 SQL Server Data Quality Services （DQS）所使用的 SQLCLR 元件。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ce898b31a3fa964a57492987f70356c18fd2964
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 623fbf69ef49ceb7dfea7f2d9c6e96b7520ded3e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252795"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558079"
 ---
-# <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>在 .NET Framework 更新之後升級 SQLCLR 組件
+# <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>在 .NET framework 更新之後升級 SQLCLR 元件
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

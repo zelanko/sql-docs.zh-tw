@@ -1,5 +1,7 @@
 ---
 title: DQS 定義域支援的 SQL Server 和 SSIS 資料類型
+description: 描述 SQL Server 中 Data Quality Services （DQS）定義域（資料、十進位、整數和字串）的四種資料類型。
+ms.custom: seo-lt-2019
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257776"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558163"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS 定義域支援的 SQL Server 和 SSIS 資料類型
 
@@ -25,7 +27,7 @@ ms.locfileid: "75257776"
 > [!NOTE]  
 >  在 .xlsx 和 .xls 檔案中，來源資料行的資料類型是由前八個資料列中最普遍的資料類型所決定。 如果資料格不符合該資料類型，將會為它提供 null 值。 同樣地，在 .csv 檔案中，來源資料行的資料類型是由前八個資料列中最普遍的資料類型所決定。  
   
-##  <a name="SQLServer"></a>支援的 SQL Server 資料類型  
+##  <a name="SQLServer"></a>支援的 SQL Server 資料類型 
  下表將提供每種 DQS 定義域資料類型所支援之 SQL Server 資料類型的相關資訊：  
   
 |DQS 定義域資料類型|支援的 SQL Server 資料類型|  

@@ -1,5 +1,7 @@
 ---
-title: 在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述
+title: 安裝 SQL Server 更新之後，升級 DQS 資料庫架構
+description: 瞭解如何在 SQL Server 已由修補程式、修正程式或累積更新更新之後，使用 Dqsinstaller.exe 升級 Data Quality Services （DQS）實例。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 17151ed7f20070b7db042b0bc7e7af31bc64b80e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252804"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558040"
 ---
-# <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述
+# <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>安裝 SQL Server 更新之後，升級 DQS 資料庫架構
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
