@@ -1,5 +1,5 @@
 ---
-title: BLOB 的串流支援輸出參數 |Microsoft Docs
+title: BLOB 輸出參數的串流支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,7 +26,7 @@ ms.locfileid: "62468175"
   
 ## <a name="example"></a>範例  
   
-### <a name="code"></a>程式碼  
+### <a name="code"></a>代碼  
   
 ```  
 // blob_out_param.cpp  
@@ -508,6 +508,6 @@ _Exit:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BLOB 與 OLE 物件](blobs-and-ole-objects.md)  
+ [Blob 和 OLE 物件](blobs-and-ole-objects.md)  
   
   
