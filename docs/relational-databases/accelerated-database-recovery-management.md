@@ -1,10 +1,8 @@
 ---
 title: 加速資料庫復原 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d825c7db4789ec1421cf43acd5897e932c7fa29a
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130537"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245256"
 ---
 # <a name="manage-accelerated-database-recovery"></a>管理加速資料庫復原
 
@@ -84,10 +83,10 @@ GO
    為了針對持續版本存放區，透過新的位置開啟 ADR，您必須確認所有版本資訊都已從先前的 PVS 位置清除。 若要強制進行清除，請執行命令：
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   `sys.sp_persistent_version_store_cleanup` 預存程序是同步的，這表示它在從目前 PVS 中清除所有版本資訊前都不會完成。  一旦完成，您便可以藉由查詢 DMV `sys.dm_persistent_version_store_stats` 並檢查 `persistent_version_store_size_kb` 的值，來驗證版本資訊確實已移除。
+   `sys.sp_persistent_version_cleanup` 預存程序是同步的，這表示它在從目前 PVS 中清除所有版本資訊前都不會完成。  一旦完成，您便可以藉由查詢 DMV `sys.dm_persistent_version_store_stats` 並檢查 `persistent_version_store_size_kb` 的值，來驗證版本資訊確實已移除。
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 

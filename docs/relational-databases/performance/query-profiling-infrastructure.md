@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559466"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257668"
 ---
 # <a name="query-profiling-infrastructure"></a>查詢分析基礎結構
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -175,19 +175,19 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 ## <a name="query-profiling-infrastruture-usage-guidance"></a>查詢分析基礎結構使用方式指導方針
 下表摘要說明啟用標準分析或輕量型分析 (全域 (在伺服器層級) 或在單一工作階段中) 的動作。 也包括支援動作的最新版本。 
 
-|範圍。|標準分析|輕量型分析|
+|影響範圍|標準分析|輕量型分析|
 |---------------|---------------|---------------|
-|全域|具有 `query_post_execution_showplan` XE 的 xEvent 工作階段，從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始|追蹤旗標 7412；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始|
+|全域|具有 `query_post_execution_showplan` XE 的 xEvent 工作階段；從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始|追蹤旗標 7412；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始|
 |全域|具有 `Showplan XML` 追蹤事件的 SQL 追蹤與 SQL Server Profiler；從 SQL Server 2000 開始|具有 `query_thread_profile` XE 的 xEvent 工作階段；從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始|
 |全域|-|具有 `query_post_execution_plan_profile` XE 的 xEvent 工作階段；從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始|
-|Session|使用 `SET STATISTICS XML ON`；從 SQL Server 2000 開始|使用 `query_plan_profile` XE 搭配 xEvent 工作階段使用 `QUERY_PLAN_PROFILE` 查詢提示；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 與 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始|
-|Session|使用 `SET STATISTICS PROFILE ON`；從 SQL Server 2000 開始|-|
-|Session|按一下 SSMS 中的[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)按鈕；從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始|-|
+|工作階段|使用 `SET STATISTICS XML ON`；從 SQL Server 2000 開始|使用 `query_plan_profile` XE 搭配 xEvent 工作階段使用 `QUERY_PLAN_PROFILE` 查詢提示；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 與 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始|
+|工作階段|使用 `SET STATISTICS PROFILE ON`；從 SQL Server 2000 開始|-|
+|工作階段|按一下 SSMS 中的[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)按鈕；從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始|-|
 
 ## <a name="remarks"></a>備註
 
 > [!IMPORTANT]
-> 由於執行參考 [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 的監視預存程序時可能會產生隨機 AV，因而請確保會在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中安裝 [KB 4078596](http://support.microsoft.com/help/4078596)。
+> 由於執行參考 [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 的監視預存程序時可能會產生隨機 AV，因而請確保會在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中安裝 [KB 4078596](https://support.microsoft.com/help/4078596)。
 
 從輕量型分析 v2 及其低額外負荷開始，尚未受限於 CPU 的任何伺服器都可**持續**執行輕量型分析，並讓資料庫專業人員可隨時點選任何執行中的執行 (例如，使用活動監視器，或直接查詢 `sys.dm_exec_query_profiles`)，並取得含執行階段統計資料的查詢計畫。
 
@@ -209,4 +209,3 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
  [執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice:Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (開發人員選擇：查詢進度 - 隨時隨地)

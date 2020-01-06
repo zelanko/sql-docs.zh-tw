@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020816"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228238"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>連線到 Always On 可用性群組接聽程式 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "68020816"
  若要使用可用性群組接聽程式，連接到主要複本進行讀寫存取，連接字串要指定可用性群組接聽程式 DNS 名稱。  如果可用性群組主要複本變更為新複本，使用可用性群組接聽程式網路名稱的現有連接會中斷連接。  然後對可用性群組接聽程式的新連接會被導向至新的主要複本。 ADO.NET 提供者 (System.Data.SqlClient) 的基本連接字串範例如下：  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  您仍然可以選擇直接參考主要或次要複本的 SQL Server 執行個體名稱，而不使用可用性群組接聽程式名稱，不過如果選擇這樣做，便無法享有新連接自動導向至目前主要複本的好處。  此外，也無法享有唯讀路由的好處。  
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  指定唯讀應用程式意圖之 ADO.NET 提供者 (System.Data.SqlClient) 的連接字串範例如下：  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  在這個連接字串範例中，用戶端嘗試透過通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式，連線到 AdventureWorks 資料庫。  若連接字串的 **ApplicationIntent** 屬性設定為 **ReadOnly**，會將此字串設為「讀取意圖的連接字串」  。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  可啟用多重子網路容錯移轉的 ADO.NET 提供者 (System.Data.SqlClient) 連接字串範例如下：  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  **MultiSubnetFailover** 連接選項應該設定為 **True** ，即使可用性群組只跨越單一子網路也一樣。  這可讓您將新用戶端預先設定為支援子網路的未來跨越，而不需要在未來變更用戶端連接字串，此外也會最佳化單一子網路容錯移轉的容錯移轉效能。  雖然 **MultiSubnetFailover** 連接選項不是必要，但是它提供更快子網路容錯移轉的好處。  這是因為用戶端驅動程式會嘗試對與可用性群組平行相關的每個 IP 位址開啟 TCP 通訊端。  用戶端驅動程式會等候第一個成功回應的 IP，一旦回應，就會將它用於連接。  

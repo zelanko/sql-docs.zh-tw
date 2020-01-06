@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 9115535ecc2569e035f4831589e53191e2634f61
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148790"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957393"
 ---
 # <a name="extensible-key-management-ekm"></a>可延伸金鑰管理 (EKM)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ GO
  若要停用此功能，請將值設定為 **0**。 如需如何設定伺服器選項的詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
 ## <a name="how-to-use-ekm"></a>如何使用 EKM  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可延伸金鑰管理可讓保護資料庫檔案的加密金鑰儲存在外部裝置中，例如智慧卡、USB 裝置或 EKM/HSM 模組。 此外，這項功能也可讓資料庫管理員進行資料保護 (除了系統管理員 (sysadmin) 群組的成員以外)。 資料可以使用只有資料庫使用者可在外部 EKM/HSM 模組上存取的加密金鑰進行加密。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可延伸金鑰管理可讓保護資料庫檔案的加密金鑰儲存在外部裝置中，例如智慧卡、USB 裝置或 EKM/HSM 模組。 這也會讓資料庫管理員 (系統管理員群組的成員除外) 能夠保護資料。 資料可以使用只有資料庫使用者可在外部 EKM/HSM 模組上存取的加密金鑰進行加密。  
   
  可延伸金鑰管理也會提供下列優點：  
   

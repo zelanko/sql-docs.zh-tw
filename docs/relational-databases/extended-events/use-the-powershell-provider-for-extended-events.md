@@ -1,6 +1,5 @@
 ---
-title: 針對擴充事件使用 PowerShell 提供者 | Microsoft 文件
-ms.custom: ''
+title: 針對擴充事件使用 PowerShell 提供者
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009323"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242892"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>針對擴充事件使用 PowerShell 提供者
 
@@ -48,7 +47,7 @@ ms.locfileid: "68009323"
   
 -   您必須從 PS SQLSERVER:\\> 提示字元 (在命令提示字元中輸入 **sqlps** 即可使用) 執行這些指令碼。  
   
--   這些指令碼會使用預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+-   這些指令碼會使用預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
 -   您必須使用 .ps1 副檔名來儲存這些指令碼。  
   
@@ -110,7 +109,7 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  若要建立、更改或卸除擴充事件工作階段，您必須擁有 ALTER ANY EVENT SESSION 權限。  
   
 ## <a name="see-also"></a>另請參閱  

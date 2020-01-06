@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 3ce0d7685c042e22e45cd85e05a8e7f779045ee6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1fa730e1143516df2fe5f14c04afcbb9292ac67f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902997"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957482"
 ---
 # <a name="back-up-the-service-master-key"></a>備份服務主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "72902997"
   
 - 我們建議您在建立主要金鑰後立即將它備份，然後將該備份儲存在安全的離站位置。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限
 需要資料庫的 CONTROL 權限。  
   
-## <a name="using-transact-sql"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a>使用 TRANSACT-SQL  
   
 ### <a name="to-back-up-the-service-master-key"></a>備份服務主要金鑰
   

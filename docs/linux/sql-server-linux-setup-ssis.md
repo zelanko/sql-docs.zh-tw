@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0ee4c32568a52f5eb7664fa8f22250370f46f033
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032432"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325470"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安裝 SQL Server Integration Services (SSIS)
 
@@ -29,18 +29,25 @@ ms.locfileid: "68032432"
 ## <a name="ubuntu"></a> 在 Ubuntu 上安裝 SSIS
 若要在 Ubuntu 上安裝 `mssql-server-is` 套件，請遵循下列步驟：
 
-1. 匯入公用存放庫 GPG 金鑰。
+1. 匯入公開存放庫 GPG 金鑰。
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 2. 註冊 Microsoft SQL Server Ubuntu 存放庫。
-
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+::: moniker-end
 3. 執行下列命令來安裝 SQL Server Integration Services。
 
    ```bash
@@ -78,10 +85,18 @@ sudo apt-get remove mssql-server-is
 
 1. 下載 Microsoft SQL Server Red Hat 存放庫設定檔。
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+::: moniker-end
 1. 執行下列命令來安裝 SQL Server Integration Services。
 
    ```bash
@@ -131,10 +146,10 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>自動安裝的環境變數
 
-| 環境變數 | Description |
+| 環境變數 | 描述 |
 |---|---|
 | **ACCEPT_EULA** | 當設定為任何值時 (例如 `Y`)，即接受 SQL Server 授權合約。|
-| **SSIS_PID** | 設定 SQL Server 版本或產品金鑰。 下列為可能的值：<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>產品金鑰<br/><br/>如果您指定產品金鑰，則產品金鑰的格式必須為 `#####-#####-#####-#####-#####`，其中 `#` 是字母或數字。  |
+| **SSIS_PID** | 設定 SQL Server 版本或產品金鑰。 下列為可能的值：<br/>評估<br/>開發人員<br/>Express <br/>Web <br/>標準<br/>Enterprise <br/>產品金鑰<br/><br/>如果您指定產品金鑰，則產品金鑰的格式必須為 `#####-#####-#####-#####-#####`，其中 `#` 是字母或數字。  |
 | | |
 
 ## <a name="next-steps"></a>後續步驟

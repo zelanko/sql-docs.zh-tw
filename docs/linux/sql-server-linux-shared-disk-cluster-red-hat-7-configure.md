@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809785"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252235"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定適用於 SQL Server 的 Red Hat Enterprise Linux 共用磁碟叢集
 
@@ -23,7 +23,7 @@ ms.locfileid: "70809785"
 本指南提供在 Red Hat Enterprise Linux 上，為 SQL Server 建立兩個節點共用磁碟叢集的指示。 叢集層是以建置於 [Pacemaker](https://clusterlabs.org/) 之上的 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)為基礎。 SQL Server 執行個體在其中一個節點上為作用中狀態。
 
 > [!NOTE] 
-> 存取 Red Hat HA 附加元件與文件需要訂用帳戶。 
+> 存取 Red Hat HA 附加元件與文件皆需要訂用帳戶。 
 
 如下圖所示，會向兩部伺服器提供儲存體。 群集元件 (Corosync 和 Pacemaker) 會協調通訊和資源管理。 其中一部伺服器具有針對儲存體資源和 SQL Server 的作用中連線。 當 Pacemaker 偵測到失敗時，群集元件會負責將資源移至另一個節點。  
 
@@ -33,7 +33,7 @@ ms.locfileid: "70809785"
 
 
 > [!NOTE] 
-> 目前，SQL Server 與 Pacemaker 整合程度尚不如 Windows 與 WSFC 的結合。 SQL 不會知道叢集是否存在，所有協調流程都是從外而入，且 Pacemaker 會以獨立執行個體形式來控制服務。 例如，叢集 dmvs sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 將不會有任何記錄。
+> 目前，SQL Server 與 Pacemaker 整合程度尚不如 Windows 與 WSFC 的結合。 從 SQL 內並無法得知叢集是否存在，所有協調流程都是從外而入，且服務會以獨立執行個體的形式由 Pacemaker 所控制。 例如，叢集 dmvs sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 將不會有任何記錄。
 若要使用指向字串伺服器名稱的連接字串而不使用 IP，他們必須在其 DNS 伺服器中搭配指定的伺服器名稱註冊用來建立虛擬 IP 資源的 IP (如下列各節中所述)。
 
 下列各節將逐步解說設定容錯移轉叢集解決方案的步驟。 
@@ -63,7 +63,7 @@ ms.locfileid: "70809785"
 > [!NOTE] 
 > 在安裝期間，將為 SQL Server 執行個體產生伺服器主要金鑰，並將其置於 `/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 一律會以名為 mssql 的本機帳戶執行。 因為它是本機帳戶，所以不會在節點之間共用其身分識別。 因此，您需要將加密金鑰從主要節點複製到每個次要節點，讓每個本機 mssql 帳戶可以存取它來將伺服器主要金鑰解密。 
 
-1. 在主要節點上，建立 Pacemaker 的 SQL Server 登入，並授與該登入執行 `sp_server_diagnostics` 的權限。 Pacemaker 會使用此帳戶來確認哪個節點正在執行 SQL Server。 
+1. 在主要節點上，建立 Pacemaker 的 SQL Server 登入，並授與該登入執行 `sp_server_diagnostics` 的權限。 Pacemaker 會使用此帳戶來驗證哪個節點正在執行 SQL Server。 
 
    ```bash
    sudo systemctl start mssql-server
@@ -95,7 +95,7 @@ ms.locfileid: "70809785"
    ```bash
    sudo vi /etc/hosts
    ```
-   下列範例顯示 `/etc/hosts`，以及適用於兩個節點 (名稱為 `sqlfcivm1`和 `sqlfcivm2`) 的新增項目。
+   下列範例顯示 `/etc/hosts`，其中包含名為 `sqlfcivm1` 和 `sqlfcivm2` 的兩個額外節點。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -202,11 +202,11 @@ ms.locfileid: "70809785"
 
 * [NFS 伺服器和 firewalld | 堆疊交換](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld) \(英文\)
 * [裝載 NFS 磁碟區 | Linux 網路系統管理員指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html) \(英文\)
-* [NFS 伺服器設定 | Red Hat 客戶入口網站](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig) \(英文\)
+* [NFS 伺服器設定 | Red Hat 客戶入口網站](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig) \(英文\)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>裝載資料庫檔案目錄以指向共用儲存體
 
-1.  **僅在主要節點上**，將資料庫檔案儲存至暫存位置。下列指令碼會建立新的暫存目錄、將資料庫檔案複製到新的目錄，並移除舊的資料庫檔案。 當 SQL Server 以本機使用者 mssql 的身分執行時，您必須確定在資料傳輸到裝載共用之後，本機使用者具有共用的讀寫存取權。 
+1.  **僅在主要節點上**，將資料庫檔案儲存至暫存位置。下列指令碼會建立新的暫存目錄、將資料庫檔案複製到新的目錄，並移除舊的資料庫檔案。 當 SQL Server 以本機使用者 mssql 的身分執行時，您必須確定在資料轉送到掛接的共用之後，本機使用者具有共用的讀寫存取權。 
 
    ``` 
    $ sudo su mssql
@@ -358,7 +358,7 @@ STONITH 裝置提供隔離代理程式。 [在 Azure 的 Red Hat Enterprise Linu
 
    推送設定之後，SQL Server 會在一個節點上啟動。 
 
-3. 確認已啟動 SQL Server。 
+3. 驗證已啟動 SQL Server。 
 
    ```bash
    sudo pcs status 

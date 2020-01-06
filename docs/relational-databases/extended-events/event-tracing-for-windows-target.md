@@ -1,6 +1,5 @@
 ---
-title: Windows 事件追蹤目標 | Microsoft Docs
-ms.custom: ''
+title: Windows 事件追蹤目標
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1191d870d7fe745cdbed0e17892c5c2cf34435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021857"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234658"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
 
@@ -52,13 +51,13 @@ ms.locfileid: "68021857"
   
  下表描述用於設定 ETW 目標的可用選項。  
   
-|選項|允許的值|Description|  
+|選項|允許的值|描述|  
 |------------|--------------------|-----------------|  
-|default_xe_session_name|最多 256 個字元的任何字串。 此為選擇性的值。|擴充事件工作階段名稱。 根據預設，這個名稱是 XE_DEFAULT_ETW_SESSION。|  
-|default_etw_session_logfile_path|最多 256 個字元的任何字串。 此為選擇性的值。|擴充事件工作階段之記錄檔的路徑。 根據預設，這個路徑是 %TEMP%\ XEEtw.etl。|  
-|default_etw_session_logfile_size_mb|任何不帶正負號的整數。 此為選擇性的值。|擴充事件工作階段的記錄檔案大小 (以 MB 為單位)。 預設值是 20 MB。|  
-|default_etw_session_buffer_size_kb|任何不帶正負號的整數。 此為選擇性的值。|擴充事件工作階段的記憶體中緩衝區大小 (以 KB 為單位)。 預設值是 128 KB。|  
-|重試次數|任何不帶正負號的整數。|在卸除事件之前，重試將此事件發行給 ETW 子系統的次數。 預設值是 0。|  
+|default_xe_session_name|最多 256 個字元的任何字串。 此為選用值。|擴充事件工作階段名稱。 根據預設，這個名稱是 XE_DEFAULT_ETW_SESSION。|  
+|default_etw_session_logfile_path|最多 256 個字元的任何字串。 此為選用值。|擴充事件工作階段之記錄檔的路徑。 根據預設，這個路徑是 %TEMP%\ XEEtw.etl。|  
+|default_etw_session_logfile_size_mb|任何不帶正負號的整數。 此為選用值。|擴充事件工作階段的記錄檔案大小 (以 MB 為單位)。 預設值是 20 MB。|  
+|default_etw_session_buffer_size_kb|任何不帶正負號的整數。 此為選用值。|擴充事件工作階段的記憶體中緩衝區大小 (以 KB 為單位)。 預設值是 128 KB。|  
+|重試|任何不帶正負號的整數。|在卸除事件之前，重試將此事件發行給 ETW 子系統的次數。 預設值是 0。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
  這些設定都是選擇性的。 ETW 目標會使用這些設定的預設值。  

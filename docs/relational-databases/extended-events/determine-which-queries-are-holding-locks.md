@@ -1,6 +1,5 @@
 ---
-title: 判斷哪些查詢持有鎖定 | Microsoft Docs
-ms.custom: ''
+title: 判斷哪些查詢持有鎖定
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +16,12 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f6bdf2ed730330e03068473e5db9f82015caacc
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: fa07161439f8536af056d8d99996d5c19242911e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589987"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234614"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>判斷哪些查詢持有鎖定
 

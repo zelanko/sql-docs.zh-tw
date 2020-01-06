@@ -1,5 +1,6 @@
 ---
-title: 個別儲存 Showplan XML Statistics Profile 事件 (SQL Server Profiler) | Microsoft Docs
+title: 個別儲存 Showplan XML Statistics Profile 事件
+titleSuffix: SQL Server Profiler
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 72d07cc36de00fd0f6fc2b9377a5ed3870413c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d15ca528efb0246d1d05c87420045fcc74918886
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113400"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165567"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>個別儲存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "68113400"
   
 3. 在 [使用範本]  清單中，選取追蹤使用為基礎的追蹤範本。 若不想要使用範本，請選取 [空白]  。  
   
-4. 執行下列其中之一：  
+4. 執行下列其中一個動作：  
   
     -   若要將追蹤擷取至檔案，請選取 [儲存至檔案]  核取方塊。 在 **[設定最大檔案大小]** 中指定一個值。  
   

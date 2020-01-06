@@ -1,21 +1,21 @@
 ---
-title: 快速入門：連線及查詢 Azure SQL 資料倉儲
+title: 連線及查詢 Azure SQL 資料倉儲
 titleSuffix: Azure Data Studio
 description: 本快速入門說明如何使用 Azure Data Studio 連線到 Azure SQL 資料倉儲並執行查詢
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
+ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959400"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957105"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入門：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連線及查詢 Azure SQL 資料倉儲中的資料
 
@@ -41,11 +41,11 @@ ms.locfileid: "67959400"
 
 2. 本文使用「SQL 登入」  ，但「Windows 驗證」  亦受支援。 使用「您的」  Azure SQL 伺服器的伺服器名稱、使用者名稱和密碼填入欄位如下：
 
-   | 設定       | 建議值 | Description |
+   | 設定       | 建議的值 | 描述 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器名稱** | 完整伺服器名稱 | 名稱應如下所示：**sqldwsample.database.windows.net** |
    | **驗證** | SQL 登入| 本教學課程使用 SQL 驗證。 |
-   | **User name** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
+   | **使用者名稱** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
    | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時指定的密碼。 |
    | **儲存密碼嗎？** | [是] 或 [否] | 如果您不想要每次都輸入密碼，請選取 [是]。 |
    | **資料庫名稱** | 保留空白  | 要連線之資料庫的名稱。 |

@@ -1,7 +1,7 @@
 ---
 title: 設定或變更伺服器定序 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81a776a0bece59f98042fec6cbf7b191ec82be1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 019c62424398b05dfaa6efe2f91ab4c08b333cd2
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140841"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901919"
 ---
 # <a name="set-or-change-the-server-collation"></a>設定或變更伺服器定序
 
@@ -43,7 +43,7 @@ ms.locfileid: "68140841"
   
 - 重建 master 資料庫，以使用 **setup** 命令的 SQLCOLLATION 屬性來指定新定序。 例如：  
   
-    ```sql  
+    ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
     /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
@@ -59,13 +59,12 @@ ms.locfileid: "68140841"
 > 您可以不變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的預設定序，而是針對每個建立的新資料庫指定預設定序。  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>設定受控執行個體中的伺服器定序
-
 建立 Azure SQL 受控執行個體時，可指定執行個體中的伺服器層級定序，且稍後無法變更。 您可以在建立執行個體時，透過 [Azure 入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance)或 [PowerShell 和 Resource Manager 範本](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)來設定伺服器層級定序。 預設伺服器層級定序為 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序和新的 UTF-8 定序指定為伺服器層級定序。
 如果您將資料庫從 SQL Server 移轉至受控執行個體，請使用 `SERVERPROPERTY(N'Collation')` 函式來檢查來源 SQL Server 中的伺服器定序，並建立符合您 SQL Server 定序的受控執行個體。 將資料庫從 SQL Server 移轉至伺服器層級定序不相符的受控執行個體，可能會導致查詢中出現數個未預期的錯誤。 您無法變更現有受控執行個體上的伺服器層級定序。
 
 ## <a name="see-also"></a>另請參閱
 
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
+ [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)   
  [設定或變更資料庫定序](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [設定或變更資料行定序](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [重建系統資料庫](../../relational-databases/databases/rebuild-system-databases.md)  

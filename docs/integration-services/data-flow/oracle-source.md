@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 4444236d19c9d7c67aba5a36ba079e1dfa9189b0
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545065"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542199"
 ---
 # <a name="oracle-source"></a>Oracle 來源
 
@@ -49,12 +49,12 @@ Oracle 來源會在錯誤輸出中傳回載入和擷取程序期間發生的錯�
 
 Oracle 來源的自訂屬性如下所示。 所有屬性都是可讀寫的。
 
-|屬性名稱|資料類型|Description|
+|屬性名稱|資料類型|描述|
 |:-|:-|:-|
 |AccessMode|整數 (列舉)|用來存取資料庫的模式。 可能的值為**資料表名稱**與 **SQL 命令**。 預設值為**資料表名稱**。|
-|BatchSize|Integer|大量載入的批次大小。 這是當做陣列擷取的記錄數目。 <br>這個屬性僅由 [進階編輯器]  設定|
-|DefaultCodePage|Integer|當資料來源沒有字碼頁資訊時，所要使用的字碼頁。 <br>這個屬性僅由 [進階編輯器]  設定。|
-|PreFetchCount|Integer|預先擷取的資料列數。 <br>這個屬性僅由 [進階編輯器]  設定。|
+|BatchSize|整數|大量載入的批次大小。 這是當做陣列擷取的記錄數目。 <br>這個屬性僅由 [進階編輯器]  設定|
+|DefaultCodePage|整數|當資料來源沒有字碼頁資訊時，所要使用的字碼頁。 <br>這個屬性僅由 [進階編輯器]  設定。|
+|PreFetchCount|整數|預先擷取的資料列數。 <br>這個屬性僅由 [進階編輯器]  設定。|
 |SqlCommand|String|當 AccessMode 設為 [SQL 命令] 時要執行的 SQL 命令。|
 |TableName|String|當 AccessMode 設定為 [資料表名稱] 時所使用之資料的資料表名稱。|
 
@@ -103,7 +103,7 @@ Oracle 來源的自訂屬性如下所示。 所有屬性都是可讀寫的。
 
 選取從來源中選取資料的方法。 下表將顯示這些選項：
 
-|選項|Description|
+|選項|描述|
 |:-|:-|
 |資料表或檢視|從 Oracle 資料來源中的資料表或檢視表擷取資料。 選取此選項後，從清單中選取可用的資料表或檢視，以取得**資料表或檢視的名稱**。|
 |SQL (命令)|使用 SQL 查詢從 Oracle 資料來源擷取資料。 當選取此選項時，請用下列其中一種方式輸入查詢： <br>在 **[SQL 命令文字]** 欄位中輸入 SQL 查詢的文字。 <br>按一下 **[瀏覽]** ，從文字檔載入 SQL 查詢。 <br>按一下 **[剖析查詢]** 驗證查詢文字的語法。|
@@ -161,7 +161,7 @@ Oracle 來源的自訂屬性如下所示。 所有屬性都是可讀寫的。
 **錯誤行為**
 
 選取 Oracle 來源應該如何處理流程中的錯誤：忽略失敗、重新導向資料列，或使元件失效。
-**相關小節**：[資料中的錯誤處理](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**相關小節**：[資料中的錯誤處理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **截斷**
 
