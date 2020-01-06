@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bcb4748aebe7b4e24ebfe8f857f422ac8a41f47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a64aac5fa64a7ace7c55f7fb3c7b70b8cf9e44c9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049966"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957456"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>在兩部伺服器上建立相同的對稱金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "68049966"
   
 - 如果是利用密碼 (而不是利用資料庫主要金鑰的公開金鑰) 來加密對稱金鑰，則會使用 TRIPLE DES 加密演算法。 因此，利用強式加密演算法 (如 AES) 建立的金鑰，其本身的安全是由較弱的演算法來維護的。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>權限  
  需要資料庫的 ALTER ANY SYMMETRIC KEY 權限。 如果指定了 AUTHORIZATION，則需要資料庫使用者的 IMPERSONATE 權限或應用程式角色的 ALTER 權限。 如果是利用憑證或非對稱金鑰來加密，則需要憑證或非對稱金鑰的 VIEW DEFINITION 權限。 只有 Windows 登入、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入，以及應用程式角色可以擁有對稱金鑰。 群組和角色無法擁有對稱金鑰。  
   
-## <a name="using-transact-sql"></a>使用 Transact-SQL  
+## <a name="using-transact-sql"></a>使用 TRANSACT-SQL  
   
 ### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>若要在兩部不同的伺服器上建立相同的對稱金鑰  
   
@@ -104,7 +104,7 @@ SQL Server 2016 使用 SHA1 雜湊演算法進行加密工作。 從 SQL Server 
 - [修正：SQL Server 2017 無法使用相同的對稱金鑰來將舊版 SQL Server 所加密的資料解密](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions) \(機器翻譯\)
 - [相同的對稱金鑰無法在 SQL Server 2017 和其他 SQL Server 版本之間運作](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) \(英文\) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
 
-## <a name="for-more-information"></a>如需詳細資訊
+## <a name="for-more-information"></a>取得詳細資訊
 
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   

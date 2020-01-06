@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586760"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243591"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>適用於 Linux 部署的 SQL Server 可用性基本概念
 
@@ -57,7 +57,7 @@ ms.locfileid: "72586760"
 將檔案從一部伺服器複製到另一部，是 Linux 上任何使用 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的人都應該能夠執行的工作。 此工作對 AG 設定而言非常重要。
 
 權限問題之類的項目均可存在於 Linux 以及 Windows 型安裝上。 不過，熟悉如何在 Windows 上從伺服器複製到伺服器的人，可能不熟悉如何在 Linux 上進行此動作。 常見的方法是使用命令列公用程式 `scp`，這代表安全複製。 在幕後，`scp` 會使用 OpenSSH。 SSH 代表安全殼層。 視 Linux 發行版本而定，可能不會安裝 OpenSSH 本身。 如果未安裝，則必須先安裝 OpenSSH。 如需設定 OpenSSH 的詳細資訊，請參閱下列適用於每個發行版本之連結中的相關資訊：
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -70,7 +70,7 @@ scp MyAGCert.cer username@servername:/folder/subfolder
 將 MyAGCert.cer 檔案複製到另一部伺服器上指定的資料夾。 請注意，您必須擁有檔案的權限 (而且可能需要擁有權) 才能複製它，因此，在複製之前，也可能需要採用 `chown`。 同樣地，在接收端，正確的使用者需要存取權才能操作檔案。 例如，若要還原該憑證檔案，`mssql` 使用者必須能夠存取它。
 
 Samba 是伺服器訊息區 (SMB) 的 Linux 變體，也可以用來建立 UNC 路徑 (例如 `\\SERVERNAME\SHARE`) 所存取的共用。 如需設定 Samba 的詳細資訊，請參閱下列適用於每個發行版本之連結中的相關資訊：
--   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html) \(英文\)
+-   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
 -   [SLES](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
 -   [Ubuntu](https://help.ubuntu.com/community/Samba)
 
@@ -83,7 +83,7 @@ Samba 是伺服器訊息區 (SMB) 的 Linux 變體，也可以用來建立 UNC �
 ### <a name="configure-the-firewall"></a>設定防火牆
 類似於 Windows，Linux 發行版本具有內建的防火牆。 如果貴公司對伺服器使用外部防火牆，則或許能夠接受在 Linux 中停用防火牆。 不過，不論啟用防火牆的位置為何，都必須開啟連接埠。 下表記載 Linux 上高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署所需的通用連接埠。
 
-| 通訊埠編號 | 類型     | Description                                                                                                                 |
+| 連接埠號碼 | 類型     | 描述                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS：`rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (如果使用)：結束點對應程式                                                                                          |
@@ -116,8 +116,8 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **防火牆文件：**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar) \(英文\)
--   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) \(英文\)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安裝 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 套件以取得可用性
 在 Windows 型 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 安裝上，即使是在基本的引擎安裝中還是會安裝某些元件，其他的則不會安裝。 在 Linux 底下，只會在安裝過程中安裝 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 引擎。 其他所有項目都是選擇性的。 針對 Linux 底下高可用性的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 執行個體，應該使用 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 來安裝兩個套件：[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) 和高可用性 (HA) 套件 (*mssql-server-ha*)。 雖然 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent 在技術上是選擇性的，但它是 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的作業排程器，而且是記錄傳送所需的，因此建議安裝。 在 Windows 型安裝上，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent 不是選擇性的。
@@ -150,8 +150,8 @@ sudo firewall-cmd --permanent --add-service=high-availability
 在 Linux 上，雖然每個支援的發行版本都有可用的 Pacemaker，但每個發行版本都可以自訂，而且實作和版本會有些微不同。 此文章中的指示將反映部分差異。 叢集層是開放原始碼，因此，即使它隨附於發行版本，也不會以 WSFC 在 Windows 底下的相同方式緊密整合。 這就是 Microsoft 提供 *mssql-server-ha* 的原因，因此 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 和 Pacemaker 堆疊可以提供接近 Windows 底下但不完全相同的 AGs 和 FCI 體驗。
 
 如需有關 Pacemaker 的完整文件，包括針對 RHEL 和 SLES 提供所有內容完整參考資訊的更深入說明：
--   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html) \(英文\)
--   [SLES](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html) \(英文\)
+-   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
+-   [SLES](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html)
 
 Ubuntu 沒有可用性指南。
 
@@ -207,7 +207,7 @@ Pacemaker 叢集的記錄檔位置會因發行版本而有所不同。
 本節將討論適用於 Pacemaker 叢集的重要規劃點。
 
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>針對 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 將 Linux 型 Pacemaker 叢集虛擬化
-使用虛擬機器來為 AG 和 FCI 部署 Linux 型 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署，會由與其 Windows 型對應項目相同的規則所涵蓋。 在 [Microsoft 支援服務 KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment) \(機器翻譯\) 中，有一組基本規則適用於 Microsoft 所提供之虛擬化 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署的支援能力。 由於平台本身的差異，不同的 Hypervisor (例如 Microsoft 的 Hyper-V 和 VMware 的 ESXi) 可能會有不同的差異。
+使用虛擬機器來為 AG 和 FCI 部署 Linux 型[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署，會由與其 Windows 型對應項目相同的規則所涵蓋。 在 [Microsoft 支援服務 KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment) \(機器翻譯\) 中，有一組基本規則適用於 Microsoft 所提供之虛擬化 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 部署的支援能力。 由於平台本身的差異，不同的 Hypervisor (例如 Microsoft 的 Hyper-V 和 VMware 的 ESXi) 可能會有不同的差異。
 
 當它進入虛擬化的 AG 和 FCI 時，請確定已針對指定 Pacemaker 叢集的節點設定反親和性。 在 AG 或 FCI 設定中設定以取得高可用性時，裝載 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 VM 應該永遠不會在相同的 Hypervisor 主機上執行。 例如，如果已部署兩個節點的 FCI，則「至少」  必須有三部 Hypervisor 主機，以便在某部主機發生故障時，讓其中一部裝載節點的 VM 能夠在某處執行，特別是使用「即時移轉」或 vMotion 之類的功能時。
 
@@ -215,7 +215,7 @@ Pacemaker 叢集的記錄檔位置會因發行版本而有所不同。
 -   Hyper-V 文件：[使用客體叢集以提供高可用性](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx) \(英文\)
 -   白皮書 (專為 Windows 型部署所撰寫，但大部分的概念仍適用)：[使用 VMware vSphere 規劃高可用性、任務關鍵性 SQL Server 部署](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf) \(英文\)
 
-### <a name="networking"></a>網路
+### <a name="networking"></a>網路功能
 與 WSFC 不同，Pacemaker 不需要專用名稱，或至少一個固定 IP 位址以供 Pacemaker 叢集本身使用。 AG 和 FCI 將需要 IP 位址 (請參閱各自的文件，以取得詳細資訊)，但不需要名稱，因為沒有網路名稱資源。 SLES 確實允許基於系統管理目的來設定 IP 位址，但並非必要，因為可以在[建立 Pacemaker 叢集中](sql-server-linux-deploy-pacemaker-cluster.md#create)查看它。
 
 就像 WSFC 一樣，Pacemaker 偏好使用多餘的網路功能，亦即具有個別 IP 位址的不同網路卡 (實體的 NIC 或 pNIC)。 就叢集設定而言，每個 IP 位址都有所謂自己的通道。 不過，就像現今的 WSFC，許多實作都會虛擬化或位於公用雲端，實際上只會將單一虛擬化的 NIC (vNIC) 呈現給伺服器。 如果所有 pNIC 和 vNIC 都連線到相同的實體或虛擬交換器，則網路層就不會有任何真正的冗餘，因此，設定多個 NIC 對虛擬機器而言就是一種假像。 網路冗餘通常內建於 Hypervisor 以用來虛擬化部署，而且一定會內建於公用雲端中。

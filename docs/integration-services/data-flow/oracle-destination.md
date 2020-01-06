@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a175c38fb591dd5805ea3e8890cf9e60392178ce
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9ee964e5c1c58ea54da3f3451c0ffdde29e71b23
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553214"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246944"
 ---
 # <a name="oracle-destination"></a>Oracle 目的地
 
@@ -83,12 +83,12 @@ Oracle 目的地有錯誤輸出。 此元件的錯誤輸出包含下列輸出資
 |:-|:-|:-|:-|
 |BatchSize|整數|大量載入的批次大小。 這是當做批次載入的資料列數目。|只能在批次模式中使用。|
 |DefaultCodePage|整數|當資料來源沒有字碼頁資訊時，所要使用的字碼頁。 <br>**注意**：這個屬性僅由 [進階編輯器]  設定。|用於這兩種模式。|
-|FastLoad|布林值|是否使用快速載入。 預設值為 **false**。 這也可以在 [Oracle 目的地編輯器 (連線管理員頁面)](#oracle-destination-editor-connection-manager-page) 中設定。 |用於這兩種模式。|
+|FastLoad|Boolean|是否使用快速載入。 預設值為 **false**。 這也可以在 [Oracle 目的地編輯器 (連線管理員頁面)](#oracle-destination-editor-connection-manager-page) 中設定。 |用於這兩種模式。|
 |MaxErrors|整數|停止資料流程之前可以發生的錯誤數目。 預設值為 **0**，表示沒有錯誤數目的限制。<br> 如果已在 [錯誤處理]  頁面中選取 [重新導向流程]  。 在達到錯誤數目限制之前，所有錯誤都會在錯誤輸出中傳回。 如需詳細資訊，請參閱[錯誤處理](#error-handling)。|只能在「快速載入」模式中使用。|
-|NoLogging|布林值|資料庫記錄是否已停用。 預設值為 **False**，表示記錄已啟用。|用於這兩種模式。|
-|Parallel|布林值|是否允許平行載入。 **True** 表示允許其他載入工作階段針對相同的目標資料表執行。<br> 如需詳細資訊，請參閱[平行處理原則](#parallelism)。|只能在「快速載入」模式中使用。|
-|TableName|子串|包含所要使用之資料的資料表名稱。|用於這兩種模式。|
-|TableSubName|字串|subname 或 subpartition。 此為選擇性的值。<br> **注意**：此屬性只能在 [進階編輯器]  中設定。|只能在「快速載入」模式中使用。|
+|NoLogging|Boolean|資料庫記錄是否已停用。 預設值為 **False**，表示記錄已啟用。|用於這兩種模式。|
+|平行|Boolean|是否允許平行載入。 **True** 表示允許其他載入工作階段針對相同的目標資料表執行。<br> 如需詳細資訊，請參閱[平行處理原則](#parallelism)。|只能在「快速載入」模式中使用。|
+|TableName|String|包含所要使用之資料的資料表名稱。|用於這兩種模式。|
+|TableSubName|String|subname 或 subpartition。 此為選用值。<br> **注意**：此屬性只能在 [進階編輯器]  中設定。|只能在「快速載入」模式中使用。|
 |TransactionSize|整數|單一交易中可以進行的插入數目。 預設值為 **BatchSize**。|只能在批次模式中使用。|
 |TransferBufferSize|整數|傳輸緩衝區的大小。 預設值為 64 KB。|只能在「快速載入」模式中使用。|
 
@@ -125,7 +125,7 @@ Oracle 目的地可以透過程式設計方式或 SSIS 設計工具來設定。
 
 - 在 [Oracle 目的地編輯器] 中，按一下 [連線管理員]。
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 **[ODBC 目的地編輯器]**
 
@@ -133,7 +133,7 @@ Oracle 目的地可以透過程式設計方式或 SSIS 設計工具來設定。
 
 **新增**
 
-按一下 [新增]  。 [Oracle 連線管理員編輯器]  對話方塊隨即開啟，讓您能夠建立新的連線管理員。
+按一下 **[新增]** 。 [Oracle 連線管理員編輯器]  對話方塊隨即開啟，讓您能夠建立新的連線管理員。
 
 **資料存取模式**
 
@@ -160,7 +160,7 @@ Oracle 目的地可以透過程式設計方式或 SSIS 設計工具來設定。
 
 - 在 [Oracle 目的地編輯器] 中，按一下 [對應]。
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 **可用的輸入資料行**
 
@@ -194,12 +194,12 @@ Oracle 目的地可以透過程式設計方式或 SSIS 設計工具來設定。
 
 - 在 [Oracle 目的地編輯器] 中，按一下 [錯誤輸出]。
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 **錯誤行為**
 
 選取 Oracle 來源應該如何處理流程中的錯誤：忽略失敗、重新導向資料列，或使元件失效。
-**相關小節**：[資料中的錯誤處理](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**相關小節**：[資料中的錯誤處理](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **截斷**
 

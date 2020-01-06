@@ -1,5 +1,5 @@
 ---
-title: 教學課程：啟用資料表空間使用量範例深入解析小工具
+title: 啟用資料表空間使用量範例深入解析小工具
 titleSuffix: Azure Data Studio
 description: 本教學課程示範如何在 Azure Data Studio 資料庫儀表板上，啟用資料表空間使用量範例深入解析小工具。
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 4b44fc9dbee773e7bc88daecf9142c1f826d65a0
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878633"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957012"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 啟用資料表空間使用量範例深入解析小工具
 
@@ -37,9 +37,9 @@ ms.locfileid: "70878633"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 內建範例小工具，可監視資料庫中資料表所使用的空間。
 
-1. 按 **Ctrl+Shift+P** 開啟 [命令選擇區]  ，以開啟 [使用者設定]  。
+1. 按 **Ctrl+Shift+P** 開啟 [命令選擇區]  ，開啟 [使用者設定]  。
 
-2. 在搜尋方塊中鍵入 *settings*，然後選取 [Preferences:**Open User Settings] \(喜好設定: 開啟使用者設定\)** 。
+2. 在搜尋方塊中鍵入 *settings*，然後選取 [Preferences:  Open User Settings] \(喜好設定: 開啟使用者設定\)。
 
 3. 在 [設定搜尋] 輸入方塊中鍵入 *dashboard*，然後尋找 **dashboard.database.widgets**。
 

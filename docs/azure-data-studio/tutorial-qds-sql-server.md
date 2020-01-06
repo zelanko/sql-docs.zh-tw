@@ -1,5 +1,5 @@
 ---
-title: 教學課程：啟用五個最慢速查詢範例小工具
+title: 啟用五個最慢速查詢範例小工具
 titleSuffix: Azure Data Studio
 description: 本教學課程示範如何在資料庫儀表板上啟用五個最慢速查詢範例小工具。
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
-ms.openlocfilehash: 576e175e8135808a4221e96085e39e9c0850190b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810914"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957042"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程：將「五個最慢速查詢」  範例小工具新增至資料庫儀表板
 

@@ -3,19 +3,19 @@ title: 教學課程：建立延伸模組
 titleSuffix: Azure Data Studio
 description: 本教學課程示範如何建立延伸模組，將自訂功能新增至 Azure Data Studio。
 ms.custom: seodec18
-ms.date: 09/24/2018
+ms.date: 12/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: kevcunnane
-ms.author: kcunnane
-ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8a8481653f7161b39cc752878f4544f98751261
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959089"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241758"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>教學課程：建立 Azure Data Studio 延伸模組
 

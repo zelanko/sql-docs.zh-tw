@@ -10,12 +10,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d4132db44bb52835e277733365321d85342e670
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 61c282e01a03a0b46de0c256025cb59c57304ddb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095847"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245601"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>以 PATH 模式格式化巢狀的 JSON 輸出 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "74095847"
 
 **FOR JSON PATH** 子句會使用資料行別名或資料行名稱判斷 JSON 輸出中的索引鍵名稱。 如果別名包含點，PATH 選項會建立巢狀物件。  
 
- **[資料集屬性]**  
+ **查詢**  
   
 ```sql  
 SELECT TOP 5   
@@ -86,13 +86,13 @@ SELECT TOP 5
 ## <a name="example---multiple-tables"></a>範例 - 多份資料表  
 如果在查詢中參考多個資料表，則 **FOR JSON PATH** 會使用別名來巢狀處理每個資料行。 下列查詢會為在查詢中聯結的每組 (OrderHeader, OrderDetails) 建立一個 JSON 物件。 
   
- **[資料集屬性]**  
+ **查詢**  
   
 ```sql  
-SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
-        OrderDate AS 'Order.Date',  
-        UnitPrice AS 'Product.Price',  
-        OrderQty AS 'Product.Quantity'  
+SELECT TOP 2 H.SalesOrderNumber AS 'Order.Number',  
+        H.OrderDate AS 'Order.Date',  
+        D.UnitPrice AS 'Product.Price',  
+        D.OrderQty AS 'Product.Quantity'  
 FROM Sales.SalesOrderHeader H  
    INNER JOIN Sales.SalesOrderDetail D  
      ON H.SalesOrderID = D.SalesOrderID  

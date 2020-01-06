@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0ad547d26c86c43b0009cdf20acae33ed7e8ab7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553238"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246946"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -43,7 +43,7 @@ Microsoft Connector for Oracle 支援下列 Microsoft SQL Server 產品：
 
 ## <a name="installation"></a>安裝
 
-如果您需要在 SQL Server 中執行套件，您可以從[這裡](https://www.microsoft.com/en-us/download/details.aspx?id=58228) \(英文\) 取得 Microsoft Connector for Oracle Database 安裝程式。 然後，遵循安裝精靈中的指示進行。
+如果您需要在 SQL Server 中執行套件，您可以從[這裡](https://www.microsoft.com/download/details.aspx?id=58228) \(英文\) 取得 Microsoft Connector for Oracle Database 安裝程式。 然後，遵循安裝精靈中的指示進行。
 
 安裝連接器之後，您必須重新啟動 SQL Server Integration Service，以確保 Oracle 來源和目的地能正常運作。
 
@@ -61,10 +61,10 @@ Microsoft Connector for Oracle 支援下列 Microsoft SQL Server 產品：
 
 **下載連結：**
 
-- [SQL Server 2017：Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=55179) \(英文\)
-- [SQL Server 2016：Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=52950) \(英文\)
-- [SQL Server 2014：Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=44582) \(英文\)
-- [SQL Server 2012：Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=29283) \(英文\)
+- [SQL Server 2017：Microsoft Connector Version 5.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=55179) \(英文\)
+- [SQL Server 2016：Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950) \(英文\)
+- [SQL Server 2014：Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582) \(英文\)
+- [SQL Server 2012：Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283) \(英文\)
 
 ## <a name="next-steps"></a>後續步驟
 
