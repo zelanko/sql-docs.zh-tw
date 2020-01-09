@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215567"
----
 ## <a name="prerequisites"></a>Prerequisites
 
 建立可用性群組之前，您需要：
@@ -14,7 +6,7 @@ ms.locfileid: "68215567"
 - 安裝 SQL Server。
 
 >[!NOTE]
->在 Linux 上，您必須先建立可用性群組，再將它新增為叢集資源，以供叢集管理。 此文件提供建立可用性群組的範例。 如需建立叢集並將可用性群組新增為叢集資源的發行版本特定指示，請參閱＜後續步驟＞底下的連結。
+>在 Linux 上，您必須先建立可用性群組，再將它新增為叢集資源，以供叢集管理。 本文件提供建立可用性群組的範例。 如需建立叢集並將可用性群組新增為叢集資源的發行版本特定指示，請參閱＜後續步驟＞底下的連結。
 
 1. 更新每一部主機的電腦名稱。
 
@@ -69,7 +61,7 @@ ms.locfileid: "68215567"
 
 ## <a name="enable-alwayson-availability-groups-and-restart-mssql-server"></a>啟用 AlwaysOn 可用性群組並重新啟動 mssql-server
 
-在每個裝載 SQL Server 執行個體的節點上啟用 AlwaysOn 可用性群組。 然後重新啟動 `mssql-server`。 請執行下列指令碼：
+在每個裝載 SQL Server 執行個體的節點上啟用 AlwaysOn 可用性群組。 然後重新啟動 `mssql-server`。 執行下列指令碼：
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1

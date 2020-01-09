@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67834417"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329960"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>適用於 Linux 上 SQL Server 的 Active Directory 驗證
 
@@ -44,8 +44,8 @@ AD 驗證與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證相較
 1. [將 SQL Server 主機加入 Active Directory 網域](sql-server-linux-active-directory-join-domain.md)。
 1. [建立 SQL Server 的 AD 使用者並設定 ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser)。
 1. [設定 SQL Server 服務 Keytab](sql-server-linux-active-directory-authentication.md#configurekeytab)。
-1. [保護 Keytab 檔案](sql-server-linux-active-directory-authentication.md#securekeytab)。
-1. [設定 SQL Server 以使用 Keytab 檔案進行 Kerberos 驗證](sql-server-linux-active-directory-authentication.md#keytabkerberos)。
+1. [保護 Keytab 檔案](sql-server-linux-active-directory-authentication.md#configurekeytab)。
+1. [設定 SQL Server 以使用 Keytab 檔案進行 Kerberos 驗證](sql-server-linux-active-directory-authentication.md#configurekeytab)。
 1. [在 Transact-SQL 中建立以 AD 為基礎的 SQL Server 登入](sql-server-linux-active-directory-authentication.md#createsqllogins)。
 1. [使用 AD 驗證連線到 SQL Server](sql-server-linux-active-directory-authentication.md#connect)。
 
@@ -53,6 +53,6 @@ AD 驗證與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證相較
 
 - 目前，資料庫鏡像端點唯一支援的驗證方法是 CERTIFICATE。 未來的版本將啟用 WINDOWS 驗證方法。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>後續步驟
 
 如需如何對 Linux 上的 SQL Server 實作 Active Directory 驗證的詳細資訊，請參閱[教學課程：在 Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。

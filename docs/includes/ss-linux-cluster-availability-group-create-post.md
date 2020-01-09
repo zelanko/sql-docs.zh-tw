@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 0cdc343bf4ea6866d1a55672187451a3b6d95ec1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215584"
----
 
 ## <a name="add-a-database-to-the-availability-group"></a>將資料庫新增至可用性群組
 

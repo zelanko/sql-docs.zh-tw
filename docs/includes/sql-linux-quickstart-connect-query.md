@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215629"
----
 ## <a name="connect-locally"></a>在本機連線
 
 下列步驟使用 **sqlcmd**，在本機連線到您的新 SQL Server 執行個體。
@@ -29,7 +21,7 @@ ms.locfileid: "68215629"
 ## <a name="create-and-query-data"></a>建立及查詢資料
 下列各節將逐步引導您使用 **sqlcmd** 來建立新的資料庫、新增資料及執行簡單查詢。
 
-### <a name="create-a-new-database"></a>建立新的資料庫
+### <a name="create-a-new-database"></a>建立新資料庫
 
 下列步驟會建立名為 `TestDB` 的新資料庫。
 
@@ -92,7 +84,7 @@ ms.locfileid: "68215629"
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. 執行命令：
+1. 執行命令︰
 
    ```sql
    GO
@@ -108,7 +100,7 @@ QUIT
 
 ## <a name="performance-best-practices"></a>效能最佳做法
 
-安裝 Linux 上的 SQL Server 之後，請參閱設定 Linux 和 SQL Server 的最佳做法，以改善生產案例的效能。 如需詳細資訊，請參閱 [Linux 上 SQL Server 的效能最佳做法和設定方針](../linux/sql-server-linux-performance-best-practices.md)。
+安裝 Linux 上的 SQL Server 之後，請參閱設定 Linux 和 SQL Server 的最佳做法，以改善生產案例的效能。 如需詳細資訊，請參閱 [Linux 上的 SQL Server 效能最佳做法和設定方針](../linux/sql-server-linux-performance-best-practices.md)。
 
 ## <a name="cross-platform-data-tools"></a>跨平台資料工具
 
