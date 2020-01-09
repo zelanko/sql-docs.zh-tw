@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 12/06/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: c877913260071e1cfabd86afd10dc92a0ab15701
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d098b4f0ff3d6c5ecf5806381db478cc8475a161
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68212957"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776444"
 ---
-報表產生器 
+報表產生器
